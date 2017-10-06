@@ -95,26 +95,12 @@ $deleteMethod
 /*
 bool checkOverflow ( double num ) const
 */
-HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW1 )
-{
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->checkOverflow ( PDOUBLE(1) ) );
-  }
-}
+$method=|bool|checkOverflow,checkOverflow1|double
 
 /*
 bool checkOverflow ( int num ) const
 */
-HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW2 )
-{
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->checkOverflow ( PINT(1) ) );
-  }
-}
+$method=|bool|checkOverflow,checkOverflow2|int
 
 //[1]bool checkOverflow ( double num ) const
 //[2]bool checkOverflow ( int num ) const
@@ -131,26 +117,12 @@ HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW )
 /*
 int digitCount () const
 */
-HB_FUNC_STATIC( QLCDNUMBER_DIGITCOUNT )
-{
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->digitCount () );
-  }
-}
+$method=|int|digitCount|
 
 /*
 int intValue () const
 */
-HB_FUNC_STATIC( QLCDNUMBER_INTVALUE )
-{
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->intValue () );
-  }
-}
+$method=|int|intValue|
 
 /*
 Mode mode () const
@@ -220,14 +192,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETSEGMENTSTYLE )
 /*
 bool smallDecimalPoint () const
 */
-HB_FUNC_STATIC( QLCDNUMBER_SMALLDECIMALPOINT )
-{
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->smallDecimalPoint () );
-  }
-}
+$method=|bool|smallDecimalPoint|
 
 /*
 double value () const

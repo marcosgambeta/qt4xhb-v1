@@ -13,8 +13,6 @@ REQUEST QVARIANT
 
 CLASS QPlainTextEdit INHERIT QAbstractScrollArea
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -150,50 +148,22 @@ $method=|QString|anchorAt|const QPoint &
 /*
 bool backgroundVisible () const
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_BACKGROUNDVISIBLE )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->backgroundVisible () );
-  }
-}
+$method=|bool|backgroundVisible|
 
 /*
 int blockCount () const
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_BLOCKCOUNT )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->blockCount () );
-  }
-}
+$method=|int|blockCount|
 
 /*
 bool canPaste () const
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_CANPASTE )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->canPaste () );
-  }
-}
+$method=|bool|canPaste|
 
 /*
 bool centerOnScroll () const
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_CENTERONSCROLL )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->centerOnScroll () );
-  }
-}
+$method=|bool|centerOnScroll|
 
 /*
 QMenu * createStandardContextMenu ()
@@ -278,14 +248,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CURSORRECT )
 /*
 int cursorWidth () const
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_CURSORWIDTH )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->cursorWidth () );
-  }
-}
+$method=|int|cursorWidth|
 
 /*
 QTextDocument * document () const
@@ -321,39 +284,17 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ENSURECURSORVISIBLE )
 /*
 bool find ( const QString & exp, QTextDocument::FindFlags options = 0 )
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_FIND )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-    RBOOL( obj->find ( PQSTRING(1), (QTextDocument::FindFlags) par2 ) );
-  }
-}
+$method=|bool|find|const QString &,QTextDocument::FindFlags=0
 
 /*
 bool isReadOnly () const
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_ISREADONLY )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isReadOnly () );
-  }
-}
+$method=|bool|isReadOnly|
 
 /*
 bool isUndoRedoEnabled () const
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_ISUNDOREDOENABLED )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isUndoRedoEnabled () );
-  }
-}
+$method=|bool|isUndoRedoEnabled|
 
 /*
 LineWrapMode lineWrapMode () const
@@ -383,14 +324,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_LOADRESOURCE )
 /*
 int maximumBlockCount () const
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_MAXIMUMBLOCKCOUNT )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->maximumBlockCount () );
-  }
-}
+$method=|int|maximumBlockCount|
 
 /*
 void mergeCurrentCharFormat ( const QTextCharFormat & modifier )
@@ -423,14 +357,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_MOVECURSOR )
 /*
 bool overwriteMode () const
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_OVERWRITEMODE )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->overwriteMode () );
-  }
-}
+$method=|bool|overwriteMode|
 
 /*
 void print ( QPrinter * printer ) const
@@ -653,26 +580,12 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETWORDWRAPMODE )
 /*
 bool tabChangesFocus () const
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_TABCHANGESFOCUS )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->tabChangesFocus () );
-  }
-}
+$method=|bool|tabChangesFocus|
 
 /*
 int tabStopWidth () const
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_TABSTOPWIDTH )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->tabStopWidth () );
-  }
-}
+$method=|int|tabStopWidth|
 
 /*
 QTextCursor textCursor () const

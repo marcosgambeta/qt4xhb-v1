@@ -51,86 +51,37 @@ $deleteMethod
 /*
 int colorCount () const
 */
-HB_FUNC_STATIC( QPAINTDEVICE_COLORCOUNT )
-{
-  QPaintDevice * obj = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->colorCount () );
-  }
-}
+$method=|int|colorCount|
 
 /*
 int depth () const
 */
-HB_FUNC_STATIC( QPAINTDEVICE_DEPTH )
-{
-  QPaintDevice * obj = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->depth () );
-  }
-}
+$method=|int|depth|
 
 /*
 int height () const
 */
-HB_FUNC_STATIC( QPAINTDEVICE_HEIGHT )
-{
-  QPaintDevice * obj = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->height () );
-  }
-}
+$method=|int|height|
 
 /*
 int heightMM () const
 */
-HB_FUNC_STATIC( QPAINTDEVICE_HEIGHTMM )
-{
-  QPaintDevice * obj = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->heightMM () );
-  }
-}
+$method=|int|heightMM|
 
 /*
 int logicalDpiX () const
 */
-HB_FUNC_STATIC( QPAINTDEVICE_LOGICALDPIX )
-{
-  QPaintDevice * obj = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->logicalDpiX () );
-  }
-}
+$method=|int|logicalDpiX|
 
 /*
 int logicalDpiY () const
 */
-HB_FUNC_STATIC( QPAINTDEVICE_LOGICALDPIY )
-{
-  QPaintDevice * obj = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->logicalDpiY () );
-  }
-}
+$method=|int|logicalDpiY|
 
 /*
 int numColors () const (deprecated)
 */
-HB_FUNC_STATIC( QPAINTDEVICE_NUMCOLORS )
-{
-  QPaintDevice * obj = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->numColors () );
-  }
-}
+$method=|int|numColors|
 
 /*
 virtual QPaintEngine * paintEngine () const = 0
@@ -148,62 +99,27 @@ HB_FUNC_STATIC( QPAINTDEVICE_PAINTENGINE )
 /*
 bool paintingActive () const
 */
-HB_FUNC_STATIC( QPAINTDEVICE_PAINTINGACTIVE )
-{
-  QPaintDevice * obj = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->paintingActive () );
-  }
-}
+$method=|bool|paintingActive|
 
 /*
 int physicalDpiX () const
 */
-HB_FUNC_STATIC( QPAINTDEVICE_PHYSICALDPIX )
-{
-  QPaintDevice * obj = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->physicalDpiX () );
-  }
-}
+$method=|int|physicalDpiX|
 
 /*
 int physicalDpiY () const
 */
-HB_FUNC_STATIC( QPAINTDEVICE_PHYSICALDPIY )
-{
-  QPaintDevice * obj = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->physicalDpiY () );
-  }
-}
+$method=|int|physicalDpiY|
 
 /*
 int width () const
 */
-HB_FUNC_STATIC( QPAINTDEVICE_WIDTH )
-{
-  QPaintDevice * obj = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->width () );
-  }
-}
+$method=|int|width|
 
 /*
 int widthMM () const
 */
-HB_FUNC_STATIC( QPAINTDEVICE_WIDTHMM )
-{
-  QPaintDevice * obj = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->widthMM () );
-  }
-}
+$method=|int|widthMM|
 
 $extraMethods
 

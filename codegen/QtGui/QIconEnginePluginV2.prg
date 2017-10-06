@@ -8,8 +8,6 @@ REQUEST QICONENGINEV2
 
 CLASS QIconEnginePluginV2 INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD create
    METHOD keys
@@ -46,13 +44,6 @@ HB_FUNC_STATIC( QICONENGINEPLUGINV2_CREATE )
 /*
 virtual QStringList keys () const = 0
 */
-HB_FUNC_STATIC( QICONENGINEPLUGINV2_KEYS )
-{
-  QIconEnginePluginV2 * obj = (QIconEnginePluginV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->keys () );
-  }
-}
+$virtualMethod=|QStringList|keys|
 
 #pragma ENDDUMP

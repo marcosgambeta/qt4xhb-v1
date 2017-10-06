@@ -118,14 +118,7 @@ $deleteMethod
 /*
 bool isEmpty () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_ISEMPTY )
-{
-  QTextDocumentFragment * obj = (QTextDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-}
+$method=|bool|isEmpty|
 
 /*
 QString toHtml ( const QByteArray & encoding ) const

@@ -68,97 +68,52 @@ $destructor
 /*
 QBrush ()
 */
-HB_FUNC_STATIC( QBRUSH_NEW1 )
-{
-  QBrush * o = new QBrush ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new1|
 
 /*
 QBrush ( Qt::BrushStyle style )
 */
-HB_FUNC_STATIC( QBRUSH_NEW2 )
-{
-  QBrush * o = new QBrush ( (Qt::BrushStyle) hb_parni(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new2|Qt::BrushStyle
 
 /*
 QBrush ( const QColor & color, Qt::BrushStyle style = Qt::SolidPattern )
 */
-HB_FUNC_STATIC( QBRUSH_NEW3 )
-{
-  QColor par1 = ISOBJECT(1)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(1));
-  int par2 = ISNIL(2)? (int) Qt::SolidPattern : hb_parni(2);
-  QBrush * o = new QBrush ( par1, (Qt::BrushStyle) par2 );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new3|const QColor &,Qt::BrushStyle=Qt::SolidPattern
 
 /*
 QBrush ( Qt::GlobalColor color, Qt::BrushStyle style = Qt::SolidPattern )
 */
-HB_FUNC_STATIC( QBRUSH_NEW4 )
-{
-  int par1 = hb_parni(1);
-  int par2 = ISNIL(2)? (int) Qt::SolidPattern : hb_parni(2);
-  QBrush * o = new QBrush ( (Qt::GlobalColor) par1, (Qt::BrushStyle) par2 );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new4|Qt::GlobalColor,Qt::BrushStyle=Qt::SolidPattern
 
 /*
 QBrush ( const QColor & color, const QPixmap & pixmap )
 */
-HB_FUNC_STATIC( QBRUSH_NEW5 )
-{
-  QColor par1 = ISOBJECT(1)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(1));
-  QBrush * o = new QBrush ( par1, *PQPIXMAP(2) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new5|const QColor &,const QPixmap &
 
 /*
 QBrush ( Qt::GlobalColor color, const QPixmap & pixmap )
 */
-HB_FUNC_STATIC( QBRUSH_NEW6 )
-{
-  QBrush * o = new QBrush ( (Qt::GlobalColor) hb_parni(1), *PQPIXMAP(2) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new6|Qt::GlobalColor,const QPixmap &
 
 /*
 QBrush ( const QPixmap & pixmap )
 */
-HB_FUNC_STATIC( QBRUSH_NEW7 )
-{
-  QBrush * o = new QBrush ( *PQPIXMAP(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new7|const QPixmap &
 
 /*
 QBrush ( const QImage & image )
 */
-HB_FUNC_STATIC( QBRUSH_NEW8 )
-{
-  QBrush * o = new QBrush ( *PQIMAGE(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new8|const QImage &
 
 /*
 QBrush ( const QBrush & other )
 */
-HB_FUNC_STATIC( QBRUSH_NEW9 )
-{
-  QBrush * o = new QBrush ( *PQBRUSH(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new9|const QBrush &
 
 /*
 QBrush ( const QGradient & gradient )
 */
-HB_FUNC_STATIC( QBRUSH_NEW10 )
-{
-  QBrush * o = new QBrush ( *PQGRADIENT(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new10|const QGradient &
 
 //[01]QBrush ()
 //[02]QBrush ( Qt::BrushStyle style )
@@ -171,7 +126,7 @@ HB_FUNC_STATIC( QBRUSH_NEW10 )
 //[09]QBrush ( const QBrush & other )
 //[10]QBrush ( const QGradient & gradient )
 
-// TODO: resolver conflito entre [2] e [4] quando for 1 parâmetro
+%% TODO: resolver conflito entre [2] e [4] quando for 1 parâmetro
 
 HB_FUNC_STATIC( QBRUSH_NEW )
 {
@@ -226,81 +181,32 @@ $deleteMethod
 /*
 const QColor & color () const
 */
-HB_FUNC_STATIC( QBRUSH_COLOR )
-{
-  QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QColor * ptr = &obj->color ();
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR" );
-  }
-}
+$method=|const QColor &|color|
 
 /*
 const QGradient * gradient () const
 */
-HB_FUNC_STATIC( QBRUSH_GRADIENT )
-{
-  QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QGradient * ptr = obj->gradient ();
-    _qt4xhb_createReturnClass ( ptr, "QGRADIENT" );
-  }
-}
+$method=|const QGradient *|gradient|
 
 /*
 bool isOpaque () const
 */
-HB_FUNC_STATIC( QBRUSH_ISOPAQUE )
-{
-  QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isOpaque () );
-  }
-}
+$method=|bool|isOpaque|
 
 /*
 const QMatrix & matrix () const
 */
-HB_FUNC_STATIC( QBRUSH_MATRIX )
-{
-  QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QMatrix * ptr = &obj->matrix ();
-    _qt4xhb_createReturnClass ( ptr, "QMATRIX" );
-  }
-}
+$method=|const QMatrix &|matrix|
 
 /*
 void setColor ( const QColor & color )
 */
-HB_FUNC_STATIC( QBRUSH_SETCOLOR1 )
-{
-  QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QColor par1 = ISOBJECT(1)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(1));
-    obj->setColor ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setColor,setColor1|const QColor &
 
 /*
 void setColor ( Qt::GlobalColor color )
 */
-HB_FUNC_STATIC( QBRUSH_SETCOLOR2 )
-{
-  QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setColor ( (Qt::GlobalColor) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setColor,setColor2|Qt::GlobalColor
 
 //[1]void setColor ( const QColor & color )
 //[2]void setColor ( Qt::GlobalColor color )
@@ -320,119 +226,47 @@ HB_FUNC_STATIC( QBRUSH_SETCOLOR )
 /*
 void setMatrix ( const QMatrix & matrix )
 */
-HB_FUNC_STATIC( QBRUSH_SETMATRIX )
-{
-  QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setMatrix ( *PQMATRIX(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMatrix|const QMatrix &
 
 /*
 void setStyle ( Qt::BrushStyle style )
 */
-HB_FUNC_STATIC( QBRUSH_SETSTYLE )
-{
-  QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setStyle ( (Qt::BrushStyle) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStyle|Qt::BrushStyle
 
 /*
 void setTexture ( const QPixmap & pixmap )
 */
-HB_FUNC_STATIC( QBRUSH_SETTEXTURE )
-{
-  QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTexture ( *PQPIXMAP(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTexture|const QPixmap &
 
 /*
 void setTextureImage ( const QImage & image )
 */
-HB_FUNC_STATIC( QBRUSH_SETTEXTUREIMAGE )
-{
-  QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTextureImage ( *PQIMAGE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTextureImage|const QImage &
 
 /*
 void setTransform ( const QTransform & matrix )
 */
-HB_FUNC_STATIC( QBRUSH_SETTRANSFORM )
-{
-  QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTransform ( *PQTRANSFORM(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTransform|const QTransform &
 
 /*
 Qt::BrushStyle style () const
 */
-HB_FUNC_STATIC( QBRUSH_STYLE )
-{
-  QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->style () );
-  }
-}
+$method=|Qt::BrushStyle|style|
 
 /*
 QPixmap texture () const
 */
-HB_FUNC_STATIC( QBRUSH_TEXTURE )
-{
-  QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPixmap * ptr = new QPixmap( obj->texture () );
-    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
-  }
-}
+$method=|QPixmap|texture|
 
 /*
 QImage textureImage () const
 */
-HB_FUNC_STATIC( QBRUSH_TEXTUREIMAGE )
-{
-  QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QImage * ptr = new QImage( obj->textureImage () );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
-  }
-}
+$method=|QImage|textureImage|
 
 /*
 QTransform transform () const
 */
-HB_FUNC_STATIC( QBRUSH_TRANSFORM )
-{
-  QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTransform * ptr = new QTransform( obj->transform () );
-    _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
-  }
-}
+$method=|QTransform|transform|
 
 $extraMethods
 

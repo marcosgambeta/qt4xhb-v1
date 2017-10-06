@@ -67,27 +67,12 @@ $deleteMethod
 /*
 int addItem ( QWidget * widget, const QIcon & iconSet, const QString & text )
 */
-HB_FUNC_STATIC( QTOOLBOX_ADDITEM1 )
-{
-  QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIcon par2 = ISOBJECT(2)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(2));
-    RINT( obj->addItem ( PQWIDGET(1), par2, PQSTRING(3) ) );
-  }
-}
+$method=|int|addItem,addItem1|QWidget *,const QIcon &,const QString &
 
 /*
 int addItem ( QWidget * w, const QString & text )
 */
-HB_FUNC_STATIC( QTOOLBOX_ADDITEM2 )
-{
-  QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->addItem ( PQWIDGET(1), PQSTRING(2) ) );
-  }
-}
+$method=|int|addItem,addItem2|QWidget *,const QString &
 
 //[1]int addItem ( QWidget * widget, const QIcon & iconSet, const QString & text )
 //[2]int addItem ( QWidget * w, const QString & text )
@@ -107,26 +92,12 @@ HB_FUNC_STATIC( QTOOLBOX_ADDITEM )
 /*
 int count () const
 */
-HB_FUNC_STATIC( QTOOLBOX_COUNT )
-{
-  QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-}
+$method=|int|count|
 
 /*
 int currentIndex () const
 */
-HB_FUNC_STATIC( QTOOLBOX_CURRENTINDEX )
-{
-  QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->currentIndex () );
-  }
-}
+$method=|int|currentIndex|
 
 /*
 QWidget * currentWidget () const
@@ -144,39 +115,17 @@ HB_FUNC_STATIC( QTOOLBOX_CURRENTWIDGET )
 /*
 int indexOf ( QWidget * widget ) const
 */
-HB_FUNC_STATIC( QTOOLBOX_INDEXOF )
-{
-  QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->indexOf ( PQWIDGET(1) ) );
-  }
-}
+$method=|int|indexOf|QWidget *
 
 /*
 int insertItem ( int index, QWidget * widget, const QIcon & icon, const QString & text )
 */
-HB_FUNC_STATIC( QTOOLBOX_INSERTITEM1 )
-{
-  QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIcon par3 = ISOBJECT(3)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(3));
-    RINT( obj->insertItem ( PINT(1), PQWIDGET(2), par3, PQSTRING(4) ) );
-  }
-}
+$method=|int|insertItem,insertItem1|int,QWidget *,const QIcon &,const QString &
 
 /*
 int insertItem ( int index, QWidget * widget, const QString & text )
 */
-HB_FUNC_STATIC( QTOOLBOX_INSERTITEM2 )
-{
-  QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->insertItem ( PINT(1), PQWIDGET(2), PQSTRING(3) ) );
-  }
-}
+$method=|int|insertItem,insertItem2|int,QWidget *,const QString &
 
 //[1]int insertItem ( int index, QWidget * widget, const QIcon & icon, const QString & text )
 //[2]int insertItem ( int index, QWidget * widget, const QString & text )
@@ -196,14 +145,7 @@ HB_FUNC_STATIC( QTOOLBOX_INSERTITEM )
 /*
 bool isItemEnabled ( int index ) const
 */
-HB_FUNC_STATIC( QTOOLBOX_ISITEMENABLED )
-{
-  QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isItemEnabled ( PINT(1) ) );
-  }
-}
+$method=|bool|isItemEnabled|int
 
 /*
 QIcon itemIcon ( int index ) const

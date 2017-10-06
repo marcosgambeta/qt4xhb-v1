@@ -11,8 +11,6 @@ REQUEST QKEYSEQUENCE
 
 CLASS QAbstractButton INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD autoExclusive
    METHOD autoRepeat
@@ -65,361 +63,92 @@ $deleteMethod
 /*
 bool autoExclusive () const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOEXCLUSIVE )
-{
-  QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RBOOL( obj->autoExclusive () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|autoExclusive|
 
 /*
 bool autoRepeat () const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEAT )
-{
-  QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RBOOL( obj->autoRepeat () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$metjod=|bool|autoRepeat|
 
 /*
 int autoRepeatDelay () const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATDELAY )
-{
-  QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RINT( obj->autoRepeatDelay () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|autoRepeatDelay|
 
 /*
 int autoRepeatInterval () const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATINTERVAL )
-{
-  QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RINT( obj->autoRepeatInterval () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|autoRepeatInterval|
 
 /*
 QButtonGroup * group () const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_GROUP )
-{
-  QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QButtonGroup * ptr = obj->group ();
-    _qt4xhb_createReturnClass ( ptr, "QBUTTONGROUP" );
-  }
-}
+$method=|QButtonGroup *|group|
 
 /*
 QIcon icon () const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_ICON )
-{
-  QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QIcon * ptr = new QIcon( obj->icon () );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );
-  }
-}
+$method=|QIcon|icon|
 
 /*
 QSize iconSize () const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_ICONSIZE )
-{
-  QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->iconSize () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|iconSize|
 
 /*
 bool isCheckable () const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKABLE )
-{
-  QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RBOOL( obj->isCheckable () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isCheckable|
 
 /*
 bool isChecked () const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKED )
-{
-  QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RBOOL( obj->isChecked () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isChecked|
 
 /*
 bool isDown () const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_ISDOWN )
-{
-  QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RBOOL( obj->isDown () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isDown|
 
 /*
 void setAutoExclusive ( bool )
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOEXCLUSIVE )
-{
-  QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISLOG(1) )
-    {
-      obj->setAutoExclusive ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAutoExclusive|bool
 
 /*
 void setAutoRepeat ( bool )
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEAT )
-{
-  QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISLOG(1) )
-    {
-      obj->setAutoRepeat ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAutoRepeat|bool
 
 /*
 void setAutoRepeatDelay ( int )
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATDELAY )
-{
-  QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISNUM(1) )
-    {
-      obj->setAutoRepeatDelay ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAutoRepeatDelay|int
 
 /*
 void setAutoRepeatInterval ( int )
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATINTERVAL )
-{
-  QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISNUM(1) )
-    {
-      obj->setAutoRepeatInterval ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAutoRepeatInterval|int
 
 /*
 void setCheckable ( bool )
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKABLE )
-{
-  QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISLOG(1) )
-    {
-      obj->setCheckable ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCheckable|bool
 
 /*
 void setDown ( bool )
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETDOWN )
-{
-  QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISLOG(1) )
-    {
-      obj->setDown ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDown|bool
 
 /*
 void setIcon ( const QIcon & icon )
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETICON )
-{
-  QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( (ISQICON(1)||ISCHAR(1)) )
-    {
-      QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
-      obj->setIcon ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setIcon|const QIcon &
 
 /*
 void setShortcut ( const QKeySequence & key )
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETSHORTCUT )
-{
-  QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISQKEYSEQUENCE(1) )
-    {
-      obj->setShortcut ( *PQKEYSEQUENCE(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setShortcut|const QKeySequence &
 
 /*
 void setText ( const QString & text )
@@ -429,16 +158,7 @@ $method=|void|setText|const QString &
 /*
 QKeySequence shortcut () const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SHORTCUT )
-{
-  QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QKeySequence * ptr = new QKeySequence( obj->shortcut () );
-    _qt4xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
-  }
-}
+$method=|QKeySequence|shortcut|
 
 /*
 QString text () const
@@ -448,111 +168,26 @@ $method=|QString|text|
 /*
 void animateClick ( int msec = 100 )
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_ANIMATECLICK )
-{
-  QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISOPTNUM(1) )
-    {
-      obj->animateClick ( OPINT(1,100) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|animateClick|int=100
 
 /*
 void click ()
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_CLICK )
-{
-  QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      obj->click ();
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|click|
 
 /*
 void setChecked ( bool )
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKED )
-{
-  QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISLOG(1) )
-    {
-      obj->setChecked ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setChecked|bool
 
 /*
 void setIconSize ( const QSize & size )
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETICONSIZE )
-{
-  QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISQSIZE(1) )
-    {
-      obj->setIconSize ( *PQSIZE(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setIconSize|const QSize &
 
 /*
 void toggle ()
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_TOGGLE )
-{
-  QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      obj->toggle ();
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|toggle|
 
 #pragma ENDDUMP

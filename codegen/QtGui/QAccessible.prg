@@ -37,39 +37,24 @@ $destructor
 #include "qt4xhb_utils.h"
 
 /*
-bool isActive ()
+static bool isActive ()
 */
-HB_FUNC_STATIC( QACCESSIBLE_ISACTIVE )
-{
-  RBOOL( QAccessible::isActive () );
-}
+$staticMethod=|bool|isActive|
 
 /*
-QAccessibleInterface * queryAccessibleInterface ( QObject * object )
+static QAccessibleInterface * queryAccessibleInterface ( QObject * object )
 */
-HB_FUNC_STATIC( QACCESSIBLE_QUERYACCESSIBLEINTERFACE )
-{
-  QAccessibleInterface * ptr = QAccessible::queryAccessibleInterface ( PQOBJECT(1) );
-  _qt4xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
-}
+$staticMethod=|QAccessibleInterface *|queryAccessibleInterface|QObject *
 
 /*
-void setRootObject ( QObject * object )
+static void setRootObject ( QObject * object )
 */
-HB_FUNC_STATIC( QACCESSIBLE_SETROOTOBJECT )
-{
-  QAccessible::setRootObject ( PQOBJECT(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|setRootObject|QObject *
 
 /*
-void updateAccessibility ( QObject * object, int child, Event reason )
+static void updateAccessibility ( QObject * object, int child, Event reason )
 */
-HB_FUNC_STATIC( QACCESSIBLE_UPDATEACCESSIBILITY )
-{
-  QAccessible::updateAccessibility ( PQOBJECT(1), PINT(2), (QAccessible::Event) hb_parni(3) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|updateAccessibility|QObject *,int,QAccessible::Event
 
 $extraMethods
 

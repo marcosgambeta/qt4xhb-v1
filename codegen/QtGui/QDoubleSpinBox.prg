@@ -4,8 +4,6 @@ $header
 
 CLASS QDoubleSpinBox INHERIT QAbstractSpinBox
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD cleanText
    METHOD decimals
@@ -62,14 +60,7 @@ $method=|QString|cleanText|
 /*
 int decimals () const
 */
-HB_FUNC_STATIC( QDOUBLESPINBOX_DECIMALS )
-{
-  QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->decimals () );
-  }
-}
+$method=|int|decimals|
 
 /*
 double maximum () const

@@ -10,8 +10,6 @@ REQUEST QPIXMAP
 
 CLASS QMessageBox INHERIT QDialog
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -584,14 +582,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETVISIBLE )
 /*
 int exec ()
 */
-HB_FUNC_STATIC( QMESSAGEBOX_EXEC )
-{
-  QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->exec () );
-  }
-}
+$method=|int|exec|
 
 /*
 void about ( QWidget * parent, const QString & title, const QString & text )

@@ -256,26 +256,12 @@ HB_FUNC_STATIC( QICON_AVAILABLESIZES )
 /*
 qint64 cacheKey () const
 */
-HB_FUNC_STATIC( QICON_CACHEKEY )
-{
-  QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->cacheKey () );
-  }
-}
+$method=|qint64|cacheKey|
 
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QICON_ISNULL )
-{
-  QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
+$method=|bool|isNull|
 
 /*
 QString name () const

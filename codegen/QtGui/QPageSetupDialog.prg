@@ -8,8 +8,6 @@ REQUEST QPRINTER
 
 CLASS QPageSetupDialog INHERIT QDialog
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD open
    METHOD options
@@ -111,15 +109,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_SETOPTIONS )
 /*
 bool testOption ( PageSetupDialogOption option ) const
 */
-HB_FUNC_STATIC( QPAGESETUPDIALOG_TESTOPTION )
-{
-  QPageSetupDialog * obj = (QPageSetupDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    RBOOL( obj->testOption ( (QPageSetupDialog::PageSetupDialogOption) par1 ) );
-  }
-}
+$method=|bool|testOption|QPageSetupDialog::PageSetupDialogOption
 
 /*
 virtual void setVisible ( bool visible )

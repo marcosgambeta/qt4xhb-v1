@@ -166,86 +166,37 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNALIGNMENT )
 /*
 int columnCount () const
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNCOUNT )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->columnCount () );
-  }
-}
+$method=|int|columnCount|
 
 /*
 qreal columnMaximumWidth ( int column ) const
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNMAXIMUMWIDTH )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->columnMaximumWidth ( PINT(1) ) );
-  }
-}
+$method=|qreal|columnMaximumWidth|int
 
 /*
 qreal columnMinimumWidth ( int column ) const
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNMINIMUMWIDTH )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->columnMinimumWidth ( PINT(1) ) );
-  }
-}
+$method=|qreal|columnMinimumWidth|int
 
 /*
 qreal columnPreferredWidth ( int column ) const
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNPREFERREDWIDTH )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->columnPreferredWidth ( PINT(1) ) );
-  }
-}
+$method=|qreal|columnPreferredWidth|int
 
 /*
 qreal columnSpacing ( int column ) const
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNSPACING )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->columnSpacing ( PINT(1) ) );
-  }
-}
+$method=|qreal|columnSpacing|int
 
 /*
 int columnStretchFactor ( int column ) const
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNSTRETCHFACTOR )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->columnStretchFactor ( PINT(1) ) );
-  }
-}
+$method=|int|columnStretchFactor|int
 
 /*
 qreal horizontalSpacing () const
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_HORIZONTALSPACING )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->horizontalSpacing () );
-  }
-}
+$method=|qreal|horizontalSpacing|
 
 /*
 QGraphicsLayoutItem * itemAt ( int row, int column ) const
@@ -317,74 +268,32 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWALIGNMENT )
 /*
 int rowCount () const
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWCOUNT )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->rowCount () );
-  }
-}
+$method=|int|rowCount|
 
 /*
 qreal rowMaximumHeight ( int row ) const
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWMAXIMUMHEIGHT )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->rowMaximumHeight ( PINT(1) ) );
-  }
-}
+$method=|qreal|rowMaximumHeight|int
 
 /*
 qreal rowMinimumHeight ( int row ) const
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWMINIMUMHEIGHT )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->rowMinimumHeight ( PINT(1) ) );
-  }
-}
+$method=|qreal|rowMinimumHeight|int
 
 /*
 qreal rowPreferredHeight ( int row ) const
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWPREFERREDHEIGHT )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->rowPreferredHeight ( PINT(1) ) );
-  }
-}
+$method=|qreal|rowPreferredHeight|int
 
 /*
 qreal rowSpacing ( int row ) const
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWSPACING )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->rowSpacing ( PINT(1) ) );
-  }
-}
+$method=|qreal|rowSpacing|int
 
 /*
 int rowStretchFactor ( int row ) const
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWSTRETCHFACTOR )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->rowStretchFactor ( PINT(1) ) );
-  }
-}
+$method=|int|rowStretchFactor|int
 
 /*
 void setAlignment ( QGraphicsLayoutItem * item, Qt::Alignment alignment )
@@ -496,210 +405,81 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNSTRETCHFACTOR )
 /*
 void setHorizontalSpacing ( qreal spacing )
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETHORIZONTALSPACING )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setHorizontalSpacing ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHorizontalSpacing|qreal
 
 /*
 void setRowAlignment ( int row, Qt::Alignment alignment )
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWALIGNMENT )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    obj->setRowAlignment ( PINT(1), (Qt::Alignment) par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRowAlignment|int,Qt::Alignment
 
 /*
 void setRowFixedHeight ( int row, qreal height )
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWFIXEDHEIGHT )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRowFixedHeight ( PINT(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRowFixedHeight|int,qreal
 
 /*
 void setRowMaximumHeight ( int row, qreal height )
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWMAXIMUMHEIGHT )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRowMaximumHeight ( PINT(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRowMaximumHeight|int,qreal
 
 /*
 void setRowMinimumHeight ( int row, qreal height )
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWMINIMUMHEIGHT )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRowMinimumHeight ( PINT(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRowMinimumHeight|int,qreal
 
 /*
 void setRowPreferredHeight ( int row, qreal height )
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWPREFERREDHEIGHT )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRowPreferredHeight ( PINT(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRowPreferredHeight|int,qreal
 
 /*
 void setRowSpacing ( int row, qreal spacing )
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWSPACING )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRowSpacing ( PINT(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRowSpacing|int,qreal
 
 /*
 void setRowStretchFactor ( int row, int stretch )
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWSTRETCHFACTOR )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRowStretchFactor ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRowStretchFactor|int,int
 
 /*
 void setSpacing ( qreal spacing )
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETSPACING )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSpacing ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSpacing|qreal
 
 /*
 void setVerticalSpacing ( qreal spacing )
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETVERTICALSPACING )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setVerticalSpacing ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setVerticalSpacing|qreal
 
 /*
 qreal verticalSpacing () const
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_VERTICALSPACING )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->verticalSpacing () );
-  }
-}
+$method=|qreal|verticalSpacing|
 
 /*
 virtual int count () const
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COUNT )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-}
+$virtualMethod=|int|count|
 
 /*
 virtual void invalidate ()
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_INVALIDATE )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->invalidate ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|invalidate|
 
 /*
 virtual void removeAt ( int index )
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_REMOVEAT )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->removeAt ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|removeAt|int
 
 /*
 virtual void setGeometry ( const QRectF & rect )
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETGEOMETRY )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setGeometry ( *PQRECTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|setGeometry|const QRectF &
 
 /*
 virtual QSizeF sizeHint ( Qt::SizeHint which, const QSizeF & constraint = QSizeF() ) const
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SIZEHINT )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    QSizeF par2 = ISNIL(2)? QSizeF() : *(QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QSizeF * ptr = new QSizeF( obj->sizeHint ( (Qt::SizeHint) par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
-  }
-}
+$virtualMethod=|QSizeF|sizeHint|Qt::SizeHint,const QSizeF &=QSizeF()
 
 #pragma ENDDUMP

@@ -177,15 +177,7 @@ par1 << temp1;
 /*
 void setTabStop ( qreal tabStop )
 */
-HB_FUNC_STATIC( QTEXTOPTION_SETTABSTOP )
-{
-  QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTabStop ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTabStop|qreal
 
 /*
 void setTextDirection ( Qt::LayoutDirection direction )
@@ -253,14 +245,7 @@ HB_FUNC_STATIC( QTEXTOPTION_TABARRAY )
 /*
 qreal tabStop () const
 */
-HB_FUNC_STATIC( QTEXTOPTION_TABSTOP )
-{
-  QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->tabStop () );
-  }
-}
+$method=|qreal|tabStop|
 
 /*
 Qt::LayoutDirection textDirection () const
@@ -277,14 +262,7 @@ HB_FUNC_STATIC( QTEXTOPTION_TEXTDIRECTION )
 /*
 bool useDesignMetrics () const
 */
-HB_FUNC_STATIC( QTEXTOPTION_USEDESIGNMETRICS )
-{
-  QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->useDesignMetrics () );
-  }
-}
+$method=|bool|useDesignMetrics|
 
 /*
 WrapMode wrapMode () const

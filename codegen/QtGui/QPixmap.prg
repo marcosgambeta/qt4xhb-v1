@@ -190,15 +190,7 @@ HB_FUNC_STATIC( QPIXMAP_CACHEKEY )
 /*
 bool convertFromImage ( const QImage & image, Qt::ImageConversionFlags flags = Qt::AutoColor )
 */
-HB_FUNC_STATIC( QPIXMAP_CONVERTFROMIMAGE )
-{
-  QPixmap * obj = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) Qt::AutoColor : hb_parni(2);
-    RBOOL( obj->convertFromImage ( *PQIMAGE(1), (Qt::ImageConversionFlags) par2 ) );
-  }
-}
+$method=|bool|convertFromImage|const QImage &,Qt::ImageConversionFlags=Qt::AutoColor
 
 /*
 QPixmap copy ( const QRect & rectangle = QRect() ) const
@@ -302,27 +294,12 @@ HB_FUNC_STATIC( QPIXMAP_CREATEMASKFROMCOLOR )
 /*
 int depth () const
 */
-HB_FUNC_STATIC( QPIXMAP_DEPTH )
-{
-  QPixmap * obj = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->depth () );
-  }
-}
+$method=|int|depth|
 
 /*
 void detach ()
 */
-HB_FUNC_STATIC( QPIXMAP_DETACH )
-{
-  QPixmap * obj = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->detach ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|detach|
 
 /*
 void fill ( const QColor & color = Qt::white )
@@ -389,102 +366,42 @@ HB_FUNC_STATIC( QPIXMAP_FILL )
 /*
 bool hasAlpha () const
 */
-HB_FUNC_STATIC( QPIXMAP_HASALPHA )
-{
-  QPixmap * obj = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasAlpha () );
-  }
-}
+$method=|bool|hasAlpha|
 
 /*
 bool hasAlphaChannel () const
 */
-HB_FUNC_STATIC( QPIXMAP_HASALPHACHANNEL )
-{
-  QPixmap * obj = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasAlphaChannel () );
-  }
-}
+$method=|bool|hasAlphaChannel|
 
 /*
 int height () const
 */
-HB_FUNC_STATIC( QPIXMAP_HEIGHT )
-{
-  QPixmap * obj = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->height () );
-  }
-}
+$method=|int|height|
 
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QPIXMAP_ISNULL )
-{
-  QPixmap * obj = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
+$method=|bool|isNull|
 
 /*
 bool isQBitmap () const
 */
-HB_FUNC_STATIC( QPIXMAP_ISQBITMAP )
-{
-  QPixmap * obj = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isQBitmap () );
-  }
-}
+$method=|bool|isQBitmap|
 
 /*
 bool load ( const QString & fileName, const char * format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor )
 */
-HB_FUNC_STATIC( QPIXMAP_LOAD )
-{
-  QPixmap * obj = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par3 = ISNIL(3)? (int) Qt::AutoColor : hb_parni(3);
-    RBOOL( obj->load ( PQSTRING(1), (const char *) ISNIL(2)? 0 : hb_parc(2), (Qt::ImageConversionFlags) par3 ) );
-  }
-}
+$method=|bool|load|const QString &,const char *=0,Qt::ImageConversionFlags=Qt::AutoColor
 
 /*
 bool loadFromData ( const uchar * data, uint len, const char * format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor )
 */
-HB_FUNC_STATIC( QPIXMAP_LOADFROMDATA1 )
-{
-  QPixmap * obj = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const uchar * par1 = (const uchar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par4 = ISNIL(4)? (int) Qt::AutoColor : hb_parni(4);
-    RBOOL( obj->loadFromData ( par1, PUINT(2), (const char *) ISNIL(3)? 0 : hb_parc(3), (Qt::ImageConversionFlags) par4 ) );
-  }
-}
+$method=|bool|loadFromData,loadFromData1|const uchar *,uint,const char *=0,Qt::ImageConversionFlags=Qt::AutoColor
 
 /*
 bool loadFromData ( const QByteArray & data, const char * format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor )
 */
-HB_FUNC_STATIC( QPIXMAP_LOADFROMDATA2 )
-{
-  QPixmap * obj = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par3 = ISNIL(3)? (int) Qt::AutoColor : hb_parni(3);
-    RBOOL( obj->loadFromData ( *PQBYTEARRAY(1), (const char *) ISNIL(2)? 0 : hb_parc(2), (Qt::ImageConversionFlags) par3 ) );
-  }
-}
+$method=|bool|loadFromData,loadFromData2|const QByteArray &,const char *=0,Qt::ImageConversionFlags=Qt::AutoColor
 
 //[1]bool loadFromData ( const uchar * data, uint len, const char * format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor )
 //[2]bool loadFromData ( const QByteArray & data, const char * format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor )
@@ -530,26 +447,12 @@ HB_FUNC_STATIC( QPIXMAP_RECT )
 /*
 bool save ( const QString & fileName, const char * format = 0, int quality = -1 ) const
 */
-HB_FUNC_STATIC( QPIXMAP_SAVE1 )
-{
-  QPixmap * obj = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->save ( PQSTRING(1), (const char *) ISNIL(2)? 0 : hb_parc(2), OPINT(3,-1) ) );
-  }
-}
+$method=|bool|save,save1|const QString &,const char *=0,int=-1
 
 /*
 bool save ( QIODevice * device, const char * format = 0, int quality = -1 ) const
 */
-HB_FUNC_STATIC( QPIXMAP_SAVE2 )
-{
-  QPixmap * obj = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->save ( PQIODEVICE(1), (const char *) ISNIL(2)? 0 : hb_parc(2), OPINT(3,-1) ) );
-  }
-}
+$method=|bool|save,save2|QIODevice *,const char *=0,int=-1
 
 //[1]bool save ( const QString & fileName, const char * format = 0, int quality = -1 ) const
 //[2]bool save ( QIODevice * device, const char * format = 0, int quality = -1 ) const
@@ -767,14 +670,7 @@ HB_FUNC_STATIC( QPIXMAP_TRANSFORMED )
 /*
 int width () const
 */
-HB_FUNC_STATIC( QPIXMAP_WIDTH )
-{
-  QPixmap * obj = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->width () );
-  }
-}
+$method=|int|width|
 
 //operator QVariant () const
 //bool operator! () const
@@ -783,12 +679,9 @@ HB_FUNC_STATIC( QPIXMAP_WIDTH )
 //Static Public Members
 
 /*
-int defaultDepth ()
+static int defaultDepth ()
 */
-HB_FUNC_STATIC( QPIXMAP_DEFAULTDEPTH )
-{
-  RINT( QPixmap::defaultDepth () );
-}
+$staticMethod=|int|defaultDepth|
 
 /*
 QPixmap fromImage ( const QImage & image, Qt::ImageConversionFlags flags = Qt::AutoColor )

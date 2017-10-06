@@ -9,8 +9,6 @@ REQUEST QACTION
 
 CLASS QDockWidget INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -114,134 +112,53 @@ HB_FUNC_STATIC( QDOCKWIDGET_FEATURES )
 }
 
 /*
-bool	isAreaAllowed ( Qt::DockWidgetArea area ) const
+bool isAreaAllowed ( Qt::DockWidgetArea area ) const
 */
-HB_FUNC_STATIC( QDOCKWIDGET_ISAREAALLOWED )
-{
-  QDockWidget * obj = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    RBOOL( obj->isAreaAllowed ( (Qt::DockWidgetArea) par1 ) );
-  }
-}
+$method=|bool|isAreaAllowed|Qt::DockWidgetArea
 
 /*
-bool	isFloating () const
+bool isFloating () const
 */
-HB_FUNC_STATIC( QDOCKWIDGET_ISFLOATING )
-{
-  QDockWidget * obj = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isFloating () );
-  }
-}
+$method=|bool|isFloating|
 
 /*
 void setAllowedAreas ( Qt::DockWidgetAreas areas )
 */
-HB_FUNC_STATIC( QDOCKWIDGET_SETALLOWEDAREAS )
-{
-  QDockWidget * obj = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setAllowedAreas ( (Qt::DockWidgetAreas) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAllowedAreas|Qt::DockWidgetAreas
 
 /*
 void setFeatures ( DockWidgetFeatures features )
 */
-HB_FUNC_STATIC( QDOCKWIDGET_SETFEATURES )
-{
-  QDockWidget * obj = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setFeatures ( (QDockWidget::DockWidgetFeatures) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFeatures|QDockWidget::DockWidgetFeatures
 
 /*
 void setFloating ( bool floating )
 */
-HB_FUNC_STATIC( QDOCKWIDGET_SETFLOATING )
-{
-  QDockWidget * obj = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFloating ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFloating|bool
 
 /*
 void setTitleBarWidget ( QWidget * widget )
 */
-HB_FUNC_STATIC( QDOCKWIDGET_SETTITLEBARWIDGET )
-{
-  QDockWidget * obj = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTitleBarWidget ( PQWIDGET(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTitleBarWidget|QWidget *
 
 /*
 void setWidget ( QWidget * widget )
 */
-HB_FUNC_STATIC( QDOCKWIDGET_SETWIDGET )
-{
-  QDockWidget * obj = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setWidget ( PQWIDGET(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWidget|QWidget *
 
 /*
 QWidget * titleBarWidget () const
 */
-HB_FUNC_STATIC( QDOCKWIDGET_TITLEBARWIDGET )
-{
-  QDockWidget * obj = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->titleBarWidget ();
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|titleBarWidget|
 
 /*
 QAction * toggleViewAction () const
 */
-HB_FUNC_STATIC( QDOCKWIDGET_TOGGLEVIEWACTION )
-{
-  QDockWidget * obj = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->toggleViewAction ();
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|toggleViewAction|
 
 /*
 QWidget * widget () const
 */
-HB_FUNC_STATIC( QDOCKWIDGET_WIDGET )
-{
-  QDockWidget * obj = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->widget ();
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|widget|
 
 #pragma ENDDUMP

@@ -10,8 +10,6 @@ REQUEST QICON
 
 CLASS QTabWidget INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addTab1
@@ -91,27 +89,12 @@ $deleteMethod
 /*
 int addTab ( QWidget * page, const QString & label )
 */
-HB_FUNC_STATIC( QTABWIDGET_ADDTAB1 )
-{
-  QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->addTab ( PQWIDGET(1), PQSTRING(2) ) );
-  }
-}
+$method=|int|addTab,addTab1|QWidget *,const QString &
 
 /*
 int addTab ( QWidget * page, const QIcon & icon, const QString & label )
 */
-HB_FUNC_STATIC( QTABWIDGET_ADDTAB2 )
-{
-  QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIcon par2 = ISOBJECT(2)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(2));
-    RINT( obj->addTab ( PQWIDGET(1), par2, PQSTRING(3) ) );
-  }
-}
+$method=|int|addTab,addTab2|QWidget *,const QIcon &,const QString &
 
 //[1]int addTab ( QWidget * page, const QString & label )
 //[2]int addTab ( QWidget * page, const QIcon & icon, const QString & label )
@@ -158,26 +141,12 @@ HB_FUNC_STATIC( QTABWIDGET_CORNERWIDGET )
 /*
 int count () const
 */
-HB_FUNC_STATIC( QTABWIDGET_COUNT )
-{
-  QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-}
+$method=|int|count|
 
 /*
 int currentIndex () const
 */
-HB_FUNC_STATIC( QTABWIDGET_CURRENTINDEX )
-{
-  QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->currentIndex () );
-  }
-}
+$method=|int|currentIndex|
 
 /*
 QWidget * currentWidget () const
@@ -195,76 +164,32 @@ HB_FUNC_STATIC( QTABWIDGET_CURRENTWIDGET )
 /*
 bool documentMode () const
 */
-HB_FUNC_STATIC( QTABWIDGET_DOCUMENTMODE )
-{
-  QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->documentMode () );
-  }
-}
+$method=|bool|documentMode|
 
 /*
 Qt::TextElideMode elideMode () const
 */
-HB_FUNC_STATIC( QTABWIDGET_ELIDEMODE )
-{
-  QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->elideMode () );
-  }
-}
+$method=|Qt::TextElideMode|elideMode|
 
 /*
 QSize iconSize () const
 */
-HB_FUNC_STATIC( QTABWIDGET_ICONSIZE )
-{
-  QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->iconSize () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|iconSize|
 
 /*
 int indexOf ( QWidget * w ) const
 */
-HB_FUNC_STATIC( QTABWIDGET_INDEXOF )
-{
-  QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->indexOf ( PQWIDGET(1) ) );
-  }
-}
+$method=|int|indexOf|QWidget *
 
 /*
 int insertTab ( int index, QWidget * page, const QString & label )
 */
-HB_FUNC_STATIC( QTABWIDGET_INSERTTAB1 )
-{
-  QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->insertTab ( PINT(1), PQWIDGET(2), PQSTRING(3) ) );
-  }
-}
+$method=|int|insertTab,insertTab1|int,QWidget *,const QString &
 
 /*
 int insertTab ( int index, QWidget * page, const QIcon & icon, const QString & label )
 */
-HB_FUNC_STATIC( QTABWIDGET_INSERTTAB2 )
-{
-  QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIcon par3 = ISOBJECT(3)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(3));
-    RINT( obj->insertTab ( PINT(1), PQWIDGET(2), par3, PQSTRING(4) ) );
-  }
-}
+$method=|int|insertTab,insertTab2|int,QWidget *,const QIcon &,const QString &
 
 //[1]int insertTab ( int index, QWidget * page, const QString & label )
 //[2]int insertTab ( int index, QWidget * page, const QIcon & icon, const QString & label )
@@ -284,26 +209,12 @@ HB_FUNC_STATIC( QTABWIDGET_INSERTTAB )
 /*
 bool isMovable () const
 */
-HB_FUNC_STATIC( QTABWIDGET_ISMOVABLE )
-{
-  QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isMovable () );
-  }
-}
+$method=|bool|isMovable|
 
 /*
 bool isTabEnabled ( int index ) const
 */
-HB_FUNC_STATIC( QTABWIDGET_ISTABENABLED )
-{
-  QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isTabEnabled ( PINT(1) ) );
-  }
-}
+$method=|bool|isTabEnabled|int
 
 /*
 void removeTab ( int index )
@@ -560,26 +471,12 @@ $method=|QString|tabWhatsThis|int
 /*
 bool tabsClosable () const
 */
-HB_FUNC_STATIC( QTABWIDGET_TABSCLOSABLE )
-{
-  QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->tabsClosable () );
-  }
-}
+$method=|bool|tabsClosable|
 
 /*
 bool usesScrollButtons () const
 */
-HB_FUNC_STATIC( QTABWIDGET_USESSCROLLBUTTONS )
-{
-  QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->usesScrollButtons () );
-  }
-}
+$method=|bool|usesScrollButtons|
 
 /*
 QWidget * widget ( int index ) const

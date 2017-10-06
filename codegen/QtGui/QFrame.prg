@@ -9,8 +9,6 @@ REQUEST QSIZE
 
 CLASS QFrame INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD frameRect
@@ -94,50 +92,22 @@ HB_FUNC_STATIC( QFRAME_FRAMESHAPE )
 /*
 int frameStyle () const
 */
-HB_FUNC_STATIC( QFRAME_FRAMESTYLE )
-{
-  QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->frameStyle () );
-  }
-}
+$method=|int|frameStyle|
 
 /*
 int frameWidth () const
 */
-HB_FUNC_STATIC( QFRAME_FRAMEWIDTH )
-{
-  QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->frameWidth () );
-  }
-}
+$method=|int|frameWidth|
 
 /*
 int lineWidth () const
 */
-HB_FUNC_STATIC( QFRAME_LINEWIDTH )
-{
-  QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->lineWidth () );
-  }
-}
+$method=|int|lineWidth|
 
 /*
 int midLineWidth () const
 */
-HB_FUNC_STATIC( QFRAME_MIDLINEWIDTH )
-{
-  QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->midLineWidth () );
-  }
-}
+$method=|int|midLineWidth|
 
 /*
 void setFrameRect ( const QRect & )

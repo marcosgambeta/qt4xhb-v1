@@ -12,8 +12,6 @@ REQUEST QSIZE
 
 CLASS QMenu INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -421,38 +419,17 @@ HB_FUNC_STATIC( QMENU_INSERTSEPARATOR )
 /*
 bool isEmpty () const
 */
-HB_FUNC_STATIC( QMENU_ISEMPTY )
-{
-  QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-}
+$method=|bool|isEmpty|
 
 /*
 bool isTearOffEnabled () const
 */
-HB_FUNC_STATIC( QMENU_ISTEAROFFENABLED )
-{
-  QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isTearOffEnabled () );
-  }
-}
+$method=|bool|isTearOffEnabled|
 
 /*
 bool isTearOffMenuVisible () const
 */
-HB_FUNC_STATIC( QMENU_ISTEAROFFMENUVISIBLE )
-{
-  QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isTearOffMenuVisible () );
-  }
-}
+$method=|bool|isTearOffMenuVisible|
 
 /*
 QAction * menuAction () const
@@ -484,14 +461,7 @@ HB_FUNC_STATIC( QMENU_POPUP )
 /*
 bool separatorsCollapsible () const
 */
-HB_FUNC_STATIC( QMENU_SEPARATORSCOLLAPSIBLE )
-{
-  QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->separatorsCollapsible () );
-  }
-}
+$method=|bool|separatorsCollapsible|
 
 /*
 void setActiveAction ( QAction * act )

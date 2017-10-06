@@ -9,8 +9,6 @@ REQUEST QSIZE
 
 CLASS QAbstractSpinBox INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD alignment
@@ -65,49 +63,24 @@ $destructor
 /*
 QAbstractSpinBox ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_NEW )
-{
-  QAbstractSpinBox * o = new QAbstractSpinBox ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QWidget *=0
 
 $deleteMethod
 
 /*
 Qt::Alignment alignment () const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_ALIGNMENT )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->alignment () );
-  }
-}
+$method=|Qt::Alignment|alignment|
 
 /*
 ButtonSymbols buttonSymbols () const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_BUTTONSYMBOLS )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->buttonSymbols () );
-  }
-}
+$method=|QAbstractSpinBox::ButtonSymbols|buttonSymbols|
 
 /*
 CorrectionMode correctionMode () const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_CORRECTIONMODE )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->correctionMode () );
-  }
-}
+$method=|QAbstractSpinBox::CorrectionMode|correctionMode|
 
 /*
 virtual void fixup ( QString & input ) const
@@ -126,169 +99,67 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_FIXUP ) // TODO: revisar implementacao e corrig
 /*
 bool hasAcceptableInput () const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_HASACCEPTABLEINPUT )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasAcceptableInput () );
-  }
-}
+$method=|bool|hasAcceptableInput|
 
 /*
 bool hasFrame () const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_HASFRAME )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasFrame () );
-  }
-}
+$method=|bool|hasFrame|
 
 /*
 void interpretText ()
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_INTERPRETTEXT )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->interpretText ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|interpretText|
 
 /*
 bool isAccelerated () const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_ISACCELERATED )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isAccelerated () );
-  }
-}
+$method=|bool|isAccelerated|
 
 /*
 bool isReadOnly () const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_ISREADONLY )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isReadOnly () );
-  }
-}
+$method=|bool|isReadOnly|
 
 /*
 bool keyboardTracking () const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_KEYBOARDTRACKING )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->keyboardTracking () );
-  }
-}
+$method=|bool|keyboardTracking|
 
 /*
 void setAccelerated ( bool on )
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_SETACCELERATED )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAccelerated ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAccelerated|bool
 
 /*
 void setAlignment ( Qt::Alignment flag )
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_SETALIGNMENT )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setAlignment ( (Qt::Alignment) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAlignment|Qt::Alignment
 
 /*
 void setButtonSymbols ( ButtonSymbols bs )
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_SETBUTTONSYMBOLS )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setButtonSymbols ( (QAbstractSpinBox::ButtonSymbols) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setButtonSymbols|QAbstractSpinBox::ButtonSymbols
 
 /*
 void setCorrectionMode ( CorrectionMode cm )
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_SETCORRECTIONMODE )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setCorrectionMode ( (QAbstractSpinBox::CorrectionMode) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCorrectionMode|QAbstractSpinBox::CorrectionMode
 
 /*
 void setFrame ( bool )
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_SETFRAME )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFrame ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFrame|bool
 
 /*
 void setKeyboardTracking ( bool kt )
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_SETKEYBOARDTRACKING )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setKeyboardTracking ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setKeyboardTracking|bool
 
 /*
 void setReadOnly ( bool r )
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_SETREADONLY )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setReadOnly ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setReadOnly|bool
 
 /*
 void setSpecialValueText ( const QString & txt )
@@ -298,15 +169,7 @@ $method=|void|setSpecialValueText|const QString &
 /*
 void setWrapping ( bool w )
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_SETWRAPPING )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setWrapping ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWrapping|bool
 
 /*
 QString specialValueText () const
@@ -316,15 +179,7 @@ $method=|QString|specialValueText|
 /*
 virtual void stepBy ( int steps )
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPBY )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->stepBy ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|stepBy|int
 
 /*
 QString text () const
@@ -348,117 +203,46 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_VALIDATE ) // TODO: revisar implementacao e cor
 /*
 bool wrapping () const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_WRAPPING )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->wrapping () );
-  }
-}
+$method=|bool|wrapping|
 
 /*
 virtual bool event ( QEvent * event )
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_EVENT )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->event ( PQEVENT(1) ) );
-  }
-}
+$virtualMethod=|bool|event|QEvent *
 
 /*
 virtual QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_INPUTMETHODQUERY )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$virtualMethod=|QVariant|inputMethodQuery|Qt::InputMethodQuery
 
 /*
 virtual QSize minimumSizeHint () const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_MINIMUMSIZEHINT )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->minimumSizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|minimumSizeHint|
 
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_SIZEHINT )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|sizeHint|
 
 /*
 virtual void clear ()
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_CLEAR )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|clear|
 
 /*
 void selectAll ()
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_SELECTALL )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->selectAll ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|selectAll|
 
 /*
 void stepDown ()
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPDOWN )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->stepDown ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|stepDown|
 
 /*
 void stepUp ()
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPUP )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->stepUp ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|stepUp|
 
 #pragma ENDDUMP

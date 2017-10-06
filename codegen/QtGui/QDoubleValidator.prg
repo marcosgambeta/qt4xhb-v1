@@ -89,14 +89,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_BOTTOM )
 /*
 int decimals () const
 */
-HB_FUNC_STATIC( QDOUBLEVALIDATOR_DECIMALS )
-{
-  QDoubleValidator * obj = (QDoubleValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->decimals () );
-  }
-}
+$method=|int|decimals|
 
 /*
 Notation notation () const

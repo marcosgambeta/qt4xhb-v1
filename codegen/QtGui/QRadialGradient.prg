@@ -160,41 +160,17 @@ $deleteMethod
 /*
 QPointF center() const
 */
-HB_FUNC_STATIC( QRADIALGRADIENT_CENTER )
-{
-  QRadialGradient * obj = (QRadialGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->center () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|center|
 
 /*
 void setCenter(const QPointF &center)
 */
-HB_FUNC_STATIC( QRADIALGRADIENT_SETCENTER1 )
-{
-  QRadialGradient * obj = (QRadialGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCenter ( *PQPOINTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCenter,setCenter1|const QPointF &
 
 /*
 void setCenter(qreal x, qreal y)
 */
-HB_FUNC_STATIC( QRADIALGRADIENT_SETCENTER2 )
-{
-  QRadialGradient * obj = (QRadialGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCenter ( PQREAL(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCenter,setCenter2|qreal,qreal
 
 //[1]void setCenter(const QPointF &center)
 //[2]void setCenter(qreal x, qreal y)
@@ -214,41 +190,17 @@ HB_FUNC_STATIC( QRADIALGRADIENT_SETCENTER )
 /*
 QPointF focalPoint() const
 */
-HB_FUNC_STATIC( QRADIALGRADIENT_FOCALPOINT )
-{
-  QRadialGradient * obj = (QRadialGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->focalPoint () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|focalPoint|
 
 /*
 void setFocalPoint(const QPointF &focalPoint)
 */
-HB_FUNC_STATIC( QRADIALGRADIENT_SETFOCALPOINT1 )
-{
-  QRadialGradient * obj = (QRadialGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFocalPoint ( *PQPOINTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFocalPoint,setFocalPoint1|const QPointF &
 
 /*
 void setFocalPoint(qreal x, qreal y)
 */
-HB_FUNC_STATIC( QRADIALGRADIENT_SETFOCALPOINT2 )
-{
-  QRadialGradient * obj = (QRadialGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFocalPoint ( PQREAL(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFocalPoint,setFocalPoint2|qreal,qreal
 
 //[1]void setFocalPoint(const QPointF &focalPoint)
 //[2]void setFocalPoint(qreal x, qreal y)
@@ -268,76 +220,31 @@ HB_FUNC_STATIC( QRADIALGRADIENT_SETFOCALPOINT )
 /*
 qreal radius() const
 */
-HB_FUNC_STATIC( QRADIALGRADIENT_RADIUS )
-{
-  QRadialGradient * obj = (QRadialGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->radius () );
-  }
-}
+$method=|qreal|radius|
 
 /*
 void setRadius(qreal radius)
 */
-HB_FUNC_STATIC( QRADIALGRADIENT_SETRADIUS )
-{
-  QRadialGradient * obj = (QRadialGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRadius ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRadius|qreal
 
 /*
 qreal centerRadius() const
 */
-HB_FUNC_STATIC( QRADIALGRADIENT_CENTERRADIUS )
-{
-  QRadialGradient * obj = (QRadialGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->centerRadius () );
-  }
-}
+$method=|qreal|centerRadius|
 
 /*
 void setCenterRadius(qreal radius)
 */
-HB_FUNC_STATIC( QRADIALGRADIENT_SETCENTERRADIUS )
-{
-  QRadialGradient * obj = (QRadialGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCenterRadius ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCenterRadius|qreal
 
 /*
 qreal focalRadius() const
 */
-HB_FUNC_STATIC( QRADIALGRADIENT_FOCALRADIUS )
-{
-  QRadialGradient * obj = (QRadialGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->focalRadius () );
-  }
-}
+$method=|qreal|focalRadius|
 
 /*
 void setFocalRadius(qreal radius)
 */
-HB_FUNC_STATIC( QRADIALGRADIENT_SETFOCALRADIUS )
-{
-  QRadialGradient * obj = (QRadialGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFocalRadius ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFocalRadius|qreal
 
 #pragma ENDDUMP

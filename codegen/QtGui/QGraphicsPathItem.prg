@@ -9,8 +9,6 @@ REQUEST QRECTF
 
 CLASS QGraphicsPathItem INHERIT QAbstractGraphicsShapeItem
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -120,27 +118,12 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_BOUNDINGRECT )
 /*
 virtual bool contains ( const QPointF & point ) const
 */
-HB_FUNC_STATIC( QGRAPHICSPATHITEM_CONTAINS )
-{
-  QGraphicsPathItem * obj = (QGraphicsPathItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->contains ( *PQPOINTF(1) ) );
-  }
-}
+$virtualMethod=|bool|contains|const QPointF &
 
 /*
 virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 */
-HB_FUNC_STATIC( QGRAPHICSPATHITEM_ISOBSCUREDBY )
-{
-  QGraphicsPathItem * obj = (QGraphicsPathItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QGraphicsItem * par1 = (const QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->isObscuredBy ( par1 ) );
-  }
-}
+$virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
 
 /*
 virtual QPainterPath opaqueArea () const
@@ -185,13 +168,6 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_SHAPE )
 /*
 virtual int type () const
 */
-HB_FUNC_STATIC( QGRAPHICSPATHITEM_TYPE )
-{
-  QGraphicsPathItem * obj = (QGraphicsPathItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->type () );
-  }
-}
+$virtualMethod=|int|type|
 
 #pragma ENDDUMP

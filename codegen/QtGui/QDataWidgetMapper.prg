@@ -12,8 +12,6 @@ REQUEST QMODELINDEX
 
 CLASS QDataWidgetMapper INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addMapping1
@@ -131,298 +129,116 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_CLEARMAPPING )
 /*
 int currentIndex () const
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_CURRENTINDEX )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->currentIndex () );
-  }
-}
+$method=|int|currentIndex|
 
 /*
 QAbstractItemDelegate * itemDelegate () const
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_ITEMDELEGATE )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractItemDelegate * ptr = obj->itemDelegate ();
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMDELEGATE" );
-  }
-}
+$method=|QAbstractItemDelegate *|itemDelegate|
 
 /*
 QByteArray mappedPropertyName ( QWidget * widget ) const
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDPROPERTYNAME )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->mappedPropertyName ( PQWIDGET(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
+$method=|QByteArray|mappedPropertyName|QWidget *
 
 /*
 int mappedSection ( QWidget * widget ) const
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDSECTION )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->mappedSection ( PQWIDGET(1) ) );
-  }
-}
+$method=|int|mappedSection|QWidget *
 
 /*
 QWidget * mappedWidgetAt ( int section ) const
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDWIDGETAT )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->mappedWidgetAt ( PINT(1) );
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|mappedWidgetAt|int
 
 /*
 QAbstractItemModel * model () const
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_MODEL )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractItemModel * ptr = obj->model ();
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
-  }
-}
+$method=|QAbstractItemModel *|model|
 
 /*
 Qt::Orientation orientation () const
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_ORIENTATION )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RENUM( obj->orientation () );
-  }
-}
+$method=|Qt::Orientation|orientation|
 
 /*
 void removeMapping ( QWidget * widget )
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_REMOVEMAPPING )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->removeMapping ( PQWIDGET(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeMapping|QWidget *
 
 /*
 QModelIndex rootIndex () const
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_ROOTINDEX )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->rootIndex () );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
+$method=|QModelIndex|rootIndex|
 
 /*
 void setItemDelegate ( QAbstractItemDelegate * delegate )
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETITEMDELEGATE )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractItemDelegate * par1 = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setItemDelegate ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setItemDelegate|QAbstractItemDelegate *
 
 /*
 void setModel ( QAbstractItemModel * model )
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETMODEL )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractItemModel * par1 = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setModel ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setModel|QAbstractItemModel *
 
 /*
 void setOrientation ( Qt::Orientation aOrientation )
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETORIENTATION )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setOrientation ( (Qt::Orientation) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOrientation|Qt::Orientation
 
 /*
 void setRootIndex ( const QModelIndex & index )
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETROOTINDEX )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRootIndex ( *PQMODELINDEX(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRootIndex|const QModelIndex &
 
 /*
 void setSubmitPolicy ( SubmitPolicy policy )
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETSUBMITPOLICY )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setSubmitPolicy ( (QDataWidgetMapper::SubmitPolicy) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSubmitPolicy|QDataWidgetMapper::SubmitPolicy
 
 /*
 SubmitPolicy submitPolicy () const
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_SUBMITPOLICY )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->submitPolicy () );
-  }
-}
+$method=|QDataWidgetMapper::SubmitPolicy|submitPolicy|
 
 /*
 void revert ()
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_REVERT )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->revert ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|revert|
 
 /*
 virtual void setCurrentIndex ( int index )
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETCURRENTINDEX )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCurrentIndex ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|setCurrentIndex|int
 
 /*
 void setCurrentModelIndex ( const QModelIndex & index )
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETCURRENTMODELINDEX )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCurrentModelIndex ( *PQMODELINDEX(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCurrentModelIndex|const QModelIndex &
 
 /*
 bool submit ()
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_SUBMIT )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->submit () );
-  }
-}
+$method=|bool|submit|
 
 /*
 void toFirst ()
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOFIRST )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->toFirst ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|toFirst|
 
 /*
 void toLast ()
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOLAST )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->toLast ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|toLast|
 
 /*
 void toNext ()
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_TONEXT )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->toNext ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|toNext|
 
 /*
 void toPrevious ()
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOPREVIOUS )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->toPrevious ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|toPrevious|
 
 #pragma ENDDUMP

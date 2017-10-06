@@ -98,26 +98,12 @@ $deleteMethod
 /*
 int addWidget ( QWidget * widget )
 */
-HB_FUNC_STATIC( QSTACKEDLAYOUT_ADDWIDGET )
-{
-  QStackedLayout * obj = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->addWidget ( PQWIDGET(1) ) );
-  }
-}
+$method=|int|addWidget|QWidget *
 
 /*
 int currentIndex () const
 */
-HB_FUNC_STATIC( QSTACKEDLAYOUT_CURRENTINDEX )
-{
-  QStackedLayout * obj = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->currentIndex () );
-  }
-}
+$method=|int|currentIndex|
 
 /*
 QWidget * currentWidget () const
@@ -135,14 +121,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_CURRENTWIDGET )
 /*
 int insertWidget ( int index, QWidget * widget )
 */
-HB_FUNC_STATIC( QSTACKEDLAYOUT_INSERTWIDGET )
-{
-  QStackedLayout * obj = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->insertWidget ( PINT(1), PQWIDGET(2) ) );
-  }
-}
+$method=|int|insertWidget|int,QWidget *
 
 /*
 void setStackingMode ( StackingMode stackingMode )

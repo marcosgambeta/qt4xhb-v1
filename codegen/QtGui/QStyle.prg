@@ -14,8 +14,6 @@ REQUEST QPOINT
 
 CLASS QStyle INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD combinedLayoutSpacing
    METHOD drawComplexControl
@@ -73,17 +71,7 @@ $deleteMethod
 /*
 int combinedLayoutSpacing ( QSizePolicy::ControlTypes controls1, QSizePolicy::ControlTypes controls2, Qt::Orientation orientation, QStyleOption * option = 0, QWidget * widget = 0 ) const
 */
-HB_FUNC_STATIC( QSTYLE_COMBINEDLAYOUTSPACING )
-{
-  QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    QStyleOption * par4 = ISNIL(4)? 0 : (QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RINT( obj->combinedLayoutSpacing ( (QSizePolicy::ControlTypes) par1, (QSizePolicy::ControlTypes) par2, (Qt::Orientation) hb_parni(3), par4, OPQWIDGET(5,0) ) );
-  }
-}
+$method=|int|combinedLayoutSpacing|QSizePolicy::ControlTypes,QSizePolicy::ControlTypes,Qt::Orientation,QStyleOption *=0,QWidget *=0
 
 /*
 virtual void drawComplexControl ( ComplexControl control, const QStyleOptionComplex * option, QPainter * painter, const QWidget * widget = 0 ) const = 0
@@ -219,33 +207,12 @@ HB_FUNC_STATIC( QSTYLE_ITEMTEXTRECT )
 /*
 int layoutSpacing ( QSizePolicy::ControlType control1, QSizePolicy::ControlType control2, Qt::Orientation orientation, const QStyleOption * option = 0, const QWidget * widget = 0 ) const
 */
-HB_FUNC_STATIC( QSTYLE_LAYOUTSPACING )
-{
-  QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    const QStyleOption * par4 = ISNIL(4)? 0 : (const QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    const QWidget * par5 = ISNIL(5)? 0 : (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RINT( obj->layoutSpacing ( (QSizePolicy::ControlType) par1, (QSizePolicy::ControlType) par2, (Qt::Orientation) hb_parni(3), par4, par5 ) );
-  }
-}
+$method=|int|layoutSpacing|QSizePolicy::ControlType,QSizePolicy::ControlType,Qt::Orientation,const QStyleOption *=0,const QWidget *=0
 
 /*
 virtual int pixelMetric ( PixelMetric metric, const QStyleOption * option = 0, const QWidget * widget = 0 ) const = 0
 */
-HB_FUNC_STATIC( QSTYLE_PIXELMETRIC )
-{
-  QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    const QStyleOption * par2 = ISNIL(2)? 0 : (const QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    const QWidget * par3 = ISNIL(3)? 0 : (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RINT( obj->pixelMetric ( (QStyle::PixelMetric) par1, par2, par3 ) );
-  }
-}
+$virtualMethod=|int|pixelMetric|QStyle::PixelMetric,const QStyleOption *=0,const QWidget *=0
 
 /*
 virtual void polish ( QWidget * widget )
@@ -369,18 +336,7 @@ HB_FUNC_STATIC( QSTYLE_STANDARDPALETTE )
 /*
 virtual int styleHint ( StyleHint hint, const QStyleOption * option = 0, const QWidget * widget = 0, QStyleHintReturn * returnData = 0 ) const = 0
 */
-HB_FUNC_STATIC( QSTYLE_STYLEHINT )
-{
-  QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    const QStyleOption * par2 = ISNIL(2)? 0 : (const QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    const QWidget * par3 = ISNIL(3)? 0 : (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QStyleHintReturn * par4 = ISNIL(4)? 0 : (QStyleHintReturn *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RINT( obj->styleHint ( (QStyle::StyleHint) par1, par2, par3, par4 ) );
-  }
-}
+$virtualMethod=|int|styleHint|QStyle::StyleHint,const QStyleOption *=0,const QWidget *=0,QStyleHintReturn *=0
 
 /*
 virtual QRect subControlRect ( ComplexControl control, const QStyleOptionComplex * option, SubControl subControl, const QWidget * widget = 0 ) const = 0
@@ -471,30 +427,19 @@ HB_FUNC_STATIC( QSTYLE_ALIGNEDRECT )
 }
 
 /*
-int sliderPositionFromValue ( int min, int max, int logicalValue, int span, bool upsideDown = false )
+static int sliderPositionFromValue ( int min, int max, int logicalValue, int span, bool upsideDown = false )
 */
-HB_FUNC_STATIC( QSTYLE_SLIDERPOSITIONFROMVALUE )
-{
-  RINT( QStyle::sliderPositionFromValue ( PINT(1), PINT(2), PINT(3), PINT(4), OPBOOL(5,false) ) );
-}
+$staticMethod=|int|sliderPositionFromValue|int,int,int,int,bool=false
 
 /*
-int sliderValueFromPosition ( int min, int max, int position, int span, bool upsideDown = false )
+static int sliderValueFromPosition ( int min, int max, int position, int span, bool upsideDown = false )
 */
-HB_FUNC_STATIC( QSTYLE_SLIDERVALUEFROMPOSITION )
-{
-  RINT( QStyle::sliderValueFromPosition ( PINT(1), PINT(2), PINT(3), PINT(4), OPBOOL(5,false) ) );
-}
+$staticMethod=|int|sliderValueFromPosition|int,int,int,int,bool=false
 
 /*
-Qt::Alignment visualAlignment ( Qt::LayoutDirection direction, Qt::Alignment alignment )
+static Qt::Alignment visualAlignment ( Qt::LayoutDirection direction, Qt::Alignment alignment )
 */
-HB_FUNC_STATIC( QSTYLE_VISUALALIGNMENT )
-{
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
-  hb_retni( (int) QStyle::visualAlignment ( (Qt::LayoutDirection) par1, (Qt::Alignment) par2 ) );
-}
+$staticMethod=|Qt::Alignment|visualAlignment|Qt::LayoutDirection,Qt::Alignment
 
 /*
 QPoint visualPos ( Qt::LayoutDirection direction, const QRect & boundingRectangle, const QPoint & logicalPosition )

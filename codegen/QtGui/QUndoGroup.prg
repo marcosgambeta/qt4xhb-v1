@@ -9,8 +9,6 @@ REQUEST QACTION
 
 CLASS QUndoGroup INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD activeStack
@@ -91,26 +89,12 @@ HB_FUNC_STATIC( QUNDOGROUP_ADDSTACK )
 /*
 bool canRedo () const
 */
-HB_FUNC_STATIC( QUNDOGROUP_CANREDO )
-{
-  QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->canRedo () );
-  }
-}
+$method=|bool|canRedo|
 
 /*
 bool canUndo () const
 */
-HB_FUNC_STATIC( QUNDOGROUP_CANUNDO )
-{
-  QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->canUndo () );
-  }
-}
+$method=|bool|canUndo|
 
 /*
 QAction * createRedoAction ( QObject * parent, const QString & prefix = QString() ) const
@@ -141,14 +125,7 @@ HB_FUNC_STATIC( QUNDOGROUP_CREATEUNDOACTION )
 /*
 bool isClean () const
 */
-HB_FUNC_STATIC( QUNDOGROUP_ISCLEAN )
-{
-  QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isClean () );
-  }
-}
+$method=|bool|isClean|
 
 /*
 QString redoText () const

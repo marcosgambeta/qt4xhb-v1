@@ -10,8 +10,6 @@ REQUEST QSIZE
 
 CLASS QWorkspace INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD activeWindow
@@ -101,14 +99,7 @@ HB_FUNC_STATIC( QWORKSPACE_BACKGROUND )
 /*
 bool scrollBarsEnabled () const
 */
-HB_FUNC_STATIC( QWORKSPACE_SCROLLBARSENABLED )
-{
-  QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->scrollBarsEnabled () );
-  }
-}
+$method=|bool|scrollBarsEnabled|
 
 /*
 void setBackground ( const QBrush & background )

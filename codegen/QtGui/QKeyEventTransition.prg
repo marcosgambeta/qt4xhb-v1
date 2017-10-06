@@ -71,52 +71,21 @@ $deleteMethod
 /*
 int key () const
 */
-HB_FUNC_STATIC( QKEYEVENTTRANSITION_KEY )
-{
-  QKeyEventTransition * obj = (QKeyEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->key () );
-  }
-}
+$method=|int|key|
 
 /*
 Qt::KeyboardModifiers modifierMask () const
 */
-HB_FUNC_STATIC( QKEYEVENTTRANSITION_MODIFIERMASK )
-{
-  QKeyEventTransition * obj = (QKeyEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->modifierMask () );
-  }
-}
+$method=|Qt::KeyboardModifiers|modifierMask|
 
 /*
 void setKey ( int key )
 */
-HB_FUNC_STATIC( QKEYEVENTTRANSITION_SETKEY )
-{
-  QKeyEventTransition * obj = (QKeyEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setKey ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setKey|int
 
 /*
 void setModifierMask ( Qt::KeyboardModifiers modifierMask )
 */
-HB_FUNC_STATIC( QKEYEVENTTRANSITION_SETMODIFIERMASK )
-{
-  QKeyEventTransition * obj = (QKeyEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setModifierMask ( (Qt::KeyboardModifiers) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setModifierMask|Qt::KeyboardModifiers
 
 #pragma ENDDUMP

@@ -9,8 +9,6 @@ REQUEST QSIZE
 
 CLASS QScrollArea INHERIT QAbstractScrollArea
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD alignment
@@ -157,26 +155,12 @@ HB_FUNC_STATIC( QSCROLLAREA_WIDGET )
 /*
 bool widgetResizable () const
 */
-HB_FUNC_STATIC( QSCROLLAREA_WIDGETRESIZABLE )
-{
-  QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->widgetResizable () );
-  }
-}
+$method=|bool|widgetResizable|
 
 /*
 virtual bool focusNextPrevChild ( bool next )
 */
-HB_FUNC_STATIC( QSCROLLAREA_FOCUSNEXTPREVCHILD )
-{
-  QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->focusNextPrevChild ( PBOOL(1) ) );
-  }
-}
+$virtualMethod=|bool|focusNextPrevChild|bool
 
 /*
 virtual QSize sizeHint () const

@@ -11,8 +11,6 @@ REQUEST QSIZE
 
 CLASS QMdiSubWindow INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD isShaded
    METHOD keyboardPageStep
@@ -61,207 +59,81 @@ HB_FUNC_STATIC( QMDISUBWINDOW_NEW )
 /*
 bool isShaded () const
 */
-HB_FUNC_STATIC( QMDISUBWINDOW_ISSHADED )
-{
-  QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isShaded () );
-  }
-}
+$method=|bool|isShaded|
 
 /*
 int keyboardPageStep () const
 */
-HB_FUNC_STATIC( QMDISUBWINDOW_KEYBOARDPAGESTEP )
-{
-  QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->keyboardPageStep () );
-  }
-}
+$method=|int|keyboardPageStep|
 
 /*
 int keyboardSingleStep () const
 */
-HB_FUNC_STATIC( QMDISUBWINDOW_KEYBOARDSINGLESTEP )
-{
-  QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->keyboardSingleStep () );
-  }
-}
+$method=|int|keyboardSingleStep|
 
 /*
 QMdiArea * mdiArea () const
 */
-HB_FUNC_STATIC( QMDISUBWINDOW_MDIAREA )
-{
-  QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QMdiArea * ptr = obj->mdiArea ();
-    _qt4xhb_createReturnClass ( ptr, "QMDIAREA" );
-  }
-}
+$method=|QMdiArea *|mdiArea|
 
 /*
 void setKeyboardPageStep ( int step )
 */
-HB_FUNC_STATIC( QMDISUBWINDOW_SETKEYBOARDPAGESTEP )
-{
-  QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setKeyboardPageStep ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setKeyboardPageStep|int
 
 /*
 void setKeyboardSingleStep ( int step )
 */
-HB_FUNC_STATIC( QMDISUBWINDOW_SETKEYBOARDSINGLESTEP )
-{
-  QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setKeyboardSingleStep ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setKeyboardSingleStep|int
 
 /*
 void setOption ( SubWindowOption option, bool on = true )
 */
-HB_FUNC_STATIC( QMDISUBWINDOW_SETOPTION )
-{
-  QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setOption ( (QMdiSubWindow::SubWindowOption) par1, OPBOOL(2,true) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOption|QMdiSubWindow::SubWindowOption,bool=true
 
 /*
 void setSystemMenu ( QMenu * systemMenu )
 */
-HB_FUNC_STATIC( QMDISUBWINDOW_SETSYSTEMMENU )
-{
-  QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSystemMenu ( PQMENU(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSystemMenu|QMenu *
 
 /*
 void setWidget ( QWidget * widget )
 */
-HB_FUNC_STATIC( QMDISUBWINDOW_SETWIDGET )
-{
-  QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setWidget ( PQWIDGET(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWidget|QWidget *
 
 /*
 QMenu * systemMenu () const
 */
-HB_FUNC_STATIC( QMDISUBWINDOW_SYSTEMMENU )
-{
-  QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QMenu * ptr = obj->systemMenu ();
-    _qt4xhb_createReturnClass ( ptr, "QMENU" );
-  }
-}
+$method=|QMenu *|systemMenu|
 
 /*
 bool testOption ( SubWindowOption option ) const
 */
-HB_FUNC_STATIC( QMDISUBWINDOW_TESTOPTION )
-{
-  QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    RBOOL( obj->testOption ( (QMdiSubWindow::SubWindowOption) par1 ) );
-  }
-}
+$method=|bool|testOption|QMdiSubWindow::SubWindowOption
 
 /*
 QWidget * widget () const
 */
-HB_FUNC_STATIC( QMDISUBWINDOW_WIDGET )
-{
-  QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->widget ();
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|widget|
 
 /*
 virtual QSize minimumSizeHint () const
 */
-HB_FUNC_STATIC( QMDISUBWINDOW_MINIMUMSIZEHINT )
-{
-  QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->minimumSizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|minimumSizeHint|
 
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC_STATIC( QMDISUBWINDOW_SIZEHINT )
-{
-  QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|sizeHint|
 
 /*
 void showShaded ()
 */
-HB_FUNC_STATIC( QMDISUBWINDOW_SHOWSHADED )
-{
-  QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->showShaded ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|showShaded|
 
 /*
 void showSystemMenu ()
 */
-HB_FUNC_STATIC( QMDISUBWINDOW_SHOWSYSTEMMENU )
-{
-  QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->showSystemMenu ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|showSystemMenu|
 
 #pragma ENDDUMP

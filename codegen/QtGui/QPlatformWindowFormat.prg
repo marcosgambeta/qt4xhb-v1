@@ -141,378 +141,152 @@ $deleteMethod
 /*
 bool accum () const
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_ACCUM )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->accum () );
-  }
-}
+$method=|bool|accum|
 
 /*
 int accumBufferSize () const
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_ACCUMBUFFERSIZE )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->accumBufferSize () );
-  }
-}
+$method=|int|accumBufferSize|
 
 /*
 bool alpha () const
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_ALPHA )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->alpha () );
-  }
-}
+$method=|bool|alpha|
 
 /*
 int alphaBufferSize () const
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_ALPHABUFFERSIZE )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->alphaBufferSize () );
-  }
-}
+$method=|int|alphaBufferSize|
 
 /*
 int blueBufferSize () const
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_BLUEBUFFERSIZE )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->blueBufferSize () );
-  }
-}
+$method=|int|blueBufferSize|
 
 /*
 bool depth () const
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_DEPTH )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->depth () );
-  }
-}
+$method=|bool|depth|
 
 /*
 int depthBufferSize () const
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_DEPTHBUFFERSIZE )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->depthBufferSize () );
-  }
-}
+$method=|int|depthBufferSize|
 
 /*
 bool directRendering () const
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_DIRECTRENDERING )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->directRendering () );
-  }
-}
+$method=|bool|directRendering|
 
 /*
 bool doubleBuffer () const
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_DOUBLEBUFFER )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->doubleBuffer () );
-  }
-}
+$method=|bool|doubleBuffer|
 
 /*
 int greenBufferSize () const
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_GREENBUFFERSIZE )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->greenBufferSize () );
-  }
-}
+$method=|int|greenBufferSize|
 
 /*
 bool hasWindowSurface () const
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_HASWINDOWSURFACE )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasWindowSurface () );
-  }
-}
+$method=|bool|hasWindowSurface|
 
 /*
 int redBufferSize () const
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_REDBUFFERSIZE )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->redBufferSize () );
-  }
-}
+$method=|int|redBufferSize|
 
 /*
 bool rgba () const
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_RGBA )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->rgba () );
-  }
-}
+$method=|bool|rgba|
 
 /*
 bool sampleBuffers () const
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SAMPLEBUFFERS )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->sampleBuffers () );
-  }
-}
+$method=|bool|sampleBuffers|
 
 /*
 int samples () const
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SAMPLES )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->samples () );
-  }
-}
+$method=|int|samples|
 
 /*
 void setAccum ( bool enable )
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETACCUM )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAccum ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAccum|bool
 
 /*
 void setAccumBufferSize ( int size )
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETACCUMBUFFERSIZE )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAccumBufferSize ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAccumBufferSize|int
 
 /*
 void setAlpha ( bool enable )
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETALPHA )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAlpha ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAlpha|bool
 
 /*
 void setAlphaBufferSize ( int size )
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETALPHABUFFERSIZE )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAlphaBufferSize ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAlphaBufferSize|int
 
 /*
 void setBlueBufferSize ( int size )
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETBLUEBUFFERSIZE )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBlueBufferSize ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBlueBufferSize|int
 
 /*
 void setDepth ( bool enable )
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETDEPTH )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDepth ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDepth|bool
 
 /*
 void setDepthBufferSize ( int size )
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETDEPTHBUFFERSIZE )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDepthBufferSize ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDepthBufferSize|int
 
 /*
 void setDirectRendering ( bool enable )
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETDIRECTRENDERING )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDirectRendering ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDirectRendering|bool
 
 /*
 void setDoubleBuffer ( bool enable )
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETDOUBLEBUFFER )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDoubleBuffer ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDoubleBuffer|bool
 
 /*
 void setGreenBufferSize ( int size )
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETGREENBUFFERSIZE )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setGreenBufferSize ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setGreenBufferSize|int
 
 /*
 void setOption ( QPlatformWindowFormat::FormatOptions opt )
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETOPTION )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setOption ( (QPlatformWindowFormat::FormatOptions) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOption|QPlatformWindowFormat::FormatOptions
 
 /*
 void setRedBufferSize ( int size )
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETREDBUFFERSIZE )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRedBufferSize ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRedBufferSize|int
 
 /*
 void setRgba ( bool enable )
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETRGBA )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRgba ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRgba|bool
 
 /*
 void setSampleBuffers ( bool enable )
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETSAMPLEBUFFERS )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSampleBuffers ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSampleBuffers|bool
 
 /*
 void setSamples ( int numSamples )
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETSAMPLES )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSamples ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSamples|int
 
 /*
 void setSharedContext ( QPlatformGLContext * context )
@@ -623,63 +397,27 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SHAREDGLCONTEXT )
 /*
 bool stencil () const
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_STENCIL )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->stencil () );
-  }
-}
+$method=|bool|stencil|
 
 /*
 int stencilBufferSize () const
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_STENCILBUFFERSIZE )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->stencilBufferSize () );
-  }
-}
+$method=|int|stencilBufferSize|
 
 /*
 bool stereo () const
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_STEREO )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->stereo () );
-  }
-}
+$method=|bool|stereo|
 
 /*
 int swapInterval () const
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SWAPINTERVAL )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->swapInterval () );
-  }
-}
+$method=|int|swapInterval|
 
 /*
 bool testOption ( QPlatformWindowFormat::FormatOptions opt ) const
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_TESTOPTION )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    RBOOL( obj->testOption ( (QPlatformWindowFormat::FormatOptions) par1 ) );
-  }
-}
+$method=|bool|testOption|QPlatformWindowFormat::FormatOptions
 
 /*
 WindowApi windowApi () const

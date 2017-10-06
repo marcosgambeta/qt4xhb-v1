@@ -123,128 +123,51 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ANCHOR )
 /*
 qreal horizontalSpacing () const
 */
-HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_HORIZONTALSPACING )
-{
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->horizontalSpacing () );
-  }
-}
+$method=|qreal|horizontalSpacing|
 
 /*
 void setHorizontalSpacing ( qreal spacing )
 */
-HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETHORIZONTALSPACING )
-{
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setHorizontalSpacing ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHorizontalSpacing|qreal
 
 /*
 void setSpacing ( qreal spacing )
 */
-HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETSPACING )
-{
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSpacing ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSpacing|qreal
 
 /*
 void setVerticalSpacing ( qreal spacing )
 */
-HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETVERTICALSPACING )
-{
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setVerticalSpacing ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setVerticalSpacing|qreal
 
 /*
 qreal verticalSpacing () const
 */
-HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_VERTICALSPACING )
-{
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->verticalSpacing () );
-  }
-}
+$method=|qreal|verticalSpacing|
 
 /*
 virtual int count () const
 */
-HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_COUNT )
-{
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-}
+$virtualMethod=|int|count|
 
 /*
 virtual void invalidate ()
 */
-HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_INVALIDATE )
-{
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->invalidate ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|invalidate|
 
 /*
 virtual QGraphicsLayoutItem * itemAt ( int index ) const
 */
-HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ITEMAT )
-{
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QGraphicsLayoutItem * ptr = obj->itemAt ( PINT(1) );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM" );
-  }
-}
+$virtualMethod=|QGraphicsLayoutItem *|itemAt|int
 
 /*
 virtual void removeAt ( int index )
 */
-HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_REMOVEAT )
-{
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->removeAt ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|removeAt|int
 
 /*
 virtual void setGeometry ( const QRectF & geom )
 */
-HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETGEOMETRY )
-{
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setGeometry ( *PQRECTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|setGeometry|const QRectF &
 
 #pragma ENDDUMP

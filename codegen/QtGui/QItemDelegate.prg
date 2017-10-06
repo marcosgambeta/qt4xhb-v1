@@ -8,8 +8,6 @@ REQUEST QITEMEDITORFACTORY
 
 CLASS QItemDelegate INHERIT QAbstractItemDelegate
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD hasClipping
@@ -45,14 +43,7 @@ $deleteMethod
 /*
 bool hasClipping () const
 */
-HB_FUNC_STATIC( QITEMDELEGATE_HASCLIPPING )
-{
-  QItemDelegate * obj = (QItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasClipping () );
-  }
-}
+$method=|bool|hasClipping|
 
 /*
 QItemEditorFactory * itemEditorFactory () const

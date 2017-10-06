@@ -162,14 +162,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_INSERTSTRETCH )
 /*
 qreal itemSpacing ( int index ) const
 */
-HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ITEMSPACING )
-{
-  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->itemSpacing ( PINT(1) ) );
-  }
-}
+$method=|qreal|itemSpacing|int
 
 /*
 Qt::Orientation orientation () const
@@ -241,80 +234,32 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETORIENTATION )
 /*
 void setSpacing ( qreal spacing )
 */
-HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETSPACING )
-{
-  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSpacing ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSpacing|qreal
 
 /*
 void setStretchFactor ( QGraphicsLayoutItem * item, int stretch )
 */
-HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETSTRETCHFACTOR )
-{
-  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = hb_parni(2);
-    obj->setStretchFactor ( par1, par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStretchFactor|QGraphicsLayoutItem *,int
 
 /*
 qreal spacing () const
 */
-HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SPACING )
-{
-  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->spacing () );
-  }
-}
+$method=|qreal|spacing|
 
 /*
 int stretchFactor ( QGraphicsLayoutItem * item ) const
 */
-HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_STRETCHFACTOR )
-{
-  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RINT( obj->stretchFactor ( par1 ) );
-  }
-}
+$method=|int|stretchFactor|QGraphicsLayoutItem *
 
 /*
 virtual int count () const
 */
-HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_COUNT )
-{
-  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-}
+$virtualMethod=|int|count|
 
 /*
 virtual void invalidate ()
 */
-HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_INVALIDATE )
-{
-  QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->invalidate ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|invalidate|
 
 /*
 virtual QGraphicsLayoutItem * itemAt ( int index ) const

@@ -128,51 +128,22 @@ $deleteMethod
 /*
 int bottom () const
 */
-HB_FUNC_STATIC( QITEMSELECTIONRANGE_BOTTOM )
-{
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->bottom () );
-  }
-}
+$method=|int|bottom|
 
 /*
 QModelIndex bottomRight () const
 */
-HB_FUNC_STATIC( QITEMSELECTIONRANGE_BOTTOMRIGHT )
-{
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->bottomRight () );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
+$method=|QModelIndex|bottomRight|
 
 /*
 bool contains ( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QITEMSELECTIONRANGE_CONTAINS1 )
-{
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->contains ( *PQMODELINDEX(1) ) );
-  }
-}
+$method=|bool|contains,contains1|const QModelIndex &
 
 /*
 bool contains ( int row, int column, const QModelIndex & parentIndex ) const
 */
-HB_FUNC_STATIC( QITEMSELECTIONRANGE_CONTAINS2 )
-{
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->contains ( PINT(1), PINT(2), *PQMODELINDEX(3) ) );
-  }
-}
+$method=|bool|contains,contains2|int,int,const QModelIndex &
 
 //[1]bool contains ( const QModelIndex & index ) const
 //[2]bool contains ( int row, int column, const QModelIndex & parentIndex ) const
@@ -192,14 +163,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_CONTAINS )
 /*
 int height () const
 */
-HB_FUNC_STATIC( QITEMSELECTIONRANGE_HEIGHT )
-{
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->height () );
-  }
-}
+$method=|int|height|
 
 /*
 QModelIndexList indexes () const
@@ -247,63 +211,27 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_INDEXES )
 /*
 QItemSelectionRange intersected ( const QItemSelectionRange & other ) const
 */
-HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTED )
-{
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QItemSelectionRange * ptr = new QItemSelectionRange( obj->intersected ( *PQITEMSELECTIONRANGE(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QITEMSELECTIONRANGE" );
-  }
-}
+$method=|QItemSelectionRange|intersected|const QItemSelectionRange &
 
 /*
 bool intersects ( const QItemSelectionRange & other ) const
 */
-HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTS )
-{
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->intersects ( *PQITEMSELECTIONRANGE(1) ) );
-  }
-}
+$method=|bool|intersects|const QItemSelectionRange &
 
 /*
 bool isEmpty () const
 */
-HB_FUNC_STATIC( QITEMSELECTIONRANGE_ISEMPTY )
-{
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-}
+$method=|bool|isEmpty|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QITEMSELECTIONRANGE_ISVALID )
-{
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
+$method=|bool|isValid|
 
 /*
 int left () const
 */
-HB_FUNC_STATIC( QITEMSELECTIONRANGE_LEFT )
-{
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->left () );
-  }
-}
+$method=|int|left|
 
 /*
 const QAbstractItemModel * model () const
@@ -334,51 +262,22 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_PARENT )
 /*
 int right () const
 */
-HB_FUNC_STATIC( QITEMSELECTIONRANGE_RIGHT )
-{
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->right () );
-  }
-}
+$method=|int|right|
 
 /*
 int top () const
 */
-HB_FUNC_STATIC( QITEMSELECTIONRANGE_TOP )
-{
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->top () );
-  }
-}
+$method=|int|top|
 
 /*
 QModelIndex topLeft () const
 */
-HB_FUNC_STATIC( QITEMSELECTIONRANGE_TOPLEFT )
-{
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->topLeft () );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
+$method=|QModelIndex|topLeft|
 
 /*
 int width () const
 */
-HB_FUNC_STATIC( QITEMSELECTIONRANGE_WIDTH )
-{
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->width () );
-  }
-}
+$method=|int|width|
 
 $extraMethods
 

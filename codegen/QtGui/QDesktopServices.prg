@@ -41,19 +41,12 @@ $staticMethod=|QString|displayName|QDesktopServices::StandardLocation
 /*
 static bool openUrl ( const QUrl & url )
 */
-HB_FUNC_STATIC( QDESKTOPSERVICES_OPENURL )
-{
-  RBOOL( QDesktopServices::openUrl ( *PQURL(1) ) );
-}
+$staticMethod=|bool|openUrl|const QUrl &
 
 /*
 static void setUrlHandler ( const QString & scheme, QObject * receiver, const char * method )
 */
-HB_FUNC_STATIC( QDESKTOPSERVICES_SETURLHANDLER )
-{
-  QDesktopServices::setUrlHandler ( PQSTRING(1), PQOBJECT(2), (const char *) hb_parc(3) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|setUrlHandler|const QString &,QObject *,const char *
 
 /*
 static QString storageLocation ( StandardLocation type )

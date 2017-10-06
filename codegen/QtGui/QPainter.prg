@@ -316,15 +316,7 @@ HB_FUNC_STATIC( QPAINTER_BACKGROUNDMODE )
 /*
 bool begin ( QPaintDevice * device )
 */
-HB_FUNC_STATIC( QPAINTER_BEGIN )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPaintDevice * par1 = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->begin ( par1 ) );
-  }
-}
+$method=|bool|begin|QPaintDevice *
 
 /*
 void beginNativePainting ()
@@ -2114,14 +2106,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWTILEDPIXMAP )
 /*
 bool end ()
 */
-HB_FUNC_STATIC( QPAINTER_END )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->end () );
-  }
-}
+$method=|bool|end|
 
 /*
 void endNativePainting ()
@@ -2480,14 +2465,7 @@ HB_FUNC_STATIC( QPAINTER_FONTMETRICS )
 /*
 bool hasClipping () const
 */
-HB_FUNC_STATIC( QPAINTER_HASCLIPPING )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasClipping () );
-  }
-}
+$method=|bool|hasClipping|
 
 /*
 void initFrom ( const QWidget * widget )
@@ -2506,14 +2484,7 @@ HB_FUNC_STATIC( QPAINTER_INITFROM )
 /*
 bool isActive () const
 */
-HB_FUNC_STATIC( QPAINTER_ISACTIVE )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isActive () );
-  }
-}
+$method=|bool|isActive|
 
 /*
 Qt::LayoutDirection layoutDirection () const
@@ -2530,14 +2501,7 @@ HB_FUNC_STATIC( QPAINTER_LAYOUTDIRECTION )
 /*
 qreal opacity () const
 */
-HB_FUNC_STATIC( QPAINTER_OPACITY )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->opacity () );
-  }
-}
+$method=|qreal|opacity|
 
 /*
 QPaintEngine * paintEngine () const
@@ -2606,95 +2570,37 @@ HB_FUNC_STATIC( QPAINTER_RESTORE )
 /*
 void rotate ( qreal angle )
 */
-HB_FUNC_STATIC( QPAINTER_ROTATE )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->rotate ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|rotate|qreal
 
 /*
 void save ()
 */
-HB_FUNC_STATIC( QPAINTER_SAVE )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->save ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|save|
 
 /*
 void scale ( qreal sx, qreal sy )
 */
-HB_FUNC_STATIC( QPAINTER_SCALE )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->scale ( PQREAL(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|scale|qreal,qreal
 
 /*
 void setBackground ( const QBrush & brush )
 */
-HB_FUNC_STATIC( QPAINTER_SETBACKGROUND )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBackground ( *PQBRUSH(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBackground|const QBrush &
 
 /*
 void setBackgroundMode ( Qt::BGMode mode )
 */
-HB_FUNC_STATIC( QPAINTER_SETBACKGROUNDMODE )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setBackgroundMode ( (Qt::BGMode) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBackgroundMode|Qt::BGMode
 
 /*
 void setBrush ( const QBrush & brush )
 */
-HB_FUNC_STATIC( QPAINTER_SETBRUSH1 )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBrush ( *PQBRUSH(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBrush,setBrush1|const QBrush &
 
 /*
 void setBrush ( Qt::BrushStyle style )
 */
-HB_FUNC_STATIC( QPAINTER_SETBRUSH2 )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setBrush ( (Qt::BrushStyle) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBrush,setBrush2|Qt::BrushStyle
 
 //[1]void setBrush ( const QBrush & brush )
 //[2]void setBrush ( Qt::BrushStyle style )
@@ -2714,41 +2620,17 @@ HB_FUNC_STATIC( QPAINTER_SETBRUSH )
 /*
 void setBrushOrigin ( const QPointF & position )
 */
-HB_FUNC_STATIC( QPAINTER_SETBRUSHORIGIN1 )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBrushOrigin ( *PQPOINTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBrushOrigin,setBrushOrigin1|const QPointF &
 
 /*
 void setBrushOrigin ( const QPoint & position )
 */
-HB_FUNC_STATIC( QPAINTER_SETBRUSHORIGIN2 )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBrushOrigin ( *PQPOINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBrushOrigin,setBrushOrigin2|const QPoint &
 
 /*
 void setBrushOrigin ( int x, int y )
 */
-HB_FUNC_STATIC( QPAINTER_SETBRUSHORIGIN3 )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBrushOrigin ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBrushOrigin,setBrushOrigin3|int,int
 
 //[1]void setBrushOrigin ( const QPointF & position )
 //[2]void setBrushOrigin ( const QPoint & position )
@@ -2917,56 +2799,22 @@ HB_FUNC_STATIC( QPAINTER_SETLAYOUTDIRECTION )
 /*
 void setOpacity ( qreal opacity )
 */
-HB_FUNC_STATIC( QPAINTER_SETOPACITY )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setOpacity ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOpacity|qreal
 
 /*
 void setPen ( const QPen & pen )
 */
-HB_FUNC_STATIC( QPAINTER_SETPEN1 )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPen ( *PQPEN(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPen,setPen1|const QPen &
 
 /*
 void setPen ( const QColor & color )
 */
-HB_FUNC_STATIC( QPAINTER_SETPEN2 )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QColor par1 = ISOBJECT(1)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(1));
-    obj->setPen ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPen,setPen2|const QColor &
 
 /*
 void setPen ( Qt::PenStyle style )
 */
-HB_FUNC_STATIC( QPAINTER_SETPEN3 )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setPen ( (Qt::PenStyle) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPen,setPen3|Qt::PenStyle
 
 //[1]void setPen ( const QPen & pen )
 //[2]void setPen ( const QColor & color )
@@ -3153,41 +3001,17 @@ HB_FUNC_STATIC( QPAINTER_SETWORLDTRANSFORM )
 /*
 void shear ( qreal sh, qreal sv )
 */
-HB_FUNC_STATIC( QPAINTER_SHEAR )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->shear ( PQREAL(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|shear|qreal,qreal
 
 /*
 void strokePath ( const QPainterPath & path, const QPen & pen )
 */
-HB_FUNC_STATIC( QPAINTER_STROKEPATH )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->strokePath ( *PQPAINTERPATH(1), *PQPEN(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|strokePath|const QPainterPath &,const QPen &
 
 /*
 bool testRenderHint ( RenderHint hint ) const
 */
-HB_FUNC_STATIC( QPAINTER_TESTRENDERHINT )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    RBOOL( obj->testRenderHint ( (QPainter::RenderHint) par1 ) );
-  }
-}
+$method=|bool|testRenderHint|QPainter::RenderHint
 
 /*
 const QTransform & transform () const
@@ -3231,15 +3055,7 @@ HB_FUNC_STATIC( QPAINTER_TRANSLATE2 )
 /*
 void translate ( qreal dx, qreal dy )
 */
-HB_FUNC_STATIC( QPAINTER_TRANSLATE3 )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->translate ( PQREAL(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|translate,translate3|qreal,qreal
 
 //[1]void translate ( const QPointF & offset )
 //[2]void translate ( const QPoint & offset )
@@ -3264,14 +3080,7 @@ HB_FUNC_STATIC( QPAINTER_TRANSLATE )
 /*
 bool viewTransformEnabled () const
 */
-HB_FUNC_STATIC( QPAINTER_VIEWTRANSFORMENABLED )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->viewTransformEnabled () );
-  }
-}
+$method=|bool|viewTransformEnabled|
 
 /*
 QRect viewport () const
@@ -3302,14 +3111,7 @@ HB_FUNC_STATIC( QPAINTER_WINDOW )
 /*
 bool worldMatrixEnabled () const
 */
-HB_FUNC_STATIC( QPAINTER_WORLDMATRIXENABLED )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->worldMatrixEnabled () );
-  }
-}
+$method=|bool|worldMatrixEnabled|
 
 /*
 const QTransform & worldTransform () const

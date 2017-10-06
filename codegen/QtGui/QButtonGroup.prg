@@ -8,8 +8,6 @@ REQUEST QABSTRACTBUTTON
 
 CLASS QButtonGroup INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addButton1
@@ -49,42 +47,19 @@ $destructor
 /*
 QButtonGroup ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QBUTTONGROUP_NEW )
-{
-  QButtonGroup * o = new QButtonGroup ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 void addButton ( QAbstractButton * button )
 */
-HB_FUNC_STATIC( QBUTTONGROUP_ADDBUTTON1 )
-{
-  QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractButton * par1 = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addButton ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addButton,addButton1|QAbstractButton *
 
 /*
 void addButton ( QAbstractButton * button, int id )
 */
-HB_FUNC_STATIC( QBUTTONGROUP_ADDBUTTON2 )
-{
-  QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractButton * par1 = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = hb_parni(2);
-    obj->addButton ( par1, par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addButton,addButton2|QAbstractButton *,int
 
 //[1]void addButton ( QAbstractButton * button )
 //[2]void addButton ( QAbstractButton * button, int id )
@@ -104,15 +79,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ADDBUTTON )
 /*
 QAbstractButton * button ( int id ) const
 */
-HB_FUNC_STATIC( QBUTTONGROUP_BUTTON )
-{
-  QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractButton * ptr = obj->button ( PINT(1) );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTBUTTON" );
-  }
-}
+$method=|QAbstractButton *|button|int
 
 /*
 QList<QAbstractButton *> buttons () const
@@ -160,93 +127,36 @@ HB_FUNC_STATIC( QBUTTONGROUP_BUTTONS )
 /*
 QAbstractButton * checkedButton () const
 */
-HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDBUTTON )
-{
-  QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractButton * ptr = obj->checkedButton ();
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTBUTTON" );
-  }
-}
+$method=|QAbstractButton *|checkedButton|
 
 /*
 int checkedId () const
 */
-HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDID )
-{
-  QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->checkedId () );
-  }
-}
+$method=|int|checkedId|
 
 /*
 bool exclusive () const
 */
-HB_FUNC_STATIC( QBUTTONGROUP_EXCLUSIVE )
-{
-  QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->exclusive () );
-  }
-}
+$method=|bool|exclusive|
 
 /*
 int id ( QAbstractButton * button ) const
 */
-HB_FUNC_STATIC( QBUTTONGROUP_ID )
-{
-  QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractButton * par1 = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RINT( obj->id ( par1 ) );
-  }
-}
+$method=|int|id|QAbstractButton *
 
 /*
 void removeButton ( QAbstractButton * button )
 */
-HB_FUNC_STATIC( QBUTTONGROUP_REMOVEBUTTON )
-{
-  QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractButton * par1 = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->removeButton ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeButton|QAbstractButton *
 
 /*
 void setExclusive ( bool )
 */
-HB_FUNC_STATIC( QBUTTONGROUP_SETEXCLUSIVE )
-{
-  QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setExclusive ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setExclusive|bool
 
 /*
 void setId ( QAbstractButton * button, int id )
 */
-HB_FUNC_STATIC( QBUTTONGROUP_SETID )
-{
-  QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractButton * par1 = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = hb_parni(2);
-    obj->setId ( par1, par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setId|QAbstractButton *,int
 
 #pragma ENDDUMP

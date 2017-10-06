@@ -9,8 +9,6 @@ REQUEST QPAINTERPATH
 
 CLASS QGraphicsEllipseItem INHERIT QAbstractGraphicsShapeItem
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new3
@@ -182,26 +180,12 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SETSTARTANGLE )
 /*
 int spanAngle () const
 */
-HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SPANANGLE )
-{
-  QGraphicsEllipseItem * obj = (QGraphicsEllipseItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->spanAngle () );
-  }
-}
+$method=|int|spanAngle|
 
 /*
 int startAngle () const
 */
-HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_STARTANGLE )
-{
-  QGraphicsEllipseItem * obj = (QGraphicsEllipseItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->startAngle () );
-  }
-}
+$method=|int|startAngle|
 
 /*
 virtual QRectF boundingRect () const
@@ -219,40 +203,17 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_BOUNDINGRECT )
 /*
 virtual bool contains ( const QPointF & point ) const
 */
-HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_CONTAINS )
-{
-  QGraphicsEllipseItem * obj = (QGraphicsEllipseItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->contains ( *PQPOINTF(1) ) );
-  }
-}
+$virtualMethod=|bool|contains|const QPointF &
 
 /*
 virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 */
-HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_ISOBSCUREDBY )
-{
-  QGraphicsEllipseItem * obj = (QGraphicsEllipseItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QGraphicsItem * par1 = (const QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->isObscuredBy ( par1 ) );
-  }
-}
+$virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
 
 /*
 virtual QPainterPath opaqueArea () const
 */
-HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_OPAQUEAREA )
-{
-  QGraphicsEllipseItem * obj = (QGraphicsEllipseItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPainterPath * ptr = new QPainterPath( obj->opaqueArea () );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
-  }
-}
+$virtualMethod=|QPainterPath|opaqueArea|
 
 /*
 virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
@@ -284,13 +245,6 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SHAPE )
 /*
 virtual int type () const
 */
-HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_TYPE )
-{
-  QGraphicsEllipseItem * obj = (QGraphicsEllipseItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->type () );
-  }
-}
+$virtualMethod=|int|type|
 
 #pragma ENDDUMP

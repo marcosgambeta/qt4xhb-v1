@@ -38,13 +38,6 @@ $deleteMethod
 /*
 bool toggle() const
 */
-HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_TOGGLE )
-{
-  QToolBarChangeEvent * obj = (QToolBarChangeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->toggle () );
-  }
-}
+$method=|bool|toggle|
 
 #pragma ENDDUMP

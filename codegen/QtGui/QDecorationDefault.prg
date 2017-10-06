@@ -43,16 +43,7 @@ $deleteMethod
 /*
 virtual bool paint ( QPainter * painter, const QWidget * widget, int decorationRegion = All, DecorationState state = Normal )
 */
-HB_FUNC_STATIC( QDECORATIONDEFAULT_PAINT )
-{
-  QDecorationDefault * obj = (QDecorationDefault *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QWidget * par2 = (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par4 = ISNIL(4)? (int) QDecoration::Normal : hb_parni(4);
-    RBOOL( obj->paint ( PQPAINTER(1), par2, OPINT(3,QDecoration::All), (QDecoration::DecorationState) par4 ) );
-  }
-}
+$virtualMethod=|bool|paint|QPainter *,const QWidget *,int=QDecoration::All,QDecoration::DecorationState=QDecoration::Normal
 
 /*
 virtual QRegion region ( const QWidget * widget, const QRect & rect, int decorationRegion = All )

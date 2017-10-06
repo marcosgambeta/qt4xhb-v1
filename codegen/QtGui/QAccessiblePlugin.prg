@@ -8,8 +8,6 @@ REQUEST QACCESSIBLEINTERFACE
 
 CLASS QAccessiblePlugin INHERIT QObject,QAccessible
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD create
    METHOD keys
@@ -33,26 +31,11 @@ $deleteMethod
 /*
 virtual QAccessibleInterface * create ( const QString & key, QObject * object ) = 0
 */
-HB_FUNC_STATIC( QACCESSIBLEPLUGIN_CREATE )
-{
-  QAccessiblePlugin * obj = (QAccessiblePlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAccessibleInterface * ptr = obj->create ( PQSTRING(1), PQOBJECT(2) );
-    _qt4xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
-  }
-}
+$virtualMethod=|QAccessibleInterface *|create|const QString &,QObject *
 
 /*
 virtual QStringList keys () const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLEPLUGIN_KEYS )
-{
-  QAccessiblePlugin * obj = (QAccessiblePlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->keys () );
-  }
-}
+$virtualMethod=|QStringList|keys|
 
 #pragma ENDDUMP

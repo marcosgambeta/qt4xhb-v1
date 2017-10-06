@@ -10,8 +10,6 @@ REQUEST QSIZE
 
 CLASS QMenuBar INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD activeAction
@@ -57,26 +55,14 @@ $destructor
 /*
 QMenuBar ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QMENUBAR_NEW )
-{
-  QMenuBar * o = new QMenuBar ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QWidget *=0
 
 $deleteMethod
 
 /*
 QAction * activeAction () const
 */
-HB_FUNC_STATIC( QMENUBAR_ACTIVEACTION )
-{
-  QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->activeAction ();
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|activeAction|
 
 /*
 QAction * addAction ( const QString & text )
@@ -86,29 +72,12 @@ $method=|QAction *|addAction,addAction1|const QString &
 /*
 QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
 */
-HB_FUNC_STATIC( QMENUBAR_ADDACTION2 )
-{
-  QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QObject * par2 = (const QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QAction * ptr = obj->addAction ( PQSTRING(1), par2, (const char *) hb_parc(3) );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|addAction,addAction2|const QString &,const QObject *,const char *
 
 /*
 void addAction ( QAction * action )
 */
-HB_FUNC_STATIC( QMENUBAR_ADDACTION3 )
-{
-  QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->addAction ( PQACTION(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addAction,addAction3|QAction *
 
 //[1]QAction * addAction ( const QString & text )
 //[2]QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
@@ -133,15 +102,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDACTION )
 /*
 QAction * addMenu ( QMenu * menu )
 */
-HB_FUNC_STATIC( QMENUBAR_ADDMENU1 )
-{
-  QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->addMenu ( PQMENU(1) );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|addMenu,addMenu1|QMenu *
 
 /*
 QMenu * addMenu ( const QString & title )
@@ -151,16 +112,7 @@ $method=|QMenu *|addMenu,addMenu2|const QString &
 /*
 QMenu * addMenu ( const QIcon & icon, const QString & title )
 */
-HB_FUNC_STATIC( QMENUBAR_ADDMENU3 )
-{
-  QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
-    QMenu * ptr = obj->addMenu ( par1, PQSTRING(2) );
-    _qt4xhb_createReturnClass ( ptr, "QMENU" );
-  }
-}
+$method=|QMenu *|addMenu,addMenu3|const QIcon &,const QString &
 
 //[1]QAction * addMenu ( QMenu * menu )
 //[2]QMenu * addMenu ( const QString & title )
@@ -185,167 +137,66 @@ HB_FUNC_STATIC( QMENUBAR_ADDMENU )
 /*
 QAction * addSeparator ()
 */
-HB_FUNC_STATIC( QMENUBAR_ADDSEPARATOR )
-{
-  QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->addSeparator ();
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|addSeparator|
 
 /*
 void clear ()
 */
-HB_FUNC_STATIC( QMENUBAR_CLEAR )
-{
-  QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clear|
 
 /*
 QAction * insertMenu ( QAction * before, QMenu * menu )
 */
-HB_FUNC_STATIC( QMENUBAR_INSERTMENU )
-{
-  QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->insertMenu ( PQACTION(1), PQMENU(2) );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|insertMenu|QAction *,QMenu *
 
 /*
 QAction * insertSeparator ( QAction * before )
 */
-HB_FUNC_STATIC( QMENUBAR_INSERTSEPARATOR )
-{
-  QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->insertSeparator ( PQACTION(1) );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|insertSeparator|QAction *
 
 /*
 bool isDefaultUp () const
 */
-HB_FUNC_STATIC( QMENUBAR_ISDEFAULTUP )
-{
-  QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isDefaultUp () );
-  }
-}
+$method=|bool|isDefaultUp|
 
 /*
 bool isNativeMenuBar () const
 */
-HB_FUNC_STATIC( QMENUBAR_ISNATIVEMENUBAR )
-{
-  QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isNativeMenuBar () );
-  }
-}
+$method=|bool|isNativeMenuBar|
 
 /*
 void setActiveAction ( QAction * act )
 */
-HB_FUNC_STATIC( QMENUBAR_SETACTIVEACTION )
-{
-  QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setActiveAction ( PQACTION(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setActiveAction|QAction *
 
 /*
 void setDefaultUp ( bool )
 */
-HB_FUNC_STATIC( QMENUBAR_SETDEFAULTUP )
-{
-  QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDefaultUp ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDefaultUp|bool
 
 /*
 void setNativeMenuBar ( bool nativeMenuBar )
 */
-HB_FUNC_STATIC( QMENUBAR_SETNATIVEMENUBAR )
-{
-  QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setNativeMenuBar ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setNativeMenuBar|bool
 
 /*
 virtual int heightForWidth ( int ) const
 */
-HB_FUNC_STATIC( QMENUBAR_HEIGHTFORWIDTH )
-{
-  QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->heightForWidth ( PINT(1) ) );
-  }
-}
+$virtualMethod=|int|heightForWidth|int
 
 /*
 virtual QSize minimumSizeHint () const
 */
-HB_FUNC_STATIC( QMENUBAR_MINIMUMSIZEHINT )
-{
-  QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->minimumSizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|minimumSizeHint|
 
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC_STATIC( QMENUBAR_SIZEHINT )
-{
-  QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|sizeHint|
 
 /*
 virtual void setVisible ( bool visible )
 */
-HB_FUNC_STATIC( QMENUBAR_SETVISIBLE )
-{
-  QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setVisible ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|setVisible|bool
 
 #pragma ENDDUMP

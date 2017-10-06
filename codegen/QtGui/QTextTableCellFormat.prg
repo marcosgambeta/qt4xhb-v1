@@ -47,126 +47,51 @@ $deleteMethod
 /*
 qreal bottomPadding () const
 */
-HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_BOTTOMPADDING )
-{
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->bottomPadding () );
-  }
-}
+$method=|qreal|bottomPadding|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_ISVALID )
-{
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
+$method=|bool|isValid|
 
 /*
 qreal leftPadding () const
 */
-HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_LEFTPADDING )
-{
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->leftPadding () );
-  }
-}
+$method=|qreal|leftPadding|
 
 /*
 qreal rightPadding () const
 */
-HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_RIGHTPADDING )
-{
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->rightPadding () );
-  }
-}
+$method=|qreal|rightPadding|
 
 /*
 void setBottomPadding ( qreal padding )
 */
-HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETBOTTOMPADDING )
-{
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBottomPadding ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBottomPadding|qreal
 
 /*
 void setLeftPadding ( qreal padding )
 */
-HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETLEFTPADDING )
-{
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setLeftPadding ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setLeftPadding|qreal
 
 /*
 void setPadding ( qreal padding )
 */
-HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETPADDING )
-{
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPadding ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPadding|qreal
 
 /*
 void setRightPadding ( qreal padding )
 */
-HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETRIGHTPADDING )
-{
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRightPadding ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRightPadding|qreal
 
 /*
 void setTopPadding ( qreal padding )
 */
-HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETTOPPADDING )
-{
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTopPadding ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTopPadding|qreal
 
 /*
 qreal topPadding () const
 */
-HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_TOPPADDING )
-{
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->topPadding () );
-  }
-}
+$method=|qreal|topPadding|
 
 #pragma ENDDUMP

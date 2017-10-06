@@ -11,8 +11,6 @@ REQUEST QTEXTFORMAT
 
 CLASS QInputContext INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD actions
    METHOD filterEvent
@@ -93,41 +91,17 @@ HB_FUNC_STATIC( QINPUTCONTEXT_ACTIONS )
 /*
 virtual bool filterEvent ( const QEvent * event )
 */
-HB_FUNC_STATIC( QINPUTCONTEXT_FILTEREVENT )
-{
-  QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QEvent * par1 = (const QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->filterEvent ( par1 ) );
-  }
-}
+$virtualMethod=|bool|filterEvent|const QEvent *
 
 /*
 QWidget * focusWidget () const
 */
-HB_FUNC_STATIC( QINPUTCONTEXT_FOCUSWIDGET )
-{
-  QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->focusWidget ();
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|focusWidget|
 
 /*
 virtual QFont font () const
 */
-HB_FUNC_STATIC( QINPUTCONTEXT_FONT )
-{
-  QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QFont * ptr = new QFont( obj->font () );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
-  }
-}
+$virtualMethod=|QFont|font|
 
 /*
 virtual QString identifierName () = 0
@@ -137,14 +111,7 @@ $virtualMethod=|QString|identifierName|
 /*
 virtual bool isComposing () const = 0
 */
-HB_FUNC_STATIC( QINPUTCONTEXT_ISCOMPOSING )
-{
-  QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isComposing () );
-  }
-}
+$virtualMethod=|bool|isComposing|
 
 /*
 virtual QString language () = 0
@@ -154,94 +121,36 @@ $virtualMethod=|QString|language|
 /*
 virtual void mouseHandler ( int x, QMouseEvent * event )
 */
-HB_FUNC_STATIC( QINPUTCONTEXT_MOUSEHANDLER )
-{
-  QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QMouseEvent * par2 = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->mouseHandler ( PINT(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|mouseHandler|int,QMouseEvent *
 
 /*
 virtual void reset () = 0
 */
-HB_FUNC_STATIC( QINPUTCONTEXT_RESET )
-{
-  QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->reset ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|reset|
 
 /*
 void sendEvent ( const QInputMethodEvent & event )
 */
-HB_FUNC_STATIC( QINPUTCONTEXT_SENDEVENT )
-{
-  QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->sendEvent ( *PQINPUTMETHODEVENT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|sendEvent|const QInputMethodEvent &
 
 /*
 virtual void setFocusWidget ( QWidget * widget )
 */
-HB_FUNC_STATIC( QINPUTCONTEXT_SETFOCUSWIDGET )
-{
-  QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFocusWidget ( PQWIDGET(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|setFocusWidget|QWidget *
 
 /*
 QTextFormat standardFormat ( StandardFormat s ) const
 */
-HB_FUNC_STATIC( QINPUTCONTEXT_STANDARDFORMAT )
-{
-  QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    QTextFormat * ptr = new QTextFormat( obj->standardFormat ( (QInputContext::StandardFormat) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTFORMAT" );
-  }
-}
+$method=|QTextFormat|standardFormat|QInputContext::StandardFormat
 
 /*
 virtual void update ()
 */
-HB_FUNC_STATIC( QINPUTCONTEXT_UPDATE )
-{
-  QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->update ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|update|
 
 /*
 virtual void widgetDestroyed ( QWidget * widget )
 */
-HB_FUNC_STATIC( QINPUTCONTEXT_WIDGETDESTROYED )
-{
-  QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->widgetDestroyed ( PQWIDGET(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|widgetDestroyed|QWidget *
 
 #pragma ENDDUMP

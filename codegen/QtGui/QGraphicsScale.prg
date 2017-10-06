@@ -82,90 +82,36 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_SETORIGIN )
 /*
 void setXScale ( qreal )
 */
-HB_FUNC_STATIC( QGRAPHICSSCALE_SETXSCALE )
-{
-  QGraphicsScale * obj = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setXScale ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setXScale|qreal
 
 /*
 void setYScale ( qreal )
 */
-HB_FUNC_STATIC( QGRAPHICSSCALE_SETYSCALE )
-{
-  QGraphicsScale * obj = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setYScale ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setYScale|qreal
 
 /*
 void setZScale ( qreal )
 */
-HB_FUNC_STATIC( QGRAPHICSSCALE_SETZSCALE )
-{
-  QGraphicsScale * obj = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setZScale ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setZScale|qreal
 
 /*
 qreal xScale () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCALE_XSCALE )
-{
-  QGraphicsScale * obj = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->xScale () );
-  }
-}
+$method=|qreal|xScale|
 
 /*
 qreal yScale () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCALE_YSCALE )
-{
-  QGraphicsScale * obj = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->yScale () );
-  }
-}
+$method=|qreal|yScale|
 
 /*
 qreal zScale () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCALE_ZSCALE )
-{
-  QGraphicsScale * obj = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->zScale () );
-  }
-}
+$method=|qreal|zScale|
 
 /*
 virtual void applyTo ( QMatrix4x4 * matrix ) const
 */
-HB_FUNC_STATIC( QGRAPHICSSCALE_APPLYTO )
-{
-  QGraphicsScale * obj = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QMatrix4x4 * par1 = (QMatrix4x4 *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->applyTo ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|applyTo|QMatrix4x4 *
 
 #pragma ENDDUMP

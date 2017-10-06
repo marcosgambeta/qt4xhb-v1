@@ -198,27 +198,12 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETFORMAT )
 /*
 bool write ( const QTextDocument * document )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_WRITE1 )
-{
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QTextDocument * par1 = (const QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->write ( par1 ) );
-  }
-}
+$method=|bool|write,write1|const QTextDocument *
 
 /*
 bool write ( const QTextDocumentFragment & fragment )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_WRITE2 )
-{
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->write ( *PQTEXTDOCUMENTFRAGMENT(1) ) );
-  }
-}
+$method=|bool|write,write2|const QTextDocumentFragment &
 
 //[1]bool write ( const QTextDocument * document )
 //[2]bool write ( const QTextDocumentFragment & fragment )

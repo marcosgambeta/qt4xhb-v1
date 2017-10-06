@@ -42,79 +42,31 @@ $deleteMethod
 /*
 QBrush brush () const
 */
-HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_BRUSH )
-{
-  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QBrush * ptr = new QBrush( obj->brush () );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
-  }
-}
+$method=|QBrush|brush|
 
 /*
 QPen pen () const
 */
-HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_PEN )
-{
-  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPen * ptr = new QPen( obj->pen () );
-    _qt4xhb_createReturnClass ( ptr, "QPEN", true );
-  }
-}
+$method=|QPen|pen|
 
 /*
 void setBrush ( const QBrush & brush )
 */
-HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_SETBRUSH )
-{
-  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBrush ( *PQBRUSH(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBrush|const QBrush &
 
 /*
 void setPen ( const QPen & pen )
 */
-HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_SETPEN )
-{
-  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPen ( *PQPEN(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPen|const QPen &
 
 /*
 virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 */
-HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_ISOBSCUREDBY )
-{
-  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QGraphicsItem * par1 = (const QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->isObscuredBy ( par1 ) );
-  }
-}
+$virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
 
 /*
 virtual QPainterPath opaqueArea () const
 */
-HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_OPAQUEAREA )
-{
-  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPainterPath * ptr = new QPainterPath( obj->opaqueArea () );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
-  }
-}
+$virtualMethod=|QPainterPath|opaqueArea|
 
 #pragma ENDDUMP

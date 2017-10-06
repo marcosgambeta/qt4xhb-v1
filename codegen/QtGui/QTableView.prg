@@ -9,8 +9,6 @@ REQUEST QMODELINDEX
 
 CLASS QTableView INHERIT QAbstractItemView
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD clearSpans
@@ -100,50 +98,22 @@ HB_FUNC_STATIC( QTABLEVIEW_CLEARSPANS )
 /*
 int columnAt ( int x ) const
 */
-HB_FUNC_STATIC( QTABLEVIEW_COLUMNAT )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->columnAt ( PINT(1) ) );
-  }
-}
+$method=|int|columnAt|int
 
 /*
 int columnSpan ( int row, int column ) const
 */
-HB_FUNC_STATIC( QTABLEVIEW_COLUMNSPAN )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->columnSpan ( PINT(1), PINT(2) ) );
-  }
-}
+$method=|int|columnSpan|int,int
 
 /*
 int columnViewportPosition ( int column ) const
 */
-HB_FUNC_STATIC( QTABLEVIEW_COLUMNVIEWPORTPOSITION )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->columnViewportPosition ( PINT(1) ) );
-  }
-}
+$method=|int|columnViewportPosition|int
 
 /*
 int columnWidth ( int column ) const
 */
-HB_FUNC_STATIC( QTABLEVIEW_COLUMNWIDTH )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->columnWidth ( PINT(1) ) );
-  }
-}
+$method=|int|columnWidth|int
 
 /*
 Qt::PenStyle gridStyle () const
@@ -173,98 +143,42 @@ HB_FUNC_STATIC( QTABLEVIEW_HORIZONTALHEADER )
 /*
 bool isColumnHidden ( int column ) const
 */
-HB_FUNC_STATIC( QTABLEVIEW_ISCOLUMNHIDDEN )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isColumnHidden ( PINT(1) ) );
-  }
-}
+$method=|bool|isColumnHidden|int
 
 /*
 bool isCornerButtonEnabled () const
 */
-HB_FUNC_STATIC( QTABLEVIEW_ISCORNERBUTTONENABLED )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isCornerButtonEnabled () );
-  }
-}
+$method=|bool|isCornerButtonEnabled|
 
 /*
 bool isRowHidden ( int row ) const
 */
-HB_FUNC_STATIC( QTABLEVIEW_ISROWHIDDEN )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isRowHidden ( PINT(1) ) );
-  }
-}
+$method=|bool|isRowHidden|int
 
 /*
 bool isSortingEnabled () const
 */
-HB_FUNC_STATIC( QTABLEVIEW_ISSORTINGENABLED )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isSortingEnabled () );
-  }
-}
+$method=|bool|isSortingEnabled|
 
 /*
 int rowAt ( int y ) const
 */
-HB_FUNC_STATIC( QTABLEVIEW_ROWAT )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->rowAt ( PINT(1) ) );
-  }
-}
+$method=|int|rowAt|int
 
 /*
 int rowHeight ( int row ) const
 */
-HB_FUNC_STATIC( QTABLEVIEW_ROWHEIGHT )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->rowHeight ( PINT(1) ) );
-  }
-}
+$method=|int|rowHeight|int
 
 /*
 int rowSpan ( int row, int column ) const
 */
-HB_FUNC_STATIC( QTABLEVIEW_ROWSPAN )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->rowSpan ( PINT(1), PINT(2) ) );
-  }
-}
+$method=|int|rowSpan|int,int
 
 /*
 int rowViewportPosition ( int row ) const
 */
-HB_FUNC_STATIC( QTABLEVIEW_ROWVIEWPORTPOSITION )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->rowViewportPosition ( PINT(1) ) );
-  }
-}
+$method=|int|rowViewportPosition|int
 
 /*
 void setColumnHidden ( int column, bool hide )
@@ -415,14 +329,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETWORDWRAP )
 /*
 bool showGrid () const
 */
-HB_FUNC_STATIC( QTABLEVIEW_SHOWGRID )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->showGrid () );
-  }
-}
+$method=|bool|showGrid|
 
 /*
 void sortByColumn ( int column, Qt::SortOrder order )
@@ -454,14 +361,7 @@ HB_FUNC_STATIC( QTABLEVIEW_VERTICALHEADER )
 /*
 bool wordWrap () const
 */
-HB_FUNC_STATIC( QTABLEVIEW_WORDWRAP )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->wordWrap () );
-  }
-}
+$method=|bool|wordWrap|
 
 /*
 virtual QModelIndex indexAt ( const QPoint & pos ) const

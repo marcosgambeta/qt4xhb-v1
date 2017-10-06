@@ -75,16 +75,7 @@ HB_FUNC_STATIC( QDECORATION_MENUTRIGGERED )
 /*
 virtual bool paint ( QPainter * painter, const QWidget * widget, int decorationRegion = All, DecorationState state = Normal ) = 0
 */
-HB_FUNC_STATIC( QDECORATION_PAINT )
-{
-  QDecoration * obj = (QDecoration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QWidget * par2 = (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par4 = ISNIL(4)? (int) QDecoration::Normal : hb_parni(4);
-    RBOOL( obj->paint ( PQPAINTER(1), par2, OPINT(3,QDecoration::All), (QDecoration::DecorationState) par4 ) );
-  }
-}
+$virtualMethod=|bool|paint|QPainter *,const QWidget *,int=QDecoration::All,QDecoration::DecorationState=QDecoration::Normal
 
 /*
 virtual QRegion region ( const QWidget * widget, const QRect & rectangle, int decorationRegion = All ) = 0
@@ -132,61 +123,27 @@ HB_FUNC_STATIC( QDECORATION_REGION )
 /*
 virtual int regionAt ( const QWidget * widget, const QPoint & point )
 */
-HB_FUNC_STATIC( QDECORATION_REGIONAT )
-{
-  QDecoration * obj = (QDecoration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QWidget * par1 = (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RINT( obj->regionAt ( par1, *PQPOINT(2) ) );
-  }
-}
+$virtualMethod=|int|regionAt|const QWidget *,const QPoint &
 
 /*
 virtual void regionClicked ( QWidget * widget, int region )
 */
-HB_FUNC_STATIC( QDECORATION_REGIONCLICKED )
-{
-  QDecoration * obj = (QDecoration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    obj->regionClicked ( PQWIDGET(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|regionClicked|QWidget *,int
 
 /*
 virtual void regionDoubleClicked ( QWidget * widget, int region )
 */
-HB_FUNC_STATIC( QDECORATION_REGIONDOUBLECLICKED )
-{
-  QDecoration * obj = (QDecoration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    obj->regionDoubleClicked ( PQWIDGET(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|regionDoubleClicked|QWidget *,int
 
 /*
-void startMove ( QWidget * widget )
+static void startMove ( QWidget * widget )
 */
-HB_FUNC_STATIC( QDECORATION_STARTMOVE )
-{
-  QDecoration::startMove ( PQWIDGET(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|startMove|QWidget *
 
 /*
-void startResize ( QWidget * widget )
+static void startResize ( QWidget * widget )
 */
-HB_FUNC_STATIC( QDECORATION_STARTRESIZE )
-{
-  QDecoration::startResize ( PQWIDGET(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|startResize|QWidget *
 
 $extraMethods
 

@@ -61,14 +61,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURHINTS )
 /*
 qreal blurRadius () const
 */
-HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURRADIUS )
-{
-  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->blurRadius () );
-  }
-}
+$method=|qreal|blurRadius|
 
 /*
 virtual QRectF boundingRectFor ( const QRectF & rect ) const
@@ -100,14 +93,6 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_SETBLURHINTS )
 /*
 void setBlurRadius ( qreal blurRadius )
 */
-HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_SETBLURRADIUS )
-{
-  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBlurRadius ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBlurRadius|qreal
 
 #pragma ENDDUMP

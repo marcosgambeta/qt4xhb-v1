@@ -255,26 +255,12 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_ICON )
 /*
 bool isHidden () const
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_ISHIDDEN )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isHidden () );
-  }
-}
+$method=|bool|isHidden|
 
 /*
 bool isSelected () const
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_ISSELECTED )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isSelected () );
-  }
-}
+$method=|bool|isSelected|
 
 /*
 QListWidget * listWidget () const
@@ -527,14 +513,7 @@ $method=|QString|text|
 /*
 int textAlignment () const
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_TEXTALIGNMENT )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->textAlignment () );
-  }
-}
+$method=|int|textAlignment|
 
 /*
 QString toolTip () const
@@ -544,14 +523,7 @@ $method=|QString|toolTip|
 /*
 int type () const
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_TYPE )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->type () );
-  }
-}
+$method=|int|type|
 
 /*
 QString whatsThis () const

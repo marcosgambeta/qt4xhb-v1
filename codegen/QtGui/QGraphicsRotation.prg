@@ -54,14 +54,7 @@ $deleteMethod
 /*
 qreal angle () const
 */
-HB_FUNC_STATIC( QGRAPHICSROTATION_ANGLE )
-{
-  QGraphicsRotation * obj = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->angle () );
-  }
-}
+$method=|qreal|angle|
 
 /*
 QVector3D axis () const
@@ -92,15 +85,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ORIGIN )
 /*
 void setAngle ( qreal )
 */
-HB_FUNC_STATIC( QGRAPHICSROTATION_SETANGLE )
-{
-  QGraphicsRotation * obj = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAngle ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAngle|qreal
 
 /*
 void setAxis ( const QVector3D & axis )

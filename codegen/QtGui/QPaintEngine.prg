@@ -60,15 +60,7 @@ $deleteMethod
 /*
 virtual bool begin ( QPaintDevice * pdev ) = 0
 */
-HB_FUNC_STATIC( QPAINTENGINE_BEGIN )
-{
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPaintDevice * par1 = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->begin ( par1 ) );
-  }
-}
+$virtualMethod=|bool|begin|QPaintDevice *
 
 /*
 virtual void drawEllipse ( const QRectF & rect )
@@ -208,39 +200,17 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWTILEDPIXMAP )
 /*
 virtual bool end () = 0
 */
-HB_FUNC_STATIC( QPAINTENGINE_END )
-{
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->end () );
-  }
-}
+$virtualMethod=|bool|end|
 
 /*
 bool hasFeature ( PaintEngineFeatures feature ) const
 */
-HB_FUNC_STATIC( QPAINTENGINE_HASFEATURE )
-{
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    RBOOL( obj->hasFeature ( (QPaintEngine::PaintEngineFeatures) par1 ) );
-  }
-}
+$method=|bool|hasFeature|QPaintEngine::PaintEngineFeatures
 
 /*
 bool isActive () const
 */
-HB_FUNC_STATIC( QPAINTENGINE_ISACTIVE )
-{
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isActive () );
-  }
-}
+$method=|bool|isActive|
 
 /*
 QPaintDevice * paintDevice () const

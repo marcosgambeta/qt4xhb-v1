@@ -54,14 +54,7 @@ HB_FUNC_STATIC( QTEXTLIST_ADD )
 /*
 int count () const
 */
-HB_FUNC_STATIC( QTEXTLIST_COUNT )
-{
-  QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-}
+$method=|int|count|
 
 /*
 QTextListFormat format () const
@@ -92,14 +85,7 @@ HB_FUNC_STATIC( QTEXTLIST_ITEM )
 /*
 int itemNumber ( const QTextBlock & block ) const
 */
-HB_FUNC_STATIC( QTEXTLIST_ITEMNUMBER )
-{
-  QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->itemNumber ( *PQTEXTBLOCK(1) ) );
-  }
-}
+$method=|int|itemNumber|const QTextBlock &
 
 /*
 QString itemText ( const QTextBlock & block ) const

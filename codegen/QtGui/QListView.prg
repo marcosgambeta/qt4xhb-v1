@@ -10,8 +10,6 @@ REQUEST QRECT
 
 CLASS QListView INHERIT QAbstractItemView
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD batchSize
@@ -77,27 +75,12 @@ $deleteMethod
 /*
 int batchSize () const
 */
-HB_FUNC_STATIC( QLISTVIEW_BATCHSIZE )
-{
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->batchSize () );
-  }
-}
+$method=|int|batchSize|
 
 /*
 void clearPropertyFlags ()
 */
-HB_FUNC_STATIC( QLISTVIEW_CLEARPROPERTYFLAGS )
-{
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clearPropertyFlags ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clearPropertyFlags|
 
 /*
 Flow flow () const
@@ -127,38 +110,17 @@ HB_FUNC_STATIC( QLISTVIEW_GRIDSIZE )
 /*
 bool isRowHidden ( int row ) const
 */
-HB_FUNC_STATIC( QLISTVIEW_ISROWHIDDEN )
-{
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isRowHidden ( PINT(1) ) );
-  }
-}
+$method=|bool|isRowHidden|int
 
 /*
 bool isSelectionRectVisible () const
 */
-HB_FUNC_STATIC( QLISTVIEW_ISSELECTIONRECTVISIBLE )
-{
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isSelectionRectVisible () );
-  }
-}
+$method=|bool|isSelectionRectVisible|
 
 /*
 bool isWrapping () const
 */
-HB_FUNC_STATIC( QLISTVIEW_ISWRAPPING )
-{
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isWrapping () );
-  }
-}
+$method=|bool|isWrapping|
 
 /*
 LayoutMode layoutMode () const
@@ -175,14 +137,7 @@ HB_FUNC_STATIC( QLISTVIEW_LAYOUTMODE )
 /*
 int modelColumn () const
 */
-HB_FUNC_STATIC( QLISTVIEW_MODELCOLUMN )
-{
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->modelColumn () );
-  }
-}
+$method=|int|modelColumn|
 
 /*
 Movement movement () const
@@ -398,26 +353,12 @@ HB_FUNC_STATIC( QLISTVIEW_SETWRAPPING )
 /*
 int spacing () const
 */
-HB_FUNC_STATIC( QLISTVIEW_SPACING )
-{
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->spacing () );
-  }
-}
+$method=|int|spacing|
 
 /*
 bool uniformItemSizes () const
 */
-HB_FUNC_STATIC( QLISTVIEW_UNIFORMITEMSIZES )
-{
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->uniformItemSizes () );
-  }
-}
+$method=|bool|uniformItemSizes|
 
 /*
 ViewMode viewMode () const
@@ -434,14 +375,7 @@ HB_FUNC_STATIC( QLISTVIEW_VIEWMODE )
 /*
 bool wordWrap () const
 */
-HB_FUNC_STATIC( QLISTVIEW_WORDWRAP )
-{
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->wordWrap () );
-  }
-}
+$method=|bool|wordWrap|
 
 /*
 virtual QModelIndex indexAt ( const QPoint & p ) const

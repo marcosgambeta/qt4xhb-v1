@@ -8,8 +8,6 @@ REQUEST QSIZE
 
 CLASS QScrollBar INHERIT QAbstractSlider
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -73,14 +71,7 @@ $deleteMethod
 /*
 virtual bool event ( QEvent * event )
 */
-HB_FUNC_STATIC( QSCROLLBAR_EVENT )
-{
-  QScrollBar * obj = (QScrollBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->event ( PQEVENT(1) ) );
-  }
-}
+$virtualMethod=|bool|event|QEvent *
 
 /*
 virtual QSize sizeHint () const

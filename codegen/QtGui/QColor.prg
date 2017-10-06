@@ -128,67 +128,37 @@ $destructor
 /*
 QColor ()
 */
-HB_FUNC_STATIC( QCOLOR_NEW1 )
-{
-  QColor * o = new QColor ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new1|
 
 /*
 QColor ( int r, int g, int b, int a = 255 )
 */
-HB_FUNC_STATIC( QCOLOR_NEW2 )
-{
-  QColor * o = new QColor ( PINT(1), PINT(2), PINT(3), OPINT(4,255) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new2|int,int,int,int=255
 
 /*
 QColor ( QRgb color )
 */
-HB_FUNC_STATIC( QCOLOR_NEW3 )
-{
-  QRgb par1 = hb_parni(1);
-  QColor * o = new QColor ( par1 );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new3|QRgb
 
 /*
 QColor ( const QString & name )
 */
-HB_FUNC_STATIC( QCOLOR_NEW4 )
-{
-  QColor * o = new QColor ( PQSTRING(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new4|const QString &
 
 /*
 QColor ( const char * name )
 */
-HB_FUNC_STATIC( QCOLOR_NEW5 )
-{
-  QColor * o = new QColor ( (const char *) hb_parc(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new5|const char *
 
 /*
 QColor ( const QColor & color )
 */
-HB_FUNC_STATIC( QCOLOR_NEW6 )
-{
-  QColor par1 = ISOBJECT(1)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(1));
-  QColor * o = new QColor ( par1 );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new6|const QColor &
 
 /*
 QColor ( Qt::GlobalColor color )
 */
-HB_FUNC_STATIC( QCOLOR_NEW7 )
-{
-  QColor * o = new QColor ( (Qt::GlobalColor) hb_parni(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new7|Qt::GlobalColor
 
 //[1]QColor ()
 //[2]QColor ( int r, int g, int b, int a = 255 )
@@ -241,514 +211,182 @@ $deleteMethod
 /*
 int alpha () const
 */
-HB_FUNC_STATIC( QCOLOR_ALPHA )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->alpha () );
-  }
-}
+$method=|int|alpha|
 
 /*
 qreal alphaF () const
 */
-HB_FUNC_STATIC( QCOLOR_ALPHAF )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->alphaF () );
-  }
-}
+$method=|qreal|alphaF|
 
 /*
 int black () const
 */
-HB_FUNC_STATIC( QCOLOR_BLACK )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->black () );
-  }
-}
+$method=|int|black|
 
 /*
 qreal blackF () const
 */
-HB_FUNC_STATIC( QCOLOR_BLACKF )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->blackF () );
-  }
-}
+$method=|qreal|blackF|
 
 /*
 int blue () const
 */
-HB_FUNC_STATIC( QCOLOR_BLUE )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->blue () );
-  }
-}
+$method=|int|blue|
 
 /*
 qreal blueF () const
 */
-HB_FUNC_STATIC( QCOLOR_BLUEF )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->blueF () );
-  }
-}
+$method=|qreal|blueF|
 
 /*
 QColor convertTo ( Spec colorSpec ) const
 */
-HB_FUNC_STATIC( QCOLOR_CONVERTTO )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    QColor * ptr = new QColor( obj->convertTo ( (QColor::Spec) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-}
+$method=|QColor|convertTo|QColor::Spec
 
 /*
 int cyan () const
 */
-HB_FUNC_STATIC( QCOLOR_CYAN )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->cyan () );
-  }
-}
+$method=|int|cyan|
 
 /*
 qreal cyanF () const
 */
-HB_FUNC_STATIC( QCOLOR_CYANF )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->cyanF () );
-  }
-}
+$method=|qreal|cyanF|
 
 /*
 QColor darker ( int factor = 200 ) const
 */
-HB_FUNC_STATIC( QCOLOR_DARKER )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QColor * ptr = new QColor( obj->darker ( OPINT(1,200) ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-}
+$method=|QColor|darker|int=200
 
 /*
 void getCmyk ( int * c, int * m, int * y, int * k, int * a = 0 )
 */
-HB_FUNC_STATIC( QCOLOR_GETCMYK )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1;
-    int par2;
-    int par3;
-    int par4;
-    int par5;
-    obj->getCmyk ( &par1, &par2, &par3, &par4, &par5 );
-    hb_storni( par1, 1 );
-    hb_storni( par2, 2 );
-    hb_storni( par3, 3 );
-    hb_storni( par4, 4 );
-    hb_storni( par5, 5 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|getCmyk|int *,int *,int *,int *,int *=0
 
 /*
 void getCmykF ( qreal * c, qreal * m, qreal * y, qreal * k, qreal * a = 0 )
 */
-HB_FUNC_STATIC( QCOLOR_GETCMYKF )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    qreal par1;
-    qreal par2;
-    qreal par3;
-    qreal par4;
-    qreal par5;
-    obj->getCmykF ( &par1, &par2, &par3, &par4, &par5 );
-    hb_stornd( par1, 1 );
-    hb_stornd( par2, 2 );
-    hb_stornd( par3, 3 );
-    hb_stornd( par4, 4 );
-    hb_stornd( par5, 5 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|getCmykF|qreal *,qreal *,qreal *,qreal *,qreal *=0
 
 /*
 void getHsl ( int * h, int * s, int * l, int * a = 0 ) const
 */
-HB_FUNC_STATIC( QCOLOR_GETHSL )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1;
-    int par2;
-    int par3;
-    int par4;
-    obj->getHsl ( &par1, &par2, &par3, &par4 );
-    hb_storni( par1, 1 );
-    hb_storni( par2, 2 );
-    hb_storni( par3, 3 );
-    hb_storni( par4, 4 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|getHsl|int *,int *,int *,int *=0
 
 /*
 void getHslF ( qreal * h, qreal * s, qreal * l, qreal * a = 0 ) const
 */
-HB_FUNC_STATIC( QCOLOR_GETHSLF )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    qreal par1;
-    qreal par2;
-    qreal par3;
-    qreal par4;
-    obj->getHslF ( &par1, &par2, &par3, &par4 );
-    hb_stornd( par1, 1 );
-    hb_stornd( par2, 2 );
-    hb_stornd( par3, 3 );
-    hb_stornd( par4, 4 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|getHslF|qreal *,qreal *,qreal *,qreal *=0
 
 /*
 void getHsv ( int * h, int * s, int * v, int * a = 0 ) const
 */
-HB_FUNC_STATIC( QCOLOR_GETHSV )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1;
-    int par2;
-    int par3;
-    int par4;
-    obj->getHsv ( &par1, &par2, &par3, &par4 );
-    hb_storni( par1, 1 );
-    hb_storni( par2, 2 );
-    hb_storni( par3, 3 );
-    hb_storni( par4, 4 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|getHsv|int *,int *,int *,int *=0
 
 /*
 void getHsvF ( qreal * h, qreal * s, qreal * v, qreal * a = 0 ) const
 */
-HB_FUNC_STATIC( QCOLOR_GETHSVF )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    qreal par1;
-    qreal par2;
-    qreal par3;
-    qreal par4;
-    obj->getHsvF ( &par1, &par2, &par3, &par4 );
-    hb_stornd( par1, 1 );
-    hb_stornd( par2, 2 );
-    hb_stornd( par3, 3 );
-    hb_stornd( par4, 4 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|getHsvF|qreal *,qreal *,qreal *,qreal *=0
 
 /*
 void getRgb ( int * r, int * g, int * b, int * a = 0 ) const
 */
-HB_FUNC_STATIC( QCOLOR_GETRGB )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1;
-    int par2;
-    int par3;
-    int par4;
-    obj->getRgb ( &par1, &par2, &par3, &par4 );
-    hb_storni( par1, 1 );
-    hb_storni( par2, 2 );
-    hb_storni( par3, 3 );
-    hb_storni( par4, 4 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|getRgb|int *,int *,int *,int *=0
 
 /*
 void getRgbF ( qreal * r, qreal * g, qreal * b, qreal * a = 0 ) const
 */
-HB_FUNC_STATIC( QCOLOR_GETRGBF )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    qreal par1;
-    qreal par2;
-    qreal par3;
-    qreal par4;
-    obj->getRgbF ( &par1, &par2, &par3, &par4 );
-    hb_stornd( par1, 1 );
-    hb_stornd( par2, 2 );
-    hb_stornd( par3, 3 );
-    hb_stornd( par4, 4 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|getRgbF|qreal *,qreal *,qreal *,qreal *=0
 
 /*
 int green () const
 */
-HB_FUNC_STATIC( QCOLOR_GREEN )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->green () );
-  }
-}
+$method=|int|green|
 
 /*
 qreal greenF () const
 */
-HB_FUNC_STATIC( QCOLOR_GREENF )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->greenF () );
-  }
-}
+$method=|qreal|greenF|
 
 /*
 int hslHue () const
 */
-HB_FUNC_STATIC( QCOLOR_HSLHUE )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->hslHue () );
-  }
-}
+$method=|int|hslHue|
 
 /*
 qreal hslHueF () const
 */
-HB_FUNC_STATIC( QCOLOR_HSLHUEF )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->hslHueF () );
-  }
-}
+$method=|qreal|hslHueF|
 
 /*
 int hslSaturation () const
 */
-HB_FUNC_STATIC( QCOLOR_HSLSATURATION )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->hslSaturation () );
-  }
-}
+$method=|int|hslSaturation|
 
 /*
 qreal hslSaturationF () const
 */
-HB_FUNC_STATIC( QCOLOR_HSLSATURATIONF )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->hslSaturationF () );
-  }
-}
+$method=|qreal|hslSaturationF|
 
 /*
 int hsvHue () const
 */
-HB_FUNC_STATIC( QCOLOR_HSVHUE )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->hsvHue () );
-  }
-}
+$method=|int|hsvHue|
 
 /*
 qreal hsvHueF () const
 */
-HB_FUNC_STATIC( QCOLOR_HSVHUEF )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->hsvHueF () );
-  }
-}
+$method=|qreal|hsvHueF|
 
 /*
 int hsvSaturation () const
 */
-HB_FUNC_STATIC( QCOLOR_HSVSATURATION )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->hsvSaturation () );
-  }
-}
+$method=|int|hsvSaturation|
 
 /*
 qreal hsvSaturationF () const
 */
-HB_FUNC_STATIC( QCOLOR_HSVSATURATIONF )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->hsvSaturationF () );
-  }
-}
+$method=|qreal|hsvSaturationF|
 
 /*
 int hue () const
 */
-HB_FUNC_STATIC( QCOLOR_HUE )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->hue () );
-  }
-}
+$method=|int|hue|
 
 /*
 qreal hueF () const
 */
-HB_FUNC_STATIC( QCOLOR_HUEF )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->hueF () );
-  }
-}
+$method=|qreal|hueF|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QCOLOR_ISVALID )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
+$method=|bool|isValid|
 
 /*
 QColor lighter ( int factor = 150 ) const
 */
-HB_FUNC_STATIC( QCOLOR_LIGHTER )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QColor * ptr = new QColor( obj->lighter ( OPINT(1,150) ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-}
+$method=|QColor|lighter|int=150
 
 /*
 int lightness () const
 */
-HB_FUNC_STATIC( QCOLOR_LIGHTNESS )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->lightness () );
-  }
-}
+$method=|int|lightness|
 
 /*
 qreal lightnessF () const
 */
-HB_FUNC_STATIC( QCOLOR_LIGHTNESSF )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->lightnessF () );
-  }
-}
+$method=|qreal|lightnessF|
 
 /*
 int magenta () const
 */
-HB_FUNC_STATIC( QCOLOR_MAGENTA )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->magenta () );
-  }
-}
+$method=|int|magenta|
 
 /*
 qreal magentaF () const
 */
-HB_FUNC_STATIC( QCOLOR_MAGENTAF )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->magentaF () );
-  }
-}
+$method=|qreal|magentaF|
 
 /*
 QString name () const
@@ -758,232 +396,92 @@ $method=|QString|name|
 /*
 int red () const
 */
-HB_FUNC_STATIC( QCOLOR_RED )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->red () );
-  }
-}
+$method=|int|red|
 
 /*
 qreal redF () const
 */
-HB_FUNC_STATIC( QCOLOR_REDF )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->redF () );
-  }
-}
+$method=|qreal|redF|
 
 /*
 QRgb rgb () const
 */
-HB_FUNC_STATIC( QCOLOR_RGB )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRgb i = obj->rgb ();
-    hb_retni( i );
-  }
-}
+$method=|QRgb|rgb|
 
 /*
 QRgb rgba () const
 */
-HB_FUNC_STATIC( QCOLOR_RGBA )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRgb i = obj->rgba ();
-    hb_retni( i );
-  }
-}
+$method=|QRgb|rgba|
 
 /*
 int saturation () const
 */
-HB_FUNC_STATIC( QCOLOR_SATURATION )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->saturation () );
-  }
-}
+$method=|int|saturation|
 
 /*
 qreal saturationF () const
 */
-HB_FUNC_STATIC( QCOLOR_SATURATIONF )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->saturationF () );
-  }
-}
+$method=|qreal|saturationF|
 
 /*
 void setAlpha ( int alpha )
 */
-HB_FUNC_STATIC( QCOLOR_SETALPHA )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAlpha ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAlpha|int
 
 /*
 void setAlphaF ( qreal alpha )
 */
-HB_FUNC_STATIC( QCOLOR_SETALPHAF )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAlphaF ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAlphaF|qreal
 
 /*
 void setBlue ( int blue )
 */
-HB_FUNC_STATIC( QCOLOR_SETBLUE )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBlue ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBlue|int
 
 /*
 void setBlueF ( qreal blue )
 */
-HB_FUNC_STATIC( QCOLOR_SETBLUEF )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBlueF ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBlueF|qreal
 
 /*
 void setCmyk ( int c, int m, int y, int k, int a = 255 )
 */
-HB_FUNC_STATIC( QCOLOR_SETCMYK )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCmyk ( PINT(1), PINT(2), PINT(3), PINT(4), OPINT(5,255) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCmyk|int,int,int,int,int=255
 
 /*
 void setCmykF ( qreal c, qreal m, qreal y, qreal k, qreal a = 1.0 )
 */
-HB_FUNC_STATIC( QCOLOR_SETCMYKF )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCmykF ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), (qreal) ISNIL(5)? 1.0 : hb_parnd(5) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCmykF|qreal,qreal,qreal,qreal,qreal=1.0
 
 /*
 void setGreen ( int green )
 */
-HB_FUNC_STATIC( QCOLOR_SETGREEN )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setGreen ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setGreen|int
 
 /*
 void setGreenF ( qreal green )
 */
-HB_FUNC_STATIC( QCOLOR_SETGREENF )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setGreenF ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setGreenF|qreal
 
 /*
 void setHsl ( int h, int s, int l, int a = 255 )
 */
-HB_FUNC_STATIC( QCOLOR_SETHSL )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setHsl ( PINT(1), PINT(2), PINT(3), OPINT(4,255) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHsl|int,int,int,int=255
 
 /*
 void setHslF ( qreal h, qreal s, qreal l, qreal a = 1.0 )
 */
-HB_FUNC_STATIC( QCOLOR_SETHSLF )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setHslF ( PQREAL(1), PQREAL(2), PQREAL(3), (qreal) ISNIL(4)? 1.0 : hb_parnd(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHslF|qreal,qreal,qreal,qreal=1.0
 
 /*
 void setHsv ( int h, int s, int v, int a = 255 )
 */
-HB_FUNC_STATIC( QCOLOR_SETHSV )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setHsv ( PINT(1), PINT(2), PINT(3), OPINT(4,255) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHsv|int,int,int,int=255
 
 /*
 void setHsvF ( qreal h, qreal s, qreal v, qreal a = 1.0 )
 */
-HB_FUNC_STATIC( QCOLOR_SETHSVF )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setHsvF ( PQREAL(1), PQREAL(2), PQREAL(3), (qreal) ISNIL(4)? 1.0 : hb_parnd(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHsvF|qreal,qreal,qreal,qreal=1.0
 
 /*
 void setNamedColor ( const QString & name )
@@ -993,55 +491,22 @@ $method=|void|setNamedColor|const QString &
 /*
 void setRed ( int red )
 */
-HB_FUNC_STATIC( QCOLOR_SETRED )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRed ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRed|int
 
 /*
 void setRedF ( qreal red )
 */
-HB_FUNC_STATIC( QCOLOR_SETREDF )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRedF ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRedF|qreal
 
 /*
 void setRgb ( int r, int g, int b, int a = 255 )
 */
-HB_FUNC_STATIC( QCOLOR_SETRGB1 )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRgb ( PINT(1), PINT(2), PINT(3), OPINT(4,255) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRgb,setRgb1|int,int,int,int=255
 
 /*
 void setRgb ( QRgb rgb )
 */
-HB_FUNC_STATIC( QCOLOR_SETRGB2 )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRgb par1 = hb_parni(1);
-    obj->setRgb ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRgb,setRgb2|QRgb
 
 //[1]void setRgb ( int r, int g, int b, int a = 255 )
 //[2]void setRgb ( QRgb rgb )
@@ -1065,241 +530,131 @@ HB_FUNC_STATIC( QCOLOR_SETRGB )
 /*
 void setRgbF ( qreal r, qreal g, qreal b, qreal a = 1.0 )
 */
-HB_FUNC_STATIC( QCOLOR_SETRGBF )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRgbF ( PQREAL(1), PQREAL(2), PQREAL(3), (qreal) ISNIL(4)? 1.0 : hb_parnd(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRgbF|qreal,qreal,qreal,qreal=1.0
 
 /*
 void setRgba ( QRgb rgba )
 */
-HB_FUNC_STATIC( QCOLOR_SETRGBA )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRgb par1 = hb_parni(1);
-    obj->setRgba ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRgba|QRgb
 
 /*
 Spec spec () const
 */
-HB_FUNC_STATIC( QCOLOR_SPEC )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->spec () );
-  }
-}
+$method=|QColor::Spec|spec|
 
 /*
 QColor toCmyk () const
 */
-HB_FUNC_STATIC( QCOLOR_TOCMYK )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QColor * ptr = new QColor( obj->toCmyk () );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-}
+$method=|QColor|toCmyk|
 
 /*
 QColor toHsl () const
 */
-HB_FUNC_STATIC( QCOLOR_TOHSL )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QColor * ptr = new QColor( obj->toHsl () );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-}
+$method=|QColor|toHsl|
 
 /*
 QColor toHsv () const
 */
-HB_FUNC_STATIC( QCOLOR_TOHSV )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QColor * ptr = new QColor( obj->toHsv () );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-}
+$method=|QColor|toHsv|
 
 /*
 QColor toRgb () const
 */
-HB_FUNC_STATIC( QCOLOR_TORGB )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QColor * ptr = new QColor( obj->toRgb () );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-}
+$method=|QColor|toRgb|
 
 /*
 int value () const
 */
-HB_FUNC_STATIC( QCOLOR_VALUE )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->value () );
-  }
-}
+$method=|int|value|
 
 /*
 qreal valueF () const
 */
-HB_FUNC_STATIC( QCOLOR_VALUEF )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->valueF () );
-  }
-}
+$method=|qreal|valueF|
 
 /*
 int yellow () const
 */
-HB_FUNC_STATIC( QCOLOR_YELLOW )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->yellow () );
-  }
-}
+$method=|int|yellow|
 
 /*
 qreal yellowF () const
 */
-HB_FUNC_STATIC( QCOLOR_YELLOWF )
+$method=|qreal|yellowF|
+
+/*
+static QStringList colorNames ()
+*/
+$staticMethod=|QStringList|colorNames|
+
+/*
+static QColor fromCmyk ( int c, int m, int y, int k, int a = 255 )
+*/
+$staticMethod=|QColor|fromCmyk|int,int,int,int,int=255
+
+/*
+static QColor fromCmykF ( qreal c, qreal m, qreal y, qreal k, qreal a = 1.0 )
+*/
+$staticMethod=|QColor|fromCmykF|qreal,qreal,qreal,qreal,qreal=1.0
+
+/*
+static QColor fromHsl ( int h, int s, int l, int a = 255 )
+*/
+$staticMethod=|QColor|fromHsl|int,int,int,int=255
+
+/*
+static QColor fromHslF ( qreal h, qreal s, qreal l, qreal a = 1.0 )
+*/
+$staticMethod=|QColor|fromHslF|qreal,qreal,qreal,qreal=1.0
+
+/*
+static QColor fromHsv ( int h, int s, int v, int a = 255 )
+*/
+$staticMethod=|QColor|fromHsv|int,int,int,int=255
+
+/*
+static QColor fromHsvF ( qreal h, qreal s, qreal v, qreal a = 1.0 )
+*/
+$staticMethod=|QColor|fromHsvF|qreal,qreal,qreal,qreal=1.0
+
+/*
+static QColor fromRgb ( QRgb rgb )
+*/
+$staticMethod=|QColor|fromRgb,fromRgb1|QRgb
+
+/*
+static QColor fromRgb ( int r, int g, int b, int a = 255 )
+*/
+$staticMethod=|QColor|fromRgb,fromRgb2|int,int,int,int=255
+
+//[1]static QColor fromRgb ( QRgb rgb )
+//[2]static QColor fromRgb ( int r, int g, int b, int a = 255 )
+
+HB_FUNC_STATIC( QCOLOR_FROMRGB )
 {
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
+  if( ISNUMPAR(1) && ISNUM(1) )
   {
-    RQREAL( obj->yellowF () );
+    HB_FUNC_EXEC( QCOLOR_FROMRGB1 );
+  }
+  else if( ISBETWEEN(3,4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && (ISNUM(4)||ISNIL(4)) )
+  {
+    HB_FUNC_EXEC( QCOLOR_FROMRGB2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
 /*
-QStringList colorNames ()
+static QColor fromRgbF ( qreal r, qreal g, qreal b, qreal a = 1.0 )
 */
-HB_FUNC_STATIC( QCOLOR_COLORNAMES )
-{
-  RQSTRINGLIST( QColor::colorNames () );
-}
+$staticMethod=|QColor|fromRgbF|qreal,qreal,qreal,qreal=1.0
 
 /*
-QColor fromCmyk ( int c, int m, int y, int k, int a = 255 )
+static QColor fromRgba ( QRgb rgba )
 */
-HB_FUNC_STATIC( QCOLOR_FROMCMYK )
-{
-  QColor * ptr = new QColor( QColor::fromCmyk ( PINT(1), PINT(2), PINT(3), PINT(4), OPINT(5,255) ) );
-  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
-}
-
-/*
-QColor fromCmykF ( qreal c, qreal m, qreal y, qreal k, qreal a = 1.0 )
-*/
-HB_FUNC_STATIC( QCOLOR_FROMCMYKF )
-{
-  QColor * ptr = new QColor( QColor::fromCmykF ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), (qreal) ISNIL(5)? 1.0 : hb_parnd(5) ) );
-  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
-}
-
-/*
-QColor fromHsl ( int h, int s, int l, int a = 255 )
-*/
-HB_FUNC_STATIC( QCOLOR_FROMHSL )
-{
-  QColor * ptr = new QColor( QColor::fromHsl ( PINT(1), PINT(2), PINT(3), OPINT(4,255) ) );
-  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
-}
-
-/*
-QColor fromHslF ( qreal h, qreal s, qreal l, qreal a = 1.0 )
-*/
-HB_FUNC_STATIC( QCOLOR_FROMHSLF )
-{
-  QColor * ptr = new QColor( QColor::fromHslF ( PQREAL(1), PQREAL(2), PQREAL(3), (qreal) ISNIL(4)? 1.0 : hb_parnd(4) ) );
-  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
-}
-
-/*
-QColor fromHsv ( int h, int s, int v, int a = 255 )
-*/
-HB_FUNC_STATIC( QCOLOR_FROMHSV )
-{
-  QColor * ptr = new QColor( QColor::fromHsv ( PINT(1), PINT(2), PINT(3), OPINT(4,255) ) );
-  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
-}
-
-/*
-QColor fromHsvF ( qreal h, qreal s, qreal v, qreal a = 1.0 )
-*/
-HB_FUNC_STATIC( QCOLOR_FROMHSVF )
-{
-  QColor * ptr = new QColor( QColor::fromHsvF ( PQREAL(1), PQREAL(2), PQREAL(3), (qreal) ISNIL(4)? 1.0 : hb_parnd(4) ) );
-  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
-}
-
-/*
-QColor fromRgb ( QRgb rgb )
-*/
-HB_FUNC_STATIC( QCOLOR_FROMRGB1 )
-{
-  QRgb par1 = hb_parni(1);
-  QColor * ptr = new QColor( QColor::fromRgb ( par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
-}
-
-/*
-QColor fromRgb ( int r, int g, int b, int a = 255 )
-*/
-HB_FUNC_STATIC( QCOLOR_FROMRGB2 )
-{
-  QColor * ptr = new QColor( QColor::fromRgb ( PINT(1), PINT(2), PINT(3), OPINT(4,255) ) );
-  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
-}
-
-/*
-QColor fromRgbF ( qreal r, qreal g, qreal b, qreal a = 1.0 )
-*/
-HB_FUNC_STATIC( QCOLOR_FROMRGBF )
-{
-  QColor * ptr = new QColor( QColor::fromRgbF ( PQREAL(1), PQREAL(2), PQREAL(3), (qreal) ISNIL(4)? 1.0 : hb_parnd(4) ) );
-  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
-}
-
-/*
-QColor fromRgba ( QRgb rgba )
-*/
-HB_FUNC_STATIC( QCOLOR_FROMRGBA )
-{
-  QRgb par1 = hb_parni(1);
-  QColor * ptr = new QColor( QColor::fromRgba ( par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
-}
+$staticMethod=|QColor|fromRgba|QRgb
 
 /*
 static bool isValidColor ( const QString & name )

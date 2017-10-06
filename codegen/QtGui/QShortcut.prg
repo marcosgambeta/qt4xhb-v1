@@ -9,8 +9,6 @@ REQUEST QWIDGET
 
 CLASS QShortcut INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -88,129 +86,52 @@ $deleteMethod
 /*
 bool autoRepeat() const
 */
-HB_FUNC_STATIC( QSHORTCUT_AUTOREPEAT )
-{
-  QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->autoRepeat () );
-  }
-}
+$method=|bool|autoRepeat|
 
 /*
 Qt::ShortcutContext context() const
 */
-HB_FUNC_STATIC( QSHORTCUT_CONTEXT )
-{
-  QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->context () );
-  }
-}
+$method=|Qt::ShortcutContext|context|
 
 /*
 int id() const
 */
-HB_FUNC_STATIC( QSHORTCUT_ID )
-{
-  QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->id () );
-  }
-}
+$method=|int|id|
 
 /*
 bool isEnabled() const
 */
-HB_FUNC_STATIC( QSHORTCUT_ISENABLED )
-{
-  QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isEnabled () );
-  }
-}
+$method=|bool|isEnabled|
 
 /*
 QKeySequence key() const
 */
-HB_FUNC_STATIC( QSHORTCUT_KEY )
-{
-  QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QKeySequence * ptr = new QKeySequence( obj->key () );
-    _qt4xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
-  }
-}
+$method=|QKeySequence|key|
 
 /*
 QWidget * parentWidget() const
 */
-HB_FUNC_STATIC( QSHORTCUT_PARENTWIDGET )
-{
-  QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->parentWidget ();
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|parentWidget|
 
 /*
 void setAutoRepeat(bool on)
 */
-HB_FUNC_STATIC( QSHORTCUT_SETAUTOREPEAT )
-{
-  QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAutoRepeat ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAutoRepeat|bool
 
 /*
 void setContext(Qt::ShortcutContext context)
 */
-HB_FUNC_STATIC( QSHORTCUT_SETCONTEXT )
-{
-  QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setContext ( (Qt::ShortcutContext) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setContext|Qt::ShortcutContext
 
 /*
 void setEnabled(bool enable)
 */
-HB_FUNC_STATIC( QSHORTCUT_SETENABLED )
-{
-  QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setEnabled ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setEnabled|bool
 
 /*
 void setKey(const QKeySequence & key)
 */
-HB_FUNC_STATIC( QSHORTCUT_SETKEY )
-{
-  QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setKey ( *PQKEYSEQUENCE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setKey|const QKeySequence &
 
 /*
 void setWhatsThis(const QString & text)

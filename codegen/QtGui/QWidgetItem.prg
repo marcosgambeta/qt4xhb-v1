@@ -78,38 +78,17 @@ HB_FUNC_STATIC( QWIDGETITEM_GEOMETRY )
 /*
 virtual bool hasHeightForWidth () const
 */
-HB_FUNC_STATIC( QWIDGETITEM_HASHEIGHTFORWIDTH )
-{
-  QWidgetItem * obj = (QWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasHeightForWidth () );
-  }
-}
+$virtualMethod=|bool|hasHeightForWidth|
 
 /*
 virtual int heightForWidth ( int w ) const
 */
-HB_FUNC_STATIC( QWIDGETITEM_HEIGHTFORWIDTH )
-{
-  QWidgetItem * obj = (QWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->heightForWidth ( PINT(1) ) );
-  }
-}
+$virtualMethod=|int|heightForWidth|int
 
 /*
 virtual bool isEmpty () const
 */
-HB_FUNC_STATIC( QWIDGETITEM_ISEMPTY )
-{
-  QWidgetItem * obj = (QWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-}
+$virtualMethod=|bool|isEmpty|
 
 /*
 virtual QSize maximumSize () const

@@ -8,8 +8,6 @@ REQUEST QSIZE
 
 CLASS QDialog INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD isSizeGripEnabled
@@ -47,179 +45,73 @@ $destructor
 /*
 QDialog ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
-HB_FUNC_STATIC( QDIALOG_NEW )
-{
-  int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QDialog * o = new QDialog ( OPQWIDGET(1,0), (Qt::WindowFlags) par2 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QWidget *=0,Qt::WindowFlags=0
 
 $deleteMethod
 
 /*
 bool isSizeGripEnabled () const
 */
-HB_FUNC_STATIC( QDIALOG_ISSIZEGRIPENABLED )
-{
-  QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isSizeGripEnabled () );
-  }
-}
+$method=|bool|isSizeGripEnabled|
 
 /*
 int result () const
 */
-HB_FUNC_STATIC( QDIALOG_RESULT )
-{
-  QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->result () );
-  }
-}
+$method=|int|result|
 
 /*
 void setModal ( bool modal )
 */
-HB_FUNC_STATIC( QDIALOG_SETMODAL )
-{
-  QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setModal ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setModal|bool
 
 /*
 void setResult ( int i )
 */
-HB_FUNC_STATIC( QDIALOG_SETRESULT )
-{
-  QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setResult ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setResult|int
 
 /*
 void setSizeGripEnabled ( bool )
 */
-HB_FUNC_STATIC( QDIALOG_SETSIZEGRIPENABLED )
-{
-  QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSizeGripEnabled ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSizeGripEnabled|bool
 
 /*
 virtual QSize minimumSizeHint () const
 */
-HB_FUNC_STATIC( QDIALOG_MINIMUMSIZEHINT )
-{
-  QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->minimumSizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|minimumSizeHint|
 
 /*
 virtual void setVisible ( bool visible )
 */
-HB_FUNC_STATIC( QDIALOG_SETVISIBLE )
-{
-  QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setVisible ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|setVisible|bool
 
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC_STATIC( QDIALOG_SIZEHINT )
-{
-  QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|sizeHint|
 
 /*
 virtual void accept ()
 */
-HB_FUNC_STATIC( QDIALOG_ACCEPT )
-{
-  QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->accept ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|accept|
 
 /*
 virtual void done ( int r )
 */
-HB_FUNC_STATIC( QDIALOG_DONE )
-{
-  QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->done ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|done|int
 
 /*
 int exec ()
 */
-HB_FUNC_STATIC( QDIALOG_EXEC )
-{
-  QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->exec () );
-  }
-}
+$method=|int|exec|
 
 /*
 void open ()
 */
-HB_FUNC_STATIC( QDIALOG_OPEN )
-{
-  QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->open ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|open|
 
 /*
 virtual void reject ()
 */
-HB_FUNC_STATIC( QDIALOG_REJECT )
-{
-  QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->reject ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|reject|
 
 #pragma ENDDUMP

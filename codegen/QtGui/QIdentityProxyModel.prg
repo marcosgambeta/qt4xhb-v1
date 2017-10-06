@@ -9,8 +9,6 @@ REQUEST QITEMSELECTION
 
 CLASS QIdentityProxyModel INHERIT QAbstractProxyModel
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD columnCount
@@ -48,131 +46,54 @@ $destructor
 /*
 QIdentityProxyModel ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_NEW )
-{
-  QIdentityProxyModel * o = new QIdentityProxyModel ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_COLUMNCOUNT )
-{
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RINT( obj->columnCount ( par1 ) );
-  }
-}
+$virtualMethod=|int|columnCount|const QModelIndex &=QModelIndex()
 
 /*
 virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_DROPMIMEDATA )
-{
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QMimeData * par1 = (const QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->dropMimeData ( par1, (Qt::DropAction) hb_parni(2), PINT(3), PINT(4), *PQMODELINDEX(5) ) );
-  }
-}
+$virtualMethod=|bool|dropMimeData|const QMimeData *,Qt::DropAction,int,int,const QModelIndex &
 
 /*
 virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_INDEX )
-{
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QModelIndex * ptr = new QModelIndex( obj->index ( PINT(1), PINT(2), par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
+$virtualMethod=|QModelIndex|index|int,int,const QModelIndex &=QModelIndex()
 
 /*
 virtual bool insertColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_INSERTCOLUMNS )
-{
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->insertColumns ( PINT(1), PINT(2), par3 ) );
-  }
-}
+$virtualMethod=|bool|insertColumns|int,int,const QModelIndex &=QModelIndex()
 
 /*
 virtual bool insertRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_INSERTROWS )
-{
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->insertRows ( PINT(1), PINT(2), par3 ) );
-  }
-}
+$virtualMethod=|bool|insertRows|int,int,const QModelIndex &=QModelIndex()
 
 /*
 virtual QModelIndex mapFromSource ( const QModelIndex & sourceIndex ) const
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPFROMSOURCE )
-{
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->mapFromSource ( *PQMODELINDEX(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
+$virtualMethod=|QModelIndex|mapFromSource|const QModelIndex &
 
 /*
 virtual QItemSelection mapSelectionFromSource ( const QItemSelection & selection ) const
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPSELECTIONFROMSOURCE )
-{
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QItemSelection * ptr = new QItemSelection( obj->mapSelectionFromSource ( *PQITEMSELECTION(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QITEMSELECTION" );
-  }
-}
+$virtualMethod=|QItemSelection|mapSelectionFromSource|const QItemSelection &
 
 /*
 virtual QItemSelection mapSelectionToSource ( const QItemSelection & selection ) const
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPSELECTIONTOSOURCE )
-{
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QItemSelection * ptr = new QItemSelection( obj->mapSelectionToSource ( *PQITEMSELECTION(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QITEMSELECTION" );
-  }
-}
+$virtualMethod=|QItemSelection|mapSelectionToSource|const QItemSelection &
 
 /*
 virtual QModelIndex mapToSource ( const QModelIndex & proxyIndex ) const
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPTOSOURCE )
-{
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->mapToSource ( *PQMODELINDEX(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
+$virtualMethod=|QModelIndex|mapToSource|const QModelIndex &
 
 /*
 virtual QModelIndexList match ( const QModelIndex & start, int role, const QVariant & value, int hits = 1, Qt::MatchFlags flags = Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) const
@@ -221,67 +142,26 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MATCH )
 /*
 virtual QModelIndex parent ( const QModelIndex & child ) const
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_PARENT )
-{
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->parent ( *PQMODELINDEX(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
+$virtualMethod=|QModelIndex|parent|const QModelIndex &
 
 /*
 virtual bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_REMOVECOLUMNS )
-{
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->removeColumns ( PINT(1), PINT(2), par3 ) );
-  }
-}
+$virtualMethod=|bool|removeColumns|int,int,const QModelIndex &=QModelIndex()
 
 /*
 virtual bool removeRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_REMOVEROWS )
-{
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->removeRows ( PINT(1), PINT(2), par3 ) );
-  }
-}
+$virtualMethod=|bool|removeRows|int,int,const QModelIndex &=QModelIndex()
 
 /*
 virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_ROWCOUNT )
-{
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RINT( obj->rowCount ( par1 ) );
-  }
-}
+$virtualMethod=|int|rowCount|const QModelIndex &=QModelIndex()
 
 /*
 virtual void setSourceModel ( QAbstractItemModel * newSourceModel )
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_SETSOURCEMODEL )
-{
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractItemModel * par1 = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setSourceModel ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|setSourceModel|QAbstractItemModel *
 
 #pragma ENDDUMP

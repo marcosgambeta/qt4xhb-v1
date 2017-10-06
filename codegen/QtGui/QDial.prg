@@ -8,8 +8,6 @@ REQUEST QSIZE
 
 CLASS QDial INHERIT QAbstractSlider
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD notchSize
@@ -39,125 +37,53 @@ $destructor
 /*
 QDial ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QDIAL_NEW )
-{
-  QDial * o = new QDial ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QWidget *=0
 
 $deleteMethod
 
 /*
 int notchSize () const
 */
-HB_FUNC_STATIC( QDIAL_NOTCHSIZE )
-{
-  QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->notchSize () );
-  }
-}
+$method=|int|notchSize|
 
 /*
 qreal notchTarget () const
 */
-HB_FUNC_STATIC( QDIAL_NOTCHTARGET )
-{
-  QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->notchTarget () );
-  }
-}
+$method=|qreal|notchTarget|
 
 /*
 bool notchesVisible () const
 */
-HB_FUNC_STATIC( QDIAL_NOTCHESVISIBLE )
-{
-  QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->notchesVisible () );
-  }
-}
+$method=|bool|notchesVisible|
 
 /*
 void setNotchTarget ( double target )
 */
-HB_FUNC_STATIC( QDIAL_SETNOTCHTARGET )
-{
-  QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setNotchTarget ( PDOUBLE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setNotchTarget|double
 
 /*
 bool wrapping () const
 */
-HB_FUNC_STATIC( QDIAL_WRAPPING )
-{
-  QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->wrapping () );
-  }
-}
+$method=|bool|wrapping|
 
 /*
 virtual QSize minimumSizeHint () const
 */
-HB_FUNC_STATIC( QDIAL_MINIMUMSIZEHINT )
-{
-  QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->minimumSizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|minimumSizeHint|
 
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC_STATIC( QDIAL_SIZEHINT )
-{
-  QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|sizeHint|
 
 /*
 void setNotchesVisible ( bool visible )
 */
-HB_FUNC_STATIC( QDIAL_SETNOTCHESVISIBLE )
-{
-  QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setNotchesVisible ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setNotchesVisible|bool
 
 /*
 void setWrapping ( bool on )
 */
-HB_FUNC_STATIC( QDIAL_SETWRAPPING )
-{
-  QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setWrapping ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWrapping|bool
 
 #pragma ENDDUMP

@@ -142,26 +142,12 @@ $deleteMethod
 /*
 bool abort ()
 */
-HB_FUNC_STATIC( QPRINTER_ABORT )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->abort () );
-  }
-}
+$method=|bool|abort|
 
 /*
 bool collateCopies () const
 */
-HB_FUNC_STATIC( QPRINTER_COLLATECOPIES )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->collateCopies () );
-  }
-}
+$method=|bool|collateCopies|
 
 /*
 ColorMode colorMode () const
@@ -178,14 +164,7 @@ HB_FUNC_STATIC( QPRINTER_COLORMODE )
 /*
 int copyCount () const
 */
-HB_FUNC_STATIC( QPRINTER_COPYCOUNT )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->copyCount () );
-  }
-}
+$method=|int|copyCount|
 
 /*
 QString creator () const
@@ -200,14 +179,7 @@ $method=|QString|docName|
 /*
 bool doubleSidedPrinting () const
 */
-HB_FUNC_STATIC( QPRINTER_DOUBLESIDEDPRINTING )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->doubleSidedPrinting () );
-  }
-}
+$method=|bool|doubleSidedPrinting|
 
 /*
 DuplexMode duplex () const
@@ -224,62 +196,27 @@ HB_FUNC_STATIC( QPRINTER_DUPLEX )
 /*
 bool fontEmbeddingEnabled () const
 */
-HB_FUNC_STATIC( QPRINTER_FONTEMBEDDINGENABLED )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->fontEmbeddingEnabled () );
-  }
-}
+$method=|bool|fontEmbeddingEnabled|
 
 /*
 int fromPage () const
 */
-HB_FUNC_STATIC( QPRINTER_FROMPAGE )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->fromPage () );
-  }
-}
+$method=|int|fromPage|
 
 /*
 bool fullPage () const
 */
-HB_FUNC_STATIC( QPRINTER_FULLPAGE )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->fullPage () );
-  }
-}
+$method=|bool|fullPage|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QPRINTER_ISVALID )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
+$method=|bool|isValid|
 
 /*
 bool newPage ()
 */
-HB_FUNC_STATIC( QPRINTER_NEWPAGE )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->newPage () );
-  }
-}
+$method=|bool|newPage|
 
 /*
 Orientation orientation () const
@@ -509,14 +446,7 @@ HB_FUNC_STATIC( QPRINTER_PRINTERSTATE )
 /*
 int resolution () const
 */
-HB_FUNC_STATIC( QPRINTER_RESOLUTION )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->resolution () );
-  }
-}
+$method=|int|resolution|
 
 /*
 void setCollateCopies ( bool collate )
@@ -849,38 +779,17 @@ HB_FUNC_STATIC( QPRINTER_SUPPORTEDRESOLUTIONS )
 /*
 bool supportsMultipleCopies () const
 */
-HB_FUNC_STATIC( QPRINTER_SUPPORTSMULTIPLECOPIES )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->supportsMultipleCopies () );
-  }
-}
+$method=|bool|supportsMultipleCopies|
 
 /*
 int toPage () const
 */
-HB_FUNC_STATIC( QPRINTER_TOPAGE )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->toPage () );
-  }
-}
+$method=|int|toPage|
 
 /*
 int winPageSize () const
 */
-HB_FUNC_STATIC( QPRINTER_WINPAGESIZE )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->winPageSize () );
-  }
-}
+$method=|int|winPageSize|
 
 /*
 virtual QPaintEngine * paintEngine () const

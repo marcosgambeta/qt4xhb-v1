@@ -10,8 +10,6 @@ REQUEST QSIZE
 
 CLASS QMdiArea INHERIT QAbstractScrollArea
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD activationOrder
@@ -138,14 +136,7 @@ HB_FUNC_STATIC( QMDIAREA_CURRENTSUBWINDOW )
 /*
 bool documentMode () const
 */
-HB_FUNC_STATIC( QMDIAREA_DOCUMENTMODE )
-{
-  QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->documentMode () );
-  }
-}
+$method=|bool|documentMode|
 
 /*
 void removeSubWindow ( QWidget * widget )
@@ -327,15 +318,7 @@ HB_FUNC_STATIC( QMDIAREA_TABSHAPE )
 /*
 bool testOption ( AreaOption option ) const
 */
-HB_FUNC_STATIC( QMDIAREA_TESTOPTION )
-{
-  QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    RBOOL( obj->testOption ( (QMdiArea::AreaOption) par1 ) );
-  }
-}
+$method=|bool|testOption|QMdiArea::AreaOption
 
 /*
 ViewMode viewMode () const

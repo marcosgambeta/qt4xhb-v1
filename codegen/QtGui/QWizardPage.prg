@@ -8,8 +8,6 @@ REQUEST QPIXMAP
 
 CLASS QWizardPage INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD buttonText
    METHOD cleanupPage
@@ -88,50 +86,22 @@ HB_FUNC_STATIC( QWIZARDPAGE_INITIALIZEPAGE )
 /*
 bool isCommitPage () const
 */
-HB_FUNC_STATIC( QWIZARDPAGE_ISCOMMITPAGE )
-{
-  QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isCommitPage () );
-  }
-}
+$method=|bool|isCommitPage|
 
 /*
 virtual bool isComplete () const
 */
-HB_FUNC_STATIC( QWIZARDPAGE_ISCOMPLETE )
-{
-  QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isComplete () );
-  }
-}
+$virtualMethod=|bool|isComplete|
 
 /*
 bool isFinalPage () const
 */
-HB_FUNC_STATIC( QWIZARDPAGE_ISFINALPAGE )
-{
-  QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isFinalPage () );
-  }
-}
+$method=|bool|isFinalPage|
 
 /*
 virtual int nextId () const
 */
-HB_FUNC_STATIC( QWIZARDPAGE_NEXTID )
-{
-  QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->nextId () );
-  }
-}
+$virtualMethod=|int|nextId|
 
 /*
 QPixmap pixmap ( QWizard::WizardPixmap which ) const
@@ -224,13 +194,6 @@ $method=|QString|title|
 /*
 virtual bool validatePage ()
 */
-HB_FUNC_STATIC( QWIZARDPAGE_VALIDATEPAGE )
-{
-  QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->validatePage () );
-  }
-}
+$virtualMethod=|bool|validatePage|
 
 #pragma ENDDUMP

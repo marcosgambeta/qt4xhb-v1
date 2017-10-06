@@ -86,14 +86,7 @@ $deleteMethod
 /*
 int delta() const
 */
-HB_FUNC_STATIC( QWHEELEVENT_DELTA )
-{
-  QWheelEvent * obj = (QWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->delta () );
-  }
-}
+$method=|int|delta|
 
 /*
 const QPoint &pos() const
@@ -124,73 +117,31 @@ HB_FUNC_STATIC( QWHEELEVENT_GLOBALPOS )
 /*
 int x() const
 */
-HB_FUNC_STATIC( QWHEELEVENT_X )
-{
-  QWheelEvent * obj = (QWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->x () );
-  }
-}
+$method=|int|x|
 
 /*
 int y() const
 */
-HB_FUNC_STATIC( QWHEELEVENT_Y )
-{
-  QWheelEvent * obj = (QWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->y () );
-  }
-}
+$method=|int|y|
 
 /*
 int globalX() const
 */
-HB_FUNC_STATIC( QWHEELEVENT_GLOBALX )
-{
-  QWheelEvent * obj = (QWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->globalX () );
-  }
-}
+$method=|int|globalX|
 
 /*
 int globalY() const
 */
-HB_FUNC_STATIC( QWHEELEVENT_GLOBALY )
-{
-  QWheelEvent * obj = (QWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->globalY () );
-  }
-}
+$method=|int|globalY|
 
 /*
 Qt::MouseButtons buttons() const
 */
-HB_FUNC_STATIC( QWHEELEVENT_BUTTONS )
-{
-  QWheelEvent * obj = (QWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->buttons () );
-  }
-}
+$method=|Qt::MouseButtons|buttons|
 
 /*
 Qt::Orientation orientation() const
 */
-HB_FUNC_STATIC( QWHEELEVENT_ORIENTATION )
-{
-  QWheelEvent * obj = (QWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RENUM( obj->orientation () );
-  }
-}
+$method=|Qt::Orientation|orientation|
 
 #pragma ENDDUMP

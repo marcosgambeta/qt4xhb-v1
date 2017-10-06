@@ -4,8 +4,6 @@ $header
 
 CLASS QSound INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD fileName
@@ -52,38 +50,17 @@ $method=|QString|fileName|
 /*
 bool isFinished () const
 */
-HB_FUNC_STATIC( QSOUND_ISFINISHED )
-{
-  QSound * obj = (QSound *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isFinished () );
-  }
-}
+$method=|bool|isFinished|
 
 /*
 int loops () const
 */
-HB_FUNC_STATIC( QSOUND_LOOPS )
-{
-  QSound * obj = (QSound *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->loops () );
-  }
-}
+$method=|int|loops|
 
 /*
 int loopsRemaining () const
 */
-HB_FUNC_STATIC( QSOUND_LOOPSREMAINING )
-{
-  QSound * obj = (QSound *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->loopsRemaining () );
-  }
-}
+$method=|int|loopsRemaining|
 
 /*
 void setLoops ( int number )
@@ -125,12 +102,9 @@ HB_FUNC_STATIC( QSOUND_STOP )
 }
 
 /*
-bool isAvailable ()
+static bool isAvailable ()
 */
-HB_FUNC_STATIC( QSOUND_ISAVAILABLE )
-{
-  RBOOL( QSound::isAvailable () );
-}
+$staticMethod=|bool|isAvailable|
 
 /*
 static void play ( const QString & filename )

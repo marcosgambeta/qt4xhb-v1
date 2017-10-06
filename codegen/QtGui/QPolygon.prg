@@ -166,15 +166,7 @@ HB_FUNC_STATIC( QPOLYGON_BOUNDINGRECT )
 /*
 bool containsPoint ( const QPoint & point, Qt::FillRule fillRule ) const
 */
-HB_FUNC_STATIC( QPOLYGON_CONTAINSPOINT )
-{
-  QPolygon * obj = (QPolygon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    RBOOL( obj->containsPoint ( *PQPOINT(1), (Qt::FillRule) par2 ) );
-  }
-}
+$method=|bool|containsPoint|const QPoint &,Qt::FillRule
 
 /*
 QPolygon intersected ( const QPolygon & r ) const

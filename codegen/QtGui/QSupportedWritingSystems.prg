@@ -90,15 +90,7 @@ HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_SETSUPPORTED )
 /*
 bool supported ( QFontDatabase::WritingSystem writingSystem ) const
 */
-HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_SUPPORTED )
-{
-  QSupportedWritingSystems * obj = (QSupportedWritingSystems *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    RBOOL( obj->supported ( (QFontDatabase::WritingSystem) par1 ) );
-  }
-}
+$method=|bool|supported|QFontDatabase::WritingSystem
 
 $extraMethods
 

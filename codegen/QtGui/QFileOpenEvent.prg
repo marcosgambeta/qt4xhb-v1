@@ -83,28 +83,11 @@ $method=|QString|file|
 /*
 bool openFile ( QFile & file, QIODevice::OpenMode flags ) const
 */
-HB_FUNC_STATIC( QFILEOPENEVENT_OPENFILE )
-{
-  QFileOpenEvent * obj = (QFileOpenEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QFile * par1 = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = hb_parni(2);
-    RBOOL( obj->openFile ( *par1, (QIODevice::OpenMode) par2 ) );
-  }
-}
+$method=|bool|openFile|QFile &,QIODevice::OpenMode
 
 /*
 QUrl url () const
 */
-HB_FUNC_STATIC( QFILEOPENEVENT_URL )
-{
-  QFileOpenEvent * obj = (QFileOpenEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->url () );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
+$method=|QUrl|url|
 
 #pragma ENDDUMP

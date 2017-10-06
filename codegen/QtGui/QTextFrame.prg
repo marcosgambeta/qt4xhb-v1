@@ -109,14 +109,7 @@ HB_FUNC_STATIC( QTEXTFRAME_FIRSTCURSORPOSITION )
 /*
 int firstPosition () const
 */
-HB_FUNC_STATIC( QTEXTFRAME_FIRSTPOSITION )
-{
-  QTextFrame * obj = (QTextFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->firstPosition () );
-  }
-}
+$method=|int|firstPosition|
 
 /*
 QTextFrameFormat frameFormat () const
@@ -147,14 +140,7 @@ HB_FUNC_STATIC( QTEXTFRAME_LASTCURSORPOSITION )
 /*
 int lastPosition () const
 */
-HB_FUNC_STATIC( QTEXTFRAME_LASTPOSITION )
-{
-  QTextFrame * obj = (QTextFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->lastPosition () );
-  }
-}
+$method=|int|lastPosition|
 
 /*
 QTextFrame * parentFrame () const

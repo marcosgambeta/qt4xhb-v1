@@ -54,38 +54,17 @@ $deleteMethod
 /*
 int addWidget ( QWidget * widget )
 */
-HB_FUNC_STATIC( QSTACKEDWIDGET_ADDWIDGET )
-{
-  QStackedWidget * obj = (QStackedWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->addWidget ( PQWIDGET(1) ) );
-  }
-}
+$method=|int|addWidget|QWidget *
 
 /*
 int count () const
 */
-HB_FUNC_STATIC( QSTACKEDWIDGET_COUNT )
-{
-  QStackedWidget * obj = (QStackedWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-}
+$method=|int|count|
 
 /*
 int currentIndex () const
 */
-HB_FUNC_STATIC( QSTACKEDWIDGET_CURRENTINDEX )
-{
-  QStackedWidget * obj = (QStackedWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->currentIndex () );
-  }
-}
+$method=|int|currentIndex|
 
 /*
 QWidget * currentWidget () const
@@ -103,26 +82,12 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_CURRENTWIDGET )
 /*
 int indexOf ( QWidget * widget ) const
 */
-HB_FUNC_STATIC( QSTACKEDWIDGET_INDEXOF )
-{
-  QStackedWidget * obj = (QStackedWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->indexOf ( PQWIDGET(1) ) );
-  }
-}
+$method=|int|indexOf|QWidget *
 
 /*
 int insertWidget ( int index, QWidget * widget )
 */
-HB_FUNC_STATIC( QSTACKEDWIDGET_INSERTWIDGET )
-{
-  QStackedWidget * obj = (QStackedWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->insertWidget ( PINT(1), PQWIDGET(2) ) );
-  }
-}
+$method=|int|insertWidget|int,QWidget *
 
 /*
 void removeWidget ( QWidget * widget )

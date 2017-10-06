@@ -4,8 +4,6 @@ $header
 
 CLASS QGraphicsAnchor INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD setSizePolicy
    METHOD setSpacing
@@ -46,15 +44,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSIZEPOLICY )
 /*
 void setSpacing ( qreal spacing )
 */
-HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSPACING )
-{
-  QGraphicsAnchor * obj = (QGraphicsAnchor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSpacing ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSpacing|qreal
 
 /*
 QSizePolicy::Policy sizePolicy () const
@@ -71,14 +61,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SIZEPOLICY )
 /*
 qreal spacing () const
 */
-HB_FUNC_STATIC( QGRAPHICSANCHOR_SPACING )
-{
-  QGraphicsAnchor * obj = (QGraphicsAnchor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->spacing () );
-  }
-}
+$method=|qreal|spacing|
 
 /*
 void unsetSpacing ()

@@ -13,8 +13,6 @@ REQUEST QCOLOR
 
 CLASS QTabBar INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addTab1
@@ -109,15 +107,7 @@ $method=|int|addTab,addTab1|const QString &
 /*
 int addTab ( const QIcon & icon, const QString & text )
 */
-HB_FUNC_STATIC( QTABBAR_ADDTAB2 )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
-    RINT( obj->addTab ( par1, PQSTRING(2) ) );
-  }
-}
+$method=|int|addTab,addTab2|const QIcon &,const QString &
 
 //[1]int addTab ( const QString & text )
 //[2]int addTab ( const QIcon & icon, const QString & text )
@@ -137,112 +127,47 @@ HB_FUNC_STATIC( QTABBAR_ADDTAB )
 /*
 int count () const
 */
-HB_FUNC_STATIC( QTABBAR_COUNT )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-}
+$method=|int|count|
 
 /*
 int currentIndex () const
 */
-HB_FUNC_STATIC( QTABBAR_CURRENTINDEX )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->currentIndex () );
-  }
-}
+$method=|int|currentIndex|
 
 /*
 bool documentMode () const
 */
-HB_FUNC_STATIC( QTABBAR_DOCUMENTMODE )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->documentMode () );
-  }
-}
+$method=|bool|documentMode|
 
 /*
 bool drawBase () const
 */
-HB_FUNC_STATIC( QTABBAR_DRAWBASE )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->drawBase () );
-  }
-}
+$method=|bool|drawBase|
 
 /*
 Qt::TextElideMode elideMode () const
 */
-HB_FUNC_STATIC( QTABBAR_ELIDEMODE )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->elideMode () );
-  }
-}
+$method=|Qt::TextElideMode|elideMode|
 
 /*
 bool expanding () const
 */
-HB_FUNC_STATIC( QTABBAR_EXPANDING )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->expanding () );
-  }
-}
+$method=|bool|expanding|
 
 /*
 QSize iconSize () const
 */
-HB_FUNC_STATIC( QTABBAR_ICONSIZE )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->iconSize () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|iconSize|
 
 /*
 int insertTab ( int index, const QString & text )
 */
-HB_FUNC_STATIC( QTABBAR_INSERTTAB1 )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->insertTab ( PINT(1), PQSTRING(2) ) );
-  }
-}
+$method=|int|insertTab,insertTab1|int,const QString &
 
 /*
 int insertTab ( int index, const QIcon & icon, const QString & text )
 */
-HB_FUNC_STATIC( QTABBAR_INSERTTAB2 )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIcon par2 = ISOBJECT(2)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(2));
-    RINT( obj->insertTab ( PINT(1), par2, PQSTRING(3) ) );
-  }
-}
+$method=|int|insertTab,insertTab2|int,const QIcon &,const QString &
 
 //[1]int insertTab ( int index, const QString & text )
 //[2]int insertTab ( int index, const QIcon & icon, const QString & text )
@@ -262,26 +187,12 @@ HB_FUNC_STATIC( QTABBAR_INSERTTAB )
 /*
 bool isMovable () const
 */
-HB_FUNC_STATIC( QTABBAR_ISMOVABLE )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isMovable () );
-  }
-}
+$method=|bool|isMovable|
 
 /*
 bool isTabEnabled ( int index ) const
 */
-HB_FUNC_STATIC( QTABBAR_ISTABENABLED )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isTabEnabled ( PINT(1) ) );
-  }
-}
+$method=|bool|isTabEnabled|int
 
 /*
 void moveTab ( int from, int to )
@@ -576,14 +487,7 @@ HB_FUNC_STATIC( QTABBAR_SHAPE )
 /*
 int tabAt ( const QPoint & position ) const
 */
-HB_FUNC_STATIC( QTABBAR_TABAT )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->tabAt ( *PQPOINT(1) ) );
-  }
-}
+$method=|int|tabAt|const QPoint &
 
 /*
 QWidget * tabButton ( int index, ButtonPosition position ) const
@@ -669,26 +573,12 @@ $method=|QString|tabWhatsThis|int
 /*
 bool tabsClosable () const
 */
-HB_FUNC_STATIC( QTABBAR_TABSCLOSABLE )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->tabsClosable () );
-  }
-}
+$method=|bool|tabsClosable|
 
 /*
 bool usesScrollButtons () const
 */
-HB_FUNC_STATIC( QTABBAR_USESSCROLLBUTTONS )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->usesScrollButtons () );
-  }
-}
+$method=|bool|usesScrollButtons|
 
 /*
 virtual QSize minimumSizeHint () const

@@ -95,26 +95,12 @@ HB_FUNC_STATIC( QTEXTBLOCK_BLOCKFORMAT )
 /*
 int blockFormatIndex () const
 */
-HB_FUNC_STATIC( QTEXTBLOCK_BLOCKFORMATINDEX )
-{
-  QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->blockFormatIndex () );
-  }
-}
+$method=|int|blockFormatIndex|
 
 /*
 int blockNumber () const
 */
-HB_FUNC_STATIC( QTEXTBLOCK_BLOCKNUMBER )
-{
-  QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->blockNumber () );
-  }
-}
+$method=|int|blockNumber|
 
 /*
 QTextCharFormat charFormat () const
@@ -132,14 +118,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_CHARFORMAT )
 /*
 int charFormatIndex () const
 */
-HB_FUNC_STATIC( QTEXTBLOCK_CHARFORMATINDEX )
-{
-  QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->charFormatIndex () );
-  }
-}
+$method=|int|charFormatIndex|
 
 /*
 void clearLayout ()
@@ -157,14 +136,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_CLEARLAYOUT )
 /*
 bool contains ( int position ) const
 */
-HB_FUNC_STATIC( QTEXTBLOCK_CONTAINS )
-{
-  QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->contains ( PINT(1) ) );
-  }
-}
+$method=|bool|contains|int
 
 /*
 const QTextDocument * document () const
@@ -182,151 +154,62 @@ HB_FUNC_STATIC( QTEXTBLOCK_DOCUMENT )
 /*
 int firstLineNumber () const
 */
-HB_FUNC_STATIC( QTEXTBLOCK_FIRSTLINENUMBER )
-{
-  QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->firstLineNumber () );
-  }
-}
+$method=|int|firstLineNumber|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QTEXTBLOCK_ISVALID )
-{
-  QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
+$method=|bool|isValid|
 
 /*
 bool isVisible () const
 */
-HB_FUNC_STATIC( QTEXTBLOCK_ISVISIBLE )
-{
-  QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isVisible () );
-  }
-}
+$method=|bool|isVisible|
 
 /*
 QTextLayout * layout () const
 */
-HB_FUNC_STATIC( QTEXTBLOCK_LAYOUT )
-{
-  QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextLayout * ptr = obj->layout ();
-    _qt4xhb_createReturnClass ( ptr, "QTEXTLAYOUT" );
-  }
-}
+$method=|QTextLayout *|layout|
 
 /*
 int length () const
 */
-HB_FUNC_STATIC( QTEXTBLOCK_LENGTH )
-{
-  QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->length () );
-  }
-}
+$method=|int|length|
 
 /*
 int lineCount () const
 */
-HB_FUNC_STATIC( QTEXTBLOCK_LINECOUNT )
-{
-  QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->lineCount () );
-  }
-}
+$method=|int|lineCount|
 
 /*
 QTextBlock next () const
 */
-HB_FUNC_STATIC( QTEXTBLOCK_NEXT )
-{
-  QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextBlock * ptr = new QTextBlock( obj->next () );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
-  }
-}
+$method=|QTextBlock|next|
 
 /*
 int position () const
 */
-HB_FUNC_STATIC( QTEXTBLOCK_POSITION )
-{
-  QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->position () );
-  }
-}
+$method=|int|position|
 
 /*
 QTextBlock previous () const
 */
-HB_FUNC_STATIC( QTEXTBLOCK_PREVIOUS )
-{
-  QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextBlock * ptr = new QTextBlock( obj->previous () );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
-  }
-}
+$method=|QTextBlock|previous|
 
 /*
 int revision () const
 */
-HB_FUNC_STATIC( QTEXTBLOCK_REVISION )
-{
-  QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->revision () );
-  }
-}
+$method=|int|revision|
 
 /*
 void setLineCount ( int count )
 */
-HB_FUNC_STATIC( QTEXTBLOCK_SETLINECOUNT )
-{
-  QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setLineCount ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setLineCount|int
 
 /*
 void setRevision ( int rev )
 */
-HB_FUNC_STATIC( QTEXTBLOCK_SETREVISION )
-{
-  QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRevision ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRevision|int
 
 /*
 void setUserData ( QTextBlockUserData * data )
@@ -414,14 +297,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_USERDATA )
 /*
 int userState () const
 */
-HB_FUNC_STATIC( QTEXTBLOCK_USERSTATE )
-{
-  QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->userState () );
-  }
-}
+$method=|int|userState|
 
 $extraMethods
 

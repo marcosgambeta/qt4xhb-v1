@@ -83,14 +83,7 @@ $deleteMethod
 /*
 bool contains ( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QITEMSELECTION_CONTAINS )
-{
-  QItemSelection * obj = (QItemSelection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->contains ( *PQMODELINDEX(1) ) );
-  }
-}
+$method=|bool|contains|const QModelIndex &
 
 /*
 QModelIndexList indexes () const

@@ -4,8 +4,6 @@ $header
 
 CLASS QGraphicsObject INHERIT QObject,QGraphicsItem
 
-   DATA self_destruction INIT .F.
-
    METHOD grabGesture
    METHOD ungrabGesture
 

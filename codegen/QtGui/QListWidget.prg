@@ -153,14 +153,7 @@ HB_FUNC_STATIC( QLISTWIDGET_CLOSEPERSISTENTEDITOR )
 /*
 int count () const
 */
-HB_FUNC_STATIC( QLISTWIDGET_COUNT )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-}
+$method=|int|count|
 
 /*
 QListWidgetItem * currentItem () const
@@ -178,14 +171,7 @@ HB_FUNC_STATIC( QLISTWIDGET_CURRENTITEM )
 /*
 int currentRow () const
 */
-HB_FUNC_STATIC( QLISTWIDGET_CURRENTROW )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->currentRow () );
-  }
-}
+$method=|int|currentRow|
 
 /*
 void editItem ( QListWidgetItem * item )
@@ -303,14 +289,7 @@ HB_FUNC_STATIC( QLISTWIDGET_INSERTITEMS )
 /*
 bool isSortingEnabled () const
 */
-HB_FUNC_STATIC( QLISTWIDGET_ISSORTINGENABLED )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isSortingEnabled () );
-  }
-}
+$method=|bool|isSortingEnabled|
 
 /*
 QListWidgetItem * item ( int row ) const
@@ -411,15 +390,7 @@ HB_FUNC_STATIC( QLISTWIDGET_REMOVEITEMWIDGET )
 /*
 int row ( const QListWidgetItem * item ) const
 */
-HB_FUNC_STATIC( QLISTWIDGET_ROW )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QListWidgetItem * par1 = (const QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RINT( obj->row ( par1 ) );
-  }
-}
+$method=|int|row|const QListWidgetItem *
 
 /*
 QList<QListWidgetItem *> selectedItems () const

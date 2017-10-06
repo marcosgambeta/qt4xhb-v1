@@ -160,14 +160,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_BOUNDINGRECT )
 /*
 bool cacheEnabled () const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_CACHEENABLED )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->cacheEnabled () );
-  }
-}
+$method=|bool|cacheEnabled|
 
 /*
 void clearAdditionalFormats ()
@@ -336,26 +329,12 @@ HB_FUNC_STATIC( QTEXTLAYOUT_GLYPHRUNS )
 /*
 bool isValidCursorPosition ( int pos ) const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_ISVALIDCURSORPOSITION )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isValidCursorPosition ( PINT(1) ) );
-  }
-}
+$method=|bool|isValidCursorPosition|int
 
 /*
 int leftCursorPosition ( int oldPos ) const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_LEFTCURSORPOSITION )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->leftCursorPosition ( PINT(1) ) );
-  }
-}
+$method=|int|leftCursorPosition|int
 
 /*
 QTextLine lineAt ( int i ) const
@@ -373,14 +352,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_LINEAT )
 /*
 int lineCount () const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_LINECOUNT )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->lineCount () );
-  }
-}
+$method=|int|lineCount|
 
 /*
 QTextLine lineForTextPosition ( int pos ) const
@@ -398,39 +370,17 @@ HB_FUNC_STATIC( QTEXTLAYOUT_LINEFORTEXTPOSITION )
 /*
 qreal maximumWidth () const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_MAXIMUMWIDTH )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->maximumWidth () );
-  }
-}
+$method=|qreal|maximumWidth|
 
 /*
 qreal minimumWidth () const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_MINIMUMWIDTH )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->minimumWidth () );
-  }
-}
+$method=|qreal|minimumWidth|
 
 /*
 int nextCursorPosition ( int oldPos, CursorMode mode = SkipCharacters ) const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_NEXTCURSORPOSITION )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) QTextLayout::SkipCharacters : hb_parni(2);
-    RINT( obj->nextCursorPosition ( PINT(1), (QTextLayout::CursorMode) par2 ) );
-  }
-}
+$method=|int|nextCursorPosition|int,QTextLayout::CursorMode=QTextLayout::SkipCharacters
 
 /*
 QPointF position () const
@@ -448,14 +398,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_POSITION )
 /*
 int preeditAreaPosition () const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_PREEDITAREAPOSITION )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->preeditAreaPosition () );
-  }
-}
+$method=|int|preeditAreaPosition|
 
 /*
 QString preeditAreaText () const
@@ -465,27 +408,12 @@ $method=|QString|preeditAreaText|
 /*
 int previousCursorPosition ( int oldPos, CursorMode mode = SkipCharacters ) const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_PREVIOUSCURSORPOSITION )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) QTextLayout::SkipCharacters : hb_parni(2);
-    RINT( obj->previousCursorPosition ( PINT(1), (QTextLayout::CursorMode) par2 ) );
-  }
-}
+$method=|int|previousCursorPosition|int,QTextLayout::CursorMode=QTextLayout::SkipCharacters
 
 /*
 int rightCursorPosition ( int oldPos ) const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_RIGHTCURSORPOSITION )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->rightCursorPosition ( PINT(1) ) );
-  }
-}
+$method=|int|rightCursorPosition|int
 
 /*
 void setCacheEnabled ( bool enable )

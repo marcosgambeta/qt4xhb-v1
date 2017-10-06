@@ -87,26 +87,12 @@ $deleteMethod
 /*
 bool bold () const
 */
-HB_FUNC_STATIC( QFONTINFO_BOLD )
-{
-  QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->bold () );
-  }
-}
+$method=|bool|bold|
 
 /*
 bool exactMatch () const
 */
-HB_FUNC_STATIC( QFONTINFO_EXACTMATCH )
-{
-  QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->exactMatch () );
-  }
-}
+$method=|bool|exactMatch|
 
 /*
 QString family () const
@@ -116,98 +102,42 @@ $method=|QString|family|
 /*
 bool fixedPitch () const
 */
-HB_FUNC_STATIC( QFONTINFO_FIXEDPITCH )
-{
-  QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->fixedPitch () );
-  }
-}
+$method=|bool|fixedPitch|
 
 /*
 bool italic () const
 */
-HB_FUNC_STATIC( QFONTINFO_ITALIC )
-{
-  QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->italic () );
-  }
-}
+$method=|bool|italic|
 
 /*
 int pixelSize () const
 */
-HB_FUNC_STATIC( QFONTINFO_PIXELSIZE )
-{
-  QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->pixelSize () );
-  }
-}
+$method=|int|pixelSize|
 
 /*
 int pointSize () const
 */
-HB_FUNC_STATIC( QFONTINFO_POINTSIZE )
-{
-  QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->pointSize () );
-  }
-}
+$method=|int|pointSize|
 
 /*
 qreal pointSizeF () const
 */
-HB_FUNC_STATIC( QFONTINFO_POINTSIZEF )
-{
-  QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->pointSizeF () );
-  }
-}
+$method=|qreal|pointSizeF|
 
 /*
 bool rawMode () const
 */
-HB_FUNC_STATIC( QFONTINFO_RAWMODE )
-{
-  QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->rawMode () );
-  }
-}
+$method=|bool|rawMode|
 
 /*
 QFont::Style style () const
 */
-HB_FUNC_STATIC( QFONTINFO_STYLE )
-{
-  QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->style () );
-  }
-}
+$method=|QFont::Style|style|
 
 /*
 QFont::StyleHint styleHint () const
 */
-HB_FUNC_STATIC( QFONTINFO_STYLEHINT )
-{
-  QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->styleHint () );
-  }
-}
+$method=|QFont::StyleHint|styleHint|
 
 /*
 QString styleName () const
@@ -217,14 +147,7 @@ $method=|QString|styleName|
 /*
 int weight () const
 */
-HB_FUNC_STATIC( QFONTINFO_WEIGHT )
-{
-  QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->weight () );
-  }
-}
+$method=|int|weight|
 
 $extraMethods
 

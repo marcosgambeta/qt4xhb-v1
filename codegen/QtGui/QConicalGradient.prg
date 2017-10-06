@@ -89,14 +89,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_NEW )
 /*
 qreal angle () const
 */
-HB_FUNC_STATIC( QCONICALGRADIENT_ANGLE )
-{
-  QConicalGradient * obj = (QConicalGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->angle () );
-  }
-}
+$method=|qreal|angle|
 
 /*
 QPointF center () const
@@ -114,15 +107,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_CENTER )
 /*
 void setAngle ( qreal angle )
 */
-HB_FUNC_STATIC( QCONICALGRADIENT_SETANGLE )
-{
-  QConicalGradient * obj = (QConicalGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAngle ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAngle|qreal
 
 /*
 void setCenter ( const QPointF & center )
@@ -140,15 +125,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_SETCENTER1 )
 /*
 void setCenter ( qreal x, qreal y )
 */
-HB_FUNC_STATIC( QCONICALGRADIENT_SETCENTER2 )
-{
-  QConicalGradient * obj = (QConicalGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCenter ( PQREAL(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCenter,setCenter2|qreal,qreal
 
 //[1]void setCenter ( const QPointF & center )
 //[2]void setCenter ( qreal x, qreal y )

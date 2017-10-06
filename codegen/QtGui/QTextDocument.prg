@@ -19,8 +19,6 @@ REQUEST QTEXTFRAME
 
 CLASS QTextDocument INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -242,26 +240,12 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ALLFORMATS )
 /*
 int availableRedoSteps () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_AVAILABLEREDOSTEPS )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->availableRedoSteps () );
-  }
-}
+$method=|int|availableRedoSteps|
 
 /*
 int availableUndoSteps () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_AVAILABLEUNDOSTEPS )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->availableUndoSteps () );
-  }
-}
+$method=|int|availableUndoSteps|
 
 /*
 QTextBlock begin () const
@@ -279,14 +263,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_BEGIN )
 /*
 int blockCount () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_BLOCKCOUNT )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->blockCount () );
-  }
-}
+$method=|int|blockCount|
 
 /*
 QChar characterAt ( int pos ) const
@@ -304,27 +281,12 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CHARACTERAT )
 /*
 int characterCount () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_CHARACTERCOUNT )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->characterCount () );
-  }
-}
+$method=|int|characterCount|
 
 /*
 virtual void clear ()
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_CLEAR )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|clear|
 
 /*
 void clearUndoRedoStacks ( Stacks stacksToClear = UndoAndRedoStacks )
@@ -412,14 +374,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DOCUMENTLAYOUT )
 /*
 qreal documentMargin () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_DOCUMENTMARGIN )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->documentMargin () );
-  }
-}
+$method=|qreal|documentMargin|
 
 /*
 void drawContents ( QPainter * p, const QRectF & rect = QRectF() )
@@ -584,86 +539,37 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIRSTBLOCK )
 /*
 qreal idealWidth () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_IDEALWIDTH )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->idealWidth () );
-  }
-}
+$method=|qreal|idealWidth|
 
 /*
 qreal indentWidth () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_INDENTWIDTH )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->indentWidth () );
-  }
-}
+$method=|qreal|indentWidth|
 
 /*
 bool isEmpty () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_ISEMPTY )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-}
+$method=|bool|isEmpty|
 
 /*
 bool isModified () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_ISMODIFIED )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isModified () );
-  }
-}
+$method=|bool|isModified|
 
 /*
 bool isRedoAvailable () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_ISREDOAVAILABLE )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isRedoAvailable () );
-  }
-}
+$method=|bool|isRedoAvailable|
 
 /*
 bool isUndoAvailable () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_ISUNDOAVAILABLE )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isUndoAvailable () );
-  }
-}
+$method=|bool|isUndoAvailable|
 
 /*
 bool isUndoRedoEnabled () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_ISUNDOREDOENABLED )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isUndoRedoEnabled () );
-  }
-}
+$method=|bool|isUndoRedoEnabled|
 
 /*
 QTextBlock lastBlock () const
@@ -681,39 +587,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_LASTBLOCK )
 /*
 int lineCount () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_LINECOUNT )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->lineCount () );
-  }
-}
+$method=|int|lineCount|
 
 /*
 void markContentsDirty ( int position, int length )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_MARKCONTENTSDIRTY )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->markContentsDirty ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|markContentsDirty|int,int
 
 /*
 int maximumBlockCount () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_MAXIMUMBLOCKCOUNT )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->maximumBlockCount () );
-  }
-}
+$method=|int|maximumBlockCount|
 
 /*
 QString metaInformation ( MetaInformation info ) const
@@ -723,67 +607,27 @@ $method=|QString|metaInformation|QTextDocument::MetaInformation
 /*
 QTextObject * object ( int objectIndex ) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_OBJECT )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextObject * ptr = obj->object ( PINT(1) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTOBJECT" );
-  }
-}
+$method=|QTextObject *|object|int
 
 /*
 QTextObject * objectForFormat ( const QTextFormat & f ) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_OBJECTFORFORMAT )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextObject * ptr = obj->objectForFormat ( *PQTEXTFORMAT(1) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTOBJECT" );
-  }
-}
+$method=|QTextObject *|objectForFormat|const QTextFormat &
 
 /*
 int pageCount () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_PAGECOUNT )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->pageCount () );
-  }
-}
+$method=|int|pageCount|
 
 /*
 QSizeF pageSize () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_PAGESIZE )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSizeF * ptr = new QSizeF( obj->pageSize () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
-  }
-}
+$method=|QSizeF|pageSize|
 
 /*
 void print ( QPrinter * printer ) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_PRINT )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPrinter * par1 = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->print ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|print|QPrinter *
 
 /*
 void redo ( QTextCursor * cursor )
@@ -815,14 +659,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_RESOURCE )
 /*
 int revision () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_REVISION )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->revision () );
-  }
-}
+$method=|int|revision|
 
 /*
 QTextFrame * rootFrame () const
@@ -898,15 +735,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETDOCUMENTLAYOUT )
 /*
 void setDocumentMargin ( qreal margin )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SETDOCUMENTMARGIN )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDocumentMargin ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDocumentMargin|qreal
 
 /*
 void setHtml ( const QString & html )
@@ -916,15 +745,7 @@ $method=|void|setHtml|const QString &
 /*
 void setIndentWidth ( qreal width )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SETINDENTWIDTH )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setIndentWidth ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setIndentWidth|qreal
 
 /*
 void setMaximumBlockCount ( int maximum )
@@ -973,15 +794,7 @@ $method=|void|setPlainText|const QString &
 /*
 void setTextWidth ( qreal width )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SETTEXTWIDTH )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTextWidth ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTextWidth|qreal
 
 /*
 void setUndoRedoEnabled ( bool enable )
@@ -1025,27 +838,12 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SIZE )
 /*
 qreal textWidth () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_TEXTWIDTH )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->textWidth () );
-  }
-}
+$method=|qreal|textWidth|
 
 /*
 QString toHtml ( const QByteArray & encoding = QByteArray() ) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_TOHTML )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray par1 = ISNIL(1)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RQSTRING( obj->toHtml ( par1 ) );
-  }
-}
+$method=|QString|toHtml|const QByteArray &=QByteArray()
 
 /*
 QString toPlainText () const
@@ -1068,14 +866,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_UNDO1 )
 /*
 bool useDesignMetrics () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_USEDESIGNMETRICS )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->useDesignMetrics () );
-  }
-}
+$method=|bool|useDesignMetrics|
 
 /*
 void redo ()

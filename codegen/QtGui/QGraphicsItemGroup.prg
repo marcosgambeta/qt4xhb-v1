@@ -88,15 +88,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_BOUNDINGRECT )
 /*
 virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 */
-HB_FUNC_STATIC( QGRAPHICSITEMGROUP_ISOBSCUREDBY )
-{
-  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QGraphicsItem * par1 = (const QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->isObscuredBy ( par1 ) );
-  }
-}
+$virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
 
 /*
 virtual QPainterPath opaqueArea () const
@@ -128,13 +120,6 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_PAINT )
 /*
 virtual int type () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEMGROUP_TYPE )
-{
-  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->type () );
-  }
-}
+$virtualMethod=|int|type|
 
 #pragma ENDDUMP

@@ -159,38 +159,17 @@ $deleteMethod
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QVECTOR2D_ISNULL )
-{
-  QVector2D * obj = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
+$method=|bool|isNull|
 
 /*
 qreal length () const
 */
-HB_FUNC_STATIC( QVECTOR2D_LENGTH )
-{
-  QVector2D * obj = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->length () );
-  }
-}
+$method=|qreal|length|
 
 /*
 qreal lengthSquared () const
 */
-HB_FUNC_STATIC( QVECTOR2D_LENGTHSQUARED )
-{
-  QVector2D * obj = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->lengthSquared () );
-  }
-}
+$method=|qreal|lengthSquared|
 
 /*
 void normalize ()
@@ -221,115 +200,50 @@ HB_FUNC_STATIC( QVECTOR2D_NORMALIZED )
 /*
 void setX ( qreal x )
 */
-HB_FUNC_STATIC( QVECTOR2D_SETX )
-{
-  QVector2D * obj = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setX ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setX|qreal
 
 /*
 void setY ( qreal y )
 */
-HB_FUNC_STATIC( QVECTOR2D_SETY )
-{
-  QVector2D * obj = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setY ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setY|qreal
 
 /*
 QPoint toPoint () const
 */
-HB_FUNC_STATIC( QVECTOR2D_TOPOINT )
-{
-  QVector2D * obj = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->toPoint () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-}
+$method=|QPoint|toPoint|
 
 /*
 QPointF toPointF () const
 */
-HB_FUNC_STATIC( QVECTOR2D_TOPOINTF )
-{
-  QVector2D * obj = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->toPointF () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|toPointF|
 
 /*
 QVector3D toVector3D () const
 */
-HB_FUNC_STATIC( QVECTOR2D_TOVECTOR3D )
-{
-  QVector2D * obj = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVector3D * ptr = new QVector3D( obj->toVector3D () );
-    _qt4xhb_createReturnClass ( ptr, "QVECTOR3D" );
-  }
-}
+$method=|QVector3D|toVector3D|
 
 /*
 QVector4D toVector4D () const
 */
-HB_FUNC_STATIC( QVECTOR2D_TOVECTOR4D )
-{
-  QVector2D * obj = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVector4D * ptr = new QVector4D( obj->toVector4D () );
-    _qt4xhb_createReturnClass ( ptr, "QVECTOR4D" );
-  }
-}
+$method=|QVector4D|toVector4D|
 
 /*
 qreal x () const
 */
-HB_FUNC_STATIC( QVECTOR2D_X )
-{
-  QVector2D * obj = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->x () );
-  }
-}
+$method=|qreal|x|
 
 /*
 qreal y () const
 */
-HB_FUNC_STATIC( QVECTOR2D_Y )
-{
-  QVector2D * obj = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->y () );
-  }
-}
+$method=|qreal|y|
 
 /*
-qreal dotProduct ( const QVector2D & v1, const QVector2D & v2 )
+static qreal dotProduct ( const QVector2D & v1, const QVector2D & v2 )
 */
-HB_FUNC_STATIC( QVECTOR2D_DOTPRODUCT )
-{
-  RQREAL( QVector2D::dotProduct ( *PQVECTOR2D(1), *PQVECTOR2D(2) ) );
-}
+$staticMethod=|qreal|dotProduct|const QVector2D &,const QVector2D &
 
-// TODO: implementar função
-// bool qFuzzyCompare ( const QVector2D & v1, const QVector2D & v2 )
+%% TODO: implementar função
+%% bool qFuzzyCompare ( const QVector2D & v1, const QVector2D & v2 )
 
 $extraMethods
 

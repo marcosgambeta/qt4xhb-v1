@@ -84,59 +84,32 @@ $destructor
 /*
 QPalette ()
 */
-HB_FUNC_STATIC( QPALETTE_NEW1 )
-{
-  QPalette * o = new QPalette ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new1|
 
 /*
 QPalette ( const QColor & button )
 */
-HB_FUNC_STATIC( QPALETTE_NEW2 )
-{
-  QColor par1 = ISOBJECT(1)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(1));
-  QPalette * o = new QPalette ( par1 );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new2|const QColor &
 
 /*
 QPalette ( Qt::GlobalColor button )
 */
-HB_FUNC_STATIC( QPALETTE_NEW3 )
-{
-  QPalette * o = new QPalette ( (Qt::GlobalColor) hb_parni(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new3|Qt::GlobalColor
 
 /*
 QPalette ( const QColor & button, const QColor & window )
 */
-HB_FUNC_STATIC( QPALETTE_NEW4 )
-{
-  QColor par1 = ISOBJECT(1)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(1));
-  QColor par2 = ISOBJECT(2)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(2));
-  QPalette * o = new QPalette ( par1, par2 );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new4|const QColor &,const QColor &
 
 /*
 QPalette ( const QBrush & windowText, const QBrush & button, const QBrush & light, const QBrush & dark, const QBrush & mid, const QBrush & text, const QBrush & bright_text, const QBrush & base, const QBrush & window )
 */
-HB_FUNC_STATIC( QPALETTE_NEW5 )
-{
-  QPalette * o = new QPalette ( *PQBRUSH(1), *PQBRUSH(2), *PQBRUSH(3), *PQBRUSH(4), *PQBRUSH(5), *PQBRUSH(6), *PQBRUSH(7), *PQBRUSH(8), *PQBRUSH(9) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new5|const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &
 
 /*
 QPalette ( const QPalette & p )
 */
-HB_FUNC_STATIC( QPALETTE_NEW6 )
-{
-  QPalette * o = new QPalette ( *PQPALETTE(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new6|const QPalette &
 
 //[1]QPalette ()
 //[2]QPalette ( const QColor & button )
@@ -178,70 +151,27 @@ $deleteMethod
 /*
 const QBrush & alternateBase () const
 */
-HB_FUNC_STATIC( QPALETTE_ALTERNATEBASE )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QBrush * ptr = &obj->alternateBase ();
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
-  }
-}
+$method=|const QBrush &|alternateBase|
 
 /*
 const QBrush & base () const
 */
-HB_FUNC_STATIC( QPALETTE_BASE )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QBrush * ptr = &obj->base ();
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
-  }
-}
+$method=|const QBrush &|base|
 
 /*
 const QBrush & brightText () const
 */
-HB_FUNC_STATIC( QPALETTE_BRIGHTTEXT )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QBrush * ptr = &obj->brightText ();
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
-  }
-}
+$method=|const QBrush &|brightText|
 
 /*
 const QBrush & brush ( ColorGroup group, ColorRole role ) const
 */
-HB_FUNC_STATIC( QPALETTE_BRUSH1 )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    const QBrush * ptr = &obj->brush ( (QPalette::ColorGroup) par1, (QPalette::ColorRole) par2 );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
-  }
-}
+$method=|const QBrush &|brush,brush1|QPalette::ColorGroup,QPalette::ColorRole
 
 /*
 const QBrush & brush ( ColorRole role ) const
 */
-HB_FUNC_STATIC( QPALETTE_BRUSH2 )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    const QBrush * ptr = &obj->brush ( (QPalette::ColorRole) par1 );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
-  }
-}
+$method=|const QBrush &|brush,brush2|QPalette::ColorRole
 
 //[1]const QBrush & brush ( ColorGroup group, ColorRole role ) const
 //[2]const QBrush & brush ( ColorRole role ) const
@@ -261,69 +191,27 @@ HB_FUNC_STATIC( QPALETTE_BRUSH )
 /*
 const QBrush & button () const
 */
-HB_FUNC_STATIC( QPALETTE_BUTTON )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QBrush * ptr = &obj->button ();
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
-  }
-}
+$method=|const QBrush &|button|
 
 /*
 const QBrush & buttonText () const
 */
-HB_FUNC_STATIC( QPALETTE_BUTTONTEXT )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QBrush * ptr = &obj->buttonText ();
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
-  }
-}
+$method=|const QBrush &|buttonText|
 
 /*
 qint64 cacheKey () const
 */
-HB_FUNC_STATIC( QPALETTE_CACHEKEY )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->cacheKey () );
-  }
-}
+$method=|qint64|cacheKey|
 
 /*
 const QColor & color ( ColorGroup group, ColorRole role ) const
 */
-HB_FUNC_STATIC( QPALETTE_COLOR1 )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    const QColor * ptr = &obj->color ( (QPalette::ColorGroup) par1, (QPalette::ColorRole) par2 );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR" );
-  }
-}
+$method=|const QColor &|color,color1|QPalette::ColorGroup,QPalette::ColorRole
 
 /*
 const QColor & color ( ColorRole role ) const
 */
-HB_FUNC_STATIC( QPALETTE_COLOR2 )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    const QColor * ptr = &obj->color ( (QPalette::ColorRole) par1 );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR" );
-  }
-}
+$method=|const QColor &|color,color2|QPalette::ColorRole
 
 //[1]const QColor & color ( ColorGroup group, ColorRole role ) const
 //[2]const QColor & color ( ColorRole role ) const
@@ -343,200 +231,77 @@ HB_FUNC_STATIC( QPALETTE_COLOR )
 /*
 ColorGroup currentColorGroup () const
 */
-HB_FUNC_STATIC( QPALETTE_CURRENTCOLORGROUP )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->currentColorGroup () );
-  }
-}
+$method=|QPalette::ColorGroup|currentColorGroup|
 
 /*
 const QBrush & dark () const
 */
-HB_FUNC_STATIC( QPALETTE_DARK )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QBrush * ptr = &obj->dark ();
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
-  }
-}
+$method=|const QBrush &|dark|
 
 /*
 const QBrush & highlight () const
 */
-HB_FUNC_STATIC( QPALETTE_HIGHLIGHT )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QBrush * ptr = &obj->highlight ();
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
-  }
-}
+$method=|const QBrush &|highlight|
 
 /*
 const QBrush & highlightedText () const
 */
-HB_FUNC_STATIC( QPALETTE_HIGHLIGHTEDTEXT )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QBrush * ptr = &obj->highlightedText ();
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
-  }
-}
+$method=|const QBrush &|highlightedText|
 
 /*
 bool isBrushSet ( ColorGroup cg, ColorRole cr ) const
 */
-HB_FUNC_STATIC( QPALETTE_ISBRUSHSET )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    RBOOL( obj->isBrushSet ( (QPalette::ColorGroup) par1, (QPalette::ColorRole) par2 ) );
-  }
-}
+$method=|bool|isBrushSet|QPalette::ColorGroup,QPalette::ColorRole
 
 /*
 bool isCopyOf ( const QPalette & p ) const
 */
-HB_FUNC_STATIC( QPALETTE_ISCOPYOF )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isCopyOf ( *PQPALETTE(1) ) );
-  }
-}
+$method=|bool|isCopyOf|const QPalette &
 
 /*
 bool isEqual ( ColorGroup cg1, ColorGroup cg2 ) const
 */
-HB_FUNC_STATIC( QPALETTE_ISEQUAL )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    RBOOL( obj->isEqual ( (QPalette::ColorGroup) par1, (QPalette::ColorGroup) par2 ) );
-  }
-}
+$method=|bool|isEqual|QPalette::ColorGroup,QPalette::ColorGroup
 
 /*
 const QBrush & light () const
 */
-HB_FUNC_STATIC( QPALETTE_LIGHT )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QBrush * ptr = &obj->light ();
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
-  }
-}
+$method=|const QBrush &|light|
 
 /*
 const QBrush & link () const
 */
-HB_FUNC_STATIC( QPALETTE_LINK )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QBrush * ptr = &obj->link ();
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
-  }
-}
+$method=|const QBrush &|link|
 
 /*
 const QBrush & linkVisited () const
 */
-HB_FUNC_STATIC( QPALETTE_LINKVISITED )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QBrush * ptr = &obj->linkVisited ();
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
-  }
-}
+$method=|const QBrush &|linkVisited|
 
 /*
 const QBrush & mid () const
 */
-HB_FUNC_STATIC( QPALETTE_MID )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QBrush * ptr = &obj->mid ();
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
-  }
-}
+$method=|const QBrush &|mid|
 
 /*
 const QBrush & midlight () const
 */
-HB_FUNC_STATIC( QPALETTE_MIDLIGHT )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QBrush * ptr = &obj->midlight ();
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
-  }
-}
+$method=|const QBrush &|midlight|
 
 /*
 QPalette resolve ( const QPalette & other ) const
 */
-HB_FUNC_STATIC( QPALETTE_RESOLVE )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPalette * ptr = new QPalette( obj->resolve ( *PQPALETTE(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QPALETTE", true );
-  }
-}
+$method=|QPalette|resolve|const QPalette &
 
 /*
 void setBrush ( ColorRole role, const QBrush & brush )
 */
-HB_FUNC_STATIC( QPALETTE_SETBRUSH1 )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setBrush ( (QPalette::ColorRole) par1, *PQBRUSH(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBrush,setBrush1|QPalette::ColorRole,const QBrush &
 
 /*
 void setBrush ( ColorGroup group, ColorRole role, const QBrush & brush )
 */
-HB_FUNC_STATIC( QPALETTE_SETBRUSH2 )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    obj->setBrush ( (QPalette::ColorGroup) par1, (QPalette::ColorRole) par2, *PQBRUSH(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBrush,setBrush2|QPalette::ColorGroup,QPalette::ColorRole,const QBrush &
 
 //[1]void setBrush ( ColorRole role, const QBrush & brush )
 //[2]void setBrush ( ColorGroup group, ColorRole role, const QBrush & brush )
@@ -556,33 +321,12 @@ HB_FUNC_STATIC( QPALETTE_SETBRUSH )
 /*
 void setColor ( ColorGroup group, ColorRole role, const QColor & color )
 */
-HB_FUNC_STATIC( QPALETTE_SETCOLOR1 )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    QColor par3 = ISOBJECT(3)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(3));
-    obj->setColor ( (QPalette::ColorGroup) par1, (QPalette::ColorRole) par2, par3 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setColor,setColor1|QPalette::ColorGroup,QPalette::ColorRole,const QColor &
 
 /*
 void setColor ( ColorRole role, const QColor & color )
 */
-HB_FUNC_STATIC( QPALETTE_SETCOLOR2 )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    QColor par2 = ISOBJECT(2)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(2));
-    obj->setColor ( (QPalette::ColorRole) par1, par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setColor,setColor2|QPalette::ColorRole,const QColor &
 
 //[1]void setColor ( ColorGroup group, ColorRole role, const QColor & color )
 //[2]void setColor ( ColorRole role, const QColor & color )
@@ -602,108 +346,42 @@ HB_FUNC_STATIC( QPALETTE_SETCOLOR )
 /*
 void setColorGroup ( ColorGroup cg, const QBrush & windowText, const QBrush & button, const QBrush & light, const QBrush & dark, const QBrush & mid, const QBrush & text, const QBrush & bright_text, const QBrush & base, const QBrush & window )
 */
-HB_FUNC_STATIC( QPALETTE_SETCOLORGROUP )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setColorGroup ( (QPalette::ColorGroup) par1, *PQBRUSH(2), *PQBRUSH(3), *PQBRUSH(4), *PQBRUSH(5), *PQBRUSH(6), *PQBRUSH(7), *PQBRUSH(8), *PQBRUSH(9), *PQBRUSH(10) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setColorGroup|QPalette::ColorGroup,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &
 
 /*
 void setCurrentColorGroup ( ColorGroup cg )
 */
-HB_FUNC_STATIC( QPALETTE_SETCURRENTCOLORGROUP )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setCurrentColorGroup ( (QPalette::ColorGroup) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCurrentColorGroup|QPalette::ColorGroup
 
 /*
 const QBrush & shadow () const
 */
-HB_FUNC_STATIC( QPALETTE_SHADOW )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QBrush * ptr = &obj->shadow ();
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
-  }
-}
+$method=|const QBrush &|shadow|
 
 /*
 const QBrush & text () const
 */
-HB_FUNC_STATIC( QPALETTE_TEXT )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QBrush * ptr = &obj->text ();
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
-  }
-}
+$method=|const QBrush &|text|
 
 /*
 const QBrush & toolTipBase () const
 */
-HB_FUNC_STATIC( QPALETTE_TOOLTIPBASE )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QBrush * ptr = &obj->toolTipBase ();
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
-  }
-}
+$method=|const QBrush &|toolTipBase|
 
 /*
 const QBrush & toolTipText () const
 */
-HB_FUNC_STATIC( QPALETTE_TOOLTIPTEXT )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QBrush * ptr = &obj->toolTipText ();
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
-  }
-}
+$method=|const QBrush &|toolTipText|
 
 /*
 const QBrush & window () const
 */
-HB_FUNC_STATIC( QPALETTE_WINDOW )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QBrush * ptr = &obj->window ();
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
-  }
-}
+$method=|const QBrush &|window|
 
 /*
 const QBrush & windowText () const
 */
-HB_FUNC_STATIC( QPALETTE_WINDOWTEXT )
-{
-  QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QBrush * ptr = &obj->windowText ();
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
-  }
-}
+$method=|const QBrush &|windowText|
 
 $extraMethods
 

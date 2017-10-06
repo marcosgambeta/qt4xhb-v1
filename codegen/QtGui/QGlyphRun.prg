@@ -127,14 +127,7 @@ HB_FUNC_STATIC( QGLYPHRUN_GLYPHINDEXES )
 /*
 bool overline () const
 */
-HB_FUNC_STATIC( QGLYPHRUN_OVERLINE )
-{
-  QGlyphRun * obj = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->overline () );
-  }
-}
+$method=|bool|overline|
 
 /*
 QVector<QPointF> positions () const
@@ -291,26 +284,12 @@ HB_FUNC_STATIC( QGLYPHRUN_SETUNDERLINE )
 /*
 bool strikeOut () const
 */
-HB_FUNC_STATIC( QGLYPHRUN_STRIKEOUT )
-{
-  QGlyphRun * obj = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->strikeOut () );
-  }
-}
+$method=|bool|strikeOut|
 
 /*
 bool underline () const
 */
-HB_FUNC_STATIC( QGLYPHRUN_UNDERLINE )
-{
-  QGlyphRun * obj = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->underline () );
-  }
-}
+$method=|bool|underline|
 
 $extraMethods
 

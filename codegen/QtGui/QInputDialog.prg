@@ -8,8 +8,6 @@ REQUEST QSIZE
 
 CLASS QInputDialog INHERIT QDialog
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD cancelButtonText
@@ -101,26 +99,12 @@ $method=|QString|cancelButtonText|
 /*
 QStringList comboBoxItems () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_COMBOBOXITEMS )
-{
-  QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->comboBoxItems () );
-  }
-}
+$method=|QStringList|comboBoxItems|
 
 /*
 int doubleDecimals () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEDECIMALS )
-{
-  QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->doubleDecimals () );
-  }
-}
+$method=|int|doubleDecimals|
 
 /*
 double doubleMaximum () const
@@ -173,62 +157,27 @@ HB_FUNC_STATIC( QINPUTDIALOG_INPUTMODE )
 /*
 int intMaximum () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_INTMAXIMUM )
-{
-  QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->intMaximum () );
-  }
-}
+$method=|int|intMaximum|
 
 /*
 int intMinimum () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_INTMINIMUM )
-{
-  QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->intMinimum () );
-  }
-}
+$method=|int|intMinimum|
 
 /*
 int intStep () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_INTSTEP )
-{
-  QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->intStep () );
-  }
-}
+$method=|int|intStep|
 
 /*
 int intValue () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_INTVALUE )
-{
-  QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->intValue () );
-  }
-}
+$method=|int|intValue|
 
 /*
 bool isComboBoxEditable () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_ISCOMBOBOXEDITABLE )
-{
-  QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isComboBoxEditable () );
-  }
-}
+$method=|bool|isComboBoxEditable|
 
 /*
 QString labelText () const
@@ -500,27 +449,12 @@ $method=|void|setTextValue|const QString &
 /*
 bool testOption ( InputDialogOption option ) const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_TESTOPTION )
-{
-  QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    RBOOL( obj->testOption ( (QInputDialog::InputDialogOption) par1 ) );
-  }
-}
+$method=|bool|testOption|QInputDialog::InputDialogOption
 
 /*
 QLineEdit::EchoMode textEchoMode () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_TEXTECHOMODE )
-{
-  QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->textEchoMode () );
-  }
-}
+$method=|QLineEdit::EchoMode|textEchoMode|
 
 /*
 QString textValue () const
@@ -530,101 +464,41 @@ $method=|QString|textValue|
 /*
 virtual void done ( int result )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_DONE )
-{
-  QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->done ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|done|int
 
 /*
 virtual QSize minimumSizeHint () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_MINIMUMSIZEHINT )
-{
-  QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->minimumSizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|minimumSizeHint|
 
 /*
 virtual void setVisible ( bool visible )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_SETVISIBLE )
-{
-  QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setVisible ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|setVisible|bool
 
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_SIZEHINT )
-{
-  QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|sizeHint|
 
 /*
-double getDouble ( QWidget * parent, const QString & title, const QString & label, double value = 0, double min = -2147483647, double max = 2147483647, int decimals = 1, bool * ok = 0, Qt::WindowFlags flags = 0 )
+static double getDouble ( QWidget * parent, const QString & title, const QString & label, double value = 0, double min = -2147483647, double max = 2147483647, int decimals = 1, bool * ok = 0, Qt::WindowFlags flags = 0 )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_GETDOUBLE )
-{
-  double par4 = ISNIL(4)? 0 : hb_parnd(4);
-  double par5 = ISNIL(5)? -2147483647 : hb_parnd(5);
-  double par6 = ISNIL(6)? 2147483647 : hb_parnd(6);
-  bool par8;
-  int par9 = ISNIL(9)? (int) 0 : hb_parni(9);
-  RDOUBLE( QInputDialog::getDouble ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), par4, par5, par6, OPINT(7,1), &par8, (Qt::WindowFlags) par9 ) );
-  hb_storl( par8, 8 );
-}
+$staticMethod=|double|getDouble|QWidget *,const QString &,const QString &,double=0,double=-2147483647,double=2147483647,int=1,bool *=0,Qt::WindowFlags=0
 
 /*
-int getInt ( QWidget * parent, const QString & title, const QString & label, int value = 0, int min = -2147483647, int max = 2147483647, int step = 1, bool * ok = 0, Qt::WindowFlags flags = 0 )
+static int getInt ( QWidget * parent, const QString & title, const QString & label, int value = 0, int min = -2147483647, int max = 2147483647, int step = 1, bool * ok = 0, Qt::WindowFlags flags = 0 )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_GETINT )
-{
-  bool par8;
-  int par9 = ISNIL(9)? (int) 0 : hb_parni(9);
-  RINT( QInputDialog::getInt ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), OPINT(4,0), OPINT(5,-2147483647), OPINT(6,2147483647), OPINT(7,1), &par8, (Qt::WindowFlags) par9 ) );
-  hb_storl( par8, 8 );
-}
+$staticMethod=|int|getInt|QWidget *,const QString &,const QString &,int=0,int=-2147483647,int=2147483647,int=1,bool *=0,Qt::WindowFlags=0
 
 /*
-QString getItem ( QWidget * parent, const QString & title, const QString & label, const QStringList & items, int current = 0, bool editable = true, bool * ok = 0, Qt::WindowFlags flags = 0 )
+static QString getItem ( QWidget * parent, const QString & title, const QString & label, const QStringList & items, int current = 0, bool editable = true, bool * ok = 0, Qt::WindowFlags flags = 0 )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_GETITEM )
-{
-  bool par7;
-  int par8 = ISNIL(8)? (int) 0 : hb_parni(8);
-  RQSTRING( QInputDialog::getItem ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), PQSTRINGLIST(4), OPINT(5,0), OPBOOL(6,true), &par7, (Qt::WindowFlags) par8 ) );
-  hb_storl( par7, 7 );
-}
+$staticMethod=|QString|getItem|QWidget *,const QString &,const QString &,const QStringList &,int=0,bool=true,bool *=0,Qt::WindowFlags=0
 
 /*
-QString getText ( QWidget * parent, const QString & title, const QString & label, QLineEdit::EchoMode mode = QLineEdit::Normal, const QString & text = QString(), bool * ok = 0, Qt::WindowFlags flags = 0 )
+static QString getText ( QWidget * parent, const QString & title, const QString & label, QLineEdit::EchoMode mode = QLineEdit::Normal, const QString & text = QString(), bool * ok = 0, Qt::WindowFlags flags = 0 )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_GETTEXT )
-{
-  int par4 = ISNIL(4)? (int) QLineEdit::Normal : hb_parni(4);
-  bool par6;
-  int par7 = ISNIL(7)? (int) 0 : hb_parni(7);
-  RQSTRING( QInputDialog::getText ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), (QLineEdit::EchoMode) par4, OPQSTRING(5,QString()), &par6, (Qt::WindowFlags) par7 ) );
-  hb_storl( par6, 6 );
-}
+$staticMethod=|QString|getText|QWidget *,const QString &,const QString &,QLineEdit::EchoMode=QLineEdit::Normal,const QString &=QString(),bool *=0,Qt::WindowFlags=0
 
 #pragma ENDDUMP

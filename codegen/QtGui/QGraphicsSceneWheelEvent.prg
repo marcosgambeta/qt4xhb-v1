@@ -51,14 +51,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_BUTTONS )
 /*
 int delta () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_DELTA )
-{
-  QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->delta () );
-  }
-}
+$method=|int|delta|
 
 /*
 Qt::KeyboardModifiers modifiers () const

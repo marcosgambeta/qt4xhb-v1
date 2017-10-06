@@ -278,14 +278,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_GETWIDGETPOSITION )
 /*
 int horizontalSpacing () const
 */
-HB_FUNC_STATIC( QFORMLAYOUT_HORIZONTALSPACING )
-{
-  QFormLayout * obj = (QFormLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->horizontalSpacing () );
-  }
-}
+$method=|int|horizontalSpacing|
 
 /*
 void insertRow ( int row, QWidget * label, QWidget * field )
@@ -470,14 +463,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD )
 /*
 int rowCount () const
 */
-HB_FUNC_STATIC( QFORMLAYOUT_ROWCOUNT )
-{
-  QFormLayout * obj = (QFormLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->rowCount () );
-  }
-}
+$method=|int|rowCount|
 
 /*
 RowWrapPolicy rowWrapPolicy () const
@@ -631,26 +617,12 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETWIDGET )
 /*
 int spacing () const
 */
-HB_FUNC_STATIC( QFORMLAYOUT_SPACING )
-{
-  QFormLayout * obj = (QFormLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->spacing () );
-  }
-}
+$method=|int|spacing|
 
 /*
 int verticalSpacing () const
 */
-HB_FUNC_STATIC( QFORMLAYOUT_VERTICALSPACING )
-{
-  QFormLayout * obj = (QFormLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->verticalSpacing () );
-  }
-}
+$method=|int|verticalSpacing|
 
 /*
 virtual void addItem ( QLayoutItem * item )
@@ -669,63 +641,27 @@ HB_FUNC_STATIC( QFORMLAYOUT_ADDITEM )
 /*
 virtual int count () const
 */
-HB_FUNC_STATIC( QFORMLAYOUT_COUNT )
-{
-  QFormLayout * obj = (QFormLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-}
+$virtualMethod=|int|count|
 
 /*
 virtual Qt::Orientations expandingDirections () const
 */
-HB_FUNC_STATIC( QFORMLAYOUT_EXPANDINGDIRECTIONS )
-{
-  QFormLayout * obj = (QFormLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RENUM( obj->expandingDirections () );
-  }
-}
+$virtualMethod=|Qt::Orientations|expandingDirections|
 
 /*
 virtual bool hasHeightForWidth () const
 */
-HB_FUNC_STATIC( QFORMLAYOUT_HASHEIGHTFORWIDTH )
-{
-  QFormLayout * obj = (QFormLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasHeightForWidth () );
-  }
-}
+$virtualMethod=|bool|hasHeightForWidth|
 
 /*
 virtual int heightForWidth ( int width ) const
 */
-HB_FUNC_STATIC( QFORMLAYOUT_HEIGHTFORWIDTH )
-{
-  QFormLayout * obj = (QFormLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->heightForWidth ( PINT(1) ) );
-  }
-}
+$virtualMethod=|int|heightForWidth|int
 
 /*
 virtual void invalidate ()
 */
-HB_FUNC_STATIC( QFORMLAYOUT_INVALIDATE )
-{
-  QFormLayout * obj = (QFormLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->invalidate ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|invalidate|
 
 /*
 virtual QLayoutItem * itemAt ( int index ) const

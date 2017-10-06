@@ -14,8 +14,6 @@ REQUEST QSIZE
 
 CLASS QMovie INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new3
@@ -159,16 +157,9 @@ HB_FUNC_STATIC( QMOVIE_CACHEMODE )
 }
 
 /*
-int  currentFrameNumber () const
+int currentFrameNumber () const
 */
-HB_FUNC_STATIC( QMOVIE_CURRENTFRAMENUMBER )
-{
-  QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->currentFrameNumber () );
-  }
-}
+$method=|int|currentFrameNumber|
 
 /*
 QImage  currentImage () const
@@ -228,16 +219,9 @@ HB_FUNC_STATIC( QMOVIE_FORMAT )
 }
 
 /*
-int  frameCount () const
+int frameCount () const
 */
-HB_FUNC_STATIC( QMOVIE_FRAMECOUNT )
-{
-  QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->frameCount () );
-  }
-}
+$method=|int|frameCount|
 
 /*
 QRect  frameRect () const
@@ -253,52 +237,24 @@ HB_FUNC_STATIC( QMOVIE_FRAMERECT )
 }
 
 /*
-bool  isValid () const
+bool isValid () const
 */
-HB_FUNC_STATIC( QMOVIE_ISVALID )
-{
-  QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
+$method=|bool|isValid|
 
 /*
-bool  jumpToFrame ( int frameNumber )
+bool jumpToFrame ( int frameNumber )
 */
-HB_FUNC_STATIC( QMOVIE_JUMPTOFRAME )
-{
-  QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->jumpToFrame ( PINT(1) ) );
-  }
-}
+$method=|bool|jumpToFrame|int
 
 /*
-int  loopCount () const
+int loopCount () const
 */
-HB_FUNC_STATIC( QMOVIE_LOOPCOUNT )
-{
-  QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->loopCount () );
-  }
-}
+$method=|int|loopCount|
 
 /*
-int  nextFrameDelay () const
+int nextFrameDelay () const
 */
-HB_FUNC_STATIC( QMOVIE_NEXTFRAMEDELAY )
-{
-  QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->nextFrameDelay () );
-  }
-}
+$method=|int|nextFrameDelay|
 
 /*
 QSize  scaledSize ()
@@ -386,16 +342,9 @@ HB_FUNC_STATIC( QMOVIE_SETSCALEDSIZE )
 }
 
 /*
-int  speed () const
+int speed () const
 */
-HB_FUNC_STATIC( QMOVIE_SPEED )
-{
-  QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->speed () );
-  }
-}
+$method=|int|speed|
 
 /*
 MovieState  state () const
@@ -409,19 +358,10 @@ HB_FUNC_STATIC( QMOVIE_STATE )
   }
 }
 
-// Public Slots
-
 /*
 bool jumpToNextFrame ()
 */
-HB_FUNC_STATIC( QMOVIE_JUMPTONEXTFRAME )
-{
-  QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->jumpToNextFrame () );
-  }
-}
+$method=|bool|jumpToNextFrame|
 
 /*
 void setPaused ( bool paused )

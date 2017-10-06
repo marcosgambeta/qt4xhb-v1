@@ -162,14 +162,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_BACKGROUND )
 /*
 bool boolProperty ( int propertyId ) const
 */
-HB_FUNC_STATIC( QTEXTFORMAT_BOOLPROPERTY )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->boolProperty ( PINT(1) ) );
-  }
-}
+$method=|bool|boolProperty|int
 
 /*
 QBrush brushProperty ( int propertyId ) const
@@ -239,14 +232,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_COLORPROPERTY )
 /*
 qreal doubleProperty ( int propertyId ) const
 */
-HB_FUNC_STATIC( QTEXTFORMAT_DOUBLEPROPERTY )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->doubleProperty ( PINT(1) ) );
-  }
-}
+$method=|qreal|doubleProperty|int
 
 /*
 QBrush foreground () const
@@ -264,122 +250,52 @@ HB_FUNC_STATIC( QTEXTFORMAT_FOREGROUND )
 /*
 bool hasProperty ( int propertyId ) const
 */
-HB_FUNC_STATIC( QTEXTFORMAT_HASPROPERTY )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasProperty ( PINT(1) ) );
-  }
-}
+$method=|bool|hasProperty|int
 
 /*
 int intProperty ( int propertyId ) const
 */
-HB_FUNC_STATIC( QTEXTFORMAT_INTPROPERTY )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->intProperty ( PINT(1) ) );
-  }
-}
+$method=|int|intProperty|int
 
 /*
 bool isBlockFormat () const
 */
-HB_FUNC_STATIC( QTEXTFORMAT_ISBLOCKFORMAT )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isBlockFormat () );
-  }
-}
+$method=|bool|isBlockFormat|
 
 /*
 bool isCharFormat () const
 */
-HB_FUNC_STATIC( QTEXTFORMAT_ISCHARFORMAT )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isCharFormat () );
-  }
-}
+$method=|bool|isCharFormat|
 
 /*
 bool isFrameFormat () const
 */
-HB_FUNC_STATIC( QTEXTFORMAT_ISFRAMEFORMAT )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isFrameFormat () );
-  }
-}
+$method=|bool|isFrameFormat|
 
 /*
 bool isImageFormat () const
 */
-HB_FUNC_STATIC( QTEXTFORMAT_ISIMAGEFORMAT )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isImageFormat () );
-  }
-}
+$method=|bool|isImageFormat|
 
 /*
 bool isListFormat () const
 */
-HB_FUNC_STATIC( QTEXTFORMAT_ISLISTFORMAT )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isListFormat () );
-  }
-}
+$method=|bool|isListFormat|
 
 /*
 bool isTableCellFormat () const
 */
-HB_FUNC_STATIC( QTEXTFORMAT_ISTABLECELLFORMAT )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isTableCellFormat () );
-  }
-}
+$method=|bool|isTableCellFormat|
 
 /*
 bool isTableFormat () const
 */
-HB_FUNC_STATIC( QTEXTFORMAT_ISTABLEFORMAT )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isTableFormat () );
-  }
-}
+$method=|bool|isTableFormat|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QTEXTFORMAT_ISVALID )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
+$method=|bool|isValid|
 
 /*
 Qt::LayoutDirection layoutDirection () const
@@ -465,26 +381,12 @@ HB_FUNC_STATIC( QTEXTFORMAT_MERGE )
 /*
 int objectIndex () const
 */
-HB_FUNC_STATIC( QTEXTFORMAT_OBJECTINDEX )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->objectIndex () );
-  }
-}
+$method=|int|objectIndex|
 
 /*
 int objectType () const
 */
-HB_FUNC_STATIC( QTEXTFORMAT_OBJECTTYPE )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->objectType () );
-  }
-}
+$method=|int|objectType|
 
 /*
 QPen penProperty ( int propertyId ) const
@@ -515,14 +417,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_PROPERTY )
 /*
 int propertyCount () const
 */
-HB_FUNC_STATIC( QTEXTFORMAT_PROPERTYCOUNT )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->propertyCount () );
-  }
-}
+$method=|int|propertyCount|
 
 /*
 void setBackground ( const QBrush & brush )
@@ -738,14 +633,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOTABLEFORMAT )
 /*
 int type () const
 */
-HB_FUNC_STATIC( QTEXTFORMAT_TYPE )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->type () );
-  }
-}
+$method=|int|type|
 
 $extraMethods
 

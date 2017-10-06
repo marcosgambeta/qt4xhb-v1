@@ -189,14 +189,7 @@ HB_FUNC_STATIC( QPEN_COLOR )
 /*
 qreal dashOffset () const
 */
-HB_FUNC_STATIC( QPEN_DASHOFFSET )
-{
-  QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->dashOffset () );
-  }
-}
+$method=|qreal|dashOffset|
 
 /*
 QVector<qreal> dashPattern () const
@@ -223,50 +216,22 @@ HB_FUNC_STATIC( QPEN_DASHPATTERN )
 /*
 bool isCosmetic () const
 */
-HB_FUNC_STATIC( QPEN_ISCOSMETIC )
-{
-  QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isCosmetic () );
-  }
-}
+$method=|bool|isCosmetic|
 
 /*
 bool isSolid () const
 */
-HB_FUNC_STATIC( QPEN_ISSOLID )
-{
-  QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isSolid () );
-  }
-}
+$method=|bool|isSolid|
 
 /*
 Qt::PenJoinStyle joinStyle () const
 */
-HB_FUNC_STATIC( QPEN_JOINSTYLE )
-{
-  QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->joinStyle () );
-  }
-}
+$method=|Qt::PenJoinStyle|joinStyle|
 
 /*
 qreal miterLimit () const
 */
-HB_FUNC_STATIC( QPEN_MITERLIMIT )
-{
-  QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->miterLimit () );
-  }
-}
+$method=|qreal|miterLimit|
 
 /*
 void setBrush ( const QBrush & brush )
@@ -325,15 +290,7 @@ HB_FUNC_STATIC( QPEN_SETCOSMETIC )
 /*
 void setDashOffset ( qreal offset )
 */
-HB_FUNC_STATIC( QPEN_SETDASHOFFSET )
-{
-  QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDashOffset ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDashOffset|qreal
 
 /*
 void setDashPattern ( const QVector<qreal> & pattern )
@@ -343,16 +300,16 @@ HB_FUNC_STATIC( QPEN_SETDASHPATTERN )
   QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-QVector<qreal> par1;
-PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aValues1);
-int temp1;
-for (i1=0;i1<nLen1;i1++)
-{
-temp1 = hb_arrayGetND(aValues1, i1+1);
-par1 << temp1;
-}
+    QVector<qreal> par1;
+    PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aValues1);
+    int temp1;
+    for (i1=0;i1<nLen1;i1++)
+    {
+      temp1 = hb_arrayGetND(aValues1, i1+1);
+      par1 << temp1;
+    }
     obj->setDashPattern ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -361,105 +318,42 @@ par1 << temp1;
 /*
 void setJoinStyle ( Qt::PenJoinStyle style )
 */
-HB_FUNC_STATIC( QPEN_SETJOINSTYLE )
-{
-  QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setJoinStyle ( (Qt::PenJoinStyle) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setJoinStyle|Qt::PenJoinStyle
 
 /*
 void setMiterLimit ( qreal limit )
 */
-HB_FUNC_STATIC( QPEN_SETMITERLIMIT )
-{
-  QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setMiterLimit ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMiterLimit|qreal
 
 /*
 void setStyle ( Qt::PenStyle style )
 */
-HB_FUNC_STATIC( QPEN_SETSTYLE )
-{
-  QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setStyle ( (Qt::PenStyle) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStyle|Qt::PenStyle
 
 /*
 void setWidth ( int width )
 */
-HB_FUNC_STATIC( QPEN_SETWIDTH )
-{
-  QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setWidth ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWidth|int
 
 /*
 void setWidthF ( qreal width )
 */
-HB_FUNC_STATIC( QPEN_SETWIDTHF )
-{
-  QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setWidthF ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWidthF|qreal
 
 /*
 Qt::PenStyle style () const
 */
-HB_FUNC_STATIC( QPEN_STYLE )
-{
-  QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->style () );
-  }
-}
+$method=|Qt::PenStyle|style|
 
 /*
 int width () const
 */
-HB_FUNC_STATIC( QPEN_WIDTH )
-{
-  QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->width () );
-  }
-}
+$method=|int|width|
 
 /*
 qreal widthF () const
 */
-HB_FUNC_STATIC( QPEN_WIDTHF )
-{
-  QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->widthF () );
-  }
-}
+$method=|qreal|widthF|
 
 $extraMethods
 

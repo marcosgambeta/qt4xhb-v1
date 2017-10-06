@@ -8,8 +8,6 @@ REQUEST QFONT
 
 CLASS QFontDialog INHERIT QDialog
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -177,28 +175,12 @@ HB_FUNC_STATIC( QFONTDIALOG_SETOPTIONS )
 /*
 bool testOption ( FontDialogOption option ) const
 */
-HB_FUNC_STATIC( QFONTDIALOG_TESTOPTION )
-{
-  QFontDialog * obj = (QFontDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    RBOOL( obj->testOption ( (QFontDialog::FontDialogOption) par1 ) );
-  }
-}
+$method=|bool|testOption|QFontDialog::FontDialogOption
 
 /*
 virtual void setVisible ( bool visible )
 */
-HB_FUNC_STATIC( QFONTDIALOG_SETVISIBLE )
-{
-  QFontDialog * obj = (QFontDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setVisible ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|setVisible|bool
 
 /*
 static QFont getFont(bool *ok, const QFont &initial, QWidget *parent, const QString &title,FontDialogOptions options)

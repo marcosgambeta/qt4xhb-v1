@@ -338,40 +338,17 @@ HB_FUNC_STATIC( QGESTUREEVENT_IGNORE )
 /*
 bool isAccepted () const
 */
-HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED1 )
-{
-  QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isAccepted () );
-  }
-}
+$method=|bool|isAccepted,isAccepted1|
 
 /*
 bool isAccepted ( QGesture * gesture ) const
 */
-HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED2 )
-{
-  QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QGesture * par1 = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->isAccepted ( par1 ) );
-  }
-}
+$method=|bool|isAccepted,isAccepted2|QGesture *
 
 /*
 bool isAccepted ( Qt::GestureType gestureType ) const
 */
-HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED3 )
-{
-  QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    RBOOL( obj->isAccepted ( (Qt::GestureType) par1 ) );
-  }
-}
+$method=|bool|isAccepted,isAccepted3|Qt::GestureType
 
 //[1]bool isAccepted () const
 //[2]bool isAccepted ( QGesture * gesture ) const

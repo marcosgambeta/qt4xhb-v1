@@ -101,52 +101,22 @@ HB_FUNC_STATIC( QUNDOCOMMAND_CHILD )
 /*
 int childCount () const
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_CHILDCOUNT )
-{
-  QUndoCommand * obj = (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->childCount () );
-  }
-}
+$method=|int|childCount|
 
 /*
 virtual int id () const
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_ID )
-{
-  QUndoCommand * obj = (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->id () );
-  }
-}
+$virtualMethod=|int|id|
 
 /*
 virtual bool mergeWith ( const QUndoCommand * command )
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_MERGEWITH )
-{
-  QUndoCommand * obj = (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QUndoCommand * par1 = (const QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->mergeWith ( par1 ) );
-  }
-}
+$virtualMethod=|bool|mergeWith|const QUndoCommand *
 
 /*
 virtual void redo ()
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_REDO )
-{
-  QUndoCommand * obj = (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->redo ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|redo|
 
 /*
 void setText ( const QString & text )

@@ -68,11 +68,8 @@ HB_FUNC_STATIC( QTAPANDHOLDGESTURE_SETTIMEOUT )
 }
 
 /*
-int timeout ()
+static int timeout ()
 */
-HB_FUNC_STATIC( QTAPANDHOLDGESTURE_TIMEOUT )
-{
-  RINT( QTapAndHoldGesture::timeout () );
-}
+$staticMethod=|int|timeout|
 
 #pragma ENDDUMP

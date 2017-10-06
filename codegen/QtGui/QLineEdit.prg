@@ -13,8 +13,6 @@ REQUEST QVARIANT
 
 CLASS QLineEdit INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -223,26 +221,12 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORFORWARD )
 /*
 int cursorPosition () const
 */
-HB_FUNC_STATIC( QLINEEDIT_CURSORPOSITION )
-{
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->cursorPosition () );
-  }
-}
+$method=|int|cursorPosition|
 
 /*
 int cursorPositionAt ( const QPoint & pos )
 */
-HB_FUNC_STATIC( QLINEEDIT_CURSORPOSITIONAT )
-{
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->cursorPositionAt ( *PQPOINT(1) ) );
-  }
-}
+$method=|int|cursorPositionAt|const QPoint &
 
 /*
 void cursorWordBackward ( bool mark )
@@ -304,14 +288,7 @@ $method=|QString|displayText|
 /*
 bool dragEnabled () const
 */
-HB_FUNC_STATIC( QLINEEDIT_DRAGENABLED )
-{
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->dragEnabled () );
-  }
-}
+$method=|bool|dragEnabled|
 
 /*
 EchoMode echoMode () const
@@ -362,51 +339,22 @@ HB_FUNC_STATIC( QLINEEDIT_GETTEXTMARGINS )
 /*
 bool hasAcceptableInput () const
 */
-HB_FUNC_STATIC( QLINEEDIT_HASACCEPTABLEINPUT )
-{
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasAcceptableInput () );
-  }
-}
+$method=|bool|hasAcceptableInput|
 
 /*
 bool hasFrame () const
 */
-HB_FUNC_STATIC( QLINEEDIT_HASFRAME )
-{
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasFrame () );
-  }
-}
+$method=|bool|hasFrame|
 
 /*
 bool hasSelectedText () const
 */
-HB_FUNC_STATIC( QLINEEDIT_HASSELECTEDTEXT )
-{
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasSelectedText () );
-  }
-}
+$method=|bool|hasSelectedText|
 
 /*
 void home ( bool mark )
 */
-HB_FUNC_STATIC( QLINEEDIT_HOME )
-{
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->home ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|home|bool
 
 /*
 QString inputMask () const
@@ -421,62 +369,27 @@ $method=|void|insert|const QString &
 /*
 bool isModified () const
 */
-HB_FUNC_STATIC( QLINEEDIT_ISMODIFIED )
-{
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isModified () );
-  }
-}
+$method=|bool|isModified|
 
 /*
 bool isReadOnly () const
 */
-HB_FUNC_STATIC( QLINEEDIT_ISREADONLY )
-{
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isReadOnly () );
-  }
-}
+$method=|bool|isReadOnly|
 
 /*
 bool isRedoAvailable () const
 */
-HB_FUNC_STATIC( QLINEEDIT_ISREDOAVAILABLE )
-{
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isRedoAvailable () );
-  }
-}
+$method=|bool|isRedoAvailable|
 
 /*
 bool isUndoAvailable () const
 */
-HB_FUNC_STATIC( QLINEEDIT_ISUNDOAVAILABLE )
-{
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isUndoAvailable () );
-  }
-}
+$method=|bool|isUndoAvailable|
 
 /*
 int maxLength () const
 */
-HB_FUNC_STATIC( QLINEEDIT_MAXLENGTH )
-{
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->maxLength () );
-  }
-}
+$method=|int|maxLength|
 
 /*
 QString placeholderText () const
@@ -504,14 +417,7 @@ $method=|QString|selectedText|
 /*
 int selectionStart () const
 */
-HB_FUNC_STATIC( QLINEEDIT_SELECTIONSTART )
-{
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->selectionStart () );
-  }
-}
+$method=|int|selectionStart|
 
 /*
 void setAlignment ( Qt::Alignment flag )
@@ -758,14 +664,7 @@ HB_FUNC_STATIC( QLINEEDIT_VALIDATOR )
 /*
 virtual bool event ( QEvent * e )
 */
-HB_FUNC_STATIC( QLINEEDIT_EVENT )
-{
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->event ( PQEVENT(1) ) );
-  }
-}
+$virtualMethod=|bool|event|QEvent *
 
 /*
 virtual QVariant inputMethodQuery ( Qt::InputMethodQuery property ) const

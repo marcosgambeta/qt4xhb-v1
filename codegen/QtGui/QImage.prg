@@ -122,56 +122,57 @@ $destructor
 /*
 QImage ()
 */
-HB_FUNC_STATIC( QIMAGE_NEW1 )
-{
-  QImage * o = new QImage ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new1|
 
 /*
 QImage ( const QSize & size, Format format )
 */
-HB_FUNC_STATIC( QIMAGE_NEW2 )
-{
-  QImage * o = new QImage ( *PQSIZE(1), (QImage::Format) hb_parni(2) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new2|const QSize &,QImage::Format
 
 /*
 QImage ( int width, int height, Format format )
 */
-HB_FUNC_STATIC( QIMAGE_NEW3 )
-{
-  QImage * o = new QImage ( PINT(1), PINT(2), (QImage::Format) hb_parni(3) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new3|int,int,QImage::Format
+
+/*
+QImage ( uchar * data, int width, int height, Format format )
+*/
+$constructor=|new4|uchar *,int,int,QImage::Format
+
+/*
+QImage ( const uchar * data, int width, int height, Format format )
+*/
+$constructor=|new5|const uchar *,int,int,QImage::Format
+
+/*
+QImage ( uchar * data, int width, int height, int bytesPerLine, Format format )
+*/
+$constructor=|new6|uchar *,int,int,int,QImage::Format
+
+/*
+QImage ( const uchar * data, int width, int height, int bytesPerLine, Format format )
+*/
+$constructor=|new7|const uchar *,int,int,int,QImage::Format
+
+/*
+QImage ( const char * const[] xpm )
+*/
+$constructor=|new8|const char * const[]
 
 /*
 QImage ( const QString & fileName, const char * format = 0 )
 */
-HB_FUNC_STATIC( QIMAGE_NEW9 )
-{
-  QImage * o = new QImage ( PQSTRING(1), (const char *) ISNIL(2)? 0 : hb_parc(2) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new9|const QString &,const char *=0
 
 /*
 QImage ( const char * fileName, const char * format = 0 )
 */
-HB_FUNC_STATIC( QIMAGE_NEW10 )
-{
-  QImage * o = new QImage ( (const char *) hb_parc(1), (const char *) ISNIL(2)? 0 : hb_parc(2) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new10|const char *,const char *=0
 
 /*
 QImage ( const QImage & image )
 */
-HB_FUNC_STATIC( QIMAGE_NEW11 )
-{
-  QImage * o = new QImage ( *PQIMAGE(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new11|const QImage &
 
 //[01]QImage ()
 //[02]QImage ( const QSize & size, Format format )
@@ -226,87 +227,37 @@ $deleteMethod
 /*
 bool allGray () const
 */
-HB_FUNC_STATIC( QIMAGE_ALLGRAY )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->allGray () );
-  }
-}
+$method=|bool|allGray|
 
 /*
 int bitPlaneCount () const
 */
-HB_FUNC_STATIC( QIMAGE_BITPLANECOUNT )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->bitPlaneCount () );
-  }
-}
+$method=|int|bitPlaneCount|
 
 /*
 int byteCount () const
 */
-HB_FUNC_STATIC( QIMAGE_BYTECOUNT )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->byteCount () );
-  }
-}
+$method=|int|byteCount|
 
 /*
 int bytesPerLine () const
 */
-HB_FUNC_STATIC( QIMAGE_BYTESPERLINE )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->bytesPerLine () );
-  }
-}
+$method=|int|bytesPerLine|
 
 /*
 qint64 cacheKey () const
 */
-HB_FUNC_STATIC( QIMAGE_CACHEKEY )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->cacheKey () );
-  }
-}
+$method=|qint64|cacheKey|
 
 /*
 QRgb color ( int i ) const
 */
-HB_FUNC_STATIC( QIMAGE_COLOR )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRgb i = obj->color ( PINT(1) );
-    hb_retni( i );
-  }
-}
+$method=|QRgb|color|int
 
 /*
 int colorCount () const
 */
-HB_FUNC_STATIC( QIMAGE_COLORCOUNT )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->colorCount () );
-  }
-}
+$method=|int|colorCount|
 
 /*
 QVector<QRgb> colorTable () const
@@ -333,17 +284,7 @@ HB_FUNC_STATIC( QIMAGE_COLORTABLE )
 /*
 QImage convertToFormat ( Format format, Qt::ImageConversionFlags flags = Qt::AutoColor ) const
 */
-HB_FUNC_STATIC( QIMAGE_CONVERTTOFORMAT1 )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    int par2 = ISNIL(2)? (int) Qt::AutoColor : hb_parni(2);
-    QImage * ptr = new QImage( obj->convertToFormat ( (QImage::Format) par1, (Qt::ImageConversionFlags) par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
-  }
-}
+$method=|QImage|convertToFormat,convertToFormat1|QImage::Format,Qt::ImageConversionFlags=Qt::AutoColor
 
 /*
 QImage convertToFormat ( Format format, const QVector<QRgb> & colorTable, Qt::ImageConversionFlags flags = Qt::AutoColor ) const
@@ -388,27 +329,12 @@ HB_FUNC_STATIC( QIMAGE_CONVERTTOFORMAT )
 /*
 QImage copy ( const QRect & rectangle = QRect() ) const
 */
-HB_FUNC_STATIC( QIMAGE_COPY1 )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRect par1 = ISNIL(1)? QRect() : *(QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QImage * ptr = new QImage( obj->copy ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
-}
+$method=|QImage|copy,copy1|const QRect &=QRect()
 
 /*
 QImage copy ( int x, int y, int width, int height ) const
 */
-HB_FUNC_STATIC( QIMAGE_COPY2 )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QImage * ptr = new QImage( obj->copy ( PINT(1), PINT(2), PINT(3), PINT(4) ) );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
-}
+$method=|QImage|copy,copy2|int,int,int,int
 
 //[1]QImage copy ( const QRect & rectangle = QRect() ) const
 //[2]QImage copy ( int x, int y, int width, int height ) const
@@ -428,118 +354,47 @@ HB_FUNC_STATIC( QIMAGE_COPY )
 /*
 QImage createAlphaMask ( Qt::ImageConversionFlags flags = Qt::AutoColor ) const
 */
-HB_FUNC_STATIC( QIMAGE_CREATEALPHAMASK )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = ISNIL(1)? (int) Qt::AutoColor : hb_parni(1);
-    QImage * ptr = new QImage( obj->createAlphaMask ( (Qt::ImageConversionFlags) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
-}
+$method=|QImage|createAlphaMask|Qt::ImageConversionFlags=Qt::AutoColor
 
 /*
 QImage createHeuristicMask ( bool clipTight = true ) const
 */
-HB_FUNC_STATIC( QIMAGE_CREATEHEURISTICMASK )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QImage * ptr = new QImage( obj->createHeuristicMask ( OPBOOL(1,true) ) );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
-}
+$method=|QImage|createHeuristicMask|bool=true
 
 /*
 QImage createMaskFromColor ( QRgb color, Qt::MaskMode mode = Qt::MaskInColor ) const
 */
-HB_FUNC_STATIC( QIMAGE_CREATEMASKFROMCOLOR )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRgb par1 = hb_parni(1);
-    int par2 = ISNIL(2)? (int) Qt::MaskInColor : hb_parni(2);
-    QImage * ptr = new QImage( obj->createMaskFromColor ( par1, (Qt::MaskMode) par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
-}
+$method=|QImage|createMaskFromColor|QRgb,Qt::MaskMode=Qt::MaskInColor
 
 /*
 int depth () const
 */
-HB_FUNC_STATIC( QIMAGE_DEPTH )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->depth () );
-  }
-}
+$method=|int|depth|
 
 /*
 int dotsPerMeterX () const
 */
-HB_FUNC_STATIC( QIMAGE_DOTSPERMETERX )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->dotsPerMeterX () );
-  }
-}
+$method=|int|dotsPerMeterX|
 
 /*
 int dotsPerMeterY () const
 */
-HB_FUNC_STATIC( QIMAGE_DOTSPERMETERY )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->dotsPerMeterY () );
-  }
-}
+$method=|int|dotsPerMeterY|
 
 /*
 void fill ( uint pixelValue )
 */
-HB_FUNC_STATIC( QIMAGE_FILL1 )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->fill ( PUINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|fill,fill1|uint
 
 /*
 void fill ( Qt::GlobalColor color )
 */
-HB_FUNC_STATIC( QIMAGE_FILL2 )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->fill ( (Qt::GlobalColor) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|fill,fill2|Qt::GlobalColor
 
 /*
 void fill ( const QColor & color )
 */
-HB_FUNC_STATIC( QIMAGE_FILL3 )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QColor par1 = ISOBJECT(1)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(1));
-    obj->fill ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|fill,fill3|const QColor &
 
 //[1]void fill ( uint pixelValue )
 //[2]void fill ( Qt::GlobalColor color )
@@ -561,100 +416,42 @@ HB_FUNC_STATIC( QIMAGE_FILL )
 /*
 Format format () const
 */
-HB_FUNC_STATIC( QIMAGE_FORMAT )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->format () );
-  }
-}
+$method=|QImage::Format|format|
 
 /*
 bool hasAlphaChannel () const
 */
-HB_FUNC_STATIC( QIMAGE_HASALPHACHANNEL )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasAlphaChannel () );
-  }
-}
+$method=|bool|hasAlphaChannel|
 
 /*
 int height () const
 */
-HB_FUNC_STATIC( QIMAGE_HEIGHT )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->height () );
-  }
-}
+$method=|int|height|
 
 /*
 void invertPixels ( InvertMode mode = InvertRgb )
 */
-HB_FUNC_STATIC( QIMAGE_INVERTPIXELS )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = ISNIL(1)? (int) QImage::InvertRgb : hb_parni(1);
-    obj->invertPixels ( (QImage::InvertMode) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|invertPixels|QImage::InvertMode=QImage::InvertRgb
 
 /*
 bool isGrayscale () const
 */
-HB_FUNC_STATIC( QIMAGE_ISGRAYSCALE )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isGrayscale () );
-  }
-}
+$method=|bool|isGrayscale|
 
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QIMAGE_ISNULL )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
+$method=|bool|isNull|
 
 /*
 bool load ( const QString & fileName, const char * format = 0 )
 */
-HB_FUNC_STATIC( QIMAGE_LOAD1 )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->load ( PQSTRING(1), (const char *) ISNIL(2)? 0 : hb_parc(2) ) );
-  }
-}
+$method=|bool|load,load1|const QString &,const char *=0
 
 /*
 bool load ( QIODevice * device, const char * format )
 */
-HB_FUNC_STATIC( QIMAGE_LOAD2 )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->load ( PQIODEVICE(1), (const char *) hb_parc(2) ) );
-  }
-}
+$method=|bool|load,load2|QIODevice *,const char *
 
 //[1]bool load ( const QString & fileName, const char * format = 0 )
 //[2]bool load ( QIODevice * device, const char * format )
@@ -674,28 +471,12 @@ HB_FUNC_STATIC( QIMAGE_LOAD )
 /*
 bool loadFromData ( const uchar * data, int len, const char * format = 0 )
 */
-HB_FUNC_STATIC( QIMAGE_LOADFROMDATA1 )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const uchar * par1 = (const uchar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = hb_parni(2);
-    RBOOL( obj->loadFromData ( par1, par2, (const char *) ISNIL(3)? 0 : hb_parc(3) ) );
-  }
-}
+$method=|bool|loadFromData,loadFromData1|const uchar *,int,const char *=0
 
 /*
 bool loadFromData ( const QByteArray & data, const char * format = 0 )
 */
-HB_FUNC_STATIC( QIMAGE_LOADFROMDATA2 )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->loadFromData ( *PQBYTEARRAY(1), (const char *) ISNIL(2)? 0 : hb_parc(2) ) );
-  }
-}
+$method=|bool|loadFromData,loadFromData2|const QByteArray &,const char *=0
 
 //[1]bool loadFromData ( const uchar * data, int len, const char * format = 0 )
 //[2]bool loadFromData ( const QByteArray & data, const char * format = 0 )
@@ -715,52 +496,22 @@ HB_FUNC_STATIC( QIMAGE_LOADFROMDATA )
 /*
 QImage mirrored ( bool horizontal = false, bool vertical = true ) const
 */
-HB_FUNC_STATIC( QIMAGE_MIRRORED )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QImage * ptr = new QImage( obj->mirrored ( OPBOOL(1,false), OPBOOL(2,true) ) );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
-}
+$method=|QImage|mirrored|bool=false,bool=true
 
 /*
 QPoint offset () const
 */
-HB_FUNC_STATIC( QIMAGE_OFFSET )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->offset () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );  }
-}
+$method=|QPoint|offset|
 
 /*
 QRgb pixel ( const QPoint & position ) const
 */
-HB_FUNC_STATIC( QIMAGE_PIXEL1 )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRgb i = obj->pixel ( *PQPOINT(1) );
-    hb_retni( i );
-  }
-}
+$method=|QRgb|pixel,pixel1|const QPoint &
 
 /*
 QRgb pixel ( int x, int y ) const
 */
-HB_FUNC_STATIC( QIMAGE_PIXEL2 )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRgb i = obj->pixel ( PINT(1), PINT(2) );
-    hb_retni( i );
-  }
-}
+$method=|QRgb|pixel,pixel2|int,int
 
 //[1]QRgb pixel ( const QPoint & position ) const
 //[2]QRgb pixel ( int x, int y ) const
@@ -780,26 +531,12 @@ HB_FUNC_STATIC( QIMAGE_PIXEL )
 /*
 int pixelIndex ( const QPoint & position ) const
 */
-HB_FUNC_STATIC( QIMAGE_PIXELINDEX1 )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->pixelIndex ( *PQPOINT(1) ) );
-  }
-}
+$method=|int|pixelIndex,pixelIndex1|const QPoint &
 
 /*
 int pixelIndex ( int x, int y ) const
 */
-HB_FUNC_STATIC( QIMAGE_PIXELINDEX2 )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->pixelIndex ( PINT(1), PINT(2) ) );
-  }
-}
+$method=|int|pixelIndex,pixelIndex2|int,int
 
 //[1]int pixelIndex ( const QPoint & position ) const
 //[2]int pixelIndex ( int x, int y ) const
@@ -819,50 +556,22 @@ HB_FUNC_STATIC( QIMAGE_PIXELINDEX )
 /*
 QRect rect () const
 */
-HB_FUNC_STATIC( QIMAGE_RECT )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->rect () );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
-}
+$method=|QRect|rect|
 
 /*
 QImage rgbSwapped () const
 */
-HB_FUNC_STATIC( QIMAGE_RGBSWAPPED )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QImage * ptr = new QImage( obj->rgbSwapped () );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
-}
+$method=|QImage|rgbSwapped|
 
 /*
 bool save ( const QString & fileName, const char * format = 0, int quality = -1 ) const
 */
-HB_FUNC_STATIC( QIMAGE_SAVE1 )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->save ( PQSTRING(1), (const char *) ISNIL(2)? 0 : hb_parc(2), OPINT(3,-1) ) );
-  }
-}
+$method=|bool|save,save1|const QString &,const char *=0,int=-1
 
 /*
 bool save ( QIODevice * device, const char * format = 0, int quality = -1 ) const
 */
-HB_FUNC_STATIC( QIMAGE_SAVE2 )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->save ( PQIODEVICE(1), (const char *) ISNIL(2)? 0 : hb_parc(2), OPINT(3,-1) ) );
-  }
-}
+$method=|bool|save,save2|QIODevice *,const char *=0,int=-1
 
 //[1]bool save ( const QString & fileName, const char * format = 0, int quality = -1 ) const
 //[2]bool save ( QIODevice * device, const char * format = 0, int quality = -1 ) const
@@ -882,30 +591,12 @@ HB_FUNC_STATIC( QIMAGE_SAVE )
 /*
 QImage scaled ( const QSize & size, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
 */
-HB_FUNC_STATIC( QIMAGE_SCALED1 )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) Qt::IgnoreAspectRatio : hb_parni(2);
-    int par3 = ISNIL(3)? (int) Qt::FastTransformation : hb_parni(3);
-    QImage * ptr = new QImage( obj->scaled ( *PQSIZE(1), (Qt::AspectRatioMode) par2, (Qt::TransformationMode) par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
-}
+$method=|QImage|scaled,scaled1|const QSize &,Qt::AspectRatioMode=Qt::IgnoreAspectRatio,Qt::TransformationMode=Qt::FastTransformation
 
 /*
 QImage scaled ( int width, int height, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
 */
-HB_FUNC_STATIC( QIMAGE_SCALED2 )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par3 = ISNIL(3)? (int) Qt::IgnoreAspectRatio : hb_parni(3);
-    int par4 = ISNIL(4)? (int) Qt::FastTransformation : hb_parni(4);
-    QImage * ptr = new QImage( obj->scaled ( PINT(1), PINT(2), (Qt::AspectRatioMode) par3, (Qt::TransformationMode) par4 ) );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
-}
+$method=|QImage|scaled,scaled2|int,int,Qt::AspectRatioMode=Qt::IgnoreAspectRatio,Qt::TransformationMode=Qt::FastTransformation
 
 //[1]QImage scaled ( const QSize & size, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
 //[2]QImage scaled ( int width, int height, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
@@ -925,29 +616,14 @@ HB_FUNC_STATIC( QIMAGE_SCALED )
 /*
 QImage scaledToHeight ( int height, Qt::TransformationMode mode = Qt::FastTransformation ) const
 */
-HB_FUNC_STATIC( QIMAGE_SCALEDTOHEIGHT )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) Qt::FastTransformation : hb_parni(2);
-    QImage * ptr = new QImage( obj->scaledToHeight ( PINT(1), (Qt::TransformationMode) par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
-}
+$method=|QImage|scaledToHeight|int,Qt::TransformationMode=Qt::FastTransformation
 
 /*
 QImage scaledToWidth ( int width, Qt::TransformationMode mode = Qt::FastTransformation ) const
 */
-HB_FUNC_STATIC( QIMAGE_SCALEDTOWIDTH )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) Qt::FastTransformation : hb_parni(2);
-    QImage * ptr = new QImage( obj->scaledToWidth ( PINT(1), (Qt::TransformationMode) par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
-}
+$method=|QImage|scaledToWidth|int,Qt::TransformationMode=Qt::FastTransformation
 
+// TODO: implementar
 //[1]uchar * scanLine ( int i )
 //[2]const uchar * scanLine ( int i ) const
 
@@ -959,29 +635,12 @@ HB_FUNC_STATIC( QIMAGE_SCALEDTOWIDTH )
 /*
 void setColor ( int index, QRgb colorValue )
 */
-HB_FUNC_STATIC( QIMAGE_SETCOLOR )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRgb par2 = hb_parni(2);
-    obj->setColor ( PINT(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setColor|int,QRgb
 
 /*
 void setColorCount ( int colorCount )
 */
-HB_FUNC_STATIC( QIMAGE_SETCOLORCOUNT )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setColorCount ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setColorCount|int
 
 /*
 void setColorTable ( const QVector<QRgb> colors )
@@ -1009,67 +668,27 @@ par1 << temp1;
 /*
 void setDotsPerMeterX ( int x )
 */
-HB_FUNC_STATIC( QIMAGE_SETDOTSPERMETERX )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDotsPerMeterX ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDotsPerMeterX|int
 
 /*
 void setDotsPerMeterY ( int y )
 */
-HB_FUNC_STATIC( QIMAGE_SETDOTSPERMETERY )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDotsPerMeterY ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDotsPerMeterY|int
 
 /*
 void setOffset ( const QPoint & offset )
 */
-HB_FUNC_STATIC( QIMAGE_SETOFFSET )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setOffset ( *PQPOINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOffset|const QPoint &
 
 /*
 void setPixel ( const QPoint & position, uint index_or_rgb )
 */
-HB_FUNC_STATIC( QIMAGE_SETPIXEL1 )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPixel ( *PQPOINT(1), PUINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPixel,setPixel1|const QPoint &,uint
 
 /*
 void setPixel ( int x, int y, uint index_or_rgb )
 */
-HB_FUNC_STATIC( QIMAGE_SETPIXEL2 )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPixel ( PINT(1), PINT(2), PUINT(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPixel,setPixel2|int,int,uint
 
 //[1]void setPixel ( const QPoint & position, uint index_or_rgb )
 //[2]void setPixel ( int x, int y, uint index_or_rgb )
@@ -1089,85 +708,48 @@ HB_FUNC_STATIC( QIMAGE_SETPIXEL )
 /*
 void setText ( const QString & key, const QString & text )
 */
-HB_FUNC_STATIC( QIMAGE_SETTEXT )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setText ( PQSTRING(1), PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setText|const QString &,const QString &
 
 /*
 QSize size () const
 */
-HB_FUNC_STATIC( QIMAGE_SIZE )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->size () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
-}
+$method=|QSize|size|
 
 /*
 void swap ( QImage & other )
 */
-HB_FUNC_STATIC( QIMAGE_SWAP )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QImage * par1 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->swap ( *par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|swap|QImage &
 
 /*
 QString text ( const QString & key = QString() ) const
 */
-HB_FUNC_STATIC( QIMAGE_TEXT )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->text ( OPQSTRING(1,QString()) ) );
-  }
-}
+$method=|QString|text|const QString &=QString()
 
 /*
 QStringList textKeys () const
 */
-HB_FUNC_STATIC( QIMAGE_TEXTKEYS )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->textKeys () );
-  }
-}
+$method=|QStringList|textKeys|
+
+/*
+QImage transformed ( const QMatrix & matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
+*/
+$method=|QImage|transformed,transformed1|const QMatrix &,Qt::TransformationMode=Qt::FastTransformation
 
 /*
 QImage transformed ( const QTransform & matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
 */
-HB_FUNC_STATIC( QIMAGE_TRANSFORMED2 )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) Qt::FastTransformation : hb_parni(2);
-    QImage * ptr = new QImage( obj->transformed ( *PQTRANSFORM(1), (Qt::TransformationMode) par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
-}
+$method=|QImage|transformed,transformed2|const QTransform &,Qt::TransformationMode=Qt::FastTransformation
 
 //[1]QImage transformed ( const QMatrix & matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
 //[2]QImage transformed ( const QTransform & matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
 
 HB_FUNC_STATIC( QIMAGE_TRANSFORMED )
 {
-  if( ISBETWEEN(1,2) && ISQTRANSFORM(1) && (ISNUM(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISQMATRIX(1) && (ISNUM(2)||ISNIL(2)) )
+  {
+    HB_FUNC_EXEC( QIMAGE_TRANSFORMED2 );
+  }
+  else if( ISBETWEEN(1,2) && ISQTRANSFORM(1) && (ISNUM(2)||ISNIL(2)) )
   {
     HB_FUNC_EXEC( QIMAGE_TRANSFORMED2 );
   }
@@ -1176,26 +758,12 @@ HB_FUNC_STATIC( QIMAGE_TRANSFORMED )
 /*
 bool valid ( const QPoint & pos ) const
 */
-HB_FUNC_STATIC( QIMAGE_VALID1 )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->valid ( *PQPOINT(1) ) );
-  }
-}
+$method=|bool|valid,valid1|const QPoint &
 
 /*
 bool valid ( int x, int y ) const
 */
-HB_FUNC_STATIC( QIMAGE_VALID2 )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->valid ( PINT(1), PINT(2) ) );
-  }
-}
+$method=|bool|valid,valid2|int,int
 
 //[1]bool valid ( const QPoint & pos ) const
 //[2]bool valid ( int x, int y ) const
@@ -1215,34 +783,17 @@ HB_FUNC_STATIC( QIMAGE_VALID )
 /*
 int width () const
 */
-HB_FUNC_STATIC( QIMAGE_WIDTH )
-{
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->width () );
-  }
-}
-
-// Static Public Members
+$method=|int|width|
 
 /*
-QImage fromData ( const uchar * data, int size, const char * format = 0 )
+static QImage fromData ( const uchar * data, int size, const char * format = 0 )
 */
-HB_FUNC_STATIC( QIMAGE_FROMDATA1 )
-{
-  const uchar * par1 = (const uchar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par2 = hb_parni(2);
-  QImage * ptr = new QImage( QImage::fromData ( par1, par2, (const char *) ISNIL(3)? 0 : hb_parc(3) ) );
-  _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );}
+$staticMethod=|QImage|fromData,fromData1|const uchar *,int,const char *=0
 
 /*
-QImage fromData ( const QByteArray & data, const char * format = 0 )
+static QImage fromData ( const QByteArray & data, const char * format = 0 )
 */
-HB_FUNC_STATIC( QIMAGE_FROMDATA2 )
-{
-  QImage * ptr = new QImage( QImage::fromData ( *PQBYTEARRAY(1), (const char *) ISNIL(2)? 0 : hb_parc(2) ) );
-  _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );}
+$staticMethod=|QImage|fromData,fromData2|const QByteArray &,const char *=0
 
 //[1]QImage fromData ( const uchar * data, int size, const char * format = 0 )
 //[2]QImage fromData ( const QByteArray & data, const char * format = 0 )
@@ -1260,21 +811,25 @@ HB_FUNC_STATIC( QIMAGE_FROMDATA )
 }
 
 /*
-QTransform trueMatrix ( const QTransform & matrix, int width, int height )
+static QTransform trueMatrix ( const QTransform & matrix, int width, int height )
 */
-HB_FUNC_STATIC( QIMAGE_TRUEMATRIX2 )
-{
-  int par2 = hb_parni(2);
-  int par3 = hb_parni(3);
-  QTransform * ptr = new QTransform( QImage::trueMatrix ( *PQTRANSFORM(1), par2, par3 ) );
-  _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );}
+$staticMethod=|QTransform|trueMatrix,trueMatrix1|const QTransform &,int,int
+
+/*
+static QTransform trueMatrix ( const QTransform & matrix, int width, int height )
+*/
+$staticMethod=|QTransform|trueMatrix,trueMatrix2|const QTransform &,int,int
 
 //[1]QMatrix trueMatrix ( const QMatrix & matrix, int width, int height )
 //[2]QTransform trueMatrix ( const QTransform & matrix, int width, int height )
 
 HB_FUNC_STATIC( QIMAGE_TRUEMATRIX )
 {
-  if( ISNUMPAR(3) && ISQTRANSFORM(1) && ISNUM(2) && ISNUM(3) )
+  if( ISNUMPAR(3) && ISQMATRIX(1) && ISNUM(2) && ISNUM(3) )
+  {
+    HB_FUNC_EXEC( QIMAGE_TRUEMATRIX2 );
+  }
+  else if( ISNUMPAR(3) && ISQTRANSFORM(1) && ISNUM(2) && ISNUM(3) )
   {
     HB_FUNC_EXEC( QIMAGE_TRUEMATRIX2 );
   }

@@ -8,8 +8,6 @@ REQUEST QACTION
 
 CLASS QActionGroup INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD actions
@@ -47,11 +45,7 @@ $destructor
 /*
 QActionGroup ( QObject * parent )
 */
-HB_FUNC_STATIC( QACTIONGROUP_NEW )
-{
-  QActionGroup * o = new QActionGroup ( PQOBJECT(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *
 
 $deleteMethod
 
@@ -111,16 +105,7 @@ $method=|QAction *|addAction,addAction2|const QString &
 /*
 QAction * addAction ( const QIcon & icon, const QString & text )
 */
-HB_FUNC_STATIC( QACTIONGROUP_ADDACTION3 )
-{
-  QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
-    QAction * ptr = obj->addAction ( par1, PQSTRING(2) );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|addAction,addAction3|const QIcon &,const QString &
 
 //[1]QAction * addAction ( QAction * action )
 //[2]QAction * addAction ( const QString & text )
@@ -145,115 +130,46 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION )
 /*
 QAction * checkedAction () const
 */
-HB_FUNC_STATIC( QACTIONGROUP_CHECKEDACTION )
-{
-  QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->checkedAction ();
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|checkedAction|
 
 /*
 bool isEnabled () const
 */
-HB_FUNC_STATIC( QACTIONGROUP_ISENABLED )
-{
-  QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isEnabled () );
-  }
-}
+$method=|bool|isEnabled|
 
 /*
 bool isExclusive () const
 */
-HB_FUNC_STATIC( QACTIONGROUP_ISEXCLUSIVE )
-{
-  QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isExclusive () );
-  }
-}
+$method=|bool|isExclusive|
 
 /*
 bool isVisible () const
 */
-HB_FUNC_STATIC( QACTIONGROUP_ISVISIBLE )
-{
-  QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isVisible () );
-  }
-}
+$method=|bool|isVisible|
 
 /*
 void removeAction ( QAction * action )
 */
-HB_FUNC_STATIC( QACTIONGROUP_REMOVEACTION )
-{
-  QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->removeAction ( PQACTION(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeAction|QAction *
 
 /*
 void setDisabled ( bool b )
 */
-HB_FUNC_STATIC( QACTIONGROUP_SETDISABLED )
-{
-  QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDisabled ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDisabled|bool
 
 /*
 void setEnabled ( bool )
 */
-HB_FUNC_STATIC( QACTIONGROUP_SETENABLED )
-{
-  QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setEnabled ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setEnabled|bool
 
 /*
 void setExclusive ( bool )
 */
-HB_FUNC_STATIC( QACTIONGROUP_SETEXCLUSIVE )
-{
-  QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setExclusive ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setExclusive|bool
 
 /*
 void setVisible ( bool )
 */
-HB_FUNC_STATIC( QACTIONGROUP_SETVISIBLE )
-{
-  QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setVisible ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setVisible|bool
 
 #pragma ENDDUMP

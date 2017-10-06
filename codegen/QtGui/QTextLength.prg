@@ -77,14 +77,7 @@ $deleteMethod
 /*
 qreal rawValue () const
 */
-HB_FUNC_STATIC( QTEXTLENGTH_RAWVALUE )
-{
-  QTextLength * obj = (QTextLength *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->rawValue () );
-  }
-}
+$method=|qreal|rawValue|
 
 /*
 Type type () const
@@ -101,14 +94,7 @@ HB_FUNC_STATIC( QTEXTLENGTH_TYPE )
 /*
 qreal value ( qreal maximumLength ) const
 */
-HB_FUNC_STATIC( QTEXTLENGTH_VALUE )
-{
-  QTextLength * obj = (QTextLength *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->value ( PQREAL(1) ) );
-  }
-}
+$method=|qreal|value|qreal
 
 $extraMethods
 

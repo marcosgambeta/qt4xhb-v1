@@ -74,65 +74,27 @@ $deleteMethod
 /*
 int bottom () const
 */
-HB_FUNC_STATIC( QINTVALIDATOR_BOTTOM )
-{
-  QIntValidator * obj = (QIntValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->bottom () );
-  }
-}
+$method=|int|bottom|
 
 /*
 void setBottom ( int )
 */
-HB_FUNC_STATIC( QINTVALIDATOR_SETBOTTOM )
-{
-  QIntValidator * obj = (QIntValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBottom ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBottom|int
 
 /*
 virtual void setRange ( int bottom, int top )
 */
-HB_FUNC_STATIC( QINTVALIDATOR_SETRANGE )
-{
-  QIntValidator * obj = (QIntValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRange ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|setRange|int,int
 
 /*
 void setTop ( int )
 */
-HB_FUNC_STATIC( QINTVALIDATOR_SETTOP )
-{
-  QIntValidator * obj = (QIntValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTop ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTop|int
 
 /*
 int top () const
 */
-HB_FUNC_STATIC( QINTVALIDATOR_TOP )
-{
-  QIntValidator * obj = (QIntValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->top () );
-  }
-}
+$method=|int|top|
 
 /*
 virtual void fixup ( QString & input ) const

@@ -59,217 +59,87 @@ $deleteMethod
 /*
 Qt::Alignment alignment () const
 */
-HB_FUNC_STATIC( QLAYOUTITEM_ALIGNMENT )
-{
-  QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->alignment () );
-  }
-}
+$method=|Qt::Alignment|alignment|
 
 /*
 QSizePolicy::ControlTypes controlTypes () const
 */
-HB_FUNC_STATIC( QLAYOUTITEM_CONTROLTYPES )
-{
-  QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->controlTypes () );
-  }
-}
+$method=|QSizePolicy::ControlTypes|controlTypes|
 
 /*
 virtual Qt::Orientations expandingDirections () const = 0
 */
-HB_FUNC_STATIC( QLAYOUTITEM_EXPANDINGDIRECTIONS )
-{
-  QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->expandingDirections () );
-  }
-}
+$virtualMethod=|Qt::Orientations|expandingDirections|
 
 /*
 virtual QRect geometry () const = 0
 */
-HB_FUNC_STATIC( QLAYOUTITEM_GEOMETRY )
-{
-  QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->geometry () );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$virtualMethod=|QRect|geometry|
 
 /*
 virtual bool hasHeightForWidth () const
 */
-HB_FUNC_STATIC( QLAYOUTITEM_HASHEIGHTFORWIDTH )
-{
-  QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasHeightForWidth () );
-  }
-}
+$virtualMethod=|bool|hasHeightForWidth|
 
 /*
 virtual int heightForWidth ( int w ) const
 */
-HB_FUNC_STATIC( QLAYOUTITEM_HEIGHTFORWIDTH )
-{
-  QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->heightForWidth ( PINT(1) ) );
-  }
-}
+$virtualMethod=|int|heightForWidth|int
 
 /*
 virtual void invalidate ()
 */
-HB_FUNC_STATIC( QLAYOUTITEM_INVALIDATE )
-{
-  QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->invalidate ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|invalidate|
 
 /*
 virtual bool isEmpty () const = 0
 */
-HB_FUNC_STATIC( QLAYOUTITEM_ISEMPTY )
-{
-  QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-}
+$virtualMethod=|bool|isEmpty|
 
 /*
 virtual QLayout * layout ()
 */
-HB_FUNC_STATIC( QLAYOUTITEM_LAYOUT )
-{
-  QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QLayout * ptr = obj->layout ();
-    _qt4xhb_createReturnClass ( ptr, "QLAYOUT" );
-  }
-}
+$virtualMethod=|QLayout *|layout|
 
 /*
 virtual QSize maximumSize () const = 0
 */
-HB_FUNC_STATIC( QLAYOUTITEM_MAXIMUMSIZE )
-{
-  QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->maximumSize () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|maximumSize|
 
 /*
 virtual int minimumHeightForWidth ( int w ) const
 */
-HB_FUNC_STATIC( QLAYOUTITEM_MINIMUMHEIGHTFORWIDTH )
-{
-  QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->minimumHeightForWidth ( PINT(1) ) );
-  }
-}
+$virtualMethod=|int|minimumHeightForWidth|int
 
 /*
 virtual QSize minimumSize () const = 0
 */
-HB_FUNC_STATIC( QLAYOUTITEM_MINIMUMSIZE )
-{
-  QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->minimumSize () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|minimumSize|
 
 /*
 void setAlignment ( Qt::Alignment alignment )
 */
-HB_FUNC_STATIC( QLAYOUTITEM_SETALIGNMENT )
-{
-  QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setAlignment ( (Qt::Alignment) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAlignment|Qt::Alignment
 
 /*
 virtual void setGeometry ( const QRect & r ) = 0
 */
-HB_FUNC_STATIC( QLAYOUTITEM_SETGEOMETRY )
-{
-  QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setGeometry ( *PQRECT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|setGeometry|const QRect &
 
 /*
 virtual QSize sizeHint () const = 0
 */
-HB_FUNC_STATIC( QLAYOUTITEM_SIZEHINT )
-{
-  QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|sizeHint|
 
 /*
 virtual QSpacerItem * spacerItem ()
 */
-HB_FUNC_STATIC( QLAYOUTITEM_SPACERITEM )
-{
-  QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSpacerItem * ptr = obj->spacerItem ();
-    _qt4xhb_createReturnClass ( ptr, "QSPACERITEM" );
-  }
-}
+$virtualMethod=|QSpacerItem *|spacerItem|
 
 /*
 virtual QWidget * widget ()
 */
-HB_FUNC_STATIC( QLAYOUTITEM_WIDGET )
-{
-  QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->widget ();
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$virtualMethod=|QWidget *|widget|
 
 $extraMethods
 

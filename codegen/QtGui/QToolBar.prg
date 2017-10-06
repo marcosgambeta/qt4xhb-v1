@@ -10,8 +10,6 @@ REQUEST QWIDGET
 
 CLASS QToolBar INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -336,180 +334,71 @@ HB_FUNC_STATIC( QTOOLBAR_INSERTWIDGET )
 /*
 bool isAreaAllowed ( Qt::ToolBarArea area ) const
 */
-HB_FUNC_STATIC( QTOOLBAR_ISAREAALLOWED )
-{
-  QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    RBOOL( obj->isAreaAllowed ( (Qt::ToolBarArea) par1 ) );
-  }
-}
+$method=|bool|isAreaAllowed|Qt::ToolBarArea
 
 /*
 bool isFloatable () const
 */
-HB_FUNC_STATIC( QTOOLBAR_ISFLOATABLE )
-{
-  QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isFloatable () );
-  }
-}
+$method=|bool|isFloatable|
 
 /*
 bool isFloating () const
 */
-HB_FUNC_STATIC( QTOOLBAR_ISFLOATING )
-{
-  QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isFloating () );
-  }
-}
+$method=|bool|isFloating|
 
 /*
 bool isMovable () const
 */
-HB_FUNC_STATIC( QTOOLBAR_ISMOVABLE )
-{
-  QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isMovable () );
-  }
-}
+$method=|bool|isMovable|
 
 /*
 Qt::Orientation orientation () const
 */
-HB_FUNC_STATIC( QTOOLBAR_ORIENTATION )
-{
-  QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RENUM( obj->orientation () );
-  }
-}
+$method=|Qt::Orientation|orientation|
 
 /*
 void setAllowedAreas ( Qt::ToolBarAreas areas )
 */
-HB_FUNC_STATIC( QTOOLBAR_SETALLOWEDAREAS )
-{
-  QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setAllowedAreas ( (Qt::ToolBarAreas) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAllowedAreas|Qt::ToolBarAreas
 
 /*
 void setFloatable ( bool floatable )
 */
-HB_FUNC_STATIC( QTOOLBAR_SETFLOATABLE )
-{
-  QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFloatable ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFloatable|bool
 
 /*
 void setMovable ( bool movable )
 */
-HB_FUNC_STATIC( QTOOLBAR_SETMOVABLE )
-{
-  QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setMovable ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMovable|bool
 
 /*
 void setOrientation ( Qt::Orientation orientation )
 */
-HB_FUNC_STATIC( QTOOLBAR_SETORIENTATION )
-{
-  QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setOrientation ( (Qt::Orientation) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOrientation|Qt::Orientation
 
 /*
 QAction * toggleViewAction () const
 */
-HB_FUNC_STATIC( QTOOLBAR_TOGGLEVIEWACTION )
-{
-  QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->toggleViewAction ();
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|toggleViewAction|
 
 /*
 Qt::ToolButtonStyle toolButtonStyle () const
 */
-HB_FUNC_STATIC( QTOOLBAR_TOOLBUTTONSTYLE )
-{
-  QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->toolButtonStyle () );
-  }
-}
+$method=|Qt::ToolButtonStyle|toolButtonStyle|
 
 /*
 QWidget * widgetForAction ( QAction * action ) const
 */
-HB_FUNC_STATIC( QTOOLBAR_WIDGETFORACTION )
-{
-  QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->widgetForAction ( PQACTION(1) );
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|widgetForAction|QAction *
 
 /*
 void setIconSize ( const QSize & iconSize )
 */
-HB_FUNC_STATIC( QTOOLBAR_SETICONSIZE )
-{
-  QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setIconSize ( *PQSIZE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setIconSize|const QSize &
 
 /*
 void setToolButtonStyle ( Qt::ToolButtonStyle toolButtonStyle )
 */
-HB_FUNC_STATIC( QTOOLBAR_SETTOOLBUTTONSTYLE )
-{
-  QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setToolButtonStyle ( (Qt::ToolButtonStyle) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setToolButtonStyle|Qt::ToolButtonStyle
 
 #pragma ENDDUMP

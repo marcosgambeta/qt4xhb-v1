@@ -141,14 +141,7 @@ HB_FUNC_STATIC( QTEXTTABLE_CELLAT )
 /*
 int columns () const
 */
-HB_FUNC_STATIC( QTEXTTABLE_COLUMNS )
-{
-  QTextTable * obj = (QTextTable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->columns () );
-  }
-}
+$method=|int|columns|
 
 /*
 QTextTableFormat format () const
@@ -298,14 +291,7 @@ HB_FUNC_STATIC( QTEXTTABLE_ROWSTART )
 /*
 int rows () const
 */
-HB_FUNC_STATIC( QTEXTTABLE_ROWS )
-{
-  QTextTable * obj = (QTextTable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->rows () );
-  }
-}
+$method=|int|rows|
 
 /*
 void setFormat ( const QTextTableFormat & format )

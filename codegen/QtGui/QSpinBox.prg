@@ -4,8 +4,6 @@ $header
 
 CLASS QSpinBox INHERIT QAbstractSpinBox
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD cleanText
@@ -59,26 +57,12 @@ $method=|QString|cleanText|
 /*
 int maximum () const
 */
-HB_FUNC_STATIC( QSPINBOX_MAXIMUM )
-{
-  QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->maximum () );
-  }
-}
+$method=|int|maximum|
 
 /*
 int minimum () const
 */
-HB_FUNC_STATIC( QSPINBOX_MINIMUM )
-{
-  QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->minimum () );
-  }
-}
+$method=|int|minimum|
 
 /*
 QString prefix () const
@@ -166,14 +150,7 @@ HB_FUNC_STATIC( QSPINBOX_SETSUFFIX )
 /*
 int singleStep () const
 */
-HB_FUNC_STATIC( QSPINBOX_SINGLESTEP )
-{
-  QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->singleStep () );
-  }
-}
+$method=|int|singleStep|
 
 /*
 QString suffix () const
@@ -183,14 +160,7 @@ $method=|QString|suffix|
 /*
 int value () const
 */
-HB_FUNC_STATIC( QSPINBOX_VALUE )
-{
-  QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->value () );
-  }
-}
+$method=|int|value|
 
 /*
 void setValue ( int val )

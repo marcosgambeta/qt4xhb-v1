@@ -10,8 +10,6 @@ REQUEST QICON
 
 CLASS QSystemTrayIcon INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -129,14 +127,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ICON )
 /*
 bool isVisible () const
 */
-HB_FUNC_STATIC( QSYSTEMTRAYICON_ISVISIBLE )
-{
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isVisible () );
-  }
-}
+$method=|bool|isVisible|
 
 /*
 void setContextMenu ( QMenu * menu )
@@ -192,56 +183,26 @@ $method=|QString|toolTip|
 /*
 void hide ()
 */
-HB_FUNC_STATIC( QSYSTEMTRAYICON_HIDE )
-{
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->hide ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|hide|
 
 /*
 void setVisible ( bool visible )
 */
-HB_FUNC_STATIC( QSYSTEMTRAYICON_SETVISIBLE )
-{
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setVisible ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setVisible|bool
 
 /*
 void show ()
 */
-HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOW )
-{
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->show ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|show|
 
 /*
-bool isSystemTrayAvailable ()
+static bool isSystemTrayAvailable ()
 */
-HB_FUNC_STATIC( QSYSTEMTRAYICON_ISSYSTEMTRAYAVAILABLE )
-{
-  RBOOL( QSystemTrayIcon::isSystemTrayAvailable () );
-}
+$staticMethod=|bool|isSystemTrayAvailable|
 
 /*
-bool supportsMessages ()
+static bool supportsMessages ()
 */
-HB_FUNC_STATIC( QSYSTEMTRAYICON_SUPPORTSMESSAGES )
-{
-  RBOOL( QSystemTrayIcon::supportsMessages () );
-}
+$staticMethod=|bool|supportsMessages|
 
 #pragma ENDDUMP

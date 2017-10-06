@@ -8,8 +8,6 @@ REQUEST QRECTF
 
 CLASS QGraphicsEffect INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD boundingRect
    METHOD boundingRectFor
@@ -64,14 +62,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECTFOR )
 /*
 bool isEnabled () const
 */
-HB_FUNC_STATIC( QGRAPHICSEFFECT_ISENABLED )
-{
-  QGraphicsEffect * obj = (QGraphicsEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isEnabled () );
-  }
-}
+$method=|bool|isEnabled|
 
 /*
 void setEnabled ( bool enable )

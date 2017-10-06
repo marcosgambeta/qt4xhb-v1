@@ -27,8 +27,6 @@ REQUEST QGRAPHICSVIEW
 
 CLASS QGraphicsScene INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new3
@@ -467,27 +465,12 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_BACKGROUNDBRUSH )
 /*
 int bspTreeDepth () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_BSPTREEDEPTH )
-{
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->bspTreeDepth () );
-  }
-}
+$method=|int|bspTreeDepth|
 
 /*
 void clearFocus ()
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_CLEARFOCUS )
-{
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clearFocus ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clearFocus|
 
 /*
 QList<QGraphicsItem *> collidingItems ( const QGraphicsItem * item, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
@@ -609,26 +592,12 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_FOREGROUNDBRUSH )
 /*
 bool hasFocus () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_HASFOCUS )
-{
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasFocus () );
-  }
-}
+$method=|bool|hasFocus|
 
 /*
 qreal height () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_HEIGHT )
-{
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->height () );
-  }
-}
+$method=|qreal|height|
 
 /*
 virtual QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
@@ -691,26 +660,12 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_INVALIDATE )
 /*
 bool isActive () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_ISACTIVE )
-{
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isActive () );
-  }
-}
+$method=|bool|isActive|
 
 /*
 bool isSortCacheEnabled () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_ISSORTCACHEENABLED )
-{
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isSortCacheEnabled () );
-  }
-}
+$method=|bool|isSortCacheEnabled|
 
 /*
 QGraphicsItem * itemAt ( const QPointF & position, const QTransform & deviceTransform ) const
@@ -1262,14 +1217,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SELECTIONAREA )
 /*
 bool sendEvent ( QGraphicsItem * item, QEvent * event )
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_SENDEVENT )
-{
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->sendEvent ( PQGRAPHICSITEM(1), PQEVENT(2) ) );
-  }
-}
+$method=|bool|sendEvent|QGraphicsItem *,QEvent *
 
 /*
 void setActivePanel ( QGraphicsItem * item )
@@ -1531,14 +1479,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETSTYLE )
 /*
 bool stickyFocus () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_STICKYFOCUS )
-{
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->stickyFocus () );
-  }
-}
+$method=|bool|stickyFocus|
 
 /*
 QStyle * style () const
@@ -1641,14 +1582,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_VIEWS )
 /*
 qreal width () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_WIDTH )
-{
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->width () );
-  }
-}
+$method=|qreal|width|
 
 /*
 void advance ()

@@ -13,8 +13,6 @@ REQUEST QSIZE
 
 CLASS QWizard INHERIT QDialog
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addPage
@@ -95,15 +93,7 @@ $deleteMethod
 /*
 int addPage ( QWizardPage * page )
 */
-HB_FUNC_STATIC( QWIZARD_ADDPAGE )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWizardPage * par1 = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RINT( obj->addPage ( par1 ) );
-  }
-}
+$method=|int|addPage|QWizardPage *
 
 /*
 QAbstractButton * button ( WizardButton which ) const
@@ -127,14 +117,7 @@ $method=|QString|buttonText|QWizard::WizardButton
 /*
 int currentId () const
 */
-HB_FUNC_STATIC( QWIZARD_CURRENTID )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->currentId () );
-  }
-}
+$method=|int|currentId|
 
 /*
 QWizardPage * currentPage () const
@@ -157,26 +140,12 @@ $method=|QVariant|field|const QString &
 /*
 bool hasVisitedPage ( int id ) const
 */
-HB_FUNC_STATIC( QWIZARD_HASVISITEDPAGE )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasVisitedPage ( PINT(1)) );
-  }
-}
+$method=|bool|hasVisitedPage|int
 
 /*
 virtual int nextId () const
 */
-HB_FUNC_STATIC( QWIZARD_NEXTID )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->nextId () );
-  }
-}
+$virtualMethod=|int|nextId|
 
 /*
 WizardOptions options () const
@@ -470,14 +439,7 @@ HB_FUNC_STATIC( QWIZARD_SIDEWIDGET )
 /*
 int startId () const
 */
-HB_FUNC_STATIC( QWIZARD_STARTID )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->startId () );
-  }
-}
+$method=|int|startId|
 
 /*
 Qt::TextFormat subTitleFormat () const
@@ -494,15 +456,7 @@ HB_FUNC_STATIC( QWIZARD_SUBTITLEFORMAT )
 /*
 bool testOption ( WizardOption option ) const
 */
-HB_FUNC_STATIC( QWIZARD_TESTOPTION )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    RBOOL( obj->testOption ( (QWizard::WizardOption) par1 ) );
-  }
-}
+$method=|bool|testOption|QWizard::WizardOption
 
 /*
 Qt::TextFormat titleFormat () const
@@ -519,14 +473,7 @@ HB_FUNC_STATIC( QWIZARD_TITLEFORMAT )
 /*
 virtual bool validateCurrentPage ()
 */
-HB_FUNC_STATIC( QWIZARD_VALIDATECURRENTPAGE )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->validateCurrentPage () );
-  }
-}
+$virtualMethod=|bool|validateCurrentPage|
 
 /*
 QList<int> visitedPages () const

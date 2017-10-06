@@ -116,50 +116,22 @@ HB_FUNC_STATIC( QMOUSEEVENT_GLOBALPOS )
 /*
 int x() const
 */
-HB_FUNC_STATIC( QMOUSEEVENT_X )
-{
-  QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->x () );
-  }
-}
+$method=|int|x|
 
 /*
 int y() const
 */
-HB_FUNC_STATIC( QMOUSEEVENT_Y )
-{
-  QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->y () );
-  }
-}
+$method=|int|y|
 
 /*
 int globalX() const
 */
-HB_FUNC_STATIC( QMOUSEEVENT_GLOBALX )
-{
-  QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->globalX () );
-  }
-}
+$method=|int|globalX|
 
 /*
 int globalY() const
 */
-HB_FUNC_STATIC( QMOUSEEVENT_GLOBALY )
-{
-  QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->globalY () );
-  }
-}
+$method=|int|globalY|
 
 /*
 Qt::MouseButton button() const
@@ -188,14 +160,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_BUTTONS )
 /*
 bool hasExtendedInfo() const
 */
-HB_FUNC_STATIC( QMOUSEEVENT_HASEXTENDEDINFO )
-{
-  QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasExtendedInfo () );
-  }
-}
+$method=|bool|hasExtendedInfo|
 
 /*
 QPointF posF() const

@@ -9,8 +9,6 @@ REQUEST QABSTRACTBUTTON
 
 CLASS QDialogButtonBox INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new3
@@ -243,93 +241,37 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTONS )
 /*
 bool centerButtons () const
 */
-HB_FUNC_STATIC( QDIALOGBUTTONBOX_CENTERBUTTONS )
-{
-  QDialogButtonBox * obj = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->centerButtons () );
-  }
-}
+$method=|bool|centerButtons|
 
 /*
 void clear ()
 */
-HB_FUNC_STATIC( QDIALOGBUTTONBOX_CLEAR )
-{
-  QDialogButtonBox * obj = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clear|
 
 /*
 Qt::Orientation orientation () const
 */
-HB_FUNC_STATIC( QDIALOGBUTTONBOX_ORIENTATION )
-{
-  QDialogButtonBox * obj = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RENUM( obj->orientation () );
-  }
-}
+$method=|Qt::Orientation|orientation|
 
 /*
 void removeButton ( QAbstractButton * button )
 */
-HB_FUNC_STATIC( QDIALOGBUTTONBOX_REMOVEBUTTON )
-{
-  QDialogButtonBox * obj = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractButton * par1 = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->removeButton ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeButton|QAbstractButton *
 
 /*
 void setCenterButtons ( bool center )
 */
-HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETCENTERBUTTONS )
-{
-  QDialogButtonBox * obj = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCenterButtons ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCenterButtons|bool
 
 /*
 void setOrientation ( Qt::Orientation orientation )
 */
-HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETORIENTATION )
-{
-  QDialogButtonBox * obj = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setOrientation ( (Qt::Orientation) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOrientation|Qt::Orientation
 
 /*
 void setStandardButtons ( StandardButtons buttons )
 */
-HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETSTANDARDBUTTONS )
-{
-  QDialogButtonBox * obj = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setStandardButtons ( (QDialogButtonBox::StandardButtons) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStandardButtons|QDialogButtonBox::StandardButtons
 
 /*
 StandardButton standardButton ( QAbstractButton * button ) const

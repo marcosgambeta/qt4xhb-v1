@@ -8,8 +8,6 @@ REQUEST QPOINTF
 
 CLASS QGesture INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD gestureCancelPolicy
@@ -73,14 +71,7 @@ HB_FUNC_STATIC( QGESTURE_GESTURETYPE )
 /*
 bool hasHotSpot () const
 */
-HB_FUNC_STATIC( QGESTURE_HASHOTSPOT )
-{
-  QGesture * obj = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasHotSpot () );
-  }
-}
+$method=|bool|hasHotSpot|
 
 /*
 QPointF hotSpot () const

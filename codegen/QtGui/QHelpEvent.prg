@@ -60,26 +60,12 @@ HB_FUNC_STATIC( QHELPEVENT_GLOBALPOS )
 /*
 int globalX () const
 */
-HB_FUNC_STATIC( QHELPEVENT_GLOBALX )
-{
-  QHelpEvent * obj = (QHelpEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->globalX () );
-  }
-}
+$method=|int|globalX|
 
 /*
 int globalY () const
 */
-HB_FUNC_STATIC( QHELPEVENT_GLOBALY )
-{
-  QHelpEvent * obj = (QHelpEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->globalY () );
-  }
-}
+$method=|int|globalY|
 
 /*
 const QPoint & pos () const
@@ -97,25 +83,11 @@ HB_FUNC_STATIC( QHELPEVENT_POS )
 /*
 int x () const
 */
-HB_FUNC_STATIC( QHELPEVENT_X )
-{
-  QHelpEvent * obj = (QHelpEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->x () );
-  }
-}
+$method=|int|x|
 
 /*
 int y () const
 */
-HB_FUNC_STATIC( QHELPEVENT_Y )
-{
-  QHelpEvent * obj = (QHelpEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->y () );
-  }
-}
+$method=|int|y|
 
 #pragma ENDDUMP

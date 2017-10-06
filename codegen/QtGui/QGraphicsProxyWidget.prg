@@ -131,13 +131,6 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SETGEOMETRY )
 /*
 virtual int type () const
 */
-HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_TYPE )
-{
-  QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->type () );
-  }
-}
+$virtualMethod=|int|type|
 
 #pragma ENDDUMP

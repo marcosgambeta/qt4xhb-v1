@@ -8,8 +8,6 @@ REQUEST QPRINTER
 
 CLASS QPrintDialog INHERIT QAbstractPrintDialog
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -107,93 +105,36 @@ HB_FUNC_STATIC( QPRINTDIALOG_OPTIONS )
 /*
 QPrinter * printer ()
 */
-HB_FUNC_STATIC( QPRINTDIALOG_PRINTER )
-{
-  QPrintDialog * obj = (QPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPrinter * ptr = obj->printer ();
-    _qt4xhb_createReturnClass ( ptr, "QPRINTER" );
-  }
-}
+$method=|QPrinter *|printer|
 
 /*
 void setOption ( PrintDialogOption option, bool on = true )
 */
-HB_FUNC_STATIC( QPRINTDIALOG_SETOPTION )
-{
-  QPrintDialog * obj = (QPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setOption ( (QPrintDialog::PrintDialogOption) par1, OPBOOL(2,true) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOption|QPrintDialog::PrintDialogOption,bool=true
 
 /*
 void setOptions ( PrintDialogOptions options )
 */
-HB_FUNC_STATIC( QPRINTDIALOG_SETOPTIONS )
-{
-  QPrintDialog * obj = (QPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setOptions ( (QPrintDialog::PrintDialogOptions) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOptions|QPrintDialog::PrintDialogOptions
 
 /*
 bool testOption ( PrintDialogOption option ) const
 */
-HB_FUNC_STATIC( QPRINTDIALOG_TESTOPTION )
-{
-  QPrintDialog * obj = (QPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    RBOOL( obj->testOption ( (QPrintDialog::PrintDialogOption) par1 ) );
-  }
-}
+$method=|bool|testOption|QPrintDialog::PrintDialogOption
 
 /*
 virtual void done ( int result )
 */
-HB_FUNC_STATIC( QPRINTDIALOG_DONE )
-{
-  QPrintDialog * obj = (QPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->done ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|done|int
 
 /*
 virtual int exec ()
 */
-HB_FUNC_STATIC( QPRINTDIALOG_EXEC )
-{
-  QPrintDialog * obj = (QPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->exec () );
-  }
-}
+$virtualMethod=|int|exec|
 
 /*
 virtual void setVisible ( bool visible )
 */
-HB_FUNC_STATIC( QPRINTDIALOG_SETVISIBLE )
-{
-  QPrintDialog * obj = (QPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setVisible ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|setVisible|bool
 
 #pragma ENDDUMP

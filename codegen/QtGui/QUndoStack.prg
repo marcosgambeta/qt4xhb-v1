@@ -9,8 +9,6 @@ REQUEST QACTION
 
 CLASS QUndoStack INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD beginMacro
@@ -78,38 +76,17 @@ $method=|void|beginMacro|const QString &
 /*
 bool canRedo () const
 */
-HB_FUNC_STATIC( QUNDOSTACK_CANREDO )
-{
-  QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->canRedo () );
-  }
-}
+$method=|bool|canRedo|
 
 /*
 bool canUndo () const
 */
-HB_FUNC_STATIC( QUNDOSTACK_CANUNDO )
-{
-  QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->canUndo () );
-  }
-}
+$method=|bool|canUndo|
 
 /*
 int cleanIndex () const
 */
-HB_FUNC_STATIC( QUNDOSTACK_CLEANINDEX )
-{
-  QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->cleanIndex () );
-  }
-}
+$method=|int|cleanIndex|
 
 /*
 void clear ()
@@ -140,14 +117,7 @@ HB_FUNC_STATIC( QUNDOSTACK_COMMAND )
 /*
 int count () const
 */
-HB_FUNC_STATIC( QUNDOSTACK_COUNT )
-{
-  QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-}
+$method=|int|count|
 
 /*
 QAction * createRedoAction ( QObject * parent, const QString & prefix = QString() ) const
@@ -191,38 +161,17 @@ HB_FUNC_STATIC( QUNDOSTACK_ENDMACRO )
 /*
 int index () const
 */
-HB_FUNC_STATIC( QUNDOSTACK_INDEX )
-{
-  QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->index () );
-  }
-}
+$method=|int|index|
 
 /*
 bool isActive () const
 */
-HB_FUNC_STATIC( QUNDOSTACK_ISACTIVE )
-{
-  QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isActive () );
-  }
-}
+$method=|bool|isActive|
 
 /*
 bool isClean () const
 */
-HB_FUNC_STATIC( QUNDOSTACK_ISCLEAN )
-{
-  QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isClean () );
-  }
-}
+$method=|bool|isClean|
 
 /*
 void push ( QUndoCommand * cmd )
@@ -264,14 +213,7 @@ $method=|QString|text|int
 /*
 int undoLimit () const
 */
-HB_FUNC_STATIC( QUNDOSTACK_UNDOLIMIT )
-{
-  QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->undoLimit () );
-  }
-}
+$method=|int|undoLimit|
 
 /*
 QString undoText () const

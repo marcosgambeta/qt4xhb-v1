@@ -187,15 +187,7 @@ HB_FUNC_STATIC( QSTATICTEXT_SETTEXTOPTION )
 /*
 void setTextWidth ( qreal textWidth )
 */
-HB_FUNC_STATIC( QSTATICTEXT_SETTEXTWIDTH )
-{
-  QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTextWidth ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTextWidth|qreal
 
 /*
 QSizeF size () const
@@ -243,14 +235,7 @@ HB_FUNC_STATIC( QSTATICTEXT_TEXTOPTION )
 /*
 qreal textWidth () const
 */
-HB_FUNC_STATIC( QSTATICTEXT_TEXTWIDTH )
-{
-  QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->textWidth () );
-  }
-}
+$method=|qreal|textWidth|
 
 $extraMethods
 

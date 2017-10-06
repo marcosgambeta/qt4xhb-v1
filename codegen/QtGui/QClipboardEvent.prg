@@ -31,26 +31,13 @@ $destructor
 /*
 QClipboardEvent(QEventPrivate *data)
 */
-HB_FUNC_STATIC( QCLIPBOARDEVENT_NEW )
-{
-  QEventPrivate * par1 = (QEventPrivate *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QClipboardEvent * o = new QClipboardEvent ( par1 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QEventPrivate *
 
 $deleteMethod
 
 /*
 QEventPrivate *data()
 */
-HB_FUNC_STATIC( QCLIPBOARDEVENT_DATA )
-{
-  QClipboardEvent * obj = (QClipboardEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QEventPrivate * ptr = obj->data ();
-    _qt4xhb_createReturnClass ( ptr, "QEVENTPRIVATE" );
-  }
-}
+$method=|QEventPrivate *|data|
 
 #pragma ENDDUMP

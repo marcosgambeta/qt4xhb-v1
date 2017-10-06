@@ -162,14 +162,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_FONT )
 /*
 bool openExternalLinks () const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_OPENEXTERNALLINKS )
-{
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->openExternalLinks () );
-  }
-}
+$method=|bool|openExternalLinks|
 
 /*
 void setDefaultTextColor ( const QColor & col )
@@ -278,64 +271,27 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTINTERACTIONFLAGS )
 /*
 void setTextWidth ( qreal width )
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTWIDTH )
-{
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTextWidth ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTextWidth|qreal
 
 /*
 bool tabChangesFocus () const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TABCHANGESFOCUS )
-{
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->tabChangesFocus () );
-  }
-}
+$method=|bool|tabChangesFocus|
 
 /*
 QTextCursor textCursor () const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTCURSOR )
-{
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextCursor * ptr = new QTextCursor( obj->textCursor () );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
-  }
-}
+$method=|QTextCursor|textCursor|
 
 /*
 Qt::TextInteractionFlags textInteractionFlags () const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTINTERACTIONFLAGS )
-{
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->textInteractionFlags () );
-  }
-}
+$method=|Qt::TextInteractionFlags|textInteractionFlags|
 
 /*
 qreal textWidth () const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTWIDTH )
-{
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->textWidth () );
-  }
-}
+$method=|qreal|textWidth|
 
 /*
 QString toHtml () const
@@ -363,27 +319,12 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_BOUNDINGRECT )
 /*
 virtual bool contains ( const QPointF & point ) const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_CONTAINS )
-{
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->contains ( *PQPOINTF(1) ) );
-  }
-}
+$virtualMethod=|bool|contains|const QPointF &
 
 /*
 virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ISOBSCUREDBY )
-{
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QGraphicsItem * par1 = (const QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->isObscuredBy ( par1 ) );
-  }
-}
+$virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
 
 /*
 virtual QPainterPath opaqueArea () const
@@ -428,13 +369,6 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SHAPE )
 /*
 virtual int type () const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TYPE )
-{
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->type () );
-  }
-}
+$virtualMethod=|int|type|
 
 #pragma ENDDUMP

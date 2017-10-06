@@ -47,11 +47,7 @@ $destructor
 /*
 QColormap ( const QColormap & colormap )
 */
-HB_FUNC_STATIC( QCOLORMAP_NEW )
-{
-  QColormap * o = new QColormap ( *PQCOLORMAP(1));
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|const QColormap &
 
 $deleteMethod
 
@@ -114,14 +110,7 @@ HB_FUNC_STATIC( QCOLORMAP_COLORMAP )
 /*
 int depth () const
 */
-HB_FUNC_STATIC( QCOLORMAP_DEPTH )
-{
-  QColormap * obj = (QColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->depth () );
-  }
-}
+$method=|int|depth|
 
 /*
 Mode mode () const
@@ -138,36 +127,17 @@ HB_FUNC_STATIC( QCOLORMAP_MODE )
 /*
 uint pixel ( const QColor & color ) const
 */
-HB_FUNC_STATIC( QCOLORMAP_PIXEL )
-{
-  QColormap * obj = (QColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QColor par1 = ISOBJECT(1)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(1));
-    hb_retni( (uint) obj->pixel ( par1 ) );
-  }
-}
+$method=|uint|pixel|const QColor &
 
 /*
 int size () const
 */
-HB_FUNC_STATIC( QCOLORMAP_SIZE )
-{
-  QColormap * obj = (QColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->size () );
-  }
-}
+$method=|int|size|
 
 /*
-QColormap instance ( int screen = -1 )
+static QColormap instance ( int screen = -1 )
 */
-HB_FUNC_STATIC( QCOLORMAP_INSTANCE )
-{
-  QColormap * ptr = new QColormap( QColormap::instance ( OPINT(1,-1) ) );
-  _qt4xhb_createReturnClass ( ptr, "QCOLORMAP" );
-}
+$staticMethod=|QColormap|instance|int=-1
 
 $extraMethods
 

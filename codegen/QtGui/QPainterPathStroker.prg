@@ -90,26 +90,12 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_CREATESTROKE )
 /*
 qreal curveThreshold () const
 */
-HB_FUNC_STATIC( QPAINTERPATHSTROKER_CURVETHRESHOLD )
-{
-  QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->curveThreshold () );
-  }
-}
+$method=|qreal|curveThreshold|
 
 /*
 qreal dashOffset () const
 */
-HB_FUNC_STATIC( QPAINTERPATHSTROKER_DASHOFFSET )
-{
-  QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->dashOffset () );
-  }
-}
+$method=|qreal|dashOffset|
 
 /*
 QVector<qreal> dashPattern () const
@@ -148,14 +134,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_JOINSTYLE )
 /*
 qreal miterLimit () const
 */
-HB_FUNC_STATIC( QPAINTERPATHSTROKER_MITERLIMIT )
-{
-  QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->miterLimit () );
-  }
-}
+$method=|qreal|miterLimit|
 
 /*
 void setCapStyle ( Qt::PenCapStyle style )
@@ -174,42 +153,17 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETCAPSTYLE )
 /*
 void setCurveThreshold ( qreal threshold )
 */
-HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETCURVETHRESHOLD )
-{
-  QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCurveThreshold ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCurveThreshold|qreal
 
 /*
 void setDashOffset ( qreal offset )
 */
-HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHOFFSET )
-{
-  QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDashOffset ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDashOffset|qreal
 
 /*
 void setDashPattern ( Qt::PenStyle style )
 */
-HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHPATTERN1 )
-{
-  QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setDashPattern ( (Qt::PenStyle) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDashPattern,setDashPattern1|Qt::PenStyle
 
 /*
 void setDashPattern ( const QVector<qreal> & dashPattern )
@@ -219,16 +173,16 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHPATTERN2 )
   QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-QVector<qreal> par1;
-PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aValues1);
-int temp1;
-for (i1=0;i1<nLen1;i1++)
-{
-temp1 = hb_arrayGetND(aValues1, i1+1);
-par1 << temp1;
-}
+    QVector<qreal> par1;
+    PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aValues1);
+    int temp1;
+    for (i1=0;i1<nLen1;i1++)
+    {
+      temp1 = hb_arrayGetND(aValues1, i1+1);
+      par1 << temp1;
+    }
     obj->setDashPattern ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -252,54 +206,22 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHPATTERN )
 /*
 void setJoinStyle ( Qt::PenJoinStyle style )
 */
-HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETJOINSTYLE )
-{
-  QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setJoinStyle ( (Qt::PenJoinStyle) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setJoinStyle|Qt::PenJoinStyle
 
 /*
 void setMiterLimit ( qreal limit )
 */
-HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETMITERLIMIT )
-{
-  QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setMiterLimit ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMiterLimit|qreal
 
 /*
 void setWidth ( qreal width )
 */
-HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETWIDTH )
-{
-  QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setWidth ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWidth|qreal
 
 /*
 qreal width () const
 */
-HB_FUNC_STATIC( QPAINTERPATHSTROKER_WIDTH )
-{
-  QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->width () );
-  }
-}
+$method=|qreal|width|
 
 $extraMethods
 

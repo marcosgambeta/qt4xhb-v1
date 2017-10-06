@@ -74,27 +74,12 @@ HB_FUNC_STATIC( QFONTDATABASE_NEW )
 /*
 bool bold ( const QString & family, const QString & style ) const
 */
-HB_FUNC_STATIC( QFONTDATABASE_BOLD )
-{
-  QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->bold ( PQSTRING(1), PQSTRING(2) ) );
-  }
-}
+$method=|bool|bold|const QString &,const QString &
 
 /*
 QStringList families ( WritingSystem writingSystem = Any ) const
 */
-HB_FUNC_STATIC( QFONTDATABASE_FAMILIES )
-{
-  QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = ISNIL(1)? (int) QFontDatabase::Any : hb_parni(1);
-    RQSTRINGLIST( obj->families ( (QFontDatabase::WritingSystem) par1 ) );
-  }
-}
+$method=|QStringList|families|QFontDatabase::WritingSystem=QFontDatabase::Any
 
 /*
 QFont font ( const QString & family, const QString & style, int pointSize ) const
@@ -113,62 +98,27 @@ HB_FUNC_STATIC( QFONTDATABASE_FONT )
 /*
 bool isBitmapScalable ( const QString & family, const QString & style = QString() ) const
 */
-HB_FUNC_STATIC( QFONTDATABASE_ISBITMAPSCALABLE )
-{
-  QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isBitmapScalable ( PQSTRING(1), OPQSTRING(2,QString()) ) );
-  }
-}
+$method=|bool|isBitmapScalable|const QString &,const QString &=QString()
 
 /*
 bool isFixedPitch ( const QString & family, const QString & style = QString() ) const
 */
-HB_FUNC_STATIC( QFONTDATABASE_ISFIXEDPITCH )
-{
-  QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isFixedPitch ( PQSTRING(1), OPQSTRING(2,QString()) ) );
-  }
-}
+$method=|bool|isFixedPitch|const QString &,const QString &=QString()
 
 /*
 bool isScalable ( const QString & family, const QString & style = QString() ) const
 */
-HB_FUNC_STATIC( QFONTDATABASE_ISSCALABLE )
-{
-  QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isScalable ( PQSTRING(1), OPQSTRING(2,QString()) ) );
-  }
-}
+$method=|bool|isScalable|const QString &,const QString &=QString()
 
 /*
 bool isSmoothlyScalable ( const QString & family, const QString & style = QString() ) const
 */
-HB_FUNC_STATIC( QFONTDATABASE_ISSMOOTHLYSCALABLE )
-{
-  QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isSmoothlyScalable ( PQSTRING(1), OPQSTRING(2,QString()) ) );
-  }
-}
+$method=|bool|isSmoothlyScalable|const QString &,const QString &=QString()
 
 /*
 bool italic ( const QString & family, const QString & style ) const
 */
-HB_FUNC_STATIC( QFONTDATABASE_ITALIC )
-{
-  QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->italic ( PQSTRING(1), PQSTRING(2) ) );
-  }
-}
+$method=|bool|italic|const QString &,const QString &
 
 /*
 QList<int> pointSizes ( const QString & family, const QString & style = QString() )

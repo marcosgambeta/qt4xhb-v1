@@ -67,14 +67,7 @@ HB_FUNC_STATIC( QMIMESOURCE_FORMAT )
 /*
 virtual bool provides ( const char * mimeType ) const
 */
-HB_FUNC_STATIC( QMIMESOURCE_PROVIDES )
-{
-  QMimeSource * obj = (QMimeSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->provides ( (const char *) hb_parc(1) ) );
-  }
-}
+$virtualMethod=|bool|provides|const char *
 
 $extraMethods
 

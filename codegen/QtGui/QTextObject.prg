@@ -9,8 +9,6 @@ REQUEST QTEXTFORMAT
 
 CLASS QTextObject INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD document
    METHOD format
    METHOD formatIndex
@@ -59,25 +57,11 @@ HB_FUNC_STATIC( QTEXTOBJECT_FORMAT )
 /*
 int formatIndex () const
 */
-HB_FUNC_STATIC( QTEXTOBJECT_FORMATINDEX )
-{
-  QTextObject * obj = (QTextObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->formatIndex () );
-  }
-}
+$method=|int|formatIndex|
 
 /*
 int objectIndex () const
 */
-HB_FUNC_STATIC( QTEXTOBJECT_OBJECTINDEX )
-{
-  QTextObject * obj = (QTextObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->objectIndex () );
-  }
-}
+$method=|int|objectIndex|
 
 #pragma ENDDUMP

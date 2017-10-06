@@ -99,26 +99,12 @@ $deleteMethod
 /*
 bool isDefault () const
 */
-HB_FUNC_STATIC( QPRINTERINFO_ISDEFAULT )
-{
-  QPrinterInfo * obj = (QPrinterInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isDefault () );
-  }
-}
+$method=|bool|isDefault|
 
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QPRINTERINFO_ISNULL )
-{
-  QPrinterInfo * obj = (QPrinterInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
+$method=|bool|isNull|
 
 /*
 QString printerName () const

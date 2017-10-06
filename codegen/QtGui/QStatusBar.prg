@@ -4,8 +4,6 @@ $header
 
 CLASS QStatusBar INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addPermanentWidget
@@ -80,51 +78,22 @@ $method=|QString|currentMessage|
 /*
 int insertPermanentWidget ( int index, QWidget * widget, int stretch = 0 )
 */
-HB_FUNC_STATIC( QSTATUSBAR_INSERTPERMANENTWIDGET )
-{
-  QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->insertPermanentWidget ( PINT(1), PQWIDGET(2), OPINT(3,0) ) );
-  }
-}
+$method=|int|insertPermanentWidget|int,QWidget *,int=0
 
 /*
 int insertWidget ( int index, QWidget * widget, int stretch = 0 )
 */
-HB_FUNC_STATIC( QSTATUSBAR_INSERTWIDGET )
-{
-  QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->insertWidget ( PINT(1), PQWIDGET(2), OPINT(3,0) ) );
-  }
-}
+$method=|int|insertWidget|int,QWidget *,int=0
 
 /*
 bool isSizeGripEnabled () const
 */
-HB_FUNC_STATIC( QSTATUSBAR_ISSIZEGRIPENABLED )
-{
-  QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isSizeGripEnabled () );
-  }
-}
+$method=|bool|isSizeGripEnabled|
 
 /*
 void removeWidget ( QWidget * widget )
 */
-HB_FUNC_STATIC( QSTATUSBAR_REMOVEWIDGET )
-{
-  QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->removeWidget ( PQWIDGET(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeWidget|QWidget *
 
 /*
 void setSizeGripEnabled ( bool )

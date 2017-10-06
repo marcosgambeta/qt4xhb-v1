@@ -111,38 +111,17 @@ HB_FUNC_STATIC( QPICTURE_DATA )
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QPICTURE_ISNULL )
-{
-  QPicture * obj = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
+$method=|bool|isNull|
 
 /*
 bool load ( const QString & fileName, const char * format = 0 )
 */
-HB_FUNC_STATIC( QPICTURE_LOAD1 )
-{
-  QPicture * obj = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->load ( PQSTRING(1), (const char *) ISNIL(2)? 0 : hb_parc(2) ) );
-  }
-}
+$method=|bool|load,load1|const QString &,const char *=0
 
 /*
 bool load ( QIODevice * dev, const char * format = 0 )
 */
-HB_FUNC_STATIC( QPICTURE_LOAD2 )
-{
-  QPicture * obj = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->load ( PQIODEVICE(1), (const char *) ISNIL(2)? 0 : hb_parc(2) ) );
-  }
-}
+$method=|bool|load,load2|QIODevice *,const char *=0
 
 //[1]bool load ( const QString & fileName, const char * format = 0 )
 //[2]bool load ( QIODevice * dev, const char * format = 0 )
@@ -162,38 +141,17 @@ HB_FUNC_STATIC( QPICTURE_LOAD )
 /*
 bool play ( QPainter * painter )
 */
-HB_FUNC_STATIC( QPICTURE_PLAY )
-{
-  QPicture * obj = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->play ( PQPAINTER(1) ) );
-  }
-}
+$method=|bool|play|QPainter *
 
 /*
 bool save ( const QString & fileName, const char * format = 0 )
 */
-HB_FUNC_STATIC( QPICTURE_SAVE1 )
-{
-  QPicture * obj = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->save ( PQSTRING(1), (const char *) ISNIL(2)? 0 : hb_parc(2) ) );
-  }
-}
+$method=|bool|save,save1|const QString &,const char *=0
 
 /*
 bool save ( QIODevice * dev, const char * format = 0 )
 */
-HB_FUNC_STATIC( QPICTURE_SAVE2 )
-{
-  QPicture * obj = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->save ( PQIODEVICE(1), (const char *) ISNIL(2)? 0 : hb_parc(2) ) );
-  }
-}
+$method=|bool|save,save2|QIODevice *,const char *=0
 
 //[1]bool save ( const QString & fileName, const char * format = 0 )
 //[2]bool save ( QIODevice * dev, const char * format = 0 )

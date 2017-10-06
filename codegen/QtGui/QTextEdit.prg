@@ -15,8 +15,6 @@ REQUEST QCOLOR
 
 CLASS QTextEdit INHERIT QAbstractScrollArea
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -169,14 +167,7 @@ $deleteMethod
 /*
 bool acceptRichText () const
 */
-HB_FUNC_STATIC( QTEXTEDIT_ACCEPTRICHTEXT )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->acceptRichText () );
-  }
-}
+$method=|bool|acceptRichText|
 
 /*
 Qt::Alignment alignment () const
@@ -210,14 +201,7 @@ HB_FUNC_STATIC( QTEXTEDIT_AUTOFORMATTING )
 /*
 bool canPaste () const
 */
-HB_FUNC_STATIC( QTEXTEDIT_CANPASTE )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->canPaste () );
-  }
-}
+$method=|bool|canPaste|
 
 /*
 QMenu * createStandardContextMenu ()
@@ -343,14 +327,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CURSORRECT )
 /*
 int cursorWidth () const
 */
-HB_FUNC_STATIC( QTEXTEDIT_CURSORWIDTH )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->cursorWidth () );
-  }
-}
+$method=|int|cursorWidth|
 
 /*
 QTextDocument * document () const
@@ -386,15 +363,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ENSURECURSORVISIBLE )
 /*
 bool find ( const QString & exp, QTextDocument::FindFlags options = 0 )
 */
-HB_FUNC_STATIC( QTEXTEDIT_FIND )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-    RBOOL( obj->find ( PQSTRING(1), (QTextDocument::FindFlags) par2 ) );
-  }
-}
+$method=|bool|find|const QString &,QTextDocument::FindFlags=0
 
 /*
 QString fontFamily () const
@@ -404,86 +373,37 @@ $method=|QString|fontFamily|
 /*
 bool fontItalic () const
 */
-HB_FUNC_STATIC( QTEXTEDIT_FONTITALIC )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->fontItalic () );
-  }
-}
+$method=|bool|fontItalic|
 
 /*
 qreal fontPointSize () const
 */
-HB_FUNC_STATIC( QTEXTEDIT_FONTPOINTSIZE )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->fontPointSize () );
-  }
-}
+$method=|qreal|fontPointSize|
 
 /*
 bool fontUnderline () const
 */
-HB_FUNC_STATIC( QTEXTEDIT_FONTUNDERLINE )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->fontUnderline () );
-  }
-}
+$method=|bool|fontUnderline|
 
 /*
 int fontWeight () const
 */
-HB_FUNC_STATIC( QTEXTEDIT_FONTWEIGHT )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->fontWeight () );
-  }
-}
+$method=|int|fontWeight|
 
 /*
 bool isReadOnly () const
 */
-HB_FUNC_STATIC( QTEXTEDIT_ISREADONLY )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isReadOnly () );
-  }
-}
+$method=|bool|isReadOnly|
 
 /*
 bool isUndoRedoEnabled () const
 */
-HB_FUNC_STATIC( QTEXTEDIT_ISUNDOREDOENABLED )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isUndoRedoEnabled () );
-  }
-}
+$method=|bool|isUndoRedoEnabled|
 
 /*
 int lineWrapColumnOrWidth () const
 */
-HB_FUNC_STATIC( QTEXTEDIT_LINEWRAPCOLUMNORWIDTH )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->lineWrapColumnOrWidth () );
-  }
-}
+$method=|int|lineWrapColumnOrWidth|
 
 /*
 LineWrapMode lineWrapMode () const
@@ -541,14 +461,7 @@ HB_FUNC_STATIC( QTEXTEDIT_MOVECURSOR )
 /*
 bool overwriteMode () const
 */
-HB_FUNC_STATIC( QTEXTEDIT_OVERWRITEMODE )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->overwriteMode () );
-  }
-}
+$method=|bool|overwriteMode|
 
 /*
 void print ( QPrinter * printer ) const
@@ -772,26 +685,12 @@ HB_FUNC_STATIC( QTEXTEDIT_SETWORDWRAPMODE )
 /*
 bool tabChangesFocus () const
 */
-HB_FUNC_STATIC( QTEXTEDIT_TABCHANGESFOCUS )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->tabChangesFocus () );
-  }
-}
+$method=|bool|tabChangesFocus|
 
 /*
 int tabStopWidth () const
 */
-HB_FUNC_STATIC( QTEXTEDIT_TABSTOPWIDTH )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->tabStopWidth () );
-  }
-}
+$method=|int|tabStopWidth|
 
 /*
 QColor textBackgroundColor () const
@@ -1012,41 +911,17 @@ HB_FUNC_STATIC( QTEXTEDIT_SETFONTITALIC )
 /*
 void setFontPointSize ( qreal s )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETFONTPOINTSIZE )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFontPointSize ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFontPointSize|qreal
 
 /*
 void setFontUnderline ( bool underline )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETFONTUNDERLINE )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFontUnderline ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFontUnderline|bool
 
 /*
 void setFontWeight ( int weight )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETFONTWEIGHT )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFontWeight ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFontWeight|int
 
 /*
 void setHtml ( const QString & text )

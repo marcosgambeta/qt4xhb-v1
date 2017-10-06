@@ -317,14 +317,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_CHILD )
 /*
 int childCount () const
 */
-HB_FUNC_STATIC( QTREEWIDGETITEM_CHILDCOUNT )
-{
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->childCount () );
-  }
-}
+$method=|int|childCount|
 
 /*
 QTreeWidgetItem::ChildIndicatorPolicy childIndicatorPolicy () const
@@ -354,14 +347,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_CLONE )
 /*
 int columnCount () const
 */
-HB_FUNC_STATIC( QTREEWIDGETITEM_COLUMNCOUNT )
-{
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->columnCount () );
-  }
-}
+$method=|int|columnCount|
 
 /*
 virtual QVariant data ( int column, int role ) const
@@ -430,15 +416,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_ICON )
 /*
 int indexOfChild ( QTreeWidgetItem * child ) const
 */
-HB_FUNC_STATIC( QTREEWIDGETITEM_INDEXOFCHILD )
-{
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTreeWidgetItem * par1 = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RINT( obj->indexOfChild ( par1 ) );
-  }
-}
+$method=|int|indexOfChild|QTreeWidgetItem *
 
 /*
 void insertChild ( int index, QTreeWidgetItem * child )
@@ -477,62 +455,27 @@ par2 << (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aL
 /*
 bool isDisabled () const
 */
-HB_FUNC_STATIC( QTREEWIDGETITEM_ISDISABLED )
-{
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isDisabled () );
-  }
-}
+$method=|bool|isDisabled|
 
 /*
 bool isExpanded () const
 */
-HB_FUNC_STATIC( QTREEWIDGETITEM_ISEXPANDED )
-{
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isExpanded () );
-  }
-}
+$method=|bool|isExpanded|
 
 /*
 bool isFirstColumnSpanned () const
 */
-HB_FUNC_STATIC( QTREEWIDGETITEM_ISFIRSTCOLUMNSPANNED )
-{
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isFirstColumnSpanned () );
-  }
-}
+$method=|bool|isFirstColumnSpanned|
 
 /*
 bool isHidden () const
 */
-HB_FUNC_STATIC( QTREEWIDGETITEM_ISHIDDEN )
-{
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isHidden () );
-  }
-}
+$method=|bool|isHidden|
 
 /*
 bool isSelected () const
 */
-HB_FUNC_STATIC( QTREEWIDGETITEM_ISSELECTED )
-{
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isSelected () );
-  }
-}
+$method=|bool|isSelected|
 
 /*
 QTreeWidgetItem * parent () const
@@ -920,14 +863,7 @@ $method=|QString|text|int
 /*
 int textAlignment ( int column ) const
 */
-HB_FUNC_STATIC( QTREEWIDGETITEM_TEXTALIGNMENT )
-{
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->textAlignment ( PINT(1) ) );
-  }
-}
+$method=|int|textAlignment|int
 
 /*
 QString toolTip ( int column ) const
@@ -950,14 +886,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TREEWIDGET )
 /*
 int type () const
 */
-HB_FUNC_STATIC( QTREEWIDGETITEM_TYPE )
-{
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->type () );
-  }
-}
+$method=|int|type|
 
 /*
 QString whatsThis ( int column ) const

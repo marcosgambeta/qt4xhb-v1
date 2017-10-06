@@ -48,52 +48,21 @@ $deleteMethod
 /*
 qreal opacity () const
 */
-HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITY )
-{
-  QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->opacity () );
-  }
-}
+$method=|qreal|opacity|
 
 /*
 QBrush opacityMask () const
 */
-HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITYMASK )
-{
-  QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QBrush * ptr = new QBrush( obj->opacityMask () );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
-  }
-}
+$method=|QBrush|opacityMask|
 
 /*
 void setOpacity ( qreal opacity )
 */
-HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_SETOPACITY )
-{
-  QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setOpacity ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOpacity|qreal
 
 /*
 void setOpacityMask ( const QBrush & mask )
 */
-HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_SETOPACITYMASK )
-{
-  QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setOpacityMask ( *PQBRUSH(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOpacityMask|const QBrush &
 
 #pragma ENDDUMP

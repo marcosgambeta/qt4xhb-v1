@@ -4,8 +4,6 @@ $header
 
 CLASS QSessionManager INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD allowsErrorInteraction
    METHOD allowsInteraction
    METHOD cancel
@@ -41,101 +39,42 @@ $destructor
 /*
 bool allowsErrorInteraction ()
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_ALLOWSERRORINTERACTION )
-{
-  QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->allowsErrorInteraction () );
-  }
-}
+$method=|bool|allowsErrorInteraction|
 
 /*
 bool allowsInteraction ()
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_ALLOWSINTERACTION )
-{
-  QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->allowsInteraction () );
-  }
-}
+$method=|bool|allowsInteraction|
 
 /*
 void cancel ()
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_CANCEL )
-{
-  QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->cancel ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|cancel|
 
 /*
 QStringList discardCommand () const
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_DISCARDCOMMAND )
-{
-  QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->discardCommand () );
-  }
-}
+$method=|QStringList|discardCommand|
 
 /*
 bool isPhase2 () const
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_ISPHASE2 )
-{
-  QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isPhase2 () );
-  }
-}
+$method=|bool|isPhase2|
 
 /*
 void release ()
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_RELEASE )
-{
-  QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->release ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|release|
 
 /*
 void requestPhase2 ()
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_REQUESTPHASE2 )
-{
-  QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->requestPhase2 ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|requestPhase2|
 
 /*
 QStringList restartCommand () const
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_RESTARTCOMMAND )
-{
-  QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->restartCommand () );
-  }
-}
+$method=|QStringList|restartCommand|
 
 /*
 RestartHint restartHint () const

@@ -9,8 +9,6 @@ REQUEST QWIDGET
 
 CLASS QDesktopWidget INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD availableGeometry1
    METHOD availableGeometry2
    METHOD availableGeometry3
@@ -108,51 +106,22 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
 /*
 bool isVirtualDesktop () const
 */
-HB_FUNC_STATIC( QDESKTOPWIDGET_ISVIRTUALDESKTOP )
-{
-  QDesktopWidget * obj = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isVirtualDesktop () );
-  }
-}
+$method=|bool|isVirtualDesktop|
 
 /*
 int primaryScreen () const
 */
-HB_FUNC_STATIC( QDESKTOPWIDGET_PRIMARYSCREEN )
-{
-  QDesktopWidget * obj = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->primaryScreen () );
-  }
-}
+$method=|int|primaryScreen|
 
 /*
 QWidget * screen ( int screen = -1 )
 */
-HB_FUNC_STATIC( QDESKTOPWIDGET_SCREEN )
-{
-  QDesktopWidget * obj = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->screen ( OPINT(1,-1) );
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|screen|int=-1
 
 /*
 int screenCount () const
 */
-HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENCOUNT )
-{
-  QDesktopWidget * obj = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->screenCount () );
-  }
-}
+$method=|int|screenCount|
 
 /*
 const QRect screenGeometry ( int screen = -1 ) const
@@ -217,27 +186,12 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
 /*
 int screenNumber ( const QWidget * widget = 0 ) const
 */
-HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER1 )
-{
-  QDesktopWidget * obj = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QWidget * par1 = ISNIL(1)? 0 : (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RINT( obj->screenNumber ( par1 ) );
-  }
-}
+$method=|int|screenNumber,screenNumber1|const QWidget *=0
 
 /*
 int screenNumber ( const QPoint & point ) const
 */
-HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER2 )
-{
-  QDesktopWidget * obj = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->screenNumber ( *PQPOINT(1) ) );
-  }
-}
+$method=|int|screenNumber,screenNumber2|const QPoint &
 
 //[1]int screenNumber ( const QWidget * widget = 0 ) const
 //[2]int screenNumber ( const QPoint & point ) const

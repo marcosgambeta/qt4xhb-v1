@@ -57,25 +57,11 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_KEY )
 /*
 int shortcutId()
 */
-HB_FUNC_STATIC( QSHORTCUTEVENT_SHORTCUTID )
-{
-  QShortcutEvent * obj = (QShortcutEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->shortcutId () );
-  }
-}
+$method=|int|shortcutId|
 
 /*
 bool isAmbiguous()
 */
-HB_FUNC_STATIC( QSHORTCUTEVENT_ISAMBIGUOUS )
-{
-  QShortcutEvent * obj = (QShortcutEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isAmbiguous () );
-  }
-}
+$method=|bool|isAmbiguous|
 
 #pragma ENDDUMP

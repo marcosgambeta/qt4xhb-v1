@@ -45,14 +45,7 @@ $deleteMethod
 /*
 virtual QStringList addApplicationFont ( const QByteArray & fontData, const QString & fileName )
 */
-HB_FUNC_STATIC( QPLATFORMFONTDATABASE_ADDAPPLICATIONFONT )
-{
-  QPlatformFontDatabase * obj = (QPlatformFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->addApplicationFont ( *PQBYTEARRAY(1), PQSTRING(2) ) );
-  }
-}
+$virtualMethod=|QStringList|addApplicationFont|const QByteArray &,const QString &
 
 /*
 virtual QString fontDir () const

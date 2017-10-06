@@ -4,8 +4,6 @@ $header
 
 CLASS QPrintPreviewWidget INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -95,38 +93,17 @@ $deleteMethod
 /*
 int currentPage () const
 */
-HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_CURRENTPAGE )
-{
-  QPrintPreviewWidget * obj = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->currentPage () );
-  }
-}
+$method=|int|currentPage|
 
 /*
 QPrinter::Orientation orientation () const
 */
-HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ORIENTATION )
-{
-  QPrintPreviewWidget * obj = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->orientation () );
-  }
-}
+$method=|QPrinter::Orientation|orientation|
 
 /*
 int pageCount () const
 */
-HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_PAGECOUNT )
-{
-  QPrintPreviewWidget * obj = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( (int) obj->pageCount () );
-  }
-}
+$method=|int|pageCount|
 
 /*
 ViewMode viewMode () const
@@ -143,14 +120,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_VIEWMODE )
 /*
 qreal zoomFactor () const
 */
-HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMFACTOR )
-{
-  QPrintPreviewWidget * obj = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->zoomFactor () );
-  }
-}
+$method=|qreal|zoomFactor|
 
 /*
 ZoomMode zoomMode () const
@@ -325,15 +295,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETVIEWMODE )
 /*
 void setZoomFactor ( qreal factor )
 */
-HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETZOOMFACTOR )
-{
-  QPrintPreviewWidget * obj = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setZoomFactor ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setZoomFactor|qreal
 
 /*
 void setZoomMode ( ZoomMode zoomMode )

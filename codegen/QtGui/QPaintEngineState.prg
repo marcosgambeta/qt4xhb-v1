@@ -101,14 +101,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSH )
 /*
 bool brushNeedsResolving () const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSHNEEDSRESOLVING )
-{
-  QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->brushNeedsResolving () );
-  }
-}
+$method=|bool|brushNeedsResolving|
 
 /*
 QPointF brushOrigin () const
@@ -189,26 +182,12 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_FONT )
 /*
 bool isClipEnabled () const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_ISCLIPENABLED )
-{
-  QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isClipEnabled () );
-  }
-}
+$method=|bool|isClipEnabled|
 
 /*
 qreal opacity () const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_OPACITY )
-{
-  QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->opacity () );
-  }
-}
+$method=|qreal|opacity|
 
 /*
 QPainter * painter () const
@@ -239,14 +218,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_PEN )
 /*
 bool penNeedsResolving () const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_PENNEEDSRESOLVING )
-{
-  QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->penNeedsResolving () );
-  }
-}
+$method=|bool|penNeedsResolving|
 
 /*
 QPainter::RenderHints renderHints () const

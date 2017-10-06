@@ -114,26 +114,12 @@ HB_FUNC_STATIC( QSPLITTER_ADDWIDGET )
 /*
 bool childrenCollapsible () const
 */
-HB_FUNC_STATIC( QSPLITTER_CHILDRENCOLLAPSIBLE )
-{
-  QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->childrenCollapsible () );
-  }
-}
+$method=|bool|childrenCollapsible|
 
 /*
 int count () const
 */
-HB_FUNC_STATIC( QSPLITTER_COUNT )
-{
-  QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-}
+$method=|int|count|
 
 /*
 void getRange ( int index, int * min, int * max ) const
@@ -168,26 +154,12 @@ HB_FUNC_STATIC( QSPLITTER_HANDLE )
 /*
 int handleWidth () const
 */
-HB_FUNC_STATIC( QSPLITTER_HANDLEWIDTH )
-{
-  QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->handleWidth () );
-  }
-}
+$method=|int|handleWidth|
 
 /*
 int indexOf ( QWidget * widget ) const
 */
-HB_FUNC_STATIC( QSPLITTER_INDEXOF )
-{
-  QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->indexOf ( PQWIDGET(1) ) );
-  }
-}
+$method=|int|indexOf|QWidget *
 
 /*
 void insertWidget ( int index, QWidget * widget )
@@ -205,141 +177,57 @@ HB_FUNC_STATIC( QSPLITTER_INSERTWIDGET )
 /*
 bool isCollapsible ( int index ) const
 */
-HB_FUNC_STATIC( QSPLITTER_ISCOLLAPSIBLE )
-{
-  QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isCollapsible ( PINT(1) ) );
-  }
-}
+$method=|bool|isCollapsible|int
 
 /*
 bool opaqueResize () const
 */
-HB_FUNC_STATIC( QSPLITTER_OPAQUERESIZE )
-{
-  QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->opaqueResize () );
-  }
-}
+$method=|bool|opaqueResize|
 
 /*
 Qt::Orientation orientation () const
 */
-HB_FUNC_STATIC( QSPLITTER_ORIENTATION )
-{
-  QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RENUM( obj->orientation () );
-  }
-}
+$method=|Qt::Orientation|orientation|
 
 /*
 void refresh ()
 */
-HB_FUNC_STATIC( QSPLITTER_REFRESH )
-{
-  QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->refresh ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|refresh|
 
 /*
 bool restoreState ( const QByteArray & state )
 */
-HB_FUNC_STATIC( QSPLITTER_RESTORESTATE )
-{
-  QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->restoreState ( *PQBYTEARRAY(1) ) );
-  }
-}
+$method=|bool|restoreState|const QByteArray &
 
 /*
 QByteArray saveState () const
 */
-HB_FUNC_STATIC( QSPLITTER_SAVESTATE )
-{
-  QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->saveState () );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
+$method=|QByteArray|saveState|
 
 /*
 void setChildrenCollapsible ( bool )
 */
-HB_FUNC_STATIC( QSPLITTER_SETCHILDRENCOLLAPSIBLE )
-{
-  QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setChildrenCollapsible ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setChildrenCollapsible|bool
 
 /*
 void setCollapsible ( int index, bool collapse )
 */
-HB_FUNC_STATIC( QSPLITTER_SETCOLLAPSIBLE )
-{
-  QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCollapsible ( PINT(1), PBOOL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCollapsible|int,bool
 
 /*
 void setHandleWidth ( int )
 */
-HB_FUNC_STATIC( QSPLITTER_SETHANDLEWIDTH )
-{
-  QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setHandleWidth ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHandleWidth|int
 
 /*
 void setOpaqueResize ( bool opaque = true )
 */
-HB_FUNC_STATIC( QSPLITTER_SETOPAQUERESIZE )
-{
-  QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setOpaqueResize ( OPBOOL(1,true) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOpaqueResize|bool=true
 
 /*
 void setOrientation ( Qt::Orientation )
 */
-HB_FUNC_STATIC( QSPLITTER_SETORIENTATION )
-{
-  QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setOrientation ( (Qt::Orientation) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOrientation|Qt::Orientation
 
 /*
 void setSizes ( const QList<int> & list )

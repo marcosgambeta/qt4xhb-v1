@@ -542,14 +542,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETFLAGS )
 /*
 bool isEnabled() const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_ISENABLED )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isEnabled () );
-  }
-}
+$method=|bool|isEnabled|
 
 /*
 void setEnabled(bool enabled)
@@ -567,14 +560,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETENABLED )
 /*
 bool isEditable() const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_ISEDITABLE )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isEditable () );
-  }
-}
+$method=|bool|isEditable|
 
 /*
 void setEditable(bool editable)
@@ -592,14 +578,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETEDITABLE )
 /*
 bool isSelectable() const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_ISSELECTABLE )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isSelectable () );
-  }
-}
+$method=|bool|isSelectable|
 
 /*
 void setSelectable(bool selectable)
@@ -617,14 +596,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETSELECTABLE )
 /*
 bool isCheckable() const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_ISCHECKABLE )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isCheckable () );
-  }
-}
+$method=|bool|isCheckable|
 
 /*
 void setCheckable(bool checkable)
@@ -642,14 +614,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETCHECKABLE )
 /*
 bool isTristate() const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_ISTRISTATE )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isTristate () );
-  }
-}
+$method=|bool|isTristate|
 
 /*
 void setTristate(bool tristate)
@@ -667,14 +632,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETTRISTATE )
 /*
 bool isDragEnabled() const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_ISDRAGENABLED )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isDragEnabled () );
-  }
-}
+$method=|bool|isDragEnabled|
 
 /*
 void setDragEnabled(bool dragEnabled)
@@ -692,14 +650,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETDRAGENABLED )
 /*
 bool isDropEnabled() const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_ISDROPENABLED )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isDropEnabled () );
-  }
-}
+$method=|bool|isDropEnabled|
 
 /*
 void setDropEnabled(bool dropEnabled)
@@ -730,26 +681,12 @@ HB_FUNC_STATIC( QSTANDARDITEM_PARENT )
 /*
 int row() const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_ROW )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->row () );
-  }
-}
+$method=|int|row|
 
 /*
 int column() const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_COLUMN )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->column () );
-  }
-}
+$method=|int|column|
 
 /*
 QModelIndex index() const
@@ -780,14 +717,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_MODEL )
 /*
 int rowCount() const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_ROWCOUNT )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->rowCount () );
-  }
-}
+$method=|int|rowCount|
 
 /*
 void setRowCount(int rows)
@@ -805,14 +735,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETROWCOUNT )
 /*
 int columnCount() const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_COLUMNCOUNT )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->columnCount () );
-  }
-}
+$method=|int|columnCount|
 
 /*
 void setColumnCount(int columns)
@@ -830,14 +753,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETCOLUMNCOUNT )
 /*
 bool hasChildren() const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_HASCHILDREN )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasChildren () );
-  }
-}
+$method=|bool|hasChildren|
 
 /*
 QStandardItem *child(int row, int column = 0) const
@@ -1295,14 +1211,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_CLONE )
 /*
 virtual int type() const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_TYPE )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->type () );
-  }
-}
+$virtualMethod=|int|type|
 
 /*
 virtual void read(QDataStream &in)

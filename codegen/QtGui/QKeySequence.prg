@@ -166,14 +166,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_COUNT )
 /*
 bool isEmpty () const
 */
-HB_FUNC_STATIC( QKEYSEQUENCE_ISEMPTY )
-{
-  QKeySequence * obj = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-}
+$method=|bool|isEmpty|
 
 /*
 SequenceMatch matches ( const QKeySequence & seq ) const

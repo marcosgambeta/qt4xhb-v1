@@ -44,26 +44,12 @@ $deleteMethod
 /*
 qreal ascent () const
 */
-HB_FUNC_STATIC( QTEXTITEM_ASCENT )
-{
-  QTextItem * obj = (QTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->ascent () );
-  }
-}
+$method=|qreal|ascent|
 
 /*
 qreal descent () const
 */
-HB_FUNC_STATIC( QTEXTITEM_DESCENT )
-{
-  QTextItem * obj = (QTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->descent () );
-  }
-}
+$method=|qreal|descent|
 
 /*
 QFont font () const
@@ -98,14 +84,7 @@ $method=|QString|text|
 /*
 qreal width () const
 */
-HB_FUNC_STATIC( QTEXTITEM_WIDTH )
-{
-  QTextItem * obj = (QTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->width () );
-  }
-}
+$method=|qreal|width|
 
 $extraMethods
 

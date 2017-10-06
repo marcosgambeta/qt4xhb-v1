@@ -137,26 +137,12 @@ $deleteMethod
 /*
 qreal ascent () const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_ASCENT )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->ascent () );
-  }
-}
+$method=|qreal|ascent|
 
 /*
 qreal averageCharWidth () const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_AVERAGECHARWIDTH )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->averageCharWidth () );
-  }
-}
+$method=|qreal|averageCharWidth|
 
 /*
 QRectF boundingRect ( const QString & text ) const
@@ -216,14 +202,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_BOUNDINGRECT )
 /*
 qreal descent () const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_DESCENT )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->descent () );
-  }
-}
+$method=|qreal|descent|
 
 /*
 QString elidedText ( const QString & text, Qt::TextElideMode mode, qreal width, int flags = 0 ) const
@@ -233,149 +212,62 @@ $method=|QString|elidedText|const QString &,Qt::TextElideMode,qreal,int=0
 /*
 qreal height () const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_HEIGHT )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->height () );
-  }
-}
+$method=|qreal|height|
 
 /*
 bool inFont ( QChar ch ) const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_INFONT )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QChar * par1 = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->inFont ( *par1 ) );
-  }
-}
+$method=|bool|inFont|QChar
 
 /*
 bool inFontUcs4 ( uint ch ) const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_INFONTUCS4 )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->inFontUcs4 ( PUINT(1) ) );
-  }
-}
+$method=|bool|inFontUcs4|uint
 
 /*
 qreal leading () const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_LEADING )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->leading () );
-  }
-}
+$method=|qreal|leading|
 
 /*
 qreal leftBearing ( QChar ch ) const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_LEFTBEARING )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QChar * par1 = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RQREAL( obj->leftBearing ( *par1 ) );
-  }
-}
+$method=|qreal|leftBearing|QChar
 
 /*
 qreal lineSpacing () const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_LINESPACING )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->lineSpacing () );
-  }
-}
+$method=|qreal|lineSpacing|
 
 /*
 qreal lineWidth () const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_LINEWIDTH )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->lineWidth () );
-  }
-}
+$method=|qreal|lineWidth|
 
 /*
 qreal maxWidth () const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_MAXWIDTH )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->maxWidth () );
-  }
-}
+$method=|qreal|maxWidth|
 
 /*
 qreal minLeftBearing () const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_MINLEFTBEARING )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->minLeftBearing () );
-  }
-}
+$method=|qreal|minLeftBearing|
 
 /*
 qreal minRightBearing () const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_MINRIGHTBEARING )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->minRightBearing () );
-  }
-}
+$method=|qreal|minRightBearing|
 
 /*
 qreal overlinePos () const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_OVERLINEPOS )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->overlinePos () );
-  }
-}
+$method=|qreal|overlinePos|
 
 /*
 qreal rightBearing ( QChar ch ) const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_RIGHTBEARING )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QChar * par1 = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RQREAL( obj->rightBearing ( *par1 ) );
-  }
-}
+$method=|qreal|rightBearing|QChar
 
 /*
 QSizeF size ( int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
@@ -395,14 +287,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_SIZE )
 /*
 qreal strikeOutPos () const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_STRIKEOUTPOS )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->strikeOutPos () );
-  }
-}
+$method=|qreal|strikeOutPos|
 
 /*
 QRectF tightBoundingRect ( const QString & text ) const
@@ -412,14 +297,7 @@ $method=|QRectF|tightBoundingRect|const QString &
 /*
 qreal underlinePos () const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_UNDERLINEPOS )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->underlinePos () );
-  }
-}
+$method=|qreal|underlinePos|
 
 /*
 qreal width ( const QString & text ) const
@@ -449,14 +327,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_WIDTH )
 /*
 qreal xHeight () const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_XHEIGHT )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->xHeight () );
-  }
-}
+$method=|qreal|xHeight|
 
 $extraMethods
 

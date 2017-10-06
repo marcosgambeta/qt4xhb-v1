@@ -66,26 +66,12 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_ALIGNMENT )
 /*
 qreal cellPadding () const
 */
-HB_FUNC_STATIC( QTEXTTABLEFORMAT_CELLPADDING )
-{
-  QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->cellPadding () );
-  }
-}
+$method=|qreal|cellPadding|
 
 /*
 qreal cellSpacing () const
 */
-HB_FUNC_STATIC( QTEXTTABLEFORMAT_CELLSPACING )
-{
-  QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->cellSpacing () );
-  }
-}
+$method=|qreal|cellSpacing|
 
 /*
 void clearColumnWidthConstraints ()
@@ -146,38 +132,17 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_COLUMNWIDTHCONSTRAINTS )
 /*
 int columns () const
 */
-HB_FUNC_STATIC( QTEXTTABLEFORMAT_COLUMNS )
-{
-  QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->columns () );
-  }
-}
+$method=|int|columns|
 
 /*
 int headerRowCount () const
 */
-HB_FUNC_STATIC( QTEXTTABLEFORMAT_HEADERROWCOUNT )
-{
-  QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->headerRowCount () );
-  }
-}
+$method=|int|headerRowCount|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QTEXTTABLEFORMAT_ISVALID )
-{
-  QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
+$method=|bool|isValid|
 
 /*
 void setAlignment ( Qt::Alignment alignment )
@@ -196,28 +161,12 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETALIGNMENT )
 /*
 void setCellPadding ( qreal padding )
 */
-HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETCELLPADDING )
-{
-  QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCellPadding ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCellPadding|qreal
 
 /*
 void setCellSpacing ( qreal spacing )
 */
-HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETCELLSPACING )
-{
-  QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCellSpacing ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCellSpacing|qreal
 
 /*
 void setColumnWidthConstraints ( const QVector<QTextLength> & constraints )
@@ -227,14 +176,14 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETCOLUMNWIDTHCONSTRAINTS )
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-QVector<QTextLength> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-par1 << *(QTextLength *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
+    QVector<QTextLength> par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    for (i1=0;i1<nLen1;i1++)
+    {
+      par1 << *(QTextLength *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    }
     obj->setColumnWidthConstraints ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );

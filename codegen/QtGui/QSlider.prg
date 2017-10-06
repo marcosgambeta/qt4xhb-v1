@@ -8,8 +8,6 @@ REQUEST QSIZE
 
 CLASS QSlider INHERIT QAbstractSlider
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -105,14 +103,7 @@ HB_FUNC_STATIC( QSLIDER_SETTICKPOSITION )
 /*
 int tickInterval () const
 */
-HB_FUNC_STATIC( QSLIDER_TICKINTERVAL )
-{
-  QSlider * obj = (QSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->tickInterval () );
-  }
-}
+$method=|int|tickInterval|
 
 /*
 TickPosition tickPosition () const
@@ -129,14 +120,7 @@ HB_FUNC_STATIC( QSLIDER_TICKPOSITION )
 /*
 virtual bool event ( QEvent * event )
 */
-HB_FUNC_STATIC( QSLIDER_EVENT )
-{
-  QSlider * obj = (QSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->event ( PQEVENT(1) ) );
-  }
-}
+$virtualMethod=|bool|event|QEvent *
 
 /*
 virtual QSize minimumSizeHint () const

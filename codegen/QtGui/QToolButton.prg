@@ -10,8 +10,6 @@ REQUEST QSIZE
 
 CLASS QToolButton INHERIT QAbstractButton
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD arrowType
@@ -73,22 +71,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_ARROWTYPE )
 /*
 bool autoRaise () const
 */
-HB_FUNC_STATIC( QTOOLBUTTON_AUTORAISE )
-{
-  QToolButton * obj = (QToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RBOOL( obj->autoRaise () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|autoRaise|
 
 /*
 QAction * defaultAction () const

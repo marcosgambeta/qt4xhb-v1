@@ -182,26 +182,12 @@ HB_FUNC_STATIC( QREGION_BOUNDINGRECT )
 /*
 bool contains ( const QPoint & p ) const
 */
-HB_FUNC_STATIC( QREGION_CONTAINS1 )
-{
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->contains ( *PQPOINT(1) ) );
-  }
-}
+$method=|bool|contains,contains1|const QPoint &
 
 /*
 bool contains ( const QRect & r ) const
 */
-HB_FUNC_STATIC( QREGION_CONTAINS2 )
-{
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->contains ( *PQRECT(1) ) );
-  }
-}
+$method=|bool|contains,contains2|const QRect &
 
 //[1]bool contains ( const QPoint & p ) const
 //[2]bool contains ( const QRect & r ) const
@@ -262,26 +248,12 @@ HB_FUNC_STATIC( QREGION_INTERSECTED )
 /*
 bool intersects ( const QRegion & region ) const
 */
-HB_FUNC_STATIC( QREGION_INTERSECTS1 )
-{
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->intersects ( *PQREGION(1) ) );
-  }
-}
+$method=|bool|intersects,intersects1|const QRegion &
 
 /*
 bool intersects ( const QRect & rect ) const
 */
-HB_FUNC_STATIC( QREGION_INTERSECTS2 )
-{
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->intersects ( *PQRECT(1) ) );
-  }
-}
+$method=|bool|intersects,intersects2|const QRect &
 
 //[1]bool intersects ( const QRegion & region ) const
 //[2]bool intersects ( const QRect & rect ) const
@@ -301,26 +273,12 @@ HB_FUNC_STATIC( QREGION_INTERSECTS )
 /*
 bool isEmpty () const
 */
-HB_FUNC_STATIC( QREGION_ISEMPTY )
-{
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-}
+$method=|bool|isEmpty|
 
 /*
 int rectCount () const
 */
-HB_FUNC_STATIC( QREGION_RECTCOUNT )
-{
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->rectCount () );
-  }
-}
+$method=|int|rectCount|
 
 /*
 QVector<QRect> rects () const

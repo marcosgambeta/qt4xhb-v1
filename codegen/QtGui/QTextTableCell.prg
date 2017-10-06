@@ -91,26 +91,12 @@ $deleteMethod
 /*
 int column () const
 */
-HB_FUNC_STATIC( QTEXTTABLECELL_COLUMN )
-{
-  QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->column () );
-  }
-}
+$method=|int|column|
 
 /*
 int columnSpan () const
 */
-HB_FUNC_STATIC( QTEXTTABLECELL_COLUMNSPAN )
-{
-  QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->columnSpan () );
-  }
-}
+$method=|int|columnSpan|
 
 /*
 QTextCursor firstCursorPosition () const
@@ -141,14 +127,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_FORMAT )
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QTEXTTABLECELL_ISVALID )
-{
-  QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
+$method=|bool|isValid|
 
 /*
 QTextCursor lastCursorPosition () const
@@ -166,26 +145,12 @@ HB_FUNC_STATIC( QTEXTTABLECELL_LASTCURSORPOSITION )
 /*
 int row () const
 */
-HB_FUNC_STATIC( QTEXTTABLECELL_ROW )
-{
-  QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->row () );
-  }
-}
+$method=|int|row|
 
 /*
 int rowSpan () const
 */
-HB_FUNC_STATIC( QTEXTTABLECELL_ROWSPAN )
-{
-  QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->rowSpan () );
-  }
-}
+$method=|int|rowSpan|
 
 /*
 void setFormat ( const QTextCharFormat & format )
@@ -203,14 +168,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_SETFORMAT )
 /*
 int tableCellFormatIndex () const
 */
-HB_FUNC_STATIC( QTEXTTABLECELL_TABLECELLFORMATINDEX )
-{
-  QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->tableCellFormatIndex () );
-  }
-}
+$method=|int|tableCellFormatIndex|
 
 $extraMethods
 

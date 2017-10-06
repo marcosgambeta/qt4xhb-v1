@@ -29,29 +29,17 @@ $destructor
 /*
 QCommandLinkButton ( QWidget * parent = 0 )
 */
-void QCommandLinkButton_new1 ()
-{
-  QCommandLinkButton * o = new QCommandLinkButton ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$internalConstructor=|new1|QWidget *=0
 
 /*
 QCommandLinkButton ( const QString & text, QWidget * parent = 0 )
 */
-void QCommandLinkButton_new2 ()
-{
-  QCommandLinkButton * o = new QCommandLinkButton ( PQSTRING(1), OPQWIDGET(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$internalConstructor=|new2|const QString &,QWidget *=0
 
 /*
 QCommandLinkButton ( const QString & text, const QString & description, QWidget * parent = 0 )
 */
-void QCommandLinkButton_new3 ()
-{
-  QCommandLinkButton * o = new QCommandLinkButton ( PQSTRING(1), PQSTRING(2), OPQWIDGET(3,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$internalConstructor=|new3|const QString &,const QString &,QWidget *=0
 
 //[1]QCommandLinkButton ( QWidget * parent = 0 )
 //[2]QCommandLinkButton ( const QString & text, QWidget * parent = 0 )
@@ -90,43 +78,11 @@ $method=|void|setDescription|const QString &
 /*
 bool isFlat () const
 */
-HB_FUNC_STATIC( QCOMMANDLINKBUTTON_ISFLAT )
-{
-  QCommandLinkButton * obj = (QCommandLinkButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RBOOL( obj->isFlat () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isFlat|
 
 /*
 void setFlat ( bool )
 */
-HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETFLAT )
-{
-  QCommandLinkButton * obj = (QCommandLinkButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISLOG(1) )
-    {
-      obj->setFlat ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFlat|bool
 
 #pragma ENDDUMP

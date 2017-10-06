@@ -8,8 +8,6 @@ REQUEST QSIZE
 
 CLASS QGroupBox INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -94,38 +92,17 @@ HB_FUNC_STATIC( QGROUPBOX_ALIGNMENT )
 /*
 bool isCheckable () const
 */
-HB_FUNC_STATIC( QGROUPBOX_ISCHECKABLE )
-{
-  QGroupBox * obj = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isCheckable () );
-  }
-}
+$method=|bool|isCheckable|
 
 /*
 bool isChecked () const
 */
-HB_FUNC_STATIC( QGROUPBOX_ISCHECKED )
-{
-  QGroupBox * obj = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isChecked () );
-  }
-}
+$method=|bool|isChecked|
 
 /*
 bool isFlat () const
 */
-HB_FUNC_STATIC( QGROUPBOX_ISFLAT )
-{
-  QGroupBox * obj = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isFlat () );
-  }
-}
+$method=|bool|isFlat|
 
 /*
 void setAlignment ( int alignment )

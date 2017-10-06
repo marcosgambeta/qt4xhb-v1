@@ -91,14 +91,7 @@ HB_FUNC_STATIC( QSPACERITEM_GEOMETRY )
 /*
 virtual bool isEmpty () const
 */
-HB_FUNC_STATIC( QSPACERITEM_ISEMPTY )
-{
-  QSpacerItem * obj = (QSpacerItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-}
+$virtualMethod=|bool|isEmpty|
 
 /*
 virtual QSize maximumSize () const

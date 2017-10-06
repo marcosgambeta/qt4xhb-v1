@@ -61,14 +61,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_COLOR )
 /*
 qreal strength () const
 */
-HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_STRENGTH )
-{
-  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->strength () );
-  }
-}
+$method=|qreal|strength|
 
 /*
 void setColor ( const QColor & c )
@@ -87,14 +80,6 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETCOLOR )
 /*
 void setStrength ( qreal strength )
 */
-HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETSTRENGTH )
-{
-  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setStrength ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStrength|qreal
 
 #pragma ENDDUMP

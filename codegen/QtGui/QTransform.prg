@@ -162,110 +162,47 @@ $deleteMethod
 /*
 qreal m11 () const
 */
-HB_FUNC_STATIC( QTRANSFORM_M11 )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->m11 () );
-  }
-}
+$method=|qreal|m11|
 
 /*
 qreal m12 () const
 */
-HB_FUNC_STATIC( QTRANSFORM_M12 )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->m12 () );
-  }
-}
+$method=|qreal|m12|
 
 /*
 qreal m13 () const
 */
-HB_FUNC_STATIC( QTRANSFORM_M13 )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->m13 () );
-  }
-}
+$method=|qreal|m13|
 
 /*
 qreal m21 () const
 */
-HB_FUNC_STATIC( QTRANSFORM_M21 )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->m21 () );
-  }
-}
+$method=|qreal|m21|
 
 /*
 qreal m22 () const
 */
-HB_FUNC_STATIC( QTRANSFORM_M22 )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->m22 () );
-  }
-}
+$method=|qreal|m22|
 
 /*
 qreal m23 () const
 */
-HB_FUNC_STATIC( QTRANSFORM_M23 )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->m23 () );
-  }
-}
+$method=|qreal|m23|
 
 /*
 qreal m31 () const
 */
-HB_FUNC_STATIC( QTRANSFORM_M31 )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->m31 () );
-  }
-}
+$method=|qreal|m31|
 
 /*
 qreal m32 () const
 */
-HB_FUNC_STATIC( QTRANSFORM_M32 )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->m32 () );
-  }
-}
+$method=|qreal|m32|
 
 /*
 qreal m33 () const
 */
-HB_FUNC_STATIC( QTRANSFORM_M33 )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->m33 () );
-  }
-}
+$method=|qreal|m33|
 
 /*
 QTransform adjoint () const
@@ -283,38 +220,17 @@ HB_FUNC_STATIC( QTRANSFORM_ADJOINT )
 /*
 qreal determinant () const
 */
-HB_FUNC_STATIC( QTRANSFORM_DETERMINANT )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->determinant () );
-  }
-}
+$method=|qreal|determinant|
 
 /*
 qreal dx () const
 */
-HB_FUNC_STATIC( QTRANSFORM_DX )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->dx () );
-  }
-}
+$method=|qreal|dx|
 
 /*
 qreal dy () const
 */
-HB_FUNC_STATIC( QTRANSFORM_DY )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->dy () );
-  }
-}
+$method=|qreal|dy|
 
 /*
 QTransform inverted ( bool * invertible = 0 ) const
@@ -334,74 +250,32 @@ HB_FUNC_STATIC( QTRANSFORM_INVERTED )
 /*
 bool isAffine () const
 */
-HB_FUNC_STATIC( QTRANSFORM_ISAFFINE )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isAffine () );
-  }
-}
+$method=|bool|isAffine|
 
 /*
 bool isIdentity () const
 */
-HB_FUNC_STATIC( QTRANSFORM_ISIDENTITY )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isIdentity () );
-  }
-}
+$method=|bool|isIdentity|
 
 /*
 bool isInvertible () const
 */
-HB_FUNC_STATIC( QTRANSFORM_ISINVERTIBLE )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isInvertible () );
-  }
-}
+$method=|bool|isInvertible|
 
 /*
 bool isRotating () const
 */
-HB_FUNC_STATIC( QTRANSFORM_ISROTATING )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isRotating () );
-  }
-}
+$method=|bool|isRotating|
 
 /*
 bool isScaling () const
 */
-HB_FUNC_STATIC( QTRANSFORM_ISSCALING )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isScaling () );
-  }
-}
+$method=|bool|isScaling|
 
 /*
 bool isTranslating () const
 */
-HB_FUNC_STATIC( QTRANSFORM_ISTRANSLATING )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isTranslating () );
-  }
-}
+$method=|bool|isTranslating|
 
 /*
 void map ( qreal x, qreal y, qreal * tx, qreal * ty ) const
@@ -722,28 +596,19 @@ HB_FUNC_STATIC( QTRANSFORM_FROMTRANSLATE )
 }
 
 /*
-bool quadToQuad ( const QPolygonF & one, const QPolygonF & two, QTransform & trans )
+static bool quadToQuad ( const QPolygonF & one, const QPolygonF & two, QTransform & trans )
 */
-HB_FUNC_STATIC( QTRANSFORM_QUADTOQUAD )
-{
-  RBOOL( QTransform::quadToQuad ( *PQPOLYGONF(1), *PQPOLYGONF(2), *PQTRANSFORM(3) ) );
-}
+$staticMethod=|bool|quadToQuad|const QPolygonF &,const QPolygonF &,QTransform &
 
 /*
-bool quadToSquare ( const QPolygonF & quad, QTransform & trans )
+static bool quadToSquare ( const QPolygonF & quad, QTransform & trans )
 */
-HB_FUNC_STATIC( QTRANSFORM_QUADTOSQUARE )
-{
-  RBOOL( QTransform::quadToSquare ( *PQPOLYGONF(1), *PQTRANSFORM(2) ) );
-}
+$staticMethod=|bool|quadToSquare|const QPolygonF &,QTransform &
 
 /*
-bool squareToQuad ( const QPolygonF & quad, QTransform & trans )
+static bool squareToQuad ( const QPolygonF & quad, QTransform & trans )
 */
-HB_FUNC_STATIC( QTRANSFORM_SQUARETOQUAD )
-{
-  RBOOL( QTransform::squareToQuad ( *PQPOLYGONF(1), *PQTRANSFORM(2) ) );
-}
+$staticMethod=|bool|squareToQuad|const QPolygonF &,QTransform &
 
 $extraMethods
 

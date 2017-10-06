@@ -9,8 +9,6 @@ REQUEST QSIZE
 
 CLASS QSplitterHandle INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD opaqueResize
    METHOD orientation
@@ -44,14 +42,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_NEW )
 /*
 bool opaqueResize () const
 */
-HB_FUNC_STATIC( QSPLITTERHANDLE_OPAQUERESIZE )
-{
-  QSplitterHandle * obj = (QSplitterHandle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->opaqueResize () );
-  }
-}
+$method=|bool|opaqueResize|
 
 /*
 Qt::Orientation orientation () const

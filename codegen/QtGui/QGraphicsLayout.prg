@@ -43,154 +43,61 @@ $deleteMethod
 /*
 void activate ()
 */
-HB_FUNC_STATIC( QGRAPHICSLAYOUT_ACTIVATE )
-{
-  QGraphicsLayout * obj = (QGraphicsLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->activate ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|activate|
 
 /*
 virtual int count () const = 0
 */
-HB_FUNC_STATIC( QGRAPHICSLAYOUT_COUNT )
-{
-  QGraphicsLayout * obj = (QGraphicsLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-}
+$virtualMethod=|int|count|
 
 /*
 virtual void invalidate ()
 */
-HB_FUNC_STATIC( QGRAPHICSLAYOUT_INVALIDATE )
-{
-  QGraphicsLayout * obj = (QGraphicsLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->invalidate ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|invalidate|
 
 /*
 bool isActivated () const
 */
-HB_FUNC_STATIC( QGRAPHICSLAYOUT_ISACTIVATED )
-{
-  QGraphicsLayout * obj = (QGraphicsLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isActivated () );
-  }
-}
+$method=|bool|isActivated|
 
 /*
 virtual QGraphicsLayoutItem * itemAt ( int i ) const = 0
 */
-HB_FUNC_STATIC( QGRAPHICSLAYOUT_ITEMAT )
-{
-  QGraphicsLayout * obj = (QGraphicsLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QGraphicsLayoutItem * ptr = obj->itemAt ( PINT(1) );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM" );
-  }
-}
+$virtualMethod=|QGraphicsLayoutItem *|itemAt|int
 
 /*
 virtual void removeAt ( int index ) = 0
 */
-HB_FUNC_STATIC( QGRAPHICSLAYOUT_REMOVEAT )
-{
-  QGraphicsLayout * obj = (QGraphicsLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->removeAt ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|removeAt|int
 
 /*
 void setContentsMargins ( qreal left, qreal top, qreal right, qreal bottom )
 */
-HB_FUNC_STATIC( QGRAPHICSLAYOUT_SETCONTENTSMARGINS )
-{
-  QGraphicsLayout * obj = (QGraphicsLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setContentsMargins ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setContentsMargins|qreal,qreal,qreal,qreal
 
 /*
 virtual void widgetEvent ( QEvent * e )
 */
-HB_FUNC_STATIC( QGRAPHICSLAYOUT_WIDGETEVENT )
-{
-  QGraphicsLayout * obj = (QGraphicsLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->widgetEvent ( PQEVENT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|widgetEvent|QEvent *
 
 /*
 virtual void getContentsMargins ( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
 */
-HB_FUNC_STATIC( QGRAPHICSLAYOUT_GETCONTENTSMARGINS )
-{
-  QGraphicsLayout * obj = (QGraphicsLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    qreal par1;
-    qreal par2;
-    qreal par3;
-    qreal par4;
-    obj->getContentsMargins ( &par1, &par2, &par3, &par4 );
-    hb_stornd( par1, 1 );
-    hb_stornd( par2, 2 );
-    hb_stornd( par3, 3 );
-    hb_stornd( par4, 4 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|getContentsMargins|qreal *,qreal *,qreal *,qreal *
 
 /*
 virtual void updateGeometry ()
 */
-HB_FUNC_STATIC( QGRAPHICSLAYOUT_UPDATEGEOMETRY )
-{
-  QGraphicsLayout * obj = (QGraphicsLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->updateGeometry ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|updateGeometry|
 
 /*
-bool instantInvalidatePropagation ()
+static bool instantInvalidatePropagation ()
 */
-HB_FUNC_STATIC( QGRAPHICSLAYOUT_INSTANTINVALIDATEPROPAGATION )
-{
-  RBOOL( QGraphicsLayout::instantInvalidatePropagation () );
-}
+$staticMethod=|bool|instantInvalidatePropagation|
 
 /*
-void setInstantInvalidatePropagation ( bool enable )
+static void setInstantInvalidatePropagation ( bool enable )
 */
-HB_FUNC_STATIC( QGRAPHICSLAYOUT_SETINSTANTINVALIDATEPROPAGATION )
-{
-  QGraphicsLayout::setInstantInvalidatePropagation ( PBOOL(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|setInstantInvalidatePropagation|bool
 
 #pragma ENDDUMP

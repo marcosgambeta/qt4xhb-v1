@@ -32,39 +32,18 @@ $destructor
 /*
 QActionEvent ( int type, QAction * action, QAction * before = 0 )
 */
-HB_FUNC_STATIC( QACTIONEVENT_NEW )
-{
-  QAction * par3 = ISNIL(3)? 0 : (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QActionEvent * o = new QActionEvent ( PINT(1), PQACTION(2), par3 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|int,QAction *,QAction *=0
 
 $deleteMethod
 
 /*
 QAction * action () const
 */
-HB_FUNC_STATIC( QACTIONEVENT_ACTION )
-{
-  QActionEvent * obj = (QActionEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->action ();
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|action|
 
 /*
 QAction * before () const
 */
-HB_FUNC_STATIC( QACTIONEVENT_BEFORE )
-{
-  QActionEvent * obj = (QActionEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->before ();
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|before|
 
 #pragma ENDDUMP

@@ -44,12 +44,9 @@ HB_FUNC_STATIC( QGENERICPLUGINFACTORY_CREATE )
 }
 
 /*
-QStringList keys ()
+static QStringList keys ()
 */
-HB_FUNC_STATIC( QGENERICPLUGINFACTORY_KEYS )
-{
-  RQSTRINGLIST( QGenericPluginFactory::keys () );
-}
+$staticMethod=|QStringList|keys|
 
 $extraMethods
 

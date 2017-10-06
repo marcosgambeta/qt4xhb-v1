@@ -129,26 +129,12 @@ HB_FUNC_STATIC( QSIZEPOLICY_EXPANDINGDIRECTIONS )
 /*
 bool hasHeightForWidth () const
 */
-HB_FUNC_STATIC( QSIZEPOLICY_HASHEIGHTFORWIDTH )
-{
-  QSizePolicy * obj = (QSizePolicy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasHeightForWidth () );
-  }
-}
+$method=|bool|hasHeightForWidth|
 
 /*
 bool hasWidthForHeight () const
 */
-HB_FUNC_STATIC( QSIZEPOLICY_HASWIDTHFORHEIGHT )
-{
-  QSizePolicy * obj = (QSizePolicy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasWidthForHeight () );
-  }
-}
+$method=|bool|hasWidthForHeight|
 
 /*
 Policy horizontalPolicy () const
@@ -165,55 +151,22 @@ HB_FUNC_STATIC( QSIZEPOLICY_HORIZONTALPOLICY )
 /*
 int horizontalStretch () const
 */
-HB_FUNC_STATIC( QSIZEPOLICY_HORIZONTALSTRETCH )
-{
-  QSizePolicy * obj = (QSizePolicy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->horizontalStretch () );
-  }
-}
+$method=|int|horizontalStretch|
 
 /*
 void setControlType ( ControlType type )
 */
-HB_FUNC_STATIC( QSIZEPOLICY_SETCONTROLTYPE )
-{
-  QSizePolicy * obj = (QSizePolicy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setControlType ( (QSizePolicy::ControlType) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setControlType|QSizePolicy::ControlType
 
 /*
 void setHeightForWidth ( bool dependent )
 */
-HB_FUNC_STATIC( QSIZEPOLICY_SETHEIGHTFORWIDTH )
-{
-  QSizePolicy * obj = (QSizePolicy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setHeightForWidth ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHeightForWidth|bool
 
 /*
 void setHorizontalPolicy ( Policy policy )
 */
-HB_FUNC_STATIC( QSIZEPOLICY_SETHORIZONTALPOLICY )
-{
-  QSizePolicy * obj = (QSizePolicy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setHorizontalPolicy ( (QSizePolicy::Policy) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHorizontalPolicy|QSizePolicy::Policy
 
 /*
 void setHorizontalStretch ( uchar stretchFactor )
@@ -298,14 +251,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_VERTICALPOLICY )
 /*
 int verticalStretch () const
 */
-HB_FUNC_STATIC( QSIZEPOLICY_VERTICALSTRETCH )
-{
-  QSizePolicy * obj = (QSizePolicy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->verticalStretch () );
-  }
-}
+$method=|int|verticalStretch|
 
 $extraMethods
 

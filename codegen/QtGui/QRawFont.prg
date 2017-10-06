@@ -220,38 +220,17 @@ HB_FUNC_STATIC( QRAWFONT_ALPHAMAPFORGLYPH )
 /*
 qreal ascent () const
 */
-HB_FUNC_STATIC( QRAWFONT_ASCENT )
-{
-  QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->ascent () );
-  }
-}
+$method=|qreal|ascent|
 
 /*
 qreal averageCharWidth () const
 */
-HB_FUNC_STATIC( QRAWFONT_AVERAGECHARWIDTH )
-{
-  QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->averageCharWidth () );
-  }
-}
+$method=|qreal|averageCharWidth|
 
 /*
 qreal descent () const
 */
-HB_FUNC_STATIC( QRAWFONT_DESCENT )
-{
-  QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->descent () );
-  }
-}
+$method=|qreal|descent|
 
 /*
 QString familyName () const
@@ -308,26 +287,12 @@ HB_FUNC_STATIC( QRAWFONT_HINTINGPREFERENCE )
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QRAWFONT_ISVALID )
-{
-  QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
+$method=|bool|isValid|
 
 /*
 qreal leading () const
 */
-HB_FUNC_STATIC( QRAWFONT_LEADING )
-{
-  QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->leading () );
-  }
-}
+$method=|qreal|leading|
 
 /*
 void loadFromData ( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference )
@@ -360,14 +325,7 @@ HB_FUNC_STATIC( QRAWFONT_LOADFROMFILE )
 /*
 qreal maxCharWidth () const
 */
-HB_FUNC_STATIC( QRAWFONT_MAXCHARWIDTH )
-{
-  QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->maxCharWidth () );
-  }
-}
+$method=|qreal|maxCharWidth|
 
 /*
 QPainterPath pathForGlyph ( quint32 glyphIndex ) const
@@ -385,39 +343,17 @@ HB_FUNC_STATIC( QRAWFONT_PATHFORGLYPH )
 /*
 qreal pixelSize () const
 */
-HB_FUNC_STATIC( QRAWFONT_PIXELSIZE )
-{
-  QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->pixelSize () );
-  }
-}
+$method=|qreal|pixelSize|
 
 /*
 void setPixelSize ( qreal pixelSize )
 */
-HB_FUNC_STATIC( QRAWFONT_SETPIXELSIZE )
-{
-  QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPixelSize ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPixelSize|qreal
 
 /*
 QFont::Style style () const
 */
-HB_FUNC_STATIC( QRAWFONT_STYLE )
-{
-  QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->style () );
-  }
-}
+$method=|QFont::Style|style|
 
 /*
 QString styleName () const
@@ -449,27 +385,12 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTEDWRITINGSYSTEMS )
 /*
 bool supportsCharacter ( QChar character ) const
 */
-HB_FUNC_STATIC( QRAWFONT_SUPPORTSCHARACTER1 )
-{
-  QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QChar * par1 = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->supportsCharacter ( *par1 ) );
-  }
-}
+$method=|bool|supportsCharacter,supportsCharacter1|QChar
 
 /*
 bool supportsCharacter ( quint32 ucs4 ) const
 */
-HB_FUNC_STATIC( QRAWFONT_SUPPORTSCHARACTER2 )
-{
-  QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->supportsCharacter ( PQUINT32(1) ) );
-  }
-}
+$method=|bool|supportsCharacter,supportsCharacter2|quint32
 
 //[1]bool supportsCharacter ( QChar character ) const
 //[2]bool supportsCharacter ( quint32 ucs4 ) const
@@ -489,38 +410,17 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTSCHARACTER )
 /*
 qreal unitsPerEm () const
 */
-HB_FUNC_STATIC( QRAWFONT_UNITSPEREM )
-{
-  QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->unitsPerEm () );
-  }
-}
+$method=|qreal|unitsPerEm|
 
 /*
 int weight () const
 */
-HB_FUNC_STATIC( QRAWFONT_WEIGHT )
-{
-  QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->weight () );
-  }
-}
+$method=|int|weight|
 
 /*
 qreal xHeight () const
 */
-HB_FUNC_STATIC( QRAWFONT_XHEIGHT )
-{
-  QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->xHeight () );
-  }
-}
+$method=|qreal|xHeight|
 
 /*
 QRawFont fromFont ( const QFont & font, QFontDatabase::WritingSystem writingSystem = QFontDatabase::Any )

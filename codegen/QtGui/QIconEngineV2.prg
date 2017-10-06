@@ -111,15 +111,7 @@ $virtualMethod=|QString|key|
 /*
 virtual bool read ( QDataStream & in )
 */
-HB_FUNC_STATIC( QICONENGINEV2_READ )
-{
-  QIconEngineV2 * obj = (QIconEngineV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDataStream * par1 = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->read ( *par1 ) );
-  }
-}
+$virtualMethod=|bool|read|QDataStream &
 
 /*
 virtual void virtual_hook ( int id, void * data )
@@ -138,14 +130,6 @@ HB_FUNC_STATIC( QICONENGINEV2_VIRTUAL_HOOK )
 /*
 virtual bool write ( QDataStream & out ) const
 */
-HB_FUNC_STATIC( QICONENGINEV2_WRITE )
-{
-  QIconEngineV2 * obj = (QIconEngineV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDataStream * par1 = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->write ( *par1 ) );
-  }
-}
+$virtualMethod=|bool|write|QDataStream &
 
 #pragma ENDDUMP

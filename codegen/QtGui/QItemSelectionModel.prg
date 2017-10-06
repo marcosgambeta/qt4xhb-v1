@@ -9,8 +9,6 @@ REQUEST QABSTRACTITEMMODEL
 
 CLASS QItemSelectionModel INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -96,14 +94,7 @@ $deleteMethod
 /*
 bool columnIntersectsSelection ( int column, const QModelIndex & parent ) const
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_COLUMNINTERSECTSSELECTION )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->columnIntersectsSelection ( PINT(1), *PQMODELINDEX(2) ) );
-  }
-}
+$method=|bool|columnIntersectsSelection|int,const QModelIndex &
 
 /*
 QModelIndex currentIndex () const
@@ -121,50 +112,22 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_CURRENTINDEX )
 /*
 bool hasSelection () const
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_HASSELECTION )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasSelection () );
-  }
-}
+$method=|bool|hasSelection|
 
 /*
 bool isColumnSelected ( int column, const QModelIndex & parent ) const
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISCOLUMNSELECTED )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isColumnSelected ( PINT(1), *PQMODELINDEX(2) ) );
-  }
-}
+$method=|bool|isColumnSelected|int,const QModelIndex &
 
 /*
 bool isRowSelected ( int row, const QModelIndex & parent ) const
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISROWSELECTED )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isRowSelected ( PINT(1), *PQMODELINDEX(2) ) );
-  }
-}
+$method=|bool|isRowSelected|int,const QModelIndex &
 
 /*
 bool isSelected ( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISSELECTED )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isSelected ( *PQMODELINDEX(1) ) );
-  }
-}
+$method=|bool|isSelected|const QModelIndex &
 
 /*
 const QAbstractItemModel * model () const
@@ -182,14 +145,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_MODEL )
 /*
 bool rowIntersectsSelection ( int row, const QModelIndex & parent ) const
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_ROWINTERSECTSSELECTION )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->rowIntersectsSelection ( PINT(1), *PQMODELINDEX(2) ) );
-  }
-}
+$method=|bool|rowIntersectsSelection|int,const QModelIndex &
 
 /*
 QModelIndexList selectedColumns ( int row = 0 ) const

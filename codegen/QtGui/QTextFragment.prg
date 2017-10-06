@@ -100,26 +100,12 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMAT )
 /*
 int charFormatIndex () const
 */
-HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMATINDEX )
-{
-  QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->charFormatIndex () );
-  }
-}
+$method=|int|charFormatIndex|
 
 /*
 bool contains ( int position ) const
 */
-HB_FUNC_STATIC( QTEXTFRAGMENT_CONTAINS )
-{
-  QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->contains ( PINT(1) ) );
-  }
-}
+$method=|bool|contains|int
 
 /*
 QList<QGlyphRun> glyphRuns () const
@@ -167,38 +153,17 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QTEXTFRAGMENT_ISVALID )
-{
-  QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
+$method=|bool|isValid|
 
 /*
 int length () const
 */
-HB_FUNC_STATIC( QTEXTFRAGMENT_LENGTH )
-{
-  QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->length () );
-  }
-}
+$method=|int|length|
 
 /*
 int position () const
 */
-HB_FUNC_STATIC( QTEXTFRAGMENT_POSITION )
-{
-  QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->position () );
-  }
-}
+$method=|int|position|
 
 /*
 QString text () const

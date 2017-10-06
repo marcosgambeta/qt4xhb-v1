@@ -8,8 +8,6 @@ REQUEST QTEXTDOCUMENT
 
 CLASS QSyntaxHighlighter INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD document
    METHOD setDocument

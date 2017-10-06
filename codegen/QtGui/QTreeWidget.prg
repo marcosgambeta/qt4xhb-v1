@@ -145,26 +145,12 @@ HB_FUNC_STATIC( QTREEWIDGET_CLOSEPERSISTENTEDITOR )
 /*
 int columnCount () const
 */
-HB_FUNC_STATIC( QTREEWIDGET_COLUMNCOUNT )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->columnCount () );
-  }
-}
+$method=|int|columnCount|
 
 /*
 int currentColumn () const
 */
-HB_FUNC_STATIC( QTREEWIDGET_CURRENTCOLUMN )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->currentColumn () );
-  }
-}
+$method=|int|currentColumn|
 
 /*
 QTreeWidgetItem * currentItem () const
@@ -252,14 +238,7 @@ HB_FUNC_STATIC( QTREEWIDGET_HEADERITEM )
 /*
 int indexOfTopLevelItem ( QTreeWidgetItem * item ) const
 */
-HB_FUNC_STATIC( QTREEWIDGET_INDEXOFTOPLEVELITEM )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->indexOfTopLevelItem ( PQTREEWIDGETITEM(1) ) );
-  }
-}
+$method=|int|indexOfTopLevelItem|QTreeWidgetItem *
 
 /*
 void insertTopLevelItem ( int index, QTreeWidgetItem * item )
@@ -311,15 +290,7 @@ HB_FUNC_STATIC( QTREEWIDGET_INVISIBLEROOTITEM )
 /*
 bool isFirstItemColumnSpanned ( const QTreeWidgetItem * item ) const
 */
-HB_FUNC_STATIC( QTREEWIDGET_ISFIRSTITEMCOLUMNSPANNED )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QTreeWidgetItem * par1 = (const QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->isFirstItemColumnSpanned ( par1 ) );
-  }
-}
+$method=|bool|isFirstItemColumnSpanned|const QTreeWidgetItem *
 
 /*
 QTreeWidgetItem * itemAbove ( const QTreeWidgetItem * item ) const
@@ -606,14 +577,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SETITEMWIDGET )
 /*
 int sortColumn () const
 */
-HB_FUNC_STATIC( QTREEWIDGET_SORTCOLUMN )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->sortColumn () );
-  }
-}
+$method=|int|sortColumn|
 
 /*
 void sortItems ( int column, Qt::SortOrder order )
@@ -657,14 +621,7 @@ HB_FUNC_STATIC( QTREEWIDGET_TOPLEVELITEM )
 /*
 int topLevelItemCount () const
 */
-HB_FUNC_STATIC( QTREEWIDGET_TOPLEVELITEMCOUNT )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->topLevelItemCount () );
-  }
-}
+$method=|int|topLevelItemCount|
 
 /*
 QRect visualItemRect ( const QTreeWidgetItem * item ) const

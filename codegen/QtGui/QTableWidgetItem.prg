@@ -82,39 +82,22 @@ $destructor
 /*
 QTableWidgetItem ( int type = Type )
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_NEW1 )
-{
-  QTableWidgetItem * o = new QTableWidgetItem ( OPINT(1,QTableWidgetItem::Type) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|int=QTableWidgetItem::Type
 
 /*
 QTableWidgetItem ( const QString & text, int type = Type )
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_NEW2 )
-{
-  QTableWidgetItem * o = new QTableWidgetItem ( PQSTRING(1), OPINT(2,QTableWidgetItem::Type) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QString &,int=QTableWidgetItem::Type
 
 /*
 QTableWidgetItem ( const QIcon & icon, const QString & text, int type = Type )
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_NEW3 )
-{
-  QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
-  QTableWidgetItem * o = new QTableWidgetItem ( par1, PQSTRING(2), OPINT(3,QTableWidgetItem::Type) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new3|const QIcon &,const QString &,int=QTableWidgetItem::Type
 
 /*
 QTableWidgetItem ( const QTableWidgetItem & other )
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_NEW4 )
-{
-  QTableWidgetItem * o = new QTableWidgetItem ( *PQTABLEWIDGETITEM(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new4|const QTableWidgetItem &
 
 //[1]QTableWidgetItem ( int type = Type )
 //[2]QTableWidgetItem ( const QString & text, int type = Type )
@@ -150,352 +133,137 @@ $deleteMethod
 /*
 QBrush background () const
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_BACKGROUND )
-{
-  QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QBrush * ptr = new QBrush( obj->background () );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
-  }
-}
+$method=|QBrush|background|
 
 /*
 Qt::CheckState checkState () const
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_CHECKSTATE )
-{
-  QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->checkState () );
-  }
-}
+$method=|Qt::CheckState|checkState|
 
 /*
 virtual QTableWidgetItem * clone () const
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_CLONE )
-{
-  QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTableWidgetItem * ptr = obj->clone ();
-    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
-  }
-}
+$virtualMethod=|QTableWidgetItem *|clone|
 
 /*
 int column () const
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_COLUMN )
-{
-  QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->column () );
-  }
-}
+$method=|int|column|
 
 /*
 virtual QVariant data ( int role ) const
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_DATA )
-{
-  QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->data ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$virtualMethod=|QVariant|data|int
 
 /*
 Qt::ItemFlags flags () const
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_FLAGS )
-{
-  QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->flags () );
-  }
-}
+$method=|Qt::ItemFlags|flags|
 
 /*
 QFont font () const
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_FONT )
-{
-  QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QFont * ptr = new QFont( obj->font () );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
-  }
-}
+$method=|QFont|font|
 
 /*
 QBrush foreground () const
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_FOREGROUND )
-{
-  QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QBrush * ptr = new QBrush( obj->foreground () );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
-  }
-}
+$method=|QBrush|foreground|
 
 /*
 QIcon icon () const
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_ICON )
-{
-  QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIcon * ptr = new QIcon( obj->icon () );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );
-  }
-}
+$method=|QIcon|icon|
 
 /*
 bool isSelected () const
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_ISSELECTED )
-{
-  QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isSelected () );
-  }
-}
+$method=|bool|isSelected|
 
 /*
 virtual void read ( QDataStream & in )
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_READ )
-{
-  QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDataStream * par1 = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->read ( *par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|read|QDataStream &
 
 /*
 int row () const
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_ROW )
-{
-  QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->row () );
-  }
-}
+$method=|int|row|
 
 /*
 void setBackground ( const QBrush & brush )
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_SETBACKGROUND )
-{
-  QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBackground ( *PQBRUSH(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBackground|const QBrush &
 
 /*
 void setCheckState ( Qt::CheckState state )
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_SETCHECKSTATE )
-{
-  QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setCheckState ( (Qt::CheckState) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCheckState|Qt::CheckState
 
 /*
 virtual void setData ( int role, const QVariant & value )
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_SETDATA )
-{
-  QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setData ( PINT(1), *PQVARIANT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|setData|int,const QVariant &
 
 /*
 void setFlags ( Qt::ItemFlags flags )
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_SETFLAGS )
-{
-  QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setFlags ( (Qt::ItemFlags) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFlags|Qt::ItemFlags
 
 /*
 void setFont ( const QFont & font )
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_SETFONT )
-{
-  QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFont ( *PQFONT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFont|const QFont &
 
 /*
 void setForeground ( const QBrush & brush )
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_SETFOREGROUND )
-{
-  QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setForeground ( *PQBRUSH(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setForeground|const QBrush &
 
 /*
 void setIcon ( const QIcon & icon )
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_SETICON )
-{
-  QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
-    obj->setIcon ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setIcon|const QIcon &
 
 /*
 void setSelected ( bool select )
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_SETSELECTED )
-{
-  QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSelected ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSelected|bool
 
 /*
 void setSizeHint ( const QSize & size )
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_SETSIZEHINT )
-{
-  QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSizeHint ( *PQSIZE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSizeHint|const QSize &
 
 /*
 void setStatusTip ( const QString & statusTip )
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_SETSTATUSTIP )
-{
-  QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setStatusTip ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStatusTip|const QString &
 
 /*
 void setText ( const QString & text )
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_SETTEXT )
-{
-  QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setText|const QString &
 
 /*
 void setTextAlignment ( int alignment )
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_SETTEXTALIGNMENT )
-{
-  QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTextAlignment ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTextAlignment|int
 
 /*
 void setToolTip ( const QString & toolTip )
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_SETTOOLTIP )
-{
-  QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setToolTip ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setToolTip|const QString &
 
 /*
 void setWhatsThis ( const QString & whatsThis )
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_SETWHATSTHIS )
-{
-  QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setWhatsThis ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWhatsThis|const QString &
 
 /*
 QSize sizeHint () const
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_SIZEHINT )
-{
-  QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|sizeHint|
 
 /*
 QString statusTip () const
@@ -505,15 +273,7 @@ $method=|QString|statusTip|
 /*
 QTableWidget * tableWidget () const
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_TABLEWIDGET )
-{
-  QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTableWidget * ptr = obj->tableWidget ();
-    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGET" );
-  }
-}
+$method=|QTableWidget *|tableWidget|
 
 /*
 QString text () const
@@ -523,14 +283,7 @@ $method=|QString|text|
 /*
 int textAlignment () const
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_TEXTALIGNMENT )
-{
-  QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->textAlignment () );
-  }
-}
+$method=|int|textAlignment|
 
 /*
 QString toolTip () const
@@ -540,14 +293,7 @@ $method=|QString|toolTip|
 /*
 int type () const
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_TYPE )
-{
-  QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->type () );
-  }
-}
+$method=|int|type|
 
 /*
 QString whatsThis () const
@@ -557,16 +303,7 @@ $method=|QString|whatsThis|
 /*
 virtual void write ( QDataStream & out ) const
 */
-HB_FUNC_STATIC( QTABLEWIDGETITEM_WRITE )
-{
-  QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDataStream * par1 = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->write ( *par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|write|QDataStream &
 
 $extraMethods
 

@@ -8,8 +8,6 @@ REQUEST QSIZE
 
 CLASS QProgressBar INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD alignment
@@ -83,50 +81,22 @@ $method=|QString|format|
 /*
 bool invertedAppearance ()
 */
-HB_FUNC_STATIC( QPROGRESSBAR_INVERTEDAPPEARANCE )
-{
-  QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->invertedAppearance () );
-  }
-}
+$method=|bool|invertedAppearance|
 
 /*
 bool isTextVisible () const
 */
-HB_FUNC_STATIC( QPROGRESSBAR_ISTEXTVISIBLE )
-{
-  QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isTextVisible () );
-  }
-}
+$method=|bool|isTextVisible|
 
 /*
 int maximum () const
 */
-HB_FUNC_STATIC( QPROGRESSBAR_MAXIMUM )
-{
-  QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->maximum () );
-  }
-}
+$method=|int|maximum|
 
 /*
 int minimum () const
 */
-HB_FUNC_STATIC( QPROGRESSBAR_MINIMUM )
-{
-  QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->minimum () );
-  }
-}
+$method=|int|minimum|
 
 /*
 Qt::Orientation orientation () const
@@ -219,14 +189,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_TEXTDIRECTION )
 /*
 int value () const
 */
-HB_FUNC_STATIC( QPROGRESSBAR_VALUE )
-{
-  QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->value () );
-  }
-}
+$method=|int|value|
 
 /*
 virtual QSize minimumSizeHint () const

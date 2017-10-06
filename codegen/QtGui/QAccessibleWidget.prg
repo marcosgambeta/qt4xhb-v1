@@ -40,12 +40,7 @@ $destructor
 /*
 QAccessibleWidget ( QWidget * w, Role role = Client, const QString & name = QString() )
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_NEW )
-{
-  int par2 = ISNIL(2)? (int) QAccessible::Client : hb_parni(2);
-  QAccessibleWidget * o = new QAccessibleWidget ( PQWIDGET(1), (QAccessible::Role) par2, OPQSTRING(3,QString()) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QWidget *,QAccessible::Role=QAccessible::Client,const QString &=QString()
 
 /*
 virtual QString actionText ( int action, Text t, int child ) const
@@ -55,26 +50,12 @@ $virtualMethod=|QString|actionText|int,QAccessible::Text,int
 /*
 virtual int childAt ( int x, int y ) const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILDAT )
-{
-  QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->childAt ( PINT(1), PINT(2) ) );
-  }
-}
+$virtualMethod=|int|childAt|int,int
 
 /*
 virtual int childCount () const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILDCOUNT )
-{
-  QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->childCount () );
-  }
-}
+$virtualMethod=|int|childCount|
 
 /*
 virtual bool doAction ( int action, int child, const QVariantList & params )
@@ -82,16 +63,17 @@ virtual bool doAction ( int action, int child, const QVariantList & params )
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_DOACTION )
 {
   QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-QVariantList par3;
-PHB_ITEM aList3 = hb_param(3, HB_IT_ARRAY);
-int i3;
-int nLen3 = hb_arrayLen(aList3);
-for (i3=0;i3<nLen3;i3++)
-{
-par3 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, i3+1 ), "POINTER", 0 ) );
-}
+    QVariantList par3;
+    PHB_ITEM aList3 = hb_param(3, HB_IT_ARRAY);
+    int i3;
+    int nLen3 = hb_arrayLen(aList3);
+    for (i3=0;i3<nLen3;i3++)
+    {
+      par3 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, i3+1 ), "POINTER", 0 ) );
+    }
     RBOOL( obj->doAction ( PINT(1), PINT(2), par3 ) );
   }
 }
@@ -99,65 +81,27 @@ par3 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, 
 /*
 virtual int indexOfChild ( const QAccessibleInterface * child ) const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_INDEXOFCHILD )
-{
-  QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QAccessibleInterface * par1 = (const QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RINT( obj->indexOfChild ( par1 ) );
-  }
-}
+$virtualMethod=|int|indexOfChild|const QAccessibleInterface *
 
 /*
 virtual QRect rect ( int child ) const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_RECT )
-{
-  QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->rect ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$virtualMethod=|QRect|rect|int
 
 /*
 virtual Relation relationTo ( int child, const QAccessibleInterface * other, int otherChild ) const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_RELATIONTO )
-{
-  QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QAccessibleInterface * par2 = (const QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( (int) obj->relationTo ( PINT(1), par2, PINT(3) ) );
-  }
-}
+$virtualMethod=|QAccessible::Relation|relationTo|int,const QAccessibleInterface *,int
 
 /*
 virtual Role role ( int child ) const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_ROLE )
-{
-  QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->role ( PINT(1) ) );
-  }
-}
+$virtualMethod=|QAccessible::Role|role|int
 
 /*
 virtual State state ( int child ) const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_STATE )
-{
-  QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->state ( PINT(1) ) );
-  }
-}
+$virtualMethod=|QAccessible::State|state|int
 
 /*
 virtual QString text ( Text t, int child ) const
@@ -167,13 +111,6 @@ $virtualMethod=|QString|text|QAccessible::Text,int
 /*
 virtual int userActionCount ( int child ) const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_USERACTIONCOUNT )
-{
-  QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->userActionCount ( PINT(1) ) );
-  }
-}
+$virtualMethod=|int|userActionCount|int
 
 #pragma ENDDUMP

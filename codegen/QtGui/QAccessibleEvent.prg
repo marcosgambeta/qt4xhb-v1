@@ -28,23 +28,12 @@ $destructor
 /*
 QAccessibleEvent ( Type type, int child )
 */
-HB_FUNC_STATIC( QACCESSIBLEEVENT_NEW )
-{
-  QAccessibleEvent * o = new QAccessibleEvent ( (QAccessibleEvent::Type) hb_parni(1), PINT(2) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QAccessibleEvent::Type,int
 
 /*
 int child () const
 */
-HB_FUNC_STATIC( QACCESSIBLEEVENT_CHILD )
-{
-  QAccessibleEvent * obj = (QAccessibleEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->child () );
-  }
-}
+$method=|int|child|
 
 /*
 void setValue ( const QString & text )

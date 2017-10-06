@@ -50,67 +50,27 @@ $deleteMethod
 /*
 void addScrollBarWidget ( QWidget * widget, Qt::Alignment alignment )
 */
-HB_FUNC_STATIC( QABSTRACTSCROLLAREA_ADDSCROLLBARWIDGET )
-{
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    obj->addScrollBarWidget ( PQWIDGET(1), (Qt::Alignment) par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addScrollBarWidget|QWidget *,Qt::Alignment
 
 /*
 QWidget * cornerWidget () const
 */
-HB_FUNC_STATIC( QABSTRACTSCROLLAREA_CORNERWIDGET )
-{
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->cornerWidget ();
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|cornerWidget|
 
 /*
 QScrollBar * horizontalScrollBar () const
 */
-HB_FUNC_STATIC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBAR )
-{
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScrollBar * ptr = obj->horizontalScrollBar ();
-    _qt4xhb_createReturnClass ( ptr, "QSCROLLBAR" );
-  }
-}
+$method=|QScrollBar *|horizontalScrollBar|
 
 /*
 Qt::ScrollBarPolicy horizontalScrollBarPolicy () const
 */
-HB_FUNC_STATIC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBARPOLICY )
-{
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->horizontalScrollBarPolicy () );
-  }
-}
+$method=|Qt::ScrollBarPolicy|horizontalScrollBarPolicy|
 
 /*
 QSize maximumViewportSize () const
 */
-HB_FUNC_STATIC( QABSTRACTSCROLLAREA_MAXIMUMVIEWPORTSIZE )
-{
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->maximumViewportSize () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|maximumViewportSize|
 
 /*
 QWidgetList scrollBarWidgets ( Qt::Alignment alignment )
@@ -159,147 +119,56 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SCROLLBARWIDGETS )
 /*
 void setCornerWidget ( QWidget * widget )
 */
-HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETCORNERWIDGET )
-{
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCornerWidget ( PQWIDGET(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCornerWidget|QWidget *
 
 /*
 void setHorizontalScrollBar ( QScrollBar * scrollBar )
 */
-HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBAR )
-{
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScrollBar * par1 = (QScrollBar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setHorizontalScrollBar ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHorizontalScrollBar|QScrollBar *
 
 /*
 void setHorizontalScrollBarPolicy ( Qt::ScrollBarPolicy )
 */
-HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBARPOLICY )
-{
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setHorizontalScrollBarPolicy ( (Qt::ScrollBarPolicy) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHorizontalScrollBarPolicy|Qt::ScrollBarPolicy
 
 /*
 void setVerticalScrollBar ( QScrollBar * scrollBar )
 */
-HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVERTICALSCROLLBAR )
-{
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScrollBar * par1 = (QScrollBar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setVerticalScrollBar ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setVerticalScrollBar|QScrollBar *
 
 /*
 void setVerticalScrollBarPolicy ( Qt::ScrollBarPolicy )
 */
-HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVERTICALSCROLLBARPOLICY )
-{
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setVerticalScrollBarPolicy ( (Qt::ScrollBarPolicy) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setVerticalScrollBarPolicy|Qt::ScrollBarPolicy
 
 /*
 void setViewport ( QWidget * widget )
 */
-HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVIEWPORT )
-{
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setViewport ( PQWIDGET(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setViewport|QWidget *
 
 /*
 QScrollBar * verticalScrollBar () const
 */
-HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VERTICALSCROLLBAR )
-{
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScrollBar * ptr = obj->verticalScrollBar ();
-    _qt4xhb_createReturnClass ( ptr, "QSCROLLBAR" );
-  }
-}
+$method=|QScrollBar *|verticalScrollBar|
 
 /*
 Qt::ScrollBarPolicy verticalScrollBarPolicy () const
 */
-HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VERTICALSCROLLBARPOLICY )
-{
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->verticalScrollBarPolicy () );
-  }
-}
+$method=|Qt::ScrollBarPolicy|verticalScrollBarPolicy|
 
 /*
 QWidget * viewport () const
 */
-HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VIEWPORT )
-{
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->viewport ();
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|viewport|
 
 /*
 virtual QSize minimumSizeHint () const
 */
-HB_FUNC_STATIC( QABSTRACTSCROLLAREA_MINIMUMSIZEHINT )
-{
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->minimumSizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|minimumSizeHint|
 
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SIZEHINT )
-{
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|sizeHint|
 
 #pragma ENDDUMP

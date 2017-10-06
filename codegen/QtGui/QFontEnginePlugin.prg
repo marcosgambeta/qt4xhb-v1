@@ -9,8 +9,6 @@ REQUEST QABSTRACTFONTENGINE
 
 CLASS QFontEnginePlugin INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD availableFontEngines
    METHOD create
@@ -91,13 +89,6 @@ HB_FUNC_STATIC( QFONTENGINEPLUGIN_CREATE )
 /*
 virtual QStringList keys () const
 */
-HB_FUNC_STATIC( QFONTENGINEPLUGIN_KEYS )
-{
-  QFontEnginePlugin * obj = (QFontEnginePlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->keys () );
-  }
-}
+$virtualMethod=|QStringList|keys|
 
 #pragma ENDDUMP

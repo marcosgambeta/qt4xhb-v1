@@ -4,8 +4,6 @@ $header
 
 CLASS QPushButton INHERIT QAbstractButton
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD autoDefault
@@ -87,149 +85,36 @@ $deleteMethod
 /*
 bool autoDefault () const
 */
-HB_FUNC_STATIC( QPUSHBUTTON_AUTODEFAULT )
-{
-  QPushButton * obj = (QPushButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RBOOL( obj->autoDefault () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|autoDefault|
 
 /*
 bool isDefault () const
 */
-HB_FUNC_STATIC( QPUSHBUTTON_ISDEFAULT )
-{
-  QPushButton * obj = (QPushButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RBOOL( obj->isDefault () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isDefault|
 
 /*
 bool isFlat () const
 */
-HB_FUNC_STATIC( QPUSHBUTTON_ISFLAT )
-{
-  QPushButton * obj = (QPushButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RBOOL( obj->isFlat () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isFlat|
 
 /*
 void setAutoDefault ( bool )
 */
-HB_FUNC_STATIC( QPUSHBUTTON_SETAUTODEFAULT )
-{
-  QPushButton * obj = (QPushButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISLOG(1) )
-    {
-      obj->setAutoDefault ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAutoDefault|bool
 
 /*
 void setDefault ( bool )
 */
-HB_FUNC_STATIC( QPUSHBUTTON_SETDEFAULT )
-{
-  QPushButton * obj = (QPushButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISLOG(1) )
-    {
-      obj->setDefault ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDefault|bool
 
 /*
 void setFlat ( bool )
 */
-HB_FUNC_STATIC( QPUSHBUTTON_SETFLAT )
-{
-  QPushButton * obj = (QPushButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISLOG(1) )
-    {
-      obj->setFlat ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFlat|bool
 
 /*
 void showMenu ()
 */
-HB_FUNC_STATIC( QPUSHBUTTON_SHOWMENU )
-{
-  QPushButton * obj = (QPushButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      obj->showMenu ();
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|showMenu|
 
 #pragma ENDDUMP

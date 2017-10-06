@@ -30,8 +30,6 @@ REQUEST QPAINTENGINE
 
 CLASS QWidget INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD acceptDrops
@@ -327,22 +325,7 @@ $deleteMethod
 /*
 bool acceptDrops () const
 */
-HB_FUNC_STATIC( QWIDGET_ACCEPTDROPS )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RBOOL( obj->acceptDrops () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|acceptDrops|
 
 /*
 QString accessibleDescription () const
@@ -478,47 +461,17 @@ HB_FUNC_STATIC( QWIDGET_ADJUSTSIZE )
 /*
 bool autoFillBackground () const
 */
-HB_FUNC_STATIC( QWIDGET_AUTOFILLBACKGROUND )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RBOOL( obj->autoFillBackground () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|autoFillBackground|
 
 /*
 QPalette::ColorRole backgroundRole () const
 */
-HB_FUNC_STATIC( QWIDGET_BACKGROUNDROLE )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->backgroundRole () );
-  }
-}
+$method=|QPalette::ColorRole|backgroundRole|
 
 /*
 QSize baseSize () const
 */
-HB_FUNC_STATIC( QWIDGET_BASESIZE )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->baseSize () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|baseSize|
 
 /*
 QWidget * childAt ( int x, int y ) const
@@ -947,15 +900,7 @@ HB_FUNC_STATIC( QWIDGET_GRABMOUSE )
 /*
 int grabShortcut ( const QKeySequence & key, Qt::ShortcutContext context = Qt::WindowShortcut )
 */
-HB_FUNC_STATIC( QWIDGET_GRABSHORTCUT )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) Qt::WindowShortcut : hb_parni(2);
-    RINT( obj->grabShortcut ( *PQKEYSEQUENCE(1), (Qt::ShortcutContext) par2 ) );
-  }
-}
+$method=|int|grabShortcut|const QKeySequence &,Qt::ShortcutContext=Qt::WindowShortcut
 
 /*
 QGraphicsEffect * graphicsEffect () const
@@ -986,82 +931,22 @@ HB_FUNC_STATIC( QWIDGET_GRAPHICSPROXYWIDGET )
 /*
 bool hasFocus () const
 */
-HB_FUNC_STATIC( QWIDGET_HASFOCUS )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RBOOL( obj->hasFocus () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|hasFocus|
 
 /*
 bool hasMouseTracking () const
 */
-HB_FUNC_STATIC( QWIDGET_HASMOUSETRACKING )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RBOOL( obj->hasMouseTracking () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|hasMouseTracking|
 
 /*
 int height () const
 */
-HB_FUNC_STATIC( QWIDGET_HEIGHT )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RINT( obj->height () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|height|
 
 /*
 virtual int heightForWidth ( int w ) const
 */
-HB_FUNC_STATIC( QWIDGET_HEIGHTFORWIDTH )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISNUM(1) )
-    {
-      RINT( obj->heightForWidth ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$virtualMethod=|int|heightForWidth|int
 
 /*
 QInputContext * inputContext ()
@@ -1139,239 +1024,67 @@ HB_FUNC_STATIC( QWIDGET_INSERTACTIONS )
 /*
 bool isActiveWindow () const
 */
-HB_FUNC_STATIC( QWIDGET_ISACTIVEWINDOW )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RBOOL( obj->isActiveWindow () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isActiveWindow|
 
 /*
 bool isAncestorOf ( const QWidget * child ) const
 */
-HB_FUNC_STATIC( QWIDGET_ISANCESTOROF )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QWidget * par1 = (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->isAncestorOf ( par1 ) );
-  }
-}
+$method=|bool|isAncestorOf|const QWidget *
 
 /*
 bool isEnabled () const
 */
-HB_FUNC_STATIC( QWIDGET_ISENABLED )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RBOOL( obj->isEnabled () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isEnabled|
 
 /*
 bool isEnabledTo ( QWidget * ancestor ) const
 */
-HB_FUNC_STATIC( QWIDGET_ISENABLEDTO )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isEnabledTo ( PQWIDGET(1) ) );
-  }
-}
+$method=|bool|isEnabledTo|QWidget *
 
 /*
 bool isFullScreen () const
 */
-HB_FUNC_STATIC( QWIDGET_ISFULLSCREEN )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RBOOL( obj->isFullScreen () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isFullScreen|
 
 /*
 bool isHidden () const
 */
-HB_FUNC_STATIC( QWIDGET_ISHIDDEN )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RBOOL( obj->isHidden () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isHidden|
 
 /*
 bool isMaximized () const
 */
-HB_FUNC_STATIC( QWIDGET_ISMAXIMIZED )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RBOOL( obj->isMaximized () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isMaximized|
 
 /*
 bool isMinimized () const
 */
-HB_FUNC_STATIC( QWIDGET_ISMINIMIZED )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RBOOL( obj->isMinimized () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isMinimized|
 
 /*
 bool isModal () const
 */
-HB_FUNC_STATIC( QWIDGET_ISMODAL )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RBOOL( obj->isModal () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isModal|
 
 /*
 bool isVisible () const
 */
-HB_FUNC_STATIC( QWIDGET_ISVISIBLE )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RBOOL( obj->isVisible () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isVisible|
 
 /*
 bool isVisibleTo ( QWidget * ancestor ) const
 */
-HB_FUNC_STATIC( QWIDGET_ISVISIBLETO )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isVisibleTo ( PQWIDGET(1) ) );
-  }
-}
+$method=|bool|isVisibleTo|QWidget *
 
 /*
 bool isWindow () const
 */
-HB_FUNC_STATIC( QWIDGET_ISWINDOW )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RBOOL( obj->isWindow () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isWindow|
 
 /*
 bool isWindowModified () const
 */
-HB_FUNC_STATIC( QWIDGET_ISWINDOWMODIFIED )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RBOOL( obj->isWindowModified () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isWindowModified|
 
 /*
 QLayout * layout () const
@@ -1505,22 +1218,7 @@ HB_FUNC_STATIC( QWIDGET_MASK )
 /*
 int maximumHeight () const
 */
-HB_FUNC_STATIC( QWIDGET_MAXIMUMHEIGHT )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RINT( obj->maximumHeight () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|maximumHeight|
 
 /*
 QSize maximumSize () const
@@ -1538,42 +1236,12 @@ HB_FUNC_STATIC( QWIDGET_MAXIMUMSIZE )
 /*
 int maximumWidth () const
 */
-HB_FUNC_STATIC( QWIDGET_MAXIMUMWIDTH )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RINT( obj->maximumWidth () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|maximumWidth|
 
 /*
 int minimumHeight () const
 */
-HB_FUNC_STATIC( QWIDGET_MINIMUMHEIGHT )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RINT( obj->minimumHeight () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|minimumHeight|
 
 /*
 QSize minimumSize () const
@@ -1604,22 +1272,7 @@ HB_FUNC_STATIC( QWIDGET_MINIMUMSIZEHINT )
 /*
 int minimumWidth () const
 */
-HB_FUNC_STATIC( QWIDGET_MINIMUMWIDTH )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RINT( obj->minimumWidth () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|minimumWidth|
 
 /*
 void move ( const QPoint & )
@@ -2012,14 +1665,7 @@ HB_FUNC_STATIC( QWIDGET_RESIZE )
 /*
 bool restoreGeometry ( const QByteArray & geometry )
 */
-HB_FUNC_STATIC( QWIDGET_RESTOREGEOMETRY )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->restoreGeometry ( *PQBYTEARRAY(1) ) );
-  }
-}
+$method=|bool|restoreGeometry|const QByteArray &
 
 /*
 QByteArray saveGeometry () const
@@ -3072,24 +2718,7 @@ HB_FUNC_STATIC( QWIDGET_SETWINDOWMODALITY )
 /*
 void setWindowOpacity ( qreal level )
 */
-HB_FUNC_STATIC( QWIDGET_SETWINDOWOPACITY )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISNUM(1) )
-    {
-      obj->setWindowOpacity ( PQREAL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWindowOpacity|
 
 /*
 void setWindowRole ( const QString & role )
@@ -3201,15 +2830,7 @@ $method=|QString|styleSheet|
 /*
 bool testAttribute ( Qt::WidgetAttribute attribute ) const
 */
-HB_FUNC_STATIC( QWIDGET_TESTATTRIBUTE )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    RBOOL( obj->testAttribute ( (Qt::WidgetAttribute) par1 ) );
-  }
-}
+$method=|bool|testAttribute|Qt::WidgetAttribute
 
 /*
 QString toolTip () const
@@ -3219,22 +2840,7 @@ $method=|QString|toolTip|
 /*
 bool underMouse () const
 */
-HB_FUNC_STATIC( QWIDGET_UNDERMOUSE )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RBOOL( obj->underMouse () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|underMouse|
 
 /*
 void ungrabGesture ( Qt::GestureType gesture )
@@ -3417,22 +3023,7 @@ HB_FUNC_STATIC( QWIDGET_UPDATEGEOMETRY )
 /*
 bool updatesEnabled () const
 */
-HB_FUNC_STATIC( QWIDGET_UPDATESENABLED )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RBOOL( obj->updatesEnabled () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|updatesEnabled|
 
 /*
 QRegion visibleRegion () const
@@ -3455,22 +3046,7 @@ $method=|QString|whatsThis|
 /*
 int width () const
 */
-HB_FUNC_STATIC( QWIDGET_WIDTH )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RINT( obj->width () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|width|
 
 /*
 WId winId () const
@@ -3548,22 +3124,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWMODALITY )
 /*
 qreal windowOpacity () const
 */
-HB_FUNC_STATIC( QWIDGET_WINDOWOPACITY )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RQREAL( obj->windowOpacity () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|qreal|windowOpacity|
 
 /*
 QString windowRole () const
@@ -3602,42 +3163,12 @@ HB_FUNC_STATIC( QWIDGET_WINDOWTYPE )
 /*
 int x () const
 */
-HB_FUNC_STATIC( QWIDGET_X )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RINT( obj->x () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|x|
 
 /*
 int y () const
 */
-HB_FUNC_STATIC( QWIDGET_Y )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RINT( obj->y () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|y|
 
 /*
 virtual QPaintEngine * paintEngine () const
@@ -3655,22 +3186,7 @@ HB_FUNC_STATIC( QWIDGET_PAINTENGINE )
 /*
 bool close ()
 */
-HB_FUNC_STATIC( QWIDGET_CLOSE )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RBOOL( obj->close () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|close|
 
 /*
 void hide ()
@@ -3975,202 +3491,52 @@ HB_FUNC_STATIC( QWIDGET_SHOWNORMAL )
 /*
 int colorCount () const
 */
-HB_FUNC_STATIC( QWIDGET_COLORCOUNT )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RINT( obj->colorCount () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|colorCount|
 
 /*
 int depth () const
 */
-HB_FUNC_STATIC( QWIDGET_DEPTH )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RINT( obj->depth () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|depth|
 
 /*
 int heightMM () const
 */
-HB_FUNC_STATIC( QWIDGET_HEIGHTMM )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RINT( obj->heightMM () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|heightMM|
 
 /*
 int logicalDpiX () const
 */
-HB_FUNC_STATIC( QWIDGET_LOGICALDPIX )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RINT( obj->logicalDpiX () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|logicalDpiX|
 
 /*
 int logicalDpiY () const
 */
-HB_FUNC_STATIC( QWIDGET_LOGICALDPIY )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RINT( obj->logicalDpiY () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|logicalDpiY|
 
 /*
 int numColors () const (deprecated)
 */
-HB_FUNC_STATIC( QWIDGET_NUMCOLORS )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RINT( obj->numColors () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|numColors|
 
 /*
 bool paintingActive () const
 */
-HB_FUNC_STATIC( QWIDGET_PAINTINGACTIVE )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RBOOL( obj->paintingActive () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|paintingActive|
 
 /*
 int physicalDpiX () const
 */
-HB_FUNC_STATIC( QWIDGET_PHYSICALDPIX )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RINT( obj->physicalDpiX () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|physicalDpiX|
 
 /*
 int physicalDpiY () const
 */
-HB_FUNC_STATIC( QWIDGET_PHYSICALDPIY )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RINT( obj->physicalDpiY () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|physicalDpiY|
 
 /*
 int widthMM () const
 */
-HB_FUNC_STATIC( QWIDGET_WIDTHMM )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RINT( obj->widthMM () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|widthMM|
 
 //=============================================================================
 // QPaintDevice methods - end

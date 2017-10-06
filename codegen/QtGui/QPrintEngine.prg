@@ -44,79 +44,32 @@ $deleteMethod
 /*
 virtual bool abort () = 0
 */
-HB_FUNC_STATIC( QPRINTENGINE_ABORT )
-{
-  QPrintEngine * obj = (QPrintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->abort () );
-  }
-}
+$virtualMethod=|bool|abort|
 
 /*
 virtual int metric ( QPaintDevice::PaintDeviceMetric id ) const = 0
 */
-HB_FUNC_STATIC( QPRINTENGINE_METRIC )
-{
-  QPrintEngine * obj = (QPrintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    RINT( obj->metric ( (QPaintDevice::PaintDeviceMetric) par1 ) );
-  }
-}
+$virtualMethod=|int|metric|QPaintDevice::PaintDeviceMetric
 
 /*
 virtual bool newPage () = 0
 */
-HB_FUNC_STATIC( QPRINTENGINE_NEWPAGE )
-{
-  QPrintEngine * obj = (QPrintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->newPage () );
-  }
-}
+$virtualMethod=|bool|newPage|
 
 /*
 virtual QPrinter::PrinterState printerState () const = 0
 */
-HB_FUNC_STATIC( QPRINTENGINE_PRINTERSTATE )
-{
-  QPrintEngine * obj = (QPrintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->printerState () );
-  }
-}
+$virtualMethod=|QPrinter::PrinterState|printerState|
 
 /*
 virtual QVariant property ( PrintEnginePropertyKey key ) const = 0
 */
-HB_FUNC_STATIC( QPRINTENGINE_PROPERTY )
-{
-  QPrintEngine * obj = (QPrintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->property ( (QPrintEngine::PrintEnginePropertyKey) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$virtualMethod=|QVariant|property|QPrintEngine::PrintEnginePropertyKey
 
 /*
 virtual void setProperty ( PrintEnginePropertyKey key, const QVariant & value ) = 0
 */
-HB_FUNC_STATIC( QPRINTENGINE_SETPROPERTY )
-{
-  QPrintEngine * obj = (QPrintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setProperty ( (QPrintEngine::PrintEnginePropertyKey) par1, *PQVARIANT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|setProperty|QPrintEngine::PrintEnginePropertyKey,const QVariant &
 
 $extraMethods
 

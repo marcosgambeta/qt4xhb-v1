@@ -20,8 +20,6 @@ REQUEST QSIZE
 
 CLASS QGraphicsView INHERIT QAbstractScrollArea
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -223,15 +221,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_CENTERON1 )
 /*
 void centerOn ( qreal x, qreal y )
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_CENTERON2 )
-{
-  QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->centerOn ( PQREAL(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|centerOn,centerOn2|qreal,qreal
 
 /*
 void centerOn ( const QGraphicsItem * item )
@@ -418,26 +408,12 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_FOREGROUNDBRUSH )
 /*
 bool isInteractive () const
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_ISINTERACTIVE )
-{
-  QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isInteractive () );
-  }
-}
+$method=|bool|isInteractive|
 
 /*
 bool isTransformed () const
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_ISTRANSFORMED )
-{
-  QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isTransformed () );
-  }
-}
+$method=|bool|isTransformed|
 
 /*
 QGraphicsItem * itemAt ( const QPoint & pos ) const
@@ -1158,284 +1134,107 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RESIZEANCHOR )
 /*
 void rotate ( qreal angle )
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_ROTATE )
-{
-  QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->rotate ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|rotate|qreal
 
 /*
 Qt::ItemSelectionMode rubberBandSelectionMode () const
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_RUBBERBANDSELECTIONMODE )
-{
-  QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->rubberBandSelectionMode () );
-  }
-}
+$method=|Qt::ItemSelectionMode|rubberBandSelectionMode|
 
 /*
 void scale ( qreal sx, qreal sy )
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_SCALE )
-{
-  QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->scale ( PQREAL(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|scale|qreal,qreal
 
 /*
 QGraphicsScene * scene () const
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_SCENE )
-{
-  QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QGraphicsScene * ptr = obj->scene ();
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSSCENE" );
-  }
-}
+$method=|QGraphicsScene *|scene|
 
 /*
 QRectF sceneRect () const
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_SCENERECT )
-{
-  QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->sceneRect () );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$method=|QRectF|sceneRect|
 
 /*
 void setAlignment ( Qt::Alignment alignment )
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_SETALIGNMENT )
-{
-  QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setAlignment ( (Qt::Alignment) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAlignment|Qt::Alignment
 
 /*
 void setBackgroundBrush ( const QBrush & brush )
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_SETBACKGROUNDBRUSH )
-{
-  QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBackgroundBrush ( *PQBRUSH(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBackgroundBrush|const QBrush &
 
 /*
 void setCacheMode ( CacheMode mode )
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_SETCACHEMODE )
-{
-  QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setCacheMode ( (QGraphicsView::CacheMode) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCacheMode|QGraphicsView::CacheMode
 
 /*
 void setDragMode ( DragMode mode )
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_SETDRAGMODE )
-{
-  QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setDragMode ( (QGraphicsView::DragMode) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDragMode|QGraphicsView::DragMode
 
 /*
 void setForegroundBrush ( const QBrush & brush )
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_SETFOREGROUNDBRUSH )
-{
-  QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setForegroundBrush ( *PQBRUSH(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setForegroundBrush|const QBrush &
 
 /*
 void setInteractive ( bool allowed )
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_SETINTERACTIVE )
-{
-  QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setInteractive ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setInteractive|bool
 
 /*
 void setMatrix ( const QMatrix & matrix, bool combine = false )
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_SETMATRIX )
-{
-  QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setMatrix ( *PQMATRIX(1), OPBOOL(2,false) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMatrix|const QMatrix &,bool=false
 
 /*
 void setOptimizationFlag ( OptimizationFlag flag, bool enabled = true )
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_SETOPTIMIZATIONFLAG )
-{
-  QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setOptimizationFlag ( (QGraphicsView::OptimizationFlag) par1, OPBOOL(2,true) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOptimizationFlag|QGraphicsView::OptimizationFlag,bool=true
 
 /*
 void setOptimizationFlags ( OptimizationFlags flags )
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_SETOPTIMIZATIONFLAGS )
-{
-  QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setOptimizationFlags ( (QGraphicsView::OptimizationFlags) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOptimizationFlags|QGraphicsView::OptimizationFlags
 
 /*
 void setRenderHint ( QPainter::RenderHint hint, bool enabled = true )
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_SETRENDERHINT )
-{
-  QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setRenderHint ( (QPainter::RenderHint) par1, OPBOOL(2,true) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRenderHint|QPainter::RenderHint,bool=true
 
 /*
 void setRenderHints ( QPainter::RenderHints hints )
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_SETRENDERHINTS )
-{
-  QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setRenderHints ( (QPainter::RenderHints) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRenderHints|QPainter::RenderHints
 
 /*
 void setResizeAnchor ( ViewportAnchor anchor )
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_SETRESIZEANCHOR )
-{
-  QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setResizeAnchor ( (QGraphicsView::ViewportAnchor) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setResizeAnchor|QGraphicsView::ViewportAnchor
 
 /*
 void setRubberBandSelectionMode ( Qt::ItemSelectionMode mode )
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_SETRUBBERBANDSELECTIONMODE )
-{
-  QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setRubberBandSelectionMode ( (Qt::ItemSelectionMode) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRubberBandSelectionMode|Qt::ItemSelectionMode
 
 /*
 void setScene ( QGraphicsScene * scene )
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_SETSCENE )
-{
-  QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QGraphicsScene * par1 = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setScene ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setScene|QGraphicsScene *
 
 /*
 void setSceneRect ( const QRectF & rect )
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_SETSCENERECT1 )
-{
-  QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSceneRect ( *PQRECTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSceneRect,setSceneRect1|const QRectF &
 
 /*
 void setSceneRect ( qreal x, qreal y, qreal w, qreal h )
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_SETSCENERECT2 )
-{
-  QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSceneRect ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSceneRect,setSceneRect2|qreal,qreal,qreal,qreal
 
 //[1]void setSceneRect ( const QRectF & rect )
 //[2]void setSceneRect ( qreal x, qreal y, qreal w, qreal h )
@@ -1455,69 +1254,27 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETSCENERECT )
 /*
 void setTransform ( const QTransform & matrix, bool combine = false )
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_SETTRANSFORM )
-{
-  QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTransform ( *PQTRANSFORM(1), OPBOOL(2,false) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTransform|const QTransform &,bool=false
 
 /*
 void setTransformationAnchor ( ViewportAnchor anchor )
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_SETTRANSFORMATIONANCHOR )
-{
-  QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setTransformationAnchor ( (QGraphicsView::ViewportAnchor) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTransformationAnchor|QGraphicsView::ViewportAnchor
 
 /*
 void setViewportUpdateMode ( ViewportUpdateMode mode )
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_SETVIEWPORTUPDATEMODE )
-{
-  QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setViewportUpdateMode ( (QGraphicsView::ViewportUpdateMode) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setViewportUpdateMode|QGraphicsView::ViewportUpdateMode
 
 /*
 void shear ( qreal sh, qreal sv )
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_SHEAR )
-{
-  QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->shear ( PQREAL(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|shear|qreal,qreal
 
 /*
 QTransform transform () const
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_TRANSFORM )
-{
-  QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTransform * ptr = new QTransform( obj->transform () );
-    _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
-  }
-}
+$method=|QTransform|transform|
 
 /*
 ViewportAnchor transformationAnchor () const
@@ -1534,28 +1291,12 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_TRANSFORMATIONANCHOR )
 /*
 void translate ( qreal dx, qreal dy )
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_TRANSLATE )
-{
-  QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->translate ( PQREAL(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|translate|qreal,qreal
 
 /*
 QTransform viewportTransform () const
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_VIEWPORTTRANSFORM )
-{
-  QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTransform * ptr = new QTransform( obj->viewportTransform () );
-    _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
-  }
-}
+$method=|QTransform|viewportTransform|
 
 /*
 ViewportUpdateMode viewportUpdateMode () const

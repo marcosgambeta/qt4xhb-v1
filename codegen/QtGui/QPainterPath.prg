@@ -393,14 +393,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDTEXT )
 /*
 qreal angleAtPercent ( qreal t ) const
 */
-HB_FUNC_STATIC( QPAINTERPATH_ANGLEATPERCENT )
-{
-  QPainterPath * obj = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->angleAtPercent ( PQREAL(1) ) );
-  }
-}
+$method=|qreal|angleAtPercent|qreal
 
 /*
 void arcMoveTo ( const QRectF & rectangle, qreal angle )
@@ -526,38 +519,17 @@ HB_FUNC_STATIC( QPAINTERPATH_CONNECTPATH )
 /*
 bool contains ( const QPointF & point ) const
 */
-HB_FUNC_STATIC( QPAINTERPATH_CONTAINS1 )
-{
-  QPainterPath * obj = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->contains ( *PQPOINTF(1) ) );
-  }
-}
+$method=|bool|contains,contains1|const QPointF &
 
 /*
 bool contains ( const QRectF & rectangle ) const
 */
-HB_FUNC_STATIC( QPAINTERPATH_CONTAINS2 )
-{
-  QPainterPath * obj = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->contains ( *PQRECTF(1) ) );
-  }
-}
+$method=|bool|contains,contains2|const QRectF &
 
 /*
 bool contains ( const QPainterPath & p ) const
 */
-HB_FUNC_STATIC( QPAINTERPATH_CONTAINS3 )
-{
-  QPainterPath * obj = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->contains ( *PQPAINTERPATH(1) ) );
-  }
-}
+$method=|bool|contains,contains3|const QPainterPath &
 
 //[1]bool contains ( const QPointF & point ) const
 //[2]bool contains ( const QRectF & rectangle ) const
@@ -649,26 +621,12 @@ HB_FUNC_STATIC( QPAINTERPATH_CURRENTPOSITION )
 /*
 int elementCount () const
 */
-HB_FUNC_STATIC( QPAINTERPATH_ELEMENTCOUNT )
-{
-  QPainterPath * obj = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->elementCount () );
-  }
-}
+$method=|int|elementCount|
 
 /*
 Qt::FillRule fillRule () const
 */
-HB_FUNC_STATIC( QPAINTERPATH_FILLRULE )
-{
-  QPainterPath * obj = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->fillRule () );
-  }
-}
+$method=|Qt::FillRule|fillRule|
 
 /*
 QPainterPath intersected ( const QPainterPath & p ) const
@@ -686,26 +644,12 @@ HB_FUNC_STATIC( QPAINTERPATH_INTERSECTED )
 /*
 bool intersects ( const QRectF & rectangle ) const
 */
-HB_FUNC_STATIC( QPAINTERPATH_INTERSECTS1 )
-{
-  QPainterPath * obj = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->intersects ( *PQRECTF(1) ) );
-  }
-}
+$method=|bool|intersects,intersects1|const QRectF &
 
 /*
 bool intersects ( const QPainterPath & p ) const
 */
-HB_FUNC_STATIC( QPAINTERPATH_INTERSECTS2 )
-{
-  QPainterPath * obj = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->intersects ( *PQPAINTERPATH(1) ) );
-  }
-}
+$method=|bool|intersects,intersects2|const QPainterPath &
 
 //[1]bool intersects ( const QRectF & rectangle ) const
 //[2]bool intersects ( const QPainterPath & p ) const
@@ -725,26 +669,12 @@ HB_FUNC_STATIC( QPAINTERPATH_INTERSECTS )
 /*
 bool isEmpty () const
 */
-HB_FUNC_STATIC( QPAINTERPATH_ISEMPTY )
-{
-  QPainterPath * obj = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-}
+$method=|bool|isEmpty|
 
 /*
 qreal length () const
 */
-HB_FUNC_STATIC( QPAINTERPATH_LENGTH )
-{
-  QPainterPath * obj = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->length () );
-  }
-}
+$method=|qreal|length|
 
 /*
 void lineTo ( const QPointF & endPoint )
@@ -831,27 +761,12 @@ HB_FUNC_STATIC( QPAINTERPATH_MOVETO )
 /*
 qreal percentAtLength ( qreal len ) const
 */
-HB_FUNC_STATIC( QPAINTERPATH_PERCENTATLENGTH )
-{
-  QPainterPath * obj = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->percentAtLength ( PQREAL(1) ) );
-  }
-}
+$method=|qreal|percentAtLength|qreal
 
 /*
 QPointF pointAtPercent ( qreal t ) const
 */
-HB_FUNC_STATIC( QPAINTERPATH_POINTATPERCENT )
-{
-  QPainterPath * obj = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->pointAtPercent ( PQREAL(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|pointAtPercent|qreal
 
 /*
 void quadTo ( const QPointF & c, const QPointF & endPoint )
@@ -937,14 +852,7 @@ HB_FUNC_STATIC( QPAINTERPATH_SIMPLIFIED )
 /*
 qreal slopeAtPercent ( qreal t ) const
 */
-HB_FUNC_STATIC( QPAINTERPATH_SLOPEATPERCENT )
-{
-  QPainterPath * obj = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->slopeAtPercent ( PQREAL(1) ) );
-  }
-}
+$method=|qreal|slopeAtPercent|qreal
 
 /*
 QPainterPath subtracted ( const QPainterPath & p ) const

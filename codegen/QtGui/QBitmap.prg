@@ -39,47 +39,27 @@ $destructor
 /*
 QBitmap ()
 */
-HB_FUNC_STATIC( QBITMAP_NEW1 )
-{
-  QBitmap * o = new QBitmap ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new1|
 
 /*
 QBitmap ( const QPixmap & pixmap )
 */
-HB_FUNC_STATIC( QBITMAP_NEW2 )
-{
-  QBitmap * o = new QBitmap ( *PQPIXMAP(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new2|const QPixmap &
 
 /*
 QBitmap ( int width, int height )
 */
-HB_FUNC_STATIC( QBITMAP_NEW3 )
-{
-  QBitmap * o = new QBitmap ( PINT(1), PINT(2) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new3|int,int
 
 /*
 QBitmap ( const QSize & size )
 */
-HB_FUNC_STATIC( QBITMAP_NEW4 )
-{
-  QBitmap * o = new QBitmap ( *PQSIZE(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new4|const QSize &
 
 /*
 QBitmap ( const QString & fileName, const char * format = 0 )
 */
-HB_FUNC_STATIC( QBITMAP_NEW5 )
-{
-  QBitmap * o = new QBitmap ( PQSTRING(1), (const char *) ISNIL(2)? 0 : hb_parc(2) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new5|const QString &,const char *=0
 
 //[1]QBitmap ()
 //[2]QBitmap ( const QPixmap & pixmap )
@@ -120,48 +100,21 @@ $deleteMethod
 /*
 void clear ()
 */
-HB_FUNC_STATIC( QBITMAP_CLEAR )
-{
-  QBitmap * obj = (QBitmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clear|
 
 /*
 QBitmap transformed ( const QTransform & matrix ) const
 */
-HB_FUNC_STATIC( QBITMAP_TRANSFORMED )
-{
-  QBitmap * obj = (QBitmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QBitmap * ptr = new QBitmap( obj->transformed ( *PQTRANSFORM(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBITMAP", true );
-  }
-}
+$method=|QBitmap|transformed|const QTransform &
 
 /*
-QBitmap fromData ( const QSize & size, const uchar * bits, QImage::Format monoFormat = QImage::Format_MonoLSB )
+static QBitmap fromData ( const QSize & size, const uchar * bits, QImage::Format monoFormat = QImage::Format_MonoLSB )
 */
-HB_FUNC_STATIC( QBITMAP_FROMDATA )
-{
-  const uchar * par2 = (const uchar *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par3 = ISNIL(3)? (int) QImage::Format_MonoLSB : hb_parni(3);
-  QBitmap * ptr = new QBitmap( QBitmap::fromData ( *PQSIZE(1), par2, (QImage::Format) par3 ) );
-  _qt4xhb_createReturnClass ( ptr, "QBITMAP", true );
-}
+$staticMethod=|QBitmap|fromData|const QSize &,const uchar *,QImage::Format=QImage::Format_MonoLSB
 
 /*
-QBitmap fromImage ( const QImage & image, Qt::ImageConversionFlags flags = Qt::AutoColor )
+static QBitmap fromImage ( const QImage & image, Qt::ImageConversionFlags flags = Qt::AutoColor )
 */
-HB_FUNC_STATIC( QBITMAP_FROMIMAGE )
-{
-  int par2 = ISNIL(2)? (int) Qt::AutoColor : hb_parni(2);
-  QBitmap * ptr = new QBitmap( QBitmap::fromImage ( *PQIMAGE(1), (Qt::ImageConversionFlags) par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QBITMAP", true );
-}
+$staticMethod=|QBitmap|fromImage|const QImage &,Qt::ImageConversionFlags=Qt::AutoColor
 
 #pragma ENDDUMP

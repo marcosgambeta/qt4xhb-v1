@@ -41,37 +41,16 @@ $deleteMethod
 /*
 bool gotFocus () const
 */
-HB_FUNC_STATIC( QFOCUSEVENT_GOTFOCUS )
-{
-  QFocusEvent * obj = (QFocusEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->gotFocus () );
-  }
-}
+$method=|bool|gotFocus|
 
 /*
 bool lostFocus () const
 */
-HB_FUNC_STATIC( QFOCUSEVENT_LOSTFOCUS )
-{
-  QFocusEvent * obj = (QFocusEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->lostFocus () );
-  }
-}
+$method=|bool|lostFocus|
 
 /*
 Qt::FocusReason reason () const
 */
-HB_FUNC_STATIC( QFOCUSEVENT_REASON )
-{
-  QFocusEvent * obj = (QFocusEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->reason () );
-  }
-}
+$method=|Qt::FocusReason|reason|
 
 #pragma ENDDUMP

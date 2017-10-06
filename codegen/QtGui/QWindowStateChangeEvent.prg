@@ -71,25 +71,11 @@ $deleteMethod
 /*
 Qt::WindowStates oldState() const
 */
-HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_OLDSTATE )
-{
-  QWindowStateChangeEvent * obj = (QWindowStateChangeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->oldState () );
-  }
-}
+$method=|Qt::WindowStates|oldState|
 
 /*
 bool isOverride() const
 */
-HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_ISOVERRIDE )
-{
-  QWindowStateChangeEvent * obj = (QWindowStateChangeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isOverride () );
-  }
-}
+$method=|bool|isOverride|
 
 #pragma ENDDUMP

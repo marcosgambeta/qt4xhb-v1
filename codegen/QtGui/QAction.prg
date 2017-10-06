@@ -15,8 +15,6 @@ REQUEST QKEYSEQUENCE
 
 CLASS QAction INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new3
@@ -102,30 +100,17 @@ $destructor
 /*
 QAction ( QObject * parent )
 */
-HB_FUNC_STATIC( QACTION_NEW1 )
-{
-  QAction * o = new QAction ( PQOBJECT(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QObject *
 
 /*
 QAction ( const QString & text, QObject * parent )
 */
-HB_FUNC_STATIC( QACTION_NEW2 )
-{
-  QAction * o = new QAction ( PQSTRING(1), PQOBJECT(2) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QString &,QObject *
 
 /*
 QAction ( const QIcon & icon, const QString & text, QObject * parent )
 */
-HB_FUNC_STATIC( QACTION_NEW3 )
-{
-  QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
-  QAction * o = new QAction ( par1, PQSTRING(2), PQOBJECT(3) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new3|const QIcon &,const QString &,QObject *
 
 //[1]QAction ( QObject * parent )
 //[2]QAction ( const QString & text, QObject * parent )
@@ -156,29 +141,12 @@ $deleteMethod
 /*
 QActionGroup * actionGroup () const
 */
-HB_FUNC_STATIC( QACTION_ACTIONGROUP )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QActionGroup * ptr = obj->actionGroup ();
-    _qt4xhb_createReturnClass ( ptr, "QACTIONGROUP" );
-  }
-}
+$method=|QActionGroup *|actionGroup|
 
 /*
 void activate ( ActionEvent event )
 */
-HB_FUNC_STATIC( QACTION_ACTIVATE )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->activate ( (QAction::ActionEvent) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|activate|QAction::ActionEvent
 
 /*
 QList<QGraphicsWidget *> associatedGraphicsWidgets () const
@@ -269,53 +237,22 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDWIDGETS )
 /*
 bool autoRepeat () const
 */
-HB_FUNC_STATIC( QACTION_AUTOREPEAT )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->autoRepeat () );
-  }
-}
+$method=|bool|autoRepeat|
 
 /*
 QVariant data () const
 */
-HB_FUNC_STATIC( QACTION_DATA )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->data () );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$method=|QVariant|data|
 
 /*
 QFont font () const
 */
-HB_FUNC_STATIC( QACTION_FONT )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QFont * ptr = new QFont( obj->font () );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
-  }
-}
+$method=|QFont|font|
 
 /*
 QIcon icon () const
 */
-HB_FUNC_STATIC( QACTION_ICON )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIcon * ptr = new QIcon( obj->icon () );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );
-  }
-}
+$method=|QIcon|icon|
 
 /*
 QString iconText () const
@@ -325,204 +262,82 @@ $method=|QString|iconText|
 /*
 bool isCheckable () const
 */
-HB_FUNC_STATIC( QACTION_ISCHECKABLE )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isCheckable () );
-  }
-}
+$method=|bool|isCheckable|
 
 /*
 bool isChecked () const
 */
-HB_FUNC_STATIC( QACTION_ISCHECKED )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isChecked () );
-  }
-}
+$method=|bool|isChecked|
 
 /*
 bool isEnabled () const
 */
-HB_FUNC_STATIC( QACTION_ISENABLED )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isEnabled () );
-  }
-}
+$method=|bool|isEnabled|
 
 /*
 bool isIconVisibleInMenu () const
 */
-HB_FUNC_STATIC( QACTION_ISICONVISIBLEINMENU )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isIconVisibleInMenu () );
-  }
-}
+$method=|bool|isIconVisibleInMenu|
 
 /*
 bool isSeparator () const
 */
-HB_FUNC_STATIC( QACTION_ISSEPARATOR )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isSeparator () );
-  }
-}
+$method=|bool|isSeparator|
 
 /*
 bool isVisible () const
 */
-HB_FUNC_STATIC( QACTION_ISVISIBLE )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isVisible () );
-  }
-}
+$method=|bool|isVisible|
 
 /*
 QMenu * menu () const
 */
-HB_FUNC_STATIC( QACTION_MENU )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QMenu * ptr = obj->menu ();
-    _qt4xhb_createReturnClass ( ptr, "QMENU" );
-  }
-}
+$method=|QMenu *|menu|
 
 /*
 MenuRole menuRole () const
 */
-HB_FUNC_STATIC( QACTION_MENUROLE )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->menuRole () );
-  }
-}
+$method=|QAction::MenuRole|menuRole|
 
 /*
 QWidget * parentWidget () const
 */
-HB_FUNC_STATIC( QACTION_PARENTWIDGET )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->parentWidget ();
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|parentWidget|
 
 /*
 Priority priority () const
 */
-HB_FUNC_STATIC( QACTION_PRIORITY )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->priority () );
-  }
-}
+$method=|QAction::Priority|priority|
 
 /*
 void setActionGroup ( QActionGroup * group )
 */
-HB_FUNC_STATIC( QACTION_SETACTIONGROUP )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QActionGroup * par1 = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setActionGroup ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setActionGroup|QActionGroup *
 
 /*
 void setAutoRepeat ( bool )
 */
-HB_FUNC_STATIC( QACTION_SETAUTOREPEAT )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAutoRepeat ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAutoRepeat|bool
 
 /*
 void setCheckable ( bool )
 */
-HB_FUNC_STATIC( QACTION_SETCHECKABLE )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCheckable ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCheckable|bool
 
 /*
 void setData ( const QVariant & userData )
 */
-HB_FUNC_STATIC( QACTION_SETDATA )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setData ( *PQVARIANT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setData|const QVariant &
 
 /*
 void setFont ( const QFont & font )
 */
-HB_FUNC_STATIC( QACTION_SETFONT )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFont ( *PQFONT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFont|const QFont &
 
 /*
 void setIcon ( const QIcon & icon )
 */
-HB_FUNC_STATIC( QACTION_SETICON )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
-    obj->setIcon ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setIcon|const QIcon &
 
 /*
 void setIconText ( const QString & text )
@@ -532,96 +347,37 @@ $method=|void|setIconText|const QString &
 /*
 void setIconVisibleInMenu ( bool visible )
 */
-HB_FUNC_STATIC( QACTION_SETICONVISIBLEINMENU )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setIconVisibleInMenu ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setIconVisibleInMenu|bool
 
 /*
 void setMenu ( QMenu * menu )
 */
-HB_FUNC_STATIC( QACTION_SETMENU )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setMenu ( PQMENU(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMenu|QMenu *
 
 /*
 void setMenuRole ( MenuRole menuRole )
 */
-HB_FUNC_STATIC( QACTION_SETMENUROLE )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setMenuRole ( (QAction::MenuRole) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMenuRole|QAction::MenuRole
 
 /*
 void setPriority ( Priority priority )
 */
-HB_FUNC_STATIC( QACTION_SETPRIORITY )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setPriority ( (QAction::Priority) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPriority|QAction::Priority
 
 /*
 void setSeparator ( bool b )
 */
-HB_FUNC_STATIC( QACTION_SETSEPARATOR )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSeparator ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSeparator|bool
 
 /*
 void setShortcut ( const QKeySequence & shortcut )
 */
-HB_FUNC_STATIC( QACTION_SETSHORTCUT )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setShortcut ( *PQKEYSEQUENCE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setShortcut|const QKeySequence &
 
 /*
 void setShortcutContext ( Qt::ShortcutContext context )
 */
-HB_FUNC_STATIC( QACTION_SETSHORTCUTCONTEXT )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setShortcutContext ( (Qt::ShortcutContext) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setShortcutContext|Qt::ShortcutContext
 
 /*
 void setShortcuts ( const QList<QKeySequence> & shortcuts )
@@ -647,16 +403,7 @@ par1 << *(QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aLis
 /*
 void setShortcuts ( QKeySequence::StandardKey key )
 */
-HB_FUNC_STATIC( QACTION_SETSHORTCUTS2 )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setShortcuts ( (QKeySequence::StandardKey) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setShortcuts|QKeySequence::StandardKey
 
 //[1]void setShortcuts ( const QList<QKeySequence> & shortcuts )
 //[2]void setShortcuts ( QKeySequence::StandardKey key )
@@ -676,16 +423,7 @@ HB_FUNC_STATIC( QACTION_SETSHORTCUTS )
 /*
 void setSoftKeyRole ( SoftKeyRole softKeyRole )
 */
-HB_FUNC_STATIC( QACTION_SETSOFTKEYROLE )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setSoftKeyRole ( (QAction::SoftKeyRole) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSoftKeyRole|QAction::SoftKeyRole
 
 /*
 void setStatusTip ( const QString & statusTip )
@@ -710,27 +448,12 @@ $method=|void|setWhatsThis|const QString &
 /*
 QKeySequence shortcut () const
 */
-HB_FUNC_STATIC( QACTION_SHORTCUT )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QKeySequence * ptr = new QKeySequence( obj->shortcut () );
-    _qt4xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
-  }
-}
+$method=|QKeySequence|shortcut|
 
 /*
 Qt::ShortcutContext shortcutContext () const
 */
-HB_FUNC_STATIC( QACTION_SHORTCUTCONTEXT )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->shortcutContext () );
-  }
-}
+$method=|Qt::ShortcutContext|shortcutContext|
 
 /*
 QList<QKeySequence> shortcuts () const
@@ -782,26 +505,12 @@ HB_FUNC_STATIC( QACTION_SHORTCUTS )
 /*
 bool showStatusText ( QWidget * widget = 0 )
 */
-HB_FUNC_STATIC( QACTION_SHOWSTATUSTEXT )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->showStatusText ( OPQWIDGET(1,0) ) );
-  }
-}
+$method=|bool|showStatusText|QWidget *=0
 
 /*
 SoftKeyRole softKeyRole () const
 */
-HB_FUNC_STATIC( QACTION_SOFTKEYROLE )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->softKeyRole () );
-  }
-}
+$method=|QAction::SoftKeyRole|softKeyRole|
 
 /*
 QString statusTip () const
@@ -826,92 +535,36 @@ $method=|QString|whatsThis|
 /*
 void hover ()
 */
-HB_FUNC_STATIC( QACTION_HOVER )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->hover ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|hover|
 
 /*
 void setChecked ( bool )
 */
-HB_FUNC_STATIC( QACTION_SETCHECKED )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setChecked ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setChecked|bool
 
 /*
 void setDisabled ( bool b )
 */
-HB_FUNC_STATIC( QACTION_SETDISABLED )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDisabled ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDisabled|bool
 
 /*
 void setEnabled ( bool )
 */
-HB_FUNC_STATIC( QACTION_SETENABLED )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setEnabled ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setEnabled|bool
 
 /*
 void setVisible ( bool )
 */
-HB_FUNC_STATIC( QACTION_SETVISIBLE )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setVisible ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setVisible|bool
 
 /*
 void toggle ()
 */
-HB_FUNC_STATIC( QACTION_TOGGLE )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->toggle ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|toggle|
 
 /*
 void trigger ()
 */
-HB_FUNC_STATIC( QACTION_TRIGGER )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->trigger ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|trigger|
 
 #pragma ENDDUMP

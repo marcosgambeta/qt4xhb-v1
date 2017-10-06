@@ -9,8 +9,6 @@ REQUEST QSIZEF
 
 CLASS QPlainTextDocumentLayout INHERIT QAbstractTextDocumentLayout
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD cursorWidth
@@ -51,14 +49,7 @@ $deleteMethod
 /*
 int cursorWidth () const
 */
-HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_CURSORWIDTH )
-{
-  QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->cursorWidth () );
-  }
-}
+$method=|int|cursorWidth|
 
 /*
 void ensureBlockLayout ( const QTextBlock & block ) const
@@ -142,26 +133,11 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT )
 /*
 virtual int hitTest ( const QPointF &, Qt::HitTestAccuracy ) const
 */
-HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_HITTEST )
-{
-  QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    RINT( obj->hitTest ( *PQPOINTF(1), (Qt::HitTestAccuracy) par2 ) );
-  }
-}
+$virtualMethod=|int|hitTest|const QPointF &,Qt::HitTestAccuracy
 
 /*
 virtual int pageCount () const
 */
-HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_PAGECOUNT )
-{
-  QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->pageCount () );
-  }
-}
+$virtualMethod=|int|pageCount|
 
 #pragma ENDDUMP

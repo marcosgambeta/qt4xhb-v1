@@ -15,8 +15,6 @@ REQUEST QDOCKWIDGET
 
 CLASS QMainWindow INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addDockWidget1
@@ -278,14 +276,7 @@ HB_FUNC_STATIC( QMAINWINDOW_DOCKWIDGETAREA )
 /*
 bool documentMode () const
 */
-HB_FUNC_STATIC( QMAINWINDOW_DOCUMENTMODE )
-{
-  QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->documentMode () );
-  }
-}
+$method=|bool|documentMode|
 
 /*
 QSize iconSize () const
@@ -332,26 +323,12 @@ HB_FUNC_STATIC( QMAINWINDOW_INSERTTOOLBARBREAK )
 /*
 bool isAnimated () const
 */
-HB_FUNC_STATIC( QMAINWINDOW_ISANIMATED )
-{
-  QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isAnimated () );
-  }
-}
+$method=|bool|isAnimated|
 
 /*
 bool isDockNestingEnabled () const
 */
-HB_FUNC_STATIC( QMAINWINDOW_ISDOCKNESTINGENABLED )
-{
-  QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isDockNestingEnabled () );
-  }
-}
+$method=|bool|isDockNestingEnabled|
 
 /*
 QMenuBar * menuBar () const
@@ -424,27 +401,12 @@ HB_FUNC_STATIC( QMAINWINDOW_REMOVETOOLBARBREAK )
 /*
 bool restoreDockWidget ( QDockWidget * dockwidget )
 */
-HB_FUNC_STATIC( QMAINWINDOW_RESTOREDOCKWIDGET )
-{
-  QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDockWidget * par1 = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->restoreDockWidget ( par1 ) );
-  }
-}
+$method=|bool|restoreDockWidget|QDockWidget *
 
 /*
 bool restoreState ( const QByteArray & state, int version = 0 )
 */
-HB_FUNC_STATIC( QMAINWINDOW_RESTORESTATE )
-{
-  QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->restoreState ( *PQBYTEARRAY(1), OPINT(2,0)) );
-  }
-}
+$method=|bool|restoreState|const QByteArray &,int=0
 
 /*
 QByteArray saveState ( int version = 0 ) const
@@ -739,15 +701,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TOOLBARAREA )
 /*
 bool toolBarBreak ( QToolBar * toolbar ) const
 */
-HB_FUNC_STATIC( QMAINWINDOW_TOOLBARBREAK )
-{
-  QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QToolBar * par1 = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->toolBarBreak ( par1 ) );
-  }
-}
+$method=|bool|toolBarBreak|QToolBar *
 
 /*
 Qt::ToolButtonStyle toolButtonStyle () const

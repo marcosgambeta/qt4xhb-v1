@@ -10,8 +10,6 @@ REQUEST UCHAR
 
 CLASS QDirectPainter INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD allocatedRegion
@@ -242,53 +240,33 @@ HB_FUNC_STATIC( QDIRECTPAINTER_FRAMEBUFFER )
 }
 
 /*
-int linestep ()
+static int linestep ()
 */
-HB_FUNC_STATIC( QDIRECTPAINTER_LINESTEP )
-{
-  RINT( QDirectPainter::linestep () );
-}
+$staticMethod=|int|linestep|
 
 /*
-void lock ()
+static void lock ()
 */
-HB_FUNC_STATIC( QDIRECTPAINTER_LOCK )
-{
-  QDirectPainter::lock ();
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|lock|
 
 /*
-int screenDepth ()
+static int screenDepth ()
 */
-HB_FUNC_STATIC( QDIRECTPAINTER_SCREENDEPTH )
-{
-  RINT( QDirectPainter::screenDepth () );
-}
+$staticMethod=|int|screenDepth|
 
 /*
-int screenHeight ()
+static int screenHeight ()
 */
-HB_FUNC_STATIC( QDIRECTPAINTER_SCREENHEIGHT )
-{
-  RINT( QDirectPainter::screenHeight () );
-}
+$staticMethod=|int|screenHeight|
 
 /*
-int screenWidth ()
+static int screenWidth ()
 */
-HB_FUNC_STATIC( QDIRECTPAINTER_SCREENWIDTH )
-{
-  RINT( QDirectPainter::screenWidth () );
-}
+$staticMethod=|int|screenWidth|
 
 /*
-void unlock ()
+static void unlock ()
 */
-HB_FUNC_STATIC( QDIRECTPAINTER_UNLOCK )
-{
-  QDirectPainter::unlock ();
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|unlock|
 
 #pragma ENDDUMP

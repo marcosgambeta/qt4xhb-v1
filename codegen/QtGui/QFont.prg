@@ -168,14 +168,7 @@ $deleteMethod
 /*
 bool bold () const
 */
-HB_FUNC_STATIC( QFONT_BOLD )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->bold () );
-  }
-}
+$method=|bool|bold|
 
 /*
 Capitalization capitalization () const
@@ -197,14 +190,7 @@ $method=|QString|defaultFamily|
 /*
 bool exactMatch () const
 */
-HB_FUNC_STATIC( QFONT_EXACTMATCH )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->exactMatch () );
-  }
-}
+$method=|bool|exactMatch|
 
 /*
 QString family () const
@@ -214,14 +200,7 @@ $method=|QString|family|
 /*
 bool fixedPitch () const
 */
-HB_FUNC_STATIC( QFONT_FIXEDPITCH )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->fixedPitch () );
-  }
-}
+$method=|bool|fixedPitch|
 
 /*
 bool fromString ( const QString & descrip )
@@ -231,38 +210,17 @@ $method=|bool|fromString|const QString &
 /*
 bool isCopyOf ( const QFont & f ) const
 */
-HB_FUNC_STATIC( QFONT_ISCOPYOF )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isCopyOf ( *PQFONT(1) ) );
-  }
-}
+$method=|bool|isCopyOf|const QFont &
 
 /*
 bool italic () const
 */
-HB_FUNC_STATIC( QFONT_ITALIC )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->italic () );
-  }
-}
+$method=|bool|italic|
 
 /*
 bool kerning () const
 */
-HB_FUNC_STATIC( QFONT_KERNING )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->kerning () );
-  }
-}
+$method=|bool|kerning|
 
 /*
 QString key () const
@@ -282,14 +240,7 @@ $method=|QString|lastResortFont|
 /*
 qreal letterSpacing () const
 */
-HB_FUNC_STATIC( QFONT_LETTERSPACING )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->letterSpacing () );
-  }
-}
+$method=|qreal|letterSpacing|
 
 /*
 SpacingType letterSpacingType () const
@@ -306,62 +257,27 @@ HB_FUNC_STATIC( QFONT_LETTERSPACINGTYPE )
 /*
 bool overline () const
 */
-HB_FUNC_STATIC( QFONT_OVERLINE )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->overline () );
-  }
-}
+$method=|bool|overline|
 
 /*
 int pixelSize () const
 */
-HB_FUNC_STATIC( QFONT_PIXELSIZE )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->pixelSize () );
-  }
-}
+$method=|int|pixelSize|
 
 /*
 int pointSize () const
 */
-HB_FUNC_STATIC( QFONT_POINTSIZE )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->pointSize () );
-  }
-}
+$method=|int|pointSize|
 
 /*
 qreal pointSizeF () const
 */
-HB_FUNC_STATIC( QFONT_POINTSIZEF )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->pointSizeF () );
-  }
-}
+$method=|qreal|pointSizeF|
 
 /*
 bool rawMode () const
 */
-HB_FUNC_STATIC( QFONT_RAWMODE )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->rawMode () );
-  }
-}
+$method=|bool|rawMode|
 
 /*
 QString rawName () const
@@ -508,15 +424,7 @@ HB_FUNC_STATIC( QFONT_SETPOINTSIZE )
 /*
 void setPointSizeF ( qreal pointSize )
 */
-HB_FUNC_STATIC( QFONT_SETPOINTSIZEF )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPointSizeF ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPointSizeF|qreal
 
 /*
 void setRawMode ( bool enable )
@@ -634,39 +542,17 @@ HB_FUNC_STATIC( QFONT_SETWEIGHT )
 /*
 void setWordSpacing ( qreal spacing )
 */
-HB_FUNC_STATIC( QFONT_SETWORDSPACING )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setWordSpacing ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWordSpacing|qreal
 
 /*
 int stretch () const
 */
-HB_FUNC_STATIC( QFONT_STRETCH )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->stretch () );
-  }
-}
+$method=|int|stretch|
 
 /*
 bool strikeOut () const
 */
-HB_FUNC_STATIC( QFONT_STRIKEOUT )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->strikeOut () );
-  }
-}
+$method=|bool|strikeOut|
 
 /*
 Style style () const
@@ -712,38 +598,17 @@ $method=|QString|toString|
 /*
 bool underline () const
 */
-HB_FUNC_STATIC( QFONT_UNDERLINE )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->underline () );
-  }
-}
+$method=|bool|underline|
 
 /*
 int weight () const
 */
-HB_FUNC_STATIC( QFONT_WEIGHT )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->weight () );
-  }
-}
+$method=|int|weight|
 
 /*
 qreal wordSpacing () const
 */
-HB_FUNC_STATIC( QFONT_WORDSPACING )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->wordSpacing () );
-  }
-}
+$method=|qreal|wordSpacing|
 
 /*
 static void insertSubstitution ( const QString & familyName, const QString & substituteName )
