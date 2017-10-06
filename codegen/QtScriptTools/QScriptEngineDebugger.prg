@@ -12,8 +12,6 @@ REQUEST QWIDGET
 
 CLASS QScriptEngineDebugger INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD action
@@ -81,19 +79,10 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ATTACHTO )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool autoShowStandardWindow () const
 */
-HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_AUTOSHOWSTANDARDWINDOW )
-{
-  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->autoShowStandardWindow () );
-  }
-}
-
+$method=|bool|autoShowStandardWindow|
 
 /*
 QMenu * createStandardMenu ( QWidget * parent = 0 )
