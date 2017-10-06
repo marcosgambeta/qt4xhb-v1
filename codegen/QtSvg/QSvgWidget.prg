@@ -9,8 +9,6 @@ REQUEST QSIZE
 
 CLASS QSvgWidget INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD renderer
