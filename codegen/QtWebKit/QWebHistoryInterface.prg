@@ -8,8 +8,6 @@ REQUEST QWEBHISTORYINTERFACE
 
 CLASS QWebHistoryInterface INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD addHistoryEntry
    METHOD historyContains
