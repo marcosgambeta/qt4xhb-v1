@@ -11,8 +11,6 @@ REQUEST QXMLNAME
 
 CLASS QSimpleXmlNodeModel INHERIT QAbstractXmlNodeModel
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD namePool
    METHOD baseUri
