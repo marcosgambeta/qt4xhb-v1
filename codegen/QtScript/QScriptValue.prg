@@ -71,11 +71,13 @@ CLASS QScriptValue
    METHOD toUInt16
    METHOD toUInt32
    METHOD toVariant
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -97,62 +99,32 @@ $destructor
 /*
 QScriptValue ()
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_NEW1 )
-{
-  QScriptValue * o = new QScriptValue ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new1|
 
 /*
 QScriptValue ( const QScriptValue & other )
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_NEW2 )
-{
-  QScriptValue * o = new QScriptValue ( *PQSCRIPTVALUE(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new2|const QScriptValue &
 
 /*
 QScriptValue ( SpecialValue value )
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_NEW3 )
-{
-  QScriptValue * o = new QScriptValue ( (QScriptValue::SpecialValue) hb_parni(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new3|QScriptValue::SpecialValue
 
 /*
 QScriptValue ( bool value )
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_NEW4 )
-{
-  QScriptValue * o = new QScriptValue ( PBOOL(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new4|bool
 
 /*
 QScriptValue ( int value )
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_NEW5 )
-{
-  QScriptValue * o = new QScriptValue ( PINT(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new5|int
 
 /*
 QScriptValue ( uint value )
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_NEW6 )
-{
-  QScriptValue * o = new QScriptValue ( PUINT(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new6|uint
 
 /*
 QScriptValue ( qsreal value )
@@ -164,27 +136,15 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW7 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QScriptValue ( const QString & value )
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_NEW8 )
-{
-  QScriptValue * o = new QScriptValue ( PQSTRING(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
-
+$constructor=|new8|const QString &
 
 /*
 QScriptValue ( const char * value )
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_NEW10 )
-{
-  QScriptValue * o = new QScriptValue ( (const char *) hb_parc(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new10|const char *
 
 //[01]QScriptValue ()
 //[02]QScriptValue ( const QScriptValue & other )
@@ -253,20 +213,10 @@ par2 << *(QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aLis
   }
 }
 
-
 /*
 QScriptValue call ( const QScriptValue & thisObject, const QScriptValue & arguments )
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_CALL2 )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->call ( *PQSCRIPTVALUE(1), *PQSCRIPTVALUE(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
-  }
-}
-
+$method=|QScriptValue|call,call2|const QScriptValue &,const QScriptValue &
 
 //[1]QScriptValue call ( const QScriptValue & thisObject = QScriptValue(), const QScriptValueList & args = QScriptValueList() )
 //[2]QScriptValue call ( const QScriptValue & thisObject, const QScriptValue & arguments )
@@ -306,20 +256,10 @@ par1 << *(QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aLis
   }
 }
 
-
 /*
 QScriptValue construct ( const QScriptValue & arguments )
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT2 )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->construct ( *PQSCRIPTVALUE(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
-  }
-}
-
+$method=|QScriptValue|construct,construct2|const QScriptValue &
 
 //[1]QScriptValue construct ( const QScriptValueList & args = QScriptValueList() )
 //[2]QScriptValue construct ( const QScriptValue & arguments )
@@ -339,396 +279,147 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT )
 /*
 QScriptValue data () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_DATA )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->data () );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
-  }
-}
-
+$method=|QScriptValue|data|
 
 /*
 QScriptEngine * engine () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_ENGINE )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScriptEngine * ptr = obj->engine ();
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTENGINE" );
-  }
-}
-
+$method=|QScriptEngine *|engine|
 
 /*
 bool equals ( const QScriptValue & other ) const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_EQUALS )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->equals ( *PQSCRIPTVALUE(1) ) );
-  }
-}
-
+$method=|bool|equals|const QScriptValue &
 
 /*
 bool instanceOf ( const QScriptValue & other ) const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_INSTANCEOF )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->instanceOf ( *PQSCRIPTVALUE(1) ) );
-  }
-}
-
+$method=|bool|instanceOf|const QScriptValue &
 
 /*
 bool isArray () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_ISARRAY )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isArray () );
-  }
-}
-
+$method=|bool|isArray|
 
 /*
 bool isBool () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_ISBOOL )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isBool () );
-  }
-}
-
+$method=|bool|isBool|
 
 /*
 bool isDate () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_ISDATE )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isDate () );
-  }
-}
-
+$method=|bool|isDate|
 
 /*
 bool isError () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_ISERROR )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isError () );
-  }
-}
-
+$method=|bool|isError|
 
 /*
 bool isFunction () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_ISFUNCTION )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isFunction () );
-  }
-}
-
+$method=|bool|isFunction|
 
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_ISNULL )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 bool isNumber () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_ISNUMBER )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isNumber () );
-  }
-}
-
+$method=|bool|isNumber|
 
 /*
 bool isObject () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_ISOBJECT )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isObject () );
-  }
-}
-
+$method=|bool|isObject|
 
 /*
 bool isQMetaObject () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_ISQMETAOBJECT )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isQMetaObject () );
-  }
-}
-
+$method=|bool|isQMetaObject|
 
 /*
 bool isQObject () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_ISQOBJECT )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isQObject () );
-  }
-}
-
+$method=|bool|isQObject|
 
 /*
 bool isRegExp () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_ISREGEXP )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isRegExp () );
-  }
-}
-
+$method=|bool|isRegExp|
 
 /*
 bool isString () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_ISSTRING )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isString () );
-  }
-}
-
+$method=|bool|isString|
 
 /*
 bool isUndefined () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_ISUNDEFINED )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isUndefined () );
-  }
-}
-
+$method=|bool|isUndefined|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_ISVALID )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 bool isVariant () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_ISVARIANT )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isVariant () );
-  }
-}
-
+$method=|bool|isVariant|
 
 /*
 bool lessThan ( const QScriptValue & other ) const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_LESSTHAN )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->lessThan ( *PQSCRIPTVALUE(1) ) );
-  }
-}
-
-
-
-
-
-
+$method=|bool|lessThan|const QScriptValue &
 
 /*
 QScriptValue prototype () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_PROTOTYPE )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->prototype () );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
-  }
-}
-
+$method=|QScriptValue|prototype|
 
 /*
 QScriptClass * scriptClass () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_SCRIPTCLASS )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScriptClass * ptr = obj->scriptClass ();
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTCLASS" );
-  }
-}
-
+$method=|QScriptClass *|scriptClass|
 
 /*
 void setData ( const QScriptValue & data )
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_SETDATA )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setData ( *PQSCRIPTVALUE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
-
+$method=|void|setData|const QScriptValue &
 
 /*
 void setPrototype ( const QScriptValue & prototype )
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_SETPROTOTYPE )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPrototype ( *PQSCRIPTVALUE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPrototype|const QScriptValue &
 
 /*
 void setScriptClass ( QScriptClass * scriptClass )
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_SETSCRIPTCLASS )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScriptClass * par1 = (QScriptClass *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setScriptClass ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setScriptClass|QScriptClass *
 
 /*
 bool strictlyEquals ( const QScriptValue & other ) const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_STRICTLYEQUALS )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->strictlyEquals ( *PQSCRIPTVALUE(1) ) );
-  }
-}
-
+$method=|bool|strictlyEquals|const QScriptValue &
 
 /*
 bool toBool () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_TOBOOL )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->toBool () );
-  }
-}
-
+$method=|bool|toBool|
 
 /*
 QDateTime toDateTime () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_TODATETIME )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDateTime * ptr = new QDateTime( obj->toDateTime () );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
-  }
-}
-
+$method=|QDateTime|toDateTime|
 
 /*
 qint32 toInt32 () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_TOINT32 )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT32( obj->toInt32 () );
-  }
-}
-
+$method=|qint32|toInt32|
 
 /*
 qsreal toInteger () const
@@ -743,7 +434,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOINTEGER )
   }
 }
 
-
 /*
 qsreal toNumber () const
 */
@@ -757,34 +447,15 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TONUMBER )
   }
 }
 
-
-
 /*
 QObject * toQObject () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_TOQOBJECT )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QObject * ptr = obj->toQObject ();
-    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
-
+$method=|QObject *|toQObject|
 
 /*
 QRegExp toRegExp () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_TOREGEXP )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRegExp * ptr = new QRegExp( obj->toRegExp () );
-    _qt4xhb_createReturnClass ( ptr, "QREGEXP", true );
-  }
-}
+$method=|QRegExp|toRegExp|
 
 /*
 QString toString () const
@@ -794,41 +465,17 @@ $method=|QString|toString|
 /*
 quint16 toUInt16 () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_TOUINT16 )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQUINT16( obj->toUInt16 () );
-  }
-}
-
+$method=|quint16|toUInt16|
 
 /*
 quint32 toUInt32 () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_TOUINT32 )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQUINT32( obj->toUInt32 () );
-  }
-}
-
+$method=|quint32|toUInt32|
 
 /*
 QVariant toVariant () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_TOVARIANT )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->toVariant () );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$method=|QVariant|toVariant|
 
 $extraMethods
 

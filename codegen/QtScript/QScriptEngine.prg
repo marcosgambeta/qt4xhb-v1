@@ -12,8 +12,6 @@ REQUEST QSCRIPTSYNTAXCHECKRESULT
 
 CLASS QScriptEngine INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -143,19 +141,10 @@ HB_FUNC_STATIC( QSCRIPTENGINE_AGENT )
   }
 }
 
-
 /*
 QStringList availableExtensions () const
 */
-HB_FUNC_STATIC( QSCRIPTENGINE_AVAILABLEEXTENSIONS )
-{
-  QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->availableExtensions () );
-  }
-}
-
+$method=|QStringList|availableExtensions|
 
 /*
 void clearExceptions ()
@@ -270,18 +259,10 @@ HB_FUNC_STATIC( QSCRIPTENGINE_GLOBALOBJECT )
   }
 }
 
-
 /*
 bool hasUncaughtException () const
 */
-HB_FUNC_STATIC( QSCRIPTENGINE_HASUNCAUGHTEXCEPTION )
-{
-  QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasUncaughtException () );
-  }
-}
+$method=|bool|hasUncaughtException|
 
 /*
 QScriptValue importExtension ( const QString & extension )
@@ -307,19 +288,10 @@ HB_FUNC_STATIC( QSCRIPTENGINE_INSTALLTRANSLATORFUNCTIONS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isEvaluating () const
 */
-HB_FUNC_STATIC( QSCRIPTENGINE_ISEVALUATING )
-{
-  QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isEvaluating () );
-  }
-}
-
+$method=|bool|isEvaluating|
 
 /*
 QScriptValue newArray ( uint length = 0 )
@@ -457,19 +429,10 @@ HB_FUNC_STATIC( QSCRIPTENGINE_POPCONTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int processEventsInterval () const
 */
-HB_FUNC_STATIC( QSCRIPTENGINE_PROCESSEVENTSINTERVAL )
-{
-  QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->processEventsInterval () );
-  }
-}
-
+$method=|int|processEventsInterval|
 
 /*
 QScriptContext * pushContext ()

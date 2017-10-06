@@ -55,19 +55,10 @@ HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENT )
   }
 }
 
-
 /*
 int argumentCount () const
 */
-HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENTCOUNT )
-{
-  QScriptable * obj = (QScriptable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->argumentCount () );
-  }
-}
-
+$method=|int|argumentCount|
 
 /*
 QScriptContext * context () const

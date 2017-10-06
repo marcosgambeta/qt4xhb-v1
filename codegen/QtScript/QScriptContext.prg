@@ -82,19 +82,10 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENT )
   }
 }
 
-
 /*
 int argumentCount () const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENTCOUNT )
-{
-  QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( (int) obj->argumentCount () );
-  }
-}
-
+$method=|int|argumentCount|
 
 /*
 QScriptValue argumentsObject () const
@@ -109,19 +100,10 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENTSOBJECT )
   }
 }
 
-
 /*
 QStringList backtrace () const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXT_BACKTRACE )
-{
-  QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->backtrace () );
-  }
-}
-
+$method=|QStringList|backtrace|
 
 /*
 QScriptValue callee () const
@@ -150,19 +132,10 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ENGINE )
   }
 }
 
-
 /*
 bool isCalledAsConstructor () const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXT_ISCALLEDASCONSTRUCTOR )
-{
-  QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isCalledAsConstructor () );
-  }
-}
-
+$method=|bool|isCalledAsConstructor|
 
 /*
 QScriptContext * parentContext () const

@@ -70,31 +70,15 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_FLAGS )
   }
 }
 
-
 /*
 bool hasNext () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_HASNEXT )
-{
-  QScriptValueIterator * obj = (QScriptValueIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasNext () );
-  }
-}
-
+$method=|bool|hasNext|
 
 /*
 bool hasPrevious () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_HASPREVIOUS )
-{
-  QScriptValueIterator * obj = (QScriptValueIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasPrevious () );
-  }
-}
+$method=|bool|hasPrevious|
 
 /*
 QString name () const

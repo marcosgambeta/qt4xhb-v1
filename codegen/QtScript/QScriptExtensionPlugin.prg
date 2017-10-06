@@ -8,8 +8,6 @@ REQUEST QSCRIPTVALUE
 
 CLASS QScriptExtensionPlugin INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD setupPackage
    METHOD initialize
@@ -61,21 +59,9 @@ HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_INITIALIZE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QStringList keys () const = 0
 */
-HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_KEYS )
-{
-  QScriptExtensionPlugin * obj = (QScriptExtensionPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->keys () );
-  }
-}
-
-
-
-
+$virtualMethod=|QStringList|keys|
 
 #pragma ENDDUMP

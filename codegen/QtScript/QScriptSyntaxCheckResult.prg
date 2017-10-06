@@ -47,27 +47,12 @@ $deleteMethod
 /*
 int errorColumnNumber () const
 */
-HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORCOLUMNNUMBER )
-{
-  QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->errorColumnNumber () );
-  }
-}
-
+$method=|int|errorColumnNumber|
 
 /*
 int errorLineNumber () const
 */
-HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORLINENUMBER )
-{
-  QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->errorLineNumber () );
-  }
-}
+$method=|int|errorLineNumber|
 
 /*
 QString errorMessage () const

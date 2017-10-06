@@ -100,27 +100,12 @@ $method=|QString|fileName|
 /*
 int firstLineNumber () const
 */
-HB_FUNC_STATIC( QSCRIPTPROGRAM_FIRSTLINENUMBER )
-{
-  QScriptProgram * obj = (QScriptProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->firstLineNumber () );
-  }
-}
-
+$method=|int|firstLineNumber|
 
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QSCRIPTPROGRAM_ISNULL )
-{
-  QScriptProgram * obj = (QScriptProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
+$method=|bool|isNull|
 
 /*
 QString sourceCode () const

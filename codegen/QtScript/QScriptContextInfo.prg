@@ -107,27 +107,12 @@ $method=|QString|fileName|
 /*
 int functionEndLineNumber () const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONENDLINENUMBER )
-{
-  QScriptContextInfo * obj = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->functionEndLineNumber () );
-  }
-}
-
+$method=|int|functionEndLineNumber|
 
 /*
 int functionMetaIndex () const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONMETAINDEX )
-{
-  QScriptContextInfo * obj = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->functionMetaIndex () );
-  }
-}
+$method=|int|functionMetaIndex|
 
 /*
 QString functionName () const
@@ -137,28 +122,12 @@ $method=|QString|functionName|
 /*
 QStringList functionParameterNames () const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONPARAMETERNAMES )
-{
-  QScriptContextInfo * obj = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->functionParameterNames () );
-  }
-}
-
+$method=|QStringList|functionParameterNames|
 
 /*
 int functionStartLineNumber () const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONSTARTLINENUMBER )
-{
-  QScriptContextInfo * obj = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->functionStartLineNumber () );
-  }
-}
-
+$method=|int|functionStartLineNumber|
 
 /*
 FunctionType functionType () const
@@ -172,44 +141,20 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONTYPE )
   }
 }
 
-
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_ISNULL )
-{
-  QScriptContextInfo * obj = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 int lineNumber () const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_LINENUMBER )
-{
-  QScriptContextInfo * obj = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->lineNumber () );
-  }
-}
-
+$method=|int|lineNumber|
 
 /*
 qint64 scriptId () const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_SCRIPTID )
-{
-  QScriptContextInfo * obj = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->scriptId () );
-  }
-}
+$method=|qint64|scriptId|
 
 $extraMethods
 

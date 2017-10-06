@@ -172,18 +172,10 @@ HB_FUNC_STATIC( QSCRIPTCLASS_SETPROPERTY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool supportsExtension ( Extension extension ) const
 */
-HB_FUNC_STATIC( QSCRIPTCLASS_SUPPORTSEXTENSION )
-{
-  QScriptClass * obj = (QScriptClass *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->supportsExtension ( (QScriptClass::Extension) hb_parni(1) ) );
-  }
-}
+$virtualMethod=|bool|supportsExtension|QScriptClass::Extension
 
 $extraMethods
 

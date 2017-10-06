@@ -77,14 +77,7 @@ $deleteMethod
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QSCRIPTSTRING_ISVALID )
-{
-  QScriptString * obj = (QScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
+$method=|bool|isValid|
 
 /*
 QString toString () const

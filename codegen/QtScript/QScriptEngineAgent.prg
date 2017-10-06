@@ -140,88 +140,35 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXTENSION )
   }
 }
 
-
 /*
 virtual void functionEntry ( qint64 scriptId )
 */
-HB_FUNC_STATIC( QSCRIPTENGINEAGENT_FUNCTIONENTRY )
-{
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->functionEntry ( PQINT64(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|functionEntry|qint64
 
 /*
 virtual void functionExit ( qint64 scriptId, const QScriptValue & returnValue )
 */
-HB_FUNC_STATIC( QSCRIPTENGINEAGENT_FUNCTIONEXIT )
-{
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->functionExit ( PQINT64(1), *PQSCRIPTVALUE(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|functionExit|qint64,const QScriptValue &
 
 /*
 virtual void positionChange ( qint64 scriptId, int lineNumber, int columnNumber )
 */
-HB_FUNC_STATIC( QSCRIPTENGINEAGENT_POSITIONCHANGE )
-{
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->positionChange ( PQINT64(1), PINT(2), PINT(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|positionChange|qint64,int,int
 
 /*
 virtual void scriptLoad ( qint64 id, const QString & program, const QString & fileName, int baseLineNumber )
 */
-HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SCRIPTLOAD )
-{
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->scriptLoad ( PQINT64(1), PQSTRING(2), PQSTRING(3), PINT(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|scriptLoad|qint64,const QString &,const QString &,int
 
 /*
 virtual void scriptUnload ( qint64 id )
 */
-HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SCRIPTUNLOAD )
-{
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->scriptUnload ( PQINT64(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|scriptUnload|qint64
 
 /*
 virtual bool supportsExtension ( Extension extension ) const
 */
-HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SUPPORTSEXTENSION )
-{
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->supportsExtension ( (QScriptEngineAgent::Extension) hb_parni(1) ) );
-  }
-}
+$virtualMethod=|bool|supportsExtension|QScriptEngineAgent::Extension
 
 $extraMethods
 
