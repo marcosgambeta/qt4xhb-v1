@@ -239,46 +239,17 @@ $method=|bool|bind|
 /*
 void bindAttributeLocation ( const char * name, int location )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_BINDATTRIBUTELOCATION1 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    obj->bindAttributeLocation ( (const char *) hb_parc(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|bindAttributeLocation,bindAttributeLocation1|const char *,int
 
 /*
 void bindAttributeLocation ( const QByteArray & name, int location )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_BINDATTRIBUTELOCATION2 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->bindAttributeLocation ( *PQBYTEARRAY(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|bindAttributeLocation,bindAttributeLocation2|const QByteArray &,int
 
 /*
 void bindAttributeLocation ( const QString & name, int location )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_BINDATTRIBUTELOCATION3 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    obj->bindAttributeLocation ( PQSTRING(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|bindAttributeLocation,bindAttributeLocation3|const QString &,int
 
 //[1]void bindAttributeLocation ( const char * name, int location )
 //[2]void bindAttributeLocation ( const QByteArray & name, int location )
@@ -303,30 +274,12 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_BINDATTRIBUTELOCATION )
 /*
 void disableAttributeArray ( int location )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_DISABLEATTRIBUTEARRAY1 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->disableAttributeArray ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|disableAttributeArray,disableAttributeArray1|int
 
 /*
 void disableAttributeArray ( const char * name )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_DISABLEATTRIBUTEARRAY2 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->disableAttributeArray ( (const char *) hb_parc(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|disableAttributeArray,disableAttributeArray2|const char *
 
 //[1]void disableAttributeArray ( int location )
 //[2]void disableAttributeArray ( const char * name )
@@ -346,30 +299,12 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_DISABLEATTRIBUTEARRAY )
 /*
 void enableAttributeArray ( int location )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_ENABLEATTRIBUTEARRAY1 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->enableAttributeArray ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|enableAttributeArray,enableAttributeArray1|int
 
 /*
 void enableAttributeArray ( const char * name )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_ENABLEATTRIBUTEARRAY2 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->enableAttributeArray ( (const char *) hb_parc(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|enableAttributeArray,enableAttributeArray2|const char *
 
 //[1]void enableAttributeArray ( int location )
 //[2]void enableAttributeArray ( const char * name )
@@ -389,27 +324,12 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_ENABLEATTRIBUTEARRAY )
 /*
 GLenum geometryInputType () const
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_GEOMETRYINPUTTYPE )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RGLENUM( obj->geometryInputType () );
-  }
-}
-
+$method=|GLenum|geometryInputType|
 
 /*
 GLenum geometryOutputType () const
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_GEOMETRYOUTPUTTYPE )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RGLENUM( obj->geometryOutputType () );
-  }
-}
+$method=|GLenum|geometryOutputType|
 
 /*
 int geometryOutputVertexCount () const
@@ -439,68 +359,22 @@ $method=|int|maxGeometryOutputVertices|
 /*
 GLuint programId () const
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_PROGRAMID )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RGLUINT( obj->programId () );
-  }
-}
-
+$method=|GLuint|programId|
 
 /*
 void release ()
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_RELEASE )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->release ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|release|
 
 /*
 void removeAllShaders ()
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_REMOVEALLSHADERS )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->removeAllShaders ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|removeAllShaders|
 
 /*
 void removeShader ( QGLShader * shader )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_REMOVESHADER )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QGLShader * par1 = (QGLShader *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->removeShader ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
-
-
-
-
-
-
-
-
+$method=|void|removeShader|QGLShader *
 
 //[01]void setAttributeArray ( int location, const GLfloat * values, int tupleSize, int stride = 0 )
 //[02]void setAttributeArray ( int location, const QVector2D * values, int stride = 0 )
@@ -513,7 +387,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_REMOVESHADER )
 //[09]void setAttributeArray ( const char * name, const QVector4D * values, int stride = 0 )
 //[10]void setAttributeArray ( const char * name, GLenum type, const void * values, int tupleSize, int stride = 0 )
 
-// TODO: implementar
+%% TODO: implementar
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEARRAY )
 {
 }
@@ -521,30 +395,12 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEARRAY )
 /*
 void setAttributeBuffer ( int location, GLenum type, int offset, int tupleSize, int stride = 0 )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEBUFFER1 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAttributeBuffer ( PINT(1), PGLENUM(2), PINT(3), PINT(4), OPINT(5,0) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAttributeBuffer,setAttributeBuffer1|int,GLenum,int,int,int=0
 
 /*
 void setAttributeBuffer ( const char * name, GLenum type, int offset, int tupleSize, int stride = 0 )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEBUFFER2 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAttributeBuffer ( (const char *) hb_parc(1), PGLENUM(2), PINT(3), PINT(4), OPINT(5,0) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAttributeBuffer,setAttributeBuffer2|const char *,GLenum,int,int,int=0
 
 //[1]void setAttributeBuffer ( int location, GLenum type, int offset, int tupleSize, int stride = 0 )
 //[2]void setAttributeBuffer ( const char * name, GLenum type, int offset, int tupleSize, int stride = 0 )
@@ -564,152 +420,52 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEBUFFER )
 /*
 void setAttributeValue ( int location, GLfloat value )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE1 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAttributeValue ( PINT(1), PGLFLOAT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAttributeValue,setAttributeValue1|int,GLfloat
 
 /*
 void setAttributeValue ( int location, GLfloat x, GLfloat y )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE2 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAttributeValue ( PINT(1), PGLFLOAT(2), PGLFLOAT(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAttributeValue,setAttributeValue2|int,GLfloat,GLfloat
 
 /*
 void setAttributeValue ( int location, GLfloat x, GLfloat y, GLfloat z )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE3 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAttributeValue ( PINT(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAttributeValue,setAttributeValue3|int,GLfloat,GLfloat,GLfloat
 
 /*
 void setAttributeValue ( int location, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE4 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAttributeValue ( PINT(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4), PGLFLOAT(5) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
-
+$method=|void|setAttributeValue,setAttributeValue4|int,GLfloat,GLfloat,GLfloat,GLfloat
 
 /*
 void setAttributeValue ( int location, const QColor & value )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE8 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QColor par2 = ISOBJECT(2)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(2));
-    obj->setAttributeValue ( PINT(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|setAttributeValue,setAttributeValue8|int,const QColor &
 
 /*
 void setAttributeValue ( const char * name, GLfloat value )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE10 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAttributeValue ( (const char *) hb_parc(1), PGLFLOAT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAttributeValue,setAttributeValue10|const char *,GLfloat
 
 /*
 void setAttributeValue ( const char * name, GLfloat x, GLfloat y )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE11 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAttributeValue ( (const char *) hb_parc(1), PGLFLOAT(2), PGLFLOAT(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAttributeValue,setAttributeValue11|const char *,GLfloat,GLfloat
 
 /*
 void setAttributeValue ( const char * name, GLfloat x, GLfloat y, GLfloat z )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE12 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAttributeValue ( (const char *) hb_parc(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAttributeValue,setAttributeValue12|const char *,GLfloat,GLfloat,GLfloat
 
 /*
 void setAttributeValue ( const char * name, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE13 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAttributeValue ( (const char *) hb_parc(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4), PGLFLOAT(5) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
-
+$method=|void|setAttributeValue,setAttributeValue13|const char *,GLfloat,GLfloat,GLfloat,GLfloat
 
 /*
 void setAttributeValue ( const char * name, const QColor & value )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE17 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QColor par2 = ISOBJECT(2)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(2));
-    obj->setAttributeValue ( (const char *) hb_parc(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|setAttributeValue,setAttributeValue17|const char *,const QColor &
 
 //[01]void setAttributeValue ( int location, GLfloat value )
 //[02]void setAttributeValue ( int location, GLfloat x, GLfloat y )
@@ -730,7 +486,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE17 )
 //[17]void setAttributeValue ( const char * name, const QColor & value )
 //[18]void setAttributeValue ( const char * name, const GLfloat * values, int columns, int rows )
 
-// TODO: implementar casos 5/6/7/9/14/15/16/18
+%% TODO: implementar casos 5/6/7/9/14/15/16/18
 
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE )
 {
@@ -779,412 +535,137 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE )
 /*
 void setGeometryInputType ( GLenum inputType )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETGEOMETRYINPUTTYPE )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setGeometryInputType ( PGLENUM(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setGeometryInputType|GLenum
 
 /*
 void setGeometryOutputType ( GLenum outputType )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETGEOMETRYOUTPUTTYPE )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setGeometryOutputType ( PGLENUM(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setGeometryOutputType|GLenum
 
 /*
 void setGeometryOutputVertexCount ( int count )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETGEOMETRYOUTPUTVERTEXCOUNT )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setGeometryOutputVertexCount ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setGeometryOutputVertexCount|int
 
 /*
 void setUniformValue ( int location, GLfloat value )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE1 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUniformValue ( PINT(1), PGLFLOAT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setUniformValue,setUniformValue1|int,GLfloat
 
 /*
 void setUniformValue ( const char * name, const QPointF & point )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE2 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUniformValue ( (const char *) hb_parc(1), *PQPOINTF(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setUniformValue,setUniformValue2|const char *,const QPointF &
 
 /*
 void setUniformValue ( const char * name, const QSize & size )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE3 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUniformValue ( (const char *) hb_parc(1), *PQSIZE(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setUniformValue,setUniformValue3|const char *,const QSize &
 
 /*
 void setUniformValue ( const char * name, const QSizeF & size )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE4 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUniformValue ( (const char *) hb_parc(1), *PQSIZEF(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$method=|void|setUniformValue,setUniformValue4|const char *,const QSizeF &
 
 /*
 void setUniformValue ( const char * name, const QTransform & value )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE20 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUniformValue ( (const char *) hb_parc(1), *PQTRANSFORM(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setUniformValue,setUniformValue20|const char *,const QTransform &
 
 /*
 void setUniformValue ( int location, GLint value )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE21 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUniformValue ( PINT(1), PGLINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setUniformValue,setUniformValue21|int,GLint
 
 /*
 void setUniformValue ( int location, GLuint value )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE22 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUniformValue ( PINT(1), PGLUINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setUniformValue,setUniformValue22|int,GLuint
 
 /*
 void setUniformValue ( int location, GLfloat x, GLfloat y )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE23 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUniformValue ( PINT(1), PGLFLOAT(2), PGLFLOAT(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setUniformValue,setUniformValue23|int,GLfloat,GLfloat
 
 /*
 void setUniformValue ( int location, GLfloat x, GLfloat y, GLfloat z )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE24 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUniformValue ( PINT(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setUniformValue,setUniformValue24|int,GLfloat,GLfloat,GLfloat
 
 /*
 void setUniformValue ( int location, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE25 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUniformValue ( PINT(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4), PGLFLOAT(5) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
-
+$method=|void|setUniformValue,setUniformValue25|int,GLfloat,GLfloat,GLfloat,GLfloat
 
 /*
 void setUniformValue ( int location, const QColor & color )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE29 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QColor par2 = ISOBJECT(2)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(2));
-    obj->setUniformValue ( PINT(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setUniformValue,setUniformValue29|int,const QColor &
 
 /*
 void setUniformValue ( int location, const QPoint & point )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE30 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUniformValue ( PINT(1), *PQPOINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setUniformValue,setUniformValue30|int,const QPoint &
 
 /*
 void setUniformValue ( int location, const QPointF & point )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE31 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUniformValue ( PINT(1), *PQPOINTF(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setUniformValue,setUniformValue31|int,const QPointF &
 
 /*
 void setUniformValue ( int location, const QSize & size )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE32 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUniformValue ( PINT(1), *PQSIZE(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setUniformValue,setUniformValue32|int,const QSize &
 
 /*
 void setUniformValue ( int location, const QSizeF & size )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE33 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUniformValue ( PINT(1), *PQSIZEF(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
-
-
-
-
-
-
-
+$method=|void|setUniformValue,setUniformValue33|int,const QSizeF &
 
 /*
 void setUniformValue ( int location, const QTransform & value )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE43 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUniformValue ( PINT(1), *PQTRANSFORM(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setUniformValue,setUniformValue43|int,const QTransform &
 
 /*
 void setUniformValue ( const char * name, GLfloat value )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE44 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUniformValue ( (const char *) hb_parc(1), PGLFLOAT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setUniformValue,setUniformValue44|const char *,GLfloat
 
 /*
 void setUniformValue ( const char * name, GLint value )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE45 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUniformValue ( (const char *) hb_parc(1), PGLINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setUniformValue,setUniformValue45|const char *,GLint
 
 /*
 void setUniformValue ( const char * name, GLuint value )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE46 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUniformValue ( (const char *) hb_parc(1), PGLUINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setUniformValue,setUniformValue46|const char *,GLuint
 
 /*
 void setUniformValue ( const char * name, GLfloat x, GLfloat y )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE47 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUniformValue ( (const char *) hb_parc(1), PGLFLOAT(2), PGLFLOAT(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setUniformValue,setUniformValue47|const char *,GLfloat,GLfloat
 
 /*
 void setUniformValue ( const char * name, GLfloat x, GLfloat y, GLfloat z )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE48 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUniformValue ( (const char *) hb_parc(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setUniformValue,setUniformValue48|const char *,GLfloat,GLfloat,GLfloat
 
 /*
 void setUniformValue ( const char * name, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE49 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUniformValue ( (const char *) hb_parc(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4), PGLFLOAT(5) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
-
+$method=|void|setUniformValue,setUniformValue49|const char *,GLfloat,GLfloat,GLfloat,GLfloat
 
 /*
 void setUniformValue ( const char * name, const QColor & color )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE53 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QColor par2 = ISOBJECT(2)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(2));
-    obj->setUniformValue ( (const char *) hb_parc(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setUniformValue,setUniformValue53|const char *,const QColor &
 
 /*
 void setUniformValue ( const char * name, const QPoint & point )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE54 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUniformValue ( (const char *) hb_parc(1), *PQPOINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setUniformValue,setUniformValue54|const char *,const QPoint &
 
 //[01]void setUniformValue ( int location, GLfloat value )
 //[02]void setUniformValue ( const char * name, const QPointF & point )
@@ -1241,7 +722,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE54 )
 //[53]void setUniformValue ( const char * name, const QColor & color )
 //[54]void setUniformValue ( const char * name, const QPoint & point )
 
-// TODO: implementar reconhecimento de parâmetros
+%% TODO: implementar reconhecimento de parâmetros
 
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE )
 {
@@ -1254,36 +735,6 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE )
     HB_FUNC_EXEC( QGLSHADERPROGRAM_SETUNIFORMVALUE53 );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //[01]void setUniformValueArray ( int location, const GLfloat * values, int count, int tupleSize )
 //[02]void setUniformValueArray ( int location, const GLint * values, int count )
@@ -1316,7 +767,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE )
 //[29]void setUniformValueArray ( const char * name, const QMatrix4x3 * values, int count )
 //[30]void setUniformValueArray ( const char * name, const QMatrix4x4 * values, int count )
 
-// TODO: implementar métodos e reconhecimento dos parâmetros
+%% TODO: implementar métodos e reconhecimento dos parâmetros
 
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUEARRAY )
 {
@@ -1328,6 +779,7 @@ QList<QGLShader *> shaders () const
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SHADERS )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QGLShader *> list = obj->shaders ();

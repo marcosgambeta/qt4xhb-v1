@@ -370,7 +370,7 @@ static bool areSharing ( const QGLContext * context1, const QGLContext * context
 $staticMethod=|bool|areSharing|const QGLContext *,const QGLContext *
 
 /*
-const QGLContext * currentContext ()
+static const QGLContext * currentContext ()
 */
 HB_FUNC_STATIC( QGLCONTEXT_CURRENTCONTEXT )
 {
@@ -378,15 +378,10 @@ HB_FUNC_STATIC( QGLCONTEXT_CURRENTCONTEXT )
   _qt4xhb_createReturnClass ( ptr, "QGLCONTEXT" );
 }
 
-
 /*
-void setTextureCacheLimit ( int size )
+static void setTextureCacheLimit ( int size )
 */
-HB_FUNC_STATIC( QGLCONTEXT_SETTEXTURECACHELIMIT )
-{
-  QGLContext::setTextureCacheLimit ( PINT(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|setTextureCacheLimit|int
 
 /*
 static int textureCacheLimit ()

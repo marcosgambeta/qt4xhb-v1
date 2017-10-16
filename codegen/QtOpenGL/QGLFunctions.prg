@@ -135,379 +135,132 @@ $deleteMethod
 /*
 void glActiveTexture ( GLenum texture )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLACTIVETEXTURE )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glActiveTexture ( PGLENUM(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|glActiveTexture|GLenum
 
 /*
 void glAttachShader ( GLuint program, GLuint shader )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLATTACHSHADER )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glAttachShader ( PGLUINT(1), PGLUINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|glAttachShader|GLuint,GLuint
 
 /*
 void glBindAttribLocation ( GLuint program, GLuint index, const char * name )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLBINDATTRIBLOCATION )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glBindAttribLocation ( PGLUINT(1), PGLUINT(2), (const char *) hb_parc(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|glBindAttribLocation|GLuint,GLuint,const char *
 
 /*
 void glBindBuffer ( GLenum target, GLuint buffer )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLBINDBUFFER )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glBindBuffer ( PGLENUM(1), PGLUINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|glBindBuffer|GLenum,GLuint
 
 /*
 void glBindFramebuffer ( GLenum target, GLuint framebuffer )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLBINDFRAMEBUFFER )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glBindFramebuffer ( PGLENUM(1), PGLUINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|glBindFramebuffer|GLenum,GLuint
 
 /*
 void glBindRenderbuffer ( GLenum target, GLuint renderbuffer )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLBINDRENDERBUFFER )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glBindRenderbuffer ( PGLENUM(1), PGLUINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|glBindRenderbuffer|GLenum,GLuint
 
 /*
 void glBlendColor ( GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLBLENDCOLOR )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    GLclampf par1 = hb_parnd(1);
-    GLclampf par2 = hb_parnd(2);
-    GLclampf par3 = hb_parnd(3);
-    GLclampf par4 = hb_parnd(4);
-    obj->glBlendColor ( par1, par2, par3, par4 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|glBlendColor|GLclampf,GLclampf,GLclampf,GLclampf
 
 /*
 void glBlendEquation ( GLenum mode )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLBLENDEQUATION )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glBlendEquation ( PGLENUM(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|glBlendEquation|GLenum
 
 /*
 void glBlendEquationSeparate ( GLenum modeRGB, GLenum modeAlpha )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLBLENDEQUATIONSEPARATE )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glBlendEquationSeparate ( PGLENUM(1), PGLENUM(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|glBlendEquationSeparate|GLenum,GLenum
 
 /*
 void glBlendFuncSeparate ( GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLBLENDFUNCSEPARATE )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glBlendFuncSeparate ( PGLENUM(1), PGLENUM(2), PGLENUM(3), PGLENUM(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$method=|void|glBlendFuncSeparate|GLenum,GLenum,GLenum,GLenum
 
 /*
 GLenum glCheckFramebufferStatus ( GLenum target )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLCHECKFRAMEBUFFERSTATUS )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RGLENUM( obj->glCheckFramebufferStatus ( PGLENUM(1) ) );
-  }
-}
-
+$method=|GLenum|glCheckFramebufferStatus|GLenum
 
 /*
 void glClearDepthf ( GLclampf depth )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLCLEARDEPTHF )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    GLclampf par1 = hb_parnd(1);
-    obj->glClearDepthf ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|glClearDepthf|GLclampf
 
 /*
 void glCompileShader ( GLuint shader )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLCOMPILESHADER )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glCompileShader ( PGLUINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|glCompileShader|GLuint
 
 /*
 void glCompressedTexImage2D ( GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, const void * data )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLCOMPRESSEDTEXIMAGE2D )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const void * par8 = (const void *) hb_parptr(8);
-    obj->glCompressedTexImage2D ( PGLENUM(1), PGLINT(2), PGLENUM(3), PGLSIZEI(4), PGLSIZEI(5), PGLINT(6), PGLSIZEI(7), par8 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|glCompressedTexImage2D|GLenum,GLint,GLenum,GLsizei,GLsizei,GLint,GLsizei,const void *
 
 /*
 void glCompressedTexSubImage2D ( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, const void * data )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLCOMPRESSEDTEXSUBIMAGE2D )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const void * par9 = (const void *) hb_parptr(9);
-    obj->glCompressedTexSubImage2D ( PGLENUM(1), PGLINT(2), PGLINT(3), PGLINT(4), PGLSIZEI(5), PGLSIZEI(6), PGLENUM(7), PGLSIZEI(8), par9 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|glCompressedTexSubImage2D|GLenum,GLint,GLint,GLint,GLsizei,GLsizei,GLenum,GLsizei,const void *
 
 /*
 GLuint glCreateProgram ()
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLCREATEPROGRAM )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RGLUINT( obj->glCreateProgram () );
-  }
-}
-
+$method=|GLuint|glCreateProgram|
 
 /*
 GLuint glCreateShader ( GLenum type )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLCREATESHADER )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RGLUINT( obj->glCreateShader ( PGLENUM(1) ) );
-  }
-}
-
-
-
+$method=|GLuint|glCreateShader|GLenum
 
 /*
 void glDeleteProgram ( GLuint program )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLDELETEPROGRAM )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glDeleteProgram ( PGLUINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|glDeleteProgram|GLuint
 
 /*
 void glDeleteShader ( GLuint shader )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLDELETESHADER )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glDeleteShader ( PGLUINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|glDeleteShader|GLuint
 
 /*
 void glDepthRangef ( GLclampf zNear, GLclampf zFar )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLDEPTHRANGEF )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    GLclampf par1 = hb_parnd(1);
-    GLclampf par2 = hb_parnd(2);
-    obj->glDepthRangef ( par1, par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|glDepthRangef|GLclampf,GLclampf
 
 /*
 void glDetachShader ( GLuint program, GLuint shader )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLDETACHSHADER )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glDetachShader ( PGLUINT(1), PGLUINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|glDetachShader|GLuint,GLuint
 
 /*
 void glDisableVertexAttribArray ( GLuint index )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLDISABLEVERTEXATTRIBARRAY )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glDisableVertexAttribArray ( PGLUINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|glDisableVertexAttribArray|GLuint
 
 /*
 void glEnableVertexAttribArray ( GLuint index )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLENABLEVERTEXATTRIBARRAY )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glEnableVertexAttribArray ( PGLUINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|glEnableVertexAttribArray|GLuint
 
 /*
 void glFramebufferRenderbuffer ( GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLFRAMEBUFFERRENDERBUFFER )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glFramebufferRenderbuffer ( PGLENUM(1), PGLENUM(2), PGLENUM(3), PGLUINT(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|glFramebufferRenderbuffer|GLenum,GLenum,GLenum,GLuint
 
 /*
 void glFramebufferTexture2D ( GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLFRAMEBUFFERTEXTURE2D )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glFramebufferTexture2D ( PGLENUM(1), PGLENUM(2), PGLENUM(3), PGLUINT(4), PGLINT(5) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
-
+$method=|void|glFramebufferTexture2D|GLenum,GLenum,GLenum,GLuint,GLint
 
 /*
 void glGenerateMipmap ( GLenum target )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLGENERATEMIPMAP )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glGenerateMipmap ( PGLENUM(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|glGenerateMipmap|GLenum
 
 /*
 int glGetAttribLocation ( GLuint program, const char * name )
@@ -522,392 +275,137 @@ $method=|int|glGetUniformLocation|GLuint,const char *
 /*
 GLboolean glIsBuffer ( GLuint buffer )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLISBUFFER )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RGLBOOLEAN( obj->glIsBuffer ( PGLUINT(1) ) );
-  }
-}
-
+$method=|GLboolean|glIsBuffer|GLuint
 
 /*
 GLboolean glIsFramebuffer ( GLuint framebuffer )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLISFRAMEBUFFER )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RGLBOOLEAN( obj->glIsFramebuffer ( PGLUINT(1) ) );
-  }
-}
-
+$method=|GLboolean|glIsFramebuffer|GLuint
 
 /*
 GLboolean glIsProgram ( GLuint program )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLISPROGRAM )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RGLBOOLEAN( obj->glIsProgram ( PGLUINT(1) ) );
-  }
-}
-
+$method=|GLboolean|glIsProgram|GLuint
 
 /*
 GLboolean glIsRenderbuffer ( GLuint renderbuffer )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLISRENDERBUFFER )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RGLBOOLEAN( obj->glIsRenderbuffer ( PGLUINT(1) ) );
-  }
-}
-
+$method=|GLboolean|glIsRenderbuffer|GLuint
 
 /*
 GLboolean glIsShader ( GLuint shader )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLISSHADER )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RGLBOOLEAN( obj->glIsShader ( PGLUINT(1) ) );
-  }
-}
-
+$method=|GLboolean|glIsShader|GLuint
 
 /*
 void glLinkProgram ( GLuint program )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLLINKPROGRAM )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glLinkProgram ( PGLUINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|glLinkProgram|GLuint
 
 /*
 void glReleaseShaderCompiler ()
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLRELEASESHADERCOMPILER )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glReleaseShaderCompiler ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|glReleaseShaderCompiler|
 
 /*
 void glRenderbufferStorage ( GLenum target, GLenum internalformat, GLsizei width, GLsizei height )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLRENDERBUFFERSTORAGE )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glRenderbufferStorage ( PGLENUM(1), PGLENUM(2), PGLSIZEI(3), PGLSIZEI(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|glRenderbufferStorage|GLenum,GLenum,GLsizei,GLsizei
 
 /*
 void glSampleCoverage ( GLclampf value, GLboolean invert )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLSAMPLECOVERAGE )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glSampleCoverage ( (GLclampf) hb_parnd(1), PGLBOOLEAN(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$method=|void|glSampleCoverage|GLclampf,GLboolean
 
 /*
 void glStencilFuncSeparate ( GLenum face, GLenum func, GLint ref, GLuint mask )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLSTENCILFUNCSEPARATE )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glStencilFuncSeparate ( PGLENUM(1), PGLENUM(2), PGLINT(3), PGLUINT(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|glStencilFuncSeparate|GLenum,GLenum,GLint,GLuint
 
 /*
 void glStencilMaskSeparate ( GLenum face, GLuint mask )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLSTENCILMASKSEPARATE )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glStencilMaskSeparate ( PGLENUM(1), PGLUINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|glStencilMaskSeparate|GLenum,GLuint
 
 /*
 void glStencilOpSeparate ( GLenum face, GLenum fail, GLenum zfail, GLenum zpass )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLSTENCILOPSEPARATE )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glStencilOpSeparate ( PGLENUM(1), PGLENUM(2), PGLENUM(3), PGLENUM(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|glStencilOpSeparate|GLenum,GLenum,GLenum,GLenum
 
 /*
 void glUniform1f ( GLint location, GLfloat x )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLUNIFORM1F )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glUniform1f ( PGLINT(1), PGLFLOAT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|glUniform1f|GLint,GLfloat
 
 /*
 void glUniform1i ( GLint location, GLint x )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLUNIFORM1I )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glUniform1i ( PGLINT(1), PGLINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|glUniform1i|GLint,GLint
 
 /*
 void glUniform2f ( GLint location, GLfloat x, GLfloat y )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLUNIFORM2F )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glUniform2f ( PGLINT(1), PGLFLOAT(2), PGLFLOAT(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|glUniform2f|GLint,GLfloat,GLfloat
 
 /*
 void glUniform2i ( GLint location, GLint x, GLint y )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLUNIFORM2I )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glUniform2i ( PGLINT(1), PGLINT(2), PGLINT(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|glUniform2i|GLint,GLint,GLint
 
 /*
 void glUniform3f ( GLint location, GLfloat x, GLfloat y, GLfloat z )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLUNIFORM3F )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glUniform3f ( PGLINT(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|glUniform3f|GLint,GLfloat,GLfloat,GLfloat
 
 /*
 void glUniform3i ( GLint location, GLint x, GLint y, GLint z )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLUNIFORM3I )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glUniform3i ( PGLINT(1), PGLINT(2), PGLINT(3), PGLINT(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|glUniform3i|GLint,GLint,GLint,GLint
 
 /*
 void glUniform4f ( GLint location, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLUNIFORM4F )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glUniform4f ( PGLINT(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4), PGLFLOAT(5) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|glUniform4f|GLint,GLfloat,GLfloat,GLfloat,GLfloat
 
 /*
 void glUniform4i ( GLint location, GLint x, GLint y, GLint z, GLint w )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLUNIFORM4I )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glUniform4i ( PGLINT(1), PGLINT(2), PGLINT(3), PGLINT(4), PGLINT(5) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
-
-
+$method=|void|glUniform4i|GLint,GLint,GLint,GLint,GLint
 
 /*
 void glUseProgram ( GLuint program )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLUSEPROGRAM )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glUseProgram ( PGLUINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|glUseProgram|GLuint
 
 /*
 void glValidateProgram ( GLuint program )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLVALIDATEPROGRAM )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glValidateProgram ( PGLUINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|glValidateProgram|GLuint
 
 /*
 void glVertexAttrib1f ( GLuint indx, GLfloat x )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLVERTEXATTRIB1F )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glVertexAttrib1f ( PGLUINT(1), PGLFLOAT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|glVertexAttrib1f|GLuint,GLfloat
 
 /*
 void glVertexAttrib2f ( GLuint indx, GLfloat x, GLfloat y )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLVERTEXATTRIB2F )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glVertexAttrib2f ( PGLUINT(1), PGLFLOAT(2), PGLFLOAT(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|glVertexAttrib2f|GLuint,GLfloat,GLfloat
 
 /*
 void glVertexAttrib3f ( GLuint indx, GLfloat x, GLfloat y, GLfloat z )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLVERTEXATTRIB3F )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glVertexAttrib3f ( PGLUINT(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|glVertexAttrib3f|GLuint,GLfloat,GLfloat,GLfloat
 
 /*
 void glVertexAttrib4f ( GLuint indx, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLVERTEXATTRIB4F )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->glVertexAttrib4f ( PGLUINT(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4), PGLFLOAT(5) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|glVertexAttrib4f|GLuint,GLfloat,GLfloat,GLfloat,GLfloat
 
 /*
 void glVertexAttribPointer ( GLuint indx, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const void * ptr )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLVERTEXATTRIBPOINTER )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const void * par6 = (const void *) hb_parptr(6);
-    obj->glVertexAttribPointer ( PGLUINT(1), PGLINT(2), PGLENUM(3), PGLBOOLEAN(4), PGLSIZEI(5), par6 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|glVertexAttribPointer|GLuint,GLint,GLenum,GLboolean,GLsizei,const void *
 
 /*
 bool hasOpenGLFeature ( QGLFunctions::OpenGLFeature feature ) const

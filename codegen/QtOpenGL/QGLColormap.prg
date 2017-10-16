@@ -89,29 +89,12 @@ $deleteMethod
 /*
 QColor entryColor ( int idx ) const
 */
-HB_FUNC_STATIC( QGLCOLORMAP_ENTRYCOLOR )
-{
-  QGLColormap * obj = (QGLColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QColor * ptr = new QColor( obj->entryColor ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-}
-
+$method=|QColor|entryColor|int
 
 /*
 QRgb entryRgb ( int idx ) const
 */
-HB_FUNC_STATIC( QGLCOLORMAP_ENTRYRGB )
-{
-  QGLColormap * obj = (QGLColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRgb i = obj->entryRgb ( PINT(1) );
-    hb_retni( i );
-  }
-}
+$method=|QRgb|entryRgb|int
 
 /*
 int find ( QRgb color ) const

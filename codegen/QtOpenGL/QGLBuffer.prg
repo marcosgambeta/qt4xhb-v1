@@ -122,20 +122,10 @@ HB_FUNC_STATIC( QGLBUFFER_ALLOCATE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void allocate ( int count )
 */
-HB_FUNC_STATIC( QGLBUFFER_ALLOCATE2 )
-{
-  QGLBuffer * obj = (QGLBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->allocate ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|allocate,allocate2|int
 
 //[1]void allocate ( const void * data, int count )
 //[2]void allocate ( int count )

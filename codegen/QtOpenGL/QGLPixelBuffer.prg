@@ -11,8 +11,6 @@ REQUEST QPAINTENGINE
 
 CLASS QGLPixelBuffer INHERIT QPaintDevice
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -100,27 +98,12 @@ $deleteMethod
 /*
 GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D )
 */
-HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTEXTURE1 )
-{
-  QGLPixelBuffer * obj = (QGLPixelBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RGLUINT( obj->bindTexture ( *PQIMAGE(1), OPGLENUM(2,GL_TEXTURE_2D) ) );
-  }
-}
-
+$method=|GLuint|bindTexture,bindTexture1|const QImage &,GLenum=GL_TEXTURE_2D
 
 /*
 GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D )
 */
-HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTEXTURE2 )
-{
-  QGLPixelBuffer * obj = (QGLPixelBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RGLUINT( obj->bindTexture ( *PQPIXMAP(1), OPGLENUM(2,GL_TEXTURE_2D) ) );
-  }
-}
+$method=|GLuint|bindTexture,bindTexture2|const QPixmap &,GLenum=GL_TEXTURE_2D
 
 /*
 GLuint bindTexture ( const QString & fileName )
@@ -143,15 +126,7 @@ $method=|bool|bindToDynamicTexture|GLuint
 /*
 void deleteTexture ( GLuint texture_id )
 */
-HB_FUNC_STATIC( QGLPIXELBUFFER_DELETETEXTURE )
-{
-  QGLPixelBuffer * obj = (QGLPixelBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->deleteTexture ( PGLUINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|deleteTexture|GLuint
 
 /*
 bool doneCurrent ()
@@ -161,30 +136,12 @@ $method=|bool|doneCurrent|
 /*
 void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 */
-HB_FUNC_STATIC( QGLPIXELBUFFER_DRAWTEXTURE1 )
-{
-  QGLPixelBuffer * obj = (QGLPixelBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->drawTexture ( *PQRECTF(1), PGLUINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|drawTexture,drawTexture1|const QRectF &,GLuint,GLenum=GL_TEXTURE_2D
 
 /*
 void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 */
-HB_FUNC_STATIC( QGLPIXELBUFFER_DRAWTEXTURE2 )
-{
-  QGLPixelBuffer * obj = (QGLPixelBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->drawTexture ( *PQPOINTF(1), PGLUINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|drawTexture,drawTexture2|const QPointF &,GLuint,GLenum=GL_TEXTURE_2D
 
 //[1]void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 //[2]void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
@@ -196,28 +153,12 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_DRAWTEXTURE )
 /*
 QGLFormat format () const
 */
-HB_FUNC_STATIC( QGLPIXELBUFFER_FORMAT )
-{
-  QGLPixelBuffer * obj = (QGLPixelBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QGLFormat * ptr = new QGLFormat( obj->format () );
-    _qt4xhb_createReturnClass ( ptr, "QGLFORMAT" );
-  }
-}
-
+$method=|QGLFormat|format|
 
 /*
 GLuint generateDynamicTexture () const
 */
-HB_FUNC_STATIC( QGLPIXELBUFFER_GENERATEDYNAMICTEXTURE )
-{
-  QGLPixelBuffer * obj = (QGLPixelBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RGLUINT( obj->generateDynamicTexture () );
-  }
-}
+$method=|GLuint|generateDynamicTexture|
 
 /*
 bool isValid () const
@@ -232,71 +173,27 @@ $method=|bool|makeCurrent|
 /*
 void releaseFromDynamicTexture ()
 */
-HB_FUNC_STATIC( QGLPIXELBUFFER_RELEASEFROMDYNAMICTEXTURE )
-{
-  QGLPixelBuffer * obj = (QGLPixelBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->releaseFromDynamicTexture ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|releaseFromDynamicTexture|
 
 /*
 QSize size () const
 */
-HB_FUNC_STATIC( QGLPIXELBUFFER_SIZE )
-{
-  QGLPixelBuffer * obj = (QGLPixelBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->size () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
-
+$method=|QSize|size|
 
 /*
 QImage toImage () const
 */
-HB_FUNC_STATIC( QGLPIXELBUFFER_TOIMAGE )
-{
-  QGLPixelBuffer * obj = (QGLPixelBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QImage * ptr = new QImage( obj->toImage () );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
-  }
-}
-
+$method=|QImage|toImage|
 
 /*
 void updateDynamicTexture ( GLuint texture_id ) const
 */
-HB_FUNC_STATIC( QGLPIXELBUFFER_UPDATEDYNAMICTEXTURE )
-{
-  QGLPixelBuffer * obj = (QGLPixelBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->updateDynamicTexture ( PGLUINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|updateDynamicTexture|GLuint
 
 /*
 virtual QPaintEngine * paintEngine () const
 */
-HB_FUNC_STATIC( QGLPIXELBUFFER_PAINTENGINE )
-{
-  QGLPixelBuffer * obj = (QGLPixelBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPaintEngine * ptr = obj->paintEngine ();
-    _qt4xhb_createReturnClass ( ptr, "QPAINTENGINE" );
-  }
-}
+$virtualMethod=|QPaintEngine *|paintEngine|
 
 /*
 static bool hasOpenGLPbuffers ()

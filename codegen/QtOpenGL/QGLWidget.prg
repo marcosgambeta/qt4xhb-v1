@@ -482,74 +482,29 @@ HB_FUNC_STATIC( QGLWIDGET_SETCOLORMAP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMouseTracking ( bool enable )
 */
-HB_FUNC_STATIC( QGLWIDGET_SETMOUSETRACKING )
-{
-  QGLWidget * obj = (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setMouseTracking ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setMouseTracking|bool
 
 /*
 void swapBuffers ()
 */
-HB_FUNC_STATIC( QGLWIDGET_SWAPBUFFERS )
-{
-  QGLWidget * obj = (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->swapBuffers ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|swapBuffers|
 
 /*
 virtual void updateGL ()
 */
-HB_FUNC_STATIC( QGLWIDGET_UPDATEGL )
-{
-  QGLWidget * obj = (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->updateGL ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|updateGL|
 
 /*
 virtual void updateOverlayGL ()
 */
-HB_FUNC_STATIC( QGLWIDGET_UPDATEOVERLAYGL )
-{
-  QGLWidget * obj = (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->updateOverlayGL ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$virtualMethod=|void|updateOverlayGL|
 
 /*
-QImage convertToGLFormat ( const QImage & img )
+static QImage convertToGLFormat ( const QImage & img )
 */
-HB_FUNC_STATIC( QGLWIDGET_CONVERTTOGLFORMAT )
-{
-  QImage * ptr = new QImage( QGLWidget::convertToGLFormat ( *PQIMAGE(1) ) );
-  _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
-}
-
-
-
+$staticMethod=|QImage|convertToGLFormat|const QImage &
 
 #pragma ENDDUMP
