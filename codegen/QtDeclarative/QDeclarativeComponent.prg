@@ -129,6 +129,7 @@ QList<QDeclarativeError> errors () const
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORS )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QDeclarativeError> list = obj->errors ();

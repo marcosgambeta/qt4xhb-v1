@@ -13,8 +13,6 @@ REQUEST QURL
 
 CLASS QDeclarativeView INHERIT QGraphicsView
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -94,6 +92,7 @@ QList<QDeclarativeError> errors () const
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
 {
   QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QDeclarativeError> list = obj->errors ();

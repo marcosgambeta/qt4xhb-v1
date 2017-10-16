@@ -10,8 +10,6 @@ REQUEST QSCRIPTVALUE
 
 CLASS QDeclarativeItem INHERIT QGraphicsObject,QDeclarativeParserStatus
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD baselineOffset
