@@ -82,6 +82,7 @@ virtual QList<QVideoFrame::PixelFormat> supportedPixelFormats ( QAbstractVideoBu
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_SUPPORTEDPIXELFORMATS )
 {
   QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QVideoFrame::PixelFormat> list = obj->supportedPixelFormats ( ISNIL(1)? QAbstractVideoBuffer::NoHandle : (QAbstractVideoBuffer::HandleType) hb_parni(1) );
