@@ -65,6 +65,7 @@ QList<QWebHistoryItem> backItems ( int maxItems ) const
 HB_FUNC_STATIC( QWEBHISTORY_BACKITEMS )
 {
   QWebHistory * obj = (QWebHistory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QWebHistoryItem> list = obj->backItems ( PINT(1) );
@@ -152,6 +153,7 @@ QList<QWebHistoryItem> forwardItems ( int maxItems ) const
 HB_FUNC_STATIC( QWEBHISTORY_FORWARDITEMS )
 {
   QWebHistory * obj = (QWebHistory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QWebHistoryItem> list = obj->forwardItems ( PINT(1) );

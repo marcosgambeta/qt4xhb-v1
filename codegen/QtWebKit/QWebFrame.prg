@@ -133,6 +133,7 @@ QList<QWebFrame *> childFrames () const
 HB_FUNC_STATIC( QWEBFRAME_CHILDFRAMES )
 {
   QWebFrame * obj = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QWebFrame *> list = obj->childFrames ();
