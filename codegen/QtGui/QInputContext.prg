@@ -51,6 +51,7 @@ virtual QList<QAction *> actions ()
 HB_FUNC_STATIC( QINPUTCONTEXT_ACTIONS )
 {
   QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QAction *> list = obj->actions ();

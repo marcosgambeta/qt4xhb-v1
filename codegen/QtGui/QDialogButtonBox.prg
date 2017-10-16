@@ -108,45 +108,17 @@ $deleteMethod
 /*
 void addButton ( QAbstractButton * button, ButtonRole role )
 */
-HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON1 )
-{
-  QDialogButtonBox * obj = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractButton * par1 = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = hb_parni(2);
-    obj->addButton ( par1, (QDialogButtonBox::ButtonRole) par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addButton,addButton1|QAbstractButton *,QDialogButtonBox::ButtonRole
 
 /*
 QPushButton * addButton ( const QString & text, ButtonRole role )
 */
-HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON2 )
-{
-  QDialogButtonBox * obj = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    QPushButton * ptr = obj->addButton ( PQSTRING(1), (QDialogButtonBox::ButtonRole) par2 );
-    _qt4xhb_createReturnClass ( ptr, "QPUSHBUTTON" );
-  }
-}
+$method=|QPushButton *|addButton,addButton2|const QString &,QDialogButtonBox::ButtonRole
 
 /*
 QPushButton * addButton ( StandardButton button )
 */
-HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON3 )
-{
-  QDialogButtonBox * obj = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    QPushButton * ptr = obj->addButton ( (QDialogButtonBox::StandardButton) par1 );
-    _qt4xhb_createReturnClass ( ptr, "QPUSHBUTTON" );
-  }
-}
+$method=|QPushButton *|addButton,addButton3|QDialogButtonBox::StandardButton
 
 //[1]void addButton ( QAbstractButton * button, ButtonRole role )
 //[2]QPushButton * addButton ( const QString & text, ButtonRole role )
@@ -171,29 +143,12 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON )
 /*
 QPushButton * button ( StandardButton which ) const
 */
-HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTON )
-{
-  QDialogButtonBox * obj = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    QPushButton * ptr = obj->button ( (QDialogButtonBox::StandardButton) par1 );
-    _qt4xhb_createReturnClass ( ptr, "QPUSHBUTTON" );
-  }
-}
+$method=|QPushButton *|button|QDialogButtonBox::StandardButton
 
 /*
 ButtonRole buttonRole ( QAbstractButton * button ) const
 */
-HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTONROLE )
-{
-  QDialogButtonBox * obj = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractButton * par1 = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( (int) obj->buttonRole ( par1 ) );
-  }
-}
+$method=|QDialogButtonBox::ButtonRole|buttonRole|QAbstractButton *
 
 /*
 QList<QAbstractButton *> buttons () const
@@ -201,6 +156,7 @@ QList<QAbstractButton *> buttons () const
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTONS )
 {
   QDialogButtonBox * obj = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QAbstractButton *> list = obj->buttons ();
@@ -276,26 +232,11 @@ $method=|void|setStandardButtons|QDialogButtonBox::StandardButtons
 /*
 StandardButton standardButton ( QAbstractButton * button ) const
 */
-HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTON )
-{
-  QDialogButtonBox * obj = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractButton * par1 = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( (int) obj->standardButton ( par1 ) );
-  }
-}
+$method=|QDialogButtonBox::StandardButton|standardButton|QAbstractButton *
 
 /*
 StandardButtons standardButtons () const
 */
-HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTONS )
-{
-  QDialogButtonBox * obj = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->standardButtons () );
-  }
-}
+$method=|QDialogButtonBox::StandardButtons|standardButtons|
 
 #pragma ENDDUMP

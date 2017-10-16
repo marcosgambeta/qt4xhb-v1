@@ -76,29 +76,12 @@ $deleteMethod
 /*
 void setTickInterval ( int ti )
 */
-HB_FUNC_STATIC( QSLIDER_SETTICKINTERVAL )
-{
-  QSlider * obj = (QSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTickInterval ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTickInterval|int
 
 /*
 void setTickPosition ( TickPosition position )
 */
-HB_FUNC_STATIC( QSLIDER_SETTICKPOSITION )
-{
-  QSlider * obj = (QSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setTickPosition ( (QSlider::TickPosition) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTickPosition|QSlider::TickPosition
 
 /*
 int tickInterval () const
@@ -108,14 +91,7 @@ $method=|int|tickInterval|
 /*
 TickPosition tickPosition () const
 */
-HB_FUNC_STATIC( QSLIDER_TICKPOSITION )
-{
-  QSlider * obj = (QSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->tickPosition () );
-  }
-}
+$method=|QSlider::TickPosition|tickPosition|
 
 /*
 virtual bool event ( QEvent * event )
@@ -125,27 +101,11 @@ $virtualMethod=|bool|event|QEvent *
 /*
 virtual QSize minimumSizeHint () const
 */
-HB_FUNC_STATIC( QSLIDER_MINIMUMSIZEHINT )
-{
-  QSlider * obj = (QSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->minimumSizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|minimumSizeHint|
 
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC_STATIC( QSLIDER_SIZEHINT )
-{
-  QSlider * obj = (QSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|sizeHint|
 
 #pragma ENDDUMP

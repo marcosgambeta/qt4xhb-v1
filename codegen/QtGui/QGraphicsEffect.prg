@@ -36,28 +36,12 @@ $deleteMethod
 /*
 QRectF boundingRect () const
 */
-HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECT )
-{
-  QGraphicsEffect * obj = (QGraphicsEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->boundingRect () );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$method=|QRectF|boundingRect|
 
 /*
 virtual QRectF boundingRectFor ( const QRectF & rect ) const
 */
-HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECTFOR )
-{
-  QGraphicsEffect * obj = (QGraphicsEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->boundingRectFor ( *PQRECTF(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$virtualMethod=|QRectF|boundingRectFor|const QRectF &
 
 /*
 bool isEnabled () const
@@ -67,27 +51,11 @@ $method=|bool|isEnabled|
 /*
 void setEnabled ( bool enable )
 */
-HB_FUNC_STATIC( QGRAPHICSEFFECT_SETENABLED )
-{
-  QGraphicsEffect * obj = (QGraphicsEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setEnabled ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setEnabled|bool
 
 /*
 void update ()
 */
-HB_FUNC_STATIC( QGRAPHICSEFFECT_UPDATE )
-{
-  QGraphicsEffect * obj = (QGraphicsEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->update ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|update|
 
 #pragma ENDDUMP

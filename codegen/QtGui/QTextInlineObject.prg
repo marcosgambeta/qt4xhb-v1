@@ -72,15 +72,7 @@ $method=|qreal|descent|
 /*
 QTextFormat format () const
 */
-HB_FUNC_STATIC( QTEXTINLINEOBJECT_FORMAT )
-{
-  QTextInlineObject * obj = (QTextInlineObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextFormat * ptr = new QTextFormat( obj->format () );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTFORMAT" );
-  }
-}
+$method=|QTextFormat|format|
 
 /*
 int formatIndex () const
@@ -100,15 +92,7 @@ $method=|bool|isValid|
 /*
 QRectF rect () const
 */
-HB_FUNC_STATIC( QTEXTINLINEOBJECT_RECT )
-{
-  QTextInlineObject * obj = (QTextInlineObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->rect () );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$method=|QRectF|rect|
 
 /*
 void setAscent ( qreal a )

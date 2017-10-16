@@ -76,16 +76,7 @@ $deleteMethod
 /*
 void setSupported ( QFontDatabase::WritingSystem writingSystem, bool support = true )
 */
-HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_SETSUPPORTED )
-{
-  QSupportedWritingSystems * obj = (QSupportedWritingSystems *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setSupported ( (QFontDatabase::WritingSystem) par1, OPBOOL(2,true) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSupported|QFontDatabase::WritingSystem,bool=true
 
 /*
 bool supported ( QFontDatabase::WritingSystem writingSystem ) const

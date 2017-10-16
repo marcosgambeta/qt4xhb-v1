@@ -43,15 +43,7 @@ $deleteMethod
 /*
 virtual QGesture * create ( QObject * target )
 */
-HB_FUNC_STATIC( QGESTURERECOGNIZER_CREATE )
-{
-  QGestureRecognizer * obj = (QGestureRecognizer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QGesture * ptr = obj->create ( PQOBJECT(1) );
-    _qt4xhb_createReturnClass ( ptr, "QGESTURE" );
-  }
-}
+$virtualMethod=|QGesture *|create|QObject *
 
 /*
 virtual Result recognize ( QGesture * gesture, QObject * watched, QEvent * event ) = 0
@@ -69,35 +61,17 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_RECOGNIZE )
 /*
 virtual void reset ( QGesture * gesture )
 */
-HB_FUNC_STATIC( QGESTURERECOGNIZER_RESET )
-{
-  QGestureRecognizer * obj = (QGestureRecognizer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QGesture * par1 = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->reset ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|reset|QGesture *
 
 /*
-Qt::GestureType registerRecognizer ( QGestureRecognizer * recognizer )
+static Qt::GestureType registerRecognizer ( QGestureRecognizer * recognizer )
 */
-HB_FUNC_STATIC( QGESTURERECOGNIZER_REGISTERRECOGNIZER )
-{
-  QGestureRecognizer * par1 = (QGestureRecognizer *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  hb_retni( (int) QGestureRecognizer::registerRecognizer ( par1 ) );
-}
+$staticMethod=|Qt::GestureType|registerRecognizer|QGestureRecognizer *
 
 /*
-void unregisterRecognizer ( Qt::GestureType type )
+static void unregisterRecognizer ( Qt::GestureType type )
 */
-HB_FUNC_STATIC( QGESTURERECOGNIZER_UNREGISTERRECOGNIZER )
-{
-  int par1 = hb_parni(1);
-  QGestureRecognizer::unregisterRecognizer ( (Qt::GestureType) par1 );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|unregisterRecognizer|Qt::GestureType
 
 $extraMethods
 

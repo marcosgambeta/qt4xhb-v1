@@ -19,8 +19,6 @@ REQUEST QICON
 
 CLASS QApplication INHERIT QCoreApplication
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD commitData

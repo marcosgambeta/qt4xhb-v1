@@ -49,28 +49,12 @@ $deleteMethod
 /*
 virtual void buildSysMenu ( QWidget * widget, QMenu * menu )
 */
-HB_FUNC_STATIC( QDECORATION_BUILDSYSMENU )
-{
-  QDecoration * obj = (QDecoration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->buildSysMenu ( PQWIDGET(1), PQMENU(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|buildSysMenu|QWidget *,QMenu *
 
 /*
 void menuTriggered ( QWidget * widget, QAction * action )
 */
-HB_FUNC_STATIC( QDECORATION_MENUTRIGGERED )
-{
-  QDecoration * obj = (QDecoration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->menuTriggered ( PQWIDGET(1), PQACTION(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|menuTriggered|QWidget *,QAction *
 
 /*
 virtual bool paint ( QPainter * painter, const QWidget * widget, int decorationRegion = All, DecorationState state = Normal ) = 0
@@ -80,30 +64,12 @@ $virtualMethod=|bool|paint|QPainter *,const QWidget *,int=QDecoration::All,QDeco
 /*
 virtual QRegion region ( const QWidget * widget, const QRect & rectangle, int decorationRegion = All ) = 0
 */
-HB_FUNC_STATIC( QDECORATION_REGION1 )
-{
-  QDecoration * obj = (QDecoration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QWidget * par1 = (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QRegion * ptr = new QRegion( obj->region ( par1, *PQRECT(2), OPINT(3,QDecoration::All) ) );
-    _qt4xhb_createReturnClass ( ptr, "QREGION", true );
-  }
-}
+$virtualMethod=|QRegion|region,region1|const QWidget *,const QRect &,int=QDecoration::All
 
 /*
 QRegion region ( const QWidget * widget, int decorationRegion = All )
 */
-HB_FUNC_STATIC( QDECORATION_REGION2 )
-{
-  QDecoration * obj = (QDecoration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QWidget * par1 = (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QRegion * ptr = new QRegion( obj->region ( par1, OPINT(2,QDecoration::All) ) );
-    _qt4xhb_createReturnClass ( ptr, "QREGION", true );
-  }
-}
+$method=|QRegion|region,region2|const QWidget *,int=QDecoration::All
 
 //[1]virtual QRegion region ( const QWidget * widget, const QRect & rectangle, int decorationRegion = All ) = 0
 //[2]QRegion region ( const QWidget * widget, int decorationRegion = All )

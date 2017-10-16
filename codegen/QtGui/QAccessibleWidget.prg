@@ -8,8 +8,6 @@ REQUEST QRECT
 
 CLASS QAccessibleWidget INHERIT QAccessibleObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD actionText
    METHOD childAt

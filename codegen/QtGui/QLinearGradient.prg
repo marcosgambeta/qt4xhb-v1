@@ -8,8 +8,6 @@ REQUEST QPOINTF
 
 CLASS QLinearGradient INHERIT QGradient
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new3
@@ -41,29 +39,17 @@ $destructor
 /*
 QLinearGradient()
 */
-HB_FUNC_STATIC( QLINEARGRADIENT_NEW1 )
-{
-  QLinearGradient * o = new QLinearGradient ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|
 
 /*
 QLinearGradient(const QPointF &start, const QPointF &finalStop)
 */
-HB_FUNC_STATIC( QLINEARGRADIENT_NEW2 )
-{
-  QLinearGradient * o = new QLinearGradient ( *PQPOINTF(1), *PQPOINTF(2) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QPointF &,const QPointF &
 
 /*
 QLinearGradient(qreal xStart, qreal yStart, qreal xFinalStop, qreal yFinalStop)
 */
-HB_FUNC_STATIC( QLINEARGRADIENT_NEW3 )
-{
-  QLinearGradient * o = new QLinearGradient ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new3|qreal,qreal,qreal,qreal
 
 //[1]QLinearGradient()
 //[2]QLinearGradient(const QPointF &start, const QPointF &finalStop)
@@ -107,28 +93,12 @@ HB_FUNC_STATIC( QLINEARGRADIENT_FINALSTOP )
 /*
 void setFinalStop ( const QPointF & stop )
 */
-HB_FUNC_STATIC( QLINEARGRADIENT_SETFINALSTOP1 )
-{
-  QLinearGradient * obj = (QLinearGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFinalStop ( *PQPOINTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFinalStop,setFinalStop1|const QPointF &
 
 /*
 void setFinalStop ( qreal x, qreal y )
 */
-HB_FUNC_STATIC( QLINEARGRADIENT_SETFINALSTOP2 )
-{
-  QLinearGradient * obj = (QLinearGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFinalStop ( PQREAL(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFinalStop,setFinalStop2|qreal,qreal
 
 //[1]void setFinalStop ( const QPointF & stop )
 //[2]void setFinalStop ( qreal x, qreal y )
@@ -148,28 +118,12 @@ HB_FUNC_STATIC( QLINEARGRADIENT_SETFINALSTOP )
 /*
 void setStart ( const QPointF & start )
 */
-HB_FUNC_STATIC( QLINEARGRADIENT_SETSTART1 )
-{
-  QLinearGradient * obj = (QLinearGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setStart ( *PQPOINTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStart,setStart1|const QPointF &
 
 /*
 void setStart ( qreal x, qreal y )
 */
-HB_FUNC_STATIC( QLINEARGRADIENT_SETSTART2 )
-{
-  QLinearGradient * obj = (QLinearGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setStart ( PQREAL(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStart,setStart2|qreal,qreal
 
 //[1]void setStart ( const QPointF & start )
 //[2]void setStart ( qreal x, qreal y )

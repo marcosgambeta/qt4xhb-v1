@@ -213,28 +213,12 @@ HB_FUNC_STATIC( QSIZEPOLICY_SETVERTICALSTRETCH )
 /*
 void setWidthForHeight ( bool dependent )
 */
-HB_FUNC_STATIC( QSIZEPOLICY_SETWIDTHFORHEIGHT )
-{
-  QSizePolicy * obj = (QSizePolicy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setWidthForHeight ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWidthForHeight|bool
 
 /*
 void transpose ()
 */
-HB_FUNC_STATIC( QSIZEPOLICY_TRANSPOSE )
-{
-  QSizePolicy * obj = (QSizePolicy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->transpose ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|transpose|
 
 /*
 Policy verticalPolicy () const

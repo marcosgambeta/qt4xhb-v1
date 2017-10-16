@@ -4,8 +4,6 @@ $header
 
 CLASS QItemEditorCreator INHERIT QItemEditorCreatorBase
 
-   DATA self_destruction INIT .F.
-
    DESTRUCTOR destroyObject
 
 END CLASS

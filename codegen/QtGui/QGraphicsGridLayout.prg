@@ -9,8 +9,6 @@ REQUEST QSIZEF
 
 CLASS QGraphicsGridLayout INHERIT QGraphicsLayout
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addItem1
@@ -90,38 +88,12 @@ $deleteMethod
 /*
 void addItem ( QGraphicsLayoutItem * item, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ADDITEM1 )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = hb_parni(2);
-    int par3 = hb_parni(3);
-    int par4 = hb_parni(4);
-    int par5 = hb_parni(5);
-    int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
-    obj->addItem ( par1, par2, par3, par4, par5, (Qt::Alignment) par6 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addItem,addItem1|QGraphicsLayoutItem *,int,int,int,int,Qt::Alignment=0
 
 /*
 void addItem ( QGraphicsLayoutItem * item, int row, int column, Qt::Alignment alignment = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ADDITEM2 )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = hb_parni(2);
-    int par3 = hb_parni(3);
-    int par4 = ISNIL(4)? (int) 0 : hb_parni(4);
-    obj->addItem ( par1, par2, par3, (Qt::Alignment) par4 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addItem,addItem2|QGraphicsLayoutItem *,int,int,Qt::Alignment=0
 
 //[1]void addItem ( QGraphicsLayoutItem * item, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
 //[2]void addItem ( QGraphicsLayoutItem * item, int row, int column, Qt::Alignment alignment = 0 )
@@ -141,27 +113,12 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ADDITEM )
 /*
 Qt::Alignment alignment ( QGraphicsLayoutItem * item ) const
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ALIGNMENT )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( (int) obj->alignment ( par1 ) );
-  }
-}
+$method=|Qt::Alignment|alignment|QGraphicsLayoutItem *
 
 /*
 Qt::Alignment columnAlignment ( int column ) const
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNALIGNMENT )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->columnAlignment ( PINT(1) ) );
-  }
-}
+$method=|Qt::Alignment|columnAlignment|int
 
 /*
 int columnCount () const
@@ -201,28 +158,12 @@ $method=|qreal|horizontalSpacing|
 /*
 QGraphicsLayoutItem * itemAt ( int row, int column ) const
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ITEMAT1 )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QGraphicsLayoutItem * ptr = obj->itemAt ( PINT(1), PINT(2) );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM" );
-  }
-}
+$method=|QGraphicsLayoutItem *|itemAt,itemAt1|int,int
 
 /*
 virtual QGraphicsLayoutItem * itemAt ( int index ) const
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ITEMAT2 )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QGraphicsLayoutItem * ptr = obj->itemAt ( PINT(1) );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM" );
-  }
-}
+$virtualMethod=|QGraphicsLayoutItem *|itemAt,itemAt2|int
 
 //[1]QGraphicsLayoutItem * itemAt ( int row, int column ) const
 //[2]virtual QGraphicsLayoutItem * itemAt ( int index ) const
@@ -242,28 +183,12 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ITEMAT )
 /*
 void removeItem ( QGraphicsLayoutItem * item )
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_REMOVEITEM )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->removeItem ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeItem|QGraphicsLayoutItem *
 
 /*
 Qt::Alignment rowAlignment ( int row ) const
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWALIGNMENT )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->rowAlignment ( PINT(1) ) );
-  }
-}
+$method=|Qt::Alignment|rowAlignment|int
 
 /*
 int rowCount () const
@@ -298,109 +223,42 @@ $method=|int|rowStretchFactor|int
 /*
 void setAlignment ( QGraphicsLayoutItem * item, Qt::Alignment alignment )
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETALIGNMENT )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = hb_parni(2);
-    obj->setAlignment ( par1, (Qt::Alignment) par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAlignment|QGraphicsLayoutItem *,Qt::Alignment
 
 /*
 void setColumnAlignment ( int column, Qt::Alignment alignment )
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNALIGNMENT )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    obj->setColumnAlignment ( PINT(1), (Qt::Alignment) par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setColumnAlignment|int,Qt::Alignment
 
 /*
 void setColumnFixedWidth ( int column, qreal width )
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNFIXEDWIDTH )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setColumnFixedWidth ( PINT(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setColumnFixedWidth|int,qreal
 
 /*
 void setColumnMaximumWidth ( int column, qreal width )
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNMAXIMUMWIDTH )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setColumnMaximumWidth ( PINT(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setColumnMaximumWidth|int,qreal
 
 /*
 void setColumnMinimumWidth ( int column, qreal width )
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNMINIMUMWIDTH )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setColumnMinimumWidth ( PINT(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setColumnMinimumWidth|int,qreal
 
 /*
 void setColumnPreferredWidth ( int column, qreal width )
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNPREFERREDWIDTH )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setColumnPreferredWidth ( PINT(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setColumnPreferredWidth|int,qreal
 
 /*
 void setColumnSpacing ( int column, qreal spacing )
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNSPACING )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setColumnSpacing ( PINT(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setColumnSpacing|int,qreal
 
 /*
 void setColumnStretchFactor ( int column, int stretch )
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNSTRETCHFACTOR )
-{
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setColumnStretchFactor ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setColumnStretchFactor|int,int
 
 /*
 void setHorizontalSpacing ( qreal spacing )

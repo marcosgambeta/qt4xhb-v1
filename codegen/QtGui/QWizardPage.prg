@@ -134,42 +134,17 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETBUTTONTEXT )
 /*
 void setCommitPage ( bool commitPage )
 */
-HB_FUNC_STATIC( QWIZARDPAGE_SETCOMMITPAGE )
-{
-  QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCommitPage ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCommitPage|bool
 
 /*
 void setFinalPage ( bool finalPage )
 */
-HB_FUNC_STATIC( QWIZARDPAGE_SETFINALPAGE )
-{
-  QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFinalPage ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFinalPage|bool
 
 /*
 void setPixmap ( QWizard::WizardPixmap which, const QPixmap & pixmap )
 */
-HB_FUNC_STATIC( QWIZARDPAGE_SETPIXMAP )
-{
-  QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setPixmap ( (QWizard::WizardPixmap) par1, *PQPIXMAP(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPixmap|QWizard::WizardPixmap,const QPixmap &
 
 /*
 void setSubTitle ( const QString & subTitle )

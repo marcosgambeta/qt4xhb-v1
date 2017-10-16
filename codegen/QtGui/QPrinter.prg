@@ -12,8 +12,6 @@ REQUEST QPAINTENGINE
 
 CLASS QPrinter INHERIT QPaintDevice
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -101,22 +99,12 @@ $destructor
 /*
 QPrinter ( PrinterMode mode = ScreenResolution )
 */
-HB_FUNC_STATIC( QPRINTER_NEW1 )
-{
-  int par1 = ISNIL(1)? (int) QPrinter::ScreenResolution : hb_parni(1);
-  QPrinter * o = new QPrinter ( (QPrinter::PrinterMode) par1 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QPrinter::PrinterMode=QPrinter::ScreenResolution
 
 /*
 QPrinter ( const QPrinterInfo & printer, PrinterMode mode = ScreenResolution )
 */
-HB_FUNC_STATIC( QPRINTER_NEW2 )
-{
-  int par2 = ISNIL(2)? (int) QPrinter::ScreenResolution : hb_parni(2);
-  QPrinter * o = new QPrinter ( *PQPRINTERINFO(1), (QPrinter::PrinterMode) par2 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QPrinterInfo &,QPrinter::PrinterMode=QPrinter::ScreenResolution
 
 //[1]QPrinter ( PrinterMode mode = ScreenResolution )
 //[2]QPrinter ( const QPrinterInfo & printer, PrinterMode mode = ScreenResolution )
@@ -262,29 +250,12 @@ HB_FUNC_STATIC( QPRINTER_PAGEORDER )
 /*
 QRect pageRect () const
 */
-HB_FUNC_STATIC( QPRINTER_PAGERECT1 )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->pageRect () );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$method=|QRect|pageRect,pageRect1|
 
 /*
 QRectF pageRect ( Unit unit ) const
 */
-HB_FUNC_STATIC( QPRINTER_PAGERECT2 )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    QRectF * ptr = new QRectF( obj->pageRect ( (QPrinter::Unit) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$method=|QRectF|pageRect,pageRect2|QPrinter::Unit
 
 //[1]QRect pageRect () const
 //[2]QRectF pageRect ( Unit unit ) const
@@ -304,29 +275,12 @@ HB_FUNC_STATIC( QPRINTER_PAGERECT )
 /*
 QRect paperRect () const
 */
-HB_FUNC_STATIC( QPRINTER_PAPERRECT1 )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->paperRect () );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$method=|QRect|paperRect,paperRect1|
 
 /*
 QRectF paperRect ( Unit unit ) const
 */
-HB_FUNC_STATIC( QPRINTER_PAPERRECT2 )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    QRectF * ptr = new QRectF( obj->paperRect ( (QPrinter::Unit) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$method=|QRectF|paperRect,paperRect2|QPrinter::Unit
 
 //[1]QRect paperRect () const
 //[2]QRectF paperRect ( Unit unit ) const
@@ -358,16 +312,7 @@ HB_FUNC_STATIC( QPRINTER_PAPERSIZE1 )
 /*
 QSizeF paperSize ( Unit unit ) const
 */
-HB_FUNC_STATIC( QPRINTER_PAPERSIZE2 )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    QSizeF * ptr = new QSizeF( obj->paperSize ( (QPrinter::Unit) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
-  }
-}
+$method=|QSizeF|paperSize,paperSize2|QPrinter::Unit
 
 //[1]PaperSize paperSize () const
 //[2]QSizeF paperSize ( Unit unit ) const
@@ -399,15 +344,7 @@ HB_FUNC_STATIC( QPRINTER_PAPERSOURCE )
 /*
 QPrintEngine * printEngine () const
 */
-HB_FUNC_STATIC( QPRINTER_PRINTENGINE )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPrintEngine * ptr = obj->printEngine ();
-    _qt4xhb_createReturnClass ( ptr, "QPRINTENGINE" );
-  }
-}
+$method=|QPrintEngine *|printEngine|
 
 /*
 QString printProgram () const
@@ -451,42 +388,17 @@ $method=|int|resolution|
 /*
 void setCollateCopies ( bool collate )
 */
-HB_FUNC_STATIC( QPRINTER_SETCOLLATECOPIES )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCollateCopies ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCollateCopies|bool
 
 /*
 void setColorMode ( ColorMode newColorMode )
 */
-HB_FUNC_STATIC( QPRINTER_SETCOLORMODE )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setColorMode ( (QPrinter::ColorMode) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setColorMode|QPrinter::ColorMode
 
 /*
 void setCopyCount ( int count )
 */
-HB_FUNC_STATIC( QPRINTER_SETCOPYCOUNT )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCopyCount ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCopyCount|int
 
 /*
 void setCreator ( const QString & creator )
@@ -501,82 +413,32 @@ $method=|void|setDocName|const QString &
 /*
 void setDoubleSidedPrinting ( bool doubleSided )
 */
-HB_FUNC_STATIC( QPRINTER_SETDOUBLESIDEDPRINTING )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDoubleSidedPrinting ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDoubleSidedPrinting|bool
 
 /*
 void setDuplex ( DuplexMode duplex )
 */
-HB_FUNC_STATIC( QPRINTER_SETDUPLEX )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setDuplex ( (QPrinter::DuplexMode) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDuplex|QPrinter::DuplexMode
 
 /*
 void setFontEmbeddingEnabled ( bool enable )
 */
-HB_FUNC_STATIC( QPRINTER_SETFONTEMBEDDINGENABLED )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFontEmbeddingEnabled ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFontEmbeddingEnabled|bool
 
 /*
 void setFromTo ( int from, int to )
 */
-HB_FUNC_STATIC( QPRINTER_SETFROMTO )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFromTo ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFromTo|int,int
 
 /*
 void setFullPage ( bool fp )
 */
-HB_FUNC_STATIC( QPRINTER_SETFULLPAGE )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFullPage ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFullPage|bool
 
 /*
 void setOrientation ( Orientation orientation )
 */
-HB_FUNC_STATIC( QPRINTER_SETORIENTATION )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setOrientation ( (QPrinter::Orientation) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOrientation|QPrinter::Orientation
 
 /*
 void setOutputFileName ( const QString & fileName )
@@ -586,72 +448,27 @@ $method=|void|setOutputFileName|const QString &
 /*
 void setOutputFormat ( OutputFormat format )
 */
-HB_FUNC_STATIC( QPRINTER_SETOUTPUTFORMAT )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setOutputFormat ( (QPrinter::OutputFormat) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOutputFormat|QPrinter::OutputFormat
 
 /*
 void setPageMargins ( qreal left, qreal top, qreal right, qreal bottom, Unit unit )
 */
-HB_FUNC_STATIC( QPRINTER_SETPAGEMARGINS )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par5 = hb_parni(5);
-    obj->setPageMargins ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), (QPrinter::Unit) par5 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPageMargins|qreal,qreal,qreal,qreal,QPrinter::Unit
 
 /*
 void setPageOrder ( PageOrder pageOrder )
 */
-HB_FUNC_STATIC( QPRINTER_SETPAGEORDER )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setPageOrder ( (QPrinter::PageOrder) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPageOrder|QPrinter::PageOrder
 
 /*
 void setPaperSize ( PaperSize newPaperSize )
 */
-HB_FUNC_STATIC( QPRINTER_SETPAPERSIZE1 )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setPaperSize ( (QPrinter::PaperSize) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPaperSize,setPaperSize1|QPrinter::PaperSize
 
 /*
 void setPaperSize ( const QSizeF & paperSize, Unit unit )
 */
-HB_FUNC_STATIC( QPRINTER_SETPAPERSIZE2 )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    obj->setPaperSize ( *PQSIZEF(1), (QPrinter::Unit) par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPaperSize,setPaperSize2|const QSizeF &,QPrinter::Unit
 
 //[1]void setPaperSize ( PaperSize newPaperSize )
 //[2]void setPaperSize ( const QSizeF & paperSize, Unit unit )
@@ -671,16 +488,7 @@ HB_FUNC_STATIC( QPRINTER_SETPAPERSIZE )
 /*
 void setPaperSource ( PaperSource source )
 */
-HB_FUNC_STATIC( QPRINTER_SETPAPERSOURCE )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setPaperSource ( (QPrinter::PaperSource) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPaperSource|QPrinter::PaperSource
 
 /*
 void setPrintProgram ( const QString & printProg )
@@ -690,16 +498,7 @@ $method=|void|setPrintProgram|const QString &
 /*
 void setPrintRange ( PrintRange range )
 */
-HB_FUNC_STATIC( QPRINTER_SETPRINTRANGE )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setPrintRange ( (QPrinter::PrintRange) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPrintRange|QPrinter::PrintRange
 
 /*
 void setPrinterName ( const QString & name )
@@ -709,28 +508,12 @@ $method=|void|setPrinterName|const QString &
 /*
 void setResolution ( int dpi )
 */
-HB_FUNC_STATIC( QPRINTER_SETRESOLUTION )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setResolution ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setResolution|int
 
 /*
 void setWinPageSize ( int pageSize )
 */
-HB_FUNC_STATIC( QPRINTER_SETWINPAGESIZE )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setWinPageSize ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWinPageSize|int
 
 /*
 QList<PaperSource> supportedPaperSources () const
@@ -738,6 +521,7 @@ QList<PaperSource> supportedPaperSources () const
 HB_FUNC_STATIC( QPRINTER_SUPPORTEDPAPERSOURCES )
 {
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QPrinter::PaperSource> list = obj->supportedPaperSources ();
@@ -760,6 +544,7 @@ QList<int> supportedResolutions () const
 HB_FUNC_STATIC( QPRINTER_SUPPORTEDRESOLUTIONS )
 {
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<int> list = obj->supportedResolutions ();
@@ -794,14 +579,6 @@ $method=|int|winPageSize|
 /*
 virtual QPaintEngine * paintEngine () const
 */
-HB_FUNC_STATIC( QPRINTER_PAINTENGINE )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPaintEngine * ptr = obj->paintEngine ();
-    _qt4xhb_createReturnClass ( ptr, "QPAINTENGINE" );
-  }
-}
+$virtualMethod=|QPaintEngine *|paintEngine|
 
 #pragma ENDDUMP

@@ -40,28 +40,12 @@ $deleteMethod
 /*
 virtual void drawObject ( QPainter * painter, const QRectF & rect, QTextDocument * doc, int posInDocument, const QTextFormat & format ) = 0
 */
-HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_DRAWOBJECT )
-{
-  QTextObjectInterface * obj = (QTextObjectInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->drawObject ( PQPAINTER(1), *PQRECTF(2), PQTEXTDOCUMENT(3), PINT(4), *PQTEXTFORMAT(5) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|drawObject|QPainter *,const QRectF &,QTextDocument *,int,const QTextFormat &
 
 /*
 virtual QSizeF intrinsicSize ( QTextDocument * doc, int posInDocument, const QTextFormat & format ) = 0
 */
-HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_INTRINSICSIZE )
-{
-  QTextObjectInterface * obj = (QTextObjectInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSizeF * ptr = new QSizeF( obj->intrinsicSize ( PQTEXTDOCUMENT(1), PINT(2), *PQTEXTFORMAT(3) ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
-  }
-}
+$virtualMethod=|QSizeF|intrinsicSize|QTextDocument *,int,const QTextFormat &
 
 $extraMethods
 

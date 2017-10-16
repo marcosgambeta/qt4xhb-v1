@@ -10,8 +10,6 @@ REQUEST QCOLOR
 
 CLASS QTextCharFormat INHERIT QTextFormat
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD anchorHref
@@ -228,134 +226,52 @@ $method=|bool|isValid|
 /*
 void setAnchor ( bool anchor )
 */
-HB_FUNC_STATIC( QTEXTCHARFORMAT_SETANCHOR )
-{
-  QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAnchor ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAnchor|bool
 
 /*
 void setAnchorHref ( const QString & value )
 */
-HB_FUNC_STATIC( QTEXTCHARFORMAT_SETANCHORHREF )
-{
-  QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAnchorHref ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAnchorHref|const QString &
 
 /*
 void setAnchorNames ( const QStringList & names )
 */
-HB_FUNC_STATIC( QTEXTCHARFORMAT_SETANCHORNAMES )
-{
-  QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAnchorNames ( PQSTRINGLIST(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAnchorNames|const QStringList &
 
 /*
 void setFont ( const QFont & font )
 */
-HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONT )
-{
-  QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFont ( *PQFONT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFont|const QFont &
 
 /*
 void setFontCapitalization ( QFont::Capitalization capitalization )
 */
-HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTCAPITALIZATION )
-{
-  QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setFontCapitalization ( (QFont::Capitalization) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFontCapitalization|QFont::Capitalization
 
 /*
 void setFontFamily ( const QString & family )
 */
-HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTFAMILY )
-{
-  QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFontFamily ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFontFamily|const QString &
 
 /*
 void setFontFixedPitch ( bool fixedPitch )
 */
-HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTFIXEDPITCH )
-{
-  QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFontFixedPitch ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFontFixedPitch|bool
 
 /*
 void setFontHintingPreference ( QFont::HintingPreference hintingPreference )
 */
-HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTHINTINGPREFERENCE )
-{
-  QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setFontHintingPreference ( (QFont::HintingPreference) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFontHintingPreference|QFont::HintingPreference
 
 /*
 void setFontItalic ( bool italic )
 */
-HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTITALIC )
-{
-  QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFontItalic ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFontItalic|bool
 
 /*
 void setFontKerning ( bool enable )
 */
-HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTKERNING )
-{
-  QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFontKerning ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFontKerning|bool
 
 /*
 void setFontLetterSpacing ( qreal spacing )

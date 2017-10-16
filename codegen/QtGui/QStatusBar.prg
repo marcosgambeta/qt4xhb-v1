@@ -47,28 +47,12 @@ $deleteMethod
 /*
 void addPermanentWidget ( QWidget * widget, int stretch = 0 )
 */
-HB_FUNC_STATIC( QSTATUSBAR_ADDPERMANENTWIDGET )
-{
-  QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->addPermanentWidget ( PQWIDGET(1), OPINT(2,0) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addPermanentWidget|QWidget *,int=0
 
 /*
 void addWidget ( QWidget * widget, int stretch = 0 )
 */
-HB_FUNC_STATIC( QSTATUSBAR_ADDWIDGET )
-{
-  QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->addWidget ( PQWIDGET(1), OPINT(2,0) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addWidget|QWidget *,int=0
 
 /*
 QString currentMessage () const
@@ -98,40 +82,16 @@ $method=|void|removeWidget|QWidget *
 /*
 void setSizeGripEnabled ( bool )
 */
-HB_FUNC_STATIC( QSTATUSBAR_SETSIZEGRIPENABLED )
-{
-  QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSizeGripEnabled ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSizeGripEnabled|bool
 
 /*
 void clearMessage ()
 */
-HB_FUNC_STATIC( QSTATUSBAR_CLEARMESSAGE )
-{
-  QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clearMessage ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clearMessage|
 
 /*
 void showMessage ( const QString & message, int timeout = 0 )
 */
-HB_FUNC_STATIC( QSTATUSBAR_SHOWMESSAGE )
-{
-  QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->showMessage ( PQSTRING(1), OPINT(2,0) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|showMessage|const QString &,int=0
 
 #pragma ENDDUMP

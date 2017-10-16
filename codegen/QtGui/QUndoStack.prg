@@ -195,15 +195,7 @@ $method=|QString|redoText|
 /*
 void setUndoLimit ( int limit )
 */
-HB_FUNC_STATIC( QUNDOSTACK_SETUNDOLIMIT )
-{
-  QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUndoLimit ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setUndoLimit|int
 
 /*
 QString text ( int idx ) const
@@ -223,66 +215,26 @@ $method=|QString|undoText|
 /*
 void redo ()
 */
-HB_FUNC_STATIC( QUNDOSTACK_REDO )
-{
-  QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->redo ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|redo|
 
 /*
 void setActive ( bool active = true )
 */
-HB_FUNC_STATIC( QUNDOSTACK_SETACTIVE )
-{
-  QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setActive ( OPBOOL(1,true) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setActive|bool=true
 
 /*
 void setClean ()
 */
-HB_FUNC_STATIC( QUNDOSTACK_SETCLEAN )
-{
-  QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setClean ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setClean|
 
 /*
 void setIndex ( int idx )
 */
-HB_FUNC_STATIC( QUNDOSTACK_SETINDEX )
-{
-  QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setIndex ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setIndex|int
 
 /*
 void undo ()
 */
-HB_FUNC_STATIC( QUNDOSTACK_UNDO )
-{
-  QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->undo ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|undo|
 
 #pragma ENDDUMP

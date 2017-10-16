@@ -277,15 +277,7 @@ HB_FUNC_STATIC( QPEN_SETCOLOR )
 /*
 void setCosmetic ( bool cosmetic )
 */
-HB_FUNC_STATIC( QPEN_SETCOSMETIC )
-{
-  QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCosmetic ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCosmetic|bool
 
 /*
 void setDashOffset ( qreal offset )

@@ -31,15 +31,7 @@ $deleteMethod
 /*
 virtual QIconEngineV2 * create ( const QString & filename = QString() ) = 0
 */
-HB_FUNC_STATIC( QICONENGINEPLUGINV2_CREATE )
-{
-  QIconEnginePluginV2 * obj = (QIconEnginePluginV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIconEngineV2 * ptr = obj->create ( OPQSTRING(1,QString()) );
-    _qt4xhb_createReturnClass ( ptr, "QICONENGINEV2" );
-  }
-}
+$virtualMethod=|QIconEngineV2 *|create|const QString &=QString()
 
 /*
 virtual QStringList keys () const = 0

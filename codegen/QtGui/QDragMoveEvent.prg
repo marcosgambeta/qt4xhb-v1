@@ -8,8 +8,6 @@ REQUEST QRECT
 
 CLASS QDragMoveEvent INHERIT QDropEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD accept1
@@ -53,28 +51,12 @@ $deleteMethod
 /*
 void accept ( const QRect & rectangle )
 */
-HB_FUNC_STATIC( QDRAGMOVEEVENT_ACCEPT1 )
-{
-  QDragMoveEvent * obj = (QDragMoveEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->accept ( *PQRECT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|accept,accept1|const QRect &
 
 /*
 void accept ()
 */
-HB_FUNC_STATIC( QDRAGMOVEEVENT_ACCEPT2 )
-{
-  QDragMoveEvent * obj = (QDragMoveEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->accept ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|accept,accept2|
 
 //[1]void accept ( const QRect & rectangle )
 //[2]void accept ()
@@ -94,41 +76,17 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_ACCEPT )
 /*
 QRect answerRect () const
 */
-HB_FUNC_STATIC( QDRAGMOVEEVENT_ANSWERRECT )
-{
-  QDragMoveEvent * obj = (QDragMoveEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->answerRect () );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$method=|QRect|answerRect|
 
 /*
 void ignore ( const QRect & rectangle )
 */
-HB_FUNC_STATIC( QDRAGMOVEEVENT_IGNORE1 )
-{
-  QDragMoveEvent * obj = (QDragMoveEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->ignore ( *PQRECT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|ignore,ignore1|const QRect &
 
 /*
 void ignore ()
 */
-HB_FUNC_STATIC( QDRAGMOVEEVENT_IGNORE2 )
-{
-  QDragMoveEvent * obj = (QDragMoveEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->ignore ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|ignore,ignore2|
 
 //[1]void ignore ( const QRect & rectangle )
 //[2]void ignore ()

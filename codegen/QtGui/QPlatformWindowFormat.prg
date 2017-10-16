@@ -291,108 +291,42 @@ $method=|void|setSamples|int
 /*
 void setSharedContext ( QPlatformGLContext * context )
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETSHAREDCONTEXT )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPlatformGLContext * par1 = (QPlatformGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setSharedContext ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSharedContext|QPlatformGLContext *
 
 /*
 void setStencil ( bool enable )
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETSTENCIL )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setStencil ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStencil|bool
 
 /*
 void setStencilBufferSize ( int size )
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETSTENCILBUFFERSIZE )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setStencilBufferSize ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStencilBufferSize|int
 
 /*
 void setStereo ( bool enable )
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETSTEREO )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setStereo ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStereo|bool
 
 /*
 void setSwapInterval ( int interval )
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETSWAPINTERVAL )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSwapInterval ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSwapInterval|int
 
 /*
 void setWindowApi ( QPlatformWindowFormat::WindowApi api )
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETWINDOWAPI )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setWindowApi ( (QPlatformWindowFormat::WindowApi) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWindowApi|QPlatformWindowFormat::WindowApi
 
 /*
 void setWindowSurface ( bool enable )
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETWINDOWSURFACE )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setWindowSurface ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWindowSurface|bool
 
 /*
 QPlatformGLContext * sharedGLContext () const
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SHAREDGLCONTEXT )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPlatformGLContext * ptr = obj->sharedGLContext ();
-    _qt4xhb_createReturnClass ( ptr, "QPLATFORMGLCONTEXT" );
-  }
-}
+$method=|QPlatformGLContext *|sharedGLContext|
 
 /*
 bool stencil () const
@@ -432,22 +366,14 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_WINDOWAPI )
 }
 
 /*
-QPlatformWindowFormat defaultFormat ()
+static QPlatformWindowFormat defaultFormat ()
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_DEFAULTFORMAT )
-{
-  QPlatformWindowFormat * ptr = new QPlatformWindowFormat( QPlatformWindowFormat::defaultFormat () );
-  _qt4xhb_createReturnClass ( ptr, "QPLATFORMWINDOWFORMAT" );
-}
+$staticMethod=|QPlatformWindowFormat|defaultFormat|
 
 /*
-void setDefaultFormat ( const QPlatformWindowFormat & f )
+static void setDefaultFormat ( const QPlatformWindowFormat & f )
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETDEFAULTFORMAT )
-{
-  QPlatformWindowFormat::setDefaultFormat ( *PQPLATFORMWINDOWFORMAT(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|setDefaultFormat|const QPlatformWindowFormat &
 
 $extraMethods
 

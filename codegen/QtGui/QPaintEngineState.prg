@@ -63,40 +63,17 @@ $deleteMethod
 /*
 QBrush backgroundBrush () const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_BACKGROUNDBRUSH )
-{
-  QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QBrush * ptr = new QBrush( obj->backgroundBrush () );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
-  }
-}
+$method=|QBrush|backgroundBrush|
 
 /*
 Qt::BGMode backgroundMode () const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_BACKGROUNDMODE )
-{
-  QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->backgroundMode () );
-  }
-}
+$method=|Qt::BGMode|backgroundMode|
 
 /*
 QBrush brush () const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSH )
-{
-  QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QBrush * ptr = new QBrush( obj->brush () );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
-  }
-}
+$method=|QBrush|brush|
 
 /*
 bool brushNeedsResolving () const
@@ -106,78 +83,32 @@ $method=|bool|brushNeedsResolving|
 /*
 QPointF brushOrigin () const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSHORIGIN )
-{
-  QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->brushOrigin () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|brushOrigin|
 
 /*
 Qt::ClipOperation clipOperation () const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPOPERATION )
-{
-  QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->clipOperation () );
-  }
-}
+$method=|Qt::ClipOperation|clipOperation|
 
 /*
 QPainterPath clipPath () const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPPATH )
-{
-  QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPainterPath * ptr = new QPainterPath( obj->clipPath () );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
-  }
-}
+$method=|QPainterPath|clipPath|
 
 /*
 QRegion clipRegion () const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPREGION )
-{
-  QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRegion * ptr = new QRegion( obj->clipRegion () );
-    _qt4xhb_createReturnClass ( ptr, "QREGION", true );
-  }
-}
+$method=|QRegion|clipRegion|
 
 /*
 QPainter::CompositionMode compositionMode () const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_COMPOSITIONMODE )
-{
-  QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->compositionMode () );
-  }
-}
+$method=|QPainter::CompositionMode|compositionMode|
 
 /*
 QFont font () const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_FONT )
-{
-  QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QFont * ptr = new QFont( obj->font () );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
-  }
-}
+$method=|QFont|font|
 
 /*
 bool isClipEnabled () const
@@ -192,28 +123,12 @@ $method=|qreal|opacity|
 /*
 QPainter * painter () const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_PAINTER )
-{
-  QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPainter * ptr = obj->painter ();
-    _qt4xhb_createReturnClass ( ptr, "QPAINTER" );
-  }
-}
+$method=|QPainter *|painter|
 
 /*
 QPen pen () const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_PEN )
-{
-  QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPen * ptr = new QPen( obj->pen () );
-    _qt4xhb_createReturnClass ( ptr, "QPEN", true );
-  }
-}
+$method=|QPen|pen|
 
 /*
 bool penNeedsResolving () const
@@ -223,39 +138,17 @@ $method=|bool|penNeedsResolving|
 /*
 QPainter::RenderHints renderHints () const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_RENDERHINTS )
-{
-  QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->renderHints () );
-  }
-}
+$method=|QPainter::RenderHints|renderHints|
 
 /*
 QPaintEngine::DirtyFlags state () const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_STATE )
-{
-  QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->state () );
-  }
-}
+$method=|QPaintEngine::DirtyFlags|state|
 
 /*
 QTransform transform () const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_TRANSFORM )
-{
-  QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTransform * ptr = new QTransform( obj->transform () );
-    _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
-  }
-}
+$method=|QTransform|transform|
 
 $extraMethods
 

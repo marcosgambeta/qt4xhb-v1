@@ -166,189 +166,72 @@ HB_FUNC_STATIC( QLISTVIEW_RESIZEMODE )
 /*
 void setBatchSize ( int batchSize )
 */
-HB_FUNC_STATIC( QLISTVIEW_SETBATCHSIZE )
-{
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBatchSize ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBatchSize|int
 
 /*
 void setFlow ( Flow flow )
 */
-HB_FUNC_STATIC( QLISTVIEW_SETFLOW )
-{
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setFlow ( (QListView::Flow) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFlow|QListView::Flow
 
 /*
 void setGridSize ( const QSize & size )
 */
-HB_FUNC_STATIC( QLISTVIEW_SETGRIDSIZE )
-{
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setGridSize ( *PQSIZE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setGridSize|const QSize &
 
 /*
 void setLayoutMode ( LayoutMode mode )
 */
-HB_FUNC_STATIC( QLISTVIEW_SETLAYOUTMODE )
-{
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setLayoutMode ( (QListView::LayoutMode) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setLayoutMode|QListView::LayoutMode
 
 /*
 void setModelColumn ( int column )
 */
-HB_FUNC_STATIC( QLISTVIEW_SETMODELCOLUMN )
-{
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setModelColumn ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setModelColumn|int
 
 /*
 void setMovement ( Movement movement )
 */
-HB_FUNC_STATIC( QLISTVIEW_SETMOVEMENT )
-{
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setMovement ( (QListView::Movement) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMovement|QListView::Movement
 
 /*
 void setResizeMode ( ResizeMode mode )
 */
-HB_FUNC_STATIC( QLISTVIEW_SETRESIZEMODE )
-{
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setResizeMode ( (QListView::ResizeMode) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setResizeMode|QListView::ResizeMode
 
 /*
 void setRowHidden ( int row, bool hide )
 */
-HB_FUNC_STATIC( QLISTVIEW_SETROWHIDDEN )
-{
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRowHidden ( (int) hb_parni(1), PBOOL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRowHidden|int,bool
 
 /*
 void setSelectionRectVisible ( bool show )
 */
-HB_FUNC_STATIC( QLISTVIEW_SETSELECTIONRECTVISIBLE )
-{
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSelectionRectVisible ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSelectionRectVisible|bool
 
 /*
 void setSpacing ( int space )
 */
-HB_FUNC_STATIC( QLISTVIEW_SETSPACING )
-{
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSpacing ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSpacing|int
 
 /*
 void setUniformItemSizes ( bool enable )
 */
-HB_FUNC_STATIC( QLISTVIEW_SETUNIFORMITEMSIZES )
-{
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUniformItemSizes ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setUniformItemSizes|bool
 
 /*
 void setViewMode ( ViewMode mode )
 */
-HB_FUNC_STATIC( QLISTVIEW_SETVIEWMODE )
-{
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setViewMode ( (QListView::ViewMode) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setViewMode|QListView::ViewMode
 
 /*
 void setWordWrap ( bool on )
 */
-HB_FUNC_STATIC( QLISTVIEW_SETWORDWRAP )
-{
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setWordWrap ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWordWrap|bool
 
 /*
 void setWrapping ( bool enable )
 */
-HB_FUNC_STATIC( QLISTVIEW_SETWRAPPING )
-{
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setWrapping ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWrapping|bool
 
 /*
 int spacing () const
@@ -380,41 +263,16 @@ $method=|bool|wordWrap|
 /*
 virtual QModelIndex indexAt ( const QPoint & p ) const
 */
-HB_FUNC_STATIC( QLISTVIEW_INDEXAT )
-{
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->indexAt ( *PQPOINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
+$virtualMethod=|QModelIndex|indexAt|const QPoint &
 
 /*
 virtual void scrollTo ( const QModelIndex & index, ScrollHint hint = EnsureVisible )
 */
-HB_FUNC_STATIC( QLISTVIEW_SCROLLTO )
-{
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) QListView::EnsureVisible : hb_parni(2);
-    obj->scrollTo ( *PQMODELINDEX(1), (QListView::ScrollHint) par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|scrollTo|const QModelIndex &,QListView::ScrollHint=QListView::EnsureVisible
 
 /*
 virtual QRect visualRect ( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QLISTVIEW_VISUALRECT )
-{
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->visualRect ( *PQMODELINDEX(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$virtualMethod=|QRect|visualRect|const QModelIndex &
 
 #pragma ENDDUMP

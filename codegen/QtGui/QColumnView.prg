@@ -57,6 +57,7 @@ QList<int> columnWidths () const
 HB_FUNC_STATIC( QCOLUMNVIEW_COLUMNWIDTHS )
 {
   QColumnView * obj = (QColumnView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<int> list = obj->columnWidths ();
@@ -89,20 +90,22 @@ void setColumnWidths ( const QList<int> & list )
 HB_FUNC_STATIC( QCOLUMNVIEW_SETCOLUMNWIDTHS )
 {
   QColumnView * obj = (QColumnView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-QList<int> par1;
-PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aValues1);
-int temp1;
-for (i1=0;i1<nLen1;i1++)
-{
-temp1 = hb_arrayGetNI(aValues1, i1+1);
-par1 << temp1;
-}
+    QList<int> par1;
+    PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aValues1);
+    int temp1;
+    for (i1=0;i1<nLen1;i1++)
+    {
+      temp1 = hb_arrayGetNI(aValues1, i1+1);
+      par1 << temp1;
+    }
     obj->setColumnWidths ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

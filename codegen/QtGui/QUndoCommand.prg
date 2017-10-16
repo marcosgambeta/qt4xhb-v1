@@ -88,15 +88,7 @@ $deleteMethod
 /*
 const QUndoCommand * child ( int index ) const
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_CHILD )
-{
-  QUndoCommand * obj = (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QUndoCommand * ptr = obj->child ( PINT(1) );
-    _qt4xhb_createReturnClass ( ptr, "QUNDOCOMMAND" );
-  }
-}
+$method=|const QUndoCommand *|child|int
 
 /*
 int childCount () const
@@ -131,15 +123,7 @@ $method=|QString|text|
 /*
 virtual void undo ()
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_UNDO )
-{
-  QUndoCommand * obj = (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->undo ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|undo|
 
 $extraMethods
 

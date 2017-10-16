@@ -8,8 +8,6 @@ REQUEST QSIZE
 
 CLASS QResizeEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD size
@@ -43,27 +41,11 @@ $deleteMethod
 /*
 const QSize &size() const
 */
-HB_FUNC_STATIC( QRESIZEEVENT_SIZE )
-{
-  QResizeEvent * obj = (QResizeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QSize * ptr = &obj->size ();
-    _qt4xhb_createReturnClass ( ptr, "QSIZE" );
-  }
-}
+$method=|const QSize &|size|
 
 /*
 const QSize &oldSize()const
 */
-HB_FUNC_STATIC( QRESIZEEVENT_OLDSIZE )
-{
-  QResizeEvent * obj = (QResizeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QSize * ptr = &obj->oldSize ();
-    _qt4xhb_createReturnClass ( ptr, "QSIZE" );
-  }
-}
+$method=|const QSize &|oldSize|
 
 #pragma ENDDUMP

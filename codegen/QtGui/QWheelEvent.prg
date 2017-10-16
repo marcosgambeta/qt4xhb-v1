@@ -8,8 +8,6 @@ REQUEST QPOINT
 
 CLASS QWheelEvent INHERIT QInputEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -91,28 +89,12 @@ $method=|int|delta|
 /*
 const QPoint &pos() const
 */
-HB_FUNC_STATIC( QWHEELEVENT_POS )
-{
-  QWheelEvent * obj = (QWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QPoint * ptr = &obj->pos ();
-    _qt4xhb_createReturnClass ( ptr, "QPOINT" );
-  }
-}
+$method=|const QPoint &|pos|
 
 /*
 const QPoint &globalPos() const
 */
-HB_FUNC_STATIC( QWHEELEVENT_GLOBALPOS )
-{
-  QWheelEvent * obj = (QWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QPoint * ptr = &obj->globalPos ();
-    _qt4xhb_createReturnClass ( ptr, "QPOINT" );
-  }
-}
+$method=|const QPoint &|globalPos|
 
 /*
 int x() const

@@ -4,8 +4,6 @@ $header
 
 CLASS QTextListFormat INHERIT QTextFormat
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD indent
@@ -66,15 +64,7 @@ $method=|QString|numberSuffix|
 /*
 void setIndent ( int indentation )
 */
-HB_FUNC_STATIC( QTEXTLISTFORMAT_SETINDENT )
-{
-  QTextListFormat * obj = (QTextListFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setIndent ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setIndent|int
 
 /*
 void setNumberPrefix ( const QString & numberPrefix )
@@ -89,27 +79,11 @@ $method=|void|setNumberSuffix|const QString &
 /*
 void setStyle ( Style style )
 */
-HB_FUNC_STATIC( QTEXTLISTFORMAT_SETSTYLE )
-{
-  QTextListFormat * obj = (QTextListFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setStyle ( (QTextListFormat::Style) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStyle|QTextListFormat::Style
 
 /*
 Style style () const
 */
-HB_FUNC_STATIC( QTEXTLISTFORMAT_STYLE )
-{
-  QTextListFormat * obj = (QTextListFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->style () );
-  }
-}
+$method=|QTextListFormat::Style|style|
 
 #pragma ENDDUMP

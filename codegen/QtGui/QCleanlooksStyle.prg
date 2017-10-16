@@ -11,8 +11,6 @@ REQUEST QPALETTE
 
 CLASS QCleanlooksStyle INHERIT QWindowsStyle
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD drawComplexControl

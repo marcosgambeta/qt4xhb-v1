@@ -8,8 +8,6 @@ REQUEST QURL
 
 CLASS QFileOpenEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new

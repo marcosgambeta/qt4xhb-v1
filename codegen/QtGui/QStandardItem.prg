@@ -199,28 +199,12 @@ $deleteMethod
 /*
 virtual QVariant data(int role = Qt::UserRole + 1) const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_DATA )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->data ( OPINT(1,Qt::UserRole+1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$virtualMethod=|QVariant|data|int=Qt::UserRole + 1
 
 /*
 virtual void setData(const QVariant &value, int role = Qt::UserRole + 1)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_SETDATA )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setData ( *PQVARIANT(1), OPINT(2,Qt::UserRole+1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|setData|const QVariant &,int=Qt::UserRole + 1
 
 /*
 QString text() const
@@ -230,42 +214,17 @@ $method=|QString|text|
 /*
 void setText(const QString &text)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_SETTEXT )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setText|const QString &
 
 /*
 QIcon icon() const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_ICON )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIcon * ptr = new QIcon( obj->icon () );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );
-  }
-}
+$method=|QIcon|icon|
 
 /*
 void setIcon(const QIcon &icon)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_SETICON )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
-    obj->setIcon ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setIcon|const QIcon &
 
 /*
 QString toolTip() const
@@ -275,15 +234,7 @@ $method=|QString|toolTip|
 /*
 void setToolTip(const QString &toolTip)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_SETTOOLTIP )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setToolTip ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setToolTip|const QString &
 
 /*
 QString statusTip() const
@@ -293,15 +244,7 @@ $method=|QString|statusTip|
 /*
 void setStatusTip(const QString &statusTip)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_SETSTATUSTIP )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setStatusTip ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStatusTip|const QString &
 
 /*
 QString whatsThis() const
@@ -311,171 +254,67 @@ $method=|QString|whatsThis|
 /*
 void setWhatsThis(const QString &whatsThis)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_SETWHATSTHIS )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setWhatsThis ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWhatsThis|const QString &
 
 /*
 QSize sizeHint() const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_SIZEHINT )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|sizeHint|
 
 /*
 void setSizeHint(const QSize &sizeHint)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_SETSIZEHINT )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSizeHint ( *PQSIZE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSizeHint|const QSize &
 
 /*
 QFont font() const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_FONT )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QFont * ptr = new QFont( obj->font () );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
-  }
-}
+$method=|QFont|font|
 
 /*
 void setFont(const QFont &font)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_SETFONT )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFont ( *PQFONT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFont|const QFont &
 
 /*
 Qt::Alignment textAlignment() const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_TEXTALIGNMENT )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->textAlignment () );
-  }
-}
+$method=|Qt::Alignment|textAlignment|
 
 /*
 void setTextAlignment(Qt::Alignment textAlignment)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_SETTEXTALIGNMENT )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setTextAlignment ( (Qt::Alignment) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTextAlignment|Qt::Alignment
 
 /*
 QBrush background() const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_BACKGROUND )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QBrush * ptr = new QBrush( obj->background () );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
-  }
-}
+$method=|QBrush|background|
 
 /*
 void setBackground(const QBrush &brush)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_SETBACKGROUND )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBackground ( *PQBRUSH(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBackground|const QBrush &
 
 /*
 QBrush foreground() const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_FOREGROUND )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QBrush * ptr = new QBrush( obj->foreground () );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
-  }
-}
+$method=|QBrush|foreground|
 
 /*
 void setForeground(const QBrush &brush)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_SETFOREGROUND )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setForeground ( *PQBRUSH(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setForeground|const QBrush &
 
 /*
 Qt::CheckState checkState() const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_CHECKSTATE )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->checkState () );
-  }
-}
+$method=|Qt::CheckState|checkState|
 
 /*
 void setCheckState(Qt::CheckState checkState)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_SETCHECKSTATE )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setCheckState ( (Qt::CheckState) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCheckState|Qt::CheckState
 
 /*
 QString accessibleText() const
@@ -485,15 +324,7 @@ $method=|QString|accessibleText|
 /*
 void setAccessibleText(const QString &accessibleText)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_SETACCESSIBLETEXT )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAccessibleText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAccessibleText|const QString &
 
 /*
 QString accessibleDescription() const
@@ -503,41 +334,17 @@ $method=|QString|accessibleDescription|
 /*
 void setAccessibleDescription(const QString &accessibleDescription)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_SETACCESSIBLEDESCRIPTION )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAccessibleDescription ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAccessibleDescription|const QString &
 
 /*
 Qt::ItemFlags flags() const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_FLAGS )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->flags () );
-  }
-}
+$method=|Qt::ItemFlags|flags|
 
 /*
 void setFlags(Qt::ItemFlags flags)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_SETFLAGS )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setFlags ( (Qt::ItemFlags) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFlags|Qt::ItemFlags
 
 /*
 bool isEnabled() const
@@ -547,15 +354,7 @@ $method=|bool|isEnabled|
 /*
 void setEnabled(bool enabled)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_SETENABLED )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setEnabled ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setEnabled|bool
 
 /*
 bool isEditable() const
@@ -565,15 +364,7 @@ $method=|bool|isEditable|
 /*
 void setEditable(bool editable)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_SETEDITABLE )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setEditable ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setEditable|bool
 
 /*
 bool isSelectable() const
@@ -583,15 +374,7 @@ $method=|bool|isSelectable|
 /*
 void setSelectable(bool selectable)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_SETSELECTABLE )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSelectable ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSelectable|bool
 
 /*
 bool isCheckable() const
@@ -601,15 +384,7 @@ $method=|bool|isCheckable|
 /*
 void setCheckable(bool checkable)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_SETCHECKABLE )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCheckable ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCheckable|bool
 
 /*
 bool isTristate() const
@@ -619,15 +394,7 @@ $method=|bool|isTristate|
 /*
 void setTristate(bool tristate)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_SETTRISTATE )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTristate ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTristate|bool
 
 /*
 bool isDragEnabled() const
@@ -637,15 +404,7 @@ $method=|bool|isDragEnabled|
 /*
 void setDragEnabled(bool dragEnabled)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_SETDRAGENABLED )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDragEnabled ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDragEnabled|bool
 
 /*
 bool isDropEnabled() const
@@ -655,28 +414,12 @@ $method=|bool|isDropEnabled|
 /*
 void setDropEnabled(bool dropEnabled)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_SETDROPENABLED )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDropEnabled ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDropEnabled|bool
 
 /*
 QStandardItem *parent() const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_PARENT )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStandardItem * ptr = obj->parent ();
-    _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
-  }
-}
+$method=|QStandardItem *|parent|
 
 /*
 int row() const
@@ -691,28 +434,12 @@ $method=|int|column|
 /*
 QModelIndex index() const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_INDEX )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->index () );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
+$method=|QModelIndex|index|
 
 /*
 QStandardItemModel *model() const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_MODEL )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStandardItemModel * ptr = obj->model ();
-    _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEMMODEL" );
-  }
-}
+$method=|QStandardItemModel *|model|
 
 /*
 int rowCount() const
@@ -722,15 +449,7 @@ $method=|int|rowCount|
 /*
 void setRowCount(int rows)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_SETROWCOUNT )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRowCount ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRowCount|int
 
 /*
 int columnCount() const
@@ -740,15 +459,7 @@ $method=|int|columnCount|
 /*
 void setColumnCount(int columns)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_SETCOLUMNCOUNT )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setColumnCount ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setColumnCount|int
 
 /*
 bool hasChildren() const
@@ -758,43 +469,17 @@ $method=|bool|hasChildren|
 /*
 QStandardItem *child(int row, int column = 0) const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_CHILD )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStandardItem * ptr = obj->child ( PINT(1), OPINT(2,0) );
-    _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
-  }
-}
+$method=|QStandardItem *|child|int,int=0
 
 /*
 void setChild(int row, int column, QStandardItem *item)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_SETCHILD1 )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStandardItem * par3 = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setChild ( PINT(1), PINT(2), par3 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setChild,setChild1|int,int,QStandardItem *
 
 /*
 void setChild(int row, QStandardItem *item)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_SETCHILD2 )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStandardItem * par2 = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setChild ( PINT(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setChild,setChild2|int,QStandardItem *
 
 //[1]void setChild(int row, int column, QStandardItem *item)
 //[2]void setChild(int row, QStandardItem *item)
@@ -817,33 +502,27 @@ void insertRow(int row, const QList<QStandardItem*> &items)
 HB_FUNC_STATIC( QSTANDARDITEM_INSERTROW1 )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-QList<QStandardItem *> par2;
-PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-int i2;
-int nLen2 = hb_arrayLen(aList2);
-for (i2=0;i2<nLen2;i2++)
-{
-par2 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );}
+    QList<QStandardItem *> par2;
+    PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
+    int i2;
+    int nLen2 = hb_arrayLen(aList2);
+    for (i2=0;i2<nLen2;i2++)
+    {
+      par2 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
+    }
     obj->insertRow ( PINT(1), par2 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 void insertRow(int row, QStandardItem *item)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_INSERTROW2 )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStandardItem * par2 = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->insertRow ( PINT(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|insertRow,insertRow2|int,QStandardItem *
 
 //[1]void insertRow(int row, const QList<QStandardItem*> &items)
 //[2]void insertRow(int row, QStandardItem *item)
@@ -866,17 +545,20 @@ void insertColumn(int column, const QList<QStandardItem*> &items)
 HB_FUNC_STATIC( QSTANDARDITEM_INSERTCOLUMN )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-QList<QStandardItem *> par2;
-PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-int i2;
-int nLen2 = hb_arrayLen(aList2);
-for (i2=0;i2<nLen2;i2++)
-{
-par2 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );}
+    QList<QStandardItem *> par2;
+    PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
+    int i2;
+    int nLen2 = hb_arrayLen(aList2);
+    for (i2=0;i2<nLen2;i2++)
+    {
+      par2 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
+    }
     obj->insertColumn ( PINT(1), par2 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -886,32 +568,27 @@ void insertRows(int row, const QList<QStandardItem*> &items)
 HB_FUNC_STATIC( QSTANDARDITEM_INSERTROWS1 )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-QList<QStandardItem *> par2;
-PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-int i2;
-int nLen2 = hb_arrayLen(aList2);
-for (i2=0;i2<nLen2;i2++)
-{
-par2 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );}
+    QList<QStandardItem *> par2;
+    PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
+    int i2;
+    int nLen2 = hb_arrayLen(aList2);
+    for (i2=0;i2<nLen2;i2++)
+    {
+      par2 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
+    }
     obj->insertRows ( PINT(1), par2 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 void insertRows(int row, int count)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_INSERTROWS2 )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->insertRows ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|insertRows,insertRows2|int,int
 
 //[1]void insertRows(int row, const QList<QStandardItem*> &items)
 //[2]void insertRows(int row, int count)
@@ -931,67 +608,27 @@ HB_FUNC_STATIC( QSTANDARDITEM_INSERTROWS )
 /*
 void insertColumns(int column, int count)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_INSERTCOLUMNS )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->insertColumns ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|insertColumns|int,int
 
 /*
 void removeRow(int row)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_REMOVEROW )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->removeRow ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeRow|int
 
 /*
 void removeColumn(int column)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_REMOVECOLUMN )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->removeColumn ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeColumn|int
 
 /*
 void removeRows(int row, int count)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_REMOVEROWS )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->removeRows ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeRows|int,int
 
 /*
 void removeColumns(int column, int count)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_REMOVECOLUMNS )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->removeColumns ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeColumns|int,int
 
 /*
 void appendRow(const QList<QStandardItem*> &items)
@@ -999,33 +636,27 @@ void appendRow(const QList<QStandardItem*> &items)
 HB_FUNC_STATIC( QSTANDARDITEM_APPENDROW1 )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-QList<QStandardItem *> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-par1 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );}
+    QList<QStandardItem *> par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    for (i1=0;i1<nLen1;i1++)
+    {
+      par1 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    }
     obj->appendRow ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 void appendRow(QStandardItem *item)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_APPENDROW2 )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStandardItem * par1 = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->appendRow ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|appendRow,appendRow2|QStandardItem *
 
 //[1]void appendRow(const QList<QStandardItem*> &items)
 //[2]void appendRow(QStandardItem *item)
@@ -1048,17 +679,20 @@ void appendRows(const QList<QStandardItem*> &items)
 HB_FUNC_STATIC( QSTANDARDITEM_APPENDROWS )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-QList<QStandardItem *> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-par1 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );}
+    QList<QStandardItem *> par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    for (i1=0;i1<nLen1;i1++)
+    {
+      par1 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    }
     obj->appendRows ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -1068,32 +702,27 @@ void appendColumn(const QList<QStandardItem*> &items)
 HB_FUNC_STATIC( QSTANDARDITEM_APPENDCOLUMN )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-QList<QStandardItem *> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-par1 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );}
+    QList<QStandardItem *> par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    for (i1=0;i1<nLen1;i1++)
+    {
+      par1 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    }
     obj->appendColumn ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 QStandardItem *takeChild(int row, int column = 0)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_TAKECHILD )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStandardItem * ptr = obj->takeChild ( PINT(1), OPINT(2,0) );
-    _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
-  }
-}
+$method=|QStandardItem *|takeChild|int,int=0
 
 /*
 QList<QStandardItem*> takeRow(int row)
@@ -1101,6 +730,7 @@ QList<QStandardItem*> takeRow(int row)
 HB_FUNC_STATIC( QSTANDARDITEM_TAKEROW )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QStandardItem *> list = obj->takeRow ( PINT(1) );
@@ -1144,6 +774,7 @@ QList<QStandardItem*> takeColumn(int column)
 HB_FUNC_STATIC( QSTANDARDITEM_TAKECOLUMN )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QStandardItem *> list = obj->takeColumn ( PINT(1) );
@@ -1184,29 +815,12 @@ HB_FUNC_STATIC( QSTANDARDITEM_TAKECOLUMN )
 /*
 void sortChildren(int column, Qt::SortOrder order = Qt::AscendingOrder)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_SORTCHILDREN )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) Qt::AscendingOrder : hb_parni(2);
-    obj->sortChildren ( PINT(1), (Qt::SortOrder) par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|sortChildren|int,Qt::SortOrder=Qt::AscendingOrder
 
 /*
 QStandardItem *clone() const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_CLONE )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStandardItem * ptr = obj->clone ();
-    _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
-  }
-}
+$method=|QStandardItem *|clone|
 
 /*
 virtual int type() const
@@ -1216,30 +830,12 @@ $virtualMethod=|int|type|
 /*
 virtual void read(QDataStream &in)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_READ )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDataStream * par1 = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->read ( *par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|read|QDataStream &
 
 /*
 virtual void write(QDataStream &out) const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_WRITE )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDataStream * par1 = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->write ( *par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|write|QDataStream &
 
 $extraMethods
 

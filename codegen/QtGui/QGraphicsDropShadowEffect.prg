@@ -10,8 +10,6 @@ REQUEST QRECTF
 
 CLASS QGraphicsDropShadowEffect INHERIT QGraphicsEffect
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD blurRadius
@@ -66,28 +64,12 @@ $method=|qreal|blurRadius|
 /*
 QColor color () const
 */
-HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_COLOR )
-{
-  QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QColor * ptr = new QColor( obj->color () );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-}
+$method=|QColor|color|
 
 /*
 QPointF offset () const
 */
-HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_OFFSET )
-{
-  QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->offset () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|offset|
 
 /*
 qreal xOffset () const
@@ -102,15 +84,7 @@ $method=|qreal|yOffset|
 /*
 virtual QRectF boundingRectFor ( const QRectF & rect ) const
 */
-HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_BOUNDINGRECTFOR )
-{
-  QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->boundingRectFor ( *PQRECTF(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$virtualMethod=|QRectF|boundingRectFor|const QRectF &
 
 /*
 void setBlurRadius ( qreal blurRadius )

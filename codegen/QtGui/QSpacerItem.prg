@@ -10,8 +10,6 @@ REQUEST QSPACERITEM
 
 CLASS QSpacerItem INHERIT QLayoutItem
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD changeSize
    METHOD expandingDirections

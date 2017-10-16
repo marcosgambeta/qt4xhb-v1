@@ -8,8 +8,6 @@ REQUEST QPOINT
 
 CLASS QContextMenuEvent INHERIT QInputEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new3
@@ -94,15 +92,7 @@ $deleteMethod
 /*
 const QPoint & globalPos () const
 */
-HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALPOS )
-{
-  QContextMenuEvent * obj = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QPoint * ptr = &obj->globalPos ();
-    _qt4xhb_createReturnClass ( ptr, "QPOINT" );
-  }
-}
+$method=|const QPoint &|globalPos|
 
 /*
 int globalX () const
@@ -117,27 +107,12 @@ $method=|int|globalY|
 /*
 const QPoint & pos () const
 */
-HB_FUNC_STATIC( QCONTEXTMENUEVENT_POS )
-{
-  QContextMenuEvent * obj = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QPoint * ptr = &obj->pos ();
-    _qt4xhb_createReturnClass ( ptr, "QPOINT" );
-  }
-}
+$method=|const QPoint &|pos|
 
 /*
 Reason reason () const
 */
-HB_FUNC_STATIC( QCONTEXTMENUEVENT_REASON )
-{
-  QContextMenuEvent * obj = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->reason () );
-  }
-}
+$method=|QContextMenuEvent::Reason|reason|
 
 /*
 int x () const

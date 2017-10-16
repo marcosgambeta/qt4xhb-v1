@@ -4,8 +4,6 @@ $header
 
 CLASS QToolBarChangeEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD toggle
@@ -27,11 +25,7 @@ $destructor
 /*
 QToolBarChangeEvent(bool t)
 */
-HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_NEW )
-{
-  QToolBarChangeEvent * o = new QToolBarChangeEvent ( PBOOL(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|bool
 
 $deleteMethod
 

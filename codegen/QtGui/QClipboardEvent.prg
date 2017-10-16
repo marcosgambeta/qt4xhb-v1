@@ -8,8 +8,6 @@ REQUEST QEVENTPRIVATE
 
 CLASS QClipboardEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD data

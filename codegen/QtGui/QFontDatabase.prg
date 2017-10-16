@@ -84,16 +84,7 @@ $method=|QStringList|families|QFontDatabase::WritingSystem=QFontDatabase::Any
 /*
 QFont font ( const QString & family, const QString & style, int pointSize ) const
 */
-HB_FUNC_STATIC( QFONTDATABASE_FONT )
-{
-  QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par3 = hb_parni(3);
-    QFont * ptr = new QFont( obj->font ( PQSTRING(1), PQSTRING(2), par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
-  }
-}
+$method=|QFont|font|const QString &,const QString &,int
 
 /*
 bool isBitmapScalable ( const QString & family, const QString & style = QString() ) const
@@ -126,6 +117,7 @@ QList<int> pointSizes ( const QString & family, const QString & style = QString(
 HB_FUNC_STATIC( QFONTDATABASE_POINTSIZES )
 {
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<int> list = obj->pointSizes ( PQSTRING(1), OPQSTRING(2,QString()) );
@@ -148,6 +140,7 @@ QList<int> smoothSizes ( const QString & family, const QString & style )
 HB_FUNC_STATIC( QFONTDATABASE_SMOOTHSIZES )
 {
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<int> list = obj->smoothSizes ( PQSTRING(1), PQSTRING(2) );
@@ -205,6 +198,7 @@ QList<WritingSystem> writingSystems () const
 HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMS1 )
 {
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QFontDatabase::WritingSystem> list = obj->writingSystems ();
@@ -227,6 +221,7 @@ QList<WritingSystem> writingSystems ( const QString & family ) const
 HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMS2 )
 {
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QFontDatabase::WritingSystem> list = obj->writingSystems ( PQSTRING(1) );

@@ -87,15 +87,7 @@ $deleteMethod
 /*
 QTextCharFormat charFormat () const
 */
-HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMAT )
-{
-  QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextCharFormat * ptr = new QTextCharFormat( obj->charFormat () );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );
-  }
-}
+$method=|QTextCharFormat|charFormat|
 
 /*
 int charFormatIndex () const
@@ -113,6 +105,7 @@ QList<QGlyphRun> glyphRuns () const
 HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
 {
   QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QGlyphRun> list = obj->glyphRuns ();

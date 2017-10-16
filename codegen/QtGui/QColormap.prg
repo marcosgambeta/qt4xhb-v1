@@ -54,15 +54,7 @@ $deleteMethod
 /*
 const QColor colorAt ( uint pixel ) const
 */
-HB_FUNC_STATIC( QCOLORMAP_COLORAT )
-{
-  QColormap * obj = (QColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QColor * ptr = new QColor( obj->colorAt ( PUINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-}
+$method=|const QColor|colorAt|uint
 
 /*
 const QVector<QColor> colormap () const
@@ -70,6 +62,7 @@ const QVector<QColor> colormap () const
 HB_FUNC_STATIC( QCOLORMAP_COLORMAP )
 {
   QColormap * obj = (QColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QVector<QColor> list = obj->colormap ();
@@ -115,14 +108,7 @@ $method=|int|depth|
 /*
 Mode mode () const
 */
-HB_FUNC_STATIC( QCOLORMAP_MODE )
-{
-  QColormap * obj = (QColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->mode () );
-  }
-}
+$method=|QColormap::Mode|mode|
 
 /*
 uint pixel ( const QColor & color ) const

@@ -11,8 +11,6 @@ REQUEST QRECT
 
 CLASS QMotifStyle INHERIT QCommonStyle
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD setUseHighlightColors
@@ -58,15 +56,7 @@ $deleteMethod
 /*
 void setUseHighlightColors ( bool arg )
 */
-HB_FUNC_STATIC( QMOTIFSTYLE_SETUSEHIGHLIGHTCOLORS )
-{
-  QMotifStyle * obj = (QMotifStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUseHighlightColors ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setUseHighlightColors|bool
 
 /*
 bool useHighlightColors () const

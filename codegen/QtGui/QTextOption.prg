@@ -196,15 +196,7 @@ HB_FUNC_STATIC( QTEXTOPTION_SETTEXTDIRECTION )
 /*
 void setUseDesignMetrics ( bool enable )
 */
-HB_FUNC_STATIC( QTEXTOPTION_SETUSEDESIGNMETRICS )
-{
-  QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUseDesignMetrics ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setUseDesignMetrics|bool
 
 /*
 void setWrapMode ( WrapMode mode )

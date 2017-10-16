@@ -8,8 +8,6 @@ REQUEST QVECTOR3D
 
 CLASS QGraphicsRotation INHERIT QGraphicsTransform
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD angle
@@ -59,28 +57,12 @@ $method=|qreal|angle|
 /*
 QVector3D axis () const
 */
-HB_FUNC_STATIC( QGRAPHICSROTATION_AXIS )
-{
-  QGraphicsRotation * obj = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVector3D * ptr = new QVector3D( obj->axis () );
-    _qt4xhb_createReturnClass ( ptr, "QVECTOR3D" );
-  }
-}
+$method=|QVector3D|axis|
 
 /*
 QVector3D origin () const
 */
-HB_FUNC_STATIC( QGRAPHICSROTATION_ORIGIN )
-{
-  QGraphicsRotation * obj = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVector3D * ptr = new QVector3D( obj->origin () );
-    _qt4xhb_createReturnClass ( ptr, "QVECTOR3D" );
-  }
-}
+$method=|QVector3D|origin|
 
 /*
 void setAngle ( qreal )
@@ -90,29 +72,12 @@ $method=|void|setAngle|qreal
 /*
 void setAxis ( const QVector3D & axis )
 */
-HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS1 )
-{
-  QGraphicsRotation * obj = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAxis ( *PQVECTOR3D(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAxis,setAxis1|const QVector3D &
 
 /*
 void setAxis ( Qt::Axis axis )
 */
-HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS2 )
-{
-  QGraphicsRotation * obj = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setAxis ( (Qt::Axis) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAxis,setAxis2|Qt::Axis
 
 //[1]void setAxis ( const QVector3D & axis )
 //[2]void setAxis ( Qt::Axis axis )
@@ -132,28 +97,11 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS )
 /*
 void setOrigin ( const QVector3D & point )
 */
-HB_FUNC_STATIC( QGRAPHICSROTATION_SETORIGIN )
-{
-  QGraphicsRotation * obj = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setOrigin ( *PQVECTOR3D(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOrigin|const QVector3D &
 
 /*
 virtual void applyTo ( QMatrix4x4 * matrix ) const
 */
-HB_FUNC_STATIC( QGRAPHICSROTATION_APPLYTO )
-{
-  QGraphicsRotation * obj = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QMatrix4x4 * par1 = (QMatrix4x4 *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->applyTo ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|applyTo|QMatrix4x4 *
 
 #pragma ENDDUMP

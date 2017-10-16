@@ -8,8 +8,6 @@ REQUEST QPOINTF
 
 CLASS QTapAndHoldGesture INHERIT QGesture
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD position
    METHOD setPosition
@@ -35,37 +33,17 @@ $deleteMethod
 /*
 QPointF position () const
 */
-HB_FUNC_STATIC( QTAPANDHOLDGESTURE_POSITION )
-{
-  QTapAndHoldGesture * obj = (QTapAndHoldGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->position () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|position|
 
 /*
 void setPosition ( const QPointF & pos )
 */
-HB_FUNC_STATIC( QTAPANDHOLDGESTURE_SETPOSITION )
-{
-  QTapAndHoldGesture * obj = (QTapAndHoldGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPosition ( *PQPOINTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPosition|const QPointF &
 
 /*
-void setTimeout ( int msecs )
+static void setTimeout ( int msecs )
 */
-HB_FUNC_STATIC( QTAPANDHOLDGESTURE_SETTIMEOUT )
-{
-  QTapAndHoldGesture::setTimeout ( PINT(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|setTimeout|int
 
 /*
 static int timeout ()

@@ -86,15 +86,7 @@ $method=|int|numColors|
 /*
 virtual QPaintEngine * paintEngine () const = 0
 */
-HB_FUNC_STATIC( QPAINTDEVICE_PAINTENGINE )
-{
-  QPaintDevice * obj = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPaintEngine * ptr = obj->paintEngine ();
-    _qt4xhb_createReturnClass ( ptr, "QPAINTENGINE" );
-  }
-}
+$virtualMethod=|QPaintEngine *|paintEngine|
 
 /*
 bool paintingActive () const

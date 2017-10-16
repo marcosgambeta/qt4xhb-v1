@@ -139,107 +139,47 @@ $deleteMethod
 /*
 const QBitmap * bitmap () const
 */
-HB_FUNC_STATIC( QCURSOR_BITMAP )
-{
-  QCursor * obj = (QCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QBitmap * ptr = obj->bitmap ();
-    _qt4xhb_createReturnClass ( ptr, "QBITMAP" );
-  }
-}
+$method=|const QBitmap *|bitmap|
 
 /*
 QPoint hotSpot () const
 */
-HB_FUNC_STATIC( QCURSOR_HOTSPOT )
-{
-  QCursor * obj = (QCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->hotSpot () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-}
+$method=|QPoint|hotSpot|
 
 /*
 const QBitmap * mask () const
 */
-HB_FUNC_STATIC( QCURSOR_MASK )
-{
-  QCursor * obj = (QCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QBitmap * ptr = obj->mask ();
-    _qt4xhb_createReturnClass ( ptr, "QBITMAP" );
-  }
-}
+$method=|const QBitmap *|mask|
 
 /*
 QPixmap pixmap () const
 */
-HB_FUNC_STATIC( QCURSOR_PIXMAP )
-{
-  QCursor * obj = (QCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPixmap * ptr = new QPixmap( obj->pixmap () );
-    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
-  }
-}
+$method=|QPixmap|pixmap|
 
 /*
 void setShape ( Qt::CursorShape shape )
 */
-HB_FUNC_STATIC( QCURSOR_SETSHAPE )
-{
-  QCursor * obj = (QCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setShape ( (Qt::CursorShape) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setShape|Qt::CursorShape
 
 /*
 Qt::CursorShape shape () const
 */
-HB_FUNC_STATIC( QCURSOR_SHAPE )
-{
-  QCursor * obj = (QCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->shape () );
-  }
-}
+$method=|Qt::CursorShape|shape|
 
 /*
-QPoint pos ()
+static QPoint pos ()
 */
-HB_FUNC_STATIC( QCURSOR_POS )
-{
-  QPoint * ptr = new QPoint( QCursor::pos () );
-  _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
-}
+$staticMethod=|QPoint|pos|
 
 /*
-void setPos ( int x, int y )
+static void setPos ( int x, int y )
 */
-HB_FUNC_STATIC( QCURSOR_SETPOS1 )
-{
-  QCursor::setPos ( PINT(1), PINT(2) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|setPos,setPos1|int,int
 
 /*
-void setPos ( const QPoint & p )
+static void setPos ( const QPoint & p )
 */
-HB_FUNC_STATIC( QCURSOR_SETPOS2 )
-{
-  QCursor::setPos ( *PQPOINT(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|setPos,setPos2|const QPoint &
 
 //[1]void setPos ( int x, int y )
 //[2]void setPos ( const QPoint & p )

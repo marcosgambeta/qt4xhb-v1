@@ -8,8 +8,6 @@ REQUEST QREGION
 
 CLASS QDecorationDefault INHERIT QDecoration
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD paint
@@ -48,15 +46,6 @@ $virtualMethod=|bool|paint|QPainter *,const QWidget *,int=QDecoration::All,QDeco
 /*
 virtual QRegion region ( const QWidget * widget, const QRect & rect, int decorationRegion = All )
 */
-HB_FUNC_STATIC( QDECORATIONDEFAULT_REGION )
-{
-  QDecorationDefault * obj = (QDecorationDefault *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QWidget * par1 = (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QRegion * ptr = new QRegion( obj->region ( par1, *PQRECT(2), OPINT(3,QDecoration::All) ) );
-    _qt4xhb_createReturnClass ( ptr, "QREGION", true );
-  }
-}
+$virtualMethod=|QRegion|region|const QWidget *,const QRect &,int=QDecoration::All
 
 #pragma ENDDUMP

@@ -87,6 +87,7 @@ QList<QAbstractButton *> buttons () const
 HB_FUNC_STATIC( QBUTTONGROUP_BUTTONS )
 {
   QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QAbstractButton *> list = obj->buttons ();

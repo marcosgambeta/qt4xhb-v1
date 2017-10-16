@@ -55,15 +55,7 @@ $deleteMethod
 /*
 QRect frameRect () const
 */
-HB_FUNC_STATIC( QFRAME_FRAMERECT )
-{
-  QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->frameRect () );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$method=|QRect|frameRect|
 
 /*
 Shadow frameShadow () const
@@ -112,94 +104,36 @@ $method=|int|midLineWidth|
 /*
 void setFrameRect ( const QRect & )
 */
-HB_FUNC_STATIC( QFRAME_SETFRAMERECT )
-{
-  QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFrameRect ( *PQRECT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFrameRect|const QRect &
 
 /*
 void setFrameShadow ( Shadow )
 */
-HB_FUNC_STATIC( QFRAME_SETFRAMESHADOW )
-{
-  QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setFrameShadow ( (QFrame::Shadow) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFrameShadow|QFrame::Shadow
 
 /*
 void setFrameShape ( Shape )
 */
-HB_FUNC_STATIC( QFRAME_SETFRAMESHAPE )
-{
-  QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setFrameShape ( (QFrame::Shape) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFrameShape|QFrame::Shape
 
 /*
 void setFrameStyle ( int style )
 */
-HB_FUNC_STATIC( QFRAME_SETFRAMESTYLE )
-{
-  QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFrameStyle ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFrameStyle|int
 
 /*
 void setLineWidth ( int )
 */
-HB_FUNC_STATIC( QFRAME_SETLINEWIDTH )
-{
-  QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setLineWidth ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setLineWidth|int
 
 /*
 void setMidLineWidth ( int )
 */
-HB_FUNC_STATIC( QFRAME_SETMIDLINEWIDTH )
-{
-  QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setMidLineWidth ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMidLineWidth|int
 
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC_STATIC( QFRAME_SIZEHINT )
-{
-  QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|sizeHint|
 
 #pragma ENDDUMP

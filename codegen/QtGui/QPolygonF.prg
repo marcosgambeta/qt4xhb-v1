@@ -238,28 +238,12 @@ HB_FUNC_STATIC( QPOLYGONF_TOPOLYGON )
 /*
 void translate ( const QPointF & offset )
 */
-HB_FUNC_STATIC( QPOLYGONF_TRANSLATE1 )
-{
-  QPolygonF * obj = (QPolygonF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->translate ( *PQPOINTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|translate,translate1|const QPointF &
 
 /*
 void translate ( qreal dx, qreal dy )
 */
-HB_FUNC_STATIC( QPOLYGONF_TRANSLATE2 )
-{
-  QPolygonF * obj = (QPolygonF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->translate ( PQREAL(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|translate,translate2|qreal,qreal
 
 //[1]void translate ( const QPointF & offset )
 //[2]void translate ( qreal dx, qreal dy )
@@ -279,28 +263,12 @@ HB_FUNC_STATIC( QPOLYGONF_TRANSLATE )
 /*
 QPolygonF translated ( const QPointF & offset ) const
 */
-HB_FUNC_STATIC( QPOLYGONF_TRANSLATED1 )
-{
-  QPolygonF * obj = (QPolygonF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPolygonF * ptr = new QPolygonF( obj->translated ( *PQPOINTF(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOLYGONF", true );
-  }
-}
+$method=|QPolygonF|translated,translated1|const QPointF &
 
 /*
 QPolygonF translated ( qreal dx, qreal dy ) const
 */
-HB_FUNC_STATIC( QPOLYGONF_TRANSLATED2 )
-{
-  QPolygonF * obj = (QPolygonF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPolygonF * ptr = new QPolygonF( obj->translated ( PQREAL(1), PQREAL(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOLYGONF", true );
-  }
-}
+$method=|QPolygonF|translated,translated2|qreal,qreal
 
 //[1]QPolygonF translated ( const QPointF & offset ) const
 //[2]QPolygonF translated ( qreal dx, qreal dy ) const
@@ -320,15 +288,7 @@ HB_FUNC_STATIC( QPOLYGONF_TRANSLATED )
 /*
 QPolygonF united ( const QPolygonF & r ) const
 */
-HB_FUNC_STATIC( QPOLYGONF_UNITED )
-{
-  QPolygonF * obj = (QPolygonF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPolygonF * ptr = new QPolygonF( obj->united ( *PQPOLYGONF(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOLYGONF", true );
-  }
-}
+$method=|QPolygonF|united|const QPolygonF &
 
 $extraMethods
 

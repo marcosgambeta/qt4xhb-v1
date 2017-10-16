@@ -9,8 +9,6 @@ REQUEST QVARIANT
 
 CLASS QTextBrowser INHERIT QTextEdit
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD backwardHistoryCount
    METHOD clearHistory

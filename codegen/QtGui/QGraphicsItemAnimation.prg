@@ -65,15 +65,7 @@ $deleteMethod
 /*
 void clear ()
 */
-HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_CLEAR )
-{
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clear|
 
 /*
 qreal horizontalScaleAt ( qreal step ) const
@@ -88,15 +80,7 @@ $method=|qreal|horizontalShearAt|qreal
 /*
 QGraphicsItem * item () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_ITEM )
-{
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QGraphicsItem * ptr = obj->item ();
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSITEM" );
-  }
-}
+$method=|QGraphicsItem *|item|
 
 /*
 QMatrix matrixAt ( qreal step ) const

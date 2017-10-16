@@ -9,8 +9,6 @@ REQUEST QTEXTBLOCK
 
 CLASS QTextList INHERIT QTextBlockGroup
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD add
    METHOD count
@@ -41,15 +39,7 @@ $deleteMethod
 /*
 void add ( const QTextBlock & block )
 */
-HB_FUNC_STATIC( QTEXTLIST_ADD )
-{
-  QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->add ( *PQTEXTBLOCK(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|add|const QTextBlock &
 
 /*
 int count () const
@@ -59,28 +49,12 @@ $method=|int|count|
 /*
 QTextListFormat format () const
 */
-HB_FUNC_STATIC( QTEXTLIST_FORMAT )
-{
-  QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextListFormat * ptr = new QTextListFormat( obj->format () );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTLISTFORMAT" );
-  }
-}
+$method=|QTextListFormat|format|
 
 /*
 QTextBlock item ( int i ) const
 */
-HB_FUNC_STATIC( QTEXTLIST_ITEM )
-{
-  QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextBlock * ptr = new QTextBlock( obj->item ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
-  }
-}
+$method=|QTextBlock|item|int
 
 /*
 int itemNumber ( const QTextBlock & block ) const
@@ -95,40 +69,16 @@ $method=|QString|itemText|const QTextBlock &
 /*
 void remove ( const QTextBlock & block )
 */
-HB_FUNC_STATIC( QTEXTLIST_REMOVE )
-{
-  QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->remove ( *PQTEXTBLOCK(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|remove|const QTextBlock &
 
 /*
 void removeItem ( int i )
 */
-HB_FUNC_STATIC( QTEXTLIST_REMOVEITEM )
-{
-  QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->removeItem ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeItem|int
 
 /*
 void setFormat ( const QTextListFormat & format )
 */
-HB_FUNC_STATIC( QTEXTLIST_SETFORMAT )
-{
-  QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFormat ( *PQTEXTLISTFORMAT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFormat|const QTextListFormat &
 
 #pragma ENDDUMP

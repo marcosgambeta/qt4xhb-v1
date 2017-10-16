@@ -210,15 +210,7 @@ HB_FUNC_STATIC( QTABBAR_MOVETAB )
 /*
 void removeTab ( int index )
 */
-HB_FUNC_STATIC( QTABBAR_REMOVETAB )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->removeTab ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeTab|int
 
 /*
 SelectionBehavior selectionBehaviorOnRemove () const
@@ -235,242 +227,92 @@ HB_FUNC_STATIC( QTABBAR_SELECTIONBEHAVIORONREMOVE )
 /*
 void setDocumentMode ( bool set )
 */
-HB_FUNC_STATIC( QTABBAR_SETDOCUMENTMODE )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDocumentMode ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDocumentMode|bool
 
 /*
 void setDrawBase ( bool drawTheBase )
 */
-HB_FUNC_STATIC( QTABBAR_SETDRAWBASE )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDrawBase ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDrawBase|bool
 
 /*
 void setElideMode ( Qt::TextElideMode )
 */
-HB_FUNC_STATIC( QTABBAR_SETELIDEMODE )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setElideMode ( (Qt::TextElideMode) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setElideMode|Qt::TextElideMode
 
 /*
 void setExpanding ( bool enabled )
 */
-HB_FUNC_STATIC( QTABBAR_SETEXPANDING )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setExpanding ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setExpanding|bool
 
 /*
 void setIconSize ( const QSize & size )
 */
-HB_FUNC_STATIC( QTABBAR_SETICONSIZE )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setIconSize ( *PQSIZE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setIconSize|const QSize &
 
 /*
 void setMovable ( bool movable )
 */
-HB_FUNC_STATIC( QTABBAR_SETMOVABLE )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setMovable ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMovable|bool
 
 /*
 void setSelectionBehaviorOnRemove ( SelectionBehavior behavior )
 */
-HB_FUNC_STATIC( QTABBAR_SETSELECTIONBEHAVIORONREMOVE )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setSelectionBehaviorOnRemove ( (QTabBar::SelectionBehavior) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSelectionBehaviorOnRemove|QTabBar::SelectionBehavior
 
 /*
 void setShape ( Shape shape )
 */
-HB_FUNC_STATIC( QTABBAR_SETSHAPE )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setShape ( (QTabBar::Shape) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setShape|QTabBar::Shape
 
 /*
 void setTabButton ( int index, ButtonPosition position, QWidget * widget )
 */
-HB_FUNC_STATIC( QTABBAR_SETTABBUTTON )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    obj->setTabButton ( PINT(1), (QTabBar::ButtonPosition) par2, PQWIDGET(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTabButton|int,QTabBar::ButtonPosition,QWidget *
 
 /*
 void setTabData ( int index, const QVariant & data )
 */
-HB_FUNC_STATIC( QTABBAR_SETTABDATA )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTabData ( PINT(1), *PQVARIANT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTabData|int,const QVariant &
 
 /*
 void setTabEnabled ( int index, bool enabled )
 */
-HB_FUNC_STATIC( QTABBAR_SETTABENABLED )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTabEnabled ( PINT(1), PBOOL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTabEnabled|int,bool
 
 /*
 void setTabIcon ( int index, const QIcon & icon )
 */
-HB_FUNC_STATIC( QTABBAR_SETTABICON )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIcon par2 = ISOBJECT(2)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(2));
-    obj->setTabIcon ( PINT(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTabIcon|int,const QIcon &
 
 /*
 void setTabText ( int index, const QString & text )
 */
-HB_FUNC_STATIC( QTABBAR_SETTABTEXT )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTabText ( PINT(1), PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTabText|int,const QString &
 
 /*
 void setTabTextColor ( int index, const QColor & color )
 */
-HB_FUNC_STATIC( QTABBAR_SETTABTEXTCOLOR )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QColor par2 = ISOBJECT(2)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(2));
-    obj->setTabTextColor ( PINT(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTabTextColor|int,const QColor &
 
 /*
 void setTabToolTip ( int index, const QString & tip )
 */
-HB_FUNC_STATIC( QTABBAR_SETTABTOOLTIP )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTabToolTip ( PINT(1), PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTabToolTip|int,const QString &
 
 /*
 void setTabWhatsThis ( int index, const QString & text )
 */
-HB_FUNC_STATIC( QTABBAR_SETTABWHATSTHIS )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTabWhatsThis ( PINT(1), PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTabWhatsThis|int,const QString &
 
 /*
 void setTabsClosable ( bool closable )
 */
-HB_FUNC_STATIC( QTABBAR_SETTABSCLOSABLE )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTabsClosable ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTabsClosable|bool
 
 /*
 void setUsesScrollButtons ( bool useButtons )
 */
-HB_FUNC_STATIC( QTABBAR_SETUSESSCROLLBUTTONS )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUsesScrollButtons ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setUsesScrollButtons|bool
 
 /*
 Shape shape () const
@@ -506,41 +348,17 @@ HB_FUNC_STATIC( QTABBAR_TABBUTTON )
 /*
 QVariant tabData ( int index ) const
 */
-HB_FUNC_STATIC( QTABBAR_TABDATA )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->tabData ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$method=|QVariant|tabData|int
 
 /*
 QIcon tabIcon ( int index ) const
 */
-HB_FUNC_STATIC( QTABBAR_TABICON )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIcon * ptr = new QIcon( obj->tabIcon ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );
-  }
-}
+$method=|QIcon|tabIcon|int
 
 /*
 QRect tabRect ( int index ) const
 */
-HB_FUNC_STATIC( QTABBAR_TABRECT )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->tabRect ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$method=|QRect|tabRect|int
 
 /*
 QString tabText ( int index ) const
@@ -550,15 +368,7 @@ $method=|QString|tabText|int
 /*
 QColor tabTextColor ( int index ) const
 */
-HB_FUNC_STATIC( QTABBAR_TABTEXTCOLOR )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QColor * ptr = new QColor( obj->tabTextColor ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-}
+$method=|QColor|tabTextColor|int
 
 /*
 QString tabToolTip ( int index ) const
@@ -583,40 +393,16 @@ $method=|bool|usesScrollButtons|
 /*
 virtual QSize minimumSizeHint () const
 */
-HB_FUNC_STATIC( QTABBAR_MINIMUMSIZEHINT )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->minimumSizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|minimumSizeHint|
 
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC_STATIC( QTABBAR_SIZEHINT )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|sizeHint|
 
 /*
 void setCurrentIndex ( int index )
 */
-HB_FUNC_STATIC( QTABBAR_SETCURRENTINDEX )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCurrentIndex ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCurrentIndex|int
 
 #pragma ENDDUMP

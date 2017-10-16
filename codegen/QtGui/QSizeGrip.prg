@@ -30,38 +30,18 @@ $destructor
 /*
 QSizeGrip ( QWidget * parent )
 */
-HB_FUNC_STATIC( QSIZEGRIP_NEW )
-{
-  QSizeGrip * o = new QSizeGrip ( PQWIDGET(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QWidget *
 
 $deleteMethod
 
 /*
 virtual void setVisible ( bool visible )
 */
-HB_FUNC_STATIC( QSIZEGRIP_SETVISIBLE )
-{
-  QSizeGrip * obj = (QSizeGrip *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setVisible ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|setVisible|bool
 
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC_STATIC( QSIZEGRIP_SIZEHINT )
-{
-  QSizeGrip * obj = (QSizeGrip *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|sizeHint|
 
 #pragma ENDDUMP

@@ -52,29 +52,12 @@ $deleteMethod
 /*
 virtual QIcon icon(IconType type) const
 */
-HB_FUNC_STATIC( QFILEICONPROVIDER_ICON1 )
-{
-  QFileIconProvider * obj = (QFileIconProvider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    QIcon * ptr = new QIcon( obj->icon ( (QFileIconProvider::IconType) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );
-  }
-}
+$virtualMethod=|QIcon|icon,icon1|QFileIconProvider::IconType
 
 /*
 virtual QIcon icon(const QFileInfo & info) const
 */
-HB_FUNC_STATIC( QFILEICONPROVIDER_ICON2 )
-{
-  QFileIconProvider * obj = (QFileIconProvider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIcon * ptr = new QIcon( obj->icon ( *PQFILEINFO(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );
-  }
-}
+$virtualMethod=|QIcon|icon,icon2|const QFileInfo &
 
 //[1]virtual QIcon icon(IconType type) const
 //[2]virtual QIcon icon(const QFileInfo & info) const

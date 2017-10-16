@@ -10,8 +10,6 @@ REQUEST QWIDGET
 
 CLASS QGestureEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD accept1
@@ -73,43 +71,17 @@ $deleteMethod
 /*
 void accept ()
 */
-HB_FUNC_STATIC( QGESTUREEVENT_ACCEPT1 )
-{
-  QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->accept ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|accept,accept1|
 
 /*
 void accept ( QGesture * gesture )
 */
-HB_FUNC_STATIC( QGESTUREEVENT_ACCEPT2 )
-{
-  QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QGesture * par1 = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->accept ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|accept,accept2|QGesture *
 
 /*
 void accept ( Qt::GestureType gestureType )
 */
-HB_FUNC_STATIC( QGESTUREEVENT_ACCEPT3 )
-{
-  QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->accept ( (Qt::GestureType) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|accept,accept3|Qt::GestureType
 
 //[1]void accept ()
 //[2]void accept ( QGesture * gesture )
@@ -137,6 +109,7 @@ QList<QGesture *> activeGestures () const
 HB_FUNC_STATIC( QGESTUREEVENT_ACTIVEGESTURES )
 {
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QGesture *> list = obj->activeGestures ();
@@ -180,6 +153,7 @@ QList<QGesture *> canceledGestures () const
 HB_FUNC_STATIC( QGESTUREEVENT_CANCELEDGESTURES )
 {
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QGesture *> list = obj->canceledGestures ();
@@ -220,16 +194,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_CANCELEDGESTURES )
 /*
 QGesture * gesture ( Qt::GestureType type ) const
 */
-HB_FUNC_STATIC( QGESTUREEVENT_GESTURE )
-{
-  QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    QGesture * ptr = obj->gesture ( (Qt::GestureType) par1 );
-    _qt4xhb_createReturnClass ( ptr, "QGESTURE" );
-  }
-}
+$method=|QGesture *|gesture|Qt::GestureType
 
 /*
 QList<QGesture *> gestures () const
@@ -237,6 +202,7 @@ QList<QGesture *> gestures () const
 HB_FUNC_STATIC( QGESTUREEVENT_GESTURES )
 {
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QGesture *> list = obj->gestures ();
@@ -277,43 +243,17 @@ HB_FUNC_STATIC( QGESTUREEVENT_GESTURES )
 /*
 void ignore ()
 */
-HB_FUNC_STATIC( QGESTUREEVENT_IGNORE1 )
-{
-  QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->ignore ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|ignore,ignore1|
 
 /*
 void ignore ( QGesture * gesture )
 */
-HB_FUNC_STATIC( QGESTUREEVENT_IGNORE2 )
-{
-  QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QGesture * par1 = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->ignore ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|ignore,ignore2|QGesture *
 
 /*
 void ignore ( Qt::GestureType gestureType )
 */
-HB_FUNC_STATIC( QGESTUREEVENT_IGNORE3 )
-{
-  QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->ignore ( (Qt::GestureType) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|ignore,ignore3|Qt::GestureType
 
 //[1]void ignore ()
 //[2]void ignore ( QGesture * gesture )
@@ -373,56 +313,22 @@ HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED )
 /*
 QPointF mapToGraphicsScene ( const QPointF & gesturePoint ) const
 */
-HB_FUNC_STATIC( QGESTUREEVENT_MAPTOGRAPHICSSCENE )
-{
-  QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->mapToGraphicsScene ( *PQPOINTF(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|mapToGraphicsScene|const QPointF &
 
 /*
 void setAccepted ( bool accepted )
 */
-HB_FUNC_STATIC( QGESTUREEVENT_SETACCEPTED1 )
-{
-  QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAccepted ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAccepted,setAccepted1|bool
 
 /*
 void setAccepted ( QGesture * gesture, bool value )
 */
-HB_FUNC_STATIC( QGESTUREEVENT_SETACCEPTED2 )
-{
-  QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QGesture * par1 = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setAccepted ( par1, PBOOL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAccepted,setAccepted2|QGesture *,bool
 
 /*
 void setAccepted ( Qt::GestureType gestureType, bool value )
 */
-HB_FUNC_STATIC( QGESTUREEVENT_SETACCEPTED3 )
-{
-  QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setAccepted ( (Qt::GestureType) par1, PBOOL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAccepted,setAccepted3|Qt::GestureType,bool
 
 //[1]void setAccepted ( bool accepted )
 //[2]void setAccepted ( QGesture * gesture, bool value )
@@ -447,27 +353,11 @@ HB_FUNC_STATIC( QGESTUREEVENT_SETACCEPTED )
 /*
 void setWidget(QWidget *widget)
 */
-HB_FUNC_STATIC( QGESTUREEVENT_SETWIDGET )
-{
-  QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setWidget ( PQWIDGET(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWidget|QWidget *
 
 /*
 QWidget * widget () const
 */
-HB_FUNC_STATIC( QGESTUREEVENT_WIDGET )
-{
-  QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->widget ();
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|widget|
 
 #pragma ENDDUMP

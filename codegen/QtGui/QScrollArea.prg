@@ -116,15 +116,7 @@ HB_FUNC_STATIC( QSCROLLAREA_SETWIDGET )
 /*
 void setWidgetResizable ( bool resizable )
 */
-HB_FUNC_STATIC( QSCROLLAREA_SETWIDGETRESIZABLE )
-{
-  QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setWidgetResizable ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWidgetResizable|bool
 
 /*
 QWidget * takeWidget ()

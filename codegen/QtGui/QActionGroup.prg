@@ -55,6 +55,7 @@ QList<QAction *> actions () const
 HB_FUNC_STATIC( QACTIONGROUP_ACTIONS )
 {
   QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QAction *> list = obj->actions ();

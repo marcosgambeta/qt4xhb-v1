@@ -96,29 +96,17 @@ $destructor
 /*
 QMatrix4x4 ()
 */
-HB_FUNC_STATIC( QMATRIX4X4_NEW1 )
-{
-  QMatrix4x4 * o = new QMatrix4x4 ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new1|
 
 /*
 QMatrix4x4 ( qreal m11, qreal m12, qreal m13, qreal m14, qreal m21, qreal m22, qreal m23, qreal m24, qreal m31, qreal m32, qreal m33, qreal m34, qreal m41, qreal m42, qreal m43, qreal m44 )
 */
-HB_FUNC_STATIC( QMATRIX4X4_NEW3 )
-{
-  QMatrix4x4 * o = new QMatrix4x4 ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6), PQREAL(7), PQREAL(8), PQREAL(9), PQREAL(10), PQREAL(11), PQREAL(12), PQREAL(13), PQREAL(14), PQREAL(15), PQREAL(16) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new3|qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal
 
 /*
 QMatrix4x4 ( const QTransform & transform )
 */
-HB_FUNC_STATIC( QMATRIX4X4_NEW5 )
-{
-  QMatrix4x4 * o = new QMatrix4x4 ( *PQTRANSFORM(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new5|const QTransform &
 
 //[1]QMatrix4x4 ()
 //[2]QMatrix4x4 ( const qreal * values )
@@ -127,7 +115,7 @@ HB_FUNC_STATIC( QMATRIX4X4_NEW5 )
 //[5]QMatrix4x4 ( const QTransform & transform )
 //[6]QMatrix4x4 ( const QMatrix & matrix )
 
-// TODO: implementar caso 2 (receber uma array de valores numéricos)
+%% TODO: implementar caso 2 (receber uma array de valores numéricos)
 
 HB_FUNC_STATIC( QMATRIX4X4_NEW )
 {
@@ -158,15 +146,7 @@ $deleteMethod
 /*
 QVector4D column ( int index ) const
 */
-HB_FUNC_STATIC( QMATRIX4X4_COLUMN )
-{
-  QMatrix4x4 * obj = (QMatrix4x4 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVector4D * ptr = new QVector4D( obj->column ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVECTOR4D" );
-  }
-}
+$method=|QVector4D|column|int
 
 /*
 qreal determinant () const
@@ -191,17 +171,7 @@ $method=|void|frustum|qreal,qreal,qreal,qreal,qreal,qreal
 /*
 QMatrix4x4 inverted ( bool * invertible = 0 ) const
 */
-HB_FUNC_STATIC( QMATRIX4X4_INVERTED )
-{
-  QMatrix4x4 * obj = (QMatrix4x4 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    bool par1;
-    QMatrix4x4 * ptr = new QMatrix4x4( obj->inverted ( &par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMATRIX4X4", true );
-    hb_storl( par1, 1 );
-  }
-}
+$method=|QMatrix4x4|inverted|bool *=0
 
 /*
 bool isIdentity () const

@@ -173,14 +173,7 @@ $method=|bool|bold|
 /*
 Capitalization capitalization () const
 */
-HB_FUNC_STATIC( QFONT_CAPITALIZATION )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->capitalization () );
-  }
-}
+$method=|QFont::Capitalization|capitalization|
 
 /*
 QString defaultFamily () const
@@ -245,14 +238,7 @@ $method=|qreal|letterSpacing|
 /*
 SpacingType letterSpacingType () const
 */
-HB_FUNC_STATIC( QFONT_LETTERSPACINGTYPE )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->letterSpacingType () );
-  }
-}
+$method=|QFont::SpacingType|letterSpacingType|
 
 /*
 bool overline () const
@@ -287,42 +273,17 @@ $method=|QString|rawName|
 /*
 QFont resolve ( const QFont & other ) const
 */
-HB_FUNC_STATIC( QFONT_RESOLVE )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QFont * ptr = new QFont( obj->resolve ( *PQFONT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
-  }
-}
+$method=|QFont|resolve|const QFont &
 
 /*
 void setBold ( bool enable )
 */
-HB_FUNC_STATIC( QFONT_SETBOLD )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBold ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBold|bool
 
 /*
 void setCapitalization ( Capitalization caps )
 */
-HB_FUNC_STATIC( QFONT_SETCAPITALIZATION )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setCapitalization ( (QFont::Capitalization) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCapitalization|QFont::Capitalization
 
 /*
 void setFamily ( const QString & family )
@@ -332,94 +293,37 @@ $method=|void|setFamily|const QString &
 /*
 void setFixedPitch ( bool enable )
 */
-HB_FUNC_STATIC( QFONT_SETFIXEDPITCH )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFixedPitch ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFixedPitch|bool
 
 /*
 void setItalic ( bool enable )
 */
-HB_FUNC_STATIC( QFONT_SETITALIC )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setItalic ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setItalic|bool
 
 /*
 void setKerning ( bool enable )
 */
-HB_FUNC_STATIC( QFONT_SETKERNING )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setKerning ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setKerning|bool
 
 /*
 void setLetterSpacing ( SpacingType type, qreal spacing )
 */
-HB_FUNC_STATIC( QFONT_SETLETTERSPACING )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setLetterSpacing ( (QFont::SpacingType) par1, PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setLetterSpacing|QFont::SpacingType,qreal
 
 /*
 void setOverline ( bool enable )
 */
-HB_FUNC_STATIC( QFONT_SETOVERLINE )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setOverline ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOverline|bool
 
 /*
 void setPixelSize ( int pixelSize )
 */
-HB_FUNC_STATIC( QFONT_SETPIXELSIZE )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPixelSize ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPixelSize|int
 
 /*
 void setPointSize ( int pointSize )
 */
-HB_FUNC_STATIC( QFONT_SETPOINTSIZE )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPointSize ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPointSize|int
 
 /*
 void setPointSizeF ( qreal pointSize )
@@ -429,15 +333,7 @@ $method=|void|setPointSizeF|qreal
 /*
 void setRawMode ( bool enable )
 */
-HB_FUNC_STATIC( QFONT_SETRAWMODE )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRawMode ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRawMode|bool
 
 /*
 void setRawName ( const QString & name )
@@ -447,97 +343,37 @@ $method=|void|setRawName|const QString &
 /*
 void setStretch ( int factor )
 */
-HB_FUNC_STATIC( QFONT_SETSTRETCH )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setStretch ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStretch|int
 
 /*
 void setStrikeOut ( bool enable )
 */
-HB_FUNC_STATIC( QFONT_SETSTRIKEOUT )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setStrikeOut ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStrikeOut|bool
 
 /*
 void setStyle ( Style style )
 */
-HB_FUNC_STATIC( QFONT_SETSTYLE )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setStyle ( (QFont::Style) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStyle|QFont::Style
 
 /*
 void setStyleHint ( StyleHint hint, StyleStrategy strategy = PreferDefault )
 */
-HB_FUNC_STATIC( QFONT_SETSTYLEHINT )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    int par2 = ISNIL(2)? (int) QFont::PreferDefault : hb_parni(2);
-    obj->setStyleHint ( (QFont::StyleHint) par1, (QFont::StyleStrategy) par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStyleHint|QFont::StyleHint,QFont::StyleStrategy=QFont::PreferDefault
 
 /*
 void setStyleStrategy ( StyleStrategy s )
 */
-HB_FUNC_STATIC( QFONT_SETSTYLESTRATEGY )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setStyleStrategy ( (QFont::StyleStrategy) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStyleStrategy|QFont::StyleStrategy
 
 /*
 void setUnderline ( bool enable )
 */
-HB_FUNC_STATIC( QFONT_SETUNDERLINE )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUnderline ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setUnderline|bool
 
 /*
 void setWeight ( int weight )
 */
-HB_FUNC_STATIC( QFONT_SETWEIGHT )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setWeight ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWeight|int
 
 /*
 void setWordSpacing ( qreal spacing )
@@ -557,38 +393,17 @@ $method=|bool|strikeOut|
 /*
 Style style () const
 */
-HB_FUNC_STATIC( QFONT_STYLE )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->style () );
-  }
-}
+$method=|QFont::Style|style|
 
 /*
 StyleHint styleHint () const
 */
-HB_FUNC_STATIC( QFONT_STYLEHINT )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->styleHint () );
-  }
-}
+$method=|QFont::StyleHint|styleHint|
 
 /*
 StyleStrategy styleStrategy () const
 */
-HB_FUNC_STATIC( QFONT_STYLESTRATEGY )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->styleStrategy () );
-  }
-}
+$method=|QFont::StyleStrategy|styleStrategy|
 
 /*
 QString toString () const

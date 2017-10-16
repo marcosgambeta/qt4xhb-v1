@@ -9,8 +9,6 @@ REQUEST QICONENGINEV2
 
 CLASS QIconEngineV2 INHERIT QIconEngine
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD availableSizes
    METHOD clone

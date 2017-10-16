@@ -74,29 +74,12 @@ $deleteMethod
 /*
 void addMapping ( QWidget * widget, int section )
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_ADDMAPPING1 )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    obj->addMapping ( PQWIDGET(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addMapping,addMapping1|QWidget *,int
 
 /*
 void addMapping ( QWidget * widget, int section, const QByteArray & propertyName )
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_ADDMAPPING2 )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->addMapping ( PQWIDGET(1), PINT(2), *PQBYTEARRAY(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addMapping,addMapping2|QWidget *,int,const QByteArray &
 
 //[1]void addMapping ( QWidget * widget, int section )
 //[2]void addMapping ( QWidget * widget, int section, const QByteArray & propertyName )
@@ -116,15 +99,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ADDMAPPING )
 /*
 void clearMapping ()
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_CLEARMAPPING )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clearMapping ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clearMapping|
 
 /*
 int currentIndex () const

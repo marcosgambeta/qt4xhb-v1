@@ -128,14 +128,7 @@ $method=|int|completionCount|
 /*
 CompletionMode completionMode () const
 */
-HB_FUNC_STATIC( QCOMPLETER_COMPLETIONMODE )
-{
-  QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->completionMode () );
-  }
-}
+$method=|QCompleter::CompletionMode|completionMode|
 
 /*
 QAbstractItemModel * completionModel () const
@@ -160,15 +153,7 @@ $method=|QString|currentCompletion|
 /*
 QModelIndex currentIndex () const
 */
-HB_FUNC_STATIC( QCOMPLETER_CURRENTINDEX )
-{
-  QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->currentIndex () );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
+$method=|QModelIndex|currentIndex|
 
 /*
 int currentRow () const
@@ -188,14 +173,7 @@ $method=|QAbstractItemModel *|model|
 /*
 ModelSorting modelSorting () const
 */
-HB_FUNC_STATIC( QCOMPLETER_MODELSORTING )
-{
-  QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->modelSorting () );
-  }
-}
+$method=|QCompleter::ModelSorting|modelSorting|
 
 /*
 virtual QString pathFromIndex ( const QModelIndex & index ) const
@@ -205,69 +183,27 @@ $virtualMethod=|QString|pathFromIndex|const QModelIndex &
 /*
 QAbstractItemView * popup () const
 */
-HB_FUNC_STATIC( QCOMPLETER_POPUP )
-{
-  QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractItemView * ptr = obj->popup ();
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMVIEW" );
-  }
-}
+$method=|QAbstractItemView *|popup|
 
 /*
 void setCaseSensitivity ( Qt::CaseSensitivity caseSensitivity )
 */
-HB_FUNC_STATIC( QCOMPLETER_SETCASESENSITIVITY )
-{
-  QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setCaseSensitivity ( (Qt::CaseSensitivity) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCaseSensitivity|Qt::CaseSensitivity
 
 /*
 void setCompletionColumn ( int column )
 */
-HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONCOLUMN )
-{
-  QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCompletionColumn ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCompletionColumn|int
 
 /*
 void setCompletionMode ( CompletionMode mode )
 */
-HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONMODE )
-{
-  QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setCompletionMode ( (QCompleter::CompletionMode) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCompletionMode|QCompleter::CompletionMode
 
 /*
 void setCompletionRole ( int role )
 */
-HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONROLE )
-{
-  QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCompletionRole ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCompletionRole|int
 
 /*
 bool setCurrentRow ( int row )

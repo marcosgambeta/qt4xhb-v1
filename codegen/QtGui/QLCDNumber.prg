@@ -8,8 +8,6 @@ REQUEST QSIZE
 
 CLASS QLCDNumber INHERIT QFrame
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -151,15 +149,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SEGMENTSTYLE )
 /*
 void setDigitCount ( int numDigits )
 */
-HB_FUNC_STATIC( QLCDNUMBER_SETDIGITCOUNT )
-{
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDigitCount ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDigitCount|int
 
 /*
 void setMode ( Mode )
@@ -197,27 +187,12 @@ $method=|bool|smallDecimalPoint|
 /*
 double value () const
 */
-HB_FUNC_STATIC( QLCDNUMBER_VALUE )
-{
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RDOUBLE( obj->value () );
-  }
-}
+$method=|double|value|
 
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC_STATIC( QLCDNUMBER_SIZEHINT )
-{
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|sizeHint|
 
 /*
 void display ( const QString & s )
@@ -227,34 +202,18 @@ $method=|void|display,display1|const QString &
 /*
 void display ( double num )
 */
-HB_FUNC_STATIC( QLCDNUMBER_DISPLAY2 )
-{
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->display ( PDOUBLE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|display,display2|double
 
 /*
 void display ( int num )
 */
-HB_FUNC_STATIC( QLCDNUMBER_DISPLAY3 )
-{
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->display ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|display,display3|int
 
 //[1]void display ( const QString & s )
 //[2]void display ( double num )
 //[3]void display ( int num )
 
-// TODO: reconhecer se é int ou double
+%% TODO: reconhecer se é int ou double
 
 HB_FUNC_STATIC( QLCDNUMBER_DISPLAY )
 {
@@ -271,66 +230,26 @@ HB_FUNC_STATIC( QLCDNUMBER_DISPLAY )
 /*
 void setBinMode ()
 */
-HB_FUNC_STATIC( QLCDNUMBER_SETBINMODE )
-{
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBinMode ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBinMode|
 
 /*
 void setDecMode ()
 */
-HB_FUNC_STATIC( QLCDNUMBER_SETDECMODE )
-{
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDecMode ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDecMode|
 
 /*
 void setHexMode ()
 */
-HB_FUNC_STATIC( QLCDNUMBER_SETHEXMODE )
-{
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setHexMode ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHexMode|
 
 /*
 void setOctMode ()
 */
-HB_FUNC_STATIC( QLCDNUMBER_SETOCTMODE )
-{
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setOctMode ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOctMode|
 
 /*
 void setSmallDecimalPoint ( bool )
 */
-HB_FUNC_STATIC( QLCDNUMBER_SETSMALLDECIMALPOINT )
-{
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSmallDecimalPoint ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSmallDecimalPoint|bool
 
 #pragma ENDDUMP

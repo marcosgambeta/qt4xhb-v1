@@ -10,8 +10,6 @@ REQUEST QRECT
 
 CLASS QAccessibleInterface INHERIT QAccessible
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD actionText
    METHOD childAt
@@ -92,6 +90,7 @@ QVariant invokeMethod ( Method method, int child = 0, const QVariantList & param
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_INVOKEMETHOD )
 {
   QAccessibleInterface * obj = (QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     int par1 = hb_parni(1);

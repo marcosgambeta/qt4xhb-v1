@@ -171,28 +171,12 @@ $deleteMethod
 /*
 void addResource ( int type, const QUrl & name, const QVariant & resource )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_ADDRESOURCE )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->addResource ( PINT(1), *PQURL(2), *PQVARIANT(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addResource|int,const QUrl &,const QVariant &
 
 /*
 void adjustSize ()
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_ADJUSTSIZE )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->adjustSize ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|adjustSize|
 
 /*
 QVector<QTextFormat> allFormats () const
@@ -200,6 +184,7 @@ QVector<QTextFormat> allFormats () const
 HB_FUNC_STATIC( QTEXTDOCUMENT_ALLFORMATS )
 {
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QVector<QTextFormat> list = obj->allFormats ();
@@ -250,15 +235,7 @@ $method=|int|availableUndoSteps|
 /*
 QTextBlock begin () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_BEGIN )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextBlock * ptr = new QTextBlock( obj->begin () );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
-  }
-}
+$method=|QTextBlock|begin|
 
 /*
 int blockCount () const
@@ -268,15 +245,7 @@ $method=|int|blockCount|
 /*
 QChar characterAt ( int pos ) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_CHARACTERAT )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QChar * ptr = new QChar( obj->characterAt ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QCHAR" );
-  }
-}
+$method=|QChar|characterAt|int
 
 /*
 int characterCount () const
@@ -291,54 +260,22 @@ $virtualMethod=|void|clear|
 /*
 void clearUndoRedoStacks ( Stacks stacksToClear = UndoAndRedoStacks )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_CLEARUNDOREDOSTACKS )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = ISNIL(1)? (int) QTextDocument::UndoAndRedoStacks : hb_parni(1);
-    obj->clearUndoRedoStacks ( (QTextDocument::Stacks) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clearUndoRedoStacks|QTextDocument::Stacks=QTextDocument::UndoAndRedoStacks
 
 /*
 QTextDocument * clone ( QObject * parent = 0 ) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_CLONE )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextDocument * ptr = obj->clone ( OPQOBJECT(1,0) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );
-  }
-}
+$method=|QTextDocument *|clone|QObject *=0
 
 /*
 Qt::CursorMoveStyle defaultCursorMoveStyle () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTCURSORMOVESTYLE )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->defaultCursorMoveStyle () );
-  }
-}
+$method=|Qt::CursorMoveStyle|defaultCursorMoveStyle|
 
 /*
 QFont defaultFont () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTFONT )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QFont * ptr = new QFont( obj->defaultFont () );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
-  }
-}
+$method=|QFont|defaultFont|
 
 /*
 QString defaultStyleSheet () const
@@ -348,28 +285,12 @@ $method=|QString|defaultStyleSheet|
 /*
 QTextOption defaultTextOption () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTTEXTOPTION )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextOption * ptr = new QTextOption( obj->defaultTextOption () );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTOPTION" );
-  }
-}
+$method=|QTextOption|defaultTextOption|
 
 /*
 QAbstractTextDocumentLayout * documentLayout () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_DOCUMENTLAYOUT )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractTextDocumentLayout * ptr = obj->documentLayout ();
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTTEXTDOCUMENTLAYOUT" );
-  }
-}
+$method=|QAbstractTextDocumentLayout *|documentLayout|
 
 /*
 qreal documentMargin () const
@@ -379,85 +300,32 @@ $method=|qreal|documentMargin|
 /*
 void drawContents ( QPainter * p, const QRectF & rect = QRectF() )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_DRAWCONTENTS )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRectF par2 = ISNIL(2)? QRectF() : *(QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->drawContents ( PQPAINTER(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|drawContents|QPainter *,const QRectF &=QRectF()
 
 /*
 QTextBlock end () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_END )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextBlock * ptr = new QTextBlock( obj->end () );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
-  }
-}
+$method=|QTextBlock|end|
 
 /*
 QTextCursor find ( const QString & subString, const QTextCursor & cursor, FindFlags options = 0 ) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_FIND1 )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-    QTextCursor * ptr = new QTextCursor( obj->find ( PQSTRING(1), *PQTEXTCURSOR(2), (QTextDocument::FindFlags) par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
-  }
-}
+$method=|QTextCursor|find,find1|const QString &,const QTextCursor &,QTextDocument::FindFlags=0
 
 /*
 QTextCursor find ( const QRegExp & expr, const QTextCursor & cursor, FindFlags options = 0 ) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_FIND2 )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-    QTextCursor * ptr = new QTextCursor( obj->find ( *PQREGEXP(1), *PQTEXTCURSOR(2), (QTextDocument::FindFlags) par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
-  }
-}
+$method=|QTextCursor|find,find2|const QRegExp &,const QTextCursor &,QTextDocument::FindFlags=0
 
 /*
 QTextCursor find ( const QString & subString, int position = 0, FindFlags options = 0 ) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_FIND3 )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-    QTextCursor * ptr = new QTextCursor( obj->find ( PQSTRING(1), OPINT(2,0), (QTextDocument::FindFlags) par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
-  }
-}
+$method=|QTextCursor|find,find3|const QString &,int=0,QTextDocument::FindFlags=0
 
 /*
 QTextCursor find ( const QRegExp & expr, int position = 0, FindFlags options = 0 ) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_FIND4 )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-    QTextCursor * ptr = new QTextCursor( obj->find ( *PQREGEXP(1), OPINT(2,0), (QTextDocument::FindFlags) par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
-  }
-}
+$method=|QTextCursor|find,find4|const QRegExp &,int=0,QTextDocument::FindFlags=0
 
 //[1]QTextCursor find ( const QString & subString, const QTextCursor & cursor, FindFlags options = 0 ) const
 //[2]QTextCursor find ( const QRegExp & expr, const QTextCursor & cursor, FindFlags options = 0 ) const
@@ -487,54 +355,22 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND )
 /*
 QTextBlock findBlock ( int pos ) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_FINDBLOCK )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextBlock * ptr = new QTextBlock( obj->findBlock ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
-  }
-}
+$method=|QTextBlock|findBlock|int
 
 /*
 QTextBlock findBlockByLineNumber ( int lineNumber ) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_FINDBLOCKBYLINENUMBER )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextBlock * ptr = new QTextBlock( obj->findBlockByLineNumber ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
-  }
-}
+$method=|QTextBlock|findBlockByLineNumber|int
 
 /*
 QTextBlock findBlockByNumber ( int blockNumber ) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_FINDBLOCKBYNUMBER )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextBlock * ptr = new QTextBlock( obj->findBlockByNumber ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
-  }
-}
+$method=|QTextBlock|findBlockByNumber|int
 
 /*
 QTextBlock firstBlock () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_FIRSTBLOCK )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextBlock * ptr = new QTextBlock( obj->firstBlock () );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
-  }
-}
+$method=|QTextBlock|firstBlock|
 
 /*
 qreal idealWidth () const
@@ -574,15 +410,7 @@ $method=|bool|isUndoRedoEnabled|
 /*
 QTextBlock lastBlock () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_LASTBLOCK )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextBlock * ptr = new QTextBlock( obj->lastBlock () );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
-  }
-}
+$method=|QTextBlock|lastBlock|
 
 /*
 int lineCount () const
@@ -632,29 +460,12 @@ $method=|void|print|QPrinter *
 /*
 void redo ( QTextCursor * cursor )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_REDO1 )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextCursor * par1 = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->redo ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|redo,redo1|QTextCursor *
 
 /*
 QVariant resource ( int type, const QUrl & name ) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_RESOURCE )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->resource ( PINT(1), *PQURL(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$method=|QVariant|resource|int,const QUrl &
 
 /*
 int revision () const
@@ -664,42 +475,17 @@ $method=|int|revision|
 /*
 QTextFrame * rootFrame () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_ROOTFRAME )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextFrame * ptr = obj->rootFrame ();
-    _qt4xhb_createReturnClass ( ptr, "QTEXTFRAME" );
-  }
-}
+$method=|QTextFrame *|rootFrame|
 
 /*
 void setDefaultCursorMoveStyle ( Qt::CursorMoveStyle style )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTCURSORMOVESTYLE )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setDefaultCursorMoveStyle ( (Qt::CursorMoveStyle) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDefaultCursorMoveStyle|Qt::CursorMoveStyle
 
 /*
 void setDefaultFont ( const QFont & font )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTFONT )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDefaultFont ( *PQFONT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDefaultFont|const QFont &
 
 /*
 void setDefaultStyleSheet ( const QString & sheet )
@@ -709,28 +495,12 @@ $method=|void|setDefaultStyleSheet|const QString &
 /*
 void setDefaultTextOption ( const QTextOption & option )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTTEXTOPTION )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDefaultTextOption ( *PQTEXTOPTION(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDefaultTextOption|const QTextOption &
 
 /*
 void setDocumentLayout ( QAbstractTextDocumentLayout * layout )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SETDOCUMENTLAYOUT )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDocumentLayout ( PQABSTRACTTEXTDOCUMENTLAYOUT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDocumentLayout|QAbstractTextDocumentLayout *
 
 /*
 void setDocumentMargin ( qreal margin )
@@ -750,41 +520,17 @@ $method=|void|setIndentWidth|qreal
 /*
 void setMaximumBlockCount ( int maximum )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SETMAXIMUMBLOCKCOUNT )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setMaximumBlockCount ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMaximumBlockCount|int
 
 /*
 void setMetaInformation ( MetaInformation info, const QString & string )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SETMETAINFORMATION )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setMetaInformation ( (QTextDocument::MetaInformation) hb_parni(1), PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMetaInformation|QTextDocument::MetaInformation,const QString &
 
 /*
 void setPageSize ( const QSizeF & size )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SETPAGESIZE )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPageSize ( *PQSIZEF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPageSize|const QSizeF &
 
 /*
 void setPlainText ( const QString & text )
@@ -799,41 +545,17 @@ $method=|void|setTextWidth|qreal
 /*
 void setUndoRedoEnabled ( bool enable )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SETUNDOREDOENABLED )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUndoRedoEnabled ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setUndoRedoEnabled|bool
 
 /*
 void setUseDesignMetrics ( bool b )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SETUSEDESIGNMETRICS )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUseDesignMetrics ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setUseDesignMetrics|bool
 
 /*
 QSizeF size () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SIZE )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSizeF * ptr = new QSizeF( obj->size () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
-  }
-}
+$method=|QSizeF|size|
 
 /*
 qreal textWidth () const
@@ -853,15 +575,7 @@ $method=|QString|toPlainText|
 /*
 void undo ( QTextCursor * cursor )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_UNDO1 )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->undo ( PQTEXTCURSOR(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|undo,undo1|QTextCursor *
 
 /*
 bool useDesignMetrics () const
@@ -871,15 +585,7 @@ $method=|bool|useDesignMetrics|
 /*
 void redo ()
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_REDO2 )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->redo ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|redo,redo2|
 
 //[1]void redo ( QTextCursor * cursor )
 //[2]void redo ()
@@ -899,28 +605,12 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_REDO )
 /*
 void setModified ( bool m = true )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SETMODIFIED )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setModified ( OPBOOL(1,true) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setModified|bool=true
 
 /*
 void undo ()
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_UNDO2 )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->undo ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|undo,undo2|
 
 //[1]void undo ( QTextCursor * cursor )
 //[2]void undo ()

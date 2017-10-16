@@ -98,16 +98,7 @@ $method=|int|addPage|QWizardPage *
 /*
 QAbstractButton * button ( WizardButton which ) const
 */
-HB_FUNC_STATIC( QWIZARD_BUTTON )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    QAbstractButton * ptr = obj->button ( (QWizard::WizardButton) par1 );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTBUTTON" );
-  }
-}
+$method=|QAbstractButton *|button|QWizard::WizardButton
 
 /*
 QString buttonText ( WizardButton which ) const
@@ -122,15 +113,7 @@ $method=|int|currentId|
 /*
 QWizardPage * currentPage () const
 */
-HB_FUNC_STATIC( QWIZARD_CURRENTPAGE )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWizardPage * ptr = obj->currentPage ();
-    _qt4xhb_createReturnClass ( ptr, "QWIZARDPAGE" );
-  }
-}
+$method=|QWizardPage *|currentPage|
 
 /*
 QVariant field ( const QString & name ) const
@@ -162,15 +145,7 @@ HB_FUNC_STATIC( QWIZARD_OPTIONS )
 /*
 QWizardPage * page ( int id ) const
 */
-HB_FUNC_STATIC( QWIZARD_PAGE )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWizardPage * ptr = obj->page ( PINT(1) );
-    _qt4xhb_createReturnClass ( ptr, "QWIZARDPAGE" );
-  }
-}
+$method=|QWizardPage *|page|int
 
 /*
 QList<int> pageIds () const
@@ -178,6 +153,7 @@ QList<int> pageIds () const
 HB_FUNC_STATIC( QWIZARD_PAGEIDS )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<int> list = obj->pageIds ();
@@ -197,44 +173,17 @@ HB_FUNC_STATIC( QWIZARD_PAGEIDS )
 /*
 QPixmap pixmap ( WizardPixmap which ) const
 */
-HB_FUNC_STATIC( QWIZARD_PIXMAP )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    QPixmap * ptr = new QPixmap( obj->pixmap ( (QWizard::WizardPixmap) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
-  }
-}
+$method=|QPixmap|pixmap|QWizard::WizardPixmap
 
 /*
 void removePage ( int id )
 */
-HB_FUNC_STATIC( QWIZARD_REMOVEPAGE )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->removePage ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removePage|int
 
 /*
 void setButton ( WizardButton which, QAbstractButton * button )
 */
-HB_FUNC_STATIC( QWIZARD_SETBUTTON )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    QAbstractButton * par2 = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setButton ( (QWizard::WizardButton) par1, par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setButton|QWizard::WizardButton,QAbstractButton *
 
 /*
 void setButtonLayout ( const QList<WizardButton> & layout )
@@ -242,199 +191,89 @@ void setButtonLayout ( const QList<WizardButton> & layout )
 HB_FUNC_STATIC( QWIZARD_SETBUTTONLAYOUT )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-QList<QWizard::WizardButton> par1;
-PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aValues1);
-int temp1;
-for (i1=0;i1<nLen1;i1++)
-{
-temp1 = hb_arrayGetNI(aValues1, i1+1);
-par1 << (QWizard::WizardButton) temp1;
-}
+    QList<QWizard::WizardButton> par1;
+    PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aValues1);
+    int temp1;
+    for (i1=0;i1<nLen1;i1++)
+    {
+      temp1 = hb_arrayGetNI(aValues1, i1+1);
+      par1 << (QWizard::WizardButton) temp1;
+    }
     obj->setButtonLayout ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 void setButtonText ( WizardButton which, const QString & text )
 */
-HB_FUNC_STATIC( QWIZARD_SETBUTTONTEXT )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setButtonText ( (QWizard::WizardButton) par1, PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setButtonText|QWizard::WizardButton,const QString &
 
 /*
 void setDefaultProperty ( const char * className, const char * property, const char * changedSignal )
 */
-HB_FUNC_STATIC( QWIZARD_SETDEFAULTPROPERTY )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDefaultProperty ( (const char *) hb_parc(1), (const char *) hb_parc(2), (const char *) hb_parc(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDefaultProperty|const char *,const char *,const char *
 
 /*
 void setField ( const QString & name, const QVariant & value )
 */
-HB_FUNC_STATIC( QWIZARD_SETFIELD )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setField ( PQSTRING(1), *PQVARIANT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setField|const QString &,const QVariant &
 
 /*
 void setOption ( WizardOption option, bool on = true )
 */
-HB_FUNC_STATIC( QWIZARD_SETOPTION )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setOption ( (QWizard::WizardOption) par1, OPBOOL(2,true) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOption|QWizard::WizardOption,bool=true
 
 /*
 void setOptions ( WizardOptions options )
 */
-HB_FUNC_STATIC( QWIZARD_SETOPTIONS )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setOptions ( (QWizard::WizardOptions) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOptions|QWizard::WizardOptions
 
 /*
 void setPage ( int id, QWizardPage * page )
 */
-HB_FUNC_STATIC( QWIZARD_SETPAGE )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWizardPage * par2 = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setPage ( PINT(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPage|int,QWizardPage *
 
 /*
 void setPixmap ( WizardPixmap which, const QPixmap & pixmap )
 */
-HB_FUNC_STATIC( QWIZARD_SETPIXMAP )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setPixmap ( (QWizard::WizardPixmap) par1, *PQPIXMAP(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPixmap|QWizard::WizardPixmap,const QPixmap &
 
 /*
 void setSideWidget ( QWidget * widget )
 */
-HB_FUNC_STATIC( QWIZARD_SETSIDEWIDGET )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSideWidget ( PQWIDGET(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSideWidget|QWidget *
 
 /*
 void setStartId ( int id )
 */
-HB_FUNC_STATIC( QWIZARD_SETSTARTID )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setStartId ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStartId|int
 
 /*
 void setSubTitleFormat ( Qt::TextFormat format )
 */
-HB_FUNC_STATIC( QWIZARD_SETSUBTITLEFORMAT )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setSubTitleFormat ( (Qt::TextFormat) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSubTitleFormat|Qt::TextFormat
 
 /*
 void setTitleFormat ( Qt::TextFormat format )
 */
-HB_FUNC_STATIC( QWIZARD_SETTITLEFORMAT )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setTitleFormat ( (Qt::TextFormat) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTitleFormat|Qt::TextFormat
 
 /*
 void setWizardStyle ( WizardStyle style )
 */
-HB_FUNC_STATIC( QWIZARD_SETWIZARDSTYLE )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setWizardStyle ( (QWizard::WizardStyle) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWizardStyle|QWizard::WizardStyle
 
 /*
 QWidget * sideWidget () const
 */
-HB_FUNC_STATIC( QWIZARD_SIDEWIDGET )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->sideWidget ();
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|sideWidget|
 
 /*
 int startId () const
@@ -444,14 +283,7 @@ $method=|int|startId|
 /*
 Qt::TextFormat subTitleFormat () const
 */
-HB_FUNC_STATIC( QWIZARD_SUBTITLEFORMAT )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->subTitleFormat () );
-  }
-}
+$method=|Qt::TextFormat|subTitleFormat|
 
 /*
 bool testOption ( WizardOption option ) const
@@ -461,14 +293,7 @@ $method=|bool|testOption|QWizard::WizardOption
 /*
 Qt::TextFormat titleFormat () const
 */
-HB_FUNC_STATIC( QWIZARD_TITLEFORMAT )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->titleFormat () );
-  }
-}
+$method=|Qt::TextFormat|titleFormat|
 
 /*
 virtual bool validateCurrentPage ()
@@ -481,6 +306,7 @@ QList<int> visitedPages () const
 HB_FUNC_STATIC( QWIZARD_VISITEDPAGES )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<int> list = obj->visitedPages ();
@@ -503,6 +329,7 @@ WizardStyle wizardStyle () const
 HB_FUNC_STATIC( QWIZARD_WIZARDSTYLE )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     hb_retni( (int) obj->wizardStyle () );
@@ -512,66 +339,26 @@ HB_FUNC_STATIC( QWIZARD_WIZARDSTYLE )
 /*
 virtual void setVisible ( bool visible )
 */
-HB_FUNC_STATIC( QWIZARD_SETVISIBLE )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setVisible ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|setVisible|bool
 
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC_STATIC( QWIZARD_SIZEHINT )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|sizeHint|
 
 /*
 void back ()
 */
-HB_FUNC_STATIC( QWIZARD_BACK )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->back ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|back|
 
 /*
 void next ()
 */
-HB_FUNC_STATIC( QWIZARD_NEXT )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->next ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|next|
 
 /*
 void restart ()
 */
-HB_FUNC_STATIC( QWIZARD_RESTART )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->restart ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|restart|
 
 #pragma ENDDUMP

@@ -117,15 +117,7 @@ HB_FUNC_STATIC( QWORKSPACE_SETBACKGROUND )
 /*
 void setScrollBarsEnabled ( bool enable )
 */
-HB_FUNC_STATIC( QWORKSPACE_SETSCROLLBARSENABLED )
-{
-  QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setScrollBarsEnabled ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setScrollBarsEnabled|bool
 
 /*
 QWidgetList windowList ( WindowOrder order = CreationOrder ) const
@@ -133,6 +125,7 @@ QWidgetList windowList ( WindowOrder order = CreationOrder ) const
 HB_FUNC_STATIC( QWORKSPACE_WINDOWLIST )
 {
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QWorkspace::CreationOrder : hb_parni(1);
@@ -171,125 +164,49 @@ HB_FUNC_STATIC( QWORKSPACE_WINDOWLIST )
   }
 }
 
-// Reimplemented Public Functions
-
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC_STATIC( QWORKSPACE_SIZEHINT )
-{
-  QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
-
-// Public Slots
+$virtualMethod=|QSize|sizeHint|
 
 /*
 void activateNextWindow ()
 */
-HB_FUNC_STATIC( QWORKSPACE_ACTIVATENEXTWINDOW )
-{
-  QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->activateNextWindow ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|activateNextWindow|
 
 /*
 void activatePreviousWindow ()
 */
-HB_FUNC_STATIC( QWORKSPACE_ACTIVATEPREVIOUSWINDOW )
-{
-  QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->activatePreviousWindow ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|activatePreviousWindow|
 
 /*
 void arrangeIcons ()
 */
-HB_FUNC_STATIC( QWORKSPACE_ARRANGEICONS )
-{
-  QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->arrangeIcons ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|arrangeIcons|
 
 /*
 void cascade ()
 */
-HB_FUNC_STATIC( QWORKSPACE_CASCADE )
-{
-  QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->cascade ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|cascade|
 
 /*
 void closeActiveWindow ()
 */
-HB_FUNC_STATIC( QWORKSPACE_CLOSEACTIVEWINDOW )
-{
-  QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->closeActiveWindow ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|closeActiveWindow|
 
 /*
 void closeAllWindows ()
 */
-HB_FUNC_STATIC( QWORKSPACE_CLOSEALLWINDOWS )
-{
-  QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->closeAllWindows ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|closeAllWindows|
 
 /*
 void setActiveWindow ( QWidget * w )
 */
-HB_FUNC_STATIC( QWORKSPACE_SETACTIVEWINDOW )
-{
-  QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setActiveWindow ( PQWIDGET(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setActiveWindow|QWidget *
 
 /*
 void tile ()
 */
-HB_FUNC_STATIC( QWORKSPACE_TILE )
-{
-  QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->tile ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|tile|
 
 #pragma ENDDUMP

@@ -47,29 +47,17 @@ $destructor
 /*
 QGraphicsEllipseItem ( QGraphicsItem * parent = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_NEW1 )
-{
-  QGraphicsEllipseItem * o = new QGraphicsEllipseItem ( OPQGRAPHICSITEM(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QGraphicsItem *=0
 
 /*
 QGraphicsEllipseItem ( const QRectF & rect, QGraphicsItem * parent = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_NEW2 )
-{
-  QGraphicsEllipseItem * o = new QGraphicsEllipseItem ( *PQRECTF(1), OPQGRAPHICSITEM(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QRectF &,QGraphicsItem *=0
 
 /*
 QGraphicsEllipseItem ( qreal x, qreal y, qreal width, qreal height, QGraphicsItem * parent = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_NEW3 )
-{
-  QGraphicsEllipseItem * o = new QGraphicsEllipseItem ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQGRAPHICSITEM(5,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new3|qreal,qreal,qreal,qreal,QGraphicsItem *=0
 
 //[1]QGraphicsEllipseItem ( QGraphicsItem * parent = 0 )
 //[2]QGraphicsEllipseItem ( const QRectF & rect, QGraphicsItem * parent = 0 )
@@ -100,41 +88,17 @@ $deleteMethod
 /*
 QRectF rect () const
 */
-HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_RECT )
-{
-  QGraphicsEllipseItem * obj = (QGraphicsEllipseItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->rect () );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$method=|QRectF|rect|
 
 /*
 void setRect ( const QRectF & rect )
 */
-HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SETRECT1 )
-{
-  QGraphicsEllipseItem * obj = (QGraphicsEllipseItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRect ( *PQRECTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRect,setRect1|const QRectF &
 
 /*
 void setRect ( qreal x, qreal y, qreal width, qreal height )
 */
-HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SETRECT2 )
-{
-  QGraphicsEllipseItem * obj = (QGraphicsEllipseItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRect ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRect,setRect2|qreal,qreal,qreal,qreal
 
 //[1]void setRect ( const QRectF & rect )
 //[2]void setRect ( qreal x, qreal y, qreal width, qreal height )
@@ -154,28 +118,12 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SETRECT )
 /*
 void setSpanAngle ( int angle )
 */
-HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SETSPANANGLE )
-{
-  QGraphicsEllipseItem * obj = (QGraphicsEllipseItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSpanAngle ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSpanAngle|int
 
 /*
 void setStartAngle ( int angle )
 */
-HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SETSTARTANGLE )
-{
-  QGraphicsEllipseItem * obj = (QGraphicsEllipseItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setStartAngle ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStartAngle|int
 
 /*
 int spanAngle () const
@@ -190,15 +138,7 @@ $method=|int|startAngle|
 /*
 virtual QRectF boundingRect () const
 */
-HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_BOUNDINGRECT )
-{
-  QGraphicsEllipseItem * obj = (QGraphicsEllipseItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->boundingRect () );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$virtualMethod=|QRectF|boundingRect|
 
 /*
 virtual bool contains ( const QPointF & point ) const
@@ -218,29 +158,12 @@ $virtualMethod=|QPainterPath|opaqueArea|
 /*
 virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_PAINT )
-{
-  QGraphicsEllipseItem * obj = (QGraphicsEllipseItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QStyleOptionGraphicsItem * par2 = (const QStyleOptionGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->paint ( PQPAINTER(1), par2, OPQWIDGET(3,0) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
 
 /*
 virtual QPainterPath shape () const
 */
-HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SHAPE )
-{
-  QGraphicsEllipseItem * obj = (QGraphicsEllipseItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPainterPath * ptr = new QPainterPath( obj->shape () );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
-  }
-}
+$virtualMethod=|QPainterPath|shape|
 
 /*
 virtual int type () const

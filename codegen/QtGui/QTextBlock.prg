@@ -228,28 +228,12 @@ HB_FUNC_STATIC( QTEXTBLOCK_SETUSERDATA )
 /*
 void setUserState ( int state )
 */
-HB_FUNC_STATIC( QTEXTBLOCK_SETUSERSTATE )
-{
-  QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUserState ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setUserState|int
 
 /*
 void setVisible ( bool visible )
 */
-HB_FUNC_STATIC( QTEXTBLOCK_SETVISIBLE )
-{
-  QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setVisible ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setVisible|bool
 
 /*
 QString text () const
@@ -259,40 +243,17 @@ $method=|QString|text|
 /*
 Qt::LayoutDirection textDirection () const
 */
-HB_FUNC_STATIC( QTEXTBLOCK_TEXTDIRECTION )
-{
-  QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->textDirection () );
-  }
-}
+$method=|Qt::LayoutDirection|textDirection|
 
 /*
 QTextList * textList () const
 */
-HB_FUNC_STATIC( QTEXTBLOCK_TEXTLIST )
-{
-  QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextList * ptr = obj->textList ();
-    _qt4xhb_createReturnClass ( ptr, "QTEXTLIST" );
-  }
-}
+$method=|QTextList *|textList|
 
 /*
 QTextBlockUserData * userData () const
 */
-HB_FUNC_STATIC( QTEXTBLOCK_USERDATA )
-{
-  QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextBlockUserData * ptr = obj->userData ();
-    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCKUSERDATA" );
-  }
-}
+$method=|QTextBlockUserData *|userData|
 
 /*
 int userState () const

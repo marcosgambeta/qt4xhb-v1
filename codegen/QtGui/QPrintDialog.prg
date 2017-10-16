@@ -80,15 +80,7 @@ $deleteMethod
 /*
 void open ( QObject * receiver, const char * member )
 */
-HB_FUNC_STATIC( QPRINTDIALOG_OPEN )
-{
-  QPrintDialog * obj = (QPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->open ( PQOBJECT(1), (const char *) hb_parc(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|open|QObject *,const char *
 
 /*
 PrintDialogOptions options () const

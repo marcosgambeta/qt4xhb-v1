@@ -11,8 +11,6 @@ REQUEST QSIZE
 
 CLASS QSplitter INHERIT QFrame
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -141,15 +139,7 @@ HB_FUNC_STATIC( QSPLITTER_GETRANGE )
 /*
 QSplitterHandle * handle ( int index ) const
 */
-HB_FUNC_STATIC( QSPLITTER_HANDLE )
-{
-  QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSplitterHandle * ptr = obj->handle ( PINT(1) );
-    _qt4xhb_createReturnClass ( ptr, "QSPLITTERHANDLE" );
-  }
-}
+$method=|QSplitterHandle *|handle|int
 
 /*
 int handleWidth () const
@@ -164,15 +154,7 @@ $method=|int|indexOf|QWidget *
 /*
 void insertWidget ( int index, QWidget * widget )
 */
-HB_FUNC_STATIC( QSPLITTER_INSERTWIDGET )
-{
-  QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->insertWidget ( PINT(1), PQWIDGET(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|insertWidget|int,QWidget *
 
 /*
 bool isCollapsible ( int index ) const
@@ -235,35 +217,29 @@ void setSizes ( const QList<int> & list )
 HB_FUNC_STATIC( QSPLITTER_SETSIZES )
 {
   QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-QList<int> par1;
-PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aValues1);
-int temp1;
-for (i1=0;i1<nLen1;i1++)
-{
-temp1 = hb_arrayGetNI(aValues1, i1+1);
-par1 << temp1;
-}
+    QList<int> par1;
+    PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aValues1);
+    int temp1;
+    for (i1=0;i1<nLen1;i1++)
+    {
+      temp1 = hb_arrayGetNI(aValues1, i1+1);
+      par1 << temp1;
+    }
     obj->setSizes ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 void setStretchFactor ( int index, int stretch )
 */
-HB_FUNC_STATIC( QSPLITTER_SETSTRETCHFACTOR )
-{
-  QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setStretchFactor ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStretchFactor|int,int
 
 /*
 QList<int> sizes () const
@@ -271,6 +247,7 @@ QList<int> sizes () const
 HB_FUNC_STATIC( QSPLITTER_SIZES )
 {
   QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<int> list = obj->sizes ();
@@ -290,40 +267,16 @@ HB_FUNC_STATIC( QSPLITTER_SIZES )
 /*
 QWidget * widget ( int index ) const
 */
-HB_FUNC_STATIC( QSPLITTER_WIDGET )
-{
-  QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->widget ( PINT(1) );
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|widget|int
 
 /*
 virtual QSize minimumSizeHint () const
 */
-HB_FUNC_STATIC( QSPLITTER_MINIMUMSIZEHINT )
-{
-  QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->minimumSizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|minimumSizeHint|
 
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC_STATIC( QSPLITTER_SIZEHINT )
-{
-  QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|sizeHint|
 
 #pragma ENDDUMP

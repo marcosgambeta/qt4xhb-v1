@@ -112,28 +112,12 @@ $deleteMethod
 /*
 QAction * actionAt ( int x, int y ) const
 */
-HB_FUNC_STATIC( QTOOLBAR_ACTIONAT1 )
-{
-  QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->actionAt ( PINT(1), PINT(2) );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|actionAt,actionAt1|int,int
 
 /*
 QAction * actionAt ( const QPoint & p ) const
 */
-HB_FUNC_STATIC( QTOOLBAR_ACTIONAT2 )
-{
-  QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->actionAt ( *PQPOINT(1) );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|actionAt,actionAt2|const QPoint &
 
 //[1]QAction * actionAt ( int x, int y ) const
 //[2]QAction * actionAt ( const QPoint & p ) const
@@ -153,15 +137,7 @@ HB_FUNC_STATIC( QTOOLBAR_ACTIONAT )
 /*
 void addAction ( QAction * action )
 */
-HB_FUNC_STATIC( QTOOLBAR_ADDACTION1 )
-{
-  QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->addAction ( PQACTION(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addAction,addAction1|QAction *
 
 /*
 QAction * addAction ( const QString & text )
@@ -171,45 +147,17 @@ $method=|QAction *|addAction,addAction2|const QString &
 /*
 QAction * addAction ( const QIcon & icon, const QString & text )
 */
-HB_FUNC_STATIC( QTOOLBAR_ADDACTION3 )
-{
-  QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
-    QAction * ptr = obj->addAction ( par1, PQSTRING(2) );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|addAction,addAction3|const QIcon &,const QString &
 
 /*
 QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
 */
-HB_FUNC_STATIC( QTOOLBAR_ADDACTION4 )
-{
-  QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QObject * par2 = (const QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QAction * ptr = obj->addAction ( PQSTRING(1), par2, (const char *) hb_parc(3) );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|addAction,addAction4|const QString &,const QObject *,const char *
 
 /*
 QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member )
 */
-HB_FUNC_STATIC( QTOOLBAR_ADDACTION5 )
-{
-  QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
-    const QObject * par3 = (const QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QAction * ptr = obj->addAction ( par1, PQSTRING(2), par3, (const char *) hb_parc(4) );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|addAction,addAction5|const QIcon &,const QString &,const QObject *,const char *
 
 //[1]void addAction ( QAction * action )
 //[2]QAction * addAction ( const QString & text )
@@ -244,92 +192,37 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
 /*
 QAction * addSeparator ()
 */
-HB_FUNC_STATIC( QTOOLBAR_ADDSEPARATOR )
-{
-  QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->addSeparator ();
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|addSeparator|
 
 /*
 QAction * addWidget ( QWidget * widget )
 */
-HB_FUNC_STATIC( QTOOLBAR_ADDWIDGET )
-{
-  QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->addWidget ( PQWIDGET(1) );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|addWidget|QWidget *
 
 /*
 Qt::ToolBarAreas allowedAreas () const
 */
-HB_FUNC_STATIC( QTOOLBAR_ALLOWEDAREAS )
-{
-  QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->allowedAreas () );
-  }
-}
+$method=|Qt::ToolBarAreas|allowedAreas|
 
 /*
 void clear ()
 */
-HB_FUNC_STATIC( QTOOLBAR_CLEAR )
-{
-  QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clear|
 
 /*
 QSize iconSize () const
 */
-HB_FUNC_STATIC( QTOOLBAR_ICONSIZE )
-{
-  QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->iconSize () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|iconSize|
 
 /*
 QAction * insertSeparator ( QAction * before )
 */
-HB_FUNC_STATIC( QTOOLBAR_INSERTSEPARATOR )
-{
-  QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->insertSeparator ( PQACTION(1) );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|insertSeparator|QAction *
 
 /*
 QAction * insertWidget ( QAction * before, QWidget * widget )
 */
-HB_FUNC_STATIC( QTOOLBAR_INSERTWIDGET )
-{
-  QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->insertWidget ( PQACTION(1), PQWIDGET(2) );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|insertWidget|QAction *,QWidget *
 
 /*
 bool isAreaAllowed ( Qt::ToolBarArea area ) const

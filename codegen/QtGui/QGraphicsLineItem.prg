@@ -11,8 +11,6 @@ REQUEST QPAINTERPATH
 
 CLASS QGraphicsLineItem INHERIT QGraphicsItem
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new3
@@ -51,29 +49,17 @@ $destructor
 /*
 QGraphicsLineItem ( QGraphicsItem * parent = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSLINEITEM_NEW1 )
-{
-  QGraphicsLineItem * o = new QGraphicsLineItem ( OPQGRAPHICSITEM(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QGraphicsItem *=0
 
 /*
 QGraphicsLineItem ( const QLineF & line, QGraphicsItem * parent = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSLINEITEM_NEW2 )
-{
-  QGraphicsLineItem * o = new QGraphicsLineItem ( *PQLINEF(1), OPQGRAPHICSITEM(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QLineF &,QGraphicsItem *=0
 
 /*
 QGraphicsLineItem ( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSLINEITEM_NEW3 )
-{
-  QGraphicsLineItem * o = new QGraphicsLineItem ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQGRAPHICSITEM(5,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new3|qreal,qreal,qreal,qreal,QGraphicsItem *=0
 
 //[1]QGraphicsLineItem ( QGraphicsItem * parent = 0 )
 //[2]QGraphicsLineItem ( const QLineF & line, QGraphicsItem * parent = 0 )
@@ -104,54 +90,22 @@ $deleteMethod
 /*
 QLineF line () const
 */
-HB_FUNC_STATIC( QGRAPHICSLINEITEM_LINE )
-{
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QLineF * ptr = new QLineF( obj->line () );
-    _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
-  }
-}
+$method=|QLineF|line|
 
 /*
 QPen pen () const
 */
-HB_FUNC_STATIC( QGRAPHICSLINEITEM_PEN )
-{
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPen * ptr = new QPen( obj->pen () );
-    _qt4xhb_createReturnClass ( ptr, "QPEN", true );
-  }
-}
+$method=|QPen|pen|
 
 /*
 void setLine ( const QLineF & line )
 */
-HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETLINE1 )
-{
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setLine ( *PQLINEF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setLine,setLine1|const QLineF &
 
 /*
 void setLine ( qreal x1, qreal y1, qreal x2, qreal y2 )
 */
-HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETLINE2 )
-{
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setLine ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setLine,setLine2|qreal,qreal,qreal,qreal
 
 //[1]void setLine ( const QLineF & line )
 //[2]void setLine ( qreal x1, qreal y1, qreal x2, qreal y2 )
@@ -171,28 +125,12 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETLINE )
 /*
 void setPen ( const QPen & pen )
 */
-HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETPEN )
-{
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPen ( *PQPEN(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPen|const QPen &
 
 /*
 virtual QRectF boundingRect () const
 */
-HB_FUNC_STATIC( QGRAPHICSLINEITEM_BOUNDINGRECT )
-{
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->boundingRect () );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$virtualMethod=|QRectF|boundingRect|
 
 /*
 virtual bool contains ( const QPointF & point ) const
@@ -207,42 +145,17 @@ $virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
 /*
 virtual QPainterPath opaqueArea () const
 */
-HB_FUNC_STATIC( QGRAPHICSLINEITEM_OPAQUEAREA )
-{
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPainterPath * ptr = new QPainterPath( obj->opaqueArea () );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
-  }
-}
+$virtualMethod=|QPainterPath|opaqueArea|
 
 /*
 virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSLINEITEM_PAINT )
-{
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QStyleOptionGraphicsItem * par2 = (const QStyleOptionGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->paint ( PQPAINTER(1), par2, OPQWIDGET(3,0) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
 
 /*
 virtual QPainterPath shape () const
 */
-HB_FUNC_STATIC( QGRAPHICSLINEITEM_SHAPE )
-{
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPainterPath * ptr = new QPainterPath( obj->shape () );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
-  }
-}
+$virtualMethod=|QPainterPath|shape|
 
 /*
 virtual int type () const

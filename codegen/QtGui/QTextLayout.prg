@@ -339,15 +339,7 @@ $method=|int|leftCursorPosition|int
 /*
 QTextLine lineAt ( int i ) const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_LINEAT )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextLine * ptr = new QTextLine( obj->lineAt ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTLINE" );
-  }
-}
+$method=|QTextLine|lineAt|int
 
 /*
 int lineCount () const
@@ -357,15 +349,7 @@ $method=|int|lineCount|
 /*
 QTextLine lineForTextPosition ( int pos ) const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_LINEFORTEXTPOSITION )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextLine * ptr = new QTextLine( obj->lineForTextPosition ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTLINE" );
-  }
-}
+$method=|QTextLine|lineForTextPosition|int
 
 /*
 qreal maximumWidth () const
@@ -385,15 +369,7 @@ $method=|int|nextCursorPosition|int,QTextLayout::CursorMode=QTextLayout::SkipCha
 /*
 QPointF position () const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_POSITION )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->position () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|position|
 
 /*
 int preeditAreaPosition () const
@@ -418,68 +394,27 @@ $method=|int|rightCursorPosition|int
 /*
 void setCacheEnabled ( bool enable )
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_SETCACHEENABLED )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCacheEnabled ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCacheEnabled|bool
 
 /*
 void setCursorMoveStyle ( Qt::CursorMoveStyle style )
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_SETCURSORMOVESTYLE )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setCursorMoveStyle ( (Qt::CursorMoveStyle) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCursorMoveStyle|Qt::CursorMoveStyle
 
 /*
 void setFont ( const QFont & font )
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_SETFONT )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFont ( *PQFONT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFont|const QFont &
 
 /*
 void setPosition ( const QPointF & p )
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_SETPOSITION )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPosition ( *PQPOINTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPosition|const QPointF &
 
 /*
 void setPreeditArea ( int position, const QString & text )
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_SETPREEDITAREA )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPreeditArea ( PINT(1), PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPreeditArea|int,const QString &
 
 /*
 void setText ( const QString & string )
@@ -489,15 +424,7 @@ $method=|void|setText|const QString &
 /*
 void setTextOption ( const QTextOption & option )
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_SETTEXTOPTION )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTextOption ( *PQTEXTOPTION(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTextOption|const QTextOption &
 
 /*
 QString text () const
@@ -507,15 +434,7 @@ $method=|QString|text|
 /*
 QTextOption textOption () const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_TEXTOPTION )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextOption * ptr = new QTextOption( obj->textOption () );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTOPTION" );
-  }
-}
+$method=|QTextOption|textOption|
 
 $extraMethods
 

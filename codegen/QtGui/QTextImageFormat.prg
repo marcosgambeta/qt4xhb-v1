@@ -4,8 +4,6 @@ $header
 
 CLASS QTextImageFormat INHERIT QTextCharFormat
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD height

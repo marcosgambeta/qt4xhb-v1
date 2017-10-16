@@ -83,55 +83,22 @@ HB_FUNC_STATIC( QMDIAREA_ACTIVATIONORDER )
 /*
 QMdiSubWindow * activeSubWindow () const
 */
-HB_FUNC_STATIC( QMDIAREA_ACTIVESUBWINDOW )
-{
-  QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QMdiSubWindow * ptr = obj->activeSubWindow ();
-    _qt4xhb_createReturnClass ( ptr, "QMDISUBWINDOW" );
-  }
-}
+$method=|QMdiSubWindow *|activeSubWindow|
 
 /*
 QMdiSubWindow * addSubWindow ( QWidget * widget, Qt::WindowFlags windowFlags = 0 )
 */
-HB_FUNC_STATIC( QMDIAREA_ADDSUBWINDOW )
-{
-  QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-    QMdiSubWindow * ptr = obj->addSubWindow ( PQWIDGET(1), (Qt::WindowFlags) par2 );
-    _qt4xhb_createReturnClass ( ptr, "QMDISUBWINDOW" );
-  }
-}
+$method=|QMdiSubWindow *|addSubWindow|QWidget *,Qt::WindowFlags=0
 
 /*
 QBrush background () const
 */
-HB_FUNC_STATIC( QMDIAREA_BACKGROUND )
-{
-  QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QBrush * ptr = new QBrush( obj->background () );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
-  }
-}
+$method=|QBrush|background|
 
 /*
 QMdiSubWindow * currentSubWindow () const
 */
-HB_FUNC_STATIC( QMDIAREA_CURRENTSUBWINDOW )
-{
-  QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QMdiSubWindow * ptr = obj->currentSubWindow ();
-    _qt4xhb_createReturnClass ( ptr, "QMDISUBWINDOW" );
-  }
-}
+$method=|QMdiSubWindow *|currentSubWindow|
 
 /*
 bool documentMode () const
@@ -141,111 +108,42 @@ $method=|bool|documentMode|
 /*
 void removeSubWindow ( QWidget * widget )
 */
-HB_FUNC_STATIC( QMDIAREA_REMOVESUBWINDOW )
-{
-  QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->removeSubWindow ( PQWIDGET(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeSubWindow|QWidget *
 
 /*
 void setActivationOrder ( WindowOrder order )
 */
-HB_FUNC_STATIC( QMDIAREA_SETACTIVATIONORDER )
-{
-  QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setActivationOrder ( (QMdiArea::WindowOrder) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setActivationOrder|QMdiArea::WindowOrder
 
 /*
 void setBackground ( const QBrush & background )
 */
-HB_FUNC_STATIC( QMDIAREA_SETBACKGROUND )
-{
-  QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBackground ( *PQBRUSH(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBackground|const QBrush &
 
 /*
 void setDocumentMode ( bool enabled )
 */
-HB_FUNC_STATIC( QMDIAREA_SETDOCUMENTMODE )
-{
-  QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDocumentMode ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDocumentMode|bool
 
 /*
 void setOption ( AreaOption option, bool on = true )
 */
-HB_FUNC_STATIC( QMDIAREA_SETOPTION )
-{
-  QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setOption ( (QMdiArea::AreaOption) par1, OPBOOL(2,true) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOption|QMdiArea::AreaOption,bool=true
 
 /*
 void setTabPosition ( QTabWidget::TabPosition position )
 */
-HB_FUNC_STATIC( QMDIAREA_SETTABPOSITION )
-{
-  QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setTabPosition ( (QTabWidget::TabPosition) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTabPosition|QTabWidget::TabPosition
 
 /*
 void setTabShape ( QTabWidget::TabShape shape )
 */
-HB_FUNC_STATIC( QMDIAREA_SETTABSHAPE )
-{
-  QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setTabShape ( (QTabWidget::TabShape) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTabShape|QTabWidget::TabShape
 
 /*
 void setViewMode ( ViewMode mode )
 */
-HB_FUNC_STATIC( QMDIAREA_SETVIEWMODE )
-{
-  QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setViewMode ( (QMdiArea::ViewMode) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setViewMode|QMdiArea::ViewMode
 
 /*
 QList<QMdiSubWindow *> subWindowList ( WindowOrder order = CreationOrder ) const
@@ -253,6 +151,7 @@ QList<QMdiSubWindow *> subWindowList ( WindowOrder order = CreationOrder ) const
 HB_FUNC_STATIC( QMDIAREA_SUBWINDOWLIST )
 {
   QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QMdiArea::CreationOrder : hb_parni(1);
@@ -294,26 +193,12 @@ HB_FUNC_STATIC( QMDIAREA_SUBWINDOWLIST )
 /*
 QTabWidget::TabPosition tabPosition () const
 */
-HB_FUNC_STATIC( QMDIAREA_TABPOSITION )
-{
-  QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->tabPosition () );
-  }
-}
+$method=|QTabWidget::TabPosition|tabPosition|
 
 /*
 QTabWidget::TabShape tabShape () const
 */
-HB_FUNC_STATIC( QMDIAREA_TABSHAPE )
-{
-  QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->tabShape () );
-  }
-}
+$method=|QTabWidget::TabShape|tabShape|
 
 /*
 bool testOption ( AreaOption option ) const
@@ -335,119 +220,46 @@ HB_FUNC_STATIC( QMDIAREA_VIEWMODE )
 /*
 virtual QSize minimumSizeHint () const
 */
-HB_FUNC_STATIC( QMDIAREA_MINIMUMSIZEHINT )
-{
-  QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->minimumSizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|minimumSizeHint|
 
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC_STATIC( QMDIAREA_SIZEHINT )
-{
-  QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|sizeHint|
 
 /*
 void activateNextSubWindow ()
 */
-HB_FUNC_STATIC( QMDIAREA_ACTIVATENEXTSUBWINDOW )
-{
-  QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->activateNextSubWindow ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|activateNextSubWindow|
 
 /*
 void activatePreviousSubWindow ()
 */
-HB_FUNC_STATIC( QMDIAREA_ACTIVATEPREVIOUSSUBWINDOW )
-{
-  QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->activatePreviousSubWindow ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|activatePreviousSubWindow|
 
 /*
 void cascadeSubWindows ()
 */
-HB_FUNC_STATIC( QMDIAREA_CASCADESUBWINDOWS )
-{
-  QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->cascadeSubWindows ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|cascadeSubWindows|
 
 /*
 void closeActiveSubWindow ()
 */
-HB_FUNC_STATIC( QMDIAREA_CLOSEACTIVESUBWINDOW )
-{
-  QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->closeActiveSubWindow ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|closeActiveSubWindow|
 
 /*
 void closeAllSubWindows ()
 */
-HB_FUNC_STATIC( QMDIAREA_CLOSEALLSUBWINDOWS )
-{
-  QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->closeAllSubWindows ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|closeAllSubWindows|
 
 /*
 void setActiveSubWindow ( QMdiSubWindow * window )
 */
-HB_FUNC_STATIC( QMDIAREA_SETACTIVESUBWINDOW )
-{
-  QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QMdiSubWindow * par1 = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setActiveSubWindow ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setActiveSubWindow|QMdiSubWindow *
 
 /*
 void tileSubWindows ()
 */
-HB_FUNC_STATIC( QMDIAREA_TILESUBWINDOWS )
-{
-  QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->tileSubWindows ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|tileSubWindows|
 
 #pragma ENDDUMP

@@ -90,26 +90,12 @@ $deleteMethod
 /*
 Qt::DockWidgetAreas allowedAreas () const
 */
-HB_FUNC_STATIC( QDOCKWIDGET_ALLOWEDAREAS )
-{
-  QDockWidget * obj = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->allowedAreas () );
-  }
-}
+$method=|Qt::DockWidgetAreas|allowedAreas|
 
 /*
 DockWidgetFeatures features () const
 */
-HB_FUNC_STATIC( QDOCKWIDGET_FEATURES )
-{
-  QDockWidget * obj = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->features () );
-  }
-}
+$method=|QDockWidget::DockWidgetFeatures|features|
 
 /*
 bool isAreaAllowed ( Qt::DockWidgetArea area ) const

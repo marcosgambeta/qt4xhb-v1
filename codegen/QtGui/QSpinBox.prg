@@ -72,80 +72,32 @@ $method=|QString|prefix|
 /*
 void setMaximum ( int max )
 */
-HB_FUNC_STATIC( QSPINBOX_SETMAXIMUM )
-{
-  QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setMaximum ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMaximum|int
 
 /*
 void setMinimum ( int min )
 */
-HB_FUNC_STATIC( QSPINBOX_SETMINIMUM )
-{
-  QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setMinimum ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMinimum|int
 
 /*
 void setPrefix ( const QString & prefix )
 */
-HB_FUNC_STATIC( QSPINBOX_SETPREFIX )
-{
-  QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPrefix ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPrefix|const QString &
 
 /*
 void setRange ( int minimum, int maximum )
 */
-HB_FUNC_STATIC( QSPINBOX_SETRANGE )
-{
-  QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRange ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRange|int,int
 
 /*
 void setSingleStep ( int val )
 */
-HB_FUNC_STATIC( QSPINBOX_SETSINGLESTEP )
-{
-  QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSingleStep ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSingleStep|int
 
 /*
 void setSuffix ( const QString & suffix )
 */
-HB_FUNC_STATIC( QSPINBOX_SETSUFFIX )
-{
-  QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSuffix ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSuffix|const QString &
 
 /*
 int singleStep () const
@@ -165,14 +117,6 @@ $method=|int|value|
 /*
 void setValue ( int val )
 */
-HB_FUNC_STATIC( QSPINBOX_SETVALUE )
-{
-  QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setValue ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setValue|int
 
 #pragma ENDDUMP

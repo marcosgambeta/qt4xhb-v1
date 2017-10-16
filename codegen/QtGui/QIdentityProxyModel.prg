@@ -101,6 +101,7 @@ virtual QModelIndexList match ( const QModelIndex & start, int role, const QVari
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MATCH )
 {
   QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     int par5 = ISNIL(5)? (int) Qt::MatchStartsWith | Qt::MatchWrap : hb_parni(5);

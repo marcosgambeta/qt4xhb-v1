@@ -8,8 +8,6 @@ REQUEST QKEYSEQUENCE
 
 CLASS QShortcutEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD key
@@ -44,15 +42,7 @@ $deleteMethod
 /*
 const QKeySequence &key()
 */
-HB_FUNC_STATIC( QSHORTCUTEVENT_KEY )
-{
-  QShortcutEvent * obj = (QShortcutEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QKeySequence * ptr = &obj->key ();
-    _qt4xhb_createReturnClass ( ptr, "QKEYSEQUENCE" );
-  }
-}
+$method=|const QKeySequence &|key|
 
 /*
 int shortcutId()

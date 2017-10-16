@@ -98,28 +98,12 @@ $deleteMethod
 /*
 QIcon fileIcon ( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEICON )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIcon * ptr = new QIcon( obj->fileIcon ( *PQMODELINDEX(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );
-  }
-}
+$method=|QIcon|fileIcon|const QModelIndex &
 
 /*
 QFileInfo fileInfo ( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEINFO )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QFileInfo * ptr = new QFileInfo( obj->fileInfo ( *PQMODELINDEX(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QFILEINFO", true );
-  }
-}
+$method=|QFileInfo|fileInfo|const QModelIndex &
 
 /*
 QString fileName ( const QModelIndex & index ) const
@@ -134,40 +118,17 @@ $method=|QString|filePath|const QModelIndex &
 /*
 QDir::Filters filter () const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_FILTER )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->filter () );
-  }
-}
+$method=|QDir::Filters|filter|
 
 /*
 QFileIconProvider * iconProvider () const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_ICONPROVIDER )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QFileIconProvider * ptr = obj->iconProvider ();
-    _qt4xhb_createReturnClass ( ptr, "QFILEICONPROVIDER" );
-  }
-}
+$method=|QFileIconProvider *|iconProvider|
 
 /*
 QModelIndex index ( const QString & path, int column = 0 ) const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_INDEX1 )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->index ( PQSTRING(1), OPINT(2,0) ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
+$method=|QModelIndex|index,index1|const QString &,int=0
 
 /*
 bool isDir ( const QModelIndex & index ) const
@@ -322,16 +283,7 @@ $virtualMethod=|QVariant|headerData|int,Qt::Orientation,int=Qt::DisplayRole
 /*
 virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_INDEX2 )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QModelIndex * ptr = new QModelIndex( obj->index ( PINT(1), PINT(2), par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
+$virtualMethod=|QModelIndex|index,index2|int,int,const QModelIndex &=QModelIndex()
 
 //[1]QModelIndex index ( const QString & path, int column = 0 ) const
 //[2]virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
@@ -354,6 +306,7 @@ virtual QMimeData * mimeData ( const QModelIndexList & indexes ) const
 HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMEDATA )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QModelIndexList * par1 = (QModelIndexList *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );

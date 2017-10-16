@@ -12,8 +12,6 @@ REQUEST QSIZE
 
 CLASS QLabel INHERIT QFrame
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -282,33 +280,17 @@ $method=|void|setMovie|QMovie *
 /*
 void setNum ( int num )
 */
-HB_FUNC_STATIC( QLABEL_SETNUM1 )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setNum ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setNum,setNum1|int
 
 /*
 void setNum ( double num )
 */
-HB_FUNC_STATIC( QLABEL_SETNUM2 )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setNum ( PDOUBLE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setNum,setNum2|double
 
 //[1]void setNum ( int num )
 //[2]void setNum ( double num )
 
-// TODO: reconhecer se é int ou double
+%% TODO: reconhecer se é int ou double
 HB_FUNC_STATIC( QLABEL_SETNUM )
 {
   if( ISNUMPAR(1) && ISNUM(1) )

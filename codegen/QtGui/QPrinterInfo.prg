@@ -117,6 +117,7 @@ QList<QPrinter::PaperSize> supportedPaperSizes () const
 HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAPERSIZES )
 {
   QPrinterInfo * obj = (QPrinterInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QPrinter::PaperSize> list = obj->supportedPaperSizes ();

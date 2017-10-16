@@ -4,8 +4,6 @@ $header
 
 CLASS QAccessibleEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD child
    METHOD setValue

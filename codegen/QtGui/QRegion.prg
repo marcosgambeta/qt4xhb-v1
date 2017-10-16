@@ -169,15 +169,7 @@ $deleteMethod
 /*
 QRect boundingRect () const
 */
-HB_FUNC_STATIC( QREGION_BOUNDINGRECT )
-{
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->boundingRect () );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$method=|QRect|boundingRect|
 
 /*
 bool contains ( const QPoint & p ) const
@@ -207,28 +199,12 @@ HB_FUNC_STATIC( QREGION_CONTAINS )
 /*
 QRegion intersected ( const QRegion & r ) const
 */
-HB_FUNC_STATIC( QREGION_INTERSECTED1 )
-{
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRegion * ptr = new QRegion( obj->intersected ( *PQREGION(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QREGION", true );
-  }
-}
+$method=|QRegion|intersected,intersected1|const QRegion &
 
 /*
 QRegion intersected ( const QRect & rect ) const
 */
-HB_FUNC_STATIC( QREGION_INTERSECTED2 )
-{
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRegion * ptr = new QRegion( obj->intersected ( *PQRECT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QREGION", true );
-  }
-}
+$method=|QRegion|intersected,intersected2|const QRect &
 
 //[1]QRegion intersected ( const QRegion & r ) const
 //[2]QRegion intersected ( const QRect & rect ) const
@@ -286,6 +262,7 @@ QVector<QRect> rects () const
 HB_FUNC_STATIC( QREGION_RECTS )
 {
   QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QVector<QRect> list = obj->rects ();
@@ -326,55 +303,22 @@ HB_FUNC_STATIC( QREGION_RECTS )
 /*
 QRegion subtracted ( const QRegion & r ) const
 */
-HB_FUNC_STATIC( QREGION_SUBTRACTED )
-{
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRegion * ptr = new QRegion( obj->subtracted ( *PQREGION(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QREGION", true );
-  }
-}
+$method=|QRegion|subtracted|const QRegion &
 
 /*
 void swap ( QRegion & other )
 */
-HB_FUNC_STATIC( QREGION_SWAP )
-{
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRegion * par1 = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->swap ( *par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|swap|QRegion &
 
 /*
 void translate ( int dx, int dy )
 */
-HB_FUNC_STATIC( QREGION_TRANSLATE1 )
-{
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->translate ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|translate,translate1|int,int
 
 /*
 void translate ( const QPoint & point )
 */
-HB_FUNC_STATIC( QREGION_TRANSLATE2 )
-{
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->translate ( *PQPOINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|translate,translate2|const QPoint &
 
 //[1]void translate ( int dx, int dy )
 //[2]void translate ( const QPoint & point )
@@ -394,28 +338,12 @@ HB_FUNC_STATIC( QREGION_TRANSLATE )
 /*
 QRegion translated ( int dx, int dy ) const
 */
-HB_FUNC_STATIC( QREGION_TRANSLATED1 )
-{
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRegion * ptr = new QRegion( obj->translated ( PINT(1), PINT(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QREGION", true );
-  }
-}
+$method=|QRegion|translated,translated1|int,int
 
 /*
 QRegion translated ( const QPoint & p ) const
 */
-HB_FUNC_STATIC( QREGION_TRANSLATED2 )
-{
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRegion * ptr = new QRegion( obj->translated ( *PQPOINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QREGION", true );
-  }
-}
+$method=|QRegion|translated,translated2|const QPoint &
 
 //[1]QRegion translated ( int dx, int dy ) const
 //[2]QRegion translated ( const QPoint & p ) const
@@ -435,28 +363,12 @@ HB_FUNC_STATIC( QREGION_TRANSLATED )
 /*
 QRegion united ( const QRegion & r ) const
 */
-HB_FUNC_STATIC( QREGION_UNITED1 )
-{
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRegion * ptr = new QRegion( obj->united ( *PQREGION(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QREGION", true );
-  }
-}
+$method=|QRegion|united,united1|const QRegion &
 
 /*
 QRegion united ( const QRect & rect ) const
 */
-HB_FUNC_STATIC( QREGION_UNITED2 )
-{
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRegion * ptr = new QRegion( obj->united ( *PQRECT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QREGION", true );
-  }
-}
+$method=|QRegion|united,united2|const QRect &
 
 //[1]QRegion united ( const QRegion & r ) const
 //[2]QRegion united ( const QRect & rect ) const
@@ -476,15 +388,7 @@ HB_FUNC_STATIC( QREGION_UNITED )
 /*
 QRegion xored ( const QRegion & r ) const
 */
-HB_FUNC_STATIC( QREGION_XORED )
-{
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRegion * ptr = new QRegion( obj->xored ( *PQREGION(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QREGION", true );
-  }
-}
+$method=|QRegion|xored|const QRegion &
 
 $extraMethods
 

@@ -36,6 +36,7 @@ virtual QList<QFontEngineInfo> availableFontEngines () const = 0
 HB_FUNC_STATIC( QFONTENGINEPLUGIN_AVAILABLEFONTENGINES )
 {
   QFontEnginePlugin * obj = (QFontEnginePlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QFontEngineInfo> list = obj->availableFontEngines ();
@@ -76,15 +77,7 @@ HB_FUNC_STATIC( QFONTENGINEPLUGIN_AVAILABLEFONTENGINES )
 /*
 virtual QAbstractFontEngine * create ( const QFontEngineInfo & info ) = 0
 */
-HB_FUNC_STATIC( QFONTENGINEPLUGIN_CREATE )
-{
-  QFontEnginePlugin * obj = (QFontEnginePlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractFontEngine * ptr = obj->create ( *PQFONTENGINEINFO(1) );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTFONTENGINE" );
-  }
-}
+$virtualMethod=|QAbstractFontEngine *|create|const QFontEngineInfo &
 
 /*
 virtual QStringList keys () const

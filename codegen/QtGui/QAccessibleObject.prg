@@ -9,8 +9,6 @@ REQUEST QRECT
 
 CLASS QAccessibleObject INHERIT QAccessibleInterface
 
-   DATA self_destruction INIT .F.
-
    METHOD actionText
    METHOD doAction
    METHOD isValid

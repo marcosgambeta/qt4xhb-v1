@@ -96,29 +96,17 @@ $destructor
 /*
 QTextFormat ()
 */
-HB_FUNC_STATIC( QTEXTFORMAT_NEW1 )
-{
-  QTextFormat * o = new QTextFormat ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|
 
 /*
 QTextFormat ( int type )
 */
-HB_FUNC_STATIC( QTEXTFORMAT_NEW2 )
-{
-  QTextFormat * o = new QTextFormat ( PINT(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|int
 
 /*
 QTextFormat ( const QTextFormat & other )
 */
-HB_FUNC_STATIC( QTEXTFORMAT_NEW3 )
-{
-  QTextFormat * o = new QTextFormat ( *PQTEXTFORMAT(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new3|const QTextFormat &
 
 //[1]QTextFormat ()
 //[2]QTextFormat ( int type )
@@ -149,15 +137,7 @@ $deleteMethod
 /*
 QBrush background () const
 */
-HB_FUNC_STATIC( QTEXTFORMAT_BACKGROUND )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QBrush * ptr = new QBrush( obj->background () );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
-  }
-}
+$method=|QBrush|background|
 
 /*
 bool boolProperty ( int propertyId ) const
@@ -167,67 +147,27 @@ $method=|bool|boolProperty|int
 /*
 QBrush brushProperty ( int propertyId ) const
 */
-HB_FUNC_STATIC( QTEXTFORMAT_BRUSHPROPERTY )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QBrush * ptr = new QBrush( obj->brushProperty ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
-  }
-}
+$method=|QBrush|brushProperty|int
 
 /*
 void clearBackground ()
 */
-HB_FUNC_STATIC( QTEXTFORMAT_CLEARBACKGROUND )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clearBackground ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clearBackground|
 
 /*
 void clearForeground ()
 */
-HB_FUNC_STATIC( QTEXTFORMAT_CLEARFOREGROUND )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clearForeground ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clearForeground|
 
 /*
 void clearProperty ( int propertyId )
 */
-HB_FUNC_STATIC( QTEXTFORMAT_CLEARPROPERTY )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clearProperty ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clearProperty|int
 
 /*
 QColor colorProperty ( int propertyId ) const
 */
-HB_FUNC_STATIC( QTEXTFORMAT_COLORPROPERTY )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QColor * ptr = new QColor( obj->colorProperty ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-}
+$method=|QColor|colorProperty|int
 
 /*
 qreal doubleProperty ( int propertyId ) const
@@ -237,15 +177,7 @@ $method=|qreal|doubleProperty|int
 /*
 QBrush foreground () const
 */
-HB_FUNC_STATIC( QTEXTFORMAT_FOREGROUND )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QBrush * ptr = new QBrush( obj->foreground () );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
-  }
-}
+$method=|QBrush|foreground|
 
 /*
 bool hasProperty ( int propertyId ) const
@@ -300,27 +232,12 @@ $method=|bool|isValid|
 /*
 Qt::LayoutDirection layoutDirection () const
 */
-HB_FUNC_STATIC( QTEXTFORMAT_LAYOUTDIRECTION )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->layoutDirection () );
-  }
-}
+$method=|Qt::LayoutDirection|layoutDirection|
 
 /*
 QTextLength lengthProperty ( int propertyId ) const
 */
-HB_FUNC_STATIC( QTEXTFORMAT_LENGTHPROPERTY )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextLength * ptr = new QTextLength( obj->lengthProperty ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTLENGTH" );
-  }
-}
+$method=|QTextLength|lengthProperty|int
 
 /*
 QVector<QTextLength> lengthVectorProperty ( int propertyId ) const
@@ -328,6 +245,7 @@ QVector<QTextLength> lengthVectorProperty ( int propertyId ) const
 HB_FUNC_STATIC( QTEXTFORMAT_LENGTHVECTORPROPERTY )
 {
   QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QVector<QTextLength> list = obj->lengthVectorProperty ( PINT(1) );
@@ -368,15 +286,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_LENGTHVECTORPROPERTY )
 /*
 void merge ( const QTextFormat & other )
 */
-HB_FUNC_STATIC( QTEXTFORMAT_MERGE )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->merge ( *PQTEXTFORMAT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|merge|const QTextFormat &
 
 /*
 int objectIndex () const
@@ -391,28 +301,12 @@ $method=|int|objectType|
 /*
 QPen penProperty ( int propertyId ) const
 */
-HB_FUNC_STATIC( QTEXTFORMAT_PENPROPERTY )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPen * ptr = new QPen( obj->penProperty ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QPEN", true );
-  }
-}
+$method=|QPen|penProperty|int
 
 /*
 QVariant property ( int propertyId ) const
 */
-HB_FUNC_STATIC( QTEXTFORMAT_PROPERTY )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->property ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$method=|QVariant|property|int
 
 /*
 int propertyCount () const
@@ -422,81 +316,32 @@ $method=|int|propertyCount|
 /*
 void setBackground ( const QBrush & brush )
 */
-HB_FUNC_STATIC( QTEXTFORMAT_SETBACKGROUND )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBackground ( *PQBRUSH(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBackground|const QBrush &
 
 /*
 void setForeground ( const QBrush & brush )
 */
-HB_FUNC_STATIC( QTEXTFORMAT_SETFOREGROUND )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setForeground ( *PQBRUSH(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setForeground|const QBrush &
 
 /*
 void setLayoutDirection ( Qt::LayoutDirection direction )
 */
-HB_FUNC_STATIC( QTEXTFORMAT_SETLAYOUTDIRECTION )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setLayoutDirection ( (Qt::LayoutDirection) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setLayoutDirection|Qt::LayoutDirection
 
 /*
 void setObjectIndex ( int index )
 */
-HB_FUNC_STATIC( QTEXTFORMAT_SETOBJECTINDEX )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setObjectIndex ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setObjectIndex|int
 
 /*
 void setObjectType ( int type )
 */
-HB_FUNC_STATIC( QTEXTFORMAT_SETOBJECTTYPE )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setObjectType ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setObjectType|int
 
 /*
 void setProperty ( int propertyId, const QVariant & value )
 */
-HB_FUNC_STATIC( QTEXTFORMAT_SETPROPERTY1 )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setProperty ( PINT(1), *PQVARIANT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setProperty,setProperty1|int,const QVariant &
 
 /*
 void setProperty ( int propertyId, const QVector<QTextLength> & value )
@@ -504,18 +349,20 @@ void setProperty ( int propertyId, const QVector<QTextLength> & value )
 HB_FUNC_STATIC( QTEXTFORMAT_SETPROPERTY2 )
 {
   QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-QVector<QTextLength> par2;
-PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-int i2;
-int nLen2 = hb_arrayLen(aList2);
-for (i2=0;i2<nLen2;i2++)
-{
-par2 << *(QTextLength *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
-}
+    QVector<QTextLength> par2;
+    PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
+    int i2;
+    int nLen2 = hb_arrayLen(aList2);
+    for (i2=0;i2<nLen2;i2++)
+    {
+      par2 << *(QTextLength *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
+    }
     obj->setProperty ( PINT(1), par2 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -542,93 +389,37 @@ $method=|QString|stringProperty|int
 /*
 QTextBlockFormat toBlockFormat () const
 */
-HB_FUNC_STATIC( QTEXTFORMAT_TOBLOCKFORMAT )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextBlockFormat * ptr = new QTextBlockFormat( obj->toBlockFormat () );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCKFORMAT" );
-  }
-}
+$method=|QTextBlockFormat|toBlockFormat|
 
 /*
 QTextCharFormat toCharFormat () const
 */
-HB_FUNC_STATIC( QTEXTFORMAT_TOCHARFORMAT )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextCharFormat * ptr = new QTextCharFormat( obj->toCharFormat () );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );
-  }
-}
+$method=|QTextCharFormat|toCharFormat|
 
 /*
 QTextFrameFormat toFrameFormat () const
 */
-HB_FUNC_STATIC( QTEXTFORMAT_TOFRAMEFORMAT )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextFrameFormat * ptr = new QTextFrameFormat( obj->toFrameFormat () );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTFRAMEFORMAT" );
-  }
-}
+$method=|QTextFrameFormat|toFrameFormat|
 
 /*
 QTextImageFormat toImageFormat () const
 */
-HB_FUNC_STATIC( QTEXTFORMAT_TOIMAGEFORMAT )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextImageFormat * ptr = new QTextImageFormat( obj->toImageFormat () );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTIMAGEFORMAT" );
-  }
-}
+$method=|QTextImageFormat|toImageFormat|
 
 /*
 QTextListFormat toListFormat () const
 */
-HB_FUNC_STATIC( QTEXTFORMAT_TOLISTFORMAT )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextListFormat * ptr = new QTextListFormat( obj->toListFormat () );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTLISTFORMAT" );
-  }
-}
+$method=|QTextListFormat|toListFormat|
 
 /*
 QTextTableCellFormat toTableCellFormat () const
 */
-HB_FUNC_STATIC( QTEXTFORMAT_TOTABLECELLFORMAT )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextTableCellFormat * ptr = new QTextTableCellFormat( obj->toTableCellFormat () );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTTABLECELLFORMAT" );
-  }
-}
+$method=|QTextTableCellFormat|toTableCellFormat|
 
 /*
 QTextTableFormat toTableFormat () const
 */
-HB_FUNC_STATIC( QTEXTFORMAT_TOTABLEFORMAT )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextTableFormat * ptr = new QTextTableFormat( obj->toTableFormat () );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTTABLEFORMAT" );
-  }
-}
+$method=|QTextTableFormat|toTableFormat|
 
 /*
 int type () const

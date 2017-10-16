@@ -10,8 +10,6 @@ REQUEST QWIDGET
 
 CLASS QGraphicsProxyWidget INHERIT QGraphicsWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD createProxyForChildWidget
@@ -51,82 +49,32 @@ $deleteMethod
 /*
 QGraphicsProxyWidget * createProxyForChildWidget ( QWidget * child )
 */
-HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_CREATEPROXYFORCHILDWIDGET )
-{
-  QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QGraphicsProxyWidget * ptr = obj->createProxyForChildWidget ( PQWIDGET(1) );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSPROXYWIDGET" );
-  }
-}
+$method=|QGraphicsProxyWidget *|createProxyForChildWidget|QWidget *
 
 /*
 void setWidget ( QWidget * widget )
 */
-HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SETWIDGET )
-{
-  QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setWidget ( PQWIDGET(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWidget|QWidget *
 
 /*
 QRectF subWidgetRect ( const QWidget * widget ) const
 */
-HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SUBWIDGETRECT )
-{
-  QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QWidget * par1 = (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QRectF * ptr = new QRectF( obj->subWidgetRect ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$method=|QRectF|subWidgetRect|const QWidget *
 
 /*
 QWidget * widget () const
 */
-HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_WIDGET )
-{
-  QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->widget ();
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|widget|
 
 /*
 virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
 */
-HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_PAINT )
-{
-  QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QStyleOptionGraphicsItem * par2 = (const QStyleOptionGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->paint ( PQPAINTER(1), par2, PQWIDGET(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *
 
 /*
 virtual void setGeometry ( const QRectF & rect )
 */
-HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SETGEOMETRY )
-{
-  QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setGeometry ( *PQRECTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|setGeometry|const QRectF &
 
 /*
 virtual int type () const

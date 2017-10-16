@@ -38,27 +38,11 @@ HB_FUNC_STATIC( QFOCUSFRAME_NEW )
 /*
 void setWidget ( QWidget * widget )
 */
-HB_FUNC_STATIC( QFOCUSFRAME_SETWIDGET )
-{
-  QFocusFrame * obj = (QFocusFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setWidget ( PQWIDGET(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWidget|QWidget *
 
 /*
 QWidget * widget () const
 */
-HB_FUNC_STATIC( QFOCUSFRAME_WIDGET )
-{
-  QFocusFrame * obj = (QFocusFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->widget ();
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|widget|
 
 #pragma ENDDUMP

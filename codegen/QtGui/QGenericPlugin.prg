@@ -31,15 +31,7 @@ $deleteMethod
 /*
 virtual QObject * create ( const QString & key, const QString & specification ) = 0
 */
-HB_FUNC_STATIC( QGENERICPLUGIN_CREATE )
-{
-  QGenericPlugin * obj = (QGenericPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QObject * ptr = obj->create ( PQSTRING(1), PQSTRING(2) );
-    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
+$virtualMethod=|QObject *|create|const QString &,const QString &
 
 /*
 virtual QStringList keys () const = 0

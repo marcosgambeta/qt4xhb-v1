@@ -74,26 +74,14 @@ $destructor
 /*
 QTableView ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QTABLEVIEW_NEW )
-{
-  QTableView * o = new QTableView ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QWidget *=0
 
 $deleteMethod
 
 /*
 void clearSpans ()
 */
-HB_FUNC_STATIC( QTABLEVIEW_CLEARSPANS )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clearSpans ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clearSpans|
 
 /*
 int columnAt ( int x ) const
@@ -118,27 +106,12 @@ $method=|int|columnWidth|int
 /*
 Qt::PenStyle gridStyle () const
 */
-HB_FUNC_STATIC( QTABLEVIEW_GRIDSTYLE )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->gridStyle () );
-  }
-}
+$method=|Qt::PenStyle|gridStyle|
 
 /*
 QHeaderView * horizontalHeader () const
 */
-HB_FUNC_STATIC( QTABLEVIEW_HORIZONTALHEADER )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QHeaderView * ptr = obj->horizontalHeader ();
-    _qt4xhb_createReturnClass ( ptr, "QHEADERVIEW" );
-  }
-}
+$method=|QHeaderView *|horizontalHeader|
 
 /*
 bool isColumnHidden ( int column ) const
@@ -183,148 +156,57 @@ $method=|int|rowViewportPosition|int
 /*
 void setColumnHidden ( int column, bool hide )
 */
-HB_FUNC_STATIC( QTABLEVIEW_SETCOLUMNHIDDEN )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setColumnHidden ( PINT(1), PBOOL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setColumnHidden|int,bool
 
 /*
 void setColumnWidth ( int column, int width )
 */
-HB_FUNC_STATIC( QTABLEVIEW_SETCOLUMNWIDTH )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setColumnWidth ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setColumnWidth|int,int
 
 /*
 void setCornerButtonEnabled ( bool enable )
 */
-HB_FUNC_STATIC( QTABLEVIEW_SETCORNERBUTTONENABLED )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCornerButtonEnabled ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCornerButtonEnabled|bool
 
 /*
 void setGridStyle ( Qt::PenStyle style )
 */
-HB_FUNC_STATIC( QTABLEVIEW_SETGRIDSTYLE )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setGridStyle ( (Qt::PenStyle) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setGridStyle|Qt::PenStyle
 
 /*
 void setHorizontalHeader ( QHeaderView * header )
 */
-HB_FUNC_STATIC( QTABLEVIEW_SETHORIZONTALHEADER )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QHeaderView * par1 = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setHorizontalHeader ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHorizontalHeader|QHeaderView *
 
 /*
 void setRowHeight ( int row, int height )
 */
-HB_FUNC_STATIC( QTABLEVIEW_SETROWHEIGHT )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRowHeight ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRowHeight|int,int
 
 /*
 void setRowHidden ( int row, bool hide )
 */
-HB_FUNC_STATIC( QTABLEVIEW_SETROWHIDDEN )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRowHidden ( PINT(1), PBOOL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRowHidden|int,bool
 
 /*
 void setSortingEnabled ( bool enable )
 */
-HB_FUNC_STATIC( QTABLEVIEW_SETSORTINGENABLED )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSortingEnabled ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSortingEnabled|bool
 
 /*
 void setSpan ( int row, int column, int rowSpanCount, int columnSpanCount )
 */
-HB_FUNC_STATIC( QTABLEVIEW_SETSPAN )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSpan ( PINT(1), PINT(2), PINT(3), PINT(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSpan|int,int,int,int
 
 /*
 void setVerticalHeader ( QHeaderView * header )
 */
-HB_FUNC_STATIC( QTABLEVIEW_SETVERTICALHEADER )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QHeaderView * par1 = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setVerticalHeader ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setVerticalHeader|QHeaderView *
 
 /*
 void setWordWrap ( bool on )
 */
-HB_FUNC_STATIC( QTABLEVIEW_SETWORDWRAP )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setWordWrap ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWordWrap|bool
 
 /*
 bool showGrid () const
@@ -334,29 +216,12 @@ $method=|bool|showGrid|
 /*
 void sortByColumn ( int column, Qt::SortOrder order )
 */
-HB_FUNC_STATIC( QTABLEVIEW_SORTBYCOLUMN )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    obj->sortByColumn ( PINT(1), (Qt::SortOrder) par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|sortByColumn|int,Qt::SortOrder
 
 /*
 QHeaderView * verticalHeader () const
 */
-HB_FUNC_STATIC( QTABLEVIEW_VERTICALHEADER )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QHeaderView * ptr = obj->verticalHeader ();
-    _qt4xhb_createReturnClass ( ptr, "QHEADERVIEW" );
-  }
-}
+$method=|QHeaderView *|verticalHeader|
 
 /*
 bool wordWrap () const
@@ -366,198 +231,76 @@ $method=|bool|wordWrap|
 /*
 virtual QModelIndex indexAt ( const QPoint & pos ) const
 */
-HB_FUNC_STATIC( QTABLEVIEW_INDEXAT )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->indexAt ( *PQPOINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
+$virtualMethod=|QModelIndex|indexAt|const QPoint &
 
 /*
 virtual void setModel ( QAbstractItemModel * model )
 */
-HB_FUNC_STATIC( QTABLEVIEW_SETMODEL )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractItemModel * par1 = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setModel ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|setModel|QAbstractItemModel *
 
 /*
 virtual void setRootIndex ( const QModelIndex & index )
 */
-HB_FUNC_STATIC( QTABLEVIEW_SETROOTINDEX )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRootIndex ( *PQMODELINDEX(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|setRootIndex|const QModelIndex &
 
 /*
 virtual void setSelectionModel ( QItemSelectionModel * selectionModel )
 */
-HB_FUNC_STATIC( QTABLEVIEW_SETSELECTIONMODEL )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QItemSelectionModel * par1 = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setSelectionModel ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|setSelectionModel|QItemSelectionModel *
 
 /*
 void hideColumn ( int column )
 */
-HB_FUNC_STATIC( QTABLEVIEW_HIDECOLUMN )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->hideColumn ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|hideColumn|int
 
 /*
 void hideRow ( int row )
 */
-HB_FUNC_STATIC( QTABLEVIEW_HIDEROW )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->hideRow ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|hideRow|int
 
 /*
 void resizeColumnToContents ( int column )
 */
-HB_FUNC_STATIC( QTABLEVIEW_RESIZECOLUMNTOCONTENTS )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->resizeColumnToContents ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|resizeColumnToContents|int
 
 /*
 void resizeColumnsToContents ()
 */
-HB_FUNC_STATIC( QTABLEVIEW_RESIZECOLUMNSTOCONTENTS )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->resizeColumnsToContents ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|resizeColumnsToContents|
 
 /*
 void resizeRowToContents ( int row )
 */
-HB_FUNC_STATIC( QTABLEVIEW_RESIZEROWTOCONTENTS )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->resizeRowToContents ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|resizeRowToContents|int
 
 /*
 void resizeRowsToContents ()
 */
-HB_FUNC_STATIC( QTABLEVIEW_RESIZEROWSTOCONTENTS )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->resizeRowsToContents ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|resizeRowsToContents|
 
 /*
 void selectColumn ( int column )
 */
-HB_FUNC_STATIC( QTABLEVIEW_SELECTCOLUMN )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->selectColumn ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|selectColumn|int
 
 /*
 void selectRow ( int row )
 */
-HB_FUNC_STATIC( QTABLEVIEW_SELECTROW )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->selectRow ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|selectRow|int
 
 /*
 void setShowGrid ( bool show )
 */
-HB_FUNC_STATIC( QTABLEVIEW_SETSHOWGRID )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setShowGrid ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setShowGrid|bool
 
 /*
 void showColumn ( int column )
 */
-HB_FUNC_STATIC( QTABLEVIEW_SHOWCOLUMN )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->showColumn ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|showColumn|int
 
 /*
 void showRow ( int row )
 */
-HB_FUNC_STATIC( QTABLEVIEW_SHOWROW )
-{
-  QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->showRow ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|showRow|int
 
 #pragma ENDDUMP

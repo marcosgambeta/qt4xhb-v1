@@ -92,15 +92,7 @@ $deleteMethod
 /*
 void clear ()
 */
-HB_FUNC_STATIC( QGLYPHRUN_CLEAR )
-{
-  QGlyphRun * obj = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clear|
 
 /*
 QVector<quint32> glyphIndexes () const
@@ -108,6 +100,7 @@ QVector<quint32> glyphIndexes () const
 HB_FUNC_STATIC( QGLYPHRUN_GLYPHINDEXES )
 {
   QGlyphRun * obj = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QVector<quint32> list = obj->glyphIndexes ();
@@ -135,6 +128,7 @@ QVector<QPointF> positions () const
 HB_FUNC_STATIC( QGLYPHRUN_POSITIONS )
 {
   QGlyphRun * obj = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QVector<QPointF> list = obj->positions ();
@@ -175,15 +169,7 @@ HB_FUNC_STATIC( QGLYPHRUN_POSITIONS )
 /*
 QRawFont rawFont () const
 */
-HB_FUNC_STATIC( QGLYPHRUN_RAWFONT )
-{
-  QGlyphRun * obj = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRawFont * ptr = new QRawFont( obj->rawFont () );
-    _qt4xhb_createReturnClass ( ptr, "QRAWFONT", true );
-  }
-}
+$method=|QRawFont|rawFont|
 
 /*
 void setGlyphIndexes ( const QVector<quint32> & glyphIndexes )
@@ -191,35 +177,29 @@ void setGlyphIndexes ( const QVector<quint32> & glyphIndexes )
 HB_FUNC_STATIC( QGLYPHRUN_SETGLYPHINDEXES )
 {
   QGlyphRun * obj = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-QVector<quint32> par1;
-PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aValues1);
-int temp1;
-for (i1=0;i1<nLen1;i1++)
-{
-temp1 = hb_arrayGetNI(aValues1, i1+1);
-par1 << temp1;
-}
+    QVector<quint32> par1;
+    PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aValues1);
+    int temp1;
+    for (i1=0;i1<nLen1;i1++)
+    {
+      temp1 = hb_arrayGetNI(aValues1, i1+1);
+      par1 << temp1;
+    }
     obj->setGlyphIndexes ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 void setOverline ( bool overline )
 */
-HB_FUNC_STATIC( QGLYPHRUN_SETOVERLINE )
-{
-  QGlyphRun * obj = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setOverline ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOverline|bool
 
 /*
 void setPositions ( const QVector<QPointF> & positions )
@@ -227,59 +207,37 @@ void setPositions ( const QVector<QPointF> & positions )
 HB_FUNC_STATIC( QGLYPHRUN_SETPOSITIONS )
 {
   QGlyphRun * obj = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-QVector<QPointF> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
+    QVector<QPointF> par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    for (i1=0;i1<nLen1;i1++)
+    {
+      par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    }
     obj->setPositions ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 void setRawFont ( const QRawFont & rawFont )
 */
-HB_FUNC_STATIC( QGLYPHRUN_SETRAWFONT )
-{
-  QGlyphRun * obj = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRawFont ( *PQRAWFONT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRawFont|const QRawFont &
 
 /*
 void setStrikeOut ( bool strikeOut )
 */
-HB_FUNC_STATIC( QGLYPHRUN_SETSTRIKEOUT )
-{
-  QGlyphRun * obj = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setStrikeOut ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStrikeOut|bool
 
 /*
 void setUnderline ( bool underline )
 */
-HB_FUNC_STATIC( QGLYPHRUN_SETUNDERLINE )
-{
-  QGlyphRun * obj = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUnderline ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setUnderline|bool
 
 /*
 bool strikeOut () const

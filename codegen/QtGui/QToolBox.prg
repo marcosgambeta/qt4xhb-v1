@@ -9,8 +9,6 @@ REQUEST QICON
 
 CLASS QToolBox INHERIT QFrame
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addItem1
@@ -102,15 +100,7 @@ $method=|int|currentIndex|
 /*
 QWidget * currentWidget () const
 */
-HB_FUNC_STATIC( QTOOLBOX_CURRENTWIDGET )
-{
-  QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->currentWidget ();
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|currentWidget|
 
 /*
 int indexOf ( QWidget * widget ) const
@@ -150,15 +140,7 @@ $method=|bool|isItemEnabled|int
 /*
 QIcon itemIcon ( int index ) const
 */
-HB_FUNC_STATIC( QTOOLBOX_ITEMICON )
-{
-  QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIcon * ptr = new QIcon( obj->itemIcon ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );
-  }
-}
+$method=|QIcon|itemIcon|int
 
 /*
 QString itemText ( int index ) const
@@ -173,106 +155,41 @@ $method=|QString|itemToolTip|int
 /*
 void removeItem ( int index )
 */
-HB_FUNC_STATIC( QTOOLBOX_REMOVEITEM )
-{
-  QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->removeItem ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeItem|int
 
 /*
 void setItemEnabled ( int index, bool enabled )
 */
-HB_FUNC_STATIC( QTOOLBOX_SETITEMENABLED )
-{
-  QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setItemEnabled ( PINT(1), PBOOL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setItemEnabled|int,bool
 
 /*
 void setItemIcon ( int index, const QIcon & icon )
 */
-HB_FUNC_STATIC( QTOOLBOX_SETITEMICON )
-{
-  QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIcon par2 = ISOBJECT(2)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(2));
-    obj->setItemIcon ( PINT(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setItemIcon|int,const QIcon &
 
 /*
 void setItemText ( int index, const QString & text )
 */
-HB_FUNC_STATIC( QTOOLBOX_SETITEMTEXT )
-{
-  QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setItemText ( PINT(1), PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setItemText|int,const QString &
 
 /*
 void setItemToolTip ( int index, const QString & toolTip )
 */
-HB_FUNC_STATIC( QTOOLBOX_SETITEMTOOLTIP )
-{
-  QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setItemToolTip ( PINT(1), PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setItemToolTip|int,const QString &
 
 /*
 QWidget * widget ( int index ) const
 */
-HB_FUNC_STATIC( QTOOLBOX_WIDGET )
-{
-  QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->widget ( PINT(1) );
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|widget|int
 
 /*
 void setCurrentIndex ( int index )
 */
-HB_FUNC_STATIC( QTOOLBOX_SETCURRENTINDEX )
-{
-  QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCurrentIndex ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCurrentIndex|int
 
 /*
 void setCurrentWidget ( QWidget * widget )
 */
-HB_FUNC_STATIC( QTOOLBOX_SETCURRENTWIDGET )
-{
-  QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCurrentWidget ( PQWIDGET(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCurrentWidget|QWidget *
 
 #pragma ENDDUMP

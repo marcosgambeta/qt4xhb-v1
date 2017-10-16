@@ -34,30 +34,11 @@ $destructor
 /*
 void grabGesture ( Qt::GestureType gesture, Qt::GestureFlags flags = Qt::GestureFlags() )
 */
-HB_FUNC_STATIC( QGRAPHICSOBJECT_GRABGESTURE )
-{
-  QGraphicsObject * obj = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    int par2 = ISNIL(2)? (int) Qt::GestureFlags() : hb_parni(2);
-    obj->grabGesture ( (Qt::GestureType) par1, (Qt::GestureFlags) par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|grabGesture|Qt::GestureType,Qt::GestureFlags=Qt::GestureFlags()
 
 /*
 void ungrabGesture ( Qt::GestureType gesture )
 */
-HB_FUNC_STATIC( QGRAPHICSOBJECT_UNGRABGESTURE )
-{
-  QGraphicsObject * obj = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->ungrabGesture ( (Qt::GestureType) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|ungrabGesture|Qt::GestureType
 
 #pragma ENDDUMP

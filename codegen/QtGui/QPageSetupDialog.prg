@@ -114,14 +114,6 @@ $method=|bool|testOption|QPageSetupDialog::PageSetupDialogOption
 /*
 virtual void setVisible ( bool visible )
 */
-HB_FUNC_STATIC( QPAGESETUPDIALOG_SETVISIBLE )
-{
-  QPageSetupDialog * obj = (QPageSetupDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setVisible ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|setVisible|bool
 
 #pragma ENDDUMP

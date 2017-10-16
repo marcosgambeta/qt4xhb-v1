@@ -132,6 +132,7 @@ void setWritingSystems ( const QList<QFontDatabase::WritingSystem> & writingSyst
 HB_FUNC_STATIC( QFONTENGINEINFO_SETWRITINGSYSTEMS )
 {
   QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QFontDatabase::WritingSystem> par1;
@@ -146,20 +147,14 @@ HB_FUNC_STATIC( QFONTENGINEINFO_SETWRITINGSYSTEMS )
     }
     obj->setWritingSystems ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 QFont::Style style () const
 */
-HB_FUNC_STATIC( QFONTENGINEINFO_STYLE )
-{
-  QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->style () );
-  }
-}
+$method=|QFont::Style|style|
 
 /*
 int weight () const
@@ -172,6 +167,7 @@ QList<QFontDatabase::WritingSystem> writingSystems () const
 HB_FUNC_STATIC( QFONTENGINEINFO_WRITINGSYSTEMS )
 {
   QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QFontDatabase::WritingSystem> list = obj->writingSystems ();

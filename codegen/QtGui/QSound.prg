@@ -65,41 +65,17 @@ $method=|int|loopsRemaining|
 /*
 void setLoops ( int number )
 */
-HB_FUNC_STATIC( QSOUND_SETLOOPS )
-{
-  QSound * obj = (QSound *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setLoops ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setLoops|int
 
 /*
 void play ()
 */
-HB_FUNC_STATIC( QSOUND_PLAY1 )
-{
-  QSound * obj = (QSound *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->play ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|play,play1|
 
 /*
 void stop ()
 */
-HB_FUNC_STATIC( QSOUND_STOP )
-{
-  QSound * obj = (QSound *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->stop ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|stop|
 
 /*
 static bool isAvailable ()

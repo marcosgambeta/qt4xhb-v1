@@ -152,32 +152,12 @@ $method=|QRectF|boundingRect,boundingRect1|const QString &
 /*
 QRectF boundingRect ( QChar ch ) const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_BOUNDINGRECT2 )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QChar * par1 = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QRectF * ptr = new QRectF( obj->boundingRect ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$method=|QRectF|boundingRect,boundingRect2|QChar
 
 /*
 QRectF boundingRect ( const QRectF & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_BOUNDINGRECT3 )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    int par5;
-    QRectF * ptr = new QRectF( obj->boundingRect ( *PQRECTF(1), par2, PQSTRING(3), OPINT(4,0), &par5 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
-    hb_storni( par5, 5 );
-  }
-}
+$method=|QRectF|boundingRect,boundingRect3|const QRectF &,int,const QString &,int=0,int *=0
 
 //[1]QRectF boundingRect ( const QString & text ) const
 //[2]QRectF boundingRect ( QChar ch ) const
@@ -272,17 +252,7 @@ $method=|qreal|rightBearing|QChar
 /*
 QSizeF size ( int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_SIZE )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par4;
-    QSizeF * ptr = new QSizeF( obj->size ( PINT(1), PQSTRING(2), OPINT(3,0), &par4 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
-    hb_storni( par4, 4 );
-  }
-}
+$method=|QSizeF|size|int,const QString &,int=0,int *=0
 
 /*
 qreal strikeOutPos () const

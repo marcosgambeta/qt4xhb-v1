@@ -9,8 +9,6 @@ REQUEST QSIZE
 
 CLASS QFontComboBox INHERIT QComboBox
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD currentFont
@@ -51,92 +49,36 @@ $deleteMethod
 /*
 QFont currentFont () const
 */
-HB_FUNC_STATIC( QFONTCOMBOBOX_CURRENTFONT )
-{
-  QFontComboBox * obj = (QFontComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QFont * ptr = new QFont( obj->currentFont () );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
-  }
-}
+$method=|QFont|currentFont|
 
 /*
 FontFilters fontFilters () const
 */
-HB_FUNC_STATIC( QFONTCOMBOBOX_FONTFILTERS )
-{
-  QFontComboBox * obj = (QFontComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->fontFilters () );
-  }
-}
+$method=|QFontComboBox::FontFilters|fontFilters|
 
 /*
 void setFontFilters ( FontFilters filters )
 */
-HB_FUNC_STATIC( QFONTCOMBOBOX_SETFONTFILTERS )
-{
-  QFontComboBox * obj = (QFontComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setFontFilters ( (QFontComboBox::FontFilters) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFontFilters|QFontComboBox::FontFilters
 
 /*
 void setWritingSystem ( QFontDatabase::WritingSystem script )
 */
-HB_FUNC_STATIC( QFONTCOMBOBOX_SETWRITINGSYSTEM )
-{
-  QFontComboBox * obj = (QFontComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setWritingSystem ( (QFontDatabase::WritingSystem) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWritingSystem|QFontDatabase::WritingSystem
 
 /*
 QFontDatabase::WritingSystem writingSystem () const
 */
-HB_FUNC_STATIC( QFONTCOMBOBOX_WRITINGSYSTEM )
-{
-  QFontComboBox * obj = (QFontComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->writingSystem () );
-  }
-}
+$method=|QFontDatabase::WritingSystem|writingSystem|
 
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC_STATIC( QFONTCOMBOBOX_SIZEHINT )
-{
-  QFontComboBox * obj = (QFontComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|sizeHint|
 
 /*
 void setCurrentFont ( const QFont & font )
 */
-HB_FUNC_STATIC( QFONTCOMBOBOX_SETCURRENTFONT )
-{
-  QFontComboBox * obj = (QFontComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCurrentFont ( *PQFONT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCurrentFont|const QFont &
 
 #pragma ENDDUMP

@@ -210,28 +210,12 @@ $method=|qreal|lengthSquared|
 /*
 void normalize ()
 */
-HB_FUNC_STATIC( QVECTOR4D_NORMALIZE )
-{
-  QVector4D * obj = (QVector4D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->normalize ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|normalize|
 
 /*
 QVector4D normalized () const
 */
-HB_FUNC_STATIC( QVECTOR4D_NORMALIZED )
-{
-  QVector4D * obj = (QVector4D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVector4D * ptr = new QVector4D( obj->normalized () );
-    _qt4xhb_createReturnClass ( ptr, "QVECTOR4D" );
-  }
-}
+$method=|QVector4D|normalized|
 
 /*
 void setW ( qreal w )

@@ -241,15 +241,7 @@ HB_FUNC_STATIC( QPAINTENGINE_PAINTER )
 /*
 void setActive ( bool state )
 */
-HB_FUNC_STATIC( QPAINTENGINE_SETACTIVE )
-{
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setActive ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setActive|bool
 
 /*
 virtual Type type () const = 0

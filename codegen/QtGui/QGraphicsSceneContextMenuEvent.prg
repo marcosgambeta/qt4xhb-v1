@@ -9,8 +9,6 @@ REQUEST QPOINT
 
 CLASS QGraphicsSceneContextMenuEvent INHERIT QGraphicsSceneEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD modifiers
    METHOD pos
@@ -37,27 +35,12 @@ $deleteMethod
 /*
 Qt::KeyboardModifiers modifiers () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_MODIFIERS )
-{
-  QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->modifiers () );
-  }
-}
+$method=|Qt::KeyboardModifiers|modifiers|
 
 /*
 QPointF pos () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_POS )
-{
-  QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->pos () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|pos|
 
 /*
 Reason reason () const
@@ -74,27 +57,11 @@ HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_REASON )
 /*
 QPointF scenePos () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_SCENEPOS )
-{
-  QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->scenePos () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|scenePos|
 
 /*
 QPoint screenPos () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_SCREENPOS )
-{
-  QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->screenPos () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-}
+$method=|QPoint|screenPos|
 
 #pragma ENDDUMP

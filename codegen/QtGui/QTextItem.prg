@@ -54,15 +54,7 @@ $method=|qreal|descent|
 /*
 QFont font () const
 */
-HB_FUNC_STATIC( QTEXTITEM_FONT )
-{
-  QTextItem * obj = (QTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QFont * ptr = new QFont( obj->font () );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
-  }
-}
+$method=|QFont|font|
 
 /*
 RenderFlags renderFlags () const

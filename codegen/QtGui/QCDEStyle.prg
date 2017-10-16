@@ -8,8 +8,6 @@ REQUEST QPALETTE
 
 CLASS QCDEStyle INHERIT QMotifStyle
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD drawControl

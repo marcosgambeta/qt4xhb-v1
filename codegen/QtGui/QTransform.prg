@@ -280,140 +280,52 @@ $method=|bool|isTranslating|
 /*
 void map ( qreal x, qreal y, qreal * tx, qreal * ty ) const
 */
-HB_FUNC_STATIC( QTRANSFORM_MAP1 )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    qreal par3;
-    qreal par4;
-    obj->map ( PQREAL(1), PQREAL(2), &par3, &par4 );
-    hb_stornd( par3, 3 );
-    hb_stornd( par4, 4 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|map,map1|qreal,qreal,qreal *,qreal *
 
 /*
 QPointF map ( const QPointF & p ) const
 */
-HB_FUNC_STATIC( QTRANSFORM_MAP2 )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->map ( *PQPOINTF(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|map,map2|const QPointF &
 
 /*
 QPoint map ( const QPoint & point ) const
 */
-HB_FUNC_STATIC( QTRANSFORM_MAP3 )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->map ( *PQPOINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-}
+$method=|QPoint|map,map3|const QPoint &
 
 /*
 QLine map ( const QLine & l ) const
 */
-HB_FUNC_STATIC( QTRANSFORM_MAP4 )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QLine * ptr = new QLine( obj->map ( *PQLINE(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QLINE", true );
-  }
-}
+$method=|QLine|map,map4|const QLine &
 
 /*
 QLineF map ( const QLineF & line ) const
 */
-HB_FUNC_STATIC( QTRANSFORM_MAP5 )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QLineF * ptr = new QLineF( obj->map ( *PQLINEF(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
-  }
-}
+$method=|QLineF|map,map5|const QLineF &
 
 /*
 QPolygonF map ( const QPolygonF & polygon ) const
 */
-HB_FUNC_STATIC( QTRANSFORM_MAP6 )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPolygonF * ptr = new QPolygonF( obj->map ( *PQPOLYGONF(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOLYGONF", true );
-  }
-}
+$method=|QPolygonF|map,map6|const QPolygonF &
 
 /*
 QPolygon map ( const QPolygon & polygon ) const
 */
-HB_FUNC_STATIC( QTRANSFORM_MAP7 )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPolygon * ptr = new QPolygon( obj->map ( *PQPOLYGON(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOLYGON", true );
-  }
-}
+$method=|QPolygon|map,map7|const QPolygon &
 
 /*
 QRegion map ( const QRegion & region ) const
 */
-HB_FUNC_STATIC( QTRANSFORM_MAP8 )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRegion * ptr = new QRegion( obj->map ( *PQREGION(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QREGION", true );
-  }
-}
+$method=|QRegion|map,map8|const QRegion &
 
 /*
 QPainterPath map ( const QPainterPath & path ) const
 */
-HB_FUNC_STATIC( QTRANSFORM_MAP9 )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPainterPath * ptr = new QPainterPath( obj->map ( *PQPAINTERPATH(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
-  }
-}
+$method=|QPainterPath|map,map9|const QPainterPath &
 
 /*
 void map ( int x, int y, int * tx, int * ty ) const
 */
-HB_FUNC_STATIC( QTRANSFORM_MAP10 )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par3;
-    int par4;
-    obj->map ( PINT(1), PINT(2), &par3, &par4 );
-    hb_storni( par3, 3 );
-    hb_storni( par4, 4 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|map,map10|int,int,int *,int *
 
 //[01]void map ( qreal x, qreal y, qreal * tx, qreal * ty ) const
 //[02]QPointF map ( const QPointF & p ) const
@@ -426,7 +338,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP10 )
 //[09]QPainterPath map ( const QPainterPath & path ) const
 //[10]void map ( int x, int y, int * tx, int * ty ) const
 
-// TODO: resolver conflito entre [1] e [10] (identificar se é qreal ou int)
+%% TODO: resolver conflito entre [1] e [10] (identificar se é qreal ou int)
 
 HB_FUNC_STATIC( QTRANSFORM_MAP )
 {
@@ -542,28 +454,12 @@ HB_FUNC_STATIC( QTRANSFORM_RESET )
 /*
 void setMatrix ( qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33 )
 */
-HB_FUNC_STATIC( QTRANSFORM_SETMATRIX )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setMatrix ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6), PQREAL(7), PQREAL(8), PQREAL(9) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMatrix|qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal
 
 /*
 QTransform transposed () const
 */
-HB_FUNC_STATIC( QTRANSFORM_TRANSPOSED )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTransform * ptr = new QTransform( obj->transposed () );
-    _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
-  }
-}
+$method=|QTransform|transposed|
 
 /*
 TransformationType type () const
@@ -578,22 +474,14 @@ HB_FUNC_STATIC( QTRANSFORM_TYPE )
 }
 
 /*
-QTransform fromScale ( qreal sx, qreal sy )
+static QTransform fromScale ( qreal sx, qreal sy )
 */
-HB_FUNC_STATIC( QTRANSFORM_FROMSCALE )
-{
-  QTransform * ptr = new QTransform( QTransform::fromScale ( PQREAL(1), PQREAL(2) ) );
-  _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
-}
+$staticMethod=|QTransform|fromScale|qreal,qreal
 
 /*
-QTransform fromTranslate ( qreal dx, qreal dy )
+static QTransform fromTranslate ( qreal dx, qreal dy )
 */
-HB_FUNC_STATIC( QTRANSFORM_FROMTRANSLATE )
-{
-  QTransform * ptr = new QTransform( QTransform::fromTranslate ( PQREAL(1), PQREAL(2) ) );
-  _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
-}
+$staticMethod=|QTransform|fromTranslate|qreal,qreal
 
 /*
 static bool quadToQuad ( const QPolygonF & one, const QPolygonF & two, QTransform & trans )

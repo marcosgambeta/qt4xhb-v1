@@ -8,8 +8,6 @@ REQUEST QPOINTF
 
 CLASS QConicalGradient INHERIT QGradient
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new3
@@ -38,29 +36,17 @@ $destructor
 /*
 QConicalGradient()
 */
-HB_FUNC_STATIC( QCONICALGRADIENT_NEW1 )
-{
-  QConicalGradient * o = new QConicalGradient ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|
 
 /*
 QConicalGradient(const QPointF &center, qreal startAngle)
 */
-HB_FUNC_STATIC( QCONICALGRADIENT_NEW2 )
-{
-  QConicalGradient * o = new QConicalGradient ( *PQPOINTF(1), PQREAL(2) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QPointF &,qreal
 
 /*
 QConicalGradient(qreal cx, qreal cy, qreal startAngle)
 */
-HB_FUNC_STATIC( QCONICALGRADIENT_NEW3 )
-{
-  QConicalGradient * o = new QConicalGradient ( PQREAL(1), PQREAL(2), PQREAL(3) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new3|qreal,qreal,qreal
 
 //[1]QConicalGradient()
 //[2]QConicalGradient(const QPointF &center, qreal startAngle)
@@ -94,15 +80,7 @@ $method=|qreal|angle|
 /*
 QPointF center () const
 */
-HB_FUNC_STATIC( QCONICALGRADIENT_CENTER )
-{
-  QConicalGradient * obj = (QConicalGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->center () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|center|
 
 /*
 void setAngle ( qreal angle )
@@ -112,15 +90,7 @@ $method=|void|setAngle|qreal
 /*
 void setCenter ( const QPointF & center )
 */
-HB_FUNC_STATIC( QCONICALGRADIENT_SETCENTER1 )
-{
-  QConicalGradient * obj = (QConicalGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCenter ( *PQPOINTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCenter,setCenter1|const QPointF &
 
 /*
 void setCenter ( qreal x, qreal y )

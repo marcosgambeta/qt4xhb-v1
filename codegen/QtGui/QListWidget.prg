@@ -10,8 +10,6 @@ REQUEST QRECT
 
 CLASS QListWidget INHERIT QListView
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addItem1
@@ -294,41 +292,17 @@ $method=|bool|isSortingEnabled|
 /*
 QListWidgetItem * item ( int row ) const
 */
-HB_FUNC_STATIC( QLISTWIDGET_ITEM )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QListWidgetItem * ptr = obj->item ( PINT(1) );
-    _qt4xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
-  }
-}
+$method=|QListWidgetItem *|item|int
 
 /*
 QListWidgetItem * itemAt ( const QPoint & p ) const
 */
-HB_FUNC_STATIC( QLISTWIDGET_ITEMAT1 )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QListWidgetItem * ptr = obj->itemAt ( *PQPOINT(1) );
-    _qt4xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
-  }
-}
+$method=|QListWidgetItem *|itemAt,itemAt1|const QPoint &
 
 /*
 QListWidgetItem * itemAt ( int x, int y ) const
 */
-HB_FUNC_STATIC( QLISTWIDGET_ITEMAT2 )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QListWidgetItem * ptr = obj->itemAt ( PINT(1), PINT(2) );
-    _qt4xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
-  }
-}
+$method=|QListWidgetItem *|itemAt,itemAt2|int,int
 
 //[1]QListWidgetItem * itemAt ( const QPoint & p ) const
 //[2]QListWidgetItem * itemAt ( int x, int y ) const
@@ -348,44 +322,17 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMAT )
 /*
 QWidget * itemWidget ( QListWidgetItem * item ) const
 */
-HB_FUNC_STATIC( QLISTWIDGET_ITEMWIDGET )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QListWidgetItem * par1 = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QWidget * ptr = obj->itemWidget ( par1 );
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|itemWidget|QListWidgetItem *
 
 /*
 void openPersistentEditor ( QListWidgetItem * item )
 */
-HB_FUNC_STATIC( QLISTWIDGET_OPENPERSISTENTEDITOR )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QListWidgetItem * par1 = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->openPersistentEditor ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|openPersistentEditor|QListWidgetItem *
 
 /*
 void removeItemWidget ( QListWidgetItem * item )
 */
-HB_FUNC_STATIC( QLISTWIDGET_REMOVEITEMWIDGET )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QListWidgetItem * par1 = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->removeItemWidget ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeItemWidget|QListWidgetItem *
 
 /*
 int row ( const QListWidgetItem * item ) const
@@ -398,6 +345,7 @@ QList<QListWidgetItem *> selectedItems () const
 HB_FUNC_STATIC( QLISTWIDGET_SELECTEDITEMS )
 {
   QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QListWidgetItem *> list = obj->selectedItems ();
@@ -438,31 +386,12 @@ HB_FUNC_STATIC( QLISTWIDGET_SELECTEDITEMS )
 /*
 void setCurrentItem ( QListWidgetItem * item )
 */
-HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTITEM1 )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QListWidgetItem * par1 = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setCurrentItem ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCurrentItem,setCurrentItem1|QListWidgetItem *
 
 /*
 void setCurrentItem ( QListWidgetItem * item, QItemSelectionModel::SelectionFlags command )
 */
-HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTITEM2 )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QListWidgetItem * par1 = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = hb_parni(2);
-    obj->setCurrentItem ( par1, (QItemSelectionModel::SelectionFlags) par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCurrentItem,setCurrentItem2|QListWidgetItem *,QItemSelectionModel::SelectionFlags
 
 //[1]void setCurrentItem ( QListWidgetItem * item )
 //[2]void setCurrentItem ( QListWidgetItem * item, QItemSelectionModel::SelectionFlags command )
@@ -482,29 +411,12 @@ HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTITEM )
 /*
 void setCurrentRow ( int row )
 */
-HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTROW1 )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCurrentRow ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCurrentRow,setCurrentRow1|int
 
 /*
 void setCurrentRow ( int row, QItemSelectionModel::SelectionFlags command )
 */
-HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTROW2 )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    obj->setCurrentRow ( PINT(1), (QItemSelectionModel::SelectionFlags) par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCurrentRow,setCurrentRow2|int,QItemSelectionModel::SelectionFlags
 
 //[1]void setCurrentRow ( int row )
 //[2]void setCurrentRow ( int row, QItemSelectionModel::SelectionFlags command )
@@ -524,111 +436,41 @@ HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTROW )
 /*
 void setItemWidget ( QListWidgetItem * item, QWidget * widget )
 */
-HB_FUNC_STATIC( QLISTWIDGET_SETITEMWIDGET )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QListWidgetItem * par1 = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setItemWidget ( par1, PQWIDGET(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setItemWidget|QListWidgetItem *,QWidget *
 
 /*
 void setSortingEnabled ( bool enable )
 */
-HB_FUNC_STATIC( QLISTWIDGET_SETSORTINGENABLED )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSortingEnabled ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSortingEnabled|bool
 
 /*
 void sortItems ( Qt::SortOrder order = Qt::AscendingOrder )
 */
-HB_FUNC_STATIC( QLISTWIDGET_SORTITEMS )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = ISNIL(1)? (int) Qt::AscendingOrder : hb_parni(1);
-    obj->sortItems ( (Qt::SortOrder) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|sortItems|Qt::SortOrder=Qt::AscendingOrder
 
 /*
 QListWidgetItem * takeItem ( int row )
 */
-HB_FUNC_STATIC( QLISTWIDGET_TAKEITEM )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QListWidgetItem * ptr = obj->takeItem ( PINT(1) );
-    _qt4xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
-  }
-}
+$method=|QListWidgetItem *|takeItem|int
 
 /*
 QRect visualItemRect ( const QListWidgetItem * item ) const
 */
-HB_FUNC_STATIC( QLISTWIDGET_VISUALITEMRECT )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QListWidgetItem * par1 = (const QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QRect * ptr = new QRect( obj->visualItemRect ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$method=|QRect|visualItemRect|const QListWidgetItem *
 
 /*
 virtual void dropEvent ( QDropEvent * event )
 */
-HB_FUNC_STATIC( QLISTWIDGET_DROPEVENT )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDropEvent * par1 = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->dropEvent ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|dropEvent|QDropEvent *
 
 /*
 void clear ()
 */
-HB_FUNC_STATIC( QLISTWIDGET_CLEAR )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clear|
 
 /*
 void scrollToItem ( const QListWidgetItem * item, QAbstractItemView::ScrollHint hint = EnsureVisible )
 */
-HB_FUNC_STATIC( QLISTWIDGET_SCROLLTOITEM )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QListWidgetItem * par1 = (const QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = ISNIL(2)? (int) QAbstractItemView::EnsureVisible : hb_parni(2);
-    obj->scrollToItem ( par1, (QAbstractItemView::ScrollHint) par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|scrollToItem|const QListWidgetItem *,QAbstractItemView::ScrollHint=QAbstractItemView::EnsureVisible
 
 #pragma ENDDUMP

@@ -99,15 +99,7 @@ $method=|bool|columnIntersectsSelection|int,const QModelIndex &
 /*
 QModelIndex currentIndex () const
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_CURRENTINDEX )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->currentIndex () );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
+$method=|QModelIndex|currentIndex|
 
 /*
 bool hasSelection () const
@@ -132,15 +124,7 @@ $method=|bool|isSelected|const QModelIndex &
 /*
 const QAbstractItemModel * model () const
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_MODEL )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QAbstractItemModel * ptr = obj->model ();
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
-  }
-}
+$method=|const QAbstractItemModel *|model|
 
 /*
 bool rowIntersectsSelection ( int row, const QModelIndex & parent ) const
@@ -153,6 +137,7 @@ QModelIndexList selectedColumns ( int row = 0 ) const
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDCOLUMNS )
 {
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QModelIndexList list = obj->selectedColumns ( OPINT(1,0) );
@@ -196,6 +181,7 @@ QModelIndexList selectedIndexes () const
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDINDEXES )
 {
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QModelIndexList list = obj->selectedIndexes ();
@@ -239,6 +225,7 @@ QModelIndexList selectedRows ( int column = 0 ) const
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDROWS )
 {
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QModelIndexList list = obj->selectedRows ( OPINT(1,0) );
@@ -279,80 +266,32 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDROWS )
 /*
 const QItemSelection selection () const
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTION )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-  }
-}
+$method=|const QItemSelection|selection|
 
 /*
 virtual void clear ()
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_CLEAR )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|clear|
 
 /*
 void clearSelection ()
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_CLEARSELECTION )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clearSelection ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clearSelection|
 
 /*
 virtual void reset ()
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_RESET )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->reset ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|reset|
 
 /*
 virtual void select ( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECT1 )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    obj->select ( *PQMODELINDEX(1), (QItemSelectionModel::SelectionFlags) par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|select,select1|const QModelIndex &,QItemSelectionModel::SelectionFlags
 
 /*
 virtual void select ( const QItemSelection & selection, QItemSelectionModel::SelectionFlags command )
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECT2 )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    obj->select ( *PQITEMSELECTION(1), (QItemSelectionModel::SelectionFlags) par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|select,select2|const QItemSelection &,QItemSelectionModel::SelectionFlags
 
 //[1]virtual void select ( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
 //[2]virtual void select ( const QItemSelection & selection, QItemSelectionModel::SelectionFlags command )
@@ -372,15 +311,6 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECT )
 /*
 void setCurrentIndex ( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_SETCURRENTINDEX )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    obj->setCurrentIndex ( *PQMODELINDEX(1), (QItemSelectionModel::SelectionFlags) par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCurrentIndex|const QModelIndex &,QItemSelectionModel::SelectionFlags
 
 #pragma ENDDUMP

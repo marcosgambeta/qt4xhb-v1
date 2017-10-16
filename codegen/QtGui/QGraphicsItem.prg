@@ -303,6 +303,7 @@ QList<QGraphicsItem *> childItems () const
 HB_FUNC_STATIC( QGRAPHICSITEM_CHILDITEMS )
 {
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QGraphicsItem *> list = obj->childItems ();
@@ -371,6 +372,7 @@ QList<QGraphicsItem *> collidingItems ( Qt::ItemSelectionMode mode = Qt::Interse
 HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDINGITEMS )
 {
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     int par1 = ISNIL(1)? (int) Qt::IntersectsItemShape : hb_parni(1);
@@ -475,6 +477,7 @@ GraphicsItemFlags flags () const
 HB_FUNC_STATIC( QGRAPHICSITEM_FLAGS )
 {
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     hb_retni( (int) obj->flags () );
@@ -1194,16 +1197,7 @@ $virtualMethod=|QPainterPath|opaqueArea|
 /*
 virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 ) = 0
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_PAINT )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QStyleOptionGraphicsItem * par2 = (const QStyleOptionGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->paint ( PQPAINTER(1), par2, OPQWIDGET(3,0) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
 
 /*
 QGraphicsItem * panel () const

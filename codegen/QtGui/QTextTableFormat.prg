@@ -8,8 +8,6 @@ REQUEST QTEXTLENGTH
 
 CLASS QTextTableFormat INHERIT QTextFrameFormat
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD alignment
@@ -192,14 +190,6 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETCOLUMNWIDTHCONSTRAINTS )
 /*
 void setHeaderRowCount ( int count )
 */
-HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETHEADERROWCOUNT )
-{
-  QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setHeaderRowCount ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHeaderRowCount|int
 
 #pragma ENDDUMP

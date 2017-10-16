@@ -10,8 +10,6 @@ REQUEST QSIZE
 
 CLASS QAbstractScrollArea INHERIT QFrame
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD addScrollBarWidget
    METHOD cornerWidget
@@ -78,6 +76,7 @@ QWidgetList scrollBarWidgets ( Qt::Alignment alignment )
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SCROLLBARWIDGETS )
 {
   QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     int par1 = hb_parni(1);

@@ -10,8 +10,6 @@ REQUEST QRECT
 
 CLASS QTreeWidget INHERIT QTreeView
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addTopLevelItem
@@ -98,15 +96,7 @@ $deleteMethod
 /*
 void addTopLevelItem ( QTreeWidgetItem * item )
 */
-HB_FUNC_STATIC( QTREEWIDGET_ADDTOPLEVELITEM )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->addTopLevelItem ( PQTREEWIDGETITEM(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addTopLevelItem|QTreeWidgetItem *
 
 /*
 void addTopLevelItems ( const QList<QTreeWidgetItem *> & items )
@@ -114,6 +104,7 @@ void addTopLevelItems ( const QList<QTreeWidgetItem *> & items )
 HB_FUNC_STATIC( QTREEWIDGET_ADDTOPLEVELITEMS )
 {
   QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QTreeWidgetItem *> par1;
@@ -126,21 +117,14 @@ HB_FUNC_STATIC( QTREEWIDGET_ADDTOPLEVELITEMS )
     }
     obj->addTopLevelItems ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 void closePersistentEditor ( QTreeWidgetItem * item, int column = 0 )
 */
-HB_FUNC_STATIC( QTREEWIDGET_CLOSEPERSISTENTEDITOR )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->closePersistentEditor ( PQTREEWIDGETITEM(1), OPINT(2,0) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|closePersistentEditor|QTreeWidgetItem *,int=0
 
 /*
 int columnCount () const
@@ -155,28 +139,12 @@ $method=|int|currentColumn|
 /*
 QTreeWidgetItem * currentItem () const
 */
-HB_FUNC_STATIC( QTREEWIDGET_CURRENTITEM )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTreeWidgetItem * ptr = obj->currentItem ();
-    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
-  }
-}
+$method=|QTreeWidgetItem *|currentItem|
 
 /*
 void editItem ( QTreeWidgetItem * item, int column = 0 )
 */
-HB_FUNC_STATIC( QTREEWIDGET_EDITITEM )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->editItem ( PQTREEWIDGETITEM(1), OPINT(2,0) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|editItem|QTreeWidgetItem *,int=0
 
 /*
 QList<QTreeWidgetItem *> findItems ( const QString & text, Qt::MatchFlags flags, int column = 0 ) const
@@ -184,6 +152,7 @@ QList<QTreeWidgetItem *> findItems ( const QString & text, Qt::MatchFlags flags,
 HB_FUNC_STATIC( QTREEWIDGET_FINDITEMS )
 {
   QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     int par2 = hb_parni(2);
@@ -225,15 +194,7 @@ HB_FUNC_STATIC( QTREEWIDGET_FINDITEMS )
 /*
 QTreeWidgetItem *  headerItem () const
 */
-HB_FUNC_STATIC( QTREEWIDGET_HEADERITEM )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTreeWidgetItem * ptr = obj->headerItem ();
-    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
-  }
-}
+$method=|QTreeWidgetItem *|headerItem|
 
 /*
 int indexOfTopLevelItem ( QTreeWidgetItem * item ) const
@@ -243,15 +204,7 @@ $method=|int|indexOfTopLevelItem|QTreeWidgetItem *
 /*
 void insertTopLevelItem ( int index, QTreeWidgetItem * item )
 */
-HB_FUNC_STATIC( QTREEWIDGET_INSERTTOPLEVELITEM )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->insertTopLevelItem ( PINT(1), PQTREEWIDGETITEM(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|insertTopLevelItem|int,QTreeWidgetItem *
 
 /*
 void insertTopLevelItems ( int index, const QList<QTreeWidgetItem *> & items )
@@ -259,6 +212,7 @@ void insertTopLevelItems ( int index, const QList<QTreeWidgetItem *> & items )
 HB_FUNC_STATIC( QTREEWIDGET_INSERTTOPLEVELITEMS )
 {
   QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QTreeWidgetItem *> par2;
@@ -271,21 +225,14 @@ HB_FUNC_STATIC( QTREEWIDGET_INSERTTOPLEVELITEMS )
     }
     obj->insertTopLevelItems ( PINT(1), par2 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 QTreeWidgetItem * invisibleRootItem () const
 */
-HB_FUNC_STATIC( QTREEWIDGET_INVISIBLEROOTITEM )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTreeWidgetItem * ptr = obj->invisibleRootItem ();
-    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
-  }
-}
+$method=|QTreeWidgetItem *|invisibleRootItem|
 
 /*
 bool isFirstItemColumnSpanned ( const QTreeWidgetItem * item ) const
@@ -295,42 +242,17 @@ $method=|bool|isFirstItemColumnSpanned|const QTreeWidgetItem *
 /*
 QTreeWidgetItem * itemAbove ( const QTreeWidgetItem * item ) const
 */
-HB_FUNC_STATIC( QTREEWIDGET_ITEMABOVE )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QTreeWidgetItem * par1 = (const QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QTreeWidgetItem * ptr = obj->itemAbove ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
-  }
-}
+$method=|QTreeWidgetItem *|itemAbove|const QTreeWidgetItem *
 
 /*
 QTreeWidgetItem * itemAt ( const QPoint & p ) const
 */
-HB_FUNC_STATIC( QTREEWIDGET_ITEMAT1 )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTreeWidgetItem * ptr = obj->itemAt ( *PQPOINT(1) );
-    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
-  }
-}
+$method=|QTreeWidgetItem *|itemAt,itemAt1|const QPoint &
 
 /*
 QTreeWidgetItem * itemAt ( int x, int y ) const
 */
-HB_FUNC_STATIC( QTREEWIDGET_ITEMAT2 )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTreeWidgetItem * ptr = obj->itemAt ( PINT(1), PINT(2) );
-    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
-  }
-}
+$method=|QTreeWidgetItem *|itemAt,itemAt2|int,int
 
 //[1]QTreeWidgetItem * itemAt ( const QPoint & p ) const
 //[2]QTreeWidgetItem * itemAt ( int x, int y ) const
@@ -350,55 +272,22 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMAT )
 /*
 QTreeWidgetItem *  itemBelow ( const QTreeWidgetItem * item ) const
 */
-HB_FUNC_STATIC( QTREEWIDGET_ITEMBELOW )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QTreeWidgetItem * par1 = (const QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QTreeWidgetItem * ptr = obj->itemBelow ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
-  }
-}
+$method=|QTreeWidgetItem *|itemBelow|const QTreeWidgetItem *
 
 /*
 QWidget * itemWidget ( QTreeWidgetItem * item, int column ) const
 */
-HB_FUNC_STATIC( QTREEWIDGET_ITEMWIDGET )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->itemWidget ( PQTREEWIDGETITEM(1), PINT(2) );
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|itemWidget|QTreeWidgetItem *,int
 
 /*
 void openPersistentEditor ( QTreeWidgetItem * item, int column = 0 )
 */
-HB_FUNC_STATIC( QTREEWIDGET_OPENPERSISTENTEDITOR )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->openPersistentEditor ( PQTREEWIDGETITEM(1), OPINT(2,0) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|openPersistentEditor|QTreeWidgetItem *,int=0
 
 /*
 void removeItemWidget ( QTreeWidgetItem * item, int column )
 */
-HB_FUNC_STATIC( QTREEWIDGET_REMOVEITEMWIDGET )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->removeItemWidget ( PQTREEWIDGETITEM(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeItemWidget|QTreeWidgetItem *,int
 
 /*
 QList<QTreeWidgetItem *> selectedItems () const
@@ -406,6 +295,7 @@ QList<QTreeWidgetItem *> selectedItems () const
 HB_FUNC_STATIC( QTREEWIDGET_SELECTEDITEMS )
 {
   QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QTreeWidgetItem *> list = obj->selectedItems ();
@@ -446,55 +336,22 @@ HB_FUNC_STATIC( QTREEWIDGET_SELECTEDITEMS )
 /*
 void setColumnCount ( int columns )
 */
-HB_FUNC_STATIC( QTREEWIDGET_SETCOLUMNCOUNT )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setColumnCount ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setColumnCount|int
 
 /*
 void setCurrentItem ( QTreeWidgetItem * item )
 */
-HB_FUNC_STATIC( QTREEWIDGET_SETCURRENTITEM1 )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCurrentItem ( PQTREEWIDGETITEM(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCurrentItem,setCurrentItem1|QTreeWidgetItem *
 
 /*
 void setCurrentItem ( QTreeWidgetItem * item, int column )
 */
-HB_FUNC_STATIC( QTREEWIDGET_SETCURRENTITEM2 )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCurrentItem ( PQTREEWIDGETITEM(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCurrentItem,setCurrentItem2|QTreeWidgetItem *,int
 
 /*
 void setCurrentItem ( QTreeWidgetItem * item, int column, QItemSelectionModel::SelectionFlags command )
 */
-HB_FUNC_STATIC( QTREEWIDGET_SETCURRENTITEM3 )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par3 = hb_parni(3);
-    obj->setCurrentItem ( PQTREEWIDGETITEM(1), PINT(2), (QItemSelectionModel::SelectionFlags) par3 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCurrentItem,setCurrentItem3|QTreeWidgetItem *,int,QItemSelectionModel::SelectionFlags
 
 //[1]void setCurrentItem ( QTreeWidgetItem * item )
 //[2]void setCurrentItem ( QTreeWidgetItem * item, int column )
@@ -519,29 +376,12 @@ HB_FUNC_STATIC( QTREEWIDGET_SETCURRENTITEM )
 /*
 void setFirstItemColumnSpanned ( const QTreeWidgetItem * item, bool span )
 */
-HB_FUNC_STATIC( QTREEWIDGET_SETFIRSTITEMCOLUMNSPANNED )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTreeWidgetItem * par1 = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setFirstItemColumnSpanned ( par1, PBOOL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFirstItemColumnSpanned|const QTreeWidgetItem *,bool
 
 /*
 void setHeaderItem ( QTreeWidgetItem * item )
 */
-HB_FUNC_STATIC( QTREEWIDGET_SETHEADERITEM )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setHeaderItem ( PQTREEWIDGETITEM(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHeaderItem|QTreeWidgetItem *
 
 /*
 void setHeaderLabel ( const QString & label )
@@ -551,28 +391,12 @@ $method=|void|setHeaderLabel|const QString &
 /*
 void setHeaderLabels ( const QStringList & labels )
 */
-HB_FUNC_STATIC( QTREEWIDGET_SETHEADERLABELS )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setHeaderLabels ( PQSTRINGLIST(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHeaderLabels|const QStringList &
 
 /*
 void setItemWidget ( QTreeWidgetItem * item, int column, QWidget * widget )
 */
-HB_FUNC_STATIC( QTREEWIDGET_SETITEMWIDGET )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setItemWidget ( PQTREEWIDGETITEM(1), PINT(2), PQWIDGET(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setItemWidget|QTreeWidgetItem *,int,QWidget *
 
 /*
 int sortColumn () const
@@ -582,41 +406,17 @@ $method=|int|sortColumn|
 /*
 void sortItems ( int column, Qt::SortOrder order )
 */
-HB_FUNC_STATIC( QTREEWIDGET_SORTITEMS )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->sortItems ( PINT(1), (Qt::SortOrder) hb_parni(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|sortItems|int,Qt::SortOrder
 
 /*
 QTreeWidgetItem *  takeTopLevelItem ( int index )
 */
-HB_FUNC_STATIC( QTREEWIDGET_TAKETOPLEVELITEM )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTreeWidgetItem * ptr = obj->takeTopLevelItem ( PINT(1) );
-    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
-  }
-}
+$method=|QTreeWidgetItem *|takeTopLevelItem|int
 
 /*
 QTreeWidgetItem *  topLevelItem ( int index ) const
 */
-HB_FUNC_STATIC( QTREEWIDGET_TOPLEVELITEM )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTreeWidgetItem * ptr = obj->topLevelItem ( PINT(1) );
-    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
-  }
-}
+$method=|QTreeWidgetItem *|topLevelItem|int
 
 /*
 int topLevelItemCount () const
@@ -626,84 +426,31 @@ $method=|int|topLevelItemCount|
 /*
 QRect visualItemRect ( const QTreeWidgetItem * item ) const
 */
-HB_FUNC_STATIC( QTREEWIDGET_VISUALITEMRECT )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QTreeWidgetItem * par1 = (const QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QRect * ptr = new QRect( obj->visualItemRect ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$method=|QRect|visualItemRect|const QTreeWidgetItem *
 
 /*
 virtual void setSelectionModel ( QItemSelectionModel * selectionModel )
 */
-HB_FUNC_STATIC( QTREEWIDGET_SETSELECTIONMODEL )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSelectionModel ( PQITEMSELECTIONMODEL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|setSelectionModel|QItemSelectionModel *
 
 /*
 void clear ()
 */
-HB_FUNC_STATIC( QTREEWIDGET_CLEAR )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clear|
 
 /*
 void collapseItem ( const QTreeWidgetItem * item )
 */
-HB_FUNC_STATIC( QTREEWIDGET_COLLAPSEITEM )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QTreeWidgetItem * par1 = (const QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->collapseItem ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|collapseItem|const QTreeWidgetItem *
 
 /*
 void expandItem ( const QTreeWidgetItem * item )
 */
-HB_FUNC_STATIC( QTREEWIDGET_EXPANDITEM )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QTreeWidgetItem * par1 = (const QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->expandItem ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|expandItem|const QTreeWidgetItem *
 
 /*
 void scrollToItem ( const QTreeWidgetItem * item, QAbstractItemView::ScrollHint hint = EnsureVisible )
 */
-HB_FUNC_STATIC( QTREEWIDGET_SCROLLTOITEM )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QTreeWidgetItem * par1 = (const QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = ISNIL(2)? (int) QAbstractItemView::EnsureVisible : hb_parni(2);
-    obj->scrollToItem ( par1, (QAbstractItemView::ScrollHint) par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|scrollToItem|const QTreeWidgetItem *,QAbstractItemView::ScrollHint=QAbstractItemView::EnsureVisible
 
 #pragma ENDDUMP

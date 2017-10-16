@@ -85,14 +85,17 @@ $method=|QAbstractSpinBox::CorrectionMode|correctionMode|
 /*
 virtual void fixup ( QString & input ) const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_FIXUP ) // TODO: revisar implementacao e corrigir
+%% TODO: revisar implementacao e corrigir
+HB_FUNC_STATIC( QABSTRACTSPINBOX_FIXUP )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QString par1 = hb_parc(1);
     obj->fixup ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -189,9 +192,11 @@ $method=|QString|text|
 /*
 virtual QValidator::State validate ( QString & input, int & pos ) const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_VALIDATE ) // TODO: revisar implementacao e corrigir
+%% TODO: revisar implementacao e corrigir
+HB_FUNC_STATIC( QABSTRACTSPINBOX_VALIDATE )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QString par1 = hb_parc(1);

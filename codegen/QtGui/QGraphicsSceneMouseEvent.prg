@@ -9,8 +9,6 @@ REQUEST QPOINT
 
 CLASS QGraphicsSceneMouseEvent INHERIT QGraphicsSceneEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD button
    METHOD buttonDownPos
@@ -44,157 +42,61 @@ $deleteMethod
 /*
 Qt::MouseButton button () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTON )
-{
-  QGraphicsSceneMouseEvent * obj = (QGraphicsSceneMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->button () );
-  }
-}
+$method=|Qt::MouseButton|button|
 
 /*
 QPointF buttonDownPos ( Qt::MouseButton button ) const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNPOS )
-{
-  QGraphicsSceneMouseEvent * obj = (QGraphicsSceneMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    QPointF * ptr = new QPointF( obj->buttonDownPos ( (Qt::MouseButton) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|buttonDownPos|Qt::MouseButton
 
 /*
 QPointF buttonDownScenePos ( Qt::MouseButton button ) const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCENEPOS )
-{
-  QGraphicsSceneMouseEvent * obj = (QGraphicsSceneMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    QPointF * ptr = new QPointF( obj->buttonDownScenePos ( (Qt::MouseButton) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|buttonDownScenePos|Qt::MouseButton
 
 /*
 QPoint buttonDownScreenPos ( Qt::MouseButton button ) const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCREENPOS )
-{
-  QGraphicsSceneMouseEvent * obj = (QGraphicsSceneMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    QPoint * ptr = new QPoint( obj->buttonDownScreenPos ( (Qt::MouseButton) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-}
+$method=|QPoint|buttonDownScreenPos|Qt::MouseButton
 
 /*
 Qt::MouseButtons buttons () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONS )
-{
-  QGraphicsSceneMouseEvent * obj = (QGraphicsSceneMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->buttons () );
-  }
-}
+$method=|Qt::MouseButtons|buttons|
 
 /*
 QPointF lastPos () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_LASTPOS )
-{
-  QGraphicsSceneMouseEvent * obj = (QGraphicsSceneMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->lastPos () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|lastPos|
 
 /*
 QPointF lastScenePos () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_LASTSCENEPOS )
-{
-  QGraphicsSceneMouseEvent * obj = (QGraphicsSceneMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->lastScenePos () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|lastScenePos|
 
 /*
 QPoint lastScreenPos () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_LASTSCREENPOS )
-{
-  QGraphicsSceneMouseEvent * obj = (QGraphicsSceneMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->lastScreenPos () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-}
+$method=|QPoint|lastScreenPos|
 
 /*
 Qt::KeyboardModifiers modifiers () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_MODIFIERS )
-{
-  QGraphicsSceneMouseEvent * obj = (QGraphicsSceneMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->modifiers () );
-  }
-}
+$method=|Qt::KeyboardModifiers|modifiers|
 
 /*
 QPointF pos () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_POS )
-{
-  QGraphicsSceneMouseEvent * obj = (QGraphicsSceneMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->pos () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|pos|
 
 /*
 QPointF scenePos () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_SCENEPOS )
-{
-  QGraphicsSceneMouseEvent * obj = (QGraphicsSceneMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->scenePos () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|scenePos|
 
 /*
 QPoint screenPos () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_SCREENPOS )
-{
-  QGraphicsSceneMouseEvent * obj = (QGraphicsSceneMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->screenPos () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-}
+$method=|QPoint|screenPos|
 
 #pragma ENDDUMP

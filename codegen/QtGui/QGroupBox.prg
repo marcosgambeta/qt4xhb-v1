@@ -80,14 +80,7 @@ HB_FUNC_STATIC( QGROUPBOX_NEW )
 /*
 Qt::Alignment alignment () const
 */
-HB_FUNC_STATIC( QGROUPBOX_ALIGNMENT )
-{
-  QGroupBox * obj = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->alignment () );
-  }
-}
+$method=|Qt::Alignment|alignment|
 
 /*
 bool isCheckable () const
@@ -107,41 +100,17 @@ $method=|bool|isFlat|
 /*
 void setAlignment ( int alignment )
 */
-HB_FUNC_STATIC( QGROUPBOX_SETALIGNMENT )
-{
-  QGroupBox * obj = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAlignment ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAlignment|int
 
 /*
 void setCheckable ( bool checkable )
 */
-HB_FUNC_STATIC( QGROUPBOX_SETCHECKABLE )
-{
-  QGroupBox * obj = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCheckable ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCheckable|bool
 
 /*
 void setFlat ( bool flat )
 */
-HB_FUNC_STATIC( QGROUPBOX_SETFLAT )
-{
-  QGroupBox * obj = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFlat ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFlat|bool
 
 /*
 void setTitle ( const QString & title )
@@ -156,27 +125,11 @@ $method=|QString|title|
 /*
 virtual QSize minimumSizeHint () const
 */
-HB_FUNC_STATIC( QGROUPBOX_MINIMUMSIZEHINT )
-{
-  QGroupBox * obj = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->minimumSizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|minimumSizeHint|
 
 /*
 void setChecked ( bool checked )
 */
-HB_FUNC_STATIC( QGROUPBOX_SETCHECKED )
-{
-  QGroupBox * obj = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setChecked ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setChecked|bool
 
 #pragma ENDDUMP

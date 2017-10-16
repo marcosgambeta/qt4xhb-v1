@@ -31,28 +31,12 @@ $destructor
 /*
 QTextDocument * document () const
 */
-HB_FUNC_STATIC( QTEXTOBJECT_DOCUMENT )
-{
-  QTextObject * obj = (QTextObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextDocument * ptr = obj->document ();
-    _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );
-  }
-}
+$method=|QTextDocument *|document|
 
 /*
 QTextFormat format () const
 */
-HB_FUNC_STATIC( QTEXTOBJECT_FORMAT )
-{
-  QTextObject * obj = (QTextObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextFormat * ptr = new QTextFormat( obj->format () );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTFORMAT" );
-  }
-}
+$method=|QTextFormat|format|
 
 /*
 int formatIndex () const

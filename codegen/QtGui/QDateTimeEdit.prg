@@ -195,14 +195,7 @@ $method=|void|clearMinimumTime|
 /*
 Section currentSection () const
 */
-HB_FUNC_STATIC( QDATETIMEEDIT_CURRENTSECTION )
-{
-  QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->currentSection () );
-  }
-}
+$method=|QDateTimeEdit::Section|currentSection|
 
 /*
 int currentSectionIndex () const
@@ -227,14 +220,7 @@ $method=|QString|displayFormat|
 /*
 Sections displayedSections () const
 */
-HB_FUNC_STATIC( QDATETIMEEDIT_DISPLAYEDSECTIONS )
-{
-  QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->displayedSections () );
-  }
-}
+$method=|QDateTimeEdit::Sections|displayedSections|
 
 /*
 QDate maximumDate () const
@@ -269,14 +255,7 @@ $method=|QTime|minimumTime|
 /*
 Section sectionAt ( int index ) const
 */
-HB_FUNC_STATIC( QDATETIMEEDIT_SECTIONAT )
-{
-  QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->sectionAt ( PINT(1) ) );
-  }
-}
+$method=|QDateTimeEdit::Section|sectionAt|int
 
 /*
 int sectionCount () const

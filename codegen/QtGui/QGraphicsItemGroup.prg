@@ -9,8 +9,6 @@ REQUEST QPAINTERPATH
 
 CLASS QGraphicsItemGroup INHERIT QGraphicsItem
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addToGroup
@@ -49,41 +47,17 @@ $deleteMethod
 /*
 void addToGroup ( QGraphicsItem * item )
 */
-HB_FUNC_STATIC( QGRAPHICSITEMGROUP_ADDTOGROUP )
-{
-  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->addToGroup ( PQGRAPHICSITEM(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addToGroup|QGraphicsItem *
 
 /*
 void removeFromGroup ( QGraphicsItem * item )
 */
-HB_FUNC_STATIC( QGRAPHICSITEMGROUP_REMOVEFROMGROUP )
-{
-  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->removeFromGroup ( PQGRAPHICSITEM(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeFromGroup|QGraphicsItem *
 
 /*
 virtual QRectF boundingRect () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEMGROUP_BOUNDINGRECT )
-{
-  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->boundingRect () );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$virtualMethod=|QRectF|boundingRect|
 
 /*
 virtual bool isObscuredBy ( const QGraphicsItem * item ) const
@@ -93,29 +67,12 @@ $virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
 /*
 virtual QPainterPath opaqueArea () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEMGROUP_OPAQUEAREA )
-{
-  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPainterPath * ptr = new QPainterPath( obj->opaqueArea () );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
-  }
-}
+$virtualMethod=|QPainterPath|opaqueArea|
 
 /*
 virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSITEMGROUP_PAINT )
-{
-  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QStyleOptionGraphicsItem * par2 = (const QStyleOptionGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->paint ( PQPAINTER(1), par2, OPQWIDGET(3,0) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
 
 /*
 virtual int type () const

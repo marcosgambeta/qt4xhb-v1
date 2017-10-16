@@ -48,41 +48,16 @@ $method=|bool|hasClipping|
 /*
 QItemEditorFactory * itemEditorFactory () const
 */
-HB_FUNC_STATIC( QITEMDELEGATE_ITEMEDITORFACTORY )
-{
-  QItemDelegate * obj = (QItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QItemEditorFactory * ptr = obj->itemEditorFactory ();
-    _qt4xhb_createReturnClass ( ptr, "QITEMEDITORFACTORY" );
-  }
-}
+$method=|QItemEditorFactory *|itemEditorFactory|
 
 /*
 void setClipping ( bool clip )
 */
-HB_FUNC_STATIC( QITEMDELEGATE_SETCLIPPING )
-{
-  QItemDelegate * obj = (QItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setClipping ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setClipping|bool
 
 /*
 void setItemEditorFactory ( QItemEditorFactory * factory )
 */
-HB_FUNC_STATIC( QITEMDELEGATE_SETITEMEDITORFACTORY )
-{
-  QItemDelegate * obj = (QItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QItemEditorFactory * par1 = (QItemEditorFactory *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setItemEditorFactory ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setItemEditorFactory|QItemEditorFactory *
 
 #pragma ENDDUMP

@@ -11,8 +11,6 @@ REQUEST QBYTEARRAY
 
 CLASS QDropEvent INHERIT QEvent,QMimeSource
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD acceptProposedAction
@@ -62,154 +60,62 @@ $deleteMethod
 /*
 void acceptProposedAction ()
 */
-HB_FUNC_STATIC( QDROPEVENT_ACCEPTPROPOSEDACTION )
-{
-  QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->acceptProposedAction ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|acceptProposedAction|
 
 /*
 Qt::DropAction dropAction () const
 */
-HB_FUNC_STATIC( QDROPEVENT_DROPACTION )
-{
-  QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->dropAction () );
-  }
-}
+$method=|Qt::DropAction|dropAction|
 
 /*
 Qt::KeyboardModifiers keyboardModifiers () const
 */
-HB_FUNC_STATIC( QDROPEVENT_KEYBOARDMODIFIERS )
-{
-  QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->keyboardModifiers () );
-  }
-}
+$method=|Qt::KeyboardModifiers|keyboardModifiers|
 
 /*
 const QMimeData * mimeData () const
 */
-HB_FUNC_STATIC( QDROPEVENT_MIMEDATA )
-{
-  QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QMimeData * ptr = obj->mimeData ();
-    _qt4xhb_createReturnClass ( ptr, "QMIMEDATA" );
-  }
-}
+$method=|const QMimeData *|mimeData|
 
 /*
 Qt::MouseButtons mouseButtons () const
 */
-HB_FUNC_STATIC( QDROPEVENT_MOUSEBUTTONS )
-{
-  QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->mouseButtons () );
-  }
-}
+$method=|Qt::MouseButtons|mouseButtons|
 
 /*
-const QPoint &  pos () const
+const QPoint & pos () const
 */
-HB_FUNC_STATIC( QDROPEVENT_POS )
-{
-  QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QPoint * ptr = &obj->pos ();
-    _qt4xhb_createReturnClass ( ptr, "QPOINT" );
-  }
-}
+$method=|const QPoint &|pos|
 
 /*
 Qt::DropActions possibleActions () const
 */
-HB_FUNC_STATIC( QDROPEVENT_POSSIBLEACTIONS )
-{
-  QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->possibleActions () );
-  }
-}
+$method=|Qt::DropActions|possibleActions|
 
 /*
 Qt::DropAction proposedAction () const
 */
-HB_FUNC_STATIC( QDROPEVENT_PROPOSEDACTION )
-{
-  QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->proposedAction () );
-  }
-}
+$method=|Qt::DropAction|proposedAction|
 
 /*
 void setDropAction ( Qt::DropAction action )
 */
-HB_FUNC_STATIC( QDROPEVENT_SETDROPACTION )
-{
-  QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setDropAction ( (Qt::DropAction) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDropAction|Qt::DropAction
 
 /*
 QWidget * source () const
 */
-HB_FUNC_STATIC( QDROPEVENT_SOURCE )
-{
-  QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->source ();
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|source|
 
 /*
 virtual QByteArray encodedData ( const char * format ) const
 */
-HB_FUNC_STATIC( QDROPEVENT_ENCODEDDATA )
-{
-  QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->encodedData ( (const char *) hb_parc(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
+$virtualMethod=|QByteArray|encodedData|const char *
 
 /*
 virtual const char * format ( int n = 0 ) const
 */
-HB_FUNC_STATIC( QDROPEVENT_FORMAT )
-{
-  QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const char * str1 = obj->format ( OPINT(1,0) );
-    hb_retc( str1 );
-  }
-}
+$virtualMethod=|const char *|format|int=0
 
 /*
 virtual bool provides ( const char * mimeType ) const

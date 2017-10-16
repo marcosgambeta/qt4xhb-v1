@@ -62,41 +62,17 @@ $deleteMethod
 /*
 QRegion allocatedRegion () const
 */
-HB_FUNC_STATIC( QDIRECTPAINTER_ALLOCATEDREGION )
-{
-  QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRegion * ptr = new QRegion( obj->allocatedRegion () );
-    _qt4xhb_createReturnClass ( ptr, "QREGION", true );
-  }
-}
+$method=|QRegion|allocatedRegion|
 
 /*
 void endPainting ()
 */
-HB_FUNC_STATIC( QDIRECTPAINTER_ENDPAINTING1 )
-{
-  QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->endPainting ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|endPainting,endPainting1|
 
 /*
 void endPainting ( const QRegion & region )
 */
-HB_FUNC_STATIC( QDIRECTPAINTER_ENDPAINTING2 )
-{
-  QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->endPainting ( *PQREGION(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|endPainting,endPainting2|const QRegion &
 
 //[1]void endPainting ()
 //[2]void endPainting ( const QRegion & region )
@@ -116,119 +92,47 @@ HB_FUNC_STATIC( QDIRECTPAINTER_ENDPAINTING )
 /*
 void flush ( const QRegion & region )
 */
-HB_FUNC_STATIC( QDIRECTPAINTER_FLUSH )
-{
-  QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->flush ( *PQREGION(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|flush|const QRegion &
 
 /*
 QRect geometry () const
 */
-HB_FUNC_STATIC( QDIRECTPAINTER_GEOMETRY )
-{
-  QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->geometry () );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$method=|QRect|geometry|
 
 /*
 void lower ()
 */
-HB_FUNC_STATIC( QDIRECTPAINTER_LOWER )
-{
-  QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->lower ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|lower|
 
 /*
 void raise ()
 */
-HB_FUNC_STATIC( QDIRECTPAINTER_RAISE )
-{
-  QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->raise ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|raise|
 
 /*
 virtual void regionChanged ( const QRegion & newRegion )
 */
-HB_FUNC_STATIC( QDIRECTPAINTER_REGIONCHANGED )
-{
-  QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->regionChanged ( *PQREGION(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|regionChanged|const QRegion &
 
 /*
 QRegion requestedRegion () const
 */
-HB_FUNC_STATIC( QDIRECTPAINTER_REQUESTEDREGION )
-{
-  QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRegion * ptr = new QRegion( obj->requestedRegion () );
-    _qt4xhb_createReturnClass ( ptr, "QREGION", true );
-  }
-}
+$method=|QRegion|requestedRegion|
 
 /*
 void setGeometry ( const QRect & rectangle )
 */
-HB_FUNC_STATIC( QDIRECTPAINTER_SETGEOMETRY )
-{
-  QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setGeometry ( *PQRECT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setGeometry|const QRect &
 
 /*
 void setRegion ( const QRegion & region )
 */
-HB_FUNC_STATIC( QDIRECTPAINTER_SETREGION )
-{
-  QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRegion ( *PQREGION(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRegion|const QRegion &
 
 /*
 void startPainting ( bool lockDisplay = true )
 */
-HB_FUNC_STATIC( QDIRECTPAINTER_STARTPAINTING )
-{
-  QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->startPainting ( OPBOOL(1,true) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|startPainting|bool=true
 
 /*
 uchar * frameBuffer ()

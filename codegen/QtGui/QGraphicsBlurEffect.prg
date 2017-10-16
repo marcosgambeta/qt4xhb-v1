@@ -8,8 +8,6 @@ REQUEST QRECTF
 
 CLASS QGraphicsBlurEffect INHERIT QGraphicsWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD blurHints
@@ -49,14 +47,7 @@ $deleteMethod
 /*
 BlurHints blurHints () const
 */
-HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURHINTS )
-{
-  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->blurHints () );
-  }
-}
+$method=|QGraphicsBlurEffect::BlurHints|blurHints|
 
 /*
 qreal blurRadius () const
@@ -66,29 +57,12 @@ $method=|qreal|blurRadius|
 /*
 virtual QRectF boundingRectFor ( const QRectF & rect ) const
 */
-HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BOUNDINGRECTFOR )
-{
-  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->boundingRectFor ( *PQRECTF(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$virtualMethod=|QRectF|boundingRectFor|const QRectF &
 
 /*
 void setBlurHints ( BlurHints hints )
 */
-HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_SETBLURHINTS )
-{
-  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setBlurHints ( (QGraphicsBlurEffect::BlurHints) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBlurHints|QGraphicsBlurEffect::BlurHints
 
 /*
 void setBlurRadius ( qreal blurRadius )

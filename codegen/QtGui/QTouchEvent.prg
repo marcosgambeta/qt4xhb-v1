@@ -8,8 +8,6 @@ REQUEST QWIDGET
 
 CLASS QTouchEvent INHERIT QInputEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD widget
    METHOD deviceType

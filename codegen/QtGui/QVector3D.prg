@@ -229,28 +229,12 @@ $method=|qreal|lengthSquared|
 /*
 void normalize ()
 */
-HB_FUNC_STATIC( QVECTOR3D_NORMALIZE )
-{
-  QVector3D * obj = (QVector3D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->normalize ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|normalize|
 
 /*
 QVector3D normalized () const
 */
-HB_FUNC_STATIC( QVECTOR3D_NORMALIZED )
-{
-  QVector3D * obj = (QVector3D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVector3D * ptr = new QVector3D( obj->normalized () );
-    _qt4xhb_createReturnClass ( ptr, "QVECTOR3D" );
-  }
-}
+$method=|QVector3D|normalized|
 
 /*
 void setX ( qreal x )

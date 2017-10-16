@@ -10,8 +10,6 @@ REQUEST QRECT
 
 CLASS QWindowsStyle INHERIT QCommonStyle
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD drawComplexControl

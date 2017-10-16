@@ -126,6 +126,7 @@ QString text ( QString & subtype, Mode mode = Clipboard ) const
 HB_FUNC_STATIC( QCLIPBOARD_TEXT2 )
 {
   QClipboard * obj = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QString par1 = hb_parc(1);

@@ -8,8 +8,6 @@ REQUEST QVECTOR3D
 
 CLASS QGraphicsScale INHERIT QGraphicsTransform
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD origin
@@ -56,28 +54,12 @@ $deleteMethod
 /*
 QVector3D origin () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCALE_ORIGIN )
-{
-  QGraphicsScale * obj = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVector3D * ptr = new QVector3D( obj->origin () );
-    _qt4xhb_createReturnClass ( ptr, "QVECTOR3D" );
-  }
-}
+$method=|QVector3D|origin|
 
 /*
 void setOrigin ( const QVector3D & point )
 */
-HB_FUNC_STATIC( QGRAPHICSSCALE_SETORIGIN )
-{
-  QGraphicsScale * obj = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setOrigin ( *PQVECTOR3D(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOrigin|const QVector3D &
 
 /*
 void setXScale ( qreal )

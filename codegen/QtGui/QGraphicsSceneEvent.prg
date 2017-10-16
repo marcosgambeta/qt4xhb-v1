@@ -8,8 +8,6 @@ REQUEST QWIDGET
 
 CLASS QGraphicsSceneEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD widget
 
@@ -32,14 +30,6 @@ $deleteMethod
 /*
 QWidget * widget () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEEVENT_WIDGET )
-{
-  QGraphicsSceneEvent * obj = (QGraphicsSceneEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->widget ();
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|widget|
 
 #pragma ENDDUMP

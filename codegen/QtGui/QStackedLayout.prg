@@ -8,8 +8,6 @@ REQUEST QWIDGET
 
 CLASS QStackedLayout INHERIT QLayout
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new3
@@ -152,40 +150,16 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_STACKINGMODE )
 /*
 QWidget * widget ( int index ) const
 */
-HB_FUNC_STATIC( QSTACKEDLAYOUT_WIDGET )
-{
-  QStackedLayout * obj = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->widget ( PINT(1) );
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|widget|int
 
 /*
 void setCurrentIndex ( int index )
 */
-HB_FUNC_STATIC( QSTACKEDLAYOUT_SETCURRENTINDEX )
-{
-  QStackedLayout * obj = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCurrentIndex ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCurrentIndex|int
 
 /*
 void setCurrentWidget ( QWidget * widget )
 */
-HB_FUNC_STATIC( QSTACKEDLAYOUT_SETCURRENTWIDGET )
-{
-  QStackedLayout * obj = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCurrentWidget ( PQWIDGET(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCurrentWidget|QWidget *
 
 #pragma ENDDUMP

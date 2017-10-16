@@ -226,14 +226,7 @@ $method=|void|insertItems|int,const QStringList &
 /*
 InsertPolicy insertPolicy () const
 */
-HB_FUNC_STATIC( QCOMBOBOX_INSERTPOLICY )
-{
-  QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->insertPolicy () );
-  }
-}
+$method=|QComboBox::InsertPolicy|insertPolicy|
 
 /*
 void insertSeparator ( int index )

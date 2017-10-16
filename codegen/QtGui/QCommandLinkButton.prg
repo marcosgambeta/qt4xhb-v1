@@ -4,8 +4,6 @@ $header
 
 CLASS QCommandLinkButton INHERIT QPushButton
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD description
    METHOD setDescription

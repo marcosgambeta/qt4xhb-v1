@@ -37,68 +37,27 @@ $destructor
 /*
 CoordinateMode coordinateMode () const
 */
-HB_FUNC_STATIC( QGRADIENT_COORDINATEMODE )
-{
-  QGradient * obj = (QGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->coordinateMode () );
-  }
-}
+$method=|QGradient::CoordinateMode|coordinateMode|
 
 /*
 void setColorAt ( qreal position, const QColor & color )
 */
-HB_FUNC_STATIC( QGRADIENT_SETCOLORAT )
-{
-  QGradient * obj = (QGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QColor par2 = ISOBJECT(2)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(2));
-    obj->setColorAt ( PQREAL(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setColorAt|qreal,const QColor &
 
 /*
 void setCoordinateMode ( CoordinateMode mode )
 */
-HB_FUNC_STATIC( QGRADIENT_SETCOORDINATEMODE )
-{
-  QGradient * obj = (QGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setCoordinateMode ( (QGradient::CoordinateMode) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCoordinateMode|QGradient::CoordinateMode
 
 /*
 void setSpread ( Spread method )
 */
-HB_FUNC_STATIC( QGRADIENT_SETSPREAD )
-{
-  QGradient * obj = (QGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setSpread ( (QGradient::Spread) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSpread|QGradient::Spread
 
 /*
 Spread spread () const
 */
-HB_FUNC_STATIC( QGRADIENT_SPREAD )
-{
-  QGradient * obj = (QGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->spread () );
-  }
-}
+$method=|QGradient::Spread|spread|
 
 /*
 Type type () const
