@@ -10,8 +10,6 @@ REQUEST QRECTF
 
 CLASS QGraphicsSvgItem INHERIT QGraphicsObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD elementId
    METHOD maximumCacheSize
