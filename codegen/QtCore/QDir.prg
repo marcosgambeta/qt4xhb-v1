@@ -183,6 +183,7 @@ HB_FUNC_STATIC( QDIR_ENTRYINFOLIST1 )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   int par2 = ISNIL(2)? (int) QDir::NoFilter : hb_parni(2);
   int par3 = ISNIL(3)? (int) QDir::NoSort : hb_parni(3);
+
   if( obj )
   {
     QFileInfoList list = obj->entryInfoList ( PQSTRINGLIST(1), (QDir::Filters) par2, (QDir::SortFlags) par3 );
@@ -226,6 +227,7 @@ QFileInfoList entryInfoList(Filters filters = NoFilter, SortFlags sort = NoSort)
 HB_FUNC_STATIC( QDIR_ENTRYINFOLIST2 )
 {
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QFileInfoList list = obj->entryInfoList ( ISNIL(1)? QDir::NoFilter : (QDir::Filters) hb_parni(1), ISNIL(2)? QDir::NoSort : (QDir::SortFlags) hb_parni(2) );
@@ -448,14 +450,7 @@ $method=|void|setSorting|QDir::SortFlags
 /*
 SortFlags sorting() const
 */
-HB_FUNC_STATIC( QDIR_SORTING )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->sorting () );
-  }
-}
+$method=|QDir::SortFlags|sorting|
 
 /*
 static void addSearchPath(const QString & prefix, const QString & path)
@@ -478,7 +473,7 @@ static QString currentPath()
 $staticMethod=|QString|currentPath|
 
 /*
-QFileInfoList drives()
+static QFileInfoList drives()
 */
 HB_FUNC_STATIC( QDIR_DRIVES )
 {

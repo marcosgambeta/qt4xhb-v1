@@ -664,6 +664,7 @@ QList<Qt::DayOfWeek> weekdays () const
 HB_FUNC_STATIC( QLOCALE_WEEKDAYS )
 {
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<Qt::DayOfWeek> list = obj->weekdays ();

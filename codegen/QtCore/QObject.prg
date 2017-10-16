@@ -1472,6 +1472,7 @@ const QObjectList & children () const
 HB_FUNC_STATIC( QOBJECT_CHILDREN )
 {
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QObjectList list = obj->children ();
@@ -1525,6 +1526,7 @@ QList<QByteArray> dynamicPropertyNames () const
 HB_FUNC_STATIC( QOBJECT_DYNAMICPROPERTYNAMES )
 {
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QByteArray> list = obj->dynamicPropertyNames ();
@@ -1575,15 +1577,7 @@ $virtualMethod=|bool|eventFilter|QObject *,QEvent *
 /*
 T findChild ( const QString & name = QString() ) const
 */
-HB_FUNC_STATIC( QOBJECT_FINDCHILD )
-{
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QObject * ptr = obj->findChild<QObject *> ( OPQSTRING(1,QString()) );
-    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
+$method=|QObject *|findChild<QObject *>,findChild|const QString &=QString()
 
 /*
 QList<T> findChildren ( const QString & name = QString() ) const
@@ -1591,6 +1585,7 @@ QList<T> findChildren ( const QString & name = QString() ) const
 HB_FUNC_STATIC( QOBJECT_FINDCHILDREN1 )
 {
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QObject *> list = obj->findChildren<QObject *> ( OPQSTRING(1,QString()) );
@@ -1634,6 +1629,7 @@ QList<T> findChildren ( const QRegExp & regExp ) const
 HB_FUNC_STATIC( QOBJECT_FINDCHILDREN2 )
 {
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QObject *> list = obj->findChildren<QObject *> ( *PQREGEXP(1) );

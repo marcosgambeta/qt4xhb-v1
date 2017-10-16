@@ -163,6 +163,7 @@ QList<QAbstractTransition *> transitions () const
 HB_FUNC_STATIC( QSTATE_TRANSITIONS )
 {
   QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QAbstractTransition *> list = obj->transitions ();

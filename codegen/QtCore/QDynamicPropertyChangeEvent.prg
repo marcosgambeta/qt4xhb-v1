@@ -8,8 +8,6 @@ REQUEST QBYTEARRAY
 
 CLASS QDynamicPropertyChangeEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD propertyName

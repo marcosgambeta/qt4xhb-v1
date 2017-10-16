@@ -1049,6 +1049,7 @@ QList<QByteArray> split ( char sep ) const
 HB_FUNC_STATIC( QBYTEARRAY_SPLIT )
 {
   QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);

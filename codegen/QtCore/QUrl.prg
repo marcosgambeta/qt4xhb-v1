@@ -185,6 +185,7 @@ QList<QByteArray> allEncodedQueryItemValues ( const QByteArray & key ) const
 HB_FUNC_STATIC( QURL_ALLENCODEDQUERYITEMVALUES )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QByteArray> list = obj->allEncodedQueryItemValues ( *PQBYTEARRAY(1) );

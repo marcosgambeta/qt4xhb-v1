@@ -74,6 +74,7 @@ QList<QByteArray> parameterTypes() const
 HB_FUNC_STATIC( QMETAMETHOD_PARAMETERTYPES )
 {
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QByteArray> list = obj->parameterTypes ();
@@ -117,6 +118,7 @@ QList<QByteArray> parameterNames() const
 HB_FUNC_STATIC( QMETAMETHOD_PARAMETERNAMES )
 {
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QByteArray> list = obj->parameterNames ();

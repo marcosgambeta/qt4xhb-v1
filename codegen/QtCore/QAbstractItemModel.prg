@@ -166,6 +166,7 @@ virtual QModelIndexList match ( const QModelIndex & start, int role, const QVari
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_MATCH )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QModelIndexList list = obj->match ( *PQMODELINDEX(1), PINT(2), *PQVARIANT(3), OPINT(4,1), ISNIL(5)? Qt::MatchStartsWith | Qt::MatchWrap : (Qt::MatchFlags) hb_parni(5) );

@@ -234,6 +234,7 @@ virtual QList<QByteArray> aliases() const
 HB_FUNC_STATIC( QTEXTCODEC_ALIASES )
 {
   QTextCodec * obj = (QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QByteArray> list = obj->aliases ();

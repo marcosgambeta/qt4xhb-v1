@@ -8,8 +8,6 @@ REQUEST QABSTRACTANIMATION
 
 CLASS QStateMachine INHERIT QState
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addDefaultAnimation
@@ -82,6 +80,7 @@ QList<QAbstractAnimation *> defaultAnimations () const
 HB_FUNC_STATIC( QSTATEMACHINE_DEFAULTANIMATIONS )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QAbstractAnimation *> list = obj->defaultAnimations ();
