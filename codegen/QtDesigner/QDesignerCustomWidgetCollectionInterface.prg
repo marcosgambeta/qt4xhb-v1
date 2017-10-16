@@ -42,6 +42,7 @@ virtual QList<QDesignerCustomWidgetInterface *> customWidgets () const = 0
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_CUSTOMWIDGETS )
 {
   QDesignerCustomWidgetCollectionInterface * obj = (QDesignerCustomWidgetCollectionInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QDesignerCustomWidgetInterface *> list = obj->customWidgets ();
