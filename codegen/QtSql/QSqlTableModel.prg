@@ -10,8 +10,6 @@ REQUEST QVARIANT
 
 CLASS QSqlTableModel INHERIT QSqlQueryModel
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD database
