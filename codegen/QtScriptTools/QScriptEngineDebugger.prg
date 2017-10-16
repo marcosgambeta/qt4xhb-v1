@@ -24,8 +24,10 @@ CLASS QScriptEngineDebugger INHERIT QObject
    METHOD standardWindow
    METHOD state
    METHOD widget
+
    METHOD onEvaluationResumed
    METHOD onEvaluationSuspended
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -125,34 +127,15 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_DETACH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setAutoShowStandardWindow ( bool autoShow )
 */
-HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_SETAUTOSHOWSTANDARDWINDOW )
-{
-  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAutoShowStandardWindow ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAutoShowStandardWindow|bool
 
 /*
 QMainWindow * standardWindow () const
 */
-HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_STANDARDWINDOW )
-{
-  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QMainWindow * ptr = obj->standardWindow ();
-    _qt4xhb_createReturnClass ( ptr, "QMAINWINDOW" );
-  }
-}
-
+$method=|QMainWindow *|standardWindow|
 
 /*
 DebuggerState state () const
@@ -166,23 +149,9 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_STATE )
   }
 }
 
-
 /*
 QWidget * widget ( DebuggerWidget widget ) const
 */
-HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_WIDGET )
-{
-  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->widget ( (QScriptEngineDebugger::DebuggerWidget) hb_parni(1) );
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
-
-
-
-
-
+$method=|QWidget *|widget|QScriptEngineDebugger::DebuggerWidget
 
 #pragma ENDDUMP
