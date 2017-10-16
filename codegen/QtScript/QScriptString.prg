@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QScriptString
 
    DATA pointer
@@ -14,11 +13,13 @@ CLASS QScriptString
    METHOD delete
    METHOD isValid
    METHOD toString
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

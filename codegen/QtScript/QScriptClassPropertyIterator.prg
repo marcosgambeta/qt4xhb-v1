@@ -23,11 +23,13 @@ CLASS QScriptClassPropertyIterator
    METHOD previous
    METHOD toBack
    METHOD toFront
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -49,14 +51,7 @@ $deleteMethod
 /*
 virtual QScriptValue::PropertyFlags flags () const
 */
-HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_FLAGS )
-{
-  QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->flags () );
-  }
-}
+$virtualMethod=|QScriptValue::PropertyFlags|flags|
 
 /*
 virtual bool hasNext () const = 0

@@ -12,6 +12,7 @@ CLASS QScriptExtensionPlugin INHERIT QObject
    METHOD setupPackage
    METHOD initialize
    METHOD keys
+
    DESTRUCTOR destroyObject
 
 END CLASS

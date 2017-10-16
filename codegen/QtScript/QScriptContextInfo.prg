@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QScriptContextInfo
 
    DATA pointer
@@ -23,11 +22,13 @@ CLASS QScriptContextInfo
    METHOD isNull
    METHOD lineNumber
    METHOD scriptId
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -135,6 +136,7 @@ FunctionType functionType () const
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONTYPE )
 {
   QScriptContextInfo * obj = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     hb_retni( (int) obj->functionType () );

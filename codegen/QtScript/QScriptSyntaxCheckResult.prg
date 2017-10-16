@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QScriptSyntaxCheckResult
 
    DATA pointer
@@ -14,11 +13,13 @@ CLASS QScriptSyntaxCheckResult
    METHOD errorLineNumber
    METHOD errorMessage
    METHOD state
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

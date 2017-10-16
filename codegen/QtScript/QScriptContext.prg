@@ -32,11 +32,13 @@ CLASS QScriptContext
    METHOD throwError
    METHOD throwValue
    METHOD toString
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -68,19 +70,10 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ACTIVATIONOBJECT )
   }
 }
 
-
 /*
 QScriptValue argument ( int index ) const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENT )
-{
-  QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->argument ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
-  }
-}
+$method=|QScriptValue|argument|int
 
 /*
 int argumentCount () const
@@ -90,15 +83,7 @@ $method=|int|argumentCount|
 /*
 QScriptValue argumentsObject () const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENTSOBJECT )
-{
-  QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->argumentsObject () );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
-  }
-}
+$method=|QScriptValue|argumentsObject|
 
 /*
 QStringList backtrace () const
@@ -108,29 +93,12 @@ $method=|QStringList|backtrace|
 /*
 QScriptValue callee () const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXT_CALLEE )
-{
-  QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->callee () );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
-  }
-}
-
+$method=|QScriptValue|callee|
 
 /*
 QScriptEngine * engine () const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXT_ENGINE )
-{
-  QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScriptEngine * ptr = obj->engine ();
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTENGINE" );
-  }
-}
+$method=|QScriptEngine *|engine|
 
 /*
 bool isCalledAsConstructor () const
@@ -140,44 +108,17 @@ $method=|bool|isCalledAsConstructor|
 /*
 QScriptContext * parentContext () const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXT_PARENTCONTEXT )
-{
-  QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScriptContext * ptr = obj->parentContext ();
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTCONTEXT" );
-  }
-}
-
+$method=|QScriptContext *|parentContext|
 
 /*
 void setActivationObject ( const QScriptValue & activation )
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXT_SETACTIVATIONOBJECT )
-{
-  QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setActivationObject ( *PQSCRIPTVALUE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setActivationObject|const QScriptValue &
 
 /*
 void setThisObject ( const QScriptValue & thisObject )
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXT_SETTHISOBJECT )
-{
-  QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setThisObject ( *PQSCRIPTVALUE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setThisObject|const QScriptValue &
 
 /*
 ExecutionState state () const
@@ -191,33 +132,15 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_STATE )
   }
 }
 
-
 /*
 QScriptValue thisObject () const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXT_THISOBJECT )
-{
-  QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->thisObject () );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
-  }
-}
-
+$method=|QScriptValue|thisObject|
 
 /*
 QScriptValue throwError ( Error error, const QString & text )
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWERROR1 )
-{
-  QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->throwError ( (QScriptContext::Error) hb_parni(1), PQSTRING(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
-  }
-}
+$method=|QScriptValue|throwError,throwError1|QScriptContext::Error,const QString &
 
 /*
 QScriptValue throwError ( const QString & text )
@@ -242,15 +165,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWERROR )
 /*
 QScriptValue throwValue ( const QScriptValue & value )
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWVALUE )
-{
-  QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->throwValue ( *PQSCRIPTVALUE(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
-  }
-}
+$method=|QScriptValue|throwValue|const QScriptValue &
 
 /*
 QString toString () const
