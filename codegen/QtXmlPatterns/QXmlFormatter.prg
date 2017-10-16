@@ -4,8 +4,6 @@ $header
 
 CLASS QXmlFormatter INHERIT QXmlSerializer
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD indentationDepth
    METHOD setIndentationDepth
