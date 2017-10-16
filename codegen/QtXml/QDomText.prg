@@ -8,8 +8,6 @@ REQUEST QDOMTEXT
 
 CLASS QDomText INHERIT QDomCharacterData
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD nodeType
    METHOD splitText

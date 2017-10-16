@@ -8,8 +8,6 @@ REQUEST QDOMNAMEDNODEMAP
 
 CLASS QDomDocumentType INHERIT QDomNode
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD entities
    METHOD internalSubset

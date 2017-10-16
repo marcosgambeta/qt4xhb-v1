@@ -10,8 +10,6 @@ REQUEST QDOMNODELIST
 
 CLASS QDomElement INHERIT QDomNode
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD attribute
    METHOD attributeNS

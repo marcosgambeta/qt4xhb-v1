@@ -4,8 +4,6 @@ $header
 
 CLASS QDomCDATASection INHERIT QDomText
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD nodeType
 

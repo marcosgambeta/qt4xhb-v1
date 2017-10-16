@@ -4,8 +4,6 @@ $header
 
 CLASS QDomProcessingInstruction INHERIT QDomNode
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD data
    METHOD nodeType

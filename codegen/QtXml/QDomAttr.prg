@@ -8,8 +8,6 @@ REQUEST QDOMELEMENT
 
 CLASS QDomAttr INHERIT QDomNode
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD name
    METHOD nodeType

@@ -4,8 +4,6 @@ $header
 
 CLASS QXmlDefaultHandler INHERIT QXmlContentHandler,QXmlErrorHandler,QXmlDTDHandler,QXmlEntityResolver,QXmlLexicalHandler,QXmlDeclHandler
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD attributeDecl

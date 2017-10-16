@@ -4,8 +4,6 @@ $header
 
 CLASS QDomEntityReference INHERIT QDomNode
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD nodeType
 

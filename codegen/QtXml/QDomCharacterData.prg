@@ -4,8 +4,6 @@ $header
 
 CLASS QDomCharacterData INHERIT QDomNode
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD appendData
    METHOD data
