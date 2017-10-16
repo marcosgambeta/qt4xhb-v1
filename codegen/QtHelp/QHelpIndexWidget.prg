@@ -4,8 +4,6 @@ $header
 
 CLASS QHelpIndexWidget INHERIT QListView
 
-   DATA self_destruction INIT .F.
-
    METHOD activateCurrentItem
    METHOD filterIndices
 

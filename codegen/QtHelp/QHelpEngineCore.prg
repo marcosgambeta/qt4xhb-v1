@@ -124,6 +124,7 @@ QList<QUrl> files ( const QString namespaceName, const QStringList & filterAttri
 HB_FUNC_STATIC( QHELPENGINECORE_FILES )
 {
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QUrl> list = obj->files ( PQSTRING(1), PQSTRINGLIST(2), OPQSTRING(3,QString()) );

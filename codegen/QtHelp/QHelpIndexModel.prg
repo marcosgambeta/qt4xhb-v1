@@ -8,8 +8,6 @@ REQUEST QMODELINDEX
 
 CLASS QHelpIndexModel INHERIT QStringListModel
 
-   DATA self_destruction INIT .F.
-
    METHOD createIndex
    METHOD filter
    METHOD isCreatingIndex

@@ -8,8 +8,6 @@ REQUEST QMODELINDEX
 
 CLASS QHelpContentWidget INHERIT QTreeView
 
-   DATA self_destruction INIT .F.
-
    METHOD indexOf
 
    METHOD onLinkActivated
