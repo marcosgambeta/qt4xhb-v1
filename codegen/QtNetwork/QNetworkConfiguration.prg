@@ -99,6 +99,7 @@ QList<QNetworkConfiguration> children () const
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_CHILDREN )
 {
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QNetworkConfiguration> list = obj->children ();

@@ -125,6 +125,7 @@ QList<QByteArray> rawHeaderList () const
 HB_FUNC_STATIC( QNETWORKREQUEST_RAWHEADERLIST )
 {
   QNetworkRequest * obj = (QNetworkRequest *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QByteArray> list = obj->rawHeaderList ();

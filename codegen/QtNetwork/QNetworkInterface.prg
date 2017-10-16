@@ -86,6 +86,7 @@ QList<QNetworkAddressEntry> addressEntries () const
 HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
 {
   QNetworkInterface * obj = (QNetworkInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QNetworkAddressEntry> list = obj->addressEntries ();
