@@ -211,6 +211,7 @@ QList<QWebHistoryItem> items () const
 HB_FUNC_STATIC( QWEBHISTORY_ITEMS )
 {
   QWebHistory * obj = (QWebHistory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QWebHistoryItem> list = obj->items ();
