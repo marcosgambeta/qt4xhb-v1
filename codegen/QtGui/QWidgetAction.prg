@@ -43,53 +43,21 @@ $deleteMethod
 /*
 QWidget * defaultWidget () const
 */
-HB_FUNC_STATIC( QWIDGETACTION_DEFAULTWIDGET )
-{
-  QWidgetAction * obj = (QWidgetAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->defaultWidget ();
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|defaultWidget|
 
 /*
 void releaseWidget ( QWidget * widget )
 */
-HB_FUNC_STATIC( QWIDGETACTION_RELEASEWIDGET )
-{
-  QWidgetAction * obj = (QWidgetAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->releaseWidget ( PQWIDGET(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|releaseWidget|QWidget *
 
 /*
 QWidget * requestWidget ( QWidget * parent )
 */
-HB_FUNC_STATIC( QWIDGETACTION_REQUESTWIDGET )
-{
-  QWidgetAction * obj = (QWidgetAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->requestWidget ( PQWIDGET(1) );
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|requestWidget|QWidget *
 
 /*
 void setDefaultWidget ( QWidget * widget )
 */
-HB_FUNC_STATIC( QWIDGETACTION_SETDEFAULTWIDGET )
-{
-  QWidgetAction * obj = (QWidgetAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDefaultWidget ( PQWIDGET(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDefaultWidget|QWidget *
 
 #pragma ENDDUMP

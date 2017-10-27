@@ -32,38 +32,16 @@ $deleteMethod
 /*
 QWidget *widget() const
 */
-HB_FUNC_STATIC( QTOUCHEVENT_WIDGET )
-{
-  QTouchEvent * obj = (QTouchEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->widget ();
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|widget|
 
 /*
 QTouchEvent::DeviceType deviceType() const
 */
-HB_FUNC_STATIC( QTOUCHEVENT_DEVICETYPE )
-{
-  QTouchEvent * obj = (QTouchEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->deviceType () );
-  }
-}
+$method=|QTouchEvent::DeviceType|deviceType|
 
 /*
 Qt::TouchPointStates touchPointStates() const
 */
-HB_FUNC_STATIC( QTOUCHEVENT_TOUCHPOINTSTATES )
-{
-  QTouchEvent * obj = (QTouchEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->touchPointStates () );
-  }
-}
+$method=|Qt::TouchPointStates|touchPointStates|
 
 #pragma ENDDUMP

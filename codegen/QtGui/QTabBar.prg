@@ -122,6 +122,10 @@ HB_FUNC_STATIC( QTABBAR_ADDTAB )
   {
     HB_FUNC_EXEC( QTABBAR_ADDTAB2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -182,6 +186,10 @@ HB_FUNC_STATIC( QTABBAR_INSERTTAB )
   {
     HB_FUNC_EXEC( QTABBAR_INSERTTAB2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -197,15 +205,7 @@ $method=|bool|isTabEnabled|int
 /*
 void moveTab ( int from, int to )
 */
-HB_FUNC_STATIC( QTABBAR_MOVETAB )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->moveTab ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|moveTab|int,int
 
 /*
 void removeTab ( int index )
@@ -215,14 +215,7 @@ $method=|void|removeTab|int
 /*
 SelectionBehavior selectionBehaviorOnRemove () const
 */
-HB_FUNC_STATIC( QTABBAR_SELECTIONBEHAVIORONREMOVE )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->selectionBehaviorOnRemove () );
-  }
-}
+$method=|QTabBar::SelectionBehavior|selectionBehaviorOnRemove|
 
 /*
 void setDocumentMode ( bool set )
@@ -317,14 +310,7 @@ $method=|void|setUsesScrollButtons|bool
 /*
 Shape shape () const
 */
-HB_FUNC_STATIC( QTABBAR_SHAPE )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->shape () );
-  }
-}
+$method=|QTabBar::Shape|shape|
 
 /*
 int tabAt ( const QPoint & position ) const
@@ -334,16 +320,7 @@ $method=|int|tabAt|const QPoint &
 /*
 QWidget * tabButton ( int index, ButtonPosition position ) const
 */
-HB_FUNC_STATIC( QTABBAR_TABBUTTON )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    QWidget * ptr = obj->tabButton ( PINT(1), (QTabBar::ButtonPosition) par2 );
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|tabButton|int,QTabBar::ButtonPosition
 
 /*
 QVariant tabData ( int index ) const

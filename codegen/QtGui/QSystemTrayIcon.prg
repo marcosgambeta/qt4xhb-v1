@@ -89,40 +89,17 @@ $deleteMethod
 /*
 QMenu * contextMenu () const
 */
-HB_FUNC_STATIC( QSYSTEMTRAYICON_CONTEXTMENU )
-{
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QMenu * ptr = obj->contextMenu ();
-    _qt4xhb_createReturnClass ( ptr, "QMENU" );
-  }
-}
+$method=|QMenu *|contextMenu|
 
 /*
 QRect geometry () const
 */
-HB_FUNC_STATIC( QSYSTEMTRAYICON_GEOMETRY )
-{
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->geometry () );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$method=|QRect|geometry|
 
 /*
 QIcon icon () const
 */
-HB_FUNC_STATIC( QSYSTEMTRAYICON_ICON )
-{
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIcon * ptr = new QIcon( obj->icon () );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );  }
-}
+$method=|QIcon|icon|
 
 /*
 bool isVisible () const
@@ -132,29 +109,12 @@ $method=|bool|isVisible|
 /*
 void setContextMenu ( QMenu * menu )
 */
-HB_FUNC_STATIC( QSYSTEMTRAYICON_SETCONTEXTMENU )
-{
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setContextMenu ( PQMENU(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setContextMenu|QMenu *
 
 /*
 void setIcon ( const QIcon & icon )
 */
-HB_FUNC_STATIC( QSYSTEMTRAYICON_SETICON )
-{
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
-    obj->setIcon ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setIcon|const QIcon &
 
 /*
 void setToolTip ( const QString & tip )
@@ -164,16 +124,7 @@ $method=|void|setToolTip|const QString &
 /*
 void showMessage ( const QString & title, const QString & message, MessageIcon icon = Information, int millisecondsTimeoutHint = 10000 )
 */
-HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOWMESSAGE )
-{
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par3 = ISNIL(3)? (int) QSystemTrayIcon::Information : hb_parni(3);
-    obj->showMessage ( PQSTRING(1), PQSTRING(2), (QSystemTrayIcon::MessageIcon) par3, OPINT(4,10000) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|showMessage|const QString &,const QString &,QSystemTrayIcon::MessageIcon=QSystemTrayIcon::Information,int=10000
 
 /*
 QString toolTip () const

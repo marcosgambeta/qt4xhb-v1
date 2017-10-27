@@ -57,70 +57,27 @@ $deleteMethod
 /*
 QPoint hotspot ()
 */
-HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_HOTSPOT )
-{
-  QPlatformCursorImage * obj = (QPlatformCursorImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->hotspot () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-}
+$method=|QPoint|hotspot|
 
 /*
 QImage * image ()
 */
-HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_IMAGE )
-{
-  QPlatformCursorImage * obj = (QPlatformCursorImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QImage * ptr = obj->image ();
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE" );
-  }
-}
+$method=|QImage *|image|
 
 /*
 void set ( const uchar * data, const uchar * mask, int width, int height, int hx, int hy )
 */
-HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_SET1 )
-{
-  QPlatformCursorImage * obj = (QPlatformCursorImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const uchar * par1 = (const uchar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    const uchar * par2 = (const uchar *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->set ( par1, par2, PINT(3), PINT(4), PINT(5), PINT(6) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|set,set1|const uchar *,const uchar *,int,int,int,int
 
 /*
 void set ( const QImage & image, int hx, int hy )
 */
-HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_SET2 )
-{
-  QPlatformCursorImage * obj = (QPlatformCursorImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->set ( *PQIMAGE(1), PINT(2), PINT(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|set,set2|const QImage &,int,int
 
 /*
 void set ( Qt::CursorShape id )
 */
-HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_SET3 )
-{
-  QPlatformCursorImage * obj = (QPlatformCursorImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->set ( (Qt::CursorShape) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|set,set3|Qt::CursorShape
 
 //[1]void set ( const uchar * data, const uchar * mask, int width, int height, int hx, int hy )
 //[2]void set ( const QImage & image, int hx, int hy )
@@ -139,6 +96,10 @@ HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_SET )
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
     HB_FUNC_EXEC( QPLATFORMCURSORIMAGE_SET3 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

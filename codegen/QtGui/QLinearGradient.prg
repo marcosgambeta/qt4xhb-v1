@@ -80,15 +80,7 @@ $deleteMethod
 /*
 QPointF finalStop () const
 */
-HB_FUNC_STATIC( QLINEARGRADIENT_FINALSTOP )
-{
-  QLinearGradient * obj = (QLinearGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->finalStop () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|finalStop|
 
 /*
 void setFinalStop ( const QPointF & stop )
@@ -112,6 +104,10 @@ HB_FUNC_STATIC( QLINEARGRADIENT_SETFINALSTOP )
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
     HB_FUNC_EXEC( QLINEARGRADIENT_SETFINALSTOP2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -138,19 +134,15 @@ HB_FUNC_STATIC( QLINEARGRADIENT_SETSTART )
   {
     HB_FUNC_EXEC( QLINEARGRADIENT_SETSTART2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
 QPointF start () const
 */
-HB_FUNC_STATIC( QLINEARGRADIENT_START )
-{
-  QLinearGradient * obj = (QLinearGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->start () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|start|
 
 #pragma ENDDUMP

@@ -82,15 +82,7 @@ $method=|qreal|rawValue|
 /*
 Type type () const
 */
-HB_FUNC_STATIC( QTEXTLENGTH_TYPE )
-{
-  QTextLength * obj = (QTextLength *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    hb_retni( (int) obj->type () );
-  }
-}
+$method=|QTextLength::Type|type|
 
 /*
 qreal value ( qreal maximumLength ) const

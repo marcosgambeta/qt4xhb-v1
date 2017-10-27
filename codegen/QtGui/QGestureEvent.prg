@@ -55,13 +55,14 @@ QGestureEvent ( const QList<QGesture *> & gestures )
 */
 HB_FUNC_STATIC( QGESTUREEVENT_NEW )
 {
-QList<QGesture *> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-par1 << (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );}
+  QList<QGesture *> par1;
+  PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+  int i1;
+  int nLen1 = hb_arrayLen(aList1);
+  for (i1=0;i1<nLen1;i1++)
+  {
+    par1 << (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+  }
   QGestureEvent * o = new QGestureEvent ( par1 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
@@ -100,6 +101,10 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACCEPT )
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
     HB_FUNC_EXEC( QGESTUREEVENT_ACCEPT3 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -273,6 +278,10 @@ HB_FUNC_STATIC( QGESTUREEVENT_IGNORE )
   {
     HB_FUNC_EXEC( QGESTUREEVENT_IGNORE3 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -307,6 +316,10 @@ HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED )
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
     HB_FUNC_EXEC( QGESTUREEVENT_ISACCEPTED3 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -347,6 +360,10 @@ HB_FUNC_STATIC( QGESTUREEVENT_SETACCEPTED )
   else if( ISNUMPAR(2) && ISNUM(1) && ISLOG(2) )
   {
     HB_FUNC_EXEC( QGESTUREEVENT_SETACCEPTED3 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

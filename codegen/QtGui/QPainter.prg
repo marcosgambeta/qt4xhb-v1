@@ -351,6 +351,10 @@ HB_FUNC_STATIC( QPAINTER_BOUNDINGRECT )
   {
     HB_FUNC_EXEC( QPAINTER_BOUNDINGRECT4 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -381,14 +385,7 @@ $method=|QTransform|combinedTransform|
 /*
 CompositionMode compositionMode () const
 */
-HB_FUNC_STATIC( QPAINTER_COMPOSITIONMODE )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->compositionMode () );
-  }
-}
+$method=|QPainter::CompositionMode|compositionMode|
 
 /*
 QPaintDevice * device () const
@@ -433,6 +430,10 @@ HB_FUNC_STATIC( QPAINTER_DRAWARC )
   {
     HB_FUNC_EXEC( QPAINTER_DRAWARC3 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -468,6 +469,10 @@ HB_FUNC_STATIC( QPAINTER_DRAWCHORD )
   {
     HB_FUNC_EXEC( QPAINTER_DRAWCHORD3 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -494,6 +499,10 @@ HB_FUNC_STATIC( QPAINTER_DRAWCONVEXPOLYGON )
   else if( ISNUMPAR(1) && ISQPOLYGON(1) )
   {
     HB_FUNC_EXEC( QPAINTER_DRAWCONVEXPOLYGON4 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -549,6 +558,10 @@ HB_FUNC_STATIC( QPAINTER_DRAWELLIPSE )
   else if( ISNUMPAR(3) && ISQPOINT(1) && ISNUM(2) && ISNUM(3) )
   {
     HB_FUNC_EXEC( QPAINTER_DRAWELLIPSE5 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -645,6 +658,10 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE )
   {
     HB_FUNC_EXEC( QPAINTER_DRAWIMAGE9 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -699,6 +716,10 @@ HB_FUNC_STATIC( QPAINTER_DRAWLINE )
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
     HB_FUNC_EXEC( QPAINTER_DRAWLINE5 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -847,6 +868,10 @@ HB_FUNC_STATIC( QPAINTER_DRAWPICTURE )
   {
     HB_FUNC_EXEC( QPAINTER_DRAWPICTURE3 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -881,6 +906,10 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIE )
   else if( ISNUMPAR(6) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) )
   {
     HB_FUNC_EXEC( QPAINTER_DRAWPIE3 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -997,6 +1026,10 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIXMAP )
   {
     HB_FUNC_EXEC( QPAINTER_DRAWPIXMAP11 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -1032,6 +1065,10 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOINT )
   {
     HB_FUNC_EXEC( QPAINTER_DRAWPOINT3 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -1058,6 +1095,10 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOINTS )
   else if( ISNUMPAR(1) && ISQPOLYGON(1) )
   {
     HB_FUNC_EXEC( QPAINTER_DRAWPOINTS4 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -1086,6 +1127,10 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOLYGON )
   {
     HB_FUNC_EXEC( QPAINTER_DRAWPOLYGON4 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -1112,6 +1157,10 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOLYLINE )
   else if( ISNUMPAR(1) && ISQPOLYGON(1) )
   {
     HB_FUNC_EXEC( QPAINTER_DRAWPOLYLINE4 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -1147,6 +1196,10 @@ HB_FUNC_STATIC( QPAINTER_DRAWRECT )
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
     HB_FUNC_EXEC( QPAINTER_DRAWRECT3 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -1238,6 +1291,10 @@ HB_FUNC_STATIC( QPAINTER_DRAWROUNDEDRECT )
   {
     HB_FUNC_EXEC( QPAINTER_DRAWROUNDEDRECT3 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -1272,6 +1329,10 @@ HB_FUNC_STATIC( QPAINTER_DRAWSTATICTEXT )
   else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQSTATICTEXT(3) )
   {
     HB_FUNC_EXEC( QPAINTER_DRAWSTATICTEXT3 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -1348,6 +1409,10 @@ HB_FUNC_STATIC( QPAINTER_DRAWTEXT )
   {
     HB_FUNC_EXEC( QPAINTER_DRAWTEXT7 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -1382,6 +1447,10 @@ HB_FUNC_STATIC( QPAINTER_DRAWTILEDPIXMAP )
   else if( ISBETWEEN(5,7) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISQPIXMAP(5) && (ISNUM(6)||ISNIL(6)) && (ISNUM(7)||ISNIL(7)) )
   {
     HB_FUNC_EXEC( QPAINTER_DRAWTILEDPIXMAP3 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -1427,6 +1496,10 @@ HB_FUNC_STATIC( QPAINTER_ERASERECT )
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
     HB_FUNC_EXEC( QPAINTER_ERASERECT3 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -1558,6 +1631,10 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT )
   {
     HB_FUNC_EXEC( QPAINTER_FILLRECT12 ); // TODO: resolver conflito entre [12] e [04]
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -1583,16 +1660,7 @@ $method=|bool|hasClipping|
 /*
 void initFrom ( const QWidget * widget )
 */
-HB_FUNC_STATIC( QPAINTER_INITFROM )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QWidget * par1 = (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->initFrom ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|initFrom|const QWidget *
 
 /*
 bool isActive () const
@@ -1622,14 +1690,7 @@ $method=|const QPen &|pen|
 /*
 RenderHints renderHints () const
 */
-HB_FUNC_STATIC( QPAINTER_RENDERHINTS )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->renderHints () );
-  }
-}
+$method=|QPainter::RenderHints|renderHints|
 
 /*
 void resetTransform ()
@@ -1689,6 +1750,10 @@ HB_FUNC_STATIC( QPAINTER_SETBRUSH )
   {
     HB_FUNC_EXEC( QPAINTER_SETBRUSH2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -1723,6 +1788,10 @@ HB_FUNC_STATIC( QPAINTER_SETBRUSHORIGIN )
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
     HB_FUNC_EXEC( QPAINTER_SETBRUSHORIGIN3 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -1763,6 +1832,10 @@ HB_FUNC_STATIC( QPAINTER_SETCLIPRECT )
   else if( ISBETWEEN(1,2) && ISQRECT(1) && (ISNUM(2)||ISNIL(2)) )
   {
     HB_FUNC_EXEC( QPAINTER_SETCLIPRECT3 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -1829,6 +1902,10 @@ HB_FUNC_STATIC( QPAINTER_SETPEN )
   {
     HB_FUNC_EXEC( QPAINTER_SETPEN3 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -1874,6 +1951,10 @@ HB_FUNC_STATIC( QPAINTER_SETVIEWPORT )
   {
     HB_FUNC_EXEC( QPAINTER_SETVIEWPORT2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -1898,6 +1979,10 @@ HB_FUNC_STATIC( QPAINTER_SETWINDOW )
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
     HB_FUNC_EXEC( QPAINTER_SETWINDOW2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -1963,6 +2048,10 @@ HB_FUNC_STATIC( QPAINTER_TRANSLATE )
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
     HB_FUNC_EXEC( QPAINTER_TRANSLATE3 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

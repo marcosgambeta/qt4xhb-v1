@@ -99,15 +99,7 @@ $deleteMethod
 /*
 void addWidget ( QWidget * widget )
 */
-HB_FUNC_STATIC( QSPLITTER_ADDWIDGET )
-{
-  QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->addWidget ( PQWIDGET(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addWidget|QWidget *
 
 /*
 bool childrenCollapsible () const
@@ -122,19 +114,7 @@ $method=|int|count|
 /*
 void getRange ( int index, int * min, int * max ) const
 */
-HB_FUNC_STATIC( QSPLITTER_GETRANGE )
-{
-  QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2;
-    int par3;
-    obj->getRange ( PINT(1), &par2, &par3 );
-    hb_storni( par2, 2 );
-    hb_storni( par3, 3 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|getRange|int,int *,int *
 
 /*
 QSplitterHandle * handle ( int index ) const

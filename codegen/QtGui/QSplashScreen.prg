@@ -81,80 +81,31 @@ $deleteMethod
 /*
 void finish ( QWidget * mainWin )
 */
-HB_FUNC_STATIC( QSPLASHSCREEN_FINISH )
-{
-  QSplashScreen * obj = (QSplashScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->finish ( PQWIDGET(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|finish|QWidget *
 
 /*
 const QPixmap pixmap () const
 */
-HB_FUNC_STATIC( QSPLASHSCREEN_PIXMAP )
-{
-  QSplashScreen * obj = (QSplashScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPixmap * ptr = new QPixmap( obj->pixmap () );
-    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
-  }
-}
+$method=|const QPixmap|pixmap|
 
 /*
 void repaint ()
 */
-HB_FUNC_STATIC( QSPLASHSCREEN_REPAINT )
-{
-  QSplashScreen * obj = (QSplashScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->repaint ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|repaint|
 
 /*
 void setPixmap ( const QPixmap & pixmap )
 */
-HB_FUNC_STATIC( QSPLASHSCREEN_SETPIXMAP )
-{
-  QSplashScreen * obj = (QSplashScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPixmap ( *PQPIXMAP(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPixmap|const QPixmap &
 
 /*
 void clearMessage ()
 */
-HB_FUNC_STATIC( QSPLASHSCREEN_CLEARMESSAGE )
-{
-  QSplashScreen * obj = (QSplashScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clearMessage ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clearMessage|
 
 /*
 void showMessage ( const QString & message, int alignment = Qt::AlignLeft, const QColor & color = Qt::black )
 */
-HB_FUNC_STATIC( QSPLASHSCREEN_SHOWMESSAGE )
-{
-  QSplashScreen * obj = (QSplashScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QColor par3 = ISNIL(3)? Qt::black : ISOBJECT(3)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(3));
-    obj->showMessage ( PQSTRING(1), OPINT(2,Qt::AlignLeft), par3 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|showMessage|const QString &,int=Qt::AlignLeft,const QColor &=Qt::black
 
 #pragma ENDDUMP

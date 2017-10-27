@@ -55,68 +55,27 @@ $virtualMethod=|QString|fontDir|
 /*
 virtual QFontEngine * fontEngine ( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference )
 */
-HB_FUNC_STATIC( QPLATFORMFONTDATABASE_FONTENGINE )
-{
-  QPlatformFontDatabase * obj = (QPlatformFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par3 = hb_parni(3);
-    QFontEngine * ptr = obj->fontEngine ( *PQBYTEARRAY(1), PQREAL(2), (QFont::HintingPreference) par3 );
-    _qt4xhb_createReturnClass ( ptr, "QFONTENGINE" );
-  }
-}
+$virtualMethod=|QFontEngine *|fontEngine|const QByteArray &,qreal,QFont::HintingPreference
 
 /*
 virtual void populateFontDatabase ()
 */
-HB_FUNC_STATIC( QPLATFORMFONTDATABASE_POPULATEFONTDATABASE )
-{
-  QPlatformFontDatabase * obj = (QPlatformFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->populateFontDatabase ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|populateFontDatabase|
 
 /*
 virtual void releaseHandle ( void * handle )
 */
-HB_FUNC_STATIC( QPLATFORMFONTDATABASE_RELEASEHANDLE )
-{
-  QPlatformFontDatabase * obj = (QPlatformFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    void * par1 = (void *) hb_parptr(1);
-    obj->releaseHandle ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|releaseHandle|void *
 
 /*
-void registerFont ( const QString & familyName, const QString & foundryName, QFont::Weight weight, QFont::Style style, QFont::Stretch stretch, bool antialiased, bool scalable, int pixelSize, const QSupportedWritingSystems & writingSystems, void * usrPtr )
+static void registerFont ( const QString & familyName, const QString & foundryName, QFont::Weight weight, QFont::Style style, QFont::Stretch stretch, bool antialiased, bool scalable, int pixelSize, const QSupportedWritingSystems & writingSystems, void * usrPtr )
 */
-HB_FUNC_STATIC( QPLATFORMFONTDATABASE_REGISTERFONT )
-{
-  int par3 = hb_parni(3);
-  int par4 = hb_parni(4);
-  int par5 = hb_parni(5);
-  int par8 = hb_parni(8);
-  QSupportedWritingSystems * par9 = (QSupportedWritingSystems *) hb_itemGetPtr( hb_objSendMsg( hb_param(9, HB_IT_OBJECT ), "POINTER", 0 ) );
-  void * par10 = (void *) hb_parptr(10);
-  QPlatformFontDatabase::registerFont ( PQSTRING(1), PQSTRING(2), (QFont::Weight) par3, (QFont::Style) par4, (QFont::Stretch) par5, PBOOL(6), PBOOL(7), par8, *par9, par10 );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$static Method=|void|registerFont|const QString &,const QString &,QFont::Weight,QFont::Style,QFont::Stretch,bool,bool,int,const QSupportedWritingSystems &,void *
 
 /*
-void registerQPF2Font ( const QByteArray & dataArray, void * handle )
+static void registerQPF2Font ( const QByteArray & dataArray, void * handle )
 */
-HB_FUNC_STATIC( QPLATFORMFONTDATABASE_REGISTERQPF2FONT )
-{
-  void * par2 = (void *) hb_parptr(2);
-  QPlatformFontDatabase::registerQPF2Font ( *PQBYTEARRAY(1), par2 );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|registerQPF2Font|const QByteArray &,void *
 
 $extraMethods
 

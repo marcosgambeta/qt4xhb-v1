@@ -154,14 +154,7 @@ $deleteMethod
 /*
 uint count () const
 */
-HB_FUNC_STATIC( QKEYSEQUENCE_COUNT )
-{
-  QKeySequence * obj = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (uint) obj->count () );
-  }
-}
+$method=|uint|count|
 
 /*
 bool isEmpty () const
@@ -171,14 +164,7 @@ $method=|bool|isEmpty|
 /*
 SequenceMatch matches ( const QKeySequence & seq ) const
 */
-HB_FUNC_STATIC( QKEYSEQUENCE_MATCHES )
-{
-  QKeySequence * obj = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->matches ( *PQKEYSEQUENCE(1) ) );
-  }
-}
+$method=|QKeySequence::SequenceMatch|matches|const QKeySequence &
 
 /*
 QString toString ( SequenceFormat format = PortableText ) const
@@ -186,17 +172,12 @@ QString toString ( SequenceFormat format = PortableText ) const
 $method=|QString|toString|QKeySequence::SequenceFormat=QKeySequence::PortableText
 
 /*
-QKeySequence fromString ( const QString & str, SequenceFormat format = PortableText )
+static QKeySequence fromString ( const QString & str, SequenceFormat format = PortableText )
 */
-HB_FUNC_STATIC( QKEYSEQUENCE_FROMSTRING )
-{
-  int par2 = ISNIL(2)? (int) QKeySequence::PortableText : hb_parni(2);
-  QKeySequence * ptr = new QKeySequence( QKeySequence::fromString ( PQSTRING(1), (QKeySequence::SequenceFormat) par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
-}
+$staticMethod=|QKeySequence|fromString|const QString &,QKeySequence::SequenceFormat=QKeySequence::PortableText
 
 /*
-QList<QKeySequence> keyBindings ( StandardKey key )
+static QList<QKeySequence> keyBindings ( StandardKey key )
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_KEYBINDINGS )
 {

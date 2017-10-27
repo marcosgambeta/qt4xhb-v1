@@ -110,28 +110,12 @@ $deleteMethod
 /*
 QTextCodec * codec () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_CODEC )
-{
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextCodec * ptr = obj->codec ();
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );
-  }
-}
+$method=|QTextCodec *|codec|
 
 /*
 QIODevice * device () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_DEVICE )
-{
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIODevice * ptr = obj->device ();
-    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
-  }
-}
+$method=|QIODevice *|device|
 
 /*
 QString fileName () const
@@ -141,41 +125,17 @@ $method=|QString|fileName|
 /*
 QByteArray format () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_FORMAT )
-{
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->format () );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
+$method=|QByteArray|format|
 
 /*
 void setCodec ( QTextCodec * codec )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETCODEC )
-{
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCodec ( PQTEXTCODEC(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCodec|QTextCodec *
 
 /*
 void setDevice ( QIODevice * device )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETDEVICE )
-{
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDevice ( PQIODEVICE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDevice|QIODevice *
 
 /*
 void setFileName ( const QString & fileName )
@@ -185,15 +145,7 @@ $method=|void|setFileName|const QString &
 /*
 void setFormat ( const QByteArray & format )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETFORMAT )
-{
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFormat ( *PQBYTEARRAY(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFormat|const QByteArray &
 
 /*
 bool write ( const QTextDocument * document )
@@ -217,6 +169,10 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_WRITE )
   else if( ISNUMPAR(1) && ISQTEXTDOCUMENTFRAGMENT(1) )
   {
     HB_FUNC_EXEC( QTEXTDOCUMENTWRITER_WRITE2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

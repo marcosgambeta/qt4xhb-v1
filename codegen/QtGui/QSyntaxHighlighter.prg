@@ -47,54 +47,21 @@ $deleteMethod
 /*
 QTextDocument * document () const
 */
-HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_DOCUMENT )
-{
-  QSyntaxHighlighter * obj = (QSyntaxHighlighter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextDocument * ptr = obj->document ();
-    _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );
-  }
-}
+$method=|QTextDocument *|document|
 
 /*
 void setDocument ( QTextDocument * doc )
 */
-HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_SETDOCUMENT )
-{
-  QSyntaxHighlighter * obj = (QSyntaxHighlighter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextDocument * par1 = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setDocument ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDocument|QTextDocument *
 
 /*
 void rehighlight ()
 */
-HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_REHIGHLIGHT )
-{
-  QSyntaxHighlighter * obj = (QSyntaxHighlighter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->rehighlight ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|rehighlight|
 
 /*
 void rehighlightBlock ( const QTextBlock & block )
 */
-HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_REHIGHLIGHTBLOCK )
-{
-  QSyntaxHighlighter * obj = (QSyntaxHighlighter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->rehighlightBlock ( *PQTEXTBLOCK(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|rehighlightBlock|const QTextBlock &
 
 #pragma ENDDUMP

@@ -158,6 +158,10 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_CONTAINS )
   {
     HB_FUNC_EXEC( QITEMSELECTIONRANGE_CONTAINS2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -171,6 +175,7 @@ QModelIndexList indexes () const
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_INDEXES )
 {
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QModelIndexList list = obj->indexes ();
@@ -236,28 +241,12 @@ $method=|int|left|
 /*
 const QAbstractItemModel * model () const
 */
-HB_FUNC_STATIC( QITEMSELECTIONRANGE_MODEL )
-{
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QAbstractItemModel * ptr = obj->model ();
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
-  }
-}
+$method=|const QAbstractItemModel *|model|
 
 /*
 QModelIndex parent () const
 */
-HB_FUNC_STATIC( QITEMSELECTIONRANGE_PARENT )
-{
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->parent () );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
+$method=|QModelIndex|parent|
 
 /*
 int right () const

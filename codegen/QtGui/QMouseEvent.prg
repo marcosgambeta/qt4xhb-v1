@@ -88,28 +88,12 @@ $deleteMethod
 /*
 const QPoint &pos() const
 */
-HB_FUNC_STATIC( QMOUSEEVENT_POS )
-{
-  QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QPoint * ptr = &obj->pos ();
-    _qt4xhb_createReturnClass ( ptr, "QPOINT" );
-  }
-}
+$method=|const QPoint &|pos|
 
 /*
 const QPoint &globalPos() const
 */
-HB_FUNC_STATIC( QMOUSEEVENT_GLOBALPOS )
-{
-  QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QPoint * ptr = &obj->globalPos ();
-    _qt4xhb_createReturnClass ( ptr, "QPOINT" );
-  }
-}
+$method=|const QPoint &|globalPos|
 
 /*
 int x() const
@@ -134,26 +118,12 @@ $method=|int|globalY|
 /*
 Qt::MouseButton button() const
 */
-HB_FUNC_STATIC( QMOUSEEVENT_BUTTON )
-{
-  QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->button () );
-  }
-}
+$method=|Qt::MouseButton|button|
 
 /*
 Qt::MouseButtons buttons() const
 */
-HB_FUNC_STATIC( QMOUSEEVENT_BUTTONS )
-{
-  QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->buttons () );
-  }
-}
+$method=|Qt::MouseButtons|buttons|
 
 /*
 bool hasExtendedInfo() const
@@ -163,26 +133,11 @@ $method=|bool|hasExtendedInfo|
 /*
 QPointF posF() const
 */
-HB_FUNC_STATIC( QMOUSEEVENT_POSF )
-{
-  QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->posF () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|posF|
 
 /*
 static QMouseEvent *createExtendedMouseEvent(Type type, const QPointF &pos,const QPoint &globalPos, Qt::MouseButton button,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
 */
-HB_FUNC_STATIC( QMOUSEEVENT_CREATEEXTENDEDMOUSEEVENT )
-{
-  int par4 = hb_parni(4);
-  int par5 = hb_parni(5);
-  int par6 = hb_parni(6);
-  QMouseEvent * ptr = QMouseEvent::createExtendedMouseEvent ( (QEvent::Type) hb_parni(1), *PQPOINTF(2), *PQPOINT(3), (Qt::MouseButton) par4, (Qt::MouseButtons) par5, (Qt::KeyboardModifiers) par6 );
-  _qt4xhb_createReturnClass ( ptr, "QMOUSEEVENT" );
-}
+$staticMethod=|QMouseEvent *|createExtendedMouseEvent|QEvent::Type,const QPointF &,const QPoint &,Qt::MouseButton,Qt::MouseButtons,Qt::KeyboardModifiers
 
 #pragma ENDDUMP

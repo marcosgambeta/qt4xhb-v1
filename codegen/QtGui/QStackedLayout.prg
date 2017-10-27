@@ -106,15 +106,7 @@ $method=|int|currentIndex|
 /*
 QWidget * currentWidget () const
 */
-HB_FUNC_STATIC( QSTACKEDLAYOUT_CURRENTWIDGET )
-{
-  QStackedLayout * obj = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->currentWidget ();
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|currentWidget|
 
 /*
 int insertWidget ( int index, QWidget * widget )
@@ -124,28 +116,12 @@ $method=|int|insertWidget|int,QWidget *
 /*
 void setStackingMode ( StackingMode stackingMode )
 */
-HB_FUNC_STATIC( QSTACKEDLAYOUT_SETSTACKINGMODE )
-{
-  QStackedLayout * obj = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setStackingMode ( (QStackedLayout::StackingMode) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStackingMode|QStackedLayout::StackingMode
 
 /*
 StackingMode stackingMode () const
 */
-HB_FUNC_STATIC( QSTACKEDLAYOUT_STACKINGMODE )
-{
-  QStackedLayout * obj = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->stackingMode () );
-  }
-}
+$method=|QStackedLayout::StackingMode|stackingMode|
 
 /*
 QWidget * widget ( int index ) const

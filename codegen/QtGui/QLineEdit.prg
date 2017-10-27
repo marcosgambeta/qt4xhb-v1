@@ -144,79 +144,32 @@ $deleteMethod
 /*
 Qt::Alignment alignment () const
 */
-HB_FUNC_STATIC( QLINEEDIT_ALIGNMENT )
-{
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->alignment () );
-  }
-}
+$method=|Qt::Alignment|alignment|
 
 /*
 void backspace ()
 */
-HB_FUNC_STATIC( QLINEEDIT_BACKSPACE )
-{
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->backspace ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|backspace|
 
 /*
 QCompleter * completer () const
 */
-HB_FUNC_STATIC( QLINEEDIT_COMPLETER )
-{
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QCompleter * ptr = obj->completer ();
-    _qt4xhb_createReturnClass ( ptr, "QCOMPLETER" );
-  }
-}
+$method=|QCompleter *|completer|
 
 /*
 QMenu * createStandardContextMenu ()
 */
-HB_FUNC_STATIC( QLINEEDIT_CREATESTANDARDCONTEXTMENU )
-{
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QMenu * ptr = obj->createStandardContextMenu ();
-    _qt4xhb_createReturnClass ( ptr, "QMENU" );
-  }
-}
+$method=|QMenu *|createStandardContextMenu|
 
 /*
 void cursorBackward ( bool mark, int steps = 1 )
 */
-HB_FUNC_STATIC( QLINEEDIT_CURSORBACKWARD )
-{
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->cursorBackward ( PBOOL(1), OPINT(2,1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|cursorBackward|bool,int=1
 
 /*
 void cursorForward ( bool mark, int steps = 1 )
 */
-HB_FUNC_STATIC( QLINEEDIT_CURSORFORWARD )
-{
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->cursorForward ( PBOOL(1), OPINT(2,1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|cursorForward|bool,int=1
 
 /*
 int cursorPosition () const
@@ -261,14 +214,7 @@ $method=|bool|dragEnabled|
 /*
 EchoMode echoMode () const
 */
-HB_FUNC_STATIC( QLINEEDIT_ECHOMODE )
-{
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->echoMode () );
-  }
-}
+$method=|QLineEdit::EchoMode|echoMode|
 
 /*
 void end ( bool mark )
@@ -437,6 +383,10 @@ HB_FUNC_STATIC( QLINEEDIT_SETTEXTMARGINS )
   else if( ISNUMPAR(1) && ISQMARGINS(1) )
   {
     HB_FUNC_EXEC( QLINEEDIT_SETTEXTMARGINS2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

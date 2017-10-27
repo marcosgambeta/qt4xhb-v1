@@ -288,14 +288,7 @@ $method=|qreal|boundingRegionGranularity|
 /*
 CacheMode cacheMode () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_CACHEMODE )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->cacheMode () );
-  }
-}
+$method=|QGraphicsItem::CacheMode|cacheMode|
 
 /*
 QList<QGraphicsItem *> childItems () const
@@ -464,6 +457,10 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ENSUREVISIBLE )
   {
     HB_FUNC_EXEC( QGRAPHICSITEM_ENSUREVISIBLE2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -474,15 +471,7 @@ $method=|bool|filtersChildEvents|
 /*
 GraphicsItemFlags flags () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_FLAGS )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    hb_retni( (int) obj->flags () );
-  }
-}
+$method=|QGraphicsItem::GraphicsItemFlags|flags|
 
 /*
 QGraphicsItem * focusItem () const
@@ -591,6 +580,10 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISOBSCURED )
   else if( ISNUMPAR(1) && ISQRECTF(1) )
   {
     HB_FUNC_EXEC( QGRAPHICSITEM_ISOBSCURED3 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -702,6 +695,10 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMITEM )
   {
     HB_FUNC_EXEC( QGRAPHICSITEM_MAPFROMITEM6 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -766,6 +763,10 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMPARENT )
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
     HB_FUNC_EXEC( QGRAPHICSITEM_MAPFROMPARENT6 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -832,6 +833,10 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMSCENE )
   {
     HB_FUNC_EXEC( QGRAPHICSITEM_MAPFROMSCENE6 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -856,6 +861,10 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMITEM )
   else if( ISNUMPAR(5) && ISQGRAPHICSITEM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) )
   {
     HB_FUNC_EXEC( QGRAPHICSITEM_MAPRECTFROMITEM2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -882,6 +891,10 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMPARENT )
   {
     HB_FUNC_EXEC( QGRAPHICSITEM_MAPRECTFROMPARENT2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -906,6 +919,10 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMSCENE )
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
     HB_FUNC_EXEC( QGRAPHICSITEM_MAPRECTFROMSCENE2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -932,6 +949,10 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOITEM )
   {
     HB_FUNC_EXEC( QGRAPHICSITEM_MAPRECTTOITEM2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -957,6 +978,10 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOPARENT )
   {
     HB_FUNC_EXEC( QGRAPHICSITEM_MAPRECTTOPARENT2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -981,6 +1006,10 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOSCENE )
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
     HB_FUNC_EXEC( QGRAPHICSITEM_MAPRECTTOSCENE2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -1047,6 +1076,10 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOITEM )
   {
     HB_FUNC_EXEC( QGRAPHICSITEM_MAPTOITEM6 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -1111,6 +1144,10 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOPARENT )
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
     HB_FUNC_EXEC( QGRAPHICSITEM_MAPTOPARENT6 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -1177,6 +1214,10 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOSCENE )
   {
     HB_FUNC_EXEC( QGRAPHICSITEM_MAPTOSCENE6 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -1207,14 +1248,7 @@ $method=|QGraphicsItem *|panel|
 /*
 PanelModality panelModality () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_PANELMODALITY )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->panelModality () );
-  }
-}
+$method=|QGraphicsItem::PanelModality|panelModality|
 
 /*
 QGraphicsItem * parentItem () const
@@ -1409,6 +1443,10 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETPOS )
   {
     HB_FUNC_EXEC( QGRAPHICSITEM_SETPOS2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -1459,6 +1497,10 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETTRANSFORMORIGINPOINT )
   {
     HB_FUNC_EXEC( QGRAPHICSITEM_SETTRANSFORMORIGINPOINT2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -1467,6 +1509,7 @@ void setTransformations ( const QList<QGraphicsTransform *> & transformations )
 HB_FUNC_STATIC( QGRAPHICSITEM_SETTRANSFORMATIONS )
 {
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QGraphicsTransform *> par1;
@@ -1479,6 +1522,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETTRANSFORMATIONS )
     }
     obj->setTransformations ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -1566,6 +1610,7 @@ QList<QGraphicsTransform *> transformations () const
 HB_FUNC_STATIC( QGRAPHICSITEM_TRANSFORMATIONS )
 {
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QGraphicsTransform *> list = obj->transformations ();
@@ -1645,6 +1690,10 @@ HB_FUNC_STATIC( QGRAPHICSITEM_UPDATE )
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
     HB_FUNC_EXEC( QGRAPHICSITEM_UPDATE2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

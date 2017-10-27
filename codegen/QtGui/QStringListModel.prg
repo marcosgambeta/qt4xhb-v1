@@ -76,15 +76,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_NEW )
 /*
 void setStringList(const QStringList & strings)
 */
-HB_FUNC_STATIC( QSTRINGLISTMODEL_SETSTRINGLIST )
-{
-  QStringListModel * obj = (QStringListModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setStringList ( PQSTRINGLIST(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStringList|const QStringList &
 
 /*
 QStringList stringList() const
@@ -94,27 +86,12 @@ $method=|QStringList|stringList|
 /*
 virtual QVariant data(const QModelIndex & index, int role) const
 */
-HB_FUNC_STATIC( QSTRINGLISTMODEL_DATA )
-{
-  QStringListModel * obj = (QStringListModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->data ( *PQMODELINDEX(1), PINT(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$virtualMethod=|QVariant|data|const QModelIndex &,int
 
 /*
 virtual Qt::ItemFlags flags(const QModelIndex & index) const
 */
-HB_FUNC_STATIC( QSTRINGLISTMODEL_FLAGS )
-{
-  QStringListModel * obj = (QStringListModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->flags ( *PQMODELINDEX(1) ) );
-  }
-}
+$virtualMethod=|Qt::ItemFlags|flags|const QModelIndex &
 
 /*
 virtual bool insertRows(int row, int count, const QModelIndex & parent = QModelIndex())

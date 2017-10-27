@@ -52,14 +52,7 @@ $deleteMethod
 /*
 Qt::Alignment alignment () const
 */
-HB_FUNC_STATIC( QTEXTTABLEFORMAT_ALIGNMENT )
-{
-  QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->alignment () );
-  }
-}
+$method=|Qt::Alignment|alignment|
 
 /*
 qreal cellPadding () const
@@ -74,15 +67,7 @@ $method=|qreal|cellSpacing|
 /*
 void clearColumnWidthConstraints ()
 */
-HB_FUNC_STATIC( QTEXTTABLEFORMAT_CLEARCOLUMNWIDTHCONSTRAINTS )
-{
-  QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clearColumnWidthConstraints ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clearColumnWidthConstraints|
 
 /*
 QVector<QTextLength> columnWidthConstraints () const
@@ -90,6 +75,7 @@ QVector<QTextLength> columnWidthConstraints () const
 HB_FUNC_STATIC( QTEXTTABLEFORMAT_COLUMNWIDTHCONSTRAINTS )
 {
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QVector<QTextLength> list = obj->columnWidthConstraints ();
@@ -145,16 +131,7 @@ $method=|bool|isValid|
 /*
 void setAlignment ( Qt::Alignment alignment )
 */
-HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETALIGNMENT )
-{
-  QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setAlignment ( (Qt::Alignment) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAlignment|Qt::Alignment
 
 /*
 void setCellPadding ( qreal padding )
@@ -172,6 +149,7 @@ void setColumnWidthConstraints ( const QVector<QTextLength> & constraints )
 HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETCOLUMNWIDTHCONSTRAINTS )
 {
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QVector<QTextLength> par1;
@@ -184,6 +162,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETCOLUMNWIDTHCONSTRAINTS )
     }
     obj->setColumnWidthConstraints ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

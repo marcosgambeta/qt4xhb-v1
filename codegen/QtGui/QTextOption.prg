@@ -103,53 +103,22 @@ $deleteMethod
 /*
 Qt::Alignment alignment () const
 */
-HB_FUNC_STATIC( QTEXTOPTION_ALIGNMENT )
-{
-  QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->alignment () );
-  }
-}
+$method=|Qt::Alignment|alignment|
 
 /*
 Flags flags () const
 */
-HB_FUNC_STATIC( QTEXTOPTION_FLAGS )
-{
-  QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->flags () );
-  }
-}
+$method=|QTextOption::Flags|flags|
 
 /*
 void setAlignment ( Qt::Alignment alignment )
 */
-HB_FUNC_STATIC( QTEXTOPTION_SETALIGNMENT )
-{
-  QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAlignment ( (Qt::Alignment) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAlignment|Qt::Alignment
 
 /*
 void setFlags ( Flags flags )
 */
-HB_FUNC_STATIC( QTEXTOPTION_SETFLAGS )
-{
-  QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setFlags ( (QTextOption::Flags) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFlags|QTextOption::Flags
 
 /*
 void setTabArray ( QList<qreal> tabStops )
@@ -157,20 +126,22 @@ void setTabArray ( QList<qreal> tabStops )
 HB_FUNC_STATIC( QTEXTOPTION_SETTABARRAY )
 {
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-QList<qreal> par1;
-PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aValues1);
-int temp1;
-for (i1=0;i1<nLen1;i1++)
-{
-temp1 = hb_arrayGetND(aValues1, i1+1);
-par1 << temp1;
-}
+    QList<qreal> par1;
+    PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aValues1);
+    int temp1;
+    for (i1=0;i1<nLen1;i1++)
+    {
+      temp1 = hb_arrayGetND(aValues1, i1+1);
+      par1 << temp1;
+    }
     obj->setTabArray ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -182,16 +153,7 @@ $method=|void|setTabStop|qreal
 /*
 void setTextDirection ( Qt::LayoutDirection direction )
 */
-HB_FUNC_STATIC( QTEXTOPTION_SETTEXTDIRECTION )
-{
-  QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setTextDirection ( (Qt::LayoutDirection) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTextDirection|Qt::LayoutDirection
 
 /*
 void setUseDesignMetrics ( bool enable )
@@ -201,16 +163,7 @@ $method=|void|setUseDesignMetrics|bool
 /*
 void setWrapMode ( WrapMode mode )
 */
-HB_FUNC_STATIC( QTEXTOPTION_SETWRAPMODE )
-{
-  QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setWrapMode ( (QTextOption::WrapMode) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWrapMode|QTextOption::WrapMode
 
 /*
 QList<qreal> tabArray () const
@@ -218,6 +171,7 @@ QList<qreal> tabArray () const
 HB_FUNC_STATIC( QTEXTOPTION_TABARRAY )
 {
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<qreal> list = obj->tabArray ();
@@ -242,14 +196,7 @@ $method=|qreal|tabStop|
 /*
 Qt::LayoutDirection textDirection () const
 */
-HB_FUNC_STATIC( QTEXTOPTION_TEXTDIRECTION )
-{
-  QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->textDirection () );
-  }
-}
+$method=|Qt::LayoutDirection|textDirection|
 
 /*
 bool useDesignMetrics () const
@@ -259,14 +206,7 @@ $method=|bool|useDesignMetrics|
 /*
 WrapMode wrapMode () const
 */
-HB_FUNC_STATIC( QTEXTOPTION_WRAPMODE )
-{
-  QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->wrapMode () );
-  }
-}
+$method=|QTextOption::WrapMode|wrapMode|
 
 $extraMethods
 

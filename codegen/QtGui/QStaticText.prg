@@ -106,83 +106,32 @@ $deleteMethod
 /*
 PerformanceHint performanceHint () const
 */
-HB_FUNC_STATIC( QSTATICTEXT_PERFORMANCEHINT )
-{
-  QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->performanceHint () );
-  }
-}
+$method=|QStaticText::PerformanceHint|performanceHint|
 
 /*
 void prepare ( const QTransform & matrix = QTransform(), const QFont & font = QFont() )
 */
-HB_FUNC_STATIC( QSTATICTEXT_PREPARE )
-{
-  QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTransform par1 = ISNIL(1)? QTransform() : *(QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QFont par2 = ISNIL(2)? QFont() : *(QFont *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->prepare ( par1, par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|prepare|const QTransform &=QTransform(),const QFont &=QFont()
 
 /*
 void setPerformanceHint ( PerformanceHint performanceHint )
 */
-HB_FUNC_STATIC( QSTATICTEXT_SETPERFORMANCEHINT )
-{
-  QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setPerformanceHint ( (QStaticText::PerformanceHint) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPerformanceHint|QStaticText::PerformanceHint
 
 /*
 void setText ( const QString & text )
 */
-HB_FUNC_STATIC( QSTATICTEXT_SETTEXT )
-{
-  QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setText|const QString &
 
 /*
 void setTextFormat ( Qt::TextFormat textFormat )
 */
-HB_FUNC_STATIC( QSTATICTEXT_SETTEXTFORMAT )
-{
-  QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setTextFormat ( (Qt::TextFormat) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTextFormat|Qt::TextFormat
 
 /*
 void setTextOption ( const QTextOption & textOption )
 */
-HB_FUNC_STATIC( QSTATICTEXT_SETTEXTOPTION )
-{
-  QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTextOption ( *PQTEXTOPTION(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTextOption|const QTextOption &
 
 /*
 void setTextWidth ( qreal textWidth )
@@ -192,15 +141,7 @@ $method=|void|setTextWidth|qreal
 /*
 QSizeF size () const
 */
-HB_FUNC_STATIC( QSTATICTEXT_SIZE )
-{
-  QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSizeF * ptr = new QSizeF( obj->size () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
-  }
-}
+$method=|QSizeF|size|
 
 /*
 QString text () const
@@ -210,27 +151,12 @@ $method=|QString|text|
 /*
 Qt::TextFormat textFormat () const
 */
-HB_FUNC_STATIC( QSTATICTEXT_TEXTFORMAT )
-{
-  QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->textFormat () );
-  }
-}
+$method=|Qt::TextFormat|textFormat|
 
 /*
 QTextOption textOption () const
 */
-HB_FUNC_STATIC( QSTATICTEXT_TEXTOPTION )
-{
-  QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextOption * ptr = new QTextOption( obj->textOption () );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTOPTION" );
-  }
-}
+$method=|QTextOption|textOption|
 
 /*
 qreal textWidth () const

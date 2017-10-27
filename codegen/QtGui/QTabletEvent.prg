@@ -59,41 +59,17 @@ $deleteMethod
 /*
 const QPoint &pos() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_POS )
-{
-  QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QPoint * ptr = &obj->pos ();
-    _qt4xhb_createReturnClass ( ptr, "QPOINT" );
-  }
-}
+$method=|const QPoint &|pos|
 
 /*
 const QPoint &globalPos() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_GLOBALPOS )
-{
-  QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QPoint * ptr = &obj->globalPos ();
-    _qt4xhb_createReturnClass ( ptr, "QPOINT" );
-  }
-}
+$method=|const QPoint &|globalPos|
 
 /*
 const QPointF &hiResGlobalPos() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_HIRESGLOBALPOS )
-{
-  QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QPointF * ptr = &obj->hiResGlobalPos ();
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF" );
-  }
-}
+$method=|const QPointF &|hiResGlobalPos|
 
 /*
 int x() const
@@ -128,38 +104,17 @@ $method=|qreal|hiResGlobalY|
 /*
 TabletDevice device() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_DEVICE )
-{
-  QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->device () );
-  }
-}
+$method=|QTabletEvent::TabletDevice|device|
 
 /*
 PointerType pointerType() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_POINTERTYPE )
-{
-  QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->pointerType () );
-  }
-}
+$method=|QTabletEvent::PointerType|pointerType|
 
 /*
 qint64 uniqueId() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_UNIQUEID )
-{
-  QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->uniqueId () );
-  }
-}
+$method=|qint64|uniqueId|
 
 /*
 qreal pressure() const

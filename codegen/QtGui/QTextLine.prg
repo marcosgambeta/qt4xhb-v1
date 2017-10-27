@@ -103,6 +103,10 @@ HB_FUNC_STATIC( QTEXTLINE_CURSORTOX )
   {
     HB_FUNC_EXEC( QTEXTLINE_CURSORTOX2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -143,15 +147,7 @@ $method=|int|lineNumber|
 /*
 QRectF naturalTextRect () const
 */
-HB_FUNC_STATIC( QTEXTLINE_NATURALTEXTRECT )
-{
-  QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->naturalTextRect () );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$method=|QRectF|naturalTextRect|
 
 /*
 qreal naturalTextWidth () const
@@ -161,28 +157,12 @@ $method=|qreal|naturalTextWidth|
 /*
 QPointF position () const
 */
-HB_FUNC_STATIC( QTEXTLINE_POSITION )
-{
-  QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->position () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|position|
 
 /*
 QRectF rect () const
 */
-HB_FUNC_STATIC( QTEXTLINE_RECT )
-{
-  QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->rect () );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$method=|QRectF|rect|
 
 /*
 void setLeadingIncluded ( bool included )
@@ -216,6 +196,10 @@ HB_FUNC_STATIC( QTEXTLINE_SETNUMCOLUMNS )
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
     HB_FUNC_EXEC( QTEXTLINE_SETNUMCOLUMNS2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

@@ -91,28 +91,12 @@ $method=|int|cleanIndex|
 /*
 void clear ()
 */
-HB_FUNC_STATIC( QUNDOSTACK_CLEAR )
-{
-  QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clear|
 
 /*
 const QUndoCommand * command ( int index ) const
 */
-HB_FUNC_STATIC( QUNDOSTACK_COMMAND )
-{
-  QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QUndoCommand * ptr = obj->command ( PINT(1) );
-    _qt4xhb_createReturnClass ( ptr, "QUNDOCOMMAND" );
-  }
-}
+$method=|const QUndoCommand *|command|int
 
 /*
 int count () const
@@ -122,41 +106,17 @@ $method=|int|count|
 /*
 QAction * createRedoAction ( QObject * parent, const QString & prefix = QString() ) const
 */
-HB_FUNC_STATIC( QUNDOSTACK_CREATEREDOACTION )
-{
-  QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->createRedoAction ( PQOBJECT(1), OPQSTRING(2,QString()) );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|createRedoAction|QObject *,const QString &=QString()
 
 /*
 QAction * createUndoAction ( QObject * parent, const QString & prefix = QString() ) const
 */
-HB_FUNC_STATIC( QUNDOSTACK_CREATEUNDOACTION )
-{
-  QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->createUndoAction ( PQOBJECT(1), OPQSTRING(2,QString()) );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|createUndoAction|QObject *,const QString &=QString()
 
 /*
 void endMacro ()
 */
-HB_FUNC_STATIC( QUNDOSTACK_ENDMACRO )
-{
-  QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->endMacro ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|endMacro|
 
 /*
 int index () const
@@ -176,16 +136,7 @@ $method=|bool|isClean|
 /*
 void push ( QUndoCommand * cmd )
 */
-HB_FUNC_STATIC( QUNDOSTACK_PUSH )
-{
-  QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QUndoCommand * par1 = (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->push ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|push|QUndoCommand *
 
 /*
 QString redoText () const

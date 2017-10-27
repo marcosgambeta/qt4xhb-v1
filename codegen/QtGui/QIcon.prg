@@ -161,48 +161,17 @@ $deleteMethod
 /*
 QSize actualSize ( const QSize & size, Mode mode = Normal, State state = Off ) const
 */
-HB_FUNC_STATIC( QICON_ACTUALSIZE )
-{
-  QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) QIcon::Normal : hb_parni(2);
-    int par3 = ISNIL(3)? (int) QIcon::Off : hb_parni(3);
-    QSize * ptr = new QSize( obj->actualSize ( *PQSIZE(1), (QIcon::Mode) par2, (QIcon::State) par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|actualSize|const QSize &,QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
 
 /*
 void addFile ( const QString & fileName, const QSize & size = QSize(), Mode mode = Normal, State state = Off )
 */
-HB_FUNC_STATIC( QICON_ADDFILE )
-{
-  QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize par2 = ISNIL(2)? QSize() : *(QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par3 = ISNIL(3)? (int) QIcon::Normal : hb_parni(3);
-    int par4 = ISNIL(4)? (int) QIcon::Off : hb_parni(4);
-    obj->addFile ( PQSTRING(1), par2, (QIcon::Mode) par3, (QIcon::State) par4 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addFile|const QString &,const QSize &=QSize(),QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
 
 /*
 void addPixmap ( const QPixmap & pixmap, Mode mode = Normal, State state = Off )
 */
-HB_FUNC_STATIC( QICON_ADDPIXMAP )
-{
-  QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) QIcon::Normal : hb_parni(2);
-    int par3 = ISNIL(3)? (int) QIcon::Off : hb_parni(3);
-    obj->addPixmap ( *PQPIXMAP(1), (QIcon::Mode) par2, (QIcon::State) par3 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addPixmap|const QPixmap &,QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
 
 /*
 QList<QSize> availableSizes ( Mode mode = Normal, State state = Off ) const
@@ -210,6 +179,7 @@ QList<QSize> availableSizes ( Mode mode = Normal, State state = Off ) const
 HB_FUNC_STATIC( QICON_AVAILABLESIZES )
 {
   QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QIcon::Normal : hb_parni(1);
@@ -271,38 +241,12 @@ $method=|QString|name|
 /*
 void paint ( QPainter * painter, const QRect & rect, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
 */
-HB_FUNC_STATIC( QICON_PAINT1 )
-{
-  QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par3 = ISNIL(3)? (int) Qt::AlignCenter : hb_parni(3);
-    int par4 = ISNIL(4)? (int) QIcon::Normal : hb_parni(4);
-    int par5 = ISNIL(5)? (int) QIcon::Off : hb_parni(5);
-    obj->paint ( PQPAINTER(1), *PQRECT(2), (Qt::Alignment) par3, (QIcon::Mode) par4, (QIcon::State) par5 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|paint,paint1|QPainter *,const QRect &,Qt::Alignment=Qt::AlignCenter,QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
 
 /*
 void paint ( QPainter * painter, int x, int y, int w, int h, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
 */
-HB_FUNC_STATIC( QICON_PAINT2 )
-{
-  QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    int par3 = hb_parni(3);
-    int par4 = hb_parni(4);
-    int par5 = hb_parni(5);
-    int par6 = ISNIL(6)? (int) Qt::AlignCenter : hb_parni(6);
-    int par7 = ISNIL(7)? (int) QIcon::Normal : hb_parni(7);
-    int par8 = ISNIL(8)? (int) QIcon::Off : hb_parni(8);
-    obj->paint ( PQPAINTER(1), par2, par3, par4, par5, (Qt::Alignment) par6, (QIcon::Mode) par7, (QIcon::State) par8 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|paint,paint2|QPainter *,int,int,int,int,Qt::Alignment=Qt::AlignCenter,QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
 
 //[1]void paint ( QPainter * painter, const QRect & rect, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
 //[2]void paint ( QPainter * painter, int x, int y, int w, int h, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
@@ -317,52 +261,26 @@ HB_FUNC_STATIC( QICON_PAINT )
   {
     HB_FUNC_EXEC( QICON_PAINT2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
 QPixmap pixmap ( const QSize & size, Mode mode = Normal, State state = Off ) const
 */
-HB_FUNC_STATIC( QICON_PIXMAP1 )
-{
-  QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) QIcon::Normal : hb_parni(2);
-    int par3 = ISNIL(3)? (int) QIcon::Off : hb_parni(3);
-    QPixmap * ptr = new QPixmap( obj->pixmap ( *PQSIZE(1), (QIcon::Mode) par2, (QIcon::State) par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
-  }
-}
+$method=|QPixmap|pixmap,pixmap1|const QSize &,QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
 
 /*
 QPixmap pixmap ( int w, int h, Mode mode = Normal, State state = Off ) const
 */
-HB_FUNC_STATIC( QICON_PIXMAP2 )
-{
-  QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par3 = ISNIL(3)? (int) QIcon::Normal : hb_parni(3);
-    int par4 = ISNIL(4)? (int) QIcon::Off : hb_parni(4);
-    QPixmap * ptr = new QPixmap( obj->pixmap ( PINT(1), PINT(2), (QIcon::Mode) par3, (QIcon::State) par4 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
-  }
-}
+$method=|QPixmap|pixmap,pixmap2|int,int,QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
 
 /*
 QPixmap pixmap ( int extent, Mode mode = Normal, State state = Off ) const
 */
-HB_FUNC_STATIC( QICON_PIXMAP3 )
-{
-  QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) QIcon::Normal : hb_parni(2);
-    int par3 = ISNIL(3)? (int) QIcon::Off : hb_parni(3);
-    QPixmap * ptr = new QPixmap( obj->pixmap ( PINT(1), (QIcon::Mode) par2, (QIcon::State) par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
-  }
-}
+$method=|QPixmap|pixmap,pixmap3|int,QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
 
 //[1]QPixmap pixmap ( const QSize & size, Mode mode = Normal, State state = Off ) const
 //[2]QPixmap pixmap ( int w, int h, Mode mode = Normal, State state = Off ) const
@@ -381,6 +299,10 @@ HB_FUNC_STATIC( QICON_PIXMAP )
   else if( ISBETWEEN(1,3) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     HB_FUNC_EXEC( QICON_PIXMAP3 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

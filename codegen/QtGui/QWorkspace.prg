@@ -59,42 +59,17 @@ $deleteMethod
 /*
 QWidget * activeWindow () const
 */
-HB_FUNC_STATIC( QWORKSPACE_ACTIVEWINDOW )
-{
-  QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->activeWindow ();
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|activeWindow|
 
 /*
 QWidget * addWindow ( QWidget * w, Qt::WindowFlags flags = 0 )
 */
-HB_FUNC_STATIC( QWORKSPACE_ADDWINDOW )
-{
-  QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-    QWidget * ptr = obj->addWindow ( PQWIDGET(1), (Qt::WindowFlags) par2 );
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|addWindow|QWidget *,Qt::WindowFlags=0
 
 /*
 QBrush background () const
 */
-HB_FUNC_STATIC( QWORKSPACE_BACKGROUND )
-{
-  QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QBrush * ptr = new QBrush( obj->background () );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
-  }
-}
+$method=|QBrush|background|
 
 /*
 bool scrollBarsEnabled () const
@@ -104,15 +79,7 @@ $method=|bool|scrollBarsEnabled|
 /*
 void setBackground ( const QBrush & background )
 */
-HB_FUNC_STATIC( QWORKSPACE_SETBACKGROUND )
-{
-  QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBackground ( *PQBRUSH(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBackground|const QBrush &
 
 /*
 void setScrollBarsEnabled ( bool enable )

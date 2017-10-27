@@ -119,6 +119,10 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDDOCKWIDGET )
   {
     HB_FUNC_EXEC( QMAINWINDOW_ADDDOCKWIDGET2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -154,6 +158,10 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBAR )
   {
     HB_FUNC_EXEC( QMAINWINDOW_ADDTOOLBAR3 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -179,14 +187,7 @@ $virtualMethod=|QMenu *|createPopupMenu|
 /*
 DockOptions dockOptions () const
 */
-HB_FUNC_STATIC( QMAINWINDOW_DOCKOPTIONS )
-{
-  QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->dockOptions () );
-  }
-}
+$method=|QMainWindow::DockOptions|dockOptions|
 
 /*
 Qt::DockWidgetArea dockWidgetArea ( QDockWidget * dockwidget ) const

@@ -78,15 +78,7 @@ $method=|QMenu *|menu|
 /*
 ToolButtonPopupMode popupMode () const
 */
-HB_FUNC_STATIC( QTOOLBUTTON_POPUPMODE )
-{
-  QToolButton * obj = (QToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    hb_retni( (int) obj->popupMode () );
-  }
-}
+$method=|QToolButton::ToolButtonPopupMode|popupMode|
 
 /*
 void setArrowType ( Qt::ArrowType type )

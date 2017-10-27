@@ -60,28 +60,12 @@ $method=|QString|buttonText|QWizard::WizardButton
 /*
 virtual void cleanupPage ()
 */
-HB_FUNC_STATIC( QWIZARDPAGE_CLEANUPPAGE )
-{
-  QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->cleanupPage ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|cleanupPage|
 
 /*
 virtual void initializePage ()
 */
-HB_FUNC_STATIC( QWIZARDPAGE_INITIALIZEPAGE )
-{
-  QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->initializePage ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|initializePage|
 
 /*
 bool isCommitPage () const
@@ -106,30 +90,12 @@ $virtualMethod=|int|nextId|
 /*
 QPixmap pixmap ( QWizard::WizardPixmap which ) const
 */
-HB_FUNC_STATIC( QWIZARDPAGE_PIXMAP )
-{
-  QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    QPixmap * ptr = new QPixmap( obj->pixmap ( (QWizard::WizardPixmap) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
-  }
-}
+$method=|QPixmap|pixmap|QWizard::WizardPixmap
 
 /*
 void setButtonText ( QWizard::WizardButton which, const QString & text )
 */
-HB_FUNC_STATIC( QWIZARDPAGE_SETBUTTONTEXT )
-{
-  QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setButtonText ( (QWizard::WizardButton) par1, PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setButtonText|QWizard::WizardButton,const QString &
 
 /*
 void setCommitPage ( bool commitPage )

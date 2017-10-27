@@ -182,14 +182,7 @@ $method=|QString|anchorAt|const QPoint &
 /*
 AutoFormatting autoFormatting () const
 */
-HB_FUNC_STATIC( QTEXTEDIT_AUTOFORMATTING )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->autoFormatting () );
-  }
-}
+$method=|QTextEdit::AutoFormatting|autoFormatting|
 
 /*
 bool canPaste () const
@@ -218,6 +211,10 @@ HB_FUNC_STATIC( QTEXTEDIT_CREATESTANDARDCONTEXTMENU )
   else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
     HB_FUNC_EXEC( QTEXTEDIT_CREATESTANDARDCONTEXTMENU2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -258,6 +255,10 @@ HB_FUNC_STATIC( QTEXTEDIT_CURSORRECT )
   else if( ISNUMPAR(0) )
   {
     HB_FUNC_EXEC( QTEXTEDIT_CURSORRECT2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -329,14 +330,7 @@ $method=|int|lineWrapColumnOrWidth|
 /*
 LineWrapMode lineWrapMode () const
 */
-HB_FUNC_STATIC( QTEXTEDIT_LINEWRAPMODE )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->lineWrapMode () );
-  }
-}
+$method=|QTextEdit::LineWrapMode|lineWrapMode|
 
 /*
 virtual QVariant loadResource ( int type, const QUrl & name )

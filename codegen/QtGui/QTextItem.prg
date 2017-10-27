@@ -59,14 +59,7 @@ $method=|QFont|font|
 /*
 RenderFlags renderFlags () const
 */
-HB_FUNC_STATIC( QTEXTITEM_RENDERFLAGS )
-{
-  QTextItem * obj = (QTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->renderFlags () );
-  }
-}
+$method=|QTextItem::RenderFlags|renderFlags|
 
 /*
 QString text () const

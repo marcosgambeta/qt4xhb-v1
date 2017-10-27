@@ -134,28 +134,12 @@ $deleteMethod
 /*
 void beginLayout ()
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_BEGINLAYOUT )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->beginLayout ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|beginLayout|
 
 /*
 QRectF boundingRect () const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_BOUNDINGRECT )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->boundingRect () );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$method=|QRectF|boundingRect|
 
 /*
 bool cacheEnabled () const
@@ -165,82 +149,32 @@ $method=|bool|cacheEnabled|
 /*
 void clearAdditionalFormats ()
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_CLEARADDITIONALFORMATS )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clearAdditionalFormats ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clearAdditionalFormats|
 
 /*
 void clearLayout ()
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_CLEARLAYOUT )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clearLayout ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clearLayout|
 
 /*
 QTextLine createLine ()
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_CREATELINE )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextLine * ptr = new QTextLine( obj->createLine () );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTLINE" );
-  }
-}
+$method=|QTextLine|createLine|
 
 /*
 Qt::CursorMoveStyle cursorMoveStyle () const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_CURSORMOVESTYLE )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->cursorMoveStyle () );
-  }
-}
+$method=|Qt::CursorMoveStyle|cursorMoveStyle|
 
 /*
 void drawCursor ( QPainter * painter, const QPointF & position, int cursorPosition, int width ) const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_DRAWCURSOR1 )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par3 = hb_parni(3);
-    int par4 = hb_parni(4);
-    obj->drawCursor ( PQPAINTER(1), *PQPOINTF(2), par3, par4 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|drawCursor,drawCursor1|QPainter *,const QPointF &,int,int
 
 /*
 void drawCursor ( QPainter * painter, const QPointF & position, int cursorPosition ) const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_DRAWCURSOR2 )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par3 = hb_parni(3);
-    obj->drawCursor ( PQPAINTER(1), *PQPOINTF(2), par3 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|drawCursor,drawCursor2|QPainter *,const QPointF &,int
 
 //[1]void drawCursor ( QPainter * painter, const QPointF & position, int cursorPosition, int width ) const
 //[2]void drawCursor ( QPainter * painter, const QPointF & position, int cursorPosition ) const
@@ -255,33 +189,21 @@ HB_FUNC_STATIC( QTEXTLAYOUT_DRAWCURSOR )
   {
     HB_FUNC_EXEC( QTEXTLAYOUT_DRAWCURSOR2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
 void endLayout ()
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_ENDLAYOUT )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->endLayout ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|endLayout|
 
 /*
 QFont font () const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_FONT )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QFont * ptr = new QFont( obj->font () );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
-  }
-}
+$method=|QFont|font|
 
 /*
 QList<QGlyphRun> glyphRuns () const
@@ -289,6 +211,7 @@ QList<QGlyphRun> glyphRuns () const
 HB_FUNC_STATIC( QTEXTLAYOUT_GLYPHRUNS )
 {
   QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QGlyphRun> list = obj->glyphRuns ();

@@ -51,27 +51,12 @@ $deleteMethod
 /*
 virtual Qt::Orientations expandingDirections () const
 */
-HB_FUNC_STATIC( QWIDGETITEM_EXPANDINGDIRECTIONS )
-{
-  QWidgetItem * obj = (QWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->expandingDirections () );
-  }
-}
+$virtualMethod=|Qt::Orientations|expandingDirections|
 
 /*
 virtual QRect geometry () const
 */
-HB_FUNC_STATIC( QWIDGETITEM_GEOMETRY )
-{
-  QWidgetItem * obj = (QWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->geometry () );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$virtualMethod=|QRect|geometry|
 
 /*
 virtual bool hasHeightForWidth () const
@@ -91,66 +76,26 @@ $virtualMethod=|bool|isEmpty|
 /*
 virtual QSize maximumSize () const
 */
-HB_FUNC_STATIC( QWIDGETITEM_MAXIMUMSIZE )
-{
-  QWidgetItem * obj = (QWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->maximumSize () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|maximumSize|
 
 /*
 virtual QSize minimumSize () const
 */
-HB_FUNC_STATIC( QWIDGETITEM_MINIMUMSIZE )
-{
-  QWidgetItem * obj = (QWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->minimumSize () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|minimumSize|
 
 /*
 virtual void setGeometry ( const QRect & rect )
 */
-HB_FUNC_STATIC( QWIDGETITEM_SETGEOMETRY )
-{
-  QWidgetItem * obj = (QWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setGeometry ( *PQRECT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|setGeometry|const QRect &
 
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC_STATIC( QWIDGETITEM_SIZEHINT )
-{
-  QWidgetItem * obj = (QWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|sizeHint|
 
 /*
 virtual QWidget * widget ()
 */
-HB_FUNC_STATIC( QWIDGETITEM_WIDGET )
-{
-  QWidgetItem * obj = (QWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->widget ();
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$virtualMethod=|QWidget *|widget|
 
 #pragma ENDDUMP

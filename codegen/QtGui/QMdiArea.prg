@@ -71,14 +71,7 @@ $deleteMethod
 /*
 WindowOrder activationOrder () const
 */
-HB_FUNC_STATIC( QMDIAREA_ACTIVATIONORDER )
-{
-  QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->activationOrder () );
-  }
-}
+$method=|QMdiArea::WindowOrder|activationOrder|
 
 /*
 QMdiSubWindow * activeSubWindow () const
@@ -208,14 +201,7 @@ $method=|bool|testOption|QMdiArea::AreaOption
 /*
 ViewMode viewMode () const
 */
-HB_FUNC_STATIC( QMDIAREA_VIEWMODE )
-{
-  QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->viewMode () );
-  }
-}
+$method=|QMdiArea::ViewMode|viewMode|
 
 /*
 virtual QSize minimumSizeHint () const

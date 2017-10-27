@@ -100,27 +100,12 @@ $method=|QStringList|anchorNames|
 /*
 QFont font () const
 */
-HB_FUNC_STATIC( QTEXTCHARFORMAT_FONT )
-{
-  QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QFont * ptr = new QFont( obj->font () );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
-  }
-}
+$method=|QFont|font|
 
 /*
 QFont::Capitalization fontCapitalization () const
 */
-HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTCAPITALIZATION )
-{
-  QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->fontCapitalization () );
-  }
-}
+$method=|QFont::Capitalization|fontCapitalization|
 
 /*
 QString fontFamily () const
@@ -135,14 +120,7 @@ $method=|bool|fontFixedPitch|
 /*
 QFont::HintingPreference fontHintingPreference () const
 */
-HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTHINTINGPREFERENCE )
-{
-  QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->fontHintingPreference () );
-  }
-}
+$method=|QFont::HintingPreference|fontHintingPreference|
 
 /*
 bool fontItalic () const
@@ -177,26 +155,12 @@ $method=|bool|fontStrikeOut|
 /*
 QFont::StyleHint fontStyleHint () const
 */
-HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTYLEHINT )
-{
-  QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->fontStyleHint () );
-  }
-}
+$method=|QFont::StyleHint|fontStyleHint|
 
 /*
 QFont::StyleStrategy fontStyleStrategy () const
 */
-HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTYLESTRATEGY )
-{
-  QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->fontStyleStrategy () );
-  }
-}
+$method=|QFont::StyleStrategy|fontStyleStrategy|
 
 /*
 bool fontUnderline () const
@@ -361,25 +325,11 @@ $method=|QColor|underlineColor|
 /*
 UnderlineStyle underlineStyle () const
 */
-HB_FUNC_STATIC( QTEXTCHARFORMAT_UNDERLINESTYLE )
-{
-  QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->underlineStyle () );
-  }
-}
+$method=|QTextCharFormat::UnderlineStyle|underlineStyle|
 
 /*
 VerticalAlignment verticalAlignment () const
 */
-HB_FUNC_STATIC( QTEXTCHARFORMAT_VERTICALALIGNMENT )
-{
-  QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->verticalAlignment () );
-  }
-}
+$method=|QTextCharFormat::VerticalAlignment|verticalAlignment|
 
 #pragma ENDDUMP

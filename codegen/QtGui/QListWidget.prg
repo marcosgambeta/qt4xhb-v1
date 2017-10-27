@@ -95,16 +95,7 @@ $method=|void|addItem,addItem1|const QString &
 /*
 void addItem ( QListWidgetItem * item )
 */
-HB_FUNC_STATIC( QLISTWIDGET_ADDITEM2 )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QListWidgetItem * par1 = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addItem ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addItem,addItem2|QListWidgetItem *
 
 //[1]void addItem ( const QString & label )
 //[2]void addItem ( QListWidgetItem * item )
@@ -119,34 +110,21 @@ HB_FUNC_STATIC( QLISTWIDGET_ADDITEM )
   {
     HB_FUNC_EXEC( QLISTWIDGET_ADDITEM2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
 void addItems ( const QStringList & labels )
 */
-HB_FUNC_STATIC( QLISTWIDGET_ADDITEMS )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->addItems ( PQSTRINGLIST(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addItems|const QStringList &
 
 /*
 void closePersistentEditor ( QListWidgetItem * item )
 */
-HB_FUNC_STATIC( QLISTWIDGET_CLOSEPERSISTENTEDITOR )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QListWidgetItem * par1 = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->closePersistentEditor ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|closePersistentEditor|QListWidgetItem *
 
 /*
 int count () const
@@ -156,15 +134,7 @@ $method=|int|count|
 /*
 QListWidgetItem * currentItem () const
 */
-HB_FUNC_STATIC( QLISTWIDGET_CURRENTITEM )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QListWidgetItem * ptr = obj->currentItem ();
-    _qt4xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
-  }
-}
+$method=|QListWidgetItem *|currentItem|
 
 /*
 int currentRow () const
@@ -174,16 +144,7 @@ $method=|int|currentRow|
 /*
 void editItem ( QListWidgetItem * item )
 */
-HB_FUNC_STATIC( QLISTWIDGET_EDITITEM )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QListWidgetItem * par1 = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->editItem ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|editItem|QListWidgetItem *
 
 /*
 QList<QListWidgetItem *> findItems ( const QString & text, Qt::MatchFlags flags ) const
@@ -191,6 +152,7 @@ QList<QListWidgetItem *> findItems ( const QString & text, Qt::MatchFlags flags 
 HB_FUNC_STATIC( QLISTWIDGET_FINDITEMS )
 {
   QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     int par2 = hb_parni(2);
@@ -232,29 +194,12 @@ HB_FUNC_STATIC( QLISTWIDGET_FINDITEMS )
 /*
 void insertItem ( int row, QListWidgetItem * item )
 */
-HB_FUNC_STATIC( QLISTWIDGET_INSERTITEM1 )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QListWidgetItem * par2 = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->insertItem ( PINT(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|insertItem,insertItem1|int,QListWidgetItem *
 
 /*
 void insertItem ( int row, const QString & label )
 */
-HB_FUNC_STATIC( QLISTWIDGET_INSERTITEM2 )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->insertItem ( PINT(1), PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|insertItem,insertItem2|int,const QString &
 
 //[1]void insertItem ( int row, QListWidgetItem * item )
 //[2]void insertItem ( int row, const QString & label )
@@ -269,20 +214,16 @@ HB_FUNC_STATIC( QLISTWIDGET_INSERTITEM )
   {
     HB_FUNC_EXEC( QLISTWIDGET_INSERTITEM2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
 void insertItems ( int row, const QStringList & labels )
 */
-HB_FUNC_STATIC( QLISTWIDGET_INSERTITEMS )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->insertItems ( PINT(1), PQSTRINGLIST(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|insertItems|int,const QStringList &
 
 /*
 bool isSortingEnabled () const
@@ -316,6 +257,10 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMAT )
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
     HB_FUNC_EXEC( QLISTWIDGET_ITEMAT2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -406,6 +351,10 @@ HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTITEM )
   {
     HB_FUNC_EXEC( QLISTWIDGET_SETCURRENTITEM2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -430,6 +379,10 @@ HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTROW )
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
     HB_FUNC_EXEC( QLISTWIDGET_SETCURRENTROW2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

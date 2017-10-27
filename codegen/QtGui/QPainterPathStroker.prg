@@ -65,27 +65,12 @@ $deleteMethod
 /*
 Qt::PenCapStyle capStyle () const
 */
-HB_FUNC_STATIC( QPAINTERPATHSTROKER_CAPSTYLE )
-{
-  QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->capStyle () );
-  }
-}
+$method=|Qt::PenCapStyle|capStyle|
 
 /*
 QPainterPath createStroke ( const QPainterPath & path ) const
 */
-HB_FUNC_STATIC( QPAINTERPATHSTROKER_CREATESTROKE )
-{
-  QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPainterPath * ptr = new QPainterPath( obj->createStroke ( *PQPAINTERPATH(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
-  }
-}
+$method=|QPainterPath|createStroke|const QPainterPath &
 
 /*
 qreal curveThreshold () const
@@ -103,6 +88,7 @@ QVector<qreal> dashPattern () const
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_DASHPATTERN )
 {
   QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QVector<qreal> list = obj->dashPattern ();
@@ -122,14 +108,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_DASHPATTERN )
 /*
 Qt::PenJoinStyle joinStyle () const
 */
-HB_FUNC_STATIC( QPAINTERPATHSTROKER_JOINSTYLE )
-{
-  QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->joinStyle () );
-  }
-}
+$method=|Qt::PenJoinStyle|joinStyle|
 
 /*
 qreal miterLimit () const
@@ -139,16 +118,7 @@ $method=|qreal|miterLimit|
 /*
 void setCapStyle ( Qt::PenCapStyle style )
 */
-HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETCAPSTYLE )
-{
-  QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setCapStyle ( (Qt::PenCapStyle) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCapStyle|Qt::PenCapStyle
 
 /*
 void setCurveThreshold ( qreal threshold )
@@ -171,6 +141,7 @@ void setDashPattern ( const QVector<qreal> & dashPattern )
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHPATTERN2 )
 {
   QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QVector<qreal> par1;
@@ -185,6 +156,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHPATTERN2 )
     }
     obj->setDashPattern ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -200,6 +172,10 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHPATTERN )
   else if( ISNUMPAR(1) && ISARRAY(1) )
   {
     HB_FUNC_EXEC( QPAINTERPATHSTROKER_SETDASHPATTERN2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

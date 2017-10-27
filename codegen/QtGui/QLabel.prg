@@ -154,28 +154,12 @@ $method=|bool|openExternalLinks|
 /*
 const QPicture * picture () const
 */
-HB_FUNC_STATIC( QLABEL_PICTURE )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QPicture * ptr = obj->picture ();
-    _qt4xhb_createReturnClass ( ptr, "QPICTURE" );
-  }
-}
+$method=|const QPicture *|picture|
 
 /*
 const QPixmap * pixmap () const
 */
-HB_FUNC_STATIC( QLABEL_PIXMAP )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QPixmap * ptr = obj->pixmap ();
-    _qt4xhb_createReturnClass ( ptr, "QPIXMAP" );
-  }
-}
+$method=|const QPixmap *|pixmap|
 
 /*
 QString selectedText () const
@@ -296,6 +280,10 @@ HB_FUNC_STATIC( QLABEL_SETNUM )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
     HB_FUNC_EXEC( QLABEL_SETNUM2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

@@ -140,14 +140,7 @@ $method=|bool|collateCopies|
 /*
 ColorMode colorMode () const
 */
-HB_FUNC_STATIC( QPRINTER_COLORMODE )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->colorMode () );
-  }
-}
+$method=|QPrinter::ColorMode|colorMode|
 
 /*
 int copyCount () const
@@ -172,14 +165,7 @@ $method=|bool|doubleSidedPrinting|
 /*
 DuplexMode duplex () const
 */
-HB_FUNC_STATIC( QPRINTER_DUPLEX )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->duplex () );
-  }
-}
+$method=|QPrinter::DuplexMode|duplex|
 
 /*
 bool fontEmbeddingEnabled () const
@@ -209,14 +195,7 @@ $method=|bool|newPage|
 /*
 Orientation orientation () const
 */
-HB_FUNC_STATIC( QPRINTER_ORIENTATION )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->orientation () );
-  }
-}
+$method=|QPrinter::Orientation|orientation|
 
 /*
 QString outputFileName () const
@@ -226,26 +205,12 @@ $method=|QString|outputFileName|
 /*
 OutputFormat outputFormat () const
 */
-HB_FUNC_STATIC( QPRINTER_OUTPUTFORMAT )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->outputFormat () );
-  }
-}
+$method=|QPrinter::OutputFormat|outputFormat|
 
 /*
 PageOrder pageOrder () const
 */
-HB_FUNC_STATIC( QPRINTER_PAGEORDER )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->pageOrder () );
-  }
-}
+$method=|QPrinter::PageOrder|pageOrder|
 
 /*
 QRect pageRect () const
@@ -269,6 +234,10 @@ HB_FUNC_STATIC( QPRINTER_PAGERECT )
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
     HB_FUNC_EXEC( QPRINTER_PAGERECT2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -295,19 +264,16 @@ HB_FUNC_STATIC( QPRINTER_PAPERRECT )
   {
     HB_FUNC_EXEC( QPRINTER_PAPERRECT2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
 PaperSize paperSize () const
 */
-HB_FUNC_STATIC( QPRINTER_PAPERSIZE1 )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->paperSize () );
-  }
-}
+$method=|QPrinter::PaperSize|paperSize,paperSize1|
 
 /*
 QSizeF paperSize ( Unit unit ) const
@@ -327,19 +293,16 @@ HB_FUNC_STATIC( QPRINTER_PAPERSIZE )
   {
     HB_FUNC_EXEC( QPRINTER_PAPERSIZE2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
 PaperSource paperSource () const
 */
-HB_FUNC_STATIC( QPRINTER_PAPERSOURCE )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->paperSource () );
-  }
-}
+$method=|QPrinter::PaperSource|paperSource|
 
 /*
 QPrintEngine * printEngine () const
@@ -354,14 +317,7 @@ $method=|QString|printProgram|
 /*
 PrintRange printRange () const
 */
-HB_FUNC_STATIC( QPRINTER_PRINTRANGE )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->printRange () );
-  }
-}
+$method=|QPrinter::PrintRange|printRange|
 
 /*
 QString printerName () const
@@ -371,14 +327,7 @@ $method=|QString|printerName|
 /*
 PrinterState printerState () const
 */
-HB_FUNC_STATIC( QPRINTER_PRINTERSTATE )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->printerState () );
-  }
-}
+$method=|QPrinter::PrinterState|printerState|
 
 /*
 int resolution () const
@@ -482,6 +431,10 @@ HB_FUNC_STATIC( QPRINTER_SETPAPERSIZE )
   else if( ISNUMPAR(2) && ISQSIZEF(1) && ISNUM(2) )
   {
     HB_FUNC_EXEC( QPRINTER_SETPAPERSIZE2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

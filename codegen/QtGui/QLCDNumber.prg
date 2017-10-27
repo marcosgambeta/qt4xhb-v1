@@ -110,6 +110,10 @@ HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW )
   {
     HB_FUNC_EXEC( QLCDNUMBER_CHECKOVERFLOW1 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -125,26 +129,12 @@ $method=|int|intValue|
 /*
 Mode mode () const
 */
-HB_FUNC_STATIC( QLCDNUMBER_MODE )
-{
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->mode () );
-  }
-}
+$method=|QLCDNumber::Mode|mode|
 
 /*
 SegmentStyle segmentStyle () const
 */
-HB_FUNC_STATIC( QLCDNUMBER_SEGMENTSTYLE )
-{
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->segmentStyle () );
-  }
-}
+$method=|QLCDNumber::SegmentStyle|segmentStyle|
 
 /*
 void setDigitCount ( int numDigits )
@@ -154,30 +144,12 @@ $method=|void|setDigitCount|int
 /*
 void setMode ( Mode )
 */
-HB_FUNC_STATIC( QLCDNUMBER_SETMODE )
-{
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setMode ( (QLCDNumber::Mode) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMode|QLCDNumber::Mode
 
 /*
 void setSegmentStyle ( SegmentStyle )
 */
-HB_FUNC_STATIC( QLCDNUMBER_SETSEGMENTSTYLE )
-{
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setSegmentStyle ( (QLCDNumber::SegmentStyle) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSegmentStyle|QLCDNumber::SegmentStyle
 
 /*
 bool smallDecimalPoint () const
@@ -224,6 +196,10 @@ HB_FUNC_STATIC( QLCDNUMBER_DISPLAY )
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
     HB_FUNC_EXEC( QLCDNUMBER_DISPLAY2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

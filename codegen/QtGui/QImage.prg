@@ -263,6 +263,7 @@ QVector<QRgb> colorTable () const
 HB_FUNC_STATIC( QIMAGE_COLORTABLE )
 {
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QVector<QRgb> list = obj->colorTable ();
@@ -290,19 +291,20 @@ QImage convertToFormat ( Format format, const QVector<QRgb> & colorTable, Qt::Im
 HB_FUNC_STATIC( QIMAGE_CONVERTTOFORMAT2 )
 {
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     int par1 = hb_parni(1);
-QVector<QRgb> par2;
-PHB_ITEM aValues2 = hb_param(2, HB_IT_ARRAY);
-int i2;
-int nLen2 = hb_arrayLen(aValues2);
-int temp2;
-for (i2=0;i2<nLen2;i2++)
-{
-temp2 = hb_arrayGetNI(aValues2, i2+1);
-par2 << temp2;
-}
+    QVector<QRgb> par2;
+    PHB_ITEM aValues2 = hb_param(2, HB_IT_ARRAY);
+    int i2;
+    int nLen2 = hb_arrayLen(aValues2);
+    int temp2;
+    for (i2=0;i2<nLen2;i2++)
+    {
+      temp2 = hb_arrayGetNI(aValues2, i2+1);
+      par2 << temp2;
+    }
     int par3 = ISNIL(3)? (int) Qt::AutoColor : hb_parni(3);
     QImage * ptr = new QImage( obj->convertToFormat ( (QImage::Format) par1, par2, (Qt::ImageConversionFlags) par3 ) );
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
@@ -321,6 +323,10 @@ HB_FUNC_STATIC( QIMAGE_CONVERTTOFORMAT )
   else if( ISBETWEEN(1,3) && ISNUM(1) && ISARRAY(2) && (ISNUM(3)||ISNIL(3)) )
   {
     HB_FUNC_EXEC( QIMAGE_CONVERTTOFORMAT2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -346,6 +352,10 @@ HB_FUNC_STATIC( QIMAGE_COPY )
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
     HB_FUNC_EXEC( QIMAGE_COPY2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -409,6 +419,10 @@ HB_FUNC_STATIC( QIMAGE_FILL )
   {
     HB_FUNC_EXEC( QIMAGE_FILL3 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -464,6 +478,10 @@ HB_FUNC_STATIC( QIMAGE_LOAD )
   {
     HB_FUNC_EXEC( QIMAGE_LOAD2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -488,6 +506,10 @@ HB_FUNC_STATIC( QIMAGE_LOADFROMDATA )
   else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISCHAR(2)||ISNIL(2)) )
   {
     HB_FUNC_EXEC( QIMAGE_LOADFROMDATA2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -524,6 +546,10 @@ HB_FUNC_STATIC( QIMAGE_PIXEL )
   {
     HB_FUNC_EXEC( QIMAGE_PIXEL2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -548,6 +574,10 @@ HB_FUNC_STATIC( QIMAGE_PIXELINDEX )
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
     HB_FUNC_EXEC( QIMAGE_PIXELINDEX2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -584,6 +614,10 @@ HB_FUNC_STATIC( QIMAGE_SAVE )
   {
     HB_FUNC_EXEC( QIMAGE_SAVE2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -608,6 +642,10 @@ HB_FUNC_STATIC( QIMAGE_SCALED )
   else if( ISBETWEEN(1,4) && ISNUM(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
     HB_FUNC_EXEC( QIMAGE_SCALED2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -646,20 +684,22 @@ void setColorTable ( const QVector<QRgb> colors )
 HB_FUNC_STATIC( QIMAGE_SETCOLORTABLE )
 {
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-QVector<QRgb> par1;
-PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aValues1);
-int temp1;
-for (i1=0;i1<nLen1;i1++)
-{
-temp1 = hb_arrayGetNI(aValues1, i1+1);
-par1 << temp1;
-}
+    QVector<QRgb> par1;
+    PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aValues1);
+    int temp1;
+    for (i1=0;i1<nLen1;i1++)
+    {
+      temp1 = hb_arrayGetNI(aValues1, i1+1);
+      par1 << temp1;
+    }
     obj->setColorTable ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -700,6 +740,10 @@ HB_FUNC_STATIC( QIMAGE_SETPIXEL )
   else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
   {
     HB_FUNC_EXEC( QIMAGE_SETPIXEL2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -751,6 +795,10 @@ HB_FUNC_STATIC( QIMAGE_TRANSFORMED )
   {
     HB_FUNC_EXEC( QIMAGE_TRANSFORMED2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -775,6 +823,10 @@ HB_FUNC_STATIC( QIMAGE_VALID )
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
     HB_FUNC_EXEC( QIMAGE_VALID2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -806,6 +858,10 @@ HB_FUNC_STATIC( QIMAGE_FROMDATA )
   {
     HB_FUNC_EXEC( QIMAGE_FROMDATA2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -830,6 +886,10 @@ HB_FUNC_STATIC( QIMAGE_TRUEMATRIX )
   else if( ISNUMPAR(3) && ISQTRANSFORM(1) && ISNUM(2) && ISNUM(3) )
   {
     HB_FUNC_EXEC( QIMAGE_TRUEMATRIX2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

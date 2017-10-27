@@ -62,29 +62,12 @@ $deleteMethod
 /*
 QUndoStack * activeStack () const
 */
-HB_FUNC_STATIC( QUNDOGROUP_ACTIVESTACK )
-{
-  QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QUndoStack * ptr = obj->activeStack ();
-    _qt4xhb_createReturnClass ( ptr, "QUNDOSTACK" );
-  }
-}
+$method=|QUndoStack *|activeStack|
 
 /*
 void addStack ( QUndoStack * stack )
 */
-HB_FUNC_STATIC( QUNDOGROUP_ADDSTACK )
-{
-  QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QUndoStack * par1 = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addStack ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addStack|QUndoStack *
 
 /*
 bool canRedo () const
@@ -99,28 +82,12 @@ $method=|bool|canUndo|
 /*
 QAction * createRedoAction ( QObject * parent, const QString & prefix = QString() ) const
 */
-HB_FUNC_STATIC( QUNDOGROUP_CREATEREDOACTION )
-{
-  QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->createRedoAction ( PQOBJECT(1), OPQSTRING(2,QString()) );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|createRedoAction|QObject *,const QString &=QString()
 
 /*
 QAction * createUndoAction ( QObject * parent, const QString & prefix = QString() ) const
 */
-HB_FUNC_STATIC( QUNDOGROUP_CREATEUNDOACTION )
-{
-  QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->createUndoAction ( PQOBJECT(1), OPQSTRING(2,QString()) );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|createUndoAction|QObject *,const QString &=QString()
 
 /*
 bool isClean () const
@@ -135,16 +102,7 @@ $method=|QString|redoText|
 /*
 void removeStack ( QUndoStack * stack )
 */
-HB_FUNC_STATIC( QUNDOGROUP_REMOVESTACK )
-{
-  QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QUndoStack * par1 = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->removeStack ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeStack|QUndoStack *
 
 /*
 QList<QUndoStack *> stacks () const
@@ -152,6 +110,7 @@ QList<QUndoStack *> stacks () const
 HB_FUNC_STATIC( QUNDOGROUP_STACKS )
 {
   QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QUndoStack *> list = obj->stacks ();
@@ -197,41 +156,16 @@ $method=|QString|undoText|
 /*
 void redo ()
 */
-HB_FUNC_STATIC( QUNDOGROUP_REDO )
-{
-  QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->redo ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|redo|
 
 /*
 void setActiveStack ( QUndoStack * stack )
 */
-HB_FUNC_STATIC( QUNDOGROUP_SETACTIVESTACK )
-{
-  QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QUndoStack * par1 = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setActiveStack ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setActiveStack|QUndoStack *
 
 /*
 void undo ()
 */
-HB_FUNC_STATIC( QUNDOGROUP_UNDO )
-{
-  QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->undo ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|undo|
 
 #pragma ENDDUMP

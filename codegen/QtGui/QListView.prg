@@ -85,27 +85,12 @@ $method=|void|clearPropertyFlags|
 /*
 Flow flow () const
 */
-HB_FUNC_STATIC( QLISTVIEW_FLOW )
-{
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->flow () );
-  }
-}
+$method=|QListView::Flow|flow|
 
 /*
 QSize gridSize () const
 */
-HB_FUNC_STATIC( QLISTVIEW_GRIDSIZE )
-{
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->gridSize () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|gridSize|
 
 /*
 bool isRowHidden ( int row ) const
@@ -125,14 +110,7 @@ $method=|bool|isWrapping|
 /*
 LayoutMode layoutMode () const
 */
-HB_FUNC_STATIC( QLISTVIEW_LAYOUTMODE )
-{
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->layoutMode () );
-  }
-}
+$method=|QListView::LayoutMode|layoutMode|
 
 /*
 int modelColumn () const
@@ -142,26 +120,12 @@ $method=|int|modelColumn|
 /*
 Movement movement () const
 */
-HB_FUNC_STATIC( QLISTVIEW_MOVEMENT )
-{
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->movement () );
-  }
-}
+$method=|QListView::Movement|movement|
 
 /*
 ResizeMode resizeMode () const
 */
-HB_FUNC_STATIC( QLISTVIEW_RESIZEMODE )
-{
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->resizeMode () );
-  }
-}
+$method=|QListView::ResizeMode|resizeMode|
 
 /*
 void setBatchSize ( int batchSize )
@@ -246,14 +210,7 @@ $method=|bool|uniformItemSizes|
 /*
 ViewMode viewMode () const
 */
-HB_FUNC_STATIC( QLISTVIEW_VIEWMODE )
-{
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->viewMode () );
-  }
-}
+$method=|QListView::ViewMode|viewMode|
 
 /*
 bool wordWrap () const

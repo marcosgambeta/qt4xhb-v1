@@ -43,68 +43,27 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW )
 /*
 void open ( QObject * receiver, const char * member )
 */
-HB_FUNC_STATIC( QPAGESETUPDIALOG_OPEN )
-{
-  QPageSetupDialog * obj = (QPageSetupDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->open ( PQOBJECT(1), (const char *) hb_parc(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|open|QObject *,const char *
 
 /*
 PageSetupDialogOptions options () const
 */
-HB_FUNC_STATIC( QPAGESETUPDIALOG_OPTIONS )
-{
-  QPageSetupDialog * obj = (QPageSetupDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->options () );
-  }
-}
+$method=|QPageSetupDialog::PageSetupDialogOptions|options|
 
 /*
 QPrinter * printer ()
 */
-HB_FUNC_STATIC( QPAGESETUPDIALOG_PRINTER )
-{
-  QPageSetupDialog * obj = (QPageSetupDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPrinter * ptr = obj->printer ();
-    _qt4xhb_createReturnClass ( ptr, "QPRINTER" );
-  }
-}
+$method=|QPrinter *|printer|
 
 /*
 void setOption ( PageSetupDialogOption option, bool on = true )
 */
-HB_FUNC_STATIC( QPAGESETUPDIALOG_SETOPTION )
-{
-  QPageSetupDialog * obj = (QPageSetupDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setOption ( (QPageSetupDialog::PageSetupDialogOption) par1, OPBOOL(2,true) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOption|QPageSetupDialog::PageSetupDialogOption,bool=true
 
 /*
 void setOptions ( PageSetupDialogOptions options )
 */
-HB_FUNC_STATIC( QPAGESETUPDIALOG_SETOPTIONS )
-{
-  QPageSetupDialog * obj = (QPageSetupDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setOptions ( (QPageSetupDialog::PageSetupDialogOptions) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOptions|QPageSetupDialog::PageSetupDialogOptions
 
 /*
 bool testOption ( PageSetupDialogOption option ) const

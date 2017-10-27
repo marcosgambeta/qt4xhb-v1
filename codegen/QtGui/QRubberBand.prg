@@ -45,28 +45,12 @@ $deleteMethod
 /*
 void move ( int x, int y )
 */
-HB_FUNC_STATIC( QRUBBERBAND_MOVE1 )
-{
-  QRubberBand * obj = (QRubberBand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->move ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|move,move1|int,int
 
 /*
 void move ( const QPoint & p )
 */
-HB_FUNC_STATIC( QRUBBERBAND_MOVE2 )
-{
-  QRubberBand * obj = (QRubberBand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->move ( *PQPOINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|move,move2|const QPoint &
 
 //[1]void move ( int x, int y )
 //[2]void move ( const QPoint & p )
@@ -81,33 +65,21 @@ HB_FUNC_STATIC( QRUBBERBAND_MOVE )
   {
     HB_FUNC_EXEC( QRUBBERBAND_MOVE2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
 void resize ( int width, int height )
 */
-HB_FUNC_STATIC( QRUBBERBAND_RESIZE1 )
-{
-  QRubberBand * obj = (QRubberBand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->resize ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|resize,resize1|int,int
 
 /*
 void resize ( const QSize & size )
 */
-HB_FUNC_STATIC( QRUBBERBAND_RESIZE2 )
-{
-  QRubberBand * obj = (QRubberBand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->resize ( *PQSIZE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|resize,resize2|const QSize &
 
 //[1]void resize ( int width, int height )
 //[2]void resize ( const QSize & size )
@@ -122,33 +94,21 @@ HB_FUNC_STATIC( QRUBBERBAND_RESIZE )
   {
     HB_FUNC_EXEC( QRUBBERBAND_RESIZE2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
 void setGeometry ( const QRect & rect )
 */
-HB_FUNC_STATIC( QRUBBERBAND_SETGEOMETRY1 )
-{
-  QRubberBand * obj = (QRubberBand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setGeometry ( *PQRECT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setGeometry,setGeometry1|const QRect &
 
 /*
 void setGeometry ( int x, int y, int width, int height )
 */
-HB_FUNC_STATIC( QRUBBERBAND_SETGEOMETRY2 )
-{
-  QRubberBand * obj = (QRubberBand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setGeometry ( PINT(1), PINT(2), PINT(3), PINT(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setGeometry,setGeometry2|int,int,int,int
 
 //[1]void setGeometry ( const QRect & rect )
 //[2]void setGeometry ( int x, int y, int width, int height )
@@ -163,18 +123,15 @@ HB_FUNC_STATIC( QRUBBERBAND_SETGEOMETRY )
   {
     HB_FUNC_EXEC( QRUBBERBAND_SETGEOMETRY2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
 Shape shape () const
 */
-HB_FUNC_STATIC( QRUBBERBAND_SHAPE )
-{
-  QRubberBand * obj = (QRubberBand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->shape () );
-  }
-}
+$method=|QRubberBand::Shape|shape|
 
 #pragma ENDDUMP

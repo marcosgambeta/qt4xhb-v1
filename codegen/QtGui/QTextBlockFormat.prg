@@ -59,14 +59,7 @@ $deleteMethod
 /*
 Qt::Alignment alignment () const
 */
-HB_FUNC_STATIC( QTEXTBLOCKFORMAT_ALIGNMENT )
-{
-  QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->alignment () );
-  }
-}
+$method=|Qt::Alignment|alignment|
 
 /*
 qreal bottomMargin () const
@@ -111,6 +104,10 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHT )
   {
     HB_FUNC_EXEC( QTEXTBLOCKFORMAT_LINEHEIGHT2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -126,14 +123,7 @@ $method=|bool|nonBreakableLines|
 /*
 PageBreakFlags pageBreakPolicy () const
 */
-HB_FUNC_STATIC( QTEXTBLOCKFORMAT_PAGEBREAKPOLICY )
-{
-  QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->pageBreakPolicy () );
-  }
-}
+$method=|QTextFormat::PageBreakFlags|pageBreakPolicy|
 
 /*
 qreal rightMargin () const
@@ -143,16 +133,7 @@ $method=|qreal|rightMargin|
 /*
 void setAlignment ( Qt::Alignment alignment )
 */
-HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETALIGNMENT )
-{
-  QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setAlignment ( (Qt::Alignment) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAlignment|Qt::Alignment
 
 /*
 void setBottomMargin ( qreal margin )

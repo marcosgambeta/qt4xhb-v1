@@ -168,67 +168,27 @@ $method=|bool|centerOnScroll|
 /*
 QMenu * createStandardContextMenu ()
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_CREATESTANDARDCONTEXTMENU )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QMenu * ptr = obj->createStandardContextMenu ();
-    _qt4xhb_createReturnClass ( ptr, "QMENU" );
-  }
-}
+$method=|QMenu *|createStandardContextMenu|
 
 /*
 QTextCharFormat currentCharFormat () const
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_CURRENTCHARFORMAT )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextCharFormat * ptr = new QTextCharFormat( obj->currentCharFormat () );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );
-  }
-}
+$method=|QTextCharFormat|currentCharFormat|
 
 /*
 QTextCursor cursorForPosition ( const QPoint & pos ) const
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_CURSORFORPOSITION )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextCursor * ptr = new QTextCursor( obj->cursorForPosition ( *PQPOINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
-  }
-}
+$method=|QTextCursor|cursorForPosition|const QPoint &
 
 /*
 QRect cursorRect ( const QTextCursor & cursor ) const
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_CURSORRECT1 )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->cursorRect ( *PQTEXTCURSOR(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$method=|QRect|cursorRect,cursorRect1|const QTextCursor &
 
 /*
 QRect cursorRect () const
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_CURSORRECT2 )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->cursorRect () );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$method=|QRect|cursorRect,cursorRect2|
 
 //[1]QRect cursorRect ( const QTextCursor & cursor ) const
 //[2]QRect cursorRect () const
@@ -243,6 +203,10 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CURSORRECT )
   {
     HB_FUNC_EXEC( QPLAINTEXTEDIT_CURSORRECT2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -253,15 +217,7 @@ $method=|int|cursorWidth|
 /*
 QTextDocument * document () const
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_DOCUMENT )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextDocument * ptr = obj->document ();
-    _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );
-  }
-}
+$method=|QTextDocument *|document|
 
 /*
 QString documentTitle () const
@@ -271,15 +227,7 @@ $method=|QString|documentTitle|
 /*
 void ensureCursorVisible ()
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_ENSURECURSORVISIBLE )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->ensureCursorVisible ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|ensureCursorVisible|
 
 /*
 bool find ( const QString & exp, QTextDocument::FindFlags options = 0 )
@@ -299,27 +247,12 @@ $method=|bool|isUndoRedoEnabled|
 /*
 LineWrapMode lineWrapMode () const
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_LINEWRAPMODE )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->lineWrapMode () );
-  }
-}
+$method=|QPlainTextEdit::LineWrapMode|lineWrapMode|
 
 /*
 virtual QVariant loadResource ( int type, const QUrl & name )
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_LOADRESOURCE )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->loadResource ( PINT(1), *PQURL(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$virtualMethod=|QVariant|loadResource|int,const QUrl &
 
 /*
 int maximumBlockCount () const
@@ -329,30 +262,12 @@ $method=|int|maximumBlockCount|
 /*
 void mergeCurrentCharFormat ( const QTextCharFormat & modifier )
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_MERGECURRENTCHARFORMAT )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->mergeCurrentCharFormat ( *PQTEXTCHARFORMAT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|mergeCurrentCharFormat|const QTextCharFormat &
 
 /*
 void moveCursor ( QTextCursor::MoveOperation operation, QTextCursor::MoveMode mode = QTextCursor::MoveAnchor )
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_MOVECURSOR )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    int par2 = ISNIL(2)? (int) QTextCursor::MoveAnchor : hb_parni(2);
-    obj->moveCursor ( (QTextCursor::MoveOperation) par1, (QTextCursor::MoveMode) par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|moveCursor|QTextCursor::MoveOperation,QTextCursor::MoveMode=QTextCursor::MoveAnchor
 
 /*
 bool overwriteMode () const
@@ -362,16 +277,7 @@ $method=|bool|overwriteMode|
 /*
 void print ( QPrinter * printer ) const
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_PRINT )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPrinter * par1 = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->print ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|print|QPrinter *
 
 /*
 void setBackgroundVisible ( bool visible )

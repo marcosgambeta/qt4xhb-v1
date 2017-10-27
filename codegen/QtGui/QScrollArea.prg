@@ -51,67 +51,27 @@ $deleteMethod
 /*
 Qt::Alignment alignment () const
 */
-HB_FUNC_STATIC( QSCROLLAREA_ALIGNMENT )
-{
-  QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->alignment () );
-  }
-}
+$method=|Qt::Alignment|alignment|
 
 /*
 void ensureVisible ( int x, int y, int xmargin = 50, int ymargin = 50 )
 */
-HB_FUNC_STATIC( QSCROLLAREA_ENSUREVISIBLE )
-{
-  QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->ensureVisible ( PINT(1), PINT(2), OPINT(3,50), OPINT(4,50) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|ensureVisible|int,int,int=50,int=50
 
 /*
 void ensureWidgetVisible ( QWidget * childWidget, int xmargin = 50, int ymargin = 50 )
 */
-HB_FUNC_STATIC( QSCROLLAREA_ENSUREWIDGETVISIBLE )
-{
-  QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->ensureWidgetVisible ( PQWIDGET(1), OPINT(2,50), OPINT(3,50) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|ensureWidgetVisible|QWidget *,int=50,int=50
 
 /*
 void setAlignment ( Qt::Alignment )
 */
-HB_FUNC_STATIC( QSCROLLAREA_SETALIGNMENT )
-{
-  QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setAlignment ( (Qt::Alignment) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAlignment|Qt::Alignment
 
 /*
 void setWidget ( QWidget * widget )
 */
-HB_FUNC_STATIC( QSCROLLAREA_SETWIDGET )
-{
-  QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setWidget ( PQWIDGET(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWidget|QWidget *
 
 /*
 void setWidgetResizable ( bool resizable )
@@ -121,28 +81,12 @@ $method=|void|setWidgetResizable|bool
 /*
 QWidget * takeWidget ()
 */
-HB_FUNC_STATIC( QSCROLLAREA_TAKEWIDGET )
-{
-  QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->takeWidget ();
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|takeWidget|
 
 /*
 QWidget * widget () const
 */
-HB_FUNC_STATIC( QSCROLLAREA_WIDGET )
-{
-  QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->widget ();
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|widget|
 
 /*
 bool widgetResizable () const
@@ -157,14 +101,6 @@ $virtualMethod=|bool|focusNextPrevChild|bool
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC_STATIC( QSCROLLAREA_SIZEHINT )
-{
-  QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|sizeHint|
 
 #pragma ENDDUMP

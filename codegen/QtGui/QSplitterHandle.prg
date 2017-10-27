@@ -47,52 +47,21 @@ $method=|bool|opaqueResize|
 /*
 Qt::Orientation orientation () const
 */
-HB_FUNC_STATIC( QSPLITTERHANDLE_ORIENTATION )
-{
-  QSplitterHandle * obj = (QSplitterHandle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RENUM( obj->orientation () );
-  }
-}
+$method=|Qt::Orientation|orientation|
 
 /*
 void setOrientation ( Qt::Orientation orientation )
 */
-HB_FUNC_STATIC( QSPLITTERHANDLE_SETORIENTATION )
-{
-  QSplitterHandle * obj = (QSplitterHandle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setOrientation ( (Qt::Orientation) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOrientation|Qt::Orientation
 
 /*
 QSplitter * splitter () const
 */
-HB_FUNC_STATIC( QSPLITTERHANDLE_SPLITTER )
-{
-  QSplitterHandle * obj = (QSplitterHandle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSplitter * ptr = obj->splitter ();
-    _qt4xhb_createReturnClass ( ptr, "QSPLITTER" );
-  }
-}
+$method=|QSplitter *|splitter|
 
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC_STATIC( QSPLITTERHANDLE_SIZEHINT )
-{
-  QSplitterHandle * obj = (QSplitterHandle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|sizeHint|
 
 #pragma ENDDUMP

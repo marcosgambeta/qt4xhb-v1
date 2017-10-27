@@ -109,34 +109,21 @@ HB_FUNC_STATIC( QTABWIDGET_ADDTAB )
   {
     HB_FUNC_EXEC( QTABWIDGET_ADDTAB2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
 void clear ()
 */
-HB_FUNC_STATIC( QTABWIDGET_CLEAR )
-{
-  QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clear|
 
 /*
 QWidget * cornerWidget ( Qt::Corner corner = Qt::TopRightCorner ) const
 */
-HB_FUNC_STATIC( QTABWIDGET_CORNERWIDGET )
-{
-  QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = ISNIL(1)? (int) Qt::TopRightCorner : hb_parni(1);
-    QWidget * ptr = obj->cornerWidget ( (Qt::Corner) par1 );
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|cornerWidget|Qt::Corner=Qt::TopRightCorner
 
 /*
 int count () const
@@ -151,15 +138,7 @@ $method=|int|currentIndex|
 /*
 QWidget * currentWidget () const
 */
-HB_FUNC_STATIC( QTABWIDGET_CURRENTWIDGET )
-{
-  QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->currentWidget ();
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|currentWidget|
 
 /*
 bool documentMode () const
@@ -203,6 +182,10 @@ HB_FUNC_STATIC( QTABWIDGET_INSERTTAB )
   else if( ISNUMPAR(4) && ISNUM(1) && ISQWIDGET(2) && (ISQICON(3)||ISCHAR(3)) && ISCHAR(4) )
   {
     HB_FUNC_EXEC( QTABWIDGET_INSERTTAB2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -299,26 +282,12 @@ $method=|QIcon|tabIcon|int
 /*
 TabPosition tabPosition () const
 */
-HB_FUNC_STATIC( QTABWIDGET_TABPOSITION )
-{
-  QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->tabPosition () );
-  }
-}
+$method=|QTabWidget::TabPosition|tabPosition|
 
 /*
 TabShape tabShape () const
 */
-HB_FUNC_STATIC( QTABWIDGET_TABSHAPE )
-{
-  QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->tabShape () );
-  }
-}
+$method=|QTabWidget::TabShape|tabShape|
 
 /*
 QString tabText ( int index ) const

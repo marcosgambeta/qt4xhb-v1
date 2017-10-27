@@ -44,77 +44,27 @@ $deleteMethod
 /*
 virtual QSize actualSize ( const QSize & size, QIcon::Mode mode, QIcon::State state )
 */
-HB_FUNC_STATIC( QICONENGINE_ACTUALSIZE )
-{
-  QIconEngine * obj = (QIconEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    int par3 = hb_parni(3);
-    QSize * ptr = new QSize( obj->actualSize ( *PQSIZE(1), (QIcon::Mode) par2, (QIcon::State) par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|actualSize|const QSize &,QIcon::Mode,QIcon::State
 
 /*
 virtual void addFile ( const QString & fileName, const QSize & size, QIcon::Mode mode, QIcon::State state )
 */
-HB_FUNC_STATIC( QICONENGINE_ADDFILE )
-{
-  QIconEngine * obj = (QIconEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par3 = hb_parni(3);
-    int par4 = hb_parni(4);
-    obj->addFile ( PQSTRING(1), *PQSIZE(2), (QIcon::Mode) par3, (QIcon::State) par4 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|addFile|const QString &,const QSize &,QIcon::Mode,QIcon::State
 
 /*
 virtual void addPixmap ( const QPixmap & pixmap, QIcon::Mode mode, QIcon::State state )
 */
-HB_FUNC_STATIC( QICONENGINE_ADDPIXMAP )
-{
-  QIconEngine * obj = (QIconEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    int par3 = hb_parni(3);
-    obj->addPixmap ( *PQPIXMAP(1), (QIcon::Mode) par2, (QIcon::State) par3 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|addPixmap|const QPixmap &,QIcon::Mode,QIcon::State
 
 /*
 virtual void paint ( QPainter * painter, const QRect & rect, QIcon::Mode mode, QIcon::State state ) = 0
 */
-HB_FUNC_STATIC( QICONENGINE_PAINT )
-{
-  QIconEngine * obj = (QIconEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par3 = hb_parni(3);
-    int par4 = hb_parni(4);
-    obj->paint ( PQPAINTER(1), *PQRECT(2), (QIcon::Mode) par3, (QIcon::State) par4 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|paint|QPainter *,const QRect &,QIcon::Mode,QIcon::State
 
 /*
 virtual QPixmap pixmap ( const QSize & size, QIcon::Mode mode, QIcon::State state )
 */
-HB_FUNC_STATIC( QICONENGINE_PIXMAP )
-{
-  QIconEngine * obj = (QIconEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    int par3 = hb_parni(3);
-    QPixmap * ptr = new QPixmap( obj->pixmap ( *PQSIZE(1), (QIcon::Mode) par2, (QIcon::State) par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
-  }
-}
+$virtualMethod=|QPixmap|pixmap|const QSize &,QIcon::Mode,QIcon::State
 
 $extraMethods
 

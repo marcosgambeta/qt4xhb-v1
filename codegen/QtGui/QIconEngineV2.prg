@@ -40,6 +40,7 @@ QList<QSize> availableSizes ( QIcon::Mode mode = QIcon::Normal, QIcon::State sta
 HB_FUNC_STATIC( QICONENGINEV2_AVAILABLESIZES )
 {
   QIconEngineV2 * obj = (QIconEngineV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QIcon::Normal : hb_parni(1);
@@ -86,15 +87,7 @@ HB_FUNC_STATIC( QICONENGINEV2_AVAILABLESIZES )
 /*
 virtual QIconEngineV2 * clone () const
 */
-HB_FUNC_STATIC( QICONENGINEV2_CLONE )
-{
-  QIconEngineV2 * obj = (QIconEngineV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIconEngineV2 * ptr = obj->clone ();
-    _qt4xhb_createReturnClass ( ptr, "QICONENGINEV2" );
-  }
-}
+$virtualMethod=|QIconEngineV2 *|clone|
 
 /*
 QString iconName ()
@@ -114,16 +107,7 @@ $virtualMethod=|bool|read|QDataStream &
 /*
 virtual void virtual_hook ( int id, void * data )
 */
-HB_FUNC_STATIC( QICONENGINEV2_VIRTUAL_HOOK )
-{
-  QIconEngineV2 * obj = (QIconEngineV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    void * par2 = (void *) hb_parptr(2);
-    obj->virtual_hook ( PINT(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|virtual_hook|int,void *
 
 /*
 virtual bool write ( QDataStream & out ) const

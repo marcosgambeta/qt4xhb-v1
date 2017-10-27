@@ -84,28 +84,12 @@ $deleteMethod
 /*
 QFont font () const
 */
-HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_FONT )
-{
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QFont * ptr = new QFont( obj->font () );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
-  }
-}
+$method=|QFont|font|
 
 /*
 void setFont ( const QFont & font )
 */
-HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SETFONT )
-{
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFont ( *PQFONT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFont|const QFont &
 
 /*
 void setText ( const QString & text )
@@ -120,15 +104,7 @@ $method=|QString|text|
 /*
 virtual QRectF boundingRect () const
 */
-HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_BOUNDINGRECT )
-{
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->boundingRect () );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$virtualMethod=|QRectF|boundingRect|
 
 /*
 virtual bool contains ( const QPointF & point ) const
@@ -143,42 +119,17 @@ $virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
 /*
 virtual QPainterPath opaqueArea () const
 */
-HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_OPAQUEAREA )
-{
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPainterPath * ptr = new QPainterPath( obj->opaqueArea () );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
-  }
-}
+$virtualMethod=|QPainterPath|opaqueArea|
 
 /*
 virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
 */
-HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_PAINT )
-{
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QStyleOptionGraphicsItem * par2 = (const QStyleOptionGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->paint ( PQPAINTER(1), par2, PQWIDGET(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *
 
 /*
 virtual QPainterPath shape () const
 */
-HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SHAPE )
-{
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPainterPath * ptr = new QPainterPath( obj->shape () );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
-  }
-}
+$virtualMethod=|QPainterPath|shape|
 
 /*
 virtual int type () const

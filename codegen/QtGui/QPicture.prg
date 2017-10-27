@@ -83,28 +83,12 @@ $deleteMethod
 /*
 QRect boundingRect () const
 */
-HB_FUNC_STATIC( QPICTURE_BOUNDINGRECT )
-{
-  QPicture * obj = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->boundingRect () );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$method=|QRect|boundingRect|
 
 /*
 const char * data () const
 */
-HB_FUNC_STATIC( QPICTURE_DATA )
-{
-  QPicture * obj = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const char * str1 = obj->data ();
-    hb_retc( str1 );
-  }
-}
+$method=|const char *|data|
 
 /*
 bool isNull () const
@@ -133,6 +117,10 @@ HB_FUNC_STATIC( QPICTURE_LOAD )
   else if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISCHAR(2)||ISNIL(2)) )
   {
     HB_FUNC_EXEC( QPICTURE_LOAD2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -164,60 +152,30 @@ HB_FUNC_STATIC( QPICTURE_SAVE )
   {
     HB_FUNC_EXEC( QPICTURE_SAVE2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
 void setBoundingRect ( const QRect & r )
 */
-HB_FUNC_STATIC( QPICTURE_SETBOUNDINGRECT )
-{
-  QPicture * obj = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBoundingRect ( *PQRECT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBoundingRect|const QRect &
 
 /*
 virtual void setData ( const char * data, uint size )
 */
-HB_FUNC_STATIC( QPICTURE_SETDATA )
-{
-  QPicture * obj = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setData ( (const char *) hb_parc(1), PUINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|setData|const char *,uint
 
 /*
 uint size () const
 */
-HB_FUNC_STATIC( QPICTURE_SIZE )
-{
-  QPicture * obj = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (uint) obj->size () );
-  }
-}
+$method=|uint|size|
 
 /*
 void swap ( QPicture & other )
 */
-HB_FUNC_STATIC( QPICTURE_SWAP )
-{
-  QPicture * obj = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPicture * par1 = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->swap ( *par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-// QPicture & operator= ( const QPicture & p )
+$method=|void|swap|QPicture &
 
 #pragma ENDDUMP

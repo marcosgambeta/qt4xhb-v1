@@ -133,14 +133,7 @@ $virtualMethod=|int|nextId|
 /*
 WizardOptions options () const
 */
-HB_FUNC_STATIC( QWIZARD_OPTIONS )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->options () );
-  }
-}
+$method=|QWizard::WizardOptions|options|
 
 /*
 QWizardPage * page ( int id ) const
@@ -326,15 +319,7 @@ HB_FUNC_STATIC( QWIZARD_VISITEDPAGES )
 /*
 WizardStyle wizardStyle () const
 */
-HB_FUNC_STATIC( QWIZARD_WIZARDSTYLE )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    hb_retni( (int) obj->wizardStyle () );
-  }
-}
+$method=|QWizard::WizardStyle|wizardStyle|
 
 /*
 virtual void setVisible ( bool visible )

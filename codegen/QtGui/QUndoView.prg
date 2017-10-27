@@ -94,15 +94,7 @@ $deleteMethod
 /*
 QIcon cleanIcon () const
 */
-HB_FUNC_STATIC( QUNDOVIEW_CLEANICON )
-{
-  QUndoView * obj = (QUndoView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIcon * ptr = new QIcon( obj->cleanIcon () );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );
-  }
-}
+$method=|QIcon|cleanIcon|
 
 /*
 QString emptyLabel () const
@@ -112,29 +104,12 @@ $method=|QString|emptyLabel|
 /*
 QUndoGroup * group () const
 */
-HB_FUNC_STATIC( QUNDOVIEW_GROUP )
-{
-  QUndoView * obj = (QUndoView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QUndoGroup * ptr = obj->group ();
-    _qt4xhb_createReturnClass ( ptr, "QUNDOGROUP" );
-  }
-}
+$method=|QUndoGroup *|group|
 
 /*
 void setCleanIcon ( const QIcon & icon )
 */
-HB_FUNC_STATIC( QUNDOVIEW_SETCLEANICON )
-{
-  QUndoView * obj = (QUndoView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
-    obj->setCleanIcon ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCleanIcon|const QIcon &
 
 /*
 void setEmptyLabel ( const QString & label )
@@ -144,42 +119,16 @@ $method=|void|setEmptyLabel|const QString &
 /*
 QUndoStack * stack () const
 */
-HB_FUNC_STATIC( QUNDOVIEW_STACK )
-{
-  QUndoView * obj = (QUndoView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QUndoStack * ptr = obj->stack ();
-    _qt4xhb_createReturnClass ( ptr, "QUNDOSTACK" );
-  }
-}
+$method=|QUndoStack *|stack|
 
 /*
 void setGroup ( QUndoGroup * group )
 */
-HB_FUNC_STATIC( QUNDOVIEW_SETGROUP )
-{
-  QUndoView * obj = (QUndoView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QUndoGroup * par1 = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setGroup ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setGroup|QUndoGroup *
 
 /*
 void setStack ( QUndoStack * stack )
 */
-HB_FUNC_STATIC( QUNDOVIEW_SETSTACK )
-{
-  QUndoView * obj = (QUndoView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QUndoStack * par1 = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setStack ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStack|QUndoStack *
 
 #pragma ENDDUMP

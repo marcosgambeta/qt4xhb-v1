@@ -151,40 +151,17 @@ $deleteMethod
 /*
 QBrush brush () const
 */
-HB_FUNC_STATIC( QPEN_BRUSH )
-{
-  QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QBrush * ptr = new QBrush( obj->brush () );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
-  }
-}
+$method=|QBrush|brush|
 
 /*
 Qt::PenCapStyle capStyle () const
 */
-HB_FUNC_STATIC( QPEN_CAPSTYLE )
-{
-  QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->capStyle () );
-  }
-}
+$method=|Qt::PenCapStyle|capStyle|
 
 /*
 QColor color () const
 */
-HB_FUNC_STATIC( QPEN_COLOR )
-{
-  QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QColor * ptr = new QColor( obj->color () );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-}
+$method=|QColor|color|
 
 /*
 qreal dashOffset () const
@@ -197,6 +174,7 @@ QVector<qreal> dashPattern () const
 HB_FUNC_STATIC( QPEN_DASHPATTERN )
 {
   QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QVector<qreal> list = obj->dashPattern ();
@@ -236,43 +214,17 @@ $method=|qreal|miterLimit|
 /*
 void setBrush ( const QBrush & brush )
 */
-HB_FUNC_STATIC( QPEN_SETBRUSH )
-{
-  QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBrush ( *PQBRUSH(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBrush|const QBrush &
 
 /*
 void setCapStyle ( Qt::PenCapStyle style )
 */
-HB_FUNC_STATIC( QPEN_SETCAPSTYLE )
-{
-  QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setCapStyle ( (Qt::PenCapStyle) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCapStyle|Qt::PenCapStyle
 
 /*
 void setColor ( const QColor & color )
 */
-HB_FUNC_STATIC( QPEN_SETCOLOR )
-{
-  QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QColor par1 = ISOBJECT(1)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(1));
-    obj->setColor ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setColor|const QColor &
 
 /*
 void setCosmetic ( bool cosmetic )
@@ -290,6 +242,7 @@ void setDashPattern ( const QVector<qreal> & pattern )
 HB_FUNC_STATIC( QPEN_SETDASHPATTERN )
 {
   QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QVector<qreal> par1;
@@ -304,6 +257,7 @@ HB_FUNC_STATIC( QPEN_SETDASHPATTERN )
     }
     obj->setDashPattern ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

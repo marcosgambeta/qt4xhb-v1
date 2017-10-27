@@ -137,15 +137,7 @@ $method=|QColor|backgroundColor|
 /*
 CacheMode  cacheMode () const
 */
-HB_FUNC_STATIC( QMOVIE_CACHEMODE )
-{
-  QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    hb_retni( (int) obj->cacheMode () );
-  }
-}
+$method=|QMovie::CacheMode|cacheMode|
 
 /*
 int currentFrameNumber () const
@@ -250,15 +242,7 @@ $method=|int|speed|
 /*
 MovieState  state () const
 */
-HB_FUNC_STATIC( QMOVIE_STATE )
-{
-  QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    hb_retni( (int) obj->state () );
-  }
-}
+$method=|QMovie::MovieState|state|
 
 /*
 bool jumpToNextFrame ()

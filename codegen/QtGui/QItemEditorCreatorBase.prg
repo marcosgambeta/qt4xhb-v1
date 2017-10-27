@@ -15,6 +15,7 @@ CLASS QItemEditorCreatorBase
    METHOD delete
    METHOD createWidget
    METHOD valuePropertyName
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
@@ -40,28 +41,12 @@ $deleteMethod
 /*
 virtual QWidget * createWidget ( QWidget * parent ) const = 0
 */
-HB_FUNC_STATIC( QITEMEDITORCREATORBASE_CREATEWIDGET )
-{
-  QItemEditorCreatorBase * obj = (QItemEditorCreatorBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->createWidget ( PQWIDGET(1) );
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$virtualMethod=|QWidget *|createWidget|QWidget *
 
 /*
 virtual QByteArray valuePropertyName () const = 0
 */
-HB_FUNC_STATIC( QITEMEDITORCREATORBASE_VALUEPROPERTYNAME )
-{
-  QItemEditorCreatorBase * obj = (QItemEditorCreatorBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->valuePropertyName () );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
+$virtualMethod=|QByteArray|valuePropertyName|
 
 $extraMethods
 

@@ -101,28 +101,12 @@ $method=|int|columnSpan|
 /*
 QTextCursor firstCursorPosition () const
 */
-HB_FUNC_STATIC( QTEXTTABLECELL_FIRSTCURSORPOSITION )
-{
-  QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextCursor * ptr = new QTextCursor( obj->firstCursorPosition () );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
-  }
-}
+$method=|QTextCursor|firstCursorPosition|
 
 /*
 QTextCharFormat format () const
 */
-HB_FUNC_STATIC( QTEXTTABLECELL_FORMAT )
-{
-  QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextCharFormat * ptr = new QTextCharFormat( obj->format () );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );
-  }
-}
+$method=|QTextCharFormat|format|
 
 /*
 bool isValid () const
@@ -132,15 +116,7 @@ $method=|bool|isValid|
 /*
 QTextCursor lastCursorPosition () const
 */
-HB_FUNC_STATIC( QTEXTTABLECELL_LASTCURSORPOSITION )
-{
-  QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextCursor * ptr = new QTextCursor( obj->lastCursorPosition () );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
-  }
-}
+$method=|QTextCursor|lastCursorPosition|
 
 /*
 int row () const
@@ -155,15 +131,7 @@ $method=|int|rowSpan|
 /*
 void setFormat ( const QTextCharFormat & format )
 */
-HB_FUNC_STATIC( QTEXTTABLECELL_SETFORMAT )
-{
-  QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFormat ( *PQTEXTCHARFORMAT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFormat|const QTextCharFormat &
 
 /*
 int tableCellFormatIndex () const

@@ -54,6 +54,7 @@ QList<QTextFrame *> childFrames () const
 HB_FUNC_STATIC( QTEXTFRAME_CHILDFRAMES )
 {
   QTextFrame * obj = (QTextFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QTextFrame *> list = obj->childFrames ();
@@ -94,15 +95,7 @@ HB_FUNC_STATIC( QTEXTFRAME_CHILDFRAMES )
 /*
 QTextCursor firstCursorPosition () const
 */
-HB_FUNC_STATIC( QTEXTFRAME_FIRSTCURSORPOSITION )
-{
-  QTextFrame * obj = (QTextFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextCursor * ptr = new QTextCursor( obj->firstCursorPosition () );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
-  }
-}
+$method=|QTextCursor|firstCursorPosition|
 
 /*
 int firstPosition () const
@@ -112,28 +105,12 @@ $method=|int|firstPosition|
 /*
 QTextFrameFormat frameFormat () const
 */
-HB_FUNC_STATIC( QTEXTFRAME_FRAMEFORMAT )
-{
-  QTextFrame * obj = (QTextFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextFrameFormat * ptr = new QTextFrameFormat( obj->frameFormat () );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTFRAMEFORMAT" );
-  }
-}
+$method=|QTextFrameFormat|frameFormat|
 
 /*
 QTextCursor lastCursorPosition () const
 */
-HB_FUNC_STATIC( QTEXTFRAME_LASTCURSORPOSITION )
-{
-  QTextFrame * obj = (QTextFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextCursor * ptr = new QTextCursor( obj->lastCursorPosition () );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
-  }
-}
+$method=|QTextCursor|lastCursorPosition|
 
 /*
 int lastPosition () const
@@ -143,27 +120,11 @@ $method=|int|lastPosition|
 /*
 QTextFrame * parentFrame () const
 */
-HB_FUNC_STATIC( QTEXTFRAME_PARENTFRAME )
-{
-  QTextFrame * obj = (QTextFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextFrame * ptr = obj->parentFrame ();
-    _qt4xhb_createReturnClass ( ptr, "QTEXTFRAME" );
-  }
-}
+$method=|QTextFrame *|parentFrame|
 
 /*
 void setFrameFormat ( const QTextFrameFormat & format )
 */
-HB_FUNC_STATIC( QTEXTFRAME_SETFRAMEFORMAT )
-{
-  QTextFrame * obj = (QTextFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFrameFormat ( *PQTEXTFRAMEFORMAT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFrameFormat|const QTextFrameFormat &
 
 #pragma ENDDUMP

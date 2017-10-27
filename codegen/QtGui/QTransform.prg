@@ -207,15 +207,7 @@ $method=|qreal|m33|
 /*
 QTransform adjoint () const
 */
-HB_FUNC_STATIC( QTRANSFORM_ADJOINT )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTransform * ptr = new QTransform( obj->adjoint () );
-    _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
-  }
-}
+$method=|QTransform|adjoint|
 
 /*
 qreal determinant () const
@@ -235,17 +227,7 @@ $method=|qreal|dy|
 /*
 QTransform inverted ( bool * invertible = 0 ) const
 */
-HB_FUNC_STATIC( QTRANSFORM_INVERTED )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    bool par1;
-    QTransform * ptr = new QTransform( obj->inverted ( &par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
-    hb_storl( par1, 1 );
-  }
-}
+$method=|QTransform|inverted|bool *=0
 
 /*
 bool isAffine () const
@@ -382,33 +364,21 @@ HB_FUNC_STATIC( QTRANSFORM_MAP )
   {
     HB_FUNC_EXEC( QTRANSFORM_MAP10 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
 QRectF mapRect ( const QRectF & rectangle ) const
 */
-HB_FUNC_STATIC( QTRANSFORM_MAPRECT1 )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->mapRect ( *PQRECTF(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$method=|QRectF|mapRect,mapRect1|const QRectF &
 
 /*
 QRect mapRect ( const QRect & rectangle ) const
 */
-HB_FUNC_STATIC( QTRANSFORM_MAPRECT2 )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->mapRect ( *PQRECT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$method=|QRect|mapRect,mapRect2|const QRect &
 
 //[1]QRectF mapRect ( const QRectF & rectangle ) const
 //[2]QRect mapRect ( const QRect & rectangle ) const
@@ -423,33 +393,21 @@ HB_FUNC_STATIC( QTRANSFORM_MAPRECT )
   {
     HB_FUNC_EXEC( QTRANSFORM_MAPRECT2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
 QPolygon mapToPolygon ( const QRect & rectangle ) const
 */
-HB_FUNC_STATIC( QTRANSFORM_MAPTOPOLYGON )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPolygon * ptr = new QPolygon( obj->mapToPolygon ( *PQRECT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOLYGON", true );
-  }
-}
+$method=|QPolygon|mapToPolygon|const QRect &
 
 /*
 void reset ()
 */
-HB_FUNC_STATIC( QTRANSFORM_RESET )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->reset ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|reset|
 
 /*
 void setMatrix ( qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33 )
@@ -464,14 +422,7 @@ $method=|QTransform|transposed|
 /*
 TransformationType type () const
 */
-HB_FUNC_STATIC( QTRANSFORM_TYPE )
-{
-  QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->type () );
-  }
-}
+$method=|QTransform::TransformationType|type|
 
 /*
 static QTransform fromScale ( qreal sx, qreal sy )

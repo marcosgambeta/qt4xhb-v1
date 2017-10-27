@@ -151,19 +151,16 @@ HB_FUNC_STATIC( QFORMLAYOUT_ADDROW )
   {
     HB_FUNC_EXEC( QFORMLAYOUT_ADDROW6 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
 FieldGrowthPolicy fieldGrowthPolicy () const
 */
-HB_FUNC_STATIC( QFORMLAYOUT_FIELDGROWTHPOLICY )
-{
-  QFormLayout * obj = (QFormLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->fieldGrowthPolicy () );
-  }
-}
+$method=|QFormLayout::FieldGrowthPolicy|fieldGrowthPolicy|
 
 /*
 Qt::Alignment formAlignment () const
@@ -173,50 +170,17 @@ $method=|Qt::Alignment|formAlignment|
 /*
 void getItemPosition ( int index, int * rowPtr, ItemRole * rolePtr ) const
 */
-HB_FUNC_STATIC( QFORMLAYOUT_GETITEMPOSITION )
-{
-  QFormLayout * obj = (QFormLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2;
-    QFormLayout::ItemRole * par3 = (QFormLayout::ItemRole *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->getItemPosition ( PINT(1), &par2, par3 );
-    hb_storni( par2, 2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|getItemPosition|int,int *,QFormLayout::ItemRole *
 
 /*
 void getLayoutPosition ( QLayout * layout, int * rowPtr, ItemRole * rolePtr ) const
 */
-HB_FUNC_STATIC( QFORMLAYOUT_GETLAYOUTPOSITION )
-{
-  QFormLayout * obj = (QFormLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2;
-    QFormLayout::ItemRole * par3 = (QFormLayout::ItemRole *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->getLayoutPosition ( PQLAYOUT(1), &par2, par3 );
-    hb_storni( par2, 2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|getLayoutPosition|QLayout *,int *,QFormLayout::ItemRole *
 
 /*
 void getWidgetPosition ( QWidget * widget, int * rowPtr, ItemRole * rolePtr ) const
 */
-HB_FUNC_STATIC( QFORMLAYOUT_GETWIDGETPOSITION )
-{
-  QFormLayout * obj = (QFormLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2;
-    QFormLayout::ItemRole * par3 = (QFormLayout::ItemRole *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->getWidgetPosition ( PQWIDGET(1), &par2, par3 );
-    hb_storni( par2, 2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|getWidgetPosition|QWidget *,int *,QFormLayout::ItemRole *
 
 /*
 int horizontalSpacing () const
@@ -286,6 +250,10 @@ HB_FUNC_STATIC( QFORMLAYOUT_INSERTROW )
   {
     HB_FUNC_EXEC( QFORMLAYOUT_INSERTROW6 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -321,6 +289,10 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD )
   {
     HB_FUNC_EXEC( QFORMLAYOUT_LABELFORFIELD2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -331,14 +303,7 @@ $method=|int|rowCount|
 /*
 RowWrapPolicy rowWrapPolicy () const
 */
-HB_FUNC_STATIC( QFORMLAYOUT_ROWWRAPPOLICY )
-{
-  QFormLayout * obj = (QFormLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->rowWrapPolicy () );
-  }
-}
+$method=|QFormLayout::RowWrapPolicy|rowWrapPolicy|
 
 /*
 void setFieldGrowthPolicy ( FieldGrowthPolicy policy )

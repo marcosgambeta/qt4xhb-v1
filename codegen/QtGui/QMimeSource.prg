@@ -41,28 +41,12 @@ $deleteMethod
 /*
 virtual QByteArray encodedData ( const char * format ) const = 0
 */
-HB_FUNC_STATIC( QMIMESOURCE_ENCODEDDATA )
-{
-  QMimeSource * obj = (QMimeSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->encodedData ( (const char *) hb_parc(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
+$virtualMethod=|QByteArray|encodedData|const char *
 
 /*
 virtual const char * format ( int i = 0 ) const = 0
 */
-HB_FUNC_STATIC( QMIMESOURCE_FORMAT )
-{
-  QMimeSource * obj = (QMimeSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const char * str1 = obj->format ( OPINT(1,0) );
-    hb_retc( str1 );
-  }
-}
+$virtualMethod=|const char *|format|int=0
 
 /*
 virtual bool provides ( const char * mimeType ) const

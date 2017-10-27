@@ -245,16 +245,7 @@ $deleteMethod
 /*
 void addChild ( QTreeWidgetItem * child )
 */
-HB_FUNC_STATIC( QTREEWIDGETITEM_ADDCHILD )
-{
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTreeWidgetItem * par1 = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addChild ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addChild|QTreeWidgetItem *
 
 /*
 void addChildren ( const QList<QTreeWidgetItem *> & children )
@@ -262,17 +253,20 @@ void addChildren ( const QList<QTreeWidgetItem *> & children )
 HB_FUNC_STATIC( QTREEWIDGETITEM_ADDCHILDREN )
 {
   QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-QList<QTreeWidgetItem *> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-par1 << (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );}
+    QList<QTreeWidgetItem *> par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    for (i1=0;i1<nLen1;i1++)
+    {
+      par1 << (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    }
     obj->addChildren ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

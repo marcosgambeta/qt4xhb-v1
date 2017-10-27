@@ -56,50 +56,17 @@ $deleteMethod
 /*
 virtual void drawComplexControl ( ComplexControl cc, const QStyleOptionComplex * opt, QPainter * p, const QWidget * widget = 0 ) const
 */
-HB_FUNC_STATIC( QWINDOWSSTYLE_DRAWCOMPLEXCONTROL )
-{
-  QWindowsStyle * obj = (QWindowsStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    const QStyleOptionComplex * par2 = (const QStyleOptionComplex *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    const QWidget * par4 = ISNIL(4)? 0 : (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->drawComplexControl ( (QStyle::ComplexControl) par1, par2, PQPAINTER(3), par4 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|drawComplexControl|QStyle::ComplexControl,const QStyleOptionComplex *,QPainter *,const QWidget *=0
 
 /*
 virtual void drawControl ( ControlElement ce, const QStyleOption * opt, QPainter * p, const QWidget * widget = 0 ) const
 */
-HB_FUNC_STATIC( QWINDOWSSTYLE_DRAWCONTROL )
-{
-  QWindowsStyle * obj = (QWindowsStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    const QStyleOption * par2 = (const QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    const QWidget * par4 = ISNIL(4)? 0 : (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->drawControl ( (QStyle::ControlElement) par1, par2, PQPAINTER(3), par4 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|drawControl|QStyle::ControlElement,const QStyleOption *,QPainter *,const QWidget *=0
 
 /*
 virtual void drawPrimitive ( PrimitiveElement pe, const QStyleOption * opt, QPainter * p, const QWidget * w = 0 ) const
 */
-HB_FUNC_STATIC( QWINDOWSSTYLE_DRAWPRIMITIVE )
-{
-  QWindowsStyle * obj = (QWindowsStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    const QStyleOption * par2 = (const QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    const QWidget * par4 = ISNIL(4)? 0 : (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->drawPrimitive ( (QStyle::PrimitiveElement) par1, par2, PQPAINTER(3), par4 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|drawPrimitive|QStyle::PrimitiveElement,const QStyleOption *,QPainter *,const QWidget *=0
 
 /*
 virtual int pixelMetric ( PixelMetric pm, const QStyleOption * opt = 0, const QWidget * widget = 0 ) const
@@ -109,43 +76,17 @@ $virtualMethod=|int|pixelMetric|QStyle::PixelMetric,const QStyleOption *=0,const
 /*
 virtual void polish ( QApplication * app )
 */
-HB_FUNC_STATIC( QWINDOWSSTYLE_POLISH1 )
-{
-  QWindowsStyle * obj = (QWindowsStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QApplication * par1 = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->polish ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|polish,polish1|QApplication *
 
 /*
 virtual void polish ( QWidget * widget )
 */
-HB_FUNC_STATIC( QWINDOWSSTYLE_POLISH2 )
-{
-  QWindowsStyle * obj = (QWindowsStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->polish ( PQWIDGET(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|polish,polish2|QWidget *
 
 /*
 virtual void polish ( QPalette & pal )
 */
-HB_FUNC_STATIC( QWINDOWSSTYLE_POLISH3 )
-{
-  QWindowsStyle * obj = (QWindowsStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPalette * par1 = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->polish ( *par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|polish,polish3|QPalette &
 
 //[1]virtual void polish ( QApplication * app )
 //[2]virtual void polish ( QWidget * widget )
@@ -165,39 +106,21 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_POLISH )
   {
     HB_FUNC_EXEC( QWINDOWSSTYLE_POLISH3 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
 virtual QSize sizeFromContents ( ContentsType ct, const QStyleOption * opt, const QSize & csz, const QWidget * widget = 0 ) const
 */
-HB_FUNC_STATIC( QWINDOWSSTYLE_SIZEFROMCONTENTS )
-{
-  QWindowsStyle * obj = (QWindowsStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    const QStyleOption * par2 = (const QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    const QWidget * par4 = ISNIL(4)? 0 : (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QSize * ptr = new QSize( obj->sizeFromContents ( (QStyle::ContentsType) par1, par2, *PQSIZE(3), par4 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|sizeFromContents|QStyle::ContentsType,const QStyleOption *,const QSize &,const QWidget *=0
 
 /*
 virtual QPixmap standardPixmap ( StandardPixmap standardPixmap, const QStyleOption * opt, const QWidget * widget = 0 ) const
 */
-HB_FUNC_STATIC( QWINDOWSSTYLE_STANDARDPIXMAP )
-{
-  QWindowsStyle * obj = (QWindowsStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    const QStyleOption * par2 = (const QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    const QWidget * par3 = ISNIL(3)? 0 : (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QPixmap * ptr = new QPixmap( obj->standardPixmap ( (QStyle::StandardPixmap) par1, par2, par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
-  }
-}
+$virtualMethod=|QPixmap|standardPixmap|QStyle::StandardPixmap,const QStyleOption *,const QWidget *=0
 
 /*
 virtual int styleHint ( StyleHint hint, const QStyleOption * opt = 0, const QWidget * widget = 0, QStyleHintReturn * returnData = 0 ) const
@@ -207,45 +130,17 @@ $virtualMethod=|int|styleHint|QStyle::StyleHint,const QStyleOption *=0,const QWi
 /*
 virtual QRect subElementRect ( SubElement sr, const QStyleOption * opt, const QWidget * w = 0 ) const
 */
-HB_FUNC_STATIC( QWINDOWSSTYLE_SUBELEMENTRECT )
-{
-  QWindowsStyle * obj = (QWindowsStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    const QStyleOption * par2 = (const QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    const QWidget * par3 = ISNIL(3)? 0 : (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QRect * ptr = new QRect( obj->subElementRect ( (QStyle::SubElement) par1, par2, par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$virtualMethod=|QRect|subElementRect|QStyle::SubElement,const QStyleOption *,const QWidget *=0
 
 /*
 virtual void unpolish ( QApplication * app )
 */
-HB_FUNC_STATIC( QWINDOWSSTYLE_UNPOLISH1 )
-{
-  QWindowsStyle * obj = (QWindowsStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QApplication * par1 = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->unpolish ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|unpolish,unpolish1|QApplication *
 
 /*
 virtual void unpolish ( QWidget * widget )
 */
-HB_FUNC_STATIC( QWINDOWSSTYLE_UNPOLISH2 )
-{
-  QWindowsStyle * obj = (QWindowsStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->unpolish ( PQWIDGET(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|unpolish,unpolish2|QWidget *
 
 //[1]virtual void unpolish ( QApplication * app )
 //[2]virtual void unpolish ( QWidget * widget )
@@ -259,6 +154,10 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_UNPOLISH )
   else if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
     HB_FUNC_EXEC( QWINDOWSSTYLE_UNPOLISH2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

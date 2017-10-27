@@ -44,153 +44,61 @@ $deleteMethod
 /*
 void acceptProposedAction ()
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_ACCEPTPROPOSEDACTION )
-{
-  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->acceptProposedAction ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|acceptProposedAction|
 
 /*
 Qt::MouseButtons buttons () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_BUTTONS )
-{
-  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->buttons () );
-  }
-}
+$method=|Qt::MouseButtons|buttons|
 
 /*
 Qt::DropAction dropAction () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_DROPACTION )
-{
-  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->dropAction () );
-  }
-}
+$method=|Qt::DropAction|dropAction|
 
 /*
 const QMimeData * mimeData () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_MIMEDATA )
-{
-  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QMimeData * ptr = obj->mimeData ();
-    _qt4xhb_createReturnClass ( ptr, "QMIMEDATA" );
-  }
-}
+$method=|const QMimeData *|mimeData|
 
 /*
 Qt::KeyboardModifiers modifiers () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_MODIFIERS )
-{
-  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->modifiers () );
-  }
-}
+$method=|Qt::KeyboardModifiers|modifiers|
 
 /*
 QPointF pos () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_POS )
-{
-  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->pos () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|pos|
 
 /*
 Qt::DropActions possibleActions () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_POSSIBLEACTIONS )
-{
-  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->possibleActions () );
-  }
-}
+$method=|Qt::DropActions|possibleActions|
 
 /*
 Qt::DropAction proposedAction () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_PROPOSEDACTION )
-{
-  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->proposedAction () );
-  }
-}
+$method=|Qt::DropAction|proposedAction|
 
 /*
 QPointF scenePos () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SCENEPOS )
-{
-  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->scenePos () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|scenePos|
 
 /*
 QPoint screenPos () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SCREENPOS )
-{
-  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->screenPos () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-}
+$method=|QPoint|screenPos|
 
 /*
 void setDropAction ( Qt::DropAction action )
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SETDROPACTION )
-{
-  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setDropAction ( (Qt::DropAction) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDropAction|Qt::DropAction
 
 /*
 QWidget * source () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SOURCE )
-{
-  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->source ();
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|source|
 
 #pragma ENDDUMP

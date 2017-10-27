@@ -147,18 +147,19 @@ QVector<QPointF> advancesForGlyphIndexes ( const QVector<quint32> & glyphIndexes
 HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES1 )
 {
   QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-QVector<quint32> par1;
-PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aValues1);
-int temp1;
-for (i1=0;i1<nLen1;i1++)
-{
-temp1 = hb_arrayGetNI(aValues1, i1+1);
-par1 << temp1;
-}
+    QVector<quint32> par1;
+    PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aValues1);
+    int temp1;
+    for (i1=0;i1<nLen1;i1++)
+    {
+      temp1 = hb_arrayGetNI(aValues1, i1+1);
+      par1 << temp1;
+    }
     QVector<QPointF> list = obj->advancesForGlyphIndexes ( par1 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
@@ -205,17 +206,7 @@ HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES )
 /*
 QImage alphaMapForGlyph ( quint32 glyphIndex, AntialiasingType antialiasingType = SubPixelAntialiasing, const QTransform & transform = QTransform() ) const
 */
-HB_FUNC_STATIC( QRAWFONT_ALPHAMAPFORGLYPH )
-{
-  QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) QRawFont::SubPixelAntialiasing : hb_parni(2);
-    QTransform par3 = ISNIL(3)? QTransform() : *(QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QImage * ptr = new QImage( obj->alphaMapForGlyph ( PQUINT32(1), (QRawFont::AntialiasingType) par2, par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
-  }
-}
+$method=|QImage|alphaMapForGlyph|quint32,QRawFont::AntialiasingType=QRawFont::SubPixelAntialiasing,const QTransform &=QTransform()
 
 /*
 qreal ascent () const
@@ -240,15 +231,7 @@ $method=|QString|familyName|
 /*
 QByteArray fontTable ( const char * tagName ) const
 */
-HB_FUNC_STATIC( QRAWFONT_FONTTABLE )
-{
-  QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->fontTable ( (const char *) hb_parc(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
+$method=|QByteArray|fontTable|const char *
 
 /*
 QVector<quint32> glyphIndexesForString ( const QString & text ) const
@@ -256,6 +239,7 @@ QVector<quint32> glyphIndexesForString ( const QString & text ) const
 HB_FUNC_STATIC( QRAWFONT_GLYPHINDEXESFORSTRING )
 {
   QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QVector<quint32> list = obj->glyphIndexesForString ( PQSTRING(1) );
@@ -275,14 +259,7 @@ HB_FUNC_STATIC( QRAWFONT_GLYPHINDEXESFORSTRING )
 /*
 QFont::HintingPreference hintingPreference () const
 */
-HB_FUNC_STATIC( QRAWFONT_HINTINGPREFERENCE )
-{
-  QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->hintingPreference () );
-  }
-}
+$method=|QFont::HintingPreference|hintingPreference|
 
 /*
 bool isValid () const
@@ -297,30 +274,12 @@ $method=|qreal|leading|
 /*
 void loadFromData ( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference )
 */
-HB_FUNC_STATIC( QRAWFONT_LOADFROMDATA )
-{
-  QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par3 = hb_parni(3);
-    obj->loadFromData ( *PQBYTEARRAY(1), PQREAL(2), (QFont::HintingPreference) par3 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|loadFromData|const QByteArray &,qreal,QFont::HintingPreference
 
 /*
 void loadFromFile ( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference )
 */
-HB_FUNC_STATIC( QRAWFONT_LOADFROMFILE )
-{
-  QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par3 = hb_parni(3);
-    obj->loadFromFile ( PQSTRING(1), PQREAL(2), (QFont::HintingPreference) par3 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|loadFromFile|const QString &,qreal,QFont::HintingPreference
 
 /*
 qreal maxCharWidth () const
@@ -330,15 +289,7 @@ $method=|qreal|maxCharWidth|
 /*
 QPainterPath pathForGlyph ( quint32 glyphIndex ) const
 */
-HB_FUNC_STATIC( QRAWFONT_PATHFORGLYPH )
-{
-  QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPainterPath * ptr = new QPainterPath( obj->pathForGlyph ( PQUINT32(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
-  }
-}
+$method=|QPainterPath|pathForGlyph|quint32
 
 /*
 qreal pixelSize () const
@@ -366,6 +317,7 @@ QList<QFontDatabase::WritingSystem> supportedWritingSystems () const
 HB_FUNC_STATIC( QRAWFONT_SUPPORTEDWRITINGSYSTEMS )
 {
   QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QFontDatabase::WritingSystem> list = obj->supportedWritingSystems ();
@@ -404,6 +356,10 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTSCHARACTER )
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
     HB_FUNC_EXEC( QRAWFONT_SUPPORTSCHARACTER2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

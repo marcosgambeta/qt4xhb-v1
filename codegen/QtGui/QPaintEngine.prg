@@ -65,28 +65,12 @@ $virtualMethod=|bool|begin|QPaintDevice *
 /*
 virtual void drawEllipse ( const QRectF & rect )
 */
-HB_FUNC_STATIC( QPAINTENGINE_DRAWELLIPSE1 )
-{
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->drawEllipse ( *PQRECTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|drawEllipse,drawEllipse1|const QRectF &
 
 /*
 virtual void drawEllipse ( const QRect & rect )
 */
-HB_FUNC_STATIC( QPAINTENGINE_DRAWELLIPSE2 )
-{
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->drawEllipse ( *PQRECT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|drawEllipse,drawEllipse2|const QRect &
 
 //[1]virtual void drawEllipse ( const QRectF & rect )
 //[2]virtual void drawEllipse ( const QRect & rect )
@@ -101,21 +85,16 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWELLIPSE )
   {
     HB_FUNC_EXEC( QPAINTENGINE_DRAWELLIPSE2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
 virtual void drawImage ( const QRectF & rectangle, const QImage & image, const QRectF & sr, Qt::ImageConversionFlags flags = Qt::AutoColor )
 */
-HB_FUNC_STATIC( QPAINTENGINE_DRAWIMAGE )
-{
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par4 = ISNIL(4)? (int) Qt::AutoColor : hb_parni(4);
-    obj->drawImage ( *PQRECTF(1), *PQIMAGE(2), *PQRECTF(3), (Qt::ImageConversionFlags) par4 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|drawImage|const QRectF &,const QImage &,const QRectF &,Qt::ImageConversionFlags=Qt::AutoColor
 
 //[1]virtual void drawLines ( const QLineF * lines, int lineCount )
 //[2]virtual void drawLines ( const QLine * lines, int lineCount )
@@ -127,28 +106,12 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWLINES )
 /*
 virtual void drawPath ( const QPainterPath & path )
 */
-HB_FUNC_STATIC( QPAINTENGINE_DRAWPATH )
-{
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->drawPath ( *PQPAINTERPATH(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|drawPath|const QPainterPath &
 
 /*
 virtual void drawPixmap ( const QRectF & r, const QPixmap & pm, const QRectF & sr ) = 0
 */
-HB_FUNC_STATIC( QPAINTENGINE_DRAWPIXMAP )
-{
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->drawPixmap ( *PQRECTF(1), *PQPIXMAP(2), *PQRECTF(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|drawPixmap|const QRectF &,const QPixmap &,const QRectF &
 
 //[1]virtual void drawPoints ( const QPointF * points, int pointCount )
 //[2]virtual void drawPoints ( const QPoint * points, int pointCount )
@@ -174,28 +137,12 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWRECTS )
 /*
 virtual void drawTextItem ( const QPointF & p, const QTextItem & textItem )
 */
-HB_FUNC_STATIC( QPAINTENGINE_DRAWTEXTITEM )
-{
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->drawTextItem ( *PQPOINTF(1), *PQTEXTITEM(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|drawTextItem|const QPointF &,const QTextItem &
 
 /*
 virtual void drawTiledPixmap ( const QRectF & rect, const QPixmap & pixmap, const QPointF & p )
 */
-HB_FUNC_STATIC( QPAINTENGINE_DRAWTILEDPIXMAP )
-{
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->drawTiledPixmap ( *PQRECTF(1), *PQPIXMAP(2), *PQPOINTF(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|drawTiledPixmap|const QRectF &,const QPixmap &,const QPointF &
 
 /*
 virtual bool end () = 0
@@ -215,28 +162,12 @@ $method=|bool|isActive|
 /*
 QPaintDevice * paintDevice () const
 */
-HB_FUNC_STATIC( QPAINTENGINE_PAINTDEVICE )
-{
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPaintDevice * ptr = obj->paintDevice ();
-    _qt4xhb_createReturnClass ( ptr, "QPAINTDEVICE" );
-  }
-}
+$method=|QPaintDevice *|paintDevice|
 
 /*
 QPainter * painter () const
 */
-HB_FUNC_STATIC( QPAINTENGINE_PAINTER )
-{
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPainter * ptr = obj->painter ();
-    _qt4xhb_createReturnClass ( ptr, "QPAINTER" );
-  }
-}
+$method=|QPainter *|painter|
 
 /*
 void setActive ( bool state )
@@ -246,27 +177,12 @@ $method=|void|setActive|bool
 /*
 virtual Type type () const = 0
 */
-HB_FUNC_STATIC( QPAINTENGINE_TYPE )
-{
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->type () );
-  }
-}
+$virtualMethod=|QPaintEngine::Type|type|
 
 /*
 virtual void updateState ( const QPaintEngineState & state ) = 0
 */
-HB_FUNC_STATIC( QPAINTENGINE_UPDATESTATE )
-{
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->updateState ( *PQPAINTENGINESTATE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|updateState|const QPaintEngineState &
 
 $extraMethods
 

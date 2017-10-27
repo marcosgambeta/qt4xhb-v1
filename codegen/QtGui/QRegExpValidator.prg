@@ -72,28 +72,12 @@ $deleteMethod
 /*
 const QRegExp & regExp () const
 */
-HB_FUNC_STATIC( QREGEXPVALIDATOR_REGEXP )
-{
-  QRegExpValidator * obj = (QRegExpValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRegExp * ptr = new QRegExp( obj->regExp () );
-    _qt4xhb_createReturnClass ( ptr, "QREGEXP", true );
-  }
-}
+$method=|const QRegExp &|regExp|
 
 /*
 void setRegExp ( const QRegExp & rx )
 */
-HB_FUNC_STATIC( QREGEXPVALIDATOR_SETREGEXP )
-{
-  QRegExpValidator * obj = (QRegExpValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRegExp ( *PQREGEXP(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRegExp|const QRegExp &
 
 /*
 virtual QValidator::State validate ( QString & input, int & pos ) const

@@ -82,15 +82,7 @@ $deleteMethod
 /*
 QTextBlockFormat blockFormat () const
 */
-HB_FUNC_STATIC( QTEXTBLOCK_BLOCKFORMAT )
-{
-  QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextBlockFormat * ptr = new QTextBlockFormat( obj->blockFormat () );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCKFORMAT" );
-  }
-}
+$method=|QTextBlockFormat|blockFormat|
 
 /*
 int blockFormatIndex () const
@@ -105,15 +97,7 @@ $method=|int|blockNumber|
 /*
 QTextCharFormat charFormat () const
 */
-HB_FUNC_STATIC( QTEXTBLOCK_CHARFORMAT )
-{
-  QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextCharFormat * ptr = new QTextCharFormat( obj->charFormat () );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );
-  }
-}
+$method=|QTextCharFormat|charFormat|
 
 /*
 int charFormatIndex () const
@@ -123,15 +107,7 @@ $method=|int|charFormatIndex|
 /*
 void clearLayout ()
 */
-HB_FUNC_STATIC( QTEXTBLOCK_CLEARLAYOUT )
-{
-  QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clearLayout ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clearLayout|
 
 /*
 bool contains ( int position ) const
@@ -141,15 +117,7 @@ $method=|bool|contains|int
 /*
 const QTextDocument * document () const
 */
-HB_FUNC_STATIC( QTEXTBLOCK_DOCUMENT )
-{
-  QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QTextDocument * ptr = obj->document ();
-    _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );
-  }
-}
+$method=|const QTextDocument *|document|
 
 /*
 int firstLineNumber () const
@@ -214,16 +182,7 @@ $method=|void|setRevision|int
 /*
 void setUserData ( QTextBlockUserData * data )
 */
-HB_FUNC_STATIC( QTEXTBLOCK_SETUSERDATA )
-{
-  QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextBlockUserData * par1 = (QTextBlockUserData *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setUserData ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setUserData|QTextBlockUserData *
 
 /*
 void setUserState ( int state )

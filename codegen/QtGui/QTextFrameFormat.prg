@@ -81,14 +81,7 @@ $method=|QBrush|borderBrush|
 /*
 BorderStyle borderStyle () const
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BORDERSTYLE )
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->borderStyle () );
-  }
-}
+$method=|QTextFrameFormat::BorderStyle|borderStyle|
 
 /*
 qreal bottomMargin () const
@@ -123,26 +116,12 @@ $method=|qreal|padding|
 /*
 PageBreakFlags pageBreakPolicy () const
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_PAGEBREAKPOLICY )
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->pageBreakPolicy () );
-  }
-}
+$method=|QTextFormat::PageBreakFlags|pageBreakPolicy|
 
 /*
 Position position () const
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_POSITION )
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->position () );
-  }
-}
+$method=|QTextFrameFormat::Position|position|
 
 /*
 qreal rightMargin () const
@@ -191,6 +170,10 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETHEIGHT )
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
     HB_FUNC_EXEC( QTEXTFRAMEFORMAT_SETHEIGHT2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -251,6 +234,10 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETWIDTH )
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
     HB_FUNC_EXEC( QTEXTFRAMEFORMAT_SETWIDTH2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

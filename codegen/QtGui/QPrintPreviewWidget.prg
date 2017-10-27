@@ -108,14 +108,7 @@ $method=|int|pageCount|
 /*
 ViewMode viewMode () const
 */
-HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_VIEWMODE )
-{
-  QPrintPreviewWidget * obj = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->viewMode () );
-  }
-}
+$method=|QPrintPreviewWidget::ViewMode|viewMode|
 
 /*
 qreal zoomFactor () const
@@ -125,14 +118,7 @@ $method=|qreal|zoomFactor|
 /*
 ZoomMode zoomMode () const
 */
-HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMMODE )
-{
-  QPrintPreviewWidget * obj = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->zoomMode () );
-  }
-}
+$method=|QPrintPreviewWidget::ZoomMode|zoomMode|
 
 /*
 virtual void setVisible ( bool visible )
@@ -142,54 +128,22 @@ $virtualMethod=|void|setVisible|bool
 /*
 void fitInView ()
 */
-HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_FITINVIEW )
-{
-  QPrintPreviewWidget * obj = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->fitInView ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|fitInView|
 
 /*
 void fitToWidth ()
 */
-HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_FITTOWIDTH )
-{
-  QPrintPreviewWidget * obj = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->fitToWidth ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|fitToWidth|
 
 /*
 void print ()
 */
-HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_PRINT )
-{
-  QPrintPreviewWidget * obj = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->print ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|print|
 
 /*
 void setAllPagesViewMode ()
 */
-HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETALLPAGESVIEWMODE )
-{
-  QPrintPreviewWidget * obj = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAllPagesViewMode ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAllPagesViewMode|
 
 /*
 void setCurrentPage ( int page )

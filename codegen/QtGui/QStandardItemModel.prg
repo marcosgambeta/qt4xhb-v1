@@ -158,6 +158,10 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_PARENT )
   {
     HB_FUNC_EXEC( QSTANDARDITEMMODEL_PARENT2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -273,6 +277,10 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETITEM )
   {
     HB_FUNC_EXEC( QSTANDARDITEMMODEL_SETITEM2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -361,6 +369,10 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_APPENDROW )
   {
     HB_FUNC_EXEC( QSTANDARDITEMMODEL_APPENDROW2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -437,6 +449,10 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_INSERTROW )
   {
     HB_FUNC_EXEC( QSTANDARDITEMMODEL_INSERTROW3 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -479,6 +495,10 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_INSERTCOLUMN )
   else if( ISBETWEEN(1,2) && ISNUM(1) && (ISQMODELINDEX(2)||ISNIL(2)) )
   {
     HB_FUNC_EXEC( QSTANDARDITEMMODEL_INSERTCOLUMN2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -588,15 +608,7 @@ $method=|QStandardItem *|takeVerticalHeaderItem|int
 /*
 const QStandardItem *itemPrototype() const
 */
-HB_FUNC_STATIC( QSTANDARDITEMMODEL_ITEMPROTOTYPE )
-{
-  QStandardItemModel * obj = (QStandardItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QStandardItem * ptr = obj->itemPrototype ();
-    _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
-  }
-}
+$method=|const QStandardItem *|itemPrototype|
 
 /*
 void setItemPrototype(const QStandardItem *item)
@@ -666,16 +678,7 @@ $method=|QStringList|mimeTypes|
 /*
 QMimeData *mimeData(const QModelIndexList &indexes) const
 */
-HB_FUNC_STATIC( QSTANDARDITEMMODEL_MIMEDATA )
-{
-  QStandardItemModel * obj = (QStandardItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndexList * par1 = (QModelIndexList *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QMimeData * ptr = obj->mimeData ( *par1 );
-    _qt4xhb_createReturnClass ( ptr, "QMIMEDATA" );
-  }
-}
+$method=|QMimeData *|mimeData|const QModelIndexList &
 
 /*
 bool dropMimeData (const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent)

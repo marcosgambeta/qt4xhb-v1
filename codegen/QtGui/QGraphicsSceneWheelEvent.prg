@@ -37,14 +37,7 @@ $deleteMethod
 /*
 Qt::MouseButtons buttons () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_BUTTONS )
-{
-  QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->buttons () );
-  }
-}
+$method=|Qt::MouseButtons|buttons|
 
 /*
 int delta () const
@@ -54,64 +47,26 @@ $method=|int|delta|
 /*
 Qt::KeyboardModifiers modifiers () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_MODIFIERS )
-{
-  QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->modifiers () );
-  }
-}
+$method=|Qt::KeyboardModifiers|modifiers|
 
 /*
 Qt::Orientation orientation () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_ORIENTATION )
-{
-  QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RENUM( obj->orientation () );
-  }
-}
+$method=|Qt::Orientation|orientation|
 
 /*
 QPointF pos () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_POS )
-{
-  QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->pos () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|pos|
 
 /*
 QPointF scenePos () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_SCENEPOS )
-{
-  QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->scenePos () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|scenePos|
 
 /*
 QPoint screenPos () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_SCREENPOS )
-{
-  QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->screenPos () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-}
+$method=|QPoint|screenPos|
 
 #pragma ENDDUMP

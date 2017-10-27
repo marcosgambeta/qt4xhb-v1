@@ -108,54 +108,22 @@ $deleteMethod
 /*
 void adjustSize ()
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ADJUSTSIZE )
-{
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->adjustSize ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|adjustSize|
 
 /*
 QColor defaultTextColor () const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DEFAULTTEXTCOLOR )
-{
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QColor * ptr = new QColor( obj->defaultTextColor () );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-}
+$method=|QColor|defaultTextColor|
 
 /*
 QTextDocument * document () const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DOCUMENT )
-{
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextDocument * ptr = obj->document ();
-    _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );
-  }
-}
+$method=|QTextDocument *|document|
 
 /*
 QFont font () const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_FONT )
-{
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QFont * ptr = new QFont( obj->font () );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
-  }
-}
+$method=|QFont|font|
 
 /*
 bool openExternalLinks () const
@@ -165,43 +133,17 @@ $method=|bool|openExternalLinks|
 /*
 void setDefaultTextColor ( const QColor & col )
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETDEFAULTTEXTCOLOR )
-{
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QColor par1 = ISOBJECT(1)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(1));
-    obj->setDefaultTextColor ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDefaultTextColor|const QColor &
 
 /*
 void setDocument ( QTextDocument * document )
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETDOCUMENT )
-{
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextDocument * par1 = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setDocument ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDocument|QTextDocument *
 
 /*
 void setFont ( const QFont & font )
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETFONT )
-{
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFont ( *PQFONT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFont|const QFont &
 
 /*
 void setHtml ( const QString & text )

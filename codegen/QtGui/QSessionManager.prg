@@ -79,14 +79,7 @@ $method=|QStringList|restartCommand|
 /*
 RestartHint restartHint () const
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_RESTARTHINT )
-{
-  QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->restartHint () );
-  }
-}
+$method=|QSessionManager::RestartHint|restartHint|
 
 /*
 QString sessionId () const
@@ -101,41 +94,17 @@ $method=|QString|sessionKey|
 /*
 void setDiscardCommand ( const QStringList & list )
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_SETDISCARDCOMMAND )
-{
-  QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDiscardCommand ( PQSTRINGLIST(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDiscardCommand|const QStringList &
 
 /*
 void setManagerProperty ( const QString & name, const QStringList & value )
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_SETMANAGERPROPERTY1 )
-{
-  QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setManagerProperty ( PQSTRING(1), PQSTRINGLIST(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setManagerProperty,setManagerProperty1|const QString &,const QStringList &
 
 /*
 void setManagerProperty ( const QString & name, const QString & value )
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_SETMANAGERPROPERTY2 )
-{
-  QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setManagerProperty ( PQSTRING(1), PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setManagerProperty,setManagerProperty2|const QString &,const QString &
 
 //[1]void setManagerProperty ( const QString & name, const QStringList & value )
 //[2]void setManagerProperty ( const QString & name, const QString & value )
@@ -150,32 +119,20 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETMANAGERPROPERTY )
   {
     HB_FUNC_EXEC( QSESSIONMANAGER_SETMANAGERPROPERTY2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
 void setRestartCommand ( const QStringList & command )
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_SETRESTARTCOMMAND )
-{
-  QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRestartCommand ( PQSTRINGLIST(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRestartCommand|const QStringList &
 
 /*
 void setRestartHint ( RestartHint hint )
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_SETRESTARTHINT )
-{
-  QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRestartHint ( (QSessionManager::RestartHint) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRestartHint|QSessionManager::RestartHint
 
 #pragma ENDDUMP
