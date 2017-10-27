@@ -56,30 +56,12 @@ $deleteMethod
 /*
 QAction * action ( DebuggerAction action ) const
 */
-HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ACTION )
-{
-  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->action ( (QScriptEngineDebugger::DebuggerAction) hb_parni(1) );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
-
+$method=|QAction *|action|QScriptEngineDebugger::DebuggerAction
 
 /*
 void attachTo ( QScriptEngine * engine )
 */
-HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ATTACHTO )
-{
-  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScriptEngine * par1 = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->attachTo ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|attachTo|QScriptEngine *
 
 /*
 bool autoShowStandardWindow () const
@@ -89,43 +71,17 @@ $method=|bool|autoShowStandardWindow|
 /*
 QMenu * createStandardMenu ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDMENU )
-{
-  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QMenu * ptr = obj->createStandardMenu ( OPQWIDGET(1,0) );
-    _qt4xhb_createReturnClass ( ptr, "QMENU" );
-  }
-}
-
+$method=|QMenu *|createStandardMenu|QWidget *=0
 
 /*
 QToolBar * createStandardToolBar ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDTOOLBAR )
-{
-  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QToolBar * ptr = obj->createStandardToolBar ( OPQWIDGET(1,0) );
-    _qt4xhb_createReturnClass ( ptr, "QTOOLBAR" );
-  }
-}
-
+$method=|QToolBar *|createStandardToolBar|QWidget *=0
 
 /*
 void detach ()
 */
-HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_DETACH )
-{
-  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->detach ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|detach|
 
 /*
 void setAutoShowStandardWindow ( bool autoShow )
@@ -140,14 +96,7 @@ $method=|QMainWindow *|standardWindow|
 /*
 DebuggerState state () const
 */
-HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_STATE )
-{
-  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->state () );
-  }
-}
+$method=|QScriptEngineDebugger::DebuggerState|state|
 
 /*
 QWidget * widget ( DebuggerWidget widget ) const
