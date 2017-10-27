@@ -115,6 +115,7 @@ QList<int> supportedFrequencies() const
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDFREQUENCIES )
 {
   QAudioDeviceInfo * obj = (QAudioDeviceInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<int> list = obj->supportedFrequencies ();
@@ -137,6 +138,7 @@ QList<int> supportedSampleRates () const
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLERATES )
 {
   QAudioDeviceInfo * obj = (QAudioDeviceInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<int> list = obj->supportedSampleRates ();
@@ -159,6 +161,7 @@ QList<int> supportedChannels() const
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDCHANNELS )
 {
   QAudioDeviceInfo * obj = (QAudioDeviceInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<int> list = obj->supportedChannels ();
@@ -181,6 +184,7 @@ QList<int> supportedChannelCounts () const
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDCHANNELCOUNTS )
 {
   QAudioDeviceInfo * obj = (QAudioDeviceInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<int> list = obj->supportedChannelCounts ();
@@ -203,6 +207,7 @@ QList<int> supportedSampleSizes () const
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLESIZES )
 {
   QAudioDeviceInfo * obj = (QAudioDeviceInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<int> list = obj->supportedSampleSizes ();
@@ -225,6 +230,7 @@ QList<QAudioFormat::Endian> supportedByteOrders () const
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDBYTEORDERS )
 {
   QAudioDeviceInfo * obj = (QAudioDeviceInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QAudioFormat::Endian> list = obj->supportedByteOrders ();
@@ -247,6 +253,7 @@ QList<QAudioFormat::SampleType> supportedSampleTypes () const
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLETYPES )
 {
   QAudioDeviceInfo * obj = (QAudioDeviceInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QAudioFormat::SampleType> list = obj->supportedSampleTypes ();
