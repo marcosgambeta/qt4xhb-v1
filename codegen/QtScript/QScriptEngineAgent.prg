@@ -61,86 +61,32 @@ $deleteMethod
 /*
 virtual void contextPop ()
 */
-HB_FUNC_STATIC( QSCRIPTENGINEAGENT_CONTEXTPOP )
-{
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->contextPop ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|contextPop|
 
 /*
 virtual void contextPush ()
 */
-HB_FUNC_STATIC( QSCRIPTENGINEAGENT_CONTEXTPUSH )
-{
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->contextPush ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|contextPush|
 
 /*
 QScriptEngine * engine () const
 */
-HB_FUNC_STATIC( QSCRIPTENGINEAGENT_ENGINE )
-{
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScriptEngine * ptr = obj->engine ();
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTENGINE" );
-  }
-}
-
+$method=|QScriptEngine *|engine|
 
 /*
 virtual void exceptionCatch ( qint64 scriptId, const QScriptValue & exception )
 */
-HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXCEPTIONCATCH )
-{
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->exceptionCatch ( PQINT64(1), *PQSCRIPTVALUE(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|exceptionCatch|qint64,const QScriptValue &
 
 /*
 virtual void exceptionThrow ( qint64 scriptId, const QScriptValue & exception, bool hasHandler )
 */
-HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXCEPTIONTHROW )
-{
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->exceptionThrow ( PQINT64(1), *PQSCRIPTVALUE(2), PBOOL(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|exceptionThrow|qint64,const QScriptValue &,bool
 
 /*
 virtual QVariant extension ( Extension extension, const QVariant & argument = QVariant() )
 */
-HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXTENSION )
-{
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant * ptr = new QVariant( obj->extension ( (QScriptEngineAgent::Extension) hb_parni(1), par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$virtualMethod=|QVariant|extension|QScriptEngineAgent::Extension,const QVariant &=QVariant()
 
 /*
 virtual void functionEntry ( qint64 scriptId )

@@ -60,15 +60,7 @@ $deleteMethod
 /*
 QScriptValue activationObject () const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXT_ACTIVATIONOBJECT )
-{
-  QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->activationObject () );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
-  }
-}
+$method=|QScriptValue|activationObject|
 
 /*
 QScriptValue argument ( int index ) const
@@ -123,14 +115,7 @@ $method=|void|setThisObject|const QScriptValue &
 /*
 ExecutionState state () const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXT_STATE )
-{
-  QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->state () );
-  }
-}
+$method=|QScriptContext::ExecutionState|state|
 
 /*
 QScriptValue thisObject () const
@@ -159,6 +144,10 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWERROR )
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
     HB_FUNC_EXEC( QSCRIPTCONTEXT_THROWERROR2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

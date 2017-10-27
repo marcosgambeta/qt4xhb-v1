@@ -63,14 +63,7 @@ $method=|QString|errorMessage|
 /*
 State state () const
 */
-HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_STATE )
-{
-  QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->state () );
-  }
-}
+$method=|QScriptSyntaxCheckResult::State|state|
 
 $extraMethods
 

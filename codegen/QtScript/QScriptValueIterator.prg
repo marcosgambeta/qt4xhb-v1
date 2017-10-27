@@ -63,14 +63,7 @@ $deleteMethod
 /*
 QScriptValue::PropertyFlags flags () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_FLAGS )
-{
-  QScriptValueIterator * obj = (QScriptValueIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->flags () );
-  }
-}
+$method=|QScriptValue::PropertyFlags|flags|
 
 /*
 bool hasNext () const
@@ -90,113 +83,42 @@ $method=|QString|name|
 /*
 void next ()
 */
-HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_NEXT )
-{
-  QScriptValueIterator * obj = (QScriptValueIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->next ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|next|
 
 /*
 void previous ()
 */
-HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_PREVIOUS )
-{
-  QScriptValueIterator * obj = (QScriptValueIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->previous ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|previous|
 
 /*
 void remove ()
 */
-HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_REMOVE )
-{
-  QScriptValueIterator * obj = (QScriptValueIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->remove ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|remove|
 
 /*
 QScriptString scriptName () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_SCRIPTNAME )
-{
-  QScriptValueIterator * obj = (QScriptValueIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScriptString * ptr = new QScriptString( obj->scriptName () );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTSTRING" );
-  }
-}
-
+$method=|QScriptString|scriptName|
 
 /*
 void setValue ( const QScriptValue & value )
 */
-HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_SETVALUE )
-{
-  QScriptValueIterator * obj = (QScriptValueIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setValue ( *PQSCRIPTVALUE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setValue|const QScriptValue &
 
 /*
 void toBack ()
 */
-HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_TOBACK )
-{
-  QScriptValueIterator * obj = (QScriptValueIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->toBack ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|toBack|
 
 /*
 void toFront ()
 */
-HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_TOFRONT )
-{
-  QScriptValueIterator * obj = (QScriptValueIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->toFront ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|toFront|
 
 /*
 QScriptValue value () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_VALUE )
-{
-  QScriptValueIterator * obj = (QScriptValueIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->value () );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
-  }
-}
+$method=|QScriptValue|value|
 
 $extraMethods
 

@@ -197,17 +197,18 @@ QScriptValue call ( const QScriptValue & thisObject = QScriptValue(), const QScr
 HB_FUNC_STATIC( QSCRIPTVALUE_CALL1 )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QScriptValue par1 = ISNIL(1)? QScriptValue() : *(QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-QScriptValueList par2;
-PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-int i2;
-int nLen2 = hb_arrayLen(aList2);
-for (i2=0;i2<nLen2;i2++)
-{
-par2 << *(QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
-}
+    QScriptValueList par2;
+    PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
+    int i2;
+    int nLen2 = hb_arrayLen(aList2);
+    for (i2=0;i2<nLen2;i2++)
+    {
+      par2 << *(QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
+    }
     QScriptValue * ptr = new QScriptValue( obj->call ( par1, par2 ) );
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
@@ -233,6 +234,10 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CALL )
   {
     HB_FUNC_EXEC( QSCRIPTVALUE_CALL2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -241,16 +246,17 @@ QScriptValue construct ( const QScriptValueList & args = QScriptValueList() )
 HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT1 )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-QScriptValueList par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-par1 << *(QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
+    QScriptValueList par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    for (i1=0;i1<nLen1;i1++)
+    {
+      par1 << *(QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    }
     QScriptValue * ptr = new QScriptValue( obj->construct ( par1 ) );
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
@@ -273,6 +279,10 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT )
   else if( ISNUMPAR(1) && ISQSCRIPTVALUE(1) )
   {
     HB_FUNC_EXEC( QSCRIPTVALUE_CONSTRUCT2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -424,28 +434,12 @@ $method=|qint32|toInt32|
 /*
 qsreal toInteger () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_TOINTEGER )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    qsreal r = obj->toInteger ();
-    hb_retnd( r );
-  }
-}
+$method=|qsreal|toInteger|
 
 /*
 qsreal toNumber () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_TONUMBER )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    qsreal r = obj->toNumber ();
-    hb_retnd( r );
-  }
-}
+$method=|qsreal|toNumber|
 
 /*
 QObject * toQObject () const

@@ -34,31 +34,12 @@ $deleteMethod
 /*
 QScriptValue setupPackage ( const QString & key, QScriptEngine * engine ) const
 */
-HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_SETUPPACKAGE )
-{
-  QScriptExtensionPlugin * obj = (QScriptExtensionPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScriptEngine * par2 = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QScriptValue * ptr = new QScriptValue( obj->setupPackage ( PQSTRING(1), par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
-  }
-}
-
+$method=|QScriptValue|setupPackage|const QString &,QScriptEngine *
 
 /*
 virtual void initialize ( const QString & key, QScriptEngine * engine ) = 0
 */
-HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_INITIALIZE )
-{
-  QScriptExtensionPlugin * obj = (QScriptExtensionPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScriptEngine * par2 = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->initialize ( PQSTRING(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|initialize|const QString &,QScriptEngine *
 
 /*
 virtual QStringList keys () const = 0
