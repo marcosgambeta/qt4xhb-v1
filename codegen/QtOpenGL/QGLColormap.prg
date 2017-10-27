@@ -114,32 +114,12 @@ $method=|bool|isEmpty|
 /*
 void setEntry ( int idx, QRgb color )
 */
-HB_FUNC_STATIC( QGLCOLORMAP_SETENTRY1 )
-{
-  QGLColormap * obj = (QGLColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRgb par2 = hb_parni(2);
-    obj->setEntry ( PINT(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setEntry,setEntry1|int,QRgb
 
 /*
 void setEntry ( int idx, const QColor & color )
 */
-HB_FUNC_STATIC( QGLCOLORMAP_SETENTRY2 )
-{
-  QGLColormap * obj = (QGLColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QColor par2 = ISOBJECT(2)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(2));
-    obj->setEntry ( PINT(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setEntry,setEntry2|int,const QColor &
 
 //[1]void setEntry ( int idx, QRgb color )
 //[2]void setEntry ( int idx, const QColor & color )
@@ -153,6 +133,10 @@ HB_FUNC_STATIC( QGLCOLORMAP_SETENTRY )
   else if( ISNUMPAR(2) && ISNUM(1) && (ISQCOLOR(2)||ISCHAR(2)) )
   {
     HB_FUNC_EXEC( QGLCOLORMAP_SETENTRY2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

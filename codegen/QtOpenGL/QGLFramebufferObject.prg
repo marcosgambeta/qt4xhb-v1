@@ -127,14 +127,7 @@ $deleteMethod
 /*
 Attachment attachment () const
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_ATTACHMENT )
-{
-  QGLFramebufferObject * obj = (QGLFramebufferObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->attachment () );
-  }
-}
+$method=|QGLFramebufferObject::Attachment|attachment|
 
 /*
 bool bind ()
@@ -144,30 +137,12 @@ $method=|bool|bind|
 /*
 void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_DRAWTEXTURE1 )
-{
-  QGLFramebufferObject * obj = (QGLFramebufferObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->drawTexture ( *PQRECTF(1), PGLUINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|drawTexture,drawTexture1|const QRectF &,GLuint,GLenum=GL_TEXTURE_2D
 
 /*
 void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_DRAWTEXTURE2 )
-{
-  QGLFramebufferObject * obj = (QGLFramebufferObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->drawTexture ( *PQPOINTF(1), PGLUINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|drawTexture,drawTexture2|const QPointF &,GLuint,GLenum=GL_TEXTURE_2D
 
 //[1]void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 //[2]void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
@@ -182,33 +157,21 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_DRAWTEXTURE )
   {
     HB_FUNC_EXEC( QGLFRAMEBUFFEROBJECT_DRAWTEXTURE2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
 QGLFramebufferObjectFormat format () const
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_FORMAT )
-{
-  QGLFramebufferObject * obj = (QGLFramebufferObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QGLFramebufferObjectFormat * ptr = new QGLFramebufferObjectFormat( obj->format () );
-    _qt4xhb_createReturnClass ( ptr, "QGLFRAMEBUFFEROBJECTFORMAT" );
-  }
-}
-
+$method=|QGLFramebufferObjectFormat|format|
 
 /*
 GLuint handle () const
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_HANDLE )
-{
-  QGLFramebufferObject * obj = (QGLFramebufferObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RGLUINT( obj->handle () );
-  }
-}
+$method=|GLuint|handle|
 
 /*
 bool isBound () const
@@ -228,68 +191,27 @@ $method=|bool|release|
 /*
 QSize size () const
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_SIZE )
-{
-  QGLFramebufferObject * obj = (QGLFramebufferObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->size () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
-
+$method=|QSize|size|
 
 /*
 GLuint texture () const
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_TEXTURE )
-{
-  QGLFramebufferObject * obj = (QGLFramebufferObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RGLUINT( obj->texture () );
-  }
-}
-
+$method=|GLuint|texture|
 
 /*
 QImage toImage () const
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_TOIMAGE )
-{
-  QGLFramebufferObject * obj = (QGLFramebufferObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QImage * ptr = new QImage( obj->toImage () );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
-  }
-}
-
+$method=|QImage|toImage|
 
 /*
 virtual QPaintEngine * paintEngine () const
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_PAINTENGINE )
-{
-  QGLFramebufferObject * obj = (QGLFramebufferObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPaintEngine * ptr = obj->paintEngine ();
-    _qt4xhb_createReturnClass ( ptr, "QPAINTENGINE" );
-  }
-}
-
-
+$virtualMethod=|QPaintEngine *|paintEngine|
 
 /*
-void blitFramebuffer ( QGLFramebufferObject * target, const QRect & targetRect, QGLFramebufferObject * source, const QRect & sourceRect, GLbitfield buffers = GL_COLOR_BUFFER_BIT, GLenum filter = GL_NEAREST )
+static void blitFramebuffer ( QGLFramebufferObject * target, const QRect & targetRect, QGLFramebufferObject * source, const QRect & sourceRect, GLbitfield buffers = GL_COLOR_BUFFER_BIT, GLenum filter = GL_NEAREST )
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_BLITFRAMEBUFFER )
-{
-  QGLFramebufferObject::blitFramebuffer ( PQGLFRAMEBUFFEROBJECT(1), *PQRECT(2), PQGLFRAMEBUFFEROBJECT(3), *PQRECT(4), OPGLBITFIELD(5,GL_COLOR_BUFFER_BIT), OPGLENUM(6,GL_NEAREST) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|blitFramebuffer|QGLFramebufferObject *,const QRect &,QGLFramebufferObject *,const QRect &,GLbitfield=GL_COLOR_BUFFER_BIT,GLenum=GL_NEAREST
 
 /*
 static bool hasOpenGLFramebufferBlit ()

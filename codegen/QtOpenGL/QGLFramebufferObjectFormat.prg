@@ -75,27 +75,12 @@ $deleteMethod
 /*
 QGLFramebufferObject::Attachment attachment () const
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_ATTACHMENT )
-{
-  QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->attachment () );
-  }
-}
-
+$method=|QGLFramebufferObject::Attachment|attachment|
 
 /*
 GLenum internalTextureFormat () const
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_INTERNALTEXTUREFORMAT )
-{
-  QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RGLENUM( obj->internalTextureFormat () );
-  }
-}
+$method=|GLenum|internalTextureFormat|
 
 /*
 int samples () const
@@ -105,30 +90,12 @@ $method=|int|samples|
 /*
 void setAttachment ( QGLFramebufferObject::Attachment attachment )
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SETATTACHMENT )
-{
-  QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setAttachment ( (QGLFramebufferObject::Attachment) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAttachment|QGLFramebufferObject::Attachment
 
 /*
 void setInternalTextureFormat ( GLenum internalTextureFormat )
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SETINTERNALTEXTUREFORMAT )
-{
-  QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setInternalTextureFormat ( PGLENUM(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setInternalTextureFormat|GLenum
 
 /*
 void setSamples ( int samples )
@@ -138,31 +105,11 @@ $method=|void|setSamples|int
 /*
 void setTextureTarget ( GLenum target )
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SETTEXTURETARGET )
-{
-  QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTextureTarget ( PGLENUM(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setTextureTarget|GLenum
 
 /*
 GLenum textureTarget () const
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_TEXTURETARGET )
-{
-  QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RGLENUM( obj->textureTarget () );
-  }
-}
-
-
-
-
+$method=|GLenum|textureTarget|
 
 #pragma ENDDUMP

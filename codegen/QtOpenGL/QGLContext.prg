@@ -78,15 +78,7 @@ $deleteMethod
 /*
 GLuint bindTexture ( const QImage & image, GLenum target, GLint format, BindOptions options )
 */
-HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE1 )
-{
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par4 = hb_parni(4);
-    RGLUINT( obj->bindTexture ( *PQIMAGE(1), PGLENUM(2), PGLINT(3), (QGLContext::BindOptions) par4 ) );
-  }
-}
+$method=|GLuint|bindTexture,bindTexture1|const QImage &,GLenum,GLint,QGLContext::BindOptions
 
 /*
 GLuint bindTexture ( const QString & fileName )
@@ -96,42 +88,17 @@ $method=|GLuint|bindTexture,bindTexture2|const QString &
 /*
 GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
 */
-HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE3 )
-{
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RGLUINT( obj->bindTexture ( *PQIMAGE(1), OPGLENUM(2,GL_TEXTURE_2D), OPGLINT(3,GL_RGBA) ) );
-  }
-}
-
+$method=|GLuint|bindTexture,bindTexture3|const QImage &,GLenum=GL_TEXTURE_2D,GLint=GL_RGBA
 
 /*
 GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
 */
-HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE4 )
-{
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RGLUINT( obj->bindTexture ( *PQPIXMAP(1), OPGLENUM(2,GL_TEXTURE_2D), OPGLINT(3,GL_RGBA) ) );
-  }
-}
-
+$method=|GLuint|bindTexture,bindTexture4|const QPixmap &,GLenum=GL_TEXTURE_2D,GLint=GL_RGBA
 
 /*
 GLuint bindTexture ( const QPixmap & pixmap, GLenum target, GLint format, BindOptions options )
 */
-HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE5 )
-{
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par4 = hb_parni(4);
-    RGLUINT( obj->bindTexture ( *PQPIXMAP(1), PGLENUM(2), PGLINT(3), (QGLContext::BindOptions) par4 ) );
-  }
-}
-
+$method=|GLuint|bindTexture,bindTexture5|const QPixmap &,GLenum,GLint,QGLContext::BindOptions
 
 //[1]GLuint bindTexture ( const QImage & image, GLenum target, GLint format, BindOptions options )
 //[2]GLuint bindTexture ( const QString & fileName )
@@ -161,6 +128,10 @@ HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE )
   {
     HB_FUNC_EXEC( QGLCONTEXT_BINDTEXTURE5 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -171,72 +142,27 @@ $virtualMethod=|bool|create|const QGLContext *=0
 /*
 void deleteTexture ( GLuint id )
 */
-HB_FUNC_STATIC( QGLCONTEXT_DELETETEXTURE )
-{
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->deleteTexture ( PGLUINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|deleteTexture|GLuint
 
 /*
 QPaintDevice * device () const
 */
-HB_FUNC_STATIC( QGLCONTEXT_DEVICE )
-{
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPaintDevice * ptr = obj->device ();
-    _qt4xhb_createReturnClass ( ptr, "QPAINTDEVICE" );
-  }
-}
-
+$method=|QPaintDevice *|device|
 
 /*
 virtual void doneCurrent ()
 */
-HB_FUNC_STATIC( QGLCONTEXT_DONECURRENT )
-{
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->doneCurrent ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|doneCurrent|
 
 /*
 void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 */
-HB_FUNC_STATIC( QGLCONTEXT_DRAWTEXTURE1 )
-{
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->drawTexture ( *PQRECTF(1), PGLUINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|drawTexture,drawTexture1|const QRectF &,GLuint,GLenum=GL_TEXTURE_2D
 
 /*
 void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 */
-HB_FUNC_STATIC( QGLCONTEXT_DRAWTEXTURE2 )
-{
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->drawTexture ( *PQPOINTF(1), PGLUINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|drawTexture,drawTexture2|const QPointF &,GLuint,GLenum=GL_TEXTURE_2D
 
 //[1]void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 //[2]void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
@@ -251,20 +177,16 @@ HB_FUNC_STATIC( QGLCONTEXT_DRAWTEXTURE )
   {
     HB_FUNC_EXEC( QGLCONTEXT_DRAWTEXTURE2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
 QGLFormat format () const
 */
-HB_FUNC_STATIC( QGLCONTEXT_FORMAT )
-{
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QGLFormat * ptr = new QGLFormat( obj->format () );
-    _qt4xhb_createReturnClass ( ptr, "QGLFORMAT" );
-  }
-}
+$method=|QGLFormat|format|
 
 /*
 void * getProcAddress ( const QString & proc ) const
@@ -284,85 +206,32 @@ $method=|bool|isValid|
 /*
 virtual void makeCurrent ()
 */
-HB_FUNC_STATIC( QGLCONTEXT_MAKECURRENT )
-{
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->makeCurrent ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|makeCurrent|
 
 /*
 QColor overlayTransparentColor () const
 */
-HB_FUNC_STATIC( QGLCONTEXT_OVERLAYTRANSPARENTCOLOR )
-{
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QColor * ptr = new QColor( obj->overlayTransparentColor () );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-}
-
+$method=|QColor|overlayTransparentColor|
 
 /*
 QGLFormat requestedFormat () const
 */
-HB_FUNC_STATIC( QGLCONTEXT_REQUESTEDFORMAT )
-{
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QGLFormat * ptr = new QGLFormat( obj->requestedFormat () );
-    _qt4xhb_createReturnClass ( ptr, "QGLFORMAT" );
-  }
-}
-
+$method=|QGLFormat|requestedFormat|
 
 /*
 void reset ()
 */
-HB_FUNC_STATIC( QGLCONTEXT_RESET )
-{
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->reset ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|reset|
 
 /*
 void setFormat ( const QGLFormat & format )
 */
-HB_FUNC_STATIC( QGLCONTEXT_SETFORMAT )
-{
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFormat ( *PQGLFORMAT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFormat|const QGLFormat &
 
 /*
 virtual void swapBuffers () const
 */
-HB_FUNC_STATIC( QGLCONTEXT_SWAPBUFFERS )
-{
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->swapBuffers ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|swapBuffers|
 
 /*
 static bool areSharing ( const QGLContext * context1, const QGLContext * context2 )
@@ -372,11 +241,7 @@ $staticMethod=|bool|areSharing|const QGLContext *,const QGLContext *
 /*
 static const QGLContext * currentContext ()
 */
-HB_FUNC_STATIC( QGLCONTEXT_CURRENTCONTEXT )
-{
-  const QGLContext * ptr = QGLContext::currentContext ();
-  _qt4xhb_createReturnClass ( ptr, "QGLCONTEXT" );
-}
+$staticMethod=|const QGLContext *|currentContext|
 
 /*
 static void setTextureCacheLimit ( int size )

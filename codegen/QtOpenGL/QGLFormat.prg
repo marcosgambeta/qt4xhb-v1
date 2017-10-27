@@ -221,14 +221,7 @@ $method=|int|plane|
 /*
 OpenGLContextProfile profile () const
 */
-HB_FUNC_STATIC( QGLFORMAT_PROFILE )
-{
-  QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->profile () );
-  }
-}
+$method=|QGLFormat::OpenGLContextProfile|profile|
 
 /*
 int redBufferSize () const
@@ -318,16 +311,7 @@ $method=|void|setPlane|int
 /*
 void setProfile ( OpenGLContextProfile profile )
 */
-HB_FUNC_STATIC( QGLFORMAT_SETPROFILE )
-{
-  QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setProfile ( (QGLFormat::OpenGLContextProfile) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setProfile|QGLFormat::OpenGLContextProfile
 
 /*
 void setRedBufferSize ( int size )

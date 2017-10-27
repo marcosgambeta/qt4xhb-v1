@@ -415,29 +415,12 @@ $method=|bool|hasOpenGLFeature|QGLFunctions::OpenGLFeature
 /*
 void initializeGLFunctions ( const QGLContext * context = 0 )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_INITIALIZEGLFUNCTIONS )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QGLContext * par1 = ISNIL(1)? 0 : (const QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->initializeGLFunctions ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|initializeGLFunctions|const QGLContext *=0
 
 /*
 QGLFunctions::OpenGLFeatures openGLFeatures () const
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_OPENGLFEATURES )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->openGLFeatures () );
-  }
-}
+$method=|QGLFunctions::OpenGLFeatures|openGLFeatures|
 
 $extraMethods
 
