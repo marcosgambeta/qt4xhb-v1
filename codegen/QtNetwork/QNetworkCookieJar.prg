@@ -40,6 +40,7 @@ virtual QList<QNetworkCookie> cookiesForUrl ( const QUrl & url ) const
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_COOKIESFORURL )
 {
   QNetworkCookieJar * obj = (QNetworkCookieJar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QNetworkCookie> list = obj->cookiesForUrl ( *PQURL(1) );
@@ -87,6 +88,7 @@ virtual bool setCookiesFromUrl ( const QList<QNetworkCookie> & cookieList, const
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_SETCOOKIESFROMURL )
 {
   QNetworkCookieJar * obj = (QNetworkCookieJar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QNetworkCookie> par1;

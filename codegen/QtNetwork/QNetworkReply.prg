@@ -92,18 +92,20 @@ void ignoreSslErrors ( const QList<QSslError> & errors )
 HB_FUNC_STATIC( QNETWORKREPLY_IGNORESSLERRORS1 )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-QList<QSslError> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-par1 << *(QSslError *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
+    QList<QSslError> par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    for (i1=0;i1<nLen1;i1++)
+    {
+      par1 << *(QSslError *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    }
     obj->ignoreSslErrors ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -124,6 +126,10 @@ HB_FUNC_STATIC( QNETWORKREPLY_IGNORESSLERRORS )
   else if( ISNUMPAR(0) )
   {
     HB_FUNC_EXEC( QNETWORKREPLY_IGNORESSLERRORS2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -158,6 +164,7 @@ QList<QByteArray> rawHeaderList () const
 HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADERLIST )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QByteArray> list = obj->rawHeaderList ();

@@ -137,18 +137,20 @@ void addCaCertificates ( const QList<QSslCertificate> & certificates )
 HB_FUNC_STATIC( QSSLSOCKET_ADDCACERTIFICATES2 )
 {
   QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-QList<QSslCertificate> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-par1 << *(QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
+    QList<QSslCertificate> par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    for (i1=0;i1<nLen1;i1++)
+    {
+      par1 << *(QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    }
     obj->addCaCertificates ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -165,6 +167,10 @@ HB_FUNC_STATIC( QSSLSOCKET_ADDCACERTIFICATES )
   {
     HB_FUNC_EXEC( QSSLSOCKET_ADDCACERTIFICATES2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -173,6 +179,7 @@ QList<QSslCertificate> caCertificates () const
 HB_FUNC_STATIC( QSSLSOCKET_CACERTIFICATES )
 {
   QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QSslCertificate> list = obj->caCertificates ();
@@ -220,6 +227,7 @@ QList<QSslCipher> ciphers () const
 HB_FUNC_STATIC( QSSLSOCKET_CIPHERS )
 {
   QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QSslCipher> list = obj->ciphers ();
@@ -284,6 +292,10 @@ HB_FUNC_STATIC( QSSLSOCKET_CONNECTTOHOSTENCRYPTED )
   {
     HB_FUNC_EXEC( QSSLSOCKET_CONNECTTOHOSTENCRYPTED2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -307,18 +319,20 @@ void ignoreSslErrors ( const QList<QSslError> & errors )
 HB_FUNC_STATIC( QSSLSOCKET_IGNORESSLERRORS1 )
 {
   QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-QList<QSslError> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-par1 << *(QSslError *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
+    QList<QSslError> par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    for (i1=0;i1<nLen1;i1++)
+    {
+      par1 << *(QSslError *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    }
     obj->ignoreSslErrors ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -339,6 +353,10 @@ HB_FUNC_STATIC( QSSLSOCKET_IGNORESSLERRORS )
   else if( ISNUMPAR(0) )
   {
     HB_FUNC_EXEC( QSSLSOCKET_IGNORESSLERRORS2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -368,6 +386,7 @@ QList<QSslCertificate> peerCertificateChain () const
 HB_FUNC_STATIC( QSSLSOCKET_PEERCERTIFICATECHAIN )
 {
   QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QSslCertificate> list = obj->peerCertificateChain ();
@@ -440,18 +459,20 @@ void setCaCertificates ( const QList<QSslCertificate> & certificates )
 HB_FUNC_STATIC( QSSLSOCKET_SETCACERTIFICATES )
 {
   QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-QList<QSslCertificate> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-par1 << *(QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
+    QList<QSslCertificate> par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    for (i1=0;i1<nLen1;i1++)
+    {
+      par1 << *(QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    }
     obj->setCaCertificates ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -461,18 +482,20 @@ void setCiphers ( const QList<QSslCipher> & ciphers )
 HB_FUNC_STATIC( QSSLSOCKET_SETCIPHERS1 )
 {
   QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-QList<QSslCipher> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-par1 << *(QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
+    QList<QSslCipher> par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    for (i1=0;i1<nLen1;i1++)
+    {
+      par1 << *(QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    }
     obj->setCiphers ( par1 );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -493,6 +516,10 @@ HB_FUNC_STATIC( QSSLSOCKET_SETCIPHERS )
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
     HB_FUNC_EXEC( QSSLSOCKET_SETCIPHERS2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -518,6 +545,10 @@ HB_FUNC_STATIC( QSSLSOCKET_SETLOCALCERTIFICATE )
   else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
     HB_FUNC_EXEC( QSSLSOCKET_SETLOCALCERTIFICATE2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -553,6 +584,10 @@ HB_FUNC_STATIC( QSSLSOCKET_SETPRIVATEKEY )
   else if( ISBETWEEN(1,4) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && (ISQBYTEARRAY(4)||ISNIL(4)) )
   {
     HB_FUNC_EXEC( QSSLSOCKET_SETPRIVATEKEY2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -597,6 +632,7 @@ QList<QSslError> sslErrors () const
 HB_FUNC_STATIC( QSSLSOCKET_SSLERRORS )
 {
   QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QSslError> list = obj->sslErrors ();
@@ -713,14 +749,14 @@ void addDefaultCaCertificates ( const QList<QSslCertificate> & certificates )
 */
 HB_FUNC_STATIC( QSSLSOCKET_ADDDEFAULTCACERTIFICATES2 )
 {
-QList<QSslCertificate> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-par1 << *(QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
+  QList<QSslCertificate> par1;
+  PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+  int i1;
+  int nLen1 = hb_arrayLen(aList1);
+  for (i1=0;i1<nLen1;i1++)
+  {
+    par1 << *(QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+  }
   QSslSocket::addDefaultCaCertificates ( par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -737,6 +773,10 @@ HB_FUNC_STATIC( QSSLSOCKET_ADDDEFAULTCACERTIFICATES )
   else if( ISNUMPAR(1) && ISARRAY(1) )
   {
     HB_FUNC_EXEC( QSSLSOCKET_ADDDEFAULTCACERTIFICATES2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -831,14 +871,14 @@ void setDefaultCaCertificates ( const QList<QSslCertificate> & certificates )
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETDEFAULTCACERTIFICATES )
 {
-QList<QSslCertificate> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-par1 << *(QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
+  QList<QSslCertificate> par1;
+  PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+  int i1;
+  int nLen1 = hb_arrayLen(aList1);
+  for (i1=0;i1<nLen1;i1++)
+  {
+    par1 << *(QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+  }
   QSslSocket::setDefaultCaCertificates ( par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -848,14 +888,14 @@ void setDefaultCiphers ( const QList<QSslCipher> & ciphers )
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETDEFAULTCIPHERS )
 {
-QList<QSslCipher> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-par1 << *(QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
+  QList<QSslCipher> par1;
+  PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+  int i1;
+  int nLen1 = hb_arrayLen(aList1);
+  for (i1=0;i1<nLen1;i1++)
+  {
+    par1 << *(QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+  }
   QSslSocket::setDefaultCiphers ( par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }

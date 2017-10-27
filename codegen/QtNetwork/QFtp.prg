@@ -168,6 +168,10 @@ HB_FUNC_STATIC( QFTP_PUT )
   {
     HB_FUNC_EXEC( QFTP_PUT2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
