@@ -35,22 +35,12 @@ $destructor
 /*
 QFileOpenEvent(const QString &file)
 */
-HB_FUNC_STATIC( QFILEOPENEVENT_NEW1 ) // TODO: revisar e corrigir
-{
-  QFileOpenEvent * par1 = (QFileOpenEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QFileOpenEvent * o = new QFileOpenEvent ( *par1 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|const QString &
 
 /*
 QFileOpenEvent(const QUrl &url)
 */
-HB_FUNC_STATIC( QFILEOPENEVENT_NEW2 ) // TODO: revisar e corrigir
-{
-  QFileOpenEvent * par1 = (QFileOpenEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QFileOpenEvent * o = new QFileOpenEvent ( *par1 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QUrl &
 
 //[1]QFileOpenEvent(const QString &file)
 //[2]QFileOpenEvent(const QUrl &url)

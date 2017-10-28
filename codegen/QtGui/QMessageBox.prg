@@ -77,22 +77,12 @@ $destructor
 /*
 QMessageBox ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QMESSAGEBOX_NEW1 )
-{
-  QMessageBox * o = new QMessageBox ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QWidget *=0
 
 /*
 QMessageBox ( Icon icon, const QString & title, const QString & text, StandardButtons buttons = NoButton, QWidget * parent = 0, Qt::WindowFlags f = Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint )
 */
-HB_FUNC_STATIC( QMESSAGEBOX_NEW2 )
-{
-  int par4 = ISNIL(4)? (int) QMessageBox::NoButton : hb_parni(4);
-  int par6 = ISNIL(6)? (int) Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint : hb_parni(6);
-  QMessageBox * o = new QMessageBox ( (QMessageBox::Icon) hb_parni(1), PQSTRING(2), PQSTRING(3), (QMessageBox::StandardButtons) par4, OPQWIDGET(5,0), (Qt::WindowFlags) par6 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|QMessageBox|QMessageBox::Icon,const QString &,const QString &,QMessageBox::StandardButtons=QMessageBox::NoButton,QWidget *=0,Qt::WindowFlags=Qt::Dialog OR Qt::MSWindowsFixedSizeDialogHint
 
 //[1]QMessageBox ( QWidget * parent = 0 )
 //[2]QMessageBox ( Icon icon, const QString & title, const QString & text, StandardButtons buttons = NoButton, QWidget * parent = 0, Qt::WindowFlags f = Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint )

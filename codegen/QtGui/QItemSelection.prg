@@ -44,20 +44,12 @@ $destructor
 /*
 QItemSelection ()
 */
-HB_FUNC_STATIC( QITEMSELECTION_NEW1 )
-{
-  QItemSelection * o = new QItemSelection ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|
 
 /*
 QItemSelection ( const QModelIndex & topLeft, const QModelIndex & bottomRight )
 */
-HB_FUNC_STATIC( QITEMSELECTION_NEW2 )
-{
-  QItemSelection * o = new QItemSelection ( *PQMODELINDEX(1), *PQMODELINDEX(2) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QModelIndex &,const QModelIndex &
 
 //[1]QItemSelection ()
 //[2]QItemSelection ( const QModelIndex & topLeft, const QModelIndex & bottomRight )

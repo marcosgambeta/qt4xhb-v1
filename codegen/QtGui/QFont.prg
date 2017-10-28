@@ -101,38 +101,22 @@ $destructor
 /*
 QFont ()
 */
-HB_FUNC_STATIC( QFONT_NEW1 )
-{
-  QFont * o = new QFont ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new1|
 
 /*
 QFont ( const QString & family, int pointSize = -1, int weight = -1, bool italic = false )
 */
-HB_FUNC_STATIC( QFONT_NEW2 )
-{
-  QFont * o = new QFont ( PQSTRING(1), OPINT(2,-1), OPINT(3,-1), OPBOOL(4,false) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new2|const QString &,int=-1,int=-1,bool=false
 
 /*
 QFont ( const QFont & font, QPaintDevice * pd )
 */
-HB_FUNC_STATIC( QFONT_NEW3 )
-{
-  QFont * o = new QFont ( *PQFONT(1), PQPAINTDEVICE(2) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new3|const QFont &,QPaintDevice *
 
 /*
 QFont ( const QFont & font )
 */
-HB_FUNC_STATIC( QFONT_NEW4 )
-{
-  QFont * o = new QFont ( *PQFONT(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new4|const QFont &
 
 //[1]QFont ()
 //[2]QFont ( const QString & family, int pointSize = -1, int weight = -1, bool italic = false )

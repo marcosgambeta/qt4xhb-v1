@@ -52,20 +52,12 @@ $destructor
 /*
 QTextTableCell ()
 */
-HB_FUNC_STATIC( QTEXTTABLECELL_NEW1 )
-{
-  QTextTableCell * o = new QTextTableCell ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|
 
 /*
 QTextTableCell ( const QTextTableCell & other )
 */
-HB_FUNC_STATIC( QTEXTTABLECELL_NEW2 )
-{
-  QTextTableCell * o = new QTextTableCell ( *PQTEXTTABLECELL(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QTextTableCell &
 
 //[1]QTextTableCell ()
 //[2]QTextTableCell ( const QTextTableCell & other )

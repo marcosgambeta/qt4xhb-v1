@@ -40,20 +40,12 @@ $destructor
 /*
 QGraphicsPathItem ( QGraphicsItem * parent = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSPATHITEM_NEW1 )
-{
-  QGraphicsPathItem * o = new QGraphicsPathItem ( OPQGRAPHICSITEM(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QGraphicsItem *=0
 
 /*
 QGraphicsPathItem ( const QPainterPath & path, QGraphicsItem * parent = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSPATHITEM_NEW2 )
-{
-  QGraphicsPathItem * o = new QGraphicsPathItem ( *PQPAINTERPATH(1), OPQGRAPHICSITEM(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|const QPainterPath &,QGraphicsItem *=0
 
 //[1]QGraphicsPathItem ( QGraphicsItem * parent = 0 )
 //[2]QGraphicsPathItem ( const QPainterPath & path, QGraphicsItem * parent = 0 )

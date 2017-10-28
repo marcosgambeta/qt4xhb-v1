@@ -128,20 +128,12 @@ $destructor
 /*
 QTextEdit ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QTEXTEDIT_NEW1 )
-{
-  QTextEdit * o = new QTextEdit ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QWidget *=0
 
 /*
 QTextEdit ( const QString & text, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QTEXTEDIT_NEW2 )
-{
-  QTextEdit * o = new QTextEdit ( PQSTRING(1), OPQWIDGET(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QString &,QWidget *=0
 
 //[1]QTextEdit ( QWidget * parent = 0 )
 //[2]QTextEdit ( const QString & text, QWidget * parent = 0 )

@@ -54,20 +54,12 @@ $destructor
 /*
 QLCDNumber ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QLCDNUMBER_NEW1 )
-{
-  QLCDNumber * o = new QLCDNumber ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QWidget *=0
 
 /*
 QLCDNumber ( uint numDigits, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QLCDNUMBER_NEW2 )
-{
-  QLCDNumber * o = new QLCDNumber ( PUINT(1), OPQWIDGET(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|uint,QWidget *=0
 
 //[1]QLCDNumber ( QWidget * parent = 0 )
 //[2]QLCDNumber ( uint numDigits, QWidget * parent = 0 )

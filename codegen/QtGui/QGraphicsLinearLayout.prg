@@ -52,22 +52,12 @@ $destructor
 /*
 QGraphicsLinearLayout ( QGraphicsLayoutItem * parent = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_NEW1 )
-{
-  QGraphicsLayoutItem * par1 = ISNIL(1)? 0 : (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QGraphicsLinearLayout * o = new QGraphicsLinearLayout ( par1 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QGraphicsLayoutItem *=0
 
 /*
 QGraphicsLinearLayout ( Qt::Orientation orientation, QGraphicsLayoutItem * parent = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_NEW2 )
-{
-  QGraphicsLayoutItem * par2 = ISNIL(2)? 0 : (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QGraphicsLinearLayout * o = new QGraphicsLinearLayout ( (Qt::Orientation) hb_parni(1), par2 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|Qt::Orientation,QGraphicsLayoutItem *=0
 
 //[1]QGraphicsLinearLayout ( QGraphicsLayoutItem * parent = 0 )
 //[2]QGraphicsLinearLayout ( Qt::Orientation orientation, QGraphicsLayoutItem * parent = 0 )

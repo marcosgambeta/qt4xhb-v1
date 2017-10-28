@@ -94,48 +94,32 @@ $destructor
 /*
 QPixmap ()
 */
-HB_FUNC_STATIC( QPIXMAP_NEW1 )
-{
-  QPixmap * o = new QPixmap ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new1|
 
 /*
 QPixmap ( int width, int height )
 */
-HB_FUNC_STATIC( QPIXMAP_NEW2 )
-{
-  QPixmap * o = new QPixmap ( PINT(1), PINT(2) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new2|int,int
 
 /*
 QPixmap ( const QString & fileName, const char * format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor )
 */
-HB_FUNC_STATIC( QPIXMAP_NEW3 )
-{
-  int par3 = ISNIL(3)? (int) Qt::AutoColor : hb_parni(3);
-  QPixmap * o = new QPixmap ( PQSTRING(1), (const char *) ISNIL(2)? 0 : hb_parc(2), (Qt::ImageConversionFlags) par3 );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new3|const QString &,const char *=0,Qt::ImageConversionFlags=Qt::AutoColor
+
+/*
+QPixmap ( const char * const[] xpm )
+*/
+%% TODO: implementar ?
 
 /*
 QPixmap ( const QPixmap & pixmap )
 */
-HB_FUNC_STATIC( QPIXMAP_NEW5 )
-{
-  QPixmap * o = new QPixmap ( *PQPIXMAP(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new5|const QPixmap &
 
 /*
 QPixmap ( const QSize & size )
 */
-HB_FUNC_STATIC( QPIXMAP_NEW6 )
-{
-  QPixmap * o = new QPixmap ( *PQSIZE(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new6|const QSize &
 
 //[1]QPixmap ()
 //[2]QPixmap ( int width, int height )
@@ -158,6 +142,10 @@ HB_FUNC_STATIC( QPIXMAP_NEW )
   {
     HB_FUNC_EXEC( QPIXMAP_NEW3 );
   }
+%%  else if( ISNUMPAR(1) && ISCHAR(1) )
+%%  {
+%%    HB_FUNC_EXEC( QPIXMAP_NEW4 );
+%%  }
   else if( ISNUMPAR(1) && ISQPIXMAP(1) )
   {
     HB_FUNC_EXEC( QPIXMAP_NEW5 );

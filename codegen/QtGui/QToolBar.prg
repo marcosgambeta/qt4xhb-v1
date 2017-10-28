@@ -73,20 +73,12 @@ $destructor
 /*
 QToolBar ( const QString & title, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QTOOLBAR_NEW1 )
-{
-  QToolBar * o = new QToolBar ( PQSTRING(1), OPQWIDGET(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|const QString &,QWidget *=0
 
 /*
 QToolBar ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QTOOLBAR_NEW2 )
-{
-  QToolBar * o = new QToolBar ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|QWidget *=0
 
 //[1]QToolBar ( const QString & title, QWidget * parent = 0 )
 //[2]QToolBar ( QWidget * parent = 0 )

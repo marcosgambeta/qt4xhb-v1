@@ -38,20 +38,12 @@ $destructor
 /*
 QTextLength ()
 */
-HB_FUNC_STATIC( QTEXTLENGTH_NEW1 )
-{
-  QTextLength * o = new QTextLength ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|
 
 /*
 QTextLength ( Type type, qreal value )
 */
-HB_FUNC_STATIC( QTEXTLENGTH_NEW2 )
-{
-  QTextLength * o = new QTextLength ( (QTextLength::Type) hb_parni(1), PQREAL(2) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|QTextLength::Type,qreal
 
 //[1]QTextLength ()
 //[2]QTextLength ( Type type, qreal value )

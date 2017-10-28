@@ -49,65 +49,37 @@ $destructor
 /*
 QRadialGradient()
 */
-HB_FUNC_STATIC( QRADIALGRADIENT_NEW1 )
-{
-  QRadialGradient * o = new QRadialGradient ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|
 
 /*
 QRadialGradient(const QPointF &center, qreal radius, const QPointF &focalPoint)
 */
-HB_FUNC_STATIC( QRADIALGRADIENT_NEW2 )
-{
-  QRadialGradient * o = new QRadialGradient ( *PQPOINTF(1), PQREAL(2), *PQPOINTF(3) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QPointF &,qreal,const QPointF &
 
 /*
 QRadialGradient(qreal cx, qreal cy, qreal radius, qreal fx, qreal fy)
 */
-HB_FUNC_STATIC( QRADIALGRADIENT_NEW3 )
-{
-  QRadialGradient * o = new QRadialGradient ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new3|qreal,qreal,qreal,qreal,qreal
 
 /*
 QRadialGradient(const QPointF &center, qreal radius)
 */
-HB_FUNC_STATIC( QRADIALGRADIENT_NEW4 )
-{
-  QRadialGradient * o = new QRadialGradient ( *PQPOINTF(1), PQREAL(2) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new4|const QPointF &,qreal
 
 /*
 QRadialGradient(qreal cx, qreal cy, qreal radius)
 */
-HB_FUNC_STATIC( QRADIALGRADIENT_NEW5 )
-{
-  QRadialGradient * o = new QRadialGradient ( PQREAL(1), PQREAL(2), PQREAL(3) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new5|qreal,qreal,qreal
 
 /*
 QRadialGradient(const QPointF &center, qreal centerRadius, const QPointF &focalPoint, qreal focalRadius)
 */
-HB_FUNC_STATIC( QRADIALGRADIENT_NEW6 )
-{
-  QRadialGradient * o = new QRadialGradient ( *PQPOINTF(1), PQREAL(2), *PQPOINTF(3), PQREAL(4) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new6|const QPointF &,qreal,const QPointF &,qreal
 
 /*
 QRadialGradient(qreal cx, qreal cy, qreal centerRadius, qreal fx, qreal fy, qreal focalRadius)
 */
-HB_FUNC_STATIC( QRADIALGRADIENT_NEW7 )
-{
-  QRadialGradient * o = new QRadialGradient ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new7|qreal,qreal,qreal,qreal,qreal,qreal
 
 //[1]QRadialGradient()
 //[2]QRadialGradient(const QPointF &center, qreal radius, const QPointF &focalPoint)

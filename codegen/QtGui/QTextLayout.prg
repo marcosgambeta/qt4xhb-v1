@@ -80,30 +80,17 @@ $destructor
 /*
 QTextLayout ()
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_NEW1 )
-{
-  QTextLayout * o = new QTextLayout ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|
 
 /*
 QTextLayout ( const QString & text )
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_NEW2 )
-{
-  QTextLayout * o = new QTextLayout ( PQSTRING(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QString &
 
 /*
 QTextLayout ( const QString & text, const QFont & font, QPaintDevice * paintdevice = 0 )
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_NEW3 )
-{
-  QPaintDevice * par3 = ISNIL(3)? 0 : (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QTextLayout * o = new QTextLayout ( PQSTRING(1), *PQFONT(2), par3 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new3|const QString &,const QFont &,QPaintDevice *=0
 
 //[1]QTextLayout ()
 //[2]QTextLayout ( const QString & text )

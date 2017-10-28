@@ -37,20 +37,12 @@ $destructor
 /*
 QSupportedWritingSystems ()
 */
-HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_NEW1 )
-{
-  QSupportedWritingSystems * o = new QSupportedWritingSystems ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|
 
 /*
 QSupportedWritingSystems ( const QSupportedWritingSystems & other )
 */
-HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_NEW2 )
-{
-  QSupportedWritingSystems * o = new QSupportedWritingSystems ( *PQSUPPORTEDWRITINGSYSTEMS(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QSupportedWritingSystems &
 
 //[1]QSupportedWritingSystems ()
 //[2]QSupportedWritingSystems ( const QSupportedWritingSystems & other )

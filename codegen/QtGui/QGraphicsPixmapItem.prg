@@ -50,20 +50,12 @@ $destructor
 /*
 QGraphicsPixmapItem ( QGraphicsItem * parent = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_NEW1 )
-{
-  QGraphicsPixmapItem * o = new QGraphicsPixmapItem ( OPQGRAPHICSITEM(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QGraphicsItem *=0
 
 /*
 QGraphicsPixmapItem ( const QPixmap & pixmap, QGraphicsItem * parent = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_NEW2 )
-{
-  QGraphicsPixmapItem * o = new QGraphicsPixmapItem ( *PQPIXMAP(1), OPQGRAPHICSITEM(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QPixmap &,QGraphicsItem *=0
 
 //[1]QGraphicsPixmapItem ( QGraphicsItem * parent = 0 )
 //[2]QGraphicsPixmapItem ( const QPixmap & pixmap, QGraphicsItem * parent = 0 )

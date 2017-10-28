@@ -38,20 +38,12 @@ $destructor
 /*
 QMouseEventTransition ( QState * sourceState = 0 )
 */
-HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_NEW1 )
-{
-  QMouseEventTransition * o = new QMouseEventTransition ( OPQSTATE(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QState *=0
 
 /*
 QMouseEventTransition ( QObject * object, QEvent::Type type, Qt::MouseButton button, QState * sourceState = 0 )
 */
-HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_NEW2 )
-{
-  QMouseEventTransition * o = new QMouseEventTransition ( PQOBJECT(1), (QEvent::Type) hb_parni(2), (Qt::MouseButton) hb_parni(3), OPQSTATE(4,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|QObject *,QEvent::Type,Qt::MouseButton,QState *=0
 
 //[1]QMouseEventTransition ( QState * sourceState = 0 )
 //[2]QMouseEventTransition ( QObject * object, QEvent::Type type, Qt::MouseButton button, QState * sourceState = 0 )

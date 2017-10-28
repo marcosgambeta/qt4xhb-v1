@@ -104,20 +104,12 @@ $destructor
 /*
 QPlainTextEdit ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_NEW1 )
-{
-  QPlainTextEdit * o = new QPlainTextEdit ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QWidget *=0
 
 /*
 QPlainTextEdit ( const QString & text, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_NEW2 )
-{
-  QPlainTextEdit * o = new QPlainTextEdit ( PQSTRING(1), OPQWIDGET(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QString &,QWidget *=0
 
 //[1]QPlainTextEdit ( QWidget * parent = 0 )
 //[2]QPlainTextEdit ( const QString & text, QWidget * parent = 0 )

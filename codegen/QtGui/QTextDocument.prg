@@ -132,20 +132,12 @@ $destructor
 /*
 QTextDocument ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_NEW1 )
-{
-  QTextDocument * o = new QTextDocument ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QObject *=0
 
 /*
 QTextDocument ( const QString & text, QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_NEW2 )
-{
-  QTextDocument * o = new QTextDocument ( PQSTRING(1), OPQOBJECT(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QString &,QObject *=0
 
 //[1]QTextDocument ( QObject * parent = 0 )
 //[2]QTextDocument ( const QString & text, QObject * parent = 0 )

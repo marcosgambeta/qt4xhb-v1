@@ -70,38 +70,22 @@ $destructor
 /*
 QFontMetricsF ( const QFont & font )
 */
-HB_FUNC_STATIC( QFONTMETRICSF_NEW1 )
-{
-  QFontMetricsF * o = new QFontMetricsF ( *PQFONT(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new1|const QFont &
 
 /*
 QFontMetricsF ( const QFont & font, QPaintDevice * paintdevice )
 */
-HB_FUNC_STATIC( QFONTMETRICSF_NEW2 )
-{
-  QFontMetricsF * o = new QFontMetricsF ( *PQFONT(1), PQPAINTDEVICE(2) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new2|const QFont &,QPaintDevice *
 
 /*
 QFontMetricsF ( const QFontMetrics & fontMetrics )
 */
-HB_FUNC_STATIC( QFONTMETRICSF_NEW3 )
-{
-  QFontMetricsF * o = new QFontMetricsF ( *PQFONTMETRICS(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new3|const QFontMetrics &
 
 /*
 QFontMetricsF ( const QFontMetricsF & fm )
 */
-HB_FUNC_STATIC( QFONTMETRICSF_NEW4 )
-{
-  QFontMetricsF * o = new QFontMetricsF ( *PQFONTMETRICSF(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new4|const QFontMetricsF &
 
 //[1]QFontMetricsF ( const QFont & font )
 //[2]QFontMetricsF ( const QFont & font, QPaintDevice * paintdevice )

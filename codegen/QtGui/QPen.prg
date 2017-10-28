@@ -66,51 +66,27 @@ $destructor
 /*
 QPen ()
 */
-HB_FUNC_STATIC( QPEN_NEW1 )
-{
-  QPen * o = new QPen ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new1|
 
 /*
 QPen ( Qt::PenStyle style )
 */
-HB_FUNC_STATIC( QPEN_NEW2 )
-{
-  QPen * o = new QPen ( (Qt::PenStyle) hb_parni(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new2|Qt::PenStyle
 
 /*
 QPen ( const QColor & color )
 */
-HB_FUNC_STATIC( QPEN_NEW3 )
-{
-  QColor par1 = ISOBJECT(1)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(1));
-  QPen * o = new QPen ( par1 );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new3|const QColor &
 
 /*
 QPen ( const QBrush & brush, qreal width, Qt::PenStyle style = Qt::SolidLine, Qt::PenCapStyle cap = Qt::SquareCap, Qt::PenJoinStyle join = Qt::BevelJoin )
 */
-HB_FUNC_STATIC( QPEN_NEW4 )
-{
-  int par3 = ISNIL(3)? (int) Qt::SolidLine : hb_parni(3);
-  int par4 = ISNIL(4)? (int) Qt::SquareCap : hb_parni(4);
-  int par5 = ISNIL(5)? (int) Qt::BevelJoin : hb_parni(5);
-  QPen * o = new QPen ( *PQBRUSH(1), PQREAL(2), (Qt::PenStyle) par3, (Qt::PenCapStyle) par4, (Qt::PenJoinStyle) par5 );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new4|const QBrush &,qreal,Qt::PenStyle=Qt::SolidLine,Qt::PenCapStyle=Qt::SquareCap,Qt::PenJoinStyle=Qt::BevelJoin
 
 /*
 QPen ( const QPen & pen )
 */
-HB_FUNC_STATIC( QPEN_NEW5 )
-{
-  QPen * o = new QPen ( *PQPEN(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new5|const QPen &
 
 //[1]QPen ()
 //[2]QPen ( Qt::PenStyle style )

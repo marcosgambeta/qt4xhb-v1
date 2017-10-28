@@ -43,20 +43,12 @@ $destructor
 /*
 QGraphicsPolygonItem ( QGraphicsItem * parent = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_NEW1 )
-{
-  QGraphicsPolygonItem * o = new QGraphicsPolygonItem ( OPQGRAPHICSITEM(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QGraphicsItem *=0
 
 /*
 QGraphicsPolygonItem ( const QPolygonF & polygon, QGraphicsItem * parent = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_NEW2 )
-{
-  QGraphicsPolygonItem * o = new QGraphicsPolygonItem ( *PQPOLYGONF(1), OPQGRAPHICSITEM(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QPolygonF &,QGraphicsItem *=0
 
 //[1]QGraphicsPolygonItem ( QGraphicsItem * parent = 0 )
 //[2]QGraphicsPolygonItem ( const QPolygonF & polygon, QGraphicsItem * parent = 0 )

@@ -105,20 +105,12 @@ $destructor
 /*
 QLineEdit ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QLINEEDIT_NEW1 )
-{
-  QLineEdit * o = new QLineEdit ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QWidget *=0
 
 /*
 QLineEdit ( const QString & contents, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QLINEEDIT_NEW2 )
-{
-  QLineEdit * o = new QLineEdit ( PQSTRING(1), OPQWIDGET(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QString &,QWidget *=0
 
 //[1]QLineEdit ( QWidget * parent = 0 )
 //[2]QLineEdit ( const QString & contents, QWidget * parent = 0 )

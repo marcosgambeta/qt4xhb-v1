@@ -64,56 +64,32 @@ $destructor
 /*
 QVector2D ()
 */
-HB_FUNC_STATIC( QVECTOR2D_NEW1 )
-{
-  QVector2D * o = new QVector2D ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|
 
 /*
 QVector2D ( qreal xpos, qreal ypos )
 */
-HB_FUNC_STATIC( QVECTOR2D_NEW2 )
-{
-  QVector2D * o = new QVector2D ( PQREAL(1), PQREAL(2) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|qreal,qreal
 
 /*
 QVector2D ( const QPoint & point )
 */
-HB_FUNC_STATIC( QVECTOR2D_NEW3 )
-{
-  QVector2D * o = new QVector2D ( *PQPOINT(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new3|const QPoint &
 
 /*
 QVector2D ( const QPointF & point )
 */
-HB_FUNC_STATIC( QVECTOR2D_NEW4 )
-{
-  QVector2D * o = new QVector2D ( *PQPOINTF(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new4|const QPointF &
 
 /*
 QVector2D ( const QVector3D & vector )
 */
-HB_FUNC_STATIC( QVECTOR2D_NEW5 )
-{
-  QVector2D * o = new QVector2D ( *PQVECTOR3D(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new5|const QVector3D &
 
 /*
 QVector2D ( const QVector4D & vector )
 */
-HB_FUNC_STATIC( QVECTOR2D_NEW6 )
-{
-  QVector2D * o = new QVector2D ( *PQVECTOR4D(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new6|const QVector4D &
 
 //[1]QVector2D ()
 //[2]QVector2D ( qreal xpos, qreal ypos )

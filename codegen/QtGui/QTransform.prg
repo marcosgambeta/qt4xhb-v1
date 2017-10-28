@@ -95,38 +95,22 @@ $destructor
 /*
 QTransform ()
 */
-HB_FUNC_STATIC( QTRANSFORM_NEW1 )
-{
-  QTransform * o = new QTransform ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new1|
 
 /*
 QTransform ( qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33 = 1.0 )
 */
-HB_FUNC_STATIC( QTRANSFORM_NEW2 )
-{
-  QTransform * o = new QTransform ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6), PQREAL(7), PQREAL(8), (qreal) ISNIL(9)? 1.0 : hb_parnd(9) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new2|qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal=1.0
 
 /*
 QTransform ( qreal m11, qreal m12, qreal m21, qreal m22, qreal dx, qreal dy )
 */
-HB_FUNC_STATIC( QTRANSFORM_NEW3 )
-{
-  QTransform * o = new QTransform ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new3|qreal,qreal,qreal,qreal,qreal,qreal
 
 /*
 QTransform ( const QMatrix & matrix )
 */
-HB_FUNC_STATIC( QTRANSFORM_NEW4 )
-{
-  QTransform * o = new QTransform ( *PQMATRIX(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new4|const QMatrix &
 
 //[1]QTransform ()
 //[2]QTransform ( qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33 = 1.0 )

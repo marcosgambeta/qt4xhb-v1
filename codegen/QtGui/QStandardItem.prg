@@ -131,39 +131,22 @@ $destructor
 /*
 QStandardItem()
 */
-HB_FUNC_STATIC( QSTANDARDITEM_NEW1 )
-{
-  QStandardItem * o = new QStandardItem ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|
 
 /*
 QStandardItem(const QString &text)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_NEW2 )
-{
-  QStandardItem * o = new QStandardItem ( PQSTRING(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QString &
 
 /*
 QStandardItem(const QIcon &icon, const QString &text)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_NEW3 )
-{
-  QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
-  QStandardItem * o = new QStandardItem ( par1, PQSTRING(2) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new3|const QIcon &,const QString &
 
 /*
 QStandardItem(int rows, int columns = 1)
 */
-HB_FUNC_STATIC( QSTANDARDITEM_NEW4 )
-{
-  QStandardItem * o = new QStandardItem ( PINT(1), OPINT(2,1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new4|int,int=1
 
 //[1]QStandardItem()
 //[2]QStandardItem(const QString &text)

@@ -26,20 +26,12 @@ $destructor
 /*
 QVBoxLayout ()
 */
-HB_FUNC_STATIC( QVBOXLAYOUT_NEW1 )
-{
-  QVBoxLayout * o = new QVBoxLayout ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|
 
 /*
 QVBoxLayout ( QWidget * parent )
 */
-HB_FUNC_STATIC( QVBOXLAYOUT_NEW2 )
-{
-  QVBoxLayout * o = new QVBoxLayout ( PQWIDGET(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|QWidget *
 
 //[1]QVBoxLayout ()
 //[2]QVBoxLayout ( QWidget * parent )

@@ -49,21 +49,12 @@ $destructor
 /*
 QSystemTrayIcon ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW1 )
-{
-  QSystemTrayIcon * o = new QSystemTrayIcon ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QObject *=0
 
 /*
 QSystemTrayIcon ( const QIcon & icon, QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW2 )
-{
-  QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
-  QSystemTrayIcon * o = new QSystemTrayIcon ( par1, OPQOBJECT(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QIcon &,QObject *=0
 
 //[1]QSystemTrayIcon ( QObject * parent = 0 )
 //[2]QSystemTrayIcon ( const QIcon & icon, QObject * parent = 0 )

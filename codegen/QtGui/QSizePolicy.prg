@@ -52,29 +52,17 @@ $destructor
 /*
 QSizePolicy ()
 */
-HB_FUNC_STATIC( QSIZEPOLICY_NEW1 )
-{
-  QSizePolicy * o = new QSizePolicy ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new1|
 
 /*
 QSizePolicy ( Policy horizontal, Policy vertical )
 */
-HB_FUNC_STATIC( QSIZEPOLICY_NEW2 )
-{
-  QSizePolicy * o = new QSizePolicy ( (QSizePolicy::Policy) hb_parni(1), (QSizePolicy::Policy) hb_parni(2) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new2|QSizePolicy::Policy,QSizePolicy::Policy
 
 /*
 QSizePolicy ( Policy horizontal, Policy vertical, ControlType type )
 */
-HB_FUNC_STATIC( QSIZEPOLICY_NEW3 )
-{
-  QSizePolicy * o = new QSizePolicy ( (QSizePolicy::Policy) hb_parni(1), (QSizePolicy::Policy) hb_parni(2), (QSizePolicy::ControlType) hb_parni(3) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new3|QSizePolicy::Policy,QSizePolicy::Policy,QSizePolicy::ControlType
 
 //[1]QSizePolicy ()
 //[2]QSizePolicy ( Policy horizontal, Policy vertical )

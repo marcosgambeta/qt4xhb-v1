@@ -50,29 +50,17 @@ $destructor
 /*
 QTextOption ()
 */
-HB_FUNC_STATIC( QTEXTOPTION_NEW1 )
-{
-  QTextOption * o = new QTextOption ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|
 
 /*
 QTextOption ( Qt::Alignment alignment )
 */
-HB_FUNC_STATIC( QTEXTOPTION_NEW2 )
-{
-  QTextOption * o = new QTextOption ( (Qt::Alignment) hb_parni(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|Qt::Alignment
 
 /*
 QTextOption ( const QTextOption & other )
 */
-HB_FUNC_STATIC( QTEXTOPTION_NEW3 )
-{
-  QTextOption * o = new QTextOption ( *PQTEXTOPTION(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new3|const QTextOption &
 
 //[1]QTextOption ()
 //[2]QTextOption ( Qt::Alignment alignment )

@@ -46,29 +46,17 @@ $destructor
 /*
 QFontEngineInfo ()
 */
-HB_FUNC_STATIC( QFONTENGINEINFO_NEW1 )
-{
-  QFontEngineInfo * o = new QFontEngineInfo ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|
 
 /*
 QFontEngineInfo ( const QString & family )
 */
-HB_FUNC_STATIC( QFONTENGINEINFO_NEW2 )
-{
-  QFontEngineInfo * o = new QFontEngineInfo ( PQSTRING(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QString &
 
 /*
 QFontEngineInfo ( const QFontEngineInfo & other )
 */
-HB_FUNC_STATIC( QFONTENGINEINFO_NEW3 )
-{
-  QFontEngineInfo * o = new QFontEngineInfo ( *PQFONTENGINEINFO(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new3|const QFontEngineInfo &
 
 //[1]QFontEngineInfo ()
 //[2]QFontEngineInfo ( const QString & family )

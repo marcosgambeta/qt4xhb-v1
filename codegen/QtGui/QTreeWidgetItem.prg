@@ -108,83 +108,47 @@ $destructor
 /*
 QTreeWidgetItem ( int type = Type )
 */
-HB_FUNC_STATIC( QTREEWIDGETITEM_NEW1 )
-{
-  QTreeWidgetItem * o = new QTreeWidgetItem ( OPINT(1,QTreeWidgetItem::Type) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|int=QTreeWidgetItem::Type
 
 /*
 QTreeWidgetItem ( const QStringList & strings, int type = Type )
 */
-HB_FUNC_STATIC( QTREEWIDGETITEM_NEW2 )
-{
-  QTreeWidgetItem * o = new QTreeWidgetItem ( PQSTRINGLIST(1), OPINT(2,QTreeWidgetItem::Type) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QStringList &,int=QTreeWidgetItem::Type
 
 /*
 QTreeWidgetItem ( QTreeWidget * parent, int type = Type )
 */
-HB_FUNC_STATIC( QTREEWIDGETITEM_NEW3 )
-{
-  QTreeWidgetItem * o = new QTreeWidgetItem ( PQTREEWIDGET(1), OPINT(2,QTreeWidgetItem::Type) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new3|QTreeWidget *,int=QTreeWidgetItem::Type
 
 /*
 QTreeWidgetItem ( QTreeWidget * parent, const QStringList & strings, int type = Type )
 */
-HB_FUNC_STATIC( QTREEWIDGETITEM_NEW4 )
-{
-  QTreeWidgetItem * o = new QTreeWidgetItem ( PQTREEWIDGET(1), PQSTRINGLIST(2), OPINT(3,QTreeWidgetItem::Type) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new4|QTreeWidget *,const QStringList &,int=QTreeWidgetItem::Type
 
 /*
 QTreeWidgetItem ( QTreeWidget * parent, QTreeWidgetItem * preceding, int type = Type )
 */
-HB_FUNC_STATIC( QTREEWIDGETITEM_NEW5 )
-{
-  QTreeWidgetItem * o = new QTreeWidgetItem ( PQTREEWIDGET(1), PQTREEWIDGETITEM(2), OPINT(3,QTreeWidgetItem::Type) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new5|QTreeWidget *,QTreeWidgetItem *,int=QTreeWidgetItem::Type
 
 /*
 QTreeWidgetItem ( QTreeWidgetItem * parent, int type = Type )
 */
-HB_FUNC_STATIC( QTREEWIDGETITEM_NEW6 )
-{
-  QTreeWidgetItem * o = new QTreeWidgetItem ( PQTREEWIDGETITEM(1), OPINT(2,QTreeWidgetItem::Type) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new6|QTreeWidgetItem *,int=QTreeWidgetItem::Type
 
 /*
 QTreeWidgetItem ( QTreeWidgetItem * parent, const QStringList & strings, int type = Type )
 */
-HB_FUNC_STATIC( QTREEWIDGETITEM_NEW7 )
-{
-  QTreeWidgetItem * o = new QTreeWidgetItem ( PQTREEWIDGETITEM(1), PQSTRINGLIST(2), OPINT(3,QTreeWidgetItem::Type) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new7|QTreeWidgetItem *,const QStringList &,int=QTreeWidgetItem::Type
 
 /*
 QTreeWidgetItem ( QTreeWidgetItem * parent, QTreeWidgetItem * preceding, int type = Type )
 */
-HB_FUNC_STATIC( QTREEWIDGETITEM_NEW8 )
-{
-  QTreeWidgetItem * o = new QTreeWidgetItem ( PQTREEWIDGETITEM(1), PQTREEWIDGETITEM(2), OPINT(3,QTreeWidgetItem::Type) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new8|QTreeWidgetItem *,QTreeWidgetItem *,int=QTreeWidgetItem::Type
 
 /*
 QTreeWidgetItem ( const QTreeWidgetItem & other )
 */
-HB_FUNC_STATIC( QTREEWIDGETITEM_NEW9 )
-{
-  QTreeWidgetItem * o = new QTreeWidgetItem ( *PQTREEWIDGETITEM(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new9|const QTreeWidgetItem &
 
 //[1]QTreeWidgetItem ( int type = Type )
 //[2]QTreeWidgetItem ( const QStringList & strings, int type = Type )

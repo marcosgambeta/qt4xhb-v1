@@ -65,57 +65,32 @@ $destructor
 /*
 QIcon ()
 */
-HB_FUNC_STATIC( QICON_NEW1 )
-{
-  QIcon * o = new QIcon ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new1|
 
 /*
 QIcon ( const QPixmap & pixmap )
 */
-HB_FUNC_STATIC( QICON_NEW2 )
-{
-  QIcon * o = new QIcon ( *PQPIXMAP(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new2|const QPixmap &
 
 /*
 QIcon ( const QIcon & other )
 */
-HB_FUNC_STATIC( QICON_NEW3 )
-{
-  QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
-  QIcon * o = new QIcon ( par1 );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new3|const QIcon &
 
 /*
 QIcon ( const QString & fileName )
 */
-HB_FUNC_STATIC( QICON_NEW4 )
-{
-  QIcon * o = new QIcon ( PQSTRING(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new4|const QString &
 
 /*
 QIcon ( QIconEngine * engine )
 */
-HB_FUNC_STATIC( QICON_NEW5 )
-{
-  QIcon * o = new QIcon ( PQICONENGINE(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new5|QIconEngine *
 
 /*
 QIcon ( QIconEngineV2 * engine )
 */
-HB_FUNC_STATIC( QICON_NEW6 )
-{
-  QIcon * o = new QIcon ( PQICONENGINEV2(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new6|QIconEngineV2 *
 
 //[1]QIcon ()
 //[2]QIcon ( const QPixmap & pixmap )

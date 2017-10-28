@@ -53,29 +53,17 @@ $destructor
 /*
 QStaticText ()
 */
-HB_FUNC_STATIC( QSTATICTEXT_NEW1 )
-{
-  QStaticText * o = new QStaticText ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new1|
 
 /*
 QStaticText ( const QString & text )
 */
-HB_FUNC_STATIC( QSTATICTEXT_NEW2 )
-{
-  QStaticText * o = new QStaticText ( PQSTRING(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new2|const QString &
 
 /*
 QStaticText ( const QStaticText & other )
 */
-HB_FUNC_STATIC( QSTATICTEXT_NEW3 )
-{
-  QStaticText * o = new QStaticText ( *PQSTATICTEXT(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new3|const QStaticText &
 
 //[1]QStaticText ()
 //[2]QStaticText ( const QString & text )

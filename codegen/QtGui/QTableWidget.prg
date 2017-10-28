@@ -100,20 +100,12 @@ $destructor
 /*
 QTableWidget ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QTABLEWIDGET_NEW1 )
-{
-  QTableWidget * o = new QTableWidget ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QWidget *=0
 
 /*
 QTableWidget ( int rows, int columns, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QTABLEWIDGET_NEW2 )
-{
-  QTableWidget * o = new QTableWidget ( PINT(1), PINT(2), OPQWIDGET(3,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|int,int,QWidget *=0
 
 //[1]QTableWidget ( QWidget * parent = 0 )
 //[2]QTableWidget ( int rows, int columns, QWidget * parent = 0 )

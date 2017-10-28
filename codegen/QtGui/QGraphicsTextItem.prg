@@ -69,20 +69,12 @@ $destructor
 /*
 QGraphicsTextItem ( QGraphicsItem * parent = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_NEW1 )
-{
-  QGraphicsTextItem * o = new QGraphicsTextItem ( OPQGRAPHICSITEM(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QGraphicsItem *=0
 
 /*
 QGraphicsTextItem ( const QString & text, QGraphicsItem * parent = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_NEW2 )
-{
-  QGraphicsTextItem * o = new QGraphicsTextItem ( PQSTRING(1), OPQGRAPHICSITEM(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QString &,QGraphicsItem *=0
 
 //[1]QGraphicsTextItem ( QGraphicsItem * parent = 0 )
 //[2]QGraphicsTextItem ( const QString & text, QGraphicsItem * parent = 0 )

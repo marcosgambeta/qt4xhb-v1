@@ -56,30 +56,17 @@ $destructor
 /*
 QTextDocumentWriter ()
 */
-HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_NEW1 )
-{
-  QTextDocumentWriter * o = new QTextDocumentWriter ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|
 
 /*
 QTextDocumentWriter ( QIODevice * device, const QByteArray & format )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_NEW2 )
-{
-  QTextDocumentWriter * o = new QTextDocumentWriter ( PQIODEVICE(1), *PQBYTEARRAY(2) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|QIODevice *,const QByteArray &
 
 /*
 QTextDocumentWriter ( const QString & fileName, const QByteArray & format = QByteArray() )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_NEW3 )
-{
-  QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QTextDocumentWriter * o = new QTextDocumentWriter ( PQSTRING(1), par2 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new3|const QString &,const QByteArray &=QByteArray()
 
 //[1]QTextDocumentWriter ()
 //[2]QTextDocumentWriter ( QIODevice * device, const QByteArray & format )

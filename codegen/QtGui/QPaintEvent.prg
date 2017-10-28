@@ -33,20 +33,12 @@ $destructor
 /*
 QPaintEvent ( const QRegion & paintRegion )
 */
-HB_FUNC_STATIC( QPAINTEVENT_NEW1 )
-{
-  QPaintEvent * o = new QPaintEvent ( *PQREGION(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|const QRegion &
 
 /*
 QPaintEvent ( const QRect & paintRect )
 */
-HB_FUNC_STATIC( QPAINTEVENT_NEW2 )
-{
-  QPaintEvent * o = new QPaintEvent ( *PQRECT(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QRect &
 
 //[1]QPaintEvent ( const QRegion & paintRegion )
 //[2]QPaintEvent ( const QRect & paintRect )

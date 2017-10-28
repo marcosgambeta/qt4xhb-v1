@@ -87,30 +87,17 @@ $destructor
 /*
 QPlatformWindowFormat ()
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_NEW1 )
-{
-  QPlatformWindowFormat * o = new QPlatformWindowFormat ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|
 
 /*
 QPlatformWindowFormat ( FormatOptions options )
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_NEW2 )
-{
-  int par1 = hb_parni(1);
-  QPlatformWindowFormat * o = new QPlatformWindowFormat ( (QPlatformWindowFormat::FormatOptions) par1 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|QPlatformWindowFormat::FormatOptions
 
 /*
 QPlatformWindowFormat ( const QPlatformWindowFormat & other )
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_NEW3 )
-{
-  QPlatformWindowFormat * o = new QPlatformWindowFormat ( *PQPLATFORMWINDOWFORMAT(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new3|const QPlatformWindowFormat &
 
 //[1]QPlatformWindowFormat ()
 //[2]QPlatformWindowFormat ( FormatOptions options )

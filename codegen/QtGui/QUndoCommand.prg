@@ -47,22 +47,12 @@ $destructor
 /*
 QUndoCommand ( QUndoCommand * parent = 0 )
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_NEW1 )
-{
-  QUndoCommand * par1 = ISNIL(1)? 0 : (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QUndoCommand * o = new QUndoCommand ( par1 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QUndoCommand *=0
 
 /*
 QUndoCommand ( const QString & text, QUndoCommand * parent = 0 )
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_NEW2 )
-{
-  QUndoCommand * par2 = ISNIL(2)? 0 : (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QUndoCommand * o = new QUndoCommand ( PQSTRING(1), par2 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QString &,QUndoCommand *=0
 
 //[1]QUndoCommand ( QUndoCommand * parent = 0 )
 //[2]QUndoCommand ( const QString & text, QUndoCommand * parent = 0 )

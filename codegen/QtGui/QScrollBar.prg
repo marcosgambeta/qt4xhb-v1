@@ -32,20 +32,12 @@ $destructor
 /*
 QScrollBar ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QSCROLLBAR_NEW1 )
-{
-  QScrollBar * o = new QScrollBar ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QWidget *=0
 
 /*
 QScrollBar ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QSCROLLBAR_NEW2 )
-{
-  QScrollBar * o = new QScrollBar ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|Qt::Orientation,QWidget *=0
 
 //[1]QScrollBar ( QWidget * parent = 0 )
 //[2]QScrollBar ( Qt::Orientation orientation, QWidget * parent = 0 )

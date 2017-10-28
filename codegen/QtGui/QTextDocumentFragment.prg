@@ -50,39 +50,22 @@ $destructor
 /*
 QTextDocumentFragment ()
 */
-HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW1 )
-{
-  QTextDocumentFragment * o = new QTextDocumentFragment ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new1|
 
 /*
 QTextDocumentFragment ( const QTextDocument * document )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW2 )
-{
-  const QTextDocument * par1 = (const QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QTextDocumentFragment * o = new QTextDocumentFragment ( par1 );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new2|const QTextDocument *
 
 /*
 QTextDocumentFragment ( const QTextCursor & cursor )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW3 )
-{
-  QTextDocumentFragment * o = new QTextDocumentFragment ( *PQTEXTCURSOR(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new3|const QTextCursor &
 
 /*
 QTextDocumentFragment ( const QTextDocumentFragment & other )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW4 )
-{
-  QTextDocumentFragment * o = new QTextDocumentFragment ( *PQTEXTDOCUMENTFRAGMENT(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new4|const QTextDocumentFragment &
 
 //[1]QTextDocumentFragment ()
 //[2]QTextDocumentFragment ( const QTextDocument * document )

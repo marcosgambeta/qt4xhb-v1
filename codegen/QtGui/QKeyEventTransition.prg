@@ -30,20 +30,12 @@ $destructor
 /*
 QKeyEventTransition ( QState * sourceState = 0 )
 */
-HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW1 )
-{
-  QKeyEventTransition * o = new QKeyEventTransition ( OPQSTATE(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QState *=0
 
 /*
 QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sourceState = 0 )
 */
-HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW2 )
-{
-  QKeyEventTransition * o = new QKeyEventTransition ( PQOBJECT(1), (QEvent::Type) hb_parni(2), PINT(3), OPQSTATE(4,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|QObject *,QEvent::Type,int,QState *=0
 
 //[1]QKeyEventTransition ( QState * sourceState = 0 )
 //[2]QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sourceState = 0 )

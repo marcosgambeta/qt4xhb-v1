@@ -52,22 +52,12 @@ $destructor
 /*
 QPrintPreviewWidget ( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
-HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_NEW1 )
-{
-  int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-  QPrintPreviewWidget * o = new QPrintPreviewWidget ( PQPRINTER(1), OPQWIDGET(2,0), (Qt::WindowFlags) par3 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QPrinter *,QWidget *=0,Qt::WindowFlags=0
 
 /*
 QPrintPreviewWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
-HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_NEW2 )
-{
-  int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QPrintPreviewWidget * o = new QPrintPreviewWidget ( OPQWIDGET(1,0), (Qt::WindowFlags) par2 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|QWidget *=0,Qt::WindowFlags=0
 
 //[1]QPrintPreviewWidget ( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 //[2]QPrintPreviewWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )

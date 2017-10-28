@@ -43,20 +43,12 @@ $destructor
 /*
 QGroupBox ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QGROUPBOX_NEW1 )
-{
-  QGroupBox * o = new QGroupBox ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QWidget *=0
 
 /*
 QGroupBox ( const QString & title, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QGROUPBOX_NEW2 )
-{
-  QGroupBox * o = new QGroupBox ( PQSTRING(1), OPQWIDGET(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QString &,QWidget *=0
 
 //[1]QGroupBox ( QWidget * parent = 0 )
 //[2]QGroupBox ( const QString & title, QWidget * parent = 0 )

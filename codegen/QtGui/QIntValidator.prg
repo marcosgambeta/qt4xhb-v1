@@ -33,20 +33,12 @@ $destructor
 /*
 QIntValidator ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QINTVALIDATOR_NEW1 )
-{
-  QIntValidator * o = new QIntValidator ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QObject *=0
 
 /*
 QIntValidator ( int minimum, int maximum, QObject * parent )
 */
-HB_FUNC_STATIC( QINTVALIDATOR_NEW2 )
-{
-  QIntValidator * o = new QIntValidator ( PINT(1), PINT(2), PQOBJECT(3) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|int,int,QObject *
 
 //[1]QIntValidator ( QObject * parent = 0 )
 //[2]QIntValidator ( int minimum, int maximum, QObject * parent )

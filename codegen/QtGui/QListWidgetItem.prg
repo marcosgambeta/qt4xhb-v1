@@ -82,42 +82,22 @@ $destructor
 /*
 QListWidgetItem ( QListWidget * parent = 0, int type = Type )
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_NEW1 )
-{
-  QListWidget * par1 = ISNIL(1)? 0 : (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QListWidgetItem * o = new QListWidgetItem ( par1, OPINT(2,QListWidgetItem::Type) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QListWidget *=0,int=QListWidgetItem::Type
 
 /*
 QListWidgetItem ( const QString & text, QListWidget * parent = 0, int type = Type )
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_NEW2 )
-{
-  QListWidget * par2 = ISNIL(2)? 0 : (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QListWidgetItem * o = new QListWidgetItem ( PQSTRING(1), par2, OPINT(3,QListWidgetItem::Type) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QString &,QListWidget *=0,int=QListWidgetItem::Type
 
 /*
 QListWidgetItem ( const QIcon & icon, const QString & text, QListWidget * parent = 0, int type = Type )
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_NEW3 )
-{
-  QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
-  QListWidget * par3 = ISNIL(3)? 0 : (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QListWidgetItem * o = new QListWidgetItem ( par1, PQSTRING(2), par3 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new3|const QIcon &,const QString &,QListWidget *=0,int=QListWidgetItem::Type
 
 /*
 QListWidgetItem ( const QListWidgetItem & other )
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_NEW4 )
-{
-  QListWidgetItem * o = new QListWidgetItem ( *PQLISTWIDGETITEM(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new4|const QListWidgetItem &
 
 //[1]QListWidgetItem ( QListWidget * parent = 0, int type = Type )
 //[2]QListWidgetItem ( const QString & text, QListWidget * parent = 0, int type = Type )

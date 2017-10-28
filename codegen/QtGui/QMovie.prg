@@ -77,31 +77,17 @@ $destructor
 /*
 QMovie ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QMOVIE_NEW1 )
-{
-  QMovie * o = new QMovie ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QObject *=0
 
 /*
 QMovie ( QIODevice * device, const QByteArray & format = QByteArray(), QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QMOVIE_NEW2 )
-{
-  QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QMovie * o = new QMovie ( PQIODEVICE(1), par2, OPQOBJECT(3,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|QIODevice *,const QByteArray &=QByteArray(),QObject *=0
 
 /*
 QMovie ( const QString & fileName, const QByteArray & format = QByteArray(), QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QMOVIE_NEW3 )
-{
-  QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QMovie * o = new QMovie ( PQSTRING(1), par2, OPQOBJECT(3,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new3|const QString &,const QByteArray &=QByteArray(),QObject *=0
 
 //[1]QMovie ( QObject * parent = 0 )
 //[2]QMovie ( QIODevice * device, const QByteArray & format = QByteArray(), QObject * parent = 0 )

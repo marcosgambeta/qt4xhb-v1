@@ -36,31 +36,17 @@ $destructor
 /*
 QTreeWidgetItemIterator ( const QTreeWidgetItemIterator & it )
 */
-HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW1 )
-{
-  QTreeWidgetItemIterator * o = new QTreeWidgetItemIterator ( *PQTREEWIDGETITEMITERATOR(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|const QTreeWidgetItemIterator &
 
 /*
 QTreeWidgetItemIterator ( QTreeWidget * widget, IteratorFlags flags = All )
 */
-HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW2 )
-{
-  int par2 = ISNIL(2)? (int) QTreeWidgetItemIterator::All : hb_parni(2);
-  QTreeWidgetItemIterator * o = new QTreeWidgetItemIterator ( PQTREEWIDGET(1), (QTreeWidgetItemIterator::IteratorFlags) par2 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|QTreeWidget *,QTreeWidgetItemIterator::IteratorFlags=QTreeWidgetItemIterator::All
 
 /*
 QTreeWidgetItemIterator ( QTreeWidgetItem * item, IteratorFlags flags = All )
 */
-HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW3 )
-{
-  int par2 = ISNIL(2)? (int) QTreeWidgetItemIterator::All : hb_parni(2);
-  QTreeWidgetItemIterator * o = new QTreeWidgetItemIterator ( PQTREEWIDGETITEM(1), (QTreeWidgetItemIterator::IteratorFlags) par2 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new3|QTreeWidgetItem *,QTreeWidgetItemIterator::IteratorFlags=QTreeWidgetItemIterator::All
 
 //[1]QTreeWidgetItemIterator ( const QTreeWidgetItemIterator & it )
 //[2]QTreeWidgetItemIterator ( QTreeWidget * widget, IteratorFlags flags = All )

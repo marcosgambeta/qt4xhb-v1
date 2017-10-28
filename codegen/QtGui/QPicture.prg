@@ -44,20 +44,12 @@ $destructor
 /*
 QPicture ( int formatVersion = -1 )
 */
-HB_FUNC_STATIC( QPICTURE_NEW1 )
-{
-  QPicture * o = new QPicture ( OPINT(1,-1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new1|int=-1
 
 /*
 QPicture ( const QPicture & pic )
 */
-HB_FUNC_STATIC( QPICTURE_NEW2 )
-{
-  QPicture * o = new QPicture ( *PQPICTURE(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new2|const QPicture &
 
 //[1]QPicture ( int formatVersion = -1 )
 //[2]QPicture ( const QPicture & pic )

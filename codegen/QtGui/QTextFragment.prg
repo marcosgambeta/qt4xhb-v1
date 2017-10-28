@@ -48,20 +48,12 @@ $destructor
 /*
 QTextFragment ()
 */
-HB_FUNC_STATIC( QTEXTFRAGMENT_NEW1 )
-{
-  QTextFragment * o = new QTextFragment ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|
 
 /*
 QTextFragment ( const QTextFragment & other )
 */
-HB_FUNC_STATIC( QTEXTFRAGMENT_NEW2 )
-{
-  QTextFragment * o = new QTextFragment ( *PQTEXTFRAGMENT(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QTextFragment &
 
 //[1]QTextFragment ()
 //[2]QTextFragment ( const QTextFragment & other )

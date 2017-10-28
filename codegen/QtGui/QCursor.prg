@@ -56,47 +56,27 @@ $destructor
 /*
 QCursor ()
 */
-HB_FUNC_STATIC( QCURSOR_NEW1 )
-{
-  QCursor * o = new QCursor ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new1|
 
 /*
 QCursor ( Qt::CursorShape shape )
 */
-HB_FUNC_STATIC( QCURSOR_NEW2 )
-{
-  QCursor * o = new QCursor ( (Qt::CursorShape) hb_parni(1));
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new2|Qt::CursorShape
 
 /*
 QCursor ( const QBitmap & bitmap, const QBitmap & mask, int hotX = -1, int hotY = -1 )
 */
-HB_FUNC_STATIC( QCURSOR_NEW3 )
-{
-  QCursor * o = new QCursor ( *PQBITMAP(1), *PQBITMAP(2), OPINT(3,-1), OPINT(4,-1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new3|const QBitmap &,const QBitmap &,int=-1,int=-1
 
 /*
 QCursor ( const QPixmap & pixmap, int hotX = -1, int hotY = -1 )
 */
-HB_FUNC_STATIC( QCURSOR_NEW4 )
-{
-  QCursor * o = new QCursor ( *PQPIXMAP(1), OPINT(2,-1), OPINT(3,-1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new4|const QPixmap &,int=-1,int=-1
 
 /*
 QCursor ( const QCursor & c )
 */
-HB_FUNC_STATIC( QCURSOR_NEW5 )
-{
-  QCursor * o = new QCursor ( *PQCURSOR(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new5|const QCursor &
 
 //[1]QCursor ()
 //[2]QCursor ( Qt::CursorShape shape )

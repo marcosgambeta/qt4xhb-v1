@@ -36,20 +36,12 @@ $destructor
 /*
 QDoubleValidator ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW1 )
-{
-  QDoubleValidator * o = new QDoubleValidator ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QObject *=0
 
 /*
 QDoubleValidator ( double bottom, double top, int decimals, QObject * parent )
 */
-HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW2 )
-{
-  QDoubleValidator * o = new QDoubleValidator ( PDOUBLE(1), PDOUBLE(2), PINT(3), PQOBJECT(4) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|double,double,int,QObject *
 
 //[1]QDoubleValidator ( QObject * parent = 0 )
 //[2]QDoubleValidator ( double bottom, double top, int decimals, QObject * parent = 0 )

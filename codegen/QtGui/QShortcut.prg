@@ -46,21 +46,12 @@ $destructor
 /*
 QShortcut(QWidget * parent)
 */
-HB_FUNC_STATIC( QSHORTCUT_NEW1 )
-{
-  QShortcut * o = new QShortcut ( PQWIDGET(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QWidget *
 
 /*
 QShortcut(const QKeySequence & key, QWidget * parent, const char * member = 0, const char * ambiguousMember = 0, Qt::ShortcutContext context = Qt::WindowShortcut)
 */
-HB_FUNC_STATIC( QSHORTCUT_NEW2 )
-{
-  int par5 = ISNIL(5)? (int) Qt::WindowShortcut : hb_parni(5);
-  QShortcut * o = new QShortcut ( *PQKEYSEQUENCE(1), PQWIDGET(2), (const char *) ISNIL(3)? 0 : hb_parc(3), (const char *) ISNIL(4)? 0 : hb_parc(4), (Qt::ShortcutContext) par5 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QKeySequence &,QWidget *,const char *=0,const char *=0,Qt::ShortcutContext=Qt::WindowShortcut
 
 //[1]QShortcut(QWidget * parent)
 //[2]QShortcut(const QKeySequence & key, QWidget * parent, const char * member = 0, const char * ambiguousMember = 0, Qt::ShortcutContext context = Qt::WindowShortcut)

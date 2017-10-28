@@ -39,26 +39,12 @@ $destructor
 /*
 QWheelEvent(const QPoint &pos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
 */
-HB_FUNC_STATIC( QWHEELEVENT_NEW1 )
-{
-  int par3 = hb_parni(3);
-  int par4 = hb_parni(4);
-  int par5 = ISNIL(5)? (int) Qt::Vertical : hb_parni(5);
-  QWheelEvent * o = new QWheelEvent ( *PQPOINT(1), PINT(2), (Qt::MouseButtons) par3, (Qt::KeyboardModifiers) par4, (Qt::Orientation) par5 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|const QPoint &,int,Qt::MouseButtons,Qt::KeyboardModifiers,Qt::Orientation=Qt::Vertical
 
 /*
 QWheelEvent(const QPoint &pos, const QPoint& globalPos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
 */
-HB_FUNC_STATIC( QWHEELEVENT_NEW2 )
-{
-  int par4 = hb_parni(4);
-  int par5 = hb_parni(5);
-  int par6 = ISNIL(6)? (int) Qt::Vertical : hb_parni(6);
-  QWheelEvent * o = new QWheelEvent ( *PQPOINT(1), *PQPOINT(2), PINT(3), (Qt::MouseButtons) par4, (Qt::KeyboardModifiers) par5, (Qt::Orientation) par6 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QPoint &,const QPoint &,int,Qt::MouseButtons,Qt::KeyboardModifiers,Qt::Orientation=Qt::Vertical
 
 //[1]QWheelEvent(const QPoint &pos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
 //[2]QWheelEvent(const QPoint &pos, const QPoint& globalPos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)

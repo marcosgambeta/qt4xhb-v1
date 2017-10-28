@@ -46,20 +46,12 @@ $destructor
 /*
 QFontDialog(QWidget *parent = 0)
 */
-HB_FUNC_STATIC( QFONTDIALOG_NEW1 )
-{
-  QFontDialog * o = new QFontDialog ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QWidget *=0
 
 /*
 QFontDialog(const QFont &initial, QWidget *parent = 0)
 */
-HB_FUNC_STATIC( QFONTDIALOG_NEW2 )
-{
-  QFontDialog * o = new QFontDialog ( *PQFONT(1), OPQWIDGET(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QFont &,QWidget *=0
 
 //[1]QFontDialog(QWidget *parent = 0)
 //[2]QFontDialog(const QFont &initial, QWidget *parent = 0)

@@ -88,38 +88,22 @@ $destructor
 /*
 QDateTimeEdit ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QDATETIMEEDIT_NEW1 )
-{
-  QDateTimeEdit * o = new QDateTimeEdit ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QWidget *=0
 
 /*
 QDateTimeEdit ( const QDateTime & datetime, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QDATETIMEEDIT_NEW2 )
-{
-  QDateTimeEdit * o = new QDateTimeEdit ( *PQDATETIME(1), OPQWIDGET(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QDateTime &,QWidget *=0
 
 /*
 QDateTimeEdit ( const QDate & date, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QDATETIMEEDIT_NEW3 )
-{
-  QDateTimeEdit * o = new QDateTimeEdit ( *PQDATE(1), OPQWIDGET(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new3|const QDate &,QWidget *=0
 
 /*
 QDateTimeEdit ( const QTime & time, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QDATETIMEEDIT_NEW4 )
-{
-  QDateTimeEdit * o = new QDateTimeEdit ( *PQTIME(1), OPQWIDGET(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new4|const QTime &,QWidget *=0
 
 //[1]QDateTimeEdit ( QWidget * parent = 0 )
 //[2]QDateTimeEdit ( const QDateTime & datetime, QWidget * parent = 0 )

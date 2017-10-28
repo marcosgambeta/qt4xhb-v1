@@ -43,26 +43,12 @@ $destructor
 /*
 QMouseEvent(Type type, const QPoint &pos, Qt::MouseButton button,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
 */
-HB_FUNC_STATIC( QMOUSEEVENT_NEW1 )
-{
-  int par3 = hb_parni(3);
-  int par4 = hb_parni(4);
-  int par5 = hb_parni(5);
-  QMouseEvent * o = new QMouseEvent ( (QEvent::Type) hb_parni(1), *PQPOINT(2), (Qt::MouseButton) par3, (Qt::MouseButtons) par4, (Qt::KeyboardModifiers) par5 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QEvent::Type,const QPoint &,Qt::MouseButton,Qt::MouseButtons,Qt::KeyboardModifiers
 
 /*
 QMouseEvent(Type type, const QPoint &pos, const QPoint &globalPos,Qt::MouseButton button, Qt::MouseButtons buttons,Qt::KeyboardModifiers modifiers)
 */
-HB_FUNC_STATIC( QMOUSEEVENT_NEW2 )
-{
-  int par4 = hb_parni(4);
-  int par5 = hb_parni(5);
-  int par6 = hb_parni(6);
-  QMouseEvent * o = new QMouseEvent ( (QEvent::Type) hb_parni(1), *PQPOINT(2), *PQPOINT(3), (Qt::MouseButton) par4, (Qt::MouseButtons) par5, (Qt::KeyboardModifiers) par6 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|QEvent::Type,const QPoint &,const QPoint &,Qt::MouseButton,Qt::MouseButtons,Qt::KeyboardModifiers
 
 //[1]QMouseEvent(Type type, const QPoint &pos, Qt::MouseButton button,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
 //[2]QMouseEvent(Type type, const QPoint &pos, const QPoint &globalPos,Qt::MouseButton button, Qt::MouseButtons buttons,Qt::KeyboardModifiers modifiers)

@@ -66,24 +66,24 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-//[1]QLayout ( QWidget * parent )
-//[2]QLayout ()
+%%//[1]QLayout ( QWidget * parent )
+%%//[2]QLayout ()
 
-// HB_FUNC_STATIC( QLAYOUT_NEW )
-// {
-//   if( ISNUMPAR(1) && ISQWIDGET(1) )
-//   {
-//     HB_FUNC_EXEC( QLAYOUT_NEW1 );
-//   }
-//   else if( ISNUMPAR(0) )
-//   {
-//     HB_FUNC_EXEC( QLAYOUT_NEW2 );
-//   }
-//  else
-//  {
-//    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-//  }
-// }
+%%// HB_FUNC_STATIC( QLAYOUT_NEW )
+%%// {
+%%//   if( ISNUMPAR(1) && ISQWIDGET(1) )
+%%//   {
+%%//     HB_FUNC_EXEC( QLAYOUT_NEW1 );
+%%//   }
+%%//   else if( ISNUMPAR(0) )
+%%//   {
+%%//     HB_FUNC_EXEC( QLAYOUT_NEW2 );
+%%//   }
+%%//  else
+%%//  {
+%%//    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+%%//  }
+%%// }
 
 /*
 bool activate ()

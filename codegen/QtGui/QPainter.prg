@@ -252,20 +252,12 @@ $destructor
 /*
 QPainter ()
 */
-HB_FUNC_STATIC( QPAINTER_NEW1 )
-{
-  QPainter * o = new QPainter ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new1|
 
 /*
 QPainter ( QPaintDevice * device )
 */
-HB_FUNC_STATIC( QPAINTER_NEW2 )
-{
-  QPainter * o = new QPainter ( PQPAINTDEVICE(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new2|QPaintDevice *
 
 //[1]QPainter ()
 //[2]QPainter ( QPaintDevice * device )

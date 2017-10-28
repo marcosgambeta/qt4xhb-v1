@@ -25,20 +25,12 @@ $destructor
 /*
 QDateEdit ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QDATEEDIT_NEW1 )
-{
-  QDateEdit * o = new QDateEdit ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QWidget *=0
 
 /*
 QDateEdit ( const QDate & date, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QDATEEDIT_NEW2 )
-{
-  QDateEdit * o = new QDateEdit ( *PQDATE(1), OPQWIDGET(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QDate &,QWidget *=0
 
 //[1]QDateEdit ( QWidget * parent = 0 )
 //[2]QDateEdit ( const QDate & date, QWidget * parent = 0 )

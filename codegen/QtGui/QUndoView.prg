@@ -41,29 +41,17 @@ $destructor
 /*
 QUndoView ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QUNDOVIEW_NEW1 )
-{
-  QUndoView * o = new QUndoView ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QWidget *=0
 
 /*
 QUndoView ( QUndoStack * stack, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QUNDOVIEW_NEW2 )
-{
-  QUndoView * o = new QUndoView ( PQUNDOSTACK(1), OPQWIDGET(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|QUndoStack *,QWidget *=0
 
 /*
 QUndoView ( QUndoGroup * group, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QUNDOVIEW_NEW3 )
-{
-  QUndoView * o = new QUndoView ( PQUNDOGROUP(1), OPQWIDGET(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new3|QUndoGroup *,QWidget *=0
 
 //[1]QUndoView ( QWidget * parent = 0 )
 //[2]QUndoView ( QUndoStack * stack, QWidget * parent = 0 )

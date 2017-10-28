@@ -31,20 +31,12 @@ $destructor
 /*
 QInputMethodEvent ()
 */
-HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW1 )
-{
-  QInputMethodEvent * o = new QInputMethodEvent ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|
 
 /*
 QInputMethodEvent ( const QInputMethodEvent & other )
 */
-HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW3 )
-{
-  QInputMethodEvent * o = new QInputMethodEvent ( *PQINPUTMETHODEVENT(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QInputMethodEvent &
 
 //[1]QInputMethodEvent ()
 //[2]QInputMethodEvent ( const QString & preeditText, const QList<Attribute> & attributes )

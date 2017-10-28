@@ -52,56 +52,32 @@ $destructor
 /*
 QKeySequence ()
 */
-HB_FUNC_STATIC( QKEYSEQUENCE_NEW1 )
-{
-  QKeySequence * o = new QKeySequence ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new1|
 
 /*
 QKeySequence ( const QString & key )
 */
-HB_FUNC_STATIC( QKEYSEQUENCE_NEW2 )
-{
-  QKeySequence * o = new QKeySequence ( PQSTRING(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new2|const QString &
 
 /*
 QKeySequence ( const QString & key, SequenceFormat format )
 */
-HB_FUNC_STATIC( QKEYSEQUENCE_NEW3 )
-{
-  QKeySequence * o = new QKeySequence ( PQSTRING(1), (QKeySequence::SequenceFormat) hb_parni(2) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new3|const QString &,QKeySequence::SequenceFormat
 
 /*
 QKeySequence ( int k1, int k2 = 0, int k3 = 0, int k4 = 0 )
 */
-HB_FUNC_STATIC( QKEYSEQUENCE_NEW4 )
-{
-  QKeySequence * o = new QKeySequence ( PINT(1), OPINT(2,0), OPINT(3,0), OPINT(4,0) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new4|int,int=0,int=0,int=0
 
 /*
 QKeySequence ( const QKeySequence & keysequence )
 */
-HB_FUNC_STATIC( QKEYSEQUENCE_NEW5 )
-{
-  QKeySequence * o = new QKeySequence ( *PQKEYSEQUENCE(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new5|const QKeySequence &
 
 /*
 QKeySequence ( StandardKey key )
 */
-HB_FUNC_STATIC( QKEYSEQUENCE_NEW6 )
-{
-  QKeySequence * o = new QKeySequence ( (QKeySequence::StandardKey) hb_parni(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new6|QKeySequence::StandardKey
 
 //[1]QKeySequence ()
 //[2]QKeySequence ( const QString & key )

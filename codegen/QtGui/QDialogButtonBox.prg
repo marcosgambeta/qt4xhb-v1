@@ -53,31 +53,17 @@ $destructor
 /*
 QDialogButtonBox ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW1 )
-{
-  QDialogButtonBox * o = new QDialogButtonBox ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QWidget *=0
 
 /*
 QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW2 )
-{
-  QDialogButtonBox * o = new QDialogButtonBox ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|Qt::Orientation,QWidget *=0
 
 /*
 QDialogButtonBox ( StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW3 )
-{
-  int par1 = hb_parni(1);
-  int par2 = ISNIL(2)? (int) Qt::Horizontal : hb_parni(2);
-  QDialogButtonBox * o = new QDialogButtonBox ( (QDialogButtonBox::StandardButtons) par1, (Qt::Orientation) par2, OPQWIDGET(3,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new3|QDialogButtonBox::StandardButtons,Qt::Orientation=Qt::Horizontal,QWidget *=0
 
 //[1]QDialogButtonBox ( QWidget * parent = 0 )
 //[2]QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = 0 )

@@ -38,30 +38,17 @@ $destructor
 /*
 QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos, Qt::KeyboardModifiers modifiers )
 */
-HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW1 )
-{
-  int par4 = hb_parni(4);
-  QContextMenuEvent * o = new QContextMenuEvent ( (QContextMenuEvent::Reason) hb_parni(1), *PQPOINT(2), *PQPOINT(3), (Qt::KeyboardModifiers) par4 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QContextMenuEvent::Reason,const QPoint &,const QPoint &,Qt::KeyboardModifiers
 
 /*
 QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos )
 */
-HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW2 )
-{
-  QContextMenuEvent * o = new QContextMenuEvent ( (QContextMenuEvent::Reason) hb_parni(1), *PQPOINT(2), *PQPOINT(3) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|QContextMenuEvent::Reason,const QPoint &,const QPoint &
 
 /*
 QContextMenuEvent ( Reason reason, const QPoint & pos )
 */
-HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW3 )
-{
-  QContextMenuEvent * o = new QContextMenuEvent ( (QContextMenuEvent::Reason) hb_parni(1), *PQPOINT(2) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new3|QContextMenuEvent::Reason,const QPoint &
 
 //[1]QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos, Qt::KeyboardModifiers modifiers )
 //[2]QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos )

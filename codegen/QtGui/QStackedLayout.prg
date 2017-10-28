@@ -43,29 +43,17 @@ $destructor
 /*
 QStackedLayout ()
 */
-HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW1 )
-{
-  QStackedLayout * o = new QStackedLayout ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|
 
 /*
 QStackedLayout ( QWidget * parent )
 */
-HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW2 )
-{
-  QStackedLayout * o = new QStackedLayout ( PQWIDGET(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|QWidget *
 
 /*
 QStackedLayout ( QLayout * parentLayout )
 */
-HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW3 )
-{
-  QStackedLayout * o = new QStackedLayout ( PQLAYOUT(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new3|QLayout *
 
 //[1]QStackedLayout ()
 //[2]QStackedLayout ( QWidget * parent )

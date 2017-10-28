@@ -59,29 +59,17 @@ $destructor
 /*
 QPolygonF ()
 */
-HB_FUNC_STATIC( QPOLYGONF_NEW1 )
-{
-  QPolygonF * o = new QPolygonF ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new1|
 
 /*
 QPolygonF ( int size )
 */
-HB_FUNC_STATIC( QPOLYGONF_NEW2 )
-{
-  QPolygonF * o = new QPolygonF ( PINT(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new2|int
 
 /*
 QPolygonF ( const QPolygonF & polygon )
 */
-HB_FUNC_STATIC( QPOLYGONF_NEW3 )
-{
-  QPolygonF * o = new QPolygonF ( *PQPOLYGONF(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new3|const QPolygonF &
 
 /*
 QPolygonF ( const QVector<QPointF> & points )
@@ -103,20 +91,12 @@ HB_FUNC_STATIC( QPOLYGONF_NEW4 )
 /*
 QPolygonF ( const QRectF & rectangle )
 */
-HB_FUNC_STATIC( QPOLYGONF_NEW5 )
-{
-  QPolygonF * o = new QPolygonF ( *PQRECTF(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new5|const QRectF &
 
 /*
 QPolygonF ( const QPolygon & polygon )
 */
-HB_FUNC_STATIC( QPOLYGONF_NEW6 )
-{
-  QPolygonF * o = new QPolygonF ( *PQPOLYGON(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new6|const QPolygon &
 
 //[1]QPolygonF ()
 //[2]QPolygonF ( int size )

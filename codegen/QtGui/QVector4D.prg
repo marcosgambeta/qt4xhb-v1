@@ -72,74 +72,42 @@ $destructor
 /*
 QVector4D ()
 */
-HB_FUNC_STATIC( QVECTOR4D_NEW1 )
-{
-  QVector4D * o = new QVector4D ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|
 
 /*
 QVector4D ( qreal xpos, qreal ypos, qreal zpos, qreal wpos )
 */
-HB_FUNC_STATIC( QVECTOR4D_NEW2 )
-{
-  QVector4D * o = new QVector4D ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|qreal,qreal,qreal,qreal
 
 /*
 QVector4D ( const QPoint & point )
 */
-HB_FUNC_STATIC( QVECTOR4D_NEW3 )
-{
-  QVector4D * o = new QVector4D ( *PQPOINT(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new3|const QPoint &
 
 /*
 QVector4D ( const QPointF & point )
 */
-HB_FUNC_STATIC( QVECTOR4D_NEW4 )
-{
-  QVector4D * o = new QVector4D ( *PQPOINTF(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new4|const QPointF &
 
 /*
 QVector4D ( const QVector2D & vector )
 */
-HB_FUNC_STATIC( QVECTOR4D_NEW5 )
-{
-  QVector4D * o = new QVector4D ( *PQVECTOR2D(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new5|const QVector2D &
 
 /*
 QVector4D ( const QVector2D & vector, qreal zpos, qreal wpos )
 */
-HB_FUNC_STATIC( QVECTOR4D_NEW6 )
-{
-  QVector4D * o = new QVector4D ( *PQVECTOR2D(1), PQREAL(2), PQREAL(3) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new6|const QVector2D &,qreal,qreal
 
 /*
 QVector4D ( const QVector3D & vector )
 */
-HB_FUNC_STATIC( QVECTOR4D_NEW7 )
-{
-  QVector4D * o = new QVector4D ( *PQVECTOR3D(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new7|const QVector3D &
 
 /*
 QVector4D ( const QVector3D & vector, qreal wpos )
 */
-HB_FUNC_STATIC( QVECTOR4D_NEW8 )
-{
-  QVector4D * o = new QVector4D ( *PQVECTOR3D(1), PQREAL(2) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new8|const QVector3D &,qreal
 
 //[1]QVector4D ()
 //[2]QVector4D ( qreal xpos, qreal ypos, qreal zpos, qreal wpos )

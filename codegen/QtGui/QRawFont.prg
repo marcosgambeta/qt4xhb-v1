@@ -75,40 +75,22 @@ $destructor
 /*
 QRawFont ()
 */
-HB_FUNC_STATIC( QRAWFONT_NEW1 )
-{
-  QRawFont * o = new QRawFont ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new1|
 
 /*
 QRawFont ( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
 */
-HB_FUNC_STATIC( QRAWFONT_NEW2 )
-{
-  int par3 = ISNIL(3)? (int) QFont::PreferDefaultHinting : hb_parni(3);
-  QRawFont * o = new QRawFont ( PQSTRING(1), PQREAL(2), (QFont::HintingPreference) par3 );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new2|const QString &,qreal,QFont::HintingPreference=QFont::PreferDefaultHinting
 
 /*
 QRawFont ( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
 */
-HB_FUNC_STATIC( QRAWFONT_NEW3 )
-{
-  int par3 = ISNIL(3)? (int) QFont::PreferDefaultHinting : hb_parni(3);
-  QRawFont * o = new QRawFont ( *PQBYTEARRAY(1), PQREAL(2), (QFont::HintingPreference) par3 );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new3|const QByteArray &,qreal,QFont::HintingPreference=QFont::PreferDefaultHinting
 
 /*
 QRawFont ( const QRawFont & other )
 */
-HB_FUNC_STATIC( QRAWFONT_NEW4 )
-{
-  QRawFont * o = new QRawFont ( *PQRAWFONT(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new4|const QRawFont &
 
 //[1]QRawFont ()
 //[2]QRawFont ( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )

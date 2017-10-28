@@ -55,20 +55,12 @@ $destructor
 /*
 QItemSelectionModel ( QAbstractItemModel * model )
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_NEW1 )
-{
-  QItemSelectionModel * o = new QItemSelectionModel ( PQABSTRACTITEMMODEL(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QAbstractItemModel *
 
 /*
 QItemSelectionModel ( QAbstractItemModel * model, QObject * parent )
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_NEW2 )
-{
-  QItemSelectionModel * o = new QItemSelectionModel ( PQABSTRACTITEMMODEL(1), PQOBJECT(2) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|QAbstractItemModel *,QObject *
 
 //[1]QItemSelectionModel ( QAbstractItemModel * model )
 //[2]QItemSelectionModel ( QAbstractItemModel * model, QObject * parent )

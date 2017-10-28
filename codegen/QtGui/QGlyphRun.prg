@@ -53,20 +53,12 @@ $destructor
 /*
 QGlyphRun ()
 */
-HB_FUNC_STATIC( QGLYPHRUN_NEW1 )
-{
-  QGlyphRun * o = new QGlyphRun ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|
 
 /*
 QGlyphRun ( const QGlyphRun & other )
 */
-HB_FUNC_STATIC( QGLYPHRUN_NEW2 )
-{
-  QGlyphRun * o = new QGlyphRun ( *PQGLYPHRUN(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QGlyphRun &
 
 //[1]QGlyphRun ()
 //[2]QGlyphRun ( const QGlyphRun & other )

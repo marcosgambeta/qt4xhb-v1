@@ -132,20 +132,12 @@ $destructor
 /*
 QGraphicsView ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_NEW1 )
-{
-  QGraphicsView * o = new QGraphicsView ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QWidget *=0
 
 /*
 QGraphicsView ( QGraphicsScene * scene, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_NEW2 )
-{
-  QGraphicsView * o = new QGraphicsView ( PQGRAPHICSSCENE(1), OPQWIDGET(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|QGraphicsScene *,QWidget *=0
 
 //[1]QGraphicsView ( QWidget * parent = 0 )
 //[2]QGraphicsView ( QGraphicsScene * scene, QWidget * parent = 0 )

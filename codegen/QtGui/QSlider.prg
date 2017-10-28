@@ -37,20 +37,12 @@ $destructor
 /*
 QSlider ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QSLIDER_NEW1 )
-{
-  QSlider * o = new QSlider ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QWidget *=0
 
 /*
 QSlider ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QSLIDER_NEW2 )
-{
-  QSlider * o = new QSlider ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|Qt::Orientation,QWidget *=0
 
 //[1]QSlider ( QWidget * parent = 0 )
 //[2]QSlider ( Qt::Orientation orientation, QWidget * parent = 0 )

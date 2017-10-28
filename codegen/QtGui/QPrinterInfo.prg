@@ -46,29 +46,17 @@ $destructor
 /*
 QPrinterInfo ()
 */
-HB_FUNC_STATIC( QPRINTERINFO_NEW1 )
-{
-  QPrinterInfo * o = new QPrinterInfo ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new1|
 
 /*
 QPrinterInfo ( const QPrinterInfo & src )
 */
-HB_FUNC_STATIC( QPRINTERINFO_NEW2 )
-{
-  QPrinterInfo * o = new QPrinterInfo ( *PQPRINTERINFO(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new2|const QPrinterInfo &
 
 /*
 QPrinterInfo ( const QPrinter & printer )
 */
-HB_FUNC_STATIC( QPRINTERINFO_NEW3 )
-{
-  QPrinterInfo * o = new QPrinterInfo ( *PQPRINTER(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new3|const QPrinter &
 
 //[1]QPrinterInfo ()
 //[2]QPrinterInfo ( const QPrinterInfo & src )

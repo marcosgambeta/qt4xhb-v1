@@ -48,20 +48,12 @@ $destructor
 /*
 QFontInfo ( const QFont & font )
 */
-HB_FUNC_STATIC( QFONTINFO_NEW1 )
-{
-  QFontInfo * o = new QFontInfo ( *PQFONT(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new1|const QFont &
 
 /*
 QFontInfo ( const QFontInfo & fi )
 */
-HB_FUNC_STATIC( QFONTINFO_NEW2 )
-{
-  QFontInfo * o = new QFontInfo ( *PQFONTINFO(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new2|const QFontInfo &
 
 //[1]QFontInfo ( const QFont & font )
 //[2]QFontInfo ( const QFontInfo & fi )

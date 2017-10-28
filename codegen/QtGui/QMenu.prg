@@ -78,20 +78,12 @@ $destructor
 /*
 QMenu ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QMENU_NEW1 )
-{
-  QMenu * o = new QMenu ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QWidget *=0
 
 /*
 QMenu ( const QString & title, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QMENU_NEW2 )
-{
-  QMenu * o = new QMenu ( PQSTRING(1), OPQWIDGET(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QString &,QWidget *=0
 
 //[1]QMenu ( QWidget * parent = 0 )
 //[2]QMenu ( const QString & title, QWidget * parent = 0 )

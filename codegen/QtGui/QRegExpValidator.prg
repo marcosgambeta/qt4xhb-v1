@@ -33,20 +33,12 @@ $destructor
 /*
 QRegExpValidator ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW1 )
-{
-  QRegExpValidator * o = new QRegExpValidator ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QObject *=0
 
 /*
 QRegExpValidator ( const QRegExp & rx, QObject * parent )
 */
-HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW2 )
-{
-  QRegExpValidator * o = new QRegExpValidator ( *PQREGEXP(1), PQOBJECT(2) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QRegExp &,QObject *
 
 //[1]QRegExpValidator ( QObject * parent = 0 )
 //[2]QRegExpValidator ( const QRegExp & rx, QObject * parent )

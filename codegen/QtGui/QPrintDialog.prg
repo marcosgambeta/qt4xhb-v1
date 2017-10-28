@@ -41,20 +41,12 @@ $destructor
 /*
 QPrintDialog ( QPrinter * printer, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QPRINTDIALOG_NEW1 )
-{
-  QPrintDialog * o = new QPrintDialog ( PQPRINTER(1), OPQWIDGET(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|QPrinter *,QWidget *=0
 
 /*
 QPrintDialog ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QPRINTDIALOG_NEW2 )
-{
-  QPrintDialog * o = new QPrintDialog ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|QWidget *=0
 
 //[1]QPrintDialog ( QPrinter * printer, QWidget * parent = 0 )
 //[2]QPrintDialog ( QWidget * parent = 0 )
@@ -85,14 +77,7 @@ $method=|void|open|QObject *,const char *
 /*
 PrintDialogOptions options () const
 */
-HB_FUNC_STATIC( QPRINTDIALOG_OPTIONS )
-{
-  QPrintDialog * obj = (QPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->options () );
-  }
-}
+$method=|QPrintDialog::PrintDialogOptions|options|
 
 /*
 QPrinter * printer ()

@@ -90,31 +90,17 @@ $destructor
 /*
 QImageReader ()
 */
-HB_FUNC_STATIC( QIMAGEREADER_NEW1 )
-{
-  QImageReader * o = new QImageReader ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new1|
 
 /*
 QImageReader ( QIODevice * device, const QByteArray & format = QByteArray() )
 */
-HB_FUNC_STATIC( QIMAGEREADER_NEW2 )
-{
-  QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QImageReader * o = new QImageReader ( PQIODEVICE(1), par2 );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new2|QIODevice *,const QByteArray &=QByteArray()
 
 /*
 QImageReader ( const QString & fileName, const QByteArray & format = QByteArray() )
 */
-HB_FUNC_STATIC( QIMAGEREADER_NEW3 )
-{
-  QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QImageReader * o = new QImageReader ( PQSTRING(1), par2 );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new3|const QString &,const QByteArray &=QByteArray()
 
 //[1]QImageReader ()
 //[2]QImageReader ( QIODevice * device, const QByteArray & format = QByteArray() )

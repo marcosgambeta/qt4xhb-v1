@@ -61,38 +61,22 @@ $destructor
 /*
 QItemSelectionRange ()
 */
-HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW1 )
-{
-  QItemSelectionRange * o = new QItemSelectionRange ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|
 
 /*
 QItemSelectionRange ( const QItemSelectionRange & other )
 */
-HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW2 )
-{
-  QItemSelectionRange * o = new QItemSelectionRange ( *PQITEMSELECTIONRANGE(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new2|const QItemSelectionRange &
 
 /*
 QItemSelectionRange ( const QModelIndex & topLeft, const QModelIndex & bottomRight )
 */
-HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW3 )
-{
-  QItemSelectionRange * o = new QItemSelectionRange ( *PQMODELINDEX(1), *PQMODELINDEX(2) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new3|const QModelIndex &,const QModelIndex &
 
 /*
 QItemSelectionRange ( const QModelIndex & index )
 */
-HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW4 )
-{
-  QItemSelectionRange * o = new QItemSelectionRange ( *PQMODELINDEX(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new4|const QModelIndex &
 
 //[1]QItemSelectionRange ()
 //[2]QItemSelectionRange ( const QItemSelectionRange & other )

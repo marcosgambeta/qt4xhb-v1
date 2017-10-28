@@ -70,29 +70,17 @@ $destructor
 /*
 QFontMetrics ( const QFont & font )
 */
-HB_FUNC_STATIC( QFONTMETRICS_NEW1 )
-{
-  QFontMetrics * o = new QFontMetrics ( *PQFONT(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new1|const QFont &
 
 /*
 QFontMetrics ( const QFont & font, QPaintDevice * paintdevice )
 */
-HB_FUNC_STATIC( QFONTMETRICS_NEW2 )
-{
-  QFontMetrics * o = new QFontMetrics ( *PQFONT(1), PQPAINTDEVICE(2) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new2|const QFont &,QPaintDevice *
 
 /*
 QFontMetrics ( const QFontMetrics & fm )
 */
-HB_FUNC_STATIC( QFONTMETRICS_NEW3 )
-{
-  QFontMetrics * o = new QFontMetrics ( *PQFONTMETRICS(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new3|const QFontMetrics &
 
 //[1]QFontMetrics ( const QFont & font )
 //[2]QFontMetrics ( const QFont & font, QPaintDevice * paintdevice )
