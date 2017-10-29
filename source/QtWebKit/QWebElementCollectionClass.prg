@@ -229,6 +229,7 @@ QList<QWebElement> toList () const
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_TOLIST )
 {
   QWebElementCollection * obj = (QWebElementCollection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QWebElement> list = obj->toList ();

@@ -25,8 +25,6 @@ REQUEST QVARIANT
 
 CLASS QWebFrame INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD addToJavaScriptWindowObject
    METHOD baseUrl
    METHOD childFrames
@@ -181,6 +179,7 @@ QList<QWebFrame *> childFrames () const
 HB_FUNC_STATIC( QWEBFRAME_CHILDFRAMES )
 {
   QWebFrame * obj = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QWebFrame *> list = obj->childFrames ();

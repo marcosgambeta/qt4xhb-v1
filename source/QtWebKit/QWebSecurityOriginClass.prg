@@ -138,6 +138,7 @@ QList<QWebDatabase> databases () const
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASES )
 {
   QWebSecurityOrigin * obj = (QWebSecurityOrigin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QWebDatabase> list = obj->databases ();
