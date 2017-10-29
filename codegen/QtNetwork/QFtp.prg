@@ -182,6 +182,7 @@ $method=|int|rawCommand|const QString &
 /*
 qint64 read ( char * data, qint64 maxlen )
 */
+%% TODO: corrigir 'char *'
 $method=|qint64|read|char *,qint64
 
 /*

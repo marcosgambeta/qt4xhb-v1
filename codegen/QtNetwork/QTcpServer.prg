@@ -46,6 +46,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 #include <QNetworkProxy>
+#include <QTcpSocket>
 
 /*
 QTcpServer ( QObject * parent = 0 )

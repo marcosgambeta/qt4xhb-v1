@@ -61,6 +61,9 @@ $destructor
 
 #include <QNetworkConfiguration>
 #include <QNetworkProxy>
+#include <QAbstractNetworkCache>
+#include <QNetworkCookieJar>
+#include <QNetworkReply>
 
 /*
 QNetworkAccessManager ( QObject * parent = 0 )
