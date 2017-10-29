@@ -21,11 +21,13 @@ CLASS QHttpPart
    METHOD setBodyDevice
    METHOD setHeader
    METHOD setRawHeader
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -50,7 +52,7 @@ QHttpPart ()
 HB_FUNC_STATIC( QHTTPPART_NEW1 )
 {
   QHttpPart * o = new QHttpPart ();
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -59,7 +61,7 @@ QHttpPart ( const QHttpPart & other )
 HB_FUNC_STATIC( QHTTPPART_NEW2 )
 {
   QHttpPart * o = new QHttpPart ( *PQHTTPPART(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QHttpPart ()
@@ -104,10 +106,19 @@ void setBody ( const QByteArray & body )
 HB_FUNC_STATIC( QHTTPPART_SETBODY )
 {
   QHttpPart * obj = (QHttpPart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setBody ( *PQBYTEARRAY(1) );
+    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    {
+      obj->setBody ( *PQBYTEARRAY(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -117,10 +128,19 @@ void setBodyDevice ( QIODevice * device )
 HB_FUNC_STATIC( QHTTPPART_SETBODYDEVICE )
 {
   QHttpPart * obj = (QHttpPart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setBodyDevice ( PQIODEVICE(1) );
+    if( ISNUMPAR(1) && ISQIODEVICE(1) )
+    {
+      obj->setBodyDevice ( PQIODEVICE(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -130,11 +150,19 @@ void setHeader ( QNetworkRequest::KnownHeaders header, const QVariant & value )
 HB_FUNC_STATIC( QHTTPPART_SETHEADER )
 {
   QHttpPart * obj = (QHttpPart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setHeader ( (QNetworkRequest::KnownHeaders) par1, *PQVARIANT(2) );
+    if( ISNUMPAR(2) && ISNUM(1) && ISQVARIANT(2) )
+    {
+      obj->setHeader ( (QNetworkRequest::KnownHeaders) hb_parni(1), *PQVARIANT(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -144,10 +172,19 @@ void setRawHeader ( const QByteArray & headerName, const QByteArray & headerValu
 HB_FUNC_STATIC( QHTTPPART_SETRAWHEADER )
 {
   QHttpPart * obj = (QHttpPart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setRawHeader ( *PQBYTEARRAY(1), *PQBYTEARRAY(2) );
+    if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2) )
+    {
+      obj->setRawHeader ( *PQBYTEARRAY(1), *PQBYTEARRAY(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

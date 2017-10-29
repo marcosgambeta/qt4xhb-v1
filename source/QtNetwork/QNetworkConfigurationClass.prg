@@ -32,11 +32,13 @@ CLASS QNetworkConfiguration
    METHOD purpose
    METHOD state
    METHOD type
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -61,7 +63,7 @@ QNetworkConfiguration ()
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW1 )
 {
   QNetworkConfiguration * o = new QNetworkConfiguration ();
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -70,7 +72,7 @@ QNetworkConfiguration ( const QNetworkConfiguration & other )
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW2 )
 {
   QNetworkConfiguration * o = new QNetworkConfiguration ( *PQNETWORKCONFIGURATION(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QNetworkConfiguration ()
@@ -135,9 +137,17 @@ BearerType bearerType () const
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPE )
 {
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->bearerType () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->bearerType () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -234,9 +244,17 @@ bool isRoamingAvailable () const
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_ISROAMINGAVAILABLE )
 {
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isRoamingAvailable () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isRoamingAvailable () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -246,9 +264,17 @@ bool isValid () const
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_ISVALID )
 {
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isValid () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isValid () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -278,9 +304,17 @@ Purpose purpose () const
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_PURPOSE )
 {
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->purpose () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->purpose () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -290,9 +324,17 @@ StateFlags state () const
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_STATE )
 {
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->state () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->state () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -302,9 +344,17 @@ Type type () const
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_TYPE )
 {
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->type () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->type () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

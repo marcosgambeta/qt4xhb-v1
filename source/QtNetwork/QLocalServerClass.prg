@@ -14,8 +14,6 @@ REQUEST QLOCALSOCKET
 
 CLASS QLocalServer INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD close
@@ -31,7 +29,9 @@ CLASS QLocalServer INHERIT QObject
    METHOD setMaxPendingConnections
    METHOD waitForNewConnection
    METHOD removeServer
+
    METHOD onNewConnection
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -50,13 +50,22 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
+#include <QLocalSocket>
+
 /*
 QLocalServer ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QLOCALSERVER_NEW )
 {
-  QLocalServer * o = new QLocalServer ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  {
+    QLocalServer * o = new QLocalServer ( OPQOBJECT(1,0) );
+    _qt4xhb_storePointerAndFlag( o, false );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QLOCALSERVER_DELETE )
@@ -82,10 +91,19 @@ void close ()
 HB_FUNC_STATIC( QLOCALSERVER_CLOSE )
 {
   QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->close ();
+    if( ISNUMPAR(0) )
+    {
+      obj->close ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -135,9 +153,17 @@ virtual bool hasPendingConnections () const
 HB_FUNC_STATIC( QLOCALSERVER_HASPENDINGCONNECTIONS )
 {
   QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->hasPendingConnections () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->hasPendingConnections () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -147,9 +173,17 @@ bool isListening () const
 HB_FUNC_STATIC( QLOCALSERVER_ISLISTENING )
 {
   QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isListening () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isListening () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -159,9 +193,17 @@ bool listen ( const QString & name )
 HB_FUNC_STATIC( QLOCALSERVER_LISTEN )
 {
   QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->listen ( PQSTRING(1) ) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      RBOOL( obj->listen ( PQSTRING(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -171,9 +213,17 @@ int maxPendingConnections () const
 HB_FUNC_STATIC( QLOCALSERVER_MAXPENDINGCONNECTIONS )
 {
   QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->maxPendingConnections () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->maxPendingConnections () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -183,10 +233,18 @@ virtual QLocalSocket * nextPendingConnection ()
 HB_FUNC_STATIC( QLOCALSERVER_NEXTPENDINGCONNECTION )
 {
   QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QLocalSocket * ptr = obj->nextPendingConnection ();
-    _qt4xhb_createReturnClass ( ptr, "QLOCALSOCKET" );
+    if( ISNUMPAR(0) )
+    {
+      QLocalSocket * ptr = obj->nextPendingConnection ();
+      _qt4xhb_createReturnQObjectClass ( ptr, "QLOCALSOCKET" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -196,9 +254,17 @@ QAbstractSocket::SocketError serverError () const
 HB_FUNC_STATIC( QLOCALSERVER_SERVERERROR )
 {
   QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->serverError () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->serverError () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -228,10 +294,19 @@ void setMaxPendingConnections ( int numConnections )
 HB_FUNC_STATIC( QLOCALSERVER_SETMAXPENDINGCONNECTIONS )
 {
   QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setMaxPendingConnections ( PINT(1) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setMaxPendingConnections ( PINT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -241,20 +316,35 @@ bool waitForNewConnection ( int msec = 0, bool * timedOut = 0 )
 HB_FUNC_STATIC( QLOCALSERVER_WAITFORNEWCONNECTION )
 {
   QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    bool par2;
-    RBOOL( obj->waitForNewConnection ( OPINT(1,0), &par2 ) );
-    hb_storl( par2, 2 );
+    if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTLOG(2) )
+    {
+      bool par2;
+      RBOOL( obj->waitForNewConnection ( OPINT(1,0), &par2 ) );
+      hb_storl( par2, 2 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
 /*
-bool removeServer ( const QString & name )
+static bool removeServer ( const QString & name )
 */
 HB_FUNC_STATIC( QLOCALSERVER_REMOVESERVER )
 {
-  RBOOL( QLocalServer::removeServer ( PQSTRING(1) ) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+      RBOOL( QLocalServer::removeServer ( PQSTRING(1) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 #pragma ENDDUMP

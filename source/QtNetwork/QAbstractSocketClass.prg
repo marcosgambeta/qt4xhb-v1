@@ -16,8 +16,6 @@ REQUEST QVARIANT
 
 CLASS QAbstractSocket INHERIT QIODevice
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD abort
@@ -52,12 +50,14 @@ CLASS QAbstractSocket INHERIT QIODevice
    METHOD isSequential
    METHOD waitForBytesWritten
    METHOD waitForReadyRead
+
    METHOD onConnected
    METHOD onDisconnected
    METHOD onError
    METHOD onHostFound
    METHOD onProxyAuthenticationRequired
    METHOD onStateChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -84,8 +84,15 @@ QAbstractSocket ( SocketType socketType, QObject * parent )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_NEW )
 {
-  QAbstractSocket * o = new QAbstractSocket ( (QAbstractSocket::SocketType) hb_parni(1), PQOBJECT(2) );
-  _qt4xhb_storePointerAndFlag ( o, false );
+  if( ISNUMPAR(2) && ISNUM(1) && ISQOBJECT(2) )
+  {
+    QAbstractSocket * o = new QAbstractSocket ( (QAbstractSocket::SocketType) hb_parni(1), PQOBJECT(2) );
+    _qt4xhb_storePointerAndFlag( o, false );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QABSTRACTSOCKET_DELETE )
@@ -111,10 +118,19 @@ void abort ()
 HB_FUNC_STATIC( QABSTRACTSOCKET_ABORT )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->abort ();
+    if( ISNUMPAR(0) )
+    {
+      obj->abort ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -124,11 +140,19 @@ void connectToHost ( const QString & hostName, quint16 port, OpenMode openMode =
 HB_FUNC_STATIC( QABSTRACTSOCKET_CONNECTTOHOST1 )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    int par3 = ISNIL(3)? (int) QAbstractSocket::ReadWrite : hb_parni(3);
-    obj->connectToHost ( PQSTRING(1), PQUINT16(2), (QAbstractSocket::OpenMode) par3 );
+    if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && ISOPTNUM(3) )
+    {
+      obj->connectToHost ( PQSTRING(1), PQUINT16(2), ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -138,11 +162,19 @@ void connectToHost ( const QHostAddress & address, quint16 port, OpenMode openMo
 HB_FUNC_STATIC( QABSTRACTSOCKET_CONNECTTOHOST2 )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    int par3 = ISNIL(3)? (int) QAbstractSocket::ReadWrite : hb_parni(3);
-    obj->connectToHost ( *PQHOSTADDRESS(1), PQUINT16(2), (QAbstractSocket::OpenMode) par3 );
+    if( ISBETWEEN(2,3) && ISQHOSTADDRESS(1) && ISNUM(2) && ISOPTNUM(3) )
+    {
+      obj->connectToHost ( *PQHOSTADDRESS(1), PQUINT16(2), ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -152,10 +184,19 @@ void disconnectFromHost ()
 HB_FUNC_STATIC( QABSTRACTSOCKET_DISCONNECTFROMHOST )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->disconnectFromHost ();
+    if( ISNUMPAR(0) )
+    {
+      obj->disconnectFromHost ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -165,9 +206,17 @@ SocketError error () const
 HB_FUNC_STATIC( QABSTRACTSOCKET_ERROR )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->error () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->error () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -177,9 +226,17 @@ bool flush ()
 HB_FUNC_STATIC( QABSTRACTSOCKET_FLUSH )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->flush () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->flush () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -189,9 +246,17 @@ bool isValid () const
 HB_FUNC_STATIC( QABSTRACTSOCKET_ISVALID )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isValid () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isValid () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -201,10 +266,18 @@ QHostAddress localAddress () const
 HB_FUNC_STATIC( QABSTRACTSOCKET_LOCALADDRESS )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QHostAddress * ptr = new QHostAddress( obj->localAddress () );
-    _qt4xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
+    if( ISNUMPAR(0) )
+    {
+      QHostAddress * ptr = new QHostAddress( obj->localAddress () );
+      _qt4xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -214,9 +287,17 @@ quint16 localPort () const
 HB_FUNC_STATIC( QABSTRACTSOCKET_LOCALPORT )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQUINT16( obj->localPort () );
+    if( ISNUMPAR(0) )
+    {
+      RQUINT16( obj->localPort () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -226,10 +307,18 @@ QHostAddress peerAddress () const
 HB_FUNC_STATIC( QABSTRACTSOCKET_PEERADDRESS )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QHostAddress * ptr = new QHostAddress( obj->peerAddress () );
-    _qt4xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
+    if( ISNUMPAR(0) )
+    {
+      QHostAddress * ptr = new QHostAddress( obj->peerAddress () );
+      _qt4xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -259,9 +348,17 @@ quint16 peerPort () const
 HB_FUNC_STATIC( QABSTRACTSOCKET_PEERPORT )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQUINT16( obj->peerPort () );
+    if( ISNUMPAR(0) )
+    {
+      RQUINT16( obj->peerPort () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -271,10 +368,18 @@ QNetworkProxy proxy () const
 HB_FUNC_STATIC( QABSTRACTSOCKET_PROXY )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QNetworkProxy * ptr = new QNetworkProxy( obj->proxy () );
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );
+    if( ISNUMPAR(0) )
+    {
+      QNetworkProxy * ptr = new QNetworkProxy( obj->proxy () );
+      _qt4xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -284,9 +389,17 @@ qint64 readBufferSize () const
 HB_FUNC_STATIC( QABSTRACTSOCKET_READBUFFERSIZE )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQINT64( obj->readBufferSize () );
+    if( ISNUMPAR(0) )
+    {
+      RQINT64( obj->readBufferSize () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -296,10 +409,19 @@ void setProxy ( const QNetworkProxy & networkProxy )
 HB_FUNC_STATIC( QABSTRACTSOCKET_SETPROXY )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setProxy ( *PQNETWORKPROXY(1) );
+    if( ISNUMPAR(1) && ISQNETWORKPROXY(1) )
+    {
+      obj->setProxy ( *PQNETWORKPROXY(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -309,10 +431,19 @@ void setReadBufferSize ( qint64 size )
 HB_FUNC_STATIC( QABSTRACTSOCKET_SETREADBUFFERSIZE )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setReadBufferSize ( PQINT64(1) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setReadBufferSize ( PQINT64(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -322,11 +453,17 @@ bool setSocketDescriptor ( int socketDescriptor, SocketState socketState = Conne
 HB_FUNC_STATIC( QABSTRACTSOCKET_SETSOCKETDESCRIPTOR )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    int par2 = hb_parni(2);
-    int par3 = ISNIL(3)? (int) QAbstractSocket::ReadWrite : hb_parni(3);
-    RBOOL( obj->setSocketDescriptor ( PINT(1), (QAbstractSocket::SocketState) par2, (QAbstractSocket::OpenMode) par3 ) );
+    if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+    {
+      RBOOL( obj->setSocketDescriptor ( PINT(1), ISNIL(2)? (QAbstractSocket::SocketState) QAbstractSocket::ConnectedState : (QAbstractSocket::SocketState) hb_parni(2), ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -336,11 +473,19 @@ void setSocketOption ( QAbstractSocket::SocketOption option, const QVariant & va
 HB_FUNC_STATIC( QABSTRACTSOCKET_SETSOCKETOPTION )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setSocketOption ( (QAbstractSocket::SocketOption) par1, *PQVARIANT(2) );
+    if( ISNUMPAR(2) && ISNUM(1) && ISQVARIANT(2) )
+    {
+      obj->setSocketOption ( (QAbstractSocket::SocketOption) hb_parni(1), *PQVARIANT(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -350,9 +495,17 @@ int socketDescriptor () const
 HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETDESCRIPTOR )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->socketDescriptor () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->socketDescriptor () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -362,11 +515,18 @@ QVariant socketOption ( QAbstractSocket::SocketOption option )
 HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETOPTION )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->socketOption ( (QAbstractSocket::SocketOption) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      QVariant * ptr = new QVariant( obj->socketOption ( (QAbstractSocket::SocketOption) hb_parni(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -376,9 +536,17 @@ SocketType socketType () const
 HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETTYPE )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->socketType () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->socketType () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -388,9 +556,17 @@ SocketState state () const
 HB_FUNC_STATIC( QABSTRACTSOCKET_STATE )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->state () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->state () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -400,9 +576,17 @@ bool waitForConnected ( int msecs = 30000 )
 HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORCONNECTED )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->waitForConnected ( OPINT(1,30000) ) );
+    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    {
+      RBOOL( obj->waitForConnected ( OPINT(1,30000) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -412,9 +596,17 @@ bool waitForDisconnected ( int msecs = 30000 )
 HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORDISCONNECTED )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->waitForDisconnected ( OPINT(1,30000) ) );
+    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    {
+      RBOOL( obj->waitForDisconnected ( OPINT(1,30000) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -424,9 +616,17 @@ virtual bool atEnd () const
 HB_FUNC_STATIC( QABSTRACTSOCKET_ATEND )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->atEnd () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->atEnd () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -436,9 +636,17 @@ virtual qint64 bytesAvailable () const
 HB_FUNC_STATIC( QABSTRACTSOCKET_BYTESAVAILABLE )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQINT64( obj->bytesAvailable () );
+    if( ISNUMPAR(0) )
+    {
+      RQINT64( obj->bytesAvailable () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -448,9 +656,17 @@ virtual qint64 bytesToWrite () const
 HB_FUNC_STATIC( QABSTRACTSOCKET_BYTESTOWRITE )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQINT64( obj->bytesToWrite () );
+    if( ISNUMPAR(0) )
+    {
+      RQINT64( obj->bytesToWrite () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -460,9 +676,17 @@ virtual bool canReadLine () const
 HB_FUNC_STATIC( QABSTRACTSOCKET_CANREADLINE )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->canReadLine () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->canReadLine () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -472,10 +696,19 @@ virtual void close ()
 HB_FUNC_STATIC( QABSTRACTSOCKET_CLOSE )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->close ();
+    if( ISNUMPAR(0) )
+    {
+      obj->close ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -485,9 +718,17 @@ virtual bool isSequential () const
 HB_FUNC_STATIC( QABSTRACTSOCKET_ISSEQUENTIAL )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isSequential () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isSequential () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -497,9 +738,17 @@ virtual bool waitForBytesWritten ( int msecs = 30000 )
 HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORBYTESWRITTEN )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->waitForBytesWritten ( OPINT(1,30000) ) );
+    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    {
+      RBOOL( obj->waitForBytesWritten ( OPINT(1,30000) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -509,9 +758,17 @@ virtual bool waitForReadyRead ( int msecs = 30000 )
 HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORREADYREAD )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->waitForReadyRead ( OPINT(1,30000) ) );
+    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    {
+      RBOOL( obj->waitForReadyRead ( OPINT(1,30000) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

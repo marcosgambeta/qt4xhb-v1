@@ -34,11 +34,13 @@ CLASS QNetworkInterface
    METHOD allInterfaces
    METHOD interfaceFromIndex
    METHOD interfaceFromName
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -63,7 +65,7 @@ QNetworkInterface ()
 HB_FUNC_STATIC( QNETWORKINTERFACE_NEW1 )
 {
   QNetworkInterface * o = new QNetworkInterface ();
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -72,7 +74,7 @@ QNetworkInterface ( const QNetworkInterface & other )
 HB_FUNC_STATIC( QNETWORKINTERFACE_NEW2 )
 {
   QNetworkInterface * o = new QNetworkInterface ( *PQNETWORKINTERFACE(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QNetworkInterface ()
@@ -164,9 +166,17 @@ InterfaceFlags flags () const
 HB_FUNC_STATIC( QNETWORKINTERFACE_FLAGS )
 {
   QNetworkInterface * obj = (QNetworkInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->flags () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->flags () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -216,9 +226,17 @@ int index () const
 HB_FUNC_STATIC( QNETWORKINTERFACE_INDEX )
 {
   QNetworkInterface * obj = (QNetworkInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->index () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->index () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -228,9 +246,17 @@ bool isValid () const
 HB_FUNC_STATIC( QNETWORKINTERFACE_ISVALID )
 {
   QNetworkInterface * obj = (QNetworkInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isValid () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isValid () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -341,21 +367,35 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLINTERFACES )
 }
 
 /*
-QNetworkInterface interfaceFromIndex ( int index )
+static QNetworkInterface interfaceFromIndex ( int index )
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEFROMINDEX )
 {
-  QNetworkInterface * ptr = new QNetworkInterface( QNetworkInterface::interfaceFromIndex ( PINT(1) ) );
-  _qt4xhb_createReturnClass ( ptr, "QNETWORKINTERFACE", true );
+    if( ISNUMPAR(1) && ISNUM(1) )
+  {
+      QNetworkInterface * ptr = new QNetworkInterface( QNetworkInterface::interfaceFromIndex ( PINT(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QNETWORKINTERFACE", true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
-QNetworkInterface interfaceFromName ( const QString & name )
+static QNetworkInterface interfaceFromName ( const QString & name )
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEFROMNAME )
 {
-  QNetworkInterface * ptr = new QNetworkInterface( QNetworkInterface::interfaceFromName ( PQSTRING(1) ) );
-  _qt4xhb_createReturnClass ( ptr, "QNETWORKINTERFACE", true );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+      QNetworkInterface * ptr = new QNetworkInterface( QNetworkInterface::interfaceFromName ( PQSTRING(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QNETWORKINTERFACE", true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QNETWORKINTERFACE_NEWFROM )

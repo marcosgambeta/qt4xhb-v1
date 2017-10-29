@@ -14,8 +14,6 @@ REQUEST QBYTEARRAY
 
 CLASS QHttpMultiPart INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -24,6 +22,7 @@ CLASS QHttpMultiPart INHERIT QObject
    METHOD boundary
    METHOD setBoundary
    METHOD setContentType
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -48,7 +47,7 @@ QHttpMultiPart ( QObject * parent = 0 )
 HB_FUNC_STATIC( QHTTPMULTIPART_NEW1 )
 {
   QHttpMultiPart * o = new QHttpMultiPart ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
+  _qt4xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -57,7 +56,7 @@ QHttpMultiPart ( ContentType contentType, QObject * parent = 0 )
 HB_FUNC_STATIC( QHTTPMULTIPART_NEW2 )
 {
   QHttpMultiPart * o = new QHttpMultiPart ( (QHttpMultiPart::ContentType) hb_parni(1), OPQOBJECT(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
+  _qt4xhb_storePointerAndFlag( o, false );
 }
 
 //[1]QHttpMultiPart ( QObject * parent = 0 )
@@ -102,10 +101,19 @@ void append ( const QHttpPart & httpPart )
 HB_FUNC_STATIC( QHTTPMULTIPART_APPEND )
 {
   QHttpMultiPart * obj = (QHttpMultiPart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->append ( *PQHTTPPART(1) );
+    if( ISNUMPAR(1) && ISQHTTPPART(1) )
+    {
+      obj->append ( *PQHTTPPART(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -115,10 +123,18 @@ QByteArray boundary () const
 HB_FUNC_STATIC( QHTTPMULTIPART_BOUNDARY )
 {
   QHttpMultiPart * obj = (QHttpMultiPart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->boundary () );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    if( ISNUMPAR(0) )
+    {
+      QByteArray * ptr = new QByteArray( obj->boundary () );
+      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -128,10 +144,19 @@ void setBoundary ( const QByteArray & boundary )
 HB_FUNC_STATIC( QHTTPMULTIPART_SETBOUNDARY )
 {
   QHttpMultiPart * obj = (QHttpMultiPart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setBoundary ( *PQBYTEARRAY(1) );
+    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    {
+      obj->setBoundary ( *PQBYTEARRAY(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -141,11 +166,19 @@ void setContentType ( ContentType contentType )
 HB_FUNC_STATIC( QHTTPMULTIPART_SETCONTENTTYPE )
 {
   QHttpMultiPart * obj = (QHttpMultiPart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setContentType ( (QHttpMultiPart::ContentType) par1 );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setContentType ( (QHttpMultiPart::ContentType) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

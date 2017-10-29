@@ -10,8 +10,6 @@
 
 CLASS QLocalSocket INHERIT QIODevice
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD abort
@@ -34,10 +32,12 @@ CLASS QLocalSocket INHERIT QIODevice
    METHOD isSequential
    METHOD waitForBytesWritten
    METHOD waitForReadyRead
+
    METHOD onConnected
    METHOD onDisconnected
    METHOD onError
    METHOD onStateChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -61,8 +61,15 @@ QLocalSocket ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QLOCALSOCKET_NEW )
 {
-  QLocalSocket * o = new QLocalSocket ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  {
+    QLocalSocket * o = new QLocalSocket ( OPQOBJECT(1,0) );
+    _qt4xhb_storePointerAndFlag( o, false );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QLOCALSOCKET_DELETE )
@@ -88,10 +95,19 @@ void abort ()
 HB_FUNC_STATIC( QLOCALSOCKET_ABORT )
 {
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->abort ();
+    if( ISNUMPAR(0) )
+    {
+      obj->abort ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -101,11 +117,19 @@ void connectToServer ( const QString & name, OpenMode openMode = ReadWrite )
 HB_FUNC_STATIC( QLOCALSOCKET_CONNECTTOSERVER )
 {
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    int par2 = ISNIL(2)? (int) QLocalSocket::ReadWrite : hb_parni(2);
-    obj->connectToServer ( PQSTRING(1), (QLocalSocket::OpenMode) par2 );
+    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+    {
+      obj->connectToServer ( PQSTRING(1), ISNIL(2)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -115,10 +139,19 @@ void disconnectFromServer ()
 HB_FUNC_STATIC( QLOCALSOCKET_DISCONNECTFROMSERVER )
 {
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->disconnectFromServer ();
+    if( ISNUMPAR(0) )
+    {
+      obj->disconnectFromServer ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -128,9 +161,17 @@ LocalSocketError error () const
 HB_FUNC_STATIC( QLOCALSOCKET_ERROR )
 {
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->error () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->error () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -140,9 +181,17 @@ bool flush ()
 HB_FUNC_STATIC( QLOCALSOCKET_FLUSH )
 {
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->flush () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->flush () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -172,9 +221,17 @@ bool isValid () const
 HB_FUNC_STATIC( QLOCALSOCKET_ISVALID )
 {
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isValid () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isValid () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -184,9 +241,17 @@ qint64 readBufferSize () const
 HB_FUNC_STATIC( QLOCALSOCKET_READBUFFERSIZE )
 {
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQINT64( obj->readBufferSize () );
+    if( ISNUMPAR(0) )
+    {
+      RQINT64( obj->readBufferSize () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -216,10 +281,19 @@ void setReadBufferSize ( qint64 size )
 HB_FUNC_STATIC( QLOCALSOCKET_SETREADBUFFERSIZE )
 {
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setReadBufferSize ( PQINT64(1) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setReadBufferSize ( PQINT64(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -229,9 +303,17 @@ LocalSocketState state () const
 HB_FUNC_STATIC( QLOCALSOCKET_STATE )
 {
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->state () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->state () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -241,9 +323,17 @@ bool waitForConnected ( int msecs = 30000 )
 HB_FUNC_STATIC( QLOCALSOCKET_WAITFORCONNECTED )
 {
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->waitForConnected ( OPINT(1,30000) ) );
+    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    {
+      RBOOL( obj->waitForConnected ( OPINT(1,30000) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -253,9 +343,17 @@ bool waitForDisconnected ( int msecs = 30000 )
 HB_FUNC_STATIC( QLOCALSOCKET_WAITFORDISCONNECTED )
 {
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->waitForDisconnected ( OPINT(1,30000) ) );
+    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    {
+      RBOOL( obj->waitForDisconnected ( OPINT(1,30000) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -265,9 +363,17 @@ virtual qint64 bytesAvailable () const
 HB_FUNC_STATIC( QLOCALSOCKET_BYTESAVAILABLE )
 {
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQINT64( obj->bytesAvailable () );
+    if( ISNUMPAR(0) )
+    {
+      RQINT64( obj->bytesAvailable () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -277,9 +383,17 @@ virtual qint64 bytesToWrite () const
 HB_FUNC_STATIC( QLOCALSOCKET_BYTESTOWRITE )
 {
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQINT64( obj->bytesToWrite () );
+    if( ISNUMPAR(0) )
+    {
+      RQINT64( obj->bytesToWrite () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -289,9 +403,17 @@ virtual bool canReadLine () const
 HB_FUNC_STATIC( QLOCALSOCKET_CANREADLINE )
 {
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->canReadLine () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->canReadLine () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -301,10 +423,19 @@ virtual void close ()
 HB_FUNC_STATIC( QLOCALSOCKET_CLOSE )
 {
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->close ();
+    if( ISNUMPAR(0) )
+    {
+      obj->close ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -314,9 +445,17 @@ virtual bool isSequential () const
 HB_FUNC_STATIC( QLOCALSOCKET_ISSEQUENTIAL )
 {
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isSequential () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isSequential () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -326,9 +465,17 @@ virtual bool waitForBytesWritten ( int msecs = 30000 )
 HB_FUNC_STATIC( QLOCALSOCKET_WAITFORBYTESWRITTEN )
 {
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->waitForBytesWritten ( OPINT(1,30000) ) );
+    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    {
+      RBOOL( obj->waitForBytesWritten ( OPINT(1,30000) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -338,9 +485,17 @@ virtual bool waitForReadyRead ( int msecs = 30000 )
 HB_FUNC_STATIC( QLOCALSOCKET_WAITFORREADYREAD )
 {
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->waitForReadyRead ( OPINT(1,30000) ) );
+    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    {
+      RBOOL( obj->waitForReadyRead ( OPINT(1,30000) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

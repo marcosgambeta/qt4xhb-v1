@@ -37,11 +37,13 @@ CLASS QHostInfo
    METHOD localDomainName
    METHOD localHostName
    METHOD lookupHost
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -66,7 +68,7 @@ QHostInfo ( int id = -1 )
 HB_FUNC_STATIC( QHOSTINFO_NEW1 )
 {
   QHostInfo * o = new QHostInfo ( OPINT(1,-1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -75,7 +77,7 @@ QHostInfo ( const QHostInfo & other )
 HB_FUNC_STATIC( QHOSTINFO_NEW2 )
 {
   QHostInfo * o = new QHostInfo ( *PQHOSTINFO(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QHostInfo ( int id = -1 )
@@ -171,9 +173,17 @@ HostInfoError error () const
 HB_FUNC_STATIC( QHOSTINFO_ERROR )
 {
   QHostInfo * obj = (QHostInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->error () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->error () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -223,9 +233,17 @@ int lookupId () const
 HB_FUNC_STATIC( QHOSTINFO_LOOKUPID )
 {
   QHostInfo * obj = (QHostInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->lookupId () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->lookupId () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -256,11 +274,19 @@ void setError ( HostInfoError error )
 HB_FUNC_STATIC( QHOSTINFO_SETERROR )
 {
   QHostInfo * obj = (QHostInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setError ( (QHostInfo::HostInfoError) par1 );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setError ( (QHostInfo::HostInfoError) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -270,10 +296,19 @@ void setErrorString ( const QString & str )
 HB_FUNC_STATIC( QHOSTINFO_SETERRORSTRING )
 {
   QHostInfo * obj = (QHostInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setErrorString ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->setErrorString ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -283,10 +318,19 @@ void setHostName ( const QString & hostName )
 HB_FUNC_STATIC( QHOSTINFO_SETHOSTNAME )
 {
   QHostInfo * obj = (QHostInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setHostName ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->setHostName ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -296,29 +340,53 @@ void setLookupId ( int id )
 HB_FUNC_STATIC( QHOSTINFO_SETLOOKUPID )
 {
   QHostInfo * obj = (QHostInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setLookupId ( PINT(1) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setLookupId ( PINT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
-void abortHostLookup ( int id )
+static void abortHostLookup ( int id )
 */
 HB_FUNC_STATIC( QHOSTINFO_ABORTHOSTLOOKUP )
 {
-  QHostInfo::abortHostLookup ( PINT(1) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+  {
+      QHostInfo::abortHostLookup ( PINT(1) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
-QHostInfo fromName ( const QString & name )
+static QHostInfo fromName ( const QString & name )
 */
 HB_FUNC_STATIC( QHOSTINFO_FROMNAME )
 {
-  QHostInfo * ptr = new QHostInfo( QHostInfo::fromName ( PQSTRING(1) ) );
-  _qt4xhb_createReturnClass ( ptr, "QHOSTINFO", true );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+      QHostInfo * ptr = new QHostInfo( QHostInfo::fromName ( PQSTRING(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QHOSTINFO", true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -356,7 +424,14 @@ static int lookupHost ( const QString & name, QObject * receiver, const char * m
 */
 HB_FUNC_STATIC( QHOSTINFO_LOOKUPHOST )
 {
-  RINT( QHostInfo::lookupHost ( PQSTRING(1), PQOBJECT(2), (const char *) hb_parc(3) ) );
+    if( ISNUMPAR(3) && ISCHAR(1) && ISQOBJECT(2) && ISCHAR(3) )
+  {
+      RINT( QHostInfo::lookupHost ( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QHOSTINFO_NEWFROM )

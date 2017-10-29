@@ -52,11 +52,13 @@ CLASS QUrlInfo
    METHOD equal
    METHOD greaterThan
    METHOD lessThan
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -81,7 +83,7 @@ QUrlInfo ()
 HB_FUNC_STATIC( QURLINFO_NEW1 )
 {
   QUrlInfo * o = new QUrlInfo ();
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -90,7 +92,7 @@ QUrlInfo ( const QUrlInfo & ui )
 HB_FUNC_STATIC( QURLINFO_NEW2 )
 {
   QUrlInfo * o = new QUrlInfo ( *PQURLINFO(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -99,7 +101,7 @@ QUrlInfo ( const QString & name, int permissions, const QString & owner, const Q
 HB_FUNC_STATIC( QURLINFO_NEW3 )
 {
   QUrlInfo * o = new QUrlInfo ( PQSTRING(1), PINT(2), PQSTRING(3), PQSTRING(4), PQINT64(5), *PQDATETIME(6), *PQDATETIME(7), PBOOL(8), PBOOL(9), PBOOL(10), PBOOL(11), PBOOL(12), PBOOL(13) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -108,7 +110,7 @@ QUrlInfo ( const QUrl & url, int permissions, const QString & owner, const QStri
 HB_FUNC_STATIC( QURLINFO_NEW4 )
 {
   QUrlInfo * o = new QUrlInfo ( *PQURL(1), PINT(2), PQSTRING(3), PQSTRING(4), PQINT64(5), *PQDATETIME(6), *PQDATETIME(7), PBOOL(8), PBOOL(9), PBOOL(10), PBOOL(11), PBOOL(12), PBOOL(13) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QUrlInfo ()
@@ -183,9 +185,17 @@ bool isDir () const
 HB_FUNC_STATIC( QURLINFO_ISDIR )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isDir () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isDir () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -195,9 +205,17 @@ bool isExecutable () const
 HB_FUNC_STATIC( QURLINFO_ISEXECUTABLE )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isExecutable () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isExecutable () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -207,9 +225,17 @@ bool isFile () const
 HB_FUNC_STATIC( QURLINFO_ISFILE )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isFile () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isFile () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -219,9 +245,17 @@ bool isReadable () const
 HB_FUNC_STATIC( QURLINFO_ISREADABLE )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isReadable () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isReadable () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -231,9 +265,17 @@ bool isSymLink () const
 HB_FUNC_STATIC( QURLINFO_ISSYMLINK )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isSymLink () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isSymLink () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -243,9 +285,17 @@ bool isValid () const
 HB_FUNC_STATIC( QURLINFO_ISVALID )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isValid () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isValid () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -255,9 +305,17 @@ bool isWritable () const
 HB_FUNC_STATIC( QURLINFO_ISWRITABLE )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isWritable () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isWritable () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -267,10 +325,18 @@ QDateTime lastModified () const
 HB_FUNC_STATIC( QURLINFO_LASTMODIFIED )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->lastModified () );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+    if( ISNUMPAR(0) )
+    {
+      QDateTime * ptr = new QDateTime( obj->lastModified () );
+      _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -280,10 +346,18 @@ QDateTime lastRead () const
 HB_FUNC_STATIC( QURLINFO_LASTREAD )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->lastRead () );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+    if( ISNUMPAR(0) )
+    {
+      QDateTime * ptr = new QDateTime( obj->lastRead () );
+      _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -333,9 +407,17 @@ int permissions () const
 HB_FUNC_STATIC( QURLINFO_PERMISSIONS )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->permissions () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->permissions () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -345,10 +427,19 @@ virtual void setDir ( bool b )
 HB_FUNC_STATIC( QURLINFO_SETDIR )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setDir ( PBOOL(1) );
+    if( ISNUMPAR(1) && ISLOG(1) )
+    {
+      obj->setDir ( PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -358,10 +449,19 @@ virtual void setFile ( bool b )
 HB_FUNC_STATIC( QURLINFO_SETFILE )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setFile ( PBOOL(1) );
+    if( ISNUMPAR(1) && ISLOG(1) )
+    {
+      obj->setFile ( PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -371,10 +471,19 @@ virtual void setGroup ( const QString & s )
 HB_FUNC_STATIC( QURLINFO_SETGROUP )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setGroup ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->setGroup ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -384,10 +493,19 @@ virtual void setLastModified ( const QDateTime & dt )
 HB_FUNC_STATIC( QURLINFO_SETLASTMODIFIED )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setLastModified ( *PQDATETIME(1) );
+    if( ISNUMPAR(1) && ISQDATETIME(1) )
+    {
+      obj->setLastModified ( *PQDATETIME(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -397,10 +515,19 @@ void setLastRead ( const QDateTime & dt )
 HB_FUNC_STATIC( QURLINFO_SETLASTREAD )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setLastRead ( *PQDATETIME(1) );
+    if( ISNUMPAR(1) && ISQDATETIME(1) )
+    {
+      obj->setLastRead ( *PQDATETIME(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -410,10 +537,19 @@ virtual void setName ( const QString & name )
 HB_FUNC_STATIC( QURLINFO_SETNAME )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setName ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->setName ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -423,10 +559,19 @@ virtual void setOwner ( const QString & s )
 HB_FUNC_STATIC( QURLINFO_SETOWNER )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setOwner ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->setOwner ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -436,10 +581,19 @@ virtual void setPermissions ( int p )
 HB_FUNC_STATIC( QURLINFO_SETPERMISSIONS )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setPermissions ( PINT(1) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setPermissions ( PINT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -449,10 +603,19 @@ virtual void setReadable ( bool b )
 HB_FUNC_STATIC( QURLINFO_SETREADABLE )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setReadable ( PBOOL(1) );
+    if( ISNUMPAR(1) && ISLOG(1) )
+    {
+      obj->setReadable ( PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -462,10 +625,19 @@ virtual void setSize ( qint64 size )
 HB_FUNC_STATIC( QURLINFO_SETSIZE )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setSize ( PQINT64(1) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setSize ( PQINT64(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -475,10 +647,19 @@ virtual void setSymLink ( bool b )
 HB_FUNC_STATIC( QURLINFO_SETSYMLINK )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setSymLink ( PBOOL(1) );
+    if( ISNUMPAR(1) && ISLOG(1) )
+    {
+      obj->setSymLink ( PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -488,10 +669,19 @@ virtual void setWritable ( bool b )
 HB_FUNC_STATIC( QURLINFO_SETWRITABLE )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setWritable ( PBOOL(1) );
+    if( ISNUMPAR(1) && ISLOG(1) )
+    {
+      obj->setWritable ( PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -501,34 +691,63 @@ qint64 size () const
 HB_FUNC_STATIC( QURLINFO_SIZE )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQINT64( obj->size () );
+    if( ISNUMPAR(0) )
+    {
+      RQINT64( obj->size () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
 /*
-bool equal ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
+static bool equal ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 */
 HB_FUNC_STATIC( QURLINFO_EQUAL )
 {
-  RBOOL( QUrlInfo::equal ( *PQURLINFO(1), *PQURLINFO(2), PINT(3) ) );
+    if( ISNUMPAR(3) && ISQURLINFO(1) && ISQURLINFO(2) && ISNUM(3) )
+  {
+      RBOOL( QUrlInfo::equal ( *PQURLINFO(1), *PQURLINFO(2), PINT(3) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
-bool greaterThan ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
+static bool greaterThan ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 */
 HB_FUNC_STATIC( QURLINFO_GREATERTHAN )
 {
-  RBOOL( QUrlInfo::greaterThan ( *PQURLINFO(1), *PQURLINFO(2), PINT(3) ) );
+    if( ISNUMPAR(3) && ISQURLINFO(1) && ISQURLINFO(2) && ISNUM(3) )
+  {
+      RBOOL( QUrlInfo::greaterThan ( *PQURLINFO(1), *PQURLINFO(2), PINT(3) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
-bool lessThan ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
+static bool lessThan ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 */
 HB_FUNC_STATIC( QURLINFO_LESSTHAN )
 {
-  RBOOL( QUrlInfo::lessThan ( *PQURLINFO(1), *PQURLINFO(2), PINT(3) ) );
+    if( ISNUMPAR(3) && ISQURLINFO(1) && ISQURLINFO(2) && ISNUM(3) )
+  {
+      RBOOL( QUrlInfo::lessThan ( *PQURLINFO(1), *PQURLINFO(2), PINT(3) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QURLINFO_NEWFROM )

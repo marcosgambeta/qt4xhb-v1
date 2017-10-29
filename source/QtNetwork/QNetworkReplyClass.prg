@@ -19,8 +19,6 @@ REQUEST QURL
 
 CLASS QNetworkReply INHERIT QIODevice
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD abort
    METHOD attribute
@@ -43,12 +41,14 @@ CLASS QNetworkReply INHERIT QIODevice
    METHOD sslConfiguration
    METHOD url
    METHOD close
+
    METHOD onDownloadProgress
    METHOD onError
    METHOD onFinished
    METHOD onMetaDataChanged
    METHOD onSslErrors
    METHOD onUploadProgress
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -92,10 +92,19 @@ virtual void abort () = 0
 HB_FUNC_STATIC( QNETWORKREPLY_ABORT )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->abort ();
+    if( ISNUMPAR(0) )
+    {
+      obj->abort ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -105,11 +114,18 @@ QVariant attribute ( QNetworkRequest::Attribute code ) const
 HB_FUNC_STATIC( QNETWORKREPLY_ATTRIBUTE )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->attribute ( (QNetworkRequest::Attribute) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      QVariant * ptr = new QVariant( obj->attribute ( (QNetworkRequest::Attribute) hb_parni(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -119,9 +135,17 @@ NetworkError error () const
 HB_FUNC_STATIC( QNETWORKREPLY_ERROR )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->error () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->error () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -131,9 +155,17 @@ bool hasRawHeader ( const QByteArray & headerName ) const
 HB_FUNC_STATIC( QNETWORKREPLY_HASRAWHEADER )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->hasRawHeader ( *PQBYTEARRAY(1) ) );
+    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    {
+      RBOOL( obj->hasRawHeader ( *PQBYTEARRAY(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -143,11 +175,18 @@ QVariant header ( QNetworkRequest::KnownHeaders header ) const
 HB_FUNC_STATIC( QNETWORKREPLY_HEADER )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->header ( (QNetworkRequest::KnownHeaders) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      QVariant * ptr = new QVariant( obj->header ( (QNetworkRequest::KnownHeaders) hb_parni(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -178,10 +217,19 @@ virtual void ignoreSslErrors ()
 HB_FUNC_STATIC( QNETWORKREPLY_IGNORESSLERRORS2 )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->ignoreSslErrors ();
+    if( ISNUMPAR(0) )
+    {
+      obj->ignoreSslErrors ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -206,9 +254,17 @@ bool isFinished () const
 HB_FUNC_STATIC( QNETWORKREPLY_ISFINISHED )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isFinished () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isFinished () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -218,9 +274,17 @@ bool isRunning () const
 HB_FUNC_STATIC( QNETWORKREPLY_ISRUNNING )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isRunning () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isRunning () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -230,10 +294,18 @@ QNetworkAccessManager * manager () const
 HB_FUNC_STATIC( QNETWORKREPLY_MANAGER )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QNetworkAccessManager * ptr = obj->manager ();
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKACCESSMANAGER" );
+    if( ISNUMPAR(0) )
+    {
+      QNetworkAccessManager * ptr = obj->manager ();
+      _qt4xhb_createReturnQObjectClass ( ptr, "QNETWORKACCESSMANAGER" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -243,9 +315,17 @@ QNetworkAccessManager::Operation operation () const
 HB_FUNC_STATIC( QNETWORKREPLY_OPERATION )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->operation () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->operation () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -255,10 +335,18 @@ QByteArray rawHeader ( const QByteArray & headerName ) const
 HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADER )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->rawHeader ( *PQBYTEARRAY(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    {
+      QByteArray * ptr = new QByteArray( obj->rawHeader ( *PQBYTEARRAY(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -311,9 +399,17 @@ qint64 readBufferSize () const
 HB_FUNC_STATIC( QNETWORKREPLY_READBUFFERSIZE )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQINT64( obj->readBufferSize () );
+    if( ISNUMPAR(0) )
+    {
+      RQINT64( obj->readBufferSize () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -323,10 +419,18 @@ QNetworkRequest request () const
 HB_FUNC_STATIC( QNETWORKREPLY_REQUEST )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QNetworkRequest * ptr = new QNetworkRequest( obj->request () );
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKREQUEST", true );
+    if( ISNUMPAR(0) )
+    {
+      QNetworkRequest * ptr = new QNetworkRequest( obj->request () );
+      _qt4xhb_createReturnClass ( ptr, "QNETWORKREQUEST", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -336,10 +440,19 @@ virtual void setReadBufferSize ( qint64 size )
 HB_FUNC_STATIC( QNETWORKREPLY_SETREADBUFFERSIZE )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setReadBufferSize ( PQINT64(1) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setReadBufferSize ( PQINT64(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -349,10 +462,19 @@ void setSslConfiguration ( const QSslConfiguration & config )
 HB_FUNC_STATIC( QNETWORKREPLY_SETSSLCONFIGURATION )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setSslConfiguration ( *PQSSLCONFIGURATION(1) );
+    if( ISNUMPAR(1) && ISQSSLCONFIGURATION(1) )
+    {
+      obj->setSslConfiguration ( *PQSSLCONFIGURATION(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -362,10 +484,18 @@ QSslConfiguration sslConfiguration () const
 HB_FUNC_STATIC( QNETWORKREPLY_SSLCONFIGURATION )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QSslConfiguration * ptr = new QSslConfiguration( obj->sslConfiguration () );
-    _qt4xhb_createReturnClass ( ptr, "QSSLCONFIGURATION", true );
+    if( ISNUMPAR(0) )
+    {
+      QSslConfiguration * ptr = new QSslConfiguration( obj->sslConfiguration () );
+      _qt4xhb_createReturnClass ( ptr, "QSSLCONFIGURATION", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -375,10 +505,18 @@ QUrl url () const
 HB_FUNC_STATIC( QNETWORKREPLY_URL )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->url () );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    if( ISNUMPAR(0) )
+    {
+      QUrl * ptr = new QUrl( obj->url () );
+      _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -388,10 +526,19 @@ virtual void close ()
 HB_FUNC_STATIC( QNETWORKREPLY_CLOSE )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->close ();
+    if( ISNUMPAR(0) )
+    {
+      obj->close ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

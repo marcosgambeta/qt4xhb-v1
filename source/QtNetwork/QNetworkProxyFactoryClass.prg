@@ -23,11 +23,13 @@ CLASS QNetworkProxyFactory
    METHOD setApplicationProxyFactory
    METHOD setUseSystemConfiguration
    METHOD systemProxyForQuery
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -155,25 +157,41 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_PROXYFORQUERY )
 }
 
 /*
-void setApplicationProxyFactory ( QNetworkProxyFactory * factory )
+static void setApplicationProxyFactory ( QNetworkProxyFactory * factory )
 */
 HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SETAPPLICATIONPROXYFACTORY )
 {
-  QNetworkProxyFactory::setApplicationProxyFactory ( PQNETWORKPROXYFACTORY(1) );
+    if( ISNUMPAR(1) && ISQNETWORKPROXYFACTORY(1) )
+  {
+      QNetworkProxyFactory::setApplicationProxyFactory ( PQNETWORKPROXYFACTORY(1) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
-void setUseSystemConfiguration ( bool enable )
+static void setUseSystemConfiguration ( bool enable )
 */
 HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SETUSESYSTEMCONFIGURATION )
 {
-  QNetworkProxyFactory::setUseSystemConfiguration ( PBOOL(1) );
+    if( ISNUMPAR(1) && ISLOG(1) )
+  {
+      QNetworkProxyFactory::setUseSystemConfiguration ( PBOOL(1) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
-QList<QNetworkProxy> systemProxyForQuery ( const QNetworkProxyQuery & query = QNetworkProxyQuery() )
+static QList<QNetworkProxy> systemProxyForQuery ( const QNetworkProxyQuery & query = QNetworkProxyQuery() )
 */
 HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SYSTEMPROXYFORQUERY )
 {

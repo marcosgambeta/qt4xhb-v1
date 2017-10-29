@@ -14,8 +14,6 @@ REQUEST QNETWORKCONFIGURATION
 
 CLASS QNetworkConfigurationManager INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD allConfigurations
@@ -24,11 +22,13 @@ CLASS QNetworkConfigurationManager INHERIT QObject
    METHOD defaultConfiguration
    METHOD isOnline
    METHOD updateConfigurations
+
    METHOD onConfigurationAdded
    METHOD onConfigurationChanged
    METHOD onConfigurationRemoved
    METHOD onOnlineStateChanged
    METHOD onUpdateCompleted
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -52,8 +52,15 @@ QNetworkConfigurationManager ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_NEW )
 {
-  QNetworkConfigurationManager * o = new QNetworkConfigurationManager ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  {
+    QNetworkConfigurationManager * o = new QNetworkConfigurationManager ( OPQOBJECT(1,0) );
+    _qt4xhb_storePointerAndFlag( o, false );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_DELETE )
@@ -127,9 +134,17 @@ QNetworkConfigurationManager::Capabilities capabilities () const
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_CAPABILITIES )
 {
   QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->capabilities () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->capabilities () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -139,10 +154,18 @@ QNetworkConfiguration configurationFromIdentifier ( const QString & identifier )
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_CONFIGURATIONFROMIDENTIFIER )
 {
   QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->configurationFromIdentifier ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->configurationFromIdentifier ( PQSTRING(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -152,10 +175,18 @@ QNetworkConfiguration defaultConfiguration () const
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_DEFAULTCONFIGURATION )
 {
   QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->defaultConfiguration () );
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
+    if( ISNUMPAR(0) )
+    {
+      QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->defaultConfiguration () );
+      _qt4xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -165,9 +196,17 @@ bool isOnline () const
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ISONLINE )
 {
   QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isOnline () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isOnline () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -177,10 +216,19 @@ void updateConfigurations ()
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_UPDATECONFIGURATIONS )
 {
   QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->updateConfigurations ();
+    if( ISNUMPAR(0) )
+    {
+      obj->updateConfigurations ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

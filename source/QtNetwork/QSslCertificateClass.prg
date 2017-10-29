@@ -43,11 +43,13 @@ CLASS QSslCertificate
    METHOD fromData
    METHOD fromDevice
    METHOD fromPath
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -74,9 +76,8 @@ QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_NEW1 )
 {
-  int par2 = ISNIL(2)? (int) QSsl::Pem : hb_parni(2);
-  QSslCertificate * o = new QSslCertificate ( PQIODEVICE(1), (QSsl::EncodingFormat) par2 );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  QSslCertificate * o = new QSslCertificate ( PQIODEVICE(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2) );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -84,10 +85,8 @@ QSslCertificate ( const QByteArray & data = QByteArray(), QSsl::EncodingFormat f
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_NEW2 )
 {
-  QByteArray par1 = ISNIL(1)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par2 = ISNIL(2)? (int) QSsl::Pem : hb_parni(2);
-  QSslCertificate * o = new QSslCertificate ( par1, (QSsl::EncodingFormat) par2 );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  QSslCertificate * o = new QSslCertificate ( ISNIL(1)? QByteArray() : *(QByteArray *) _qt4xhb_itemGetPtr(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2) );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -96,7 +95,7 @@ QSslCertificate ( const QSslCertificate & other )
 HB_FUNC_STATIC( QSSLCERTIFICATE_NEW3 )
 {
   QSslCertificate * o = new QSslCertificate ( *PQSSLCERTIFICATE(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
@@ -146,10 +145,19 @@ void clear ()
 HB_FUNC_STATIC( QSSLCERTIFICATE_CLEAR )
 {
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->clear ();
+    if( ISNUMPAR(0) )
+    {
+      obj->clear ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -159,11 +167,18 @@ QByteArray digest ( QCryptographicHash::Algorithm algorithm = QCryptographicHash
 HB_FUNC_STATIC( QSSLCERTIFICATE_DIGEST )
 {
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    int par1 = ISNIL(1)? (int) QCryptographicHash::Md5 : hb_parni(1);
-    QByteArray * ptr = new QByteArray( obj->digest ( (QCryptographicHash::Algorithm) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    {
+      QByteArray * ptr = new QByteArray( obj->digest ( ISNIL(1)? (QCryptographicHash::Algorithm) QCryptographicHash::Md5 : (QCryptographicHash::Algorithm) hb_parni(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -173,10 +188,18 @@ QDateTime effectiveDate () const
 HB_FUNC_STATIC( QSSLCERTIFICATE_EFFECTIVEDATE )
 {
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->effectiveDate () );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+    if( ISNUMPAR(0) )
+    {
+      QDateTime * ptr = new QDateTime( obj->effectiveDate () );
+      _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -186,10 +209,18 @@ QDateTime expiryDate () const
 HB_FUNC_STATIC( QSSLCERTIFICATE_EXPIRYDATE )
 {
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->expiryDate () );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+    if( ISNUMPAR(0) )
+    {
+      QDateTime * ptr = new QDateTime( obj->expiryDate () );
+      _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -199,9 +230,17 @@ bool isNull () const
 HB_FUNC_STATIC( QSSLCERTIFICATE_ISNULL )
 {
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isNull () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isNull () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -211,9 +250,17 @@ bool isValid () const
 HB_FUNC_STATIC( QSSLCERTIFICATE_ISVALID )
 {
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isValid () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isValid () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -263,10 +310,18 @@ QSslKey publicKey () const
 HB_FUNC_STATIC( QSSLCERTIFICATE_PUBLICKEY )
 {
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QSslKey * ptr = new QSslKey( obj->publicKey () );
-    _qt4xhb_createReturnClass ( ptr, "QSSLKEY", true );
+    if( ISNUMPAR(0) )
+    {
+      QSslKey * ptr = new QSslKey( obj->publicKey () );
+      _qt4xhb_createReturnClass ( ptr, "QSSLKEY", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -276,10 +331,18 @@ QByteArray serialNumber () const
 HB_FUNC_STATIC( QSSLCERTIFICATE_SERIALNUMBER )
 {
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->serialNumber () );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    if( ISNUMPAR(0) )
+    {
+      QByteArray * ptr = new QByteArray( obj->serialNumber () );
+      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -329,10 +392,18 @@ QByteArray toDer () const
 HB_FUNC_STATIC( QSSLCERTIFICATE_TODER )
 {
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->toDer () );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    if( ISNUMPAR(0) )
+    {
+      QByteArray * ptr = new QByteArray( obj->toDer () );
+      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -342,10 +413,18 @@ QByteArray toPem () const
 HB_FUNC_STATIC( QSSLCERTIFICATE_TOPEM )
 {
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->toPem () );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    if( ISNUMPAR(0) )
+    {
+      QByteArray * ptr = new QByteArray( obj->toPem () );
+      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -355,10 +434,18 @@ QByteArray version () const
 HB_FUNC_STATIC( QSSLCERTIFICATE_VERSION )
 {
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->version () );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    if( ISNUMPAR(0) )
+    {
+      QByteArray * ptr = new QByteArray( obj->version () );
+      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
