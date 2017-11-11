@@ -13,8 +13,6 @@ REQUEST QURL
 
 CLASS QDeclarativeView INHERIT QGraphicsView
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD engine
@@ -53,12 +51,12 @@ $destructor
 /*
 QDeclarativeView ( QWidget * parent = 0 )
 */
-$constructor=|new1|QWidget *=0
+$internalConstructor=|new1|QWidget *=0
 
 /*
 QDeclarativeView ( const QUrl & source, QWidget * parent = 0 )
 */
-$constructor=|new2|const QUrl &,QWidget *=0
+$internalConstructor=|new2|const QUrl &,QWidget *=0
 
 //[1]QDeclarativeView ( QWidget * parent = 0 )
 //[2]QDeclarativeView ( const QUrl & source, QWidget * parent = 0 )
@@ -67,11 +65,11 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QDECLARATIVEVIEW_NEW1 );
+    QDeclarativeView_new1();
   }
   else if( ISBETWEEN(1,2) && ISQURL(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QDECLARATIVEVIEW_NEW2 );
+    QDeclarativeView_new2();
   }
   else
   {
@@ -96,14 +94,8 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
   if( obj )
   {
     QList<QDeclarativeError> list = obj->errors ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QDECLARATIVEERROR" );
-    #else
-    pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

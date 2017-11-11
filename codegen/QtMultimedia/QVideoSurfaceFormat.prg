@@ -14,9 +14,6 @@ CLASS QVideoSurfaceFormat
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD frameHeight
@@ -31,11 +28,7 @@ CLASS QVideoSurfaceFormat
    METHOD propertyNames
    METHOD scanLineDirection
    METHOD setFrameRate
-   METHOD setFrameSize1
-   METHOD setFrameSize2
    METHOD setFrameSize
-   METHOD setPixelAspectRatio1
-   METHOD setPixelAspectRatio2
    METHOD setPixelAspectRatio
    METHOD setProperty
    METHOD setScanLineDirection
@@ -70,17 +63,17 @@ $destructor
 /*
 QVideoSurfaceFormat ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QVideoSurfaceFormat ( const QSize & size, QVideoFrame::PixelFormat format, QAbstractVideoBuffer::HandleType type = QAbstractVideoBuffer::NoHandle )
 */
-$constructor=|new2|const QSize &,QVideoFrame::PixelFormat,QAbstractVideoBuffer::HandleType=QAbstractVideoBuffer::NoHandle
+$internalConstructor=|new2|const QSize &,QVideoFrame::PixelFormat,QAbstractVideoBuffer::HandleType=QAbstractVideoBuffer::NoHandle
 
 /*
 QVideoSurfaceFormat ( const QVideoSurfaceFormat & other )
 */
-$constructor=|new3|const QVideoSurfaceFormat &
+$internalConstructor=|new3|const QVideoSurfaceFormat &
 
 //[1]QVideoSurfaceFormat ()
 //[2]QVideoSurfaceFormat ( const QSize & size, QVideoFrame::PixelFormat format, QAbstractVideoBuffer::HandleType type = QAbstractVideoBuffer::NoHandle )
@@ -90,15 +83,15 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QVIDEOSURFACEFORMAT_NEW1 );
+    QVideoSurfaceFormat_new1();
   }
   else if( ISBETWEEN(2,3) && ISQSIZE(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QVIDEOSURFACEFORMAT_NEW2 );
+    QVideoSurfaceFormat_new2();
   }
   else if( ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1) )
   {
-    HB_FUNC_EXEC( QVIDEOSURFACEFORMAT_NEW3 );
+    QVideoSurfaceFormat_new3();
   }
   else
   {
@@ -163,14 +156,8 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_PROPERTYNAMES )
   if( obj )
   {
     QList<QByteArray> list = obj->propertyNames ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QBYTEARRAY" );
-    #else
-    pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -210,12 +197,12 @@ $method=|void|setFrameRate|qreal
 /*
 void setFrameSize ( const QSize & size )
 */
-$method=|void|setFrameSize,setFrameSize1|const QSize &
+$internalMethod=|void|setFrameSize,setFrameSize1|const QSize &
 
 /*
 void setFrameSize ( int width, int height )
 */
-$method=|void|setFrameSize,setFrameSize2|int,int
+$internalMethod=|void|setFrameSize,setFrameSize2|int,int
 
 //[1]void setFrameSize ( const QSize & size )
 //[2]void setFrameSize ( int width, int height )
@@ -224,11 +211,11 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETFRAMESIZE )
 {
   if( ISNUMPAR(1) && ISQSIZE(1) )
   {
-    HB_FUNC_EXEC( QVIDEOSURFACEFORMAT_SETFRAMESIZE1 );
+    QVideoSurfaceFormat_setFrameSize1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QVIDEOSURFACEFORMAT_SETFRAMESIZE2 );
+    QVideoSurfaceFormat_setFrameSize2();
   }
   else
   {
@@ -239,12 +226,12 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETFRAMESIZE )
 /*
 void setPixelAspectRatio ( const QSize & ratio )
 */
-$method=|void|setPixelAspectRatio,setPixelAspectRatio1|const QSize &
+$internalMethod=|void|setPixelAspectRatio,setPixelAspectRatio1|const QSize &
 
 /*
 void setPixelAspectRatio ( int horizontal, int vertical )
 */
-$method=|void|setPixelAspectRatio,setPixelAspectRatio2|int,int
+$internalMethod=|void|setPixelAspectRatio,setPixelAspectRatio2|int,int
 
 //[1]void setPixelAspectRatio ( const QSize & ratio )
 //[2]void setPixelAspectRatio ( int horizontal, int vertical )
@@ -253,11 +240,11 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETPIXELASPECTRATIO )
 {
   if( ISNUMPAR(1) && ISQSIZE(1) )
   {
-    HB_FUNC_EXEC( QVIDEOSURFACEFORMAT_SETPIXELASPECTRATIO1 );
+    QVideoSurfaceFormat_setPixelAspectRatio1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QVIDEOSURFACEFORMAT_SETPIXELASPECTRATIO2 );
+    QVideoSurfaceFormat_setPixelAspectRatio2();
   }
   else
   {

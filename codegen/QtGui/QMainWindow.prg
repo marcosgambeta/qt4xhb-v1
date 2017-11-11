@@ -17,12 +17,7 @@ CLASS QMainWindow INHERIT QWidget
 
    METHOD new
    METHOD delete
-   METHOD addDockWidget1
-   METHOD addDockWidget2
    METHOD addDockWidget
-   METHOD addToolBar1
-   METHOD addToolBar2
-   METHOD addToolBar3
    METHOD addToolBar
    METHOD addToolBarBreak
    METHOD centralWidget
@@ -87,24 +82,19 @@ $destructor
 /*
 QMainWindow ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
-HB_FUNC_STATIC( QMAINWINDOW_NEW )
-{
-  int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QMainWindow * o = new QMainWindow ( OPQWIDGET(1,0), (Qt::WindowFlags) par2 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QWidget *=0,Qt::WindowFlags=0
 
 $deleteMethod
 
 /*
 void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget )
 */
-$method=|void|addDockWidget,addDockWidget1|Qt::DockWidgetArea,QDockWidget *
+$internalMethod=|void|addDockWidget,addDockWidget1|Qt::DockWidgetArea,QDockWidget *
 
 /*
 void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget, Qt::Orientation orientation )
 */
-$method=|void|addDockWidget,addDockWidget2|Qt::DockWidgetArea,QDockWidget *,Qt::Orientation
+$internalMethod=|void|addDockWidget,addDockWidget2|Qt::DockWidgetArea,QDockWidget *,Qt::Orientation
 
 //[1]void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget )
 //[2]void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget, Qt::Orientation orientation )
@@ -113,11 +103,11 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDDOCKWIDGET )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISQDOCKWIDGET(2) )
   {
-    HB_FUNC_EXEC( QMAINWINDOW_ADDDOCKWIDGET1 );
+    QMainWindow_addDockWidget1();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISQDOCKWIDGET(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QMAINWINDOW_ADDDOCKWIDGET2 );
+    QMainWindow_addDockWidget2();
   }
   else
   {
@@ -128,17 +118,17 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDDOCKWIDGET )
 /*
 void addToolBar ( Qt::ToolBarArea area, QToolBar * toolbar )
 */
-$method=|void|addToolBar,addToolBar1|Qt::ToolBarArea,QToolBar *
+$internalMethod=|void|addToolBar,addToolBar1|Qt::ToolBarArea,QToolBar *
 
 /*
 void addToolBar ( QToolBar * toolbar )
 */
-$method=|void|addToolBar,addToolBar2|QToolBar *
+$internalMethod=|void|addToolBar,addToolBar2|QToolBar *
 
 /*
 QToolBar * addToolBar ( const QString & title )
 */
-$method=|QToolBar *|addToolBar,addToolBar3|const QString &
+$internalMethod=|QToolBar *|addToolBar,addToolBar3|const QString &
 
 //[1]void addToolBar ( Qt::ToolBarArea area, QToolBar * toolbar )
 //[2]void addToolBar ( QToolBar * toolbar )
@@ -148,15 +138,15 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBAR )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISQTOOLBAR(2) )
   {
-    HB_FUNC_EXEC( QMAINWINDOW_ADDTOOLBAR1 );
+    QMainWindow_addToolbar1();
   }
   else if( ISNUMPAR(1) && ISQTOOLBAR(1) )
   {
-    HB_FUNC_EXEC( QMAINWINDOW_ADDTOOLBAR2 );
+    QMainWindow_addToolbar2();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QMAINWINDOW_ADDTOOLBAR3 );
+    QMainWindow_addToolbar3();
   }
   else
   {
@@ -350,14 +340,8 @@ HB_FUNC_STATIC( QMAINWINDOW_TABIFIEDDOCKWIDGETS )
   {
     QDockWidget * par1 = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QList<QDockWidget *> list = obj->tabifiedDockWidgets ( par1 );
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QDOCKWIDGET" );
-    #else
-    pDynSym = hb_dynsymFindName( "QDOCKWIDGET" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QDOCKWIDGET" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

@@ -11,8 +11,6 @@ REQUEST QSIZE
 
 CLASS QSplitter INHERIT QFrame
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD addWidget
@@ -60,12 +58,12 @@ $destructor
 /*
 QSplitter ( QWidget * parent = 0 )
 */
-$constructor=|new1|QWidget *=0
+$internalConstructor=|new1|QWidget *=0
 
 /*
 QSplitter ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
-$constructor=|new2|Qt::Orientation,QWidget *=0
+$internalConstructor=|new2|Qt::Orientation,QWidget *=0
 
 //[1]QSplitter ( QWidget * parent = 0 )
 //[2]QSplitter ( Qt::Orientation orientation, QWidget * parent = 0 )
@@ -74,11 +72,11 @@ HB_FUNC_STATIC( QSPLITTER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QSPLITTER_NEW1 );
+    QSplitter_new1();
   }
   else if( ISBETWEEN(1,2) && ISNUM(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QSPLITTER_NEW2 );
+    QSplitter_new2();
   }
   else
   {
@@ -223,8 +221,7 @@ HB_FUNC_STATIC( QSPLITTER_SIZES )
   if( obj )
   {
     QList<int> list = obj->sizes ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

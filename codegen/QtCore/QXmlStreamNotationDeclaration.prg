@@ -11,8 +11,6 @@ CLASS QXmlStreamNotationDeclaration
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD name
@@ -42,12 +40,12 @@ $destructor
 /*
 QXmlStreamNotationDeclaration()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & other)
 */
-$constructor=|new2|const QXmlStreamNotationDeclaration &
+$internalConstructor=|new2|const QXmlStreamNotationDeclaration &
 
 //[1]QXmlStreamNotationDeclaration()
 //[2]QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & other)
@@ -56,11 +54,11 @@ HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMNOTATIONDECLARATION_NEW1 );
+    QXmlStreamNotationDeclaration_new1();
   }
   else if( ISNUMPAR(1) && ISQXMLSTREAMNOTATIONDECLARATION(1) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMNOTATIONDECLARATION_NEW2 );
+    QXmlStreamNotationDeclaration_new2();
   }
   else
   {

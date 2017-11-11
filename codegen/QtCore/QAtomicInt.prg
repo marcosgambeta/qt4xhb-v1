@@ -7,8 +7,6 @@ CLASS QAtomicInt
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD deref
@@ -57,12 +55,12 @@ $destructor
 /*
 QAtomicInt ( int value = 0 )
 */
-$constructor=|new1|int=0
+$internalConstructor=|new1|int=0
 
 /*
 QAtomicInt ( const QAtomicInt & other )
 */
-$constructor=|new2|const QAtomicInt &
+$internalConstructor=|new2|const QAtomicInt &
 
 //[1]QAtomicInt ( int value = 0 )
 //[2]QAtomicInt ( const QAtomicInt & other )
@@ -71,11 +69,11 @@ HB_FUNC_STATIC( QATOMICINT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QATOMICINT_NEW1 );
+    QAtomicInt_new1();
   }
   else if( ISNUMPAR(1) && ISQATOMICINT(1) )
   {
-    HB_FUNC_EXEC( QATOMICINT_NEW2 );
+    QAtomicInt_new2();
   }
   else
   {

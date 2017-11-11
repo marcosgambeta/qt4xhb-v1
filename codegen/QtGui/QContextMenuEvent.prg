@@ -8,9 +8,6 @@ REQUEST QPOINT
 
 CLASS QContextMenuEvent INHERIT QInputEvent
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD globalPos
@@ -38,17 +35,17 @@ $destructor
 /*
 QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos, Qt::KeyboardModifiers modifiers )
 */
-$constructor=|new1|QContextMenuEvent::Reason,const QPoint &,const QPoint &,Qt::KeyboardModifiers
+$internalConstructor=|new1|QContextMenuEvent::Reason,const QPoint &,const QPoint &,Qt::KeyboardModifiers
 
 /*
 QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos )
 */
-$constructor=|new2|QContextMenuEvent::Reason,const QPoint &,const QPoint &
+$internalConstructor=|new2|QContextMenuEvent::Reason,const QPoint &,const QPoint &
 
 /*
 QContextMenuEvent ( Reason reason, const QPoint & pos )
 */
-$constructor=|new3|QContextMenuEvent::Reason,const QPoint &
+$internalConstructor=|new3|QContextMenuEvent::Reason,const QPoint &
 
 //[1]QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos, Qt::KeyboardModifiers modifiers )
 //[2]QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos )
@@ -58,15 +55,15 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW )
 {
   if( ISNUMPAR(4) && ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QCONTEXTMENUEVENT_NEW1 );
+    QContextMenuEvent_new1();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) )
   {
-    HB_FUNC_EXEC( QCONTEXTMENUEVENT_NEW2 );
+    QContextMenuEvent_new2();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISQPOINT(2) )
   {
-    HB_FUNC_EXEC( QCONTEXTMENUEVENT_NEW3 );
+    QContextMenuEvent_new3();
   }
   else
   {

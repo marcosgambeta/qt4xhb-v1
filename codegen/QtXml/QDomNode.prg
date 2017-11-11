@@ -74,8 +74,6 @@ CLASS QDomNode
    METHOD previousSiblingElement
    METHOD removeChild
    METHOD replaceChild
-   METHOD save1
-   METHOD save2
    METHOD save
    METHOD setNodeValue
    METHOD setPrefix
@@ -377,12 +375,12 @@ $method=|QDomNode|replaceChild|const QDomNode &,const QDomNode &
 /*
 void save ( QTextStream & str, int indent ) const
 */
-$method=|void|save,save1|QTextStream &,int
+$internalMethod=|void|save,save1|QTextStream &,int
 
 /*
 void save ( QTextStream & str, int indent, EncodingPolicy encodingPolicy ) const
 */
-$method=|void|save,save2|QTextStream &,int,QDomNode::EncodingPolicy
+$internalMethod=|void|save,save2|QTextStream &,int,QDomNode::EncodingPolicy
 
 //[1]void save ( QTextStream & str, int indent ) const
 //[2]void save ( QTextStream & str, int indent, EncodingPolicy encodingPolicy ) const
@@ -391,11 +389,11 @@ HB_FUNC_STATIC( QDOMNODE_SAVE )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QDOMNODE_SAVE1 );
+    QDomNode_save1();
   }
   else if( ISNUMPAR(3) && ISCHAR(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QDOMNODE_SAVE2 );
+    QDomNode_save2();
   }
   else
   {

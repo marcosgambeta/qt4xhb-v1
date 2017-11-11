@@ -12,8 +12,6 @@ REQUEST QDECLARATIVECONTEXT
 
 CLASS QDeclarativeContext INHERIT QObject
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD baseUrl
@@ -25,8 +23,6 @@ CLASS QDeclarativeContext INHERIT QObject
    METHOD resolvedUrl
    METHOD setBaseUrl
    METHOD setContextObject
-   METHOD setContextProperty1
-   METHOD setContextProperty2
    METHOD setContextProperty
 
    DESTRUCTOR destroyObject
@@ -48,12 +44,12 @@ $destructor
 /*
 QDeclarativeContext ( QDeclarativeEngine * engine, QObject * parent = 0 )
 */
-$constructor=|new1|QDeclarativeEngine *,QObject *=0
+$internalConstructor=|new1|QDeclarativeEngine *,QObject *=0
 
 /*
 QDeclarativeContext ( QDeclarativeContext * parentContext, QObject * parent = 0 )
 */
-$constructor=|new2|QDeclarativeContext *,QObject *=0
+$internalConstructor=|new2|QDeclarativeContext *,QObject *=0
 
 //[1]QDeclarativeContext ( QDeclarativeEngine * engine, QObject * parent = 0 )
 //[2]QDeclarativeContext ( QDeclarativeContext * parentContext, QObject * parent = 0 )
@@ -62,11 +58,11 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_NEW )
 {
   if( ISBETWEEN(1,2) && ISQDECLARATIVEENGINE(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QDECLARATIVECONTEXT_NEW1 );
+    QDeclarativeContext_new1();
   }
   else if( ISBETWEEN(1,2) && ISQDECLARATIVECONTEXT(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QDECLARATIVECONTEXT_NEW2 );
+    QDeclarativeContext_new2();
   }
   else
   {
@@ -124,12 +120,12 @@ $method=|void|setContextObject|QObject *
 /*
 void setContextProperty ( const QString & name, QObject * value )
 */
-$method=|void|setContextProperty,setContextProperty1|const QString &,QObject *
+$internalMethod=|void|setContextProperty,setContextProperty1|const QString &,QObject *
 
 /*
 void setContextProperty ( const QString & name, const QVariant & value )
 */
-$method=|void|setContextProperty,setContextProperty2|const QString &,const QVariant &
+$internalMethod=|void|setContextProperty,setContextProperty2|const QString &,const QVariant &
 
 //[1]void setContextProperty ( const QString & name, QObject * value )
 //[2]void setContextProperty ( const QString & name, const QVariant & value )
@@ -138,11 +134,11 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETCONTEXTPROPERTY )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISQOBJECT(2) )
   {
-    HB_FUNC_EXEC( QDECLARATIVECONTEXT_SETCONTEXTPROPERTY1 );
+    QDeclarativeContext_setContextProperty1();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISQVARIANT(2) )
   {
-    HB_FUNC_EXEC( QDECLARATIVECONTEXT_SETCONTEXTPROPERTY2 );
+    QDeclarativeContext_setContextProperty2();
   }
   else
   {

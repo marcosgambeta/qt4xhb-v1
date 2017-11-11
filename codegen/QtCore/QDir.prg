@@ -13,9 +13,6 @@ CLASS QDir
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD absoluteFilePath
@@ -28,11 +25,7 @@ CLASS QDir
    METHOD entryInfoList1
    METHOD entryInfoList2
    METHOD entryInfoList
-   METHOD entryList1
-   METHOD entryList2
    METHOD entryList
-   METHOD exists1
-   METHOD exists2
    METHOD exists
    METHOD filePath
    METHOD filter
@@ -66,8 +59,6 @@ CLASS QDir
    METHOD homePath
    METHOD isAbsolutePath
    METHOD isRelativePath
-   METHOD match1
-   METHOD match2
    METHOD match
    METHOD root
    METHOD rootPath
@@ -102,17 +93,17 @@ $destructor
 /*
 QDir(const QDir & dir)
 */
-$constructor=|new1|const QDir &
+$internalConstructor=|new1|const QDir &
 
 /*
 QDir(const QString & path = QString())
 */
-$constructor=|new2|const QString &=QString()
+$internalConstructor=|new2|const QString &=QString()
 
 /*
 QDir(const QString & path, const QString & nameFilter, SortFlags sort = SortFlags( Name | IgnoreCase ), Filters filters = AllEntries)
 */
-$constructor=|new3|const QString &,const QString &,QDir::SortFlags=QDir::SortFlags( QDir::Name OR QDir::IgnoreCase ),QDir::Filters=QDir::AllEntries
+$internalConstructor=|new3|const QString &,const QString &,QDir::SortFlags=QDir::SortFlags( QDir::Name OR QDir::IgnoreCase ),QDir::Filters=QDir::AllEntries
 
 //[1]QDir(const QDir & dir)
 //[2]QDir(const QString & path = QString())
@@ -122,15 +113,15 @@ HB_FUNC_STATIC( QDIR_NEW )
 {
   if( ISNUMPAR(1) && ISQDIR(1) )
   {
-    HB_FUNC_EXEC( QDIR_NEW1 );
+    QDir_new1();
   }
   else if( ISBETWEEN(0,1) && (ISCHAR(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QDIR_NEW2 );
+    QDir_new2();
   }
   else if( ISBETWEEN(2,4) && ISCHAR(1) && ISCHAR(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QDIR_NEW3 );
+    QDir_new3();
   }
   else
   {
@@ -187,14 +178,8 @@ HB_FUNC_STATIC( QDIR_ENTRYINFOLIST1 )
   if( obj )
   {
     QFileInfoList list = obj->entryInfoList ( PQSTRINGLIST(1), (QDir::Filters) par2, (QDir::SortFlags) par3 );
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QFILEINFO" );
-    #else
-    pDynSym = hb_dynsymFindName( "QFILEINFO" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -231,14 +216,8 @@ HB_FUNC_STATIC( QDIR_ENTRYINFOLIST2 )
   if( obj )
   {
     QFileInfoList list = obj->entryInfoList ( ISNIL(1)? QDir::NoFilter : (QDir::Filters) hb_parni(1), ISNIL(2)? QDir::NoSort : (QDir::SortFlags) hb_parni(2) );
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QFILEINFO" );
-    #else
-    pDynSym = hb_dynsymFindName( "QFILEINFO" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -287,12 +266,12 @@ HB_FUNC_STATIC( QDIR_ENTRYINFOLIST )
 /*
 QStringList entryList(const QStringList & nameFilters, Filters filters = NoFilter, SortFlags sort = NoSort) const
 */
-$method=|QStringList|entryList,entryList1|const QStringList &,QDir::Filters=QDir::NoFilter,QDir::SortFlags=QDir::NoSort
+$internalMethod=|QStringList|entryList,entryList1|const QStringList &,QDir::Filters=QDir::NoFilter,QDir::SortFlags=QDir::NoSort
 
 /*
 QStringList entryList(Filters filters = NoFilter, SortFlags sort = NoSort) const
 */
-$method=|QStringList|entryList,entryList2|QDir::Filters=QDir::NoFilter,QDir::SortFlags=QDir::NoSort
+$internalMethod=|QStringList|entryList,entryList2|QDir::Filters=QDir::NoFilter,QDir::SortFlags=QDir::NoSort
 
 //[1]QStringList entryList(const QStringList & nameFilters, Filters filters = NoFilter, SortFlags sort = NoSort) const
 //[2]QStringList entryList(Filters filters = NoFilter, SortFlags sort = NoSort) const
@@ -301,11 +280,11 @@ HB_FUNC_STATIC( QDIR_ENTRYLIST )
 {
   if( ISBETWEEN(1,3) && ISARRAY(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QDIR_ENTRYLIST1 );
+    QDir_entryList1();
   }
   else if( ISBETWEEN(0,2) && (ISNUM(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QDIR_ENTRYLIST2 );
+    QDir_entryList2();
   }
   else
   {
@@ -316,12 +295,12 @@ HB_FUNC_STATIC( QDIR_ENTRYLIST )
 /*
 bool exists(const QString & name) const
 */
-$method=|bool|exists,exists1|const QString &
+$internalMethod=|bool|exists,exists1|const QString &
 
 /*
 bool exists() const
 */
-$method=|bool|exists,exists2|
+$internalMethod=|bool|exists,exists2|
 
 //[1]bool exists(const QString & name) const
 //[2]bool exists() const
@@ -330,11 +309,11 @@ HB_FUNC_STATIC( QDIR_EXISTS )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QDIR_EXISTS1 );
+    QDir_exists1();
   }
   else if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDIR_EXISTS2 );
+    QDir_exists2();
   }
   else
   {
@@ -478,14 +457,8 @@ static QFileInfoList drives()
 HB_FUNC_STATIC( QDIR_DRIVES )
 {
   QFileInfoList list = QDir::drives ();
-  PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QFILEINFO" );
-  #else
-  pDynSym = hb_dynsymFindName( "QFILEINFO" );
-  #endif
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO" );
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {
@@ -539,12 +512,12 @@ $staticMethod=|bool|isRelativePath|const QString &
 /*
 static bool match(const QString & filter, const QString & fileName)
 */
-$staticMethod=|bool|match,match1|const QString &,const QString &
+$internalStaticMethod=|bool|match,match1|const QString &,const QString &
 
 /*
 static bool match(const QStringList & filters, const QString & fileName)
 */
-$staticMethod=|bool|match,match2|const QStringList &,const QString &
+$internalStaticMethod=|bool|match,match2|const QStringList &,const QString &
 
 //[1]bool match(const QString & filter, const QString & fileName)
 //[2]bool match(const QStringList & filters, const QString & fileName)
@@ -553,11 +526,11 @@ HB_FUNC_STATIC( QDIR_MATCH )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QDIR_MATCH1 );
+    QDir_match1();
   }
   else if( ISNUMPAR(2) && ISARRAY(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QDIR_MATCH2 );
+    QDir_match2();
   }
   else
   {

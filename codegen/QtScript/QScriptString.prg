@@ -7,8 +7,6 @@ CLASS QScriptString
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD isValid
@@ -37,22 +35,12 @@ $destructor
 /*
 QScriptString ()
 */
-HB_FUNC_STATIC( QSCRIPTSTRING_NEW1 )
-{
-  QScriptString * o = new QScriptString ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$internalConstructor=|new1|
 
 /*
 QScriptString ( const QScriptString & other )
 */
-HB_FUNC_STATIC( QSCRIPTSTRING_NEW2 )
-{
-  QScriptString * o = new QScriptString ( *PQSCRIPTSTRING(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$internalConstructor=|new2|const QScriptString &
 
 //[1]QScriptString ()
 //[2]QScriptString ( const QScriptString & other )
@@ -61,11 +49,11 @@ HB_FUNC_STATIC( QSCRIPTSTRING_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSCRIPTSTRING_NEW1 );
+    QScriptString_new1();
   }
   else if( ISNUMPAR(1) && ISQSCRIPTSTRING(1) )
   {
-    HB_FUNC_EXEC( QSCRIPTSTRING_NEW2 );
+    QScriptString_new2();
   }
   else
   {

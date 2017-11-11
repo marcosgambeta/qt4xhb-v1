@@ -12,12 +12,6 @@ CLASS QFormLayout INHERIT QLayout
 
    METHOD new
    METHOD delete
-   METHOD addRow1
-   METHOD addRow2
-   METHOD addRow3
-   METHOD addRow4
-   METHOD addRow5
-   METHOD addRow6
    METHOD addRow
    METHOD fieldGrowthPolicy
    METHOD formAlignment
@@ -25,17 +19,8 @@ CLASS QFormLayout INHERIT QLayout
    METHOD getLayoutPosition
    METHOD getWidgetPosition
    METHOD horizontalSpacing
-   METHOD insertRow1
-   METHOD insertRow2
-   METHOD insertRow3
-   METHOD insertRow4
-   METHOD insertRow5
-   METHOD insertRow6
    METHOD insertRow
-   METHOD itemAt1
    METHOD labelAlignment
-   METHOD labelForField1
-   METHOD labelForField2
    METHOD labelForField
    METHOD rowCount
    METHOD rowWrapPolicy
@@ -57,7 +42,7 @@ CLASS QFormLayout INHERIT QLayout
    METHOD hasHeightForWidth
    METHOD heightForWidth
    METHOD invalidate
-   METHOD itemAt2
+   METHOD itemAt
    METHOD minimumSize
    METHOD setGeometry
    METHOD sizeHint
@@ -80,43 +65,39 @@ $destructor
 /*
 QFormLayout ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QFORMLAYOUT_NEW )
-{
-  QFormLayout * o = new QFormLayout ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QWidget *=0
 
 $deleteMethod
 
 /*
 void addRow ( QWidget * label, QWidget * field )
 */
-$method=|void|addRow,addRow1|QWidget *,QWidget *
+$internalMethod=|void|addRow,addRow1|QWidget *,QWidget *
 
 /*
 void addRow ( QWidget * label, QLayout * field )
 */
-$method=|void|addRow,addRow2|QWidget *,QLayout *
+$internalMethod=|void|addRow,addRow2|QWidget *,QLayout *
 
 /*
 void addRow ( const QString & labelText, QWidget * field )
 */
-$method=|void|addRow,addRow3|const QString &,QWidget *
+$internalMethod=|void|addRow,addRow3|const QString &,QWidget *
 
 /*
 void addRow ( const QString & labelText, QLayout * field )
 */
-$method=|void|addRow,addRow4|const QString &,QLayout *
+$internalMethod=|void|addRow,addRow4|const QString &,QLayout *
 
 /*
 void addRow ( QWidget * widget )
 */
-$method=|void|addRow,addRow5|QWidget *
+$internalMethod=|void|addRow,addRow5|QWidget *
 
 /*
 void addRow ( QLayout * layout )
 */
-$method=|void|addRow,addRow6|QLayout *
+$internalMethod=|void|addRow,addRow6|QLayout *
 
 //[1]void addRow ( QWidget * label, QWidget * field )
 //[2]void addRow ( QWidget * label, QLayout * field )
@@ -129,27 +110,27 @@ HB_FUNC_STATIC( QFORMLAYOUT_ADDROW )
 {
   if( ISNUMPAR(2) && ISQWIDGET(1) && ISQWIDGET(2) )
   {
-    HB_FUNC_EXEC( QFORMLAYOUT_ADDROW1 );
+    QFormLayout_addRow1();
   }
   else if( ISNUMPAR(2) && ISQWIDGET(1) && ISQLAYOUT(2) )
   {
-    HB_FUNC_EXEC( QFORMLAYOUT_ADDROW2 );
+    QFormLayout_addRow2();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISQWIDGET(2) )
   {
-    HB_FUNC_EXEC( QFORMLAYOUT_ADDROW3 );
+    QFormLayout_addRow3();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISQLAYOUT(2) )
   {
-    HB_FUNC_EXEC( QFORMLAYOUT_ADDROW4 );
+    QFormLayout_addRow4();
   }
   else if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    HB_FUNC_EXEC( QFORMLAYOUT_ADDROW5 );
+    QFormLayout_addRow5();
   }
   else if( ISNUMPAR(1) && ISQLAYOUT(1) )
   {
-    HB_FUNC_EXEC( QFORMLAYOUT_ADDROW6 );
+    QFormLayout_addRow6();
   }
   else
   {
@@ -190,32 +171,32 @@ $method=|int|horizontalSpacing|
 /*
 void insertRow ( int row, QWidget * label, QWidget * field )
 */
-$method=|void|insertRow,insertRow1|int,QWidget *,QWidget *
+$internalMethod=|void|insertRow,insertRow1|int,QWidget *,QWidget *
 
 /*
 void insertRow ( int row, QWidget * label, QLayout * field )
 */
-$method=|void|insertRow,insertRow2|int,QWidget *,QLayout *
+$internalMethod=|void|insertRow,insertRow2|int,QWidget *,QLayout *
 
 /*
 void insertRow ( int row, const QString & labelText, QWidget * field )
 */
-$method=|void|insertRow,insertRow3|int,const QString &,QWidget *
+$internalMethod=|void|insertRow,insertRow3|int,const QString &,QWidget *
 
 /*
 void insertRow ( int row, const QString & labelText, QLayout * field )
 */
-$method=|void|insertRow,insertRow4|int,const QString &,QLayout *
+$internalMethod=|void|insertRow,insertRow4|int,const QString &,QLayout *
 
 /*
 void insertRow ( int row, QWidget * widget )
 */
-$method=|void|insertRow,insertRow5|int,QWidget *
+$internalMethod=|void|insertRow,insertRow5|int,QWidget *
 
 /*
 void insertRow ( int row, QLayout * layout )
 */
-$method=|void|insertRow,insertRow6|int,QLayout *
+$internalMethod=|void|insertRow,insertRow6|int,QLayout *
 
 //[1]void insertRow ( int row, QWidget * label, QWidget * field )
 //[2]void insertRow ( int row, QWidget * label, QLayout * field )
@@ -228,38 +209,33 @@ HB_FUNC_STATIC( QFORMLAYOUT_INSERTROW )
 {
   if( ISNUMPAR(3) && ISNUM(1) && ISQWIDGET(2) && ISQWIDGET(3) )
   {
-    HB_FUNC_EXEC( QFORMLAYOUT_INSERTROW1 );
+    QFormLayout_insertRow1();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISQWIDGET(2) && ISQLAYOUT(3) )
   {
-    HB_FUNC_EXEC( QFORMLAYOUT_INSERTROW2 );
+    QFormLayout_insertRow2();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISCHAR(2) && ISQWIDGET(3) )
   {
-    HB_FUNC_EXEC( QFORMLAYOUT_INSERTROW3 );
+    QFormLayout_insertRow3();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISCHAR(2) && ISQLAYOUT(3) )
   {
-    HB_FUNC_EXEC( QFORMLAYOUT_INSERTROW4 );
+    QFormLayout_insertRow4();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISQWIDGET(2) )
   {
-    HB_FUNC_EXEC( QFORMLAYOUT_INSERTROW5 );
+    QFormLayout_insertRow5();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISQLAYOUT(2) )
   {
-    HB_FUNC_EXEC( QFORMLAYOUT_INSERTROW6 );
+    QFormLayout_insertRow6();
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
-
-/*
-QLayoutItem * itemAt ( int row, ItemRole role ) const
-*/
-$method=|QLayoutItem *|itemAt,itemAt1|int,QFormLayout::ItemRole
 
 /*
 Qt::Alignment labelAlignment () const
@@ -269,12 +245,12 @@ $method=|Qt::Alignment|labelAlignment|
 /*
 QWidget * labelForField ( QWidget * field ) const
 */
-$method=|QWidget *|labelForField,labelForField1|QWidget *
+$internalMethod=|QWidget *|labelForField,labelForField1|QWidget *
 
 /*
 QWidget * labelForField ( QLayout * field ) const
 */
-$method=|QWidget *|labelForField,labelForField2|QLayout *
+$internalMethod=|QWidget *|labelForField,labelForField2|QLayout *
 
 //[1]QWidget * labelForField ( QWidget * field ) const
 //[2]QWidget * labelForField ( QLayout * field ) const
@@ -283,11 +259,11 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD )
 {
   if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    HB_FUNC_EXEC( QFORMLAYOUT_LABELFORFIELD1 );
+    QFormLayout_labelForField1();
   }
   else if( ISNUMPAR(1) && ISQLAYOUT(1) )
   {
-    HB_FUNC_EXEC( QFORMLAYOUT_LABELFORFIELD2 );
+    QFormLayout_labelForField2();
   }
   else
   {
@@ -396,9 +372,33 @@ virtual void invalidate ()
 $virtualMethod=|void|invalidate|
 
 /*
+QLayoutItem * itemAt ( int row, ItemRole role ) const
+*/
+$internalMethod=|QLayoutItem *|itemAt,itemAt1|int,QFormLayout::ItemRole
+
+/*
 virtual QLayoutItem * itemAt ( int index ) const
 */
-$virtualMethod=|QLayoutItem *|itemAt,itemAt2|int
+$internalVirtualMethod=|QLayoutItem *|itemAt,itemAt2|int
+
+//[1]QLayoutItem * itemAt ( int row, ItemRole role ) const
+//[2]virtual QLayoutItem * itemAt ( int index ) const
+
+HB_FUNC_STATIC( QFORMLAYOUT_ITEMAT )
+{
+  if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  {
+    QFormLayout_itemAt1();
+  }
+  else if( ISNUMPAR(1) && ISNUM(1) )
+  {
+    QFormLayout_itemAt2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
 
 /*
 virtual QSize minimumSize () const

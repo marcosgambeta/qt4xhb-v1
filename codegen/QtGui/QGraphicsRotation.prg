@@ -14,8 +14,6 @@ CLASS QGraphicsRotation INHERIT QGraphicsTransform
    METHOD axis
    METHOD origin
    METHOD setAngle
-   METHOD setAxis1
-   METHOD setAxis2
    METHOD setAxis
    METHOD setOrigin
    METHOD applyTo
@@ -41,11 +39,7 @@ $destructor
 /*
 QGraphicsRotation ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSROTATION_NEW )
-{
-  QGraphicsRotation * o = new QGraphicsRotation ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
@@ -72,12 +66,12 @@ $method=|void|setAngle|qreal
 /*
 void setAxis ( const QVector3D & axis )
 */
-$method=|void|setAxis,setAxis1|const QVector3D &
+$internalMethod=|void|setAxis,setAxis1|const QVector3D &
 
 /*
 void setAxis ( Qt::Axis axis )
 */
-$method=|void|setAxis,setAxis2|Qt::Axis
+$internalMethod=|void|setAxis,setAxis2|Qt::Axis
 
 //[1]void setAxis ( const QVector3D & axis )
 //[2]void setAxis ( Qt::Axis axis )
@@ -86,11 +80,11 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS )
 {
   if( ISNUMPAR(1) && ISQVECTOR3D(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSROTATION_SETAXIS1 );
+    QGraphicsRotation_setAxis1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSROTATION_SETAXIS2 );
+    QGraphicsRotation_setAxis2();
   }
   else
   {

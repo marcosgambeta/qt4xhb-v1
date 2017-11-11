@@ -15,10 +15,6 @@ CLASS QRawFont
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD advancesForGlyphIndexes1
@@ -42,8 +38,6 @@ CLASS QRawFont
    METHOD style
    METHOD styleName
    METHOD supportedWritingSystems
-   METHOD supportsCharacter1
-   METHOD supportsCharacter2
    METHOD supportsCharacter
    METHOD unitsPerEm
    METHOD weight
@@ -75,22 +69,22 @@ $destructor
 /*
 QRawFont ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QRawFont ( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
 */
-$constructor=|new2|const QString &,qreal,QFont::HintingPreference=QFont::PreferDefaultHinting
+$internalConstructor=|new2|const QString &,qreal,QFont::HintingPreference=QFont::PreferDefaultHinting
 
 /*
 QRawFont ( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
 */
-$constructor=|new3|const QByteArray &,qreal,QFont::HintingPreference=QFont::PreferDefaultHinting
+$internalConstructor=|new3|const QByteArray &,qreal,QFont::HintingPreference=QFont::PreferDefaultHinting
 
 /*
 QRawFont ( const QRawFont & other )
 */
-$constructor=|new4|const QRawFont &
+$internalConstructor=|new4|const QRawFont &
 
 //[1]QRawFont ()
 //[2]QRawFont ( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
@@ -101,19 +95,19 @@ HB_FUNC_STATIC( QRAWFONT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QRAWFONT_NEW1 );
+    QRawFont_new1();
   }
   else if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QRAWFONT_NEW2 );
+    QRawFont_new2();
   }
   else if( ISBETWEEN(2,3) && ISQBYTEARRAY(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QRAWFONT_NEW3 );
+    QRawFont_new3();
   }
   else if( ISNUMPAR(1) && ISQRAWFONT(1) )
   {
-    HB_FUNC_EXEC( QRAWFONT_NEW4 );
+    QRawFont_new4();
   }
   else
   {
@@ -143,14 +137,8 @@ HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES1 )
       par1 << temp1;
     }
     QVector<QPointF> list = obj->advancesForGlyphIndexes ( par1 );
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QPOINTF" );
-    #else
-    pDynSym = hb_dynsymFindName( "QPOINTF" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QPOINTF" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -225,8 +213,7 @@ HB_FUNC_STATIC( QRAWFONT_GLYPHINDEXESFORSTRING )
   if( obj )
   {
     QVector<quint32> list = obj->glyphIndexesForString ( PQSTRING(1) );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -303,8 +290,7 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTEDWRITINGSYSTEMS )
   if( obj )
   {
     QList<QFontDatabase::WritingSystem> list = obj->supportedWritingSystems ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -319,12 +305,12 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTEDWRITINGSYSTEMS )
 /*
 bool supportsCharacter ( QChar character ) const
 */
-$method=|bool|supportsCharacter,supportsCharacter1|QChar
+$internalMethod=|bool|supportsCharacter,supportsCharacter1|QChar
 
 /*
 bool supportsCharacter ( quint32 ucs4 ) const
 */
-$method=|bool|supportsCharacter,supportsCharacter2|quint32
+$internalMethod=|bool|supportsCharacter,supportsCharacter2|quint32
 
 //[1]bool supportsCharacter ( QChar character ) const
 //[2]bool supportsCharacter ( quint32 ucs4 ) const
@@ -333,11 +319,11 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTSCHARACTER )
 {
   if( ISNUMPAR(1) && ISQCHAR(1) )
   {
-    HB_FUNC_EXEC( QRAWFONT_SUPPORTSCHARACTER1 );
+    QRawFont_supportsCharacter1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QRAWFONT_SUPPORTSCHARACTER2 );
+    QRawFont_supportsCharacter2();
   }
   else
   {

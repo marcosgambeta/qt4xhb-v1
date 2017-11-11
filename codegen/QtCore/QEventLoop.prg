@@ -9,8 +9,6 @@ CLASS QEventLoop INHERIT QObject
    METHOD exec
    METHOD exit
    METHOD isRunning
-   METHOD processEvents1
-   METHOD processEvents2
    METHOD processEvents
    METHOD wakeUp
    METHOD quit
@@ -54,12 +52,12 @@ $method=|bool|isRunning|
 /*
 bool processEvents ( ProcessEventsFlags flags = AllEvents )
 */
-$method=|bool|processEvents,processEvents1|QEventLoop::ProcessEventsFlags=QEventLoop::AllEvents
+$internalMethod=|bool|processEvents,processEvents1|QEventLoop::ProcessEventsFlags=QEventLoop::AllEvents
 
 /*
 void processEvents ( ProcessEventsFlags flags, int maxTime )
 */
-$method=|void|processEvents,processEvents2|QEventLoop::ProcessEventsFlags,int
+$internalMethod=|void|processEvents,processEvents2|QEventLoop::ProcessEventsFlags,int
 
 //[1]bool processEvents ( ProcessEventsFlags flags = AllEvents )
 //[2]void processEvents ( ProcessEventsFlags flags, int maxTime )
@@ -68,11 +66,11 @@ HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS )
 {
   if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QEVENTLOOP_PROCESSEVENTS1 );
+    QEventLoop_processEvents1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QEVENTLOOP_PROCESSEVENTS2 );
+    QEventLoop_processEvents2();
   }
   else
   {

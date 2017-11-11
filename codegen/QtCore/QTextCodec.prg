@@ -14,25 +14,14 @@ CLASS QTextCodec
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD canEncode1
-   METHOD canEncode2
    METHOD canEncode
-   METHOD toUnicode1
-   METHOD toUnicode2
    METHOD toUnicode
-   METHOD fromUnicode1
    METHOD fromUnicode
-   METHOD makeDecoder1
-   METHOD makeDecoder2
    METHOD makeDecoder
-   METHOD makeEncoder1
-   METHOD makeEncoder2
    METHOD makeEncoder
    METHOD name
    METHOD aliases
    METHOD mibEnum
-   METHOD codecForName1
-   METHOD codecForName2
    METHOD codecForName
    METHOD codecForMib
    METHOD availableCodecs
@@ -43,11 +32,7 @@ CLASS QTextCodec
    METHOD setCodecForTr
    METHOD codecForCStrings
    METHOD setCodecForCStrings
-   METHOD codecForHtml1
-   METHOD codecForHtml2
    METHOD codecForHtml
-   METHOD codecForUtfText1
-   METHOD codecForUtfText2
    METHOD codecForUtfText
 
    METHOD newFrom
@@ -73,12 +58,12 @@ $destructor
 /*
 bool canEncode(QChar) const
 */
-$method=|bool|canEncode,canEncode1|QChar
+$internalMethod=|bool|canEncode,canEncode1|QChar
 
 /*
 bool canEncode(const QString&) const
 */
-$method=|bool|canEncode,canEncode2|const QString &
+$internalMethod=|bool|canEncode,canEncode2|const QString &
 
 //[1]bool canEncode(QChar) const
 //[2]bool canEncode(const QString&) const
@@ -87,11 +72,11 @@ HB_FUNC_STATIC( QTEXTCODEC_CANENCODE )
 {
   if( ISNUMPAR(1) && ISQCHAR(1) )
   {
-    HB_FUNC_EXEC( QTEXTCODEC_CANENCODE1 );
+    QTextCodec_canEncode1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QTEXTCODEC_CANENCODE2 );
+    QTextCodec_canEncode2();
   }
   else
   {
@@ -102,12 +87,12 @@ HB_FUNC_STATIC( QTEXTCODEC_CANENCODE )
 /*
 QString toUnicode(const QByteArray&) const
 */
-$method=|QString|toUnicode,toUnicode1|const QByteArray &
+$internalMethod=|QString|toUnicode,toUnicode1|const QByteArray &
 
 /*
 QString toUnicode(const char* chars) const
 */
-$method=|QString|toUnicode,toUnicode2|const char *
+$internalMethod=|QString|toUnicode,toUnicode2|const char *
 
 /*
 QString toUnicode(const char *in, int length, ConverterState *state = 0) const
@@ -123,11 +108,11 @@ HB_FUNC_STATIC( QTEXTCODEC_TOUNICODE )
 {
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    HB_FUNC_EXEC( QTEXTCODEC_TOUNICODE1 );
+    QTextCodec_toUnicode1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QTEXTCODEC_TOUNICODE2 );
+    QTextCodec_toUnicode2();
   }
   else
   {
@@ -138,7 +123,7 @@ HB_FUNC_STATIC( QTEXTCODEC_TOUNICODE )
 /*
 QByteArray fromUnicode(const QString& uc) const
 */
-$method=|QByteArray|fromUnicode,fromUnicode1|const QString &
+$internalMethod=|QByteArray|fromUnicode,fromUnicode1|const QString &
 
 /*
 QByteArray fromUnicode(const QChar *in, int length, ConverterState *state = 0) const
@@ -153,7 +138,7 @@ HB_FUNC_STATIC( QTEXTCODEC_FROMUNICODE )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QTEXTCODEC_FROMUNICODE1 );
+    QTextCodec_fromUnicode1();
   }
   //else if( ISBETWEEN(2,3) && ISQCHAR(1) && ISNUM(2) && (ISOBJECT(3)||ISNIL(3)) )
   //{
@@ -168,12 +153,12 @@ HB_FUNC_STATIC( QTEXTCODEC_FROMUNICODE )
 /*
 QTextDecoder* makeDecoder() const
 */
-$method=|QTextDecoder *|makeDecoder,makeDecoder1|
+$internalMethod=|QTextDecoder *|makeDecoder,makeDecoder1|
 
 /*
 QTextDecoder* makeDecoder(ConversionFlags flags) const
 */
-$method=|QTextDecoder *|makeDecoder,makeDecoder2|QTextCodec::ConversionFlags
+$internalMethod=|QTextDecoder *|makeDecoder,makeDecoder2|QTextCodec::ConversionFlags
 
 //[1]QTextDecoder* makeDecoder() const
 //[2]QTextDecoder* makeDecoder(ConversionFlags flags) const
@@ -182,11 +167,11 @@ HB_FUNC_STATIC( QTEXTCODEC_MAKEDECODER )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTEXTCODEC_MAKEDECODER1 );
+    QTextCodec_makeDecoder1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QTEXTCODEC_MAKEDECODER2 );
+    QTextCodec_makeDecoder2();
   }
   else
   {
@@ -197,12 +182,12 @@ HB_FUNC_STATIC( QTEXTCODEC_MAKEDECODER )
 /*
 QTextEncoder* makeEncoder() const
 */
-$method=|QTextEncoder *|makeEncoder,makeEncoder1|
+$internalMethod=|QTextEncoder *|makeEncoder,makeEncoder1|
 
 /*
 QTextEncoder* makeEncoder(ConversionFlags flags) const
 */
-$method=|QTextEncoder *|makeEncoder,makeEncoder2|QTextCodec::ConversionFlags
+$internalMethod=|QTextEncoder *|makeEncoder,makeEncoder2|QTextCodec::ConversionFlags
 
 //[1]QTextEncoder* makeEncoder() const
 //[2]QTextEncoder* makeEncoder(ConversionFlags flags) const
@@ -211,11 +196,11 @@ HB_FUNC_STATIC( QTEXTCODEC_MAKEENCODER )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTEXTCODEC_MAKEENCODER1 );
+    QTextCodec_makeEncoder1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QTEXTCODEC_MAKEENCODER2 );
+    QTextCodec_makeEncoder2();
   }
   else
   {
@@ -238,14 +223,8 @@ HB_FUNC_STATIC( QTEXTCODEC_ALIASES )
   if( obj )
   {
     QList<QByteArray> list = obj->aliases ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QBYTEARRAY" );
-    #else
-    pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -280,12 +259,12 @@ $virtualMethod=|int|mibEnum|
 /*
 static QTextCodec* codecForName(const QByteArray &name)
 */
-$staticMethod=|QTextCodec *|codecForName,codecForName1|const QByteArray &
+$internalStaticMethod=|QTextCodec *|codecForName,codecForName1|const QByteArray &
 
 /*
 static QTextCodec* codecForName(const char *name)
 */
-$staticMethod=|QTextCodec *|codecForName,codecForName2|const char *
+$internalStaticMethod=|QTextCodec *|codecForName,codecForName2|const char *
 
 //[1]static QTextCodec* codecForName(const QByteArray &name)
 //[2]static QTextCodec* codecForName(const char *name)
@@ -294,11 +273,11 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORNAME )
 {
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    HB_FUNC_EXEC( QTEXTCODEC_CODECFORNAME1 );
+    QTextCodec_codecForName1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QTEXTCODEC_CODECFORNAME2 );
+    QTextCodec_codecForName2();
   }
   else
   {
@@ -317,14 +296,8 @@ static QList<QByteArray> availableCodecs()
 HB_FUNC_STATIC( QTEXTCODEC_AVAILABLECODECS )
 {
   QList<QByteArray> list = QTextCodec::availableCodecs ();
-  PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QBYTEARRAY" );
-  #else
-  pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-  #endif
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {
@@ -356,8 +329,7 @@ static QList<int> availableMibs()
 HB_FUNC_STATIC( QTEXTCODEC_AVAILABLEMIBS )
 {
   QList<int> list = QTextCodec::availableMibs ();
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {
@@ -401,12 +373,12 @@ $staticMethod=|void|setCodecForCStrings|QTextCodec *
 /*
 static QTextCodec *codecForHtml(const QByteArray &ba)
 */
-$staticMethod=|QTextCodec *|codecForHtml,codecForHtml1|const QByteArray &
+$internalStaticMethod=|QTextCodec *|codecForHtml,codecForHtml1|const QByteArray &
 
 /*
 static QTextCodec *codecForHtml(const QByteArray &ba, QTextCodec *defaultCodec)
 */
-$staticMethod=|QTextCodec *|codecForHtml,codecForHtml2|const QByteArray &,QTextCodec *
+$internalStaticMethod=|QTextCodec *|codecForHtml,codecForHtml2|const QByteArray &,QTextCodec *
 
 //[1]static QTextCodec *codecForHtml(const QByteArray &ba)
 //[2]static QTextCodec *codecForHtml(const QByteArray &ba, QTextCodec *defaultCodec)
@@ -415,11 +387,11 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORHTML )
 {
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    HB_FUNC_EXEC( QTEXTCODEC_CODECFORHTML1 );
+    QTextCodec_codecForHtml1();
   }
   else if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQTEXTCODEC(2) )
   {
-    HB_FUNC_EXEC( QTEXTCODEC_CODECFORHTML2 );
+    QTextCodec_codecForHtml2();
   }
   else
   {
@@ -430,12 +402,12 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORHTML )
 /*
 static QTextCodec *codecForUtfText(const QByteArray &ba)
 */
-$staticMethod=|QTextCodec *|codecForUtfText,codecForUtfText1|const QByteArray &
+$internalStaticMethod=|QTextCodec *|codecForUtfText,codecForUtfText1|const QByteArray &
 
 /*
 static QTextCodec *codecForUtfText(const QByteArray &ba, QTextCodec *defaultCodec)
 */
-$staticMethod=|QTextCodec *|codecForUtfText,codecForUtfText2|const QByteArray &,QTextCodec *
+$internalStaticMethod=|QTextCodec *|codecForUtfText,codecForUtfText2|const QByteArray &,QTextCodec *
 
 //[1]static QTextCodec *codecForUtfText(const QByteArray &ba)
 //[2]static QTextCodec *codecForUtfText(const QByteArray &ba, QTextCodec *defaultCodec)
@@ -444,11 +416,11 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORUTFTEXT )
 {
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    HB_FUNC_EXEC( QTEXTCODEC_CODECFORUTFTEXT1 );
+    QTextCodec_codecForUtfText1();
   }
   else if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQTEXTCODEC(2) )
   {
-    HB_FUNC_EXEC( QTEXTCODEC_CODECFORUTFTEXT2 );
+    QTextCodec_codecForUtfText2();
   }
   else
   {

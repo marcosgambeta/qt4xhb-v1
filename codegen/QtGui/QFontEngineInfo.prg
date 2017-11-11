@@ -7,9 +7,6 @@ CLASS QFontEngineInfo
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD family
@@ -46,17 +43,17 @@ $destructor
 /*
 QFontEngineInfo ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QFontEngineInfo ( const QString & family )
 */
-$constructor=|new2|const QString &
+$internalConstructor=|new2|const QString &
 
 /*
 QFontEngineInfo ( const QFontEngineInfo & other )
 */
-$constructor=|new3|const QFontEngineInfo &
+$internalConstructor=|new3|const QFontEngineInfo &
 
 //[1]QFontEngineInfo ()
 //[2]QFontEngineInfo ( const QString & family )
@@ -66,15 +63,15 @@ HB_FUNC_STATIC( QFONTENGINEINFO_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QFONTENGINEINFO_NEW1 );
+    QFontEngineInfo_new1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QFONTENGINEINFO_NEW2 );
+    QFontEngineInfo_new2();
   }
   else if( ISNUMPAR(1) && ISQFONTENGINEINFO(1) )
   {
-    HB_FUNC_EXEC( QFONTENGINEINFO_NEW3 );
+    QFontEngineInfo_new3();
   }
   else
   {
@@ -159,8 +156,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_WRITINGSYSTEMS )
   if( obj )
   {
     QList<QFontDatabase::WritingSystem> list = obj->writingSystems ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

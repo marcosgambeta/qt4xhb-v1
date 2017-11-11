@@ -22,8 +22,6 @@ CLASS QTextStream
    METHOD new6
    METHOD new
    METHOD delete
-   METHOD setCodec1
-   METHOD setCodec2
    METHOD setCodec
    METHOD codec
    METHOD setAutoDetectUnicode
@@ -154,12 +152,12 @@ $deleteMethod
 /*
 void setCodec(QTextCodec *codec)
 */
-$method=|void|setCodec,setCodec1|QTextCodec *
+$internalMethod=|void|setCodec,setCodec1|QTextCodec *
 
 /*
 void setCodec(const char *codecName)
 */
-$method=|void|setCodec,setCodec2|const char *
+$internalMethod=|void|setCodec,setCodec2|const char *
 
 //[1]void setCodec(QTextCodec *codec)
 //[2]void setCodec(const char *codecName)
@@ -168,11 +166,11 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETCODEC )
 {
   if( ISNUMPAR(1) && ISQTEXTCODEC(1) )
   {
-    HB_FUNC_EXEC( QTEXTSTREAM_SETCODEC1 );
+    QTextStream_setCodec1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QTEXTSTREAM_SETCODEC2 );
+    QTextStream_setCodec2();
   }
   else
   {

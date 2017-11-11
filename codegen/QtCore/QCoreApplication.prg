@@ -30,20 +30,12 @@ CLASS QCoreApplication INHERIT QObject
    METHOD libraryPaths
    METHOD organizationDomain
    METHOD organizationName
-   METHOD postEvent1
-   METHOD postEvent2
    METHOD postEvent
-   METHOD processEvents1
-   METHOD processEvents2
    METHOD processEvents
    METHOD removeLibraryPath
-   METHOD removePostedEvents1
-   METHOD removePostedEvents2
    METHOD removePostedEvents
    METHOD removeTranslator
    METHOD sendEvent
-   METHOD sendPostedEvents1
-   METHOD sendPostedEvents2
    METHOD sendPostedEvents
    METHOD setApplicationName
    METHOD setApplicationVersion
@@ -53,8 +45,6 @@ CLASS QCoreApplication INHERIT QObject
    METHOD setOrganizationName
    METHOD startingUp
    METHOD testAttribute
-   METHOD translate1
-   METHOD translate2
    METHOD translate
 
    METHOD onAboutToQuit
@@ -193,12 +183,12 @@ $staticMethod=|QString|organizationName|
 /*
 static void postEvent ( QObject * receiver, QEvent * event )
 */
-$staticMethod=|void|postEvent,postEvent1|QObject *,QEvent *
+$internalStaticMethod=|void|postEvent,postEvent1|QObject *,QEvent *
 
 /*
 static void postEvent ( QObject * receiver, QEvent * event, int priority )
 */
-$staticMethod=|void|postEvent,postEvent2|QObject *,QEvent *,int
+$internalStaticMethod=|void|postEvent,postEvent2|QObject *,QEvent *,int
 
 //[1]void postEvent ( QObject * receiver, QEvent * event )
 //[2]void postEvent ( QObject * receiver, QEvent * event, int priority )
@@ -207,11 +197,11 @@ HB_FUNC_STATIC( QCOREAPPLICATION_POSTEVENT )
 {
   if( ISNUMPAR(2) && ISQOBJECT(1) && ISOBJECT(2) )
   {
-    HB_FUNC_EXEC( QCOREAPPLICATION_POSTEVENT1 );
+    QCoreApplication_postEvent1();
   }
   else if( ISNUMPAR(3) && ISQOBJECT(1) && ISOBJECT(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QCOREAPPLICATION_POSTEVENT2 );
+    QCoreApplication_postEvent2();
   }
   else
   {
@@ -222,12 +212,12 @@ HB_FUNC_STATIC( QCOREAPPLICATION_POSTEVENT )
 /*
 static void processEvents ( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
 */
-$staticMethod=|void|processEvents,processEvents1|QEventLoop::ProcessEventsFlags=QEventLoop::AllEvents
+$internalStaticMethod=|void|processEvents,processEvents1|QEventLoop::ProcessEventsFlags=QEventLoop::AllEvents
 
 /*
 static void processEvents ( QEventLoop::ProcessEventsFlags flags, int maxtime )
 */
-$staticMethod=|void|processEvents,processEvents2|QEventLoop::ProcessEventsFlags,int
+$internalStaticMethod=|void|processEvents,processEvents2|QEventLoop::ProcessEventsFlags,int
 
 //[1]void processEvents ( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
 //[2]void processEvents ( QEventLoop::ProcessEventsFlags flags, int maxtime )
@@ -236,11 +226,11 @@ HB_FUNC_STATIC( QCOREAPPLICATION_PROCESSEVENTS )
 {
   if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QCOREAPPLICATION_PROCESSEVENTS1 );
+    QCoreApplication_processEvents1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QCOREAPPLICATION_PROCESSEVENTS2 );
+    QCoreApplication_processEvents2();
   }
   else
   {
@@ -256,12 +246,12 @@ $staticMethod=|void|removeLibraryPath|const QString &
 /*
 static void removePostedEvents ( QObject * receiver )
 */
-$staticMethod=|void|removePostedEvents,removePostedEvents1|QObject *
+$internalStaticMethod=|void|removePostedEvents,removePostedEvents1|QObject *
 
 /*
 static void removePostedEvents ( QObject * receiver, int eventType )
 */
-$staticMethod=|void|removePostedEvents,removePostedEvents2|QObject *,int
+$internalStaticMethod=|void|removePostedEvents,removePostedEvents2|QObject *,int
 
 //[1]void removePostedEvents ( QObject * receiver )
 //[2]void removePostedEvents ( QObject * receiver, int eventType )
@@ -270,11 +260,11 @@ HB_FUNC_STATIC( QCOREAPPLICATION_REMOVEPOSTEDEVENTS )
 {
   if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
-    HB_FUNC_EXEC( QCOREAPPLICATION_REMOVEPOSTEDEVENTS1 );
+    QCoreApplication_removePostedEvents1();
   }
   else if( ISNUMPAR(2) && ISQOBJECT(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QCOREAPPLICATION_REMOVEPOSTEDEVENTS2 );
+    QCoreApplication_removePostedEvents2();
   }
   else
   {
@@ -295,12 +285,12 @@ $staticMethod=|bool|sendEvent|QObject *,QEvent *
 /*
 static void sendPostedEvents ( QObject * receiver, int event_type )
 */
-$staticMethod=|void|sendPostedEvents,sendPostedEvents1|QObject *,int
+$internalStaticMethod=|void|sendPostedEvents,sendPostedEvents1|QObject *,int
 
 /*
 static void sendPostedEvents ()
 */
-$staticMethod=|void|sendPostedEvents,sendPostedEvents2|
+$internalStaticMethod=|void|sendPostedEvents,sendPostedEvents2|
 
 //[1]void sendPostedEvents ( QObject * receiver, int event_type )
 //[2]void sendPostedEvents ()
@@ -309,11 +299,11 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SENDPOSTEDEVENTS )
 {
   if( ISNUMPAR(2) && ISQOBJECT(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QCOREAPPLICATION_SENDPOSTEDEVENTS1 );
+    QCoreApplication_sendPostedEvents1();
   }
   else if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QCOREAPPLICATION_SENDPOSTEDEVENTS2 );
+    QCoreApplication_sendPostedEvents2();
   }
   else
   {
@@ -364,12 +354,12 @@ $staticMethod=|bool|testAttribute|Qt::ApplicationAttribute
 /*
 static QString translate ( const char * context, const char * sourceText, const char * disambiguation, Encoding encoding, int n )
 */
-$staticMethod=|QString|translate,translate1|const char *,const char *,const char *,QCoreApplication::Encoding,int
+$internalStaticMethod=|QString|translate,translate1|const char *,const char *,const char *,QCoreApplication::Encoding,int
 
 /*
 static QString translate ( const char * context, const char * sourceText, const char * disambiguation = 0, Encoding encoding = CodecForTr )
 */
-$staticMethod=|QString|translate,translate2|const char *,const char *,const char *=0,QCoreApplication::Encoding=QCoreApplication::CodecForTr
+$internalStaticMethod=|QString|translate,translate2|const char *,const char *,const char *=0,QCoreApplication::Encoding=QCoreApplication::CodecForTr
 
 //[1]QString translate ( const char * context, const char * sourceText, const char * disambiguation, Encoding encoding, int n )
 //[2]QString translate ( const char * context, const char * sourceText, const char * disambiguation = 0, Encoding encoding = CodecForTr )
@@ -378,11 +368,11 @@ HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE )
 {
   if( ISNUMPAR(5) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) && ISNUM(4) && ISNUM(5) )
   {
-    HB_FUNC_EXEC( QCOREAPPLICATION_TRANSLATE1 );
+    QCoreApplication_translate1();
   }
   else if( ISNUMPAR(4) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QCOREAPPLICATION_TRANSLATE2 );
+    QCoreApplication_translate2();
   }
   else
   {

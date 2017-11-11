@@ -595,14 +595,8 @@ HB_FUNC_STATIC( QVARIANT_TOLIST )
   if( obj )
   {
     QList<QVariant> list = obj->toList ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QVARIANT" );
-    #else
-    pDynSym = hb_dynsymFindName( "QVARIANT" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QVARIANT" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

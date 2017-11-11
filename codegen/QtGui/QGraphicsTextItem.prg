@@ -13,8 +13,6 @@ REQUEST QPAINTERPATH
 
 CLASS QGraphicsTextItem INHERIT QGraphicsObject
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD adjustSize
@@ -69,12 +67,12 @@ $destructor
 /*
 QGraphicsTextItem ( QGraphicsItem * parent = 0 )
 */
-$constructor=|new1|QGraphicsItem *=0
+$internalConstructor=|new1|QGraphicsItem *=0
 
 /*
 QGraphicsTextItem ( const QString & text, QGraphicsItem * parent = 0 )
 */
-$constructor=|new2|const QString &,QGraphicsItem *=0
+$internalConstructor=|new2|const QString &,QGraphicsItem *=0
 
 //[1]QGraphicsTextItem ( QGraphicsItem * parent = 0 )
 //[2]QGraphicsTextItem ( const QString & text, QGraphicsItem * parent = 0 )
@@ -83,11 +81,11 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSTEXTITEM_NEW1 );
+    QGraphicsTextItem_new1();
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQGRAPHICSITEM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSTEXTITEM_NEW2 );
+    QGraphicsTextItem_new2();
   }
   else
   {

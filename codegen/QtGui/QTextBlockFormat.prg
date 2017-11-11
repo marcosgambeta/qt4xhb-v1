@@ -11,8 +11,6 @@ CLASS QTextBlockFormat INHERIT QTextFormat
    METHOD indent
    METHOD isValid
    METHOD leftMargin
-   METHOD lineHeight1
-   METHOD lineHeight2
    METHOD lineHeight
    METHOD lineHeightType
    METHOD nonBreakableLines
@@ -48,11 +46,7 @@ $destructor
 /*
 QTextBlockFormat ()
 */
-HB_FUNC_STATIC( QTEXTBLOCKFORMAT_NEW )
-{
-  QTextBlockFormat * o = new QTextBlockFormat ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 
@@ -84,12 +78,12 @@ $method=|qreal|leftMargin|
 /*
 qreal lineHeight ( qreal scriptLineHeight, qreal scaling ) const
 */
-$method=|qreal|lineHeight,lineHeight1|qreal,qreal
+$internalMethod=|qreal|lineHeight,lineHeight1|qreal,qreal
 
 /*
 qreal lineHeight () const
 */
-$method=|qreal|lineHeight,lineHeight2|
+$internalMethod=|qreal|lineHeight,lineHeight2|
 
 //[1]qreal lineHeight ( qreal scriptLineHeight, qreal scaling ) const
 //[2]qreal lineHeight () const
@@ -98,11 +92,11 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHT )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QTEXTBLOCKFORMAT_LINEHEIGHT1 );
+    QTextBlockFormat_lineHeight1();
   }
   else if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTEXTBLOCKFORMAT_LINEHEIGHT2 );
+    QTextBlockFormat_lineHeight2();
   }
   else
   {

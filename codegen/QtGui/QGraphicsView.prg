@@ -20,31 +20,18 @@ REQUEST QSIZE
 
 CLASS QGraphicsView INHERIT QAbstractScrollArea
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD alignment
    METHOD backgroundBrush
    METHOD cacheMode
-   METHOD centerOn1
-   METHOD centerOn2
-   METHOD centerOn3
    METHOD centerOn
    METHOD dragMode
-   METHOD ensureVisible1
-   METHOD ensureVisible2
-   METHOD ensureVisible3
    METHOD ensureVisible
-   METHOD fitInView1
-   METHOD fitInView2
-   METHOD fitInView3
    METHOD fitInView
    METHOD foregroundBrush
    METHOD isInteractive
    METHOD isTransformed
-   METHOD itemAt1
-   METHOD itemAt2
    METHOD itemAt
    METHOD items1
    METHOD items2
@@ -54,19 +41,7 @@ CLASS QGraphicsView INHERIT QAbstractScrollArea
    METHOD items6
    METHOD items7
    METHOD items
-   METHOD mapFromScene1
-   METHOD mapFromScene2
-   METHOD mapFromScene3
-   METHOD mapFromScene4
-   METHOD mapFromScene5
-   METHOD mapFromScene6
    METHOD mapFromScene
-   METHOD mapToScene1
-   METHOD mapToScene2
-   METHOD mapToScene3
-   METHOD mapToScene4
-   METHOD mapToScene5
-   METHOD mapToScene6
    METHOD mapToScene
    METHOD matrix
    METHOD optimizationFlags
@@ -95,8 +70,6 @@ CLASS QGraphicsView INHERIT QAbstractScrollArea
    METHOD setResizeAnchor
    METHOD setRubberBandSelectionMode
    METHOD setScene
-   METHOD setSceneRect1
-   METHOD setSceneRect2
    METHOD setSceneRect
    METHOD setTransform
    METHOD setTransformationAnchor
@@ -132,12 +105,12 @@ $destructor
 /*
 QGraphicsView ( QWidget * parent = 0 )
 */
-$constructor=|new1|QWidget *=0
+$internalConstructor=|new1|QWidget *=0
 
 /*
 QGraphicsView ( QGraphicsScene * scene, QWidget * parent = 0 )
 */
-$constructor=|new2|QGraphicsScene *,QWidget *=0
+$internalConstructor=|new2|QGraphicsScene *,QWidget *=0
 
 //[1]QGraphicsView ( QWidget * parent = 0 )
 //[2]QGraphicsView ( QGraphicsScene * scene, QWidget * parent = 0 )
@@ -146,11 +119,11 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSVIEW_NEW1 );
+    QGraphicsView_new1();
   }
   else if( ISBETWEEN(1,2) && ISQGRAPHICSSCENE(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSVIEW_NEW2 );
+    QGraphicsView_new2();
   }
   else
   {
@@ -178,17 +151,17 @@ $method=|QGraphicsView::CacheMode|cacheMode|
 /*
 void centerOn ( const QPointF & pos )
 */
-$method=|void|centerOn,centerOn1|const QPointF &
+$internalMethod=|void|centerOn,centerOn1|const QPointF &
 
 /*
 void centerOn ( qreal x, qreal y )
 */
-$method=|void|centerOn,centerOn2|qreal,qreal
+$internalMethod=|void|centerOn,centerOn2|qreal,qreal
 
 /*
 void centerOn ( const QGraphicsItem * item )
 */
-$method=|void|centerOn,centerOn3|const QGraphicsItem *
+$internalMethod=|void|centerOn,centerOn3|const QGraphicsItem *
 
 //[1]void centerOn ( const QPointF & pos )
 //[2]void centerOn ( qreal x, qreal y )
@@ -198,15 +171,15 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_CENTERON )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSVIEW_CENTERON1 );
+    QGraphicsView_centerOn1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QGRAPHICSVIEW_CENTERON2 );
+    QGraphicsView_centerOn2();
   }
   else if( ISNUMPAR(1) && ISQGRAPHICSITEM(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSVIEW_CENTERON3 );
+    QGraphicsView_centerOn3();
   }
   else
   {
@@ -222,17 +195,17 @@ $method=|QGraphicsView::DragMode|dragMode|
 /*
 void ensureVisible ( const QRectF & rect, int xmargin = 50, int ymargin = 50 )
 */
-$method=|void|ensureVisible,ensureVisible1|const QRectF &,int=50,int=50
+$internalMethod=|void|ensureVisible,ensureVisible1|const QRectF &,int=50,int=50
 
 /*
 void ensureVisible ( qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50 )
 */
-$method=|void|ensureVisible,ensureVisible2|qreal,qreal,qreal,qreal,int=50,int=50
+$internalMethod=|void|ensureVisible,ensureVisible2|qreal,qreal,qreal,qreal,int=50,int=50
 
 /*
 void ensureVisible ( const QGraphicsItem * item, int xmargin = 50, int ymargin = 50 )
 */
-$method=|void|ensureVisible,ensureVisible3|const QGraphicsItem *,int=50,int=50
+$internalMethod=|void|ensureVisible,ensureVisible3|const QGraphicsItem *,int=50,int=50
 
 //[1]void ensureVisible ( const QRectF & rect, int xmargin = 50, int ymargin = 50 )
 //[2]void ensureVisible ( qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50 )
@@ -242,15 +215,15 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ENSUREVISIBLE )
 {
   if( ISBETWEEN(1,3) && ISQRECTF(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSVIEW_ENSUREVISIBLE1 );
+    QGraphicsView_ensureVisible1();
   }
   else if( ISBETWEEN(4,6) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISNUM(5)||ISNIL(5)) && (ISNUM(6)||ISNIL(6)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSVIEW_ENSUREVISIBLE2 );
+    QGraphicsView_ensureVisible2();
   }
   else if( ISBETWEEN(1,3) && ISQGRAPHICSITEM(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSVIEW_ENSUREVISIBLE3 );
+    QGraphicsView_ensureVisible3();
   }
   else
   {
@@ -261,17 +234,17 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ENSUREVISIBLE )
 /*
 void fitInView ( const QRectF & rect, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
 */
-$method=|void|fitInView,fitInView1|const QRectF &,Qt::AspectRatioMode=Qt::IgnoreAspectRatio
+$internalMethod=|void|fitInView,fitInView1|const QRectF &,Qt::AspectRatioMode=Qt::IgnoreAspectRatio
 
 /*
 void fitInView ( qreal x, qreal y, qreal w, qreal h, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
 */
-$method=|void|fitInView,fitInView2|qreal,qreal,qreal,qreal,Qt::AspectRatioMode=Qt::IgnoreAspectRatio
+$internalMethod=|void|fitInView,fitInView2|qreal,qreal,qreal,qreal,Qt::AspectRatioMode=Qt::IgnoreAspectRatio
 
 /*
 void fitInView ( const QGraphicsItem * item, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
 */
-$method=|void|fitInView,fitInView3|const QGraphicsItem *,Qt::AspectRatioMode=Qt::IgnoreAspectRatio
+$internalMethod=|void|fitInView,fitInView3|const QGraphicsItem *,Qt::AspectRatioMode=Qt::IgnoreAspectRatio
 
 //[1]void fitInView ( const QRectF & rect, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
 //[2]void fitInView ( qreal x, qreal y, qreal w, qreal h, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
@@ -281,15 +254,15 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_FITINVIEW )
 {
   if( ISBETWEEN(1,2) && ISQRECTF(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSVIEW_FITINVIEW1 );
+    QGraphicsView_fitInView1();
   }
   else if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISNUM(5)||ISNIL(5)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSVIEW_FITINVIEW2 );
+    QGraphicsView_fitInView2();
   }
   else if( ISBETWEEN(1,2) && ISQGRAPHICSITEM(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSVIEW_FITINVIEW3 );
+    QGraphicsView_fitInView3();
   }
   else
   {
@@ -315,12 +288,12 @@ $method=|bool|isTransformed|
 /*
 QGraphicsItem * itemAt ( const QPoint & pos ) const
 */
-$method=|QGraphicsItem *|itemAt,itemAt1|const QPoint &
+$internalMethod=|QGraphicsItem *|itemAt,itemAt1|const QPoint &
 
 /*
 QGraphicsItem * itemAt ( int x, int y ) const
 */
-$method=|QGraphicsItem *|itemAt,itemAt2|int,int
+$internalMethod=|QGraphicsItem *|itemAt,itemAt2|int,int
 
 //[1]QGraphicsItem * itemAt ( const QPoint & pos ) const
 //[2]QGraphicsItem * itemAt ( int x, int y ) const
@@ -329,11 +302,11 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMAT )
 {
   if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSVIEW_ITEMAT1 );
+    QGraphicsView_itemAt1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QGRAPHICSVIEW_ITEMAT2 );
+    QGraphicsView_itemAt2();
   }
   else
   {
@@ -351,14 +324,8 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS1 )
   if( obj )
   {
     QList<QGraphicsItem *> list = obj->items ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGRAPHICSITEM" );
-    #else
-    pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -395,14 +362,8 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS2 )
   if( obj )
   {
     QList<QGraphicsItem *> list = obj->items ( *PQPOINT(1) );
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGRAPHICSITEM" );
-    #else
-    pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -439,14 +400,8 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS3 )
   if( obj )
   {
     QList<QGraphicsItem *> list = obj->items ( PINT(1), PINT(2) );
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGRAPHICSITEM" );
-    #else
-    pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -484,14 +439,8 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS4 )
   {
     int par5 = ISNIL(5)? (int) Qt::IntersectsItemShape : hb_parni(5);
     QList<QGraphicsItem *> list = obj->items ( PINT(1), PINT(2), PINT(3), PINT(4), (Qt::ItemSelectionMode) par5 );
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGRAPHICSITEM" );
-    #else
-    pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -529,14 +478,8 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS5 )
   {
     int par2 = ISNIL(2)? (int) Qt::IntersectsItemShape : hb_parni(2);
     QList<QGraphicsItem *> list = obj->items ( *PQRECT(1), (Qt::ItemSelectionMode) par2 );
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGRAPHICSITEM" );
-    #else
-    pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -574,14 +517,8 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS6 )
   {
     int par2 = ISNIL(2)? (int) Qt::IntersectsItemShape : hb_parni(2);
     QList<QGraphicsItem *> list = obj->items ( *PQPOLYGON(1), (Qt::ItemSelectionMode) par2 );
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGRAPHICSITEM" );
-    #else
-    pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -619,14 +556,8 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS7 )
   {
     int par2 = ISNIL(2)? (int) Qt::IntersectsItemShape : hb_parni(2);
     QList<QGraphicsItem *> list = obj->items ( *PQPAINTERPATH(1), (Qt::ItemSelectionMode) par2 );
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGRAPHICSITEM" );
-    #else
-    pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -700,32 +631,32 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS )
 /*
 QPoint mapFromScene ( const QPointF & point ) const
 */
-$method=|QPoint|mapFromScene,mapFromScene1|const QPointF &
+$internalMethod=|QPoint|mapFromScene,mapFromScene1|const QPointF &
 
 /*
 QPolygon mapFromScene ( const QRectF & rect ) const
 */
-$method=|QPolygon|mapFromScene,mapFromScene2|const QRectF &
+$internalMethod=|QPolygon|mapFromScene,mapFromScene2|const QRectF &
 
 /*
 QPolygon mapFromScene ( const QPolygonF & polygon ) const
 */
-$method=|QPolygon|mapFromScene,mapFromScene3|const QPolygonF &
+$internalMethod=|QPolygon|mapFromScene,mapFromScene3|const QPolygonF &
 
 /*
 QPainterPath mapFromScene ( const QPainterPath & path ) const
 */
-$method=|QPainterPath|mapFromScene,mapFromScene4|const QPainterPath &
+$internalMethod=|QPainterPath|mapFromScene,mapFromScene4|const QPainterPath &
 
 /*
 QPoint mapFromScene ( qreal x, qreal y ) const
 */
-$method=|QPoint|mapFromScene,mapFromScene5|qreal,qreal
+$internalMethod=|QPoint|mapFromScene,mapFromScene5|qreal,qreal
 
 /*
 QPolygon mapFromScene ( qreal x, qreal y, qreal w, qreal h ) const
 */
-$method=|QPolygon|mapFromScene,mapFromScene6|qreal,qreal,qreal,qreal
+$internalMethod=|QPolygon|mapFromScene,mapFromScene6|qreal,qreal,qreal,qreal
 
 //[1]QPoint mapFromScene ( const QPointF & point ) const
 //[2]QPolygon mapFromScene ( const QRectF & rect ) const
@@ -738,27 +669,27 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_MAPFROMSCENE )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSVIEW_MAPFROMSCENE1 );
+    QGraphicsView_mapFromScene1();
   }
   else if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSVIEW_MAPFROMSCENE2 );
+    QGraphicsView_mapFromScene2();
   }
   else if( ISNUMPAR(1) && ISQPOLYGONF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSVIEW_MAPFROMSCENE3 );
+    QGraphicsView_mapFromScene3();
   }
   else if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSVIEW_MAPFROMSCENE4 );
+    QGraphicsView_mapFromScene4();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QGRAPHICSVIEW_MAPFROMSCENE5 );
+    QGraphicsView_mapFromScene5();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QGRAPHICSVIEW_MAPFROMSCENE6 );
+    QGraphicsView_mapFromScene6();
   }
   else
   {
@@ -769,32 +700,32 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_MAPFROMSCENE )
 /*
 QPointF mapToScene ( const QPoint & point ) const
 */
-$method=|QPointF|mapToScene,mapToScene1|const QPoint &
+$internalMethod=|QPointF|mapToScene,mapToScene1|const QPoint &
 
 /*
 QPolygonF mapToScene ( const QRect & rect ) const
 */
-$method=|QPolygonF|mapToScene,mapToScene2|const QRect &
+$internalMethod=|QPolygonF|mapToScene,mapToScene2|const QRect &
 
 /*
 QPolygonF mapToScene ( const QPolygon & polygon ) const
 */
-$method=|QPolygonF|mapToScene,mapToScene3|const QPolygon &
+$internalMethod=|QPolygonF|mapToScene,mapToScene3|const QPolygon &
 
 /*
 QPainterPath mapToScene ( const QPainterPath & path ) const
 */
-$method=|QPainterPath|mapToScene,mapToScene4|const QPainterPath &
+$internalMethod=|QPainterPath|mapToScene,mapToScene4|const QPainterPath &
 
 /*
 QPointF mapToScene ( int x, int y ) const
 */
-$method=|QPointF|mapToScene,mapToScene5|int,int
+$internalMethod=|QPointF|mapToScene,mapToScene5|int,int
 
 /*
 QPolygonF mapToScene ( int x, int y, int w, int h ) const
 */
-$method=|QPolygonF|mapToScene,mapToScene6|int,int,int,int
+$internalMethod=|QPolygonF|mapToScene,mapToScene6|int,int,int,int
 
 //[1]QPointF mapToScene ( const QPoint & point ) const
 //[2]QPolygonF mapToScene ( const QRect & rect ) const
@@ -807,27 +738,27 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_MAPTOSCENE )
 {
   if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSVIEW_MAPTOSCENE1 );
+    QGraphicsView_mapToScene1();
   }
   else if( ISNUMPAR(1) && ISQRECT(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSVIEW_MAPTOSCENE2 );
+    QGraphicsView_mapToScene2();
   }
   else if( ISNUMPAR(1) && ISQPOLYGON(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSVIEW_MAPTOSCENE3 );
+    QGraphicsView_mapToScene3();
   }
   else if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSVIEW_MAPTOSCENE4 );
+    QGraphicsView_mapToScene4();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QGRAPHICSVIEW_MAPTOSCENE5 );
+    QGraphicsView_mapToScene5();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QGRAPHICSVIEW_MAPTOSCENE6 );
+    QGraphicsView_mapToScene6();
   }
   else
   {
@@ -973,12 +904,12 @@ $method=|void|setScene|QGraphicsScene *
 /*
 void setSceneRect ( const QRectF & rect )
 */
-$method=|void|setSceneRect,setSceneRect1|const QRectF &
+$internalMethod=|void|setSceneRect,setSceneRect1|const QRectF &
 
 /*
 void setSceneRect ( qreal x, qreal y, qreal w, qreal h )
 */
-$method=|void|setSceneRect,setSceneRect2|qreal,qreal,qreal,qreal
+$internalMethod=|void|setSceneRect,setSceneRect2|qreal,qreal,qreal,qreal
 
 //[1]void setSceneRect ( const QRectF & rect )
 //[2]void setSceneRect ( qreal x, qreal y, qreal w, qreal h )
@@ -987,11 +918,11 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETSCENERECT )
 {
   if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSVIEW_SETSCENERECT1 );
+    QGraphicsView_setSceneRect1();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QGRAPHICSVIEW_SETSCENERECT2 );
+    QGraphicsView_setSceneRect2();
   }
   else
   {

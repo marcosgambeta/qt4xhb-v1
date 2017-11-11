@@ -90,14 +90,8 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
   if( obj )
   {
     QList<QNetworkAddressEntry> list = obj->addressEntries ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QNETWORKADDRESSENTRY" );
-    #else
-    pDynSym = hb_dynsymFindName( "QNETWORKADDRESSENTRY" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKADDRESSENTRY" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -164,14 +158,8 @@ QList<QHostAddress> allAddresses ()
 HB_FUNC_STATIC( QNETWORKINTERFACE_ALLADDRESSES )
 {
   QList<QHostAddress> list = QNetworkInterface::allAddresses ();
-  PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QHOSTADDRESS" );
-  #else
-  pDynSym = hb_dynsymFindName( "QHOSTADDRESS" );
-  #endif
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QHOSTADDRESS" );
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {
@@ -207,14 +195,8 @@ QList<QNetworkInterface> allInterfaces ()
 HB_FUNC_STATIC( QNETWORKINTERFACE_ALLINTERFACES )
 {
   QList<QNetworkInterface> list = QNetworkInterface::allInterfaces ();
-  PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QNETWORKINTERFACE" );
-  #else
-  pDynSym = hb_dynsymFindName( "QNETWORKINTERFACE" );
-  #endif
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKINTERFACE" );
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {

@@ -10,8 +10,6 @@ REQUEST QPAINTERPATH
 
 CLASS QGraphicsPolygonItem INHERIT QAbstractGraphicsShapeItem
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD fillRule
@@ -43,12 +41,12 @@ $destructor
 /*
 QGraphicsPolygonItem ( QGraphicsItem * parent = 0 )
 */
-$constructor=|new1|QGraphicsItem *=0
+$internalConstructor=|new1|QGraphicsItem *=0
 
 /*
 QGraphicsPolygonItem ( const QPolygonF & polygon, QGraphicsItem * parent = 0 )
 */
-$constructor=|new2|const QPolygonF &,QGraphicsItem *=0
+$internalConstructor=|new2|const QPolygonF &,QGraphicsItem *=0
 
 //[1]QGraphicsPolygonItem ( QGraphicsItem * parent = 0 )
 //[2]QGraphicsPolygonItem ( const QPolygonF & polygon, QGraphicsItem * parent = 0 )
@@ -57,11 +55,11 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSPOLYGONITEM_NEW1 );
+    QGraphicsPolygonItem_new1();
   }
   else if( ISBETWEEN(1,2) && ISQPOLYGONF(1) && (ISQGRAPHICSITEM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSPOLYGONITEM_NEW2 );
+    QGraphicsPolygonItem_new2();
   }
   else
   {

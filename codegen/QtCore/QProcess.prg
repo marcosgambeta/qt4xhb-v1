@@ -33,8 +33,6 @@ CLASS QProcess INHERIT QIODevice
    METHOD setStandardOutputFile
    METHOD setStandardOutputProcess
    METHOD setWorkingDirectory
-   METHOD start1
-   METHOD start2
    METHOD start
    METHOD state
    METHOD waitForFinished
@@ -50,12 +48,7 @@ CLASS QProcess INHERIT QIODevice
    METHOD waitForReadyRead
    METHOD kill
    METHOD terminate
-   METHOD execute1
-   METHOD execute2
    METHOD execute
-   METHOD startDetached1
-   METHOD startDetached2
-   METHOD startDetached3
    METHOD startDetached
    METHOD systemEnvironment
 
@@ -200,12 +193,12 @@ $method=|void|setWorkingDirectory|const QString &
 /*
 void start ( const QString & program, const QStringList & arguments, OpenMode mode = ReadWrite )
 */
-$method=|void|start,start1|const QString &,const QStringList &,QIODevice::OpenMode=QIODevice::ReadWrite
+$internalMethod=|void|start,start1|const QString &,const QStringList &,QIODevice::OpenMode=QIODevice::ReadWrite
 
 /*
 void start ( const QString & program, OpenMode mode = ReadWrite )
 */
-$method=|void|start,start2|const QString &,QIODevice::OpenMode=QIODevice::ReadWrite
+$internalMethod=|void|start,start2|const QString &,QIODevice::OpenMode=QIODevice::ReadWrite
 
 //[1]void start ( const QString & program, const QStringList & arguments, OpenMode mode = ReadWrite )
 //[2]void start ( const QString & program, OpenMode mode = ReadWrite )
@@ -214,11 +207,11 @@ HB_FUNC_STATIC( QPROCESS_START )
 {
   if( ISBETWEEN(2,3) && ISCHAR(1) && ISARRAY(2) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QPROCESS_START1 );
+    QProcess_start1();
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QPROCESS_START2 );
+    QProcess_start2();
   }
   else
   {
@@ -299,12 +292,12 @@ $method=|void|terminate|
 /*
 static int execute ( const QString & program, const QStringList & arguments )
 */
-$staticMethod=|int|execute,execute1|const QString &,const QStringList &
+$internalStaticMethod=|int|execute,execute1|const QString &,const QStringList &
 
 /*
 static int execute ( const QString & program )
 */
-$staticMethod=|int|execute,execute2|const QString &
+$internalStaticMethod=|int|execute,execute2|const QString &
 
 //[1]int execute ( const QString & program, const QStringList & arguments )
 //[2]int execute ( const QString & program )
@@ -313,11 +306,11 @@ HB_FUNC_STATIC( QPROCESS_EXECUTE )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISARRAY(2) )
   {
-    HB_FUNC_EXEC( QPROCESS_EXECUTE1 );
+    QProcess_execute1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QPROCESS_EXECUTE2 );
+    QProcess_execute2();
   }
   else
   {
@@ -328,17 +321,17 @@ HB_FUNC_STATIC( QPROCESS_EXECUTE )
 /*
 static bool startDetached ( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = 0 )
 */
-$staticMethod=|bool|startDetached,startDetached1|const QString &,const QStringList &,const QString &,qint64 *=0
+$internalStaticMethod=|bool|startDetached,startDetached1|const QString &,const QStringList &,const QString &,qint64 *=0
 
 /*
 static bool startDetached ( const QString & program, const QStringList & arguments )
 */
-$staticMethod=|bool|startDetached,startDetached2|const QString &,const QStringList &
+$internalStaticMethod=|bool|startDetached,startDetached2|const QString &,const QStringList &
 
 /*
 static bool startDetached ( const QString & program )
 */
-$staticMethod=|bool|startDetached|const QString &
+$internalStaticMethod=|bool|startDetached|const QString &
 
 //[1]bool startDetached ( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = 0 )
 //[2]bool startDetached ( const QString & program, const QStringList & arguments )
@@ -348,15 +341,15 @@ HB_FUNC_STATIC( QPROCESS_STARTDETACHED )
 {
   if( ISNUMPAR(4) && ISCHAR(1) && ISARRAY(2) && ISCHAR(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QPROCESS_STARTDETACHED1 );
+    QProcess_startDetached1();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISARRAY(2) )
   {
-    HB_FUNC_EXEC( QPROCESS_STARTDETACHED2 );
+    QProcess_startDetached2();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QPROCESS_STARTDETACHED3 );
+    QProcess_startDetached3();
   }
   else
   {

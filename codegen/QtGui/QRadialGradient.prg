@@ -8,22 +8,11 @@ REQUEST QPOINTF
 
 CLASS QRadialGradient INHERIT QGradient
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
-   METHOD new6
-   METHOD new7
    METHOD new
    METHOD delete
    METHOD center
-   METHOD setCenter1
-   METHOD setCenter2
    METHOD setCenter
    METHOD focalPoint
-   METHOD setFocalPoint1
-   METHOD setFocalPoint2
    METHOD setFocalPoint
    METHOD radius
    METHOD setRadius
@@ -49,37 +38,37 @@ $destructor
 /*
 QRadialGradient()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QRadialGradient(const QPointF &center, qreal radius, const QPointF &focalPoint)
 */
-$constructor=|new2|const QPointF &,qreal,const QPointF &
+$internalConstructor=|new2|const QPointF &,qreal,const QPointF &
 
 /*
 QRadialGradient(qreal cx, qreal cy, qreal radius, qreal fx, qreal fy)
 */
-$constructor=|new3|qreal,qreal,qreal,qreal,qreal
+$internalConstructor=|new3|qreal,qreal,qreal,qreal,qreal
 
 /*
 QRadialGradient(const QPointF &center, qreal radius)
 */
-$constructor=|new4|const QPointF &,qreal
+$internalConstructor=|new4|const QPointF &,qreal
 
 /*
 QRadialGradient(qreal cx, qreal cy, qreal radius)
 */
-$constructor=|new5|qreal,qreal,qreal
+$internalConstructor=|new5|qreal,qreal,qreal
 
 /*
 QRadialGradient(const QPointF &center, qreal centerRadius, const QPointF &focalPoint, qreal focalRadius)
 */
-$constructor=|new6|const QPointF &,qreal,const QPointF &,qreal
+$internalConstructor=|new6|const QPointF &,qreal,const QPointF &,qreal
 
 /*
 QRadialGradient(qreal cx, qreal cy, qreal centerRadius, qreal fx, qreal fy, qreal focalRadius)
 */
-$constructor=|new7|qreal,qreal,qreal,qreal,qreal,qreal
+$internalConstructor=|new7|qreal,qreal,qreal,qreal,qreal,qreal
 
 //[1]QRadialGradient()
 //[2]QRadialGradient(const QPointF &center, qreal radius, const QPointF &focalPoint)
@@ -93,31 +82,31 @@ HB_FUNC_STATIC( QRADIALGRADIENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QRADIALGRADIENT_NEW1 );
+    QRadialGradient_new1();
   }
   else if( ISNUMPAR(3) && ISQPOINTF(1) && ISNUM(2) && ISQPOINTF(3) )
   {
-    HB_FUNC_EXEC( QRADIALGRADIENT_NEW2 );
+    QRadialGradient_new2();
   }
   else if( ISNUMPAR(5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) )
   {
-    HB_FUNC_EXEC( QRADIALGRADIENT_NEW3 );
+    QRadialGradient_new3();
   }
   else if( ISNUMPAR(2) && ISQPOINTF(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QRADIALGRADIENT_NEW4 );
+    QRadialGradient_new4();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QRADIALGRADIENT_NEW5 );
+    QRadialGradient_new5();
   }
   else if( ISNUMPAR(4) && ISQPOINTF(1) && ISNUM(2) && ISQPOINTF(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QRADIALGRADIENT_NEW6 );
+    QRadialGradient_new6();
   }
   else if( ISNUMPAR(6) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) )
   {
-    HB_FUNC_EXEC( QRADIALGRADIENT_NEW7 );
+    QRadialGradient_new7();
   }
   else
   {
@@ -135,12 +124,12 @@ $method=|QPointF|center|
 /*
 void setCenter(const QPointF &center)
 */
-$method=|void|setCenter,setCenter1|const QPointF &
+$internalMethod=|void|setCenter,setCenter1|const QPointF &
 
 /*
 void setCenter(qreal x, qreal y)
 */
-$method=|void|setCenter,setCenter2|qreal,qreal
+$internalMethod=|void|setCenter,setCenter2|qreal,qreal
 
 //[1]void setCenter(const QPointF &center)
 //[2]void setCenter(qreal x, qreal y)
@@ -149,11 +138,11 @@ HB_FUNC_STATIC( QRADIALGRADIENT_SETCENTER )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    HB_FUNC_EXEC( QRADIALGRADIENT_SETCENTER1 );
+    QRadialGradient_setCenter1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QRADIALGRADIENT_SETCENTER2 );
+    QRadialGradient_setCenter2();
   }
   else
   {
@@ -169,12 +158,12 @@ $method=|QPointF|focalPoint|
 /*
 void setFocalPoint(const QPointF &focalPoint)
 */
-$method=|void|setFocalPoint,setFocalPoint1|const QPointF &
+$internalMethod=|void|setFocalPoint,setFocalPoint1|const QPointF &
 
 /*
 void setFocalPoint(qreal x, qreal y)
 */
-$method=|void|setFocalPoint,setFocalPoint2|qreal,qreal
+$internalMethod=|void|setFocalPoint,setFocalPoint2|qreal,qreal
 
 //[1]void setFocalPoint(const QPointF &focalPoint)
 //[2]void setFocalPoint(qreal x, qreal y)
@@ -183,11 +172,11 @@ HB_FUNC_STATIC( QRADIALGRADIENT_SETFOCALPOINT )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    HB_FUNC_EXEC( QRADIALGRADIENT_SETFOCALPOINT1 );
+    QRadialGradient_setFocalPoint1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QRADIALGRADIENT_SETFOCALPOINT2 );
+    QRadialGradient_setFocalPoint2();
   }
   else
   {

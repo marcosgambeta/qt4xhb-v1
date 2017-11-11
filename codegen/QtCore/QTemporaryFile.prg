@@ -4,10 +4,6 @@ $header
 
 CLASS QTemporaryFile INHERIT QFile
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD autoRemove
@@ -16,6 +12,7 @@ CLASS QTemporaryFile INHERIT QFile
    METHOD setAutoRemove
    METHOD setFileTemplate
    METHOD fileName
+   METHOD createNativeFile
 
    DESTRUCTOR destroyObject
 
@@ -34,22 +31,22 @@ $destructor
 /*
 QTemporaryFile()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QTemporaryFile(const QString & templateName)
 */
-$constructor=|new2|const QString &
+$internalConstructor=|new2|const QString &
 
 /*
 QTemporaryFile(QObject * parent)
 */
-$constructor=|new3|QObject *
+$internalConstructor=|new3|QObject *
 
 /*
 QTemporaryFile(const QString & templateName, QObject * parent)
 */
-$constructor=|new4|const QString &,QObject *
+$internalConstructor=|new4|const QString &,QObject *
 
 //[1]QTemporaryFile()
 //[2]QTemporaryFile(const QString & templateName)
@@ -60,19 +57,19 @@ HB_FUNC_STATIC( QTEMPORARYFILE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTEMPORARYFILE_NEW1 );
+    QTemporaryFile_new1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QTEMPORARYFILE_NEW2 );
+    QTemporaryFile_new2();
   }
   else if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
-    HB_FUNC_EXEC( QTEMPORARYFILE_NEW3 );
+    QTemporaryFile_new3();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISQOBJECT(2) )
   {
-    HB_FUNC_EXEC( QTEMPORARYFILE_NEW4 );
+    QTemporaryFile_new4();
   }
   else
   {
@@ -115,25 +112,25 @@ $virtualMethod=|QString|fileName|
 /*
 static QTemporaryFile * createNativeFile(QFile & file)
 */
-$staticMethod=|QTemporaryFile *|createNativeFile,createNativeFile1|QFile &
+$internalStaticMethod=|QTemporaryFile *|createNativeFile,createNativeFile1|QFile &
 
 /*
 static QTemporaryFile * createNativeFile(const QString & fileName)
 */
-$staticMethod=|QTemporaryFile *|createNativeFile,createNativeFile2|const QString &
+$internalStaticMethod=|QTemporaryFile *|createNativeFile,createNativeFile2|const QString &
 
-//[1]QTemporaryFile * createNativeFile(QFile & file)
-//[2]QTemporaryFile * createNativeFile(const QString & fileName)
+//[1]static QTemporaryFile * createNativeFile(QFile & file)
+//[2]static QTemporaryFile * createNativeFile(const QString & fileName)
 
 HB_FUNC_STATIC( QTEMPORARYFILE_CREATENATIVEFILE )
 {
   if( ISNUMPAR(1) && ISQFILE(1) )
   {
-    HB_FUNC_EXEC( QTEMPORARYFILE_CREATENATIVEFILE1 );
+    QTemporaryFile_createNativeFile1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QTEMPORARYFILE_CREATENATIVEFILE2 );
+    QTemporaryFile_createNativeFile2();
   }
   else
   {

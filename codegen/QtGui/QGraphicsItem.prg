@@ -48,8 +48,6 @@ CLASS QGraphicsItem
    METHOD data
    METHOD deviceTransform
    METHOD effectiveOpacity
-   METHOD ensureVisible1
-   METHOD ensureVisible2
    METHOD ensureVisible
    METHOD filtersChildEvents
    METHOD flags
@@ -68,9 +66,6 @@ CLASS QGraphicsItem
    METHOD isAncestorOf
    METHOD isClipped
    METHOD isEnabled
-   METHOD isObscured1
-   METHOD isObscured2
-   METHOD isObscured3
    METHOD isObscured
    METHOD isObscuredBy
    METHOD isPanel
@@ -81,65 +76,17 @@ CLASS QGraphicsItem
    METHOD isWidget
    METHOD isWindow
    METHOD itemTransform
-   METHOD mapFromItem1
-   METHOD mapFromItem2
-   METHOD mapFromItem3
-   METHOD mapFromItem4
-   METHOD mapFromItem5
-   METHOD mapFromItem6
    METHOD mapFromItem
-   METHOD mapFromParent1
-   METHOD mapFromParent2
-   METHOD mapFromParent3
-   METHOD mapFromParent4
-   METHOD mapFromParent5
-   METHOD mapFromParent6
    METHOD mapFromParent
-   METHOD mapFromScene1
-   METHOD mapFromScene2
-   METHOD mapFromScene3
-   METHOD mapFromScene4
-   METHOD mapFromScene5
-   METHOD mapFromScene6
    METHOD mapFromScene
-   METHOD mapRectFromItem1
-   METHOD mapRectFromItem2
    METHOD mapRectFromItem
-   METHOD mapRectFromParent1
-   METHOD mapRectFromParent2
    METHOD mapRectFromParent
-   METHOD mapRectFromScene1
-   METHOD mapRectFromScene2
    METHOD mapRectFromScene
-   METHOD mapRectToItem1
-   METHOD mapRectToItem2
    METHOD mapRectToItem
-   METHOD mapRectToParent1
-   METHOD mapRectToParent2
    METHOD mapRectToParent
-   METHOD mapRectToScene1
-   METHOD mapRectToScene2
    METHOD mapRectToScene
-   METHOD mapToItem1
-   METHOD mapToItem2
-   METHOD mapToItem3
-   METHOD mapToItem4
-   METHOD mapToItem5
-   METHOD mapToItem6
    METHOD mapToItem
-   METHOD mapToParent1
-   METHOD mapToParent2
-   METHOD mapToParent3
-   METHOD mapToParent4
-   METHOD mapToParent5
-   METHOD mapToParent6
    METHOD mapToParent
-   METHOD mapToScene1
-   METHOD mapToScene2
-   METHOD mapToScene3
-   METHOD mapToScene4
-   METHOD mapToScene5
-   METHOD mapToScene6
    METHOD mapToScene
    METHOD moveBy
    METHOD opacity
@@ -181,16 +128,12 @@ CLASS QGraphicsItem
    METHOD setOpacity
    METHOD setPanelModality
    METHOD setParentItem
-   METHOD setPos1
-   METHOD setPos2
    METHOD setPos
    METHOD setRotation
    METHOD setScale
    METHOD setSelected
    METHOD setToolTip
    METHOD setTransform
-   METHOD setTransformOriginPoint1
-   METHOD setTransformOriginPoint2
    METHOD setTransformOriginPoint
    METHOD setTransformations
    METHOD setVisible
@@ -213,8 +156,6 @@ CLASS QGraphicsItem
    METHOD ungrabKeyboard
    METHOD ungrabMouse
    METHOD unsetCursor
-   METHOD update1
-   METHOD update2
    METHOD update
    METHOD window
    METHOD x
@@ -300,14 +241,8 @@ HB_FUNC_STATIC( QGRAPHICSITEM_CHILDITEMS )
   if( obj )
   {
     QList<QGraphicsItem *> list = obj->childItems ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGRAPHICSITEM" );
-    #else
-    pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -370,14 +305,8 @@ HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDINGITEMS )
   {
     int par1 = ISNIL(1)? (int) Qt::IntersectsItemShape : hb_parni(1);
     QList<QGraphicsItem *> list = obj->collidingItems ( (Qt::ItemSelectionMode) par1 );
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGRAPHICSITEM" );
-    #else
-    pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -437,12 +366,12 @@ $method=|qreal|effectiveOpacity|
 /*
 void ensureVisible ( const QRectF & rect = QRectF(), int xmargin = 50, int ymargin = 50 )
 */
-$method=|void|ensureVisible,ensureVisible1|const QRectF &=QRectF(),int=50,int=50
+$internalMethod=|void|ensureVisible,ensureVisible1|const QRectF &=QRectF(),int=50,int=50
 
 /*
 void ensureVisible ( qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50 )
 */
-$method=|void|ensureVisible,ensureVisible2|qreal,qreal,qreal,qreal,int=50,int=50
+$internalMethod=|void|ensureVisible,ensureVisible2|qreal,qreal,qreal,qreal,int=50,int=50
 
 //[1]void ensureVisible ( const QRectF & rect = QRectF(), int xmargin = 50, int ymargin = 50 )
 //[2]void ensureVisible ( qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50 )
@@ -451,11 +380,11 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ENSUREVISIBLE )
 {
   if( ISBETWEEN(0,3) && (ISQRECTF(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_ENSUREVISIBLE1 );
+    QGraphicsItem_ensureVisible1();
   }
   else if( ISBETWEEN(4,6) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISNUM(5)||ISNIL(5)) && (ISNUM(6)||ISNIL(6)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_ENSUREVISIBLE2 );
+    QGraphicsItem_ensureVisible2();
   }
   else
   {
@@ -551,17 +480,17 @@ $method=|bool|isEnabled|
 /*
 bool isObscured () const
 */
-$method=|bool|isObscured,isObscured1|
+$internalMethod=|bool|isObscured,isObscured1|
 
 /*
 bool isObscured ( qreal x, qreal y, qreal w, qreal h ) const
 */
-$method=|bool|isObscured,isObscured2|qreal,qreal,qreal,qreal
+$internalMethod=|bool|isObscured,isObscured2|qreal,qreal,qreal,qreal
 
 /*
 bool isObscured ( const QRectF & rect ) const
 */
-$method=|bool|isObscured,isObscured3|const QRectF &
+$internalMethod=|bool|isObscured,isObscured3|const QRectF &
 
 //[1]bool isObscured () const
 //[2]bool isObscured ( qreal x, qreal y, qreal w, qreal h ) const
@@ -571,15 +500,15 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISOBSCURED )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_ISOBSCURED1 );
+    QGraphicsItem_isObscured1();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_ISOBSCURED2 );
+    QGraphicsItem_isObscured2();
   }
   else if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_ISOBSCURED3 );
+    QGraphicsItem_isObscured3();
   }
   else
   {
@@ -635,32 +564,32 @@ $method=|QTransform|itemTransform|const QGraphicsItem *,bool *=0
 /*
 QPointF mapFromItem ( const QGraphicsItem * item, const QPointF & point ) const
 */
-$method=|QPointF|mapFromItem,mapFromItem1|const QGraphicsItem *,const QPointF &
+$internalMethod=|QPointF|mapFromItem,mapFromItem1|const QGraphicsItem *,const QPointF &
 
 /*
 QPolygonF mapFromItem ( const QGraphicsItem * item, const QRectF & rect ) const
 */
-$method=|QPolygonF|mapFromItem,mapFromItem2|const QGraphicsItem *,const QRectF &
+$internalMethod=|QPolygonF|mapFromItem,mapFromItem2|const QGraphicsItem *,const QRectF &
 
 /*
 QPolygonF mapFromItem ( const QGraphicsItem * item, const QPolygonF & polygon ) const
 */
-$method=|QPolygonF|mapFromItem,mapFromItem3|const QGraphicsItem *,const QPolygonF &
+$internalMethod=|QPolygonF|mapFromItem,mapFromItem3|const QGraphicsItem *,const QPolygonF &
 
 /*
 QPainterPath mapFromItem ( const QGraphicsItem * item, const QPainterPath & path ) const
 */
-$method=|QPainterPath|mapFromItem,mapFromItem4|const QGraphicsItem *,const QPainterPath &
+$internalMethod=|QPainterPath|mapFromItem,mapFromItem4|const QGraphicsItem *,const QPainterPath &
 
 /*
 QPolygonF mapFromItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
 */
-$method=|QPolygonF|mapFromItem,mapFromItem5|const QGraphicsItem *,qreal,qreal,qreal,qreal
+$internalMethod=|QPolygonF|mapFromItem,mapFromItem5|const QGraphicsItem *,qreal,qreal,qreal,qreal
 
 /*
 QPointF mapFromItem ( const QGraphicsItem * item, qreal x, qreal y ) const
 */
-$method=|QPointF|mapFromItem,mapFromItem6|const QGraphicsItem *,qreal,qreal
+$internalMethod=|QPointF|mapFromItem,mapFromItem6|const QGraphicsItem *,qreal,qreal
 
 //[1]QPointF mapFromItem ( const QGraphicsItem * item, const QPointF & point ) const
 //[2]QPolygonF mapFromItem ( const QGraphicsItem * item, const QRectF & rect ) const
@@ -673,27 +602,27 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMITEM )
 {
   if( ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQPOINTF(2) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPFROMITEM1 );
+    QGraphicsItem_mapFromItem1();
   }
   else if( ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQRECTF(2) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPFROMITEM2 );
+    QGraphicsItem_mapFromItem2();
   }
   else if( ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQPOLYGONF(2) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPFROMITEM3 );
+    QGraphicsItem_mapFromItem3();
   }
   else if( ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQPAINTERPATH(2) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPFROMITEM4 );
+    QGraphicsItem_mapFromItem4();
   }
   else if( ISNUMPAR(5) && ISQGRAPHICSITEM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPFROMITEM5 );
+    QGraphicsItem_mapFromItem5();
   }
   else if( ISNUMPAR(3) && ISQGRAPHICSITEM(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPFROMITEM6 );
+    QGraphicsItem_mapFromItem6();
   }
   else
   {
@@ -704,32 +633,32 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMITEM )
 /*
 QPointF mapFromParent ( const QPointF & point ) const
 */
-$method=|QPointF|mapFromParent,mapFromParent1|const QPointF &
+$internalMethod=|QPointF|mapFromParent,mapFromParent1|const QPointF &
 
 /*
 QPolygonF mapFromParent ( const QRectF & rect ) const
 */
-$method=|QPolygonF|mapFromParent,mapFromParent2|const QRectF &
+$internalMethod=|QPolygonF|mapFromParent,mapFromParent2|const QRectF &
 
 /*
 QPolygonF mapFromParent ( const QPolygonF & polygon ) const
 */
-$method=|QPolygonF|mapFromParent,mapFromParent3|const QPolygonF &
+$internalMethod=|QPolygonF|mapFromParent,mapFromParent3|const QPolygonF &
 
 /*
 QPainterPath mapFromParent ( const QPainterPath & path ) const
 */
-$method=|QPainterPath|mapFromParent,mapFromParent4|const QPainterPath &
+$internalMethod=|QPainterPath|mapFromParent,mapFromParent4|const QPainterPath &
 
 /*
 QPolygonF mapFromParent ( qreal x, qreal y, qreal w, qreal h ) const
 */
-$method=|QPolygonF|mapFromParent,mapFromParent5|qreal,qreal,qreal,qreal
+$internalMethod=|QPolygonF|mapFromParent,mapFromParent5|qreal,qreal,qreal,qreal
 
 /*
 QPointF mapFromParent ( qreal x, qreal y ) const
 */
-$method=|QPointF|mapFromParent,mapFromParent6|qreal,qreal
+$internalMethod=|QPointF|mapFromParent,mapFromParent6|qreal,qreal
 
 //[1]QPointF mapFromParent ( const QPointF & point ) const
 //[2]QPolygonF mapFromParent ( const QRectF & rect ) const
@@ -742,27 +671,27 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMPARENT )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPFROMPARENT1 );
+    QGraphicsItem_mapFromParent1();
   }
   else if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPFROMPARENT2 );
+    QGraphicsItem_mapFromParent2();
   }
   else if( ISNUMPAR(1) && ISQPOLYGONF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPFROMPARENT3 );
+    QGraphicsItem_mapFromParent3();
   }
   else if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPFROMPARENT4 );
+    QGraphicsItem_mapFromParent4();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPFROMPARENT5 );
+    QGraphicsItem_mapFromParent5();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPFROMPARENT6 );
+    QGraphicsItem_mapFromParent6();
   }
   else
   {
@@ -773,32 +702,32 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMPARENT )
 /*
 QPointF mapFromScene ( const QPointF & point ) const
 */
-$method=|QPointF|mapFromScene,mapFromScene1|const QPointF &
+$internalMethod=|QPointF|mapFromScene,mapFromScene1|const QPointF &
 
 /*
 QPolygonF mapFromScene ( const QRectF & rect ) const
 */
-$method=|QPolygonF|mapFromScene,mapFromScene2|const QRectF &
+$internalMethod=|QPolygonF|mapFromScene,mapFromScene2|const QRectF &
 
 /*
 QPolygonF mapFromScene ( const QPolygonF & polygon ) const
 */
-$method=|QPolygonF|mapFromScene,mapFromScene3|const QPolygonF &
+$internalMethod=|QPolygonF|mapFromScene,mapFromScene3|const QPolygonF &
 
 /*
 QPainterPath mapFromScene ( const QPainterPath & path ) const
 */
-$method=|QPainterPath|mapFromScene,mapFromScene4|const QPainterPath &
+$internalMethod=|QPainterPath|mapFromScene,mapFromScene4|const QPainterPath &
 
 /*
 QPolygonF mapFromScene ( qreal x, qreal y, qreal w, qreal h ) const
 */
-$method=|QPolygonF|mapFromScene,mapFromScene5|qreal,qreal,qreal,qreal
+$internalMethod=|QPolygonF|mapFromScene,mapFromScene5|qreal,qreal,qreal,qreal
 
 /*
 QPointF mapFromScene ( qreal x, qreal y ) const
 */
-$method=|QPointF|mapFromScene,mapFromScene6|qreal,qreal
+$internalMethod=|QPointF|mapFromScene,mapFromScene6|qreal,qreal
 
 //[1]QPointF mapFromScene ( const QPointF & point ) const
 //[2]QPolygonF mapFromScene ( const QRectF & rect ) const
@@ -811,27 +740,27 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMSCENE )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPFROMSCENE1 );
+    QGraphicsItem_mapFromScene1();
   }
   else if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPFROMSCENE2 );
+    QGraphicsItem_mapFromScene2();
   }
   else if( ISNUMPAR(1) && ISQPOLYGONF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPFROMSCENE3 );
+    QGraphicsItem_mapFromScene3();
   }
   else if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPFROMSCENE4 );
+    QGraphicsItem_mapFromScene4();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPFROMSCENE5 );
+    QGraphicsItem_mapFromScene5();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPFROMSCENE6 );
+    QGraphicsItem_mapFromScene6();
   }
   else
   {
@@ -842,12 +771,12 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMSCENE )
 /*
 QRectF mapRectFromItem ( const QGraphicsItem * item, const QRectF & rect ) const
 */
-$method=|QRectF|mapRectFromItem,mapRectFromItem1|const QGraphicsItem *,const QRectF &
+$internalMethod=|QRectF|mapRectFromItem,mapRectFromItem1|const QGraphicsItem *,const QRectF &
 
 /*
 QRectF mapRectFromItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
 */
-$method=|QRectF|mapRectFromItem,mapRectFromItem2|const QGraphicsItem *,qreal,qreal,qreal,qreal
+$internalMethod=|QRectF|mapRectFromItem,mapRectFromItem2|const QGraphicsItem *,qreal,qreal,qreal,qreal
 
 //[1]QRectF mapRectFromItem ( const QGraphicsItem * item, const QRectF & rect ) const
 //[2]QRectF mapRectFromItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
@@ -856,11 +785,11 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMITEM )
 {
   if( ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQRECTF(2) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPRECTFROMITEM1 );
+    QGraphicsItem_mapRectFromItem1();
   }
   else if( ISNUMPAR(5) && ISQGRAPHICSITEM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPRECTFROMITEM2 );
+    QGraphicsItem_mapRectFromItem2();
   }
   else
   {
@@ -871,12 +800,12 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMITEM )
 /*
 QRectF mapRectFromParent ( const QRectF & rect ) const
 */
-$method=|QRectF|mapRectFromParent,mapRectFromParent1|const QRectF &
+$internalMethod=|QRectF|mapRectFromParent,mapRectFromParent1|const QRectF &
 
 /*
 QRectF mapRectFromParent ( qreal x, qreal y, qreal w, qreal h ) const
 */
-$method=|QRectF|mapRectFromParent,mapRectFromParent2|qreal,qreal,qreal,qreal
+$internalMethod=|QRectF|mapRectFromParent,mapRectFromParent2|qreal,qreal,qreal,qreal
 
 //[1]QRectF mapRectFromParent ( const QRectF & rect ) const
 //[2]QRectF mapRectFromParent ( qreal x, qreal y, qreal w, qreal h ) const
@@ -885,11 +814,11 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMPARENT )
 {
   if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPRECTFROMPARENT1 );
+    QGraphicsItem_mapRectFromParent1();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPRECTFROMPARENT2 );
+    QGraphicsItem_mapRectFromParent2();
   }
   else
   {
@@ -900,12 +829,12 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMPARENT )
 /*
 QRectF mapRectFromScene ( const QRectF & rect ) const
 */
-$method=|QRectF|mapRectFromScene,mapRectFromScene1|const QRectF &
+$internalMethod=|QRectF|mapRectFromScene,mapRectFromScene1|const QRectF &
 
 /*
 QRectF mapRectFromScene ( qreal x, qreal y, qreal w, qreal h ) const
 */
-$method=|QRectF|mapRectFromScene,mapRectFromScene2|qreal,qreal,qreal,qreal
+$internalMthod=|QRectF|mapRectFromScene,mapRectFromScene2|qreal,qreal,qreal,qreal
 
 //[1]QRectF mapRectFromScene ( const QRectF & rect ) const
 //[2]QRectF mapRectFromScene ( qreal x, qreal y, qreal w, qreal h ) const
@@ -914,11 +843,11 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMSCENE )
 {
   if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPRECTFROMSCENE1 );
+    QGraphicsItem_mapRectFromScene1();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPRECTFROMSCENE2 );
+    QGraphicsItem_mapRectFromScene2();
   }
   else
   {
@@ -929,12 +858,12 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMSCENE )
 /*
 QRectF mapRectToItem ( const QGraphicsItem * item, const QRectF & rect ) const
 */
-$method=|QRectF|mapRectToItem,mapRectToItem1|const QGraphicsItem *,const QRectF &
+$internalMethod=|QRectF|mapRectToItem,mapRectToItem1|const QGraphicsItem *,const QRectF &
 
 /*
 QRectF mapRectToItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
 */
-$method=|QRectF|mapRectToItem,mapRectToItem2|const QGraphicsItem *,qreal,qreal,qreal,qreal
+$internalMethod=|QRectF|mapRectToItem,mapRectToItem2|const QGraphicsItem *,qreal,qreal,qreal,qreal
 
 //[1]QRectF mapRectToItem ( const QGraphicsItem * item, const QRectF & rect ) const
 //[2]QRectF mapRectToItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
@@ -943,11 +872,11 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOITEM )
 {
   if( ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQRECTF(2) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPRECTTOITEM1 );
+    QGraphicsItem_mapRectToItem1();
   }
   else if( ISNUMPAR(5) && ISQGRAPHICSITEM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPRECTTOITEM2 );
+    QGraphicsItem_mapRectToItem2();
   }
   else
   {
@@ -958,12 +887,12 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOITEM )
 /*
 QRectF mapRectToParent ( const QRectF & rect ) const
 */
-$method=|QRectF|mapRectToParent,mapRectToParent1|const QRectF &
+$internalMethod=|QRectF|mapRectToParent,mapRectToParent1|const QRectF &
 
 /*
 QRectF mapRectToParent ( qreal x, qreal y, qreal w, qreal h ) const
 */
-$method=|QRectF|mapRectToParent,mapRectToParent2|qreal,qreal,qreal,qreal
+$internalMethod=|QRectF|mapRectToParent,mapRectToParent2|qreal,qreal,qreal,qreal
 
 //[1]QRectF mapRectToParent ( const QRectF & rect ) const
 //[2]QRectF mapRectToParent ( qreal x, qreal y, qreal w, qreal h ) const
@@ -972,11 +901,11 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOPARENT )
 {
   if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPRECTTOPARENT1 );
+    QGraphicsItem_mapRectToParent1();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPRECTTOPARENT2 );
+    QGraphicsItem_mapRectToParent2();
   }
   else
   {
@@ -987,12 +916,12 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOPARENT )
 /*
 QRectF mapRectToScene ( const QRectF & rect ) const
 */
-$method=|QRectF|mapRectToScene,mapRectToScene1|const QRectF &
+$internalMethod=|QRectF|mapRectToScene,mapRectToScene1|const QRectF &
 
 /*
 QRectF mapRectToScene ( qreal x, qreal y, qreal w, qreal h ) const
 */
-$method=|QRectF|mapRectToScene,mapRectToScene2|qreal,qreal,qreal,qreal
+$internalMethod=|QRectF|mapRectToScene,mapRectToScene2|qreal,qreal,qreal,qreal
 
 //[1]QRectF mapRectToScene ( const QRectF & rect ) const
 //[2]QRectF mapRectToScene ( qreal x, qreal y, qreal w, qreal h ) const
@@ -1001,11 +930,11 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOSCENE )
 {
   if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPRECTTOSCENE1 );
+    QGraphicsItem_mapRectToScene1();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPRECTTOSCENE2 );
+    QGraphicsItem_mapRectToScene2();
   }
   else
   {
@@ -1016,32 +945,32 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOSCENE )
 /*
 QPointF mapToItem ( const QGraphicsItem * item, const QPointF & point ) const
 */
-$method=|QPointF|mapToItem,mapToItem1|const QGraphicsItem *,const QPointF &
+$internalMethod=|QPointF|mapToItem,mapToItem1|const QGraphicsItem *,const QPointF &
 
 /*
 QPolygonF mapToItem ( const QGraphicsItem * item, const QRectF & rect ) const
 */
-$method=|QPolygonF|mapToItem,mapToItem2|const QGraphicsItem *,const QRectF &
+$internalMethod=|QPolygonF|mapToItem,mapToItem2|const QGraphicsItem *,const QRectF &
 
 /*
 QPolygonF mapToItem ( const QGraphicsItem * item, const QPolygonF & polygon ) const
 */
-$method=|QPolygonF|mapToItem,mapToItem3|const QGraphicsItem *,const QPolygonF &
+$internalMethod=|QPolygonF|mapToItem,mapToItem3|const QGraphicsItem *,const QPolygonF &
 
 /*
 QPainterPath mapToItem ( const QGraphicsItem * item, const QPainterPath & path ) const
 */
-$method=|QPainterPath|mapToItem,mapToItem4|const QGraphicsItem *,const QPainterPath &
+$internalMethod=|QPainterPath|mapToItem,mapToItem4|const QGraphicsItem *,const QPainterPath &
 
 /*
 QPolygonF mapToItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
 */
-$method=|QPolygonF|mapToItem,mapToItem5|const QGraphicsItem *,qreal,qreal,qreal,qreal
+$internalMethod=|QPolygonF|mapToItem,mapToItem5|const QGraphicsItem *,qreal,qreal,qreal,qreal
 
 /*
 QPointF mapToItem ( const QGraphicsItem * item, qreal x, qreal y ) const
 */
-$method=|QPointF|mapToItem,mapToItem6|const QGraphicsItem *,qreal,qreal
+$internalMethod=|QPointF|mapToItem,mapToItem6|const QGraphicsItem *,qreal,qreal
 
 //[1]QPointF mapToItem ( const QGraphicsItem * item, const QPointF & point ) const
 //[2]QPolygonF mapToItem ( const QGraphicsItem * item, const QRectF & rect ) const
@@ -1054,27 +983,27 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOITEM )
 {
   if( ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQPOINTF(2) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPTOITEM1 );
+    QGraphicsItem_mapToItem1();
   }
   else if( ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQRECTF(2) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPTOITEM2 );
+    QGraphicsItem_mapToItem2();
   }
   else if( ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQPOLYGONF(2) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPTOITEM3 );
+    QGraphicsItem_mapToItem3();
   }
   else if( ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQPAINTERPATH(2) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPTOITEM4 );
+    QGraphicsItem_mapToItem4();
   }
   else if( ISNUMPAR(5) && ISQGRAPHICSITEM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPTOITEM5 );
+    QGraphicsItem_mapToItem5();
   }
   else if( ISNUMPAR(3) && ISQGRAPHICSITEM(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPTOITEM6 );
+    QGraphicsItem_mapToItem6();
   }
   else
   {
@@ -1085,32 +1014,32 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOITEM )
 /*
 QPointF mapToParent ( const QPointF & point ) const
 */
-$method=|QPointF|mapToParent,mapToParent1|const QPointF &
+$internalMethod=|QPointF|mapToParent,mapToParent1|const QPointF &
 
 /*
 QPolygonF mapToParent ( const QRectF & rect ) const
 */
-$method=|QPolygonF|mapToParent,mapToParent2|const QRectF &
+$internalMethod=|QPolygonF|mapToParent,mapToParent2|const QRectF &
 
 /*
 QPolygonF mapToParent ( const QPolygonF & polygon ) const
 */
-$method=|QPolygonF|mapToParent,mapToParent3|const QPolygonF &
+$internalMethod=|QPolygonF|mapToParent,mapToParent3|const QPolygonF &
 
 /*
 QPainterPath mapToParent ( const QPainterPath & path ) const
 */
-$method=|QPainterPath|mapToParent,mapToParent4|const QPainterPath &
+$internalMethod=|QPainterPath|mapToParent,mapToParent4|const QPainterPath &
 
 /*
 QPolygonF mapToParent ( qreal x, qreal y, qreal w, qreal h ) const
 */
-$method=|QPolygonF|mapToParent,mapToParent5|qreal,qreal,qreal,qreal
+$internalMethod=|QPolygonF|mapToParent,mapToParent5|qreal,qreal,qreal,qreal
 
 /*
 QPointF mapToParent ( qreal x, qreal y ) const
 */
-$method=|QPointF|mapToParent,mapToParent6|qreal,qreal
+$internalMethod=|QPointF|mapToParent,mapToParent6|qreal,qreal
 
 //[1]QPointF mapToParent ( const QPointF & point ) const
 //[2]QPolygonF mapToParent ( const QRectF & rect ) const
@@ -1123,27 +1052,27 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOPARENT )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPTOPARENT1 );
+    QGraphicsItem_mapToParent1();
   }
   else if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPTOPARENT2 );
+    QGraphicsItem_mapToParent2();
   }
   else if( ISNUMPAR(1) && ISQPOLYGONF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPTOPARENT3 );
+    QGraphicsItem_mapToParent3();
   }
   else if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPTOPARENT4 );
+    QGraphicsItem_mapToParent4();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPTOPARENT5 );
+    QGraphicsItem_mapToParent5();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPTOPARENT6 );
+    QGraphicsItem_mapToParent6();
   }
   else
   {
@@ -1154,32 +1083,32 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOPARENT )
 /*
 QPointF mapToScene ( const QPointF & point ) const
 */
-$method=|QPointF|mapToScene,mapToScene1|const QPointF &
+$internalMethod=|QPointF|mapToScene,mapToScene1|const QPointF &
 
 /*
 QPolygonF mapToScene ( const QRectF & rect ) const
 */
-$method=|QPolygonF|mapToScene,mapToScene2|const QRectF &
+$internalMethod=|QPolygonF|mapToScene,mapToScene2|const QRectF &
 
 /*
 QPolygonF mapToScene ( const QPolygonF & polygon ) const
 */
-$method=|QPolygonF|mapToScene,mapToScene3|const QPolygonF &
+$internalMethod=|QPolygonF|mapToScene,mapToScene3|const QPolygonF &
 
 /*
 QPainterPath mapToScene ( const QPainterPath & path ) const
 */
-$method=|QPainterPath|mapToScene,mapToScene4|const QPainterPath &
+$internalMethod=|QPainterPath|mapToScene,mapToScene4|const QPainterPath &
 
 /*
 QPolygonF mapToScene ( qreal x, qreal y, qreal w, qreal h ) const
 */
-$method=|QPolygonF|mapToScene,mapToScene5|qreal,qreal,qreal,qreal
+$internalMethod=|QPolygonF|mapToScene,mapToScene5|qreal,qreal,qreal,qreal
 
 /*
 QPointF mapToScene ( qreal x, qreal y ) const
 */
-$method=|QPointF|mapToScene,mapToScene6|qreal,qreal
+$internalMethod=|QPointF|mapToScene,mapToScene6|qreal,qreal
 
 //[1]QPointF mapToScene ( const QPointF & point ) const
 //[2]QPolygonF mapToScene ( const QRectF & rect ) const
@@ -1192,27 +1121,27 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOSCENE )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPTOSCENE1 );
+    QGraphicsItem_mapToScene1();
   }
   else if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPTOSCENE2 );
+    QGraphicsItem_mapToScene2();
   }
   else if( ISNUMPAR(1) && ISQPOLYGONF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPTOSCENE3 );
+    QGraphicsItem_mapToScene3();
   }
   else if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPTOSCENE4 );
+    QGraphicsItem_mapToScene4();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPTOSCENE5 );
+    QGraphicsItem_mapToScene5();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_MAPTOSCENE6 );
+    QGraphicsItem_mapToScene6();
   }
   else
   {
@@ -1423,12 +1352,12 @@ $method=|void|setParentItem|QGraphicsItem *
 /*
 void setPos ( const QPointF & pos )
 */
-$method=|void|setPos,setPos1|const QPointF &
+$internalMethod=|void|setPos,setPos1|const QPointF &
 
 /*
 void setPos ( qreal x, qreal y )
 */
-$method=|void|setPos,setPos2|qreal,qreal
+$internalMethod=|void|setPos,setPos2|qreal,qreal
 
 //[1]void setPos ( const QPointF & pos )
 //[2]void setPos ( qreal x, qreal y )
@@ -1437,11 +1366,11 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETPOS )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_SETPOS1 );
+    QGraphicsItem_setPos1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_SETPOS2 );
+    QGraphicsItem_setPos2();
   }
   else
   {
@@ -1477,12 +1406,12 @@ $method=|void|setTransform|const QTransform &,bool=false
 /*
 void setTransformOriginPoint ( const QPointF & origin )
 */
-$method=|void|setTransformOriginPoint,setTransformOriginPoint1|const QPointF &
+$internalMethod=|void|setTransformOriginPoint,setTransformOriginPoint1|const QPointF &
 
 /*
 void setTransformOriginPoint ( qreal x, qreal y )
 */
-$method=|void|setTransformOriginPoint,setTransformOriginPoint2|qreal,qreal
+$internalMethod=|void|setTransformOriginPoint,setTransformOriginPoint2|qreal,qreal
 
 //[1]void setTransformOriginPoint ( const QPointF & origin )
 //[2]void setTransformOriginPoint ( qreal x, qreal y )
@@ -1491,11 +1420,11 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETTRANSFORMORIGINPOINT )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_SETTRANSFORMORIGINPOINT1 );
+    QGraphicsItem_setTransformOriginPoint1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_SETTRANSFORMORIGINPOINT2 );
+    QGraphicsItem_setTransformOriginPoint2();
   }
   else
   {
@@ -1571,6 +1500,7 @@ const QGraphicsObject * toGraphicsObject () const
 */
 $method=|const QGraphicsObject *|toGraphicsObject,toGraphicsObject2|
 
+%% TOCHECK:
 //[1]QGraphicsObject * toGraphicsObject ()
 //[2]const QGraphicsObject * toGraphicsObject () const
 
@@ -1614,14 +1544,8 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TRANSFORMATIONS )
   if( obj )
   {
     QList<QGraphicsTransform *> list = obj->transformations ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGRAPHICSTRANSFORM" );
-    #else
-    pDynSym = hb_dynsymFindName( "QGRAPHICSTRANSFORM" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSTRANSFORM" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -1671,12 +1595,12 @@ $method=|void|unsetCursor|
 /*
 void update ( const QRectF & rect = QRectF() )
 */
-$method=|void|update,update1|const QRectF &=QRectF()
+$internalMethod=|void|update,update1|const QRectF &=QRectF()
 
 /*
 void update ( qreal x, qreal y, qreal width, qreal height )
 */
-$method=|void|update,update2|qreal,qreal,qreal,qreal
+$internalMethod=|void|update,update2|qreal,qreal,qreal,qreal
 
 //[1]void update ( const QRectF & rect = QRectF() )
 //[2]void update ( qreal x, qreal y, qreal width, qreal height )
@@ -1685,11 +1609,11 @@ HB_FUNC_STATIC( QGRAPHICSITEM_UPDATE )
 {
   if( ISBETWEEN(0,1) && (ISQRECTF(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_UPDATE1 );
+    QGraphicsItem_update1();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QGRAPHICSITEM_UPDATE2 );
+    QGraphicsItem_update2();
   }
   else
   {

@@ -150,8 +150,7 @@ HB_FUNC_STATIC( QWIZARD_PAGEIDS )
   if( obj )
   {
     QList<int> list = obj->pageIds ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -303,8 +302,7 @@ HB_FUNC_STATIC( QWIZARD_VISITEDPAGES )
   if( obj )
   {
     QList<int> list = obj->visitedPages ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

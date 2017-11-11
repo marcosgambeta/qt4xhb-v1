@@ -14,17 +14,7 @@ CLASS QDeclarativeProperty
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
-   METHOD new6
-   METHOD new7
-   METHOD new8
    METHOD new
-   METHOD connectNotifySignal1
-   METHOD connectNotifySignal2
    METHOD connectNotifySignal
    METHOD hasNotifySignal
    METHOD index
@@ -44,15 +34,7 @@ CLASS QDeclarativeProperty
    METHOD propertyTypeName
    METHOD reset
    METHOD type
-   METHOD read1
-   METHOD read2
-   METHOD read3
-   METHOD read4
    METHOD read
-   METHOD write1
-   METHOD write2
-   METHOD write3
-   METHOD write4
    METHOD write
 
    METHOD newFrom
@@ -78,42 +60,42 @@ $destructor
 /*
 QDeclarativeProperty ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QDeclarativeProperty ( QObject * obj )
 */
-$constructor=|new2|QObject *
+$internalConstructor=|new2|QObject *
 
 /*
 QDeclarativeProperty ( QObject * obj, QDeclarativeContext * ctxt )
 */
-$constructor=|new3|QObject *,QDeclarativeContext *
+$internalConstructor=|new3|QObject *,QDeclarativeContext *
 
 /*
 QDeclarativeProperty ( QObject * obj, QDeclarativeEngine * engine )
 */
-$constructor=|new4|QObject *,QDeclarativeEngine *
+$internalConstructor=|new4|QObject *,QDeclarativeEngine *
 
 /*
 QDeclarativeProperty ( QObject * obj, const QString & name )
 */
-$constructor=|new5|QObject *,const QString &
+$internalConstructor=|new5|QObject *,const QString &
 
 /*
 QDeclarativeProperty ( QObject * obj, const QString & name, QDeclarativeContext * ctxt )
 */
-$constructor=|new6|QObject *,const QString &,QDeclarativeContext *
+$internalConstructor=|new6|QObject *,const QString &,QDeclarativeContext *
 
 /*
 QDeclarativeProperty ( QObject * obj, const QString & name, QDeclarativeEngine * engine )
 */
-$constructor=|new7|QObject *,const QString &,QDeclarativeEngine *
+$internalConstructor=|new7|QObject *,const QString &,QDeclarativeEngine *
 
 /*
 QDeclarativeProperty ( const QDeclarativeProperty & other )
 */
-$constructor=|new8|const QDeclarativeProperty &
+$internalConstructor=|new8|const QDeclarativeProperty &
 
 //[1]QDeclarativeProperty ()
 //[2]QDeclarativeProperty ( QObject * obj )
@@ -128,35 +110,35 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDECLARATIVEPROPERTY_NEW1 );
+    QDeclarativeProperty_new1();
   }
   else if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
-    HB_FUNC_EXEC( QDECLARATIVEPROPERTY_NEW2 );
+    QDeclarativeProperty_new2();
   }
   else if( ISNUMPAR(2) && ISQOBJECT(1) && ISQDECLARATIVECONTEXT(2) )
   {
-    HB_FUNC_EXEC( QDECLARATIVEPROPERTY_NEW3 );
+    QDeclarativeProperty_new3();
   }
   else if( ISNUMPAR(2) && ISQOBJECT(1) && ISQDECLARATIVEENGINE(2) )
   {
-    HB_FUNC_EXEC( QDECLARATIVEPROPERTY_NEW4 );
+    QDeclarativeProperty_new4();
   }
   else if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QDECLARATIVEPROPERTY_NEW5 );
+    QDeclarativeProperty_new5();
   }
   else if( ISNUMPAR(3) && ISQOBJECT(1) && ISCHAR(2) && ISQDECLARATIVECONTEXT(3) )
   {
-    HB_FUNC_EXEC( QDECLARATIVEPROPERTY_NEW6 );
+    QDeclarativeProperty_new6();
   }
   else if( ISNUMPAR(3) && ISQOBJECT(1) && ISCHAR(2) && ISQDECLARATIVEENGINE(3) )
   {
-    HB_FUNC_EXEC( QDECLARATIVEPROPERTY_NEW7 );
+    QDeclarativeProperty_new7();
   }
   else if( ISNUMPAR(1) && ISQDECLARATIVEPROPERTY(1) )
   {
-    HB_FUNC_EXEC( QDECLARATIVEPROPERTY_NEW8 );
+    QDeclarativeProperty_new8();
   }
   else
   {
@@ -167,12 +149,12 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW )
 /*
 bool connectNotifySignal ( QObject * dest, const char * slot ) const
 */
-$method=|bool|connectNotifySignal,connectNotifySignal1|QObject *,const char *
+$internalMethod=|bool|connectNotifySignal,connectNotifySignal1|QObject *,const char *
 
 /*
 bool connectNotifySignal ( QObject * dest, int method ) const
 */
-$method=|bool|connectNotifySignal,connectNotifySignal2|QObject *,int
+$internalMethod=|bool|connectNotifySignal,connectNotifySignal2|QObject *,int
 
 //[1]bool connectNotifySignal ( QObject * dest, const char * slot ) const
 //[2]bool connectNotifySignal ( QObject * dest, int method ) const
@@ -181,11 +163,11 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_CONNECTNOTIFYSIGNAL )
 {
   if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QDECLARATIVEPROPERTY_CONNECTNOTIFYSIGNAL1 );
+    QDeclarativeProperty_connectNotifySignal1();
   }
   else if( ISNUMPAR(2) && ISQOBJECT(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QDECLARATIVEPROPERTY_CONNECTNOTIFYSIGNAL2 );
+    QDeclarativeProperty_connectNotifySignal2();
   }
   else
   {
@@ -286,22 +268,22 @@ $method=|QDeclarativeProperty::Type|type|
 /*
 QVariant read () const
 */
-$method=|QVariant|read,read1|
+$internalMethod=|QVariant|read,read1|
 
 /*
 static QVariant read ( QObject * object, const QString & name )
 */
-$staticMethod=|QVariant|read,read2|QObject *,const QString &
+$internalStaticMethod=|QVariant|read,read2|QObject *,const QString &
 
 /*
 static QVariant read ( QObject * object, const QString & name, QDeclarativeContext * ctxt )
 */
-$staticMethod=|QVariant|read,read3|QObject *,const QString &,QDeclarativeContext *
+$internalStaticMethod=|QVariant|read,read3|QObject *,const QString &,QDeclarativeContext *
 
 /*
 static QVariant read ( QObject * object, const QString & name, QDeclarativeEngine * engine )
 */
-$staticMethod=|QVariant|read,read4|QObject *,const QString &,QDeclarativeEngine *
+$internalStaticMethod=|QVariant|read,read4|QObject *,const QString &,QDeclarativeEngine *
 
 //[1]QVariant read () const
 //[2]QVariant read ( QObject * object, const QString & name )
@@ -312,19 +294,19 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_READ )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDECLARATIVEPROPERTY_READ1 );
+    QDeclarativeProperty_read1();
   }
   else if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QDECLARATIVEPROPERTY_READ2 );
+    QDeclarativeProperty_read2();
   }
   else if( ISNUMPAR(3) && ISQOBJECT(1) && ISCHAR(2) && ISQDECLARATIVECONTEXT(3) )
   {
-    HB_FUNC_EXEC( QDECLARATIVEPROPERTY_READ3 );
+    QDeclarativeProperty_read3();
   }
   else if( ISNUMPAR(3) && ISQOBJECT(1) && ISCHAR(2) && ISQDECLARATIVEENGINE(3) )
   {
-    HB_FUNC_EXEC( QDECLARATIVEPROPERTY_READ4 );
+    QDeclarativeProperty_read4();
   }
   else
   {
@@ -335,22 +317,22 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_READ )
 /*
 bool write ( const QVariant & value ) const
 */
-$method=|bool|write,write1|const QVariant &
+$internalMethod=|bool|write,write1|const QVariant &
 
 /*
 static bool write ( QObject * object, const QString & name, const QVariant & value )
 */
-$staticMethod=|bool|write,write2|QObject *,const QString &,const QVariant &
+$internalStaticMethod=|bool|write,write2|QObject *,const QString &,const QVariant &
 
 /*
 static bool write ( QObject * object, const QString & name, const QVariant & value, QDeclarativeContext * ctxt )
 */
-$staticMethod=|bool|write,write3|QObject *,const QString &,const QVariant &,QDeclarativeContext *
+$internalStaticMethod=|bool|write,write3|QObject *,const QString &,const QVariant &,QDeclarativeContext *
 
 /*
 static bool write ( QObject * object, const QString & name, const QVariant & value, QDeclarativeEngine * engine )
 */
-$staticMethod=|bool|write,write4|QObject *,const QString &,const QVariant &,QDeclarativeEngine *
+$internalStaticMethod=|bool|write,write4|QObject *,const QString &,const QVariant &,QDeclarativeEngine *
 
 //[1]bool write ( const QVariant & value ) const
 //[2]bool write ( QObject * object, const QString & name, const QVariant & value )
@@ -361,19 +343,19 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_WRITE )
 {
   if( ISNUMPAR(1) && ISQVARIANT(1) )
   {
-    HB_FUNC_EXEC( QDECLARATIVEPROPERTY_WRITE1 );
+    QDeclarativeProperty_write1();
   }
   else if( ISNUMPAR(3) && ISQOBJECT(1) && ISCHAR(2) && ISQVARIANT(3) )
   {
-    HB_FUNC_EXEC( QDECLARATIVEPROPERTY_WRITE2 );
+    QDeclarativeProperty_write2();
   }
   else if( ISNUMPAR(4) && ISQOBJECT(1) && ISCHAR(2) && ISQVARIANT(3) && ISQDECLARATIVECONTEXT(4) )
   {
-    HB_FUNC_EXEC( QDECLARATIVEPROPERTY_WRITE3 );
+    QDeclarativeProperty_write3();
   }
   else if( ISNUMPAR(4) && ISQOBJECT(1) && ISCHAR(2) && ISQVARIANT(3) && ISQDECLARATIVEENGINE(4) )
   {
-    HB_FUNC_EXEC( QDECLARATIVEPROPERTY_WRITE4 );
+    QDeclarativeProperty_write4();
   }
   else
   {

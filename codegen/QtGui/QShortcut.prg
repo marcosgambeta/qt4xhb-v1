@@ -9,8 +9,6 @@ REQUEST QWIDGET
 
 CLASS QShortcut INHERIT QObject
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD autoRepeat
@@ -46,12 +44,12 @@ $destructor
 /*
 QShortcut(QWidget * parent)
 */
-$constructor=|new1|QWidget *
+$internalConstructor=|new1|QWidget *
 
 /*
 QShortcut(const QKeySequence & key, QWidget * parent, const char * member = 0, const char * ambiguousMember = 0, Qt::ShortcutContext context = Qt::WindowShortcut)
 */
-$constructor=|new2|const QKeySequence &,QWidget *,const char *=0,const char *=0,Qt::ShortcutContext=Qt::WindowShortcut
+$internalConstructor=|new2|const QKeySequence &,QWidget *,const char *=0,const char *=0,Qt::ShortcutContext=Qt::WindowShortcut
 
 //[1]QShortcut(QWidget * parent)
 //[2]QShortcut(const QKeySequence & key, QWidget * parent, const char * member = 0, const char * ambiguousMember = 0, Qt::ShortcutContext context = Qt::WindowShortcut)
@@ -60,11 +58,11 @@ HB_FUNC_STATIC( QSHORTCUT_NEW )
 {
   if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    HB_FUNC_EXEC( QSHORTCUT_NEW1 );
+    QShortcut_new1();
   }
   else if( ISBETWEEN(2,5) && ISQKEYSEQUENCE(1) && ISQWIDGET(2) && (ISCHAR(3)||ISNIL(3)) && (ISCHAR(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
   {
-    HB_FUNC_EXEC( QSHORTCUT_NEW2 );
+    QShortcut_new2();
   }
   else
   {

@@ -183,14 +183,8 @@ HB_FUNC_STATIC( QSSLSOCKET_CACERTIFICATES )
   if( obj )
   {
     QList<QSslCertificate> list = obj->caCertificates ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QSSLCERTIFICATE" );
-    #else
-    pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -231,14 +225,8 @@ HB_FUNC_STATIC( QSSLSOCKET_CIPHERS )
   if( obj )
   {
     QList<QSslCipher> list = obj->ciphers ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QSSLCIPHER" );
-    #else
-    pDynSym = hb_dynsymFindName( "QSSLCIPHER" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCIPHER" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -390,14 +378,8 @@ HB_FUNC_STATIC( QSSLSOCKET_PEERCERTIFICATECHAIN )
   if( obj )
   {
     QList<QSslCertificate> list = obj->peerCertificateChain ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QSSLCERTIFICATE" );
-    #else
-    pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -636,14 +618,8 @@ HB_FUNC_STATIC( QSSLSOCKET_SSLERRORS )
   if( obj )
   {
     QList<QSslError> list = obj->sslErrors ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QSSLERROR" );
-    #else
-    pDynSym = hb_dynsymFindName( "QSSLERROR" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -786,14 +762,8 @@ QList<QSslCertificate> defaultCaCertificates ()
 HB_FUNC_STATIC( QSSLSOCKET_DEFAULTCACERTIFICATES )
 {
   QList<QSslCertificate> list = QSslSocket::defaultCaCertificates ();
-  PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QSSLCERTIFICATE" );
-  #else
-  pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
-  #endif
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {
@@ -829,14 +799,8 @@ QList<QSslCipher> defaultCiphers ()
 HB_FUNC_STATIC( QSSLSOCKET_DEFAULTCIPHERS )
 {
   QList<QSslCipher> list = QSslSocket::defaultCiphers ();
-  PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QSSLCIPHER" );
-  #else
-  pDynSym = hb_dynsymFindName( "QSSLCIPHER" );
-  #endif
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCIPHER" );
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {
@@ -906,14 +870,8 @@ QList<QSslCipher> supportedCiphers ()
 HB_FUNC_STATIC( QSSLSOCKET_SUPPORTEDCIPHERS )
 {
   QList<QSslCipher> list = QSslSocket::supportedCiphers ();
-  PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QSSLCIPHER" );
-  #else
-  pDynSym = hb_dynsymFindName( "QSSLCIPHER" );
-  #endif
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCIPHER" );
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {
@@ -954,14 +912,8 @@ QList<QSslCertificate> systemCaCertificates ()
 HB_FUNC_STATIC( QSSLSOCKET_SYSTEMCACERTIFICATES )
 {
   QList<QSslCertificate> list = QSslSocket::systemCaCertificates ();
-  PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QSSLCERTIFICATE" );
-  #else
-  pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
-  #endif
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {

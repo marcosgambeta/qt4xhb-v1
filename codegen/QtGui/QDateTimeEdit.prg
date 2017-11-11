@@ -12,10 +12,6 @@ REQUEST QSIZE
 
 CLASS QDateTimeEdit INHERIT QAbstractSpinBox
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD calendarPopup
@@ -88,22 +84,22 @@ $destructor
 /*
 QDateTimeEdit ( QWidget * parent = 0 )
 */
-$constructor=|new1|QWidget *=0
+$internalConstructor=|new1|QWidget *=0
 
 /*
 QDateTimeEdit ( const QDateTime & datetime, QWidget * parent = 0 )
 */
-$constructor=|new2|const QDateTime &,QWidget *=0
+$internalConstructor=|new2|const QDateTime &,QWidget *=0
 
 /*
 QDateTimeEdit ( const QDate & date, QWidget * parent = 0 )
 */
-$constructor=|new3|const QDate &,QWidget *=0
+$internalConstructor=|new3|const QDate &,QWidget *=0
 
 /*
 QDateTimeEdit ( const QTime & time, QWidget * parent = 0 )
 */
-$constructor=|new4|const QTime &,QWidget *=0
+$internalConstructor=|new4|const QTime &,QWidget *=0
 
 //[1]QDateTimeEdit ( QWidget * parent = 0 )
 //[2]QDateTimeEdit ( const QDateTime & datetime, QWidget * parent = 0 )
@@ -114,19 +110,19 @@ HB_FUNC_STATIC( QDATETIMEEDIT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QDATETIMEEDIT_NEW1 );
+    QDateTimeEdit_new1();
   }
   else if( ISBETWEEN(1,2) && ISQDATETIME(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QDATETIMEEDIT_NEW2 );
+    QDateTimeEdit_new2();
   }
   else if( ISBETWEEN(1,2) && ISQDATE(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QDATETIMEEDIT_NEW3 );
+    QDateTimeEdit_new3();
   }
   else if( ISBETWEEN(1,2) && ISQTIME(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QDATETIMEEDIT_NEW4 );
+    QDateTimeEdit_new4();
   }
   else
   {

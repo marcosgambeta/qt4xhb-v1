@@ -12,8 +12,6 @@ CLASS QDeclarativeListReference
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD append
    METHOD at
@@ -50,12 +48,12 @@ $destructor
 /*
 QDeclarativeListReference ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QDeclarativeListReference ( QObject * object, const char * property, QDeclarativeEngine * engine = 0 )
 */
-$constructor=|new2|QObject *,const char *,QDeclarativeEngine *=0
+$internalConstructor=|new2|QObject *,const char *,QDeclarativeEngine *=0
 
 //[1]QDeclarativeListReference ()
 //[2]QDeclarativeListReference ( QObject * object, const char * property, QDeclarativeEngine * engine = 0 )
@@ -64,11 +62,11 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDECLARATIVELISTREFERENCE_NEW1 );
+    QDeclarativeListReference_new1();
   }
   else if( ISBETWEEN(2,3) && ISQOBJECT(1) && ISCHAR(2) && (ISQDECLARATIVEENGINE(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QDECLARATIVELISTREFERENCE_NEW2 );
+    QDeclarativeListReference_new2();
   }
   else
   {

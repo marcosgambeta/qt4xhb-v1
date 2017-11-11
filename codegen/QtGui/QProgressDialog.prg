@@ -8,8 +8,6 @@ REQUEST QSIZE
 
 CLASS QProgressDialog INHERIT QDialog
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD autoClose
@@ -56,12 +54,12 @@ $destructor
 /*
 QProgressDialog ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
-$constructor=|new1|QWidget *=0,Qt::WindowFlags=0
+$internalConstructor=|new1|QWidget *=0,Qt::WindowFlags=0
 
 /*
 QProgressDialog ( const QString & labelText, const QString & cancelButtonText, int minimum, int maximum, QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
-$constructor=|new2|const QString &,const QString &,int,int,QWidget *=0,Qt::WindowFlags=0
+$internalConstructor=|new2|const QString &,const QString &,int,int,QWidget *=0,Qt::WindowFlags=0
 
 //[1]QProgressDialog ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 //[2]QProgressDialog ( const QString & labelText, const QString & cancelButtonText, int minimum, int maximum, QWidget * parent = 0, Qt::WindowFlags f = 0 )
@@ -70,11 +68,11 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QPROGRESSDIALOG_NEW1 );
+    QProgressDialog_new1();
   }
   else if( ISBETWEEN(4,6) && ISCHAR(1) && ISCHAR(2) && ISNUM(3) && ISNUM(4) && (ISQWIDGET(5)||ISNIL(5)) && (ISNUM(6)||ISNIL(6)) )
   {
-    HB_FUNC_EXEC( QPROGRESSDIALOG_NEW2 );
+    QProgressDialog_new2();
   }
   else
   {

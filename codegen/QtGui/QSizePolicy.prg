@@ -7,9 +7,6 @@ CLASS QSizePolicy
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD controlType
@@ -52,17 +49,17 @@ $destructor
 /*
 QSizePolicy ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QSizePolicy ( Policy horizontal, Policy vertical )
 */
-$constructor=|new2|QSizePolicy::Policy,QSizePolicy::Policy
+$internalConstructor=|new2|QSizePolicy::Policy,QSizePolicy::Policy
 
 /*
 QSizePolicy ( Policy horizontal, Policy vertical, ControlType type )
 */
-$constructor=|new3|QSizePolicy::Policy,QSizePolicy::Policy,QSizePolicy::ControlType
+$internalConstructor=|new3|QSizePolicy::Policy,QSizePolicy::Policy,QSizePolicy::ControlType
 
 //[1]QSizePolicy ()
 //[2]QSizePolicy ( Policy horizontal, Policy vertical )
@@ -72,15 +69,15 @@ HB_FUNC_STATIC( QSIZEPOLICY_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSIZEPOLICY_NEW1 );
+    QSizePolicy_new1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QSIZEPOLICY_NEW2 );
+    QSizePolicy_new2();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QSIZEPOLICY_NEW3 );
+    QSizePolicy_new3();
   }
   else
   {

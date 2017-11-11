@@ -32,23 +32,15 @@ CLASS QGraphicsLayoutItem INHERIT QObject
    METHOD preferredWidth
    METHOD setGeometry
    METHOD setMaximumHeight
-   METHOD setMaximumSize1
-   METHOD setMaximumSize2
    METHOD setMaximumSize
    METHOD setMaximumWidth
    METHOD setMinimumHeight
-   METHOD setMinimumSize1
-   METHOD setMinimumSize2
    METHOD setMinimumSize
    METHOD setMinimumWidth
    METHOD setParentLayoutItem
    METHOD setPreferredHeight
-   METHOD setPreferredSize1
-   METHOD setPreferredSize2
    METHOD setPreferredSize
    METHOD setPreferredWidth
-   METHOD setSizePolicy1
-   METHOD setSizePolicy2
    METHOD setSizePolicy
    METHOD sizePolicy
    METHOD updateGeometry
@@ -167,12 +159,12 @@ $method=|void|setMaximumHeight|qreal
 /*
 void setMaximumSize ( const QSizeF & size )
 */
-$method=|void|setMaximumSize,setMaximumSize1|const QSizeF &
+$internalMethod=|void|setMaximumSize,setMaximumSize1|const QSizeF &
 
 /*
 void setMaximumSize ( qreal w, qreal h )
 */
-$method=|void|setMaximumSize,setMaximumSize2|qreal,qreal
+$internalMethod=|void|setMaximumSize,setMaximumSize2|qreal,qreal
 
 //[1]void setMaximumSize ( const QSizeF & size )
 //[2]void setMaximumSize ( qreal w, qreal h )
@@ -181,11 +173,11 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMSIZE )
 {
   if( ISNUMPAR(1) && ISQSIZEF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSLAYOUTITEM_SETMAXIMUMSIZE1 );
+    QGraphicsLayoutItem_setMaximumSize1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QGRAPHICSLAYOUTITEM_SETMAXIMUMSIZE2 );
+    QGraphicsLayoutItem_setMaximumSize2();
   }
   else
   {
@@ -206,12 +198,12 @@ $method=|void|setMinimumHeight|qreal
 /*
 void setMinimumSize ( const QSizeF & size )
 */
-$method=|void|setMinimumSize,setMinimumSize1|const QSizeF &
+$internalMethod=|void|setMinimumSize,setMinimumSize1|const QSizeF &
 
 /*
 void setMinimumSize ( qreal w, qreal h )
 */
-$method=|void|setMinimumSize,setMinimumSize2|qreal,qreal
+$internalMethod=|void|setMinimumSize,setMinimumSize2|qreal,qreal
 
 //[1]void setMinimumSize ( const QSizeF & size )
 //[2]void setMinimumSize ( qreal w, qreal h )
@@ -220,11 +212,11 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE )
 {
   if( ISNUMPAR(1) && ISQSIZEF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE1 );
+    QGraphicsLayoutItem_setMinimumSize1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE2 );
+    QGraphicsLayoutItem_setMinimumSize2();
   }
   else
   {
@@ -250,12 +242,12 @@ $method=|void|setPreferredHeight|qreal
 /*
 void setPreferredSize ( const QSizeF & size )
 */
-$method=|void|setPreferredSize,setPreferredSize1|const QSizeF &
+$internalMethod=|void|setPreferredSize,setPreferredSize1|const QSizeF &
 
 /*
 void setPreferredSize ( qreal w, qreal h )
 */
-$method=|void|setPreferredSize,setPreferredSize2|qreal,qreal
+$internalMethod=|void|setPreferredSize,setPreferredSize2|qreal,qreal
 
 //[1]void setPreferredSize ( const QSizeF & size )
 //[2]void setPreferredSize ( qreal w, qreal h )
@@ -264,11 +256,11 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE )
 {
   if( ISNUMPAR(1) && ISQSIZEF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE1 );
+    QGraphicsLayoutItem_setPreferredSize1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE2 );
+    QGraphicsLayoutItem_setPreferredSize2();
   }
   else
   {
@@ -284,12 +276,12 @@ $method=|void|setPreferredWidth|qreal
 /*
 void setSizePolicy ( const QSizePolicy & policy )
 */
-$method=|void|setSizePolicy,setSizePolicy1|const QSizePolicy &
+$internalMethod=|void|setSizePolicy,setSizePolicy1|const QSizePolicy &
 
 /*
 void setSizePolicy ( QSizePolicy::Policy hPolicy, QSizePolicy::Policy vPolicy, QSizePolicy::ControlType controlType = QSizePolicy::DefaultType )
 */
-$method=|void|setSizePolicy,setSizePolicy2|QSizePolicy::Policy,QSizePolicy::Policy,QSizePolicy::ControlType=QSizePolicy::DefaultType
+$internalMethod=|void|setSizePolicy,setSizePolicy2|QSizePolicy::Policy,QSizePolicy::Policy,QSizePolicy::ControlType=QSizePolicy::DefaultType
 
 //[1]void setSizePolicy ( const QSizePolicy & policy )
 //[2]void setSizePolicy ( QSizePolicy::Policy hPolicy, QSizePolicy::Policy vPolicy, QSizePolicy::ControlType controlType = QSizePolicy::DefaultType )
@@ -298,11 +290,11 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETSIZEPOLICY )
 {
   if( ISNUMPAR(1) && ISQSIZEPOLICY(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSLAYOUTITEM_SETSIZEPOLICY1 );
+    QGraphicsLayoutItem_setSizePolicy1();
   }
   else if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSLAYOUTITEM_SETSIZEPOLICY2 );
+    QGraphicsLayoutItem_setSizePolicy2();
   }
   else
   {

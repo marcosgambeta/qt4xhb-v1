@@ -11,9 +11,6 @@ CLASS QActionGroup INHERIT QObject
    METHOD new
    METHOD delete
    METHOD actions
-   METHOD addAction1
-   METHOD addAction2
-   METHOD addAction3
    METHOD addAction
    METHOD checkedAction
    METHOD isEnabled
@@ -59,14 +56,8 @@ HB_FUNC_STATIC( QACTIONGROUP_ACTIONS )
   if( obj )
   {
     QList<QAction *> list = obj->actions ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QACTION" );
-    #else
-    pDynSym = hb_dynsymFindName( "QACTION" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QACTION" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -96,17 +87,17 @@ HB_FUNC_STATIC( QACTIONGROUP_ACTIONS )
 /*
 QAction * addAction ( QAction * action )
 */
-$method=|QAction *|addAction,addAction1|QAction *
+$internalMethod=|QAction *|addAction,addAction1|QAction *
 
 /*
 QAction * addAction ( const QString & text )
 */
-$method=|QAction *|addAction,addAction2|const QString &
+$internalMethod=|QAction *|addAction,addAction2|const QString &
 
 /*
 QAction * addAction ( const QIcon & icon, const QString & text )
 */
-$method=|QAction *|addAction,addAction3|const QIcon &,const QString &
+$internalMethod=|QAction *|addAction,addAction3|const QIcon &,const QString &
 
 //[1]QAction * addAction ( QAction * action )
 //[2]QAction * addAction ( const QString & text )
@@ -116,15 +107,15 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION )
 {
   if( ISNUMPAR(1) && ISQACTION(1) )
   {
-    HB_FUNC_EXEC( QACTIONGROUP_ADDACTION1 );
+    QActionGroup_addAction1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QACTIONGROUP_ADDACTION2 );
+    QActionGroup_addAction2();
   }
   else if( ISNUMPAR(2) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QACTIONGROUP_ADDACTION3 );
+    QActionGroup_addAction3();
   }
   else
   {

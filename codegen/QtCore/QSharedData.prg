@@ -7,8 +7,6 @@ CLASS QSharedData
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
 
@@ -35,12 +33,12 @@ $destructor
 /*
 QSharedData ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QSharedData ( const QSharedData & other )
 */
-$constructor=|new2|const QSharedData &
+$internalConstructor=|new2|const QSharedData &
 
 //[1]QSharedData ()
 //[2]QSharedData ( const QSharedData & other )
@@ -49,11 +47,11 @@ HB_FUNC_STATIC( QSHAREDDATA_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSHAREDDATA_NEW1 );
+    QSharedData_new1();
   }
   else if( ISNUMPAR(1) && ISQSHAREDDATA(1) )
   {
-    HB_FUNC_EXEC( QSHAREDDATA_NEW2 );
+    QSharedData_new2();
   }
   else
   {

@@ -27,8 +27,6 @@ CLASS QScriptContext
    METHOD setThisObject
    METHOD state
    METHOD thisObject
-   METHOD throwError1
-   METHOD throwError2
    METHOD throwError
    METHOD throwValue
    METHOD toString
@@ -125,12 +123,12 @@ $method=|QScriptValue|thisObject|
 /*
 QScriptValue throwError ( Error error, const QString & text )
 */
-$method=|QScriptValue|throwError,throwError1|QScriptContext::Error,const QString &
+$internalMethod=|QScriptValue|throwError,throwError1|QScriptContext::Error,const QString &
 
 /*
 QScriptValue throwError ( const QString & text )
 */
-$method=|QScriptValue|throwError,throwError2|const QString &
+$internalMethod=|QScriptValue|throwError,throwError2|const QString &
 
 //[1]QScriptValue throwError ( Error error, const QString & text )
 //[2]QScriptValue throwError ( const QString & text )
@@ -139,11 +137,11 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWERROR )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QSCRIPTCONTEXT_THROWERROR1 );
+    QScriptContext_throwError1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QSCRIPTCONTEXT_THROWERROR2 );
+    QScriptContext_throwError2();
   }
   else
   {

@@ -10,8 +10,6 @@ CLASS QMutex
    METHOD new
    METHOD delete
    METHOD lock
-   METHOD tryLock1
-   METHOD tryLock2
    METHOD tryLock
    METHOD unlock
 
@@ -50,12 +48,12 @@ $method=|void|lock|
 /*
 bool tryLock ()
 */
-$method=|bool|tryLock,tryLock1|
+$internalMethod=|bool|tryLock,tryLock1|
 
 /*
 bool tryLock ( int timeout )
 */
-$method=|bool|tryLock,tryLock2|int
+$internalMethod=|bool|tryLock,tryLock2|int
 
 //[1]bool tryLock ()
 //[2]bool tryLock ( int timeout )
@@ -64,11 +62,11 @@ HB_FUNC_STATIC( QMUTEX_TRYLOCK )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QMUTEX_TRYLOCK1 );
+    QMutex_tryLock1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QMUTEX_TRYLOCK2 );
+    QMutex_tryLock2();
   }
   else
   {

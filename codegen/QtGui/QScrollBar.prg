@@ -8,8 +8,6 @@ REQUEST QSIZE
 
 CLASS QScrollBar INHERIT QAbstractSlider
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD event
@@ -32,12 +30,12 @@ $destructor
 /*
 QScrollBar ( QWidget * parent = 0 )
 */
-$constructor=|new1|QWidget *=0
+$internalConstructor=|new1|QWidget *=0
 
 /*
 QScrollBar ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
-$constructor=|new2|Qt::Orientation,QWidget *=0
+$internalConstructor=|new2|Qt::Orientation,QWidget *=0
 
 //[1]QScrollBar ( QWidget * parent = 0 )
 //[2]QScrollBar ( Qt::Orientation orientation, QWidget * parent = 0 )
@@ -46,11 +44,11 @@ HB_FUNC_STATIC( QSCROLLBAR_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QSCROLLBAR_NEW1 );
+    QScrollBar_new1();
   }
   else if( ISBETWEEN(1,2) && ISNUM(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QSCROLLBAR_NEW2 );
+    QScrollBar_new2();
   }
   else
   {

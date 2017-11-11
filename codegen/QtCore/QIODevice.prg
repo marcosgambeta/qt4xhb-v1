@@ -23,17 +23,11 @@ CLASS QIODevice INHERIT QObject
    METHOD isWritable
    METHOD open
    METHOD openMode
-   METHOD peek1
-   METHOD peek2
    METHOD peek
    METHOD pos
    METHOD putChar
-   METHOD read1
-   METHOD read2
    METHOD read
    METHOD readAll
-   METHOD readLine1
-   METHOD readLine2
    METHOD readLine
    METHOD reset
    METHOD seek
@@ -42,9 +36,6 @@ CLASS QIODevice INHERIT QObject
    METHOD ungetChar
    METHOD waitForBytesWritten
    METHOD waitForReadyRead
-   METHOD write1
-   METHOD write2
-   METHOD write3
    METHOD write
 
    METHOD onAboutToClose
@@ -160,12 +151,12 @@ $method=|QIODevice::OpenMode|openMode|
 /*
 qint64 peek ( char * data, qint64 maxSize )
 */
-$method=|qint64|peek,peek1|char *,qint64
+$internalMethod=|qint64|peek,peek1|char *,qint64
 
 /*
 QByteArray peek ( qint64 maxSize )
 */
-$method=|QByteArray|peek,peek2|qint64
+$internalMethod=|QByteArray|peek,peek2|qint64
 
 //[1]qint64 peek ( char * data, qint64 maxSize )
 //[2]QByteArray peek ( qint64 maxSize )
@@ -174,11 +165,11 @@ HB_FUNC_STATIC( QIODEVICE_PEEK )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QIODEVICE_PEEK1 );
+    QIODevice_peek1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QIODEVICE_PEEK2 );
+    QIODevice_peek2();
   }
   else
   {
@@ -199,12 +190,12 @@ $method=|bool|putChar|char
 /*
 qint64 read ( char * data, qint64 maxSize )
 */
-$method=|qint64|read,read1|char *,qint64
+$internalMethod=|qint64|read,read1|char *,qint64
 
 /*
 QByteArray read ( qint64 maxSize )
 */
-$method=|QByteArray|read,read2|qint64
+$internalMethod=|QByteArray|read,read2|qint64
 
 //[1]qint64 read ( char * data, qint64 maxSize )
 //[2]QByteArray read ( qint64 maxSize )
@@ -213,11 +204,11 @@ HB_FUNC_STATIC( QIODEVICE_READ )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QIODEVICE_READ1 );
+    QIODevice_read1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QIODEVICE_READ2 );
+    QIODevice_read2();
   }
   else
   {
@@ -233,12 +224,12 @@ $method=|QByteArray|readAll|
 /*
 qint64 readLine ( char * data, qint64 maxSize )
 */
-$method=|qint64|readLine,readLine1|char *,qint64
+$internalMethod=|qint64|readLine,readLine1|char *,qint64
 
 /*
 QByteArray readLine ( qint64 maxSize = 0 )
 */
-$method=|QByteArray|readLine,readLine2|qint64=0
+$internalMethod=|QByteArray|readLine,readLine2|qint64=0
 
 //[1]qint64 readLine ( char * data, qint64 maxSize )
 //[2]QByteArray readLine ( qint64 maxSize = 0 )
@@ -247,11 +238,11 @@ HB_FUNC_STATIC( QIODEVICE_READLINE )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QIODEVICE_READLINE1 );
+    QIODevice_readLine1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QIODEVICE_READLINE2 );
+    QIODevice_readLine2();
   }
   else
   {
@@ -297,17 +288,17 @@ $virtualMethod=|bool|waitForReadyRead|int
 /*
 qint64 write ( const char * data, qint64 maxSize )
 */
-$method=|qint64|write,write1|const char *,qint64
+$internalMethod=|qint64|write,write1|const char *,qint64
 
 /*
 qint64 write ( const char * data )
 */
-$method=|qint64|write,write2|const char *
+$internalMethod=|qint64|write,write2|const char *
 
 /*
 qint64 write ( const QByteArray & byteArray )
 */
-$method=|qint64|write,write3|const QByteArray &
+$internalMethod=|qint64|write,write3|const QByteArray &
 
 //[1]qint64 write ( const char * data, qint64 maxSize )
 //[2]qint64 write ( const char * data )
@@ -317,15 +308,15 @@ HB_FUNC_STATIC( QIODEVICE_WRITE )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QIODEVICE_WRITE1 );
+    QIODevice_write1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QIODEVICE_WRITE2 );
+    QIODevice_write2();
   }
   else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    HB_FUNC_EXEC( QIODEVICE_WRITE3 );
+    QIODevice_write3();
   }
   else
   {

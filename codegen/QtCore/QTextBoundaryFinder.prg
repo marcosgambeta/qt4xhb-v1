@@ -7,10 +7,6 @@ CLASS QTextBoundaryFinder
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD isValid
@@ -48,22 +44,22 @@ $destructor
 /*
 QTextBoundaryFinder()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QTextBoundaryFinder(const QTextBoundaryFinder &other)
 */
-$constructor=|new2|const QTextBoundaryFinder &
+$internalConstructor=|new2|const QTextBoundaryFinder &
 
 /*
 QTextBoundaryFinder(BoundaryType type, const QString &string)
 */
-$constructor=|new3|QTextBoundaryFinder::BoundaryType,const QString &
+$internalConstructor=|new3|QTextBoundaryFinder::BoundaryType,const QString &
 
 /*
 QTextBoundaryFinder(BoundaryType type, const QChar *chars, int length, unsigned char *buffer = 0, int bufferSize = 0)
 */
-$constructor=|new4|QTextBoundaryFinder::BoundaryType,const QChar *,int,unsigned char *=0,int=0
+$internalConstructor=|new4|QTextBoundaryFinder::BoundaryType,const QChar *,int,unsigned char *=0,int=0
 
 //[1]QTextBoundaryFinder()
 //[2]QTextBoundaryFinder(const QTextBoundaryFinder &other)
@@ -74,19 +70,19 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTEXTBOUNDARYFINDER_NEW1 );
+    QTextBoundaryFinder_new1();
   }
   else if( ISNUMPAR(1) && ISQTEXTBOUNDARYFINDER(1) )
   {
-    HB_FUNC_EXEC( QTEXTBOUNDARYFINDER_NEW2 );
+    QTextBoundaryFinder_new2();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QTEXTBOUNDARYFINDER_NEW3 );
+    QTextBoundaryFinder_new3();
   }
   else if( ISBETWEEN(3,5) && ISNUM(1) && ISQCHAR(2) && ISNUM(3) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
   {
-    HB_FUNC_EXEC( QTEXTBOUNDARYFINDER_NEW4 );
+    QTextBoundaryFinder_new4();
   }
   else
   {

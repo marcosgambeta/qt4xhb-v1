@@ -10,8 +10,6 @@ REQUEST QPAINTERPATH
 
 CLASS QGraphicsSimpleTextItem INHERIT QAbstractGraphicsShapeItem
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD font
@@ -45,12 +43,12 @@ $destructor
 /*
 QGraphicsSimpleTextItem ( QGraphicsItem * parent = 0 )
 */
-$constructor=|new1|QGraphicsItem *=0
+$internalConstructor=|new1|QGraphicsItem *=0
 
 /*
 QGraphicsSimpleTextItem ( const QString & text, QGraphicsItem * parent = 0 )
 */
-$constructor=|new2|const QString &,QGraphicsItem *=0
+$internalConstructor=|new2|const QString &,QGraphicsItem *=0
 
 //[1]QGraphicsSimpleTextItem ( QGraphicsItem * parent = 0 )
 //[2]QGraphicsSimpleTextItem ( const QString & text, QGraphicsItem * parent = 0 )
@@ -59,11 +57,11 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSSIMPLETEXTITEM_NEW1 );
+    QGraphicsSimpleTextItem_new1();
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQGRAPHICSITEM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSSIMPLETEXTITEM_NEW2 );
+    QGraphicsSimpleTextItem_new2();
   }
   else
   {

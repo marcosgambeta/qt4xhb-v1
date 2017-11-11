@@ -13,10 +13,6 @@ CLASS QRect
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD adjust
@@ -25,10 +21,6 @@ CLASS QRect
    METHOD bottomLeft
    METHOD bottomRight
    METHOD center
-   METHOD contains1
-   METHOD contains2
-   METHOD contains3
-   METHOD contains4
    METHOD contains
    METHOD getCoords
    METHOD getRect
@@ -45,8 +37,6 @@ CLASS QRect
    METHOD moveCenter
    METHOD moveLeft
    METHOD moveRight
-   METHOD moveTo1
-   METHOD moveTo2
    METHOD moveTo
    METHOD moveTop
    METHOD moveTopLeft
@@ -72,11 +62,7 @@ CLASS QRect
    METHOD top
    METHOD topLeft
    METHOD topRight
-   METHOD translate1
-   METHOD translate2
    METHOD translate
-   METHOD translated1
-   METHOD translated2
    METHOD translated
    METHOD united
    METHOD width
@@ -106,22 +92,22 @@ $destructor
 /*
 QRect ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QRect ( const QPoint & topLeft, const QPoint & bottomRight )
 */
-$constructor=|new2|const QPoint &,const QPoint &
+$internalConstructor=|new2|const QPoint &,const QPoint &
 
 /*
 QRect ( const QPoint & topLeft, const QSize & size )
 */
-$constructor=|new3|const QPoint &,const QSize &
+$internalConstructor=|new3|const QPoint &,const QSize &
 
 /*
 QRect ( int x, int y, int width, int height )
 */
-$constructor=|new4|int,int,int,int
+$internalConstructor=|new4|int,int,int,int
 
 //[1]QRect ()
 //[2]QRect ( const QPoint & topLeft, const QPoint & bottomRight )
@@ -132,19 +118,19 @@ HB_FUNC_STATIC( QRECT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QRECT_NEW1 );
+    QRect_new1();
   }
   else if( ISNUMPAR(2) && ISQPOINT(1) && ISQPOINT(2) )
   {
-    HB_FUNC_EXEC( QRECT_NEW2 );
+    QRect_new2();
   }
   else if( ISNUMPAR(2) && ISQPOINT(1) && ISQSIZE(2) )
   {
-    HB_FUNC_EXEC( QRECT_NEW3 );
+    QRect_new3();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QRECT_NEW4 );
+    QRect_new4();
   }
   else
   {
@@ -187,22 +173,22 @@ $method=|QPoint|center|
 /*
 bool contains ( const QPoint & point, bool proper = false ) const
 */
-$method=|bool|contains,contains1|const QPoint &,bool=false
+$internalMethod=|bool|contains,contains1|const QPoint &,bool=false
 
 /*
 bool contains ( int x, int y, bool proper ) const
 */
-$method=|bool|contains,contains2|int,int,bool
+$internalMethod=|bool|contains,contains2|int,int,bool
 
 /*
 bool contains ( int x, int y ) const
 */
-$method=|bool|contains,contains3|int,int
+$internalMethod=|bool|contains,contains3|int,int
 
 /*
 bool contains ( const QRect & rectangle, bool proper = false ) const
 */
-$method=|bool|contains,contains4|const QRect &,bool=false
+$internalMethod=|bool|contains,contains4|const QRect &,bool=false
 
 //[1]bool contains ( const QPoint & point, bool proper = false ) const
 //[2]bool contains ( int x, int y, bool proper ) const
@@ -213,19 +199,19 @@ HB_FUNC_STATIC( QRECT_CONTAINS )
 {
   if( ISBETWEEN(1,2) && ISQPOINT(1) && (ISLOG(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QRECT_CONTAINS1 );
+    QRect_contains1();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISLOG(3) )
   {
-    HB_FUNC_EXEC( QRECT_CONTAINS2 );
+    QRect_contains2();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QRECT_CONTAINS3 );
+    QRect_contains3();
   }
   else if( ISBETWEEN(1,2) && ISQRECT(1) && (ISLOG(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QRECT_CONTAINS4 );
+    QRect_contains4();
   }
   else
   {
@@ -311,12 +297,12 @@ $method=|void|moveRight|int
 /*
 void moveTo ( int x, int y )
 */
-$method=|void|moveTo,moveTo1|int,int
+$internalMethod=|void|moveTo,moveTo1|int,int
 
 /*
 void moveTo ( const QPoint & position )
 */
-$method=|void|moveTo,moveTo2|const QPoint &
+$internalMethod=|void|moveTo,moveTo2|const QPoint &
 
 //[1]void moveTo ( int x, int y )
 //[2]void moveTo ( const QPoint & position )
@@ -325,11 +311,11 @@ HB_FUNC_STATIC( QRECT_MOVETO )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QRECT_MOVETO1 );
+    QRect_moveTo1();
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QRECT_MOVETO2 );
+    QRect_moveTo2();
   }
   else
   {
@@ -460,12 +446,12 @@ $method=|QPoint|topRight|
 /*
 void translate ( int dx, int dy )
 */
-$method=|void|translate,translate1|int,int
+$internalMethod=|void|translate,translate1|int,int
 
 /*
 void translate ( const QPoint & offset )
 */
-$method=|void|translate,translate2|const QPoint &
+$internalMethod=|void|translate,translate2|const QPoint &
 
 //[1]void translate ( int dx, int dy )
 //[2]void translate ( const QPoint & offset )
@@ -474,11 +460,11 @@ HB_FUNC_STATIC( QRECT_TRANSLATE )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QRECT_TRANSLATE1 );
+    QRect_translate1();
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QRECT_TRANSLATE2 );
+    QRect_translate2();
   }
   else
   {
@@ -489,12 +475,12 @@ HB_FUNC_STATIC( QRECT_TRANSLATE )
 /*
 QRect translated ( int dx, int dy ) const
 */
-$method=|QRect|translated,translated1|int,int
+$internalMethod=|QRect|translated,translated1|int,int
 
 /*
 QRect translated ( const QPoint & offset ) const
 */
-$method=|QRect|translated,translated2|const QPoint &
+$internalMethod=|QRect|translated,translated2|const QPoint &
 
 //[1]QRect translated ( int dx, int dy ) const
 //[2]QRect translated ( const QPoint & offset ) const
@@ -503,11 +489,11 @@ HB_FUNC_STATIC( QRECT_TRANSLATED )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QRECT_TRANSLATED1 );
+    QRect_translated1();
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QRECT_TRANSLATED2 );
+    QRect_translated2();
   }
   else
   {

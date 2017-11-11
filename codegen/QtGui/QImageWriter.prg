@@ -12,9 +12,6 @@ CLASS QImageWriter
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD canWrite
@@ -60,17 +57,17 @@ $destructor
 /*
 QImageWriter ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QImageWriter ( QIODevice * device, const QByteArray & format )
 */
-$constructor=|new2|QIODevice *,const QByteArray &
+$internalConstructor=|new2|QIODevice *,const QByteArray &
 
 /*
 QImageWriter ( const QString & fileName, const QByteArray & format = QByteArray() )
 */
-$constructor=|new3|const QString &,const QByteArray &=QByteArray()
+$internalConstructor=|new3|const QString &,const QByteArray &=QByteArray()
 
 //[1]QImageWriter ()
 //[2]QImageWriter ( QIODevice * device, const QByteArray & format )
@@ -80,15 +77,15 @@ HB_FUNC_STATIC( QIMAGEWRITER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QIMAGEWRITER_NEW1 );
+    QImageWriter_new1();
   }
   else if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISQBYTEARRAY(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QIMAGEWRITER_NEW2 );
+    QImageWriter_new2();
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQBYTEARRAY(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QIMAGEWRITER_NEW3 );
+    QImageWriter_new3();
   }
   else
   {
@@ -116,14 +113,7 @@ $method=|QIODevice *|device|
 /*
 ImageWriterError error () const
 */
-HB_FUNC_STATIC( QIMAGEWRITER_ERROR )
-{
-  QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->error () );
-  }
-}
+$method=|QImageWriterError::ImageWriterError|error|
 
 /*
 QString errorString () const
@@ -201,14 +191,8 @@ QList<QByteArray> supportedImageFormats ()
 HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTEDIMAGEFORMATS )
 {
   QList<QByteArray> list = QImageWriter::supportedImageFormats ();
-  PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QBYTEARRAY" );
-  #else
-  pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-  #endif
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {

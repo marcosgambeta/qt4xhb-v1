@@ -13,8 +13,6 @@ REQUEST QVARIANT
 
 CLASS QLineEdit INHERIT QWidget
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD alignment
@@ -61,8 +59,6 @@ CLASS QLineEdit INHERIT QWidget
    METHOD setPlaceholderText
    METHOD setReadOnly
    METHOD setSelection
-   METHOD setTextMargins1
-   METHOD setTextMargins2
    METHOD setTextMargins
    METHOD setValidator
    METHOD sizeHint
@@ -105,12 +101,12 @@ $destructor
 /*
 QLineEdit ( QWidget * parent = 0 )
 */
-$constructor=|new1|QWidget *=0
+$internalConstructor=|new1|QWidget *=0
 
 /*
 QLineEdit ( const QString & contents, QWidget * parent = 0 )
 */
-$constructor=|new2|const QString &,QWidget *=0
+$internalConstructor=|new2|const QString &,QWidget *=0
 
 //[1]QLineEdit ( QWidget * parent = 0 )
 //[2]QLineEdit ( const QString & contents, QWidget * parent = 0 )
@@ -119,11 +115,11 @@ HB_FUNC_STATIC( QLINEEDIT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QLINEEDIT_NEW1 );
+    QLineEdit_new1();
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QLINEEDIT_NEW2 );
+    QLineEdit_new2();
   }
   else
   {
@@ -356,12 +352,12 @@ $method=|void|setSelection|int,int
 /*
 void setTextMargins ( int left, int top, int right, int bottom )
 */
-$method=|void|setTextMargins,setTextMargins1|int,int,int,int
+$internalMethod=|void|setTextMargins,setTextMargins1|int,int,int,int
 
 /*
 void setTextMargins ( const QMargins & margins )
 */
-$method=|void|setTextMargins,setTextMargins2|const QMargins &
+$internalMethod=|void|setTextMargins,setTextMargins2|const QMargins &
 
 //[1]void setTextMargins ( int left, int top, int right, int bottom )
 //[2]void setTextMargins ( const QMargins & margins )
@@ -370,11 +366,11 @@ HB_FUNC_STATIC( QLINEEDIT_SETTEXTMARGINS )
 {
   if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QLINEEDIT_SETTEXTMARGINS1 );
+    QLineEdit_setTextMargins1();
   }
   else if( ISNUMPAR(1) && ISQMARGINS(1) )
   {
-    HB_FUNC_EXEC( QLINEEDIT_SETTEXTMARGINS2 );
+    QLineEdit_setTextMargins2();
   }
   else
   {

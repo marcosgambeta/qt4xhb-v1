@@ -8,9 +8,6 @@ REQUEST QWIDGET
 
 CLASS QStackedLayout INHERIT QLayout
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD addWidget
@@ -43,17 +40,17 @@ $destructor
 /*
 QStackedLayout ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QStackedLayout ( QWidget * parent )
 */
-$constructor=|new2|QWidget *
+$internalConstructor=|new2|QWidget *
 
 /*
 QStackedLayout ( QLayout * parentLayout )
 */
-$constructor=|new3|QLayout *
+$internalConstructor=|new3|QLayout *
 
 //[1]QStackedLayout ()
 //[2]QStackedLayout ( QWidget * parent )
@@ -63,15 +60,15 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSTACKEDLAYOUT_NEW1 );
+    QStackedLayout_new1();
   }
   else if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    HB_FUNC_EXEC( QSTACKEDLAYOUT_NEW2 );
+    QStackedLayout_new2();
   }
   else if( ISNUMPAR(1) && ISQLAYOUT(1) )
   {
-    HB_FUNC_EXEC( QSTACKEDLAYOUT_NEW3 );
+    QStackedLayout_new3();
   }
   else
   {

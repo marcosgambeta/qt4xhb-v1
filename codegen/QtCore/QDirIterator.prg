@@ -11,10 +11,6 @@ CLASS QDirIterator
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD fileInfo
@@ -47,22 +43,22 @@ $destructor
 /*
 QDirIterator ( const QDir & dir, IteratorFlags flags = NoIteratorFlags )
 */
-$constructor=|new1|const QDir &,QDirIterator::IteratorFlags=QDirIterator::NoIteratorFlags
+$internalConstructor=|new1|const QDir &,QDirIterator::IteratorFlags=QDirIterator::NoIteratorFlags
 
 /*
 QDirIterator ( const QString & path, IteratorFlags flags = NoIteratorFlags )
 */
-$constructor=|new2|const QString &,QDirIterator::IteratorFlags=QDirIterator::NoIteratorFlags
+$internalConstructor=|new2|const QString &,QDirIterator::IteratorFlags=QDirIterator::NoIteratorFlags
 
 /*
 QDirIterator ( const QString & path, QDir::Filters filters, IteratorFlags flags = NoIteratorFlags )
 */
-$constructor=|new3|const QString &,QDir::Filters,QDir::IteratorFlags=QDir::NoIteratorFlags
+$internalConstructor=|new3|const QString &,QDir::Filters,QDir::IteratorFlags=QDir::NoIteratorFlags
 
 /*
 QDirIterator ( const QString & path, const QStringList & nameFilters, QDir::Filters filters = QDir::NoFilter, IteratorFlags flags = NoIteratorFlags )
 */
-$constructor=|new4|const QString &,const QStringList &,QDir::Filters=QDir::NoFilter,QDirIterator::IteratorFlags=QDirIterator::NoIteratorFlags
+$internalConstructor=|new4|const QString &,const QStringList &,QDir::Filters=QDir::NoFilter,QDirIterator::IteratorFlags=QDirIterator::NoIteratorFlags
 
 //[1]QDirIterator ( const QDir & dir, IteratorFlags flags = NoIteratorFlags )
 //[2]QDirIterator ( const QString & path, IteratorFlags flags = NoIteratorFlags )
@@ -75,19 +71,19 @@ HB_FUNC_STATIC( QDIRITERATOR_NEW )
 {
   if( ISBETWEEN(1,2) && ISQDIR(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QDIRITERATOR_NEW1 );
+    QDirIterator_new1();
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QDIRITERATOR_NEW2 );
+    QDirIterator_new2();
   }
   else if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QDIRITERATOR_NEW3 );
+    QDirIterator_new3();
   }
   else if( ISBETWEEN(2,4) && ISCHAR(1) && ISARRAY(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QDIRITERATOR_NEW4 );
+    QDirIterator_new4();
   }
   else
   {

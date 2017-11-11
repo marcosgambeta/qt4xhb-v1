@@ -22,9 +22,6 @@ CLASS QCleanlooksStyle INHERIT QWindowsStyle
    METHOD hitTestComplexControl
    METHOD itemPixmapRect
    METHOD pixelMetric
-   METHOD polish1
-   METHOD polish2
-   METHOD polish3
    METHOD polish
    METHOD sizeFromContents
    METHOD standardPalette
@@ -32,8 +29,6 @@ CLASS QCleanlooksStyle INHERIT QWindowsStyle
    METHOD styleHint
    METHOD subControlRect
    METHOD subElementRect
-   METHOD unpolish1
-   METHOD unpolish2
    METHOD unpolish
 
    DESTRUCTOR destroyObject
@@ -105,17 +100,17 @@ $virtualMethod=|int|pixelMetric|QStyle::PixelMetric,const QStyleOption *=0,const
 /*
 virtual void polish ( QWidget * widget )
 */
-$virtualMethod=|void|polish,polish1|QWidget *
+$internalVirtualMethod=|void|polish,polish1|QWidget *
 
 /*
 virtual void polish ( QApplication * app )
 */
-$virtualMethod=|void|polish,polish2|QApplication *
+$internalVirtualMethod=|void|polish,polish2|QApplication *
 
 /*
 virtual void polish ( QPalette & pal )
 */
-$virtualMethod=|void|polish,polish3|QPalette &
+$internalVirtualMethod=|void|polish,polish3|QPalette &
 
 //[1]virtual void polish ( QWidget * widget )
 //[2]virtual void polish ( QApplication * app )
@@ -125,15 +120,15 @@ HB_FUNC_STATIC( QCLEANLOOKSSTYLE_POLISH )
 {
   if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    HB_FUNC_EXEC( QCLEANLOOKSSTYLE_POLISH1 );
+    QCleanLooksStyle_polish1();
   }
   else if( ISNUMPAR(1) && ISQAPPLICATION(1) )
   {
-    HB_FUNC_EXEC( QCLEANLOOKSSTYLE_POLISH2 );
+    QCleanLooksStyle_polish2();
   }
   else if( ISNUMPAR(1) && ISQPALETTE(1) )
   {
-    HB_FUNC_EXEC( QCLEANLOOKSSTYLE_POLISH3 );
+    QCleanLooksStyle_polish3();
   }
   else
   {
@@ -174,12 +169,12 @@ $virtualMethod=|QRect|subElementRect|QStyle::SubElement,const QStyleOption *,con
 /*
 virtual void unpolish ( QWidget * widget )
 */
-$virtualMethod=|void|unpolish,unpolish1|QWidget *
+$internalVirtualMethod=|void|unpolish,unpolish1|QWidget *
 
 /*
 virtual void unpolish ( QApplication * app )
 */
-$virtualMethod=|void|unpolish|QApplication *
+$internalVirtualMethod=|void|unpolish|QApplication *
 
 //[1]virtual void unpolish ( QWidget * widget )
 //[2]virtual void unpolish ( QApplication * app )
@@ -188,11 +183,11 @@ HB_FUNC_STATIC( QCLEANLOOKSSTYLE_UNPOLISH )
 {
   if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    HB_FUNC_EXEC( QCLEANLOOKSSTYLE_UNPOLISH1 );
+    QCleanLooksStyle_unpolish1();
   }
   else if( ISNUMPAR(1) && ISQAPPLICATION(1) )
   {
-    HB_FUNC_EXEC( QCLEANLOOKSSTYLE_UNPOLISH2 );
+    QCleanLooksStyle_unpolish2();
   }
   else
   {

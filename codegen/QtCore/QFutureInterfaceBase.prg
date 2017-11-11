@@ -11,8 +11,6 @@ CLASS QFutureInterfaceBase
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD reportStarted
@@ -73,12 +71,12 @@ $destructor
 /*
 QFutureInterfaceBase(State initialState = NoState)
 */
-$constructor=|new1|QFutureInterfaceBase::State=QFutureInterfaceBase::NoState
+$internalConstructor=|new1|QFutureInterfaceBase::State=QFutureInterfaceBase::NoState
 
 /*
 QFutureInterfaceBase(const QFutureInterfaceBase &other)
 */
-$constructor=|new2|const QFutureInterfaceBase &
+$internalConstructor=|new2|const QFutureInterfaceBase &
 
 //[1]QFutureInterfaceBase(State initialState = NoState)
 //[2]QFutureInterfaceBase(const QFutureInterfaceBase &other)
@@ -87,11 +85,11 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QFUTUREINTERFACEBASE_NEW1 );
+    QFutureInterfaceBase_new1();
   }
   else if( ISNUMPAR(1) && ISQFUTUREINTERFACEBASE(1) )
   {
-    HB_FUNC_EXEC( QFUTUREINTERFACEBASE_NEW2 );
+    QFutureInterfaceBase_new2();
   }
   else
   {

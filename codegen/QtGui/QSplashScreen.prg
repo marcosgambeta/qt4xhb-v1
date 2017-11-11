@@ -8,8 +8,6 @@ REQUEST QPIXMAP
 
 CLASS QSplashScreen INHERIT QWidget
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD finish
@@ -38,12 +36,12 @@ $destructor
 /*
 QSplashScreen ( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
 */
-$constructor=|new1|const QPixmap &=QPixmap(),Qt::WindowFlags=0
+$internalConstructor=|new1|const QPixmap &=QPixmap(),Qt::WindowFlags=0
 
 /*
 QSplashScreen ( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
 */
-$constructor=|new2|QWidget *,const QPixmap &=QPixmap(),Qt::WindowFlags=0
+$internalConstructor=|new2|QWidget *,const QPixmap &=QPixmap(),Qt::WindowFlags=0
 
 //[1]QSplashScreen ( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
 //[2]QSplashScreen ( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
@@ -52,11 +50,11 @@ HB_FUNC_STATIC( QSPLASHSCREEN_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQPIXMAP(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QSPLASHSCREEN_NEW1 );
+    QSplashScreen_new1();
   }
   else if( ISBETWEEN(1,3) && ISQWIDGET(1) && (ISQPIXMAP(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QSPLASHSCREEN_NEW2 );
+    QSplashScreen_new2();
   }
   else
   {

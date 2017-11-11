@@ -342,14 +342,8 @@ HB_FUNC_STATIC( QWIDGET_ACTIONS )
   if( obj )
   {
     QList<QAction *> list = obj->actions ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QACTION" );
-    #else
-    pDynSym = hb_dynsymFindName( "QACTION" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QACTION" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

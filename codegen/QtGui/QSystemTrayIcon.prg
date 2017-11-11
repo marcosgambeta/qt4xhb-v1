@@ -10,8 +10,6 @@ REQUEST QICON
 
 CLASS QSystemTrayIcon INHERIT QObject
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD contextMenu
@@ -49,12 +47,12 @@ $destructor
 /*
 QSystemTrayIcon ( QObject * parent = 0 )
 */
-$constructor=|new1|QObject *=0
+$internalConstructor=|new1|QObject *=0
 
 /*
 QSystemTrayIcon ( const QIcon & icon, QObject * parent = 0 )
 */
-$constructor=|new2|const QIcon &,QObject *=0
+$internalConstructor=|new2|const QIcon &,QObject *=0
 
 //[1]QSystemTrayIcon ( QObject * parent = 0 )
 //[2]QSystemTrayIcon ( const QIcon & icon, QObject * parent = 0 )
@@ -63,11 +61,11 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QSYSTEMTRAYICON_NEW1 );
+    QSystemTrayIcon_new1();
   }
   else if( ISBETWEEN(1,2) && (ISQICON(1)||ISCHAR(1)) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QSYSTEMTRAYICON_NEW2 );
+    QSystemTrayIcon_new2();
   }
   else
   {

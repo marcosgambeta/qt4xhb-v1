@@ -11,9 +11,6 @@ CLASS QXmlStreamNamespaceDeclaration
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD namespaceUri
@@ -42,17 +39,17 @@ $destructor
 /*
 QXmlStreamNamespaceDeclaration()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & other)
 */
-$constructor=|new2|const QXmlStreamNamespaceDeclaration &
+$internalConstructor=|new2|const QXmlStreamNamespaceDeclaration &
 
 /*
 QXmlStreamNamespaceDeclaration(const QString & prefix, const QString & namespaceUri)
 */
-$constructor=|new3|const QString &,const QString &
+$internalConstructor=|new3|const QString &,const QString &
 
 //[1]QXmlStreamNamespaceDeclaration()
 //[2]QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & other)
@@ -62,15 +59,15 @@ HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMNAMESPACEDECLARATION_NEW1 );
+    QXmlStreamNamespaceDeclaration_new1();
   }
   else if( ISNUMPAR(1) && ISQXMLSTREAMNAMESPACEDECLARATION(1) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMNAMESPACEDECLARATION_NEW2 );
+    QXmlStreamNamespaceDeclaration_new2();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMNAMESPACEDECLARATION_NEW3 );
+    QXmlStreamNamespaceDeclaration_new3();
   }
   else
   {

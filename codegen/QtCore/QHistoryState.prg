@@ -8,8 +8,6 @@ REQUEST QABSTRACTSTATE
 
 CLASS QHistoryState INHERIT QAbstractState
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD defaultState
@@ -34,12 +32,12 @@ $destructor
 /*
 QHistoryState(QState *parent = 0)
 */
-$constructor=|new1|QState *=0
+$internalConstructor=|new1|QState *=0
 
 /*
 QHistoryState(HistoryType type, QState *parent = 0)
 */
-$constructor=|new2|QHistoryState::HistoryType,QState *=0
+$internalConstructor=|new2|QHistoryState::HistoryType,QState *=0
 
 //[1]QHistoryState(QState *parent = 0)
 //[2]QHistoryState(HistoryType type, QState *parent = 0)
@@ -48,11 +46,11 @@ HB_FUNC_STATIC( QHISTORYSTATE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQSTATE(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QHISTORYSTATE_NEW1 );
+    QHistoryState_new1();
   }
   else if( ISBETWEEN(1,2) && ISNUM(1) && (ISQSTATE(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QHISTORYSTATE_NEW2 );
+    QHistoryState_new2();
   }
   else
   {

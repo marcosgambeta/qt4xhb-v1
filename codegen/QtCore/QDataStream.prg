@@ -11,10 +11,6 @@ CLASS QDataStream
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD atEnd
@@ -56,22 +52,22 @@ $destructor
 /*
 QDataStream ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QDataStream ( QIODevice * d )
 */
-$constructor=|new2|QIODevice *
+$internalConstructor=|new2|QIODevice *
 
 /*
 QDataStream ( QByteArray * a, QIODevice::OpenMode mode )
 */
-$constructor=|new3|QByteArray *,QIODevice::OpenMode
+$internalConstructor=|new3|QByteArray *,QIODevice::OpenMode
 
 /*
 QDataStream ( const QByteArray & a )
 */
-$constructor=|new4|const QByteArray &
+$internalConstructor=|new4|const QByteArray &
 
 //[1]QDataStream ()
 //[2]QDataStream ( QIODevice * d )
@@ -82,19 +78,19 @@ HB_FUNC_STATIC( QDATASTREAM_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDATASTREAM_NEW1 );
+    QDataStream_new1();
   }
   else if( ISNUMPAR(1) && ISQIODEVICE(1) )
   {
-    HB_FUNC_EXEC( QDATASTREAM_NEW2 );
+    QDataStream_new2();
   }
   else if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QDATASTREAM_NEW3 );
+    QDataStream_new3();
   }
   else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    HB_FUNC_EXEC( QDATASTREAM_NEW4 );
+    QDataStream_new4();
   }
   else
   {

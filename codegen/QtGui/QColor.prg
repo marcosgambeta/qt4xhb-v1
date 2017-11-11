@@ -78,8 +78,6 @@ CLASS QColor
    METHOD setNamedColor
    METHOD setRed
    METHOD setRedF
-   METHOD setRgb1
-   METHOD setRgb2
    METHOD setRgb
    METHOD setRgbF
    METHOD setRgba
@@ -99,8 +97,7 @@ CLASS QColor
    METHOD fromHslF
    METHOD fromHsv
    METHOD fromHsvF
-   METHOD fromRgb1
-   METHOD fromRgb2
+   METHOD fromRgb
    METHOD fromRgbF
    METHOD fromRgba
    METHOD isValidColor
@@ -501,12 +498,12 @@ $method=|void|setRedF|qreal
 /*
 void setRgb ( int r, int g, int b, int a = 255 )
 */
-$method=|void|setRgb,setRgb1|int,int,int,int=255
+$internalMethod=|void|setRgb,setRgb1|int,int,int,int=255
 
 /*
 void setRgb ( QRgb rgb )
 */
-$method=|void|setRgb,setRgb2|QRgb
+$internalMethod=|void|setRgb,setRgb2|QRgb
 
 //[1]void setRgb ( int r, int g, int b, int a = 255 )
 //[2]void setRgb ( QRgb rgb )
@@ -515,15 +512,11 @@ HB_FUNC_STATIC( QCOLOR_SETRGB )
 {
   if( ISBETWEEN(3,4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && (ISNUM(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QCOLOR_SETRGB1 );
+    QColor_setRgb1();
   }
-  //else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
-  //{
-  //  HB_FUNC_EXEC( QCOLOR_SETRGB1 );
-  //}
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QCOLOR_SETRGB2 );
+    QColor_setRgb2();
   }
   else
   {
@@ -624,12 +617,12 @@ $staticMethod=|QColor|fromHsvF|qreal,qreal,qreal,qreal=1.0
 /*
 static QColor fromRgb ( QRgb rgb )
 */
-$staticMethod=|QColor|fromRgb,fromRgb1|QRgb
+$internalStaticMethod=|QColor|fromRgb,fromRgb1|QRgb
 
 /*
 static QColor fromRgb ( int r, int g, int b, int a = 255 )
 */
-$staticMethod=|QColor|fromRgb,fromRgb2|int,int,int,int=255
+$internalStaticMethod=|QColor|fromRgb,fromRgb2|int,int,int,int=255
 
 //[1]static QColor fromRgb ( QRgb rgb )
 //[2]static QColor fromRgb ( int r, int g, int b, int a = 255 )
@@ -638,11 +631,11 @@ HB_FUNC_STATIC( QCOLOR_FROMRGB )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QCOLOR_FROMRGB1 );
+    QColor_fromRgb1();
   }
   else if( ISBETWEEN(3,4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && (ISNUM(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QCOLOR_FROMRGB2 );
+    QColor_fromRgb2();
   }
   else
   {

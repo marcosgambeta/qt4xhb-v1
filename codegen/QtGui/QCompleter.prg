@@ -11,9 +11,6 @@ REQUEST QWIDGET
 
 CLASS QCompleter INHERIT QObject
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD caseSensitivity
@@ -72,17 +69,17 @@ $destructor
 /*
 QCompleter ( QObject * parent = 0 )
 */
-$constructor=|new1|QObject *=0
+$internalConstructor=|new1|QObject *=0
 
 /*
 QCompleter ( QAbstractItemModel * model, QObject * parent = 0 )
 */
-$constructor=|new2|QAbstractItemModel *,QObject *=0
+$internalConstructor=|new2|QAbstractItemModel *,QObject *=0
 
 /*
 QCompleter ( const QStringList & list, QObject * parent = 0 )
 */
-$constructor=|new3|const QStringList &,QObject *=0
+$internalConstructor=|new3|const QStringList &,QObject *=0
 
 //[1]QCompleter ( QObject * parent = 0 )
 //[2]QCompleter ( QAbstractItemModel * model, QObject * parent = 0 )
@@ -92,15 +89,15 @@ HB_FUNC_STATIC( QCOMPLETER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QCOMPLETER_NEW1 );
+    QCompleter_new1();
   }
   else if( ISBETWEEN(1,2) && ISQABSTRACTITEMMODEL(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QCOMPLETER_NEW2 );
+    QCompleter_new2();
   }
   else if( ISBETWEEN(1,2) && ISARRAY(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QCOMPLETER_NEW3 );
+    QCompleter_new3();
   }
   else
   {

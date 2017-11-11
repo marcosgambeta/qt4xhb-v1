@@ -19,8 +19,6 @@ CLASS QComboBox INHERIT QWidget
 
    METHOD new
    METHOD delete
-   METHOD addItem1
-   METHOD addItem2
    METHOD addItem
    METHOD addItems
    METHOD completer
@@ -33,8 +31,6 @@ CLASS QComboBox INHERIT QWidget
    METHOD hasFrame
    METHOD hidePopup
    METHOD iconSize
-   METHOD insertItem1
-   METHOD insertItem2
    METHOD insertItem
    METHOD insertItems
    METHOD insertPolicy
@@ -116,12 +112,12 @@ $deleteMethod
 /*
 void addItem ( const QString & text, const QVariant & userData = QVariant() )
 */
-$method=|void|addItem,addItem1|const QString &,const QVariant &=QVariant()
+$internalMethod=|void|addItem,addItem1|const QString &,const QVariant &=QVariant()
 
 /*
 void addItem ( const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
 */
-$method=|void|addItem,addItem2|const QIcon &,const QString &,const QVariant &=QVariant()
+$internalMethod=|void|addItem,addItem2|const QIcon &,const QString &,const QVariant &=QVariant()
 
 //[1]void addItem ( const QString & text, const QVariant & userData = QVariant() )
 //[2]void addItem ( const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
@@ -130,11 +126,11 @@ HB_FUNC_STATIC( QCOMBOBOX_ADDITEM )
 {
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQVARIANT(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QCOMBOBOX_ADDITEM1 );
+    QComboBox_addItem1();
   }
   else if( ISBETWEEN(2,3) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) && (ISQVARIANT(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QCOMBOBOX_ADDITEM2 );
+    QComboBox_addItem2();
   }
   else
   {
@@ -200,12 +196,12 @@ $method=|QSize|iconSize|
 /*
 void insertItem ( int index, const QString & text, const QVariant & userData = QVariant() )
 */
-$method=|void|insertItem,insertItem1|int,const QString &,const QVariant &=QVariant()
+$internalMethod=|void|insertItem,insertItem1|int,const QString &,const QVariant &=QVariant()
 
 /*
 void insertItem ( int index, const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
 */
-$method=|void|insertItem,insertItem2|int,const QIcon &,const QString &,const QVariant &=QVariant()
+$internalMethod=|void|insertItem,insertItem2|int,const QIcon &,const QString &,const QVariant &=QVariant()
 
 //[1]void insertItem ( int index, const QString & text, const QVariant & userData = QVariant() )
 //[2]void insertItem ( int index, const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
@@ -214,11 +210,11 @@ HB_FUNC_STATIC( QCOMBOBOX_INSERTITEM )
 {
   if( ISBETWEEN(2,3) && ISNUM(1) && ISCHAR(2) && (ISQVARIANT(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QCOMBOBOX_INSERTITEM1 );
+    QComboBox_insertItem1();
   }
   else if( ISBETWEEN(3,4) && ISNUM(1) && (ISQICON(2)||ISCHAR(2)) && ISCHAR(3) && (ISQVARIANT(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QCOMBOBOX_INSERTITEM2 );
+    QComboBox_insertItem2();
   }
   else
   {

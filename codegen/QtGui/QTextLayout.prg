@@ -202,14 +202,8 @@ HB_FUNC_STATIC( QTEXTLAYOUT_GLYPHRUNS )
   if( obj )
   {
     QList<QGlyphRun> list = obj->glyphRuns ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGLYPHRUN" );
-    #else
-    pDynSym = hb_dynsymFindName( "QGLYPHRUN" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QGLYPHRUN" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

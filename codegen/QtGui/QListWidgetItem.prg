@@ -17,10 +17,6 @@ CLASS QListWidgetItem
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD background
@@ -82,22 +78,22 @@ $destructor
 /*
 QListWidgetItem ( QListWidget * parent = 0, int type = Type )
 */
-$constructor=|new1|QListWidget *=0,int=QListWidgetItem::Type
+$internalConstructor=|new1|QListWidget *=0,int=QListWidgetItem::Type
 
 /*
 QListWidgetItem ( const QString & text, QListWidget * parent = 0, int type = Type )
 */
-$constructor=|new2|const QString &,QListWidget *=0,int=QListWidgetItem::Type
+$internalConstructor=|new2|const QString &,QListWidget *=0,int=QListWidgetItem::Type
 
 /*
 QListWidgetItem ( const QIcon & icon, const QString & text, QListWidget * parent = 0, int type = Type )
 */
-$constructor=|new3|const QIcon &,const QString &,QListWidget *=0,int=QListWidgetItem::Type
+$internalConstructor=|new3|const QIcon &,const QString &,QListWidget *=0,int=QListWidgetItem::Type
 
 /*
 QListWidgetItem ( const QListWidgetItem & other )
 */
-$constructor=|new4|const QListWidgetItem &
+$internalConstructor=|new4|const QListWidgetItem &
 
 //[1]QListWidgetItem ( QListWidget * parent = 0, int type = Type )
 //[2]QListWidgetItem ( const QString & text, QListWidget * parent = 0, int type = Type )
@@ -108,19 +104,19 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQLISTWIDGET(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QLISTWIDGETITEM_NEW1 );
+    QListWidgetItem_new1();
   }
   else if( ISBETWEEN(1,3) && ISCHAR(1) && (ISQLISTWIDGET(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QLISTWIDGETITEM_NEW2 );
+    QListWidgetItem_new2();
   }
   else if( ISBETWEEN(2,4) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) && (ISQLISTWIDGET(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QLISTWIDGETITEM_NEW3 );
+    QListWidgetItem_new3();
   }
   else if( ISNUMPAR(1) && ISQLISTWIDGETITEM(1) )
   {
-    HB_FUNC_EXEC( QLISTWIDGETITEM_NEW4 );
+    QListWidgetItem_new4();
   }
   else
   {

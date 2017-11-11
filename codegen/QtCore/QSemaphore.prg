@@ -12,8 +12,6 @@ CLASS QSemaphore
    METHOD acquire
    METHOD available
    METHOD release
-   METHOD tryAcquire1
-   METHOD tryAcquire2
    METHOD tryAcquire
 
    METHOD newFrom
@@ -61,29 +59,25 @@ $method=|void|release|int=1
 /*
 bool tryAcquire ( int n = 1 )
 */
-$method=|bool|tryAcquire,tryAcquire1|int=1
+$internalMethod=|bool|tryAcquire,tryAcquire1|int=1
 
 /*
 bool tryAcquire ( int n, int timeout )
 */
-$method=|bool|tryAcquire,tryAcquire2|int,int
+$internalMethod=|bool|tryAcquire,tryAcquire2|int,int
 
 //[1]bool tryAcquire ( int n = 1 )
 //[2]bool tryAcquire ( int n, int timeout )
 
 HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE )
 {
-  if( ISNUMPAR(0) )
+  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QSEMAPHORE_TRYACQUIRE1 );
-  }
-  else if( ISNUMPAR(1) && ISNUM(1) )
-  {
-    HB_FUNC_EXEC( QSEMAPHORE_TRYACQUIRE1 );
+    QSemaphore_tryAcquire1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QSEMAPHORE_TRYACQUIRE2 );
+    QSemaphore_tryAcquire2();
   }
   else
   {

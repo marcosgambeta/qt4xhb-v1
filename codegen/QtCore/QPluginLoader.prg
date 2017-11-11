@@ -8,8 +8,6 @@ REQUEST QOBJECT
 
 CLASS QPluginLoader INHERIT QObject
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD errorString
@@ -39,12 +37,12 @@ $destructor
 /*
 QPluginLoader ( QObject * parent = 0 )
 */
-$constructor=|new1|QObject *=0
+$internalConstructor=|new1|QObject *=0
 
 /*
 QPluginLoader ( const QString & fileName, QObject * parent = 0 )
 */
-$constructor=|new2|const QString &,QObject *=0
+$internalConstructor=|new2|const QString &,QObject *=0
 
 //[1]QPluginLoader ( QObject * parent = 0 )
 //[2]QPluginLoader ( const QString & fileName, QObject * parent = 0 )
@@ -53,11 +51,11 @@ HB_FUNC_STATIC( QPLUGINLOADER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QPLUGINLOADER_NEW1 );
+    QPluginLoader_new1();
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QPLUGINLOADER_NEW2 );
+    QPluginLoader_new2();
   }
   else
   {

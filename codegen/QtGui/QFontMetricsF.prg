@@ -12,10 +12,6 @@ CLASS QFontMetricsF
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD ascent
@@ -70,22 +66,22 @@ $destructor
 /*
 QFontMetricsF ( const QFont & font )
 */
-$constructor=|new1|const QFont &
+$internalConstructor=|new1|const QFont &
 
 /*
 QFontMetricsF ( const QFont & font, QPaintDevice * paintdevice )
 */
-$constructor=|new2|const QFont &,QPaintDevice *
+$internalConstructor=|new2|const QFont &,QPaintDevice *
 
 /*
 QFontMetricsF ( const QFontMetrics & fontMetrics )
 */
-$constructor=|new3|const QFontMetrics &
+$internalConstructor=|new3|const QFontMetrics &
 
 /*
 QFontMetricsF ( const QFontMetricsF & fm )
 */
-$constructor=|new4|const QFontMetricsF &
+$internalConstructor=|new4|const QFontMetricsF &
 
 //[1]QFontMetricsF ( const QFont & font )
 //[2]QFontMetricsF ( const QFont & font, QPaintDevice * paintdevice )
@@ -96,19 +92,19 @@ HB_FUNC_STATIC( QFONTMETRICSF_NEW )
 {
   if( ISNUMPAR(1) && ISQFONT(1) )
   {
-    HB_FUNC_EXEC( QFONTMETRICSF_NEW1 );
+    QFontMetricsF_new1();
   }
   else if( ISNUMPAR(2) && ISQFONT(1) && ISOBJECT(2) )
   {
-    HB_FUNC_EXEC( QFONTMETRICSF_NEW2 );
+    QFontMetricsF_new2();
   }
   else if( ISNUMPAR(1) && ISQFONTMETRICS(1) )
   {
-    HB_FUNC_EXEC( QFONTMETRICSF_NEW3 );
+    QFontMetricsF_new3();
   }
   else if( ISNUMPAR(1) && ISQFONTMETRICSF(1) )
   {
-    HB_FUNC_EXEC( QFONTMETRICSF_NEW4 );
+    QFontMetricsF_new4();
   }
   else
   {

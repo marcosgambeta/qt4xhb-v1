@@ -46,16 +46,12 @@ CLASS QDesignerFormWindowInterface INHERIT QWidget
    METHOD clearSelection
    METHOD manageWidget
    METHOD selectWidget
-   METHOD setContents1
-   METHOD setContents2
    METHOD setContents
    METHOD setDirty
    METHOD setFeatures
    METHOD setFileName
    METHOD setGrid
    METHOD unmanageWidget
-   METHOD findFormWindow1
-   METHOD findFormWindow2
    METHOD findFormWindow
 
    METHOD onSelectionChanged
@@ -252,12 +248,12 @@ $virtualMethod=|void|selectWidget|QWidget *,bool=true
 /*
 virtual void setContents ( QIODevice * device ) = 0
 */
-$virtualMethod=|void|setContents,setContents1|QIODevice *
+$internalVirtualMethod=|void|setContents,setContents1|QIODevice *
 
 /*
 virtual void setContents ( const QString & contents ) = 0
 */
-$virtualMethod=|void|setContents,setContents2|const QString &
+$internalVirtualMethod=|void|setContents,setContents2|const QString &
 
 //[1]virtual void setContents ( QIODevice * device ) = 0
 //[2]virtual void setContents ( const QString & contents ) = 0
@@ -266,11 +262,11 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS )
 {
   if( ISNUMPAR(1) && ISQIODEVICE(1) )
   {
-    HB_FUNC_EXEC( QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS1 );
+    QDesignerFormWindowInterface_setContents1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS2 );
+    QDesignerFormWindowInterface_setContents2();
   }
   else
   {
@@ -306,12 +302,12 @@ $virtualMethod=|void|unmanageWidget|QWidget *
 /*
 static QDesignerFormWindowInterface * findFormWindow ( QWidget * widget )
 */
-$staticMethod=|QDesignerFormWindowInterface *|findFormWindow,findFormWindow1|QWidget *
+$internalStaticMethod=|QDesignerFormWindowInterface *|findFormWindow,findFormWindow1|QWidget *
 
 /*
 static QDesignerFormWindowInterface * findFormWindow ( QObject * object )
 */
-$staticMethod=|QDesignerFormWindowInterface *|findFormWindow,findFormWindow2|QObject *
+$internalStaticMethod=|QDesignerFormWindowInterface *|findFormWindow,findFormWindow2|QObject *
 
 //[1]QDesignerFormWindowInterface * findFormWindow ( QWidget * widget )
 //[2]QDesignerFormWindowInterface * findFormWindow ( QObject * object )
@@ -320,11 +316,11 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW )
 {
   if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    HB_FUNC_EXEC( QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW1 );
+    QDesignerFormWindowInterface_findFormWindow1();
   }
   else if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
-    HB_FUNC_EXEC( QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW2 );
+    QDesignerFormWindowInterface_findFormWindow2();
   }
   else
   {

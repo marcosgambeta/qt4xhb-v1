@@ -7,8 +7,6 @@ CLASS QFontInfo
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD bold
@@ -48,12 +46,12 @@ $destructor
 /*
 QFontInfo ( const QFont & font )
 */
-$constructor=|new1|const QFont &
+$internalConstructor=|new1|const QFont &
 
 /*
 QFontInfo ( const QFontInfo & fi )
 */
-$constructor=|new2|const QFontInfo &
+$internalConstructor=|new2|const QFontInfo &
 
 //[1]QFontInfo ( const QFont & font )
 //[2]QFontInfo ( const QFontInfo & fi )
@@ -62,11 +60,11 @@ HB_FUNC_STATIC( QFONTINFO_NEW )
 {
   if( ISNUMPAR(1) && ISQFONT(1) )
   {
-    HB_FUNC_EXEC( QFONTINFO_NEW1 );
+    QFontInfo_new1();
   }
   else if( ISNUMPAR(1) && ISQFONTINFO(1) )
   {
-    HB_FUNC_EXEC( QFONTINFO_NEW2 );
+    QFontInfo_new2();
   }
   else
   {

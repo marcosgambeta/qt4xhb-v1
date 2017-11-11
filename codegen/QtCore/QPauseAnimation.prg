@@ -4,8 +4,6 @@ $header
 
 CLASS QPauseAnimation INHERIT QAbstractAnimation
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD setDuration
@@ -28,12 +26,12 @@ $destructor
 /*
 QPauseAnimation ( QObject * parent = 0 )
 */
-$constructor=|new1|QObject *=0
+$internalConstructor=|new1|QObject *=0
 
 /*
 QPauseAnimation ( int msecs, QObject * parent = 0 )
 */
-$constructor=|new2|int,QObject *=0
+$internalConstructor=|new2|int,QObject *=0
 
 //[1]QPauseAnimation ( QObject * parent = 0 )
 //[2]QPauseAnimation ( int msecs, QObject * parent = 0 )
@@ -42,11 +40,11 @@ HB_FUNC_STATIC( QPAUSEANIMATION_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QPAUSEANIMATION_NEW1 );
+    QPauseAnimation_new1();
   }
   else if( ISBETWEEN(1,2) && ISNUM(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QPAUSEANIMATION_NEW2 );
+    QPauseAnimation_new2();
   }
   else
   {

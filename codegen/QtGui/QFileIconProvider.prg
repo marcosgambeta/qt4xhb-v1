@@ -13,8 +13,6 @@ CLASS QFileIconProvider
 
    METHOD new
    METHOD delete
-   METHOD icon1
-   METHOD icon2
    METHOD icon
    METHOD type
 
@@ -41,23 +39,19 @@ $destructor
 /*
 QFileIconProvider()
 */
-HB_FUNC_STATIC( QFILEICONPROVIDER_NEW )
-{
-  QFileIconProvider * o = new QFileIconProvider ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 
 /*
 virtual QIcon icon(IconType type) const
 */
-$virtualMethod=|QIcon|icon,icon1|QFileIconProvider::IconType
+$internalVirtualMethod=|QIcon|icon,icon1|QFileIconProvider::IconType
 
 /*
 virtual QIcon icon(const QFileInfo & info) const
 */
-$virtualMethod=|QIcon|icon,icon2|const QFileInfo &
+$internalVirtualMethod=|QIcon|icon,icon2|const QFileInfo &
 
 //[1]virtual QIcon icon(IconType type) const
 //[2]virtual QIcon icon(const QFileInfo & info) const
@@ -66,11 +60,11 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_ICON )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QFILEICONPROVIDER_ICON1 );
+    QFileIconProvider_icon1();
   }
   else if( ISNUMPAR(1) && ISQFILEINFO(1) )
   {
-    HB_FUNC_EXEC( QFILEICONPROVIDER_ICON2 );
+    QFileIconProvider_icon2();
   }
   else
   {

@@ -7,8 +7,6 @@ CLASS QPoint
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD isNull
@@ -41,12 +39,12 @@ $destructor
 /*
 QPoint()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QPoint(int xpos, int ypos)
 */
-$constructor=|new2|int,int
+$internalConstructor=|new2|int,int
 
 //[1]QPoint()
 //[2]QPoint(int xpos, int ypos)
@@ -55,11 +53,11 @@ HB_FUNC_STATIC( QPOINT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QPOINT_NEW1 );
+    QPoint_new1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QPOINT_NEW2 );
+    QPoint_new2();
   }
   else
   {

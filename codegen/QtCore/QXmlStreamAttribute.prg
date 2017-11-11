@@ -11,10 +11,6 @@ CLASS QXmlStreamAttribute
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD isDefault
@@ -47,22 +43,22 @@ $destructor
 /*
 QXmlStreamAttribute()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QXmlStreamAttribute(const QString & qualifiedName, const QString & value)
 */
-$constructor=|new2|const QString &,const QString &
+$internalConstructor=|new2|const QString &,const QString &
 
 /*
 QXmlStreamAttribute(const QString & namespaceUri, const QString & name, const QString & value)
 */
-$constructor=|new3|const QString &,const QString &,const QString &
+$internalConstructor=|new3|const QString &,const QString &,const QString &
 
 /*
 QXmlStreamAttribute(const QXmlStreamAttribute & other)
 */
-$constructor=|new4|const QXmlStreamAttribute &
+$internalConstructor=|new4|const QXmlStreamAttribute &
 
 //[1]QXmlStreamAttribute()
 //[2]QXmlStreamAttribute(const QString & qualifiedName, const QString & value)
@@ -73,19 +69,19 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTE_NEW1 );
+    QXmlStreamAttribute_new1();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTE_NEW2 );
+    QXmlStreamAttribute_new2();
   }
   else if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTE_NEW3 );
+    QXmlStreamAttribute_new3();
   }
   else if( ISNUMPAR(1) && ISQXMLSTREAMATTRIBUTE(1) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTE_NEW4 );
+    QXmlStreamAttribute_new4();
   }
   else
   {

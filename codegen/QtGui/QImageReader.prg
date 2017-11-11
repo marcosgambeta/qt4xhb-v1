@@ -16,9 +16,6 @@ CLASS QImageReader
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD autoDetectImageFormat
@@ -34,14 +31,11 @@ CLASS QImageReader
    METHOD fileName
    METHOD format
    METHOD imageCount
-   METHOD imageFormat1
    METHOD jumpToImage
    METHOD jumpToNextImage
    METHOD loopCount
    METHOD nextImageDelay
    METHOD quality
-   METHOD read1
-   METHOD read2
    METHOD read
    METHOD scaledClipRect
    METHOD scaledSize
@@ -60,8 +54,6 @@ CLASS QImageReader
    METHOD supportsOption
    METHOD text
    METHOD textKeys
-   METHOD imageFormat2
-   METHOD imageFormat3
    METHOD imageFormat
    METHOD supportedImageFormats
 
@@ -90,17 +82,17 @@ $destructor
 /*
 QImageReader ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QImageReader ( QIODevice * device, const QByteArray & format = QByteArray() )
 */
-$constructor=|new2|QIODevice *,const QByteArray &=QByteArray()
+$internalConstructor=|new2|QIODevice *,const QByteArray &=QByteArray()
 
 /*
 QImageReader ( const QString & fileName, const QByteArray & format = QByteArray() )
 */
-$constructor=|new3|const QString &,const QByteArray &=QByteArray()
+$internalConstructor=|new3|const QString &,const QByteArray &=QByteArray()
 
 //[1]QImageReader ()
 //[2]QImageReader ( QIODevice * device, const QByteArray & format = QByteArray() )
@@ -110,15 +102,15 @@ HB_FUNC_STATIC( QIMAGEREADER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QIMAGEREADER_NEW1 );
+    QImageReader_new1();
   }
   else if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISQBYTEARRAY(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QIMAGEREADER_NEW2 );
+    QImageReader_new2();
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQBYTEARRAY(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QIMAGEREADER_NEW3 );
+    QImageReader_new3();
   }
   else
   {
@@ -171,14 +163,7 @@ $method=|QIODevice *|device|
 /*
 ImageReaderError error () const
 */
-HB_FUNC_STATIC( QIMAGEREADER_ERROR )
-{
-  QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->error () );
-  }
-}
+$method=|QImageReader::ImageReaderError|error|
 
 /*
 QString errorString () const
@@ -199,11 +184,6 @@ $method=|QByteArray|format|
 int imageCount () const
 */
 $method=|int|imageCount|
-
-/*
-QImage::Format imageFormat () const
-*/
-$method=|QImage::Format|imageFormat,imageFormat1|
 
 /*
 bool jumpToImage ( int imageNumber )
@@ -233,12 +213,12 @@ $method=|int|quality|
 /*
 QImage read ()
 */
-$method=|QImage|read,read1|
+$internalMethod=|QImage|read,read1|
 
 /*
 bool read ( QImage * image )
 */
-$method=|bool|read,read2|QImage *
+$internalMethod=|bool|read,read2|QImage *
 
 //[1]QImage read ()
 //[2]bool read ( QImage * image )
@@ -247,11 +227,11 @@ HB_FUNC_STATIC( QIMAGEREADER_READ )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QIMAGEREADER_READ1 );
+    QImageReader_read1();
   }
   else if( ISNUMPAR(1) && ISQIMAGE(1) )
   {
-    HB_FUNC_EXEC( QIMAGEREADER_READ2 );
+    QImageReader_read2();
   }
   else
   {
@@ -354,14 +334,19 @@ QStringList textKeys () const
 $method=|QStringList|textKeys|
 
 /*
+QImage::Format imageFormat () const
+*/
+$internalMethod=|QImage::Format|imageFormat,imageFormat1|
+
+/*
 static QByteArray imageFormat ( const QString & fileName )
 */
-$staticMethod=|QByteArray|imageFormat,imageFormat2|const QString &
+$internalStaticMethod=|QByteArray|imageFormat,imageFormat2|const QString &
 
 /*
 static QByteArray imageFormat ( QIODevice * device )
 */
-$staticMethod=|QByteArray|imageFormat,imageFormat3|QIODevice *
+$internalStaticMethod=|QByteArray|imageFormat,imageFormat3|QIODevice *
 
 //[1]QImage::Format imageFormat () const
 //[2]QByteArray imageFormat ( const QString & fileName )
@@ -371,15 +356,15 @@ HB_FUNC_STATIC( QIMAGEREADER_IMAGEFORMAT )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QIMAGEREADER_IMAGEFORMAT1 );
+    QImageReader_imageFormat1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QIMAGEREADER_IMAGEFORMAT2 );
+    QImageReader_imageFormat2();
   }
   else if( ISNUMPAR(1) && ISQIODEVICE(1) )
   {
-    HB_FUNC_EXEC( QIMAGEREADER_IMAGEFORMAT3 );
+    QImageReader_imageFormat3();
   }
   else
   {
@@ -393,14 +378,8 @@ QList<QByteArray> supportedImageFormats ()
 HB_FUNC_STATIC( QIMAGEREADER_SUPPORTEDIMAGEFORMATS )
 {
   QList<QByteArray> list = QImageReader::supportedImageFormats ();
-  PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QBYTEARRAY" );
-  #else
-  pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-  #endif
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {

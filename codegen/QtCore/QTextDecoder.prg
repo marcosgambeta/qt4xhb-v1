@@ -7,13 +7,8 @@ CLASS QTextDecoder
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
-   METHOD toUnicode1
-   METHOD toUnicode2
-   METHOD toUnicode3
    METHOD toUnicode
 
    METHOD newFrom
@@ -39,12 +34,12 @@ $destructor
 /*
 QTextDecoder(const QTextCodec * codec)
 */
-$constructor=|new1|const QTextCodec *
+$internalConstructor=|new1|const QTextCodec *
 
 /*
 QTextDecoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
 */
-$constructor=|new2|const QTextCodec *,QTextCodec::ConversionFlags
+$internalConstructor=|new2|const QTextCodec *,QTextCodec::ConversionFlags
 
 //[1]QTextDecoder(const QTextCodec * codec)
 //[2]QTextDecoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
@@ -53,11 +48,11 @@ HB_FUNC_STATIC( QTEXTDECODER_NEW )
 {
   if( ISNUMPAR(1) && ISQTEXTCODEC(1) )
   {
-    HB_FUNC_EXEC( QTEXTDECODER_NEW1 );
+    QTextDecoder_new1();
   }
   else if( ISNUMPAR(2) && ISQTEXTCODEC(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QTEXTDECODER_NEW2 );
+    QTextDecoder_new2();
   }
   else
   {
@@ -70,17 +65,17 @@ $deleteMethod
 /*
 QString toUnicode(const char * chars, int len)
 */
-$method=|QString|toUnicode,toUnicode1|const char *,int
+$internalMethod=|QString|toUnicode,toUnicode1|const char *,int
 
 /*
 void toUnicode(QString * target, const char * chars, int len)
 */
-$method=|void|toUnicode,toUnicode2|QString *,const char *,int
+$internalMethod=|void|toUnicode,toUnicode2|QString *,const char *,int
 
 /*
 QString toUnicode(const QByteArray & ba)
 */
-$method=|QString|toUnicode,toUnicode3|const QByteArray &
+$internalMethod=|QString|toUnicode,toUnicode3|const QByteArray &
 
 //[1]QString toUnicode(const char * chars, int len)
 //[2]void toUnicode(QString * target, const char * chars, int len)
@@ -90,15 +85,15 @@ HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QTEXTDECODER_TOUNICODE1 );
+    QTextDecoder_toUnicode1();
   }
   else if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QTEXTDECODER_TOUNICODE2 );
+    QTextDecoder_toUnicode2();
   }
   else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    HB_FUNC_EXEC( QTEXTDECODER_TOUNICODE3 );
+    QTextDecoder_toUnicode3();
   }
   else
   {

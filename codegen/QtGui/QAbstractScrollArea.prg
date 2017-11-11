@@ -81,14 +81,8 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SCROLLBARWIDGETS )
   {
     int par1 = hb_parni(1);
     QWidgetList list = obj->scrollBarWidgets ( (Qt::Alignment) par1 );
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QWIDGET" );
-    #else
-    pDynSym = hb_dynsymFindName( "QWIDGET" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QWIDGET" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

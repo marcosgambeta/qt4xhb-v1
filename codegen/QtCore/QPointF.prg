@@ -47,17 +47,17 @@ $destructor
 /*
 QPointF()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QPointF(const QPoint & point)
 */
-$constructor=|new2|const QPoint &
+$internalConstructor=|new2|const QPoint &
 
 /*
 QPointF(qreal xpos, qreal ypos)
 */
-$constructor=|new3|qreal,qreal
+$internalConstructor=|new3|qreal,qreal
 
 //[1]QPointF()
 //[2]QPointF(const QPoint & point)
@@ -67,15 +67,15 @@ HB_FUNC_STATIC( QPOINTF_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QPOINTF_NEW1 );
+    QPointf_new1();
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QPOINTF_NEW2 );
+    QPointf_new2();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QPOINTF_NEW3 );
+    QPointf_new3();
   }
   else
   {

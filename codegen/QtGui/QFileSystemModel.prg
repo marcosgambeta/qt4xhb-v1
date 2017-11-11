@@ -23,7 +23,6 @@ CLASS QFileSystemModel INHERIT QAbstractItemModel
    METHOD filePath
    METHOD filter
    METHOD iconProvider
-   METHOD index1
    METHOD isDir
    METHOD isReadOnly
    METHOD lastModified
@@ -54,7 +53,6 @@ CLASS QFileSystemModel INHERIT QAbstractItemModel
    METHOD flags
    METHOD hasChildren
    METHOD headerData
-   METHOD index2
    METHOD index
    METHOD mimeData
    METHOD mimeTypes
@@ -87,11 +85,7 @@ $destructor
 /*
 QFileSystemModel(QObject * parent = 0)
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_NEW )
-{
-  QFileSystemModel * o = new QFileSystemModel ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
@@ -124,11 +118,6 @@ $method=|QDir::Filters|filter|
 QFileIconProvider * iconProvider () const
 */
 $method=|QFileIconProvider *|iconProvider|
-
-/*
-QModelIndex index ( const QString & path, int column = 0 ) const
-*/
-$method=|QModelIndex|index,index1|const QString &,int=0
 
 /*
 bool isDir ( const QModelIndex & index ) const
@@ -281,9 +270,14 @@ virtual QVariant headerData ( int section, Qt::Orientation orientation, int role
 $virtualMethod=|QVariant|headerData|int,Qt::Orientation,int=Qt::DisplayRole
 
 /*
+QModelIndex index ( const QString & path, int column = 0 ) const
+*/
+$internalMethod=|QModelIndex|index,index1|const QString &,int=0
+
+/*
 virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 */
-$virtualMethod=|QModelIndex|index,index2|int,int,const QModelIndex &=QModelIndex()
+$internalVirtualMethod=|QModelIndex|index,index2|int,int,const QModelIndex &=QModelIndex()
 
 //[1]QModelIndex index ( const QString & path, int column = 0 ) const
 //[2]virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
@@ -292,11 +286,11 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_INDEX )
 {
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QFILESYSTEMMODEL_INDEX1 );
+    QFileSystemModel_index1();
   }
   else if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QFILESYSTEMMODEL_INDEX2 );
+    QFileSystemModel_index2();
   }
   else
   {

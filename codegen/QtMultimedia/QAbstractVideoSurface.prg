@@ -86,8 +86,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_SUPPORTEDPIXELFORMATS )
   if( obj )
   {
     QList<QVideoFrame::PixelFormat> list = obj->supportedPixelFormats ( ISNIL(1)? QAbstractVideoBuffer::NoHandle : (QAbstractVideoBuffer::HandleType) hb_parni(1) );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

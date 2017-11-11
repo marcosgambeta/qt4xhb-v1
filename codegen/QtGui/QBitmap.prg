@@ -8,11 +8,6 @@ REQUEST QBITMAP
 
 CLASS QBitmap INHERIT QPixmap
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
    METHOD new
    METHOD delete
    METHOD clear
@@ -37,27 +32,27 @@ $destructor
 /*
 QBitmap ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QBitmap ( const QPixmap & pixmap )
 */
-$constructor=|new2|const QPixmap &
+$internalConstructor=|new2|const QPixmap &
 
 /*
 QBitmap ( int width, int height )
 */
-$constructor=|new3|int,int
+$internalConstructor=|new3|int,int
 
 /*
 QBitmap ( const QSize & size )
 */
-$constructor=|new4|const QSize &
+$internalConstructor=|new4|const QSize &
 
 /*
 QBitmap ( const QString & fileName, const char * format = 0 )
 */
-$constructor=|new5|const QString &,const char *=0
+$internalConstructor=|new5|const QString &,const char *=0
 
 //[1]QBitmap ()
 //[2]QBitmap ( const QPixmap & pixmap )
@@ -69,23 +64,23 @@ HB_FUNC_STATIC( QBITMAP_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QBITMAP_NEW1 );
+    QBitmap_new1();
   }
   else if( ISNUMPAR(1) && ISQPIXMAP(1) )
   {
-    HB_FUNC_EXEC( QBITMAP_NEW2 );
+    QBitmap_new2();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QBITMAP_NEW3 );
+    QBitmap_new3();
   }
   else if( ISNUMPAR(1) && ISQSIZE(1) )
   {
-    HB_FUNC_EXEC( QBITMAP_NEW4 );
+    QBitmap_new4();
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QBITMAP_NEW5 );
+    QBitmap_new5();
   }
   else
   {

@@ -4,8 +4,6 @@ $header
 
 CLASS QFileSystemWatcher INHERIT QObject
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD addPath
@@ -37,12 +35,12 @@ $destructor
 /*
 QFileSystemWatcher(QObject * parent = 0)
 */
-$constructor=|new1|QObject *=0
+$internalConstructor=|new1|QObject *=0
 
 /*
 QFileSystemWatcher(const QStringList & paths, QObject * parent = 0)
 */
-$constructor=|new2|const QStringList &,QObject *=0
+$internalConstructor=|new2|const QStringList &,QObject *=0
 
 //[1]QFileSystemWatcher(QObject * parent = 0)
 //[2]QFileSystemWatcher(const QStringList & paths, QObject * parent = 0)
@@ -51,11 +49,11 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QFILESYSTEMWATCHER_NEW1 );
+    QFileSystemWatcher_new1();
   }
   else if( ISBETWEEN(1,2) && ISARRAY(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QFILESYSTEMWATCHER_NEW2 );
+    QFileSystemWatcher_new2();
   }
   else
   {

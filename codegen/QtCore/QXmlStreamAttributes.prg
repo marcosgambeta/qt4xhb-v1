@@ -13,19 +13,8 @@ CLASS QXmlStreamAttributes
 
    METHOD new
    METHOD delete
-   METHOD append1
-   METHOD append2
-   METHOD append3
    METHOD append
-   METHOD hasAttribute1
-   METHOD hasAttribute2
-   METHOD hasAttribute3
    METHOD hasAttribute
-   METHOD value1
-   METHOD value2
-   METHOD value3
-   METHOD value4
-   METHOD value5
    METHOD value
 
    METHOD newFrom
@@ -58,17 +47,17 @@ $deleteMethod
 /*
 void append(const QString & namespaceUri, const QString & name, const QString & value)
 */
-$method=|void|append,append1|const QString &,const QString &,const QString &
+$internalMethod=|void|append,append1|const QString &,const QString &,const QString &
 
 /*
 void append(const QXmlStreamAttribute & attribute)
 */
-$method=|void|append,append2|const QXmlStreamAttribute &
+$internalMethod=|void|append,append2|const QXmlStreamAttribute &
 
 /*
 void append(const QString & qualifiedName, const QString & value)
 */
-$method=|void|append,append3|const QString &,const QString &
+$internalMethod=|void|append,append3|const QString &,const QString &
 
 //[1]void append(const QString & namespaceUri, const QString & name, const QString & value)
 //[2]void append(const QXmlStreamAttribute & attribute)
@@ -78,15 +67,15 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_APPEND )
 {
   if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_APPEND1 );
+    QXmlStreamAttributes_append1();
   }
   else if( ISNUMPAR(1) && ISQXMLSTREAMATTRIBUTE(1) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_APPEND2 );
+    QXmlStreamAttributes_append2();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_APPEND3 );
+    QXmlStreamAttributes_append3();
   }
   else
   {
@@ -97,17 +86,17 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_APPEND )
 /*
 bool hasAttribute(const QString & qualifiedName) const
 */
-$method=|bool|hasAttribute,hasAttribute1|const QString &
+$internalMethod=|bool|hasAttribute,hasAttribute1|const QString &
 
 /*
 bool hasAttribute(QLatin1String qualifiedName) const
 */
-$method=|bool|hasAttribute,hasAttribute2|QLatin1String
+$internalMethod=|bool|hasAttribute,hasAttribute2|QLatin1String
 
 /*
 bool hasAttribute(const QString & namespaceUri, const QString & name) const
 */
-$method=|bool|hasAttribute,hasAttribute3|const QString &,const QString &
+$internalMethod=|bool|hasAttribute,hasAttribute3|const QString &,const QString &
 
 //[1]bool hasAttribute(const QString & qualifiedName) const
 //[2]bool hasAttribute(QLatin1String qualifiedName) const
@@ -117,15 +106,15 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE1 );
+    QXmlStreamAttributes_hasAttribute1();
   }
   else if( ISNUMPAR(1) && ISQLATIN1STRING(1) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE2 );
+    QXmlStreamAttributes_hasAttribute2();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE3 );
+    QXmlStreamAttributes_hasAttribute3();
   }
   else
   {
@@ -136,27 +125,27 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE )
 /*
 QStringRef value(const QString & namespaceUri, const QString & name) const
 */
-$method=|QStringRef|value,value1|const QString &,const QString &
+$internalMethod=|QStringRef|value,value1|const QString &,const QString &
 
 /*
 QStringRef value(const QString & namespaceUri, QLatin1String name) const
 */
-$method=|QStringRef|value,value2|const QString &,QLatin1String
+$internalMethod=|QStringRef|value,value2|const QString &,QLatin1String
 
 /*
 QStringRef value(QLatin1String namespaceUri, QLatin1String name) const
 */
-$method=|QStringRef|value,value3|QLatin1String,QLatin1String
+$internalMethod=|QStringRef|value,value3|QLatin1String,QLatin1String
 
 /*
 QStringRef value(const QString & qualifiedName) const
 */
-$method=|QStringRef|value,value4|const QString &
+$internalMethod=|QStringRef|value,value4|const QString &
 
 /*
 QStringRef value(QLatin1String qualifiedName) const
 */
-$method=|QStringRef|value,value5|QLatin1String
+$internalMethod=|QStringRef|value,value5|QLatin1String
 
 //[1]QStringRef value(const QString & namespaceUri, const QString & name) const
 //[2]QStringRef value(const QString & namespaceUri, QLatin1String name) const
@@ -168,23 +157,23 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_VALUE1 );
+    QXmlStreamAttributes_value1();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISQLATIN1STRING(2) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_VALUE2 );
+    QXmlStreamAttributes_value2();
   }
   else if( ISNUMPAR(2) && ISQLATIN1STRING(1) && ISQLATIN1STRING(2) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_VALUE3 );
+    QXmlStreamAttributes_value3();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_VALUE4 );
+    QXmlStreamAttributes_value4();
   }
   else if( ISNUMPAR(1) && ISQLATIN1STRING(1) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_VALUE5 );
+    QXmlStreamAttributes_value5();
   }
   else
   {

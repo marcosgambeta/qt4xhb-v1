@@ -8,15 +8,10 @@ REQUEST QPOINTF
 
 CLASS QConicalGradient INHERIT QGradient
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD angle
    METHOD center
    METHOD setAngle
-   METHOD setCenter1
-   METHOD setCenter2
    METHOD setCenter
 
    DESTRUCTOR destroyObject
@@ -36,17 +31,17 @@ $destructor
 /*
 QConicalGradient()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QConicalGradient(const QPointF &center, qreal startAngle)
 */
-$constructor=|new2|const QPointF &,qreal
+$internalConstructor=|new2|const QPointF &,qreal
 
 /*
 QConicalGradient(qreal cx, qreal cy, qreal startAngle)
 */
-$constructor=|new3|qreal,qreal,qreal
+$internalConstructor=|new3|qreal,qreal,qreal
 
 //[1]QConicalGradient()
 //[2]QConicalGradient(const QPointF &center, qreal startAngle)
@@ -56,15 +51,15 @@ HB_FUNC_STATIC( QCONICALGRADIENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QCONICALGRADIENT_NEW1 );
+    QConicalGradient_new1();
   }
   else if( ISNUMPAR(2) && ISQPOINTF(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QCONICALGRADIENT_NEW2 );
+    QConicalGradient_new2();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QCONICALGRADIENT_NEW3 );
+    QConicalGradient_new3();
   }
   else
   {
@@ -90,12 +85,12 @@ $method=|void|setAngle|qreal
 /*
 void setCenter ( const QPointF & center )
 */
-$method=|void|setCenter,setCenter1|const QPointF &
+$internalMethod=|void|setCenter,setCenter1|const QPointF &
 
 /*
 void setCenter ( qreal x, qreal y )
 */
-$method=|void|setCenter,setCenter2|qreal,qreal
+$internalMethod=|void|setCenter,setCenter2|qreal,qreal
 
 //[1]void setCenter ( const QPointF & center )
 //[2]void setCenter ( qreal x, qreal y )
@@ -104,11 +99,11 @@ HB_FUNC_STATIC( QCONICALGRADIENT_SETCENTER )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    HB_FUNC_EXEC( QCONICALGRADIENT_SETCENTER1 );
+    QConicalGradient_setCenter1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QCONICALGRADIENT_SETCENTER2 );
+    QConicalGradient_setCenter2();
   }
   else
   {

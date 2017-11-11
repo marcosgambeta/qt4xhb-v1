@@ -12,9 +12,6 @@ CLASS QLine
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD p1
@@ -30,11 +27,7 @@ CLASS QLine
    METHOD setP2
    METHOD setLine
    METHOD setPoints
-   METHOD translate1
-   METHOD translate2
    METHOD translate
-   METHOD translated1
-   METHOD translated2
    METHOD translated
 
    METHOD newFrom
@@ -60,17 +53,17 @@ $destructor
 /*
 QLine()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QLine(const QPoint & p1, const QPoint & p2)
 */
-$constructor=|new2|const QPoint &,const QPoint &
+$internalConstructor=|new2|const QPoint &,const QPoint &
 
 /*
 QLine(int x1, int y1, int x2, int y2)
 */
-$constructor=|new3|int,int,int,int
+$internalConstructor=|new3|int,int,int,int
 
 //[1]QLine()
 //[2]QLine(const QPoint & p1, const QPoint & p2)
@@ -80,15 +73,15 @@ HB_FUNC_STATIC( QLINE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QLINE_NEW1 );
+    QLine_new1();
   }
   else if( ISNUMPAR(2) && ISQPOINT(1) && ISQPOINT(2) )
   {
-    HB_FUNC_EXEC( QLINE_NEW2 );
+    QLine_new2();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QLINE_NEW3 );
+    QLine_new3();
   }
   else
   {
@@ -166,12 +159,12 @@ $method=|void|setPoints|const QPoint &,const QPoint &
 /*
 void translate(const QPoint & offset)
 */
-$method=|void|translate,translate1|const QPoint &
+$internalMethod=|void|translate,translate1|const QPoint &
 
 /*
 void translate(int dx, int dy)
 */
-$method=|void|translate,translate2|int,int
+$internalMethod=|void|translate,translate2|int,int
 
 //[1]void translate(const QPoint & offset)
 //[2]void translate(int dx, int dy)
@@ -180,11 +173,11 @@ HB_FUNC_STATIC( QLINE_TRANSLATE )
 {
   if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QLINE_TRANSLATE1 );
+    QLine_translate1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QLINE_TRANSLATE2 );
+    QLine_translate2();
   }
   else
   {
@@ -195,12 +188,12 @@ HB_FUNC_STATIC( QLINE_TRANSLATE )
 /*
 QLine translated(const QPoint & offset) const
 */
-$method=|QLine|translated,translated1|const QPoint &
+$internalMethod=|QLine|translated,translated1|const QPoint &
 
 /*
 QLine translated(int dx, int dy) const
 */
-$method=|QLine|translated,translated2|int,int
+$internalMethod=|QLine|translated,translated2|int,int
 
 //[1]QLine translated(const QPoint & offset) const
 //[2]QLine translated(int dx, int dy) const
@@ -209,11 +202,11 @@ HB_FUNC_STATIC( QLINE_TRANSLATED )
 {
   if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QLINE_TRANSLATED1 );
+    QLine_translated1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QLINE_TRANSLATED2 );
+    QLine_translated2();
   }
   else
   {

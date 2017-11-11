@@ -19,8 +19,6 @@ CLASS QThreadPool INHERIT QObject
    METHOD setMaxThreadCount
    METHOD start
    METHOD tryStart
-   METHOD waitForDone1
-   METHOD waitForDone2
    METHOD waitForDone
    METHOD globalInstance
 
@@ -93,12 +91,12 @@ $method=|bool|tryStart|QRunnable *
 /*
 void waitForDone ()
 */
-$method=|void|waitForDone,waitForDone1|
+$internalMethod=|void|waitForDone,waitForDone1|
 
 /*
 bool waitForDone ( int msecs )
 */
-$method=|bool|waitForDone,waitForDone2|int
+$internalMethod=|bool|waitForDone,waitForDone2|int
 
 //[1]void waitForDone ()
 //[2]bool waitForDone ( int msecs )
@@ -107,11 +105,11 @@ HB_FUNC_STATIC( QTHREADPOOL_WAITFORDONE )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTHREADPOOL_WAITFORDONE1 );
+    QThreadPool_WaitForDone1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QTHREADPOOL_WAITFORDONE2 );
+    QThreadPool_WaitForDone2();
   }
   else
   {

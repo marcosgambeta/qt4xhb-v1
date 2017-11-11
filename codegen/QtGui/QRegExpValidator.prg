@@ -8,8 +8,6 @@ REQUEST QREGEXP
 
 CLASS QRegExpValidator INHERIT QValidator
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD regExp
@@ -33,12 +31,12 @@ $destructor
 /*
 QRegExpValidator ( QObject * parent = 0 )
 */
-$constructor=|new1|QObject *=0
+$internalConstructor=|new1|QObject *=0
 
 /*
 QRegExpValidator ( const QRegExp & rx, QObject * parent )
 */
-$constructor=|new2|const QRegExp &,QObject *
+$internalConstructor=|new2|const QRegExp &,QObject *
 
 //[1]QRegExpValidator ( QObject * parent = 0 )
 //[2]QRegExpValidator ( const QRegExp & rx, QObject * parent )
@@ -47,11 +45,11 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QREGEXPVALIDATOR_NEW1 );
+    QRegExpValidator_new1();
   }
   else if( ISNUMPAR(2) && ISQREGEXP(1) && ISQOBJECT(2) )
   {
-    HB_FUNC_EXEC( QREGEXPVALIDATOR_NEW2 );
+    QRegExpValidator_new2();
   }
   else
   {

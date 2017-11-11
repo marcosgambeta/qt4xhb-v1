@@ -7,8 +7,6 @@ CLASS QHelpSearchQuery
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
 
    METHOD newFrom
@@ -34,12 +32,12 @@ $destructor
 /*
 QHelpSearchQuery ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QHelpSearchQuery ( FieldName field, const QStringList & wordList )
 */
-$constructor=|new2|QHelpSearchQuery::FieldName,const QStringList &
+$internalConstructor=|new2|QHelpSearchQuery::FieldName,const QStringList &
 
 //[1]QHelpSearchQuery ()
 //[2]QHelpSearchQuery ( FieldName field, const QStringList & wordList )
@@ -48,11 +46,11 @@ HB_FUNC_STATIC( QHELPSEARCHQUERY_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QHELPSEARCHQUERY_NEW1 );
+    QHelpSearchQuery_new1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISARRAY(2) )
   {
-    HB_FUNC_EXEC( QHELPSEARCHQUERY_NEW2 );
+    QHelpSearchQuery_new2();
   }
   else
   {

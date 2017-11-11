@@ -8,8 +8,6 @@ REQUEST QVARIANT
 
 CLASS QStringListModel INHERIT QAbstractListModel
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD setStringList
    METHOD stringList
@@ -39,12 +37,12 @@ $destructor
 /*
 QStringListModel(QObject * parent = 0)
 */
-$constructor=|new1|QObject *=0
+$internalConstructor=|new1|QObject *=0
 
 /*
 QStringListModel(const QStringList & strings, QObject * parent = 0)
 */
-$constructor=|new2|const QStringList &,QObject *=0
+$internalConstructor=|new2|const QStringList &,QObject *=0
 
 //[1]QStringListModel(QObject * parent = 0)
 //[2]QStringListModel(const QStringList & strings, QObject * parent = 0)
@@ -53,11 +51,11 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QSTRINGLISTMODEL_NEW1 );
+    QStringListModel_new1();
   }
   else if( ISBETWEEN(1,2) && ISARRAY(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QSTRINGLISTMODEL_NEW2 );
+    QStringListModel_new2();
   }
   else
   {

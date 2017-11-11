@@ -13,8 +13,6 @@ CLASS QDrag INHERIT QObject
 
    METHOD new
    METHOD delete
-   METHOD exec1
-   METHOD exec2
    METHOD exec
    METHOD hotSpot
    METHOD mimeData
@@ -49,23 +47,19 @@ $destructor
 /*
 QDrag ( QWidget * dragSource )
 */
-HB_FUNC_STATIC( QDRAG_NEW )
-{
-  QDrag * o = new QDrag ( PQWIDGET(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QWidget *
 
 $deleteMethod
 
 /*
 Qt::DropAction exec ( Qt::DropActions supportedActions = Qt::MoveAction )
 */
-$method=|Qt::DropAction|exec,exec1|Qt::DropActions=Qt::MoveAction
+$internalMethod=|Qt::DropAction|exec,exec1|Qt::DropActions=Qt::MoveAction
 
 /*
 Qt::DropAction exec ( Qt::DropActions supportedActions, Qt::DropAction defaultDropAction )
 */
-$method=|Qt::DropAction|exec,exec2|Qt::DropActions,Qt::DropAction
+$internalMethod=|Qt::DropAction|exec,exec2|Qt::DropActions,Qt::DropAction
 
 //[1]Qt::DropAction exec ( Qt::DropActions supportedActions = Qt::MoveAction )
 //[2]Qt::DropAction exec ( Qt::DropActions supportedActions, Qt::DropAction defaultDropAction )
@@ -74,11 +68,11 @@ HB_FUNC_STATIC( QDRAG_EXEC )
 {
   if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QDRAG_EXEC1 );
+    QDrag_exec1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QDRAG_EXEC2 );
+    QDrag_exec2();
   }
   else
   {

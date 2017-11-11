@@ -22,8 +22,6 @@ CLASS QFontDatabase
    METHOD italic
    METHOD pointSizes
    METHOD smoothSizes
-   METHOD styleString1
-   METHOD styleString2
    METHOD styleString
    METHOD styles
    METHOD weight
@@ -65,11 +63,7 @@ $destructor
 /*
 QFontDatabase ()
 */
-HB_FUNC_STATIC( QFONTDATABASE_NEW )
-{
-  QFontDatabase * o = new QFontDatabase ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new|
 
 /*
 bool bold ( const QString & family, const QString & style ) const
@@ -121,8 +115,7 @@ HB_FUNC_STATIC( QFONTDATABASE_POINTSIZES )
   if( obj )
   {
     QList<int> list = obj->pointSizes ( PQSTRING(1), OPQSTRING(2,QString()) );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -144,8 +137,7 @@ HB_FUNC_STATIC( QFONTDATABASE_SMOOTHSIZES )
   if( obj )
   {
     QList<int> list = obj->smoothSizes ( PQSTRING(1), PQSTRING(2) );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -160,12 +152,12 @@ HB_FUNC_STATIC( QFONTDATABASE_SMOOTHSIZES )
 /*
 QString styleString ( const QFont & font )
 */
-$method=|QString|styleString,styleString1|const QFont &
+$internalMethod=|QString|styleString,styleString1|const QFont &
 
 /*
 QString styleString ( const QFontInfo & fontInfo )
 */
-$method=|QString|styleString,styleString2|const QFontInfo &
+$internalMethod=|QString|styleString,styleString2|const QFontInfo &
 
 //[1]QString styleString ( const QFont & font )
 //[2]QString styleString ( const QFontInfo & fontInfo )
@@ -174,11 +166,11 @@ HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING )
 {
   if( ISNUMPAR(1) && ISQFONT(1) )
   {
-    HB_FUNC_EXEC( QFONTDATABASE_STYLESTRING1 );
+    QFontDatabase_styleString1();
   }
   else if( ISNUMPAR(1) && ISQFONTINFO(1) )
   {
-    HB_FUNC_EXEC( QFONTDATABASE_STYLESTRING2 );
+    QFontDatabase_styleString2();
   }
   else
   {
@@ -206,8 +198,7 @@ HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMS1 )
   if( obj )
   {
     QList<QFontDatabase::WritingSystem> list = obj->writingSystems ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -229,8 +220,7 @@ HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMS2 )
   if( obj )
   {
     QList<QFontDatabase::WritingSystem> list = obj->writingSystems ( PQSTRING(1) );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -292,8 +282,7 @@ static QList<int> standardSizes ()
 HB_FUNC_STATIC( QFONTDATABASE_STANDARDSIZES )
 {
   QList<int> list = QFontDatabase::standardSizes ();
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {

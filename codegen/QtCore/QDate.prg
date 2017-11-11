@@ -11,8 +11,6 @@ CLASS QDate
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD addDays
@@ -26,34 +24,20 @@ CLASS QDate
    METHOD daysTo
    METHOD getDate
    METHOD isNull
-   METHOD isValid1
    METHOD month
    METHOD setDate
    METHOD toJulianDay
-   METHOD toString1
-   METHOD toString2
    METHOD toString
    METHOD weekNumber
    METHOD year
    METHOD currentDate
    METHOD fromJulianDay
-   METHOD fromString1
-   METHOD fromString2
    METHOD fromString
    METHOD isLeapYear
-   METHOD isValid2
    METHOD isValid
-   METHOD longDayName1
-   METHOD longDayName2
    METHOD longDayName
-   METHOD longMonthName1
-   METHOD longMonthName2
    METHOD longMonthName
-   METHOD shortDayName1
-   METHOD shortDayName2
    METHOD shortDayName
-   METHOD shortMonthName1
-   METHOD shortMonthName2
    METHOD shortMonthName
 
    METHOD newFrom
@@ -79,12 +63,12 @@ $destructor
 /*
 QDate ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QDate ( int y, int m, int d )
 */
-$constructor=|new2|int,int,int
+$internalConstructor=|new2|int,int,int
 
 //[1]QDate ()
 //[2]QDate ( int y, int m, int d )
@@ -93,11 +77,11 @@ HB_FUNC_STATIC( QDATE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDATE_NEW1 );
+    QDate_new1();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QDATE_NEW2 );
+    QDate_new2();
   }
   else
   {
@@ -163,11 +147,6 @@ bool isNull () const
 $method=|bool|isNull|
 
 /*
-bool isValid () const
-*/
-$method=|bool|isValid,isValid1|
-
-/*
 int month () const
 */
 $method=|int|month|
@@ -185,12 +164,12 @@ $method=|int|toJulianDay|
 /*
 QString toString ( const QString & format ) const
 */
-$method=|QString|toString,toString1|const QString &
+$internalMethod=|QString|toString,toString1|const QString &
 
 /*
 QString toString ( Qt::DateFormat format = Qt::TextDate ) const
 */
-$method=|QString|toString,toString2|Qt::DateFormat=Qt::TextDate
+$internalMethod=|QString|toString,toString2|Qt::DateFormat=Qt::TextDate
 
 //[1]QString toString ( const QString & format ) const
 //[2]QString toString ( Qt::DateFormat format = Qt::TextDate ) const
@@ -199,11 +178,11 @@ HB_FUNC_STATIC( QDATE_TOSTRING )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QDATE_TOSTRING1 );
+    QDate_toString1();
   }
   else if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QDATE_TOSTRING2 );
+    QDate_toString2();
   }
   else
   {
@@ -234,12 +213,12 @@ $staticMethod=|QDate|fromJulianDay|int
 /*
 static QDate fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
 */
-$staticMethod=|QDate|fromString,fromString1|const QString &,Qt::DateFormat=Qt::TextDate
+$internalStaticMethod=|QDate|fromString,fromString1|const QString &,Qt::DateFormat=Qt::TextDate
 
 /*
 static QDate fromString ( const QString & string, const QString & format )
 */
-$staticMethod=|QDate|fromString,fromString2|const QString &,const QString &
+$internalStaticMethod=|QDate|fromString,fromString2|const QString &,const QString &
 
 //[1]QDate fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
 //[2]QDate fromString ( const QString & string, const QString & format )
@@ -248,11 +227,11 @@ HB_FUNC_STATIC( QDATE_FROMSTRING )
 {
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QDATE_FROMSTRING1 );
+    QDate_fromString1();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QDATE_FROMSTRING2 );
+    QDate_fromString2();
   }
   else
   {
@@ -266,9 +245,14 @@ static bool isLeapYear ( int year )
 $staticMethod=|bool|isLeapYear|int
 
 /*
+bool isValid () const
+*/
+$internalMethod=|bool|isValid,isValid1|
+
+/*
 static bool isValid ( int year, int month, int day )
 */
-$staticMethod=|bool|isValid,isValid2|int,int,int
+$internalStaticMethod=|bool|isValid,isValid2|int,int,int
 
 //[1]bool isValid () const
 //[2]bool isValid ( int year, int month, int day )
@@ -277,11 +261,11 @@ HB_FUNC_STATIC( QDATE_ISVALID )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDATE_ISVALID1 );
+    QDate_isValid1();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QDATE_ISVALID2 );
+    QDate_isValid2();
   }
   else
   {
@@ -292,12 +276,12 @@ HB_FUNC_STATIC( QDATE_ISVALID )
 /*
 static QString longDayName ( int weekday )
 */
-$staticMethod=|QString|longDayName,longDayName1|int
+$internalStaticMethod=|QString|longDayName,longDayName1|int
 
 /*
 static QString longDayName ( int weekday, MonthNameType type )
 */
-$staticMethod=|QString|longDayName,longDayName2|int,QDate::MonthNameType
+$internalStaticMethod=|QString|longDayName,longDayName2|int,QDate::MonthNameType
 
 //[1]QString longDayName ( int weekday )
 //[2]QString longDayName ( int weekday, MonthNameType type )
@@ -306,11 +290,11 @@ HB_FUNC_STATIC( QDATE_LONGDAYNAME )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QDATE_LONGDAYNAME1 );
+    QDate_longDayName1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QDATE_LONGDAYNAME2 );
+    QDate_longDayName2();
   }
   else
   {
@@ -321,12 +305,12 @@ HB_FUNC_STATIC( QDATE_LONGDAYNAME )
 /*
 static QString longMonthName ( int month )
 */
-$staticMethod=|QString|longMonthName,longMonthName1|int
+$internalStaticMethod=|QString|longMonthName,longMonthName1|int
 
 /*
 static QString longMonthName ( int month, MonthNameType type )
 */
-$staticMethod=|QString|longMonthName,longMonthName2|int,QDate::MonthNameType
+$internalStaticMethod=|QString|longMonthName,longMonthName2|int,QDate::MonthNameType
 
 //[1]QString longMonthName ( int month )
 //[2]QString longMonthName ( int month, MonthNameType type )
@@ -335,11 +319,11 @@ HB_FUNC_STATIC( QDATE_LONGMONTHNAME )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QDATE_LONGMONTHNAME1 );
+    QDate_longMonthName1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QDATE_LONGMONTHNAME2 );
+    QDate_longMonthName2();
   }
   else
   {
@@ -350,12 +334,12 @@ HB_FUNC_STATIC( QDATE_LONGMONTHNAME )
 /*
 static QString shortDayName ( int weekday )
 */
-$staticMethod=|QString|shortDayName,shortDayName1|int
+$internalStaticMethod=|QString|shortDayName,shortDayName1|int
 
 /*
 static QString shortDayName ( int weekday, MonthNameType type )
 */
-$staticMethod=|QString|shortDayName,shortDayName2|int,QDate::MonthNameType
+$internalStaticMethod=|QString|shortDayName,shortDayName2|int,QDate::MonthNameType
 
 //[1]QString shortDayName ( int weekday )
 //[2]QString shortDayName ( int weekday, MonthNameType type )
@@ -364,11 +348,11 @@ HB_FUNC_STATIC( QDATE_SHORTDAYNAME )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QDATE_SHORTDAYNAME1 );
+    QDate_shortDayName1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QDATE_SHORTDAYNAME2 );
+    QDate_shortDayName2();
   }
   else
   {
@@ -379,12 +363,12 @@ HB_FUNC_STATIC( QDATE_SHORTDAYNAME )
 /*
 static QString shortMonthName ( int month )
 */
-$staticMethod=|QString|shortMonthName,shortMonthName1|int
+$internalStaticMethod=|QString|shortMonthName,shortMonthName1|int
 
 /*
 static QString shortMonthName ( int month, MonthNameType type )
 */
-$staticMethod=|QString|shortMonthName,shortMonthName2|int,QDate::MonthNameType
+$internalStaticMethod=|QString|shortMonthName,shortMonthName2|int,QDate::MonthNameType
 
 //[1]QString shortMonthName ( int month )
 //[2]QString shortMonthName ( int month, MonthNameType type )
@@ -393,11 +377,11 @@ HB_FUNC_STATIC( QDATE_SHORTMONTHNAME )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QDATE_SHORTMONTHNAME1 );
+    QDate_shortMonthName1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QDATE_SHORTMONTHNAME2 );
+    QDate_shortMonthName2();
   }
   else
   {

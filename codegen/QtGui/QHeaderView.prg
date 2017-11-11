@@ -24,9 +24,6 @@ CLASS QHeaderView INHERIT QAbstractItemView
    METHOD isSortIndicatorShown
    METHOD length
    METHOD logicalIndex
-   METHOD logicalIndexAt1
-   METHOD logicalIndexAt2
-   METHOD logicalIndexAt3
    METHOD logicalIndexAt
    METHOD minimumSectionSize
    METHOD moveSection
@@ -50,8 +47,6 @@ CLASS QHeaderView INHERIT QAbstractItemView
    METHOD setHighlightSections
    METHOD setMinimumSectionSize
    METHOD setMovable
-   METHOD setResizeMode1
-   METHOD setResizeMode2
    METHOD setResizeMode
    METHOD setSectionHidden
    METHOD setSortIndicator
@@ -174,17 +169,17 @@ $method=|int|logicalIndex|int
 /*
 int logicalIndexAt ( int position ) const
 */
-$method=|int|logicalIndexAt,logicalIndexAt1|int
+$internalMethod=|int|logicalIndexAt,logicalIndexAt1|int
 
 /*
 int logicalIndexAt ( int x, int y ) const
 */
-$method=|int|logicalIndexAt,logicalIndexAt2|int,int
+$internalMethod=|int|logicalIndexAt,logicalIndexAt2|int,int
 
 /*
 int logicalIndexAt ( const QPoint & pos ) const
 */
-$method=|int|logicalIndexAt,logicalIndexAt3|const QPoint &
+$internalMethod=|int|logicalIndexAt,logicalIndexAt3|const QPoint &
 
 //[1]int logicalIndexAt ( int position ) const
 //[2]int logicalIndexAt ( int x, int y ) const
@@ -194,15 +189,15 @@ HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QHEADERVIEW_LOGICALINDEXAT1 );
+    QHeaderView_logicalIndexAt1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QHEADERVIEW_LOGICALINDEXAT2 );
+    QHeaderView_logicalIndexAt2();
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QHEADERVIEW_LOGICALINDEXAT3 );
+    QHeaderView_logicalIndexAt3();
   }
   else
   {
@@ -323,12 +318,12 @@ $method=|void|setMovable|bool
 /*
 void setResizeMode ( ResizeMode mode )
 */
-$method=|void|setResizeMode,setResizeMode1|QHeaderView::ResizeMode
+$internalMethod=|void|setResizeMode,setResizeMode1|QHeaderView::ResizeMode
 
 /*
 void setResizeMode ( int logicalIndex, ResizeMode mode )
 */
-$method=|void|setResizeMode,setResizeMode2|int,QHeaderView::ResizeMode
+$internalMethod=|void|setResizeMode,setResizeMode2|int,QHeaderView::ResizeMode
 
 //[1]void setResizeMode ( ResizeMode mode )
 //[2]void setResizeMode ( int logicalIndex, ResizeMode mode )
@@ -337,11 +332,11 @@ HB_FUNC_STATIC( QHEADERVIEW_SETRESIZEMODE )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QHEADERVIEW_SETRESIZEMODE1 );
+    QHeaderView_setResizeMode1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QHEADERVIEW_SETRESIZEMODE2 );
+    QHeaderView_setResizeMode2();
   }
   else
   {

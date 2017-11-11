@@ -8,8 +8,6 @@ REQUEST QOBJECT
 
 CLASS QEventTransition INHERIT QAbstractTransition
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD eventSource
@@ -34,12 +32,12 @@ $destructor
 /*
 QEventTransition(QState * sourceState = 0)
 */
-$constructor=|new1|QState *=0
+$internalConstructor=|new1|QState *=0
 
 /*
 QEventTransition(QObject * object, QEvent::Type type, QState * sourceState = 0)
 */
-$constructor=|new2|QObject *,QEvent::Type,QState *=0
+$internalConstructor=|new2|QObject *,QEvent::Type,QState *=0
 
 //[1]QEventTransition(QState * sourceState = 0)
 //[2]QEventTransition(QObject * object, QEvent::Type type, QState * sourceState = 0)
@@ -48,11 +46,11 @@ HB_FUNC_STATIC( QEVENTTRANSITION_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQSTATE(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QEVENTTRANSITION_NEW1 );
+    QEventTransition_new1();
   }
   else if( ISBETWEEN(2,3) && ISQOBJECT(1) && ISNUM(2) && (ISQSTATE(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QEVENTTRANSITION_NEW2 );
+    QEventTransition_new2();
   }
   else
   {

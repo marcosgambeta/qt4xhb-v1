@@ -8,8 +8,6 @@ REQUEST QFONT
 
 CLASS QFontDialog INHERIT QDialog
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD currentFont
    METHOD open
@@ -20,10 +18,6 @@ CLASS QFontDialog INHERIT QDialog
    METHOD setOptions
    METHOD testOption
    METHOD setVisible
-   METHOD getFont1
-   METHOD getFont2
-   METHOD getFont3
-   METHOD getFont4
    METHOD getFont
 
    METHOD onCurrentFontChanged
@@ -46,12 +40,12 @@ $destructor
 /*
 QFontDialog(QWidget *parent = 0)
 */
-$constructor=|new1|QWidget *=0
+$internalConstructor=|new1|QWidget *=0
 
 /*
 QFontDialog(const QFont &initial, QWidget *parent = 0)
 */
-$constructor=|new2|const QFont &,QWidget *=0
+$internalConstructor=|new2|const QFont &,QWidget *=0
 
 //[1]QFontDialog(QWidget *parent = 0)
 //[2]QFontDialog(const QFont &initial, QWidget *parent = 0)
@@ -60,11 +54,11 @@ HB_FUNC_STATIC( QFONTDIALOG_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QFONTDIALOG_NEW1 );
+    QFontDialog_new1();
   }
   else if( ISBETWEEN(1,2) && ISQFONT(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QFONTDIALOG_NEW2 );
+    QFontDialog_new2();
   }
   else
   {
@@ -120,22 +114,22 @@ $virtualMethod=|void|setVisible|bool
 /*
 static QFont getFont(bool *ok, const QFont &initial, QWidget *parent, const QString &title,FontDialogOptions options)
 */
-$staticMethod=|QFont|getFont,getFont1|bool *,const QFont &,QWidget *,const QString &,QFontDialog::FontDialogOptions
+$internalStaticMethod=|QFont|getFont,getFont1|bool *,const QFont &,QWidget *,const QString &,QFontDialog::FontDialogOptions
 
 /*
 static QFont getFont(bool *ok, const QFont &initial, QWidget *parent, const QString &title)
 */
-$staticMethod=|QFont|getFont,getFont2|bool *,const QFont &,QWidget *,const QString &
+$internalStaticMethod=|QFont|getFont,getFont2|bool *,const QFont &,QWidget *,const QString &
 
 /*
 static QFont getFont(bool *ok, const QFont &initial, QWidget *parent = 0)
 */
-$staticMethod=|QFont|getFont,getFont3|bool *,const QFont &,QWidget *=0
+$internalStaticMethod=|QFont|getFont,getFont3|bool *,const QFont &,QWidget *=0
 
 /*
 static QFont getFont(bool *ok, QWidget *parent = 0)
 */
-$staticMethod=|QFont|getFont,getFont4|bool *,QWidget *=0
+$internalStaticMethod=|QFont|getFont,getFont4|bool *,QWidget *=0
 
 //[1]static QFont getFont(bool *ok, const QFont &initial, QWidget *parent, const QString &title,FontDialogOptions options)
 //[2]static QFont getFont(bool *ok, const QFont &initial, QWidget *parent, const QString &title)
@@ -146,19 +140,19 @@ HB_FUNC_STATIC( QFONTDIALOG_GETFONT )
 {
   if( ISNUMPAR(5) && ISLOG(1) && ISQFONT(2) && ISQWIDGET(3) && ISCHAR(4) && ISNUM(5) )
   {
-    HB_FUNC_EXEC( QFONTDIALOG_GETFONT1 );
+    QFontDialog_getFont1();
   }
   else if( ISNUMPAR(4) && ISLOG(1) && ISQFONT(2) && ISQWIDGET(3) && ISCHAR(4) )
   {
-    HB_FUNC_EXEC( QFONTDIALOG_GETFONT2 );
+    QFontDialog_getFont2();
   }
   else if( ISBETWEEN(2,3) && ISLOG(1) && ISQFONT(2) && (ISQWIDGET(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QFONTDIALOG_GETFONT3 );
+    QFontDialog_getFont3();
   }
   else if( ISBETWEEN(1,2) && ISLOG(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QFONTDIALOG_GETFONT4 );
+    QFontDialog_getFont4();
   }
   else
   {

@@ -9,8 +9,6 @@ REQUEST QACTION
 
 CLASS QDockWidget INHERIT QWidget
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD allowedAreas
@@ -49,12 +47,12 @@ $destructor
 /*
 QDockWidget ( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
-$constructor=|new1|const QString &,QWidget *=0,Qt::WindowFlags=0
+$internalConstructor=|new1|const QString &,QWidget *=0,Qt::WindowFlags=0
 
 /*
 QDockWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
-$constructor=|new2|QWidget *=0,Qt::WindowFlags=0
+$internalConstructor=|new2|QWidget *=0,Qt::WindowFlags=0
 
 //[1]QDockWidget ( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 //[2]QDockWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
@@ -63,11 +61,11 @@ HB_FUNC_STATIC( QDOCKWIDGET_NEW )
 {
   if( ISBETWEEN(1,3) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QDOCKWIDGET_NEW1 );
+    QDockWidget_new1();
   }
   else if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QDOCKWIDGET_NEW2 );
+    QDockWidget_new2();
   }
   else
   {

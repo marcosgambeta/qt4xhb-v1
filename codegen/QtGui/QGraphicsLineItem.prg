@@ -11,15 +11,10 @@ REQUEST QPAINTERPATH
 
 CLASS QGraphicsLineItem INHERIT QGraphicsItem
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD line
    METHOD pen
-   METHOD setLine1
-   METHOD setLine2
    METHOD setLine
    METHOD setPen
    METHOD boundingRect
@@ -49,17 +44,17 @@ $destructor
 /*
 QGraphicsLineItem ( QGraphicsItem * parent = 0 )
 */
-$constructor=|new1|QGraphicsItem *=0
+$internalConstructor=|new1|QGraphicsItem *=0
 
 /*
 QGraphicsLineItem ( const QLineF & line, QGraphicsItem * parent = 0 )
 */
-$constructor=|new2|const QLineF &,QGraphicsItem *=0
+$internalConstructor=|new2|const QLineF &,QGraphicsItem *=0
 
 /*
 QGraphicsLineItem ( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent = 0 )
 */
-$constructor=|new3|qreal,qreal,qreal,qreal,QGraphicsItem *=0
+$internalConstructor=|new3|qreal,qreal,qreal,qreal,QGraphicsItem *=0
 
 //[1]QGraphicsLineItem ( QGraphicsItem * parent = 0 )
 //[2]QGraphicsLineItem ( const QLineF & line, QGraphicsItem * parent = 0 )
@@ -69,15 +64,15 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSLINEITEM_NEW1 );
+    QGraphicsLineItem_new1();
   }
   else if( ISBETWEEN(1,2) && ISQLINEF(1) && (ISQGRAPHICSITEM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSLINEITEM_NEW2 );
+    QGraphicsLineItem_new2();
   }
   else if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISQGRAPHICSITEM(5)||ISNIL(5)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSLINEITEM_NEW3 );
+    QGraphicsLineItem_new3();
   }
   else
   {
@@ -100,12 +95,12 @@ $method=|QPen|pen|
 /*
 void setLine ( const QLineF & line )
 */
-$method=|void|setLine,setLine1|const QLineF &
+$internalMethod=|void|setLine,setLine1|const QLineF &
 
 /*
 void setLine ( qreal x1, qreal y1, qreal x2, qreal y2 )
 */
-$method=|void|setLine,setLine2|qreal,qreal,qreal,qreal
+$internalMethod=|void|setLine,setLine2|qreal,qreal,qreal,qreal
 
 //[1]void setLine ( const QLineF & line )
 //[2]void setLine ( qreal x1, qreal y1, qreal x2, qreal y2 )
@@ -114,11 +109,11 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETLINE )
 {
   if( ISNUMPAR(1) && ISQLINEF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSLINEITEM_SETLINE1 );
+    QGraphicsLineItem_setLine1();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QGRAPHICSLINEITEM_SETLINE2 );
+    QGraphicsLineItem_setLine2();
   }
   else
   {

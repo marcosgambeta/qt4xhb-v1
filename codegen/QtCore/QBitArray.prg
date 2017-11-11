@@ -7,24 +7,15 @@ CLASS QBitArray
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD at
    METHOD clear
    METHOD clearBit
-   METHOD count1
-   METHOD count2
    METHOD count
-   METHOD fill1
-   METHOD fill2
    METHOD fill
    METHOD isEmpty
    METHOD isNull
    METHOD resize
-   METHOD setBit1
-   METHOD setBit2
    METHOD setBit
    METHOD size
    METHOD testBit
@@ -54,17 +45,17 @@ $destructor
 /*
 QBitArray ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QBitArray ( int size, bool value = false )
 */
-$constructor=|new2|int,bool=false
+$internalConstructor=|new2|int,bool=false
 
 /*
 QBitArray ( const QBitArray & other )
 */
-$constructor=|new3|const QBitArray &
+$internalConstructor=|new3|const QBitArray &
 
 //[1]QBitArray ()
 //[2]QBitArray ( int size, bool value = false )
@@ -74,15 +65,15 @@ HB_FUNC_STATIC( QBITARRAY_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QBITARRAY_NEW1 );
+    QBitArray_new1();
   }
   else if( ISBETWEEN(1,2) && ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QBITARRAY_NEW2 );
+    QBitArray_new2();
   }
   else if( ISNUMPAR(1) && ISQBITARRAY(1) )
   {
-    HB_FUNC_EXEC( QBITARRAY_NEW3 );
+    QBitArray_new3();
   }
   else
   {
@@ -108,12 +99,12 @@ $method=|void|clearBit|int
 /*
 int count () const
 */
-$method=|int|count,count1|
+$internalMethod=|int|count,count1|
 
 /*
 int count ( bool on ) const
 */
-$method=|int|count,count2|bool
+$internalMethod=|int|count,count2|bool
 
 //[1]int count () const
 //[2]int count ( bool on ) const
@@ -122,11 +113,11 @@ HB_FUNC_STATIC( QBITARRAY_COUNT )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QBITARRAY_COUNT1 );
+    QBitArray_count1();
   }
   else if( ISNUMPAR(1) && ISLOG(1) )
   {
-    HB_FUNC_EXEC( QBITARRAY_COUNT2 );
+    QBitArray_count2();
   }
   else
   {
@@ -137,12 +128,12 @@ HB_FUNC_STATIC( QBITARRAY_COUNT )
 /*
 bool fill ( bool value, int size = -1 )
 */
-$method=|bool|fill,fill1|bool,int=-1
+$internalMethod=|bool|fill,fill1|bool,int=-1
 
 /*
 void fill ( bool value, int begin, int end )
 */
-$method=|void|fill,fill2|bool,int,int
+$internalMethod=|void|fill,fill2|bool,int,int
 
 //[1]bool fill ( bool value, int size = -1 )
 //[2]void fill ( bool value, int begin, int end )
@@ -151,11 +142,11 @@ HB_FUNC_STATIC( QBITARRAY_FILL )
 {
   if( ISBETWEEN(1,2) && ISLOG(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QBITARRAY_FILL1 );
+    QBitArray_fill1();
   }
   else if( ISNUMPAR(3) && ISLOG(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QBITARRAY_FILL2 );
+    QBitArray_fill2();
   }
   else
   {
@@ -181,12 +172,12 @@ $method=|void|resize|int
 /*
 void setBit ( int i )
 */
-$method=|void|setBit,setBit1|int
+$internalMethod=|void|setBit,setBit1|int
 
 /*
 void setBit ( int i, bool value )
 */
-$method=|void|setBit,setBit2|int,bool
+$internalMethod=|void|setBit,setBit2|int,bool
 
 //[1]void setBit ( int i )
 //[2]void setBit ( int i, bool value )
@@ -195,11 +186,11 @@ HB_FUNC_STATIC( QBITARRAY_SETBIT )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QBITARRAY_SETBIT1 );
+    QBitArray_setBit1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISLOG(2) )
   {
-    HB_FUNC_EXEC( QBITARRAY_SETBIT2 );
+    QBitArray_setBit2();
   }
   else
   {

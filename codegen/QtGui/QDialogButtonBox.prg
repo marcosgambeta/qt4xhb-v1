@@ -9,14 +9,8 @@ REQUEST QABSTRACTBUTTON
 
 CLASS QDialogButtonBox INHERIT QWidget
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
-   METHOD addButton1
-   METHOD addButton2
-   METHOD addButton3
    METHOD addButton
    METHOD button
    METHOD buttonRole
@@ -53,17 +47,17 @@ $destructor
 /*
 QDialogButtonBox ( QWidget * parent = 0 )
 */
-$constructor=|new1|QWidget *=0
+$internalConstructor=|new1|QWidget *=0
 
 /*
 QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
-$constructor=|new2|Qt::Orientation,QWidget *=0
+$internalConstructor=|new2|Qt::Orientation,QWidget *=0
 
 /*
 QDialogButtonBox ( StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget * parent = 0 )
 */
-$constructor=|new3|QDialogButtonBox::StandardButtons,Qt::Orientation=Qt::Horizontal,QWidget *=0
+$internalConstructor=|new3|QDialogButtonBox::StandardButtons,Qt::Orientation=Qt::Horizontal,QWidget *=0
 
 //[1]QDialogButtonBox ( QWidget * parent = 0 )
 //[2]QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = 0 )
@@ -73,15 +67,15 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QDIALOGBUTTONBOX_NEW1 );
+    QDialogButtonBox_new1();
   }
   else if( ISBETWEEN(1,2) && ISNUM(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QDIALOGBUTTONBOX_NEW2 );
+    QDialogButtonBox_new2();
   }
   else if( ISBETWEEN(1,3) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) && (ISQWIDGET(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QDIALOGBUTTONBOX_NEW3 );
+    QDialogButtonBox_new3();
   }
   else
   {
@@ -94,17 +88,17 @@ $deleteMethod
 /*
 void addButton ( QAbstractButton * button, ButtonRole role )
 */
-$method=|void|addButton,addButton1|QAbstractButton *,QDialogButtonBox::ButtonRole
+$internalMethod=|void|addButton,addButton1|QAbstractButton *,QDialogButtonBox::ButtonRole
 
 /*
 QPushButton * addButton ( const QString & text, ButtonRole role )
 */
-$method=|QPushButton *|addButton,addButton2|const QString &,QDialogButtonBox::ButtonRole
+$internalMethod=|QPushButton *|addButton,addButton2|const QString &,QDialogButtonBox::ButtonRole
 
 /*
 QPushButton * addButton ( StandardButton button )
 */
-$method=|QPushButton *|addButton,addButton3|QDialogButtonBox::StandardButton
+$internalMethod=|QPushButton *|addButton,addButton3|QDialogButtonBox::StandardButton
 
 //[1]void addButton ( QAbstractButton * button, ButtonRole role )
 //[2]QPushButton * addButton ( const QString & text, ButtonRole role )
@@ -114,15 +108,15 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON )
 {
   if( ISNUMPAR(2) && ISQABSTRACTBUTTON(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QDIALOGBUTTONBOX_ADDBUTTON1 );
+    QDialogButtonBox_addButton1();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QDIALOGBUTTONBOX_ADDBUTTON2 );
+    QDialogButtonBox_addButton2();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QDIALOGBUTTONBOX_ADDBUTTON3 );
+    QDialogButtonBox_addButton3();
   }
   else
   {
@@ -150,14 +144,8 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTONS )
   if( obj )
   {
     QList<QAbstractButton *> list = obj->buttons ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QABSTRACTBUTTON" );
-    #else
-    pDynSym = hb_dynsymFindName( "QABSTRACTBUTTON" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTBUTTON" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

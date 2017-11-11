@@ -18,10 +18,6 @@ CLASS QStandardItem
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD data
@@ -79,8 +75,6 @@ CLASS QStandardItem
    METHOD setColumnCount
    METHOD hasChildren
    METHOD child
-   METHOD setChild1
-   METHOD setChild2
    METHOD setChild
    METHOD insertRow1
    METHOD insertRow2
@@ -131,22 +125,22 @@ $destructor
 /*
 QStandardItem()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QStandardItem(const QString &text)
 */
-$constructor=|new2|const QString &
+$internalConstructor=|new2|const QString &
 
 /*
 QStandardItem(const QIcon &icon, const QString &text)
 */
-$constructor=|new3|const QIcon &,const QString &
+$internalConstructor=|new3|const QIcon &,const QString &
 
 /*
 QStandardItem(int rows, int columns = 1)
 */
-$constructor=|new4|int,int=1
+$internalConstructor=|new4|int,int=1
 
 //[1]QStandardItem()
 //[2]QStandardItem(const QString &text)
@@ -157,19 +151,19 @@ HB_FUNC_STATIC( QSTANDARDITEM_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSTANDARDITEM_NEW1 );
+    QStandardItem_new1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QSTANDARDITEM_NEW2 );
+    QStandardItem_new2();
   }
   else if( ISNUMPAR(2) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QSTANDARDITEM_NEW3 );
+    QStandardItem_new3();
   }
   else if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QSTANDARDITEM_NEW4 );
+    QStandardItem_new4();
   }
   else
   {
@@ -457,12 +451,12 @@ $method=|QStandardItem *|child|int,int=0
 /*
 void setChild(int row, int column, QStandardItem *item)
 */
-$method=|void|setChild,setChild1|int,int,QStandardItem *
+$internalMethod=|void|setChild,setChild1|int,int,QStandardItem *
 
 /*
 void setChild(int row, QStandardItem *item)
 */
-$method=|void|setChild,setChild2|int,QStandardItem *
+$internalMethod=|void|setChild,setChild2|int,QStandardItem *
 
 //[1]void setChild(int row, int column, QStandardItem *item)
 //[2]void setChild(int row, QStandardItem *item)
@@ -471,11 +465,11 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETCHILD )
 {
   if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQSTANDARDITEM(3) )
   {
-    HB_FUNC_EXEC( QSTANDARDITEM_SETCHILD1 );
+    QStandardItem_setChild1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISQSTANDARDITEM(2) )
   {
-    HB_FUNC_EXEC( QSTANDARDITEM_SETCHILD2 );
+    QStandardItem_setChild2();
   }
   else
   {
@@ -733,14 +727,8 @@ HB_FUNC_STATIC( QSTANDARDITEM_TAKEROW )
   if( obj )
   {
     QList<QStandardItem *> list = obj->takeRow ( PINT(1) );
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QSTANDARDITEM" );
-    #else
-    pDynSym = hb_dynsymFindName( "QSTANDARDITEM" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QSTANDARDITEM" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -777,14 +765,8 @@ HB_FUNC_STATIC( QSTANDARDITEM_TAKECOLUMN )
   if( obj )
   {
     QList<QStandardItem *> list = obj->takeColumn ( PINT(1) );
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QSTANDARDITEM" );
-    #else
-    pDynSym = hb_dynsymFindName( "QSTANDARDITEM" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QSTANDARDITEM" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

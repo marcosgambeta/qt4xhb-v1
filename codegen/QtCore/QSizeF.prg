@@ -12,9 +12,6 @@ CLASS QSizeF
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD boundedTo
@@ -23,8 +20,6 @@ CLASS QSizeF
    METHOD isEmpty
    METHOD isNull
    METHOD isValid
-   METHOD scale1
-   METHOD scale2
    METHOD scale
    METHOD setHeight
    METHOD setWidth
@@ -55,17 +50,17 @@ $destructor
 /*
 QSizeF ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QSizeF ( const QSize & size )
 */
-$constructor=|new2|const QSize &
+$internalConstructor=|new2|const QSize &
 
 /*
 QSizeF ( qreal width, qreal height )
 */
-$constructor=|new3|qreal,qreal
+$internalConstructor=|new3|qreal,qreal
 
 //[1]QSizeF ()
 //[2]QSizeF ( const QSize & size )
@@ -75,15 +70,15 @@ HB_FUNC_STATIC( QSIZEF_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSIZEF_NEW1 );
+    QSizeF_new1();
   }
   else if( ISNUMPAR(1) && ISQSIZE(1) )
   {
-    HB_FUNC_EXEC( QSIZEF_NEW2 );
+    QSizeF_new2();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QSIZEF_NEW3 );
+    QSizeF_new3();
   }
   else
   {
@@ -126,12 +121,12 @@ $method=|bool|isValid|
 /*
 void scale ( qreal width, qreal height, Qt::AspectRatioMode mode )
 */
-$method=|void|scale,scale1|qreal,qreal,Qt::AspectRatioMode
+$internalMethod=|void|scale,scale1|qreal,qreal,Qt::AspectRatioMode
 
 /*
 void scale ( const QSizeF & size, Qt::AspectRatioMode mode )
 */
-$method=|void|scale,scale2|const QSizeF &,Qt::AspectRatioMode
+$internalMethod=|void|scale,scale2|const QSizeF &,Qt::AspectRatioMode
 
 //[1]void scale ( qreal width, qreal height, Qt::AspectRatioMode mode )
 //[2]void scale ( const QSizeF & size, Qt::AspectRatioMode mode )
@@ -140,11 +135,11 @@ HB_FUNC_STATIC( QSIZEF_SCALE )
 {
   if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QSIZEF_SCALE1 );
+    QSizeF_scale1();
   }
   else if( ISNUMPAR(2) && ISQSIZEF(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QSIZEF_SCALE2 );
+    QSizeF_scale2();
   }
   else
   {

@@ -7,8 +7,6 @@ CLASS QMargins
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD bottom
@@ -44,12 +42,12 @@ $destructor
 /*
 QMargins ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QMargins ( int left, int top, int right, int bottom )
 */
-$constructor=|new2|int,int,int,int
+$internalConstructor=|new2|int,int,int,int
 
 //[1]QMargins ()
 //[2]QMargins ( int left, int top, int right, int bottom )
@@ -58,11 +56,11 @@ HB_FUNC_STATIC( QMARGINS_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QMARGINS_NEW1 );
+    QMargins_new1();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QMARGINS_NEW2 );
+    QMargins_new2();
   }
   else
   {

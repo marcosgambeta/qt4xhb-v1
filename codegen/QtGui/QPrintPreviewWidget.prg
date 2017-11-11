@@ -4,8 +4,6 @@ $header
 
 CLASS QPrintPreviewWidget INHERIT QWidget
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD currentPage
@@ -52,12 +50,12 @@ $destructor
 /*
 QPrintPreviewWidget ( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
-$constructor=|new1|QPrinter *,QWidget *=0,Qt::WindowFlags=0
+$internalConstructor=|new1|QPrinter *,QWidget *=0,Qt::WindowFlags=0
 
 /*
 QPrintPreviewWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
-$constructor=|new2|QWidget *=0,Qt::WindowFlags=0
+$internalConstructor=|new2|QWidget *=0,Qt::WindowFlags=0
 
 //[1]QPrintPreviewWidget ( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 //[2]QPrintPreviewWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
@@ -66,11 +64,11 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_NEW )
 {
   if( ISBETWEEN(1,3) && ISQPRINTER(1) && (ISQWIDGET(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QPRINTPREVIEWWIDGET_NEW1 );
+    QPrintPreviewWidget_new1();
   }
   else if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QPRINTPREVIEWWIDGET_NEW2 );
+    QPrintPreviewWidget_new2();
   }
   else
   {

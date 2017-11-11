@@ -7,8 +7,6 @@ CLASS QAudioFormat
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD isValid
@@ -52,12 +50,12 @@ $destructor
 /*
 QAudioFormat ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QAudioFormat ( const QAudioFormat & other )
 */
-$constructor=|new2|const QAudioFormat &
+$internalConstructor=|new2|const QAudioFormat &
 
 //[1]QAudioFormat ()
 //[2]QAudioFormat ( const QAudioFormat & other )
@@ -66,11 +64,11 @@ HB_FUNC_STATIC( QAUDIOFORMAT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QAUDIOFORMAT_NEW1 );
+    QAudioFormat_new1();
   }
   else if( ISNUMPAR(1) && ISQAUDIOFORMAT(1) )
   {
-    HB_FUNC_EXEC( QAUDIOFORMAT_NEW2 );
+    QAudioFormat_new2();
   }
   else
   {

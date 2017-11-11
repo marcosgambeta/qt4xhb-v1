@@ -11,19 +11,15 @@ CLASS QProcessEnvironment
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD isEmpty
    METHOD clear
    METHOD contains
-   METHOD insert1
    METHOD remove
    METHOD value
    METHOD toStringList
    METHOD keys
-   METHOD insert2
    METHOD insert
    METHOD systemEnvironment
 
@@ -50,12 +46,12 @@ $destructor
 /*
 QProcessEnvironment()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QProcessEnvironment(const QProcessEnvironment &other)
 */
-$constructor=|new2|const QProcessEnvironment &
+$internalConstructor=|new2|const QProcessEnvironment &
 
 //[1]QProcessEnvironment()
 //[2]QProcessEnvironment(const QProcessEnvironment &other)
@@ -64,11 +60,11 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QPROCESSENVIRONMENT_NEW1 );
+    QProcessEnvironment_new1();
   }
   else if( ISNUMPAR(1) && ISQPROCESSENVIRONMENT(1) )
   {
-    HB_FUNC_EXEC( QPROCESSENVIRONMENT_NEW2 );
+    QProcessEnvironment_new2();
   }
   else
   {
@@ -94,11 +90,6 @@ bool contains(const QString &name) const
 $method=|bool|contains|const QString &
 
 /*
-void insert(const QString &name, const QString &value)
-*/
-$method=|void|insert,insert1|const QString &,const QString &
-
-/*
 void remove(const QString &name)
 */
 $method=|void|remove|const QString &
@@ -119,9 +110,14 @@ QStringList keys() const
 $method=|QStringList|keys|
 
 /*
+void insert(const QString &name, const QString &value)
+*/
+$internalMethod=|void|insert,insert1|const QString &,const QString &
+
+/*
 void insert(const QProcessEnvironment &e)
 */
-$method=|void|insert,insert2|const QProcessEnvironment &
+$internalMethod=|void|insert,insert2|const QProcessEnvironment &
 
 //[1]void insert(const QString &name, const QString &value)
 //[2]void insert(const QProcessEnvironment &e)
@@ -130,11 +126,11 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_INSERT )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QPROCESSENVIRONMENT_INSERT1 );
+    QProcessEnvironment_insert1();
   }
   else if( ISNUMPAR(1) && ISQPROCESSENVIRONMENT(1) )
   {
-    HB_FUNC_EXEC( QPROCESSENVIRONMENT_INSERT2 );
+    QProcessEnvironment_insert2();
   }
   else
   {

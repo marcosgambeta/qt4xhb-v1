@@ -9,8 +9,6 @@ REQUEST QBYTEARRAY
 
 CLASS QSignalTransition INHERIT QAbstractTransition
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD senderObject
@@ -35,12 +33,12 @@ $destructor
 /*
 QSignalTransition(QState *sourceState = 0)
 */
-$constructor=|new1|QState *=0
+$internalConstructor=|new1|QState *=0
 
 /*
 QSignalTransition(QObject *sender, const char *signal,QState *sourceState = 0)
 */
-$constructor=|new2|QObject *,const char *,QState *=0
+$internalConstructor=|new2|QObject *,const char *,QState *=0
 
 //[1]QSignalTransition(QState *sourceState = 0)
 //[2]QSignalTransition(QObject *sender, const char *signal,QState *sourceState = 0)
@@ -49,11 +47,11 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQSTATE(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QSIGNALTRANSITION_NEW1 );
+    QSignalTransition_new1();
   }
   else if( ISBETWEEN(2,3) && ISQOBJECT(1) && ISCHAR(2) && (ISQSTATE(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QSIGNALTRANSITION_NEW2 );
+    QSignalTransition_new2();
   }
   else
   {

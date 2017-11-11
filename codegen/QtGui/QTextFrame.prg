@@ -58,14 +58,8 @@ HB_FUNC_STATIC( QTEXTFRAME_CHILDFRAMES )
   if( obj )
   {
     QList<QTextFrame *> list = obj->childFrames ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QTEXTFRAME" );
-    #else
-    pDynSym = hb_dynsymFindName( "QTEXTFRAME" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QTEXTFRAME" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

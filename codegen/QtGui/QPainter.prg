@@ -23,18 +23,12 @@ CLASS QPainter
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD background
    METHOD backgroundMode
    METHOD begin
    METHOD beginNativePainting
-   METHOD boundingRect1
-   METHOD boundingRect2
-   METHOD boundingRect3
-   METHOD boundingRect4
    METHOD boundingRect
    METHOD brush
    METHOD brushOrigin
@@ -44,38 +38,11 @@ CLASS QPainter
    METHOD compositionMode
    METHOD device
    METHOD deviceTransform
-   METHOD drawArc1
-   METHOD drawArc2
-   METHOD drawArc3
    METHOD drawArc
-   METHOD drawChord1
-   METHOD drawChord2
-   METHOD drawChord3
    METHOD drawChord
-   METHOD drawConvexPolygon3
-   METHOD drawConvexPolygon4
    METHOD drawConvexPolygon
-   METHOD drawEllipse1
-   METHOD drawEllipse2
-   METHOD drawEllipse3
-   METHOD drawEllipse4
-   METHOD drawEllipse5
    METHOD drawEllipse
-   METHOD drawImage1
-   METHOD drawImage2
-   METHOD drawImage3
-   METHOD drawImage4
-   METHOD drawImage5
-   METHOD drawImage6
-   METHOD drawImage7
-   METHOD drawImage8
-   METHOD drawImage9
    METHOD drawImage
-   METHOD drawLine1
-   METHOD drawLine2
-   METHOD drawLine3
-   METHOD drawLine4
-   METHOD drawLine5
    METHOD drawLine
    METHOD drawLines5
    METHOD drawLines6
@@ -83,71 +50,23 @@ CLASS QPainter
    METHOD drawLines8
    METHOD drawLines
    METHOD drawPath
-   METHOD drawPicture1
-   METHOD drawPicture2
-   METHOD drawPicture3
    METHOD drawPicture
-   METHOD drawPie1
-   METHOD drawPie2
-   METHOD drawPie3
    METHOD drawPie
-   METHOD drawPixmap1
-   METHOD drawPixmap2
-   METHOD drawPixmap3
-   METHOD drawPixmap4
-   METHOD drawPixmap5
-   METHOD drawPixmap6
-   METHOD drawPixmap7
-   METHOD drawPixmap8
-   METHOD drawPixmap9
-   METHOD drawPixmap10
-   METHOD drawPixmap11
    METHOD drawPixmap
-   METHOD drawPoint1
-   METHOD drawPoint2
-   METHOD drawPoint3
    METHOD drawPoint
-   METHOD drawPoints3
-   METHOD drawPoints4
    METHOD drawPoints
-   METHOD drawPolygon3
-   METHOD drawPolygon4
    METHOD drawPolygon
-   METHOD drawPolyline3
-   METHOD drawPolyline4
    METHOD drawPolyline
-   METHOD drawRect1
-   METHOD drawRect2
-   METHOD drawRect3
    METHOD drawRect
    METHOD drawRects3
    METHOD drawRects4
    METHOD drawRects
-   METHOD drawRoundedRect1
-   METHOD drawRoundedRect2
-   METHOD drawRoundedRect3
    METHOD drawRoundedRect
-   METHOD drawStaticText1
-   METHOD drawStaticText2
-   METHOD drawStaticText3
    METHOD drawStaticText
-   METHOD drawText1
-   METHOD drawText2
-   METHOD drawText3
-   METHOD drawText4
-   METHOD drawText5
-   METHOD drawText6
-   METHOD drawText7
    METHOD drawText
-   METHOD drawTiledPixmap1
-   METHOD drawTiledPixmap2
-   METHOD drawTiledPixmap3
    METHOD drawTiledPixmap
    METHOD end
    METHOD endNativePainting
-   METHOD eraseRect1
-   METHOD eraseRect2
-   METHOD eraseRect3
    METHOD eraseRect
    METHOD fillPath
    METHOD fillRect1
@@ -181,17 +100,9 @@ CLASS QPainter
    METHOD scale
    METHOD setBackground
    METHOD setBackgroundMode
-   METHOD setBrush1
-   METHOD setBrush2
    METHOD setBrush
-   METHOD setBrushOrigin1
-   METHOD setBrushOrigin2
-   METHOD setBrushOrigin3
    METHOD setBrushOrigin
    METHOD setClipPath
-   METHOD setClipRect1
-   METHOD setClipRect2
-   METHOD setClipRect3
    METHOD setClipRect
    METHOD setClipRegion
    METHOD setClipping
@@ -199,19 +110,12 @@ CLASS QPainter
    METHOD setFont
    METHOD setLayoutDirection
    METHOD setOpacity
-   METHOD setPen1
-   METHOD setPen2
-   METHOD setPen3
    METHOD setPen
    METHOD setRenderHint
    METHOD setRenderHints
    METHOD setTransform
    METHOD setViewTransformEnabled
-   METHOD setViewport1
-   METHOD setViewport2
    METHOD setViewport
-   METHOD setWindow1
-   METHOD setWindow2
    METHOD setWindow
    METHOD setWorldMatrixEnabled
    METHOD setWorldTransform
@@ -219,9 +123,6 @@ CLASS QPainter
    METHOD strokePath
    METHOD testRenderHint
    METHOD transform
-   METHOD translate1
-   METHOD translate2
-   METHOD translate3
    METHOD translate
    METHOD viewTransformEnabled
    METHOD viewport
@@ -252,12 +153,12 @@ $destructor
 /*
 QPainter ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QPainter ( QPaintDevice * device )
 */
-$constructor=|new2|QPaintDevice *
+$internalConstructor=|new2|QPaintDevice *
 
 //[1]QPainter ()
 //[2]QPainter ( QPaintDevice * device )
@@ -266,11 +167,11 @@ HB_FUNC_STATIC( QPAINTER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QPAINTER_NEW1 );
+    QPainter_new1();
   }
   else if( ISNUMPAR(1) && ISOBJECT(1) )
   {
-    HB_FUNC_EXEC( QPAINTER_NEW2 );
+    QPainter_new2();
   }
   else
   {
@@ -303,22 +204,22 @@ $method=|void|beginNativePainting|
 /*
 QRectF boundingRect ( const QRectF & rectangle, int flags, const QString & text )
 */
-$method=|QRectF|boundingRect,boundingRect1|const QRectF &,int,const QString &
+$internalMethod=|QRectF|boundingRect,boundingRect1|const QRectF &,int,const QString &
 
 /*
 QRect boundingRect ( const QRect & rectangle, int flags, const QString & text )
 */
-$method=|QRect|boundingRect,boundingRect2|const QRect &,int,const QString &
+$internalMethod=|QRect|boundingRect,boundingRect2|const QRect &,int,const QString &
 
 /*
 QRect boundingRect ( int x, int y, int w, int h, int flags, const QString & text )
 */
-$method=|QRect|boundingRect,boundingRect3|int,int,int,int,int,const QString &
+$internalMethod=|QRect|boundingRect,boundingRect3|int,int,int,int,int,const QString &
 
 /*
 QRectF boundingRect ( const QRectF & rectangle, const QString & text, const QTextOption & option = QTextOption() )
 */
-$method=|QRectF|boundingRect,boundingRect4|const QRectF &,const QString &,const QTextOption &=QTextOption()
+$internalMethod=|QRectF|boundingRect,boundingRect4|const QRectF &,const QString &,const QTextOption &=QTextOption()
 
 //[1]QRectF boundingRect ( const QRectF & rectangle, int flags, const QString & text )
 //[2]QRect boundingRect ( const QRect & rectangle, int flags, const QString & text )
@@ -329,19 +230,19 @@ HB_FUNC_STATIC( QPAINTER_BOUNDINGRECT )
 {
   if( ISNUMPAR(3) && ISQRECTF(1) && ISNUM(2) && ISCHAR(3) )
   {
-    HB_FUNC_EXEC( QPAINTER_BOUNDINGRECT1 );
+    QPainter_boundingRect1();
   }
   else if( ISNUMPAR(3) && ISQRECT(1) && ISNUM(2) && ISCHAR(3) )
   {
-    HB_FUNC_EXEC( QPAINTER_BOUNDINGRECT2 );
+    QPainter_boundingRect2();
   }
   else if( ISNUMPAR(6) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISCHAR(6) )
   {
-    HB_FUNC_EXEC( QPAINTER_BOUNDINGRECT3 );
+    QPainter_boundingRect3();
   }
   else if( ISBETWEEN(2,3) && ISQRECTF(1) && ISCHAR(2) && (ISQTEXTOPTION(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QPAINTER_BOUNDINGRECT4 );
+    QPainter_boundingRect4();
   }
   else
   {
@@ -392,17 +293,17 @@ $method=|const QTransform &|deviceTransform|
 /*
 void drawArc ( const QRectF & rectangle, int startAngle, int spanAngle )
 */
-$method=|void|drawArc,drawArc1|const QRectF &,int,int
+$internalMethod=|void|drawArc,drawArc1|const QRectF &,int,int
 
 /*
 void drawArc ( const QRect & rectangle, int startAngle, int spanAngle )
 */
-$method=|void|drawArc,drawArc2|const QRect &,int,int
+$internalMethod=|void|drawArc,drawArc2|const QRect &,int,int
 
 /*
 void drawArc ( int x, int y, int width, int height, int startAngle, int spanAngle )
 */
-$method=|void|drawArc,drawArc3|int,int,int,int,int,int
+$internalMethod=|void|drawArc,drawArc3|int,int,int,int,int,int
 
 //[1]void drawArc ( const QRectF & rectangle, int startAngle, int spanAngle )
 //[2]void drawArc ( const QRect & rectangle, int startAngle, int spanAngle )
@@ -412,15 +313,15 @@ HB_FUNC_STATIC( QPAINTER_DRAWARC )
 {
   if( ISNUMPAR(3) && ISQRECTF(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWARC1 );
+    QPainter_drawArc1();
   }
   else if( ISNUMPAR(3) && ISQRECT(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWARC2 );
+    QPainter_drawArc2();
   }
   else if( ISNUMPAR(6) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWARC3 );
+    QPainter_drawArc3();
   }
   else
   {
@@ -431,17 +332,17 @@ HB_FUNC_STATIC( QPAINTER_DRAWARC )
 /*
 void drawChord ( const QRectF & rectangle, int startAngle, int spanAngle )
 */
-$method=|void|drawChord,drawChord1|const QRectF &,int,int
+$internalMethod=|void|drawChord,drawChord1|const QRectF &,int,int
 
 /*
 void drawChord ( const QRect & rectangle, int startAngle, int spanAngle )
 */
-$method=|void|drawChord,drawChord2|const QRect &,int,int
+$internalMethod=|void|drawChord,drawChord2|const QRect &,int,int
 
 /*
 void drawChord ( int x, int y, int width, int height, int startAngle, int spanAngle )
 */
-$method=|void|drawChord,drawChord3|int,int,int,int,int,int
+$internalMethod=|void|drawChord,drawChord3|int,int,int,int,int,int
 
 //[1]void drawChord ( const QRectF & rectangle, int startAngle, int spanAngle )
 //[2]void drawChord ( const QRect & rectangle, int startAngle, int spanAngle )
@@ -451,15 +352,15 @@ HB_FUNC_STATIC( QPAINTER_DRAWCHORD )
 {
   if( ISNUMPAR(3) && ISQRECTF(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWCHORD1 );
+    QPainter_drawChord1();
   }
   else if( ISNUMPAR(3) && ISQRECT(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWCHORD2 );
+    QPainter_drawChord2();
   }
   else if( ISNUMPAR(6) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWCHORD3 );
+    QPainter_drawChord3();
   }
   else
   {
@@ -468,14 +369,22 @@ HB_FUNC_STATIC( QPAINTER_DRAWCHORD )
 }
 
 /*
+void drawConvexPolygon ( const QPointF * points, int pointCount )
+*/
+
+/*
+void drawConvexPolygon ( const QPoint * points, int pointCount )
+*/
+
+/*
 void drawConvexPolygon ( const QPolygonF & polygon )
 */
-$method=|void|drawConvexPolygon,drawConvexPolygon3|const QPolygonF &
+$internalMethod=|void|drawConvexPolygon,drawConvexPolygon3|const QPolygonF &
 
 /*
 void drawConvexPolygon ( const QPolygon & polygon )
 */
-$method=|void|drawConvexPolygon,drawConvexPolygon4|const QPolygon &
+$internalMethod=|void|drawConvexPolygon,drawConvexPolygon4|const QPolygon &
 
 //[1]void drawConvexPolygon ( const QPointF * points, int pointCount )
 //[2]void drawConvexPolygon ( const QPoint * points, int pointCount )
@@ -486,11 +395,11 @@ HB_FUNC_STATIC( QPAINTER_DRAWCONVEXPOLYGON )
 {
   if( ISNUMPAR(1) && ISQPOLYGONF(1) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWCONVEXPOLYGON3 );
+    QPainter_drawConvexPolygon3();
   }
   else if( ISNUMPAR(1) && ISQPOLYGON(1) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWCONVEXPOLYGON4 );
+    QPainter_drawConvexPolygon4();
   }
   else
   {
@@ -501,27 +410,27 @@ HB_FUNC_STATIC( QPAINTER_DRAWCONVEXPOLYGON )
 /*
 void drawEllipse ( const QRectF & rectangle )
 */
-$method=|void|drawEllipse,drawEllipse1|const QRectF &
+$internalMethod=|void|drawEllipse,drawEllipse1|const QRectF &
 
 /*
 void drawEllipse ( const QRect & rectangle )
 */
-$method=|void|drawEllipse,drawEllipse2|const QRect &
+$internalMethod=|void|drawEllipse,drawEllipse2|const QRect &
 
 /*
 void drawEllipse ( int x, int y, int width, int height )
 */
-$method=|void|drawEllipse,drawEllipse3|int,int,int,int
+$internalMethod=|void|drawEllipse,drawEllipse3|int,int,int,int
 
 /*
 void drawEllipse ( const QPointF & center, qreal rx, qreal ry )
 */
-$method=|void|drawEllipse,drawEllipse4|const QPointF &,qreal,qreal
+$internalMethod=|void|drawEllipse,drawEllipse4|const QPointF &,qreal,qreal
 
 /*
 void drawEllipse ( const QPoint & center, int rx, int ry )
 */
-$method=|void|drawEllipse,drawEllipse5|const QPoint &,int,int
+$internalMethod=|void|drawEllipse,drawEllipse5|const QPoint &,int,int
 
 //[1]void drawEllipse ( const QRectF & rectangle )
 //[2]void drawEllipse ( const QRect & rectangle )
@@ -533,23 +442,23 @@ HB_FUNC_STATIC( QPAINTER_DRAWELLIPSE )
 {
   if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWELLIPSE1 );
+    QPainter_drawEllipse1();
   }
   else if( ISNUMPAR(1) && ISQRECT(1) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWELLIPSE2 );
+    QPainter_drawEllipse2();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWELLIPSE3 );
+    QPainter_drawEllipse3();
   }
   else if( ISNUMPAR(3) && ISQPOINTF(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWELLIPSE4 );
+    QPainter_drawEllipse4();
   }
   else if( ISNUMPAR(3) && ISQPOINT(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWELLIPSE5 );
+    QPainter_drawEllipse5();
   }
   else
   {
@@ -560,47 +469,47 @@ HB_FUNC_STATIC( QPAINTER_DRAWELLIPSE )
 /*
 void drawImage ( const QRectF & target, const QImage & image, const QRectF & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
 */
-$method=|void|drawImage,drawImage1|const QRectF &,const QImage &,const QRectF &,Qt::ImageConversionFlags=Qt::AutoColor
+$internalMethod=|void|drawImage,drawImage1|const QRectF &,const QImage &,const QRectF &,Qt::ImageConversionFlags=Qt::AutoColor
 
 /*
 void drawImage ( const QRect & target, const QImage & image, const QRect & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
 */
-$method=|void|drawImage,drawImage2|const QRect &,const QImage &,const QRect &,Qt::ImageConversionFlags=Qt::AutoColor
+$internalMethod=|void|drawImage,drawImage2|const QRect &,const QImage &,const QRect &,Qt::ImageConversionFlags=Qt::AutoColor
 
 /*
 void drawImage ( const QPointF & point, const QImage & image )
 */
-$method=|void|drawImage,drawImage3|const QPointF &,const QImage &
+$internalMethod=|void|drawImage,drawImage3|const QPointF &,const QImage &
 
 /*
 void drawImage ( const QPoint & point, const QImage & image )
 */
-$method=|void|drawImage,drawImage4|const QPoint &,const QImage &
+$internalMethod=|void|drawImage,drawImage4|const QPoint &,const QImage &
 
 /*
 void drawImage ( const QPointF & point, const QImage & image, const QRectF & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
 */
-$method=|void|drawImage,drawImage5|const QPointF &,const QImage &,const QRectF &,Qt::ImageConversionFlags=Qt::AutoColor
+$internalMethod=|void|drawImage,drawImage5|const QPointF &,const QImage &,const QRectF &,Qt::ImageConversionFlags=Qt::AutoColor
 
 /*
 void drawImage ( const QPoint & point, const QImage & image, const QRect & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
 */
-$method=|void|drawImage,drawImage6|const QPoint &,const QImage &,const QRect &,Qt::ImageConversionFlags=Qt::AutoColor
+$internalMethod=|void|drawImage,drawImage6|const QPoint &,const QImage &,const QRect &,Qt::ImageConversionFlags=Qt::AutoColor
 
 /*
 void drawImage ( const QRectF & rectangle, const QImage & image )
 */
-$method=|void|drawImage,drawImage7|const QRectF &,const QImage &
+$internalMethod=|void|drawImage,drawImage7|const QRectF &,const QImage &
 
 /*
 void drawImage ( const QRect & rectangle, const QImage & image )
 */
-$method=|void|drawImage,drawImage8|const QRect &,const QImage &
+$internalMethod=|void|drawImage,drawImage8|const QRect &,const QImage &
 
 /*
 void drawImage ( int x, int y, const QImage & image, int sx = 0, int sy = 0, int sw = -1, int sh = -1, Qt::ImageConversionFlags flags = Qt::AutoColor )
 */
-$method=|void|drawImage,drawImage9|int,int,const QImage &,int=0,int=0,int=-1,int=-1,Qt::ImageConversionFlags=Qt::AutoColor
+$internalMethod=|void|drawImage,drawImage9|int,int,const QImage &,int=0,int=0,int=-1,int=-1,Qt::ImageConversionFlags=Qt::AutoColor
 
 //[1]void drawImage ( const QRectF & target, const QImage & image, const QRectF & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
 //[2]void drawImage ( const QRect & target, const QImage & image, const QRect & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
@@ -616,39 +525,39 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE )
 {
   if( ISBETWEEN(3,4) && ISQRECTF(1) && ISQIMAGE(2) && ISQRECTF(3) && (ISNUM(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWIMAGE1 );
+    QPainter_drawImage1();
   }
   else if( ISBETWEEN(3,4) && ISQRECT(1) && ISQIMAGE(2) && ISQRECT(3) && (ISNUM(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWIMAGE2 );
+    QPainter_drawImage2();
   }
   else if( ISNUMPAR(2) && ISQPOINTF(1) && ISQIMAGE(2) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWIMAGE3 );
+    QPainter_drawImage3();
   }
   else if( ISNUMPAR(2) && ISQPOINT(1) && ISQIMAGE(2) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWIMAGE4 );
+    QPainter_drawImage4();
   }
   else if( ISBETWEEN(3,4) && ISQPOINTF(1) && ISQIMAGE(2) && ISQRECTF(3) && (ISNUM(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWIMAGE5 );
+    QPainter_drawImage5();
   }
   else if( ISBETWEEN(3,4) && ISQPOINT(1) && ISQIMAGE(2) && ISQRECT(3) && (ISNUM(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWIMAGE6 );
+    QPainter_drawImage6();
   }
   else if( ISNUMPAR(2) && ISQRECTF(1) && ISQIMAGE(2) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWIMAGE7 );
+    QPainter_drawImage7();
   }
   else if( ISNUMPAR(2) && ISQRECT(1) && ISQIMAGE(2) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWIMAGE8 );
+    QPainter_drawImage8();
   }
   else if( ISBETWEEN(3,8) && ISNUM(1) && ISNUM(2) && ISQIMAGE(3) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) && (ISNUM(6)||ISNIL(6)) && (ISNUM(7)||ISNIL(7)) && (ISNUM(8)||ISNIL(8)) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWIMAGE9 );
+    QPainter_drawImage9();
   }
   else
   {
@@ -659,27 +568,27 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE )
 /*
 void drawLine ( const QLineF & line )
 */
-$method=|void|drawLine,drawLine1|const QLineF &
+$internalMethod=|void|drawLine,drawLine1|const QLineF &
 
 /*
 void drawLine ( const QLine & line )
 */
-$method=|void|drawLine,drawLine2|const QLine &
+$internalMethod=|void|drawLine,drawLine2|const QLine &
 
 /*
 void drawLine ( const QPoint & p1, const QPoint & p2 )
 */
-$method=|void|drawLine,drawLine3|const QPoint &,const QPoint &
+$internalMethod=|void|drawLine,drawLine3|const QPoint &,const QPoint &
 
 /*
 void drawLine ( const QPointF & p1, const QPointF & p2 )
 */
-$method=|void|drawLine,drawLine4|const QPointF &,const QPointF &
+$internalMethod=|void|drawLine,drawLine4|const QPointF &,const QPointF &
 
 /*
 void drawLine ( int x1, int y1, int x2, int y2 )
 */
-$method=|void|drawLine,drawLine5|int,int,int,int
+$internalMethod=|void|drawLine,drawLine5|int,int,int,int
 
 //[1]void drawLine ( const QLineF & line )
 //[2]void drawLine ( const QLine & line )
@@ -691,29 +600,45 @@ HB_FUNC_STATIC( QPAINTER_DRAWLINE )
 {
   if( ISNUMPAR(1) && ISQLINEF(1) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWLINE1 );
+    QPainter_drawLine1();
   }
   else if( ISNUMPAR(1) && ISQLINE(1) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWLINE2 );
+    QPainter_drawLine2();
   }
   else if( ISNUMPAR(2) && ISQPOINT(1) && ISQPOINT(2) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWLINE3 );
+    QPainter_drawLine3();
   }
   else if( ISNUMPAR(2) && ISQPOINTF(1) && ISQPOINTF(2) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWLINE4 );
+    QPainter_drawLine4();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWLINE5 );
+    QPainter_drawLine5();
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+
+/*
+void drawLines ( const QLineF * lines, int lineCount )
+*/
+
+/*
+void drawLines ( const QLine * lines, int lineCount )
+*/
+
+/*
+void drawLines ( const QPointF * pointPairs, int lineCount )
+*/
+
+/*
+void drawLines ( const QPoint * pointPairs, int lineCount )
+*/
 
 /*
 void drawLines ( const QVector<QPointF> & pointPairs )
@@ -830,17 +755,17 @@ $method=|void|drawPath|const QPainterPath &
 /*
 void drawPicture ( const QPointF & point, const QPicture & picture )
 */
-$method=|void|drawPicture,drawPicture1|const QPointF &,const QPicture &
+$internalMethod=|void|drawPicture,drawPicture1|const QPointF &,const QPicture &
 
 /*
 void drawPicture ( const QPoint & point, const QPicture & picture )
 */
-$method=|void|drawPicture,drawPicture2|const QPoint &,const QPicture &
+$internalMethod=|void|drawPicture,drawPicture2|const QPoint &,const QPicture &
 
 /*
 void drawPicture ( int x, int y, const QPicture & picture )
 */
-$method=|void|drawPicture,drawPicture3|int,int,const QPicture &
+$internalMethod=|void|drawPicture,drawPicture3|int,int,const QPicture &
 
 //[1]void drawPicture ( const QPointF & point, const QPicture & picture )
 //[2]void drawPicture ( const QPoint & point, const QPicture & picture )
@@ -850,15 +775,15 @@ HB_FUNC_STATIC( QPAINTER_DRAWPICTURE )
 {
   if( ISNUMPAR(2) && ISQPOINTF(1) && ISQPICTURE(2) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWPICTURE1 );
+    QPainter_drawPicture1();
   }
   else if( ISNUMPAR(2) && ISQPOINT(1) && ISQPICTURE(2) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWPICTURE2 );
+    QPainter_drawPicture2();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQPICTURE(3) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWPICTURE3 );
+    QPainter_drawPicture3();
   }
   else
   {
@@ -869,17 +794,17 @@ HB_FUNC_STATIC( QPAINTER_DRAWPICTURE )
 /*
 void drawPie ( const QRectF & rectangle, int startAngle, int spanAngle )
 */
-$method=|void|drawPie,drawPie1|const QRectF &,int,int
+$internalMethod=|void|drawPie,drawPie1|const QRectF &,int,int
 
 /*
 void drawPie ( const QRect & rectangle, int startAngle, int spanAngle )
 */
-$method=|void|drawPie,drawPie2|const QRect &,int,int
+$internalMethod=|void|drawPie,drawPie2|const QRect &,int,int
 
 /*
 void drawPie ( int x, int y, int width, int height, int startAngle, int spanAngle )
 */
-$method=|void|drawPie,drawPie3|int,int,int,int,int,int
+$internalMethod=|void|drawPie,drawPie3|int,int,int,int,int,int
 
 //[1]void drawPie ( const QRectF & rectangle, int startAngle, int spanAngle )
 //[2]void drawPie ( const QRect & rectangle, int startAngle, int spanAngle )
@@ -889,15 +814,15 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIE )
 {
   if( ISNUMPAR(3) && ISQRECTF(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWPIE1 );
+    QPainter_drawPie1();
   }
   else if( ISNUMPAR(3) && ISQRECT(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWPIE2 );
+    QPainter_drawPie2();
   }
   else if( ISNUMPAR(6) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWPIE3 );
+    QPainter_drawPie3();
   }
   else
   {
@@ -908,57 +833,57 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIE )
 /*
 void drawPixmap ( const QRectF & target, const QPixmap & pixmap, const QRectF & source )
 */
-$method=|void|drawPixmap,drawPixmap1|const QRectF &,const QPixmap &,const QRectF &
+$internalMethod=|void|drawPixmap,drawPixmap1|const QRectF &,const QPixmap &,const QRectF &
 
 /*
 void drawPixmap ( const QRect & target, const QPixmap & pixmap, const QRect & source )
 */
-$method=|void|drawPixmap,drawPixmap2|const QRect &,const QPixmap &,const QRect &
+$internalMethod=|void|drawPixmap,drawPixmap2|const QRect &,const QPixmap &,const QRect &
 
 /*
 void drawPixmap ( const QPointF & point, const QPixmap & pixmap, const QRectF & source )
 */
-$method=|void|drawPixmap,drawPixmap3|const QPointF &,const QPixmap &,const QRectF &
+$internalMethod=|void|drawPixmap,drawPixmap3|const QPointF &,const QPixmap &,const QRectF &
 
 /*
 void drawPixmap ( const QPoint & point, const QPixmap & pixmap, const QRect & source )
 */
-$method=|void|drawPixmap,drawPixmap4|const QPoint &,const QPixmap &,const QRect &
+$internalMethod=|void|drawPixmap,drawPixmap4|const QPoint &,const QPixmap &,const QRect &
 
 /*
 void drawPixmap ( const QPointF & point, const QPixmap & pixmap )
 */
-$method=|void|drawPixmap,drawPixmap5|const QPointF &,const QPixmap &
+$internalMethod=|void|drawPixmap,drawPixmap5|const QPointF &,const QPixmap &
 
 /*
 void drawPixmap ( const QPoint & point, const QPixmap & pixmap )
 */
-$method=|void|drawPixmap,drawPixmap6|const QPoint &,const QPixmap &
+$internalMethod=|void|drawPixmap,drawPixmap6|const QPoint &,const QPixmap &
 
 /*
 void drawPixmap ( int x, int y, const QPixmap & pixmap )
 */
-$method=|void|drawPixmap,drawPixmap7|int,int,const QPixmap &
+$internalMethod=|void|drawPixmap,drawPixmap7|int,int,const QPixmap &
 
 /*
 void drawPixmap ( const QRect & rectangle, const QPixmap & pixmap )
 */
-$method=|void|drawPixmap,drawPixmap8|const QRect &,const QPixmap &
+$internalMethod=|void|drawPixmap,drawPixmap8|const QRect &,const QPixmap &
 
 /*
 void drawPixmap ( int x, int y, int width, int height, const QPixmap & pixmap )
 */
-$method=|void|drawPixmap,drawPixmap9|int,int,int,int,const QPixmap &
+$internalMethod=|void|drawPixmap,drawPixmap9|int,int,int,int,const QPixmap &
 
 /*
 void drawPixmap ( int x, int y, int w, int h, const QPixmap & pixmap, int sx, int sy, int sw, int sh )
 */
-$method=|void|drawPixmap,drawPixmap10|int,int,int,int,const QPixmap &,int,int,int,int
+$internalMethod=|void|drawPixmap,drawPixmap10|int,int,int,int,const QPixmap &,int,int,int,int
 
 /*
 void drawPixmap ( int x, int y, const QPixmap & pixmap, int sx, int sy, int sw, int sh )
 */
-$method=|void|drawPixmap,drawPixmap11|int,int,const QPixmap &,int,int,int,int
+$internalMethod=|void|drawPixmap,drawPixmap11|int,int,const QPixmap &,int,int,int,int
 
 //[01]void drawPixmap ( const QRectF & target, const QPixmap & pixmap, const QRectF & source )
 //[02]void drawPixmap ( const QRect & target, const QPixmap & pixmap, const QRect & source )
@@ -976,47 +901,47 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIXMAP )
 {
   if( ISNUMPAR(3) && ISQRECTF(1) && ISQPIXMAP(2) && ISQRECTF(3) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWPIXMAP1 );
+    QPainter_drawPixmap1();
   }
   else if( ISNUMPAR(3) && ISQRECT(1) && ISQPIXMAP(2) && ISQRECT(3) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWPIXMAP2 );
+    QPainter_drawPixmap2();
   }
   else if( ISNUMPAR(3) && ISQPOINTF(1) && ISQPIXMAP(2) && ISQRECTF(3) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWPIXMAP3 );
+    QPainter_drawPixmap3();
   }
   else if( ISNUMPAR(3) && ISQPOINT(1) && ISQPIXMAP(2) && ISQRECT(3) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWPIXMAP4 );
+    QPainter_drawPixmap4();
   }
   else if( ISNUMPAR(2) && ISQPOINTF(1) && ISQPIXMAP(2) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWPIXMAP5 );
+    QPainter_drawPixmap5();
   }
   else if( ISNUMPAR(2) && ISQPOINT(1) && ISQPIXMAP(2) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWPIXMAP6 );
+    QPainter_drawPixmap6();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQPIXMAP(3) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWPIXMAP7 );
+    QPainter_drawPixmap7();
   }
   else if( ISNUMPAR(2) && ISQRECT(1) && ISQPIXMAP(2) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWPIXMAP8 );
+    QPainter_drawPixmap8();
   }
   else if( ISNUMPAR(5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISQPIXMAP(5) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWPIXMAP9 );
+    QPainter_drawPixmap9();
   }
   else if( ISNUMPAR(9) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISQPIXMAP(5) && ISNUM(6) && ISNUM(7) && ISNUM(8) && ISNUM(9) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWPIXMAP10 );
+    QPainter_drawPixmap10();
   }
   else if( ISNUMPAR(7) && ISNUM(1) && ISNUM(2) && ISQPIXMAP(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) && ISNUM(7) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWPIXMAP11 );
+    QPainter_drawPixmap11();
   }
   else
   {
@@ -1027,17 +952,17 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIXMAP )
 /*
 void drawPoint ( const QPointF & position )
 */
-$method=|void|drawPoint,drawPoint1|const QPointF &
+$internalMethod=|void|drawPoint,drawPoint1|const QPointF &
 
 /*
 void drawPoint ( const QPoint & position )
 */
-$method=|void|drawPoint,drawPoint2|const QPoint &
+$internalMethod=|void|drawPoint,drawPoint2|const QPoint &
 
 /*
 void drawPoint ( int x, int y )
 */
-$method=|void|drawPoint,drawPoint3|int,int
+$internalMethod=|void|drawPoint,drawPoint3|int,int
 
 //[1]void drawPoint ( const QPointF & position )
 //[2]void drawPoint ( const QPoint & position )
@@ -1047,15 +972,15 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOINT )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWPOINT1 );
+    QPainter_drawPoint1();
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWPOINT2 );
+    QPainter_drawPoint2();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWPOINT3 );
+    QPainter_drawPoint3();
   }
   else
   {
@@ -1064,14 +989,22 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOINT )
 }
 
 /*
+void drawPoints ( const QPointF * points, int pointCount )
+*/
+
+/*
+void drawPoints ( const QPoint * points, int pointCount )
+*/
+
+/*
 void drawPoints ( const QPolygonF & points )
 */
-$method=|void|drawPoints,drawPoints3|const QPolygonF &
+$internalMethod=|void|drawPoints,drawPoints3|const QPolygonF &
 
 /*
 void drawPoints ( const QPolygon & points )
 */
-$method=|void|drawPoints,drawPoints4|const QPolygon &
+$internalMethod=|void|drawPoints,drawPoints4|const QPolygon &
 
 //[1]void drawPoints ( const QPointF * points, int pointCount )
 //[2]void drawPoints ( const QPoint * points, int pointCount )
@@ -1082,11 +1015,11 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOINTS )
 {
   if( ISNUMPAR(1) && ISQPOLYGONF(1) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWPOINTS3 );
+    QPainter_drawPoints3();
   }
   else if( ISNUMPAR(1) && ISQPOLYGON(1) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWPOINTS4 );
+    QPainter_drawPoints4();
   }
   else
   {
@@ -1095,14 +1028,22 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOINTS )
 }
 
 /*
+void drawPolygon ( const QPointF * points, int pointCount, Qt::FillRule fillRule = Qt::OddEvenFill )
+*/
+
+/*
+void drawPolygon ( const QPoint * points, int pointCount, Qt::FillRule fillRule = Qt::OddEvenFill )
+*/
+
+/*
 void drawPolygon ( const QPolygonF & points, Qt::FillRule fillRule = Qt::OddEvenFill )
 */
-$method=|void|drawPolygon,drawPolygon3|const QPolygonF &,Qt::FillRule=Qt::OddEvenFill
+$internalMethod=|void|drawPolygon,drawPolygon3|const QPolygonF &,Qt::FillRule=Qt::OddEvenFill
 
 /*
 void drawPolygon ( const QPolygon & points, Qt::FillRule fillRule = Qt::OddEvenFill )
 */
-$method=|void|drawPolygon,drawPolygon4|const QPolygon &,Qt::FillRule=Qt::OddEvenFill
+$internalMethod=|void|drawPolygon,drawPolygon4|const QPolygon &,Qt::FillRule=Qt::OddEvenFill
 
 //[1]void drawPolygon ( const QPointF * points, int pointCount, Qt::FillRule fillRule = Qt::OddEvenFill )
 //[2]void drawPolygon ( const QPoint * points, int pointCount, Qt::FillRule fillRule = Qt::OddEvenFill )
@@ -1113,11 +1054,11 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOLYGON )
 {
   if( ISBETWEEN(1,2) && ISQPOLYGONF(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWPOLYGON3 );
+    QPainter_drawPolygon3();
   }
   else if( ISBETWEEN(1,2) && ISQPOLYGON(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWPOLYGON4 );
+    QPainter_drawPolygon4();
   }
   else
   {
@@ -1126,14 +1067,22 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOLYGON )
 }
 
 /*
+void drawPolyline ( const QPointF * points, int pointCount )
+*/
+
+/*
+void drawPolyline ( const QPoint * points, int pointCount )
+*/
+
+/*
 void drawPolyline ( const QPolygonF & points )
 */
-$method=|void|drawPolyline,drawPolyline3|const QPolygonF &
+$internalMethod=|void|drawPolyline,drawPolyline3|const QPolygonF &
 
 /*
 void drawPolyline ( const QPolygon & points )
 */
-$method=|void|drawPolyline,drawPolyline4|const QPolygon &
+$internalMethod=|void|drawPolyline,drawPolyline4|const QPolygon &
 
 //[1]void drawPolyline ( const QPointF * points, int pointCount )
 //[2]void drawPolyline ( const QPoint * points, int pointCount )
@@ -1144,11 +1093,11 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOLYLINE )
 {
   if( ISNUMPAR(1) && ISQPOLYGONF(1) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWPOLYLINE3 );
+    QPainter_drawPolyline3();
   }
   else if( ISNUMPAR(1) && ISQPOLYGON(1) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWPOLYLINE4 );
+    QPainter_drawPolyline4();
   }
   else
   {
@@ -1159,17 +1108,17 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOLYLINE )
 /*
 void drawRect ( const QRectF & rectangle )
 */
-$method=|void|drawRect,drawRect1|const QRectF &
+$internalMmethod=|void|drawRect,drawRect1|const QRectF &
 
 /*
 void drawRect ( const QRect & rectangle )
 */
-$method=|void|drawRect,drawRect2|const QRect &
+$internalMethod=|void|drawRect,drawRect2|const QRect &
 
 /*
 void drawRect ( int x, int y, int width, int height )
 */
-$method=|void|drawRect,drawRect3|int,int,int,int
+$internalMethod=|void|drawRect,drawRect3|int,int,int,int
 
 //[1]void drawRect ( const QRectF & rectangle )
 //[2]void drawRect ( const QRect & rectangle )
@@ -1179,21 +1128,29 @@ HB_FUNC_STATIC( QPAINTER_DRAWRECT )
 {
   if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWRECT1 );
+    QPainter_drawRect1();
   }
   else if( ISNUMPAR(1) && ISQRECT(1) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWRECT2 );
+    QPainter_drawRect2();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWRECT3 );
+    QPainter_drawRect3();
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+
+/*
+void drawRects ( const QRectF * rectangles, int rectCount )
+*/
+
+/*
+void drawRects ( const QRect * rectangles, int rectCount )
+*/
 
 /*
 void drawRects ( const QVector<QRectF> & rectangles )
@@ -1246,24 +1203,26 @@ HB_FUNC_STATIC( QPAINTER_DRAWRECTS4 )
 //[3]void drawRects ( const QVector<QRectF> & rectangles )
 //[4]void drawRects ( const QVector<QRect> & rectangles )
 
-HB_FUNC_STATIC( QPAINTER_DRAWRECTS ) // TODO: implementar reconhecimento de parâmetros
+%% TODO: implementar reconhecimento de parâmetros
+
+HB_FUNC_STATIC( QPAINTER_DRAWRECTS )
 {
 }
 
 /*
 void drawRoundedRect ( const QRectF & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
 */
-$method=|void|drawRoundedRect,drawRoundedRect1|const QRectF &,qreal,qreal,Qt::SizeMode=Qt::AbsoluteSize
+$internalMethod=|void|drawRoundedRect,drawRoundedRect1|const QRectF &,qreal,qreal,Qt::SizeMode=Qt::AbsoluteSize
 
 /*
 void drawRoundedRect ( const QRect & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
 */
-$method=|void|drawRoundedRect,drawRoundedRect2|const QRect &,qreal,qreal,Qt::SizeMode=Qt::AbsoluteSize
+$internalMethod=|void|drawRoundedRect,drawRoundedRect2|const QRect &,qreal,qreal,Qt::SizeMode=Qt::AbsoluteSize
 
 /*
 void drawRoundedRect ( int x, int y, int w, int h, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
 */
-$method=|void|drawRoundedRect,drawRoundedRect3|int,int,int,int,qreal,qreal,Qt::SizeMode=Qt::AbsoluteSize
+$internalMethod=|void|drawRoundedRect,drawRoundedRect3|int,int,int,int,qreal,qreal,Qt::SizeMode=Qt::AbsoluteSize
 
 //[1]void drawRoundedRect ( const QRectF & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
 //[2]void drawRoundedRect ( const QRect & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
@@ -1273,15 +1232,15 @@ HB_FUNC_STATIC( QPAINTER_DRAWROUNDEDRECT )
 {
   if( ISBETWEEN(3,4) && ISQRECTF(1) && ISNUM(2) && ISNUM(3) && (ISNUM(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWROUNDEDRECT1 );
+    QPainter_drawRoundedRect1();
   }
   else if( ISBETWEEN(3,4) && ISQRECT(1) && ISNUM(2) && ISNUM(3) && (ISNUM(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWROUNDEDRECT2 );
+    QPainter_drawRoundedRect2();
   }
   else if( ISBETWEEN(6,7) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) && (ISNUM(7)||ISNIL(7)) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWROUNDEDRECT3 );
+    QPainter_drawRoundedRect3();
   }
   else
   {
@@ -1292,17 +1251,17 @@ HB_FUNC_STATIC( QPAINTER_DRAWROUNDEDRECT )
 /*
 void drawStaticText ( const QPointF & topLeftPosition, const QStaticText & staticText )
 */
-$method=|void|drawStaticText,drawStaticText1|const QPointF &,const QStaticText &
+$internalMethod=|void|drawStaticText,drawStaticText1|const QPointF &,const QStaticText &
 
 /*
 void drawStaticText ( const QPoint & topLeftPosition, const QStaticText & staticText )
 */
-$method=|void|drawStaticText,drawStaticText2|const QPoint &,const QStaticText &
+$internalMethod=|void|drawStaticText,drawStaticText2|const QPoint &,const QStaticText &
 
 /*
 void drawStaticText ( int left, int top, const QStaticText & staticText )
 */
-$method=|void|drawStaticText,drawStaticText3|int,int,const QStaticText &
+$internalMethod=|void|drawStaticText,drawStaticText3|int,int,const QStaticText &
 
 //[1]void drawStaticText ( const QPointF & topLeftPosition, const QStaticText & staticText )
 //[2]void drawStaticText ( const QPoint & topLeftPosition, const QStaticText & staticText )
@@ -1312,15 +1271,15 @@ HB_FUNC_STATIC( QPAINTER_DRAWSTATICTEXT )
 {
   if( ISNUMPAR(2) && ISQPOINTF(1) && ISQSTATICTEXT(2) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWSTATICTEXT1 );
+    QPainter_drawStaticText1();
   }
   else if( ISNUMPAR(2) && ISQPOINT(1) && ISQSTATICTEXT(2) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWSTATICTEXT2 );
+    QPainter_drawStaticText2();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQSTATICTEXT(3) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWSTATICTEXT3 );
+    QPainter_drawStaticText3();
   }
   else
   {
@@ -1331,37 +1290,37 @@ HB_FUNC_STATIC( QPAINTER_DRAWSTATICTEXT )
 /*
 void drawText ( const QPointF & position, const QString & text )
 */
-$method=|void|drawText,drawText1|const QPointF &,const QString &
+$internalMethod=|void|drawText,drawText1|const QPointF &,const QString &
 
 /*
 void drawText ( const QPoint & position, const QString & text )
 */
-$method=|void|drawText,drawText2|const QPoint &,const QString &
+$internalMethod=|void|drawText,drawText2|const QPoint &,const QString &
 
 /*
 void drawText ( const QRectF & rectangle, int flags, const QString & text, QRectF * boundingRect = 0 )
 */
-$method=|void|drawText,drawText3|const QRectF &,int,const QString &,QRectF *=0
+$internalMethod=|void|drawText,drawText3|const QRectF &,int,const QString &,QRectF *=0
 
 /*
 void drawText ( const QRect & rectangle, int flags, const QString & text, QRect * boundingRect = 0 )
 */
-$method=|void|drawText,drawText4|const QRect &,int,const QString &,QRect *=0
+$internalMethod=|void|drawText,drawText4|const QRect &,int,const QString &,QRect *=0
 
 /*
 void drawText ( int x, int y, const QString & text )
 */
-$method=|void|drawText,drawText5|int,int,const QString &
+$internalMethod=|void|drawText,drawText5|int,int,const QString &
 
 /*
 void drawText ( int x, int y, int width, int height, int flags, const QString & text, QRect * boundingRect = 0 )
 */
-$method=|void|drawText,drawText6|int,int,int,int,int,const QString &,QRect *=0
+$internalMethod=|void|drawText,drawText6|int,int,int,int,int,const QString &,QRect *=0
 
 /*
 void drawText ( const QRectF & rectangle, const QString & text, const QTextOption & option = QTextOption() )
 */
-$method=|void|drawText,drawText7|const QRectF &,const QString &,const QTextOption &=QTextOption()
+$internalMethod=|void|drawText,drawText7|const QRectF &,const QString &,const QTextOption &=QTextOption()
 
 //[1]void drawText ( const QPointF & position, const QString & text )
 //[2]void drawText ( const QPoint & position, const QString & text )
@@ -1375,31 +1334,31 @@ HB_FUNC_STATIC( QPAINTER_DRAWTEXT )
 {
   if( ISNUMPAR(2) && ISQPOINTF(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWTEXT1 );
+    QPainter_drawText1();
   }
   else if( ISNUMPAR(2) && ISQPOINT(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWTEXT2 );
+    QPainter_drawText2();
   }
   else if( ISBETWEEN(3,4) && ISQRECTF(1) && ISNUM(2) && ISCHAR(3) && (ISQRECTF(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWTEXT3 );
+    QPainter_drawText3();
   }
   else if( ISBETWEEN(3,4) && ISQRECT(1) && ISNUM(2) && ISCHAR(3) && (ISQRECT(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWTEXT4 );
+    QPainter_drawText4();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISCHAR(3) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWTEXT5 );
+    QPainter_drawText5();
   }
   else if( ISBETWEEN(6,7) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISCHAR(6) && (ISQRECT(7)||ISNUM(7)) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWTEXT6 );
+    QPainter_drawText6();
   }
   else if( ISBETWEEN(2,3) && ISQRECT(1) && ISCHAR(2) && (ISQTEXTOPTION(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWTEXT7 );
+    QPainter_drawText7();
   }
   else
   {
@@ -1410,17 +1369,17 @@ HB_FUNC_STATIC( QPAINTER_DRAWTEXT )
 /*
 void drawTiledPixmap ( const QRectF & rectangle, const QPixmap & pixmap, const QPointF & position = QPointF() )
 */
-$method=|void|drawTiledPixmap,drawTiledPixmap1|const QRectF &,const QPixmap &,const QPointF &=QPointF()
+$internalMethod=|void|drawTiledPixmap,drawTiledPixmap1|const QRectF &,const QPixmap &,const QPointF &=QPointF()
 
 /*
 void drawTiledPixmap ( const QRect & rectangle, const QPixmap & pixmap, const QPoint & position = QPoint() )
 */
-$method=|void|drawTiledPixmap,drawTiledPixmap2|const QRect &,const QPixmap &,const QPoint &=QPoint()
+$internalMethod=|void|drawTiledPixmap,drawTiledPixmap2|const QRect &,const QPixmap &,const QPoint &=QPoint()
 
 /*
 void drawTiledPixmap ( int x, int y, int width, int height, const QPixmap & pixmap, int sx = 0, int sy = 0 )
 */
-$method=|void|drawTiledPixmap,drawTiledPixmap3|int,int,int,int,const QPixmap &,int=0,int=0
+$internalMethod=|void|drawTiledPixmap,drawTiledPixmap3|int,int,int,int,const QPixmap &,int=0,int=0
 
 //[1]void drawTiledPixmap ( const QRectF & rectangle, const QPixmap & pixmap, const QPointF & position = QPointF() )
 //[2]void drawTiledPixmap ( const QRect & rectangle, const QPixmap & pixmap, const QPoint & position = QPoint() )
@@ -1430,15 +1389,15 @@ HB_FUNC_STATIC( QPAINTER_DRAWTILEDPIXMAP )
 {
   if( ISBETWEEN(2,3) && ISQRECTF(1) && ISQPIXMAP(2) && (ISQPOINTF(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWTILEDPIXMAP1 );
+    QPainter_drawTiledPixmap1();
   }
   else if( ISBETWEEN(2,3) && ISQRECT(1) && ISQPIXMAP(2) && (ISQPOINT(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWTILEDPIXMAP2 );
+    QPainter_drawTiledPixmap2();
   }
   else if( ISBETWEEN(5,7) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISQPIXMAP(5) && (ISNUM(6)||ISNIL(6)) && (ISNUM(7)||ISNIL(7)) )
   {
-    HB_FUNC_EXEC( QPAINTER_DRAWTILEDPIXMAP3 );
+    QPainter_drawTiledPixmap3();
   }
   else
   {
@@ -1459,17 +1418,17 @@ $method=|void|endNativePainting|
 /*
 void eraseRect ( const QRectF & rectangle )
 */
-$method=|void|eraseRect,eraseRect1|const QRectF &
+$internalMethod=|void|eraseRect,eraseRect1|const QRectF &
 
 /*
 void eraseRect ( const QRect & rectangle )
 */
-$method=|void|eraseRect,eraseRect2|const QRect &
+$internalMethod=|void|eraseRect,eraseRect2|const QRect &
 
 /*
 void eraseRect ( int x, int y, int width, int height )
 */
-$method=|void|eraseRect,eraseRect3|int,int,int,int
+$internalMethod=|void|eraseRect,eraseRect3|int,int,int,int
 
 //[1]void eraseRect ( const QRectF & rectangle )
 //[2]void eraseRect ( const QRect & rectangle )
@@ -1479,15 +1438,15 @@ HB_FUNC_STATIC( QPAINTER_ERASERECT )
 {
   if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    HB_FUNC_EXEC( QPAINTER_ERASERECT1 );
+    QPainter_eraseRect1();
   }
   else if( ISNUMPAR(1) && ISQRECT(1) )
   {
-    HB_FUNC_EXEC( QPAINTER_ERASERECT2 );
+    QPainter_eraseRect2();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QPAINTER_ERASERECT3 );
+    QPainter_eraseRect3();
   }
   else
   {
@@ -1722,12 +1681,12 @@ $method=|void|setBackgroundMode|Qt::BGMode
 /*
 void setBrush ( const QBrush & brush )
 */
-$method=|void|setBrush,setBrush1|const QBrush &
+$internalMethod=|void|setBrush,setBrush1|const QBrush &
 
 /*
 void setBrush ( Qt::BrushStyle style )
 */
-$method=|void|setBrush,setBrush2|Qt::BrushStyle
+$internalMethod=|void|setBrush,setBrush2|Qt::BrushStyle
 
 //[1]void setBrush ( const QBrush & brush )
 //[2]void setBrush ( Qt::BrushStyle style )
@@ -1736,11 +1695,11 @@ HB_FUNC_STATIC( QPAINTER_SETBRUSH )
 {
   if( ISNUMPAR(1) && ISQBRUSH(1) )
   {
-    HB_FUNC_EXEC( QPAINTER_SETBRUSH1 );
+    QPainter_setBrush1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QPAINTER_SETBRUSH2 );
+    QPainter_setBrush2();
   }
   else
   {
@@ -1751,17 +1710,17 @@ HB_FUNC_STATIC( QPAINTER_SETBRUSH )
 /*
 void setBrushOrigin ( const QPointF & position )
 */
-$method=|void|setBrushOrigin,setBrushOrigin1|const QPointF &
+$internalMethod=|void|setBrushOrigin,setBrushOrigin1|const QPointF &
 
 /*
 void setBrushOrigin ( const QPoint & position )
 */
-$method=|void|setBrushOrigin,setBrushOrigin2|const QPoint &
+$internalMethod=|void|setBrushOrigin,setBrushOrigin2|const QPoint &
 
 /*
 void setBrushOrigin ( int x, int y )
 */
-$method=|void|setBrushOrigin,setBrushOrigin3|int,int
+$internalMethod=|void|setBrushOrigin,setBrushOrigin3|int,int
 
 //[1]void setBrushOrigin ( const QPointF & position )
 //[2]void setBrushOrigin ( const QPoint & position )
@@ -1771,15 +1730,15 @@ HB_FUNC_STATIC( QPAINTER_SETBRUSHORIGIN )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    HB_FUNC_EXEC( QPAINTER_SETBRUSHORIGIN1 );
+    QPainter_setBrushOrigin1();
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QPAINTER_SETBRUSHORIGIN2 );
+    QPainter_setBrushOrigin2();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QPAINTER_SETBRUSHORIGIN3 );
+    QPainter_setBrushOrigin3();
   }
   else
   {
@@ -1795,17 +1754,17 @@ $method=|void|setClipPath|const QPainterPath &,Qt::ClipOperation=Qt::ReplaceClip
 /*
 void setClipRect ( const QRectF & rectangle, Qt::ClipOperation operation = Qt::ReplaceClip )
 */
-$method=|void|setClipRect,setClipRect1|const QRectF &,Qt::ClipOperation=Qt::ReplaceClip
+$internalMethod=|void|setClipRect,setClipRect1|const QRectF &,Qt::ClipOperation=Qt::ReplaceClip
 
 /*
 void setClipRect ( int x, int y, int width, int height, Qt::ClipOperation operation = Qt::ReplaceClip )
 */
-$method=|void|setClipRect,setClipRect2|int,int,int,int,Qt::ClipOperation=Qt::ReplaceClip
+$internalMethod=|void|setClipRect,setClipRect2|int,int,int,int,Qt::ClipOperation=Qt::ReplaceClip
 
 /*
 void setClipRect ( const QRect & rectangle, Qt::ClipOperation operation = Qt::ReplaceClip )
 */
-$method=|void|setClipRect,setClipRect3|const QRect &,Qt::ClipOperation=Qt::ReplaceClip
+$internalMethod=|void|setClipRect,setClipRect3|const QRect &,Qt::ClipOperation=Qt::ReplaceClip
 
 //[1]void setClipRect ( const QRectF & rectangle, Qt::ClipOperation operation = Qt::ReplaceClip )
 //[2]void setClipRect ( int x, int y, int width, int height, Qt::ClipOperation operation = Qt::ReplaceClip )
@@ -1815,15 +1774,15 @@ HB_FUNC_STATIC( QPAINTER_SETCLIPRECT )
 {
   if( ISBETWEEN(1,2) && ISQRECTF(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QPAINTER_SETCLIPRECT1 );
+    QPainter_setClipRect1();
   }
   else if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISNUM(5)||ISNIL(5)) )
   {
-    HB_FUNC_EXEC( QPAINTER_SETCLIPRECT2 );
+    QPainter_setClipRect2();
   }
   else if( ISBETWEEN(1,2) && ISQRECT(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QPAINTER_SETCLIPRECT3 );
+    QPainter_setClipRect3();
   }
   else
   {
@@ -1864,17 +1823,17 @@ $method=|void|setOpacity|qreal
 /*
 void setPen ( const QPen & pen )
 */
-$method=|void|setPen,setPen1|const QPen &
+$internalMethod=|void|setPen,setPen1|const QPen &
 
 /*
 void setPen ( const QColor & color )
 */
-$method=|void|setPen,setPen2|const QColor &
+$internalMethod=|void|setPen,setPen2|const QColor &
 
 /*
 void setPen ( Qt::PenStyle style )
 */
-$method=|void|setPen,setPen3|Qt::PenStyle
+$internalMethod=|void|setPen,setPen3|Qt::PenStyle
 
 //[1]void setPen ( const QPen & pen )
 //[2]void setPen ( const QColor & color )
@@ -1884,15 +1843,15 @@ HB_FUNC_STATIC( QPAINTER_SETPEN )
 {
   if( ISNUMPAR(1) && ISQPEN(1) )
   {
-    HB_FUNC_EXEC( QPAINTER_SETPEN1 );
+    QPainter_setPen1();
   }
   else if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
   {
-    HB_FUNC_EXEC( QPAINTER_SETPEN2 );
+    QPainter_setPen2();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QPAINTER_SETPEN3 );
+    QPainter_setPen3();
   }
   else
   {
@@ -1923,12 +1882,12 @@ $method=|void|setViewTransformEnabled|bool
 /*
 void setViewport ( const QRect & rectangle )
 */
-$method=|void|setViewport,setViewport1|const QRect &
+$internalMethod=|void|setViewport,setViewport1|const QRect &
 
 /*
 void setViewport ( int x, int y, int width, int height )
 */
-$method=|void|setViewport,setViewport2|int,int,int,int
+$internalMethod=|void|setViewport,setViewport2|int,int,int,int
 
 //[1]void setViewport ( const QRect & rectangle )
 //[2]void setViewport ( int x, int y, int width, int height )
@@ -1937,11 +1896,11 @@ HB_FUNC_STATIC( QPAINTER_SETVIEWPORT )
 {
   if( ISNUMPAR(1) && ISQRECT(1) )
   {
-    HB_FUNC_EXEC( QPAINTER_SETVIEWPORT1 );
+    QPainter_setViewPort1();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QPAINTER_SETVIEWPORT2 );
+    QPainter_setViewPort2();
   }
   else
   {
@@ -1952,12 +1911,12 @@ HB_FUNC_STATIC( QPAINTER_SETVIEWPORT )
 /*
 void setWindow ( const QRect & rectangle )
 */
-$method=|void|setWindow,setWindow1|const QRect &
+$internalMethod=|void|setWindow,setWindow1|const QRect &
 
 /*
 void setWindow ( int x, int y, int width, int height )
 */
-$method=|void|setWindow,setWindow2|int,int,int,int
+$internalMethod=|void|setWindow,setWindow2|int,int,int,int
 
 //[1]void setWindow ( const QRect & rectangle )
 //[2]void setWindow ( int x, int y, int width, int height )
@@ -1966,11 +1925,11 @@ HB_FUNC_STATIC( QPAINTER_SETWINDOW )
 {
   if( ISNUMPAR(1) && ISQRECT(1) )
   {
-    HB_FUNC_EXEC( QPAINTER_SETWINDOW1 );
+    QPainter_setWindow1();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QPAINTER_SETWINDOW2 );
+    QPainter_setWindow2();
   }
   else
   {
@@ -2011,17 +1970,17 @@ $method=|const QTransform &|transform|
 /*
 void translate ( const QPointF & offset )
 */
-$method=|void|translate,translate1|const QPointF &
+$internalMethod=|void|translate,translate1|const QPointF &
 
 /*
 void translate ( const QPoint & offset )
 */
-$method=|void|translate,translate2|const QPoint &
+$internalMethod=|void|translate,translate2|const QPoint &
 
 /*
 void translate ( qreal dx, qreal dy )
 */
-$method=|void|translate,translate3|qreal,qreal
+$internalMethod=|void|translate,translate3|qreal,qreal
 
 //[1]void translate ( const QPointF & offset )
 //[2]void translate ( const QPoint & offset )
@@ -2031,15 +1990,15 @@ HB_FUNC_STATIC( QPAINTER_TRANSLATE )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    HB_FUNC_EXEC( QPAINTER_TRANSLATE1 );
+    QPainter_translate1();
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QPAINTER_TRANSLATE2 );
+    QPainter_translate2();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QPAINTER_TRANSLATE3 );
+    QPainter_translate3();
   }
   else
   {

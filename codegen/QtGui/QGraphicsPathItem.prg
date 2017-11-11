@@ -9,8 +9,6 @@ REQUEST QRECTF
 
 CLASS QGraphicsPathItem INHERIT QAbstractGraphicsShapeItem
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD path
@@ -40,12 +38,12 @@ $destructor
 /*
 QGraphicsPathItem ( QGraphicsItem * parent = 0 )
 */
-$constructor=|new1|QGraphicsItem *=0
+$internalConstructor=|new1|QGraphicsItem *=0
 
 /*
 QGraphicsPathItem ( const QPainterPath & path, QGraphicsItem * parent = 0 )
 */
-$constructor=|new1|const QPainterPath &,QGraphicsItem *=0
+$internalConstructor=|new1|const QPainterPath &,QGraphicsItem *=0
 
 //[1]QGraphicsPathItem ( QGraphicsItem * parent = 0 )
 //[2]QGraphicsPathItem ( const QPainterPath & path, QGraphicsItem * parent = 0 )
@@ -54,11 +52,11 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSPATHITEM_NEW1 );
+    QGraphicsPathItem_new1();
   }
   else if( ISBETWEEN(1,2) && ISQPAINTERPATH(1) && (ISQGRAPHICSITEM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSPATHITEM_NEW2 );
+    QGraphicsPathItem_new2();
   }
   else
   {

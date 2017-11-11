@@ -11,14 +11,10 @@ REQUEST QPAINTERPATH
 
 CLASS QGraphicsPixmapItem INHERIT QGraphicsItem
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD offset
    METHOD pixmap
-   METHOD setOffset1
-   METHOD setOffset2
    METHOD setOffset
    METHOD setPixmap
    METHOD setShapeMode
@@ -50,12 +46,12 @@ $destructor
 /*
 QGraphicsPixmapItem ( QGraphicsItem * parent = 0 )
 */
-$constructor=|new1|QGraphicsItem *=0
+$internalConstructor=|new1|QGraphicsItem *=0
 
 /*
 QGraphicsPixmapItem ( const QPixmap & pixmap, QGraphicsItem * parent = 0 )
 */
-$constructor=|new2|const QPixmap &,QGraphicsItem *=0
+$internalConstructor=|new2|const QPixmap &,QGraphicsItem *=0
 
 //[1]QGraphicsPixmapItem ( QGraphicsItem * parent = 0 )
 //[2]QGraphicsPixmapItem ( const QPixmap & pixmap, QGraphicsItem * parent = 0 )
@@ -64,11 +60,11 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSPIXMAPITEM_NEW1 );
+    QGraphicsPixmapItem_new1();
   }
   else if( ISBETWEEN(1,2) && ISQPIXMAP(1) && (ISQGRAPHICSITEM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSPIXMAPITEM_NEW2 );
+    QGraphicsPixmapItem_new2();
   }
   else
   {
@@ -91,12 +87,12 @@ $method=|QPixmap|pixmap|
 /*
 void setOffset ( const QPointF & offset )
 */
-$method=|void|setOffset,setOffset1|const QPointF &
+$internalMethod=|void|setOffset,setOffset1|const QPointF &
 
 /*
 void setOffset ( qreal x, qreal y )
 */
-$method=|void|setOffset,setOffset2|qreal,qreal
+$internalMethod=|void|setOffset,setOffset2|qreal,qreal
 
 //[1]void setOffset ( const QPointF & offset )
 //[2]void setOffset ( qreal x, qreal y )
@@ -105,11 +101,11 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETOFFSET )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSPIXMAPITEM_SETOFFSET1 );
+    QGraphicsPixmapItem_setOffset1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QGRAPHICSPIXMAPITEM_SETOFFSET2 );
+    QGraphicsPixmapItem_setOffset2();
   }
   else
   {

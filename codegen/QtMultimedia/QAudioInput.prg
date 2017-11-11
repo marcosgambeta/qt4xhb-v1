@@ -9,8 +9,6 @@ REQUEST QIODEVICE
 
 CLASS QAudioInput INHERIT QObject
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD bufferSize
@@ -25,8 +23,6 @@ CLASS QAudioInput INHERIT QObject
    METHOD resume
    METHOD setBufferSize
    METHOD setNotifyInterval
-   METHOD start1
-   METHOD start2
    METHOD start
    METHOD state
    METHOD stop
@@ -52,12 +48,12 @@ $destructor
 /*
 QAudioInput ( const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
 */
-$constructor=|new1|const QAudioFormat &=QAudioFormat(),QObject *=0
+$internalConstructor=|new1|const QAudioFormat &=QAudioFormat(),QObject *=0
 
 /*
 QAudioInput ( const QAudioDeviceInfo & audioDevice, const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
 */
-$constructor=|new2|const QAudioDeviceInfo &,const QAudioFormat &=QAudioFormat(),QObject *=0
+$internalConstructor=|new2|const QAudioDeviceInfo &,const QAudioFormat &=QAudioFormat(),QObject *=0
 
 //[1]QAudioInput ( const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
 //[2]QAudioInput ( const QAudioDeviceInfo & audioDevice, const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
@@ -66,11 +62,11 @@ HB_FUNC_STATIC( QAUDIOINPUT_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQAUDIOFORMAT(1)||ISNIL(1)) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QAUDIOINPUT_NEW1 );
+    QAudioInput_new1();
   }
   else if( ISBETWEEN(1,3) && ISQAUDIODEVICEINFO(1) && (ISQAUDIOFORMAT(2)||ISNIL(2)) && (ISQOBJECT(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QAUDIOINPUT_NEW2 );
+    QAudioInput_new2();
   }
   else
   {
@@ -143,12 +139,12 @@ $method=|void|setNotifyInterval|int
 /*
 void start ( QIODevice * device )
 */
-$method=|void|start,start1|QIODevice *
+$internalMethod=|void|start,start1|QIODevice *
 
 /*
 QIODevice * start ()
 */
-$method=|QIODevice *|start,start2|
+$internalMethod=|QIODevice *|start,start2|
 
 //[1]void start ( QIODevice * device )
 //[2]QIODevice * start ()
@@ -157,11 +153,11 @@ HB_FUNC_STATIC( QAUDIOINPUT_START )
 {
   if( ISNUMPAR(1) && ISQIODEVICE(1) )
   {
-    HB_FUNC_EXEC( QAUDIOINPUT_START1 );
+    QAudioInput_start1();
   }
   else if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QAUDIOINPUT_START2 );
+    QAudioInput_start2();
   }
   else
   {

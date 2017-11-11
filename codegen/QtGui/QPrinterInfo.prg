@@ -11,9 +11,6 @@ CLASS QPrinterInfo
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD isDefault
@@ -46,17 +43,17 @@ $destructor
 /*
 QPrinterInfo ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QPrinterInfo ( const QPrinterInfo & src )
 */
-$constructor=|new2|const QPrinterInfo &
+$internalConstructor=|new2|const QPrinterInfo &
 
 /*
 QPrinterInfo ( const QPrinter & printer )
 */
-$constructor=|new3|const QPrinter &
+$internalConstructor=|new3|const QPrinter &
 
 //[1]QPrinterInfo ()
 //[2]QPrinterInfo ( const QPrinterInfo & src )
@@ -66,15 +63,15 @@ HB_FUNC_STATIC( QPRINTERINFO_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QPRINTERINFO_NEW1 );
+    QPrinterInfo_new1();
   }
   else if( ISNUMPAR(1) && ISQPRINTERINFO(1) )
   {
-    HB_FUNC_EXEC( QPRINTERINFO_NEW2 );
+    QPrinterInfo_new2();
   }
   else if( ISNUMPAR(1) && ISQPRINTER(1) )
   {
-    HB_FUNC_EXEC( QPRINTERINFO_NEW3 );
+    QPrinterInfo_new3();
   }
   else
   {
@@ -109,8 +106,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAPERSIZES )
   if( obj )
   {
     QList<QPrinter::PaperSize> list = obj->supportedPaperSizes ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -128,14 +124,8 @@ QList<QPrinterInfo> availablePrinters ()
 HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERS )
 {
   QList<QPrinterInfo> list = QPrinterInfo::availablePrinters ();
-  PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QPRINTERINFO" );
-  #else
-  pDynSym = hb_dynsymFindName( "QPRINTERINFO" );
-  #endif
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QPRINTERINFO" );
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {
@@ -166,13 +156,9 @@ HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERS )
 }
 
 /*
-QPrinterInfo defaultPrinter ()
+static QPrinterInfo defaultPrinter ()
 */
-HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPRINTER )
-{
-  QPrinterInfo * ptr = new QPrinterInfo( QPrinterInfo::defaultPrinter () );
-  _qt4xhb_createReturnClass ( ptr, "QPRINTERINFO", true );
-}
+$staticMethod=|QPrinterInfo|defaultPrinter|
 
 $extraMethods
 

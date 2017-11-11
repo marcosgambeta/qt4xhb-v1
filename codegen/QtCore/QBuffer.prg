@@ -8,8 +8,6 @@ REQUEST QBYTEARRAY
 
 CLASS QBuffer INHERIT QIODevice
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD buffer1
@@ -17,8 +15,6 @@ CLASS QBuffer INHERIT QIODevice
    METHOD buffer
    METHOD data
    METHOD setBuffer
-   METHOD setData1
-   METHOD setData2
    METHOD setData
    METHOD atEnd
    METHOD canReadLine
@@ -45,12 +41,12 @@ $destructor
 /*
 QBuffer ( QObject * parent = 0 )
 */
-$constructor=|new1|QObject *=0
+$internalConstructor=|new1|QObject *=0
 
 /*
 QBuffer ( QByteArray * byteArray, QObject * parent = 0 )
 */
-$constructor=|new2|QByteArray *,QObject *=0
+$internalConstructor=|new2|QByteArray *,QObject *=0
 
 //[1]QBuffer ( QObject * parent = 0 )
 //[2]QBuffer ( QByteArray * byteArray, QObject * parent = 0 )
@@ -59,11 +55,11 @@ HB_FUNC_STATIC( QBUFFER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QBUFFER_NEW1 );
+    QBuffer_new1();
   }
   else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QBUFFER_NEW2 );
+    QBuffer_new2();
   }
   else
   {
@@ -91,7 +87,7 @@ HB_FUNC_STATIC( QBUFFER_BUFFER )
   if( ISNUMPAR(0) )
   {
     HB_FUNC_EXEC( QBUFFER_BUFFER1 );
-  }  
+  }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
@@ -112,12 +108,12 @@ $method=|void|setBuffer|QByteArray *
 /*
 void setData ( const QByteArray & data )
 */
-$method=|void|setData,setData1|const QByteArray &
+$internalMethod=|void|setData,setData1|const QByteArray &
 
 /*
 void setData ( const char * data, int size )
 */
-$method=|void|setData,setData2|const char *,int
+$internalMethod=|void|setData,setData2|const char *,int
 
 //[1]void setData ( const QByteArray & data )
 //[2]void setData ( const char * data, int size )
@@ -126,11 +122,11 @@ HB_FUNC_STATIC( QBUFFER_SETDATA )
 {
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    HB_FUNC_EXEC( QBUFFER_SETDATA1 );
+    QBuffer_setData1();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QBUFFER_SETDATA2 );
+    QBuffer_setData2();
   }
   else
   {

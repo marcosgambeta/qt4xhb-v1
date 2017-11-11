@@ -13,10 +13,6 @@ CLASS QLineF
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD p1
@@ -40,11 +36,7 @@ CLASS QLineF
    METHOD setLine
    METHOD setPoints
    METHOD toLine
-   METHOD translate1
-   METHOD translate2
    METHOD translate
-   METHOD translated1
-   METHOD translated2
    METHOD translated
    METHOD unitVector
    METHOD fromPolar
@@ -72,22 +64,22 @@ $destructor
 /*
 QLineF()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QLineF(const QPointF & p1, const QPointF & p2)
 */
-$constructor=|new2|const QPointF &,const QPointF &
+$internalConstructor=|new2|const QPointF &,const QPointF &
 
 /*
 QLineF(qreal x1, qreal y1, qreal x2, qreal y2)
 */
-$constructor=|new3|qreal,qreal,qreal,qreal
+$internalConstructor=|new3|qreal,qreal,qreal,qreal
 
 /*
 QLineF(const QLine & line)
 */
-$constructor=|new4|const QLine &
+$internalConstructor=|new4|const QLine &
 
 //[1]QLineF()
 //[2]QLineF(const QPointF & p1, const QPointF & p2)
@@ -98,19 +90,19 @@ HB_FUNC_STATIC( QLINEF_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QLINEF_NEW1 );
+    QLineF_new1();
   }
   else if( ISNUMPAR(2) && ISQPOINTF(1) && ISQPOINTF(2) )
   {
-    HB_FUNC_EXEC( QLINEF_NEW2 );
+    QLineF_new2();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QLINEF_NEW3 );
+    QLineF_new3();
   }
   else if( ISNUMPAR(1) && ISQLINE(1) )
   {
-    HB_FUNC_EXEC( QLINEF_NEW4 );
+    QLineF_new4();
   }
   else
   {
@@ -228,12 +220,12 @@ $method=|QLine|toLine|
 /*
 void translate(const QPointF & offset)
 */
-$method=|void|translate,translate1|const QPointF &
+$internalMethod=|void|translate,translate1|const QPointF &
 
 /*
 void translate(qreal dx, qreal dy)
 */
-$method=|void|translate,translate2|qreal,qreal
+$internalMethod=|void|translate,translate2|qreal,qreal
 
 //[1]void translate(const QPointF & offset)
 //[2]void translate(qreal dx, qreal dy)
@@ -242,11 +234,11 @@ HB_FUNC_STATIC( QLINEF_TRANSLATE )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    HB_FUNC_EXEC( QLINEF_TRANSLATE1 );
+    QLineF_translate1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QLINEF_TRANSLATE2 );
+    QLineF_translate2();
   }
   else
   {
@@ -257,12 +249,12 @@ HB_FUNC_STATIC( QLINEF_TRANSLATE )
 /*
 QLineF translated(const QPointF & offset) const
 */
-$method=|QLineF|translated,translated2|const QPointF &
+$internalMethod=|QLineF|translated,translated2|const QPointF &
 
 /*
 QLineF translated(qreal dx, qreal dy) const
 */
-$method=|QLineF|translated,translated2|qreal,qreal
+$internalMethod=|QLineF|translated,translated2|qreal,qreal
 
 //[1]QLineF translated(const QPointF & offset) const
 //[2]QLineF translated(qreal dx, qreal dy) const
@@ -271,11 +263,11 @@ HB_FUNC_STATIC( QLINEF_TRANSLATED )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    HB_FUNC_EXEC( QLINEF_TRANSLATED1 );
+    QLineF_translated1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QLINEF_TRANSLATED2 );
+    QLineF_translated2();
   }
   else
   {

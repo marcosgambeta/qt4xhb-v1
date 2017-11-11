@@ -11,8 +11,6 @@ CLASS QGraphicsGridLayout INHERIT QGraphicsLayout
 
    METHOD new
    METHOD delete
-   METHOD addItem1
-   METHOD addItem2
    METHOD addItem
    METHOD alignment
    METHOD columnAlignment
@@ -23,8 +21,6 @@ CLASS QGraphicsGridLayout INHERIT QGraphicsLayout
    METHOD columnSpacing
    METHOD columnStretchFactor
    METHOD horizontalSpacing
-   METHOD itemAt1
-   METHOD itemAt2
    METHOD itemAt
    METHOD removeItem
    METHOD rowAlignment
@@ -76,24 +72,19 @@ $destructor
 /*
 QGraphicsGridLayout ( QGraphicsLayoutItem * parent = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_NEW )
-{
-  QGraphicsLayoutItem * par1 = ISNIL(1)? 0 : (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QGraphicsGridLayout * o = new QGraphicsGridLayout ( par1 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QGraphicsLayoutItem *=0
 
 $deleteMethod
 
 /*
 void addItem ( QGraphicsLayoutItem * item, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
 */
-$method=|void|addItem,addItem1|QGraphicsLayoutItem *,int,int,int,int,Qt::Alignment=0
+$internalMethod=|void|addItem,addItem1|QGraphicsLayoutItem *,int,int,int,int,Qt::Alignment=0
 
 /*
 void addItem ( QGraphicsLayoutItem * item, int row, int column, Qt::Alignment alignment = 0 )
 */
-$method=|void|addItem,addItem2|QGraphicsLayoutItem *,int,int,Qt::Alignment=0
+$internalMethod=|void|addItem,addItem2|QGraphicsLayoutItem *,int,int,Qt::Alignment=0
 
 //[1]void addItem ( QGraphicsLayoutItem * item, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
 //[2]void addItem ( QGraphicsLayoutItem * item, int row, int column, Qt::Alignment alignment = 0 )
@@ -102,11 +93,11 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ADDITEM )
 {
   if( ISBETWEEN(5,6) && ISQGRAPHICSLAYOUTITEM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && (ISNUM(6)||ISNIL(6)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSGRIDLAYOUT_ADDITEM1 );
+    QGraphicsGridLayout_addItem1();
   }
   else if( ISBETWEEN(3,4) && ISQGRAPHICSLAYOUTITEM(1) && ISNUM(2) && ISNUM(3) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSGRIDLAYOUT_ADDITEM2 );
+    QGraphicsGridLayout_addItem2();
   }
   else
   {
@@ -162,12 +153,12 @@ $method=|qreal|horizontalSpacing|
 /*
 QGraphicsLayoutItem * itemAt ( int row, int column ) const
 */
-$method=|QGraphicsLayoutItem *|itemAt,itemAt1|int,int
+$internalMethod=|QGraphicsLayoutItem *|itemAt,itemAt1|int,int
 
 /*
 virtual QGraphicsLayoutItem * itemAt ( int index ) const
 */
-$virtualMethod=|QGraphicsLayoutItem *|itemAt,itemAt2|int
+$internalVirtualMethod=|QGraphicsLayoutItem *|itemAt,itemAt2|int
 
 //[1]QGraphicsLayoutItem * itemAt ( int row, int column ) const
 //[2]virtual QGraphicsLayoutItem * itemAt ( int index ) const
@@ -176,11 +167,11 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ITEMAT )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QGRAPHICSGRIDLAYOUT_ITEMAT1 );
+    QGraphicsGridLayout_itemAt1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSGRIDLAYOUT_ITEMAT2 );
+    QGraphicsGridLayout_itemAt2();
   }
   else
   {

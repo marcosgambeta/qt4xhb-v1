@@ -12,26 +12,14 @@ CLASS QGestureEvent INHERIT QEvent
 
    METHOD new
    METHOD delete
-   METHOD accept1
-   METHOD accept2
-   METHOD accept3
    METHOD accept
    METHOD activeGestures
    METHOD canceledGestures
    METHOD gesture
    METHOD gestures
-   METHOD ignore1
-   METHOD ignore2
-   METHOD ignore3
    METHOD ignore
-   METHOD isAccepted1
-   METHOD isAccepted2
-   METHOD isAccepted3
    METHOD isAccepted
    METHOD mapToGraphicsScene
-   METHOD setAccepted1
-   METHOD setAccepted2
-   METHOD setAccepted3
    METHOD setAccepted
    METHOD setWidget
    METHOD widget
@@ -72,17 +60,17 @@ $deleteMethod
 /*
 void accept ()
 */
-$method=|void|accept,accept1|
+$internalMethod=|void|accept,accept1|
 
 /*
 void accept ( QGesture * gesture )
 */
-$method=|void|accept,accept2|QGesture *
+$internalMethod=|void|accept,accept2|QGesture *
 
 /*
 void accept ( Qt::GestureType gestureType )
 */
-$method=|void|accept,accept3|Qt::GestureType
+$internalMethod=|void|accept,accept3|Qt::GestureType
 
 //[1]void accept ()
 //[2]void accept ( QGesture * gesture )
@@ -92,15 +80,15 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACCEPT )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QGESTUREEVENT_ACCEPT1 );
+    QGestureEvent_accept1();
   }
   else if( ISNUMPAR(1) && ISQGESTURE(1) )
   {
-    HB_FUNC_EXEC( QGESTUREEVENT_ACCEPT2 );
+    QGestureEvent_accept2();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QGESTUREEVENT_ACCEPT3 );
+    QGestureEvent_accept3();
   }
   else
   {
@@ -118,14 +106,8 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACTIVEGESTURES )
   if( obj )
   {
     QList<QGesture *> list = obj->activeGestures ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGESTURE" );
-    #else
-    pDynSym = hb_dynsymFindName( "QGESTURE" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QGESTURE" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -162,14 +144,8 @@ HB_FUNC_STATIC( QGESTUREEVENT_CANCELEDGESTURES )
   if( obj )
   {
     QList<QGesture *> list = obj->canceledGestures ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGESTURE" );
-    #else
-    pDynSym = hb_dynsymFindName( "QGESTURE" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QGESTURE" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -211,14 +187,8 @@ HB_FUNC_STATIC( QGESTUREEVENT_GESTURES )
   if( obj )
   {
     QList<QGesture *> list = obj->gestures ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGESTURE" );
-    #else
-    pDynSym = hb_dynsymFindName( "QGESTURE" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QGESTURE" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -248,17 +218,17 @@ HB_FUNC_STATIC( QGESTUREEVENT_GESTURES )
 /*
 void ignore ()
 */
-$method=|void|ignore,ignore1|
+$internalMethod=|void|ignore,ignore1|
 
 /*
 void ignore ( QGesture * gesture )
 */
-$method=|void|ignore,ignore2|QGesture *
+$internalMethod=|void|ignore,ignore2|QGesture *
 
 /*
 void ignore ( Qt::GestureType gestureType )
 */
-$method=|void|ignore,ignore3|Qt::GestureType
+$internalMethod=|void|ignore,ignore3|Qt::GestureType
 
 //[1]void ignore ()
 //[2]void ignore ( QGesture * gesture )
@@ -268,15 +238,15 @@ HB_FUNC_STATIC( QGESTUREEVENT_IGNORE )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QGESTUREEVENT_IGNORE1 );
+    QGestureEvent_ignore1();
   }
   else if( ISNUMPAR(1) && ISQGESTURE(1) )
   {
-    HB_FUNC_EXEC( QGESTUREEVENT_IGNORE2 );
+    QGestureEvent_ignore2();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QGESTUREEVENT_IGNORE3 );
+    QGestureEvent_ignore3();
   }
   else
   {
@@ -287,17 +257,17 @@ HB_FUNC_STATIC( QGESTUREEVENT_IGNORE )
 /*
 bool isAccepted () const
 */
-$method=|bool|isAccepted,isAccepted1|
+$internalMethod=|bool|isAccepted,isAccepted1|
 
 /*
 bool isAccepted ( QGesture * gesture ) const
 */
-$method=|bool|isAccepted,isAccepted2|QGesture *
+$internalMethod=|bool|isAccepted,isAccepted2|QGesture *
 
 /*
 bool isAccepted ( Qt::GestureType gestureType ) const
 */
-$method=|bool|isAccepted,isAccepted3|Qt::GestureType
+$internalMethod=|bool|isAccepted,isAccepted3|Qt::GestureType
 
 //[1]bool isAccepted () const
 //[2]bool isAccepted ( QGesture * gesture ) const
@@ -307,15 +277,15 @@ HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QGESTUREEVENT_ISACCEPTED1 );
+    QGestureEvent_isAccepted1();
   }
   else if( ISNUMPAR(1) && ISQGESTURE(1) )
   {
-    HB_FUNC_EXEC( QGESTUREEVENT_ISACCEPTED2 );
+    QGestureEvent_isAccepted2();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QGESTUREEVENT_ISACCEPTED3 );
+    QGestureEvent_isAccepted3();
   }
   else
   {
@@ -331,17 +301,17 @@ $method=|QPointF|mapToGraphicsScene|const QPointF &
 /*
 void setAccepted ( bool accepted )
 */
-$method=|void|setAccepted,setAccepted1|bool
+$internalMethod=|void|setAccepted,setAccepted1|bool
 
 /*
 void setAccepted ( QGesture * gesture, bool value )
 */
-$method=|void|setAccepted,setAccepted2|QGesture *,bool
+$internalMethod=|void|setAccepted,setAccepted2|QGesture *,bool
 
 /*
 void setAccepted ( Qt::GestureType gestureType, bool value )
 */
-$method=|void|setAccepted,setAccepted3|Qt::GestureType,bool
+$internalMethod=|void|setAccepted,setAccepted3|Qt::GestureType,bool
 
 //[1]void setAccepted ( bool accepted )
 //[2]void setAccepted ( QGesture * gesture, bool value )
@@ -351,15 +321,15 @@ HB_FUNC_STATIC( QGESTUREEVENT_SETACCEPTED )
 {
   if( ISNUMPAR(1) && ISLOG(1) )
   {
-    HB_FUNC_EXEC( QGESTUREEVENT_SETACCEPTED1 );
+    QGestureEvent_setAccepted1();
   }
   else if( ISNUMPAR(2) && ISQGESTURE(1) && ISLOG(2) )
   {
-    HB_FUNC_EXEC( QGESTUREEVENT_SETACCEPTED2 );
+    QGestureEvent_setAccepted2();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISLOG(2) )
   {
-    HB_FUNC_EXEC( QGESTUREEVENT_SETACCEPTED3 );
+    QGestureEvent_setAccepted3();
   }
   else
   {

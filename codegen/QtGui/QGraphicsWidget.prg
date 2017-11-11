@@ -38,15 +38,12 @@ CLASS QGraphicsWidget INHERIT QGraphicsObject,QGraphicsLayoutItem
    METHOD rect
    METHOD releaseShortcut
    METHOD removeAction
-   METHOD resize1
-   METHOD resize2
    METHOD resize
    METHOD setAttribute
    METHOD setAutoFillBackground
    METHOD setContentsMargins
    METHOD setFocusPolicy
    METHOD setFont
-   METHOD setGeometry1
    METHOD setLayout
    METHOD setLayoutDirection
    METHOD setPalette
@@ -69,7 +66,6 @@ CLASS QGraphicsWidget INHERIT QGraphicsObject,QGraphicsLayoutItem
    METHOD boundingRect
    METHOD getContentsMargins
    METHOD paint
-   METHOD setGeometry2
    METHOD setGeometry
    METHOD shape
    METHOD type
@@ -95,12 +91,7 @@ $destructor
 /*
 QGraphicsWidget ( QGraphicsItem * parent = 0, Qt::WindowFlags wFlags = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSWIDGET_NEW )
-{
-  int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QGraphicsWidget * o = new QGraphicsWidget ( OPQGRAPHICSITEM(1,0), (Qt::WindowFlags) par2 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QGraphicsItem *=0,Qt::WindowFlags=0
 
 $deleteMethod
 
@@ -114,14 +105,8 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_ACTIONS )
   if( obj )
   {
     QList<QAction *> list = obj->actions ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QACTION" );
-    #else
-    pDynSym = hb_dynsymFindName( "QACTION" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QACTION" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -282,12 +267,12 @@ $method=|void|removeAction|QAction *
 /*
 void resize ( const QSizeF & size )
 */
-$method=|void|resize,resize1|const QSizeF &
+$internalMethod=|void|resize,resize1|const QSizeF &
 
 /*
 void resize ( qreal w, qreal h )
 */
-$method=|void|resize,resize2|qreal,qreal
+$internalMethod=|void|resize,resize2|qreal,qreal
 
 //[1]void resize ( const QSizeF & size )
 //[2]void resize ( qreal w, qreal h )
@@ -296,11 +281,11 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_RESIZE )
 {
   if( ISNUMPAR(1) && ISQSIZEF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSWIDGET_RESIZE1 );
+    QGraphicsWidget_resize1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QGRAPHICSWIDGET_RESIZE2 );
+    QGraphicsWidget_resize2();
   }
   else
   {
@@ -332,11 +317,6 @@ $method=|void|setFocusPolicy|Qt::FocusPolicy
 void setFont ( const QFont & font )
 */
 $method=|void|setFont|const QFont &
-
-/*
-void setGeometry ( qreal x, qreal y, qreal w, qreal h )
-*/
-$method=|void|setGeometry,setGeometry1|qreal,qreal,qreal,qreal
 
 /*
 void setLayout ( QGraphicsLayout * layout )
@@ -449,9 +429,14 @@ virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option
 $virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
 
 /*
+void setGeometry ( qreal x, qreal y, qreal w, qreal h )
+*/
+$internalMethod=|void|setGeometry,setGeometry1|qreal,qreal,qreal,qreal
+
+/*
 virtual void setGeometry ( const QRectF & rect )
 */
-$virtualMethod=|void|setGeometry,setGeometry2|const QRectF &
+$internalVirtualMethod=|void|setGeometry,setGeometry2|const QRectF &
 
 //[1]void setGeometry ( qreal x, qreal y, qreal w, qreal h )
 //[2]virtual void setGeometry ( const QRectF & rect )
@@ -460,11 +445,11 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETGEOMETRY )
 {
   if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QGRAPHICSWIDGET_SETGEOMETRY1 );
+    QGraphicsWidget_setGeometry1();
   }
   else if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSWIDGET_SETGEOMETRY2 );
+    QGraphicsWidget_setGeometry2();
   }
   else
   {

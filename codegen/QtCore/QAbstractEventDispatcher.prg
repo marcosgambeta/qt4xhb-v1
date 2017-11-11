@@ -15,8 +15,6 @@ CLASS QAbstractEventDispatcher INHERIT QObject
    METHOD interrupt
    METHOD processEvents
    METHOD registerSocketNotifier
-   METHOD registerTimer1
-   METHOD registerTimer2
    METHOD registerTimer
    METHOD unregisterSocketNotifier
    METHOD unregisterTimer
@@ -76,12 +74,12 @@ $virtualMethod=|void|registerSocketNotifier|QSocketNotifier *
 /*
 int registerTimer ( int interval, QObject * object )
 */
-$method=|int|registerTimer,registerTimer1|int,QObject *
+$internalMethod=|int|registerTimer,registerTimer1|int,QObject *
 
 /*
 virtual void registerTimer ( int timerId, int interval, QObject * object ) = 0
 */
-$virtualMethod=|void|registerTimer,registerTimer2|int,int,QObject *
+$internalVirtualMethod=|void|registerTimer,registerTimer2|int,int,QObject *
 
 //[1]int registerTimer ( int interval, QObject * object )
 //[2]virtual void registerTimer ( int timerId, int interval, QObject * object ) = 0
@@ -90,11 +88,11 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISQOBJECT(2) )
   {
-    HB_FUNC_EXEC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER1 );
+    QAbstractEventDispatcher_registerTimer1();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQOBJECT(3) )
   {
-    HB_FUNC_EXEC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER2 );
+    QAbstractEventDispatcher_registerTimer2();
   }
   else
   {

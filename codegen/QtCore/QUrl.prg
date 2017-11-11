@@ -12,10 +12,6 @@ CLASS QUrl
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD addEncodedQueryItem
@@ -45,8 +41,6 @@ CLASS QUrl
    METHOD isValid
    METHOD password
    METHOD path
-   METHOD port1
-   METHOD port2
    METHOD port
    METHOD queryItemValue
    METHOD removeAllEncodedQueryItems
@@ -61,8 +55,6 @@ CLASS QUrl
    METHOD setEncodedPassword
    METHOD setEncodedPath
    METHOD setEncodedQuery
-   METHOD setEncodedUrl1
-   METHOD setEncodedUrl2
    METHOD setEncodedUrl
    METHOD setEncodedUserName
    METHOD setFragment
@@ -72,8 +64,6 @@ CLASS QUrl
    METHOD setPort
    METHOD setQueryDelimiters
    METHOD setScheme
-   METHOD setUrl1
-   METHOD setUrl2
    METHOD setUrl
    METHOD setUserInfo
    METHOD setUserName
@@ -85,8 +75,6 @@ CLASS QUrl
    METHOD userInfo
    METHOD userName
    METHOD fromAce
-   METHOD fromEncoded1
-   METHOD fromEncoded2
    METHOD fromEncoded
    METHOD fromLocalFile
    METHOD fromPercentEncoding
@@ -121,22 +109,22 @@ $destructor
 /*
 QUrl ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QUrl ( const QString & url )
 */
-$constructor=|new2|const QString &
+$internalConstructor=|new2|const QString &
 
 /*
 QUrl ( const QUrl & other )
 */
-$constructor=|new3|const QUrl &
+$internalConstructor=|new3|const QUrl &
 
 /*
 QUrl ( const QString & url, ParsingMode parsingMode )
 */
-$constructor=|new4|const QString &,QUrl::ParsingMode
+$internalConstructor=|new4|const QString &,QUrl::ParsingMode
 
 //[1]QUrl ()
 //[2]QUrl ( const QString & url )
@@ -147,19 +135,19 @@ HB_FUNC_STATIC( QURL_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QURL_NEW1 );
+    QUrl_new1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QURL_NEW2 );
+    QUrl_new2();
   }
   else if( ISNUMPAR(1) && ISQURL(1) )
   {
-    HB_FUNC_EXEC( QURL_NEW3 );
+    QUrl_new3();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QURL_NEW4 );
+    QUrl_new4();
   }
   else
   {
@@ -189,14 +177,8 @@ HB_FUNC_STATIC( QURL_ALLENCODEDQUERYITEMVALUES )
   if( obj )
   {
     QList<QByteArray> list = obj->allEncodedQueryItemValues ( *PQBYTEARRAY(1) );
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QBYTEARRAY" );
-    #else
-    pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -346,12 +328,12 @@ $method=|QString|path|
 /*
 int port () const
 */
-$method=|int|port,port1|
+$internalMethod=|int|port,port1|
 
 /*
 int port ( int defaultPort ) const
 */
-$method=|int|port,port2|int
+$internalMethod=|int|port,port2|int
 
 //[1]int port () const
 //[2]int port ( int defaultPort ) const
@@ -360,11 +342,11 @@ HB_FUNC_STATIC( QURL_PORT )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QURL_PORT1 );
+    QUrl_port1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QURL_PORT2 );
+    QUrl_port2();
   }
   else
   {
@@ -440,12 +422,12 @@ $method=|void|setEncodedQuery|const QByteArray &
 /*
 void setEncodedUrl ( const QByteArray & encodedUrl )
 */
-$method=|void|setEncodedUrl,setEncodedUrl1|const QByteArray &
+$internalMethod=|void|setEncodedUrl,setEncodedUrl1|const QByteArray &
 
 /*
 void setEncodedUrl ( const QByteArray & encodedUrl, ParsingMode parsingMode )
 */
-$method=|void|setEncodedUrl,setEncodedUrl2|const QByteArray &,QUrl::ParsingMode
+$internalMethod=|void|setEncodedUrl,setEncodedUrl2|const QByteArray &,QUrl::ParsingMode
 
 //[1]void setEncodedUrl ( const QByteArray & encodedUrl )
 //[2]void setEncodedUrl ( const QByteArray & encodedUrl, ParsingMode parsingMode )
@@ -454,11 +436,11 @@ HB_FUNC_STATIC( QURL_SETENCODEDURL )
 {
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    HB_FUNC_EXEC( QURL_SETENCODEDURL1 );
+    QUrl_setEncodedUrl1();
   }
   else if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QURL_SETENCODEDURL2 );
+    QUrl_setEncodedUrl2();
   }
   else
   {
@@ -509,12 +491,12 @@ $method=|void|setScheme|const QString &
 /*
 void setUrl ( const QString & url )
 */
-$method=|void|setUrl|const QString &
+$internalMethod=|void|setUrl,setUrl1|const QString &
 
 /*
 void setUrl ( const QString & url, ParsingMode parsingMode )
 */
-$method=|void|setUrl,setUrl2|const QString &,QUrl::ParsingMode
+$internalMethod=|void|setUrl,setUrl2|const QString &,QUrl::ParsingMode
 
 //[1]void setUrl ( const QString & url )
 //[2]void setUrl ( const QString & url, ParsingMode parsingMode )
@@ -523,11 +505,11 @@ HB_FUNC_STATIC( QURL_SETURL )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QURL_SETURL1 );
+    QUrl_setUrl1();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QURL_SETURL2 );
+    QUrl_setUrl2();
   }
   else
   {
@@ -588,12 +570,12 @@ $staticMethod=|QString|fromAce|const QByteArray &
 /*
 static QUrl fromEncoded ( const QByteArray & input )
 */
-$staticMethod=|QUrl|fromEncoded,fromEncoded1|const QByteArray &
+$internalStaticMethod=|QUrl|fromEncoded,fromEncoded1|const QByteArray &
 
 /*
 static QUrl fromEncoded ( const QByteArray & input, ParsingMode parsingMode )
 */
-$staticMethod=|QUrl|fromEncoded,fromEncoded2|const QByteArray &,QUrl::ParsingMode
+$internalStaticMethod=|QUrl|fromEncoded,fromEncoded2|const QByteArray &,QUrl::ParsingMode
 
 //[1]QUrl fromEncoded ( const QByteArray & input )
 //[2]QUrl fromEncoded ( const QByteArray & input, ParsingMode parsingMode )
@@ -602,11 +584,11 @@ HB_FUNC_STATIC( QURL_FROMENCODED )
 {
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    HB_FUNC_EXEC( QURL_FROMENCODED1 );
+    QUrl_fromEncoded1();
   }
   else if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QURL_FROMENCODED2 );
+    QUrl_fromEncoded2();
   }
   else
   {

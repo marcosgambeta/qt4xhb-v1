@@ -11,10 +11,8 @@ CLASS QSound INHERIT QObject
    METHOD loops
    METHOD loopsRemaining
    METHOD setLoops
-   METHOD play1
    METHOD stop
    METHOD isAvailable
-   METHOD play2
    METHOD play
 
    DESTRUCTOR destroyObject
@@ -68,11 +66,6 @@ void setLoops ( int number )
 $method=|void|setLoops|int
 
 /*
-void play ()
-*/
-$method=|void|play,play1|
-
-/*
 void stop ()
 */
 $method=|void|stop|
@@ -83,9 +76,14 @@ static bool isAvailable ()
 $staticMethod=|bool|isAvailable|
 
 /*
+void play ()
+*/
+$internalMethod=|void|play,play1|
+
+/*
 static void play ( const QString & filename )
 */
-$staticMethod=|void|play,play2|const QString &
+$internalStaticMethod=|void|play,play2|const QString &
 
 //[1]void play ()
 //[2]void play ( const QString & filename )
@@ -94,11 +92,11 @@ HB_FUNC_STATIC( QSOUND_PLAY )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSOUND_PLAY1 );
+    QSound_play1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QSOUND_PLAY2 );
+    QSound_play2();
   }
   else
   {

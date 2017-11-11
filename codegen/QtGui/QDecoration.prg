@@ -15,8 +15,6 @@ CLASS QDecoration
    METHOD buildSysMenu
    METHOD menuTriggered
    METHOD paint
-   METHOD region1
-   METHOD region2
    METHOD region
    METHOD regionAt
    METHOD regionClicked
@@ -64,12 +62,12 @@ $virtualMethod=|bool|paint|QPainter *,const QWidget *,int=QDecoration::All,QDeco
 /*
 virtual QRegion region ( const QWidget * widget, const QRect & rectangle, int decorationRegion = All ) = 0
 */
-$virtualMethod=|QRegion|region,region1|const QWidget *,const QRect &,int=QDecoration::All
+$internalVirtualMethod=|QRegion|region,region1|const QWidget *,const QRect &,int=QDecoration::All
 
 /*
 QRegion region ( const QWidget * widget, int decorationRegion = All )
 */
-$method=|QRegion|region,region2|const QWidget *,int=QDecoration::All
+$internalMethod=|QRegion|region,region2|const QWidget *,int=QDecoration::All
 
 //[1]virtual QRegion region ( const QWidget * widget, const QRect & rectangle, int decorationRegion = All ) = 0
 //[2]QRegion region ( const QWidget * widget, int decorationRegion = All )
@@ -78,11 +76,11 @@ HB_FUNC_STATIC( QDECORATION_REGION )
 {
   if( ISBETWEEN(2,3) && ISQWIDGET(1) && ISQRECT(2) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QDECORATION_REGION1 );
+    QDecoration_region1();
   }
   else if( ISBETWEEN(1,2) && ISQWIDGET(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QDECORATION_REGION2 );
+    QDecoration_region2();
   }
   else
   {

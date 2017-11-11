@@ -16,8 +16,6 @@ CLASS QSessionManager INHERIT QObject
    METHOD sessionId
    METHOD sessionKey
    METHOD setDiscardCommand
-   METHOD setManagerProperty1
-   METHOD setManagerProperty2
    METHOD setManagerProperty
    METHOD setRestartCommand
    METHOD setRestartHint
@@ -99,12 +97,12 @@ $method=|void|setDiscardCommand|const QStringList &
 /*
 void setManagerProperty ( const QString & name, const QStringList & value )
 */
-$method=|void|setManagerProperty,setManagerProperty1|const QString &,const QStringList &
+$internalMethod=|void|setManagerProperty,setManagerProperty1|const QString &,const QStringList &
 
 /*
 void setManagerProperty ( const QString & name, const QString & value )
 */
-$method=|void|setManagerProperty,setManagerProperty2|const QString &,const QString &
+$internalMethod=|void|setManagerProperty,setManagerProperty2|const QString &,const QString &
 
 //[1]void setManagerProperty ( const QString & name, const QStringList & value )
 //[2]void setManagerProperty ( const QString & name, const QString & value )
@@ -113,11 +111,11 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETMANAGERPROPERTY )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISARRAY(2) )
   {
-    HB_FUNC_EXEC( QSESSIONMANAGER_SETMANAGERPROPERTY1 );
+    QSessionManager_setManagerProperty1();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QSESSIONMANAGER_SETMANAGERPROPERTY2 );
+    QSessionManager_setManagerProperty2();
   }
   else
   {

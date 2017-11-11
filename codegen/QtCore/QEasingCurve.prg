@@ -7,8 +7,6 @@ CLASS QEasingCurve
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD amplitude
@@ -43,29 +41,25 @@ $destructor
 /*
 QEasingCurve ( Type type = Linear )
 */
-$constructor=|new1|QEasingCurve::Type=QEasingCurve::Linear )
+$internalConstructor=|new1|QEasingCurve::Type=QEasingCurve::Linear )
 
 /*
 QEasingCurve ( const QEasingCurve & other )
 */
-$constructor=|new2|const QEasingCurve &
+$internalConstructor=|new2|const QEasingCurve &
 
 //[1]QEasingCurve(Type type = Linear)
 //[2]QEasingCurve(const QEasingCurve & other)
 
 HB_FUNC_STATIC( QEASINGCURVE_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QEASINGCURVE_NEW1 );
-  }
-  else if( ISNUMPAR(1) && ISNUM(1) )
-  {
-    HB_FUNC_EXEC( QEASINGCURVE_NEW1 );
+    QEasingCurve_new1();
   }
   else if( ISNUMPAR(1) && ISQEASINGCURVE(1) )
   {
-    HB_FUNC_EXEC( QEASINGCURVE_NEW2 );
+    QEasingCurve_new2();
   }
   else
   {

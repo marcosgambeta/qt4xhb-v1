@@ -4,8 +4,6 @@ $header
 
 CLASS QHBoxLayout INHERIT QBoxLayout
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
 
@@ -26,12 +24,12 @@ $destructor
 /*
 QHBoxLayout ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QHBoxLayout ( QWidget * parent )
 */
-$constructor=|new2|QWidget *
+$internalConstructor=|new2|QWidget *
 
 //[1]QHBoxLayout ()
 //[2]QHBoxLayout ( QWidget * parent )
@@ -40,11 +38,11 @@ HB_FUNC_STATIC( QHBOXLAYOUT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QHBOXLAYOUT_NEW1 );
+    QHBoxLayout_new1();
   }
   else if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    HB_FUNC_EXEC( QHBOXLAYOUT_NEW2 );
+    QHBoxLayout_new2();
   }
   else
   {

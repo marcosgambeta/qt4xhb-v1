@@ -14,11 +14,6 @@ CLASS QVideoFrame
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
    METHOD new
    METHOD delete
    METHOD bits1
@@ -73,27 +68,27 @@ $destructor
 /*
 QVideoFrame ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QVideoFrame ( QAbstractVideoBuffer * buffer, const QSize & size, PixelFormat format )
 */
-$constructor=|new2|QAbstractVideoBuffer *,const QSize &,QVideoFrame::PixelFormat
+$internalConstructor=|new2|QAbstractVideoBuffer *,const QSize &,QVideoFrame::PixelFormat
 
 /*
 QVideoFrame ( int bytes, const QSize & size, int bytesPerLine, PixelFormat format )
 */
-$constructor=|new3|int,const QSize &,int,QVideoFrame::PixelFormat
+$internalConstructor=|new3|int,const QSize &,int,QVideoFrame::PixelFormat
 
 /*
 QVideoFrame ( const QImage & image )
 */
-$constructor=|new4|const QImage &
+$internalConstructor=|new4|const QImage &
 
 /*
 QVideoFrame ( const QVideoFrame & other )
 */
-$constructor=|new5|const QVideoFrame &
+$internalConstructor=|new5|const QVideoFrame &
 
 //[1]QVideoFrame ()
 //[2]QVideoFrame ( QAbstractVideoBuffer * buffer, const QSize & size, PixelFormat format )
@@ -105,23 +100,23 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QVIDEOFRAME_NEW1 );
+    QVideoFrame_new1();
   }
   else if( ISNUMPAR(3) && ISQABSTRACTVIDEOBUFFER(1) && ISQSIZE(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QVIDEOFRAME_NEW2 );
+    QVideoFrame_new2();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISQSIZE(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QVIDEOFRAME_NEW3 );
+    QVideoFrame_new3();
   }
   else if( ISNUMPAR(1) && ISQIMAGE(1) )
   {
-    HB_FUNC_EXEC( QVIDEOFRAME_NEW4 );
+    QVideoFrame_new4();
   }
   else if( ISNUMPAR(1) && ISQVIDEOFRAME(1) )
   {
-    HB_FUNC_EXEC( QVIDEOFRAME_NEW5 );
+    QVideoFrame_new5();
   }
   else
   {

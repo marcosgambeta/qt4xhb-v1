@@ -30,12 +30,7 @@ CLASS QLayout INHERIT QObject,QLayoutItem
    METHOD parentWidget
    METHOD removeItem
    METHOD removeWidget
-   METHOD setAlignment1
-   METHOD setAlignment2
-   METHOD setAlignment3
    METHOD setAlignment
-   METHOD setContentsMargins1
-   METHOD setContentsMargins2
    METHOD setContentsMargins
    METHOD setEnabled
    METHOD setMenuBar
@@ -173,17 +168,17 @@ $method=|void|removeWidget|QWidget *
 /*
 bool setAlignment ( QWidget * w, Qt::Alignment alignment )
 */
-$method=|bool|setAlignment,setAlignment1|QWidget *,Qt::Alignment
+$internalMethod=|bool|setAlignment,setAlignment1|QWidget *,Qt::Alignment
 
 /*
 void setAlignment ( Qt::Alignment alignment )
 */
-$method=|void|setAlignment,setAlignment2|Qt::Alignment
+$internalMethod=|void|setAlignment,setAlignment2|Qt::Alignment
 
 /*
 bool setAlignment ( QLayout * l, Qt::Alignment alignment )
 */
-$method=|bool|setAlignment,setAlignment3|QLayout *,Qt::Alignment
+$internalMethod=|bool|setAlignment,setAlignment3|QLayout *,Qt::Alignment
 
 //[1]bool setAlignment ( QWidget * w, Qt::Alignment alignment )
 //[2]void setAlignment ( Qt::Alignment alignment )
@@ -193,15 +188,15 @@ HB_FUNC_STATIC( QLAYOUT_SETALIGNMENT )
 {
   if( ISNUMPAR(2) && ISQWIDGET(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QLAYOUT_SETALIGNMENT1 );
+    QLayout_setAlignment1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QLAYOUT_SETALIGNMENT2 );
+    QLayout_setAlignment2();
   }
   else if( ISNUMPAR(2) && ISQLAYOUT(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QLAYOUT_SETALIGNMENT3 );
+    QLayout_setAlignment3();
   }
   else
   {
@@ -212,12 +207,12 @@ HB_FUNC_STATIC( QLAYOUT_SETALIGNMENT )
 /*
 void setContentsMargins ( int left, int top, int right, int bottom )
 */
-$method=|void|setContentsMargins,setContentsMargins1|int,int,int,int
+$internalMethod=|void|setContentsMargins,setContentsMargins1|int,int,int,int
 
 /*
 void setContentsMargins ( const QMargins & margins )
 */
-$method=|void|setContentsMargins,setContentsMargins2|const QMargins &
+$internalMethod=|void|setContentsMargins,setContentsMargins2|const QMargins &
 
 //[1]void setContentsMargins ( int left, int top, int right, int bottom )
 //[2]void setContentsMargins ( const QMargins & margins )
@@ -226,11 +221,11 @@ HB_FUNC_STATIC( QLAYOUT_SETCONTENTSMARGINS )
 {
   if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QLAYOUT_SETCONTENTSMARGINS1 );
+    QLayout_setContentsMargins1();
   }
   else if( ISNUMPAR(1) && ISQMARGINS(1) )
   {
-    HB_FUNC_EXEC( QLAYOUT_SETCONTENTSMARGINS2 );
+    QLayout_setContentsMargins2();
   }
   else
   {

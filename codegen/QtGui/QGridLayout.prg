@@ -10,16 +10,10 @@ REQUEST QSIZE
 
 CLASS QGridLayout INHERIT QLayout
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD addItem
-   METHOD addLayout1
-   METHOD addLayout2
    METHOD addLayout
-   METHOD addWidget1
-   METHOD addWidget2
    METHOD addWidget
    METHOD cellRect
    METHOD columnCount
@@ -72,12 +66,12 @@ $destructor
 /*
 QGridLayout ( QWidget * parent )
 */
-$constructor=|new1|QWidget *
+$internalConstructor=|new1|QWidget *
 
 /*
 QGridLayout ()
 */
-$constructor=|new2|
+$internalConstructor=|new2|
 
 //[1]QGridLayout ( QWidget * parent )
 //[2]QGridLayout ()
@@ -86,11 +80,11 @@ HB_FUNC_STATIC( QGRIDLAYOUT_NEW )
 {
   if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    HB_FUNC_EXEC( QGRIDLAYOUT_NEW1 );
+    QGridLayout_new1();
   }
   else if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QGRIDLAYOUT_NEW2 );
+    QGridLayout_new2();
   }
   else
   {
@@ -108,12 +102,12 @@ $method=|void|addItem|QLayoutItem *,int,int,int=1,int=1,Qt::Alignment=0
 /*
 void addLayout ( QLayout * layout, int row, int column, Qt::Alignment alignment = 0 )
 */
-$method=|void|addLayout,addLayout1|QLayout *,int,int,Qt::Alignment=0
+$internalMethod=|void|addLayout,addLayout1|QLayout *,int,int,Qt::Alignment=0
 
 /*
 void addLayout ( QLayout * layout, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
 */
-$method=|void|addLayout,addLayout2|QLayout *,int,int,int,int,Qt::Alignment=0
+$internalMethod=|void|addLayout,addLayout2|QLayout *,int,int,int,int,Qt::Alignment=0
 
 //[1]void addLayout ( QLayout * layout, int row, int column, Qt::Alignment alignment = 0 )
 //[2]void addLayout ( QLayout * layout, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
@@ -122,11 +116,11 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDLAYOUT )
 {
   if( ISBETWEEN(3,4) && ISQLAYOUT(1) && ISNUM(2) && ISNUM(3) && (ISNUM(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QGRIDLAYOUT_ADDLAYOUT1 );
+    QGridLayout_addLayout1();
   }
   else if( ISBETWEEN(5,6) && ISQLAYOUT(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && (ISNUM(6)||ISNIL(6)) )
   {
-    HB_FUNC_EXEC( QGRIDLAYOUT_ADDLAYOUT2 );
+    QGridLayout_addLayout2();
   }
   else
   {
@@ -137,12 +131,12 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDLAYOUT )
 /*
 void addWidget ( QWidget * widget, int row, int column, Qt::Alignment alignment = 0 )
 */
-$method=|void|addWidget,addWidget1|QWidget *,int,int,Qt::Alignment=0
+$internalMethod=|void|addWidget,addWidget1|QWidget *,int,int,Qt::Alignment=0
 
 /*
 void addWidget ( QWidget * widget, int fromRow, int fromColumn, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
 */
-$method=|void|addWidget,addWidget2|QWidget *,int,int,int,int,Qt::Alignment=0
+$internalMethod=|void|addWidget,addWidget2|QWidget *,int,int,int,int,Qt::Alignment=0
 
 //[1]void addWidget ( QWidget * widget, int row, int column, Qt::Alignment alignment = 0 )
 //[2]void addWidget ( QWidget * widget, int fromRow, int fromColumn, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
@@ -151,11 +145,11 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDWIDGET )
 {
   if( ISBETWEEN(3,4) && ISQWIDGET(1) && ISNUM(2) && ISNUM(3) && (ISNUM(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QGRIDLAYOUT_ADDWIDGET1 );
+    QGridLayout_addWidget1();
   }
   else if( ISBETWEEN(5,6) && ISQWIDGET(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && (ISNUM(6)||ISNIL(6)) )
   {
-    HB_FUNC_EXEC( QGRIDLAYOUT_ADDWIDGET2 );
+    QGridLayout_addWidget2();
   }
   else
   {

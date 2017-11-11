@@ -12,17 +12,10 @@ CLASS QFontMetrics
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD ascent
    METHOD averageCharWidth
-   METHOD boundingRect1
-   METHOD boundingRect2
-   METHOD boundingRect3
-   METHOD boundingRect4
    METHOD boundingRect
    METHOD descent
    METHOD elidedText
@@ -42,8 +35,6 @@ CLASS QFontMetrics
    METHOD strikeOutPos
    METHOD tightBoundingRect
    METHOD underlinePos
-   METHOD width1
-   METHOD width2
    METHOD width
    METHOD xHeight
 
@@ -70,17 +61,17 @@ $destructor
 /*
 QFontMetrics ( const QFont & font )
 */
-$constructor=|new1|const QFont &
+$internalConstructor=|new1|const QFont &
 
 /*
 QFontMetrics ( const QFont & font, QPaintDevice * paintdevice )
 */
-$constructor=|new2|const QFont &,QPaintDevice *
+$internalConstructor=|new2|const QFont &,QPaintDevice *
 
 /*
 QFontMetrics ( const QFontMetrics & fm )
 */
-$constructor=|new3|const QFontMetrics &
+$internalConstructor=|new3|const QFontMetrics &
 
 //[1]QFontMetrics ( const QFont & font )
 //[2]QFontMetrics ( const QFont & font, QPaintDevice * paintdevice )
@@ -90,15 +81,15 @@ HB_FUNC_STATIC( QFONTMETRICS_NEW )
 {
   if( ISNUMPAR(1) && ISQFONT(1) )
   {
-    HB_FUNC_EXEC( QFONTMETRICS_NEW1 );
+    QFontMetrics_new1();
   }
   else if( ISNUMPAR(2) && ISQFONT(1) && ISOBJECT(2) )
   {
-    HB_FUNC_EXEC( QFONTMETRICS_NEW2 );
+    QFontMetrics_new2();
   }
   else if( ISNUMPAR(1) && ISQFONTMETRICS(1) )
   {
-    HB_FUNC_EXEC( QFONTMETRICS_NEW3 );
+    QFontMetrics_new3();
   }
   else
   {
@@ -121,22 +112,22 @@ $method=|int|averageCharWidth|
 /*
 QRect boundingRect ( QChar ch ) const
 */
-$method=|QRect|boundingRect,boundingRect1|QChar
+$internalMethod=|QRect|boundingRect,boundingRect1|QChar
 
 /*
 QRect boundingRect ( const QString & text ) const
 */
-$method=|QRect|boundingRect,boundingRect2|const QString &
+$internalMethod=|QRect|boundingRect,boundingRect2|const QString &
 
 /*
 QRect boundingRect ( int x, int y, int width, int height, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
 */
-$method=|QRect|boundingRect,boundingRect3|int,int,int,int,int,const QString &,int=0,int *=0
+$internalMethod=|QRect|boundingRect,boundingRect3|int,int,int,int,int,const QString &,int=0,int *=0
 
 /*
 QRect boundingRect ( const QRect & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
 */
-$method=|QRect|boundingRect,boundingRect4|const QRect &,int,const QString &,int=0,int *=0
+$internalMethod=|QRect|boundingRect,boundingRect4|const QRect &,int,const QString &,int=0,int *=0
 
 //[1]QRect boundingRect ( QChar ch ) const
 //[2]QRect boundingRect ( const QString & text ) const
@@ -147,19 +138,19 @@ HB_FUNC_STATIC( QFONTMETRICS_BOUNDINGRECT )
 {
   if( ISNUMPAR(1) && ISQCHAR(1) )
   {
-    HB_FUNC_EXEC( QFONTMETRICS_BOUNDINGRECT1 );
+    QFontMetrics_boundingRect1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QFONTMETRICS_BOUNDINGRECT2 );
+    QFontMetrics_boundingRect2();
   }
   else if( ISBETWEEN(6,8) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISCHAR(6) && (ISNUM(7)||ISNIL(7)) && (ISARRAY(8)||ISNIL(8)) )
   {
-    HB_FUNC_EXEC( QFONTMETRICS_BOUNDINGRECT3 );
+    QFontMetrics_boundingRect3();
   }
   else if( ISBETWEEN(3,5) && ISQRECT(1) && ISNUM(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) && (ISARRAY(5)||ISNIL(5)) )
   {
-    HB_FUNC_EXEC( QFONTMETRICS_BOUNDINGRECT4 );
+    QFontMetrics_boundingRect4();
   }
   else
   {
@@ -260,12 +251,12 @@ $method=|int|underlinePos|
 /*
 int width ( const QString & text, int len = -1 ) const
 */
-$method=|int|width,width1|const QString &,int=-1
+$internalMethod=|int|width,width1|const QString &,int=-1
 
 /*
 int width ( QChar ch ) const
 */
-$method=|int|width,width2|QChar
+$internalMethod=|int|width,width2|QChar
 
 //[1]int width ( const QString & text, int len = -1 ) const
 //[2]int width ( QChar ch ) const
@@ -274,11 +265,11 @@ HB_FUNC_STATIC( QFONTMETRICS_WIDTH )
 {
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QFONTMETRICS_WIDTH1 );
+    QFontMetrics_width1();
   }
   else if( ISNUMPAR(1) && ISQCHAR(1) )
   {
-    HB_FUNC_EXEC( QFONTMETRICS_WIDTH2 );
+    QFontMetrics_width2();
   }
   else
   {

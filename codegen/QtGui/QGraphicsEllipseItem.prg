@@ -9,14 +9,9 @@ REQUEST QPAINTERPATH
 
 CLASS QGraphicsEllipseItem INHERIT QAbstractGraphicsShapeItem
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD rect
-   METHOD setRect1
-   METHOD setRect2
    METHOD setRect
    METHOD setSpanAngle
    METHOD setStartAngle
@@ -47,17 +42,17 @@ $destructor
 /*
 QGraphicsEllipseItem ( QGraphicsItem * parent = 0 )
 */
-$constructor=|new1|QGraphicsItem *=0
+$internalConstructor=|new1|QGraphicsItem *=0
 
 /*
 QGraphicsEllipseItem ( const QRectF & rect, QGraphicsItem * parent = 0 )
 */
-$constructor=|new2|const QRectF &,QGraphicsItem *=0
+$internalConstructor=|new2|const QRectF &,QGraphicsItem *=0
 
 /*
 QGraphicsEllipseItem ( qreal x, qreal y, qreal width, qreal height, QGraphicsItem * parent = 0 )
 */
-$constructor=|new3|qreal,qreal,qreal,qreal,QGraphicsItem *=0
+$internalConstructor=|new3|qreal,qreal,qreal,qreal,QGraphicsItem *=0
 
 //[1]QGraphicsEllipseItem ( QGraphicsItem * parent = 0 )
 //[2]QGraphicsEllipseItem ( const QRectF & rect, QGraphicsItem * parent = 0 )
@@ -67,15 +62,15 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSELLIPSEITEM_NEW1 );
+    QGraphicsEllipseItem_new1();
   }
   else if( ISBETWEEN(1,2) && ISQRECTF(1) && (ISQGRAPHICSITEM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSELLIPSEITEM_NEW2 );
+    QGraphicsEllipseItem_new2();
   }
   else if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISQGRAPHICSITEM(5)||ISNIL(5)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSELLIPSEITEM_NEW3 );
+    QGraphicsEllipseItem_new3();
   }
   else
   {
@@ -93,12 +88,12 @@ $method=|QRectF|rect|
 /*
 void setRect ( const QRectF & rect )
 */
-$method=|void|setRect,setRect1|const QRectF &
+$internalMethod=|void|setRect,setRect1|const QRectF &
 
 /*
 void setRect ( qreal x, qreal y, qreal width, qreal height )
 */
-$method=|void|setRect,setRect2|qreal,qreal,qreal,qreal
+$internalMethod=|void|setRect,setRect2|qreal,qreal,qreal,qreal
 
 //[1]void setRect ( const QRectF & rect )
 //[2]void setRect ( qreal x, qreal y, qreal width, qreal height )
@@ -107,11 +102,11 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SETRECT )
 {
   if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSELLIPSEITEM_SETRECT1 );
+    QGraphicsEllipseItem_setRect1();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QGRAPHICSELLIPSEITEM_SETRECT2 );
+    QGraphicsEllipseItem_setRect2();
   }
   else
   {

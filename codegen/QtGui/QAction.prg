@@ -15,9 +15,6 @@ REQUEST QKEYSEQUENCE
 
 CLASS QAction INHERIT QObject
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD actionGroup
@@ -100,17 +97,17 @@ $destructor
 /*
 QAction ( QObject * parent )
 */
-$constructor=|new1|QObject *
+$internalConstructor=|new1|QObject *
 
 /*
 QAction ( const QString & text, QObject * parent )
 */
-$constructor=|new2|const QString &,QObject *
+$internalConstructor=|new2|const QString &,QObject *
 
 /*
 QAction ( const QIcon & icon, const QString & text, QObject * parent )
 */
-$constructor=|new3|const QIcon &,const QString &,QObject *
+$internalConstructor=|new3|const QIcon &,const QString &,QObject *
 
 //[1]QAction ( QObject * parent )
 //[2]QAction ( const QString & text, QObject * parent )
@@ -120,15 +117,15 @@ HB_FUNC_STATIC( QACTION_NEW )
 {
   if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
-    HB_FUNC_EXEC( QACTION_NEW1 );
+    QAction_new1();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISQOBJECT(2) )
   {
-    HB_FUNC_EXEC( QACTION_NEW2 );
+    QAction_new2();
   }
   else if( ISNUMPAR(3) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) && ISQOBJECT(3) )
   {
-    HB_FUNC_EXEC( QACTION_NEW3 );
+    QAction_new3();
   }
   else
   {
@@ -158,14 +155,8 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDGRAPHICSWIDGETS )
   if( obj )
   {
     QList<QGraphicsWidget *> list = obj->associatedGraphicsWidgets ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGRAPHICSWIDGET" );
-    #else
-    pDynSym = hb_dynsymFindName( "QGRAPHICSWIDGET" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSWIDGET" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -202,14 +193,8 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDWIDGETS )
   if( obj )
   {
     QList<QWidget *> list = obj->associatedWidgets ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QWIDGET" );
-    #else
-    pDynSym = hb_dynsymFindName( "QWIDGET" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QWIDGET" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -407,7 +392,7 @@ HB_FUNC_STATIC( QACTION_SETSHORTCUTS1 )
 /*
 void setShortcuts ( QKeySequence::StandardKey key )
 */
-$method=|void|setShortcuts|QKeySequence::StandardKey
+$method=|void|setShortcuts,setShortcuts2|QKeySequence::StandardKey
 
 //[1]void setShortcuts ( const QList<QKeySequence> & shortcuts )
 //[2]void setShortcuts ( QKeySequence::StandardKey key )
@@ -473,14 +458,8 @@ HB_FUNC_STATIC( QACTION_SHORTCUTS )
   if( obj )
   {
     QList<QKeySequence> list = obj->shortcuts ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QKEYSEQUENCE" );
-    #else
-    pDynSym = hb_dynsymFindName( "QKEYSEQUENCE" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QKEYSEQUENCE" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

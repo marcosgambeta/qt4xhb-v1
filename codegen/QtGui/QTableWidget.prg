@@ -11,8 +11,6 @@ REQUEST QRECT
 
 CLASS QTableWidget INHERIT QTableView
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD cellWidget
@@ -26,8 +24,6 @@ CLASS QTableWidget INHERIT QTableView
    METHOD findItems
    METHOD horizontalHeaderItem
    METHOD item
-   METHOD itemAt1
-   METHOD itemAt2
    METHOD itemAt
    METHOD openPersistentEditor
    METHOD removeCellWidget
@@ -37,11 +33,7 @@ CLASS QTableWidget INHERIT QTableView
    METHOD selectedRanges
    METHOD setCellWidget
    METHOD setColumnCount
-   METHOD setCurrentCell1
-   METHOD setCurrentCell2
    METHOD setCurrentCell
-   METHOD setCurrentItem1
-   METHOD setCurrentItem2
    METHOD setCurrentItem
    METHOD setHorizontalHeaderItem
    METHOD setHorizontalHeaderLabels
@@ -100,12 +92,12 @@ $destructor
 /*
 QTableWidget ( QWidget * parent = 0 )
 */
-$constructor=|new1|QWidget *=0
+$internalConstructor=|new1|QWidget *=0
 
 /*
 QTableWidget ( int rows, int columns, QWidget * parent = 0 )
 */
-$constructor=|new2|int,int,QWidget *=0
+$internalConstructor=|new2|int,int,QWidget *=0
 
 //[1]QTableWidget ( QWidget * parent = 0 )
 //[2]QTableWidget ( int rows, int columns, QWidget * parent = 0 )
@@ -114,11 +106,11 @@ HB_FUNC_STATIC( QTABLEWIDGET_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QTABLEWIDGET_NEW1 );
+    QTableWidget_new1();
   }
   else if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQWIDGET(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QTABLEWIDGET_NEW2 );
+    QTableWidget_new2();
   }
   else
   {
@@ -179,14 +171,8 @@ HB_FUNC_STATIC( QTABLEWIDGET_FINDITEMS )
   {
     int par2 = hb_parni(2);
     QList<QTableWidgetItem *> list = obj->findItems ( PQSTRING(1), (Qt::MatchFlags) par2 );
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QTABLEWIDGETITEM" );
-    #else
-    pDynSym = hb_dynsymFindName( "QTABLEWIDGETITEM" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QTABLEWIDGETITEM" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -226,12 +212,12 @@ $method=|QTableWidgetItem *|item|int,int
 /*
 QTableWidgetItem * itemAt ( const QPoint & point ) const
 */
-$method=|QTableWidgetItem *|itemAt,itemAt1|const QPoint &
+$internalMethod=|QTableWidgetItem *|itemAt,itemAt1|const QPoint &
 
 /*
 QTableWidgetItem * itemAt ( int ax, int ay ) const
 */
-$method=|QTableWidgetItem *|itemAt,itemAt2|int,int
+$internalMethod=|QTableWidgetItem *|itemAt,itemAt2|int,int
 
 //[1]QTableWidgetItem * itemAt ( const QPoint & point ) const
 //[2]QTableWidgetItem * itemAt ( int ax, int ay ) const
@@ -240,11 +226,11 @@ HB_FUNC_STATIC( QTABLEWIDGET_ITEMAT )
 {
   if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QTABLEWIDGET_ITEMAT1 );
+    QTableWidget_itemAt1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QTABLEWIDGET_ITEMAT2 );
+    QTableWidget_itemAt2();
   }
   else
   {
@@ -282,14 +268,8 @@ HB_FUNC_STATIC( QTABLEWIDGET_SELECTEDITEMS )
   if( obj )
   {
     QList<QTableWidgetItem *> list = obj->selectedItems ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QTABLEWIDGETITEM" );
-    #else
-    pDynSym = hb_dynsymFindName( "QTABLEWIDGETITEM" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QTABLEWIDGETITEM" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -326,14 +306,8 @@ HB_FUNC_STATIC( QTABLEWIDGET_SELECTEDRANGES )
   if( obj )
   {
     QList<QTableWidgetSelectionRange> list = obj->selectedRanges ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QTABLEWIDGETSELECTIONRANGE" );
-    #else
-    pDynSym = hb_dynsymFindName( "QTABLEWIDGETSELECTIONRANGE" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QTABLEWIDGETSELECTIONRANGE" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -373,12 +347,12 @@ $method=|void|setColumnCount|int
 /*
 void setCurrentCell ( int row, int column )
 */
-$method=|void|setCurrentCell,setCurrentCell1|int,int
+$internalMethod=|void|setCurrentCell,setCurrentCell1|int,int
 
 /*
 void setCurrentCell ( int row, int column, QItemSelectionModel::SelectionFlags command )
 */
-$method=|void|setCurrentCell,setCurrentCell2|int,int,QItemSelectionModel::SelectionFlags
+$internalMethod=|void|setCurrentCell,setCurrentCell2|int,int,QItemSelectionModel::SelectionFlags
 
 //[1]void setCurrentCell ( int row, int column )
 //[2]void setCurrentCell ( int row, int column, QItemSelectionModel::SelectionFlags command )
@@ -387,11 +361,11 @@ HB_FUNC_STATIC( QTABLEWIDGET_SETCURRENTCELL )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QTABLEWIDGET_SETCURRENTCELL1 );
+    QTableWidget_setCurrentCell1();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QTABLEWIDGET_SETCURRENTCELL2 );
+    QTableWidget_setCurrentCell2();
   }
   else
   {
@@ -402,12 +376,12 @@ HB_FUNC_STATIC( QTABLEWIDGET_SETCURRENTCELL )
 /*
 void setCurrentItem ( QTableWidgetItem * item )
 */
-$method=|void|setCurrentItem,setCurrentItem1|QTableWidgetItem *
+$internalMethod=|void|setCurrentItem,setCurrentItem1|QTableWidgetItem *
 
 /*
 void setCurrentItem ( QTableWidgetItem * item, QItemSelectionModel::SelectionFlags command )
 */
-$method=|void|setCurrentItem,setCurrentItem2|QTableWidgetItem *,QItemSelectionModel::SelectionFlags
+$internalMethod=|void|setCurrentItem,setCurrentItem2|QTableWidgetItem *,QItemSelectionModel::SelectionFlags
 
 //[1]void setCurrentItem ( QTableWidgetItem * item )
 //[2]void setCurrentItem ( QTableWidgetItem * item, QItemSelectionModel::SelectionFlags command )
@@ -416,11 +390,11 @@ HB_FUNC_STATIC( QTABLEWIDGET_SETCURRENTITEM )
 {
   if( ISNUMPAR(1) && ISQTABLEWIDGETITEM(1) )
   {
-    HB_FUNC_EXEC( QTABLEWIDGET_SETCURRENTITEM1 );
+    QTableWidget_setCurrentItem1();
   }
   else if( ISNUMPAR(2) && ISQTABLEWIDGETITEM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QTABLEWIDGET_SETCURRENTITEM2 );
+    QTableWidget_setCurrentItem2();
   }
   else
   {

@@ -63,8 +63,6 @@ CLASS QSortFilterProxyModel INHERIT QAbstractProxyModel
    METHOD supportedDropActions
    METHOD invalidate
    METHOD setFilterFixedString
-   METHOD setFilterRegExp1
-   METHOD setFilterRegExp2
    METHOD setFilterRegExp
    METHOD setFilterWildcard
 
@@ -89,11 +87,7 @@ $destructor
 /*
 QSortFilterProxyModel ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_NEW )
-{
-  QSortFilterProxyModel * o = new QSortFilterProxyModel ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
@@ -273,14 +267,8 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MATCH )
   {
     int par5 = ISNIL(5)? (int) Qt::MatchStartsWith | Qt::MatchWrap : hb_parni(5);
     QModelIndexList list = obj->match ( *PQMODELINDEX(1), PINT(2), *PQVARIANT(3), OPINT(4,1), (Qt::MatchFlags) par5 );
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QMODELINDEX" );
-    #else
-    pDynSym = hb_dynsymFindName( "QMODELINDEX" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -380,12 +368,12 @@ $method=|void|setFilterFixedString|const QString &
 /*
 void setFilterRegExp ( const QRegExp & regExp )
 */
-$method=|void|setFilterRegExp,setFilterRegExp1|const QRegExp &
+$internalMethod=|void|setFilterRegExp,setFilterRegExp1|const QRegExp &
 
 /*
 void setFilterRegExp ( const QString & pattern )
 */
-$method=|void|setFilterRegExp,setFilterRegExp2|const QString &
+$internalMethod=|void|setFilterRegExp,setFilterRegExp2|const QString &
 
 //[1]void setFilterRegExp ( const QRegExp & regExp )
 //[2]void setFilterRegExp ( const QString & pattern )
@@ -394,11 +382,11 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERREGEXP )
 {
   if( ISNUMPAR(1) && ISQREGEXP(1) )
   {
-    HB_FUNC_EXEC( QSORTFILTERPROXYMODEL_SETFILTERREGEXP1 );
+    QSortFilterProxyModel_setFilterRegExp1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QSORTFILTERPROXYMODEL_SETFILTERREGEXP2 );
+    QSortFilterProxyModel_setFilterRegExp2();
   }
   else
   {

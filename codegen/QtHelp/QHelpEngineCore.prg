@@ -23,8 +23,6 @@ CLASS QHelpEngineCore INHERIT QObject
    METHOD error
    METHOD fileData
    METHOD files
-   METHOD filterAttributes1
-   METHOD filterAttributes2
    METHOD filterAttributes
    METHOD findFile
    METHOD registerDocumentation
@@ -128,14 +126,8 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILES )
   if( obj )
   {
     QList<QUrl> list = obj->files ( PQSTRING(1), PQSTRINGLIST(2), OPQSTRING(3,QString()) );
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QURL" );
-    #else
-    pDynSym = hb_dynsymFindName( "QURL" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QURL" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -169,12 +161,12 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILES )
 /*
 QStringList filterAttributes () const
 */
-$method=|QStringList|filterAttributes,filterAttributes1|
+$internalMethod=|QStringList|filterAttributes,filterAttributes1|
 
 /*
 QStringList filterAttributes ( const QString & filterName ) const
 */
-$method=|QStringList|filterAttributes,filterAttributes2|const QString &
+$internalMethod=|QStringList|filterAttributes,filterAttributes2|const QString &
 
 //[1]QStringList filterAttributes () const
 //[2]QStringList filterAttributes ( const QString & filterName ) const
@@ -183,11 +175,11 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILTERATTRIBUTES )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QHELPENGINECORE_FILTERATTRIBUTES1 );
+    QHelpEngineCore_filterAttributes1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QHELPENGINECORE_FILTERATTRIBUTES2 );
+    QHelpEngineCore_filterAttributes2();
   }
   else
   {

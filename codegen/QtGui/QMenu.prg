@@ -12,28 +12,16 @@ REQUEST QSIZE
 
 CLASS QMenu INHERIT QWidget
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD actionAt
    METHOD actionGeometry
    METHOD activeAction
-   METHOD addAction1
-   METHOD addAction2
-   METHOD addAction3
-   METHOD addAction4
-   METHOD addAction5
    METHOD addAction
-   METHOD addMenu1
-   METHOD addMenu2
-   METHOD addMenu3
    METHOD addMenu
    METHOD addSeparator
    METHOD clear
    METHOD defaultAction
-   METHOD exec1
-   METHOD exec2
    METHOD hideTearOffMenu
    METHOD icon
    METHOD insertMenu
@@ -52,6 +40,8 @@ CLASS QMenu INHERIT QWidget
    METHOD setTitle
    METHOD title
    METHOD sizeHint
+   METHOD exec1
+   METHOD exec2
    METHOD exec3
    METHOD exec4
    METHOD exec
@@ -78,12 +68,12 @@ $destructor
 /*
 QMenu ( QWidget * parent = 0 )
 */
-$constructor=|new1|QWidget *=0
+$internalConstructor=|new1|QWidget *=0
 
 /*
 QMenu ( const QString & title, QWidget * parent = 0 )
 */
-$constructor=|new2|const QString &,QWidget *=0
+$internalConstructor=|new2|const QString &,QWidget *=0
 
 //[1]QMenu ( QWidget * parent = 0 )
 //[2]QMenu ( const QString & title, QWidget * parent = 0 )
@@ -92,11 +82,11 @@ HB_FUNC_STATIC( QMENU_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QMENU_NEW1 );
+    QMenu_new1();
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QMENU_NEW2 );
+    QMenu_new2();
   }
   else
   {
@@ -124,27 +114,27 @@ $method=|QAction *|activeAction|
 /*
 QAction * addAction ( const QString & text )
 */
-$method=|QAction *|addAction,addAction1|const QString &
+$internalMethod=|QAction *|addAction,addAction1|const QString &
 
 /*
 QAction * addAction ( const QIcon & icon, const QString & text )
 */
-$method=|QAction *|addAction,addAction2|const QIcon &,const QString &
+$internalMethod=|QAction *|addAction,addAction2|const QIcon &,const QString &
 
 /*
 QAction * addAction ( const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
 */
-$method=|QAction *|addAction,addAction3|const QString &,const QObject *,const char *,const QKeySequence &=0
+$internalMethod=|QAction *|addAction,addAction3|const QString &,const QObject *,const char *,const QKeySequence &=0
 
 /*
 QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
 */
-$method=|QAction *|addAction,addAction4|const QIcon &,const QString &,const QObject *,const char *,const QKeySequence &=0
+$internalMethod=|QAction *|addAction,addAction4|const QIcon &,const QString &,const QObject *,const char *,const QKeySequence &=0
 
 /*
 void addAction ( QAction * action )
 */
-$method=|void|addAction,addAction5|QAction *
+$internalMethod=|void|addAction,addAction5|QAction *
 
 //[1]QAction * addAction ( const QString & text )
 //[2]QAction * addAction ( const QIcon & icon, const QString & text )
@@ -156,23 +146,23 @@ HB_FUNC_STATIC( QMENU_ADDACTION )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QMENU_ADDACTION1 );
+    QMenu_addAction1();
   }
   else if( ISNUMPAR(2) && (ISQICON(1)||ISCHAR(2)) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QMENU_ADDACTION2 );
+    QMenu_addAction2();
   }
   else if( ISBETWEEN(3,4) && ISCHAR(1) && ISQOBJECT(2) && ISCHAR(3) && (ISQKEYSEQUENCE(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QMENU_ADDACTION3 );
+    QMenu_addAction3();
   }
   else if( ISBETWEEN(4,5) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) && ISQOBJECT(3) && ISCHAR(4) && (ISQKEYSEQUENCE(5)||ISNIL(5)) )
   {
-    HB_FUNC_EXEC( QMENU_ADDACTION4 );
+    QMenu_addAction4();
   }
   else if( ISNUMPAR(1) && ISQACTION(1) )
   {
-    HB_FUNC_EXEC( QMENU_ADDACTION5 );
+    QMenu_addAction5();
   }
   else
   {
@@ -183,17 +173,17 @@ HB_FUNC_STATIC( QMENU_ADDACTION )
 /*
 QAction * addMenu ( QMenu * menu )
 */
-$method=|QAction *|addMenu,addMenu1|QMenu *
+$internalMethod=|QAction *|addMenu,addMenu1|QMenu *
 
 /*
 QMenu * addMenu ( const QString & title )
 */
-$method=|QMenu *|addMenu,addMenu2|const QString &
+$internalMethod=|QMenu *|addMenu,addMenu2|const QString &
 
 /*
 QMenu * addMenu ( const QIcon & icon, const QString & title )
 */
-$method=|QMenu *|addMenu,addMenu3|const QIcon &,const QString &
+$internalMethod=|QMenu *|addMenu,addMenu3|const QIcon &,const QString &
 
 //[1]QAction * addMenu ( QMenu * menu )
 //[2]QMenu * addMenu ( const QString & title )
@@ -203,15 +193,15 @@ HB_FUNC_STATIC( QMENU_ADDMENU )
 {
   if( ISNUMPAR(1) && ISQMENU(1) )
   {
-    HB_FUNC_EXEC( QMENU_ADDMENU1 );
+    QMenu_addMenu1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QMENU_ADDMENU2 );
+    QMenu_addMenu2();
   }
   else if( ISNUMPAR(2) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QMENU_ADDMENU3 );
+    QMenu_addMenu3();
   }
   else
   {
@@ -233,16 +223,6 @@ $method=|void|clear|
 QAction * defaultAction () const
 */
 $method=|QAction *|defaultAction|
-
-/*
-QAction * exec ()
-*/
-$method=|QAction *|exec,exec1|
-
-/*
-QAction * exec ( const QPoint & p, QAction * action = 0 )
-*/
-$method=|QAction *|exec,exec2|const QPoint &,QAction *=0
 
 /*
 void hideTearOffMenu ()
@@ -333,6 +313,16 @@ $method=|QString|title|
 virtual QSize sizeHint () const
 */
 $virtualMethod=|QSize|sizeHint|
+
+/*
+QAction * exec ()
+*/
+$method=|QAction *|exec,exec1|
+
+/*
+QAction * exec ( const QPoint & p, QAction * action = 0 )
+*/
+$method=|QAction *|exec,exec2|const QPoint &,QAction *=0
 
 /*
 QAction * exec ( QList<QAction *> actions, const QPoint & pos, QAction * at, QWidget * parent )

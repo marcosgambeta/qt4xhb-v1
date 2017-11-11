@@ -12,8 +12,6 @@ REQUEST QPAINTENGINE
 
 CLASS QPrinter INHERIT QPaintDevice
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD abort
@@ -33,14 +31,8 @@ CLASS QPrinter INHERIT QPaintDevice
    METHOD outputFileName
    METHOD outputFormat
    METHOD pageOrder
-   METHOD pageRect1
-   METHOD pageRect2
    METHOD pageRect
-   METHOD paperRect1
-   METHOD paperRect2
    METHOD paperRect
-   METHOD paperSize1
-   METHOD paperSize2
    METHOD paperSize
    METHOD paperSource
    METHOD printEngine
@@ -64,8 +56,6 @@ CLASS QPrinter INHERIT QPaintDevice
    METHOD setOutputFormat
    METHOD setPageMargins
    METHOD setPageOrder
-   METHOD setPaperSize1
-   METHOD setPaperSize2
    METHOD setPaperSize
    METHOD setPaperSource
    METHOD setPrintProgram
@@ -99,12 +89,12 @@ $destructor
 /*
 QPrinter ( PrinterMode mode = ScreenResolution )
 */
-$constructor=|new1|QPrinter::PrinterMode=QPrinter::ScreenResolution
+$internalConstructor=|new1|QPrinter::PrinterMode=QPrinter::ScreenResolution
 
 /*
 QPrinter ( const QPrinterInfo & printer, PrinterMode mode = ScreenResolution )
 */
-$constructor=|new2|const QPrinterInfo &,QPrinter::PrinterMode=QPrinter::ScreenResolution
+$internalConstructor=|new2|const QPrinterInfo &,QPrinter::PrinterMode=QPrinter::ScreenResolution
 
 //[1]QPrinter ( PrinterMode mode = ScreenResolution )
 //[2]QPrinter ( const QPrinterInfo & printer, PrinterMode mode = ScreenResolution )
@@ -113,11 +103,11 @@ HB_FUNC_STATIC( QPRINTER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QPRINTER_NEW1 );
+    QPrinter_new1();
   }
   else if( ISBETWEEN(1,2) && ISQPRINTERINFO(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QPRINTER_NEW2 );
+    QPrinter_new2();
   }
   else
   {
@@ -215,12 +205,12 @@ $method=|QPrinter::PageOrder|pageOrder|
 /*
 QRect pageRect () const
 */
-$method=|QRect|pageRect,pageRect1|
+$internalMethod=|QRect|pageRect,pageRect1|
 
 /*
 QRectF pageRect ( Unit unit ) const
 */
-$method=|QRectF|pageRect,pageRect2|QPrinter::Unit
+$internalMethod=|QRectF|pageRect,pageRect2|QPrinter::Unit
 
 //[1]QRect pageRect () const
 //[2]QRectF pageRect ( Unit unit ) const
@@ -229,11 +219,11 @@ HB_FUNC_STATIC( QPRINTER_PAGERECT )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QPRINTER_PAGERECT1 );
+    QPrinter_pageRect1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QPRINTER_PAGERECT2 );
+    QPrinter_pageRect2();
   }
   else
   {
@@ -244,12 +234,12 @@ HB_FUNC_STATIC( QPRINTER_PAGERECT )
 /*
 QRect paperRect () const
 */
-$method=|QRect|paperRect,paperRect1|
+$internalMethod=|QRect|paperRect,paperRect1|
 
 /*
 QRectF paperRect ( Unit unit ) const
 */
-$method=|QRectF|paperRect,paperRect2|QPrinter::Unit
+$internalMethod=|QRectF|paperRect,paperRect2|QPrinter::Unit
 
 //[1]QRect paperRect () const
 //[2]QRectF paperRect ( Unit unit ) const
@@ -258,11 +248,11 @@ HB_FUNC_STATIC( QPRINTER_PAPERRECT )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QPRINTER_PAPERRECT1 );
+    QPrinter_paperRect1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QPRINTER_PAPERRECT2 );
+    QPrinter_paperRect2();
   }
   else
   {
@@ -273,12 +263,12 @@ HB_FUNC_STATIC( QPRINTER_PAPERRECT )
 /*
 PaperSize paperSize () const
 */
-$method=|QPrinter::PaperSize|paperSize,paperSize1|
+$internalMethod=|QPrinter::PaperSize|paperSize,paperSize1|
 
 /*
 QSizeF paperSize ( Unit unit ) const
 */
-$method=|QSizeF|paperSize,paperSize2|QPrinter::Unit
+$internalMethod=|QSizeF|paperSize,paperSize2|QPrinter::Unit
 
 //[1]PaperSize paperSize () const
 //[2]QSizeF paperSize ( Unit unit ) const
@@ -287,11 +277,11 @@ HB_FUNC_STATIC( QPRINTER_PAPERSIZE )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QPRINTER_PAPERSIZE1 );
+    QPrinter_paperSize1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QPRINTER_PAPERSIZE2 );
+    QPrinter_paperSize2();
   }
   else
   {
@@ -412,12 +402,12 @@ $method=|void|setPageOrder|QPrinter::PageOrder
 /*
 void setPaperSize ( PaperSize newPaperSize )
 */
-$method=|void|setPaperSize,setPaperSize1|QPrinter::PaperSize
+$internalMethod=|void|setPaperSize,setPaperSize1|QPrinter::PaperSize
 
 /*
 void setPaperSize ( const QSizeF & paperSize, Unit unit )
 */
-$method=|void|setPaperSize,setPaperSize2|const QSizeF &,QPrinter::Unit
+$internalMethod=|void|setPaperSize,setPaperSize2|const QSizeF &,QPrinter::Unit
 
 //[1]void setPaperSize ( PaperSize newPaperSize )
 //[2]void setPaperSize ( const QSizeF & paperSize, Unit unit )
@@ -426,11 +416,11 @@ HB_FUNC_STATIC( QPRINTER_SETPAPERSIZE )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QPRINTER_SETPAPERSIZE1 );
+    QPrinter_setPaperSize1();
   }
   else if( ISNUMPAR(2) && ISQSIZEF(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QPRINTER_SETPAPERSIZE2 );
+    QPrinter_setPaperSize2();
   }
   else
   {
@@ -478,8 +468,7 @@ HB_FUNC_STATIC( QPRINTER_SUPPORTEDPAPERSOURCES )
   if( obj )
   {
     QList<QPrinter::PaperSource> list = obj->supportedPaperSources ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -501,8 +490,7 @@ HB_FUNC_STATIC( QPRINTER_SUPPORTEDRESOLUTIONS )
   if( obj )
   {
     QList<int> list = obj->supportedResolutions ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

@@ -12,8 +12,6 @@ CLASS QListWidget INHERIT QListView
 
    METHOD new
    METHOD delete
-   METHOD addItem1
-   METHOD addItem2
    METHOD addItem
    METHOD addItems
    METHOD closePersistentEditor
@@ -22,25 +20,17 @@ CLASS QListWidget INHERIT QListView
    METHOD currentRow
    METHOD editItem
    METHOD findItems
-   METHOD insertItem1
-   METHOD insertItem2
    METHOD insertItem
    METHOD insertItems
    METHOD isSortingEnabled
    METHOD item
-   METHOD itemAt1
-   METHOD itemAt2
    METHOD itemAt
    METHOD itemWidget
    METHOD openPersistentEditor
    METHOD removeItemWidget
    METHOD row
    METHOD selectedItems
-   METHOD setCurrentItem1
-   METHOD setCurrentItem2
    METHOD setCurrentItem
-   METHOD setCurrentRow1
-   METHOD setCurrentRow2
    METHOD setCurrentRow
    METHOD setItemWidget
    METHOD setSortingEnabled
@@ -79,23 +69,19 @@ $destructor
 /*
 QListWidget ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QLISTWIDGET_NEW )
-{
-  QListWidget * o = new QListWidget ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QWidget *=0
 
 $deleteMethod
 
 /*
 void addItem ( const QString & label )
 */
-$method=|void|addItem,addItem1|const QString &
+$internalMethod=|void|addItem,addItem1|const QString &
 
 /*
 void addItem ( QListWidgetItem * item )
 */
-$method=|void|addItem,addItem2|QListWidgetItem *
+$internalMethod=|void|addItem,addItem2|QListWidgetItem *
 
 //[1]void addItem ( const QString & label )
 //[2]void addItem ( QListWidgetItem * item )
@@ -104,11 +90,11 @@ HB_FUNC_STATIC( QLISTWIDGET_ADDITEM )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QLISTWIDGET_ADDITEM1 );
+    QListWidget_addItem1();
   }
   else if( ISNUMPAR(1) && ISQLISTWIDGETITEM(1) )
   {
-    HB_FUNC_EXEC( QLISTWIDGET_ADDITEM2 );
+    QListWidget_addItem2();
   }
   else
   {
@@ -157,14 +143,8 @@ HB_FUNC_STATIC( QLISTWIDGET_FINDITEMS )
   {
     int par2 = hb_parni(2);
     QList<QListWidgetItem *> list = obj->findItems ( PQSTRING(1), (Qt::MatchFlags) par2 );
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QLISTWIDGETITEM" );
-    #else
-    pDynSym = hb_dynsymFindName( "QLISTWIDGETITEM" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QLISTWIDGETITEM" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -194,12 +174,12 @@ HB_FUNC_STATIC( QLISTWIDGET_FINDITEMS )
 /*
 void insertItem ( int row, QListWidgetItem * item )
 */
-$method=|void|insertItem,insertItem1|int,QListWidgetItem *
+$internalMethod=|void|insertItem,insertItem1|int,QListWidgetItem *
 
 /*
 void insertItem ( int row, const QString & label )
 */
-$method=|void|insertItem,insertItem2|int,const QString &
+$internalMethod=|void|insertItem,insertItem2|int,const QString &
 
 //[1]void insertItem ( int row, QListWidgetItem * item )
 //[2]void insertItem ( int row, const QString & label )
@@ -208,11 +188,11 @@ HB_FUNC_STATIC( QLISTWIDGET_INSERTITEM )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISQLISTWIDGETITEM(2) )
   {
-    HB_FUNC_EXEC( QLISTWIDGET_INSERTITEM1 );
+    QListWidget_insertItem1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QLISTWIDGET_INSERTITEM2 );
+    QListWidget_insertItem2();
   }
   else
   {
@@ -238,12 +218,12 @@ $method=|QListWidgetItem *|item|int
 /*
 QListWidgetItem * itemAt ( const QPoint & p ) const
 */
-$method=|QListWidgetItem *|itemAt,itemAt1|const QPoint &
+$internalMethod=|QListWidgetItem *|itemAt,itemAt1|const QPoint &
 
 /*
 QListWidgetItem * itemAt ( int x, int y ) const
 */
-$method=|QListWidgetItem *|itemAt,itemAt2|int,int
+$internalMethod=|QListWidgetItem *|itemAt,itemAt2|int,int
 
 //[1]QListWidgetItem * itemAt ( const QPoint & p ) const
 //[2]QListWidgetItem * itemAt ( int x, int y ) const
@@ -252,11 +232,11 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMAT )
 {
   if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QLISTWIDGET_ITEMAT1 );
+    QListWidget_itemAt1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QLISTWIDGET_ITEMAT2 );
+    QListWidget_itemAt2();
   }
   else
   {
@@ -294,14 +274,8 @@ HB_FUNC_STATIC( QLISTWIDGET_SELECTEDITEMS )
   if( obj )
   {
     QList<QListWidgetItem *> list = obj->selectedItems ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QLISTWIDGETITEM" );
-    #else
-    pDynSym = hb_dynsymFindName( "QLISTWIDGETITEM" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QLISTWIDGETITEM" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -331,12 +305,12 @@ HB_FUNC_STATIC( QLISTWIDGET_SELECTEDITEMS )
 /*
 void setCurrentItem ( QListWidgetItem * item )
 */
-$method=|void|setCurrentItem,setCurrentItem1|QListWidgetItem *
+$internalMethod=|void|setCurrentItem,setCurrentItem1|QListWidgetItem *
 
 /*
 void setCurrentItem ( QListWidgetItem * item, QItemSelectionModel::SelectionFlags command )
 */
-$method=|void|setCurrentItem,setCurrentItem2|QListWidgetItem *,QItemSelectionModel::SelectionFlags
+$internalMethod=|void|setCurrentItem,setCurrentItem2|QListWidgetItem *,QItemSelectionModel::SelectionFlags
 
 //[1]void setCurrentItem ( QListWidgetItem * item )
 //[2]void setCurrentItem ( QListWidgetItem * item, QItemSelectionModel::SelectionFlags command )
@@ -345,11 +319,11 @@ HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTITEM )
 {
   if( ISNUMPAR(1) && ISQLISTWIDGETITEM(1) )
   {
-    HB_FUNC_EXEC( QLISTWIDGET_SETCURRENTITEM1 );
+    QListWidget_setCurrentItem1();
   }
   else if( ISNUMPAR(2) && ISQLISTWIDGETITEM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QLISTWIDGET_SETCURRENTITEM2 );
+    QListWidget_setCurrentItem2();
   }
   else
   {
@@ -360,12 +334,12 @@ HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTITEM )
 /*
 void setCurrentRow ( int row )
 */
-$method=|void|setCurrentRow,setCurrentRow1|int
+$internalMethod=|void|setCurrentRow,setCurrentRow1|int
 
 /*
 void setCurrentRow ( int row, QItemSelectionModel::SelectionFlags command )
 */
-$method=|void|setCurrentRow,setCurrentRow2|int,QItemSelectionModel::SelectionFlags
+$internalMethod=|void|setCurrentRow,setCurrentRow2|int,QItemSelectionModel::SelectionFlags
 
 //[1]void setCurrentRow ( int row )
 //[2]void setCurrentRow ( int row, QItemSelectionModel::SelectionFlags command )
@@ -374,11 +348,11 @@ HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTROW )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QLISTWIDGET_SETCURRENTROW1 );
+    QListWidget_setCurrentRow1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QLISTWIDGET_SETCURRENTROW2 );
+    QListWidget_setCurrentRow2();
   }
   else
   {

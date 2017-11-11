@@ -26,8 +26,6 @@ CLASS QBoxLayout INHERIT QLayout
    METHOD setDirection
    METHOD setSpacing
    METHOD setStretch
-   METHOD setStretchFactor1
-   METHOD setStretchFactor2
    METHOD setStretchFactor
    METHOD spacing
    METHOD stretch
@@ -144,12 +142,12 @@ $method=|void|setStretch|int,int
 /*
 bool setStretchFactor ( QWidget * widget, int stretch )
 */
-$method=|bool|setStretchFactor,setStretchFactor1|QWidget *,int
+$internalMethod=|bool|setStretchFactor,setStretchFactor1|QWidget *,int
 
 /*
 bool setStretchFactor ( QLayout * layout, int stretch )
 */
-$method=|bool|setStretchFactor,setStretchFactor2|QLayout *,int
+$internalMethod=|bool|setStretchFactor,setStretchFactor2|QLayout *,int
 
 //[1]bool setStretchFactor ( QWidget * widget, int stretch )
 //[2]bool setStretchFactor ( QLayout * layout, int stretch )
@@ -158,11 +156,11 @@ HB_FUNC_STATIC( QBOXLAYOUT_SETSTRETCHFACTOR )
 {
   if( ISNUMPAR(2) && ISQWIDGET(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QBOXLAYOUT_SETSTRETCHFACTOR1 );
+    QBoxLayout_setStretchFactor1();
   }
   else if( ISNUMPAR(2) && ISQLAYOUT(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QBOXLAYOUT_SETSTRETCHFACTOR2 );
+    QBoxLayout_setStretchFactor2();
   }
   else
   {

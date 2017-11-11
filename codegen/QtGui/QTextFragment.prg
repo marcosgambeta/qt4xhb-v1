@@ -12,8 +12,6 @@ CLASS QTextFragment
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD charFormat
@@ -48,12 +46,12 @@ $destructor
 /*
 QTextFragment ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QTextFragment ( const QTextFragment & other )
 */
-$constructor=|new2|const QTextFragment &
+$internalConstructor=|new2|const QTextFragment &
 
 //[1]QTextFragment ()
 //[2]QTextFragment ( const QTextFragment & other )
@@ -62,11 +60,11 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTEXTFRAGMENT_NEW1 );
+    QTextFragment_new1();
   }
   else if( ISNUMPAR(1) && ISQTEXTFRAGMENT(1) )
   {
-    HB_FUNC_EXEC( QTEXTFRAGMENT_NEW2 );
+    QTextFragment_new2();
   }
   else
   {
@@ -101,14 +99,8 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
   if( obj )
   {
     QList<QGlyphRun> list = obj->glyphRuns ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGLYPHRUN" );
-    #else
-    pDynSym = hb_dynsymFindName( "QGLYPHRUN" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QGLYPHRUN" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

@@ -13,8 +13,6 @@ CLASS QDirectPainter INHERIT QObject
    METHOD new
    METHOD delete
    METHOD allocatedRegion
-   METHOD endPainting1
-   METHOD endPainting2
    METHOD endPainting
    METHOD flush
    METHOD geometry
@@ -67,12 +65,12 @@ $method=|QRegion|allocatedRegion|
 /*
 void endPainting ()
 */
-$method=|void|endPainting,endPainting1|
+$internalMethod=|void|endPainting,endPainting1|
 
 /*
 void endPainting ( const QRegion & region )
 */
-$method=|void|endPainting,endPainting2|const QRegion &
+$internalMethod=|void|endPainting,endPainting2|const QRegion &
 
 //[1]void endPainting ()
 //[2]void endPainting ( const QRegion & region )
@@ -81,11 +79,11 @@ HB_FUNC_STATIC( QDIRECTPAINTER_ENDPAINTING )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDIRECTPAINTER_ENDPAINTING1 );
+    QDirectPainter_endPainting1();
   }
   else if( ISNUMPAR(1) && ISQREGION(1) )
   {
-    HB_FUNC_EXEC( QDIRECTPAINTER_ENDPAINTING2 );
+    QDirectPainter_endPainting2();
   }
   else
   {

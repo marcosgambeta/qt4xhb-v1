@@ -11,10 +11,6 @@ CLASS QDebug
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD maybeSpace
@@ -44,22 +40,22 @@ $destructor
 /*
 QDebug ( QIODevice * device )
 */
-$constructor=|new1|QIODevice *
+$internalConstructor=|new1|QIODevice *
 
 /*
 QDebug ( QString * string )
 */
-$constructor=|new2|QString *
+$internalConstructor=|new2|QString *
 
 /*
 QDebug ( QtMsgType type )
 */
-$constructor=|new3|QtMsgType
+$internalConstructor=|new3|QtMsgType
 
 /*
 QDebug ( const QDebug & other )
 */
-$constructor=|new4|const QDebug &
+$internalConstructor=|new4|const QDebug &
 
 //[1]QDebug ( QIODevice * device )
 //[2]QDebug ( QString * string )
@@ -70,19 +66,19 @@ HB_FUNC_STATIC( QDEBUG_NEW )
 {
   if( ISNUMPAR(1) && ISQIODEVICE(1) )
   {
-    HB_FUNC_EXEC( QDEBUG_NEW1 );
+    QDebug_new1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QDEBUG_NEW2 );
+    QDebug_new2();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QDEBUG_NEW3 );
+    QDebug_new3();
   }
   else if( ISNUMPAR(1) && ISQDEBUG(1) )
   {
-    HB_FUNC_EXEC( QDEBUG_NEW4 );
+    QDebug_new4();
   }
   else
   {

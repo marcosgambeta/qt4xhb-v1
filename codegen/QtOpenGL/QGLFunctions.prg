@@ -7,8 +7,6 @@ CLASS QGLFunctions
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD glActiveTexture
@@ -93,23 +91,12 @@ $destructor
 /*
 QGLFunctions ()
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_NEW1 )
-{
-  QGLFunctions * o = new QGLFunctions ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$internalConstructor=|new1|
 
 /*
 QGLFunctions ( const QGLContext * context )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_NEW2 )
-{
-  const QGLContext * par1 = (const QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QGLFunctions * o = new QGLFunctions ( par1 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$internalConstructor=|new2|const QGLContext *
 
 //[1]QGLFunctions ()
 //[2]QGLFunctions ( const QGLContext * context )
@@ -118,11 +105,11 @@ HB_FUNC_STATIC( QGLFUNCTIONS_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QGLFUNCTIONS_NEW1 );
+    QGLFunctions_new1();
   }
   else if( ISNUMPAR(1) && ISQGLCONTEXT(1) )
   {
-    HB_FUNC_EXEC( QGLFUNCTIONS_NEW2 );
+    QGLFunctions_new2();
   }
   else
   {

@@ -18,17 +18,12 @@ CLASS QCommonStyle INHERIT QStyle
    METHOD generatedIconPixmap
    METHOD hitTestComplexControl
    METHOD pixelMetric
-   METHOD polish1
-   METHOD polish2
-   METHOD polish3
    METHOD polish
    METHOD sizeFromContents
    METHOD standardPixmap
    METHOD styleHint
    METHOD subControlRect
    METHOD subElementRect
-   METHOD unpolish1
-   METHOD unpolish2
    METHOD unpolish
 
    DESTRUCTOR destroyObject
@@ -85,17 +80,17 @@ $virtualMethod=|int|pixelMetric|QStyle::PixelMetric,const QStyleOption *=0,const
 /*
 virtual void polish ( QPalette & pal )
 */
-$virtualMethod=|void|polish,polish1|QPalette &
+$internalVirtualMethod=|void|polish,polish1|QPalette &
 
 /*
 virtual void polish ( QApplication * app )
 */
-$virtualMethod=|void|polish,polish2|QApplication *
+$internalVirtualMethod=|void|polish,polish2|QApplication *
 
 /*
 virtual void polish ( QWidget * widget )
 */
-$virtualMethod=|void|polish,polish3|QWidget *
+$internalVirtualMethod=|void|polish,polish3|QWidget *
 
 //[1]virtual void polish ( QPalette & pal )
 //[2]virtual void polish ( QApplication * app )
@@ -105,15 +100,15 @@ HB_FUNC_STATIC( QCOMMONSTYLE_POLISH )
 {
   if( ISNUMPAR(1) && ISQPALETTE(1) )
   {
-    HB_FUNC_EXEC( QCOMMONSTYLE_POLISH1 );
+    QCommonStyle_polish1();
   }
   else if( ISNUMPAR(1) && ISQAPPLICATION(1) )
   {
-    HB_FUNC_EXEC( QCOMMONSTYLE_POLISH2 );
+    QCommonStyle_polish2();
   }
   else if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    HB_FUNC_EXEC( QCOMMONSTYLE_POLISH3 );
+    QCommonStyle_polish3();
   }
   else
   {
@@ -149,12 +144,12 @@ $virtualMethod=|QRect|subElementRect|QStyle::SubElement,const QStyleOption *,con
 /*
 virtual void unpolish ( QWidget * widget )
 */
-$virtualMethod=|void|unpolish,unpolish1|QWidget *
+$internalVirtualMethod=|void|unpolish,unpolish1|QWidget *
 
 /*
 virtual void unpolish ( QApplication * application )
 */
-$virtualMethod=|void|unpolish,unpolish2|QApplication *
+$internalVirtualMethod=|void|unpolish,unpolish2|QApplication *
 
 //[1]virtual void unpolish ( QWidget * widget )
 //[2]virtual void unpolish ( QApplication * application )
@@ -163,11 +158,11 @@ HB_FUNC_STATIC( QCOMMONSTYLE_UNPOLISH )
 {
   if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    HB_FUNC_EXEC( QCOMMONSTYLE_UNPOLISH1 );
+    QCommonStyle_unpolish1();
   }
   else if( ISNUMPAR(1) && ISQAPPLICATION(1) )
   {
-    HB_FUNC_EXEC( QCOMMONSTYLE_UNPOLISH2 );
+    QCommonStyle_unpolish2();
   }
   else
   {

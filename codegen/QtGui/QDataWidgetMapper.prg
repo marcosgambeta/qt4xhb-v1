@@ -14,8 +14,6 @@ CLASS QDataWidgetMapper INHERIT QObject
 
    METHOD new
    METHOD delete
-   METHOD addMapping1
-   METHOD addMapping2
    METHOD addMapping
    METHOD clearMapping
    METHOD currentIndex
@@ -63,23 +61,19 @@ $destructor
 /*
 QDataWidgetMapper ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_NEW )
-{
-  QDataWidgetMapper * o = new QDataWidgetMapper ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 void addMapping ( QWidget * widget, int section )
 */
-$method=|void|addMapping,addMapping1|QWidget *,int
+$internalMethod=|void|addMapping,addMapping1|QWidget *,int
 
 /*
 void addMapping ( QWidget * widget, int section, const QByteArray & propertyName )
 */
-$method=|void|addMapping,addMapping2|QWidget *,int,const QByteArray &
+$internalMethod=|void|addMapping,addMapping2|QWidget *,int,const QByteArray &
 
 //[1]void addMapping ( QWidget * widget, int section )
 //[2]void addMapping ( QWidget * widget, int section, const QByteArray & propertyName )
@@ -88,11 +82,11 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ADDMAPPING )
 {
   if( ISNUMPAR(2) && ISQWIDGET(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QDATAWIDGETMAPPER_ADDMAPPING1 );
+    QDataWidgetMapper_addMapping1();
   }
   else if( ISNUMPAR(3) && ISQWIDGET(1) && ISNUM(2) && ISQBYTEARRAY(3) )
   {
-    HB_FUNC_EXEC( QDATAWIDGETMAPPER_ADDMAPPING2 );
+    QDataWidgetMapper_addMapping2();
   }
   else
   {

@@ -7,8 +7,6 @@ CLASS QTextLength
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD rawValue
@@ -38,12 +36,12 @@ $destructor
 /*
 QTextLength ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QTextLength ( Type type, qreal value )
 */
-$constructor=|new2|QTextLength::Type,qreal
+$internalConstructor=|new2|QTextLength::Type,qreal
 
 //[1]QTextLength ()
 //[2]QTextLength ( Type type, qreal value )
@@ -52,11 +50,11 @@ HB_FUNC_STATIC( QTEXTLENGTH_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTEXTLENGTH_NEW1 );
+    QTextLength_new1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QTEXTLENGTH_NEW2 );
+    QTextLength_new2();
   }
   else
   {

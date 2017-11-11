@@ -12,8 +12,6 @@ REQUEST QOBJECT
 
 CLASS QDeclarativeExpression INHERIT QObject
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD clearError
@@ -53,12 +51,12 @@ $destructor
 /*
 QDeclarativeExpression ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QDeclarativeExpression ( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = 0 )
 */
-$constructor=|new2|QDeclarativeContext *,QObject *,const QString &,QObject *=0
+$internalConstructor=|new2|QDeclarativeContext *,QObject *,const QString &,QObject *=0
 
 //[1]QDeclarativeExpression ()
 //[2]QDeclarativeExpression ( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = 0 )
@@ -67,11 +65,11 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDECLARATIVEEXPRESSION_NEW1 );
+    QDeclarativeExpression_new1();
   }
   else if( ISBETWEEN(3,4) && ISQDECLARATIVECONTEXT(1) && ISQOBJECT(2) && ISCHAR(3) && (ISQOBJECT(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QDECLARATIVEEXPRESSION_NEW2 );
+    QDeclarativeExpression_new2();
   }
   else
   {

@@ -23,7 +23,6 @@ CLASS QClipboard INHERIT QObject
    METHOD setText
    METHOD supportsFindBuffer
    METHOD supportsSelection
-   METHOD text1
    METHOD text2
    METHOD text
 
@@ -118,7 +117,7 @@ $method=|bool|supportsSelection|
 /*
 QString text ( Mode mode = Clipboard ) const
 */
-$method=|QString|text,text1|QClipboard::Mode=QClipboard::Clipboard
+$internalMethod=|QString|text,text1|QClipboard::Mode=QClipboard::Clipboard
 
 /*
 QString text ( QString & subtype, Mode mode = Clipboard ) const
@@ -139,19 +138,11 @@ HB_FUNC_STATIC( QCLIPBOARD_TEXT2 )
 
 HB_FUNC_STATIC( QCLIPBOARD_TEXT )
 {
-  if( ISNUMPAR(0) )
+  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QCLIPBOARD_TEXT1 );
+    QClipboard_text1();
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
-  {
-    HB_FUNC_EXEC( QCLIPBOARD_TEXT1 );
-  }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
-  {
-    HB_FUNC_EXEC( QCLIPBOARD_TEXT2 );
-  }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
     HB_FUNC_EXEC( QCLIPBOARD_TEXT2 );
   }

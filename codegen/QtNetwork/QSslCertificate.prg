@@ -184,14 +184,8 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDATA )
 {
   int par2 = ISNIL(2)? (int) QSsl::Pem : hb_parni(2);
   QList<QSslCertificate> list = QSslCertificate::fromData ( *PQBYTEARRAY(1), (QSsl::EncodingFormat) par2 );
-  PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QSSLCERTIFICATE" );
-  #else
-  pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
-  #endif
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {
@@ -228,14 +222,8 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDEVICE )
 {
   int par2 = ISNIL(2)? (int) QSsl::Pem : hb_parni(2);
   QList<QSslCertificate> list = QSslCertificate::fromDevice ( PQIODEVICE(1), (QSsl::EncodingFormat) par2 );
-  PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QSSLCERTIFICATE" );
-  #else
-  pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
-  #endif
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {
@@ -273,14 +261,8 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_FROMPATH )
   int par2 = ISNIL(2)? (int) QSsl::Pem : hb_parni(2);
   int par3 = ISNIL(3)? (int) QRegExp::FixedString : hb_parni(3);
   QList<QSslCertificate> list = QSslCertificate::fromPath ( PQSTRING(1), (QSsl::EncodingFormat) par2, (QRegExp::PatternSyntax) par3 );
-  PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QSSLCERTIFICATE" );
-  #else
-  pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
-  #endif
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {

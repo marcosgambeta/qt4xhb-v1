@@ -4,8 +4,6 @@ $header
 
 CLASS QSharedMemory INHERIT QObject
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD setKey
@@ -40,12 +38,12 @@ $destructor
 /*
 QSharedMemory(QObject *parent = 0)
 */
-$constructor=|new1|QObject *=0
+$internalConstructor=|new1|QObject *=0
 
 /*
 QSharedMemory(const QString &key, QObject *parent = 0)
 */
-$constructor=|new2|const QString &,QObject *=0
+$internalConstructor=|new2|const QString &,QObject *=0
 
 //[1]QSharedMemory(QObject *parent = 0)
 //[2]QSharedMemory(const QString &key, QObject *parent = 0)
@@ -54,11 +52,11 @@ HB_FUNC_STATIC( QSHAREDMEMORY_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QSHAREDMEMORY_NEW1 );
+    QSharedMemory_new1();
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QSHAREDMEMORY_NEW2 );
+    QSharedMemory_new2();
   }
   else
   {

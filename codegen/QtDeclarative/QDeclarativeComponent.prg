@@ -12,10 +12,6 @@ REQUEST QDECLARATIVECOMPONENTATTACHED
 
 CLASS QDeclarativeComponent INHERIT QObject
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD beginCreate
@@ -55,22 +51,22 @@ $destructor
 /*
 QDeclarativeComponent(QObject *parent = 0);
 */
-$constructor=|new1|QObject *=0
+$internalConstructor=|new1|QObject *=0
 
 /*
 QDeclarativeComponent(QDeclarativeEngine *, QObject *parent=0)
 */
-$constructor=|new2|QDeclarativeEngine *,QObject *=0
+$internalConstructor=|new2|QDeclarativeEngine *,QObject *=0
 
 /*
 QDeclarativeComponent(QDeclarativeEngine *, const QString &fileName, QObject *parent = 0)
 */
-$constructor=|new3|QDeclarativeEngine *,const QString &,QObject *=0
+$internalConstructor=|new3|QDeclarativeEngine *,const QString &,QObject *=0
 
 /*
 QDeclarativeComponent(QDeclarativeEngine *, const QUrl &url, QObject *parent = 0)
 */
-$constructor=|new4|QDeclarativeEngine *,const QUrl &,QObject *=0
+$internalConstructor=|new4|QDeclarativeEngine *,const QUrl &,QObject *=0
 
 //[1]QDeclarativeComponent(QObject *parent = 0);
 //[2]QDeclarativeComponent(QDeclarativeEngine *, QObject *parent=0);
@@ -81,19 +77,19 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QDECLARATIVECOMPONENT_NEW1 );
+    QDeclarativeComponent_new1();
   }
   else if( ISBETWEEN(1,2) && ISQDECLARATIVEENGINE(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QDECLARATIVECOMPONENT_NEW2 );
+    QDeclarativeComponent_new2();
   }
   else if( ISBETWEEN(2,3) && ISQDECLARATIVEENGINE(1) && ISCHAR(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QDECLARATIVECOMPONENT_NEW3 );
+    QDeclarativeComponent_new3();
   }
   else if( ISBETWEEN(2,3) && ISQDECLARATIVEENGINE(1) && ISQURL(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QDECLARATIVECOMPONENT_NEW4 );
+    QDeclarativeComponent_new4();
   }
   else
   {
@@ -133,14 +129,8 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORS )
   if( obj )
   {
     QList<QDeclarativeError> list = obj->errors ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QDECLARATIVEERROR" );
-    #else
-    pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

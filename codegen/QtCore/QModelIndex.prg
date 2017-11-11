@@ -13,8 +13,6 @@ CLASS QModelIndex
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD child
@@ -52,12 +50,12 @@ $destructor
 /*
 QModelIndex ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QModelIndex ( const QModelIndex & other )
 */
-$constructor=|new2|const QModelIndex &
+$internalConstructor=|new2|const QModelIndex &
 
 //[1]QModelIndex ()
 //[2]QModelIndex ( const QModelIndex & other )
@@ -66,11 +64,11 @@ HB_FUNC_STATIC( QMODELINDEX_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QMODELINDEX_NEW1 );
+    QModelIndex_new1();
   }
   else if( ISNUMPAR(1) && ISQMODELINDEX(1) )
   {
-    HB_FUNC_EXEC( QMODELINDEX_NEW2 );
+    QModelIndex_new2();
   }
   else
   {

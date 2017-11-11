@@ -11,11 +11,6 @@ CLASS QByteArray
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
    METHOD new
    METHOD delete
    METHOD append1
@@ -29,18 +24,8 @@ CLASS QByteArray
    METHOD chop
    METHOD clear
    METHOD constData
-   METHOD contains1
-   METHOD contains2
-   METHOD contains3
    METHOD contains
-   METHOD count1
-   METHOD count2
-   METHOD count3
-   METHOD count4
    METHOD count
-   METHOD endsWith1
-   METHOD endsWith2
-   METHOD endsWith3
    METHOD endsWith
    METHOD fill
    METHOD indexOf1
@@ -70,13 +55,7 @@ CLASS QByteArray
    METHOD prepend3
    METHOD prepend4
    METHOD prepend
-   METHOD push_back1
-   METHOD push_back2
-   METHOD push_back3
    METHOD push_back
-   METHOD push_front1
-   METHOD push_front2
-   METHOD push_front3
    METHOD push_front
    METHOD remove
    METHOD repeated
@@ -113,9 +92,6 @@ CLASS QByteArray
    METHOD size
    METHOD split
    METHOD squeeze
-   METHOD startsWith1
-   METHOD startsWith2
-   METHOD startsWith3
    METHOD startsWith
    METHOD toBase64
    METHOD toDouble
@@ -170,27 +146,27 @@ $destructor
 /*
 QByteArray ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QByteArray ( const char * str )
 */
-$constructor=|new2|const char *
+$internalConstructor=|new2|const char *
 
 /*
 QByteArray ( const char * data, int size )
 */
-$constructor=|new3|const char *,int
+$internalConstructor=|new3|const char *,int
 
 /*
 QByteArray ( int size, char ch )
 */
-$constructor=|new4|int,char
+$internalConstructor=|new4|int,char
 
 /*
 QByteArray ( const QByteArray & other )
 */
-$constructor=|new5|const QByteArray &
+$internalConstructor=|new5|const QByteArray &
 
 //[1]QByteArray ()
 //[2]QByteArray ( const char * str )
@@ -202,23 +178,23 @@ HB_FUNC_STATIC( QBYTEARRAY_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QBYTEARRAY_NEW1 );
+    QByteArray_new1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QBYTEARRAY_NEW2 );
+    QByteArray_new2();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QBYTEARRAY_NEW3 );
+    QByteArray_new3();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QBYTEARRAY_NEW4 );
+    QByteArray_new4();
   }
   else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    HB_FUNC_EXEC( QBYTEARRAY_NEW5 );
+    QByteArray_new5();
   }
   else
   {
@@ -311,17 +287,17 @@ $method=|const char *|constData|
 /*
 bool contains ( const QByteArray & ba ) const
 */
-$method=|bool|contains,contains1|const QByteArray &
+$internalMethod=|bool|contains,contains1|const QByteArray &
 
 /*
 bool contains ( const char * str ) const
 */
-$method=|bool|contains,contains2|const char *
+$internalMethod=|bool|contains,contains2|const char *
 
 /*
 bool contains ( char ch ) const
 */
-$method=|bool|contains,contains3|char
+$internalMethod=|bool|contains,contains3|char
 
 //[1]bool contains ( const QByteArray & ba ) const
 //[2]bool contains ( const char * str ) const
@@ -331,15 +307,15 @@ HB_FUNC_STATIC( QBYTEARRAY_CONTAINS )
 {
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    HB_FUNC_EXEC( QBYTEARRAY_CONTAINS1 );
+    QByteArray_contains1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QBYTEARRAY_CONTAINS2 );
+    QByteArray_contains2();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QBYTEARRAY_CONTAINS3 );
+    QByteArray_contains3();
   }
   else
   {
@@ -350,22 +326,22 @@ HB_FUNC_STATIC( QBYTEARRAY_CONTAINS )
 /*
 int count ( const QByteArray & ba ) const
 */
-$method=|int|count,count1|const QByteArray &
+$internalMethod=|int|count,count1|const QByteArray &
 
 /*
 int count ( const char * str ) const
 */
-$method=|int|count,count2|const char *
+$internalMethod=|int|count,count2|const char *
 
 /*
 int count ( char ch ) const
 */
-$method=|int|count,count3|char
+$internalMethod=|int|count,count3|char
 
 /*
 int count () const
 */
-$method=|int|count,count4|
+$internalMethod=|int|count,count4|
 
 //[1]int count ( const QByteArray & ba ) const
 //[2]int count ( const char * str ) const
@@ -376,19 +352,19 @@ HB_FUNC_STATIC( QBYTEARRAY_COUNT )
 {
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    HB_FUNC_EXEC( QBYTEARRAY_COUNT1 );
+    QByteArray_count1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QBYTEARRAY_COUNT2 );
+    QByteArray_count2();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QBYTEARRAY_COUNT3 );
+    QByteArray_count3();
   }
   else if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QBYTEARRAY_COUNT4 );
+    QByteArray_count4();
   }
   else
   {
@@ -407,17 +383,17 @@ HB_FUNC_STATIC( QBYTEARRAY_COUNT )
 /*
 bool endsWith ( const QByteArray & ba ) const
 */
-$method=|bool|endsWith,endsWith1|const QByteArray &
+$internalMethod=|bool|endsWith,endsWith1|const QByteArray &
 
 /*
 bool endsWith ( const char * str ) const
 */
-$method=|bool|endsWith,endsWith2|const char *
+$internalMethod=|bool|endsWith,endsWith2|const char *
 
 /*
 bool endsWith ( char ch ) const
 */
-$method=|bool|endsWith,endsWith3|char
+$internalMethod=|bool|endsWith,endsWith3|char
 
 //[1]bool endsWith ( const QByteArray & ba ) const
 //[2]bool endsWith ( const char * str ) const
@@ -427,15 +403,15 @@ HB_FUNC_STATIC( QBYTEARRAY_ENDSWITH )
 {
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    HB_FUNC_EXEC( QBYTEARRAY_ENDSWITH1 );
+    QByteArray_endsWith1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QBYTEARRAY_ENDSWITH2 );
+    QByteArray_endsWith2();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QBYTEARRAY_ENDSWITH3 );
+    QByteArray_endsWith3();
   }
   else
   {
@@ -683,17 +659,17 @@ HB_FUNC_STATIC( QBYTEARRAY_PREPEND )
 /*
 void push_back ( const QByteArray & other )
 */
-$method=|void|push_back,push_back1|const QByteArray &
+$internalMethod=|void|push_back,push_back1|const QByteArray &
 
 /*
 void push_back ( const char * str )
 */
-$method=|void|push_back,push_back2|const char *
+$internalMethod=|void|push_back,push_back2|const char *
 
 /*
 void push_back ( char ch )
 */
-$method=|void|push_back,push_back3|char
+$internalMethod=|void|push_back,push_back3|char
 
 //[1]void push_back ( const QByteArray & other )
 //[2]void push_back ( const char * str )
@@ -703,15 +679,15 @@ HB_FUNC_STATIC( QBYTEARRAY_PUSH_BACK )
 {
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    HB_FUNC_EXEC( QBYTEARRAY_PUSH_BACK1 );
+    QByteArray_push_back1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QBYTEARRAY_PUSH_BACK2 );
+    QByteArray_push_back2();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QBYTEARRAY_PUSH_BACK3 );
+    QByteArray_push_back3();
   }
   else
   {
@@ -722,17 +698,17 @@ HB_FUNC_STATIC( QBYTEARRAY_PUSH_BACK )
 /*
 void push_front ( const QByteArray & other )
 */
-$method=|void|push_front,push_front1|const QByteArray &
+$internalMethod=|void|push_front,push_front1|const QByteArray &
 
 /*
 void push_front ( const char * str )
 */
-$method=|void|push_front,push_front2|const char *
+$internalMethod=|void|push_front,push_front2|const char *
 
 /*
 void push_front ( char ch )
 */
-$method=|void|push_front,push_front3|char
+$internalMethod=|void|push_front,push_front3|char
 
 //[1]void push_front ( const QByteArray & other )
 //[2]void push_front ( const char * str )
@@ -742,15 +718,15 @@ HB_FUNC_STATIC( QBYTEARRAY_PUSH_FRONT )
 {
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    HB_FUNC_EXEC( QBYTEARRAY_PUSH_FRONT1 );
+    QByteArray_push_front1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QBYTEARRAY_PUSH_FRONT2 );
+    QByteArray_push_front2();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QBYTEARRAY_PUSH_FRONT3 );
+    QByteArray_push_front3();
   }
   else
   {
@@ -1054,14 +1030,8 @@ HB_FUNC_STATIC( QBYTEARRAY_SPLIT )
   {
     char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
     QList<QByteArray> list = obj->split ( par1 );
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QBYTEARRAY" );
-    #else
-    pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -1096,17 +1066,17 @@ $method=|void|squeeze|
 /*
 bool startsWith ( const QByteArray & ba ) const
 */
-$method=|bool|startsWithm,startsWith1|const QByteArray &
+$internalMethod=|bool|startsWithm,startsWith1|const QByteArray &
 
 /*
 bool startsWith ( const char * str ) const
 */
-$method=|bool|startsWith,startsWith2|const char *
+$internalMethod=|bool|startsWith,startsWith2|const char *
 
 /*
 bool startsWith ( char ch ) const
 */
-$method=|bool|startsWith,startsWith3|char
+$internalMethod=|bool|startsWith,startsWith3|char
 
 //[1]bool startsWith ( const QByteArray & ba ) const
 //[2]bool startsWith ( const char * str ) const
@@ -1116,15 +1086,15 @@ HB_FUNC_STATIC( QBYTEARRAY_STARTSWITH )
 {
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    HB_FUNC_EXEC( QBYTEARRAY_STARTSWITH1 );
+    QByteArray_startsWith1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QBYTEARRAY_STARTSWITH2 );
+    QByteArray_startsWith2();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QBYTEARRAY_STARTSWITH3 );
+    QByteArray_startsWith3();
   }
   else
   {

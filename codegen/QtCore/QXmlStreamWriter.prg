@@ -12,10 +12,6 @@ CLASS QXmlStreamWriter
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD autoFormatting
@@ -25,13 +21,8 @@ CLASS QXmlStreamWriter
    METHOD hasError
    METHOD setAutoFormatting
    METHOD setAutoFormattingIndent
-   METHOD setCodec1
-   METHOD setCodec2
    METHOD setCodec
    METHOD setDevice
-   METHOD writeAttribute1
-   METHOD writeAttribute2
-   METHOD writeAttribute3
    METHOD writeAttribute
    METHOD writeAttributes
    METHOD writeCDATA
@@ -40,23 +31,14 @@ CLASS QXmlStreamWriter
    METHOD writeCurrentToken
    METHOD writeDTD
    METHOD writeDefaultNamespace
-   METHOD writeEmptyElement1
-   METHOD writeEmptyElement2
    METHOD writeEmptyElement
    METHOD writeEndDocument
    METHOD writeEndElement
    METHOD writeEntityReference
    METHOD writeNamespace
    METHOD writeProcessingInstruction
-   METHOD writeStartDocument1
-   METHOD writeStartDocument2
-   METHOD writeStartDocument3
    METHOD writeStartDocument
-   METHOD writeStartElement1
-   METHOD writeStartElement2
    METHOD writeStartElement
-   METHOD writeTextElement1
-   METHOD writeTextElement2
    METHOD writeTextElement
 
    METHOD newFrom
@@ -82,22 +64,22 @@ $destructor
 /*
 QXmlStreamWriter()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QXmlStreamWriter(QIODevice * device)
 */
-$constructor=|new2|QIODevice *
+$internalConstructor=|new2|QIODevice *
 
 /*
 QXmlStreamWriter(QByteArray * array)
 */
-$constructor=|new3|QByteArray *
+$internalConstructor=|new3|QByteArray *
 
 /*
 QXmlStreamWriter(QString * string)
 */
-$constructor=|new4|QString *
+$internalConstructor=|new4|QString *
 
 //[1]QXmlStreamWriter()
 //[2]QXmlStreamWriter(QIODevice * device)
@@ -108,19 +90,19 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMWRITER_NEW1 );
+    QXmlStreamWriter_new1();
   }
   else if( ISNUMPAR(1) && ISQIODEVICE(1) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMWRITER_NEW2 );
+    QXmlStreamWriter_new2();
   }
   else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMWRITER_NEW3 );
+    QXmlStreamWriter_new3();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMWRITER_NEW4 );
+    QXmlStreamWriter_new4();
   }
   else
   {
@@ -168,12 +150,12 @@ $method=|void|setAutoFormattingIndent|int
 /*
 void setCodec(QTextCodec * codec)
 */
-$method=|void|setCodec,setCodec1|QTextCodec *
+$internalMethod=|void|setCodec,setCodec1|QTextCodec *
 
 /*
 void setCodec(const char * codecName)
 */
-$method=|void|setCodec,setCodec2|const char *
+$internalMethod=|void|setCodec,setCodec2|const char *
 
 //[1]void setCodec(QTextCodec * codec)
 //[2]void setCodec(const char * codecName)
@@ -182,11 +164,11 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_SETCODEC )
 {
   if( ISNUMPAR(1) && ISQTEXTCODEC(1) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMWRITER_SETCODEC1 );
+    QXmlStreamWriter_setCodec1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMWRITER_SETCODEC2 );
+    QXmlStreamWriter_setCodec2();
   }
   else
   {
@@ -202,17 +184,17 @@ $method=|void|setDevice|QIODevice *
 /*
 void writeAttribute(const QString & namespaceUri, const QString & name, const QString & value)
 */
-$method=|void|writeAttribute,writeAttribute1|const QString &,const QString &,const QString &
+$internalMethod=|void|writeAttribute,writeAttribute1|const QString &,const QString &,const QString &
 
 /*
 void writeAttribute(const QString & qualifiedName, const QString & value)
 */
-$method=|void|writeAttribute,writeAttribute2|const QString &,const QString &
+$internalMethod=|void|writeAttribute,writeAttribute2|const QString &,const QString &
 
 /*
 void writeAttribute(const QXmlStreamAttribute & attribute)
 */
-$method=|void|writeAttribute,writeAttribute3|const QXmlStreamAttribute &
+$internalMethod=|void|writeAttribute,writeAttribute3|const QXmlStreamAttribute &
 
 //[1]void writeAttribute(const QString & namespaceUri, const QString & name, const QString & value)
 //[2]void writeAttribute(const QString & qualifiedName, const QString & value)
@@ -222,15 +204,15 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEATTRIBUTE )
 {
   if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMWRITER_WRITEATTRIBUTE1 );
+    QXmlStreamWriter_writeAttribute1();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMWRITER_WRITEATTRIBUTE2 );
+    QXmlStreamWriter_writeAttribute2();
   }
   else if( ISNUMPAR(1) && ISQXMLSTREAMATTRIBUTE(1) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMWRITER_WRITEATTRIBUTE3 );
+    QXmlStreamWriter_writeAttribute3();
   }
   else
   {
@@ -276,12 +258,12 @@ $method=|void|writeDefaultNamespace|const QString &
 /*
 void writeEmptyElement(const QString & namespaceUri, const QString & name)
 */
-$method=|void|writeEmptyElement,writeEmptyElement1|const QString &,const QString &
+$internalMethod=|void|writeEmptyElement,writeEmptyElement1|const QString &,const QString &
 
 /*
 void writeEmptyElement(const QString & qualifiedName)
 */
-$method=|void|writeEmptyElement,writeEmptyElement2|const QString &
+$internalMethod=|void|writeEmptyElement,writeEmptyElement2|const QString &
 
 //[1]void writeEmptyElement(const QString & namespaceUri, const QString & name)
 //[2]void writeEmptyElement(const QString & qualifiedName)
@@ -290,11 +272,11 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEEMPTYELEMENT )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMWRITER_WRITEEMPTYELEMENT1 );
+    QXmlStreamWriter_writeEmptyElement1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMWRITER_WRITEEMPTYELEMENT2 );
+    QXmlStreamWriter_writeEmptyElement2();
   }
   else
   {
@@ -330,17 +312,17 @@ $method=|void|writeProcessingInstruction|const QString &,const QString &=QString
 /*
 void writeStartDocument(const QString & version)
 */
-$method=|void|writeStartDocument,writeStartDocument1|const QString &
+$internalMethod=|void|writeStartDocument,writeStartDocument1|const QString &
 
 /*
 void writeStartDocument(const QString & version, bool standalone)
 */
-$method=|void|writeStartDocument,writeStartDocument2|const QString &,bool
+$internalMethod=|void|writeStartDocument,writeStartDocument2|const QString &,bool
 
 /*
 void writeStartDocument()
 */
-$method=|void|writeStartDocument,writeStartDocument3|
+$internalMethod=|void|writeStartDocument,writeStartDocument3|
 
 //[1]void writeStartDocument(const QString & version)
 //[2]void writeStartDocument(const QString & version, bool standalone)
@@ -350,15 +332,15 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTDOCUMENT )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMWRITER_WRITESTARTDOCUMENT1 );
+    QXmlStreamWriter_writeStartDocument1();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISLOG(2) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMWRITER_WRITESTARTDOCUMENT2 );
+    QXmlStreamWriter_writeStartDocument2();
   }
   else if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMWRITER_WRITESTARTDOCUMENT3 );
+    QXmlStreamWriter_writeStartDocument3();
   }
   else
   {
@@ -369,12 +351,12 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTDOCUMENT )
 /*
 void writeStartElement(const QString & namespaceUri, const QString & name)
 */
-$method=|void|writeStartElement,writeStartElement1|const QString &,const QString &
+$internalMethod=|void|writeStartElement,writeStartElement1|const QString &,const QString &
 
 /*
 void writeStartElement(const QString & qualifiedName)
 */
-$method=|void|writeStartElement,writeStartElement2|const QString &
+$internalMethod=|void|writeStartElement,writeStartElement2|const QString &
 
 //[1]void writeStartElement(const QString & namespaceUri, const QString & name)
 //[2]void writeStartElement(const QString & qualifiedName)
@@ -383,11 +365,11 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTELEMENT )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMWRITER_WRITESTARTELEMENT1 );
+    QXmlStreamWriter_writeStartElement1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMWRITER_WRITESTARTELEMENT2 );
+    QXmlStreamWriter_writeStartElement2();
   }
   else
   {
@@ -398,12 +380,12 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTELEMENT )
 /*
 void writeTextElement(const QString & namespaceUri, const QString & name, const QString & text)
 */
-$method=|void|writeTextElement,writeTextElement1|const QString &,const QString &,const QString &
+$internalMethod=|void|writeTextElement,writeTextElement1|const QString &,const QString &,const QString &
 
 /*
 void writeTextElement(const QString & qualifiedName, const QString & text)
 */
-$method=|void|writeTextElement,writeTextElement2|const QString &,const QString &
+$internalMethod=|void|writeTextElement,writeTextElement2|const QString &,const QString &
 
 //[1]void writeTextElement(const QString & namespaceUri, const QString & name, const QString & text)
 //[2]void writeTextElement(const QString & qualifiedName, const QString & text)
@@ -412,11 +394,11 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITETEXTELEMENT )
 {
   if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMWRITER_WRITETEXTELEMENT1 );
+    QXmlStreamWriter_writeTextElement1();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMWRITER_WRITETEXTELEMENT2 );
+    QXmlStreamWriter_writeTextElement2();
   }
   else
   {

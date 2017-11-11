@@ -20,9 +20,6 @@ CLASS QGraphicsDropShadowEffect INHERIT QGraphicsEffect
    METHOD boundingRectFor
    METHOD setBlurRadius
    METHOD setColor
-   METHOD setOffset1
-   METHOD setOffset2
-   METHOD setOffset3
    METHOD setOffset
    METHOD setXOffset
    METHOD setYOffset
@@ -99,17 +96,17 @@ $method=|void|setColor|const QColor &
 /*
 void setOffset ( const QPointF & ofs )
 */
-$method=|void|setOffset,setOffset1|const QPointF &
+$internalMethod=|void|setOffset,setOffset1|const QPointF &
 
 /*
 void setOffset ( qreal dx, qreal dy )
 */
-$method=|void|setOffset,setOffset2|qreal,qreal
+$internalMethod=|void|setOffset,setOffset2|qreal,qreal
 
 /*
 void setOffset ( qreal d )
 */
-$method=|void|setOffset,setOffset3|qreal
+$internalMethod=|void|setOffset,setOffset3|qreal
 
 //[1]void setOffset ( const QPointF & ofs )
 //[2]void setOffset ( qreal dx, qreal dy )
@@ -119,15 +116,15 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET1 );
+    QGraphicsDropShadowEffect_setOffset1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET2 );
+    QGraphicsDropShadowEffect_setOffset2();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET3 );
+    QGraphicsDropShadowEffect_setOffset3();
   }
   else
   {

@@ -9,14 +9,8 @@ REQUEST QFILEINFO
 
 CLASS QFSFileEngine INHERIT QAbstractFileEngine
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
-   METHOD open1
-   METHOD open2
-   METHOD open3
-   METHOD open4
    METHOD open
    METHOD caseSensitive
    METHOD close
@@ -71,12 +65,12 @@ $destructor
 /*
 QFSFileEngine ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QFSFileEngine ( const QString & file )
 */
-$constructor=|new2|const QString &
+$internalConstructor=|new2|const QString &
 
 //[1]QFSFileEngine ()
 //[2]QFSFileEngine ( const QString & file )
@@ -85,11 +79,11 @@ HB_FUNC_STATIC( QFSFILEENGINE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QFSFILEENGINE_NEW1 );
+    QFSFileEngine_new1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QFSFILEENGINE_NEW2 );
+    QFSFileEngine_new2();
   }
   else
   {
@@ -102,22 +96,22 @@ $deleteMethod
 /*
 bool open ( QIODevice::OpenMode openMode, FILE * fh )
 */
-$method=|bool|open,open1|QIODevice::OpenMode,FILE *
+$internalMethod=|bool|open,open1|QIODevice::OpenMode,FILE *
 
 /*
 bool open ( QIODevice::OpenMode openMode, int fd )
 */
-$method=|bool|open,open2|QIODevice::OpenMode,int
+$internalMethod=|bool|open,open2|QIODevice::OpenMode,int
 
 /*
 bool open ( QIODevice::OpenMode openMode, int fd, QFile::FileHandleFlags handleFlags )
 */
-$method=|bool|open,open3|QIODevice::OpenMode,int,QFile::FileHandleFlags
+$internalMethod=|bool|open,open3|QIODevice::OpenMode,int,QFile::FileHandleFlags
 
 /*
 bool open ( QIODevice::OpenMode openMode, FILE * fh, QFile::FileHandleFlags handleFlags )
 */
-$method=|bool|open,open4|QIODevice::OpenMode,FILE *,QFile::FileHandleFlags
+$internalMethod=|bool|open,open4|QIODevice::OpenMode,FILE *,QFile::FileHandleFlags
 
 /*
 bool open ( QIODevice::OpenMode openMode, const RFile & file, QFile::FileHandleFlags handleFlags )
@@ -134,19 +128,19 @@ HB_FUNC_STATIC( QFSFILEENGINE_OPEN )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISPOINTER(2) )
   {
-    HB_FUNC_EXEC( QFSFILEENGINE_OPEN1 );
+    QFSFileEngine_open1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QFSFILEENGINE_OPEN2 );
+    QFSFileEngine_open2();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QFSFILEENGINE_OPEN3 );
+    QFSFileEngine_open3();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISPOINTER(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QFSFILEENGINE_OPEN4 );
+    QFSFileEngine_open4();
   }
   else
   {
@@ -300,14 +294,8 @@ QFileInfoList drives ()
 HB_FUNC_STATIC( QFSFILEENGINE_DRIVES )
 {
   QFileInfoList list = QFSFileEngine::drives ();
-  PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QFILEINFO" );
-  #else
-  pDynSym = hb_dynsymFindName( "QFILEINFO" );
-  #endif
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO" );
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {

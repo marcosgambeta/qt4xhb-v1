@@ -11,12 +11,8 @@ CLASS QTextEncoder
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
-   METHOD fromUnicode1
-   METHOD fromUnicode2
    METHOD fromUnicode
 
    METHOD newFrom
@@ -42,12 +38,12 @@ $destructor
 /*
 QTextEncoder(const QTextCodec * codec)
 */
-$constructor=|new1|const QTextCodec *
+$internalConstructor=|new1|const QTextCodec *
 
 /*
 QTextEncoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
 */
-$constructor=|new2|const QTextCodec *,QTextCodec::ConversionFlags
+$internalConstructor=|new2|const QTextCodec *,QTextCodec::ConversionFlags
 
 //[1]QTextEncoder(const QTextCodec * codec)
 //[2]QTextEncoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
@@ -56,11 +52,11 @@ HB_FUNC_STATIC( QTEXTENCODER_NEW )
 {
   if( ISNUMPAR(1) && ISQTEXTCODEC(1) )
   {
-    HB_FUNC_EXEC( QTEXTENCODER_NEW1 );
+    QTextEncoder_new1();
   }
   else if( ISNUMPAR(2) && ISQTEXTCODEC(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QTEXTENCODER_NEW2 );
+    QTextEncoder_new2();
   }
   else
   {
@@ -73,12 +69,12 @@ $deleteMethod
 /*
 QByteArray fromUnicode(const QString & str)
 */
-$method=|QByteArray|fromUnicode,fromUnicode1|const QString &
+$internalMethod=|QByteArray|fromUnicode,fromUnicode1|const QString &
 
 /*
 QByteArray fromUnicode(const QChar * uc, int len)
 */
-$method=|QByteArray|fromUnicode,fromUnicode2|const QChar *,int
+$internalMethod=|QByteArray|fromUnicode,fromUnicode2|const QChar *,int
 
 //[1]QByteArray fromUnicode(const QString & str)
 //[2]QByteArray fromUnicode(const QChar * uc, int len)
@@ -87,11 +83,11 @@ HB_FUNC_STATIC( QTEXTENCODER_FROMUNICODE )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QTEXTENCODER_FROMUNICODE1 );
+    QTextEncoder_fromUnicode1();
   }
   else if( ISNUMPAR(2) && ISQCHAR(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QTEXTENCODER_FROMUNICODE2 );
+    QTextEncoder_fromUnicode2();
   }
   else
   {

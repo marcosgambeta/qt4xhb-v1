@@ -12,8 +12,6 @@ CLASS QDeclarativeScriptString
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD context
    METHOD scopeObject
@@ -47,12 +45,12 @@ $destructor
 /*
 QDeclarativeScriptString ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QDeclarativeScriptString ( const QDeclarativeScriptString & other )
 */
-$constructor=|new2|const QDeclarativeScriptString &
+$internalConstructor=|new2|const QDeclarativeScriptString &
 
 //[1]QDeclarativeScriptString ()
 //[2]QDeclarativeScriptString ( const QDeclarativeScriptString & other )
@@ -61,11 +59,11 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDECLARATIVESCRIPTSTRING_NEW1 );
+    QDeclarativeScriptString_new1();
   }
   else if( ISNUMPAR(1) && ISQDECLARATIVESCRIPTSTRING(1) )
   {
-    HB_FUNC_EXEC( QDECLARATIVESCRIPTSTRING_NEW2 );
+    QDeclarativeScriptString_new2();
   }
   else
   {

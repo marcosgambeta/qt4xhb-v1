@@ -8,8 +8,6 @@ REQUEST QSIZE
 
 CLASS QSlider INHERIT QAbstractSlider
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD setTickInterval
@@ -37,12 +35,12 @@ $destructor
 /*
 QSlider ( QWidget * parent = 0 )
 */
-$constructor=|new1|QWidget *=0
+$internalConstructor=|new1|QWidget *=0
 
 /*
 QSlider ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
-$constructor=|new2|Qt::Orientation,QWidget *=0
+$internalConstructor=|new2|Qt::Orientation,QWidget *=0
 
 //[1]QSlider ( QWidget * parent = 0 )
 //[2]QSlider ( Qt::Orientation orientation, QWidget * parent = 0 )
@@ -51,11 +49,11 @@ HB_FUNC_STATIC( QSLIDER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QSLIDER_NEW1 );
+    QSlider_new1();
   }
   else if( ISBETWEEN(1,2) && ISNUM(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QSLIDER_NEW2 );
+    QSlider_new2();
   }
   else
   {

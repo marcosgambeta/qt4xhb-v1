@@ -12,9 +12,6 @@ CLASS QStaticText
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD performanceHint
@@ -53,17 +50,17 @@ $destructor
 /*
 QStaticText ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QStaticText ( const QString & text )
 */
-$constructor=|new2|const QString &
+$internalConstructor=|new2|const QString &
 
 /*
 QStaticText ( const QStaticText & other )
 */
-$constructor=|new3|const QStaticText &
+$internalConstructor=|new3|const QStaticText &
 
 //[1]QStaticText ()
 //[2]QStaticText ( const QString & text )
@@ -73,15 +70,15 @@ HB_FUNC_STATIC( QSTATICTEXT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSTATICTEXT_NEW1 );
+    QStaticText_new1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QSTATICTEXT_NEW2 );
+    QStaticText_new2();
   }
   else if( ISNUMPAR(1) && ISQSTATICTEXT(1) )
   {
-    HB_FUNC_EXEC( QSTATICTEXT_NEW3 );
+    QStaticText_new3();
   }
   else
   {

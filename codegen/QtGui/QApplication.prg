@@ -48,9 +48,6 @@ CLASS QApplication INHERIT QCoreApplication
    METHOD doubleClickInterval
    METHOD exec
    METHOD focusWidget
-   METHOD font1
-   METHOD font2
-   METHOD font3
    METHOD font
    METHOD fontMetrics
    METHOD globalStrut
@@ -64,9 +61,6 @@ CLASS QApplication INHERIT QCoreApplication
    METHOD layoutDirection
    METHOD mouseButtons
    METHOD overrideCursor
-   METHOD palette1
-   METHOD palette2
-   METHOD palette3
    METHOD palette
    METHOD queryKeyboardModifiers
    METHOD quitOnLastWindowClosed
@@ -87,8 +81,6 @@ CLASS QApplication INHERIT QCoreApplication
    METHOD setQuitOnLastWindowClosed
    METHOD setStartDragDistance
    METHOD setStartDragTime
-   METHOD setStyle1
-   METHOD setStyle2
    METHOD setStyle
    METHOD setWheelScrollLines
    METHOD setWindowIcon
@@ -96,14 +88,10 @@ CLASS QApplication INHERIT QCoreApplication
    METHOD startDragTime
    METHOD style
    METHOD syncX
-   METHOD topLevelAt1
-   METHOD topLevelAt2
    METHOD topLevelAt
    METHOD topLevelWidgets
    METHOD type
    METHOD wheelScrollLines
-   METHOD widgetAt1
-   METHOD widgetAt2
    METHOD widgetAt
    METHOD windowIcon
    METHOD aboutToReleaseGpuResources
@@ -243,14 +231,8 @@ static QWidgetList allWidgets ()
 HB_FUNC_STATIC( QAPPLICATION_ALLWIDGETS )
 {
   QWidgetList list = QApplication::allWidgets ();
-  PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QWIDGET" );
-  #else
-  pDynSym = hb_dynsymFindName( "QWIDGET" );
-  #endif
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QWIDGET" );
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {
@@ -329,17 +311,17 @@ $staticMethod=|QWidget *|focusWidget|
 /*
 static QFont font ()
 */
-$staticMethod=|QFont|font,font1|
+$internalStaticMethod=|QFont|font,font1|
 
 /*
 static QFont font ( const QWidget * widget )
 */
-$staticMethod=|QFont|font,font2|const QWidget *
+$internalStaticMethod=|QFont|font,font2|const QWidget *
 
 /*
 static QFont font ( const char * className )
 */
-$staticMethod=|QFont|font,font3|const char *
+$internalStaticMethod=|QFont|font,font3|const char *
 
 //[1]QFont font ()
 //[2]QFont font ( const QWidget * widget )
@@ -349,15 +331,15 @@ HB_FUNC_STATIC( QAPPLICATION_FONT )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QAPPLICATION_FONT1 );
+    QApplication_font1();
   }
   else if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    HB_FUNC_EXEC( QAPPLICATION_FONT2 );
+    QApplication_font2();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QAPPLICATION_FONT3 );
+    QApplication_font3();
   }
   else
   {
@@ -428,17 +410,17 @@ $staticMethod=|QCursor *|overrideCursor|
 /*
 static QPalette palette ()
 */
-$staticMethod=|QPalette|palette,palette1|
+$internalStaticMethod=|QPalette|palette,palette1|
 
 /*
 static QPalette palette ( const QWidget * widget )
 */
-$staticMethod=|QPalette|palette,palette2|const QWidget *
+$internalStaticMethod=|QPalette|palette,palette2|const QWidget *
 
 /*
 static QPalette palette ( const char * className )
 */
-$staticMethod=|QPalette|palette,palette3|const char *
+$internalStaticMethod=|QPalette|palette,palette3|const char *
 
 //[1]QPalette palette ()
 //[2]QPalette palette ( const QWidget * widget )
@@ -448,15 +430,15 @@ HB_FUNC_STATIC( QAPPLICATION_PALETTE )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QAPPLICATION_PALETTE1 );
+    QApplication_palette1();
   }
   else if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    HB_FUNC_EXEC( QAPPLICATION_PALETTE2 );
+    QApplication_palette2();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QAPPLICATION_PALETTE3 );
+    QApplication_palette3();
   }
   else
   {
@@ -562,12 +544,12 @@ $staticMethod=|void|setStartDragTime|int
 /*
 static void setStyle ( QStyle * style )
 */
-$staticMethod=|void|setStyle,setStyle1|QStyle *
+$internalStaticMethod=|void|setStyle,setStyle1|QStyle *
 
 /*
 static QStyle * setStyle ( const QString & style )
 */
-$staticMethod=|QStyle *|setStyle,setStyle2|const QString &
+$internalStaticMethod=|QStyle *|setStyle,setStyle2|const QString &
 
 //[1]void setStyle ( QStyle * style )
 //[2]QStyle * setStyle ( const QString & style )
@@ -576,11 +558,11 @@ HB_FUNC_STATIC( QAPPLICATION_SETSTYLE )
 {
   if( ISNUMPAR(1) && ISQSTYLE(1) )
   {
-    HB_FUNC_EXEC( QAPPLICATION_SETSTYLE1 );
+    QApplication_setStyle1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QAPPLICATION_SETSTYLE2 );
+    QApplication_setStyle2();
   }
   else
   {
@@ -621,12 +603,12 @@ $staticMethod=|void|syncX|
 /*
 static QWidget * topLevelAt ( const QPoint & point )
 */
-$staticMethod=|QWidget *|topLevelAt,topLevelAt1|const QPoint &
+$internalStaticMethod=|QWidget *|topLevelAt,topLevelAt1|const QPoint &
 
 /*
 static QWidget * topLevelAt ( int x, int y )
 */
-$staticMethod=|QWidget *|topLevelAt,topLevelAt2|int,int
+$internalStaticMethod=|QWidget *|topLevelAt,topLevelAt2|int,int
 
 //[1]QWidget * topLevelAt ( const QPoint & point )
 //[2]QWidget * topLevelAt ( int x, int y )
@@ -635,11 +617,11 @@ HB_FUNC_STATIC( QAPPLICATION_TOPLEVELAT )
 {
   if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QAPPLICATION_TOPLEVELAT1 );
+    QApplication_topLevelAt1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QAPPLICATION_TOPLEVELAT2 );
+    QApplication_topLevelAt2();
   }
   else
   {
@@ -653,14 +635,8 @@ static QWidgetList topLevelWidgets ()
 HB_FUNC_STATIC( QAPPLICATION_TOPLEVELWIDGETS )
 {
   QWidgetList list = QApplication::topLevelWidgets ();
-  PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QWIDGET" );
-  #else
-  pDynSym = hb_dynsymFindName( "QWIDGET" );
-  #endif
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QWIDGET" );
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {
@@ -699,12 +675,12 @@ $staticMethod=|int|wheelScrollLines|
 /*
 static QWidget * widgetAt ( const QPoint & point )
 */
-$staticMethod=|QWidget *|widgetAt,widgetAt1|const QPoint &
+$internalStaticMethod=|QWidget *|widgetAt,widgetAt1|const QPoint &
 
 /*
 static QWidget * widgetAt ( int x, int y )
 */
-$staticMethod=|QWidget *|widgetAt,widgetAt2|int,int
+$internalStaticMethod=|QWidget *|widgetAt,widgetAt2|int,int
 
 //[1]QWidget * widgetAt ( const QPoint & point )
 //[2]QWidget * widgetAt ( int x, int y )
@@ -713,11 +689,11 @@ HB_FUNC_STATIC( QAPPLICATION_WIDGETAT )
 {
   if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QAPPLICATION_WIDGETAT1 );
+    QApplication_widgetAt1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QAPPLICATION_WIDGETAT2 );
+    QApplication_widgetAt2();
   }
   else
   {

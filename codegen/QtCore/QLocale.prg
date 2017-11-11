@@ -15,11 +15,6 @@ CLASS QLocale
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
    METHOD new
    METHOD amText
    METHOD bcp47Name
@@ -62,11 +57,7 @@ CLASS QLocale
    METHOD toCurrencyString7
    METHOD toCurrencyString8
    METHOD toCurrencyString
-   METHOD toDate1
-   METHOD toDate2
    METHOD toDate
-   METHOD toDateTime1
-   METHOD toDateTime2
    METHOD toDateTime
    METHOD toDouble
    METHOD toFloat
@@ -89,8 +80,6 @@ CLASS QLocale
    METHOD toString13
    METHOD toString14
    METHOD toString
-   METHOD toTime1
-   METHOD toTime2
    METHOD toTime
    METHOD toUInt
    METHOD toULongLong
@@ -132,27 +121,27 @@ $destructor
 /*
 QLocale ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QLocale ( const QString & name )
 */
-$constructor=|new2|const QString &
+$internalConstructor=|new2|const QString &
 
 /*
 QLocale ( Language language, Country country = AnyCountry )
 */
-$constructor=|new3|QLocale::Language,QLocale::Country=QLocale::AnyCountry
+$internalConstructor=|new3|QLocale::Language,QLocale::Country=QLocale::AnyCountry
 
 /*
 QLocale ( Language language, Script script, Country country )
 */
-$constructor=|new4|QLocale::Language,QLocale::Script,QLocale::Country
+$internalConstructor=|new4|QLocale::Language,QLocale::Script,QLocale::Country
 
 /*
 QLocale ( const QLocale & other )
 */
-$constructor=|new5|const QLocale &
+$internalConstructor=|new5|const QLocale &
 
 //[1] QLocale ()
 //[2] QLocale ( const QString & name )
@@ -164,27 +153,23 @@ HB_FUNC_STATIC( QLOCALE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QLOCALE_NEW1 );
+    QLocale_new1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QLOCALE_NEW2 );
+    QLocale_new2();
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QLOCALE_NEW3 );
-  }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
-  {
-    HB_FUNC_EXEC( QLOCALE_NEW3 );
+    QLocale_new3();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QLOCALE_NEW4 );
+    QLocale_new4();
   }
   else if( ISNUMPAR(1) && ISQLOCALE(1) )
   {
-    HB_FUNC_EXEC( QLOCALE_NEW5 );
+    QLocale_new5();
   }
   else
   {
@@ -420,12 +405,12 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING )
 /*
 QDate toDate ( const QString & string, FormatType format = LongFormat ) const
 */
-$method=|QDate|toDate,toDate1|const QString &,QLocale::FormatType=QLocale::LongFormat
+$internalMethod=|QDate|toDate,toDate1|const QString &,QLocale::FormatType=QLocale::LongFormat
 
 /*
 QDate toDate ( const QString & string, const QString & format ) const
 */
-$method=|QDate|toDate,toDate2|const QString &,const QString &
+$internalMethod=|QDate|toDate,toDate2|const QString &,const QString &
 
 //[1]QDate toDate ( const QString & string, FormatType format = LongFormat ) const
 //[2]QDate toDate ( const QString & string, const QString & format ) const
@@ -434,11 +419,11 @@ HB_FUNC_STATIC( QLOCALE_TODATE )
 {
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QLOCALE_TODATE1 );
+    QLocale_toDate1();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QLOCALE_TODATE2 );
+    QLocale_toDate2();
   }
   else
   {
@@ -449,29 +434,25 @@ HB_FUNC_STATIC( QLOCALE_TODATE )
 /*
 QDateTime toDateTime ( const QString & string, FormatType format = LongFormat ) const
 */
-$method=|QDateTime|toDateTime,toDateTime1|const QString &,QLocale::FormatType=QLocale::LongFormat
+$internalMethod=|QDateTime|toDateTime,toDateTime1|const QString &,QLocale::FormatType=QLocale::LongFormat
 
 /*
 QDateTime toDateTime ( const QString & string, const QString & format ) const
 */
-$method=|QDateTime|toDateTime,toDateTime2|const QString &,const QString &
+$internalMethod=|QDateTime|toDateTime,toDateTime2|const QString &,const QString &
 
 //[1]QDateTime toDateTime ( const QString & string, FormatType format = LongFormat ) const
 //[2]QDateTime toDateTime ( const QString & string, const QString & format ) const
 
 HB_FUNC_STATIC( QLOCALE_TODATETIME )
 {
-  if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QLOCALE_TODATETIME1 );
-  }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
-  {
-    HB_FUNC_EXEC( QLOCALE_TODATETIME1 );
+    QLocale_toDateTime1();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QLOCALE_TODATETIME2 );
+    QLocale_toDateTime2();
   }
   else
   {
@@ -603,29 +584,25 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING )
 /*
 QTime toTime ( const QString & string, FormatType format = LongFormat ) const
 */
-$method=|QTime|toTime,toTime1|const QString &,QLocale::FormatType=QLocale::LongFormat
+$internalMethod=|QTime|toTime,toTime1|const QString &,QLocale::FormatType=QLocale::LongFormat
 
 /*
 QTime toTime ( const QString & string, const QString & format ) const
 */
-$method=|QTime|toTime,toTime2|const QString &,const QString &
+$internalMethod=|QTime|toTime,toTime2|const QString &,const QString &
 
 //[1]QTime toTime ( const QString & string, FormatType format = LongFormat ) const
 //[2]QTime toTime ( const QString & string, const QString & format ) const
 
 HB_FUNC_STATIC( QLOCALE_TOTIME )
 {
-  if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QLOCALE_TOTIME1 );
-  }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
-  {
-    HB_FUNC_EXEC( QLOCALE_TOTIME1 );
+    QLocale_toTime1();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QLOCALE_TOTIME2 );
+    QLocale_toTime2();
   }
   else
   {
@@ -668,8 +645,7 @@ HB_FUNC_STATIC( QLOCALE_WEEKDAYS )
   if( obj )
   {
     QList<Qt::DayOfWeek> list = obj->weekdays ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -702,14 +678,8 @@ static QList<QLocale> matchingLocales ( QLocale::Language language, QLocale::Scr
 HB_FUNC_STATIC( QLOCALE_MATCHINGLOCALES )
 {
   QList<QLocale> list = QLocale::matchingLocales ( (QLocale::Language) hb_parni(1), (QLocale::Script) hb_parni(2), (QLocale::Country) hb_parni(3) );
-  PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QLOCALE" );
-  #else
-  pDynSym = hb_dynsymFindName( "QLOCALE" );
-  #endif
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QLOCALE" );
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {

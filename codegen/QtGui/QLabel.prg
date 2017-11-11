@@ -12,8 +12,6 @@ REQUEST QSIZE
 
 CLASS QLabel INHERIT QFrame
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD alignment
@@ -73,12 +71,12 @@ $destructor
 /*
 QLabel ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
-$constructor=|new1|QWidget *=0,Qt::WindowFlags=0
+$internalConstructor=|new1|QWidget *=0,Qt::WindowFlags=0
 
 /*
 QLabel ( const QString & text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
-$constructor=|new2|const QString &,QWidget *=0,Qt::WindowFlags=0
+$internalConstructor=|new2|const QString &,QWidget *=0,Qt::WindowFlags=0
 
 //[1]QLabel ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 //[2]QLabel ( const QString & text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
@@ -87,11 +85,11 @@ HB_FUNC_STATIC( QLABEL_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QLABEL_NEW1 );
+    QLabel_new1();
   }
   else if( ISBETWEEN(1,3) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QLABEL_NEW2 );
+    QLabel_new2();
   }
   else
   {

@@ -16,24 +16,12 @@ CLASS QBrush
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
-   METHOD new6
-   METHOD new7
-   METHOD new8
-   METHOD new9
-   METHOD new10
    METHOD new
    METHOD delete
    METHOD color
    METHOD gradient
    METHOD isOpaque
    METHOD matrix
-   METHOD setColor1
-   METHOD setColor2
    METHOD setColor
    METHOD setMatrix
    METHOD setStyle
@@ -68,52 +56,52 @@ $destructor
 /*
 QBrush ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QBrush ( Qt::BrushStyle style )
 */
-$constructor=|new2|Qt::BrushStyle
+$internalConstructor=|new2|Qt::BrushStyle
 
 /*
 QBrush ( const QColor & color, Qt::BrushStyle style = Qt::SolidPattern )
 */
-$constructor=|new3|const QColor &,Qt::BrushStyle=Qt::SolidPattern
+$internalConstructor=|new3|const QColor &,Qt::BrushStyle=Qt::SolidPattern
 
 /*
 QBrush ( Qt::GlobalColor color, Qt::BrushStyle style = Qt::SolidPattern )
 */
-$constructor=|new4|Qt::GlobalColor,Qt::BrushStyle=Qt::SolidPattern
+$internalConstructor=|new4|Qt::GlobalColor,Qt::BrushStyle=Qt::SolidPattern
 
 /*
 QBrush ( const QColor & color, const QPixmap & pixmap )
 */
-$constructor=|new5|const QColor &,const QPixmap &
+$internalConstructor=|new5|const QColor &,const QPixmap &
 
 /*
 QBrush ( Qt::GlobalColor color, const QPixmap & pixmap )
 */
-$constructor=|new6|Qt::GlobalColor,const QPixmap &
+$internalConstructor=|new6|Qt::GlobalColor,const QPixmap &
 
 /*
 QBrush ( const QPixmap & pixmap )
 */
-$constructor=|new7|const QPixmap &
+$internalConstructor=|new7|const QPixmap &
 
 /*
 QBrush ( const QImage & image )
 */
-$constructor=|new8|const QImage &
+$internalConstructor=|new8|const QImage &
 
 /*
 QBrush ( const QBrush & other )
 */
-$constructor=|new9|const QBrush &
+$internalConstructor=|new9|const QBrush &
 
 /*
 QBrush ( const QGradient & gradient )
 */
-$constructor=|new10|const QGradient &
+$internalConstructor=|new10|const QGradient &
 
 //[01]QBrush ()
 //[02]QBrush ( Qt::BrushStyle style )
@@ -132,43 +120,43 @@ HB_FUNC_STATIC( QBRUSH_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QBRUSH_NEW1 );
+    QBrush_new1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QBRUSH_NEW2 );
+    QBrush_new2();
   }
   else if( ISBETWEEN(1,2) && (ISQCOLOR(1)||ISCHAR(1)) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QBRUSH_NEW3 );
+    QBrush_new3();
   }
   else if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QBRUSH_NEW4 );
+    QBrush_new4();
   }
   else if( ISNUMPAR(2) && (ISQCOLOR(1)||ISCHAR(1)) && ISQPIXMAP(2) )
   {
-    HB_FUNC_EXEC( QBRUSH_NEW5 );
+    QBrush_new5();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISQPIXMAP(2) )
   {
-    HB_FUNC_EXEC( QBRUSH_NEW6 );
+    QBrush_new6();
   }
   else if( ISNUMPAR(1) && ISQPIXMAP(1) )
   {
-    HB_FUNC_EXEC( QBRUSH_NEW7 );
+    QBrush_new7();
   }
   else if( ISNUMPAR(1) && ISQIMAGE(1) )
   {
-    HB_FUNC_EXEC( QBRUSH_NEW8 );
+    QBrush_new8();
   }
   else if( ISNUMPAR(1) && ISQBRUSH(1) )
   {
-    HB_FUNC_EXEC( QBRUSH_NEW9 );
+    QBrush_new9();
   }
   else if( ISNUMPAR(1) && ISQGRADIENT(1) )
   {
-    HB_FUNC_EXEC( QBRUSH_NEW10 );
+    QBrush_new10();
   }
   else
   {
@@ -201,12 +189,12 @@ $method=|const QMatrix &|matrix|
 /*
 void setColor ( const QColor & color )
 */
-$method=|void|setColor,setColor1|const QColor &
+$internalMethod=|void|setColor,setColor1|const QColor &
 
 /*
 void setColor ( Qt::GlobalColor color )
 */
-$method=|void|setColor,setColor2|Qt::GlobalColor
+$internalMethod=|void|setColor,setColor2|Qt::GlobalColor
 
 //[1]void setColor ( const QColor & color )
 //[2]void setColor ( Qt::GlobalColor color )
@@ -215,11 +203,11 @@ HB_FUNC_STATIC( QBRUSH_SETCOLOR )
 {
   if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
   {
-    HB_FUNC_EXEC( QBRUSH_SETCOLOR1 );
+    QBrush_setColor1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QBRUSH_SETCOLOR2 );
+    QBrush_setColor2();
   }
   else
   {

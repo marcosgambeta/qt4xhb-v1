@@ -7,9 +7,6 @@ CLASS QRegExp
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD cap
@@ -58,17 +55,17 @@ $destructor
 /*
 QRegExp ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QRegExp ( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, PatternSyntax syntax = RegExp )
 */
-$constructor=|new2|const QString &,Qt::CaseSensitivity=Qt::CaseSensitive,QRegExp::PatternSyntax=QRegExp::RegExp
+$internalConstructor=|new2|const QString &,Qt::CaseSensitivity=Qt::CaseSensitive,QRegExp::PatternSyntax=QRegExp::RegExp
 
 /*
 QRegExp ( const QRegExp & rx )
 */
-$constructor=|new3|const QRegExp &
+$internalConstructor=|new3|const QRegExp &
 
 //[1]QRegExp ()
 //[2]QRegExp ( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, PatternSyntax syntax = RegExp )
@@ -78,15 +75,15 @@ HB_FUNC_STATIC( QREGEXP_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QREGEXP_NEW1 );
+    QRegExp_new1();
   }
   else if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QREGEXP_NEW2 );
+    QRegExp_new2();
   }
   else if( ISNUMPAR(1) && ISQREGEXP(1) )
   {
-    HB_FUNC_EXEC( QREGEXP_NEW3 );
+    QRegExp_new3();
   }
   else
   {

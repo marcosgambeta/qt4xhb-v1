@@ -12,8 +12,6 @@ CLASS QTimer INHERIT QObject
    METHOD setInterval
    METHOD setSingleShot
    METHOD timerId
-   METHOD start1
-   METHOD start2
    METHOD start
    METHOD stop
    METHOD singleShot
@@ -74,25 +72,25 @@ $method=|int|timerId|
 /*
 void start ( int msec )
 */
-$method=|void|start,start1|int
+$internalMethod=|void|start,start1|int
 
 /*
 void start ()
 */
-$method=|void|start,start2|
+$internalMethod=|void|start,start2|
 
 //[1]void start ( int msec )
 //[2]void start ()
 
 HB_FUNC_STATIC( QTIMER_START )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QTIMER_START2 );
+    QTimer_start1();
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTIMER_START1 );
+    QTimer_start2();
   }
   else
   {

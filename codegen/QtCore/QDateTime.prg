@@ -13,10 +13,6 @@ CLASS QDateTime
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD addDays
@@ -39,8 +35,6 @@ CLASS QDateTime
    METHOD timeSpec
    METHOD toLocalTime
    METHOD toMSecsSinceEpoch
-   METHOD toString1
-   METHOD toString2
    METHOD toString
    METHOD toTimeSpec
    METHOD toTime_t
@@ -49,8 +43,6 @@ CLASS QDateTime
    METHOD currentDateTimeUtc
    METHOD currentMSecsSinceEpoch
    METHOD fromMSecsSinceEpoch
-   METHOD fromString1
-   METHOD fromString2
    METHOD fromString
    METHOD fromTime_t
 
@@ -77,22 +69,22 @@ $destructor
 /*
 QDateTime ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QDateTime ( const QDate & date )
 */
-$constructor=|new2|const QDate &
+$internalConstructor=|new2|const QDate &
 
 /*
 QDateTime ( const QDate & date, const QTime & time, Qt::TimeSpec spec = Qt::LocalTime )
 */
-$constructor=|new3|const QDate &,const QTime &,Qt::TimeSpec=Qt::LocalTime
+$internalConstructor=|new3|const QDate &,const QTime &,Qt::TimeSpec=Qt::LocalTime
 
 /*
 QDateTime ( const QDateTime & other )
 */
-$constructor=|new4|const QDateTime &
+$internalConstructor=|new4|const QDateTime &
 
 //[1]QDateTime ()
 //[2]QDateTime ( const QDate & date )
@@ -103,19 +95,19 @@ HB_FUNC_STATIC( QDATETIME_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDATETIME_NEW1 );
+    QDateTime_new1();
   }
   else if( ISNUMPAR(1) && ISQDATE(1) )
   {
-    HB_FUNC_EXEC( QDATETIME_NEW2 );
+    QDateTime_new2();
   }
   else if( ISBETWEEN(2,3) && ISQDATE(1) && ISQTIME(2) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QDATETIME_NEW3 );
+    QDateTime_new3();
   }
   else if( ISNUMPAR(1) && ISQDATETIME(1) )
   {
-    HB_FUNC_EXEC( QDATETIME_NEW4 );
+    QDateTime_new4();
   }
   else
   {
@@ -228,12 +220,12 @@ $method=|qint64|toMSecsSinceEpoch|
 /*
 QString toString ( const QString & format ) const
 */
-$method=|QString|toString,toString1|const QString &
+$internalMethod=|QString|toString,toString1|const QString &
 
 /*
 QString toString ( Qt::DateFormat format = Qt::TextDate ) const
 */
-$method=|QString|toString,toString2|Qt::DateFormat=Qt::TextDate
+$internalMethod=|QString|toString,toString2|Qt::DateFormat=Qt::TextDate
 
 //[1]QString toString ( const QString & format ) const
 //[2]QString toString ( Qt::DateFormat format = Qt::TextDate ) const
@@ -242,11 +234,11 @@ HB_FUNC_STATIC( QDATETIME_TOSTRING )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QDATETIME_TOSTRING1 );
+    QDateTime_toString1();
   }
   else if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QDATETIME_TOSTRING2 );
+    QDateTime_toString2();
   }
   else
   {
@@ -292,12 +284,12 @@ $staticMethod=|QDateTime|fromMSecsSinceEpoch|qint64
 /*
 static QDateTime fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
 */
-$staticMethod=|QDateTime|fromString,fromString1|const QString &,Qt::DateFormat=Qt::TextDate
+$internalStaticMethod=|QDateTime|fromString,fromString1|const QString &,Qt::DateFormat=Qt::TextDate
 
 /*
 static QDateTime fromString ( const QString & string, const QString & format )
 */
-$staticMethod=|QDateTime|fromString,fromString2|const QString &,const QString &
+$internalStaticMethod=|QDateTime|fromString,fromString2|const QString &,const QString &
 
 //[1]QDateTime fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
 //[2]QDateTime fromString ( const QString & string, const QString & format )
@@ -306,11 +298,11 @@ HB_FUNC_STATIC( QDATETIME_FROMSTRING )
 {
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QDATETIME_FROMSTRING1 );
+    QDateTime_fromString1();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QDATETIME_FROMSTRING1 );
+    QDateTime_fromString2();
   }
   else
   {

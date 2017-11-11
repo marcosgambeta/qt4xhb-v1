@@ -12,11 +12,6 @@ CLASS QFileInfo
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
    METHOD new
    METHOD delete
    METHOD absoluteDir
@@ -57,9 +52,6 @@ CLASS QFileInfo
    METHOD permissions
    METHOD refresh
    METHOD setCaching
-   METHOD setFile1
-   METHOD setFile2
-   METHOD setFile3
    METHOD setFile
    METHOD size
    METHOD suffix
@@ -91,27 +83,27 @@ $destructor
 /*
 QFileInfo()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QFileInfo(const QString & file)
 */
-$constructor=|new2|const QString &
+$internalConstructor=|new2|const QString &
 
 /*
 QFileInfo(const QFile & file)
 */
-$constructor=|new3|const QFile &
+$internalConstructor=|new3|const QFile &
 
 /*
 QFileInfo(const QDir & dir, const QString & file)
 */
-$constructor=|new4|const QDir &,const QString &
+$internalConstructor=|new4|const QDir &,const QString &
 
 /*
 QFileInfo(const QFileInfo & fileinfo)
 */
-$constructor=|new5|const QFileInfo &
+$internalConstructor=|new5|const QFileInfo &
 
 //[1]QFileInfo()
 //[2]QFileInfo(const QString & file)
@@ -123,23 +115,23 @@ HB_FUNC_STATIC( QFILEINFO_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QFILEINFO_NEW1 );
+    QFileInfo_new1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QFILEINFO_NEW2 );
+    QFileInfo_new2();
   }
   else if( ISNUMPAR(1) && ISQFILE(1) )
   {
-    HB_FUNC_EXEC( QFILEINFO_NEW3 );
+    QFileInfo_new3();
   }
   else if( ISNUMPAR(2) && ISQDIR(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QFILEINFO_NEW4 );
+    QFileInfo_new4();
   }
   else if( ISNUMPAR(1) && ISQFILEINFO(1) )
   {
-    HB_FUNC_EXEC( QFILEINFO_NEW5 );
+    QFileInfo_new5();
   }
   else
   {
@@ -342,17 +334,17 @@ $method=|void|setCaching|bool
 /*
 void setFile(const QString & file)
 */
-$method=|void|setFile,setFile1|const QString &
+$internalMethod=|void|setFile,setFile1|const QString &
 
 /*
 void setFile(const QFile & file)
 */
-$method=|void|setFile,setFile2|const QFile &
+$internalMethod=|void|setFile,setFile2|const QFile &
 
 /*
 void setFile(const QDir & dir, const QString & file)
 */
-$method=|void|setFile,setFile3|const QDir &,const QString &
+$internalMethod=|void|setFile,setFile3|const QDir &,const QString &
 
 //[1]void setFile(const QString & file)
 //[2]void setFile(const QFile & file)
@@ -362,15 +354,15 @@ HB_FUNC_STATIC( QFILEINFO_SETFILE )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QFILEINFO_SETFILE1 );
+    QFileInfo_setFile1();
   }
   else if( ISNUMPAR(1) && ISQFILE(1) )
   {
-    HB_FUNC_EXEC( QFILEINFO_SETFILE2 );
+    QFileInfo_setFile2();
   }
   else if( ISNUMPAR(2) && ISQDIR(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QFILEINFO_SETFILE3 );
+    QFileInfo_setFile3();
   }
   else
   {

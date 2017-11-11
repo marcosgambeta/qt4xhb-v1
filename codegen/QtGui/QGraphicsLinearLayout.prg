@@ -9,8 +9,6 @@ REQUEST QSIZEF
 
 CLASS QGraphicsLinearLayout INHERIT QGraphicsLayout
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD addItem
@@ -52,12 +50,12 @@ $destructor
 /*
 QGraphicsLinearLayout ( QGraphicsLayoutItem * parent = 0 )
 */
-$constructor=|new1|QGraphicsLayoutItem *=0
+$internalConstructor=|new1|QGraphicsLayoutItem *=0
 
 /*
 QGraphicsLinearLayout ( Qt::Orientation orientation, QGraphicsLayoutItem * parent = 0 )
 */
-$constructor=|new2|Qt::Orientation,QGraphicsLayoutItem *=0
+$internalConstructor=|new2|Qt::Orientation,QGraphicsLayoutItem *=0
 
 //[1]QGraphicsLinearLayout ( QGraphicsLayoutItem * parent = 0 )
 //[2]QGraphicsLinearLayout ( Qt::Orientation orientation, QGraphicsLayoutItem * parent = 0 )
@@ -66,11 +64,11 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQGRAPHICSLAYOUTITEM(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSLINEARLAYOUT_NEW1 );
+    QGraphicsLinearLayout_new1();
   }
   else if( ISBETWEEN(1,2) && ISNUM(1) && (ISQGRAPHICSLAYOUTITEM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSLINEARLAYOUT_NEW2 );
+    QGraphicsLinearLayout_new2();
   }
   else
   {

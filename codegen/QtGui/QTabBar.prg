@@ -15,8 +15,6 @@ CLASS QTabBar INHERIT QWidget
 
    METHOD new
    METHOD delete
-   METHOD addTab1
-   METHOD addTab2
    METHOD addTab
    METHOD count
    METHOD currentIndex
@@ -25,8 +23,6 @@ CLASS QTabBar INHERIT QWidget
    METHOD elideMode
    METHOD expanding
    METHOD iconSize
-   METHOD insertTab1
-   METHOD insertTab2
    METHOD insertTab
    METHOD isMovable
    METHOD isTabEnabled
@@ -91,23 +87,19 @@ $destructor
 /*
 QTabBar ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QTABBAR_NEW )
-{
-  QTabBar * o = new QTabBar ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QWidget *=0
 
 $deleteMethod
 
 /*
 int addTab ( const QString & text )
 */
-$method=|int|addTab,addTab1|const QString &
+$internalMethod=|int|addTab,addTab1|const QString &
 
 /*
 int addTab ( const QIcon & icon, const QString & text )
 */
-$method=|int|addTab,addTab2|const QIcon &,const QString &
+$internalMethod=|int|addTab,addTab2|const QIcon &,const QString &
 
 //[1]int addTab ( const QString & text )
 //[2]int addTab ( const QIcon & icon, const QString & text )
@@ -116,11 +108,11 @@ HB_FUNC_STATIC( QTABBAR_ADDTAB )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QTABBAR_ADDTAB1 );
+    QTabBar_addTab1();
   }
   else if( ISNUMPAR(2) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QTABBAR_ADDTAB2 );
+    QTabBar_addTab2();
   }
   else
   {
@@ -166,12 +158,12 @@ $method=|QSize|iconSize|
 /*
 int insertTab ( int index, const QString & text )
 */
-$method=|int|insertTab,insertTab1|int,const QString &
+$internalMethod=|int|insertTab,insertTab1|int,const QString &
 
 /*
 int insertTab ( int index, const QIcon & icon, const QString & text )
 */
-$method=|int|insertTab,insertTab2|int,const QIcon &,const QString &
+$internalMethod=|int|insertTab,insertTab2|int,const QIcon &,const QString &
 
 //[1]int insertTab ( int index, const QString & text )
 //[2]int insertTab ( int index, const QIcon & icon, const QString & text )
@@ -180,11 +172,11 @@ HB_FUNC_STATIC( QTABBAR_INSERTTAB )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QTABBAR_INSERTTAB1 );
+    QTabBar_insertTab1();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && (ISQICON(2)||ISCHAR(2)) && ISCHAR(3) )
   {
-    HB_FUNC_EXEC( QTABBAR_INSERTTAB2 );
+    QTabBar_insertTab2();
   }
   else
   {

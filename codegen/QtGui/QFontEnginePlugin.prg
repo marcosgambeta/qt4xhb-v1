@@ -40,14 +40,8 @@ HB_FUNC_STATIC( QFONTENGINEPLUGIN_AVAILABLEFONTENGINES )
   if( obj )
   {
     QList<QFontEngineInfo> list = obj->availableFontEngines ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QFONTENGINEINFO" );
-    #else
-    pDynSym = hb_dynsymFindName( "QFONTENGINEINFO" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QFONTENGINEINFO" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

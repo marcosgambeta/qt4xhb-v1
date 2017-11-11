@@ -13,12 +13,6 @@ CLASS QIcon
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
-   METHOD new6
    METHOD new
    METHOD delete
    METHOD actualSize
@@ -28,8 +22,6 @@ CLASS QIcon
    METHOD cacheKey
    METHOD isNull
    METHOD name
-   METHOD paint1
-   METHOD paint2
    METHOD paint
    METHOD pixmap1
    METHOD pixmap2
@@ -65,32 +57,32 @@ $destructor
 /*
 QIcon ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QIcon ( const QPixmap & pixmap )
 */
-$constructor=|new2|const QPixmap &
+$internalConstructor=|new2|const QPixmap &
 
 /*
 QIcon ( const QIcon & other )
 */
-$constructor=|new3|const QIcon &
+$internalConstructor=|new3|const QIcon &
 
 /*
 QIcon ( const QString & fileName )
 */
-$constructor=|new4|const QString &
+$internalConstructor=|new4|const QString &
 
 /*
 QIcon ( QIconEngine * engine )
 */
-$constructor=|new5|QIconEngine *
+$internalConstructor=|new5|QIconEngine *
 
 /*
 QIcon ( QIconEngineV2 * engine )
 */
-$constructor=|new6|QIconEngineV2 *
+$internalConstructor=|new6|QIconEngineV2 *
 
 //[1]QIcon ()
 //[2]QIcon ( const QPixmap & pixmap )
@@ -103,27 +95,27 @@ HB_FUNC_STATIC( QICON_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QICON_NEW1 );
+    QIcon_new1();
   }
   else if( ISNUMPAR(1) && ISQPIXMAP(1) )
   {
-    HB_FUNC_EXEC( QICON_NEW2 );
+    QIcon_new2();
   }
   else if( ISNUMPAR(1) && ISQICON(1) )
   {
-    HB_FUNC_EXEC( QICON_NEW3 );
+    QIcon_new3();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QICON_NEW4 );
+    QIcon_new4();
   }
   else if( ISNUMPAR(1) && ISQICONENGINE(1) )
   {
-    HB_FUNC_EXEC( QICON_NEW5 );
+    QIcon_new5();
   }
   else if( ISNUMPAR(1) && ISQICONENGINEV2(1) )
   {
-    HB_FUNC_EXEC( QICON_NEW6 );
+    QIcon_new6();
   }
   else
   {
@@ -160,14 +152,8 @@ HB_FUNC_STATIC( QICON_AVAILABLESIZES )
     int par1 = ISNIL(1)? (int) QIcon::Normal : hb_parni(1);
     int par2 = ISNIL(2)? (int) QIcon::Off : hb_parni(2);
     QList<QSize> list = obj->availableSizes ( (QIcon::Mode) par1, (QIcon::State) par2 );
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QSIZE" );
-    #else
-    pDynSym = hb_dynsymFindName( "QSIZE" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QSIZE" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -216,12 +202,12 @@ $method=|QString|name|
 /*
 void paint ( QPainter * painter, const QRect & rect, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
 */
-$method=|void|paint,paint1|QPainter *,const QRect &,Qt::Alignment=Qt::AlignCenter,QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
+$internalMethod=|void|paint,paint1|QPainter *,const QRect &,Qt::Alignment=Qt::AlignCenter,QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
 
 /*
 void paint ( QPainter * painter, int x, int y, int w, int h, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
 */
-$method=|void|paint,paint2|QPainter *,int,int,int,int,Qt::Alignment=Qt::AlignCenter,QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
+$internalMethod=|void|paint,paint2|QPainter *,int,int,int,int,Qt::Alignment=Qt::AlignCenter,QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
 
 //[1]void paint ( QPainter * painter, const QRect & rect, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
 //[2]void paint ( QPainter * painter, int x, int y, int w, int h, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
@@ -230,11 +216,11 @@ HB_FUNC_STATIC( QICON_PAINT )
 {
   if( ISBETWEEN(2,5) && ISQPAINTER(1) && ISQRECT(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
   {
-    HB_FUNC_EXEC( QICON_PAINT1 );
+    QIcon_paint1();
   }
   else if( ISBETWEEN(5,8) && ISQPAINTER(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && (ISNUM(6)||ISNIL(6)) && (ISNUM(7)||ISNIL(7)) && (ISNUM(8)||ISNIL(8)) )
   {
-    HB_FUNC_EXEC( QICON_PAINT2 );
+    QIcon_paint2();
   }
   else
   {

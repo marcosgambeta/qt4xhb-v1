@@ -12,8 +12,6 @@ CLASS QAudioDeviceInfo
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD deviceName
@@ -56,12 +54,12 @@ $destructor
 /*
 QAudioDeviceInfo ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QAudioDeviceInfo ( const QAudioDeviceInfo & other )
 */
-$constructor=|new2|const QAudioDeviceInfo &
+$internalConstructor=|new2|const QAudioDeviceInfo &
 
 //[1]QAudioDeviceInfo ()
 //[2]QAudioDeviceInfo ( const QAudioDeviceInfo & other )
@@ -70,11 +68,11 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QAUDIODEVICEINFO_NEW1 );
+    QAudioDeviceInfo_new1();
   }
   else if( ISNUMPAR(1) && ISQAUDIODEVICEINFO(1) )
   {
-    HB_FUNC_EXEC( QAUDIODEVICEINFO_NEW2 );
+    QAudioDeviceInfo_new2();
   }
   else
   {
@@ -119,8 +117,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDFREQUENCIES )
   if( obj )
   {
     QList<int> list = obj->supportedFrequencies ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -142,8 +139,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLERATES )
   if( obj )
   {
     QList<int> list = obj->supportedSampleRates ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -165,8 +161,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDCHANNELS )
   if( obj )
   {
     QList<int> list = obj->supportedChannels ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -188,8 +183,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDCHANNELCOUNTS )
   if( obj )
   {
     QList<int> list = obj->supportedChannelCounts ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -211,8 +205,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLESIZES )
   if( obj )
   {
     QList<int> list = obj->supportedSampleSizes ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -234,8 +227,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDBYTEORDERS )
   if( obj )
   {
     QList<QAudioFormat::Endian> list = obj->supportedByteOrders ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -257,8 +249,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLETYPES )
   if( obj )
   {
     QList<QAudioFormat::SampleType> list = obj->supportedSampleTypes ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -281,14 +272,8 @@ static QList<QAudioDeviceInfo> availableDevices ( QAudio::Mode mode )
 HB_FUNC_STATIC( QAUDIODEVICEINFO_AVAILABLEDEVICES )
 {
   QList<QAudioDeviceInfo> list = QAudioDeviceInfo::availableDevices ( (QAudio::Mode) hb_parni(1) );
-  PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QAUDIODEVICEINFO" );
-  #else
-  pDynSym = hb_dynsymFindName( "QAUDIODEVICEINFO" );
-  #endif
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QAUDIODEVICEINFO" );
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {

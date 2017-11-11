@@ -30,8 +30,6 @@ CLASS QAbstractItemView INHERIT QAbstractScrollArea
    METHOD iconSize
    METHOD indexAt
    METHOD indexWidget
-   METHOD itemDelegate1
-   METHOD itemDelegate2
    METHOD itemDelegate
    METHOD itemDelegateForColumn
    METHOD itemDelegateForRow
@@ -180,12 +178,12 @@ $method=|QWidget *|indexWidget|const QModelIndex &
 /*
 QAbstractItemDelegate * itemDelegate () const
 */
-$method=|QAbstractItemDelegate *|itemDelegate,itemDelegate1|
+$internalMethod=|QAbstractItemDelegate *|itemDelegate,itemDelegate1|
 
 /*
 QAbstractItemDelegate * itemDelegate ( const QModelIndex & index ) const
 */
-$method=|QAbstractItemDelegate *|itemDelegate,itemDelegate2|const QModelIndex &
+$internalMethod=|QAbstractItemDelegate *|itemDelegate,itemDelegate2|const QModelIndex &
 
 //[1]QAbstractItemDelegate * itemDelegate () const
 //[2]QAbstractItemDelegate * itemDelegate ( const QModelIndex & index ) const
@@ -194,11 +192,11 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATE )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QABSTRACTITEMVIEW_ITEMDELEGATE1 );
+    QAbstractItemView_itemDelegate1();
   }
   else if( ISNUMPAR(1) && ISQMODELINDEX(1) )
   {
-    HB_FUNC_EXEC( QABSTRACTITEMVIEW_ITEMDELEGATE2 );
+    QAbstractItemView_itemDelegate2();
   }
   else
   {

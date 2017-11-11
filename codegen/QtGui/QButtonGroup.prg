@@ -10,8 +10,6 @@ CLASS QButtonGroup INHERIT QObject
 
    METHOD new
    METHOD delete
-   METHOD addButton1
-   METHOD addButton2
    METHOD addButton
    METHOD button
    METHOD buttons
@@ -54,12 +52,12 @@ $deleteMethod
 /*
 void addButton ( QAbstractButton * button )
 */
-$method=|void|addButton,addButton1|QAbstractButton *
+$internalMethod=|void|addButton,addButton1|QAbstractButton *
 
 /*
 void addButton ( QAbstractButton * button, int id )
 */
-$method=|void|addButton,addButton2|QAbstractButton *,int
+$internalMethod=|void|addButton,addButton2|QAbstractButton *,int
 
 //[1]void addButton ( QAbstractButton * button )
 //[2]void addButton ( QAbstractButton * button, int id )
@@ -68,11 +66,11 @@ HB_FUNC_STATIC( QBUTTONGROUP_ADDBUTTON )
 {
   if( ISNUMPAR(1) && ISQABSTRACTBUTTON(1) )
   {
-    HB_FUNC_EXEC( QBUTTONGROUP_ADDBUTTON1 );
+    QButtonGroup_addButton1();
   }
   else if( ISNUMPAR(2) && ISQABSTRACTBUTTON(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QBUTTONGROUP_ADDBUTTON2 );
+    QButtonGroup_addButton2();
   }
   else
   {
@@ -95,14 +93,8 @@ HB_FUNC_STATIC( QBUTTONGROUP_BUTTONS )
   if( obj )
   {
     QList<QAbstractButton *> list = obj->buttons ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QABSTRACTBUTTON" );
-    #else
-    pDynSym = hb_dynsymFindName( "QABSTRACTBUTTON" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTBUTTON" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

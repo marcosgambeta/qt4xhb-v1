@@ -13,7 +13,6 @@ CLASS QCalendarWidget INHERIT QWidget
    METHOD new
    METHOD delete
    METHOD dateEditAcceptDelay
-   METHOD dateTextFormat2
    METHOD dateTextFormat
    METHOD firstDayOfWeek
    METHOD headerTextFormat
@@ -90,11 +89,12 @@ $method=|int|dateEditAcceptDelay|
 /*
 QMap<QDate, QTextCharFormat> dateTextFormat () const
 */
+%% TODO: implementar
 
 /*
 QTextCharFormat dateTextFormat ( const QDate & date ) const
 */
-$method=|QTextCharFormat|dateTextFormat,dateTextFormat2|const QDate &
+$internalMethod=|QTextCharFormat|dateTextFormat,dateTextFormat2|const QDate &
 
 //[1]QMap<QDate, QTextCharFormat> dateTextFormat () const
 //[2]QTextCharFormat dateTextFormat ( const QDate & date ) const
@@ -103,16 +103,16 @@ HB_FUNC_STATIC( QCALENDARWIDGET_DATETEXTFORMAT )
 {
   //if( ISNUMPAR(0) )
   //{
-  //  HB_FUNC_EXEC( QCALENDARWIDGET_DATETEXTFORMAT1 );
+  //  QCalendarWidget_dateTextFormat1();
   //}
-  //else if( ISNUMPAR(1) && ISQDATE(1) )
-  //{
-    HB_FUNC_EXEC( QCALENDARWIDGET_DATETEXTFORMAT2 );
-  //}
-  //else
-  //{
-  //  hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  //}
+  if( ISNUMPAR(1) && ISQDATE(1) )
+  {
+    QCalendarWidget_dateTextFormat2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*

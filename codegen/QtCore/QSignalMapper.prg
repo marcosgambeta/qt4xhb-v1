@@ -10,19 +10,9 @@ CLASS QSignalMapper INHERIT QObject
 
    METHOD new
    METHOD delete
-   METHOD setMapping1
-   METHOD setMapping2
-   METHOD setMapping3
-   METHOD setMapping4
    METHOD setMapping
    METHOD removeMappings
-   METHOD mapping1
-   METHOD mapping2
-   METHOD mapping3
-   METHOD mapping4
    METHOD mapping
-   METHOD map1
-   METHOD map2
    METHOD map
 
    METHOD onMapped1
@@ -54,22 +44,22 @@ $deleteMethod
 /*
 void setMapping(QObject *sender, int id)
 */
-$method=|void|setMapping,setMapping1|QObject *,int
+$internalMethod=|void|setMapping,setMapping1|QObject *,int
 
 /*
 void setMapping(QObject *sender, const QString &text)
 */
-$method=|void|setMapping,setMapping2|QObject *,const QString &
+$internalMethod=|void|setMapping,setMapping2|QObject *,const QString &
 
 /*
 void setMapping(QObject *sender, QWidget *widget)
 */
-$method=|void|setMapping,setMapping3|QObject *,QWidget *
+$internalMethod=|void|setMapping,setMapping3|QObject *,QWidget *
 
 /*
 void setMapping(QObject *sender, QObject *object)
 */
-$method=|void|setMapping,setMapping4|QObject *,QObject *
+$internalMethod=|void|setMapping,setMapping4|QObject *,QObject *
 
 //[1]void setMapping(QObject *sender, int id)
 //[2]void setMapping(QObject *sender, const QString &text)
@@ -80,19 +70,19 @@ HB_FUNC_STATIC( QSIGNALMAPPER_SETMAPPING )
 {
   if( ISNUMPAR(2) && ISQOBJECT(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QSIGNALMAPPER_SETMAPPING1 );
+    QSignalMapper_setMapping1();
   }
   else if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QSIGNALMAPPER_SETMAPPING2 );
+    QSignalMapper_setMapping2();
   }
   else if( ISNUMPAR(2) && ISQOBJECT(1) && ISQWIDGET(2) )
   {
-    HB_FUNC_EXEC( QSIGNALMAPPER_SETMAPPING3 );
+    QSignalMapper_setMapping3();
   }
   else if( ISNUMPAR(2) && ISQOBJECT(1) && ISQOBJECT(2) )
   {
-    HB_FUNC_EXEC( QSIGNALMAPPER_SETMAPPING4 );
+    QSignalMapper_setMapping4();
   }
   else
   {
@@ -108,22 +98,22 @@ $method=|void|removeMappings|QObject *
 /*
 QObject *mapping(int id) const
 */
-$method=|QObject *|mapping,mapping1|int
+$internalMethod=|QObject *|mapping,mapping1|int
 
 /*
 QObject *mapping(const QString &text) const
 */
-$method=|QObject *|mapping,mapping2|const QString &
+$internalMethod=|QObject *|mapping,mapping2|const QString &
 
 /*
 QObject *mapping(QWidget *widget) const
 */
-$method=|QObject *|mapping,mapping3|QWidget *
+$internalMethod=|QObject *|mapping,mapping3|QWidget *
 
 /*
 QObject *mapping(QObject *object) const
 */
-$method=|QObject *|mapping,mapping4|QObject *
+$internalMethod=|QObject *|mapping,mapping4|QObject *
 
 //[1]QObject *mapping(int id) const
 //[2]QObject *mapping(const QString &text) const
@@ -134,19 +124,19 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QSIGNALMAPPER_MAPPING1 );
+    QSignalMapper_mapping1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QSIGNALMAPPER_MAPPING2 );
+    QSignalMapper_mapping2();
   }
   else if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    HB_FUNC_EXEC( QSIGNALMAPPER_MAPPING3 );
+    QSignalMapper_mapping3();
   }
   else if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
-    HB_FUNC_EXEC( QSIGNALMAPPER_MAPPING4 );
+    QSignalMapper_mapping4();
   }
   else
   {
@@ -157,12 +147,12 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING )
 /*
 void map()
 */
-$method=|void|map,map1|
+$internalMethod=|void|map,map1|
 
 /*
 void map(QObject *sender)
 */
-$method=|void|map,map2|QObject *
+$internalMethod=|void|map,map2|QObject *
 
 //[1]void map()
 //[2]void map(QObject *sender)
@@ -171,11 +161,11 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAP )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSIGNALMAPPER_MAP1 );
+    QSignalMapper_map1();
   }
   else if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
-    HB_FUNC_EXEC( QSIGNALMAPPER_MAP2 );
+    QSignalMapper_map2();
   }
   else
   {

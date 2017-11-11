@@ -13,8 +13,6 @@ CLASS QCryptographicHash
 
    METHOD new
    METHOD delete
-   METHOD addData1
-   METHOD addData2
    METHOD addData
    METHOD reset
    METHOD result
@@ -50,12 +48,12 @@ $deleteMethod
 /*
 void addData ( const char * data, int length )
 */
-$method=|void|addData,addData1|const char *,int
+$internalMethod=|void|addData,addData1|const char *,int
 
 /*
 void addData ( const QByteArray & data )
 */
-$method=|void|addData,addData2|const QByteArray &
+$internalMethod=|void|addData,addData2|const QByteArray &
 
 //[1]void addData ( const char * data, int length )
 //[2]void addData ( const QByteArray & data )
@@ -64,11 +62,11 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_ADDDATA )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QCRYPTOGRAPHICHASH_ADDDATA1 );
+    QCryptographicHash_addData1();
   }
   else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    HB_FUNC_EXEC( QCRYPTOGRAPHICHASH_ADDDATA2 );
+    QCryptographicHash_addData2();
   }
   else
   {

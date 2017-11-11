@@ -8,8 +8,6 @@ REQUEST QURL
 
 CLASS QFileOpenEvent INHERIT QEvent
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD file
@@ -35,12 +33,12 @@ $destructor
 /*
 QFileOpenEvent(const QString &file)
 */
-$constructor=|new1|const QString &
+$internalConstructor=|new1|const QString &
 
 /*
 QFileOpenEvent(const QUrl &url)
 */
-$constructor=|new2|const QUrl &
+$internalConstructor=|new2|const QUrl &
 
 //[1]QFileOpenEvent(const QString &file)
 //[2]QFileOpenEvent(const QUrl &url)
@@ -49,11 +47,11 @@ HB_FUNC_STATIC( QFILEOPENEVENT_NEW )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QFILEOPENEVENT_NEW1 );
+    QFileOpenEvent_new1();
   }
   else if( ISNUMPAR(1) && ISQURL(1) )
   {
-    HB_FUNC_EXEC( QFILEOPENEVENT_NEW2 );
+    QFileOpenEvent_new2();
   }
   else
   {

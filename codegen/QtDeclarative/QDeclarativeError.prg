@@ -11,8 +11,6 @@ CLASS QDeclarativeError
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD column
@@ -49,12 +47,12 @@ $destructor
 /*
 QDeclarativeError ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QDeclarativeError ( const QDeclarativeError & other )
 */
-$constructor=|new2|const QDeclarativeError &
+$internalConstructor=|new2|const QDeclarativeError &
 
 //[1]QDeclarativeError ()
 //[2]QDeclarativeError ( const QDeclarativeError & other )
@@ -63,11 +61,11 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDECLARATIVEERROR_NEW1 );
+    QDeclarativeError_new1();
   }
   else if( ISNUMPAR(1) && ISQDECLARATIVEERROR(1) )
   {
-    HB_FUNC_EXEC( QDECLARATIVEERROR_NEW2 );
+    QDeclarativeError_new2();
   }
   else
   {

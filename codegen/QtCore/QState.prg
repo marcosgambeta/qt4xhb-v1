@@ -10,13 +10,8 @@ REQUEST QABSTRACTSTATE
 
 CLASS QState INHERIT QAbstractState
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
-   METHOD addTransition1
-   METHOD addTransition2
-   METHOD addTransition3
    METHOD addTransition
    METHOD assignProperty
    METHOD childMode
@@ -50,12 +45,12 @@ $destructor
 /*
 QState ( QState * parent = 0 )
 */
-$constructor=|new1|QState *=0
+$internalConstructor=|new1|QState *=0
 
 /*
 QState ( ChildMode childMode, QState * parent = 0 )
 */
-$constructor=|new2|QState::ChildMode,QState *=0
+$internalConstructor=|new2|QState::ChildMode,QState *=0
 
 //[1]QState ( QState * parent = 0 )
 //[2]QState ( ChildMode childMode, QState * parent = 0 )
@@ -64,11 +59,11 @@ HB_FUNC_STATIC( QSTATE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQSTATE(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QSTATE_NEW1 );
+    QState_new1();
   }
   else if( ISBETWEEN(1,2) && ISNUM(1) && (ISQSTATE(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QSTATE_NEW2 );
+    QState_new2();
   }
   else
   {
@@ -81,17 +76,17 @@ $deleteMethod
 /*
 void addTransition ( QAbstractTransition * transition )
 */
-$method=|void|addTransition,addTransition1|QAbstractTransition *
+$internalMethod=|void|addTransition,addTransition1|QAbstractTransition *
 
 /*
 QSignalTransition * addTransition ( QObject * sender, const char * signal, QAbstractState * target )
 */
-$method=|QSignalTransition *|addTransition,addTransition2|QObject *,const char *,QAbstractState *
+$internalMethod=|QSignalTransition *|addTransition,addTransition2|QObject *,const char *,QAbstractState *
 
 /*
 QAbstractTransition * addTransition ( QAbstractState * target )
 */
-$method=|QAbstractTransition *|addTransition,addTransition3|QAbstractState *
+$internalMethod=|QAbstractTransition *|addTransition,addTransition3|QAbstractState *
 
 //[1]void addTransition ( QAbstractTransition * transition )
 //[2]QSignalTransition * addTransition ( QObject * sender, const char * signal, QAbstractState * target )
@@ -101,15 +96,15 @@ HB_FUNC_STATIC( QSTATE_ADDTRANSITION )
 {
   if( ISNUMPAR(1) && ISQABSTRACTTRANSITION(1) )
   {
-    HB_FUNC_EXEC( QSTATE_ADDTRANSITION1 );
+    QState_addTransition1();
   }
   else if( ISNUMPAR(3) && ISQOBJECT(1) && ISCHAR(2) && ISQABSTRACTSTATE(3) )
   {
-    HB_FUNC_EXEC( QSTATE_ADDTRANSITION2 );
+    QState_addTransition2();
   }
   else if( ISNUMPAR(1) && ISQABSTRACTSTATE(1) )
   {
-    HB_FUNC_EXEC( QSTATE_ADDTRANSITION3 );
+    QState_addTransition3();
   }
   else
   {
@@ -167,14 +162,8 @@ HB_FUNC_STATIC( QSTATE_TRANSITIONS )
   if( obj )
   {
     QList<QAbstractTransition *> list = obj->transitions ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QABSTRACTTRANSITION" );
-    #else
-    pDynSym = hb_dynsymFindName( "QABSTRACTTRANSITION" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTTRANSITION" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

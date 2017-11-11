@@ -13,11 +13,6 @@ CLASS QCursor
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
    METHOD new
    METHOD delete
    METHOD bitmap
@@ -27,8 +22,6 @@ CLASS QCursor
    METHOD setShape
    METHOD shape
    METHOD pos
-   METHOD setPos1
-   METHOD setPos2
    METHOD setPos
 
    METHOD newFrom
@@ -56,27 +49,37 @@ $destructor
 /*
 QCursor ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QCursor ( Qt::CursorShape shape )
 */
-$constructor=|new2|Qt::CursorShape
+$internalConstructor=|new2|Qt::CursorShape
 
 /*
 QCursor ( const QBitmap & bitmap, const QBitmap & mask, int hotX = -1, int hotY = -1 )
 */
-$constructor=|new3|const QBitmap &,const QBitmap &,int=-1,int=-1
+$internalConstructor=|new3|const QBitmap &,const QBitmap &,int=-1,int=-1
 
 /*
 QCursor ( const QPixmap & pixmap, int hotX = -1, int hotY = -1 )
 */
-$constructor=|new4|const QPixmap &,int=-1,int=-1
+$internalConstructor=|new4|const QPixmap &,int=-1,int=-1
 
 /*
 QCursor ( const QCursor & c )
 */
-$constructor=|new5|const QCursor &
+$internalConstructor=|new5|const QCursor &
+
+/*
+QCursor ( HCURSOR cursor )
+*/
+%% TODO: implementar
+
+/*
+QCursor ( Qt::HANDLE handle )
+*/
+%% TODO: implementar
 
 //[1]QCursor ()
 //[2]QCursor ( Qt::CursorShape shape )
@@ -90,23 +93,23 @@ HB_FUNC_STATIC( QCURSOR_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QCURSOR_NEW1 );
+    QCursor_new1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QCURSOR_NEW2 );
+    QCursor_new2();
   }
   else if( ISBETWEEN(2,4) && ISQBITMAP(1) && ISQBITMAP(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QCURSOR_NEW3 );
+    QCursor_new3();
   }
   else if( ISBETWEEN(1,3) && ISQPIXMAP(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QCURSOR_NEW4 );
+    QCursor_new4();
   }
   else if( ISNUMPAR(1) && ISQCURSOR(1) )
   {
-    HB_FUNC_EXEC( QCURSOR_NEW5 );
+    QCursor_new5();
   }
   else
   {
@@ -154,12 +157,12 @@ $staticMethod=|QPoint|pos|
 /*
 static void setPos ( int x, int y )
 */
-$staticMethod=|void|setPos,setPos1|int,int
+$internalStaticMethod=|void|setPos,setPos1|int,int
 
 /*
 static void setPos ( const QPoint & p )
 */
-$staticMethod=|void|setPos,setPos2|const QPoint &
+$internalStaticMethod=|void|setPos,setPos2|const QPoint &
 
 //[1]void setPos ( int x, int y )
 //[2]void setPos ( const QPoint & p )
@@ -168,11 +171,11 @@ HB_FUNC_STATIC( QCURSOR_SETPOS )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QCURSOR_SETPOS1 );
+    QCursor_setPos1();
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QCURSOR_SETPOS2 );
+    QCursor_setPos2();
   }
   else
   {

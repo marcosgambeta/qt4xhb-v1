@@ -8,13 +8,9 @@ REQUEST QCOLOR
 
 CLASS QColorDialog INHERIT QDialog
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD currentColor
-   METHOD open1
-   METHOD open2
    METHOD open
    METHOD options
    METHOD selectedColor
@@ -25,8 +21,6 @@ CLASS QColorDialog INHERIT QDialog
    METHOD setVisible
    METHOD customColor
    METHOD customCount
-   METHOD getColor1
-   METHOD getColor2
    METHOD getColor
    METHOD setCustomColor
    METHOD setStandardColor
@@ -51,12 +45,12 @@ $destructor
 /*
 QColorDialog ( QWidget * parent = 0 )
 */
-$constructor=|new1|QWidget *=0
+$internalConstructor=|new1|QWidget *=0
 
 /*
 QColorDialog ( const QColor & initial, QWidget * parent = 0 )
 */
-$constructor=|new2|const QColor &,QWidget *=0
+$internalConstructor=|new2|const QColor &,QWidget *=0
 
 //[1]QColorDialog ( QWidget * parent = 0 )
 //[2]QColorDialog ( const QColor & initial, QWidget * parent = 0 )
@@ -65,11 +59,11 @@ HB_FUNC_STATIC( QCOLORDIALOG_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QCOLORDIALOG_NEW1 );
+    QColorDialog_new1();
   }
   else if( ISBETWEEN(1,2) && (ISQCOLOR(1)||ISCHAR(1)) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QCOLORDIALOG_NEW2 );
+    QColorDialog_new2();
   }
   else
   {
@@ -87,12 +81,12 @@ $method=|QColor|currentColor|
 /*
 void open ()
 */
-$method=|void|open,open1|
+$internalMethod=|void|open,open1|
 
 /*
 void open ( QObject * receiver, const char * member )
 */
-$method=|void|open,open2|QObject *,const char *
+$internalMethod=|void|open,open2|QObject *,const char *
 
 //[1]void open ()
 //[2]void open ( QObject * receiver, const char * member )
@@ -101,11 +95,11 @@ HB_FUNC_STATIC( QCOLORDIALOG_OPEN )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QCOLORDIALOG_OPEN1 );
+    QColorDialog_open1();
   }
   else if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QCOLORDIALOG_OPEN2 );
+    QColorDialog_open2();
   }
   else
   {
@@ -161,12 +155,12 @@ $staticMethod=|int|customCount|
 /*
 static QColor getColor ( const QColor & initial, QWidget * parent, const QString & title, ColorDialogOptions options = 0 )
 */
-$staticMethod=|QColor|getColor,getColor1|const QColor &,QWidget *,const QString &,QColorDialog::ColorDialogOptions=0
+$internalStaticMethod=|QColor|getColor,getColor1|const QColor &,QWidget *,const QString &,QColorDialog::ColorDialogOptions=0
 
 /*
 static QColor getColor ( const QColor & initial = Qt::white, QWidget * parent = 0 )
 */
-$staticMethod=|QColor|getColor,getColor2|const QColor &=Qt::white,QWidget *=0
+$internalStaticMethod=|QColor|getColor,getColor2|const QColor &=Qt::white,QWidget *=0
 
 //[1]QColor getColor ( const QColor & initial, QWidget * parent, const QString & title, ColorDialogOptions options = 0 )
 //[2]QColor getColor ( const QColor & initial = Qt::white, QWidget * parent = 0 )
@@ -175,11 +169,11 @@ HB_FUNC_STATIC( QCOLORDIALOG_GETCOLOR )
 {
   if( ISBETWEEN(3,4) && (ISQCOLOR(1)||ISCHAR(1)) && ISQWIDGET(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QCOLORDIALOG_GETCOLOR1 );
+    QColorDialog_getColor1();
   }
   else if( ISBETWEEN(0,2) && (ISQCOLOR(1)||ISCHAR(1)||ISNIL(1)) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QCOLORDIALOG_GETCOLOR2 );
+    QColorDialog_getColor2();
   }
   else
   {

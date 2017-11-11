@@ -12,37 +12,19 @@ CLASS QRegion
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
-   METHOD new6
    METHOD new
    METHOD delete
    METHOD boundingRect
-   METHOD contains1
-   METHOD contains2
    METHOD contains
-   METHOD intersected1
-   METHOD intersected2
    METHOD intersected
-   METHOD intersects1
-   METHOD intersects2
    METHOD intersects
    METHOD isEmpty
    METHOD rectCount
    METHOD rects
    METHOD subtracted
    METHOD swap
-   METHOD translate1
-   METHOD translate2
    METHOD translate
-   METHOD translated1
-   METHOD translated2
    METHOD translated
-   METHOD united1
-   METHOD united2
    METHOD united
    METHOD xored
 
@@ -71,32 +53,32 @@ $destructor
 /*
 QRegion ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QRegion ( int x, int y, int w, int h, RegionType t = Rectangle )
 */
-$constructor=|new2|int,int,int,int,QRegion::RegionType=QRegion::Rectangle
+$internalConstructor=|new2|int,int,int,int,QRegion::RegionType=QRegion::Rectangle
 
 /*
 QRegion ( const QPolygon & a, Qt::FillRule fillRule = Qt::OddEvenFill )
 */
-$constructor=|new3|const QPolygon &,Qt::FillRule=Qt::OddEvenFill
+$internalConstructor=|new3|const QPolygon &,Qt::FillRule=Qt::OddEvenFill
 
 /*
 QRegion ( const QRegion & r )
 */
-$constructor=|new4|const QRegion &
+$internalConstructor=|new4|const QRegion &
 
 /*
 QRegion ( const QBitmap & bm )
 */
-$constructor=|new5|const QBitmap &
+$internalConstructor=|new5|const QBitmap &
 
 /*
 QRegion ( const QRect & r, RegionType t = Rectangle )
 */
-$constructor=|new6|const QRect &,QRegion::RegionType=QRegion::Rectangle
+$internalConstructor=|new6|const QRect &,QRegion::RegionType=QRegion::Rectangle
 
 //[1]QRegion ()
 //[2]QRegion ( int x, int y, int w, int h, RegionType t = Rectangle )
@@ -109,27 +91,27 @@ HB_FUNC_STATIC( QREGION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QREGION_NEW1 );
+    QRegion_new1();
   }
   else if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISNUM(5)||ISNIL(5)) )
   {
-    HB_FUNC_EXEC( QREGION_NEW2 );
+    QRegion_new2();
   }
   else if( ISBETWEEN(1,2) && ISQPOLYGON(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QREGION_NEW3 );
+    QRegion_new3();
   }
   else if( ISNUMPAR(1) && ISQREGION(1) )
   {
-    HB_FUNC_EXEC( QREGION_NEW4 );
+    QRegion_new4();
   }
   else if( ISNUMPAR(1) && ISQBITMAP(1) )
   {
-    HB_FUNC_EXEC( QREGION_NEW5 );
+    QRegion_new5();
   }
   else if( ISBETWEEN(1,2) && ISQRECT(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QREGION_NEW6 );
+    QRegion_new6();
   }
   else
   {
@@ -147,12 +129,12 @@ $method=|QRect|boundingRect|
 /*
 bool contains ( const QPoint & p ) const
 */
-$method=|bool|contains,contains1|const QPoint &
+$internalMethod=|bool|contains,contains1|const QPoint &
 
 /*
 bool contains ( const QRect & r ) const
 */
-$method=|bool|contains,contains2|const QRect &
+$internalMethod=|bool|contains,contains2|const QRect &
 
 //[1]bool contains ( const QPoint & p ) const
 //[2]bool contains ( const QRect & r ) const
@@ -161,11 +143,11 @@ HB_FUNC_STATIC( QREGION_CONTAINS )
 {
   if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QREGION_CONTAINS1 );
+    QRegion_contains1();
   }
   else if( ISNUMPAR(1) && ISQRECT(1) )
   {
-    HB_FUNC_EXEC( QREGION_CONTAINS2 );
+    QRegion_contains2();
   }
   else
   {
@@ -176,12 +158,12 @@ HB_FUNC_STATIC( QREGION_CONTAINS )
 /*
 QRegion intersected ( const QRegion & r ) const
 */
-$method=|QRegion|intersected,intersected1|const QRegion &
+$internalMethod=|QRegion|intersected,intersected1|const QRegion &
 
 /*
 QRegion intersected ( const QRect & rect ) const
 */
-$method=|QRegion|intersected,intersected2|const QRect &
+$internalMethod=|QRegion|intersected,intersected2|const QRect &
 
 //[1]QRegion intersected ( const QRegion & r ) const
 //[2]QRegion intersected ( const QRect & rect ) const
@@ -190,11 +172,11 @@ HB_FUNC_STATIC( QREGION_INTERSECTED )
 {
   if( ISNUMPAR(1) && ISQREGION(1) )
   {
-    HB_FUNC_EXEC( QREGION_INTERSECTED1 );
+    QRegion_intersected1();
   }
   else if( ISNUMPAR(1) && ISQRECT(1) )
   {
-    HB_FUNC_EXEC( QREGION_INTERSECTED2 );
+    QRegion_intersected2();
   }
   else
   {
@@ -205,12 +187,12 @@ HB_FUNC_STATIC( QREGION_INTERSECTED )
 /*
 bool intersects ( const QRegion & region ) const
 */
-$method=|bool|intersects,intersects1|const QRegion &
+$internalMethod=|bool|intersects,intersects1|const QRegion &
 
 /*
 bool intersects ( const QRect & rect ) const
 */
-$method=|bool|intersects,intersects2|const QRect &
+$internalMethod=|bool|intersects,intersects2|const QRect &
 
 //[1]bool intersects ( const QRegion & region ) const
 //[2]bool intersects ( const QRect & rect ) const
@@ -219,11 +201,11 @@ HB_FUNC_STATIC( QREGION_INTERSECTS )
 {
   if( ISNUMPAR(1) && ISQREGION(1) )
   {
-    HB_FUNC_EXEC( QREGION_INTERSECTS1 );
+    QRegion_intersects1();
   }
   else if( ISNUMPAR(1) && ISQRECT(1) )
   {
-    HB_FUNC_EXEC( QREGION_INTERSECTS2 );
+    QRegion_intersects2();
   }
   else
   {
@@ -251,14 +233,8 @@ HB_FUNC_STATIC( QREGION_RECTS )
   if( obj )
   {
     QVector<QRect> list = obj->rects ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QRECT" );
-    #else
-    pDynSym = hb_dynsymFindName( "QRECT" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QRECT" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -298,12 +274,12 @@ $method=|void|swap|QRegion &
 /*
 void translate ( int dx, int dy )
 */
-$method=|void|translate,translate1|int,int
+$internalMethod=|void|translate,translate1|int,int
 
 /*
 void translate ( const QPoint & point )
 */
-$method=|void|translate,translate2|const QPoint &
+$internalMethod=|void|translate,translate2|const QPoint &
 
 //[1]void translate ( int dx, int dy )
 //[2]void translate ( const QPoint & point )
@@ -312,11 +288,11 @@ HB_FUNC_STATIC( QREGION_TRANSLATE )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QREGION_TRANSLATE1 );
+    QRegion_translate1();
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QREGION_TRANSLATE2 );
+    QRegion_translate2();
   }
   else
   {
@@ -327,12 +303,12 @@ HB_FUNC_STATIC( QREGION_TRANSLATE )
 /*
 QRegion translated ( int dx, int dy ) const
 */
-$method=|QRegion|translated,translated1|int,int
+$internalMethod=|QRegion|translated,translated1|int,int
 
 /*
 QRegion translated ( const QPoint & p ) const
 */
-$method=|QRegion|translated,translated2|const QPoint &
+$internalMethod=|QRegion|translated,translated2|const QPoint &
 
 //[1]QRegion translated ( int dx, int dy ) const
 //[2]QRegion translated ( const QPoint & p ) const
@@ -341,11 +317,11 @@ HB_FUNC_STATIC( QREGION_TRANSLATED )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QREGION_TRANSLATED1 );
+    QRegion_translated1();
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QREGION_TRANSLATED2 );
+    QRegion_translated2();
   }
   else
   {
@@ -356,12 +332,12 @@ HB_FUNC_STATIC( QREGION_TRANSLATED )
 /*
 QRegion united ( const QRegion & r ) const
 */
-$method=|QRegion|united,united1|const QRegion &
+$internalMethod=|QRegion|united,united1|const QRegion &
 
 /*
 QRegion united ( const QRect & rect ) const
 */
-$method=|QRegion|united,united2|const QRect &
+$internalMethod=|QRegion|united,united2|const QRect &
 
 //[1]QRegion united ( const QRegion & r ) const
 //[2]QRegion united ( const QRect & rect ) const
@@ -370,11 +346,11 @@ HB_FUNC_STATIC( QREGION_UNITED )
 {
   if( ISNUMPAR(1) && ISQREGION(1) )
   {
-    HB_FUNC_EXEC( QREGION_UNITED1 );
+    QRegion_united1();
   }
   else if( ISNUMPAR(1) && ISQRECT(1) )
   {
-    HB_FUNC_EXEC( QREGION_UNITED2 );
+    QRegion_united2();
   }
   else
   {

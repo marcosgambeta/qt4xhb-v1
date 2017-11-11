@@ -129,14 +129,8 @@ HB_FUNC_STATIC( QNETWORKREQUEST_RAWHEADERLIST )
   if( obj )
   {
     QList<QByteArray> list = obj->rawHeaderList ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QBYTEARRAY" );
-    #else
-    pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
