@@ -8,19 +8,13 @@ REQUEST QRECT
 
 CLASS QPicture INHERIT QPaintDevice
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD boundingRect
    METHOD data
    METHOD isNull
-   METHOD load1
-   METHOD load2
    METHOD load
    METHOD play
-   METHOD save1
-   METHOD save2
    METHOD save
    METHOD setBoundingRect
    METHOD setData
@@ -44,12 +38,12 @@ $destructor
 /*
 QPicture ( int formatVersion = -1 )
 */
-$constructor=|new1|int=-1
+$internalConstructor=|new1|int=-1
 
 /*
 QPicture ( const QPicture & pic )
 */
-$constructor=|new2|const QPicture &
+$internalConstructor=|new2|const QPicture &
 
 //[1]QPicture ( int formatVersion = -1 )
 //[2]QPicture ( const QPicture & pic )
@@ -58,11 +52,11 @@ HB_FUNC_STATIC( QPICTURE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QPICTURE_NEW1 );
+    QPicture_new1();
   }
   else if( ISNUMPAR(1) && ISQPICTURE(1) )
   {
-    HB_FUNC_EXEC( QPICTURE_NEW2 );
+    QPicture_new2();
   }
   else
   {
@@ -90,12 +84,12 @@ $method=|bool|isNull|
 /*
 bool load ( const QString & fileName, const char * format = 0 )
 */
-$method=|bool|load,load1|const QString &,const char *=0
+$internalMethod=|bool|load,load1|const QString &,const char *=0
 
 /*
 bool load ( QIODevice * dev, const char * format = 0 )
 */
-$method=|bool|load,load2|QIODevice *,const char *=0
+$internalMethod=|bool|load,load2|QIODevice *,const char *=0
 
 //[1]bool load ( const QString & fileName, const char * format = 0 )
 //[2]bool load ( QIODevice * dev, const char * format = 0 )
@@ -104,11 +98,11 @@ HB_FUNC_STATIC( QPICTURE_LOAD )
 {
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QPICTURE_LOAD1 );
+    QPicture_load1();
   }
   else if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISCHAR(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QPICTURE_LOAD2 );
+    QPicture_load2();
   }
   else
   {
@@ -124,12 +118,12 @@ $method=|bool|play|QPainter *
 /*
 bool save ( const QString & fileName, const char * format = 0 )
 */
-$method=|bool|save,save1|const QString &,const char *=0
+$internalMethod=|bool|save,save1|const QString &,const char *=0
 
 /*
 bool save ( QIODevice * dev, const char * format = 0 )
 */
-$method=|bool|save,save2|QIODevice *,const char *=0
+$internalMethod=|bool|save,save2|QIODevice *,const char *=0
 
 //[1]bool save ( const QString & fileName, const char * format = 0 )
 //[2]bool save ( QIODevice * dev, const char * format = 0 )
@@ -138,11 +132,11 @@ HB_FUNC_STATIC( QPICTURE_SAVE )
 {
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QPICTURE_SAVE1 );
+    QPicture_save1();
   }
   else if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISCHAR(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QPICTURE_SAVE2 );
+    QPicture_save2();
   }
   else
   {

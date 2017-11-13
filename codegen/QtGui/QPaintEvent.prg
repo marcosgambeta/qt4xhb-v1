@@ -9,8 +9,6 @@ REQUEST QREGION
 
 CLASS QPaintEvent INHERIT QEvent
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD rect
@@ -33,12 +31,12 @@ $destructor
 /*
 QPaintEvent ( const QRegion & paintRegion )
 */
-$constructor=|new1|const QRegion &
+$internalConstructor=|new1|const QRegion &
 
 /*
 QPaintEvent ( const QRect & paintRect )
 */
-$constructor=|new2|const QRect &
+$internalConstructor=|new2|const QRect &
 
 //[1]QPaintEvent ( const QRegion & paintRegion )
 //[2]QPaintEvent ( const QRect & paintRect )
@@ -47,11 +45,11 @@ HB_FUNC_STATIC( QPAINTEVENT_NEW )
 {
   if( ISNUMPAR(1) && ISQREGION(1) )
   {
-    HB_FUNC_EXEC( QPAINTEVENT_NEW1 );
+    QPaintEvent_new1();
   }
   else if( ISNUMPAR(1) && ISQRECT(1) )
   {
-    HB_FUNC_EXEC( QPAINTEVENT_NEW2 );
+    QPaintEvent_new2();
   }
   else
   {

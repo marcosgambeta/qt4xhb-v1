@@ -7,9 +7,6 @@ CLASS QTableWidgetSelectionRange
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD bottomRow
@@ -42,17 +39,17 @@ $destructor
 /*
 QTableWidgetSelectionRange ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QTableWidgetSelectionRange ( int top, int left, int bottom, int right )
 */
-$constructor=|new2|int,int,int,int
+$internalConstructor=|new2|int,int,int,int
 
 /*
 QTableWidgetSelectionRange ( const QTableWidgetSelectionRange & other )
 */
-$constuctor=|new3|const QTableWidgetSelectionRange &
+$internalConstuctor=|new3|const QTableWidgetSelectionRange &
 
 //[1]QTableWidgetSelectionRange ()
 //[2]QTableWidgetSelectionRange ( int top, int left, int bottom, int right )
@@ -62,15 +59,15 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTABLEWIDGETSELECTIONRANGE_NEW1 );
+    QTableWidgetSelectionRange_new1();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QTABLEWIDGETSELECTIONRANGE_NEW2 );
+    QTableWidgetSelectionRange_new2();
   }
   else if( ISNUMPAR(1) && ISQTABLEWIDGETSELECTIONRANGE(1) )
   {
-    HB_FUNC_EXEC( QTABLEWIDGETSELECTIONRANGE_NEW3 );
+    QTableWidgetSelectionRange_new3();
   }
   else
   {

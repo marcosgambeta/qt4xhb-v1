@@ -8,8 +8,6 @@ REQUEST QPAINTERPATH
 
 CLASS QMouseEventTransition INHERIT QEventTransition
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD button
@@ -38,12 +36,12 @@ $destructor
 /*
 QMouseEventTransition ( QState * sourceState = 0 )
 */
-$constructor=|new1|QState *=0
+$internalConstructor=|new1|QState *=0
 
 /*
 QMouseEventTransition ( QObject * object, QEvent::Type type, Qt::MouseButton button, QState * sourceState = 0 )
 */
-$constructor=|new2|QObject *,QEvent::Type,Qt::MouseButton,QState *=0
+$internalConstructor=|new2|QObject *,QEvent::Type,Qt::MouseButton,QState *=0
 
 //[1]QMouseEventTransition ( QState * sourceState = 0 )
 //[2]QMouseEventTransition ( QObject * object, QEvent::Type type, Qt::MouseButton button, QState * sourceState = 0 )
@@ -52,11 +50,11 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQSTATE(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QMOUSEEVENTTRANSITION_NEW1 );
+    QMouseEventTransition_new1();
   }
   else if( ISBETWEEN(3,4) && ISQOBJECT(1) && ISNUM(2) && ISNUM(3) && (ISQSTATE(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QMOUSEEVENTTRANSITION_NEW2 );
+    QMouseEventTransition_new2();
   }
   else
   {

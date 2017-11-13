@@ -10,8 +10,6 @@ REQUEST QMOUSEEVENT
 
 CLASS QMouseEvent INHERIT QInputEvent
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD pos
@@ -43,12 +41,12 @@ $destructor
 /*
 QMouseEvent(Type type, const QPoint &pos, Qt::MouseButton button,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
 */
-$constructor=|new1|QEvent::Type,const QPoint &,Qt::MouseButton,Qt::MouseButtons,Qt::KeyboardModifiers
+$internalConstructor=|new1|QEvent::Type,const QPoint &,Qt::MouseButton,Qt::MouseButtons,Qt::KeyboardModifiers
 
 /*
 QMouseEvent(Type type, const QPoint &pos, const QPoint &globalPos,Qt::MouseButton button, Qt::MouseButtons buttons,Qt::KeyboardModifiers modifiers)
 */
-$constructor=|new2|QEvent::Type,const QPoint &,const QPoint &,Qt::MouseButton,Qt::MouseButtons,Qt::KeyboardModifiers
+$internalConstructor=|new2|QEvent::Type,const QPoint &,const QPoint &,Qt::MouseButton,Qt::MouseButtons,Qt::KeyboardModifiers
 
 //[1]QMouseEvent(Type type, const QPoint &pos, Qt::MouseButton button,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
 //[2]QMouseEvent(Type type, const QPoint &pos, const QPoint &globalPos,Qt::MouseButton button, Qt::MouseButtons buttons,Qt::KeyboardModifiers modifiers)
@@ -57,11 +55,11 @@ HB_FUNC_STATIC( QMOUSEEVENT_NEW )
 {
   if( ISNUMPAR(5) && ISNUM(1) && ISQPOINT(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) )
   {
-    HB_FUNC_EXEC( QMOUSEEVENT_NEW1 );
+    QMouseEvent_new1();
   }
   else if( ISNUMPAR(6) && ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) )
   {
-    HB_FUNC_EXEC( QMOUSEEVENT_NEW2 );
+    QMouseEvent_new2();
   }
   else
   {

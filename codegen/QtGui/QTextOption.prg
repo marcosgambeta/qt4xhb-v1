@@ -7,9 +7,6 @@ CLASS QTextOption
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD alignment
@@ -50,17 +47,17 @@ $destructor
 /*
 QTextOption ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QTextOption ( Qt::Alignment alignment )
 */
-$constructor=|new2|Qt::Alignment
+$internalConstructor=|new2|Qt::Alignment
 
 /*
 QTextOption ( const QTextOption & other )
 */
-$constructor=|new3|const QTextOption &
+$internalConstructor=|new3|const QTextOption &
 
 //[1]QTextOption ()
 //[2]QTextOption ( Qt::Alignment alignment )
@@ -70,15 +67,15 @@ HB_FUNC_STATIC( QTEXTOPTION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTEXTOPTION_NEW1 );
+    QTextOption_new1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QTEXTOPTION_NEW2 );
+    QTextOption_new2();
   }
   else if( ISNUMPAR(1) && ISQTEXTOPTION(1) )
   {
-    HB_FUNC_EXEC( QTEXTOPTION_NEW3 );
+    QTextOption_new3();
   }
   else
   {

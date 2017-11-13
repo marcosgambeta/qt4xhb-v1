@@ -11,8 +11,6 @@ CLASS QItemSelection
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD contains
@@ -44,12 +42,12 @@ $destructor
 /*
 QItemSelection ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QItemSelection ( const QModelIndex & topLeft, const QModelIndex & bottomRight )
 */
-$constructor=|new2|const QModelIndex &,const QModelIndex &
+$internalConstructor=|new2|const QModelIndex &,const QModelIndex &
 
 //[1]QItemSelection ()
 //[2]QItemSelection ( const QModelIndex & topLeft, const QModelIndex & bottomRight )
@@ -58,11 +56,11 @@ HB_FUNC_STATIC( QITEMSELECTION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QITEMSELECTION_NEW1 );
+    QItemSelection_new1();
   }
   else if( ISNUMPAR(2) && ISQMODELINDEX(1) && ISQMODELINDEX(2) )
   {
-    HB_FUNC_EXEC( QITEMSELECTION_NEW2 );
+    QItemSelection_new2();
   }
   else
   {

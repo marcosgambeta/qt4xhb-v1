@@ -11,19 +11,11 @@ CLASS QTextDocumentFragment
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD isEmpty
-   METHOD toHtml1
-   METHOD toHtml2
    METHOD toHtml
    METHOD toPlainText
-   METHOD fromHtml1
-   METHOD fromHtml2
    METHOD fromHtml
    METHOD fromPlainText
 
@@ -50,22 +42,22 @@ $destructor
 /*
 QTextDocumentFragment ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QTextDocumentFragment ( const QTextDocument * document )
 */
-$constructor=|new2|const QTextDocument *
+$internalConstructor=|new2|const QTextDocument *
 
 /*
 QTextDocumentFragment ( const QTextCursor & cursor )
 */
-$constructor=|new3|const QTextCursor &
+$internalConstructor=|new3|const QTextCursor &
 
 /*
 QTextDocumentFragment ( const QTextDocumentFragment & other )
 */
-$constructor=|new4|const QTextDocumentFragment &
+$internalConstructor=|new4|const QTextDocumentFragment &
 
 //[1]QTextDocumentFragment ()
 //[2]QTextDocumentFragment ( const QTextDocument * document )
@@ -76,19 +68,19 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTEXTDOCUMENTFRAGMENT_NEW1 );
+    QTextDocumentFragment_new1();
   }
   else if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
   {
-    HB_FUNC_EXEC( QTEXTDOCUMENTFRAGMENT_NEW2 );
+    QTextDocumentFragment_new2();
   }
   else if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
   {
-    HB_FUNC_EXEC( QTEXTDOCUMENTFRAGMENT_NEW3 );
+    QTextDocumentFragment_new3();
   }
   else if( ISNUMPAR(1) && ISQTEXTDOCUMENTFRAGMENT(1) )
   {
-    HB_FUNC_EXEC( QTEXTDOCUMENTFRAGMENT_NEW4 );
+    QTextDocumentFragment_new4();
   }
   else
   {
@@ -106,12 +98,12 @@ $method=|bool|isEmpty|
 /*
 QString toHtml ( const QByteArray & encoding ) const
 */
-$method=|QString|toHtml,toHtml1|const QByteArray &
+$internalMethod=|QString|toHtml,toHtml1|const QByteArray &
 
 /*
 QString toHtml () const
 */
-$method=|QString|toHtml,toHtml2|
+$internalMethod=|QString|toHtml,toHtml2|
 
 //[1]QString toHtml ( const QByteArray & encoding ) const
 //[2]QString toHtml () const
@@ -120,11 +112,11 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOHTML )
 {
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    HB_FUNC_EXEC( QTEXTDOCUMENTFRAGMENT_TOHTML1 );
+    QTextDocumentFragment_toHtml1();
   }
   else if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTEXTDOCUMENTFRAGMENT_TOHTML2 );
+    QTextDocumentFragment_toHtml2();
   }
   else
   {
@@ -140,17 +132,12 @@ $method=|QString|toPlainText|
 /*
 static QTextDocumentFragment fromHtml ( const QString & text )
 */
-$staticMethod=|QTextDocumentFragment|fromHtml,fromHtml1|const QString &
+$internalStaticMethod=|QTextDocumentFragment|fromHtml,fromHtml1|const QString &
 
 /*
 static QTextDocumentFragment fromHtml ( const QString & text, const QTextDocument * resourceProvider )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMHTML2 )
-{
-  const QTextDocument * par2 = (const QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QTextDocumentFragment * ptr = new QTextDocumentFragment( QTextDocumentFragment::fromHtml ( PQSTRING(1), par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );
-}
+$internalStaticMethod=|QTextDocumentFragment|fromHtml,fromHtml2|const QString &,const QTextDocument *
 
 //[1]QTextDocumentFragment fromHtml ( const QString & text )
 //[2]QTextDocumentFragment fromHtml ( const QString & text, const QTextDocument * resourceProvider )
@@ -159,11 +146,11 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMHTML )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QTEXTDOCUMENTFRAGMENT_FROMHTML1 );
+    QTextDocumentFragment_fromHtml1();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISQTEXTDOCUMENT(2) )
   {
-    HB_FUNC_EXEC( QTEXTDOCUMENTFRAGMENT_FROMHTML2 );
+    QTextDocumentFragment_fromHtml2();
   }
   else
   {

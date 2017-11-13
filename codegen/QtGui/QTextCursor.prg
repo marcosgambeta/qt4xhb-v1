@@ -18,11 +18,6 @@ CLASS QTextCursor
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
    METHOD new
    METHOD delete
    METHOD anchor
@@ -38,8 +33,6 @@ CLASS QTextCursor
    METHOD charFormat
    METHOD clearSelection
    METHOD columnNumber
-   METHOD createList1
-   METHOD createList2
    METHOD createList
    METHOD currentFrame
    METHOD currentList
@@ -50,26 +43,13 @@ CLASS QTextCursor
    METHOD endEditBlock
    METHOD hasComplexSelection
    METHOD hasSelection
-   METHOD insertBlock1
-   METHOD insertBlock2
-   METHOD insertBlock3
    METHOD insertBlock
    METHOD insertFragment
    METHOD insertFrame
    METHOD insertHtml
-   METHOD insertImage1
-   METHOD insertImage2
-   METHOD insertImage3
-   METHOD insertImage4
    METHOD insertImage
-   METHOD insertList1
-   METHOD insertList2
    METHOD insertList
-   METHOD insertTable1
-   METHOD insertTable2
    METHOD insertTable
-   METHOD insertText1
-   METHOD insertText2
    METHOD insertText
    METHOD isCopyOf
    METHOD isNull
@@ -124,27 +104,27 @@ $destructor
 /*
 QTextCursor ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QTextCursor ( QTextDocument * document )
 */
-$constructor=|new2|QTextDocument *
+$internalConstructor=|new2|QTextDocument *
 
 /*
 QTextCursor ( QTextFrame * frame )
 */
-$constructor=|new3|QTextFrame *
+$internalConstructor=|new3|QTextFrame *
 
 /*
 QTextCursor ( const QTextBlock & block )
 */
-$constructor=|new4|const QTextBlock &
+$internalConstructor=|new4|const QTextBlock &
 
 /*
 QTextCursor ( const QTextCursor & cursor )
 */
-$constructor=|new5|const QTextCursor &
+$internalConstructor=|new5|const QTextCursor &
 
 //[1]QTextCursor ()
 //[2]QTextCursor ( QTextDocument * document )
@@ -156,23 +136,23 @@ HB_FUNC_STATIC( QTEXTCURSOR_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTEXTCURSOR_NEW1 );
+    QTextCursor_new1();
   }
   else if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
   {
-    HB_FUNC_EXEC( QTEXTCURSOR_NEW2 );
+    QTextCursor_new2();
   }
   else if( ISNUMPAR(1) && ISQTEXTFRAME(1) )
   {
-    HB_FUNC_EXEC( QTEXTCURSOR_NEW3 );
+    QTextCursor_new3();
   }
   else if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
   {
-    HB_FUNC_EXEC( QTEXTCURSOR_NEW4 );
+    QTextCursor_new4();
   }
   else if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
   {
-    HB_FUNC_EXEC( QTEXTCURSOR_NEW5 );
+    QTextCursor_new5();
   }
   else
   {
@@ -250,12 +230,12 @@ $method=|int|columnNumber|
 /*
 QTextList * createList ( const QTextListFormat & format )
 */
-$method=|QTextList *|createList,createList1|const QTextListFormat &
+$internalMethod=|QTextList *|createList,createList1|const QTextListFormat &
 
 /*
 QTextList * createList ( QTextListFormat::Style style )
 */
-$method=|QTextList *|createList,createList2|QTextListFormat::Style
+$internalMethod=|QTextList *|createList,createList2|QTextListFormat::Style
 
 //[1]QTextList * createList ( const QTextListFormat & format )
 //[2]QTextList * createList ( QTextListFormat::Style style )
@@ -264,11 +244,11 @@ HB_FUNC_STATIC( QTEXTCURSOR_CREATELIST )
 {
   if( ISNUMPAR(1) && ISQTEXTLISTFORMAT(1) )
   {
-    HB_FUNC_EXEC( QTEXTCURSOR_CREATELIST1 );
+    QTextCursor_createList1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QTEXTCURSOR_CREATELIST2 );
+    QTextCursor_createList2();
   }
   else
   {
@@ -324,17 +304,17 @@ $method=|bool|hasSelection|
 /*
 void insertBlock ()
 */
-$method=|void|insertBlock,insertBlock1|
+$internalMethod=|void|insertBlock,insertBlock1|
 
 /*
 void insertBlock ( const QTextBlockFormat & format )
 */
-$method=|void|insertBlock,insertBlock2|const QTextBlockFormat &
+$internalMethod=|void|insertBlock,insertBlock2|const QTextBlockFormat &
 
 /*
 void insertBlock ( const QTextBlockFormat & format, const QTextCharFormat & charFormat )
 */
-$method=|void|insertBlock,insertBlock3|const QTextBlockFormat &,const QTextCharFormat &
+$internalMethod=|void|insertBlock,insertBlock3|const QTextBlockFormat &,const QTextCharFormat &
 
 //[1]void insertBlock ()
 //[2]void insertBlock ( const QTextBlockFormat & format )
@@ -344,15 +324,15 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTBLOCK )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTEXTCURSOR_INSERTBLOCK1 );
+    QTextCursor_insertBlock1();
   }
   else if( ISNUMPAR(1) && ISQTEXTBLOCKFORMAT(1) )
   {
-    HB_FUNC_EXEC( QTEXTCURSOR_INSERTBLOCK2 );
+    QTextCursor_insertBlock2();
   }
   else if( ISNUMPAR(2) && ISQTEXTBLOCKFORMAT(1) && ISQTEXTCHARFORMAT(2) )
   {
-    HB_FUNC_EXEC( QTEXTCURSOR_INSERTBLOCK3 );
+    QTextCursor_insertBlock3();
   }
   else
   {
@@ -378,22 +358,22 @@ $method=|void|insertHtml|const QString &
 /*
 void insertImage ( const QTextImageFormat & format )
 */
-$method=|void|insertImage,insertImage1|const QTextImageFormat &
+$internalMethod=|void|insertImage,insertImage1|const QTextImageFormat &
 
 /*
 void insertImage ( const QTextImageFormat & format, QTextFrameFormat::Position alignment )
 */
-$method=|void|insertImage,insertImage2|const QTextImageFormat &,QTextFrameFormat::Position
+$internalMethod=|void|insertImage,insertImage2|const QTextImageFormat &,QTextFrameFormat::Position
 
 /*
 void insertImage ( const QString & name )
 */
-$method=|void|insertImage,insertImage3|const QString &
+$internalMethod=|void|insertImage,insertImage3|const QString &
 
 /*
 void insertImage ( const QImage & image, const QString & name = QString() )
 */
-$method=|void|insertImage,insertImage4|const QImage &,const QString &=QString()
+$internalMethod=|void|insertImage,insertImage4|const QImage &,const QString &=QString()
 
 //[1]void insertImage ( const QTextImageFormat & format )
 //[2]void insertImage ( const QTextImageFormat & format, QTextFrameFormat::Position alignment )
@@ -404,19 +384,19 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE )
 {
   if( ISNUMPAR(1) && ISQTEXTIMAGEFORMAT(1) )
   {
-    HB_FUNC_EXEC( QTEXTCURSOR_INSERTIMAGE1 );
+    QTextCursor_insertImage1();
   }
   else if( ISNUMPAR(2) && ISQTEXTIMAGEFORMAT(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QTEXTCURSOR_INSERTIMAGE2 );
+    QTextCursor_insertImage2();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QTEXTCURSOR_INSERTIMAGE3 );
+    QTextCursor_insertImage3();
   }
   else if( ISBETWEEN(1,2) && ISQIMAGE(1) && (ISCHAR(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QTEXTCURSOR_INSERTIMAGE4 );
+    QTextCursor_insertImage4();
   }
   else
   {
@@ -427,12 +407,12 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE )
 /*
 QTextList * insertList ( const QTextListFormat & format )
 */
-$method=|QTextList *|insertList,insertList1|const QTextListFormat &
+$internalMethod=|QTextList *|insertList,insertList1|const QTextListFormat &
 
 /*
 QTextList * insertList ( QTextListFormat::Style style )
 */
-$method=|QTextList *|insertList,insertList2|QTextListFormat::Style
+$internalMethod=|QTextList *|insertList,insertList2|QTextListFormat::Style
 
 //[1]QTextList * insertList ( const QTextListFormat & format )
 //[2]QTextList * insertList ( QTextListFormat::Style style )
@@ -441,11 +421,11 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTLIST )
 {
   if( ISNUMPAR(1) && ISQTEXTLISTFORMAT(1) )
   {
-    HB_FUNC_EXEC( QTEXTCURSOR_INSERTLIST1 );
+    QTextCursor_insertList1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QTEXTCURSOR_INSERTLIST2 );
+    QTextCursor_insertList2();
   }
   else
   {
@@ -456,12 +436,12 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTLIST )
 /*
 QTextTable * insertTable ( int rows, int columns, const QTextTableFormat & format )
 */
-$method=|QTextTable *|insertTable,insertTable1|int,int,const QTextTableFormat &
+$internalMethod=|QTextTable *|insertTable,insertTable1|int,int,const QTextTableFormat &
 
 /*
 QTextTable * insertTable ( int rows, int columns )
 */
-$method=|QTextTable *|insertTable,insertTable2|int,int
+$internalMethod=|QTextTable *|insertTable,insertTable2|int,int
 
 //[1]QTextTable * insertTable ( int rows, int columns, const QTextTableFormat & format )
 //[2]QTextTable * insertTable ( int rows, int columns )
@@ -470,11 +450,11 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTTABLE )
 {
   if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQTEXTTABLEFORMAT(3) )
   {
-    HB_FUNC_EXEC( QTEXTCURSOR_INSERTTABLE1 );
+    QTextCursor_insertTable1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QTEXTCURSOR_INSERTTABLE2 );
+    QTextCursor_insertTable2();
   }
   else
   {
@@ -485,12 +465,12 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTTABLE )
 /*
 void insertText ( const QString & text )
 */
-$method=|void|insertText,insertText1|const QString &
+$internalMethod=|void|insertText,insertText1|const QString &
 
 /*
 void insertText ( const QString & text, const QTextCharFormat & format )
 */
-$method=|void|insertText,insertText2|const QString &,const QTextCharFormat &
+$internalMethod=|void|insertText,insertText2|const QString &,const QTextCharFormat &
 
 //[1]void insertText ( const QString & text )
 //[2]void insertText ( const QString & text, const QTextCharFormat & format )
@@ -499,11 +479,11 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTTEXT )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QTEXTCURSOR_INSERTTEXT1 );
+    QTextCursor_insertText1();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISQTEXTCHARFORMAT(2) )
   {
-    HB_FUNC_EXEC( QTEXTCURSOR_INSERTTEXT2 );
+    QTextCursor_insertText2();
   }
   else
   {

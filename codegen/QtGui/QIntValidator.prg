@@ -4,8 +4,6 @@ $header
 
 CLASS QIntValidator INHERIT QValidator
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD bottom
@@ -33,12 +31,12 @@ $destructor
 /*
 QIntValidator ( QObject * parent = 0 )
 */
-$constructor=|new1|QObject *=0
+$internalConstructor=|new1|QObject *=0
 
 /*
 QIntValidator ( int minimum, int maximum, QObject * parent )
 */
-$constructor=|new2|int,int,QObject *
+$internalConstructor=|new2|int,int,QObject *
 
 //[1]QIntValidator ( QObject * parent = 0 )
 //[2]QIntValidator ( int minimum, int maximum, QObject * parent )
@@ -47,11 +45,11 @@ HB_FUNC_STATIC( QINTVALIDATOR_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QINTVALIDATOR_NEW1 );
+    QIntValidator_new1();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQOBJECT(3) )
   {
-    HB_FUNC_EXEC( QINTVALIDATOR_NEW2 );
+    QIntValidator_new2();
   }
   else
   {

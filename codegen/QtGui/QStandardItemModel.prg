@@ -12,13 +12,9 @@ REQUEST QMIMEDATA
 
 CLASS QStandardItemModel INHERIT QAbstractItemModel
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD index
-   METHOD parent1
-   METHOD parent2
    METHOD parent
    METHOD rowCount
    METHOD columnCount
@@ -38,8 +34,6 @@ CLASS QStandardItemModel INHERIT QAbstractItemModel
    METHOD itemFromIndex
    METHOD indexFromItem
    METHOD item
-   METHOD setItem1
-   METHOD setItem2
    METHOD setItem
    METHOD invisibleRootItem
    METHOD horizontalHeaderItem
@@ -94,12 +88,12 @@ $destructor
 /*
 QStandardItemModel(QObject *parent = 0)
 */
-$constructor=|new1|QObject *=0
+$internalConstructor=|new1|QObject *=0
 
 /*
 QStandardItemModel(int rows, int columns, QObject *parent = 0)
 */
-$constructor=|new2|int,int,QObject *=0
+$internalConstructor=|new2|int,int,QObject *=0
 
 //[1]QStandardItemModel(QObject *parent = 0)
 //[2]QStandardItemModel(int rows, int columns, QObject *parent = 0)
@@ -108,11 +102,11 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QSTANDARDITEMMODEL_NEW1 );
+    QStandardItemModel_new1();
   }
   else if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QSTANDARDITEMMODEL_NEW2 );
+    QStandardItemModel_new2();
   }
   else
   {
@@ -130,12 +124,12 @@ $method=|QModelIndex|index|int,int,const QModelIndex &=QModelIndex()
 /*
 QModelIndex parent(const QModelIndex &child) const
 */
-$method=|QModelIndex|parent,parent1|const QModelIndex &
+$internalMethod=|QModelIndex|parent,parent1|const QModelIndex &
 
 /*
 QObject *parent() const
 */
-$method=|QObject *|parent,parent2|
+$internalMethod=|QObject *|parent,parent2|
 
 //[1]QModelIndex parent(const QModelIndex &child) const
 //[2]QObject *parent() const
@@ -144,11 +138,11 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_PARENT )
 {
   if( ISNUMPAR(1) && ISQMODELINDEX(1) )
   {
-    HB_FUNC_EXEC( QSTANDARDITEMMODEL_PARENT1 );
+    QStandardItemModel_parent1();
   }
   else if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSTANDARDITEMMODEL_PARENT2 );
+    QStandardItemModel_parent2();
   }
   else
   {
@@ -249,12 +243,12 @@ $method=|QStandardItem *|item|int,int=0
 /*
 void setItem(int row, int column, QStandardItem *item)
 */
-$method=|void|setItem,setItem1|int,int,QStandardItem *
+$internalMethod=|void|setItem,setItem1|int,int,QStandardItem *
 
 /*
 void setItem(int row, QStandardItem *item)
 */
-$method=|void|setItem,setItem2|int,QStandardItem *
+$internalMethod=|void|setItem,setItem2|int,QStandardItem *
 
 //[1]void setItem(int row, int column, QStandardItem *item)
 //[2]void setItem(int row, QStandardItem *item)
@@ -263,11 +257,11 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETITEM )
 {
   if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQSTANDARDITEM(3) )
   {
-    HB_FUNC_EXEC( QSTANDARDITEMMODEL_SETITEM1 );
+    QStandardItemModel_setItem1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISQSTANDARDITEM(2) )
   {
-    HB_FUNC_EXEC( QSTANDARDITEMMODEL_SETITEM2 );
+    QStandardItemModel_setItem2();
   }
   else
   {

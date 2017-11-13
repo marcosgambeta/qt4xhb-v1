@@ -15,8 +15,6 @@ REQUEST QCOLOR
 
 CLASS QTextEdit INHERIT QAbstractScrollArea
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD acceptRichText
@@ -24,14 +22,10 @@ CLASS QTextEdit INHERIT QAbstractScrollArea
    METHOD anchorAt
    METHOD autoFormatting
    METHOD canPaste
-   METHOD createStandardContextMenu1
-   METHOD createStandardContextMenu2
    METHOD createStandardContextMenu
    METHOD currentCharFormat
    METHOD currentFont
    METHOD cursorForPosition
-   METHOD cursorRect1
-   METHOD cursorRect2
    METHOD cursorRect
    METHOD cursorWidth
    METHOD document
@@ -128,12 +122,12 @@ $destructor
 /*
 QTextEdit ( QWidget * parent = 0 )
 */
-$constructor=|new1|QWidget *=0
+$internalConstructor=|new1|QWidget *=0
 
 /*
 QTextEdit ( const QString & text, QWidget * parent = 0 )
 */
-$constructor=|new2|const QString &,QWidget *=0
+$internalConstructor=|new2|const QString &,QWidget *=0
 
 //[1]QTextEdit ( QWidget * parent = 0 )
 //[2]QTextEdit ( const QString & text, QWidget * parent = 0 )
@@ -142,11 +136,11 @@ HB_FUNC_STATIC( QTEXTEDIT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QTEXTEDIT_NEW1 );
+    QTextEdit_new1();
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QTEXTEDIT_NEW2 );
+    QTextEdit_new2();
   }
   else
   {
@@ -184,12 +178,12 @@ $method=|bool|canPaste|
 /*
 QMenu * createStandardContextMenu ()
 */
-$method=|QMenu *|createStandardContextMenu,createStandardContextMenu1|
+$internalMethod=|QMenu *|createStandardContextMenu,createStandardContextMenu1|
 
 /*
 QMenu * createStandardContextMenu ( const QPoint & position )
 */
-$method=|QMenu *|createStandardContextMenu,createStandardContextMenu2|const QPoint &
+$internalMethod=|QMenu *|createStandardContextMenu,createStandardContextMenu2|const QPoint &
 
 //[1]QMenu * createStandardContextMenu ()
 //[2]QMenu * createStandardContextMenu ( const QPoint & position )
@@ -198,11 +192,11 @@ HB_FUNC_STATIC( QTEXTEDIT_CREATESTANDARDCONTEXTMENU )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTEXTEDIT_CREATESTANDARDCONTEXTMENU1 );
+    QTextEdit_createStandardContextMenu1();
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QTEXTEDIT_CREATESTANDARDCONTEXTMENU2 );
+    QTextEdit_createStandardContextMenu2();
   }
   else
   {
@@ -228,12 +222,12 @@ $method=|QTextCursor|cursorForPosition|const QPoint &
 /*
 QRect cursorRect ( const QTextCursor & cursor ) const
 */
-$method=|QRect|cursorRect,cursorRect1|const QTextCursor &
+$internalMethod=|QRect|cursorRect,cursorRect1|const QTextCursor &
 
 /*
 QRect cursorRect () const
 */
-$method=|QRect|cursorRect,cursorRect2|
+$internalMethod=|QRect|cursorRect,cursorRect2|
 
 //[1]QRect cursorRect ( const QTextCursor & cursor ) const
 //[2]QRect cursorRect () const
@@ -242,11 +236,11 @@ HB_FUNC_STATIC( QTEXTEDIT_CURSORRECT )
 {
   if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
   {
-    HB_FUNC_EXEC( QTEXTEDIT_CURSORRECT1 );
+    QTextEdit_cursorRect1();
   }
   else if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTEXTEDIT_CURSORRECT2 );
+    QTextEdit_cursorRect2();
   }
   else
   {

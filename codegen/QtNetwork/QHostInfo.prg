@@ -12,8 +12,6 @@ CLASS QHostInfo
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD addresses
@@ -55,29 +53,25 @@ $destructor
 /*
 QHostInfo ( int id = -1 )
 */
-$constructor=|new1|int=-1
+$internalConstructor=|new1|int=-1
 
 /*
 QHostInfo ( const QHostInfo & other )
 */
-$constructor=|new2|const QHostInfo &
+$internalConstructor=|new2|const QHostInfo &
 
 //[1]QHostInfo ( int id = -1 )
 //[2]QHostInfo ( const QHostInfo & other )
 
 HB_FUNC_STATIC( QHOSTINFO_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QHOSTINFO_NEW1 );
-  }
-  else if( ISNUMPAR(1) && ISNUM(1) )
-  {
-    HB_FUNC_EXEC( QHOSTINFO_NEW1 );
+    QHostInfo_new1();
   }
   else if( ISNUMPAR(1) && ISQHOSTINFO(1) )
   {
-    HB_FUNC_EXEC( QHOSTINFO_NEW2 );
+    QHostInfo_new2();
   }
   else
   {

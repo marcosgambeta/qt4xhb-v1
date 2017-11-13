@@ -4,8 +4,6 @@ $header
 
 CLASS QGLFramebufferObjectFormat INHERIT QWidget
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD attachment
@@ -34,22 +32,12 @@ $destructor
 /*
 QGLFramebufferObjectFormat ()
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_NEW1 )
-{
-  QGLFramebufferObjectFormat * o = new QGLFramebufferObjectFormat ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$internalConstructor=|new1|
 
 /*
 QGLFramebufferObjectFormat ( const QGLFramebufferObjectFormat & other )
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_NEW2 )
-{
-  QGLFramebufferObjectFormat * o = new QGLFramebufferObjectFormat ( *PQGLFRAMEBUFFEROBJECTFORMAT(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$internalConstructor=|new2|const QGLFramebufferObjectFormat &
 
 //[1]QGLFramebufferObjectFormat ()
 //[2]QGLFramebufferObjectFormat ( const QGLFramebufferObjectFormat & other )
@@ -58,11 +46,11 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QGLFRAMEBUFFEROBJECTFORMAT_NEW1 );
+    QGLFrameBufferObjectFormat_new1();
   }
   else if( ISNUMPAR(1) && ISQGLFRAMEBUFFEROBJECTFORMAT(1) )
   {
-    HB_FUNC_EXEC( QGLFRAMEBUFFEROBJECTFORMAT_NEW2 );
+    QGLFrameBufferObjectFormat_new2();
   }
   else
   {

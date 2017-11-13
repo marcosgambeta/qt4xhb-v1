@@ -19,8 +19,6 @@ REQUEST QTEXTFRAME
 
 CLASS QTextDocument INHERIT QObject
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD addResource
@@ -43,10 +41,6 @@ CLASS QTextDocument INHERIT QObject
    METHOD documentMargin
    METHOD drawContents
    METHOD end
-   METHOD find1
-   METHOD find2
-   METHOD find3
-   METHOD find4
    METHOD find
    METHOD findBlock
    METHOD findBlockByLineNumber
@@ -69,7 +63,6 @@ CLASS QTextDocument INHERIT QObject
    METHOD pageCount
    METHOD pageSize
    METHOD print
-   METHOD redo1
    METHOD resource
    METHOD revision
    METHOD rootFrame
@@ -92,12 +85,9 @@ CLASS QTextDocument INHERIT QObject
    METHOD textWidth
    METHOD toHtml
    METHOD toPlainText
-   METHOD undo1
    METHOD useDesignMetrics
-   METHOD redo2
    METHOD redo
    METHOD setModified
-   METHOD undo2
    METHOD undo
 
    METHOD onBlockCountChanged
@@ -132,12 +122,12 @@ $destructor
 /*
 QTextDocument ( QObject * parent = 0 )
 */
-$constructor=|new1|QObject *=0
+$internalConstructor=|new1|QObject *=0
 
 /*
 QTextDocument ( const QString & text, QObject * parent = 0 )
 */
-$constructor=|new2|const QString &,QObject *=0
+$internalConstructor=|new2|const QString &,QObject *=0
 
 //[1]QTextDocument ( QObject * parent = 0 )
 //[2]QTextDocument ( const QString & text, QObject * parent = 0 )
@@ -146,11 +136,11 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QTEXTDOCUMENT_NEW1 );
+    QTextDocument_new1();
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QTEXTDOCUMENT_NEW2 );
+    QTextDocument_new2();
   }
   else
   {
@@ -296,22 +286,22 @@ $method=|QTextBlock|end|
 /*
 QTextCursor find ( const QString & subString, const QTextCursor & cursor, FindFlags options = 0 ) const
 */
-$method=|QTextCursor|find,find1|const QString &,const QTextCursor &,QTextDocument::FindFlags=0
+$internalMethod=|QTextCursor|find,find1|const QString &,const QTextCursor &,QTextDocument::FindFlags=0
 
 /*
 QTextCursor find ( const QRegExp & expr, const QTextCursor & cursor, FindFlags options = 0 ) const
 */
-$method=|QTextCursor|find,find2|const QRegExp &,const QTextCursor &,QTextDocument::FindFlags=0
+$internalMethod=|QTextCursor|find,find2|const QRegExp &,const QTextCursor &,QTextDocument::FindFlags=0
 
 /*
 QTextCursor find ( const QString & subString, int position = 0, FindFlags options = 0 ) const
 */
-$method=|QTextCursor|find,find3|const QString &,int=0,QTextDocument::FindFlags=0
+$internalMethod=|QTextCursor|find,find3|const QString &,int=0,QTextDocument::FindFlags=0
 
 /*
 QTextCursor find ( const QRegExp & expr, int position = 0, FindFlags options = 0 ) const
 */
-$method=|QTextCursor|find,find4|const QRegExp &,int=0,QTextDocument::FindFlags=0
+$internalMethod=|QTextCursor|find,find4|const QRegExp &,int=0,QTextDocument::FindFlags=0
 
 //[1]QTextCursor find ( const QString & subString, const QTextCursor & cursor, FindFlags options = 0 ) const
 //[2]QTextCursor find ( const QRegExp & expr, const QTextCursor & cursor, FindFlags options = 0 ) const
@@ -322,19 +312,19 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND )
 {
   if( ISBETWEEN(2,3) && ISCHAR(1) && ISQTEXTCURSOR(2) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QTEXTDOCUMENT_FIND1 );
+    QTextDocument_find1();
   }
   else if( ISBETWEEN(2,3) && ISQREGEXP(1) && ISQTEXTCURSOR(2) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QTEXTDOCUMENT_FIND2 );
+    QTextDocument_find2();
   }
   else if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QTEXTDOCUMENT_FIND3 );
+    QTextDocument_find3();
   }
   else if( ISBETWEEN(1,3) && ISQREGEXP(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QTEXTDOCUMENT_FIND4 );
+    QTextDocument_find4();
   }
   else
   {
@@ -448,11 +438,6 @@ void print ( QPrinter * printer ) const
 $method=|void|print|QPrinter *
 
 /*
-void redo ( QTextCursor * cursor )
-*/
-$method=|void|redo,redo1|QTextCursor *
-
-/*
 QVariant resource ( int type, const QUrl & name ) const
 */
 $method=|QVariant|resource|int,const QUrl &
@@ -563,19 +548,19 @@ QString toPlainText () const
 $method=|QString|toPlainText|
 
 /*
-void undo ( QTextCursor * cursor )
-*/
-$method=|void|undo,undo1|QTextCursor *
-
-/*
 bool useDesignMetrics () const
 */
 $method=|bool|useDesignMetrics|
 
 /*
+void redo ( QTextCursor * cursor )
+*/
+$internalMethod=|void|redo,redo1|QTextCursor *
+
+/*
 void redo ()
 */
-$method=|void|redo,redo2|
+$internalMethod=|void|redo,redo2|
 
 //[1]void redo ( QTextCursor * cursor )
 //[2]void redo ()
@@ -584,11 +569,11 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_REDO )
 {
   if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
   {
-    HB_FUNC_EXEC( QTEXTDOCUMENT_REDO1 );
+    QTextDocument_redo1();
   }
   else if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTEXTDOCUMENT_REDO2 );
+    QTextDocument_redo2();
   }
   else
   {
@@ -602,9 +587,14 @@ void setModified ( bool m = true )
 $method=|void|setModified|bool=true
 
 /*
+void undo ( QTextCursor * cursor )
+*/
+$internalMethod=|void|undo,undo1|QTextCursor *
+
+/*
 void undo ()
 */
-$method=|void|undo,undo2|
+$internalMethod=|void|undo,undo2|
 
 //[1]void undo ( QTextCursor * cursor )
 //[2]void undo ()
@@ -613,11 +603,11 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_UNDO )
 {
   if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
   {
-    HB_FUNC_EXEC( QTEXTDOCUMENT_UNDO1 );
+    QTextDocument_undo1();
   }
   else if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTEXTDOCUMENT_UNDO2 );
+    QTextDocument_undo2();
   }
   else
   {

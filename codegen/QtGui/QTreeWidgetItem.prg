@@ -17,15 +17,6 @@ CLASS QTreeWidgetItem
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
-   METHOD new6
-   METHOD new7
-   METHOD new8
-   METHOD new9
    METHOD new
    METHOD delete
    METHOD addChild
@@ -108,47 +99,47 @@ $destructor
 /*
 QTreeWidgetItem ( int type = Type )
 */
-$constructor=|new1|int=QTreeWidgetItem::Type
+$internalConstructor=|new1|int=QTreeWidgetItem::Type
 
 /*
 QTreeWidgetItem ( const QStringList & strings, int type = Type )
 */
-$constructor=|new2|const QStringList &,int=QTreeWidgetItem::Type
+$internalConstructor=|new2|const QStringList &,int=QTreeWidgetItem::Type
 
 /*
 QTreeWidgetItem ( QTreeWidget * parent, int type = Type )
 */
-$constructor=|new3|QTreeWidget *,int=QTreeWidgetItem::Type
+$internalConstructor=|new3|QTreeWidget *,int=QTreeWidgetItem::Type
 
 /*
 QTreeWidgetItem ( QTreeWidget * parent, const QStringList & strings, int type = Type )
 */
-$constructor=|new4|QTreeWidget *,const QStringList &,int=QTreeWidgetItem::Type
+$internalConstructor=|new4|QTreeWidget *,const QStringList &,int=QTreeWidgetItem::Type
 
 /*
 QTreeWidgetItem ( QTreeWidget * parent, QTreeWidgetItem * preceding, int type = Type )
 */
-$constructor=|new5|QTreeWidget *,QTreeWidgetItem *,int=QTreeWidgetItem::Type
+$internalConstructor=|new5|QTreeWidget *,QTreeWidgetItem *,int=QTreeWidgetItem::Type
 
 /*
 QTreeWidgetItem ( QTreeWidgetItem * parent, int type = Type )
 */
-$constructor=|new6|QTreeWidgetItem *,int=QTreeWidgetItem::Type
+$internalConstructor=|new6|QTreeWidgetItem *,int=QTreeWidgetItem::Type
 
 /*
 QTreeWidgetItem ( QTreeWidgetItem * parent, const QStringList & strings, int type = Type )
 */
-$constructor=|new7|QTreeWidgetItem *,const QStringList &,int=QTreeWidgetItem::Type
+$internalConstructor=|new7|QTreeWidgetItem *,const QStringList &,int=QTreeWidgetItem::Type
 
 /*
 QTreeWidgetItem ( QTreeWidgetItem * parent, QTreeWidgetItem * preceding, int type = Type )
 */
-$constructor=|new8|QTreeWidgetItem *,QTreeWidgetItem *,int=QTreeWidgetItem::Type
+$internalConstructor=|new8|QTreeWidgetItem *,QTreeWidgetItem *,int=QTreeWidgetItem::Type
 
 /*
 QTreeWidgetItem ( const QTreeWidgetItem & other )
 */
-$constructor=|new9|const QTreeWidgetItem &
+$internalConstructor=|new9|const QTreeWidgetItem &
 
 //[1]QTreeWidgetItem ( int type = Type )
 //[2]QTreeWidgetItem ( const QStringList & strings, int type = Type )
@@ -164,39 +155,39 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_NEW )
 {
   if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QTREEWIDGETITEM_NEW1 );
+    QTreeWidgetItem_new1();
   }
   else if( ISBETWEEN(1,2) && ISARRAY(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QTREEWIDGETITEM_NEW2 );
+    QTreeWidgetItem_new2();
   }
   else if( ISBETWEEN(1,2) && ISQTREEWIDGET(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QTREEWIDGETITEM_NEW3 );
+    QTreeWidgetItem_new3();
   }
   else if( ISBETWEEN(2,3) && ISQTREEWIDGET(1) && ISARRAY(2) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QTREEWIDGETITEM_NEW4 );
+    QTreeWidgetItem_new4();
   }
   else if( ISBETWEEN(2,3) && ISQTREEWIDGET(1) && ISQTREEWIDGETITEM(2) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QTREEWIDGETITEM_NEW5 );
+    QTreeWidgetItem_new5();
   }
   else if( ISBETWEEN(1,2) && ISQTREEWIDGETITEM(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QTREEWIDGETITEM_NEW6 );
+    QTreeWidgetItem_new6();
   }
   else if( ISBETWEEN(2,3) && ISQTREEWIDGETITEM(1) && ISARRAY(2) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QTREEWIDGETITEM_NEW7 );
+    QTreeWidgetItem_new7();
   }
   else if( ISBETWEEN(2,3) && ISQTREEWIDGETITEM(1) && ISQTREEWIDGETITEM(2) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QTREEWIDGETITEM_NEW8 );
+    QTreeWidgetItem_new8();
   }
   else if( ISNUMPAR(1) && ISQTREEWIDGETITEM(1) )
   {
-    HB_FUNC_EXEC( QTREEWIDGETITEM_NEW9 ); // WARNING: conflita com [6] quando é apenas 1 parâmetro
+    QTreeWidgetItem_new9(); // WARNING: conflita com [6] quando é apenas 1 parâmetro
   }
   else
   {

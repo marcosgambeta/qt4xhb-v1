@@ -7,8 +7,6 @@ CLASS QHttpPart
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD setBody
@@ -39,12 +37,12 @@ $destructor
 /*
 QHttpPart ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QHttpPart ( const QHttpPart & other )
 */
-$constructor=|new2|const QHttpPart &
+$internalConstructor=|new2|const QHttpPart &
 
 //[1]QHttpPart ()
 //[2]QHttpPart ( const QHttpPart & other )
@@ -53,11 +51,11 @@ HB_FUNC_STATIC( QHTTPPART_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QHTTPPART_NEW1 );
+    QHttpPart_new1();
   }
   else if( ISNUMPAR(1) && ISQHTTPPART(1) )
   {
-    HB_FUNC_EXEC( QHTTPPART_NEW2 );
+    QHttpPart_new2();
   }
   else
   {

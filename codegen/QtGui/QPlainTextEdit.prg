@@ -13,8 +13,6 @@ REQUEST QVARIANT
 
 CLASS QPlainTextEdit INHERIT QAbstractScrollArea
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD anchorAt
@@ -104,12 +102,12 @@ $destructor
 /*
 QPlainTextEdit ( QWidget * parent = 0 )
 */
-$constructor=|new1|QWidget *=0
+$internalConstructor=|new1|QWidget *=0
 
 /*
 QPlainTextEdit ( const QString & text, QWidget * parent = 0 )
 */
-$constructor=|new2|const QString &,QWidget *=0
+$internalConstructor=|new2|const QString &,QWidget *=0
 
 //[1]QPlainTextEdit ( QWidget * parent = 0 )
 //[2]QPlainTextEdit ( const QString & text, QWidget * parent = 0 )
@@ -118,11 +116,11 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QPLAINTEXTEDIT_NEW1 );
+    QPlainTextEdit_new1();
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QPLAINTEXTEDIT_NEW2 );
+    QPlainTextEdit_new2();
   }
   else
   {

@@ -11,18 +11,10 @@ REQUEST QPAINTENGINE
 
 CLASS QGLFramebufferObject INHERIT QPaintDevice
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
-   METHOD new6
    METHOD new
    METHOD delete
    METHOD attachment
    METHOD bind
-   METHOD drawTexture1
-   METHOD drawTexture2
    METHOD drawTexture
    METHOD format
    METHOD handle
@@ -54,62 +46,32 @@ $destructor
 /*
 QGLFramebufferObject ( const QSize & size, GLenum target = GL_TEXTURE_2D )
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW1 )
-{
-  QGLFramebufferObject * o = new QGLFramebufferObject ( *PQSIZE(1), OPGLENUM(2,GL_TEXTURE_2D) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new1|const QSize &,GLenum=GL_TEXTURE_2D
 
 /*
 QGLFramebufferObject ( int width, int height, GLenum target = GL_TEXTURE_2D )
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW2 )
-{
-  QGLFramebufferObject * o = new QGLFramebufferObject ( PINT(1), PINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new2|int,int,GLenum=GL_TEXTURE_2D
 
 /*
 QGLFramebufferObject ( const QSize & size, const QGLFramebufferObjectFormat & format )
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW3 )
-{
-  QGLFramebufferObject * o = new QGLFramebufferObject ( *PQSIZE(1), *PQGLFRAMEBUFFEROBJECTFORMAT(2) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new3|const QSize &,const QGLFramebufferObjectFormat &
 
 /*
 QGLFramebufferObject ( int width, int height, const QGLFramebufferObjectFormat & format )
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW4 )
-{
-  QGLFramebufferObject * o = new QGLFramebufferObject ( PINT(1), PINT(2), *PQGLFRAMEBUFFEROBJECTFORMAT(2) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new4|int,int,const QGLFramebufferObjectFormat &
 
 /*
 QGLFramebufferObject ( int width, int height, Attachment attachment, GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW5 )
-{
-  QGLFramebufferObject * o = new QGLFramebufferObject ( PINT(1), PINT(2), (QGLFramebufferObject::Attachment) hb_parni(3), OPGLENUM(4,GL_TEXTURE_2D), OPGLENUM(5,GL_RGBA8) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new5|int,int,QGLFramebufferObject::Attachment,GLenum=GL_TEXTURE_2D,GLenum=GL_RGBA8
 
 /*
 QGLFramebufferObject ( const QSize & size, Attachment attachment, GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW6 )
-{
-  QGLFramebufferObject * o = new QGLFramebufferObject ( *PQSIZE(1), (QGLFramebufferObject::Attachment) hb_parni(2), OPGLENUM(3,GL_TEXTURE_2D), OPGLENUM(4,GL_RGBA8) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new6|const QSize &,QGLFramebufferObject::Attachment,GLenum=GL_TEXTURE_2D,GLenum=GL_RGBA8
 
 //[1]QGLFramebufferObject ( const QSize & size, GLenum target = GL_TEXTURE_2D )
 //[2]QGLFramebufferObject ( int width, int height, GLenum target = GL_TEXTURE_2D )
@@ -120,6 +82,34 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW6 )
 
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW )
 {
+  if( ISBETWEEN(1,2) && ISQSIZE(1) && (ISNUM(2)||ISNIL(2)) )
+  {
+    QGLFramebufferObject_new1();
+  }
+  else if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
+  {
+    QGLFramebufferObject_new2();
+  }
+  else if( ISNUMPAR(2) && ISQSIZE(1) && ISQGLFRAMEBUFFEROBJECTFORMAT(2) )
+  {
+    QGLFramebufferObject_new3();
+  }
+  else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQGLFRAMEBUFFEROBJECTFORMAT(3) )
+  {
+    QGLFramebufferObject_new4();
+  }
+  else if( ISBETWEEN(3,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
+  {
+    QGLFramebufferObject_new5();
+  }
+  else if( ISBETWEEN(3,4) && ISQSIZE(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
+  {
+    QGLFramebufferObject_new6();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 $deleteMethod
@@ -137,12 +127,12 @@ $method=|bool|bind|
 /*
 void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 */
-$method=|void|drawTexture,drawTexture1|const QRectF &,GLuint,GLenum=GL_TEXTURE_2D
+$internalMethod=|void|drawTexture,drawTexture1|const QRectF &,GLuint,GLenum=GL_TEXTURE_2D
 
 /*
 void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 */
-$method=|void|drawTexture,drawTexture2|const QPointF &,GLuint,GLenum=GL_TEXTURE_2D
+$internalMethod=|void|drawTexture,drawTexture2|const QPointF &,GLuint,GLenum=GL_TEXTURE_2D
 
 //[1]void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 //[2]void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
@@ -151,11 +141,11 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_DRAWTEXTURE )
 {
   if( ISBETWEEN(2,3) && ISQRECTF(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QGLFRAMEBUFFEROBJECT_DRAWTEXTURE1 );
+    QGLFrameBufferObject_drawTexture1();
   }
   else if( ISBETWEEN(2,3) && ISQPOINTF(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QGLFRAMEBUFFEROBJECT_DRAWTEXTURE2 );
+    QGLFrameBufferObject_drawTexture2();
   }
   else
   {

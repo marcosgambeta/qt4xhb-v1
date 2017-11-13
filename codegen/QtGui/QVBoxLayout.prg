@@ -4,8 +4,6 @@ $header
 
 CLASS QVBoxLayout INHERIT QBoxLayout
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
 
@@ -26,12 +24,12 @@ $destructor
 /*
 QVBoxLayout ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QVBoxLayout ( QWidget * parent )
 */
-$constructor=|new2|QWidget *
+$internalConstructor=|new2|QWidget *
 
 //[1]QVBoxLayout ()
 //[2]QVBoxLayout ( QWidget * parent )
@@ -40,11 +38,11 @@ HB_FUNC_STATIC( QVBOXLAYOUT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QVBOXLAYOUT_NEW1 );
+    QVBoxLayout_new1();
   }
   else if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    HB_FUNC_EXEC( QVBOXLAYOUT_NEW2 );
+    QVBoxLayout_new2();
   }
   else
   {

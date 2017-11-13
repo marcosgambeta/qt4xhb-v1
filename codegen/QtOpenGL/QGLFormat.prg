@@ -11,9 +11,6 @@ CLASS QGLFormat
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD accum
@@ -94,33 +91,17 @@ $destructor
 /*
 QGLFormat ()
 */
-HB_FUNC_STATIC( QGLFORMAT_NEW1 )
-{
-  QGLFormat * o = new QGLFormat ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$internalConstructor=|new1|
 
 /*
 QGLFormat ( QGL::FormatOptions options, int plane = 0 )
 */
-HB_FUNC_STATIC( QGLFORMAT_NEW2 )
-{
-  int par1 = hb_parni(1);
-  QGLFormat * o = new QGLFormat ( (QGL::FormatOptions) par1, OPINT(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$internalConstructor=|new2|QGL::FormatOptions,int=0
 
 /*
 QGLFormat ( const QGLFormat & other )
 */
-HB_FUNC_STATIC( QGLFORMAT_NEW3 )
-{
-  QGLFormat * o = new QGLFormat ( *PQGLFORMAT(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$internalConstructor=|new3|const QGLFormat &
 
 //[1]QGLFormat ()
 //[2]QGLFormat ( QGL::FormatOptions options, int plane = 0 )
@@ -130,15 +111,15 @@ HB_FUNC_STATIC( QGLFORMAT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QGLFORMAT_NEW1 );
+    QGLFormat_new1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QGLFORMAT_NEW2 );
+    QGLFormat_new2();
   }
   else if( ISNUMPAR(1) && ISQGLFORMAT(1) )
   {
-    HB_FUNC_EXEC( QGLFORMAT_NEW3 );
+    QGLFormat_new3();
   }
   else
   {

@@ -13,12 +13,7 @@ CLASS QPolygonF
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new4
-   METHOD new5
-   METHOD new6
    METHOD new
    METHOD delete
    METHOD boundingRect
@@ -28,11 +23,7 @@ CLASS QPolygonF
    METHOD subtracted
    METHOD swap
    METHOD toPolygon
-   METHOD translate1
-   METHOD translate2
    METHOD translate
-   METHOD translated1
-   METHOD translated2
    METHOD translated
    METHOD united
 
@@ -59,17 +50,17 @@ $destructor
 /*
 QPolygonF ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QPolygonF ( int size )
 */
-$constructor=|new2|int
+$internalConstructor=|new2|int
 
 /*
 QPolygonF ( const QPolygonF & polygon )
 */
-$constructor=|new3|const QPolygonF &
+$internalConstructor=|new3|const QPolygonF &
 
 /*
 QPolygonF ( const QVector<QPointF> & points )
@@ -91,12 +82,12 @@ HB_FUNC_STATIC( QPOLYGONF_NEW4 )
 /*
 QPolygonF ( const QRectF & rectangle )
 */
-$constructor=|new5|const QRectF &
+$internalConstructor=|new5|const QRectF &
 
 /*
 QPolygonF ( const QPolygon & polygon )
 */
-$constructor=|new6|const QPolygon &
+$internalConstructor=|new6|const QPolygon &
 
 //[1]QPolygonF ()
 //[2]QPolygonF ( int size )
@@ -109,15 +100,15 @@ HB_FUNC_STATIC( QPOLYGONF_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QPOLYGONF_NEW1 );
+    QPolygonF_new1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QPOLYGONF_NEW2 );
+    QPolygonF_new2();
   }
   else if( ISNUMPAR(1) && ISQPOLYGONF(1) )
   {
-    HB_FUNC_EXEC( QPOLYGONF_NEW3 );
+    QPolygonF_new3();
   }
   else if( ISNUMPAR(1) && ISARRAY(1) )
   {
@@ -125,11 +116,11 @@ HB_FUNC_STATIC( QPOLYGONF_NEW )
   }
   else if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    HB_FUNC_EXEC( QPOLYGONF_NEW5 );
+    QPolygonF_new5();
   }
   else if( ISNUMPAR(1) && ISQPOLYGON(1) )
   {
-    HB_FUNC_EXEC( QPOLYGONF_NEW6 );
+    QPolygonF_new6();
   }
   else
   {
@@ -177,12 +168,12 @@ $method=|QPolygon|toPolygon|
 /*
 void translate ( const QPointF & offset )
 */
-$method=|void|translate,translate1|const QPointF &
+$internalMethod=|void|translate,translate1|const QPointF &
 
 /*
 void translate ( qreal dx, qreal dy )
 */
-$method=|void|translate,translate2|qreal,qreal
+$internalMethod=|void|translate,translate2|qreal,qreal
 
 //[1]void translate ( const QPointF & offset )
 //[2]void translate ( qreal dx, qreal dy )
@@ -191,11 +182,11 @@ HB_FUNC_STATIC( QPOLYGONF_TRANSLATE )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    HB_FUNC_EXEC( QPOLYGONF_TRANSLATE1 );
+    QPolygonF_translate1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QPOLYGONF_TRANSLATE2 );
+    QPolygonF_translate2();
   }
   else
   {
@@ -206,12 +197,12 @@ HB_FUNC_STATIC( QPOLYGONF_TRANSLATE )
 /*
 QPolygonF translated ( const QPointF & offset ) const
 */
-$method=|QPolygonF|translated,translated1|const QPointF &
+$internalMethod=|QPolygonF|translated,translated1|const QPointF &
 
 /*
 QPolygonF translated ( qreal dx, qreal dy ) const
 */
-$method=|QPolygonF|translated,translated2|qreal,qreal
+$internalMethod=|QPolygonF|translated,translated2|qreal,qreal
 
 //[1]QPolygonF translated ( const QPointF & offset ) const
 //[2]QPolygonF translated ( qreal dx, qreal dy ) const
@@ -220,11 +211,11 @@ HB_FUNC_STATIC( QPOLYGONF_TRANSLATED )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    HB_FUNC_EXEC( QPOLYGONF_TRANSLATED1 );
+    QPolygonF_translated1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QPOLYGONF_TRANSLATED2 );
+    QPolygonF_translated2();
   }
   else
   {

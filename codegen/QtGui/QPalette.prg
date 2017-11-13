@@ -13,25 +13,15 @@ CLASS QPalette
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
-   METHOD new6
    METHOD new
    METHOD delete
    METHOD alternateBase
    METHOD base
    METHOD brightText
-   METHOD brush1
-   METHOD brush2
    METHOD brush
    METHOD button
    METHOD buttonText
    METHOD cacheKey
-   METHOD color1
-   METHOD color2
    METHOD color
    METHOD currentColorGroup
    METHOD dark
@@ -46,11 +36,7 @@ CLASS QPalette
    METHOD mid
    METHOD midlight
    METHOD resolve
-   METHOD setBrush1
-   METHOD setBrush2
    METHOD setBrush
-   METHOD setColor1
-   METHOD setColor2
    METHOD setColor
    METHOD setColorGroup
    METHOD setCurrentColorGroup
@@ -84,32 +70,32 @@ $destructor
 /*
 QPalette ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QPalette ( const QColor & button )
 */
-$constructor=|new2|const QColor &
+$internalConstructor=|new2|const QColor &
 
 /*
 QPalette ( Qt::GlobalColor button )
 */
-$constructor=|new3|Qt::GlobalColor
+$internalConstructor=|new3|Qt::GlobalColor
 
 /*
 QPalette ( const QColor & button, const QColor & window )
 */
-$constructor=|new4|const QColor &,const QColor &
+$internalConstructor=|new4|const QColor &,const QColor &
 
 /*
 QPalette ( const QBrush & windowText, const QBrush & button, const QBrush & light, const QBrush & dark, const QBrush & mid, const QBrush & text, const QBrush & bright_text, const QBrush & base, const QBrush & window )
 */
-$constructor=|new5|const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &
+$internalConstructor=|new5|const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &
 
 /*
 QPalette ( const QPalette & p )
 */
-$constructor=|new6|const QPalette &
+$internalConstructor=|new6|const QPalette &
 
 //[1]QPalette ()
 //[2]QPalette ( const QColor & button )
@@ -122,23 +108,27 @@ HB_FUNC_STATIC( QPALETTE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QPALETTE_NEW1 );
+    QPalette_new1();
   }
   else if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
   {
-    HB_FUNC_EXEC( QPALETTE_NEW2 );
+    QPalette_new2();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QPALETTE_NEW3 );
+    QPalette_new3();
   }
   else if( ISNUMPAR(2) && (ISQCOLOR(1)||ISCHAR(1)) && (ISQCOLOR(2)||ISCHAR(2)) )
   {
-    HB_FUNC_EXEC( QPALETTE_NEW4 );
+    QPalette_new4();
   }
   else if( ISNUMPAR(9) && ISQBRUSH(1) && ISQBRUSH(2) && ISQBRUSH(3) && ISQBRUSH(4) && ISQBRUSH(5) && ISQBRUSH(6) && ISQBRUSH(7) && ISQBRUSH(8) && ISQBRUSH(9) )
   {
-    HB_FUNC_EXEC( QPALETTE_NEW6 );
+    QPalette_new5();
+  }
+  else if( ISNUMPAR(1) && ISQPALETTE(1) )
+  {
+    QPalette_new6();
   }
   else
   {
@@ -166,12 +156,12 @@ $method=|const QBrush &|brightText|
 /*
 const QBrush & brush ( ColorGroup group, ColorRole role ) const
 */
-$method=|const QBrush &|brush,brush1|QPalette::ColorGroup,QPalette::ColorRole
+$internalMethod=|const QBrush &|brush,brush1|QPalette::ColorGroup,QPalette::ColorRole
 
 /*
 const QBrush & brush ( ColorRole role ) const
 */
-$method=|const QBrush &|brush,brush2|QPalette::ColorRole
+$internalMethod=|const QBrush &|brush,brush2|QPalette::ColorRole
 
 //[1]const QBrush & brush ( ColorGroup group, ColorRole role ) const
 //[2]const QBrush & brush ( ColorRole role ) const
@@ -180,11 +170,11 @@ HB_FUNC_STATIC( QPALETTE_BRUSH )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QPALETTE_BRUSH1 );
+    QPalette_brush1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QPALETTE_BRUSH2 );
+    QPalette_brush2();
   }
   else
   {
@@ -210,12 +200,12 @@ $method=|qint64|cacheKey|
 /*
 const QColor & color ( ColorGroup group, ColorRole role ) const
 */
-$method=|const QColor &|color,color1|QPalette::ColorGroup,QPalette::ColorRole
+$internalMethod=|const QColor &|color,color1|QPalette::ColorGroup,QPalette::ColorRole
 
 /*
 const QColor & color ( ColorRole role ) const
 */
-$method=|const QColor &|color,color2|QPalette::ColorRole
+$internalMethod=|const QColor &|color,color2|QPalette::ColorRole
 
 //[1]const QColor & color ( ColorGroup group, ColorRole role ) const
 //[2]const QColor & color ( ColorRole role ) const
@@ -224,11 +214,11 @@ HB_FUNC_STATIC( QPALETTE_COLOR )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QPALETTE_COLOR1 );
+    QPalette_color1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QPALETTE_COLOR2 );
+    QPalette_color2();
   }
   else
   {
@@ -304,12 +294,12 @@ $method=|QPalette|resolve|const QPalette &
 /*
 void setBrush ( ColorRole role, const QBrush & brush )
 */
-$method=|void|setBrush,setBrush1|QPalette::ColorRole,const QBrush &
+$internalMethod=|void|setBrush,setBrush1|QPalette::ColorRole,const QBrush &
 
 /*
 void setBrush ( ColorGroup group, ColorRole role, const QBrush & brush )
 */
-$method=|void|setBrush,setBrush2|QPalette::ColorGroup,QPalette::ColorRole,const QBrush &
+$internalMethod=|void|setBrush,setBrush2|QPalette::ColorGroup,QPalette::ColorRole,const QBrush &
 
 //[1]void setBrush ( ColorRole role, const QBrush & brush )
 //[2]void setBrush ( ColorGroup group, ColorRole role, const QBrush & brush )
@@ -318,11 +308,11 @@ HB_FUNC_STATIC( QPALETTE_SETBRUSH )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISQBRUSH(2) )
   {
-    HB_FUNC_EXEC( QPALETTE_SETBRUSH1 );
+    QPalette_setBrush1();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQBRUSH(3) )
   {
-    HB_FUNC_EXEC( QPALETTE_SETBRUSH2 );
+    QPalette_setBrush2();
   }
   else
   {
@@ -333,12 +323,12 @@ HB_FUNC_STATIC( QPALETTE_SETBRUSH )
 /*
 void setColor ( ColorGroup group, ColorRole role, const QColor & color )
 */
-$method=|void|setColor,setColor1|QPalette::ColorGroup,QPalette::ColorRole,const QColor &
+$internalMethod=|void|setColor,setColor1|QPalette::ColorGroup,QPalette::ColorRole,const QColor &
 
 /*
 void setColor ( ColorRole role, const QColor & color )
 */
-$method=|void|setColor,setColor2|QPalette::ColorRole,const QColor &
+$internalMethod=|void|setColor,setColor2|QPalette::ColorRole,const QColor &
 
 //[1]void setColor ( ColorGroup group, ColorRole role, const QColor & color )
 //[2]void setColor ( ColorRole role, const QColor & color )
@@ -347,11 +337,11 @@ HB_FUNC_STATIC( QPALETTE_SETCOLOR )
 {
   if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && (ISQCOLOR(3)||ISCHAR(3)) )
   {
-    HB_FUNC_EXEC( QPALETTE_SETCOLOR1 );
+    QPalette_setColor1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && (ISQCOLOR(2)||ISCHAR(3)) )
   {
-    HB_FUNC_EXEC( QPALETTE_SETCOLOR2 );
+    QPalette_setColor2();
   }
   else
   {

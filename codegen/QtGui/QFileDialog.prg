@@ -13,8 +13,6 @@ REQUEST QURL
 
 CLASS QFileDialog INHERIT QDialog
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD acceptMode
@@ -43,8 +41,6 @@ CLASS QFileDialog INHERIT QDialog
    METHOD setAcceptMode
    METHOD setConfirmOverwrite
    METHOD setDefaultSuffix
-   METHOD setDirectory1
-   METHOD setDirectory2
    METHOD setDirectory
    METHOD setFileMode
    METHOD setFilter
@@ -96,12 +92,12 @@ $destructor
 /*
 QFileDialog ( QWidget * parent, Qt::WindowFlags flags )
 */
-$constructor=|new1|QWidget *,Qt::WindowFlags
+$internalConstructor=|new1|QWidget *,Qt::WindowFlags
 
 /*
 QFileDialog ( QWidget * parent = 0, const QString & caption = QString(), const QString & directory = QString(), const QString & filter = QString() )
 */
-$constructor=|new2|QWidget *=0,const QString &=QString(),const QString &=QString(),const QString &=QString()
+$internalConstructor=|new2|QWidget *=0,const QString &=QString(),const QString &=QString(),const QString &=QString()
 
 //[1]QFileDialog ( QWidget * parent, Qt::WindowFlags flags )
 //[2]QFileDialog ( QWidget * parent = 0, const QString & caption = QString(), const QString & directory = QString(), const QString & filter = QString() )
@@ -110,11 +106,11 @@ HB_FUNC_STATIC( QFILEDIALOG_NEW )
 {
   if( ISNUMPAR(2) && ISQWIDGET(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QFILEDIALOG_NEW1 );
+    QFileDialog_new1();
   }
   else if( ISBETWEEN(0,4) && (ISQWIDGET(1)||ISNIL(1)) && (ISCHAR(2)||ISNIL(2)) && (ISCHAR(3)||ISNIL(3)) && (ISCHAR(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QFILEDIALOG_NEW2 );
+    QFileDialog_new2();
   }
   else
   {
@@ -257,12 +253,12 @@ $method=|void|setDefaultSuffix|const QString &
 /*
 void setDirectory ( const QString & directory )
 */
-$method=|void|setDirectory,setDirectory1|const QString &
+$internalMethod=|void|setDirectory,setDirectory1|const QString &
 
 /*
 void setDirectory ( const QDir & directory )
 */
-$method=|void|setDirectory,setDirectory2|const QDir &
+$internalMethod=|void|setDirectory,setDirectory2|const QDir &
 
 //[1]void setDirectory ( const QString & directory )
 //[2]void setDirectory ( const QDir & directory )
@@ -271,11 +267,11 @@ HB_FUNC_STATIC( QFILEDIALOG_SETDIRECTORY )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QFILEDIALOG_SETDIRECTORY1 );
+    QFileDialog_setDirectory1();
   }
   else if( ISNUMPAR(1) && ISQDIR(1) )
   {
-    HB_FUNC_EXEC( QFILEDIALOG_SETDIRECTORY2 );
+    QFileDialog_setDirectory2();
   }
   else
   {

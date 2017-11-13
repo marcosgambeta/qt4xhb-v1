@@ -4,8 +4,6 @@ $header
 
 CLASS QInputMethodEvent INHERIT QEvent
 
-   METHOD new1
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD commitString
@@ -31,12 +29,17 @@ $destructor
 /*
 QInputMethodEvent ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
+
+/*
+QInputMethodEvent ( const QString & preeditText, const QList<Attribute> & attributes )
+*/
+%% TODO: implementar ?
 
 /*
 QInputMethodEvent ( const QInputMethodEvent & other )
 */
-$constructor=|new2|const QInputMethodEvent &
+$internalConstructor=|new2|const QInputMethodEvent &
 
 //[1]QInputMethodEvent ()
 //[2]QInputMethodEvent ( const QString & preeditText, const QList<Attribute> & attributes )
@@ -46,11 +49,11 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QINPUTMETHODEVENT_NEW1 );
+    QInputMethodEvent_new1();
   }
   else if( ISNUMPAR(1) && ISQINPUTMETHODEVENT(1) )
   {
-    HB_FUNC_EXEC( QINPUTMETHODEVENT_NEW3 );
+    QInputMethodEvent_new3();
   }
   else
   {

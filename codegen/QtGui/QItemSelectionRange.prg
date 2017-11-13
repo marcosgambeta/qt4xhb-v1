@@ -13,16 +13,10 @@ CLASS QItemSelectionRange
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD bottom
    METHOD bottomRight
-   METHOD contains1
-   METHOD contains2
    METHOD contains
    METHOD height
    METHOD indexes
@@ -61,22 +55,22 @@ $destructor
 /*
 QItemSelectionRange ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QItemSelectionRange ( const QItemSelectionRange & other )
 */
-$constructor=|new2|const QItemSelectionRange &
+$internalConstructor=|new2|const QItemSelectionRange &
 
 /*
 QItemSelectionRange ( const QModelIndex & topLeft, const QModelIndex & bottomRight )
 */
-$constructor=|new3|const QModelIndex &,const QModelIndex &
+$internalConstructor=|new3|const QModelIndex &,const QModelIndex &
 
 /*
 QItemSelectionRange ( const QModelIndex & index )
 */
-$constructor=|new4|const QModelIndex &
+$internalConstructor=|new4|const QModelIndex &
 
 //[1]QItemSelectionRange ()
 //[2]QItemSelectionRange ( const QItemSelectionRange & other )
@@ -87,19 +81,19 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QITEMSELECTIONRANGE_NEW1 );
+    QItemSelectionRange_new1();
   }
   else if( ISNUMPAR(1) && ISQITEMSELECTIONRANGE(1) )
   {
-    HB_FUNC_EXEC( QITEMSELECTIONRANGE_NEW2 );
+    QItemSelectionRange_new2();
   }
   else if( ISNUMPAR(2) && ISQMODELINDEX(1) && ISQMODELINDEX(2) )
   {
-    HB_FUNC_EXEC( QITEMSELECTIONRANGE_NEW3 );
+    QItemSelectionRange_new3();
   }
   else if( ISNUMPAR(1) && ISQMODELINDEX(1) )
   {
-    HB_FUNC_EXEC( QITEMSELECTIONRANGE_NEW4 );
+    QItemSelectionRange_new4();
   }
   else
   {
@@ -122,12 +116,12 @@ $method=|QModelIndex|bottomRight|
 /*
 bool contains ( const QModelIndex & index ) const
 */
-$method=|bool|contains,contains1|const QModelIndex &
+$internalMethod=|bool|contains,contains1|const QModelIndex &
 
 /*
 bool contains ( int row, int column, const QModelIndex & parentIndex ) const
 */
-$method=|bool|contains,contains2|int,int,const QModelIndex &
+$internalMethod=|bool|contains,contains2|int,int,const QModelIndex &
 
 //[1]bool contains ( const QModelIndex & index ) const
 //[2]bool contains ( int row, int column, const QModelIndex & parentIndex ) const
@@ -136,11 +130,11 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_CONTAINS )
 {
   if( ISNUMPAR(1) && ISQMODELINDEX(1) )
   {
-    HB_FUNC_EXEC( QITEMSELECTIONRANGE_CONTAINS1 );
+    QItemSelectionRange_contains1();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQMODELINDEX(3) )
   {
-    HB_FUNC_EXEC( QITEMSELECTIONRANGE_CONTAINS2 );
+    QItemSelectionRange_contains2();
   }
   else
   {

@@ -12,8 +12,6 @@ CLASS QGlyphRun
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD clear
@@ -53,12 +51,12 @@ $destructor
 /*
 QGlyphRun ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QGlyphRun ( const QGlyphRun & other )
 */
-$constructor=|new2|const QGlyphRun &
+$internalConstructor=|new2|const QGlyphRun &
 
 //[1]QGlyphRun ()
 //[2]QGlyphRun ( const QGlyphRun & other )
@@ -67,11 +65,11 @@ HB_FUNC_STATIC( QGLYPHRUN_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QGLYPHRUN_NEW1 );
+    QGlyphRun_new1();
   }
   else if( ISNUMPAR(1) && ISQGLYPHRUN(1) )
   {
-    HB_FUNC_EXEC( QGLYPHRUN_NEW2 );
+    QGlyphRun_new2();
   }
   else
   {

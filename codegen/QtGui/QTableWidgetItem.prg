@@ -17,10 +17,6 @@ CLASS QTableWidgetItem
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD background
@@ -82,22 +78,22 @@ $destructor
 /*
 QTableWidgetItem ( int type = Type )
 */
-$constructor=|new1|int=QTableWidgetItem::Type
+$internalConstructor=|new1|int=QTableWidgetItem::Type
 
 /*
 QTableWidgetItem ( const QString & text, int type = Type )
 */
-$constructor=|new2|const QString &,int=QTableWidgetItem::Type
+$internalConstructor=|new2|const QString &,int=QTableWidgetItem::Type
 
 /*
 QTableWidgetItem ( const QIcon & icon, const QString & text, int type = Type )
 */
-$constructor=|new3|const QIcon &,const QString &,int=QTableWidgetItem::Type
+$internalConstructor=|new3|const QIcon &,const QString &,int=QTableWidgetItem::Type
 
 /*
 QTableWidgetItem ( const QTableWidgetItem & other )
 */
-$constructor=|new4|const QTableWidgetItem &
+$internalConstructor=|new4|const QTableWidgetItem &
 
 //[1]QTableWidgetItem ( int type = Type )
 //[2]QTableWidgetItem ( const QString & text, int type = Type )
@@ -108,19 +104,19 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_NEW )
 {
   if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QTABLEWIDGETITEM_NEW1 );
+    QTableWidgetItem_new1();
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QTABLEWIDGETITEM_NEW2 );
+    QTableWidgetItem_new2();
   }
   else if( ISBETWEEN(2,3) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QTABLEWIDGETITEM_NEW3 );
+    QTableWidgetItem_new3();
   }
   else if( ISNUMPAR(1) && ISQTABLEWIDGETITEM(1) )
   {
-    HB_FUNC_EXEC( QTABLEWIDGETITEM_NEW4 );
+    QTableWidgetItem_new4();
   }
   else
   {

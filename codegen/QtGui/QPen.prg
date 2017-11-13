@@ -12,11 +12,6 @@ CLASS QPen
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
    METHOD new
    METHOD delete
    METHOD brush
@@ -66,27 +61,27 @@ $destructor
 /*
 QPen ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QPen ( Qt::PenStyle style )
 */
-$constructor=|new2|Qt::PenStyle
+$internalConstructor=|new2|Qt::PenStyle
 
 /*
 QPen ( const QColor & color )
 */
-$constructor=|new3|const QColor &
+$internalConstructor=|new3|const QColor &
 
 /*
 QPen ( const QBrush & brush, qreal width, Qt::PenStyle style = Qt::SolidLine, Qt::PenCapStyle cap = Qt::SquareCap, Qt::PenJoinStyle join = Qt::BevelJoin )
 */
-$constructor=|new4|const QBrush &,qreal,Qt::PenStyle=Qt::SolidLine,Qt::PenCapStyle=Qt::SquareCap,Qt::PenJoinStyle=Qt::BevelJoin
+$internalConstructor=|new4|const QBrush &,qreal,Qt::PenStyle=Qt::SolidLine,Qt::PenCapStyle=Qt::SquareCap,Qt::PenJoinStyle=Qt::BevelJoin
 
 /*
 QPen ( const QPen & pen )
 */
-$constructor=|new5|const QPen &
+$internalConstructor=|new5|const QPen &
 
 //[1]QPen ()
 //[2]QPen ( Qt::PenStyle style )
@@ -98,23 +93,23 @@ HB_FUNC_STATIC( QPEN_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QPEN_NEW1 );
+    QPen_new1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QPEN_NEW2 );
+    QPen_new2();
   }
   else if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
   {
-    HB_FUNC_EXEC( QPEN_NEW3 );
+    QPen_new3();
   }
   else if( ISBETWEEN(2,5) && ISQBRUSH(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
   {
-    HB_FUNC_EXEC( QPEN_NEW4 );
+    QPen_new4();
   }
   else if( ISNUMPAR(1) && ISQPEN(1) )
   {
-    HB_FUNC_EXEC( QPEN_NEW5 );
+    QPen_new5();
   }
   else
   {

@@ -4,8 +4,6 @@ $header
 
 CLASS QDoubleValidator INHERIT QValidator
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD bottom
@@ -36,12 +34,12 @@ $destructor
 /*
 QDoubleValidator ( QObject * parent = 0 )
 */
-$constructor=|new1|QObject *=0
+$internalConstructor=|new1|QObject *=0
 
 /*
 QDoubleValidator ( double bottom, double top, int decimals, QObject * parent )
 */
-$constructor=|new2|double,double,int,QObject *
+$internalConstructor=|new2|double,double,int,QObject *
 
 //[1]QDoubleValidator ( QObject * parent = 0 )
 //[2]QDoubleValidator ( double bottom, double top, int decimals, QObject * parent = 0 )
@@ -50,11 +48,11 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QDOUBLEVALIDATOR_NEW1 );
+    QDoubleValidator_new1();
   }
   else if( ISBETWEEN(3,4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && (ISQOBJECT(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QDOUBLEVALIDATOR_NEW2 );
+    QDoubleValidator_new2();
   }
   else
   {

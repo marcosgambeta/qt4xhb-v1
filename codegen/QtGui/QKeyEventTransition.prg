@@ -4,8 +4,6 @@ $header
 
 CLASS QKeyEventTransition INHERIT QEventTransition
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD key
@@ -30,12 +28,12 @@ $destructor
 /*
 QKeyEventTransition ( QState * sourceState = 0 )
 */
-$constructor=|new1|QState *=0
+$internalConstructor=|new1|QState *=0
 
 /*
 QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sourceState = 0 )
 */
-$constructor=|new2|QObject *,QEvent::Type,int,QState *=0
+$internalConstructor=|new2|QObject *,QEvent::Type,int,QState *=0
 
 //[1]QKeyEventTransition ( QState * sourceState = 0 )
 //[2]QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sourceState = 0 )
@@ -44,11 +42,11 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQSTATE(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QKEYEVENTTRANSITION_NEW1 );
+    QKeyEventTransition_new1();
   }
   else if( ISBETWEEN(3,4) && ISQOBJECT(1) && ISNUM(2) && ISNUM(3) && (ISQSTATE(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QKEYEVENTTRANSITION_NEW2 );
+    QKeyEventTransition_new2();
   }
   else
   {

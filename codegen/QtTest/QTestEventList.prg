@@ -7,8 +7,6 @@ CLASS QTestEventList
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD addDelay
@@ -53,22 +51,12 @@ $destructor
 /*
 QTestEventList ()
 */
-HB_FUNC_STATIC( QTESTEVENTLIST_NEW1 )
-{
-  QTestEventList * o = new QTestEventList ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$internalConstructor=|new1|
 
 /*
 QTestEventList ( const QTestEventList & other )
 */
-HB_FUNC_STATIC( QTESTEVENTLIST_NEW2 )
-{
-  QTestEventList * o = new QTestEventList ( *PQTESTEVENTLIST(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$internalConstructor=|new2|const QTestEventList &
 
 //[1]QTestEventList ()
 //[2]QTestEventList ( const QTestEventList & other )
@@ -77,11 +65,11 @@ HB_FUNC_STATIC( QTESTEVENTLIST_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTESTEVENTLIST_NEW1 );
+    QTestEventList_new1();
   }
   else if( ISNUMPAR(1) && ISQTESTEVENTLIST(1) )
   {
-    HB_FUNC_EXEC( QTESTEVENTLIST_NEW2 );
+    QTestEventList_new2();
   }
   else
   {

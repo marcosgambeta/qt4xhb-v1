@@ -11,19 +11,12 @@ REQUEST QPAINTENGINE
 
 CLASS QGLPixelBuffer INHERIT QPaintDevice
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
-   METHOD bindTexture1
-   METHOD bindTexture2
-   METHOD bindTexture3
    METHOD bindTexture
    METHOD bindToDynamicTexture
    METHOD deleteTexture
    METHOD doneCurrent
-   METHOD drawTexture1
-   METHOD drawTexture2
    METHOD drawTexture
    METHOD format
    METHOD generateDynamicTexture
@@ -53,26 +46,12 @@ $destructor
 /*
 QGLPixelBuffer ( const QSize & size, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget = 0 )
 */
-HB_FUNC_STATIC( QGLPIXELBUFFER_NEW1 )
-{
-  QGLFormat par2 = ISNIL(2)? QGLFormat::defaultFormat() : *(QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QGLWidget * par3 = ISNIL(3)? 0 : (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QGLPixelBuffer * o = new QGLPixelBuffer ( *PQSIZE(1), par2, par3 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$internalConstructor=|new1|const QSize &,const QGLFormat &=QGLFormat::defaultFormat(),QGLWidget *=0
 
 /*
 QGLPixelBuffer ( int width, int height, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget = 0 )
 */
-HB_FUNC_STATIC( QGLPIXELBUFFER_NEW2 )
-{
-  QGLFormat par3 = ISNIL(3)? QGLFormat::defaultFormat() : *(QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QGLWidget * par4 = ISNIL(4)? 0 : (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QGLPixelBuffer * o = new QGLPixelBuffer ( PINT(1), PINT(2), par3, par4 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$internalConstructor=|new2|int,int,const QGLFormat &=QGLFormat::defaultFormat(),QGLWidget *=0
 
 //[1]QGLPixelBuffer ( const QSize & size, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget = 0 )
 //[2]QGLPixelBuffer ( int width, int height, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget = 0 )
@@ -81,11 +60,11 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_NEW )
 {
   if( ISBETWEEN(1,3) && ISQSIZE(1) && (ISQGLFORMAT(2)||ISNIL(2)) && (ISQGLWIDGET(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QGLPIXELBUFFER_NEW1 );
+    QGLPixelBuffer_new1();
   }
   else if( ISBETWEEN(2,4) && ISNUM(1) && ISNUM(2) && (ISQGLFORMAT(3)||ISNIL(3)) && (ISQGLWIDGET(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QGLPIXELBUFFER_NEW2 );
+    QGLPixelBuffer_new2();
   }
   else
   {
@@ -98,17 +77,17 @@ $deleteMethod
 /*
 GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D )
 */
-$method=|GLuint|bindTexture,bindTexture1|const QImage &,GLenum=GL_TEXTURE_2D
+$internalMethod=|GLuint|bindTexture,bindTexture1|const QImage &,GLenum=GL_TEXTURE_2D
 
 /*
 GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D )
 */
-$method=|GLuint|bindTexture,bindTexture2|const QPixmap &,GLenum=GL_TEXTURE_2D
+$internalMethod=|GLuint|bindTexture,bindTexture2|const QPixmap &,GLenum=GL_TEXTURE_2D
 
 /*
 GLuint bindTexture ( const QString & fileName )
 */
-$method=|GLuint|bindTexture,bindTexture3|const QString &
+$internalMethod=|GLuint|bindTexture,bindTexture3|const QString &
 
 //[1]GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D )
 //[2]GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D )
@@ -116,6 +95,22 @@ $method=|GLuint|bindTexture,bindTexture3|const QString &
 
 HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTEXTURE )
 {
+  if( ISBETWEEN(1,2) && ISQIMAGE(1) && (ISNUM(2)||ISNIL(2)) )
+  {
+    QGLPixelBuffer_bindTexture1();
+  }
+  else if( ISBETWEEN(1,2) && ISQPIXMAP(1) && (ISNUM(2)||ISNIL(2)) )
+  {
+    QGLPixelBuffer_bindTexture2();
+  }
+  else if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+    QGLPixelBuffer_bindTexture3();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -136,18 +131,30 @@ $method=|bool|doneCurrent|
 /*
 void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 */
-$method=|void|drawTexture,drawTexture1|const QRectF &,GLuint,GLenum=GL_TEXTURE_2D
+$internalMethod=|void|drawTexture,drawTexture1|const QRectF &,GLuint,GLenum=GL_TEXTURE_2D
 
 /*
 void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 */
-$method=|void|drawTexture,drawTexture2|const QPointF &,GLuint,GLenum=GL_TEXTURE_2D
+$internalMethod=|void|drawTexture,drawTexture2|const QPointF &,GLuint,GLenum=GL_TEXTURE_2D
 
 //[1]void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 //[2]void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 
 HB_FUNC_STATIC( QGLPIXELBUFFER_DRAWTEXTURE )
 {
+  if( ISBETWEEN(2,3) && ISQRECTF(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
+  {
+    QGLPixelBuffer_drawTexture1();
+  }
+  else if( ISBETWEEN(2,3) && ISQPOINTF(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
+  {
+    QGLPixelBuffer_drawTexture2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*

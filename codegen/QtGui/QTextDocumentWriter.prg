@@ -13,9 +13,6 @@ CLASS QTextDocumentWriter
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD codec
@@ -26,8 +23,6 @@ CLASS QTextDocumentWriter
    METHOD setDevice
    METHOD setFileName
    METHOD setFormat
-   METHOD write1
-   METHOD write2
    METHOD write
    METHOD supportedDocumentFormats
 
@@ -56,17 +51,17 @@ $destructor
 /*
 QTextDocumentWriter ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QTextDocumentWriter ( QIODevice * device, const QByteArray & format )
 */
-$constructor=|new2|QIODevice *,const QByteArray &
+$internalConstructor=|new2|QIODevice *,const QByteArray &
 
 /*
 QTextDocumentWriter ( const QString & fileName, const QByteArray & format = QByteArray() )
 */
-$constructor=|new3|const QString &,const QByteArray &=QByteArray()
+$internalConstructor=|new3|const QString &,const QByteArray &=QByteArray()
 
 //[1]QTextDocumentWriter ()
 //[2]QTextDocumentWriter ( QIODevice * device, const QByteArray & format )
@@ -76,15 +71,15 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTEXTDOCUMENTWRITER_NEW1 );
+    QTextDocumentWriter_new1();
   }
   else if( ISNUMPAR(2) && ISQIODEVICE(1) && ISQBYTEARRAY(2) )
   {
-    HB_FUNC_EXEC( QTEXTDOCUMENTWRITER_NEW2 );
+    QTextDocumentWriter_new2();
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQBYTEARRAY(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QTEXTDOCUMENTWRITER_NEW3 );
+    QTextDocumentWriter_new3();
   }
   else
   {
@@ -137,12 +132,12 @@ $method=|void|setFormat|const QByteArray &
 /*
 bool write ( const QTextDocument * document )
 */
-$method=|bool|write,write1|const QTextDocument *
+$internalMethod=|bool|write,write1|const QTextDocument *
 
 /*
 bool write ( const QTextDocumentFragment & fragment )
 */
-$method=|bool|write,write2|const QTextDocumentFragment &
+$internalMethod=|bool|write,write2|const QTextDocumentFragment &
 
 //[1]bool write ( const QTextDocument * document )
 //[2]bool write ( const QTextDocumentFragment & fragment )
@@ -151,11 +146,11 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_WRITE )
 {
   if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
   {
-    HB_FUNC_EXEC( QTEXTDOCUMENTWRITER_WRITE1 );
+    QTextDocumentWriter_write1();
   }
   else if( ISNUMPAR(1) && ISQTEXTDOCUMENTFRAGMENT(1) )
   {
-    HB_FUNC_EXEC( QTEXTDOCUMENTWRITER_WRITE2 );
+    QTextDocumentWriter_write2();
   }
   else
   {

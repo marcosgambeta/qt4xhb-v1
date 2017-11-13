@@ -22,9 +22,6 @@ CLASS QTextFormat
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD background
@@ -96,17 +93,17 @@ $destructor
 /*
 QTextFormat ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QTextFormat ( int type )
 */
-$constructor=|new2|int
+$internalConstructor=|new2|int
 
 /*
 QTextFormat ( const QTextFormat & other )
 */
-$constructor=|new3|const QTextFormat &
+$internalConstructor=|new3|const QTextFormat &
 
 //[1]QTextFormat ()
 //[2]QTextFormat ( int type )
@@ -116,15 +113,15 @@ HB_FUNC_STATIC( QTEXTFORMAT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTEXTFORMAT_NEW1 );
+    QTextFormat_new1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QTEXTFORMAT_NEW2 );
+    QTextFormat_new2();
   }
   else if( ISNUMPAR(1) && ISQTEXTFORMAT(1) )
   {
-    HB_FUNC_EXEC( QTEXTFORMAT_NEW3 );
+    QTextFormat_new3();
   }
   else
   {

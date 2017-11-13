@@ -27,8 +27,6 @@ CLASS QTreeWidget INHERIT QTreeView
    METHOD invisibleRootItem
    METHOD isFirstItemColumnSpanned
    METHOD itemAbove
-   METHOD itemAt1
-   METHOD itemAt2
    METHOD itemAt
    METHOD itemBelow
    METHOD itemWidget
@@ -36,9 +34,6 @@ CLASS QTreeWidget INHERIT QTreeView
    METHOD removeItemWidget
    METHOD selectedItems
    METHOD setColumnCount
-   METHOD setCurrentItem1
-   METHOD setCurrentItem2
-   METHOD setCurrentItem3
    METHOD setCurrentItem
    METHOD setFirstItemColumnSpanned
    METHOD setHeaderItem
@@ -85,11 +80,7 @@ $destructor
 /*
 QTreeWidget ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QTREEWIDGET_NEW )
-{
-  QTreeWidget * o = new QTreeWidget ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QWidget *=0
 
 $deleteMethod
 
@@ -241,12 +232,12 @@ $method=|QTreeWidgetItem *|itemAbove|const QTreeWidgetItem *
 /*
 QTreeWidgetItem * itemAt ( const QPoint & p ) const
 */
-$method=|QTreeWidgetItem *|itemAt,itemAt1|const QPoint &
+$internalMethod=|QTreeWidgetItem *|itemAt,itemAt1|const QPoint &
 
 /*
 QTreeWidgetItem * itemAt ( int x, int y ) const
 */
-$method=|QTreeWidgetItem *|itemAt,itemAt2|int,int
+$internalMethod=|QTreeWidgetItem *|itemAt,itemAt2|int,int
 
 //[1]QTreeWidgetItem * itemAt ( const QPoint & p ) const
 //[2]QTreeWidgetItem * itemAt ( int x, int y ) const
@@ -255,11 +246,11 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMAT )
 {
   if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QTREEWIDGET_ITEMAT1 );
+    QTreeWidget_itemAt1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QTREEWIDGET_ITEMAT2 );
+    QTreeWidget_itemAt2();
   }
   else
   {
@@ -333,17 +324,17 @@ $method=|void|setColumnCount|int
 /*
 void setCurrentItem ( QTreeWidgetItem * item )
 */
-$method=|void|setCurrentItem,setCurrentItem1|QTreeWidgetItem *
+$internalMethod=|void|setCurrentItem,setCurrentItem1|QTreeWidgetItem *
 
 /*
 void setCurrentItem ( QTreeWidgetItem * item, int column )
 */
-$method=|void|setCurrentItem,setCurrentItem2|QTreeWidgetItem *,int
+$internalMethod=|void|setCurrentItem,setCurrentItem2|QTreeWidgetItem *,int
 
 /*
 void setCurrentItem ( QTreeWidgetItem * item, int column, QItemSelectionModel::SelectionFlags command )
 */
-$method=|void|setCurrentItem,setCurrentItem3|QTreeWidgetItem *,int,QItemSelectionModel::SelectionFlags
+$internalMethod=|void|setCurrentItem,setCurrentItem3|QTreeWidgetItem *,int,QItemSelectionModel::SelectionFlags
 
 //[1]void setCurrentItem ( QTreeWidgetItem * item )
 //[2]void setCurrentItem ( QTreeWidgetItem * item, int column )
@@ -353,15 +344,15 @@ HB_FUNC_STATIC( QTREEWIDGET_SETCURRENTITEM )
 {
   if( ISNUMPAR(1) && ISQTREEWIDGETITEM(1) )
   {
-    HB_FUNC_EXEC( QTREEWIDGET_SETCURRENTITEM1 );
+    QTreeWidget_setCurrentItem1();
   }
   else if( ISNUMPAR(2) && ISQTREEWIDGETITEM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QTREEWIDGET_SETCURRENTITEM2 );
+    QTreeWidget_setCurrentItem2();
   }
   else if( ISNUMPAR(3) && ISQTREEWIDGETITEM(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QTREEWIDGET_SETCURRENTITEM3 );
+    QTreeWidget_setCurrentItem3();
   }
   else
   {

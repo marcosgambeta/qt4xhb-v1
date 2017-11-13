@@ -129,12 +129,7 @@ $constructor=|new6|uint
 /*
 QScriptValue ( qsreal value )
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_NEW7 )
-{
-  qsreal par1 = hb_parnd(1);
-  QScriptValue * o = new QScriptValue ( par1 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new7|qsreal
 
 /*
 QScriptValue ( const QString & value )

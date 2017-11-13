@@ -16,9 +16,6 @@ CLASS QTextLayout
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD beginLayout
@@ -28,8 +25,6 @@ CLASS QTextLayout
    METHOD clearLayout
    METHOD createLine
    METHOD cursorMoveStyle
-   METHOD drawCursor1
-   METHOD drawCursor2
    METHOD drawCursor
    METHOD endLayout
    METHOD font
@@ -80,17 +75,17 @@ $destructor
 /*
 QTextLayout ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QTextLayout ( const QString & text )
 */
-$constructor=|new2|const QString &
+$internalConstructor=|new2|const QString &
 
 /*
 QTextLayout ( const QString & text, const QFont & font, QPaintDevice * paintdevice = 0 )
 */
-$constructor=|new3|const QString &,const QFont &,QPaintDevice *=0
+$internalConstructor=|new3|const QString &,const QFont &,QPaintDevice *=0
 
 //[1]QTextLayout ()
 //[2]QTextLayout ( const QString & text )
@@ -100,15 +95,15 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTEXTLAYOUT_NEW1 );
+    QTextLayout_new1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QTEXTLAYOUT_NEW2 );
+    QTextLayout_new2();
   }
   else if( ISBETWEEN(2,3) && ISCHAR(1) && ISQFONT(2) && (ISOBJECT(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QTEXTLAYOUT_NEW3 );
+    QTextLayout_new3();
   }
   else
   {
@@ -156,12 +151,12 @@ $method=|Qt::CursorMoveStyle|cursorMoveStyle|
 /*
 void drawCursor ( QPainter * painter, const QPointF & position, int cursorPosition, int width ) const
 */
-$method=|void|drawCursor,drawCursor1|QPainter *,const QPointF &,int,int
+$internalMethod=|void|drawCursor,drawCursor1|QPainter *,const QPointF &,int,int
 
 /*
 void drawCursor ( QPainter * painter, const QPointF & position, int cursorPosition ) const
 */
-$method=|void|drawCursor,drawCursor2|QPainter *,const QPointF &,int
+$internalMethod=|void|drawCursor,drawCursor2|QPainter *,const QPointF &,int
 
 //[1]void drawCursor ( QPainter * painter, const QPointF & position, int cursorPosition, int width ) const
 //[2]void drawCursor ( QPainter * painter, const QPointF & position, int cursorPosition ) const
@@ -170,11 +165,11 @@ HB_FUNC_STATIC( QTEXTLAYOUT_DRAWCURSOR )
 {
   if( ISNUMPAR(4) && ISQPAINTER(1) && ISQPOINTF(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QTEXTLAYOUT_DRAWCURSOR1 );
+    QTextLayout_drawCursor1();
   }
   else if( ISNUMPAR(3) && ISQPAINTER(1) && ISQPOINTF(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QTEXTLAYOUT_DRAWCURSOR2 );
+    QTextLayout_drawCursor2();
   }
   else
   {

@@ -8,8 +8,6 @@ REQUEST QPRINTER
 
 CLASS QPrintDialog INHERIT QAbstractPrintDialog
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD open
@@ -41,12 +39,12 @@ $destructor
 /*
 QPrintDialog ( QPrinter * printer, QWidget * parent = 0 )
 */
-$constructor=|new1|QPrinter *,QWidget *=0
+$internalConstructor=|new1|QPrinter *,QWidget *=0
 
 /*
 QPrintDialog ( QWidget * parent = 0 )
 */
-$constructor=|new2|QWidget *=0
+$internalConstructor=|new2|QWidget *=0
 
 //[1]QPrintDialog ( QPrinter * printer, QWidget * parent = 0 )
 //[2]QPrintDialog ( QWidget * parent = 0 )
@@ -55,11 +53,11 @@ HB_FUNC_STATIC( QPRINTDIALOG_NEW )
 {
   if( ISBETWEEN(1,2) && ISQPRINTER(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QPRINTDIALOG_NEW1 );
+    QPrintDialog_new1();
   }
   else if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QPRINTDIALOG_NEW2 );
+    QPrintDialog_new2();
   }
   else
   {

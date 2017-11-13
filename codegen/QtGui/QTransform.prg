@@ -21,10 +21,6 @@ CLASS QTransform
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD m11
@@ -58,8 +54,6 @@ CLASS QTransform
    METHOD map9
    METHOD map10
    METHOD map
-   METHOD mapRect1
-   METHOD mapRect2
    METHOD mapRect
    METHOD mapToPolygon
    METHOD reset
@@ -95,22 +89,22 @@ $destructor
 /*
 QTransform ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QTransform ( qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33 = 1.0 )
 */
-$constructor=|new2|qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal=1.0
+$internalConstructor=|new2|qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal=1.0
 
 /*
 QTransform ( qreal m11, qreal m12, qreal m21, qreal m22, qreal dx, qreal dy )
 */
-$constructor=|new3|qreal,qreal,qreal,qreal,qreal,qreal
+$internalConstructor=|new3|qreal,qreal,qreal,qreal,qreal,qreal
 
 /*
 QTransform ( const QMatrix & matrix )
 */
-$constructor=|new4|const QMatrix &
+$internalConstructor=|new4|const QMatrix &
 
 //[1]QTransform ()
 //[2]QTransform ( qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33 = 1.0 )
@@ -121,19 +115,19 @@ HB_FUNC_STATIC( QTRANSFORM_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTRANSFORM_NEW1 );
+    QTransform_new1();
   }
   else if( ISBETWEEN(8,9) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) && ISNUM(7) && ISNUM(8) && (ISNUM(9)||ISNIL(9)) )
   {
-    HB_FUNC_EXEC( QTRANSFORM_NEW2 );
+    QTransform_new2();
   }
   else if( ISNUMPAR(6) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) )
   {
-    HB_FUNC_EXEC( QTRANSFORM_NEW3 );
+    QTransform_new3();
   }
   else if( ISNUMPAR(1) && ISQMATRIX(1) )
   {
-    HB_FUNC_EXEC( QTRANSFORM_NEW4 );
+    QTransform_new4();
   }
   else
   {
@@ -357,12 +351,12 @@ HB_FUNC_STATIC( QTRANSFORM_MAP )
 /*
 QRectF mapRect ( const QRectF & rectangle ) const
 */
-$method=|QRectF|mapRect,mapRect1|const QRectF &
+$internalMethod=|QRectF|mapRect,mapRect1|const QRectF &
 
 /*
 QRect mapRect ( const QRect & rectangle ) const
 */
-$method=|QRect|mapRect,mapRect2|const QRect &
+$internalMethod=|QRect|mapRect,mapRect2|const QRect &
 
 //[1]QRectF mapRect ( const QRectF & rectangle ) const
 //[2]QRect mapRect ( const QRect & rectangle ) const
@@ -371,11 +365,11 @@ HB_FUNC_STATIC( QTRANSFORM_MAPRECT )
 {
   if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    HB_FUNC_EXEC( QTRANSFORM_MAPRECT1 );
+    QTransform_mapRect1();
   }
   else if( ISNUMPAR(1) && ISQRECT(1) )
   {
-    HB_FUNC_EXEC( QTRANSFORM_MAPRECT2 );
+    QTransform_mapRect2();
   }
   else
   {

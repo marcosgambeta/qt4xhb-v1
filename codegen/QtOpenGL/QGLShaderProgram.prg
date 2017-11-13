@@ -8,8 +8,6 @@ REQUEST QGLSHADER
 
 CLASS QGLShaderProgram INHERIT QObject
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD addShader
@@ -112,23 +110,12 @@ $destructor
 /*
 QGLShaderProgram ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_NEW1 )
-{
-  QGLShaderProgram * o = new QGLShaderProgram ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$internalConstructor=|new1|QObject *=0
 
 /*
 QGLShaderProgram ( const QGLContext * context, QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_NEW2 )
-{
-  const QGLContext * par1 = (const QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QGLShaderProgram * o = new QGLShaderProgram ( par1, OPQOBJECT(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$internalConstructor=|new2|const QGLContext *,QObject *=0
 
 //[1]QGLShaderProgram ( QObject * parent = 0 )
 //[2]QGLShaderProgram ( const QGLContext * context, QObject * parent = 0 )
@@ -137,11 +124,11 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QGLSHADERPROGRAM_NEW1 );
+    QGLShaderProgram_new1();
   }
   else if( ISBETWEEN(1,2) && ISQGLCONTEXT(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QGLSHADERPROGRAM_NEW2 );
+    QGLShaderProgram_new2();
   }
   else
   {

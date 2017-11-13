@@ -7,9 +7,6 @@ CLASS QTreeWidgetItemIterator
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
 
@@ -36,17 +33,17 @@ $destructor
 /*
 QTreeWidgetItemIterator ( const QTreeWidgetItemIterator & it )
 */
-$constructor=|new1|const QTreeWidgetItemIterator &
+$internalConstructor=|new1|const QTreeWidgetItemIterator &
 
 /*
 QTreeWidgetItemIterator ( QTreeWidget * widget, IteratorFlags flags = All )
 */
-$constructor=|new2|QTreeWidget *,QTreeWidgetItemIterator::IteratorFlags=QTreeWidgetItemIterator::All
+$internalConstructor=|new2|QTreeWidget *,QTreeWidgetItemIterator::IteratorFlags=QTreeWidgetItemIterator::All
 
 /*
 QTreeWidgetItemIterator ( QTreeWidgetItem * item, IteratorFlags flags = All )
 */
-$constructor=|new3|QTreeWidgetItem *,QTreeWidgetItemIterator::IteratorFlags=QTreeWidgetItemIterator::All
+$internalConstructor=|new3|QTreeWidgetItem *,QTreeWidgetItemIterator::IteratorFlags=QTreeWidgetItemIterator::All
 
 //[1]QTreeWidgetItemIterator ( const QTreeWidgetItemIterator & it )
 //[2]QTreeWidgetItemIterator ( QTreeWidget * widget, IteratorFlags flags = All )
@@ -56,15 +53,15 @@ HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW )
 {
   if( ISNUMPAR(1) && ISQTREEWIDGETITEMITERATOR(1) )
   {
-    HB_FUNC_EXEC( QTREEWIDGETITEMITERATOR_NEW1 );
+    QTreeWidgetItemIterator_new1();
   }
   else if( ISBETWEEN(1,2) && ISQTREEWIDGET(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QTREEWIDGETITEMITERATOR_NEW2 );
+    QTreeWidgetItemIterator_new2();
   }
   else if( ISBETWEEN(1,2) && ISQTREEWIDGETITEM(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QTREEWIDGETITEMITERATOR_NEW3 );
+    QTreeWidgetItemIterator_new3();
   }
   else
   {

@@ -12,8 +12,6 @@ REQUEST QSCRIPTSYNTAXCHECKRESULT
 
 CLASS QScriptEngine INHERIT QObject
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD abortEvaluation
@@ -23,8 +21,6 @@ CLASS QScriptEngine INHERIT QObject
    METHOD collectGarbage
    METHOD currentContext
    METHOD defaultPrototype
-   METHOD evaluate1
-   METHOD evaluate2
    METHOD evaluate
    METHOD globalObject
    METHOD hasUncaughtException
@@ -33,11 +29,7 @@ CLASS QScriptEngine INHERIT QObject
    METHOD installTranslatorFunctions
    METHOD isEvaluating
    METHOD newArray
-   METHOD newRegExp1
-   METHOD newRegExp2
    METHOD newRegExp
-   METHOD newVariant1
-   METHOD newVariant2
    METHOD newVariant
    METHOD nullValue
    METHOD popContext
@@ -77,22 +69,12 @@ $destructor
 /*
 QScriptEngine ()
 */
-HB_FUNC_STATIC( QSCRIPTENGINE_NEW1 )
-{
-  QScriptEngine * o = new QScriptEngine ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$internalConstructor=|new1|
 
 /*
 QScriptEngine ( QObject * parent )
 */
-HB_FUNC_STATIC( QSCRIPTENGINE_NEW2 )
-{
-  QScriptEngine * o = new QScriptEngine ( PQOBJECT(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$internalConstructor=|new2|QObject *
 
 //[1]QScriptEngine ()
 //[2]QScriptEngine ( QObject * parent )
@@ -101,11 +83,11 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSCRIPTENGINE_NEW1 );
+    QScriptEngine_new1();
   }
   else if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
-    HB_FUNC_EXEC( QSCRIPTENGINE_NEW2 );
+    QScriptEngine_new2();
   }
   else
   {
@@ -153,12 +135,12 @@ $method=|QScriptValue|defaultPrototype|int
 /*
 QScriptValue evaluate ( const QString & program, const QString & fileName = QString(), int lineNumber = 1 )
 */
-$method=|QScriptValue|evaluate,evaluate1|const QString &,const QString &=QString(),int=1
+$internalMethod=|QScriptValue|evaluate,evaluate1|const QString &,const QString &=QString(),int=1
 
 /*
 QScriptValue evaluate ( const QScriptProgram & program )
 */
-$method=|QScriptValue|evaluate,evaluate2|const QScriptProgram &
+$internalMethod=|QScriptValue|evaluate,evaluate2|const QScriptProgram &
 
 //[1]QScriptValue evaluate ( const QString & program, const QString & fileName = QString(), int lineNumber = 1 )
 //[2]QScriptValue evaluate ( const QScriptProgram & program )
@@ -167,11 +149,11 @@ HB_FUNC_STATIC( QSCRIPTENGINE_EVALUATE )
 {
   if( ISBETWEEN(1,3) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNUM(3)) )
   {
-    HB_FUNC_EXEC( QSCRIPTENGINE_EVALUATE1 );
+    QScriptEngine_evaluate1();
   }
   else if( ISNUMPAR(1) && ISQSCRIPTPROGRAM(1) )
   {
-    HB_FUNC_EXEC( QSCRIPTENGINE_EVALUATE2 );
+    QScriptEngine_evaluate2();
   }
   else
   {
@@ -217,12 +199,12 @@ $method=|QScriptValue|newArray|uint=0
 /*
 QScriptValue newRegExp ( const QRegExp & regexp )
 */
-$method=|QScriptValue|newRegExp,newRegExp1|const QRegExp &
+$internalMethod=|QScriptValue|newRegExp,newRegExp1|const QRegExp &
 
 /*
 QScriptValue newRegExp ( const QString & pattern, const QString & flags )
 */
-$method=|QScriptValue|newRegExp,newRegExp2|const QString &,const QString &
+$internalMethod=|QScriptValue|newRegExp,newRegExp2|const QString &,const QString &
 
 //[1]QScriptValue newRegExp ( const QRegExp & regexp )
 //[2]QScriptValue newRegExp ( const QString & pattern, const QString & flags )
@@ -231,11 +213,11 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWREGEXP )
 {
   if( ISNUMPAR(1) && ISQREGEXP(1) )
   {
-    HB_FUNC_EXEC( QSCRIPTENGINE_NEWREGEXP1 );
+    QScriptEngine_newRegExp1();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QSCRIPTENGINE_NEWREGEXP2 );
+    QScriptEngine_newRegExp2();
   }
   else
   {
@@ -246,12 +228,12 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWREGEXP )
 /*
 QScriptValue newVariant ( const QVariant & value )
 */
-$method=|QScriptValue|newVariant,newVariant1|const QVariant &
+$internalMethod=|QScriptValue|newVariant,newVariant1|const QVariant &
 
 /*
 QScriptValue newVariant ( const QScriptValue & object, const QVariant & value )
 */
-$method=|QScriptValue|newVariant,newVariant2|const QScriptValue &,const QVariant &
+$internalMethod=|QScriptValue|newVariant,newVariant2|const QScriptValue &,const QVariant &
 
 //[1]QScriptValue newVariant ( const QVariant & value )
 //[2]QScriptValue newVariant ( const QScriptValue & object, const QVariant & value )
@@ -260,11 +242,11 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWVARIANT )
 {
   if( ISNUMPAR(1) && ISQVARIANT(1) )
   {
-    HB_FUNC_EXEC( QSCRIPTENGINE_NEWVARIANT1 );
+    QScriptEngine_newVariant1();
   }
   else if( ISNUMPAR(2) && ISQSCRIPTVALUE(1) && ISQVARIANT(2) )
   {
-    HB_FUNC_EXEC( QSCRIPTENGINE_NEWVARIANT2 );
+    QScriptEngine_newVariant2();
   }
   else
   {

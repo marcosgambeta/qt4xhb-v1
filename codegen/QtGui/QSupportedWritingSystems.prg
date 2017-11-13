@@ -7,8 +7,6 @@ CLASS QSupportedWritingSystems
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD setSupported
@@ -37,12 +35,12 @@ $destructor
 /*
 QSupportedWritingSystems ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QSupportedWritingSystems ( const QSupportedWritingSystems & other )
 */
-$constructor=|new2|const QSupportedWritingSystems &
+$internalConstructor=|new2|const QSupportedWritingSystems &
 
 //[1]QSupportedWritingSystems ()
 //[2]QSupportedWritingSystems ( const QSupportedWritingSystems & other )
@@ -51,11 +49,11 @@ HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSUPPORTEDWRITINGSYSTEMS_NEW1 );
+    QSupportedWritingSystems_new1();
   }
   else if( ISNUMPAR(1) && ISQSUPPORTEDWRITINGSYSTEMS(1) )
   {
-    HB_FUNC_EXEC( QSUPPORTEDWRITINGSYSTEMS_NEW2 );
+    QSupportedWritingSystems_new2();
   }
   else
   {

@@ -9,8 +9,6 @@ REQUEST QABSTRACTITEMMODEL
 
 CLASS QItemSelectionModel INHERIT QObject
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD columnIntersectsSelection
@@ -28,8 +26,6 @@ CLASS QItemSelectionModel INHERIT QObject
    METHOD clear
    METHOD clearSelection
    METHOD reset
-   METHOD select1
-   METHOD select2
    METHOD select
    METHOD setCurrentIndex
 
@@ -55,12 +51,12 @@ $destructor
 /*
 QItemSelectionModel ( QAbstractItemModel * model )
 */
-$constructor=|new1|QAbstractItemModel *
+$internalConstructor=|new1|QAbstractItemModel *
 
 /*
 QItemSelectionModel ( QAbstractItemModel * model, QObject * parent )
 */
-$constructor=|new2|QAbstractItemModel *,QObject *
+$internalConstructor=|new2|QAbstractItemModel *,QObject *
 
 //[1]QItemSelectionModel ( QAbstractItemModel * model )
 //[2]QItemSelectionModel ( QAbstractItemModel * model, QObject * parent )
@@ -69,11 +65,11 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_NEW )
 {
   if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
   {
-    HB_FUNC_EXEC( QITEMSELECTIONMODEL_NEW1 );
+    QItemSelectionModel_new1();
   }
   else if( ISNUMPAR(2) && ISQABSTRACTITEMMODEL(1) && ISQOBJECT(2) )
   {
-    HB_FUNC_EXEC( QITEMSELECTIONMODEL_NEW2 );
+    QItemSelectionModel_new2();
   }
   else
   {
@@ -260,12 +256,12 @@ $virtualMethod=|void|reset|
 /*
 virtual void select ( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
 */
-$virtualMethod=|void|select,select1|const QModelIndex &,QItemSelectionModel::SelectionFlags
+$internalVirtualMethod=|void|select,select1|const QModelIndex &,QItemSelectionModel::SelectionFlags
 
 /*
 virtual void select ( const QItemSelection & selection, QItemSelectionModel::SelectionFlags command )
 */
-$virtualMethod=|void|select,select2|const QItemSelection &,QItemSelectionModel::SelectionFlags
+$internalVirtualMethod=|void|select,select2|const QItemSelection &,QItemSelectionModel::SelectionFlags
 
 //[1]virtual void select ( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
 //[2]virtual void select ( const QItemSelection & selection, QItemSelectionModel::SelectionFlags command )
@@ -274,11 +270,11 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECT )
 {
   if( ISNUMPAR(2) && ISQMODELINDEX(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QITEMSELECTIONMODEL_SELECT1 );
+    QItemSelectionModel_select1();
   }
   else if( ISNUMPAR(2) && ISQITEMSELECTION(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QITEMSELECTIONMODEL_SELECT2 );
+    QItemSelectionModel_select2();
   }
   else
   {

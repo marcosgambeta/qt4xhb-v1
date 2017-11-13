@@ -8,8 +8,6 @@ REQUEST QPOINT
 
 CLASS QWheelEvent INHERIT QInputEvent
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD delta
@@ -39,12 +37,12 @@ $destructor
 /*
 QWheelEvent(const QPoint &pos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
 */
-$constructor=|new1|const QPoint &,int,Qt::MouseButtons,Qt::KeyboardModifiers,Qt::Orientation=Qt::Vertical
+$internalConstructor=|new1|const QPoint &,int,Qt::MouseButtons,Qt::KeyboardModifiers,Qt::Orientation=Qt::Vertical
 
 /*
 QWheelEvent(const QPoint &pos, const QPoint& globalPos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
 */
-$constructor=|new2|const QPoint &,const QPoint &,int,Qt::MouseButtons,Qt::KeyboardModifiers,Qt::Orientation=Qt::Vertical
+$internalConstructor=|new2|const QPoint &,const QPoint &,int,Qt::MouseButtons,Qt::KeyboardModifiers,Qt::Orientation=Qt::Vertical
 
 //[1]QWheelEvent(const QPoint &pos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
 //[2]QWheelEvent(const QPoint &pos, const QPoint& globalPos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
@@ -53,11 +51,11 @@ HB_FUNC_STATIC( QWHEELEVENT_NEW )
 {
   if( ISBETWEEN(4,5) && ISQPOINT(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISNUM(5)||ISNIL(5)) )
   {
-    HB_FUNC_EXEC( QWHEELEVENT_NEW1 );
+    QWheelEvent_new1();
   }
   else if( ISBETWEEN(5,6) && ISQPOINT(1) && ISQPOINT(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && (ISNUM(6)||ISNIL(6)) )
   {
-    HB_FUNC_EXEC( QWHEELEVENT_NEW2 );
+    QWheelEvent_new2();
   }
   else
   {

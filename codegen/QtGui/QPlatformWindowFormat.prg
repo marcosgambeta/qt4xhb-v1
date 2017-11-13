@@ -12,9 +12,6 @@ CLASS QPlatformWindowFormat
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD accum
@@ -87,17 +84,17 @@ $destructor
 /*
 QPlatformWindowFormat ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QPlatformWindowFormat ( FormatOptions options )
 */
-$constructor=|new2|QPlatformWindowFormat::FormatOptions
+$internalConstructor=|new2|QPlatformWindowFormat::FormatOptions
 
 /*
 QPlatformWindowFormat ( const QPlatformWindowFormat & other )
 */
-$constructor=|new3|const QPlatformWindowFormat &
+$internalConstructor=|new3|const QPlatformWindowFormat &
 
 //[1]QPlatformWindowFormat ()
 //[2]QPlatformWindowFormat ( FormatOptions options )
@@ -107,15 +104,15 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QPLATFORMWINDOWFORMAT_NEW1 );
+    QPlatformWindowFormat_new1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QPLATFORMWINDOWFORMAT_NEW2 );
+    QPlatformWindowFormat_new2();
   }
   else if( ISNUMPAR(1) && ISQPLATFORMWINDOWFORMAT(1) )
   {
-    HB_FUNC_EXEC( QPLATFORMWINDOWFORMAT_NEW3 );
+    QPlatformWindowFormat_new3();
   }
   else
   {
@@ -343,14 +340,7 @@ $method=|bool|testOption|QPlatformWindowFormat::FormatOptions
 /*
 WindowApi windowApi () const
 */
-HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_WINDOWAPI )
-{
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->windowApi () );
-  }
-}
+$method=|QPlatformWindowFormat::WindowApi|windowApi|
 
 /*
 static QPlatformWindowFormat defaultFormat ()

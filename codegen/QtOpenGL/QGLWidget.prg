@@ -12,9 +12,6 @@ REQUEST QPIXMAP
 
 CLASS QGLWidget INHERIT QWidget
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD bindTexture1
@@ -28,8 +25,6 @@ CLASS QGLWidget INHERIT QWidget
    METHOD deleteTexture
    METHOD doneCurrent
    METHOD doubleBuffer
-   METHOD drawTexture1
-   METHOD drawTexture2
    METHOD drawTexture
    METHOD format
    METHOD grabFrameBuffer
@@ -41,8 +36,6 @@ CLASS QGLWidget INHERIT QWidget
    METHOD qglClearColor
    METHOD qglColor
    METHOD renderPixmap
-   METHOD renderText1
-   METHOD renderText2
    METHOD renderText
    METHOD setColormap
    METHOD setMouseTracking
@@ -68,39 +61,17 @@ $destructor
 /*
 QGLWidget ( QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
 */
-HB_FUNC_STATIC( QGLWIDGET_NEW1 )
-{
-  const QGLWidget * par2 = ISNIL(2)? 0 : (const QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-  QGLWidget * o = new QGLWidget ( OPQWIDGET(1,0), par2, (Qt::WindowFlags) par3 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$internalConstructor=|new1|QWidget *=0,const QGLWidget *=0,Qt::WindowFlags=0
 
 /*
 QGLWidget ( QGLContext * context, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
 */
-HB_FUNC_STATIC( QGLWIDGET_NEW2 )
-{
-  QGLContext * par1 = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  const QGLWidget * par3 = ISNIL(3)? 0 : (const QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par4 = ISNIL(4)? (int) 0 : hb_parni(4);
-  QGLWidget * o = new QGLWidget ( par1, OPQWIDGET(2,0), par3, (Qt::WindowFlags) par4 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$internalConstructor=|new2|QGLContext *,QWidget *=0,const QGLWidget *=0,Qt::WindowFlags=0
 
 /*
 QGLWidget ( const QGLFormat & format, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
 */
-HB_FUNC_STATIC( QGLWIDGET_NEW3 )
-{
-  const QGLWidget * par3 = ISNIL(3)? 0 : (const QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par4 = ISNIL(4)? (int) 0 : hb_parni(4);
-  QGLWidget * o = new QGLWidget ( *PQGLFORMAT(1), OPQWIDGET(2,0), par3, (Qt::WindowFlags) par4 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$internalConstructor=|new3|const QGLFormat &,QWidget *=0,const QGLWidget *=0,Qt::WindowFlags=0
 
 //[1]QGLWidget ( QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
 //[2]QGLWidget ( QGLContext * context, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
@@ -110,15 +81,15 @@ HB_FUNC_STATIC( QGLWIDGET_NEW )
 {
   if( ISBETWEEN(0,3) && (ISQWIDGET(1)||ISNIL(1)) && (ISQGLWIDGET(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QGLWIDGET_NEW1 );
+    QGLWidget_new1();
   }
   else if( ISBETWEEN(1,4) && ISQGLCONTEXT(1) && (ISQWIDGET(2)||ISNIL(2)) && (ISQGLWIDGET(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QGLWIDGET_NEW2 );
+    QGLWidget_new2();
   }
   else if( ISBETWEEN(1,4) && ISQGLFORMAT(1) && (ISQWIDGET(2)||ISNIL(2)) && (ISQGLWIDGET(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QGLWIDGET_NEW3 );
+    QGLWidget_new3();
   }
   else
   {
@@ -215,12 +186,12 @@ $method=|bool|doubleBuffer|
 /*
 void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 */
-$method=|void|drawTexture,drawTexture1|const QRectF &,GLuint,GLenum=GL_TEXTURE_2D
+$internalMethod=|void|drawTexture,drawTexture1|const QRectF &,GLuint,GLenum=GL_TEXTURE_2D
 
 /*
 void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 */
-$method=|void|drawTexture,drawTexture2|const QPointF &,GLuint,GLenum=GL_TEXTURE_2D
+$internalMethod=|void|drawTexture,drawTexture2|const QPointF &,GLuint,GLenum=GL_TEXTURE_2D
 
 //[1]void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 //[2]void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
@@ -229,11 +200,11 @@ HB_FUNC_STATIC( QGLWIDGET_DRAWTEXTURE )
 {
   if( ISBETWEEN(2,3) && ISQRECTF(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QGLWIDGET_DRAWTEXTURE1 );
+    QGLWidget_drawTexture1();
   }
   else if( ISBETWEEN(2,3) && ISQPOINTF(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QGLWIDGET_DRAWTEXTURE2 );
+    QGLWidget_drawTexture2();
   }
   else
   {
@@ -294,12 +265,12 @@ $method=|QPixmap|renderPixmap|int=0,int=0,bool=false
 /*
 void renderText ( int x, int y, const QString & str, const QFont & font = QFont(), int listBase = 2000 )
 */
-$method=|void|renderText,renderText1|int,int,const QString &,const QFont &=QFont(),int=2000
+$internalMethod=|void|renderText,renderText1|int,int,const QString &,const QFont &=QFont(),int=2000
 
 /*
 void renderText ( double x, double y, double z, const QString & str, const QFont & font = QFont(), int listBase = 2000 )
 */
-$method=|void|renderText,renderText2|double,double,double,const QString &,const QFont &=QFont(),int=2000
+$internalMethod=|void|renderText,renderText2|double,double,double,const QString &,const QFont &=QFont(),int=2000
 
 //[1]void renderText ( int x, int y, const QString & str, const QFont & font = QFont(), int listBase = 2000 )
 //[2]void renderText ( double x, double y, double z, const QString & str, const QFont & font = QFont(), int listBase = 2000 )
@@ -308,11 +279,11 @@ HB_FUNC_STATIC( QGLWIDGET_RENDERTEXT )
 {
   if( ISBETWEEN(3,5) && ISNUM(1) && ISNUM(2) && ISCHAR(3) && (ISQFONT(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
   {
-    HB_FUNC_EXEC( QGLWIDGET_RENDERTEXT1 );
+    QGLWidget_renderText1();
   }
   else if( ISBETWEEN(4,6) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISCHAR(4) && (ISQFONT(5)||ISNIL(5)) && (ISNUM(6)||ISNIL(6)) )
   {
-    HB_FUNC_EXEC( QGLWIDGET_RENDERTEXT2 );
+    QGLWidget_renderText2();
   }
   else
   {

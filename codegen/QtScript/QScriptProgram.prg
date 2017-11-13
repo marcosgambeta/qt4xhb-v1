@@ -7,9 +7,6 @@ CLASS QScriptProgram
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD fileName
@@ -40,32 +37,17 @@ $destructor
 /*
 QScriptProgram ()
 */
-HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW1 )
-{
-  QScriptProgram * o = new QScriptProgram ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$internalConstructor=|new1|
 
 /*
 QScriptProgram ( const QString & sourceCode, const QString fileName = QString(), int firstLineNumber = 1 )
 */
-HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW2 )
-{
-  QScriptProgram * o = new QScriptProgram ( PQSTRING(1), OPQSTRING(2,QString()), OPINT(3,1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$internalConstructor=|new2|const QString &,const QString=QString(),int=1
 
 /*
 QScriptProgram ( const QScriptProgram & other )
 */
-HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW3 )
-{
-  QScriptProgram * o = new QScriptProgram ( *PQSCRIPTPROGRAM(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$internalConstructor=|new3|const QScriptProgram &
 
 //[1]QScriptProgram ()
 //[2]QScriptProgram ( const QString & sourceCode, const QString fileName = QString(), int firstLineNumber = 1 )
@@ -75,15 +57,15 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSCRIPTPROGRAM_NEW1 );
+    QScriptProgram_new1();
   }
   else if( ISBETWEEN(1,3) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QSCRIPTPROGRAM_NEW2 );
+    QScriptProgram_new2();
   }
   else if( ISNUMPAR(1) && ISQSCRIPTPROGRAM(1) )
   {
-    HB_FUNC_EXEC( QSCRIPTPROGRAM_NEW3 );
+    QScriptProgram_new3();
   }
   else
   {

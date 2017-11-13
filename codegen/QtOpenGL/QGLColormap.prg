@@ -11,8 +11,6 @@ CLASS QGLColormap
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD entryColor
@@ -20,8 +18,6 @@ CLASS QGLColormap
    METHOD find
    METHOD findNearest
    METHOD isEmpty
-   METHOD setEntry1
-   METHOD setEntry2
    METHOD setEntry
    METHOD size
 
@@ -48,22 +44,12 @@ $destructor
 /*
 QGLColormap ()
 */
-HB_FUNC_STATIC( QGLCOLORMAP_NEW1 )
-{
-  QGLColormap * o = new QGLColormap ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$internalConstructor=|new1|
 
 /*
 QGLColormap ( const QGLColormap & map )
 */
-HB_FUNC_STATIC( QGLCOLORMAP_NEW2 )
-{
-  QGLColormap * o = new QGLColormap ( *PQGLCOLORMAP(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$internalConstructor=|new2|const QGLColormap &
 
 //[1]QGLColormap ()
 //[2]QGLColormap ( const QGLColormap & map )
@@ -72,11 +58,11 @@ HB_FUNC_STATIC( QGLCOLORMAP_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QGLCOLORMAP_NEW1 );
+    QGLColormap_new1();
   }
   else if( ISNUMPAR(1) && ISQGLCOLORMAP(1) )
   {
-    HB_FUNC_EXEC( QGLCOLORMAP_NEW2 );
+    QGLColormap_new2();
   }
   else
   {
@@ -114,12 +100,12 @@ $method=|bool|isEmpty|
 /*
 void setEntry ( int idx, QRgb color )
 */
-$method=|void|setEntry,setEntry1|int,QRgb
+$internalMethod=|void|setEntry,setEntry1|int,QRgb
 
 /*
 void setEntry ( int idx, const QColor & color )
 */
-$method=|void|setEntry,setEntry2|int,const QColor &
+$internalMethod=|void|setEntry,setEntry2|int,const QColor &
 
 //[1]void setEntry ( int idx, QRgb color )
 //[2]void setEntry ( int idx, const QColor & color )
@@ -128,11 +114,11 @@ HB_FUNC_STATIC( QGLCOLORMAP_SETENTRY )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QGLCOLORMAP_SETENTRY1 );
+    QGLColormap_setEntry1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && (ISQCOLOR(2)||ISCHAR(2)) )
   {
-    HB_FUNC_EXEC( QGLCOLORMAP_SETENTRY2 );
+    QGLColormap_setEntry2();
   }
   else
   {

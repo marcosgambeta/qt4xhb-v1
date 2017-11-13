@@ -7,9 +7,6 @@ CLASS QScriptContextInfo
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD fileName
@@ -46,33 +43,17 @@ $destructor
 /*
 QScriptContextInfo ( const QScriptContext * context )
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW1 )
-{
-  const QScriptContext * par1 = (const QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QScriptContextInfo * o = new QScriptContextInfo ( par1 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$internalConstructor=|new1|const QScriptContext *
 
 /*
 QScriptContextInfo ( const QScriptContextInfo & other )
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW2 )
-{
-  QScriptContextInfo * o = new QScriptContextInfo ( *PQSCRIPTCONTEXTINFO(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$internalConstructor=|new2|const QScriptContextInfo &
 
 /*
 QScriptContextInfo ()
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW3 )
-{
-  QScriptContextInfo * o = new QScriptContextInfo ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$internalConstructor=|new3|
 
 //[1]QScriptContextInfo ( const QScriptContext * context )
 //[2]QScriptContextInfo ( const QScriptContextInfo & other )
@@ -82,15 +63,15 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW )
 {
   if( ISNUMPAR(1) && ISQSCRIPTCONTEXT(1) )
   {
-    HB_FUNC_EXEC( QSCRIPTCONTEXTINFO_NEW1 );
+    QScriptContextInfo_new1();
   }
   else if( ISNUMPAR(1) && ISQSCRIPTCONTEXTINFO(1) )
   {
-    HB_FUNC_EXEC( QSCRIPTCONTEXTINFO_NEW2 );
+    QScriptContextInfo_new2();
   }
   else if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSCRIPTCONTEXTINFO_NEW3 );
+    QScriptContextInfo_new3();
   }
   else
   {

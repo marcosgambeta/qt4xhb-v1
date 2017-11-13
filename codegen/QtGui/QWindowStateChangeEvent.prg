@@ -4,8 +4,6 @@ $header
 
 CLASS QWindowStateChangeEvent INHERIT QEvent
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD oldState
@@ -28,12 +26,12 @@ $destructor
 /*
 QWindowStateChangeEvent(Qt::WindowStates aOldState)
 */
-$constructor=|new1|Qt::WindowStates
+$internalConstructor=|new1|Qt::WindowStates
 
 /*
 QWindowStateChangeEvent(Qt::WindowStates aOldState, bool isOverride)
 */
-$constructor=|new2|Qt::WindowStates,bool
+$internalConstructor=|new2|Qt::WindowStates,bool
 
 //[1]QWindowStateChangeEvent(Qt::WindowStates aOldState)
 //[2]QWindowStateChangeEvent(Qt::WindowStates aOldState, bool isOverride)
@@ -42,11 +40,11 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QWINDOWSTATECHANGEEVENT_NEW1 );
+    QWindowStateChangeEvent_new1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISLOG(2) )
   {
-    HB_FUNC_EXEC( QWINDOWSTATECHANGEEVENT_NEW2 );
+    QWindowStateChangeEvent_new2();
   }
   else
   {

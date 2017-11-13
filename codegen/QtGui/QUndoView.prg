@@ -10,9 +10,6 @@ REQUEST QUNDOSTACK
 
 CLASS QUndoView INHERIT QWidget
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD cleanIcon
@@ -41,17 +38,17 @@ $destructor
 /*
 QUndoView ( QWidget * parent = 0 )
 */
-$constructor=|new1|QWidget *=0
+$internalConstructor=|new1|QWidget *=0
 
 /*
 QUndoView ( QUndoStack * stack, QWidget * parent = 0 )
 */
-$constructor=|new2|QUndoStack *,QWidget *=0
+$internalConstructor=|new2|QUndoStack *,QWidget *=0
 
 /*
 QUndoView ( QUndoGroup * group, QWidget * parent = 0 )
 */
-$constructor=|new3|QUndoGroup *,QWidget *=0
+$internalConstructor=|new3|QUndoGroup *,QWidget *=0
 
 //[1]QUndoView ( QWidget * parent = 0 )
 //[2]QUndoView ( QUndoStack * stack, QWidget * parent = 0 )
@@ -61,15 +58,15 @@ HB_FUNC_STATIC( QUNDOVIEW_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QUNDOVIEW_NEW1 );
+    QUndoView_new1();
   }
   else if( ISBETWEEN(1,2) && ISQUNDOSTACK(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QUNDOVIEW_NEW2 );
+    QUndoView_new2();
   }
   else if( ISBETWEEN(1,2) && ISQUNDOGROUP(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QUNDOVIEW_NEW3 );
+    QUndoView_new3();
   }
   else
   {

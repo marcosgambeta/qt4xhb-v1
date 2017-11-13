@@ -8,8 +8,6 @@ REQUEST QSIZE
 
 CLASS QLCDNumber INHERIT QFrame
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD checkOverflow1
@@ -54,12 +52,12 @@ $destructor
 /*
 QLCDNumber ( QWidget * parent = 0 )
 */
-$constructor=|new1|QWidget *=0
+$internalConstructor=|new1|QWidget *=0
 
 /*
 QLCDNumber ( uint numDigits, QWidget * parent = 0 )
 */
-$constructor=|new2|uint,QWidget *=0
+$internalConstructor=|new2|uint,QWidget *=0
 
 //[1]QLCDNumber ( QWidget * parent = 0 )
 //[2]QLCDNumber ( uint numDigits, QWidget * parent = 0 )
@@ -68,11 +66,11 @@ HB_FUNC_STATIC( QLCDNUMBER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QLCDNUMBER_NEW1 );
+    QLCDNumber_new1();
   }
   else if( ISBETWEEN(1,2) && ISNUM(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QLCDNUMBER_NEW2 );
+    QLCDNumber_new2();
   }
   else
   {

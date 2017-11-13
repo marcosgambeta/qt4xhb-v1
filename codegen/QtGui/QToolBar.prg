@@ -10,18 +10,9 @@ REQUEST QWIDGET
 
 CLASS QToolBar INHERIT QWidget
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
-   METHOD actionAt1
-   METHOD actionAt2
    METHOD actionAt
-   METHOD addAction1
-   METHOD addAction2
-   METHOD addAction3
-   METHOD addAction4
-   METHOD addAction5
    METHOD addAction
    METHOD addSeparator
    METHOD addWidget
@@ -73,12 +64,12 @@ $destructor
 /*
 QToolBar ( const QString & title, QWidget * parent = 0 )
 */
-$constructor=|new1|const QString &,QWidget *=0
+$internalConstructor=|new1|const QString &,QWidget *=0
 
 /*
 QToolBar ( QWidget * parent = 0 )
 */
-$constructor=|new2|QWidget *=0
+$internalConstructor=|new2|QWidget *=0
 
 //[1]QToolBar ( const QString & title, QWidget * parent = 0 )
 //[2]QToolBar ( QWidget * parent = 0 )
@@ -87,11 +78,11 @@ HB_FUNC_STATIC( QTOOLBAR_NEW )
 {
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QTOOLBAR_NEW1 );
+    QToolBar_new1();
   }
   else if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QTOOLBAR_NEW2 );
+    QToolBar_new2();
   }
   else
   {
@@ -104,12 +95,12 @@ $deleteMethod
 /*
 QAction * actionAt ( int x, int y ) const
 */
-$method=|QAction *|actionAt,actionAt1|int,int
+$internalMethod=|QAction *|actionAt,actionAt1|int,int
 
 /*
 QAction * actionAt ( const QPoint & p ) const
 */
-$method=|QAction *|actionAt,actionAt2|const QPoint &
+$internalMethod=|QAction *|actionAt,actionAt2|const QPoint &
 
 //[1]QAction * actionAt ( int x, int y ) const
 //[2]QAction * actionAt ( const QPoint & p ) const
@@ -118,11 +109,11 @@ HB_FUNC_STATIC( QTOOLBAR_ACTIONAT )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QTOOLBAR_ACTIONAT1 );
+    QToolBar_actionAt1();
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QTOOLBAR_ACTIONAT2 );
+    QToolBar_actionAt2();
   }
   else
   {
@@ -133,27 +124,27 @@ HB_FUNC_STATIC( QTOOLBAR_ACTIONAT )
 /*
 void addAction ( QAction * action )
 */
-$method=|void|addAction,addAction1|QAction *
+$internalMethod=|void|addAction,addAction1|QAction *
 
 /*
 QAction * addAction ( const QString & text )
 */
-$method=|QAction *|addAction,addAction2|const QString &
+$internalMethod=|QAction *|addAction,addAction2|const QString &
 
 /*
 QAction * addAction ( const QIcon & icon, const QString & text )
 */
-$method=|QAction *|addAction,addAction3|const QIcon &,const QString &
+$internalMethod=|QAction *|addAction,addAction3|const QIcon &,const QString &
 
 /*
 QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
 */
-$method=|QAction *|addAction,addAction4|const QString &,const QObject *,const char *
+$internalMethod=|QAction *|addAction,addAction4|const QString &,const QObject *,const char *
 
 /*
 QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member )
 */
-$method=|QAction *|addAction,addAction5|const QIcon &,const QString &,const QObject *,const char *
+$internalMethod=|QAction *|addAction,addAction5|const QIcon &,const QString &,const QObject *,const char *
 
 //[1]void addAction ( QAction * action )
 //[2]QAction * addAction ( const QString & text )
@@ -165,23 +156,23 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
 {
   if( ISNUMPAR(1) && ISQACTION(1) )
   {
-    HB_FUNC_EXEC( QTOOLBAR_ADDACTION1 );
+    QToolBar_addAction1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QTOOLBAR_ADDACTION2 );
+    QToolBar_addAction2();
   }
   else if( ISNUMPAR(2) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QTOOLBAR_ADDACTION3 );
+    QToolBar_addAction3();
   }
   else if( ISNUMPAR(3) && ISCHAR(1) && ISQOBJECT(2) && ISCHAR(3) )
   {
-    HB_FUNC_EXEC( QTOOLBAR_ADDACTION4 );
+    QToolBar_addAction4();
   }
   else if( ISNUMPAR(4) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) && ISQOBJECT(3) && ISCHAR(4) )
   {
-    HB_FUNC_EXEC( QTOOLBAR_ADDACTION5 );
+    QToolBar_addAction5();
   }
   else
   {

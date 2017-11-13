@@ -12,8 +12,6 @@ CLASS QTextTableCell
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD column
@@ -52,12 +50,12 @@ $destructor
 /*
 QTextTableCell ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QTextTableCell ( const QTextTableCell & other )
 */
-$constructor=|new2|const QTextTableCell &
+$internalConstructor=|new2|const QTextTableCell &
 
 //[1]QTextTableCell ()
 //[2]QTextTableCell ( const QTextTableCell & other )
@@ -66,11 +64,11 @@ HB_FUNC_STATIC( QTEXTTABLECELL_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTEXTTABLECELL_NEW1 );
+    QTextTableCell_new1();
   }
   else if( ISNUMPAR(1) && ISQTEXTTABLECELL(1) )
   {
-    HB_FUNC_EXEC( QTEXTTABLECELL_NEW2 );
+    QTextTableCell_new2();
   }
   else
   {
