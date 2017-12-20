@@ -30,14 +30,10 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual QDesignerFormEditorInterface * core () const
-*/
+prototype=virtual QDesignerFormEditorInterface * core () const
 $virtualMethod=|QDesignerFormEditorInterface *|core|
 
-/*
-virtual void setFormWindow ( QDesignerFormWindowInterface * formWindow ) = 0
-*/
+prototype=virtual void setFormWindow ( QDesignerFormWindowInterface * formWindow ) = 0
 $virtualMethod=|void|setFormWindow|QDesignerFormWindowInterface *
 
 #pragma ENDDUMP

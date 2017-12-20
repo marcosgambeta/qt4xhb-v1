@@ -26,24 +26,16 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual QString fileName () const = 0
-*/
+prototype=virtual QString fileName () const = 0
 $virtualMethod=|QString|fileName|
 
-/*
-virtual bool load () = 0
-*/
+prototype=virtual bool load () = 0
 $virtualMethod=|bool|load|
 
-/*
-virtual bool save () = 0
-*/
+prototype=virtual bool save () = 0
 $virtualMethod=|bool|save|
 
-/*
-virtual void setFileName ( const QString & fileName ) = 0
-*/
+prototype=virtual void setFileName ( const QString & fileName ) = 0
 $virtualMethod=|void|setFileName|const QString &
 
 #pragma ENDDUMP

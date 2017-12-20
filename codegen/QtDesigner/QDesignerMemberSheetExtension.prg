@@ -49,54 +49,34 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual int count () const = 0
-*/
+prototype=virtual int count () const = 0
 $virtualMethod=|int|count|
 
-/*
-virtual QString declaredInClass ( int index ) const = 0
-*/
+prototype=virtual QString declaredInClass ( int index ) const = 0
 $virtualMethod=|QString|declaredInClass|int
 
-/*
-virtual int indexOf ( const QString & name ) const = 0
-*/
+prototype=virtual int indexOf ( const QString & name ) const = 0
 $virtualMethod=|int|indexOf|const QString &
 
-/*
-virtual bool inheritedFromWidget ( int index ) const = 0
-*/
+prototype=virtual bool inheritedFromWidget ( int index ) const = 0
 $virtualMethod=|bool|inheritedFromWidget|int
 
-/*
-virtual bool isSignal ( int index ) const = 0
-*/
+prototype=virtual bool isSignal ( int index ) const = 0
 $virtualMethod=|bool|isSignal|int
 
-/*
-virtual bool isSlot ( int index ) const = 0
-*/
+prototype=virtual bool isSlot ( int index ) const = 0
 $virtualMethod=|bool|isSlot|int
 
-/*
-virtual bool isVisible ( int index ) const = 0
-*/
+prototype=virtual bool isVisible ( int index ) const = 0
 $virtualMethod=|bool|isVisible|int
 
-/*
-virtual QString memberGroup ( int index ) const = 0
-*/
+prototype=virtual QString memberGroup ( int index ) const = 0
 $virtualMethod=|QString|memberGroup|int
 
-/*
-virtual QString memberName ( int index ) const = 0
-*/
+prototype=virtual QString memberName ( int index ) const = 0
 $virtualMethod=|QString|memberName|int
 
-/*
-virtual QList<QByteArray> parameterNames ( int index ) const = 0
-*/
+prototype=virtual QList<QByteArray> parameterNames ( int index ) const = 0
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERNAMES )
 {
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -132,9 +112,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERNAMES )
   }
 }
 
-/*
-virtual QList<QByteArray> parameterTypes ( int index ) const = 0
-*/
+prototype=virtual QList<QByteArray> parameterTypes ( int index ) const = 0
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERTYPES )
 {
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -170,19 +148,13 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERTYPES )
   }
 }
 
-/*
-virtual void setMemberGroup ( int index, const QString & group ) = 0
-*/
+prototype=virtual void setMemberGroup ( int index, const QString & group ) = 0
 $virtualMethod=|void|setMemberGroup|int,const QString &
 
-/*
-virtual void setVisible ( int index, bool visible ) = 0
-*/
+prototype=virtual void setVisible ( int index, bool visible ) = 0
 $virtualMethod=|void|setVisible|int,bool
 
-/*
-virtual QString signature ( int index ) const = 0
-*/
+prototype=virtual QString signature ( int index ) const = 0
 $virtualMethod=|QString|signature|int
 
 $extraMethods

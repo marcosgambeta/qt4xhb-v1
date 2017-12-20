@@ -28,26 +28,18 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QExtensionManager ( QObject * parent = 0 )
-*/
+prototype=QExtensionManager ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-virtual QObject * extension ( QObject * object, const QString & iid ) const
-*/
+prototype=virtual QObject * extension ( QObject * object, const QString & iid ) const
 $virtualMethod=|QObject *|extension|QObject *,const QString &
 
-/*
-virtual void registerExtensions ( QAbstractExtensionFactory * factory, const QString & iid = QString() )
-*/
+prototype=virtual void registerExtensions ( QAbstractExtensionFactory * factory, const QString & iid = QString() )
 $virtualMethod=|void|registerExtensions|QAbstractExtensionFactory *,const QString &=QString()
 
-/*
-virtual void unregisterExtensions ( QAbstractExtensionFactory * factory, const QString & iid = QString() )
-*/
+prototype=virtual void unregisterExtensions ( QAbstractExtensionFactory * factory, const QString & iid = QString() )
 $virtualMethod=|void|unregisterExtensions|QAbstractExtensionFactory *,const QString &=QString()
 
 #pragma ENDDUMP
