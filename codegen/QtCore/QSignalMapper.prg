@@ -34,31 +34,21 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QSignalMapper(QObject *parent = 0)
-*/
+$prototype=QSignalMapper(QObject *parent = 0)
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-void setMapping(QObject *sender, int id)
-*/
+$prototype=void setMapping(QObject *sender, int id)
 $internalMethod=|void|setMapping,setMapping1|QObject *,int
 
-/*
-void setMapping(QObject *sender, const QString &text)
-*/
+$prototype=void setMapping(QObject *sender, const QString &text)
 $internalMethod=|void|setMapping,setMapping2|QObject *,const QString &
 
-/*
-void setMapping(QObject *sender, QWidget *widget)
-*/
+$prototype=void setMapping(QObject *sender, QWidget *widget)
 $internalMethod=|void|setMapping,setMapping3|QObject *,QWidget *
 
-/*
-void setMapping(QObject *sender, QObject *object)
-*/
+$prototype=void setMapping(QObject *sender, QObject *object)
 $internalMethod=|void|setMapping,setMapping4|QObject *,QObject *
 
 //[1]void setMapping(QObject *sender, int id)
@@ -90,29 +80,19 @@ HB_FUNC_STATIC( QSIGNALMAPPER_SETMAPPING )
   }
 }
 
-/*
-void removeMappings(QObject *sender)
-*/
+$prototype=void removeMappings(QObject *sender)
 $method=|void|removeMappings|QObject *
 
-/*
-QObject *mapping(int id) const
-*/
+$prototype=QObject *mapping(int id) const
 $internalMethod=|QObject *|mapping,mapping1|int
 
-/*
-QObject *mapping(const QString &text) const
-*/
+$prototype=QObject *mapping(const QString &text) const
 $internalMethod=|QObject *|mapping,mapping2|const QString &
 
-/*
-QObject *mapping(QWidget *widget) const
-*/
+$prototype=QObject *mapping(QWidget *widget) const
 $internalMethod=|QObject *|mapping,mapping3|QWidget *
 
-/*
-QObject *mapping(QObject *object) const
-*/
+$prototype=QObject *mapping(QObject *object) const
 $internalMethod=|QObject *|mapping,mapping4|QObject *
 
 //[1]QObject *mapping(int id) const
@@ -144,14 +124,10 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING )
   }
 }
 
-/*
-void map()
-*/
+$prototype=void map()
 $internalMethod=|void|map,map1|
 
-/*
-void map(QObject *sender)
-*/
+$prototype=void map(QObject *sender)
 $internalMethod=|void|map,map2|QObject *
 
 //[1]void map()

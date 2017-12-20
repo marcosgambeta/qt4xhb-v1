@@ -34,36 +34,24 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QSemaphore ( int n = 0 )
-*/
+$prototype=QSemaphore ( int n = 0 )
 $constructor=|new|int=0
 
 $deleteMethod
 
-/*
-void acquire ( int n = 1 )
-*/
+$prototype=void acquire ( int n = 1 )
 $method=|void|acquire|int=1
 
-/*
-int available () const
-*/
+$prototype=int available () const
 $method=|int|available|
 
-/*
-void release ( int n = 1 )
-*/
+$prototype=void release ( int n = 1 )
 $method=|void|release|int=1
 
-/*
-bool tryAcquire ( int n = 1 )
-*/
+$prototype=bool tryAcquire ( int n = 1 )
 $internalMethod=|bool|tryAcquire,tryAcquire1|int=1
 
-/*
-bool tryAcquire ( int n, int timeout )
-*/
+$prototype=bool tryAcquire ( int n, int timeout )
 $internalMethod=|bool|tryAcquire,tryAcquire2|int,int
 
 //[1]bool tryAcquire ( int n = 1 )

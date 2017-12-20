@@ -68,14 +68,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QFutureInterfaceBase(State initialState = NoState)
-*/
+$prototype=QFutureInterfaceBase(State initialState = NoState)
 $internalConstructor=|new1|QFutureInterfaceBase::State=QFutureInterfaceBase::NoState
 
-/*
-QFutureInterfaceBase(const QFutureInterfaceBase &other)
-*/
+$prototype=QFutureInterfaceBase(const QFutureInterfaceBase &other)
 $internalConstructor=|new2|const QFutureInterfaceBase &
 
 //[1]QFutureInterfaceBase(State initialState = NoState)
@@ -99,174 +95,106 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_NEW )
 
 $deleteMethod
 
-/*
-void reportStarted()
-*/
+$prototype=void reportStarted()
 $method=|void|reportStarted|
 
-/*
-void reportFinished()
-*/
+$prototype=void reportFinished()
 $method=|void|reportFinished|
 
-/*
-void reportCanceled()
-*/
+$prototype=void reportCanceled()
 $method=|void|reportCanceled|
 
-/*
-void reportResultsReady(int beginIndex, int endIndex)
-*/
+$prototype=void reportResultsReady(int beginIndex, int endIndex)
 $method=|void|reportResultsReady|int,int
 
-/*
-void setRunnable(QRunnable *runnable)
-*/
+$prototype=void setRunnable(QRunnable *runnable)
 $method=|void|setRunnable|QRunnable *
 
-/*
-void setFilterMode(bool enable)
-*/
+$prototype=void setFilterMode(bool enable)
 $method=|void|setFilterMode|bool
 
-/*
-void setProgressRange(int minimum, int maximum)
-*/
+$prototype=void setProgressRange(int minimum, int maximum)
 $method=|void|setProgressRange|int,int
 
-/*
-int progressMinimum() const
-*/
+$prototype=int progressMinimum() const
 $method=|int|progressMinimum|
 
-/*
-int progressMaximum() const
-*/
+$prototype=int progressMaximum() const
 $method=|int|progressMaximum|
 
-/*
-bool isProgressUpdateNeeded() const
-*/
+$prototype=bool isProgressUpdateNeeded() const
 $method=|bool|isProgressUpdateNeeded|
 
-/*
-void setProgressValue(int progressValue)
-*/
+$prototype=void setProgressValue(int progressValue)
 $method=|void|setProgressValue|int
 
-/*
-int progressValue() const
-*/
+$prototype=int progressValue() const
 $method=|int|progressValue|
 
-/*
-void setProgressValueAndText(int progressValue, const QString &progressText)
-*/
+$prototype=void setProgressValueAndText(int progressValue, const QString &progressText)
 $method=|void|setProgressValueAndText|int,const QString &
 
-/*
-QString progressText() const
-*/
+$prototype=QString progressText() const
 $method=|QString|progressText|
 
-/*
-void setExpectedResultCount(int resultCount)
-*/
+$prototype=void setExpectedResultCount(int resultCount)
 $method=|void|setExpectedResultCount|int
 
-/*
-int expectedResultCount()
-*/
+$prototype=int expectedResultCount()
 $method=|int|expectedResultCount|
 
-/*
-int resultCount() const
-*/
+$prototype=int resultCount() const
 $method=|int|resultCount|
 
-/*
-bool queryState(State state) const
-*/
+$prototype=bool queryState(State state) const
 $method=|bool|queryState|QFutureInterfaceBase::State
 
-/*
-bool isRunning() const
-*/
+$prototype=bool isRunning() const
 $method=|bool|isRunning|
 
-/*
-bool isStarted() const
-*/
+$prototype=bool isStarted() const
 $method=|bool|isStarted|
 
-/*
-bool isCanceled() const
-*/
+$prototype=bool isCanceled() const
 $method=|bool|isCanceled|
 
-/*
-bool isFinished() const
-*/
+$prototype=bool isFinished() const
 $method=|bool|isFinished|
 
-/*
-bool isPaused() const
-*/
+$prototype=bool isPaused() const
 $method=|bool|isPaused|
 
-/*
-bool isThrottled() const
-*/
+$prototype=bool isThrottled() const
 $method=|bool|isThrottled|
 
-/*
-bool isResultReadyAt(int index) const
-*/
+$prototype=bool isResultReadyAt(int index) const
 $method=|bool|isResultReadyAt|int
 
-/*
-void cancel()
-*/
+$prototype=void cancel()
 $method=|void|cancel|
 
-/*
-void setPaused(bool paused)
-*/
+$prototype=void setPaused(bool paused)
 $method=|void|setPaused|bool
 
-/*
-void togglePaused()
-*/
+$prototype=void togglePaused()
 $method=|void|togglePaused|
 
-/*
-void setThrottled(bool enable)
-*/
+$prototype=void setThrottled(bool enable)
 $method=|void|setThrottled|bool
 
-/*
-void waitForFinished()
-*/
+$prototype=void waitForFinished()
 $method=|void|waitForFinished|
 
-/*
-bool waitForNextResult()
-*/
+$prototype=bool waitForNextResult()
 $method=|bool|waitForNextResult|
 
-/*
-void waitForResult(int resultIndex)
-*/
+$prototype=void waitForResult(int resultIndex)
 $method=|void|waitForResult|int
 
-/*
-void waitForResume()
-*/
+$prototype=void waitForResume()
 $method=|void|waitForResume|
 
-/*
-QMutex *mutex() const
-*/
+$prototype=QMutex *mutex() const
 $method=|QMutex *|mutex|
 
 $extraMethods

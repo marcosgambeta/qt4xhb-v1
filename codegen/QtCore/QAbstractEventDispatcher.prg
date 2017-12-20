@@ -41,44 +41,28 @@ $destructor
 
 $deleteMethod
 
-/*
-bool filterEvent ( void * message )
-*/
+$prototype=bool filterEvent ( void * message )
 $method=|bool|filterEvent|void *
 
-/*
-virtual void flush () = 0
-*/
+$prototype=virtual void flush () = 0
 $virtualMethod=|void|flush|
 
-/*
-virtual bool hasPendingEvents () = 0
-*/
+$prototype=virtual bool hasPendingEvents () = 0
 $virtualMethod=|bool|hasPendingEvents|
 
-/*
-virtual void interrupt () = 0
-*/
+$prototype=virtual void interrupt () = 0
 $virtualMethod=|void|interrupt|
 
-/*
-virtual bool processEvents ( QEventLoop::ProcessEventsFlags flags ) = 0
-*/
+$prototype=virtual bool processEvents ( QEventLoop::ProcessEventsFlags flags ) = 0
 $virtualMethod=|bool|processEvents|QEventLoop::ProcessEventsFlags
 
-/*
-virtual void registerSocketNotifier ( QSocketNotifier * notifier ) = 0
-*/
+$prototype=virtual void registerSocketNotifier ( QSocketNotifier * notifier ) = 0
 $virtualMethod=|void|registerSocketNotifier|QSocketNotifier *
 
-/*
-int registerTimer ( int interval, QObject * object )
-*/
+$prototype=int registerTimer ( int interval, QObject * object )
 $internalMethod=|int|registerTimer,registerTimer1|int,QObject *
 
-/*
-virtual void registerTimer ( int timerId, int interval, QObject * object ) = 0
-*/
+$prototype=virtual void registerTimer ( int timerId, int interval, QObject * object ) = 0
 $internalVirtualMethod=|void|registerTimer,registerTimer2|int,int,QObject *
 
 //[1]int registerTimer ( int interval, QObject * object )
@@ -100,29 +84,19 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER )
   }
 }
 
-/*
-virtual void unregisterSocketNotifier ( QSocketNotifier * notifier ) = 0
-*/
+$prototype=virtual void unregisterSocketNotifier ( QSocketNotifier * notifier ) = 0
 $virtualMethod=|void|unregisterSocketNotifier|QSocketNotifier *
 
-/*
-virtual bool unregisterTimer ( int timerId ) = 0
-*/
+$prototype=virtual bool unregisterTimer ( int timerId ) = 0
 $virtualMethod=|bool|unregisterTimer|int
 
-/*
-virtual bool unregisterTimers ( QObject * object ) = 0
-*/
+$prototype=virtual bool unregisterTimers ( QObject * object ) = 0
 $virtualMethod=|bool|unregisterTimers|QObject *
 
-/*
-virtual void wakeUp () = 0
-*/
+$prototype=virtual void wakeUp () = 0
 $virtualMethod=|void|wakeUp|
 
-/*
-static QAbstractEventDispatcher * instance ( QThread * thread = 0 )
-*/
+$prototype=static QAbstractEventDispatcher * instance ( QThread * thread = 0 )
 $static Method=|QAbstractEventDispatcher *|instance|QThread *=0
 
 #pragma ENDDUMP

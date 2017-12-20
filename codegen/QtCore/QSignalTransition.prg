@@ -30,14 +30,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QSignalTransition(QState *sourceState = 0)
-*/
+$prototype=QSignalTransition(QState *sourceState = 0)
 $internalConstructor=|new1|QState *=0
 
-/*
-QSignalTransition(QObject *sender, const char *signal,QState *sourceState = 0)
-*/
+$prototype=QSignalTransition(QObject *sender, const char *signal,QState *sourceState = 0)
 $internalConstructor=|new2|QObject *,const char *,QState *=0
 
 //[1]QSignalTransition(QState *sourceState = 0)
@@ -61,24 +57,16 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_NEW )
 
 $deleteMethod
 
-/*
-QObject *senderObject() const
-*/
+$prototype=QObject *senderObject() const
 $method=|QObject *|senderObject|
 
-/*
-void setSenderObject(QObject *sender)
-*/
+$prototype=void setSenderObject(QObject *sender)
 $method=|void|setSenderObject|QObject *
 
-/*
-QByteArray signal() const
-*/
+$prototype=QByteArray signal() const
 $method=|QByteArray|signal|
 
-/*
-void setSignal(const QByteArray &signal)
-*/
+$prototype=void setSignal(const QByteArray &signal)
 $method=|void|setSignal|const QByteArray &
 
 #pragma ENDDUMP

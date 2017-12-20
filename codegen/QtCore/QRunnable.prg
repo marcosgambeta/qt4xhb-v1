@@ -34,19 +34,13 @@ $destructor
 
 $deleteMethod
 
-/*
-bool autoDelete () const
-*/
+$prototype=bool autoDelete () const
 $method=|bool|autoDelete|
 
-/*
-virtual void run () = 0
-*/
+$prototype=virtual void run () = 0
 $virtualMethod=|void|run|
 
-/*
-void setAutoDelete ( bool autoDelete )
-*/
+$prototype=void setAutoDelete ( bool autoDelete )
 $method=|void|setAutoDelete|bool
 
 $extraMethods

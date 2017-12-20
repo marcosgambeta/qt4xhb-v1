@@ -142,139 +142,85 @@ $destructor
 #include <QRectF>
 #include <QUrl>
 
-/*
-QVariant ()
-*/
+$prototype=QVariant ()
 $constructor=|new1|
 
-/*
-QVariant ( const QLocale & l )
-*/
+$prototype=QVariant ( const QLocale & l )
 $constructor=|new2|const QLocale &
 
-/*
-QVariant ( const QRegExp & regExp )
-*/
+$prototype=QVariant ( const QRegExp & regExp )
 $constructor=|new3|const QRegExp &
 
-/*
-QVariant ( const QEasingCurve & val )
-*/
+$prototype=QVariant ( const QEasingCurve & val )
 $constructor=|new4|const QEasingCurve &
 
-/*
-QVariant ( Qt::GlobalColor color )
-*/
+$prototype=QVariant ( Qt::GlobalColor color )
 $constructor=|new5|Qt::GlobalColor
 
-/*
-QVariant ( Type type )
-*/
+$prototype=QVariant ( Type type )
 $constructor=|new6|QVariant::Type
 
-/*
-QVariant ( int typeOrUserType, const void * copy )
-*/
+$prototype=QVariant ( int typeOrUserType, const void * copy )
 $constructor=|new7|int,const void *
 
-/*
-QVariant ( const QVariant & p )
-*/
+$prototype=QVariant ( const QVariant & p )
 $constructor=|new8|const QVariant &
 
-/*
-QVariant ( QDataStream & s )
-*/
+$prototype=QVariant ( QDataStream & s )
 $constructor=|new9|QDataStream &
 
-/*
-QVariant ( int val )
-*/
+$prototype=QVariant ( int val )
 $constructor=|new10|int
 
-/*
-QVariant ( uint val )
-*/
+$prototype=QVariant ( uint val )
 $constructor=|new11|uint
 
-/*
-QVariant ( qlonglong val )
-*/
+$prototype=QVariant ( qlonglong val )
 $constructor=|new12|qlonglong
 
-/*
-QVariant ( qulonglong val )
-*/
+$prototype=QVariant ( qulonglong val )
 $constructor=|new13|qulonglong
 
-/*
-QVariant ( bool val )
-*/
+$prototype=QVariant ( bool val )
 $constructor=|new14|bool
 
-/*
-QVariant ( double val )
-*/
+$prototype=QVariant ( double val )
 $constructor=|new15|double
 
-/*
-QVariant ( float val )
-*/
+$prototype=QVariant ( float val )
 $constructor=|new16|float
 
-/*
-QVariant ( const char * val )
-*/
+$prototype=QVariant ( const char * val )
 $constructor=|new17|const char *
 
-/*
-QVariant ( const QByteArray & val )
-*/
+$prototype=QVariant ( const QByteArray & val )
 $constructor=|new18|const QByteArray &
 
-/*
-QVariant ( const QBitArray & val )
-*/
+$prototype=QVariant ( const QBitArray & val )
 $constructor=|new19|const QBitArray &
 
-/*
-QVariant ( const QString & val )
-*/
+$prototype=QVariant ( const QString & val )
 $constructor=|new20|const QString &
 
-/*
-QVariant ( const QLatin1String & val )
-*/
+$prototype=QVariant ( const QLatin1String & val )
 $constructor=|new21|const QLatin1String &
 
-/*
-QVariant ( const QStringList & val )
-*/
+$prototype=QVariant ( const QStringList & val )
 $constructor=|new22|const QStringList &
 
-/*
-QVariant ( const QChar & c )
-*/
+$prototype=QVariant ( const QChar & c )
 $constructor=|new23|const QChar &
 
-/*
-QVariant ( const QDate & val )
-*/
+$prototype=QVariant ( const QDate & val )
 $constructor=|new24|const QDate &
 
-/*
-QVariant ( const QTime & val )
-*/
+$prototype=QVariant ( const QTime & val )
 $constructor=|new25|const QTime &
 
-/*
-QVariant ( const QDateTime & val )
-*/
+$prototype=QVariant ( const QDateTime & val )
 $constructor=|new26|const QDateTime &
 
-/*
-QVariant ( const QList<QVariant> & val )
-*/
+$prototype=QVariant ( const QList<QVariant> & val )
 HB_FUNC_STATIC( QVARIANT_NEW27 )
 {
   QList<QVariant> par1;
@@ -289,57 +235,35 @@ HB_FUNC_STATIC( QVARIANT_NEW27 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-/*
-QVariant ( const QMap<QString, QVariant> & val )
-*/
+$prototype=QVariant ( const QMap<QString, QVariant> & val )
 
-/*
-QVariant ( const QHash<QString, QVariant> & val )
-*/
+$prototype=QVariant ( const QHash<QString, QVariant> & val )
 
-/*
-QVariant ( const QSize & val )
-*/
+$prototype=QVariant ( const QSize & val )
 $constructor=|new30|const QSize &
 
-/*
-QVariant ( const QSizeF & val )
-*/
+$prototype=QVariant ( const QSizeF & val )
 $constructor=|new31|const QSizeF &
 
-/*
-QVariant ( const QPoint & val )
-*/
+$prototype=QVariant ( const QPoint & val )
 $constructor=|new32|const QPoint &
 
-/*
-QVariant ( const QPointF & val )
-*/
+$prototype=QVariant ( const QPointF & val )
 $constructor=|new33|const QPointF &
 
-/*
-QVariant ( const QLine & val )
-*/
+$prototype=QVariant ( const QLine & val )
 $constructor=|new34|const QLine &
 
-/*
-QVariant ( const QLineF & val )
-*/
+$prototype=QVariant ( const QLineF & val )
 $constructor=|new35|const QLineF &
 
-/*
-QVariant ( const QRect & val )
-*/
+$prototype=QVariant ( const QRect & val )
 $constructor=|new36|const QRect &
 
-/*
-QVariant ( const QRectF & val )
-*/
+$prototype=QVariant ( const QRectF & val )
 $constructor=|new37|const QRectF &
 
-/*
-QVariant ( const QUrl & val )
-*/
+$prototype=QVariant ( const QUrl & val )
 $constructor=|new38|const QUrl &
 
 //[1]QVariant ()
@@ -491,14 +415,10 @@ HB_FUNC_STATIC( QVARIANT_NEW )
 
 $deleteMethod
 
-/*
-bool canConvert ( Type t ) const
-*/
+$prototype=bool canConvert ( Type t ) const
 $method=|bool|canConvert,canConvert1|QVariant::Type
 
-/*
-bool canConvert () const
-*/
+$prototype=bool canConvert () const
 $method=|bool|canConvert,canConvert2|
 
 //[1]bool canConvert ( Type t ) const
@@ -520,74 +440,46 @@ HB_FUNC_STATIC( QVARIANT_CANCONVERT )
   }
 }
 
-/*
-void clear ()
-*/
+$prototype=void clear ()
 $method=|void|clear|
 
-/*
-bool convert ( Type t )
-*/
+$prototype=bool convert ( Type t )
 $method=|bool|convert|QVariant::Type
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-QBitArray toBitArray () const
-*/
+$prototype=QBitArray toBitArray () const
 $method=|QBitArray|toBitArray|
 
-/*
-bool toBool () const
-*/
+$prototype=bool toBool () const
 $method=|bool|toBool|
 
-/*
-QByteArray toByteArray () const
-*/
+$prototype=QByteArray toByteArray () const
 $method=|QByteArray|toByteArray|
 
-/*
-QChar toChar () const
-*/
+$prototype=QChar toChar () const
 $method=|QChar|toChar|
 
-/*
-QDate toDate () const
-*/
+$prototype=QDate toDate () const
 $method=|QDate|toDate|
 
-/*
-QDateTime toDateTime () const
-*/
+$prototype=QDateTime toDateTime () const
 $method=|QDateTime|toDateTime|
 
-/*
-QEasingCurve toEasingCurve () const
-*/
+$prototype=QEasingCurve toEasingCurve () const
 $method=|QEasingCurve|toEasingCurve|
 
-/*
-QLine toLine () const
-*/
+$prototype=QLine toLine () const
 $method=|QLine|toLine|
 
-/*
-QLineF toLineF () const
-*/
+$prototype=QLineF toLineF () const
 $method=|QLineF|toLineF|
 
-/*
-QList<QVariant> toList () const
-*/
+$prototype=QList<QVariant> toList () const
 HB_FUNC_STATIC( QVARIANT_TOLIST )
 {
   QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -627,89 +519,55 @@ HB_FUNC_STATIC( QVARIANT_TOLIST )
   }
 }
 
-/*
-QLocale toLocale () const
-*/
+$prototype=QLocale toLocale () const
 $method=|QLocale|toLocale|
 
-/*
-QPoint toPoint () const
-*/
+$prototype=QPoint toPoint () const
 $method=|QPoint|toPoint|
 
-/*
-QPointF toPointF () const
-*/
+$prototype=QPointF toPointF () const
 $method=|QPointF|toPointF|
 
-/*
-QRect toRect () const
-*/
+$prototype=QRect toRect () const
 $method=|QRect|toRect|
 
-/*
-QRectF toRectF () const
-*/
+$prototype=QRectF toRectF () const
 $method=|QRectF|toRectF|
 
-/*
-QRegExp toRegExp () const
-*/
+$prototype=QRegExp toRegExp () const
 $method=|QRegExp|toRegExp|
 
-/*
-QSize toSize () const
-*/
+$prototype=QSize toSize () const
 $method=|QSize|toSize|
 
-/*
-QSizeF toSizeF () const
-*/
+$prototype=QSizeF toSizeF () const
 $method=|QSizeF|toSizeF|
 
-/*
-QString toString () const
-*/
+$prototype=QString toString () const
 $method=|QString|toString|
 
-/*
-QStringList toStringList () const
-*/
+$prototype=QStringList toStringList () const
 $method=|QStringList|toStringList|
 
-/*
-QTime toTime () const
-*/
+$prototype=QTime toTime () const
 $method=|QTime|toTime|
 
-/*
-QUrl toUrl () const
-*/
+$prototype=QUrl toUrl () const
 $method=|QUrl|toUrl|
 
-/*
-Type type () const
-*/
+$prototype=Type type () const
 $method=|QVariant::Type|type|
 
-/*
-const char * typeName () const
-*/
+$prototype=const char * typeName () const
 $method=|const char *|typeName|
 
-/*
-int userType () const
-*/
+$prototype=int userType () const
 $method=|int|userType|
 
-/*
-static Type nameToType ( const char * name )
-*/
+$prototype=static Type nameToType ( const char * name )
 $staticMethod=|QVariant::Type|nameToType|const char *
 
-/*
-static const char * typeToName ( Type typ )
-*/
+$prototype=static const char * typeToName ( Type typ )
 $staticMethod=|const char *|typeToName|QVariant::Type
 
 $extraMethods

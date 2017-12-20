@@ -49,24 +49,16 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QDataStream ()
-*/
+$prototype=QDataStream ()
 $internalConstructor=|new1|
 
-/*
-QDataStream ( QIODevice * d )
-*/
+$prototype=QDataStream ( QIODevice * d )
 $internalConstructor=|new2|QIODevice *
 
-/*
-QDataStream ( QByteArray * a, QIODevice::OpenMode mode )
-*/
+$prototype=QDataStream ( QByteArray * a, QIODevice::OpenMode mode )
 $internalConstructor=|new3|QByteArray *,QIODevice::OpenMode
 
-/*
-QDataStream ( const QByteArray & a )
-*/
+$prototype=QDataStream ( const QByteArray & a )
 $internalConstructor=|new4|const QByteArray &
 
 //[1]QDataStream ()
@@ -100,79 +92,49 @@ HB_FUNC_STATIC( QDATASTREAM_NEW )
 
 $deleteMethod
 
-/*
-bool atEnd () const
-*/
+$prototype=bool atEnd () const
 $method=|bool|atEnd|
 
-/*
-ByteOrder byteOrder () const
-*/
+$prototype=ByteOrder byteOrder () const
 $method=|QDataStream::ByteOrder|byteOrder|
 
-/*
-QIODevice * device () const
-*/
+$prototype=QIODevice * device () const
 $method=|QIODevice *|device|
 
-/*
-FloatingPointPrecision floatingPointPrecision () const
-*/
+$prototype=FloatingPointPrecision floatingPointPrecision () const
 $method=|QDataStream::FloatingPointPrecision|floatingPointPrecision|
 
-/*
-int readRawData ( char * s, int len )
-*/
+$prototype=int readRawData ( char * s, int len )
 $method=|int|readRawData|char *,int
 
-/*
-void resetStatus ()
-*/
+$prototype=void resetStatus ()
 $method=|void|resetStatus|
 
-/*
-void setByteOrder ( ByteOrder bo )
-*/
+$prototype=void setByteOrder ( ByteOrder bo )
 $method=|void|setByteOrder|QDataStream::ByteOrder
 
-/*
-void setDevice ( QIODevice * d )
-*/
+$prototype=void setDevice ( QIODevice * d )
 $method=|void|setDevice|QIODevice *
 
-/*
-void setFloatingPointPrecision ( FloatingPointPrecision precision )
-*/
+$prototype=void setFloatingPointPrecision ( FloatingPointPrecision precision )
 $method=|void|setFloatingPointPrecision|QDataStream::FloatingPointPrecision
 
-/*
-void setStatus ( Status status )
-*/
+$prototype=void setStatus ( Status status )
 $method=|void|setStatus|QDataStream::Status
 
-/*
-void setVersion ( int v )
-*/
+$prototype=void setVersion ( int v )
 $method=|void|setVersion|int
 
-/*
-int skipRawData ( int len )
-*/
+$prototype=int skipRawData ( int len )
 $method=|int|skipRawData|int
 
-/*
-Status status () const
-*/
+$prototype=Status status () const
 $method=|QDataStream::Status|status|
 
-/*
-int version () const
-*/
+$prototype=int version () const
 $method=|int|version|
 
-/*
-int writeRawData ( const char * s, int len )
-*/
+$prototype=int writeRawData ( const char * s, int len )
 $method=|int|writeRawData|const char *,int
 
 $extraMethods

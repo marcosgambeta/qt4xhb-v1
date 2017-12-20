@@ -28,24 +28,16 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QTemporaryFile()
-*/
+$prototype=QTemporaryFile()
 $internalConstructor=|new1|
 
-/*
-QTemporaryFile(const QString & templateName)
-*/
+$prototype=QTemporaryFile(const QString & templateName)
 $internalConstructor=|new2|const QString &
 
-/*
-QTemporaryFile(QObject * parent)
-*/
+$prototype=QTemporaryFile(QObject * parent)
 $internalConstructor=|new3|QObject *
 
-/*
-QTemporaryFile(const QString & templateName, QObject * parent)
-*/
+$prototype=QTemporaryFile(const QString & templateName, QObject * parent)
 $internalConstructor=|new4|const QString &,QObject *
 
 //[1]QTemporaryFile()
@@ -79,44 +71,28 @@ HB_FUNC_STATIC( QTEMPORARYFILE_NEW )
 
 $deleteMethod
 
-/*
-bool autoRemove() const
-*/
+$prototype=bool autoRemove() const
 $method=|bool|autoRemove|
 
-/*
-QString fileTemplate() const
-*/
+$prototype=QString fileTemplate() const
 $method=|QString|fileTemplate|
 
-/*
-bool open()
-*/
+$prototype=bool open()
 $method=|bool|open|
 
-/*
-void setAutoRemove(bool b)
-*/
+$prototype=void setAutoRemove(bool b)
 $method=|void|setAutoRemove|bool
 
-/*
-void setFileTemplate(const QString & name)
-*/
+$prototype=void setFileTemplate(const QString & name)
 $method=|void|setFileTemplate|const QString &
 
-/*
-virtual QString fileName() const
-*/
+$prototype=virtual QString fileName() const
 $virtualMethod=|QString|fileName|
 
-/*
-static QTemporaryFile * createNativeFile(QFile & file)
-*/
+$prototype=static QTemporaryFile * createNativeFile(QFile & file)
 $internalStaticMethod=|QTemporaryFile *|createNativeFile,createNativeFile1|QFile &
 
-/*
-static QTemporaryFile * createNativeFile(const QString & fileName)
-*/
+$prototype=static QTemporaryFile * createNativeFile(const QString & fileName)
 $internalStaticMethod=|QTemporaryFile *|createNativeFile,createNativeFile2|const QString &
 
 //[1]static QTemporaryFile * createNativeFile(QFile & file)

@@ -73,131 +73,81 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QProcess ( QObject * parent = 0 )
-*/
+$prototype=QProcess ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-void closeReadChannel ( ProcessChannel channel )
-*/
+$prototype=void closeReadChannel ( ProcessChannel channel )
 $method=|void|closeReadChannel|QProcess::ProcessChannel
 
-/*
-void closeWriteChannel ()
-*/
+$prototype=void closeWriteChannel ()
 $method=|void|closeWriteChannel|
 
-/*
-QStringList environment () const (deprecated)
-*/
+$prototype=QStringList environment () const (deprecated)
 $method=|QStringList|environment|
 
-/*
-QProcess::ProcessError error () const
-*/
+$prototype=QProcess::ProcessError error () const
 $method=|QProcess::ProcessError|error|
 
-/*
-int exitCode () const
-*/
+$prototype=int exitCode () const
 $method=|int|exitCode|
 
-/*
-QProcess::ExitStatus exitStatus () const
-*/
+$prototype=QProcess::ExitStatus exitStatus () const
 $method=|QProcess::ExitStatus|exitStatus|
 
-/*
-QString nativeArguments () const
-*/
+$prototype=QString nativeArguments () const
 $method=|QString|nativeArguments|
 
-/*
-ProcessChannelMode processChannelMode () const
-*/
+$prototype=ProcessChannelMode processChannelMode () const
 $method=|QProcess::ProcessChannelMode|processChannelMode|
 
-/*
-QProcessEnvironment processEnvironment () const
-*/
+$prototype=QProcessEnvironment processEnvironment () const
 $method=|QProcessEnvironment|processEnvironment|
 
-/*
-QByteArray readAllStandardError ()
-*/
+$prototype=QByteArray readAllStandardError ()
 $method=|QByteArray|readAllStandardError|
 
-/*
-QByteArray readAllStandardOutput ()
-*/
+$prototype=QByteArray readAllStandardOutput ()
 $method=|QByteArray|readAllStandardOutput|
 
-/*
-ProcessChannel readChannel () const
-*/
+$prototype=ProcessChannel readChannel () const
 $method=|QProcess::ProcessChannel|readChannel|
 
-/*
-void setEnvironment ( const QStringList & environment ) (deprecated)
-*/
+$prototype=void setEnvironment ( const QStringList & environment ) (deprecated)
 $method=|void|setEnvironment|const QStringList &
 
-/*
-void setNativeArguments ( const QString & arguments )
-*/
+$prototype=void setNativeArguments ( const QString & arguments )
 $method=|void|setNativeArguments|const QString &
 
-/*
-void setProcessChannelMode ( ProcessChannelMode mode )
-*/
+$prototype=void setProcessChannelMode ( ProcessChannelMode mode )
 $method=|void|setProcessChannelMode|QProcess::ProcessChannelMode
 
-/*
-void setProcessEnvironment ( const QProcessEnvironment & environment )
-*/
+$prototype=void setProcessEnvironment ( const QProcessEnvironment & environment )
 $method=|void|setProcessEnvironment|const QProcessEnvironment &
 
-/*
-void setReadChannel ( ProcessChannel channel )
-*/
+$prototype=void setReadChannel ( ProcessChannel channel )
 $method=|void|setReadChannel|QProcess::ProcessChannel
 
-/*
-void setStandardErrorFile ( const QString & fileName, OpenMode mode = Truncate )
-*/
+$prototype=void setStandardErrorFile ( const QString & fileName, OpenMode mode = Truncate )
 $method=|void|setStandardErrorFile|const QString &,QIODevice::OpenMode=QIODevice::Truncate
 
-/*
-void setStandardInputFile ( const QString & fileName )
-*/
+$prototype=void setStandardInputFile ( const QString & fileName )
 $method=|void|setStandardInputFile|const QString &
 
-/*
-void setStandardOutputFile ( const QString & fileName, OpenMode mode = Truncate )
-*/
+$prototype=void setStandardOutputFile ( const QString & fileName, OpenMode mode = Truncate )
 $method=|void|setStandardOutputFile|const QString &,QIODevice::OpenMode=QIODevice::Truncate
 
-/*
-void setStandardOutputProcess ( QProcess * destination )
-*/
+$prototype=void setStandardOutputProcess ( QProcess * destination )
 $method=|void|setStandardOutputProcess|QProcess *
 
-/*
-void setWorkingDirectory ( const QString & dir )
-*/
+$prototype=void setWorkingDirectory ( const QString & dir )
 $method=|void|setWorkingDirectory|const QString &
 
-/*
-void start ( const QString & program, const QStringList & arguments, OpenMode mode = ReadWrite )
-*/
+$prototype=void start ( const QString & program, const QStringList & arguments, OpenMode mode = ReadWrite )
 $internalMethod=|void|start,start1|const QString &,const QStringList &,QIODevice::OpenMode=QIODevice::ReadWrite
 
-/*
-void start ( const QString & program, OpenMode mode = ReadWrite )
-*/
+$prototype=void start ( const QString & program, OpenMode mode = ReadWrite )
 $internalMethod=|void|start,start2|const QString &,QIODevice::OpenMode=QIODevice::ReadWrite
 
 //[1]void start ( const QString & program, const QStringList & arguments, OpenMode mode = ReadWrite )
@@ -219,84 +169,52 @@ HB_FUNC_STATIC( QPROCESS_START )
   }
 }
 
-/*
-QProcess::ProcessState state () const
-*/
+$prototype=QProcess::ProcessState state () const
 $method=|QProcess::ProcessState|state|
 
-/*
-bool waitForFinished ( int msecs = 30000 )
-*/
+$prototype=bool waitForFinished ( int msecs = 30000 )
 $method=|bool|waitForFinished|int=30000
 
-/*
-bool waitForStarted ( int msecs = 30000 )
-*/
+$prototype=bool waitForStarted ( int msecs = 30000 )
 $method=|bool|waitForStarted|int=30000
 
-/*
-QString workingDirectory () const
-*/
+$prototype=QString workingDirectory () const
 $method=|QString|workingDirectory|
 
-/*
-virtual bool atEnd () const
-*/
+$prototype=virtual bool atEnd () const
 $virtualMethod=|bool|atEnd|
 
-/*
-virtual qint64 bytesAvailable () const
-*/
+$prototype=virtual qint64 bytesAvailable () const
 $virtualMethod=|qint64|bytesAvailable|
 
-/*
-virtual qint64 bytesToWrite () const
-*/
+$prototype=virtual qint64 bytesToWrite () const
 $virtualMethod=|qint64|bytesToWrite|
 
-/*
-virtual bool canReadLine () const
-*/
+$prototype=virtual bool canReadLine () const
 $virtualMethod=|bool|canReadLine|
 
-/*
-virtual void close ()
-*/
+$prototype=virtual void close ()
 $virtualMethod=|void|close|
 
-/*
-virtual bool isSequential () const
-*/
+$prototype=virtual bool isSequential () const
 $virtualMethod=|bool|isSequential|
 
-/*
-virtual bool waitForBytesWritten ( int msecs = 30000 )
-*/
+$prototype=virtual bool waitForBytesWritten ( int msecs = 30000 )
 $virtualMethod=|bool|waitForBytesWritten|int=30000
 
-/*
-virtual bool waitForReadyRead ( int msecs = 30000 )
-*/
+$prototype=virtual bool waitForReadyRead ( int msecs = 30000 )
 $virtualMethod=|bool|waitForReadyRead|int=30000
 
-/*
-void kill ()
-*/
+$prototype=void kill ()
 $method=|void|kill|
 
-/*
-void terminate ()
-*/
+$prototype=void terminate ()
 $method=|void|terminate|
 
-/*
-static int execute ( const QString & program, const QStringList & arguments )
-*/
+$prototype=static int execute ( const QString & program, const QStringList & arguments )
 $internalStaticMethod=|int|execute,execute1|const QString &,const QStringList &
 
-/*
-static int execute ( const QString & program )
-*/
+$prototype=static int execute ( const QString & program )
 $internalStaticMethod=|int|execute,execute2|const QString &
 
 //[1]int execute ( const QString & program, const QStringList & arguments )
@@ -318,19 +236,13 @@ HB_FUNC_STATIC( QPROCESS_EXECUTE )
   }
 }
 
-/*
-static bool startDetached ( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = 0 )
-*/
+$prototype=static bool startDetached ( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = 0 )
 $internalStaticMethod=|bool|startDetached,startDetached1|const QString &,const QStringList &,const QString &,qint64 *=0
 
-/*
-static bool startDetached ( const QString & program, const QStringList & arguments )
-*/
+$prototype=static bool startDetached ( const QString & program, const QStringList & arguments )
 $internalStaticMethod=|bool|startDetached,startDetached2|const QString &,const QStringList &
 
-/*
-static bool startDetached ( const QString & program )
-*/
+$prototype=static bool startDetached ( const QString & program )
 $internalStaticMethod=|bool|startDetached|const QString &
 
 //[1]bool startDetached ( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = 0 )
@@ -357,9 +269,7 @@ HB_FUNC_STATIC( QPROCESS_STARTDETACHED )
   }
 }
 
-/*
-static QStringList systemEnvironment ()
-*/
+$prototype=static QStringList systemEnvironment ()
 $staticMethod=|QStringList|systemEnvironment|
 
 #pragma ENDDUMP

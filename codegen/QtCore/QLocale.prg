@@ -118,29 +118,19 @@ $destructor
 #include <QDate>
 #include <QStringList>
 
-/*
-QLocale ()
-*/
+$prototype=QLocale ()
 $internalConstructor=|new1|
 
-/*
-QLocale ( const QString & name )
-*/
+$prototype=QLocale ( const QString & name )
 $internalConstructor=|new2|const QString &
 
-/*
-QLocale ( Language language, Country country = AnyCountry )
-*/
+$prototype=QLocale ( Language language, Country country = AnyCountry )
 $internalConstructor=|new3|QLocale::Language,QLocale::Country=QLocale::AnyCountry
 
-/*
-QLocale ( Language language, Script script, Country country )
-*/
+$prototype=QLocale ( Language language, Script script, Country country )
 $internalConstructor=|new4|QLocale::Language,QLocale::Script,QLocale::Country
 
-/*
-QLocale ( const QLocale & other )
-*/
+$prototype=QLocale ( const QLocale & other )
 $internalConstructor=|new5|const QLocale &
 
 //[1] QLocale ()
@@ -177,129 +167,79 @@ HB_FUNC_STATIC( QLOCALE_NEW )
   }
 }
 
-/*
-QString amText () const
-*/
+$prototype=QString amText () const
 $method=|QString|amText|
 
-/*
-QString bcp47Name () const
-*/
+$prototype=QString bcp47Name () const
 $method=|QString|bcp47Name|
 
-/*
-Country country () const
-*/
+$prototype=Country country () const
 $method=|QLocale::Country|country|
 
-/*
-QString createSeparatedList ( const QStringList & list ) const
-*/
+$prototype=QString createSeparatedList ( const QStringList & list ) const
 $method=|QString|createSeparatedList|const QStringList &
 
-/*
-QString currencySymbol ( CurrencySymbolFormat format = CurrencySymbol ) const
-*/
+$prototype=QString currencySymbol ( CurrencySymbolFormat format = CurrencySymbol ) const
 $method=|QString|currencySymbol|QLocale::CurrencySymbolFormat=QLocale::CurrencySymbol
 
-/*
-QString dateFormat ( FormatType format = LongFormat ) const
-*/
+$prototype=QString dateFormat ( FormatType format = LongFormat ) const
 $method=|QString|dateFormat|QLocale::FormatType=QLocale::LongFormat
 
-/*
-QString dateTimeFormat ( FormatType format = LongFormat ) const
-*/
+$prototype=QString dateTimeFormat ( FormatType format = LongFormat ) const
 $method=|QString|dateTimeFormat|QLocale::FormatType=QLocale::LongFormat
 
-/*
-QString dayName ( int day, FormatType type = LongFormat ) const
-*/
+$prototype=QString dayName ( int day, FormatType type = LongFormat ) const
 $method=|QString|dayName|int,QLocale::FormatType=QLocale::LongFormat
 
-/*
-QChar decimalPoint () const
-*/
+$prototype=QChar decimalPoint () const
 $method=|QChar|decimalPoint|
 
-/*
-QChar exponential () const
-*/
+$prototype=QChar exponential () const
 $method=|QChar|exponential|
 
-/*
-Qt::DayOfWeek firstDayOfWeek () const
-*/
+$prototype=Qt::DayOfWeek firstDayOfWeek () const
 $method=|Qt::DayOfWeek|firstDayOfWeek|
 
-/*
-QChar groupSeparator () const
-*/
+$prototype=QChar groupSeparator () const
 $method=|QChar|groupSeparator|
 
-/*
-Language language () const
-*/
+$prototype=Language language () const
 $method=|QLocale::Language|language|
 
-/*
-MeasurementSystem measurementSystem () const
-*/
+$prototype=MeasurementSystem measurementSystem () const
 $method=|QLocale::MeasurementSystem|measurementSystem|
 
-/*
-QString monthName ( int month, FormatType type = LongFormat ) const
-*/
+$prototype=QString monthName ( int month, FormatType type = LongFormat ) const
 $method=|QString|monthName|int,QLocale::FormatType=QLocale::LongFormat
 
-/*
-QString name () const
-*/
+$prototype=QString name () const
 $method=|QString|name|
 
-/*
-QString nativeCountryName () const
-*/
+$prototype=QString nativeCountryName () const
 $method=|QString|nativeCountryName|
 
-/*
-QString nativeLanguageName () const
-*/
+$prototype=QString nativeLanguageName () const
 $method=|QString|nativeLanguageName|
 
-/*
-QChar negativeSign () const
-*/
+$prototype=QChar negativeSign () const
 $method=|QChar|negativeSign|
 
-/*
-NumberOptions numberOptions () const
-*/
+$prototype=NumberOptions numberOptions () const
 $method=|QLocale::NumberOptions|numberOptions|
 
-/*
-QChar percent () const
-*/
+$prototype=QChar percent () const
 $method=|QChar|percent|
 
-/*
-QString pmText () const
-*/
+$prototype=QString pmText () const
 $method=|QString|pmText|
 
-/*
-QChar positiveSign () const
-*/
+$prototype=QChar positiveSign () const
 $method=|QChar|positiveSign|
 
-/*
-QString quoteString ( const QString & str, QuotationStyle style = StandardQuotation ) const
-*/
+$prototype=QString quoteString ( const QString & str, QuotationStyle style = StandardQuotation ) const
 $method=|QString|quoteString,quoteString1|const QString &,QLocale::QuotationStyle=QLocale::StandardQuotation
 
-/*
-QString quoteString ( const QStringRef & str, QuotationStyle style = StandardQuotation ) const
-*/
+$prototype=QString quoteString ( const QStringRef & str, QuotationStyle style = StandardQuotation ) const
 $method=|QString|quoteString,quoteString2|const QStringRef &,QLocale::QuotationStyle=QLocale::StandardQuotation
 
 //[1]QString quoteString ( const QString & str, QuotationStyle style = StandardQuotation ) const
@@ -317,74 +257,46 @@ HB_FUNC_STATIC( QLOCALE_QUOTESTRING )
   }
 }
 
-/*
-Script script () const
-*/
+$prototype=Script script () const
 $method=|QLocale::Script|script|
 
-/*
-void setNumberOptions ( NumberOptions options )
-*/
+$prototype=void setNumberOptions ( NumberOptions options )
 $method=|void|setNumberOptions|QLocale::NumberOptions
 
-/*
-QString standaloneDayName ( int day, FormatType type = LongFormat ) const
-*/
+$prototype=QString standaloneDayName ( int day, FormatType type = LongFormat ) const
 $method=|QString|standaloneDayName|int,QLocale::FormatType=QLocale::LongFormat
 
-/*
-QString standaloneMonthName ( int month, FormatType type = LongFormat ) const
-*/
+$prototype=QString standaloneMonthName ( int month, FormatType type = LongFormat ) const
 $method=|QString|standaloneMonthName|int,QLocale::FormatType=QLocale::LongFormat
 
-/*
-Qt::LayoutDirection textDirection () const
-*/
+$prototype=Qt::LayoutDirection textDirection () const
 $method=|Qt::LayoutDirection|textDirection|
 
-/*
-QString timeFormat ( FormatType format = LongFormat ) const
-*/
+$prototype=QString timeFormat ( FormatType format = LongFormat ) const
 $method=|QString|timeFormat|QLocale::FormatType=QLocale::LongFormat
 
-/*
-QString toCurrencyString ( qlonglong value, const QString & symbol = QString() ) const
-*/
+$prototype=QString toCurrencyString ( qlonglong value, const QString & symbol = QString() ) const
 $method=|QString|toCurrencyString,toCurrencyString1|qlonglong,const QString &=QString()
 
-/*
-QString toCurrencyString ( short value, const QString & symbol = QString() ) const
-*/
+$prototype=QString toCurrencyString ( short value, const QString & symbol = QString() ) const
 $method=|QString|toCurrencyString,toCurrencyString2|short,const QString &=QString()
 
-/*
-QString toCurrencyString ( ushort value, const QString & symbol = QString() ) const
-*/
+$prototype=QString toCurrencyString ( ushort value, const QString & symbol = QString() ) const
 $method=|QString|toCurrencyString,toCurrencyString3|ushort,const QString &=QString()
 
-/*
-QString toCurrencyString ( int value, const QString & symbol = QString() ) const
-*/
+$prototype=QString toCurrencyString ( int value, const QString & symbol = QString() ) const
 $method=|QString|toCurrencyString,toCurrencyString4|int,const QString &=QString()
 
-/*
-QString toCurrencyString ( uint value, const QString & symbol = QString() ) const
-*/
+$prototype=QString toCurrencyString ( uint value, const QString & symbol = QString() ) const
 $method=|QString|toCurrencyString,toCurrencyString5|uint,const QString &=QString()
 
-/*
-QString toCurrencyString ( float value, const QString & symbol = QString() ) const
-*/
+$prototype=QString toCurrencyString ( float value, const QString & symbol = QString() ) const
 $method=|QString|toCurrencyString,toCurrencyString6|float,const QString &=QString()
 
-/*
-QString toCurrencyString ( qulonglong value, const QString & symbol = QString() ) const
-*/
+$prototype=QString toCurrencyString ( qulonglong value, const QString & symbol = QString() ) const
 $method=|QString|toCurrencyString,toCurrencyString7|qulonglong,const QString &=QString()
 
-/*
-QString toCurrencyString ( double value, const QString & symbol = QString() ) const
-*/
+$prototype=QString toCurrencyString ( double value, const QString & symbol = QString() ) const
 $method=|QString|toCurrencyString,toCurrencyString8|double,const QString &=QString()
 
 //[1]QString toCurrencyString ( qlonglong value, const QString & symbol = QString() ) const
@@ -402,14 +314,10 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING )
 {
 }
 
-/*
-QDate toDate ( const QString & string, FormatType format = LongFormat ) const
-*/
+$prototype=QDate toDate ( const QString & string, FormatType format = LongFormat ) const
 $internalMethod=|QDate|toDate,toDate1|const QString &,QLocale::FormatType=QLocale::LongFormat
 
-/*
-QDate toDate ( const QString & string, const QString & format ) const
-*/
+$prototype=QDate toDate ( const QString & string, const QString & format ) const
 $internalMethod=|QDate|toDate,toDate2|const QString &,const QString &
 
 //[1]QDate toDate ( const QString & string, FormatType format = LongFormat ) const
@@ -431,14 +339,10 @@ HB_FUNC_STATIC( QLOCALE_TODATE )
   }
 }
 
-/*
-QDateTime toDateTime ( const QString & string, FormatType format = LongFormat ) const
-*/
+$prototype=QDateTime toDateTime ( const QString & string, FormatType format = LongFormat ) const
 $internalMethod=|QDateTime|toDateTime,toDateTime1|const QString &,QLocale::FormatType=QLocale::LongFormat
 
-/*
-QDateTime toDateTime ( const QString & string, const QString & format ) const
-*/
+$prototype=QDateTime toDateTime ( const QString & string, const QString & format ) const
 $internalMethod=|QDateTime|toDateTime,toDateTime2|const QString &,const QString &
 
 //[1]QDateTime toDateTime ( const QString & string, FormatType format = LongFormat ) const
@@ -460,104 +364,64 @@ HB_FUNC_STATIC( QLOCALE_TODATETIME )
   }
 }
 
-/*
-double toDouble ( const QString & s, bool * ok = 0 ) const
-*/
+$prototype=double toDouble ( const QString & s, bool * ok = 0 ) const
 $method=|double|toDouble|const QString &,bool *=0
 
-/*
-float toFloat ( const QString & s, bool * ok = 0 ) const
-*/
+$prototype=float toFloat ( const QString & s, bool * ok = 0 ) const
 $method=|float|toFloat|const QString &,bool *=0
 
-/*
-int toInt ( const QString & s, bool * ok = 0, int base = 0 ) const
-*/
+$prototype=int toInt ( const QString & s, bool * ok = 0, int base = 0 ) const
 $method=|int|toInt|const QString &,bool *=0,int=0
 
-/*
-qlonglong toLongLong ( const QString & s, bool * ok = 0, int base = 0 ) const
-*/
+$prototype=qlonglong toLongLong ( const QString & s, bool * ok = 0, int base = 0 ) const
 $method=|qlonglong|toLongLong|const QString &,bool *=0,int=0
 
-/*
-QString toLower ( const QString & str ) const
-*/
+$prototype=QString toLower ( const QString & str ) const
 $method=|QString|toLower|const QString &
 
-/*
-short toShort ( const QString & s, bool * ok = 0, int base = 0 ) const
-*/
+$prototype=short toShort ( const QString & s, bool * ok = 0, int base = 0 ) const
 $method=|short|toShort|const QString &,bool *=0,int=0
 
-/*
-QString toString ( qlonglong i ) const
-*/
+$prototype=QString toString ( qlonglong i ) const
 $method=|QString|toString,toString1|qlonglong
 
-/*
-QString toString ( const QDate & date, const QString & format ) const
-*/
+$prototype=QString toString ( const QDate & date, const QString & format ) const
 $method=|QString|toString,toString2|const QDate &,const QString &
 
-/*
-QString toString ( const QDate & date, FormatType format = LongFormat ) const
-*/
+$prototype=QString toString ( const QDate & date, FormatType format = LongFormat ) const
 $method=|QString|toString,toString3|const QDate &,QLocale::FormatType=QLocale::LongFormat
 
-/*
-QString toString ( const QTime & time, const QString & format ) const
-*/
+$prototype=QString toString ( const QTime & time, const QString & format ) const
 $method=|QString|toString,toString4|const QTime &,const QString &
 
-/*
-QString toString ( const QTime & time, FormatType format = LongFormat ) const
-*/
+$prototype=QString toString ( const QTime & time, FormatType format = LongFormat ) const
 $method=|QString|toString,toString5|const QTime &,QLocale::FormatType=QLocale::LongFormat
 
-/*
-QString toString ( const QDateTime & dateTime, FormatType format = LongFormat ) const
-*/
+$prototype=QString toString ( const QDateTime & dateTime, FormatType format = LongFormat ) const
 $method=|QString|toString,toString6|const QDateTime &,QLocale::FormatType=QLocale::LongFormat
 
-/*
-QString toString ( const QDateTime & dateTime, const QString & format ) const
-*/
+$prototype=QString toString ( const QDateTime & dateTime, const QString & format ) const
 $method=|QString|toString,toString7|const QDateTime &,const QString &
 
-/*
-QString toString ( short i ) const
-*/
+$prototype=QString toString ( short i ) const
 $method=|QString|toString,toString8|short
 
-/*
-QString toString ( ushort i ) const
-*/
+$prototype=QString toString ( ushort i ) const
 $method=|QString|toString,toString9|ushort
 
-/*
-QString toString ( int i ) const
-*/
+$prototype=QString toString ( int i ) const
 $method=|QString|toString,toString10|int
 
-/*
-QString toString ( uint i ) const
-*/
+$prototype=QString toString ( uint i ) const
 $method=|QString|toString,toString11|uint
 
-/*
-QString toString ( float i, char f = 'g', int prec = 6 ) const
-*/
+$prototype=QString toString ( float i, char f = 'g', int prec = 6 ) const
 $method=|QString|toString,toString12|float,char='g',int=6
 
-/*
-QString toString ( qulonglong i ) const
-*/
+$prototype=QString toString ( qulonglong i ) const
 $method=|QString|toString,toString13|qulonglong
 
-/*
-QString toString ( double i, char f = 'g', int prec = 6 ) const
-*/
+$prototype=QString toString ( double i, char f = 'g', int prec = 6 ) const
 $method=|QString|toString,toString14|double,char='g',int=6
 
 //[01]QString toString ( qlonglong i ) const
@@ -581,14 +445,10 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING )
 {
 }
 
-/*
-QTime toTime ( const QString & string, FormatType format = LongFormat ) const
-*/
+$prototype=QTime toTime ( const QString & string, FormatType format = LongFormat ) const
 $internalMethod=|QTime|toTime,toTime1|const QString &,QLocale::FormatType=QLocale::LongFormat
 
-/*
-QTime toTime ( const QString & string, const QString & format ) const
-*/
+$prototype=QTime toTime ( const QString & string, const QString & format ) const
 $internalMethod=|QTime|toTime,toTime2|const QString &,const QString &
 
 //[1]QTime toTime ( const QString & string, FormatType format = LongFormat ) const
@@ -610,34 +470,22 @@ HB_FUNC_STATIC( QLOCALE_TOTIME )
   }
 }
 
-/*
-uint toUInt ( const QString & s, bool * ok = 0, int base = 0 ) const
-*/
+$prototype=uint toUInt ( const QString & s, bool * ok = 0, int base = 0 ) const
 $method=|uint|toUInt|const QString &,bool *=0,int=0
 
-/*
-qlonglong toULongLong ( const QString & s, bool * ok = 0, int base = 0 ) const
-*/
+$prototype=qlonglong toULongLong ( const QString & s, bool * ok = 0, int base = 0 ) const
 $method=|qlonglong|toULongLong|const QString &,bool *=0,int=0
 
-/*
-ushort toUShort ( const QString & s, bool * ok = 0, int base = 0 ) const
-*/
+$prototype=ushort toUShort ( const QString & s, bool * ok = 0, int base = 0 ) const
 $method=|ushort|toUShort|const QString &,bool *=0,int=0
 
-/*
-QString toUpper ( const QString & str ) const
-*/
+$prototype=QString toUpper ( const QString & str ) const
 $method=|QString|toUpper|const QString &
 
-/*
-QStringList uiLanguages () const
-*/
+$prototype=QStringList uiLanguages () const
 $method=|QStringList|uiLanguages|
 
-/*
-QList<Qt::DayOfWeek> weekdays () const
-*/
+$prototype=QList<Qt::DayOfWeek> weekdays () const
 HB_FUNC_STATIC( QLOCALE_WEEKDAYS )
 {
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -657,24 +505,16 @@ HB_FUNC_STATIC( QLOCALE_WEEKDAYS )
   }
 }
 
-/*
-static QLocale c ()
-*/
+$prototype=static QLocale c ()
 $staticMethod=|QLocale|c|
 
-/*
-static QString countryToString ( Country country )
-*/
+$prototype=static QString countryToString ( Country country )
 $staticMethod=|QString|countryToString|QLocale::Country
 
-/*
-static QString languageToString ( Language language )
-*/
+$prototype=static QString languageToString ( Language language )
 $staticMethod=|QString|languageToString|QLocale::Language
 
-/*
-static QList<QLocale> matchingLocales ( QLocale::Language language, QLocale::Script script, QLocale::Country country )
-*/
+$prototype=static QList<QLocale> matchingLocales ( QLocale::Language language, QLocale::Script script, QLocale::Country country )
 HB_FUNC_STATIC( QLOCALE_MATCHINGLOCALES )
 {
   QList<QLocale> list = QLocale::matchingLocales ( (QLocale::Language) hb_parni(1), (QLocale::Script) hb_parni(2), (QLocale::Country) hb_parni(3) );
@@ -705,19 +545,13 @@ HB_FUNC_STATIC( QLOCALE_MATCHINGLOCALES )
   hb_itemReturnRelease(pArray);
 }
 
-/*
-static QString scriptToString ( Script script )
-*/
+$prototype=static QString scriptToString ( Script script )
 $staticMethod=|QString|scriptToString|QLocale::Script
 
-/*
-static void setDefault ( const QLocale & locale )
-*/
+$prototype=static void setDefault ( const QLocale & locale )
 $staticMethod=|void|setDefault|const QLocale &
 
-/*
-static QLocale system ()
-*/
+$prototype=static QLocale system ()
 $staticMethod=|QLocale|system|
 
 $extraMethods

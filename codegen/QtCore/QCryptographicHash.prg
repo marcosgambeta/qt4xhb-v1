@@ -38,21 +38,15 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QCryptographicHash ( Algorithm method )
-*/
+$prototype=QCryptographicHash ( Algorithm method )
 $constructor=|new|QCryptographicHash::Algorithm
 
 $deleteMethod
 
-/*
-void addData ( const char * data, int length )
-*/
+$prototype=void addData ( const char * data, int length )
 $internalMethod=|void|addData,addData1|const char *,int
 
-/*
-void addData ( const QByteArray & data )
-*/
+$prototype=void addData ( const QByteArray & data )
 $internalMethod=|void|addData,addData2|const QByteArray &
 
 //[1]void addData ( const char * data, int length )
@@ -74,19 +68,13 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_ADDDATA )
   }
 }
 
-/*
-void reset ()
-*/
+$prototype=void reset ()
 $method=|void|reset|
 
-/*
-QByteArray result () const
-*/
+$prototype=QByteArray result () const
 $method=|QByteArray|result|
 
-/*
-static QByteArray hash ( const QByteArray & data, Algorithm method )
-*/
+$prototype=static QByteArray hash ( const QByteArray & data, Algorithm method )
 $staticMethod=|QByteArray|hash|const QByteArray &,QCryptographicHash::Algorithm
 
 $extraMethods

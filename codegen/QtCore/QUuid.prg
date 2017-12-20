@@ -48,34 +48,22 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QUuid()
-*/
+$prototype=QUuid()
 $constructor=|new1|
 
-/*
-QUuid(uint l, ushort w1, ushort w2, uchar b1, uchar b2, uchar b3, uchar b4, uchar b5, uchar b6, uchar b7, uchar b8)
-*/
+$prototype=QUuid(uint l, ushort w1, ushort w2, uchar b1, uchar b2, uchar b3, uchar b4, uchar b5, uchar b6, uchar b7, uchar b8)
 $constructor=|new2|uint,ushort,ushort,uchar,uchar,uchar,uchar,uchar,uchar,uchar,uchar
 
-/*
-QUuid(const QString &)
-*/
+$prototype=QUuid(const QString &)
 $constructor=|new3|const QString &
 
-/*
-QUuid(const char *)
-*/
+$prototype=QUuid(const char *)
 $constructor=|new4|const char *
 
-/*
-QUuid(const QByteArray &)
-*/
+$prototype=QUuid(const QByteArray &)
 $constructor=|new5|const QByteArray &
 
-/*
-QUuid(const GUID &guid)
-*/
+$prototype=QUuid(const GUID &guid)
 %% TOOD: implementar
 %% $constructor=|new6|const GUID &
 
@@ -113,44 +101,28 @@ HB_FUNC_STATIC( QUUID_NEW )
 
 $deleteMethod
 
-/*
-QString toString() const;
-*/
+$prototype=QString toString() const;
 $method=|QString|toString|
 
-/*
-QByteArray toByteArray() const
-*/
+$prototype=QByteArray toByteArray() const
 $method=|QByteArray|toByteArray|
 
-/*
-QByteArray toRfc4122() const
-*/
+$prototype=QByteArray toRfc4122() const
 $method=|QByteArray|toRfc4122|
 
-/*
-bool isNull() const
-*/
+$prototype=bool isNull() const
 $method=|bool|isNull|
 
-/*
-QUuid::Variant variant() const
-*/
+$prototype=QUuid::Variant variant() const
 $method=|QUuid::Variant|variant|
 
-/*
-QUuid::Version version() const
-*/
+$prototype=QUuid::Version version() const
 $method=|QUuid::Version|version|
 
-/*
-static QUuid fromRfc4122(const QByteArray &)
-*/
+$prototype=static QUuid fromRfc4122(const QByteArray &)
 $staticMethod=|QUuid|fromRfc4122|const QByteArray &
 
-/*
-static QUuid createUuid()
-*/
+$prototype=static QUuid createUuid()
 $staticMethod=|QUuid|createUuid|
 
 $extraMethods

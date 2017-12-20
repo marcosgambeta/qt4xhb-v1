@@ -71,54 +71,34 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QChar ()
-*/
+$prototype=QChar ()
 $constructor=|new1|
 
-/*
-QChar ( char ch )
-*/
+$prototype=QChar ( char ch )
 $constructor=|new2|char
 
-/*
-QChar ( uchar ch )
-*/
+$prototype=QChar ( uchar ch )
 $constructor=|new3|uchar
 
-/*
-QChar ( QLatin1Char ch )
-*/
+$prototype=QChar ( QLatin1Char ch )
 $constructor=|new4|QLatin1Char
 
-/*
-QChar ( uchar cell, uchar row )
-*/
+$prototype=QChar ( uchar cell, uchar row )
 $constructor=|new5|uchar,uchar
 
-/*
-QChar ( ushort code )
-*/
+$prototype=QChar ( ushort code )
 $constructor=|new6|ushort
 
-/*
-QChar ( short code )
-*/
+$prototype=QChar ( short code )
 $constructor=|new7|short
 
-/*
-QChar ( uint code )
-*/
+$prototype=QChar ( uint code )
 $constructor=|new8|uint
 
-/*
-QChar ( int code )
-*/
+$prototype=QChar ( int code )
 $constructor=|new9|int
 
-/*
-QChar ( SpecialCharacter ch )
-*/
+$prototype=QChar ( SpecialCharacter ch )
 $constructor=|new10|QChar::SpecialCharacter
 
 //[01]QChar ()
@@ -137,7 +117,7 @@ HB_FUNC_STATIC( QCHAR_NEW )
   if( ISNUMPAR(0) )
   {
     HB_FUNC_EXEC( QCHAR_NEW1 );
-  }  
+  }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
@@ -146,139 +126,85 @@ HB_FUNC_STATIC( QCHAR_NEW )
 
 $deleteMethod
 
-/*
-Category category () const
-*/
+$prototype=Category category () const
 $method=|QChar::Category|category|
 
-/*
-Decomposition decompositionTag () const
-*/
+$prototype=Decomposition decompositionTag () const
 $method=|QChar::Decomposition|decompositionTag|
 
-/*
-int digitValue () const
-*/
+$prototype=int digitValue () const
 $method=|int|digitValue|
 
-/*
-Direction direction () const
-*/
+$prototype=Direction direction () const
 $method=|QChar::Direction|direction|
 
-/*
-bool hasMirrored () const
-*/
+$prototype=bool hasMirrored () const
 $method=|bool|hasMirrored|
 
-/*
-bool isDigit () const
-*/
+$prototype=bool isDigit () const
 $method=|bool|isDigit|
 
-/*
-bool isHighSurrogate () const
-*/
+$prototype=bool isHighSurrogate () const
 $method=|bool|isHighSurrogate|
 
-/*
-bool isLetter () const
-*/
+$prototype=bool isLetter () const
 $method=|bool|isLetter|
 
-/*
-bool isLetterOrNumber () const
-*/
+$prototype=bool isLetterOrNumber () const
 $method=|bool|isLetterOrNumber|
 
-/*
-bool isLowSurrogate () const
-*/
+$prototype=bool isLowSurrogate () const
 $method=|bool|isLowSurrogate|
 
-/*
-bool isLower () const
-*/
+$prototype=bool isLower () const
 $method=|bool|isLower|
 
-/*
-bool isMark () const
-*/
+$prototype=bool isMark () const
 $method=|bool|isMark|
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-bool isNumber () const
-*/
+$prototype=bool isNumber () const
 $method=|bool|isNumber|
 
-/*
-bool isPrint () const
-*/
+$prototype=bool isPrint () const
 $method=|bool|isPrint|
 
-/*
-bool isPunct () const
-*/
+$prototype=bool isPunct () const
 $method=|bool|isPunct|
 
-/*
-bool isSpace () const
-*/
+$prototype=bool isSpace () const
 $method=|bool|isSpace|
 
-/*
-bool isSymbol () const
-*/
+$prototype=bool isSymbol () const
 $method=|bool|isSymbol|
 
-/*
-bool isTitleCase () const
-*/
+$prototype=bool isTitleCase () const
 $method=|bool|isTitleCase|
 
-/*
-bool isUpper () const
-*/
+$prototype=bool isUpper () const
 $method=|bool|isUpper|
 
-/*
-Joining joining () const
-*/
+$prototype=Joining joining () const
 $method=|QChar::Joining|joining|
 
-/*
-QChar mirroredChar () const
-*/
+$prototype=QChar mirroredChar () const
 $method=|QChar|mirroredChar|
 
-/*
-QChar toCaseFolded () const
-*/
+$prototype=QChar toCaseFolded () const
 $method=|QChar|toCaseFolded|
 
-/*
-QChar toLower () const
-*/
+$prototype=QChar toLower () const
 $method=|QChar|toLower|
 
-/*
-QChar toTitleCase () const
-*/
+$prototype=QChar toTitleCase () const
 $method=|QChar|toTitleCase|
 
-/*
-QChar toUpper () const
-*/
+$prototype=QChar toUpper () const
 $method=|QChar|toUpper|
 
-/*
-UnicodeVersion unicodeVersion () const
-*/
+$prototype=UnicodeVersion unicodeVersion () const
 $method=|QChar::UnicodeVersion|unicodeVersion|
 
 %% TODO: implementar metódos estáticos

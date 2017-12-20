@@ -37,29 +37,19 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-static QString licensee()
-*/
+$prototype=static QString licensee()
 $staticMethod=|QString|licensee|
 
-/*
-static QString licensedProducts()
-*/
+$prototype=static QString licensedProducts()
 $staticMethod=|QString|licensedProducts|
 
-/*
-static QString buildKey()
-*/
+$prototype=static QString buildKey()
 $staticMethod=|QString|buildKey|
 
-/*
-static QDate buildDate()
-*/
+$prototype=static QDate buildDate()
 $staticMethod=|QDate|buildDate|
 
-/*
-static QString location(LibraryLocation)
-*/
+$prototype=static QString location(LibraryLocation)
 $staticMethod=|QString|location|QLibraryInfo::LibraryLocation
 
 $extraMethods

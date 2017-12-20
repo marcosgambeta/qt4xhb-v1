@@ -35,24 +35,16 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QStringMatcher()
-*/
+$prototype=QStringMatcher()
 $internalConstructor=|new1|
 
-/*
-QStringMatcher(const QString &pattern,Qt::CaseSensitivity cs = Qt::CaseSensitive)
-*/
+$prototype=QStringMatcher(const QString &pattern,Qt::CaseSensitivity cs = Qt::CaseSensitive)
 $internalConstructor=|new2|const QString &,Qt::CaseSensitivity=Qt::CaseSensitive
 
-/*
-QStringMatcher(const QChar *uc, int len,Qt::CaseSensitivity cs = Qt::CaseSensitive)
-*/
+$prototype=QStringMatcher(const QChar *uc, int len,Qt::CaseSensitivity cs = Qt::CaseSensitive)
 $internalConstructor=|new3|const QChar *,int,Qt::CaseSensitivity=Qt::CaseSensitive
 
-/*
-QStringMatcher(const QStringMatcher &other)
-*/
+$prototype=QStringMatcher(const QStringMatcher &other)
 $internalConstructor=|new4|const QStringMatcher &
 
 //[1]QStringMatcher()
@@ -86,24 +78,16 @@ HB_FUNC_STATIC( QSTRINGMATCHER_NEW )
 
 $deleteMethod
 
-/*
-void setPattern(const QString &pattern)
-*/
+$prototype=void setPattern(const QString &pattern)
 $method=|void|setPattern|const QString &
 
-/*
-void setCaseSensitivity(Qt::CaseSensitivity cs)
-*/
+$prototype=void setCaseSensitivity(Qt::CaseSensitivity cs)
 $method=|void|setCaseSensitivity|Qt::CaseSensitivity
 
-/*
-int indexIn(const QString &str, int from = 0) const
-*/
+$prototype=int indexIn(const QString &str, int from = 0) const
 $internalMethod=|int|indexIn,indexIn1|const QString &,int=0
 
-/*
-int indexIn(const QChar *str, int length, int from = 0) const
-*/
+$prototype=int indexIn(const QChar *str, int length, int from = 0) const
 $internalMethod=|int|indexIn,indexIn2|const QChar *,int,int=0
 
 //[1]int indexIn(const QString &str, int from = 0) const
@@ -125,14 +109,10 @@ HB_FUNC_STATIC( QSTRINGMATCHER_INDEXIN )
   }
 }
 
-/*
-QString pattern() const
-*/
+$prototype=QString pattern() const
 $method=|QString|pattern|
 
-/*
-Qt::CaseSensitivity caseSensitivity() const
-*/
+$prototype=Qt::CaseSensitivity caseSensitivity() const
 $method=|Qt::CaseSensitivity|caseSensitivity|
 
 $extraMethods

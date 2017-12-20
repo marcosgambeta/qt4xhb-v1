@@ -30,14 +30,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QSharedData ()
-*/
+$prototype=QSharedData ()
 $internalConstructor=|new1|
 
-/*
-QSharedData ( const QSharedData & other )
-*/
+$prototype=QSharedData ( const QSharedData & other )
 $internalConstructor=|new2|const QSharedData &
 
 //[1]QSharedData ()

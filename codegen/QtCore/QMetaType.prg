@@ -37,49 +37,31 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-static int registerTypedef(const char *typeName, int aliasId)
-*/
+$prototype=static int registerTypedef(const char *typeName, int aliasId)
 $staticMethod=|int|registerTypedef|const char *,int
 
-/*
-static int type(const char *typeName)
-*/
+$prototype=static int type(const char *typeName)
 $staticMethod=|int|type|const char *
 
-/*
-static const char *typeName(int type)
-*/
+$prototype=static const char *typeName(int type)
 $staticMethod=|const char *|typeName|int
 
-/*
-static bool isRegistered(int type)
-*/
+$prototype=static bool isRegistered(int type)
 $staticMethod=|bool|isRegistered|int
 
-/*
-static void *construct(int type, const void *copy = 0)
-*/
+$prototype=static void *construct(int type, const void *copy = 0)
 $staticMethod=|void *|construct|int,const void *=0
 
-/*
-static void destroy(int type, void *data)
-*/
+$prototype=static void destroy(int type, void *data)
 $staticMethod=|void|destroy|int,void *
 
-/*
-static void unregisterType(const char *typeName)
-*/
+$prototype=static void unregisterType(const char *typeName)
 $staticMethod=|void|unregisterType|const char *
 
-/*
-static bool save(QDataStream &stream, int type, const void *data)
-*/
+$prototype=static bool save(QDataStream &stream, int type, const void *data)
 $staticMethod=|bool|save|QDataStream &,int,const void *
 
-/*
-static bool load(QDataStream &stream, int type, void *data)
-*/
+$prototype=static bool load(QDataStream &stream, int type, void *data)
 $staticMethod=|bool|load|QDataStream &,int,void *
 
 $extraMethods

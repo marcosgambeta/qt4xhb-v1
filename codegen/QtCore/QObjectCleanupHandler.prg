@@ -29,31 +29,21 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QObjectCleanupHandler()
-*/
+$prototype=QObjectCleanupHandler()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-QObject* add(QObject* object)
-*/
+$prototype=QObject* add(QObject* object)
 $method=|QObject *|add|QObject *
 
-/*
-void remove(QObject *object)
-*/
+$prototype=void remove(QObject *object)
 $method=|void|remove|QObject *
 
-/*
-bool isEmpty() const
-*/
+$prototype=bool isEmpty() const
 $method=|bool|isEmpty|
 
-/*
-void clear()
-*/
+$prototype=void clear()
 $method=|void|clear|
 
 #pragma ENDDUMP

@@ -21,9 +21,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QFinalState(QState * parent = 0)
-*/
+$prototype=QFinalState(QState * parent = 0)
 $constructor=|new|QState *=0
 
 $deleteMethod

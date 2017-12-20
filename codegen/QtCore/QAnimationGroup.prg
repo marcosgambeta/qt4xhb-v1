@@ -34,44 +34,28 @@ $destructor
 
 $deleteMethod
 
-/*
-void addAnimation ( QAbstractAnimation * animation )
-*/
+$prototype=void addAnimation ( QAbstractAnimation * animation )
 $method=|void|addAnimation|QAbstractAnimation *
 
-/*
-QAbstractAnimation * animationAt ( int index ) const
-*/
+$prototype=QAbstractAnimation * animationAt ( int index ) const
 $method=|QAbstractAnimation *|animationAt|int
 
-/*
-int animationCount () const
-*/
+$prototype=int animationCount () const
 $method=|int|animationCount|
 
-/*
-void clear ()
-*/
+$prototype=void clear ()
 $method=|void|clear|
 
-/*
-int indexOfAnimation ( QAbstractAnimation * animation ) const
-*/
+$prototype=int indexOfAnimation ( QAbstractAnimation * animation ) const
 $method=|int|indexOfAnimation|QAbstractAnimation *
 
-/*
-void insertAnimation ( int index, QAbstractAnimation * animation )
-*/
+$prototype=void insertAnimation ( int index, QAbstractAnimation * animation )
 $method=|void|insertAnimation|int,QAbstractAnimation *
 
-/*
-void removeAnimation ( QAbstractAnimation * animation )
-*/
+$prototype=void removeAnimation ( QAbstractAnimation * animation )
 $method=|void|removeAnimation|QAbstractAnimation *
 
-/*
-QAbstractAnimation * takeAnimation ( int index )
-*/
+$prototype=QAbstractAnimation * takeAnimation ( int index )
 $method=|QAbstractAnimation *|takeAnimation|int
 
 #pragma ENDDUMP

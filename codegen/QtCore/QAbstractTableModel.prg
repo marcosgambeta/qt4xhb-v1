@@ -28,14 +28,10 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
-*/
+$prototype=virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
 $virtualMethod=|bool|dropMimeData|const QMimeData *,Qt::DropAction,int,int,const QModelIndex &
 
-/*
-virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
-*/
+$prototype=virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 $virtualMethod=|QModelIndex|index|int,int,const QModelIndex &=QModelIndex()
 
 #pragma ENDDUMP

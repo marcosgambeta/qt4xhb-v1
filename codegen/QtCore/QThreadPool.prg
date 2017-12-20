@@ -36,66 +36,42 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QThreadPool ( QObject * parent = 0 )
-*/
+$prototype=QThreadPool ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-int activeThreadCount () const
-*/
+$prototype=int activeThreadCount () const
 $method=|int|activeThreadCount|
 
-/*
-int expiryTimeout () const
-*/
+$prototype=int expiryTimeout () const
 $method=|int|expiryTimeout|
 
-/*
-int maxThreadCount () const
-*/
+$prototype=int maxThreadCount () const
 $method=|int|maxThreadCount|
 
-/*
-void releaseThread ()
-*/
+$prototype=void releaseThread ()
 $method=|void|releaseThread|
 
-/*
-void reserveThread ()
-*/
+$prototype=void reserveThread ()
 $method=|void|reserveThread|
 
-/*
-void setExpiryTimeout ( int expiryTimeout )
-*/
+$prototype=void setExpiryTimeout ( int expiryTimeout )
 $method=|void|setExpiryTimeout|int
 
-/*
-void setMaxThreadCount ( int maxThreadCount )
-*/
+$prototype=void setMaxThreadCount ( int maxThreadCount )
 $method=|void|setMaxThreadCount|int
 
-/*
-void start ( QRunnable * runnable, int priority = 0 )
-*/
+$prototype=void start ( QRunnable * runnable, int priority = 0 )
 $method=|void|start|QRunnable *,int=0
 
-/*
-bool tryStart ( QRunnable * runnable )
-*/
+$prototype=bool tryStart ( QRunnable * runnable )
 $method=|bool|tryStart|QRunnable *
 
-/*
-void waitForDone ()
-*/
+$prototype=void waitForDone ()
 $internalMethod=|void|waitForDone,waitForDone1|
 
-/*
-bool waitForDone ( int msecs )
-*/
+$prototype=bool waitForDone ( int msecs )
 $internalMethod=|bool|waitForDone,waitForDone2|int
 
 //[1]void waitForDone ()
@@ -117,9 +93,7 @@ HB_FUNC_STATIC( QTHREADPOOL_WAITFORDONE )
   }
 }
 
-/*
-static QThreadPool * globalInstance ()
-*/
+$prototype=static QThreadPool * globalInstance ()
 $staticMethod=|QThreadPool *|globalInstance|
 
 #pragma ENDDUMP

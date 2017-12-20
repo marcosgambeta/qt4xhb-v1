@@ -43,44 +43,28 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual QFileInfo currentFileInfo () const
-*/
+$prototype=virtual QFileInfo currentFileInfo () const
 $virtualMethod=|QFileInfo|currentFileInfo|
 
-/*
-virtual QString currentFileName () const = 0
-*/
+$prototype=virtual QString currentFileName () const = 0
 $virtualMethod=|QString|currentFileName|
 
-/*
-QString currentFilePath () const
-*/
+$prototype=QString currentFilePath () const
 $method=|QString|currentFilePath|
 
-/*
-QDir::Filters filters () const
-*/
+$prototype=QDir::Filters filters () const
 $method=|QDir::Filters|filters|
 
-/*
-virtual bool hasNext () const = 0
-*/
+$prototype=virtual bool hasNext () const = 0
 $virtualMethod=|bool|hasNext|
 
-/*
-QStringList nameFilters () const
-*/
+$prototype=QStringList nameFilters () const
 $method=|QStringList|nameFilters|
 
-/*
-virtual QString next () = 0
-*/
+$prototype=virtual QString next () = 0
 $virtualMethod=|QString|next|
 
-/*
-QString path () const
-*/
+$prototype=QString path () const
 $method=|QString|path|
 
 $extraMethods

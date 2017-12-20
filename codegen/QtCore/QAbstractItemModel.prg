@@ -85,84 +85,52 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual QModelIndex buddy ( const QModelIndex & index ) const
-*/
+$prototype=virtual QModelIndex buddy ( const QModelIndex & index ) const
 $virtualMethod=|QModelIndex|buddy|const QModelIndex &
 
-/*
-virtual bool canFetchMore ( const QModelIndex & parent ) const
-*/
+$prototype=virtual bool canFetchMore ( const QModelIndex & parent ) const
 $virtualMethod=|bool|canFetchMore|const QModelIndex &
 
-/*
-virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const = 0
-*/
+$prototype=virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const = 0
 $virtualMethod=|int|columnCount|const QModelIndex &=QModelIndex()
 
-/*
-virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const = 0
-*/
+$prototype=virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const = 0
 $virtualMethod=|QVariant|data|const QModelIndex &,int=Qt::DisplayRole
 
-/*
-virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
-*/
+$prototype=virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
 $virtualMethod=|bool|dropMimeData|const QMimeData *,Qt::DropAction,int,int,const QModelIndex &
 
-/*
-virtual void fetchMore ( const QModelIndex & parent )
-*/
+$prototype=virtual void fetchMore ( const QModelIndex & parent )
 $virtualMethod=|void|fetchMore|const QModelIndex &
 
-/*
-virtual Qt::ItemFlags flags ( const QModelIndex & index ) const
-*/
+$prototype=virtual Qt::ItemFlags flags ( const QModelIndex & index ) const
 $virtualMethod=|Qt::ItemFlags|flags|const QModelIndex &
 
-/*
-virtual bool hasChildren ( const QModelIndex & parent = QModelIndex() ) const
-*/
+$prototype=virtual bool hasChildren ( const QModelIndex & parent = QModelIndex() ) const
 $virtualMethod=|bool|hasChildren|const QModelIndex &=QModelIndex()
 
-/*
-bool hasIndex ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
-*/
+$prototype=bool hasIndex ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 $method=|bool|hasIndex|int,int,const QModelIndex &=QModelIndex()
 
-/*
-virtual QVariant headerData ( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
-*/
+$prototype=virtual QVariant headerData ( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
 $virtualMethod=|QVariant|headerData|int,Qt::Orientation,int=Qt::DisplayRole
 
-/*
-virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const = 0
-*/
+$prototype=virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const = 0
 $virtualMethod=|QModelIndex|index|int,int,const QModelIndex &=QModelIndex()
 
-/*
-bool insertColumn ( int column, const QModelIndex & parent = QModelIndex() )
-*/
+$prototype=bool insertColumn ( int column, const QModelIndex & parent = QModelIndex() )
 $method=|bool|insertColumn|int,const QModelIndex &=QModelIndex()
 
-/*
-virtual bool insertColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
-*/
+$prototype=virtual bool insertColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
 $virtualMethod=|bool|insertColumns|int,int,const QModelIndex &=QModelIndex()
 
-/*
-bool insertRow ( int row, const QModelIndex & parent = QModelIndex() )
-*/
+$prototype=bool insertRow ( int row, const QModelIndex & parent = QModelIndex() )
 $method=|bool|insertRow|int,const QModelIndex &=QModelIndex()
 
-/*
-virtual bool insertRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
-*/
+$prototype=virtual bool insertRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
 $virtualMethod=|bool|insertRows|int,int,const QModelIndex &=QModelIndex()
 
-/*
-virtual QModelIndexList match ( const QModelIndex & start, int role, const QVariant & value, int hits = 1, Qt::MatchFlags flags = Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) const
-*/
+$prototype=virtual QModelIndexList match ( const QModelIndex & start, int role, const QVariant & value, int hits = 1, Qt::MatchFlags flags = Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) const
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_MATCH )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -198,94 +166,58 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_MATCH )
   }
 }
 
-/*
-virtual QMimeData * mimeData ( const QModelIndexList & indexes ) const
-*/
+$prototype=virtual QMimeData * mimeData ( const QModelIndexList & indexes ) const
 $virtualMethod=|QMimeData *|mimeData|const QModelIndexList &
 
-/*
-virtual QStringList mimeTypes () const
-*/
+$prototype=virtual QStringList mimeTypes () const
 $virtualMethod=|QStringList|mimeTypes|
 
-/*
-virtual QModelIndex parent ( const QModelIndex & index ) const = 0
-*/
+$prototype=virtual QModelIndex parent ( const QModelIndex & index ) const = 0
 $virtualMethod=|QModelIndex|parent|const QModelIndex &
 
-/*
-bool removeColumn ( int column, const QModelIndex & parent = QModelIndex() )
-*/
+$prototype=bool removeColumn ( int column, const QModelIndex & parent = QModelIndex() )
 $method=|bool|removeColumn|int,const QModelIndex &=QModelIndex()
 
-/*
-virtual bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
-*/
+$prototype=virtual bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
 $virtualMethod=|bool|removeColumns|int,int,const QModelIndex &=QModelIndex()
 
-/*
-bool removeRow ( int row, const QModelIndex & parent = QModelIndex() )
-*/
+$prototype=bool removeRow ( int row, const QModelIndex & parent = QModelIndex() )
 $method=|bool|removeRow|int,const QModelIndex &=QModelIndex()
 
-/*
-virtual bool removeRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
-*/
+$prototype=virtual bool removeRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
 $virtualMethod=|bool|removeRows|int,int,const QModelIndex &=QModelIndex()
 
-/*
-virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const = 0
-*/
+$prototype=virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const = 0
 $virtualMethod=|int|rowCount|const QModelIndex &=QModelIndex()
 
-/*
-virtual bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
-*/
+$prototype=virtual bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 $virtualMethod=|bool|setData|const QModelIndex &,const QVariant &,int=Qt::EditRole
 
-/*
-virtual bool setHeaderData ( int section, Qt::Orientation orientation, const QVariant & value, int role = Qt::EditRole )
-*/
+$prototype=virtual bool setHeaderData ( int section, Qt::Orientation orientation, const QVariant & value, int role = Qt::EditRole )
 $virtualMethod=|bool|setHeaderData|int,Qt::Orientation,const QVariant &,int=Qt::EditRole
 
-/*
-void setSupportedDragActions ( Qt::DropActions actions )
-*/
+$prototype=void setSupportedDragActions ( Qt::DropActions actions )
 $method=|void|setSupportedDragActions|Qt::DropActions
 
-/*
-QModelIndex sibling ( int row, int column, const QModelIndex & index ) const
-*/
+$prototype=QModelIndex sibling ( int row, int column, const QModelIndex & index ) const
 $method=|QModelIndex|sibling|int,int,const QModelIndex &
 
-/*
-virtual void sort ( int column, Qt::SortOrder order = Qt::AscendingOrder )
-*/
+$prototype=virtual void sort ( int column, Qt::SortOrder order = Qt::AscendingOrder )
 $virtualMethod=|void|sort|int,Qt::SortOrder=Qt::AscendingOrder
 
-/*
-virtual QSize span ( const QModelIndex & index ) const
-*/
+$prototype=virtual QSize span ( const QModelIndex & index ) const
 $virtualMethod=|QSize|span|const QModelIndex &
 
-/*
-Qt::DropActions supportedDragActions () const
-*/
+$prototype=Qt::DropActions supportedDragActions () const
 $method=|Qt::DropActions|supportedDragActions|
 
-/*
-virtual Qt::DropActions supportedDropActions () const
-*/
+$prototype=virtual Qt::DropActions supportedDropActions () const
 $virtualMethod=|Qt::DropActions|supportedDropActions|
 
-/*
-virtual void revert ()
-*/
+$prototype=virtual void revert ()
 $virtualMethod=|void|revert|
 
-/*
-virtual bool submit ()
-*/
+$prototype=virtual bool submit ()
 $virtualMethod=|bool|submit|
 
 #pragma ENDDUMP

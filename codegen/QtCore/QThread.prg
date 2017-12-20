@@ -42,81 +42,51 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QThread(QObject * parent = 0)
-*/
+$prototype=QThread(QObject * parent = 0)
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-void exit(int returnCode = 0)
-*/
+$prototype=void exit(int returnCode = 0)
 $method=|void|exit|int=0
 
-/*
-bool isFinished() const
-*/
+$prototype=bool isFinished() const
 $method=|bool|isFinished|
 
-/*
-bool isRunning() const
-*/
+$prototype=bool isRunning() const
 $method=|bool|isRunning|
 
-/*
-Priority priority() const
-*/
+$prototype=Priority priority() const
 $method=|QThread::Priority|priority|
 
-/*
-void setPriority(Priority priority)
-*/
+$prototype=void setPriority(Priority priority)
 $method=|void|setPriority|QThread::Priority
 
-/*
-void setStackSize(uint stackSize)
-*/
+$prototype=void setStackSize(uint stackSize)
 $method=|void|setStackSize|uint
 
-/*
-uint stackSize() const
-*/
+$prototype=uint stackSize() const
 $method=|uint|stackSize|
 
-/*
-virtual bool event(QEvent * event)
-*/
+$prototype=virtual bool event(QEvent * event)
 $virtualMethod=|bool|event|QEvent *
 
-/*
-void quit()
-*/
+$prototype=void quit()
 $method=|void|quit|
 
-/*
-void start(Priority priority = InheritPriority)
-*/
+$prototype=void start(Priority priority = InheritPriority)
 $method=|void|start|QThread::Priority=QThread::InheritPriority
 
-/*
-void terminate()
-*/
+$prototype=void terminate()
 $method=|void|terminate|
 
-/*
-static QThread * currentThread()
-*/
+$prototype=static QThread * currentThread()
 $staticMethod=|QThread *|currentThread|
 
-/*
-static int idealThreadCount()
-*/
+$prototype=static int idealThreadCount()
 $staticMethod=|int|idealThreadCount|
 
-/*
-void yieldCurrentThread()
-*/
+$prototype=void yieldCurrentThread()
 $method=|void|yieldCurrentThread|
 
 #pragma ENDDUMP

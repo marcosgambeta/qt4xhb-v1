@@ -36,41 +36,27 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QSystemSemaphore ( const QString & key, int initialValue = 0, AccessMode mode = Open )
-*/
+$prototype=QSystemSemaphore ( const QString & key, int initialValue = 0, AccessMode mode = Open )
 $constructor=|new|const QString &,int=0,QSystemSemaphore::AccessMode=QSystemSemaphore::Open
 
 $deleteMethod
 
-/*
-bool acquire ()
-*/
+$prototype=bool acquire ()
 $method=|bool|acquire|
 
-/*
-SystemSemaphoreError error () const
-*/
+$prototype=SystemSemaphoreError error () const
 $method=|QSystemSemaphore::SystemSemaphoreError|error|
 
-/*
-QString errorString () const
-*/
+$prototype=QString errorString () const
 $method=|QString|errorString|
 
-/*
-QString key () const
-*/
+$prototype=QString key () const
 $method=|QString|key|
 
-/*
-bool release ( int n = 1 )
-*/
+$prototype=bool release ( int n = 1 )
 $method=|bool|release|int=1
 
-/*
-void setKey ( const QString & key, int initialValue = 0, AccessMode mode = Open )
-*/
+$prototype=void setKey ( const QString & key, int initialValue = 0, AccessMode mode = Open )
 $method=|void|setKey|const QString &,int=0,QSystemSemaphore::AccessMode=QSystemSemaphore::Open
 
 $extraMethods

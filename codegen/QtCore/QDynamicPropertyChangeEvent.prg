@@ -26,16 +26,12 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QDynamicPropertyChangeEvent ( const QByteArray & name )
-*/
+$prototype=QDynamicPropertyChangeEvent ( const QByteArray & name )
 $constructor=|new1|const QByteArray &
 
 $deleteMethod
 
-/*
-QByteArray propertyName () const
-*/
+$prototype=QByteArray propertyName () const
 $method=|QByteArray|propertyName|
 
 #pragma ENDDUMP

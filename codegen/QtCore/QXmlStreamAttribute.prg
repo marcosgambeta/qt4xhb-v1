@@ -40,24 +40,16 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QXmlStreamAttribute()
-*/
+$prototype=QXmlStreamAttribute()
 $internalConstructor=|new1|
 
-/*
-QXmlStreamAttribute(const QString & qualifiedName, const QString & value)
-*/
+$prototype=QXmlStreamAttribute(const QString & qualifiedName, const QString & value)
 $internalConstructor=|new2|const QString &,const QString &
 
-/*
-QXmlStreamAttribute(const QString & namespaceUri, const QString & name, const QString & value)
-*/
+$prototype=QXmlStreamAttribute(const QString & namespaceUri, const QString & name, const QString & value)
 $internalConstructor=|new3|const QString &,const QString &,const QString &
 
-/*
-QXmlStreamAttribute(const QXmlStreamAttribute & other)
-*/
+$prototype=QXmlStreamAttribute(const QXmlStreamAttribute & other)
 $internalConstructor=|new4|const QXmlStreamAttribute &
 
 //[1]QXmlStreamAttribute()
@@ -91,34 +83,22 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW )
 
 $deleteMethod
 
-/*
-bool isDefault() const
-*/
+$prototype=bool isDefault() const
 $method=|bool|isDefault|
 
-/*
-QStringRef name() const
-*/
+$prototype=QStringRef name() const
 $method=|QStringRef|name|
 
-/*
-QStringRef namespaceUri() const
-*/
+$prototype=QStringRef namespaceUri() const
 $method=|QStringRef|namespaceUri|
 
-/*
-QStringRef prefix() const
-*/
+$prototype=QStringRef prefix() const
 $method=|QStringRef|prefix|
 
-/*
-QStringRef qualifiedName() const
-*/
+$prototype=QStringRef qualifiedName() const
 $method=|QStringRef|qualifiedName|
 
-/*
-QStringRef value() const
-*/
+$prototype=QStringRef value() const
 $method=|QStringRef|value|
 
 $extraMethods

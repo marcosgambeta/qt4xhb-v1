@@ -50,19 +50,13 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QFile ( const QString & name )
-*/
+$prototype=QFile ( const QString & name )
 $internalConstructor=|new1|const QString &
 
-/*
-QFile ( QObject * parent )
-*/
+$prototype=QFile ( QObject * parent )
 $internalConstructor=|new2|QObject *
 
-/*
-QFile ( const QString & name, QObject * parent )
-*/
+$prototype=QFile ( const QString & name, QObject * parent )
 $internalConstructor=|new3|const QString &,QObject *
 
 //[1]QFile ( const QString & name )
@@ -91,83 +85,51 @@ HB_FUNC_STATIC( QFILE_NEW )
 
 $deleteMethod
 
-/*
-FileError error () const
-*/
+$prototype=FileError error () const
 $method=|QFile::FileError|error|
 
-/*
-QString fileName () const
-*/
+$prototype=QString fileName () const
 $method=|QString|fileName|
 
-/*
-bool flush ()
-*/
+$prototype=bool flush ()
 $method=|bool|flush|
 
-/*
-int handle () const
-*/
+$prototype=int handle () const
 $method=|int|handle|
 
-/*
-void setFileName ( const QString & name )
-*/
+$prototype=void setFileName ( const QString & name )
 $method=|void|setFileName|const QString &
 
-/*
-bool unmap ( uchar * address )
-*/
+$prototype=bool unmap ( uchar * address )
 $method=|bool|unmap|uchar *
 
-/*
-void unsetError ()
-*/
+$prototype=void unsetError ()
 $method=|void|unsetError|
 
-/*
-virtual bool atEnd () const
-*/
+$prototype=virtual bool atEnd () const
 $virtualMethod=|bool|atEnd|
 
-/*
-virtual void close ()
-*/
+$prototype=virtual void close ()
 $virtualMethod=|void|close|
 
-/*
-virtual bool isSequential () const
-*/
+$prototype=virtual bool isSequential () const
 $virtualMethod=|bool|isSequential|
 
-/*
-bool open ( FILE * fh, OpenMode mode )
-*/
+$prototype=bool open ( FILE * fh, OpenMode mode )
 $internalMethod=|bool|open,open1|FILE *,QIODevice::OpenMode
 
-/*
-bool open ( FILE * fh, OpenMode mode, FileHandleFlags handleFlags )
-*/
+$prototype=bool open ( FILE * fh, OpenMode mode, FileHandleFlags handleFlags )
 $internalMethod=|bool|open,open2|FILE *,QIODevice::OpenMode,QFile::FileHandleFlags
 
-/*
-bool open ( int fd, OpenMode mode )
-*/
+$prototype=bool open ( int fd, OpenMode mode )
 $internalMethod=|bool|open,open3|int,QIODevice::OpenMode
 
-/*
-bool open ( int fd, OpenMode mode, FileHandleFlags handleFlags )
-*/
+$prototype=bool open ( int fd, OpenMode mode, FileHandleFlags handleFlags )
 $internalMethod=|bool|open,open4|int,QIODevice::OpenMode,QFile::FileHandleFlags
 
-/*
-bool open ( const RFile & f, OpenMode mode, FileHandleFlags handleFlags = DontCloseHandle )
-*/
+$prototype=bool open ( const RFile & f, OpenMode mode, FileHandleFlags handleFlags = DontCloseHandle )
 
-/*
-virtual bool open ( OpenMode mode )
-*/
+$prototype=virtual bool open ( OpenMode mode )
 $internalVirtualMethod=|bool|open,open6|QIODevice::OpenMode
 
 //[1]bool open ( FILE * fh, OpenMode mode )
@@ -206,29 +168,19 @@ HB_FUNC_STATIC( QFILE_OPEN )
   }
 }
 
-/*
-virtual qint64 pos () const
-*/
+$prototype=virtual qint64 pos () const
 $virtualMethod=|qint64|pos|
 
-/*
-virtual bool seek ( qint64 pos )
-*/
+$prototype=virtual bool seek ( qint64 pos )
 $virtualMethod=|bool|seek|qint64
 
-/*
-virtual qint64 size () const
-*/
+$prototype=virtual qint64 size () const
 $virtualMethod=|qint64|size|
 
-/*
-bool copy ( const QString & newName )
-*/
+$prototype=bool copy ( const QString & newName )
 $internalMethod=|bool|copy,copy1|const QString &
 
-/*
-static bool copy ( const QString & fileName, const QString & newName )
-*/
+$prototype=static bool copy ( const QString & fileName, const QString & newName )
 $internalStaticMethod=|bool|copy,copy2|const QString &,const QString &
 
 //[1]bool copy ( const QString & newName )
@@ -250,14 +202,10 @@ HB_FUNC_STATIC( QFILE_COPY )
   }
 }
 
-/*
-static QString decodeName ( const QByteArray & localFileName )
-*/
+$prototype=static QString decodeName ( const QByteArray & localFileName )
 $internalStaticMethod=|QString|decodeName,decodeName1|const QByteArray &
 
-/*
-static QString decodeName ( const char * localFileName )
-*/
+$prototype=static QString decodeName ( const char * localFileName )
 $internalStaticMethod=|QString|decodeName,decodeName2|const char *
 
 //[1]QString decodeName ( const QByteArray & localFileName )
@@ -279,19 +227,13 @@ HB_FUNC_STATIC( QFILE_DECODENAME )
   }
 }
 
-/*
-static QByteArray encodeName ( const QString & fileName )
-*/
+$prototype=static QByteArray encodeName ( const QString & fileName )
 $staticMethod=|QByteArray|encodeName|const QString &
 
-/*
-bool exists () const
-*/
+$prototype=bool exists () const
 $internalMethod=|bool|exists,exists1|
 
-/*
-static bool exists ( const QString & fileName )
-*/
+$prototype=static bool exists ( const QString & fileName )
 $internalStaticMethod=|bool|exists,exists2|const QString &
 
 //[1]bool exists () const
@@ -313,14 +255,10 @@ HB_FUNC_STATIC( QFILE_EXISTS )
   }
 }
 
-/*
-bool link ( const QString & linkName )
-*/
+$prototype=bool link ( const QString & linkName )
 $internalMethod=|bool|link,link1|const QString &
 
-/*
-static bool link ( const QString & fileName, const QString & linkName )
-*/
+$prototype=static bool link ( const QString & fileName, const QString & linkName )
 $internalStaticMethod=|bool|link,link2|const QString &,const QString &
 
 //[1]bool link ( const QString & linkName )
@@ -342,14 +280,10 @@ HB_FUNC_STATIC( QFILE_LINK )
   }
 }
 
-/*
-Permissions permissions () const
-*/
+$prototype=Permissions permissions () const
 $internalMethod=|QFile::Permissions|permissions,permissions1|
 
-/*
-static Permissions permissions ( const QString & fileName )
-*/
+$prototype=static Permissions permissions ( const QString & fileName )
 $internalStaticMethod=|QFile::Permissions|permissions,permissions2|const QString &
 
 //[1]Permissions permissions () const
@@ -371,14 +305,10 @@ HB_FUNC_STATIC( QFILE_PERMISSIONS )
   }
 }
 
-/*
-bool remove ()
-*/
+$prototype=bool remove ()
 $internalMethod=|bool|remove,remove1|
 
-/*
-static bool remove ( const QString & fileName )
-*/
+$prototype=static bool remove ( const QString & fileName )
 $internalStaticMethod=|bool|remove,remove2|const QString &
 
 //[1]bool remove ()
@@ -400,14 +330,10 @@ HB_FUNC_STATIC( QFILE_REMOVE )
   }
 }
 
-/*
-bool rename ( const QString & newName )
-*/
+$prototype=bool rename ( const QString & newName )
 $internalMethod=|bool|rename,rename1|const QString &
 
-/*
-static bool rename ( const QString & oldName, const QString & newName )
-*/
+$prototype=static bool rename ( const QString & oldName, const QString & newName )
 $internalStaticMethod=|bool|rename,rename2|const QString &,const QString &
 
 //[1]bool rename ( const QString & newName )
@@ -429,14 +355,10 @@ HB_FUNC_STATIC( QFILE_RENAME )
   }
 }
 
-/*
-bool resize ( qint64 sz )
-*/
+$prototype=bool resize ( qint64 sz )
 $internalMethod=|bool|resize,resize1|qint64
 
-/*
-static bool resize ( const QString & fileName, qint64 sz )
-*/
+$prototype=static bool resize ( const QString & fileName, qint64 sz )
 $internalStaticMethod=|bool|resize,resize2|const QString &,qint64
 
 //[1]bool resize ( qint64 sz )
@@ -458,14 +380,10 @@ HB_FUNC_STATIC( QFILE_RESIZE )
   }
 }
 
-/*
-bool setPermissions ( Permissions permissions )
-*/
+$prototype=bool setPermissions ( Permissions permissions )
 $internalMethod=|bool|setPermissions,setPermissions1|QFile::Permissions
 
-/*
-static bool setPermissions ( const QString & fileName, Permissions permissions )
-*/
+$prototype=static bool setPermissions ( const QString & fileName, Permissions permissions )
 $internalStaticMethod=|bool|setPermissions,setPermissions2|const QString &,QFile::Permissions
 
 //[1]bool setPermissions ( Permissions permissions )
@@ -487,14 +405,10 @@ HB_FUNC_STATIC( QFILE_SETPERMISSIONS )
   }
 }
 
-/*
-QString symLinkTarget () const
-*/
+$prototype=QString symLinkTarget () const
 $internalMethod=|QString|symLinkTarget,symLinkTarget1|
 
-/*
-static QString symLinkTarget ( const QString & fileName )
-*/
+$prototype=static QString symLinkTarget ( const QString & fileName )
 $internalStaticMethod=|QString|symLinkTarget,symLinkTarget2|const QString &
 
 //[1]QString symLinkTarget () const

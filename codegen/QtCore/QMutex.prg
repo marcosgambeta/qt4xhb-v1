@@ -33,26 +33,18 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QMutex ( RecursionMode mode = NonRecursive )
-*/
+$prototype=QMutex ( RecursionMode mode = NonRecursive )
 $constructor=|new|QMutex::RecursionMode=QMutex::NonRecursive
 
 $deleteMethod
 
-/*
-void lock ()
-*/
+$prototype=void lock ()
 $method=|void|lock|
 
-/*
-bool tryLock ()
-*/
+$prototype=bool tryLock ()
 $internalMethod=|bool|tryLock,tryLock1|
 
-/*
-bool tryLock ( int timeout )
-*/
+$prototype=bool tryLock ( int timeout )
 $internalMethod=|bool|tryLock,tryLock2|int
 
 //[1]bool tryLock ()
@@ -74,9 +66,7 @@ HB_FUNC_STATIC( QMUTEX_TRYLOCK )
   }
 }
 
-/*
-void unlock ()
-*/
+$prototype=void unlock ()
 $method=|void|unlock|
 
 $extraMethods

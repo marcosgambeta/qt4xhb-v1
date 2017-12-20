@@ -35,14 +35,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QSharedMemory(QObject *parent = 0)
-*/
+$prototype=QSharedMemory(QObject *parent = 0)
 $internalConstructor=|new1|QObject *=0
 
-/*
-QSharedMemory(const QString &key, QObject *parent = 0)
-*/
+$prototype=QSharedMemory(const QString &key, QObject *parent = 0)
 $internalConstructor=|new2|const QString &,QObject *=0
 
 //[1]QSharedMemory(QObject *parent = 0)
@@ -66,74 +62,46 @@ HB_FUNC_STATIC( QSHAREDMEMORY_NEW )
 
 $deleteMethod
 
-/*
-void setKey(const QString &key)
-*/
+$prototype=void setKey(const QString &key)
 $method=|void|setKey|const QString &
 
-/*
-QString key() const
-*/
+$prototype=QString key() const
 $method=|QString|key|
 
-/*
-void setNativeKey(const QString &key)
-*/
+$prototype=void setNativeKey(const QString &key)
 $method=|void|setNativeKey|const QString &
 
-/*
-QString nativeKey() const
-*/
+$prototype=QString nativeKey() const
 $method=|QString|nativeKey|
 
-/*
-bool create(int size, AccessMode mode = ReadWrite)
-*/
+$prototype=bool create(int size, AccessMode mode = ReadWrite)
 $method=|bool|create|int,QSharedMemory::AccessMode=QSharedMemory::ReadWrite
 
-/*
-int size() const
-*/
+$prototype=int size() const
 $method=|int|size|
 
-/*
-bool attach(AccessMode mode = ReadWrite)
-*/
+$prototype=bool attach(AccessMode mode = ReadWrite)
 $method=|bool|attach|QSharedMemory::AccessMode=QSharedMemory::ReadWrite
 
-/*
-bool isAttached() const
-*/
+$prototype=bool isAttached() const
 $method=|bool|isAttached|
 
-/*
-bool detach()
-*/
+$prototype=bool detach()
 $method=|bool|detach|
 
-/*
-void *data()
-*/
+$prototype=void *data()
 $method=|void *|data|
 
-/*
-bool lock()
-*/
+$prototype=bool lock()
 $method=|bool|lock|
 
-/*
-bool unlock()
-*/
+$prototype=bool unlock()
 $method=|bool|unlock|
 
-/*
-SharedMemoryError error() const
-*/
+$prototype=SharedMemoryError error() const
 $method=|QSharedMemory::SharedMemoryError|error|
 
-/*
-QString errorString() const
-*/
+$prototype=QString errorString() const
 $method=|QString|errorString|
 
 #pragma ENDDUMP

@@ -22,16 +22,12 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QTimerEvent(int timerId)
-*/
+$prototype=QTimerEvent(int timerId)
 $constructor=|new|int
 
 $deleteMethod
 
-/*
-int timerId() const
-*/
+$prototype=int timerId() const
 $method=|int|timerId|
 
 #pragma ENDDUMP

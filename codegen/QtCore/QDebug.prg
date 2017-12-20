@@ -37,24 +37,16 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QDebug ( QIODevice * device )
-*/
+$prototype=QDebug ( QIODevice * device )
 $internalConstructor=|new1|QIODevice *
 
-/*
-QDebug ( QString * string )
-*/
+$prototype=QDebug ( QString * string )
 $internalConstructor=|new2|QString *
 
-/*
-QDebug ( QtMsgType type )
-*/
+$prototype=QDebug ( QtMsgType type )
 $internalConstructor=|new3|QtMsgType
 
-/*
-QDebug ( const QDebug & other )
-*/
+$prototype=QDebug ( const QDebug & other )
 $internalConstructor=|new4|const QDebug &
 
 //[1]QDebug ( QIODevice * device )
@@ -88,19 +80,13 @@ HB_FUNC_STATIC( QDEBUG_NEW )
 
 $deleteMethod
 
-/*
-QDebug & maybeSpace ()
-*/
+$prototype=QDebug & maybeSpace ()
 $method=|QDebug &|maybeSpace|
 
-/*
-QDebug & nospace ()
-*/
+$prototype=QDebug & nospace ()
 $method=|QDebug &|nospace|
 
-/*
-QDebug & space ()
-*/
+$prototype=QDebug & space ()
 $method=|QDebug &|space|
 
 $extraMethods

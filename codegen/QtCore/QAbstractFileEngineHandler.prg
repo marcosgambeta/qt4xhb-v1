@@ -36,9 +36,7 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual QAbstractFileEngine * create ( const QString & fileName ) const = 0
-*/
+$prototype=virtual QAbstractFileEngine * create ( const QString & fileName ) const = 0
 $virtualMethod=|QAbstractFileEngine *|create|const QString &
 
 $extraMethods

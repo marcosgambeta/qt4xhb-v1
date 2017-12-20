@@ -32,9 +32,7 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual QString resolveUndeclaredEntity(const QString & name)
-*/
+$prototype=virtual QString resolveUndeclaredEntity(const QString & name)
 $virtualMethod=|QString|resolveUndeclaredEntity|const QString &
 
 $extraMethods

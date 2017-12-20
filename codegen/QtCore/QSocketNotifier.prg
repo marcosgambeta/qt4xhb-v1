@@ -27,31 +27,21 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QSocketNotifier(int socket, Type, QObject *parent = 0)
-*/
+$prototype=QSocketNotifier(int socket, Type, QObject *parent = 0)
 $constructor=|new|int,QSocketNotifier::Type,QObject *=0
 
 $deleteMethod
 
-/*
-int socket() const
-*/
+$prototype=int socket() const
 $method=|int|socket|
 
-/*
-Type type() const
-*/
+$prototype=Type type() const
 $method=|QSocketNotifier::Type|type|
 
-/*
-bool isEnabled() const
-*/
+$prototype=bool isEnabled() const
 $method=|bool|isEnabled|
 
-/*
-void setEnabled(bool)
-*/
+$prototype=void setEnabled(bool)
 $method=|void|setEnabled|bool
 
 #pragma ENDDUMP

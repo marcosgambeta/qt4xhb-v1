@@ -37,26 +37,18 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QReadLocker ( QReadWriteLock * lock )
-*/
+$prototype=QReadLocker ( QReadWriteLock * lock )
 $constructor=|new|QReadWriteLock *
 
 $deleteMethod
 
-/*
-QReadWriteLock * readWriteLock () const
-*/
+$prototype=QReadWriteLock * readWriteLock () const
 $method=|QReadWriteLock *|readWriteLock|
 
-/*
-void relock ()
-*/
+$prototype=void relock ()
 $method=|void|relock|
 
-/*
-void unlock ()
-*/
+$prototype=void unlock ()
 $method=|void|unlock|
 
 $extraMethods

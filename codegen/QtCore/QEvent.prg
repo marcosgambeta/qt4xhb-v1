@@ -37,46 +37,30 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QEvent ( Type type )
-*/
+$prototype=QEvent ( Type type )
 $constructor=|new|QEvent::Type
 
 $deleteMethod
 
-/*
-void accept ()
-*/
+$prototype=void accept ()
 $method=|void|accept|
 
-/*
-void ignore ()
-*/
+$prototype=void ignore ()
 $method=|void|ignore|
 
-/*
-bool isAccepted () const
-*/
+$prototype=bool isAccepted () const
 $method=|bool|isAccepted|
 
-/*
-void setAccepted ( bool accepted )
-*/
+$prototype=void setAccepted ( bool accepted )
 $method=|void|setAccepted|bool
 
-/*
-bool spontaneous () const
-*/
+$prototype=bool spontaneous () const
 $method=|bool|spontaneous|
 
-/*
-Type type () const
-*/
+$prototype=Type type () const
 $method=|QEvent::Type|type|
 
-/*
-static int registerEventType ( int hint = -1 )
-*/
+$prototype=static int registerEventType ( int hint = -1 )
 $staticMethod=|int|registerEventType|int=-1
 
 $extraMethods

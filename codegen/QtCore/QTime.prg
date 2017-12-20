@@ -51,14 +51,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QTime()
-*/
+$prototype=QTime()
 $internalConstructor=|new1|
 
-/*
-QTime(int h, int m, int s = 0, int ms = 0)
-*/
+$prototype=QTime(int h, int m, int s = 0, int ms = 0)
 $internalConstructor=|new2|int,int,int=0,int=0
 
 //[1]QTime()
@@ -82,79 +78,49 @@ HB_FUNC_STATIC( QTIME_NEW )
 
 $deleteMethod
 
-/*
-QTime addMSecs(int ms) const
-*/
+$prototype=QTime addMSecs(int ms) const
 $method=|QTime|addMSecs|int
 
-/*
-QTime addSecs(int s) const
-*/
+$prototype=QTime addSecs(int s) const
 $method=|QTime|addSecs|int
 
-/*
-int elapsed() const
-*/
+$prototype=int elapsed() const
 $method=|int|elapsed|
 
-/*
-int hour() const
-*/
+$prototype=int hour() const
 $method=|int|hour|
 
-/*
-bool isNull() const
-*/
+$prototype=bool isNull() const
 $method=|bool|isNull|
 
-/*
-int minute() const
-*/
+$prototype=int minute() const
 $method=|int|minute|
 
-/*
-int msec() const
-*/
+$prototype=int msec() const
 $method=|int|msec|
 
-/*
-int msecsTo(const QTime & t) const
-*/
+$prototype=int msecsTo(const QTime & t) const
 $method=|int|msecsTo|const QTime &
 
-/*
-int restart()
-*/
+$prototype=int restart()
 $method=|int|restart|
 
-/*
-int second() const
-*/
+$prototype=int second() const
 $method=|int|second|
 
-/*
-int secsTo(const QTime & t) const
-*/
+$prototype=int secsTo(const QTime & t) const
 $method=|int|secsTo|const QTime &
 
-/*
-bool setHMS(int h, int m, int s, int ms = 0)
-*/
+$prototype=bool setHMS(int h, int m, int s, int ms = 0)
 $method=|bool|setHMS|int,int,int,int=0
 
-/*
-void start()
-*/
+$prototype=void start()
 $method=|void|start|
 
-/*
-QString toString(const QString & format) const
-*/
+$prototype=QString toString(const QString & format) const
 $internalMethod=|QString|toString,toString1|const QString &
 
-/*
-QString toString(Qt::DateFormat format = Qt::TextDate) const
-*/
+$prototype=QString toString(Qt::DateFormat format = Qt::TextDate) const
 $internalMethod=|QString|toString,toString2|Qt::DateFormat=Qt::TextDate
 
 //[1]QString toString(const QString & format) const
@@ -176,19 +142,13 @@ HB_FUNC_STATIC( QTIME_TOSTRING )
   }
 }
 
-/*
-static QTime currentTime()
-*/
+$prototype=static QTime currentTime()
 $staticMethod=|QTime|currentTime|
 
-/*
-static QTime fromString(const QString & string, Qt::DateFormat format = Qt::TextDate)
-*/
+$prototype=static QTime fromString(const QString & string, Qt::DateFormat format = Qt::TextDate)
 $internalStaticMethod=|QTime|fromString,fromString1|const QString &,Qt::DateFormat=Qt::TextDate
 
-/*
-QTime fromString(const QString & string, const QString & format)
-*/
+$prototype=QTime fromString(const QString & string, const QString & format)
 $internalMethod=|QTime|fromString,fromString2|const QString &,const QString &
 
 //[1]QTime fromString(const QString & string, Qt::DateFormat format = Qt::TextDate)
@@ -210,14 +170,10 @@ HB_FUNC_STATIC( QTIME_FROMSTRING )
   }
 }
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $internalMethod=|bool|isValid,isValid1|
 
-/*
-static bool isValid(int h, int m, int s, int ms = 0)
-*/
+$prototype=static bool isValid(int h, int m, int s, int ms = 0)
 $internalStaticMethod=|bool|isValid,isValid2|int,int,int,int=0
 
 //[1]bool isValid() const

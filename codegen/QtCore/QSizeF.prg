@@ -47,19 +47,13 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QSizeF ()
-*/
+$prototype=QSizeF ()
 $internalConstructor=|new1|
 
-/*
-QSizeF ( const QSize & size )
-*/
+$prototype=QSizeF ( const QSize & size )
 $internalConstructor=|new2|const QSize &
 
-/*
-QSizeF ( qreal width, qreal height )
-*/
+$prototype=QSizeF ( qreal width, qreal height )
 $internalConstructor=|new3|qreal,qreal
 
 //[1]QSizeF ()
@@ -88,44 +82,28 @@ HB_FUNC_STATIC( QSIZEF_NEW )
 
 $deleteMethod
 
-/*
-QSizeF boundedTo ( const QSizeF & otherSize ) const
-*/
+$prototype=QSizeF boundedTo ( const QSizeF & otherSize ) const
 $method=|QSizeF|boundedTo|const QSizeF &
 
-/*
-QSizeF expandedTo ( const QSizeF & otherSize ) const
-*/
+$prototype=QSizeF expandedTo ( const QSizeF & otherSize ) const
 $method=|QSizeF|expandedTo|const QSizeF &
 
-/*
-qreal height () const
-*/
+$prototype=qreal height () const
 $method=|qreal|height|
 
-/*
-bool isEmpty () const
-*/
+$prototype=bool isEmpty () const
 $method=|bool|isEmpty|
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-void scale ( qreal width, qreal height, Qt::AspectRatioMode mode )
-*/
+$prototype=void scale ( qreal width, qreal height, Qt::AspectRatioMode mode )
 $internalMethod=|void|scale,scale1|qreal,qreal,Qt::AspectRatioMode
 
-/*
-void scale ( const QSizeF & size, Qt::AspectRatioMode mode )
-*/
+$prototype=void scale ( const QSizeF & size, Qt::AspectRatioMode mode )
 $internalMethod=|void|scale,scale2|const QSizeF &,Qt::AspectRatioMode
 
 //[1]void scale ( qreal width, qreal height, Qt::AspectRatioMode mode )
@@ -147,29 +125,19 @@ HB_FUNC_STATIC( QSIZEF_SCALE )
   }
 }
 
-/*
-void setHeight ( qreal height )
-*/
+$prototype=void setHeight ( qreal height )
 $method=|void|setHeight|qreal
 
-/*
-void setWidth ( qreal width )
-*/
+$prototype=void setWidth ( qreal width )
 $method=|void|setWidth|qreal
 
-/*
-QSize toSize () const
-*/
+$prototype=QSize toSize () const
 $method=|QSize|toSize|
 
-/*
-void transpose ()
-*/
+$prototype=void transpose ()
 $method=|void|transpose|
 
-/*
-qreal width () const
-*/
+$prototype=qreal width () const
 $method=|qreal|width|
 
 $extraMethods

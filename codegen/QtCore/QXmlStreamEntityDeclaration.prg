@@ -39,14 +39,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QXmlStreamEntityDeclaration()
-*/
+$prototype=QXmlStreamEntityDeclaration()
 $internalConstructor=|new1|
 
-/*
-QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & other)
-*/
+$prototype=QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & other)
 $internalConstructor=|new2|const QXmlStreamEntityDeclaration &
 
 //[1]QXmlStreamEntityDeclaration()
@@ -70,29 +66,19 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEW )
 
 $deleteMethod
 
-/*
-QStringRef name() const
-*/
+$prototype=QStringRef name() const
 $method=|QStringRef|name|
 
-/*
-QStringRef notationName() const
-*/
+$prototype=QStringRef notationName() const
 $method=|QStringRef|notationName|
 
-/*
-QStringRef publicId() const
-*/
+$prototype=QStringRef publicId() const
 $method=|QStringRef|publicId|
 
-/*
-QStringRef systemId() const
-*/
+$prototype=QStringRef systemId() const
 $method=|QStringRef|systemId|
 
-/*
-QStringRef value() const
-*/
+$prototype=QStringRef value() const
 $method=|QStringRef|value|
 
 $extraMethods

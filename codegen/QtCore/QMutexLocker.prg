@@ -37,26 +37,18 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QMutexLocker ( QMutex * mutex )
-*/
+$prototype=QMutexLocker ( QMutex * mutex )
 $constructor=|new|QMutex *
 
 $deleteMethod
 
-/*
-QMutex * mutex () const
-*/
+$prototype=QMutex * mutex () const
 $method=|QMutex *|mutex|
 
-/*
-void relock ()
-*/
+$prototype=void relock ()
 $method=|void|relock|
 
-/*
-void unlock ()
-*/
+$prototype=void unlock ()
 $method=|void|unlock|
 
 $extraMethods

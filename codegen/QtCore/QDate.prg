@@ -60,14 +60,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QDate ()
-*/
+$prototype=QDate ()
 $internalConstructor=|new1|
 
-/*
-QDate ( int y, int m, int d )
-*/
+$prototype=QDate ( int y, int m, int d )
 $internalConstructor=|new2|int,int,int
 
 //[1]QDate ()
@@ -91,84 +87,52 @@ HB_FUNC_STATIC( QDATE_NEW )
 
 $deleteMethod
 
-/*
-QDate addDays ( int ndays ) const
-*/
+$prototype=QDate addDays ( int ndays ) const
 $method=|QDate|addDays|int
 
-/*
-QDate addMonths ( int nmonths ) const
-*/
+$prototype=QDate addMonths ( int nmonths ) const
 $method=|QDate|addMonths|int
 
-/*
-QDate addYears ( int nyears ) const
-*/
+$prototype=QDate addYears ( int nyears ) const
 $method=|QDate|addYears|int
 
-/*
-int day () const
-*/
+$prototype=int day () const
 $method=|int|day|
 
-/*
-int dayOfWeek () const
-*/
+$prototype=int dayOfWeek () const
 $method=|int|dayOfWeek|
 
-/*
-int dayOfYear () const
-*/
+$prototype=int dayOfYear () const
 $method=|int|dayOfYear|
 
-/*
-int daysInMonth () const
-*/
+$prototype=int daysInMonth () const
 $method=|int|daysInMonth|
 
-/*
-int daysInYear () const
-*/
+$prototype=int daysInYear () const
 $method=|int|daysInYear|
 
-/*
-int daysTo ( const QDate & d ) const
-*/
+$prototype=int daysTo ( const QDate & d ) const
 $method=|int|daysTo|const QDate &
 
-/*
-void getDate ( int * year, int * month, int * day )
-*/
+$prototype=void getDate ( int * year, int * month, int * day )
 $method=|void|getDate|int *,int *,int *
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-int month () const
-*/
+$prototype=int month () const
 $method=|int|month|
 
-/*
-bool setDate ( int year, int month, int day )
-*/
+$prototype=bool setDate ( int year, int month, int day )
 $method=|bool|setDate|int,int,int
 
-/*
-int toJulianDay () const
-*/
+$prototype=int toJulianDay () const
 $method=|int|toJulianDay|
 
-/*
-QString toString ( const QString & format ) const
-*/
+$prototype=QString toString ( const QString & format ) const
 $internalMethod=|QString|toString,toString1|const QString &
 
-/*
-QString toString ( Qt::DateFormat format = Qt::TextDate ) const
-*/
+$prototype=QString toString ( Qt::DateFormat format = Qt::TextDate ) const
 $internalMethod=|QString|toString,toString2|Qt::DateFormat=Qt::TextDate
 
 //[1]QString toString ( const QString & format ) const
@@ -190,34 +154,22 @@ HB_FUNC_STATIC( QDATE_TOSTRING )
   }
 }
 
-/*
-int weekNumber ( int * yearNumber = 0 ) const
-*/
+$prototype=int weekNumber ( int * yearNumber = 0 ) const
 $method=|int|weekNumber|int *=0
 
-/*
-int year () const
-*/
+$prototype=int year () const
 $method=|int|year|
 
-/*
-static QDate currentDate ()
-*/
+$prototype=static QDate currentDate ()
 $staticMethod=|QDate|currentDate|
 
-/*
-static QDate fromJulianDay ( int jd )
-*/
+$prototype=static QDate fromJulianDay ( int jd )
 $staticMethod=|QDate|fromJulianDay|int
 
-/*
-static QDate fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
-*/
+$prototype=static QDate fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
 $internalStaticMethod=|QDate|fromString,fromString1|const QString &,Qt::DateFormat=Qt::TextDate
 
-/*
-static QDate fromString ( const QString & string, const QString & format )
-*/
+$prototype=static QDate fromString ( const QString & string, const QString & format )
 $internalStaticMethod=|QDate|fromString,fromString2|const QString &,const QString &
 
 //[1]QDate fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
@@ -239,19 +191,13 @@ HB_FUNC_STATIC( QDATE_FROMSTRING )
   }
 }
 
-/*
-static bool isLeapYear ( int year )
-*/
+$prototype=static bool isLeapYear ( int year )
 $staticMethod=|bool|isLeapYear|int
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $internalMethod=|bool|isValid,isValid1|
 
-/*
-static bool isValid ( int year, int month, int day )
-*/
+$prototype=static bool isValid ( int year, int month, int day )
 $internalStaticMethod=|bool|isValid,isValid2|int,int,int
 
 //[1]bool isValid () const
@@ -273,14 +219,10 @@ HB_FUNC_STATIC( QDATE_ISVALID )
   }
 }
 
-/*
-static QString longDayName ( int weekday )
-*/
+$prototype=static QString longDayName ( int weekday )
 $internalStaticMethod=|QString|longDayName,longDayName1|int
 
-/*
-static QString longDayName ( int weekday, MonthNameType type )
-*/
+$prototype=static QString longDayName ( int weekday, MonthNameType type )
 $internalStaticMethod=|QString|longDayName,longDayName2|int,QDate::MonthNameType
 
 //[1]QString longDayName ( int weekday )
@@ -302,14 +244,10 @@ HB_FUNC_STATIC( QDATE_LONGDAYNAME )
   }
 }
 
-/*
-static QString longMonthName ( int month )
-*/
+$prototype=static QString longMonthName ( int month )
 $internalStaticMethod=|QString|longMonthName,longMonthName1|int
 
-/*
-static QString longMonthName ( int month, MonthNameType type )
-*/
+$prototype=static QString longMonthName ( int month, MonthNameType type )
 $internalStaticMethod=|QString|longMonthName,longMonthName2|int,QDate::MonthNameType
 
 //[1]QString longMonthName ( int month )
@@ -331,14 +269,10 @@ HB_FUNC_STATIC( QDATE_LONGMONTHNAME )
   }
 }
 
-/*
-static QString shortDayName ( int weekday )
-*/
+$prototype=static QString shortDayName ( int weekday )
 $internalStaticMethod=|QString|shortDayName,shortDayName1|int
 
-/*
-static QString shortDayName ( int weekday, MonthNameType type )
-*/
+$prototype=static QString shortDayName ( int weekday, MonthNameType type )
 $internalStaticMethod=|QString|shortDayName,shortDayName2|int,QDate::MonthNameType
 
 //[1]QString shortDayName ( int weekday )
@@ -360,14 +294,10 @@ HB_FUNC_STATIC( QDATE_SHORTDAYNAME )
   }
 }
 
-/*
-static QString shortMonthName ( int month )
-*/
+$prototype=static QString shortMonthName ( int month )
 $internalStaticMethod=|QString|shortMonthName,shortMonthName1|int
 
-/*
-static QString shortMonthName ( int month, MonthNameType type )
-*/
+$prototype=static QString shortMonthName ( int month, MonthNameType type )
 $internalStaticMethod=|QString|shortMonthName,shortMonthName2|int,QDate::MonthNameType
 
 //[1]QString shortMonthName ( int month )

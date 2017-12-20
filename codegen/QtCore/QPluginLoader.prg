@@ -34,14 +34,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QPluginLoader ( QObject * parent = 0 )
-*/
+$prototype=QPluginLoader ( QObject * parent = 0 )
 $internalConstructor=|new1|QObject *=0
 
-/*
-QPluginLoader ( const QString & fileName, QObject * parent = 0 )
-*/
+$prototype=QPluginLoader ( const QString & fileName, QObject * parent = 0 )
 $internalConstructor=|new2|const QString &,QObject *=0
 
 //[1]QPluginLoader ( QObject * parent = 0 )
@@ -65,49 +61,31 @@ HB_FUNC_STATIC( QPLUGINLOADER_NEW )
 
 $deleteMethod
 
-/*
-QString errorString () const
-*/
+$prototype=QString errorString () const
 $method=|QString|errorString|
 
-/*
-QString fileName () const
-*/
+$prototype=QString fileName () const
 $method=|QString|fileName|
 
-/*
-QObject * instance ()
-*/
+$prototype=QObject * instance ()
 $method=|QObject *|instance|
 
-/*
-bool isLoaded () const
-*/
+$prototype=bool isLoaded () const
 $method=|bool|isLoaded|
 
-/*
-bool load ()
-*/
+$prototype=bool load ()
 $method=|bool|load|
 
-/*
-QLibrary::LoadHints loadHints () const
-*/
+$prototype=QLibrary::LoadHints loadHints () const
 $method=|QLibrary::LoadHints|loadHints|
 
-/*
-void setFileName ( const QString & fileName )
-*/
+$prototype=void setFileName ( const QString & fileName )
 $method=|void|setFileName|const QString &
 
-/*
-void setLoadHints ( QLibrary::LoadHints loadHints )
-*/
+$prototype=void setLoadHints ( QLibrary::LoadHints loadHints )
 $method=|void|setLoadHints|QLibrary::LoadHints
 
-/*
-bool unload ()
-*/
+$prototype=bool unload ()
 $method=|bool|unload|
 
 #pragma ENDDUMP

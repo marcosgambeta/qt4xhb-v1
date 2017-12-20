@@ -36,19 +36,13 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QSystemLocale ()
-*/
+$prototype=QSystemLocale ()
 $constructor=|new|
 
-/*
-virtual QLocale fallbackLocale () const
-*/
+$prototype=virtual QLocale fallbackLocale () const
 $virtualMethod=|QLocale|fallbackLocale|
 
-/*
-virtual QVariant query ( QueryType type, QVariant in ) const
-*/
+$prototype=virtual QVariant query ( QueryType type, QVariant in ) const
 $virtualMethod=|QVariant|query|QSystemLocale::QueryType,QVariant
 
 $extraMethods

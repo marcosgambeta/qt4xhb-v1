@@ -35,14 +35,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QReadWriteLock ()
-*/
+$prototype=QReadWriteLock ()
 $internalConstructor=|new1|
 
-/*
-QReadWriteLock ( RecursionMode recursionMode )
-*/
+$prototype=QReadWriteLock ( RecursionMode recursionMode )
 $internalConstructor=|new2|QReadWriteLock::RecursionMode
 
 //[1]QReadWriteLock ()
@@ -66,24 +62,16 @@ HB_FUNC_STATIC( QREADWRITELOCK_NEW )
 
 $deleteMethod
 
-/*
-void lockForRead ()
-*/
+$prototype=void lockForRead ()
 $method=|void|lockForRead|
 
-/*
-void lockForWrite ()
-*/
+$prototype=void lockForWrite ()
 $method=|void|lockForWrite|
 
-/*
-bool tryLockForRead ()
-*/
+$prototype=bool tryLockForRead ()
 $internalMethod=|bool|tryLockForRead,tryLockForRead1|
 
-/*
-bool tryLockForRead ( int timeout )
-*/
+$prototype=bool tryLockForRead ( int timeout )
 $internalMethod=|bool|tryLockForRead,tryLockForRead2|int
 
 //[1]bool tryLockForRead ()
@@ -105,14 +93,10 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORREAD )
   }
 }
 
-/*
-bool tryLockForWrite ()
-*/
+$prototype=bool tryLockForWrite ()
 $internalMethod=|bool|tryLockForWrite,tryLockForWrite1|
 
-/*
-bool tryLockForWrite ( int timeout )
-*/
+$prototype=bool tryLockForWrite ( int timeout )
 $internalMethod=|bool|tryLockForWrite,tryLockForWrite2|int
 
 //[1]bool tryLockForWrite ()
@@ -134,9 +118,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORWRITE )
   }
 }
 
-/*
-void unlock ()
-*/
+$prototype=void unlock ()
 $method=|void|unlock|
 
 $extraMethods

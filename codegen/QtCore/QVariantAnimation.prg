@@ -39,54 +39,34 @@ $destructor
 
 $deleteMethod
 
-/*
-QVariant currentValue () const
-*/
+$prototype=QVariant currentValue () const
 $method=|QVariant|currentValue|
 
-/*
-QEasingCurve easingCurve () const
-*/
+$prototype=QEasingCurve easingCurve () const
 $method=|QEasingCurve|easingCurve|
 
-/*
-QVariant endValue () const
-*/
+$prototype=QVariant endValue () const
 $method=|QVariant|endValue|
 
-/*
-QVariant keyValueAt ( qreal step ) const
-*/
+$prototype=QVariant keyValueAt ( qreal step ) const
 $method=|QVariant|keyValueAt|qreal
 
-/*
-void setDuration ( int msecs )
-*/
+$prototype=void setDuration ( int msecs )
 $method=|void|setDuration|int
 
-/*
-void setEasingCurve ( const QEasingCurve & easing )
-*/
+$prototype=void setEasingCurve ( const QEasingCurve & easing )
 $method=|void|setEasingCurve|const QEasingCurve &
 
-/*
-void setEndValue ( const QVariant & value )
-*/
+$prototype=void setEndValue ( const QVariant & value )
 $method=|void|setEndValue|const QVariant &
 
-/*
-void setKeyValueAt ( qreal step, const QVariant & value )
-*/
+$prototype=void setKeyValueAt ( qreal step, const QVariant & value )
 $method=|void|setKeyValueAt|qreal,const QVariant &
 
-/*
-void setStartValue ( const QVariant & value )
-*/
+$prototype=void setStartValue ( const QVariant & value )
 $method=|void|setStartValue|const QVariant &
 
-/*
-QVariant startValue () const
-*/
+$prototype=QVariant startValue () const
 $method=|QVariant|startValue|
 
 #pragma ENDDUMP

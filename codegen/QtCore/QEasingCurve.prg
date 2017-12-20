@@ -38,14 +38,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QEasingCurve ( Type type = Linear )
-*/
+$prototype=QEasingCurve ( Type type = Linear )
 $internalConstructor=|new1|QEasingCurve::Type=QEasingCurve::Linear )
 
-/*
-QEasingCurve ( const QEasingCurve & other )
-*/
+$prototype=QEasingCurve ( const QEasingCurve & other )
 $internalConstructor=|new2|const QEasingCurve &
 
 //[1]QEasingCurve(Type type = Linear)
@@ -69,44 +65,28 @@ HB_FUNC_STATIC( QEASINGCURVE_NEW )
 
 $deleteMethod
 
-/*
-qreal amplitude () const
-*/
+$prototype=qreal amplitude () const
 $method=|qreal|amplitude|
 
-/*
-qreal overshoot () const
-*/
+$prototype=qreal overshoot () const
 $method=|qreal|overshoot|
 
-/*
-qreal period () const
-*/
+$prototype=qreal period () const
 $method=|qreal|period|
 
-/*
-void setAmplitude ( qreal amplitude )
-*/
+$prototype=void setAmplitude ( qreal amplitude )
 $method=|void|setAmplitude|qreal
 
-/*
-void setOvershoot ( qreal overshoot )
-*/
+$prototype=void setOvershoot ( qreal overshoot )
 $method=|void|setOvershoot|qreal
 
-/*
-void setPeriod ( qreal period )
-*/
+$prototype=void setPeriod ( qreal period )
 $method=|void|setPeriod|qreal
 
-/*
-void setType ( Type type )
-*/
+$prototype=void setType ( Type type )
 $method=|void|setType|QEasingCurve::Type
 
-/*
-Type type () const
-*/
+$prototype=Type type () const
 $method=|QEasingCurve::Type|type|
 
 $extraMethods

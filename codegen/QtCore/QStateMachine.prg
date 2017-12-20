@@ -47,36 +47,24 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QStateMachine ( QObject * parent = 0 )
-*/
+$prototype=QStateMachine ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-void addDefaultAnimation ( QAbstractAnimation * animation )
-*/
+$prototype=void addDefaultAnimation ( QAbstractAnimation * animation )
 $method=|void|addDefaultAnimation|QAbstractAnimation *
 
-/*
-void addState ( QAbstractState * state )
-*/
+$prototype=void addState ( QAbstractState * state )
 $method=|void|addState|QAbstractState *
 
-/*
-bool cancelDelayedEvent ( int id )
-*/
+$prototype=bool cancelDelayedEvent ( int id )
 $method=|bool|cancelDelayedEvent|int
 
-/*
-void clearError ()
-*/
+$prototype=void clearError ()
 $method=|void|clearError|
 
-/*
-QList<QAbstractAnimation *> defaultAnimations () const
-*/
+$prototype=QList<QAbstractAnimation *> defaultAnimations () const
 HB_FUNC_STATIC( QSTATEMACHINE_DEFAULTANIMATIONS )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -112,74 +100,46 @@ HB_FUNC_STATIC( QSTATEMACHINE_DEFAULTANIMATIONS )
   }
 }
 
-/*
-Error error () const
-*/
+$prototype=Error error () const
 $method=|QStateMachine::Error|error|
 
-/*
-QString errorString () const
-*/
+$prototype=QString errorString () const
 $method=|QString|errorString|
 
-/*
-QStateMachine::RestorePolicy globalRestorePolicy () const
-*/
+$prototype=QStateMachine::RestorePolicy globalRestorePolicy () const
 $method=|QStateMachine::RestorePolicy|globalRestorePolicy|
 
-/*
-bool isAnimated () const
-*/
+$prototype=bool isAnimated () const
 $method=|bool|isAnimated|
 
-/*
-bool isRunning () const
-*/
+$prototype=bool isRunning () const
 $method=|bool|isRunning|
 
-/*
-int postDelayedEvent ( QEvent * event, int delay )
-*/
+$prototype=int postDelayedEvent ( QEvent * event, int delay )
 $method=|int|postDelayedEvent|QEvent *,int
 
-/*
-void postEvent ( QEvent * event, EventPriority priority = NormalPriority )
-*/
+$prototype=void postEvent ( QEvent * event, EventPriority priority = NormalPriority )
 $method=|void|postEvent|QEvent *,QStateMachine::EventPriority=QStateMachine::NormalPriority
 
-/*
-void removeDefaultAnimation ( QAbstractAnimation * animation )
-*/
+$prototype=void removeDefaultAnimation ( QAbstractAnimation * animation )
 $method=|void|removeDefaultAnimation|QAbstractAnimation *
 
-/*
-void removeState ( QAbstractState * state )
-*/
+$prototype=void removeState ( QAbstractState * state )
 $method=|void|removeState|QAbstractState *
 
-/*
-void setAnimated ( bool enabled )
-*/
+$prototype=void setAnimated ( bool enabled )
 $method=|void|setAnimated|bool
 
-/*
-void setGlobalRestorePolicy ( QStateMachine::RestorePolicy restorePolicy )
-*/
+$prototype=void setGlobalRestorePolicy ( QStateMachine::RestorePolicy restorePolicy )
 $method=|void|setGlobalRestorePolicy|QStateMachine::RestorePolicy
 
-/*
-virtual bool eventFilter ( QObject * watched, QEvent * event )
-*/
+$prototype=virtual bool eventFilter ( QObject * watched, QEvent * event )
 $virtualMethod=|bool|eventFilter|QObject *,QEvent *
 
-/*
-void start ()
-*/
+$prototype=void start ()
 $method=|void|start|
 
-/*
-void stop ()
-*/
+$prototype=void stop ()
 $method=|void|stop|
 
 #pragma ENDDUMP

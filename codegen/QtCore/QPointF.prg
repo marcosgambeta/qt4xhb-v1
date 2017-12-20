@@ -41,19 +41,13 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QPointF()
-*/
+$prototype=QPointF()
 $internalConstructor=|new1|
 
-/*
-QPointF(const QPoint & point)
-*/
+$prototype=QPointF(const QPoint & point)
 $internalConstructor=|new2|const QPoint &
 
-/*
-QPointF(qreal xpos, qreal ypos)
-*/
+$prototype=QPointF(qreal xpos, qreal ypos)
 $internalConstructor=|new3|qreal,qreal
 
 //[1]QPointF()
@@ -82,39 +76,25 @@ HB_FUNC_STATIC( QPOINTF_NEW )
 
 $deleteMethod
 
-/*
-bool isNull() const
-*/
+$prototype=bool isNull() const
 $method=|bool|isNull|
 
-/*
-qreal manhattanLength() const
-*/
+$prototype=qreal manhattanLength() const
 $method=|qreal|manhattanLength|
 
-/*
-void setX(qreal x)
-*/
+$prototype=void setX(qreal x)
 $method=|void|setX|qreal
 
-/*
-void setY(qreal y)
-*/
+$prototype=void setY(qreal y)
 $method=|void|setY|qreal
 
-/*
-QPoint toPoint() const
-*/
+$prototype=QPoint toPoint() const
 $method=|QPoint|toPoint|
 
-/*
-qreal x() const
-*/
+$prototype=qreal x() const
 $method=|qreal|x|
 
-/*
-qreal y() const
-*/
+$prototype=qreal y() const
 $method=|qreal|y|
 
 $extraMethods

@@ -50,89 +50,55 @@ $destructor
 
 $deleteMethod
 
-/*
-int progressValue() const
-*/
+$prototype=int progressValue() const
 $method=|int|progressValue|
 
-/*
-int progressMinimum() const
-*/
+$prototype=int progressMinimum() const
 $method=|int|progressMinimum|
 
-/*
-int progressMaximum() const
-*/
+$prototype=int progressMaximum() const
 $method=|int|progressMaximum|
 
-/*
-QString progressText() const
-*/
+$prototype=QString progressText() const
 $method=|QString|progressText|
 
-/*
-bool isStarted() const
-*/
+$prototype=bool isStarted() const
 $method=|bool|isStarted|
 
-/*
-bool isFinished() const
-*/
+$prototype=bool isFinished() const
 $method=|bool|isFinished|
 
-/*
-bool isRunning() const
-*/
+$prototype=bool isRunning() const
 $method=|bool|isRunning|
 
-/*
-bool isCanceled() const
-*/
+$prototype=bool isCanceled() const
 $method=|bool|isCanceled|
 
-/*
-bool isPaused() const
-*/
+$prototype=bool isPaused() const
 $method=|bool|isPaused|
 
-/*
-void waitForFinished()
-*/
+$prototype=void waitForFinished()
 $method=|void|waitForFinished|
 
-/*
-void setPendingResultsLimit(int limit)
-*/
+$prototype=void setPendingResultsLimit(int limit)
 $method=|void|setPendingResultsLimit|int
 
-/*
-bool event(QEvent *event)
-*/
+$prototype=bool event(QEvent *event)
 $method=|bool|event|QEvent *
 
-/*
-void cancel()
-*/
+$prototype=void cancel()
 $method=|void|cancel|
 
-/*
-void setPaused(bool paused)
-*/
+$prototype=void setPaused(bool paused)
 $method=|void|setPaused|bool
 
-/*
-void pause()
-*/
+$prototype=void pause()
 $method=|void|pause|
 
-/*
-void resume()
-*/
+$prototype=void resume()
 $method=|void|resume|
 
-/*
-void togglePaused()
-*/
+$prototype=void togglePaused()
 $method=|void|togglePaused|
 
 #pragma ENDDUMP

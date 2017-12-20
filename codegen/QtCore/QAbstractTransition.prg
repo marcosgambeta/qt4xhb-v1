@@ -40,14 +40,10 @@ $destructor
 
 $deleteMethod
 
-/*
-void addAnimation ( QAbstractAnimation * animation )
-*/
+$prototype=void addAnimation ( QAbstractAnimation * animation )
 $method=|void|addAnimation|QAbstractAnimation *
 
-/*
-QList<QAbstractAnimation *> animations () const
-*/
+$prototype=QList<QAbstractAnimation *> animations () const
 HB_FUNC_STATIC( QABSTRACTTRANSITION_ANIMATIONS )
 {
   QAbstractTransition * obj = (QAbstractTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -83,24 +79,16 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_ANIMATIONS )
   }
 }
 
-/*
-QStateMachine * machine () const
-*/
+$prototype=QStateMachine * machine () const
 $method=|QStateMachine *|machine|
 
-/*
-void removeAnimation ( QAbstractAnimation * animation )
-*/
+$prototype=void removeAnimation ( QAbstractAnimation * animation )
 $method=|void|removeAnimation|QAbstractAnimation *
 
-/*
-void setTargetState ( QAbstractState * target )
-*/
+$prototype=void setTargetState ( QAbstractState * target )
 $method=|void|setTargetState|QAbstractState *
 
-/*
-void setTargetStates ( const QList<QAbstractState *> & targets )
-*/
+$prototype=void setTargetStates ( const QList<QAbstractState *> & targets )
 HB_FUNC_STATIC( QABSTRACTTRANSITION_SETTARGETSTATES )
 {
   QAbstractTransition * obj = (QAbstractTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -121,19 +109,13 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_SETTARGETSTATES )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-QState * sourceState () const
-*/
+$prototype=QState * sourceState () const
 $method=|QState *|sourceState|
 
-/*
-QAbstractState * targetState () const
-*/
+$prototype=QAbstractState * targetState () const
 $method=|QAbstractState *|targetState|
 
-/*
-QList<QAbstractState *> targetStates () const
-*/
+$prototype=QList<QAbstractState *> targetStates () const
 HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATES )
 {
   QAbstractTransition * obj = (QAbstractTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

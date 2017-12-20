@@ -32,21 +32,15 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QWaitCondition ()
-*/
+$prototype=QWaitCondition ()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-void wakeAll ()
-*/
+$prototype=void wakeAll ()
 $method=|void|wakeAll|
 
-/*
-void wakeOne ()
-*/
+$prototype=void wakeOne ()
 $method=|void|wakeOne|
 
 $extraMethods

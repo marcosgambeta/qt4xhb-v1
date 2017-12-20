@@ -29,14 +29,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QEventTransition(QState * sourceState = 0)
-*/
+$prototype=QEventTransition(QState * sourceState = 0)
 $internalConstructor=|new1|QState *=0
 
-/*
-QEventTransition(QObject * object, QEvent::Type type, QState * sourceState = 0)
-*/
+$prototype=QEventTransition(QObject * object, QEvent::Type type, QState * sourceState = 0)
 $internalConstructor=|new2|QObject *,QEvent::Type,QState *=0
 
 //[1]QEventTransition(QState * sourceState = 0)
@@ -60,24 +56,16 @@ HB_FUNC_STATIC( QEVENTTRANSITION_NEW )
 
 $deleteMethod
 
-/*
-QObject * eventSource() const
-*/
+$prototype=QObject * eventSource() const
 $method=|QObject *|eventSource|
 
-/*
-QEvent::Type eventType() const
-*/
+$prototype=QEvent::Type eventType() const
 $method=|QEvent::Type|eventType|
 
-/*
-void setEventSource(QObject * object)
-*/
+$prototype=void setEventSource(QObject * object)
 $method=|void|setEventSource|QObject *
 
-/*
-void setEventType(QEvent::Type type)
-*/
+$prototype=void setEventType(QEvent::Type type)
 $method=|void|setEventType|QEvent::Type
 
 #pragma ENDDUMP

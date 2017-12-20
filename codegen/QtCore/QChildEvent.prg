@@ -29,31 +29,21 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QChildEvent(Type type, QObject * child)
-*/
+$prototype=QChildEvent(Type type, QObject * child)
 $constructor=|new|QEvent::Type,QObject *
 
 $deleteMethod
 
-/*
-bool added() const
-*/
+$prototype=bool added() const
 $method=|bool|added|
 
-/*
-QObject * child() const
-*/
+$prototype=QObject * child() const
 $method=|QObject *|child|
 
-/*
-bool polished() const
-*/
+$prototype=bool polished() const
 $method=|bool|polished|
 
-/*
-bool removed() const
-*/
+$prototype=bool removed() const
 $method=|bool|removed|
 
 #pragma ENDDUMP

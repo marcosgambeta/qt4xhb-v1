@@ -32,14 +32,10 @@ $destructor
 
 #include <QStringList>
 
-/*
-QFileSystemWatcher(QObject * parent = 0)
-*/
+$prototype=QFileSystemWatcher(QObject * parent = 0)
 $internalConstructor=|new1|QObject *=0
 
-/*
-QFileSystemWatcher(const QStringList & paths, QObject * parent = 0)
-*/
+$prototype=QFileSystemWatcher(const QStringList & paths, QObject * parent = 0)
 $internalConstructor=|new2|const QStringList &,QObject *=0
 
 //[1]QFileSystemWatcher(QObject * parent = 0)
@@ -63,34 +59,22 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW )
 
 $deleteMethod
 
-/*
-void addPath ( const QString & path )
-*/
+$prototype=void addPath ( const QString & path )
 $method=|void|addPath|const QString &
 
-/*
-void addPaths ( const QStringList & paths )
-*/
+$prototype=void addPaths ( const QStringList & paths )
 $method=|void|addPaths|const QStringList &
 
-/*
-QStringList directories () const
-*/
+$prototype=QStringList directories () const
 $method=|QStringList|directories|
 
-/*
-QStringList files () const
-*/
+$prototype=QStringList files () const
 $method=|QStringList|files|
 
-/*
-void removePath ( const QString & path )
-*/
+$prototype=void removePath ( const QString & path )
 $method=|void|removePath|const QString &
 
-/*
-void removePaths ( const QStringList & paths )
-*/
+$prototype=void removePaths ( const QStringList & paths )
 $method=|void|removePaths|const QStringList &
 
 #pragma ENDDUMP

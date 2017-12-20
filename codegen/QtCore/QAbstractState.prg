@@ -32,14 +32,10 @@ $destructor
 
 $deleteMethod
 
-/*
-QStateMachine * machine () const
-*/
+$prototype=QStateMachine * machine () const
 $method=|QStateMachine *|machine|
 
-/*
-QState * parentState () const
-*/
+$prototype=QState * parentState () const
 $method=|QState *|parentState|
 
 #pragma ENDDUMP

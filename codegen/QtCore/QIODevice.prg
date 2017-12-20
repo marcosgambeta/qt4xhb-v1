@@ -78,84 +78,52 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual bool atEnd () const
-*/
+$prototype=virtual bool atEnd () const
 $virtualMethod=|bool|atEnd|
 
-/*
-virtual qint64 bytesAvailable () const
-*/
+$prototype=virtual qint64 bytesAvailable () const
 $virtualMethod=|qint64|bytesAvailable|
 
-/*
-virtual qint64 bytesToWrite () const
-*/
+$prototype=virtual qint64 bytesToWrite () const
 $virtualMethod=|qint64|bytesToWrite|
 
-/*
-virtual bool canReadLine () const
-*/
+$prototype=virtual bool canReadLine () const
 $virtualMethod=|bool|canReadLine|
 
-/*
-virtual void close ()
-*/
+$prototype=virtual void close ()
 $virtualMethod=|void|close|
 
-/*
-QString errorString () const
-*/
+$prototype=QString errorString () const
 $method=|QString|errorString|
 
-/*
-bool getChar ( char * c )
-*/
+$prototype=bool getChar ( char * c )
 $method=|bool|getChar|char *
 
-/*
-bool isOpen () const
-*/
+$prototype=bool isOpen () const
 $method=|bool|isOpen|
 
-/*
-bool isReadable () const
-*/
+$prototype=bool isReadable () const
 $method=|bool|isReadable|
 
-/*
-virtual bool isSequential () const
-*/
+$prototype=virtual bool isSequential () const
 $virtualMethod=|bool|isSequential|
 
-/*
-bool isTextModeEnabled () const
-*/
+$prototype=bool isTextModeEnabled () const
 $method=|bool|isTextModeEnabled|
 
-/*
-bool isWritable () const
-*/
+$prototype=bool isWritable () const
 $method=|bool|isWritable|
 
-/*
-virtual bool open ( OpenMode mode )
-*/
+$prototype=virtual bool open ( OpenMode mode )
 $virtualMethod=|bool|open|QIODevice::OpenMode
 
-/*
-OpenMode openMode () const
-*/
+$prototype=OpenMode openMode () const
 $method=|QIODevice::OpenMode|openMode|
 
-/*
-qint64 peek ( char * data, qint64 maxSize )
-*/
+$prototype=qint64 peek ( char * data, qint64 maxSize )
 $internalMethod=|qint64|peek,peek1|char *,qint64
 
-/*
-QByteArray peek ( qint64 maxSize )
-*/
+$prototype=QByteArray peek ( qint64 maxSize )
 $internalMethod=|QByteArray|peek,peek2|qint64
 
 //[1]qint64 peek ( char * data, qint64 maxSize )
@@ -177,24 +145,16 @@ HB_FUNC_STATIC( QIODEVICE_PEEK )
   }
 }
 
-/*
-virtual qint64 pos () const
-*/
+$prototype=virtual qint64 pos () const
 $virtualMethod=|qint64|pos|
 
-/*
-bool putChar ( char c )
-*/
+$prototype=bool putChar ( char c )
 $method=|bool|putChar|char
 
-/*
-qint64 read ( char * data, qint64 maxSize )
-*/
+$prototype=qint64 read ( char * data, qint64 maxSize )
 $internalMethod=|qint64|read,read1|char *,qint64
 
-/*
-QByteArray read ( qint64 maxSize )
-*/
+$prototype=QByteArray read ( qint64 maxSize )
 $internalMethod=|QByteArray|read,read2|qint64
 
 //[1]qint64 read ( char * data, qint64 maxSize )
@@ -216,19 +176,13 @@ HB_FUNC_STATIC( QIODEVICE_READ )
   }
 }
 
-/*
-QByteArray readAll ()
-*/
+$prototype=QByteArray readAll ()
 $method=|QByteArray|readAll|
 
-/*
-qint64 readLine ( char * data, qint64 maxSize )
-*/
+$prototype=qint64 readLine ( char * data, qint64 maxSize )
 $internalMethod=|qint64|readLine,readLine1|char *,qint64
 
-/*
-QByteArray readLine ( qint64 maxSize = 0 )
-*/
+$prototype=QByteArray readLine ( qint64 maxSize = 0 )
 $internalMethod=|QByteArray|readLine,readLine2|qint64=0
 
 //[1]qint64 readLine ( char * data, qint64 maxSize )
@@ -250,54 +204,34 @@ HB_FUNC_STATIC( QIODEVICE_READLINE )
   }
 }
 
-/*
-virtual bool reset ()
-*/
+$prototype=virtual bool reset ()
 $virtualMethod=|bool|reset|
 
-/*
-virtual bool seek ( qint64 pos )
-*/
+$prototype=virtual bool seek ( qint64 pos )
 $virtualMethod=|bool|seek|qint64
 
-/*
-void setTextModeEnabled ( bool enabled )
-*/
+$prototype=void setTextModeEnabled ( bool enabled )
 $method=|void|setTextModeEnabled|bool
 
-/*
-virtual qint64 size () const
-*/
+$prototype=virtual qint64 size () const
 $virtualMethod=|qint64|size|
 
-/*
-void ungetChar ( char c )
-*/
+$prototype=void ungetChar ( char c )
 $method=|void|ungetChar|char
 
-/*
-virtual bool waitForBytesWritten ( int msecs )
-*/
+$prototype=virtual bool waitForBytesWritten ( int msecs )
 $virtualMethod=|bool|waitForBytesWritten|int
 
-/*
-virtual bool waitForReadyRead ( int msecs )
-*/
+$prototype=virtual bool waitForReadyRead ( int msecs )
 $virtualMethod=|bool|waitForReadyRead|int
 
-/*
-qint64 write ( const char * data, qint64 maxSize )
-*/
+$prototype=qint64 write ( const char * data, qint64 maxSize )
 $internalMethod=|qint64|write,write1|const char *,qint64
 
-/*
-qint64 write ( const char * data )
-*/
+$prototype=qint64 write ( const char * data )
 $internalMethod=|qint64|write,write2|const char *
 
-/*
-qint64 write ( const QByteArray & byteArray )
-*/
+$prototype=qint64 write ( const QByteArray & byteArray )
 $internalMethod=|qint64|write,write3|const QByteArray &
 
 //[1]qint64 write ( const char * data, qint64 maxSize )

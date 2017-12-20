@@ -39,14 +39,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QMargins ()
-*/
+$prototype=QMargins ()
 $internalConstructor=|new1|
 
-/*
-QMargins ( int left, int top, int right, int bottom )
-*/
+$prototype=QMargins ( int left, int top, int right, int bottom )
 $internalConstructor=|new2|int,int,int,int
 
 //[1]QMargins ()
@@ -70,49 +66,31 @@ HB_FUNC_STATIC( QMARGINS_NEW )
 
 $deleteMethod
 
-/*
-int bottom () const
-*/
+$prototype=int bottom () const
 $method=|int|bottom|
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-int left () const
-*/
+$prototype=int left () const
 $method=|int|left|
 
-/*
-int right () const
-*/
+$prototype=int right () const
 $method=|int|right|
 
-/*
-void setBottom ( int bottom )
-*/
+$prototype=void setBottom ( int bottom )
 $method=|void|setBottom|int
 
-/*
-void setLeft ( int left )
-*/
+$prototype=void setLeft ( int left )
 $method=|void|setLeft|int
 
-/*
-void setRight ( int right )
-*/
+$prototype=void setRight ( int right )
 $method=|void|setRight|int
 
-/*
-void setTop ( int Top )
-*/
+$prototype=void setTop ( int Top )
 $method=|void|setTop|int
 
-/*
-int top () const
-*/
+$prototype=int top () const
 $method=|int|top|
 
 $extraMethods
