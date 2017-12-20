@@ -38,9 +38,7 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual QNetworkAccessManager * create ( QObject * parent ) = 0
-*/
+prototype=virtual QNetworkAccessManager * create ( QObject * parent ) = 0
 $virtualMethod=|QNetworkAccessManager *|create|QObject *
 
 $extraMethods

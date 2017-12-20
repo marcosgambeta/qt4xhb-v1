@@ -48,24 +48,16 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QDeclarativeComponent(QObject *parent = 0);
-*/
+$prototype=QDeclarativeComponent(QObject *parent = 0);
 $internalConstructor=|new1|QObject *=0
 
-/*
-QDeclarativeComponent(QDeclarativeEngine *, QObject *parent=0)
-*/
+$prototype=QDeclarativeComponent(QDeclarativeEngine *, QObject *parent=0)
 $internalConstructor=|new2|QDeclarativeEngine *,QObject *=0
 
-/*
-QDeclarativeComponent(QDeclarativeEngine *, const QString &fileName, QObject *parent = 0)
-*/
+$prototype=QDeclarativeComponent(QDeclarativeEngine *, const QString &fileName, QObject *parent = 0)
 $internalConstructor=|new3|QDeclarativeEngine *,const QString &,QObject *=0
 
-/*
-QDeclarativeComponent(QDeclarativeEngine *, const QUrl &url, QObject *parent = 0)
-*/
+$prototype=QDeclarativeComponent(QDeclarativeEngine *, const QUrl &url, QObject *parent = 0)
 $internalConstructor=|new4|QDeclarativeEngine *,const QUrl &,QObject *=0
 
 //[1]QDeclarativeComponent(QObject *parent = 0);
@@ -99,29 +91,19 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW )
 
 $deleteMethod
 
-/*
-virtual QObject * beginCreate ( QDeclarativeContext * context )
-*/
+$prototype=virtual QObject * beginCreate ( QDeclarativeContext * context )
 $virtualMethod=|QObject *|beginCreate|QDeclarativeContext *
 
-/*
-virtual void completeCreate ()
-*/
+$prototype=virtual void completeCreate ()
 $virtualMethod=|void|completeCreate|
 
-/*
-virtual QObject * create ( QDeclarativeContext * context = 0 )
-*/
+$prototype=virtual QObject * create ( QDeclarativeContext * context = 0 )
 $virtualMethod=|QObject *|create|QDeclarativeContext *=0
 
-/*
-QDeclarativeContext * creationContext () const
-*/
+$prototype=QDeclarativeContext * creationContext () const
 $method=|QDeclarativeContext *|creationContext|
 
-/*
-QList<QDeclarativeError> errors () const
-*/
+$prototype=QList<QDeclarativeError> errors () const
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORS )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -157,59 +139,37 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORS )
   }
 }
 
-/*
-bool isError () const
-*/
+$prototype=bool isError () const
 $method=|bool|isError|
 
-/*
-bool isLoading () const
-*/
+$prototype=bool isLoading () const
 $method=|bool|isLoading|
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-bool isReady () const
-*/
+$prototype=bool isReady () const
 $method=|bool|isReady|
 
-/*
-void loadUrl ( const QUrl & url )
-*/
+$prototype=void loadUrl ( const QUrl & url )
 $method=|void|loadUrl|const QUrl &
 
-/*
-qreal progress () const
-*/
+$prototype=qreal progress () const
 $method=|qreal|progress|
 
-/*
-void setData ( const QByteArray & data, const QUrl & url )
-*/
+$prototype=void setData ( const QByteArray & data, const QUrl & url )
 $method=|void|setData|const QByteArray &,const QUrl &
 
-/*
-Status status () const
-*/
+$prototype=Status status () const
 $method=|QDeclarativeComponent::Status|status|
 
-/*
-QUrl url () const
-*/
+$prototype=QUrl url () const
 $method=|QUrl|url|
 
-/*
-Q_INVOKABLE QString errorString() const
-*/
+$prototype=Q_INVOKABLE QString errorString() const
 $method=|QString|errorString|
 
-/*
-static QDeclarativeComponentAttached *qmlAttachedProperties(QObject *)
-*/
+$prototype=static QDeclarativeComponentAttached *qmlAttachedProperties(QObject *)
 $staticMethod=|QDeclarativeComponentAttached *|qmlAttachedProperties|QObject *
 
 #pragma ENDDUMP

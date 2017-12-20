@@ -38,26 +38,18 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QDeclarativeImageProvider ( ImageType type )
-*/
+$prototype=QDeclarativeImageProvider ( ImageType type )
 $constructor=|new|QDeclarativeImageProvider::ImageType
 
 $deleteMethod
 
-/*
-ImageType imageType () const
-*/
+$prototype=ImageType imageType () const
 $method=|QDeclarativeImageProvider::ImageType|imageType|
 
-/*
-virtual QImage requestImage ( const QString & id, QSize * size, const QSize & requestedSize )
-*/
+$prototype=virtual QImage requestImage ( const QString & id, QSize * size, const QSize & requestedSize )
 $virtualMethod=|QImage|requestImage|const QString &,QSize *,const QSize &
 
-/*
-virtual QPixmap requestPixmap ( const QString & id, QSize * size, const QSize & requestedSize )
-*/
+$prototype=virtual QPixmap requestPixmap ( const QString & id, QSize * size, const QSize & requestedSize )
 $virtualMethod=|QPixmap|requestPixmap|const QString &,QSize *,const QSize &
 
 $extraMethods
