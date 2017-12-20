@@ -47,19 +47,13 @@ $destructor
 
 #include <QStringList>
 
-/*
-QAxObject ( QObject * parent = 0 )
-*/
+$prototype=QAxObject ( QObject * parent = 0 )
 $internalConstructor=|new1|QObject *=0
 
-/*
-QAxObject ( const QString & c, QObject * parent = 0 )
-*/
+$prototype=QAxObject ( const QString & c, QObject * parent = 0 )
 $internalConstructor=|new2|const QString &,QObject *=0
 
-/*
-QAxObject ( IUnknown * iface, QObject * parent = 0 )
-*/
+$prototype=QAxObject ( IUnknown * iface, QObject * parent = 0 )
 $internalConstructor=|new3|IUnknown *,QObject *=0
 
 //[1]QAxObject ( QObject * parent = 0 )
@@ -88,52 +82,34 @@ HB_FUNC_STATIC( QAXOBJECT_NEW )
 
 $deleteMethod
 
-/*
-bool doVerb ( const QString & verb )
-*/
+$prototype=bool doVerb ( const QString & verb )
 $method=|bool|doVerb|const QString &
 
 // métodos da classe QAxBase, colocados aqui por causa
 // de problemas com herança no [x]Harbour
 
-/*
-QVariant asVariant () const
-*/
+$prototype=QVariant asVariant () const
 $method=|QVariant|asVariant|
 
-/*
-virtual void clear ()
-*/
+$prototype=virtual void clear ()
 $virtualMethod=|void|clear|
 
-/*
-QString control () const
-*/
+$prototype=QString control () const
 $method=|QString|control|
 
-/*
-void disableClassInfo ()
-*/
+$prototype=void disableClassInfo ()
 $method=|void|disableClassInfo|
 
-/*
-void disableEventSink ()
-*/
+$prototype=void disableEventSink ()
 $method=|void|disableEventSink|
 
-/*
-void disableMetaObject ()
-*/
+$prototype=void disableMetaObject ()
 $method=|void|disableMetaObject|
 
-/*
-QVariant dynamicCall ( const char * function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
-*/
+$prototype=QVariant dynamicCall ( const char * function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 $internalMethod=|QVariant|dynamicCall,dynamicCall1|const char *,const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant()
 
-/*
-QVariant dynamicCall ( const char * function, QList<QVariant> & vars )
-*/
+$prototype=QVariant dynamicCall ( const char * function, QList<QVariant> & vars )
 void QAxObject_dynamicCall2 ()
 {
   QAxObject * obj = (QAxObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -172,29 +148,19 @@ HB_FUNC_STATIC( QAXOBJECT_DYNAMICCALL )
   }
 }
 
-/*
-QString generateDocumentation ()
-*/
+$prototype=QString generateDocumentation ()
 $method=|QString|generateDocumentation|
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-virtual bool propertyWritable ( const char * prop ) const
-*/
+$prototype=virtual bool propertyWritable ( const char * prop ) const
 $virtualMethod=|bool|propertyWritable|const char *
 
-/*
-QAxObject * querySubObject ( const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
-*/
+$prototype=QAxObject * querySubObject ( const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 $internalMethod=|QAxObject *|querySubObject,querySubObject1|const char *,const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant()
 
-/*
-QAxObject * querySubObject ( const char * name, QList<QVariant> & vars )
-*/
+$prototype=QAxObject * querySubObject ( const char * name, QList<QVariant> & vars )
 void QAxObject_querySubObject2 ()
 {
   QAxObject * obj = (QAxObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -233,19 +199,13 @@ HB_FUNC_STATIC( QAXOBJECT_QUERYSUBOBJECT )
   }
 }
 
-/*
-bool setControl ( const QString & )
-*/
+$prototype=bool setControl ( const QString & )
 $method=|bool|setControl|const QString &
 
-/*
-virtual void setPropertyWritable ( const char * prop, bool ok )
-*/
+$prototype=virtual void setPropertyWritable ( const char * prop, bool ok )
 $virtualMethod=|void|setPropertyWritable|const char *,bool
 
-/*
-QStringList verbs () const
-*/
+$prototype=QStringList verbs () const
 $method=|QStringList|verbs|
 
 #pragma ENDDUMP

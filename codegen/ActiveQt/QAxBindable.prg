@@ -38,31 +38,21 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QAxBindable ()
-*/
+$prototype=QAxBindable ()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-virtual QAxAggregated * createAggregate ()
-*/
+$prototype=virtual QAxAggregated * createAggregate ()
 $virtualMethod=|QAxAggregated *|createAggregate|
 
-/*
-virtual bool readData ( QIODevice * source, const QString & format )
-*/
+$prototype=virtual bool readData ( QIODevice * source, const QString & format )
 $virtualMethod=|bool|readData|QIODevice *,const QString &
 
-/*
-void reportError ( int code, const QString & src, const QString & desc, const QString & context = QString() )
-*/
+$prototype=void reportError ( int code, const QString & src, const QString & desc, const QString & context = QString() )
 $method=|void|reportError|int,const QString &,const QString &,const QString &=QString()
 
-/*
-virtual bool writeData ( QIODevice * sink )
-*/
+$prototype=virtual bool writeData ( QIODevice * sink )
 $virtualMethod=|bool|writeData|QIODevice *
 
 $extraMethods

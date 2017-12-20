@@ -38,21 +38,15 @@ $destructor
 
 #include <QStringList>
 
-/*
-QAxScriptManager ( QObject * parent = 0 )
-*/
+$prototype=QAxScriptManager ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-void addObject ( QAxBase * object )
-*/
+$prototype=void addObject ( QAxBase * object )
 $internalMethod=|void|addObject,addObject1|QAxBase *
 
-/*
-void addObject ( QObject * object )
-*/
+$prototype=void addObject ( QObject * object )
 $internalMethod=|void|addObject,addObject2|QObject *
 
 //[1]void addObject ( QAxBase * object )
@@ -74,14 +68,10 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_ADDOBJECT )
   }
 }
 
-/*
-QVariant call ( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
-*/
+$prototype=QVariant call ( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 $internalMethod=|QVariant|call,call1|const QString &,const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant()
 
-/*
-QVariant call ( const QString & function, QList<QVariant> & arguments )
-*/
+$prototype=QVariant call ( const QString & function, QList<QVariant> & arguments )
 void QAxScriptManager_call2 ()
 {
   QAxScriptManager * obj = (QAxScriptManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -120,19 +110,13 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_CALL )
   }
 }
 
-/*
-QStringList functions ( QAxScript::FunctionFlags flags = QAxScript::FunctionNames ) const
-*/
+$prototype=QStringList functions ( QAxScript::FunctionFlags flags = QAxScript::FunctionNames ) const
 $method=|QStringList|functions|QAxScript::FunctionFlags=QAxScript::FunctionNames
 
-/*
-QAxScript * load ( const QString & code, const QString & name, const QString & language )
-*/
+$prototype=QAxScript * load ( const QString & code, const QString & name, const QString & language )
 $internalMethod=|QAxScript *|load,load1|const QString &,const QString &,const QString &
 
-/*
-QAxScript * load ( const QString & file, const QString & name )
-*/
+$prototype=QAxScript * load ( const QString & file, const QString & name )
 $internalMethod=|QAxScript *|load,load2|const QString &,const QString &
 
 //[1]QAxScript * load ( const QString & code, const QString & name, const QString & language )
@@ -154,24 +138,16 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_LOAD )
   }
 }
 
-/*
-QAxScript * script ( const QString & name ) const
-*/
+$prototype=QAxScript * script ( const QString & name ) const
 $method=|QAxScript *|script|const QString &
 
-/*
-QStringList scriptNames () const
-*/
+$prototype=QStringList scriptNames () const
 $method=|QStringList|scriptNames|
 
-/*
-static bool registerEngine ( const QString & name, const QString & extension, const QString & code = QString() )
-*/
+$prototype=static bool registerEngine ( const QString & name, const QString & extension, const QString & code = QString() )
 $staticMethod=|bool|registerEngine|const QString &,const QString &,const QString &=QString()
 
-/*
-static QString scriptFileFilter ()
-*/
+$prototype=static QString scriptFileFilter ()
 $staticMethod=|QString|scriptFileFilter|
 
 #pragma ENDDUMP
