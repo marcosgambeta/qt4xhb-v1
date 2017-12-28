@@ -46,9 +46,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QMdiSubWindow ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
-*/
+$prototype=QMdiSubWindow ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 HB_FUNC_STATIC( QMDISUBWINDOW_NEW )
 {
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
@@ -56,84 +54,52 @@ HB_FUNC_STATIC( QMDISUBWINDOW_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-/*
-bool isShaded () const
-*/
+$prototype=bool isShaded () const
 $method=|bool|isShaded|
 
-/*
-int keyboardPageStep () const
-*/
+$prototype=int keyboardPageStep () const
 $method=|int|keyboardPageStep|
 
-/*
-int keyboardSingleStep () const
-*/
+$prototype=int keyboardSingleStep () const
 $method=|int|keyboardSingleStep|
 
-/*
-QMdiArea * mdiArea () const
-*/
+$prototype=QMdiArea * mdiArea () const
 $method=|QMdiArea *|mdiArea|
 
-/*
-void setKeyboardPageStep ( int step )
-*/
+$prototype=void setKeyboardPageStep ( int step )
 $method=|void|setKeyboardPageStep|int
 
-/*
-void setKeyboardSingleStep ( int step )
-*/
+$prototype=void setKeyboardSingleStep ( int step )
 $method=|void|setKeyboardSingleStep|int
 
-/*
-void setOption ( SubWindowOption option, bool on = true )
-*/
+$prototype=void setOption ( SubWindowOption option, bool on = true )
 $method=|void|setOption|QMdiSubWindow::SubWindowOption,bool=true
 
-/*
-void setSystemMenu ( QMenu * systemMenu )
-*/
+$prototype=void setSystemMenu ( QMenu * systemMenu )
 $method=|void|setSystemMenu|QMenu *
 
-/*
-void setWidget ( QWidget * widget )
-*/
+$prototype=void setWidget ( QWidget * widget )
 $method=|void|setWidget|QWidget *
 
-/*
-QMenu * systemMenu () const
-*/
+$prototype=QMenu * systemMenu () const
 $method=|QMenu *|systemMenu|
 
-/*
-bool testOption ( SubWindowOption option ) const
-*/
+$prototype=bool testOption ( SubWindowOption option ) const
 $method=|bool|testOption|QMdiSubWindow::SubWindowOption
 
-/*
-QWidget * widget () const
-*/
+$prototype=QWidget * widget () const
 $method=|QWidget *|widget|
 
-/*
-virtual QSize minimumSizeHint () const
-*/
+$prototype=virtual QSize minimumSizeHint () const
 $virtualMethod=|QSize|minimumSizeHint|
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $virtualMethod=|QSize|sizeHint|
 
-/*
-void showShaded ()
-*/
+$prototype=void showShaded ()
 $method=|void|showShaded|
 
-/*
-void showSystemMenu ()
-*/
+$prototype=void showSystemMenu ()
 $method=|void|showSystemMenu|
 
 #pragma ENDDUMP

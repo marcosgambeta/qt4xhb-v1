@@ -41,9 +41,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QItemEditorFactory ()
-*/
+$prototype=QItemEditorFactory ()
 HB_FUNC_STATIC( QITEMEDITORFACTORY_NEW )
 {
   QItemEditorFactory * o = new QItemEditorFactory ();
@@ -52,29 +50,19 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_NEW )
 
 $deleteMethod
 
-/*
-virtual QWidget * createEditor ( QVariant::Type type, QWidget * parent ) const
-*/
+$prototype=virtual QWidget * createEditor ( QVariant::Type type, QWidget * parent ) const
 $virtualMethod=|QWidget *|createEditor|QVariant::Type,QWidget *
 
-/*
-void registerEditor ( QVariant::Type type, QItemEditorCreatorBase * creator )
-*/
+$prototype=void registerEditor ( QVariant::Type type, QItemEditorCreatorBase * creator )
 $method=|void|registerEditor|QVariant::Type,QItemEditorCreatorBase *
 
-/*
-virtual QByteArray valuePropertyName ( QVariant::Type type ) const
-*/
+$prototype=virtual QByteArray valuePropertyName ( QVariant::Type type ) const
 $virtualMethod=|QByteArray|valuePropertyName|QVariant::Type
 
-/*
-static const QItemEditorFactory * defaultFactory ()
-*/
+$prototype=static const QItemEditorFactory * defaultFactory ()
 $staticMethod=|const QItemEditorFactory *|defaultFactory|
 
-/*
-static void setDefaultFactory ( QItemEditorFactory * factory )
-*/
+$prototype=static void setDefaultFactory ( QItemEditorFactory * factory )
 $staticMethod=|void|setDefaultFactory|QItemEditorFactory *
 
 $extraMethods

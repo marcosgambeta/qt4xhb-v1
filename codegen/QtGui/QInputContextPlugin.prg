@@ -31,29 +31,19 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual QInputContext * create ( const QString & key ) = 0
-*/
+$prototype=virtual QInputContext * create ( const QString & key ) = 0
 $virtualMethod=|QInputContext *|create|const QString &
 
-/*
-virtual QString description ( const QString & key ) = 0
-*/
+$prototype=virtual QString description ( const QString & key ) = 0
 $virtualMethod=|QString|description|const QString &
 
-/*
-virtual QString displayName ( const QString & key ) = 0
-*/
+$prototype=virtual QString displayName ( const QString & key ) = 0
 $virtualMethod=|QString|displayName|const QString &
 
-/*
-virtual QStringList keys () const = 0
-*/
+$prototype=virtual QStringList keys () const = 0
 $virtualMethod=|QStringList|keys|
 
-/*
-virtual QStringList languages ( const QString & key ) = 0
-*/
+$prototype=virtual QStringList languages ( const QString & key ) = 0
 $virtualMethod=|QStringList|languages|const QString &
 
 #pragma ENDDUMP

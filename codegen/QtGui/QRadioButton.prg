@@ -26,18 +26,14 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QRadioButton ( QWidget * parent = 0 )
-*/
+$prototype=QRadioButton ( QWidget * parent = 0 )
 void QRadioButton_new1 ()
 {
   QRadioButton * o = new QRadioButton ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-/*
-QRadioButton ( const QString & text, QWidget * parent = 0 )
-*/
+$prototype=QRadioButton ( const QString & text, QWidget * parent = 0 )
 void QRadioButton_new2 ()
 {
   QRadioButton * o = new QRadioButton ( PQSTRING(1), OPQWIDGET(2,0) );
@@ -63,14 +59,10 @@ HB_FUNC_STATIC( QRADIOBUTTON_NEW )
   }
 }
 
-/*
-virtual QSize minimumSizeHint () const
-*/
+$prototype=virtual QSize minimumSizeHint () const
 $virtualMethod=|QSize|minimumSizeHint|
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $virtualMethod=|QSize|sizeHint|
 
 #pragma ENDDUMP

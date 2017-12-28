@@ -34,14 +34,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QStringListModel(QObject * parent = 0)
-*/
+$prototype=QStringListModel(QObject * parent = 0)
 $internalConstructor=|new1|QObject *=0
 
-/*
-QStringListModel(const QStringList & strings, QObject * parent = 0)
-*/
+$prototype=QStringListModel(const QStringList & strings, QObject * parent = 0)
 $internalConstructor=|new2|const QStringList &,QObject *=0
 
 //[1]QStringListModel(QObject * parent = 0)
@@ -63,54 +59,34 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_NEW )
   }
 }
 
-/*
-void setStringList(const QStringList & strings)
-*/
+$prototype=void setStringList(const QStringList & strings)
 $method=|void|setStringList|const QStringList &
 
-/*
-QStringList stringList() const
-*/
+$prototype=QStringList stringList() const
 $method=|QStringList|stringList|
 
-/*
-virtual QVariant data(const QModelIndex & index, int role) const
-*/
+$prototype=virtual QVariant data(const QModelIndex & index, int role) const
 $virtualMethod=|QVariant|data|const QModelIndex &,int
 
-/*
-virtual Qt::ItemFlags flags(const QModelIndex & index) const
-*/
+$prototype=virtual Qt::ItemFlags flags(const QModelIndex & index) const
 $virtualMethod=|Qt::ItemFlags|flags|const QModelIndex &
 
-/*
-virtual bool insertRows(int row, int count, const QModelIndex & parent = QModelIndex())
-*/
+$prototype=virtual bool insertRows(int row, int count, const QModelIndex & parent = QModelIndex())
 $virtualMethod=|bool|insertRows|int,int,const QModelIndex &=QModelIndex()
 
-/*
-virtual bool removeRows(int row, int count, const QModelIndex & parent = QModelIndex())
-*/
+$prototype=virtual bool removeRows(int row, int count, const QModelIndex & parent = QModelIndex())
 $virtualMethod=|bool|removeRows|int,int,const QModelIndex &=QModelIndex()
 
-/*
-virtual int rowCount(const QModelIndex & parent = QModelIndex()) const
-*/
+$prototype=virtual int rowCount(const QModelIndex & parent = QModelIndex()) const
 $virtualMethod=|int|rowCount|const QModelIndex &=QModelIndex()
 
-/*
-virtual bool setData(const QModelIndex & index, const QVariant & value, int role = Qt::EditRole)
-*/
+$prototype=virtual bool setData(const QModelIndex & index, const QVariant & value, int role = Qt::EditRole)
 $virtualMethod=|bool|setData|const QModelIndex &,const QVariant &,int=Qt::EditRole
 
-/*
-virtual void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
-*/
+$prototype=virtual void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
 $virtualMethod=|void|sort|int,Qt::SortOrder=Qt::AscendingOrder
 
-/*
-virtual Qt::DropActions supportedDropActions() const
-*/
+$prototype=virtual Qt::DropActions supportedDropActions() const
 $virtualMethod=|Qt::DropActions|supportedDropActions|
 
 #pragma ENDDUMP

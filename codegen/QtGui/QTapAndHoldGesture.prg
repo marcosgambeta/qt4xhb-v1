@@ -30,24 +30,16 @@ $destructor
 
 $deleteMethod
 
-/*
-QPointF position () const
-*/
+$prototype=QPointF position () const
 $method=|QPointF|position|
 
-/*
-void setPosition ( const QPointF & pos )
-*/
+$prototype=void setPosition ( const QPointF & pos )
 $method=|void|setPosition|const QPointF &
 
-/*
-static void setTimeout ( int msecs )
-*/
+$prototype=static void setTimeout ( int msecs )
 $staticMethod=|void|setTimeout|int
 
-/*
-static int timeout ()
-*/
+$prototype=static int timeout ()
 $staticMethod=|int|timeout|
 
 #pragma ENDDUMP

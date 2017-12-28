@@ -47,24 +47,16 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QPolygonF ()
-*/
+$prototype=QPolygonF ()
 $internalConstructor=|new1|
 
-/*
-QPolygonF ( int size )
-*/
+$prototype=QPolygonF ( int size )
 $internalConstructor=|new2|int
 
-/*
-QPolygonF ( const QPolygonF & polygon )
-*/
+$prototype=QPolygonF ( const QPolygonF & polygon )
 $internalConstructor=|new3|const QPolygonF &
 
-/*
-QPolygonF ( const QVector<QPointF> & points )
-*/
+$prototype=QPolygonF ( const QVector<QPointF> & points )
 HB_FUNC_STATIC( QPOLYGONF_NEW4 )
 {
   QVector<QPointF> par1;
@@ -79,14 +71,10 @@ HB_FUNC_STATIC( QPOLYGONF_NEW4 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-/*
-QPolygonF ( const QRectF & rectangle )
-*/
+$prototype=QPolygonF ( const QRectF & rectangle )
 $internalConstructor=|new5|const QRectF &
 
-/*
-QPolygonF ( const QPolygon & polygon )
-*/
+$prototype=QPolygonF ( const QPolygon & polygon )
 $internalConstructor=|new6|const QPolygon &
 
 //[1]QPolygonF ()
@@ -130,49 +118,31 @@ HB_FUNC_STATIC( QPOLYGONF_NEW )
 
 $deleteMethod
 
-/*
-QRectF boundingRect () const
-*/
+$prototype=QRectF boundingRect () const
 $method=|QRectF|boundingRect|
 
-/*
-bool containsPoint ( const QPointF & point, Qt::FillRule fillRule ) const
-*/
+$prototype=bool containsPoint ( const QPointF & point, Qt::FillRule fillRule ) const
 $method=|bool|containsPoint|const QPointF &,Qt::FillRule
 
-/*
-QPolygonF intersected ( const QPolygonF & r ) const
-*/
+$prototype=QPolygonF intersected ( const QPolygonF & r ) const
 $method=|QPolygonF|intersected|const QPolygonF &
 
-/*
-bool isClosed () const
-*/
+$prototype=bool isClosed () const
 $method=|bool|isClosed|
 
-/*
-QPolygonF subtracted ( const QPolygonF & r ) const
-*/
+$prototype=QPolygonF subtracted ( const QPolygonF & r ) const
 $method=|QPolygonF|subtracted|const QPolygonF &
 
-/*
-void swap ( QPolygonF & other )
-*/
+$prototype=void swap ( QPolygonF & other )
 $method=|void|swap|QPolygonF &
 
-/*
-QPolygon toPolygon () const
-*/
+$prototype=QPolygon toPolygon () const
 $method=|QPolygon|toPolygon|
 
-/*
-void translate ( const QPointF & offset )
-*/
+$prototype=void translate ( const QPointF & offset )
 $internalMethod=|void|translate,translate1|const QPointF &
 
-/*
-void translate ( qreal dx, qreal dy )
-*/
+$prototype=void translate ( qreal dx, qreal dy )
 $internalMethod=|void|translate,translate2|qreal,qreal
 
 //[1]void translate ( const QPointF & offset )
@@ -194,14 +164,10 @@ HB_FUNC_STATIC( QPOLYGONF_TRANSLATE )
   }
 }
 
-/*
-QPolygonF translated ( const QPointF & offset ) const
-*/
+$prototype=QPolygonF translated ( const QPointF & offset ) const
 $internalMethod=|QPolygonF|translated,translated1|const QPointF &
 
-/*
-QPolygonF translated ( qreal dx, qreal dy ) const
-*/
+$prototype=QPolygonF translated ( qreal dx, qreal dy ) const
 $internalMethod=|QPolygonF|translated,translated2|qreal,qreal
 
 //[1]QPolygonF translated ( const QPointF & offset ) const
@@ -223,9 +189,7 @@ HB_FUNC_STATIC( QPOLYGONF_TRANSLATED )
   }
 }
 
-/*
-QPolygonF united ( const QPolygonF & r ) const
-*/
+$prototype=QPolygonF united ( const QPolygonF & r ) const
 $method=|QPolygonF|united|const QPolygonF &
 
 $extraMethods

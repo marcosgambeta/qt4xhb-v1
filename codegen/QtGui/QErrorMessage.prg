@@ -29,9 +29,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QErrorMessage ( QWidget * parent = 0 )
-*/
+$prototype=QErrorMessage ( QWidget * parent = 0 )
 HB_FUNC_STATIC( QERRORMESSAGE_NEW )
 {
   QErrorMessage * o = new QErrorMessage ( OPQWIDGET(1,0) );
@@ -40,14 +38,10 @@ HB_FUNC_STATIC( QERRORMESSAGE_NEW )
 
 $deleteMethod
 
-/*
-void showMessage ( const QString & message )
-*/
+$prototype=void showMessage ( const QString & message )
 $method=|void|showMessage,showMessage1|const QString &
 
-/*
-void showMessage ( const QString & message, const QString & type )
-*/
+$prototype=void showMessage ( const QString & message, const QString & type )
 $method=|void|showMessage,showMessage2|const QString &,const QString &
 
 //[1]void showMessage ( const QString & message )
@@ -69,9 +63,7 @@ HB_FUNC_STATIC( QERRORMESSAGE_SHOWMESSAGE )
   }
 }
 
-/*
-QErrorMessage * qtHandler ()
-*/
+$prototype=QErrorMessage * qtHandler ()
 HB_FUNC_STATIC( QERRORMESSAGE_QTHANDLER )
 {
   QErrorMessage * ptr = QErrorMessage::qtHandler ();

@@ -27,21 +27,15 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QSizeGrip ( QWidget * parent )
-*/
+$prototype=QSizeGrip ( QWidget * parent )
 $constructor=|new|QWidget *
 
 $deleteMethod
 
-/*
-virtual void setVisible ( bool visible )
-*/
+$prototype=virtual void setVisible ( bool visible )
 $virtualMethod=|void|setVisible|bool
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $virtualMethod=|QSize|sizeHint|
 
 #pragma ENDDUMP

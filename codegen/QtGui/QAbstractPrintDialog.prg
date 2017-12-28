@@ -33,54 +33,34 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-virtual int exec () = 0
-*/
+$prototype=virtual int exec () = 0
 $virtualMethod=|int|exec|
 
-/*
-int fromPage () const
-*/
+$prototype=int fromPage () const
 $method=|int|fromPage|
 
-/*
-int maxPage () const
-*/
+$prototype=int maxPage () const
 $method=|int|maxPage|
 
-/*
-int minPage () const
-*/
+$prototype=int minPage () const
 $method=|int|minPage|
 
-/*
-PrintRange printRange () const
-*/
+$prototype=PrintRange printRange () const
 $method=|QAbstractPrintDialog::PrintRange|printRange|
 
-/*
-QPrinter * printer () const
-*/
+$prototype=QPrinter * printer () const
 $method=|QPrinter *|printer|
 
-/*
-void setFromTo ( int from, int to )
-*/
+$prototype=void setFromTo ( int from, int to )
 $method=|void|setFromTo|int,int
 
-/*
-void setMinMax ( int min, int max )
-*/
+$prototype=void setMinMax ( int min, int max )
 $method=|void|setMinMax|int,int
 
-/*
-void setPrintRange ( PrintRange range )
-*/
+$prototype=void setPrintRange ( PrintRange range )
 $method=|void|setPrintRange|QAbstractPrintDialog::PrintRange
 
-/*
-int toPage () const
-*/
+$prototype=int toPage () const
 $method=|int|toPage|
 
 #pragma ENDDUMP

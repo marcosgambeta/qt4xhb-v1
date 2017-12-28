@@ -21,9 +21,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QStyleHintReturnVariant ()
-*/
+$prototype=QStyleHintReturnVariant ()
 HB_FUNC_STATIC( QSTYLEHINTRETURNVARIANT_NEW )
 {
   QStyleHintReturnVariant * o = new QStyleHintReturnVariant ();

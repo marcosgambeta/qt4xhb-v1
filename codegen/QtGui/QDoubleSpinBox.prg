@@ -43,103 +43,65 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QDoubleSpinBox ( QWidget * parent = 0 )
-*/
+$prototype=QDoubleSpinBox ( QWidget * parent = 0 )
 HB_FUNC_STATIC( QDOUBLESPINBOX_NEW )
 {
   QDoubleSpinBox * o = new QDoubleSpinBox ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-/*
-QString cleanText () const
-*/
+$prototype=QString cleanText () const
 $method=|QString|cleanText|
 
-/*
-int decimals () const
-*/
+$prototype=int decimals () const
 $method=|int|decimals|
 
-/*
-double maximum () const
-*/
+$prototype=double maximum () const
 $method=|double|maximum|
 
-/*
-double minimum () const
-*/
+$prototype=double minimum () const
 $method=|double|minimum|
 
-/*
-QString prefix () const
-*/
+$prototype=QString prefix () const
 $method=|QString|prefix|
 
-/*
-void setDecimals ( int prec )
-*/
+$prototype=void setDecimals ( int prec )
 $method=|void|setDecimals|int
 
-/*
-void setMaximum ( double max )
-*/
+$prototype=void setMaximum ( double max )
 $method=|void|setMaximum|double
 
-/*
-void setMinimum ( double min )
-*/
+$prototype=void setMinimum ( double min )
 $method=|void|setMinimum|double
 
-/*
-void setPrefix ( const QString & prefix )
-*/
+$prototype=void setPrefix ( const QString & prefix )
 $method=|void|setPrefix|const QString &
 
-/*
-void setRange ( double minimum, double maximum )
-*/
+$prototype=void setRange ( double minimum, double maximum )
 $method=|void|setRange|double,double
 
-/*
-void setSingleStep ( double val )
-*/
+$prototype=void setSingleStep ( double val )
 $method=|void|setSingleStep|double
 
-/*
-void setSuffix ( const QString & suffix )
-*/
+$prototype=void setSuffix ( const QString & suffix )
 $method=|void|setSuffix|const QString &
 
-/*
-double singleStep () const
-*/
+$prototype=double singleStep () const
 $method=|double|singleStep|
 
-/*
-QString suffix () const
-*/
+$prototype=QString suffix () const
 $method=|QString|suffix|
 
-/*
-virtual QString textFromValue ( double value ) const
-*/
+$prototype=virtual QString textFromValue ( double value ) const
 $virtualMethod=|QString|textFromValue|double
 
-/*
-double value () const
-*/
+$prototype=double value () const
 $method=|double|value|
 
-/*
-virtual double valueFromText ( const QString & text ) const
-*/
+$prototype=virtual double valueFromText ( const QString & text ) const
 $virtualMethod=|double|valueFromText|const QString &
 
-/*
-virtual void fixup ( QString & input ) const
-*/
+$prototype=virtual void fixup ( QString & input ) const
 %% TODO: revisar implementacao e corrigir
 HB_FUNC_STATIC( QDOUBLESPINBOX_FIXUP )
 {
@@ -154,9 +116,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_FIXUP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-virtual QValidator::State validate ( QString & text, int & pos ) const
-*/
+$prototype=virtual QValidator::State validate ( QString & text, int & pos ) const
 %% TODO: revisar implementacao e corrigir
 HB_FUNC_STATIC( QDOUBLESPINBOX_VALIDATE )
 {
@@ -170,9 +130,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_VALIDATE )
   }
 }
 
-/*
-void setValue ( double val )
-*/
+$prototype=void setValue ( double val )
 $method=|void|setValue|double
 
 #pragma ENDDUMP

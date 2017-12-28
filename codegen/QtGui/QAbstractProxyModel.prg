@@ -57,114 +57,70 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual QModelIndex mapFromSource ( const QModelIndex & sourceIndex ) const = 0
-*/
+$prototype=virtual QModelIndex mapFromSource ( const QModelIndex & sourceIndex ) const = 0
 $virtualMethod=|QModelIndex|mapFromSource|const QModelIndex &
 
-/*
-virtual QItemSelection mapSelectionFromSource ( const QItemSelection & sourceSelection ) const
-*/
+$prototype=virtual QItemSelection mapSelectionFromSource ( const QItemSelection & sourceSelection ) const
 $virtualMethod=|QItemSelection|mapSelectionFromSource|const QItemSelection &
 
-/*
-virtual QItemSelection mapSelectionToSource ( const QItemSelection & proxySelection ) const
-*/
+$prototype=virtual QItemSelection mapSelectionToSource ( const QItemSelection & proxySelection ) const
 $virtualMethod=|QItemSelection|mapSelectionToSource|const QItemSelection &
 
-/*
-virtual QModelIndex mapToSource ( const QModelIndex & proxyIndex ) const = 0
-*/
+$prototype=virtual QModelIndex mapToSource ( const QModelIndex & proxyIndex ) const = 0
 $virtualMethod=|QModelIndex|mapToSource|const QModelIndex &
 
-/*
-virtual void setSourceModel ( QAbstractItemModel * sourceModel )
-*/
+$prototype=virtual void setSourceModel ( QAbstractItemModel * sourceModel )
 $virtualMethod=|void|setSourceModel|QAbstractItemModel *
 
-/*
-QAbstractItemModel * sourceModel () const
-*/
+$prototype=QAbstractItemModel * sourceModel () const
 $method=|QAbstractItemModel *|sourceModel|
 
-/*
-virtual QModelIndex buddy ( const QModelIndex & index ) const
-*/
+$prototype=virtual QModelIndex buddy ( const QModelIndex & index ) const
 $virtualMethod=|QModelIndex|buddy|const QModelIndex &
 
-/*
-virtual bool canFetchMore ( const QModelIndex & parent ) const
-*/
+$prototype=virtual bool canFetchMore ( const QModelIndex & parent ) const
 $virtualMethod=|bool|canFetchMore|const QModelIndex &
 
-/*
-virtual QVariant data ( const QModelIndex & proxyIndex, int role = Qt::DisplayRole ) const
-*/
+$prototype=virtual QVariant data ( const QModelIndex & proxyIndex, int role = Qt::DisplayRole ) const
 $virtualMethod=|QVariant|data|const QModelIndex &,int=Qt::DisplayRole
 
-/*
-virtual void fetchMore ( const QModelIndex & parent )
-*/
+$prototype=virtual void fetchMore ( const QModelIndex & parent )
 $virtualMethod=|void|fetchMore|const QModelIndex &
 
-/*
-virtual Qt::ItemFlags flags ( const QModelIndex & index ) const
-*/
+$prototype=virtual Qt::ItemFlags flags ( const QModelIndex & index ) const
 $virtualMethod=|Qt::ItemFlags|flags|const QModelIndex &
 
-/*
-virtual bool hasChildren ( const QModelIndex & parent = QModelIndex() ) const
-*/
+$prototype=virtual bool hasChildren ( const QModelIndex & parent = QModelIndex() ) const
 $virtualMethod=|bool|hasChildren|const QModelIndex &=QModelIndex()
 
-/*
-virtual QVariant headerData ( int section, Qt::Orientation orientation, int role ) const
-*/
+$prototype=virtual QVariant headerData ( int section, Qt::Orientation orientation, int role ) const
 $virtualMethod=|QVariant|headerData|int,Qt::Orientation,int
 
-/*
-virtual QMimeData * mimeData ( const QModelIndexList & indexes ) const
-*/
+$prototype=virtual QMimeData * mimeData ( const QModelIndexList & indexes ) const
 $virtualMethod=|QMimeData *|mimeData|const QModelIndexList &
 
-/*
-virtual QStringList mimeTypes () const
-*/
+$prototype=virtual QStringList mimeTypes () const
 $virtualMethod=|QStringList|mimeTypes|
 
-/*
-virtual void revert ()
-*/
+$prototype=virtual void revert ()
 $virtualMethod=|void|revert|
 
-/*
-virtual bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
-*/
+$prototype=virtual bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 $virtualMethod=|bool|setData|const QModelIndex &,const QVariant &,int=Qt::EditRole
 
-/*
-virtual bool setHeaderData ( int section, Qt::Orientation orientation, const QVariant & value, int role = Qt::EditRole )
-*/
+$prototype=virtual bool setHeaderData ( int section, Qt::Orientation orientation, const QVariant & value, int role = Qt::EditRole )
 $virtualMethod=|bool|setHeaderData|int,Qt::Orientation,const QVariant &,int=Qt::EditRole
 
-/*
-virtual void sort ( int column, Qt::SortOrder order = Qt::AscendingOrder )
-*/
+$prototype=virtual void sort ( int column, Qt::SortOrder order = Qt::AscendingOrder )
 $virtualMethod=|void|sort|int,Qt::SortOrder=Qt::AscendingOrder
 
-/*
-virtual QSize span ( const QModelIndex & index ) const
-*/
+$prototype=virtual QSize span ( const QModelIndex & index ) const
 $virtualMethod=|QSize|span|const QModelIndex &
 
-/*
-virtual bool submit ()
-*/
+$prototype=virtual bool submit ()
 $virtualMethod=|bool|submit|
 
-/*
-virtual Qt::DropActions supportedDropActions () const
-*/
+$prototype=virtual Qt::DropActions supportedDropActions () const
 $virtualMethod=|Qt::DropActions|supportedDropActions|
 
 #pragma ENDDUMP

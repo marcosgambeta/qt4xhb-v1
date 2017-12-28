@@ -28,9 +28,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QShortcutEvent(const QKeySequence &key, int id, bool ambiguous = false)
-*/
+$prototype=QShortcutEvent(const QKeySequence &key, int id, bool ambiguous = false)
 HB_FUNC_STATIC( QSHORTCUTEVENT_NEW )
 {
   QShortcutEvent * o = new QShortcutEvent ( *PQKEYSEQUENCE(1), PINT(2), OPBOOL(3,false) );
@@ -39,19 +37,13 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_NEW )
 
 $deleteMethod
 
-/*
-const QKeySequence &key()
-*/
+$prototype=const QKeySequence &key()
 $method=|const QKeySequence &|key|
 
-/*
-int shortcutId()
-*/
+$prototype=int shortcutId()
 $method=|int|shortcutId|
 
-/*
-bool isAmbiguous()
-*/
+$prototype=bool isAmbiguous()
 $method=|bool|isAmbiguous|
 
 #pragma ENDDUMP

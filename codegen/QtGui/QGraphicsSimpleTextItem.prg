@@ -40,14 +40,10 @@ $destructor
 
 #include <QFont>
 
-/*
-QGraphicsSimpleTextItem ( QGraphicsItem * parent = 0 )
-*/
+$prototype=QGraphicsSimpleTextItem ( QGraphicsItem * parent = 0 )
 $internalConstructor=|new1|QGraphicsItem *=0
 
-/*
-QGraphicsSimpleTextItem ( const QString & text, QGraphicsItem * parent = 0 )
-*/
+$prototype=QGraphicsSimpleTextItem ( const QString & text, QGraphicsItem * parent = 0 )
 $internalConstructor=|new2|const QString &,QGraphicsItem *=0
 
 //[1]QGraphicsSimpleTextItem ( QGraphicsItem * parent = 0 )
@@ -71,59 +67,37 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_NEW )
 
 $deleteMethod
 
-/*
-QFont font () const
-*/
+$prototype=QFont font () const
 $method=|QFont|font|
 
-/*
-void setFont ( const QFont & font )
-*/
+$prototype=void setFont ( const QFont & font )
 $method=|void|setFont|const QFont &
 
-/*
-void setText ( const QString & text )
-*/
+$prototype=void setText ( const QString & text )
 $method=|void|setText|const QString &
 
-/*
-QString text () const
-*/
+$prototype=QString text () const
 $method=|QString|text|
 
-/*
-virtual QRectF boundingRect () const
-*/
+$prototype=virtual QRectF boundingRect () const
 $virtualMethod=|QRectF|boundingRect|
 
-/*
-virtual bool contains ( const QPointF & point ) const
-*/
+$prototype=virtual bool contains ( const QPointF & point ) const
 $virtualMethod=|bool|contains|const QPointF &
 
-/*
-virtual bool isObscuredBy ( const QGraphicsItem * item ) const
-*/
+$prototype=virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 $virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
 
-/*
-virtual QPainterPath opaqueArea () const
-*/
+$prototype=virtual QPainterPath opaqueArea () const
 $virtualMethod=|QPainterPath|opaqueArea|
 
-/*
-virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
-*/
+$prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
 $virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *
 
-/*
-virtual QPainterPath shape () const
-*/
+$prototype=virtual QPainterPath shape () const
 $virtualMethod=|QPainterPath|shape|
 
-/*
-virtual int type () const
-*/
+$prototype=virtual int type () const
 $virtualMethod=|int|type|
 
 #pragma ENDDUMP

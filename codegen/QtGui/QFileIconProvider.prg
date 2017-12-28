@@ -36,21 +36,15 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QFileIconProvider()
-*/
+$prototype=QFileIconProvider()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-virtual QIcon icon(IconType type) const
-*/
+$prototype=virtual QIcon icon(IconType type) const
 $internalVirtualMethod=|QIcon|icon,icon1|QFileIconProvider::IconType
 
-/*
-virtual QIcon icon(const QFileInfo & info) const
-*/
+$prototype=virtual QIcon icon(const QFileInfo & info) const
 $internalVirtualMethod=|QIcon|icon,icon2|const QFileInfo &
 
 //[1]virtual QIcon icon(IconType type) const
@@ -72,9 +66,7 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_ICON )
   }
 }
 
-/*
-virtual QString type(const QFileInfo & info) const
-*/
+$prototype=virtual QString type(const QFileInfo & info) const
 $virtualMethod=|QString|type|const QFileInfo &
 
 $extraMethods

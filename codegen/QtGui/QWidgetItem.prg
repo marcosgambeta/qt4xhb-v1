@@ -37,9 +37,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QWidgetItem ( QWidget * widget )
-*/
+$prototype=QWidgetItem ( QWidget * widget )
 HB_FUNC_STATIC( QWIDGETITEM_NEW )
 {
   QWidgetItem * o = new QWidgetItem ( PQWIDGET(1) );
@@ -48,54 +46,34 @@ HB_FUNC_STATIC( QWIDGETITEM_NEW )
 
 $deleteMethod
 
-/*
-virtual Qt::Orientations expandingDirections () const
-*/
+$prototype=virtual Qt::Orientations expandingDirections () const
 $virtualMethod=|Qt::Orientations|expandingDirections|
 
-/*
-virtual QRect geometry () const
-*/
+$prototype=virtual QRect geometry () const
 $virtualMethod=|QRect|geometry|
 
-/*
-virtual bool hasHeightForWidth () const
-*/
+$prototype=virtual bool hasHeightForWidth () const
 $virtualMethod=|bool|hasHeightForWidth|
 
-/*
-virtual int heightForWidth ( int w ) const
-*/
+$prototype=virtual int heightForWidth ( int w ) const
 $virtualMethod=|int|heightForWidth|int
 
-/*
-virtual bool isEmpty () const
-*/
+$prototype=virtual bool isEmpty () const
 $virtualMethod=|bool|isEmpty|
 
-/*
-virtual QSize maximumSize () const
-*/
+$prototype=virtual QSize maximumSize () const
 $virtualMethod=|QSize|maximumSize|
 
-/*
-virtual QSize minimumSize () const
-*/
+$prototype=virtual QSize minimumSize () const
 $virtualMethod=|QSize|minimumSize|
 
-/*
-virtual void setGeometry ( const QRect & rect )
-*/
+$prototype=virtual void setGeometry ( const QRect & rect )
 $virtualMethod=|void|setGeometry|const QRect &
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $virtualMethod=|QSize|sizeHint|
 
-/*
-virtual QWidget * widget ()
-*/
+$prototype=virtual QWidget * widget ()
 $virtualMethod=|QWidget *|widget|
 
 #pragma ENDDUMP

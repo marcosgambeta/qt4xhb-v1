@@ -76,9 +76,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QTextCharFormat ()
-*/
+$prototype=QTextCharFormat ()
 HB_FUNC_STATIC( QTEXTCHARFORMAT_NEW )
 {
   QTextCharFormat * o = new QTextCharFormat ();
@@ -87,249 +85,151 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_NEW )
 
 $deleteMethod
 
-/*
-QString anchorHref () const
-*/
+$prototype=QString anchorHref () const
 $method=|QString|anchorHref|
 
-/*
-QStringList anchorNames () const
-*/
+$prototype=QStringList anchorNames () const
 $method=|QStringList|anchorNames|
 
-/*
-QFont font () const
-*/
+$prototype=QFont font () const
 $method=|QFont|font|
 
-/*
-QFont::Capitalization fontCapitalization () const
-*/
+$prototype=QFont::Capitalization fontCapitalization () const
 $method=|QFont::Capitalization|fontCapitalization|
 
-/*
-QString fontFamily () const
-*/
+$prototype=QString fontFamily () const
 $method=|QString|fontFamily|
 
-/*
-bool fontFixedPitch () const
-*/
+$prototype=bool fontFixedPitch () const
 $method=|bool|fontFixedPitch|
 
-/*
-QFont::HintingPreference fontHintingPreference () const
-*/
+$prototype=QFont::HintingPreference fontHintingPreference () const
 $method=|QFont::HintingPreference|fontHintingPreference|
 
-/*
-bool fontItalic () const
-*/
+$prototype=bool fontItalic () const
 $method=|bool|fontItalic|
 
-/*
-bool fontKerning () const
-*/
+$prototype=bool fontKerning () const
 $method=|bool|fontKerning|
 
-/*
-qreal fontLetterSpacing () const
-*/
+$prototype=qreal fontLetterSpacing () const
 $method=|qreal|fontLetterSpacing|
 
-/*
-bool fontOverline () const
-*/
+$prototype=bool fontOverline () const
 $method=|bool|fontOverline|
 
-/*
-qreal fontPointSize () const
-*/
+$prototype=qreal fontPointSize () const
 $method=|qreal|fontPointSize|
 
-/*
-bool fontStrikeOut () const
-*/
+$prototype=bool fontStrikeOut () const
 $method=|bool|fontStrikeOut|
 
-/*
-QFont::StyleHint fontStyleHint () const
-*/
+$prototype=QFont::StyleHint fontStyleHint () const
 $method=|QFont::StyleHint|fontStyleHint|
 
-/*
-QFont::StyleStrategy fontStyleStrategy () const
-*/
+$prototype=QFont::StyleStrategy fontStyleStrategy () const
 $method=|QFont::StyleStrategy|fontStyleStrategy|
 
-/*
-bool fontUnderline () const
-*/
+$prototype=bool fontUnderline () const
 $method=|bool|fontUnderline|
 
-/*
-int fontWeight () const
-*/
+$prototype=int fontWeight () const
 $method=|int|fontWeight|
 
-/*
-qreal fontWordSpacing () const
-*/
+$prototype=qreal fontWordSpacing () const
 $method=|qreal|fontWordSpacing|
 
-/*
-bool isAnchor () const
-*/
+$prototype=bool isAnchor () const
 $method=|bool|isAnchor|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-void setAnchor ( bool anchor )
-*/
+$prototype=void setAnchor ( bool anchor )
 $method=|void|setAnchor|bool
 
-/*
-void setAnchorHref ( const QString & value )
-*/
+$prototype=void setAnchorHref ( const QString & value )
 $method=|void|setAnchorHref|const QString &
 
-/*
-void setAnchorNames ( const QStringList & names )
-*/
+$prototype=void setAnchorNames ( const QStringList & names )
 $method=|void|setAnchorNames|const QStringList &
 
-/*
-void setFont ( const QFont & font )
-*/
+$prototype=void setFont ( const QFont & font )
 $method=|void|setFont|const QFont &
 
-/*
-void setFontCapitalization ( QFont::Capitalization capitalization )
-*/
+$prototype=void setFontCapitalization ( QFont::Capitalization capitalization )
 $method=|void|setFontCapitalization|QFont::Capitalization
 
-/*
-void setFontFamily ( const QString & family )
-*/
+$prototype=void setFontFamily ( const QString & family )
 $method=|void|setFontFamily|const QString &
 
-/*
-void setFontFixedPitch ( bool fixedPitch )
-*/
+$prototype=void setFontFixedPitch ( bool fixedPitch )
 $method=|void|setFontFixedPitch|bool
 
-/*
-void setFontHintingPreference ( QFont::HintingPreference hintingPreference )
-*/
+$prototype=void setFontHintingPreference ( QFont::HintingPreference hintingPreference )
 $method=|void|setFontHintingPreference|QFont::HintingPreference
 
-/*
-void setFontItalic ( bool italic )
-*/
+$prototype=void setFontItalic ( bool italic )
 $method=|void|setFontItalic|bool
 
-/*
-void setFontKerning ( bool enable )
-*/
+$prototype=void setFontKerning ( bool enable )
 $method=|void|setFontKerning|bool
 
-/*
-void setFontLetterSpacing ( qreal spacing )
-*/
+$prototype=void setFontLetterSpacing ( qreal spacing )
 $method=|void|setFontLetterSpacing|qreal
 
-/*
-void setFontOverline ( bool overline )
-*/
+$prototype=void setFontOverline ( bool overline )
 $method=|void|setFontOverline|bool
 
-/*
-void setFontPointSize ( qreal size )
-*/
+$prototype=void setFontPointSize ( qreal size )
 $method=|void|setFontPointSize|qreal
 
-/*
-void setFontStrikeOut ( bool strikeOut )
-*/
+$prototype=void setFontStrikeOut ( bool strikeOut )
 $method=|void|setFontStrikeOut|bool
 
-/*
-void setFontStyleHint ( QFont::StyleHint hint, QFont::StyleStrategy strategy = QFont::PreferDefault )
-*/
+$prototype=void setFontStyleHint ( QFont::StyleHint hint, QFont::StyleStrategy strategy = QFont::PreferDefault )
 $method=|void|setFontStyleHint|QFont::StyleHint,QFont::StyleStrategy=QFont::PreferDefault
 
-/*
-void setFontStyleStrategy ( QFont::StyleStrategy strategy )
-*/
+$prototype=void setFontStyleStrategy ( QFont::StyleStrategy strategy )
 $method=|void|setFontStyleStrategy|QFont::StyleStrategy
 
-/*
-void setFontUnderline ( bool underline )
-*/
+$prototype=void setFontUnderline ( bool underline )
 $method=|void|setFontUnderline|bool
 
-/*
-void setFontWeight ( int weight )
-*/
+$prototype=void setFontWeight ( int weight )
 $method=|void|setFontWeight|int
 
-/*
-void setFontWordSpacing ( qreal spacing )
-*/
+$prototype=void setFontWordSpacing ( qreal spacing )
 $method=|void|setFontWordSpacing|qreal
 
-/*
-void setTextOutline ( const QPen & pen )
-*/
+$prototype=void setTextOutline ( const QPen & pen )
 $method=|void|setTextOutline|const QPen &
 
-/*
-void setToolTip ( const QString & text )
-*/
+$prototype=void setToolTip ( const QString & text )
 $method=|void|setToolTip|const QString &
 
-/*
-void setUnderlineColor ( const QColor & color )
-*/
+$prototype=void setUnderlineColor ( const QColor & color )
 $method=|void|setUnderlineColor|const QColor &
 
-/*
-void setUnderlineStyle ( UnderlineStyle style )
-*/
+$prototype=void setUnderlineStyle ( UnderlineStyle style )
 $method=|void|setUnderlineStyle|QTextCharFormat::UnderlineStyle
 
-/*
-void setVerticalAlignment ( VerticalAlignment alignment )
-*/
+$prototype=void setVerticalAlignment ( VerticalAlignment alignment )
 $method=|void|setVerticalAlignment|QTextCharFormat::VerticalAlignment
 
-/*
-QPen textOutline () const
-*/
+$prototype=QPen textOutline () const
 $method=|QPen|textOutline|
 
-/*
-QString toolTip () const
-*/
+$prototype=QString toolTip () const
 $method=|QString|toolTip|
 
-/*
-QColor underlineColor () const
-*/
+$prototype=QColor underlineColor () const
 $method=|QColor|underlineColor|
 
-/*
-UnderlineStyle underlineStyle () const
-*/
+$prototype=UnderlineStyle underlineStyle () const
 $method=|QTextCharFormat::UnderlineStyle|underlineStyle|
 
-/*
-VerticalAlignment verticalAlignment () const
-*/
+$prototype=VerticalAlignment verticalAlignment () const
 $method=|QTextCharFormat::VerticalAlignment|verticalAlignment|
 
 #pragma ENDDUMP

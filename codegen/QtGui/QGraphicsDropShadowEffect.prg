@@ -42,9 +42,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QGraphicsDropShadowEffect ( QObject * parent = 0 )
-*/
+$prototype=QGraphicsDropShadowEffect ( QObject * parent = 0 )
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_NEW )
 {
   QGraphicsDropShadowEffect * o = new QGraphicsDropShadowEffect ( OPQOBJECT(1,0) );
@@ -53,59 +51,37 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_NEW )
 
 $deleteMethod
 
-/*
-qreal blurRadius () const
-*/
+$prototype=qreal blurRadius () const
 $method=|qreal|blurRadius|
 
-/*
-QColor color () const
-*/
+$prototype=QColor color () const
 $method=|QColor|color|
 
-/*
-QPointF offset () const
-*/
+$prototype=QPointF offset () const
 $method=|QPointF|offset|
 
-/*
-qreal xOffset () const
-*/
+$prototype=qreal xOffset () const
 $method=|qreal|xOffset|
 
-/*
-qreal yOffset () const
-*/
+$prototype=qreal yOffset () const
 $method=|qreal|yOffset|
 
-/*
-virtual QRectF boundingRectFor ( const QRectF & rect ) const
-*/
+$prototype=virtual QRectF boundingRectFor ( const QRectF & rect ) const
 $virtualMethod=|QRectF|boundingRectFor|const QRectF &
 
-/*
-void setBlurRadius ( qreal blurRadius )
-*/
+$prototype=void setBlurRadius ( qreal blurRadius )
 $method=|void|setBlurRadius|qreal
 
-/*
-void setColor ( const QColor & color )
-*/
+$prototype=void setColor ( const QColor & color )
 $method=|void|setColor|const QColor &
 
-/*
-void setOffset ( const QPointF & ofs )
-*/
+$prototype=void setOffset ( const QPointF & ofs )
 $internalMethod=|void|setOffset,setOffset1|const QPointF &
 
-/*
-void setOffset ( qreal dx, qreal dy )
-*/
+$prototype=void setOffset ( qreal dx, qreal dy )
 $internalMethod=|void|setOffset,setOffset2|qreal,qreal
 
-/*
-void setOffset ( qreal d )
-*/
+$prototype=void setOffset ( qreal d )
 $internalMethod=|void|setOffset,setOffset3|qreal
 
 //[1]void setOffset ( const QPointF & ofs )
@@ -132,14 +108,10 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET )
   }
 }
 
-/*
-void setXOffset ( qreal dx )
-*/
+$prototype=void setXOffset ( qreal dx )
 $method=|void|setXOffset|qreal
 
-/*
-void setYOffset ( qreal dy )
-*/
+$prototype=void setYOffset ( qreal dy )
 $method=|void|setYOffset|qreal
 
 #pragma ENDDUMP

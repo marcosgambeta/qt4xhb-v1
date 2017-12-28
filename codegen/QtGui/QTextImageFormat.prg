@@ -28,9 +28,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QTextImageFormat ()
-*/
+$prototype=QTextImageFormat ()
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NEW )
 {
   QTextImageFormat * o = new QTextImageFormat ();
@@ -39,39 +37,25 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NEW )
 
 $deleteMethod
 
-/*
-qreal height () const
-*/
+$prototype=qreal height () const
 $method=|qreal|height|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-QString name () const
-*/
+$prototype=QString name () const
 $method=|QString|name|
 
-/*
-void setHeight ( qreal height )
-*/
+$prototype=void setHeight ( qreal height )
 $method=|void|setHeight|qreal
 
-/*
-void setName ( const QString & name )
-*/
+$prototype=void setName ( const QString & name )
 $method=|void|setName|const QString &
 
-/*
-void setWidth ( qreal width )
-*/
+$prototype=void setWidth ( qreal width )
 $method=|void|setWidth|qreal
 
-/*
-qreal width () const
-*/
+$prototype=qreal width () const
 $method=|qreal|width|
 
 #pragma ENDDUMP

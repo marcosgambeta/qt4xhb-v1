@@ -27,9 +27,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QMoveEvent ( const QPoint & pos, const QPoint & oldPos )
-*/
+$prototype=QMoveEvent ( const QPoint & pos, const QPoint & oldPos )
 HB_FUNC_STATIC( QMOVEEVENT_NEW )
 {
   QMoveEvent * o = new QMoveEvent ( *PQPOINT(1), *PQPOINT(2) );
@@ -38,14 +36,10 @@ HB_FUNC_STATIC( QMOVEEVENT_NEW )
 
 $deleteMethod
 
-/*
-const QPoint & oldPos () const
-*/
+$prototype=const QPoint & oldPos () const
 $method=|const QPoint &|oldPos|
 
-/*
-const QPoint & pos () const
-*/
+$prototype=const QPoint & pos () const
 $method=|const QPoint &|pos|
 
 #pragma ENDDUMP

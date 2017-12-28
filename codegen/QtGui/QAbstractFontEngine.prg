@@ -32,34 +32,22 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual void addGlyphOutlinesToPath ( uint * glyphs, int numGlyphs, FixedPoint * positions, QPainterPath * path )
-*/
+$prototype=virtual void addGlyphOutlinesToPath ( uint * glyphs, int numGlyphs, FixedPoint * positions, QPainterPath * path )
 $virtualMethod=|void|addGlyphOutlinesToPath|uint *,int,QAbstractFontEngine::FixedPoint *,QPainterPath *
 
-/*
-virtual Capabilities capabilities () const = 0
-*/
+$prototype=virtual Capabilities capabilities () const = 0
 $virtualMethod=|QAbstractFontEngine::Capabilities|capabilities|
 
-/*
-virtual bool convertStringToGlyphIndices ( const QChar * string, int length, uint * glyphs, int * numGlyphs, TextShapingFlags flags ) const = 0
-*/
+$prototype=virtual bool convertStringToGlyphIndices ( const QChar * string, int length, uint * glyphs, int * numGlyphs, TextShapingFlags flags ) const = 0
 $virtualMethod=|bool|convertStringToGlyphIndices|const QChar *,int,uint *,int *,QAbstractFontEngine::TextShapingFlags
 
-/*
-virtual QVariant fontProperty ( FontProperty property ) const = 0
-*/
+$prototype=virtual QVariant fontProperty ( FontProperty property ) const = 0
 $virtualMethod=|QVariant|fontProperty|QAbstractFontEngine::FontProperty
 
-/*
-virtual void getGlyphAdvances ( const uint * glyphs, int numGlyphs, Fixed * advances, TextShapingFlags flags ) const = 0
-*/
+$prototype=virtual void getGlyphAdvances ( const uint * glyphs, int numGlyphs, Fixed * advances, TextShapingFlags flags ) const = 0
 $virtualMethod=|void|getGlyphAdvances|const uint *,int,QAbstractFontEngine::Fixed *,QAbstractFontEngine::TextShapingFlags
 
-/*
-virtual bool renderGlyph ( uint glyph, int depth, int bytesPerLine, int height, uchar * buffer )
-*/
+$prototype=virtual bool renderGlyph ( uint glyph, int depth, int bytesPerLine, int height, uchar * buffer )
 $virtualMethod=|bool|renderGlyph|uint,int,int,int,uchar *
 
 #pragma ENDDUMP

@@ -63,14 +63,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QGridLayout ( QWidget * parent )
-*/
+$prototype=QGridLayout ( QWidget * parent )
 $internalConstructor=|new1|QWidget *
 
-/*
-QGridLayout ()
-*/
+$prototype=QGridLayout ()
 $internalConstructor=|new2|
 
 //[1]QGridLayout ( QWidget * parent )
@@ -94,19 +90,13 @@ HB_FUNC_STATIC( QGRIDLAYOUT_NEW )
 
 $deleteMethod
 
-/*
-void addItem ( QLayoutItem * item, int row, int column, int rowSpan = 1, int columnSpan = 1, Qt::Alignment alignment = 0 )
-*/
+$prototype=void addItem ( QLayoutItem * item, int row, int column, int rowSpan = 1, int columnSpan = 1, Qt::Alignment alignment = 0 )
 $method=|void|addItem|QLayoutItem *,int,int,int=1,int=1,Qt::Alignment=0
 
-/*
-void addLayout ( QLayout * layout, int row, int column, Qt::Alignment alignment = 0 )
-*/
+$prototype=void addLayout ( QLayout * layout, int row, int column, Qt::Alignment alignment = 0 )
 $internalMethod=|void|addLayout,addLayout1|QLayout *,int,int,Qt::Alignment=0
 
-/*
-void addLayout ( QLayout * layout, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
-*/
+$prototype=void addLayout ( QLayout * layout, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
 $internalMethod=|void|addLayout,addLayout2|QLayout *,int,int,int,int,Qt::Alignment=0
 
 //[1]void addLayout ( QLayout * layout, int row, int column, Qt::Alignment alignment = 0 )
@@ -128,14 +118,10 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDLAYOUT )
   }
 }
 
-/*
-void addWidget ( QWidget * widget, int row, int column, Qt::Alignment alignment = 0 )
-*/
+$prototype=void addWidget ( QWidget * widget, int row, int column, Qt::Alignment alignment = 0 )
 $internalMethod=|void|addWidget,addWidget1|QWidget *,int,int,Qt::Alignment=0
 
-/*
-void addWidget ( QWidget * widget, int fromRow, int fromColumn, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
-*/
+$prototype=void addWidget ( QWidget * widget, int fromRow, int fromColumn, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
 $internalMethod=|void|addWidget,addWidget2|QWidget *,int,int,int,int,Qt::Alignment=0
 
 //[1]void addWidget ( QWidget * widget, int row, int column, Qt::Alignment alignment = 0 )
@@ -157,169 +143,103 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDWIDGET )
   }
 }
 
-/*
-QRect cellRect ( int row, int column ) const
-*/
+$prototype=QRect cellRect ( int row, int column ) const
 $method=|QRect|cellRect|int,int
 
-/*
-int columnCount () const
-*/
+$prototype=int columnCount () const
 $method=|int|columnCount|
 
-/*
-int columnMinimumWidth ( int column ) const
-*/
+$prototype=int columnMinimumWidth ( int column ) const
 $method=|int|columnMinimumWidth|int
 
-/*
-int columnStretch ( int column ) const
-*/
+$prototype=int columnStretch ( int column ) const
 $method=|int|columnStretch|int
 
-/*
-void getItemPosition ( int index, int * row, int * column, int * rowSpan, int * columnSpan )
-*/
+$prototype=void getItemPosition ( int index, int * row, int * column, int * rowSpan, int * columnSpan )
 $method=|void|getItemPosition|int,int *,int *,int *,int *
 
-/*
-int horizontalSpacing () const
-*/
+$prototype=int horizontalSpacing () const
 $method=|int|horizontalSpacing|
 
-/*
-QLayoutItem * itemAtPosition ( int row, int column ) const
-*/
+$prototype=QLayoutItem * itemAtPosition ( int row, int column ) const
 $method=|QLayoutItem *|itemAtPosition|int,int
 
-/*
-Qt::Corner originCorner () const
-*/
+$prototype=Qt::Corner originCorner () const
 $method=|Qt::Corner|originCorner|
 
-/*
-int rowCount () const
-*/
+$prototype=int rowCount () const
 $method=|int|rowCount|
 
-/*
-int rowMinimumHeight ( int row ) const
-*/
+$prototype=int rowMinimumHeight ( int row ) const
 $method=|int|rowMinimumHeight|int
 
-/*
-int rowStretch ( int row ) const
-*/
+$prototype=int rowStretch ( int row ) const
 $method=|int|rowStretch|int
 
-/*
-void setColumnMinimumWidth ( int column, int minSize )
-*/
+$prototype=void setColumnMinimumWidth ( int column, int minSize )
 $method=|void|setColumnMinimumWidth|int,int
 
-/*
-void setColumnStretch ( int column, int stretch )
-*/
+$prototype=void setColumnStretch ( int column, int stretch )
 $method=|void|setColumnStretch|int,int
 
-/*
-void setHorizontalSpacing ( int spacing )
-*/
+$prototype=void setHorizontalSpacing ( int spacing )
 $method=|void|setHorizontalSpacing|int
 
-/*
-void setOriginCorner ( Qt::Corner corner )
-*/
+$prototype=void setOriginCorner ( Qt::Corner corner )
 $method=|void|setOriginCorner|Qt::Corner
 
-/*
-void setRowMinimumHeight ( int row, int minSize )
-*/
+$prototype=void setRowMinimumHeight ( int row, int minSize )
 $method=|void|setRowMinimumHeight|int,int
 
-/*
-void setRowStretch ( int row, int stretch )
-*/
+$prototype=void setRowStretch ( int row, int stretch )
 $method=|void|setRowStretch|int,int
 
-/*
-void setSpacing ( int spacing )
-*/
+$prototype=void setSpacing ( int spacing )
 $method=|void|setSpacing|int
 
-/*
-void setVerticalSpacing ( int spacing )
-*/
+$prototype=void setVerticalSpacing ( int spacing )
 $method=|void|setVerticalSpacing|int
 
-/*
-int spacing () const
-*/
+$prototype=int spacing () const
 $method=|int|spacing|
 
-/*
-int verticalSpacing () const
-*/
+$prototype=int verticalSpacing () const
 $method=|int|verticalSpacing|
 
-/*
-virtual int count () const
-*/
+$prototype=virtual int count () const
 $virtualMethod=|int|count|
 
-/*
-virtual Qt::Orientations expandingDirections () const
-*/
+$prototype=virtual Qt::Orientations expandingDirections () const
 $virtualMethod=|Qt::Orientations|expandingDirections|
 
-/*
-virtual bool hasHeightForWidth () const
-*/
+$prototype=virtual bool hasHeightForWidth () const
 $virtualMethod=|bool|hasHeightForWidth|
 
-/*
-virtual int heightForWidth ( int w ) const
-*/
+$prototype=virtual int heightForWidth ( int w ) const
 $virtualMethod=|int|heightForWidth|int
 
-/*
-virtual void invalidate ()
-*/
+$prototype=virtual void invalidate ()
 $virtualMethod=|void|invalidate|
 
-/*
-virtual QLayoutItem * itemAt ( int index ) const
-*/
+$prototype=virtual QLayoutItem * itemAt ( int index ) const
 $virtualMethod=|QLayoutItem *|itemAt|int
 
-/*
-virtual QSize maximumSize () const
-*/
+$prototype=virtual QSize maximumSize () const
 $virtualMethod=|QSize|maximumSize|
 
-/*
-virtual int minimumHeightForWidth ( int w ) const
-*/
+$prototype=virtual int minimumHeightForWidth ( int w ) const
 $virtualMethod=|int|minimumHeightForWidth|int
 
-/*
-virtual QSize minimumSize () const
-*/
+$prototype=virtual QSize minimumSize () const
 $virtualMethod=|QSize|minimumSize|
 
-/*
-virtual void setGeometry ( const QRect & rect )
-*/
+$prototype=virtual void setGeometry ( const QRect & rect )
 $virtualMethod=|void|setGeometry|const QRect &
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $virtualMethod=|QSize|sizeHint|
 
-/*
-virtual QLayoutItem * takeAt ( int index )
-*/
+$prototype=virtual QLayoutItem * takeAt ( int index )
 $virtualMethod=|QLayoutItem *|takeAt|int
 
 #pragma ENDDUMP

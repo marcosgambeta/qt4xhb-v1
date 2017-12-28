@@ -31,14 +31,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-virtual QString actionText ( int action, Text t, int child ) const
-*/
+$prototype=virtual QString actionText ( int action, Text t, int child ) const
 $virtualMethod=|QString|actionText|int,QAccessibleObject::Text,int
 
-/*
-virtual bool doAction ( int action, int child, const QVariantList & params )
-*/
+$prototype=virtual bool doAction ( int action, int child, const QVariantList & params )
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_DOACTION )
 {
   QAccessibleObject * obj = (QAccessibleObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -57,29 +53,19 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_DOACTION )
   }
 }
 
-/*
-virtual bool isValid () const
-*/
+$prototype=virtual bool isValid () const
 $virtualMethod=|bool|isValid|
 
-/*
-virtual QObject * object () const
-*/
+$prototype=virtual QObject * object () const
 $virtualMethod=|QObject *|object|
 
-/*
-virtual QRect rect ( int child ) const
-*/
+$prototype=virtual QRect rect ( int child ) const
 $virtualMethod=|QRect|rect|int
 
-/*
-virtual void setText ( Text t, int child, const QString & text )
-*/
+$prototype=virtual void setText ( Text t, int child, const QString & text )
 $virtualMethod=|void|setText|QAccessibleObject::Text,int,const QString &
 
-/*
-virtual int userActionCount ( int child ) const
-*/
+$prototype=virtual int userActionCount ( int child ) const
 $virtualMethod=|int|userActionCount|int
 
 #pragma ENDDUMP

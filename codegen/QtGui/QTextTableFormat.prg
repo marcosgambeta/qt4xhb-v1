@@ -38,9 +38,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QTextTableFormat ()
-*/
+$prototype=QTextTableFormat ()
 HB_FUNC_STATIC( QTEXTTABLEFORMAT_NEW )
 {
   QTextTableFormat * o = new QTextTableFormat ();
@@ -49,29 +47,19 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_NEW )
 
 $deleteMethod
 
-/*
-Qt::Alignment alignment () const
-*/
+$prototype=Qt::Alignment alignment () const
 $method=|Qt::Alignment|alignment|
 
-/*
-qreal cellPadding () const
-*/
+$prototype=qreal cellPadding () const
 $method=|qreal|cellPadding|
 
-/*
-qreal cellSpacing () const
-*/
+$prototype=qreal cellSpacing () const
 $method=|qreal|cellSpacing|
 
-/*
-void clearColumnWidthConstraints ()
-*/
+$prototype=void clearColumnWidthConstraints ()
 $method=|void|clearColumnWidthConstraints|
 
-/*
-QVector<QTextLength> columnWidthConstraints () const
-*/
+$prototype=QVector<QTextLength> columnWidthConstraints () const
 HB_FUNC_STATIC( QTEXTTABLEFORMAT_COLUMNWIDTHCONSTRAINTS )
 {
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -107,39 +95,25 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_COLUMNWIDTHCONSTRAINTS )
   }
 }
 
-/*
-int columns () const
-*/
+$prototype=int columns () const
 $method=|int|columns|
 
-/*
-int headerRowCount () const
-*/
+$prototype=int headerRowCount () const
 $method=|int|headerRowCount|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-void setAlignment ( Qt::Alignment alignment )
-*/
+$prototype=void setAlignment ( Qt::Alignment alignment )
 $method=|void|setAlignment|Qt::Alignment
 
-/*
-void setCellPadding ( qreal padding )
-*/
+$prototype=void setCellPadding ( qreal padding )
 $method=|void|setCellPadding|qreal
 
-/*
-void setCellSpacing ( qreal spacing )
-*/
+$prototype=void setCellSpacing ( qreal spacing )
 $method=|void|setCellSpacing|qreal
 
-/*
-void setColumnWidthConstraints ( const QVector<QTextLength> & constraints )
-*/
+$prototype=void setColumnWidthConstraints ( const QVector<QTextLength> & constraints )
 HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETCOLUMNWIDTHCONSTRAINTS )
 {
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -160,9 +134,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETCOLUMNWIDTHCONSTRAINTS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setHeaderRowCount ( int count )
-*/
+$prototype=void setHeaderRowCount ( int count )
 $method=|void|setHeaderRowCount|int
 
 #pragma ENDDUMP

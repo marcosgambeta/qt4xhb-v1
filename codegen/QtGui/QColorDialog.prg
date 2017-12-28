@@ -42,14 +42,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QColorDialog ( QWidget * parent = 0 )
-*/
+$prototype=QColorDialog ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0
 
-/*
-QColorDialog ( const QColor & initial, QWidget * parent = 0 )
-*/
+$prototype=QColorDialog ( const QColor & initial, QWidget * parent = 0 )
 $internalConstructor=|new2|const QColor &,QWidget *=0
 
 //[1]QColorDialog ( QWidget * parent = 0 )
@@ -73,19 +69,13 @@ HB_FUNC_STATIC( QCOLORDIALOG_NEW )
 
 $deleteMethod
 
-/*
-QColor currentColor () const
-*/
+$prototype=QColor currentColor () const
 $method=|QColor|currentColor|
 
-/*
-void open ()
-*/
+$prototype=void open ()
 $internalMethod=|void|open,open1|
 
-/*
-void open ( QObject * receiver, const char * member )
-*/
+$prototype=void open ( QObject * receiver, const char * member )
 $internalMethod=|void|open,open2|QObject *,const char *
 
 //[1]void open ()
@@ -107,59 +97,37 @@ HB_FUNC_STATIC( QCOLORDIALOG_OPEN )
   }
 }
 
-/*
-ColorDialogOptions options () const
-*/
+$prototype=ColorDialogOptions options () const
 $method=|QColorDialog::ColorDialogOptions|options|
 
-/*
-QColor selectedColor () const
-*/
+$prototype=QColor selectedColor () const
 $method=|QColor|selectedColor|
 
-/*
-void setCurrentColor ( const QColor & color )
-*/
+$prototype=void setCurrentColor ( const QColor & color )
 $method=|void|setCurrentColor|const QColor &
 
-/*
-void setOption ( ColorDialogOption option, bool on = true )
-*/
+$prototype=void setOption ( ColorDialogOption option, bool on = true )
 $method=|void|setOption|QColorDialog::ColorDialogOption,bool=true
 
-/*
-void setOptions ( ColorDialogOptions options )
-*/
+$prototype=void setOptions ( ColorDialogOptions options )
 $method=|void|setOptions|QColorDialog::ColorDialogOptions
 
-/*
-bool testOption ( ColorDialogOption option ) const
-*/
+$prototype=bool testOption ( ColorDialogOption option ) const
 $method=|bool|testOption|QColorDialog::ColorDialogOption
 
-/*
-virtual void setVisible ( bool visible )
-*/
+$prototype=virtual void setVisible ( bool visible )
 $virtualMethod=|void|setVisible|bool
 
-/*
-static QRgb customColor ( int index )
-*/
+$prototype=static QRgb customColor ( int index )
 $staticMethod=|QRgb|customColor|int
 
-/*
-static int customCount ()
-*/
+$prototype=static int customCount ()
 $staticMethod=|int|customCount|
 
-/*
-static QColor getColor ( const QColor & initial, QWidget * parent, const QString & title, ColorDialogOptions options = 0 )
-*/
+$prototype=static QColor getColor ( const QColor & initial, QWidget * parent, const QString & title, ColorDialogOptions options = 0 )
 $internalStaticMethod=|QColor|getColor,getColor1|const QColor &,QWidget *,const QString &,QColorDialog::ColorDialogOptions=0
 
-/*
-static QColor getColor ( const QColor & initial = Qt::white, QWidget * parent = 0 )
-*/
+$prototype=static QColor getColor ( const QColor & initial = Qt::white, QWidget * parent = 0 )
 $internalStaticMethod=|QColor|getColor,getColor2|const QColor &=Qt::white,QWidget *=0
 
 //[1]QColor getColor ( const QColor & initial, QWidget * parent, const QString & title, ColorDialogOptions options = 0 )
@@ -181,14 +149,10 @@ HB_FUNC_STATIC( QCOLORDIALOG_GETCOLOR )
   }
 }
 
-/*
-static void setCustomColor ( int index, QRgb color )
-*/
+$prototype=static void setCustomColor ( int index, QRgb color )
 $staticMethod=|void|setCustomColor|int,QRgb
 
-/*
-static void setStandardColor ( int index, QRgb color
-*/
+$prototype=static void setStandardColor ( int index, QRgb color
 $staticMethod=|void|setStandardColor|int,QRgb
 
 #pragma ENDDUMP

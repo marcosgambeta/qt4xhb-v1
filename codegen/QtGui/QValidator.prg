@@ -30,9 +30,7 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual void fixup ( QString & input ) const
-*/
+$prototype=virtual void fixup ( QString & input ) const
 HB_FUNC_STATIC( QVALIDATOR_FIXUP ) // TODO: revisar a implementacao e corrigir
 {
   QValidator * obj = (QValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -46,19 +44,13 @@ HB_FUNC_STATIC( QVALIDATOR_FIXUP ) // TODO: revisar a implementacao e corrigir
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-QLocale locale () const
-*/
+$prototype=QLocale locale () const
 $method=|QLocale|locale|
 
-/*
-void setLocale ( const QLocale & locale )
-*/
+$prototype=void setLocale ( const QLocale & locale )
 $method=|void|setLocale|const QLocale &
 
-/*
-virtual State validate ( QString & input, int & pos ) const = 0
-*/
+$prototype=virtual State validate ( QString & input, int & pos ) const = 0
 HB_FUNC_STATIC( QVALIDATOR_VALIDATE ) // TODO: revisar a implementacao e corrigir
 {
   QValidator * obj = (QValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

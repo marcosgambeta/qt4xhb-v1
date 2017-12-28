@@ -31,9 +31,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QTextTableCellFormat ()
-*/
+$prototype=QTextTableCellFormat ()
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_NEW )
 {
   QTextTableCellFormat * o = new QTextTableCellFormat ();
@@ -42,54 +40,34 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_NEW )
 
 $deleteMethod
 
-/*
-qreal bottomPadding () const
-*/
+$prototype=qreal bottomPadding () const
 $method=|qreal|bottomPadding|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-qreal leftPadding () const
-*/
+$prototype=qreal leftPadding () const
 $method=|qreal|leftPadding|
 
-/*
-qreal rightPadding () const
-*/
+$prototype=qreal rightPadding () const
 $method=|qreal|rightPadding|
 
-/*
-void setBottomPadding ( qreal padding )
-*/
+$prototype=void setBottomPadding ( qreal padding )
 $method=|void|setBottomPadding|qreal
 
-/*
-void setLeftPadding ( qreal padding )
-*/
+$prototype=void setLeftPadding ( qreal padding )
 $method=|void|setLeftPadding|qreal
 
-/*
-void setPadding ( qreal padding )
-*/
+$prototype=void setPadding ( qreal padding )
 $method=|void|setPadding|qreal
 
-/*
-void setRightPadding ( qreal padding )
-*/
+$prototype=void setRightPadding ( qreal padding )
 $method=|void|setRightPadding|qreal
 
-/*
-void setTopPadding ( qreal padding )
-*/
+$prototype=void setTopPadding ( qreal padding )
 $method=|void|setTopPadding|qreal
 
-/*
-qreal topPadding () const
-*/
+$prototype=qreal topPadding () const
 $method=|qreal|topPadding|
 
 #pragma ENDDUMP

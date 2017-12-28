@@ -27,21 +27,15 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QActionEvent ( int type, QAction * action, QAction * before = 0 )
-*/
+$prototype=QActionEvent ( int type, QAction * action, QAction * before = 0 )
 $constructor=|new|int,QAction *,QAction *=0
 
 $deleteMethod
 
-/*
-QAction * action () const
-*/
+$prototype=QAction * action () const
 $method=|QAction *|action|
 
-/*
-QAction * before () const
-*/
+$prototype=QAction * before () const
 $method=|QAction *|before|
 
 #pragma ENDDUMP

@@ -40,19 +40,13 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QPrinterInfo ()
-*/
+$prototype=QPrinterInfo ()
 $internalConstructor=|new1|
 
-/*
-QPrinterInfo ( const QPrinterInfo & src )
-*/
+$prototype=QPrinterInfo ( const QPrinterInfo & src )
 $internalConstructor=|new2|const QPrinterInfo &
 
-/*
-QPrinterInfo ( const QPrinter & printer )
-*/
+$prototype=QPrinterInfo ( const QPrinter & printer )
 $internalConstructor=|new3|const QPrinter &
 
 //[1]QPrinterInfo ()
@@ -81,24 +75,16 @@ HB_FUNC_STATIC( QPRINTERINFO_NEW )
 
 $deleteMethod
 
-/*
-bool isDefault () const
-*/
+$prototype=bool isDefault () const
 $method=|bool|isDefault|
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-QString printerName () const
-*/
+$prototype=QString printerName () const
 $method=|QString|printerName|
 
-/*
-QList<QPrinter::PaperSize> supportedPaperSizes () const
-*/
+$prototype=QList<QPrinter::PaperSize> supportedPaperSizes () const
 HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAPERSIZES )
 {
   QPrinterInfo * obj = (QPrinterInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -118,9 +104,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAPERSIZES )
   }
 }
 
-/*
-QList<QPrinterInfo> availablePrinters ()
-*/
+$prototype=QList<QPrinterInfo> availablePrinters ()
 HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERS )
 {
   QList<QPrinterInfo> list = QPrinterInfo::availablePrinters ();
@@ -155,9 +139,7 @@ HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERS )
   hb_itemReturnRelease(pArray);
 }
 
-/*
-static QPrinterInfo defaultPrinter ()
-*/
+$prototype=static QPrinterInfo defaultPrinter ()
 $staticMethod=|QPrinterInfo|defaultPrinter|
 
 $extraMethods

@@ -24,9 +24,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QFocusEvent ( Type type, Qt::FocusReason reason = Qt::OtherFocusReason )
-*/
+$prototype=QFocusEvent ( Type type, Qt::FocusReason reason = Qt::OtherFocusReason )
 HB_FUNC_STATIC( QFOCUSEVENT_NEW )
 {
   int par2 = ISNIL(2)? (int) Qt::OtherFocusReason : hb_parni(2);
@@ -36,19 +34,13 @@ HB_FUNC_STATIC( QFOCUSEVENT_NEW )
 
 $deleteMethod
 
-/*
-bool gotFocus () const
-*/
+$prototype=bool gotFocus () const
 $method=|bool|gotFocus|
 
-/*
-bool lostFocus () const
-*/
+$prototype=bool lostFocus () const
 $method=|bool|lostFocus|
 
-/*
-Qt::FocusReason reason () const
-*/
+$prototype=Qt::FocusReason reason () const
 $method=|Qt::FocusReason|reason|
 
 #pragma ENDDUMP

@@ -36,24 +36,16 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-static bool isActive ()
-*/
+$prototype=static bool isActive ()
 $staticMethod=|bool|isActive|
 
-/*
-static QAccessibleInterface * queryAccessibleInterface ( QObject * object )
-*/
+$prototype=static QAccessibleInterface * queryAccessibleInterface ( QObject * object )
 $staticMethod=|QAccessibleInterface *|queryAccessibleInterface|QObject *
 
-/*
-static void setRootObject ( QObject * object )
-*/
+$prototype=static void setRootObject ( QObject * object )
 $staticMethod=|void|setRootObject|QObject *
 
-/*
-static void updateAccessibility ( QObject * object, int child, Event reason )
-*/
+$prototype=static void updateAccessibility ( QObject * object, int child, Event reason )
 $staticMethod=|void|updateAccessibility|QObject *,int,QAccessible::Event
 
 $extraMethods

@@ -48,14 +48,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QGlyphRun ()
-*/
+$prototype=QGlyphRun ()
 $internalConstructor=|new1|
 
-/*
-QGlyphRun ( const QGlyphRun & other )
-*/
+$prototype=QGlyphRun ( const QGlyphRun & other )
 $internalConstructor=|new2|const QGlyphRun &
 
 //[1]QGlyphRun ()
@@ -79,14 +75,10 @@ HB_FUNC_STATIC( QGLYPHRUN_NEW )
 
 $deleteMethod
 
-/*
-void clear ()
-*/
+$prototype=void clear ()
 $method=|void|clear|
 
-/*
-QVector<quint32> glyphIndexes () const
-*/
+$prototype=QVector<quint32> glyphIndexes () const
 HB_FUNC_STATIC( QGLYPHRUN_GLYPHINDEXES )
 {
   QGlyphRun * obj = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -106,14 +98,10 @@ HB_FUNC_STATIC( QGLYPHRUN_GLYPHINDEXES )
   }
 }
 
-/*
-bool overline () const
-*/
+$prototype=bool overline () const
 $method=|bool|overline|
 
-/*
-QVector<QPointF> positions () const
-*/
+$prototype=QVector<QPointF> positions () const
 HB_FUNC_STATIC( QGLYPHRUN_POSITIONS )
 {
   QGlyphRun * obj = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -149,14 +137,10 @@ HB_FUNC_STATIC( QGLYPHRUN_POSITIONS )
   }
 }
 
-/*
-QRawFont rawFont () const
-*/
+$prototype=QRawFont rawFont () const
 $method=|QRawFont|rawFont|
 
-/*
-void setGlyphIndexes ( const QVector<quint32> & glyphIndexes )
-*/
+$prototype=void setGlyphIndexes ( const QVector<quint32> & glyphIndexes )
 HB_FUNC_STATIC( QGLYPHRUN_SETGLYPHINDEXES )
 {
   QGlyphRun * obj = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -179,14 +163,10 @@ HB_FUNC_STATIC( QGLYPHRUN_SETGLYPHINDEXES )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setOverline ( bool overline )
-*/
+$prototype=void setOverline ( bool overline )
 $method=|void|setOverline|bool
 
-/*
-void setPositions ( const QVector<QPointF> & positions )
-*/
+$prototype=void setPositions ( const QVector<QPointF> & positions )
 HB_FUNC_STATIC( QGLYPHRUN_SETPOSITIONS )
 {
   QGlyphRun * obj = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -207,29 +187,19 @@ HB_FUNC_STATIC( QGLYPHRUN_SETPOSITIONS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setRawFont ( const QRawFont & rawFont )
-*/
+$prototype=void setRawFont ( const QRawFont & rawFont )
 $method=|void|setRawFont|const QRawFont &
 
-/*
-void setStrikeOut ( bool strikeOut )
-*/
+$prototype=void setStrikeOut ( bool strikeOut )
 $method=|void|setStrikeOut|bool
 
-/*
-void setUnderline ( bool underline )
-*/
+$prototype=void setUnderline ( bool underline )
 $method=|void|setUnderline|bool
 
-/*
-bool strikeOut () const
-*/
+$prototype=bool strikeOut () const
 $method=|bool|strikeOut|
 
-/*
-bool underline () const
-*/
+$prototype=bool underline () const
 $method=|bool|underline|
 
 $extraMethods

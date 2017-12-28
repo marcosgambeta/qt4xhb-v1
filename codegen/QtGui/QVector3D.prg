@@ -15,18 +15,9 @@ CLASS QVector3D
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
-   METHOD new6
-   METHOD new7
    METHOD new
    METHOD delete
    METHOD distanceToLine
-   METHOD distanceToPlane1
-   METHOD distanceToPlane2
    METHOD distanceToPlane
    METHOD isNull
    METHOD length
@@ -45,8 +36,6 @@ CLASS QVector3D
    METHOD z
    METHOD crossProduct
    METHOD dotProduct
-   METHOD normal1
-   METHOD normal2
    METHOD normal
 
    METHOD newFrom
@@ -72,40 +61,26 @@ $destructor
 #include <QVector2D>
 #include <QVector4D>
 
-/*
-QVector3D ()
-*/
-$constructor=|new1|
+$prototype=QVector3D ()
+$internalConstructor=|new1|
 
-/*
-QVector3D ( qreal xpos, qreal ypos, qreal zpos )
-*/
-$constructor=|new2|qreal,qreal,qreal
+$prototype=QVector3D ( qreal xpos, qreal ypos, qreal zpos )
+$internalConstructor=|new2|qreal,qreal,qreal
 
-/*
-QVector3D ( const QPoint & point )
-*/
-$constructor=|new3|const QPoint &
+$prototype=QVector3D ( const QPoint & point )
+$internalConstructor=|new3|const QPoint &
 
-/*
-QVector3D ( const QPointF & point )
-*/
-$constructor=|new4|const QPointF &
+$prototype=QVector3D ( const QPointF & point )
+$internalConstructor=|new4|const QPointF &
 
-/*
-QVector3D ( const QVector2D & vector )
-*/
-$constructor=|new5|const QVector2D &
+$prototype=QVector3D ( const QVector2D & vector )
+$internalConstructor=|new5|const QVector2D &
 
-/*
-QVector3D ( const QVector2D & vector, qreal zpos )
-*/
-$constructor=|new6|const QVector2D &,qreal
+$prototype=QVector3D ( const QVector2D & vector, qreal zpos )
+$internalConstructor=|new6|const QVector2D &,qreal
 
-/*
-QVector3D ( const QVector4D & vector )
-*/
-$constructor=|new7|const QVector4D &
+$prototype=QVector3D ( const QVector4D & vector )
+$internalConstructor=|new7|const QVector4D &
 
 //[1]QVector3D ()
 //[2]QVector3D ( qreal xpos, qreal ypos, qreal zpos )
@@ -119,31 +94,31 @@ HB_FUNC_STATIC( QVECTOR3D_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QVECTOR3D_NEW1 );
+    QVector3D_new1();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QVECTOR3D_NEW2 );
+    QVector3D_new2();
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QVECTOR3D_NEW3 );
+    QVector3D_new3();
   }
   else if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    HB_FUNC_EXEC( QVECTOR3D_NEW4 );
+    QVector3D_new4();
   }
   else if( ISNUMPAR(1) && ISQVECTOR2D(1) )
   {
-    HB_FUNC_EXEC( QVECTOR3D_NEW5 );
+    QVector3D_new5();
   }
   else if( ISNUMPAR(2) && ISQVECTOR2D(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QVECTOR3D_NEW6 );
+    QVector3D_new6();
   }
   else if( ISNUMPAR(1) && ISQVECTOR4D(1) )
   {
-    HB_FUNC_EXEC( QVECTOR3D_NEW7 );
+    QVector3D_new7();
   }
   else
   {
@@ -153,20 +128,14 @@ HB_FUNC_STATIC( QVECTOR3D_NEW )
 
 $deleteMethod
 
-/*
-qreal distanceToLine ( const QVector3D & point, const QVector3D & direction ) const
-*/
+$prototype=qreal distanceToLine ( const QVector3D & point, const QVector3D & direction ) const
 $method=|qreal|distanceToLine|const QVector3D &,const QVector3D &
 
-/*
-qreal distanceToPlane ( const QVector3D & plane, const QVector3D & normal ) const
-*/
-$method=|qreal|distanceToPlane,distanceToPlane1|const QVector3D &,const QVector3D &
+$prototype=qreal distanceToPlane ( const QVector3D & plane, const QVector3D & normal ) const
+$internalMethod=|qreal|distanceToPlane,distanceToPlane1|const QVector3D &,const QVector3D &
 
-/*
-qreal distanceToPlane ( const QVector3D & plane1, const QVector3D & plane2, const QVector3D & plane3 ) const
-*/
-$method=|qreal|distanceToPlane,distanceToPlane2|const QVector3D &,const QVector3D &,const QVector3D &
+$prototype=qreal distanceToPlane ( const QVector3D & plane1, const QVector3D & plane2, const QVector3D & plane3 ) const
+$internalMethod=|qreal|distanceToPlane,distanceToPlane2|const QVector3D &,const QVector3D &,const QVector3D &
 
 //[1]qreal distanceToPlane ( const QVector3D & plane, const QVector3D & normal ) const
 //[2]qreal distanceToPlane ( const QVector3D & plane1, const QVector3D & plane2, const QVector3D & plane3 ) const
@@ -175,11 +144,11 @@ HB_FUNC_STATIC( QVECTOR3D_DISTANCETOPLANE )
 {
   if( ISNUMPAR(2) && ISQVECTOR3D(1) && ISQVECTOR3D(2) )
   {
-    HB_FUNC_EXEC( QVECTOR3D_DISTANCETOPLANE1 );
+    QVector3D_distanceToPlane1();
   }
   else if( ISNUMPAR(3) && ISQVECTOR3D(1) && ISQVECTOR3D(2) && ISQVECTOR3D(3) )
   {
-    HB_FUNC_EXEC( QVECTOR3D_DISTANCETOPLANE2 );
+    QVector3D_distanceToPlane2();
   }
   else
   {
@@ -187,100 +156,62 @@ HB_FUNC_STATIC( QVECTOR3D_DISTANCETOPLANE )
   }
 }
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-qreal length () const
-*/
+$prototype=qreal length () const
 $method=|qreal|length|
 
-/*
-qreal lengthSquared () const
-*/
+$prototype=qreal lengthSquared () const
 $method=|qreal|lengthSquared|
 
-/*
-void normalize ()
-*/
+$prototype=void normalize ()
 $method=|void|normalize|
 
-/*
-QVector3D normalized () const
-*/
+$prototype=QVector3D normalized () const
 $method=|QVector3D|normalized|
 
-/*
-void setX ( qreal x )
-*/
+$prototype=void setX ( qreal x )
 $method=|void|setX|qreal
 
-/*
-void setY ( qreal y )
-*/
+$prototype=void setY ( qreal y )
 $method=|void|setY|qreal
 
-/*
-void setZ ( qreal z )
-*/
+$prototype=void setZ ( qreal z )
 $method=|void|setZ|qreal
 
-/*
-QPoint toPoint () const
-*/
+$prototype=QPoint toPoint () const
 $method=|QPoint|toPoint|
 
-/*
-QPointF toPointF () const
-*/
+$prototype=QPointF toPointF () const
 $method=|QPointF|toPointF|
 
-/*
-QVector2D toVector2D () const
-*/
+$prototype=QVector2D toVector2D () const
 $method=|QVector2D|toVector2D|
 
-/*
-QVector4D toVector4D () const
-*/
+$prototype=QVector4D toVector4D () const
 $method=|QVector4D|toVector4D|
 
-/*
-qreal x () const
-*/
+$prototype=qreal x () const
 $method=|qreal|x|
 
-/*
-qreal y () const
-*/
+$prototype=qreal y () const
 $method=|qreal|y|
 
-/*
-qreal z () const
-*/
+$prototype=qreal z () const
 $method=|qreal|z|
 
-/*
-static QVector3D crossProduct ( const QVector3D & v1, const QVector3D & v2 )
-*/
+$prototype=static QVector3D crossProduct ( const QVector3D & v1, const QVector3D & v2 )
 $staticMethod=|QVector3D|crossProduct|const QVector3D &,const QVector3D &
 
-/*
-static qreal dotProduct ( const QVector3D & v1, const QVector3D & v2 )
-*/
+$prototype=static qreal dotProduct ( const QVector3D & v1, const QVector3D & v2 )
 $staticMethod=|qreal|dotProduct|const QVector3D &,const QVector3D &
 
-/*
-static QVector3D normal ( const QVector3D & v1, const QVector3D & v2 )
-*/
-$staticMethod=|QVector3D|normal,normal1|const QVector3D &,const QVector3D &
+$prototype=static QVector3D normal ( const QVector3D & v1, const QVector3D & v2 )
+$internalStaticMethod=|QVector3D|normal,normal1|const QVector3D &,const QVector3D &
 
-/*
-static QVector3D normal ( const QVector3D & v1, const QVector3D & v2, const QVector3D & v3 )
-*/
-$staticMethod=|QVector3D|normal,normal2|const QVector3D &,const QVector3D &,const QVector3D &
+$prototype=static QVector3D normal ( const QVector3D & v1, const QVector3D & v2, const QVector3D & v3 )
+$internalStaticMethod=|QVector3D|normal,normal2|const QVector3D &,const QVector3D &,const QVector3D &
 
 //[1]QVector3D normal ( const QVector3D & v1, const QVector3D & v2 )
 //[2]QVector3D normal ( const QVector3D & v1, const QVector3D & v2, const QVector3D & v3 )
@@ -289,11 +220,11 @@ HB_FUNC_STATIC( QVECTOR3D_NORMAL )
 {
   if( ISNUMPAR(2) && ISQVECTOR3D(1) && ISQVECTOR3D(2) )
   {
-    HB_FUNC_EXEC( QVECTOR3D_NORMAL1 );
+    QVector3D_normal1();
   }
   else if( ISNUMPAR(3) && ISQVECTOR3D(1) && ISQVECTOR3D(2) && ISQVECTOR3D(3) )
   {
-    HB_FUNC_EXEC( QVECTOR3D_NORMAL2 );
+    QVector3D_normal2();
   }
   else
   {
@@ -301,7 +232,7 @@ HB_FUNC_STATIC( QVECTOR3D_NORMAL )
   }
 }
 
-// TODO: implementar função
+// TODO: implementar função ?
 // bool qFuzzyCompare ( const QVector3D & v1, const QVector3D & v2 )
 
 $extraMethods

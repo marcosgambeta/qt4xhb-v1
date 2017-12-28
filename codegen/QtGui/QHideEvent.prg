@@ -21,9 +21,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QHideEvent ()
-*/
+$prototype=QHideEvent ()
 HB_FUNC_STATIC( QHIDEEVENT_NEW )
 {
   QHideEvent * o = new QHideEvent ();

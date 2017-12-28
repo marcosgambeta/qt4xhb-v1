@@ -22,9 +22,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QWhatsThisClickedEvent(const QString &href)
-*/
+$prototype=QWhatsThisClickedEvent(const QString &href)
 HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_NEW )
 {
   QWhatsThisClickedEvent * o = new QWhatsThisClickedEvent ( PQSTRING(1) );
@@ -33,9 +31,7 @@ HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_NEW )
 
 $deleteMethod
 
-/*
-QString href() const
-*/
+$prototype=QString href() const
 $method=|QString|href|
 
 #pragma ENDDUMP

@@ -43,61 +43,39 @@ $destructor
 
 #include <QItemSelection>
 
-/*
-QIdentityProxyModel ( QObject * parent = 0 )
-*/
+$prototype=QIdentityProxyModel ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const
-*/
+$prototype=virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const
 $virtualMethod=|int|columnCount|const QModelIndex &=QModelIndex()
 
-/*
-virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
-*/
+$prototype=virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
 $virtualMethod=|bool|dropMimeData|const QMimeData *,Qt::DropAction,int,int,const QModelIndex &
 
-/*
-virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
-*/
+$prototype=virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 $virtualMethod=|QModelIndex|index|int,int,const QModelIndex &=QModelIndex()
 
-/*
-virtual bool insertColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
-*/
+$prototype=virtual bool insertColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
 $virtualMethod=|bool|insertColumns|int,int,const QModelIndex &=QModelIndex()
 
-/*
-virtual bool insertRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
-*/
+$prototype=virtual bool insertRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
 $virtualMethod=|bool|insertRows|int,int,const QModelIndex &=QModelIndex()
 
-/*
-virtual QModelIndex mapFromSource ( const QModelIndex & sourceIndex ) const
-*/
+$prototype=virtual QModelIndex mapFromSource ( const QModelIndex & sourceIndex ) const
 $virtualMethod=|QModelIndex|mapFromSource|const QModelIndex &
 
-/*
-virtual QItemSelection mapSelectionFromSource ( const QItemSelection & selection ) const
-*/
+$prototype=virtual QItemSelection mapSelectionFromSource ( const QItemSelection & selection ) const
 $virtualMethod=|QItemSelection|mapSelectionFromSource|const QItemSelection &
 
-/*
-virtual QItemSelection mapSelectionToSource ( const QItemSelection & selection ) const
-*/
+$prototype=virtual QItemSelection mapSelectionToSource ( const QItemSelection & selection ) const
 $virtualMethod=|QItemSelection|mapSelectionToSource|const QItemSelection &
 
-/*
-virtual QModelIndex mapToSource ( const QModelIndex & proxyIndex ) const
-*/
+$prototype=virtual QModelIndex mapToSource ( const QModelIndex & proxyIndex ) const
 $virtualMethod=|QModelIndex|mapToSource|const QModelIndex &
 
-/*
-virtual QModelIndexList match ( const QModelIndex & start, int role, const QVariant & value, int hits = 1, Qt::MatchFlags flags = Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) const
-*/
+$prototype=virtual QModelIndexList match ( const QModelIndex & start, int role, const QVariant & value, int hits = 1, Qt::MatchFlags flags = Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) const
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MATCH )
 {
   QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -134,29 +112,19 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MATCH )
   }
 }
 
-/*
-virtual QModelIndex parent ( const QModelIndex & child ) const
-*/
+$prototype=virtual QModelIndex parent ( const QModelIndex & child ) const
 $virtualMethod=|QModelIndex|parent|const QModelIndex &
 
-/*
-virtual bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
-*/
+$prototype=virtual bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
 $virtualMethod=|bool|removeColumns|int,int,const QModelIndex &=QModelIndex()
 
-/*
-virtual bool removeRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
-*/
+$prototype=virtual bool removeRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
 $virtualMethod=|bool|removeRows|int,int,const QModelIndex &=QModelIndex()
 
-/*
-virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const
-*/
+$prototype=virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const
 $virtualMethod=|int|rowCount|const QModelIndex &=QModelIndex()
 
-/*
-virtual void setSourceModel ( QAbstractItemModel * newSourceModel )
-*/
+$prototype=virtual void setSourceModel ( QAbstractItemModel * newSourceModel )
 $virtualMethod=|void|setSourceModel|QAbstractItemModel *
 
 #pragma ENDDUMP

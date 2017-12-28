@@ -21,9 +21,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QDragLeaveEvent ()
-*/
+$prototype=QDragLeaveEvent ()
 HB_FUNC_STATIC( QDRAGLEAVEEVENT_NEW )
 {
   QDragLeaveEvent * o = new QDragLeaveEvent ();

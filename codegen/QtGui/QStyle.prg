@@ -68,79 +68,49 @@ $destructor
 
 $deleteMethod
 
-/*
-int combinedLayoutSpacing ( QSizePolicy::ControlTypes controls1, QSizePolicy::ControlTypes controls2, Qt::Orientation orientation, QStyleOption * option = 0, QWidget * widget = 0 ) const
-*/
+$prototype=int combinedLayoutSpacing ( QSizePolicy::ControlTypes controls1, QSizePolicy::ControlTypes controls2, Qt::Orientation orientation, QStyleOption * option = 0, QWidget * widget = 0 ) const
 $method=|int|combinedLayoutSpacing|QSizePolicy::ControlTypes,QSizePolicy::ControlTypes,Qt::Orientation,QStyleOption *=0,QWidget *=0
 
-/*
-virtual void drawComplexControl ( ComplexControl control, const QStyleOptionComplex * option, QPainter * painter, const QWidget * widget = 0 ) const = 0
-*/
+$prototype=virtual void drawComplexControl ( ComplexControl control, const QStyleOptionComplex * option, QPainter * painter, const QWidget * widget = 0 ) const = 0
 $virtualMethod=|void|drawComplexControl|QStyle::ComplexControl,const QStyleOptionComplex *,QPainter *,const QWidget *=0
 
-/*
-virtual void drawControl ( ControlElement element, const QStyleOption * option, QPainter * painter, const QWidget * widget = 0 ) const = 0
-*/
+$prototype=virtual void drawControl ( ControlElement element, const QStyleOption * option, QPainter * painter, const QWidget * widget = 0 ) const = 0
 $virtualMethod=|void|drawControl|QStyle::ControlElement,const QStyleOption *,QPainter *,const QWidget *=0
 
-/*
-virtual void drawItemPixmap ( QPainter * painter, const QRect & rectangle, int alignment, const QPixmap & pixmap ) const
-*/
+$prototype=virtual void drawItemPixmap ( QPainter * painter, const QRect & rectangle, int alignment, const QPixmap & pixmap ) const
 $virtualMethod=|void|drawItemPixmap|QPainter *,const QRect &,int,const QPixmap &
 
-/*
-virtual void drawItemText ( QPainter * painter, const QRect & rectangle, int alignment, const QPalette & palette, bool enabled, const QString & text, QPalette::ColorRole textRole = QPalette::NoRole ) const
-*/
+$prototype=virtual void drawItemText ( QPainter * painter, const QRect & rectangle, int alignment, const QPalette & palette, bool enabled, const QString & text, QPalette::ColorRole textRole = QPalette::NoRole ) const
 $virtualMethod=|void|drawItemText|QPainter *,const QRect &,int,const QPalette &,bool,const QString &,QPalette::ColorRole=QPalette::NoRole
 
-/*
-virtual void drawPrimitive ( PrimitiveElement element, const QStyleOption * option, QPainter * painter, const QWidget * widget = 0 ) const = 0
-*/
+$prototype=virtual void drawPrimitive ( PrimitiveElement element, const QStyleOption * option, QPainter * painter, const QWidget * widget = 0 ) const = 0
 $virtualMethod=|void|drawPrimitive|QStyle::PrimitiveElement,const QStyleOption *,QPainter *,const QWidget *=0
 
-/*
-virtual QPixmap generatedIconPixmap ( QIcon::Mode iconMode, const QPixmap & pixmap, const QStyleOption * option ) const = 0
-*/
+$prototype=virtual QPixmap generatedIconPixmap ( QIcon::Mode iconMode, const QPixmap & pixmap, const QStyleOption * option ) const = 0
 $virtualMethod=|QPixmap|generatedIconPixmap|QIcon::Mode,const QPixmap &,const QStyleOption *
 
-/*
-virtual SubControl hitTestComplexControl ( ComplexControl control, const QStyleOptionComplex * option, const QPoint & position, const QWidget * widget = 0 ) const = 0
-*/
+$prototype=virtual SubControl hitTestComplexControl ( ComplexControl control, const QStyleOptionComplex * option, const QPoint & position, const QWidget * widget = 0 ) const = 0
 $virtualMethod=|QStyle::SubControl|hitTestComplexControl|QStyle::ComplexControl,const QStyleOptionComplex *,const QPoint &,const QWidget *=0
 
-/*
-virtual QRect itemPixmapRect ( const QRect & rectangle, int alignment, const QPixmap & pixmap ) const
-*/
+$prototype=virtual QRect itemPixmapRect ( const QRect & rectangle, int alignment, const QPixmap & pixmap ) const
 $virtualMethod=|QRect|itemPixmapRect|const QRect &,int,const QPixmap &
 
-/*
-virtual QRect itemTextRect ( const QFontMetrics & metrics, const QRect & rectangle, int alignment, bool enabled, const QString & text ) const
-*/
+$prototype=virtual QRect itemTextRect ( const QFontMetrics & metrics, const QRect & rectangle, int alignment, bool enabled, const QString & text ) const
 $virtualMethod=|QRect|itemTextRect|const QFontMetrics &,const QRect &,int,bool,const QString &
 
-/*
-int layoutSpacing ( QSizePolicy::ControlType control1, QSizePolicy::ControlType control2, Qt::Orientation orientation, const QStyleOption * option = 0, const QWidget * widget = 0 ) const
-*/
+$prototype=int layoutSpacing ( QSizePolicy::ControlType control1, QSizePolicy::ControlType control2, Qt::Orientation orientation, const QStyleOption * option = 0, const QWidget * widget = 0 ) const
 $method=|int|layoutSpacing|QSizePolicy::ControlType,QSizePolicy::ControlType,Qt::Orientation,const QStyleOption *=0,const QWidget *=0
 
-/*
-virtual int pixelMetric ( PixelMetric metric, const QStyleOption * option = 0, const QWidget * widget = 0 ) const = 0
-*/
+$prototype=virtual int pixelMetric ( PixelMetric metric, const QStyleOption * option = 0, const QWidget * widget = 0 ) const = 0
 $virtualMethod=|int|pixelMetric|QStyle::PixelMetric,const QStyleOption *=0,const QWidget *=0
 
-/*
-virtual void polish ( QWidget * widget )
-*/
+$prototype=virtual void polish ( QWidget * widget )
 $virtualMethod=|void|polish,polish1|QWidget *
 
-/*
-virtual void polish ( QApplication * application )
-*/
+$prototype=virtual void polish ( QApplication * application )
 $virtualMethod=|void|polish,polish2|QApplication *
 
-/*
-virtual void polish ( QPalette & palette )
-*/
+$prototype=virtual void polish ( QPalette & palette )
 $virtualMethod=|void|polish,polish3|QPalette &
 
 //[1]virtual void polish ( QWidget * widget )
@@ -167,49 +137,31 @@ HB_FUNC_STATIC( QSTYLE_POLISH )
   }
 }
 
-/*
-const QStyle * proxy () const
-*/
+$prototype=const QStyle * proxy () const
 $method=|const QStyle *|proxy|
 
-/*
-virtual QSize sizeFromContents ( ContentsType type, const QStyleOption * option, const QSize & contentsSize, const QWidget * widget = 0 ) const = 0
-*/
+$prototype=virtual QSize sizeFromContents ( ContentsType type, const QStyleOption * option, const QSize & contentsSize, const QWidget * widget = 0 ) const = 0
 $virtualMethod=|QSize|sizeFromContents|QStyle::ContentsType,const QStyleOption *,const QSize &,const QWidget *=0
 
-/*
-QIcon standardIcon ( StandardPixmap standardIcon, const QStyleOption * option = 0, const QWidget * widget = 0 ) const
-*/
+$prototype=QIcon standardIcon ( StandardPixmap standardIcon, const QStyleOption * option = 0, const QWidget * widget = 0 ) const
 $method=|QIcon|standardIcon|QStyle::StandardPixmap,const QStyleOption *=0,const QWidget *=0
 
-/*
-virtual QPalette standardPalette () const
-*/
+$prototype=virtual QPalette standardPalette () const
 $virtualMethod=|QPalette|standardPalette|
 
-/*
-virtual int styleHint ( StyleHint hint, const QStyleOption * option = 0, const QWidget * widget = 0, QStyleHintReturn * returnData = 0 ) const = 0
-*/
+$prototype=virtual int styleHint ( StyleHint hint, const QStyleOption * option = 0, const QWidget * widget = 0, QStyleHintReturn * returnData = 0 ) const = 0
 $virtualMethod=|int|styleHint|QStyle::StyleHint,const QStyleOption *=0,const QWidget *=0,QStyleHintReturn *=0
 
-/*
-virtual QRect subControlRect ( ComplexControl control, const QStyleOptionComplex * option, SubControl subControl, const QWidget * widget = 0 ) const = 0
-*/
+$prototype=virtual QRect subControlRect ( ComplexControl control, const QStyleOptionComplex * option, SubControl subControl, const QWidget * widget = 0 ) const = 0
 $virtualMethod=|QRect|subControlRect|QStyle::ComplexControl,const QStyleOptionComplex *,QStyle::SubControl,const QWidget *=0
 
-/*
-virtual QRect subElementRect ( SubElement element, const QStyleOption * option, const QWidget * widget = 0 ) const = 0
-*/
+$prototype=virtual QRect subElementRect ( SubElement element, const QStyleOption * option, const QWidget * widget = 0 ) const = 0
 $virtualMethod=|QRect|subElementRect|QStyle::SubElement,const QStyleOption *,const QWidget *=0
 
-/*
-virtual void unpolish ( QWidget * widget )
-*/
+$prototype=virtual void unpolish ( QWidget * widget )
 $virtualMethod=|void|unpolish,unpolish1|QWidget *
 
-/*
-virtual void unpolish ( QApplication * application )
-*/
+$prototype=virtual void unpolish ( QApplication * application )
 $virtualMethod=|void|unpolish,unpolish2|QApplication *
 
 //[1]virtual void unpolish ( QWidget * widget )
@@ -231,34 +183,22 @@ HB_FUNC_STATIC( QSTYLE_UNPOLISH )
   }
 }
 
-/*
-QRect alignedRect ( Qt::LayoutDirection direction, Qt::Alignment alignment, const QSize & size, const QRect & rectangle )
-*/
+$prototype=QRect alignedRect ( Qt::LayoutDirection direction, Qt::Alignment alignment, const QSize & size, const QRect & rectangle )
 $method=|QRect|alignedRect|Qt::LayoutDirection,Qt::Alignment,const QSize &,const QRect &
 
-/*
-static int sliderPositionFromValue ( int min, int max, int logicalValue, int span, bool upsideDown = false )
-*/
+$prototype=static int sliderPositionFromValue ( int min, int max, int logicalValue, int span, bool upsideDown = false )
 $staticMethod=|int|sliderPositionFromValue|int,int,int,int,bool=false
 
-/*
-static int sliderValueFromPosition ( int min, int max, int position, int span, bool upsideDown = false )
-*/
+$prototype=static int sliderValueFromPosition ( int min, int max, int position, int span, bool upsideDown = false )
 $staticMethod=|int|sliderValueFromPosition|int,int,int,int,bool=false
 
-/*
-static Qt::Alignment visualAlignment ( Qt::LayoutDirection direction, Qt::Alignment alignment )
-*/
+$prototype=static Qt::Alignment visualAlignment ( Qt::LayoutDirection direction, Qt::Alignment alignment )
 $staticMethod=|Qt::Alignment|visualAlignment|Qt::LayoutDirection,Qt::Alignment
 
-/*
-static QPoint visualPos ( Qt::LayoutDirection direction, const QRect & boundingRectangle, const QPoint & logicalPosition )
-*/
+$prototype=static QPoint visualPos ( Qt::LayoutDirection direction, const QRect & boundingRectangle, const QPoint & logicalPosition )
 $staticMethod=|QPoint|visualPos|Qt::LayoutDirection,const QRect &,const QPoint &
 
-/*
-static QRect visualRect ( Qt::LayoutDirection direction, const QRect & boundingRectangle, const QRect & logicalRectangle )
-*/
+$prototype=static QRect visualRect ( Qt::LayoutDirection direction, const QRect & boundingRectangle, const QRect & logicalRectangle )
 $staticMethod=|QRect|visualRect|Qt::LayoutDirection,const QRect &,const QRect &
 
 #pragma ENDDUMP

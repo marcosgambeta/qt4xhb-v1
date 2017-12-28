@@ -40,29 +40,19 @@ $destructor
 
 $deleteMethod
 
-/*
-QInputContext * create ( const QString & key, QObject * parent )
-*/
+$prototype=QInputContext * create ( const QString & key, QObject * parent )
 $method=|QInputContext *|create|const QString &,QObject *
 
-/*
-static QString description ( const QString & key )
-*/
+$prototype=static QString description ( const QString & key )
 $staticMethod=|QString|description|const QString &
 
-/*
-static QString displayName ( const QString & key )
-*/
+$prototype=static QString displayName ( const QString & key )
 $staticMethod=|QString|displayName|const QString &
 
-/*
-static QStringList keys ()
-*/
+$prototype=static QStringList keys ()
 $staticMethod=|QStringList|keys|
 
-/*
-static QStringList languages ( const QString & key )
-*/
+$prototype=static QStringList languages ( const QString & key )
 $staticMethod=|QStringList|languages|const QString &
 
 $extraMethods

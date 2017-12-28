@@ -32,9 +32,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QGraphicsColorizeEffect ( QObject * parent = 0 )
-*/
+$prototype=QGraphicsColorizeEffect ( QObject * parent = 0 )
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_NEW )
 {
   QGraphicsColorizeEffect * o = new QGraphicsColorizeEffect ( OPQOBJECT(1,0) );
@@ -43,24 +41,16 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_NEW )
 
 $deleteMethod
 
-/*
-QColor color () const
-*/
+$prototype=QColor color () const
 $method=|QColor|color|
 
-/*
-qreal strength () const
-*/
+$prototype=qreal strength () const
 $method=|qreal|strength|
 
-/*
-void setColor ( const QColor & c )
-*/
+$prototype=void setColor ( const QColor & c )
 $method=|void|setColor|const QColor &
 
-/*
-void setStrength ( qreal strength )
-*/
+$prototype=void setStrength ( qreal strength )
 $method=|void|setStrength|qreal
 
 #pragma ENDDUMP

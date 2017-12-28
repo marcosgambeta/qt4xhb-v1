@@ -35,9 +35,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QFontComboBox ( QWidget * parent = 0 )
-*/
+$prototype=QFontComboBox ( QWidget * parent = 0 )
 HB_FUNC_STATIC( QFONTCOMBOBOX_NEW )
 {
   QFontComboBox * o = new QFontComboBox ( OPQWIDGET(1,0) );
@@ -46,39 +44,25 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_NEW )
 
 $deleteMethod
 
-/*
-QFont currentFont () const
-*/
+$prototype=QFont currentFont () const
 $method=|QFont|currentFont|
 
-/*
-FontFilters fontFilters () const
-*/
+$prototype=FontFilters fontFilters () const
 $method=|QFontComboBox::FontFilters|fontFilters|
 
-/*
-void setFontFilters ( FontFilters filters )
-*/
+$prototype=void setFontFilters ( FontFilters filters )
 $method=|void|setFontFilters|QFontComboBox::FontFilters
 
-/*
-void setWritingSystem ( QFontDatabase::WritingSystem script )
-*/
+$prototype=void setWritingSystem ( QFontDatabase::WritingSystem script )
 $method=|void|setWritingSystem|QFontDatabase::WritingSystem
 
-/*
-QFontDatabase::WritingSystem writingSystem () const
-*/
+$prototype=QFontDatabase::WritingSystem writingSystem () const
 $method=|QFontDatabase::WritingSystem|writingSystem|
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $virtualMethod=|QSize|sizeHint|
 
-/*
-void setCurrentFont ( const QFont & font )
-*/
+$prototype=void setCurrentFont ( const QFont & font )
 $method=|void|setCurrentFont|const QFont &
 
 #pragma ENDDUMP

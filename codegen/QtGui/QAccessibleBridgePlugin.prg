@@ -28,14 +28,10 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual QAccessibleBridge * create ( const QString & key ) = 0
-*/
+$prototype=virtual QAccessibleBridge * create ( const QString & key ) = 0
 $virtualMethod=|QAccessibleBridge *|create|const QString &
 
-/*
-virtual QStringList keys () const = 0
-*/
+$prototype=virtual QStringList keys () const = 0
 $virtualMethod=|QStringList|keys|
 
 #pragma ENDDUMP

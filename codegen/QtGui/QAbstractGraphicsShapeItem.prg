@@ -37,34 +37,22 @@ $destructor
 
 $deleteMethod
 
-/*
-QBrush brush () const
-*/
+$prototype=QBrush brush () const
 $method=|QBrush|brush|
 
-/*
-QPen pen () const
-*/
+$prototype=QPen pen () const
 $method=|QPen|pen|
 
-/*
-void setBrush ( const QBrush & brush )
-*/
+$prototype=void setBrush ( const QBrush & brush )
 $method=|void|setBrush|const QBrush &
 
-/*
-void setPen ( const QPen & pen )
-*/
+$prototype=void setPen ( const QPen & pen )
 $method=|void|setPen|const QPen &
 
-/*
-virtual bool isObscuredBy ( const QGraphicsItem * item ) const
-*/
+$prototype=virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 $virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
 
-/*
-virtual QPainterPath opaqueArea () const
-*/
+$prototype=virtual QPainterPath opaqueArea () const
 $virtualMethod=|QPainterPath|opaqueArea|
 
 #pragma ENDDUMP

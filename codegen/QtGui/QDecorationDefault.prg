@@ -27,9 +27,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QDecorationDefault ()
-*/
+$prototype=QDecorationDefault ()
 HB_FUNC_STATIC( QDECORATIONDEFAULT_NEW )
 {
   QDecorationDefault * o = new QDecorationDefault ();
@@ -38,14 +36,10 @@ HB_FUNC_STATIC( QDECORATIONDEFAULT_NEW )
 
 $deleteMethod
 
-/*
-virtual bool paint ( QPainter * painter, const QWidget * widget, int decorationRegion = All, DecorationState state = Normal )
-*/
+$prototype=virtual bool paint ( QPainter * painter, const QWidget * widget, int decorationRegion = All, DecorationState state = Normal )
 $virtualMethod=|bool|paint|QPainter *,const QWidget *,int=QDecoration::All,QDecoration::DecorationState=QDecoration::Normal
 
-/*
-virtual QRegion region ( const QWidget * widget, const QRect & rect, int decorationRegion = All )
-*/
+$prototype=virtual QRegion region ( const QWidget * widget, const QRect & rect, int decorationRegion = All )
 $virtualMethod=|QRegion|region|const QWidget *,const QRect &,int=QDecoration::All
 
 #pragma ENDDUMP

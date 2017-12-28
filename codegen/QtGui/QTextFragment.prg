@@ -43,14 +43,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QTextFragment ()
-*/
+$prototype=QTextFragment ()
 $internalConstructor=|new1|
 
-/*
-QTextFragment ( const QTextFragment & other )
-*/
+$prototype=QTextFragment ( const QTextFragment & other )
 $internalConstructor=|new2|const QTextFragment &
 
 //[1]QTextFragment ()
@@ -74,24 +70,16 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_NEW )
 
 $deleteMethod
 
-/*
-QTextCharFormat charFormat () const
-*/
+$prototype=QTextCharFormat charFormat () const
 $method=|QTextCharFormat|charFormat|
 
-/*
-int charFormatIndex () const
-*/
+$prototype=int charFormatIndex () const
 $method=|int|charFormatIndex|
 
-/*
-bool contains ( int position ) const
-*/
+$prototype=bool contains ( int position ) const
 $method=|bool|contains|int
 
-/*
-QList<QGlyphRun> glyphRuns () const
-*/
+$prototype=QList<QGlyphRun> glyphRuns () const
 HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
 {
   QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -127,24 +115,16 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
   }
 }
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-int length () const
-*/
+$prototype=int length () const
 $method=|int|length|
 
-/*
-int position () const
-*/
+$prototype=int position () const
 $method=|int|position|
 
-/*
-QString text () const
-*/
+$prototype=QString text () const
 $method=|QString|text|
 
 $extraMethods

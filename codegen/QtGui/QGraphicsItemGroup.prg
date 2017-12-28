@@ -33,9 +33,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QGraphicsItemGroup ( QGraphicsItem * parent = 0 )
-*/
+$prototype=QGraphicsItemGroup ( QGraphicsItem * parent = 0 )
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_NEW )
 {
   QGraphicsItemGroup * o = new QGraphicsItemGroup ( OPQGRAPHICSITEM(1,0) );
@@ -44,39 +42,25 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_NEW )
 
 $deleteMethod
 
-/*
-void addToGroup ( QGraphicsItem * item )
-*/
+$prototype=void addToGroup ( QGraphicsItem * item )
 $method=|void|addToGroup|QGraphicsItem *
 
-/*
-void removeFromGroup ( QGraphicsItem * item )
-*/
+$prototype=void removeFromGroup ( QGraphicsItem * item )
 $method=|void|removeFromGroup|QGraphicsItem *
 
-/*
-virtual QRectF boundingRect () const
-*/
+$prototype=virtual QRectF boundingRect () const
 $virtualMethod=|QRectF|boundingRect|
 
-/*
-virtual bool isObscuredBy ( const QGraphicsItem * item ) const
-*/
+$prototype=virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 $virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
 
-/*
-virtual QPainterPath opaqueArea () const
-*/
+$prototype=virtual QPainterPath opaqueArea () const
 $virtualMethod=|QPainterPath|opaqueArea|
 
-/*
-virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
-*/
+$prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
 $virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
 
-/*
-virtual int type () const
-*/
+$prototype=virtual int type () const
 $virtualMethod=|int|type|
 
 #pragma ENDDUMP

@@ -38,14 +38,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QMouseEvent(Type type, const QPoint &pos, Qt::MouseButton button,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
-*/
+$prototype=QMouseEvent(Type type, const QPoint &pos, Qt::MouseButton button,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
 $internalConstructor=|new1|QEvent::Type,const QPoint &,Qt::MouseButton,Qt::MouseButtons,Qt::KeyboardModifiers
 
-/*
-QMouseEvent(Type type, const QPoint &pos, const QPoint &globalPos,Qt::MouseButton button, Qt::MouseButtons buttons,Qt::KeyboardModifiers modifiers)
-*/
+$prototype=QMouseEvent(Type type, const QPoint &pos, const QPoint &globalPos,Qt::MouseButton button, Qt::MouseButtons buttons,Qt::KeyboardModifiers modifiers)
 $internalConstructor=|new2|QEvent::Type,const QPoint &,const QPoint &,Qt::MouseButton,Qt::MouseButtons,Qt::KeyboardModifiers
 
 //[1]QMouseEvent(Type type, const QPoint &pos, Qt::MouseButton button,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
@@ -69,59 +65,37 @@ HB_FUNC_STATIC( QMOUSEEVENT_NEW )
 
 $deleteMethod
 
-/*
-const QPoint &pos() const
-*/
+$prototype=const QPoint &pos() const
 $method=|const QPoint &|pos|
 
-/*
-const QPoint &globalPos() const
-*/
+$prototype=const QPoint &globalPos() const
 $method=|const QPoint &|globalPos|
 
-/*
-int x() const
-*/
+$prototype=int x() const
 $method=|int|x|
 
-/*
-int y() const
-*/
+$prototype=int y() const
 $method=|int|y|
 
-/*
-int globalX() const
-*/
+$prototype=int globalX() const
 $method=|int|globalX|
 
-/*
-int globalY() const
-*/
+$prototype=int globalY() const
 $method=|int|globalY|
 
-/*
-Qt::MouseButton button() const
-*/
+$prototype=Qt::MouseButton button() const
 $method=|Qt::MouseButton|button|
 
-/*
-Qt::MouseButtons buttons() const
-*/
+$prototype=Qt::MouseButtons buttons() const
 $method=|Qt::MouseButtons|buttons|
 
-/*
-bool hasExtendedInfo() const
-*/
+$prototype=bool hasExtendedInfo() const
 $method=|bool|hasExtendedInfo|
 
-/*
-QPointF posF() const
-*/
+$prototype=QPointF posF() const
 $method=|QPointF|posF|
 
-/*
-static QMouseEvent *createExtendedMouseEvent(Type type, const QPointF &pos,const QPoint &globalPos, Qt::MouseButton button,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
-*/
+$prototype=static QMouseEvent *createExtendedMouseEvent(Type type, const QPointF &pos,const QPoint &globalPos, Qt::MouseButton button,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
 $staticMethod=|QMouseEvent *|createExtendedMouseEvent|QEvent::Type,const QPointF &,const QPoint &,Qt::MouseButton,Qt::MouseButtons,Qt::KeyboardModifiers
 
 #pragma ENDDUMP

@@ -27,9 +27,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QGraphicsSceneMoveEvent ()
-*/
+$prototype=QGraphicsSceneMoveEvent ()
 HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_NEW )
 {
   QGraphicsSceneMoveEvent * o = new QGraphicsSceneMoveEvent ();
@@ -38,9 +36,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_NEW )
 
 $deleteMethod
 
-/*
-QPointF newPos () const
-*/
+$prototype=QPointF newPos () const
 HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_NEWPOS )
 {
   QGraphicsSceneMoveEvent * obj = (QGraphicsSceneMoveEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -51,9 +47,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_NEWPOS )
   }
 }
 
-/*
-QPointF oldPos () const
-*/
+$prototype=QPointF oldPos () const
 HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_OLDPOS )
 {
   QGraphicsSceneMoveEvent * obj = (QGraphicsSceneMoveEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

@@ -45,9 +45,7 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual QList<QAction *> actions ()
-*/
+$prototype=virtual QList<QAction *> actions ()
 HB_FUNC_STATIC( QINPUTCONTEXT_ACTIONS )
 {
   QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -83,69 +81,43 @@ HB_FUNC_STATIC( QINPUTCONTEXT_ACTIONS )
   }
 }
 
-/*
-virtual bool filterEvent ( const QEvent * event )
-*/
+$prototype=virtual bool filterEvent ( const QEvent * event )
 $virtualMethod=|bool|filterEvent|const QEvent *
 
-/*
-QWidget * focusWidget () const
-*/
+$prototype=QWidget * focusWidget () const
 $method=|QWidget *|focusWidget|
 
-/*
-virtual QFont font () const
-*/
+$prototype=virtual QFont font () const
 $virtualMethod=|QFont|font|
 
-/*
-virtual QString identifierName () = 0
-*/
+$prototype=virtual QString identifierName () = 0
 $virtualMethod=|QString|identifierName|
 
-/*
-virtual bool isComposing () const = 0
-*/
+$prototype=virtual bool isComposing () const = 0
 $virtualMethod=|bool|isComposing|
 
-/*
-virtual QString language () = 0
-*/
+$prototype=virtual QString language () = 0
 $virtualMethod=|QString|language|
 
-/*
-virtual void mouseHandler ( int x, QMouseEvent * event )
-*/
+$prototype=virtual void mouseHandler ( int x, QMouseEvent * event )
 $virtualMethod=|void|mouseHandler|int,QMouseEvent *
 
-/*
-virtual void reset () = 0
-*/
+$prototype=virtual void reset () = 0
 $virtualMethod=|void|reset|
 
-/*
-void sendEvent ( const QInputMethodEvent & event )
-*/
+$prototype=void sendEvent ( const QInputMethodEvent & event )
 $method=|void|sendEvent|const QInputMethodEvent &
 
-/*
-virtual void setFocusWidget ( QWidget * widget )
-*/
+$prototype=virtual void setFocusWidget ( QWidget * widget )
 $virtualMethod=|void|setFocusWidget|QWidget *
 
-/*
-QTextFormat standardFormat ( StandardFormat s ) const
-*/
+$prototype=QTextFormat standardFormat ( StandardFormat s ) const
 $method=|QTextFormat|standardFormat|QInputContext::StandardFormat
 
-/*
-virtual void update ()
-*/
+$prototype=virtual void update ()
 $virtualMethod=|void|update|
 
-/*
-virtual void widgetDestroyed ( QWidget * widget )
-*/
+$prototype=virtual void widgetDestroyed ( QWidget * widget )
 $virtualMethod=|void|widgetDestroyed|QWidget *
 
 #pragma ENDDUMP

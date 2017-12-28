@@ -43,24 +43,16 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual QString actionText ( int action, Text t, int child ) const = 0
-*/
+$prototype=virtual QString actionText ( int action, Text t, int child ) const = 0
 $virtualMethod=|QString|actionText|int,QAccessibleInterface::Text,int
 
-/*
-virtual int childAt ( int x, int y ) const = 0
-*/
+$prototype=virtual int childAt ( int x, int y ) const = 0
 $virtualMethod=|int|childAt|int,int
 
-/*
-virtual int childCount () const = 0
-*/
+$prototype=virtual int childCount () const = 0
 $virtualMethod=|int|childCount|
 
-/*
-virtual bool doAction ( int action, int child, const QVariantList & params = QVariantList() ) = 0
-*/
+$prototype=virtual bool doAction ( int action, int child, const QVariantList & params = QVariantList() ) = 0
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_DOACTION )
 {
   QAccessibleInterface * obj = (QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -79,14 +71,10 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_DOACTION )
   }
 }
 
-/*
-virtual int indexOfChild ( const QAccessibleInterface * child ) const = 0
-*/
+$prototype=virtual int indexOfChild ( const QAccessibleInterface * child ) const = 0
 $virtualMethod=|int|indexOfChild|const QAccessibleInterface *
 
-/*
-QVariant invokeMethod ( Method method, int child = 0, const QVariantList & params = QVariantList() )
-*/
+$prototype=QVariant invokeMethod ( Method method, int child = 0, const QVariantList & params = QVariantList() )
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_INVOKEMETHOD )
 {
   QAccessibleInterface * obj = (QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -107,49 +95,31 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_INVOKEMETHOD )
   }
 }
 
-/*
-virtual bool isValid () const = 0
-*/
+$prototype=virtual bool isValid () const = 0
 $virtualMethod=|bool|isValid|
 
-/*
-virtual QObject * object () const = 0
-*/
+$prototype=virtual QObject * object () const = 0
 $virtualMethod=|QObject *|object|
 
-/*
-virtual QRect rect ( int child ) const = 0
-*/
+$prototype=virtual QRect rect ( int child ) const = 0
 $virtualMethod=|QRect|rect|int
 
-/*
-virtual Relation relationTo ( int child, const QAccessibleInterface * other, int otherChild ) const = 0
-*/
+$prototype=virtual Relation relationTo ( int child, const QAccessibleInterface * other, int otherChild ) const = 0
 $virtualMethod=|QAccessible::Relation|relationTo|int,const QAccessibleInterface *,int
 
-/*
-virtual Role role ( int child ) const = 0
-*/
+$prototype=virtual Role role ( int child ) const = 0
 $virtualMethod=|QAccessible::Role|role|int
 
-/*
-virtual void setText ( Text t, int child, const QString & text ) = 0
-*/
+$prototype=virtual void setText ( Text t, int child, const QString & text ) = 0
 $virtualMethod=|void|setText|QAccessibleInterface::Text,int,const QString &
 
-/*
-virtual State state ( int child ) const = 0
-*/
+$prototype=virtual State state ( int child ) const = 0
 $virtualMethod=|QAccessible::State|state|int
 
-/*
-virtual QString text ( Text t, int child ) const = 0
-*/
+$prototype=virtual QString text ( Text t, int child ) const = 0
 $virtualMethod=|QString|text|QAccessibleInterface::Text,int
 
-/*
-virtual int userActionCount ( int child ) const = 0
-*/
+$prototype=virtual int userActionCount ( int child ) const = 0
 $virtualMethod=|int|userActionCount|int
 
 #pragma ENDDUMP

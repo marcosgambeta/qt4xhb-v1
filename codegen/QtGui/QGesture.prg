@@ -33,9 +33,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QGesture ( QObject * parent = 0 )
-*/
+$prototype=QGesture ( QObject * parent = 0 )
 HB_FUNC_STATIC( QGESTURE_NEW )
 {
   QGesture * o = new QGesture ( OPQOBJECT(1,0) );
@@ -44,44 +42,28 @@ HB_FUNC_STATIC( QGESTURE_NEW )
 
 $deleteMethod
 
-/*
-GestureCancelPolicy gestureCancelPolicy () const
-*/
+$prototype=GestureCancelPolicy gestureCancelPolicy () const
 $method=|QGesture::GestureCancelPolicy|gestureCancelPolicy|
 
-/*
-Qt::GestureType gestureType () const
-*/
+$prototype=Qt::GestureType gestureType () const
 $method=|Qt::GestureType|gestureType|
 
-/*
-bool hasHotSpot () const
-*/
+$prototype=bool hasHotSpot () const
 $method=|bool|hasHotSpot|
 
-/*
-QPointF hotSpot () const
-*/
+$prototype=QPointF hotSpot () const
 $method=|QPointF|hotSpot|
 
-/*
-void setGestureCancelPolicy ( GestureCancelPolicy policy )
-*/
+$prototype=void setGestureCancelPolicy ( GestureCancelPolicy policy )
 $method=|void|setGestureCancelPolicy|QGesture::GestureCancelPolicy
 
-/*
-void setHotSpot ( const QPointF & value )
-*/
+$prototype=void setHotSpot ( const QPointF & value )
 $method=|void|setHotSpot|const QPointF &
 
-/*
-Qt::GestureState state () const
-*/
+$prototype=Qt::GestureState state () const
 $method=|Qt::GestureState|state|
 
-/*
-void unsetHotSpot ()
-*/
+$prototype=void unsetHotSpot ()
 $method=|void|unsetHotSpot|
 
 #pragma ENDDUMP

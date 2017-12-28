@@ -22,9 +22,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QStatusTipEvent(const QString &tip)
-*/
+$prototype=QStatusTipEvent(const QString &tip)
 HB_FUNC_STATIC( QSTATUSTIPEVENT_NEW )
 {
   QStatusTipEvent * o = new QStatusTipEvent ( PQSTRING(1) );
@@ -33,9 +31,7 @@ HB_FUNC_STATIC( QSTATUSTIPEVENT_NEW )
 
 $deleteMethod
 
-/*
-QString tip() const
-*/
+$prototype=QString tip() const
 $method=|QString|tip|
 
 #pragma ENDDUMP

@@ -28,14 +28,10 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual QDecoration * create ( const QString & key ) = 0
-*/
+$prototype=virtual QDecoration * create ( const QString & key ) = 0
 $virtualMethod=|QDecoration *|create|const QString &
 
-/*
-virtual QStringList keys () const = 0
-*/
+$prototype=virtual QStringList keys () const = 0
 $virtualMethod=|QStringList|keys|
 
 #pragma ENDDUMP

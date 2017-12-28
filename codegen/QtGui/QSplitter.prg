@@ -55,14 +55,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QSplitter ( QWidget * parent = 0 )
-*/
+$prototype=QSplitter ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0
 
-/*
-QSplitter ( Qt::Orientation orientation, QWidget * parent = 0 )
-*/
+$prototype=QSplitter ( Qt::Orientation orientation, QWidget * parent = 0 )
 $internalConstructor=|new2|Qt::Orientation,QWidget *=0
 
 //[1]QSplitter ( QWidget * parent = 0 )
@@ -86,104 +82,64 @@ HB_FUNC_STATIC( QSPLITTER_NEW )
 
 $deleteMethod
 
-/*
-void addWidget ( QWidget * widget )
-*/
+$prototype=void addWidget ( QWidget * widget )
 $method=|void|addWidget|QWidget *
 
-/*
-bool childrenCollapsible () const
-*/
+$prototype=bool childrenCollapsible () const
 $method=|bool|childrenCollapsible|
 
-/*
-int count () const
-*/
+$prototype=int count () const
 $method=|int|count|
 
-/*
-void getRange ( int index, int * min, int * max ) const
-*/
+$prototype=void getRange ( int index, int * min, int * max ) const
 $method=|void|getRange|int,int *,int *
 
-/*
-QSplitterHandle * handle ( int index ) const
-*/
+$prototype=QSplitterHandle * handle ( int index ) const
 $method=|QSplitterHandle *|handle|int
 
-/*
-int handleWidth () const
-*/
+$prototype=int handleWidth () const
 $method=|int|handleWidth|
 
-/*
-int indexOf ( QWidget * widget ) const
-*/
+$prototype=int indexOf ( QWidget * widget ) const
 $method=|int|indexOf|QWidget *
 
-/*
-void insertWidget ( int index, QWidget * widget )
-*/
+$prototype=void insertWidget ( int index, QWidget * widget )
 $method=|void|insertWidget|int,QWidget *
 
-/*
-bool isCollapsible ( int index ) const
-*/
+$prototype=bool isCollapsible ( int index ) const
 $method=|bool|isCollapsible|int
 
-/*
-bool opaqueResize () const
-*/
+$prototype=bool opaqueResize () const
 $method=|bool|opaqueResize|
 
-/*
-Qt::Orientation orientation () const
-*/
+$prototype=Qt::Orientation orientation () const
 $method=|Qt::Orientation|orientation|
 
-/*
-void refresh ()
-*/
+$prototype=void refresh ()
 $method=|void|refresh|
 
-/*
-bool restoreState ( const QByteArray & state )
-*/
+$prototype=bool restoreState ( const QByteArray & state )
 $method=|bool|restoreState|const QByteArray &
 
-/*
-QByteArray saveState () const
-*/
+$prototype=QByteArray saveState () const
 $method=|QByteArray|saveState|
 
-/*
-void setChildrenCollapsible ( bool )
-*/
+$prototype=void setChildrenCollapsible ( bool )
 $method=|void|setChildrenCollapsible|bool
 
-/*
-void setCollapsible ( int index, bool collapse )
-*/
+$prototype=void setCollapsible ( int index, bool collapse )
 $method=|void|setCollapsible|int,bool
 
-/*
-void setHandleWidth ( int )
-*/
+$prototype=void setHandleWidth ( int )
 $method=|void|setHandleWidth|int
 
-/*
-void setOpaqueResize ( bool opaque = true )
-*/
+$prototype=void setOpaqueResize ( bool opaque = true )
 $method=|void|setOpaqueResize|bool=true
 
-/*
-void setOrientation ( Qt::Orientation )
-*/
+$prototype=void setOrientation ( Qt::Orientation )
 $method=|void|setOrientation|Qt::Orientation
 
-/*
-void setSizes ( const QList<int> & list )
-*/
+$prototype=void setSizes ( const QList<int> & list )
 HB_FUNC_STATIC( QSPLITTER_SETSIZES )
 {
   QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -206,14 +162,10 @@ HB_FUNC_STATIC( QSPLITTER_SETSIZES )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setStretchFactor ( int index, int stretch )
-*/
+$prototype=void setStretchFactor ( int index, int stretch )
 $method=|void|setStretchFactor|int,int
 
-/*
-QList<int> sizes () const
-*/
+$prototype=QList<int> sizes () const
 HB_FUNC_STATIC( QSPLITTER_SIZES )
 {
   QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -233,19 +185,13 @@ HB_FUNC_STATIC( QSPLITTER_SIZES )
   }
 }
 
-/*
-QWidget * widget ( int index ) const
-*/
+$prototype=QWidget * widget ( int index ) const
 $method=|QWidget *|widget|int
 
-/*
-virtual QSize minimumSizeHint () const
-*/
+$prototype=virtual QSize minimumSizeHint () const
 $virtualMethod=|QSize|minimumSizeHint|
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $virtualMethod=|QSize|sizeHint|
 
 #pragma ENDDUMP

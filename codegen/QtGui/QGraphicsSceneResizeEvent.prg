@@ -27,9 +27,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QGraphicsSceneMoveEvent ()
-*/
+$prototype=QGraphicsSceneMoveEvent ()
 HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_NEW )
 {
   QGraphicsSceneResizeEvent * o = new QGraphicsSceneResizeEvent ();
@@ -38,9 +36,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_NEW )
 
 $deleteMethod
 
-/*
-QSizeF newSize () const
-*/
+$prototype=QSizeF newSize () const
 HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_NEWSIZE )
 {
   QGraphicsSceneResizeEvent * obj = (QGraphicsSceneResizeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -51,9 +47,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_NEWSIZE )
   }
 }
 
-/*
-QSizeF oldSize () const
-*/
+$prototype=QSizeF oldSize () const
 HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_OLDSIZE )
 {
   QGraphicsSceneResizeEvent * obj = (QGraphicsSceneResizeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

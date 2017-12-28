@@ -30,38 +30,26 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QSplitterHandle ( Qt::Orientation orientation, QSplitter * parent )
-*/
+$prototype=QSplitterHandle ( Qt::Orientation orientation, QSplitter * parent )
 HB_FUNC_STATIC( QSPLITTERHANDLE_NEW )
 {
   QSplitterHandle * o = new QSplitterHandle ( (Qt::Orientation) hb_parni(1), PQSPLITTER(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-/*
-bool opaqueResize () const
-*/
+$prototype=bool opaqueResize () const
 $method=|bool|opaqueResize|
 
-/*
-Qt::Orientation orientation () const
-*/
+$prototype=Qt::Orientation orientation () const
 $method=|Qt::Orientation|orientation|
 
-/*
-void setOrientation ( Qt::Orientation orientation )
-*/
+$prototype=void setOrientation ( Qt::Orientation orientation )
 $method=|void|setOrientation|Qt::Orientation
 
-/*
-QSplitter * splitter () const
-*/
+$prototype=QSplitter * splitter () const
 $method=|QSplitter *|splitter|
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $virtualMethod=|QSize|sizeHint|
 
 #pragma ENDDUMP

@@ -44,19 +44,13 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QTextOption ()
-*/
+$prototype=QTextOption ()
 $internalConstructor=|new1|
 
-/*
-QTextOption ( Qt::Alignment alignment )
-*/
+$prototype=QTextOption ( Qt::Alignment alignment )
 $internalConstructor=|new2|Qt::Alignment
 
-/*
-QTextOption ( const QTextOption & other )
-*/
+$prototype=QTextOption ( const QTextOption & other )
 $internalConstructor=|new3|const QTextOption &
 
 //[1]QTextOption ()
@@ -85,29 +79,19 @@ HB_FUNC_STATIC( QTEXTOPTION_NEW )
 
 $deleteMethod
 
-/*
-Qt::Alignment alignment () const
-*/
+$prototype=Qt::Alignment alignment () const
 $method=|Qt::Alignment|alignment|
 
-/*
-Flags flags () const
-*/
+$prototype=Flags flags () const
 $method=|QTextOption::Flags|flags|
 
-/*
-void setAlignment ( Qt::Alignment alignment )
-*/
+$prototype=void setAlignment ( Qt::Alignment alignment )
 $method=|void|setAlignment|Qt::Alignment
 
-/*
-void setFlags ( Flags flags )
-*/
+$prototype=void setFlags ( Flags flags )
 $method=|void|setFlags|QTextOption::Flags
 
-/*
-void setTabArray ( QList<qreal> tabStops )
-*/
+$prototype=void setTabArray ( QList<qreal> tabStops )
 HB_FUNC_STATIC( QTEXTOPTION_SETTABARRAY )
 {
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -130,29 +114,19 @@ HB_FUNC_STATIC( QTEXTOPTION_SETTABARRAY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setTabStop ( qreal tabStop )
-*/
+$prototype=void setTabStop ( qreal tabStop )
 $method=|void|setTabStop|qreal
 
-/*
-void setTextDirection ( Qt::LayoutDirection direction )
-*/
+$prototype=void setTextDirection ( Qt::LayoutDirection direction )
 $method=|void|setTextDirection|Qt::LayoutDirection
 
-/*
-void setUseDesignMetrics ( bool enable )
-*/
+$prototype=void setUseDesignMetrics ( bool enable )
 $method=|void|setUseDesignMetrics|bool
 
-/*
-void setWrapMode ( WrapMode mode )
-*/
+$prototype=void setWrapMode ( WrapMode mode )
 $method=|void|setWrapMode|QTextOption::WrapMode
 
-/*
-QList<qreal> tabArray () const
-*/
+$prototype=QList<qreal> tabArray () const
 HB_FUNC_STATIC( QTEXTOPTION_TABARRAY )
 {
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -172,24 +146,16 @@ HB_FUNC_STATIC( QTEXTOPTION_TABARRAY )
   }
 }
 
-/*
-qreal tabStop () const
-*/
+$prototype=qreal tabStop () const
 $method=|qreal|tabStop|
 
-/*
-Qt::LayoutDirection textDirection () const
-*/
+$prototype=Qt::LayoutDirection textDirection () const
 $method=|Qt::LayoutDirection|textDirection|
 
-/*
-bool useDesignMetrics () const
-*/
+$prototype=bool useDesignMetrics () const
 $method=|bool|useDesignMetrics|
 
-/*
-WrapMode wrapMode () const
-*/
+$prototype=WrapMode wrapMode () const
 $method=|QTextOption::WrapMode|wrapMode|
 
 $extraMethods

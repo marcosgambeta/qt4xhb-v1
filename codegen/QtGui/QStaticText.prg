@@ -47,19 +47,13 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QStaticText ()
-*/
+$prototype=QStaticText ()
 $internalConstructor=|new1|
 
-/*
-QStaticText ( const QString & text )
-*/
+$prototype=QStaticText ( const QString & text )
 $internalConstructor=|new2|const QString &
 
-/*
-QStaticText ( const QStaticText & other )
-*/
+$prototype=QStaticText ( const QStaticText & other )
 $internalConstructor=|new3|const QStaticText &
 
 //[1]QStaticText ()
@@ -88,64 +82,40 @@ HB_FUNC_STATIC( QSTATICTEXT_NEW )
 
 $deleteMethod
 
-/*
-PerformanceHint performanceHint () const
-*/
+$prototype=PerformanceHint performanceHint () const
 $method=|QStaticText::PerformanceHint|performanceHint|
 
-/*
-void prepare ( const QTransform & matrix = QTransform(), const QFont & font = QFont() )
-*/
+$prototype=void prepare ( const QTransform & matrix = QTransform(), const QFont & font = QFont() )
 $method=|void|prepare|const QTransform &=QTransform(),const QFont &=QFont()
 
-/*
-void setPerformanceHint ( PerformanceHint performanceHint )
-*/
+$prototype=void setPerformanceHint ( PerformanceHint performanceHint )
 $method=|void|setPerformanceHint|QStaticText::PerformanceHint
 
-/*
-void setText ( const QString & text )
-*/
+$prototype=void setText ( const QString & text )
 $method=|void|setText|const QString &
 
-/*
-void setTextFormat ( Qt::TextFormat textFormat )
-*/
+$prototype=void setTextFormat ( Qt::TextFormat textFormat )
 $method=|void|setTextFormat|Qt::TextFormat
 
-/*
-void setTextOption ( const QTextOption & textOption )
-*/
+$prototype=void setTextOption ( const QTextOption & textOption )
 $method=|void|setTextOption|const QTextOption &
 
-/*
-void setTextWidth ( qreal textWidth )
-*/
+$prototype=void setTextWidth ( qreal textWidth )
 $method=|void|setTextWidth|qreal
 
-/*
-QSizeF size () const
-*/
+$prototype=QSizeF size () const
 $method=|QSizeF|size|
 
-/*
-QString text () const
-*/
+$prototype=QString text () const
 $method=|QString|text|
 
-/*
-Qt::TextFormat textFormat () const
-*/
+$prototype=Qt::TextFormat textFormat () const
 $method=|Qt::TextFormat|textFormat|
 
-/*
-QTextOption textOption () const
-*/
+$prototype=QTextOption textOption () const
 $method=|QTextOption|textOption|
 
-/*
-qreal textWidth () const
-*/
+$prototype=qreal textWidth () const
 $method=|qreal|textWidth|
 
 $extraMethods

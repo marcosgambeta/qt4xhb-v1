@@ -34,14 +34,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QWheelEvent(const QPoint &pos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
-*/
+$prototype=QWheelEvent(const QPoint &pos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
 $internalConstructor=|new1|const QPoint &,int,Qt::MouseButtons,Qt::KeyboardModifiers,Qt::Orientation=Qt::Vertical
 
-/*
-QWheelEvent(const QPoint &pos, const QPoint& globalPos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
-*/
+$prototype=QWheelEvent(const QPoint &pos, const QPoint& globalPos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
 $internalConstructor=|new2|const QPoint &,const QPoint &,int,Qt::MouseButtons,Qt::KeyboardModifiers,Qt::Orientation=Qt::Vertical
 
 //[1]QWheelEvent(const QPoint &pos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
@@ -65,49 +61,31 @@ HB_FUNC_STATIC( QWHEELEVENT_NEW )
 
 $deleteMethod
 
-/*
-int delta() const
-*/
+$prototype=int delta() const
 $method=|int|delta|
 
-/*
-const QPoint &pos() const
-*/
+$prototype=const QPoint &pos() const
 $method=|const QPoint &|pos|
 
-/*
-const QPoint &globalPos() const
-*/
+$prototype=const QPoint &globalPos() const
 $method=|const QPoint &|globalPos|
 
-/*
-int x() const
-*/
+$prototype=int x() const
 $method=|int|x|
 
-/*
-int y() const
-*/
+$prototype=int y() const
 $method=|int|y|
 
-/*
-int globalX() const
-*/
+$prototype=int globalX() const
 $method=|int|globalX|
 
-/*
-int globalY() const
-*/
+$prototype=int globalY() const
 $method=|int|globalY|
 
-/*
-Qt::MouseButtons buttons() const
-*/
+$prototype=Qt::MouseButtons buttons() const
 $method=|Qt::MouseButtons|buttons|
 
-/*
-Qt::Orientation orientation() const
-*/
+$prototype=Qt::Orientation orientation() const
 $method=|Qt::Orientation|orientation|
 
 #pragma ENDDUMP

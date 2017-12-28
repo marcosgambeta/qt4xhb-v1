@@ -28,14 +28,10 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual QIconEngine * create ( const QString & filename ) = 0
-*/
+$prototype=virtual QIconEngine * create ( const QString & filename ) = 0
 $virtualMethod=|QIconEngine *|create|const QString &
 
-/*
-virtual QStringList keys () const = 0
-*/
+$prototype=virtual QStringList keys () const = 0
 $virtualMethod=|QStringList|keys|
 
 #pragma ENDDUMP

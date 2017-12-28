@@ -21,9 +21,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QWindowsVistaStyle ()
-*/
+$prototype=QWindowsVistaStyle ()
 HB_FUNC_STATIC( QWINDOWSVISTASTYLE_NEW )
 {
   QWindowsVistaStyle * o = new QWindowsVistaStyle ();

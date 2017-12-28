@@ -44,24 +44,16 @@ $destructor
 
 $deleteMethod
 
-/*
-QTextDocument * document () const
-*/
+$prototype=QTextDocument * document () const
 $method=|QTextDocument *|document|
 
-/*
-void setDocument ( QTextDocument * doc )
-*/
+$prototype=void setDocument ( QTextDocument * doc )
 $method=|void|setDocument|QTextDocument *
 
-/*
-void rehighlight ()
-*/
+$prototype=void rehighlight ()
 $method=|void|rehighlight|
 
-/*
-void rehighlightBlock ( const QTextBlock & block )
-*/
+$prototype=void rehighlightBlock ( const QTextBlock & block )
 $method=|void|rehighlightBlock|const QTextBlock &
 
 #pragma ENDDUMP

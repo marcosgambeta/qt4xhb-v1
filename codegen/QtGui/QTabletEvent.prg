@@ -44,9 +44,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QTabletEvent(Type t, const QPoint &pos, const QPoint &globalPos, const QPointF &hiResGlobalPos,int device, int pointerType, qreal pressure, int xTilt, int yTilt,qreal tangentialPressure, qreal rotation, int z,Qt::KeyboardModifiers keyState, qint64 uniqueID)
-*/
+$prototype=QTabletEvent(Type t, const QPoint &pos, const QPoint &globalPos, const QPointF &hiResGlobalPos,int device, int pointerType, qreal pressure, int xTilt, int yTilt,qreal tangentialPressure, qreal rotation, int z,Qt::KeyboardModifiers keyState, qint64 uniqueID)
 HB_FUNC_STATIC( QTABLETEVENT_NEW )
 {
   int par13 = hb_parni(13);
@@ -56,94 +54,58 @@ HB_FUNC_STATIC( QTABLETEVENT_NEW )
 
 $deleteMethod
 
-/*
-const QPoint &pos() const
-*/
+$prototype=const QPoint &pos() const
 $method=|const QPoint &|pos|
 
-/*
-const QPoint &globalPos() const
-*/
+$prototype=const QPoint &globalPos() const
 $method=|const QPoint &|globalPos|
 
-/*
-const QPointF &hiResGlobalPos() const
-*/
+$prototype=const QPointF &hiResGlobalPos() const
 $method=|const QPointF &|hiResGlobalPos|
 
-/*
-int x() const
-*/
+$prototype=int x() const
 $method=|int|x|
 
-/*
-int y() const
-*/
+$prototype=int y() const
 $method=|int|y|
 
-/*
-int globalX() const
-*/
+$prototype=int globalX() const
 $method=|int|globalX|
 
-/*
-int globalY() const
-*/
+$prototype=int globalY() const
 $method=|int|globalY|
 
-/*
-qreal hiResGlobalX() const
-*/
+$prototype=qreal hiResGlobalX() const
 $method=|qreal|hiResGlobalX|
 
-/*
-qreal hiResGlobalY() const
-*/
+$prototype=qreal hiResGlobalY() const
 $method=|qreal|hiResGlobalY|
 
-/*
-TabletDevice device() const
-*/
+$prototype=TabletDevice device() const
 $method=|QTabletEvent::TabletDevice|device|
 
-/*
-PointerType pointerType() const
-*/
+$prototype=PointerType pointerType() const
 $method=|QTabletEvent::PointerType|pointerType|
 
-/*
-qint64 uniqueId() const
-*/
+$prototype=qint64 uniqueId() const
 $method=|qint64|uniqueId|
 
-/*
-qreal pressure() const
-*/
+$prototype=qreal pressure() const
 $method=|qreal|pressure|
 
-/*
-int z() const
-*/
+$prototype=int z() const
 $method=|int|z|
 
-/*
-qreal tangentialPressure() const
-*/
+$prototype=qreal tangentialPressure() const
 $method=|qreal|tangentialPressure|
 
-/*
-qreal rotation() const
-*/
+$prototype=qreal rotation() const
 $method=|qreal|rotation|
 
-/*
-int xTilt() const
-*/
+$prototype=int xTilt() const
 $method=|int|xTilt|
 
-/*
-int yTilt() const
-*/
+$prototype=int yTilt() const
 $method=|int|yTilt|
 
 #pragma ENDDUMP

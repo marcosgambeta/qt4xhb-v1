@@ -30,9 +30,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QTextListFormat ()
-*/
+$prototype=QTextListFormat ()
 HB_FUNC_STATIC( QTEXTLISTFORMAT_NEW )
 {
   QTextListFormat * o = new QTextListFormat ();
@@ -41,49 +39,31 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_NEW )
 
 $deleteMethod
 
-/*
-int indent () const
-*/
+$prototype=int indent () const
 $method=|int|indent|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-QString numberPrefix () const
-*/
+$prototype=QString numberPrefix () const
 $method=|QString|numberPrefix|
 
-/*
-QString numberSuffix () const
-*/
+$prototype=QString numberSuffix () const
 $method=|QString|numberSuffix|
 
-/*
-void setIndent ( int indentation )
-*/
+$prototype=void setIndent ( int indentation )
 $method=|void|setIndent|int
 
-/*
-void setNumberPrefix ( const QString & numberPrefix )
-*/
+$prototype=void setNumberPrefix ( const QString & numberPrefix )
 $method=|void|setNumberPrefix|const QString &
 
-/*
-void setNumberSuffix ( const QString & numberSuffix )
-*/
+$prototype=void setNumberSuffix ( const QString & numberSuffix )
 $method=|void|setNumberSuffix|const QString &
 
-/*
-void setStyle ( Style style )
-*/
+$prototype=void setStyle ( Style style )
 $method=|void|setStyle|QTextListFormat::Style
 
-/*
-Style style () const
-*/
+$prototype=Style style () const
 $method=|QTextListFormat::Style|style|
 
 #pragma ENDDUMP

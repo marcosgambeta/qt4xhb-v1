@@ -44,21 +44,15 @@ $destructor
 #include <QPoint>
 #include <QPixmap>
 
-/*
-QDrag ( QWidget * dragSource )
-*/
+$prototype=QDrag ( QWidget * dragSource )
 $constructor=|new|QWidget *
 
 $deleteMethod
 
-/*
-Qt::DropAction exec ( Qt::DropActions supportedActions = Qt::MoveAction )
-*/
+$prototype=Qt::DropAction exec ( Qt::DropActions supportedActions = Qt::MoveAction )
 $internalMethod=|Qt::DropAction|exec,exec1|Qt::DropActions=Qt::MoveAction
 
-/*
-Qt::DropAction exec ( Qt::DropActions supportedActions, Qt::DropAction defaultDropAction )
-*/
+$prototype=Qt::DropAction exec ( Qt::DropActions supportedActions, Qt::DropAction defaultDropAction )
 $internalMethod=|Qt::DropAction|exec,exec2|Qt::DropActions,Qt::DropAction
 
 //[1]Qt::DropAction exec ( Qt::DropActions supportedActions = Qt::MoveAction )
@@ -80,49 +74,31 @@ HB_FUNC_STATIC( QDRAG_EXEC )
   }
 }
 
-/*
-QPoint hotSpot () const
-*/
+$prototype=QPoint hotSpot () const
 $method=|QPoint|hotSpot|
 
-/*
-QMimeData * mimeData () const
-*/
+$prototype=QMimeData * mimeData () const
 $method=|QMimeData *|mimeData|
 
-/*
-QPixmap pixmap () const
-*/
+$prototype=QPixmap pixmap () const
 $method=|QPixmap|pixmap|
 
-/*
-void setDragCursor ( const QPixmap & cursor, Qt::DropAction action )
-*/
+$prototype=void setDragCursor ( const QPixmap & cursor, Qt::DropAction action )
 $method=|void|setDragCursor|const QPixmap &,Qt::DropAction
 
-/*
-void setHotSpot ( const QPoint & hotspot )
-*/
+$prototype=void setHotSpot ( const QPoint & hotspot )
 $method=|void|setHotSpot|const QPoint &
 
-/*
-void setMimeData ( QMimeData * data )
-*/
+$prototype=void setMimeData ( QMimeData * data )
 $method=|void|setMimeData|QMimeData *
 
-/*
-void setPixmap ( const QPixmap & pixmap )
-*/
+$prototype=void setPixmap ( const QPixmap & pixmap )
 $method=|void|setPixmap|const QPixmap &
 
-/*
-QWidget * source () const
-*/
+$prototype=QWidget * source () const
 $method=|QWidget *|source|
 
-/*
-QWidget * target () const
-*/
+$prototype=QWidget * target () const
 $method=|QWidget *|target|
 
 #pragma ENDDUMP

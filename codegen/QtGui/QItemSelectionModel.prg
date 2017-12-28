@@ -48,14 +48,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QItemSelectionModel ( QAbstractItemModel * model )
-*/
+$prototype=QItemSelectionModel ( QAbstractItemModel * model )
 $internalConstructor=|new1|QAbstractItemModel *
 
-/*
-QItemSelectionModel ( QAbstractItemModel * model, QObject * parent )
-*/
+$prototype=QItemSelectionModel ( QAbstractItemModel * model, QObject * parent )
 $internalConstructor=|new2|QAbstractItemModel *,QObject *
 
 //[1]QItemSelectionModel ( QAbstractItemModel * model )
@@ -79,49 +75,31 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_NEW )
 
 $deleteMethod
 
-/*
-bool columnIntersectsSelection ( int column, const QModelIndex & parent ) const
-*/
+$prototype=bool columnIntersectsSelection ( int column, const QModelIndex & parent ) const
 $method=|bool|columnIntersectsSelection|int,const QModelIndex &
 
-/*
-QModelIndex currentIndex () const
-*/
+$prototype=QModelIndex currentIndex () const
 $method=|QModelIndex|currentIndex|
 
-/*
-bool hasSelection () const
-*/
+$prototype=bool hasSelection () const
 $method=|bool|hasSelection|
 
-/*
-bool isColumnSelected ( int column, const QModelIndex & parent ) const
-*/
+$prototype=bool isColumnSelected ( int column, const QModelIndex & parent ) const
 $method=|bool|isColumnSelected|int,const QModelIndex &
 
-/*
-bool isRowSelected ( int row, const QModelIndex & parent ) const
-*/
+$prototype=bool isRowSelected ( int row, const QModelIndex & parent ) const
 $method=|bool|isRowSelected|int,const QModelIndex &
 
-/*
-bool isSelected ( const QModelIndex & index ) const
-*/
+$prototype=bool isSelected ( const QModelIndex & index ) const
 $method=|bool|isSelected|const QModelIndex &
 
-/*
-const QAbstractItemModel * model () const
-*/
+$prototype=const QAbstractItemModel * model () const
 $method=|const QAbstractItemModel *|model|
 
-/*
-bool rowIntersectsSelection ( int row, const QModelIndex & parent ) const
-*/
+$prototype=bool rowIntersectsSelection ( int row, const QModelIndex & parent ) const
 $method=|bool|rowIntersectsSelection|int,const QModelIndex &
 
-/*
-QModelIndexList selectedColumns ( int row = 0 ) const
-*/
+$prototype=QModelIndexList selectedColumns ( int row = 0 ) const
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDCOLUMNS )
 {
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -157,9 +135,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDCOLUMNS )
   }
 }
 
-/*
-QModelIndexList selectedIndexes () const
-*/
+$prototype=QModelIndexList selectedIndexes () const
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDINDEXES )
 {
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -195,9 +171,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDINDEXES )
   }
 }
 
-/*
-QModelIndexList selectedRows ( int column = 0 ) const
-*/
+$prototype=QModelIndexList selectedRows ( int column = 0 ) const
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDROWS )
 {
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -233,34 +207,22 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDROWS )
   }
 }
 
-/*
-const QItemSelection selection () const
-*/
+$prototype=const QItemSelection selection () const
 $method=|const QItemSelection|selection|
 
-/*
-virtual void clear ()
-*/
+$prototype=virtual void clear ()
 $virtualMethod=|void|clear|
 
-/*
-void clearSelection ()
-*/
+$prototype=void clearSelection ()
 $method=|void|clearSelection|
 
-/*
-virtual void reset ()
-*/
+$prototype=virtual void reset ()
 $virtualMethod=|void|reset|
 
-/*
-virtual void select ( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
-*/
+$prototype=virtual void select ( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
 $internalVirtualMethod=|void|select,select1|const QModelIndex &,QItemSelectionModel::SelectionFlags
 
-/*
-virtual void select ( const QItemSelection & selection, QItemSelectionModel::SelectionFlags command )
-*/
+$prototype=virtual void select ( const QItemSelection & selection, QItemSelectionModel::SelectionFlags command )
 $internalVirtualMethod=|void|select,select2|const QItemSelection &,QItemSelectionModel::SelectionFlags
 
 //[1]virtual void select ( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
@@ -282,9 +244,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECT )
   }
 }
 
-/*
-void setCurrentIndex ( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
-*/
+$prototype=void setCurrentIndex ( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
 $method=|void|setCurrentIndex|const QModelIndex &,QItemSelectionModel::SelectionFlags
 
 #pragma ENDDUMP

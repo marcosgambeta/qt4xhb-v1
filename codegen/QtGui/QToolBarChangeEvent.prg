@@ -22,16 +22,12 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QToolBarChangeEvent(bool t)
-*/
+$prototype=QToolBarChangeEvent(bool t)
 $constructor=|new|bool
 
 $deleteMethod
 
-/*
-bool toggle() const
-*/
+$prototype=bool toggle() const
 $method=|bool|toggle|
 
 #pragma ENDDUMP

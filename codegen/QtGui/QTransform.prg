@@ -44,14 +44,6 @@ CLASS QTransform
    METHOD isScaling
    METHOD isTranslating
    METHOD map1
-   METHOD map2
-   METHOD map3
-   METHOD map4
-   METHOD map5
-   METHOD map6
-   METHOD map7
-   METHOD map8
-   METHOD map9
    METHOD map10
    METHOD map
    METHOD mapRect
@@ -86,24 +78,16 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QTransform ()
-*/
+$prototype=QTransform ()
 $internalConstructor=|new1|
 
-/*
-QTransform ( qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33 = 1.0 )
-*/
+$prototype=QTransform ( qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33 = 1.0 )
 $internalConstructor=|new2|qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal=1.0
 
-/*
-QTransform ( qreal m11, qreal m12, qreal m21, qreal m22, qreal dx, qreal dy )
-*/
+$prototype=QTransform ( qreal m11, qreal m12, qreal m21, qreal m22, qreal dx, qreal dy )
 $internalConstructor=|new3|qreal,qreal,qreal,qreal,qreal,qreal
 
-/*
-QTransform ( const QMatrix & matrix )
-*/
+$prototype=QTransform ( const QMatrix & matrix )
 $internalConstructor=|new4|const QMatrix &
 
 //[1]QTransform ()
@@ -137,154 +121,94 @@ HB_FUNC_STATIC( QTRANSFORM_NEW )
 
 $deleteMethod
 
-/*
-qreal m11 () const
-*/
+$prototype=qreal m11 () const
 $method=|qreal|m11|
 
-/*
-qreal m12 () const
-*/
+$prototype=qreal m12 () const
 $method=|qreal|m12|
 
-/*
-qreal m13 () const
-*/
+$prototype=qreal m13 () const
 $method=|qreal|m13|
 
-/*
-qreal m21 () const
-*/
+$prototype=qreal m21 () const
 $method=|qreal|m21|
 
-/*
-qreal m22 () const
-*/
+$prototype=qreal m22 () const
 $method=|qreal|m22|
 
-/*
-qreal m23 () const
-*/
+$prototype=qreal m23 () const
 $method=|qreal|m23|
 
-/*
-qreal m31 () const
-*/
+$prototype=qreal m31 () const
 $method=|qreal|m31|
 
-/*
-qreal m32 () const
-*/
+$prototype=qreal m32 () const
 $method=|qreal|m32|
 
-/*
-qreal m33 () const
-*/
+$prototype=qreal m33 () const
 $method=|qreal|m33|
 
-/*
-QTransform adjoint () const
-*/
+$prototype=QTransform adjoint () const
 $method=|QTransform|adjoint|
 
-/*
-qreal determinant () const
-*/
+$prototype=qreal determinant () const
 $method=|qreal|determinant|
 
-/*
-qreal dx () const
-*/
+$prototype=qreal dx () const
 $method=|qreal|dx|
 
-/*
-qreal dy () const
-*/
+$prototype=qreal dy () const
 $method=|qreal|dy|
 
-/*
-QTransform inverted ( bool * invertible = 0 ) const
-*/
+$prototype=QTransform inverted ( bool * invertible = 0 ) const
 $method=|QTransform|inverted|bool *=0
 
-/*
-bool isAffine () const
-*/
+$prototype=bool isAffine () const
 $method=|bool|isAffine|
 
-/*
-bool isIdentity () const
-*/
+$prototype=bool isIdentity () const
 $method=|bool|isIdentity|
 
-/*
-bool isInvertible () const
-*/
+$prototype=bool isInvertible () const
 $method=|bool|isInvertible|
 
-/*
-bool isRotating () const
-*/
+$prototype=bool isRotating () const
 $method=|bool|isRotating|
 
-/*
-bool isScaling () const
-*/
+$prototype=bool isScaling () const
 $method=|bool|isScaling|
 
-/*
-bool isTranslating () const
-*/
+$prototype=bool isTranslating () const
 $method=|bool|isTranslating|
 
-/*
-void map ( qreal x, qreal y, qreal * tx, qreal * ty ) const
-*/
+$prototype=void map ( qreal x, qreal y, qreal * tx, qreal * ty ) const
 $method=|void|map,map1|qreal,qreal,qreal *,qreal *
 
-/*
-QPointF map ( const QPointF & p ) const
-*/
-$method=|QPointF|map,map2|const QPointF &
+$prototype=QPointF map ( const QPointF & p ) const
+$internalMethod=|QPointF|map,map2|const QPointF &
 
-/*
-QPoint map ( const QPoint & point ) const
-*/
-$method=|QPoint|map,map3|const QPoint &
+$prototype=QPoint map ( const QPoint & point ) const
+$internalMethod=|QPoint|map,map3|const QPoint &
 
-/*
-QLine map ( const QLine & l ) const
-*/
-$method=|QLine|map,map4|const QLine &
+$prototype=QLine map ( const QLine & l ) const
+$internalMethod=|QLine|map,map4|const QLine &
 
-/*
-QLineF map ( const QLineF & line ) const
-*/
-$method=|QLineF|map,map5|const QLineF &
+$prototype=QLineF map ( const QLineF & line ) const
+$internalMethod=|QLineF|map,map5|const QLineF &
 
-/*
-QPolygonF map ( const QPolygonF & polygon ) const
-*/
-$method=|QPolygonF|map,map6|const QPolygonF &
+$prototype=QPolygonF map ( const QPolygonF & polygon ) const
+$internalMethod=|QPolygonF|map,map6|const QPolygonF &
 
-/*
-QPolygon map ( const QPolygon & polygon ) const
-*/
-$method=|QPolygon|map,map7|const QPolygon &
+$prototype=QPolygon map ( const QPolygon & polygon ) const
+$internalMethod=|QPolygon|map,map7|const QPolygon &
 
-/*
-QRegion map ( const QRegion & region ) const
-*/
-$method=|QRegion|map,map8|const QRegion &
+$prototype=QRegion map ( const QRegion & region ) const
+$internalMethod=|QRegion|map,map8|const QRegion &
 
-/*
-QPainterPath map ( const QPainterPath & path ) const
-*/
-$method=|QPainterPath|map,map9|const QPainterPath &
+$prototype=QPainterPath map ( const QPainterPath & path ) const
+$internalMethod=|QPainterPath|map,map9|const QPainterPath &
 
-/*
-void map ( int x, int y, int * tx, int * ty ) const
-*/
+$prototype=void map ( int x, int y, int * tx, int * ty ) const
 $method=|void|map,map10|int,int,int *,int *
 
 //[01]void map ( qreal x, qreal y, qreal * tx, qreal * ty ) const
@@ -308,35 +232,35 @@ HB_FUNC_STATIC( QTRANSFORM_MAP )
   }
   else if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    HB_FUNC_EXEC( QTRANSFORM_MAP2 );
+    QTransform_map2();
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QTRANSFORM_MAP3 );
+    QTransform_map3();
   }
   else if( ISNUMPAR(1) && ISQLINE(1) )
   {
-    HB_FUNC_EXEC( QTRANSFORM_MAP4 );
+    QTransform_map4();
   }
   else if( ISNUMPAR(1) && ISQLINEF(1) )
   {
-    HB_FUNC_EXEC( QTRANSFORM_MAP5 );
+    QTransform_map5();
   }
   else if( ISNUMPAR(1) && ISQPOLYGONF(1) )
   {
-    HB_FUNC_EXEC( QTRANSFORM_MAP6 );
+    QTransform_map6();
   }
   else if( ISNUMPAR(1) && ISQPOLYGON(1) )
   {
-    HB_FUNC_EXEC( QTRANSFORM_MAP7 );
+    QTransform_map7();
   }
   else if( ISNUMPAR(1) && ISQREGION(1) )
   {
-    HB_FUNC_EXEC( QTRANSFORM_MAP8 );
+    QTransform_map8();
   }
   else if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
   {
-    HB_FUNC_EXEC( QTRANSFORM_MAP9 );
+    QTransform_map9();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
@@ -348,14 +272,10 @@ HB_FUNC_STATIC( QTRANSFORM_MAP )
   }
 }
 
-/*
-QRectF mapRect ( const QRectF & rectangle ) const
-*/
+$prototype=QRectF mapRect ( const QRectF & rectangle ) const
 $internalMethod=|QRectF|mapRect,mapRect1|const QRectF &
 
-/*
-QRect mapRect ( const QRect & rectangle ) const
-*/
+$prototype=QRect mapRect ( const QRect & rectangle ) const
 $internalMethod=|QRect|mapRect,mapRect2|const QRect &
 
 //[1]QRectF mapRect ( const QRectF & rectangle ) const
@@ -377,54 +297,34 @@ HB_FUNC_STATIC( QTRANSFORM_MAPRECT )
   }
 }
 
-/*
-QPolygon mapToPolygon ( const QRect & rectangle ) const
-*/
+$prototype=QPolygon mapToPolygon ( const QRect & rectangle ) const
 $method=|QPolygon|mapToPolygon|const QRect &
 
-/*
-void reset ()
-*/
+$prototype=void reset ()
 $method=|void|reset|
 
-/*
-void setMatrix ( qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33 )
-*/
+$prototype=void setMatrix ( qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33 )
 $method=|void|setMatrix|qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal
 
-/*
-QTransform transposed () const
-*/
+$prototype=QTransform transposed () const
 $method=|QTransform|transposed|
 
-/*
-TransformationType type () const
-*/
+$prototype=TransformationType type () const
 $method=|QTransform::TransformationType|type|
 
-/*
-static QTransform fromScale ( qreal sx, qreal sy )
-*/
+$prototype=static QTransform fromScale ( qreal sx, qreal sy )
 $staticMethod=|QTransform|fromScale|qreal,qreal
 
-/*
-static QTransform fromTranslate ( qreal dx, qreal dy )
-*/
+$prototype=static QTransform fromTranslate ( qreal dx, qreal dy )
 $staticMethod=|QTransform|fromTranslate|qreal,qreal
 
-/*
-static bool quadToQuad ( const QPolygonF & one, const QPolygonF & two, QTransform & trans )
-*/
+$prototype=static bool quadToQuad ( const QPolygonF & one, const QPolygonF & two, QTransform & trans )
 $staticMethod=|bool|quadToQuad|const QPolygonF &,const QPolygonF &,QTransform &
 
-/*
-static bool quadToSquare ( const QPolygonF & quad, QTransform & trans )
-*/
+$prototype=static bool quadToSquare ( const QPolygonF & quad, QTransform & trans )
 $staticMethod=|bool|quadToSquare|const QPolygonF &,QTransform &
 
-/*
-static bool squareToQuad ( const QPolygonF & quad, QTransform & trans )
-*/
+$prototype=static bool squareToQuad ( const QPolygonF & quad, QTransform & trans )
 $staticMethod=|bool|squareToQuad|const QPolygonF &,QTransform &
 
 $extraMethods

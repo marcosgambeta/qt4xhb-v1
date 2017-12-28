@@ -35,39 +35,25 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QRadialGradient()
-*/
+$prototype=QRadialGradient()
 $internalConstructor=|new1|
 
-/*
-QRadialGradient(const QPointF &center, qreal radius, const QPointF &focalPoint)
-*/
+$prototype=QRadialGradient(const QPointF &center, qreal radius, const QPointF &focalPoint)
 $internalConstructor=|new2|const QPointF &,qreal,const QPointF &
 
-/*
-QRadialGradient(qreal cx, qreal cy, qreal radius, qreal fx, qreal fy)
-*/
+$prototype=QRadialGradient(qreal cx, qreal cy, qreal radius, qreal fx, qreal fy)
 $internalConstructor=|new3|qreal,qreal,qreal,qreal,qreal
 
-/*
-QRadialGradient(const QPointF &center, qreal radius)
-*/
+$prototype=QRadialGradient(const QPointF &center, qreal radius)
 $internalConstructor=|new4|const QPointF &,qreal
 
-/*
-QRadialGradient(qreal cx, qreal cy, qreal radius)
-*/
+$prototype=QRadialGradient(qreal cx, qreal cy, qreal radius)
 $internalConstructor=|new5|qreal,qreal,qreal
 
-/*
-QRadialGradient(const QPointF &center, qreal centerRadius, const QPointF &focalPoint, qreal focalRadius)
-*/
+$prototype=QRadialGradient(const QPointF &center, qreal centerRadius, const QPointF &focalPoint, qreal focalRadius)
 $internalConstructor=|new6|const QPointF &,qreal,const QPointF &,qreal
 
-/*
-QRadialGradient(qreal cx, qreal cy, qreal centerRadius, qreal fx, qreal fy, qreal focalRadius)
-*/
+$prototype=QRadialGradient(qreal cx, qreal cy, qreal centerRadius, qreal fx, qreal fy, qreal focalRadius)
 $internalConstructor=|new7|qreal,qreal,qreal,qreal,qreal,qreal
 
 //[1]QRadialGradient()
@@ -116,19 +102,13 @@ HB_FUNC_STATIC( QRADIALGRADIENT_NEW )
 
 $deleteMethod
 
-/*
-QPointF center() const
-*/
+$prototype=QPointF center() const
 $method=|QPointF|center|
 
-/*
-void setCenter(const QPointF &center)
-*/
+$prototype=void setCenter(const QPointF &center)
 $internalMethod=|void|setCenter,setCenter1|const QPointF &
 
-/*
-void setCenter(qreal x, qreal y)
-*/
+$prototype=void setCenter(qreal x, qreal y)
 $internalMethod=|void|setCenter,setCenter2|qreal,qreal
 
 //[1]void setCenter(const QPointF &center)
@@ -150,19 +130,13 @@ HB_FUNC_STATIC( QRADIALGRADIENT_SETCENTER )
   }
 }
 
-/*
-QPointF focalPoint() const
-*/
+$prototype=QPointF focalPoint() const
 $method=|QPointF|focalPoint|
 
-/*
-void setFocalPoint(const QPointF &focalPoint)
-*/
+$prototype=void setFocalPoint(const QPointF &focalPoint)
 $internalMethod=|void|setFocalPoint,setFocalPoint1|const QPointF &
 
-/*
-void setFocalPoint(qreal x, qreal y)
-*/
+$prototype=void setFocalPoint(qreal x, qreal y)
 $internalMethod=|void|setFocalPoint,setFocalPoint2|qreal,qreal
 
 //[1]void setFocalPoint(const QPointF &focalPoint)
@@ -184,34 +158,22 @@ HB_FUNC_STATIC( QRADIALGRADIENT_SETFOCALPOINT )
   }
 }
 
-/*
-qreal radius() const
-*/
+$prototype=qreal radius() const
 $method=|qreal|radius|
 
-/*
-void setRadius(qreal radius)
-*/
+$prototype=void setRadius(qreal radius)
 $method=|void|setRadius|qreal
 
-/*
-qreal centerRadius() const
-*/
+$prototype=qreal centerRadius() const
 $method=|qreal|centerRadius|
 
-/*
-void setCenterRadius(qreal radius)
-*/
+$prototype=void setCenterRadius(qreal radius)
 $method=|void|setCenterRadius|qreal
 
-/*
-qreal focalRadius() const
-*/
+$prototype=qreal focalRadius() const
 $method=|qreal|focalRadius|
 
-/*
-void setFocalRadius(qreal radius)
-*/
+$prototype=void setFocalRadius(qreal radius)
 $method=|void|setFocalRadius|qreal
 
 #pragma ENDDUMP

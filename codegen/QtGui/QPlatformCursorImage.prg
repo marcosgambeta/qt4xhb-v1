@@ -41,9 +41,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QPlatformCursorImage ( const uchar * data, const uchar * mask, int width, int height, int hotX, int hotY )
-*/
+$prototype=QPlatformCursorImage ( const uchar * data, const uchar * mask, int width, int height, int hotX, int hotY )
 HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_NEW )
 {
   const uchar * par1 = (const uchar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -54,29 +52,19 @@ HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_NEW )
 
 $deleteMethod
 
-/*
-QPoint hotspot ()
-*/
+$prototype=QPoint hotspot ()
 $method=|QPoint|hotspot|
 
-/*
-QImage * image ()
-*/
+$prototype=QImage * image ()
 $method=|QImage *|image|
 
-/*
-void set ( const uchar * data, const uchar * mask, int width, int height, int hx, int hy )
-*/
+$prototype=void set ( const uchar * data, const uchar * mask, int width, int height, int hx, int hy )
 $method=|void|set,set1|const uchar *,const uchar *,int,int,int,int
 
-/*
-void set ( const QImage & image, int hx, int hy )
-*/
+$prototype=void set ( const QImage & image, int hx, int hy )
 $method=|void|set,set2|const QImage &,int,int
 
-/*
-void set ( Qt::CursorShape id )
-*/
+$prototype=void set ( Qt::CursorShape id )
 $method=|void|set,set3|Qt::CursorShape
 
 //[1]void set ( const uchar * data, const uchar * mask, int width, int height, int hx, int hy )

@@ -37,14 +37,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QFontDialog(QWidget *parent = 0)
-*/
+$prototype=QFontDialog(QWidget *parent = 0)
 $internalConstructor=|new1|QWidget *=0
 
-/*
-QFontDialog(const QFont &initial, QWidget *parent = 0)
-*/
+$prototype=QFontDialog(const QFont &initial, QWidget *parent = 0)
 $internalConstructor=|new2|const QFont &,QWidget *=0
 
 //[1]QFontDialog(QWidget *parent = 0)
@@ -66,69 +62,43 @@ HB_FUNC_STATIC( QFONTDIALOG_NEW )
   }
 }
 
-/*
-QFont currentFont () const
-*/
+$prototype=QFont currentFont () const
 $method=|QFont|currentFont|
 
-/*
-void open ( QObject * receiver, const char * member )
-*/
+$prototype=void open ( QObject * receiver, const char * member )
 $method=|void|open|QObject *,const char *
 
-/*
-FontDialogOptions options () const
-*/
+$prototype=FontDialogOptions options () const
 $method=|QFontDialog::FontDialogOptions|options|
 
-/*
-QFont selectedFont () const
-*/
+$prototype=QFont selectedFont () const
 $method=|QFont|selectedFont|
 
-/*
-void setCurrentFont ( const QFont & font )
-*/
+$prototype=void setCurrentFont ( const QFont & font )
 $method=|void|setCurrentFont|const QFont &
 
-/*
-void setOption ( FontDialogOption option, bool on = true )
-*/
+$prototype=void setOption ( FontDialogOption option, bool on = true )
 $method=|void|setOption|QFontDialog::FontDialogOption,bool=true
 
-/*
-void setOptions ( FontDialogOptions options )
-*/
+$prototype=void setOptions ( FontDialogOptions options )
 $method=|void|setOptions|QFontDialog::FontDialogOptions
 
-/*
-bool testOption ( FontDialogOption option ) const
-*/
+$prototype=bool testOption ( FontDialogOption option ) const
 $method=|bool|testOption|QFontDialog::FontDialogOption
 
-/*
-virtual void setVisible ( bool visible )
-*/
+$prototype=virtual void setVisible ( bool visible )
 $virtualMethod=|void|setVisible|bool
 
-/*
-static QFont getFont(bool *ok, const QFont &initial, QWidget *parent, const QString &title,FontDialogOptions options)
-*/
+$prototype=static QFont getFont(bool *ok, const QFont &initial, QWidget *parent, const QString &title,FontDialogOptions options)
 $internalStaticMethod=|QFont|getFont,getFont1|bool *,const QFont &,QWidget *,const QString &,QFontDialog::FontDialogOptions
 
-/*
-static QFont getFont(bool *ok, const QFont &initial, QWidget *parent, const QString &title)
-*/
+$prototype=static QFont getFont(bool *ok, const QFont &initial, QWidget *parent, const QString &title)
 $internalStaticMethod=|QFont|getFont,getFont2|bool *,const QFont &,QWidget *,const QString &
 
-/*
-static QFont getFont(bool *ok, const QFont &initial, QWidget *parent = 0)
-*/
+$prototype=static QFont getFont(bool *ok, const QFont &initial, QWidget *parent = 0)
 $internalStaticMethod=|QFont|getFont,getFont3|bool *,const QFont &,QWidget *=0
 
-/*
-static QFont getFont(bool *ok, QWidget *parent = 0)
-*/
+$prototype=static QFont getFont(bool *ok, QWidget *parent = 0)
 $internalStaticMethod=|QFont|getFont,getFont4|bool *,QWidget *=0
 
 //[1]static QFont getFont(bool *ok, const QFont &initial, QWidget *parent, const QString &title,FontDialogOptions options)

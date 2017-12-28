@@ -41,9 +41,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QDropEvent ( const QPoint & pos, Qt::DropActions actions, const QMimeData * data, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, Type type = Drop )
-*/
+$prototype=QDropEvent ( const QPoint & pos, Qt::DropActions actions, const QMimeData * data, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, Type type = Drop )
 HB_FUNC_STATIC( QDROPEVENT_NEW )
 {
   int par2 = hb_parni(2);
@@ -57,69 +55,43 @@ HB_FUNC_STATIC( QDROPEVENT_NEW )
 
 $deleteMethod
 
-/*
-void acceptProposedAction ()
-*/
+$prototype=void acceptProposedAction ()
 $method=|void|acceptProposedAction|
 
-/*
-Qt::DropAction dropAction () const
-*/
+$prototype=Qt::DropAction dropAction () const
 $method=|Qt::DropAction|dropAction|
 
-/*
-Qt::KeyboardModifiers keyboardModifiers () const
-*/
+$prototype=Qt::KeyboardModifiers keyboardModifiers () const
 $method=|Qt::KeyboardModifiers|keyboardModifiers|
 
-/*
-const QMimeData * mimeData () const
-*/
+$prototype=const QMimeData * mimeData () const
 $method=|const QMimeData *|mimeData|
 
-/*
-Qt::MouseButtons mouseButtons () const
-*/
+$prototype=Qt::MouseButtons mouseButtons () const
 $method=|Qt::MouseButtons|mouseButtons|
 
-/*
-const QPoint & pos () const
-*/
+$prototype=const QPoint & pos () const
 $method=|const QPoint &|pos|
 
-/*
-Qt::DropActions possibleActions () const
-*/
+$prototype=Qt::DropActions possibleActions () const
 $method=|Qt::DropActions|possibleActions|
 
-/*
-Qt::DropAction proposedAction () const
-*/
+$prototype=Qt::DropAction proposedAction () const
 $method=|Qt::DropAction|proposedAction|
 
-/*
-void setDropAction ( Qt::DropAction action )
-*/
+$prototype=void setDropAction ( Qt::DropAction action )
 $method=|void|setDropAction|Qt::DropAction
 
-/*
-QWidget * source () const
-*/
+$prototype=QWidget * source () const
 $method=|QWidget *|source|
 
-/*
-virtual QByteArray encodedData ( const char * format ) const
-*/
+$prototype=virtual QByteArray encodedData ( const char * format ) const
 $virtualMethod=|QByteArray|encodedData|const char *
 
-/*
-virtual const char * format ( int n = 0 ) const
-*/
+$prototype=virtual const char * format ( int n = 0 ) const
 $virtualMethod=|const char *|format|int=0
 
-/*
-virtual bool provides ( const char * mimeType ) const
-*/
+$prototype=virtual bool provides ( const char * mimeType ) const
 $virtualMethod=|bool|provides|const char *
 
 #pragma ENDDUMP

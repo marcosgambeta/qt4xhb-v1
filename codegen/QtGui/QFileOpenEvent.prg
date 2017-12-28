@@ -30,14 +30,10 @@ $destructor
 
 #include <QUrl>
 
-/*
-QFileOpenEvent(const QString &file)
-*/
+$prototype=QFileOpenEvent(const QString &file)
 $internalConstructor=|new1|const QString &
 
-/*
-QFileOpenEvent(const QUrl &url)
-*/
+$prototype=QFileOpenEvent(const QUrl &url)
 $internalConstructor=|new2|const QUrl &
 
 //[1]QFileOpenEvent(const QString &file)
@@ -61,19 +57,13 @@ HB_FUNC_STATIC( QFILEOPENEVENT_NEW )
 
 $deleteMethod
 
-/*
-QString file () const
-*/
+$prototype=QString file () const
 $method=|QString|file|
 
-/*
-bool openFile ( QFile & file, QIODevice::OpenMode flags ) const
-*/
+$prototype=bool openFile ( QFile & file, QIODevice::OpenMode flags ) const
 $method=|bool|openFile|QFile &,QIODevice::OpenMode
 
-/*
-QUrl url () const
-*/
+$prototype=QUrl url () const
 $method=|QUrl|url|
 
 #pragma ENDDUMP

@@ -51,14 +51,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QProgressDialog ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
-*/
+$prototype=QProgressDialog ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 $internalConstructor=|new1|QWidget *=0,Qt::WindowFlags=0
 
-/*
-QProgressDialog ( const QString & labelText, const QString & cancelButtonText, int minimum, int maximum, QWidget * parent = 0, Qt::WindowFlags f = 0 )
-*/
+$prototype=QProgressDialog ( const QString & labelText, const QString & cancelButtonText, int minimum, int maximum, QWidget * parent = 0, Qt::WindowFlags f = 0 )
 $internalConstructor=|new2|const QString &,const QString &,int,int,QWidget *=0,Qt::WindowFlags=0
 
 //[1]QProgressDialog ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
@@ -82,124 +78,76 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_NEW )
 
 $deleteMethod
 
-/*
-bool autoClose () const
-*/
+$prototype=bool autoClose () const
 $method=|bool|autoClose|
 
-/*
-bool autoReset () const
-*/
+$prototype=bool autoReset () const
 $method=|bool|autoReset|
 
-/*
-QString labelText () const
-*/
+$prototype=QString labelText () const
 $method=|QString|labelText|
 
-/*
-int maximum () const
-*/
+$prototype=int maximum () const
 $method=|int|maximum|
 
-/*
-int minimum () const
-*/
+$prototype=int minimum () const
 $method=|int|minimum|
 
-/*
-int minimumDuration () const
-*/
+$prototype=int minimumDuration () const
 $method=|int|minimumDuration|
 
-/*
-void open ( QObject * receiver, const char * member )
-*/
+$prototype=void open ( QObject * receiver, const char * member )
 $method=|void|open|QObject *,const char *
 
-/*
-void setAutoClose ( bool close )
-*/
+$prototype=void setAutoClose ( bool close )
 $method=|void|setAutoClose|bool
 
-/*
-void setAutoReset ( bool reset )
-*/
+$prototype=void setAutoReset ( bool reset )
 $method=|void|setAutoReset|bool
 
-/*
-void setBar ( QProgressBar * bar )
-*/
+$prototype=void setBar ( QProgressBar * bar )
 $method=|void|setBar|QProgressBar *
 
-/*
-void setCancelButton ( QPushButton * cancelButton )
-*/
+$prototype=void setCancelButton ( QPushButton * cancelButton )
 $method=|void|setCancelButton|QPushButton *
 
-/*
-void setLabel ( QLabel * label )
-*/
+$prototype=void setLabel ( QLabel * label )
 $method=|void|setLabel|QLabel *
 
-/*
-int value () const
-*/
+$prototype=int value () const
 $method=|int|value|
 
-/*
-bool wasCanceled () const
-*/
+$prototype=bool wasCanceled () const
 $method=|bool|wasCanceled|
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $virtualMethod=|QSize|sizeHint|
 
-/*
-void cancel ()
-*/
+$prototype=void cancel ()
 $method=|void|cancel|
 
-/*
-void reset ()
-*/
+$prototype=void reset ()
 $method=|void|reset|
 
-/*
-void setCancelButtonText ( const QString & cancelButtonText )
-*/
+$prototype=void setCancelButtonText ( const QString & cancelButtonText )
 $method=|void|setCancelButtonText|const QString &
 
-/*
-void setLabelText ( const QString & text )
-*/
+$prototype=void setLabelText ( const QString & text )
 $method=|void|setLabelText|const QString &
 
-/*
-void setMaximum ( int maximum )
-*/
+$prototype=void setMaximum ( int maximum )
 $method=|void|setMaximum|int
 
-/*
-void setMinimum ( int minimum )
-*/
+$prototype=void setMinimum ( int minimum )
 $method=|void|setMinimum|int
 
-/*
-void setMinimumDuration ( int ms )
-*/
+$prototype=void setMinimumDuration ( int ms )
 $method=|void|setMinimumDuration|int
 
-/*
-void setRange ( int minimum, int maximum )
-*/
+$prototype=void setRange ( int minimum, int maximum )
 $method=|void|setRange|int,int
 
-/*
-void setValue ( int progress )
-*/
+$prototype=void setValue ( int progress )
 $method=|void|setValue|int
 
 #pragma ENDDUMP

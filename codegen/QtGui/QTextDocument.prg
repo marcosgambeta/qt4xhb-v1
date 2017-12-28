@@ -119,14 +119,10 @@ $destructor
 #include <QTextCursor>
 #include <QVariant>
 
-/*
-QTextDocument ( QObject * parent = 0 )
-*/
+$prototype=QTextDocument ( QObject * parent = 0 )
 $internalConstructor=|new1|QObject *=0
 
-/*
-QTextDocument ( const QString & text, QObject * parent = 0 )
-*/
+$prototype=QTextDocument ( const QString & text, QObject * parent = 0 )
 $internalConstructor=|new2|const QString &,QObject *=0
 
 //[1]QTextDocument ( QObject * parent = 0 )
@@ -150,19 +146,13 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_NEW )
 
 $deleteMethod
 
-/*
-void addResource ( int type, const QUrl & name, const QVariant & resource )
-*/
+$prototype=void addResource ( int type, const QUrl & name, const QVariant & resource )
 $method=|void|addResource|int,const QUrl &,const QVariant &
 
-/*
-void adjustSize ()
-*/
+$prototype=void adjustSize ()
 $method=|void|adjustSize|
 
-/*
-QVector<QTextFormat> allFormats () const
-*/
+$prototype=QVector<QTextFormat> allFormats () const
 HB_FUNC_STATIC( QTEXTDOCUMENT_ALLFORMATS )
 {
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -198,109 +188,67 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ALLFORMATS )
   }
 }
 
-/*
-int availableRedoSteps () const
-*/
+$prototype=int availableRedoSteps () const
 $method=|int|availableRedoSteps|
 
-/*
-int availableUndoSteps () const
-*/
+$prototype=int availableUndoSteps () const
 $method=|int|availableUndoSteps|
 
-/*
-QTextBlock begin () const
-*/
+$prototype=QTextBlock begin () const
 $method=|QTextBlock|begin|
 
-/*
-int blockCount () const
-*/
+$prototype=int blockCount () const
 $method=|int|blockCount|
 
-/*
-QChar characterAt ( int pos ) const
-*/
+$prototype=QChar characterAt ( int pos ) const
 $method=|QChar|characterAt|int
 
-/*
-int characterCount () const
-*/
+$prototype=int characterCount () const
 $method=|int|characterCount|
 
-/*
-virtual void clear ()
-*/
+$prototype=virtual void clear ()
 $virtualMethod=|void|clear|
 
-/*
-void clearUndoRedoStacks ( Stacks stacksToClear = UndoAndRedoStacks )
-*/
+$prototype=void clearUndoRedoStacks ( Stacks stacksToClear = UndoAndRedoStacks )
 $method=|void|clearUndoRedoStacks|QTextDocument::Stacks=QTextDocument::UndoAndRedoStacks
 
-/*
-QTextDocument * clone ( QObject * parent = 0 ) const
-*/
+$prototype=QTextDocument * clone ( QObject * parent = 0 ) const
 $method=|QTextDocument *|clone|QObject *=0
 
-/*
-Qt::CursorMoveStyle defaultCursorMoveStyle () const
-*/
+$prototype=Qt::CursorMoveStyle defaultCursorMoveStyle () const
 $method=|Qt::CursorMoveStyle|defaultCursorMoveStyle|
 
-/*
-QFont defaultFont () const
-*/
+$prototype=QFont defaultFont () const
 $method=|QFont|defaultFont|
 
-/*
-QString defaultStyleSheet () const
-*/
+$prototype=QString defaultStyleSheet () const
 $method=|QString|defaultStyleSheet|
 
-/*
-QTextOption defaultTextOption () const
-*/
+$prototype=QTextOption defaultTextOption () const
 $method=|QTextOption|defaultTextOption|
 
-/*
-QAbstractTextDocumentLayout * documentLayout () const
-*/
+$prototype=QAbstractTextDocumentLayout * documentLayout () const
 $method=|QAbstractTextDocumentLayout *|documentLayout|
 
-/*
-qreal documentMargin () const
-*/
+$prototype=qreal documentMargin () const
 $method=|qreal|documentMargin|
 
-/*
-void drawContents ( QPainter * p, const QRectF & rect = QRectF() )
-*/
+$prototype=void drawContents ( QPainter * p, const QRectF & rect = QRectF() )
 $method=|void|drawContents|QPainter *,const QRectF &=QRectF()
 
-/*
-QTextBlock end () const
-*/
+$prototype=QTextBlock end () const
 $method=|QTextBlock|end|
 
-/*
-QTextCursor find ( const QString & subString, const QTextCursor & cursor, FindFlags options = 0 ) const
-*/
+$prototype=QTextCursor find ( const QString & subString, const QTextCursor & cursor, FindFlags options = 0 ) const
 $internalMethod=|QTextCursor|find,find1|const QString &,const QTextCursor &,QTextDocument::FindFlags=0
 
-/*
-QTextCursor find ( const QRegExp & expr, const QTextCursor & cursor, FindFlags options = 0 ) const
-*/
+$prototype=QTextCursor find ( const QRegExp & expr, const QTextCursor & cursor, FindFlags options = 0 ) const
 $internalMethod=|QTextCursor|find,find2|const QRegExp &,const QTextCursor &,QTextDocument::FindFlags=0
 
-/*
-QTextCursor find ( const QString & subString, int position = 0, FindFlags options = 0 ) const
-*/
+$prototype=QTextCursor find ( const QString & subString, int position = 0, FindFlags options = 0 ) const
 $internalMethod=|QTextCursor|find,find3|const QString &,int=0,QTextDocument::FindFlags=0
 
-/*
-QTextCursor find ( const QRegExp & expr, int position = 0, FindFlags options = 0 ) const
-*/
+$prototype=QTextCursor find ( const QRegExp & expr, int position = 0, FindFlags options = 0 ) const
 $internalMethod=|QTextCursor|find,find4|const QRegExp &,int=0,QTextDocument::FindFlags=0
 
 //[1]QTextCursor find ( const QString & subString, const QTextCursor & cursor, FindFlags options = 0 ) const
@@ -332,234 +280,142 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND )
   }
 }
 
-/*
-QTextBlock findBlock ( int pos ) const
-*/
+$prototype=QTextBlock findBlock ( int pos ) const
 $method=|QTextBlock|findBlock|int
 
-/*
-QTextBlock findBlockByLineNumber ( int lineNumber ) const
-*/
+$prototype=QTextBlock findBlockByLineNumber ( int lineNumber ) const
 $method=|QTextBlock|findBlockByLineNumber|int
 
-/*
-QTextBlock findBlockByNumber ( int blockNumber ) const
-*/
+$prototype=QTextBlock findBlockByNumber ( int blockNumber ) const
 $method=|QTextBlock|findBlockByNumber|int
 
-/*
-QTextBlock firstBlock () const
-*/
+$prototype=QTextBlock firstBlock () const
 $method=|QTextBlock|firstBlock|
 
-/*
-qreal idealWidth () const
-*/
+$prototype=qreal idealWidth () const
 $method=|qreal|idealWidth|
 
-/*
-qreal indentWidth () const
-*/
+$prototype=qreal indentWidth () const
 $method=|qreal|indentWidth|
 
-/*
-bool isEmpty () const
-*/
+$prototype=bool isEmpty () const
 $method=|bool|isEmpty|
 
-/*
-bool isModified () const
-*/
+$prototype=bool isModified () const
 $method=|bool|isModified|
 
-/*
-bool isRedoAvailable () const
-*/
+$prototype=bool isRedoAvailable () const
 $method=|bool|isRedoAvailable|
 
-/*
-bool isUndoAvailable () const
-*/
+$prototype=bool isUndoAvailable () const
 $method=|bool|isUndoAvailable|
 
-/*
-bool isUndoRedoEnabled () const
-*/
+$prototype=bool isUndoRedoEnabled () const
 $method=|bool|isUndoRedoEnabled|
 
-/*
-QTextBlock lastBlock () const
-*/
+$prototype=QTextBlock lastBlock () const
 $method=|QTextBlock|lastBlock|
 
-/*
-int lineCount () const
-*/
+$prototype=int lineCount () const
 $method=|int|lineCount|
 
-/*
-void markContentsDirty ( int position, int length )
-*/
+$prototype=void markContentsDirty ( int position, int length )
 $method=|void|markContentsDirty|int,int
 
-/*
-int maximumBlockCount () const
-*/
+$prototype=int maximumBlockCount () const
 $method=|int|maximumBlockCount|
 
-/*
-QString metaInformation ( MetaInformation info ) const
-*/
+$prototype=QString metaInformation ( MetaInformation info ) const
 $method=|QString|metaInformation|QTextDocument::MetaInformation
 
-/*
-QTextObject * object ( int objectIndex ) const
-*/
+$prototype=QTextObject * object ( int objectIndex ) const
 $method=|QTextObject *|object|int
 
-/*
-QTextObject * objectForFormat ( const QTextFormat & f ) const
-*/
+$prototype=QTextObject * objectForFormat ( const QTextFormat & f ) const
 $method=|QTextObject *|objectForFormat|const QTextFormat &
 
-/*
-int pageCount () const
-*/
+$prototype=int pageCount () const
 $method=|int|pageCount|
 
-/*
-QSizeF pageSize () const
-*/
+$prototype=QSizeF pageSize () const
 $method=|QSizeF|pageSize|
 
-/*
-void print ( QPrinter * printer ) const
-*/
+$prototype=void print ( QPrinter * printer ) const
 $method=|void|print|QPrinter *
 
-/*
-QVariant resource ( int type, const QUrl & name ) const
-*/
+$prototype=QVariant resource ( int type, const QUrl & name ) const
 $method=|QVariant|resource|int,const QUrl &
 
-/*
-int revision () const
-*/
+$prototype=int revision () const
 $method=|int|revision|
 
-/*
-QTextFrame * rootFrame () const
-*/
+$prototype=QTextFrame * rootFrame () const
 $method=|QTextFrame *|rootFrame|
 
-/*
-void setDefaultCursorMoveStyle ( Qt::CursorMoveStyle style )
-*/
+$prototype=void setDefaultCursorMoveStyle ( Qt::CursorMoveStyle style )
 $method=|void|setDefaultCursorMoveStyle|Qt::CursorMoveStyle
 
-/*
-void setDefaultFont ( const QFont & font )
-*/
+$prototype=void setDefaultFont ( const QFont & font )
 $method=|void|setDefaultFont|const QFont &
 
-/*
-void setDefaultStyleSheet ( const QString & sheet )
-*/
+$prototype=void setDefaultStyleSheet ( const QString & sheet )
 $method=|void|setDefaultStyleSheet|const QString &
 
-/*
-void setDefaultTextOption ( const QTextOption & option )
-*/
+$prototype=void setDefaultTextOption ( const QTextOption & option )
 $method=|void|setDefaultTextOption|const QTextOption &
 
-/*
-void setDocumentLayout ( QAbstractTextDocumentLayout * layout )
-*/
+$prototype=void setDocumentLayout ( QAbstractTextDocumentLayout * layout )
 $method=|void|setDocumentLayout|QAbstractTextDocumentLayout *
 
-/*
-void setDocumentMargin ( qreal margin )
-*/
+$prototype=void setDocumentMargin ( qreal margin )
 $method=|void|setDocumentMargin|qreal
 
-/*
-void setHtml ( const QString & html )
-*/
+$prototype=void setHtml ( const QString & html )
 $method=|void|setHtml|const QString &
 
-/*
-void setIndentWidth ( qreal width )
-*/
+$prototype=void setIndentWidth ( qreal width )
 $method=|void|setIndentWidth|qreal
 
-/*
-void setMaximumBlockCount ( int maximum )
-*/
+$prototype=void setMaximumBlockCount ( int maximum )
 $method=|void|setMaximumBlockCount|int
 
-/*
-void setMetaInformation ( MetaInformation info, const QString & string )
-*/
+$prototype=void setMetaInformation ( MetaInformation info, const QString & string )
 $method=|void|setMetaInformation|QTextDocument::MetaInformation,const QString &
 
-/*
-void setPageSize ( const QSizeF & size )
-*/
+$prototype=void setPageSize ( const QSizeF & size )
 $method=|void|setPageSize|const QSizeF &
 
-/*
-void setPlainText ( const QString & text )
-*/
+$prototype=void setPlainText ( const QString & text )
 $method=|void|setPlainText|const QString &
 
-/*
-void setTextWidth ( qreal width )
-*/
+$prototype=void setTextWidth ( qreal width )
 $method=|void|setTextWidth|qreal
 
-/*
-void setUndoRedoEnabled ( bool enable )
-*/
+$prototype=void setUndoRedoEnabled ( bool enable )
 $method=|void|setUndoRedoEnabled|bool
 
-/*
-void setUseDesignMetrics ( bool b )
-*/
+$prototype=void setUseDesignMetrics ( bool b )
 $method=|void|setUseDesignMetrics|bool
 
-/*
-QSizeF size () const
-*/
+$prototype=QSizeF size () const
 $method=|QSizeF|size|
 
-/*
-qreal textWidth () const
-*/
+$prototype=qreal textWidth () const
 $method=|qreal|textWidth|
 
-/*
-QString toHtml ( const QByteArray & encoding = QByteArray() ) const
-*/
+$prototype=QString toHtml ( const QByteArray & encoding = QByteArray() ) const
 $method=|QString|toHtml|const QByteArray &=QByteArray()
 
-/*
-QString toPlainText () const
-*/
+$prototype=QString toPlainText () const
 $method=|QString|toPlainText|
 
-/*
-bool useDesignMetrics () const
-*/
+$prototype=bool useDesignMetrics () const
 $method=|bool|useDesignMetrics|
 
-/*
-void redo ( QTextCursor * cursor )
-*/
+$prototype=void redo ( QTextCursor * cursor )
 $internalMethod=|void|redo,redo1|QTextCursor *
 
-/*
-void redo ()
-*/
+$prototype=void redo ()
 $internalMethod=|void|redo,redo2|
 
 //[1]void redo ( QTextCursor * cursor )
@@ -581,19 +437,13 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_REDO )
   }
 }
 
-/*
-void setModified ( bool m = true )
-*/
+$prototype=void setModified ( bool m = true )
 $method=|void|setModified|bool=true
 
-/*
-void undo ( QTextCursor * cursor )
-*/
+$prototype=void undo ( QTextCursor * cursor )
 $internalMethod=|void|undo,undo1|QTextCursor *
 
-/*
-void undo ()
-*/
+$prototype=void undo ()
 $internalMethod=|void|undo,undo2|
 
 //[1]void undo ( QTextCursor * cursor )

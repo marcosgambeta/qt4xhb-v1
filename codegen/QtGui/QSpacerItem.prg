@@ -35,9 +35,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QSpacerItem ( int w, int h, QSizePolicy::Policy hPolicy = QSizePolicy::Minimum, QSizePolicy::Policy vPolicy = QSizePolicy::Minimum )
-*/
+$prototype=QSpacerItem ( int w, int h, QSizePolicy::Policy hPolicy = QSizePolicy::Minimum, QSizePolicy::Policy vPolicy = QSizePolicy::Minimum )
 HB_FUNC_STATIC( QSPACERITEM_NEW )
 {
   int par3 = ISNIL(3)? (int) QSizePolicy::Minimum : hb_parni(3);
@@ -46,49 +44,31 @@ HB_FUNC_STATIC( QSPACERITEM_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-/*
-void changeSize ( int w, int h, QSizePolicy::Policy hPolicy = QSizePolicy::Minimum, QSizePolicy::Policy vPolicy = QSizePolicy::Minimum )
-*/
+$prototype=void changeSize ( int w, int h, QSizePolicy::Policy hPolicy = QSizePolicy::Minimum, QSizePolicy::Policy vPolicy = QSizePolicy::Minimum )
 $method=|void|changeSize|int,int,QSizePolicy::Policy=QSizePolicy::Minimum,QSizePolicy::Policy=QSizePolicy::Minimum
 
-/*
-virtual Qt::Orientations expandingDirections () const
-*/
+$prototype=virtual Qt::Orientations expandingDirections () const
 $virtualMethod=|Qt::Orientations|expandingDirections|
 
-/*
-virtual QRect geometry () const
-*/
+$prototype=virtual QRect geometry () const
 $virtualMethod=|QRect|geometry|
 
-/*
-virtual bool isEmpty () const
-*/
+$prototype=virtual bool isEmpty () const
 $virtualMethod=|bool|isEmpty|
 
-/*
-virtual QSize maximumSize () const
-*/
+$prototype=virtual QSize maximumSize () const
 $virtualMethod=|QSize|maximumSize|
 
-/*
-virtual QSize minimumSize () const
-*/
+$prototype=virtual QSize minimumSize () const
 $virtualMethod=|QSize|minimumSize|
 
-/*
-virtual void setGeometry ( const QRect & r )
-*/
+$prototype=virtual void setGeometry ( const QRect & r )
 $virtualMethod=|void|setGeometry|const QRect &
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $virtualMethod=|QSize|sizeHint|
 
-/*
-virtual QSpacerItem * spacerItem ()
-*/
+$prototype=virtual QSpacerItem * spacerItem ()
 $virtualMethod=|QSpacerItem *|spacerItem|
 
 #pragma ENDDUMP

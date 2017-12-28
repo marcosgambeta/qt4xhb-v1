@@ -32,9 +32,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QDragMoveEvent ( const QPoint & pos, Qt::DropActions actions, const QMimeData * data, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, Type type = DragMove )
-*/
+$prototype=QDragMoveEvent ( const QPoint & pos, Qt::DropActions actions, const QMimeData * data, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, Type type = DragMove )
 HB_FUNC_STATIC( QDRAGMOVEEVENT_NEW )
 {
   int par2 = hb_parni(2);
@@ -48,14 +46,10 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_NEW )
 
 $deleteMethod
 
-/*
-void accept ( const QRect & rectangle )
-*/
+$prototype=void accept ( const QRect & rectangle )
 $method=|void|accept,accept1|const QRect &
 
-/*
-void accept ()
-*/
+$prototype=void accept ()
 $method=|void|accept,accept2|
 
 //[1]void accept ( const QRect & rectangle )
@@ -77,19 +71,13 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_ACCEPT )
   }
 }
 
-/*
-QRect answerRect () const
-*/
+$prototype=QRect answerRect () const
 $method=|QRect|answerRect|
 
-/*
-void ignore ( const QRect & rectangle )
-*/
+$prototype=void ignore ( const QRect & rectangle )
 $method=|void|ignore,ignore1|const QRect &
 
-/*
-void ignore ()
-*/
+$prototype=void ignore ()
 $method=|void|ignore,ignore2|
 
 //[1]void ignore ( const QRect & rectangle )

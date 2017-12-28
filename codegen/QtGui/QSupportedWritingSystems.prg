@@ -32,14 +32,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QSupportedWritingSystems ()
-*/
+$prototype=QSupportedWritingSystems ()
 $internalConstructor=|new1|
 
-/*
-QSupportedWritingSystems ( const QSupportedWritingSystems & other )
-*/
+$prototype=QSupportedWritingSystems ( const QSupportedWritingSystems & other )
 $internalConstructor=|new2|const QSupportedWritingSystems &
 
 //[1]QSupportedWritingSystems ()
@@ -63,14 +59,10 @@ HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_NEW )
 
 $deleteMethod
 
-/*
-void setSupported ( QFontDatabase::WritingSystem writingSystem, bool support = true )
-*/
+$prototype=void setSupported ( QFontDatabase::WritingSystem writingSystem, bool support = true )
 $method=|void|setSupported|QFontDatabase::WritingSystem,bool=true
 
-/*
-bool supported ( QFontDatabase::WritingSystem writingSystem ) const
-*/
+$prototype=bool supported ( QFontDatabase::WritingSystem writingSystem ) const
 $method=|bool|supported|QFontDatabase::WritingSystem
 
 $extraMethods

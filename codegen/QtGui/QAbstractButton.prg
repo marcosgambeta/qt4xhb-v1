@@ -60,134 +60,82 @@ $destructor
 
 $deleteMethod
 
-/*
-bool autoExclusive () const
-*/
+$prototype=bool autoExclusive () const
 $method=|bool|autoExclusive|
 
-/*
-bool autoRepeat () const
-*/
+$prototype=bool autoRepeat () const
 $metjod=|bool|autoRepeat|
 
-/*
-int autoRepeatDelay () const
-*/
+$prototype=int autoRepeatDelay () const
 $method=|int|autoRepeatDelay|
 
-/*
-int autoRepeatInterval () const
-*/
+$prototype=int autoRepeatInterval () const
 $method=|int|autoRepeatInterval|
 
-/*
-QButtonGroup * group () const
-*/
+$prototype=QButtonGroup * group () const
 $method=|QButtonGroup *|group|
 
-/*
-QIcon icon () const
-*/
+$prototype=QIcon icon () const
 $method=|QIcon|icon|
 
-/*
-QSize iconSize () const
-*/
+$prototype=QSize iconSize () const
 $method=|QSize|iconSize|
 
-/*
-bool isCheckable () const
-*/
+$prototype=bool isCheckable () const
 $method=|bool|isCheckable|
 
-/*
-bool isChecked () const
-*/
+$prototype=bool isChecked () const
 $method=|bool|isChecked|
 
-/*
-bool isDown () const
-*/
+$prototype=bool isDown () const
 $method=|bool|isDown|
 
-/*
-void setAutoExclusive ( bool )
-*/
+$prototype=void setAutoExclusive ( bool )
 $method=|void|setAutoExclusive|bool
 
-/*
-void setAutoRepeat ( bool )
-*/
+$prototype=void setAutoRepeat ( bool )
 $method=|void|setAutoRepeat|bool
 
-/*
-void setAutoRepeatDelay ( int )
-*/
+$prototype=void setAutoRepeatDelay ( int )
 $method=|void|setAutoRepeatDelay|int
 
-/*
-void setAutoRepeatInterval ( int )
-*/
+$prototype=void setAutoRepeatInterval ( int )
 $method=|void|setAutoRepeatInterval|int
 
-/*
-void setCheckable ( bool )
-*/
+$prototype=void setCheckable ( bool )
 $method=|void|setCheckable|bool
 
-/*
-void setDown ( bool )
-*/
+$prototype=void setDown ( bool )
 $method=|void|setDown|bool
 
-/*
-void setIcon ( const QIcon & icon )
-*/
+$prototype=void setIcon ( const QIcon & icon )
 $method=|void|setIcon|const QIcon &
 
-/*
-void setShortcut ( const QKeySequence & key )
-*/
+$prototype=void setShortcut ( const QKeySequence & key )
 $method=|void|setShortcut|const QKeySequence &
 
-/*
-void setText ( const QString & text )
-*/
+$prototype=void setText ( const QString & text )
 $method=|void|setText|const QString &
 
-/*
-QKeySequence shortcut () const
-*/
+$prototype=QKeySequence shortcut () const
 $method=|QKeySequence|shortcut|
 
-/*
-QString text () const
-*/
+$prototype=QString text () const
 $method=|QString|text|
 
-/*
-void animateClick ( int msec = 100 )
-*/
+$prototype=void animateClick ( int msec = 100 )
 $method=|void|animateClick|int=100
 
-/*
-void click ()
-*/
+$prototype=void click ()
 $method=|void|click|
 
-/*
-void setChecked ( bool )
-*/
+$prototype=void setChecked ( bool )
 $method=|void|setChecked|bool
 
-/*
-void setIconSize ( const QSize & size )
-*/
+$prototype=void setIconSize ( const QSize & size )
 $method=|void|setIconSize|const QSize &
 
-/*
-void toggle ()
-*/
+$prototype=void toggle ()
 $method=|void|toggle|
 
 #pragma ENDDUMP

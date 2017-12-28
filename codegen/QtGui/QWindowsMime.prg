@@ -32,9 +32,7 @@ $destructor
 
 $deleteMethod
 
-/*
-static int registerMimeType ( const QString & mime )
-*/
+$prototype=static int registerMimeType ( const QString & mime )
 $staticMethod=|int|registerMimeType|const QString &
 
 $extraMethods

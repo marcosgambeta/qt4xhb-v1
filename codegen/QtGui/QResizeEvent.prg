@@ -27,9 +27,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QResizeEvent(const QSize &size, const QSize &oldSize)
-*/
+$prototype=QResizeEvent(const QSize &size, const QSize &oldSize)
 HB_FUNC_STATIC( QRESIZEEVENT_NEW )
 {
   QResizeEvent * o = new QResizeEvent ( *PQSIZE(1), *PQSIZE(2) );
@@ -38,14 +36,10 @@ HB_FUNC_STATIC( QRESIZEEVENT_NEW )
 
 $deleteMethod
 
-/*
-const QSize &size() const
-*/
+$prototype=const QSize &size() const
 $method=|const QSize &|size|
 
-/*
-const QSize &oldSize()const
-*/
+$prototype=const QSize &oldSize()const
 $method=|const QSize &|oldSize|
 
 #pragma ENDDUMP

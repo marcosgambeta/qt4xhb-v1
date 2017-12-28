@@ -42,39 +42,25 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual QStringList addApplicationFont ( const QByteArray & fontData, const QString & fileName )
-*/
+$prototype=virtual QStringList addApplicationFont ( const QByteArray & fontData, const QString & fileName )
 $virtualMethod=|QStringList|addApplicationFont|const QByteArray &,const QString &
 
-/*
-virtual QString fontDir () const
-*/
+$prototype=virtual QString fontDir () const
 $virtualMethod=|QString|fontDir|
 
-/*
-virtual QFontEngine * fontEngine ( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference )
-*/
+$prototype=virtual QFontEngine * fontEngine ( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference )
 $virtualMethod=|QFontEngine *|fontEngine|const QByteArray &,qreal,QFont::HintingPreference
 
-/*
-virtual void populateFontDatabase ()
-*/
+$prototype=virtual void populateFontDatabase ()
 $virtualMethod=|void|populateFontDatabase|
 
-/*
-virtual void releaseHandle ( void * handle )
-*/
+$prototype=virtual void releaseHandle ( void * handle )
 $virtualMethod=|void|releaseHandle|void *
 
-/*
-static void registerFont ( const QString & familyName, const QString & foundryName, QFont::Weight weight, QFont::Style style, QFont::Stretch stretch, bool antialiased, bool scalable, int pixelSize, const QSupportedWritingSystems & writingSystems, void * usrPtr )
-*/
+$prototype=static void registerFont ( const QString & familyName, const QString & foundryName, QFont::Weight weight, QFont::Style style, QFont::Stretch stretch, bool antialiased, bool scalable, int pixelSize, const QSupportedWritingSystems & writingSystems, void * usrPtr )
 $static Method=|void|registerFont|const QString &,const QString &,QFont::Weight,QFont::Style,QFont::Stretch,bool,bool,int,const QSupportedWritingSystems &,void *
 
-/*
-static void registerQPF2Font ( const QByteArray & dataArray, void * handle )
-*/
+$prototype=static void registerQPF2Font ( const QByteArray & dataArray, void * handle )
 $staticMethod=|void|registerQPF2Font|const QByteArray &,void *
 
 $extraMethods

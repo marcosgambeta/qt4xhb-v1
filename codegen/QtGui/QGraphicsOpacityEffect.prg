@@ -32,9 +32,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QGraphicsOpacityEffect ( QObject * parent = 0 )
-*/
+$prototype=QGraphicsOpacityEffect ( QObject * parent = 0 )
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_NEW )
 {
   QGraphicsOpacityEffect * o = new QGraphicsOpacityEffect ( OPQOBJECT(1,0) );
@@ -43,24 +41,16 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_NEW )
 
 $deleteMethod
 
-/*
-qreal opacity () const
-*/
+$prototype=qreal opacity () const
 $method=|qreal|opacity|
 
-/*
-QBrush opacityMask () const
-*/
+$prototype=QBrush opacityMask () const
 $method=|QBrush|opacityMask|
 
-/*
-void setOpacity ( qreal opacity )
-*/
+$prototype=void setOpacity ( qreal opacity )
 $method=|void|setOpacity|qreal
 
-/*
-void setOpacityMask ( const QBrush & mask )
-*/
+$prototype=void setOpacityMask ( const QBrush & mask )
 $method=|void|setOpacityMask|const QBrush &
 
 #pragma ENDDUMP

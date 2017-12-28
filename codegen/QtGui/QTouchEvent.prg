@@ -29,19 +29,13 @@ $destructor
 
 $deleteMethod
 
-/*
-QWidget *widget() const
-*/
+$prototype=QWidget *widget() const
 $method=|QWidget *|widget|
 
-/*
-QTouchEvent::DeviceType deviceType() const
-*/
+$prototype=QTouchEvent::DeviceType deviceType() const
 $method=|QTouchEvent::DeviceType|deviceType|
 
-/*
-Qt::TouchPointStates touchPointStates() const
-*/
+$prototype=Qt::TouchPointStates touchPointStates() const
 $method=|Qt::TouchPointStates|touchPointStates|
 
 #pragma ENDDUMP

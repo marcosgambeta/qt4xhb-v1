@@ -34,18 +34,14 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QObject * create ( const QString & key, const QString & specification )
-*/
+$prototype=QObject * create ( const QString & key, const QString & specification )
 HB_FUNC_STATIC( QGENERICPLUGINFACTORY_CREATE )
 {
   QObject * ptr = QGenericPluginFactory::create ( PQSTRING(1), PQSTRING(2) );
   _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
 }
 
-/*
-static QStringList keys ()
-*/
+$prototype=static QStringList keys ()
 $staticMethod=|QStringList|keys|
 
 $extraMethods

@@ -38,9 +38,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QSpinBox ( QWidget * parent = 0 )
-*/
+$prototype=QSpinBox ( QWidget * parent = 0 )
 HB_FUNC_STATIC( QSPINBOX_NEW )
 {
   QSpinBox * o = new QSpinBox ( OPQWIDGET(1,0) );
@@ -49,74 +47,46 @@ HB_FUNC_STATIC( QSPINBOX_NEW )
 
 $deleteMethod
 
-/*
-QString cleanText () const
-*/
+$prototype=QString cleanText () const
 $method=|QString|cleanText|
 
-/*
-int maximum () const
-*/
+$prototype=int maximum () const
 $method=|int|maximum|
 
-/*
-int minimum () const
-*/
+$prototype=int minimum () const
 $method=|int|minimum|
 
-/*
-QString prefix () const
-*/
+$prototype=QString prefix () const
 $method=|QString|prefix|
 
-/*
-void setMaximum ( int max )
-*/
+$prototype=void setMaximum ( int max )
 $method=|void|setMaximum|int
 
-/*
-void setMinimum ( int min )
-*/
+$prototype=void setMinimum ( int min )
 $method=|void|setMinimum|int
 
-/*
-void setPrefix ( const QString & prefix )
-*/
+$prototype=void setPrefix ( const QString & prefix )
 $method=|void|setPrefix|const QString &
 
-/*
-void setRange ( int minimum, int maximum )
-*/
+$prototype=void setRange ( int minimum, int maximum )
 $method=|void|setRange|int,int
 
-/*
-void setSingleStep ( int val )
-*/
+$prototype=void setSingleStep ( int val )
 $method=|void|setSingleStep|int
 
-/*
-void setSuffix ( const QString & suffix )
-*/
+$prototype=void setSuffix ( const QString & suffix )
 $method=|void|setSuffix|const QString &
 
-/*
-int singleStep () const
-*/
+$prototype=int singleStep () const
 $method=|int|singleStep|
 
-/*
-QString suffix () const
-*/
+$prototype=QString suffix () const
 $method=|QString|suffix|
 
-/*
-int value () const
-*/
+$prototype=int value () const
 $method=|int|value|
 
-/*
-void setValue ( int val )
-*/
+$prototype=void setValue ( int val )
 $method=|void|setValue|int
 
 #pragma ENDDUMP

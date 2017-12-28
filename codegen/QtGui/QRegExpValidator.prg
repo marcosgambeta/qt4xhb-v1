@@ -28,14 +28,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QRegExpValidator ( QObject * parent = 0 )
-*/
+$prototype=QRegExpValidator ( QObject * parent = 0 )
 $internalConstructor=|new1|QObject *=0
 
-/*
-QRegExpValidator ( const QRegExp & rx, QObject * parent )
-*/
+$prototype=QRegExpValidator ( const QRegExp & rx, QObject * parent )
 $internalConstructor=|new2|const QRegExp &,QObject *
 
 //[1]QRegExpValidator ( QObject * parent = 0 )
@@ -59,19 +55,13 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
 
 $deleteMethod
 
-/*
-const QRegExp & regExp () const
-*/
+$prototype=const QRegExp & regExp () const
 $method=|const QRegExp &|regExp|
 
-/*
-void setRegExp ( const QRegExp & rx )
-*/
+$prototype=void setRegExp ( const QRegExp & rx )
 $method=|void|setRegExp|const QRegExp &
 
-/*
-virtual QValidator::State validate ( QString & input, int & pos ) const
-*/
+$prototype=virtual QValidator::State validate ( QString & input, int & pos ) const
 HB_FUNC_STATIC( QREGEXPVALIDATOR_VALIDATE ) // TODO: revisar implementacao e corrigir
 {
   QRegExpValidator * obj = (QRegExpValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

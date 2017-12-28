@@ -60,31 +60,21 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QAbstractSpinBox ( QWidget * parent = 0 )
-*/
+$prototype=QAbstractSpinBox ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-/*
-Qt::Alignment alignment () const
-*/
+$prototype=Qt::Alignment alignment () const
 $method=|Qt::Alignment|alignment|
 
-/*
-ButtonSymbols buttonSymbols () const
-*/
+$prototype=ButtonSymbols buttonSymbols () const
 $method=|QAbstractSpinBox::ButtonSymbols|buttonSymbols|
 
-/*
-CorrectionMode correctionMode () const
-*/
+$prototype=CorrectionMode correctionMode () const
 $method=|QAbstractSpinBox::CorrectionMode|correctionMode|
 
-/*
-virtual void fixup ( QString & input ) const
-*/
+$prototype=virtual void fixup ( QString & input ) const
 %% TODO: revisar implementacao e corrigir
 HB_FUNC_STATIC( QABSTRACTSPINBOX_FIXUP )
 {
@@ -99,99 +89,61 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_FIXUP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-bool hasAcceptableInput () const
-*/
+$prototype=bool hasAcceptableInput () const
 $method=|bool|hasAcceptableInput|
 
-/*
-bool hasFrame () const
-*/
+$prototype=bool hasFrame () const
 $method=|bool|hasFrame|
 
-/*
-void interpretText ()
-*/
+$prototype=void interpretText ()
 $method=|void|interpretText|
 
-/*
-bool isAccelerated () const
-*/
+$prototype=bool isAccelerated () const
 $method=|bool|isAccelerated|
 
-/*
-bool isReadOnly () const
-*/
+$prototype=bool isReadOnly () const
 $method=|bool|isReadOnly|
 
-/*
-bool keyboardTracking () const
-*/
+$prototype=bool keyboardTracking () const
 $method=|bool|keyboardTracking|
 
-/*
-void setAccelerated ( bool on )
-*/
+$prototype=void setAccelerated ( bool on )
 $method=|void|setAccelerated|bool
 
-/*
-void setAlignment ( Qt::Alignment flag )
-*/
+$prototype=void setAlignment ( Qt::Alignment flag )
 $method=|void|setAlignment|Qt::Alignment
 
-/*
-void setButtonSymbols ( ButtonSymbols bs )
-*/
+$prototype=void setButtonSymbols ( ButtonSymbols bs )
 $method=|void|setButtonSymbols|QAbstractSpinBox::ButtonSymbols
 
-/*
-void setCorrectionMode ( CorrectionMode cm )
-*/
+$prototype=void setCorrectionMode ( CorrectionMode cm )
 $method=|void|setCorrectionMode|QAbstractSpinBox::CorrectionMode
 
-/*
-void setFrame ( bool )
-*/
+$prototype=void setFrame ( bool )
 $method=|void|setFrame|bool
 
-/*
-void setKeyboardTracking ( bool kt )
-*/
+$prototype=void setKeyboardTracking ( bool kt )
 $method=|void|setKeyboardTracking|bool
 
-/*
-void setReadOnly ( bool r )
-*/
+$prototype=void setReadOnly ( bool r )
 $method=|void|setReadOnly|bool
 
-/*
-void setSpecialValueText ( const QString & txt )
-*/
+$prototype=void setSpecialValueText ( const QString & txt )
 $method=|void|setSpecialValueText|const QString &
 
-/*
-void setWrapping ( bool w )
-*/
+$prototype=void setWrapping ( bool w )
 $method=|void|setWrapping|bool
 
-/*
-QString specialValueText () const
-*/
+$prototype=QString specialValueText () const
 $method=|QString|specialValueText|
 
-/*
-virtual void stepBy ( int steps )
-*/
+$prototype=virtual void stepBy ( int steps )
 $virtualMethod=|void|stepBy|int
 
-/*
-QString text () const
-*/
+$prototype=QString text () const
 $method=|QString|text|
 
-/*
-virtual QValidator::State validate ( QString & input, int & pos ) const
-*/
+$prototype=virtual QValidator::State validate ( QString & input, int & pos ) const
 %% TODO: revisar implementacao e corrigir
 HB_FUNC_STATIC( QABSTRACTSPINBOX_VALIDATE )
 {
@@ -205,49 +157,31 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_VALIDATE )
   }
 }
 
-/*
-bool wrapping () const
-*/
+$prototype=bool wrapping () const
 $method=|bool|wrapping|
 
-/*
-virtual bool event ( QEvent * event )
-*/
+$prototype=virtual bool event ( QEvent * event )
 $virtualMethod=|bool|event|QEvent *
 
-/*
-virtual QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
-*/
+$prototype=virtual QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
 $virtualMethod=|QVariant|inputMethodQuery|Qt::InputMethodQuery
 
-/*
-virtual QSize minimumSizeHint () const
-*/
+$prototype=virtual QSize minimumSizeHint () const
 $virtualMethod=|QSize|minimumSizeHint|
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $virtualMethod=|QSize|sizeHint|
 
-/*
-virtual void clear ()
-*/
+$prototype=virtual void clear ()
 $virtualMethod=|void|clear|
 
-/*
-void selectAll ()
-*/
+$prototype=void selectAll ()
 $method=|void|selectAll|
 
-/*
-void stepDown ()
-*/
+$prototype=void stepDown ()
 $method=|void|stepDown|
 
-/*
-void stepUp ()
-*/
+$prototype=void stepUp ()
 $method=|void|stepUp|
 
 #pragma ENDDUMP

@@ -52,24 +52,16 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QItemSelectionRange ()
-*/
+$prototype=QItemSelectionRange ()
 $internalConstructor=|new1|
 
-/*
-QItemSelectionRange ( const QItemSelectionRange & other )
-*/
+$prototype=QItemSelectionRange ( const QItemSelectionRange & other )
 $internalConstructor=|new2|const QItemSelectionRange &
 
-/*
-QItemSelectionRange ( const QModelIndex & topLeft, const QModelIndex & bottomRight )
-*/
+$prototype=QItemSelectionRange ( const QModelIndex & topLeft, const QModelIndex & bottomRight )
 $internalConstructor=|new3|const QModelIndex &,const QModelIndex &
 
-/*
-QItemSelectionRange ( const QModelIndex & index )
-*/
+$prototype=QItemSelectionRange ( const QModelIndex & index )
 $internalConstructor=|new4|const QModelIndex &
 
 //[1]QItemSelectionRange ()
@@ -103,24 +95,16 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW )
 
 $deleteMethod
 
-/*
-int bottom () const
-*/
+$prototype=int bottom () const
 $method=|int|bottom|
 
-/*
-QModelIndex bottomRight () const
-*/
+$prototype=QModelIndex bottomRight () const
 $method=|QModelIndex|bottomRight|
 
-/*
-bool contains ( const QModelIndex & index ) const
-*/
+$prototype=bool contains ( const QModelIndex & index ) const
 $internalMethod=|bool|contains,contains1|const QModelIndex &
 
-/*
-bool contains ( int row, int column, const QModelIndex & parentIndex ) const
-*/
+$prototype=bool contains ( int row, int column, const QModelIndex & parentIndex ) const
 $internalMethod=|bool|contains,contains2|int,int,const QModelIndex &
 
 //[1]bool contains ( const QModelIndex & index ) const
@@ -142,14 +126,10 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_CONTAINS )
   }
 }
 
-/*
-int height () const
-*/
+$prototype=int height () const
 $method=|int|height|
 
-/*
-QModelIndexList indexes () const
-*/
+$prototype=QModelIndexList indexes () const
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_INDEXES )
 {
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -185,59 +165,37 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_INDEXES )
   }
 }
 
-/*
-QItemSelectionRange intersected ( const QItemSelectionRange & other ) const
-*/
+$prototype=QItemSelectionRange intersected ( const QItemSelectionRange & other ) const
 $method=|QItemSelectionRange|intersected|const QItemSelectionRange &
 
-/*
-bool intersects ( const QItemSelectionRange & other ) const
-*/
+$prototype=bool intersects ( const QItemSelectionRange & other ) const
 $method=|bool|intersects|const QItemSelectionRange &
 
-/*
-bool isEmpty () const
-*/
+$prototype=bool isEmpty () const
 $method=|bool|isEmpty|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-int left () const
-*/
+$prototype=int left () const
 $method=|int|left|
 
-/*
-const QAbstractItemModel * model () const
-*/
+$prototype=const QAbstractItemModel * model () const
 $method=|const QAbstractItemModel *|model|
 
-/*
-QModelIndex parent () const
-*/
+$prototype=QModelIndex parent () const
 $method=|QModelIndex|parent|
 
-/*
-int right () const
-*/
+$prototype=int right () const
 $method=|int|right|
 
-/*
-int top () const
-*/
+$prototype=int top () const
 $method=|int|top|
 
-/*
-QModelIndex topLeft () const
-*/
+$prototype=QModelIndex topLeft () const
 $method=|QModelIndex|topLeft|
 
-/*
-int width () const
-*/
+$prototype=int width () const
 $method=|int|width|
 
 $extraMethods

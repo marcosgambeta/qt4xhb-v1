@@ -53,124 +53,76 @@ $destructor
 
 $deleteMethod
 
-/*
-bool hasTracking () const
-*/
+$prototype=bool hasTracking () const
 $method=|bool|hasTracking|
 
-/*
-bool invertedAppearance () const
-*/
+$prototype=bool invertedAppearance () const
 $method=|bool|invertedAppearance|
 
-/*
-bool invertedControls () const
-*/
+$prototype=bool invertedControls () const
 $method=|bool|invertedControls|
 
-/*
-bool isSliderDown () const
-*/
+$prototype=bool isSliderDown () const
 $method=|bool|isSliderDown|
 
-/*
-int maximum () const
-*/
+$prototype=int maximum () const
 $method=|int|maximum|
 
-/*
-int minimum () const
-*/
+$prototype=int minimum () const
 $method=|int|minimum|
 
-/*
-Qt::Orientation orientation () const
-*/
+$prototype=Qt::Orientation orientation () const
 $method=|Qt::Orientation|orientation|
 
-/*
-int pageStep () const
-*/
+$prototype=int pageStep () const
 $method=|int|pageStep|
 
-/*
-void setInvertedAppearance ( bool )
-*/
+$prototype=void setInvertedAppearance ( bool )
 $method=|void|setInvertedAppearance|bool
 
-/*
-void setInvertedControls ( bool )
-*/
+$prototype=void setInvertedControls ( bool )
 $method=|void|setInvertedControls|bool
 
-/*
-void setMaximum ( int )
-*/
+$prototype=void setMaximum ( int )
 $method=|void|setMaximum|int
 
-/*
-void setMinimum ( int )
-*/
+$prototype=void setMinimum ( int )
 $method=|void|setMinimum|int
 
-/*
-void setPageStep ( int )
-*/
+$prototype=void setPageStep ( int )
 $method=|void|setPageStep|int
 
-/*
-void setRange ( int min, int max )
-*/
+$prototype=void setRange ( int min, int max )
 $method=|void|setRange|int,int
 
-/*
-void setSingleStep ( int )
-*/
+$prototype=void setSingleStep ( int )
 $method=|void|setSingleStep|int
 
-/*
-void setSliderDown ( bool )
-*/
+$prototype=void setSliderDown ( bool )
 $method=|void|setSliderDown|bool
 
-/*
-void setSliderPosition ( int )
-*/
+$prototype=void setSliderPosition ( int )
 $method=|void|setSliderPosition|int
 
-/*
-void setTracking ( bool enable )
-*/
+$prototype=void setTracking ( bool enable )
 $method=|void|setTracking|bool
 
-/*
-int singleStep () const
-*/
+$prototype=int singleStep () const
 $method=|int|singleStep|
 
-/*
-int sliderPosition () const
-*/
+$prototype=int sliderPosition () const
 $method=|int|sliderPosition|
 
-/*
-void triggerAction ( SliderAction action )
-*/
+$prototype=void triggerAction ( SliderAction action )
 $method=|void|triggerAction|QAbstractSlider::SliderAction
 
-/*
-int value () const
-*/
+$prototype=int value () const
 $method=|int|value|
 
-/*
-void setOrientation ( Qt::Orientation )
-*/
+$prototype=void setOrientation ( Qt::Orientation )
 $method=|void|setOrientation|Qt::Orientation
 
-/*
-void setValue ( int )
-*/
+$prototype=void setValue ( int )
 $method=|void|setValue|int
 
 #pragma ENDDUMP

@@ -36,14 +36,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QPrintDialog ( QPrinter * printer, QWidget * parent = 0 )
-*/
+$prototype=QPrintDialog ( QPrinter * printer, QWidget * parent = 0 )
 $internalConstructor=|new1|QPrinter *,QWidget *=0
 
-/*
-QPrintDialog ( QWidget * parent = 0 )
-*/
+$prototype=QPrintDialog ( QWidget * parent = 0 )
 $internalConstructor=|new2|QWidget *=0
 
 //[1]QPrintDialog ( QPrinter * printer, QWidget * parent = 0 )
@@ -67,49 +63,31 @@ HB_FUNC_STATIC( QPRINTDIALOG_NEW )
 
 $deleteMethod
 
-/*
-void open ( QObject * receiver, const char * member )
-*/
+$prototype=void open ( QObject * receiver, const char * member )
 $method=|void|open|QObject *,const char *
 
-/*
-PrintDialogOptions options () const
-*/
+$prototype=PrintDialogOptions options () const
 $method=|QPrintDialog::PrintDialogOptions|options|
 
-/*
-QPrinter * printer ()
-*/
+$prototype=QPrinter * printer ()
 $method=|QPrinter *|printer|
 
-/*
-void setOption ( PrintDialogOption option, bool on = true )
-*/
+$prototype=void setOption ( PrintDialogOption option, bool on = true )
 $method=|void|setOption|QPrintDialog::PrintDialogOption,bool=true
 
-/*
-void setOptions ( PrintDialogOptions options )
-*/
+$prototype=void setOptions ( PrintDialogOptions options )
 $method=|void|setOptions|QPrintDialog::PrintDialogOptions
 
-/*
-bool testOption ( PrintDialogOption option ) const
-*/
+$prototype=bool testOption ( PrintDialogOption option ) const
 $method=|bool|testOption|QPrintDialog::PrintDialogOption
 
-/*
-virtual void done ( int result )
-*/
+$prototype=virtual void done ( int result )
 $virtualMethod=|void|done|int
 
-/*
-virtual int exec ()
-*/
+$prototype=virtual int exec ()
 $virtualMethod=|int|exec|
 
-/*
-virtual void setVisible ( bool visible )
-*/
+$prototype=virtual void setVisible ( bool visible )
 $virtualMethod=|void|setVisible|bool
 
 #pragma ENDDUMP

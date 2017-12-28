@@ -42,9 +42,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QMotifStyle ( bool useHighlightCols = false )
-*/
+$prototype=QMotifStyle ( bool useHighlightCols = false )
 HB_FUNC_STATIC( QMOTIFSTYLE_NEW )
 {
   QMotifStyle * o = new QMotifStyle ( OPBOOL(1,false) );
@@ -53,19 +51,13 @@ HB_FUNC_STATIC( QMOTIFSTYLE_NEW )
 
 $deleteMethod
 
-/*
-void setUseHighlightColors ( bool arg )
-*/
+$prototype=void setUseHighlightColors ( bool arg )
 $method=|void|setUseHighlightColors|bool
 
-/*
-bool useHighlightColors () const
-*/
+$prototype=bool useHighlightColors () const
 $method=|bool|useHighlightColors|
 
-/*
-virtual void drawComplexControl ( ComplexControl cc, const QStyleOptionComplex * opt, QPainter * p, const QWidget * widget = 0 ) const
-*/
+$prototype=virtual void drawComplexControl ( ComplexControl cc, const QStyleOptionComplex * opt, QPainter * p, const QWidget * widget = 0 ) const
 HB_FUNC_STATIC( QMOTIFSTYLE_DRAWCOMPLEXCONTROL )
 {
   QMotifStyle * obj = (QMotifStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -79,9 +71,7 @@ HB_FUNC_STATIC( QMOTIFSTYLE_DRAWCOMPLEXCONTROL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-virtual void drawControl ( ControlElement element, const QStyleOption * opt, QPainter * p, const QWidget * widget = 0 ) const
-*/
+$prototype=virtual void drawControl ( ControlElement element, const QStyleOption * opt, QPainter * p, const QWidget * widget = 0 ) const
 HB_FUNC_STATIC( QMOTIFSTYLE_DRAWCONTROL )
 {
   QMotifStyle * obj = (QMotifStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -95,9 +85,7 @@ HB_FUNC_STATIC( QMOTIFSTYLE_DRAWCONTROL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-virtual void drawPrimitive ( PrimitiveElement pe, const QStyleOption * opt, QPainter * p, const QWidget * w = 0 ) const
-*/
+$prototype=virtual void drawPrimitive ( PrimitiveElement pe, const QStyleOption * opt, QPainter * p, const QWidget * w = 0 ) const
 HB_FUNC_STATIC( QMOTIFSTYLE_DRAWPRIMITIVE )
 {
   QMotifStyle * obj = (QMotifStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -111,19 +99,13 @@ HB_FUNC_STATIC( QMOTIFSTYLE_DRAWPRIMITIVE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-virtual bool event ( QEvent * e )
-*/
+$prototype=virtual bool event ( QEvent * e )
 $virtualMethod=|bool|event|QEvent *
 
-/*
-virtual int pixelMetric ( PixelMetric pm, const QStyleOption * opt = 0, const QWidget * widget = 0 ) const
-*/
+$prototype=virtual int pixelMetric ( PixelMetric pm, const QStyleOption * opt = 0, const QWidget * widget = 0 ) const
 $virtualMethod=|int|pixelMetric|QStyle::PixelMetric,const QStyleOption *=0,const QWidget *=0
 
-/*
-virtual void polish ( QPalette & pal )
-*/
+$prototype=virtual void polish ( QPalette & pal )
 HB_FUNC_STATIC( QMOTIFSTYLE_POLISH )
 {
   QMotifStyle * obj = (QMotifStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -135,9 +117,7 @@ HB_FUNC_STATIC( QMOTIFSTYLE_POLISH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-virtual QSize sizeFromContents ( ContentsType ct, const QStyleOption * opt, const QSize & contentsSize, const QWidget * widget = 0 ) const
-*/
+$prototype=virtual QSize sizeFromContents ( ContentsType ct, const QStyleOption * opt, const QSize & contentsSize, const QWidget * widget = 0 ) const
 HB_FUNC_STATIC( QMOTIFSTYLE_SIZEFROMCONTENTS )
 {
   QMotifStyle * obj = (QMotifStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -151,9 +131,7 @@ HB_FUNC_STATIC( QMOTIFSTYLE_SIZEFROMCONTENTS )
   }
 }
 
-/*
-virtual QPalette standardPalette () const
-*/
+$prototype=virtual QPalette standardPalette () const
 HB_FUNC_STATIC( QMOTIFSTYLE_STANDARDPALETTE )
 {
   QMotifStyle * obj = (QMotifStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -164,9 +142,7 @@ HB_FUNC_STATIC( QMOTIFSTYLE_STANDARDPALETTE )
   }
 }
 
-/*
-virtual QPixmap standardPixmap ( StandardPixmap standardPixmap, const QStyleOption * opt, const QWidget * widget = 0 ) const
-*/
+$prototype=virtual QPixmap standardPixmap ( StandardPixmap standardPixmap, const QStyleOption * opt, const QWidget * widget = 0 ) const
 HB_FUNC_STATIC( QMOTIFSTYLE_STANDARDPIXMAP )
 {
   QMotifStyle * obj = (QMotifStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -180,14 +156,10 @@ HB_FUNC_STATIC( QMOTIFSTYLE_STANDARDPIXMAP )
   }
 }
 
-/*
-virtual int styleHint ( StyleHint hint, const QStyleOption * opt = 0, const QWidget * widget = 0, QStyleHintReturn * returnData = 0 ) const
-*/
+$prototype=virtual int styleHint ( StyleHint hint, const QStyleOption * opt = 0, const QWidget * widget = 0, QStyleHintReturn * returnData = 0 ) const
 $virtualMethod=|int|styleHint|QStyle::StyleHint,const QStyleOption *=0,const QWidget *=0,QStyleHintReturn *=0
 
-/*
-virtual QRect subControlRect ( ComplexControl cc, const QStyleOptionComplex * opt, SubControl sc, const QWidget * widget = 0 ) const
-*/
+$prototype=virtual QRect subControlRect ( ComplexControl cc, const QStyleOptionComplex * opt, SubControl sc, const QWidget * widget = 0 ) const
 HB_FUNC_STATIC( QMOTIFSTYLE_SUBCONTROLRECT )
 {
   QMotifStyle * obj = (QMotifStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -202,9 +174,7 @@ HB_FUNC_STATIC( QMOTIFSTYLE_SUBCONTROLRECT )
   }
 }
 
-/*
-virtual QRect subElementRect ( SubElement sr, const QStyleOption * opt, const QWidget * widget = 0 ) const
-*/
+$prototype=virtual QRect subElementRect ( SubElement sr, const QStyleOption * opt, const QWidget * widget = 0 ) const
 HB_FUNC_STATIC( QMOTIFSTYLE_SUBELEMENTRECT )
 {
   QMotifStyle * obj = (QMotifStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

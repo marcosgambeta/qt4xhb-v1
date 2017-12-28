@@ -29,9 +29,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QWidgetAction ( QObject * parent )
-*/
+$prototype=QWidgetAction ( QObject * parent )
 HB_FUNC_STATIC( QWIDGETACTION_NEW )
 {
   QWidgetAction * o = new QWidgetAction ( PQOBJECT(1) );
@@ -40,24 +38,16 @@ HB_FUNC_STATIC( QWIDGETACTION_NEW )
 
 $deleteMethod
 
-/*
-QWidget * defaultWidget () const
-*/
+$prototype=QWidget * defaultWidget () const
 $method=|QWidget *|defaultWidget|
 
-/*
-void releaseWidget ( QWidget * widget )
-*/
+$prototype=void releaseWidget ( QWidget * widget )
 $method=|void|releaseWidget|QWidget *
 
-/*
-QWidget * requestWidget ( QWidget * parent )
-*/
+$prototype=QWidget * requestWidget ( QWidget * parent )
 $method=|QWidget *|requestWidget|QWidget *
 
-/*
-void setDefaultWidget ( QWidget * widget )
-*/
+$prototype=void setDefaultWidget ( QWidget * widget )
 $method=|void|setDefaultWidget|QWidget *
 
 #pragma ENDDUMP

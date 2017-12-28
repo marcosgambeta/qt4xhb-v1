@@ -81,19 +81,13 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QPlatformWindowFormat ()
-*/
+$prototype=QPlatformWindowFormat ()
 $internalConstructor=|new1|
 
-/*
-QPlatformWindowFormat ( FormatOptions options )
-*/
+$prototype=QPlatformWindowFormat ( FormatOptions options )
 $internalConstructor=|new2|QPlatformWindowFormat::FormatOptions
 
-/*
-QPlatformWindowFormat ( const QPlatformWindowFormat & other )
-*/
+$prototype=QPlatformWindowFormat ( const QPlatformWindowFormat & other )
 $internalConstructor=|new3|const QPlatformWindowFormat &
 
 //[1]QPlatformWindowFormat ()
@@ -122,234 +116,142 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_NEW )
 
 $deleteMethod
 
-/*
-bool accum () const
-*/
+$prototype=bool accum () const
 $method=|bool|accum|
 
-/*
-int accumBufferSize () const
-*/
+$prototype=int accumBufferSize () const
 $method=|int|accumBufferSize|
 
-/*
-bool alpha () const
-*/
+$prototype=bool alpha () const
 $method=|bool|alpha|
 
-/*
-int alphaBufferSize () const
-*/
+$prototype=int alphaBufferSize () const
 $method=|int|alphaBufferSize|
 
-/*
-int blueBufferSize () const
-*/
+$prototype=int blueBufferSize () const
 $method=|int|blueBufferSize|
 
-/*
-bool depth () const
-*/
+$prototype=bool depth () const
 $method=|bool|depth|
 
-/*
-int depthBufferSize () const
-*/
+$prototype=int depthBufferSize () const
 $method=|int|depthBufferSize|
 
-/*
-bool directRendering () const
-*/
+$prototype=bool directRendering () const
 $method=|bool|directRendering|
 
-/*
-bool doubleBuffer () const
-*/
+$prototype=bool doubleBuffer () const
 $method=|bool|doubleBuffer|
 
-/*
-int greenBufferSize () const
-*/
+$prototype=int greenBufferSize () const
 $method=|int|greenBufferSize|
 
-/*
-bool hasWindowSurface () const
-*/
+$prototype=bool hasWindowSurface () const
 $method=|bool|hasWindowSurface|
 
-/*
-int redBufferSize () const
-*/
+$prototype=int redBufferSize () const
 $method=|int|redBufferSize|
 
-/*
-bool rgba () const
-*/
+$prototype=bool rgba () const
 $method=|bool|rgba|
 
-/*
-bool sampleBuffers () const
-*/
+$prototype=bool sampleBuffers () const
 $method=|bool|sampleBuffers|
 
-/*
-int samples () const
-*/
+$prototype=int samples () const
 $method=|int|samples|
 
-/*
-void setAccum ( bool enable )
-*/
+$prototype=void setAccum ( bool enable )
 $method=|void|setAccum|bool
 
-/*
-void setAccumBufferSize ( int size )
-*/
+$prototype=void setAccumBufferSize ( int size )
 $method=|void|setAccumBufferSize|int
 
-/*
-void setAlpha ( bool enable )
-*/
+$prototype=void setAlpha ( bool enable )
 $method=|void|setAlpha|bool
 
-/*
-void setAlphaBufferSize ( int size )
-*/
+$prototype=void setAlphaBufferSize ( int size )
 $method=|void|setAlphaBufferSize|int
 
-/*
-void setBlueBufferSize ( int size )
-*/
+$prototype=void setBlueBufferSize ( int size )
 $method=|void|setBlueBufferSize|int
 
-/*
-void setDepth ( bool enable )
-*/
+$prototype=void setDepth ( bool enable )
 $method=|void|setDepth|bool
 
-/*
-void setDepthBufferSize ( int size )
-*/
+$prototype=void setDepthBufferSize ( int size )
 $method=|void|setDepthBufferSize|int
 
-/*
-void setDirectRendering ( bool enable )
-*/
+$prototype=void setDirectRendering ( bool enable )
 $method=|void|setDirectRendering|bool
 
-/*
-void setDoubleBuffer ( bool enable )
-*/
+$prototype=void setDoubleBuffer ( bool enable )
 $method=|void|setDoubleBuffer|bool
 
-/*
-void setGreenBufferSize ( int size )
-*/
+$prototype=void setGreenBufferSize ( int size )
 $method=|void|setGreenBufferSize|int
 
-/*
-void setOption ( QPlatformWindowFormat::FormatOptions opt )
-*/
+$prototype=void setOption ( QPlatformWindowFormat::FormatOptions opt )
 $method=|void|setOption|QPlatformWindowFormat::FormatOptions
 
-/*
-void setRedBufferSize ( int size )
-*/
+$prototype=void setRedBufferSize ( int size )
 $method=|void|setRedBufferSize|int
 
-/*
-void setRgba ( bool enable )
-*/
+$prototype=void setRgba ( bool enable )
 $method=|void|setRgba|bool
 
-/*
-void setSampleBuffers ( bool enable )
-*/
+$prototype=void setSampleBuffers ( bool enable )
 $method=|void|setSampleBuffers|bool
 
-/*
-void setSamples ( int numSamples )
-*/
+$prototype=void setSamples ( int numSamples )
 $method=|void|setSamples|int
 
-/*
-void setSharedContext ( QPlatformGLContext * context )
-*/
+$prototype=void setSharedContext ( QPlatformGLContext * context )
 $method=|void|setSharedContext|QPlatformGLContext *
 
-/*
-void setStencil ( bool enable )
-*/
+$prototype=void setStencil ( bool enable )
 $method=|void|setStencil|bool
 
-/*
-void setStencilBufferSize ( int size )
-*/
+$prototype=void setStencilBufferSize ( int size )
 $method=|void|setStencilBufferSize|int
 
-/*
-void setStereo ( bool enable )
-*/
+$prototype=void setStereo ( bool enable )
 $method=|void|setStereo|bool
 
-/*
-void setSwapInterval ( int interval )
-*/
+$prototype=void setSwapInterval ( int interval )
 $method=|void|setSwapInterval|int
 
-/*
-void setWindowApi ( QPlatformWindowFormat::WindowApi api )
-*/
+$prototype=void setWindowApi ( QPlatformWindowFormat::WindowApi api )
 $method=|void|setWindowApi|QPlatformWindowFormat::WindowApi
 
-/*
-void setWindowSurface ( bool enable )
-*/
+$prototype=void setWindowSurface ( bool enable )
 $method=|void|setWindowSurface|bool
 
-/*
-QPlatformGLContext * sharedGLContext () const
-*/
+$prototype=QPlatformGLContext * sharedGLContext () const
 $method=|QPlatformGLContext *|sharedGLContext|
 
-/*
-bool stencil () const
-*/
+$prototype=bool stencil () const
 $method=|bool|stencil|
 
-/*
-int stencilBufferSize () const
-*/
+$prototype=int stencilBufferSize () const
 $method=|int|stencilBufferSize|
 
-/*
-bool stereo () const
-*/
+$prototype=bool stereo () const
 $method=|bool|stereo|
 
-/*
-int swapInterval () const
-*/
+$prototype=int swapInterval () const
 $method=|int|swapInterval|
 
-/*
-bool testOption ( QPlatformWindowFormat::FormatOptions opt ) const
-*/
+$prototype=bool testOption ( QPlatformWindowFormat::FormatOptions opt ) const
 $method=|bool|testOption|QPlatformWindowFormat::FormatOptions
 
-/*
-WindowApi windowApi () const
-*/
+$prototype=WindowApi windowApi () const
 $method=|QPlatformWindowFormat::WindowApi|windowApi|
 
-/*
-static QPlatformWindowFormat defaultFormat ()
-*/
+$prototype=static QPlatformWindowFormat defaultFormat ()
 $staticMethod=|QPlatformWindowFormat|defaultFormat|
 
-/*
-static void setDefaultFormat ( const QPlatformWindowFormat & f )
-*/
+$prototype=static void setDefaultFormat ( const QPlatformWindowFormat & f )
 $staticMethod=|void|setDefaultFormat|const QPlatformWindowFormat &
 
 $extraMethods

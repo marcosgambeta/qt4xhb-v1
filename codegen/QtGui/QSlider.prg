@@ -32,14 +32,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QSlider ( QWidget * parent = 0 )
-*/
+$prototype=QSlider ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0
 
-/*
-QSlider ( Qt::Orientation orientation, QWidget * parent = 0 )
-*/
+$prototype=QSlider ( Qt::Orientation orientation, QWidget * parent = 0 )
 $internalConstructor=|new2|Qt::Orientation,QWidget *=0
 
 //[1]QSlider ( QWidget * parent = 0 )
@@ -63,39 +59,25 @@ HB_FUNC_STATIC( QSLIDER_NEW )
 
 $deleteMethod
 
-/*
-void setTickInterval ( int ti )
-*/
+$prototype=void setTickInterval ( int ti )
 $method=|void|setTickInterval|int
 
-/*
-void setTickPosition ( TickPosition position )
-*/
+$prototype=void setTickPosition ( TickPosition position )
 $method=|void|setTickPosition|QSlider::TickPosition
 
-/*
-int tickInterval () const
-*/
+$prototype=int tickInterval () const
 $method=|int|tickInterval|
 
-/*
-TickPosition tickPosition () const
-*/
+$prototype=TickPosition tickPosition () const
 $method=|QSlider::TickPosition|tickPosition|
 
-/*
-virtual bool event ( QEvent * event )
-*/
+$prototype=virtual bool event ( QEvent * event )
 $virtualMethod=|bool|event|QEvent *
 
-/*
-virtual QSize minimumSizeHint () const
-*/
+$prototype=virtual QSize minimumSizeHint () const
 $virtualMethod=|QSize|minimumSizeHint|
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $virtualMethod=|QSize|sizeHint|
 
 #pragma ENDDUMP

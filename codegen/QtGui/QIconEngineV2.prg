@@ -34,9 +34,7 @@ $destructor
 
 $deleteMethod
 
-/*
-QList<QSize> availableSizes ( QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off )
-*/
+$prototype=QList<QSize> availableSizes ( QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off )
 HB_FUNC_STATIC( QICONENGINEV2_AVAILABLESIZES )
 {
   QIconEngineV2 * obj = (QIconEngineV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -78,34 +76,22 @@ HB_FUNC_STATIC( QICONENGINEV2_AVAILABLESIZES )
   }
 }
 
-/*
-virtual QIconEngineV2 * clone () const
-*/
+$prototype=virtual QIconEngineV2 * clone () const
 $virtualMethod=|QIconEngineV2 *|clone|
 
-/*
-QString iconName ()
-*/
+$prototype=QString iconName ()
 $method=|QString|iconName|
 
-/*
-virtual QString key () const
-*/
+$prototype=virtual QString key () const
 $virtualMethod=|QString|key|
 
-/*
-virtual bool read ( QDataStream & in )
-*/
+$prototype=virtual bool read ( QDataStream & in )
 $virtualMethod=|bool|read|QDataStream &
 
-/*
-virtual void virtual_hook ( int id, void * data )
-*/
+$prototype=virtual void virtual_hook ( int id, void * data )
 $virtualMethod=|void|virtual_hook|int,void *
 
-/*
-virtual bool write ( QDataStream & out ) const
-*/
+$prototype=virtual bool write ( QDataStream & out ) const
 $virtualMethod=|bool|write|QDataStream &
 
 #pragma ENDDUMP

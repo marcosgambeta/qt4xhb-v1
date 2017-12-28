@@ -30,9 +30,7 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual QList<QFontEngineInfo> availableFontEngines () const = 0
-*/
+$prototype=virtual QList<QFontEngineInfo> availableFontEngines () const = 0
 HB_FUNC_STATIC( QFONTENGINEPLUGIN_AVAILABLEFONTENGINES )
 {
   QFontEnginePlugin * obj = (QFontEnginePlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -68,14 +66,10 @@ HB_FUNC_STATIC( QFONTENGINEPLUGIN_AVAILABLEFONTENGINES )
   }
 }
 
-/*
-virtual QAbstractFontEngine * create ( const QFontEngineInfo & info ) = 0
-*/
+$prototype=virtual QAbstractFontEngine * create ( const QFontEngineInfo & info ) = 0
 $virtualMethod=|QAbstractFontEngine *|create|const QFontEngineInfo &
 
-/*
-virtual QStringList keys () const
-*/
+$prototype=virtual QStringList keys () const
 $virtualMethod=|QStringList|keys|
 
 #pragma ENDDUMP

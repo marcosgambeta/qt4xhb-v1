@@ -35,29 +35,19 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QAccessibleWidget ( QWidget * w, Role role = Client, const QString & name = QString() )
-*/
+$prototype=QAccessibleWidget ( QWidget * w, Role role = Client, const QString & name = QString() )
 $constructor=|new|QWidget *,QAccessible::Role=QAccessible::Client,const QString &=QString()
 
-/*
-virtual QString actionText ( int action, Text t, int child ) const
-*/
+$prototype=virtual QString actionText ( int action, Text t, int child ) const
 $virtualMethod=|QString|actionText|int,QAccessible::Text,int
 
-/*
-virtual int childAt ( int x, int y ) const
-*/
+$prototype=virtual int childAt ( int x, int y ) const
 $virtualMethod=|int|childAt|int,int
 
-/*
-virtual int childCount () const
-*/
+$prototype=virtual int childCount () const
 $virtualMethod=|int|childCount|
 
-/*
-virtual bool doAction ( int action, int child, const QVariantList & params )
-*/
+$prototype=virtual bool doAction ( int action, int child, const QVariantList & params )
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_DOACTION )
 {
   QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -76,39 +66,25 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_DOACTION )
   }
 }
 
-/*
-virtual int indexOfChild ( const QAccessibleInterface * child ) const
-*/
+$prototype=virtual int indexOfChild ( const QAccessibleInterface * child ) const
 $virtualMethod=|int|indexOfChild|const QAccessibleInterface *
 
-/*
-virtual QRect rect ( int child ) const
-*/
+$prototype=virtual QRect rect ( int child ) const
 $virtualMethod=|QRect|rect|int
 
-/*
-virtual Relation relationTo ( int child, const QAccessibleInterface * other, int otherChild ) const
-*/
+$prototype=virtual Relation relationTo ( int child, const QAccessibleInterface * other, int otherChild ) const
 $virtualMethod=|QAccessible::Relation|relationTo|int,const QAccessibleInterface *,int
 
-/*
-virtual Role role ( int child ) const
-*/
+$prototype=virtual Role role ( int child ) const
 $virtualMethod=|QAccessible::Role|role|int
 
-/*
-virtual State state ( int child ) const
-*/
+$prototype=virtual State state ( int child ) const
 $virtualMethod=|QAccessible::State|state|int
 
-/*
-virtual QString text ( Text t, int child ) const
-*/
+$prototype=virtual QString text ( Text t, int child ) const
 $virtualMethod=|QString|text|QAccessible::Text,int
 
-/*
-virtual int userActionCount ( int child ) const
-*/
+$prototype=virtual int userActionCount ( int child ) const
 $virtualMethod=|int|userActionCount|int
 
 #pragma ENDDUMP

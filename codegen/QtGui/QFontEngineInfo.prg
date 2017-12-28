@@ -40,19 +40,13 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QFontEngineInfo ()
-*/
+$prototype=QFontEngineInfo ()
 $internalConstructor=|new1|
 
-/*
-QFontEngineInfo ( const QString & family )
-*/
+$prototype=QFontEngineInfo ( const QString & family )
 $internalConstructor=|new2|const QString &
 
-/*
-QFontEngineInfo ( const QFontEngineInfo & other )
-*/
+$prototype=QFontEngineInfo ( const QFontEngineInfo & other )
 $internalConstructor=|new3|const QFontEngineInfo &
 
 //[1]QFontEngineInfo ()
@@ -81,39 +75,25 @@ HB_FUNC_STATIC( QFONTENGINEINFO_NEW )
 
 $deleteMethod
 
-/*
-QString family () const
-*/
+$prototype=QString family () const
 $method=|QString|family|
 
-/*
-qreal pixelSize () const
-*/
+$prototype=qreal pixelSize () const
 $method=|qreal|pixelSize|
 
-/*
-void setFamily ( const QString & name )
-*/
+$prototype=void setFamily ( const QString & name )
 $method=|void|setFamily|const QString &
 
-/*
-void setPixelSize ( qreal size )
-*/
+$prototype=void setPixelSize ( qreal size )
 $method=|void|setPixelSize|qreal
 
-/*
-void setStyle ( QFont::Style style )
-*/
+$prototype=void setStyle ( QFont::Style style )
 $method=|void|setStyle|QFont::Style
 
-/*
-void setWeight ( int weight )
-*/
+$prototype=void setWeight ( int weight )
 $method=|void|setWeight|int
 
-/*
-void setWritingSystems ( const QList<QFontDatabase::WritingSystem> & writingSystems )
-*/
+$prototype=void setWritingSystems ( const QList<QFontDatabase::WritingSystem> & writingSystems )
 HB_FUNC_STATIC( QFONTENGINEINFO_SETWRITINGSYSTEMS )
 {
   QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -136,19 +116,13 @@ HB_FUNC_STATIC( QFONTENGINEINFO_SETWRITINGSYSTEMS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-QFont::Style style () const
-*/
+$prototype=QFont::Style style () const
 $method=|QFont::Style|style|
 
-/*
-int weight () const
-*/
+$prototype=int weight () const
 $method=|int|weight|
 
-/*
-QList<QFontDatabase::WritingSystem> writingSystems () const
-*/
+$prototype=QList<QFontDatabase::WritingSystem> writingSystems () const
 HB_FUNC_STATIC( QFONTENGINEINFO_WRITINGSYSTEMS )
 {
   QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

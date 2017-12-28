@@ -26,16 +26,12 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QClipboardEvent(QEventPrivate *data)
-*/
+$prototype=QClipboardEvent(QEventPrivate *data)
 $constructor=|new|QEventPrivate *
 
 $deleteMethod
 
-/*
-QEventPrivate *data()
-*/
+$prototype=QEventPrivate *data()
 $method=|QEventPrivate *|data|
 
 #pragma ENDDUMP

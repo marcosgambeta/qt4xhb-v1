@@ -58,89 +58,55 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual bool canRead () const = 0
-*/
+$prototype=virtual bool canRead () const = 0
 $virtualMethod=|bool|canRead|
 
-/*
-virtual int currentImageNumber () const
-*/
+$prototype=virtual int currentImageNumber () const
 $virtualMethod=|int|currentImageNumber|
 
-/*
-virtual QRect currentImageRect () const
-*/
+$prototype=virtual QRect currentImageRect () const
 $virtualMethod=|QRect|currentImageRect|
 
-/*
-QIODevice * device () const
-*/
+$prototype=QIODevice * device () const
 $method=|QIODevice *|device|
 
-/*
-QByteArray format () const
-*/
+$prototype=QByteArray format () const
 $method=|QByteArray|format|
 
-/*
-virtual int imageCount () const
-*/
+$prototype=virtual int imageCount () const
 $virtualMethod=|int|imageCount|
 
-/*
-virtual bool jumpToImage ( int imageNumber )
-*/
+$prototype=virtual bool jumpToImage ( int imageNumber )
 $virtualMethod=|bool|jumpToImage|int
 
-/*
-virtual bool jumpToNextImage ()
-*/
+$prototype=virtual bool jumpToNextImage ()
 $virtualMethod=|bool|jumpToNextImage|
 
-/*
-virtual int loopCount () const
-*/
+$prototype=virtual int loopCount () const
 $virtualMethod=|int|loopCount|
 
-/*
-virtual int nextImageDelay () const
-*/
+$prototype=virtual int nextImageDelay () const
 $virtualMethod=|int|nextImageDelay|
 
-/*
-virtual QVariant option ( ImageOption option ) const
-*/
+$prototype=virtual QVariant option ( ImageOption option ) const
 $virtualMethod=|QVariant|option|QImageIOHandler::ImageOption
 
-/*
-virtual bool read ( QImage * image ) = 0
-*/
+$prototype=virtual bool read ( QImage * image ) = 0
 $virtualMethod=|bool|read|QImage *
 
-/*
-void setDevice ( QIODevice * device )
-*/
+$prototype=void setDevice ( QIODevice * device )
 $method=|void|setDevice|QIODevice *
 
-/*
-void setFormat ( const QByteArray & format )
-*/
+$prototype=void setFormat ( const QByteArray & format )
 $method=|void|setFormat|const QByteArray &
 
-/*
-virtual void setOption ( ImageOption option, const QVariant & value )
-*/
+$prototype=virtual void setOption ( ImageOption option, const QVariant & value )
 $virtualMethod=|void|setOption|QImageIOHandler::ImageOption,const QVariant &
 
-/*
-virtual bool supportsOption ( ImageOption option ) const
-*/
+$prototype=virtual bool supportsOption ( ImageOption option ) const
 $virtualMethod=|bool|supportsOption|QImageIOHandler::ImageOption
 
-/*
-virtual bool write ( const QImage & image )
-*/
+$prototype=virtual bool write ( const QImage & image )
 $virtualMethod=|bool|write|const QImage &
 
 $extraMethods

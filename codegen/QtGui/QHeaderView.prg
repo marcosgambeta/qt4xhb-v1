@@ -94,91 +94,57 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QHeaderView ( Qt::Orientation orientation, QWidget * parent = 0 )
-*/
+$prototype=QHeaderView ( Qt::Orientation orientation, QWidget * parent = 0 )
 $constructor=|new|Qt::Orientation,QWidget *=0
 
 $deleteMethod
 
-/*
-bool cascadingSectionResizes () const
-*/
+$prototype=bool cascadingSectionResizes () const
 $method=|bool|cascadingSectionResizes|
 
-/*
-int count () const
-*/
+$prototype=int count () const
 $method=|int|count|
 
-/*
-Qt::Alignment defaultAlignment () const
-*/
+$prototype=Qt::Alignment defaultAlignment () const
 $method=|Qt::Alignment|defaultAlignment|
 
-/*
-int defaultSectionSize () const
-*/
+$prototype=int defaultSectionSize () const
 $method=|int|defaultSectionSize|
 
-/*
-int hiddenSectionCount () const
-*/
+$prototype=int hiddenSectionCount () const
 $method=|int|hiddenSectionCount|
 
-/*
-void hideSection ( int logicalIndex )
-*/
+$prototype=void hideSection ( int logicalIndex )
 $method=|void|hideSection|int
 
-/*
-bool highlightSections () const
-*/
+$prototype=bool highlightSections () const
 $method=|bool|highlightSections|
 
-/*
-bool isClickable () const
-*/
+$prototype=bool isClickable () const
 $method=|bool|isClickable|
 
-/*
-bool isMovable () const
-*/
+$prototype=bool isMovable () const
 $method=|bool|isMovable|
 
-/*
-bool isSectionHidden ( int logicalIndex ) const
-*/
+$prototype=bool isSectionHidden ( int logicalIndex ) const
 $method=|bool|isSectionHidden|int
 
-/*
-bool isSortIndicatorShown () const
-*/
+$prototype=bool isSortIndicatorShown () const
 $method=|bool|isSortIndicatorShown|
 
-/*
-int length () const
-*/
+$prototype=int length () const
 $method=|int|length|
 
-/*
-int logicalIndex ( int visualIndex ) const
-*/
+$prototype=int logicalIndex ( int visualIndex ) const
 $method=|int|logicalIndex|int
 
-/*
-int logicalIndexAt ( int position ) const
-*/
+$prototype=int logicalIndexAt ( int position ) const
 $internalMethod=|int|logicalIndexAt,logicalIndexAt1|int
 
-/*
-int logicalIndexAt ( int x, int y ) const
-*/
+$prototype=int logicalIndexAt ( int x, int y ) const
 $internalMethod=|int|logicalIndexAt,logicalIndexAt2|int,int
 
-/*
-int logicalIndexAt ( const QPoint & pos ) const
-*/
+$prototype=int logicalIndexAt ( const QPoint & pos ) const
 $internalMethod=|int|logicalIndexAt,logicalIndexAt3|const QPoint &
 
 //[1]int logicalIndexAt ( int position ) const
@@ -205,124 +171,76 @@ HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT )
   }
 }
 
-/*
-int minimumSectionSize () const
-*/
+$prototype=int minimumSectionSize () const
 $method=|int|minimumSectionSize|
 
-/*
-void moveSection ( int from, int to )
-*/
+$prototype=void moveSection ( int from, int to )
 $method=|void|moveSection|int,int
 
-/*
-int offset () const
-*/
+$prototype=int offset () const
 $method=|int|offset|
 
-/*
-Qt::Orientation orientation () const
-*/
+$prototype=Qt::Orientation orientation () const
 $method=|Qt::Orientation|orientation|
 
-/*
-ResizeMode resizeMode ( int logicalIndex ) const
-*/
+$prototype=ResizeMode resizeMode ( int logicalIndex ) const
 $method=|QHeaderView::ResizeMode|resizeMode|int
 
-/*
-void resizeSection ( int logicalIndex, int size )
-*/
+$prototype=void resizeSection ( int logicalIndex, int size )
 $method=|void|resizeSection|int,int
 
-/*
-void resizeSections ( QHeaderView::ResizeMode mode )
-*/
+$prototype=void resizeSections ( QHeaderView::ResizeMode mode )
 $method=|void|resizeSections|QHeaderView::ResizeMode
 
-/*
-bool restoreState ( const QByteArray & state )
-*/
+$prototype=bool restoreState ( const QByteArray & state )
 $method=|bool|restoreState|const QByteArray &
 
-/*
-QByteArray saveState () const
-*/
+$prototype=QByteArray saveState () const
 $method=|QByteArray|saveState|
 
-/*
-int sectionPosition ( int logicalIndex ) const
-*/
+$prototype=int sectionPosition ( int logicalIndex ) const
 $method=|int|sectionPosition|int
 
-/*
-int sectionSize ( int logicalIndex ) const
-*/
+$prototype=int sectionSize ( int logicalIndex ) const
 $method=|int|sectionSize|int
 
-/*
-int sectionSizeHint ( int logicalIndex ) const
-*/
+$prototype=int sectionSizeHint ( int logicalIndex ) const
 $method=|int|sectionSizeHint|int
 
-/*
-int sectionViewportPosition ( int logicalIndex ) const
-*/
+$prototype=int sectionViewportPosition ( int logicalIndex ) const
 $method=|int|sectionViewportPosition|int
 
-/*
-bool sectionsHidden () const
-*/
+$prototype=bool sectionsHidden () const
 $method=|bool|sectionsHidden|
 
-/*
-bool sectionsMoved () const
-*/
+$prototype=bool sectionsMoved () const
 $method=|bool|sectionsMoved|
 
-/*
-void setCascadingSectionResizes ( bool enable )
-*/
+$prototype=void setCascadingSectionResizes ( bool enable )
 $method=|void|setCascadingSectionResizes|bool
 
-/*
-void setClickable ( bool clickable )
-*/
+$prototype=void setClickable ( bool clickable )
 $method=|void|setClickable|bool
 
-/*
-void setDefaultAlignment ( Qt::Alignment alignment )
-*/
+$prototype=void setDefaultAlignment ( Qt::Alignment alignment )
 $method=|void|setDefaultAlignment|Qt::Alignment
 
-/*
-void setDefaultSectionSize ( int size )
-*/
+$prototype=void setDefaultSectionSize ( int size )
 $method=|void|setDefaultSectionSize|int
 
-/*
-void setHighlightSections ( bool highlight )
-*/
+$prototype=void setHighlightSections ( bool highlight )
 $method=|void|setHighlightSections|bool
 
-/*
-void setMinimumSectionSize ( int size )
-*/
+$prototype=void setMinimumSectionSize ( int size )
 $method=|void|setMinimumSectionSize|int
 
-/*
-void setMovable ( bool movable )
-*/
+$prototype=void setMovable ( bool movable )
 $method=|void|setMovable|bool
 
-/*
-void setResizeMode ( ResizeMode mode )
-*/
+$prototype=void setResizeMode ( ResizeMode mode )
 $internalMethod=|void|setResizeMode,setResizeMode1|QHeaderView::ResizeMode
 
-/*
-void setResizeMode ( int logicalIndex, ResizeMode mode )
-*/
+$prototype=void setResizeMode ( int logicalIndex, ResizeMode mode )
 $internalMethod=|void|setResizeMode,setResizeMode2|int,QHeaderView::ResizeMode
 
 //[1]void setResizeMode ( ResizeMode mode )
@@ -344,99 +262,61 @@ HB_FUNC_STATIC( QHEADERVIEW_SETRESIZEMODE )
   }
 }
 
-/*
-void setSectionHidden ( int logicalIndex, bool hide )
-*/
+$prototype=void setSectionHidden ( int logicalIndex, bool hide )
 $method=|void|setSectionHidden|int,bool
 
-/*
-void setSortIndicator ( int logicalIndex, Qt::SortOrder order )
-*/
+$prototype=void setSortIndicator ( int logicalIndex, Qt::SortOrder order )
 $method=|void|setSortIndicator|int,Qt::SortOrder
 
-/*
-void setSortIndicatorShown ( bool show )
-*/
+$prototype=void setSortIndicatorShown ( bool show )
 $method=|void|setSortIndicatorShown|bool
 
-/*
-void setStretchLastSection ( bool stretch )
-*/
+$prototype=void setStretchLastSection ( bool stretch )
 $method=|void|setStretchLastSection|bool
 
-/*
-void showSection ( int logicalIndex )
-*/
+$prototype=void showSection ( int logicalIndex )
 $method=|void|showSection|int
 
-/*
-Qt::SortOrder sortIndicatorOrder () const
-*/
+$prototype=Qt::SortOrder sortIndicatorOrder () const
 $method=|Qt::SortOrder|sortIndicatorOrder|
 
-/*
-int sortIndicatorSection () const
-*/
+$prototype=int sortIndicatorSection () const
 $method=|int|sortIndicatorSection|
 
-/*
-bool stretchLastSection () const
-*/
+$prototype=bool stretchLastSection () const
 $method=|bool|stretchLastSection|
 
-/*
-int stretchSectionCount () const
-*/
+$prototype=int stretchSectionCount () const
 $method=|int|stretchSectionCount|
 
-/*
-void swapSections ( int first, int second )
-*/
+$prototype=void swapSections ( int first, int second )
 $method=|void|swapSections|int,int
 
-/*
-int visualIndex ( int logicalIndex ) const
-*/
+$prototype=int visualIndex ( int logicalIndex ) const
 $method=|int|visualIndex|int
 
-/*
-int visualIndexAt ( int position ) const
-*/
+$prototype=int visualIndexAt ( int position ) const
 $method=|int|visualIndexAt|int
 
-/*
-virtual void reset ()
-*/
+$prototype=virtual void reset ()
 $virtualMethod=|void|reset|
 
-/*
-virtual void setModel ( QAbstractItemModel * model )
-*/
+$prototype=virtual void setModel ( QAbstractItemModel * model )
 $virtualMethod=|void|setModel|QAbstractItemModel *
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $virtualMethod=|QSize|sizeHint|
 
-/*
-void headerDataChanged ( Qt::Orientation orientation, int logicalFirst, int logicalLast )
-*/
+$prototype=void headerDataChanged ( Qt::Orientation orientation, int logicalFirst, int logicalLast )
 $method=|void|headerDataChanged|Qt::Orientation,int,int
 
-/*
-void setOffset ( int offset )
-*/
+$prototype=void setOffset ( int offset )
 $method=|void|setOffset|int
 
-/*
-void setOffsetToLastSection ()
-*/
+$prototype=void setOffsetToLastSection ()
 $method=|void|setOffsetToLastSection|
 
-/*
-void setOffsetToSectionPosition ( int visualIndex )
-*/
+$prototype=void setOffsetToSectionPosition ( int visualIndex )
 $method=|void|setOffsetToSectionPosition|int
 
 #pragma ENDDUMP

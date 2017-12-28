@@ -36,49 +36,31 @@ $destructor
 
 $deleteMethod
 
-/*
-void add ( const QTextBlock & block )
-*/
+$prototype=void add ( const QTextBlock & block )
 $method=|void|add|const QTextBlock &
 
-/*
-int count () const
-*/
+$prototype=int count () const
 $method=|int|count|
 
-/*
-QTextListFormat format () const
-*/
+$prototype=QTextListFormat format () const
 $method=|QTextListFormat|format|
 
-/*
-QTextBlock item ( int i ) const
-*/
+$prototype=QTextBlock item ( int i ) const
 $method=|QTextBlock|item|int
 
-/*
-int itemNumber ( const QTextBlock & block ) const
-*/
+$prototype=int itemNumber ( const QTextBlock & block ) const
 $method=|int|itemNumber|const QTextBlock &
 
-/*
-QString itemText ( const QTextBlock & block ) const
-*/
+$prototype=QString itemText ( const QTextBlock & block ) const
 $method=|QString|itemText|const QTextBlock &
 
-/*
-void remove ( const QTextBlock & block )
-*/
+$prototype=void remove ( const QTextBlock & block )
 $method=|void|remove|const QTextBlock &
 
-/*
-void removeItem ( int i )
-*/
+$prototype=void removeItem ( int i )
 $method=|void|removeItem|int
 
-/*
-void setFormat ( const QTextListFormat & format )
-*/
+$prototype=void setFormat ( const QTextListFormat & format )
 $method=|void|setFormat|const QTextListFormat &
 
 #pragma ENDDUMP

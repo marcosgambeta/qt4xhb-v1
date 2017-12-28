@@ -35,19 +35,13 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QGraphicsRectItem ( QGraphicsItem * parent = 0 )
-*/
+$prototype=QGraphicsRectItem ( QGraphicsItem * parent = 0 )
 $internalConstructor=|new1|QGraphicsItem *=0
 
-/*
-QGraphicsRectItem ( const QRectF & rect, QGraphicsItem * parent = 0 )
-*/
+$prototype=QGraphicsRectItem ( const QRectF & rect, QGraphicsItem * parent = 0 )
 $internalConstructor=|new2|const QRectF &,QGraphicsItem *=0
 
-/*
-QGraphicsRectItem ( qreal x, qreal y, qreal width, qreal height, QGraphicsItem * parent = 0 )
-*/
+$prototype=QGraphicsRectItem ( qreal x, qreal y, qreal width, qreal height, QGraphicsItem * parent = 0 )
 $internalConstructor=|new3|qreal,qreal,qreal,qreal,QGraphicsItem *=0
 
 //[1]QGraphicsRectItem ( QGraphicsItem * parent = 0 )
@@ -76,19 +70,13 @@ HB_FUNC_STATIC( QGRAPHICSRECTITEM_NEW )
 
 $deleteMethod
 
-/*
-QRectF rect () const
-*/
+$prototype=QRectF rect () const
 $method=|QRectF|rect|
 
-/*
-void setRect ( const QRectF & rect )
-*/
+$prototype=void setRect ( const QRectF & rect )
 $internalMethod=|void|setRect,setRect1|const QRectF &
 
-/*
-void setRect ( qreal x, qreal y, qreal width, qreal height )
-*/
+$prototype=void setRect ( qreal x, qreal y, qreal width, qreal height )
 $internalMethod=|void|setRect,setRect2|qreal,qreal,qreal,qreal
 
 //[1]void setRect ( const QRectF & rect )
@@ -110,39 +98,25 @@ HB_FUNC_STATIC( QGRAPHICSRECTITEM_SETRECT )
   }
 }
 
-/*
-virtual QRectF boundingRect () const
-*/
+$prototype=virtual QRectF boundingRect () const
 $virtualMethod=|QRectF|boundingRect|
 
-/*
-virtual bool contains ( const QPointF & point ) const
-*/
+$prototype=virtual bool contains ( const QPointF & point ) const
 $virtualMethod=|bool|contains|const QPointF &
 
-/*
-virtual bool isObscuredBy ( const QGraphicsItem * item ) const
-*/
+$prototype=virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 $virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
 
-/*
-virtual QPainterPath opaqueArea () const
-*/
+$prototype=virtual QPainterPath opaqueArea () const
 $virtualMethod=|QPainterPath|opaqueArea|
 
-/*
-virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
-*/
+$prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
 $virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
 
-/*
-virtual QPainterPath shape () const
-*/
+$prototype=virtual QPainterPath shape () const
 $virtualMethod=|QPainterPath|shape|
 
-/*
-virtual int type () const
-*/
+$prototype=virtual int type () const
 $virtualMethod=|int|type|
 
 #pragma ENDDUMP

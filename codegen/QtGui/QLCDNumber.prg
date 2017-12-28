@@ -49,14 +49,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QLCDNumber ( QWidget * parent = 0 )
-*/
+$prototype=QLCDNumber ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0
 
-/*
-QLCDNumber ( uint numDigits, QWidget * parent = 0 )
-*/
+$prototype=QLCDNumber ( uint numDigits, QWidget * parent = 0 )
 $internalConstructor=|new2|uint,QWidget *=0
 
 //[1]QLCDNumber ( QWidget * parent = 0 )
@@ -80,20 +76,16 @@ HB_FUNC_STATIC( QLCDNUMBER_NEW )
 
 $deleteMethod
 
-/*
-bool checkOverflow ( double num ) const
-*/
+$prototype=bool checkOverflow ( double num ) const
 $method=|bool|checkOverflow,checkOverflow1|double
 
-/*
-bool checkOverflow ( int num ) const
-*/
+$prototype=bool checkOverflow ( int num ) const
 $method=|bool|checkOverflow,checkOverflow2|int
 
 //[1]bool checkOverflow ( double num ) const
 //[2]bool checkOverflow ( int num ) const
 
-// TODO: reconhecer se é int ou double
+%% TODO: reconhecer se é int ou double
 HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
@@ -106,69 +98,43 @@ HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW )
   }
 }
 
-/*
-int digitCount () const
-*/
+$prototype=int digitCount () const
 $method=|int|digitCount|
 
-/*
-int intValue () const
-*/
+$prototype=int intValue () const
 $method=|int|intValue|
 
-/*
-Mode mode () const
-*/
+$prototype=Mode mode () const
 $method=|QLCDNumber::Mode|mode|
 
-/*
-SegmentStyle segmentStyle () const
-*/
+$prototype=SegmentStyle segmentStyle () const
 $method=|QLCDNumber::SegmentStyle|segmentStyle|
 
-/*
-void setDigitCount ( int numDigits )
-*/
+$prototype=void setDigitCount ( int numDigits )
 $method=|void|setDigitCount|int
 
-/*
-void setMode ( Mode )
-*/
+$prototype=void setMode ( Mode )
 $method=|void|setMode|QLCDNumber::Mode
 
-/*
-void setSegmentStyle ( SegmentStyle )
-*/
+$prototype=void setSegmentStyle ( SegmentStyle )
 $method=|void|setSegmentStyle|QLCDNumber::SegmentStyle
 
-/*
-bool smallDecimalPoint () const
-*/
+$prototype=bool smallDecimalPoint () const
 $method=|bool|smallDecimalPoint|
 
-/*
-double value () const
-*/
+$prototype=double value () const
 $method=|double|value|
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $virtualMethod=|QSize|sizeHint|
 
-/*
-void display ( const QString & s )
-*/
+$prototype=void display ( const QString & s )
 $method=|void|display,display1|const QString &
 
-/*
-void display ( double num )
-*/
+$prototype=void display ( double num )
 $method=|void|display,display2|double
 
-/*
-void display ( int num )
-*/
+$prototype=void display ( int num )
 $method=|void|display,display3|int
 
 //[1]void display ( const QString & s )
@@ -193,29 +159,19 @@ HB_FUNC_STATIC( QLCDNUMBER_DISPLAY )
   }
 }
 
-/*
-void setBinMode ()
-*/
+$prototype=void setBinMode ()
 $method=|void|setBinMode|
 
-/*
-void setDecMode ()
-*/
+$prototype=void setDecMode ()
 $method=|void|setDecMode|
 
-/*
-void setHexMode ()
-*/
+$prototype=void setHexMode ()
 $method=|void|setHexMode|
 
-/*
-void setOctMode ()
-*/
+$prototype=void setOctMode ()
 $method=|void|setOctMode|
 
-/*
-void setSmallDecimalPoint ( bool )
-*/
+$prototype=void setSmallDecimalPoint ( bool )
 $method=|void|setSmallDecimalPoint|bool
 
 #pragma ENDDUMP

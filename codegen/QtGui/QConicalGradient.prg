@@ -28,19 +28,13 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QConicalGradient()
-*/
+$prototype=QConicalGradient()
 $internalConstructor=|new1|
 
-/*
-QConicalGradient(const QPointF &center, qreal startAngle)
-*/
+$prototype=QConicalGradient(const QPointF &center, qreal startAngle)
 $internalConstructor=|new2|const QPointF &,qreal
 
-/*
-QConicalGradient(qreal cx, qreal cy, qreal startAngle)
-*/
+$prototype=QConicalGradient(qreal cx, qreal cy, qreal startAngle)
 $internalConstructor=|new3|qreal,qreal,qreal
 
 //[1]QConicalGradient()
@@ -67,29 +61,19 @@ HB_FUNC_STATIC( QCONICALGRADIENT_NEW )
   }
 }
 
-/*
-qreal angle () const
-*/
+$prototype=qreal angle () const
 $method=|qreal|angle|
 
-/*
-QPointF center () const
-*/
+$prototype=QPointF center () const
 $method=|QPointF|center|
 
-/*
-void setAngle ( qreal angle )
-*/
+$prototype=void setAngle ( qreal angle )
 $method=|void|setAngle|qreal
 
-/*
-void setCenter ( const QPointF & center )
-*/
+$prototype=void setCenter ( const QPointF & center )
 $internalMethod=|void|setCenter,setCenter1|const QPointF &
 
-/*
-void setCenter ( qreal x, qreal y )
-*/
+$prototype=void setCenter ( qreal x, qreal y )
 $internalMethod=|void|setCenter,setCenter2|qreal,qreal
 
 //[1]void setCenter ( const QPointF & center )

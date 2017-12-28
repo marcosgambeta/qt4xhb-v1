@@ -39,24 +39,16 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QTextDocumentFragment ()
-*/
+$prototype=QTextDocumentFragment ()
 $internalConstructor=|new1|
 
-/*
-QTextDocumentFragment ( const QTextDocument * document )
-*/
+$prototype=QTextDocumentFragment ( const QTextDocument * document )
 $internalConstructor=|new2|const QTextDocument *
 
-/*
-QTextDocumentFragment ( const QTextCursor & cursor )
-*/
+$prototype=QTextDocumentFragment ( const QTextCursor & cursor )
 $internalConstructor=|new3|const QTextCursor &
 
-/*
-QTextDocumentFragment ( const QTextDocumentFragment & other )
-*/
+$prototype=QTextDocumentFragment ( const QTextDocumentFragment & other )
 $internalConstructor=|new4|const QTextDocumentFragment &
 
 //[1]QTextDocumentFragment ()
@@ -90,19 +82,13 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW )
 
 $deleteMethod
 
-/*
-bool isEmpty () const
-*/
+$prototype=bool isEmpty () const
 $method=|bool|isEmpty|
 
-/*
-QString toHtml ( const QByteArray & encoding ) const
-*/
+$prototype=QString toHtml ( const QByteArray & encoding ) const
 $internalMethod=|QString|toHtml,toHtml1|const QByteArray &
 
-/*
-QString toHtml () const
-*/
+$prototype=QString toHtml () const
 $internalMethod=|QString|toHtml,toHtml2|
 
 //[1]QString toHtml ( const QByteArray & encoding ) const
@@ -124,19 +110,13 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOHTML )
   }
 }
 
-/*
-QString toPlainText () const
-*/
+$prototype=QString toPlainText () const
 $method=|QString|toPlainText|
 
-/*
-static QTextDocumentFragment fromHtml ( const QString & text )
-*/
+$prototype=static QTextDocumentFragment fromHtml ( const QString & text )
 $internalStaticMethod=|QTextDocumentFragment|fromHtml,fromHtml1|const QString &
 
-/*
-static QTextDocumentFragment fromHtml ( const QString & text, const QTextDocument * resourceProvider )
-*/
+$prototype=static QTextDocumentFragment fromHtml ( const QString & text, const QTextDocument * resourceProvider )
 $internalStaticMethod=|QTextDocumentFragment|fromHtml,fromHtml2|const QString &,const QTextDocument *
 
 //[1]QTextDocumentFragment fromHtml ( const QString & text )
@@ -158,9 +138,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMHTML )
   }
 }
 
-/*
-static QTextDocumentFragment fromPlainText ( const QString & plainText )
-*/
+$prototype=static QTextDocumentFragment fromPlainText ( const QString & plainText )
 $staticMethod=|QTextDocumentFragment|fromPlainText|const QString &
 
 $extraMethods

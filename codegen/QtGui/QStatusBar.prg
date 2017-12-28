@@ -33,9 +33,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QStatusBar ( QWidget * parent = 0 )
-*/
+$prototype=QStatusBar ( QWidget * parent = 0 )
 HB_FUNC_STATIC( QSTATUSBAR_NEW )
 {
   QStatusBar * o = new QStatusBar ( OPQWIDGET(1,0) );
@@ -44,54 +42,34 @@ HB_FUNC_STATIC( QSTATUSBAR_NEW )
 
 $deleteMethod
 
-/*
-void addPermanentWidget ( QWidget * widget, int stretch = 0 )
-*/
+$prototype=void addPermanentWidget ( QWidget * widget, int stretch = 0 )
 $method=|void|addPermanentWidget|QWidget *,int=0
 
-/*
-void addWidget ( QWidget * widget, int stretch = 0 )
-*/
+$prototype=void addWidget ( QWidget * widget, int stretch = 0 )
 $method=|void|addWidget|QWidget *,int=0
 
-/*
-QString currentMessage () const
-*/
+$prototype=QString currentMessage () const
 $method=|QString|currentMessage|
 
-/*
-int insertPermanentWidget ( int index, QWidget * widget, int stretch = 0 )
-*/
+$prototype=int insertPermanentWidget ( int index, QWidget * widget, int stretch = 0 )
 $method=|int|insertPermanentWidget|int,QWidget *,int=0
 
-/*
-int insertWidget ( int index, QWidget * widget, int stretch = 0 )
-*/
+$prototype=int insertWidget ( int index, QWidget * widget, int stretch = 0 )
 $method=|int|insertWidget|int,QWidget *,int=0
 
-/*
-bool isSizeGripEnabled () const
-*/
+$prototype=bool isSizeGripEnabled () const
 $method=|bool|isSizeGripEnabled|
 
-/*
-void removeWidget ( QWidget * widget )
-*/
+$prototype=void removeWidget ( QWidget * widget )
 $method=|void|removeWidget|QWidget *
 
-/*
-void setSizeGripEnabled ( bool )
-*/
+$prototype=void setSizeGripEnabled ( bool )
 $method=|void|setSizeGripEnabled|bool
 
-/*
-void clearMessage ()
-*/
+$prototype=void clearMessage ()
 $method=|void|clearMessage|
 
-/*
-void showMessage ( const QString & message, int timeout = 0 )
-*/
+$prototype=void showMessage ( const QString & message, int timeout = 0 )
 $method=|void|showMessage|const QString &,int=0
 
 #pragma ENDDUMP

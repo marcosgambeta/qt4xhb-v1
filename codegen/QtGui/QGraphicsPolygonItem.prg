@@ -38,14 +38,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QGraphicsPolygonItem ( QGraphicsItem * parent = 0 )
-*/
+$prototype=QGraphicsPolygonItem ( QGraphicsItem * parent = 0 )
 $internalConstructor=|new1|QGraphicsItem *=0
 
-/*
-QGraphicsPolygonItem ( const QPolygonF & polygon, QGraphicsItem * parent = 0 )
-*/
+$prototype=QGraphicsPolygonItem ( const QPolygonF & polygon, QGraphicsItem * parent = 0 )
 $internalConstructor=|new2|const QPolygonF &,QGraphicsItem *=0
 
 //[1]QGraphicsPolygonItem ( QGraphicsItem * parent = 0 )
@@ -69,59 +65,37 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_NEW )
 
 $deleteMethod
 
-/*
-Qt::FillRule fillRule () const
-*/
+$prototype=Qt::FillRule fillRule () const
 $method=|Qt::FillRule|fillRule|
 
-/*
-QPolygonF polygon () const
-*/
+$prototype=QPolygonF polygon () const
 $method=|QPolygonF|polygon|
 
-/*
-void setFillRule ( Qt::FillRule rule )
-*/
+$prototype=void setFillRule ( Qt::FillRule rule )
 $method=|void|setFillRule|Qt::FillRule
 
-/*
-void setPolygon ( const QPolygonF & polygon )
-*/
+$prototype=void setPolygon ( const QPolygonF & polygon )
 $method=|void|setPolygon|const QPolygonF &
 
-/*
-virtual QRectF boundingRect () const
-*/
+$prototype=virtual QRectF boundingRect () const
 $virtualMethod=|QRectF|boundingRect|
 
-/*
-virtual bool contains ( const QPointF & point ) const
-*/
+$prototype=virtual bool contains ( const QPointF & point ) const
 $virtualMethod=|bool|contains|const QPointF &
 
-/*
-virtual bool isObscuredBy ( const QGraphicsItem * item ) const
-*/
+$prototype=virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 $virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
 
-/*
-virtual QPainterPath opaqueArea () const
-*/
+$prototype=virtual QPainterPath opaqueArea () const
 $virtualMethod=|QPainterPath|opaqueArea|
 
-/*
-virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
-*/
+$prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
 $virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
 
-/*
-virtual QPainterPath shape () const
-*/
+$prototype=virtual QPainterPath shape () const
 $virtualMethod=|QPainterPath|shape|
 
-/*
-virtual int type () const
-*/
+$prototype=virtual int type () const
 $virtualMethod=|int|type|
 
 #pragma ENDDUMP

@@ -66,24 +66,16 @@ $destructor
 
 #include <QImage>
 
-/*
-QRawFont ()
-*/
+$prototype=QRawFont ()
 $internalConstructor=|new1|
 
-/*
-QRawFont ( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
-*/
+$prototype=QRawFont ( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
 $internalConstructor=|new2|const QString &,qreal,QFont::HintingPreference=QFont::PreferDefaultHinting
 
-/*
-QRawFont ( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
-*/
+$prototype=QRawFont ( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
 $internalConstructor=|new3|const QByteArray &,qreal,QFont::HintingPreference=QFont::PreferDefaultHinting
 
-/*
-QRawFont ( const QRawFont & other )
-*/
+$prototype=QRawFont ( const QRawFont & other )
 $internalConstructor=|new4|const QRawFont &
 
 //[1]QRawFont ()
@@ -117,9 +109,7 @@ HB_FUNC_STATIC( QRAWFONT_NEW )
 
 $deleteMethod
 
-/*
-QVector<QPointF> advancesForGlyphIndexes ( const QVector<quint32> & glyphIndexes ) const
-*/
+$prototype=QVector<QPointF> advancesForGlyphIndexes ( const QVector<quint32> & glyphIndexes ) const
 HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES1 )
 {
   QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -173,39 +163,25 @@ HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES )
   HB_FUNC_EXEC( QRAWFONT_ADVANCESFORGLYPHINDEXES1 );
 }
 
-/*
-QImage alphaMapForGlyph ( quint32 glyphIndex, AntialiasingType antialiasingType = SubPixelAntialiasing, const QTransform & transform = QTransform() ) const
-*/
+$prototype=QImage alphaMapForGlyph ( quint32 glyphIndex, AntialiasingType antialiasingType = SubPixelAntialiasing, const QTransform & transform = QTransform() ) const
 $method=|QImage|alphaMapForGlyph|quint32,QRawFont::AntialiasingType=QRawFont::SubPixelAntialiasing,const QTransform &=QTransform()
 
-/*
-qreal ascent () const
-*/
+$prototype=qreal ascent () const
 $method=|qreal|ascent|
 
-/*
-qreal averageCharWidth () const
-*/
+$prototype=qreal averageCharWidth () const
 $method=|qreal|averageCharWidth|
 
-/*
-qreal descent () const
-*/
+$prototype=qreal descent () const
 $method=|qreal|descent|
 
-/*
-QString familyName () const
-*/
+$prototype=QString familyName () const
 $method=|QString|familyName|
 
-/*
-QByteArray fontTable ( const char * tagName ) const
-*/
+$prototype=QByteArray fontTable ( const char * tagName ) const
 $method=|QByteArray|fontTable|const char *
 
-/*
-QVector<quint32> glyphIndexesForString ( const QString & text ) const
-*/
+$prototype=QVector<quint32> glyphIndexesForString ( const QString & text ) const
 HB_FUNC_STATIC( QRAWFONT_GLYPHINDEXESFORSTRING )
 {
   QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -225,64 +201,40 @@ HB_FUNC_STATIC( QRAWFONT_GLYPHINDEXESFORSTRING )
   }
 }
 
-/*
-QFont::HintingPreference hintingPreference () const
-*/
+$prototype=QFont::HintingPreference hintingPreference () const
 $method=|QFont::HintingPreference|hintingPreference|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-qreal leading () const
-*/
+$prototype=qreal leading () const
 $method=|qreal|leading|
 
-/*
-void loadFromData ( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference )
-*/
+$prototype=void loadFromData ( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference )
 $method=|void|loadFromData|const QByteArray &,qreal,QFont::HintingPreference
 
-/*
-void loadFromFile ( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference )
-*/
+$prototype=void loadFromFile ( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference )
 $method=|void|loadFromFile|const QString &,qreal,QFont::HintingPreference
 
-/*
-qreal maxCharWidth () const
-*/
+$prototype=qreal maxCharWidth () const
 $method=|qreal|maxCharWidth|
 
-/*
-QPainterPath pathForGlyph ( quint32 glyphIndex ) const
-*/
+$prototype=QPainterPath pathForGlyph ( quint32 glyphIndex ) const
 $method=|QPainterPath|pathForGlyph|quint32
 
-/*
-qreal pixelSize () const
-*/
+$prototype=qreal pixelSize () const
 $method=|qreal|pixelSize|
 
-/*
-void setPixelSize ( qreal pixelSize )
-*/
+$prototype=void setPixelSize ( qreal pixelSize )
 $method=|void|setPixelSize|qreal
 
-/*
-QFont::Style style () const
-*/
+$prototype=QFont::Style style () const
 $method=|QFont::Style|style|
 
-/*
-QString styleName () const
-*/
+$prototype=QString styleName () const
 $method=|QString|styleName|
 
-/*
-QList<QFontDatabase::WritingSystem> supportedWritingSystems () const
-*/
+$prototype=QList<QFontDatabase::WritingSystem> supportedWritingSystems () const
 HB_FUNC_STATIC( QRAWFONT_SUPPORTEDWRITINGSYSTEMS )
 {
   QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -302,14 +254,10 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTEDWRITINGSYSTEMS )
   }
 }
 
-/*
-bool supportsCharacter ( QChar character ) const
-*/
+$prototype=bool supportsCharacter ( QChar character ) const
 $internalMethod=|bool|supportsCharacter,supportsCharacter1|QChar
 
-/*
-bool supportsCharacter ( quint32 ucs4 ) const
-*/
+$prototype=bool supportsCharacter ( quint32 ucs4 ) const
 $internalMethod=|bool|supportsCharacter,supportsCharacter2|quint32
 
 //[1]bool supportsCharacter ( QChar character ) const
@@ -331,24 +279,16 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTSCHARACTER )
   }
 }
 
-/*
-qreal unitsPerEm () const
-*/
+$prototype=qreal unitsPerEm () const
 $method=|qreal|unitsPerEm|
 
-/*
-int weight () const
-*/
+$prototype=int weight () const
 $method=|int|weight|
 
-/*
-qreal xHeight () const
-*/
+$prototype=qreal xHeight () const
 $method=|qreal|xHeight|
 
-/*
-QRawFont fromFont ( const QFont & font, QFontDatabase::WritingSystem writingSystem = QFontDatabase::Any )
-*/
+$prototype=QRawFont fromFont ( const QFont & font, QFontDatabase::WritingSystem writingSystem = QFontDatabase::Any )
 HB_FUNC_STATIC( QRAWFONT_FROMFONT )
 {
   int par2 = ISNIL(2)? (int) QFontDatabase::Any : hb_parni(2);

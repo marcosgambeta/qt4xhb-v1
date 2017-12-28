@@ -37,9 +37,7 @@ $destructor
 
 #include <QTextCursor>
 
-/*
-QTextFrame ( QTextDocument * document )
-*/
+$prototype=QTextFrame ( QTextDocument * document )
 HB_FUNC_STATIC( QTEXTFRAME_NEW )
 {
   QTextFrame * o = new QTextFrame ( PQTEXTDOCUMENT(1) );
@@ -48,9 +46,7 @@ HB_FUNC_STATIC( QTEXTFRAME_NEW )
 
 $deleteMethod
 
-/*
-QList<QTextFrame *> childFrames () const
-*/
+$prototype=QList<QTextFrame *> childFrames () const
 HB_FUNC_STATIC( QTEXTFRAME_CHILDFRAMES )
 {
   QTextFrame * obj = (QTextFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -86,39 +82,25 @@ HB_FUNC_STATIC( QTEXTFRAME_CHILDFRAMES )
   }
 }
 
-/*
-QTextCursor firstCursorPosition () const
-*/
+$prototype=QTextCursor firstCursorPosition () const
 $method=|QTextCursor|firstCursorPosition|
 
-/*
-int firstPosition () const
-*/
+$prototype=int firstPosition () const
 $method=|int|firstPosition|
 
-/*
-QTextFrameFormat frameFormat () const
-*/
+$prototype=QTextFrameFormat frameFormat () const
 $method=|QTextFrameFormat|frameFormat|
 
-/*
-QTextCursor lastCursorPosition () const
-*/
+$prototype=QTextCursor lastCursorPosition () const
 $method=|QTextCursor|lastCursorPosition|
 
-/*
-int lastPosition () const
-*/
+$prototype=int lastPosition () const
 $method=|int|lastPosition|
 
-/*
-QTextFrame * parentFrame () const
-*/
+$prototype=QTextFrame * parentFrame () const
 $method=|QTextFrame *|parentFrame|
 
-/*
-void setFrameFormat ( const QTextFrameFormat & format )
-*/
+$prototype=void setFrameFormat ( const QTextFrameFormat & format )
 $method=|void|setFrameFormat|const QTextFrameFormat &
 
 #pragma ENDDUMP

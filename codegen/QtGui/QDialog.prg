@@ -42,76 +42,48 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QDialog ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
-*/
+$prototype=QDialog ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 $constructor=|new|QWidget *=0,Qt::WindowFlags=0
 
 $deleteMethod
 
-/*
-bool isSizeGripEnabled () const
-*/
+$prototype=bool isSizeGripEnabled () const
 $method=|bool|isSizeGripEnabled|
 
-/*
-int result () const
-*/
+$prototype=int result () const
 $method=|int|result|
 
-/*
-void setModal ( bool modal )
-*/
+$prototype=void setModal ( bool modal )
 $method=|void|setModal|bool
 
-/*
-void setResult ( int i )
-*/
+$prototype=void setResult ( int i )
 $method=|void|setResult|int
 
-/*
-void setSizeGripEnabled ( bool )
-*/
+$prototype=void setSizeGripEnabled ( bool )
 $method=|void|setSizeGripEnabled|bool
 
-/*
-virtual QSize minimumSizeHint () const
-*/
+$prototype=virtual QSize minimumSizeHint () const
 $virtualMethod=|QSize|minimumSizeHint|
 
-/*
-virtual void setVisible ( bool visible )
-*/
+$prototype=virtual void setVisible ( bool visible )
 $virtualMethod=|void|setVisible|bool
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $virtualMethod=|QSize|sizeHint|
 
-/*
-virtual void accept ()
-*/
+$prototype=virtual void accept ()
 $virtualMethod=|void|accept|
 
-/*
-virtual void done ( int r )
-*/
+$prototype=virtual void done ( int r )
 $virtualMethod=|void|done|int
 
-/*
-int exec ()
-*/
+$prototype=int exec ()
 $method=|int|exec|
 
-/*
-void open ()
-*/
+$prototype=void open ()
 $method=|void|open|
 
-/*
-virtual void reject ()
-*/
+$prototype=virtual void reject ()
 $virtualMethod=|void|reject|
 
 #pragma ENDDUMP

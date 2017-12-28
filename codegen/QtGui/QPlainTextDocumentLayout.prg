@@ -35,9 +35,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QPlainTextDocumentLayout ( QTextDocument * document )
-*/
+$prototype=QPlainTextDocumentLayout ( QTextDocument * document )
 HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_NEW )
 {
   QPlainTextDocumentLayout * o = new QPlainTextDocumentLayout ( PQTEXTDOCUMENT(1) );
@@ -46,49 +44,31 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_NEW )
 
 $deleteMethod
 
-/*
-int cursorWidth () const
-*/
+$prototype=int cursorWidth () const
 $method=|int|cursorWidth|
 
-/*
-void ensureBlockLayout ( const QTextBlock & block ) const
-*/
+$prototype=void ensureBlockLayout ( const QTextBlock & block ) const
 $method=|void|ensureBlockLayout|const QTextBlock &
 
-/*
-void requestUpdate ()
-*/
+$prototype=void requestUpdate ()
 $method=|void|requestUpdate|
 
-/*
-void setCursorWidth ( int width )
-*/
+$prototype=void setCursorWidth ( int width )
 $method=|void|setCursorWidth|int
 
-/*
-virtual QRectF blockBoundingRect ( const QTextBlock & block ) const
-*/
+$prototype=virtual QRectF blockBoundingRect ( const QTextBlock & block ) const
 $virtualMethod=|QRectF|blockBoundingRect|const QTextBlock &
 
-/*
-virtual QSizeF documentSize () const
-*/
+$prototype=virtual QSizeF documentSize () const
 $virtualMethod=|QSizeF|documentSize|
 
-/*
-virtual QRectF frameBoundingRect ( QTextFrame * ) const
-*/
+$prototype=virtual QRectF frameBoundingRect ( QTextFrame * ) const
 $virtualMethod=|QRectF|frameBoundingRect|QTextFrame *
 
-/*
-virtual int hitTest ( const QPointF &, Qt::HitTestAccuracy ) const
-*/
+$prototype=virtual int hitTest ( const QPointF &, Qt::HitTestAccuracy ) const
 $virtualMethod=|int|hitTest|const QPointF &,Qt::HitTestAccuracy
 
-/*
-virtual int pageCount () const
-*/
+$prototype=virtual int pageCount () const
 $virtualMethod=|int|pageCount|
 
 #pragma ENDDUMP

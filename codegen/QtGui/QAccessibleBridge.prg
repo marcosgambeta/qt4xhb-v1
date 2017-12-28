@@ -33,14 +33,10 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual void notifyAccessibilityUpdate ( int reason, QAccessibleInterface * interface, int child ) = 0
-*/
+$prototype=virtual void notifyAccessibilityUpdate ( int reason, QAccessibleInterface * interface, int child ) = 0
 $virtualMethod=|void|notifyAccessibilityUpdate|int,QAccessibleInterface *,int
 
-/*
-virtual void setRootObject ( QAccessibleInterface * object ) = 0
-*/
+$prototype=virtual void setRootObject ( QAccessibleInterface * object ) = 0
 $virtualMethod=|void|setRootObject|QAccessibleInterface *
 
 $extraMethods

@@ -48,9 +48,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QTextInlineObject ( int i, QTextEngine * e )
-*/
+$prototype=QTextInlineObject ( int i, QTextEngine * e )
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_NEW )
 {
   QTextInlineObject * o = new QTextInlineObject ( PINT(1), PQTEXTENGINE(1) );
@@ -59,69 +57,43 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_NEW )
 
 $deleteMethod
 
-/*
-qreal ascent () const
-*/
+$prototype=qreal ascent () const
 $method=|qreal|ascent|
 
-/*
-qreal descent () const
-*/
+$prototype=qreal descent () const
 $method=|qreal|descent|
 
-/*
-QTextFormat format () const
-*/
+$prototype=QTextFormat format () const
 $method=|QTextFormat|format|
 
-/*
-int formatIndex () const
-*/
+$prototype=int formatIndex () const
 $method=|int|formatIndex|
 
-/*
-qreal height () const
-*/
+$prototype=qreal height () const
 $method=|qreal|height|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-QRectF rect () const
-*/
+$prototype=QRectF rect () const
 $method=|QRectF|rect|
 
-/*
-void setAscent ( qreal a )
-*/
+$prototype=void setAscent ( qreal a )
 $method=|void|setAscent|qreal
 
-/*
-void setDescent ( qreal d )
-*/
+$prototype=void setDescent ( qreal d )
 $method=|void|setDescent|qreal
 
-/*
-void setWidth ( qreal w )
-*/
+$prototype=void setWidth ( qreal w )
 $method=|void|setWidth|qreal
 
-/*
-Qt::LayoutDirection textDirection () const
-*/
+$prototype=Qt::LayoutDirection textDirection () const
 $method=|Qt::LayoutDirection|textDirection|
 
-/*
-int textPosition () const
-*/
+$prototype=int textPosition () const
 $method=|int|textPosition|
 
-/*
-qreal width () const
-*/
+$prototype=qreal width () const
 $method=|qreal|width|
 
 $extraMethods

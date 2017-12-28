@@ -28,27 +28,21 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QPushButton ( QWidget * parent = 0 )
-*/
+$prototype=QPushButton ( QWidget * parent = 0 )
 void QPushButton_new1 ()
 {
   QPushButton * o = new QPushButton ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-/*
-QPushButton ( const QString & text, QWidget * parent = 0 )
-*/
+$prototype=QPushButton ( const QString & text, QWidget * parent = 0 )
 void QPushButton_new2 ()
 {
   QPushButton * o = new QPushButton ( PQSTRING(1), OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-/*
-QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = 0 )
-*/
+$prototype=QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = 0 )
 void QPushButton_new3 ()
 {
   QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
@@ -82,39 +76,25 @@ HB_FUNC_STATIC( QPUSHBUTTON_NEW )
 
 $deleteMethod
 
-/*
-bool autoDefault () const
-*/
+$prototype=bool autoDefault () const
 $method=|bool|autoDefault|
 
-/*
-bool isDefault () const
-*/
+$prototype=bool isDefault () const
 $method=|bool|isDefault|
 
-/*
-bool isFlat () const
-*/
+$prototype=bool isFlat () const
 $method=|bool|isFlat|
 
-/*
-void setAutoDefault ( bool )
-*/
+$prototype=void setAutoDefault ( bool )
 $method=|void|setAutoDefault|bool
 
-/*
-void setDefault ( bool )
-*/
+$prototype=void setDefault ( bool )
 $method=|void|setDefault|bool
 
-/*
-void setFlat ( bool )
-*/
+$prototype=void setFlat ( bool )
 $method=|void|setFlat|bool
 
-/*
-void showMenu ()
-*/
+$prototype=void showMenu ()
 $method=|void|showMenu|
 
 #pragma ENDDUMP

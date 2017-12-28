@@ -45,9 +45,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QWorkspace ( QWidget * parent = 0 )
-*/
+$prototype=QWorkspace ( QWidget * parent = 0 )
 HB_FUNC_STATIC( QWORKSPACE_NEW )
 {
   QWorkspace * o = new QWorkspace ( OPQWIDGET(1,0) );
@@ -56,39 +54,25 @@ HB_FUNC_STATIC( QWORKSPACE_NEW )
 
 $deleteMethod
 
-/*
-QWidget * activeWindow () const
-*/
+$prototype=QWidget * activeWindow () const
 $method=|QWidget *|activeWindow|
 
-/*
-QWidget * addWindow ( QWidget * w, Qt::WindowFlags flags = 0 )
-*/
+$prototype=QWidget * addWindow ( QWidget * w, Qt::WindowFlags flags = 0 )
 $method=|QWidget *|addWindow|QWidget *,Qt::WindowFlags=0
 
-/*
-QBrush background () const
-*/
+$prototype=QBrush background () const
 $method=|QBrush|background|
 
-/*
-bool scrollBarsEnabled () const
-*/
+$prototype=bool scrollBarsEnabled () const
 $method=|bool|scrollBarsEnabled|
 
-/*
-void setBackground ( const QBrush & background )
-*/
+$prototype=void setBackground ( const QBrush & background )
 $method=|void|setBackground|const QBrush &
 
-/*
-void setScrollBarsEnabled ( bool enable )
-*/
+$prototype=void setScrollBarsEnabled ( bool enable )
 $method=|void|setScrollBarsEnabled|bool
 
-/*
-QWidgetList windowList ( WindowOrder order = CreationOrder ) const
-*/
+$prototype=QWidgetList windowList ( WindowOrder order = CreationOrder ) const
 HB_FUNC_STATIC( QWORKSPACE_WINDOWLIST )
 {
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -125,49 +109,31 @@ HB_FUNC_STATIC( QWORKSPACE_WINDOWLIST )
   }
 }
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $virtualMethod=|QSize|sizeHint|
 
-/*
-void activateNextWindow ()
-*/
+$prototype=void activateNextWindow ()
 $method=|void|activateNextWindow|
 
-/*
-void activatePreviousWindow ()
-*/
+$prototype=void activatePreviousWindow ()
 $method=|void|activatePreviousWindow|
 
-/*
-void arrangeIcons ()
-*/
+$prototype=void arrangeIcons ()
 $method=|void|arrangeIcons|
 
-/*
-void cascade ()
-*/
+$prototype=void cascade ()
 $method=|void|cascade|
 
-/*
-void closeActiveWindow ()
-*/
+$prototype=void closeActiveWindow ()
 $method=|void|closeActiveWindow|
 
-/*
-void closeAllWindows ()
-*/
+$prototype=void closeAllWindows ()
 $method=|void|closeAllWindows|
 
-/*
-void setActiveWindow ( QWidget * w )
-*/
+$prototype=void setActiveWindow ( QWidget * w )
 $method=|void|setActiveWindow|QWidget *
 
-/*
-void tile ()
-*/
+$prototype=void tile ()
 $method=|void|tile|
 
 #pragma ENDDUMP

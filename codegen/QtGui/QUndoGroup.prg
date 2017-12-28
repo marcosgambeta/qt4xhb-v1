@@ -48,9 +48,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QUndoGroup ( QObject * parent = 0 )
-*/
+$prototype=QUndoGroup ( QObject * parent = 0 )
 HB_FUNC_STATIC( QUNDOGROUP_NEW )
 {
   QUndoGroup * o = new QUndoGroup ( OPQOBJECT(1,0) );
@@ -59,54 +57,34 @@ HB_FUNC_STATIC( QUNDOGROUP_NEW )
 
 $deleteMethod
 
-/*
-QUndoStack * activeStack () const
-*/
+$prototype=QUndoStack * activeStack () const
 $method=|QUndoStack *|activeStack|
 
-/*
-void addStack ( QUndoStack * stack )
-*/
+$prototype=void addStack ( QUndoStack * stack )
 $method=|void|addStack|QUndoStack *
 
-/*
-bool canRedo () const
-*/
+$prototype=bool canRedo () const
 $method=|bool|canRedo|
 
-/*
-bool canUndo () const
-*/
+$prototype=bool canUndo () const
 $method=|bool|canUndo|
 
-/*
-QAction * createRedoAction ( QObject * parent, const QString & prefix = QString() ) const
-*/
+$prototype=QAction * createRedoAction ( QObject * parent, const QString & prefix = QString() ) const
 $method=|QAction *|createRedoAction|QObject *,const QString &=QString()
 
-/*
-QAction * createUndoAction ( QObject * parent, const QString & prefix = QString() ) const
-*/
+$prototype=QAction * createUndoAction ( QObject * parent, const QString & prefix = QString() ) const
 $method=|QAction *|createUndoAction|QObject *,const QString &=QString()
 
-/*
-bool isClean () const
-*/
+$prototype=bool isClean () const
 $method=|bool|isClean|
 
-/*
-QString redoText () const
-*/
+$prototype=QString redoText () const
 $method=|QString|redoText|
 
-/*
-void removeStack ( QUndoStack * stack )
-*/
+$prototype=void removeStack ( QUndoStack * stack )
 $method=|void|removeStack|QUndoStack *
 
-/*
-QList<QUndoStack *> stacks () const
-*/
+$prototype=QList<QUndoStack *> stacks () const
 HB_FUNC_STATIC( QUNDOGROUP_STACKS )
 {
   QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -142,24 +120,16 @@ HB_FUNC_STATIC( QUNDOGROUP_STACKS )
   }
 }
 
-/*
-QString undoText () const
-*/
+$prototype=QString undoText () const
 $method=|QString|undoText|
 
-/*
-void redo ()
-*/
+$prototype=void redo ()
 $method=|void|redo|
 
-/*
-void setActiveStack ( QUndoStack * stack )
-*/
+$prototype=void setActiveStack ( QUndoStack * stack )
 $method=|void|setActiveStack|QUndoStack *
 
-/*
-void undo ()
-*/
+$prototype=void undo ()
 $method=|void|undo|
 
 #pragma ENDDUMP

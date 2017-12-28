@@ -27,9 +27,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QHoverEvent ( Type type, const QPoint & pos, const QPoint & oldPos )
-*/
+$prototype=QHoverEvent ( Type type, const QPoint & pos, const QPoint & oldPos )
 HB_FUNC_STATIC( QHOVEREVENT_NEW )
 {
   QHoverEvent * o = new QHoverEvent ( (QEvent::Type) hb_parni(1), *PQPOINT(2), *PQPOINT(3) );
@@ -38,9 +36,7 @@ HB_FUNC_STATIC( QHOVEREVENT_NEW )
 
 $deleteMethod
 
-/*
-const QPoint & pos () const
-*/
+$prototype=const QPoint & pos () const
 HB_FUNC_STATIC( QHOVEREVENT_POS )
 {
   QHoverEvent * obj = (QHoverEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -51,9 +47,7 @@ HB_FUNC_STATIC( QHOVEREVENT_POS )
   }
 }
 
-/*
-const QPoint & oldPos () const
-*/
+$prototype=const QPoint & oldPos () const
 HB_FUNC_STATIC( QHOVEREVENT_OLDPOS )
 {
   QHoverEvent * obj = (QHoverEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

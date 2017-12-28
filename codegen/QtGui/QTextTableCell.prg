@@ -47,14 +47,10 @@ $destructor
 
 #include <QTextCursor>
 
-/*
-QTextTableCell ()
-*/
+$prototype=QTextTableCell ()
 $internalConstructor=|new1|
 
-/*
-QTextTableCell ( const QTextTableCell & other )
-*/
+$prototype=QTextTableCell ( const QTextTableCell & other )
 $internalConstructor=|new2|const QTextTableCell &
 
 //[1]QTextTableCell ()
@@ -78,54 +74,34 @@ HB_FUNC_STATIC( QTEXTTABLECELL_NEW )
 
 $deleteMethod
 
-/*
-int column () const
-*/
+$prototype=int column () const
 $method=|int|column|
 
-/*
-int columnSpan () const
-*/
+$prototype=int columnSpan () const
 $method=|int|columnSpan|
 
-/*
-QTextCursor firstCursorPosition () const
-*/
+$prototype=QTextCursor firstCursorPosition () const
 $method=|QTextCursor|firstCursorPosition|
 
-/*
-QTextCharFormat format () const
-*/
+$prototype=QTextCharFormat format () const
 $method=|QTextCharFormat|format|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-QTextCursor lastCursorPosition () const
-*/
+$prototype=QTextCursor lastCursorPosition () const
 $method=|QTextCursor|lastCursorPosition|
 
-/*
-int row () const
-*/
+$prototype=int row () const
 $method=|int|row|
 
-/*
-int rowSpan () const
-*/
+$prototype=int rowSpan () const
 $method=|int|rowSpan|
 
-/*
-void setFormat ( const QTextCharFormat & format )
-*/
+$prototype=void setFormat ( const QTextCharFormat & format )
 $method=|void|setFormat|const QTextCharFormat &
 
-/*
-int tableCellFormatIndex () const
-*/
+$prototype=int tableCellFormatIndex () const
 $method=|int|tableCellFormatIndex|
 
 $extraMethods

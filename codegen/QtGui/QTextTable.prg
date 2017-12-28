@@ -51,29 +51,19 @@ $destructor
 
 $deleteMethod
 
-/*
-void appendColumns ( int count )
-*/
+$prototype=void appendColumns ( int count )
 $method=|void|appendColumns|int
 
-/*
-void appendRows ( int count )
-*/
+$prototype=void appendRows ( int count )
 $method=|void|appendRows|int
 
-/*
-QTextTableCell cellAt ( int row, int column ) const
-*/
+$prototype=QTextTableCell cellAt ( int row, int column ) const
 $method=|QTextTableCell|cellAt,cellAt1|int,int
 
-/*
-QTextTableCell cellAt ( int position ) const
-*/
+$prototype=QTextTableCell cellAt ( int position ) const
 $method=|QTextTableCell|cellAt,cellAt2|int
 
-/*
-QTextTableCell cellAt ( const QTextCursor & cursor ) const
-*/
+$prototype=QTextTableCell cellAt ( const QTextCursor & cursor ) const
 $method=|QTextTableCell|cellAt,cellAt3|const QTextCursor &
 
 //[1]QTextTableCell cellAt ( int row, int column ) const
@@ -100,34 +90,22 @@ HB_FUNC_STATIC( QTEXTTABLE_CELLAT )
   }
 }
 
-/*
-int columns () const
-*/
+$prototype=int columns () const
 $method=|int|columns|
 
-/*
-QTextTableFormat format () const
-*/
+$prototype=QTextTableFormat format () const
 $method=|QTextTableFormat|format|
 
-/*
-void insertColumns ( int index, int columns )
-*/
+$prototype=void insertColumns ( int index, int columns )
 $method=|void|insertColumns|int,int
 
-/*
-void insertRows ( int index, int rows )
-*/
+$prototype=void insertRows ( int index, int rows )
 $method=|void|insertRows|int,int
 
-/*
-void mergeCells ( int row, int column, int numRows, int numCols )
-*/
+$prototype=void mergeCells ( int row, int column, int numRows, int numCols )
 $method=|void|mergeCells,mergeCells1|int,int,int,int
 
-/*
-void mergeCells ( const QTextCursor & cursor )
-*/
+$prototype=void mergeCells ( const QTextCursor & cursor )
 $method=|void|mergeCells,mergeCells2|const QTextCursor &
 
 //[1]void mergeCells ( int row, int column, int numRows, int numCols )
@@ -149,44 +127,28 @@ HB_FUNC_STATIC( QTEXTTABLE_MERGECELLS )
   }
 }
 
-/*
-void removeColumns ( int index, int columns )
-*/
+$prototype=void removeColumns ( int index, int columns )
 $method=|void|removeColumns|int,int
 
-/*
-void removeRows ( int index, int rows )
-*/
+$prototype=void removeRows ( int index, int rows )
 $method=|void|removeRows|int,int
 
-/*
-void resize ( int rows, int columns )
-*/
+$prototype=void resize ( int rows, int columns )
 $method=|void|resize|int,int
 
-/*
-QTextCursor rowEnd ( const QTextCursor & cursor ) const
-*/
+$prototype=QTextCursor rowEnd ( const QTextCursor & cursor ) const
 $method=|QTextCursor|rowEnd|const QTextCursor &
 
-/*
-QTextCursor rowStart ( const QTextCursor & cursor ) const
-*/
+$prototype=QTextCursor rowStart ( const QTextCursor & cursor ) const
 $method=|QTextCursor|rowStart|const QTextCursor &
 
-/*
-int rows () const
-*/
+$prototype=int rows () const
 $method=|int|rows|
 
-/*
-void setFormat ( const QTextTableFormat & format )
-*/
+$prototype=void setFormat ( const QTextTableFormat & format )
 $method=|void|setFormat|const QTextTableFormat &
 
-/*
-void splitCell ( int row, int column, int numRows, int numCols )
-*/
+$prototype=void splitCell ( int row, int column, int numRows, int numCols )
 $method=|void|splitCell|int,int,int,int
 
 #pragma ENDDUMP

@@ -23,14 +23,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QWindowStateChangeEvent(Qt::WindowStates aOldState)
-*/
+$prototype=QWindowStateChangeEvent(Qt::WindowStates aOldState)
 $internalConstructor=|new1|Qt::WindowStates
 
-/*
-QWindowStateChangeEvent(Qt::WindowStates aOldState, bool isOverride)
-*/
+$prototype=QWindowStateChangeEvent(Qt::WindowStates aOldState, bool isOverride)
 $internalConstructor=|new2|Qt::WindowStates,bool
 
 //[1]QWindowStateChangeEvent(Qt::WindowStates aOldState)
@@ -54,14 +50,10 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW )
 
 $deleteMethod
 
-/*
-Qt::WindowStates oldState() const
-*/
+$prototype=Qt::WindowStates oldState() const
 $method=|Qt::WindowStates|oldState|
 
-/*
-bool isOverride() const
-*/
+$prototype=bool isOverride() const
 $method=|bool|isOverride|
 
 #pragma ENDDUMP

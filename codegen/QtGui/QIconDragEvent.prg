@@ -21,9 +21,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QIconDragEvent ()
-*/
+$prototype=QIconDragEvent ()
 HB_FUNC_STATIC( QICONDRAGEVENT_NEW )
 {
   QIconDragEvent * o = new QIconDragEvent ();

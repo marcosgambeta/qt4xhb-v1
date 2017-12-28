@@ -32,14 +32,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QCheckBox ( QWidget * parent = 0 )
-*/
+$prototype=QCheckBox ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0
 
-/*
-QCheckBox ( const QString & text, QWidget * parent = 0 )
-*/
+$prototype=QCheckBox ( const QString & text, QWidget * parent = 0 )
 $internalConstructor=|new2|const QString &,QWidget *=0
 
 //[1]QCheckBox ( QWidget * parent = 0 )
@@ -61,34 +57,22 @@ HB_FUNC_STATIC( QCHECKBOX_NEW )
   }
 }
 
-/*
-Qt::CheckState checkState () const
-*/
+$prototype=Qt::CheckState checkState () const
 $method=|Qt::CheckState|checkState|
 
-/*
-bool isTristate () const
-*/
+$prototype=bool isTristate () const
 $method=|bool|isTristate|
 
-/*
-void setCheckState ( Qt::CheckState state )
-*/
+$prototype=void setCheckState ( Qt::CheckState state )
 $method=|void|setCheckState|Qt::CheckState
 
-/*
-void setTristate ( bool y = true )
-*/
+$prototype=void setTristate ( bool y = true )
 $method=|void|setTristate|bool=true
 
-/*
-virtual QSize minimumSizeHint () const
-*/
+$prototype=virtual QSize minimumSizeHint () const
 $virtualMethod=|QSize|minimumSizeHint|
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $virtualMethod=|QSize|sizeHint|
 
 #pragma ENDDUMP

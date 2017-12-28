@@ -34,14 +34,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-static QDecoration * create ( const QString & key )
-*/
+$prototype=static QDecoration * create ( const QString & key )
 $staticMethod=|QDecoration *|create|const QString &
 
-/*
-static QStringList keys ()
-*/
+$prototype=static QStringList keys ()
 $staticMethod=|QStringList|keys|
 
 $extraMethods

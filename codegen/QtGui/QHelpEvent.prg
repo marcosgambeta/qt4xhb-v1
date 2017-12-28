@@ -31,9 +31,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QHelpEvent ( Type type, const QPoint & pos, const QPoint & globalPos )
-*/
+$prototype=QHelpEvent ( Type type, const QPoint & pos, const QPoint & globalPos )
 HB_FUNC_STATIC( QHELPEVENT_NEW )
 {
   QHelpEvent * o = new QHelpEvent ( (QEvent::Type) hb_parni(1), *PQPOINT(2), *PQPOINT(3) );
@@ -42,9 +40,7 @@ HB_FUNC_STATIC( QHELPEVENT_NEW )
 
 $deleteMethod
 
-/*
-const QPoint & globalPos () const
-*/
+$prototype=const QPoint & globalPos () const
 HB_FUNC_STATIC( QHELPEVENT_GLOBALPOS )
 {
   QHelpEvent * obj = (QHelpEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -55,19 +51,13 @@ HB_FUNC_STATIC( QHELPEVENT_GLOBALPOS )
   }
 }
 
-/*
-int globalX () const
-*/
+$prototype=int globalX () const
 $method=|int|globalX|
 
-/*
-int globalY () const
-*/
+$prototype=int globalY () const
 $method=|int|globalY|
 
-/*
-const QPoint & pos () const
-*/
+$prototype=const QPoint & pos () const
 HB_FUNC_STATIC( QHELPEVENT_POS )
 {
   QHelpEvent * obj = (QHelpEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -78,14 +68,10 @@ HB_FUNC_STATIC( QHELPEVENT_POS )
   }
 }
 
-/*
-int x () const
-*/
+$prototype=int x () const
 $method=|int|x|
 
-/*
-int y () const
-*/
+$prototype=int y () const
 $method=|int|y|
 
 #pragma ENDDUMP

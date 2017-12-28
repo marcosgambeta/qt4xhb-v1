@@ -44,29 +44,19 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual void buildSysMenu ( QWidget * widget, QMenu * menu )
-*/
+$prototype=virtual void buildSysMenu ( QWidget * widget, QMenu * menu )
 $virtualMethod=|void|buildSysMenu|QWidget *,QMenu *
 
-/*
-void menuTriggered ( QWidget * widget, QAction * action )
-*/
+$prototype=void menuTriggered ( QWidget * widget, QAction * action )
 $method=|void|menuTriggered|QWidget *,QAction *
 
-/*
-virtual bool paint ( QPainter * painter, const QWidget * widget, int decorationRegion = All, DecorationState state = Normal ) = 0
-*/
+$prototype=virtual bool paint ( QPainter * painter, const QWidget * widget, int decorationRegion = All, DecorationState state = Normal ) = 0
 $virtualMethod=|bool|paint|QPainter *,const QWidget *,int=QDecoration::All,QDecoration::DecorationState=QDecoration::Normal
 
-/*
-virtual QRegion region ( const QWidget * widget, const QRect & rectangle, int decorationRegion = All ) = 0
-*/
+$prototype=virtual QRegion region ( const QWidget * widget, const QRect & rectangle, int decorationRegion = All ) = 0
 $internalVirtualMethod=|QRegion|region,region1|const QWidget *,const QRect &,int=QDecoration::All
 
-/*
-QRegion region ( const QWidget * widget, int decorationRegion = All )
-*/
+$prototype=QRegion region ( const QWidget * widget, int decorationRegion = All )
 $internalMethod=|QRegion|region,region2|const QWidget *,int=QDecoration::All
 
 //[1]virtual QRegion region ( const QWidget * widget, const QRect & rectangle, int decorationRegion = All ) = 0
@@ -88,29 +78,19 @@ HB_FUNC_STATIC( QDECORATION_REGION )
   }
 }
 
-/*
-virtual int regionAt ( const QWidget * widget, const QPoint & point )
-*/
+$prototype=virtual int regionAt ( const QWidget * widget, const QPoint & point )
 $virtualMethod=|int|regionAt|const QWidget *,const QPoint &
 
-/*
-virtual void regionClicked ( QWidget * widget, int region )
-*/
+$prototype=virtual void regionClicked ( QWidget * widget, int region )
 $virtualMethod=|void|regionClicked|QWidget *,int
 
-/*
-virtual void regionDoubleClicked ( QWidget * widget, int region )
-*/
+$prototype=virtual void regionDoubleClicked ( QWidget * widget, int region )
 $virtualMethod=|void|regionDoubleClicked|QWidget *,int
 
-/*
-static void startMove ( QWidget * widget )
-*/
+$prototype=static void startMove ( QWidget * widget )
 $staticMethod=|void|startMove|QWidget *
 
-/*
-static void startResize ( QWidget * widget )
-*/
+$prototype=static void startResize ( QWidget * widget )
 $staticMethod=|void|startResize|QWidget *
 
 $extraMethods

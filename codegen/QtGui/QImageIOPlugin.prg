@@ -29,9 +29,7 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual Capabilities capabilities ( QIODevice * device, const QByteArray & format ) const = 0
-*/
+$prototype=virtual Capabilities capabilities ( QIODevice * device, const QByteArray & format ) const = 0
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_CAPABILITIES )
 {
   QImageIOPlugin * obj = (QImageIOPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -41,9 +39,7 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_CAPABILITIES )
   }
 }
 
-/*
-virtual QImageIOHandler * create ( QIODevice * device, const QByteArray & format = QByteArray() ) const = 0
-*/
+$prototype=virtual QImageIOHandler * create ( QIODevice * device, const QByteArray & format = QByteArray() ) const = 0
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_CREATE )
 {
   QImageIOPlugin * obj = (QImageIOPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -55,9 +51,7 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_CREATE )
   }
 }
 
-/*
-virtual QStringList keys () const = 0
-*/
+$prototype=virtual QStringList keys () const = 0
 $virtualMethod=|QStringList|keys|
 
 #pragma ENDDUMP

@@ -38,14 +38,10 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual QWidget * createWidget ( QWidget * parent ) const = 0
-*/
+$prototype=virtual QWidget * createWidget ( QWidget * parent ) const = 0
 $virtualMethod=|QWidget *|createWidget|QWidget *
 
-/*
-virtual QByteArray valuePropertyName () const = 0
-*/
+$prototype=virtual QByteArray valuePropertyName () const = 0
 $virtualMethod=|QByteArray|valuePropertyName|
 
 $extraMethods

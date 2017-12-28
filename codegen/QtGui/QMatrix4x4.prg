@@ -32,41 +32,20 @@ CLASS QMatrix4x4
    METHOD inverted
    METHOD isIdentity
    METHOD lookAt
-   METHOD map1
-   METHOD map2
-   METHOD map3
-   METHOD map4
    METHOD map
-   METHOD mapRect1
-   METHOD mapRect2
    METHOD mapRect
    METHOD mapVector
    METHOD normalMatrix
    METHOD optimize
-   METHOD ortho1
-   METHOD ortho2
-   METHOD ortho3
    METHOD ortho
    METHOD perspective
-   METHOD rotate1
-   METHOD rotate2
-   METHOD rotate3
    METHOD rotate
    METHOD row
-   METHOD scale1
-   METHOD scale2
-   METHOD scale3
-   METHOD scale4
    METHOD scale
    METHOD setColumn
    METHOD setRow
    METHOD setToIdentity
-   METHOD toTransform1
-   METHOD toTransform2
    METHOD toTransform
-   METHOD translate1
-   METHOD translate2
-   METHOD translate3
    METHOD translate
    METHOD transposed
 
@@ -93,20 +72,23 @@ $destructor
 #include <QMatrix>
 #include <QTransform>
 
-/*
-QMatrix4x4 ()
-*/
+$prototype=QMatrix4x4 ()
 $constructor=|new1|
 
-/*
-QMatrix4x4 ( qreal m11, qreal m12, qreal m13, qreal m14, qreal m21, qreal m22, qreal m23, qreal m24, qreal m31, qreal m32, qreal m33, qreal m34, qreal m41, qreal m42, qreal m43, qreal m44 )
-*/
+$prototype=QMatrix4x4 ( const qreal * values )
+%% TODO: implementar ?
+
+$prototype=QMatrix4x4 ( qreal m11, qreal m12, qreal m13, qreal m14, qreal m21, qreal m22, qreal m23, qreal m24, qreal m31, qreal m32, qreal m33, qreal m34, qreal m41, qreal m42, qreal m43, qreal m44 )
 $constructor=|new3|qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal
 
-/*
-QMatrix4x4 ( const QTransform & transform )
-*/
+$prototype=QMatrix4x4 ( const QGenericMatrix<N, M, qreal> & matrix )
+%% TODO: implementar ?
+
+$prototype=QMatrix4x4 ( const QTransform & transform )
 $constructor=|new5|const QTransform &
+
+$prototype=QMatrix4x4 ( const QMatrix & matrix )
+%% TODO: implementar ?
 
 //[1]QMatrix4x4 ()
 //[2]QMatrix4x4 ( const qreal * values )
@@ -143,65 +125,41 @@ HB_FUNC_STATIC( QMATRIX4X4_NEW )
 
 $deleteMethod
 
-/*
-QVector4D column ( int index ) const
-*/
+$prototype=QVector4D column ( int index ) const
 $method=|QVector4D|column|int
 
-/*
-qreal determinant () const
-*/
+$prototype=qreal determinant () const
 $method=|qreal|determinant|
 
-/*
-void fill ( qreal value )
-*/
+$prototype=void fill ( qreal value )
 $method=|void|fill|qreal
 
-/*
-void flipCoordinates ()
-*/
+$prototype=void flipCoordinates ()
 $method=|void|flipCoordinates|
 
-/*
-void frustum ( qreal left, qreal right, qreal bottom, qreal top, qreal nearPlane, qreal farPlane )
-*/
+$prototype=void frustum ( qreal left, qreal right, qreal bottom, qreal top, qreal nearPlane, qreal farPlane )
 $method=|void|frustum|qreal,qreal,qreal,qreal,qreal,qreal
 
-/*
-QMatrix4x4 inverted ( bool * invertible = 0 ) const
-*/
+$prototype=QMatrix4x4 inverted ( bool * invertible = 0 ) const
 $method=|QMatrix4x4|inverted|bool *=0
 
-/*
-bool isIdentity () const
-*/
+$prototype=bool isIdentity () const
 $method=|bool|isIdentity|
 
-/*
-void lookAt ( const QVector3D & eye, const QVector3D & center, const QVector3D & up )
-*/
+$prototype=void lookAt ( const QVector3D & eye, const QVector3D & center, const QVector3D & up )
 $method=|void|lookAt|const QVector3D &,const QVector3D &,const QVector3D &
 
-/*
-QPoint map ( const QPoint & point ) const
-*/
-$method=|QPoint|map,map1|const QPoint &
+$prototype=QPoint map ( const QPoint & point ) const
+$internalMethod=|QPoint|map,map1|const QPoint &
 
-/*
-QPointF map ( const QPointF & point ) const
-*/
-$method=|QPointF|map,map2|const QPointF &
+$prototype=QPointF map ( const QPointF & point ) const
+$internalMethod=|QPointF|map,map2|const QPointF &
 
-/*
-QVector3D map ( const QVector3D & point ) const
-*/
-$method=|QVector3D|map,map3|const QVector3D &
+$prototype=QVector3D map ( const QVector3D & point ) const
+$internalMethod=|QVector3D|map,map3|const QVector3D &
 
-/*
-QVector4D map ( const QVector4D & point ) const
-*/
-$method=|QVector4D|map,map4|const QVector4D &
+$prototype=QVector4D map ( const QVector4D & point ) const
+$internalMethod=|QVector4D|map,map4|const QVector4D &
 
 //[1]QPoint map ( const QPoint & point ) const
 //[2]QPointF map ( const QPointF & point ) const
@@ -212,19 +170,19 @@ HB_FUNC_STATIC( QMATRIX4X4_MAP )
 {
   if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QMATRIX4X4_MAP1 );
+    QMatrix4X4_map1();
   }
   else if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    HB_FUNC_EXEC( QMATRIX4X4_MAP2 );
+    QMatrix4X4_map2();
   }
   else if( ISNUMPAR(1) && ISQVECTOR3D(1) )
   {
-    HB_FUNC_EXEC( QMATRIX4X4_MAP3 );
+    QMatrix4X4_map3();
   }
   else if( ISNUMPAR(1) && ISQVECTOR4D(1) )
   {
-    HB_FUNC_EXEC( QMATRIX4X4_MAP4 );
+    QMatrix4X4_map4();
   }
   else
   {
@@ -232,15 +190,11 @@ HB_FUNC_STATIC( QMATRIX4X4_MAP )
   }
 }
 
-/*
-QRect mapRect ( const QRect & rect ) const
-*/
-$method=|QRect|mapRect,mapRect1|const QRect &
+$prototype=QRect mapRect ( const QRect & rect ) const
+$internalMethod=|QRect|mapRect,mapRect1|const QRect &
 
-/*
-QRectF mapRect ( const QRectF & rect ) const
-*/
-$method=|QRectF|mapRect,mapRect2|const QRectF &
+$prototype=QRectF mapRect ( const QRectF & rect ) const
+$internalMethod=|QRectF|mapRect,mapRect2|const QRectF &
 
 //[1]QRect mapRect ( const QRect & rect ) const
 //[2]QRectF mapRect ( const QRectF & rect ) const
@@ -249,11 +203,11 @@ HB_FUNC_STATIC( QMATRIX4X4_MAPRECT )
 {
   if( ISNUMPAR(1) && ISQRECT(1) )
   {
-    HB_FUNC_EXEC( QMATRIX4X4_MAPRECT1 );
+    QMatrix4X4_mapRect1();
   }
   else if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    HB_FUNC_EXEC( QMATRIX4X4_MAPRECT2 );
+    QMatrix4X4_mapRect2();
   }
   else
   {
@@ -261,35 +215,23 @@ HB_FUNC_STATIC( QMATRIX4X4_MAPRECT )
   }
 }
 
-/*
-QVector3D mapVector ( const QVector3D & vector ) const
-*/
+$prototype=QVector3D mapVector ( const QVector3D & vector ) const
 $method=|QVector3D|mapVector|const QVector3D &
 
-/*
-QMatrix3x3 normalMatrix () const
-*/
+$prototype=QMatrix3x3 normalMatrix () const
 $method=|QMatrix3x3|normalMatrix|
 
-/*
-void optimize ()
-*/
+$prototype=void optimize ()
 $method=|void|optimize|
 
-/*
-void ortho ( qreal left, qreal right, qreal bottom, qreal top, qreal nearPlane, qreal farPlane )
-*/
-$method=|void|ortho,ortho1|qreal,qreal,qreal,qreal,qreal,qreal
+$prototype=void ortho ( qreal left, qreal right, qreal bottom, qreal top, qreal nearPlane, qreal farPlane )
+$internalMethod=|void|ortho,ortho1|qreal,qreal,qreal,qreal,qreal,qreal
 
-/*
-void ortho ( const QRect & rect )
-*/
-$method=|void|ortho,ortho2|const QRect &
+$prototype=void ortho ( const QRect & rect )
+$internalMethod=|void|ortho,ortho2|const QRect &
 
-/*
-void ortho ( const QRectF & rect )
-*/
-$method=|void|ortho,ortho3|const QRectF &
+$prototype=void ortho ( const QRectF & rect )
+$internalMethod=|void|ortho,ortho3|const QRectF &
 
 //[1]void ortho ( qreal left, qreal right, qreal bottom, qreal top, qreal nearPlane, qreal farPlane )
 //[2]void ortho ( const QRect & rect )
@@ -299,15 +241,15 @@ HB_FUNC_STATIC( QMATRIX4X4_ORTHO )
 {
   if( ISNUMPAR(6) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) )
   {
-    HB_FUNC_EXEC( QMATRIX4X4_ORTHO1 );
+    QMatrix4X4_ortho1();
   }
   else if( ISNUMPAR(1) && ISQRECT(1) )
   {
-    HB_FUNC_EXEC( QMATRIX4X4_ORTHO2 );
+    QMatrix4X4_ortho2();
   }
   else if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    HB_FUNC_EXEC( QMATRIX4X4_ORTHO3 );
+    QMatrix4X4_ortho3();
   }
   else
   {
@@ -315,25 +257,17 @@ HB_FUNC_STATIC( QMATRIX4X4_ORTHO )
   }
 }
 
-/*
-void perspective ( qreal angle, qreal aspect, qreal nearPlane, qreal farPlane )
-*/
+$prototype=void perspective ( qreal angle, qreal aspect, qreal nearPlane, qreal farPlane )
 $method=|void|perspective|qreal,qreal,qreal,qreal
 
-/*
-void rotate ( qreal angle, const QVector3D & vector )
-*/
-$method=|void|rotate,rotate1|qreal,const QVector3D &
+$prototype=void rotate ( qreal angle, const QVector3D & vector )
+$internalMethod=|void|rotate,rotate1|qreal,const QVector3D &
 
-/*
-void rotate ( const QQuaternion & quaternion )
-*/
-$method=|void|rotate,rotate2|const QQuaternion &
+$prototype=void rotate ( const QQuaternion & quaternion )
+$internalMethod=|void|rotate,rotate2|const QQuaternion &
 
-/*
-void rotate ( qreal angle, qreal x, qreal y, qreal z = 0.0f )
-*/
-$method=|void|rotate,rotate3|qreal,qreal,qreal,qreal=0.0f
+$prototype=void rotate ( qreal angle, qreal x, qreal y, qreal z = 0.0f )
+$internalMethod=|void|rotate,rotate3|qreal,qreal,qreal,qreal=0.0f
 
 //[1]void rotate ( qreal angle, const QVector3D & vector )
 //[2]void rotate ( const QQuaternion & quaternion )
@@ -343,15 +277,15 @@ HB_FUNC_STATIC( QMATRIX4X4_ROTATE )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISQVECTOR3D(2) )
   {
-    HB_FUNC_EXEC( QMATRIX4X4_ROTATE1 );
+    QMatrix4X4_rotate1();
   }
   else if( ISNUMPAR(1) && ISQQUATERNION(1) )
   {
-    HB_FUNC_EXEC( QMATRIX4X4_ROTATE2 );
+    QMatrix4X4_rotate2();
   }
   else if( ISBETWEEN(3,4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && (ISNUM(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QMATRIX4X4_ROTATE3 );
+    QMatrix4X4_rotate3();
   }
   else
   {
@@ -359,30 +293,20 @@ HB_FUNC_STATIC( QMATRIX4X4_ROTATE )
   }
 }
 
-/*
-QVector4D row ( int index ) const
-*/
+$prototype=QVector4D row ( int index ) const
 $method=|QVector4D|row|int
 
-/*
-void scale ( const QVector3D & vector )
-*/
-$method=|void|scale,scale1|const QVector3D &
+$prototype=void scale ( const QVector3D & vector )
+$internalMethod=|void|scale,scale1|const QVector3D &
 
-/*
-void scale ( qreal x, qreal y )
-*/
-$method=|void|scale,scale2|qreal,qreal
+$prototype=void scale ( qreal x, qreal y )
+$internalMethod=|void|scale,scale2|qreal,qreal
 
-/*
-void scale ( qreal x, qreal y, qreal z )
-*/
-$method=|void|scale,scale3|qreal,qreal,qreal
+$prototype=void scale ( qreal x, qreal y, qreal z )
+$internalMethod=|void|scale,scale3|qreal,qreal,qreal
 
-/*
-void scale ( qreal factor )
-*/
-$method=|void|scale,scale4|qreal
+$prototype=void scale ( qreal factor )
+$internalMethod=|void|scale,scale4|qreal
 
 //[1]void scale ( const QVector3D & vector )
 //[2]void scale ( qreal x, qreal y )
@@ -393,19 +317,19 @@ HB_FUNC_STATIC( QMATRIX4X4_SCALE )
 {
   if( ISNUMPAR(1) && ISQVECTOR3D(1) )
   {
-    HB_FUNC_EXEC( QMATRIX4X4_SCALE1 );
+    QMatrix4X4_scale1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QMATRIX4X4_SCALE2 );
+    QMatrix4X4_scale2();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QMATRIX4X4_SCALE3 );
+    QMatrix4X4_scale3();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QMATRIX4X4_SCALE4 );
+    QMatrix4X4_scale4();
   }
   else
   {
@@ -413,30 +337,20 @@ HB_FUNC_STATIC( QMATRIX4X4_SCALE )
   }
 }
 
-/*
-void setColumn ( int index, const QVector4D & value )
-*/
+$prototype=void setColumn ( int index, const QVector4D & value )
 $method=|void|setColumn|int,const QVector4D &
 
-/*
-void setRow ( int index, const QVector4D & value )
-*/
+$prototype=void setRow ( int index, const QVector4D & value )
 $method=|void|setRow|int,const QVector4D &
 
-/*
-void setToIdentity ()
-*/
+$prototype=void setToIdentity ()
 $method=|void|setToIdentity|
 
-/*
-QTransform toTransform () const
-*/
-$method=|QTransform|toTransform,toTransform1|
+$prototype=QTransform toTransform () const
+$internalMethod=|QTransform|toTransform,toTransform1|
 
-/*
-QTransform toTransform ( qreal distanceToPlane ) const
-*/
-$method=|QTransform|toTransform,toTransform2|qreal
+$prototype=QTransform toTransform ( qreal distanceToPlane ) const
+$internalMethod=|QTransform|toTransform,toTransform2|qreal
 
 //[1]QTransform toTransform () const
 //[2]QTransform toTransform ( qreal distanceToPlane ) const
@@ -445,11 +359,11 @@ HB_FUNC_STATIC( QMATRIX4X4_TOTRANSFORM )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QMATRIX4X4_TOTRANSFORM1 );
+    QMatrix4X4_toTransform1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QMATRIX4X4_TOTRANSFORM2 );
+    QMatrix4X4_toTransform2();
   }
   else
   {
@@ -457,20 +371,14 @@ HB_FUNC_STATIC( QMATRIX4X4_TOTRANSFORM )
   }
 }
 
-/*
-void translate ( const QVector3D & vector )
-*/
-$method=|void|translate,translate1|const QVector3D &
+$prototype=void translate ( const QVector3D & vector )
+$internalMethod=|void|translate,translate1|const QVector3D &
 
-/*
-void translate ( qreal x, qreal y )
-*/
-$method=|void|translate,translate2|qreal,qreal
+$prototype=void translate ( qreal x, qreal y )
+$internalMethod=|void|translate,translate2|qreal,qreal
 
-/*
-void translate ( qreal x, qreal y, qreal z )
-*/
-$method=|void|translate,translate3|qreal,qreal,qreal
+$prototype=void translate ( qreal x, qreal y, qreal z )
+$internalMmethod=|void|translate,translate3|qreal,qreal,qreal
 
 //[1]void translate ( const QVector3D & vector )
 //[2]void translate ( qreal x, qreal y )
@@ -480,15 +388,15 @@ HB_FUNC_STATIC( QMATRIX4X4_TRANSLATE )
 {
   if( ISNUMPAR(1) && ISQVECTOR3D(1) )
   {
-    HB_FUNC_EXEC( QMATRIX4X4_TRANSLATE1 );
+    QMatrix4X4_translate1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QMATRIX4X4_TRANSLATE2 );
+    QMatrix4X4_translate2();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QMATRIX4X4_TRANSLATE3 );
+    QMatrix4X4_translate3();
   }
   else
   {
@@ -496,9 +404,7 @@ HB_FUNC_STATIC( QMATRIX4X4_TRANSLATE )
   }
 }
 
-/*
-QMatrix4x4 transposed () const
-*/
+$prototype=QMatrix4x4 transposed () const
 $method=|QMatrix4x4|transposed|
 
 $extraMethods

@@ -35,9 +35,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QKeyEvent ( Type type, int key, Qt::KeyboardModifiers modifiers, const QString & text = QString(), bool autorep = false, ushort count = 1 )
-*/
+$prototype=QKeyEvent ( Type type, int key, Qt::KeyboardModifiers modifiers, const QString & text = QString(), bool autorep = false, ushort count = 1 )
 HB_FUNC_STATIC( QKEYEVENT_NEW )
 {
   int par3 = hb_parni(3);
@@ -47,54 +45,34 @@ HB_FUNC_STATIC( QKEYEVENT_NEW )
 
 $deleteMethod
 
-/*
-int count () const
-*/
+$prototype=int count () const
 $method=|int|count|
 
-/*
-bool isAutoRepeat () const
-*/
+$prototype=bool isAutoRepeat () const
 $method=|bool|isAutoRepeat|
 
-/*
-int key () const
-*/
+$prototype=int key () const
 $method=|int|key|
 
-/*
-bool matches ( QKeySequence::StandardKey key ) const
-*/
+$prototype=bool matches ( QKeySequence::StandardKey key ) const
 $method=|bool|matches|QKeySequence::StandardKey
 
-/*
-Qt::KeyboardModifiers modifiers () const
-*/
+$prototype=Qt::KeyboardModifiers modifiers () const
 $method=|Qt::KeyboardModifiers|modifiers|
 
-/*
-quint32 nativeModifiers () const
-*/
+$prototype=quint32 nativeModifiers () const
 $method=|quint32|nativeModifiers|
 
-/*
-quint32 nativeScanCode () const
-*/
+$prototype=quint32 nativeScanCode () const
 $method=|quint32|nativeScanCode|
 
-/*
-quint32 nativeVirtualKey () const
-*/
+$prototype=quint32 nativeVirtualKey () const
 $method=|quint32|nativeVirtualKey|
 
-/*
-QString text () const
-*/
+$prototype=QString text () const
 $method=|QString|text|
 
-/*
-static QKeyEvent *createExtendedKeyEvent(Type type, int key, Qt::KeyboardModifiers modifiers, quint32 nativeScanCode, quint32 nativeVirtualKey,quint32 nativeModifiers,const QString& text = QString(), bool autorep = false,ushort count = 1)
-*/
+$prototype=static QKeyEvent *createExtendedKeyEvent(Type type, int key, Qt::KeyboardModifiers modifiers, quint32 nativeScanCode, quint32 nativeVirtualKey,quint32 nativeModifiers,const QString& text = QString(), bool autorep = false,ushort count = 1)
 $staticMethod=|QKeyEvent *|createExtendedKeyEvent|QEvent::Type,int,Qt::KeyboardModifiers,quint32,quint32,quint32,const QString &=QString(),bool=false,ushort=1
 
 #pragma ENDDUMP

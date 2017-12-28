@@ -37,9 +37,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QScrollArea ( QWidget * parent = 0 )
-*/
+$prototype=QScrollArea ( QWidget * parent = 0 )
 HB_FUNC_STATIC( QSCROLLAREA_NEW )
 {
   QScrollArea * o = new QScrollArea ( OPQWIDGET(1,0) );
@@ -48,59 +46,37 @@ HB_FUNC_STATIC( QSCROLLAREA_NEW )
 
 $deleteMethod
 
-/*
-Qt::Alignment alignment () const
-*/
+$prototype=Qt::Alignment alignment () const
 $method=|Qt::Alignment|alignment|
 
-/*
-void ensureVisible ( int x, int y, int xmargin = 50, int ymargin = 50 )
-*/
+$prototype=void ensureVisible ( int x, int y, int xmargin = 50, int ymargin = 50 )
 $method=|void|ensureVisible|int,int,int=50,int=50
 
-/*
-void ensureWidgetVisible ( QWidget * childWidget, int xmargin = 50, int ymargin = 50 )
-*/
+$prototype=void ensureWidgetVisible ( QWidget * childWidget, int xmargin = 50, int ymargin = 50 )
 $method=|void|ensureWidgetVisible|QWidget *,int=50,int=50
 
-/*
-void setAlignment ( Qt::Alignment )
-*/
+$prototype=void setAlignment ( Qt::Alignment )
 $method=|void|setAlignment|Qt::Alignment
 
-/*
-void setWidget ( QWidget * widget )
-*/
+$prototype=void setWidget ( QWidget * widget )
 $method=|void|setWidget|QWidget *
 
-/*
-void setWidgetResizable ( bool resizable )
-*/
+$prototype=void setWidgetResizable ( bool resizable )
 $method=|void|setWidgetResizable|bool
 
-/*
-QWidget * takeWidget ()
-*/
+$prototype=QWidget * takeWidget ()
 $method=|QWidget *|takeWidget|
 
-/*
-QWidget * widget () const
-*/
+$prototype=QWidget * widget () const
 $method=|QWidget *|widget|
 
-/*
-bool widgetResizable () const
-*/
+$prototype=bool widgetResizable () const
 $method=|bool|widgetResizable|
 
-/*
-virtual bool focusNextPrevChild ( bool next )
-*/
+$prototype=virtual bool focusNextPrevChild ( bool next )
 $virtualMethod=|bool|focusNextPrevChild|bool
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $virtualMethod=|QSize|sizeHint|
 
 #pragma ENDDUMP

@@ -21,9 +21,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QCloseEvent ()
-*/
+$prototype=QCloseEvent ()
 $constructor=|new|
 
 $deleteMethod

@@ -78,9 +78,7 @@ $destructor
 
 #include <QVariant>
 
-/*
-QWizard ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
-*/
+$prototype=QWizard ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 HB_FUNC_STATIC( QWIZARD_NEW )
 {
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
@@ -90,59 +88,37 @@ HB_FUNC_STATIC( QWIZARD_NEW )
 
 $deleteMethod
 
-/*
-int addPage ( QWizardPage * page )
-*/
+$prototype=int addPage ( QWizardPage * page )
 $method=|int|addPage|QWizardPage *
 
-/*
-QAbstractButton * button ( WizardButton which ) const
-*/
+$prototype=QAbstractButton * button ( WizardButton which ) const
 $method=|QAbstractButton *|button|QWizard::WizardButton
 
-/*
-QString buttonText ( WizardButton which ) const
-*/
+$prototype=QString buttonText ( WizardButton which ) const
 $method=|QString|buttonText|QWizard::WizardButton
 
-/*
-int currentId () const
-*/
+$prototype=int currentId () const
 $method=|int|currentId|
 
-/*
-QWizardPage * currentPage () const
-*/
+$prototype=QWizardPage * currentPage () const
 $method=|QWizardPage *|currentPage|
 
-/*
-QVariant field ( const QString & name ) const
-*/
+$prototype=QVariant field ( const QString & name ) const
 $method=|QVariant|field|const QString &
 
-/*
-bool hasVisitedPage ( int id ) const
-*/
+$prototype=bool hasVisitedPage ( int id ) const
 $method=|bool|hasVisitedPage|int
 
-/*
-virtual int nextId () const
-*/
+$prototype=virtual int nextId () const
 $virtualMethod=|int|nextId|
 
-/*
-WizardOptions options () const
-*/
+$prototype=WizardOptions options () const
 $method=|QWizard::WizardOptions|options|
 
-/*
-QWizardPage * page ( int id ) const
-*/
+$prototype=QWizardPage * page ( int id ) const
 $method=|QWizardPage *|page|int
 
-/*
-QList<int> pageIds () const
-*/
+$prototype=QList<int> pageIds () const
 HB_FUNC_STATIC( QWIZARD_PAGEIDS )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -162,24 +138,16 @@ HB_FUNC_STATIC( QWIZARD_PAGEIDS )
   }
 }
 
-/*
-QPixmap pixmap ( WizardPixmap which ) const
-*/
+$prototype=QPixmap pixmap ( WizardPixmap which ) const
 $method=|QPixmap|pixmap|QWizard::WizardPixmap
 
-/*
-void removePage ( int id )
-*/
+$prototype=void removePage ( int id )
 $method=|void|removePage|int
 
-/*
-void setButton ( WizardButton which, QAbstractButton * button )
-*/
+$prototype=void setButton ( WizardButton which, QAbstractButton * button )
 $method=|void|setButton|QWizard::WizardButton,QAbstractButton *
 
-/*
-void setButtonLayout ( const QList<WizardButton> & layout )
-*/
+$prototype=void setButtonLayout ( const QList<WizardButton> & layout )
 HB_FUNC_STATIC( QWIZARD_SETBUTTONLAYOUT )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -202,99 +170,61 @@ HB_FUNC_STATIC( QWIZARD_SETBUTTONLAYOUT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setButtonText ( WizardButton which, const QString & text )
-*/
+$prototype=void setButtonText ( WizardButton which, const QString & text )
 $method=|void|setButtonText|QWizard::WizardButton,const QString &
 
-/*
-void setDefaultProperty ( const char * className, const char * property, const char * changedSignal )
-*/
+$prototype=void setDefaultProperty ( const char * className, const char * property, const char * changedSignal )
 $method=|void|setDefaultProperty|const char *,const char *,const char *
 
-/*
-void setField ( const QString & name, const QVariant & value )
-*/
+$prototype=void setField ( const QString & name, const QVariant & value )
 $method=|void|setField|const QString &,const QVariant &
 
-/*
-void setOption ( WizardOption option, bool on = true )
-*/
+$prototype=void setOption ( WizardOption option, bool on = true )
 $method=|void|setOption|QWizard::WizardOption,bool=true
 
-/*
-void setOptions ( WizardOptions options )
-*/
+$prototype=void setOptions ( WizardOptions options )
 $method=|void|setOptions|QWizard::WizardOptions
 
-/*
-void setPage ( int id, QWizardPage * page )
-*/
+$prototype=void setPage ( int id, QWizardPage * page )
 $method=|void|setPage|int,QWizardPage *
 
-/*
-void setPixmap ( WizardPixmap which, const QPixmap & pixmap )
-*/
+$prototype=void setPixmap ( WizardPixmap which, const QPixmap & pixmap )
 $method=|void|setPixmap|QWizard::WizardPixmap,const QPixmap &
 
-/*
-void setSideWidget ( QWidget * widget )
-*/
+$prototype=void setSideWidget ( QWidget * widget )
 $method=|void|setSideWidget|QWidget *
 
-/*
-void setStartId ( int id )
-*/
+$prototype=void setStartId ( int id )
 $method=|void|setStartId|int
 
-/*
-void setSubTitleFormat ( Qt::TextFormat format )
-*/
+$prototype=void setSubTitleFormat ( Qt::TextFormat format )
 $method=|void|setSubTitleFormat|Qt::TextFormat
 
-/*
-void setTitleFormat ( Qt::TextFormat format )
-*/
+$prototype=void setTitleFormat ( Qt::TextFormat format )
 $method=|void|setTitleFormat|Qt::TextFormat
 
-/*
-void setWizardStyle ( WizardStyle style )
-*/
+$prototype=void setWizardStyle ( WizardStyle style )
 $method=|void|setWizardStyle|QWizard::WizardStyle
 
-/*
-QWidget * sideWidget () const
-*/
+$prototype=QWidget * sideWidget () const
 $method=|QWidget *|sideWidget|
 
-/*
-int startId () const
-*/
+$prototype=int startId () const
 $method=|int|startId|
 
-/*
-Qt::TextFormat subTitleFormat () const
-*/
+$prototype=Qt::TextFormat subTitleFormat () const
 $method=|Qt::TextFormat|subTitleFormat|
 
-/*
-bool testOption ( WizardOption option ) const
-*/
+$prototype=bool testOption ( WizardOption option ) const
 $method=|bool|testOption|QWizard::WizardOption
 
-/*
-Qt::TextFormat titleFormat () const
-*/
+$prototype=Qt::TextFormat titleFormat () const
 $method=|Qt::TextFormat|titleFormat|
 
-/*
-virtual bool validateCurrentPage ()
-*/
+$prototype=virtual bool validateCurrentPage ()
 $virtualMethod=|bool|validateCurrentPage|
 
-/*
-QList<int> visitedPages () const
-*/
+$prototype=QList<int> visitedPages () const
 HB_FUNC_STATIC( QWIZARD_VISITEDPAGES )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -314,34 +244,22 @@ HB_FUNC_STATIC( QWIZARD_VISITEDPAGES )
   }
 }
 
-/*
-WizardStyle wizardStyle () const
-*/
+$prototype=WizardStyle wizardStyle () const
 $method=|QWizard::WizardStyle|wizardStyle|
 
-/*
-virtual void setVisible ( bool visible )
-*/
+$prototype=virtual void setVisible ( bool visible )
 $virtualMethod=|void|setVisible|bool
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $virtualMethod=|QSize|sizeHint|
 
-/*
-void back ()
-*/
+$prototype=void back ()
 $method=|void|back|
 
-/*
-void next ()
-*/
+$prototype=void next ()
 $method=|void|next|
 
-/*
-void restart ()
-*/
+$prototype=void restart ()
 $method=|void|restart|
 
 #pragma ENDDUMP

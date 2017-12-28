@@ -120,19 +120,13 @@ $destructor
 #include <QVariant>
 #include <QPalette>
 
-/*
-QGraphicsScene ( QObject * parent = 0 )
-*/
+$prototype=QGraphicsScene ( QObject * parent = 0 )
 $internalConstructor=|new1|QObject *=0
 
-/*
-QGraphicsScene ( const QRectF & sceneRect, QObject * parent = 0 )
-*/
+$prototype=QGraphicsScene ( const QRectF & sceneRect, QObject * parent = 0 )
 $internalConstructor=|new2|const QRectF &,QObject *=0
 
-/*
-QGraphicsScene ( qreal x, qreal y, qreal width, qreal height, QObject * parent = 0 )
-*/
+$prototype=QGraphicsScene ( qreal x, qreal y, qreal width, qreal height, QObject * parent = 0 )
 $internalConstructor=|new3|qreal,qreal,qreal,qreal,QObject *=0
 
 //[1]QGraphicsScene ( QObject * parent = 0 )
@@ -161,24 +155,16 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_NEW )
 
 $deleteMethod
 
-/*
-QGraphicsItem * activePanel () const
-*/
+$prototype=QGraphicsItem * activePanel () const
 $method=|QGraphicsItem *|activePanel|
 
-/*
-QGraphicsWidget * activeWindow () const
-*/
+$prototype=QGraphicsWidget * activeWindow () const
 $method=|QGraphicsWidget *|activeWindow|
 
-/*
-QGraphicsEllipseItem * addEllipse ( const QRectF & rect, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
-*/
+$prototype=QGraphicsEllipseItem * addEllipse ( const QRectF & rect, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
 $internalMethod=|QGraphicsEllipseItem *|addEllipse,addEllipse1|const QRectF &,const QPen &=QPen(),const QBrush &=QBrush()
 
-/*
-QGraphicsEllipseItem * addEllipse ( qreal x, qreal y, qreal w, qreal h, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
-*/
+$prototype=QGraphicsEllipseItem * addEllipse ( qreal x, qreal y, qreal w, qreal h, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
 $internalMethod=|QGraphicsEllipseItem *|addEllipse,addEllipse2|qreal,qreal,qreal,qreal,const QPen &=QPen(),const QBrush &=QBrush()
 
 //[1]QGraphicsEllipseItem * addEllipse ( const QRectF & rect, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
@@ -200,19 +186,13 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDELLIPSE )
   }
 }
 
-/*
-void addItem ( QGraphicsItem * item )
-*/
+$prototype=void addItem ( QGraphicsItem * item )
 $method=|void|addItem|QGraphicsItem *
 
-/*
-QGraphicsLineItem * addLine ( const QLineF & line, const QPen & pen = QPen() )
-*/
+$prototype=QGraphicsLineItem * addLine ( const QLineF & line, const QPen & pen = QPen() )
 $internalMethod=|QGraphicsLineItem *|addLine,addLine1|const QLineF &,const QPen &=QPen()
 
-/*
-QGraphicsLineItem * addLine ( qreal x1, qreal y1, qreal x2, qreal y2, const QPen & pen = QPen() )
-*/
+$prototype=QGraphicsLineItem * addLine ( qreal x1, qreal y1, qreal x2, qreal y2, const QPen & pen = QPen() )
 $internalMethod=|QGraphicsLineItem *|addLine,addLine2|qreal,qreal,qreal,qreal,const QPen &=QPen()
 
 //[1]QGraphicsLineItem * addLine ( const QLineF & line, const QPen & pen = QPen() )
@@ -234,29 +214,19 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDLINE )
   }
 }
 
-/*
-QGraphicsPathItem * addPath ( const QPainterPath & path, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
-*/
+$prototype=QGraphicsPathItem * addPath ( const QPainterPath & path, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
 $method=|QGraphicsPathItem *|addPath|const QPainterPath &,const QPen &=QPen(),const QBrush &=QBrush()
 
-/*
-QGraphicsPixmapItem * addPixmap ( const QPixmap & pixmap )
-*/
+$prototype=QGraphicsPixmapItem * addPixmap ( const QPixmap & pixmap )
 $method=|QGraphicsPixmapItem *|addPixmap|const QPixmap &
 
-/*
-QGraphicsPolygonItem * addPolygon ( const QPolygonF & polygon, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
-*/
+$prototype=QGraphicsPolygonItem * addPolygon ( const QPolygonF & polygon, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
 $method=|QGraphicsPolygonItem *|addPolygon|const QPolygonF &,const QPen &=QPen(),const QBrush &=QBrush()
 
-/*
-QGraphicsRectItem * addRect ( const QRectF & rect, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
-*/
+$prototype=QGraphicsRectItem * addRect ( const QRectF & rect, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
 $internalMethod=|QGraphicsRectItem *|addRect,addRect1|const QRectF &,const QPen &=QPen(),const QBrush &=QBrush()
 
-/*
-QGraphicsRectItem * addRect ( qreal x, qreal y, qreal w, qreal h, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
-*/
+$prototype=QGraphicsRectItem * addRect ( qreal x, qreal y, qreal w, qreal h, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
 $internalMethod=|QGraphicsRectItem *|addRect,addRect2|qreal,qreal,qreal,qreal,const QPen &=QPen(),const QBrush &=QBrush()
 
 //[1]QGraphicsRectItem * addRect ( const QRectF & rect, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
@@ -278,39 +248,25 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDRECT )
   }
 }
 
-/*
-QGraphicsSimpleTextItem * addSimpleText ( const QString & text, const QFont & font = QFont() )
-*/
+$prototype=QGraphicsSimpleTextItem * addSimpleText ( const QString & text, const QFont & font = QFont() )
 $method=|QGraphicsSimpleTextItem *|addSimpleText|const QString &,const QFont &=QFont()
 
-/*
-QGraphicsTextItem * addText ( const QString & text, const QFont & font = QFont() )
-*/
+$prototype=QGraphicsTextItem * addText ( const QString & text, const QFont & font = QFont() )
 $method=|QGraphicsTextItem *|addText|const QString &,const QFont &=QFont()
 
-/*
-QGraphicsProxyWidget * addWidget ( QWidget * widget, Qt::WindowFlags wFlags = 0 )
-*/
+$prototype=QGraphicsProxyWidget * addWidget ( QWidget * widget, Qt::WindowFlags wFlags = 0 )
 $method=|QGraphicsProxyWidget *|addWidget|QWidget *,Qt::WindowFlags=0
 
-/*
-QBrush backgroundBrush () const
-*/
+$prototype=QBrush backgroundBrush () const
 $method=|QBrush|backgroundBrush|
 
-/*
-int bspTreeDepth () const
-*/
+$prototype=int bspTreeDepth () const
 $method=|int|bspTreeDepth|
 
-/*
-void clearFocus ()
-*/
+$prototype=void clearFocus ()
 $method=|void|clearFocus|
 
-/*
-QList<QGraphicsItem *> collidingItems ( const QGraphicsItem * item, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
-*/
+$prototype=QList<QGraphicsItem *> collidingItems ( const QGraphicsItem * item, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
 HB_FUNC_STATIC( QGRAPHICSSCENE_COLLIDINGITEMS )
 {
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -348,9 +304,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_COLLIDINGITEMS )
   }
 }
 
-/*
-QGraphicsItemGroup * createItemGroup ( const QList<QGraphicsItem *> & items )
-*/
+$prototype=QGraphicsItemGroup * createItemGroup ( const QList<QGraphicsItem *> & items )
 HB_FUNC_STATIC( QGRAPHICSSCENE_CREATEITEMGROUP )
 {
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -370,49 +324,31 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_CREATEITEMGROUP )
   }
 }
 
-/*
-void destroyItemGroup ( QGraphicsItemGroup * group )
-*/
+$prototype=void destroyItemGroup ( QGraphicsItemGroup * group )
 $method=|void|destroyItemGroup|QGraphicsItemGroup *
 
-/*
-QGraphicsItem * focusItem () const
-*/
+$prototype=QGraphicsItem * focusItem () const
 $method=|QGraphicsItem *|focusItem|
 
-/*
-QFont font () const
-*/
+$prototype=QFont font () const
 $method=|QFont|font|
 
-/*
-QBrush foregroundBrush () const
-*/
+$prototype=QBrush foregroundBrush () const
 $method=|QBrush|foregroundBrush|
 
-/*
-bool hasFocus () const
-*/
+$prototype=bool hasFocus () const
 $method=|bool|hasFocus|
 
-/*
-qreal height () const
-*/
+$prototype=qreal height () const
 $method=|qreal|height|
 
-/*
-virtual QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
-*/
+$prototype=virtual QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
 $virtualMethod=|QVariant|inputMethodQuery|Qt::InputMethodQuery
 
-/*
-void invalidate ( qreal x, qreal y, qreal w, qreal h, SceneLayers layers = AllLayers )
-*/
+$prototype=void invalidate ( qreal x, qreal y, qreal w, qreal h, SceneLayers layers = AllLayers )
 $internalMethod=|void|invalidate,invalidate1|qreal,qreal,qreal,qreal,QGraphicsScene::SceneLayers=QGraphicsScene::AllLayers
 
-/*
-void invalidate ( const QRectF & rect = QRectF(), SceneLayers layers = AllLayers )
-*/
+$prototype=void invalidate ( const QRectF & rect = QRectF(), SceneLayers layers = AllLayers )
 $internalMethod=|void|invalidate,invalidate2|const QRectF &=QRectF(),QGraphicsScene::SceneLayers=QGraphicsScene::AllLayers
 
 //[1]void invalidate ( qreal x, qreal y, qreal w, qreal h, SceneLayers layers = AllLayers )
@@ -434,24 +370,16 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_INVALIDATE )
   }
 }
 
-/*
-bool isActive () const
-*/
+$prototype=bool isActive () const
 $method=|bool|isActive|
 
-/*
-bool isSortCacheEnabled () const
-*/
+$prototype=bool isSortCacheEnabled () const
 $method=|bool|isSortCacheEnabled|
 
-/*
-QGraphicsItem * itemAt ( const QPointF & position, const QTransform & deviceTransform ) const
-*/
+$prototype=QGraphicsItem * itemAt ( const QPointF & position, const QTransform & deviceTransform ) const
 $internalMethod=|QGraphicsItem *|itemAt,itemAt1|const QPointF &,const QTransform &
 
-/*
-QGraphicsItem * itemAt ( qreal x, qreal y, const QTransform & deviceTransform ) const
-*/
+$prototype=QGraphicsItem * itemAt ( qreal x, qreal y, const QTransform & deviceTransform ) const
 $internalMethod=|QGraphicsItem *|itemAt,itemAt2|qreal,qreal,const QTransform &
 
 //[1]QGraphicsItem * itemAt ( const QPointF & position, const QTransform & deviceTransform ) const
@@ -473,14 +401,10 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMAT )
   }
 }
 
-/*
-ItemIndexMethod itemIndexMethod () const
-*/
+$prototype=ItemIndexMethod itemIndexMethod () const
 $method=|QGraphicsScene::ItemIndexMethod|itemIndexMethod|
 
-/*
-QList<QGraphicsItem *> items () const
-*/
+$prototype=QList<QGraphicsItem *> items () const
 HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS1 )
 {
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -516,9 +440,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS1 )
   }
 }
 
-/*
-QList<QGraphicsItem *> items ( Qt::SortOrder order ) const
-*/
+$prototype=QList<QGraphicsItem *> items ( Qt::SortOrder order ) const
 HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS2 )
 {
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -555,9 +477,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS2 )
   }
 }
 
-/*
-QList<QGraphicsItem *> items ( const QPointF & pos, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
-*/
+$prototype=QList<QGraphicsItem *> items ( const QPointF & pos, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
 HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS3 )
 {
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -596,9 +516,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS3 )
   }
 }
 
-/*
-QList<QGraphicsItem *> items ( qreal x, qreal y, qreal w, qreal h, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
-*/
+$prototype=QList<QGraphicsItem *> items ( qreal x, qreal y, qreal w, qreal h, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
 HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS4 )
 {
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -637,9 +555,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS4 )
   }
 }
 
-/*
-QList<QGraphicsItem *> items ( const QRectF & rect, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
-*/
+$prototype=QList<QGraphicsItem *> items ( const QRectF & rect, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
 HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS5 )
 {
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -678,9 +594,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS5 )
   }
 }
 
-/*
-QList<QGraphicsItem *> items ( const QPolygonF & polygon, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
-*/
+$prototype=QList<QGraphicsItem *> items ( const QPolygonF & polygon, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
 HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS6 )
 {
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -719,9 +633,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS6 )
   }
 }
 
-/*
-QList<QGraphicsItem *> items ( const QPainterPath & path, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
-*/
+$prototype=QList<QGraphicsItem *> items ( const QPainterPath & path, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
 HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS7 )
 {
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -804,39 +716,25 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS )
   }
 }
 
-/*
-QRectF itemsBoundingRect () const
-*/
+$prototype=QRectF itemsBoundingRect () const
 $method=|QRectF|itemsBoundingRect|
 
-/*
-QGraphicsItem * mouseGrabberItem () const
-*/
+$prototype=QGraphicsItem * mouseGrabberItem () const
 $method=|QGraphicsItem *|mouseGrabberItem|
 
-/*
-QPalette palette () const
-*/
+$prototype=QPalette palette () const
 $method=|QPalette|palette|
 
-/*
-void removeItem ( QGraphicsItem * item )
-*/
+$prototype=void removeItem ( QGraphicsItem * item )
 $method=|void|removeItem|QGraphicsItem *
 
-/*
-void render ( QPainter * painter, const QRectF & target = QRectF(), const QRectF & source = QRectF(), Qt::AspectRatioMode aspectRatioMode = Qt::KeepAspectRatio )
-*/
+$prototype=void render ( QPainter * painter, const QRectF & target = QRectF(), const QRectF & source = QRectF(), Qt::AspectRatioMode aspectRatioMode = Qt::KeepAspectRatio )
 $method=|void|render|QPainter *,const QRectF &=QRectF(),const QRectF &=QRectF(),Qt::AspectRatioMode=Qt::KeepAspectRatio
 
-/*
-QRectF sceneRect () const
-*/
+$prototype=QRectF sceneRect () const
 $method=|QRectF|sceneRect|
 
-/*
-QList<QGraphicsItem *> selectedItems () const
-*/
+$prototype=QList<QGraphicsItem *> selectedItems () const
 HB_FUNC_STATIC( QGRAPHICSSCENE_SELECTEDITEMS )
 {
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -872,74 +770,46 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SELECTEDITEMS )
   }
 }
 
-/*
-QPainterPath selectionArea () const
-*/
+$prototype=QPainterPath selectionArea () const
 $method=|QPainterPath|selectionArea|
 
-/*
-bool sendEvent ( QGraphicsItem * item, QEvent * event )
-*/
+$prototype=bool sendEvent ( QGraphicsItem * item, QEvent * event )
 $method=|bool|sendEvent|QGraphicsItem *,QEvent *
 
-/*
-void setActivePanel ( QGraphicsItem * item )
-*/
+$prototype=void setActivePanel ( QGraphicsItem * item )
 $method=|void|setActivePanel|QGraphicsItem *
 
-/*
-void setActiveWindow ( QGraphicsWidget * widget )
-*/
+$prototype=void setActiveWindow ( QGraphicsWidget * widget )
 $method=|void|setActiveWindow|QGraphicsWidget *
 
-/*
-void setBackgroundBrush ( const QBrush & brush )
-*/
+$prototype=void setBackgroundBrush ( const QBrush & brush )
 $method=|void|setBackgroundBrush|const QBrush &
 
-/*
-void setBspTreeDepth ( int depth )
-*/
+$prototype=void setBspTreeDepth ( int depth )
 $method=|void|setBspTreeDepth|int
 
-/*
-void setFocus ( Qt::FocusReason focusReason = Qt::OtherFocusReason )
-*/
+$prototype=void setFocus ( Qt::FocusReason focusReason = Qt::OtherFocusReason )
 $method=|void|setFocus|Qt::FocusReason=Qt::OtherFocusReason
 
-/*
-void setFocusItem ( QGraphicsItem * item, Qt::FocusReason focusReason = Qt::OtherFocusReason )
-*/
+$prototype=void setFocusItem ( QGraphicsItem * item, Qt::FocusReason focusReason = Qt::OtherFocusReason )
 $method=|void|setFocusItem|QGraphicsItem *,Qt::FocusReason=Qt::OtherFocusReason
 
-/*
-void setFont ( const QFont & font )
-*/
+$prototype=void setFont ( const QFont & font )
 $method=|void|setFont|const QFont &
 
-/*
-void setForegroundBrush ( const QBrush & brush )
-*/
+$prototype=void setForegroundBrush ( const QBrush & brush )
 $method=|void|setForegroundBrush|const QBrush &
 
-/*
-void setItemIndexMethod ( ItemIndexMethod method )
-*/
+$prototype=void setItemIndexMethod ( ItemIndexMethod method )
 $method=|void|setItemIndexMethod|QGraphicsScene::ItemIndexMethod
 
-/*
-void setPalette ( const QPalette & palette )
-*/
+$prototype=void setPalette ( const QPalette & palette )
 $method=|void|setPalette|const QPalette &
 
-/*
-void setSceneRect ( const QRectF & rect )
-*/
+$prototype=void setSceneRect ( const QRectF & rect )
 $internalMethod=|void|setSceneRect,setSceneRect1|const QRectF &
 
-/*
-void setSceneRect ( qreal x, qreal y, qreal w, qreal h )
-*/
+$prototype=void setSceneRect ( qreal x, qreal y, qreal w, qreal h )
 $internalMethod=|void|setSceneRect,setSceneRect2|qreal,qreal,qreal,qreal
 
 //[1]void setSceneRect ( const QRectF & rect )
@@ -961,14 +831,10 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETSCENERECT )
   }
 }
 
-/*
-void setSelectionArea ( const QPainterPath & path, const QTransform & deviceTransform )
-*/
+$prototype=void setSelectionArea ( const QPainterPath & path, const QTransform & deviceTransform )
 $internalMethod=|void|setSelectionArea,setSelectionArea1|const QPainterPath &,const QTransform &
 
-/*
-void setSelectionArea ( const QPainterPath & path, Qt::ItemSelectionMode mode, const QTransform & deviceTransform )
-*/
+$prototype=void setSelectionArea ( const QPainterPath & path, Qt::ItemSelectionMode mode, const QTransform & deviceTransform )
 $internalMethod=|void|setSelectionArea,setSelectionArea2|const QPainterPath &,Qt::ItemSelectionMode,const QTransform &
 
 //[1]void setSelectionArea ( const QPainterPath & path, const QTransform & deviceTransform )
@@ -990,39 +856,25 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETSELECTIONAREA )
   }
 }
 
-/*
-void setSortCacheEnabled ( bool enabled )
-*/
+$prototype=void setSortCacheEnabled ( bool enabled )
 $method=|void|setSortCacheEnabled|bool
 
-/*
-void setStickyFocus ( bool enabled )
-*/
+$prototype=void setStickyFocus ( bool enabled )
 $method=|void|setStickyFocus|bool
 
-/*
-void setStyle ( QStyle * style )
-*/
+$prototype=void setStyle ( QStyle * style )
 $method=|void|setStyle|QStyle *
 
-/*
-bool stickyFocus () const
-*/
+$prototype=bool stickyFocus () const
 $method=|bool|stickyFocus|
 
-/*
-QStyle * style () const
-*/
+$prototype=QStyle * style () const
 $method=|QStyle *|style|
 
-/*
-void update ( qreal x, qreal y, qreal w, qreal h )
-*/
+$prototype=void update ( qreal x, qreal y, qreal w, qreal h )
 $internalMethod=|void|update,update1|qreal,qreal,qreal,qreal
 
-/*
-void update ( const QRectF & rect = QRectF() )
-*/
+$prototype=void update ( const QRectF & rect = QRectF() )
 $internalMethod=|void|update,update2|const QRectF &=QRectF()
 
 //[1]void update ( qreal x, qreal y, qreal w, qreal h )
@@ -1044,9 +896,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_UPDATE )
   }
 }
 
-/*
-QList<QGraphicsView *> views () const
-*/
+$prototype=QList<QGraphicsView *> views () const
 HB_FUNC_STATIC( QGRAPHICSSCENE_VIEWS )
 {
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -1082,24 +932,16 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_VIEWS )
   }
 }
 
-/*
-qreal width () const
-*/
+$prototype=qreal width () const
 $method=|qreal|width|
 
-/*
-void advance ()
-*/
+$prototype=void advance ()
 $method=|void|advance|
 
-/*
-void clear ()
-*/
+$prototype=void clear ()
 $method=|void|clear|
 
-/*
-void clearSelection ()
-*/
+$prototype=void clearSelection ()
 $method=|void|clearSelection|
 
 #pragma ENDDUMP

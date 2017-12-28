@@ -28,14 +28,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QIntValidator ( QObject * parent = 0 )
-*/
+$prototype=QIntValidator ( QObject * parent = 0 )
 $internalConstructor=|new1|QObject *=0
 
-/*
-QIntValidator ( int minimum, int maximum, QObject * parent )
-*/
+$prototype=QIntValidator ( int minimum, int maximum, QObject * parent )
 $internalConstructor=|new2|int,int,QObject *
 
 //[1]QIntValidator ( QObject * parent = 0 )
@@ -59,34 +55,22 @@ HB_FUNC_STATIC( QINTVALIDATOR_NEW )
 
 $deleteMethod
 
-/*
-int bottom () const
-*/
+$prototype=int bottom () const
 $method=|int|bottom|
 
-/*
-void setBottom ( int )
-*/
+$prototype=void setBottom ( int )
 $method=|void|setBottom|int
 
-/*
-virtual void setRange ( int bottom, int top )
-*/
+$prototype=virtual void setRange ( int bottom, int top )
 $virtualMethod=|void|setRange|int,int
 
-/*
-void setTop ( int )
-*/
+$prototype=void setTop ( int )
 $method=|void|setTop|int
 
-/*
-int top () const
-*/
+$prototype=int top () const
 $method=|int|top|
 
-/*
-virtual void fixup ( QString & input ) const
-*/
+$prototype=virtual void fixup ( QString & input ) const
 HB_FUNC_STATIC( QINTVALIDATOR_FIXUP ) // TODO: revisar a implementacao e corrigir
 {
   QIntValidator * obj = (QIntValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -98,9 +82,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_FIXUP ) // TODO: revisar a implementacao e corrigi
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-virtual QValidator::State validate ( QString & input, int & pos ) const
-*/
+$prototype=virtual QValidator::State validate ( QString & input, int & pos ) const
 HB_FUNC_STATIC( QINTVALIDATOR_VALIDATE ) // TODO: revisar a implementacao e corrigir
 {
   QIntValidator * obj = (QIntValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

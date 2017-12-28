@@ -53,113 +53,71 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QTextBrowser ( QWidget * parent = 0 )
-*/
+$prototype=QTextBrowser ( QWidget * parent = 0 )
 HB_FUNC_STATIC( QTEXTBROWSER_NEW )
 {
   QTextBrowser * o = new QTextBrowser ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-/*
-int backwardHistoryCount () const
-*/
+$prototype=int backwardHistoryCount () const
 $method=|int|backwardHistoryCount|
 
-/*
-void clearHistory ()
-*/
+$prototype=void clearHistory ()
 $method=|void|clearHistory|
 
-/*
-int forwardHistoryCount () const
-*/
+$prototype=int forwardHistoryCount () const
 $method=|int|forwardHistoryCount|
 
-/*
-QString historyTitle ( int i ) const
-*/
+$prototype=QString historyTitle ( int i ) const
 $method=|QString|historyTitle|int
 
-/*
-QUrl historyUrl ( int i ) const
-*/
+$prototype=QUrl historyUrl ( int i ) const
 $method=|QUrl|historyUrl|int
 
-/*
-bool isBackwardAvailable () const
-*/
+$prototype=bool isBackwardAvailable () const
 $method=|bool|isBackwardAvailable|
 
-/*
-bool isForwardAvailable () const
-*/
+$prototype=bool isForwardAvailable () const
 $method=|bool|isForwardAvailable|
 
-/*
-bool openExternalLinks () const
-*/
+$prototype=bool openExternalLinks () const
 $method=|bool|openExternalLinks|
 
-/*
-bool openLinks () const
-*/
+$prototype=bool openLinks () const
 $method=|bool|openLinks|
 
-/*
-QStringList searchPaths () const
-*/
+$prototype=QStringList searchPaths () const
 $method=|QStringList|searchPaths|
 
-/*
-void setOpenExternalLinks ( bool open )
-*/
+$prototype=void setOpenExternalLinks ( bool open )
 $method=|void|setOpenExternalLinks|bool
 
-/*
-void setOpenLinks ( bool open )
-*/
+$prototype=void setOpenLinks ( bool open )
 $method=|void|setOpenLinks|bool
 
-/*
-void setSearchPaths ( const QStringList & paths )
-*/
+$prototype=void setSearchPaths ( const QStringList & paths )
 $method=|void|setSearchPaths|const QStringList &
 
-/*
-QUrl source () const
-*/
+$prototype=QUrl source () const
 $method=|QUrl|source|
 
-/*
-virtual QVariant loadResource ( int type, const QUrl & name )
-*/
+$prototype=virtual QVariant loadResource ( int type, const QUrl & name )
 $virtualMethod=|QVariant|loadResource|int,const QUrl &
 
-/*
-virtual void backward ()
-*/
+$prototype=virtual void backward ()
 $virtualMethod=|void|backward|
 
-/*
-virtual void forward ()
-*/
+$prototype=virtual void forward ()
 $virtualMethod=|void|forward|
 
-/*
-virtual void home ()
-*/
+$prototype=virtual void home ()
 $virtualMethod=|void|home|
 
-/*
-virtual void reload ()
-*/
+$prototype=virtual void reload ()
 $virtualMethod=|void|reload|
 
-/*
-virtual void setSource ( const QUrl & name )
-*/
+$prototype=virtual void setSource ( const QUrl & name )
 $virtualMethod=|void|setSource|const QUrl &
 
 #pragma ENDDUMP

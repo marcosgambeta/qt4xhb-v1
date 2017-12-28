@@ -34,74 +34,46 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-bool allowsErrorInteraction ()
-*/
+$prototype=bool allowsErrorInteraction ()
 $method=|bool|allowsErrorInteraction|
 
-/*
-bool allowsInteraction ()
-*/
+$prototype=bool allowsInteraction ()
 $method=|bool|allowsInteraction|
 
-/*
-void cancel ()
-*/
+$prototype=void cancel ()
 $method=|void|cancel|
 
-/*
-QStringList discardCommand () const
-*/
+$prototype=QStringList discardCommand () const
 $method=|QStringList|discardCommand|
 
-/*
-bool isPhase2 () const
-*/
+$prototype=bool isPhase2 () const
 $method=|bool|isPhase2|
 
-/*
-void release ()
-*/
+$prototype=void release ()
 $method=|void|release|
 
-/*
-void requestPhase2 ()
-*/
+$prototype=void requestPhase2 ()
 $method=|void|requestPhase2|
 
-/*
-QStringList restartCommand () const
-*/
+$prototype=QStringList restartCommand () const
 $method=|QStringList|restartCommand|
 
-/*
-RestartHint restartHint () const
-*/
+$prototype=RestartHint restartHint () const
 $method=|QSessionManager::RestartHint|restartHint|
 
-/*
-QString sessionId () const
-*/
+$prototype=QString sessionId () const
 $method=|QString|sessionId|
 
-/*
-QString sessionKey () const
-*/
+$prototype=QString sessionKey () const
 $method=|QString|sessionKey|
 
-/*
-void setDiscardCommand ( const QStringList & list )
-*/
+$prototype=void setDiscardCommand ( const QStringList & list )
 $method=|void|setDiscardCommand|const QStringList &
 
-/*
-void setManagerProperty ( const QString & name, const QStringList & value )
-*/
+$prototype=void setManagerProperty ( const QString & name, const QStringList & value )
 $internalMethod=|void|setManagerProperty,setManagerProperty1|const QString &,const QStringList &
 
-/*
-void setManagerProperty ( const QString & name, const QString & value )
-*/
+$prototype=void setManagerProperty ( const QString & name, const QString & value )
 $internalMethod=|void|setManagerProperty,setManagerProperty2|const QString &,const QString &
 
 //[1]void setManagerProperty ( const QString & name, const QStringList & value )
@@ -123,14 +95,10 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETMANAGERPROPERTY )
   }
 }
 
-/*
-void setRestartCommand ( const QStringList & command )
-*/
+$prototype=void setRestartCommand ( const QStringList & command )
 $method=|void|setRestartCommand|const QStringList &
 
-/*
-void setRestartHint ( RestartHint hint )
-*/
+$prototype=void setRestartHint ( RestartHint hint )
 $method=|void|setRestartHint|QSessionManager::RestartHint
 
 #pragma ENDDUMP

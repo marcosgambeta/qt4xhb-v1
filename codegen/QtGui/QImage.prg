@@ -117,59 +117,37 @@ $destructor
 #include <QStringList>
 #include <QColor>
 
-/*
-QImage ()
-*/
+$prototype=QImage ()
 $constructor=|new1|
 
-/*
-QImage ( const QSize & size, Format format )
-*/
+$prototype=QImage ( const QSize & size, Format format )
 $constructor=|new2|const QSize &,QImage::Format
 
-/*
-QImage ( int width, int height, Format format )
-*/
+$prototype=QImage ( int width, int height, Format format )
 $constructor=|new3|int,int,QImage::Format
 
-/*
-QImage ( uchar * data, int width, int height, Format format )
-*/
+$prototype=QImage ( uchar * data, int width, int height, Format format )
 $constructor=|new4|uchar *,int,int,QImage::Format
 
-/*
-QImage ( const uchar * data, int width, int height, Format format )
-*/
+$prototype=QImage ( const uchar * data, int width, int height, Format format )
 $constructor=|new5|const uchar *,int,int,QImage::Format
 
-/*
-QImage ( uchar * data, int width, int height, int bytesPerLine, Format format )
-*/
+$prototype=QImage ( uchar * data, int width, int height, int bytesPerLine, Format format )
 $constructor=|new6|uchar *,int,int,int,QImage::Format
 
-/*
-QImage ( const uchar * data, int width, int height, int bytesPerLine, Format format )
-*/
+$prototype=QImage ( const uchar * data, int width, int height, int bytesPerLine, Format format )
 $constructor=|new7|const uchar *,int,int,int,QImage::Format
 
-/*
-QImage ( const char * const[] xpm )
-*/
+$prototype=QImage ( const char * const[] xpm )
 $constructor=|new8|const char * const[]
 
-/*
-QImage ( const QString & fileName, const char * format = 0 )
-*/
+$prototype=QImage ( const QString & fileName, const char * format = 0 )
 $constructor=|new9|const QString &,const char *=0
 
-/*
-QImage ( const char * fileName, const char * format = 0 )
-*/
+$prototype=QImage ( const char * fileName, const char * format = 0 )
 $constructor=|new10|const char *,const char *=0
 
-/*
-QImage ( const QImage & image )
-*/
+$prototype=QImage ( const QImage & image )
 $constructor=|new11|const QImage &
 
 //[01]QImage ()
@@ -222,44 +200,28 @@ HB_FUNC_STATIC( QIMAGE_NEW )
 
 $deleteMethod
 
-/*
-bool allGray () const
-*/
+$prototype=bool allGray () const
 $method=|bool|allGray|
 
-/*
-int bitPlaneCount () const
-*/
+$prototype=int bitPlaneCount () const
 $method=|int|bitPlaneCount|
 
-/*
-int byteCount () const
-*/
+$prototype=int byteCount () const
 $method=|int|byteCount|
 
-/*
-int bytesPerLine () const
-*/
+$prototype=int bytesPerLine () const
 $method=|int|bytesPerLine|
 
-/*
-qint64 cacheKey () const
-*/
+$prototype=qint64 cacheKey () const
 $method=|qint64|cacheKey|
 
-/*
-QRgb color ( int i ) const
-*/
+$prototype=QRgb color ( int i ) const
 $method=|QRgb|color|int
 
-/*
-int colorCount () const
-*/
+$prototype=int colorCount () const
 $method=|int|colorCount|
 
-/*
-QVector<QRgb> colorTable () const
-*/
+$prototype=QVector<QRgb> colorTable () const
 HB_FUNC_STATIC( QIMAGE_COLORTABLE )
 {
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -279,14 +241,10 @@ HB_FUNC_STATIC( QIMAGE_COLORTABLE )
   }
 }
 
-/*
-QImage convertToFormat ( Format format, Qt::ImageConversionFlags flags = Qt::AutoColor ) const
-*/
+$prototype=QImage convertToFormat ( Format format, Qt::ImageConversionFlags flags = Qt::AutoColor ) const
 $method=|QImage|convertToFormat,convertToFormat1|QImage::Format,Qt::ImageConversionFlags=Qt::AutoColor
 
-/*
-QImage convertToFormat ( Format format, const QVector<QRgb> & colorTable, Qt::ImageConversionFlags flags = Qt::AutoColor ) const
-*/
+$prototype=QImage convertToFormat ( Format format, const QVector<QRgb> & colorTable, Qt::ImageConversionFlags flags = Qt::AutoColor ) const
 HB_FUNC_STATIC( QIMAGE_CONVERTTOFORMAT2 )
 {
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -329,14 +287,10 @@ HB_FUNC_STATIC( QIMAGE_CONVERTTOFORMAT )
   }
 }
 
-/*
-QImage copy ( const QRect & rectangle = QRect() ) const
-*/
+$prototype=QImage copy ( const QRect & rectangle = QRect() ) const
 $method=|QImage|copy,copy1|const QRect &=QRect()
 
-/*
-QImage copy ( int x, int y, int width, int height ) const
-*/
+$prototype=QImage copy ( int x, int y, int width, int height ) const
 $method=|QImage|copy,copy2|int,int,int,int
 
 //[1]QImage copy ( const QRect & rectangle = QRect() ) const
@@ -358,49 +312,31 @@ HB_FUNC_STATIC( QIMAGE_COPY )
   }
 }
 
-/*
-QImage createAlphaMask ( Qt::ImageConversionFlags flags = Qt::AutoColor ) const
-*/
+$prototype=QImage createAlphaMask ( Qt::ImageConversionFlags flags = Qt::AutoColor ) const
 $method=|QImage|createAlphaMask|Qt::ImageConversionFlags=Qt::AutoColor
 
-/*
-QImage createHeuristicMask ( bool clipTight = true ) const
-*/
+$prototype=QImage createHeuristicMask ( bool clipTight = true ) const
 $method=|QImage|createHeuristicMask|bool=true
 
-/*
-QImage createMaskFromColor ( QRgb color, Qt::MaskMode mode = Qt::MaskInColor ) const
-*/
+$prototype=QImage createMaskFromColor ( QRgb color, Qt::MaskMode mode = Qt::MaskInColor ) const
 $method=|QImage|createMaskFromColor|QRgb,Qt::MaskMode=Qt::MaskInColor
 
-/*
-int depth () const
-*/
+$prototype=int depth () const
 $method=|int|depth|
 
-/*
-int dotsPerMeterX () const
-*/
+$prototype=int dotsPerMeterX () const
 $method=|int|dotsPerMeterX|
 
-/*
-int dotsPerMeterY () const
-*/
+$prototype=int dotsPerMeterY () const
 $method=|int|dotsPerMeterY|
 
-/*
-void fill ( uint pixelValue )
-*/
+$prototype=void fill ( uint pixelValue )
 $method=|void|fill,fill1|uint
 
-/*
-void fill ( Qt::GlobalColor color )
-*/
+$prototype=void fill ( Qt::GlobalColor color )
 $method=|void|fill,fill2|Qt::GlobalColor
 
-/*
-void fill ( const QColor & color )
-*/
+$prototype=void fill ( const QColor & color )
 $method=|void|fill,fill3|const QColor &
 
 //[1]void fill ( uint pixelValue )
@@ -424,44 +360,28 @@ HB_FUNC_STATIC( QIMAGE_FILL )
   }
 }
 
-/*
-Format format () const
-*/
+$prototype=Format format () const
 $method=|QImage::Format|format|
 
-/*
-bool hasAlphaChannel () const
-*/
+$prototype=bool hasAlphaChannel () const
 $method=|bool|hasAlphaChannel|
 
-/*
-int height () const
-*/
+$prototype=int height () const
 $method=|int|height|
 
-/*
-void invertPixels ( InvertMode mode = InvertRgb )
-*/
+$prototype=void invertPixels ( InvertMode mode = InvertRgb )
 $method=|void|invertPixels|QImage::InvertMode=QImage::InvertRgb
 
-/*
-bool isGrayscale () const
-*/
+$prototype=bool isGrayscale () const
 $method=|bool|isGrayscale|
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-bool load ( const QString & fileName, const char * format = 0 )
-*/
+$prototype=bool load ( const QString & fileName, const char * format = 0 )
 $method=|bool|load,load1|const QString &,const char *=0
 
-/*
-bool load ( QIODevice * device, const char * format )
-*/
+$prototype=bool load ( QIODevice * device, const char * format )
 $method=|bool|load,load2|QIODevice *,const char *
 
 //[1]bool load ( const QString & fileName, const char * format = 0 )
@@ -483,14 +403,10 @@ HB_FUNC_STATIC( QIMAGE_LOAD )
   }
 }
 
-/*
-bool loadFromData ( const uchar * data, int len, const char * format = 0 )
-*/
+$prototype=bool loadFromData ( const uchar * data, int len, const char * format = 0 )
 $method=|bool|loadFromData,loadFromData1|const uchar *,int,const char *=0
 
-/*
-bool loadFromData ( const QByteArray & data, const char * format = 0 )
-*/
+$prototype=bool loadFromData ( const QByteArray & data, const char * format = 0 )
 $method=|bool|loadFromData,loadFromData2|const QByteArray &,const char *=0
 
 //[1]bool loadFromData ( const uchar * data, int len, const char * format = 0 )
@@ -512,24 +428,16 @@ HB_FUNC_STATIC( QIMAGE_LOADFROMDATA )
   }
 }
 
-/*
-QImage mirrored ( bool horizontal = false, bool vertical = true ) const
-*/
+$prototype=QImage mirrored ( bool horizontal = false, bool vertical = true ) const
 $method=|QImage|mirrored|bool=false,bool=true
 
-/*
-QPoint offset () const
-*/
+$prototype=QPoint offset () const
 $method=|QPoint|offset|
 
-/*
-QRgb pixel ( const QPoint & position ) const
-*/
+$prototype=QRgb pixel ( const QPoint & position ) const
 $method=|QRgb|pixel,pixel1|const QPoint &
 
-/*
-QRgb pixel ( int x, int y ) const
-*/
+$prototype=QRgb pixel ( int x, int y ) const
 $method=|QRgb|pixel,pixel2|int,int
 
 //[1]QRgb pixel ( const QPoint & position ) const
@@ -551,14 +459,10 @@ HB_FUNC_STATIC( QIMAGE_PIXEL )
   }
 }
 
-/*
-int pixelIndex ( const QPoint & position ) const
-*/
+$prototype=int pixelIndex ( const QPoint & position ) const
 $method=|int|pixelIndex,pixelIndex1|const QPoint &
 
-/*
-int pixelIndex ( int x, int y ) const
-*/
+$prototype=int pixelIndex ( int x, int y ) const
 $method=|int|pixelIndex,pixelIndex2|int,int
 
 //[1]int pixelIndex ( const QPoint & position ) const
@@ -580,24 +484,16 @@ HB_FUNC_STATIC( QIMAGE_PIXELINDEX )
   }
 }
 
-/*
-QRect rect () const
-*/
+$prototype=QRect rect () const
 $method=|QRect|rect|
 
-/*
-QImage rgbSwapped () const
-*/
+$prototype=QImage rgbSwapped () const
 $method=|QImage|rgbSwapped|
 
-/*
-bool save ( const QString & fileName, const char * format = 0, int quality = -1 ) const
-*/
+$prototype=bool save ( const QString & fileName, const char * format = 0, int quality = -1 ) const
 $method=|bool|save,save1|const QString &,const char *=0,int=-1
 
-/*
-bool save ( QIODevice * device, const char * format = 0, int quality = -1 ) const
-*/
+$prototype=bool save ( QIODevice * device, const char * format = 0, int quality = -1 ) const
 $method=|bool|save,save2|QIODevice *,const char *=0,int=-1
 
 //[1]bool save ( const QString & fileName, const char * format = 0, int quality = -1 ) const
@@ -619,14 +515,10 @@ HB_FUNC_STATIC( QIMAGE_SAVE )
   }
 }
 
-/*
-QImage scaled ( const QSize & size, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
-*/
+$prototype=QImage scaled ( const QSize & size, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
 $method=|QImage|scaled,scaled1|const QSize &,Qt::AspectRatioMode=Qt::IgnoreAspectRatio,Qt::TransformationMode=Qt::FastTransformation
 
-/*
-QImage scaled ( int width, int height, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
-*/
+$prototype=QImage scaled ( int width, int height, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
 $method=|QImage|scaled,scaled2|int,int,Qt::AspectRatioMode=Qt::IgnoreAspectRatio,Qt::TransformationMode=Qt::FastTransformation
 
 //[1]QImage scaled ( const QSize & size, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
@@ -648,14 +540,10 @@ HB_FUNC_STATIC( QIMAGE_SCALED )
   }
 }
 
-/*
-QImage scaledToHeight ( int height, Qt::TransformationMode mode = Qt::FastTransformation ) const
-*/
+$prototype=QImage scaledToHeight ( int height, Qt::TransformationMode mode = Qt::FastTransformation ) const
 $method=|QImage|scaledToHeight|int,Qt::TransformationMode=Qt::FastTransformation
 
-/*
-QImage scaledToWidth ( int width, Qt::TransformationMode mode = Qt::FastTransformation ) const
-*/
+$prototype=QImage scaledToWidth ( int width, Qt::TransformationMode mode = Qt::FastTransformation ) const
 $method=|QImage|scaledToWidth|int,Qt::TransformationMode=Qt::FastTransformation
 
 // TODO: implementar
@@ -667,19 +555,13 @@ $method=|QImage|scaledToWidth|int,Qt::TransformationMode=Qt::FastTransformation
 //  HB_FUNC_EXEC( QIMAGE_SCANLINE1 );
 //}
 
-/*
-void setColor ( int index, QRgb colorValue )
-*/
+$prototype=void setColor ( int index, QRgb colorValue )
 $method=|void|setColor|int,QRgb
 
-/*
-void setColorCount ( int colorCount )
-*/
+$prototype=void setColorCount ( int colorCount )
 $method=|void|setColorCount|int
 
-/*
-void setColorTable ( const QVector<QRgb> colors )
-*/
+$prototype=void setColorTable ( const QVector<QRgb> colors )
 HB_FUNC_STATIC( QIMAGE_SETCOLORTABLE )
 {
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -702,29 +584,19 @@ HB_FUNC_STATIC( QIMAGE_SETCOLORTABLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setDotsPerMeterX ( int x )
-*/
+$prototype=void setDotsPerMeterX ( int x )
 $method=|void|setDotsPerMeterX|int
 
-/*
-void setDotsPerMeterY ( int y )
-*/
+$prototype=void setDotsPerMeterY ( int y )
 $method=|void|setDotsPerMeterY|int
 
-/*
-void setOffset ( const QPoint & offset )
-*/
+$prototype=void setOffset ( const QPoint & offset )
 $method=|void|setOffset|const QPoint &
 
-/*
-void setPixel ( const QPoint & position, uint index_or_rgb )
-*/
+$prototype=void setPixel ( const QPoint & position, uint index_or_rgb )
 $method=|void|setPixel,setPixel1|const QPoint &,uint
 
-/*
-void setPixel ( int x, int y, uint index_or_rgb )
-*/
+$prototype=void setPixel ( int x, int y, uint index_or_rgb )
 $method=|void|setPixel,setPixel2|int,int,uint
 
 //[1]void setPixel ( const QPoint & position, uint index_or_rgb )
@@ -746,39 +618,25 @@ HB_FUNC_STATIC( QIMAGE_SETPIXEL )
   }
 }
 
-/*
-void setText ( const QString & key, const QString & text )
-*/
+$prototype=void setText ( const QString & key, const QString & text )
 $method=|void|setText|const QString &,const QString &
 
-/*
-QSize size () const
-*/
+$prototype=QSize size () const
 $method=|QSize|size|
 
-/*
-void swap ( QImage & other )
-*/
+$prototype=void swap ( QImage & other )
 $method=|void|swap|QImage &
 
-/*
-QString text ( const QString & key = QString() ) const
-*/
+$prototype=QString text ( const QString & key = QString() ) const
 $method=|QString|text|const QString &=QString()
 
-/*
-QStringList textKeys () const
-*/
+$prototype=QStringList textKeys () const
 $method=|QStringList|textKeys|
 
-/*
-QImage transformed ( const QMatrix & matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
-*/
+$prototype=QImage transformed ( const QMatrix & matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
 $method=|QImage|transformed,transformed1|const QMatrix &,Qt::TransformationMode=Qt::FastTransformation
 
-/*
-QImage transformed ( const QTransform & matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
-*/
+$prototype=QImage transformed ( const QTransform & matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
 $method=|QImage|transformed,transformed2|const QTransform &,Qt::TransformationMode=Qt::FastTransformation
 
 //[1]QImage transformed ( const QMatrix & matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
@@ -800,14 +658,10 @@ HB_FUNC_STATIC( QIMAGE_TRANSFORMED )
   }
 }
 
-/*
-bool valid ( const QPoint & pos ) const
-*/
+$prototype=bool valid ( const QPoint & pos ) const
 $method=|bool|valid,valid1|const QPoint &
 
-/*
-bool valid ( int x, int y ) const
-*/
+$prototype=bool valid ( int x, int y ) const
 $method=|bool|valid,valid2|int,int
 
 //[1]bool valid ( const QPoint & pos ) const
@@ -829,19 +683,13 @@ HB_FUNC_STATIC( QIMAGE_VALID )
   }
 }
 
-/*
-int width () const
-*/
+$prototype=int width () const
 $method=|int|width|
 
-/*
-static QImage fromData ( const uchar * data, int size, const char * format = 0 )
-*/
+$prototype=static QImage fromData ( const uchar * data, int size, const char * format = 0 )
 $staticMethod=|QImage|fromData,fromData1|const uchar *,int,const char *=0
 
-/*
-static QImage fromData ( const QByteArray & data, const char * format = 0 )
-*/
+$prototype=static QImage fromData ( const QByteArray & data, const char * format = 0 )
 $staticMethod=|QImage|fromData,fromData2|const QByteArray &,const char *=0
 
 //[1]QImage fromData ( const uchar * data, int size, const char * format = 0 )
@@ -863,14 +711,10 @@ HB_FUNC_STATIC( QIMAGE_FROMDATA )
   }
 }
 
-/*
-static QTransform trueMatrix ( const QTransform & matrix, int width, int height )
-*/
+$prototype=static QTransform trueMatrix ( const QTransform & matrix, int width, int height )
 $staticMethod=|QTransform|trueMatrix,trueMatrix1|const QTransform &,int,int
 
-/*
-static QTransform trueMatrix ( const QTransform & matrix, int width, int height )
-*/
+$prototype=static QTransform trueMatrix ( const QTransform & matrix, int width, int height )
 $staticMethod=|QTransform|trueMatrix,trueMatrix2|const QTransform &,int,int
 
 //[1]QMatrix trueMatrix ( const QMatrix & matrix, int width, int height )

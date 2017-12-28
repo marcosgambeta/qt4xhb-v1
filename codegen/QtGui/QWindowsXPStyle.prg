@@ -45,9 +45,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QWindowsXPStyle ()
-*/
+$prototype=QWindowsXPStyle ()
 HB_FUNC_STATIC( QWINDOWSXPSTYLE_NEW )
 {
   QWindowsXPStyle * o = new QWindowsXPStyle ();
@@ -56,39 +54,25 @@ HB_FUNC_STATIC( QWINDOWSXPSTYLE_NEW )
 
 $deleteMethod
 
-/*
-virtual void drawComplexControl ( ComplexControl cc, const QStyleOptionComplex * option, QPainter * p, const QWidget * widget = 0 ) const
-*/
+$prototype=virtual void drawComplexControl ( ComplexControl cc, const QStyleOptionComplex * option, QPainter * p, const QWidget * widget = 0 ) const
 $virtualMethod=|void|drawComplexControl|QStyle::ComplexControl,const QStyleOptionComplex *,QPainter *,const QWidget *=0
 
-/*
-virtual void drawControl ( ControlElement element, const QStyleOption * option, QPainter * p, const QWidget * widget = 0 ) const
-*/
+$prototype=virtual void drawControl ( ControlElement element, const QStyleOption * option, QPainter * p, const QWidget * widget = 0 ) const
 $virtualMethod=|void|drawControl|QStyle::ControlElement,const QStyleOption *,QPainter *,const QWidget *=0
 
-/*
-virtual void drawPrimitive ( PrimitiveElement pe, const QStyleOption * option, QPainter * p, const QWidget * widget = 0 ) const
-*/
+$prototype=virtual void drawPrimitive ( PrimitiveElement pe, const QStyleOption * option, QPainter * p, const QWidget * widget = 0 ) const
 $virtualMethod=|void|drawPrimitive|QStyle::PrimitiveElement,const QStyleOption *,QPainter *,const QWidget *=0
 
-/*
-virtual int pixelMetric ( PixelMetric pm, const QStyleOption * option = 0, const QWidget * widget = 0 ) const
-*/
+$prototype=virtual int pixelMetric ( PixelMetric pm, const QStyleOption * option = 0, const QWidget * widget = 0 ) const
 $virtualMethod=|int|pixelMetric|QStyle::PixelMetric,const QStyleOption *=0,const QWidget *=0
 
-/*
-virtual void polish ( QApplication * app )
-*/
+$prototype=virtual void polish ( QApplication * app )
 $virtualMethod=|void|polish,polish1|QApplication *
 
-/*
-virtual void polish ( QWidget * widget )
-*/
+$prototype=virtual void polish ( QWidget * widget )
 $virtualMethod=|void|polish,polish2|QWidget *
 
-/*
-virtual void polish ( QPalette & pal )
-*/
+$prototype=virtual void polish ( QPalette & pal )
 $virtualMethod=|void|polish,polish3|QPalette &
 
 //[1]virtual void polish ( QApplication * app )
@@ -115,44 +99,28 @@ HB_FUNC_STATIC( QWINDOWSXPSTYLE_POLISH )
   }
 }
 
-/*
-virtual QSize sizeFromContents ( ContentsType ct, const QStyleOption * option, const QSize & contentsSize, const QWidget * widget = 0 ) const
-*/
+$prototype=virtual QSize sizeFromContents ( ContentsType ct, const QStyleOption * option, const QSize & contentsSize, const QWidget * widget = 0 ) const
 $virtualMethod=|QSize|sizeFromContents|QStyle::ContentsType,const QStyleOption *,const QSize &,const QWidget *=0
 
-/*
-virtual QPalette standardPalette () const
-*/
+$prototype=virtual QPalette standardPalette () const
 $virtualMethod=|QPalette|standardPalette|
 
-/*
-virtual QPixmap standardPixmap ( StandardPixmap standardPixmap, const QStyleOption * option, const QWidget * widget = 0 ) const
-*/
+$prototype=virtual QPixmap standardPixmap ( StandardPixmap standardPixmap, const QStyleOption * option, const QWidget * widget = 0 ) const
 $virtualMethod=|QPixmap|standardPixmap|QStyle::StandardPixmap,const QStyleOption *,const QWidget *=0
 
-/*
-virtual int styleHint ( StyleHint hint, const QStyleOption * option = 0, const QWidget * widget = 0, QStyleHintReturn * returnData = 0 ) const
-*/
+$prototype=virtual int styleHint ( StyleHint hint, const QStyleOption * option = 0, const QWidget * widget = 0, QStyleHintReturn * returnData = 0 ) const
 $virtualMethod=|int|styleHint|QStyle::StyleHint,const QStyleOption *=0,const QWidget *=0,QStyleHintReturn *=0
 
-/*
-virtual QRect subControlRect ( ComplexControl cc, const QStyleOptionComplex * option, SubControl subControl, const QWidget * widget = 0 ) const
-*/
+$prototype=virtual QRect subControlRect ( ComplexControl cc, const QStyleOptionComplex * option, SubControl subControl, const QWidget * widget = 0 ) const
 $virtualMethod=|QRect|subControlRect|QStyle::ComplexControl,const QStyleOptionComplex *,QStyle::SubControl,const QWidget *=0
 
-/*
-virtual QRect subElementRect ( SubElement sr, const QStyleOption * option, const QWidget * widget = 0 ) const
-*/
+$prototype=virtual QRect subElementRect ( SubElement sr, const QStyleOption * option, const QWidget * widget = 0 ) const
 $virtualMethod=|QRect|subElementRect|QStyle::SubElement,const QStyleOption *,const QWidget *=0
 
-/*
-virtual void unpolish ( QApplication * app )
-*/
+$prototype=virtual void unpolish ( QApplication * app )
 $virtualMethod=|void|unpolish,unpolish1|QApplication *
 
-/*
-virtual void unpolish ( QWidget * widget )
-*/
+$prototype=virtual void unpolish ( QWidget * widget )
 $virtualMethod=|void|unpolish,unpolish2|QWidget *
 
 //[1]virtual void unpolish ( QApplication * app )

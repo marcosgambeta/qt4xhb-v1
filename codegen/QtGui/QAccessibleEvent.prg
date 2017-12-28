@@ -23,24 +23,16 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QAccessibleEvent ( Type type, int child )
-*/
+$prototype=QAccessibleEvent ( Type type, int child )
 $constructor=|new|QAccessibleEvent::Type,int
 
-/*
-int child () const
-*/
+$prototype=int child () const
 $method=|int|child|
 
-/*
-void setValue ( const QString & text )
-*/
+$prototype=void setValue ( const QString & text )
 $method=|void|setValue|const QString &
 
-/*
-QString value () const
-*/
+$prototype=QString value () const
 $method=|QString|value|
 
 #pragma ENDDUMP

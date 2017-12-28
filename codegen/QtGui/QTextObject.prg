@@ -28,24 +28,16 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QTextDocument * document () const
-*/
+$prototype=QTextDocument * document () const
 $method=|QTextDocument *|document|
 
-/*
-QTextFormat format () const
-*/
+$prototype=QTextFormat format () const
 $method=|QTextFormat|format|
 
-/*
-int formatIndex () const
-*/
+$prototype=int formatIndex () const
 $method=|int|formatIndex|
 
-/*
-int objectIndex () const
-*/
+$prototype=int objectIndex () const
 $method=|int|objectIndex|
 
 #pragma ENDDUMP

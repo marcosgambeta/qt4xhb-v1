@@ -45,34 +45,22 @@ $destructor
 
 $deleteMethod
 
-/*
-void addScrollBarWidget ( QWidget * widget, Qt::Alignment alignment )
-*/
+$prototype=void addScrollBarWidget ( QWidget * widget, Qt::Alignment alignment )
 $method=|void|addScrollBarWidget|QWidget *,Qt::Alignment
 
-/*
-QWidget * cornerWidget () const
-*/
+$prototype=QWidget * cornerWidget () const
 $method=|QWidget *|cornerWidget|
 
-/*
-QScrollBar * horizontalScrollBar () const
-*/
+$prototype=QScrollBar * horizontalScrollBar () const
 $method=|QScrollBar *|horizontalScrollBar|
 
-/*
-Qt::ScrollBarPolicy horizontalScrollBarPolicy () const
-*/
+$prototype=Qt::ScrollBarPolicy horizontalScrollBarPolicy () const
 $method=|Qt::ScrollBarPolicy|horizontalScrollBarPolicy|
 
-/*
-QSize maximumViewportSize () const
-*/
+$prototype=QSize maximumViewportSize () const
 $method=|QSize|maximumViewportSize|
 
-/*
-QWidgetList scrollBarWidgets ( Qt::Alignment alignment )
-*/
+$prototype=QWidgetList scrollBarWidgets ( Qt::Alignment alignment )
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SCROLLBARWIDGETS )
 {
   QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -109,59 +97,37 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SCROLLBARWIDGETS )
   }
 }
 
-/*
-void setCornerWidget ( QWidget * widget )
-*/
+$prototype=void setCornerWidget ( QWidget * widget )
 $method=|void|setCornerWidget|QWidget *
 
-/*
-void setHorizontalScrollBar ( QScrollBar * scrollBar )
-*/
+$prototype=void setHorizontalScrollBar ( QScrollBar * scrollBar )
 $method=|void|setHorizontalScrollBar|QScrollBar *
 
-/*
-void setHorizontalScrollBarPolicy ( Qt::ScrollBarPolicy )
-*/
+$prototype=void setHorizontalScrollBarPolicy ( Qt::ScrollBarPolicy )
 $method=|void|setHorizontalScrollBarPolicy|Qt::ScrollBarPolicy
 
-/*
-void setVerticalScrollBar ( QScrollBar * scrollBar )
-*/
+$prototype=void setVerticalScrollBar ( QScrollBar * scrollBar )
 $method=|void|setVerticalScrollBar|QScrollBar *
 
-/*
-void setVerticalScrollBarPolicy ( Qt::ScrollBarPolicy )
-*/
+$prototype=void setVerticalScrollBarPolicy ( Qt::ScrollBarPolicy )
 $method=|void|setVerticalScrollBarPolicy|Qt::ScrollBarPolicy
 
-/*
-void setViewport ( QWidget * widget )
-*/
+$prototype=void setViewport ( QWidget * widget )
 $method=|void|setViewport|QWidget *
 
-/*
-QScrollBar * verticalScrollBar () const
-*/
+$prototype=QScrollBar * verticalScrollBar () const
 $method=|QScrollBar *|verticalScrollBar|
 
-/*
-Qt::ScrollBarPolicy verticalScrollBarPolicy () const
-*/
+$prototype=Qt::ScrollBarPolicy verticalScrollBarPolicy () const
 $method=|Qt::ScrollBarPolicy|verticalScrollBarPolicy|
 
-/*
-QWidget * viewport () const
-*/
+$prototype=QWidget * viewport () const
 $method=|QWidget *|viewport|
 
-/*
-virtual QSize minimumSizeHint () const
-*/
+$prototype=virtual QSize minimumSizeHint () const
 $virtualMethod=|QSize|minimumSizeHint|
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $virtualMethod=|QSize|sizeHint|
 
 #pragma ENDDUMP

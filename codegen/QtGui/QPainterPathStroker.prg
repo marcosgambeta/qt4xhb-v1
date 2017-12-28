@@ -51,9 +51,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QPainterPathStroker ()
-*/
+$prototype=QPainterPathStroker ()
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_NEW )
 {
   QPainterPathStroker * o = new QPainterPathStroker ();
@@ -62,29 +60,19 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_NEW )
 
 $deleteMethod
 
-/*
-Qt::PenCapStyle capStyle () const
-*/
+$prototype=Qt::PenCapStyle capStyle () const
 $method=|Qt::PenCapStyle|capStyle|
 
-/*
-QPainterPath createStroke ( const QPainterPath & path ) const
-*/
+$prototype=QPainterPath createStroke ( const QPainterPath & path ) const
 $method=|QPainterPath|createStroke|const QPainterPath &
 
-/*
-qreal curveThreshold () const
-*/
+$prototype=qreal curveThreshold () const
 $method=|qreal|curveThreshold|
 
-/*
-qreal dashOffset () const
-*/
+$prototype=qreal dashOffset () const
 $method=|qreal|dashOffset|
 
-/*
-QVector<qreal> dashPattern () const
-*/
+$prototype=QVector<qreal> dashPattern () const
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_DASHPATTERN )
 {
   QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -104,39 +92,25 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_DASHPATTERN )
   }
 }
 
-/*
-Qt::PenJoinStyle joinStyle () const
-*/
+$prototype=Qt::PenJoinStyle joinStyle () const
 $method=|Qt::PenJoinStyle|joinStyle|
 
-/*
-qreal miterLimit () const
-*/
+$prototype=qreal miterLimit () const
 $method=|qreal|miterLimit|
 
-/*
-void setCapStyle ( Qt::PenCapStyle style )
-*/
+$prototype=void setCapStyle ( Qt::PenCapStyle style )
 $method=|void|setCapStyle|Qt::PenCapStyle
 
-/*
-void setCurveThreshold ( qreal threshold )
-*/
+$prototype=void setCurveThreshold ( qreal threshold )
 $method=|void|setCurveThreshold|qreal
 
-/*
-void setDashOffset ( qreal offset )
-*/
+$prototype=void setDashOffset ( qreal offset )
 $method=|void|setDashOffset|qreal
 
-/*
-void setDashPattern ( Qt::PenStyle style )
-*/
+$prototype=void setDashPattern ( Qt::PenStyle style )
 $method=|void|setDashPattern,setDashPattern1|Qt::PenStyle
 
-/*
-void setDashPattern ( const QVector<qreal> & dashPattern )
-*/
+$prototype=void setDashPattern ( const QVector<qreal> & dashPattern )
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHPATTERN2 )
 {
   QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -178,24 +152,16 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHPATTERN )
   }
 }
 
-/*
-void setJoinStyle ( Qt::PenJoinStyle style )
-*/
+$prototype=void setJoinStyle ( Qt::PenJoinStyle style )
 $method=|void|setJoinStyle|Qt::PenJoinStyle
 
-/*
-void setMiterLimit ( qreal limit )
-*/
+$prototype=void setMiterLimit ( qreal limit )
 $method=|void|setMiterLimit|qreal
 
-/*
-void setWidth ( qreal width )
-*/
+$prototype=void setWidth ( qreal width )
 $method=|void|setWidth|qreal
 
-/*
-qreal width () const
-*/
+$prototype=qreal width () const
 $method=|qreal|width|
 
 $extraMethods

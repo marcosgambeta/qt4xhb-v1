@@ -41,34 +41,22 @@ $destructor
 
 $deleteMethod
 
-/*
-qreal ascent () const
-*/
+$prototype=qreal ascent () const
 $method=|qreal|ascent|
 
-/*
-qreal descent () const
-*/
+$prototype=qreal descent () const
 $method=|qreal|descent|
 
-/*
-QFont font () const
-*/
+$prototype=QFont font () const
 $method=|QFont|font|
 
-/*
-RenderFlags renderFlags () const
-*/
+$prototype=RenderFlags renderFlags () const
 $method=|QTextItem::RenderFlags|renderFlags|
 
-/*
-QString text () const
-*/
+$prototype=QString text () const
 $method=|QString|text|
 
-/*
-qreal width () const
-*/
+$prototype=qreal width () const
 $method=|qreal|width|
 
 $extraMethods

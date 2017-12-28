@@ -40,14 +40,10 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual QGesture * create ( QObject * target )
-*/
+$prototype=virtual QGesture * create ( QObject * target )
 $virtualMethod=|QGesture *|create|QObject *
 
-/*
-virtual Result recognize ( QGesture * gesture, QObject * watched, QEvent * event ) = 0
-*/
+$prototype=virtual Result recognize ( QGesture * gesture, QObject * watched, QEvent * event ) = 0
 HB_FUNC_STATIC( QGESTURERECOGNIZER_RECOGNIZE )
 {
   QGestureRecognizer * obj = (QGestureRecognizer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -58,19 +54,13 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_RECOGNIZE )
   }
 }
 
-/*
-virtual void reset ( QGesture * gesture )
-*/
+$prototype=virtual void reset ( QGesture * gesture )
 $virtualMethod=|void|reset|QGesture *
 
-/*
-static Qt::GestureType registerRecognizer ( QGestureRecognizer * recognizer )
-*/
+$prototype=static Qt::GestureType registerRecognizer ( QGestureRecognizer * recognizer )
 $staticMethod=|Qt::GestureType|registerRecognizer|QGestureRecognizer *
 
-/*
-static void unregisterRecognizer ( Qt::GestureType type )
-*/
+$prototype=static void unregisterRecognizer ( Qt::GestureType type )
 $staticMethod=|void|unregisterRecognizer|Qt::GestureType
 
 $extraMethods
