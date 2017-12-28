@@ -34,14 +34,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QHttpPart ()
-*/
+$prototype=QHttpPart ()
 $internalConstructor=|new1|
 
-/*
-QHttpPart ( const QHttpPart & other )
-*/
+$prototype=QHttpPart ( const QHttpPart & other )
 $internalConstructor=|new2|const QHttpPart &
 
 //[1]QHttpPart ()
@@ -65,24 +61,16 @@ HB_FUNC_STATIC( QHTTPPART_NEW )
 
 $deleteMethod
 
-/*
-void setBody ( const QByteArray & body )
-*/
+$prototype=void setBody ( const QByteArray & body )
 $method=|void|setBody|const QByteArray &
 
-/*
-void setBodyDevice ( QIODevice * device )
-*/
+$prototype=void setBodyDevice ( QIODevice * device )
 $method=|void|setBodyDevice|QIODevice *
 
-/*
-void setHeader ( QNetworkRequest::KnownHeaders header, const QVariant & value )
-*/
+$prototype=void setHeader ( QNetworkRequest::KnownHeaders header, const QVariant & value )
 $method=|void|setHeader|QNetworkRequest::KnownHeaders,const QVariant &
 
-/*
-void setRawHeader ( const QByteArray & headerName, const QByteArray & headerValue )
-*/
+$prototype=void setRawHeader ( const QByteArray & headerName, const QByteArray & headerValue )
 $method=|void|setRawHeader|const QByteArray &,const QByteArray &
 
 $extraMethods

@@ -27,16 +27,12 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QNetworkCookieJar ( QObject * parent = 0 )
-*/
+$prototype=QNetworkCookieJar ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-virtual QList<QNetworkCookie> cookiesForUrl ( const QUrl & url ) const
-*/
+$prototype=virtual QList<QNetworkCookie> cookiesForUrl ( const QUrl & url ) const
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_COOKIESFORURL )
 {
   QNetworkCookieJar * obj = (QNetworkCookieJar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -76,9 +72,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_COOKIESFORURL )
   }
 }
 
-/*
-virtual bool setCookiesFromUrl ( const QList<QNetworkCookie> & cookieList, const QUrl & url )
-*/
+$prototype=virtual bool setCookiesFromUrl ( const QList<QNetworkCookie> & cookieList, const QUrl & url )
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_SETCOOKIESFROMURL )
 {
   QNetworkCookieJar * obj = (QNetworkCookieJar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

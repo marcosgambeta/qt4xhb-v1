@@ -22,8 +22,6 @@ CLASS QSslSocket INHERIT QTcpSocket
    METHOD addCaCertificates
    METHOD caCertificates
    METHOD ciphers
-   METHOD connectToHostEncrypted1
-   METHOD connectToHostEncrypted2
    METHOD connectToHostEncrypted
    METHOD encryptedBytesAvailable
    METHOD encryptedBytesToWrite
@@ -109,31 +107,21 @@ $destructor
 #include <QSslCipher>
 #include <QSslConfiguration>
 
-/*
-QSslSocket ( QObject * parent = 0 )
-*/
+$prototype=QSslSocket ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-void abort ()
-*/
+$prototype=void abort ()
 $method=|void|abort|
 
-/*
-void addCaCertificate ( const QSslCertificate & certificate )
-*/
+$prototype=void addCaCertificate ( const QSslCertificate & certificate )
 $method=|void|addCaCertificate|const QSslCertificate &
 
-/*
-bool addCaCertificates ( const QString & path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString )
-*/
+$prototype=bool addCaCertificates ( const QString & path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString )
 $method=|bool|addCaCertificates,addCaCertificates1|const QString &,QSsl::EncodingFormat=QSsl::Pem,QRegExp::PatternSyntax=QRegExp::FixedString
 
-/*
-void addCaCertificates ( const QList<QSslCertificate> & certificates )
-*/
+$prototype=void addCaCertificates ( const QList<QSslCertificate> & certificates )
 HB_FUNC_STATIC( QSSLSOCKET_ADDCACERTIFICATES2 )
 {
   QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -173,9 +161,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ADDCACERTIFICATES )
   }
 }
 
-/*
-QList<QSslCertificate> caCertificates () const
-*/
+$prototype=QList<QSslCertificate> caCertificates () const
 HB_FUNC_STATIC( QSSLSOCKET_CACERTIFICATES )
 {
   QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -215,9 +201,7 @@ HB_FUNC_STATIC( QSSLSOCKET_CACERTIFICATES )
   }
 }
 
-/*
-QList<QSslCipher> ciphers () const
-*/
+$prototype=QList<QSslCipher> ciphers () const
 HB_FUNC_STATIC( QSSLSOCKET_CIPHERS )
 {
   QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -257,15 +241,11 @@ HB_FUNC_STATIC( QSSLSOCKET_CIPHERS )
   }
 }
 
-/*
-void connectToHostEncrypted ( const QString & hostName, quint16 port, OpenMode mode = ReadWrite )
-*/
-$method=|void|connectToHostEncrypted,connectToHostEncrypted1|const QString &,quint16,QIODevice::OpenMode=QIODevice::ReadWrite
+$prototype=void connectToHostEncrypted ( const QString & hostName, quint16 port, OpenMode mode = ReadWrite )
+$internalMethod=|void|connectToHostEncrypted,connectToHostEncrypted1|const QString &,quint16,QIODevice::OpenMode=QIODevice::ReadWrite
 
-/*
-void connectToHostEncrypted ( const QString & hostName, quint16 port, const QString & sslPeerName, OpenMode mode = ReadWrite )
-*/
-$method=|void|connectToHostEncrypted,connectToHostEncrypted2|const QString &,quint16,const QString &,QIODevice::OpenMode=QIODevice::ReadWrite
+$prototype=void connectToHostEncrypted ( const QString & hostName, quint16 port, const QString & sslPeerName, OpenMode mode = ReadWrite )
+$internalMethod=|void|connectToHostEncrypted,connectToHostEncrypted2|const QString &,quint16,const QString &,QIODevice::OpenMode=QIODevice::ReadWrite
 
 //[1]void connectToHostEncrypted ( const QString & hostName, quint16 port, OpenMode mode = ReadWrite )
 //[2]void connectToHostEncrypted ( const QString & hostName, quint16 port, const QString & sslPeerName, OpenMode mode = ReadWrite )
@@ -274,11 +254,11 @@ HB_FUNC_STATIC( QSSLSOCKET_CONNECTTOHOSTENCRYPTED )
 {
   if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QSSLSOCKET_CONNECTTOHOSTENCRYPTED1 );
+    QSslSocket_connectToHostEncrypted1();
   }
   else if( ISBETWEEN(3,4) && ISCHAR(1) && ISNUM(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QSSLSOCKET_CONNECTTOHOSTENCRYPTED2 );
+    QSslSocket_connectToHostEncrypted2();
   }
   else
   {
@@ -286,24 +266,16 @@ HB_FUNC_STATIC( QSSLSOCKET_CONNECTTOHOSTENCRYPTED )
   }
 }
 
-/*
-qint64 encryptedBytesAvailable () const
-*/
+$prototype=qint64 encryptedBytesAvailable () const
 $method=|qint64|encryptedBytesAvailable|
 
-/*
-qint64 encryptedBytesToWrite () const
-*/
+$prototype=qint64 encryptedBytesToWrite () const
 $method=|qint64|encryptedBytesToWrite|
 
-/*
-bool flush ()
-*/
+$prototype=bool flush ()
 $method=|bool|flush|
 
-/*
-void ignoreSslErrors ( const QList<QSslError> & errors )
-*/
+$prototype=void ignoreSslErrors ( const QList<QSslError> & errors )
 HB_FUNC_STATIC( QSSLSOCKET_IGNORESSLERRORS1 )
 {
   QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -324,9 +296,7 @@ HB_FUNC_STATIC( QSSLSOCKET_IGNORESSLERRORS1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void ignoreSslErrors ()
-*/
+$prototype=void ignoreSslErrors ()
 $method=|void|ignoreSslErrors,ignoreSslErrors2|
 
 //[1]void ignoreSslErrors ( const QList<QSslError> & errors )
@@ -348,29 +318,19 @@ HB_FUNC_STATIC( QSSLSOCKET_IGNORESSLERRORS )
   }
 }
 
-/*
-bool isEncrypted () const
-*/
+$prototype=bool isEncrypted () const
 $method=|bool|isEncrypted|
 
-/*
-QSslCertificate localCertificate () const
-*/
+$prototype=QSslCertificate localCertificate () const
 $method=|QSslCertificate|localCertificate|
 
-/*
-SslMode mode () const
-*/
+$prototype=SslMode mode () const
 $method=|QSslSocket::SslMode|mode|
 
-/*
-QSslCertificate peerCertificate () const
-*/
+$prototype=QSslCertificate peerCertificate () const
 $method=|QSslCertificate|peerCertificate|
 
-/*
-QList<QSslCertificate> peerCertificateChain () const
-*/
+$prototype=QList<QSslCertificate> peerCertificateChain () const
 HB_FUNC_STATIC( QSSLSOCKET_PEERCERTIFICATECHAIN )
 {
   QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -410,34 +370,22 @@ HB_FUNC_STATIC( QSSLSOCKET_PEERCERTIFICATECHAIN )
   }
 }
 
-/*
-int peerVerifyDepth () const
-*/
+$prototype=int peerVerifyDepth () const
 $method=|int|peerVerifyDepth|
 
-/*
-QSslSocket::PeerVerifyMode peerVerifyMode () const
-*/
+$prototype=QSslSocket::PeerVerifyMode peerVerifyMode () const
 $method=|QSslSocket::PeerVerifyMode|peerVerifyMode|
 
-/*
-QSslKey privateKey () const
-*/
+$prototype=QSslKey privateKey () const
 $method=|QSslKey|privateKey|
 
-/*
-QSsl::SslProtocol protocol () const
-*/
+$prototype=QSsl::SslProtocol protocol () const
 $method=|QSsl::SslProtocol|protocol|
 
-/*
-QSslCipher sessionCipher () const
-*/
+$prototype=QSslCipher sessionCipher () const
 $method=|QSslCipher|sessionCipher|
 
-/*
-void setCaCertificates ( const QList<QSslCertificate> & certificates )
-*/
+$prototype=void setCaCertificates ( const QList<QSslCertificate> & certificates )
 HB_FUNC_STATIC( QSSLSOCKET_SETCACERTIFICATES )
 {
   QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -458,9 +406,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETCACERTIFICATES )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setCiphers ( const QList<QSslCipher> & ciphers )
-*/
+$prototype=void setCiphers ( const QList<QSslCipher> & ciphers )
 HB_FUNC_STATIC( QSSLSOCKET_SETCIPHERS1 )
 {
   QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -481,9 +427,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETCIPHERS1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setCiphers ( const QString & ciphers )
-*/
+$prototype=void setCiphers ( const QString & ciphers )
 $method=|void|setCiphers,setCiphers2|const QString &
 
 //[1]void setCiphers ( const QList<QSslCipher> & ciphers )
@@ -505,14 +449,10 @@ HB_FUNC_STATIC( QSSLSOCKET_SETCIPHERS )
   }
 }
 
-/*
-void setLocalCertificate ( const QSslCertificate & certificate )
-*/
+$prototype=void setLocalCertificate ( const QSslCertificate & certificate )
 $method=|void|setLocalCertificate,setLocalCertificate1|const QSslCertificate &
 
-/*
-void setLocalCertificate ( const QString & path, QSsl::EncodingFormat format = QSsl::Pem )
-*/
+$prototype=void setLocalCertificate ( const QString & path, QSsl::EncodingFormat format = QSsl::Pem )
 $method=|void|setLocalCertificate,setLocalCertificate2|const QString &,QSsl::EncodingFormat=QSsl::Pem
 
 //[1]void setLocalCertificate ( const QSslCertificate & certificate )
@@ -534,24 +474,16 @@ HB_FUNC_STATIC( QSSLSOCKET_SETLOCALCERTIFICATE )
   }
 }
 
-/*
-void setPeerVerifyDepth ( int depth )
-*/
+$prototype=void setPeerVerifyDepth ( int depth )
 $method=|void|setPeerVerifyDepth|int
 
-/*
-void setPeerVerifyMode ( QSslSocket::PeerVerifyMode mode )
-*/
+$prototype=void setPeerVerifyMode ( QSslSocket::PeerVerifyMode mode )
 $method=|void|setPeerVerifyMode|QSslSocket::PeerVerifyMode
 
-/*
-void setPrivateKey ( const QSslKey & key )
-*/
+$prototype=void setPrivateKey ( const QSslKey & key )
 $method=|void|setPrivateKey,setPrivateKey1|const QSslKey &
 
-/*
-void setPrivateKey ( const QString & fileName, QSsl::KeyAlgorithm algorithm = QSsl::Rsa, QSsl::EncodingFormat format = QSsl::Pem, const QByteArray & passPhrase = QByteArray() )
-*/
+$prototype=void setPrivateKey ( const QString & fileName, QSsl::KeyAlgorithm algorithm = QSsl::Rsa, QSsl::EncodingFormat format = QSsl::Pem, const QByteArray & passPhrase = QByteArray() )
 $method=|void|setPrivateKey,setPrivateKey2|const QString &,QSsl::KeyAlgorithm=QSsl::Rsa,QSsl::EncodingFormat=QSsl::Pem,const QByteArray &=QByteArray()
 
 //[1]void setPrivateKey ( const QSslKey & key )
@@ -573,44 +505,28 @@ HB_FUNC_STATIC( QSSLSOCKET_SETPRIVATEKEY )
   }
 }
 
-/*
-void setProtocol ( QSsl::SslProtocol protocol )
-*/
+$prototype=void setProtocol ( QSsl::SslProtocol protocol )
 $method=|void|setProtocol|QSsl::SslProtocol
 
-/*
-void setReadBufferSize ( qint64 size )
-*/
+$prototype=void setReadBufferSize ( qint64 size )
 $method=|void|setReadBufferSize|qint64
 
-/*
-bool setSocketDescriptor ( int socketDescriptor, SocketState state = ConnectedState, OpenMode openMode = ReadWrite )
-*/
+$prototype=bool setSocketDescriptor ( int socketDescriptor, SocketState state = ConnectedState, OpenMode openMode = ReadWrite )
 $method=|bool|setSocketDescriptor|int,QAbstractSocket::SocketState=QAbstractSocket::ConnectedState,QIODevice::OpenMode=QIODevice::ReadWrite
 
-/*
-void setSocketOption ( QAbstractSocket::SocketOption option, const QVariant & value )
-*/
+$prototype=void setSocketOption ( QAbstractSocket::SocketOption option, const QVariant & value )
 $method=|void|setSocketOption|QAbstractSocket::SocketOption,const QVariant &
 
-/*
-void setSslConfiguration ( const QSslConfiguration & configuration )
-*/
+$prototype=void setSslConfiguration ( const QSslConfiguration & configuration )
 $method=|void|setSslConfiguration|const QSslConfiguration &
 
-/*
-QVariant socketOption ( QAbstractSocket::SocketOption option )
-*/
+$prototype=QVariant socketOption ( QAbstractSocket::SocketOption option )
 $method=|QVariant|socketOption|QAbstractSocket::SocketOption
 
-/*
-QSslConfiguration sslConfiguration () const
-*/
+$prototype=QSslConfiguration sslConfiguration () const
 $method=|QSslConfiguration|sslConfiguration|
 
-/*
-QList<QSslError> sslErrors () const
-*/
+$prototype=QList<QSslError> sslErrors () const
 HB_FUNC_STATIC( QSSLSOCKET_SSLERRORS )
 {
   QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -650,79 +566,49 @@ HB_FUNC_STATIC( QSSLSOCKET_SSLERRORS )
   }
 }
 
-/*
-bool waitForConnected ( int msecs = 30000 )
-*/
+$prototype=bool waitForConnected ( int msecs = 30000 )
 $method=|bool|waitForConnected|int=30000
 
-/*
-bool waitForDisconnected ( int msecs = 30000 )
-*/
+$prototype=bool waitForDisconnected ( int msecs = 30000 )
 $method=|bool|waitForDisconnected|int=30000
 
-/*
-bool waitForEncrypted ( int msecs = 30000 )
-*/
+$prototype=bool waitForEncrypted ( int msecs = 30000 )
 $method=|bool|waitForEncrypted|int=30000
 
-/*
-virtual bool atEnd () const
-*/
+$prototype=virtual bool atEnd () const
 $virtualMethod=|bool|atEnd|
 
-/*
-virtual qint64 bytesAvailable () const
-*/
+$prototype=virtual qint64 bytesAvailable () const
 $virtualMethod=|qint64|bytesAvailable|
 
-/*
-virtual qint64 bytesToWrite () const
-*/
+$prototype=virtual qint64 bytesToWrite () const
 $virtualMethod=|qint64|bytesToWrite|
 
-/*
-virtual bool canReadLine () const
-*/
+$prototype=virtual bool canReadLine () const
 $virtualMethod=|bool|canReadLine|
 
-/*
-virtual void close ()
-*/
+$prototype=virtual void close ()
 $virtualMethod=|void|close|
 
-/*
-virtual bool waitForBytesWritten ( int msecs = 30000 )
-*/
+$prototype=virtual bool waitForBytesWritten ( int msecs = 30000 )
 $virtualMethod=|bool|waitForBytesWritten|int=30000
 
-/*
-virtual bool waitForReadyRead ( int msecs = 30000 )
-*/
+$prototype=virtual bool waitForReadyRead ( int msecs = 30000 )
 $virtualMethod=|bool|waitForReadyRead|int=30000
 
-/*
-void startClientEncryption ()
-*/
+$prototype=void startClientEncryption ()
 $method=|void|startClientEncryption|
 
-/*
-void startServerEncryption ()
-*/
+$prototype=void startServerEncryption ()
 $method=|void|startServerEncryption|
 
-/*
-static void addDefaultCaCertificate ( const QSslCertificate & certificate )
-*/
+$prototype=static void addDefaultCaCertificate ( const QSslCertificate & certificate )
 $staticMethod=|void|addDefaultCaCertificate|const QSslCertificate &
 
-/*
-static bool addDefaultCaCertificates ( const QString & path, QSsl::EncodingFormat encoding = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString )
-*/
+$prototype=static bool addDefaultCaCertificates ( const QString & path, QSsl::EncodingFormat encoding = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString )
 $staticMethod=|bool|addDefaultCaCertificates,addDefaultCaCertificates1|const QString &,QSsl::EncodingFormat=QSsl::Pem,QRegExp::PatternSyntax=QRegExp::FixedString
 
-/*
-void addDefaultCaCertificates ( const QList<QSslCertificate> & certificates )
-*/
+$prototype=void addDefaultCaCertificates ( const QList<QSslCertificate> & certificates )
 HB_FUNC_STATIC( QSSLSOCKET_ADDDEFAULTCACERTIFICATES2 )
 {
   QList<QSslCertificate> par1;
@@ -756,9 +642,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ADDDEFAULTCACERTIFICATES )
   }
 }
 
-/*
-QList<QSslCertificate> defaultCaCertificates ()
-*/
+$prototype=QList<QSslCertificate> defaultCaCertificates ()
 HB_FUNC_STATIC( QSSLSOCKET_DEFAULTCACERTIFICATES )
 {
   QList<QSslCertificate> list = QSslSocket::defaultCaCertificates ();
@@ -793,9 +677,7 @@ HB_FUNC_STATIC( QSSLSOCKET_DEFAULTCACERTIFICATES )
   hb_itemReturnRelease(pArray);
 }
 
-/*
-QList<QSslCipher> defaultCiphers ()
-*/
+$prototype=QList<QSslCipher> defaultCiphers ()
 HB_FUNC_STATIC( QSSLSOCKET_DEFAULTCIPHERS )
 {
   QList<QSslCipher> list = QSslSocket::defaultCiphers ();
@@ -830,9 +712,7 @@ HB_FUNC_STATIC( QSSLSOCKET_DEFAULTCIPHERS )
   hb_itemReturnRelease(pArray);
 }
 
-/*
-void setDefaultCaCertificates ( const QList<QSslCertificate> & certificates )
-*/
+$prototype=void setDefaultCaCertificates ( const QList<QSslCertificate> & certificates )
 HB_FUNC_STATIC( QSSLSOCKET_SETDEFAULTCACERTIFICATES )
 {
   QList<QSslCertificate> par1;
@@ -847,9 +727,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETDEFAULTCACERTIFICATES )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setDefaultCiphers ( const QList<QSslCipher> & ciphers )
-*/
+$prototype=void setDefaultCiphers ( const QList<QSslCipher> & ciphers )
 HB_FUNC_STATIC( QSSLSOCKET_SETDEFAULTCIPHERS )
 {
   QList<QSslCipher> par1;
@@ -864,9 +742,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETDEFAULTCIPHERS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-QList<QSslCipher> supportedCiphers ()
-*/
+$prototype=QList<QSslCipher> supportedCiphers ()
 HB_FUNC_STATIC( QSSLSOCKET_SUPPORTEDCIPHERS )
 {
   QList<QSslCipher> list = QSslSocket::supportedCiphers ();
@@ -901,14 +777,10 @@ HB_FUNC_STATIC( QSSLSOCKET_SUPPORTEDCIPHERS )
   hb_itemReturnRelease(pArray);
 }
 
-/*
-static bool supportsSsl ()
-*/
+$prototype=static bool supportsSsl ()
 $staticMethod=|bool|supportsSsl|
 
-/*
-QList<QSslCertificate> systemCaCertificates ()
-*/
+$prototype=QList<QSslCertificate> systemCaCertificates ()
 HB_FUNC_STATIC( QSSLSOCKET_SYSTEMCACERTIFICATES )
 {
   QList<QSslCertificate> list = QSslSocket::systemCaCertificates ();

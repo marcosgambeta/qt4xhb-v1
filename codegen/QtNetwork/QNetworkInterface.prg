@@ -49,14 +49,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QNetworkInterface ()
-*/
+$prototype=QNetworkInterface ()
 $constructor=|new1|
 
-/*
-QNetworkInterface ( const QNetworkInterface & other )
-*/
+$prototype=QNetworkInterface ( const QNetworkInterface & other )
 $constructor=|new2|const QNetworkInterface &
 
 //[1]QNetworkInterface ()
@@ -80,9 +76,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NEW )
 
 $deleteMethod
 
-/*
-QList<QNetworkAddressEntry> addressEntries () const
-*/
+$prototype=QList<QNetworkAddressEntry> addressEntries () const
 HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
 {
   QNetworkInterface * obj = (QNetworkInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -122,39 +116,25 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
   }
 }
 
-/*
-InterfaceFlags flags () const
-*/
+$prototype=InterfaceFlags flags () const
 $method=|QNetworkInterface::InterfaceFlags|flags|
 
-/*
-QString hardwareAddress () const
-*/
+$prototype=QString hardwareAddress () const
 $method=|QString|hardwareAddress|
 
-/*
-QString humanReadableName () const
-*/
+$prototype=QString humanReadableName () const
 $method=|QString|humanReadableName|
 
-/*
-int index () const
-*/
+$prototype=int index () const
 $method=|int|index|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-QString name () const
-*/
+$prototype=QString name () const
 $method=|QString|name|
 
-/*
-QList<QHostAddress> allAddresses ()
-*/
+$prototype=QList<QHostAddress> allAddresses ()
 HB_FUNC_STATIC( QNETWORKINTERFACE_ALLADDRESSES )
 {
   QList<QHostAddress> list = QNetworkInterface::allAddresses ();
@@ -189,9 +169,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLADDRESSES )
   hb_itemReturnRelease(pArray);
 }
 
-/*
-QList<QNetworkInterface> allInterfaces ()
-*/
+$prototype=QList<QNetworkInterface> allInterfaces ()
 HB_FUNC_STATIC( QNETWORKINTERFACE_ALLINTERFACES )
 {
   QList<QNetworkInterface> list = QNetworkInterface::allInterfaces ();
@@ -226,14 +204,10 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLINTERFACES )
   hb_itemReturnRelease(pArray);
 }
 
-/*
-static QNetworkInterface interfaceFromIndex ( int index )
-*/
+$prototype=static QNetworkInterface interfaceFromIndex ( int index )
 $staticMethod=|QNetworkInterface|interfaceFromIndex|int
 
-/*
-static QNetworkInterface interfaceFromName ( const QString & name )
-*/
+$prototype=static QNetworkInterface interfaceFromName ( const QString & name )
 $staticMethod=|QNetworkInterface|interfaceFromName|const QString &
 
 $extraMethods

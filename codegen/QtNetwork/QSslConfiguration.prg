@@ -62,14 +62,10 @@ $destructor
 #include <QSslKey>
 #include <QSslCipher>
 
-/*
-QSslConfiguration ()
-*/
+$prototype=QSslConfiguration ()
 $constructor=|new1|
 
-/*
-QSslConfiguration ( const QSslConfiguration & other )
-*/
+$prototype=QSslConfiguration ( const QSslConfiguration & other )
 $constructor=|new2|const QSslConfiguration &
 
 //[1]QSslConfiguration ()
@@ -93,9 +89,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_NEW )
 
 $deleteMethod
 
-/*
-QList<QSslCertificate> caCertificates () const
-*/
+$prototype=QList<QSslCertificate> caCertificates () const
 HB_FUNC_STATIC( QSSLCONFIGURATION_CACERTIFICATES )
 {
   QSslConfiguration * obj = (QSslConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -135,9 +129,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_CACERTIFICATES )
   }
 }
 
-/*
-QList<QSslCipher> ciphers () const
-*/
+$prototype=QList<QSslCipher> ciphers () const
 HB_FUNC_STATIC( QSSLCONFIGURATION_CIPHERS )
 {
   QSslConfiguration * obj = (QSslConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -177,24 +169,16 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_CIPHERS )
   }
 }
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-QSslCertificate localCertificate () const
-*/
+$prototype=QSslCertificate localCertificate () const
 $method=|QSslCertificate|localCertificate|
 
-/*
-QSslCertificate peerCertificate () const
-*/
+$prototype=QSslCertificate peerCertificate () const
 $method=|QSslCertificate|peerCertificate|
 
-/*
-QList<QSslCertificate> peerCertificateChain () const
-*/
+$prototype=QList<QSslCertificate> peerCertificateChain () const
 HB_FUNC_STATIC( QSSLCONFIGURATION_PEERCERTIFICATECHAIN )
 {
   QSslConfiguration * obj = (QSslConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -234,34 +218,22 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PEERCERTIFICATECHAIN )
   }
 }
 
-/*
-int peerVerifyDepth () const
-*/
+$prototype=int peerVerifyDepth () const
 $method=|int|peerVerifyDepth|
 
-/*
-QSslSocket::PeerVerifyMode peerVerifyMode () const
-*/
+$prototype=QSslSocket::PeerVerifyMode peerVerifyMode () const
 $method=|QSslSocket::PeerVerifyMode|peerVerifyMode|
 
-/*
-QSslKey privateKey () const
-*/
+$prototype=QSslKey privateKey () const
 $method=|QSslKey|privateKey|
 
-/*
-QSsl::SslProtocol protocol () const
-*/
+$prototype=QSsl::SslProtocol protocol () const
 $method=|QSsl::SslProtocol|protocol|
 
-/*
-QSslCipher sessionCipher () const
-*/
+$prototype=QSslCipher sessionCipher () const
 $method=|QSslCipher|sessionCipher|
 
-/*
-void setCaCertificates ( const QList<QSslCertificate> & certificates )
-*/
+$prototype=void setCaCertificates ( const QList<QSslCertificate> & certificates )
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETCACERTIFICATES )
 {
   QSslConfiguration * obj = (QSslConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -282,9 +254,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETCACERTIFICATES )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setCiphers ( const QList<QSslCipher> & ciphers )
-*/
+$prototype=void setCiphers ( const QList<QSslCipher> & ciphers )
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETCIPHERS )
 {
   QSslConfiguration * obj = (QSslConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -305,39 +275,25 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETCIPHERS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setLocalCertificate ( const QSslCertificate & certificate )
-*/
+$prototype=void setLocalCertificate ( const QSslCertificate & certificate )
 $method=|void|setLocalCertificate|const QSslCertificate &
 
-/*
-void setPeerVerifyDepth ( int depth )
-*/
+$prototype=void setPeerVerifyDepth ( int depth )
 $method=|void|setPeerVerifyDepth|int
 
-/*
-void setPeerVerifyMode ( QSslSocket::PeerVerifyMode mode )
-*/
+$prototype=void setPeerVerifyMode ( QSslSocket::PeerVerifyMode mode )
 $method=|void|setPeerVerifyMode|QSslSocket::PeerVerifyMode
 
-/*
-void setPrivateKey ( const QSslKey & key )
-*/
+$prototype=void setPrivateKey ( const QSslKey & key )
 $method=|void|setPrivateKey|const QSslKey &
 
-/*
-void setProtocol ( QSsl::SslProtocol protocol )
-*/
+$prototype=void setProtocol ( QSsl::SslProtocol protocol )
 $method=|void|setProtocol|QSsl::SslProtocol
 
-/*
-static QSslConfiguration defaultConfiguration ()
-*/
+$prototype=static QSslConfiguration defaultConfiguration ()
 $staticMethod=|QSslConfiguration|defaultConfiguration|
 
-/*
-static void setDefaultConfiguration ( const QSslConfiguration & configuration )
-*/
+$prototype=static void setDefaultConfiguration ( const QSslConfiguration & configuration )
 $staticMethod=|void|setDefaultConfiguration|const QSslConfiguration &
 
 $extraMethods

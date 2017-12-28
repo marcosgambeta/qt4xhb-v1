@@ -61,19 +61,13 @@ $destructor
 #include <QDateTime>
 #include <QSslKey>
 
-/*
-QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
-*/
+$prototype=QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
 $constructor=|new1|QIODevice *,QSsl::EncodingFormat=QSsl::Pem
 
-/*
-QSslCertificate ( const QByteArray & data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem )
-*/
+$prototype=QSslCertificate ( const QByteArray & data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem )
 $constructor=|new2|const QByteArray &=QByteArray(),QSsl::EncodingFormat=QSsl::Pem
 
-/*
-QSslCertificate ( const QSslCertificate & other )
-*/
+$prototype=QSslCertificate ( const QSslCertificate & other )
 $constructor=|new3|const QSslCertificate &
 
 //[1]QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
@@ -102,84 +96,52 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_NEW )
 
 $deleteMethod
 
-/*
-void clear ()
-*/
+$prototype=void clear ()
 $method=|void|clear|
 
-/*
-QByteArray digest ( QCryptographicHash::Algorithm algorithm = QCryptographicHash::Md5 ) const
-*/
+$prototype=QByteArray digest ( QCryptographicHash::Algorithm algorithm = QCryptographicHash::Md5 ) const
 $method=|QByteArray|digest|QCryptographicHash::Algorithm=QCryptographicHash::Md5
 
-/*
-QDateTime effectiveDate () const
-*/
+$prototype=QDateTime effectiveDate () const
 $method=|QDateTime|effectiveDate|
 
-/*
-QDateTime expiryDate () const
-*/
+$prototype=QDateTime expiryDate () const
 $method=|QDateTime|expiryDate|
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-QString issuerInfo ( SubjectInfo subject ) const
-*/
+$prototype=QString issuerInfo ( SubjectInfo subject ) const
 $method=|QString|issuerInfo,issuerInfo1|QSslCertificate::SubjectInfo
 
-/*
-QString issuerInfo ( const QByteArray & tag ) const
-*/
+$prototype=QString issuerInfo ( const QByteArray & tag ) const
 $method=|QString|issuerInfo,issuerInfo2|const QByteArray &
 
-/*
-QSslKey publicKey () const
-*/
+$prototype=QSslKey publicKey () const
 $method=|QSslKey|publicKey|
 
-/*
-QByteArray serialNumber () const
-*/
+$prototype=QByteArray serialNumber () const
 $method=|QByteArray|serialNumber|
 
-/*
-QString subjectInfo ( SubjectInfo subject ) const
-*/
+$prototype=QString subjectInfo ( SubjectInfo subject ) const
 $method=|QString|subjectInfo,subjectInfo1|QSslCertificate::SubjectInfo
 
-/*
-QString subjectInfo ( const QByteArray & tag ) const
-*/
+$prototype=QString subjectInfo ( const QByteArray & tag ) const
 $method=|QString|subjectInfo,subjectInfo2|const QByteArray &
 
-/*
-QByteArray toDer () const
-*/
+$prototype=QByteArray toDer () const
 $method=|QByteArray|toDer|
 
-/*
-QByteArray toPem () const
-*/
+$prototype=QByteArray toPem () const
 $method=|QByteArray|toPem|
 
-/*
-QByteArray version () const
-*/
+$prototype=QByteArray version () const
 $method=|QByteArray|version|
 
-/*
-QList<QSslCertificate> fromData ( const QByteArray & data, QSsl::EncodingFormat format = QSsl::Pem )
-*/
+$prototype=QList<QSslCertificate> fromData ( const QByteArray & data, QSsl::EncodingFormat format = QSsl::Pem )
 HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDATA )
 {
   int par2 = ISNIL(2)? (int) QSsl::Pem : hb_parni(2);
@@ -215,9 +177,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDATA )
   hb_itemReturnRelease(pArray);
 }
 
-/*
-QList<QSslCertificate> fromDevice ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
-*/
+$prototype=QList<QSslCertificate> fromDevice ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
 HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDEVICE )
 {
   int par2 = ISNIL(2)? (int) QSsl::Pem : hb_parni(2);
@@ -253,9 +213,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDEVICE )
   hb_itemReturnRelease(pArray);
 }
 
-/*
-QList<QSslCertificate> fromPath ( const QString & path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString )
-*/
+$prototype=QList<QSslCertificate> fromPath ( const QString & path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString )
 HB_FUNC_STATIC( QSSLCERTIFICATE_FROMPATH )
 {
   int par2 = ISNIL(2)? (int) QSsl::Pem : hb_parni(2);

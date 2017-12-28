@@ -39,76 +39,48 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QNetworkDiskCache ( QObject * parent = 0 )
-*/
+$prototype=QNetworkDiskCache ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-QString cacheDirectory () const
-*/
+$prototype=QString cacheDirectory () const
 $method=|QString|cacheDirectory|
 
-/*
-QNetworkCacheMetaData fileMetaData ( const QString & fileName ) const
-*/
+$prototype=QNetworkCacheMetaData fileMetaData ( const QString & fileName ) const
 $method=|QNetworkCacheMetaData|fileMetaData|const QString &
 
-/*
-qint64 maximumCacheSize () const
-*/
+$prototype=qint64 maximumCacheSize () const
 $method=|qint64|maximumCacheSize|
 
-/*
-void setCacheDirectory ( const QString & cacheDir )
-*/
+$prototype=void setCacheDirectory ( const QString & cacheDir )
 $method=|void|setCacheDirectory|const QString &
 
-/*
-void setMaximumCacheSize ( qint64 size )
-*/
+$prototype=void setMaximumCacheSize ( qint64 size )
 $method=|void|setMaximumCacheSize|qint64
 
-/*
-virtual qint64 cacheSize () const
-*/
+$prototype=virtual qint64 cacheSize () const
 $virtualMethod=|qint64|cacheSize|
 
-/*
-virtual QIODevice * data ( const QUrl & url )
-*/
+$prototype=virtual QIODevice * data ( const QUrl & url )
 $virtualMethod=|QIODevice *|data|const QUrl &
 
-/*
-virtual void insert ( QIODevice * device )
-*/
+$prototype=virtual void insert ( QIODevice * device )
 $virtualMethod=|void|insert|QIODevice *
 
-/*
-virtual QNetworkCacheMetaData metaData ( const QUrl & url )
-*/
+$prototype=virtual QNetworkCacheMetaData metaData ( const QUrl & url )
 $virtualMethod=|QNetworkCacheMetaData|metaData|const QUrl &
 
-/*
-virtual QIODevice * prepare ( const QNetworkCacheMetaData & metaData )
-*/
+$prototype=virtual QIODevice * prepare ( const QNetworkCacheMetaData & metaData )
 $virtualMethod=|QIODevice *|prepare|const QNetworkCacheMetaData &
 
-/*
-virtual bool remove ( const QUrl & url )
-*/
+$prototype=virtual bool remove ( const QUrl & url )
 $virtualMethod=|bool|remove|const QUrl &
 
-/*
-virtual void updateMetaData ( const QNetworkCacheMetaData & metaData )
-*/
+$prototype=virtual void updateMetaData ( const QNetworkCacheMetaData & metaData )
 $virtualMethod=|void|updateMetaData|const QNetworkCacheMetaData &
 
-/*
-virtual void clear ()
-*/
+$prototype=virtual void clear ()
 $virtualMethod=|void|clear|
 
 #pragma ENDDUMP

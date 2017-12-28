@@ -46,14 +46,10 @@ $destructor
 
 #include <QDateTime>
 
-/*
-QNetworkCacheMetaData ()
-*/
+$prototype=QNetworkCacheMetaData ()
 $internalConstructor=|new1|
 
-/*
-QNetworkCacheMetaData ( const QNetworkCacheMetaData & other )
-*/
+$prototype=QNetworkCacheMetaData ( const QNetworkCacheMetaData & other )
 $internalConstructor=|new2|const QNetworkCacheMetaData &
 
 //[1]QNetworkCacheMetaData ()
@@ -77,49 +73,31 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_NEW )
 
 $deleteMethod
 
-/*
-QDateTime expirationDate () const
-*/
+$prototype=QDateTime expirationDate () const
 $method=|QDateTime|expirationDate|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-QDateTime lastModified () const
-*/
+$prototype=QDateTime lastModified () const
 $method=|QDateTime|lastModified|
 
-/*
-bool saveToDisk () const
-*/
+$prototype=bool saveToDisk () const
 $method=|bool|saveToDisk|
 
-/*
-void setExpirationDate ( const QDateTime & dateTime )
-*/
+$prototype=void setExpirationDate ( const QDateTime & dateTime )
 $method=|void|setExpirationDate|const QDateTime &
 
-/*
-void setLastModified ( const QDateTime & dateTime )
-*/
+$prototype=void setLastModified ( const QDateTime & dateTime )
 $method=|void|setLastModified|const QDateTime &
 
-/*
-void setSaveToDisk ( bool allow )
-*/
+$prototype=void setSaveToDisk ( bool allow )
 $method=|void|setSaveToDisk|bool
 
-/*
-void setUrl ( const QUrl & url )
-*/
+$prototype=void setUrl ( const QUrl & url )
 $method=|void|setUrl|const QUrl &
 
-/*
-QUrl url () const
-*/
+$prototype=QUrl url () const
 $method=|QUrl|url|
 
 $extraMethods

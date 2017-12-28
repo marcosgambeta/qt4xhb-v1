@@ -45,14 +45,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QNetworkConfiguration ()
-*/
+$prototype=QNetworkConfiguration ()
 $internalConstructor=|new1|
 
-/*
-QNetworkConfiguration ( const QNetworkConfiguration & other )
-*/
+$prototype=QNetworkConfiguration ( const QNetworkConfiguration & other )
 $internalConstructor=|new2|const QNetworkConfiguration &
 
 //[1]QNetworkConfiguration ()
@@ -76,24 +72,16 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW )
 
 $deleteMethod
 
-/*
-QString bearerName () const (deprecated)
-*/
+$prototype=QString bearerName () const (deprecated)
 $method=|QString|bearerName|
 
-/*
-BearerType bearerType () const
-*/
+$prototype=BearerType bearerType () const
 $method=|QNetworkConfiguration::BearerType|bearerType|
 
-/*
-QString bearerTypeName () const
-*/
+$prototype=QString bearerTypeName () const
 $method=|QString|bearerTypeName|
 
-/*
-QList<QNetworkConfiguration> children () const
-*/
+$prototype=QList<QNetworkConfiguration> children () const
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_CHILDREN )
 {
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -133,39 +121,25 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_CHILDREN )
   }
 }
 
-/*
-QString identifier () const
-*/
+$prototype=QString identifier () const
 $method=|QString|identifier|
 
-/*
-bool isRoamingAvailable () const
-*/
+$prototype=bool isRoamingAvailable () const
 $method=|bool|isRoamingAvailable|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-QString name () const
-*/
+$prototype=QString name () const
 $method=|QString|name|
 
-/*
-Purpose purpose () const
-*/
+$prototype=Purpose purpose () const
 $method=|QNetworkConfiguration::Purpose|purpose|
 
-/*
-StateFlags state () const
-*/
+$prototype=StateFlags state () const
 $method=|QNetworkConfiguration::StateFlags|state|
 
-/*
-Type type () const
-*/
+$prototype=Type type () const
 $method=|QNetworkConfiguration::Type|type|
 
 $extraMethods

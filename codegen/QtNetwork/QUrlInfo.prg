@@ -11,10 +11,6 @@ CLASS QUrlInfo
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD group
@@ -67,25 +63,17 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QUrlInfo ()
-*/
-$constructor=|new1|
+$prototype=QUrlInfo ()
+$internalConstructor=|new1|
 
-/*
-QUrlInfo ( const QUrlInfo & ui )
-*/
-$constructor=|new2|const QUrlInfo &
+$prototype=QUrlInfo ( const QUrlInfo & ui )
+$internalConstructor=|new2|const QUrlInfo &
 
-/*
-QUrlInfo ( const QString & name, int permissions, const QString & owner, const QString & group, qint64 size, const QDateTime & lastModified, const QDateTime & lastRead, bool isDir, bool isFile, bool isSymLink, bool isWritable, bool isReadable, bool isExecutable )
-*/
-$constructor=|new3|const QString &,int,const QString &,const QString &,qint64,const QDateTime &,const QDateTime &,bool,bool,bool,bool,bool,bool
+$prototype=QUrlInfo ( const QString & name, int permissions, const QString & owner, const QString & group, qint64 size, const QDateTime & lastModified, const QDateTime & lastRead, bool isDir, bool isFile, bool isSymLink, bool isWritable, bool isReadable, bool isExecutable )
+$internalConstructor=|new3|const QString &,int,const QString &,const QString &,qint64,const QDateTime &,const QDateTime &,bool,bool,bool,bool,bool,bool
 
-/*
-QUrlInfo ( const QUrl & url, int permissions, const QString & owner, const QString & group, qint64 size, const QDateTime & lastModified, const QDateTime & lastRead, bool isDir, bool isFile, bool isSymLink, bool isWritable, bool isReadable, bool isExecutable )
-*/
-$constructor=|new4|const QUrl &,int,const QString &,const QString &,qint64,const QDateTime &,const QDateTime &,bool,bool,bool,bool,bool,bool
+$prototype=QUrlInfo ( const QUrl & url, int permissions, const QString & owner, const QString & group, qint64 size, const QDateTime & lastModified, const QDateTime & lastRead, bool isDir, bool isFile, bool isSymLink, bool isWritable, bool isReadable, bool isExecutable )
+$internalConstructor=|new4|const QUrl &,int,const QString &,const QString &,qint64,const QDateTime &,const QDateTime &,bool,bool,bool,bool,bool,bool
 
 //[1]QUrlInfo ()
 //[2]QUrlInfo ( const QUrlInfo & ui )
@@ -96,19 +84,19 @@ HB_FUNC_STATIC( QURLINFO_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QURLINFO_NEW1 );
+    QUrlInfo_new1();
   }
   else if( ISNUMPAR(1) && ISQURLINFO(1) )
   {
-    HB_FUNC_EXEC( QURLINFO_NEW2 );
+    QUrlInfo_new2();
   }
   else if( ISNUMPAR(13) && ISCHAR(1) && ISNUM(2) && ISCHAR(3) && ISCHAR(4) && ISNUM(5) && ISQDATETIME(6) && ISQDATETIME(7) && ISLOG(8) && ISLOG(9) && ISLOG(10) && ISLOG(11) && ISLOG(12) && ISLOG(13) )
   {
-    HB_FUNC_EXEC( QURLINFO_NEW3 );
+    QUrlInfo_new3();
   }
   else if( ISNUMPAR(13) && ISQURL(1) && ISNUM(2) && ISCHAR(3) && ISCHAR(4) && ISNUM(5) && ISQDATETIME(6) && ISQDATETIME(7) && ISLOG(8) && ISLOG(9) && ISLOG(10) && ISLOG(11) && ISLOG(12) && ISLOG(13) )
   {
-    HB_FUNC_EXEC( QURLINFO_NEW4 );
+    QUrlInfo_new4();
   }
   else
   {
@@ -118,149 +106,91 @@ HB_FUNC_STATIC( QURLINFO_NEW )
 
 $deleteMethod
 
-/*
-QString group () const
-*/
+$prototype=QString group () const
 $method=|QString|group|
 
-/*
-bool isDir () const
-*/
+$prototype=bool isDir () const
 $method=|bool|isDir|
 
-/*
-bool isExecutable () const
-*/
+$prototype=bool isExecutable () const
 $method=|bool|isExecutable|
 
-/*
-bool isFile () const
-*/
+$prototype=bool isFile () const
 $method=|bool|isFile|
 
-/*
-bool isReadable () const
-*/
+$prototype=bool isReadable () const
 $method=|bool|isReadable|
 
-/*
-bool isSymLink () const
-*/
+$prototype=bool isSymLink () const
 $method=|bool|isSymLink|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-bool isWritable () const
-*/
+$prototype=bool isWritable () const
 $method=|bool|isWritable|
 
-/*
-QDateTime lastModified () const
-*/
+$prototype=QDateTime lastModified () const
 $method=|QDateTime|lastModified|
 
-/*
-QDateTime lastRead () const
-*/
+$prototype=QDateTime lastRead () const
 $method=|QDateTime|lastRead|
 
-/*
-QString name () const
-*/
+$prototype=QString name () const
 $method=|QString|name|
 
-/*
-QString owner () const
-*/
+$prototype=QString owner () const
 $method=|QString|owner|
 
-/*
-int permissions () const
-*/
+$prototype=int permissions () const
 $method=|int|permissions|
 
-/*
-virtual void setDir ( bool b )
-*/
+$prototype=virtual void setDir ( bool b )
 $virtualMethod=|void|setDir|bool
 
-/*
-virtual void setFile ( bool b )
-*/
+$prototype=virtual void setFile ( bool b )
 $virtualMethod=|void|setFile|bool
 
-/*
-virtual void setGroup ( const QString & s )
-*/
+$prototype=virtual void setGroup ( const QString & s )
 $virtualMethod=|void|setGroup|const QString &
 
-/*
-virtual void setLastModified ( const QDateTime & dt )
-*/
+$prototype=virtual void setLastModified ( const QDateTime & dt )
 $virtualMethod=|void|setLastModified|const QDateTime &
 
-/*
-void setLastRead ( const QDateTime & dt )
-*/
+$prototype=void setLastRead ( const QDateTime & dt )
 $method=|void|setLastRead|const QDateTime &
 
-/*
-virtual void setName ( const QString & name )
-*/
+$prototype=virtual void setName ( const QString & name )
 $virtualMethod=|void|setName|const QString &
 
-/*
-virtual void setOwner ( const QString & s )
-*/
+$prototype=virtual void setOwner ( const QString & s )
 $virtualMethod=|void|setOwner|const QString &
 
-/*
-virtual void setPermissions ( int p )
-*/
+$prototype=virtual void setPermissions ( int p )
 $virtualMethod=|void|setPermissions|int
 
-/*
-virtual void setReadable ( bool b )
-*/
+$prototype=virtual void setReadable ( bool b )
 $virtualMethod=|void|setReadable|bool
 
-/*
-virtual void setSize ( qint64 size )
-*/
+$prototype=virtual void setSize ( qint64 size )
 $virtualMethod=|void|setSize|qint64
 
-/*
-virtual void setSymLink ( bool b )
-*/
+$prototype=virtual void setSymLink ( bool b )
 $virtualMethod=|void|setSymLink|bool
 
-/*
-virtual void setWritable ( bool b )
-*/
+$prototype=virtual void setWritable ( bool b )
 $virtualMethod=|void|setWritable|bool
 
-/*
-qint64 size () const
-*/
+$prototype=qint64 size () const
 $method=|qint64|size|
 
-/*
-static bool equal ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
-*/
+$prototype=static bool equal ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 $staticMethod=|bool|equal|const QUrlInfo &,const QUrlInfo &,int
 
-/*
-static bool greaterThan ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
-*/
+$prototype=static bool greaterThan ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 $staticMethod=|bool|greaterThan|const QUrlInfo &,const QUrlInfo &,int
 
-/*
-static bool lessThan ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
-*/
+$prototype=static bool lessThan ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 $staticMethod=|bool|lessThan|const QUrlInfo &,const QUrlInfo &,int
 
 $extraMethods

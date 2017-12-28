@@ -11,10 +11,6 @@ CLASS QSslError
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD certificate
@@ -41,25 +37,17 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QSslError ()
-*/
-$constructor=|new1|
+$prototype=QSslError ()
+$internalConstructor=|new1|
 
-/*
-QSslError ( SslError error )
-*/
-$constructor=|new2|QSslError::SslError
+$prototype=QSslError ( SslError error )
+$internalConstructor=|new2|QSslError::SslError
 
-/*
-QSslError ( SslError error, const QSslCertificate & certificate )
-*/
-$constructor=|new3|QSslError::SslError,const QSslCertificate &
+$prototype=QSslError ( SslError error, const QSslCertificate & certificate )
+$internalConstructor=|new3|QSslError::SslError,const QSslCertificate &
 
-/*
-QSslError ( const QSslError & other )
-*/
-$constructor=|new4|const QSslError &
+$prototype=QSslError ( const QSslError & other )
+$internalConstructor=|new4|const QSslError &
 
 //[1]QSslError ()
 //[2]QSslError ( SslError error )
@@ -70,19 +58,19 @@ HB_FUNC_STATIC( QSSLERROR_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSSLERROR_NEW1 );
+    QSslError_new1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QSSLERROR_NEW2 );
+    QSslError_new2();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISQSSLCERTIFICATE(2) )
   {
-    HB_FUNC_EXEC( QSSLERROR_NEW3 );
+    QSslError_new3();
   }
   else if( ISNUMPAR(1) && ISQSSLERROR(1) )
   {
-    HB_FUNC_EXEC( QSSLERROR_NEW4 );
+    QSslError_new4();
   }
   else
   {
@@ -92,19 +80,13 @@ HB_FUNC_STATIC( QSSLERROR_NEW )
 
 $deleteMethod
 
-/*
-QSslCertificate certificate () const
-*/
+$prototype=QSslCertificate certificate () const
 $method=|QSslCertificate|certificate|
 
-/*
-SslError error () const
-*/
+$prototype=SslError error () const
 $method=|QSslError::SslError|error|
 
-/*
-QString errorString () const
-*/
+$prototype=QString errorString () const
 $method=|QString|errorString|
 
 $extraMethods

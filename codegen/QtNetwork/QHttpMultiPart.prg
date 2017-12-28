@@ -29,14 +29,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QHttpMultiPart ( QObject * parent = 0 )
-*/
+$prototype=QHttpMultiPart ( QObject * parent = 0 )
 $internalConstructor=|new1|QObject *=0
 
-/*
-QHttpMultiPart ( ContentType contentType, QObject * parent = 0 )
-*/
+$prototype=QHttpMultiPart ( ContentType contentType, QObject * parent = 0 )
 $internalConstructor=|new2|QHttpMultiPart::ContentType,QObject *=0
 
 //[1]QHttpMultiPart ( QObject * parent = 0 )
@@ -60,24 +56,16 @@ HB_FUNC_STATIC( QHTTPMULTIPART_NEW )
 
 $deleteMethod
 
-/*
-void append ( const QHttpPart & httpPart )
-*/
+$prototype=void append ( const QHttpPart & httpPart )
 $method=|void|append|const QHttpPart &
 
-/*
-QByteArray boundary () const
-*/
+$prototype=QByteArray boundary () const
 $method=|QByteArray|boundary|
 
-/*
-void setBoundary ( const QByteArray & boundary )
-*/
+$prototype=void setBoundary ( const QByteArray & boundary )
 $method=|void|setBoundary|const QByteArray &
 
-/*
-void setContentType ( ContentType contentType )
-*/
+$prototype=void setContentType ( ContentType contentType )
 $method=|void|setContentType|QHttpMultiPart::ContentType
 
 #pragma ENDDUMP

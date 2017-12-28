@@ -61,34 +61,22 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual void abort () = 0
-*/
+$prototype=virtual void abort () = 0
 $virtualMethod=|void|abort|
 
-/*
-QVariant attribute ( QNetworkRequest::Attribute code ) const
-*/
+$prototype=QVariant attribute ( QNetworkRequest::Attribute code ) const
 $method=|QVariant|attribute|QNetworkRequest::Attribute
 
-/*
-NetworkError error () const
-*/
+$prototype=NetworkError error () const
 $method=|QNetworkReply::NetworkError|error|
 
-/*
-bool hasRawHeader ( const QByteArray & headerName ) const
-*/
+$prototype=bool hasRawHeader ( const QByteArray & headerName ) const
 $method=|bool|hasRawHeader|const QByteArray &
 
-/*
-QVariant header ( QNetworkRequest::KnownHeaders header ) const
-*/
+$prototype=QVariant header ( QNetworkRequest::KnownHeaders header ) const
 $method=|QVariant|header|QNetworkRequest::KnownHeaders
 
-/*
-void ignoreSslErrors ( const QList<QSslError> & errors )
-*/
+$prototype=void ignoreSslErrors ( const QList<QSslError> & errors )
 HB_FUNC_STATIC( QNETWORKREPLY_IGNORESSLERRORS1 )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -109,9 +97,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_IGNORESSLERRORS1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-virtual void ignoreSslErrors ()
-*/
+$prototype=virtual void ignoreSslErrors ()
 $virtualMethod=|void|ignoreSslErrors,ignoreSslErrors2|
 
 //[1]void ignoreSslErrors ( const QList<QSslError> & errors )
@@ -133,34 +119,22 @@ HB_FUNC_STATIC( QNETWORKREPLY_IGNORESSLERRORS )
   }
 }
 
-/*
-bool isFinished () const
-*/
+$prototype=bool isFinished () const
 $method=|bool|isFinished|
 
-/*
-bool isRunning () const
-*/
+$prototype=bool isRunning () const
 $method=|bool|isRunning|
 
-/*
-QNetworkAccessManager * manager () const
-*/
+$prototype=QNetworkAccessManager * manager () const
 $method=|QNetworkAccessManager *|manager|
 
-/*
-QNetworkAccessManager::Operation operation () const
-*/
+$prototype=QNetworkAccessManager::Operation operation () const
 $method=|QNetworkAccessManager::Operation|operation|
 
-/*
-QByteArray rawHeader ( const QByteArray & headerName ) const
-*/
+$prototype=QByteArray rawHeader ( const QByteArray & headerName ) const
 $method=|QByteArray|rawHeader|const QByteArray &
 
-/*
-QList<QByteArray> rawHeaderList () const
-*/
+$prototype=QList<QByteArray> rawHeaderList () const
 HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADERLIST )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -196,39 +170,25 @@ HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADERLIST )
   }
 }
 
-/*
-qint64 readBufferSize () const
-*/
+$prototype=qint64 readBufferSize () const
 $method=|qint64|readBufferSize|
 
-/*
-QNetworkRequest request () const
-*/
+$prototype=QNetworkRequest request () const
 $method=|QNetworkRequest|request|
 
-/*
-virtual void setReadBufferSize ( qint64 size )
-*/
+$prototype=virtual void setReadBufferSize ( qint64 size )
 $virtualMethod=|void|setReadBufferSize|qint64
 
-/*
-void setSslConfiguration ( const QSslConfiguration & config )
-*/
+$prototype=void setSslConfiguration ( const QSslConfiguration & config )
 $method=|void|setSslConfiguration|const QSslConfiguration &
 
-/*
-QSslConfiguration sslConfiguration () const
-*/
+$prototype=QSslConfiguration sslConfiguration () const
 $method=|QSslConfiguration|sslConfiguration|
 
-/*
-QUrl url () const
-*/
+$prototype=QUrl url () const
 $method=|QUrl|url|
 
-/*
-virtual void close ()
-*/
+$prototype=virtual void close ()
 $virtualMethod=|void|close|
 
 #pragma ENDDUMP

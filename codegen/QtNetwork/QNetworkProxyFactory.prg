@@ -40,9 +40,7 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual QList<QNetworkProxy> queryProxy ( const QNetworkProxyQuery & query = QNetworkProxyQuery() ) = 0
-*/
+$prototype=virtual QList<QNetworkProxy> queryProxy ( const QNetworkProxyQuery & query = QNetworkProxyQuery() ) = 0
 HB_FUNC_STATIC( QNETWORKPROXYFACTORY_QUERYPROXY )
 {
   QNetworkProxyFactory * obj = (QNetworkProxyFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -83,9 +81,7 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_QUERYPROXY )
   }
 }
 
-/*
-static QList<QNetworkProxy> proxyForQuery ( const QNetworkProxyQuery & query )
-*/
+$prototype=static QList<QNetworkProxy> proxyForQuery ( const QNetworkProxyQuery & query )
 HB_FUNC_STATIC( QNETWORKPROXYFACTORY_PROXYFORQUERY )
 {
   QList<QNetworkProxy> list = QNetworkProxyFactory::proxyForQuery ( *PQNETWORKPROXYQUERY(1) );
@@ -120,19 +116,13 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_PROXYFORQUERY )
   hb_itemReturnRelease(pArray);
 }
 
-/*
-static void setApplicationProxyFactory ( QNetworkProxyFactory * factory )
-*/
+$prototype=static void setApplicationProxyFactory ( QNetworkProxyFactory * factory )
 $staticMethod=|void|setApplicationProxyFactory|QNetworkProxyFactory *
 
-/*
-static void setUseSystemConfiguration ( bool enable )
-*/
+$prototype=static void setUseSystemConfiguration ( bool enable )
 $staticMethod=|void|setUseSystemConfiguration|bool
 
-/*
-static QList<QNetworkProxy> systemProxyForQuery ( const QNetworkProxyQuery & query = QNetworkProxyQuery() )
-*/
+$prototype=static QList<QNetworkProxy> systemProxyForQuery ( const QNetworkProxyQuery & query = QNetworkProxyQuery() )
 HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SYSTEMPROXYFORQUERY )
 {
   QNetworkProxyQuery par1 = ISNIL(1)? QNetworkProxyQuery() : *(QNetworkProxyQuery *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );

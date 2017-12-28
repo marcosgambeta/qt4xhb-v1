@@ -11,10 +11,6 @@ CLASS QSslKey
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD algorithm
@@ -45,25 +41,17 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QSslKey ()
-*/
-$constructor=|new1|
+$prototype=QSslKey ()
+$internalConstructor=|new1|
 
-/*
-QSslKey ( const QByteArray & encoded, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray() )
-*/
-$constructor=|new2|const QByteArray &,QSsl::KeyAlgorithm,QSsl::EncodingFormat=QSsl::Pem,QSsl::KeyType=QSsl::PrivateKey,const QByteArray &=QByteArray()
+$prototype=QSslKey ( const QByteArray & encoded, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray() )
+$internalConstructor=|new2|const QByteArray &,QSsl::KeyAlgorithm,QSsl::EncodingFormat=QSsl::Pem,QSsl::KeyType=QSsl::PrivateKey,const QByteArray &=QByteArray()
 
-/*
-QSslKey ( QIODevice * device, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray() )
-*/
-$constructor=|new3|QIODevice *,QSsl::KeyAlgorithm,QSsl::EncodingFormat=QSsl::Pem,QSsl::KeyType=QSsl::PrivateKey,const QByteArray &=QByteArray()
+$prototype=QSslKey ( QIODevice * device, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray() )
+$internalConstructor=|new3|QIODevice *,QSsl::KeyAlgorithm,QSsl::EncodingFormat=QSsl::Pem,QSsl::KeyType=QSsl::PrivateKey,const QByteArray &=QByteArray()
 
-/*
-QSslKey ( const QSslKey & other )
-*/
-$constructor=|new4|const QSslKey &
+$prototype=QSslKey ( const QSslKey & other )
+$internalConstructor=|new4|const QSslKey &
 
 //[1]QSslKey ()
 //[2]QSslKey ( const QByteArray & encoded, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray() )
@@ -74,19 +62,19 @@ HB_FUNC_STATIC( QSSLKEY_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSSLKEY_NEW1 );
+    QSslKey_new1();
   }
   else if( ISBETWEEN(2,5) && ISQBYTEARRAY(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) && (ISQBYTEARRAY(5)||ISNIL(5)) )
   {
-    HB_FUNC_EXEC( QSSLKEY_NEW2 );
+    QSslKey_new2();
   }
   else if( ISBETWEEN(2,5) && ISQIODEVICE(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) && (ISQBYTEARRAY(5)||ISNIL(5)) )
   {
-    HB_FUNC_EXEC( QSSLKEY_NEW3 );
+    QSslKey_new3();
   }
   else if( ISNUMPAR(1) && ISQSSLKEY(1) )
   {
-    HB_FUNC_EXEC( QSSLKEY_NEW4 );
+    QSslKey_new4();
   }
   else
   {
@@ -96,39 +84,25 @@ HB_FUNC_STATIC( QSSLKEY_NEW )
 
 $deleteMethod
 
-/*
-QSsl::KeyAlgorithm algorithm () const
-*/
+$prototype=QSsl::KeyAlgorithm algorithm () const
 $method=|QSsl::KeyAlgorithm|algorithm|
 
-/*
-void clear ()
-*/
+$prototype=void clear ()
 $method=|void|clear|
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-int length () const
-*/
+$prototype=int length () const
 $method=|int|length|
 
-/*
-QByteArray toDer ( const QByteArray & passPhrase = QByteArray() ) const
-*/
+$prototype=QByteArray toDer ( const QByteArray & passPhrase = QByteArray() ) const
 $method=|QByteArray|toDer|const QByteArray &=QByteArray()
 
-/*
-QByteArray toPem ( const QByteArray & passPhrase = QByteArray() ) const
-*/
+$prototype=QByteArray toPem ( const QByteArray & passPhrase = QByteArray() ) const
 $method=|QByteArray|toPem|const QByteArray &=QByteArray()
 
-/*
-QSsl::KeyType type () const
-*/
+$prototype=QSsl::KeyType type () const
 $method=|QSsl::KeyType|type|
 
 $extraMethods

@@ -63,96 +63,60 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QFtp ( QObject * parent = 0 )
-*/
+$prototype=QFtp ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-qint64 bytesAvailable () const
-*/
+$prototype=qint64 bytesAvailable () const
 $method=|qint64|bytesAvailable|
 
-/*
-int cd ( const QString & dir )
-*/
+$prototype=int cd ( const QString & dir )
 $method=|int|cd|const QString &
 
-/*
-void clearPendingCommands ()
-*/
+$prototype=void clearPendingCommands ()
 $method=|void|clearPendingCommands|
 
-/*
-int close ()
-*/
+$prototype=int close ()
 $method=|int|close|
 
-/*
-int connectToHost ( const QString & host, quint16 port = 21 )
-*/
+$prototype=int connectToHost ( const QString & host, quint16 port = 21 )
 $method=|int|connectToHost|const QString &,quint16=21
 
-/*
-Command currentCommand () const
-*/
+$prototype=Command currentCommand () const
 $method=|QFtp::Command|currentCommand|
 
-/*
-QIODevice * currentDevice () const
-*/
+$prototype=QIODevice * currentDevice () const
 $method=|QIODevice *|currentDevice|
 
-/*
-int currentId () const
-*/
+$prototype=int currentId () const
 $method=|int|currentId|
 
-/*
-Error error () const
-*/
+$prototype=Error error () const
 $method=|QFtp::Error|error|
 
-/*
-QString errorString () const
-*/
+$prototype=QString errorString () const
 $method=|QString|errorString|
 
-/*
-int get ( const QString & file, QIODevice * dev = 0, TransferType type = Binary )
-*/
+$prototype=int get ( const QString & file, QIODevice * dev = 0, TransferType type = Binary )
 $method=|int|get|const QString &,QIODevice *=0,QFtp::TransferType=QFtp::Binary
 
-/*
-bool hasPendingCommands () const
-*/
+$prototype=bool hasPendingCommands () const
 $method=|bool|hasPendingCommands|
 
-/*
-int list ( const QString & dir = QString() )
-*/
+$prototype=int list ( const QString & dir = QString() )
 $method=|int|list|const QString &=QString()
 
-/*
-int login ( const QString & user = QString(), const QString & password = QString() )
-*/
+$prototype=int login ( const QString & user = QString(), const QString & password = QString() )
 $method=|int|login|const QString &=QString(),const QString &=QString()
 
-/*
-int mkdir ( const QString & dir )
-*/
+$prototype=int mkdir ( const QString & dir )
 $method=|int|mkdir|const QString &
 
-/*
-int put ( QIODevice * dev, const QString & file, TransferType type = Binary )
-*/
+$prototype=int put ( QIODevice * dev, const QString & file, TransferType type = Binary )
 $method=|int|put,put1|QIODevice *,const QString &,QFtp::TransferType=QFtp::Binary
 
-/*
-int put ( const QByteArray & data, const QString & file, TransferType type = Binary )
-*/
+$prototype=int put ( const QByteArray & data, const QString & file, TransferType type = Binary )
 $method=|int|put,put2|const QByteArray &,const QString &,QFtp::TransferType=QFtp::Binary
 
 //[1]int put ( QIODevice * dev, const QString & file, TransferType type = Binary )
@@ -174,55 +138,35 @@ HB_FUNC_STATIC( QFTP_PUT )
   }
 }
 
-/*
-int rawCommand ( const QString & command )
-*/
+$prototype=int rawCommand ( const QString & command )
 $method=|int|rawCommand|const QString &
 
-/*
-qint64 read ( char * data, qint64 maxlen )
-*/
+$prototype=qint64 read ( char * data, qint64 maxlen )
 %% TODO: corrigir 'char *'
 $method=|qint64|read|char *,qint64
 
-/*
-QByteArray readAll ()
-*/
+$prototype=QByteArray readAll ()
 $method=|QByteArray|readAll|
 
-/*
-int remove ( const QString & file )
-*/
+$prototype=int remove ( const QString & file )
 $method=|int|remove|const QString &
 
-/*
-int rename ( const QString & oldname, const QString & newname )
-*/
+$prototype=int rename ( const QString & oldname, const QString & newname )
 $method=|int|rename|const QString &,const QString &
 
-/*
-int rmdir ( const QString & dir )
-*/
+$prototype=int rmdir ( const QString & dir )
 $method=|int|rmdir|const QString &
 
-/*
-int setProxy ( const QString & host, quint16 port )
-*/
+$prototype=int setProxy ( const QString & host, quint16 port )
 $method=|int|setProxy|const QString &,quint16
 
-/*
-int setTransferMode ( TransferMode mode )
-*/
+$prototype=int setTransferMode ( TransferMode mode )
 $method=|int|setTransferMode|QFtp::TransferMode
 
-/*
-State state () const
-*/
+$prototype=State state () const
 $method=|QFtp::State|state|
 
-/*
-void abort ()
-*/
+$prototype=void abort ()
 $method=|void|abort|
 
 #pragma ENDDUMP
