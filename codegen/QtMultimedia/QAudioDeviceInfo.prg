@@ -51,14 +51,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QAudioDeviceInfo ()
-*/
+$prototype=QAudioDeviceInfo ()
 $internalConstructor=|new1|
 
-/*
-QAudioDeviceInfo ( const QAudioDeviceInfo & other )
-*/
+$prototype=QAudioDeviceInfo ( const QAudioDeviceInfo & other )
 $internalConstructor=|new2|const QAudioDeviceInfo &
 
 //[1]QAudioDeviceInfo ()
@@ -82,34 +78,22 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_NEW )
 
 $deleteMethod
 
-/*
-QString deviceName () const
-*/
+$prototype=QString deviceName () const
 $method=|QString|deviceName|
 
-/*
-bool isFormatSupported ( const QAudioFormat & settings ) const
-*/
+$prototype=bool isFormatSupported ( const QAudioFormat & settings ) const
 $method=|bool|isFormatSupported|const QAudioFormat &
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-QAudioFormat nearestFormat ( const QAudioFormat & settings ) const
-*/
+$prototype=QAudioFormat nearestFormat ( const QAudioFormat & settings ) const
 $method=|QAudioFormat|nearestFormat|const QAudioFormat &
 
-/*
-QAudioFormat preferredFormat () const
-*/
+$prototype=QAudioFormat preferredFormat () const
 $method=|QAudioFormat|preferredFormat|
 
-/*
-QList<int> supportedFrequencies() const
-*/
+$prototype=QList<int> supportedFrequencies() const
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDFREQUENCIES )
 {
   QAudioDeviceInfo * obj = (QAudioDeviceInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -129,9 +113,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDFREQUENCIES )
   }
 }
 
-/*
-QList<int> supportedSampleRates () const
-*/
+$prototype=QList<int> supportedSampleRates () const
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLERATES )
 {
   QAudioDeviceInfo * obj = (QAudioDeviceInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -151,9 +133,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLERATES )
   }
 }
 
-/*
-QList<int> supportedChannels() const
-*/
+$prototype=QList<int> supportedChannels() const
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDCHANNELS )
 {
   QAudioDeviceInfo * obj = (QAudioDeviceInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -173,9 +153,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDCHANNELS )
   }
 }
 
-/*
-QList<int> supportedChannelCounts () const
-*/
+$prototype=QList<int> supportedChannelCounts () const
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDCHANNELCOUNTS )
 {
   QAudioDeviceInfo * obj = (QAudioDeviceInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -195,9 +173,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDCHANNELCOUNTS )
   }
 }
 
-/*
-QList<int> supportedSampleSizes () const
-*/
+$prototype=QList<int> supportedSampleSizes () const
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLESIZES )
 {
   QAudioDeviceInfo * obj = (QAudioDeviceInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -217,9 +193,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLESIZES )
   }
 }
 
-/*
-QList<QAudioFormat::Endian> supportedByteOrders () const
-*/
+$prototype=QList<QAudioFormat::Endian> supportedByteOrders () const
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDBYTEORDERS )
 {
   QAudioDeviceInfo * obj = (QAudioDeviceInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -239,9 +213,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDBYTEORDERS )
   }
 }
 
-/*
-QList<QAudioFormat::SampleType> supportedSampleTypes () const
-*/
+$prototype=QList<QAudioFormat::SampleType> supportedSampleTypes () const
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLETYPES )
 {
   QAudioDeviceInfo * obj = (QAudioDeviceInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -261,14 +233,10 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLETYPES )
   }
 }
 
-/*
-QStringList supportedCodecs () const
-*/
+$prototype=QStringList supportedCodecs () const
 $method=|QStringList|supportedCodecs|
 
-/*
-static QList<QAudioDeviceInfo> availableDevices ( QAudio::Mode mode )
-*/
+$prototype=static QList<QAudioDeviceInfo> availableDevices ( QAudio::Mode mode )
 HB_FUNC_STATIC( QAUDIODEVICEINFO_AVAILABLEDEVICES )
 {
   QList<QAudioDeviceInfo> list = QAudioDeviceInfo::availableDevices ( (QAudio::Mode) hb_parni(1) );
@@ -300,14 +268,10 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_AVAILABLEDEVICES )
 }
 
 
-/*
-static QAudioDeviceInfo defaultInputDevice ()
-*/
+$prototype=static QAudioDeviceInfo defaultInputDevice ()
 $staticMethod=|QAudioDeviceInfo|defaultInputDevice|
 
-/*
-static QAudioDeviceInfo defaultOutputDevice ()
-*/
+$prototype=static QAudioDeviceInfo defaultOutputDevice ()
 $staticMethod=|QAudioDeviceInfo|defaultOutputDevice|
 
 $extraMethods

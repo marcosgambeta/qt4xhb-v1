@@ -41,44 +41,28 @@ $destructor
 
 $deleteMethod
 
-/*
-Error error () const
-*/
+$prototype=Error error () const
 $method=|QAbstractVideoSurface::Error|error|
 
-/*
-bool isActive () const
-*/
+$prototype=bool isActive () const
 $method=|bool|isActive|
 
-/*
-virtual bool isFormatSupported ( const QVideoSurfaceFormat & format ) const
-*/
+$prototype=virtual bool isFormatSupported ( const QVideoSurfaceFormat & format ) const
 $virtualMethod=|bool|isFormatSupported|const QVideoSurfaceFormat &
 
-/*
-virtual QVideoSurfaceFormat nearestFormat ( const QVideoSurfaceFormat & format ) const
-*/
+$prototype=virtual QVideoSurfaceFormat nearestFormat ( const QVideoSurfaceFormat & format ) const
 $virtualMethod=|QVideoSurfaceFormat|nearestFormat|const QVideoSurfaceFormat &
 
-/*
-virtual bool present ( const QVideoFrame & frame ) = 0
-*/
+$prototype=virtual bool present ( const QVideoFrame & frame ) = 0
 $virtualMethod=|bool|present|const QVideoFrame &
 
-/*
-virtual bool start ( const QVideoSurfaceFormat & format )
-*/
+$prototype=virtual bool start ( const QVideoSurfaceFormat & format )
 $virtualMethod=|bool|start|const QVideoSurfaceFormat &
 
-/*
-virtual void stop ()
-*/
+$prototype=virtual void stop ()
 $virtualMethod=|void|stop|
 
-/*
-virtual QList<QVideoFrame::PixelFormat> supportedPixelFormats ( QAbstractVideoBuffer::HandleType type = QAbstractVideoBuffer::NoHandle ) const = 0
-*/
+$prototype=virtual QList<QVideoFrame::PixelFormat> supportedPixelFormats ( QAbstractVideoBuffer::HandleType type = QAbstractVideoBuffer::NoHandle ) const = 0
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_SUPPORTEDPIXELFORMATS )
 {
   QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -98,9 +82,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_SUPPORTEDPIXELFORMATS )
   }
 }
 
-/*
-QVideoSurfaceFormat surfaceFormat () const
-*/
+$prototype=QVideoSurfaceFormat surfaceFormat () const
 $method=|QVideoSurfaceFormat|surfaceFormat|
 
 #pragma ENDDUMP

@@ -47,14 +47,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QAudioFormat ()
-*/
+$prototype=QAudioFormat ()
 $internalConstructor=|new1|
 
-/*
-QAudioFormat ( const QAudioFormat & other )
-*/
+$prototype=QAudioFormat ( const QAudioFormat & other )
 $internalConstructor=|new2|const QAudioFormat &
 
 //[1]QAudioFormat ()
@@ -78,89 +74,55 @@ HB_FUNC_STATIC( QAUDIOFORMAT_NEW )
 
 $deleteMethod
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-void setFrequency(int frequency)
-*/
+$prototype=void setFrequency(int frequency)
 $method=|void|setFrequency|int
 
-/*
-int frequency() const
-*/
+$prototype=int frequency() const
 $method=|int|frequency|
 
-/*
-void setSampleRate ( int samplerate )
-*/
+$prototype=void setSampleRate ( int samplerate )
 $method=|void|setSampleRate|int
 
-/*
-int sampleRate () const
-*/
+$prototype=int sampleRate () const
 $method=|int|sampleRate|
 
-/*
-void setChannels(int channels)
-*/
+$prototype=void setChannels(int channels)
 $method=|void|setChannels|int
 
-/*
-int channels() const
-*/
+$prototype=int channels() const
 $method=|int|channels|
 
-/*
-void setChannelCount(int channelCount)
-*/
+$prototype=void setChannelCount(int channelCount)
 $method=|void|setChannelCount|int
 
-/*
-int channelCount() const
-*/
+$prototype=int channelCount() const
 $method=|int|channelCount|
 
-/*
-void setSampleSize ( int sampleSize )
-*/
+$prototype=void setSampleSize ( int sampleSize )
 $method=|void|setSampleSize|int
 
-/*
-int sampleSize () const
-*/
+$prototype=int sampleSize () const
 $method=|int|sampleSize|
 
-/*
-void setCodec ( const QString & codec )
-*/
+$prototype=void setCodec ( const QString & codec )
 $method=|void|setCodec|const QString &
 
-/*
-QString codec () const
-*/
+$prototype=QString codec () const
 $method=|QString|codec|
 
-/*
-void setByteOrder ( QAudioFormat::Endian byteOrder )
-*/
+$prototype=void setByteOrder ( QAudioFormat::Endian byteOrder )
 $method=|void|setByteOrder|QAudioFormat::Endian
 
-/*
-QAudioFormat::Endian byteOrder () const
-*/
+$prototype=QAudioFormat::Endian byteOrder () const
 $method=|QAudioFormat::Endian|byteOrder|
 
-/*
-QAudioFormat::SampleType sampleType () const
-*/
+$prototype=QAudioFormat::SampleType sampleType () const
 $method=|QAudioFormat::SampleType|sampleType|
 
-/*
-void setSampleType ( QAudioFormat::SampleType sampleType )
-*/
+$prototype=void setSampleType ( QAudioFormat::SampleType sampleType )
 $method=|void|setSampleType|QAudioFormat::SampleType
 
 $extraMethods

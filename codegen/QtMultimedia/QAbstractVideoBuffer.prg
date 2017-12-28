@@ -44,29 +44,19 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual QVariant handle () const
-*/
+$prototype=virtual QVariant handle () const
 $virtualMethod=|QVariant|handle|
 
-/*
-HandleType handleType () const
-*/
+$prototype=HandleType handleType () const
 $method=|QAbstractVideoBuffer::HandleType|handleType|
 
-/*
-virtual uchar * map ( MapMode mode, int * numBytes, int * bytesPerLine ) = 0
-*/
+$prototype=virtual uchar * map ( MapMode mode, int * numBytes, int * bytesPerLine ) = 0
 $virtualMethod=|uchar *|map|QAbstractVideoBuffer::MapMode,int *,int *
 
-/*
-virtual MapMode mapMode () const = 0
-*/
+$prototype=virtual MapMode mapMode () const = 0
 $virtualMethod=|QAbstractVideoBuffer::MapMode|mapMode|
 
-/*
-virtual void unmap () = 0
-*/
+$prototype=virtual void unmap () = 0
 $virtualMethod=|void|unmap|
 
 $extraMethods
