@@ -48,14 +48,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QTestEventList ()
-*/
+$prototype=QTestEventList ()
 $internalConstructor=|new1|
 
-/*
-QTestEventList ( const QTestEventList & other )
-*/
+$prototype=QTestEventList ( const QTestEventList & other )
 $internalConstructor=|new2|const QTestEventList &
 
 //[1]QTestEventList ()
@@ -79,19 +75,13 @@ HB_FUNC_STATIC( QTESTEVENTLIST_NEW )
 
 $deleteMethod
 
-/*
-void addDelay ( int msecs )
-*/
+$prototype=void addDelay ( int msecs )
 $method=|void|addDelay|int
 
-/*
-void addKeyClick ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
-*/
+$prototype=void addKeyClick ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 $method=|void|addKeyClick,addKeyClick1|Qt::Key,Qt::KeyboardModifiers=Qt::NoModifier,int=-1
 
-/*
-void addKeyClick ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
-*/
+$prototype=void addKeyClick ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 $method=|void|addKeyClick,addKeyClick2|char,Qt::KeyboardModifiers=Qt::NoModifier,int=-1
 
 //[1]void addKeyClick ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
@@ -113,19 +103,13 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICK )
   }
 }
 
-/*
-void addKeyClicks ( const QString & keys, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
-*/
+$prototype=void addKeyClicks ( const QString & keys, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 $method=|void|addKeyClicks|const QString &,Qt::KeyboardModifiers=Qt::NoModifier,int=-1
 
-/*
-void addKeyPress ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
-*/
+$prototype=void addKeyPress ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 $method=|void|addKeyPress,addKeyPress1|Qt::Key,Qt::KeyboardModifiers=Qt::NoModifier,int=-1
 
-/*
-void addKeyPress ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
-*/
+$prototype=void addKeyPress ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 $method=|void|addKeyPress,addKeyPress2|char,Qt::KeyboardModifiers=Qt::NoModifier,int=-1
 
 //[1]void addKeyPress ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
@@ -147,14 +131,10 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYPRESS )
   }
 }
 
-/*
-void addKeyRelease ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
-*/
+$prototype=void addKeyRelease ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 $method=|void|addKeyRelease,addKeyRelease1|Qt::Key,Qt::KeyboardModifiers=Qt::NoModifier,int=-1
 
-/*
-void addKeyRelease ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
-*/
+$prototype=void addKeyRelease ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 $method=|void|addKeyRelease,addKeyRelease2|char,Qt::KeyboardModifiers=Qt::NoModifier,int=-1
 
 //[1]void addKeyRelease ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
@@ -176,39 +156,25 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYRELEASE )
   }
 }
 
-/*
-void addMouseClick ( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
-*/
+$prototype=void addMouseClick ( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
 $method=|void|addMouseClick|Qt::MouseButton,Qt::KeyboardModifiers=0,QPoint=QPoint(),int=-1
 
-/*
-void addMouseDClick ( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
-*/
+$prototype=void addMouseDClick ( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
 $method=|void|addMouseDClick|Qt::MouseButton,Qt::KeyboardModifiers=0,QPoint=QPoint(),int=-1
 
-/*
-void addMouseMove ( QPoint pos = QPoint(), int delay = -1 )
-*/
+$prototype=void addMouseMove ( QPoint pos = QPoint(), int delay = -1 )
 $method=|void|addMouseMove|QPoint=QPoint(),int=-1
 
-/*
-void addMousePress ( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
-*/
+$prototype=void addMousePress ( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
 $method=|void|addMousePress|Qt::MouseButton,Qt::KeyboardModifiers=0,QPoint=QPoint(),int=-1
 
-/*
-void addMouseRelease ( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
-*/
+$prototype=void addMouseRelease ( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
 $method=|void|addMouseRelease|Qt::MouseButton,Qt::KeyboardModifiers=0,QPoint=QPoint(),int=-1
 
-/*
-void clear ()
-*/
+$prototype=void clear ()
 $method=|void|clear|
 
-/*
-void simulate ( QWidget * w )
-*/
+$prototype=void simulate ( QWidget * w )
 $method=|void|simulate|QWidget *
 
 $extraMethods
