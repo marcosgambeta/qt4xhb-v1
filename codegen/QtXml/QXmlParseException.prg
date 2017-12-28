@@ -35,14 +35,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QXmlParseException ( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString() )
-*/
+$prototype=QXmlParseException ( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString() )
 $internalConstructor=|new1|const QString &=QString(),int=-1,int=-1,const QString &=QString(),const QString &=QString()
 
-/*
-QXmlParseException ( const QXmlParseException & other )
-*/
+$prototype=QXmlParseException ( const QXmlParseException & other )
 $internalConstructor=|new2|const QXmlParseException &
 
 //[1]QXmlParseException ( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString() )
@@ -66,29 +62,19 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW )
 
 $deleteMethod
 
-/*
-int columnNumber () const
-*/
+$prototype=int columnNumber () const
 $method=|int|columnNumber|
 
-/*
-int lineNumber () const
-*/
+$prototype=int lineNumber () const
 $method=|int|lineNumber|
 
-/*
-QString message () const
-*/
+$prototype=QString message () const
 $method=|QString|message|
 
-/*
-QString publicId () const
-*/
+$prototype=QString publicId () const
 $method=|QString|publicId|
 
-/*
-QString systemId () const
-*/
+$prototype=QString systemId () const
 $method=|QString|systemId|
 
 $extraMethods

@@ -30,14 +30,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QDomAttr ()
-*/
+$prototype=QDomAttr ()
 $internalConstructor=|new1|
 
-/*
-QDomAttr ( const QDomAttr & x )
-*/
+$prototype=QDomAttr ( const QDomAttr & x )
 $internalConstructor=|new2|const QDomAttr &
 
 //[1]QDomAttr ()
@@ -59,34 +55,22 @@ HB_FUNC_STATIC( QDOMATTR_NEW )
   }
 }
 
-/*
-QString name () const
-*/
+$prototype=QString name () const
 $method=|QString|name|
 
-/*
-QDomNode::NodeType nodeType () const
-*/
+$prototype=QDomNode::NodeType nodeType () const
 $method=|QDomNode::NodeType|nodeType|
 
-/*
-QDomElement ownerElement () const
-*/
+$prototype=QDomElement ownerElement () const
 $method=|QDomElement|ownerElement|
 
-/*
-void setValue ( const QString & v )
-*/
+$prototype=void setValue ( const QString & v )
 $method=|void|setValue|const QString &
 
-/*
-bool specified () const
-*/
+$prototype=bool specified () const
 $method=|bool|specified|
 
-/*
-QString value () const
-*/
+$prototype=QString value () const
 $method=|QString|value|
 
 #pragma ENDDUMP

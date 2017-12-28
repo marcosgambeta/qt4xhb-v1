@@ -21,14 +21,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QDomComment ()
-*/
+$prototype=QDomComment ()
 $internalConstructor=|new1|
 
-/*
-QDomComment ( const QDomComment & x )
-*/
+$prototype=QDomComment ( const QDomComment & x )
 $internalConstructor=|new2|const QDomComment &
 
 //[1]QDomComment ()
@@ -50,9 +46,7 @@ HB_FUNC_STATIC( QDOMCOMMENT_NEW )
   }
 }
 
-/*
-QDomNode::NodeType nodeType () cons
-*/
+$prototype=QDomNode::NodeType nodeType () cons
 $method=|QDomNode::NodeType|nodeType|
 
 #pragma ENDDUMP

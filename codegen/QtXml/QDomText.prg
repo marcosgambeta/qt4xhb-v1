@@ -26,14 +26,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QDomText ()
-*/
+$prototype=QDomText ()
 $internalConstructor=|new1|
 
-/*
-QDomText ( const QDomText & x )
-*/
+$prototype=QDomText ( const QDomText & x )
 $internalConstructor=|new2|const QDomText &
 
 //[1]QDomText ()
@@ -55,14 +51,10 @@ HB_FUNC_STATIC( QDOMTEXT_NEW )
   }
 }
 
-/*
-QDomNode::NodeType nodeType () const
-*/
+$prototype=QDomNode::NodeType nodeType () const
 $method=|QDomNode::NodeType|nodeType|
 
-/*
-QDomText splitText ( int offset )
-*/
+$prototype=QDomText splitText ( int offset )
 $method=|QDomText|splitText|int
 
 #pragma ENDDUMP

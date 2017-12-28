@@ -21,14 +21,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QDomEntityReference ()
-*/
+$prototype=QDomEntityReference ()
 $internalConstructor=|new1|
 
-/*
-QDomEntityReference ( const QDomEntityReference & x )
-*/
+$prototype=QDomEntityReference ( const QDomEntityReference & x )
 $internalConstructor=|new2|const QDomEntityReference &
 
 //[1]QDomEntityReference ()
@@ -50,9 +46,7 @@ HB_FUNC_STATIC( QDOMENTITYREFERENCE_NEW )
   }
 }
 
-/*
-QDomNode::NodeType nodeType () const
-*/
+$prototype=QDomNode::NodeType nodeType () const
 $method=|QDomNode::NodeType|nodeType|
 
 #pragma ENDDUMP

@@ -24,14 +24,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QDomProcessingInstruction ()
-*/
+$prototype=QDomProcessingInstruction ()
 $internalConstructor=|new1|
 
-/*
-QDomProcessingInstruction ( const QDomProcessingInstruction & x )
-*/
+$prototype=QDomProcessingInstruction ( const QDomProcessingInstruction & x )
 $internalConstructor=|new2|const QDomProcessingInstruction &
 
 //[1]QDomProcessingInstruction ()
@@ -53,24 +49,16 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW )
   }
 }
 
-/*
-QString data () const
-*/
+$prototype=QString data () const
 $method=|QString|data|
 
-/*
-QDomNode::NodeType nodeType () const
-*/
+$prototype=QDomNode::NodeType nodeType () const
 $method=|QDomNode::NodeType|nodeType|
 
-/*
-void setData ( const QString & d )
-*/
+$prototype=void setData ( const QString & d )
 $method=|void|setData|const QString &
 
-/*
-QString target () const
-*/
+$prototype=QString target () const
 $method=|QString|target|
 
 #pragma ENDDUMP

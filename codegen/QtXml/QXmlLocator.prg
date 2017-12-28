@@ -33,14 +33,10 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual int columnNumber () const = 0
-*/
+$prototype=virtual int columnNumber () const = 0
 $virtualMethod=|int|columnNumber|
 
-/*
-virtual int lineNumber () const = 0
-*/
+$prototype=virtual int lineNumber () const = 0
 $virtualMethod=|int|lineNumber|
 
 $extraMethods

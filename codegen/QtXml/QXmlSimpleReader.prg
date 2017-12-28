@@ -23,21 +23,15 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QXmlSimpleReader ()
-*/
+$prototype=QXmlSimpleReader ()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-virtual bool parse ( const QXmlInputSource * input, bool incremental )
-*/
+$prototype=virtual bool parse ( const QXmlInputSource * input, bool incremental )
 $virtualMethod=|bool|parse|const QXmlInputSource *,bool
 
-/*
-virtual bool parseContinue ()
-*/
+$prototype=virtual bool parseContinue ()
 $virtualMethod=|bool|parseContinue|
 
 #pragma ENDDUMP

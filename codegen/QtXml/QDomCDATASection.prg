@@ -21,14 +21,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QDomCDATASection ()
-*/
+$prototype=QDomCDATASection ()
 $internalConstructor=|new1|
 
-/*
-QDomCDATASection ( const QDomCDATASection & x )
-*/
+$prototype=QDomCDATASection ( const QDomCDATASection & x )
 $internalConstructor=|new2|const QDomCDATASection &
 
 //[1]QDomCDATASection ()
@@ -50,9 +46,7 @@ HB_FUNC_STATIC( QDOMCDATASECTION_NEW )
   }
 }
 
-/*
-QDomNode::NodeType nodeType () const
-*/
+$prototype=QDomNode::NodeType nodeType () const
 $method=|QDomNode::NodeType|nodeType|
 
 #pragma ENDDUMP

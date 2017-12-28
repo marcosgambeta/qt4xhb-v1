@@ -29,14 +29,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QDomCharacterData ()
-*/
+$prototype=QDomCharacterData ()
 $internalConstructor=|new1|
 
-/*
-QDomCharacterData ( const QDomCharacterData & x )
-*/
+$prototype=QDomCharacterData ( const QDomCharacterData & x )
 $internalConstructor=|new2|
 
 //[1]QDomCharacterData ()
@@ -58,49 +54,31 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW )
   }
 }
 
-/*
-void appendData ( const QString & arg )
-*/
+$prototype=void appendData ( const QString & arg )
 $method=|void|appendData|const QString &
 
-/*
-QString data () const
-*/
+$prototype=QString data () const
 $method=|QString|data|
 
-/*
-void deleteData ( unsigned long offset, unsigned long count )
-*/
+$prototype=void deleteData ( unsigned long offset, unsigned long count )
 $method=|void|deleteData|unsigned long,unsigned long
 
-/*
-void insertData ( unsigned long offset, const QString & arg )
-*/
+$prototype=void insertData ( unsigned long offset, const QString & arg )
 $method=|void|insertData|unsigned long,const QString &
 
-/*
-uint length () const
-*/
+$prototype=uint length () const
 $method=|uint|length|
 
-/*
-QDomNode::NodeType nodeType () const
-*/
+$prototype=QDomNode::NodeType nodeType () const
 $method=|QDomNode::NodeType|nodeType|
 
-/*
-void replaceData ( unsigned long offset, unsigned long count, const QString & arg )
-*/
+$prototype=void replaceData ( unsigned long offset, unsigned long count, const QString & arg )
 $method=|void|replaceData|unsigned long,unsigned long,const QString &
 
-/*
-void setData ( const QString & v )
-*/
+$prototype=void setData ( const QString & v )
 $method=|void|setData|const QString &
 
-/*
-QString substringData ( unsigned long offset, unsigned long count )
-*/
+$prototype=QString substringData ( unsigned long offset, unsigned long count )
 $method=|QString|substringData|unsigned long,unsigned long
 
 #pragma ENDDUMP

@@ -24,14 +24,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QDomEntity ()
-*/
+$prototype=QDomEntity ()
 $internalConstructor=|new1|
 
-/*
-QDomEntity ( const QDomEntity & x )
-*/
+$prototype=QDomEntity ( const QDomEntity & x )
 $internalConstructor=|new2|const QDomEntity &
 
 //[1]QDomEntity ()
@@ -53,24 +49,16 @@ HB_FUNC_STATIC( QDOMENTITY_NEW )
   }
 }
 
-/*
-QDomNode::NodeType nodeType () const
-*/
+$prototype=QDomNode::NodeType nodeType () const
 $method=|QDomNode::NodeType|nodeType|
 
-/*
-QString notationName () const
-*/
+$prototype=QString notationName () const
 $method=|QString|notationName|
 
-/*
-QString publicId () const
-*/
+$prototype=QString publicId () const
 $method=|QString|publicId|
 
-/*
-QString systemId () const
-*/
+$prototype=QString systemId () const
 $method=|QString|systemId|
 
 #pragma ENDDUMP

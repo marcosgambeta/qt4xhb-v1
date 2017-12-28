@@ -32,9 +32,7 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual QString errorString () const = 0
-*/
+$prototype=virtual QString errorString () const = 0
 $virtualMethod=|QString|errorString|
 
 $extraMethods
