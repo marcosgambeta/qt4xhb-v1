@@ -26,9 +26,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QModelIndex indexOf ( const QUrl & link )
-*/
+$prototype=QModelIndex indexOf ( const QUrl & link )
 $method=|QModelIndex|indexOf|const QUrl &
 
 #pragma ENDDUMP

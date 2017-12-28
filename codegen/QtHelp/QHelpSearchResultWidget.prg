@@ -29,9 +29,7 @@ $destructor
 
 $deleteMethod
 
-/*
-QUrl linkAt ( const QPoint & point )
-*/
+$prototype=QUrl linkAt ( const QPoint & point )
 $method=|QUrl|linkAt|const QPoint &
 
 #pragma ENDDUMP

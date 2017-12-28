@@ -43,21 +43,15 @@ $destructor
 #include <QHelpSearchQueryWidget>
 #include <QHelpSearchResultWidget>
 
-/*
-QHelpSearchEngine ( QHelpEngineCore * helpEngine, QObject * parent = 0 )
-*/
+$prototype=QHelpSearchEngine ( QHelpEngineCore * helpEngine, QObject * parent = 0 )
 $constructor=|new|QHelpEngineCore *,QObject *=0
 
 $deleteMethod
 
-/*
-int hitCount () const
-*/
+$prototype=int hitCount () const
 $metjod=|int|hitCount|
 
-/*
-QList<QHelpSearchQuery> query () const
-*/
+$prototype=QList<QHelpSearchQuery> query () const
 HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERY )
 {
   QHelpSearchEngine * obj = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -93,34 +87,22 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERY )
   }
 }
 
-/*
-QHelpSearchQueryWidget * queryWidget ()
-*/
+$prototype=QHelpSearchQueryWidget * queryWidget ()
 $method=|QHelpSearchQueryWidget *|queryWidget|
 
-/*
-QHelpSearchResultWidget * resultWidget ()
-*/
+$prototype=QHelpSearchResultWidget * resultWidget ()
 $method=|QHelpSearchResultWidget *|resultWidget|
 
-/*
-void cancelIndexing ()
-*/
+$prototype=void cancelIndexing ()
 $method=|void|cancelIndexing|
 
-/*
-void cancelSearching ()
-*/
+$prototype=void cancelSearching ()
 $method=|void|cancelSearching|
 
-/*
-void reindexDocumentation ()
-*/
+$prototype=void reindexDocumentation ()
 $method=|void|reindexDocumentation|
 
-/*
-void search ( const QList<QHelpSearchQuery> & queryList )
-*/
+$prototype=void search ( const QList<QHelpSearchQuery> & queryList )
 HB_FUNC_STATIC( QHELPSEARCHENGINE_SEARCH )
 {
   QHelpSearchEngine * obj = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

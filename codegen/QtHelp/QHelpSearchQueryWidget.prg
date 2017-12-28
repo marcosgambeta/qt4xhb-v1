@@ -28,16 +28,12 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QHelpSearchQueryWidget ( QWidget * parent = 0 )
-*/
+$prototype=QHelpSearchQueryWidget ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-/*
-QList<QHelpSearchQuery> query () const
-*/
+$prototype=QList<QHelpSearchQuery> query () const
 HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_QUERY )
 {
   QHelpSearchQueryWidget * obj = (QHelpSearchQueryWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

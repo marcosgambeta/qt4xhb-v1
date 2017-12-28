@@ -29,14 +29,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QHelpSearchQuery ()
-*/
+$prototype=QHelpSearchQuery ()
 $internalConstructor=|new1|
 
-/*
-QHelpSearchQuery ( FieldName field, const QStringList & wordList )
-*/
+$prototype=QHelpSearchQuery ( FieldName field, const QStringList & wordList )
 $internalConstructor=|new2|QHelpSearchQuery::FieldName,const QStringList &
 
 //[1]QHelpSearchQuery ()
