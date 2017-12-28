@@ -30,18 +30,18 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-prototype=QFormBuilder ()
+$prototype=QFormBuilder ()
 $constructor=|new|
 
 $deleteMethod
 
-prototype=void addPluginPath ( const QString & pluginPath )
+$prototype=void addPluginPath ( const QString & pluginPath )
 $method=|void|addPluginPath|const QString &
 
-prototype=void clearPluginPaths ()
+$prototype=void clearPluginPaths ()
 $method=|void|clearPluginPaths|
 
-prototype=QList<QDesignerCustomWidgetInterface *> customWidgets () const
+$prototype=QList<QDesignerCustomWidgetInterface *> customWidgets () const
 HB_FUNC_STATIC( QFORMBUILDER_CUSTOMWIDGETS )
 {
   QFormBuilder * obj = (QFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -77,10 +77,10 @@ HB_FUNC_STATIC( QFORMBUILDER_CUSTOMWIDGETS )
   }
 }
 
-prototype=QStringList pluginPaths () const
+$prototype=QStringList pluginPaths () const
 $method=|QStringList|pluginPaths|
 
-prototype=void setPluginPath ( const QStringList & pluginPaths )
+$prototype=void setPluginPath ( const QStringList & pluginPaths )
 $method=|void|setPluginPath|const QStringList &
 
 #pragma ENDDUMP

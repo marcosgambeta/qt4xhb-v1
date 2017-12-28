@@ -36,7 +36,7 @@ $destructor
 
 $deleteMethod
 
-prototype=virtual QObject * extension ( QObject * object, const QString & iid ) const = 0
+$prototype=virtual QObject * extension ( QObject * object, const QString & iid ) const = 0
 $virtualMethod=|QObject *|extension|QObject *,const QString &
 
 $extraMethods

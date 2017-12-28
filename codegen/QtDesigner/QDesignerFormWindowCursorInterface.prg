@@ -49,37 +49,37 @@ $destructor
 
 $deleteMethod
 
-prototype=virtual QWidget * current () const = 0
+$prototype=virtual QWidget * current () const = 0
 $virtualMethod=|QWidget *|current|
 
-prototype=virtual QDesignerFormWindowInterface * formWindow () const = 0
+$prototype=virtual QDesignerFormWindowInterface * formWindow () const = 0
 $virtualMethod=|QDesignerFormWindowInterface *|formWindow|
 
-prototype=virtual bool hasSelection () const = 0
+$prototype=virtual bool hasSelection () const = 0
 $virtualMethod=|bool|hasSelection|
 
-prototype=bool isWidgetSelected ( QWidget * widget ) const
+$prototype=bool isWidgetSelected ( QWidget * widget ) const
 $method=|bool|isWidgetSelected|QWidget *
 
-prototype=virtual bool movePosition ( MoveOperation operation, MoveMode mode = MoveAnchor ) = 0
+$prototype=virtual bool movePosition ( MoveOperation operation, MoveMode mode = MoveAnchor ) = 0
 $virtualMethod=|bool|movePosition|QDesignerFormWindowCursorInterface::MoveOperation,QDesignerFormWindowCursorInterface::MoveMode=QDesignerFormWindowCursorInterface::MoveAnchor
 
-prototype=virtual int position () const = 0
+$prototype=virtual int position () const = 0
 $virtualMethod=|int|position|
 
-prototype=virtual QWidget * selectedWidget ( int index ) const = 0
+$prototype=virtual QWidget * selectedWidget ( int index ) const = 0
 $virtualMethod=|QWidget *|selectedWidget|int
 
-prototype=virtual int selectedWidgetCount () const = 0
+$prototype=virtual int selectedWidgetCount () const = 0
 $virtualMethod=|int|selectedWidgetCount|
 
-prototype=virtual void setPosition ( int position, MoveMode mode = MoveAnchor ) = 0
+$prototype=virtual void setPosition ( int position, MoveMode mode = MoveAnchor ) = 0
 $virtualMethod=|void|setPosition|int,QDesignerFormWindowCursorInterface::MoveMode=QDesignerFormWindowCursorInterface::MoveAnchor
 
-prototype=virtual QWidget * widget ( int index ) const = 0
+$prototype=virtual QWidget * widget ( int index ) const = 0
 $virtualMethod=|QWidget *|widget|int
 
-prototype=virtual int widgetCount () const = 0
+$prototype=virtual int widgetCount () const = 0
 $virtualMethod=|int|widgetCount|
 
 $extraMethods

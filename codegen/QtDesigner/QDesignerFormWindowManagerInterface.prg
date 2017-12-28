@@ -61,82 +61,82 @@ $destructor
 
 $deleteMethod
 
-prototype=virtual QAction * actionAdjustSize () const
+$prototype=virtual QAction * actionAdjustSize () const
 $virtualMethod=|QAction *|actionAdjustSize|
 
-prototype=virtual QAction * actionBreakLayout () const
+$prototype=virtual QAction * actionBreakLayout () const
 $virtualMethod=|QAction *|actionBreakLayout|
 
-prototype=virtual QAction * actionCopy () const
+$prototype=virtual QAction * actionCopy () const
 $virtualMethod=|QAction *|actionCopy|
 
-prototype=virtual QAction * actionCut () const
+$prototype=virtual QAction * actionCut () const
 $virtualMethod=|QAction *|actionCut|
 
-prototype=virtual QAction * actionDelete () const
+$prototype=virtual QAction * actionDelete () const
 $virtualMethod=|QAction *|actionDelete|
 
-prototype=QAction * actionFormLayout () const
+$prototype=QAction * actionFormLayout () const
 $method=|QAction *|actionFormLayout|
 
-prototype=virtual QAction * actionGridLayout () const
+$prototype=virtual QAction * actionGridLayout () const
 $virtualMtehod=|QAction *|actionGridLayout|
 
-prototype=virtual QAction * actionHorizontalLayout () const
+$prototype=virtual QAction * actionHorizontalLayout () const
 $virtualMethod=|QAction *|actionHorizontalLayout|
 
-prototype=virtual QAction * actionLower () const
+$prototype=virtual QAction * actionLower () const
 $virtualMethod=|QAction *|actionLower|
 
-prototype=virtual QAction * actionPaste () const
+$prototype=virtual QAction * actionPaste () const
 $virtualMethod=|QAction *|actionPaste|
 
-prototype=virtual QAction * actionRaise () const
+$prototype=virtual QAction * actionRaise () const
 $virtualMethod=|QAction *|actionRaise|
 
-prototype=virtual QAction * actionRedo () const
+$prototype=virtual QAction * actionRedo () const
 $virtualMethod=|QAction *|actionRedo|
 
-prototype=virtual QAction * actionSelectAll () const
+$prototype=virtual QAction * actionSelectAll () const
 $virtualMethod=|QAction *|actionSelectAll|
 
-prototype=QAction * actionSimplifyLayout () const
+$prototype=QAction * actionSimplifyLayout () const
 $method=|QAction *|actionSimplifyLayout|
 
-prototype=virtual QAction * actionSplitHorizontal () const
+$prototype=virtual QAction * actionSplitHorizontal () const
 $virtualMethod=|QAction *|actionSplitHorizontal|
 
-prototype=virtual QAction * actionSplitVertical () const
+$prototype=virtual QAction * actionSplitVertical () const
 $virtualMethod=|QAction *|actionSplitVertical|
 
-prototype=virtual QAction * actionUndo () const
+$prototype=virtual QAction * actionUndo () const
 $virtualMethod=|QAction *|actionUndo|
 
-prototype=virtual QAction * actionVerticalLayout () const
+$prototype=virtual QAction * actionVerticalLayout () const
 $virtualMethod=|QAction *|actionVerticalLayout|
 
-prototype=virtual QDesignerFormWindowInterface * activeFormWindow () const
+$prototype=virtual QDesignerFormWindowInterface * activeFormWindow () const
 $virtualMethod=|QDesignerFormWindowInterface *|activeFormWindow|
 
-prototype=virtual QDesignerFormEditorInterface * core () const
+$prototype=virtual QDesignerFormEditorInterface * core () const
 $virtualMethod=|QDesignerFormEditorInterface *|core|
 
-prototype=virtual QDesignerFormWindowInterface * createFormWindow ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
+$prototype=virtual QDesignerFormWindowInterface * createFormWindow ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 $virtualMethod=|QDesignerFormWindowInterface *|createFormWindow|QWidget *=0,Qt::WindowFlags=0
 
-prototype=virtual QDesignerFormWindowInterface * formWindow ( int index ) const
+$prototype=virtual QDesignerFormWindowInterface * formWindow ( int index ) const
 $virtualMethod=|QDesignerFormWindowInterface *|formWindow|int
 
-prototype=virtual int formWindowCount () const
+$prototype=virtual int formWindowCount () const
 $virtualMethod=|int|formWindowCount|
 
-prototype=virtual void addFormWindow ( QDesignerFormWindowInterface * formWindow )
+$prototype=virtual void addFormWindow ( QDesignerFormWindowInterface * formWindow )
 $virtualMethod=|void|addFormWindow|QDesignerFormWindowInterface *
 
-prototype=virtual void removeFormWindow ( QDesignerFormWindowInterface * formWindow )
+$prototype=virtual void removeFormWindow ( QDesignerFormWindowInterface * formWindow )
 $virtualMethod=|void|removeFormWindow|QDesignerFormWindowInterface *
 
-prototype=virtual void setActiveFormWindow ( QDesignerFormWindowInterface * formWindow )
+$prototype=virtual void setActiveFormWindow ( QDesignerFormWindowInterface * formWindow )
 $virtualMethod=|void|setActiveFormWindow|QDesignerFormWindowInterface *
 
 #pragma ENDDUMP

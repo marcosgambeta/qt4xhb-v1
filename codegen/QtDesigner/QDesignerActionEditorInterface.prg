@@ -31,13 +31,13 @@ $destructor
 
 $deleteMethod
 
-prototype=virtual QDesignerFormEditorInterface * core () const
+$prototype=virtual QDesignerFormEditorInterface * core () const
 $virtualMethod=|QDesignerFormEditorInterface *|core|
 
-prototype=virtual void manageAction ( QAction * action ) = 0
+$prototype=virtual void manageAction ( QAction * action ) = 0
 $virtualMethod=|void|manageAction|QAction *
 
-prototype=virtual void setFormWindow ( QDesignerFormWindowInterface * formWindow ) = 0
+$prototype=virtual void setFormWindow ( QDesignerFormWindowInterface * formWindow ) = 0
 $virtualMethod=|void|setFormWindow|QDesignerFormWindowInterface *
 
 #pragma ENDDUMP

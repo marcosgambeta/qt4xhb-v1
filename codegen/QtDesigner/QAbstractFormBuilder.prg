@@ -39,21 +39,21 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-prototype=QAbstractFormBuilder ()
+$prototype=QAbstractFormBuilder ()
 $constructor=|new|
 
 $deleteMethod
 
-prototype=virtual QWidget * load ( QIODevice * device, QWidget * parent = 0 )
+$prototype=virtual QWidget * load ( QIODevice * device, QWidget * parent = 0 )
 $virtualMethod=|QWidget *|load|QIODevice *,QWidget *=0
 
-prototype=virtual void save ( QIODevice * device, QWidget * widget )
+$prototype=virtual void save ( QIODevice * device, QWidget * widget )
 $virtualMethod=|void|save|QIODevice *,QWidget *
 
-prototype=void setWorkingDirectory ( const QDir & directory )
+$prototype=void setWorkingDirectory ( const QDir & directory )
 $method=|void|setWorkingDirectory|const QDir &
 
-prototype=QDir workingDirectory () const
+$prototype=QDir workingDirectory () const
 $method=|QDir|workingDirectory|
 
 $extraMethods

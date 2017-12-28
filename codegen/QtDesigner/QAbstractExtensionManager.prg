@@ -38,13 +38,13 @@ $destructor
 
 $deleteMethod
 
-prototype=virtual QObject * extension ( QObject * object, const QString & iid ) const = 0
+$prototype=virtual QObject * extension ( QObject * object, const QString & iid ) const = 0
 $virtualMethod=|QObject *|extension|QObject *,const QString &
 
-prototype=virtual void registerExtensions ( QAbstractExtensionFactory * factory, const QString & iid ) = 0
+$prototype=virtual void registerExtensions ( QAbstractExtensionFactory * factory, const QString & iid ) = 0
 $virtualMethod=|void|registerExtensions|QAbstractExtensionFactory *,const QString &
 
-prototype=virtual void unregisterExtensions ( QAbstractExtensionFactory * factory, const QString & iid ) = 0
+$prototype=virtual void unregisterExtensions ( QAbstractExtensionFactory * factory, const QString & iid ) = 0
 $virtualMethod=|void|unregisterExtensions|QAbstractExtensionFactory *,const QString &
 
 $extraMethods
