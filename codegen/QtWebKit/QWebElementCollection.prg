@@ -40,19 +40,13 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QWebElementCollection ()
-*/
+$prototype=QWebElementCollection ()
 $internalConstructor=|new1|
 
-/*
-QWebElementCollection ( const QWebElement & contextElement, const QString & query )
-*/
+$prototype=QWebElementCollection ( const QWebElement & contextElement, const QString & query )
 $internalConstructor=|new2|const QWebElement &,const QString &
 
-/*
-QWebElementCollection ( const QWebElementCollection & other )
-*/
+$prototype=QWebElementCollection ( const QWebElementCollection & other )
 $internalConstructor=|new3|const QWebElementCollection &
 
 //[1]QWebElementCollection ()
@@ -81,34 +75,22 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW )
 
 $deleteMethod
 
-/*
-void append ( const QWebElementCollection & other )
-*/
+$prototype=void append ( const QWebElementCollection & other )
 $method=|void|append|const QWebElementCollection &
 
-/*
-QWebElement at ( int i ) const
-*/
+$prototype=QWebElement at ( int i ) const
 $method=|QWebElement|at|int
 
-/*
-int count () const
-*/
+$prototype=int count () const
 $method=|int|count|
 
-/*
-QWebElement first () const
-*/
+$prototype=QWebElement first () const
 $method=|QWebElement|first|
 
-/*
-QWebElement last () const
-*/
+$prototype=QWebElement last () const
 $method=|QWebElement|last|
 
-/*
-QList<QWebElement> toList () const
-*/
+$prototype=QList<QWebElement> toList () const
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_TOLIST )
 {
   QWebElementCollection * obj = (QWebElementCollection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

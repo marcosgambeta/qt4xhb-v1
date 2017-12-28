@@ -49,26 +49,18 @@ $destructor
 #include <QStringList>
 #include <QWebDatabase>
 
-/*
-QWebSecurityOrigin ( const QWebSecurityOrigin & other )
-*/
+$prototype=QWebSecurityOrigin ( const QWebSecurityOrigin & other )
 $constructor=|new|const QWebSecurityOrigin &
 
 $deleteMethod
 
-/*
-qint64 databaseQuota () const
-*/
+$prototype=qint64 databaseQuota () const
 $method=|qint64|databaseQuota|
 
-/*
-qint64 databaseUsage () const
-*/
+$prototype=qint64 databaseUsage () const
 $method=|qint64|databaseUsage|
 
-/*
-QList<QWebDatabase> databases () const
-*/
+$prototype=QList<QWebDatabase> databases () const
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASES )
 {
   QWebSecurityOrigin * obj = (QWebSecurityOrigin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -108,34 +100,22 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASES )
   }
 }
 
-/*
-QString host () const
-*/
+$prototype=QString host () const
 $method=|QString|host|
 
-/*
-int port () const
-*/
+$prototype=int port () const
 $method=|int|port|
 
-/*
-QString scheme () const
-*/
+$prototype=QString scheme () const
 $method=|QString|scheme|
 
-/*
-void setDatabaseQuota ( qint64 quota )
-*/
+$prototype=void setDatabaseQuota ( qint64 quota )
 $method=|void|setDatabaseQuota|qint64
 
-/*
-static void addLocalScheme ( const QString & scheme )
-*/
+$prototype=static void addLocalScheme ( const QString & scheme )
 $staticMethod=|void|addLocalScheme|const QString &
 
-/*
-QList<QWebSecurityOrigin> allOrigins ()
-*/
+$prototype=QList<QWebSecurityOrigin> allOrigins ()
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_ALLORIGINS )
 {
   QList<QWebSecurityOrigin> list = QWebSecurityOrigin::allOrigins ();
@@ -170,14 +150,10 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_ALLORIGINS )
   hb_itemReturnRelease(pArray);
 }
 
-/*
-static QStringList localSchemes ()
-*/
+$prototype=static QStringList localSchemes ()
 $staticMethod=|QStringList|localSchemes|
 
-/*
-static void removeLocalScheme ( const QString & scheme )
-*/
+$prototype=static void removeLocalScheme ( const QString & scheme )
 $staticMethod=|void|removeLocalScheme|const QString &
 
 $extraMethods

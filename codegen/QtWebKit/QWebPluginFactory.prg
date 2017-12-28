@@ -28,14 +28,10 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual QObject * create ( const QString & mimeType, const QUrl & url, const QStringList & argumentNames, const QStringList & argumentValues ) const = 0
-*/
+$prototype=virtual QObject * create ( const QString & mimeType, const QUrl & url, const QStringList & argumentNames, const QStringList & argumentValues ) const = 0
 $virtualMethod=|QObject *|create|const QString &,const QUrl &,const QStringList &,const QStringList &
 
-/*
-virtual void refreshPlugins ()
-*/
+$prototype=virtual void refreshPlugins ()
 $virtualMethod=|void|refreshPlugins|
 
 #pragma ENDDUMP

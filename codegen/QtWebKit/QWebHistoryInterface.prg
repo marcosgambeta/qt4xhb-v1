@@ -30,24 +30,16 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual void addHistoryEntry ( const QString & url ) = 0
-*/
+$prototype=virtual void addHistoryEntry ( const QString & url ) = 0
 $virtualMethod=|void|addHistoryEntry|const QString &
 
-/*
-virtual bool historyContains ( const QString & url ) const = 0
-*/
+$prototype=virtual bool historyContains ( const QString & url ) const = 0
 $virtualMethod=|bool|historyContains|const QString &
 
-/*
-static QWebHistoryInterface * defaultInterface ()
-*/
+$prototype=static QWebHistoryInterface * defaultInterface ()
 $staticMethod=|QWebHistoryInterface *|defaultInterface|
 
-/*
-static void setDefaultInterface ( QWebHistoryInterface * defaultInterface )
-*/
+$prototype=static void setDefaultInterface ( QWebHistoryInterface * defaultInterface )
 $staticMethod=|void|setDefaultInterface|QWebHistoryInterface *
 
 #pragma ENDDUMP

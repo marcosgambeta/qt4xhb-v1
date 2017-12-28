@@ -30,31 +30,21 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QWebInspector ( QWidget * parent = 0 )
-*/
+$prototype=QWebInspector ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-/*
-QWebPage * page () const
-*/
+$prototype=QWebPage * page () const
 $method=|QWebPage *|page|
 
-/*
-void setPage ( QWebPage * page )
-*/
+$prototype=void setPage ( QWebPage * page )
 $method=|void|setPage|QWebPage *
 
-/*
-virtual bool event ( QEvent * ev )
-*/
+$prototype=virtual bool event ( QEvent * ev )
 $virtualMethod=|bool|event|QEvent *
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $virtualMethod=|QSize|sizeHint|
 
 #pragma ENDDUMP
