@@ -30,14 +30,10 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual QSqlDriver * create ( const QString & key ) = 0
-*/
+$prototype=virtual QSqlDriver * create ( const QString & key ) = 0
 $virtualMethod=|QSqlDriver *|create|const QString &
 
-/*
-virtual QStringList keys () const = 0
-*/
+$prototype=virtual QStringList keys () const = 0
 $virtualMethod=|QStringList|keys|
 
 #pragma ENDDUMP

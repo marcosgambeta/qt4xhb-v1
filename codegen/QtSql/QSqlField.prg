@@ -58,14 +58,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QSqlField ( const QString & fieldName = QString(), QVariant::Type type = QVariant::Invalid )
-*/
+$prototype=QSqlField ( const QString & fieldName = QString(), QVariant::Type type = QVariant::Invalid )
 $internalConstructor=|new1|const QString &=QString(),QVariant::Type=QVariant::Invalid
 
-/*
-QSqlField ( const QSqlField & other )
-*/
+$prototype=QSqlField ( const QSqlField & other )
 $internalConstructor=|new2|const QSqlField &
 
 //[1]QSqlField ( const QString & fieldName = QString(), QVariant::Type type = QVariant::Invalid )
@@ -89,124 +85,76 @@ HB_FUNC_STATIC( QSQLFIELD_NEW )
 
 $deleteMethod
 
-/*
-void clear ()
-*/
+$prototype=void clear ()
 $method=|void|clear|
 
-/*
-QVariant defaultValue () const
-*/
+$prototype=QVariant defaultValue () const
 $method=|QVariant|defaultValue|
 
-/*
-bool isAutoValue () const
-*/
+$prototype=bool isAutoValue () const
 $method=|bool|isAutoValue|
 
-/*
-bool isGenerated () const
-*/
+$prototype=bool isGenerated () const
 $method=|bool|isGenerated|
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-bool isReadOnly () const
-*/
+$prototype=bool isReadOnly () const
 $method=|bool|isReadOnly|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-int length () const
-*/
+$prototype=int length () const
 $method=|int|length|
 
-/*
-QString name () const
-*/
+$prototype=QString name () const
 $method=|QString|name|
 
-/*
-int precision () const
-*/
+$prototype=int precision () const
 $method=|int|precision|
 
-/*
-RequiredStatus requiredStatus () const
-*/
+$prototype=RequiredStatus requiredStatus () const
 $method=|QSqlField::RequiredStatus|requiredStatus|
 
-/*
-void setAutoValue ( bool autoVal )
-*/
+$prototype=void setAutoValue ( bool autoVal )
 $method=|void|setAutoValue|bool
 
-/*
-void setDefaultValue ( const QVariant & value )
-*/
+$prototype=void setDefaultValue ( const QVariant & value )
 $method=|void|setDefaultValue|const QVariant &
 
-/*
-void setGenerated ( bool gen )
-*/
+$prototype=void setGenerated ( bool gen )
 $method=|void|setGenerated|bool
 
-/*
-void setLength ( int fieldLength )
-*/
+$prototype=void setLength ( int fieldLength )
 $method=|void|setLength|int
 
-/*
-void setName ( const QString & name )
-*/
+$prototype=void setName ( const QString & name )
 $method=|void|setName|const QString &
 
-/*
-void setPrecision ( int precision )
-*/
+$prototype=void setPrecision ( int precision )
 $method=|void|setPrecision|int
 
-/*
-void setReadOnly ( bool readOnly )
-*/
+$prototype=void setReadOnly ( bool readOnly )
 $method=|void|setReadOnly|bool
 
-/*
-void setRequired ( bool required )
-*/
+$prototype=void setRequired ( bool required )
 $method=|void|setRequired|bool
 
-/*
-void setRequiredStatus ( RequiredStatus required )
-*/
+$prototype=void setRequiredStatus ( RequiredStatus required )
 $method=|void|setRequiredStatus|QSqlField::RequiredStatus
 
-/*
-void setType ( QVariant::Type type )
-*/
+$prototype=void setType ( QVariant::Type type )
 $method=|void|setType|QVariant::Type
 
-/*
-void setValue ( const QVariant & value )
-*/
+$prototype=void setValue ( const QVariant & value )
 $method=|void|setValue|const QVariant &
 
-/*
-QVariant::Type type () const
-*/
+$prototype=QVariant::Type type () const
 $method=|QVariant::Type|type|
 
-/*
-QVariant value () const
-*/
+$prototype=QVariant value () const
 $method=|QVariant|value|
 
 $extraMethods

@@ -28,14 +28,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QSqlIndex ( const QString & cursorname = QString(), const QString & name = QString() )
-*/
+$prototype=QSqlIndex ( const QString & cursorname = QString(), const QString & name = QString() )
 $internalConstructor=|new1|const QString &=QString(),const QString &=QString()
 
-/*
-QSqlIndex ( const QSqlIndex & other )
-*/
+$prototype=QSqlIndex ( const QSqlIndex & other )
 $internalConstructor=|new2|const QSqlIndex &
 
 //[1]QSqlIndex ( const QString & cursorname = QString(), const QString & name = QString() )
@@ -59,14 +55,10 @@ HB_FUNC_STATIC( QSQLINDEX_NEW )
 
 $deleteMethod
 
-/*
-void append ( const QSqlField & field )
-*/
+$prototype=void append ( const QSqlField & field )
 $internalMethod=|void|append,append1|const QSqlField &
 
-/*
-void append ( const QSqlField & field, bool desc )
-*/
+$prototype=void append ( const QSqlField & field, bool desc )
 $internalMethod=|void|append,append2|const QSqlField &,bool
 
 //[1]void append ( const QSqlField & field )
@@ -88,34 +80,22 @@ HB_FUNC_STATIC( QSQLINDEX_APPEND )
   }
 }
 
-/*
-QString cursorName () const
-*/
+$prototype=QString cursorName () const
 $method=|QString|cursorName|
 
-/*
-bool isDescending ( int i ) const
-*/
+$prototype=bool isDescending ( int i ) const
 $method=|bool|isDescending|int
 
-/*
-QString name () const
-*/
+$prototype=QString name () const
 $method=|QString|name|
 
-/*
-void setCursorName ( const QString & cursorName )
-*/
+$prototype=void setCursorName ( const QString & cursorName )
 $method=|void|setCursorName|const QString &
 
-/*
-void setDescending ( int i, bool desc )
-*/
+$prototype=void setDescending ( int i, bool desc )
 $method=|void|setDescending|int,bool
 
-/*
-void setName ( const QString & name )
-*/
+$prototype=void setName ( const QString & name )
 $method=|void|setName|const QString &
 
 #pragma ENDDUMP

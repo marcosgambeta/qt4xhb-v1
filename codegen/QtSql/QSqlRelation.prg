@@ -33,14 +33,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QSqlRelation ()
-*/
+$prototype=QSqlRelation ()
 $internalConstructor=|new1|
 
-/*
-QSqlRelation ( const QString & tableName, const QString & indexColumn, const QString & displayColumn )
-*/
+$prototype=QSqlRelation ( const QString & tableName, const QString & indexColumn, const QString & displayColumn )
 $internalConstructor=|new2|const QString &,const QString &,const QString &
 
 //[1]QSqlRelation ()
@@ -62,24 +58,16 @@ HB_FUNC_STATIC( QSQLRELATION_NEW )
   }
 }
 
-/*
-QString displayColumn () const
-*/
+$prototype=QString displayColumn () const
 $method=|QString|displayColumn|
 
-/*
-QString indexColumn () const
-*/
+$prototype=QString indexColumn () const
 $method=|QString|indexColumn|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-QString tableName () const
-*/
+$prototype=QString tableName () const
 $method=|QString|tableName|
 
 $extraMethods

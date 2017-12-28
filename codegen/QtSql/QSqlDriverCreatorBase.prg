@@ -38,9 +38,7 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual QSqlDriver * createObject () const = 0
-*/
+$prototype=virtual QSqlDriver * createObject () const = 0
 $virtualMethod=|QSqlDriver *|createObject|
 
 $extraMethods

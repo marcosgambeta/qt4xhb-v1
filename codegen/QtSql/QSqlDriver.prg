@@ -61,124 +61,76 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual bool beginTransaction ()
-*/
+$prototype=virtual bool beginTransaction ()
 $virtualMethod=|bool|beginTransaction|
 
-/*
-virtual void close () = 0
-*/
+$prototype=virtual void close () = 0
 $virtualMethod=|void|close|
 
-/*
-virtual bool commitTransaction ()
-*/
+$prototype=virtual bool commitTransaction ()
 $virtualMethod=|bool|commitTransaction|
 
-/*
-virtual QSqlResult * createResult () const = 0
-*/
+$prototype=virtual QSqlResult * createResult () const = 0
 $virtualMethod=|QSqlResult *|createResult|
 
-/*
-virtual QString escapeIdentifier ( const QString & identifier, IdentifierType type ) const
-*/
+$prototype=virtual QString escapeIdentifier ( const QString & identifier, IdentifierType type ) const
 $virtualMethod=|QString|escapeIdentifier|const QString &,QSqlDriver::IdentifierType
 
-/*
-virtual QString formatValue ( const QSqlField & field, bool trimStrings = false ) const
-*/
+$prototype=virtual QString formatValue ( const QSqlField & field, bool trimStrings = false ) const
 $virtualMethod=|QString|formatValue|const QSqlField &,bool=false
 
-/*
-virtual QVariant handle () const
-*/
+$prototype=virtual QVariant handle () const
 $virtualMethod=|QVariant|handle|
 
-/*
-virtual bool hasFeature ( DriverFeature feature ) const = 0
-*/
+$prototype=virtual bool hasFeature ( DriverFeature feature ) const = 0
 $virtualMethod=|bool|hasFeature|QSqlDriver::DriverFeature
 
-/*
-bool isIdentifierEscaped ( const QString & identifier, IdentifierType type ) const
-*/
+$prototype=bool isIdentifierEscaped ( const QString & identifier, IdentifierType type ) const
 $method=|bool|isIdentifierEscaped|const QString &,QSqlDriver::IdentifierType
 
-/*
-virtual bool isOpen () const
-*/
+$prototype=virtual bool isOpen () const
 $virtualMethod=|bool|isOpen|
 
-/*
-bool isOpenError () const
-*/
+$prototype=bool isOpenError () const
 $method=|bool|isOpenError|
 
-/*
-QSqlError lastError () const
-*/
+$prototype=QSqlError lastError () const
 $method=|QSqlError|lastError|
 
-/*
-QSql::NumericalPrecisionPolicy numericalPrecisionPolicy () const
-*/
+$prototype=QSql::NumericalPrecisionPolicy numericalPrecisionPolicy () const
 $method=|QSql::NumericalPrecisionPolicy|numericalPrecisionPolicy|
 
-/*
-virtual bool open ( const QString & db, const QString & user = QString(), const QString & password = QString(), const QString & host = QString(), int port = -1, const QString & options = QString() ) = 0
-*/
+$prototype=virtual bool open ( const QString & db, const QString & user = QString(), const QString & password = QString(), const QString & host = QString(), int port = -1, const QString & options = QString() ) = 0
 $virtualMethod=|bool|open|const QString &,const QString &=QString(),const QString &=QString(),const QString &=QString(),int=-1,const QString &=QString()
 
-/*
-virtual QSqlIndex primaryIndex ( const QString & tableName ) const
-*/
+$prototype=virtual QSqlIndex primaryIndex ( const QString & tableName ) const
 $virtualMethod=|QSqlIndex|primaryIndex|const QString &
 
-/*
-virtual QSqlRecord record ( const QString & tableName ) const
-*/
+$prototype=virtual QSqlRecord record ( const QString & tableName ) const
 $virtualMethod=|QSqlRecord|record|const QString &
 
-/*
-virtual bool rollbackTransaction ()
-*/
+$prototype=virtual bool rollbackTransaction ()
 $virtualMethod=|bool|rollbackTransaction|
 
-/*
-void setNumericalPrecisionPolicy ( QSql::NumericalPrecisionPolicy precisionPolicy )
-*/
+$prototype=void setNumericalPrecisionPolicy ( QSql::NumericalPrecisionPolicy precisionPolicy )
 $method=|void|setNumericalPrecisionPolicy|QSql::NumericalPrecisionPolicy
 
-/*
-virtual QString sqlStatement ( StatementType type, const QString & tableName, const QSqlRecord & rec, bool preparedStatement ) const
-*/
+$prototype=virtual QString sqlStatement ( StatementType type, const QString & tableName, const QSqlRecord & rec, bool preparedStatement ) const
 $virtualMethod=|QString|sqlStatement|QSqlDriver::StatementType,const QString &,const QSqlRecord &,bool
 
-/*
-QString stripDelimiters ( const QString & identifier, IdentifierType type ) const
-*/
+$prototype=QString stripDelimiters ( const QString & identifier, IdentifierType type ) const
 $method=|QString|stripDelimiters|const QString &,QSqlDriver::IdentifierType
 
-/*
-bool subscribeToNotification ( const QString & name )
-*/
+$prototype=bool subscribeToNotification ( const QString & name )
 $method=|bool|subscribeToNotification|const QString &
 
-/*
-QStringList subscribedToNotifications () const
-*/
+$prototype=QStringList subscribedToNotifications () const
 $method=|QStringList|subscribedToNotifications|
 
-/*
-virtual QStringList tables ( QSql::TableType tableType ) const
-*/
+$prototype=virtual QStringList tables ( QSql::TableType tableType ) const
 $virtualMethod=|QStringList|tables|QSql::TableType
 
-/*
-bool unsubscribeFromNotification ( const QString & name )
-*/
+$prototype=bool unsubscribeFromNotification ( const QString & name )
 $method=|bool|unsubscribeFromNotification|const QString &
 
 #pragma ENDDUMP

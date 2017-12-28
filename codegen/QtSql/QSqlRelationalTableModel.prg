@@ -37,61 +37,39 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QSqlRelationalTableModel ( QObject * parent = 0, QSqlDatabase db = QSqlDatabase() )
-*/
+$prototype=QSqlRelationalTableModel ( QObject * parent = 0, QSqlDatabase db = QSqlDatabase() )
 $constructor=|new|QObject *=0,QSqlDatabase=QSqlDatabase()
 
 $deleteMethod
 
-/*
-QSqlRelation relation ( int column ) const
-*/
+$prototype=QSqlRelation relation ( int column ) const
 $method=|QSqlRelation|relation|int
 
-/*
-virtual QSqlTableModel * relationModel ( int column ) const
-*/
+$prototype=virtual QSqlTableModel * relationModel ( int column ) const
 $virtualMethod=|QSqlTableModel *|relationModel|int
 
-/*
-virtual void setRelation ( int column, const QSqlRelation & relation )
-*/
+$prototype=virtual void setRelation ( int column, const QSqlRelation & relation )
 $virtualMethod=|void|setRelation|int,const QSqlRelation &
 
-/*
-virtual void clear ()
-*/
+$prototype=virtual void clear ()
 $virtualMethod=|void|clear|
 
-/*
-virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const
-*/
+$prototype=virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const
 $virtualMethod=|QVariant|data|const QModelIndex &,int=Qt::DisplayRole
 
-/*
-virtual bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
-*/
+$prototype=virtual bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
 $virtualMethod=|bool|removeColumns|int,int,const QModelIndex &=QModelIndex()
 
-/*
-virtual bool select ()
-*/
+$prototype=virtual bool select ()
 $virtualMethod=|bool|select|
 
-/*
-virtual bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
-*/
+$prototype=virtual bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 $virtualMethod=|bool|setData|const QModelIndex &,const QVariant &,int=Qt::EditRole
 
-/*
-virtual void setTable ( const QString & table )
-*/
+$prototype=virtual void setTable ( const QString & table )
 $virtualMethod=|void|setTable|const QString &
 
-/*
-virtual void revertRow ( int row )
-*/
+$prototype=virtual void revertRow ( int row )
 $virtualMethod=|void|revertRow|int
 
 #pragma ENDDUMP

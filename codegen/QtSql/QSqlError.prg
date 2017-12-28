@@ -40,14 +40,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QSqlError ( const QString & driverText = QString(), const QString & databaseText = QString(), ErrorType type = NoError, int number = -1 )
-*/
+$prototype=QSqlError ( const QString & driverText = QString(), const QString & databaseText = QString(), ErrorType type = NoError, int number = -1 )
 $internalConstructor=|new1|const QString &=QString(),const QString &=QString(),QSqlError::ErrorType=QSqlError::NoError,int=-1
 
-/*
-QSqlError ( const QSqlError & other )
-*/
+$prototype=QSqlError ( const QSqlError & other )
 $internalConstructor=|new2|const QSqlError &
 
 //[1]QSqlError ( const QString & driverText = QString(), const QString & databaseText = QString(), ErrorType type = NoError, int number = -1 )
@@ -71,54 +67,34 @@ HB_FUNC_STATIC( QSQLERROR_NEW )
 
 $deleteMethod
 
-/*
-QString databaseText () const
-*/
+$prototype=QString databaseText () const
 $method=|QString|databaseText|
 
-/*
-QString driverText () const
-*/
+$prototype=QString driverText () const
 $method=|QString|driverText|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-int number () const
-*/
+$prototype=int number () const
 $method=|int|number|
 
-/*
-void setDatabaseText ( const QString & databaseText )
-*/
+$prototype=void setDatabaseText ( const QString & databaseText )
 $method=|void|setDatabaseText|const QString &
 
-/*
-void setDriverText ( const QString & driverText )
-*/
+$prototype=void setDriverText ( const QString & driverText )
 $method=|void|setDriverText|const QString &
 
-/*
-void setNumber ( int number )
-*/
+$prototype=void setNumber ( int number )
 $method=|void|setNumber|int
 
-/*
-void setType ( ErrorType type )
-*/
+$prototype=void setType ( ErrorType type )
 $method=|void|setType|QSqlError::ErrorType
 
-/*
-QString text () const
-*/
+$prototype=QString text () const
 $method=|QString|text|
 
-/*
-ErrorType type () const
-*/
+$prototype=ErrorType type () const
 $method=|QSqlError::ErrorType|type|
 
 $extraMethods

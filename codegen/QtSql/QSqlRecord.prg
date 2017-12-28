@@ -56,14 +56,10 @@ $destructor
 #include <QSqlField>
 #include <QVariant>
 
-/*
-QSqlRecord ()
-*/
+$prototype=QSqlRecord ()
 $internalConstructor=|new1|
 
-/*
-QSqlRecord ( const QSqlRecord & other )
-*/
+$prototype=QSqlRecord ( const QSqlRecord & other )
 $internalConstructor=|new2|const QSqlRecord &
 
 //[1]QSqlRecord ()
@@ -87,39 +83,25 @@ HB_FUNC_STATIC( QSQLRECORD_NEW )
 
 $deleteMethod
 
-/*
-void append ( const QSqlField & field )
-*/
+$prototype=void append ( const QSqlField & field )
 $method=|void|append|const QSqlField &
 
-/*
-void clear ()
-*/
+$prototype=void clear ()
 $method=|void|clear|
 
-/*
-void clearValues ()
-*/
+$prototype=void clearValues ()
 $method=|void|clearValues|
 
-/*
-bool contains ( const QString & name ) const
-*/
+$prototype=bool contains ( const QString & name ) const
 $method=|bool|contains|const QString &
 
-/*
-int count () const
-*/
+$prototype=int count () const
 $method=|int|count|
 
-/*
-QSqlField field ( int index ) const
-*/
+$prototype=QSqlField field ( int index ) const
 $internalMethod=|QSqlField|field,field1|int
 
-/*
-QSqlField field ( const QString & name ) const
-*/
+$prototype=QSqlField field ( const QString & name ) const
 $internalMethod=|QSqlField|field,field2|const QString &
 
 //[1]QSqlField field ( int index ) const
@@ -141,34 +123,22 @@ HB_FUNC_STATIC( QSQLRECORD_FIELD )
   }
 }
 
-/*
-QString fieldName ( int index ) const
-*/
+$prototype=QString fieldName ( int index ) const
 $method=|QString|fieldName|int
 
-/*
-int indexOf ( const QString & name ) const
-*/
+$prototype=int indexOf ( const QString & name ) const
 $method=|int|indexOf|const QString &
 
-/*
-void insert ( int pos, const QSqlField & field )
-*/
+$prototype=void insert ( int pos, const QSqlField & field )
 $method=|void|insert|int,const QSqlField &
 
-/*
-bool isEmpty () const
-*/
+$prototype=bool isEmpty () const
 $method=|bool|isEmpty|
 
-/*
-bool isGenerated ( const QString & name ) const
-*/
+$prototype=bool isGenerated ( const QString & name ) const
 $internalMethod=|bool|isGenerated,isGenerated1|const QString &
 
-/*
-bool isGenerated ( int index ) const
-*/
+$prototype=bool isGenerated ( int index ) const
 $internalMethod=|bool|isGenerated,isGenerated2|int
 
 //[1]bool isGenerated ( const QString & name ) const
@@ -190,14 +160,10 @@ HB_FUNC_STATIC( QSQLRECORD_ISGENERATED )
   }
 }
 
-/*
-bool isNull ( const QString & name ) const
-*/
+$prototype=bool isNull ( const QString & name ) const
 $internalMethod=|bool|isNull,isNull1|const QString &
 
-/*
-bool isNull ( int index ) const
-*/
+$prototype=bool isNull ( int index ) const
 $internalMethod=|bool|isNull,isNull2|int
 
 //[1]bool isNull ( const QString & name ) const
@@ -219,24 +185,16 @@ HB_FUNC_STATIC( QSQLRECORD_ISNULL )
   }
 }
 
-/*
-void remove ( int pos )
-*/
+$prototype=void remove ( int pos )
 $method=|void|remove|int
 
-/*
-void replace ( int pos, const QSqlField & field )
-*/
+$prototype=void replace ( int pos, const QSqlField & field )
 $method=|void|replace|int,const QSqlField &
 
-/*
-void setGenerated ( const QString & name, bool generated )
-*/
+$prototype=void setGenerated ( const QString & name, bool generated )
 $internalMethod=|void|setGenerated,setGenerated1|const QString &,bool
 
-/*
-void setGenerated ( int index, bool generated )
-*/
+$prototype=void setGenerated ( int index, bool generated )
 $internalMethod=|void|setGenerated,setGenerated2|int,bool
 
 //[1]void setGenerated ( const QString & name, bool generated )
@@ -258,14 +216,10 @@ HB_FUNC_STATIC( QSQLRECORD_SETGENERATED )
   }
 }
 
-/*
-void setNull ( int index )
-*/
+$prototype=void setNull ( int index )
 $internalMethod=|void|setNull,setNull1|int
 
-/*
-void setNull ( const QString & name )
-*/
+$prototype=void setNull ( const QString & name )
 $internalMethod=|void|setNull,setNull2|const QString &
 
 //[1]void setNull ( int index )
@@ -287,14 +241,10 @@ HB_FUNC_STATIC( QSQLRECORD_SETNULL )
   }
 }
 
-/*
-void setValue ( int index, const QVariant & val )
-*/
+$prototype=void setValue ( int index, const QVariant & val )
 $internalMethod=|void|setValue,setValue1|int,const QVariant &
 
-/*
-void setValue ( const QString & name, const QVariant & val )
-*/
+$prototype=void setValue ( const QString & name, const QVariant & val )
 $internalMethod=|void|setValue,setValue2|const QString &,const QVariant &
 
 //[1]void setValue ( int index, const QVariant & val )
@@ -316,14 +266,10 @@ HB_FUNC_STATIC( QSQLRECORD_SETVALUE )
   }
 }
 
-/*
-QVariant value ( int index ) const
-*/
+$prototype=QVariant value ( int index ) const
 $internalMethod=|QVariant|value,value1|int
 
-/*
-QVariant value ( const QString & name ) const
-*/
+$prototype=QVariant value ( const QString & name ) const
 $internalMethod=|QVariant|value,value2|const QString &
 
 //[1]QVariant value ( int index ) const

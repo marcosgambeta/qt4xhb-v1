@@ -76,24 +76,16 @@ $destructor
 #include <QSqlRecord>
 #include <QSqlDriver>
 
-/*
-QSqlQuery ( QSqlResult * result )
-*/
+$prototype=QSqlQuery ( QSqlResult * result )
 $internalConstructor=|new1|QSqlResult *
 
-/*
-QSqlQuery ( const QString & query = QString(), QSqlDatabase db = QSqlDatabase() )
-*/
+$prototype=QSqlQuery ( const QString & query = QString(), QSqlDatabase db = QSqlDatabase() )
 $internalConstructor=|new2|const QString &=QString(),QSqlDatabase=QSqlDatabase()
 
-/*
-QSqlQuery ( QSqlDatabase db )
-*/
+$prototype=QSqlQuery ( QSqlDatabase db )
 $internalConstructor=|new3|QSqlDatabase
 
-/*
-QSqlQuery ( const QSqlQuery & other )
-*/
+$prototype=QSqlQuery ( const QSqlQuery & other )
 $internalConstructor=|new4|const QSqlQuery &
 
 //[1]QSqlQuery ( QSqlResult * result )
@@ -127,24 +119,16 @@ HB_FUNC_STATIC( QSQLQUERY_NEW )
 
 $deleteMethod
 
-/*
-void addBindValue ( const QVariant & val, QSql::ParamType paramType = QSql::In )
-*/
+$prototype=void addBindValue ( const QVariant & val, QSql::ParamType paramType = QSql::In )
 $method=|void|addBindValue|const QVariant &,QSql::ParamType=QSql::In
 
-/*
-int at () const
-*/
+$prototype=int at () const
 $method=|int|at|
 
-/*
-void bindValue ( const QString & placeholder, const QVariant & val, QSql::ParamType paramType = QSql::In )
-*/
+$prototype=void bindValue ( const QString & placeholder, const QVariant & val, QSql::ParamType paramType = QSql::In )
 $internalMethod=|void|bindValue,bindValue1|const QString &,const QVariant &,QSql::ParamType=QSql::In
 
-/*
-void bindValue ( int pos, const QVariant & val, QSql::ParamType paramType = QSql::In )
-*/
+$prototype=void bindValue ( int pos, const QVariant & val, QSql::ParamType paramType = QSql::In )
 $internalMethod=|void|bindValue,bindValue2|int,const QVariant &,QSql::ParamType=QSql::In
 
 //[1]void bindValue ( const QString & placeholder, const QVariant & val, QSql::ParamType paramType = QSql::In )
@@ -166,14 +150,10 @@ HB_FUNC_STATIC( QSQLQUERY_BINDVALUE )
   }
 }
 
-/*
-QVariant boundValue ( const QString & placeholder ) const
-*/
+$prototype=QVariant boundValue ( const QString & placeholder ) const
 $internalMethod=|QVariant|boundValue,boundValue1|const QString &
 
-/*
-QVariant boundValue ( int pos ) const
-*/
+$prototype=QVariant boundValue ( int pos ) const
 $internalMethod=|QVariant|boundValue,boundValue2|int
 
 //[1]QVariant boundValue ( const QString & placeholder ) const
@@ -195,24 +175,16 @@ HB_FUNC_STATIC( QSQLQUERY_BOUNDVALUE )
   }
 }
 
-/*
-void clear ()
-*/
+$prototype=void clear ()
 $method=|void|clear|
 
-/*
-const QSqlDriver * driver () const
-*/
+$prototype=const QSqlDriver * driver () const
 $method=|const QSqlDriver *|driver|
 
-/*
-bool exec ( const QString & query )
-*/
+$prototype=bool exec ( const QString & query )
 $internalMethod=|bool|exec,exec1|const QString &
 
-/*
-bool exec ()
-*/
+$prototype=bool exec ()
 $internalMethod=|bool|exec,exec2|
 
 //[1]bool exec ( const QString & query )
@@ -234,134 +206,82 @@ HB_FUNC_STATIC( QSQLQUERY_EXEC )
   }
 }
 
-/*
-bool execBatch ( BatchExecutionMode mode = ValuesAsRows )
-*/
+$prototype=bool execBatch ( BatchExecutionMode mode = ValuesAsRows )
 $method=|bool|execBatch|QSqlQuery::BatchExecutionMode=QSqlQuery::ValuesAsRows
 
-/*
-QString executedQuery () const
-*/
+$prototype=QString executedQuery () const
 $method=|QString|executedQuery|
 
-/*
-void finish ()
-*/
+$prototype=void finish ()
 $method=|void|finish|
 
-/*
-bool first ()
-*/
+$prototype=bool first ()
 $method=|bool|first|
 
-/*
-bool isActive () const
-*/
+$prototype=bool isActive () const
 $method=|bool|isActive|
 
-/*
-bool isForwardOnly () const
-*/
+$prototype=bool isForwardOnly () const
 $method=|bool|isForwardOnly|
 
-/*
-bool isNull ( int field ) const
-*/
+$prototype=bool isNull ( int field ) const
 $method=|bool|isNull|int
 
-/*
-bool isSelect () const
-*/
+$prototype=bool isSelect () const
 $method=|bool|isSelect|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-bool last ()
-*/
+$prototype=bool last ()
 $method=|bool|last|
 
-/*
-QSqlError lastError () const
-*/
+$prototype=QSqlError lastError () const
 $method=|QSqlError|lastError|
 
-/*
-QVariant lastInsertId () const
-*/
+$prototype=QVariant lastInsertId () const
 $method=|QVariant|lastInsertId|
 
-/*
-QString lastQuery () const
-*/
+$prototype=QString lastQuery () const
 $method=|QString|lastQuery|
 
-/*
-bool next ()
-*/
+$prototype=bool next ()
 $method=|bool|next|
 
-/*
-bool nextResult ()
-*/
+$prototype=bool nextResult ()
 $method=|bool|nextResult|
 
-/*
-int numRowsAffected () const
-*/
+$prototype=int numRowsAffected () const
 $method=|int|numRowsAffected|
 
-/*
-QSql::NumericalPrecisionPolicy numericalPrecisionPolicy () const
-*/
+$prototype=QSql::NumericalPrecisionPolicy numericalPrecisionPolicy () const
 $method=|QSql::NumericalPrecisionPolicy|numericalPrecisionPolicy|
 
-/*
-bool prepare ( const QString & query )
-*/
+$prototype=bool prepare ( const QString & query )
 $method=|bool|prepare|const QString &
 
-/*
-bool previous ()
-*/
+$prototype=bool previous ()
 $method=|bool|previous|
 
-/*
-QSqlRecord record () const
-*/
+$prototype=QSqlRecord record () const
 $method=|QSqlRecord|record|
 
-/*
-const QSqlResult * result () const
-*/
+$prototype=const QSqlResult * result () const
 $method=|const QSqlResult *|result|
 
-/*
-bool seek ( int index, bool relative = false )
-*/
+$prototype=bool seek ( int index, bool relative = false )
 $method=|bool|seek|int,bool=false
 
-/*
-void setForwardOnly ( bool forward )
-*/
+$prototype=void setForwardOnly ( bool forward )
 $method=|void|setForwardOnly|bool
 
-/*
-void setNumericalPrecisionPolicy ( QSql::NumericalPrecisionPolicy precisionPolicy )
-*/
+$prototype=void setNumericalPrecisionPolicy ( QSql::NumericalPrecisionPolicy precisionPolicy )
 $method=|void|setNumericalPrecisionPolicy|QSql::NumericalPrecisionPolicy
 
-/*
-int size () const
-*/
+$prototype=int size () const
 $method=|int|size|
 
-/*
-QVariant value ( int index ) const
-*/
+$prototype=QVariant value ( int index ) const
 $method=|QVariant|value|int
 
 $extraMethods

@@ -36,9 +36,7 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual QVariant handle () const
-*/
+$prototype=virtual QVariant handle () const
 $virtualMethod=|QVariant|handle|
 
 $extraMethods

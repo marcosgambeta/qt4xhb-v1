@@ -28,26 +28,18 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QSqlRelationalDelegate ( QObject * parent = 0 )
-*/
+$prototype=QSqlRelationalDelegate ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-virtual QWidget * createEditor ( QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index ) const
-*/
+$prototype=virtual QWidget * createEditor ( QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index ) const
 $virtualMethod=|QWidget *|createEditor|QWidget *,const QStyleOptionViewItem &,const QModelIndex &
 
-/*
-virtual void setEditorData ( QWidget * editor, const QModelIndex & index ) const
-*/
+$prototype=virtual void setEditorData ( QWidget * editor, const QModelIndex & index ) const
 $virtualMethod=|void|setEditorData|QWidget *,const QModelIndex &
 
-/*
-virtual void setModelData ( QWidget * editor, QAbstractItemModel * model, const QModelIndex & index ) const
-*/
+$prototype=virtual void setModelData ( QWidget * editor, QAbstractItemModel * model, const QModelIndex & index ) const
 $virtualMethod=|void|setModelData|QWidget *,QAbstractItemModel *,const QModelIndex &
 
 #pragma ENDDUMP

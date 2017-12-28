@@ -85,14 +85,10 @@ $destructor
 #include <QSqlRecord>
 #include <QSqlDriver>
 
-/*
-QSqlDatabase ()
-*/
+$prototype=QSqlDatabase ()
 $internalConstructor=|new1|
 
-/*
-QSqlDatabase ( const QSqlDatabase & other )
-*/
+$prototype=QSqlDatabase ( const QSqlDatabase & other )
 $internalConstructor=|new2|const QSqlDatabase &
 
 //[1]QSqlDatabase ()
@@ -116,84 +112,52 @@ HB_FUNC_STATIC( QSQLDATABASE_NEW )
 
 $deleteMethod
 
-/*
-void close ()
-*/
+$prototype=void close ()
 $method=|void|close|
 
-/*
-bool commit ()
-*/
+$prototype=bool commit ()
 $method=|bool|commit|
 
-/*
-QString connectOptions () const
-*/
+$prototype=QString connectOptions () const
 $method=|QString|connectOptions|
 
-/*
-QString connectionName () const
-*/
+$prototype=QString connectionName () const
 $method=|QString|connectionName|
 
-/*
-QString databaseName () const
-*/
+$prototype=QString databaseName () const
 $method=|QString|databaseName|
 
-/*
-QSqlDriver * driver () const
-*/
+$prototype=QSqlDriver * driver () const
 $method=|QSqlDriver *|driver|
 
-/*
-QString driverName () const
-*/
+$prototype=QString driverName () const
 $method=|QString|driverName|
 
-/*
-QSqlQuery exec ( const QString & query = QString() ) const
-*/
+$prototype=QSqlQuery exec ( const QString & query = QString() ) const
 $method=|QSqlQuery|exec|const QString &=QString()
 
-/*
-QString hostName () const
-*/
+$prototype=QString hostName () const
 $method=|QString|hostName|
 
-/*
-bool isOpen () const
-*/
+$prototype=bool isOpen () const
 $method=|bool|isOpen|
 
-/*
-bool isOpenError () const
-*/
+$prototype=bool isOpenError () const
 $method=|bool|isOpenError|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-QSqlError lastError () const
-*/
+$prototype=QSqlError lastError () const
 $method=|QSqlError|lastError|
 
-/*
-QSql::NumericalPrecisionPolicy numericalPrecisionPolicy () const
-*/
+$prototype=QSql::NumericalPrecisionPolicy numericalPrecisionPolicy () const
 $method=|QSql::NumericalPrecisionPolicy|numericalPrecisionPolicy|
 
-/*
-bool open ()
-*/
+$prototype=bool open ()
 $internalMethod=|bool|open,open1|
 
-/*
-bool open ( const QString & user, const QString & password )
-*/
+$prototype=bool open ( const QString & user, const QString & password )
 $internalMethod=|bool|open,open2|const QString &,const QString &
 
 //[1]bool open ()
@@ -215,84 +179,52 @@ HB_FUNC_STATIC( QSQLDATABASE_OPEN )
   }
 }
 
-/*
-QString password () const
-*/
+$prototype=QString password () const
 $method=|QString|password|
 
-/*
-int port () const
-*/
+$prototype=int port () const
 $method=|int|port|
 
-/*
-QSqlIndex primaryIndex ( const QString & tablename ) const
-*/
+$prototype=QSqlIndex primaryIndex ( const QString & tablename ) const
 $method=|QSqlIndex|primaryIndex|const QString &
 
-/*
-QSqlRecord record ( const QString & tablename ) const
-*/
+$prototype=QSqlRecord record ( const QString & tablename ) const
 $method=|QSqlRecord|record|const QString &
 
-/*
-bool rollback ()
-*/
+$prototype=bool rollback ()
 $method=|bool|rollback|
 
-/*
-void setConnectOptions ( const QString & options = QString() )
-*/
+$prototype=void setConnectOptions ( const QString & options = QString() )
 $method=|void|setConnectOptions|const QString &=QString()
 
-/*
-void setDatabaseName ( const QString & name )
-*/
+$prototype=void setDatabaseName ( const QString & name )
 $method=|void|setDatabaseName|const QString &
 
-/*
-void setHostName ( const QString & host )
-*/
+$prototype=void setHostName ( const QString & host )
 $method=|void|setHostName|const QString &
 
-/*
-void setNumericalPrecisionPolicy ( QSql::NumericalPrecisionPolicy precisionPolicy )
-*/
+$prototype=void setNumericalPrecisionPolicy ( QSql::NumericalPrecisionPolicy precisionPolicy )
 $method=|void|setNumericalPrecisionPolicy|QSql::NumericalPrecisionPolicy
 
-/*
-void setPassword ( const QString & password )
-*/
+$prototype=void setPassword ( const QString & password )
 $method=|void|setPassword|const QString &
 
-/*
-void setPort ( int port )
-*/
+$prototype=void setPort ( int port )
 $method=|void|setPort|int
 
-/*
-void setUserName ( const QString & name )
-*/
+$prototype=void setUserName ( const QString & name )
 $method=|void|setUserName|const QString &
 
-/*
-QStringList tables ( QSql::TableType type = QSql::Tables ) const
-*/
+$prototype=QStringList tables ( QSql::TableType type = QSql::Tables ) const
 $method=|QStringList|tables|QSql::TableType=QSql::Tables
 
-/*
-bool transaction ()
-*/
+$prototype=bool transaction ()
 $method=|bool|transaction|
 
-/*
-QString userName () const
-*/
+$prototype=QString userName () const
 $method=|QString|userName|
 
-/*
-static QSqlDatabase addDatabase ( const QString & type, const QString & connectionName = QLatin1String( defaultConnection ) )
-*/
+$prototype=static QSqlDatabase addDatabase ( const QString & type, const QString & connectionName = QLatin1String( defaultConnection ) )
 void QSqlDatabase_addDatabase1 ()
 {
   QString par2; // TODO: revisar
@@ -326,9 +258,7 @@ void QSqlDatabase_addDatabase1 ()
   }
 }
 
-/*
-static QSqlDatabase addDatabase ( QSqlDriver * driver, const QString & connectionName = QLatin1String( defaultConnection ) )
-*/
+$prototype=static QSqlDatabase addDatabase ( QSqlDriver * driver, const QString & connectionName = QLatin1String( defaultConnection ) )
 void QSqlDatabase_addDatabase2 ()
 {
   QSqlDriver * par1 = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -382,19 +312,13 @@ HB_FUNC_STATIC( QSQLDATABASE_ADDDATABASE )
   }
 }
 
-/*
-static QSqlDatabase cloneDatabase ( const QSqlDatabase & other, const QString & connectionName )
-*/
+$prototype=static QSqlDatabase cloneDatabase ( const QSqlDatabase & other, const QString & connectionName )
 $staticMethod=|QSqlDatabase|cloneDatabase|const QSqlDatabase &,const QString &
 
-/*
-static QStringList connectionNames ()
-*/
+$prototype=static QStringList connectionNames ()
 $staticMethod=|QStringList|connectionNames|
 
-/*
-static bool contains ( const QString & connectionName = QLatin1String( defaultConnection ) )
-*/
+$prototype=static bool contains ( const QString & connectionName = QLatin1String( defaultConnection ) )
 HB_FUNC_STATIC( QSQLDATABASE_CONTAINS )
 {
   QString par1; // TODO: revisar
@@ -409,9 +333,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CONTAINS )
   RBOOL( QSqlDatabase::contains ( par1 ) );
 }
 
-/*
-static QSqlDatabase database ( const QString & connectionName = QLatin1String( defaultConnection ), bool open = true )
-*/
+$prototype=static QSqlDatabase database ( const QString & connectionName = QLatin1String( defaultConnection ), bool open = true )
 HB_FUNC_STATIC( QSQLDATABASE_DATABASE )
 {
   QString par1; // TODO: revisar
@@ -445,24 +367,16 @@ HB_FUNC_STATIC( QSQLDATABASE_DATABASE )
   }
 }
 
-/*
-static QStringList drivers ()
-*/
+$prototype=static QStringList drivers ()
 $staticMethod=|QStringList|drivers|
 
-/*
-static bool isDriverAvailable ( const QString & name )
-*/
+$prototype=static bool isDriverAvailable ( const QString & name )
 $staticMethod=|bool|isDriverAvailable|const QString &
 
-/*
-static void registerSqlDriver ( const QString & name, QSqlDriverCreatorBase * creator )
-*/
+$prototype=static void registerSqlDriver ( const QString & name, QSqlDriverCreatorBase * creator )
 $staticMethod=|void|registerSqlDriver|const QString &,QSqlDriverCreatorBase *
 
-/*
-static void removeDatabase ( const QString & connectionName )
-*/
+$prototype=static void removeDatabase ( const QString & connectionName )
 $staticMethod=|void|removeDatabase|const QString &
 
 $extraMethods
