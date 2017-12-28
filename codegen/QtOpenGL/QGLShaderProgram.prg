@@ -107,14 +107,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QGLShaderProgram ( QObject * parent = 0 )
-*/
+$prototype=QGLShaderProgram ( QObject * parent = 0 )
 $internalConstructor=|new1|QObject *=0
 
-/*
-QGLShaderProgram ( const QGLContext * context, QObject * parent = 0 )
-*/
+$prototype=QGLShaderProgram ( const QGLContext * context, QObject * parent = 0 )
 $internalConstructor=|new2|const QGLContext *,QObject *=0
 
 //[1]QGLShaderProgram ( QObject * parent = 0 )
@@ -138,24 +134,16 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_NEW )
 
 $deleteMethod
 
-/*
-bool addShader ( QGLShader * shader )
-*/
+$prototype=bool addShader ( QGLShader * shader )
 $method=|bool|addShader|QGLShader *
 
-/*
-bool addShaderFromSourceCode ( QGLShader::ShaderType type, const char * source )
-*/
+$prototype=bool addShaderFromSourceCode ( QGLShader::ShaderType type, const char * source )
 $method=|bool|addShaderFromSourceCode,addShaderFromSourceCode1|QGLShader::ShaderType,const char *
 
-/*
-bool addShaderFromSourceCode ( QGLShader::ShaderType type, const QByteArray & source )
-*/
+$prototype=bool addShaderFromSourceCode ( QGLShader::ShaderType type, const QByteArray & source )
 $method=|bool|addShaderFromSourceCode,addShaderFromSourceCode2|QGLShader::ShaderType,const QByteArray &
 
-/*
-bool addShaderFromSourceCode ( QGLShader::ShaderType type, const QString & source )
-*/
+$prototype=bool addShaderFromSourceCode ( QGLShader::ShaderType type, const QString & source )
 $method=|bool|addShaderFromSourceCode,addShaderFromSourceCode3|QGLShader::ShaderType,const QString &
 
 //[1]bool addShaderFromSourceCode ( QGLShader::ShaderType type, const char * source )
@@ -182,24 +170,16 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE )
   }
 }
 
-/*
-bool addShaderFromSourceFile ( QGLShader::ShaderType type, const QString & fileName )
-*/
+$prototype=bool addShaderFromSourceFile ( QGLShader::ShaderType type, const QString & fileName )
 $method=|bool|addShaderFromSourceFile|QGLShader::ShaderType,const QString &
 
-/*
-int attributeLocation ( const char * name ) const
-*/
+$prototype=int attributeLocation ( const char * name ) const
 $method=|int|attributeLocation,attributeLocation1|const char *
 
-/*
-int attributeLocation ( const QByteArray & name ) const
-*/
+$prototype=int attributeLocation ( const QByteArray & name ) const
 $method=|int|attributeLocation,attributeLocation2|const QByteArray &
 
-/*
-int attributeLocation ( const QString & name ) const
-*/
+$prototype=int attributeLocation ( const QString & name ) const
 $method=|int|attributeLocation,attributeLocation3|const QString &
 
 //[1]int attributeLocation ( const char * name ) const
@@ -226,24 +206,16 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_ATTRIBUTELOCATION )
   }
 }
 
-/*
-bool bind ()
-*/
+$prototype=bool bind ()
 $method=|bool|bind|
 
-/*
-void bindAttributeLocation ( const char * name, int location )
-*/
+$prototype=void bindAttributeLocation ( const char * name, int location )
 $method=|void|bindAttributeLocation,bindAttributeLocation1|const char *,int
 
-/*
-void bindAttributeLocation ( const QByteArray & name, int location )
-*/
+$prototype=void bindAttributeLocation ( const QByteArray & name, int location )
 $method=|void|bindAttributeLocation,bindAttributeLocation2|const QByteArray &,int
 
-/*
-void bindAttributeLocation ( const QString & name, int location )
-*/
+$prototype=void bindAttributeLocation ( const QString & name, int location )
 $method=|void|bindAttributeLocation,bindAttributeLocation3|const QString &,int
 
 //[1]void bindAttributeLocation ( const char * name, int location )
@@ -270,14 +242,10 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_BINDATTRIBUTELOCATION )
   }
 }
 
-/*
-void disableAttributeArray ( int location )
-*/
+$prototype=void disableAttributeArray ( int location )
 $method=|void|disableAttributeArray,disableAttributeArray1|int
 
-/*
-void disableAttributeArray ( const char * name )
-*/
+$prototype=void disableAttributeArray ( const char * name )
 $method=|void|disableAttributeArray,disableAttributeArray2|const char *
 
 //[1]void disableAttributeArray ( int location )
@@ -299,14 +267,10 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_DISABLEATTRIBUTEARRAY )
   }
 }
 
-/*
-void enableAttributeArray ( int location )
-*/
+$prototype=void enableAttributeArray ( int location )
 $method=|void|enableAttributeArray,enableAttributeArray1|int
 
-/*
-void enableAttributeArray ( const char * name )
-*/
+$prototype=void enableAttributeArray ( const char * name )
 $method=|void|enableAttributeArray,enableAttributeArray2|const char *
 
 //[1]void enableAttributeArray ( int location )
@@ -328,59 +292,37 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_ENABLEATTRIBUTEARRAY )
   }
 }
 
-/*
-GLenum geometryInputType () const
-*/
+$prototype=GLenum geometryInputType () const
 $method=|GLenum|geometryInputType|
 
-/*
-GLenum geometryOutputType () const
-*/
+$prototype=GLenum geometryOutputType () const
 $method=|GLenum|geometryOutputType|
 
-/*
-int geometryOutputVertexCount () const
-*/
+$prototype=int geometryOutputVertexCount () const
 $method=|int|geometryOutputVertexCount|
 
-/*
-bool isLinked () const
-*/
+$prototype=bool isLinked () const
 $method=|bool|isLinked|
 
-/*
-virtual bool link ()
-*/
+$prototype=virtual bool link ()
 $virtualMethod=|bool|link|
 
-/*
-QString log () const
-*/
+$prototype=QString log () const
 $method=|QString|log|
 
-/*
-int maxGeometryOutputVertices () const
-*/
+$prototype=int maxGeometryOutputVertices () const
 $method=|int|maxGeometryOutputVertices|
 
-/*
-GLuint programId () const
-*/
+$prototype=GLuint programId () const
 $method=|GLuint|programId|
 
-/*
-void release ()
-*/
+$prototype=void release ()
 $method=|void|release|
 
-/*
-void removeAllShaders ()
-*/
+$prototype=void removeAllShaders ()
 $method=|void|removeAllShaders|
 
-/*
-void removeShader ( QGLShader * shader )
-*/
+$prototype=void removeShader ( QGLShader * shader )
 $method=|void|removeShader|QGLShader *
 
 //[01]void setAttributeArray ( int location, const GLfloat * values, int tupleSize, int stride = 0 )
@@ -399,14 +341,10 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEARRAY )
 {
 }
 
-/*
-void setAttributeBuffer ( int location, GLenum type, int offset, int tupleSize, int stride = 0 )
-*/
+$prototype=void setAttributeBuffer ( int location, GLenum type, int offset, int tupleSize, int stride = 0 )
 $method=|void|setAttributeBuffer,setAttributeBuffer1|int,GLenum,int,int,int=0
 
-/*
-void setAttributeBuffer ( const char * name, GLenum type, int offset, int tupleSize, int stride = 0 )
-*/
+$prototype=void setAttributeBuffer ( const char * name, GLenum type, int offset, int tupleSize, int stride = 0 )
 $method=|void|setAttributeBuffer,setAttributeBuffer2|const char *,GLenum,int,int,int=0
 
 //[1]void setAttributeBuffer ( int location, GLenum type, int offset, int tupleSize, int stride = 0 )
@@ -428,54 +366,34 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEBUFFER )
   }
 }
 
-/*
-void setAttributeValue ( int location, GLfloat value )
-*/
+$prototype=void setAttributeValue ( int location, GLfloat value )
 $method=|void|setAttributeValue,setAttributeValue1|int,GLfloat
 
-/*
-void setAttributeValue ( int location, GLfloat x, GLfloat y )
-*/
+$prototype=void setAttributeValue ( int location, GLfloat x, GLfloat y )
 $method=|void|setAttributeValue,setAttributeValue2|int,GLfloat,GLfloat
 
-/*
-void setAttributeValue ( int location, GLfloat x, GLfloat y, GLfloat z )
-*/
+$prototype=void setAttributeValue ( int location, GLfloat x, GLfloat y, GLfloat z )
 $method=|void|setAttributeValue,setAttributeValue3|int,GLfloat,GLfloat,GLfloat
 
-/*
-void setAttributeValue ( int location, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
-*/
+$prototype=void setAttributeValue ( int location, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
 $method=|void|setAttributeValue,setAttributeValue4|int,GLfloat,GLfloat,GLfloat,GLfloat
 
-/*
-void setAttributeValue ( int location, const QColor & value )
-*/
+$prototype=void setAttributeValue ( int location, const QColor & value )
 $method=|void|setAttributeValue,setAttributeValue8|int,const QColor &
 
-/*
-void setAttributeValue ( const char * name, GLfloat value )
-*/
+$prototype=void setAttributeValue ( const char * name, GLfloat value )
 $method=|void|setAttributeValue,setAttributeValue10|const char *,GLfloat
 
-/*
-void setAttributeValue ( const char * name, GLfloat x, GLfloat y )
-*/
+$prototype=void setAttributeValue ( const char * name, GLfloat x, GLfloat y )
 $method=|void|setAttributeValue,setAttributeValue11|const char *,GLfloat,GLfloat
 
-/*
-void setAttributeValue ( const char * name, GLfloat x, GLfloat y, GLfloat z )
-*/
+$prototype=void setAttributeValue ( const char * name, GLfloat x, GLfloat y, GLfloat z )
 $method=|void|setAttributeValue,setAttributeValue12|const char *,GLfloat,GLfloat,GLfloat
 
-/*
-void setAttributeValue ( const char * name, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
-*/
+$prototype=void setAttributeValue ( const char * name, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
 $method=|void|setAttributeValue,setAttributeValue13|const char *,GLfloat,GLfloat,GLfloat,GLfloat
 
-/*
-void setAttributeValue ( const char * name, const QColor & value )
-*/
+$prototype=void setAttributeValue ( const char * name, const QColor & value )
 $method=|void|setAttributeValue,setAttributeValue17|const char *,const QColor &
 
 //[01]void setAttributeValue ( int location, GLfloat value )
@@ -547,139 +465,85 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE )
   }
 }
 
-/*
-void setGeometryInputType ( GLenum inputType )
-*/
+$prototype=void setGeometryInputType ( GLenum inputType )
 $method=|void|setGeometryInputType|GLenum
 
-/*
-void setGeometryOutputType ( GLenum outputType )
-*/
+$prototype=void setGeometryOutputType ( GLenum outputType )
 $method=|void|setGeometryOutputType|GLenum
 
-/*
-void setGeometryOutputVertexCount ( int count )
-*/
+$prototype=void setGeometryOutputVertexCount ( int count )
 $method=|void|setGeometryOutputVertexCount|int
 
-/*
-void setUniformValue ( int location, GLfloat value )
-*/
+$prototype=void setUniformValue ( int location, GLfloat value )
 $method=|void|setUniformValue,setUniformValue1|int,GLfloat
 
-/*
-void setUniformValue ( const char * name, const QPointF & point )
-*/
+$prototype=void setUniformValue ( const char * name, const QPointF & point )
 $method=|void|setUniformValue,setUniformValue2|const char *,const QPointF &
 
-/*
-void setUniformValue ( const char * name, const QSize & size )
-*/
+$prototype=void setUniformValue ( const char * name, const QSize & size )
 $method=|void|setUniformValue,setUniformValue3|const char *,const QSize &
 
-/*
-void setUniformValue ( const char * name, const QSizeF & size )
-*/
+$prototype=void setUniformValue ( const char * name, const QSizeF & size )
 $method=|void|setUniformValue,setUniformValue4|const char *,const QSizeF &
 
-/*
-void setUniformValue ( const char * name, const QTransform & value )
-*/
+$prototype=void setUniformValue ( const char * name, const QTransform & value )
 $method=|void|setUniformValue,setUniformValue20|const char *,const QTransform &
 
-/*
-void setUniformValue ( int location, GLint value )
-*/
+$prototype=void setUniformValue ( int location, GLint value )
 $method=|void|setUniformValue,setUniformValue21|int,GLint
 
-/*
-void setUniformValue ( int location, GLuint value )
-*/
+$prototype=void setUniformValue ( int location, GLuint value )
 $method=|void|setUniformValue,setUniformValue22|int,GLuint
 
-/*
-void setUniformValue ( int location, GLfloat x, GLfloat y )
-*/
+$prototype=void setUniformValue ( int location, GLfloat x, GLfloat y )
 $method=|void|setUniformValue,setUniformValue23|int,GLfloat,GLfloat
 
-/*
-void setUniformValue ( int location, GLfloat x, GLfloat y, GLfloat z )
-*/
+$prototype=void setUniformValue ( int location, GLfloat x, GLfloat y, GLfloat z )
 $method=|void|setUniformValue,setUniformValue24|int,GLfloat,GLfloat,GLfloat
 
-/*
-void setUniformValue ( int location, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
-*/
+$prototype=void setUniformValue ( int location, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
 $method=|void|setUniformValue,setUniformValue25|int,GLfloat,GLfloat,GLfloat,GLfloat
 
-/*
-void setUniformValue ( int location, const QColor & color )
-*/
+$prototype=void setUniformValue ( int location, const QColor & color )
 $method=|void|setUniformValue,setUniformValue29|int,const QColor &
 
-/*
-void setUniformValue ( int location, const QPoint & point )
-*/
+$prototype=void setUniformValue ( int location, const QPoint & point )
 $method=|void|setUniformValue,setUniformValue30|int,const QPoint &
 
-/*
-void setUniformValue ( int location, const QPointF & point )
-*/
+$prototype=void setUniformValue ( int location, const QPointF & point )
 $method=|void|setUniformValue,setUniformValue31|int,const QPointF &
 
-/*
-void setUniformValue ( int location, const QSize & size )
-*/
+$prototype=void setUniformValue ( int location, const QSize & size )
 $method=|void|setUniformValue,setUniformValue32|int,const QSize &
 
-/*
-void setUniformValue ( int location, const QSizeF & size )
-*/
+$prototype=void setUniformValue ( int location, const QSizeF & size )
 $method=|void|setUniformValue,setUniformValue33|int,const QSizeF &
 
-/*
-void setUniformValue ( int location, const QTransform & value )
-*/
+$prototype=void setUniformValue ( int location, const QTransform & value )
 $method=|void|setUniformValue,setUniformValue43|int,const QTransform &
 
-/*
-void setUniformValue ( const char * name, GLfloat value )
-*/
+$prototype=void setUniformValue ( const char * name, GLfloat value )
 $method=|void|setUniformValue,setUniformValue44|const char *,GLfloat
 
-/*
-void setUniformValue ( const char * name, GLint value )
-*/
+$prototype=void setUniformValue ( const char * name, GLint value )
 $method=|void|setUniformValue,setUniformValue45|const char *,GLint
 
-/*
-void setUniformValue ( const char * name, GLuint value )
-*/
+$prototype=void setUniformValue ( const char * name, GLuint value )
 $method=|void|setUniformValue,setUniformValue46|const char *,GLuint
 
-/*
-void setUniformValue ( const char * name, GLfloat x, GLfloat y )
-*/
+$prototype=void setUniformValue ( const char * name, GLfloat x, GLfloat y )
 $method=|void|setUniformValue,setUniformValue47|const char *,GLfloat,GLfloat
 
-/*
-void setUniformValue ( const char * name, GLfloat x, GLfloat y, GLfloat z )
-*/
+$prototype=void setUniformValue ( const char * name, GLfloat x, GLfloat y, GLfloat z )
 $method=|void|setUniformValue,setUniformValue48|const char *,GLfloat,GLfloat,GLfloat
 
-/*
-void setUniformValue ( const char * name, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
-*/
+$prototype=void setUniformValue ( const char * name, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
 $method=|void|setUniformValue,setUniformValue49|const char *,GLfloat,GLfloat,GLfloat,GLfloat
 
-/*
-void setUniformValue ( const char * name, const QColor & color )
-*/
+$prototype=void setUniformValue ( const char * name, const QColor & color )
 $method=|void|setUniformValue,setUniformValue53|const char *,const QColor &
 
-/*
-void setUniformValue ( const char * name, const QPoint & point )
-*/
+$prototype=void setUniformValue ( const char * name, const QPoint & point )
 $method=|void|setUniformValue,setUniformValue54|const char *,const QPoint &
 
 //[01]void setUniformValue ( int location, GLfloat value )
@@ -792,9 +656,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUEARRAY )
 {
 }
 
-/*
-QList<QGLShader *> shaders () const
-*/
+$prototype=QList<QGLShader *> shaders () const
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SHADERS )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -830,19 +692,13 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SHADERS )
   }
 }
 
-/*
-int uniformLocation ( const char * name ) const
-*/
+$prototype=int uniformLocation ( const char * name ) const
 $method=|int|uniformLocation,uniformLocation1|const char *
 
-/*
-int uniformLocation ( const QByteArray & name ) const
-*/
+$prototype=int uniformLocation ( const QByteArray & name ) const
 $method=|int|uniformLocation,uniformLocation2|const QByteArray &
 
-/*
-int uniformLocation ( const QString & name ) const
-*/
+$prototype=int uniformLocation ( const QString & name ) const
 $method=|int|uniformLocation,uniformLocation3|const QString &
 
 //[1]int uniformLocation ( const char * name ) const
@@ -870,9 +726,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_UNIFORMLOCATION )
 }
 
 
-/*
-static bool hasOpenGLShaderPrograms ( const QGLContext * context = 0 )
-*/
+$prototype=static bool hasOpenGLShaderPrograms ( const QGLContext * context = 0 )
 $staticMethod=|bool|hasOpenGLShaderPrograms|const QGLContext *=0
 
 #pragma ENDDUMP

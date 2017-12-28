@@ -64,9 +64,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QGLContext ( const QGLFormat & format )
-*/
+$prototype=QGLContext ( const QGLFormat & format )
 HB_FUNC_STATIC( QGLCONTEXT_NEW )
 {
   QGLContext * o = new QGLContext ( *PQGLFORMAT(1) );
@@ -75,29 +73,19 @@ HB_FUNC_STATIC( QGLCONTEXT_NEW )
 
 $deleteMethod
 
-/*
-GLuint bindTexture ( const QImage & image, GLenum target, GLint format, BindOptions options )
-*/
+$prototype=GLuint bindTexture ( const QImage & image, GLenum target, GLint format, BindOptions options )
 $method=|GLuint|bindTexture,bindTexture1|const QImage &,GLenum,GLint,QGLContext::BindOptions
 
-/*
-GLuint bindTexture ( const QString & fileName )
-*/
+$prototype=GLuint bindTexture ( const QString & fileName )
 $method=|GLuint|bindTexture,bindTexture2|const QString &
 
-/*
-GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
-*/
+$prototype=GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
 $method=|GLuint|bindTexture,bindTexture3|const QImage &,GLenum=GL_TEXTURE_2D,GLint=GL_RGBA
 
-/*
-GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
-*/
+$prototype=GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
 $method=|GLuint|bindTexture,bindTexture4|const QPixmap &,GLenum=GL_TEXTURE_2D,GLint=GL_RGBA
 
-/*
-GLuint bindTexture ( const QPixmap & pixmap, GLenum target, GLint format, BindOptions options )
-*/
+$prototype=GLuint bindTexture ( const QPixmap & pixmap, GLenum target, GLint format, BindOptions options )
 $method=|GLuint|bindTexture,bindTexture5|const QPixmap &,GLenum,GLint,QGLContext::BindOptions
 
 //[1]GLuint bindTexture ( const QImage & image, GLenum target, GLint format, BindOptions options )
@@ -134,34 +122,22 @@ HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE )
   }
 }
 
-/*
-virtual bool create ( const QGLContext * shareContext = 0 )
-*/
+$prototype=virtual bool create ( const QGLContext * shareContext = 0 )
 $virtualMethod=|bool|create|const QGLContext *=0
 
-/*
-void deleteTexture ( GLuint id )
-*/
+$prototype=void deleteTexture ( GLuint id )
 $method=|void|deleteTexture|GLuint
 
-/*
-QPaintDevice * device () const
-*/
+$prototype=QPaintDevice * device () const
 $method=|QPaintDevice *|device|
 
-/*
-virtual void doneCurrent ()
-*/
+$prototype=virtual void doneCurrent ()
 $virtualMethod=|void|doneCurrent|
 
-/*
-void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
-*/
+$prototype=void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 $method=|void|drawTexture,drawTexture1|const QRectF &,GLuint,GLenum=GL_TEXTURE_2D
 
-/*
-void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
-*/
+$prototype=void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 $method=|void|drawTexture,drawTexture2|const QPointF &,GLuint,GLenum=GL_TEXTURE_2D
 
 //[1]void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
@@ -183,74 +159,46 @@ HB_FUNC_STATIC( QGLCONTEXT_DRAWTEXTURE )
   }
 }
 
-/*
-QGLFormat format () const
-*/
+$prototype=QGLFormat format () const
 $method=|QGLFormat|format|
 
-/*
-void * getProcAddress ( const QString & proc ) const
-*/
+$prototype=void * getProcAddress ( const QString & proc ) const
 $method=|void *|getProcAddress|const QString &
 
-/*
-bool isSharing () const
-*/
+$prototype=bool isSharing () const
 $method=|bool|isSharing|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-virtual void makeCurrent ()
-*/
+$prototype=virtual void makeCurrent ()
 $virtualMethod=|void|makeCurrent|
 
-/*
-QColor overlayTransparentColor () const
-*/
+$prototype=QColor overlayTransparentColor () const
 $method=|QColor|overlayTransparentColor|
 
-/*
-QGLFormat requestedFormat () const
-*/
+$prototype=QGLFormat requestedFormat () const
 $method=|QGLFormat|requestedFormat|
 
-/*
-void reset ()
-*/
+$prototype=void reset ()
 $method=|void|reset|
 
-/*
-void setFormat ( const QGLFormat & format )
-*/
+$prototype=void setFormat ( const QGLFormat & format )
 $method=|void|setFormat|const QGLFormat &
 
-/*
-virtual void swapBuffers () const
-*/
+$prototype=virtual void swapBuffers () const
 $virtualMethod=|void|swapBuffers|
 
-/*
-static bool areSharing ( const QGLContext * context1, const QGLContext * context2 )
-*/
+$prototype=static bool areSharing ( const QGLContext * context1, const QGLContext * context2 )
 $staticMethod=|bool|areSharing|const QGLContext *,const QGLContext *
 
-/*
-static const QGLContext * currentContext ()
-*/
+$prototype=static const QGLContext * currentContext ()
 $staticMethod=|const QGLContext *|currentContext|
 
-/*
-static void setTextureCacheLimit ( int size )
-*/
+$prototype=static void setTextureCacheLimit ( int size )
 $staticMethod=|void|setTextureCacheLimit|int
 
-/*
-static int textureCacheLimit ()
-*/
+$prototype=static int textureCacheLimit ()
 $staticMethod=|int|textureCacheLimit|
 
 $extraMethods

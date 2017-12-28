@@ -58,19 +58,13 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QGLWidget ( QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
-*/
+$prototype=QGLWidget ( QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
 $internalConstructor=|new1|QWidget *=0,const QGLWidget *=0,Qt::WindowFlags=0
 
-/*
-QGLWidget ( QGLContext * context, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
-*/
+$prototype=QGLWidget ( QGLContext * context, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
 $internalConstructor=|new2|QGLContext *,QWidget *=0,const QGLWidget *=0,Qt::WindowFlags=0
 
-/*
-QGLWidget ( const QGLFormat & format, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
-*/
+$prototype=QGLWidget ( const QGLFormat & format, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
 $internalConstructor=|new3|const QGLFormat &,QWidget *=0,const QGLWidget *=0,Qt::WindowFlags=0
 
 //[1]QGLWidget ( QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
@@ -99,29 +93,19 @@ HB_FUNC_STATIC( QGLWIDGET_NEW )
 
 $deleteMethod
 
-/*
-GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
-*/
+$prototype=GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
 $method=|GLuint|bindTexture,bindTexture1|const QImage &,GLenum=GL_TEXTURE_2D,GLint=GL_RGBA
 
-/*
-GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
-*/
+$prototype=GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
 $method=|GLuint|bindTexture,bindTexture2|const QPixmap &,GLenum=GL_TEXTURE_2D,GLint=GL_RGBA
 
-/*
-GLuint bindTexture ( const QImage & image, GLenum target, GLint format, QGLContext::BindOptions options )
-*/
+$prototype=GLuint bindTexture ( const QImage & image, GLenum target, GLint format, QGLContext::BindOptions options )
 $method=|GLuint|bindTexture,bindTexture3|const QImage &,GLenum,GLint,QGLContext::BindOptions
 
-/*
-GLuint bindTexture ( const QPixmap & pixmap, GLenum target, GLint format, QGLContext::BindOptions options )
-*/
+$prototype=GLuint bindTexture ( const QPixmap & pixmap, GLenum target, GLint format, QGLContext::BindOptions options )
 $method=|GLuint|bindTexture,bindTexture4|const QPixmap &,GLenum,GLint,QGLContext::BindOptions
 
-/*
-GLuint bindTexture ( const QString & fileName )
-*/
+$prototype=GLuint bindTexture ( const QString & fileName )
 $method=|GLuint|bindTexture,bindTexture5|const QString &
 
 //[1]GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
@@ -158,39 +142,25 @@ HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE ) // TODO: resolver conflitos 1/2 com 3/4
   }
 }
 
-/*
-const QGLColormap & colormap () const
-*/
+$prototype=const QGLColormap & colormap () const
 $method=|const QGLColormap &|colormap|
 
-/*
-const QGLContext * context () const
-*/
+$prototype=const QGLContext * context () const
 $method=|const QGLContext *|context|
 
-/*
-void deleteTexture ( GLuint id )
-*/
+$prototype=void deleteTexture ( GLuint id )
 $method=|void|deleteTexture|GLuint
 
-/*
-void doneCurrent ()
-*/
+$prototype=void doneCurrent ()
 $method=|void|doneCurrent|
 
-/*
-bool doubleBuffer () const
-*/
+$prototype=bool doubleBuffer () const
 $method=|bool|doubleBuffer|
 
-/*
-void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
-*/
+$prototype=void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 $internalMethod=|void|drawTexture,drawTexture1|const QRectF &,GLuint,GLenum=GL_TEXTURE_2D
 
-/*
-void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
-*/
+$prototype=void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 $internalMethod=|void|drawTexture,drawTexture2|const QPointF &,GLuint,GLenum=GL_TEXTURE_2D
 
 //[1]void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
@@ -212,64 +182,40 @@ HB_FUNC_STATIC( QGLWIDGET_DRAWTEXTURE )
   }
 }
 
-/*
-QGLFormat format () const
-*/
+$prototype=QGLFormat format () const
 $method=|QGLFormat|format|
 
-/*
-QImage grabFrameBuffer ( bool withAlpha = false )
-*/
+$prototype=QImage grabFrameBuffer ( bool withAlpha = false )
 $method=|QImage|grabFrameBuffer|bool=false
 
-/*
-bool isSharing () const
-*/
+$prototype=bool isSharing () const
 $method=|bool|isSharing|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-void makeCurrent ()
-*/
+$prototype=void makeCurrent ()
 $method=|void|makeCurrent|
 
-/*
-void makeOverlayCurrent ()
-*/
+$prototype=void makeOverlayCurrent ()
 $method=|void|makeOverlayCurrent|
 
-/*
-const QGLContext * overlayContext () const
-*/
+$prototype=const QGLContext * overlayContext () const
 $method=|const QGLContext *|overlayContext|
 
-/*
-void qglClearColor ( const QColor & c ) const
-*/
+$prototype=void qglClearColor ( const QColor & c ) const
 $method=|void|qglClearColor|const QColor &
 
-/*
-void qglColor ( const QColor & c ) const
-*/
+$prototype=void qglColor ( const QColor & c ) const
 $method=|void|qglColor|const QColor &
 
-/*
-QPixmap renderPixmap ( int w = 0, int h = 0, bool useContext = false )
-*/
+$prototype=QPixmap renderPixmap ( int w = 0, int h = 0, bool useContext = false )
 $method=|QPixmap|renderPixmap|int=0,int=0,bool=false
 
-/*
-void renderText ( int x, int y, const QString & str, const QFont & font = QFont(), int listBase = 2000 )
-*/
+$prototype=void renderText ( int x, int y, const QString & str, const QFont & font = QFont(), int listBase = 2000 )
 $internalMethod=|void|renderText,renderText1|int,int,const QString &,const QFont &=QFont(),int=2000
 
-/*
-void renderText ( double x, double y, double z, const QString & str, const QFont & font = QFont(), int listBase = 2000 )
-*/
+$prototype=void renderText ( double x, double y, double z, const QString & str, const QFont & font = QFont(), int listBase = 2000 )
 $internalMethod=|void|renderText,renderText2|double,double,double,const QString &,const QFont &=QFont(),int=2000
 
 //[1]void renderText ( int x, int y, const QString & str, const QFont & font = QFont(), int listBase = 2000 )
@@ -291,34 +237,22 @@ HB_FUNC_STATIC( QGLWIDGET_RENDERTEXT )
   }
 }
 
-/*
-void setColormap ( const QGLColormap & cmap )
-*/
+$prototype=void setColormap ( const QGLColormap & cmap )
 $method=|void|setColormap|const QGLColormap &
 
-/*
-void setMouseTracking ( bool enable )
-*/
+$prototype=void setMouseTracking ( bool enable )
 $method=|void|setMouseTracking|bool
 
-/*
-void swapBuffers ()
-*/
+$prototype=void swapBuffers ()
 $method=|void|swapBuffers|
 
-/*
-virtual void updateGL ()
-*/
+$prototype=virtual void updateGL ()
 $virtualMethod=|void|updateGL|
 
-/*
-virtual void updateOverlayGL ()
-*/
+$prototype=virtual void updateOverlayGL ()
 $virtualMethod=|void|updateOverlayGL|
 
-/*
-static QImage convertToGLFormat ( const QImage & img )
-*/
+$prototype=static QImage convertToGLFormat ( const QImage & img )
 $staticMethod=|QImage|convertToGLFormat|const QImage &
 
 #pragma ENDDUMP
