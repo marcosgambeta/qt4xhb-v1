@@ -49,9 +49,7 @@ $destructor
 
 #include <QScriptString>
 
-/*
-QScriptValueIterator ( const QScriptValue & object )
-*/
+$prototype=QScriptValueIterator ( const QScriptValue & object )
 HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_NEW )
 {
   QScriptValueIterator * o = new QScriptValueIterator ( *PQSCRIPTVALUE(1) );
@@ -60,64 +58,40 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_NEW )
 
 $deleteMethod
 
-/*
-QScriptValue::PropertyFlags flags () const
-*/
+$prototype=QScriptValue::PropertyFlags flags () const
 $method=|QScriptValue::PropertyFlags|flags|
 
-/*
-bool hasNext () const
-*/
+$prototype=bool hasNext () const
 $method=|bool|hasNext|
 
-/*
-bool hasPrevious () const
-*/
+$prototype=bool hasPrevious () const
 $method=|bool|hasPrevious|
 
-/*
-QString name () const
-*/
+$prototype=QString name () const
 $method=|QString|name|
 
-/*
-void next ()
-*/
+$prototype=void next ()
 $method=|void|next|
 
-/*
-void previous ()
-*/
+$prototype=void previous ()
 $method=|void|previous|
 
-/*
-void remove ()
-*/
+$prototype=void remove ()
 $method=|void|remove|
 
-/*
-QScriptString scriptName () const
-*/
+$prototype=QScriptString scriptName () const
 $method=|QScriptString|scriptName|
 
-/*
-void setValue ( const QScriptValue & value )
-*/
+$prototype=void setValue ( const QScriptValue & value )
 $method=|void|setValue|const QScriptValue &
 
-/*
-void toBack ()
-*/
+$prototype=void toBack ()
 $method=|void|toBack|
 
-/*
-void toFront ()
-*/
+$prototype=void toFront ()
 $method=|void|toFront|
 
-/*
-QScriptValue value () const
-*/
+$prototype=QScriptValue value () const
 $method=|QScriptValue|value|
 
 $extraMethods

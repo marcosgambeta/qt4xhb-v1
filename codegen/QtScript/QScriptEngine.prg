@@ -66,14 +66,10 @@ $destructor
 
 #include <QStringList>
 
-/*
-QScriptEngine ()
-*/
+$prototype=QScriptEngine ()
 $internalConstructor=|new1|
 
-/*
-QScriptEngine ( QObject * parent )
-*/
+$prototype=QScriptEngine ( QObject * parent )
 $internalConstructor=|new2|QObject *
 
 //[1]QScriptEngine ()
@@ -97,49 +93,31 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEW )
 
 $deleteMethod
 
-/*
-void abortEvaluation ( const QScriptValue & result = QScriptValue() )
-*/
+$prototype=void abortEvaluation ( const QScriptValue & result = QScriptValue() )
 $method=|void|abortEvaluation|const QScriptValue &=QScriptValue()
 
-/*
-QScriptEngineAgent * agent () const
-*/
+$prototype=QScriptEngineAgent * agent () const
 $method=|QScriptEngineAgent *|agent|
 
-/*
-QStringList availableExtensions () const
-*/
+$prototype=QStringList availableExtensions () const
 $method=|QStringList|availableExtensions|
 
-/*
-void clearExceptions ()
-*/
+$prototype=void clearExceptions ()
 $method=|void|clearExceptions|
 
-/*
-void collectGarbage ()
-*/
+$prototype=void collectGarbage ()
 $method=|void|collectGarbage|
 
-/*
-QScriptContext * currentContext () const
-*/
+$prototype=QScriptContext * currentContext () const
 $method=|QScriptContext *|currentContext|
 
-/*
-QScriptValue defaultPrototype ( int metaTypeId ) const
-*/
+$prototype=QScriptValue defaultPrototype ( int metaTypeId ) const
 $method=|QScriptValue|defaultPrototype|int
 
-/*
-QScriptValue evaluate ( const QString & program, const QString & fileName = QString(), int lineNumber = 1 )
-*/
+$prototype=QScriptValue evaluate ( const QString & program, const QString & fileName = QString(), int lineNumber = 1 )
 $internalMethod=|QScriptValue|evaluate,evaluate1|const QString &,const QString &=QString(),int=1
 
-/*
-QScriptValue evaluate ( const QScriptProgram & program )
-*/
+$prototype=QScriptValue evaluate ( const QScriptProgram & program )
 $internalMethod=|QScriptValue|evaluate,evaluate2|const QScriptProgram &
 
 //[1]QScriptValue evaluate ( const QString & program, const QString & fileName = QString(), int lineNumber = 1 )
@@ -161,49 +139,31 @@ HB_FUNC_STATIC( QSCRIPTENGINE_EVALUATE )
   }
 }
 
-/*
-QScriptValue globalObject () const
-*/
+$prototype=QScriptValue globalObject () const
 $method=|QScriptValue|globalObject|
 
-/*
-bool hasUncaughtException () const
-*/
+$prototype=bool hasUncaughtException () const
 $method=|bool|hasUncaughtException|
 
-/*
-QScriptValue importExtension ( const QString & extension )
-*/
+$prototype=QScriptValue importExtension ( const QString & extension )
 $method=|QScriptValue|importExtension|const QString &
 
-/*
-QStringList importedExtensions () const
-*/
+$prototype=QStringList importedExtensions () const
 $method=|QStringList|importedExtensions|
 
-/*
-void installTranslatorFunctions ( const QScriptValue & object = QScriptValue() )
-*/
+$prototype=void installTranslatorFunctions ( const QScriptValue & object = QScriptValue() )
 $method=|void|installTranslatorFunctions|const QScriptValue &=QScriptValue()
 
-/*
-bool isEvaluating () const
-*/
+$prototype=bool isEvaluating () const
 $method=|bool|isEvaluating|
 
-/*
-QScriptValue newArray ( uint length = 0 )
-*/
+$prototype=QScriptValue newArray ( uint length = 0 )
 $method=|QScriptValue|newArray|uint=0
 
-/*
-QScriptValue newRegExp ( const QRegExp & regexp )
-*/
+$prototype=QScriptValue newRegExp ( const QRegExp & regexp )
 $internalMethod=|QScriptValue|newRegExp,newRegExp1|const QRegExp &
 
-/*
-QScriptValue newRegExp ( const QString & pattern, const QString & flags )
-*/
+$prototype=QScriptValue newRegExp ( const QString & pattern, const QString & flags )
 $internalMethod=|QScriptValue|newRegExp,newRegExp2|const QString &,const QString &
 
 //[1]QScriptValue newRegExp ( const QRegExp & regexp )
@@ -225,14 +185,10 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWREGEXP )
   }
 }
 
-/*
-QScriptValue newVariant ( const QVariant & value )
-*/
+$prototype=QScriptValue newVariant ( const QVariant & value )
 $internalMethod=|QScriptValue|newVariant,newVariant1|const QVariant &
 
-/*
-QScriptValue newVariant ( const QScriptValue & object, const QVariant & value )
-*/
+$prototype=QScriptValue newVariant ( const QScriptValue & object, const QVariant & value )
 $internalMethod=|QScriptValue|newVariant,newVariant2|const QScriptValue &,const QVariant &
 
 //[1]QScriptValue newVariant ( const QVariant & value )
@@ -254,84 +210,52 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWVARIANT )
   }
 }
 
-/*
-QScriptValue nullValue ()
-*/
+$prototype=QScriptValue nullValue ()
 $method=|QScriptValue|nullValue|
 
-/*
-void popContext ()
-*/
+$prototype=void popContext ()
 $method=|void|popContext|
 
-/*
-int processEventsInterval () const
-*/
+$prototype=int processEventsInterval () const
 $method=|int|processEventsInterval|
 
-/*
-QScriptContext * pushContext ()
-*/
+$prototype=QScriptContext * pushContext ()
 $method=|QScriptContext *|pushContext|
 
-/*
-void reportAdditionalMemoryCost ( int size )
-*/
+$prototype=void reportAdditionalMemoryCost ( int size )
 $method=|void|reportAdditionalMemoryCost|int
 
-/*
-void setAgent ( QScriptEngineAgent * agent )
-*/
+$prototype=void setAgent ( QScriptEngineAgent * agent )
 $method=|void|setAgent|QScriptEngineAgent *
 
-/*
-void setDefaultPrototype ( int metaTypeId, const QScriptValue & prototype )
-*/
+$prototype=void setDefaultPrototype ( int metaTypeId, const QScriptValue & prototype )
 $method=|void|setDefaultPrototype|int,const QScriptValue &
 
-/*
-void setGlobalObject ( const QScriptValue & object )
-*/
+$prototype=void setGlobalObject ( const QScriptValue & object )
 $method=|void|setGlobalObject|const QScriptValue &
 
-/*
-void setProcessEventsInterval ( int interval )
-*/
+$prototype=void setProcessEventsInterval ( int interval )
 $method=|void|setProcessEventsInterval|int
 
-/*
-QScriptValue toObject ( const QScriptValue & value )
-*/
+$prototype=QScriptValue toObject ( const QScriptValue & value )
 $method=|QScriptValue|toObject|const QScriptValue &
 
-/*
-QScriptString toStringHandle ( const QString & str )
-*/
+$prototype=QScriptString toStringHandle ( const QString & str )
 $method=|QScriptString|toStringHandle|const QString &
 
-/*
-QScriptValue uncaughtException () const
-*/
+$prototype=QScriptValue uncaughtException () const
 $method=|QScriptValue|uncaughtException|
 
-/*
-QStringList uncaughtExceptionBacktrace () const
-*/
+$prototype=QStringList uncaughtExceptionBacktrace () const
 $method=|QStringList|uncaughtExceptionBacktrace|
 
-/*
-int uncaughtExceptionLineNumber () const
-*/
+$prototype=int uncaughtExceptionLineNumber () const
 $method=|int|uncaughtExceptionLineNumber|
 
-/*
-QScriptValue undefinedValue ()
-*/
+$prototype=QScriptValue undefinedValue ()
 $method=|QScriptValue|undefinedValue|
 
-/*
-static QScriptSyntaxCheckResult checkSyntax ( const QString & program )
-*/
+$prototype=static QScriptSyntaxCheckResult checkSyntax ( const QString & program )
 $staticMethod=|QScriptSyntaxCheckResult|checkSyntax|const QString &
 
 #pragma ENDDUMP

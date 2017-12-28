@@ -34,9 +34,7 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QScriptSyntaxCheckResult ( const QScriptSyntaxCheckResult & other )
-*/
+$prototype=QScriptSyntaxCheckResult ( const QScriptSyntaxCheckResult & other )
 HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_NEW )
 {
   QScriptSyntaxCheckResult * o = new QScriptSyntaxCheckResult ( *PQSCRIPTSYNTAXCHECKRESULT(1) );
@@ -45,24 +43,16 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_NEW )
 
 $deleteMethod
 
-/*
-int errorColumnNumber () const
-*/
+$prototype=int errorColumnNumber () const
 $method=|int|errorColumnNumber|
 
-/*
-int errorLineNumber () const
-*/
+$prototype=int errorLineNumber () const
 $method=|int|errorLineNumber|
 
-/*
-QString errorMessage () const
-*/
+$prototype=QString errorMessage () const
 $method=|QString|errorMessage|
 
-/*
-State state () const
-*/
+$prototype=State state () const
 $method=|QScriptSyntaxCheckResult::State|state|
 
 $extraMethods

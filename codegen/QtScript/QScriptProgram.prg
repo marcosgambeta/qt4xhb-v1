@@ -34,19 +34,13 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QScriptProgram ()
-*/
+$prototype=QScriptProgram ()
 $internalConstructor=|new1|
 
-/*
-QScriptProgram ( const QString & sourceCode, const QString fileName = QString(), int firstLineNumber = 1 )
-*/
+$prototype=QScriptProgram ( const QString & sourceCode, const QString fileName = QString(), int firstLineNumber = 1 )
 $internalConstructor=|new2|const QString &,const QString=QString(),int=1
 
-/*
-QScriptProgram ( const QScriptProgram & other )
-*/
+$prototype=QScriptProgram ( const QScriptProgram & other )
 $internalConstructor=|new3|const QScriptProgram &
 
 //[1]QScriptProgram ()
@@ -75,24 +69,16 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW )
 
 $deleteMethod
 
-/*
-QString fileName () const
-*/
+$prototype=QString fileName () const
 $method=|QString|fileName|
 
-/*
-int firstLineNumber () const
-*/
+$prototype=int firstLineNumber () const
 $method=|int|firstLineNumber|
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-QString sourceCode () const
-*/
+$prototype=QString sourceCode () const
 $method=|QString|sourceCode|
 
 $extraMethods
