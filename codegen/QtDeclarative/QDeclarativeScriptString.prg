@@ -42,10 +42,10 @@ $destructor
 
 #include <QDeclarativeContext>
 
-prototype=QDeclarativeScriptString ()
+$prototype=QDeclarativeScriptString ()
 $internalConstructor=|new1|
 
-prototype=QDeclarativeScriptString ( const QDeclarativeScriptString & other )
+$prototype=QDeclarativeScriptString ( const QDeclarativeScriptString & other )
 $internalConstructor=|new2|const QDeclarativeScriptString &
 
 //[1]QDeclarativeScriptString ()
@@ -67,22 +67,22 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW )
   }
 }
 
-prototype=QDeclarativeContext * context () const
+$prototype=QDeclarativeContext * context () const
 $method=|QDeclarativeContext *|context|
 
-prototype=QObject * scopeObject () const
+$prototype=QObject * scopeObject () const
 $method=|QObject *|scopeObject|
 
-prototype=QString script () const
+$prototype=QString script () const
 $method=|QString|script|
 
-prototype=void setContext ( QDeclarativeContext * context )
+$prototype=void setContext ( QDeclarativeContext * context )
 $method=|void|setContext|QDeclarativeContext *
 
-prototype=void setScopeObject ( QObject * object )
+$prototype=void setScopeObject ( QObject * object )
 $method=|void|setScopeObject|QObject *
 
-prototype=void setScript ( const QString & script )
+$prototype=void setScript ( const QString & script )
 $method=|void|setScript|const QString &
 
 $extraMethods

@@ -30,10 +30,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-prototype=virtual void classBegin () = 0
+$prototype=virtual void classBegin () = 0
 $virtualMethod=|void|classBegin|
 
-prototype=virtual void componentComplete () = 0
+$prototype=virtual void componentComplete () = 0
 $virtualMethod=|void|componentComplete|
 
 $extraMethods

@@ -32,7 +32,7 @@ $destructor
 
 $deleteMethod
 
-prototype=virtual void setTarget ( const QDeclarativeProperty & property ) = 0
+$prototype=virtual void setTarget ( const QDeclarativeProperty & property ) = 0
 $virtualMethod=|void|setTarget|const QDeclarativeProperty &
 
 $extraMethods

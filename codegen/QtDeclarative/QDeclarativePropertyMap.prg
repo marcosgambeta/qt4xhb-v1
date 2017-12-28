@@ -35,33 +35,33 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-prototype=QDeclarativePropertyMap ( QObject * parent = 0 )
+$prototype=QDeclarativePropertyMap ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-prototype=void clear ( const QString & key )
+$prototype=void clear ( const QString & key )
 $method=|void|clear|const QString &
 
-prototype=bool contains ( const QString & key ) const
+$prototype=bool contains ( const QString & key ) const
 $method=|bool|contains|const QString &
 
-prototype=int count () const
+$prototype=int count () const
 $method=|int|count|
 
-prototype=void insert ( const QString & key, const QVariant & value )
+$prototype=void insert ( const QString & key, const QVariant & value )
 $method=|void|insert|const QString &,const QVariant &
 
-prototype=bool isEmpty () const
+$prototype=bool isEmpty () const
 $method=|bool|isEmpty|
 
-prototype=QStringList keys () const
+$prototype=QStringList keys () const
 $method=|QStringList|keys|
 
-prototype=int size () const
+$prototype=int size () const
 $method=|int|size|
 
-prototype=QVariant value ( const QString & key ) const
+$prototype=QVariant value ( const QString & key ) const
 $method=|QVariant|value|const QString &
 
 #pragma ENDDUMP
