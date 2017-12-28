@@ -47,39 +47,25 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual QUrl baseUri ( const QXmlNodeModelIndex & n ) const = 0
-*/
+$prototype=virtual QUrl baseUri ( const QXmlNodeModelIndex & n ) const = 0
 $virtualMethod=|QUrl|baseUri|const QXmlNodeModelIndex &
 
-/*
-virtual QXmlNodeModelIndex::DocumentOrder compareOrder ( const QXmlNodeModelIndex & ni1, const QXmlNodeModelIndex & ni2 ) const = 0
-*/
+$prototype=virtual QXmlNodeModelIndex::DocumentOrder compareOrder ( const QXmlNodeModelIndex & ni1, const QXmlNodeModelIndex & ni2 ) const = 0
 $virtualMethod=|QXmlNodeModelIndex::DocumentOrder|compareOrder|const QXmlNodeModelIndex &,const QXmlNodeModelIndex &
 
-/*
-virtual QUrl documentUri ( const QXmlNodeModelIndex & n ) const = 0
-*/
+$prototype=virtual QUrl documentUri ( const QXmlNodeModelIndex & n ) const = 0
 $virtualMethod=|QUrl|documentUri|const QXmlNodeModelIndex &
 
-/*
-virtual QXmlNodeModelIndex elementById ( const QXmlName & id ) const = 0
-*/
+$prototype=virtual QXmlNodeModelIndex elementById ( const QXmlName & id ) const = 0
 $virtualMethod=|QXmlNodeModelIndex|elementById|const QXmlName &
 
-/*
-virtual QXmlNodeModelIndex::NodeKind kind ( const QXmlNodeModelIndex & ni ) const = 0
-*/
+$prototype=virtual QXmlNodeModelIndex::NodeKind kind ( const QXmlNodeModelIndex & ni ) const = 0
 $virtualMethod=|QXmlNodeModelIndex::NodeKind|kind|const QXmlNodeModelIndex &
 
-/*
-virtual QXmlName name ( const QXmlNodeModelIndex & ni ) const = 0
-*/
+$prototype=virtual QXmlName name ( const QXmlNodeModelIndex & ni ) const = 0
 $virtualMethod=|QXmlName|name|const QXmlNodeModelIndex &
 
-/*
-virtual QVector<QXmlName> namespaceBindings ( const QXmlNodeModelIndex & n ) const = 0
-*/
+$prototype=virtual QVector<QXmlName> namespaceBindings ( const QXmlNodeModelIndex & n ) const = 0
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_NAMESPACEBINDINGS )
 {
   QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -115,9 +101,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_NAMESPACEBINDINGS )
   }
 }
 
-/*
-virtual QVector<QXmlNodeModelIndex> nodesByIdref ( const QXmlName & idref ) const = 0
-*/
+$prototype=virtual QVector<QXmlNodeModelIndex> nodesByIdref ( const QXmlName & idref ) const = 0
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_NODESBYIDREF )
 {
   QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -153,24 +137,16 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_NODESBYIDREF )
   }
 }
 
-/*
-virtual QXmlNodeModelIndex root ( const QXmlNodeModelIndex & n ) const = 0
-*/
+$prototype=virtual QXmlNodeModelIndex root ( const QXmlNodeModelIndex & n ) const = 0
 $virtualMethod=|QXmlNodeModelIndex|root|const QXmlNodeModelIndex &
 
-/*
-QSourceLocation sourceLocation ( const QXmlNodeModelIndex & index ) const
-*/
+$prototype=QSourceLocation sourceLocation ( const QXmlNodeModelIndex & index ) const
 $method=|QSourceLocation|sourceLocation|const QXmlNodeModelIndex &
 
-/*
-virtual QString stringValue ( const QXmlNodeModelIndex & n ) const = 0
-*/
+$prototype=virtual QString stringValue ( const QXmlNodeModelIndex & n ) const = 0
 $virtualMethod=|QString|stringValue|const QXmlNodeModelIndex &
 
-/*
-virtual QVariant typedValue ( const QXmlNodeModelIndex & node ) const = 0
-*/
+$prototype=virtual QVariant typedValue ( const QXmlNodeModelIndex & node ) const = 0
 $virtualMethod=|QVariant|typedValue|const QXmlNodeModelIndex &
 
 #pragma ENDDUMP

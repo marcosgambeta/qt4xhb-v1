@@ -33,74 +33,46 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QXmlFormatter ( const QXmlQuery & query, QIODevice * outputDevice )
-*/
+$prototype=QXmlFormatter ( const QXmlQuery & query, QIODevice * outputDevice )
 $constructor=|new|const QXmlQuery &,QIODevice *
 
-/*
-int indentationDepth () const
-*/
+$prototype=int indentationDepth () const
 $method=|int|indentationDepth|
 
-/*
-void setIndentationDepth ( int depth )
-*/
+$prototype=void setIndentationDepth ( int depth )
 $method=|void|setIndentationDepth|int
 
-/*
-virtual void atomicValue ( const QVariant & value )
-*/
+$prototype=virtual void atomicValue ( const QVariant & value )
 $virtualMethod=|void|atomicValue|const QVariant &
 
-/*
-virtual void attribute ( const QXmlName & name, const QStringRef & value )
-*/
+$prototype=virtual void attribute ( const QXmlName & name, const QStringRef & value )
 $virtualMethod=|void|attribute|const QXmlName &,const QStringRef &
 
-/*
-virtual void characters ( const QStringRef & value )
-*/
+$prototype=virtual void characters ( const QStringRef & value )
 $virtualMethod=|void|characters|const QStringRef &
 
-/*
-virtual void comment ( const QString & value )
-*/
+$prototype=virtual void comment ( const QString & value )
 $virtualMethod=|void|comment|const QString &
 
-/*
-virtual void endDocument ()
-*/
+$prototype=virtual void endDocument ()
 $virtualMethod=|void|endDocument|
 
-/*
-virtual void endElement ()
-*/
+$prototype=virtual void endElement ()
 $virtualMethod=|void|endElement|
 
-/*
-virtual void endOfSequence ()
-*/
+$prototype=virtual void endOfSequence ()
 $virtualMethod=|void|endOfSequence|
 
-/*
-virtual void processingInstruction ( const QXmlName & name, const QString & value )
-*/
+$prototype=virtual void processingInstruction ( const QXmlName & name, const QString & value )
 $virtualMethod=|void|processingInstruction|const QXmlName &,const QString &
 
-/*
-virtual void startDocument ()
-*/
+$prototype=virtual void startDocument ()
 $virtualMethod=|void|startDocument|
 
-/*
-virtual void startElement ( const QXmlName & name )
-*/
+$prototype=virtual void startElement ( const QXmlName & name )
 $virtualMethod=|void|startElement|const QXmlName &
 
-/*
-virtual void startOfSequence ()
-*/
+$prototype=virtual void startOfSequence ()
 $virtualMethod=|void|startOfSequence|
 
 #pragma ENDDUMP

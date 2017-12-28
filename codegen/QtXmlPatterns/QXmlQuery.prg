@@ -57,24 +57,16 @@ $destructor
 #include <QNetworkAccessManager>
 #include <QAbstractUriResolver>
 
-/*
-QXmlQuery ()
-*/
+$prototype=QXmlQuery ()
 $internalConstructor=|new1|
 
-/*
-QXmlQuery ( const QXmlQuery & other )
-*/
+$prototype=QXmlQuery ( const QXmlQuery & other )
 $internalConstructor=|new2|const QXmlQuery &
 
-/*
-QXmlQuery ( const QXmlNamePool & np )
-*/
+$prototype=QXmlQuery ( const QXmlNamePool & np )
 $internalConstructor=|new3|const QXmlNamePool &
 
-/*
-QXmlQuery ( QueryLanguage,QXmlNamePool & np = QXmlNamePool() )
-*/
+$prototype=QXmlQuery ( QueryLanguage,QXmlNamePool & np = QXmlNamePool() )
 $internalConstructor=|new4|QXmlQuery::QueryLanguage,QXmlNamePool &=QXmlNamePool()
 
 //[1]QXmlQuery ()
@@ -108,34 +100,22 @@ HB_FUNC_STATIC( QXMLQUERY_NEW )
 
 $deleteMethod
 
-/*
-void bindVariable ( const QXmlName & name, const QXmlItem & value )
-*/
+$prototype=void bindVariable ( const QXmlName & name, const QXmlItem & value )
 $internalMethod=|void|bindVariable,bindVariable1|const QXmlName &,const QXmlItem &
 
-/*
-void bindVariable ( const QXmlName & name, QIODevice * device )
-*/
+$prototype=void bindVariable ( const QXmlName & name, QIODevice * device )
 $internalMethod=|void|bindVariable,bindVariable2|const QXmlName &,QIODevice *
 
-/*
-void bindVariable ( const QXmlName & name, const QXmlQuery & query )
-*/
+$prototype=void bindVariable ( const QXmlName & name, const QXmlQuery & query )
 $internalMethod=|void|bindVariable,bindVariable3|const QXmlName &,const QXmlQuery &
 
-/*
-void bindVariable ( const QString & localName, const QXmlItem & value )
-*/
+$prototype=void bindVariable ( const QString & localName, const QXmlItem & value )
 $internalMethod=|void|bindVariable,bindVariable4|const QString &,const QXmlItem &
 
-/*
-void bindVariable ( const QString & localName, QIODevice * device )
-*/
+$prototype=void bindVariable ( const QString & localName, QIODevice * device )
 $internalMethod=|void|bindVariable,bindVariable5|const QString &,QIODevice *
 
-/*
-void bindVariable ( const QString & localName, const QXmlQuery & query )
-*/
+$prototype=void bindVariable ( const QString & localName, const QXmlQuery & query )
 $internalMethod=|void|bindVariable,bindVariable6|const QString &,const QXmlQuery &
 
 //[1]void bindVariable ( const QXmlName & name, const QXmlItem & value )
@@ -177,31 +157,21 @@ HB_FUNC_STATIC( QXMLQUERY_BINDVARIABLE )
   }
 }
 
-/*
-void evaluateTo ( QXmlResultItems * result ) const
-*/
+$prototype=void evaluateTo ( QXmlResultItems * result ) const
 $internalMethod=|void|evaluateTo,evaluateTo1|QXmlResultItems *
 
-/*
-bool evaluateTo ( QAbstractXmlReceiver * callback ) const
-*/
+$prototype=bool evaluateTo ( QAbstractXmlReceiver * callback ) const
 $internalMethod=|bool|evaluateTo,evaluateTo2|QAbstractXmlReceiver *
 
-/*
-bool evaluateTo ( QStringList * target ) const
-*/
+$prototype=bool evaluateTo ( QStringList * target ) const
 %% TODO: implementar 'QStringList *'
 %% $internalMethod=|bool|evaluateTo,evaluateTo3|QStringList *
 
-/*
-bool evaluateTo ( QString * output ) const
-*/
+$prototype=bool evaluateTo ( QString * output ) const
 %% TODO: implementar 'QString *'
 %% $internalMethod=|bool|evaluateTo,evaluateTo4|QString *
 
-/*
-bool evaluateTo ( QIODevice * target ) const
-*/
+$prototype=bool evaluateTo ( QIODevice * target ) const
 $internalMethod=|bool|evaluateTo,evaluateTo5|QIODevice *
 
 //[1]void evaluateTo ( QXmlResultItems * result ) const
@@ -238,54 +208,34 @@ HB_FUNC_STATIC( QXMLQUERY_EVALUATETO )
   }
 }
 
-/*
-QXmlName initialTemplateName () const
-*/
+$prototype=QXmlName initialTemplateName () const
 $method=|QXmlName|initialTemplateName|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-QAbstractMessageHandler * messageHandler () const
-*/
+$prototype=QAbstractMessageHandler * messageHandler () const
 $method=|QAbstractMessageHandler *|messageHandler|
 
-/*
-QXmlNamePool namePool () const
-*/
+$prototype=QXmlNamePool namePool () const
 $method=|QXmlNamePool|namePool|
 
-/*
-QNetworkAccessManager * networkAccessManager () const
-*/
+$prototype=QNetworkAccessManager * networkAccessManager () const
 $method=|QNetworkAccessManager *|networkAccessManager|
 
-/*
-QueryLanguage queryLanguage () const
-*/
+$prototype=QueryLanguage queryLanguage () const
 $method=|QXmlQuery::QueryLanguage|queryLanguage|
 
-/*
-void setFocus ( const QXmlItem & item )
-*/
+$prototype=void setFocus ( const QXmlItem & item )
 $internalMethod=|void|setFocus,setFocus1|const QXmlItem &
 
-/*
-bool setFocus ( const QUrl & documentURI )
-*/
+$prototype=bool setFocus ( const QUrl & documentURI )
 $internalMethod=|bool|setFocus,setFocus2|const QUrl &
 
-/*
-bool setFocus ( QIODevice * document )
-*/
+$prototype=bool setFocus ( QIODevice * document )
 $internalMethod=|bool|setFocus,setFocus3|QIODevice *
 
-/*
-bool setFocus ( const QString & focus )
-*/
+$prototype=bool setFocus ( const QString & focus )
 $internalMethod=|bool|setFocus,setFocus4|const QString &
 
 //[1]void setFocus ( const QXmlItem & item )
@@ -317,14 +267,10 @@ HB_FUNC_STATIC( QXMLQUERY_SETFOCUS )
   }
 }
 
-/*
-void setInitialTemplateName ( const QXmlName & name )
-*/
+$prototype=void setInitialTemplateName ( const QXmlName & name )
 $internalMethod=|void|setInitialTemplateName,setInitialTemplateName1|const QXmlName &
 
-/*
-void setInitialTemplateName ( const QString & localName )
-*/
+$prototype=void setInitialTemplateName ( const QString & localName )
 $internalMethod=|void|setInitialTemplateName,setInitialTemplateName2|const QString &
 
 //[1]void setInitialTemplateName ( const QXmlName & name )
@@ -346,29 +292,19 @@ HB_FUNC_STATIC( QXMLQUERY_SETINITIALTEMPLATENAME )
   }
 }
 
-/*
-void setMessageHandler ( QAbstractMessageHandler * aMessageHandler )
-*/
+$prototype=void setMessageHandler ( QAbstractMessageHandler * aMessageHandler )
 $method=|void|setMessageHandler|QAbstractMessageHandler *
 
-/*
-void setNetworkAccessManager ( QNetworkAccessManager * newManager )
-*/
+$prototype=void setNetworkAccessManager ( QNetworkAccessManager * newManager )
 $method=|void|setNetworkAccessManager|QNetworkAccessManager *
 
-/*
-void setQuery ( QIODevice * sourceCode, const QUrl & documentURI = QUrl() )
-*/
+$prototype=void setQuery ( QIODevice * sourceCode, const QUrl & documentURI = QUrl() )
 $internalMethod=|void|setQuery,setQuery1|QIODevice *,const QUrl &=QUrl()
 
-/*
-void setQuery ( const QUrl & queryURI, const QUrl & baseURI = QUrl() )
-*/
+$prototype=void setQuery ( const QUrl & queryURI, const QUrl & baseURI = QUrl() )
 $internalMethod=|void|setQuery,setQuery2|const QUrl &,const QUrl &=QUrl()
 
-/*
-void setQuery ( const QString & sourceCode, const QUrl & documentURI = QUrl() )
-*/
+$prototype=void setQuery ( const QString & sourceCode, const QUrl & documentURI = QUrl() )
 $internalMethod=|void|setQuery,setQuery3|const QString &,const QUrl &=QUrl()
 
 //[1]void setQuery ( QIODevice * sourceCode, const QUrl & documentURI = QUrl() )
@@ -395,14 +331,10 @@ HB_FUNC_STATIC( QXMLQUERY_SETQUERY )
   }
 }
 
-/*
-void setUriResolver ( const QAbstractUriResolver * resolver )
-*/
+$prototype=void setUriResolver ( const QAbstractUriResolver * resolver )
 $method=|void|setUriResolver|const QAbstractUriResolver *
 
-/*
-const QAbstractUriResolver * uriResolver () const
-*/
+$prototype=const QAbstractUriResolver * uriResolver () const
 $method=|const QAbstractUriResolver *|uriResolver|
 
 $extraMethods

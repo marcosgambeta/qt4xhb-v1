@@ -41,19 +41,13 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QSourceLocation ()
-*/
+$prototype=QSourceLocation ()
 $internalConstructor=|new1|
 
-/*
-QSourceLocation ( const QSourceLocation & other )
-*/
+$prototype=QSourceLocation ( const QSourceLocation & other )
 $internalConstructor=|new2|const QSourceLocation &
 
-/*
-QSourceLocation ( const QUrl & u, int l = -1, int c = -1 )
-*/
+$prototype=QSourceLocation ( const QUrl & u, int l = -1, int c = -1 )
 $internalConstructor=|new3|const QUrl &,int=-1,int=-1
 
 //[1]QSourceLocation ()
@@ -82,39 +76,25 @@ HB_FUNC_STATIC( QSOURCELOCATION_NEW )
 
 $deleteMethod
 
-/*
-qint64 column () const
-*/
+$prototype=qint64 column () const
 $method=|qint64|column|
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-qint64 line () const
-*/
+$prototype=qint64 line () const
 $method=|qint64|line|
 
-/*
-void setColumn ( qint64 newColumn )
-*/
+$prototype=void setColumn ( qint64 newColumn )
 $method=|void|setColumn|qint64
 
-/*
-void setLine ( qint64 newLine )
-*/
+$prototype=void setLine ( qint64 newLine )
 $method=|void|setLine|qint64
 
-/*
-void setUri ( const QUrl & newUri )
-*/
+$prototype=void setUri ( const QUrl & newUri )
 $method=|void|setUri|const QUrl &
 
-/*
-QUrl uri () const
-*/
+$prototype=QUrl uri () const
 $method=|QUrl|uri|
 
 $extraMethods

@@ -30,14 +30,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QXmlNamePool ()
-*/
+$prototype=QXmlNamePool ()
 $internalConstructor=|new1|
 
-/*
-QXmlNamePool ( const QXmlNamePool & other )
-*/
+$prototype=QXmlNamePool ( const QXmlNamePool & other )
 $internalConstructor=|new2|const QXmlNamePool &
 
 //[1]QXmlNamePool ()

@@ -38,14 +38,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QXmlNodeModelIndex ()
-*/
+$prototype=QXmlNodeModelIndex ()
 $internalConstructor=|new1|
 
-/*
-QXmlNodeModelIndex ( const QXmlNodeModelIndex & other )
-*/
+$prototype=QXmlNodeModelIndex ( const QXmlNodeModelIndex & other )
 $internalConstructor=|new2|const QXmlNodeModelIndex &
 
 //[1]QXmlNodeModelIndex ()
@@ -67,29 +63,19 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEW )
   }
 }
 
-/*
-qint64 additionalData () const
-*/
+$prototype=qint64 additionalData () const
 $method=|qint64|additionalData|
 
-/*
-qint64 data () const
-*/
+$prototype=qint64 data () const
 $method=|qint64|data|
 
-/*
-void * internalPointer () const
-*/
+$prototype=void * internalPointer () const
 $method=|void *|internalPointer|
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-const QAbstractXmlNodeModel * model () const
-*/
+$prototype=const QAbstractXmlNodeModel * model () const
 $method=|const QAbstractXmlNodeModel *|model|
 
 $extraMethods

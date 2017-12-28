@@ -29,9 +29,7 @@ $destructor
 
 $deleteMethod
 
-/*
-virtual QUrl resolve ( const QUrl & relative, const QUrl & baseURI ) const = 0
-*/
+$prototype=virtual QUrl resolve ( const QUrl & relative, const QUrl & baseURI ) const = 0
 $virtualMethod=|QUrl|resolve|const QUrl &,const QUrl &
 
 #pragma ENDDUMP
