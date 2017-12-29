@@ -47,6 +47,8 @@ CLASS QIcon
    METHOD setThemeSearchPaths
    METHOD themeName
    METHOD themeSearchPaths
+   METHOD toVariant
+   METHOD fromVariant
 
    METHOD newFrom
    METHOD newFromObject
@@ -71,6 +73,8 @@ RETURN
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
+
+#include <QVariant>
 
 /*
 QIcon ()
@@ -558,6 +562,68 @@ HB_FUNC_STATIC( QICON_SETSELFDESTRUCTION )
   }
 
   hb_itemReturn( self );
+}
+
+/*
+QVariant toVariant ()
+*/
+void QIcon_toVariant1 ()
+{
+  QIcon * obj = (QIcon *) _qt4xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    QVariant * variant = new QVariant();
+    variant->setValue<QIcon>( *obj );
+    _qt4xhb_createReturnClass ( variant, "QVARIANT", true );
+  }
+}
+
+/*
+static QVariant toVariant ( const QIcon & )
+*/
+void QIcon_toVariant2 ()
+{
+  QIcon * icon = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
+  QVariant * variant = new QVariant();
+  variant->setValue<QIcon>( *icon );
+  _qt4xhb_createReturnClass ( variant, "QVARIANT", true );
+}
+
+//[1]QVariant toVariant ()
+//[2]static QVariant toVariant ( const QIcon & )
+
+HB_FUNC_STATIC( QICON_TOVARIANT )
+{
+  if( ISNUMPAR(0) )
+  {
+    QIcon_toVariant1();
+  }
+  else if( ISNUMPAR(1) && ISQICON(1) )
+  {
+    QIcon_toVariant2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
+
+/*
+static QIcon fromVariant ( const QVariant & )
+*/
+HB_FUNC_STATIC( QICON_FROMVARIANT )
+{
+  if( ISNUMPAR(1) && ISQVARIANT(1) )
+  {
+    QVariant * variant = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
+    QIcon * icon = new QIcon( variant->value<QIcon>() );
+    _qt4xhb_createReturnClass ( icon, "QICON", true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 #pragma ENDDUMP

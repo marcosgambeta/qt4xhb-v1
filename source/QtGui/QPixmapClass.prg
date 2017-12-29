@@ -81,6 +81,8 @@ CLASS QPixmap INHERIT QPaintDevice
    METHOD grabWindow
    METHOD trueMatrix1
    METHOD trueMatrix
+   METHOD toVariant
+   METHOD fromVariant
 
    DESTRUCTOR destroyObject
 
@@ -101,6 +103,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 #include <QBitmap>
+#include <QVariant>
 
 /*
 QPixmap ()
@@ -903,6 +906,68 @@ HB_FUNC_STATIC( QPIXMAP_TRUEMATRIX )
   //{
   //  HB_FUNC_EXEC( QPIXMAP_TRUEMATRIX2 );
   //}
+}
+
+/*
+QVariant toVariant ()
+*/
+void QPixmap_toVariant1 ()
+{
+  QPixmap * obj = (QPixmap *) _qt4xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    QVariant * variant = new QVariant();
+    variant->setValue<QPixmap>( *obj );
+    _qt4xhb_createReturnClass ( variant, "QVARIANT", true );
+  }
+}
+
+/*
+static QVariant toVariant ( const QPixmap & )
+*/
+void QPixmap_toVariant2 ()
+{
+  QPixmap * pixmap = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
+  QVariant * variant = new QVariant();
+  variant->setValue<QPixmap>( *pixmap );
+  _qt4xhb_createReturnClass ( variant, "QVARIANT", true );
+}
+
+//[1]QVariant toVariant ()
+//[2]static QVariant toVariant ( const QPixmap & )
+
+HB_FUNC_STATIC( QPIXMAP_TOVARIANT )
+{
+  if( ISNUMPAR(0) )
+  {
+    QPixmap_toVariant1();
+  }
+  else if( ISNUMPAR(1) && ISQPIXMAP(1) )
+  {
+    QPixmap_toVariant2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
+
+/*
+static QPixmap fromVariant ( const QVariant & )
+*/
+HB_FUNC_STATIC( QPIXMAP_FROMVARIANT )
+{
+  if( ISNUMPAR(1) && ISQVARIANT(1) )
+  {
+    QVariant * variant = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
+    QPixmap * pixmap = new QPixmap( variant->value<QPixmap>() );
+    _qt4xhb_createReturnClass ( pixmap, "QPIXMAP", true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 #pragma ENDDUMP
