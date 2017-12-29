@@ -736,4 +736,6 @@ HB_FUNC_STATIC( QIMAGE_TRUEMATRIX )
   }
 }
 
+$variantMethods
+
 #pragma ENDDUMP

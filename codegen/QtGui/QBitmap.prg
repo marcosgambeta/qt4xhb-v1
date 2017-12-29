@@ -92,4 +92,6 @@ $staticMethod=|QBitmap|fromData|const QSize &,const uchar *,QImage::Format=QImag
 $prototype=static QBitmap fromImage ( const QImage & image, Qt::ImageConversionFlags flags = Qt::AutoColor )
 $staticMethod=|QBitmap|fromImage|const QImage &,Qt::ImageConversionFlags=Qt::AutoColor
 
+$variantMethods
+
 #pragma ENDDUMP

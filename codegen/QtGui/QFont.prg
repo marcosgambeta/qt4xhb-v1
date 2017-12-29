@@ -311,6 +311,8 @@ $staticMethod=|QStringList|substitutes|const QString &
 $prototype=static QStringList substitutions ()
 $staticMethod=|QStringList|substitutions|
 
+$variantMethods
+
 $extraMethods
 
 #pragma ENDDUMP

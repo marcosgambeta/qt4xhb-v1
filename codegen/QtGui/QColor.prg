@@ -541,6 +541,8 @@ HB_FUNC( QRGBA )
   hb_retni( qRgba ( PINT(1), PINT(2), PINT(3), PINT(4) ) );
 }
 
+$variantMethods
+
 $extraMethods
 
 #pragma ENDDUMP

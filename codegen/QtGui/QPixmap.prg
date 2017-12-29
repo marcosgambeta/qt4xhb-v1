@@ -465,4 +465,6 @@ HB_FUNC_STATIC( QPIXMAP_TRUEMATRIX )
   }
 }
 
+$variantMethods
+
 #pragma ENDDUMP

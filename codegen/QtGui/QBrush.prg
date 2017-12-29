@@ -210,6 +210,8 @@ $method=|QImage|textureImage|
 $prototype=QTransform transform () const
 $method=|QTransform|transform|
 
+$variantMethods
+
 $extraMethods
 
 #pragma ENDDUMP

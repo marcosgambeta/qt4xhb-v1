@@ -254,6 +254,8 @@ $staticMethod=|QString|themeName|
 $prototype=static QStringList themeSearchPaths ()
 $staticMethod=|QStringList|themeSearchPaths|
 
+$variantMethods
+
 $extraMethods
 
 #pragma ENDDUMP
