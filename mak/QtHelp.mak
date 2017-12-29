@@ -1,3 +1,9 @@
+#
+# Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
+#
+# Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+#
+
 # QtHelp
 OBJECTS_QTHELP =
 OBJECTS_QTHELP += $(QT4XHB_OBJ_DIR)/QHelpContentItemClass$(OBJEXT)
