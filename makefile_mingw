@@ -1,7 +1,9 @@
 #
-# Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+# Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 #
-# Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+# Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+#
+
 #
 # Makefile para compilação com Harbour/xHarbour e MinGW
 #
@@ -10,80 +12,10 @@
 # Framework, que está disponível no site oficial do projeto.
 
 # lista de módulos
-MODULE_ACTIVEQT = no
-MODULE_QTCORE = no
-MODULE_QTDECLARATIVE = no
-MODULE_QTDESIGNER = no
-MODULE_QTGUI = no
-MODULE_QTHELP = no
-MODULE_QTMULTIMEDIA = no
-MODULE_QTNETWORK = no
-MODULE_QTOPENGL = no
-MODULE_QTSCRIPT = no
-MODULE_QTSCRIPTTOOLS = no
-MODULE_QTSQL = no
-MODULE_QTSVG = no
-MODULE_QTTEST = no
-MODULE_QTUITOOLS = no
-MODULE_QTWEBKIT = no
-MODULE_QTXML = no
-MODULE_QTXMLPATTERNS = no
+include mak/modules1.mak
 
 # checa presença dos módulos na instalação do Qt Framework
-ifneq ($(wildcard $(QTDIR)/include/ActiveQt/.*),)
-   MODULE_ACTIVEQT = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtCore/.*),)
-   MODULE_QTCORE = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtDeclarative/.*),)
-   MODULE_QTDECLARATIVE = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtDesigner/.*),)
-   MODULE_QTDESIGNER = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtGui/.*),)
-   MODULE_QTGUI = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtHelp/.*),)
-   MODULE_QTHELP = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtMultimedia/.*),)
-   MODULE_QTMULTIMEDIA = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtNetwork/.*),)
-   MODULE_QTNETWORK = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtOpenGL/.*),)
-   MODULE_QTOPENGL = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtScript/.*),)
-   MODULE_QTSCRIPT = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtScriptTools/.*),)
-   MODULE_QTSCRIPTTOOLS = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtSql/.*),)
-   MODULE_QTSQL = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtSvg/.*),)
-   MODULE_QTSVG = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtTest/.*),)
-   MODULE_QTTEST = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtUiTools/.*),)
-   MODULE_QTUITOOLS = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtWebKit/.*),)
-   MODULE_QTWEBKIT = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtXml/.*),)
-   MODULE_QTXML = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtXmlPatterns/.*),)
-   MODULE_QTXMLPATTERNS = yes
-endif
+include mak/modules2.mak
 
 HB_BIN_DIR = $(HBDIR)/bin
 HB_INC_DIR = $(HBDIR)/include
@@ -95,6 +27,9 @@ QT4XHB_SRC_DIR = source
 
 OBJEXT = .o
 LIBEXT = .a
+LIBPRE = lib
+
+HB = $(HB_BIN_DIR)/harbour
 
 # PRGFLAGS
 PRGFLAGS = -n -w3 -gc3
@@ -109,401 +44,182 @@ CFLAGS += -DUNICODE
 CFLAGS += -DQT_DLL
 CFLAGS += -DQT_NO_DEBUG
 CFLAGS += -DQT_THREAD_SUPPORT
-ifeq ($(MODULE_ACTIVEQT),yes)
-   CFLAGS += -DQT_ACTIVEQT_LIB
-endif
-ifeq ($(MODULE_ACTIVEQT),yes)
-   CFLAGS += -DQT_AXCONTAINER_LIB
-endif
-ifeq ($(MODULE_ACTIVEQT),yes)
-   CFLAGS += -DQT_AXSERVER_LIB
-endif
-ifeq ($(MODULE_QTCORE),yes)
-   CFLAGS += -DQT_CORE_LIB
-endif
-ifeq ($(MODULE_QTDECLARATIVE),yes)
-   CFLAGS += -DQT_DECLARATIVE_LIB
-endif
-ifeq ($(MODULE_QTDESIGNER),yes)
-   CFLAGS += -DQT_DESIGNER_LIB
-endif
-ifeq ($(MODULE_QTGUI),yes)
-   CFLAGS += -DQT_GUI_LIB
-endif
-ifeq ($(MODULE_QTHELP),yes)
-   CFLAGS += -DQT_HELP_LIB
-endif
-ifeq ($(MODULE_QTMULTIMEDIA),yes)
-   CFLAGS += -DQT_MULTIMEDIA_LIB
-endif
-ifeq ($(MODULE_QTNETWORK),yes)
-   CFLAGS += -DQT_NETWORK_LIB
-endif
-ifeq ($(MODULE_QTOPENGL),yes)
-   CFLAGS += -DQT_OPENGL_LIB
-endif
-ifeq ($(MODULE_QTSCRIPT),yes)
-   CFLAGS += -DQT_SCRIPT_LIB
-endif
-ifeq ($(MODULE_QTSCRIPTTOOLS),yes)
-   CFLAGS += -DQT_SCRIPTTOOLS_LIB
-endif
-ifeq ($(MODULE_QTSQL),yes)
-   CFLAGS += -DQT_SQL_LIB
-endif
-ifeq ($(MODULE_QTSVG),yes)
-   CFLAGS += -DQT_SVG_LIB
-endif
-ifeq ($(MODULE_QTTEST),yes)
-   CFLAGS += -DQT_TEST_LIB
-endif
-ifeq ($(MODULE_QTUITOOLS),yes)
-   CFLAGS += -DQT_UITOOLS_LIB
-endif
-ifeq ($(MODULE_QTWEBKIT),yes)
-   CFLAGS += -DQT_WEBKIT_LIB
-endif
-ifeq ($(MODULE_QTXML),yes)
-   CFLAGS += -DQT_XML_LIB
-endif
-ifeq ($(MODULE_QTXMLPATTERNS),yes)
-   CFLAGS += -DQT_XMLPATTERNS_LIB
-endif
+include mak/modules3.mak
 
 CINCLUDES =
 CINCLUDES += -I$(QTDIR)/include
 CINCLUDES += -I$(QTDIR)/include/Qt
-ifeq ($(MODULE_ACTIVEQT),yes)
-   CINCLUDES += -I$(QTDIR)/include/ActiveQt
-endif
-ifeq ($(MODULE_QTCORE),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtCore
-endif
-ifeq ($(MODULE_QTDECLARATIVE),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtDeclarative
-endif
-ifeq ($(MODULE_QTDESIGNER),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtDesigner
-endif
-ifeq ($(MODULE_QTGUI),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtGui
-endif
-ifeq ($(MODULE_QTHELP),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtHelp
-endif
-ifeq ($(MODULE_QTMULTIMEDIA),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtMultimedia
-endif
-ifeq ($(MODULE_QTNETWORK),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtNetwork
-endif
-ifeq ($(MODULE_QTOPENGL),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtOpenGL
-endif
-ifeq ($(MODULE_QTSCRIPT),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtScript
-endif
-ifeq ($(MODULE_QTSCRIPTTOOLS),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtScriptTools
-endif
-ifeq ($(MODULE_QTSQL),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtSql
-endif
-ifeq ($(MODULE_QTSVG),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtSvg
-endif
-ifeq ($(MODULE_QTTEST),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtTest
-endif
-ifeq ($(MODULE_QTUITOOLS),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtUiTools
-endif
-ifeq ($(MODULE_QTWEBKIT),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtWebKit
-endif
-ifeq ($(MODULE_QTXML),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtXml
-endif
-ifeq ($(MODULE_QTXMLPATTERNS),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtXmlPatterns
-endif
+include mak/modules4.mak
 CINCLUDES += -I$(QT4XHB_INC_DIR)
 CINCLUDES += -I$(QT4XHB_SRC_DIR)
 CINCLUDES += -I$(HB_INC_DIR)
 
+AR = ar
+ARFLAGS = rc
+
 MOC = $(QTDIR)/bin/moc
 
-OBJECTS =
-OBJECTS += $(QT4XHB_OBJ_DIR)/events$(OBJEXT)
-OBJECTS += $(QT4XHB_OBJ_DIR)/dummy$(OBJEXT)
-OBJECTS += $(QT4XHB_OBJ_DIR)/version$(OBJEXT)
-OBJECTS += $(QT4XHB_OBJ_DIR)/qt4xhb_utils$(OBJEXT)
-OBJECTS += $(QT4XHB_OBJ_DIR)/habstractlistmodel$(OBJEXT)
-OBJECTS += $(QT4XHB_OBJ_DIR)/habstractlistmodelMoc$(OBJEXT)
-OBJECTS += $(QT4XHB_OBJ_DIR)/habstractlistmodelbin$(OBJEXT)
-OBJECTS += $(QT4XHB_OBJ_DIR)/habstractlistmodelcls$(OBJEXT)
-OBJECTS += $(QT4XHB_OBJ_DIR)/habstracttablemodel$(OBJEXT)
-OBJECTS += $(QT4XHB_OBJ_DIR)/habstracttablemodelMoc$(OBJEXT)
-OBJECTS += $(QT4XHB_OBJ_DIR)/habstracttablemodelbin$(OBJEXT)
-OBJECTS += $(QT4XHB_OBJ_DIR)/habstracttablemodelcls$(OBJEXT)
-OBJECTS += $(QT4XHB_OBJ_DIR)/qt4xhbbase$(OBJEXT)
+# include mak/modules5.mak
+# include mak/modules6.mak
 
-ifeq ($(MODULE_ACTIVEQT),yes)
-   include mak/QAxContainer.mak
-endif
-ifeq ($(MODULE_ACTIVEQT),yes)
-   include mak/QAxServer.mak
-endif
-ifeq ($(MODULE_QTCORE),yes)
-   include mak/QtCore.mak
-endif
-ifeq ($(MODULE_QTDECLARATIVE),yes)
-   include mak/QtDeclarative.mak
-endif
-ifeq ($(MODULE_QTDESIGNER),yes)
-   include mak/QtDesigner.mak
-endif
-ifeq ($(MODULE_QTGUI),yes)
-   include mak/QtGui.mak
-endif
-ifeq ($(MODULE_QTHELP),yes)
-   include mak/QtHelp.mak
-endif
-ifeq ($(MODULE_QTMULTIMEDIA),yes)
-   include mak/QtMultimedia.mak
-endif
-ifeq ($(MODULE_QTNETWORK),yes)
-   include mak/QtNetwork.mak
-endif
-ifeq ($(MODULE_QTOPENGL),yes)
-   include mak/QtOpenGL.mak
-endif
-ifeq ($(MODULE_QTSCRIPT),yes)
-   include mak/QtScript.mak
-endif
-ifeq ($(MODULE_QTSCRIPTTOOLS),yes)
-   include mak/QtScriptTools.mak
-endif
-ifeq ($(MODULE_QTSQL),yes)
-   include mak/QtSql.mak
-endif
-ifeq ($(MODULE_QTSVG),yes)
-   include mak/QtSvg.mak
-endif
-ifeq ($(MODULE_QTTEST),yes)
-   include mak/QtTest.mak
-endif
-ifeq ($(MODULE_QTUITOOLS),yes)
-   include mak/QtUiTools.mak
-endif
-ifeq ($(MODULE_QTWEBKIT),yes)
-   include mak/QtWebKit.mak
-endif
-ifeq ($(MODULE_QTXML),yes)
-   include mak/QtXml.mak
-endif
-ifeq ($(MODULE_QTXMLPATTERNS),yes)
-   include mak/QtXmlPatterns.mak
-endif
+OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/events$(OBJEXT)
+OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/dummy$(OBJEXT)
+OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/version$(OBJEXT)
+OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/qt4xhb_utils$(OBJEXT)
+OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstractlistmodel$(OBJEXT)
+OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstractlistmodelMoc$(OBJEXT)
+OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstractlistmodelbin$(OBJEXT)
+OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstractlistmodelcls$(OBJEXT)
+OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodel$(OBJEXT)
+OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodelMoc$(OBJEXT)
+OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodelbin$(OBJEXT)
+OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodelcls$(OBJEXT)
+OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/qt4xhbbase$(OBJEXT)
+
+include mak/modules7.mak
 
 ALLLIBS =
-ifeq ($(MODULE_ACTIVEQT),yes)
-   ALLLIBS += $(QT4XHB_LIB_DIR)/libhbqaxcontainer4$(LIBEXT)
-endif
-ifeq ($(MODULE_ACTIVEQT),yes)
-   ALLLIBS += $(QT4XHB_LIB_DIR)/libhbqaxserver4$(LIBEXT)
-endif
-ifeq ($(MODULE_QTCORE),yes)
-   ALLLIBS += $(QT4XHB_LIB_DIR)/libhbqtcore4$(LIBEXT)
-endif
-ifeq ($(MODULE_QTDECLARATIVE),yes)
-   ALLLIBS += $(QT4XHB_LIB_DIR)/libhbqtdeclarative4$(LIBEXT)
-endif
-ifeq ($(MODULE_QTDESIGNER),yes)
-   ALLLIBS += $(QT4XHB_LIB_DIR)/libhbqtdesigner4$(LIBEXT)
-endif
-ifeq ($(MODULE_QTGUI),yes)
-   ALLLIBS += $(QT4XHB_LIB_DIR)/libhbqtgui4$(LIBEXT)
-endif
-ifeq ($(MODULE_QTHELP),yes)
-   ALLLIBS += $(QT4XHB_LIB_DIR)/libhbqthelp4$(LIBEXT)
-endif
-ifeq ($(MODULE_QTMULTIMEDIA),yes)
-   ALLLIBS += $(QT4XHB_LIB_DIR)/libhbqtmultimedia4$(LIBEXT)
-endif
-ifeq ($(MODULE_QTNETWORK),yes)
-   ALLLIBS += $(QT4XHB_LIB_DIR)/libhbqtnetwork4$(LIBEXT)
-endif
-ifeq ($(MODULE_QTOPENGL),yes)
-   ALLLIBS += $(QT4XHB_LIB_DIR)/libhbqtopengl4$(LIBEXT)
-endif
-ifeq ($(MODULE_QTSCRIPT),yes)
-   ALLLIBS += $(QT4XHB_LIB_DIR)/libhbqtscript4$(LIBEXT)
-endif
-ifeq ($(MODULE_QTSCRIPTTOOLS),yes)
-   ALLLIBS += $(QT4XHB_LIB_DIR)/libhbqtscripttools4$(LIBEXT)
-endif
-ifeq ($(MODULE_QTSQL),yes)
-   ALLLIBS += $(QT4XHB_LIB_DIR)/libhbqtsql4$(LIBEXT)
-endif
-ifeq ($(MODULE_QTSVG),yes)
-   ALLLIBS += $(QT4XHB_LIB_DIR)/libhbqtsvg4$(LIBEXT)
-endif
-ifeq ($(MODULE_QTTEST),yes)
-   ALLLIBS += $(QT4XHB_LIB_DIR)/libhbqttest4$(LIBEXT)
-endif
-ifeq ($(MODULE_QTUITOOLS),yes)
-   ALLLIBS += $(QT4XHB_LIB_DIR)/libhbqtuitools4$(LIBEXT)
-endif
-ifeq ($(MODULE_QTWEBKIT),yes)
-   ALLLIBS += $(QT4XHB_LIB_DIR)/libhbqtwebkit4$(LIBEXT)
-endif
-ifeq ($(MODULE_QTXML),yes)
-   ALLLIBS += $(QT4XHB_LIB_DIR)/libhbqtxml4$(LIBEXT)
-endif
-ifeq ($(MODULE_QTXMLPATTERNS),yes)
-   ALLLIBS += $(QT4XHB_LIB_DIR)/libhbqtxmlpatterns4$(LIBEXT)
-endif
+include mak/modules8.mak
 
 all: $(ALLLIBS)
 
-$(QT4XHB_LIB_DIR)/libhbqaxcontainer4$(LIBEXT)        : $(OBJECTS_QAXCONTAINER)
-	ar rc $@ $^
-$(QT4XHB_LIB_DIR)/libhbqaxserver4$(LIBEXT)           : $(OBJECTS_QAXSERVER)
-	ar rc $@ $^
-$(QT4XHB_LIB_DIR)/libhbqtcore4$(LIBEXT)              : $(OBJECTS_QTCORE) $(OBJECTS)
-	ar rc $@ $^
-$(QT4XHB_LIB_DIR)/libhbqtdeclarative4$(LIBEXT)       : $(OBJECTS_QTDECLARATIVE)
-	ar rc $@ $^
-$(QT4XHB_LIB_DIR)/libhbqtdesigner4$(LIBEXT)          : $(OBJECTS_QTDESIGNER)
-	ar rc $@ $^
-$(QT4XHB_LIB_DIR)/libhbqtgui4$(LIBEXT)               : $(OBJECTS_QTGUI)
-	ar rc $@ $^
-$(QT4XHB_LIB_DIR)/libhbqthelp4$(LIBEXT)              : $(OBJECTS_QTHELP)
-	ar rc $@ $^
-$(QT4XHB_LIB_DIR)/libhbqtmultimedia4$(LIBEXT)        : $(OBJECTS_QTMULTIMEDIA)
-	ar rc $@ $^
-$(QT4XHB_LIB_DIR)/libhbqtnetwork4$(LIBEXT)           : $(OBJECTS_QTNETWORK)
-	ar rc $@ $^
-$(QT4XHB_LIB_DIR)/libhbqtopengl4$(LIBEXT)            : $(OBJECTS_QTOPENGL)
-	ar rc $@ $^
-$(QT4XHB_LIB_DIR)/libhbqtscript4$(LIBEXT)            : $(OBJECTS_QTSCRIPT)
-	ar rc $@ $^
-$(QT4XHB_LIB_DIR)/libhbqtscripttools4$(LIBEXT)       : $(OBJECTS_QTSCRIPTTOOLS)
-	ar rc $@ $^
-$(QT4XHB_LIB_DIR)/libhbqtsql4$(LIBEXT)               : $(OBJECTS_QTSQL)
-	ar rc $@ $^
-$(QT4XHB_LIB_DIR)/libhbqtsvg4$(LIBEXT)               : $(OBJECTS_QTSVG)
-	ar rc $@ $^
-$(QT4XHB_LIB_DIR)/libhbqttest4$(LIBEXT)              : $(OBJECTS_QTTEST)
-	ar rc $@ $^
-$(QT4XHB_LIB_DIR)/libhbqtuitools4$(LIBEXT)           : $(OBJECTS_QTUITOOLS)
-	ar rc $@ $^
-$(QT4XHB_LIB_DIR)/libhbqtwebkit4$(LIBEXT)            : $(OBJECTS_QTWEBKIT)
-	ar rc $@ $^
-$(QT4XHB_LIB_DIR)/libhbqtxml4$(LIBEXT)               : $(OBJECTS_QTXML)
-	ar rc $@ $^
-$(QT4XHB_LIB_DIR)/libhbqtxmlpatterns4$(LIBEXT)       : $(OBJECTS_QTXMLPATTERNS)
-	ar rc $@ $^
+$(QT4XHB_LIB_DIR)/$(LIBPRE)hbqaxcontainer4$(LIBEXT)        : $(OBJECTS_QAXCONTAINER)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT4XHB_LIB_DIR)/$(LIBPRE)hbqaxserver4$(LIBEXT)           : $(OBJECTS_QAXSERVER)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT4XHB_LIB_DIR)/$(LIBPRE)hbqtcore4$(LIBEXT)              : $(OBJECTS_QTCORE)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT4XHB_LIB_DIR)/$(LIBPRE)hbqtdeclarative4$(LIBEXT)       : $(OBJECTS_QTDECLARATIVE)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT4XHB_LIB_DIR)/$(LIBPRE)hbqtdesigner4$(LIBEXT)          : $(OBJECTS_QTDESIGNER)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT4XHB_LIB_DIR)/$(LIBPRE)hbqtgui4$(LIBEXT)               : $(OBJECTS_QTGUI)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT4XHB_LIB_DIR)/$(LIBPRE)hbqthelp4$(LIBEXT)              : $(OBJECTS_QTHELP)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT4XHB_LIB_DIR)/$(LIBPRE)hbqtmultimedia4$(LIBEXT)        : $(OBJECTS_QTMULTIMEDIA)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT4XHB_LIB_DIR)/$(LIBPRE)hbqtnetwork4$(LIBEXT)           : $(OBJECTS_QTNETWORK)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT4XHB_LIB_DIR)/$(LIBPRE)hbqtopengl4$(LIBEXT)            : $(OBJECTS_QTOPENGL)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT4XHB_LIB_DIR)/$(LIBPRE)hbqtscript4$(LIBEXT)            : $(OBJECTS_QTSCRIPT)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT4XHB_LIB_DIR)/$(LIBPRE)hbqtscripttools4$(LIBEXT)       : $(OBJECTS_QTSCRIPTTOOLS)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT4XHB_LIB_DIR)/$(LIBPRE)hbqtsql4$(LIBEXT)               : $(OBJECTS_QTSQL)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT4XHB_LIB_DIR)/$(LIBPRE)hbqtsvg4$(LIBEXT)               : $(OBJECTS_QTSVG)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT4XHB_LIB_DIR)/$(LIBPRE)hbqttest4$(LIBEXT)              : $(OBJECTS_QTTEST)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT4XHB_LIB_DIR)/$(LIBPRE)hbqtuitools4$(LIBEXT)           : $(OBJECTS_QTUITOOLS)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT4XHB_LIB_DIR)/$(LIBPRE)hbqtwebkit4$(LIBEXT)            : $(OBJECTS_QTWEBKIT)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT4XHB_LIB_DIR)/$(LIBPRE)hbqtxml4$(LIBEXT)               : $(OBJECTS_QTXML)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT4XHB_LIB_DIR)/$(LIBPRE)hbqtxmlpatterns4$(LIBEXT)       : $(OBJECTS_QTXMLPATTERNS)
+	$(AR) $(ARFLAGS) $@ $^
 
-$(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_SRC_DIR)/%.cpp
+$(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/%.prg
+	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # ActiveQt
-$(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/ActiveQt/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_SRC_DIR)/ActiveQt/%.cpp
+$(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/ActiveQt/%.prg
+	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/ActiveQt/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtCore
-$(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/QtCore/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_SRC_DIR)/QtCore/%.cpp
+$(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtCore/%.prg
+	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtCore/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtDeclarative
-$(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/QtDeclarative/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_SRC_DIR)/QtDeclarative/%.cpp
+$(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtDeclarative/%.prg
+	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtDeclarative/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtDesigner
-$(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/QtDesigner/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_SRC_DIR)/QtDesigner/%.cpp
+$(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtDesigner/%.prg
+	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtDesigner/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtGui
-$(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/QtGui/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_SRC_DIR)/QtGui/%.cpp
+$(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtGui/%.prg
+	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtGui/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtHelp
-$(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/QtHelp/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_SRC_DIR)/QtHelp/%.cpp
+$(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtHelp/%.prg
+	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtHelp/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtMultimedia
-$(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/QtMultimedia/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_SRC_DIR)/QtMultimedia/%.cpp
+$(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtMultimedia/%.prg
+	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtMultimedia/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtNetwork
-$(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/QtNetwork/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_SRC_DIR)/QtNetwork/%.cpp
+$(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtNetwork/%.prg
+	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtNetwork/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtOpenGL
-$(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/QtOpenGL/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_SRC_DIR)/QtOpenGL/%.cpp
+$(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtOpenGL/%.prg
+	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtOpenGL/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtScript
-$(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/QtScript/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_SRC_DIR)/QtScript/%.cpp
+$(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtScript/%.prg
+	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtScript/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtScriptTools
-$(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/QtScriptTools/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_SRC_DIR)/QtScriptTools/%.cpp
+$(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtScriptTools/%.prg
+	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtScriptTools/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtSql
-$(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/QtSql/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_SRC_DIR)/QtSql/%.cpp
+$(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtSql/%.prg
+	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtSql/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtSvg
-$(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/QtSvg/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_SRC_DIR)/QtSvg/%.cpp
+$(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtSvg/%.prg
+	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtSvg/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtTest
-$(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/QtTest/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_SRC_DIR)/QtTest/%.cpp
+$(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtTest/%.prg
+	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtTest/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtUiTools
-$(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/QtUiTools/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_SRC_DIR)/QtUiTools/%.cpp
+$(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtUiTools/%.prg
+	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtUiTools/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtWebKit
-$(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/QtWebKit/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_SRC_DIR)/QtWebKit/%.cpp
+$(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtWebKit/%.prg
+	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtWebKit/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtXml
-$(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/QtXml/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_SRC_DIR)/QtXml/%.cpp
+$(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtXml/%.prg
+	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtXml/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtXmlPatterns
-$(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/QtXmlPatterns/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_SRC_DIR)/QtXmlPatterns/%.cpp
+$(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtXmlPatterns/%.prg
+	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtXmlPatterns/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 
-$(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_OBJ_DIR)/%.c
+$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_OBJ_DIR)/%.c
 	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
-$(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_OBJ_DIR)/%.cpp
+$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_OBJ_DIR)/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 
 $(QT4XHB_OBJ_DIR)/habstracttablemodelMoc.cpp : $(QT4XHB_SRC_DIR)/habstracttablemodel.h
@@ -511,57 +227,4 @@ $(QT4XHB_OBJ_DIR)/habstracttablemodelMoc.cpp : $(QT4XHB_SRC_DIR)/habstracttablem
 $(QT4XHB_OBJ_DIR)/habstractlistmodelMoc.cpp  : $(QT4XHB_SRC_DIR)/habstractlistmodel.h
 	$(MOC) $^ -o $@
 
-ifeq ($(MODULE_ACTIVEQT),yes)
-   include mak/QAxContainerMocs.mak
-endif
-ifeq ($(MODULE_ACTIVEQT),yes)
-   include mak/QAxServerMocs.mak
-endif
-ifeq ($(MODULE_QTCORE),yes)
-   include mak/QtCoreMocs.mak
-endif
-ifeq ($(MODULE_QTDECLARATIVE),yes)
-   include mak/QtDeclarativeMocs.mak
-endif
-ifeq ($(MODULE_QTDESIGNER),yes)
-   include mak/QtDesignerMocs.mak
-endif
-ifeq ($(MODULE_QTGUI),yes)
-   include mak/QtGuiMocs.mak
-endif
-ifeq ($(MODULE_QTHELP),yes)
-   include mak/QtHelpMocs.mak
-endif
-ifeq ($(MODULE_QTMULTIMEDIA),yes)
-   include mak/QtMultimediaMocs.mak
-endif
-ifeq ($(MODULE_QTNETWORK),yes)
-   include mak/QtNetworkMocs.mak
-endif
-ifeq ($(MODULE_QTOPENGL),yes)
-   include mak/QtOpenGLMocs.mak
-endif
-ifeq ($(MODULE_QTSCRIPT),yes)
-   include mak/QtScriptMocs.mak
-endif
-ifeq ($(MODULE_QTSCRIPTTOOLS),yes)
-   include mak/QtScriptToolsMocs.mak
-endif
-ifeq ($(MODULE_QTSQL),yes)
-   include mak/QtSqlMocs.mak
-endif
-ifeq ($(MODULE_QTSVG),yes)
-   include mak/QtSvgMocs.mak
-endif
-ifeq ($(MODULE_QTUITOOLS),yes)
-   include mak/QtUiToolsMocs.mak
-endif
-ifeq ($(MODULE_QTWEBKIT),yes)
-   include mak/QtWebKitMocs.mak
-endif
-ifeq ($(MODULE_QTXML),yes)
-   include mak/QtXmlMocs.mak
-endif
-ifeq ($(MODULE_QTXMLPATTERNS),yes)
-   include mak/QtXmlPatternsMocs.mak
-endif
+include mak/modules9.mak
