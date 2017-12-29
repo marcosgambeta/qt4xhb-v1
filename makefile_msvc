@@ -71,6 +71,9 @@ OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodel$(OBJEXT)
 OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodelMoc$(OBJEXT)
 OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodelbin$(OBJEXT)
 OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodelcls$(OBJEXT)
+OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodelV2$(OBJEXT)
+OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodelV2Moc$(OBJEXT)
+OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodelclsV2$(OBJEXT)
 OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/qt4xhbbase$(OBJEXT)
 
 include mak/modules7.mak
@@ -120,108 +123,110 @@ $(QT4XHB_LIB_DIR)/$(LIBPRE)hbqtxmlpatterns4$(LIBEXT)       : $(OBJECTS_QTXMLPATT
 	link /lib /out:$@ $^
 
 $(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/%.prg
-	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/%.cpp
+	$(HB) $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%$(OBJEXT) : $(QT4XHB_SRC_DIR)/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
 # ActiveQt
 $(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/ActiveQt/%.prg
-	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/ActiveQt/%.cpp
+	$(HB) $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%$(OBJEXT) : $(QT4XHB_SRC_DIR)/ActiveQt/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
 # QtCore
 $(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtCore/%.prg
-	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtCore/%.cpp
+	$(HB) $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtCore/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
 # QtDeclarative
 $(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtDeclarative/%.prg
-	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtDeclarative/%.cpp
+	$(HB) $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtDeclarative/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
 # QtDesigner
 $(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtDesigner/%.prg
-	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtDesigner/%.cpp
+	$(HB) $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtDesigner/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
 # QtGui
 $(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtGui/%.prg
-	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtGui/%.cpp
+	$(HB) $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtGui/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
 # QtHelp
 $(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtHelp/%.prg
-	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtHelp/%.cpp
+	$(HB) $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtHelp/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
 # QtMultimedia
 $(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtMultimedia/%.prg
-	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtMultimedia/%.cpp
+	$(HB) $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtMultimedia/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
 # QtNetwork
 $(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtNetwork/%.prg
-	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtNetwork/%.cpp
+	$(HB) $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtNetwork/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
 # QtOpenGL
 $(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtOpenGL/%.prg
-	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtOpenGL/%.cpp
+	$(HB) $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtOpenGL/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
 # QtScript
 $(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtScript/%.prg
-	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtScript/%.cpp
+	$(HB) $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtScript/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
 # QtScriptTools
 $(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtScriptTools/%.prg
-	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtScriptTools/%.cpp
+	$(HB) $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtScriptTools/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
 # QtSql
 $(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtSql/%.prg
-	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtSql/%.cpp
+	$(HB) $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtSql/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
 # QtSvg
 $(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QSvg/%.prg
-	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtSvg/%.cpp
+	$(HB) $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtSvg/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
 # QtTest
 $(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtTest/%.prg
-	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtTest/%.cpp
+	$(HB) $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtTest/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
 # QtUiTools
 $(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtUiTools/%.prg
-	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtUiTools/%.cpp
+	$(HB) $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtUiTools/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
 # QtWebKit
 $(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtWebKit/%.prg
-	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtWebKit/%.cpp
+	$(HB) $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtWebKit/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
 # QtXml
 $(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtXml/%.prg
-	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtXml/%.cpp
+	$(HB) $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtXml/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
 # QtXmlPatterns
 $(QT4XHB_OBJ_DIR)/%.c         : $(QT4XHB_SRC_DIR)/QtXmlPatterns/%.prg
-	$(HB) $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
-$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtXmlPatterns/%.cpp
+	$(HB) $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%$(OBJEXT) : $(QT4XHB_SRC_DIR)/QtXmlPatterns/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
 
-$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_OBJ_DIR)/%.c
+$(QT4XHB_OBJ_DIR)/%$(OBJEXT) : $(QT4XHB_OBJ_DIR)/%.c
 	$(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
-$(QT4XHB_OBJ_DIR)/%.$(OBJEXT) : $(QT4XHB_OBJ_DIR)/%.cpp
+$(QT4XHB_OBJ_DIR)/%$(OBJEXT) : $(QT4XHB_OBJ_DIR)/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
 
-$(QT4XHB_OBJ_DIR)/habstracttablemodelMoc.cpp : $(QT4XHB_SRC_DIR)/habstracttablemodel.h
+$(QT4XHB_OBJ_DIR)/habstractlistmodelMoc.cpp    : $(QT4XHB_SRC_DIR)/habstractlistmodel.h
 	$(MOC) $^ -o $@
-$(QT4XHB_OBJ_DIR)/habstractlistmodelMoc.cpp  : $(QT4XHB_SRC_DIR)/habstractlistmodel.h
+$(QT4XHB_OBJ_DIR)/habstracttablemodelMoc.cpp   : $(QT4XHB_SRC_DIR)/habstracttablemodel.h
+	$(MOC) $^ -o $@
+$(QT4XHB_OBJ_DIR)/habstracttablemodelV2Moc.cpp : $(QT4XHB_SRC_DIR)/habstracttablemodelV2.h
 	$(MOC) $^ -o $@
 
 include mak/modules9.mak

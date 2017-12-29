@@ -76,7 +76,6 @@ OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodelbin$(OBJEXT)
 OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodelcls$(OBJEXT)
 OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodelV2$(OBJEXT)
 OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodelV2Moc$(OBJEXT)
-OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodelbinV2$(OBJEXT)
 OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodelclsV2$(OBJEXT)
 OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/qt4xhbbase$(OBJEXT)
 
