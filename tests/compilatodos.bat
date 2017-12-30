@@ -6,6 +6,9 @@ rem
 rem Batch para compilar testes.
 rem
 
+hbmk2 ColorsNames1            %1 %2 %3 ..\qt4xhb.hbc
+hbmk2 ColorsNames2            %1 %2 %3 ..\qt4xhb.hbc
+hbmk2 ColorsNames3            %1 %2 %3 ..\qt4xhb.hbc
 hbmk2 HAbstractTableModelV21  %1 %2 %3 ..\qt4xhb.hbc
 hbmk2 HAbstractTableModelV22  %1 %2 %3 ..\qt4xhb.hbc
 hbmk2 HAbstractTableModelV23  %1 %2 %3 ..\qt4xhb.hbc
