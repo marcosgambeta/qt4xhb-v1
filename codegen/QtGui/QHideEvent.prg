@@ -22,11 +22,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QHideEvent ()
-HB_FUNC_STATIC( QHIDEEVENT_NEW )
-{
-  QHideEvent * o = new QHideEvent ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 

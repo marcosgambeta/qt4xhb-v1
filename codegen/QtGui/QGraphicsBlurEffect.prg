@@ -34,11 +34,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QGraphicsBlurEffect ( QObject * parent = 0 )
-HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_NEW )
-{
-  QGraphicsBlurEffect * o = new QGraphicsBlurEffect ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 

@@ -31,11 +31,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QSplitterHandle ( Qt::Orientation orientation, QSplitter * parent )
-HB_FUNC_STATIC( QSPLITTERHANDLE_NEW )
-{
-  QSplitterHandle * o = new QSplitterHandle ( (Qt::Orientation) hb_parni(1), PQSPLITTER(2) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|Qt::Orientation,QSplitter *
 
 $prototype=bool opaqueResize () const
 $method=|bool|opaqueResize|

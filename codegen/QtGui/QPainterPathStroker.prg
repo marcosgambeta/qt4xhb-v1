@@ -52,11 +52,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QPainterPathStroker ()
-HB_FUNC_STATIC( QPAINTERPATHSTROKER_NEW )
-{
-  QPainterPathStroker * o = new QPainterPathStroker ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new|
 
 $deleteMethod
 

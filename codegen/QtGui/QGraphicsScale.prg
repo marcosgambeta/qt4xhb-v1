@@ -41,11 +41,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QGraphicsScale ( QObject * parent = 0 )
-HB_FUNC_STATIC( QGRAPHICSSCALE_NEW )
-{
-  QGraphicsScale * o = new QGraphicsScale ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 

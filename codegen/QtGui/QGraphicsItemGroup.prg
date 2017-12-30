@@ -34,11 +34,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QGraphicsItemGroup ( QGraphicsItem * parent = 0 )
-HB_FUNC_STATIC( QGRAPHICSITEMGROUP_NEW )
-{
-  QGraphicsItemGroup * o = new QGraphicsItemGroup ( OPQGRAPHICSITEM(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QGraphicsItem *=0
 
 $deleteMethod
 

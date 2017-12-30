@@ -63,11 +63,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QTextLine ()
-HB_FUNC_STATIC( QTEXTLINE_NEW )
-{
-  QTextLine * o = new QTextLine ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 

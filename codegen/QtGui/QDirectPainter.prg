@@ -46,12 +46,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QDirectPainter ( QObject * parent = 0, SurfaceFlag flag = NonReserved )
-HB_FUNC_STATIC( QDIRECTPAINTER_NEW )
-{
-  int par2 = ISNIL(2)? (int) QDirectPainter::NonReserved : hb_parni(2);
-  QDirectPainter * o = new QDirectPainter ( OPQOBJECT(1,0), (QDirectPainter::SurfaceFlag) par2 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *=0,QDirectPainter::SurfaceFlag=QDirectPainter::NonReserved
 
 $deleteMethod
 
@@ -111,11 +106,7 @@ $prototype=void startPainting ( bool lockDisplay = true )
 $method=|void|startPainting|bool=true
 
 $prototype=uchar * frameBuffer ()
-HB_FUNC_STATIC( QDIRECTPAINTER_FRAMEBUFFER )
-{
-  uchar * ptr = QDirectPainter::frameBuffer ();
-  _qt4xhb_createReturnClass ( ptr, "UCHAR" );
-}
+$method=|uchar *|frameBuffer|
 
 $prototype=static int linestep ()
 $staticMethod=|int|linestep|

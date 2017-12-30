@@ -28,34 +28,14 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QGraphicsSceneMoveEvent ()
-HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_NEW )
-{
-  QGraphicsSceneResizeEvent * o = new QGraphicsSceneResizeEvent ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 
 $prototype=QSizeF newSize () const
-HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_NEWSIZE )
-{
-  QGraphicsSceneResizeEvent * obj = (QGraphicsSceneResizeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSizeF * ptr = new QSizeF( obj->newSize () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
-  }
-}
+$method=|QSizeF|newSize|
 
 $prototype=QSizeF oldSize () const
-HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_OLDSIZE )
-{
-  QGraphicsSceneResizeEvent * obj = (QGraphicsSceneResizeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSizeF * ptr = new QSizeF( obj->oldSize () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
-  }
-}
+$method=|QSizeF|oldSize|
 
 #pragma ENDDUMP

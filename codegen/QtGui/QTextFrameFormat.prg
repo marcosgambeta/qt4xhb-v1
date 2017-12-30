@@ -58,11 +58,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QTextFrameFormat ()
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_NEW )
-{
-  QTextFrameFormat * o = new QTextFrameFormat ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 

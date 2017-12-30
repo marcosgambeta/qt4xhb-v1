@@ -43,11 +43,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QWindowsStyle ()
-HB_FUNC_STATIC( QWINDOWSSTYLE_NEW )
-{
-  QWindowsStyle * o = new QWindowsStyle ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 

@@ -33,16 +33,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QDragMoveEvent ( const QPoint & pos, Qt::DropActions actions, const QMimeData * data, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, Type type = DragMove )
-HB_FUNC_STATIC( QDRAGMOVEEVENT_NEW )
-{
-  int par2 = hb_parni(2);
-  const QMimeData * par3 = (const QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par4 = hb_parni(4);
-  int par5 = hb_parni(5);
-  int par6 = ISNIL(6)? (int) QDragMoveEvent::DragMove : hb_parni(6);
-  QDragMoveEvent * o = new QDragMoveEvent ( *PQPOINT(1), (Qt::DropActions) par2, par3, (Qt::MouseButtons) par4, (Qt::KeyboardModifiers) par5, (QDragMoveEvent::Type) par6 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|const QPoint &,Qt::DropActions,const QMimeData *,Qt::MouseButtons,Qt::KeyboardModifiers,QDragMoveEvent::Type=QDragMoveEvent::DragMove
 
 $deleteMethod
 

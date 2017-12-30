@@ -33,11 +33,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QGraphicsOpacityEffect ( QObject * parent = 0 )
-HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_NEW )
-{
-  QGraphicsOpacityEffect * o = new QGraphicsOpacityEffect ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 

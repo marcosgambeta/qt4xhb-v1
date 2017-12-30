@@ -27,11 +27,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QFocusFrame ( QWidget * parent = 0 )
-HB_FUNC_STATIC( QFOCUSFRAME_NEW )
-{
-  QFocusFrame * o = new QFocusFrame ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QWidget *=0
 
 $prototype=void setWidget ( QWidget * widget )
 $method=|void|setWidget|QWidget *

@@ -29,26 +29,13 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QPushButton ( QWidget * parent = 0 )
-void QPushButton_new1 ()
-{
-  QPushButton * o = new QPushButton ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$internalConstructor=|new1|QWidget *=0
 
 $prototype=QPushButton ( const QString & text, QWidget * parent = 0 )
-void QPushButton_new2 ()
-{
-  QPushButton * o = new QPushButton ( PQSTRING(1), OPQWIDGET(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$internalConstructor=|new2|const QString &,QWidget *=0
 
 $prototype=QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = 0 )
-void QPushButton_new3 ()
-{
-  QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
-  QPushButton * o = new QPushButton ( par1, PQSTRING(2), OPQWIDGET(3,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$internalConstructor=|new3|const QIcon &,const QString &,QWidget *=0
 
 //[1]QPushButton ( QWidget * parent = 0 )
 //[2]QPushButton ( const QString & text, QWidget * parent = 0 )

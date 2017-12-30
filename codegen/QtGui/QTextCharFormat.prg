@@ -77,11 +77,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QTextCharFormat ()
-HB_FUNC_STATIC( QTEXTCHARFORMAT_NEW )
-{
-  QTextCharFormat * o = new QTextCharFormat ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 

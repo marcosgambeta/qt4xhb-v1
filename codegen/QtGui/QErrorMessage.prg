@@ -30,11 +30,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QErrorMessage ( QWidget * parent = 0 )
-HB_FUNC_STATIC( QERRORMESSAGE_NEW )
-{
-  QErrorMessage * o = new QErrorMessage ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QWidget *=0
 
 $deleteMethod
 
@@ -64,10 +60,6 @@ HB_FUNC_STATIC( QERRORMESSAGE_SHOWMESSAGE )
 }
 
 $prototype=QErrorMessage * qtHandler ()
-HB_FUNC_STATIC( QERRORMESSAGE_QTHANDLER )
-{
-  QErrorMessage * ptr = QErrorMessage::qtHandler ();
-  _qt4xhb_createReturnClass ( ptr, "QERRORMESSAGE" );
-}
+$method=|QErrorMessage *|qtHandler|
 
 #pragma ENDDUMP

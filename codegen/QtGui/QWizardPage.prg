@@ -44,11 +44,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QWizardPage ( QWidget * parent = 0 )
-HB_FUNC_STATIC( QWIZARDPAGE_NEW )
-{
-  QWizardPage * o = new QWizardPage ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QWidget *=0
 
 $prototype=QString buttonText ( QWizard::WizardButton which ) const
 $method=|QString|buttonText|QWizard::WizardButton

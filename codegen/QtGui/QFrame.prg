@@ -41,12 +41,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QFrame ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
-HB_FUNC_STATIC( QFRAME_NEW )
-{
-  int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QFrame * o = new QFrame ( OPQWIDGET(1,0), (Qt::WindowFlags) par2 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QWidget *=0,Qt::WindowFlags=0
 
 $deleteMethod
 
@@ -54,24 +49,10 @@ $prototype=QRect frameRect () const
 $method=|QRect|frameRect|
 
 $prototype=Shadow frameShadow () const
-HB_FUNC_STATIC( QFRAME_FRAMESHADOW )
-{
-  QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->frameShadow () );
-  }
-}
+$method=|QFrame::Shadow|frameShadow|
 
 $prototype=Shape frameShape () const
-HB_FUNC_STATIC( QFRAME_FRAMESHAPE )
-{
-  QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->frameShape () );
-  }
-}
+$method=|QFrame::Shape|frameShape|
 
 $prototype=int frameStyle () const
 $method=|int|frameStyle|

@@ -22,11 +22,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QStyleHintReturnMask ()
-HB_FUNC_STATIC( QSTYLEHINTRETURNMASK_NEW )
-{
-  QStyleHintReturnMask * o = new QStyleHintReturnMask ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 

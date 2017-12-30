@@ -36,12 +36,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QKeyEvent ( Type type, int key, Qt::KeyboardModifiers modifiers, const QString & text = QString(), bool autorep = false, ushort count = 1 )
-HB_FUNC_STATIC( QKEYEVENT_NEW )
-{
-  int par3 = hb_parni(3);
-  QKeyEvent * o = new QKeyEvent ( (QEvent::Type) hb_parni(1), PINT(2), (Qt::KeyboardModifiers) par3, OPQSTRING(4,QString()), OPBOOL(5,false), OPUSHORT(6,1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QEvent::Type,int,Qt::KeyboardModifiers,const QString &=QString(),bool=false,ushort=1
 
 $deleteMethod
 

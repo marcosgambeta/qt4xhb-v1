@@ -43,11 +43,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QGraphicsDropShadowEffect ( QObject * parent = 0 )
-HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_NEW )
-{
-  QGraphicsDropShadowEffect * o = new QGraphicsDropShadowEffect ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 

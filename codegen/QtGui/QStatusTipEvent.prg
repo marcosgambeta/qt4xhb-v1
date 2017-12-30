@@ -23,11 +23,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QStatusTipEvent(const QString &tip)
-HB_FUNC_STATIC( QSTATUSTIPEVENT_NEW )
-{
-  QStatusTipEvent * o = new QStatusTipEvent ( PQSTRING(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|const QString &
 
 $deleteMethod
 

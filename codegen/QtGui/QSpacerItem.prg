@@ -36,13 +36,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QSpacerItem ( int w, int h, QSizePolicy::Policy hPolicy = QSizePolicy::Minimum, QSizePolicy::Policy vPolicy = QSizePolicy::Minimum )
-HB_FUNC_STATIC( QSPACERITEM_NEW )
-{
-  int par3 = ISNIL(3)? (int) QSizePolicy::Minimum : hb_parni(3);
-  int par4 = ISNIL(4)? (int) QSizePolicy::Minimum : hb_parni(4);
-  QSpacerItem * o = new QSpacerItem ( PINT(1), PINT(2), (QSizePolicy::Policy) par3, (QSizePolicy::Policy) par4 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|int,int,QSizePolicy::Policy=QSizePolicy::Minimum,QSizePolicy::Policy=QSizePolicy::Minimum
 
 $prototype=void changeSize ( int w, int h, QSizePolicy::Policy hPolicy = QSizePolicy::Minimum, QSizePolicy::Policy vPolicy = QSizePolicy::Minimum )
 $method=|void|changeSize|int,int,QSizePolicy::Policy=QSizePolicy::Minimum,QSizePolicy::Policy=QSizePolicy::Minimum

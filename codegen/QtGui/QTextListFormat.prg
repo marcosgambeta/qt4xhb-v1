@@ -31,11 +31,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QTextListFormat ()
-HB_FUNC_STATIC( QTEXTLISTFORMAT_NEW )
-{
-  QTextListFormat * o = new QTextListFormat ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 

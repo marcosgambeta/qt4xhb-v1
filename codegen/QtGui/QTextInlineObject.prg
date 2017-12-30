@@ -49,11 +49,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QTextInlineObject ( int i, QTextEngine * e )
-HB_FUNC_STATIC( QTEXTINLINEOBJECT_NEW )
-{
-  QTextInlineObject * o = new QTextInlineObject ( PINT(1), PQTEXTENGINE(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|int,QTextEngine *
 
 $deleteMethod
 

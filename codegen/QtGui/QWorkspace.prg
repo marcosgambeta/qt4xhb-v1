@@ -46,11 +46,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QWorkspace ( QWidget * parent = 0 )
-HB_FUNC_STATIC( QWORKSPACE_NEW )
-{
-  QWorkspace * o = new QWorkspace ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QWidget *=0
 
 $deleteMethod
 

@@ -41,11 +41,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QGraphicsAnchorLayout ( QGraphicsLayoutItem * parent = 0 )
-HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_NEW )
-{
-  QGraphicsAnchorLayout * o = new QGraphicsAnchorLayout ( PQGRAPHICSLAYOUTITEM(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QGraphicsLayoutItem *=0
 
 $deleteMethod
 

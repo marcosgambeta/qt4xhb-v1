@@ -39,11 +39,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QSpinBox ( QWidget * parent = 0 )
-HB_FUNC_STATIC( QSPINBOX_NEW )
-{
-  QSpinBox * o = new QSpinBox ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QWidget *=0
 
 $deleteMethod
 

@@ -22,11 +22,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QIconDragEvent ()
-HB_FUNC_STATIC( QICONDRAGEVENT_NEW )
-{
-  QIconDragEvent * o = new QIconDragEvent ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 

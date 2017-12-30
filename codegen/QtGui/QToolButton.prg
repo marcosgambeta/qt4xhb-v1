@@ -45,11 +45,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QToolButton ( QWidget * parent = 0 )
-HB_FUNC_STATIC( QTOOLBUTTON_NEW )
-{
-  QToolButton * o = new QToolButton ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QWidget *=0
 
 $deleteMethod
 

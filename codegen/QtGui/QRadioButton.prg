@@ -27,18 +27,10 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QRadioButton ( QWidget * parent = 0 )
-void QRadioButton_new1 ()
-{
-  QRadioButton * o = new QRadioButton ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$internalConstructor=|new1|QWidget *=0
 
 $prototype=QRadioButton ( const QString & text, QWidget * parent = 0 )
-void QRadioButton_new2 ()
-{
-  QRadioButton * o = new QRadioButton ( PQSTRING(1), OPQWIDGET(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$internalConstructor=|new2|const QString &,QWidget *=0
 
 //[1]QRadioButton ( QWidget * parent = 0 )
 //[2]QRadioButton ( const QString & text, QWidget * parent = 0 )

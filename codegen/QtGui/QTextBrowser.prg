@@ -54,11 +54,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QTextBrowser ( QWidget * parent = 0 )
-HB_FUNC_STATIC( QTEXTBROWSER_NEW )
-{
-  QTextBrowser * o = new QTextBrowser ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QWidget *=0
 
 $prototype=int backwardHistoryCount () const
 $method=|int|backwardHistoryCount|

@@ -36,11 +36,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QPlainTextDocumentLayout ( QTextDocument * document )
-HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_NEW )
-{
-  QPlainTextDocumentLayout * o = new QPlainTextDocumentLayout ( PQTEXTDOCUMENT(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QTextDocument *
 
 $deleteMethod
 

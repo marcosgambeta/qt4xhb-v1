@@ -28,11 +28,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QResizeEvent(const QSize &size, const QSize &oldSize)
-HB_FUNC_STATIC( QRESIZEEVENT_NEW )
-{
-  QResizeEvent * o = new QResizeEvent ( *PQSIZE(1), *PQSIZE(2) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|const QSize &,const QSize &
 
 $deleteMethod
 

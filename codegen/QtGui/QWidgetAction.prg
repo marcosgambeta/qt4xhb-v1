@@ -30,11 +30,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QWidgetAction ( QObject * parent )
-HB_FUNC_STATIC( QWIDGETACTION_NEW )
-{
-  QWidgetAction * o = new QWidgetAction ( PQOBJECT(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *
 
 $deleteMethod
 

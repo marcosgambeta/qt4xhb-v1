@@ -32,11 +32,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QTextTableCellFormat ()
-HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_NEW )
-{
-  QTextTableCellFormat * o = new QTextTableCellFormat ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 

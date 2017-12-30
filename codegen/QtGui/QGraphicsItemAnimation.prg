@@ -52,11 +52,7 @@ $destructor
 #include <QPointF>
 
 $prototype=QGraphicsItemAnimation ( QObject * parent = 0 )
-HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_NEW )
-{
-  QGraphicsItemAnimation * o = new QGraphicsItemAnimation ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 

@@ -30,11 +30,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QSound ( const QString & filename, QObject * parent = 0 )
-HB_FUNC_STATIC( QSOUND_NEW )
-{
-  QSound * o = new QSound ( PQSTRING(1), OPQOBJECT(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|const QString &,QObject *=0
 
 $deleteMethod
 

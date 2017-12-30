@@ -62,11 +62,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QListView ( QWidget * parent = 0 )
-HB_FUNC_STATIC( QLISTVIEW_NEW )
-{
-  QListView * o = new QListView ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QWidget *=0
 
 $deleteMethod
 

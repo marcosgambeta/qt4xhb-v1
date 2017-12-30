@@ -69,11 +69,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QTextBlock ( const QTextBlock & other )
-HB_FUNC_STATIC( QTEXTBLOCK_NEW )
-{
-  QTextBlock * o = new QTextBlock ( *PQTEXTBLOCK(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|const QTextBlock &
 
 $deleteMethod
 

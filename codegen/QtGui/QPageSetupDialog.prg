@@ -32,11 +32,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QPageSetupDialog ( QPrinter * printer, QWidget * parent = 0 )
-HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW )
-{
-  QPageSetupDialog * o = new QPageSetupDialog ( PQPRINTER(1), OPQWIDGET(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QPrinter *,QWidget *=0
 
 $prototype=void open ( QObject * receiver, const char * member )
 $method=|void|open|QObject *,const char *

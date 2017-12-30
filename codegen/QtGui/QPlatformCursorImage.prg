@@ -42,13 +42,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QPlatformCursorImage ( const uchar * data, const uchar * mask, int width, int height, int hotX, int hotY )
-HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_NEW )
-{
-  const uchar * par1 = (const uchar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  const uchar * par2 = (const uchar *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QPlatformCursorImage * o = new QPlatformCursorImage ( par1, par2, PINT(3), PINT(4), PINT(5), PINT(6) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|const uchar *,const uchar *,int,int,int,int
 
 $deleteMethod
 

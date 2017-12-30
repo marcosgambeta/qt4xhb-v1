@@ -44,11 +44,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QDoubleSpinBox ( QWidget * parent = 0 )
-HB_FUNC_STATIC( QDOUBLESPINBOX_NEW )
-{
-  QDoubleSpinBox * o = new QDoubleSpinBox ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QWidget *=0
 
 $prototype=QString cleanText () const
 $method=|QString|cleanText|

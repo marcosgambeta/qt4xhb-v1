@@ -76,11 +76,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QTabWidget ( QWidget * parent = 0 )
-HB_FUNC_STATIC( QTABWIDGET_NEW )
-{
-  QTabWidget * o = new QTabWidget ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QWidget *=0
 
 $deleteMethod
 

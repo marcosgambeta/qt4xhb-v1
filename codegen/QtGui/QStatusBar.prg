@@ -34,11 +34,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QStatusBar ( QWidget * parent = 0 )
-HB_FUNC_STATIC( QSTATUSBAR_NEW )
-{
-  QStatusBar * o = new QStatusBar ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QWidget *=0
 
 $deleteMethod
 
