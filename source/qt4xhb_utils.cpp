@@ -6,20 +6,7 @@
 
 */
 
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#define ISNIL HB_ISNIL
-#define ISLOG HB_ISLOG
-#define ISNUM HB_ISNUM
-#define ISCHAR HB_ISCHAR
-#define ISPOINTER HB_ISPOINTER
-#define ISOBJECT HB_ISOBJECT
-#define ISARRAY HB_ISARRAY
-#endif
+#include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 
 #include <QObject>
@@ -29,18 +16,10 @@
 void _qt4xhb_createReturnClass ( void * ptr, const char * classname )
 {
   PHB_DYNS pDynSym;
-  //#ifdef __XHARBOUR__
-  //pDynSym = hb_dynsymFind( classname );
-  //#else
   pDynSym = hb_dynsymFindName( classname );
-  //#endif
   if( pDynSym )
   {
-    //#ifdef __XHARBOUR__
-    //hb_vmPushSymbol( pDynSym->pSymbol );
-    //#else
     hb_vmPushDynSym( pDynSym );
-    //#endif
     hb_vmPushNil();
     hb_vmDo( 0 );
     PHB_ITEM pObject = hb_itemNew( NULL );
@@ -57,18 +36,10 @@ void _qt4xhb_createReturnClass ( void * ptr, const char * classname )
 void _qt4xhb_createReturnClass ( const void * ptr, const char * classname )
 {
   PHB_DYNS pDynSym;
-  //#ifdef __XHARBOUR__
-  //pDynSym = hb_dynsymFind( classname );
-  //#else
   pDynSym = hb_dynsymFindName( classname );
-  //#endif
   if( pDynSym )
   {
-    //#ifdef __XHARBOUR__
-    //hb_vmPushSymbol( pDynSym->pSymbol );
-    //#else
     hb_vmPushDynSym( pDynSym );
-    //#endif
     hb_vmPushNil();
     hb_vmDo( 0 );
     PHB_ITEM pObject = hb_itemNew( NULL );
@@ -85,18 +56,10 @@ void _qt4xhb_createReturnClass ( const void * ptr, const char * classname )
 void _qt4xhb_createReturnClass ( void * ptr, const char * classname, bool destroy )
 {
   PHB_DYNS pDynSym;
-  //#ifdef __XHARBOUR__
-  //pDynSym = hb_dynsymFind( classname );
-  //#else
   pDynSym = hb_dynsymFindName( classname );
-  //#endif
   if( pDynSym )
   {
-    //#ifdef __XHARBOUR__
-    //hb_vmPushSymbol( pDynSym->pSymbol );
-    //#else
     hb_vmPushDynSym( pDynSym );
-    //#endif
     hb_vmPushNil();
     hb_vmDo( 0 );
     PHB_ITEM pObject = hb_itemNew( NULL );
@@ -120,18 +83,10 @@ void _qt4xhb_createReturnClass ( void * ptr, const char * classname, bool destro
 void _qt4xhb_createReturnClass ( const void * ptr, const char * classname, bool destroy )
 {
   PHB_DYNS pDynSym;
-  //#ifdef __XHARBOUR__
-  //pDynSym = hb_dynsymFind( classname );
-  //#else
   pDynSym = hb_dynsymFindName( classname );
-  //#endif
   if( pDynSym )
   {
-    //#ifdef __XHARBOUR__
-    //hb_vmPushSymbol( pDynSym->pSymbol );
-    //#else
     hb_vmPushDynSym( pDynSym );
-    //#endif
     hb_vmPushNil();
     hb_vmDo( 0 );
     PHB_ITEM pObject = hb_itemNew( NULL );
@@ -158,16 +113,6 @@ void _qt4xhb_createReturnClass ( const void * ptr, const char * classname, bool 
 void _qt4xhb_createReturnQObjectClass ( QObject * ptr, const char * classname )
 {
   PHB_DYNS pDynSym;
-  //#ifdef __XHARBOUR__
-  //if( ptr )
-  //{
-  //  pDynSym = hb_dynsymFind( (const char *) ptr->metaObject()->className() );
-  //}
-  //else
-  //{
-  //  pDynSym = hb_dynsymFind( classname );
-  //}
-  //#else
   if( ptr )
   {
     pDynSym = hb_dynsymFindName( (const char *) ptr->metaObject()->className() );
@@ -176,14 +121,9 @@ void _qt4xhb_createReturnQObjectClass ( QObject * ptr, const char * classname )
   {
     pDynSym = hb_dynsymFindName( classname );
   }
-  //#endif
   if( pDynSym )
   {
-    //#ifdef __XHARBOUR__
-    //hb_vmPushSymbol( pDynSym->pSymbol );
-    //#else
     hb_vmPushDynSym( pDynSym );
-    //#endif
     hb_vmPushNil();
     hb_vmDo( 0 );
     PHB_ITEM pObject = hb_itemNew( NULL );
@@ -203,16 +143,6 @@ void _qt4xhb_createReturnQObjectClass ( QObject * ptr, const char * classname )
 void _qt4xhb_createReturnQObjectClass ( const QObject * ptr, const char * classname )
 {
   PHB_DYNS pDynSym;
-  //#ifdef __XHARBOUR__
-  //if( ptr )
-  //{
-  //  pDynSym = hb_dynsymFind( (const char *) ptr->metaObject()->className() );
-  //}
-  //else
-  //{
-  //  pDynSym = hb_dynsymFind( classname );
-  //}
-  //#else
   if( ptr )
   {
     pDynSym = hb_dynsymFindName( (const char *) ptr->metaObject()->className() );
@@ -221,14 +151,9 @@ void _qt4xhb_createReturnQObjectClass ( const QObject * ptr, const char * classn
   {
     pDynSym = hb_dynsymFindName( classname );
   }
-  //#endif
   if( pDynSym )
   {
-    //#ifdef __XHARBOUR__
-    //hb_vmPushSymbol( pDynSym->pSymbol );
-    //#else
     hb_vmPushDynSym( pDynSym );
-    //#endif
     hb_vmPushNil();
     hb_vmDo( 0 );
     PHB_ITEM pObject = hb_itemNew( NULL );
@@ -248,16 +173,6 @@ void _qt4xhb_createReturnQObjectClass ( const QObject * ptr, const char * classn
 void _qt4xhb_createReturnQWidgetClass ( QWidget * ptr, const char * classname )
 {
   PHB_DYNS pDynSym;
-  //#ifdef __XHARBOUR__
-  //if( ptr )
-  //{
-  //  pDynSym = hb_dynsymFind( (const char *) ptr->metaObject()->className() );
-  //}
-  //else
-  //{
-  //  pDynSym = hb_dynsymFind( classname );
-  //}
-  //#else
   if( ptr )
   {
     pDynSym = hb_dynsymFindName( (const char *) ptr->metaObject()->className() );
@@ -266,14 +181,9 @@ void _qt4xhb_createReturnQWidgetClass ( QWidget * ptr, const char * classname )
   {
     pDynSym = hb_dynsymFindName( classname );
   }
-  //#endif
   if( pDynSym )
   {
-    //#ifdef __XHARBOUR__
-    //hb_vmPushSymbol( pDynSym->pSymbol );
-    //#else
     hb_vmPushDynSym( pDynSym );
-    //#endif
     hb_vmPushNil();
     hb_vmDo( 0 );
     PHB_ITEM pObject = hb_itemNew( NULL );
@@ -293,16 +203,6 @@ void _qt4xhb_createReturnQWidgetClass ( QWidget * ptr, const char * classname )
 void _qt4xhb_createReturnQWidgetClass ( const QWidget * ptr, const char * classname )
 {
   PHB_DYNS pDynSym;
-  //#ifdef __XHARBOUR__
-  //if( ptr )
-  //{
-  //  pDynSym = hb_dynsymFind( (const char *) ptr->metaObject()->className() );
-  //}
-  //else
-  //{
-  //  pDynSym = hb_dynsymFind( classname );
-  //}
-  //#else
   if( ptr )
   {
     pDynSym = hb_dynsymFindName( (const char *) ptr->metaObject()->className() );
@@ -311,14 +211,9 @@ void _qt4xhb_createReturnQWidgetClass ( const QWidget * ptr, const char * classn
   {
     pDynSym = hb_dynsymFindName( classname );
   }
-  //#endif
   if( pDynSym )
   {
-    //#ifdef __XHARBOUR__
-    //hb_vmPushSymbol( pDynSym->pSymbol );
-    //#else
     hb_vmPushDynSym( pDynSym );
-    //#endif
     hb_vmPushNil();
     hb_vmDo( 0 );
     PHB_ITEM pObject = hb_itemNew( NULL );
