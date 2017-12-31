@@ -215,11 +215,7 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDGRAPHICSWIDGETS )
   {
     QList<QGraphicsWidget *> list = obj->associatedGraphicsWidgets ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGRAPHICSWIDGET" );
-    #else
     pDynSym = hb_dynsymFindName( "QGRAPHICSWIDGET" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -227,11 +223,7 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDGRAPHICSWIDGETS )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -258,11 +250,7 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDWIDGETS )
   {
     QList<QWidget *> list = obj->associatedWidgets ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QWIDGET" );
-    #else
     pDynSym = hb_dynsymFindName( "QWIDGET" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -270,11 +258,7 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDWIDGETS )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -822,11 +806,7 @@ HB_FUNC_STATIC( QACTION_SHORTCUTS )
   {
     QList<QKeySequence> list = obj->shortcuts ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QKEYSEQUENCE" );
-    #else
     pDynSym = hb_dynsymFindName( "QKEYSEQUENCE" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -834,11 +814,7 @@ HB_FUNC_STATIC( QACTION_SHORTCUTS )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );

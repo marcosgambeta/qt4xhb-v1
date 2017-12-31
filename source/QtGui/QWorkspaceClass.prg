@@ -172,11 +172,7 @@ HB_FUNC_STATIC( QWORKSPACE_WINDOWLIST )
     int par1 = ISNIL(1)? (int) QWorkspace::CreationOrder : hb_parni(1);
     QWidgetList list = obj->windowList ( (QWorkspace::WindowOrder) par1 );
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QWIDGET" );
-    #else
     pDynSym = hb_dynsymFindName( "QWIDGET" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -184,11 +180,7 @@ HB_FUNC_STATIC( QWORKSPACE_WINDOWLIST )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );

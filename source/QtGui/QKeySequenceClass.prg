@@ -250,11 +250,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_KEYBINDINGS )
   int par1 = hb_parni(1);
   QList<QKeySequence> list = QKeySequence::keyBindings ( (QKeySequence::StandardKey) par1 );
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QKEYSEQUENCE" );
-  #else
   pDynSym = hb_dynsymFindName( "QKEYSEQUENCE" );
-  #endif
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;
@@ -262,11 +258,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_KEYBINDINGS )
   {
     if( pDynSym )
     {
-      #ifdef __XHARBOUR__
-      hb_vmPushSymbol( pDynSym->pSymbol );
-      #else
       hb_vmPushDynSym( pDynSym );
-      #endif
       hb_vmPushNil();
       hb_vmDo( 0 );
       PHB_ITEM pObject = hb_itemNew( NULL );

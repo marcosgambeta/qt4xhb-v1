@@ -141,11 +141,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_ACTIONS )
   {
     QList<QAction *> list = obj->actions ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QACTION" );
-    #else
     pDynSym = hb_dynsymFindName( "QACTION" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -153,11 +149,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_ACTIONS )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );

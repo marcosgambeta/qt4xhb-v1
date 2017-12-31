@@ -166,11 +166,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACTIVEGESTURES )
   {
     QList<QGesture *> list = obj->activeGestures ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGESTURE" );
-    #else
     pDynSym = hb_dynsymFindName( "QGESTURE" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -178,11 +174,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACTIVEGESTURES )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -209,11 +201,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_CANCELEDGESTURES )
   {
     QList<QGesture *> list = obj->canceledGestures ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGESTURE" );
-    #else
     pDynSym = hb_dynsymFindName( "QGESTURE" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -221,11 +209,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_CANCELEDGESTURES )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -266,11 +250,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_GESTURES )
   {
     QList<QGesture *> list = obj->gestures ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGESTURE" );
-    #else
     pDynSym = hb_dynsymFindName( "QGESTURE" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -278,11 +258,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_GESTURES )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );

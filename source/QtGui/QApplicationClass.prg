@@ -411,11 +411,7 @@ HB_FUNC_STATIC( QAPPLICATION_ALLWIDGETS )
 {
   QWidgetList list = QApplication::allWidgets ();
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QWIDGET" );
-  #else
   pDynSym = hb_dynsymFindName( "QWIDGET" );
-  #endif
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;
@@ -423,11 +419,7 @@ HB_FUNC_STATIC( QAPPLICATION_ALLWIDGETS )
   {
     if( pDynSym )
     {
-      #ifdef __XHARBOUR__
-      hb_vmPushSymbol( pDynSym->pSymbol );
-      #else
       hb_vmPushDynSym( pDynSym );
-      #endif
       hb_vmPushNil();
       hb_vmDo( 0 );
       PHB_ITEM pObject = hb_itemNew( NULL );
@@ -1023,11 +1015,7 @@ HB_FUNC_STATIC( QAPPLICATION_TOPLEVELWIDGETS )
 {
   QWidgetList list = QApplication::topLevelWidgets ();
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QWIDGET" );
-  #else
   pDynSym = hb_dynsymFindName( "QWIDGET" );
-  #endif
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;
@@ -1035,11 +1023,7 @@ HB_FUNC_STATIC( QAPPLICATION_TOPLEVELWIDGETS )
   {
     if( pDynSym )
     {
-      #ifdef __XHARBOUR__
-      hb_vmPushSymbol( pDynSym->pSymbol );
-      #else
       hb_vmPushDynSym( pDynSym );
-      #endif
       hb_vmPushNil();
       hb_vmDo( 0 );
       PHB_ITEM pObject = hb_itemNew( NULL );

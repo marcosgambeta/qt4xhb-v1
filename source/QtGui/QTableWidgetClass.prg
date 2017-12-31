@@ -277,11 +277,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_FINDITEMS )
     int par2 = hb_parni(2);
     QList<QTableWidgetItem *> list = obj->findItems ( PQSTRING(1), (Qt::MatchFlags) par2 );
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QTABLEWIDGETITEM" );
-    #else
     pDynSym = hb_dynsymFindName( "QTABLEWIDGETITEM" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -289,11 +285,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_FINDITEMS )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -439,11 +431,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SELECTEDITEMS )
   {
     QList<QTableWidgetItem *> list = obj->selectedItems ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QTABLEWIDGETITEM" );
-    #else
     pDynSym = hb_dynsymFindName( "QTABLEWIDGETITEM" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -451,11 +439,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SELECTEDITEMS )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -482,11 +466,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SELECTEDRANGES )
   {
     QList<QTableWidgetSelectionRange> list = obj->selectedRanges ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QTABLEWIDGETSELECTIONRANGE" );
-    #else
     pDynSym = hb_dynsymFindName( "QTABLEWIDGETSELECTIONRANGE" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -494,11 +474,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SELECTEDRANGES )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );

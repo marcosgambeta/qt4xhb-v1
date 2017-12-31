@@ -228,11 +228,7 @@ HB_FUNC_STATIC( QTREEWIDGET_FINDITEMS )
     int par2 = hb_parni(2);
     QList<QTreeWidgetItem *> list = obj->findItems ( PQSTRING(1), (Qt::MatchFlags) par2, OPINT(3,0) );
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QTREEWIDGETITEM" );
-    #else
     pDynSym = hb_dynsymFindName( "QTREEWIDGETITEM" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -240,11 +236,7 @@ HB_FUNC_STATIC( QTREEWIDGET_FINDITEMS )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -464,11 +456,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SELECTEDITEMS )
   {
     QList<QTreeWidgetItem *> list = obj->selectedItems ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QTREEWIDGETITEM" );
-    #else
     pDynSym = hb_dynsymFindName( "QTREEWIDGETITEM" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -476,11 +464,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SELECTEDITEMS )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );

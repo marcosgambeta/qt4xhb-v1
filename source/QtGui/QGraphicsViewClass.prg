@@ -515,11 +515,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS1 )
   {
     QList<QGraphicsItem *> list = obj->items ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGRAPHICSITEM" );
-    #else
     pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -527,11 +523,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS1 )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -558,11 +550,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS2 )
   {
     QList<QGraphicsItem *> list = obj->items ( *PQPOINT(1) );
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGRAPHICSITEM" );
-    #else
     pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -570,11 +558,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS2 )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -601,11 +585,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS3 )
   {
     QList<QGraphicsItem *> list = obj->items ( PINT(1), PINT(2) );
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGRAPHICSITEM" );
-    #else
     pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -613,11 +593,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS3 )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -645,11 +621,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS4 )
     int par5 = ISNIL(5)? (int) Qt::IntersectsItemShape : hb_parni(5);
     QList<QGraphicsItem *> list = obj->items ( PINT(1), PINT(2), PINT(3), PINT(4), (Qt::ItemSelectionMode) par5 );
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGRAPHICSITEM" );
-    #else
     pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -657,11 +629,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS4 )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -689,11 +657,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS5 )
     int par2 = ISNIL(2)? (int) Qt::IntersectsItemShape : hb_parni(2);
     QList<QGraphicsItem *> list = obj->items ( *PQRECT(1), (Qt::ItemSelectionMode) par2 );
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGRAPHICSITEM" );
-    #else
     pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -701,11 +665,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS5 )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -733,11 +693,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS6 )
     int par2 = ISNIL(2)? (int) Qt::IntersectsItemShape : hb_parni(2);
     QList<QGraphicsItem *> list = obj->items ( *PQPOLYGON(1), (Qt::ItemSelectionMode) par2 );
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGRAPHICSITEM" );
-    #else
     pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -745,11 +701,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS6 )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -777,11 +729,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS7 )
     int par2 = ISNIL(2)? (int) Qt::IntersectsItemShape : hb_parni(2);
     QList<QGraphicsItem *> list = obj->items ( *PQPAINTERPATH(1), (Qt::ItemSelectionMode) par2 );
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGRAPHICSITEM" );
-    #else
     pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -789,11 +737,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS7 )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
