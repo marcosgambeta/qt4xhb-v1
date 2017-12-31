@@ -264,11 +264,7 @@ HB_FUNC_STATIC( QSSLSOCKET_CACERTIFICATES )
   {
     QList<QSslCertificate> list = obj->caCertificates ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QSSLCERTIFICATE" );
-    #else
     pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -276,11 +272,7 @@ HB_FUNC_STATIC( QSSLSOCKET_CACERTIFICATES )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -311,11 +303,7 @@ HB_FUNC_STATIC( QSSLSOCKET_CIPHERS )
   {
     QList<QSslCipher> list = obj->ciphers ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QSSLCIPHER" );
-    #else
     pDynSym = hb_dynsymFindName( "QSSLCIPHER" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -323,11 +311,7 @@ HB_FUNC_STATIC( QSSLSOCKET_CIPHERS )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -617,11 +601,7 @@ HB_FUNC_STATIC( QSSLSOCKET_PEERCERTIFICATECHAIN )
   {
     QList<QSslCertificate> list = obj->peerCertificateChain ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QSSLCERTIFICATE" );
-    #else
     pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -629,11 +609,7 @@ HB_FUNC_STATIC( QSSLSOCKET_PEERCERTIFICATECHAIN )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -1157,11 +1133,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SSLERRORS )
   {
     QList<QSslError> list = obj->sslErrors ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QSSLERROR" );
-    #else
     pDynSym = hb_dynsymFindName( "QSSLERROR" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -1169,11 +1141,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SSLERRORS )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -1511,11 +1479,7 @@ HB_FUNC_STATIC( QSSLSOCKET_DEFAULTCACERTIFICATES )
 {
   QList<QSslCertificate> list = QSslSocket::defaultCaCertificates ();
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QSSLCERTIFICATE" );
-  #else
   pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
-  #endif
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;
@@ -1523,11 +1487,7 @@ HB_FUNC_STATIC( QSSLSOCKET_DEFAULTCACERTIFICATES )
   {
     if( pDynSym )
     {
-      #ifdef __XHARBOUR__
-      hb_vmPushSymbol( pDynSym->pSymbol );
-      #else
       hb_vmPushDynSym( pDynSym );
-      #endif
       hb_vmPushNil();
       hb_vmDo( 0 );
       PHB_ITEM pObject = hb_itemNew( NULL );
@@ -1554,11 +1514,7 @@ HB_FUNC_STATIC( QSSLSOCKET_DEFAULTCIPHERS )
 {
   QList<QSslCipher> list = QSslSocket::defaultCiphers ();
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QSSLCIPHER" );
-  #else
   pDynSym = hb_dynsymFindName( "QSSLCIPHER" );
-  #endif
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;
@@ -1566,11 +1522,7 @@ HB_FUNC_STATIC( QSSLSOCKET_DEFAULTCIPHERS )
   {
     if( pDynSym )
     {
-      #ifdef __XHARBOUR__
-      hb_vmPushSymbol( pDynSym->pSymbol );
-      #else
       hb_vmPushDynSym( pDynSym );
-      #endif
       hb_vmPushNil();
       hb_vmDo( 0 );
       PHB_ITEM pObject = hb_itemNew( NULL );
@@ -1631,11 +1583,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SUPPORTEDCIPHERS )
 {
   QList<QSslCipher> list = QSslSocket::supportedCiphers ();
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QSSLCIPHER" );
-  #else
   pDynSym = hb_dynsymFindName( "QSSLCIPHER" );
-  #endif
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;
@@ -1643,11 +1591,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SUPPORTEDCIPHERS )
   {
     if( pDynSym )
     {
-      #ifdef __XHARBOUR__
-      hb_vmPushSymbol( pDynSym->pSymbol );
-      #else
       hb_vmPushDynSym( pDynSym );
-      #endif
       hb_vmPushNil();
       hb_vmDo( 0 );
       PHB_ITEM pObject = hb_itemNew( NULL );
@@ -1689,11 +1633,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SYSTEMCACERTIFICATES )
 {
   QList<QSslCertificate> list = QSslSocket::systemCaCertificates ();
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QSSLCERTIFICATE" );
-  #else
   pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
-  #endif
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;
@@ -1701,11 +1641,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SYSTEMCACERTIFICATES )
   {
     if( pDynSym )
     {
-      #ifdef __XHARBOUR__
-      hb_vmPushSymbol( pDynSym->pSymbol );
-      #else
       hb_vmPushDynSym( pDynSym );
-      #endif
       hb_vmPushNil();
       hb_vmDo( 0 );
       PHB_ITEM pObject = hb_itemNew( NULL );

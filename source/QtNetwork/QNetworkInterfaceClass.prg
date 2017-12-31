@@ -123,11 +123,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
   {
     QList<QNetworkAddressEntry> list = obj->addressEntries ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QNETWORKADDRESSENTRY" );
-    #else
     pDynSym = hb_dynsymFindName( "QNETWORKADDRESSENTRY" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -135,11 +131,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -287,11 +279,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLADDRESSES )
 {
   QList<QHostAddress> list = QNetworkInterface::allAddresses ();
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QHOSTADDRESS" );
-  #else
   pDynSym = hb_dynsymFindName( "QHOSTADDRESS" );
-  #endif
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;
@@ -299,11 +287,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLADDRESSES )
   {
     if( pDynSym )
     {
-      #ifdef __XHARBOUR__
-      hb_vmPushSymbol( pDynSym->pSymbol );
-      #else
       hb_vmPushDynSym( pDynSym );
-      #endif
       hb_vmPushNil();
       hb_vmDo( 0 );
       PHB_ITEM pObject = hb_itemNew( NULL );
@@ -330,11 +314,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLINTERFACES )
 {
   QList<QNetworkInterface> list = QNetworkInterface::allInterfaces ();
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QNETWORKINTERFACE" );
-  #else
   pDynSym = hb_dynsymFindName( "QNETWORKINTERFACE" );
-  #endif
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;
@@ -342,11 +322,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLINTERFACES )
   {
     if( pDynSym )
     {
-      #ifdef __XHARBOUR__
-      hb_vmPushSymbol( pDynSym->pSymbol );
-      #else
       hb_vmPushDynSym( pDynSym );
-      #endif
       hb_vmPushNil();
       hb_vmDo( 0 );
       PHB_ITEM pObject = hb_itemNew( NULL );
