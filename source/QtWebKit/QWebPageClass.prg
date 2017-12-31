@@ -31,7 +31,7 @@ CLASS QWebPage INHERIT QObject
    METHOD bytesReceived
    METHOD createStandardContextMenu
    METHOD currentFrame
-   METHOD extension
+   //METHOD extension
    METHOD findText
    METHOD focusNextPrevChild
    METHOD forwardUnsupportedContent
@@ -78,8 +78,8 @@ CLASS QWebPage INHERIT QObject
    METHOD onLoadFinished
    METHOD onLoadProgress
    METHOD onLoadStarted
-   METHOD omMenuBarVisibilityChangeRequested
-   METHOD omMicroFocusChanged
+   METHOD onMenuBarVisibilityChangeRequested
+   METHOD onMicroFocusChanged
    METHOD onPrintRequested
    METHOD onRepaintRequested
    METHOD onRestoreFrameStateRequested

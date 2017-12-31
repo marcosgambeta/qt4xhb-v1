@@ -1174,7 +1174,7 @@ HB_FUNC( QWEBPAGE_ONLOADSTARTED )
   hb_retl( ret );
 }
 
-HB_FUNC( QWEBPAGE_OMMENUBARVISIBILITYCHANGEREQUESTED )
+HB_FUNC( QWEBPAGE_ONMENUBARVISIBILITYCHANGEREQUESTED )
 {
   QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   QString signal = "menuBarVisibilityChangeRequested(bool)";
@@ -1248,7 +1248,7 @@ HB_FUNC( QWEBPAGE_OMMENUBARVISIBILITYCHANGEREQUESTED )
   hb_retl( ret );
 }
 
-HB_FUNC( QWEBPAGE_OMMICROFOCUSCHANGED )
+HB_FUNC( QWEBPAGE_ONMICROFOCUSCHANGED )
 {
   QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   QString signal = "microFocusChanged()";
