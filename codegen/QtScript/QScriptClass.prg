@@ -48,11 +48,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QScriptClass ( QScriptEngine * engine )
-HB_FUNC_STATIC( QSCRIPTCLASS_NEW )
-{
-  QScriptClass * o = new QScriptClass ( PQSCRIPTENGINE(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QScriptEngine *
 
 $deleteMethod
 

@@ -50,11 +50,7 @@ $destructor
 #include <QScriptString>
 
 $prototype=QScriptValueIterator ( const QScriptValue & object )
-HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_NEW )
-{
-  QScriptValueIterator * o = new QScriptValueIterator ( *PQSCRIPTVALUE(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|const QScriptValue &
 
 $deleteMethod
 

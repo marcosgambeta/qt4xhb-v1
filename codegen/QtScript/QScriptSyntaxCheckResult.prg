@@ -35,11 +35,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QScriptSyntaxCheckResult ( const QScriptSyntaxCheckResult & other )
-HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_NEW )
-{
-  QScriptSyntaxCheckResult * o = new QScriptSyntaxCheckResult ( *PQSCRIPTSYNTAXCHECKRESULT(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|const QScriptSyntaxCheckResult &
 
 $deleteMethod
 
