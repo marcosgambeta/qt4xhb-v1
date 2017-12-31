@@ -811,18 +811,10 @@ void QSqlDatabase_addDatabase1 ()
   }
   QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::addDatabase ( PQSTRING(1), par2 ) );
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QSQLDATABASE" );
-  #else
   pDynSym = hb_dynsymFindName( "QSQLDATABASE" );
-  #endif
   if( pDynSym )
   {
-    #ifdef __XHARBOUR__
-    hb_vmPushSymbol( pDynSym->pSymbol );
-    #else
     hb_vmPushDynSym( pDynSym );
-    #endif
     hb_vmPushNil();
     hb_vmDo( 0 );
     PHB_ITEM pObject = hb_itemNew( NULL );
@@ -853,18 +845,10 @@ void QSqlDatabase_addDatabase2 ()
   }
   QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::addDatabase ( par1, par2 ) );
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QSQLDATABASE" );
-  #else
   pDynSym = hb_dynsymFindName( "QSQLDATABASE" );
-  #endif
   if( pDynSym )
   {
-    #ifdef __XHARBOUR__
-    hb_vmPushSymbol( pDynSym->pSymbol );
-    #else
     hb_vmPushDynSym( pDynSym );
-    #endif
     hb_vmPushNil();
     hb_vmDo( 0 );
     PHB_ITEM pObject = hb_itemNew( NULL );
@@ -961,18 +945,10 @@ HB_FUNC_STATIC( QSQLDATABASE_DATABASE )
   }
   QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::database ( par1, OPBOOL(2,true) ) );
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QSQLDATABASE" );
-  #else
   pDynSym = hb_dynsymFindName( "QSQLDATABASE" );
-  #endif
   if( pDynSym )
   {
-    #ifdef __XHARBOUR__
-    hb_vmPushSymbol( pDynSym->pSymbol );
-    #else
     hb_vmPushDynSym( pDynSym );
-    #endif
     hb_vmPushNil();
     hb_vmDo( 0 );
     PHB_ITEM pObject = hb_itemNew( NULL );
