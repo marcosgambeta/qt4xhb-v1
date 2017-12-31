@@ -1695,11 +1695,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SPLIT )
     char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
     QList<QByteArray> list = obj->split ( par1 );
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QBYTEARRAY" );
-    #else
     pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -1707,11 +1703,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SPLIT )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );

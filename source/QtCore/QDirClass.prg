@@ -305,11 +305,7 @@ HB_FUNC_STATIC( QDIR_ENTRYINFOLIST1 )
   {
     QFileInfoList list = obj->entryInfoList ( PQSTRINGLIST(1), (QDir::Filters) par2, (QDir::SortFlags) par3 );
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QFILEINFO" );
-    #else
     pDynSym = hb_dynsymFindName( "QFILEINFO" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -317,11 +313,7 @@ HB_FUNC_STATIC( QDIR_ENTRYINFOLIST1 )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -348,11 +340,7 @@ HB_FUNC_STATIC( QDIR_ENTRYINFOLIST2 )
   {
     QFileInfoList list = obj->entryInfoList ( ISNIL(1)? QDir::NoFilter : (QDir::Filters) hb_parni(1), ISNIL(2)? QDir::NoSort : (QDir::SortFlags) hb_parni(2) );
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QFILEINFO" );
-    #else
     pDynSym = hb_dynsymFindName( "QFILEINFO" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -360,11 +348,7 @@ HB_FUNC_STATIC( QDIR_ENTRYINFOLIST2 )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -824,11 +808,7 @@ HB_FUNC_STATIC( QDIR_DRIVES )
 {
   QFileInfoList list = QDir::drives ();
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QFILEINFO" );
-  #else
   pDynSym = hb_dynsymFindName( "QFILEINFO" );
-  #endif
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;
@@ -836,11 +816,7 @@ HB_FUNC_STATIC( QDIR_DRIVES )
   {
     if( pDynSym )
     {
-      #ifdef __XHARBOUR__
-      hb_vmPushSymbol( pDynSym->pSymbol );
-      #else
       hb_vmPushDynSym( pDynSym );
-      #endif
       hb_vmPushNil();
       hb_vmDo( 0 );
       PHB_ITEM pObject = hb_itemNew( NULL );
