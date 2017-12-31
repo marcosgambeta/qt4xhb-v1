@@ -243,8 +243,7 @@ HB_FUNC_STATIC( QURL_ALLENCODEDQUERYITEMVALUES )
   if( obj )
   {
     QList<QByteArray> list = obj->allEncodedQueryItemValues ( *PQBYTEARRAY(1) );
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

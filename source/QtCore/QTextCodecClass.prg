@@ -292,8 +292,7 @@ HB_FUNC_STATIC( QTEXTCODEC_ALIASES )
   if( obj )
   {
     QList<QByteArray> list = obj->aliases ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -378,8 +377,7 @@ static QList<QByteArray> availableCodecs()
 HB_FUNC_STATIC( QTEXTCODEC_AVAILABLECODECS )
 {
   QList<QByteArray> list = QTextCodec::availableCodecs ();
-  PHB_DYNS pDynSym;
-  pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;

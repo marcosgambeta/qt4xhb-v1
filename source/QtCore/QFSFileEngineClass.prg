@@ -567,8 +567,7 @@ QFileInfoList drives ()
 HB_FUNC_STATIC( QFSFILEENGINE_DRIVES )
 {
   QFileInfoList list = QFSFileEngine::drives ();
-  PHB_DYNS pDynSym;
-  pDynSym = hb_dynsymFindName( "QFILEINFO" );
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO" );
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;

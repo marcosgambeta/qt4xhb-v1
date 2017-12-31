@@ -304,8 +304,7 @@ HB_FUNC_STATIC( QDIR_ENTRYINFOLIST1 )
   if( obj )
   {
     QFileInfoList list = obj->entryInfoList ( PQSTRINGLIST(1), (QDir::Filters) par2, (QDir::SortFlags) par3 );
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QFILEINFO" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -339,8 +338,7 @@ HB_FUNC_STATIC( QDIR_ENTRYINFOLIST2 )
   if( obj )
   {
     QFileInfoList list = obj->entryInfoList ( ISNIL(1)? QDir::NoFilter : (QDir::Filters) hb_parni(1), ISNIL(2)? QDir::NoSort : (QDir::SortFlags) hb_parni(2) );
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QFILEINFO" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -807,8 +805,7 @@ QFileInfoList drives()
 HB_FUNC_STATIC( QDIR_DRIVES )
 {
   QFileInfoList list = QDir::drives ();
-  PHB_DYNS pDynSym;
-  pDynSym = hb_dynsymFindName( "QFILEINFO" );
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO" );
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;

@@ -313,8 +313,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_MATCH )
   if( obj )
   {
     QModelIndexList list = obj->match ( *PQMODELINDEX(1), PINT(2), *PQVARIANT(3), OPINT(4,1), ISNIL(5)? Qt::MatchStartsWith | Qt::MatchWrap : (Qt::MatchFlags) hb_parni(5) );
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QMODELINDEX" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
