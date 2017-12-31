@@ -27,8 +27,6 @@ CLASS QTextFrameFormat INHERIT QTextFormat
    METHOD setBorderBrush
    METHOD setBorderStyle
    METHOD setBottomMargin
-   METHOD setHeight1
-   METHOD setHeight2
    METHOD setHeight
    METHOD setLeftMargin
    METHOD setMargin
@@ -37,8 +35,6 @@ CLASS QTextFrameFormat INHERIT QTextFormat
    METHOD setPosition
    METHOD setRightMargin
    METHOD setTopMargin
-   METHOD setWidth1
-   METHOD setWidth2
    METHOD setWidth
    METHOD topMargin
    METHOD width
@@ -111,10 +107,10 @@ $prototype=void setBottomMargin ( qreal margin )
 $method=|void|setBottomMargin|qreal
 
 $prototype=void setHeight ( const QTextLength & height )
-$method=|void|setHeight,setHeight1|const QTextLength &
+$internalMethod=|void|setHeight,setHeight1|const QTextLength &
 
 $prototype=void setHeight ( qreal height )
-$method=|void|setHeight,setHeight2|qreal
+$internalMethod=|void|setHeight,setHeight2|qreal
 
 //[1]void setHeight ( const QTextLength & height )
 //[2]void setHeight ( qreal height )
@@ -123,11 +119,11 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETHEIGHT )
 {
   if( ISNUMPAR(1) && ISQTEXTLENGTH(1) )
   {
-    HB_FUNC_EXEC( QTEXTFRAMEFORMAT_SETHEIGHT1 );
+    QTextFrameFormat_setHeight1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QTEXTFRAMEFORMAT_SETHEIGHT2 );
+    QTextFrameFormat_setHeight2();
   }
   else
   {
@@ -157,10 +153,10 @@ $prototype=void setTopMargin ( qreal margin )
 $method=|void|setTopMargin|qreal
 
 $prototype=void setWidth ( const QTextLength & width )
-$method=|void|setWidth,setWidth1|const QTextLength &
+$internalMethod=|void|setWidth,setWidth1|const QTextLength &
 
 $prototype=void setWidth ( qreal width )
-$method=|void|setWidth,setWidth2|qreal
+$internalMethod=|void|setWidth,setWidth2|qreal
 
 //[1]void setWidth ( const QTextLength & width )
 //[2]void setWidth ( qreal width )
@@ -169,11 +165,11 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETWIDTH )
 {
   if( ISNUMPAR(1) && ISQTEXTLENGTH(1) )
   {
-    HB_FUNC_EXEC( QTEXTFRAMEFORMAT_SETWIDTH1 );
+    QTextFrameFormat_setWidth1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QTEXTFRAMEFORMAT_SETWIDTH2 );
+    QTextFrameFormat_setWidth2();
   }
   else
   {

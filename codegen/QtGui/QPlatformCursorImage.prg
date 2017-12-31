@@ -16,9 +16,6 @@ CLASS QPlatformCursorImage
    METHOD delete
    METHOD hotspot
    METHOD image
-   METHOD set1
-   METHOD set2
-   METHOD set3
    METHOD set
 
    METHOD newFrom
@@ -53,13 +50,13 @@ $prototype=QImage * image ()
 $method=|QImage *|image|
 
 $prototype=void set ( const uchar * data, const uchar * mask, int width, int height, int hx, int hy )
-$method=|void|set,set1|const uchar *,const uchar *,int,int,int,int
+$internalMethod=|void|set,set1|const uchar *,const uchar *,int,int,int,int
 
 $prototype=void set ( const QImage & image, int hx, int hy )
-$method=|void|set,set2|const QImage &,int,int
+$internalMethod=|void|set,set2|const QImage &,int,int
 
 $prototype=void set ( Qt::CursorShape id )
-$method=|void|set,set3|Qt::CursorShape
+$internalMethod=|void|set,set3|Qt::CursorShape
 
 //[1]void set ( const uchar * data, const uchar * mask, int width, int height, int hx, int hy )
 //[2]void set ( const QImage & image, int hx, int hy )
@@ -69,15 +66,15 @@ HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_SET )
 {
   if( ISNUMPAR(6) && ISCHAR(1) && ISCHAR(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) )
   {
-    HB_FUNC_EXEC( QPLATFORMCURSORIMAGE_SET1 );
+    QPlatformCursorImage_set1();
   }
   else if( ISNUMPAR(3) && ISQIMAGE(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QPLATFORMCURSORIMAGE_SET2 );
+    QPlatformCursorImage_set2();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QPLATFORMCURSORIMAGE_SET3 );
+    QPlatformCursorImage_set3();
   }
   else
   {

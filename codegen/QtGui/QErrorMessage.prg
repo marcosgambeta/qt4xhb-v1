@@ -10,8 +10,6 @@ CLASS QErrorMessage INHERIT QDialog
 
    METHOD new
    METHOD delete
-   METHOD showMessage1
-   METHOD showMessage2
    METHOD showMessage
    METHOD qtHandler
 
@@ -35,10 +33,10 @@ $constructor=|new|QWidget *=0
 $deleteMethod
 
 $prototype=void showMessage ( const QString & message )
-$method=|void|showMessage,showMessage1|const QString &
+$internalMethod=|void|showMessage,showMessage1|const QString &
 
 $prototype=void showMessage ( const QString & message, const QString & type )
-$method=|void|showMessage,showMessage2|const QString &,const QString &
+$internalMethod=|void|showMessage,showMessage2|const QString &,const QString &
 
 //[1]void showMessage ( const QString & message )
 //[2]void showMessage ( const QString & message, const QString & type )
@@ -47,11 +45,11 @@ HB_FUNC_STATIC( QERRORMESSAGE_SHOWMESSAGE )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QERRORMESSAGE_SHOWMESSAGE1 );
+    QErrorMessage_showMessage1();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QERRORMESSAGE_SHOWMESSAGE2 );
+    QErrorMessage_showMessage2();
   }
   else
   {

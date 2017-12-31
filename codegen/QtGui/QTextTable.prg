@@ -13,16 +13,11 @@ CLASS QTextTable INHERIT QTextFrame
    METHOD delete
    METHOD appendColumns
    METHOD appendRows
-   METHOD cellAt1
-   METHOD cellAt2
-   METHOD cellAt3
    METHOD cellAt
    METHOD columns
    METHOD format
    METHOD insertColumns
    METHOD insertRows
-   METHOD mergeCells1
-   METHOD mergeCells2
    METHOD mergeCells
    METHOD removeColumns
    METHOD removeRows
@@ -58,13 +53,13 @@ $prototype=void appendRows ( int count )
 $method=|void|appendRows|int
 
 $prototype=QTextTableCell cellAt ( int row, int column ) const
-$method=|QTextTableCell|cellAt,cellAt1|int,int
+$internalMethod=|QTextTableCell|cellAt,cellAt1|int,int
 
 $prototype=QTextTableCell cellAt ( int position ) const
-$method=|QTextTableCell|cellAt,cellAt2|int
+$internalMethod=|QTextTableCell|cellAt,cellAt2|int
 
 $prototype=QTextTableCell cellAt ( const QTextCursor & cursor ) const
-$method=|QTextTableCell|cellAt,cellAt3|const QTextCursor &
+$internalMethod=|QTextTableCell|cellAt,cellAt3|const QTextCursor &
 
 //[1]QTextTableCell cellAt ( int row, int column ) const
 //[2]QTextTableCell cellAt ( int position ) const
@@ -74,15 +69,15 @@ HB_FUNC_STATIC( QTEXTTABLE_CELLAT )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QTEXTTABLE_CELLAT1 );
+    QTextTable_cellAt1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QTEXTTABLE_CELLAT2 );
+    QTextTable_cellAt2();
   }
   else if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
   {
-    HB_FUNC_EXEC( QTEXTTABLE_CELLAT3 );
+    QTextTable_cellAt3();
   }
   else
   {
@@ -103,10 +98,10 @@ $prototype=void insertRows ( int index, int rows )
 $method=|void|insertRows|int,int
 
 $prototype=void mergeCells ( int row, int column, int numRows, int numCols )
-$method=|void|mergeCells,mergeCells1|int,int,int,int
+$internalMethod=|void|mergeCells,mergeCells1|int,int,int,int
 
 $prototype=void mergeCells ( const QTextCursor & cursor )
-$method=|void|mergeCells,mergeCells2|const QTextCursor &
+$internalMethod=|void|mergeCells,mergeCells2|const QTextCursor &
 
 //[1]void mergeCells ( int row, int column, int numRows, int numCols )
 //[2]void mergeCells ( const QTextCursor & cursor )
@@ -115,11 +110,11 @@ HB_FUNC_STATIC( QTEXTTABLE_MERGECELLS )
 {
   if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QTEXTTABLE_MERGECELLS1 );
+    QTextTable_mergeCells1();
   }
   else if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
   {
-    HB_FUNC_EXEC( QTEXTTABLE_MERGECELLS2 );
+    QTextTable_mergeCells2();
   }
   else
   {

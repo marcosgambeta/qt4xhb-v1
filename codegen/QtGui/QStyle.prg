@@ -27,9 +27,6 @@ CLASS QStyle INHERIT QObject
    METHOD itemTextRect
    METHOD layoutSpacing
    METHOD pixelMetric
-   METHOD polish1
-   METHOD polish2
-   METHOD polish3
    METHOD polish
    METHOD proxy
    METHOD sizeFromContents
@@ -105,13 +102,13 @@ $prototype=virtual int pixelMetric ( PixelMetric metric, const QStyleOption * op
 $virtualMethod=|int|pixelMetric|QStyle::PixelMetric,const QStyleOption *=0,const QWidget *=0
 
 $prototype=virtual void polish ( QWidget * widget )
-$virtualMethod=|void|polish,polish1|QWidget *
+$internalVirtualMethod=|void|polish,polish1|QWidget *
 
 $prototype=virtual void polish ( QApplication * application )
-$virtualMethod=|void|polish,polish2|QApplication *
+$internalVirtualMethod=|void|polish,polish2|QApplication *
 
 $prototype=virtual void polish ( QPalette & palette )
-$virtualMethod=|void|polish,polish3|QPalette &
+$internalVirtualMethod=|void|polish,polish3|QPalette &
 
 //[1]virtual void polish ( QWidget * widget )
 //[2]virtual void polish ( QApplication * application )
@@ -121,15 +118,15 @@ HB_FUNC_STATIC( QSTYLE_POLISH )
 {
   if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    HB_FUNC_EXEC( QSTYLE_POLISH1 );
+    QStyle_polish1();
   }
   else if( ISNUMPAR(1) && ISQAPPLICATION(1) )
   {
-    HB_FUNC_EXEC( QSTYLE_POLISH2 );
+    QStyle_polish2();
   }
   else if( ISNUMPAR(1) && ISQPALETTE(1) )
   {
-    HB_FUNC_EXEC( QSTYLE_POLISH3 );
+    QStyle_polish3();
   }
   else
   {

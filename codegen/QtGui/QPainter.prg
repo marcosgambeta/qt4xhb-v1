@@ -1261,7 +1261,7 @@ $method=|void|fillRect,fillRect11|const QRect &,Qt::GlobalColor
 $prototype=void fillRect ( const QRectF & rectangle, Qt::GlobalColor color )
 $method=|void|fillRect,fillRect12|const QRectF &,Qt::GlobalColor
 
-//[01]void fillPath ( const QPainterPath & path, const QBrush & brush )
+//[01]void fillRect ( const QRectF & rectangle, const QBrush & brush )
 //[02]void fillRect ( int x, int y, int width, int height, Qt::BrushStyle style )
 //[03]void fillRect ( const QRect & rectangle, Qt::BrushStyle style )
 //[04]void fillRect ( const QRectF & rectangle, Qt::BrushStyle style )

@@ -10,12 +10,8 @@ CLASS QDragMoveEvent INHERIT QDropEvent
 
    METHOD new
    METHOD delete
-   METHOD accept1
-   METHOD accept2
    METHOD accept
    METHOD answerRect
-   METHOD ignore1
-   METHOD ignore2
    METHOD ignore
 
    DESTRUCTOR destroyObject
@@ -38,10 +34,10 @@ $constructor=|new|const QPoint &,Qt::DropActions,const QMimeData *,Qt::MouseButt
 $deleteMethod
 
 $prototype=void accept ( const QRect & rectangle )
-$method=|void|accept,accept1|const QRect &
+$internalMethod=|void|accept,accept1|const QRect &
 
 $prototype=void accept ()
-$method=|void|accept,accept2|
+$internalMethod=|void|accept,accept2|
 
 //[1]void accept ( const QRect & rectangle )
 //[2]void accept ()
@@ -50,11 +46,11 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_ACCEPT )
 {
   if( ISNUMPAR(1) && ISQRECT(1) )
   {
-    HB_FUNC_EXEC( QDRAGMOVEEVENT_ACCEPT1 );
+    QDragMoveEvent_accept1();
   }
   else if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDRAGMOVEEVENT_ACCEPT2 );
+    QDragMoveEvent_accept2();
   }
   else
   {
@@ -66,10 +62,10 @@ $prototype=QRect answerRect () const
 $method=|QRect|answerRect|
 
 $prototype=void ignore ( const QRect & rectangle )
-$method=|void|ignore,ignore1|const QRect &
+$internalMethod=|void|ignore,ignore1|const QRect &
 
 $prototype=void ignore ()
-$method=|void|ignore,ignore2|
+$internalMethod=|void|ignore,ignore2|
 
 //[1]void ignore ( const QRect & rectangle )
 //[2]void ignore ()
@@ -78,11 +74,11 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_IGNORE )
 {
   if( ISNUMPAR(1) && ISQRECT(1) )
   {
-    HB_FUNC_EXEC( QDRAGMOVEEVENT_IGNORE1 );
+    QDragMoveEvent_ignore1();
   }
   else if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDRAGMOVEEVENT_IGNORE2 );
+    QDragMoveEvent_ignore2();
   }
   else
   {

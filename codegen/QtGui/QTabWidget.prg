@@ -12,8 +12,6 @@ CLASS QTabWidget INHERIT QWidget
 
    METHOD new
    METHOD delete
-   METHOD addTab1
-   METHOD addTab2
    METHOD addTab
    METHOD clear
    METHOD cornerWidget
@@ -24,8 +22,6 @@ CLASS QTabWidget INHERIT QWidget
    METHOD elideMode
    METHOD iconSize
    METHOD indexOf
-   METHOD insertTab1
-   METHOD insertTab2
    METHOD insertTab
    METHOD isMovable
    METHOD isTabEnabled
@@ -81,10 +77,10 @@ $constructor=|new|QWidget *=0
 $deleteMethod
 
 $prototype=int addTab ( QWidget * page, const QString & label )
-$method=|int|addTab,addTab1|QWidget *,const QString &
+$internalMethod=|int|addTab,addTab1|QWidget *,const QString &
 
 $prototype=int addTab ( QWidget * page, const QIcon & icon, const QString & label )
-$method=|int|addTab,addTab2|QWidget *,const QIcon &,const QString &
+$internalMethod=|int|addTab,addTab2|QWidget *,const QIcon &,const QString &
 
 //[1]int addTab ( QWidget * page, const QString & label )
 //[2]int addTab ( QWidget * page, const QIcon & icon, const QString & label )
@@ -93,11 +89,11 @@ HB_FUNC_STATIC( QTABWIDGET_ADDTAB )
 {
   if( ISNUMPAR(2) && ISQWIDGET(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QTABWIDGET_ADDTAB1 );
+    QTabWidget_addTab1();
   }
   else if( ISNUMPAR(3) && ISQWIDGET(1) && (ISQICON(2)||ISCHAR(2)) && ISCHAR(3) )
   {
-    HB_FUNC_EXEC( QTABWIDGET_ADDTAB2 );
+    QTabWidget_addTab2();
   }
   else
   {
@@ -133,10 +129,10 @@ $prototype=int indexOf ( QWidget * w ) const
 $method=|int|indexOf|QWidget *
 
 $prototype=int insertTab ( int index, QWidget * page, const QString & label )
-$method=|int|insertTab,insertTab1|int,QWidget *,const QString &
+$internalMethod=|int|insertTab,insertTab1|int,QWidget *,const QString &
 
 $prototype=int insertTab ( int index, QWidget * page, const QIcon & icon, const QString & label )
-$method=|int|insertTab,insertTab2|int,QWidget *,const QIcon &,const QString &
+$internalMethod=|int|insertTab,insertTab2|int,QWidget *,const QIcon &,const QString &
 
 //[1]int insertTab ( int index, QWidget * page, const QString & label )
 //[2]int insertTab ( int index, QWidget * page, const QIcon & icon, const QString & label )
@@ -145,11 +141,11 @@ HB_FUNC_STATIC( QTABWIDGET_INSERTTAB )
 {
   if( ISNUMPAR(3) && ISNUM(1) && ISQWIDGET(2) && ISCHAR(3) )
   {
-    HB_FUNC_EXEC( QTABWIDGET_INSERTTAB1 );
+    QTabWidget_insertTab1();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISQWIDGET(2) && (ISQICON(3)||ISCHAR(3)) && ISCHAR(4) )
   {
-    HB_FUNC_EXEC( QTABWIDGET_INSERTTAB2 );
+    QTabWidget_insertTab2();
   }
   else
   {

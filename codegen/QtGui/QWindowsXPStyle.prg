@@ -17,9 +17,6 @@ CLASS QWindowsXPStyle INHERIT QWindowsStyle
    METHOD drawControl
    METHOD drawPrimitive
    METHOD pixelMetric
-   METHOD polish1
-   METHOD polish2
-   METHOD polish3
    METHOD polish
    METHOD sizeFromContents
    METHOD standardPalette
@@ -27,8 +24,6 @@ CLASS QWindowsXPStyle INHERIT QWindowsStyle
    METHOD styleHint
    METHOD subControlRect
    METHOD subElementRect
-   METHOD unpolish1
-   METHOD unpolish2
    METHOD unpolish
 
    DESTRUCTOR destroyObject
@@ -63,13 +58,13 @@ $prototype=virtual int pixelMetric ( PixelMetric pm, const QStyleOption * option
 $virtualMethod=|int|pixelMetric|QStyle::PixelMetric,const QStyleOption *=0,const QWidget *=0
 
 $prototype=virtual void polish ( QApplication * app )
-$virtualMethod=|void|polish,polish1|QApplication *
+$internalVirtualMethod=|void|polish,polish1|QApplication *
 
 $prototype=virtual void polish ( QWidget * widget )
-$virtualMethod=|void|polish,polish2|QWidget *
+$internalVirtualMethod=|void|polish,polish2|QWidget *
 
 $prototype=virtual void polish ( QPalette & pal )
-$virtualMethod=|void|polish,polish3|QPalette &
+$internalVirtualMethod=|void|polish,polish3|QPalette &
 
 //[1]virtual void polish ( QApplication * app )
 //[2]virtual void polish ( QWidget * widget )
@@ -79,15 +74,15 @@ HB_FUNC_STATIC( QWINDOWSXPSTYLE_POLISH )
 {
   if( ISNUMPAR(1) && ISQAPPLICATION(1) )
   {
-    HB_FUNC_EXEC( QWINDOWSXPSTYLE_POLISH1 );
+    QWindowsXPStyle_polish1();
   }
   else if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    HB_FUNC_EXEC( QWINDOWSXPSTYLE_POLISH2 );
+    QWindowsXPStyle_polish2();
   }
   else if( ISNUMPAR(1) && ISQPALETTE(1) )
   {
-    HB_FUNC_EXEC( QWINDOWSXPSTYLE_POLISH3 );
+    QWindowsXPStyle_polish3();
   }
   else
   {
@@ -114,10 +109,10 @@ $prototype=virtual QRect subElementRect ( SubElement sr, const QStyleOption * op
 $virtualMethod=|QRect|subElementRect|QStyle::SubElement,const QStyleOption *,const QWidget *=0
 
 $prototype=virtual void unpolish ( QApplication * app )
-$virtualMethod=|void|unpolish,unpolish1|QApplication *
+$internalVirtualMethod=|void|unpolish,unpolish1|QApplication *
 
 $prototype=virtual void unpolish ( QWidget * widget )
-$virtualMethod=|void|unpolish,unpolish2|QWidget *
+$internalVirtualMethod=|void|unpolish,unpolish2|QWidget *
 
 //[1]virtual void unpolish ( QApplication * app )
 //[2]virtual void unpolish ( QWidget * widget )
@@ -126,11 +121,11 @@ HB_FUNC_STATIC( QWINDOWSXPSTYLE_UNPOLISH )
 {
   if( ISNUMPAR(1) && ISQAPPLICATION(1) )
   {
-    HB_FUNC_EXEC( QWINDOWSXPSTYLE_UNPOLISH1 );
+    QWindowsXPStyle_unpolish1();
   }
   else if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    HB_FUNC_EXEC( QWINDOWSXPSTYLE_UNPOLISH2 );
+    QWindowsXPStyle_unpolish2();
   }
   else
   {

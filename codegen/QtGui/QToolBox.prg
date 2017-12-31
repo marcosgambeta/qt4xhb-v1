@@ -11,15 +11,11 @@ CLASS QToolBox INHERIT QFrame
 
    METHOD new
    METHOD delete
-   METHOD addItem1
-   METHOD addItem2
    METHOD addItem
    METHOD count
    METHOD currentIndex
    METHOD currentWidget
    METHOD indexOf
-   METHOD insertItem1
-   METHOD insertItem2
    METHOD insertItem
    METHOD isItemEnabled
    METHOD itemIcon
@@ -56,10 +52,10 @@ $constructor=|new|QWidget *=0,Qt::WindowFlags=0
 $deleteMethod
 
 $prototype=int addItem ( QWidget * widget, const QIcon & iconSet, const QString & text )
-$method=|int|addItem,addItem1|QWidget *,const QIcon &,const QString &
+$internalMethod=|int|addItem,addItem1|QWidget *,const QIcon &,const QString &
 
 $prototype=int addItem ( QWidget * w, const QString & text )
-$method=|int|addItem,addItem2|QWidget *,const QString &
+$internalMethod=|int|addItem,addItem2|QWidget *,const QString &
 
 //[1]int addItem ( QWidget * widget, const QIcon & iconSet, const QString & text )
 //[2]int addItem ( QWidget * w, const QString & text )
@@ -68,11 +64,11 @@ HB_FUNC_STATIC( QTOOLBOX_ADDITEM )
 {
   if( ISNUMPAR(3) && ISQWIDGET(1) && (ISQICON(2)||ISCHAR(2)) && ISCHAR(3) )
   {
-    HB_FUNC_EXEC( QTOOLBOX_ADDITEM1 );
+    QToolBox_addItem1();
   }
   else if( ISNUMPAR(2) && ISQWIDGET(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QTOOLBOX_ADDITEM2 );
+    QToolBox_addItem2();
   }
   else
   {
@@ -93,10 +89,10 @@ $prototype=int indexOf ( QWidget * widget ) const
 $method=|int|indexOf|QWidget *
 
 $prototype=int insertItem ( int index, QWidget * widget, const QIcon & icon, const QString & text )
-$method=|int|insertItem,insertItem1|int,QWidget *,const QIcon &,const QString &
+$internalMethod=|int|insertItem,insertItem1|int,QWidget *,const QIcon &,const QString &
 
 $prototype=int insertItem ( int index, QWidget * widget, const QString & text )
-$method=|int|insertItem,insertItem2|int,QWidget *,const QString &
+$internalMethod=|int|insertItem,insertItem2|int,QWidget *,const QString &
 
 //[1]int insertItem ( int index, QWidget * widget, const QIcon & icon, const QString & text )
 //[2]int insertItem ( int index, QWidget * widget, const QString & text )
@@ -105,11 +101,11 @@ HB_FUNC_STATIC( QTOOLBOX_INSERTITEM )
 {
   if( ISNUMPAR(4) && ISNUM(1) && ISQWIDGET(2) && (ISQICON(3)||ISCHAR(3)) && ISCHAR(4) )
   {
-    HB_FUNC_EXEC( QTOOLBOX_INSERTITEM1 );
+    QToolBox_insertItem1();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISQWIDGET(2) && ISCHAR(3) )
   {
-    HB_FUNC_EXEC( QTOOLBOX_INSERTITEM2 );
+    QToolBox_insertItem2();
   }
   else
   {

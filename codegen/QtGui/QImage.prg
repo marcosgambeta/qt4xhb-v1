@@ -31,8 +31,6 @@ CLASS QImage INHERIT QPaintDevice
    METHOD convertToFormat1
    METHOD convertToFormat2
    METHOD convertToFormat
-   METHOD copy1
-   METHOD copy2
    METHOD copy
    METHOD createAlphaMask
    METHOD createHeuristicMask
@@ -50,27 +48,15 @@ CLASS QImage INHERIT QPaintDevice
    METHOD invertPixels
    METHOD isGrayscale
    METHOD isNull
-   METHOD load1
-   METHOD load2
    METHOD load
-   METHOD loadFromData1
-   METHOD loadFromData2
    METHOD loadFromData
    METHOD mirrored
    METHOD offset
-   METHOD pixel1
-   METHOD pixel2
    METHOD pixel
-   METHOD pixelIndex1
-   METHOD pixelIndex2
    METHOD pixelIndex
    METHOD rect
    METHOD rgbSwapped
-   METHOD save1
-   METHOD save2
    METHOD save
-   METHOD scaled1
-   METHOD scaled2
    METHOD scaled
    METHOD scaledToHeight
    METHOD scaledToWidth
@@ -80,22 +66,15 @@ CLASS QImage INHERIT QPaintDevice
    METHOD setDotsPerMeterX
    METHOD setDotsPerMeterY
    METHOD setOffset
-   METHOD setPixel1
-   METHOD setPixel2
    METHOD setPixel
    METHOD setText
    METHOD size
    METHOD swap
    METHOD text
    METHOD textKeys
-   METHOD transformed2
    METHOD transformed
-   METHOD valid1
-   METHOD valid2
    METHOD valid
    METHOD width
-   METHOD fromData1
-   METHOD fromData2
    METHOD fromData
    METHOD trueMatrix2
    METHOD trueMatrix
@@ -288,10 +267,10 @@ HB_FUNC_STATIC( QIMAGE_CONVERTTOFORMAT )
 }
 
 $prototype=QImage copy ( const QRect & rectangle = QRect() ) const
-$method=|QImage|copy,copy1|const QRect &=QRect()
+$internalMethod=|QImage|copy,copy1|const QRect &=QRect()
 
 $prototype=QImage copy ( int x, int y, int width, int height ) const
-$method=|QImage|copy,copy2|int,int,int,int
+$internalMethod=|QImage|copy,copy2|int,int,int,int
 
 //[1]QImage copy ( const QRect & rectangle = QRect() ) const
 //[2]QImage copy ( int x, int y, int width, int height ) const
@@ -300,11 +279,11 @@ HB_FUNC_STATIC( QIMAGE_COPY )
 {
   if( ISBETWEEN(0,1) && (ISQRECT(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QIMAGE_COPY1 );
+    QImage_copy1();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QIMAGE_COPY2 );
+    QImage_copy2();
   }
   else
   {
@@ -379,10 +358,10 @@ $prototype=bool isNull () const
 $method=|bool|isNull|
 
 $prototype=bool load ( const QString & fileName, const char * format = 0 )
-$method=|bool|load,load1|const QString &,const char *=0
+$internalMethod=|bool|load,load1|const QString &,const char *=0
 
 $prototype=bool load ( QIODevice * device, const char * format )
-$method=|bool|load,load2|QIODevice *,const char *
+$internalMethod=|bool|load,load2|QIODevice *,const char *
 
 //[1]bool load ( const QString & fileName, const char * format = 0 )
 //[2]bool load ( QIODevice * device, const char * format )
@@ -391,11 +370,11 @@ HB_FUNC_STATIC( QIMAGE_LOAD )
 {
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QIMAGE_LOAD1 );
+    QImage_load1();
   }
   else if( ISNUMPAR(2) && ISQIODEVICE(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QIMAGE_LOAD2 );
+    QImage_load2();
   }
   else
   {
@@ -404,10 +383,10 @@ HB_FUNC_STATIC( QIMAGE_LOAD )
 }
 
 $prototype=bool loadFromData ( const uchar * data, int len, const char * format = 0 )
-$method=|bool|loadFromData,loadFromData1|const uchar *,int,const char *=0
+$internalMethod=|bool|loadFromData,loadFromData1|const uchar *,int,const char *=0
 
 $prototype=bool loadFromData ( const QByteArray & data, const char * format = 0 )
-$method=|bool|loadFromData,loadFromData2|const QByteArray &,const char *=0
+$internalMethod=|bool|loadFromData,loadFromData2|const QByteArray &,const char *=0
 
 //[1]bool loadFromData ( const uchar * data, int len, const char * format = 0 )
 //[2]bool loadFromData ( const QByteArray & data, const char * format = 0 )
@@ -416,11 +395,11 @@ HB_FUNC_STATIC( QIMAGE_LOADFROMDATA )
 {
   if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && (ISCHAR(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QIMAGE_LOADFROMDATA1 );
+    QImage_loadFromData1();
   }
   else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISCHAR(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QIMAGE_LOADFROMDATA2 );
+    QImage_loadFromData2();
   }
   else
   {
@@ -435,10 +414,10 @@ $prototype=QPoint offset () const
 $method=|QPoint|offset|
 
 $prototype=QRgb pixel ( const QPoint & position ) const
-$method=|QRgb|pixel,pixel1|const QPoint &
+$internalMethod=|QRgb|pixel,pixel1|const QPoint &
 
 $prototype=QRgb pixel ( int x, int y ) const
-$method=|QRgb|pixel,pixel2|int,int
+$internalMethod=|QRgb|pixel,pixel2|int,int
 
 //[1]QRgb pixel ( const QPoint & position ) const
 //[2]QRgb pixel ( int x, int y ) const
@@ -447,11 +426,11 @@ HB_FUNC_STATIC( QIMAGE_PIXEL )
 {
   if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QIMAGE_PIXEL1 );
+    QImage_pixel1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QIMAGE_PIXEL2 );
+    QImage_pixel2();
   }
   else
   {
@@ -460,10 +439,10 @@ HB_FUNC_STATIC( QIMAGE_PIXEL )
 }
 
 $prototype=int pixelIndex ( const QPoint & position ) const
-$method=|int|pixelIndex,pixelIndex1|const QPoint &
+$internalMethod=|int|pixelIndex,pixelIndex1|const QPoint &
 
 $prototype=int pixelIndex ( int x, int y ) const
-$method=|int|pixelIndex,pixelIndex2|int,int
+$internalMethod=|int|pixelIndex,pixelIndex2|int,int
 
 //[1]int pixelIndex ( const QPoint & position ) const
 //[2]int pixelIndex ( int x, int y ) const
@@ -472,11 +451,11 @@ HB_FUNC_STATIC( QIMAGE_PIXELINDEX )
 {
   if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QIMAGE_PIXELINDEX1 );
+    QImage_pixelIndex1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QIMAGE_PIXELINDEX2 );
+    QImage_pixelIndex2();
   }
   else
   {
@@ -491,10 +470,10 @@ $prototype=QImage rgbSwapped () const
 $method=|QImage|rgbSwapped|
 
 $prototype=bool save ( const QString & fileName, const char * format = 0, int quality = -1 ) const
-$method=|bool|save,save1|const QString &,const char *=0,int=-1
+$internalMethod=|bool|save,save1|const QString &,const char *=0,int=-1
 
 $prototype=bool save ( QIODevice * device, const char * format = 0, int quality = -1 ) const
-$method=|bool|save,save2|QIODevice *,const char *=0,int=-1
+$internalMethod=|bool|save,save2|QIODevice *,const char *=0,int=-1
 
 //[1]bool save ( const QString & fileName, const char * format = 0, int quality = -1 ) const
 //[2]bool save ( QIODevice * device, const char * format = 0, int quality = -1 ) const
@@ -503,11 +482,11 @@ HB_FUNC_STATIC( QIMAGE_SAVE )
 {
   if( ISBETWEEN(1,3) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QIMAGE_SAVE1 );
+    QImage_save1();
   }
   else if( ISBETWEEN(1,3) && ISQIODEVICE(1) && (ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QIMAGE_SAVE2 );
+    QImage_save2();
   }
   else
   {
@@ -516,10 +495,10 @@ HB_FUNC_STATIC( QIMAGE_SAVE )
 }
 
 $prototype=QImage scaled ( const QSize & size, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
-$method=|QImage|scaled,scaled1|const QSize &,Qt::AspectRatioMode=Qt::IgnoreAspectRatio,Qt::TransformationMode=Qt::FastTransformation
+$internalMethod=|QImage|scaled,scaled1|const QSize &,Qt::AspectRatioMode=Qt::IgnoreAspectRatio,Qt::TransformationMode=Qt::FastTransformation
 
 $prototype=QImage scaled ( int width, int height, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
-$method=|QImage|scaled,scaled2|int,int,Qt::AspectRatioMode=Qt::IgnoreAspectRatio,Qt::TransformationMode=Qt::FastTransformation
+$internalMethod=|QImage|scaled,scaled2|int,int,Qt::AspectRatioMode=Qt::IgnoreAspectRatio,Qt::TransformationMode=Qt::FastTransformation
 
 //[1]QImage scaled ( const QSize & size, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
 //[2]QImage scaled ( int width, int height, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
@@ -528,11 +507,11 @@ HB_FUNC_STATIC( QIMAGE_SCALED )
 {
   if( ISBETWEEN(1,3) && ISQSIZE(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QIMAGE_SCALED1 );
+    QImage_scaled1();
   }
   else if( ISBETWEEN(1,4) && ISNUM(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QIMAGE_SCALED2 );
+    QImage_scaled2();
   }
   else
   {
@@ -594,10 +573,10 @@ $prototype=void setOffset ( const QPoint & offset )
 $method=|void|setOffset|const QPoint &
 
 $prototype=void setPixel ( const QPoint & position, uint index_or_rgb )
-$method=|void|setPixel,setPixel1|const QPoint &,uint
+$internalMethod=|void|setPixel,setPixel1|const QPoint &,uint
 
 $prototype=void setPixel ( int x, int y, uint index_or_rgb )
-$method=|void|setPixel,setPixel2|int,int,uint
+$internalMethod=|void|setPixel,setPixel2|int,int,uint
 
 //[1]void setPixel ( const QPoint & position, uint index_or_rgb )
 //[2]void setPixel ( int x, int y, uint index_or_rgb )
@@ -606,11 +585,11 @@ HB_FUNC_STATIC( QIMAGE_SETPIXEL )
 {
   if( ISNUMPAR(2) && ISQPOINT(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QIMAGE_SETPIXEL1 );
+    QImage_setPixel1();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QIMAGE_SETPIXEL2 );
+    QImage_setPixel2();
   }
   else
   {
@@ -634,10 +613,10 @@ $prototype=QStringList textKeys () const
 $method=|QStringList|textKeys|
 
 $prototype=QImage transformed ( const QMatrix & matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
-$method=|QImage|transformed,transformed1|const QMatrix &,Qt::TransformationMode=Qt::FastTransformation
+$internalMethod=|QImage|transformed,transformed1|const QMatrix &,Qt::TransformationMode=Qt::FastTransformation
 
 $prototype=QImage transformed ( const QTransform & matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
-$method=|QImage|transformed,transformed2|const QTransform &,Qt::TransformationMode=Qt::FastTransformation
+$internalMethod=|QImage|transformed,transformed2|const QTransform &,Qt::TransformationMode=Qt::FastTransformation
 
 //[1]QImage transformed ( const QMatrix & matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
 //[2]QImage transformed ( const QTransform & matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
@@ -646,11 +625,11 @@ HB_FUNC_STATIC( QIMAGE_TRANSFORMED )
 {
   if( ISBETWEEN(1,2) && ISQMATRIX(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QIMAGE_TRANSFORMED2 );
+    QImage_transformed1();
   }
   else if( ISBETWEEN(1,2) && ISQTRANSFORM(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QIMAGE_TRANSFORMED2 );
+    QImage_transformed2();
   }
   else
   {
@@ -659,10 +638,10 @@ HB_FUNC_STATIC( QIMAGE_TRANSFORMED )
 }
 
 $prototype=bool valid ( const QPoint & pos ) const
-$method=|bool|valid,valid1|const QPoint &
+$internalMethod=|bool|valid,valid1|const QPoint &
 
 $prototype=bool valid ( int x, int y ) const
-$method=|bool|valid,valid2|int,int
+$internalMethod=|bool|valid,valid2|int,int
 
 //[1]bool valid ( const QPoint & pos ) const
 //[2]bool valid ( int x, int y ) const
@@ -671,11 +650,11 @@ HB_FUNC_STATIC( QIMAGE_VALID )
 {
   if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    HB_FUNC_EXEC( QIMAGE_VALID1 );
+    QImage_valid1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QIMAGE_VALID2 );
+    QImage_valid2();
   }
   else
   {
@@ -687,10 +666,10 @@ $prototype=int width () const
 $method=|int|width|
 
 $prototype=static QImage fromData ( const uchar * data, int size, const char * format = 0 )
-$staticMethod=|QImage|fromData,fromData1|const uchar *,int,const char *=0
+$internalStaticMethod=|QImage|fromData,fromData1|const uchar *,int,const char *=0
 
 $prototype=static QImage fromData ( const QByteArray & data, const char * format = 0 )
-$staticMethod=|QImage|fromData,fromData2|const QByteArray &,const char *=0
+$internalStaticMethod=|QImage|fromData,fromData2|const QByteArray &,const char *=0
 
 //[1]QImage fromData ( const uchar * data, int size, const char * format = 0 )
 //[2]QImage fromData ( const QByteArray & data, const char * format = 0 )
@@ -699,11 +678,11 @@ HB_FUNC_STATIC( QIMAGE_FROMDATA )
 {
   if( ISBETWEEN(1,3) && ISCHAR(1) && ISNUM(2) && (ISCHAR(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QIMAGE_FROMDATA1 );
+    QImage_fromData1();
   }
   else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISCHAR(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QIMAGE_FROMDATA2 );
+    QImage_fromData2();
   }
   else
   {
@@ -711,11 +690,11 @@ HB_FUNC_STATIC( QIMAGE_FROMDATA )
   }
 }
 
-$prototype=static QTransform trueMatrix ( const QTransform & matrix, int width, int height )
-$staticMethod=|QTransform|trueMatrix,trueMatrix1|const QTransform &,int,int
+$prototype=static QMatrix trueMatrix ( const QMatrix & matrix, int width, int height )
+$internalStaticMethod=|QMatrix|trueMatrix,trueMatrix1|const QMatrix &,int,int
 
 $prototype=static QTransform trueMatrix ( const QTransform & matrix, int width, int height )
-$staticMethod=|QTransform|trueMatrix,trueMatrix2|const QTransform &,int,int
+$internalStaticMethod=|QTransform|trueMatrix,trueMatrix2|const QTransform &,int,int
 
 //[1]QMatrix trueMatrix ( const QMatrix & matrix, int width, int height )
 //[2]QTransform trueMatrix ( const QTransform & matrix, int width, int height )
@@ -724,11 +703,11 @@ HB_FUNC_STATIC( QIMAGE_TRUEMATRIX )
 {
   if( ISNUMPAR(3) && ISQMATRIX(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QIMAGE_TRUEMATRIX2 );
+    QImage_trueMatrix1();
   }
   else if( ISNUMPAR(3) && ISQTRANSFORM(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QIMAGE_TRUEMATRIX2 );
+    QImage_trueMatrix2();
   }
   else
   {

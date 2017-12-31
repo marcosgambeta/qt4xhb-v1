@@ -23,8 +23,6 @@ CLASS QPlainTextEdit INHERIT QAbstractScrollArea
    METHOD createStandardContextMenu
    METHOD currentCharFormat
    METHOD cursorForPosition
-   METHOD cursorRect1
-   METHOD cursorRect2
    METHOD cursorRect
    METHOD cursorWidth
    METHOD document
@@ -151,10 +149,10 @@ $prototype=QTextCursor cursorForPosition ( const QPoint & pos ) const
 $method=|QTextCursor|cursorForPosition|const QPoint &
 
 $prototype=QRect cursorRect ( const QTextCursor & cursor ) const
-$method=|QRect|cursorRect,cursorRect1|const QTextCursor &
+$internalMethod=|QRect|cursorRect,cursorRect1|const QTextCursor &
 
 $prototype=QRect cursorRect () const
-$method=|QRect|cursorRect,cursorRect2|
+$internalMethod=|QRect|cursorRect,cursorRect2|
 
 //[1]QRect cursorRect ( const QTextCursor & cursor ) const
 //[2]QRect cursorRect () const
@@ -163,11 +161,11 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CURSORRECT )
 {
   if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
   {
-    HB_FUNC_EXEC( QPLAINTEXTEDIT_CURSORRECT1 );
+    QPlainTextEdit_cursorRect1();
   }
   else if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QPLAINTEXTEDIT_CURSORRECT2 );
+    QPlainTextEdit_cursorRect2();
   }
   else
   {

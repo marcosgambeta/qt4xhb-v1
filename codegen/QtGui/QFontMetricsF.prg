@@ -16,9 +16,6 @@ CLASS QFontMetricsF
    METHOD delete
    METHOD ascent
    METHOD averageCharWidth
-   METHOD boundingRect1
-   METHOD boundingRect2
-   METHOD boundingRect3
    METHOD boundingRect
    METHOD descent
    METHOD elidedText
@@ -38,8 +35,6 @@ CLASS QFontMetricsF
    METHOD strikeOutPos
    METHOD tightBoundingRect
    METHOD underlinePos
-   METHOD width1
-   METHOD width2
    METHOD width
    METHOD xHeight
 
@@ -113,13 +108,13 @@ $prototype=qreal averageCharWidth () const
 $method=|qreal|averageCharWidth|
 
 $prototype=QRectF boundingRect ( const QString & text ) const
-$method=|QRectF|boundingRect,boundingRect1|const QString &
+$internalMethod=|QRectF|boundingRect,boundingRect1|const QString &
 
 $prototype=QRectF boundingRect ( QChar ch ) const
-$method=|QRectF|boundingRect,boundingRect2|QChar
+$internalMethod=|QRectF|boundingRect,boundingRect2|QChar
 
 $prototype=QRectF boundingRect ( const QRectF & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
-$method=|QRectF|boundingRect,boundingRect3|const QRectF &,int,const QString &,int=0,int *=0
+$internalMethod=|QRectF|boundingRect,boundingRect3|const QRectF &,int,const QString &,int=0,int *=0
 
 //[1]QRectF boundingRect ( const QString & text ) const
 //[2]QRectF boundingRect ( QChar ch ) const
@@ -129,15 +124,15 @@ HB_FUNC_STATIC( QFONTMETRICSF_BOUNDINGRECT )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QFONTMETRICSF_BOUNDINGRECT1 );
+    QFontMetricsF_boundingRect1();
   }
   else if( ISNUMPAR(1) && ISQCHAR(1) )
   {
-    HB_FUNC_EXEC( QFONTMETRICSF_BOUNDINGRECT2 );
+    QFontMetricsF_boundingRect2();
   }
   else if( ISBETWEEN(3,5) && ISQRECTF(1) && ISNUM(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) && (ISARRAY(5)||ISNIL(5)) )
   {
-    HB_FUNC_EXEC( QFONTMETRICSF_BOUNDINGRECT3 );
+    QFontMetricsF_boundingRect3();
   }
   else
   {
@@ -200,10 +195,10 @@ $prototype=qreal underlinePos () const
 $method=|qreal|underlinePos|
 
 $prototype=qreal width ( const QString & text ) const
-$method=|qreal|width,width1|const QString &
+$internalMethod=|qreal|width,width1|const QString &
 
 $prototype=qreal width ( QChar ch ) const
-$method=|qreal|width,width2|QChar
+$internalMethod=|qreal|width,width2|QChar
 
 //[1]qreal width ( const QString & text ) const
 //[2]qreal width ( QChar ch ) const
@@ -212,11 +207,11 @@ HB_FUNC_STATIC( QFONTMETRICSF_WIDTH )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QFONTMETRICSF_WIDTH1 );
+    QFontMetricsF_width1();
   }
   else if( ISNUMPAR(1) && ISQCHAR(1) )
   {
-    HB_FUNC_EXEC( QFONTMETRICSF_WIDTH2 );
+    QFontMetricsF_width2();
   }
   else
   {

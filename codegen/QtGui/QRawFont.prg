@@ -288,13 +288,8 @@ $method=|int|weight|
 $prototype=qreal xHeight () const
 $method=|qreal|xHeight|
 
-$prototype=QRawFont fromFont ( const QFont & font, QFontDatabase::WritingSystem writingSystem = QFontDatabase::Any )
-HB_FUNC_STATIC( QRAWFONT_FROMFONT )
-{
-  int par2 = ISNIL(2)? (int) QFontDatabase::Any : hb_parni(2);
-  QRawFont * ptr = new QRawFont( QRawFont::fromFont ( *PQFONT(1), (QFontDatabase::WritingSystem) par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QRAWFONT", true );
-}
+$prototype=static QRawFont fromFont ( const QFont & font, QFontDatabase::WritingSystem writingSystem = QFontDatabase::Any )
+$staticMethod=|QRawFont|fromFont|const QFont &,QFontDatabase::WritingSystem=QFontDatabase::Any
 
 $extraMethods
 

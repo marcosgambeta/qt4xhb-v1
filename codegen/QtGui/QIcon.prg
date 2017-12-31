@@ -23,9 +23,6 @@ CLASS QIcon
    METHOD isNull
    METHOD name
    METHOD paint
-   METHOD pixmap1
-   METHOD pixmap2
-   METHOD pixmap3
    METHOD pixmap
    METHOD fromTheme
    METHOD hasThemeIcon
@@ -199,31 +196,32 @@ HB_FUNC_STATIC( QICON_PAINT )
 }
 
 $prototype=QPixmap pixmap ( const QSize & size, Mode mode = Normal, State state = Off ) const
-$method=|QPixmap|pixmap,pixmap1|const QSize &,QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
+$internalMethod=|QPixmap|pixmap,pixmap1|const QSize &,QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
 
 $prototype=QPixmap pixmap ( int w, int h, Mode mode = Normal, State state = Off ) const
-$method=|QPixmap|pixmap,pixmap2|int,int,QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
+$internalMethod=|QPixmap|pixmap,pixmap2|int,int,QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
 
 $prototype=QPixmap pixmap ( int extent, Mode mode = Normal, State state = Off ) const
-$method=|QPixmap|pixmap,pixmap3|int,QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
+$internalMethod=|QPixmap|pixmap,pixmap3|int,QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
 
 //[1]QPixmap pixmap ( const QSize & size, Mode mode = Normal, State state = Off ) const
 //[2]QPixmap pixmap ( int w, int h, Mode mode = Normal, State state = Off ) const
 //[3]QPixmap pixmap ( int extent, Mode mode = Normal, State state = Off ) const
 
+%% TODO: verificar possiveis conflitos
 HB_FUNC_STATIC( QICON_PIXMAP )
 {
   if( ISBETWEEN(1,3) && ISQSIZE(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QICON_PIXMAP1 );
+    QIcon_pixmap1();
   }
   else if( ISBETWEEN(2,4) && ISNUM(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QICON_PIXMAP2 );
+    QIcon_pixmap2();
   }
   else if( ISBETWEEN(1,3) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QICON_PIXMAP3 );
+    QIcon_pixmap3();
   }
   else
   {
