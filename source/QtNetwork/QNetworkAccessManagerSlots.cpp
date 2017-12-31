@@ -105,8 +105,7 @@ void SlotsQNetworkAccessManager::sslErrors ( QNetworkReply * reply, const QList<
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
         PHB_ITEM preply = hb_itemPutPtr( NULL, (QNetworkReply *) reply );
-        PHB_DYNS pDynSym;
-        pDynSym = hb_dynsymFindName( "QSSLERROR" );
+        PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
         PHB_ITEM perrors = hb_itemArrayNew(0);
         int i;
         for(i=0;i<errors.count();i++)

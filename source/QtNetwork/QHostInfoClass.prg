@@ -129,8 +129,7 @@ HB_FUNC_STATIC( QHOSTINFO_ADDRESSES )
   if( obj )
   {
     QList<QHostAddress> list = obj->addresses ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QHOSTADDRESS" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QHOSTADDRESS" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
