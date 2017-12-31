@@ -1336,8 +1336,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SHADERS )
   if( obj )
   {
     QList<QGLShader *> list = obj->shaders ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QGLSHADER" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QGLSHADER" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
