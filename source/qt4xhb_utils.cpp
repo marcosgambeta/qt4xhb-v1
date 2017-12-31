@@ -15,8 +15,8 @@
 
 void _qt4xhb_createReturnClass ( void * ptr, const char * classname )
 {
-  PHB_DYNS pDynSym;
-  pDynSym = hb_dynsymFindName( classname );
+  PHB_DYNS pDynSym = hb_dynsymFindName( classname );
+
   if( pDynSym )
   {
     hb_vmPushDynSym( pDynSym );
@@ -35,8 +35,8 @@ void _qt4xhb_createReturnClass ( void * ptr, const char * classname )
 
 void _qt4xhb_createReturnClass ( const void * ptr, const char * classname )
 {
-  PHB_DYNS pDynSym;
-  pDynSym = hb_dynsymFindName( classname );
+  PHB_DYNS pDynSym = hb_dynsymFindName( classname );
+
   if( pDynSym )
   {
     hb_vmPushDynSym( pDynSym );
@@ -55,8 +55,8 @@ void _qt4xhb_createReturnClass ( const void * ptr, const char * classname )
 
 void _qt4xhb_createReturnClass ( void * ptr, const char * classname, bool destroy )
 {
-  PHB_DYNS pDynSym;
-  pDynSym = hb_dynsymFindName( classname );
+  PHB_DYNS pDynSym = hb_dynsymFindName( classname );
+
   if( pDynSym )
   {
     hb_vmPushDynSym( pDynSym );
@@ -82,8 +82,8 @@ void _qt4xhb_createReturnClass ( void * ptr, const char * classname, bool destro
 
 void _qt4xhb_createReturnClass ( const void * ptr, const char * classname, bool destroy )
 {
-  PHB_DYNS pDynSym;
-  pDynSym = hb_dynsymFindName( classname );
+  PHB_DYNS pDynSym = hb_dynsymFindName( classname );
+
   if( pDynSym )
   {
     hb_vmPushDynSym( pDynSym );
@@ -113,6 +113,7 @@ void _qt4xhb_createReturnClass ( const void * ptr, const char * classname, bool 
 void _qt4xhb_createReturnQObjectClass ( QObject * ptr, const char * classname )
 {
   PHB_DYNS pDynSym;
+
   if( ptr )
   {
     pDynSym = hb_dynsymFindName( (const char *) ptr->metaObject()->className() );
@@ -121,6 +122,7 @@ void _qt4xhb_createReturnQObjectClass ( QObject * ptr, const char * classname )
   {
     pDynSym = hb_dynsymFindName( classname );
   }
+
   if( pDynSym )
   {
     hb_vmPushDynSym( pDynSym );
@@ -143,6 +145,7 @@ void _qt4xhb_createReturnQObjectClass ( QObject * ptr, const char * classname )
 void _qt4xhb_createReturnQObjectClass ( const QObject * ptr, const char * classname )
 {
   PHB_DYNS pDynSym;
+
   if( ptr )
   {
     pDynSym = hb_dynsymFindName( (const char *) ptr->metaObject()->className() );
@@ -151,6 +154,7 @@ void _qt4xhb_createReturnQObjectClass ( const QObject * ptr, const char * classn
   {
     pDynSym = hb_dynsymFindName( classname );
   }
+
   if( pDynSym )
   {
     hb_vmPushDynSym( pDynSym );
@@ -173,6 +177,7 @@ void _qt4xhb_createReturnQObjectClass ( const QObject * ptr, const char * classn
 void _qt4xhb_createReturnQWidgetClass ( QWidget * ptr, const char * classname )
 {
   PHB_DYNS pDynSym;
+
   if( ptr )
   {
     pDynSym = hb_dynsymFindName( (const char *) ptr->metaObject()->className() );
@@ -181,6 +186,7 @@ void _qt4xhb_createReturnQWidgetClass ( QWidget * ptr, const char * classname )
   {
     pDynSym = hb_dynsymFindName( classname );
   }
+
   if( pDynSym )
   {
     hb_vmPushDynSym( pDynSym );
@@ -203,6 +209,7 @@ void _qt4xhb_createReturnQWidgetClass ( QWidget * ptr, const char * classname )
 void _qt4xhb_createReturnQWidgetClass ( const QWidget * ptr, const char * classname )
 {
   PHB_DYNS pDynSym;
+
   if( ptr )
   {
     pDynSym = hb_dynsymFindName( (const char *) ptr->metaObject()->className() );
@@ -211,6 +218,7 @@ void _qt4xhb_createReturnQWidgetClass ( const QWidget * ptr, const char * classn
   {
     pDynSym = hb_dynsymFindName( classname );
   }
+
   if( pDynSym )
   {
     hb_vmPushDynSym( pDynSym );
