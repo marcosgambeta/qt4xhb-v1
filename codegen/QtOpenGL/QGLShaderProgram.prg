@@ -25,11 +25,7 @@ CLASS QGLShaderProgram INHERIT QObject
    METHOD bindAttributeLocation2
    METHOD bindAttributeLocation3
    METHOD bindAttributeLocation
-   METHOD disableAttributeArray1
-   METHOD disableAttributeArray2
    METHOD disableAttributeArray
-   METHOD enableAttributeArray1
-   METHOD enableAttributeArray2
    METHOD enableAttributeArray
    METHOD geometryInputType
    METHOD geometryOutputType
@@ -43,8 +39,6 @@ CLASS QGLShaderProgram INHERIT QObject
    METHOD removeAllShaders
    METHOD removeShader
    METHOD setAttributeArray
-   METHOD setAttributeBuffer1
-   METHOD setAttributeBuffer2
    METHOD setAttributeBuffer
    METHOD setAttributeValue1
    METHOD setAttributeValue2
@@ -243,10 +237,10 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_BINDATTRIBUTELOCATION )
 }
 
 $prototype=void disableAttributeArray ( int location )
-$method=|void|disableAttributeArray,disableAttributeArray1|int
+$internalMethod=|void|disableAttributeArray,disableAttributeArray1|int
 
 $prototype=void disableAttributeArray ( const char * name )
-$method=|void|disableAttributeArray,disableAttributeArray2|const char *
+$internalMethod=|void|disableAttributeArray,disableAttributeArray2|const char *
 
 //[1]void disableAttributeArray ( int location )
 //[2]void disableAttributeArray ( const char * name )
@@ -255,11 +249,11 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_DISABLEATTRIBUTEARRAY )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QGLSHADERPROGRAM_DISABLEATTRIBUTEARRAY1 );
+    QGLShaderProgram_disableAttributeArray1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QGLSHADERPROGRAM_DISABLEATTRIBUTEARRAY2 );
+    QGLShaderProgram_disableAttributeArray2();
   }
   else
   {
@@ -268,10 +262,10 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_DISABLEATTRIBUTEARRAY )
 }
 
 $prototype=void enableAttributeArray ( int location )
-$method=|void|enableAttributeArray,enableAttributeArray1|int
+$internalMethod=|void|enableAttributeArray,enableAttributeArray1|int
 
 $prototype=void enableAttributeArray ( const char * name )
-$method=|void|enableAttributeArray,enableAttributeArray2|const char *
+$internalMethod=|void|enableAttributeArray,enableAttributeArray2|const char *
 
 //[1]void enableAttributeArray ( int location )
 //[2]void enableAttributeArray ( const char * name )
@@ -280,11 +274,11 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_ENABLEATTRIBUTEARRAY )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QGLSHADERPROGRAM_ENABLEATTRIBUTEARRAY1 );
+    QGLShaderProgram_enableAttributeArray1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QGLSHADERPROGRAM_ENABLEATTRIBUTEARRAY2 );
+    QGLShaderProgram_enableAttributeArray2();
   }
   else
   {
@@ -342,10 +336,10 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEARRAY )
 }
 
 $prototype=void setAttributeBuffer ( int location, GLenum type, int offset, int tupleSize, int stride = 0 )
-$method=|void|setAttributeBuffer,setAttributeBuffer1|int,GLenum,int,int,int=0
+$internalMethod=|void|setAttributeBuffer,setAttributeBuffer1|int,GLenum,int,int,int=0
 
 $prototype=void setAttributeBuffer ( const char * name, GLenum type, int offset, int tupleSize, int stride = 0 )
-$method=|void|setAttributeBuffer,setAttributeBuffer2|const char *,GLenum,int,int,int=0
+$internalMethod=|void|setAttributeBuffer,setAttributeBuffer2|const char *,GLenum,int,int,int=0
 
 //[1]void setAttributeBuffer ( int location, GLenum type, int offset, int tupleSize, int stride = 0 )
 //[2]void setAttributeBuffer ( const char * name, GLenum type, int offset, int tupleSize, int stride = 0 )
@@ -354,11 +348,11 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEBUFFER )
 {
   if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISNUM(5)||ISNIL(5)) )
   {
-    HB_FUNC_EXEC( QGLSHADERPROGRAM_SETATTRIBUTEBUFFER1 );
+    QGLShaderProgram_setAttributeBuffer1();
   }
   else if( ISBETWEEN(4,5) && ISCHAR(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISNUM(5)||ISNIL(5)) )
   {
-    HB_FUNC_EXEC( QGLSHADERPROGRAM_SETATTRIBUTEBUFFER2 );
+    QGLShaderProgram_setAttributeBuffer2();
   }
   else
   {
@@ -724,7 +718,6 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_UNIFORMLOCATION )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
-
 
 $prototype=static bool hasOpenGLShaderPrograms ( const QGLContext * context = 0 )
 $staticMethod=|bool|hasOpenGLShaderPrograms|const QGLContext *=0

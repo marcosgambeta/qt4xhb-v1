@@ -14,11 +14,6 @@ CLASS QGLWidget INHERIT QWidget
 
    METHOD new
    METHOD delete
-   METHOD bindTexture1
-   METHOD bindTexture2
-   METHOD bindTexture3
-   METHOD bindTexture4
-   METHOD bindTexture5
    METHOD bindTexture
    METHOD colormap
    METHOD context
@@ -94,19 +89,19 @@ HB_FUNC_STATIC( QGLWIDGET_NEW )
 $deleteMethod
 
 $prototype=GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
-$method=|GLuint|bindTexture,bindTexture1|const QImage &,GLenum=GL_TEXTURE_2D,GLint=GL_RGBA
+$internalMethod=|GLuint|bindTexture,bindTexture1|const QImage &,GLenum=GL_TEXTURE_2D,GLint=GL_RGBA
 
 $prototype=GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
-$method=|GLuint|bindTexture,bindTexture2|const QPixmap &,GLenum=GL_TEXTURE_2D,GLint=GL_RGBA
+$internalMethod=|GLuint|bindTexture,bindTexture2|const QPixmap &,GLenum=GL_TEXTURE_2D,GLint=GL_RGBA
 
 $prototype=GLuint bindTexture ( const QImage & image, GLenum target, GLint format, QGLContext::BindOptions options )
-$method=|GLuint|bindTexture,bindTexture3|const QImage &,GLenum,GLint,QGLContext::BindOptions
+$internalMethod=|GLuint|bindTexture,bindTexture3|const QImage &,GLenum,GLint,QGLContext::BindOptions
 
 $prototype=GLuint bindTexture ( const QPixmap & pixmap, GLenum target, GLint format, QGLContext::BindOptions options )
-$method=|GLuint|bindTexture,bindTexture4|const QPixmap &,GLenum,GLint,QGLContext::BindOptions
+$internalMethod=|GLuint|bindTexture,bindTexture4|const QPixmap &,GLenum,GLint,QGLContext::BindOptions
 
 $prototype=GLuint bindTexture ( const QString & fileName )
-$method=|GLuint|bindTexture,bindTexture5|const QString &
+$internalMethod=|GLuint|bindTexture,bindTexture5|const QString &
 
 //[1]GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
 //[2]GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
@@ -118,23 +113,23 @@ HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE ) // TODO: resolver conflitos 1/2 com 3/4
 {
   if( ISBETWEEN(1,3) && ISQIMAGE(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QGLWIDGET_BINDTEXTURE1 );
+    QGLWidget_bindTexture1();
   }
   else if( ISBETWEEN(1,3) && ISQPIXMAP(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QGLWIDGET_BINDTEXTURE2 );
+    QGLWidget_bindTexture2();
   }
   else if( ISBETWEEN(3,4) && ISQIMAGE(1) && ISNUM(2) && ISNUM(3) && (ISNUM(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QGLWIDGET_BINDTEXTURE3 );
+    QGLWidget_bindTexture3();
   }
   else if( ISBETWEEN(3,4) && ISQPIXMAP(1) && ISNUM(2) && ISNUM(3) && (ISNUM(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QGLWIDGET_BINDTEXTURE4 );
+    QGLWidget_bindTexture4();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QGLWIDGET_BINDTEXTURE5 );
+    QGLWidget_bindTexture5();
   }
   else
   {

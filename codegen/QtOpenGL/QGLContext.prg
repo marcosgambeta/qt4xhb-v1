@@ -16,18 +16,11 @@ CLASS QGLContext
 
    METHOD new
    METHOD delete
-   METHOD bindTexture1
-   METHOD bindTexture2
-   METHOD bindTexture3
-   METHOD bindTexture4
-   METHOD bindTexture5
    METHOD bindTexture
    METHOD create
    METHOD deleteTexture
    METHOD device
    METHOD doneCurrent
-   METHOD drawTexture1
-   METHOD drawTexture2
    METHOD drawTexture
    METHOD format
    METHOD getProcAddress
@@ -65,28 +58,24 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QGLContext ( const QGLFormat & format )
-HB_FUNC_STATIC( QGLCONTEXT_NEW )
-{
-  QGLContext * o = new QGLContext ( *PQGLFORMAT(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|const QGLFormat &
 
 $deleteMethod
 
 $prototype=GLuint bindTexture ( const QImage & image, GLenum target, GLint format, BindOptions options )
-$method=|GLuint|bindTexture,bindTexture1|const QImage &,GLenum,GLint,QGLContext::BindOptions
+$internalMethod=|GLuint|bindTexture,bindTexture1|const QImage &,GLenum,GLint,QGLContext::BindOptions
 
 $prototype=GLuint bindTexture ( const QString & fileName )
-$method=|GLuint|bindTexture,bindTexture2|const QString &
+$internalMethod=|GLuint|bindTexture,bindTexture2|const QString &
 
 $prototype=GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
-$method=|GLuint|bindTexture,bindTexture3|const QImage &,GLenum=GL_TEXTURE_2D,GLint=GL_RGBA
+$internalMethod=|GLuint|bindTexture,bindTexture3|const QImage &,GLenum=GL_TEXTURE_2D,GLint=GL_RGBA
 
 $prototype=GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
-$method=|GLuint|bindTexture,bindTexture4|const QPixmap &,GLenum=GL_TEXTURE_2D,GLint=GL_RGBA
+$internalMethod=|GLuint|bindTexture,bindTexture4|const QPixmap &,GLenum=GL_TEXTURE_2D,GLint=GL_RGBA
 
 $prototype=GLuint bindTexture ( const QPixmap & pixmap, GLenum target, GLint format, BindOptions options )
-$method=|GLuint|bindTexture,bindTexture5|const QPixmap &,GLenum,GLint,QGLContext::BindOptions
+$internalMethod=|GLuint|bindTexture,bindTexture5|const QPixmap &,GLenum,GLint,QGLContext::BindOptions
 
 //[1]GLuint bindTexture ( const QImage & image, GLenum target, GLint format, BindOptions options )
 //[2]GLuint bindTexture ( const QString & fileName )
@@ -98,23 +87,23 @@ HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE )
 {
   if( ISNUMPAR(4) && ISQIMAGE(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QGLCONTEXT_BINDTEXTURE1 );
+    QGLContext_bindTexture1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QGLCONTEXT_BINDTEXTURE2 );
+    QGLContext_bindTexture2();
   }
   else if( ISBETWEEN(1,3) && ISQIMAGE(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QGLCONTEXT_BINDTEXTURE3 );
+    QGLContext_bindTexture3();
   }
   else if( ISBETWEEN(1,3) && ISQPIXMAP(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QGLCONTEXT_BINDTEXTURE4 );
+    QGLContext_bindTexture4();
   }
   else if( ISNUMPAR(4) && ISQPIXMAP(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QGLCONTEXT_BINDTEXTURE5 );
+    QGLContext_bindTexture5();
   }
   else
   {
@@ -135,10 +124,10 @@ $prototype=virtual void doneCurrent ()
 $virtualMethod=|void|doneCurrent|
 
 $prototype=void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
-$method=|void|drawTexture,drawTexture1|const QRectF &,GLuint,GLenum=GL_TEXTURE_2D
+$internalMethod=|void|drawTexture,drawTexture1|const QRectF &,GLuint,GLenum=GL_TEXTURE_2D
 
 $prototype=void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
-$method=|void|drawTexture,drawTexture2|const QPointF &,GLuint,GLenum=GL_TEXTURE_2D
+$internalMethod=|void|drawTexture,drawTexture2|const QPointF &,GLuint,GLenum=GL_TEXTURE_2D
 
 //[1]void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 //[2]void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
@@ -147,11 +136,11 @@ HB_FUNC_STATIC( QGLCONTEXT_DRAWTEXTURE )
 {
   if( ISBETWEEN(2,3) && ISQRECTF(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QGLCONTEXT_DRAWTEXTURE1 );
+    QGLContext_drawTexture1();
   }
   else if( ISBETWEEN(2,3) && ISQPOINTF(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QGLCONTEXT_DRAWTEXTURE2 );
+    QGLContext_drawTexture2();
   }
   else
   {
