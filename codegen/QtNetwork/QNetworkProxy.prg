@@ -11,9 +11,6 @@ CLASS QNetworkProxy
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD capabilities
@@ -54,13 +51,13 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QNetworkProxy ()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QNetworkProxy ( ProxyType type, const QString & hostName = QString(), quint16 port = 0, const QString & user = QString(), const QString & password = QString() )
-$constructor=|new2|QNetworkProxy::ProxyType,const QString &=QString(),quint16=0,const QString &=QString(),const QString &=QString()
+$internalConstructor=|new2|QNetworkProxy::ProxyType,const QString &=QString(),quint16=0,const QString &=QString(),const QString &=QString()
 
 $prototype=QNetworkProxy ( const QNetworkProxy & other )
-$constructor=|new3|const QNetworkProxy &
+$internalConstructor=|new3|const QNetworkProxy &
 
 //[1]QNetworkProxy ()
 //[2]QNetworkProxy ( ProxyType type, const QString & hostName = QString(), quint16 port = 0, const QString & user = QString(), const QString & password = QString() )
@@ -70,15 +67,15 @@ HB_FUNC_STATIC( QNETWORKPROXY_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QNETWORKPROXY_NEW1 );
+    QNetworkProxy_new1();
   }
   else if( ISBETWEEN(1,5) && ISNUM(1) && (ISCHAR(2)||ISNIL(2)) && (ISCHAR(3)||ISNIL(3))  && (ISCHAR(4)||ISNIL(4)) && (ISCHAR(5)||ISNIL(5)) )
   {
-    HB_FUNC_EXEC( QNETWORKPROXY_NEW2 );
+    QNetworkProxy_new2();
   }
   else if( ISNUMPAR(1) && ISQNETWORKPROXY(1) )
   {
-    HB_FUNC_EXEC( QNETWORKPROXY_NEW3 );
+    QNetworkProxy_new3();
   }
   else
   {

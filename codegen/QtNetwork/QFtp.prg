@@ -26,8 +26,6 @@ CLASS QFtp INHERIT QObject
    METHOD list
    METHOD login
    METHOD mkdir
-   METHOD put1
-   METHOD put2
    METHOD put
    METHOD rawCommand
    METHOD read
@@ -114,10 +112,10 @@ $prototype=int mkdir ( const QString & dir )
 $method=|int|mkdir|const QString &
 
 $prototype=int put ( QIODevice * dev, const QString & file, TransferType type = Binary )
-$method=|int|put,put1|QIODevice *,const QString &,QFtp::TransferType=QFtp::Binary
+$internalMethod=|int|put,put1|QIODevice *,const QString &,QFtp::TransferType=QFtp::Binary
 
 $prototype=int put ( const QByteArray & data, const QString & file, TransferType type = Binary )
-$method=|int|put,put2|const QByteArray &,const QString &,QFtp::TransferType=QFtp::Binary
+$internalMethod=|int|put,put2|const QByteArray &,const QString &,QFtp::TransferType=QFtp::Binary
 
 //[1]int put ( QIODevice * dev, const QString & file, TransferType type = Binary )
 //[2]int put ( const QByteArray & data, const QString & file, TransferType type = Binary )
@@ -126,11 +124,11 @@ HB_FUNC_STATIC( QFTP_PUT )
 {
   if( ISBETWEEN(2,3) && ISQIODEVICE(1) && ISCHAR(2) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QFTP_PUT1 );
+    QFtp_put1();
   }
   else if( ISBETWEEN(2,3) && ISQBYTEARRAY(1) && ISCHAR(2) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QFTP_PUT2 );
+    QFtp_put2();
   }
   else
   {

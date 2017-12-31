@@ -48,8 +48,6 @@ CLASS QSslSocket INHERIT QTcpSocket
    METHOD setLocalCertificate
    METHOD setPeerVerifyDepth
    METHOD setPeerVerifyMode
-   METHOD setPrivateKey1
-   METHOD setPrivateKey2
    METHOD setPrivateKey
    METHOD setProtocol
    METHOD setReadBufferSize
@@ -481,10 +479,10 @@ $prototype=void setPeerVerifyMode ( QSslSocket::PeerVerifyMode mode )
 $method=|void|setPeerVerifyMode|QSslSocket::PeerVerifyMode
 
 $prototype=void setPrivateKey ( const QSslKey & key )
-$method=|void|setPrivateKey,setPrivateKey1|const QSslKey &
+$internalMethod=|void|setPrivateKey,setPrivateKey1|const QSslKey &
 
 $prototype=void setPrivateKey ( const QString & fileName, QSsl::KeyAlgorithm algorithm = QSsl::Rsa, QSsl::EncodingFormat format = QSsl::Pem, const QByteArray & passPhrase = QByteArray() )
-$method=|void|setPrivateKey,setPrivateKey2|const QString &,QSsl::KeyAlgorithm=QSsl::Rsa,QSsl::EncodingFormat=QSsl::Pem,const QByteArray &=QByteArray()
+$internalMethod=|void|setPrivateKey,setPrivateKey2|const QString &,QSsl::KeyAlgorithm=QSsl::Rsa,QSsl::EncodingFormat=QSsl::Pem,const QByteArray &=QByteArray()
 
 //[1]void setPrivateKey ( const QSslKey & key )
 //[2]void setPrivateKey ( const QString & fileName, QSsl::KeyAlgorithm algorithm = QSsl::Rsa, QSsl::EncodingFormat format = QSsl::Pem, const QByteArray & passPhrase = QByteArray() )
@@ -493,11 +491,11 @@ HB_FUNC_STATIC( QSSLSOCKET_SETPRIVATEKEY )
 {
   if( ISNUMPAR(1) && ISQSSLKEY(1) )
   {
-    HB_FUNC_EXEC( QSSLSOCKET_SETPRIVATEKEY1 );
+    QSslSocket_setPrivateKey1();
   }
   else if( ISBETWEEN(1,4) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && (ISQBYTEARRAY(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QSSLSOCKET_SETPRIVATEKEY2 );
+    QSslSocket_setPrivateKey2();
   }
   else
   {
