@@ -43,11 +43,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QScriptEngineDebugger ( QObject * parent = 0 )
-HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_NEW )
-{
-  QScriptEngineDebugger * o = new QScriptEngineDebugger ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
