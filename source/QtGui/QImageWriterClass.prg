@@ -384,8 +384,7 @@ QList<QByteArray> supportedImageFormats ()
 HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTEDIMAGEFORMATS )
 {
   QList<QByteArray> list = QImageWriter::supportedImageFormats ();
-  PHB_DYNS pDynSym;
-  pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;

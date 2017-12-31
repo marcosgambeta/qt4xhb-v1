@@ -783,8 +783,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SIDEBARURLS )
   if( obj )
   {
     QList<QUrl> list = obj->sidebarUrls ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QURL" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QURL" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

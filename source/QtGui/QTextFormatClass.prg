@@ -440,8 +440,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_LENGTHVECTORPROPERTY )
   if( obj )
   {
     QVector<QTextLength> list = obj->lengthVectorProperty ( PINT(1) );
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QTEXTLENGTH" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QTEXTLENGTH" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

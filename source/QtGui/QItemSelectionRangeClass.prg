@@ -235,8 +235,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_INDEXES )
   if( obj )
   {
     QModelIndexList list = obj->indexes ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QMODELINDEX" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

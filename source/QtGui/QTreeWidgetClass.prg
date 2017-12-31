@@ -227,8 +227,7 @@ HB_FUNC_STATIC( QTREEWIDGET_FINDITEMS )
   {
     int par2 = hb_parni(2);
     QList<QTreeWidgetItem *> list = obj->findItems ( PQSTRING(1), (Qt::MatchFlags) par2, OPINT(3,0) );
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QTREEWIDGETITEM" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QTREEWIDGETITEM" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -455,8 +454,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SELECTEDITEMS )
   if( obj )
   {
     QList<QTreeWidgetItem *> list = obj->selectedItems ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QTREEWIDGETITEM" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QTREEWIDGETITEM" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

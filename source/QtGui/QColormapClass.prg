@@ -102,8 +102,7 @@ HB_FUNC_STATIC( QCOLORMAP_COLORMAP )
   if( obj )
   {
     QVector<QColor> list = obj->colormap ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QCOLOR" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QCOLOR" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

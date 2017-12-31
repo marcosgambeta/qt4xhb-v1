@@ -728,8 +728,7 @@ QList<QByteArray> supportedImageFormats ()
 HB_FUNC_STATIC( QIMAGEREADER_SUPPORTEDIMAGEFORMATS )
 {
   QList<QByteArray> list = QImageReader::supportedImageFormats ();
-  PHB_DYNS pDynSym;
-  pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;

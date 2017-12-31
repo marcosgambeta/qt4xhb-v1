@@ -148,8 +148,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_BUTTONS )
   if( obj )
   {
     QList<QAbstractButton *> list = obj->buttons ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QABSTRACTBUTTON" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTBUTTON" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

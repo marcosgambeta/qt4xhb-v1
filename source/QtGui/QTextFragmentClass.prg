@@ -155,8 +155,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
   if( obj )
   {
     QList<QGlyphRun> list = obj->glyphRuns ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QGLYPHRUN" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QGLYPHRUN" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

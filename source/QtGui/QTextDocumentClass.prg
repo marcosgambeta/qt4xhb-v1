@@ -230,8 +230,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ALLFORMATS )
   if( obj )
   {
     QVector<QTextFormat> list = obj->allFormats ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QTEXTFORMAT" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QTEXTFORMAT" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

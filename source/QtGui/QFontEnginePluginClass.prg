@@ -66,8 +66,7 @@ HB_FUNC_STATIC( QFONTENGINEPLUGIN_AVAILABLEFONTENGINES )
   if( obj )
   {
     QList<QFontEngineInfo> list = obj->availableFontEngines ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QFONTENGINEINFO" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QFONTENGINEINFO" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

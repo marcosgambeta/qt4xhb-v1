@@ -276,8 +276,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_FINDITEMS )
   {
     int par2 = hb_parni(2);
     QList<QTableWidgetItem *> list = obj->findItems ( PQSTRING(1), (Qt::MatchFlags) par2 );
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QTABLEWIDGETITEM" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QTABLEWIDGETITEM" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -430,8 +429,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SELECTEDITEMS )
   if( obj )
   {
     QList<QTableWidgetItem *> list = obj->selectedItems ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QTABLEWIDGETITEM" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QTABLEWIDGETITEM" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -465,8 +463,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SELECTEDRANGES )
   if( obj )
   {
     QList<QTableWidgetSelectionRange> list = obj->selectedRanges ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QTABLEWIDGETSELECTIONRANGE" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QTABLEWIDGETSELECTIONRANGE" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

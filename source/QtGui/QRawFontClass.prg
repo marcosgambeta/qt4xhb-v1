@@ -174,19 +174,18 @@ HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES1 )
   QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-QVector<quint32> par1;
-PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aValues1);
-int temp1;
-for (i1=0;i1<nLen1;i1++)
-{
-temp1 = hb_arrayGetNI(aValues1, i1+1);
-par1 << temp1;
-}
+    QVector<quint32> par1;
+    PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aValues1);
+    int temp1;
+    for (i1=0;i1<nLen1;i1++)
+    {
+      temp1 = hb_arrayGetNI(aValues1, i1+1);
+      par1 << temp1;
+    }
     QVector<QPointF> list = obj->advancesForGlyphIndexes ( par1 );
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QPOINTF" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QPOINTF" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

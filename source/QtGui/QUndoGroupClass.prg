@@ -218,8 +218,7 @@ HB_FUNC_STATIC( QUNDOGROUP_STACKS )
   if( obj )
   {
     QList<QUndoStack *> list = obj->stacks ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QUNDOSTACK" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QUNDOSTACK" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

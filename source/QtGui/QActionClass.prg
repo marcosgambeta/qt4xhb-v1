@@ -214,8 +214,7 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDGRAPHICSWIDGETS )
   if( obj )
   {
     QList<QGraphicsWidget *> list = obj->associatedGraphicsWidgets ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QGRAPHICSWIDGET" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSWIDGET" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -249,8 +248,7 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDWIDGETS )
   if( obj )
   {
     QList<QWidget *> list = obj->associatedWidgets ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QWIDGET" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QWIDGET" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -805,8 +803,7 @@ HB_FUNC_STATIC( QACTION_SHORTCUTS )
   if( obj )
   {
     QList<QKeySequence> list = obj->shortcuts ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QKEYSEQUENCE" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QKEYSEQUENCE" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

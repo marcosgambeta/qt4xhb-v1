@@ -134,8 +134,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_COLUMNWIDTHCONSTRAINTS )
   if( obj )
   {
     QVector<QTextLength> list = obj->columnWidthConstraints ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QTEXTLENGTH" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QTEXTLENGTH" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

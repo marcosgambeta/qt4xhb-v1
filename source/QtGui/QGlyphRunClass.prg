@@ -170,8 +170,7 @@ HB_FUNC_STATIC( QGLYPHRUN_POSITIONS )
   if( obj )
   {
     QVector<QPointF> list = obj->positions ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QPOINTF" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QPOINTF" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

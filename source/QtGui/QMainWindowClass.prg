@@ -707,8 +707,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TABIFIEDDOCKWIDGETS )
   {
     QDockWidget * par1 = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QList<QDockWidget *> list = obj->tabifiedDockWidgets ( par1 );
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QDOCKWIDGET" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QDOCKWIDGET" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

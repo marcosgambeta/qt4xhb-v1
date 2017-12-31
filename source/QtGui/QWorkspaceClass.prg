@@ -171,8 +171,7 @@ HB_FUNC_STATIC( QWORKSPACE_WINDOWLIST )
   {
     int par1 = ISNIL(1)? (int) QWorkspace::CreationOrder : hb_parni(1);
     QWidgetList list = obj->windowList ( (QWorkspace::WindowOrder) par1 );
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QWIDGET" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QWIDGET" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

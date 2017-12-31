@@ -418,8 +418,7 @@ HB_FUNC_STATIC( QWIDGET_ACTIONS )
   if( obj )
   {
     QList<QAction *> list = obj->actions ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QACTION" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QACTION" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
