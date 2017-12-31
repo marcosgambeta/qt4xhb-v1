@@ -146,8 +146,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
   if( obj )
   {
     QList<QDeclarativeError> list = obj->errors ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
