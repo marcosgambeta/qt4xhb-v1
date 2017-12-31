@@ -207,8 +207,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_NAMESPACEBINDINGS )
   if( obj )
   {
     QVector<QXmlName> list = obj->namespaceBindings ( *PQXMLNODEMODELINDEX(1) );
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QXMLNAME" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QXMLNAME" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -242,8 +241,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_NODESBYIDREF )
   if( obj )
   {
     QVector<QXmlNodeModelIndex> list = obj->nodesByIdref ( *PQXMLNAME(1) );
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QXMLNODEMODELINDEX" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QXMLNODEMODELINDEX" );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
