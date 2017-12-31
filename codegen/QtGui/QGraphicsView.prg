@@ -289,11 +289,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS1 )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -325,11 +321,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS2 )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -361,11 +353,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS3 )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -398,11 +386,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS4 )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -435,11 +419,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS5 )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -472,11 +452,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS6 )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -509,11 +485,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS7 )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );

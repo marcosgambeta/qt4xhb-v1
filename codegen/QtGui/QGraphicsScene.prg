@@ -283,11 +283,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_COLLIDINGITEMS )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -419,11 +415,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS1 )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -456,11 +448,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS2 )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -495,11 +483,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS3 )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -534,11 +518,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS4 )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -573,11 +553,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS5 )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -612,11 +588,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS6 )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -651,11 +623,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS7 )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -749,11 +717,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SELECTEDITEMS )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -911,11 +875,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_VIEWS )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
