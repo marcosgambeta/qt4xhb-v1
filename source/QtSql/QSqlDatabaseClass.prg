@@ -810,8 +810,7 @@ void QSqlDatabase_addDatabase1 ()
     par2 = hb_parc(2);
   }
   QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::addDatabase ( PQSTRING(1), par2 ) );
-  PHB_DYNS pDynSym;
-  pDynSym = hb_dynsymFindName( "QSQLDATABASE" );
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QSQLDATABASE" );
   if( pDynSym )
   {
     hb_vmPushDynSym( pDynSym );
@@ -844,8 +843,7 @@ void QSqlDatabase_addDatabase2 ()
     par2 = hb_parc(2);
   }
   QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::addDatabase ( par1, par2 ) );
-  PHB_DYNS pDynSym;
-  pDynSym = hb_dynsymFindName( "QSQLDATABASE" );
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QSQLDATABASE" );
   if( pDynSym )
   {
     hb_vmPushDynSym( pDynSym );
@@ -944,8 +942,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DATABASE )
     par1 = hb_parc(1);
   }
   QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::database ( par1, OPBOOL(2,true) ) );
-  PHB_DYNS pDynSym;
-  pDynSym = hb_dynsymFindName( "QSQLDATABASE" );
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QSQLDATABASE" );
   if( pDynSym )
   {
     hb_vmPushDynSym( pDynSym );
