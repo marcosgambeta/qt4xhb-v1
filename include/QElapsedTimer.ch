@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QELAPSEDTIMER_CH
+#define QELAPSEDTIMER_CH
 
 /*
 enum QElapsedTimer::ClockType
@@ -14,3 +17,5 @@ enum QElapsedTimer::ClockType
 #define QElapsedTimer_TickCounter                                    2
 #define QElapsedTimer_MachAbsoluteTime                               3
 #define QElapsedTimer_PerformanceCounter                             4
+
+#endif /* QELAPSEDTIMER_CH */

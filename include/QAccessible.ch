@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QACCESSIBLE_CH
+#define QACCESSIBLE_CH
 
 /*
 enum QAccessible::Action
@@ -238,3 +241,5 @@ enum QAccessible::Text
 #define QAccessible_Help                                             3
 #define QAccessible_Accelerator                                      4
 #define QAccessible_UserText                                         0x0000ffff
+
+#endif /* QACCESSIBLE_CH */

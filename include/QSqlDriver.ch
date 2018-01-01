@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QSQLDRIVER_CH
+#define QSQLDRIVER_CH
 
 /*
 enum QSqlDriver::DriverFeature
@@ -38,3 +41,5 @@ enum QSqlDriver::StatementType
 #define QSqlDriver_UpdateStatement                                   2
 #define QSqlDriver_InsertStatement                                   3
 #define QSqlDriver_DeleteStatement                                   4
+
+#endif /* QSQLDRIVER_CH */

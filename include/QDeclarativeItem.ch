@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QDECLARATIVEITEM_CH
+#define QDECLARATIVEITEM_CH
 
 /*
 enum QDeclarativeItem::TransformOrigin
@@ -18,3 +21,5 @@ enum QDeclarativeItem::TransformOrigin
 #define QDeclarativeItem_BottomLeft                                  6
 #define QDeclarativeItem_Bottom                                      7
 #define QDeclarativeItem_BottomRight                                 8
+
+#endif /* QDECLARATIVEITEM_CH */

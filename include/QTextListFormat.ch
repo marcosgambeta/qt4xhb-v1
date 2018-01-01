@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QTEXTLISTFORMAT_CH
+#define QTEXTLISTFORMAT_CH
 
 /*
 enum QTextListFormat::Style
@@ -17,3 +20,5 @@ enum QTextListFormat::Style
 #define QTextListFormat_ListUpperAlpha                               -6
 #define QTextListFormat_ListLowerRoman                               -7
 #define QTextListFormat_ListUpperRoman                               -8
+
+#endif /* QTEXTLISTFORMAT_CH */

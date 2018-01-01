@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QNETWORKINTERFACE_CH
+#define QNETWORKINTERFACE_CH
 
 /*
 enum QNetworkInterface::InterfaceFlag
@@ -16,3 +19,5 @@ flags QNetworkInterface::InterfaceFlags
 #define QNetworkInterface_IsLoopBack                                 0x8
 #define QNetworkInterface_IsPointToPoint                             0x10
 #define QNetworkInterface_CanMulticast                               0x20
+
+#endif /* QNETWORKINTERFACE_CH */

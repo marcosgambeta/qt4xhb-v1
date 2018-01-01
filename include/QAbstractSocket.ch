@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QABSTRACTSOCKET_CH
+#define QABSTRACTSOCKET_CH
 
 /*
 enum QAbstractSocket::NetworkLayerProtocol
@@ -62,3 +65,5 @@ enum QAbstractSocket::SocketType
 #define QAbstractSocket_TcpSocket                                    0
 #define QAbstractSocket_UdpSocket                                    1
 #define QAbstractSocket_UnknownSocketType                            -1
+
+#endif /* QABSTRACTSOCKET_CH */

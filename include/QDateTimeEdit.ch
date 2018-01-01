@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QDATETIMEEDIT_CH
+#define QDATETIMEEDIT_CH
 
 /*
 enum QDateTimeEdit::Section
@@ -19,3 +22,5 @@ flags QDateTimeEdit::Sections
 #define QDateTimeEdit_DaySection                                     0x0100
 #define QDateTimeEdit_MonthSection                                   0x0200
 #define QDateTimeEdit_YearSection                                    0x0400
+
+#endif /* QDATETIMEEDIT_CH */

@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QDIR_CH
+#define QDIR_CH
 
 /*
 enum QDir::Filter
@@ -42,3 +45,5 @@ flags QDir::SortFlags
 #define QDir_Reversed                                                0x08
 #define QDir_IgnoreCase                                              0x10
 #define QDir_LocaleAware                                             0x40
+
+#endif /* QDIR_CH */

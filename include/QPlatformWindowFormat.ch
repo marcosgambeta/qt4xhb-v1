@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QPLATFORMWINDOWFORMAT_CH
+#define QPLATFORMWINDOWFORMAT_CH
 
 /*
 enum QPlatformWindowFormat::FormatOption
@@ -41,3 +44,5 @@ enum QPlatformWindowFormat::WindowApi
 #define QPlatformWindowFormat_Raster                                 0
 #define QPlatformWindowFormat_OpenGL                                 1
 #define QPlatformWindowFormat_OpenVG                                 2
+
+#endif /* QPLATFORMWINDOWFORMAT_CH */

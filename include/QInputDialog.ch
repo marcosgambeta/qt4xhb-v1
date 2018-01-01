@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QINPUTDIALOG_CH
+#define QINPUTDIALOG_CH
 
 /*
 enum QInputDialog::InputDialogOption
@@ -19,3 +22,5 @@ enum QInputDialog::InputMode
 #define QInputDialog_TextInput                                       0
 #define QInputDialog_IntInput                                        1
 #define QInputDialog_DoubleInput                                     2
+
+#endif /* QINPUTDIALOG_CH */

@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QFTP_CH
+#define QFTP_CH
 
 /*
 enum QFtp::Command
@@ -55,3 +58,5 @@ enum QFtp::TransferType
 */
 #define QFtp_Binary                                                  0
 #define QFtp_Ascii                                                   1
+
+#endif /* QFTP_CH */

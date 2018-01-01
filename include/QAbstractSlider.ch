@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QABSTRACTSLIDER_CH
+#define QABSTRACTSLIDER_CH
 
 /*
 enum QAbstractSlider::SliderAction
@@ -25,3 +28,5 @@ enum QAbstractSlider::SliderChange
 #define QAbstractSlider_SliderOrientationChange                      1
 #define QAbstractSlider_SliderStepsChange                            2
 #define QAbstractSlider_SliderValueChange                            3
+
+#endif /* QABSTRACTSLIDER_CH */

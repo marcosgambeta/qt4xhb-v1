@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QPAINTENGINE_CH
+#define QPAINTENGINE_CH
 
 /*
 enum QPaintEngine::DirtyFlag
@@ -80,3 +83,5 @@ enum QPaintEngine::Type
 #define QPaintEngine_OpenGL2                                         14
 #define QPaintEngine_PaintBuffer                                     15
 #define QPaintEngine_Blitter                                         16
+
+#endif /* QPAINTENGINE_CH */

@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QXMLSTREAMREADER_CH
+#define QXMLSTREAMREADER_CH
 
 /*
 enum QXmlStreamReader::Error
@@ -36,3 +39,5 @@ enum QXmlStreamReader::TokenType
 #define QXmlStreamReader_DTD                                         8
 #define QXmlStreamReader_EntityReference                             9
 #define QXmlStreamReader_ProcessingInstruction                       10
+
+#endif /* QXMLSTREAMREADER_CH */

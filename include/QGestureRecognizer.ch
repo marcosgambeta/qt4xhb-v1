@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QGESTURERECOGNIZER_CH
+#define QGESTURERECOGNIZER_CH
 
 /*
 enum QGestureRecognizer::ResultFlag
@@ -16,3 +19,5 @@ flags QGestureRecognizer::Result
 #define QGestureRecognizer_FinishGesture                             0x0008
 #define QGestureRecognizer_CancelGesture                             0x0010
 #define QGestureRecognizer_ConsumeEventHint                          0x0100
+
+#endif /* QGESTURERECOGNIZER_CH */

@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QLIBRARY_CH
+#define QLIBRARY_CH
 
 /*
 enum QLibrary::LoadHint
@@ -13,3 +16,5 @@ enum QLibrary::LoadHint
 #define QLibrary_ExportExternalSymbolsHint                           0x02
 #define QLibrary_LoadArchiveMemberHint                               0x04
 #define QLibrary_ImprovedSearchHeuristics                            0x08
+
+#endif /* QLIBRARY_CH */

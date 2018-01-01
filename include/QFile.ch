@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QFILE_CH
+#define QFILE_CH
 
 /*
 enum QFile::FileError
@@ -53,3 +56,5 @@ flags QFile::Permissions
 #define QFile_ReadOther                                              0x0004
 #define QFile_WriteOther                                             0x0002
 #define QFile_ExeOther                                               0x0001
+
+#endif /* QFILE_CH */

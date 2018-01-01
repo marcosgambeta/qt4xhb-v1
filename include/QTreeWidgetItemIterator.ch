@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QTREEWIDGETITEMITERATOR_CH
+#define QTREEWIDGETITEMITERATOR_CH
 
 /*
 enum QTreeWidgetItemIterator::IteratorFlag
@@ -30,3 +33,5 @@ flags QTreeWidgetItemIterator::IteratorFlags
 #define QTreeWidgetItemIterator_Editable                             0x00010000
 #define QTreeWidgetItemIterator_NotEditable                          0x00020000
 #define QTreeWidgetItemIterator_UserFlag                             0x01000000
+
+#endif /* QTREEWIDGETITEMITERATOR_CH */

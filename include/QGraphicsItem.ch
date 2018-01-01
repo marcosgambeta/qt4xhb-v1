@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QGRAPHICSITEM_CH
+#define QGRAPHICSITEM_CH
 
 /*
 enum QGraphicsItem::CacheMode
@@ -78,3 +81,5 @@ enum QGraphicsItem::PanelModality
 #define QGraphicsItem_NonModal                                       0
 #define QGraphicsItem_PanelModal                                     1
 #define QGraphicsItem_SceneModal                                     2
+
+#endif /* QGRAPHICSITEM_CH */

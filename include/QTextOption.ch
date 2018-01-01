@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QTEXTOPTION_CH
+#define QTEXTOPTION_CH
 
 /*
 enum QTextOption::Flag
@@ -32,3 +35,5 @@ enum QTextOption::WrapMode
 #define QTextOption_ManualWrap                                       2
 #define QTextOption_WrapAnywhere                                     3
 #define QTextOption_WrapAtWordBoundaryOrAnywhere                     4
+
+#endif /* QTEXTOPTION_CH */

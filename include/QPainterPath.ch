@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QPAINTERPATH_CH
+#define QPAINTERPATH_CH
 
 /*
 enum QPainterPath::ElementType
@@ -13,3 +16,5 @@ enum QPainterPath::ElementType
 #define QPainterPath_LineToElement                                   1
 #define QPainterPath_CurveToElement                                  2
 #define QPainterPath_CurveToDataElement                              3
+
+#endif /* QPAINTERPATH_CH */

@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QIMAGEREADER_CH
+#define QIMAGEREADER_CH
 
 /*
 enum QImageReader::ImageReaderError
@@ -14,3 +17,5 @@ enum QImageReader::ImageReaderError
 #define QImageReader_UnsupportedFormatError                          3
 #define QImageReader_InvalidDataError                                4
 #define QImageReader_UnknownError                                    0
+
+#endif /* QIMAGEREADER_CH */

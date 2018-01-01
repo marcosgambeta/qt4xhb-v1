@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QSQL_CH
+#define QSQL_CH
 
 /*
 enum QSql::Location
@@ -36,3 +39,5 @@ enum QSql::TableType
 #define QSql_SystemTables                                  0x02
 #define QSql_Views                                         0x04
 #define QSql_AllTables                                     0xff
+
+#endif /* QSQL_CH */

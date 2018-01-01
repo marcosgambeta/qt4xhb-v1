@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QTEXTCHARFORMAT_CH
+#define QTEXTCHARFORMAT_CH
 
 /*
 enum QTextCharFormat::UnderlineStyle
@@ -28,3 +31,5 @@ enum QTextCharFormat::VerticalAlignment
 #define QTextCharFormat_AlignBottom                                  5
 #define QTextCharFormat_AlignTop                                     4
 #define QTextCharFormat_AlignBaseline                                6
+
+#endif /* QTEXTCHARFORMAT_CH */

@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QCALENDARWIDGET_CH
+#define QCALENDARWIDGET_CH
 
 /*
 enum QCalendarWidget::HorizontalHeaderFormat
@@ -25,3 +28,5 @@ enum QCalendarWidget::VerticalHeaderFormat
 */
 #define QCalendarWidget_ISOWeekNumbers                               1
 #define QCalendarWidget_NoVerticalHeader                             0
+
+#endif /* QCALENDARWIDGET_CH */

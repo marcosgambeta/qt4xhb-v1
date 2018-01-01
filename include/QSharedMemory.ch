@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QSHAREDMEMORY_CH
+#define QSHAREDMEMORY_CH
 
 /*
 enum QSharedMemory::AccessMode
@@ -24,3 +27,5 @@ enum QSharedMemory::SharedMemoryError
 #define QSharedMemory_LockError                                      6
 #define QSharedMemory_OutOfResources                                 7
 #define QSharedMemory_UnknownError                                   8
+
+#endif /* QSHAREDMEMORY_CH */

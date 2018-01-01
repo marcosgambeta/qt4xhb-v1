@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QKEYSEQUENCE_CH
+#define QKEYSEQUENCE_CH
 
 /*
 enum QKeySequence::SequenceFormat
@@ -88,3 +91,5 @@ enum QKeySequence::StandardKey
 #define QKeySequence_WhatsThis                                       2
 #define QKeySequence_ZoomIn                                          16
 #define QKeySequence_ZoomOut                                         17
+
+#endif /* QKEYSEQUENCE_CH */

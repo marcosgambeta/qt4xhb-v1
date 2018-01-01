@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QTEXTITEM_CH
+#define QTEXTITEM_CH
 
 /*
 enum QTextItem::RenderFlag
@@ -14,3 +17,5 @@ flags QTextItem::RenderFlags
 #define QTextItem_Overline                                           0x10
 #define QTextItem_Underline                                          0x20
 #define QTextItem_StrikeOut                                          0x40
+
+#endif /* QTEXTITEM_CH */

@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QSIZEPOLICY_CH
+#define QSIZEPOLICY_CH
 
 /*
 enum QSizePolicy::ControlType
@@ -44,3 +47,5 @@ enum QSizePolicy::Policy
 #define QSizePolicy_Expanding                                        hb_bitor(hb_bitor(QSizePolicy_GrowFlag,QSizePolicy_ShrinkFlag),QSizePolicy_ExpandFlag)
 #define QSizePolicy_MinimumExpanding                                 hb_bitor(QSizePolicy_GrowFlag,QSizePolicy_ExpandFlag)
 #define QSizePolicy_Ignored                                          hb_bitor(hb_bitor(QSizePolicy_ShrinkFlag,QSizePolicy_GrowFlag),QSizePolicy_IgnoreFlag)
+
+#endif /* QSIZEPOLICY_CH */

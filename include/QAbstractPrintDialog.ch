@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QABSTRACTPRINTDIALOG_CH
+#define QABSTRACTPRINTDIALOG_CH
 
 /*
 enum QAbstractPrintDialog::PrintDialogOption
@@ -26,3 +29,5 @@ enum QAbstractPrintDialog::PrintRange
 #define QAbstractPrintDialog_Selection                               1
 #define QAbstractPrintDialog_PageRange                               2
 #define QAbstractPrintDialog_CurrentPage                             3
+
+#endif /* QABSTRACTPRINTDIALOG_CH */

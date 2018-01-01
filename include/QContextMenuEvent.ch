@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QCONTEXTMENUEVENT_CH
+#define QCONTEXTMENUEVENT_CH
 
 /*
 enum QContextMenuEvent::Reason
@@ -12,3 +15,5 @@ enum QContextMenuEvent::Reason
 #define QContextMenuEvent_Mouse                                      0
 #define QContextMenuEvent_Keyboard                                   1
 #define QContextMenuEvent_Other                                      2
+
+#endif /* QCONTEXTMENUEVENT_CH */

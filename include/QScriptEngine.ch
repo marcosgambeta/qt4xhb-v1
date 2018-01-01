@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QSCRIPTENGINE_CH
+#define QSCRIPTENGINE_CH
 
 /*
 enum QScriptEngine::QObjectWrapOption
@@ -26,3 +29,5 @@ enum QScriptEngine::ValueOwnership
 #define QScriptEngine_QtOwnership                                    0
 #define QScriptEngine_ScriptOwnership                                1
 #define QScriptEngine_AutoOwnership                                  2
+
+#endif /* QSCRIPTENGINE_CH */

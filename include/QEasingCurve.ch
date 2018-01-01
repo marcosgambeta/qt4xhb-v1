@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QEASINGCURVE_CH
+#define QEASINGCURVE_CH
 
 /*
 enum QEasingCurve::Type
@@ -53,3 +56,5 @@ enum QEasingCurve::Type
 #define QEasingCurve_BezierSpline                                    45
 #define QEasingCurve_TCBSpline                                       46
 #define QEasingCurve_Custom                                          47
+
+#endif /* QEASINGCURVE_CH */

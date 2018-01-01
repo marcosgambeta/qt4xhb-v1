@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - biblioteca de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QT4XHB_UTILS_H
+#define QT4XHB_UTILS_H
 
 #include <QString>
 #include <QObject>
@@ -25,3 +28,5 @@ void _qt4xhb_storePointerAndFlag (void * pointer, bool flag);
 void _qt4xhb_convert_qstringlist_to_array ( const QStringList list );
 void * _qt4xhb_itemGetPtr( int numpar );
 void * _qt4xhb_itemGetPtrStackSelfItem ();
+
+#endif /* QT4XHB_UTILS_H */

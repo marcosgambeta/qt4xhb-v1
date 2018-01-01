@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QFONT_CH
+#define QFONT_CH
 
 /*
 enum QFont::Capitalization
@@ -82,3 +85,5 @@ enum QFont::Weight
 #define QFont_DemiBold                                               63
 #define QFont_Bold                                                   75
 #define QFont_Black                                                  87
+
+#endif /* QFONT_CH */

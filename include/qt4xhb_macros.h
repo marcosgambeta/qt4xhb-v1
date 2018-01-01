@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QT4XHB_MACROS_H
+#define QT4XHB_MACROS_H
 
 #define ISOPTLOG(n) (ISLOG(n)||ISNIL(n))
 #define ISOPTNUM(n) (ISNUM(n)||ISNIL(n))
@@ -1428,6 +1431,7 @@
 #define OPGLENUM(n,v)                                       (GLenum) ISNIL(n)? v : hb_parni(n)
 #define OPGLBITFIELD(n,v)                                   (GLbitfield) ISNIL(n)? v : hb_parni(n)
 #define OPGLSIZEI(n,v)                                      (GLsizei) ISNIL(n)? v : hb_parni(n)
+#define OPCONSTCHAR(n,v)                                    (const char *) ISNIL(n)? v : hb_parc(n)
 
 // macros for return's
 #define RQSTRING(x)                                         hb_retc( (const char *) x.toAscii().data() )
@@ -1463,3 +1467,5 @@
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  (const char *) x.toAscii().data()
+
+#endif /* QT4XHB_MACROS_H */

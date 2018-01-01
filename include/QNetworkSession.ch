@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QNETWORKSESSION_CH
+#define QNETWORKSESSION_CH
 
 /*
 enum QNetworkSession::SessionError
@@ -25,3 +28,5 @@ enum QNetworkSession::State
 #define QNetworkSession_Closing                                      4
 #define QNetworkSession_Disconnected                                 5
 #define QNetworkSession_Roaming                                      6
+
+#endif /* QNETWORKSESSION_CH */

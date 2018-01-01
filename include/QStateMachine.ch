@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QSTATEMACHINE_CH
+#define QSTATEMACHINE_CH
 
 /*
 enum QStateMachine::Error
@@ -25,3 +28,5 @@ enum QStateMachine::RestorePolicy
 */
 #define QStateMachine_DontRestoreProperties                          0
 #define QStateMachine_RestoreProperties                              1
+
+#endif /* QSTATEMACHINE_CH */

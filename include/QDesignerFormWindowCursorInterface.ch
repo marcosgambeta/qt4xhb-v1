@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QDESIGNERFORMWINDOWCURSORINTERFACE_CH
+#define QDESIGNERFORMWINDOWCURSORINTERFACE_CH
 
 /*
 enum QDesignerFormWindowCursorInterface::MoveMode
@@ -24,3 +27,5 @@ enum QDesignerFormWindowCursorInterface::MoveOperation
 #define QDesignerFormWindowCursorInterface_Right                     6
 #define QDesignerFormWindowCursorInterface_Up                        7
 #define QDesignerFormWindowCursorInterface_Down                      8
+
+#endif /* QDESIGNERFORMWINDOWCURSORINTERFACE_CH */

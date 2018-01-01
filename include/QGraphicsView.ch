@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QGRAPHICSVIEW_CH
+#define QGRAPHICSVIEW_CH
 
 /*
 enum QGraphicsView::CacheModeFlag
@@ -44,3 +47,5 @@ enum QGraphicsView::ViewportUpdateMode
 #define QGraphicsView_SmartViewportUpdate                            2
 #define QGraphicsView_BoundingRectViewportUpdate                     4
 #define QGraphicsView_NoViewportUpdate                               3
+
+#endif /* QGRAPHICSVIEW_CH */

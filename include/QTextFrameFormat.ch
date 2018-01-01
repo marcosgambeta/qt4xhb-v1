@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QTEXTFRAMEFORMAT_CH
+#define QTEXTFRAMEFORMAT_CH
 
 /*
 enum QTextFrameFormat::BorderStyle
@@ -27,3 +30,5 @@ enum QTextFrameFormat::Position
 #define QTextFrameFormat_InFlow                                      0
 #define QTextFrameFormat_FloatLeft                                   1
 #define QTextFrameFormat_FloatRight                                  2
+
+#endif /* QTEXTFRAMEFORMAT_CH */

@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QDECLARATIVEVIEW_CH
+#define QDECLARATIVEVIEW_CH
 
 /*
 enum QDeclarativeView::ResizeMode
@@ -19,3 +22,5 @@ enum QDeclarativeView::Status
 #define QDeclarativeView_Ready                                       1
 #define QDeclarativeView_Loading                                     2
 #define QDeclarativeView_Error                                       3
+
+#endif /* QDECLARATIVEVIEW_CH */

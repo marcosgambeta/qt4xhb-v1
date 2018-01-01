@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QMOVIE_CH
+#define QMOVIE_CH
 
 /*
 enum QMovie::CacheMode
@@ -18,3 +21,5 @@ enum QMovie::MovieState
 #define QMovie_NotRunning                                            0
 #define QMovie_Paused                                                1
 #define QMovie_Running                                               2
+
+#endif /* QMOVIE_CH */

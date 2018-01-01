@@ -1,13 +1,18 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QNETWORKCOOKIE_CH
+#define QNETWORKCOOKIE_CH
 
 /*
 enum QNetworkCookie::RawForm
 */
 #define QNetworkCookie_NameAndValueOnly                              0
 #define QNetworkCookie_Full                                          1
+
+#endif /* QNETWORKCOOKIE_CH */

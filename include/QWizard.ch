@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QWIZARD_CH
+#define QWIZARD_CH
 
 /*
 enum QWizard::WizardButton
@@ -56,3 +59,5 @@ enum QWizard::WizardStyle
 #define QWizard_ModernStyle                                          1
 #define QWizard_MacStyle                                             2
 #define QWizard_AeroStyle                                            3
+
+#endif /* QWIZARD_CH */

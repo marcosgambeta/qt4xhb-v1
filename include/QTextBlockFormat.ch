@@ -1,10 +1,13 @@
 /*
 
-  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QTEXTBLOCKFORMAT_CH
+#define QTEXTBLOCKFORMAT_CH
 
 /*
 enum QTextBlockFormat::LineHeightTypes
@@ -14,3 +17,5 @@ enum QTextBlockFormat::LineHeightTypes
 #define QTextBlockFormat_FixedHeight                                 2
 #define QTextBlockFormat_MinimumHeight                               3
 #define QTextBlockFormat_LineDistanceHeight                          4
+
+#endif /* QTEXTBLOCKFORMAT_CH */
