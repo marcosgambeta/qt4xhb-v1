@@ -18,8 +18,6 @@ CLASS QDeclarativeScriptString
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD context
    METHOD scopeObject
@@ -57,7 +55,7 @@ RETURN
 /*
 QDeclarativeScriptString ()
 */
-HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW1 )
+void QDeclarativeScriptString_new1 ()
 {
   QDeclarativeScriptString * o = new QDeclarativeScriptString ();
   _qt4xhb_storePointerAndFlag( o, true );
@@ -66,7 +64,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW1 )
 /*
 QDeclarativeScriptString ( const QDeclarativeScriptString & other )
 */
-HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW2 )
+void QDeclarativeScriptString_new2 ()
 {
   QDeclarativeScriptString * o = new QDeclarativeScriptString ( *PQDECLARATIVESCRIPTSTRING(1) );
   _qt4xhb_storePointerAndFlag( o, true );
@@ -79,11 +77,11 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDECLARATIVESCRIPTSTRING_NEW1 );
+    QDeclarativeScriptString_new1();
   }
   else if( ISNUMPAR(1) && ISQDECLARATIVESCRIPTSTRING(1) )
   {
-    HB_FUNC_EXEC( QDECLARATIVESCRIPTSTRING_NEW2 );
+    QDeclarativeScriptString_new2();
   }
   else
   {

@@ -18,10 +18,6 @@ REQUEST QDECLARATIVECONTEXT
 
 CLASS QDeclarativeContext INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD baseUrl
@@ -33,8 +29,6 @@ CLASS QDeclarativeContext INHERIT QObject
    METHOD resolvedUrl
    METHOD setBaseUrl
    METHOD setContextObject
-   METHOD setContextProperty1
-   METHOD setContextProperty2
    METHOD setContextProperty
 
    DESTRUCTOR destroyObject
@@ -60,7 +54,7 @@ RETURN
 /*
 QDeclarativeContext ( QDeclarativeEngine * engine, QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QDECLARATIVECONTEXT_NEW1 )
+void QDeclarativeContext_new1 ()
 {
   QDeclarativeContext * o = new QDeclarativeContext ( PQDECLARATIVEENGINE(1), OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag( o, false );
@@ -69,7 +63,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_NEW1 )
 /*
 QDeclarativeContext ( QDeclarativeContext * parentContext, QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QDECLARATIVECONTEXT_NEW2 )
+void QDeclarativeContext_new2 ()
 {
   QDeclarativeContext * o = new QDeclarativeContext ( PQDECLARATIVECONTEXT(1), OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag( o, false );
@@ -82,11 +76,11 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_NEW )
 {
   if( ISBETWEEN(1,2) && ISQDECLARATIVEENGINE(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QDECLARATIVECONTEXT_NEW1 );
+    QDeclarativeContext_new1();
   }
   else if( ISBETWEEN(1,2) && ISQDECLARATIVECONTEXT(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QDECLARATIVECONTEXT_NEW2 );
+    QDeclarativeContext_new2();
   }
   else
   {
@@ -304,20 +298,13 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETCONTEXTOBJECT )
 /*
 void setContextProperty ( const QString & name, QObject * value )
 */
-HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETCONTEXTPROPERTY1 )
+void QDeclarativeContext_setContextProperty1 ()
 {
   QDeclarativeContext * obj = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISCHAR(1) && ISQOBJECT(2) )
-    {
       obj->setContextProperty ( PQSTRING(1), PQOBJECT(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -326,20 +313,13 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETCONTEXTPROPERTY1 )
 /*
 void setContextProperty ( const QString & name, const QVariant & value )
 */
-HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETCONTEXTPROPERTY2 )
+void QDeclarativeContext_setContextProperty2 ()
 {
   QDeclarativeContext * obj = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISCHAR(1) && ISQVARIANT(2) )
-    {
       obj->setContextProperty ( PQSTRING(1), *PQVARIANT(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -352,11 +332,11 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETCONTEXTPROPERTY )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISQOBJECT(2) )
   {
-    HB_FUNC_EXEC( QDECLARATIVECONTEXT_SETCONTEXTPROPERTY1 );
+    QDeclarativeContext_setContextProperty1();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISQVARIANT(2) )
   {
-    HB_FUNC_EXEC( QDECLARATIVECONTEXT_SETCONTEXTPROPERTY2 );
+    QDeclarativeContext_setContextProperty2();
   }
   else
   {

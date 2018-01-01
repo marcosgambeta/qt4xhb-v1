@@ -18,10 +18,6 @@ REQUEST QOBJECT
 
 CLASS QDeclarativeExpression INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD clearError
@@ -65,7 +61,7 @@ RETURN
 /*
 QDeclarativeExpression ()
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW1 )
+void QDeclarativeExpression_new1 ()
 {
   QDeclarativeExpression * o = new QDeclarativeExpression ();
   _qt4xhb_storePointerAndFlag( o, false );
@@ -74,7 +70,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW1 )
 /*
 QDeclarativeExpression ( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW2 )
+void QDeclarativeExpression_new2 ()
 {
   QDeclarativeExpression * o = new QDeclarativeExpression ( PQDECLARATIVECONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4,0) );
   _qt4xhb_storePointerAndFlag( o, false );
@@ -87,11 +83,11 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDECLARATIVEEXPRESSION_NEW1 );
+    QDeclarativeExpression_new1();
   }
   else if( ISBETWEEN(3,4) && ISQDECLARATIVECONTEXT(1) && ISQOBJECT(2) && ISCHAR(3) && (ISQOBJECT(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QDECLARATIVEEXPRESSION_NEW2 );
+    QDeclarativeExpression_new2();
   }
   else
   {

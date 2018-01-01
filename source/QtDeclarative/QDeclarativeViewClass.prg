@@ -19,10 +19,6 @@ REQUEST QURL
 
 CLASS QDeclarativeView INHERIT QGraphicsView
 
-   DATA self_destruction INIT .F.
-
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD engine
@@ -65,7 +61,7 @@ RETURN
 /*
 QDeclarativeView ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW1 )
+void QDeclarativeView_new1 ()
 {
   QDeclarativeView * o = new QDeclarativeView ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag( o, false );
@@ -74,7 +70,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW1 )
 /*
 QDeclarativeView ( const QUrl & source, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW2 )
+void QDeclarativeView_new2 ()
 {
   QDeclarativeView * o = new QDeclarativeView ( *PQURL(1), OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag( o, false );
@@ -87,11 +83,11 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QDECLARATIVEVIEW_NEW1 );
+    QDeclarativeView_new1();
   }
   else if( ISBETWEEN(1,2) && ISQURL(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QDECLARATIVEVIEW_NEW2 );
+    QDeclarativeView_new2();
   }
   else
   {
@@ -143,12 +139,12 @@ QList<QDeclarativeError> errors () const
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
 {
   QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QDeclarativeError> list = obj->errors ();
     PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR" );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

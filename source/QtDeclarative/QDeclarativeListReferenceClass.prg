@@ -18,8 +18,6 @@ CLASS QDeclarativeListReference
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD append
    METHOD at
@@ -60,7 +58,7 @@ RETURN
 /*
 QDeclarativeListReference ()
 */
-HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW1 )
+void QDeclarativeListReference_new1 ()
 {
   QDeclarativeListReference * o = new QDeclarativeListReference ();
   _qt4xhb_storePointerAndFlag( o, true );
@@ -69,7 +67,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW1 )
 /*
 QDeclarativeListReference ( QObject * object, const char * property, QDeclarativeEngine * engine = 0 )
 */
-HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW2 )
+void QDeclarativeListReference_new2 ()
 {
   QDeclarativeListReference * o = new QDeclarativeListReference ( PQOBJECT(1), PCONSTCHAR(2), OPQDECLARATIVEENGINE(3,0) );
   _qt4xhb_storePointerAndFlag( o, true );
@@ -82,11 +80,11 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDECLARATIVELISTREFERENCE_NEW1 );
+    QDeclarativeListReference_new1();
   }
   else if( ISBETWEEN(2,3) && ISQOBJECT(1) && ISCHAR(2) && (ISQDECLARATIVEENGINE(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QDECLARATIVELISTREFERENCE_NEW2 );
+    QDeclarativeListReference_new2();
   }
   else
   {
