@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QAXBINDABLE_NEW )
   if( ISNUMPAR(0) )
   {
     QAxBindable * o = new QAxBindable ();
-    _qt4xhb_storePointerAndFlag( o, false );
+    _qt4xhb_storePointerAndFlag( o, true );
   }
   else
   {

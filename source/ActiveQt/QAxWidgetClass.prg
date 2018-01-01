@@ -17,8 +17,6 @@ REQUEST QAXOBJECT
 
 CLASS QAxWidget INHERIT QWidget,QAxBase
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD createAggregate
@@ -369,6 +367,7 @@ QVariant dynamicCall ( const char * function, QList<QVariant> & vars )
 void QAxWidget_dynamicCall2 ()
 {
   QAxWidget * obj = (QAxWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QVariant> par2;
