@@ -243,7 +243,7 @@ $prototype=static bool startDetached ( const QString & program, const QStringLis
 $internalStaticMethod=|bool|startDetached,startDetached2|const QString &,const QStringList &
 
 $prototype=static bool startDetached ( const QString & program )
-$internalStaticMethod=|bool|startDetached|const QString &
+$internalStaticMethod=|bool|startDetached,startDetached3|const QString &
 
 //[1]bool startDetached ( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = 0 )
 //[2]bool startDetached ( const QString & program, const QStringList & arguments )

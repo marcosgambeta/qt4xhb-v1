@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QLINEF_TRANSLATE )
 }
 
 $prototype=QLineF translated(const QPointF & offset) const
-$internalMethod=|QLineF|translated,translated2|const QPointF &
+$internalMethod=|QLineF|translated,translated1|const QPointF &
 
 $prototype=QLineF translated(qreal dx, qreal dy) const
 $internalMethod=|QLineF|translated,translated2|qreal,qreal

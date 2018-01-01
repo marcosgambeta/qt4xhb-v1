@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QRECT_TRANSLATED )
 $prototype=QRect united ( const QRect & rectangle ) const
 $method=|QRect|united|const QRect &
 
-prototype=int width () const
+$prototype=int width () const
 $method=|int|width|
 
 $prototype=int x () const

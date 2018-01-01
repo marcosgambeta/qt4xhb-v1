@@ -81,11 +81,11 @@ HB_FUNC_STATIC( QTHREADPOOL_WAITFORDONE )
 {
   if( ISNUMPAR(0) )
   {
-    QThreadPool_WaitForDone1();
+    QThreadPool_waitForDone1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    QThreadPool_WaitForDone2();
+    QThreadPool_waitForDone2();
   }
   else
   {

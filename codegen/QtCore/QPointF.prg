@@ -58,15 +58,15 @@ HB_FUNC_STATIC( QPOINTF_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QPointf_new1();
+    QPointF_new1();
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    QPointf_new2();
+    QPointF_new2();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    QPointf_new3();
+    QPointF_new3();
   }
   else
   {
