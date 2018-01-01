@@ -19,11 +19,13 @@ CLASS QAbstractFileEngineHandler
 
    METHOD delete
    METHOD create
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -65,10 +67,18 @@ virtual QAbstractFileEngine * create ( const QString & fileName ) const = 0
 HB_FUNC_STATIC( QABSTRACTFILEENGINEHANDLER_CREATE )
 {
   QAbstractFileEngineHandler * obj = (QAbstractFileEngineHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QAbstractFileEngine * ptr = obj->create ( PQSTRING(1) );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTFILEENGINE" );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      QAbstractFileEngine * ptr = obj->create ( PQSTRING(1) );
+      _qt4xhb_createReturnClass ( ptr, "QABSTRACTFILEENGINE", false );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

@@ -19,11 +19,13 @@ CLASS QBasicTimer
    METHOD start
    METHOD stop
    METHOD timerId
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -47,8 +49,15 @@ QBasicTimer ()
 */
 HB_FUNC_STATIC( QBASICTIMER_NEW )
 {
-  QBasicTimer * o = new QBasicTimer ();
-  _qt4xhb_storePointerAndFlag ( o, false );
+  if( ISNUMPAR(0) )
+  {
+    QBasicTimer * o = new QBasicTimer ();
+    _qt4xhb_storePointerAndFlag( o, true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QBASICTIMER_DELETE )
@@ -74,9 +83,17 @@ bool isActive () const
 HB_FUNC_STATIC( QBASICTIMER_ISACTIVE )
 {
   QBasicTimer * obj = (QBasicTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isActive () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isActive () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -86,10 +103,19 @@ void start ( int msec, QObject * object )
 HB_FUNC_STATIC( QBASICTIMER_START )
 {
   QBasicTimer * obj = (QBasicTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->start ( PINT(1), PQOBJECT(2) );
+    if( ISNUMPAR(2) && ISNUM(1) && ISQOBJECT(2) )
+    {
+      obj->start ( PINT(1), PQOBJECT(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -99,10 +125,19 @@ void stop ()
 HB_FUNC_STATIC( QBASICTIMER_STOP )
 {
   QBasicTimer * obj = (QBasicTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->stop ();
+    if( ISNUMPAR(0) )
+    {
+      obj->stop ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -112,9 +147,17 @@ int timerId () const
 HB_FUNC_STATIC( QBASICTIMER_TIMERID )
 {
   QBasicTimer * obj = (QBasicTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->timerId () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->timerId () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

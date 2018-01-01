@@ -15,8 +15,6 @@ REQUEST QEASINGCURVE
 
 CLASS QVariantAnimation INHERIT QAbstractAnimation
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD currentValue
    METHOD easingCurve
@@ -28,7 +26,9 @@ CLASS QVariantAnimation INHERIT QAbstractAnimation
    METHOD setKeyValueAt
    METHOD setStartValue
    METHOD startValue
+
    METHOD onValueChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -70,10 +70,18 @@ QVariant currentValue () const
 HB_FUNC_STATIC( QVARIANTANIMATION_CURRENTVALUE )
 {
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->currentValue () );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    if( ISNUMPAR(0) )
+    {
+      QVariant * ptr = new QVariant( obj->currentValue () );
+      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -83,10 +91,18 @@ QEasingCurve easingCurve () const
 HB_FUNC_STATIC( QVARIANTANIMATION_EASINGCURVE )
 {
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QEasingCurve * ptr = new QEasingCurve( obj->easingCurve () );
-    _qt4xhb_createReturnClass ( ptr, "QEASINGCURVE" );
+    if( ISNUMPAR(0) )
+    {
+      QEasingCurve * ptr = new QEasingCurve( obj->easingCurve () );
+      _qt4xhb_createReturnClass ( ptr, "QEASINGCURVE", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -96,10 +112,18 @@ QVariant endValue () const
 HB_FUNC_STATIC( QVARIANTANIMATION_ENDVALUE )
 {
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->endValue () );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    if( ISNUMPAR(0) )
+    {
+      QVariant * ptr = new QVariant( obj->endValue () );
+      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -109,10 +133,18 @@ QVariant keyValueAt ( qreal step ) const
 HB_FUNC_STATIC( QVARIANTANIMATION_KEYVALUEAT )
 {
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->keyValueAt ( PQREAL(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      QVariant * ptr = new QVariant( obj->keyValueAt ( PQREAL(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -122,10 +154,19 @@ void setDuration ( int msecs )
 HB_FUNC_STATIC( QVARIANTANIMATION_SETDURATION )
 {
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setDuration ( PINT(1) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setDuration ( PINT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -135,10 +176,19 @@ void setEasingCurve ( const QEasingCurve & easing )
 HB_FUNC_STATIC( QVARIANTANIMATION_SETEASINGCURVE )
 {
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setEasingCurve ( *PQEASINGCURVE(1) );
+    if( ISNUMPAR(1) && ISQEASINGCURVE(1) )
+    {
+      obj->setEasingCurve ( *PQEASINGCURVE(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -148,10 +198,19 @@ void setEndValue ( const QVariant & value )
 HB_FUNC_STATIC( QVARIANTANIMATION_SETENDVALUE )
 {
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setEndValue ( *PQVARIANT(1) );
+    if( ISNUMPAR(1) && ISQVARIANT(1) )
+    {
+      obj->setEndValue ( *PQVARIANT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -161,10 +220,19 @@ void setKeyValueAt ( qreal step, const QVariant & value )
 HB_FUNC_STATIC( QVARIANTANIMATION_SETKEYVALUEAT )
 {
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setKeyValueAt ( PQREAL(1), *PQVARIANT(2) );
+    if( ISNUMPAR(2) && ISNUM(1) && ISQVARIANT(2) )
+    {
+      obj->setKeyValueAt ( PQREAL(1), *PQVARIANT(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -174,10 +242,19 @@ void setStartValue ( const QVariant & value )
 HB_FUNC_STATIC( QVARIANTANIMATION_SETSTARTVALUE )
 {
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setStartValue ( *PQVARIANT(1) );
+    if( ISNUMPAR(1) && ISQVARIANT(1) )
+    {
+      obj->setStartValue ( *PQVARIANT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -187,10 +264,18 @@ QVariant startValue () const
 HB_FUNC_STATIC( QVARIANTANIMATION_STARTVALUE )
 {
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->startValue () );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    if( ISNUMPAR(0) )
+    {
+      QVariant * ptr = new QVariant( obj->startValue () );
+      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

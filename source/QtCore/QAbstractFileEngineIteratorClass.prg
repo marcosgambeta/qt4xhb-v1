@@ -26,11 +26,13 @@ CLASS QAbstractFileEngineIterator
    METHOD nameFilters
    METHOD next
    METHOD path
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -72,10 +74,18 @@ virtual QFileInfo currentFileInfo () const
 HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_CURRENTFILEINFO )
 {
   QAbstractFileEngineIterator * obj = (QAbstractFileEngineIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QFileInfo * ptr = new QFileInfo( obj->currentFileInfo () );
-    _qt4xhb_createReturnClass ( ptr, "QFILEINFO", true );
+    if( ISNUMPAR(0) )
+    {
+      QFileInfo * ptr = new QFileInfo( obj->currentFileInfo () );
+      _qt4xhb_createReturnClass ( ptr, "QFILEINFO", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -125,9 +135,17 @@ QDir::Filters filters () const
 HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_FILTERS )
 {
   QAbstractFileEngineIterator * obj = (QAbstractFileEngineIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->filters () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->filters () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -137,9 +155,17 @@ virtual bool hasNext () const = 0
 HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_HASNEXT )
 {
   QAbstractFileEngineIterator * obj = (QAbstractFileEngineIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->hasNext () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->hasNext () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -149,9 +175,17 @@ QStringList nameFilters () const
 HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_NAMEFILTERS )
 {
   QAbstractFileEngineIterator * obj = (QAbstractFileEngineIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRINGLIST( obj->nameFilters () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRINGLIST( obj->nameFilters () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

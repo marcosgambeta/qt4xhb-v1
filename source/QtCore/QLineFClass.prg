@@ -19,10 +19,6 @@ CLASS QLineF
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD p1
@@ -46,19 +42,17 @@ CLASS QLineF
    METHOD setLine
    METHOD setPoints
    METHOD toLine
-   METHOD translate1
-   METHOD translate2
    METHOD translate
-   METHOD translated1
-   METHOD translated2
    METHOD translated
    METHOD unitVector
    METHOD fromPolar
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -80,37 +74,37 @@ RETURN
 /*
 QLineF()
 */
-HB_FUNC_STATIC( QLINEF_NEW1 )
+void QLineF_new1 ()
 {
   QLineF * o = new QLineF ();
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
 QLineF(const QPointF & p1, const QPointF & p2)
 */
-HB_FUNC_STATIC( QLINEF_NEW2 )
+void QLineF_new2 ()
 {
   QLineF * o = new QLineF ( *PQPOINTF(1), *PQPOINTF(2) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
 QLineF(qreal x1, qreal y1, qreal x2, qreal y2)
 */
-HB_FUNC_STATIC( QLINEF_NEW3 )
+void QLineF_new3 ()
 {
   QLineF * o = new QLineF ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
 QLineF(const QLine & line)
 */
-HB_FUNC_STATIC( QLINEF_NEW4 )
+void QLineF_new4 ()
 {
   QLineF * o = new QLineF ( *PQLINE(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QLineF()
@@ -122,19 +116,19 @@ HB_FUNC_STATIC( QLINEF_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QLINEF_NEW1 );
+    QLineF_new1();
   }
   else if( ISNUMPAR(2) && ISQPOINTF(1) && ISQPOINTF(2) )
   {
-    HB_FUNC_EXEC( QLINEF_NEW2 );
+    QLineF_new2();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QLINEF_NEW3 );
+    QLineF_new3();
   }
   else if( ISNUMPAR(1) && ISQLINE(1) )
   {
-    HB_FUNC_EXEC( QLINEF_NEW4 );
+    QLineF_new4();
   }
   else
   {
@@ -165,10 +159,18 @@ QPointF p1() const
 HB_FUNC_STATIC( QLINEF_P1 )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->p1 () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    if( ISNUMPAR(0) )
+    {
+      QPointF * ptr = new QPointF( obj->p1 () );
+      _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -178,10 +180,18 @@ QPointF p2() const
 HB_FUNC_STATIC( QLINEF_P2 )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->p2 () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    if( ISNUMPAR(0) )
+    {
+      QPointF * ptr = new QPointF( obj->p2 () );
+      _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -191,9 +201,17 @@ qreal x1() const
 HB_FUNC_STATIC( QLINEF_X1 )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQREAL( obj->x1 () );
+    if( ISNUMPAR(0) )
+    {
+      RQREAL( obj->x1 () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -203,9 +221,17 @@ qreal x2() const
 HB_FUNC_STATIC( QLINEF_X2 )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQREAL( obj->x2 () );
+    if( ISNUMPAR(0) )
+    {
+      RQREAL( obj->x2 () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -215,9 +241,17 @@ qreal y1() const
 HB_FUNC_STATIC( QLINEF_Y1 )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQREAL( obj->y1 () );
+    if( ISNUMPAR(0) )
+    {
+      RQREAL( obj->y1 () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -227,9 +261,17 @@ qreal y2() const
 HB_FUNC_STATIC( QLINEF_Y2 )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQREAL( obj->y2 () );
+    if( ISNUMPAR(0) )
+    {
+      RQREAL( obj->y2 () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -239,9 +281,17 @@ qreal angle() const
 HB_FUNC_STATIC( QLINEF_ANGLE )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQREAL( obj->angle () );
+    if( ISNUMPAR(0) )
+    {
+      RQREAL( obj->angle () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -251,9 +301,17 @@ qreal angleTo(const QLineF & line) const
 HB_FUNC_STATIC( QLINEF_ANGLETO )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQREAL( obj->angleTo ( *PQLINEF(1) ) );
+    if( ISNUMPAR(1) && ISQLINEF(1) )
+    {
+      RQREAL( obj->angleTo ( *PQLINEF(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -263,9 +321,17 @@ qreal dx() const
 HB_FUNC_STATIC( QLINEF_DX )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQREAL( obj->dx () );
+    if( ISNUMPAR(0) )
+    {
+      RQREAL( obj->dx () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -275,9 +341,17 @@ qreal dy() const
 HB_FUNC_STATIC( QLINEF_DY )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQREAL( obj->dy () );
+    if( ISNUMPAR(0) )
+    {
+      RQREAL( obj->dy () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -287,9 +361,17 @@ bool isNull() const
 HB_FUNC_STATIC( QLINEF_ISNULL )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isNull () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isNull () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -299,9 +381,17 @@ qreal length() const
 HB_FUNC_STATIC( QLINEF_LENGTH )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQREAL( obj->length () );
+    if( ISNUMPAR(0) )
+    {
+      RQREAL( obj->length () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -311,10 +401,18 @@ QLineF normalVector() const
 HB_FUNC_STATIC( QLINEF_NORMALVECTOR )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QLineF * ptr = new QLineF( obj->normalVector () );
-    _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
+    if( ISNUMPAR(0) )
+    {
+      QLineF * ptr = new QLineF( obj->normalVector () );
+      _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -324,10 +422,18 @@ QPointF pointAt(qreal t) const
 HB_FUNC_STATIC( QLINEF_POINTAT )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->pointAt ( PQREAL(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      QPointF * ptr = new QPointF( obj->pointAt ( PQREAL(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -337,10 +443,19 @@ void setP1(const QPointF & p1)
 HB_FUNC_STATIC( QLINEF_SETP1 )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setP1 ( *PQPOINTF(1) );
+    if( ISNUMPAR(1) && ISQPOINTF(1) )
+    {
+      obj->setP1 ( *PQPOINTF(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -350,10 +465,19 @@ void setP2(const QPointF & p2)
 HB_FUNC_STATIC( QLINEF_SETP2 )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setP2 ( *PQPOINTF(1) );
+    if( ISNUMPAR(1) && ISQPOINTF(1) )
+    {
+      obj->setP2 ( *PQPOINTF(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -363,10 +487,19 @@ void setAngle(qreal angle)
 HB_FUNC_STATIC( QLINEF_SETANGLE )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setAngle ( PQREAL(1) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setAngle ( PQREAL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -376,10 +509,19 @@ void setLength(qreal length)
 HB_FUNC_STATIC( QLINEF_SETLENGTH )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setLength ( PQREAL(1) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setLength ( PQREAL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -389,10 +531,19 @@ void setLine(qreal x1, qreal y1, qreal x2, qreal y2)
 HB_FUNC_STATIC( QLINEF_SETLINE )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setLine ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+    if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+    {
+      obj->setLine ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -402,10 +553,19 @@ void setPoints(const QPointF & p1, const QPointF & p2)
 HB_FUNC_STATIC( QLINEF_SETPOINTS )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setPoints ( *PQPOINTF(1), *PQPOINTF(2) );
+    if( ISNUMPAR(2) && ISQPOINTF(1) && ISQPOINTF(2) )
+    {
+      obj->setPoints ( *PQPOINTF(1), *PQPOINTF(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -415,36 +575,48 @@ QLine toLine() const
 HB_FUNC_STATIC( QLINEF_TOLINE )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QLine * ptr = new QLine( obj->toLine () );
-    _qt4xhb_createReturnClass ( ptr, "QLINE", true );
+    if( ISNUMPAR(0) )
+    {
+      QLine * ptr = new QLine( obj->toLine () );
+      _qt4xhb_createReturnClass ( ptr, "QLINE", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
 /*
 void translate(const QPointF & offset)
 */
-HB_FUNC_STATIC( QLINEF_TRANSLATE1 )
+void QLineF_translate1 ()
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->translate ( *PQPOINTF(1) );
+      obj->translate ( *PQPOINTF(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 void translate(qreal dx, qreal dy)
 */
-HB_FUNC_STATIC( QLINEF_TRANSLATE2 )
+void QLineF_translate2 ()
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->translate ( PQREAL(1), PQREAL(2) );
+      obj->translate ( PQREAL(1), PQREAL(2) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -455,37 +627,43 @@ HB_FUNC_STATIC( QLINEF_TRANSLATE )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    HB_FUNC_EXEC( QLINEF_TRANSLATE1 );
+    QLineF_translate1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QLINEF_TRANSLATE2 );
+    QLineF_translate2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
 /*
 QLineF translated(const QPointF & offset) const
 */
-HB_FUNC_STATIC( QLINEF_TRANSLATED1 )
+void QLineF_translated1 ()
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QLineF * ptr = new QLineF( obj->translated ( *PQPOINTF(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
+      QLineF * ptr = new QLineF( obj->translated ( *PQPOINTF(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
   }
 }
 
 /*
 QLineF translated(qreal dx, qreal dy) const
 */
-HB_FUNC_STATIC( QLINEF_TRANSLATED2 )
+void QLineF_translated2 ()
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QLineF * ptr = new QLineF( obj->translated ( PQREAL(1), PQREAL(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
+      QLineF * ptr = new QLineF( obj->translated ( PQREAL(1), PQREAL(2) ) );
+      _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
   }
 }
 
@@ -496,11 +674,15 @@ HB_FUNC_STATIC( QLINEF_TRANSLATED )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    HB_FUNC_EXEC( QLINEF_TRANSLATED1 );
+    QLineF_translated1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QLINEF_TRANSLATED2 );
+    QLineF_translated2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -510,20 +692,35 @@ QLineF unitVector() const
 HB_FUNC_STATIC( QLINEF_UNITVECTOR )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QLineF * ptr = new QLineF( obj->unitVector () );
-    _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
+    if( ISNUMPAR(0) )
+    {
+      QLineF * ptr = new QLineF( obj->unitVector () );
+      _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
 /*
-QLineF fromPolar(qreal length, qreal angle)
+static QLineF fromPolar(qreal length, qreal angle)
 */
 HB_FUNC_STATIC( QLINEF_FROMPOLAR )
 {
-  QLineF * ptr = new QLineF( QLineF::fromPolar ( PQREAL(1), PQREAL(2) ) );
-  _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
+    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  {
+      QLineF * ptr = new QLineF( QLineF::fromPolar ( PQREAL(1), PQREAL(2) ) );
+      _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QLINEF_NEWFROM )

@@ -22,11 +22,13 @@ CLASS QMutexLocker
    METHOD mutex
    METHOD relock
    METHOD unlock
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -50,8 +52,15 @@ QMutexLocker ( QMutex * mutex )
 */
 HB_FUNC_STATIC( QMUTEXLOCKER_NEW )
 {
-  QMutexLocker * o = new QMutexLocker ( PQMUTEX(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  if( ISNUMPAR(1) && ISQMUTEX(1) )
+  {
+    QMutexLocker * o = new QMutexLocker ( PQMUTEX(1) );
+    _qt4xhb_storePointerAndFlag( o, true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QMUTEXLOCKER_DELETE )
@@ -77,10 +86,18 @@ QMutex * mutex () const
 HB_FUNC_STATIC( QMUTEXLOCKER_MUTEX )
 {
   QMutexLocker * obj = (QMutexLocker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QMutex * ptr = obj->mutex ();
-    _qt4xhb_createReturnClass ( ptr, "QMUTEX" );
+    if( ISNUMPAR(0) )
+    {
+      QMutex * ptr = obj->mutex ();
+      _qt4xhb_createReturnClass ( ptr, "QMUTEX", false );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -90,10 +107,19 @@ void relock ()
 HB_FUNC_STATIC( QMUTEXLOCKER_RELOCK )
 {
   QMutexLocker * obj = (QMutexLocker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->relock ();
+    if( ISNUMPAR(0) )
+    {
+      obj->relock ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -103,10 +129,19 @@ void unlock ()
 HB_FUNC_STATIC( QMUTEXLOCKER_UNLOCK )
 {
   QMutexLocker * obj = (QMutexLocker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->unlock ();
+    if( ISNUMPAR(0) )
+    {
+      obj->unlock ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

@@ -14,8 +14,6 @@ REQUEST QABSTRACTANIMATION
 
 CLASS QStateMachine INHERIT QState
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addDefaultAnimation
@@ -37,8 +35,10 @@ CLASS QStateMachine INHERIT QState
    METHOD eventFilter
    METHOD start
    METHOD stop
+
    METHOD onStarted
    METHOD onStopped
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -62,8 +62,15 @@ QStateMachine ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSTATEMACHINE_NEW )
 {
-  QStateMachine * o = new QStateMachine ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  {
+    QStateMachine * o = new QStateMachine ( OPQOBJECT(1,0) );
+    _qt4xhb_storePointerAndFlag( o, false );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QSTATEMACHINE_DELETE )
@@ -89,11 +96,19 @@ void addDefaultAnimation ( QAbstractAnimation * animation )
 HB_FUNC_STATIC( QSTATEMACHINE_ADDDEFAULTANIMATION )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QAbstractAnimation * par1 = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addDefaultAnimation ( par1 );
+    if( ISNUMPAR(1) && ISQABSTRACTANIMATION(1) )
+    {
+      obj->addDefaultAnimation ( PQABSTRACTANIMATION(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -103,11 +118,19 @@ void addState ( QAbstractState * state )
 HB_FUNC_STATIC( QSTATEMACHINE_ADDSTATE )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QAbstractState * par1 = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addState ( par1 );
+    if( ISNUMPAR(1) && ISQABSTRACTSTATE(1) )
+    {
+      obj->addState ( PQABSTRACTSTATE(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -117,9 +140,17 @@ bool cancelDelayedEvent ( int id )
 HB_FUNC_STATIC( QSTATEMACHINE_CANCELDELAYEDEVENT )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->cancelDelayedEvent ( PINT(1) ) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      RBOOL( obj->cancelDelayedEvent ( PINT(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -129,10 +160,19 @@ void clearError ()
 HB_FUNC_STATIC( QSTATEMACHINE_CLEARERROR )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->clearError ();
+    if( ISNUMPAR(0) )
+    {
+      obj->clearError ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -142,12 +182,12 @@ QList<QAbstractAnimation *> defaultAnimations () const
 HB_FUNC_STATIC( QSTATEMACHINE_DEFAULTANIMATIONS )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QAbstractAnimation *> list = obj->defaultAnimations ();
     PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTANIMATION" );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -176,9 +216,17 @@ Error error () const
 HB_FUNC_STATIC( QSTATEMACHINE_ERROR )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->error () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->error () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -208,9 +256,17 @@ QStateMachine::RestorePolicy globalRestorePolicy () const
 HB_FUNC_STATIC( QSTATEMACHINE_GLOBALRESTOREPOLICY )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->globalRestorePolicy () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->globalRestorePolicy () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -220,9 +276,17 @@ bool isAnimated () const
 HB_FUNC_STATIC( QSTATEMACHINE_ISANIMATED )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isAnimated () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isAnimated () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -232,9 +296,17 @@ bool isRunning () const
 HB_FUNC_STATIC( QSTATEMACHINE_ISRUNNING )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isRunning () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isRunning () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -244,9 +316,17 @@ int postDelayedEvent ( QEvent * event, int delay )
 HB_FUNC_STATIC( QSTATEMACHINE_POSTDELAYEDEVENT )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->postDelayedEvent ( PQEVENT(1), PINT(2) ) );
+    if( ISNUMPAR(2) && ISQEVENT(1) && ISNUM(2) )
+    {
+      RINT( obj->postDelayedEvent ( PQEVENT(1), PINT(2) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -256,11 +336,19 @@ void postEvent ( QEvent * event, EventPriority priority = NormalPriority )
 HB_FUNC_STATIC( QSTATEMACHINE_POSTEVENT )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    int par2 = ISNIL(2)? (int) QStateMachine::NormalPriority : hb_parni(2);
-    obj->postEvent ( PQEVENT(1), (QStateMachine::EventPriority) par2 );
+    if( ISBETWEEN(1,2) && ISQEVENT(1) && ISOPTNUM(2) )
+    {
+      obj->postEvent ( PQEVENT(1), ISNIL(2)? (QStateMachine::EventPriority) QStateMachine::NormalPriority : (QStateMachine::EventPriority) hb_parni(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -270,11 +358,19 @@ void removeDefaultAnimation ( QAbstractAnimation * animation )
 HB_FUNC_STATIC( QSTATEMACHINE_REMOVEDEFAULTANIMATION )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QAbstractAnimation * par1 = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->removeDefaultAnimation ( par1 );
+    if( ISNUMPAR(1) && ISQABSTRACTANIMATION(1) )
+    {
+      obj->removeDefaultAnimation ( PQABSTRACTANIMATION(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -284,11 +380,19 @@ void removeState ( QAbstractState * state )
 HB_FUNC_STATIC( QSTATEMACHINE_REMOVESTATE )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QAbstractState * par1 = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->removeState ( par1 );
+    if( ISNUMPAR(1) && ISQABSTRACTSTATE(1) )
+    {
+      obj->removeState ( PQABSTRACTSTATE(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -298,10 +402,19 @@ void setAnimated ( bool enabled )
 HB_FUNC_STATIC( QSTATEMACHINE_SETANIMATED )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setAnimated ( PBOOL(1) );
+    if( ISNUMPAR(1) && ISLOG(1) )
+    {
+      obj->setAnimated ( PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -311,10 +424,19 @@ void setGlobalRestorePolicy ( QStateMachine::RestorePolicy restorePolicy )
 HB_FUNC_STATIC( QSTATEMACHINE_SETGLOBALRESTOREPOLICY )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setGlobalRestorePolicy ( (QStateMachine::RestorePolicy) hb_parni(1) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setGlobalRestorePolicy ( (QStateMachine::RestorePolicy) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -324,9 +446,17 @@ virtual bool eventFilter ( QObject * watched, QEvent * event )
 HB_FUNC_STATIC( QSTATEMACHINE_EVENTFILTER )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->eventFilter ( PQOBJECT(1), PQEVENT(2) ) );
+    if( ISNUMPAR(2) && ISQOBJECT(1) && ISQEVENT(2) )
+    {
+      RBOOL( obj->eventFilter ( PQOBJECT(1), PQEVENT(2) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -336,10 +466,19 @@ void start ()
 HB_FUNC_STATIC( QSTATEMACHINE_START )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->start ();
+    if( ISNUMPAR(0) )
+    {
+      obj->start ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -349,10 +488,19 @@ void stop ()
 HB_FUNC_STATIC( QSTATEMACHINE_STOP )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->stop ();
+    if( ISNUMPAR(0) )
+    {
+      obj->stop ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

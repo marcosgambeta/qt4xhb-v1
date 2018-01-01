@@ -22,11 +22,13 @@ CLASS QLibraryInfo
    METHOD buildKey
    METHOD buildDate
    METHOD location
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -95,8 +97,15 @@ static QDate buildDate()
 */
 HB_FUNC_STATIC( QLIBRARYINFO_BUILDDATE )
 {
-  QDate * ptr = new QDate( QLibraryInfo::buildDate () );
-  _qt4xhb_createReturnClass ( ptr, "QDATE", true );
+    if( ISNUMPAR(0) )
+  {
+      QDate * ptr = new QDate( QLibraryInfo::buildDate () );
+      _qt4xhb_createReturnClass ( ptr, "QDATE", true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*

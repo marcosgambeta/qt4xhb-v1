@@ -13,15 +13,15 @@ CLASS QSharedData
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -43,19 +43,19 @@ RETURN
 /*
 QSharedData ()
 */
-HB_FUNC_STATIC( QSHAREDDATA_NEW1 )
+void QSharedData_new1 ()
 {
   QSharedData * o = new QSharedData ();
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
 QSharedData ( const QSharedData & other )
 */
-HB_FUNC_STATIC( QSHAREDDATA_NEW2 )
+void QSharedData_new2 ()
 {
   QSharedData * o = new QSharedData ( *PQSHAREDDATA(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QSharedData ()
@@ -65,11 +65,11 @@ HB_FUNC_STATIC( QSHAREDDATA_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSHAREDDATA_NEW1 );
+    QSharedData_new1();
   }
   else if( ISNUMPAR(1) && ISQSHAREDDATA(1) )
   {
-    HB_FUNC_EXEC( QSHAREDDATA_NEW2 );
+    QSharedData_new2();
   }
   else
   {

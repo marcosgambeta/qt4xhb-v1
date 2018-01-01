@@ -10,15 +10,15 @@
 
 CLASS QSocketNotifier INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD socket
    METHOD type
    METHOD isEnabled
    METHOD setEnabled
+
    METHOD onActivated
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -42,8 +42,15 @@ QSocketNotifier(int socket, Type, QObject *parent = 0)
 */
 HB_FUNC_STATIC( QSOCKETNOTIFIER_NEW )
 {
-  QSocketNotifier * o = new QSocketNotifier ( PINT(1), (QSocketNotifier::Type) hb_parni(2), OPQOBJECT(3,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
+  if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQOBJECT(3)||ISNIL(3)) )
+  {
+    QSocketNotifier * o = new QSocketNotifier ( PINT(1), (QSocketNotifier::Type) hb_parni(2), OPQOBJECT(3,0) );
+    _qt4xhb_storePointerAndFlag( o, false );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QSOCKETNOTIFIER_DELETE )
@@ -69,9 +76,17 @@ int socket() const
 HB_FUNC_STATIC( QSOCKETNOTIFIER_SOCKET )
 {
   QSocketNotifier * obj = (QSocketNotifier *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->socket () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->socket () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -81,9 +96,17 @@ Type type() const
 HB_FUNC_STATIC( QSOCKETNOTIFIER_TYPE )
 {
   QSocketNotifier * obj = (QSocketNotifier *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->type () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->type () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -93,9 +116,17 @@ bool isEnabled() const
 HB_FUNC_STATIC( QSOCKETNOTIFIER_ISENABLED )
 {
   QSocketNotifier * obj = (QSocketNotifier *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isEnabled () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isEnabled () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -105,10 +136,19 @@ void setEnabled(bool)
 HB_FUNC_STATIC( QSOCKETNOTIFIER_SETENABLED )
 {
   QSocketNotifier * obj = (QSocketNotifier *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setEnabled ( PBOOL(1) );
+    if( ISNUMPAR(1) && ISLOG(1) )
+    {
+      obj->setEnabled ( PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

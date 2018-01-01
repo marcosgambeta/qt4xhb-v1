@@ -10,11 +10,10 @@
 
 CLASS QParallelAnimationGroup INHERIT QAnimationGroup
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD duration
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -38,8 +37,15 @@ QParallelAnimationGroup ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_NEW )
 {
-  QParallelAnimationGroup * o = new QParallelAnimationGroup ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  {
+    QParallelAnimationGroup * o = new QParallelAnimationGroup ( OPQOBJECT(1,0) );
+    _qt4xhb_storePointerAndFlag( o, false );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_DELETE )
@@ -65,9 +71,17 @@ virtual int duration () const
 HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_DURATION )
 {
   QParallelAnimationGroup * obj = (QParallelAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->duration () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->duration () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

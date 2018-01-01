@@ -13,8 +13,6 @@ CLASS QPoint
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD isNull
@@ -23,11 +21,13 @@ CLASS QPoint
    METHOD setY
    METHOD x
    METHOD y
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -49,19 +49,19 @@ RETURN
 /*
 QPoint()
 */
-HB_FUNC_STATIC( QPOINT_NEW1 )
+void QPoint_new1 ()
 {
   QPoint * o = new QPoint ();
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
 QPoint(int xpos, int ypos)
 */
-HB_FUNC_STATIC( QPOINT_NEW2 )
+void QPoint_new2 ()
 {
   QPoint * o = new QPoint ( PINT(1), PINT(2) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QPoint()
@@ -71,11 +71,11 @@ HB_FUNC_STATIC( QPOINT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QPOINT_NEW1 );
+    QPoint_new1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QPOINT_NEW2 );
+    QPoint_new2();
   }
   else
   {
@@ -106,9 +106,17 @@ bool isNull() const
 HB_FUNC_STATIC( QPOINT_ISNULL )
 {
   QPoint * obj = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isNull () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isNull () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -118,9 +126,17 @@ int manhattanLength() const
 HB_FUNC_STATIC( QPOINT_MANHATTANLENGTH )
 {
   QPoint * obj = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->manhattanLength () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->manhattanLength () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -130,10 +146,19 @@ void setX(int x)
 HB_FUNC_STATIC( QPOINT_SETX )
 {
   QPoint * obj = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setX ( PINT(1) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setX ( PINT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -143,10 +168,19 @@ void setY(int y)
 HB_FUNC_STATIC( QPOINT_SETY )
 {
   QPoint * obj = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setY ( PINT(1) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setY ( PINT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -156,9 +190,17 @@ int x() const
 HB_FUNC_STATIC( QPOINT_X )
 {
   QPoint * obj = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->x () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->x () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -168,9 +210,17 @@ int y() const
 HB_FUNC_STATIC( QPOINT_Y )
 {
   QPoint * obj = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->y () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->y () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

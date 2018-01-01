@@ -16,15 +16,15 @@ CLASS QMutex
    METHOD new
    METHOD delete
    METHOD lock
-   METHOD tryLock1
-   METHOD tryLock2
    METHOD tryLock
    METHOD unlock
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -48,8 +48,15 @@ QMutex ( RecursionMode mode = NonRecursive )
 */
 HB_FUNC_STATIC( QMUTEX_NEW )
 {
-  QMutex * o = new QMutex ( ISNIL(1)? QMutex::NonRecursive : (QMutex::RecursionMode) hb_parni(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  {
+    QMutex * o = new QMutex ( ISNIL(1)? (QMutex::RecursionMode) QMutex::NonRecursive : (QMutex::RecursionMode) hb_parni(1) );
+    _qt4xhb_storePointerAndFlag( o, true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QMUTEX_DELETE )
@@ -75,34 +82,45 @@ void lock ()
 HB_FUNC_STATIC( QMUTEX_LOCK )
 {
   QMutex * obj = (QMutex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->lock ();
+    if( ISNUMPAR(0) )
+    {
+      obj->lock ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 bool tryLock ()
 */
-HB_FUNC_STATIC( QMUTEX_TRYLOCK1 )
+void QMutex_tryLock1 ()
 {
   QMutex * obj = (QMutex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->tryLock () );
+      RBOOL( obj->tryLock () );
   }
 }
 
 /*
 bool tryLock ( int timeout )
 */
-HB_FUNC_STATIC( QMUTEX_TRYLOCK2 )
+void QMutex_tryLock2 ()
 {
   QMutex * obj = (QMutex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->tryLock ( PINT(1) ) );
+      RBOOL( obj->tryLock ( PINT(1) ) );
   }
 }
 
@@ -113,11 +131,15 @@ HB_FUNC_STATIC( QMUTEX_TRYLOCK )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QMUTEX_TRYLOCK1 );
+    QMutex_tryLock1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QMUTEX_TRYLOCK2 );
+    QMutex_tryLock2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -127,10 +149,19 @@ void unlock ()
 HB_FUNC_STATIC( QMUTEX_UNLOCK )
 {
   QMutex * obj = (QMutex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->unlock ();
+    if( ISNUMPAR(0) )
+    {
+      obj->unlock ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

@@ -17,22 +17,18 @@ CLASS QByteArrayMatcher
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
-   METHOD indexIn1
-   METHOD indexIn2
    METHOD indexIn
    METHOD pattern
    METHOD setPattern
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -54,37 +50,37 @@ RETURN
 /*
 QByteArrayMatcher ()
 */
-HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW1 )
+void QByteArrayMatcher_new1 ()
 {
   QByteArrayMatcher * o = new QByteArrayMatcher ();
-  _qt4xhb_storePointerAndFlag ( o, false );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
 QByteArrayMatcher ( const QByteArray & pattern )
 */
-HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW2 )
+void QByteArrayMatcher_new2 ()
 {
   QByteArrayMatcher * o = new QByteArrayMatcher ( *PQBYTEARRAY(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
 QByteArrayMatcher ( const char * pattern, int length )
 */
-HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW3 )
+void QByteArrayMatcher_new3 ()
 {
-  QByteArrayMatcher * o = new QByteArrayMatcher ( (const char *) hb_parc(1), PINT(2) );
-  _qt4xhb_storePointerAndFlag ( o, false );
+  QByteArrayMatcher * o = new QByteArrayMatcher ( PCONSTCHAR(1), PINT(2) );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
 QByteArrayMatcher ( const QByteArrayMatcher & other )
 */
-HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW4 )
+void QByteArrayMatcher_new4 ()
 {
   QByteArrayMatcher * o = new QByteArrayMatcher ( *PQBYTEARRAYMATCHER(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QByteArrayMatcher ()
@@ -96,19 +92,19 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QBYTEARRAYMATCHER_NEW1 );
+    QByteArrayMatcher_new1();
   }
   else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    HB_FUNC_EXEC( QBYTEARRAYMATCHER_NEW2 );
+    QByteArrayMatcher_new2();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QBYTEARRAYMATCHER_NEW3 );
+    QByteArrayMatcher_new3();
   }
   else if( ISNUMPAR(1) && ISQBYTEARRAYMATCHER(1) )
   {
-    HB_FUNC_EXEC( QBYTEARRAYMATCHER_NEW4 );
+    QByteArrayMatcher_new4();
   }
   else
   {
@@ -136,24 +132,26 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_DELETE )
 /*
 int indexIn ( const QByteArray & ba, int from = 0 ) const
 */
-HB_FUNC_STATIC( QBYTEARRAYMATCHER_INDEXIN1 )
+void QByteArrayMatcher_indexIn1 ()
 {
   QByteArrayMatcher * obj = (QByteArrayMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->indexIn ( *PQBYTEARRAY(1), OPINT(2,0) ) );
+      RINT( obj->indexIn ( *PQBYTEARRAY(1), OPINT(2,0) ) );
   }
 }
 
 /*
 int indexIn ( const char * str, int len, int from = 0 ) const
 */
-HB_FUNC_STATIC( QBYTEARRAYMATCHER_INDEXIN2 )
+void QByteArrayMatcher_indexIn2 ()
 {
   QByteArrayMatcher * obj = (QByteArrayMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->indexIn ( (const char *) hb_parc(1), PINT(2), OPINT(3,0) ) );
+      RINT( obj->indexIn ( PCONSTCHAR(1), PINT(2), OPINT(3,0) ) );
   }
 }
 
@@ -164,11 +162,15 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_INDEXIN )
 {
   if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QBYTEARRAYMATCHER_INDEXIN1 );
+    QByteArrayMatcher_indexIn1();
   }
   else if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QBYTEARRAYMATCHER_INDEXIN2 );
+    QByteArrayMatcher_indexIn2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -178,10 +180,18 @@ QByteArray pattern () const
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_PATTERN )
 {
   QByteArrayMatcher * obj = (QByteArrayMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->pattern () );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    if( ISNUMPAR(0) )
+    {
+      QByteArray * ptr = new QByteArray( obj->pattern () );
+      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -191,10 +201,19 @@ void setPattern ( const QByteArray & pattern )
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_SETPATTERN )
 {
   QByteArrayMatcher * obj = (QByteArrayMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setPattern ( *PQBYTEARRAY(1) );
+    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    {
+      obj->setPattern ( *PQBYTEARRAY(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

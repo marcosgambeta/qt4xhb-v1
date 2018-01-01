@@ -22,11 +22,13 @@ CLASS QWriteLocker
    METHOD readWriteLock
    METHOD relock
    METHOD unlock
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -50,8 +52,15 @@ QWriteLocker ( QReadWriteLock * lock )
 */
 HB_FUNC_STATIC( QWRITELOCKER_NEW )
 {
-  QWriteLocker * o = new QWriteLocker ( PQREADWRITELOCK(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
+  if( ISNUMPAR(1) && ISQREADWRITELOCK(1) )
+  {
+    QWriteLocker * o = new QWriteLocker ( PQREADWRITELOCK(1) );
+    _qt4xhb_storePointerAndFlag( o, true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QWRITELOCKER_DELETE )
@@ -77,10 +86,18 @@ QReadWriteLock * readWriteLock () const
 HB_FUNC_STATIC( QWRITELOCKER_READWRITELOCK )
 {
   QWriteLocker * obj = (QWriteLocker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QReadWriteLock * ptr = obj->readWriteLock ();
-    _qt4xhb_createReturnClass ( ptr, "QREADWRITELOCK" );
+    if( ISNUMPAR(0) )
+    {
+      QReadWriteLock * ptr = obj->readWriteLock ();
+      _qt4xhb_createReturnClass ( ptr, "QREADWRITELOCK", false );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -90,10 +107,19 @@ void relock ()
 HB_FUNC_STATIC( QWRITELOCKER_RELOCK )
 {
   QWriteLocker * obj = (QWriteLocker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->relock ();
+    if( ISNUMPAR(0) )
+    {
+      obj->relock ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -103,10 +129,19 @@ void unlock ()
 HB_FUNC_STATIC( QWRITELOCKER_UNLOCK )
 {
   QWriteLocker * obj = (QWriteLocker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->unlock ();
+    if( ISNUMPAR(0) )
+    {
+      obj->unlock ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

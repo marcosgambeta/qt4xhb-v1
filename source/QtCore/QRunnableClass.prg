@@ -17,11 +17,13 @@ CLASS QRunnable
    METHOD autoDelete
    METHOD run
    METHOD setAutoDelete
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -63,9 +65,17 @@ bool autoDelete () const
 HB_FUNC_STATIC( QRUNNABLE_AUTODELETE )
 {
   QRunnable * obj = (QRunnable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->autoDelete () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->autoDelete () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -75,10 +85,19 @@ virtual void run () = 0
 HB_FUNC_STATIC( QRUNNABLE_RUN )
 {
   QRunnable * obj = (QRunnable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->run ();
+    if( ISNUMPAR(0) )
+    {
+      obj->run ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -88,10 +107,19 @@ void setAutoDelete ( bool autoDelete )
 HB_FUNC_STATIC( QRUNNABLE_SETAUTODELETE )
 {
   QRunnable * obj = (QRunnable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setAutoDelete ( PBOOL(1) );
+    if( ISNUMPAR(1) && ISLOG(1) )
+    {
+      obj->setAutoDelete ( PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

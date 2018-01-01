@@ -15,16 +15,13 @@ REQUEST QBYTEARRAY
 
 CLASS QSignalTransition INHERIT QAbstractTransition
 
-   DATA self_destruction INIT .F.
-
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD senderObject
    METHOD setSenderObject
    METHOD signal
    METHOD setSignal
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -46,19 +43,19 @@ RETURN
 /*
 QSignalTransition(QState *sourceState = 0)
 */
-HB_FUNC_STATIC( QSIGNALTRANSITION_NEW1 )
+void QSignalTransition_new1 ()
 {
   QSignalTransition * o = new QSignalTransition ( OPQSTATE(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
+  _qt4xhb_storePointerAndFlag( o, false );
 }
 
 /*
 QSignalTransition(QObject *sender, const char *signal,QState *sourceState = 0)
 */
-HB_FUNC_STATIC( QSIGNALTRANSITION_NEW2 )
+void QSignalTransition_new2 ()
 {
-  QSignalTransition * o = new QSignalTransition ( PQOBJECT(1), (const char *) hb_parc(2), OPQSTATE(3,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
+  QSignalTransition * o = new QSignalTransition ( PQOBJECT(1), PCONSTCHAR(2), OPQSTATE(3,0) );
+  _qt4xhb_storePointerAndFlag( o, false );
 }
 
 //[1]QSignalTransition(QState *sourceState = 0)
@@ -68,11 +65,11 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQSTATE(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QSIGNALTRANSITION_NEW1 );
+    QSignalTransition_new1();
   }
   else if( ISBETWEEN(2,3) && ISQOBJECT(1) && ISCHAR(2) && (ISQSTATE(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QSIGNALTRANSITION_NEW2 );
+    QSignalTransition_new2();
   }
   else
   {
@@ -103,10 +100,18 @@ QObject *senderObject() const
 HB_FUNC_STATIC( QSIGNALTRANSITION_SENDEROBJECT )
 {
   QSignalTransition * obj = (QSignalTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QObject * ptr = obj->senderObject ();
-    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+    if( ISNUMPAR(0) )
+    {
+      QObject * ptr = obj->senderObject ();
+      _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -116,10 +121,19 @@ void setSenderObject(QObject *sender)
 HB_FUNC_STATIC( QSIGNALTRANSITION_SETSENDEROBJECT )
 {
   QSignalTransition * obj = (QSignalTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setSenderObject ( PQOBJECT(1) );
+    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    {
+      obj->setSenderObject ( PQOBJECT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -129,10 +143,18 @@ QByteArray signal() const
 HB_FUNC_STATIC( QSIGNALTRANSITION_SIGNAL )
 {
   QSignalTransition * obj = (QSignalTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->signal () );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    if( ISNUMPAR(0) )
+    {
+      QByteArray * ptr = new QByteArray( obj->signal () );
+      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -142,10 +164,19 @@ void setSignal(const QByteArray &signal)
 HB_FUNC_STATIC( QSIGNALTRANSITION_SETSIGNAL )
 {
   QSignalTransition * obj = (QSignalTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setSignal ( *PQBYTEARRAY(1) );
+    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    {
+      obj->setSignal ( *PQBYTEARRAY(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

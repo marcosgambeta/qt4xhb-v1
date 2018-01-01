@@ -10,10 +10,6 @@
 
 CLASS QSharedMemory INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD setKey
@@ -30,6 +26,7 @@ CLASS QSharedMemory INHERIT QObject
    METHOD unlock
    METHOD error
    METHOD errorString
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -51,19 +48,19 @@ RETURN
 /*
 QSharedMemory(QObject *parent = 0)
 */
-HB_FUNC_STATIC( QSHAREDMEMORY_NEW1 )
+void QSharedMemory_new1 ()
 {
   QSharedMemory * o = new QSharedMemory ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
+  _qt4xhb_storePointerAndFlag( o, false );
 }
 
 /*
 QSharedMemory(const QString &key, QObject *parent = 0)
 */
-HB_FUNC_STATIC( QSHAREDMEMORY_NEW2 )
+void QSharedMemory_new2 ()
 {
   QSharedMemory * o = new QSharedMemory ( PQSTRING(1), OPQOBJECT(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
+  _qt4xhb_storePointerAndFlag( o, false );
 }
 
 //[1]QSharedMemory(QObject *parent = 0)
@@ -73,11 +70,11 @@ HB_FUNC_STATIC( QSHAREDMEMORY_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QSHAREDMEMORY_NEW1 );
+    QSharedMemory_new1();
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QSHAREDMEMORY_NEW2 );
+    QSharedMemory_new2();
   }
   else
   {
@@ -108,10 +105,19 @@ void setKey(const QString &key)
 HB_FUNC_STATIC( QSHAREDMEMORY_SETKEY )
 {
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setKey ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->setKey ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -141,10 +147,19 @@ void setNativeKey(const QString &key)
 HB_FUNC_STATIC( QSHAREDMEMORY_SETNATIVEKEY )
 {
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setNativeKey ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->setNativeKey ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -174,9 +189,17 @@ bool create(int size, AccessMode mode = ReadWrite)
 HB_FUNC_STATIC( QSHAREDMEMORY_CREATE )
 {
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->create ( PINT(1), ISNIL(2)? QSharedMemory::ReadWrite : (QSharedMemory::AccessMode) hb_parni(2) ) );
+    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    {
+      RBOOL( obj->create ( PINT(1), ISNIL(2)? (QSharedMemory::AccessMode) QSharedMemory::ReadWrite : (QSharedMemory::AccessMode) hb_parni(2) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -186,9 +209,17 @@ int size() const
 HB_FUNC_STATIC( QSHAREDMEMORY_SIZE )
 {
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->size () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->size () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -198,9 +229,17 @@ bool attach(AccessMode mode = ReadWrite)
 HB_FUNC_STATIC( QSHAREDMEMORY_ATTACH )
 {
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->attach ( ISNIL(1)? QSharedMemory::ReadWrite : (QSharedMemory::AccessMode) hb_parni(1) ) );
+    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    {
+      RBOOL( obj->attach ( ISNIL(1)? (QSharedMemory::AccessMode) QSharedMemory::ReadWrite : (QSharedMemory::AccessMode) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -210,9 +249,17 @@ bool isAttached() const
 HB_FUNC_STATIC( QSHAREDMEMORY_ISATTACHED )
 {
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isAttached () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isAttached () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -222,9 +269,17 @@ bool detach()
 HB_FUNC_STATIC( QSHAREDMEMORY_DETACH )
 {
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->detach () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->detach () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -234,10 +289,17 @@ void *data()
 HB_FUNC_STATIC( QSHAREDMEMORY_DATA )
 {
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    void * retptr = obj->data ();
-  hb_retptr( (void *) retptr );
+    if( ISNUMPAR(0) )
+    {
+      hb_retptr( (void *) obj->data () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -247,9 +309,17 @@ bool lock()
 HB_FUNC_STATIC( QSHAREDMEMORY_LOCK )
 {
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->lock () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->lock () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -259,9 +329,17 @@ bool unlock()
 HB_FUNC_STATIC( QSHAREDMEMORY_UNLOCK )
 {
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->unlock () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->unlock () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -271,9 +349,17 @@ SharedMemoryError error() const
 HB_FUNC_STATIC( QSHAREDMEMORY_ERROR )
 {
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->error () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->error () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

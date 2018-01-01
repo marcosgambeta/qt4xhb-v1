@@ -27,11 +27,13 @@ CLASS QElapsedTimer
    METHOD start
    METHOD clockType
    METHOD isMonotonic
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -55,8 +57,15 @@ QElapsedTimer()
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_NEW )
 {
-  QElapsedTimer * o = new QElapsedTimer ();
-  _qt4xhb_storePointerAndFlag ( o, true );
+  if( ISNUMPAR(0) )
+  {
+    QElapsedTimer * o = new QElapsedTimer ();
+    _qt4xhb_storePointerAndFlag( o, true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QELAPSEDTIMER_DELETE )
@@ -82,9 +91,17 @@ qint64 elapsed() const
 HB_FUNC_STATIC( QELAPSEDTIMER_ELAPSED )
 {
   QElapsedTimer * obj = (QElapsedTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQINT64( obj->elapsed () );
+    if( ISNUMPAR(0) )
+    {
+      RQINT64( obj->elapsed () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -94,9 +111,17 @@ bool hasExpired(qint64 timeout) const
 HB_FUNC_STATIC( QELAPSEDTIMER_HASEXPIRED )
 {
   QElapsedTimer * obj = (QElapsedTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->hasExpired ( PQINT64(1) ) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      RBOOL( obj->hasExpired ( PQINT64(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -106,10 +131,19 @@ void invalidate()
 HB_FUNC_STATIC( QELAPSEDTIMER_INVALIDATE )
 {
   QElapsedTimer * obj = (QElapsedTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->invalidate ();
+    if( ISNUMPAR(0) )
+    {
+      obj->invalidate ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -119,9 +153,17 @@ bool isValid() const
 HB_FUNC_STATIC( QELAPSEDTIMER_ISVALID )
 {
   QElapsedTimer * obj = (QElapsedTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isValid () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isValid () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -131,9 +173,17 @@ qint64 msecsSinceReference() const
 HB_FUNC_STATIC( QELAPSEDTIMER_MSECSSINCEREFERENCE )
 {
   QElapsedTimer * obj = (QElapsedTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQINT64( obj->msecsSinceReference () );
+    if( ISNUMPAR(0) )
+    {
+      RQINT64( obj->msecsSinceReference () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -143,9 +193,17 @@ qint64 msecsTo(const QElapsedTimer & other) const
 HB_FUNC_STATIC( QELAPSEDTIMER_MSECSTO )
 {
   QElapsedTimer * obj = (QElapsedTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQINT64( obj->msecsTo ( *PQELAPSEDTIMER(1) ) );
+    if( ISNUMPAR(1) && ISQELAPSEDTIMER(1) )
+    {
+      RQINT64( obj->msecsTo ( *PQELAPSEDTIMER(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -155,9 +213,17 @@ qint64 nsecsElapsed() const
 HB_FUNC_STATIC( QELAPSEDTIMER_NSECSELAPSED )
 {
   QElapsedTimer * obj = (QElapsedTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQINT64( obj->nsecsElapsed () );
+    if( ISNUMPAR(0) )
+    {
+      RQINT64( obj->nsecsElapsed () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -167,9 +233,17 @@ qint64 restart()
 HB_FUNC_STATIC( QELAPSEDTIMER_RESTART )
 {
   QElapsedTimer * obj = (QElapsedTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQINT64( obj->restart () );
+    if( ISNUMPAR(0) )
+    {
+      RQINT64( obj->restart () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -179,9 +253,17 @@ qint64 secsTo(const QElapsedTimer & other) const
 HB_FUNC_STATIC( QELAPSEDTIMER_SECSTO )
 {
   QElapsedTimer * obj = (QElapsedTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQINT64( obj->secsTo ( *PQELAPSEDTIMER(1) ) );
+    if( ISNUMPAR(1) && ISQELAPSEDTIMER(1) )
+    {
+      RQINT64( obj->secsTo ( *PQELAPSEDTIMER(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -191,27 +273,50 @@ void start()
 HB_FUNC_STATIC( QELAPSEDTIMER_START )
 {
   QElapsedTimer * obj = (QElapsedTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->start ();
+    if( ISNUMPAR(0) )
+    {
+      obj->start ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
-ClockType clockType()
+static ClockType clockType()
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_CLOCKTYPE )
 {
-  hb_retni( (int) QElapsedTimer::clockType () );
+    if( ISNUMPAR(0) )
+  {
+      RENUM( QElapsedTimer::clockType () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
-bool isMonotonic()
+static bool isMonotonic()
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_ISMONOTONIC )
 {
-  RBOOL( QElapsedTimer::isMonotonic () );
+    if( ISNUMPAR(0) )
+  {
+      RBOOL( QElapsedTimer::isMonotonic () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QELAPSEDTIMER_NEWFROM )

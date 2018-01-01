@@ -10,8 +10,6 @@
 
 CLASS QFutureWatcherBase INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD progressValue
    METHOD progressMinimum
@@ -30,6 +28,7 @@ CLASS QFutureWatcherBase INHERIT QObject
    METHOD pause
    METHOD resume
    METHOD togglePaused
+
    METHOD onStarted
    METHOD onFinished
    METHOD onCanceled
@@ -40,6 +39,7 @@ CLASS QFutureWatcherBase INHERIT QObject
    METHOD onProgressRangeChanged
    METHOD onProgressValueChanged
    METHOD onProgressTextChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -81,9 +81,17 @@ int progressValue() const
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSVALUE )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->progressValue () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->progressValue () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -93,9 +101,17 @@ int progressMinimum() const
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSMINIMUM )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->progressMinimum () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->progressMinimum () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -105,9 +121,17 @@ int progressMaximum() const
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSMAXIMUM )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->progressMaximum () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->progressMaximum () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -137,9 +161,17 @@ bool isStarted() const
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISSTARTED )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isStarted () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isStarted () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -149,9 +181,17 @@ bool isFinished() const
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISFINISHED )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isFinished () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isFinished () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -161,9 +201,17 @@ bool isRunning() const
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISRUNNING )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isRunning () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isRunning () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -173,9 +221,17 @@ bool isCanceled() const
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISCANCELED )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isCanceled () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isCanceled () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -185,9 +241,17 @@ bool isPaused() const
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISPAUSED )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isPaused () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isPaused () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -197,10 +261,19 @@ void waitForFinished()
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_WAITFORFINISHED )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->waitForFinished ();
+    if( ISNUMPAR(0) )
+    {
+      obj->waitForFinished ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -210,10 +283,19 @@ void setPendingResultsLimit(int limit)
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_SETPENDINGRESULTSLIMIT )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setPendingResultsLimit ( PINT(1) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setPendingResultsLimit ( PINT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -223,9 +305,17 @@ bool event(QEvent *event)
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_EVENT )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->event ( PQEVENT(1) ) );
+    if( ISNUMPAR(1) && ISQEVENT(1) )
+    {
+      RBOOL( obj->event ( PQEVENT(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -235,10 +325,19 @@ void cancel()
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_CANCEL )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->cancel ();
+    if( ISNUMPAR(0) )
+    {
+      obj->cancel ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -248,10 +347,19 @@ void setPaused(bool paused)
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_SETPAUSED )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setPaused ( PBOOL(1) );
+    if( ISNUMPAR(1) && ISLOG(1) )
+    {
+      obj->setPaused ( PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -261,10 +369,19 @@ void pause()
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_PAUSE )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->pause ();
+    if( ISNUMPAR(0) )
+    {
+      obj->pause ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -274,10 +391,19 @@ void resume()
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_RESUME )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->resume ();
+    if( ISNUMPAR(0) )
+    {
+      obj->resume ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -287,10 +413,19 @@ void togglePaused()
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_TOGGLEPAUSED )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->togglePaused ();
+    if( ISNUMPAR(0) )
+    {
+      obj->togglePaused ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

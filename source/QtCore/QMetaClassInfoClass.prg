@@ -22,11 +22,13 @@ CLASS QMetaClassInfo
    METHOD name
    METHOD value
    METHOD enclosingMetaObject
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -50,8 +52,15 @@ QMetaClassInfo()
 */
 HB_FUNC_STATIC( QMETACLASSINFO_NEW )
 {
-  QMetaClassInfo * o = new QMetaClassInfo ();
-  _qt4xhb_storePointerAndFlag ( o, false );
+  if( ISNUMPAR(0) )
+  {
+    QMetaClassInfo * o = new QMetaClassInfo ();
+    _qt4xhb_storePointerAndFlag( o, true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QMETACLASSINFO_DELETE )
@@ -77,10 +86,17 @@ const char *name() const
 HB_FUNC_STATIC( QMETACLASSINFO_NAME )
 {
   QMetaClassInfo * obj = (QMetaClassInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    const char * str1 = obj->name ();
-    hb_retc( str1 );
+    if( ISNUMPAR(0) )
+    {
+      hb_retc( (const char *) obj->name () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -90,10 +106,17 @@ const char *value() const
 HB_FUNC_STATIC( QMETACLASSINFO_VALUE )
 {
   QMetaClassInfo * obj = (QMetaClassInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    const char * str1 = obj->value ();
-    hb_retc( str1 );
+    if( ISNUMPAR(0) )
+    {
+      hb_retc( (const char *) obj->value () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -103,10 +126,18 @@ const QMetaObject *enclosingMetaObject() const
 HB_FUNC_STATIC( QMETACLASSINFO_ENCLOSINGMETAOBJECT )
 {
   QMetaClassInfo * obj = (QMetaClassInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    const QMetaObject * ptr = obj->enclosingMetaObject ();
-    _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT" );
+    if( ISNUMPAR(0) )
+    {
+      const QMetaObject * ptr = obj->enclosingMetaObject ();
+      _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT", false );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

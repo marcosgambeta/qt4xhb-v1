@@ -14,8 +14,6 @@ REQUEST QANIMATIONGROUP
 
 CLASS QAbstractAnimation INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD currentLoop
    METHOD currentLoopTime
@@ -34,10 +32,12 @@ CLASS QAbstractAnimation INHERIT QObject
    METHOD setPaused
    METHOD start
    METHOD stop
+
    METHOD onCurrentLoopChanged
    METHOD onDirectionChanged
    METHOD onFinished
    METHOD onStateChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -55,6 +55,8 @@ RETURN
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
+
+#include <QAnimationGroup>
 
 HB_FUNC_STATIC( QABSTRACTANIMATION_DELETE )
 {
@@ -79,9 +81,17 @@ int currentLoop () const
 HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTLOOP )
 {
   QAbstractAnimation * obj = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->currentLoop () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->currentLoop () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -91,9 +101,17 @@ int currentLoopTime () const
 HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTLOOPTIME )
 {
   QAbstractAnimation * obj = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->currentLoopTime () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->currentLoopTime () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -103,9 +121,17 @@ int currentTime () const
 HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTTIME )
 {
   QAbstractAnimation * obj = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->currentTime () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->currentTime () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -115,9 +141,17 @@ Direction direction () const
 HB_FUNC_STATIC( QABSTRACTANIMATION_DIRECTION )
 {
   QAbstractAnimation * obj = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->direction () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->direction () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -127,9 +161,17 @@ virtual int duration () const = 0
 HB_FUNC_STATIC( QABSTRACTANIMATION_DURATION )
 {
   QAbstractAnimation * obj = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->duration () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->duration () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -139,10 +181,18 @@ QAnimationGroup * group () const
 HB_FUNC_STATIC( QABSTRACTANIMATION_GROUP )
 {
   QAbstractAnimation * obj = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QAnimationGroup * ptr = obj->group ();
-    _qt4xhb_createReturnClass ( ptr, "QANIMATIONGROUP" );
+    if( ISNUMPAR(0) )
+    {
+      QAnimationGroup * ptr = obj->group ();
+      _qt4xhb_createReturnQObjectClass ( ptr, "QANIMATIONGROUP" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -152,9 +202,17 @@ int loopCount () const
 HB_FUNC_STATIC( QABSTRACTANIMATION_LOOPCOUNT )
 {
   QAbstractAnimation * obj = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->loopCount () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->loopCount () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -164,10 +222,19 @@ void  setDirection ( Direction direction )
 HB_FUNC_STATIC( QABSTRACTANIMATION_SETDIRECTION )
 {
   QAbstractAnimation * obj = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setDirection ( (QAbstractAnimation::Direction) hb_parni(1) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setDirection ( (QAbstractAnimation::Direction) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -177,10 +244,19 @@ void setLoopCount ( int loopCount )
 HB_FUNC_STATIC( QABSTRACTANIMATION_SETLOOPCOUNT )
 {
   QAbstractAnimation * obj = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setLoopCount ( PINT(1) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setLoopCount ( PINT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -190,9 +266,17 @@ State state () const
 HB_FUNC_STATIC( QABSTRACTANIMATION_STATE )
 {
   QAbstractAnimation * obj = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->state () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->state () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -202,9 +286,17 @@ int totalDuration () const
 HB_FUNC_STATIC( QABSTRACTANIMATION_TOTALDURATION )
 {
   QAbstractAnimation * obj = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->totalDuration () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->totalDuration () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -214,10 +306,19 @@ void pause ()
 HB_FUNC_STATIC( QABSTRACTANIMATION_PAUSE )
 {
   QAbstractAnimation * obj = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->pause ();
+    if( ISNUMPAR(0) )
+    {
+      obj->pause ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -227,10 +328,19 @@ void resume ()
 HB_FUNC_STATIC( QABSTRACTANIMATION_RESUME )
 {
   QAbstractAnimation * obj = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->resume ();
+    if( ISNUMPAR(0) )
+    {
+      obj->resume ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -240,10 +350,19 @@ void setCurrentTime ( int msecs )
 HB_FUNC_STATIC( QABSTRACTANIMATION_SETCURRENTTIME )
 {
   QAbstractAnimation * obj = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setCurrentTime ( PINT(1) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setCurrentTime ( PINT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -253,10 +372,19 @@ void setPaused ( bool paused )
 HB_FUNC_STATIC( QABSTRACTANIMATION_SETPAUSED )
 {
   QAbstractAnimation * obj = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setPaused ( PBOOL(1) );
+    if( ISNUMPAR(1) && ISLOG(1) )
+    {
+      obj->setPaused ( PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -266,10 +394,19 @@ void start ( QAbstractAnimation::DeletionPolicy policy = KeepWhenStopped )
 HB_FUNC_STATIC( QABSTRACTANIMATION_START )
 {
   QAbstractAnimation * obj = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->start ( ISNIL(1)? QAbstractAnimation::KeepWhenStopped : (QAbstractAnimation::DeletionPolicy) hb_parni(1) );
+    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    {
+      obj->start ( ISNIL(1)? (QAbstractAnimation::DeletionPolicy) QAbstractAnimation::KeepWhenStopped : (QAbstractAnimation::DeletionPolicy) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -279,10 +416,19 @@ void stop ()
 HB_FUNC_STATIC( QABSTRACTANIMATION_STOP )
 {
   QAbstractAnimation * obj = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->stop ();
+    if( ISNUMPAR(0) )
+    {
+      obj->stop ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

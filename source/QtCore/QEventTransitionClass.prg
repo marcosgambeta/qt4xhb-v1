@@ -14,16 +14,13 @@ REQUEST QOBJECT
 
 CLASS QEventTransition INHERIT QAbstractTransition
 
-   DATA self_destruction INIT .F.
-
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD eventSource
    METHOD eventType
    METHOD setEventSource
    METHOD setEventType
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -45,19 +42,19 @@ RETURN
 /*
 QEventTransition(QState * sourceState = 0)
 */
-HB_FUNC_STATIC( QEVENTTRANSITION_NEW1 )
+void QEventTransition_new1 ()
 {
   QEventTransition * o = new QEventTransition ( OPQSTATE(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
+  _qt4xhb_storePointerAndFlag( o, false );
 }
 
 /*
 QEventTransition(QObject * object, QEvent::Type type, QState * sourceState = 0)
 */
-HB_FUNC_STATIC( QEVENTTRANSITION_NEW2 )
+void QEventTransition_new2 ()
 {
   QEventTransition * o = new QEventTransition ( PQOBJECT(1), (QEvent::Type) hb_parni(2), OPQSTATE(3,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
+  _qt4xhb_storePointerAndFlag( o, false );
 }
 
 //[1]QEventTransition(QState * sourceState = 0)
@@ -67,11 +64,11 @@ HB_FUNC_STATIC( QEVENTTRANSITION_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQSTATE(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QEVENTTRANSITION_NEW1 );
+    QEventTransition_new1();
   }
   else if( ISBETWEEN(2,3) && ISQOBJECT(1) && ISNUM(2) && (ISQSTATE(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QEVENTTRANSITION_NEW2 );
+    QEventTransition_new2();
   }
   else
   {
@@ -102,10 +99,18 @@ QObject * eventSource() const
 HB_FUNC_STATIC( QEVENTTRANSITION_EVENTSOURCE )
 {
   QEventTransition * obj = (QEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QObject * ptr = obj->eventSource ();
-    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+    if( ISNUMPAR(0) )
+    {
+      QObject * ptr = obj->eventSource ();
+      _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -115,9 +120,17 @@ QEvent::Type eventType() const
 HB_FUNC_STATIC( QEVENTTRANSITION_EVENTTYPE )
 {
   QEventTransition * obj = (QEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->eventType () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->eventType () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -127,10 +140,19 @@ void setEventSource(QObject * object)
 HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTSOURCE )
 {
   QEventTransition * obj = (QEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setEventSource ( PQOBJECT(1) );
+    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    {
+      obj->setEventSource ( PQOBJECT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -140,10 +162,19 @@ void setEventType(QEvent::Type type)
 HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTTYPE )
 {
   QEventTransition * obj = (QEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setEventType ( (QEvent::Type) hb_parni(1) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setEventType ( (QEvent::Type) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

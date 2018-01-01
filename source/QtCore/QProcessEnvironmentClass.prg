@@ -17,26 +17,24 @@ CLASS QProcessEnvironment
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD isEmpty
    METHOD clear
    METHOD contains
-   METHOD insert1
    METHOD remove
    METHOD value
    METHOD toStringList
    METHOD keys
-   METHOD insert2
    METHOD insert
    METHOD systemEnvironment
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -58,19 +56,19 @@ RETURN
 /*
 QProcessEnvironment()
 */
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW1 )
+void QProcessEnvironment_new1 ()
 {
   QProcessEnvironment * o = new QProcessEnvironment ();
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
 QProcessEnvironment(const QProcessEnvironment &other)
 */
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW2 )
+void QProcessEnvironment_new2 ()
 {
   QProcessEnvironment * o = new QProcessEnvironment ( *PQPROCESSENVIRONMENT(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QProcessEnvironment()
@@ -80,11 +78,11 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QPROCESSENVIRONMENT_NEW1 );
+    QProcessEnvironment_new1();
   }
   else if( ISNUMPAR(1) && ISQPROCESSENVIRONMENT(1) )
   {
-    HB_FUNC_EXEC( QPROCESSENVIRONMENT_NEW2 );
+    QProcessEnvironment_new2();
   }
   else
   {
@@ -115,9 +113,17 @@ bool isEmpty() const
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_ISEMPTY )
 {
   QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isEmpty () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isEmpty () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -127,10 +133,19 @@ void clear()
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_CLEAR )
 {
   QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->clear ();
+    if( ISNUMPAR(0) )
+    {
+      obj->clear ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -140,23 +155,18 @@ bool contains(const QString &name) const
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_CONTAINS )
 {
   QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->contains ( PQSTRING(1) ) );
-  }
-}
 
-/*
-void insert(const QString &name, const QString &value)
-*/
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_INSERT1 )
-{
-  QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->insert ( PQSTRING(1), PQSTRING(2) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      RBOOL( obj->contains ( PQSTRING(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
-  hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
@@ -165,10 +175,19 @@ void remove(const QString &name)
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_REMOVE )
 {
   QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->remove ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->remove ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -178,9 +197,17 @@ QString value(const QString &name, const QString &defaultValue = QString()) cons
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_VALUE )
 {
   QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->value ( PQSTRING(1), OPQSTRING(2,QString()) ) );
+    if( ISNUMPAR(2) && ISCHAR(1) && ISOPTCHAR(2) )
+    {
+      RQSTRING( obj->value ( PQSTRING(1), OPQSTRING(2,QString()) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -190,9 +217,17 @@ QStringList toStringList() const
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_TOSTRINGLIST )
 {
   QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRINGLIST( obj->toStringList () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRINGLIST( obj->toStringList () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -202,22 +237,47 @@ QStringList keys() const
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_KEYS )
 {
   QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRINGLIST( obj->keys () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRINGLIST( obj->keys () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+}
+
+/*
+void insert(const QString &name, const QString &value)
+*/
+void QProcessEnvironment_insert1 ()
+{
+  QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+  if( obj )
+  {
+      obj->insert ( PQSTRING(1), PQSTRING(2) );
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 void insert(const QProcessEnvironment &e)
 */
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_INSERT2 )
+void QProcessEnvironment_insert2 ()
 {
   QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->insert ( *PQPROCESSENVIRONMENT(1) );
+      obj->insert ( *PQPROCESSENVIRONMENT(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -228,11 +288,15 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_INSERT )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QPROCESSENVIRONMENT_INSERT1 );
+    QProcessEnvironment_insert1();
   }
   else if( ISNUMPAR(1) && ISQPROCESSENVIRONMENT(1) )
   {
-    HB_FUNC_EXEC( QPROCESSENVIRONMENT_INSERT2 );
+    QProcessEnvironment_insert2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -241,8 +305,15 @@ static QProcessEnvironment systemEnvironment()
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_SYSTEMENVIRONMENT )
 {
-  QProcessEnvironment * ptr = new QProcessEnvironment( QProcessEnvironment::systemEnvironment () );
-  _qt4xhb_createReturnClass ( ptr, "QPROCESSENVIRONMENT", true );
+    if( ISNUMPAR(0) )
+  {
+      QProcessEnvironment * ptr = new QProcessEnvironment( QProcessEnvironment::systemEnvironment () );
+      _qt4xhb_createReturnClass ( ptr, "QPROCESSENVIRONMENT", true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEWFROM )

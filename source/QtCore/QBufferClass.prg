@@ -14,10 +14,6 @@ REQUEST QBYTEARRAY
 
 CLASS QBuffer INHERIT QIODevice
 
-   DATA self_destruction INIT .F.
-
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD buffer1
@@ -25,8 +21,6 @@ CLASS QBuffer INHERIT QIODevice
    METHOD buffer
    METHOD data
    METHOD setBuffer
-   METHOD setData1
-   METHOD setData2
    METHOD setData
    METHOD atEnd
    METHOD canReadLine
@@ -35,6 +29,7 @@ CLASS QBuffer INHERIT QIODevice
    METHOD pos
    METHOD seek
    METHOD size
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -56,19 +51,19 @@ RETURN
 /*
 QBuffer ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QBUFFER_NEW1 )
+void QBuffer_new1 ()
 {
   QBuffer * o = new QBuffer ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
+  _qt4xhb_storePointerAndFlag( o, false );
 }
 
 /*
 QBuffer ( QByteArray * byteArray, QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QBUFFER_NEW2 )
+void QBuffer_new2 ()
 {
   QBuffer * o = new QBuffer ( PQBYTEARRAY(1), OPQOBJECT(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
+  _qt4xhb_storePointerAndFlag( o, false );
 }
 
 //[1]QBuffer ( QObject * parent = 0 )
@@ -78,11 +73,11 @@ HB_FUNC_STATIC( QBUFFER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QBUFFER_NEW1 );
+    QBuffer_new1();
   }
   else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QBUFFER_NEW2 );
+    QBuffer_new2();
   }
   else
   {
@@ -113,10 +108,18 @@ QByteArray & buffer ()
 HB_FUNC_STATIC( QBUFFER_BUFFER1 )
 {
   QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QByteArray * ptr = &obj->buffer ();
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    if( ISNUMPAR(0) )
+    {
+      QByteArray * ptr = &obj->buffer ();
+      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", false );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -126,10 +129,18 @@ const QByteArray & buffer () const
 HB_FUNC_STATIC( QBUFFER_BUFFER2 )
 {
   QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    const QByteArray * ptr = &obj->buffer ();
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    if( ISNUMPAR(0) )
+    {
+      const QByteArray * ptr = &obj->buffer ();
+      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", false );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -138,7 +149,15 @@ HB_FUNC_STATIC( QBUFFER_BUFFER2 )
 
 HB_FUNC_STATIC( QBUFFER_BUFFER )
 {
-  HB_FUNC_EXEC( QBUFFER_BUFFER1 );
+  if( ISNUMPAR(0) )
+  {
+    HB_FUNC_EXEC( QBUFFER_BUFFER1 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+
 }
 
 /*
@@ -147,10 +166,18 @@ const QByteArray & data () const
 HB_FUNC_STATIC( QBUFFER_DATA )
 {
   QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    const QByteArray * ptr = &obj->data ();
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    if( ISNUMPAR(0) )
+    {
+      const QByteArray * ptr = &obj->data ();
+      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", false );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -160,36 +187,49 @@ void setBuffer ( QByteArray * byteArray )
 HB_FUNC_STATIC( QBUFFER_SETBUFFER )
 {
   QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setBuffer ( PQBYTEARRAY(1) );
+    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    {
+      obj->setBuffer ( PQBYTEARRAY(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 void setData ( const QByteArray & data )
 */
-HB_FUNC_STATIC( QBUFFER_SETDATA1 )
+void QBuffer_setData1 ()
 {
   QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setData ( *PQBYTEARRAY(1) );
+      obj->setData ( *PQBYTEARRAY(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 void setData ( const char * data, int size )
 */
-HB_FUNC_STATIC( QBUFFER_SETDATA2 )
+void QBuffer_setData2 ()
 {
   QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setData ( (const char *) hb_parc(1), PINT(2) );
+      obj->setData ( PCONSTCHAR(1), PINT(2) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -200,11 +240,15 @@ HB_FUNC_STATIC( QBUFFER_SETDATA )
 {
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    HB_FUNC_EXEC( QBUFFER_SETDATA1 );
+    QBuffer_setData1();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QBUFFER_SETDATA2 );
+    QBuffer_setData2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -214,9 +258,17 @@ virtual bool atEnd () const
 HB_FUNC_STATIC( QBUFFER_ATEND )
 {
   QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->atEnd () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->atEnd () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -226,9 +278,17 @@ virtual bool canReadLine () const
 HB_FUNC_STATIC( QBUFFER_CANREADLINE )
 {
   QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->canReadLine () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->canReadLine () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -238,10 +298,19 @@ virtual void close ()
 HB_FUNC_STATIC( QBUFFER_CLOSE )
 {
   QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->close ();
+    if( ISNUMPAR(0) )
+    {
+      obj->close ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -251,9 +320,17 @@ virtual bool open ( OpenMode flags )
 HB_FUNC_STATIC( QBUFFER_OPEN )
 {
   QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->open ( (QBuffer::OpenMode) hb_parni(1) ) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      RBOOL( obj->open ( (QBuffer::OpenMode) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -263,9 +340,17 @@ virtual qint64 pos () const
 HB_FUNC_STATIC( QBUFFER_POS )
 {
   QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQINT64( obj->pos () );
+    if( ISNUMPAR(0) )
+    {
+      RQINT64( obj->pos () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -275,9 +360,17 @@ virtual bool seek ( qint64 pos )
 HB_FUNC_STATIC( QBUFFER_SEEK )
 {
   QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->seek ( PQINT64(1) ) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      RBOOL( obj->seek ( PQINT64(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -287,9 +380,17 @@ virtual qint64 size () const
 HB_FUNC_STATIC( QBUFFER_SIZE )
 {
   QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQINT64( obj->size () );
+    if( ISNUMPAR(0) )
+    {
+      RQINT64( obj->size () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

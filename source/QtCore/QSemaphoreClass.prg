@@ -18,14 +18,14 @@ CLASS QSemaphore
    METHOD acquire
    METHOD available
    METHOD release
-   METHOD tryAcquire1
-   METHOD tryAcquire2
    METHOD tryAcquire
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -49,8 +49,15 @@ QSemaphore ( int n = 0 )
 */
 HB_FUNC_STATIC( QSEMAPHORE_NEW )
 {
-  QSemaphore * o = new QSemaphore ( OPINT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  {
+    QSemaphore * o = new QSemaphore ( OPINT(1,0) );
+    _qt4xhb_storePointerAndFlag( o, true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QSEMAPHORE_DELETE )
@@ -76,10 +83,19 @@ void acquire ( int n = 1 )
 HB_FUNC_STATIC( QSEMAPHORE_ACQUIRE )
 {
   QSemaphore * obj = (QSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->acquire ( OPINT(1,1) );
+    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    {
+      obj->acquire ( OPINT(1,1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -89,9 +105,17 @@ int available () const
 HB_FUNC_STATIC( QSEMAPHORE_AVAILABLE )
 {
   QSemaphore * obj = (QSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->available () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->available () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -101,34 +125,45 @@ void release ( int n = 1 )
 HB_FUNC_STATIC( QSEMAPHORE_RELEASE )
 {
   QSemaphore * obj = (QSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->release ( OPINT(1,1) );
+    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    {
+      obj->release ( OPINT(1,1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 bool tryAcquire ( int n = 1 )
 */
-HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE1 )
+void QSemaphore_tryAcquire1 ()
 {
   QSemaphore * obj = (QSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->tryAcquire ( OPINT(1,1) ) );
+      RBOOL( obj->tryAcquire ( OPINT(1,1) ) );
   }
 }
 
 /*
 bool tryAcquire ( int n, int timeout )
 */
-HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE2 )
+void QSemaphore_tryAcquire2 ()
 {
   QSemaphore * obj = (QSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->tryAcquire ( PINT(1), PINT(2) ) );
+      RBOOL( obj->tryAcquire ( PINT(1), PINT(2) ) );
   }
 }
 
@@ -137,17 +172,17 @@ HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE2 )
 
 HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE )
 {
-  if( ISNUMPAR(0) )
+  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QSEMAPHORE_TRYACQUIRE1 );
-  }
-  else if( ISNUMPAR(1) && ISNUM(1) )
-  {
-    HB_FUNC_EXEC( QSEMAPHORE_TRYACQUIRE1 );
+    QSemaphore_tryAcquire1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QSEMAPHORE_TRYACQUIRE2 );
+    QSemaphore_tryAcquire2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

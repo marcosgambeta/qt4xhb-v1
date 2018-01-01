@@ -17,11 +17,13 @@ CLASS QWaitCondition
    METHOD delete
    METHOD wakeAll
    METHOD wakeOne
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -45,8 +47,15 @@ QWaitCondition ()
 */
 HB_FUNC_STATIC( QWAITCONDITION_NEW )
 {
-  QWaitCondition * o = new QWaitCondition ();
-  _qt4xhb_storePointerAndFlag ( o, true );
+  if( ISNUMPAR(0) )
+  {
+    QWaitCondition * o = new QWaitCondition ();
+    _qt4xhb_storePointerAndFlag( o, true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QWAITCONDITION_DELETE )
@@ -72,10 +81,19 @@ void wakeAll ()
 HB_FUNC_STATIC( QWAITCONDITION_WAKEALL )
 {
   QWaitCondition * obj = (QWaitCondition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->wakeAll ();
+    if( ISNUMPAR(0) )
+    {
+      obj->wakeAll ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -85,10 +103,19 @@ void wakeOne ()
 HB_FUNC_STATIC( QWAITCONDITION_WAKEONE )
 {
   QWaitCondition * obj = (QWaitCondition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->wakeOne ();
+    if( ISNUMPAR(0) )
+    {
+      obj->wakeOne ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

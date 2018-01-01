@@ -17,10 +17,6 @@ CLASS QXmlStreamAttribute
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD isDefault
@@ -29,11 +25,13 @@ CLASS QXmlStreamAttribute
    METHOD prefix
    METHOD qualifiedName
    METHOD value
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -55,37 +53,37 @@ RETURN
 /*
 QXmlStreamAttribute()
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW1 )
+void QXmlStreamAttribute_new1 ()
 {
   QXmlStreamAttribute * o = new QXmlStreamAttribute ();
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
 QXmlStreamAttribute(const QString & qualifiedName, const QString & value)
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW2 )
+void QXmlStreamAttribute_new2 ()
 {
   QXmlStreamAttribute * o = new QXmlStreamAttribute ( PQSTRING(1), PQSTRING(2) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
 QXmlStreamAttribute(const QString & namespaceUri, const QString & name, const QString & value)
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW3 )
+void QXmlStreamAttribute_new3 ()
 {
   QXmlStreamAttribute * o = new QXmlStreamAttribute ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
 QXmlStreamAttribute(const QXmlStreamAttribute & other)
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW4 )
+void QXmlStreamAttribute_new4 ()
 {
   QXmlStreamAttribute * o = new QXmlStreamAttribute ( *PQXMLSTREAMATTRIBUTE(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QXmlStreamAttribute()
@@ -97,19 +95,19 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTE_NEW1 );
+    QXmlStreamAttribute_new1();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTE_NEW2 );
+    QXmlStreamAttribute_new2();
   }
   else if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTE_NEW3 );
+    QXmlStreamAttribute_new3();
   }
   else if( ISNUMPAR(1) && ISQXMLSTREAMATTRIBUTE(1) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTE_NEW4 );
+    QXmlStreamAttribute_new4();
   }
   else
   {
@@ -140,9 +138,17 @@ bool isDefault() const
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_ISDEFAULT )
 {
   QXmlStreamAttribute * obj = (QXmlStreamAttribute *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isDefault () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isDefault () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -152,10 +158,18 @@ QStringRef name() const
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NAME )
 {
   QXmlStreamAttribute * obj = (QXmlStreamAttribute *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QStringRef * ptr = new QStringRef( obj->name () );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+    if( ISNUMPAR(0) )
+    {
+      QStringRef * ptr = new QStringRef( obj->name () );
+      _qt4xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -165,10 +179,18 @@ QStringRef namespaceUri() const
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NAMESPACEURI )
 {
   QXmlStreamAttribute * obj = (QXmlStreamAttribute *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QStringRef * ptr = new QStringRef( obj->namespaceUri () );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+    if( ISNUMPAR(0) )
+    {
+      QStringRef * ptr = new QStringRef( obj->namespaceUri () );
+      _qt4xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -178,10 +200,18 @@ QStringRef prefix() const
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_PREFIX )
 {
   QXmlStreamAttribute * obj = (QXmlStreamAttribute *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QStringRef * ptr = new QStringRef( obj->prefix () );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+    if( ISNUMPAR(0) )
+    {
+      QStringRef * ptr = new QStringRef( obj->prefix () );
+      _qt4xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -191,10 +221,18 @@ QStringRef qualifiedName() const
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_QUALIFIEDNAME )
 {
   QXmlStreamAttribute * obj = (QXmlStreamAttribute *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QStringRef * ptr = new QStringRef( obj->qualifiedName () );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+    if( ISNUMPAR(0) )
+    {
+      QStringRef * ptr = new QStringRef( obj->qualifiedName () );
+      _qt4xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -204,10 +242,18 @@ QStringRef value() const
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_VALUE )
 {
   QXmlStreamAttribute * obj = (QXmlStreamAttribute *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QStringRef * ptr = new QStringRef( obj->value () );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+    if( ISNUMPAR(0) )
+    {
+      QStringRef * ptr = new QStringRef( obj->value () );
+      _qt4xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

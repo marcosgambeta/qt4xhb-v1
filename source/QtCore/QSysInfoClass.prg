@@ -14,11 +14,13 @@ CLASS QSysInfo
    DATA self_destruction INIT .F.
 
    METHOD delete
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

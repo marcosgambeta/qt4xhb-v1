@@ -14,14 +14,13 @@ REQUEST QOBJECT
 
 CLASS QObjectCleanupHandler INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD add
    METHOD remove
    METHOD isEmpty
    METHOD clear
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -45,8 +44,15 @@ QObjectCleanupHandler()
 */
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_NEW )
 {
-  QObjectCleanupHandler * o = new QObjectCleanupHandler ();
-  _qt4xhb_storePointerAndFlag ( o, false );
+  if( ISNUMPAR(0) )
+  {
+    QObjectCleanupHandler * o = new QObjectCleanupHandler ();
+    _qt4xhb_storePointerAndFlag( o, false );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_DELETE )
@@ -72,10 +78,18 @@ QObject* add(QObject* object)
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_ADD )
 {
   QObjectCleanupHandler * obj = (QObjectCleanupHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QObject * ptr = obj->add ( PQOBJECT(1) );
-    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    {
+      QObject * ptr = obj->add ( PQOBJECT(1) );
+      _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -85,10 +99,19 @@ void remove(QObject *object)
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_REMOVE )
 {
   QObjectCleanupHandler * obj = (QObjectCleanupHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->remove ( PQOBJECT(1) );
+    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    {
+      obj->remove ( PQOBJECT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -98,9 +121,17 @@ bool isEmpty() const
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_ISEMPTY )
 {
   QObjectCleanupHandler * obj = (QObjectCleanupHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isEmpty () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isEmpty () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -110,10 +141,19 @@ void clear()
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_CLEAR )
 {
   QObjectCleanupHandler * obj = (QObjectCleanupHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->clear ();
+    if( ISNUMPAR(0) )
+    {
+      obj->clear ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

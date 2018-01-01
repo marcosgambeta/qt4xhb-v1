@@ -21,11 +21,13 @@ CLASS QSystemSemaphore
    METHOD key
    METHOD release
    METHOD setKey
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -49,9 +51,15 @@ QSystemSemaphore ( const QString & key, int initialValue = 0, AccessMode mode = 
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_NEW )
 {
-  int par3 = ISNIL(3)? (int) QSystemSemaphore::Open : hb_parni(3);
-  QSystemSemaphore * o = new QSystemSemaphore ( PQSTRING(1), OPINT(2,0), (QSystemSemaphore::AccessMode) par3 );
-  _qt4xhb_storePointerAndFlag ( o, false );
+  if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  {
+    QSystemSemaphore * o = new QSystemSemaphore ( PQSTRING(1), OPINT(2,0), ISNIL(3)? (QSystemSemaphore::AccessMode) QSystemSemaphore::Open : (QSystemSemaphore::AccessMode) hb_parni(3) );
+    _qt4xhb_storePointerAndFlag( o, true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_DELETE )
@@ -77,9 +85,17 @@ bool acquire ()
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ACQUIRE )
 {
   QSystemSemaphore * obj = (QSystemSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->acquire () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->acquire () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -89,9 +105,17 @@ SystemSemaphoreError error () const
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ERROR )
 {
   QSystemSemaphore * obj = (QSystemSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->error () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->error () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -141,9 +165,17 @@ bool release ( int n = 1 )
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_RELEASE )
 {
   QSystemSemaphore * obj = (QSystemSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->release ( OPINT(1,1) ) );
+    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    {
+      RBOOL( obj->release ( OPINT(1,1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -153,11 +185,19 @@ void setKey ( const QString & key, int initialValue = 0, AccessMode mode = Open 
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_SETKEY )
 {
   QSystemSemaphore * obj = (QSystemSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    int par3 = ISNIL(3)? (int) QSystemSemaphore::Open : hb_parni(3);
-    obj->setKey ( PQSTRING(1), OPINT(2,0), (QSystemSemaphore::AccessMode) par3 );
+    if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+    {
+      obj->setKey ( PQSTRING(1), OPINT(2,0), ISNIL(3)? (QSystemSemaphore::AccessMode) QSystemSemaphore::Open : (QSystemSemaphore::AccessMode) hb_parni(3) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

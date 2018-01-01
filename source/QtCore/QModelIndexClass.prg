@@ -19,8 +19,6 @@ CLASS QModelIndex
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD child
@@ -34,11 +32,13 @@ CLASS QModelIndex
    METHOD parent
    METHOD row
    METHOD sibling
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -60,19 +60,19 @@ RETURN
 /*
 QModelIndex ()
 */
-HB_FUNC_STATIC( QMODELINDEX_NEW1 )
+void QModelIndex_new1 ()
 {
   QModelIndex * o = new QModelIndex ();
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
 QModelIndex ( const QModelIndex & other )
 */
-HB_FUNC_STATIC( QMODELINDEX_NEW2 )
+void QModelIndex_new2 ()
 {
   QModelIndex * o = new QModelIndex ( *PQMODELINDEX(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QModelIndex ()
@@ -82,11 +82,11 @@ HB_FUNC_STATIC( QMODELINDEX_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QMODELINDEX_NEW1 );
+    QModelIndex_new1();
   }
   else if( ISNUMPAR(1) && ISQMODELINDEX(1) )
   {
-    HB_FUNC_EXEC( QMODELINDEX_NEW2 );
+    QModelIndex_new2();
   }
   else
   {
@@ -117,10 +117,18 @@ QModelIndex child ( int row, int column ) const
 HB_FUNC_STATIC( QMODELINDEX_CHILD )
 {
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QModelIndex * ptr = new QModelIndex( obj->child ( PINT(1), PINT(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    {
+      QModelIndex * ptr = new QModelIndex( obj->child ( PINT(1), PINT(2) ) );
+      _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -130,9 +138,17 @@ int column () const
 HB_FUNC_STATIC( QMODELINDEX_COLUMN )
 {
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->column () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->column () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -142,10 +158,18 @@ QVariant data ( int role = Qt::DisplayRole ) const
 HB_FUNC_STATIC( QMODELINDEX_DATA )
 {
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->data ( OPINT(1,Qt::DisplayRole) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    {
+      QVariant * ptr = new QVariant( obj->data ( OPINT(1,Qt::DisplayRole) ) );
+      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -155,9 +179,17 @@ Qt::ItemFlags flags () const
 HB_FUNC_STATIC( QMODELINDEX_FLAGS )
 {
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->flags () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->flags () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -167,9 +199,17 @@ qint64 internalId () const
 HB_FUNC_STATIC( QMODELINDEX_INTERNALID )
 {
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQINT64( obj->internalId () );
+    if( ISNUMPAR(0) )
+    {
+      RQINT64( obj->internalId () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -179,10 +219,17 @@ void * internalPointer () const
 HB_FUNC_STATIC( QMODELINDEX_INTERNALPOINTER )
 {
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    void * retptr = obj->internalPointer ();
-  hb_retptr( (void *) retptr );
+    if( ISNUMPAR(0) )
+    {
+      hb_retptr( (void *) obj->internalPointer () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -192,9 +239,17 @@ bool isValid () const
 HB_FUNC_STATIC( QMODELINDEX_ISVALID )
 {
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isValid () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isValid () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -204,10 +259,18 @@ const QAbstractItemModel * model () const
 HB_FUNC_STATIC( QMODELINDEX_MODEL )
 {
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    const QAbstractItemModel * ptr = obj->model ();
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
+    if( ISNUMPAR(0) )
+    {
+      const QAbstractItemModel * ptr = obj->model ();
+      _qt4xhb_createReturnQObjectClass ( ptr, "QABSTRACTITEMMODEL" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -217,10 +280,18 @@ QModelIndex parent () const
 HB_FUNC_STATIC( QMODELINDEX_PARENT )
 {
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QModelIndex * ptr = new QModelIndex( obj->parent () );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    if( ISNUMPAR(0) )
+    {
+      QModelIndex * ptr = new QModelIndex( obj->parent () );
+      _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -230,9 +301,17 @@ int row () const
 HB_FUNC_STATIC( QMODELINDEX_ROW )
 {
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->row () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->row () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -242,10 +321,18 @@ QModelIndex sibling ( int row, int column ) const
 HB_FUNC_STATIC( QMODELINDEX_SIBLING )
 {
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QModelIndex * ptr = new QModelIndex( obj->sibling ( PINT(1), PINT(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    {
+      QModelIndex * ptr = new QModelIndex( obj->sibling ( PINT(1), PINT(2) ) );
+      _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

@@ -10,11 +10,10 @@
 
 CLASS QTimerEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD timerId
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -38,8 +37,15 @@ QTimerEvent(int timerId)
 */
 HB_FUNC_STATIC( QTIMEREVENT_NEW )
 {
-  QTimerEvent * o = new QTimerEvent ( PINT(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
+  if( ISNUMPAR(1) && ISNUM(1) )
+  {
+    QTimerEvent * o = new QTimerEvent ( PINT(1) );
+    _qt4xhb_storePointerAndFlag( o, false );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QTIMEREVENT_DELETE )
@@ -65,9 +71,17 @@ int timerId() const
 HB_FUNC_STATIC( QTIMEREVENT_TIMERID )
 {
   QTimerEvent * obj = (QTimerEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->timerId () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->timerId () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

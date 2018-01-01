@@ -15,13 +15,13 @@ REQUEST QSTATE
 
 CLASS QAbstractState INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD machine
    METHOD parentState
+
    METHOD onEntered
    METHOD onExited
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -39,6 +39,9 @@ RETURN
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
+
+#include <QStateMachine>
+#include <QState>
 
 HB_FUNC_STATIC( QABSTRACTSTATE_DELETE )
 {
@@ -63,10 +66,18 @@ QStateMachine * machine () const
 HB_FUNC_STATIC( QABSTRACTSTATE_MACHINE )
 {
   QAbstractState * obj = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QStateMachine * ptr = obj->machine ();
-    _qt4xhb_createReturnClass ( ptr, "QSTATEMACHINE" );
+    if( ISNUMPAR(0) )
+    {
+      QStateMachine * ptr = obj->machine ();
+      _qt4xhb_createReturnQObjectClass ( ptr, "QSTATEMACHINE" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -76,10 +87,18 @@ QState * parentState () const
 HB_FUNC_STATIC( QABSTRACTSTATE_PARENTSTATE )
 {
   QAbstractState * obj = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QState * ptr = obj->parentState ();
-    _qt4xhb_createReturnClass ( ptr, "QSTATE" );
+    if( ISNUMPAR(0) )
+    {
+      QState * ptr = obj->parentState ();
+      _qt4xhb_createReturnQObjectClass ( ptr, "QSTATE" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
