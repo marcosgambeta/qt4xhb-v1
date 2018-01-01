@@ -14,8 +14,6 @@ REQUEST QDESIGNERCUSTOMWIDGETINTERFACE
 
 CLASS QFormBuilder INHERIT QAbstractFormBuilder
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addPluginPath
@@ -125,12 +123,12 @@ QList<QDesignerCustomWidgetInterface *> customWidgets () const
 HB_FUNC_STATIC( QFORMBUILDER_CUSTOMWIDGETS )
 {
   QFormBuilder * obj = (QFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QList<QDesignerCustomWidgetInterface *> list = obj->customWidgets ();
     PHB_DYNS pDynSym = hb_dynsymFindName( "QDESIGNERCUSTOMWIDGETINTERFACE" );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
