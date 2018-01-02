@@ -132,7 +132,7 @@ $prototype=virtual void unpolish ( QWidget * widget )
 $internalVirtualMethod=|void|unpolish,unpolish1|QWidget *
 
 $prototype=virtual void unpolish ( QApplication * app )
-$internalVirtualMethod=|void|unpolish|QApplication *
+$internalVirtualMethod=|void|unpolish,unpolish2|QApplication *
 
 //[1]virtual void unpolish ( QWidget * widget )
 //[2]virtual void unpolish ( QApplication * app )
@@ -141,11 +141,11 @@ HB_FUNC_STATIC( QCLEANLOOKSSTYLE_UNPOLISH )
 {
   if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    QCleanLooksStyle_unpolish1();
+    QCleanlooksStyle_unpolish1();
   }
   else if( ISNUMPAR(1) && ISQAPPLICATION(1) )
   {
-    QCleanLooksStyle_unpolish2();
+    QCleanlooksStyle_unpolish2();
   }
   else
   {

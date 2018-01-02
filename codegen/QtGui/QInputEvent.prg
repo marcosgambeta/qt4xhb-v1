@@ -24,7 +24,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QInputEvent(Type type, Qt::KeyboardModifiers modifiers = Qt::NoModifier)
-$method=|new|QEvent::Type,Qt::KeyboardModifiers=Qt::NoModifier
+$constructor=|new|QEvent::Type,Qt::KeyboardModifiers=Qt::NoModifier
 
 $deleteMethod
 

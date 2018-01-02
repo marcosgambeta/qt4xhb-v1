@@ -14,6 +14,8 @@ CLASS QBitmap INHERIT QPixmap
    METHOD transformed
    METHOD fromData
    METHOD fromImage
+   METHOD toVariant
+   METHOD fromVariant
 
    DESTRUCTOR destroyObject
 
@@ -28,6 +30,8 @@ $destructor
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
+
+#include <QVariant>
 
 $prototype=QBitmap ()
 $internalConstructor=|new1|

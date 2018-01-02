@@ -71,6 +71,8 @@ CLASS QFont
    METHOD substitute
    METHOD substitutes
    METHOD substitutions
+   METHOD toVariant
+   METHOD fromVariant
 
    METHOD newFrom
    METHOD newFromObject
@@ -93,6 +95,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 #include <QStringList>
+#include <QVariant>
 
 $prototype=QFont ()
 $internalConstructor=|new1|

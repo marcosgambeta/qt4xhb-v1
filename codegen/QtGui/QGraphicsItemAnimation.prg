@@ -50,6 +50,7 @@ $destructor
 
 #include <QMatrix>
 #include <QPointF>
+#include <QTimeLine>
 
 $prototype=QGraphicsItemAnimation ( QObject * parent = 0 )
 $constructor=|new|QObject *=0

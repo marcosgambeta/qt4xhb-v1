@@ -38,6 +38,8 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
+#include <QGesture>
+
 $deleteMethod
 
 $prototype=virtual QGesture * create ( QObject * target )

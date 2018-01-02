@@ -183,6 +183,9 @@ $destructor
 #include "qt4xhb_utils.h"
 
 #include <QCursor>
+#include <QGraphicsEffect>
+#include <QGraphicsWidget>
+#include <QGraphicsScene>
 
 $deleteMethod
 
@@ -672,7 +675,7 @@ $prototype=QRectF mapRectFromScene ( const QRectF & rect ) const
 $internalMethod=|QRectF|mapRectFromScene,mapRectFromScene1|const QRectF &
 
 $prototype=QRectF mapRectFromScene ( qreal x, qreal y, qreal w, qreal h ) const
-$internalMthod=|QRectF|mapRectFromScene,mapRectFromScene2|qreal,qreal,qreal,qreal
+$internalMethod=|QRectF|mapRectFromScene,mapRectFromScene2|qreal,qreal,qreal,qreal
 
 //[1]QRectF mapRectFromScene ( const QRectF & rect ) const
 //[2]QRectF mapRectFromScene ( qreal x, qreal y, qreal w, qreal h ) const

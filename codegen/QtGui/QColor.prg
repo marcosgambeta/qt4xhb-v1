@@ -101,6 +101,8 @@ CLASS QColor
    METHOD fromRgbF
    METHOD fromRgba
    METHOD isValidColor
+   METHOD toVariant
+   METHOD fromVariant
 
    METHOD newFrom
    METHOD newFromObject
@@ -121,6 +123,8 @@ $destructor
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
+
+#include <QVariant>
 
 $prototype=QColor ()
 $constructor=|new1|

@@ -119,6 +119,10 @@ $destructor
 
 #include <QVariant>
 #include <QPalette>
+#include <QGraphicsWidget>
+#include <QGraphicsTextItem>
+#include <QGraphicsProxyWidget>
+#include <QStyle>
 
 $prototype=QGraphicsScene ( QObject * parent = 0 )
 $internalConstructor=|new1|QObject *=0

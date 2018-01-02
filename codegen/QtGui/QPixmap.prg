@@ -54,6 +54,8 @@ CLASS QPixmap INHERIT QPaintDevice
    METHOD grabWidget
    METHOD grabWindow
    METHOD trueMatrix
+   METHOD toVariant
+   METHOD fromVariant
 
    DESTRUCTOR destroyObject
 
@@ -70,6 +72,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 #include <QBitmap>
+#include <QVariant>
 
 $prototype=QPixmap ()
 $constructor=|new1|

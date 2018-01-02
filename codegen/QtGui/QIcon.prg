@@ -30,6 +30,8 @@ CLASS QIcon
    METHOD setThemeSearchPaths
    METHOD themeName
    METHOD themeSearchPaths
+   METHOD toVariant
+   METHOD fromVariant
 
    METHOD newFrom
    METHOD newFromObject
@@ -50,6 +52,8 @@ $destructor
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
+
+#include <QVariant>
 
 $prototype=QIcon ()
 $internalConstructor=|new1|

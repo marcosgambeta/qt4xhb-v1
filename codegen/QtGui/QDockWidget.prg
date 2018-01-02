@@ -44,6 +44,8 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
+#include <QAction>
+
 $prototype=QDockWidget ( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 $internalConstructor=|new1|const QString &,QWidget *=0,Qt::WindowFlags=0
 

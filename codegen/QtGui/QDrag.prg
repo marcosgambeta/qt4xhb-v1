@@ -43,6 +43,7 @@ $destructor
 
 #include <QPoint>
 #include <QPixmap>
+#include <QMimeData>
 
 $prototype=QDrag ( QWidget * dragSource )
 $constructor=|new|QWidget *

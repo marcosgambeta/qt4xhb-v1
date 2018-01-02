@@ -33,7 +33,7 @@ $prototype=QInputMethodEvent ( const QString & preeditText, const QList<Attribut
 %% TODO: implementar ?
 
 $prototype=QInputMethodEvent ( const QInputMethodEvent & other )
-$internalConstructor=|new2|const QInputMethodEvent &
+$internalConstructor=|new3|const QInputMethodEvent &
 
 //[1]QInputMethodEvent ()
 //[2]QInputMethodEvent ( const QString & preeditText, const QList<Attribute> & attributes )

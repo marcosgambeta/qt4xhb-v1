@@ -122,6 +122,10 @@ $destructor
 #include <QSessionManager>
 #include <QFontMetrics>
 #include <QPalette>
+#include <QInputContext>
+#include <QClipboard>
+#include <QDesktopWidget>
+#include <QStyle>
 
 //QApplication ( int & argc, char ** argv )
 //QApplication ( int & argc, char ** argv, bool GUIenabled )
