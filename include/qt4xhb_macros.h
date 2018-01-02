@@ -522,6 +522,8 @@
 #define ISQSTYLEHINTRETURN(n)                               _qt4xhb_isObjectDerivedFrom(n,"QStyleHintReturn")
 #define ISQSTYLEHINTRETURNMASK(n)                           _qt4xhb_isObjectDerivedFrom(n,"QStyleHintReturnMask")
 #define ISQSTYLEHINTRETURNVARIANT(n)                        _qt4xhb_isObjectDerivedFrom(n,"QStyleHintReturnVariant")
+#define ISQSTYLEOPTION(n)                                   _qt4xhb_isObjectDerivedFrom(n,"QStyleOption")
+#define ISQSTYLEOPTIONCOMPLEX(n)                            _qt4xhb_isObjectDerivedFrom(n,"QStyleOptionComplex")
 #define ISQSTYLEOPTIONGRAPHICSITEM(n)                       _qt4xhb_isObjectDerivedFrom(n,"QStyleOptionGraphicsItem")
 #define ISQSTYLEOPTIONVIEWITEM(n)                           _qt4xhb_isObjectDerivedFrom(n,"QStyleOptionViewItem")
 #define ISQSUPPORTEDWRITINGSYSTEMS(n)                       _qt4xhb_isObjectDerivedFrom(n,"QSupportedWritingSystems")
@@ -1194,6 +1196,8 @@
 #define PQSTYLEHINTRETURN(n)                               (QStyleHintReturn *) hb_itemGetPtr( hb_objSendMsg( hb_param(n, HB_IT_OBJECT ), "POINTER", 0 ) )
 #define PQSTYLEHINTRETURNMASK(n)                           (QStyleHintReturnMask *) hb_itemGetPtr( hb_objSendMsg( hb_param(n, HB_IT_OBJECT ), "POINTER", 0 ) )
 #define PQSTYLEHINTRETURNVARIANT(n)                        (QStyleHintReturnVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(n, HB_IT_OBJECT ), "POINTER", 0 ) )
+#define PQSTYLEOPTION(n)                                   (QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(n, HB_IT_OBJECT ), "POINTER", 0 ) )
+#define PQSTYLEOPTIONCOMPLEX(n)                            (QStyleOptionComplex *) hb_itemGetPtr( hb_objSendMsg( hb_param(n, HB_IT_OBJECT ), "POINTER", 0 ) )
 #define PQSTYLEOPTIONGRAPHICSITEM(n)                       (QStyleOptionGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(n, HB_IT_OBJECT ), "POINTER", 0 ) )
 #define PQSTYLEOPTIONVIEWITEM(n)                           (QStyleOptionViewItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(n, HB_IT_OBJECT ), "POINTER", 0 ) )
 #define PQSUPPORTEDWRITINGSYSTEMS(n)                       (QSupportedWritingSystems *) hb_itemGetPtr( hb_objSendMsg( hb_param(n, HB_IT_OBJECT ), "POINTER", 0 ) )
@@ -1401,6 +1405,8 @@
 #define PGLBITFIELD(n)                                      (GLbitfield) hb_parni(n)
 #define PGLSIZEI(n)                                         (GLsizei) hb_parni(n)
 #define PCONSTCHAR(n)                                       (const char *) hb_parc(n)
+#define PCONSTUCHAR(n)                                      (const uchar *) hb_parc(n)
+#define PQRGB(n)                                            (uint) hb_parni(n)
 
 // macros for optional parameters
 #define OPBOOL(n,v)                                         (bool) ISNIL(n)? v : hb_parl(n)
@@ -1464,6 +1470,7 @@
 #define RGLBITFIELD(x)                                      hb_parni( (GLbitfield) x )
 #define RGLSIZEI(x)                                         hb_parni( (GLsizei) x )
 #define RQSTRINGLIST(x)                                     _qt4xhb_convert_qstringlist_to_array( x )
+#define RQRGB(x)                                            hb_retni( x )
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  (const char *) x.toAscii().data()
