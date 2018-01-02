@@ -41,6 +41,8 @@ $destructor
 #include "qt4xhb_utils.h"
 
 #include <QVariant>
+#include <QSignalTransition>
+#include <QAbstractTransition>
 
 $prototype=QState ( QState * parent = 0 )
 $internalConstructor=|new1|QState *=0

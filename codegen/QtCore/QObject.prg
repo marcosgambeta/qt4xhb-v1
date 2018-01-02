@@ -1453,6 +1453,7 @@ $destructor
 
 #include <QWidget>
 #include <QVariant>
+#include <QThread>
 
 $prototype=QObject ( QObject * parent = 0 )
 $constructor=|new|QObject *=0

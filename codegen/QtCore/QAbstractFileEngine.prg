@@ -33,7 +33,7 @@ CLASS QAbstractFileEngine
    METHOD owner
    METHOD ownerId
    METHOD pos
-   METHOD readLine
+   //METHOD readLine
    METHOD remove
    METHOD rename
    METHOD rmdir
@@ -131,7 +131,8 @@ $prototype=virtual qint64 pos () const
 $virtualMethod=|qint64|pos|
 
 $prototype=virtual qint64 readLine ( char * data, qint64 maxlen )
-$virtualMethod=|qint64|readLine|char *,qint64
+%% TODO: corrigir codigo
+%% $virtualMethod=|qint64|readLine|char *,qint64
 
 $prototype=virtual bool remove ()
 $virtualMethod=|bool|remove|

@@ -38,6 +38,10 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
+#include <QStateMachine>
+#include <QState>
+#include <QAbstractState>
+
 $deleteMethod
 
 $prototype=void addAnimation ( QAbstractAnimation * animation )
