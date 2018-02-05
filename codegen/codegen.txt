@@ -405,7 +405,6 @@ QFormBuilder                                     |object
 QFormLayout                                      |QObject
 QFormLayout::FieldGrowthPolicy                   |enum
 QFormLayout::ItemRole                            |enum
-QFormLayout::ItemRole                            |enum
 QFormLayout::RowWrapPolicy                       |enum
 QFrame                                           |QObject
 QFrame::Shadow                                   |enum
@@ -568,7 +567,6 @@ QInputDialog::InputDialogOptions                 |enum
 QInputDialog::InputMode                          |enum
 QInputEvent                                      |QEvent
 QInputMethodEvent                                |QEvent
-QInputMethodEvent                                |QEvent
 QIntValidator                                    |QObject
 QIODevice                                        |QObject
 QIODevice::OpenMode                              |enum
@@ -581,7 +579,6 @@ QItemSelectionModel                              |QObject
 QItemSelectionModel::SelectionFlags              |enum
 QItemSelectionRange                              |object
 QKbdDriverPlugin                                 |QObject
-QKeyEvent                                        |QEvent
 QKeyEvent                                        |QEvent
 QKeyEventTransition                              |QObject
 QKeySequence                                     |object
@@ -664,7 +661,6 @@ QMimeSource                                      |object
 QModelIndex                                      |object
 QMotifStyle                                      |QObject
 QMouseDriverPlugin                               |QObject
-QMouseEvent                                      |QEvent
 QMouseEvent                                      |QEvent
 QMouseEventTransition                            |QObject
 QMoveEvent                                       |QEvent
@@ -883,7 +879,6 @@ QSplashScreen                                    |QObject
 QSplitter                                        |QObject
 QSplitterHandle                                  |QObject
 QSql::NumericalPrecisionPolicy                   |enum
-QSql::NumericalPrecisionPolicy                   |enum
 QSql::ParamType                                  |enum
 QSql::TableType                                  |enum
 QSqlDatabase                                     |object
@@ -896,9 +891,7 @@ QSqlDriverCreatorBase                            |object
 QSqlDriverPlugin                                 |QObject
 QSqlError                                        |object
 QSqlError::ErrorType                             |enum
-QSqlError::ErrorType                             |enum
 QSqlField                                        |object
-QSqlField::RequiredStatus                        |enum
 QSqlField::RequiredStatus                        |enum
 QSqlIndex                                        |object
 QSqlQuery                                        |object
@@ -910,7 +903,6 @@ QSqlRelationalDelegate                           |QObject
 QSqlRelationalTableModel                         |QObject
 QSqlResult                                       |object
 QSqlTableModel                                   |QObject
-QSqlTableModel::EditStrategy                     |enum
 QSqlTableModel::EditStrategy                     |enum
 QSsl::EncodingFormat                             |enum
 QSsl::KeyAlgorithm                               |enum
@@ -1176,7 +1168,6 @@ QUuid::Variant                                   |enum
 QUuid::Version                                   |enum
 QValidator                                       |QObject
 QVariant                                         |object
-QVariant::Type                                   |enum
 QVariant::Type                                   |enum
 QVariantAnimation                                |QObject
 QVBoxLayout                                      |QObject
