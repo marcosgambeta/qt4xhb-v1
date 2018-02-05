@@ -4,6 +4,8 @@
 %% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 %%
 
+$header
+
 #ifndef SLOTSQGRAPHICSSCENE_H
 #define SLOTSQGRAPHICSSCENE_H
 

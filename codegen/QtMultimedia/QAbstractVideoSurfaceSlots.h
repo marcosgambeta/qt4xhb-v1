@@ -4,6 +4,8 @@
 %% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 %%
 
+$header
+
 #ifndef SLOTSQABSTRACTVIDEOSURFACE_H
 #define SLOTSQABSTRACTVIDEOSURFACE_H
 

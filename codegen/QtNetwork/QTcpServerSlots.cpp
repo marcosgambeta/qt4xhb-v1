@@ -4,6 +4,8 @@
 %% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 %%
 
+$header
+
 #include "QTcpServerSlots.h"
 
 static SlotsQTcpServer * s = NULL;

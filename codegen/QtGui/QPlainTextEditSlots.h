@@ -4,6 +4,8 @@
 %% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 %%
 
+$header
+
 #ifndef SLOTSQPLAINTEXTEDIT_H
 #define SLOTSQPLAINTEXTEDIT_H
 

@@ -4,6 +4,8 @@
 %% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 %%
 
+$header
+
 #ifndef SLOTSQABSTRACTSPINBOX_H
 #define SLOTSQABSTRACTSPINBOX_H
 
