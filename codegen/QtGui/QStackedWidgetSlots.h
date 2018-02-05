@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQSTACKEDWIDGET_H
-#define SLOTSQSTACKEDWIDGET_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -35,5 +32,3 @@ class SlotsQStackedWidget: public QObject
   void currentChanged ( int index );
   void widgetRemoved ( int index );
 };
-
-#endif

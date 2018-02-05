@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQSOCKETNOTIFIER_H
-#define SLOTSQSOCKETNOTIFIER_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -34,5 +31,3 @@ class SlotsQSocketNotifier: public QObject
   public slots:
   void activated(int socket);
 };
-
-#endif

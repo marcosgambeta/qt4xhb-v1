@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQDESIGNERFORMWINDOWINTERFACE_H
-#define SLOTSQDESIGNERFORMWINDOWINTERFACE_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -46,5 +43,3 @@ class SlotsQDesignerFormWindowInterface: public QObject
   void widgetRemoved ( QWidget * widget );
   void widgetUnmanaged ( QWidget * widget );
 };
-
-#endif

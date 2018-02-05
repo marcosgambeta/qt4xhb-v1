@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQHELPENGINECORE_H
-#define SLOTSQHELPENGINECORE_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -37,5 +34,3 @@ class SlotsQHelpEngineCore: public QObject
   void setupStarted ();
   void warning ( const QString & msg );
 };
-
-#endif

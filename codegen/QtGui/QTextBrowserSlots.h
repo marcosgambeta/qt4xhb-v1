@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQTEXTBROWSER_H
-#define SLOTSQTEXTBROWSER_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -40,5 +37,3 @@ class SlotsQTextBrowser: public QObject
   void historyChanged ();
   void sourceChanged ( const QUrl & src );
 };
-
-#endif

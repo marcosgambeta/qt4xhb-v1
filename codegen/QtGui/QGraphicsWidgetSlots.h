@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQGRAPHICSWIDGET_H
-#define SLOTSQGRAPHICSWIDGET_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -34,5 +31,3 @@ class SlotsQGraphicsWidget: public QObject
   public slots:
   void geometryChanged ();
 };
-
-#endif

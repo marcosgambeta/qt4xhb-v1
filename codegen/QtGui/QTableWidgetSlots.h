@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQTABLEWIDGET_H
-#define SLOTSQTABLEWIDGET_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -48,5 +45,3 @@ class SlotsQTableWidget: public QObject
   void itemPressed ( QTableWidgetItem * item );
   void itemSelectionChanged ();
 };
-
-#endif

@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQCOLORDIALOG_H
-#define SLOTSQCOLORDIALOG_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -35,5 +32,3 @@ class SlotsQColorDialog: public QObject
   void colorSelected ( const QColor & color );
   void currentColorChanged ( const QColor & color );
 };
-
-#endif

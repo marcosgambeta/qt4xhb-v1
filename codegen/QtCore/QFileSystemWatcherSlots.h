@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQFILESYSTEMWATCHER_H
-#define SLOTSQFILESYSTEMWATCHER_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -35,5 +32,3 @@ class SlotsQFileSystemWatcher: public QObject
   void directoryChanged(const QString & path);
   void fileChanged(const QString & path);
 };
-
-#endif

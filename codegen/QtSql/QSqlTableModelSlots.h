@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQSQLTABLEMODEL_H
-#define SLOTSQSQLTABLEMODEL_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -37,5 +34,3 @@ class SlotsQSqlTableModel: public QObject
   void beforeUpdate ( int row, QSqlRecord & record );
   void primeInsert ( int row, QSqlRecord & record );
 };
-
-#endif

@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQNETWORKACCESSMANAGER_H
-#define SLOTSQNETWORKACCESSMANAGER_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -39,5 +36,3 @@ class SlotsQNetworkAccessManager: public QObject
   void proxyAuthenticationRequired ( const QNetworkProxy & proxy, QAuthenticator * authenticator );
   void sslErrors ( QNetworkReply * reply, const QList<QSslError> & errors );
 };
-
-#endif

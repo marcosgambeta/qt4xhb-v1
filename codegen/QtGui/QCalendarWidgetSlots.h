@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQCALENDARWIDGET_H
-#define SLOTSQCALENDARWIDGET_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -37,5 +34,3 @@ class SlotsQCalendarWidget: public QObject
   void currentPageChanged ( int year, int month );
   void selectionChanged ();
 };
-
-#endif

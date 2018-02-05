@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQSTATEMACHINE_H
-#define SLOTSQSTATEMACHINE_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -35,5 +32,3 @@ class SlotsQStateMachine: public QObject
   void started ();
   void stopped ();
 };
-
-#endif

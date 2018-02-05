@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQPROCESS_H
-#define SLOTSQPROCESS_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -39,5 +36,3 @@ class SlotsQProcess: public QObject
   void started ();
   void stateChanged ( QProcess::ProcessState newState );
 };
-
-#endif

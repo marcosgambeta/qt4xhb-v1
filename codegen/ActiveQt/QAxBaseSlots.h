@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQAXBASE_H
-#define SLOTSQAXBASE_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -36,5 +33,3 @@ class SlotsQAxBase: public QObject
   void propertyChanged ( const QString & name );
   void signal ( const QString & name, int argc, void * argv );
 };
-
-#endif

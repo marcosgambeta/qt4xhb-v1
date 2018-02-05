@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQSYSTEMTRAYICON_H
-#define SLOTSQSYSTEMTRAYICON_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -35,5 +32,3 @@ class SlotsQSystemTrayIcon: public QObject
   void activated ( QSystemTrayIcon::ActivationReason reason );
   void messageClicked ();
 };
-
-#endif

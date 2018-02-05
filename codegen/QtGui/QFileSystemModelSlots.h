@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQFILESYSTEMMODEL_H
-#define SLOTSQFILESYSTEMMODEL_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -36,5 +33,3 @@ class SlotsQFileSystemModel: public QObject
   void fileRenamed ( const QString & path, const QString & oldName, const QString & newName );
   void rootPathChanged ( const QString & newPath );
 };
-
-#endif

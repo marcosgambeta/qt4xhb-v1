@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQSQLDRIVER_H
-#define SLOTSQSQLDRIVER_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -34,5 +31,3 @@ class SlotsQSqlDriver: public QObject
   public slots:
   void notification ( const QString & name );
 };
-
-#endif

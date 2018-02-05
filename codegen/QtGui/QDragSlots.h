@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQDRAG_H
-#define SLOTSQDRAG_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -35,5 +32,3 @@ class SlotsQDrag: public QObject
   void actionChanged ( Qt::DropAction action );
   void targetChanged ( QWidget * newTarget );
 };
-
-#endif

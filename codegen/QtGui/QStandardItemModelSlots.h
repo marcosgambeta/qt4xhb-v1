@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQSTANDARDITEMMODEL_H
-#define SLOTSQSTANDARDITEMMODEL_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -34,5 +31,3 @@ class SlotsQStandardItemModel: public QObject
   public slots:
   void itemChanged(QStandardItem *item);
 };
-
-#endif

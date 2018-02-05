@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQDECLARATIVECOMPONENT_H
-#define SLOTSQDECLARATIVECOMPONENT_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -35,5 +32,3 @@ class SlotsQDeclarativeComponent: public QObject
   void progressChanged ( qreal progress );
   void statusChanged ( QDeclarativeComponent::Status status );
 };
-
-#endif

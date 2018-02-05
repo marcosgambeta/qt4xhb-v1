@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQWEBVIEW_H
-#define SLOTSQWEBVIEW_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -42,5 +39,3 @@ class SlotsQWebView: public QObject
   void titleChanged ( const QString & title );
   void urlChanged ( const QUrl & url );
 };
-
-#endif

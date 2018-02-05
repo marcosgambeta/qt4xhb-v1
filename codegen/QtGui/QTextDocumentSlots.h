@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQTEXTDOCUMENT_H
-#define SLOTSQTEXTDOCUMENT_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -42,5 +39,3 @@ class SlotsQTextDocument: public QObject
   void undoAvailable ( bool available );
   void undoCommandAdded ();
 };
-
-#endif

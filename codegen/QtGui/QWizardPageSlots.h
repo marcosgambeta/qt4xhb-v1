@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQWIZARDPAGE_H
-#define SLOTSQWIZARDPAGE_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -34,5 +31,3 @@ class SlotsQWizardPage: public QObject
   public slots:
   void completeChanged ();
 };
-
-#endif

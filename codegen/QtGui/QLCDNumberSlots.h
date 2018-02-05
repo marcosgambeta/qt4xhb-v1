@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQLCDNUMBER_H
-#define SLOTSQLCDNUMBER_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -34,5 +31,3 @@ class SlotsQLCDNumber: public QObject
   public slots:
   void overflow ();
 };
-
-#endif

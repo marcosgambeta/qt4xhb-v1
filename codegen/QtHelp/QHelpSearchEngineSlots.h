@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQHELPSEARCHENGINE_H
-#define SLOTSQHELPSEARCHENGINE_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -37,5 +34,3 @@ class SlotsQHelpSearchEngine: public QObject
   void searchingFinished ( int hits );
   void searchingStarted ();
 };
-
-#endif

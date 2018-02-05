@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQUNDOSTACK_H
-#define SLOTSQUNDOSTACK_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -39,5 +36,3 @@ class SlotsQUndoStack: public QObject
   void redoTextChanged ( const QString & redoText );
   void undoTextChanged ( const QString & undoText );
 };
-
-#endif

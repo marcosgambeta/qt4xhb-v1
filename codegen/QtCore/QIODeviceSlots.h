@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQIODEVICE_H
-#define SLOTSQIODEVICE_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -37,5 +34,3 @@ class SlotsQIODevice: public QObject
   void readChannelFinished ();
   void readyRead ();
 };
-
-#endif

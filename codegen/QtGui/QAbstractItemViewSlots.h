@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQABSTRACTITEMVIEW_H
-#define SLOTSQABSTRACTITEMVIEW_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -39,5 +36,3 @@ class SlotsQAbstractItemView: public QObject
   void pressed ( const QModelIndex & index );
   void viewportEntered ();
 };
-
-#endif

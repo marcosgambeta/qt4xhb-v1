@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQDESIGNERPROPERTYEDITORINTERFACE_H
-#define SLOTSQDESIGNERPROPERTYEDITORINTERFACE_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -34,5 +31,3 @@ class SlotsQDesignerPropertyEditorInterface: public QObject
   public slots:
   void propertyChanged ( const QString & name, const QVariant & value );
 };
-
-#endif

@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQACTIONGROUP_H
-#define SLOTSQACTIONGROUP_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -35,5 +32,3 @@ class SlotsQActionGroup: public QObject
   void hovered ( QAction * action );
   void triggered ( QAction * action );
 };
-
-#endif

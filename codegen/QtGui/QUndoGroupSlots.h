@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQUNDOGROUP_H
-#define SLOTSQUNDOGROUP_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -40,5 +37,3 @@ class SlotsQUndoGroup: public QObject
   void redoTextChanged ( const QString & redoText );
   void undoTextChanged ( const QString & undoText );
 };
-
-#endif

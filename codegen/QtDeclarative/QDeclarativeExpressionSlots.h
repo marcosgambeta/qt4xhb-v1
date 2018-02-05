@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQDECLARATIVEEXPRESSION_H
-#define SLOTSQDECLARATIVEEXPRESSION_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -34,5 +31,3 @@ class SlotsQDeclarativeExpression: public QObject
   public slots:
   void valueChanged ();
 };
-
-#endif

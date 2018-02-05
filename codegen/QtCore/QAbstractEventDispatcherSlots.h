@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQABSTRACTEVENTDISPATCHER_H
-#define SLOTSQABSTRACTEVENTDISPATCHER_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -35,5 +32,3 @@ class SlotsQAbstractEventDispatcher: public QObject
   void aboutToBlock ();
   void awake ();
 };
-
-#endif

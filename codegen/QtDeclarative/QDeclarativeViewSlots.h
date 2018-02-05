@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQDECLARATIVEVIEW_H
-#define SLOTSQDECLARATIVEVIEW_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -35,5 +32,3 @@ class SlotsQDeclarativeView: public QObject
   void sceneResized ( QSize size );
   void statusChanged ( QDeclarativeView::Status status );
 };
-
-#endif

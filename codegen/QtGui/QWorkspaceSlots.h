@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQWORKSPACE_H
-#define SLOTSQWORKSPACE_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -34,5 +31,3 @@ class SlotsQWorkspace: public QObject
   public slots:
   void windowActivated ( QWidget * w );
 };
-
-#endif

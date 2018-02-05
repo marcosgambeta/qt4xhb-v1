@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQMENUBAR_H
-#define SLOTSQMENUBAR_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -35,5 +32,3 @@ class SlotsQMenuBar: public QObject
   void hovered ( QAction * action );
   void triggered ( QAction * action );
 };
-
-#endif

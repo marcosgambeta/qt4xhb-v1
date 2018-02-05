@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQHELPINDEXMODEL_H
-#define SLOTSQHELPINDEXMODEL_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -35,5 +32,3 @@ class SlotsQHelpIndexModel: public QObject
   void indexCreated ();
   void indexCreationStarted ();
 };
-
-#endif

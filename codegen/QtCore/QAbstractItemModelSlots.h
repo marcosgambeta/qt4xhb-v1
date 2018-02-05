@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQABSTRACTITEMMODEL_H
-#define SLOTSQABSTRACTITEMMODEL_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -51,5 +48,3 @@ class SlotsQAbstractItemModel: public QObject
   void rowsMoved ( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationRow );
   void rowsRemoved ( const QModelIndex & parent, int start, int end );
 };
-
-#endif

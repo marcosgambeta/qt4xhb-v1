@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQSTATE_H
-#define SLOTSQSTATE_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -35,5 +32,3 @@ class SlotsQState: public QObject
   void finished ();
   void propertiesAssigned ();
 };
-
-#endif

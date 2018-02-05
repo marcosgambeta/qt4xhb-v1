@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQCLIPBOARD_H
-#define SLOTSQCLIPBOARD_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -37,5 +34,3 @@ class SlotsQClipboard: public QObject
   void findBufferChanged ();
   void selectionChanged ();
 };
-
-#endif

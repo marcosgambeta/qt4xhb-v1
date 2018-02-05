@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQSPLITTER_H
-#define SLOTSQSPLITTER_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -34,5 +31,3 @@ class SlotsQSplitter: public QObject
   public slots:
   void splitterMoved ( int pos, int index );
 };
-
-#endif

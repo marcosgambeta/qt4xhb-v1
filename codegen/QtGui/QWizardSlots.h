@@ -4,9 +4,6 @@
 %% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 %%
 
-#ifndef SLOTSQWIZARD_H
-#define SLOTSQWIZARD_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -36,5 +33,3 @@ class SlotsQWizard: public QObject
   void pageAdded ( int id );
   void pageRemoved ( int id );
 };
-
-#endif

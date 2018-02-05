@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQSVGRENDERER_H
-#define SLOTSQSVGRENDERER_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -34,5 +31,3 @@ class SlotsQSvgRenderer: public QObject
   public slots:
   void repaintNeeded ();
 };
-
-#endif

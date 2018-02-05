@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQMOVIE_H
-#define SLOTSQMOVIE_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -34,5 +31,3 @@ class SlotsQMovie: public QObject
   public slots:
   void updated ( const QRect & rect );
 };
-
-#endif

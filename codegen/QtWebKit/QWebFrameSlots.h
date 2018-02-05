@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQWEBFRAME_H
-#define SLOTSQWEBFRAME_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -42,5 +39,3 @@ class SlotsQWebFrame: public QObject
   void titleChanged ( const QString & title );
   void urlChanged ( const QUrl & url );
 };
-
-#endif

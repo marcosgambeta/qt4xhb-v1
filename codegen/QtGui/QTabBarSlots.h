@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQTABBAR_H
-#define SLOTSQTABBAR_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -36,5 +33,3 @@ class SlotsQTabBar: public QObject
   void tabCloseRequested ( int index );
   void tabMoved ( int from, int to );
 };
-
-#endif

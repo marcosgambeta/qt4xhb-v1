@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQLOCALSOCKET_H
-#define SLOTSQLOCALSOCKET_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -37,5 +34,3 @@ class SlotsQLocalSocket: public QObject
   void error ( QLocalSocket::LocalSocketError socketError );
   void stateChanged ( QLocalSocket::LocalSocketState socketState );
 };
-
-#endif

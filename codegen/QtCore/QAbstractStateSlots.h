@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQABSTRACTSTATE_H
-#define SLOTSQABSTRACTSTATE_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -35,5 +32,3 @@ class SlotsQAbstractState: public QObject
   void entered ();
   void exited ();
 };
-
-#endif

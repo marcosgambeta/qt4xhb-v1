@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQDECLARATIVEENGINE_H
-#define SLOTSQDECLARATIVEENGINE_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -35,5 +32,3 @@ class SlotsQDeclarativeEngine: public QObject
   void quit ();
   void warnings ( const QList<QDeclarativeError> & warnings );
 };
-
-#endif

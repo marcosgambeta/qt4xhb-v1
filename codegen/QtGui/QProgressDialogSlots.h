@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQPROGRESSDIALOG_H
-#define SLOTSQPROGRESSDIALOG_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -34,5 +31,3 @@ class SlotsQProgressDialog: public QObject
   public slots:
   void canceled ();
 };
-
-#endif

@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQABSTRACTVIDEOSURFACE_H
-#define SLOTSQABSTRACTVIDEOSURFACE_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -36,5 +33,3 @@ class SlotsQAbstractVideoSurface: public QObject
   void surfaceFormatChanged(const QVideoSurfaceFormat &format);
   void supportedFormatsChanged();
 };
-
-#endif

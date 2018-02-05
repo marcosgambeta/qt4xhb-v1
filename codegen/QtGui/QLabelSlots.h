@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQLABEL_H
-#define SLOTSQLABEL_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -35,5 +32,3 @@ class SlotsQLabel: public QObject
   void linkActivated ( const QString & link );
   void linkHovered ( const QString & link );
 };
-
-#endif

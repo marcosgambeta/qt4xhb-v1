@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQABSTRACTSPINBOX_H
-#define SLOTSQABSTRACTSPINBOX_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -34,5 +31,3 @@ class SlotsQAbstractSpinBox: public QObject
   public slots:
   void editingFinished ();
 };
-
-#endif

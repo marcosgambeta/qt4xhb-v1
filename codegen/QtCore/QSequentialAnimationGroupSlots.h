@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQSEQUENTIALANIMATIONGROUP_H
-#define SLOTSQSEQUENTIALANIMATIONGROUP_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -34,5 +31,3 @@ class SlotsQSequentialAnimationGroup: public QObject
   public slots:
   void currentAnimationChanged ( QAbstractAnimation * current );
 };
-
-#endif

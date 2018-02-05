@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQSPINBOX_H
-#define SLOTSQSPINBOX_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -35,5 +32,3 @@ class SlotsQSpinBox: public QObject
   void valueChanged ( int i );
   void valueChanged ( const QString & text );
 };
-
-#endif

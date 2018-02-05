@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQTHREAD_H
-#define SLOTSQTHREAD_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -35,5 +32,3 @@ class SlotsQThread: public QObject
   void finished();
   void started();
 };
-
-#endif

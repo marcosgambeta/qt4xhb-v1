@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQWEBPAGE_H
-#define SLOTSQWEBPAGE_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -56,5 +53,3 @@ class SlotsQWebPage: public QObject
   void unsupportedContent ( QNetworkReply * reply );
   void windowCloseRequested ();
 };
-
-#endif

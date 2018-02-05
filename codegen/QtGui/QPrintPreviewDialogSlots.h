@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQPRINTPREVIEWDIALOG_H
-#define SLOTSQPRINTPREVIEWDIALOG_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -34,5 +31,3 @@ class SlotsQPrintPreviewDialog: public QObject
   public slots:
   void paintRequested ( QPrinter * printer );
 };
-
-#endif

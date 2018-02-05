@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQFONTCOMBOBOX_H
-#define SLOTSQFONTCOMBOBOX_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -34,5 +31,3 @@ class SlotsQFontComboBox: public QObject
   public slots:
   void currentFontChanged ( const QFont & font );
 };
-
-#endif

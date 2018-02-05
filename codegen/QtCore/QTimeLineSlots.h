@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQTIMELINE_H
-#define SLOTSQTIMELINE_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -37,5 +34,3 @@ class SlotsQTimeLine: public QObject
   void stateChanged ( QTimeLine::State newState );
   void valueChanged ( qreal value );
 };
-
-#endif

@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQAUDIOINPUT_H
-#define SLOTSQAUDIOINPUT_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -35,5 +32,3 @@ class SlotsQAudioInput: public QObject
   void stateChanged ( QAudio::State state );
   void notify ();
 };
-
-#endif

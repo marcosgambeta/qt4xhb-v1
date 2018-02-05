@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQABSTRACTANIMATION_H
-#define SLOTSQABSTRACTANIMATION_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -37,5 +34,3 @@ class SlotsQAbstractAnimation: public QObject
   void finished ();
   void stateChanged ( QAbstractAnimation::State newState, QAbstractAnimation::State oldState );
 };
-
-#endif

@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQHELPINDEXWIDGET_H
-#define SLOTSQHELPINDEXWIDGET_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -34,5 +31,3 @@ class SlotsQHelpIndexWidget: public QObject
   public slots:
   void linkActivated ( const QUrl & link, const QString & keyword );
 };
-
-#endif

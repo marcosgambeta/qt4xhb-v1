@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQSCRIPTENGINE_H
-#define SLOTSQSCRIPTENGINE_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -34,5 +31,3 @@ class SlotsQScriptEngine: public QObject
   public slots:
   void signalHandlerException ( const QScriptValue & exception );
 };
-
-#endif

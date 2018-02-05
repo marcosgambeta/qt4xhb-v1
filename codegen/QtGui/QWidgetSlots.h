@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQWIDGET_H
-#define SLOTSQWIDGET_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -34,5 +31,3 @@ class SlotsQWidget: public QObject
   public slots:
   void customContextMenuRequested ( const QPoint & pos );
 };
-
-#endif

@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQGRAPHICSROTATION_H
-#define SLOTSQGRAPHICSROTATION_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -36,5 +33,3 @@ class SlotsQGraphicsRotation: public QObject
   void axisChanged ();
   void originChanged ();
 };
-
-#endif

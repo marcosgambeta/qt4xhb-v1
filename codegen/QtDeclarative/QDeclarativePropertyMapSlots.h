@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQDECLARATIVEPROPERTYMAP_H
-#define SLOTSQDECLARATIVEPROPERTYMAP_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -34,5 +31,3 @@ class SlotsQDeclarativePropertyMap: public QObject
   public slots:
   void valueChanged ( const QString & key, const QVariant & value );
 };
-
-#endif

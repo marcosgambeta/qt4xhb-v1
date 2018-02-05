@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQSSLSOCKET_H
-#define SLOTSQSSLSOCKET_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -39,5 +36,3 @@ class SlotsQSslSocket: public QObject
   void peerVerifyError ( const QSslError & error );
   void sslErrors ( const QList<QSslError> & errors );
 };
-
-#endif

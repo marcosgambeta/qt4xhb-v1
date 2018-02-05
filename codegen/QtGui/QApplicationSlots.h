@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQAPPLICATION_H
-#define SLOTSQAPPLICATION_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -40,5 +37,3 @@ class SlotsQApplication: public QObject
   void lastWindowClosed ();
   void saveStateRequest ( QSessionManager & manager );
 };
-
-#endif

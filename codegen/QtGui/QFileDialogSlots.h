@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQFILEDIALOG_H
-#define SLOTSQFILEDIALOG_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -38,5 +35,3 @@ class SlotsQFileDialog: public QObject
   void filesSelected ( const QStringList & selected );
   void filterSelected ( const QString & filter );
 };
-
-#endif

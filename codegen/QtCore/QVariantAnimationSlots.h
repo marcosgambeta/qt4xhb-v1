@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQVARIANTANIMATION_H
-#define SLOTSQVARIANTANIMATION_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -34,5 +31,3 @@ class SlotsQVariantAnimation: public QObject
   public slots:
   void valueChanged ( const QVariant & value );
 };
-
-#endif

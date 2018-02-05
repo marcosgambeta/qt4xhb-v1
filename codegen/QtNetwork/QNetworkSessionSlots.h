@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQNETWORKSESSION_H
-#define SLOTSQNETWORKSESSION_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -39,5 +36,3 @@ class SlotsQNetworkSession: public QObject
   void preferredConfigurationChanged ( const QNetworkConfiguration & config, bool isSeamless );
   void stateChanged ( QNetworkSession::State state );
 };
-
-#endif

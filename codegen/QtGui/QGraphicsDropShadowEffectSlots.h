@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQGRAPHICSDROPSHADOWEFFECT_H
-#define SLOTSQGRAPHICSDROPSHADOWEFFECT_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -36,5 +33,3 @@ class SlotsQGraphicsDropShadowEffect: public QObject
   void colorChanged ( const QColor & color );
   void offsetChanged ( const QPointF & offset );
 };
-
-#endif

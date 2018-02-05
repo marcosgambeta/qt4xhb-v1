@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQSCRIPTENGINEDEBUGGER_H
-#define SLOTSQSCRIPTENGINEDEBUGGER_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -35,5 +32,3 @@ class SlotsQScriptEngineDebugger: public QObject
   void evaluationResumed ();
   void evaluationSuspended ();
 };
-
-#endif

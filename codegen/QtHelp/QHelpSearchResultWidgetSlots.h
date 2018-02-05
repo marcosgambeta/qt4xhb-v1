@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQHELPSEARCHRESULTWIDGET_H
-#define SLOTSQHELPSEARCHRESULTWIDGET_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -34,5 +31,3 @@ class SlotsQHelpSearchResultWidget: public QObject
   public slots:
   void requestShowLink ( const QUrl & link );
 };
-
-#endif

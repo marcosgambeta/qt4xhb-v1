@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQABSTRACTTEXTDOCUMENTLAYOUT_H
-#define SLOTSQABSTRACTTEXTDOCUMENTLAYOUT_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -37,5 +34,3 @@ class SlotsQAbstractTextDocumentLayout: public QObject
   void update ( const QRectF & rect = QRectF( 0., 0., 1000000000., 1000000000. ) );
   void updateBlock ( const QTextBlock & block );
 };
-
-#endif

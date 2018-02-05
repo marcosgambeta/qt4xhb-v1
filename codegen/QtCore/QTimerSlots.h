@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQTIMER_H
-#define SLOTSQTIMER_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -34,5 +31,3 @@ class SlotsQTimer: public QObject
   public slots:
   void timeout ();
 };
-
-#endif

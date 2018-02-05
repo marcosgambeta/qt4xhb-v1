@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQITEMSELECTIONMODEL_H
-#define SLOTSQITEMSELECTIONMODEL_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -37,5 +34,3 @@ class SlotsQItemSelectionModel: public QObject
   void currentRowChanged ( const QModelIndex & current, const QModelIndex & previous );
   void selectionChanged ( const QItemSelection & selected, const QItemSelection & deselected );
 };
-
-#endif

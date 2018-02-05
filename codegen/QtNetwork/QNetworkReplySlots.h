@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQNETWORKREPLY_H
-#define SLOTSQNETWORKREPLY_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -40,5 +37,3 @@ class SlotsQNetworkReply: public QObject
   void sslErrors ( const QList<QSslError> & errors );
   void uploadProgress ( qint64 bytesSent, qint64 bytesTotal );
 };
-
-#endif

@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQTOOLBAR_H
-#define SLOTSQTOOLBAR_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -41,5 +38,3 @@ class SlotsQToolBar: public QObject
   void topLevelChanged ( bool topLevel );
   void visibilityChanged ( bool visible );
 };
-
-#endif

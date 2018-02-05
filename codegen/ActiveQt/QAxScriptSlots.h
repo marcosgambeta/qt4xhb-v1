@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQAXSCRIPT_H
-#define SLOTSQAXSCRIPT_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -39,5 +36,3 @@ class SlotsQAxScript: public QObject
   void finished ( int code, const QString & source, const QString & description, const QString & help );
   void stateChanged ( int state );
 };
-
-#endif

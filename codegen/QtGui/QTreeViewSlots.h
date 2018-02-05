@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQTREEVIEW_H
-#define SLOTSQTREEVIEW_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -35,5 +32,3 @@ class SlotsQTreeView: public QObject
   void collapsed ( const QModelIndex & index );
   void expanded ( const QModelIndex & index );
 };
-
-#endif

@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQLOCALSERVER_H
-#define SLOTSQLOCALSERVER_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -34,5 +31,3 @@ class SlotsQLocalServer: public QObject
   public slots:
   void newConnection ();
 };
-
-#endif

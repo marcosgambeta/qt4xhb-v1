@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQFTP_H
-#define SLOTSQFTP_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -41,5 +38,3 @@ class SlotsQFtp: public QObject
   void readyRead ();
   void stateChanged ( int state );
 };
-
-#endif

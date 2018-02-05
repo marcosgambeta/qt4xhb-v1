@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQDESIGNERFORMWINDOWMANAGERINTERFACE_H
-#define SLOTSQDESIGNERFORMWINDOWMANAGERINTERFACE_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -36,5 +33,3 @@ class SlotsQDesignerFormWindowManagerInterface: public QObject
   void formWindowAdded ( QDesignerFormWindowInterface * formWindow );
   void formWindowRemoved ( QDesignerFormWindowInterface * formWindow );
 };
-
-#endif

@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQOBJECT_H
-#define SLOTSQOBJECT_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -34,5 +31,3 @@ class SlotsQObject: public QObject
   public slots:
   void destroyed ( QObject * obj = 0);
 };
-
-#endif

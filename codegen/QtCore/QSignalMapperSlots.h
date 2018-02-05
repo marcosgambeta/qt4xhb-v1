@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQSIGNALMAPPER_H
-#define SLOTSQSIGNALMAPPER_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -37,5 +34,3 @@ class SlotsQSignalMapper: public QObject
   void mapped(QWidget * w);
   void mapped(QObject * o);
 };
-
-#endif

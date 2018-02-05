@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQACTION_H
-#define SLOTSQACTION_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -37,5 +34,3 @@ class SlotsQAction: public QObject
   void toggled ( bool checked );
   void triggered ( bool checked = false );
 };
-
-#endif

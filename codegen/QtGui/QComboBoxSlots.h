@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQCOMBOBOX_H
-#define SLOTSQCOMBOBOX_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -40,5 +37,3 @@ class SlotsQComboBox: public QObject
   void highlighted ( int index );
   void highlighted ( const QString & text );
 };
-
-#endif

@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQCOLUMNVIEW_H
-#define SLOTSQCOLUMNVIEW_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -34,5 +31,3 @@ class SlotsQColumnView: public QObject
   public slots:
   void updatePreviewWidget ( const QModelIndex & index );
 };
-
-#endif

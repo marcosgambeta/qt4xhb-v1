@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQAXSCRIPTMANAGER_H
-#define SLOTSQAXSCRIPTMANAGER_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -34,5 +31,3 @@ class SlotsQAxScriptManager: public QObject
   public slots:
   void error ( QAxScript * script, int code, const QString & description, int sourcePosition, const QString & sourceText );
 };
-
-#endif

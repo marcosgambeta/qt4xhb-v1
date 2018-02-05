@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQFUTUREWATCHERBASE_H
-#define SLOTSQFUTUREWATCHERBASE_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -43,5 +40,3 @@ class SlotsQFutureWatcherBase: public QObject
   void progressValueChanged(int progressValue);
   void progressTextChanged(const QString &progressText);
 };
-
-#endif

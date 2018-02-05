@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQHELPCONTENTMODEL_H
-#define SLOTSQHELPCONTENTMODEL_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -35,5 +32,3 @@ class SlotsQHelpContentModel: public QObject
   void contentsCreated ();
   void contentsCreationStarted ();
 };
-
-#endif

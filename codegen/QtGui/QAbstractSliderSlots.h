@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQABSTRACTSLIDER_H
-#define SLOTSQABSTRACTSLIDER_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -39,5 +36,3 @@ class SlotsQAbstractSlider: public QObject
   void sliderReleased ();
   void valueChanged ( int value );
 };
-
-#endif

@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQABSTRACTSOCKET_H
-#define SLOTSQABSTRACTSOCKET_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -39,5 +36,3 @@ class SlotsQAbstractSocket: public QObject
   void proxyAuthenticationRequired ( const QNetworkProxy & proxy, QAuthenticator * authenticator );
   void stateChanged ( QAbstractSocket::SocketState socketState );
 };
-
-#endif

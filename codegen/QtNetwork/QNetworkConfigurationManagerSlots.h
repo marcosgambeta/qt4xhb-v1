@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQNETWORKCONFIGURATIONMANAGER_H
-#define SLOTSQNETWORKCONFIGURATIONMANAGER_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
@@ -38,5 +35,3 @@ class SlotsQNetworkConfigurationManager: public QObject
   void onlineStateChanged ( bool isOnline );
   void updateCompleted ();
 };
-
-#endif
