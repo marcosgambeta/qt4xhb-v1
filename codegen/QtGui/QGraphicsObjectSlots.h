@@ -6,36 +6,16 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QGraphicsObject>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QGraphicsObject_release_codeblocks ();
-
-class SlotsQGraphicsObject: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQGraphicsObject(QObject *parent = 0);
-  ~SlotsQGraphicsObject();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void enabledChanged ();
-  void opacityChanged ();
-  void parentChanged ();
-  void rotationChanged ();
-  void scaleChanged ();
-  void visibleChanged ();
-  void xChanged ();
-  void yChanged ();
-  void zChanged ();
-};
+$beginSlotsClass
+$signal=|void enabledChanged();
+$signal=|void opacityChanged();
+$signal=|void parentChanged();
+$signal=|void rotationChanged();
+$signal=|void scaleChanged();
+$signal=|void visibleChanged();
+$signal=|void xChanged();
+$signal=|void yChanged();
+$signal=|void zChanged();
+$endSlotsClass

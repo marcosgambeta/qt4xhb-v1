@@ -6,31 +6,11 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QDialogButtonBox>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QDialogButtonBox_release_codeblocks ();
-
-class SlotsQDialogButtonBox: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQDialogButtonBox(QObject *parent = 0);
-  ~SlotsQDialogButtonBox();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void accepted ();
-  void clicked ( QAbstractButton * button );
-  void helpRequested ();
-  void rejected ();
-};
+$beginSlotsClass
+$signal=|void accepted();
+$signal=|void clicked( QAbstractButton * button );
+$signal=|void helpRequested();
+$signal=|void rejected();
+$endSlotsClass

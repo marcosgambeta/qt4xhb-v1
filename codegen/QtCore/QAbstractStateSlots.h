@@ -6,29 +6,9 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QAbstractState>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QAbstractState_release_codeblocks ();
-
-class SlotsQAbstractState: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQAbstractState(QObject *parent = 0);
-  ~SlotsQAbstractState();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void entered ();
-  void exited ();
-};
+$beginSlotsClass
+$signal=|void entered();
+$signal=|void exited();
+$endSlotsClass

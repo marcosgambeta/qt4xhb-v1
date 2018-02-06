@@ -6,28 +6,8 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QMovie>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QMovie_release_codeblocks ();
-
-class SlotsQMovie: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQMovie(QObject *parent = 0);
-  ~SlotsQMovie();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void updated ( const QRect & rect );
-};
+$beginSlotsClass
+$signal=|void updated( const QRect & rect );
+$endSlotsClass

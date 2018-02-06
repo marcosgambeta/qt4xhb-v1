@@ -6,29 +6,9 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QGroupBox>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QGroupBox_release_codeblocks ();
-
-class SlotsQGroupBox: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQGroupBox(QObject *parent = 0);
-  ~SlotsQGroupBox();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void clicked ( bool checked = false );
-  void toggled ( bool on );
-};
+$beginSlotsClass
+$signal=|void clicked( bool checked = false );
+$signal=|void toggled( bool on );
+$endSlotsClass

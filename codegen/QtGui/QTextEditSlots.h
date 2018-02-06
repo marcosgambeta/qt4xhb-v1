@@ -6,34 +6,14 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QTextEdit>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QTextEdit_release_codeblocks ();
-
-class SlotsQTextEdit: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQTextEdit(QObject *parent = 0);
-  ~SlotsQTextEdit();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void copyAvailable ( bool yes );
-  void currentCharFormatChanged ( const QTextCharFormat & f );
-  void cursorPositionChanged ();
-  void redoAvailable ( bool available );
-  void selectionChanged ();
-  void textChanged ();
-  void undoAvailable ( bool available );
-};
+$beginSlotsClass
+$signal=|void copyAvailable( bool yes );
+$signal=|void currentCharFormatChanged( const QTextCharFormat & f );
+$signal=|void cursorPositionChanged();
+$signal=|void redoAvailable( bool available );
+$signal=|void selectionChanged();
+$signal=|void textChanged();
+$signal=|void undoAvailable( bool available );
+$endSlotsClass

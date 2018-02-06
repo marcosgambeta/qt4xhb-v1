@@ -6,29 +6,9 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QDeclarativeEngine>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QDeclarativeEngine_release_codeblocks ();
-
-class SlotsQDeclarativeEngine: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQDeclarativeEngine(QObject *parent = 0);
-  ~SlotsQDeclarativeEngine();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void quit ();
-  void warnings ( const QList<QDeclarativeError> & warnings );
-};
+$beginSlotsClass
+$signal=|void quit();
+$signal=|void warnings( const QList<QDeclarativeError> & warnings );
+$endSlotsClass

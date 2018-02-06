@@ -6,28 +6,8 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QGraphicsWidget>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QGraphicsWidget_release_codeblocks ();
-
-class SlotsQGraphicsWidget: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQGraphicsWidget(QObject *parent = 0);
-  ~SlotsQGraphicsWidget();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void geometryChanged ();
-};
+$beginSlotsClass
+$signal=|void geometryChanged ();
+$endSlotsClass

@@ -6,28 +6,8 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QSplashScreen>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QSplashScreen_release_codeblocks ();
-
-class SlotsQSplashScreen: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQSplashScreen(QObject *parent = 0);
-  ~SlotsQSplashScreen();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void messageChanged ( const QString & message );
-};
+$beginSlotsClass
+$signal=|void messageChanged( const QString & message );
+$endSlotsClass

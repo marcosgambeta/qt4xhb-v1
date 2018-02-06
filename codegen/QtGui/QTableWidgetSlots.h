@@ -6,42 +6,22 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QTableWidget>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QTableWidget_release_codeblocks ();
-
-class SlotsQTableWidget: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQTableWidget(QObject *parent = 0);
-  ~SlotsQTableWidget();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void cellActivated ( int row, int column );
-  void cellChanged ( int row, int column );
-  void cellClicked ( int row, int column );
-  void cellDoubleClicked ( int row, int column );
-  void cellEntered ( int row, int column );
-  void cellPressed ( int row, int column );
-  void currentCellChanged ( int currentRow, int currentColumn, int previousRow, int previousColumn );
-  void currentItemChanged ( QTableWidgetItem * current, QTableWidgetItem * previous );
-  void itemActivated ( QTableWidgetItem * item );
-  void itemChanged ( QTableWidgetItem * item );
-  void itemClicked ( QTableWidgetItem * item );
-  void itemDoubleClicked ( QTableWidgetItem * item );
-  void itemEntered ( QTableWidgetItem * item );
-  void itemPressed ( QTableWidgetItem * item );
-  void itemSelectionChanged ();
-};
+$beginSlotsClass
+$signal=|void cellActivated( int row, int column );
+$signal=|void cellChanged( int row, int column );
+$signal=|void cellClicked( int row, int column );
+$signal=|void cellDoubleClicked( int row, int column );
+$signal=|void cellEntered( int row, int column );
+$signal=|void cellPressed( int row, int column );
+$signal=|void currentCellChanged( int currentRow, int currentColumn, int previousRow, int previousColumn );
+$signal=|void currentItemChanged( QTableWidgetItem * current, QTableWidgetItem * previous );
+$signal=|void itemActivated( QTableWidgetItem * item );
+$signal=|void itemChanged( QTableWidgetItem * item );
+$signal=|void itemClicked( QTableWidgetItem * item );
+$signal=|void itemDoubleClicked( QTableWidgetItem * item );
+$signal=|void itemEntered( QTableWidgetItem * item );
+$signal=|void itemPressed( QTableWidgetItem * item );
+$signal=|void itemSelectionChanged();
+$endSlotsClass

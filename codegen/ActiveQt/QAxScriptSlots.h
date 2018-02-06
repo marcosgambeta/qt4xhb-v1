@@ -6,33 +6,13 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QAxScript>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QAxScript_release_codeblocks ();
-
-class SlotsQAxScript: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQAxScript(QObject *parent = 0);
-  ~SlotsQAxScript();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void entered ();
-  void error ( int code, const QString & description, int sourcePosition, const QString & sourceText );
-  void finished ();
-  void finished ( const QVariant & result );
-  void finished ( int code, const QString & source, const QString & description, const QString & help );
-  void stateChanged ( int state );
-};
+$beginSlotsClass
+$signal=|void entered();
+$signal=|void error( int code, const QString & description, int sourcePosition, const QString & sourceText );
+$signal=|void finished();
+$signal=|void finished( const QVariant & result );
+$signal=|void finished( int code, const QString & source, const QString & description, const QString & help );
+$signal=|void stateChanged( int state );
+$endSlotsClass

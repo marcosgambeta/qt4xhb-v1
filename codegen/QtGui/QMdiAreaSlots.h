@@ -6,28 +6,8 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QMdiArea>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QMdiArea_release_codeblocks ();
-
-class SlotsQMdiArea: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQMdiArea(QObject *parent = 0);
-  ~SlotsQMdiArea();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void subWindowActivated ( QMdiSubWindow * window );
-};
+$beginSlotsClass
+$signal=|void subWindowActivated( QMdiSubWindow * window );
+$endSlotsClass

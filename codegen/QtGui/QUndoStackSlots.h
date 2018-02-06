@@ -6,33 +6,13 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QUndoStack>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QUndoStack_release_codeblocks ();
-
-class SlotsQUndoStack: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQUndoStack(QObject *parent = 0);
-  ~SlotsQUndoStack();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void canRedoChanged ( bool canRedo );
-  void canUndoChanged ( bool canUndo );
-  void cleanChanged ( bool clean );
-  void indexChanged ( int idx );
-  void redoTextChanged ( const QString & redoText );
-  void undoTextChanged ( const QString & undoText );
-};
+$beginSlotsClass
+$signal=|void canRedoChanged( bool canRedo );
+$signal=|void canUndoChanged( bool canUndo );
+$signal=|void cleanChanged( bool clean );
+$signal=|void indexChanged( int idx );
+$signal=|void redoTextChanged( const QString & redoText );
+$signal=|void undoTextChanged( const QString & undoText );
+$endSlotsClass

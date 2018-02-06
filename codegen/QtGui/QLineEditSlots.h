@@ -6,33 +6,13 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QLineEdit>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QLineEdit_release_codeblocks ();
-
-class SlotsQLineEdit: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQLineEdit(QObject *parent = 0);
-  ~SlotsQLineEdit();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void cursorPositionChanged ( int iold, int inew );
-  void editingFinished ();
-  void returnPressed ();
-  void selectionChanged ();
-  void textChanged ( const QString & text );
-  void textEdited ( const QString & text );
-};
+$beginSlotsClass
+$signal=|void cursorPositionChanged( int iold, int inew );
+$signal=|void editingFinished();
+$signal=|void returnPressed();
+$signal=|void selectionChanged();
+$signal=|void textChanged( const QString & text );
+$signal=|void textEdited( const QString & text );
+$endSlotsClass

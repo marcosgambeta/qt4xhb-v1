@@ -6,29 +6,9 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QAbstractEventDispatcher>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QAbstractEventDispatcher_release_codeblocks ();
-
-class SlotsQAbstractEventDispatcher: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQAbstractEventDispatcher(QObject *parent = 0);
-  ~SlotsQAbstractEventDispatcher();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void aboutToBlock ();
-  void awake ();
-};
+$beginSlotsClass
+$signal=|void aboutToBlock();
+$signal=|void awake();
+$endSlotsClass

@@ -6,29 +6,9 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QGraphicsOpacityEffect>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QGraphicsOpacityEffect_release_codeblocks ();
-
-class SlotsQGraphicsOpacityEffect: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQGraphicsOpacityEffect(QObject *parent = 0);
-  ~SlotsQGraphicsOpacityEffect();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void opacityChanged ( qreal opacity );
-  void opacityMaskChanged ( const QBrush & mask );
-};
+$beginSlotsClass
+$signal=|void opacityChanged( qreal opacity );
+$signal=|void opacityMaskChanged( const QBrush & mask );
+$endSlotsClass

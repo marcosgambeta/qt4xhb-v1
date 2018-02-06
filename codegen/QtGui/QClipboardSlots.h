@@ -6,31 +6,11 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QClipboard>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QClipboard_release_codeblocks ();
-
-class SlotsQClipboard: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQClipboard(QObject *parent = 0);
-  ~SlotsQClipboard();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void changed ( QClipboard::Mode mode );
-  void dataChanged ();
-  void findBufferChanged ();
-  void selectionChanged ();
-};
+$beginSlotsClass
+$signal=|void changed( QClipboard::Mode mode );
+$signal=|void dataChanged();
+$signal=|void findBufferChanged();
+$signal=|void selectionChanged();
+$endSlotsClass

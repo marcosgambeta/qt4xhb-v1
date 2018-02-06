@@ -6,28 +6,8 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QWidget>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QWidget_release_codeblocks ();
-
-class SlotsQWidget: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQWidget(QObject *parent = 0);
-  ~SlotsQWidget();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void customContextMenuRequested ( const QPoint & pos );
-};
+$beginSlotsClass
+$signal=|void customContextMenuRequested( const QPoint & pos );
+$endSlotsClass

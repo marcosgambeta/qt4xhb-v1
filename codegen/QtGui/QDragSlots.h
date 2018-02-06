@@ -6,29 +6,9 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QDrag>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QDrag_release_codeblocks ();
-
-class SlotsQDrag: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQDrag(QObject *parent = 0);
-  ~SlotsQDrag();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void actionChanged ( Qt::DropAction action );
-  void targetChanged ( QWidget * newTarget );
-};
+$beginSlotsClass
+$signal=|void actionChanged( Qt::DropAction action );
+$signal=|void targetChanged( QWidget * newTarget );
+$endSlotsClass

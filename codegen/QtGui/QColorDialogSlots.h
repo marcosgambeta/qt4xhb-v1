@@ -6,29 +6,9 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QColorDialog>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QColorDialog_release_codeblocks ();
-
-class SlotsQColorDialog: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQColorDialog(QObject *parent = 0);
-  ~SlotsQColorDialog();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void colorSelected ( const QColor & color );
-  void currentColorChanged ( const QColor & color );
-};
+$beginSlotsClass
+$signal=|void colorSelected( const QColor & color );
+$signal=|void currentColorChanged( const QColor & color );
+$endSlotsClass

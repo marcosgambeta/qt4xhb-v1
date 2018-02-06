@@ -6,30 +6,10 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QGraphicsScene>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QGraphicsScene_release_codeblocks ();
-
-class SlotsQGraphicsScene: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQGraphicsScene(QObject *parent = 0);
-  ~SlotsQGraphicsScene();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void changed ( const QList<QRectF> & region );
-  void sceneRectChanged ( const QRectF & rect );
-  void selectionChanged ();
-};
+$beginSlotsClass
+$signal=|void changed( const QList<QRectF> & region );
+$signal=|void sceneRectChanged( const QRectF & rect );
+$signal=|void selectionChanged();
+$endSlotsClass

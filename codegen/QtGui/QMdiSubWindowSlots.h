@@ -6,29 +6,9 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QMdiSubWindow>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QMdiSubWindow_release_codeblocks ();
-
-class SlotsQMdiSubWindow: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQMdiSubWindow(QObject *parent = 0);
-  ~SlotsQMdiSubWindow();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void aboutToActivate ();
-  void windowStateChanged ( Qt::WindowStates oldState, Qt::WindowStates newState );
-};
+$beginSlotsClass
+$signal=|void aboutToActivate();
+$signal=|void windowStateChanged( Qt::WindowStates oldState, Qt::WindowStates newState );
+$endSlotsClass

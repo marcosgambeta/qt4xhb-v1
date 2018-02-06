@@ -6,28 +6,8 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QObject>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QObject_release_codeblocks ();
-
-class SlotsQObject: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQObject(QObject *parent = 0);
-  ~SlotsQObject();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void destroyed ( QObject * obj = 0);
-};
+$beginSlotsClass
+$signal=|void destroyed( QObject * obj = 0 );
+$endSlotsClass

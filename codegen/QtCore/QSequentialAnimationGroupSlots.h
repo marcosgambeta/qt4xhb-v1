@@ -6,28 +6,8 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QSequentialAnimationGroup>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QSequentialAnimationGroup_release_codeblocks ();
-
-class SlotsQSequentialAnimationGroup: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQSequentialAnimationGroup(QObject *parent = 0);
-  ~SlotsQSequentialAnimationGroup();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void currentAnimationChanged ( QAbstractAnimation * current );
-};
+$beginSlotsClass
+$signal=|void currentAnimationChanged( QAbstractAnimation * current );
+$endSlotsClass

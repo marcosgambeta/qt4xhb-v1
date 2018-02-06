@@ -6,30 +6,10 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QGraphicsRotation>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QGraphicsRotation_release_codeblocks ();
-
-class SlotsQGraphicsRotation: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQGraphicsRotation(QObject *parent = 0);
-  ~SlotsQGraphicsRotation();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void angleChanged ();
-  void axisChanged ();
-  void originChanged ();
-};
+$beginSlotsClass
+$signal=|void angleChanged();
+$signal=|void axisChanged();
+$signal=|void originChanged();
+$endSlotsClass

@@ -6,29 +6,9 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QGraphicsColorizeEffect>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QGraphicsColorizeEffect_release_codeblocks ();
-
-class SlotsQGraphicsColorizeEffect: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQGraphicsColorizeEffect(QObject *parent = 0);
-  ~SlotsQGraphicsColorizeEffect();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void colorChanged ( const QColor & color );
-  void strengthChanged ( qreal strength );
-};
+$beginSlotsClass
+$signal=|void colorChanged( const QColor & color );
+$signal=|void strengthChanged( qreal strength );
+$endSlotsClass

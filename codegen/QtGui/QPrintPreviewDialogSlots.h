@@ -6,28 +6,8 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QPrintPreviewDialog>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QPrintPreviewDialog_release_codeblocks ();
-
-class SlotsQPrintPreviewDialog: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQPrintPreviewDialog(QObject *parent = 0);
-  ~SlotsQPrintPreviewDialog();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void paintRequested ( QPrinter * printer );
-};
+$beginSlotsClass
+$signal=|void paintRequested( QPrinter * printer );
+$endSlotsClass

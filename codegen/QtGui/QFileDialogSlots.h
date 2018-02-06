@@ -6,32 +6,12 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QFileDialog>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QFileDialog_release_codeblocks ();
-
-class SlotsQFileDialog: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQFileDialog(QObject *parent = 0);
-  ~SlotsQFileDialog();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void currentChanged ( const QString & path );
-  void directoryEntered ( const QString & directory );
-  void fileSelected ( const QString & file );
-  void filesSelected ( const QStringList & selected );
-  void filterSelected ( const QString & filter );
-};
+$beginSlotsClass
+$signal=|void currentChanged( const QString & path );
+$signal=|void directoryEntered( const QString & directory );
+$signal=|void fileSelected( const QString & file );
+$signal=|void filesSelected( const QStringList & selected );
+$signal=|void filterSelected( const QString & filter );
+$endSlotsClass

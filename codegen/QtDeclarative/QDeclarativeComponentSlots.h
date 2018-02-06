@@ -6,29 +6,9 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QDeclarativeComponent>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QDeclarativeComponent_release_codeblocks ();
-
-class SlotsQDeclarativeComponent: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQDeclarativeComponent(QObject *parent = 0);
-  ~SlotsQDeclarativeComponent();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void progressChanged ( qreal progress );
-  void statusChanged ( QDeclarativeComponent::Status status );
-};
+$beginSlotsClass
+$signal=|void progressChanged( qreal progress );
+$signal=|void statusChanged( QDeclarativeComponent::Status status );
+$endSlotsClass

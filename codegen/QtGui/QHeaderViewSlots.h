@@ -6,38 +6,18 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QHeaderView>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QHeaderView_release_codeblocks ();
-
-class SlotsQHeaderView: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQHeaderView(QObject *parent = 0);
-  ~SlotsQHeaderView();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void geometriesChanged ();
-  void sectionAutoResize ( int logicalIndex, QHeaderView::ResizeMode mode );
-  void sectionClicked ( int logicalIndex );
-  void sectionCountChanged ( int oldCount, int newCount );
-  void sectionDoubleClicked ( int logicalIndex );
-  void sectionEntered ( int logicalIndex );
-  void sectionHandleDoubleClicked ( int logicalIndex );
-  void sectionMoved ( int logicalIndex, int oldVisualIndex, int newVisualIndex );
-  void sectionPressed ( int logicalIndex );
-  void sectionResized ( int logicalIndex, int oldSize, int newSize );
-  void sortIndicatorChanged ( int logicalIndex, Qt::SortOrder order );
-};
+$beginSlotsClass
+$signal=|void geometriesChanged();
+$signal=|void sectionAutoResize( int logicalIndex, QHeaderView::ResizeMode mode );
+$signal=|void sectionClicked( int logicalIndex );
+$signal=|void sectionCountChanged( int oldCount, int newCount );
+$signal=|void sectionDoubleClicked( int logicalIndex );
+$signal=|void sectionEntered( int logicalIndex );
+$signal=|void sectionHandleDoubleClicked( int logicalIndex );
+$signal=|void sectionMoved( int logicalIndex, int oldVisualIndex, int newVisualIndex );
+$signal=|void sectionPressed( int logicalIndex );
+$signal=|void sectionResized( int logicalIndex, int oldSize, int newSize );
+$signal=|void sortIndicatorChanged( int logicalIndex, Qt::SortOrder order );
+$endSlotsClass

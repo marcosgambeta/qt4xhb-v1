@@ -6,29 +6,9 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QTreeView>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QTreeView_release_codeblocks ();
-
-class SlotsQTreeView: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQTreeView(QObject *parent = 0);
-  ~SlotsQTreeView();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void collapsed ( const QModelIndex & index );
-  void expanded ( const QModelIndex & index );
-};
+$beginSlotsClass
+$signal=|void collapsed( const QModelIndex & index );
+$signal=|void expanded( const QModelIndex & index );
+$endSlotsClass

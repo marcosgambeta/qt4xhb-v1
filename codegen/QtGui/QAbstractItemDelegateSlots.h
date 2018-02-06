@@ -6,30 +6,10 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QAbstractItemDelegate>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QAbstractItemDelegate_release_codeblocks ();
-
-class SlotsQAbstractItemDelegate: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQAbstractItemDelegate(QObject *parent = 0);
-  ~SlotsQAbstractItemDelegate();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void closeEditor ( QWidget * editor, QAbstractItemDelegate::EndEditHint hint = QAbstractItemDelegate::NoHint );
-  void commitData ( QWidget * editor );
-  void sizeHintChanged ( const QModelIndex & index );
-};
+$beginSlotsClass
+$signal=|void closeEditor( QWidget * editor, QAbstractItemDelegate::EndEditHint hint = QAbstractItemDelegate::NoHint );
+$signal=|void commitData( QWidget * editor );
+$signal=|void sizeHintChanged( const QModelIndex & index );
+$endSlotsClass

@@ -6,36 +6,16 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QTextDocument>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QTextDocument_release_codeblocks ();
-
-class SlotsQTextDocument: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQTextDocument(QObject *parent = 0);
-  ~SlotsQTextDocument();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void blockCountChanged ( int newBlockCount );
-  void contentsChange ( int position, int charsRemoved, int charsAdded );
-  void contentsChanged ();
-  void cursorPositionChanged ( const QTextCursor & cursor );
-  void documentLayoutChanged ();
-  void modificationChanged ( bool changed );
-  void redoAvailable ( bool available );
-  void undoAvailable ( bool available );
-  void undoCommandAdded ();
-};
+$beginSlotsClass
+$signal=|void blockCountChanged( int newBlockCount );
+$signal=|void contentsChange( int position, int charsRemoved, int charsAdded );
+$signal=|void contentsChanged();
+$signal=|void cursorPositionChanged( const QTextCursor & cursor );
+$signal=|void documentLayoutChanged();
+$signal=|void modificationChanged( bool changed );
+$signal=|void redoAvailable( bool available );
+$signal=|void undoAvailable( bool available );
+$signal=|void undoCommandAdded();
+$endSlotsClass

@@ -6,28 +6,8 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QDataWidgetMapper>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QDataWidgetMapper_release_codeblocks ();
-
-class SlotsQDataWidgetMapper: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQDataWidgetMapper(QObject *parent = 0);
-  ~SlotsQDataWidgetMapper();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void currentIndexChanged ( int index );
-};
+$beginSlotsClass
+$signal=|void currentIndexChanged( int index );
+$endSlotsClass

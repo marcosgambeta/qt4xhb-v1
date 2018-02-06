@@ -6,30 +6,10 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QDateTimeEdit>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QDateTimeEdit_release_codeblocks ();
-
-class SlotsQDateTimeEdit: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQDateTimeEdit(QObject *parent = 0);
-  ~SlotsQDateTimeEdit();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void dateChanged ( const QDate & date );
-  void dateTimeChanged ( const QDateTime & datetime );
-  void timeChanged ( const QTime & time );
-};
+$beginSlotsClass
+$signal=|void dateChanged( const QDate & date );
+$signal=|void dateTimeChanged( const QDateTime & datetime );
+$signal=|void timeChanged( const QTime & time );
+$endSlotsClass

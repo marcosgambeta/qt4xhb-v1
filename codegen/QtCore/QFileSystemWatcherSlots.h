@@ -6,29 +6,9 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QFileSystemWatcher>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QFileSystemWatcher_release_codeblocks ();
-
-class SlotsQFileSystemWatcher: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQFileSystemWatcher(QObject *parent = 0);
-  ~SlotsQFileSystemWatcher();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void directoryChanged(const QString & path);
-  void fileChanged(const QString & path);
-};
+$beginSlotsClass
+$signal=|void directoryChanged( const QString & path );
+$signal=|void fileChanged( const QString & path );
+$endSlotsClass

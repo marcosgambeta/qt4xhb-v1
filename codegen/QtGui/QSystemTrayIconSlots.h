@@ -6,29 +6,9 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QSystemTrayIcon>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QSystemTrayIcon_release_codeblocks ();
-
-class SlotsQSystemTrayIcon: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQSystemTrayIcon(QObject *parent = 0);
-  ~SlotsQSystemTrayIcon();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void activated ( QSystemTrayIcon::ActivationReason reason );
-  void messageClicked ();
-};
+$beginSlotsClass
+$signal=|void activated( QSystemTrayIcon::ActivationReason reason );
+$signal=|void messageClicked();
+$endSlotsClass

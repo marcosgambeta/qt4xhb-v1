@@ -6,29 +6,9 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QShortcut>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QShortcut_release_codeblocks ();
-
-class SlotsQShortcut: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQShortcut(QObject *parent = 0);
-  ~SlotsQShortcut();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void activated();
-  void activatedAmbiguously();
-};
+$beginSlotsClass
+$signal=|void activated();
+$signal=|void activatedAmbiguously();
+$endSlotsClass

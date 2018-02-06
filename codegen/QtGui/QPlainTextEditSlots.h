@@ -6,36 +6,16 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QPlainTextEdit>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QPlainTextEdit_release_codeblocks ();
-
-class SlotsQPlainTextEdit: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQPlainTextEdit(QObject *parent = 0);
-  ~SlotsQPlainTextEdit();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void blockCountChanged ( int newBlockCount );
-  void copyAvailable ( bool yes );
-  void cursorPositionChanged ();
-  void modificationChanged ( bool changed );
-  void redoAvailable ( bool available );
-  void selectionChanged ();
-  void textChanged ();
-  void undoAvailable ( bool available );
-  void updateRequest ( const QRect & rect, int dy );
-};
+$beginSlotsClass
+$signal=|void blockCountChanged( int newBlockCount );
+$signal=|void copyAvailable( bool yes );
+$signal=|void cursorPositionChanged();
+$signal=|void modificationChanged( bool changed );
+$signal=|void redoAvailable( bool available );
+$signal=|void selectionChanged();
+$signal=|void textChanged();
+$signal=|void undoAvailable( bool available );
+$signal=|void updateRequest( const QRect & rect, int dy );
+$endSlotsClass

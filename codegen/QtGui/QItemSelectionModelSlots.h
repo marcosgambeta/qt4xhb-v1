@@ -6,31 +6,11 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QItemSelectionModel>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QItemSelectionModel_release_codeblocks ();
-
-class SlotsQItemSelectionModel: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQItemSelectionModel(QObject *parent = 0);
-  ~SlotsQItemSelectionModel();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void currentChanged ( const QModelIndex & current, const QModelIndex & previous );
-  void currentColumnChanged ( const QModelIndex & current, const QModelIndex & previous );
-  void currentRowChanged ( const QModelIndex & current, const QModelIndex & previous );
-  void selectionChanged ( const QItemSelection & selected, const QItemSelection & deselected );
-};
+$beginSlotsClass
+$signal=|void currentChanged( const QModelIndex & current, const QModelIndex & previous );
+$signal=|void currentColumnChanged( const QModelIndex & current, const QModelIndex & previous );
+$signal=|void currentRowChanged( const QModelIndex & current, const QModelIndex & previous );
+$signal=|void selectionChanged( const QItemSelection & selected, const QItemSelection & deselected );
+$endSlotsClass

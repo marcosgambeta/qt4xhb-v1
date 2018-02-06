@@ -6,34 +6,14 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QTextBrowser>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QTextBrowser_release_codeblocks ();
-
-class SlotsQTextBrowser: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQTextBrowser(QObject *parent = 0);
-  ~SlotsQTextBrowser();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void anchorClicked ( const QUrl & link );
-  void backwardAvailable ( bool available );
-  void forwardAvailable ( bool available );
-  void highlighted ( const QUrl & link );
-  void highlighted ( const QString & link );
-  void historyChanged ();
-  void sourceChanged ( const QUrl & src );
-};
+$beginSlotsClass
+$signal=|void anchorClicked( const QUrl & link );
+$signal=|void backwardAvailable( bool available );
+$signal=|void forwardAvailable( bool available );
+$signal=|void highlighted( const QUrl & link );
+$signal=|void highlighted( const QString & link );
+$signal=|void historyChanged();
+$signal=|void sourceChanged( const QUrl & src );
+$endSlotsClass

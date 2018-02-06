@@ -6,30 +6,10 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QFileSystemModel>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QFileSystemModel_release_codeblocks ();
-
-class SlotsQFileSystemModel: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQFileSystemModel(QObject *parent = 0);
-  ~SlotsQFileSystemModel();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void directoryLoaded ( const QString & path );
-  void fileRenamed ( const QString & path, const QString & oldName, const QString & newName );
-  void rootPathChanged ( const QString & newPath );
-};
+$beginSlotsClass
+$signal=|void directoryLoaded( const QString & path );
+$signal=|void fileRenamed( const QString & path, const QString & oldName, const QString & newName );
+$signal=|void rootPathChanged( const QString & newPath );
+$endSlotsClass

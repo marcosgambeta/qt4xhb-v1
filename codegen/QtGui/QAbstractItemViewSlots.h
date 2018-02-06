@@ -6,33 +6,13 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QAbstractItemView>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QAbstractItemView_release_codeblocks ();
-
-class SlotsQAbstractItemView: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQAbstractItemView(QObject *parent = 0);
-  ~SlotsQAbstractItemView();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void activated ( const QModelIndex & index );
-  void clicked ( const QModelIndex & index );
-  void doubleClicked ( const QModelIndex & index );
-  void entered ( const QModelIndex & index );
-  void pressed ( const QModelIndex & index );
-  void viewportEntered ();
-};
+$beginSlotsClass
+$signal=|void activated( const QModelIndex & index );
+$signal=|void clicked( const QModelIndex & index );
+$signal=|void doubleClicked( const QModelIndex & index );
+$signal=|void entered( const QModelIndex & index );
+$signal=|void pressed( const QModelIndex & index );
+$signal=|void viewportEntered();
+$endSlotsClass

@@ -6,28 +6,8 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QToolButton>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QToolButton_release_codeblocks ();
-
-class SlotsQToolButton: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQToolButton(QObject *parent = 0);
-  ~SlotsQToolButton();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void triggered ( QAction * action );
-};
+$beginSlotsClass
+$signal=|void triggered( QAction * action );
+$endSlotsClass

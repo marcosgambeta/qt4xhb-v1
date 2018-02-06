@@ -6,28 +6,8 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QStatusBar>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QStatusBar_release_codeblocks ();
-
-class SlotsQStatusBar: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQStatusBar(QObject *parent = 0);
-  ~SlotsQStatusBar();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void messageChanged ( const QString & message );
-};
+$beginSlotsClass
+$signal=|void messageChanged( const QString & message );
+$endSlotsClass

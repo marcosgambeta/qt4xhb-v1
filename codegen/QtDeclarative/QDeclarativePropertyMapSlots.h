@@ -6,28 +6,8 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QDeclarativePropertyMap>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QDeclarativePropertyMap_release_codeblocks ();
-
-class SlotsQDeclarativePropertyMap: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQDeclarativePropertyMap(QObject *parent = 0);
-  ~SlotsQDeclarativePropertyMap();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void valueChanged ( const QString & key, const QVariant & value );
-};
+$beginSlotsClass
+$signal=|void valueChanged( const QString & key, const QVariant & value );
+$endSlotsClass

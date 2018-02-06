@@ -6,28 +6,8 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QSplitter>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QSplitter_release_codeblocks ();
-
-class SlotsQSplitter: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQSplitter(QObject *parent = 0);
-  ~SlotsQSplitter();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void splitterMoved ( int pos, int index );
-};
+$beginSlotsClass
+$signal=|void splitterMoved( int pos, int index );
+$endSlotsClass

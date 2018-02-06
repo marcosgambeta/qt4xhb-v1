@@ -4,32 +4,14 @@
 %% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 %%
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QWizard>
+$header
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
+$includes
 
-void QWizard_release_codeblocks ();
-
-class SlotsQWizard: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQWizard(QObject *parent = 0);
-  ~SlotsQWizard();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void currentIdChanged ( int id );
-  void customButtonClicked ( int which );
-  void helpRequested ();
-  void pageAdded ( int id );
-  void pageRemoved ( int id );
-};
+$beginSlotsClass
+$signal=|void currentIdChanged( int id );
+$signal=|void customButtonClicked( int which );
+$signal=|void helpRequested();
+$signal=|void pageAdded( int id );
+$signal=|void pageRemoved( int id );
+$endSlotsClass

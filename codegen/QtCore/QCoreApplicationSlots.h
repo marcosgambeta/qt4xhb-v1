@@ -6,28 +6,8 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QCoreApplication>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QCoreApplication_release_codeblocks ();
-
-class SlotsQCoreApplication: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQCoreApplication(QObject *parent = 0);
-  ~SlotsQCoreApplication();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void aboutToQuit ();
-};
+$beginSlotsClass
+$signal=|void aboutToQuit();
+$endSlotsClass

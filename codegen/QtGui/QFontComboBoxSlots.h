@@ -6,28 +6,8 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QFontComboBox>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QFontComboBox_release_codeblocks ();
-
-class SlotsQFontComboBox: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQFontComboBox(QObject *parent = 0);
-  ~SlotsQFontComboBox();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void currentFontChanged ( const QFont & font );
-};
+$beginSlotsClass
+$signal=|void currentFontChanged( const QFont & font );
+$endSlotsClass

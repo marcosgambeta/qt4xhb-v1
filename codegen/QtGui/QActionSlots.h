@@ -6,31 +6,11 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QAction>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QAction_release_codeblocks ();
-
-class SlotsQAction: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQAction(QObject *parent = 0);
-  ~SlotsQAction();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void changed ();
-  void hovered ();
-  void toggled ( bool checked );
-  void triggered ( bool checked = false );
-};
+$beginSlotsClass
+$signal=|void changed();
+$signal=|void hovered();
+$signal=|void toggled( bool checked );
+$signal=|void triggered( bool checked = false );
+$endSlotsClass

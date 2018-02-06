@@ -6,29 +6,9 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QMainWindow>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QMainWindow_release_codeblocks ();
-
-class SlotsQMainWindow: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQMainWindow(QObject *parent = 0);
-  ~SlotsQMainWindow();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void iconSizeChanged ( const QSize & iconSize );
-  void toolButtonStyleChanged ( Qt::ToolButtonStyle toolButtonStyle );
-};
+$beginSlotsClass
+$signal=|void iconSizeChanged( const QSize & iconSize );
+$signal=|void toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonStyle );
+$endSlotsClass

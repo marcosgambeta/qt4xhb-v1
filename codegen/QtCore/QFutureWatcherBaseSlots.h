@@ -6,37 +6,17 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QFutureWatcherBase>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QFutureWatcherBase_release_codeblocks ();
-
-class SlotsQFutureWatcherBase: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQFutureWatcherBase(QObject *parent = 0);
-  ~SlotsQFutureWatcherBase();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void started();
-  void finished();
-  void canceled();
-  void paused();
-  void resumed();
-  void resultReadyAt(int resultIndex);
-  void resultsReadyAt(int beginIndex, int endIndex);
-  void progressRangeChanged(int minimum, int maximum);
-  void progressValueChanged(int progressValue);
-  void progressTextChanged(const QString &progressText);
-};
+$beginSlotsClass
+$signal=|void started();
+$signal=|void finished();
+$signal=|void canceled();
+$signal=|void paused();
+$signal=|void resumed();
+$signal=|void resultReadyAt( int resultIndex );
+$signal=|void resultsReadyAt( int beginIndex, int endIndex );
+$signal=|void progressRangeChanged( int minimum, int maximum );
+$signal=|void progressValueChanged( int progressValue );
+$signal=|void progressTextChanged( const QString & progressText );
+$endSlotsClass

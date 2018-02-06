@@ -6,28 +6,8 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QWorkspace>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QWorkspace_release_codeblocks ();
-
-class SlotsQWorkspace: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQWorkspace(QObject *parent = 0);
-  ~SlotsQWorkspace();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void windowActivated ( QWidget * w );
-};
+$beginSlotsClass
+$signal=|void windowActivated( QWidget * w );
+$endSlotsClass
