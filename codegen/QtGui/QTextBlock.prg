@@ -74,6 +74,9 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
+#include <QTextDocument>
+#include <QTextList>
+
 $prototype=QTextBlock ( const QTextBlock & other )
 $constructor=|new|const QTextBlock &
 

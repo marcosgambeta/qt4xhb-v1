@@ -6,33 +6,12 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QSslSocket>
-#include <QSslError>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QSslSocket_release_codeblocks ();
-
-class SlotsQSslSocket: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQSslSocket(QObject *parent = 0);
-  ~SlotsQSslSocket();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void encrypted ();
-  void encryptedBytesWritten ( qint64 written );
-  void modeChanged ( QSslSocket::SslMode mode );
-  void peerVerifyError ( const QSslError & error );
-  void sslErrors ( const QList<QSslError> & errors );
-};
+$beginSlotsClass
+$signal=|void encrypted();
+$signal=|void encryptedBytesWritten( qint64 written );
+$signal=|void modeChanged( QSslSocket::SslMode mode );
+$signal=|void peerVerifyError( const QSslError & error );
+$signal=|void sslErrors( const QList<QSslError> & errors );
+$endSlotsClass

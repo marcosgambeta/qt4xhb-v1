@@ -47,7 +47,8 @@ $prototype=QDebug ( QIODevice * device )
 $internalConstructor=|new1|QIODevice *
 
 $prototype=QDebug ( QString * string )
-$internalConstructor=|new2|QString *
+%% TODO: implementar
+%% $internalConstructor=|new2|QString *
 
 $prototype=QDebug ( QtMsgType type )
 $internalConstructor=|new3|QtMsgType
@@ -66,10 +67,10 @@ HB_FUNC_STATIC( QDEBUG_NEW )
   {
     QDebug_new1();
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
-  {
-    QDebug_new2();
-  }
+%%  else if( ISNUMPAR(1) && ISCHAR(1) )
+%%  {
+%%    QDebug_new2();
+%%  }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
     QDebug_new3();

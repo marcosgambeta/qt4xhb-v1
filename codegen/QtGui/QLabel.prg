@@ -74,6 +74,8 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
+#include <QMovie>
+
 $prototype=QLabel ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 $internalConstructor=|new1|QWidget *=0,Qt::WindowFlags=0
 

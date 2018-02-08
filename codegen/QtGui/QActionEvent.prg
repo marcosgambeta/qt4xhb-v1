@@ -33,6 +33,8 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
+#include <QAction>
+
 $prototype=QActionEvent ( int type, QAction * action, QAction * before = 0 )
 $constructor=|new|int,QAction *,QAction *=0
 

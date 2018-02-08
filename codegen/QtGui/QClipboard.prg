@@ -98,6 +98,7 @@ $prototype=QString text ( Mode mode = Clipboard ) const
 $internalMethod=|QString|text,text1|QClipboard::Mode=QClipboard::Clipboard
 
 $prototype=QString text ( QString & subtype, Mode mode = Clipboard ) const
+%% TODO: implementar
 HB_FUNC_STATIC( QCLIPBOARD_TEXT2 )
 {
   QClipboard * obj = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

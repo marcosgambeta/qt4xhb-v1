@@ -88,6 +88,7 @@ $destructor
 
 #include <QStringList>
 #include <QSize>
+#include <QMimeData>
 
 $deleteMethod
 

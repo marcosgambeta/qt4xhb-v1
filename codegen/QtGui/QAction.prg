@@ -144,68 +144,10 @@ $prototype=void activate ( ActionEvent event )
 $method=|void|activate|QAction::ActionEvent
 
 $prototype=QList<QGraphicsWidget *> associatedGraphicsWidgets () const
-HB_FUNC_STATIC( QACTION_ASSOCIATEDGRAPHICSWIDGETS )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QGraphicsWidget *> list = obj->associatedGraphicsWidgets ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSWIDGET" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QGraphicsWidget *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QGraphicsWidget *>|associatedGraphicsWidgets|
 
 $prototype=QList<QWidget *> associatedWidgets () const
-HB_FUNC_STATIC( QACTION_ASSOCIATEDWIDGETS )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QWidget *> list = obj->associatedWidgets ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QWIDGET" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QWidget *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QWidget *>|associatedWidgets|
 
 $prototype=bool autoRepeat () const
 $method=|bool|autoRepeat|
@@ -295,28 +237,10 @@ $prototype=void setShortcutContext ( Qt::ShortcutContext context )
 $method=|void|setShortcutContext|Qt::ShortcutContext
 
 $prototype=void setShortcuts ( const QList<QKeySequence> & shortcuts )
-HB_FUNC_STATIC( QACTION_SETSHORTCUTS1 )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QKeySequence> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << *(QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    obj->setShortcuts ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setShortcuts,setShortcuts1|const QList<QKeySequence> &
 
 $prototype=void setShortcuts ( QKeySequence::StandardKey key )
-$method=|void|setShortcuts,setShortcuts2|QKeySequence::StandardKey
+$internalMethod=|void|setShortcuts,setShortcuts2|QKeySequence::StandardKey
 
 //[1]void setShortcuts ( const QList<QKeySequence> & shortcuts )
 //[2]void setShortcuts ( QKeySequence::StandardKey key )
@@ -325,11 +249,11 @@ HB_FUNC_STATIC( QACTION_SETSHORTCUTS )
 {
   if( ISNUMPAR(1) && ISARRAY(1) )
   {
-    HB_FUNC_EXEC( QACTION_SETSHORTCUTS1 );
+    QAction_setShortcuts1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QACTION_SETSHORTCUTS2 );
+    QAction_setShortcuts2();
   }
   else
   {
@@ -359,40 +283,7 @@ $prototype=Qt::ShortcutContext shortcutContext () const
 $method=|Qt::ShortcutContext|shortcutContext|
 
 $prototype=QList<QKeySequence> shortcuts () const
-HB_FUNC_STATIC( QACTION_SHORTCUTS )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QKeySequence> list = obj->shortcuts ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QKEYSEQUENCE" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QKeySequence *) new QKeySequence ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( NULL );
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QKeySequence>|shortcuts|
 
 $prototype=bool showStatusText ( QWidget * widget = 0 )
 $method=|bool|showStatusText|QWidget *=0

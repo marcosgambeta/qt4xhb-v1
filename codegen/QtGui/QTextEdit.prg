@@ -125,6 +125,8 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
+#include <QMenu>
+
 $prototype=QTextEdit ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0
 

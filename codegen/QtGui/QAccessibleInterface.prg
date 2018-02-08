@@ -59,47 +59,13 @@ $prototype=virtual int childCount () const = 0
 $virtualMethod=|int|childCount|
 
 $prototype=virtual bool doAction ( int action, int child, const QVariantList & params = QVariantList() ) = 0
-HB_FUNC_STATIC( QACCESSIBLEINTERFACE_DOACTION )
-{
-  QAccessibleInterface * obj = (QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QVariantList par3;
-    PHB_ITEM aList3 = hb_param(3, HB_IT_ARRAY);
-    int i3;
-    int nLen3 = hb_arrayLen(aList3);
-    for (i3=0;i3<nLen3;i3++)
-    {
-      par3 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, i3+1 ), "POINTER", 0 ) );
-    }
-    RBOOL( obj->doAction ( PINT(1), PINT(2), par3 ) );
-  }
-}
+$virtualMethod=|bool|doAction|int,int,const QVariantList &=QVariantList()
 
 $prototype=virtual int indexOfChild ( const QAccessibleInterface * child ) const = 0
 $virtualMethod=|int|indexOfChild|const QAccessibleInterface *
 
 $prototype=QVariant invokeMethod ( Method method, int child = 0, const QVariantList & params = QVariantList() )
-HB_FUNC_STATIC( QACCESSIBLEINTERFACE_INVOKEMETHOD )
-{
-  QAccessibleInterface * obj = (QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    QVariantList par3;
-    PHB_ITEM aList3 = hb_param(3, HB_IT_ARRAY);
-    int i3;
-    int nLen3 = hb_arrayLen(aList3);
-    for (i3=0;i3<nLen3;i3++)
-    {
-      par3 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, i3+1 ), "POINTER", 0 ) );
-    }
-    QVariant * ptr = new QVariant( obj->invokeMethod ( (QAccessibleInterface::Method) par1, OPINT(2,0), par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$method=|QVariant|invokeMethod|QAccessibleInterface::Method,int=0,const QVariantList &=QVariantList()
 
 $prototype=virtual bool isValid () const = 0
 $virtualMethod=|bool|isValid|

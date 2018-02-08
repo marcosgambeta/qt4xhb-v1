@@ -41,6 +41,9 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
+#include <QUndoGroup>
+#include <QUndoStack>
+
 $prototype=QUndoView ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0
 

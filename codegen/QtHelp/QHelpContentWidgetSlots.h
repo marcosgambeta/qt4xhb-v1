@@ -6,28 +6,8 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QHelpContentWidget>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QHelpContentWidget_release_codeblocks ();
-
-class SlotsQHelpContentWidget: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQHelpContentWidget(QObject *parent = 0);
-  ~SlotsQHelpContentWidget();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void linkActivated ( const QUrl & link );
-};
+$beginSlotsClass
+$signal=|void linkActivated( const QUrl & link );
+$endSlotsClass

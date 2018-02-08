@@ -48,11 +48,11 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QGLFrameBufferObjectFormat_new1();
+    QGLFramebufferObjectFormat_new1();
   }
   else if( ISNUMPAR(1) && ISQGLFRAMEBUFFEROBJECTFORMAT(1) )
   {
-    QGLFrameBufferObjectFormat_new2();
+    QGLFramebufferObjectFormat_new2();
   }
   else
   {

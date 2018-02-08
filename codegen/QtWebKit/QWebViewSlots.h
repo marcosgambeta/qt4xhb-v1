@@ -6,36 +6,16 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QWebView>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QWebView_release_codeblocks ();
-
-class SlotsQWebView: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQWebView(QObject *parent = 0);
-  ~SlotsQWebView();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void iconChanged ();
-  void linkClicked ( const QUrl & url );
-  void loadFinished ( bool ok );
-  void loadProgress ( int progress );
-  void loadStarted ();
-  void selectionChanged ();
-  void statusBarMessage ( const QString & text );
-  void titleChanged ( const QString & title );
-  void urlChanged ( const QUrl & url );
-};
+$beginSlotsClass
+$signal=|void iconChanged();
+$signal=|void linkClicked( const QUrl & url );
+$signal=|void loadFinished( bool ok );
+$signal=|void loadProgress( int progress );
+$signal=|void loadStarted();
+$signal=|void selectionChanged();
+$signal=|void statusBarMessage( const QString & text );
+$signal=|void titleChanged( const QString & title );
+$signal=|void urlChanged( const QUrl & url );
+$endSlotsClass

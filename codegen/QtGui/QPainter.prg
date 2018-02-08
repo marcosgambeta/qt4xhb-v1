@@ -936,7 +936,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOLYLINE )
 }
 
 $prototype=void drawRect ( const QRectF & rectangle )
-$internalMmethod=|void|drawRect,drawRect1|const QRectF &
+$internalMethod=|void|drawRect,drawRect1|const QRectF &
 
 $prototype=void drawRect ( const QRect & rectangle )
 $internalMethod=|void|drawRect,drawRect2|const QRect &
@@ -1560,11 +1560,11 @@ HB_FUNC_STATIC( QPAINTER_SETVIEWPORT )
 {
   if( ISNUMPAR(1) && ISQRECT(1) )
   {
-    QPainter_setViewPort1();
+    QPainter_setViewport1();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    QPainter_setViewPort2();
+    QPainter_setViewport2();
   }
   else
   {

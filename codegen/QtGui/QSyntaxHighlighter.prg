@@ -34,6 +34,8 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
+#include <QTextDocument>
+
 //[1]QSyntaxHighlighter ( QObject * parent )
 //[2]QSyntaxHighlighter ( QTextDocument * parent )
 //[3]QSyntaxHighlighter ( QTextEdit * parent )

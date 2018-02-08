@@ -69,37 +69,7 @@ $prototype=QSize maximumViewportSize () const
 $method=|QSize|maximumViewportSize|
 
 $prototype=QWidgetList scrollBarWidgets ( Qt::Alignment alignment )
-HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SCROLLBARWIDGETS )
-{
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    QWidgetList list = obj->scrollBarWidgets ( (Qt::Alignment) par1 );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QWIDGET" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QWidget *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QWidgetList|scrollBarWidgets|Qt::Alignment
 
 $prototype=void setCornerWidget ( QWidget * widget )
 $method=|void|setCornerWidget|QWidget *

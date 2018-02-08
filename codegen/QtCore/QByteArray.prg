@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QBYTEARRAY_ENDSWITH )
 }
 
 $prototype=QByteArray & fill ( char ch, int size = -1 )
-$method=|QByteArray &|fill,fill1|char,int=-1
+$method=|QByteArray &|fill|char,int=-1
 
 $prototype=int indexOf ( const QByteArray & ba, int from = 0 ) const
 $method=|int|indexOf,indexOf1|const QByteArray &,int=0
@@ -890,7 +890,7 @@ $prototype=void squeeze ()
 $method=|void|squeeze|
 
 $prototype=bool startsWith ( const QByteArray & ba ) const
-$internalMethod=|bool|startsWithm,startsWith1|const QByteArray &
+$internalMethod=|bool|startsWith,startsWith1|const QByteArray &
 
 $prototype=bool startsWith ( const char * str ) const
 $internalMethod=|bool|startsWith,startsWith2|const char *
@@ -992,7 +992,7 @@ $prototype=static QByteArray number ( uint n, int base = 10 )
 $staticMethod=|QByteArray|number,number2|uint,int=10
 
 $prototype=static QByteArray number ( qlonglong n, int base = 10 )
-$staticMethod=|QByteArray|number.number3|qlonglong,int=10
+$staticMethod=|QByteArray|number,number3|qlonglong,int=10
 
 $prototype=static QByteArray number ( qulonglong n, int base = 10 )
 $staticMethod=|QByteArray|number,number4|qulonglong,int=10

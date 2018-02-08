@@ -6,30 +6,10 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QAbstractVideoSurface>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QAbstractVideoSurface_release_codeblocks ();
-
-class SlotsQAbstractVideoSurface: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQAbstractVideoSurface(QObject *parent = 0);
-  ~SlotsQAbstractVideoSurface();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void activeChanged(bool active);
-  void surfaceFormatChanged(const QVideoSurfaceFormat &format);
-  void supportedFormatsChanged();
-};
+$beginSlotsClass
+$signal=|void activeChanged( bool active );
+$signal=|void surfaceFormatChanged( const QVideoSurfaceFormat & format );
+$signal=|void supportedFormatsChanged();
+$endSlotsClass

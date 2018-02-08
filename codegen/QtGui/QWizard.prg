@@ -83,6 +83,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 #include <QVariant>
+#include <QAbstractButton>
 
 $prototype=QWizard ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 $constructor=|new|QWidget *=0,Qt::WindowFlags=0

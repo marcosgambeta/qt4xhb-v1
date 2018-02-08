@@ -64,7 +64,7 @@ $prototype=virtual void releaseHandle ( void * handle )
 $virtualMethod=|void|releaseHandle|void *
 
 $prototype=static void registerFont ( const QString & familyName, const QString & foundryName, QFont::Weight weight, QFont::Style style, QFont::Stretch stretch, bool antialiased, bool scalable, int pixelSize, const QSupportedWritingSystems & writingSystems, void * usrPtr )
-$static Method=|void|registerFont|const QString &,const QString &,QFont::Weight,QFont::Style,QFont::Stretch,bool,bool,int,const QSupportedWritingSystems &,void *
+$staticMethod=|void|registerFont|const QString &,const QString &,QFont::Weight,QFont::Style,QFont::Stretch,bool,bool,int,const QSupportedWritingSystems &,void *
 
 $prototype=static void registerQPF2Font ( const QByteArray & dataArray, void * handle )
 $staticMethod=|void|registerQPF2Font|const QByteArray &,void *

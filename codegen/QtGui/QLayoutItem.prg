@@ -60,6 +60,8 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
+#include <QLayout>
+
 $deleteMethod
 
 $prototype=Qt::Alignment alignment () const

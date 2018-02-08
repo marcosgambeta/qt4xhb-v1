@@ -33,7 +33,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QDynamicPropertyChangeEvent ( const QByteArray & name )
-$constructor=|new1|const QByteArray &
+$constructor=|new|const QByteArray &
 
 $deleteMethod
 

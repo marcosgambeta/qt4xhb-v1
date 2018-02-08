@@ -11,7 +11,7 @@ $includes
 $beginSlotsClass
 $slot=|documentSizeChanged( const QSizeF & newSize )
 $slot=|pageCountChanged( int newPages )
-$slot=|update( const QRectF & rect = QRectF( 0., 0., 1000000000., 1000000000. ) )
+$slot=|update( const QRectF & rect )
 $slot=|updateBlock( const QTextBlock & block )
 $endSlotsClass
 

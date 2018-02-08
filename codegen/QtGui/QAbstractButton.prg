@@ -72,7 +72,7 @@ $prototype=bool autoExclusive () const
 $method=|bool|autoExclusive|
 
 $prototype=bool autoRepeat () const
-$metjod=|bool|autoRepeat|
+$method=|bool|autoRepeat|
 
 $prototype=int autoRepeatDelay () const
 $method=|int|autoRepeatDelay|

@@ -86,7 +86,7 @@ $prototype=QAction * actionFormLayout () const
 $method=|QAction *|actionFormLayout|
 
 $prototype=virtual QAction * actionGridLayout () const
-$virtualMtehod=|QAction *|actionGridLayout|
+$virtualMethod=|QAction *|actionGridLayout|
 
 $prototype=virtual QAction * actionHorizontalLayout () const
 $virtualMethod=|QAction *|actionHorizontalLayout|

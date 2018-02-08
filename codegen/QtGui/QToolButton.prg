@@ -50,6 +50,9 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
+#include <QAction>
+#include <QMenu>
+
 $prototype=QToolButton ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
 

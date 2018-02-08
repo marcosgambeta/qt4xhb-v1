@@ -71,6 +71,9 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
+#include <QPushButton>
+#include <QAbstractButton>
+
 $prototype=QMessageBox ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0
 

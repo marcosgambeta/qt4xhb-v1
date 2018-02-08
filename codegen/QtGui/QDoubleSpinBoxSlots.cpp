@@ -13,5 +13,7 @@ $slot=|valueChanged( double d )
 $slot=|valueChanged( const QString & text )
 $endSlotsClass
 
+$beginGroup
 $signalMethod=|valueChanged(double)
 $signalMethod=|valueChanged(QString)
+$endGroup

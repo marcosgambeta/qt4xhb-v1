@@ -105,7 +105,7 @@ $prototype=virtual bool internalEntityDecl ( const QString & name, const QString
 $virtualMethod=|bool|internalEntityDecl|const QString &,const QString &
 
 $prototype=virtual bool notationDecl ( const QString & name, const QString & publicId, const QString & systemId )
-$virtualMtehod=|bool|notationDecl|const QString &,const QString &,const QString &
+$virtualMethod=|bool|notationDecl|const QString &,const QString &,const QString &
 
 $prototype=virtual bool processingInstruction ( const QString & target, const QString & data )
 $virtualMethod=|bool|processingInstruction|const QString &,const QString &
@@ -120,7 +120,7 @@ $prototype=virtual bool startCDATA ()
 $virtualMethod=|bool|startCDATA|
 
 $prototype=virtual bool startDTD ( const QString & name, const QString & publicId, const QString & systemId )
-$virtualMtehod=|bool|startDTD|const QString &,const QString &,const QString &
+$virtualMethod=|bool|startDTD|const QString &,const QString &,const QString &
 
 $prototype=virtual bool startDocument ()
 $virtualMethod=|bool|startDocument|

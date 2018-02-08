@@ -6,29 +6,9 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QAudioOutput>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QAudioOutput_release_codeblocks ();
-
-class SlotsQAudioOutput: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQAudioOutput(QObject *parent = 0);
-  ~SlotsQAudioOutput();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void notify ();
-  void stateChanged ( QAudio::State state );
-};
+$beginSlotsClass
+$signal=|void notify();
+$signal=|void stateChanged( QAudio::State state );
+$endSlotsClass

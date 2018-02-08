@@ -84,36 +84,7 @@ $prototype=QAbstractButton * button ( int id ) const
 $method=|QAbstractButton *|button|int
 
 $prototype=QList<QAbstractButton *> buttons () const
-HB_FUNC_STATIC( QBUTTONGROUP_BUTTONS )
-{
-  QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QAbstractButton *> list = obj->buttons ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTBUTTON" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QAbstractButton *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QAbstractButton *>|buttons|
 
 $prototype=QAbstractButton * checkedButton () const
 $method=|QAbstractButton *|checkedButton|

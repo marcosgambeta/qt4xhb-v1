@@ -91,6 +91,8 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
+#include <QMimeData>
+
 $prototype=QStandardItemModel(QObject *parent = 0)
 $internalConstructor=|new1|QObject *=0
 

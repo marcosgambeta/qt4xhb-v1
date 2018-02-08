@@ -63,6 +63,8 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
+#include <QAction>
+
 $prototype=QUndoStack ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 

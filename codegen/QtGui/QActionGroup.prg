@@ -51,36 +51,7 @@ $constructor=|new|QObject *
 $deleteMethod
 
 $prototype=QList<QAction *> actions () const
-HB_FUNC_STATIC( QACTIONGROUP_ACTIONS )
-{
-  QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QAction *> list = obj->actions ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QACTION" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QAction *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QAction *>|actions|
 
 $prototype=QAction * addAction ( QAction * action )
 $internalMethod=|QAction *|addAction,addAction1|QAction *

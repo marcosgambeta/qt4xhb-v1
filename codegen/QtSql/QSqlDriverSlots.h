@@ -6,28 +6,8 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QSqlDriver>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QSqlDriver_release_codeblocks ();
-
-class SlotsQSqlDriver: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQSqlDriver(QObject *parent = 0);
-  ~SlotsQSqlDriver();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void notification ( const QString & name );
-};
+$beginSlotsClass
+$signal=|void notification( const QString & name );
+$endSlotsClass

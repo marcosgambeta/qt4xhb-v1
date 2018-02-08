@@ -106,6 +106,9 @@ $destructor
 
 #include <QTextBlock>
 #include <QTextDocumentFragment>
+#include <QTextList>
+#include <QTextTable>
+#include <QTextDocument>
 
 $prototype=QTextCursor ()
 $internalConstructor=|new1|

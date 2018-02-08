@@ -527,77 +527,10 @@ HB_FUNC_STATIC( QPAINTERPATH_TOFILLPOLYGON )
 }
 
 $prototype=QList<QPolygonF> toFillPolygons ( const QTransform & matrix ) const
-HB_FUNC_STATIC( QPAINTERPATH_TOFILLPOLYGONS1 )
-{
-  QPainterPath * obj = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QPolygonF> list = obj->toFillPolygons ( *PQTRANSFORM(1) );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QPOLYGONF" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QPolygonF *) new QPolygonF ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( NULL );
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$internalMethod=|QList<QPolygonF>|toFillPolygons,toFillPolygons1|const QTransform &
 
 $prototype=QList<QPolygonF> toFillPolygons ( const QMatrix & matrix = QMatrix() ) const
-%% TOFIX: parameter is optional
-HB_FUNC_STATIC( QPAINTERPATH_TOFILLPOLYGONS2 )
-{
-  QPainterPath * obj = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QPolygonF> list = obj->toFillPolygons ( *PQMATRIX(1) );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QPOLYGONF" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QPolygonF *) new QPolygonF ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( NULL );
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$internalMethod=|QList<QPolygonF>|toFillPolygons,toFillPolygons2|const QMatrix &=QMatrix()
 
 //[1]QList<QPolygonF> toFillPolygons ( const QTransform & matrix ) const
 //[2]QList<QPolygonF> toFillPolygons ( const QMatrix & matrix = QMatrix() ) const
@@ -622,77 +555,10 @@ $prototype=QPainterPath toReversed () const
 $method=|QPainterPath|toReversed|
 
 $prototype=QList<QPolygonF> toSubpathPolygons ( const QTransform & matrix ) const
-HB_FUNC_STATIC( QPAINTERPATH_TOSUBPATHPOLYGONS1 )
-{
-  QPainterPath * obj = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QPolygonF> list = obj->toSubpathPolygons ( *PQTRANSFORM(1) );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QPOLYGONF" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QPolygonF *) new QPolygonF ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( NULL );
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$internalMethod=|QList<QPolygonF>|toSubpathPolygons,toSubpathPolygons1|const QTransform &
 
 $prototype=QList<QPolygonF> toSubpathPolygons ( const QMatrix & matrix = QMatrix() ) const
-%% TOFIX: parameter is optional
-HB_FUNC_STATIC( QPAINTERPATH_TOSUBPATHPOLYGONS2 )
-{
-  QPainterPath * obj = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QPolygonF> list = obj->toSubpathPolygons ( *PQMATRIX(1) );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QPOLYGONF" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QPolygonF *) new QPolygonF ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( NULL );
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$internalMethod=|QList<QPolygonF>|toSubpathPolygons,toSubpathPolygons2|const QMatrix &=QMatrix()
 
 //[1]QList<QPolygonF> toSubpathPolygons ( const QTransform & matrix ) const
 //[2]QList<QPolygonF> toSubpathPolygons ( const QMatrix & matrix = QMatrix() ) const
@@ -701,11 +567,11 @@ HB_FUNC_STATIC( QPAINTERPATH_TOSUBPATHPOLYGONS )
 {
   if( ISNUMPAR(1) && ISQTRANSFORM(1) )
   {
-    QPainterPath_toSubPathPolygons1();
+    QPainterPath_toSubpathPolygons1();
   }
-  else if( ISNUMPAR(1) && ISQMATRIX(1) )
+  else if( ISBETWEEN(0,1) && (ISQMATRIX(1)||ISNIL(1)) )
   {
-    QPainterPath_toSubPathPolygons2();
+    QPainterPath_toSubpathPolygons2();
   }
   else
   {

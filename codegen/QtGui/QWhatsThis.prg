@@ -45,6 +45,8 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
+#include <QAction>
+
 $deleteMethod
 
 $prototype=static QAction * createAction ( QObject * parent = 0 )

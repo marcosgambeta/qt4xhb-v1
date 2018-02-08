@@ -103,6 +103,6 @@ $prototype=virtual void wakeUp () = 0
 $virtualMethod=|void|wakeUp|
 
 $prototype=static QAbstractEventDispatcher * instance ( QThread * thread = 0 )
-$static Method=|QAbstractEventDispatcher *|instance|QThread *=0
+$staticMethod=|QAbstractEventDispatcher *|instance|QThread *=0
 
 #pragma ENDDUMP

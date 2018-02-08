@@ -6,36 +6,16 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QWebFrame>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QWebFrame_release_codeblocks ();
-
-class SlotsQWebFrame: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQWebFrame(QObject *parent = 0);
-  ~SlotsQWebFrame();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void contentsSizeChanged ( const QSize & size );
-  void iconChanged ();
-  void initialLayoutCompleted ();
-  void javaScriptWindowObjectCleared ();
-  void loadFinished ( bool ok );
-  void loadStarted ();
-  void pageChanged ();
-  void titleChanged ( const QString & title );
-  void urlChanged ( const QUrl & url );
-};
+$beginSlotsClass
+$signal=|void contentsSizeChanged( const QSize & size );
+$signal=|void iconChanged();
+$signal=|void initialLayoutCompleted();
+$signal=|void javaScriptWindowObjectCleared();
+$signal=|void loadFinished( bool ok );
+$signal=|void loadStarted();
+$signal=|void pageChanged();
+$signal=|void titleChanged( const QString & title );
+$signal=|void urlChanged( const QUrl & url );
+$endSlotsClass

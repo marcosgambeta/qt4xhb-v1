@@ -6,29 +6,9 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QScriptEngineDebugger>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QScriptEngineDebugger_release_codeblocks ();
-
-class SlotsQScriptEngineDebugger: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQScriptEngineDebugger(QObject *parent = 0);
-  ~SlotsQScriptEngineDebugger();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void evaluationResumed ();
-  void evaluationSuspended ();
-};
+$beginSlotsClass
+$signal=|void evaluationResumed();
+$signal=|void evaluationSuspended();
+$endSlotsClass

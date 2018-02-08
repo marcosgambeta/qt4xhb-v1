@@ -6,29 +6,9 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QHelpContentModel>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QHelpContentModel_release_codeblocks ();
-
-class SlotsQHelpContentModel: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQHelpContentModel(QObject *parent = 0);
-  ~SlotsQHelpContentModel();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void contentsCreated ();
-  void contentsCreationStarted ();
-};
+$beginSlotsClass
+$signal=|void contentsCreated();
+$signal=|void contentsCreationStarted();
+$endSlotsClass

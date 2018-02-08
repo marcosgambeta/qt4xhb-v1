@@ -77,6 +77,8 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
+#include <QHeaderView>
+
 $prototype=QTableView ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
 

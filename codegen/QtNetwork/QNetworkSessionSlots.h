@@ -6,33 +6,13 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QNetworkSession>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QNetworkSession_release_codeblocks ();
-
-class SlotsQNetworkSession: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQNetworkSession(QObject *parent = 0);
-  ~SlotsQNetworkSession();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void closed ();
-  void error ( QNetworkSession::SessionError error );
-  void newConfigurationActivated ();
-  void opened ();
-  void preferredConfigurationChanged ( const QNetworkConfiguration & config, bool isSeamless );
-  void stateChanged ( QNetworkSession::State state );
-};
+$beginSlotsClass
+$signal=|void closed();
+$signal=|void error( QNetworkSession::SessionError error );
+$signal=|void newConfigurationActivated();
+$signal=|void opened();
+$signal=|void preferredConfigurationChanged( const QNetworkConfiguration & config, bool isSeamless );
+$signal=|void stateChanged( QNetworkSession::State state );
+$endSlotsClass

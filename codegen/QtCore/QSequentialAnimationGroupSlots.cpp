@@ -9,7 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-$slot=|currentAnimationChanged(QAbstractAnimation*)
+$slot=|currentAnimationChanged( QAbstractAnimation * current )
 $endSlotsClass
 
 $signalMethod=|currentAnimationChanged(QAbstractAnimation*)

@@ -49,7 +49,7 @@ $prototype=QTableWidgetSelectionRange ( int top, int left, int bottom, int right
 $internalConstructor=|new2|int,int,int,int
 
 $prototype=QTableWidgetSelectionRange ( const QTableWidgetSelectionRange & other )
-$internalConstuctor=|new3|const QTableWidgetSelectionRange &
+$internalConstructor=|new3|const QTableWidgetSelectionRange &
 
 //[1]QTableWidgetSelectionRange ()
 //[2]QTableWidgetSelectionRange ( int top, int left, int bottom, int right )

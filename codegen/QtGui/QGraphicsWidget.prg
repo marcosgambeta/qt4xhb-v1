@@ -94,66 +94,21 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
+#include <QStyle>
+
 $prototype=QGraphicsWidget ( QGraphicsItem * parent = 0, Qt::WindowFlags wFlags = 0 )
 $constructor=|new|QGraphicsItem *=0,Qt::WindowFlags=0
 
 $deleteMethod
 
 $prototype=QList<QAction *> actions () const
-HB_FUNC_STATIC( QGRAPHICSWIDGET_ACTIONS )
-{
-  QGraphicsWidget * obj = (QGraphicsWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QAction *> list = obj->actions ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QACTION" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QAction *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QAction *>|actions|
 
 $prototype=void addAction ( QAction * action )
 $method=|void|addAction|QAction *
 
 $prototype=void addActions ( QList<QAction *> actions )
-HB_FUNC_STATIC( QGRAPHICSWIDGET_ADDACTIONS )
-{
-  QGraphicsWidget * obj = (QGraphicsWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QAction *> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    obj->addActions ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addActions|QList<QAction *>
 
 $prototype=void adjustSize ()
 $method=|void|adjustSize|
@@ -174,31 +129,13 @@ $prototype=void getWindowFrameMargins ( qreal * left, qreal * top, qreal * right
 $method=|void|getWindowFrameMargins|qreal *,qreal *,qreal *,qreal *
 
 $prototype=int grabShortcut ( const QKeySequence & sequence, Qt::ShortcutContext context = Qt::WindowShortcut )
-$method=|int|grabShortcut|const QKeySequence &|Qt::ShortcutContext=Qt::WindowShortcut
+$method=|int|grabShortcut|const QKeySequence &,Qt::ShortcutContext=Qt::WindowShortcut
 
 $prototype=void insertAction ( QAction * before, QAction * action )
 $method=|void|insertAction|QAction *,QAction *
 
 $prototype=void insertActions ( QAction * before, QList<QAction *> actions )
-HB_FUNC_STATIC( QGRAPHICSWIDGET_INSERTACTIONS )
-{
-  QGraphicsWidget * obj = (QGraphicsWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QAction *> par2;
-    PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-    int i2;
-    int nLen2 = hb_arrayLen(aList2);
-    for (i2=0;i2<nLen2;i2++)
-    {
-      par2 << (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
-    }
-    obj->insertActions ( PQACTION(1), par2 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|insertActions|QAction *,QList<QAction *>
 
 $prototype=bool isActiveWindow () const
 $method=|bool|isActiveWindow|

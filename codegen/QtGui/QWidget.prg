@@ -274,6 +274,11 @@ $destructor
 #include <QIcon>
 #include <QVariant>
 #include <QLocale>
+#include <QGraphicsEffect>
+#include <QGraphicsProxyWidget>
+#include <QInputContext>
+#include <QLayout>
+#include <QStyle>
 
 $prototype=QWidget ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 $constructor=|new|QWidget *=0,Qt::WindowFlags=0
@@ -290,36 +295,7 @@ $prototype=QString accessibleName () const
 $method=|QString|accessibleName|
 
 $prototype=QList<QAction *> actions () const
-HB_FUNC_STATIC( QWIDGET_ACTIONS )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QAction *> list = obj->actions ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QACTION" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QAction *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QAction *>|actions|
 
 $prototype=void activateWindow ()
 $method=|void|activateWindow|
@@ -328,25 +304,7 @@ $prototype=void addAction ( QAction * action )
 $method=|void|addAction|QAction *
 
 $prototype=void addActions ( QList<QAction *> actions )
-HB_FUNC_STATIC( QWIDGET_ADDACTIONS )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QAction *> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    obj->addActions ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addActions|QList<QAction *>
 
 $prototype=void adjustSize ()
 $method=|void|adjustSize|
@@ -521,25 +479,7 @@ $prototype=void insertAction ( QAction * before, QAction * action )
 $method=|void|insertAction|QAction *,QAction *
 
 $prototype=void insertActions ( QAction * before, QList<QAction *> actions )
-HB_FUNC_STATIC( QWIDGET_INSERTACTIONS )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QAction *> par2;
-    PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-    int i2;
-    int nLen2 = hb_arrayLen(aList2);
-    for (i2=0;i2<nLen2;i2++)
-    {
-      par2 << (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
-    }
-    obj->insertActions ( PQACTION(1), par2 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|insertActions|QAction *,QList<QAction *>
 
 $prototype=bool isActiveWindow () const
 $method=|bool|isActiveWindow|
@@ -1201,7 +1141,7 @@ $prototype=void setWindowModality ( Qt::WindowModality windowModality )
 $method=|void|setWindowModality|Qt::WindowModality
 
 $prototype=void setWindowOpacity ( qreal level )
-$method=|void|setWindowOpacity|
+$method=|void|setWindowOpacity|qreal
 
 $prototype=void setWindowRole ( const QString & role )
 $method=|void|setWindowRole|const QString &

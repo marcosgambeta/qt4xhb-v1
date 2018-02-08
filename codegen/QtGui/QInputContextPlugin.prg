@@ -35,6 +35,8 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
+#include <QInputContext>
+
 $deleteMethod
 
 $prototype=virtual QInputContext * create ( const QString & key ) = 0

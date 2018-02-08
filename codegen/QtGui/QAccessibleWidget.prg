@@ -54,23 +54,7 @@ $prototype=virtual int childCount () const
 $virtualMethod=|int|childCount|
 
 $prototype=virtual bool doAction ( int action, int child, const QVariantList & params )
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_DOACTION )
-{
-  QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QVariantList par3;
-    PHB_ITEM aList3 = hb_param(3, HB_IT_ARRAY);
-    int i3;
-    int nLen3 = hb_arrayLen(aList3);
-    for (i3=0;i3<nLen3;i3++)
-    {
-      par3 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, i3+1 ), "POINTER", 0 ) );
-    }
-    RBOOL( obj->doAction ( PINT(1), PINT(2), par3 ) );
-  }
-}
+$virtualMethod=|bool|doAction|int,int,const QVariantList &
 
 $prototype=virtual int indexOfChild ( const QAccessibleInterface * child ) const
 $virtualMethod=|int|indexOfChild|const QAccessibleInterface *

@@ -17,12 +17,9 @@ CLASS QColor
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new3
    METHOD new4
    METHOD new5
-   METHOD new6
    METHOD new7
    METHOD new
    METHOD delete
@@ -133,10 +130,10 @@ $destructor
 #include <QVariant>
 
 $prototype=QColor ()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QColor ( int r, int g, int b, int a = 255 )
-$constructor=|new2|int,int,int,int=255
+$internalConstructor=|new2|int,int,int,int=255
 
 $prototype=QColor ( QRgb color )
 $constructor=|new3|QRgb
@@ -148,7 +145,7 @@ $prototype=QColor ( const char * name )
 $constructor=|new5|const char *
 
 $prototype=QColor ( const QColor & color )
-$constructor=|new6|const QColor &
+$internalConstructor=|new6|const QColor &
 
 $prototype=QColor ( Qt::GlobalColor color )
 $constructor=|new7|Qt::GlobalColor
@@ -167,11 +164,11 @@ HB_FUNC_STATIC( QCOLOR_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QCOLOR_NEW1 );
+    QColor_new1();
   }
   else if( ISBETWEEN(3,4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && (ISNUM(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QCOLOR_NEW2 );
+    QColor_new2();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
@@ -187,7 +184,7 @@ HB_FUNC_STATIC( QCOLOR_NEW )
   }
   else if( ISNUMPAR(1) && ISQCOLOR(1) )
   {
-    HB_FUNC_EXEC( QCOLOR_NEW6 );
+    QColor_new6();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
@@ -487,6 +484,8 @@ $staticMethod=|QColor|fromRgba|QRgb
 
 $prototype=static bool isValidColor ( const QString & name )
 $staticMethod=|bool|isValidColor|const QString &
+
+%% TODO implementar $function=
 
 $prototype=int qAlpha ( QRgb rgba )
 HB_FUNC( QALPHA )

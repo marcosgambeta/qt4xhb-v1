@@ -60,6 +60,7 @@ $destructor
 #include <QItemSelection>
 #include <QStringList>
 #include <QSize>
+#include <QMimeData>
 
 $deleteMethod
 

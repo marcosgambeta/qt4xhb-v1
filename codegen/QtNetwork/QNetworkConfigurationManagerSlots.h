@@ -6,32 +6,12 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QNetworkConfigurationManager>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QNetworkConfigurationManager_release_codeblocks ();
-
-class SlotsQNetworkConfigurationManager: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQNetworkConfigurationManager(QObject *parent = 0);
-  ~SlotsQNetworkConfigurationManager();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void configurationAdded ( const QNetworkConfiguration & config );
-  void configurationChanged ( const QNetworkConfiguration & config );
-  void configurationRemoved ( const QNetworkConfiguration & config );
-  void onlineStateChanged ( bool isOnline );
-  void updateCompleted ();
-};
+$beginSlotsClass
+$signal=|void configurationAdded( const QNetworkConfiguration & config );
+$signal=|void configurationChanged( const QNetworkConfiguration & config );
+$signal=|void configurationRemoved( const QNetworkConfiguration & config );
+$signal=|void onlineStateChanged( bool isOnline );
+$signal=|void updateCompleted();
+$endSlotsClass

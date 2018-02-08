@@ -53,7 +53,7 @@ $prototype=QDirIterator ( const QString & path, IteratorFlags flags = NoIterator
 $internalConstructor=|new2|const QString &,QDirIterator::IteratorFlags=QDirIterator::NoIteratorFlags
 
 $prototype=QDirIterator ( const QString & path, QDir::Filters filters, IteratorFlags flags = NoIteratorFlags )
-$internalConstructor=|new3|const QString &,QDir::Filters,QDir::IteratorFlags=QDir::NoIteratorFlags
+$internalConstructor=|new3|const QString &,QDir::Filters,QDirIterator::IteratorFlags=QDirIterator::NoIteratorFlags
 
 $prototype=QDirIterator ( const QString & path, const QStringList & nameFilters, QDir::Filters filters = QDir::NoFilter, IteratorFlags flags = NoIteratorFlags )
 $internalConstructor=|new4|const QString &,const QStringList &,QDir::Filters=QDir::NoFilter,QDirIterator::IteratorFlags=QDirIterator::NoIteratorFlags

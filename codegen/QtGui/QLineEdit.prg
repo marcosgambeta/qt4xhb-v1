@@ -103,6 +103,9 @@ $destructor
 #include "qt4xhb_utils.h"
 
 #include <QVariant>
+#include <QCompleter>
+#include <QMenu>
+#include <QValidator>
 
 $prototype=QLineEdit ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0

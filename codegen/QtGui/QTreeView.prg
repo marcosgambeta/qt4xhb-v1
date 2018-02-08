@@ -93,6 +93,8 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
+#include <QHeaderView>
+
 $prototype=QTreeView ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
 
@@ -267,6 +269,6 @@ $prototype=void resizeColumnToContents ( int column )
 $method=|void|resizeColumnToContents|int
 
 $prototype=void showColumn ( int column )
-$methdo=|void|showColumn|int
+$method=|void|showColumn|int
 
 #pragma ENDDUMP

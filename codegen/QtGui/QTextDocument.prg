@@ -124,6 +124,7 @@ $destructor
 #include <QTextOption>
 #include <QTextCursor>
 #include <QVariant>
+#include <QAbstractTextDocumentLayout>
 
 $prototype=QTextDocument ( QObject * parent = 0 )
 $internalConstructor=|new1|QObject *=0

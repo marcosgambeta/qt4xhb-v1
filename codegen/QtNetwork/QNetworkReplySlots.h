@@ -6,34 +6,15 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QNetworkReply>
+$includes
+
 #include <QSslError>
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QNetworkReply_release_codeblocks ();
-
-class SlotsQNetworkReply: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQNetworkReply(QObject *parent = 0);
-  ~SlotsQNetworkReply();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void downloadProgress ( qint64 bytesReceived, qint64 bytesTotal );
-  void error ( QNetworkReply::NetworkError code );
-  void finished ();
-  void metaDataChanged ();
-  void sslErrors ( const QList<QSslError> & errors );
-  void uploadProgress ( qint64 bytesSent, qint64 bytesTotal );
-};
+$beginSlotsClass
+$signal=|void downloadProgress( qint64 bytesReceived, qint64 bytesTotal );
+$signal=|void error( QNetworkReply::NetworkError code );
+$signal=|void finished();
+$signal=|void metaDataChanged();
+$signal=|void sslErrors( const QList<QSslError> & errors );
+$signal=|void uploadProgress( qint64 bytesSent, qint64 bytesTotal );
+$endSlotsClass

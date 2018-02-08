@@ -85,6 +85,11 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
+#include <QToolBar>
+#include <QMenu>
+#include <QMenuBar>
+#include <QStatusBar>
+
 $prototype=QMainWindow ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 $constructor=|new|QWidget *=0,Qt::WindowFlags=0
 
@@ -132,15 +137,15 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBAR )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISQTOOLBAR(2) )
   {
-    QMainWindow_addToolbar1();
+    QMainWindow_addToolBar1();
   }
   else if( ISNUMPAR(1) && ISQTOOLBAR(1) )
   {
-    QMainWindow_addToolbar2();
+    QMainWindow_addToolBar2();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    QMainWindow_addToolbar3();
+    QMainWindow_addToolBar3();
   }
   else
   {
@@ -254,37 +259,7 @@ $prototype=QTabWidget::TabShape tabShape () const
 $method=|QTabWidget::TabShape|tabShape|
 
 $prototype=QList<QDockWidget *> tabifiedDockWidgets ( QDockWidget * dockwidget ) const
-HB_FUNC_STATIC( QMAINWINDOW_TABIFIEDDOCKWIDGETS )
-{
-  QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QDockWidget * par1 = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QList<QDockWidget *> list = obj->tabifiedDockWidgets ( par1 );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QDOCKWIDGET" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QDockWidget *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QDockWidget *>|tabifiedDockWidgets|QDockWidget *
 
 $prototype=void tabifyDockWidget ( QDockWidget * first, QDockWidget * second )
 $method=|void|tabifyDockWidget|QDockWidget *,QDockWidget *

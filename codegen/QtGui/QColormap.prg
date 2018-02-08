@@ -59,36 +59,7 @@ $prototype=const QColor colorAt ( uint pixel ) const
 $method=|const QColor|colorAt|uint
 
 $prototype=const QVector<QColor> colormap () const
-HB_FUNC_STATIC( QCOLORMAP_COLORMAP )
-{
-  QColormap * obj = (QColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QVector<QColor> list = obj->colormap ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QCOLOR" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QColor *) new QColor ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|const QVector<QColor>|colormap|
 
 $prototype=int depth () const
 $method=|int|depth|

@@ -47,7 +47,8 @@ $prototype=bool load(const QLocale & locale, const QString & filename, const QSt
 $internalMethod=|bool|load,load2|const QLocale &,const QString &,const QString &=QString(),const QString &=QString(),const QString &=QString()
 
 $prototype=bool load(const uchar * data, int len, const QString & directory = QString())
-$internalMethod=|bool|load,load3|const uchar *,int,const QString &=QString()
+%% TODO: fix
+%% $internalMethod=|bool|load,load3|const uchar *,int,const QString &=QString()
 
 //[1]bool load(const QString & filename, const QString & directory = QString(), const QString & search_delimiters = QString(), const QString & suffix = QString())
 //[2]bool load(const QLocale & locale, const QString & filename, const QString & prefix = QString(), const QString & directory = QString(), const QString & suffix = QString())
@@ -63,10 +64,10 @@ HB_FUNC_STATIC( QTRANSLATOR_LOAD )
   {
     QTranslator_load2();
   }
-  else if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && (ISCHAR(3)||ISNIL(3)) )
-  {
-    QTranslator_load3();
-  }
+%%  else if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && (ISCHAR(3)||ISNIL(3)) )
+%%  {
+%%    QTranslator_load3();
+%%  }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );

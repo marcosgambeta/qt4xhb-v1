@@ -6,28 +6,8 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QSvgRenderer>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QSvgRenderer_release_codeblocks ();
-
-class SlotsQSvgRenderer: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQSvgRenderer(QObject *parent = 0);
-  ~SlotsQSvgRenderer();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void repaintNeeded ();
-};
+$beginSlotsClass
+$signal=|void repaintNeeded();
+$endSlotsClass

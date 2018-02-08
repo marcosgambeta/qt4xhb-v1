@@ -176,19 +176,19 @@ HB_FUNC_STATIC( QMATRIX4X4_MAP )
 {
   if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    QMatrix4X4_map1();
+    QMatrix4x4_map1();
   }
   else if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    QMatrix4X4_map2();
+    QMatrix4x4_map2();
   }
   else if( ISNUMPAR(1) && ISQVECTOR3D(1) )
   {
-    QMatrix4X4_map3();
+    QMatrix4x4_map3();
   }
   else if( ISNUMPAR(1) && ISQVECTOR4D(1) )
   {
-    QMatrix4X4_map4();
+    QMatrix4x4_map4();
   }
   else
   {
@@ -209,11 +209,11 @@ HB_FUNC_STATIC( QMATRIX4X4_MAPRECT )
 {
   if( ISNUMPAR(1) && ISQRECT(1) )
   {
-    QMatrix4X4_mapRect1();
+    QMatrix4x4_mapRect1();
   }
   else if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    QMatrix4X4_mapRect2();
+    QMatrix4x4_mapRect2();
   }
   else
   {
@@ -247,15 +247,15 @@ HB_FUNC_STATIC( QMATRIX4X4_ORTHO )
 {
   if( ISNUMPAR(6) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) )
   {
-    QMatrix4X4_ortho1();
+    QMatrix4x4_ortho1();
   }
   else if( ISNUMPAR(1) && ISQRECT(1) )
   {
-    QMatrix4X4_ortho2();
+    QMatrix4x4_ortho2();
   }
   else if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    QMatrix4X4_ortho3();
+    QMatrix4x4_ortho3();
   }
   else
   {
@@ -283,15 +283,15 @@ HB_FUNC_STATIC( QMATRIX4X4_ROTATE )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISQVECTOR3D(2) )
   {
-    QMatrix4X4_rotate1();
+    QMatrix4x4_rotate1();
   }
   else if( ISNUMPAR(1) && ISQQUATERNION(1) )
   {
-    QMatrix4X4_rotate2();
+    QMatrix4x4_rotate2();
   }
   else if( ISBETWEEN(3,4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && (ISNUM(4)||ISNIL(4)) )
   {
-    QMatrix4X4_rotate3();
+    QMatrix4x4_rotate3();
   }
   else
   {
@@ -323,19 +323,19 @@ HB_FUNC_STATIC( QMATRIX4X4_SCALE )
 {
   if( ISNUMPAR(1) && ISQVECTOR3D(1) )
   {
-    QMatrix4X4_scale1();
+    QMatrix4x4_scale1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    QMatrix4X4_scale2();
+    QMatrix4x4_scale2();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
   {
-    QMatrix4X4_scale3();
+    QMatrix4x4_scale3();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    QMatrix4X4_scale4();
+    QMatrix4x4_scale4();
   }
   else
   {
@@ -365,11 +365,11 @@ HB_FUNC_STATIC( QMATRIX4X4_TOTRANSFORM )
 {
   if( ISNUMPAR(0) )
   {
-    QMatrix4X4_toTransform1();
+    QMatrix4x4_toTransform1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    QMatrix4X4_toTransform2();
+    QMatrix4x4_toTransform2();
   }
   else
   {
@@ -384,7 +384,7 @@ $prototype=void translate ( qreal x, qreal y )
 $internalMethod=|void|translate,translate2|qreal,qreal
 
 $prototype=void translate ( qreal x, qreal y, qreal z )
-$internalMmethod=|void|translate,translate3|qreal,qreal,qreal
+$internalMethod=|void|translate,translate3|qreal,qreal,qreal
 
 //[1]void translate ( const QVector3D & vector )
 //[2]void translate ( qreal x, qreal y )
@@ -394,15 +394,15 @@ HB_FUNC_STATIC( QMATRIX4X4_TRANSLATE )
 {
   if( ISNUMPAR(1) && ISQVECTOR3D(1) )
   {
-    QMatrix4X4_translate1();
+    QMatrix4x4_translate1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    QMatrix4X4_translate2();
+    QMatrix4x4_translate2();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
   {
-    QMatrix4X4_translate3();
+    QMatrix4x4_translate3();
   }
   else
   {

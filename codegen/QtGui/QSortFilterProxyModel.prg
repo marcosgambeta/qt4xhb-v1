@@ -89,6 +89,7 @@ $destructor
 #include <QItemSelection>
 #include <QStringList>
 #include <QSize>
+#include <QMimeData>
 
 $prototype=QSortFilterProxyModel ( QObject * parent = 0 )
 $constructor=|new|QObject *=0

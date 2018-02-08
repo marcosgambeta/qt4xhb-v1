@@ -6,29 +6,9 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QList>
-#include <QHelpIndexModel>
+$includes
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-
-void QHelpIndexModel_release_codeblocks ();
-
-class SlotsQHelpIndexModel: public QObject
-{
-  Q_OBJECT
-
-  public:
-  SlotsQHelpIndexModel(QObject *parent = 0);
-  ~SlotsQHelpIndexModel();
-  QList<QObject*> list1;
-  QList<QString> list2;
-  QList<PHB_ITEM> list3;
-  QList<bool> list4;
-
-  public slots:
-  void indexCreated ();
-  void indexCreationStarted ();
-};
+$beginSlotsClass
+$signal=|void indexCreated();
+$signal=|void indexCreationStarted();
+$endSlotsClass

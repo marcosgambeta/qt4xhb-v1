@@ -63,6 +63,8 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
+#include <QMdiSubWindow>
+
 $prototype=QMdiArea ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
 

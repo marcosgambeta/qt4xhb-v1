@@ -47,6 +47,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 #include <QScriptValue>
+#include <QScriptEngine>
 
 $deleteMethod
 

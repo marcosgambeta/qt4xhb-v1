@@ -100,15 +100,15 @@ HB_FUNC_STATIC( QCLEANLOOKSSTYLE_POLISH )
 {
   if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    QCleanLooksStyle_polish1();
+    QCleanlooksStyle_polish1();
   }
   else if( ISNUMPAR(1) && ISQAPPLICATION(1) )
   {
-    QCleanLooksStyle_polish2();
+    QCleanlooksStyle_polish2();
   }
   else if( ISNUMPAR(1) && ISQPALETTE(1) )
   {
-    QCleanLooksStyle_polish3();
+    QCleanlooksStyle_polish3();
   }
   else
   {

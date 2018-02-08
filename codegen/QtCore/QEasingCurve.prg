@@ -45,7 +45,7 @@ $destructor
 #include "qt4xhb_utils.h"
 
 $prototype=QEasingCurve ( Type type = Linear )
-$internalConstructor=|new1|QEasingCurve::Type=QEasingCurve::Linear )
+$internalConstructor=|new1|QEasingCurve::Type=QEasingCurve::Linear
 
 $prototype=QEasingCurve ( const QEasingCurve & other )
 $internalConstructor=|new2|const QEasingCurve &
