@@ -89,6 +89,7 @@ QAbstractFontEngine::TextShapingFlags            |enum
 QAbstractFormBuilder                             |object
 QAbstractGraphicsShapeItem                       |object
 QAbstractItemDelegate                            |QObject
+QAbstractItemDelegate::EndEditHint               |enum
 QAbstractItemModel                               |QObject
 QAbstractItemView                                |QObject
 QAbstractItemView::DragDropMode                  |enum
@@ -385,9 +386,11 @@ QFont                                            |object
 QFont::Capitalization                            |enum
 QFont::HintingPreference                         |enum
 QFont::SpacingType                               |enum
+QFont::Stretch                                   |enum
 QFont::Style                                     |enum
 QFont::StyleHint                                 |enum
 QFont::StyleStrategy                             |enum
+QFont::Weight                                    |enum
 QFontComboBox                                    |QObject
 QFontComboBox::FontFilters                       |enum
 QFontDatabase                                    |object
@@ -610,8 +613,8 @@ QListView::Movement                              |enum
 QListView::ResizeMode                            |enum
 QListView::ScrollHint                            |enum
 QListView::ViewMode                              |enum
-QListWidget                                      |QObject
-QListWidgetItem                                  |object
+QListWidget                                      |QWidget
+QListWidgetItem                                  |item
 QLocale                                          |object
 QLocale::Country                                 |enum
 QLocale::CurrencySymbolFormat                    |enum
@@ -970,6 +973,7 @@ QSystemSemaphore                                 |object
 QSystemSemaphore::AccessMode                     |enum
 QSystemSemaphore::SystemSemaphoreError           |enum
 QSystemTrayIcon                                  |QObject
+QSystemTrayIcon::ActivationReason                |enum
 QSystemTrayIcon::MessageIcon                     |enum
 Qt::Alignment                                    |enum
 Qt::AnchorPoint                                  |enum
@@ -1047,7 +1051,7 @@ QTabletEvent::PointerType                        |enum
 QTabletEvent::TabletDevice                       |enum
 QTableView                                       |QObject
 QTableWidget                                     |QObject
-QTableWidgetItem                                 |object
+QTableWidgetItem                                 |item
 QTableWidgetSelectionRange                       |object
 QTabWidget                                       |QObject
 QTabWidget::TabPosition                          |enum
@@ -1148,7 +1152,7 @@ QTranslator                                      |QObject
 QTreeView                                        |QObject
 QTreeView::ScrollHint                            |enum
 QTreeWidget                                      |QObject
-QTreeWidgetItem                                  |object
+QTreeWidgetItem                                  |item
 QTreeWidgetItem::ChildIndicatorPolicy            |enum
 QTreeWidgetItemIterator                          |object
 QTreeWidgetItemIterator::IteratorFlags           |enum
