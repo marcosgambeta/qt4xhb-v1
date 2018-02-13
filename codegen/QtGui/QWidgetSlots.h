@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void customContextMenuRequested( const QPoint & pos );
+$signal=|void customContextMenuRequested( const QPoint & pos )
 $endSlotsClass

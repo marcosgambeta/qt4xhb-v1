@@ -9,17 +9,17 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void aboutToUnmanageWidget( QWidget * widget );
-$signal=|void activated( QWidget * widget );
-$signal=|void changed();
-$signal=|void featureChanged( QDesignerFormWindowInterface::Feature feature );
-$signal=|void fileNameChanged( const QString & fileName );
-$signal=|void geometryChanged();
-$signal=|void mainContainerChanged( QWidget * mainContainer );
-$signal=|void objectRemoved( QObject * object2 );
-$signal=|void resourceFilesChanged();
-$signal=|void selectionChanged();
-$signal=|void widgetManaged( QWidget * widget );
-$signal=|void widgetRemoved( QWidget * widget );
-$signal=|void widgetUnmanaged( QWidget * widget );
+$signal=|void aboutToUnmanageWidget( QWidget * widget )
+$signal=|void activated( QWidget * widget )
+$signal=|void changed()
+$signal=|void featureChanged( QDesignerFormWindowInterface::Feature feature )
+$signal=|void fileNameChanged( const QString & fileName )
+$signal=|void geometryChanged()
+$signal=|void mainContainerChanged( QWidget * mainContainer )
+$signal=|void objectRemoved( QObject * object2 )
+$signal=|void resourceFilesChanged()
+$signal=|void selectionChanged()
+$signal=|void widgetManaged( QWidget * widget )
+$signal=|void widgetRemoved( QWidget * widget )
+$signal=|void widgetUnmanaged( QWidget * widget )
 $endSlotsClass

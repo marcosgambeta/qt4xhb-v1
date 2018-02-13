@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void activated( int socket );
+$signal=|void activated( int socket )
 $endSlotsClass

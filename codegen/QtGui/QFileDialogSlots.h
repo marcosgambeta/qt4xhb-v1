@@ -9,9 +9,9 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void currentChanged( const QString & path );
-$signal=|void directoryEntered( const QString & directory );
-$signal=|void fileSelected( const QString & file );
-$signal=|void filesSelected( const QStringList & selected );
-$signal=|void filterSelected( const QString & filter );
+$signal=|void currentChanged( const QString & path )
+$signal=|void directoryEntered( const QString & directory )
+$signal=|void fileSelected( const QString & file )
+$signal=|void filesSelected( const QStringList & selected )
+$signal=|void filterSelected( const QString & filter )
 $endSlotsClass

@@ -11,10 +11,10 @@ $includes
 #include <QSslError>
 
 $beginSlotsClass
-$signal=|void downloadProgress( qint64 bytesReceived, qint64 bytesTotal );
-$signal=|void error( QNetworkReply::NetworkError code );
-$signal=|void finished();
-$signal=|void metaDataChanged();
-$signal=|void sslErrors( const QList<QSslError> & errors );
-$signal=|void uploadProgress( qint64 bytesSent, qint64 bytesTotal );
+$signal=|void downloadProgress( qint64 bytesReceived, qint64 bytesTotal )
+$signal=|void error( QNetworkReply::NetworkError code )
+$signal=|void finished()
+$signal=|void metaDataChanged()
+$signal=|void sslErrors( const QList<QSslError> & errors )
+$signal=|void uploadProgress( qint64 bytesSent, qint64 bytesTotal )
 $endSlotsClass
