@@ -31,8 +31,6 @@ CLASS QObject
    METHOD event
    METHOD eventFilter
    METHOD findChild
-   METHOD findChildren1
-   METHOD findChildren2
    METHOD findChildren
    METHOD inherits
    METHOD installEventFilter
@@ -1451,11 +1449,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QObject>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QWidget>
 #include <QVariant>
@@ -1470,36 +1464,8 @@ $prototype=bool blockSignals ( bool block )
 $method=|bool|blockSignals|bool
 
 $prototype=const QObjectList & children () const
-HB_FUNC_STATIC( QOBJECT_CHILDREN )
-{
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QObjectList list = obj->children ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QOBJECT" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QObject *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+%% TODO: implementar 'const QObjectList &'
+$method=|QObjectList|children|
 
 $prototype=void dumpObjectInfo ()
 $method=|void|dumpObjectInfo|
@@ -1508,36 +1474,7 @@ $prototype=void dumpObjectTree ()
 $method=|void|dumpObjectTree|
 
 $prototype=QList<QByteArray> dynamicPropertyNames () const
-HB_FUNC_STATIC( QOBJECT_DYNAMICPROPERTYNAMES )
-{
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QByteArray> list = obj->dynamicPropertyNames ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QByteArray>|dynamicPropertyNames|
 
 $prototype=virtual bool event ( QEvent * e )
 $virtualMethod=|bool|event|QEvent *
@@ -1549,68 +1486,10 @@ $prototype=T findChild ( const QString & name = QString() ) const
 $method=|QObject *|findChild<QObject *>,findChild|const QString &=QString()
 
 $prototype=QList<T> findChildren ( const QString & name = QString() ) const
-HB_FUNC_STATIC( QOBJECT_FINDCHILDREN1 )
-{
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QObject *> list = obj->findChildren<QObject *> ( OPQSTRING(1,QString()) );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QOBJECT" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QObject *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$internalMethod=|QList<QObject *>|findChildren<QObject *>,findChildren1|const QString &=QString()
 
 $prototype=QList<T> findChildren ( const QRegExp & regExp ) const
-HB_FUNC_STATIC( QOBJECT_FINDCHILDREN2 )
-{
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QObject *> list = obj->findChildren<QObject *> ( *PQREGEXP(1) );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QOBJECT" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QObject *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$internalMethod=|QList<QObject *>|findChildren<QObject *>,findChildren2|const QRegExp &
 
 //[1]QList<T> findChildren ( const QString & name = QString() ) const
 //[2]QList<T> findChildren ( const QRegExp & regExp ) const
@@ -1619,11 +1498,11 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
 {
   if( ISBETWEEN(0,1) && (ISCHAR(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QOBJECT_FINDCHILDREN1 );
+    QObject_findChildren1();
   }
   else if( ISNUMPAR(1) && ISQREGEXP(1) )
   {
-    HB_FUNC_EXEC( QOBJECT_FINDCHILDREN2 );
+    QObject_findChildren2();
   }
   else
   {

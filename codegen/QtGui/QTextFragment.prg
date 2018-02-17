@@ -43,11 +43,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QTextFragment>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QTextFragment ()
 $internalConstructor=|new1|
@@ -86,36 +82,7 @@ $prototype=bool contains ( int position ) const
 $method=|bool|contains|int
 
 $prototype=QList<QGlyphRun> glyphRuns () const
-HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
-{
-  QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QGlyphRun> list = obj->glyphRuns ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QGLYPHRUN" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QGlyphRun *) new QGlyphRun ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QGlyphRun>|glyphRuns|
 
 $prototype=bool isValid () const
 $method=|bool|isValid|

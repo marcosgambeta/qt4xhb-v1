@@ -54,11 +54,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QLayoutItem>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QLayout>
 

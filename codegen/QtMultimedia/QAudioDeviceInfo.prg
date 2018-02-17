@@ -51,11 +51,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QAudioDeviceInfo>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QAudioDeviceInfo ()
 $internalConstructor=|new1|
@@ -100,175 +96,31 @@ $prototype=QAudioFormat preferredFormat () const
 $method=|QAudioFormat|preferredFormat|
 
 $prototype=QList<int> supportedFrequencies() const
-HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDFREQUENCIES )
-{
-  QAudioDeviceInfo * obj = (QAudioDeviceInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<int> list = obj->supportedFrequencies ();
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutNI( NULL, list[i] );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<int>|supportedFrequencies|
 
 $prototype=QList<int> supportedSampleRates () const
-HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLERATES )
-{
-  QAudioDeviceInfo * obj = (QAudioDeviceInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<int> list = obj->supportedSampleRates ();
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutNI( NULL, list[i] );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<int>|supportedSampleRates|
 
 $prototype=QList<int> supportedChannels() const
-HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDCHANNELS )
-{
-  QAudioDeviceInfo * obj = (QAudioDeviceInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<int> list = obj->supportedChannels ();
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutNI( NULL, list[i] );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<int>|supportedChannels|
 
 $prototype=QList<int> supportedChannelCounts () const
-HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDCHANNELCOUNTS )
-{
-  QAudioDeviceInfo * obj = (QAudioDeviceInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<int> list = obj->supportedChannelCounts ();
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutNI( NULL, list[i] );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<int>|supportedChannelCounts|
 
 $prototype=QList<int> supportedSampleSizes () const
-HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLESIZES )
-{
-  QAudioDeviceInfo * obj = (QAudioDeviceInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<int> list = obj->supportedSampleSizes ();
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutNI( NULL, list[i] );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<int>|supportedSampleSizes|
 
 $prototype=QList<QAudioFormat::Endian> supportedByteOrders () const
-HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDBYTEORDERS )
-{
-  QAudioDeviceInfo * obj = (QAudioDeviceInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QAudioFormat::Endian> list = obj->supportedByteOrders ();
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QAudioFormat::Endian>|supportedByteOrders|
 
 $prototype=QList<QAudioFormat::SampleType> supportedSampleTypes () const
-HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLETYPES )
-{
-  QAudioDeviceInfo * obj = (QAudioDeviceInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QAudioFormat::SampleType> list = obj->supportedSampleTypes ();
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QAudioFormat::SampleType>|supportedSampleTypes|
 
 $prototype=QStringList supportedCodecs () const
 $method=|QStringList|supportedCodecs|
 
 $prototype=static QList<QAudioDeviceInfo> availableDevices ( QAudio::Mode mode )
-HB_FUNC_STATIC( QAUDIODEVICEINFO_AVAILABLEDEVICES )
-{
-  QList<QAudioDeviceInfo> list = QAudioDeviceInfo::availableDevices ( (QAudio::Mode) hb_parni(1) );
-  PHB_DYNS pDynSym = hb_dynsymFindName( "QAUDIODEVICEINFO" );
-  PHB_ITEM pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<list.count();i++)
-  {
-    if( pDynSym )
-    {
-      hb_vmPushDynSym( pDynSym );
-      hb_vmPushNil();
-      hb_vmDo( 0 );
-      PHB_ITEM pObject = hb_itemNew( NULL );
-      hb_itemCopy( pObject, hb_stackReturnItem() );
-      PHB_ITEM pItem = hb_itemNew( NULL );
-      hb_itemPutPtr( pItem, (QAudioDeviceInfo *) new QAudioDeviceInfo ( list[i] ) );
-      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-      hb_itemRelease( pItem );
-      hb_arrayAddForward( pArray, pObject );
-      hb_itemRelease( pObject );
-    }
-  }
-  hb_itemReturnRelease(pArray);
-}
-
+$staticMethod=|QList<QAudioDeviceInfo>|availableDevices|QAudio::Mode
 
 $prototype=static QAudioDeviceInfo defaultInputDevice ()
 $staticMethod=|QAudioDeviceInfo|defaultInputDevice|

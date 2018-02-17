@@ -9,7 +9,19 @@ $header
 $includes
 
 $beginSlotsClass
+$slot=|error( QImageReader::ImageReaderError error )
+$slot=|finished()
+$slot=|frameChanged( int frameNumber )
+$slot=|resized( const QSize & size )
+$slot=|started()
+$slot=|stateChanged( QMovie::MovieState state )
 $slot=|updated( const QRect & rect )
 $endSlotsClass
 
+$signalMethod=|error(QImageReader::ImageReaderError)
+$signalMethod=|finished()
+$signalMethod=|frameChanged(int)
+$signalMethod=|resized(QSize)
+$signalMethod=|started()
+$signalMethod=|stateChanged(QMovie::MovieState)
 $signalMethod=|updated(QRect)

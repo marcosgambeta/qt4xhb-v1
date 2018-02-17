@@ -45,8 +45,6 @@ CLASS QLocale
    METHOD percent
    METHOD pmText
    METHOD positiveSign
-   METHOD quoteString1
-   METHOD quoteString2
    METHOD quoteString
    METHOD script
    METHOD setNumberOptions
@@ -115,11 +113,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QLocale>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QDate>
 #include <QStringList>
@@ -243,10 +237,10 @@ $prototype=QChar positiveSign () const
 $method=|QChar|positiveSign|
 
 $prototype=QString quoteString ( const QString & str, QuotationStyle style = StandardQuotation ) const
-$method=|QString|quoteString,quoteString1|const QString &,QLocale::QuotationStyle=QLocale::StandardQuotation
+$internalMethod=|QString|quoteString,quoteString1|const QString &,QLocale::QuotationStyle=QLocale::StandardQuotation
 
 $prototype=QString quoteString ( const QStringRef & str, QuotationStyle style = StandardQuotation ) const
-$method=|QString|quoteString,quoteString2|const QStringRef &,QLocale::QuotationStyle=QLocale::StandardQuotation
+$internalMethod=|QString|quoteString,quoteString2|const QStringRef &,QLocale::QuotationStyle=QLocale::StandardQuotation
 
 //[1]QString quoteString ( const QString & str, QuotationStyle style = StandardQuotation ) const
 //[2]QString quoteString ( const QStringRef & str, QuotationStyle style = StandardQuotation ) const
@@ -255,7 +249,11 @@ HB_FUNC_STATIC( QLOCALE_QUOTESTRING )
 {
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QLOCALE_QUOTESTRING1 );
+    QLocale_quoteString1();
+  }
+  else if( ISBETWEEN(1,2) && ISQSTRINGREF(1) && (ISNUM(2)||ISNIL(2)) )
+  {
+    QLocale_quoteString2();
   }
   else
   {
@@ -492,24 +490,7 @@ $prototype=QStringList uiLanguages () const
 $method=|QStringList|uiLanguages|
 
 $prototype=QList<Qt::DayOfWeek> weekdays () const
-HB_FUNC_STATIC( QLOCALE_WEEKDAYS )
-{
-  QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<Qt::DayOfWeek> list = obj->weekdays ();
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<Qt::DayOfWeek>|weekdays|
 
 $prototype=static QLocale c ()
 $staticMethod=|QLocale|c|
@@ -521,31 +502,7 @@ $prototype=static QString languageToString ( Language language )
 $staticMethod=|QString|languageToString|QLocale::Language
 
 $prototype=static QList<QLocale> matchingLocales ( QLocale::Language language, QLocale::Script script, QLocale::Country country )
-HB_FUNC_STATIC( QLOCALE_MATCHINGLOCALES )
-{
-  QList<QLocale> list = QLocale::matchingLocales ( (QLocale::Language) hb_parni(1), (QLocale::Script) hb_parni(2), (QLocale::Country) hb_parni(3) );
-  PHB_DYNS pDynSym = hb_dynsymFindName( "QLOCALE" );
-  PHB_ITEM pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<list.count();i++)
-  {
-    if( pDynSym )
-    {
-      hb_vmPushDynSym( pDynSym );
-      hb_vmPushNil();
-      hb_vmDo( 0 );
-      PHB_ITEM pObject = hb_itemNew( NULL );
-      hb_itemCopy( pObject, hb_stackReturnItem() );
-      PHB_ITEM pItem = hb_itemNew( NULL );
-      hb_itemPutPtr( pItem, (QLocale *) new QLocale ( list[i] ) );
-      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-      hb_itemRelease( pItem );
-      hb_arrayAddForward( pArray, pObject );
-      hb_itemRelease( pObject );
-    }
-  }
-  hb_itemReturnRelease(pArray);
-}
+$staticMethod=|QList<QLocale>|matchingLocales|QLocale::Language,QLocale::Script,QLocale::Country
 
 $prototype=static QString scriptToString ( Script script )
 $staticMethod=|QString|scriptToString|QLocale::Script

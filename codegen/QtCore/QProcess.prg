@@ -73,11 +73,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QProcess>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QProcess ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
@@ -243,7 +239,8 @@ HB_FUNC_STATIC( QPROCESS_EXECUTE )
 }
 
 $prototype=static bool startDetached ( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = 0 )
-$internalStaticMethod=|bool|startDetached,startDetached1|const QString &,const QStringList &,const QString &,qint64 *=0
+%% TODO: implementar 'qint64 *=0'
+$internalStaticMethod=|bool|startDetached,startDetached1|const QString &,const QStringList &,const QString &,NULL
 
 $prototype=static bool startDetached ( const QString & program, const QStringList & arguments )
 $internalStaticMethod=|bool|startDetached,startDetached2|const QString &,const QStringList &
@@ -257,7 +254,7 @@ $internalStaticMethod=|bool|startDetached,startDetached3|const QString &
 
 HB_FUNC_STATIC( QPROCESS_STARTDETACHED )
 {
-  if( ISNUMPAR(4) && ISCHAR(1) && ISARRAY(2) && ISCHAR(3) && ISNUM(4) )
+  if( ISBETWEEN(3,4) && ISCHAR(1) && ISARRAY(2) && ISCHAR(3) )
   {
     QProcess_startDetached1();
   }

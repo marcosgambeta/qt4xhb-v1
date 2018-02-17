@@ -29,8 +29,6 @@ CLASS QPainterPathStroker
    METHOD setCapStyle
    METHOD setCurveThreshold
    METHOD setDashOffset
-   METHOD setDashPattern1
-   METHOD setDashPattern2
    METHOD setDashPattern
    METHOD setJoinStyle
    METHOD setMiterLimit
@@ -51,11 +49,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QPainterPathStroker>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QPainterPathStroker ()
 $constructor=|new|
@@ -75,24 +69,7 @@ $prototype=qreal dashOffset () const
 $method=|qreal|dashOffset|
 
 $prototype=QVector<qreal> dashPattern () const
-HB_FUNC_STATIC( QPAINTERPATHSTROKER_DASHPATTERN )
-{
-  QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QVector<qreal> list = obj->dashPattern ();
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutND( NULL, list[i] );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QVector<qreal>|dashPattern|
 
 $prototype=Qt::PenJoinStyle joinStyle () const
 $method=|Qt::PenJoinStyle|joinStyle|
@@ -110,30 +87,10 @@ $prototype=void setDashOffset ( qreal offset )
 $method=|void|setDashOffset|qreal
 
 $prototype=void setDashPattern ( Qt::PenStyle style )
-$method=|void|setDashPattern,setDashPattern1|Qt::PenStyle
+$internalMethod=|void|setDashPattern,setDashPattern1|Qt::PenStyle
 
 $prototype=void setDashPattern ( const QVector<qreal> & dashPattern )
-HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHPATTERN2 )
-{
-  QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QVector<qreal> par1;
-    PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aValues1);
-    int temp1;
-    for (i1=0;i1<nLen1;i1++)
-    {
-      temp1 = hb_arrayGetND(aValues1, i1+1);
-      par1 << temp1;
-    }
-    obj->setDashPattern ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setDashPattern,setDashPattern2|const QVector<qreal> &
 
 //[1]void setDashPattern ( Qt::PenStyle style )
 //[2]void setDashPattern ( const QVector<qreal> & dashPattern )
@@ -142,11 +99,11 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHPATTERN )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QPAINTERPATHSTROKER_SETDASHPATTERN1 );
+    QPainterPathStroker_setDashPattern1();
   }
   else if( ISNUMPAR(1) && ISARRAY(1) )
   {
-    HB_FUNC_EXEC( QPAINTERPATHSTROKER_SETDASHPATTERN2 );
+    QPainterPathStroker_setDashPattern2();
   }
   else
   {

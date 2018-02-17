@@ -42,11 +42,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QColorDialog>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QColorDialog ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0

@@ -40,11 +40,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QPrinterInfo>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QPrinterInfo ()
 $internalConstructor=|new1|
@@ -91,55 +87,10 @@ $prototype=QString printerName () const
 $method=|QString|printerName|
 
 $prototype=QList<QPrinter::PaperSize> supportedPaperSizes () const
-HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAPERSIZES )
-{
-  QPrinterInfo * obj = (QPrinterInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QPrinter::PaperSize> list = obj->supportedPaperSizes ();
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QPrinter::PaperSize>|supportedPaperSizes|
 
 $prototype=QList<QPrinterInfo> availablePrinters ()
-HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERS )
-{
-  QList<QPrinterInfo> list = QPrinterInfo::availablePrinters ();
-  PHB_DYNS pDynSym = hb_dynsymFindName( "QPRINTERINFO" );
-  PHB_ITEM pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<list.count();i++)
-  {
-    if( pDynSym )
-    {
-      hb_vmPushDynSym( pDynSym );
-      hb_vmPushNil();
-      hb_vmDo( 0 );
-      PHB_ITEM pObject = hb_itemNew( NULL );
-      hb_itemCopy( pObject, hb_stackReturnItem() );
-      PHB_ITEM pItem = hb_itemNew( NULL );
-      hb_itemPutPtr( pItem, (QPrinterInfo *) new QPrinterInfo ( list[i] ) );
-      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-      hb_itemRelease( pItem );
-      PHB_ITEM pDestroy = hb_itemNew( NULL );
-      hb_itemPutL( pDestroy, true );
-      hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-      hb_itemRelease( pDestroy );
-      hb_arrayAddForward( pArray, pObject );
-      hb_itemRelease( pObject );
-    }
-  }
-  hb_itemReturnRelease(pArray);
-}
+$method=|QList<QPrinterInfo>|availablePrinters|
 
 $prototype=static QPrinterInfo defaultPrinter ()
 $staticMethod=|QPrinterInfo|defaultPrinter|

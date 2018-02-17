@@ -96,11 +96,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QTreeWidgetItem>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QTreeWidgetItem ( int type = Type )
 $internalConstructor=|new1|int=QTreeWidgetItem::Type
@@ -189,25 +185,7 @@ $prototype=void addChild ( QTreeWidgetItem * child )
 $method=|void|addChild|QTreeWidgetItem *
 
 $prototype=void addChildren ( const QList<QTreeWidgetItem *> & children )
-HB_FUNC_STATIC( QTREEWIDGETITEM_ADDCHILDREN )
-{
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QTreeWidgetItem *> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    obj->addChildren ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addChildren|const QList<QTreeWidgetItem *> &
 
 $prototype=QBrush background ( int column ) const
 $method=|QBrush|background|int
@@ -252,25 +230,7 @@ $prototype=void insertChild ( int index, QTreeWidgetItem * child )
 $method=|void|insertChild|int,QTreeWidgetItem *
 
 $prototype=void insertChildren ( int index, const QList<QTreeWidgetItem *> & children )
-HB_FUNC_STATIC( QTREEWIDGETITEM_INSERTCHILDREN )
-{
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QTreeWidgetItem *> par2;
-    PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-    int i2;
-    int nLen2 = hb_arrayLen(aList2);
-    for (i2=0;i2<nLen2;i2++)
-    {
-      par2 << (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
-    }
-    obj->insertChildren ( PINT(1), par2 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|insertChildren|int,const QList<QTreeWidgetItem *> &
 
 $prototype=bool isDisabled () const
 $method=|bool|isDisabled|
@@ -366,36 +326,7 @@ $prototype=QTreeWidgetItem * takeChild ( int index )
 $method=|QTreeWidgetItem *|takeChild|int
 
 $prototype=QList<QTreeWidgetItem *> takeChildren ()
-HB_FUNC_STATIC( QTREEWIDGETITEM_TAKECHILDREN )
-{
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QTreeWidgetItem *> list = obj->takeChildren ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QTREEWIDGETITEM" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QTreeWidgetItem *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QTreeWidgetItem *>|takeChildren|
 
 $prototype=QString text ( int column ) const
 $method=|QString|text|int

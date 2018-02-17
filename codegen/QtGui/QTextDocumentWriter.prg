@@ -46,11 +46,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QTextDocumentWriter>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QList>
 
@@ -139,31 +135,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_WRITE )
 }
 
 $prototype=QList<QByteArray> supportedDocumentFormats ()
-HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SUPPORTEDDOCUMENTFORMATS )
-{
-  QList<QByteArray> list = QTextDocumentWriter::supportedDocumentFormats ();
-  PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-  PHB_ITEM pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<list.count();i++)
-  {
-    if( pDynSym )
-    {
-      hb_vmPushDynSym( pDynSym );
-      hb_vmPushNil();
-      hb_vmDo( 0 );
-      PHB_ITEM pObject = hb_itemNew( NULL );
-      hb_itemCopy( pObject, hb_stackReturnItem() );
-      PHB_ITEM pItem = hb_itemNew( NULL );
-      hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
-      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-      hb_itemRelease( pItem );
-      hb_arrayAddForward( pArray, pObject );
-      hb_itemRelease( pObject );
-    }
-  }
-  hb_itemReturnRelease(pArray);
-}
+$method=|QList<QByteArray>|supportedDocumentFormats|
 
 $extraMethods
 

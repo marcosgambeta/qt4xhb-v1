@@ -71,11 +71,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QTabWidget>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QTabWidget ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0

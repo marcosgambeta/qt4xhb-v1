@@ -38,11 +38,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QPlatformCursorImage>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QPlatformCursorImage ( const uchar * data, const uchar * mask, int width, int height, int hotX, int hotY )
 $constructor=|new|const uchar *,const uchar *,int,int,int,int

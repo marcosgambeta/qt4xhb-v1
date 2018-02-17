@@ -50,11 +50,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QFile>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QFile ( const QString & name )
 $internalConstructor=|new1|const QString &

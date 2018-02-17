@@ -29,11 +29,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QHelpSearchQuery>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QHelpSearchQuery ()
 $internalConstructor=|new1|

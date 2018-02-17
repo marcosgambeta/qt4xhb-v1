@@ -47,11 +47,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QPolygonF>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QPolygonF ()
 $internalConstructor=|new1|
@@ -63,19 +59,7 @@ $prototype=QPolygonF ( const QPolygonF & polygon )
 $internalConstructor=|new3|const QPolygonF &
 
 $prototype=QPolygonF ( const QVector<QPointF> & points )
-HB_FUNC_STATIC( QPOLYGONF_NEW4 )
-{
-  QVector<QPointF> par1;
-  PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-  int i1;
-  int nLen1 = hb_arrayLen(aList1);
-  for (i1=0;i1<nLen1;i1++)
-  {
-    par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-  }
-  QPolygonF * o = new QPolygonF ( par1 );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$internalConstructor=|new4|const QVector<QPointF> &
 
 $prototype=QPolygonF ( const QRectF & rectangle )
 $internalConstructor=|new5|const QRectF &

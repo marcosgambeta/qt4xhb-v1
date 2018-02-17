@@ -77,11 +77,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QTreeWidget>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QTreeWidget ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
@@ -92,25 +88,7 @@ $prototype=void addTopLevelItem ( QTreeWidgetItem * item )
 $method=|void|addTopLevelItem|QTreeWidgetItem *
 
 $prototype=void addTopLevelItems ( const QList<QTreeWidgetItem *> & items )
-HB_FUNC_STATIC( QTREEWIDGET_ADDTOPLEVELITEMS )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QTreeWidgetItem *> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    obj->addTopLevelItems ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addTopLevelItems|const QList<QTreeWidgetItem *> &
 
 $prototype=void closePersistentEditor ( QTreeWidgetItem * item, int column = 0 )
 $method=|void|closePersistentEditor|QTreeWidgetItem *,int=0
@@ -128,37 +106,7 @@ $prototype=void editItem ( QTreeWidgetItem * item, int column = 0 )
 $method=|void|editItem|QTreeWidgetItem *,int=0
 
 $prototype=QList<QTreeWidgetItem *> findItems ( const QString & text, Qt::MatchFlags flags, int column = 0 ) const
-HB_FUNC_STATIC( QTREEWIDGET_FINDITEMS )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    QList<QTreeWidgetItem *> list = obj->findItems ( PQSTRING(1), (Qt::MatchFlags) par2, OPINT(3,0) );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QTREEWIDGETITEM" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QTreeWidgetItem *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QTreeWidgetItem *>|findItems|const QString &,Qt::MatchFlags,int=0
 
 $prototype=QTreeWidgetItem *  headerItem () const
 $method=|QTreeWidgetItem *|headerItem|
@@ -170,25 +118,7 @@ $prototype=void insertTopLevelItem ( int index, QTreeWidgetItem * item )
 $method=|void|insertTopLevelItem|int,QTreeWidgetItem *
 
 $prototype=void insertTopLevelItems ( int index, const QList<QTreeWidgetItem *> & items )
-HB_FUNC_STATIC( QTREEWIDGET_INSERTTOPLEVELITEMS )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QTreeWidgetItem *> par2;
-    PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-    int i2;
-    int nLen2 = hb_arrayLen(aList2);
-    for (i2=0;i2<nLen2;i2++)
-    {
-      par2 << (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
-    }
-    obj->insertTopLevelItems ( PINT(1), par2 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|insertTopLevelItems|int,const QList<QTreeWidgetItem *> &
 
 $prototype=QTreeWidgetItem * invisibleRootItem () const
 $method=|QTreeWidgetItem *|invisibleRootItem|
@@ -237,36 +167,7 @@ $prototype=void removeItemWidget ( QTreeWidgetItem * item, int column )
 $method=|void|removeItemWidget|QTreeWidgetItem *,int
 
 $prototype=QList<QTreeWidgetItem *> selectedItems () const
-HB_FUNC_STATIC( QTREEWIDGET_SELECTEDITEMS )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QTreeWidgetItem *> list = obj->selectedItems ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QTREEWIDGETITEM" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QTreeWidgetItem *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QTreeWidgetItem *>|selectedItems|
 
 $prototype=void setColumnCount ( int columns )
 $method=|void|setColumnCount|int

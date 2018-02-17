@@ -42,11 +42,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QElapsedTimer>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QElapsedTimer()
 $constructor=|new|

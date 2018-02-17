@@ -57,11 +57,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QIODevice>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 %% //[1]QIODevice ()
 %% //[2]QIODevice ( QObject * parent )

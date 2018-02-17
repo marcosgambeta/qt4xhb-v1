@@ -28,45 +28,12 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QFontEnginePlugin>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $deleteMethod
 
 $prototype=virtual QList<QFontEngineInfo> availableFontEngines () const = 0
-HB_FUNC_STATIC( QFONTENGINEPLUGIN_AVAILABLEFONTENGINES )
-{
-  QFontEnginePlugin * obj = (QFontEnginePlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QFontEngineInfo> list = obj->availableFontEngines ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QFONTENGINEINFO" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QFontEngineInfo *) new QFontEngineInfo ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$virtualMethod=|QList<QFontEngineInfo>|availableFontEngines|
 
 $prototype=virtual QAbstractFontEngine * create ( const QFontEngineInfo & info ) = 0
 $virtualMethod=|QAbstractFontEngine *|create|const QFontEngineInfo &

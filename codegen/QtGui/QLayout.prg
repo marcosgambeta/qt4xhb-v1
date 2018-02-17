@@ -61,11 +61,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QLayout>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 %%//[1]QLayout ( QWidget * parent )
 %%//[2]QLayout ()

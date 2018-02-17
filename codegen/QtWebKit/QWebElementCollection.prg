@@ -40,11 +40,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QWebElementCollection>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QWebElementCollection ()
 $internalConstructor=|new1|
@@ -97,40 +93,7 @@ $prototype=QWebElement last () const
 $method=|QWebElement|last|
 
 $prototype=QList<QWebElement> toList () const
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_TOLIST )
-{
-  QWebElementCollection * obj = (QWebElementCollection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QWebElement> list = obj->toList ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QWEBELEMENT" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QWebElement *) new QWebElement ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( NULL );
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QWebElement>|toList|
 
 $extraMethods
 

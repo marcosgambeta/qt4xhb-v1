@@ -80,11 +80,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QAbstractItemModel>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QStringList>
 #include <QSize>
@@ -138,36 +134,7 @@ $prototype=virtual bool insertRows ( int row, int count, const QModelIndex & par
 $virtualMethod=|bool|insertRows|int,int,const QModelIndex &=QModelIndex()
 
 $prototype=virtual QModelIndexList match ( const QModelIndex & start, int role, const QVariant & value, int hits = 1, Qt::MatchFlags flags = Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) const
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_MATCH )
-{
-  QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QModelIndexList list = obj->match ( *PQMODELINDEX(1), PINT(2), *PQVARIANT(3), OPINT(4,1), ISNIL(5)? Qt::MatchStartsWith | Qt::MatchWrap : (Qt::MatchFlags) hb_parni(5) );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QModelIndex *) new QModelIndex( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$virtualMethod=|QModelIndexList|match|const QModelIndex &,int,const QVariant &,int=1,Qt::MatchFlags=Qt::MatchFlags( Qt::MatchStartsWith OR Qt::MatchWrap )
 
 $prototype=virtual QMimeData * mimeData ( const QModelIndexList & indexes ) const
 $virtualMethod=|QMimeData *|mimeData|const QModelIndexList &

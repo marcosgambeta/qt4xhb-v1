@@ -23,8 +23,6 @@ CLASS QSslSocket INHERIT QTcpSocket
    METHOD delete
    METHOD abort
    METHOD addCaCertificate
-   METHOD addCaCertificates1
-   METHOD addCaCertificates2
    METHOD addCaCertificates
    METHOD caCertificates
    METHOD ciphers
@@ -32,8 +30,6 @@ CLASS QSslSocket INHERIT QTcpSocket
    METHOD encryptedBytesAvailable
    METHOD encryptedBytesToWrite
    METHOD flush
-   METHOD ignoreSslErrors1
-   METHOD ignoreSslErrors2
    METHOD ignoreSslErrors
    METHOD isEncrypted
    METHOD localCertificate
@@ -46,11 +42,7 @@ CLASS QSslSocket INHERIT QTcpSocket
    METHOD protocol
    METHOD sessionCipher
    METHOD setCaCertificates
-   METHOD setCiphers1
-   METHOD setCiphers2
    METHOD setCiphers
-   METHOD setLocalCertificate1
-   METHOD setLocalCertificate2
    METHOD setLocalCertificate
    METHOD setPeerVerifyDepth
    METHOD setPeerVerifyMode
@@ -76,8 +68,6 @@ CLASS QSslSocket INHERIT QTcpSocket
    METHOD startClientEncryption
    METHOD startServerEncryption
    METHOD addDefaultCaCertificate
-   METHOD addDefaultCaCertificates1
-   METHOD addDefaultCaCertificates2
    METHOD addDefaultCaCertificates
    METHOD defaultCaCertificates
    METHOD defaultCiphers
@@ -101,11 +91,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QSslSocket>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QSslKey>
 #include <QSslCipher>
@@ -123,28 +109,10 @@ $prototype=void addCaCertificate ( const QSslCertificate & certificate )
 $method=|void|addCaCertificate|const QSslCertificate &
 
 $prototype=bool addCaCertificates ( const QString & path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString )
-$method=|bool|addCaCertificates,addCaCertificates1|const QString &,QSsl::EncodingFormat=QSsl::Pem,QRegExp::PatternSyntax=QRegExp::FixedString
+$internalMethod=|bool|addCaCertificates,addCaCertificates1|const QString &,QSsl::EncodingFormat=QSsl::Pem,QRegExp::PatternSyntax=QRegExp::FixedString
 
 $prototype=void addCaCertificates ( const QList<QSslCertificate> & certificates )
-HB_FUNC_STATIC( QSSLSOCKET_ADDCACERTIFICATES2 )
-{
-  QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QSslCertificate> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << *(QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    obj->addCaCertificates ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|addCaCertificates,addCaCertificates2|const QList<QSslCertificate> &
 
 //[1]bool addCaCertificates ( const QString & path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString )
 //[2]void addCaCertificates ( const QList<QSslCertificate> & certificates )
@@ -153,11 +121,11 @@ HB_FUNC_STATIC( QSSLSOCKET_ADDCACERTIFICATES )
 {
   if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QSSLSOCKET_ADDCACERTIFICATES1 );
+    QSslSocket_addCaCertificates1();
   }
   else if( ISNUMPAR(1) && ISARRAY(1) )
   {
-    HB_FUNC_EXEC( QSSLSOCKET_ADDCACERTIFICATES2 );
+    QSslSocket_addCaCertificates2();
   }
   else
   {
@@ -166,76 +134,10 @@ HB_FUNC_STATIC( QSSLSOCKET_ADDCACERTIFICATES )
 }
 
 $prototype=QList<QSslCertificate> caCertificates () const
-HB_FUNC_STATIC( QSSLSOCKET_CACERTIFICATES )
-{
-  QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QSslCertificate> list = obj->caCertificates ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QSslCertificate *) new QSslCertificate ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( NULL );
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QSslCertificate>|caCertificates|
 
 $prototype=QList<QSslCipher> ciphers () const
-HB_FUNC_STATIC( QSSLSOCKET_CIPHERS )
-{
-  QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QSslCipher> list = obj->ciphers ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCIPHER" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QSslCipher *) new QSslCipher ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( NULL );
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QSslCipher>|ciphers|
 
 $prototype=void connectToHostEncrypted ( const QString & hostName, quint16 port, OpenMode mode = ReadWrite )
 $internalMethod=|void|connectToHostEncrypted,connectToHostEncrypted1|const QString &,quint16,QIODevice::OpenMode=QIODevice::ReadWrite
@@ -272,28 +174,10 @@ $prototype=bool flush ()
 $method=|bool|flush|
 
 $prototype=void ignoreSslErrors ( const QList<QSslError> & errors )
-HB_FUNC_STATIC( QSSLSOCKET_IGNORESSLERRORS1 )
-{
-  QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QSslError> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << *(QSslError *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    obj->ignoreSslErrors ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|ignoreSslErrors,ignoreSslErrors1|const QList<QSslError> &
 
 $prototype=void ignoreSslErrors ()
-$method=|void|ignoreSslErrors,ignoreSslErrors2|
+$internalMethod=|void|ignoreSslErrors,ignoreSslErrors2|
 
 //[1]void ignoreSslErrors ( const QList<QSslError> & errors )
 //[2]void ignoreSslErrors ()
@@ -302,11 +186,11 @@ HB_FUNC_STATIC( QSSLSOCKET_IGNORESSLERRORS )
 {
   if( ISNUMPAR(1) && ISARRAY(1) )
   {
-    HB_FUNC_EXEC( QSSLSOCKET_IGNORESSLERRORS1 );
+    QSslSocket_ignoreSslErrors1();
   }
   else if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSSLSOCKET_IGNORESSLERRORS2 );
+    QSslSocket_ignoreSslErrors2();
   }
   else
   {
@@ -327,40 +211,7 @@ $prototype=QSslCertificate peerCertificate () const
 $method=|QSslCertificate|peerCertificate|
 
 $prototype=QList<QSslCertificate> peerCertificateChain () const
-HB_FUNC_STATIC( QSSLSOCKET_PEERCERTIFICATECHAIN )
-{
-  QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QSslCertificate> list = obj->peerCertificateChain ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QSslCertificate *) new QSslCertificate ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( NULL );
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QSslCertificate>|peerCertificateChain|
 
 $prototype=int peerVerifyDepth () const
 $method=|int|peerVerifyDepth|
@@ -378,49 +229,13 @@ $prototype=QSslCipher sessionCipher () const
 $method=|QSslCipher|sessionCipher|
 
 $prototype=void setCaCertificates ( const QList<QSslCertificate> & certificates )
-HB_FUNC_STATIC( QSSLSOCKET_SETCACERTIFICATES )
-{
-  QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QSslCertificate> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << *(QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    obj->setCaCertificates ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCaCertificates|const QList<QSslCertificate> &
 
 $prototype=void setCiphers ( const QList<QSslCipher> & ciphers )
-HB_FUNC_STATIC( QSSLSOCKET_SETCIPHERS1 )
-{
-  QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QSslCipher> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << *(QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    obj->setCiphers ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setCiphers,setCiphers1|const QList<QSslCipher> &
 
 $prototype=void setCiphers ( const QString & ciphers )
-$method=|void|setCiphers,setCiphers2|const QString &
+$internalMethod=|void|setCiphers,setCiphers2|const QString &
 
 //[1]void setCiphers ( const QList<QSslCipher> & ciphers )
 //[2]void setCiphers ( const QString & ciphers )
@@ -429,11 +244,11 @@ HB_FUNC_STATIC( QSSLSOCKET_SETCIPHERS )
 {
   if( ISNUMPAR(1) && ISARRAY(1) )
   {
-    HB_FUNC_EXEC( QSSLSOCKET_SETCIPHERS1 );
+    QSslSocket_setCiphers1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QSSLSOCKET_SETCIPHERS2 );
+    QSslSocket_setCiphers2();
   }
   else
   {
@@ -442,10 +257,10 @@ HB_FUNC_STATIC( QSSLSOCKET_SETCIPHERS )
 }
 
 $prototype=void setLocalCertificate ( const QSslCertificate & certificate )
-$method=|void|setLocalCertificate,setLocalCertificate1|const QSslCertificate &
+$internalMethod=|void|setLocalCertificate,setLocalCertificate1|const QSslCertificate &
 
 $prototype=void setLocalCertificate ( const QString & path, QSsl::EncodingFormat format = QSsl::Pem )
-$method=|void|setLocalCertificate,setLocalCertificate2|const QString &,QSsl::EncodingFormat=QSsl::Pem
+$internalMethod=|void|setLocalCertificate,setLocalCertificate2|const QString &,QSsl::EncodingFormat=QSsl::Pem
 
 //[1]void setLocalCertificate ( const QSslCertificate & certificate )
 //[2]void setLocalCertificate ( const QString & path, QSsl::EncodingFormat format = QSsl::Pem )
@@ -454,11 +269,11 @@ HB_FUNC_STATIC( QSSLSOCKET_SETLOCALCERTIFICATE )
 {
   if( ISNUMPAR(1) && ISQSSLCERTIFICATE(1) )
   {
-    HB_FUNC_EXEC( QSSLSOCKET_SETLOCALCERTIFICATE1 );
+    QSslSocket_setLocalCertificate1();
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QSSLSOCKET_SETLOCALCERTIFICATE2 );
+    QSslSocket_setLocalCertificate2();
   }
   else
   {
@@ -519,40 +334,7 @@ $prototype=QSslConfiguration sslConfiguration () const
 $method=|QSslConfiguration|sslConfiguration|
 
 $prototype=QList<QSslError> sslErrors () const
-HB_FUNC_STATIC( QSSLSOCKET_SSLERRORS )
-{
-  QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QSslError> list = obj->sslErrors ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QSslError *) new QSslError ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( NULL );
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QSslError>|sslErrors|
 
 $prototype=bool waitForConnected ( int msecs = 30000 )
 $method=|bool|waitForConnected|int=30000
@@ -594,22 +376,10 @@ $prototype=static void addDefaultCaCertificate ( const QSslCertificate & certifi
 $staticMethod=|void|addDefaultCaCertificate|const QSslCertificate &
 
 $prototype=static bool addDefaultCaCertificates ( const QString & path, QSsl::EncodingFormat encoding = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString )
-$staticMethod=|bool|addDefaultCaCertificates,addDefaultCaCertificates1|const QString &,QSsl::EncodingFormat=QSsl::Pem,QRegExp::PatternSyntax=QRegExp::FixedString
+$internalStaticMethod=|bool|addDefaultCaCertificates,addDefaultCaCertificates1|const QString &,QSsl::EncodingFormat=QSsl::Pem,QRegExp::PatternSyntax=QRegExp::FixedString
 
 $prototype=void addDefaultCaCertificates ( const QList<QSslCertificate> & certificates )
-HB_FUNC_STATIC( QSSLSOCKET_ADDDEFAULTCACERTIFICATES2 )
-{
-  QList<QSslCertificate> par1;
-  PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-  int i1;
-  int nLen1 = hb_arrayLen(aList1);
-  for (i1=0;i1<nLen1;i1++)
-  {
-    par1 << *(QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-  }
-  QSslSocket::addDefaultCaCertificates ( par1 );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|addDefaultCaCertificates,addDefaultCaCertificates2|const QList<QSslCertificate> &
 
 //[1]bool addDefaultCaCertificates ( const QString & path, QSsl::EncodingFormat encoding = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString )
 //[2]void addDefaultCaCertificates ( const QList<QSslCertificate> & certificates )
@@ -618,11 +388,11 @@ HB_FUNC_STATIC( QSSLSOCKET_ADDDEFAULTCACERTIFICATES )
 {
   if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QSSLSOCKET_ADDDEFAULTCACERTIFICATES1 );
+    QSslSocket_addDefaultCaCertificates1();
   }
   else if( ISNUMPAR(1) && ISARRAY(1) )
   {
-    HB_FUNC_EXEC( QSSLSOCKET_ADDDEFAULTCACERTIFICATES2 );
+    QSslSocket_addDefaultCaCertificates2();
   }
   else
   {
@@ -631,160 +401,24 @@ HB_FUNC_STATIC( QSSLSOCKET_ADDDEFAULTCACERTIFICATES )
 }
 
 $prototype=QList<QSslCertificate> defaultCaCertificates ()
-HB_FUNC_STATIC( QSSLSOCKET_DEFAULTCACERTIFICATES )
-{
-  QList<QSslCertificate> list = QSslSocket::defaultCaCertificates ();
-  PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
-  PHB_ITEM pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<list.count();i++)
-  {
-    if( pDynSym )
-    {
-      hb_vmPushDynSym( pDynSym );
-      hb_vmPushNil();
-      hb_vmDo( 0 );
-      PHB_ITEM pObject = hb_itemNew( NULL );
-      hb_itemCopy( pObject, hb_stackReturnItem() );
-      PHB_ITEM pItem = hb_itemNew( NULL );
-      hb_itemPutPtr( pItem, (QSslCertificate *) new QSslCertificate ( list[i] ) );
-      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-      hb_itemRelease( pItem );
-      PHB_ITEM pDestroy = hb_itemNew( NULL );
-      hb_itemPutL( pDestroy, true );
-      hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-      hb_itemRelease( pDestroy );
-      hb_arrayAddForward( pArray, pObject );
-      hb_itemRelease( pObject );
-    }
-  }
-  hb_itemReturnRelease(pArray);
-}
+$method=|QList<QSslCertificate>|defaultCaCertificates|
 
 $prototype=QList<QSslCipher> defaultCiphers ()
-HB_FUNC_STATIC( QSSLSOCKET_DEFAULTCIPHERS )
-{
-  QList<QSslCipher> list = QSslSocket::defaultCiphers ();
-  PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCIPHER" );
-  PHB_ITEM pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<list.count();i++)
-  {
-    if( pDynSym )
-    {
-      hb_vmPushDynSym( pDynSym );
-      hb_vmPushNil();
-      hb_vmDo( 0 );
-      PHB_ITEM pObject = hb_itemNew( NULL );
-      hb_itemCopy( pObject, hb_stackReturnItem() );
-      PHB_ITEM pItem = hb_itemNew( NULL );
-      hb_itemPutPtr( pItem, (QSslCipher *) new QSslCipher ( list[i] ) );
-      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-      hb_itemRelease( pItem );
-      PHB_ITEM pDestroy = hb_itemNew( NULL );
-      hb_itemPutL( pDestroy, true );
-      hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-      hb_itemRelease( pDestroy );
-      hb_arrayAddForward( pArray, pObject );
-      hb_itemRelease( pObject );
-    }
-  }
-  hb_itemReturnRelease(pArray);
-}
+$method=|QList<QSslCipher>|defaultCiphers|
 
 $prototype=void setDefaultCaCertificates ( const QList<QSslCertificate> & certificates )
-HB_FUNC_STATIC( QSSLSOCKET_SETDEFAULTCACERTIFICATES )
-{
-  QList<QSslCertificate> par1;
-  PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-  int i1;
-  int nLen1 = hb_arrayLen(aList1);
-  for (i1=0;i1<nLen1;i1++)
-  {
-    par1 << *(QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-  }
-  QSslSocket::setDefaultCaCertificates ( par1 );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDefaultCaCertificates|const QList<QSslCertificate> &
 
 $prototype=void setDefaultCiphers ( const QList<QSslCipher> & ciphers )
-HB_FUNC_STATIC( QSSLSOCKET_SETDEFAULTCIPHERS )
-{
-  QList<QSslCipher> par1;
-  PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-  int i1;
-  int nLen1 = hb_arrayLen(aList1);
-  for (i1=0;i1<nLen1;i1++)
-  {
-    par1 << *(QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-  }
-  QSslSocket::setDefaultCiphers ( par1 );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDefaultCiphers|const QList<QSslCipher> &
 
 $prototype=QList<QSslCipher> supportedCiphers ()
-HB_FUNC_STATIC( QSSLSOCKET_SUPPORTEDCIPHERS )
-{
-  QList<QSslCipher> list = QSslSocket::supportedCiphers ();
-  PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCIPHER" );
-  PHB_ITEM pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<list.count();i++)
-  {
-    if( pDynSym )
-    {
-      hb_vmPushDynSym( pDynSym );
-      hb_vmPushNil();
-      hb_vmDo( 0 );
-      PHB_ITEM pObject = hb_itemNew( NULL );
-      hb_itemCopy( pObject, hb_stackReturnItem() );
-      PHB_ITEM pItem = hb_itemNew( NULL );
-      hb_itemPutPtr( pItem, (QSslCipher *) new QSslCipher ( list[i] ) );
-      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-      hb_itemRelease( pItem );
-      PHB_ITEM pDestroy = hb_itemNew( NULL );
-      hb_itemPutL( pDestroy, true );
-      hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-      hb_itemRelease( pDestroy );
-      hb_arrayAddForward( pArray, pObject );
-      hb_itemRelease( pObject );
-    }
-  }
-  hb_itemReturnRelease(pArray);
-}
+$method=|QList<QSslCipher>|supportedCiphers|
 
 $prototype=static bool supportsSsl ()
 $staticMethod=|bool|supportsSsl|
 
 $prototype=QList<QSslCertificate> systemCaCertificates ()
-HB_FUNC_STATIC( QSSLSOCKET_SYSTEMCACERTIFICATES )
-{
-  QList<QSslCertificate> list = QSslSocket::systemCaCertificates ();
-  PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
-  PHB_ITEM pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<list.count();i++)
-  {
-    if( pDynSym )
-    {
-      hb_vmPushDynSym( pDynSym );
-      hb_vmPushNil();
-      hb_vmDo( 0 );
-      PHB_ITEM pObject = hb_itemNew( NULL );
-      hb_itemCopy( pObject, hb_stackReturnItem() );
-      PHB_ITEM pItem = hb_itemNew( NULL );
-      hb_itemPutPtr( pItem, (QSslCertificate *) new QSslCertificate ( list[i] ) );
-      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-      hb_itemRelease( pItem );
-      PHB_ITEM pDestroy = hb_itemNew( NULL );
-      hb_itemPutL( pDestroy, true );
-      hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-      hb_itemRelease( pDestroy );
-      hb_arrayAddForward( pArray, pObject );
-      hb_itemRelease( pObject );
-    }
-  }
-  hb_itemReturnRelease(pArray);
-}
+$method=|QList<QSslCertificate>|systemCaCertificates|
 
 #pragma ENDDUMP

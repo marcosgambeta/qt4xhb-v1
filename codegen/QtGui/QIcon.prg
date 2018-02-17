@@ -53,11 +53,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QIcon>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QVariant>
 
@@ -130,42 +126,7 @@ $prototype=void addPixmap ( const QPixmap & pixmap, Mode mode = Normal, State st
 $method=|void|addPixmap|const QPixmap &,QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
 
 $prototype=QList<QSize> availableSizes ( Mode mode = Normal, State state = Off ) const
-HB_FUNC_STATIC( QICON_AVAILABLESIZES )
-{
-  QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    int par1 = ISNIL(1)? (int) QIcon::Normal : hb_parni(1);
-    int par2 = ISNIL(2)? (int) QIcon::Off : hb_parni(2);
-    QList<QSize> list = obj->availableSizes ( (QIcon::Mode) par1, (QIcon::State) par2 );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QSIZE" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QSize *) new QSize ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( NULL );
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QSize>|availableSizes|QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
 
 $prototype=qint64 cacheKey () const
 $method=|qint64|cacheKey|
@@ -236,12 +197,7 @@ HB_FUNC_STATIC( QICON_PIXMAP )
 }
 
 $prototype=QIcon fromTheme ( const QString & name, const QIcon & fallback = QIcon() )
-HB_FUNC_STATIC( QICON_FROMTHEME )
-{
-  QIcon par2 = ISNIL(2)? QIcon() : ISOBJECT(2)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(2));
-  QIcon * ptr = new QIcon( QIcon::fromTheme ( PQSTRING(1), par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QICON", true );
-}
+$method=|QIcon|fromTheme|const QString &,const QIcon &=QIcon()
 
 $prototype=static bool hasThemeIcon ( const QString & name )
 $staticMethod=|bool|hasThemeIcon|const QString &

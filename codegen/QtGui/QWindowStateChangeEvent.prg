@@ -23,11 +23,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QWindowStateChangeEvent>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QWindowStateChangeEvent(Qt::WindowStates aOldState)
 $internalConstructor=|new1|Qt::WindowStates

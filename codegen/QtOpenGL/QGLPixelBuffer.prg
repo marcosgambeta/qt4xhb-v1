@@ -43,11 +43,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QGLPixelBuffer>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QGLPixelBuffer ( const QSize & size, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget = 0 )
 $internalConstructor=|new1|const QSize &,const QGLFormat &=QGLFormat::defaultFormat(),QGLWidget *=0

@@ -48,11 +48,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QRegion>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QVector>
 
@@ -200,36 +196,7 @@ $prototype=int rectCount () const
 $method=|int|rectCount|
 
 $prototype=QVector<QRect> rects () const
-HB_FUNC_STATIC( QREGION_RECTS )
-{
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QVector<QRect> list = obj->rects ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QRECT" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QRect *) new QRect ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QVector<QRect>|rects|
 
 $prototype=QRegion subtracted ( const QRegion & r ) const
 $method=|QRegion|subtracted|const QRegion &

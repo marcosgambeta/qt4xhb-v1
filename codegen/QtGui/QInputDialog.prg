@@ -79,11 +79,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QInputDialog>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QInputDialog ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 $constructor=|new|QWidget *=0,Qt::WindowFlags=0

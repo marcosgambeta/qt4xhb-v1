@@ -140,11 +140,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QByteArray>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QString>
 #include <QList>
@@ -854,37 +850,7 @@ $prototype=int size () const
 $method=|int|size|
 
 $prototype=QList<QByteArray> split ( char sep ) const
-HB_FUNC_STATIC( QBYTEARRAY_SPLIT )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-    QList<QByteArray> list = obj->split ( par1 );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QByteArray>|split|char
 
 $prototype=void squeeze ()
 $method=|void|squeeze|

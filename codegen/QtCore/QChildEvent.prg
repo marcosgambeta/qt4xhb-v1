@@ -29,11 +29,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QChildEvent>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QChildEvent(Type type, QObject * child)
 $constructor=|new|QEvent::Type,QObject *

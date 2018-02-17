@@ -41,16 +41,12 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QAccessibleInterface>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $deleteMethod
 
 $prototype=virtual QString actionText ( int action, Text t, int child ) const = 0
-$virtualMethod=|QString|actionText|int,QAccessibleInterface::Text,int
+$virtualMethod=|QString|actionText|int,QAccessible::Text,int
 
 $prototype=virtual int childAt ( int x, int y ) const = 0
 $virtualMethod=|int|childAt|int,int
@@ -65,7 +61,7 @@ $prototype=virtual int indexOfChild ( const QAccessibleInterface * child ) const
 $virtualMethod=|int|indexOfChild|const QAccessibleInterface *
 
 $prototype=QVariant invokeMethod ( Method method, int child = 0, const QVariantList & params = QVariantList() )
-$method=|QVariant|invokeMethod|QAccessibleInterface::Method,int=0,const QVariantList &=QVariantList()
+$method=|QVariant|invokeMethod|QAccessible::Method,int=0,const QVariantList &=QVariantList()
 
 $prototype=virtual bool isValid () const = 0
 $virtualMethod=|bool|isValid|
@@ -83,13 +79,13 @@ $prototype=virtual Role role ( int child ) const = 0
 $virtualMethod=|QAccessible::Role|role|int
 
 $prototype=virtual void setText ( Text t, int child, const QString & text ) = 0
-$virtualMethod=|void|setText|QAccessibleInterface::Text,int,const QString &
+$virtualMethod=|void|setText|QAccessible::Text,int,const QString &
 
 $prototype=virtual State state ( int child ) const = 0
 $virtualMethod=|QAccessible::State|state|int
 
 $prototype=virtual QString text ( Text t, int child ) const = 0
-$virtualMethod=|QString|text|QAccessibleInterface::Text,int
+$virtualMethod=|QString|text|QAccessible::Text,int
 
 $prototype=virtual int userActionCount ( int child ) const = 0
 $virtualMethod=|int|userActionCount|int

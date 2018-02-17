@@ -43,11 +43,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QGLFramebufferObject>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QGLFramebufferObject ( const QSize & size, GLenum target = GL_TEXTURE_2D )
 $constructor=|new1|const QSize &,GLenum=GL_TEXTURE_2D

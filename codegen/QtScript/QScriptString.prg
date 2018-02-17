@@ -32,11 +32,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QScriptString>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QScriptString ()
 $internalConstructor=|new1|

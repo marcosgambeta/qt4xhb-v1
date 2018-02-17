@@ -47,11 +47,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QPrintPreviewWidget>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QPrintPreviewWidget ( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 $internalConstructor=|new1|QPrinter *,QWidget *=0,Qt::WindowFlags=0

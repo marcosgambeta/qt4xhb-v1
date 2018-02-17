@@ -76,11 +76,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QWizard>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QVariant>
 #include <QAbstractButton>
@@ -121,24 +117,7 @@ $prototype=QWizardPage * page ( int id ) const
 $method=|QWizardPage *|page|int
 
 $prototype=QList<int> pageIds () const
-HB_FUNC_STATIC( QWIZARD_PAGEIDS )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<int> list = obj->pageIds ();
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutNI( NULL, list[i] );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<int>|pageIds|
 
 $prototype=QPixmap pixmap ( WizardPixmap which ) const
 $method=|QPixmap|pixmap|QWizard::WizardPixmap
@@ -150,27 +129,7 @@ $prototype=void setButton ( WizardButton which, QAbstractButton * button )
 $method=|void|setButton|QWizard::WizardButton,QAbstractButton *
 
 $prototype=void setButtonLayout ( const QList<WizardButton> & layout )
-HB_FUNC_STATIC( QWIZARD_SETBUTTONLAYOUT )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QWizard::WizardButton> par1;
-    PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aValues1);
-    int temp1;
-    for (i1=0;i1<nLen1;i1++)
-    {
-      temp1 = hb_arrayGetNI(aValues1, i1+1);
-      par1 << (QWizard::WizardButton) temp1;
-    }
-    obj->setButtonLayout ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setButtonLayout|const QList<QWizard::WizardButton> &
 
 $prototype=void setButtonText ( WizardButton which, const QString & text )
 $method=|void|setButtonText|QWizard::WizardButton,const QString &
@@ -227,24 +186,7 @@ $prototype=virtual bool validateCurrentPage ()
 $virtualMethod=|bool|validateCurrentPage|
 
 $prototype=QList<int> visitedPages () const
-HB_FUNC_STATIC( QWIZARD_VISITEDPAGES )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<int> list = obj->visitedPages ();
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutNI( NULL, list[i] );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<int>|visitedPages|
 
 $prototype=WizardStyle wizardStyle () const
 $method=|QWizard::WizardStyle|wizardStyle|

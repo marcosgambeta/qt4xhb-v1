@@ -21,11 +21,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QDeclarativeExtensionPlugin>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=virtual void initializeEngine ( QDeclarativeEngine * engine, const char * uri )
 $virtualMethod=|void|initializeEngine|QDeclarativeEngine *,const char *

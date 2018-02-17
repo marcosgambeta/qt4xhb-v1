@@ -75,11 +75,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QTableWidgetItem>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QTableWidgetItem ( int type = Type )
 $internalConstructor=|new1|int=QTableWidgetItem::Type

@@ -35,11 +35,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QPicture>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QPicture ( int formatVersion = -1 )
 $internalConstructor=|new1|int=-1

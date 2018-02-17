@@ -63,8 +63,6 @@ CLASS QTextFormat
    METHOD setLayoutDirection
    METHOD setObjectIndex
    METHOD setObjectType
-   METHOD setProperty1
-   METHOD setProperty2
    METHOD setProperty
    METHOD stringProperty
    METHOD toBlockFormat
@@ -90,11 +88,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QTextFormat>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QTextFormat ()
 $internalConstructor=|new1|
@@ -195,36 +189,7 @@ $prototype=QTextLength lengthProperty ( int propertyId ) const
 $method=|QTextLength|lengthProperty|int
 
 $prototype=QVector<QTextLength> lengthVectorProperty ( int propertyId ) const
-HB_FUNC_STATIC( QTEXTFORMAT_LENGTHVECTORPROPERTY )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QVector<QTextLength> list = obj->lengthVectorProperty ( PINT(1) );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QTEXTLENGTH" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QTextLength *) new QTextLength ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QVector<QTextLength>|lengthVectorProperty|int
 
 $prototype=void merge ( const QTextFormat & other )
 $method=|void|merge|const QTextFormat &
@@ -260,28 +225,10 @@ $prototype=void setObjectType ( int type )
 $method=|void|setObjectType|int
 
 $prototype=void setProperty ( int propertyId, const QVariant & value )
-$method=|void|setProperty,setProperty1|int,const QVariant &
+$internalMethod=|void|setProperty,setProperty1|int,const QVariant &
 
 $prototype=void setProperty ( int propertyId, const QVector<QTextLength> & value )
-HB_FUNC_STATIC( QTEXTFORMAT_SETPROPERTY2 )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QVector<QTextLength> par2;
-    PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-    int i2;
-    int nLen2 = hb_arrayLen(aList2);
-    for (i2=0;i2<nLen2;i2++)
-    {
-      par2 << *(QTextLength *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
-    }
-    obj->setProperty ( PINT(1), par2 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setProperty,setProperty2|int,const QVector<QTextLength> &
 
 //[1]void setProperty ( int propertyId, const QVariant & value )
 //[2]void setProperty ( int propertyId, const QVector<QTextLength> & value )
@@ -290,11 +237,11 @@ HB_FUNC_STATIC( QTEXTFORMAT_SETPROPERTY )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISQVARIANT(2) )
   {
-    HB_FUNC_EXEC( QTEXTFORMAT_SETPROPERTY1 );
+    QTextFormat_setProperty1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISARRAY(2) )
   {
-    HB_FUNC_EXEC( QTEXTFORMAT_SETPROPERTY2 );
+    QTextFormat_setProperty2();
   }
   else
   {

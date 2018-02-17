@@ -45,11 +45,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QAxObject>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QStringList>
 
@@ -116,24 +112,7 @@ $prototype=QVariant dynamicCall ( const char * function, const QVariant & var1 =
 $internalMethod=|QVariant|dynamicCall,dynamicCall1|const char *,const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant()
 
 $prototype=QVariant dynamicCall ( const char * function, QList<QVariant> & vars )
-void QAxObject_dynamicCall2 ()
-{
-  QAxObject * obj = (QAxObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QVariant> par2;
-    PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-    int i2;
-    int nLen2 = hb_arrayLen(aList2);
-    for (i2=0;i2<nLen2;i2++)
-    {
-      par2 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
-    }
-    QVariant * ptr = new QVariant( obj->dynamicCall ( (const char *) hb_parc(1), par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$internalMethod=|QVariant|dynamicCall,dynamicCall2|const char *,QList<QVariant> &
 
 //[1]QVariant dynamicCall ( const char * function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 //[2]QVariant dynamicCall ( const char * function, QList<QVariant> & vars )
@@ -167,24 +146,7 @@ $prototype=QAxObject * querySubObject ( const char * name, const QVariant & var1
 $internalMethod=|QAxObject *|querySubObject,querySubObject1|const char *,const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant()
 
 $prototype=QAxObject * querySubObject ( const char * name, QList<QVariant> & vars )
-void QAxObject_querySubObject2 ()
-{
-  QAxObject * obj = (QAxObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QVariant> par2;
-    PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-    int i2;
-    int nLen2 = hb_arrayLen(aList2);
-    for (i2=0;i2<nLen2;i2++)
-    {
-      par2 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
-    }
-    QAxObject * ptr = obj->querySubObject ( (const char *) hb_parc(1), par2 );
-    _qt4xhb_createReturnClass ( ptr, "QAXOBJECT" );
-  }
-}
+$internalMethod=|QAxObject *|querySubObject,querySubObject2|const char *,QList<QVariant> &
 
 //[1]QAxObject * querySubObject ( const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 //[2]QAxObject * querySubObject ( const char * name, QList<QVariant> & vars )

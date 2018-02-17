@@ -27,11 +27,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QScrollBar>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QScrollBar ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0

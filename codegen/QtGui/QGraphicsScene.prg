@@ -64,13 +64,6 @@ CLASS QGraphicsScene INHERIT QObject
    METHOD isSortCacheEnabled
    METHOD itemAt
    METHOD itemIndexMethod
-   METHOD items1
-   METHOD items2
-   METHOD items3
-   METHOD items4
-   METHOD items5
-   METHOD items6
-   METHOD items7
    METHOD items
    METHOD itemsBoundingRect
    METHOD mouseGrabberItem
@@ -117,11 +110,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QGraphicsScene>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QVariant>
 #include <QPalette>
@@ -277,58 +266,10 @@ $prototype=void clearFocus ()
 $method=|void|clearFocus|
 
 $prototype=QList<QGraphicsItem *> collidingItems ( const QGraphicsItem * item, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
-HB_FUNC_STATIC( QGRAPHICSSCENE_COLLIDINGITEMS )
-{
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    const QGraphicsItem * par1 = (const QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = ISNIL(2)? (int) Qt::IntersectsItemShape : hb_parni(2);
-    QList<QGraphicsItem *> list = obj->collidingItems ( par1, (Qt::ItemSelectionMode) par2 );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QGraphicsItem *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QGraphicsItem *>|collidingItems|const QGraphicsItem *,Qt::ItemSelectionMode=Qt::IntersectsItemShape
 
 $prototype=QGraphicsItemGroup * createItemGroup ( const QList<QGraphicsItem *> & items )
-HB_FUNC_STATIC( QGRAPHICSSCENE_CREATEITEMGROUP )
-{
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QGraphicsItem *> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    QGraphicsItemGroup * ptr = obj->createItemGroup ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSITEMGROUP" );
-  }
-}
+$method=|QGraphicsItemGroup *|createItemGroup|const QList<QGraphicsItem *> &
 
 $prototype=void destroyItemGroup ( QGraphicsItemGroup * group )
 $method=|void|destroyItemGroup|QGraphicsItemGroup *
@@ -411,244 +352,25 @@ $prototype=ItemIndexMethod itemIndexMethod () const
 $method=|QGraphicsScene::ItemIndexMethod|itemIndexMethod|
 
 $prototype=QList<QGraphicsItem *> items () const
-HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS1 )
-{
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QGraphicsItem *> list = obj->items ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QGraphicsItem *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$internalMethod=|QList<QGraphicsItem *>|items,items1|
 
 $prototype=QList<QGraphicsItem *> items ( Qt::SortOrder order ) const
-HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS2 )
-{
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    QList<QGraphicsItem *> list = obj->items ( (Qt::SortOrder) par1 );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QGraphicsItem *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$internalMethod=|QList<QGraphicsItem *>|items,items2|Qt::SortOrder
 
 $prototype=QList<QGraphicsItem *> items ( const QPointF & pos, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
-HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS3 )
-{
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    int par3 = hb_parni(3);
-    QTransform par4 = ISNIL(4)? QTransform() : *(QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QList<QGraphicsItem *> list = obj->items ( *PQPOINTF(1), (Qt::ItemSelectionMode) par2, (Qt::SortOrder) par3, par4 );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QGraphicsItem *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$internalMethod=|QList<QGraphicsItem *>|items,items3|const QPointF &,Qt::ItemSelectionMode,Qt::SortOrder,const QTransform &=QTransform()
 
 $prototype=QList<QGraphicsItem *> items ( qreal x, qreal y, qreal w, qreal h, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
-HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS4 )
-{
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    int par5 = hb_parni(5);
-    int par6 = hb_parni(6);
-    QTransform par7 = ISNIL(7)? QTransform() : *(QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_param(7, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QList<QGraphicsItem *> list = obj->items ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), (Qt::ItemSelectionMode) par5, (Qt::SortOrder) par6, par7 );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QGraphicsItem *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$internalMethod=|QList<QGraphicsItem *>|items,items4|qreal,qreal,qreal,qreal,Qt::ItemSelectionMode,Qt::SortOrder,const QTransform &=QTransform()
 
 $prototype=QList<QGraphicsItem *> items ( const QRectF & rect, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
-HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS5 )
-{
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    int par3 = hb_parni(3);
-    QTransform par4 = ISNIL(4)? QTransform() : *(QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QList<QGraphicsItem *> list = obj->items ( *PQRECTF(1), (Qt::ItemSelectionMode) par2, (Qt::SortOrder) par3, par4 );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QGraphicsItem *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$internalMethod=|QList<QGraphicsItem *>|items,items5|const QRectF &,Qt::ItemSelectionMode,Qt::SortOrder,const QTransform &=QTransform()
 
 $prototype=QList<QGraphicsItem *> items ( const QPolygonF & polygon, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
-HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS6 )
-{
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    int par3 = hb_parni(3);
-    QTransform par4 = ISNIL(4)? QTransform() : *(QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QList<QGraphicsItem *> list = obj->items ( *PQPOLYGONF(1), (Qt::ItemSelectionMode) par2, (Qt::SortOrder) par3, par4 );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QGraphicsItem *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$internalMethod=|QList<QGraphicsItem *>|items,items6|const QPolygonF &,Qt::ItemSelectionMode,Qt::SortOrder,const QTransform &=QTransform()
 
 $prototype=QList<QGraphicsItem *> items ( const QPainterPath & path, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
-HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS7 )
-{
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    int par3 = hb_parni(3);
-    QTransform par4 = ISNIL(4)? QTransform() : *(QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QList<QGraphicsItem *> list = obj->items ( *PQPAINTERPATH(1), (Qt::ItemSelectionMode) par2, (Qt::SortOrder) par3, par4 );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QGraphicsItem *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$internalMethod=|QList<QGraphicsItem *>|items,items7|const QPainterPath &,Qt::ItemSelectionMode,Qt::SortOrder,const QTransform &=QTransform()
 
 //[1]QList<QGraphicsItem *> items () const
 //[2]QList<QGraphicsItem *> items ( Qt::SortOrder order ) const
@@ -662,31 +384,31 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QGRAPHICSSCENE_ITEMS1 );
+    QGraphicsScene_items1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSSCENE_ITEMS2 );
+    QGraphicsScene_items2();
   }
   else if( ISBETWEEN(3,4) && ISQPOINTF(1) && ISNUM(2) && ISNUM(3) && (ISQTRANSFORM(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSSCENE_ITEMS3 );
+    QGraphicsScene_items3();
   }
   else if( ISBETWEEN(6,7) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) && (ISQTRANSFORM(7)||ISNIL(7)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSSCENE_ITEMS4 );
+    QGraphicsScene_items4();
   }
   else if( ISBETWEEN(3,4) && ISQRECTF(1) && ISNUM(2) && ISNUM(3) && (ISQTRANSFORM(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSSCENE_ITEMS5 );
+    QGraphicsScene_items5();
   }
   else if( ISBETWEEN(3,4) && ISQPOLYGONF(1) && ISNUM(2) && ISNUM(3) && (ISQTRANSFORM(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSSCENE_ITEMS6 );
+    QGraphicsScene_items6();
   }
   else if( ISBETWEEN(3,4) && ISQPAINTERPATH(1) && ISNUM(2) && ISNUM(3) && (ISQTRANSFORM(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QGRAPHICSSCENE_ITEMS7 );
+    QGraphicsScene_items7();
   }
   else
   {
@@ -713,36 +435,7 @@ $prototype=QRectF sceneRect () const
 $method=|QRectF|sceneRect|
 
 $prototype=QList<QGraphicsItem *> selectedItems () const
-HB_FUNC_STATIC( QGRAPHICSSCENE_SELECTEDITEMS )
-{
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QGraphicsItem *> list = obj->selectedItems ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QGraphicsItem *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QGraphicsItem *>|selectedItems|
 
 $prototype=QPainterPath selectionArea () const
 $method=|QPainterPath|selectionArea|
@@ -871,36 +564,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_UPDATE )
 }
 
 $prototype=QList<QGraphicsView *> views () const
-HB_FUNC_STATIC( QGRAPHICSSCENE_VIEWS )
-{
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QGraphicsView *> list = obj->views ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSVIEW" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QGraphicsView *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QGraphicsView *>|views|
 
 $prototype=qreal width () const
 $method=|qreal|width|

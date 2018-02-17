@@ -23,11 +23,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QAccessibleEvent>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QAccessibleEvent ( Type type, int child )
 $constructor=|new|QAccessibleEvent::Type,int

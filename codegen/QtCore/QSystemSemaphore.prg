@@ -36,11 +36,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QSystemSemaphore>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QSystemSemaphore ( const QString & key, int initialValue = 0, AccessMode mode = Open )
 $constructor=|new|const QString &,int=0,QSystemSemaphore::AccessMode=QSystemSemaphore::Open

@@ -22,7 +22,7 @@ CLASS QAbstractVideoBuffer
    METHOD delete
    METHOD handle
    METHOD handleType
-   METHOD map
+%%   METHOD map
    METHOD mapMode
    METHOD unmap
 
@@ -40,11 +40,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QAbstractVideoBuffer>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QVariant>
 
@@ -57,7 +53,8 @@ $prototype=HandleType handleType () const
 $method=|QAbstractVideoBuffer::HandleType|handleType|
 
 $prototype=virtual uchar * map ( MapMode mode, int * numBytes, int * bytesPerLine ) = 0
-$virtualMethod=|uchar *|map|QAbstractVideoBuffer::MapMode,int *,int *
+%% TODO: implementar 'uchar *'
+%% $virtualMethod=|uchar *|map|QAbstractVideoBuffer::MapMode,int *,int *
 
 $prototype=virtual MapMode mapMode () const = 0
 $virtualMethod=|QAbstractVideoBuffer::MapMode|mapMode|

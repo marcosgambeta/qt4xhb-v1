@@ -28,11 +28,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QShortcutEvent>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QShortcutEvent(const QKeySequence &key, int id, bool ambiguous = false)
 $constructor=|new|const QKeySequence &,int,bool=false

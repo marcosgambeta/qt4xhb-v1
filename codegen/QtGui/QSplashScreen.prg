@@ -33,11 +33,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QSplashScreen>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QSplashScreen ( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
 $internalConstructor=|new1|const QPixmap &=QPixmap(),Qt::WindowFlags=0

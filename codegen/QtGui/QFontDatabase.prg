@@ -31,8 +31,6 @@ CLASS QFontDatabase
    METHOD styleString
    METHOD styles
    METHOD weight
-   METHOD writingSystems1
-   METHOD writingSystems2
    METHOD writingSystems
    METHOD addApplicationFont
    METHOD addApplicationFontFromData
@@ -58,11 +56,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QFontDatabase>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QStringList>
 
@@ -94,44 +88,10 @@ $prototype=bool italic ( const QString & family, const QString & style ) const
 $method=|bool|italic|const QString &,const QString &
 
 $prototype=QList<int> pointSizes ( const QString & family, const QString & style = QString() )
-HB_FUNC_STATIC( QFONTDATABASE_POINTSIZES )
-{
-  QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<int> list = obj->pointSizes ( PQSTRING(1), OPQSTRING(2,QString()) );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutNI( NULL, list[i] );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<int>|pointSizes|const QString &,const QString &=QString()
 
 $prototype=QList<int> smoothSizes ( const QString & family, const QString & style )
-HB_FUNC_STATIC( QFONTDATABASE_SMOOTHSIZES )
-{
-  QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<int> list = obj->smoothSizes ( PQSTRING(1), PQSTRING(2) );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutNI( NULL, list[i] );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<int>|smoothSizes|const QString &,const QString &
 
 $prototype=QString styleString ( const QFont & font )
 $internalMethod=|QString|styleString,styleString1|const QFont &
@@ -165,44 +125,10 @@ $prototype=int weight ( const QString & family, const QString & style ) const
 $method=|int|weight|const QString &,const QString &
 
 $prototype=QList<WritingSystem> writingSystems () const
-HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMS1 )
-{
-  QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QFontDatabase::WritingSystem> list = obj->writingSystems ();
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$internalMethod=|QList<QFontDatabase::WritingSystem>|writingSystems,writingSystems1|
 
 $prototype=QList<WritingSystem> writingSystems ( const QString & family ) const
-HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMS2 )
-{
-  QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QFontDatabase::WritingSystem> list = obj->writingSystems ( PQSTRING(1) );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$internalMethod=|QList<QFontDatabase::WritingSystem>|writingSystems,writingSystems2|const QString &
 
 //[1]QList<WritingSystem> writingSystems () const
 //[2]QList<WritingSystem> writingSystems ( const QString & family ) const
@@ -211,11 +137,11 @@ HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMS )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QFONTDATABASE_WRITINGSYSTEMS1 );
+    QFontDatabase_writingSystems1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QFONTDATABASE_WRITINGSYSTEMS2 );
+    QFontDatabase_writingSystems2();
   }
   else
   {
@@ -239,19 +165,7 @@ $prototype=static bool removeApplicationFont ( int id )
 $staticMethod=|bool|removeApplicationFont|int
 
 $prototype=static QList<int> standardSizes ()
-HB_FUNC_STATIC( QFONTDATABASE_STANDARDSIZES )
-{
-  QList<int> list = QFontDatabase::standardSizes ();
-  PHB_ITEM pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<list.count();i++)
-  {
-    PHB_ITEM pItem = hb_itemPutNI( NULL, list[i] );
-    hb_arrayAddForward( pArray, pItem );
-    hb_itemRelease(pItem);
-  }
-  hb_itemReturnRelease(pArray);
-}
+$staticMethod=|QList<int>|standardSizes|
 
 $prototype=static bool supportsThreadedFontRendering ()
 $staticMethod=|bool|supportsThreadedFontRendering|

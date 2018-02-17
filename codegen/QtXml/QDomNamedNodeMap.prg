@@ -46,11 +46,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QDomNamedNodeMap>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QDomNamedNodeMap ()
 $internalConstructor=|new1|

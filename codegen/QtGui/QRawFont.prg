@@ -64,11 +64,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QRawFont>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QImage>
 
@@ -116,46 +112,7 @@ HB_FUNC_STATIC( QRAWFONT_NEW )
 $deleteMethod
 
 $prototype=QVector<QPointF> advancesForGlyphIndexes ( const QVector<quint32> & glyphIndexes ) const
-HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES1 )
-{
-  QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QVector<quint32> par1;
-    PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aValues1);
-    int temp1;
-    for (i1=0;i1<nLen1;i1++)
-    {
-      temp1 = hb_arrayGetNI(aValues1, i1+1);
-      par1 << temp1;
-    }
-    QVector<QPointF> list = obj->advancesForGlyphIndexes ( par1 );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QPOINTF" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QPointF *) new QPointF ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QVector<QPointF>|advancesForGlyphIndexes,advancesForGlyphIndexes1|const QVector<quint32> &
 
 //[1]QVector<QPointF> advancesForGlyphIndexes ( const QVector<quint32> & glyphIndexes ) const
 //[2]bool advancesForGlyphIndexes ( const quint32 * glyphIndexes, QPointF * advances, int numGlyphs ) const
@@ -184,24 +141,7 @@ $prototype=QByteArray fontTable ( const char * tagName ) const
 $method=|QByteArray|fontTable|const char *
 
 $prototype=QVector<quint32> glyphIndexesForString ( const QString & text ) const
-HB_FUNC_STATIC( QRAWFONT_GLYPHINDEXESFORSTRING )
-{
-  QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QVector<quint32> list = obj->glyphIndexesForString ( PQSTRING(1) );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutNI( NULL, list[i] );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QVector<quint32>|glyphIndexesForString|const QString &
 
 $prototype=QFont::HintingPreference hintingPreference () const
 $method=|QFont::HintingPreference|hintingPreference|
@@ -237,24 +177,7 @@ $prototype=QString styleName () const
 $method=|QString|styleName|
 
 $prototype=QList<QFontDatabase::WritingSystem> supportedWritingSystems () const
-HB_FUNC_STATIC( QRAWFONT_SUPPORTEDWRITINGSYSTEMS )
-{
-  QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QFontDatabase::WritingSystem> list = obj->supportedWritingSystems ();
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QFontDatabase::WritingSystem>|supportedWritingSystems|
 
 $prototype=bool supportsCharacter ( QChar character ) const
 $internalMethod=|bool|supportsCharacter,supportsCharacter1|QChar

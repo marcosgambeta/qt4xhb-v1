@@ -47,11 +47,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QStateMachine>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QStateMachine ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
@@ -71,36 +67,7 @@ $prototype=void clearError ()
 $method=|void|clearError|
 
 $prototype=QList<QAbstractAnimation *> defaultAnimations () const
-HB_FUNC_STATIC( QSTATEMACHINE_DEFAULTANIMATIONS )
-{
-  QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QAbstractAnimation *> list = obj->defaultAnimations ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTANIMATION" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QAbstractAnimation *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QAbstractAnimation *>|defaultAnimations|
 
 $prototype=Error error () const
 $method=|QStateMachine::Error|error|

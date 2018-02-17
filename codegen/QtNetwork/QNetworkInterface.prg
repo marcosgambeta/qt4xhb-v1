@@ -47,11 +47,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QNetworkInterface>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QNetworkInterface ()
 $internalConstructor=|new1|
@@ -81,40 +77,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NEW )
 $deleteMethod
 
 $prototype=QList<QNetworkAddressEntry> addressEntries () const
-HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
-{
-  QNetworkInterface * obj = (QNetworkInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QNetworkAddressEntry> list = obj->addressEntries ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKADDRESSENTRY" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QNetworkAddressEntry *) new QNetworkAddressEntry ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( NULL );
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QNetworkAddressEntry>|addressEntries|
 
 $prototype=InterfaceFlags flags () const
 $method=|QNetworkInterface::InterfaceFlags|flags|
@@ -135,66 +98,10 @@ $prototype=QString name () const
 $method=|QString|name|
 
 $prototype=QList<QHostAddress> allAddresses ()
-HB_FUNC_STATIC( QNETWORKINTERFACE_ALLADDRESSES )
-{
-  QList<QHostAddress> list = QNetworkInterface::allAddresses ();
-  PHB_DYNS pDynSym = hb_dynsymFindName( "QHOSTADDRESS" );
-  PHB_ITEM pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<list.count();i++)
-  {
-    if( pDynSym )
-    {
-      hb_vmPushDynSym( pDynSym );
-      hb_vmPushNil();
-      hb_vmDo( 0 );
-      PHB_ITEM pObject = hb_itemNew( NULL );
-      hb_itemCopy( pObject, hb_stackReturnItem() );
-      PHB_ITEM pItem = hb_itemNew( NULL );
-      hb_itemPutPtr( pItem, (QHostAddress *) new QHostAddress ( list[i] ) );
-      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-      hb_itemRelease( pItem );
-      PHB_ITEM pDestroy = hb_itemNew( NULL );
-      hb_itemPutL( pDestroy, true );
-      hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-      hb_itemRelease( pDestroy );
-      hb_arrayAddForward( pArray, pObject );
-      hb_itemRelease( pObject );
-    }
-  }
-  hb_itemReturnRelease(pArray);
-}
+$method=|QList<QHostAddress>|allAddresses|
 
 $prototype=QList<QNetworkInterface> allInterfaces ()
-HB_FUNC_STATIC( QNETWORKINTERFACE_ALLINTERFACES )
-{
-  QList<QNetworkInterface> list = QNetworkInterface::allInterfaces ();
-  PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKINTERFACE" );
-  PHB_ITEM pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<list.count();i++)
-  {
-    if( pDynSym )
-    {
-      hb_vmPushDynSym( pDynSym );
-      hb_vmPushNil();
-      hb_vmDo( 0 );
-      PHB_ITEM pObject = hb_itemNew( NULL );
-      hb_itemCopy( pObject, hb_stackReturnItem() );
-      PHB_ITEM pItem = hb_itemNew( NULL );
-      hb_itemPutPtr( pItem, (QNetworkInterface *) new QNetworkInterface ( list[i] ) );
-      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-      hb_itemRelease( pItem );
-      PHB_ITEM pDestroy = hb_itemNew( NULL );
-      hb_itemPutL( pDestroy, true );
-      hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-      hb_itemRelease( pDestroy );
-      hb_arrayAddForward( pArray, pObject );
-      hb_itemRelease( pObject );
-    }
-  }
-  hb_itemReturnRelease(pArray);
-}
+$method=|QList<QNetworkInterface>|allInterfaces|
 
 $prototype=static QNetworkInterface interfaceFromIndex ( int index )
 $staticMethod=|QNetworkInterface|interfaceFromIndex|int

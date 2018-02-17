@@ -15,7 +15,7 @@ CLASS QUdpSocket INHERIT QAbstractSocket
    METHOD bind
    METHOD hasPendingDatagrams
    METHOD pendingDatagramSize
-   METHOD readDatagram
+%%   METHOD readDatagram
    METHOD writeDatagram
 
    DESTRUCTOR destroyObject
@@ -26,11 +26,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QUdpSocket>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QUdpSocket ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
@@ -85,7 +81,8 @@ $prototype=qint64 pendingDatagramSize () const
 $method=|qint64|pendingDatagramSize|
 
 $prototype=qint64 readDatagram ( char * data, qint64 maxSize, QHostAddress * address = 0, quint16 * port = 0 )
-$method=|qint64|readDatagram|char *,qint64,QHostAddress *=0,quint16 *=0
+%% TODO: implementar 'quint16 * port = 0'
+%% $method=|qint64|readDatagram|char *,qint64,QHostAddress *=0,quint16 *=0
 
 $prototype=qint64 writeDatagram ( const char * data, qint64 size, const QHostAddress & address, quint16 port )
 $internalMethod=|qint64|writeDatagram,writeDatagram1|const char *,qint64,const QHostAddress &,quint16

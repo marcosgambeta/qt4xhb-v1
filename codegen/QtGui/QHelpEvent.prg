@@ -31,11 +31,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QHelpEvent>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QHelpEvent ( Type type, const QPoint & pos, const QPoint & globalPos )
 $constructor=|new|QEvent::Type,const QPoint &,const QPoint &

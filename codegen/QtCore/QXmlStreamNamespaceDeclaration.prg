@@ -36,11 +36,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QXmlStreamNamespaceDeclaration>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QXmlStreamNamespaceDeclaration()
 $internalConstructor=|new1|

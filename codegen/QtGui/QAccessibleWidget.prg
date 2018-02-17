@@ -35,11 +35,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QAccessibleWidget>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QAccessibleWidget ( QWidget * w, Role role = Client, const QString & name = QString() )
 $constructor=|new|QWidget *,QAccessible::Role=QAccessible::Client,const QString &=QString()

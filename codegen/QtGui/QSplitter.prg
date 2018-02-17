@@ -55,11 +55,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QSplitter>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QSplitter ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0
@@ -146,50 +142,13 @@ $prototype=void setOrientation ( Qt::Orientation )
 $method=|void|setOrientation|Qt::Orientation
 
 $prototype=void setSizes ( const QList<int> & list )
-HB_FUNC_STATIC( QSPLITTER_SETSIZES )
-{
-  QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<int> par1;
-    PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aValues1);
-    int temp1;
-    for (i1=0;i1<nLen1;i1++)
-    {
-      temp1 = hb_arrayGetNI(aValues1, i1+1);
-      par1 << temp1;
-    }
-    obj->setSizes ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSizes|const QList<int> &
 
 $prototype=void setStretchFactor ( int index, int stretch )
 $method=|void|setStretchFactor|int,int
 
 $prototype=QList<int> sizes () const
-HB_FUNC_STATIC( QSPLITTER_SIZES )
-{
-  QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<int> list = obj->sizes ();
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutNI( NULL, list[i] );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<int>|sizes|
 
 $prototype=QWidget * widget ( int index ) const
 $method=|QWidget *|widget|int

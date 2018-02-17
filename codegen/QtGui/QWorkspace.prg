@@ -45,11 +45,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QWorkspace>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QWorkspace ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
@@ -75,37 +71,7 @@ $prototype=void setScrollBarsEnabled ( bool enable )
 $method=|void|setScrollBarsEnabled|bool
 
 $prototype=QWidgetList windowList ( WindowOrder order = CreationOrder ) const
-HB_FUNC_STATIC( QWORKSPACE_WINDOWLIST )
-{
-  QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    int par1 = ISNIL(1)? (int) QWorkspace::CreationOrder : hb_parni(1);
-    QWidgetList list = obj->windowList ( (QWorkspace::WindowOrder) par1 );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QWIDGET" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QWidget *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QWidgetList|windowList|QWorkspace::WindowOrder=QWorkspace::CreationOrder
 
 $prototype=virtual QSize sizeHint () const
 $virtualMethod=|QSize|sizeHint|

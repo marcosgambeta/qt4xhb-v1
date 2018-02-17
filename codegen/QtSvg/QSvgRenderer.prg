@@ -43,11 +43,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QSvgRenderer>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QSvgRenderer ( QObject * parent = 0 )
 $internalConstructor=|new1|QObject *=0

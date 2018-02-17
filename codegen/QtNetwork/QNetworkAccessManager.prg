@@ -55,11 +55,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QNetworkAccessManager>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QNetworkConfiguration>
 #include <QNetworkProxy>

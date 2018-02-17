@@ -40,11 +40,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QHelpSearchEngine>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QHelpSearchQueryWidget>
 #include <QHelpSearchResultWidget>
@@ -58,36 +54,7 @@ $prototype=int hitCount () const
 $method=|int|hitCount|
 
 $prototype=QList<QHelpSearchQuery> query () const
-HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERY )
-{
-  QHelpSearchEngine * obj = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QHelpSearchQuery> list = obj->query ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QHELPSEARCHQUERY" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QHelpSearchQuery *) new QHelpSearchQuery ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QHelpSearchQuery>|query|
 
 $prototype=QHelpSearchQueryWidget * queryWidget ()
 $method=|QHelpSearchQueryWidget *|queryWidget|
@@ -105,24 +72,6 @@ $prototype=void reindexDocumentation ()
 $method=|void|reindexDocumentation|
 
 $prototype=void search ( const QList<QHelpSearchQuery> & queryList )
-HB_FUNC_STATIC( QHELPSEARCHENGINE_SEARCH )
-{
-  QHelpSearchEngine * obj = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QHelpSearchQuery> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << *(QHelpSearchQuery *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    obj->search ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|search|const QList<QHelpSearchQuery> &
 
 #pragma ENDDUMP

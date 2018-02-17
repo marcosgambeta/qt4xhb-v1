@@ -45,11 +45,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QDeclarativeListReference>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QDeclarativeListReference ()
 $internalConstructor=|new1|

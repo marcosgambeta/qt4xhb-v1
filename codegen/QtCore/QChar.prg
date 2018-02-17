@@ -71,11 +71,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QChar>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QChar ()
 $constructor=|new1|

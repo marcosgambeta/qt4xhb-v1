@@ -34,45 +34,12 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QDesignerCustomWidgetCollectionInterface>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $deleteMethod
 
 $prototype=virtual QList<QDesignerCustomWidgetInterface *> customWidgets () const = 0
-HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_CUSTOMWIDGETS )
-{
-  QDesignerCustomWidgetCollectionInterface * obj = (QDesignerCustomWidgetCollectionInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QDesignerCustomWidgetInterface *> list = obj->customWidgets ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QDESIGNERCUSTOMWIDGETINTERFACE" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QDesignerCustomWidgetInterface *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$virtualMethod=|QList<QDesignerCustomWidgetInterface *>|customWidgets|
 
 $extraMethods
 

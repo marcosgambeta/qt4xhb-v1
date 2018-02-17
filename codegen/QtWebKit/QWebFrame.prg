@@ -89,11 +89,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QWebFrame>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QWebElement>
 #include <QWebSecurityOrigin>
@@ -128,36 +124,7 @@ $prototype=QUrl baseUrl () const
 $method=|QUrl|baseUrl|
 
 $prototype=QList<QWebFrame *> childFrames () const
-HB_FUNC_STATIC( QWEBFRAME_CHILDFRAMES )
-{
-  QWebFrame * obj = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QWebFrame *> list = obj->childFrames ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QWEBFRAME" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QWebFrame *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QWebFrame *>|childFrames|
 
 $prototype=QSize contentsSize () const
 $method=|QSize|contentsSize|

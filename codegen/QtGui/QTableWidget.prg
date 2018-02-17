@@ -89,11 +89,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QTableWidget>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QTableWidget ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0
@@ -147,37 +143,7 @@ $prototype=void editItem ( QTableWidgetItem * item )
 $method=|void|editItem|QTableWidgetItem *
 
 $prototype=QList<QTableWidgetItem *> findItems ( const QString & text, Qt::MatchFlags flags ) const
-HB_FUNC_STATIC( QTABLEWIDGET_FINDITEMS )
-{
-  QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    QList<QTableWidgetItem *> list = obj->findItems ( PQSTRING(1), (Qt::MatchFlags) par2 );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QTABLEWIDGETITEM" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QTableWidgetItem *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QTableWidgetItem *>|findItems|const QString &,Qt::MatchFlags
 
 $prototype=QTableWidgetItem * horizontalHeaderItem ( int column ) const
 $method=|QTableWidgetItem *|horizontalHeaderItem|int
@@ -223,68 +189,10 @@ $prototype=int rowCount () const
 $method=|int|rowCount|
 
 $prototype=QList<QTableWidgetItem *> selectedItems ()
-HB_FUNC_STATIC( QTABLEWIDGET_SELECTEDITEMS )
-{
-  QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QTableWidgetItem *> list = obj->selectedItems ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QTABLEWIDGETITEM" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QTableWidgetItem *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QTableWidgetItem *>|selectedItems|
 
 $prototype=QList<QTableWidgetSelectionRange> selectedRanges () const
-HB_FUNC_STATIC( QTABLEWIDGET_SELECTEDRANGES )
-{
-  QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QTableWidgetSelectionRange> list = obj->selectedRanges ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QTABLEWIDGETSELECTIONRANGE" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QTableWidgetSelectionRange *) new QTableWidgetSelectionRange ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QTableWidgetSelectionRange>|selectedRanges|
 
 $prototype=void setCellWidget ( int row, int column, QWidget * widget )
 $method=|void|setCellWidget|int,int,QWidget *

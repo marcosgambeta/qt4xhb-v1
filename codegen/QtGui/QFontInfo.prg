@@ -43,11 +43,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QFontInfo>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QFontInfo ( const QFont & font )
 $internalConstructor=|new1|const QFont &

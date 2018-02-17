@@ -75,11 +75,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QListWidgetItem>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QListWidgetItem ( QListWidget * parent = 0, int type = Type )
 $internalConstructor=|new1|QListWidget *=0,int=QListWidgetItem::Type

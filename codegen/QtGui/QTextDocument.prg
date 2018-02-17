@@ -114,11 +114,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QTextDocument>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QTextBlock>
 #include <QTextOption>
@@ -160,36 +156,7 @@ $prototype=void adjustSize ()
 $method=|void|adjustSize|
 
 $prototype=QVector<QTextFormat> allFormats () const
-HB_FUNC_STATIC( QTEXTDOCUMENT_ALLFORMATS )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QVector<QTextFormat> list = obj->allFormats ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QTEXTFORMAT" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QTextFormat *) new QTextFormat ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QVector<QTextFormat>|allFormats|
 
 $prototype=int availableRedoSteps () const
 $method=|int|availableRedoSteps|

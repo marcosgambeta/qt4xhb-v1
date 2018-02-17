@@ -28,8 +28,6 @@ CLASS QDir
    METHOD cdUp
    METHOD count
    METHOD dirName
-   METHOD entryInfoList1
-   METHOD entryInfoList2
    METHOD entryInfoList
    METHOD entryList
    METHOD exists
@@ -90,11 +88,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QDir>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QDir(const QDir & dir)
 $internalConstructor=|new1|const QDir &
@@ -153,70 +147,10 @@ $prototype=QString dirName() const
 $method=|QString|dirName|
 
 $prototype=QFileInfoList entryInfoList(const QStringList & nameFilters, Filters filters = NoFilter, SortFlags sort = NoSort) const
-HB_FUNC_STATIC( QDIR_ENTRYINFOLIST1 )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  int par2 = ISNIL(2)? (int) QDir::NoFilter : hb_parni(2);
-  int par3 = ISNIL(3)? (int) QDir::NoSort : hb_parni(3);
-
-  if( obj )
-  {
-    QFileInfoList list = obj->entryInfoList ( PQSTRINGLIST(1), (QDir::Filters) par2, (QDir::SortFlags) par3 );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QFileInfo *) new QFileInfo( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$internalMethod=|QFileInfoList|entryInfoList,entryInfoList1|const QStringList &,QDir::Filters=QDir::NoFilter,QDir::SortFlags=QDir::NoSort
 
 $prototype=QFileInfoList entryInfoList(Filters filters = NoFilter, SortFlags sort = NoSort) const
-HB_FUNC_STATIC( QDIR_ENTRYINFOLIST2 )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QFileInfoList list = obj->entryInfoList ( ISNIL(1)? QDir::NoFilter : (QDir::Filters) hb_parni(1), ISNIL(2)? QDir::NoSort : (QDir::SortFlags) hb_parni(2) );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QFileInfo *) new QFileInfo( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$internalMethod=|QFileInfoList|entryInfoList,entryInfoList2|QDir::Filters=QDir::NoFilter,QDir::SortFlags=QDir::NoSort
 
 //[1]QFileInfoList entryInfoList(const QStringList & nameFilters, Filters filters = NoFilter, SortFlags sort = NoSort) const
 //[2]QFileInfoList entryInfoList(Filters filters = NoFilter, SortFlags sort = NoSort) const
@@ -225,11 +159,11 @@ HB_FUNC_STATIC( QDIR_ENTRYINFOLIST )
 {
   if( ISBETWEEN(1,3) && ISARRAY(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QDIR_ENTRYINFOLIST1 );
+    QDir_entryInfoList1();
   }
   else if( ISBETWEEN(0,2) && (ISNUM(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QDIR_ENTRYINFOLIST2 );
+    QDir_entryInfoList2();
   }
   else
   {
@@ -366,31 +300,7 @@ $prototype=static QString currentPath()
 $staticMethod=|QString|currentPath|
 
 $prototype=static QFileInfoList drives()
-HB_FUNC_STATIC( QDIR_DRIVES )
-{
-  QFileInfoList list = QDir::drives ();
-  PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO" );
-  PHB_ITEM pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<list.count();i++)
-  {
-    if( pDynSym )
-    {
-      hb_vmPushDynSym( pDynSym );
-      hb_vmPushNil();
-      hb_vmDo( 0 );
-      PHB_ITEM pObject = hb_itemNew( NULL );
-      hb_itemCopy( pObject, hb_stackReturnItem() );
-      PHB_ITEM pItem = hb_itemNew( NULL );
-      hb_itemPutPtr( pItem, (QFileInfo *) new QFileInfo( list[i] ) );
-      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-      hb_arrayAddForward( pArray, pObject );
-      hb_itemRelease( pObject );
-      hb_itemRelease( pItem );
-    }
-  }
-  hb_itemReturnRelease(pArray);
-}
+$staticMethod=|QFileInfoList|drives|
 
 $prototype=static QString fromNativeSeparators(const QString & pathName)
 $staticMethod=|QString|fromNativeSeparators|const QString &

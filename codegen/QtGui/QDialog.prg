@@ -42,11 +42,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QDialog>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QDialog ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 $constructor=|new|QWidget *=0,Qt::WindowFlags=0

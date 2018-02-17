@@ -84,11 +84,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QPrinter>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QList>
 
@@ -355,44 +351,10 @@ $prototype=void setWinPageSize ( int pageSize )
 $method=|void|setWinPageSize|int
 
 $prototype=QList<PaperSource> supportedPaperSources () const
-HB_FUNC_STATIC( QPRINTER_SUPPORTEDPAPERSOURCES )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QPrinter::PaperSource> list = obj->supportedPaperSources ();
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QPrinter::PaperSource>|supportedPaperSources|
 
 $prototype=QList<int> supportedResolutions () const
-HB_FUNC_STATIC( QPRINTER_SUPPORTEDRESOLUTIONS )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<int> list = obj->supportedResolutions ();
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutNI( NULL, list[i] );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<int>|supportedResolutions|
 
 $prototype=bool supportsMultipleCopies () const
 $method=|bool|supportsMultipleCopies|

@@ -28,11 +28,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QPaintEvent>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QPaintEvent ( const QRegion & paintRegion )
 $internalConstructor=|new1|const QRegion &

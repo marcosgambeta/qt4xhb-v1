@@ -37,11 +37,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QWidgetItem>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QWidgetItem ( QWidget * widget )
 $constructor=|new|QWidget *

@@ -40,11 +40,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QFontEngineInfo>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QFontEngineInfo ()
 $internalConstructor=|new1|
@@ -100,27 +96,7 @@ $prototype=void setWeight ( int weight )
 $method=|void|setWeight|int
 
 $prototype=void setWritingSystems ( const QList<QFontDatabase::WritingSystem> & writingSystems )
-HB_FUNC_STATIC( QFONTENGINEINFO_SETWRITINGSYSTEMS )
-{
-  QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QFontDatabase::WritingSystem> par1;
-    PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aValues1);
-    int temp1;
-    for (i1=0;i1<nLen1;i1++)
-    {
-      temp1 = hb_arrayGetNI(aValues1, i1+1);
-      par1 << (QFontDatabase::WritingSystem) temp1;
-    }
-    obj->setWritingSystems ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWritingSystems|QList<QFontDatabase::WritingSystem>
 
 $prototype=QFont::Style style () const
 $method=|QFont::Style|style|
@@ -129,24 +105,7 @@ $prototype=int weight () const
 $method=|int|weight|
 
 $prototype=QList<QFontDatabase::WritingSystem> writingSystems () const
-HB_FUNC_STATIC( QFONTENGINEINFO_WRITINGSYSTEMS )
-{
-  QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QFontDatabase::WritingSystem> list = obj->writingSystems ();
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QFontDatabase::WritingSystem>|writingSystems|
 
 $extraMethods
 

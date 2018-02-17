@@ -40,11 +40,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QScriptContextInfo>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QScriptContextInfo ( const QScriptContext * context )
 $internalConstructor=|new1|const QScriptContext *

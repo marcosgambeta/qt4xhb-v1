@@ -46,11 +46,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QWebSecurityOrigin>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QStringList>
 #include <QWebDatabase>
@@ -67,40 +63,7 @@ $prototype=qint64 databaseUsage () const
 $method=|qint64|databaseUsage|
 
 $prototype=QList<QWebDatabase> databases () const
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASES )
-{
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QWebDatabase> list = obj->databases ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QWEBDATABASE" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QWebDatabase *) new QWebDatabase ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( NULL );
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QWebDatabase>|databases|
 
 $prototype=QString host () const
 $method=|QString|host|
@@ -118,35 +81,7 @@ $prototype=static void addLocalScheme ( const QString & scheme )
 $staticMethod=|void|addLocalScheme|const QString &
 
 $prototype=QList<QWebSecurityOrigin> allOrigins ()
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_ALLORIGINS )
-{
-  QList<QWebSecurityOrigin> list = QWebSecurityOrigin::allOrigins ();
-  PHB_DYNS pDynSym = hb_dynsymFindName( "QWEBSECURITYORIGIN" );
-  PHB_ITEM pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<list.count();i++)
-  {
-    if( pDynSym )
-    {
-      hb_vmPushDynSym( pDynSym );
-      hb_vmPushNil();
-      hb_vmDo( 0 );
-      PHB_ITEM pObject = hb_itemNew( NULL );
-      hb_itemCopy( pObject, hb_stackReturnItem() );
-      PHB_ITEM pItem = hb_itemNew( NULL );
-      hb_itemPutPtr( pItem, (QWebSecurityOrigin *) new QWebSecurityOrigin ( list[i] ) );
-      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-      hb_itemRelease( pItem );
-      PHB_ITEM pDestroy = hb_itemNew( NULL );
-      hb_itemPutL( pDestroy, true );
-      hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-      hb_itemRelease( pDestroy );
-      hb_arrayAddForward( pArray, pObject );
-      hb_itemRelease( pObject );
-    }
-  }
-  hb_itemReturnRelease(pArray);
-}
+$method=|QList<QWebSecurityOrigin>|allOrigins|
 
 $prototype=static QStringList localSchemes ()
 $staticMethod=|QStringList|localSchemes|

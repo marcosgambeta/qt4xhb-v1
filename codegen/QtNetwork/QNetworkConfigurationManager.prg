@@ -37,11 +37,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QNetworkConfigurationManager>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QNetworkConfigurationManager ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
@@ -49,41 +45,7 @@ $constructor=|new|QObject *=0
 $deleteMethod
 
 $prototype=QList<QNetworkConfiguration> allConfigurations ( QNetworkConfiguration::StateFlags filter = 0 ) const
-HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS )
-{
-  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    int par1 = ISNIL(1)? (int) 0 : hb_parni(1);
-    QList<QNetworkConfiguration> list = obj->allConfigurations ( (QNetworkConfiguration::StateFlags) par1 );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKCONFIGURATION" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QNetworkConfiguration *) new QNetworkConfiguration ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( NULL );
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QNetworkConfiguration>|allConfigurations|QNetworkConfiguration::StateFlags=0
 
 $prototype=QNetworkConfigurationManager::Capabilities capabilities () const
 $method=|QNetworkConfigurationManager::Capabilities|capabilities|

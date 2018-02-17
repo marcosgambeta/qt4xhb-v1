@@ -34,11 +34,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QDecorationFactory>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=static QDecoration * create ( const QString & key )
 $staticMethod=|QDecoration *|create|const QString &

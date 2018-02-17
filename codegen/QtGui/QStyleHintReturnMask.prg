@@ -21,11 +21,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QStyleHintReturnMask>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QStyleHintReturnMask ()
 $constructor=|new|

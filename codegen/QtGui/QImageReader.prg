@@ -77,11 +77,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QImageReader>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QColor>
 
@@ -209,16 +205,7 @@ $prototype=void setAutoDetectImageFormat ( bool enabled )
 $method=|void|setAutoDetectImageFormat|bool
 
 $prototype=void setBackgroundColor ( const QColor & color )
-HB_FUNC_STATIC( QIMAGEREADER_SETBACKGROUNDCOLOR )
-{
-  QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QColor par1 = ISOBJECT(1)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(1));
-    obj->setBackgroundColor ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBackgroundColor|const QColor &
 
 $prototype=void setClipRect ( const QRect & rect )
 $method=|void|setClipRect|const QRect &
@@ -293,31 +280,7 @@ HB_FUNC_STATIC( QIMAGEREADER_IMAGEFORMAT )
 }
 
 $prototype=QList<QByteArray> supportedImageFormats ()
-HB_FUNC_STATIC( QIMAGEREADER_SUPPORTEDIMAGEFORMATS )
-{
-  QList<QByteArray> list = QImageReader::supportedImageFormats ();
-  PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-  PHB_ITEM pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<list.count();i++)
-  {
-    if( pDynSym )
-    {
-      hb_vmPushDynSym( pDynSym );
-      hb_vmPushNil();
-      hb_vmDo( 0 );
-      PHB_ITEM pObject = hb_itemNew( NULL );
-      hb_itemCopy( pObject, hb_stackReturnItem() );
-      PHB_ITEM pItem = hb_itemNew( NULL );
-      hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
-      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-      hb_itemRelease( pItem );
-      hb_arrayAddForward( pArray, pObject );
-      hb_itemRelease( pObject );
-    }
-  }
-  hb_itemReturnRelease(pArray);
-}
+$method=|QList<QByteArray>|supportedImageFormats|
 
 $extraMethods
 

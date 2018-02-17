@@ -36,11 +36,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QThreadPool>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QThreadPool ( QObject * parent = 0 )
 $constructor=|new|QObject *=0

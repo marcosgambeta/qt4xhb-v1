@@ -33,11 +33,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QDesktopServices>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=static QString displayName ( StandardLocation type )
 $staticMethod=|QString|displayName|QDesktopServices::StandardLocation

@@ -57,11 +57,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QDeclarativeEngine>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QStringList>
 #include <QNetworkAccessManager>

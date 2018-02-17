@@ -31,11 +31,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QGraphicsObject>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=void grabGesture ( Qt::GestureType gesture, Qt::GestureFlags flags = Qt::GestureFlags() )
 $method=|void|grabGesture|Qt::GestureType,Qt::GestureFlags=Qt::GestureFlags()

@@ -66,11 +66,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QListWidget>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QListWidget ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
@@ -121,37 +117,7 @@ $prototype=void editItem ( QListWidgetItem * item )
 $method=|void|editItem|QListWidgetItem *
 
 $prototype=QList<QListWidgetItem *> findItems ( const QString & text, Qt::MatchFlags flags ) const
-HB_FUNC_STATIC( QLISTWIDGET_FINDITEMS )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    QList<QListWidgetItem *> list = obj->findItems ( PQSTRING(1), (Qt::MatchFlags) par2 );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QLISTWIDGETITEM" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QListWidgetItem *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QListWidgetItem *>|findItems|const QString &,Qt::MatchFlags
 
 $prototype=void insertItem ( int row, QListWidgetItem * item )
 $internalMethod=|void|insertItem,insertItem1|int,QListWidgetItem *
@@ -225,36 +191,7 @@ $prototype=int row ( const QListWidgetItem * item ) const
 $method=|int|row|const QListWidgetItem *
 
 $prototype=QList<QListWidgetItem *> selectedItems () const
-HB_FUNC_STATIC( QLISTWIDGET_SELECTEDITEMS )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QListWidgetItem *> list = obj->selectedItems ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QLISTWIDGETITEM" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QListWidgetItem *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QListWidgetItem *>|selectedItems|
 
 $prototype=void setCurrentItem ( QListWidgetItem * item )
 $internalMethod=|void|setCurrentItem,setCurrentItem1|QListWidgetItem *

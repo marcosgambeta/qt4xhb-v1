@@ -37,11 +37,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QMetaType>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=static int registerTypedef(const char *typeName, int aliasId)
 $staticMethod=|int|registerTypedef|const char *,int

@@ -69,11 +69,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QMatrix4x4>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QMatrix>
 #include <QTransform>

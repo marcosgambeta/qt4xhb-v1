@@ -54,11 +54,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QTimeLine>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QTimeLine ( int duration = 1000, QObject * parent = 0 )
 $constructor=|new|int=1000,QObject *=0

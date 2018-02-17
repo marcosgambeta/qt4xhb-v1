@@ -101,11 +101,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QGLShaderProgram>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QGLShaderProgram ( QObject * parent = 0 )
 $internalConstructor=|new1|QObject *=0
@@ -657,36 +653,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUEARRAY )
 }
 
 $prototype=QList<QGLShader *> shaders () const
-HB_FUNC_STATIC( QGLSHADERPROGRAM_SHADERS )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QGLShader *> list = obj->shaders ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QGLSHADER" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QGLShader *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QGLShader *>|shaders|
 
 $prototype=int uniformLocation ( const char * name ) const
 $method=|int|uniformLocation,uniformLocation1|const char *

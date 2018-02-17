@@ -32,11 +32,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QContextMenuEvent>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos, Qt::KeyboardModifiers modifiers )
 $internalConstructor=|new1|QContextMenuEvent::Reason,const QPoint &,const QPoint &,Qt::KeyboardModifiers

@@ -41,11 +41,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QSslKey>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QSslKey ()
 $internalConstructor=|new1|

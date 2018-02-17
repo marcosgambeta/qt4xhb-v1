@@ -29,11 +29,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QLinearGradient>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QLinearGradient()
 $internalConstructor=|new1|

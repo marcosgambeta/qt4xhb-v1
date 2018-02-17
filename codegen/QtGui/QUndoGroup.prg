@@ -48,11 +48,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QUndoGroup>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QUndoStack>
 #include <QAction>
@@ -90,36 +86,7 @@ $prototype=void removeStack ( QUndoStack * stack )
 $method=|void|removeStack|QUndoStack *
 
 $prototype=QList<QUndoStack *> stacks () const
-HB_FUNC_STATIC( QUNDOGROUP_STACKS )
-{
-  QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QUndoStack *> list = obj->stacks ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QUNDOSTACK" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QUndoStack *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QUndoStack *>|stacks|
 
 $prototype=QString undoText () const
 $method=|QString|undoText|

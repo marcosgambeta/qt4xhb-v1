@@ -55,11 +55,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QTextCodec>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=bool canEncode(QChar) const
 $internalMethod=|bool|canEncode,canEncode1|QChar
@@ -196,36 +192,7 @@ $prototype=virtual QByteArray name() const = 0
 $virtualMethod=|QByteArray|name|
 
 $prototype=virtual QList<QByteArray> aliases() const
-HB_FUNC_STATIC( QTEXTCODEC_ALIASES )
-{
-  QTextCodec * obj = (QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QByteArray> list = obj->aliases ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$virtualMethod=|QList<QByteArray>|aliases|
 
 $prototype=virtual int mibEnum() const = 0
 $virtualMethod=|int|mibEnum|
@@ -259,46 +226,10 @@ $prototype=static QTextCodec* codecForMib(int mib)
 $staticMethod=|QTextCodec *|codecForMib|int
 
 $prototype=static QList<QByteArray> availableCodecs()
-HB_FUNC_STATIC( QTEXTCODEC_AVAILABLECODECS )
-{
-  QList<QByteArray> list = QTextCodec::availableCodecs ();
-  PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-  PHB_ITEM pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<list.count();i++)
-  {
-    if( pDynSym )
-    {
-      hb_vmPushDynSym( pDynSym );
-      hb_vmPushNil();
-      hb_vmDo( 0 );
-      PHB_ITEM pObject = hb_itemNew( NULL );
-      hb_itemCopy( pObject, hb_stackReturnItem() );
-      PHB_ITEM pItem = hb_itemNew( NULL );
-      hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
-      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-      hb_itemRelease( pItem );
-      hb_arrayAddForward( pArray, pObject );
-      hb_itemRelease( pObject );
-    }
-  }
-  hb_itemReturnRelease(pArray);
-}
+$staticMethod=|QList<QByteArray>|availableCodecs|
 
 $prototype=static QList<int> availableMibs()
-HB_FUNC_STATIC( QTEXTCODEC_AVAILABLEMIBS )
-{
-  QList<int> list = QTextCodec::availableMibs ();
-  PHB_ITEM pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<list.count();i++)
-  {
-    PHB_ITEM pItem = hb_itemPutNI( NULL, list[i] );
-    hb_arrayAddForward( pArray, pItem );
-    hb_itemRelease(pItem);
-  }
-  hb_itemReturnRelease(pArray);
-}
+$staticMethod=|QList<int>|availableMibs|
 
 $prototype=static QTextCodec* codecForLocale()
 $staticMethod=|QTextCodec *|codecForLocale|

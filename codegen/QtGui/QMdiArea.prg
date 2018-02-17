@@ -57,11 +57,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QMdiArea>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QMdiSubWindow>
 
@@ -113,37 +109,7 @@ $prototype=void setViewMode ( ViewMode mode )
 $method=|void|setViewMode|QMdiArea::ViewMode
 
 $prototype=QList<QMdiSubWindow *> subWindowList ( WindowOrder order = CreationOrder ) const
-HB_FUNC_STATIC( QMDIAREA_SUBWINDOWLIST )
-{
-  QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    int par1 = ISNIL(1)? (int) QMdiArea::CreationOrder : hb_parni(1);
-    QList<QMdiSubWindow *> list = obj->subWindowList ( (QMdiArea::WindowOrder) par1 );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QMDISUBWINDOW" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QMdiSubWindow *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QMdiSubWindow *>|subWindowList|QMdiArea::WindowOrder=QMdiArea::CreationOrder
 
 $prototype=QTabWidget::TabPosition tabPosition () const
 $method=|QTabWidget::TabPosition|tabPosition|

@@ -25,8 +25,6 @@ CLASS QNetworkReply INHERIT QIODevice
    METHOD error
    METHOD hasRawHeader
    METHOD header
-   METHOD ignoreSslErrors1
-   METHOD ignoreSslErrors2
    METHOD ignoreSslErrors
    METHOD isFinished
    METHOD isRunning
@@ -57,11 +55,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QNetworkReply>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QSslConfiguration>
 
@@ -83,28 +77,10 @@ $prototype=QVariant header ( QNetworkRequest::KnownHeaders header ) const
 $method=|QVariant|header|QNetworkRequest::KnownHeaders
 
 $prototype=void ignoreSslErrors ( const QList<QSslError> & errors )
-HB_FUNC_STATIC( QNETWORKREPLY_IGNORESSLERRORS1 )
-{
-  QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QSslError> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << *(QSslError *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    obj->ignoreSslErrors ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|ignoreSslErrors,ignoreSslErrors1|const QList<QSslError> &
 
 $prototype=virtual void ignoreSslErrors ()
-$virtualMethod=|void|ignoreSslErrors,ignoreSslErrors2|
+$internalVirtualMethod=|void|ignoreSslErrors,ignoreSslErrors2|
 
 //[1]void ignoreSslErrors ( const QList<QSslError> & errors )
 //[2]virtual void ignoreSslErrors ()
@@ -113,11 +89,11 @@ HB_FUNC_STATIC( QNETWORKREPLY_IGNORESSLERRORS )
 {
   if( ISNUMPAR(1) && ISARRAY(1) )
   {
-    HB_FUNC_EXEC( QNETWORKREPLY_IGNORESSLERRORS1 );
+    QNetworkReply_ignoreSslErrors1();
   }
   else if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QNETWORKREPLY_IGNORESSLERRORS2 );
+    QNetworkReply_ignoreSslErrors2();
   }
   else
   {
@@ -141,36 +117,7 @@ $prototype=QByteArray rawHeader ( const QByteArray & headerName ) const
 $method=|QByteArray|rawHeader|const QByteArray &
 
 $prototype=QList<QByteArray> rawHeaderList () const
-HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADERLIST )
-{
-  QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QByteArray> list = obj->rawHeaderList ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QByteArray>|rawHeaderList|
 
 $prototype=qint64 readBufferSize () const
 $method=|qint64|readBufferSize|

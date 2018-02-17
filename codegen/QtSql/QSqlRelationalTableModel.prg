@@ -37,11 +37,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QSqlRelationalTableModel>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QSqlRelationalTableModel ( QObject * parent = 0, QSqlDatabase db = QSqlDatabase() )
 $constructor=|new|QObject *=0,QSqlDatabase=QSqlDatabase()

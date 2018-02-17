@@ -40,11 +40,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QDirIterator>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QDirIterator ( const QDir & dir, IteratorFlags flags = NoIteratorFlags )
 $internalConstructor=|new1|const QDir &,QDirIterator::IteratorFlags=QDirIterator::NoIteratorFlags

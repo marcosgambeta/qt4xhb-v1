@@ -47,11 +47,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QAudioFormat>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QAudioFormat ()
 $internalConstructor=|new1|

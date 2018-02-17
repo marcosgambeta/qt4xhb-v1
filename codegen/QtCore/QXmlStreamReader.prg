@@ -23,14 +23,9 @@ CLASS QXmlStreamReader
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
    METHOD new
    METHOD delete
-   METHOD addData1
+
    METHOD addData2
    METHOD addData3
    METHOD addData
@@ -100,27 +95,24 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QXmlStreamReader>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QXmlStreamReader()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QXmlStreamReader(QIODevice * device)
-$constructor=|new2|QIODevice *
+$internalConstructor=|new2|QIODevice *
 
 $prototype=QXmlStreamReader(const QByteArray & data)
-$constructor=|new3|const QByteArray &
+$internalConstructor=|new3|const QByteArray &
 
 $prototype=QXmlStreamReader(const QString & data)
-$constructor=|new4|const QString &
+$internalConstructor=|new4|const QString &
 
 $prototype=QXmlStreamReader(const char * data)
-$constructor=|new5|const char *
+$internalConstructor=|new5|const char *
 
+%% TODO: conflito entre [4] e [5]
 //[1]QXmlStreamReader()
 //[2]QXmlStreamReader(QIODevice * device)
 //[3]QXmlStreamReader(const QByteArray & data)
@@ -131,23 +123,23 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMREADER_NEW1 );
+    QXmlStreamReader_new1();
   }
   else if( ISNUMPAR(1) && ISQIODEVICE(1) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMREADER_NEW2 );
+    QXmlStreamReader_new2();
   }
   else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMREADER_NEW3 );
+    QXmlStreamReader_new3();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMREADER_NEW4 );
+    QXmlStreamReader_new4();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMREADER_NEW5 );
+    QXmlStreamReader_new5();
   }
   else
   {
@@ -158,14 +150,15 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NEW )
 $deleteMethod
 
 $prototype=void addData(const QByteArray & data)
-$method=|void|addData,addData1|const QByteArray &
+$internalMethod=|void|addData,addData1|const QByteArray &
 
 $prototype=void addData(const QString & data)
-$method=|void|addData,addData2|const QString &
+$internalMethod=|void|addData,addData2|const QString &
 
 $prototype=void addData(const char * data)
-$method=|void|addData,addData3|const char *
+$internalMethod=|void|addData,addData3|const char *
 
+%% TODO: conflito entre [2] e [3]
 //[1]void addData(const QByteArray & data)
 //[2]void addData(const QString & data)
 //[3]void addData(const char * data)
@@ -174,11 +167,11 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ADDDATA )
 {
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMREADER_ADDDATA1 );
+    QXmlStreamReader_addData1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QXMLSTREAMREADER_ADDDATA2 );
+    QXmlStreamReader_addData2();
   }
   else
   {
@@ -325,7 +318,7 @@ $prototype=void setEntityResolver(QXmlStreamEntityResolver * resolver)
 $method=|void|setEntityResolver|QXmlStreamEntityResolver *
 
 $prototype=void setNamespaceProcessing(bool)
-$methdo=|void|setNamespaceProcessing|bool
+$method=|void|setNamespaceProcessing|bool
 
 $prototype=void skipCurrentElement()
 $method=|void|skipCurrentElement|

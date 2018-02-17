@@ -86,11 +86,18 @@ CLASS QComboBox INHERIT QWidget
    METHOD setCurrentIndex
    METHOD setEditText
 
+   METHOD onActivated1
+   METHOD onActivated2
+   METHOD onCurrentIndexChanged1
+   METHOD onCurrentIndexChanged2
+   METHOD onEditTextChanged
+   METHOD onHighlighted1
+   METHOD onHighlighted2
+
    METHOD onActivated
    METHOD onActivatedC
    METHOD onCurrentIndexChanged
    METHOD onCurrentIndexChangedC
-   METHOD onEditTextChanged
    METHOD onHighlighted
    METHOD onHighlightedC
 
@@ -102,11 +109,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QComboBox>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QCompleter>
 #include <QLineEdit>

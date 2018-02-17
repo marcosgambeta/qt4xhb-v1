@@ -25,11 +25,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QKeyEventTransition>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QKeyEventTransition ( QState * sourceState = 0 )
 $internalConstructor=|new1|QState *=0

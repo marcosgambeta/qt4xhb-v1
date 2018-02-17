@@ -30,11 +30,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QSplitterHandle>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QSplitterHandle ( Qt::Orientation orientation, QSplitter * parent )
 $constructor=|new|Qt::Orientation,QSplitter *

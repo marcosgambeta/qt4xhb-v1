@@ -63,11 +63,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QGridLayout>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QGridLayout ( QWidget * parent )
 $internalConstructor=|new1|QWidget *

@@ -35,11 +35,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QFontComboBox>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QFontComboBox ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0

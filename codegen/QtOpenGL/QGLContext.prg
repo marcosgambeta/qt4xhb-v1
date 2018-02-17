@@ -57,11 +57,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QGLContext>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QGLContext ( const QGLFormat & format )
 $constructor=|new|const QGLFormat &

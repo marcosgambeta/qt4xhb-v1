@@ -17,32 +17,25 @@ CLASS QHostAddress
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
    METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
-   METHOD new6
-   METHOD new7
+%%   METHOD new3
+%%   METHOD new4
+%%   METHOD new5
    METHOD new8
    METHOD new
    METHOD delete
    METHOD clear
-   METHOD isInSubnet1
-   METHOD isInSubnet2
    METHOD isInSubnet
    METHOD isNull
    METHOD protocol
    METHOD scopeId
-   METHOD setAddress1
-   METHOD setAddress2
-   METHOD setAddress3
-   METHOD setAddress4
-   METHOD setAddress5
+%%   METHOD setAddress2
+%%   METHOD setAddress3
+%%   METHOD setAddress5
    METHOD setAddress
    METHOD setScopeId
    METHOD toIPv4Address
-   METHOD toIPv6Address
+%%   METHOD toIPv6Address
    METHOD toString
 
    METHOD newFrom
@@ -59,32 +52,31 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QHostAddress>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QHostAddress ()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QHostAddress ( quint32 ip4Addr )
 $constructor=|new2|quint32
 
 $prototype=QHostAddress ( quint8 * ip6Addr )
-$constructor=|new3|quint8 *
+%% TODO: implementar 'quint8 *'
+%% $constructor=|new3|quint8 *
 
 $prototype=QHostAddress ( const Q_IPV6ADDR & ip6Addr )
-$constructor=|new4|const Q_IPV6ADDR &
+%% TODO: implementar 'const Q_IPV6ADDR &'
+%% $constructor=|new4|const Q_IPV6ADDR &
 
 $prototype=QHostAddress ( const sockaddr * sockaddr )
-$constructor=|new5|const sockaddr *
+%% TODO: implementar 'const sockaddr *'
+%% $constructor=|new5|const sockaddr *
 
 $prototype=QHostAddress ( const QString & address )
-$constructor=|new6|const QString &
+$internalConstructor=|new6|const QString &
 
 $prototype=QHostAddress ( const QHostAddress & address )
-$constructor=|new7|const QHostAddress &
+$internalConstructor=|new7|const QHostAddress &
 
 $prototype=QHostAddress ( SpecialAddress address )
 $constructor=|new8|QHostAddress::SpecialAddress
@@ -102,19 +94,19 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QHOSTADDRESS_NEW1 );
+    QHostAddress_new1();
   }
-  //else if( ISNUMPAR(1) && ISNUM(1) ) // desativado para não conflitar com [8]
-  //{
-  //  HB_FUNC_EXEC( QHOSTADDRESS_NEW2 );
-  //}
+%%  else if( ISNUMPAR(1) && ISNUM(1) ) // desativado para não conflitar com [8]
+%%  {
+%%    HB_FUNC_EXEC( QHOSTADDRESS_NEW2 );
+%%  }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QHOSTADDRESS_NEW6 );
+    QHostAddress_new6();
   }
   else if( ISNUMPAR(1) && ISQHOSTADDRESS(1) )
   {
-    HB_FUNC_EXEC( QHOSTADDRESS_NEW7 );
+    QHostAddress_new7();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
@@ -132,11 +124,11 @@ $prototype=void clear ()
 $method=|void|clear|
 
 $prototype=bool isInSubnet ( const QHostAddress & subnet, int netmask ) const
-$method=|bool|isInSubnet,isInSubnet1|const QHostAddress &,int
+$internalMethod=|bool|isInSubnet,isInSubnet1|const QHostAddress &,int
 
 $prototype=bool isInSubnet ( const QPair<QHostAddress, int> & subnet ) const
 %% TODO: implementar
-%% $method=|bool|isInSubnet,isInSubnet2|const QPair<QHostAddress, int> &
+%% $internalMethod=|bool|isInSubnet,isInSubnet2|const QPair<QHostAddress, int> &
 
 //[1]bool isInSubnet ( const QHostAddress & subnet, int netmask ) const
 //[2]bool isInSubnet ( const QPair<QHostAddress, int> & subnet ) const
@@ -145,12 +137,12 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET )
 {
   if( ISNUMPAR(2) && ISQHOSTADDRESS(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QHOSTADDRESS_ISINSUBNET1 );
+    QHostAddress_isInSubnet1();
   }
-  //else if( ISNUMPAR(1) && ISOBJECT(1) )
-  //{
-  //  HB_FUNC_EXEC( QHOSTADDRESS_ISINSUBNET2 );
-  //}
+%%  else if( ISNUMPAR(1) && ISOBJECT(1) )
+%%  {
+%%    QHostAddress_isInSubnet2();
+%%  }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
@@ -167,20 +159,22 @@ $prototype=QString scopeId () const
 $method=|QString|scopeId|
 
 $prototype=void setAddress ( quint32 ip4Addr )
-$method=|void|setAddress,setAddress1|quint32
+$internalMethod=|void|setAddress,setAddress1|quint32
 
 $prototype=void setAddress ( quint8 * ip6Addr )
-%% TODO: parametro deve ser array
-$method=|void|setAddress,setAddress2|quint8 *
+%% TODO: implementar 'quint8 *'
+%% $method=|void|setAddress,setAddress2|quint8 *
 
 $prototype=void setAddress ( const Q_IPV6ADDR & ip6Addr )
-$method=|void|setAddress,setAddress3|const Q_IPV6ADDR &
+%% TODO: implementar 'const Q_IPV6ADDR &'
+%% $method=|void|setAddress,setAddress3|const Q_IPV6ADDR &
 
 $prototype=bool setAddress ( const QString & address )
-$method=|bool|setAddress,setAddress4|const QString &
+$internalMethod=|bool|setAddress,setAddress4|const QString &
 
 $prototype=void setAddress ( const sockaddr * sockaddr )
-$method=|void|setAddress,setAddress5|const sockaddr *
+%% TODO: implementar 'const sockaddr *'
+%% $method=|void|setAddress,setAddress5|const sockaddr *
 
 //[1]void setAddress ( quint32 ip4Addr )
 //[2]void setAddress ( quint8 * ip6Addr )
@@ -193,11 +187,11 @@ HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QHOSTADDRESS_SETADDRESS1 );
+    QHostAddress_setAddress1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QHOSTADDRESS_SETADDRESS4 );
+    QHostAddress_setAddress4();
   }
   else
   {
@@ -212,7 +206,8 @@ $prototype=quint32 toIPv4Address () const
 $method=|quint32|toIPv4Address|
 
 $prototype=Q_IPV6ADDR toIPv6Address () const
-$method=|Q_IPV6ADDR|toIPv6Address|
+%% TODO: implementar 'Q_IPV6ADDR'
+%% $method=|Q_IPV6ADDR|toIPv6Address|
 
 $prototype=QString toString () const
 $method=|QString|toString|

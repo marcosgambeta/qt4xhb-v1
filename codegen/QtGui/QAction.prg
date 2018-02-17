@@ -56,8 +56,6 @@ CLASS QAction INHERIT QObject
    METHOD setSeparator
    METHOD setShortcut
    METHOD setShortcutContext
-   METHOD setShortcuts1
-   METHOD setShortcuts2
    METHOD setShortCuts
    METHOD setSoftKeyRole
    METHOD setStatusTip
@@ -94,11 +92,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QAction>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QMenu>
 

@@ -21,11 +21,6 @@ CLASS QTextStream
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new6
    METHOD new
    METHOD delete
    METHOD setCodec
@@ -38,8 +33,8 @@ CLASS QTextStream
    METHOD locale
    METHOD setDevice
    METHOD device
-   METHOD setString
-   METHOD string
+%%   METHOD setString
+%%   METHOD string
    METHOD status
    METHOD setStatus
    METHOD resetStatus
@@ -81,30 +76,27 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QTextStream>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QTextStream()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QTextStream(QIODevice *device)
-$constructor=|new2|QIODevice *
+$internalConstructor=|new2|QIODevice *
 
 $prototype=QTextStream(FILE *fileHandle, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
-$constructor=|new3|FILE *,QIODevice::OpenMode=QIODevice::ReadWrite
+$internalConstructor=|new3|FILE *,QIODevice::OpenMode=QIODevice::ReadWrite
 
 $prototype=QTextStream(QString *string, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
-$constructor=|new4|QString *,QIODevice::OpenMode=QIODevice::ReadWrite
+%% TODO: implementar
+%% $internalConstructor=|new4|QString *,QIODevice::OpenMode=QIODevice::ReadWrite
 
 $prototype=QTextStream(QByteArray *array, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
 %% TODO: conflito entre [5] e [6]
-%% $constructor=|new5|QByteArray *,QIODevice::OpenMode=QIODevice::ReadWrite
+%% $internalConstructor=|new5|QByteArray *,QIODevice::OpenMode=QIODevice::ReadWrite
 
 $prototype=QTextStream(const QByteArray &array, QIODevice::OpenMode openMode = QIODevice::ReadOnly)
-$constructor=|new6|const QByteArray &,QIODevice::OpenMode=QIODevice::ReadOnly
+$internalConstructor=|new6|const QByteArray &,QIODevice::OpenMode=QIODevice::ReadOnly
 
 //[1]QTextStream()
 //[2]QTextStream(QIODevice *device)
@@ -117,23 +109,23 @@ HB_FUNC_STATIC( QTEXTSTREAM_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTEXTSTREAM_NEW1 );
+    QTextStream_new1();
   }
   else if( ISNUMPAR(1) && ISQIODEVICE(1) )
   {
-    HB_FUNC_EXEC( QTEXTSTREAM_NEW2 );
+    QTextStream_new2();
   }
   else if( ISBETWEEN(1,2) && ISPOINTER(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QTEXTSTREAM_NEW3 );
+    QTextStream_new3();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
-  {
-    HB_FUNC_EXEC( QTEXTSTREAM_NEW4 );
-  }
+%%  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+%%  {
+%%    QTextStream_new4();
+%%  }
   else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QTEXTSTREAM_NEW6 );
+    QTextStream_new6();
   }
   else
   {
@@ -196,10 +188,12 @@ $prototype=QIODevice *device() const
 $method=|QIODevice *|device|
 
 $prototype=void setString(QString *string, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
-$method=|void|setString|QString *,QIODevice::OpenMode=QIODevice::ReadWrite
+%% TODO: implementar
+%% $method=|void|setString|QString *,QIODevice::OpenMode=QIODevice::ReadWrite
 
 $prototype=QString *string() const
-$method=|QString *|string|
+%% TODO: implementar
+%% $method=|QString *|string|
 
 $prototype=Status status() const
 $method=|QTextStream::Status|status|

@@ -22,11 +22,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QWhatsThisClickedEvent>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QWhatsThisClickedEvent(const QString &href)
 $constructor=|new|const QString &

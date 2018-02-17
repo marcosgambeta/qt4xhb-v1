@@ -63,11 +63,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QVideoFrame>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QVariant>
 
@@ -122,26 +118,28 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW )
 
 $deleteMethod
 
+%% TODO: implementar 'uchar *'
+
 $prototype=uchar * bits ()
-$method=|uchar *|bits,bits1|
+%% $method=|uchar *|bits,bits1|
 
 $prototype=const uchar * bits () const
-$method=|const uchar *|bits,bits2|
+%% $method=|const uchar *|bits,bits2|
 
-//[1]uchar * bits ()
-//[2]const uchar * bits () const
+%% //[1]uchar * bits ()
+%% //[2]const uchar * bits () const
 
-HB_FUNC_STATIC( QVIDEOFRAME_BITS )
-{
-  if( ISNUMPAR(0) )
-  {
-    HB_FUNC_EXEC( QVIDEOFRAME_BITS1 );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+%% HB_FUNC_STATIC( QVIDEOFRAME_BITS )
+%% {
+%%   if( ISNUMPAR(0) )
+%%   {
+%%     HB_FUNC_EXEC( QVIDEOFRAME_BITS1 );
+%%   }
+%%   else
+%%   {
+%%     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+%%   }
+%% }
 
 $prototype=int bytesPerLine () const
 $method=|int|bytesPerLine|

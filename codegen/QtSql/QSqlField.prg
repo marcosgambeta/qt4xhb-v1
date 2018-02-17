@@ -58,11 +58,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QSqlField>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QSqlField ( const QString & fieldName = QString(), QVariant::Type type = QVariant::Invalid )
 $internalConstructor=|new1|const QString &=QString(),QVariant::Type=QVariant::Invalid

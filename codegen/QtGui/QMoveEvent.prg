@@ -27,11 +27,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QMoveEvent>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QMoveEvent ( const QPoint & pos, const QPoint & oldPos )
 $constructor=|new|const QPoint &,const QPoint &

@@ -38,28 +38,12 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QGestureEvent>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QGesture>
 
 $prototype=QGestureEvent ( const QList<QGesture *> & gestures )
-HB_FUNC_STATIC( QGESTUREEVENT_NEW )
-{
-  QList<QGesture *> par1;
-  PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-  int i1;
-  int nLen1 = hb_arrayLen(aList1);
-  for (i1=0;i1<nLen1;i1++)
-  {
-    par1 << (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-  }
-  QGestureEvent * o = new QGestureEvent ( par1 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|const QList<QGesture *> &
 
 $deleteMethod
 
@@ -97,103 +81,16 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACCEPT )
 }
 
 $prototype=QList<QGesture *> activeGestures () const
-HB_FUNC_STATIC( QGESTUREEVENT_ACTIVEGESTURES )
-{
-  QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QGesture *> list = obj->activeGestures ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QGESTURE" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QGesture *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QGesture *>|activeGestures|
 
 $prototype=QList<QGesture *> canceledGestures () const
-HB_FUNC_STATIC( QGESTUREEVENT_CANCELEDGESTURES )
-{
-  QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QGesture *> list = obj->canceledGestures ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QGESTURE" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QGesture *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QGesture *>|canceledGestures|
 
 $prototype=QGesture * gesture ( Qt::GestureType type ) const
 $method=|QGesture *|gesture|Qt::GestureType
 
 $prototype=QList<QGesture *> gestures () const
-HB_FUNC_STATIC( QGESTUREEVENT_GESTURES )
-{
-  QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QGesture *> list = obj->gestures ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QGESTURE" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QGesture *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QGesture *>|gestures|
 
 $prototype=void ignore ()
 $internalMethod=|void|ignore,ignore1|

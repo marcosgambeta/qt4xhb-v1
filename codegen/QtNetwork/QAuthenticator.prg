@@ -10,7 +10,7 @@ $header
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QVARIANT
-REQUEST QVARIANTHASH
+%% REQUEST QVARIANTHASH
 #endif
 
 CLASS QAuthenticator
@@ -22,7 +22,7 @@ CLASS QAuthenticator
    METHOD delete
    METHOD isNull
    METHOD option
-   METHOD options
+%%   METHOD options
    METHOD password
    METHOD realm
    METHOD setOption
@@ -44,11 +44,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QAuthenticator>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QAuthenticator ()
 $internalConstructor=|new1|
@@ -84,7 +80,8 @@ $prototype=QVariant option ( const QString & opt ) const
 $method=|QVariant|option|const QString &
 
 $prototype=QVariantHash options () const
-$method=|QVariantHash|options|
+%% TODO: implementar 'QVariantHash'
+%% $method=|QVariantHash|options|
 
 $prototype=QString password () const
 $method=|QString|password|

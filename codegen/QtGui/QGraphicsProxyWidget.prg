@@ -34,11 +34,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QGraphicsProxyWidget>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QGraphicsProxyWidget ( QGraphicsItem * parent = 0, Qt::WindowFlags wFlags = 0 )
 $constructor=|new|QGraphicsItem *=0,Qt::WindowFlags=0

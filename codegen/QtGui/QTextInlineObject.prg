@@ -48,11 +48,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QTextInlineObject>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QTextInlineObject ( int i, QTextEngine * e )
 $constructor=|new|int,QTextEngine *

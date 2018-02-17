@@ -53,11 +53,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QGLWidget>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QGLWidget ( QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
 $internalConstructor=|new1|QWidget *=0,const QGLWidget *=0,Qt::WindowFlags=0

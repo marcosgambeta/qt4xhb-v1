@@ -46,11 +46,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QResource>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QResource ( const QString & file = QString(), const QLocale & locale = QLocale() )
 $constructor=|new|const QString &=QString(),const QLocale &=QLocale()

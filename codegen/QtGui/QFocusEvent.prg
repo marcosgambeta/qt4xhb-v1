@@ -24,11 +24,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QFocusEvent>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QFocusEvent ( Type type, Qt::FocusReason reason = Qt::OtherFocusReason )
 $constructor=|new|QEvent::Type,Qt::FocusReason=Qt::OtherFocusReason

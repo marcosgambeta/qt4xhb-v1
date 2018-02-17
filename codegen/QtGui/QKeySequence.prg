@@ -41,11 +41,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QKeySequence>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QList>
 
@@ -131,36 +127,7 @@ $prototype=static QKeySequence fromString ( const QString & str, SequenceFormat 
 $staticMethod=|QKeySequence|fromString|const QString &,QKeySequence::SequenceFormat=QKeySequence::PortableText
 
 $prototype=static QList<QKeySequence> keyBindings ( StandardKey key )
-HB_FUNC_STATIC( QKEYSEQUENCE_KEYBINDINGS )
-{
-  int par1 = hb_parni(1);
-  QList<QKeySequence> list = QKeySequence::keyBindings ( (QKeySequence::StandardKey) par1 );
-  PHB_DYNS pDynSym = hb_dynsymFindName( "QKEYSEQUENCE" );
-  PHB_ITEM pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<list.count();i++)
-  {
-    if( pDynSym )
-    {
-      hb_vmPushDynSym( pDynSym );
-      hb_vmPushNil();
-      hb_vmDo( 0 );
-      PHB_ITEM pObject = hb_itemNew( NULL );
-      hb_itemCopy( pObject, hb_stackReturnItem() );
-      PHB_ITEM pItem = hb_itemNew( NULL );
-      hb_itemPutPtr( pItem, (QKeySequence *) new QKeySequence ( list[i] ) );
-      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-      hb_itemRelease( pItem );
-      PHB_ITEM pDestroy = hb_itemNew( NULL );
-      hb_itemPutL( pDestroy, true );
-      hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-      hb_itemRelease( pDestroy );
-      hb_arrayAddForward( pArray, pObject );
-      hb_itemRelease( pObject );
-    }
-  }
-  hb_itemReturnRelease(pArray);
-}
+$staticMethod=|QList<QKeySequence>|keyBindings|QKeySequence::StandardKey
 
 $prototype=static QKeySequence mnemonic ( const QString & text )
 $staticMethod=|QKeySequence|mnemonic|const QString &

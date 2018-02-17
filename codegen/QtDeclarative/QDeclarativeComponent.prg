@@ -13,7 +13,7 @@ REQUEST QOBJECT
 REQUEST QDECLARATIVECONTEXT
 REQUEST QDECLARATIVEERROR
 REQUEST QURL
-REQUEST QDECLARATIVECOMPONENTATTACHED
+%% REQUEST QDECLARATIVECOMPONENTATTACHED
 #endif
 
 CLASS QDeclarativeComponent INHERIT QObject
@@ -35,7 +35,7 @@ CLASS QDeclarativeComponent INHERIT QObject
    METHOD status
    METHOD url
    METHOD errorString
-   METHOD qmlAttachedProperties
+%%   METHOD qmlAttachedProperties
 
    METHOD onProgressChanged
    METHOD onStatusChanged
@@ -48,11 +48,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QDeclarativeComponent>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QDeclarativeComponent(QObject *parent = 0);
 $internalConstructor=|new1|QObject *=0
@@ -110,36 +106,7 @@ $prototype=QDeclarativeContext * creationContext () const
 $method=|QDeclarativeContext *|creationContext|
 
 $prototype=QList<QDeclarativeError> errors () const
-HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORS )
-{
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QDeclarativeError> list = obj->errors ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QDeclarativeError *) new QDeclarativeError ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QDeclarativeError>|errors|
 
 $prototype=bool isError () const
 $method=|bool|isError|
@@ -172,6 +139,7 @@ $prototype=Q_INVOKABLE QString errorString() const
 $method=|QString|errorString|
 
 $prototype=static QDeclarativeComponentAttached *qmlAttachedProperties(QObject *)
-$staticMethod=|QDeclarativeComponentAttached *|qmlAttachedProperties|QObject *
+%% TODO: implementar
+%% $staticMethod=|QDeclarativeComponentAttached *|qmlAttachedProperties|QObject *
 
 #pragma ENDDUMP

@@ -87,11 +87,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QFileDialog>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QUrl>
 #include <QAbstractItemDelegate>
@@ -270,64 +266,13 @@ $prototype=void setResolveSymlinks ( bool enabled )
 $method=|void|setResolveSymlinks|bool
 
 $prototype=void setSidebarUrls ( const QList<QUrl> & urls )
-HB_FUNC_STATIC( QFILEDIALOG_SETSIDEBARURLS )
-{
-  QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QUrl> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << *(QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    obj->setSidebarUrls ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSidebarUrls|const QList<QUrl> &
 
 $prototype=void setViewMode ( ViewMode mode )
 $method=|void|setViewMode|QFileDialog::ViewMode
 
 $prototype=QList<QUrl> sidebarUrls () const
-HB_FUNC_STATIC( QFILEDIALOG_SIDEBARURLS )
-{
-  QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QUrl> list = obj->sidebarUrls ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QURL" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QUrl *) new QUrl ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( NULL );
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QUrl>|sidebarUrls|
 
 $prototype=bool testOption ( Option option ) const
 $method=|bool|testOption|QFileDialog::Option

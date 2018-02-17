@@ -39,11 +39,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QNetworkDiskCache>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QNetworkDiskCache ( QObject * parent = 0 )
 $constructor=|new|QObject *=0

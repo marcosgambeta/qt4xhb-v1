@@ -35,11 +35,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QDeclarativePropertyMap>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QDeclarativePropertyMap ( QObject * parent = 0 )
 $constructor=|new|QObject *=0

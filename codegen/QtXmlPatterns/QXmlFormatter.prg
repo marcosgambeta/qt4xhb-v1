@@ -33,11 +33,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QXmlFormatter>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QXmlFormatter ( const QXmlQuery & query, QIODevice * outputDevice )
 $constructor=|new|const QXmlQuery &,QIODevice *

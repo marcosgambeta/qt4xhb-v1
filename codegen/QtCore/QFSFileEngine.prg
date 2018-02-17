@@ -60,11 +60,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QFSFileEngine>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QDateTime>
 
@@ -225,31 +221,7 @@ $prototype=static QString currentPath ( const QString & fileName = QString() )
 $staticMethod=|QString|currentPath|const QString &=QString()
 
 $prototype=QFileInfoList drives ()
-HB_FUNC_STATIC( QFSFILEENGINE_DRIVES )
-{
-  QFileInfoList list = QFSFileEngine::drives ();
-  PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO" );
-  PHB_ITEM pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<list.count();i++)
-  {
-    if( pDynSym )
-    {
-      hb_vmPushDynSym( pDynSym );
-      hb_vmPushNil();
-      hb_vmDo( 0 );
-      PHB_ITEM pObject = hb_itemNew( NULL );
-      hb_itemCopy( pObject, hb_stackReturnItem() );
-      PHB_ITEM pItem = hb_itemNew( NULL );
-      hb_itemPutPtr( pItem, (QFileInfo *) new QFileInfo( list[i] ) );
-      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-      hb_arrayAddForward( pArray, pObject );
-      hb_itemRelease( pObject );
-      hb_itemRelease( pItem );
-    }
-  }
-  hb_itemReturnRelease(pArray);
-}
+$method=|QFileInfoList|drives|
 
 $prototype=static QString homePath ()
 $staticMethod=|QString|homePath|

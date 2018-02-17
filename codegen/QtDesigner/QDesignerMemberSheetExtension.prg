@@ -47,11 +47,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QDesignerMemberSheetExtension>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $deleteMethod
 
@@ -83,68 +79,10 @@ $prototype=virtual QString memberName ( int index ) const = 0
 $virtualMethod=|QString|memberName|int
 
 $prototype=virtual QList<QByteArray> parameterNames ( int index ) const = 0
-HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERNAMES )
-{
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QByteArray> list = obj->parameterNames ( PINT(1) );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$virtualMethod=|QList<QByteArray>|parameterNames|int
 
 $prototype=virtual QList<QByteArray> parameterTypes ( int index ) const = 0
-HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERTYPES )
-{
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QByteArray> list = obj->parameterTypes ( PINT(1) );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$virtualMethod=|QList<QByteArray>|parameterTypes|int
 
 $prototype=virtual void setMemberGroup ( int index, const QString & group ) = 0
 $virtualMethod=|void|setMemberGroup|int,const QString &

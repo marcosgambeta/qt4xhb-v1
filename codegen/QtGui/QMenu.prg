@@ -65,11 +65,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QMenu>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QMenu ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0
@@ -114,10 +110,12 @@ $prototype=QAction * addAction ( const QIcon & icon, const QString & text )
 $internalMethod=|QAction *|addAction,addAction2|const QIcon &,const QString &
 
 $prototype=QAction * addAction ( const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
-$internalMethod=|QAction *|addAction,addAction3|const QString &,const QObject *,const char *,const QKeySequence &=0
+$internalMethod=|QAction *|addAction,addAction3a|const QString &,const QObject *,const char *
+$internalMethod=|QAction *|addAction,addAction3b|const QString &,const QObject *,const char *,const QKeySequence &
 
 $prototype=QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
-$internalMethod=|QAction *|addAction,addAction4|const QIcon &,const QString &,const QObject *,const char *,const QKeySequence &=0
+$internalMethod=|QAction *|addAction,addAction4a|const QIcon &,const QString &,const QObject *,const char *
+$internalMethod=|QAction *|addAction,addAction4b|const QIcon &,const QString &,const QObject *,const char *,const QKeySequence &
 
 $prototype=void addAction ( QAction * action )
 $internalMethod=|void|addAction,addAction5|QAction *
@@ -138,13 +136,21 @@ HB_FUNC_STATIC( QMENU_ADDACTION )
   {
     QMenu_addAction2();
   }
-  else if( ISBETWEEN(3,4) && ISCHAR(1) && ISQOBJECT(2) && ISCHAR(3) && (ISQKEYSEQUENCE(4)||ISNIL(4)) )
+  else if( ISBETWEEN(3,4) && ISCHAR(1) && ISQOBJECT(2) && ISCHAR(3) && ISNIL(4) )
   {
-    QMenu_addAction3();
+    QMenu_addAction3a();
   }
-  else if( ISBETWEEN(4,5) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) && ISQOBJECT(3) && ISCHAR(4) && (ISQKEYSEQUENCE(5)||ISNIL(5)) )
+  else if( ISNUMPAR(4) && ISCHAR(1) && ISQOBJECT(2) && ISCHAR(3) && ISQKEYSEQUENCE(4) )
   {
-    QMenu_addAction4();
+    QMenu_addAction3b();
+  }
+  else if( ISBETWEEN(4,5) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) && ISQOBJECT(3) && ISCHAR(4) && ISNIL(5) )
+  {
+    QMenu_addAction4a();
+  }
+  else if( ISNUMPAR(5) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) && ISQOBJECT(3) && ISCHAR(4) && ISQKEYSEQUENCE(5) )
+  {
+    QMenu_addAction4b();
   }
   else if( ISNUMPAR(1) && ISQACTION(1) )
   {

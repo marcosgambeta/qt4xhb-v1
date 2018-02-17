@@ -68,11 +68,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QFutureInterfaceBase>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QFutureInterfaceBase(State initialState = NoState)
 $internalConstructor=|new1|QFutureInterfaceBase::State=QFutureInterfaceBase::NoState

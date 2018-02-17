@@ -29,11 +29,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QHelpIndexModel>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=void createIndex ( const QString & customFilterName )
 $method=|void|createIndex|const QString &

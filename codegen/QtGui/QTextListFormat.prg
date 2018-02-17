@@ -30,11 +30,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QTextListFormat>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QTextListFormat ()
 $constructor=|new|

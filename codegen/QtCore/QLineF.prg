@@ -61,11 +61,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QLineF>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QLineF()
 $internalConstructor=|new1|

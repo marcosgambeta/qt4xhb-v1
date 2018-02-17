@@ -39,11 +39,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QAxScript>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QStringList>
 
@@ -56,24 +52,7 @@ $prototype=QVariant call ( const QString & function, const QVariant & var1 = QVa
 $internalMethod=|QVariant|call,call1|const QString &,const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant()
 
 $prototype=QVariant call ( const QString & function, QList<QVariant> & arguments )
-void QAxScript_call2 ()
-{
-  QAxScript * obj = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QVariant> par2;
-    PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-    int i2;
-    int nLen2 = hb_arrayLen(aList2);
-    for (i2=0;i2<nLen2;i2++)
-    {
-      par2 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
-    }
-    QVariant * ptr = new QVariant( obj->call ( PQSTRING(1), par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$internalMethod=|QVariant|call,call2|const QString &,QList<QVariant> &
 
 //[1]QVariant call ( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 //[2]QVariant call ( const QString & function, QList<QVariant> & arguments )

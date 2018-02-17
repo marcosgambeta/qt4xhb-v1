@@ -30,11 +30,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QTreeWidgetItemIterator>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QTreeWidgetItemIterator ( const QTreeWidgetItemIterator & it )
 $internalConstructor=|new1|const QTreeWidgetItemIterator &

@@ -42,11 +42,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QGraphicsDropShadowEffect>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QGraphicsDropShadowEffect ( QObject * parent = 0 )
 $constructor=|new|QObject *=0

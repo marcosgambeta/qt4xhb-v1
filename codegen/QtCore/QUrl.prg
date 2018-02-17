@@ -104,11 +104,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QUrl>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QStringList>
 
@@ -162,36 +158,7 @@ $prototype=void addQueryItem ( const QString & key, const QString & value )
 $method=|void|addQueryItem|const QString &,const QString &
 
 $prototype=QList<QByteArray> allEncodedQueryItemValues ( const QByteArray & key ) const
-HB_FUNC_STATIC( QURL_ALLENCODEDQUERYITEMVALUES )
-{
-  QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QByteArray> list = obj->allEncodedQueryItemValues ( *PQBYTEARRAY(1) );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QByteArray>|allEncodedQueryItemValues|const QByteArray &
 
 $prototype=QStringList allQueryItemValues ( const QString & key ) const
 $method=|QStringList|allQueryItemValues|const QString &

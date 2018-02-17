@@ -30,11 +30,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QStyleHintReturn>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QStyleHintReturn ( int version = QStyleOption::Version, int type = SH_Default )
 $constructor=|new|int=QStyleOption::Version,int=QStyleHintReturn::SH_Default

@@ -100,13 +100,14 @@ CLASS QApplication INHERIT QCoreApplication
    METHOD wheelScrollLines
    METHOD widgetAt
    METHOD windowIcon
-   METHOD aboutToReleaseGpuResources
-   METHOD aboutToUseGpuResources
-   METHOD commitDataRequest
-   METHOD focusChanged
-   METHOD fontDatabaseChanged
-   METHOD lastWindowClosed
-   METHOD saveStateRequest
+
+   METHOD onAboutToReleaseGpuResources
+   METHOD onAboutToUseGpuResources
+   METHOD onCommitDataRequest
+   METHOD onFocusChanged
+   METHOD onFontDatabaseChanged
+   METHOD onLastWindowClosed
+   METHOD onSaveStateRequest
 
    DESTRUCTOR destroyObject
 
@@ -116,11 +117,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QApplication>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QFont>
 #include <QLocale>

@@ -26,11 +26,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QHelpContentWidget>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QModelIndex indexOf ( const QUrl & link )
 $method=|QModelIndex|indexOf|const QUrl &

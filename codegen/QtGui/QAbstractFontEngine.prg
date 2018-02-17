@@ -15,11 +15,11 @@ REQUEST QVARIANT
 CLASS QAbstractFontEngine INHERIT QObject
 
    METHOD delete
-   METHOD addGlyphOutlinesToPath
+%%   METHOD addGlyphOutlinesToPath
    METHOD capabilities
-   METHOD convertStringToGlyphIndices
+%%   METHOD convertStringToGlyphIndices
    METHOD fontProperty
-   METHOD getGlyphAdvances
+%%   METHOD getGlyphAdvances
    METHOD renderGlyph
 
    DESTRUCTOR destroyObject
@@ -30,28 +30,27 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QAbstractFontEngine>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $deleteMethod
 
 $prototype=virtual void addGlyphOutlinesToPath ( uint * glyphs, int numGlyphs, FixedPoint * positions, QPainterPath * path )
-$virtualMethod=|void|addGlyphOutlinesToPath|uint *,int,QAbstractFontEngine::FixedPoint *,QPainterPath *
+%% TODO: implementar 'uint *'
+%% $virtualMethod=|void|addGlyphOutlinesToPath|uint *,int,QAbstractFontEngine::FixedPoint *,QPainterPath *
 
 $prototype=virtual Capabilities capabilities () const = 0
 $virtualMethod=|QAbstractFontEngine::Capabilities|capabilities|
 
 $prototype=virtual bool convertStringToGlyphIndices ( const QChar * string, int length, uint * glyphs, int * numGlyphs, TextShapingFlags flags ) const = 0
-$virtualMethod=|bool|convertStringToGlyphIndices|const QChar *,int,uint *,int *,QAbstractFontEngine::TextShapingFlags
+%% TODO: implementar 'uint *'
+%% $virtualMethod=|bool|convertStringToGlyphIndices|const QChar *,int,uint *,int *,QAbstractFontEngine::TextShapingFlags
 
 $prototype=virtual QVariant fontProperty ( FontProperty property ) const = 0
 $virtualMethod=|QVariant|fontProperty|QAbstractFontEngine::FontProperty
 
 $prototype=virtual void getGlyphAdvances ( const uint * glyphs, int numGlyphs, Fixed * advances, TextShapingFlags flags ) const = 0
-$virtualMethod=|void|getGlyphAdvances|const uint *,int,QAbstractFontEngine::Fixed *,QAbstractFontEngine::TextShapingFlags
+%% TODO: implementar 'uint *'
+%% $virtualMethod=|void|getGlyphAdvances|const uint *,int,QAbstractFontEngine::Fixed *,QAbstractFontEngine::TextShapingFlags
 
 $prototype=virtual bool renderGlyph ( uint glyph, int depth, int bytesPerLine, int height, uchar * buffer )
 $virtualMethod=|bool|renderGlyph|uint,int,int,int,uchar *

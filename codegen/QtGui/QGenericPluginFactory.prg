@@ -34,11 +34,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QGenericPluginFactory>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QObject * create ( const QString & key, const QString & specification )
 HB_FUNC_STATIC( QGENERICPLUGINFACTORY_CREATE )

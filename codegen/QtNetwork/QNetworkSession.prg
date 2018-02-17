@@ -53,11 +53,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QNetworkSession>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QNetworkSession ( const QNetworkConfiguration & connectionConfig, QObject * parent = 0 )
 $constructor=|new|const QNetworkConfiguration &,QObject *=0

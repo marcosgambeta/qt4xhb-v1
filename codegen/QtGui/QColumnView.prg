@@ -44,11 +44,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QColumnView>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QColumnView ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
@@ -65,7 +61,7 @@ $prototype=bool resizeGripsVisible () const
 $method=|bool|resizeGripsVisible|
 
 $prototype=void setColumnWidths ( const QList<int> & list )
-$method=|void|setColumnWidths|const QList<int> &
+$method=|void|setColumnWidths|QList<int>
 
 $prototype=void setPreviewWidget ( QWidget * widget )
 $method=|void|setPreviewWidget|QWidget *

@@ -11,7 +11,7 @@ $header
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QREGION
 REQUEST QRECT
-REQUEST UCHAR
+%% REQUEST UCHAR
 #endif
 
 CLASS QDirectPainter INHERIT QObject
@@ -45,11 +45,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QDirectPainter>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QDirectPainter ( QObject * parent = 0, SurfaceFlag flag = NonReserved )
 $constructor=|new|QObject *=0,QDirectPainter::SurfaceFlag=QDirectPainter::NonReserved
@@ -112,7 +108,8 @@ $prototype=void startPainting ( bool lockDisplay = true )
 $method=|void|startPainting|bool=true
 
 $prototype=uchar * frameBuffer ()
-$method=|uchar *|frameBuffer|
+%% TODO: implementar 'uchar *'
+%% $method=|uchar *|frameBuffer|
 
 $prototype=static int linestep ()
 $staticMethod=|int|linestep|

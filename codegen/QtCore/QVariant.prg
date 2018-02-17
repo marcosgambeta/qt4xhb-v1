@@ -72,6 +72,7 @@ CLASS QVariant
    METHOD new38
    METHOD new
    METHOD delete
+
    METHOD canConvert
    METHOD clear
    METHOD convert
@@ -119,11 +120,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QVariant>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 #include <QLocale>
 #include <QRegExp>
@@ -227,19 +224,7 @@ $prototype=QVariant ( const QDateTime & val )
 $constructor=|new26|const QDateTime &
 
 $prototype=QVariant ( const QList<QVariant> & val )
-HB_FUNC_STATIC( QVARIANT_NEW27 )
-{
-  QList<QVariant> par1;
-  PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-  int i1;
-  int nLen1 = hb_arrayLen(aList1);
-  for (i1=0;i1<nLen1;i1++)
-  {
-    par1 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-  }
-  QVariant * o = new QVariant ( par1 );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new27|const QList<QVariant> &
 
 $prototype=QVariant ( const QMap<QString, QVariant> & val )
 
@@ -359,6 +344,10 @@ HB_FUNC_STATIC( QVARIANT_NEW )
   {
     HB_FUNC_EXEC( QVARIANT_NEW23 );
   }
+  else if( ISNUMPAR(1) && ISQLATIN1STRING(1) )
+  {
+    HB_FUNC_EXEC( QVARIANT_NEW21 );
+  }
   else if( ISNUMPAR(1) && ISQDATE(1) )
   {
     HB_FUNC_EXEC( QVARIANT_NEW24 );
@@ -422,29 +411,32 @@ HB_FUNC_STATIC( QVARIANT_NEW )
 $deleteMethod
 
 $prototype=bool canConvert ( Type t ) const
-$method=|bool|canConvert,canConvert1|QVariant::Type
+$method=|bool|canConvert|QVariant::Type
 
-$prototype=bool canConvert () const
-$method=|bool|canConvert,canConvert2|
+%% $prototype=bool canConvert ( Type t ) const
+%% $method=|bool|canConvert,canConvert1|QVariant::Type
 
-//[1]bool canConvert ( Type t ) const
-//[2]bool canConvert () const
+%% $prototype=bool canConvert () const
+%% $method=|bool|canConvert,canConvert2|
 
-HB_FUNC_STATIC( QVARIANT_CANCONVERT )
-{
-  if( ISNUMPAR(0) )
-  {
-    HB_FUNC_EXEC( QVARIANT_CANCONVERT2 );
-  }
-  else if( ISNUMPAR(1) && ISNUM(1) )
-  {
-    HB_FUNC_EXEC( QVARIANT_CANCONVERT1 );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+%% //[1]bool canConvert ( Type t ) const
+%% //[2]bool canConvert () const
+
+%% HB_FUNC_STATIC( QVARIANT_CANCONVERT )
+%% {
+%%   if( ISNUMPAR(0) )
+%%   {
+%%     HB_FUNC_EXEC( QVARIANT_CANCONVERT2 );
+%%   }
+%%   else if( ISNUMPAR(1) && ISNUM(1) )
+%%   {
+%%     HB_FUNC_EXEC( QVARIANT_CANCONVERT1 );
+%%   }
+%%   else
+%%   {
+%%     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+%%   }
+%% }
 
 $prototype=void clear ()
 $method=|void|clear|
@@ -486,40 +478,7 @@ $prototype=QLineF toLineF () const
 $method=|QLineF|toLineF|
 
 $prototype=QList<QVariant> toList () const
-HB_FUNC_STATIC( QVARIANT_TOLIST )
-{
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QList<QVariant> list = obj->toList ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QVARIANT" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QVariant *) new QVariant ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( NULL );
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QVariant>|toList|
 
 $prototype=QLocale toLocale () const
 $method=|QLocale|toLocale|

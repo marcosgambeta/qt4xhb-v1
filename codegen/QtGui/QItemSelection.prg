@@ -39,11 +39,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QItemSelection>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QItemSelection ()
 $internalConstructor=|new1|
@@ -76,36 +72,7 @@ $prototype=bool contains ( const QModelIndex & index ) const
 $method=|bool|contains|const QModelIndex &
 
 $prototype=QModelIndexList indexes () const
-HB_FUNC_STATIC( QITEMSELECTION_INDEXES )
-{
-  QItemSelection * obj = (QItemSelection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QModelIndexList list = obj->indexes ();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QModelIndex *) new QModelIndex( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QModelIndexList|indexes|
 
 $prototype=void merge ( const QItemSelection & other, QItemSelectionModel::SelectionFlags command )
 $method=|void|merge|const QItemSelection &,QItemSelectionModel::SelectionFlags

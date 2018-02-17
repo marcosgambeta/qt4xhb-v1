@@ -38,11 +38,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QMouseEvent>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QMouseEvent(Type type, const QPoint &pos, Qt::MouseButton button,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
 $internalConstructor=|new1|QEvent::Type,const QPoint &,Qt::MouseButton,Qt::MouseButtons,Qt::KeyboardModifiers

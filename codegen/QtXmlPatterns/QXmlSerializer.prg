@@ -40,11 +40,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <QXmlSerializer>
-
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+$includes
 
 $prototype=QXmlSerializer ( const QXmlQuery & query, QIODevice * outputDevice )
 $constructor=|new|const QXmlQuery &,QIODevice *
