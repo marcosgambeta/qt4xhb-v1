@@ -130,6 +130,7 @@ QAbstractXmlNodeModel                            |object
 QAbstractXmlReceiver                             |object
 QAccessible                                      |object
 QAccessible::Event                               |enum
+QAccessible::Method                              |enum
 QAccessible::Relation                            |enum
 QAccessible::Role                                |enum
 QAccessible::State                               |enum
@@ -156,6 +157,7 @@ QApplication                                     |QObject
 QApplication::Type                               |enum
 QAtomicInt                                       |object
 QAudio::Error                                    |enum
+QAudio::Mode                                     |enum
 QAudio::State                                    |enum
 QAudioDeviceInfo                                 |object
 QAudioFormat                                     |object
@@ -286,7 +288,7 @@ QDecorationPlugin                                |QObject
 QDesignerActionEditorInterface                   |QObject
 QDesignerContainerExtension                      |object
 QDesignerCustomWidgetCollectionInterface         |object
-QDesignerCustomWidgetInterface                   |object
+QDesignerCustomWidgetInterface                   |interface
 QDesignerDynamicPropertySheetExtension           |object
 QDesignerFormEditorInterface                     |QObject
 QDesignerFormWindowCursorInterface               |object
@@ -420,7 +422,7 @@ QFtp::State                                      |enum
 QFtp::TransferMode                               |enum
 QFtp::TransferType                               |enum
 QFuture                                          |object
-QFutureInterfaceBase                             |
+QFutureInterfaceBase                             |object
 QFutureInterfaceBase::State                      |enum
 QFutureWatcher                                   |QObject
 QFutureWatcherBase                               |
@@ -924,7 +926,7 @@ QSslSocket::SslMode                              |enum
 QStackedLayout                                   |QObject
 QStackedLayout::StackingMode                     |enum
 QStackedWidget                                   |QObject
-QStandardItem                                    |object
+QStandardItem                                    |item
 QStandardItemModel                               |QObject
 QState                                           |QObject
 QState::ChildMode                                |enum
@@ -1233,6 +1235,7 @@ QWizard::WizardPixmap                            |enum
 QWizard::WizardStyle                             |enum
 QWizardPage                                      |QObject
 QWorkspace                                       |QObject
+QWorkspace::WindowOrder                          |enum
 QWriteLocker                                     |object
 QWSClient                                        |QObject
 QWSEmbedWidget                                   |QObject
