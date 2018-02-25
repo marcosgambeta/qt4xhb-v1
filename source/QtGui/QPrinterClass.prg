@@ -1269,6 +1269,7 @@ void setWinPageSize ( int pageSize )
 */
 HB_FUNC_STATIC( QPRINTER_SETWINPAGESIZE )
 {
+#ifdef Q_WS_WIN
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
@@ -1284,6 +1285,7 @@ HB_FUNC_STATIC( QPRINTER_SETWINPAGESIZE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -1291,6 +1293,7 @@ QList<PaperSource> supportedPaperSources () const
 */
 HB_FUNC_STATIC( QPRINTER_SUPPORTEDPAPERSOURCES )
 {
+#ifdef Q_WS_WIN
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
@@ -1313,6 +1316,7 @@ HB_FUNC_STATIC( QPRINTER_SUPPORTEDPAPERSOURCES )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -1381,6 +1385,7 @@ int winPageSize () const
 */
 HB_FUNC_STATIC( QPRINTER_WINPAGESIZE )
 {
+#ifdef Q_WS_WIN
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
@@ -1394,6 +1399,7 @@ HB_FUNC_STATIC( QPRINTER_WINPAGESIZE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*

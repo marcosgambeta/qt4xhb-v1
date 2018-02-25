@@ -6,6 +6,10 @@
 
 $header
 
+%% TODO: class under condition
+%% #ifndef QT_NO_PRINTER
+%% #endif // QT_NO_PRINTER
+
 #include "hbclass.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
@@ -348,10 +352,10 @@ $prototype=void setResolution ( int dpi )
 $method=|void|setResolution|int
 
 $prototype=void setWinPageSize ( int pageSize )
-$method=|void|setWinPageSize|int
+$method=|void|setWinPageSize|int|#ifdef Q_WS_WIN
 
 $prototype=QList<PaperSource> supportedPaperSources () const
-$method=|QList<QPrinter::PaperSource>|supportedPaperSources|
+$method=|QList<QPrinter::PaperSource>|supportedPaperSources||#ifdef Q_WS_WIN
 
 $prototype=QList<int> supportedResolutions () const
 $method=|QList<int>|supportedResolutions|
@@ -363,7 +367,7 @@ $prototype=int toPage () const
 $method=|int|toPage|
 
 $prototype=int winPageSize () const
-$method=|int|winPageSize|
+$method=|int|winPageSize||#ifdef Q_WS_WIN
 
 $prototype=virtual QPaintEngine * paintEngine () const
 $virtualMethod=|QPaintEngine *|paintEngine|
