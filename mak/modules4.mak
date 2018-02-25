@@ -6,56 +6,56 @@
 
 # CINCLUDES
 ifeq ($(MODULE_ACTIVEQT),yes)
-   CINCLUDES += -I$(QTDIR)/include/ActiveQt
+   CINCLUDES += -I$(QT_INC_DIR)/ActiveQt
 endif
 ifeq ($(MODULE_QTCORE),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtCore
+   CINCLUDES += -I$(QT_INC_DIR)/QtCore
 endif
 ifeq ($(MODULE_QTDECLARATIVE),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtDeclarative
+   CINCLUDES += -I$(QT_INC_DIR)/QtDeclarative
 endif
 ifeq ($(MODULE_QTDESIGNER),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtDesigner
+   CINCLUDES += -I$(QT_INC_DIR)/QtDesigner
 endif
 ifeq ($(MODULE_QTGUI),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtGui
+   CINCLUDES += -I$(QT_INC_DIR)/QtGui
 endif
 ifeq ($(MODULE_QTHELP),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtHelp
+   CINCLUDES += -I$(QT_INC_DIR)/QtHelp
 endif
 ifeq ($(MODULE_QTMULTIMEDIA),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtMultimedia
+   CINCLUDES += -I$(QT_INC_DIR)/QtMultimedia
 endif
 ifeq ($(MODULE_QTNETWORK),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtNetwork
+   CINCLUDES += -I$(QT_INC_DIR)/QtNetwork
 endif
 ifeq ($(MODULE_QTOPENGL),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtOpenGL
+   CINCLUDES += -I$(QT_INC_DIR)/QtOpenGL
 endif
 ifeq ($(MODULE_QTSCRIPT),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtScript
+   CINCLUDES += -I$(QT_INC_DIR)/QtScript
 endif
 ifeq ($(MODULE_QTSCRIPTTOOLS),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtScriptTools
+   CINCLUDES += -I$(QT_INC_DIR)/QtScriptTools
 endif
 ifeq ($(MODULE_QTSQL),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtSql
+   CINCLUDES += -I$(QT_INC_DIR)/QtSql
 endif
 ifeq ($(MODULE_QTSVG),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtSvg
+   CINCLUDES += -I$(QT_INC_DIR)/QtSvg
 endif
 ifeq ($(MODULE_QTTEST),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtTest
+   CINCLUDES += -I$(QT_INC_DIR)/QtTest
 endif
 ifeq ($(MODULE_QTUITOOLS),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtUiTools
+   CINCLUDES += -I$(QT_INC_DIR)/QtUiTools
 endif
 ifeq ($(MODULE_QTWEBKIT),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtWebKit
+   CINCLUDES += -I$(QT_INC_DIR)/QtWebKit
 endif
 ifeq ($(MODULE_QTXML),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtXml
+   CINCLUDES += -I$(QT_INC_DIR)/QtXml
 endif
 ifeq ($(MODULE_QTXMLPATTERNS),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtXmlPatterns
+   CINCLUDES += -I$(QT_INC_DIR)/QtXmlPatterns
 endif

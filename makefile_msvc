@@ -11,6 +11,10 @@
 # Atenção! A compilação do código-fonte do projeto Qt4xHb requer o SDK do Qt
 # Framework, que está disponível no site oficial do projeto.
 
+QT_BIN_DIR = $(QTDIR)/bin
+QT_INC_DIR = $(QTDIR)/include
+QT_LIB_DIR = $(QTDIR)/lib
+
 # lista de módulos
 include mak/modules1.mak
 
@@ -47,14 +51,14 @@ CFLAGS += -DQT_THREAD_SUPPORT
 include mak/modules3.mak
 
 CINCLUDES =
-CINCLUDES += -I$(QTDIR)/include
-CINCLUDES += -I$(QTDIR)/include/Qt
+CINCLUDES += -I$(QT_INC_DIR)
+CINCLUDES += -I$(QT_INC_DIR)/Qt
 include mak/modules4.mak
 CINCLUDES += -I$(QT4XHB_INC_DIR)
 CINCLUDES += -I$(QT4XHB_SRC_DIR)
 CINCLUDES += -I$(HB_INC_DIR)
 
-MOC = $(QTDIR)/bin/moc
+MOC = $(QT_BIN_DIR)/moc
 
 # include mak/modules5.mak
 # include mak/modules6.mak
@@ -62,6 +66,7 @@ MOC = $(QTDIR)/bin/moc
 include mak/modules7.mak
 
 OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/events$(OBJEXT)
+OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/signals$(OBJEXT)
 OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/dummy$(OBJEXT)
 OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/version$(OBJEXT)
 OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/qt4xhb_utils$(OBJEXT)

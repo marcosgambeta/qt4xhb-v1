@@ -5,57 +5,57 @@
 #
 
 # checa presença dos módulos na instalação do Qt Framework
-ifneq ($(wildcard $(QTDIR)/include/ActiveQt/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/ActiveQt/.*),)
    MODULE_ACTIVEQT = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtCore/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtCore/.*),)
    MODULE_QTCORE = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtDeclarative/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtDeclarative/.*),)
    MODULE_QTDECLARATIVE = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtDesigner/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtDesigner/.*),)
    MODULE_QTDESIGNER = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtGui/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtGui/.*),)
    MODULE_QTGUI = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtHelp/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtHelp/.*),)
    MODULE_QTHELP = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtMultimedia/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtMultimedia/.*),)
    MODULE_QTMULTIMEDIA = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtNetwork/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtNetwork/.*),)
    MODULE_QTNETWORK = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtOpenGL/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtOpenGL/.*),)
    MODULE_QTOPENGL = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtScript/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtScript/.*),)
    MODULE_QTSCRIPT = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtScriptTools/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtScriptTools/.*),)
    MODULE_QTSCRIPTTOOLS = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtSql/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtSql/.*),)
    MODULE_QTSQL = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtSvg/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtSvg/.*),)
    MODULE_QTSVG = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtTest/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtTest/.*),)
    MODULE_QTTEST = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtUiTools/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtUiTools/.*),)
    MODULE_QTUITOOLS = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtWebKit/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtWebKit/.*),)
    MODULE_QTWEBKIT = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtXml/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtXml/.*),)
    MODULE_QTXML = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtXmlPatterns/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtXmlPatterns/.*),)
    MODULE_QTXMLPATTERNS = yes
 endif
