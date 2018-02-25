@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void error( QAxScript * script, int code, const QString & description, int sourcePosition, const QString & sourceText )
+$signal=|error( QAxScript * script, int code, const QString & description, int sourcePosition, const QString & sourceText )
 $endSlotsClass

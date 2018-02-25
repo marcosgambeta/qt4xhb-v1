@@ -11,9 +11,9 @@ $includes
 #include <QSslError>
 
 $beginSlotsClass
-$signal=|void authenticationRequired( QNetworkReply * reply, QAuthenticator * authenticator )
-$signal=|void finished( QNetworkReply * reply )
-$signal=|void networkAccessibleChanged( QNetworkAccessManager::NetworkAccessibility accessible )
-$signal=|void proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator )
-$signal=|void sslErrors( QNetworkReply * reply, const QList<QSslError> & errors )
+$signal=|authenticationRequired( QNetworkReply * reply, QAuthenticator * authenticator )
+$signal=|finished( QNetworkReply * reply )
+$signal=|networkAccessibleChanged( QNetworkAccessManager::NetworkAccessibility accessible )
+$signal=|proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator )
+$signal=|sslErrors( QNetworkReply * reply, const QList<QSslError> & errors )
 $endSlotsClass

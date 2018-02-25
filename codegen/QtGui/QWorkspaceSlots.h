@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void windowActivated( QWidget * w )
+$signal=|windowActivated( QWidget * w )
 $endSlotsClass

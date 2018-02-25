@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void valueChanged( int i )
-$signal=|void valueChanged( const QString & text )
+$signal=|valueChanged( int i )
+$signal=|valueChanged( const QString & text )
 $endSlotsClass

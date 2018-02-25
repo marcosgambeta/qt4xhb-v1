@@ -9,13 +9,13 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void contentsSizeChanged( const QSize & size )
-$signal=|void iconChanged()
-$signal=|void initialLayoutCompleted()
-$signal=|void javaScriptWindowObjectCleared()
-$signal=|void loadFinished( bool ok )
-$signal=|void loadStarted()
-$signal=|void pageChanged()
-$signal=|void titleChanged( const QString & title )
-$signal=|void urlChanged( const QUrl & url )
+$signal=|contentsSizeChanged( const QSize & size )
+$signal=|iconChanged()
+$signal=|initialLayoutCompleted()
+$signal=|javaScriptWindowObjectCleared()
+$signal=|loadFinished( bool ok )
+$signal=|loadStarted()
+$signal=|pageChanged()
+$signal=|titleChanged( const QString & title )
+$signal=|urlChanged( const QUrl & url )
 $endSlotsClass

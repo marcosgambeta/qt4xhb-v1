@@ -9,12 +9,12 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void commandFinished( int id, bool error )
-$signal=|void commandStarted( int id )
-$signal=|void dataTransferProgress( qint64 done, qint64 total )
-$signal=|void done( bool error )
-$signal=|void listInfo( const QUrlInfo & i )
-$signal=|void rawCommandReply( int replyCode, const QString & detail )
-$signal=|void readyRead()
-$signal=|void stateChanged( int state )
+$signal=|commandFinished( int id, bool error )
+$signal=|commandStarted( int id )
+$signal=|dataTransferProgress( qint64 done, qint64 total )
+$signal=|done( bool error )
+$signal=|listInfo( const QUrlInfo & i )
+$signal=|rawCommandReply( int replyCode, const QString & detail )
+$signal=|readyRead()
+$signal=|stateChanged( int state )
 $endSlotsClass

@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void currentChanged( int index )
-$signal=|void tabCloseRequested( int index )
+$signal=|currentChanged( int index )
+$signal=|tabCloseRequested( int index )
 $endSlotsClass

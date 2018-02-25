@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void destroyed( QObject * obj = 0 )
+$signal=|destroyed( QObject * obj = 0 )
 $endSlotsClass

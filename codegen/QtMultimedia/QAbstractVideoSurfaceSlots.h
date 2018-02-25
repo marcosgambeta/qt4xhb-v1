@@ -9,7 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void activeChanged( bool active )
-$signal=|void surfaceFormatChanged( const QVideoSurfaceFormat & format )
-$signal=|void supportedFormatsChanged()
+$signal=|activeChanged( bool active )
+$signal=|surfaceFormatChanged( const QVideoSurfaceFormat & format )
+$signal=|supportedFormatsChanged()
 $endSlotsClass
