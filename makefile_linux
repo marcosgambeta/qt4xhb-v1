@@ -52,7 +52,7 @@ endif
 
 CC = g++
 
-CFLAGS = -c -O2 -frtti -fexceptions -mthreads -Wall
+CFLAGS = -c -O2 -frtti -fexceptions -Wall
 CFLAGS += -DUNICODE
 CFLAGS += -DQT_DLL
 CFLAGS += -DQT_NO_DEBUG
@@ -70,7 +70,7 @@ CINCLUDES += -I$(HB_INC_DIR)
 AR = ar
 ARFLAGS = rc
 
-MOC = $(QT_BIN_DIR)/moc
+MOC = $(QT_BIN_DIR)/moc-qt4
 
 # include mak/modules5.mak
 # include mak/modules6.mak
@@ -243,7 +243,7 @@ $(QT4XHB_OBJ_DIR)/habstractlistmodelMoc.cpp    : $(QT4XHB_SRC_DIR)/habstractlist
 	$(MOC) $^ -o $@
 $(QT4XHB_OBJ_DIR)/habstracttablemodelMoc.cpp   : $(QT4XHB_SRC_DIR)/habstracttablemodel.h
 	$(MOC) $^ -o $@
-$(QT4XHB_OBJ_DIR)/habstracttablemodelV2Moc.cpp : $(QT4XHB_SRC_DIR)/habstracttablemodelv2.h
+$(QT4XHB_OBJ_DIR)/habstracttablemodelV2Moc.cpp : $(QT4XHB_SRC_DIR)/habstracttablemodelV2.h
 	$(MOC) $^ -o $@
 
 include mak/modules9.mak
