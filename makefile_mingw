@@ -234,7 +234,7 @@ $(QT4XHB_OBJ_DIR)/habstractlistmodelMoc.cpp    : $(QT4XHB_SRC_DIR)/habstractlist
 	$(MOC) $^ -o $@
 $(QT4XHB_OBJ_DIR)/habstracttablemodelMoc.cpp   : $(QT4XHB_SRC_DIR)/habstracttablemodel.h
 	$(MOC) $^ -o $@
-$(QT4XHB_OBJ_DIR)/habstracttablemodelV2Moc.cpp : $(QT4XHB_SRC_DIR)/habstracttablemodelv2.h
+$(QT4XHB_OBJ_DIR)/habstracttablemodelV2Moc.cpp : $(QT4XHB_SRC_DIR)/habstracttablemodelV2.h
 	$(MOC) $^ -o $@
 
 include mak/modules9.mak
