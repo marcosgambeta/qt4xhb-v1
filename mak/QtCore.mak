@@ -6,6 +6,17 @@
 
 # QtCore
 OBJECTS_QTCORE =
+OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstractlistmodel$(OBJEXT)
+OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstractlistmodelMoc$(OBJEXT)
+OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstractlistmodelbin$(OBJEXT)
+OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstractlistmodelcls$(OBJEXT)
+OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodel$(OBJEXT)
+OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodelMoc$(OBJEXT)
+OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodelbin$(OBJEXT)
+OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodelcls$(OBJEXT)
+OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodelV2$(OBJEXT)
+OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodelV2Moc$(OBJEXT)
+OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodelclsV2$(OBJEXT)
 OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/QAbstractAnimationClass$(OBJEXT)
 OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/QAbstractAnimationSlots$(OBJEXT)
 OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/QAbstractAnimationSlotsMoc$(OBJEXT)

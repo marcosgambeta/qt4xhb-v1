@@ -63,8 +63,13 @@ ARFLAGS = rc
 
 MOC = $(QT_BIN_DIR)/moc
 
-# include mak/modules5.mak
-# include mak/modules6.mak
+MOCFLAGS =
+MOCFLAGS += -DQT_NO_DEBUG
+include mak/modules5.mak
+
+MOCINCLUDES =
+MOCINCLUDES += -I$(QT_INC_DIR)
+include mak/modules6.mak
 
 include mak/modules7.mak
 
@@ -73,17 +78,6 @@ OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/signals$(OBJEXT)
 OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/dummy$(OBJEXT)
 OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/version$(OBJEXT)
 OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/qt4xhb_utils$(OBJEXT)
-OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstractlistmodel$(OBJEXT)
-OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstractlistmodelMoc$(OBJEXT)
-OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstractlistmodelbin$(OBJEXT)
-OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstractlistmodelcls$(OBJEXT)
-OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodel$(OBJEXT)
-OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodelMoc$(OBJEXT)
-OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodelbin$(OBJEXT)
-OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodelcls$(OBJEXT)
-OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodelV2$(OBJEXT)
-OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodelV2Moc$(OBJEXT)
-OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodelclsV2$(OBJEXT)
 OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/qt4xhbbase$(OBJEXT)
 
 ALLLIBS =
@@ -229,12 +223,5 @@ $(QT4XHB_OBJ_DIR)/%$(OBJEXT) : $(QT4XHB_OBJ_DIR)/%.c
 	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 $(QT4XHB_OBJ_DIR)/%$(OBJEXT) : $(QT4XHB_OBJ_DIR)/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
-
-$(QT4XHB_OBJ_DIR)/habstractlistmodelMoc.cpp    : $(QT4XHB_SRC_DIR)/habstractlistmodel.h
-	$(MOC) $^ -o $@
-$(QT4XHB_OBJ_DIR)/habstracttablemodelMoc.cpp   : $(QT4XHB_SRC_DIR)/habstracttablemodel.h
-	$(MOC) $^ -o $@
-$(QT4XHB_OBJ_DIR)/habstracttablemodelV2Moc.cpp : $(QT4XHB_SRC_DIR)/habstracttablemodelV2.h
-	$(MOC) $^ -o $@
 
 include mak/modules9.mak

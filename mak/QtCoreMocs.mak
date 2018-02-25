@@ -4,6 +4,12 @@
 # Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 #
 
+$(QT4XHB_OBJ_DIR)/habstractlistmodelMoc.cpp             : $(QT4XHB_SRC_DIR)/QtCore/habstractlistmodel.h
+	$(MOC) $^ -o $@
+$(QT4XHB_OBJ_DIR)/habstracttablemodelMoc.cpp            : $(QT4XHB_SRC_DIR)/QtCore/habstracttablemodel.h
+	$(MOC) $^ -o $@
+$(QT4XHB_OBJ_DIR)/habstracttablemodelV2Moc.cpp          : $(QT4XHB_SRC_DIR)/QtCore/habstracttablemodelV2.h
+	$(MOC) $^ -o $@
 $(QT4XHB_OBJ_DIR)/QAbstractAnimationSlotsMoc.cpp        : $(QT4XHB_SRC_DIR)/QtCore/QAbstractAnimationSlots.h
 	$(MOC) $^ -o $@
 $(QT4XHB_OBJ_DIR)/QAbstractEventDispatcherSlotsMoc.cpp  : $(QT4XHB_SRC_DIR)/QtCore/QAbstractEventDispatcherSlots.h
