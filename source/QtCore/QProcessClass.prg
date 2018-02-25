@@ -249,6 +249,7 @@ QString nativeArguments () const
 */
 HB_FUNC_STATIC( QPROCESS_NATIVEARGUMENTS )
 {
+#if defined(Q_OS_WIN) 
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
@@ -262,6 +263,7 @@ HB_FUNC_STATIC( QPROCESS_NATIVEARGUMENTS )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -394,6 +396,7 @@ void setNativeArguments ( const QString & arguments )
 */
 HB_FUNC_STATIC( QPROCESS_SETNATIVEARGUMENTS )
 {
+#if defined(Q_OS_WIN) 
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
@@ -409,6 +412,7 @@ HB_FUNC_STATIC( QPROCESS_SETNATIVEARGUMENTS )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*

@@ -99,7 +99,7 @@ $prototype=QProcess::ExitStatus exitStatus () const
 $method=|QProcess::ExitStatus|exitStatus|
 
 $prototype=QString nativeArguments () const
-$method=|QString|nativeArguments|
+$method=|QString|nativeArguments||#if defined(Q_OS_WIN) || defined(Q_OS_SYMBIAN)
 
 $prototype=ProcessChannelMode processChannelMode () const
 $method=|QProcess::ProcessChannelMode|processChannelMode|
@@ -120,7 +120,7 @@ $prototype=void setEnvironment ( const QStringList & environment ) (deprecated)
 $method=|void|setEnvironment|const QStringList &
 
 $prototype=void setNativeArguments ( const QString & arguments )
-$method=|void|setNativeArguments|const QString &
+$method=|void|setNativeArguments|const QString &|#if defined(Q_OS_WIN) || defined(Q_OS_SYMBIAN)
 
 $prototype=void setProcessChannelMode ( ProcessChannelMode mode )
 $method=|void|setProcessChannelMode|QProcess::ProcessChannelMode
