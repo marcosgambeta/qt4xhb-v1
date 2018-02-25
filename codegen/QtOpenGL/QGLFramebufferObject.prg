@@ -19,6 +19,7 @@ CLASS QGLFramebufferObject INHERIT QPaintDevice
 
    METHOD new
    METHOD delete
+
    METHOD attachment
    METHOD bind
    METHOD drawTexture
@@ -46,23 +47,25 @@ $destructor
 $includes
 
 $prototype=QGLFramebufferObject ( const QSize & size, GLenum target = GL_TEXTURE_2D )
-$constructor=|new1|const QSize &,GLenum=GL_TEXTURE_2D
+$internalConstructor=|new1|const QSize &,GLenum=GL_TEXTURE_2D
 
 $prototype=QGLFramebufferObject ( int width, int height, GLenum target = GL_TEXTURE_2D )
-$constructor=|new2|int,int,GLenum=GL_TEXTURE_2D
+$internalConstructor=|new2|int,int,GLenum=GL_TEXTURE_2D
 
 $prototype=QGLFramebufferObject ( const QSize & size, const QGLFramebufferObjectFormat & format )
-$constructor=|new3|const QSize &,const QGLFramebufferObjectFormat &
+$internalConstructor=|new3|const QSize &,const QGLFramebufferObjectFormat &
 
 $prototype=QGLFramebufferObject ( int width, int height, const QGLFramebufferObjectFormat & format )
-$constructor=|new4|int,int,const QGLFramebufferObjectFormat &
+$internalConstructor=|new4|int,int,const QGLFramebufferObjectFormat &
 
 $prototype=QGLFramebufferObject ( int width, int height, Attachment attachment, GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
-$constructor=|new5|int,int,QGLFramebufferObject::Attachment,GLenum=GL_TEXTURE_2D,GLenum=GL_RGBA8
+$internalConstructor=|new5|int,int,QGLFramebufferObject::Attachment,GLenum=GL_TEXTURE_2D,GLenum=GL_RGBA8
 
 $prototype=QGLFramebufferObject ( const QSize & size, Attachment attachment, GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
-$constructor=|new6|const QSize &,QGLFramebufferObject::Attachment,GLenum=GL_TEXTURE_2D,GLenum=GL_RGBA8
+$internalConstructor=|new6|const QSize &,QGLFramebufferObject::Attachment,GLenum=GL_TEXTURE_2D,GLenum=GL_RGBA8
 
+%% TODO: conflict between [1] and [6]
+%% TODO: conflict between [2] and [5]
 //[1]QGLFramebufferObject ( const QSize & size, GLenum target = GL_TEXTURE_2D )
 //[2]QGLFramebufferObject ( int width, int height, GLenum target = GL_TEXTURE_2D )
 //[3]QGLFramebufferObject ( const QSize & size, const QGLFramebufferObjectFormat & format )
@@ -123,11 +126,11 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_DRAWTEXTURE )
 {
   if( ISBETWEEN(2,3) && ISQRECTF(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
-    QGLFrameBufferObject_drawTexture1();
+    QGLFramebufferObject_drawTexture1();
   }
   else if( ISBETWEEN(2,3) && ISQPOINTF(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
-    QGLFrameBufferObject_drawTexture2();
+    QGLFramebufferObject_drawTexture2();
   }
   else
   {

@@ -18,14 +18,9 @@ REQUEST QTRANSFORM
 
 CLASS QImage INHERIT QPaintDevice
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new9
-   METHOD new10
-   METHOD new11
    METHOD new
    METHOD delete
+
    METHOD allGray
    METHOD bitPlaneCount
    METHOD byteCount
@@ -80,8 +75,9 @@ CLASS QImage INHERIT QPaintDevice
    METHOD valid
    METHOD width
    METHOD fromData
-   METHOD trueMatrix2
    METHOD trueMatrix
+   METHOD toVariant
+   METHOD fromVariant
 
    DESTRUCTOR destroyObject
 
@@ -97,47 +93,51 @@ $includes
 #include <QColor>
 
 $prototype=QImage ()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QImage ( const QSize & size, Format format )
-$constructor=|new2|const QSize &,QImage::Format
+$internalConstructor=|new2|const QSize &,QImage::Format
 
 $prototype=QImage ( int width, int height, Format format )
-$constructor=|new3|int,int,QImage::Format
+$internalConstructor=|new3|int,int,QImage::Format
 
 $prototype=QImage ( uchar * data, int width, int height, Format format )
-$constructor=|new4|uchar *,int,int,QImage::Format
+$internalConstructor=|new4|uchar *,int,int,QImage::Format
 
 $prototype=QImage ( const uchar * data, int width, int height, Format format )
-$constructor=|new5|const uchar *,int,int,QImage::Format
+$internalConstructor=|new5|const uchar *,int,int,QImage::Format
 
 $prototype=QImage ( uchar * data, int width, int height, int bytesPerLine, Format format )
-$constructor=|new6|uchar *,int,int,int,QImage::Format
+$internalConstructor=|new6|uchar *,int,int,int,QImage::Format
 
 $prototype=QImage ( const uchar * data, int width, int height, int bytesPerLine, Format format )
-$constructor=|new7|const uchar *,int,int,int,QImage::Format
+$internalConstructor=|new7|const uchar *,int,int,int,QImage::Format
 
 $prototype=QImage ( const char * const[] xpm )
 %% TODO: implementar 'const char * const[] '
 %% $constructor=|new8|const char * const[]
 
 $prototype=QImage ( const QString & fileName, const char * format = 0 )
-$constructor=|new9|const QString &,const char *=0
+$internalConstructor=|new9|const QString &,const char *=0
 
 $prototype=QImage ( const char * fileName, const char * format = 0 )
-$constructor=|new10|const char *,const char *=0
+$internalConstructor=|new10|const char *,const char *=0
 
 $prototype=QImage ( const QImage & image )
-$constructor=|new11|const QImage &
+$internalConstructor=|new11|const QImage &
 
 //[01]QImage ()
 //[02]QImage ( const QSize & size, Format format )
 //[03]QImage ( int width, int height, Format format )
+%% TODO: conflict between [4] and [5]
 //[04]QImage ( uchar * data, int width, int height, Format format )
 //[05]QImage ( const uchar * data, int width, int height, Format format )
+%% TODO: conflict between [6] and [7]
 //[06]QImage ( uchar * data, int width, int height, int bytesPerLine, Format format )
 //[07]QImage ( const uchar * data, int width, int height, int bytesPerLine, Format format )
+%% TODO: implement
 //[08]QImage ( const char * const[] xpm )
+%% TODO: conflict between [9] and [10]
 //[09]QImage ( const QString & fileName, const char * format = 0 )
 //[10]QImage ( const char * fileName, const char * format = 0 )
 //[11]QImage ( const QImage & image )
@@ -146,31 +146,43 @@ HB_FUNC_STATIC( QIMAGE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QIMAGE_NEW1 );
+    QImage_new1();
   }
   else if( ISNUMPAR(2) && ISQSIZE(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QIMAGE_NEW2 );
+    QImage_new2();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QIMAGE_NEW3 );
+    QImage_new3();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISNUMPAR(4) && ISCHAR(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QIMAGE_NEW9 );
+    QImage_new4();
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+  else if( ISNUMPAR(4) && ISCHAR(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QIMAGE_NEW9 );
+    QImage_new5();
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+  else if( ISNUMPAR(5) && ISCHAR(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) )
   {
-    HB_FUNC_EXEC( QIMAGE_NEW10 );
+    QImage_new6();
+  }
+  else if( ISNUMPAR(5) && ISCHAR(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) )
+  {
+    QImage_new7();
+  }
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
+  {
+    QImage_new9();
+  }
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
+  {
+    QImage_new10();
   }
   else if( ISNUMPAR(1) && ISQIMAGE(1) )
   {
-    HB_FUNC_EXEC( QIMAGE_NEW11 );
+    QImage_new11();
   }
   else
   {
@@ -281,6 +293,7 @@ $method=|void|fill,fill2|Qt::GlobalColor
 $prototype=void fill ( const QColor & color )
 $method=|void|fill,fill3|const QColor &
 
+%% TODO: conflict between [1] and [2]
 //[1]void fill ( uint pixelValue )
 //[2]void fill ( Qt::GlobalColor color )
 //[3]void fill ( const QColor & color )
@@ -290,7 +303,10 @@ HB_FUNC_STATIC( QIMAGE_FILL )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
     HB_FUNC_EXEC( QIMAGE_FILL1 );
-    //HB_FUNC_EXEC( QIMAGE_FILL2 );
+  }
+  else if( ISNUMPAR(1) && ISNUM(1) )
+  {
+    HB_FUNC_EXEC( QIMAGE_FILL2 );
   }
   else if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
   {

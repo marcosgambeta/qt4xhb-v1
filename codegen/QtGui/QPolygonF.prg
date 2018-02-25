@@ -19,9 +19,9 @@ CLASS QPolygonF
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new4
    METHOD new
    METHOD delete
+
    METHOD boundingRect
    METHOD containsPoint
    METHOD intersected
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QPOLYGONF_NEW )
   }
   else if( ISNUMPAR(1) && ISARRAY(1) )
   {
-    HB_FUNC_EXEC( QPOLYGONF_NEW4 );
+    QPolygonF_new4();
   }
   else if( ISNUMPAR(1) && ISQRECTF(1) )
   {
