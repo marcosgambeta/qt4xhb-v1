@@ -903,4 +903,12 @@ HB_FUNC_STATIC( QSCRIPTENGINE_CHECKSYNTAX )
   }
 }
 
+void QScriptEngineSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QSCRIPTENGINE_ONSIGNALHANDLEREXCEPTION )
+{
+  QScriptEngineSlots_connect_signal( "signalHandlerException(QScriptValue)", "signalHandlerException(QScriptValue)" );
+}
+
+
 #pragma ENDDUMP

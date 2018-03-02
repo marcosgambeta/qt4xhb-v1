@@ -35,13 +35,12 @@ void QScriptEngineSlots::signalHandlerException( const QScriptValue & exception 
   }
 }
 
-HB_FUNC( QSCRIPTENGINE_ONSIGNALHANDLEREXCEPTION )
+void QScriptEngineSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QScriptEngineSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "signalHandlerException(QScriptValue)", "signalHandlerException(QScriptValue)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
