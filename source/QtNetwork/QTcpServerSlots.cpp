@@ -33,13 +33,12 @@ void QTcpServerSlots::newConnection()
   }
 }
 
-HB_FUNC( QTCPSERVER_ONNEWCONNECTION )
+void QTcpServerSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QTcpServerSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "newConnection()", "newConnection()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

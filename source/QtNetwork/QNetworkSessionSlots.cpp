@@ -96,63 +96,12 @@ void QNetworkSessionSlots::stateChanged( QNetworkSession::State state )
   }
 }
 
-HB_FUNC( QNETWORKSESSION_ONCLOSED )
+void QNetworkSessionSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QNetworkSessionSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "closed()", "closed()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QNETWORKSESSION_ONERROR )
-{
-  if( s == NULL )
-  {
-    s = new QNetworkSessionSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "error(QNetworkSession::SessionError)", "error(QNetworkSession::SessionError)" ) );
-}
-
-HB_FUNC( QNETWORKSESSION_ONNEWCONFIGURATIONACTIVATED )
-{
-  if( s == NULL )
-  {
-    s = new QNetworkSessionSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "newConfigurationActivated()", "newConfigurationActivated()" ) );
-}
-
-HB_FUNC( QNETWORKSESSION_ONOPENED )
-{
-  if( s == NULL )
-  {
-    s = new QNetworkSessionSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "opened()", "opened()" ) );
-}
-
-HB_FUNC( QNETWORKSESSION_ONPREFERREDCONFIGURATIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QNetworkSessionSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "preferredConfigurationChanged(QNetworkConfiguration,bool)", "preferredConfigurationChanged(QNetworkConfiguration,bool)" ) );
-}
-
-HB_FUNC( QNETWORKSESSION_ONSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QNetworkSessionSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "stateChanged(QNetworkSession::State)", "stateChanged(QNetworkSession::State)" ) );
-}
-

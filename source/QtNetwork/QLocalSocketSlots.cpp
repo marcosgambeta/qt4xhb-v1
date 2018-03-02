@@ -70,43 +70,12 @@ void QLocalSocketSlots::stateChanged( QLocalSocket::LocalSocketState socketState
   }
 }
 
-HB_FUNC( QLOCALSOCKET_ONCONNECTED )
+void QLocalSocketSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QLocalSocketSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "connected()", "connected()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QLOCALSOCKET_ONDISCONNECTED )
-{
-  if( s == NULL )
-  {
-    s = new QLocalSocketSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "disconnected()", "disconnected()" ) );
-}
-
-HB_FUNC( QLOCALSOCKET_ONERROR )
-{
-  if( s == NULL )
-  {
-    s = new QLocalSocketSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "error(QLocalSocket::LocalSocketError)", "error(QLocalSocket::LocalSocketError)" ) );
-}
-
-HB_FUNC( QLOCALSOCKET_ONSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QLocalSocketSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "stateChanged(QLocalSocket::LocalSocketState)", "stateChanged(QLocalSocket::LocalSocketState)" ) );
-}
-

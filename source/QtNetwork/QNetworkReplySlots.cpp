@@ -123,63 +123,12 @@ void QNetworkReplySlots::uploadProgress( qint64 bytesSent, qint64 bytesTotal )
   }
 }
 
-HB_FUNC( QNETWORKREPLY_ONDOWNLOADPROGRESS )
+void QNetworkReplySlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QNetworkReplySlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "downloadProgress(qint64,qint64)", "downloadProgress(qint64,qint64)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QNETWORKREPLY_ONERROR )
-{
-  if( s == NULL )
-  {
-    s = new QNetworkReplySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "error(QNetworkReply::NetworkError)", "error(QNetworkReply::NetworkError)" ) );
-}
-
-HB_FUNC( QNETWORKREPLY_ONFINISHED )
-{
-  if( s == NULL )
-  {
-    s = new QNetworkReplySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "finished()", "finished()" ) );
-}
-
-HB_FUNC( QNETWORKREPLY_ONMETADATACHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QNetworkReplySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "metaDataChanged()", "metaDataChanged()" ) );
-}
-
-HB_FUNC( QNETWORKREPLY_ONSSLERRORS )
-{
-  if( s == NULL )
-  {
-    s = new QNetworkReplySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "sslErrors(QList<QSslError>)", "sslErrors(QList<QSslError>)" ) );
-}
-
-HB_FUNC( QNETWORKREPLY_ONUPLOADPROGRESS )
-{
-  if( s == NULL )
-  {
-    s = new QNetworkReplySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "uploadProgress(qint64,qint64)", "uploadProgress(qint64,qint64)" ) );
-}
-

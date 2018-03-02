@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QFTP_LIST )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISOPTCHAR(1) )
+    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
     {
       RINT( obj->list ( OPQSTRING(1,QString()) ) );
     }
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QFTP_LOGIN )
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISOPTCHAR(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(0,2) && ISOPTCHAR(1) && ISOPTCHAR(2) )
     {
       RINT( obj->login ( OPQSTRING(1,QString()), OPQSTRING(2,QString()) ) );
     }
@@ -658,5 +658,48 @@ HB_FUNC_STATIC( QFTP_ABORT )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
+
+void QFtpSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QFTP_ONCOMMANDFINISHED )
+{
+  QFtpSlots_connect_signal( "commandFinished(int,bool)", "commandFinished(int,bool)" );
+}
+
+HB_FUNC_STATIC( QFTP_ONCOMMANDSTARTED )
+{
+  QFtpSlots_connect_signal( "commandStarted(int)", "commandStarted(int)" );
+}
+
+HB_FUNC_STATIC( QFTP_ONDATATRANSFERPROGRESS )
+{
+  QFtpSlots_connect_signal( "dataTransferProgress(qint64,qint64)", "dataTransferProgress(qint64,qint64)" );
+}
+
+HB_FUNC_STATIC( QFTP_ONDONE )
+{
+  QFtpSlots_connect_signal( "done(bool)", "done(bool)" );
+}
+
+HB_FUNC_STATIC( QFTP_ONLISTINFO )
+{
+  QFtpSlots_connect_signal( "listInfo(QUrlInfo)", "listInfo(QUrlInfo)" );
+}
+
+HB_FUNC_STATIC( QFTP_ONRAWCOMMANDREPLY )
+{
+  QFtpSlots_connect_signal( "rawCommandReply(int,QString)", "rawCommandReply(int,QString)" );
+}
+
+HB_FUNC_STATIC( QFTP_ONREADYREAD )
+{
+  QFtpSlots_connect_signal( "readyRead()", "readyRead()" );
+}
+
+HB_FUNC_STATIC( QFTP_ONSTATECHANGED )
+{
+  QFtpSlots_connect_signal( "stateChanged(int)", "stateChanged(int)" );
+}
+
 
 #pragma ENDDUMP

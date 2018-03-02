@@ -499,4 +499,37 @@ HB_FUNC_STATIC( QNETWORKSESSION_STOP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QNetworkSessionSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QNETWORKSESSION_ONCLOSED )
+{
+  QNetworkSessionSlots_connect_signal( "closed()", "closed()" );
+}
+
+HB_FUNC_STATIC( QNETWORKSESSION_ONERROR )
+{
+  QNetworkSessionSlots_connect_signal( "error(QNetworkSession::SessionError)", "error(QNetworkSession::SessionError)" );
+}
+
+HB_FUNC_STATIC( QNETWORKSESSION_ONNEWCONFIGURATIONACTIVATED )
+{
+  QNetworkSessionSlots_connect_signal( "newConfigurationActivated()", "newConfigurationActivated()" );
+}
+
+HB_FUNC_STATIC( QNETWORKSESSION_ONOPENED )
+{
+  QNetworkSessionSlots_connect_signal( "opened()", "opened()" );
+}
+
+HB_FUNC_STATIC( QNETWORKSESSION_ONPREFERREDCONFIGURATIONCHANGED )
+{
+  QNetworkSessionSlots_connect_signal( "preferredConfigurationChanged(QNetworkConfiguration,bool)", "preferredConfigurationChanged(QNetworkConfiguration,bool)" );
+}
+
+HB_FUNC_STATIC( QNETWORKSESSION_ONSTATECHANGED )
+{
+  QNetworkSessionSlots_connect_signal( "stateChanged(QNetworkSession::State)", "stateChanged(QNetworkSession::State)" );
+}
+
+
 #pragma ENDDUMP

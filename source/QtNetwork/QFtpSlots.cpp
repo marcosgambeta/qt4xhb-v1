@@ -130,83 +130,12 @@ void QFtpSlots::stateChanged( int state )
   }
 }
 
-HB_FUNC( QFTP_ONCOMMANDFINISHED )
+void QFtpSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QFtpSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "commandFinished(int,bool)", "commandFinished(int,bool)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QFTP_ONCOMMANDSTARTED )
-{
-  if( s == NULL )
-  {
-    s = new QFtpSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "commandStarted(int)", "commandStarted(int)" ) );
-}
-
-HB_FUNC( QFTP_ONDATATRANSFERPROGRESS )
-{
-  if( s == NULL )
-  {
-    s = new QFtpSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "dataTransferProgress(qint64,qint64)", "dataTransferProgress(qint64,qint64)" ) );
-}
-
-HB_FUNC( QFTP_ONDONE )
-{
-  if( s == NULL )
-  {
-    s = new QFtpSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "done(bool)", "done(bool)" ) );
-}
-
-HB_FUNC( QFTP_ONLISTINFO )
-{
-  if( s == NULL )
-  {
-    s = new QFtpSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "listInfo(QUrlInfo)", "listInfo(QUrlInfo)" ) );
-}
-
-HB_FUNC( QFTP_ONRAWCOMMANDREPLY )
-{
-  if( s == NULL )
-  {
-    s = new QFtpSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "rawCommandReply(int,QString)", "rawCommandReply(int,QString)" ) );
-}
-
-HB_FUNC( QFTP_ONREADYREAD )
-{
-  if( s == NULL )
-  {
-    s = new QFtpSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "readyRead()", "readyRead()" ) );
-}
-
-HB_FUNC( QFTP_ONSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QFtpSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "stateChanged(int)", "stateChanged(int)" ) );
-}
-
