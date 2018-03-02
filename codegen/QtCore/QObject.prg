@@ -1563,4 +1563,8 @@ $method=|void|deleteLater|
 
 $extraMethods
 
+$connectSignalFunction
+
+$signalMethod=|destroyed(QObject*)
+
 #pragma ENDDUMP

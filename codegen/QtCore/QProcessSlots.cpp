@@ -17,9 +17,4 @@ $slot=|started()
 $slot=|stateChanged( QProcess::ProcessState newState )
 $endSlotsClass
 
-$signalMethod=|error(QProcess::ProcessError)
-$signalMethod=|finished(int,QProcess::ExitStatus)
-$signalMethod=|readyReadStandardError()
-$signalMethod=|readyReadStandardOutput()
-$signalMethod=|started()
-$signalMethod=|stateChanged(QProcess::ProcessState)
+$connectSignalFunction

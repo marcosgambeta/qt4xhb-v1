@@ -298,4 +298,8 @@ HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE )
   }
 }
 
+$connectSignalFunction
+
+$signalMethod=|aboutToQuit()
+
 #pragma ENDDUMP

@@ -21,13 +21,4 @@ $slot=|progressValueChanged( int progressValue )
 $slot=|progressTextChanged( const QString & progressText )
 $endSlotsClass
 
-$signalMethod=|started()
-$signalMethod=|finished()
-$signalMethod=|canceled()
-$signalMethod=|paused()
-$signalMethod=|resumed()
-$signalMethod=|resultReadyAt(int)
-$signalMethod=|resultsReadyAt(int,int)
-$signalMethod=|progressRangeChanged(int,int)
-$signalMethod=|progressValueChanged(int)
-$signalMethod=|progressTextChanged(QString)
+$connectSignalFunction

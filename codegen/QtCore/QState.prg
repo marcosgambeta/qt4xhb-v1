@@ -133,4 +133,9 @@ $method=|void|setInitialState|QAbstractState *
 $prototype=QList<QAbstractTransition *> transitions () const
 $method=|QList<QAbstractTransition *>|transitions|
 
+$connectSignalFunction
+
+$signalMethod=|finished()
+$signalMethod=|propertiesAssigned()
+
 #pragma ENDDUMP

@@ -103,4 +103,17 @@ $method=|void|resume|
 $prototype=void togglePaused()
 $method=|void|togglePaused|
 
+$connectSignalFunction
+
+$signalMethod=|started()
+$signalMethod=|finished()
+$signalMethod=|canceled()
+$signalMethod=|paused()
+$signalMethod=|resumed()
+$signalMethod=|resultReadyAt(int)
+$signalMethod=|resultsReadyAt(int,int)
+$signalMethod=|progressRangeChanged(int,int)
+$signalMethod=|progressValueChanged(int)
+$signalMethod=|progressTextChanged(QString)
+
 #pragma ENDDUMP

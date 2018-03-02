@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=|activated( int socket )
 $endSlotsClass
 
-$signalMethod=|activated(int)
+$connectSignalFunction

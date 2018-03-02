@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=|destroyed( QObject * obj )
 $endSlotsClass
 
-$signalMethod=|destroyed(QObject*)
+$connectSignalFunction

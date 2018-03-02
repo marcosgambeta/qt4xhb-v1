@@ -15,9 +15,4 @@ $slot=|mapped( QWidget * w )
 $slot=|mapped( QObject * o )
 $endSlotsClass
 
-$beginGroup
-$signalMethod=|mapped(int)
-$signalMethod=|mapped(QString)
-$signalMethod=|mapped(QWidget*)
-$signalMethod=|mapped(QObject*)
-$endGroup
+$connectSignalFunction
