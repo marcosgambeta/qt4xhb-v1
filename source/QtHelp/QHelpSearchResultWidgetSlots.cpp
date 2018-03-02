@@ -35,13 +35,12 @@ void QHelpSearchResultWidgetSlots::requestShowLink( const QUrl & link )
   }
 }
 
-HB_FUNC( QHELPSEARCHRESULTWIDGET_ONREQUESTSHOWLINK )
+void QHelpSearchResultWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QHelpSearchResultWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "requestShowLink(QUrl)", "requestShowLink(QUrl)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

@@ -68,43 +68,12 @@ void QHelpSearchEngineSlots::searchingStarted()
   }
 }
 
-HB_FUNC( QHELPSEARCHENGINE_ONINDEXINGFINISHED )
+void QHelpSearchEngineSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QHelpSearchEngineSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "indexingFinished()", "indexingFinished()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QHELPSEARCHENGINE_ONINDEXINGSTARTED )
-{
-  if( s == NULL )
-  {
-    s = new QHelpSearchEngineSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "indexingStarted()", "indexingStarted()" ) );
-}
-
-HB_FUNC( QHELPSEARCHENGINE_ONSEARCHINGFINISHED )
-{
-  if( s == NULL )
-  {
-    s = new QHelpSearchEngineSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "searchingFinished(int)", "searchingFinished(int)" ) );
-}
-
-HB_FUNC( QHELPSEARCHENGINE_ONSEARCHINGSTARTED )
-{
-  if( s == NULL )
-  {
-    s = new QHelpSearchEngineSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "searchingStarted()", "searchingStarted()" ) );
-}
-

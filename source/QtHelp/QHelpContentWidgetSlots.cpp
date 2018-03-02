@@ -35,13 +35,12 @@ void QHelpContentWidgetSlots::linkActivated( const QUrl & link )
   }
 }
 
-HB_FUNC( QHELPCONTENTWIDGET_ONLINKACTIVATED )
+void QHelpContentWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QHelpContentWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "linkActivated(QUrl)", "linkActivated(QUrl)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

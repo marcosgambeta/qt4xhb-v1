@@ -44,23 +44,12 @@ void QHelpIndexModelSlots::indexCreationStarted()
   }
 }
 
-HB_FUNC( QHELPINDEXMODEL_ONINDEXCREATED )
+void QHelpIndexModelSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QHelpIndexModelSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "indexCreated()", "indexCreated()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QHELPINDEXMODEL_ONINDEXCREATIONSTARTED )
-{
-  if( s == NULL )
-  {
-    s = new QHelpIndexModelSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "indexCreationStarted()", "indexCreationStarted()" ) );
-}
-

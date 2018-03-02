@@ -44,23 +44,12 @@ void QHelpContentModelSlots::contentsCreationStarted()
   }
 }
 
-HB_FUNC( QHELPCONTENTMODEL_ONCONTENTSCREATED )
+void QHelpContentModelSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QHelpContentModelSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "contentsCreated()", "contentsCreated()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QHELPCONTENTMODEL_ONCONTENTSCREATIONSTARTED )
-{
-  if( s == NULL )
-  {
-    s = new QHelpContentModelSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "contentsCreationStarted()", "contentsCreationStarted()" ) );
-}
-

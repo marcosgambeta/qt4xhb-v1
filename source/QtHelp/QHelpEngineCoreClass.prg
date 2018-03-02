@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILES )
 
   if( obj )
   {
-    if( ISNUMPAR(3) && ISCHAR(1) && ISARRAY(2) && ISOPTCHAR(3) )
+    if( ISBETWEEN(2,3) && ISCHAR(1) && ISARRAY(2) && ISOPTCHAR(3) )
     {
       QList<QUrl> list = obj->files ( PQSTRING(1), PQSTRINGLIST(2), OPQSTRING(3,QString()) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QURL" );
@@ -659,5 +659,28 @@ HB_FUNC_STATIC( QHELPENGINECORE_NAMESPACENAME )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+
+void QHelpEngineCoreSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QHELPENGINECORE_ONCURRENTFILTERCHANGED )
+{
+  QHelpEngineCoreSlots_connect_signal( "currentFilterChanged(QString)", "currentFilterChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPFINISHED )
+{
+  QHelpEngineCoreSlots_connect_signal( "setupFinished()", "setupFinished()" );
+}
+
+HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPSTARTED )
+{
+  QHelpEngineCoreSlots_connect_signal( "setupStarted()", "setupStarted()" );
+}
+
+HB_FUNC_STATIC( QHELPENGINECORE_ONWARNING )
+{
+  QHelpEngineCoreSlots_connect_signal( "warning(QString)", "warning(QString)" );
+}
+
 
 #pragma ENDDUMP
