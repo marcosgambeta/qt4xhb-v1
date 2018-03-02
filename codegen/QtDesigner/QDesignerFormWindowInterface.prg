@@ -71,6 +71,8 @@ CLASS QDesignerFormWindowInterface INHERIT QWidget
    METHOD onWidgetManaged
    METHOD onWidgetRemoved
    METHOD onWidgetUnmanaged
+   METHOD onAboutToUnmanageWidget
+   METHOD onResourceFilesChanged
 
    DESTRUCTOR destroyObject
 
@@ -247,5 +249,21 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+
+$connectSignalFunction
+
+$signalMethod=|aboutToUnmanageWidget(QWidget*)
+$signalMethod=|activated(QWidget*)
+$signalMethod=|changed()
+$signalMethod=|featureChanged(QDesignerFormWindowInterface::Feature)
+$signalMethod=|fileNameChanged(QString)
+$signalMethod=|geometryChanged()
+$signalMethod=|mainContainerChanged(QWidget*)
+$signalMethod=|objectRemoved(QObject*)
+$signalMethod=|resourceFilesChanged()
+$signalMethod=|selectionChanged()
+$signalMethod=|widgetManaged(QWidget*)
+$signalMethod=|widgetRemoved(QWidget*)
+$signalMethod=|widgetUnmanaged(QWidget*)
 
 #pragma ENDDUMP

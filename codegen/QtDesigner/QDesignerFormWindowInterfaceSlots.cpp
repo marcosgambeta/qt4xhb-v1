@@ -24,16 +24,4 @@ $slot=|widgetRemoved( QWidget * widget )
 $slot=|widgetUnmanaged( QWidget * widget )
 $endSlotsClass
 
-$signalMethod=|aboutToUnmanageWidget(QWidget*)
-$signalMethod=|activated(QWidget*)
-$signalMethod=|changed()
-$signalMethod=|featureChanged(QDesignerFormWindowInterface::Feature)
-$signalMethod=|fileNameChanged(QString)
-$signalMethod=|geometryChanged()
-$signalMethod=|mainContainerChanged(QWidget*)
-$signalMethod=|objectRemoved(QObject*)
-$signalMethod=|resourceFilesChanged()
-$signalMethod=|selectionChanged()
-$signalMethod=|widgetManaged(QWidget*)
-$signalMethod=|widgetRemoved(QWidget*)
-$signalMethod=|widgetUnmanaged(QWidget*)
+$connectSignalFunction
