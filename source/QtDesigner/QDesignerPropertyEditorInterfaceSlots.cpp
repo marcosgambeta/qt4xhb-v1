@@ -37,13 +37,12 @@ void QDesignerPropertyEditorInterfaceSlots::propertyChanged( const QString & nam
   }
 }
 
-HB_FUNC( QDESIGNERPROPERTYEDITORINTERFACE_ONPROPERTYCHANGED )
+void QDesignerPropertyEditorInterfaceSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QDesignerPropertyEditorInterfaceSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "propertyChanged(QString,QVariant)", "propertyChanged(QString,QVariant)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

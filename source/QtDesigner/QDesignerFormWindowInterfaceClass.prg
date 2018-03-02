@@ -75,6 +75,8 @@ CLASS QDesignerFormWindowInterface INHERIT QWidget
    METHOD onWidgetManaged
    METHOD onWidgetRemoved
    METHOD onWidgetUnmanaged
+   METHOD onAboutToUnmanageWidget
+   METHOD onResourceFilesChanged
 
    DESTRUCTOR destroyObject
 
@@ -990,5 +992,73 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+
+void QDesignerFormWindowInterfaceSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ONABOUTTOUNMANAGEWIDGET )
+{
+  QDesignerFormWindowInterfaceSlots_connect_signal( "aboutToUnmanageWidget(QWidget*)", "aboutToUnmanageWidget(QWidget*)" );
+}
+
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ONACTIVATED )
+{
+  QDesignerFormWindowInterfaceSlots_connect_signal( "activated(QWidget*)", "activated(QWidget*)" );
+}
+
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ONCHANGED )
+{
+  QDesignerFormWindowInterfaceSlots_connect_signal( "changed()", "changed()" );
+}
+
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ONFEATURECHANGED )
+{
+  QDesignerFormWindowInterfaceSlots_connect_signal( "featureChanged(QDesignerFormWindowInterface::Feature)", "featureChanged(QDesignerFormWindowInterface::Feature)" );
+}
+
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ONFILENAMECHANGED )
+{
+  QDesignerFormWindowInterfaceSlots_connect_signal( "fileNameChanged(QString)", "fileNameChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ONGEOMETRYCHANGED )
+{
+  QDesignerFormWindowInterfaceSlots_connect_signal( "geometryChanged()", "geometryChanged()" );
+}
+
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ONMAINCONTAINERCHANGED )
+{
+  QDesignerFormWindowInterfaceSlots_connect_signal( "mainContainerChanged(QWidget*)", "mainContainerChanged(QWidget*)" );
+}
+
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ONOBJECTREMOVED )
+{
+  QDesignerFormWindowInterfaceSlots_connect_signal( "objectRemoved(QObject*)", "objectRemoved(QObject*)" );
+}
+
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ONRESOURCEFILESCHANGED )
+{
+  QDesignerFormWindowInterfaceSlots_connect_signal( "resourceFilesChanged()", "resourceFilesChanged()" );
+}
+
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ONSELECTIONCHANGED )
+{
+  QDesignerFormWindowInterfaceSlots_connect_signal( "selectionChanged()", "selectionChanged()" );
+}
+
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ONWIDGETMANAGED )
+{
+  QDesignerFormWindowInterfaceSlots_connect_signal( "widgetManaged(QWidget*)", "widgetManaged(QWidget*)" );
+}
+
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ONWIDGETREMOVED )
+{
+  QDesignerFormWindowInterfaceSlots_connect_signal( "widgetRemoved(QWidget*)", "widgetRemoved(QWidget*)" );
+}
+
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ONWIDGETUNMANAGED )
+{
+  QDesignerFormWindowInterfaceSlots_connect_signal( "widgetUnmanaged(QWidget*)", "widgetUnmanaged(QWidget*)" );
+}
+
 
 #pragma ENDDUMP

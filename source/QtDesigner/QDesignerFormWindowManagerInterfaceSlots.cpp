@@ -61,33 +61,12 @@ void QDesignerFormWindowManagerInterfaceSlots::formWindowRemoved( QDesignerFormW
   }
 }
 
-HB_FUNC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONACTIVEFORMWINDOWCHANGED )
+void QDesignerFormWindowManagerInterfaceSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QDesignerFormWindowManagerInterfaceSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "activeFormWindowChanged(QDesignerFormWindowInterface*)", "activeFormWindowChanged(QDesignerFormWindowInterface*)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWADDED )
-{
-  if( s == NULL )
-  {
-    s = new QDesignerFormWindowManagerInterfaceSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "formWindowAdded(QDesignerFormWindowInterface*)", "formWindowAdded(QDesignerFormWindowInterface*)" ) );
-}
-
-HB_FUNC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWREMOVED )
-{
-  if( s == NULL )
-  {
-    s = new QDesignerFormWindowManagerInterfaceSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "formWindowRemoved(QDesignerFormWindowInterface*)", "formWindowRemoved(QDesignerFormWindowInterface*)" ) );
-}
-
