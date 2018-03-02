@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QDOMNODE_FIRSTCHILDELEMENT )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISOPTCHAR(1) )
+    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
     {
       QDomElement * ptr = new QDomElement( obj->firstChildElement ( OPQSTRING(1,QString()) ) );
       _qt4xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
@@ -759,7 +759,7 @@ HB_FUNC_STATIC( QDOMNODE_LASTCHILDELEMENT )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISOPTCHAR(1) )
+    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
     {
       QDomElement * ptr = new QDomElement( obj->lastChildElement ( OPQSTRING(1,QString()) ) );
       _qt4xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
@@ -882,7 +882,7 @@ HB_FUNC_STATIC( QDOMNODE_NEXTSIBLINGELEMENT )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISOPTCHAR(1) )
+    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
     {
       QDomElement * ptr = new QDomElement( obj->nextSiblingElement ( OPQSTRING(1,QString()) ) );
       _qt4xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
@@ -1068,7 +1068,7 @@ HB_FUNC_STATIC( QDOMNODE_PREVIOUSSIBLINGELEMENT )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISOPTCHAR(1) )
+    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
     {
       QDomElement * ptr = new QDomElement( obj->previousSiblingElement ( OPQSTRING(1,QString()) ) );
       _qt4xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
