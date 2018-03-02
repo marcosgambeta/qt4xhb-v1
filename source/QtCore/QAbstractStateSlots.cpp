@@ -44,23 +44,12 @@ void QAbstractStateSlots::exited()
   }
 }
 
-HB_FUNC( QABSTRACTSTATE_ONENTERED )
+void QAbstractStateSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QAbstractStateSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "entered()", "entered()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QABSTRACTSTATE_ONEXITED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractStateSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "exited()", "exited()" ) );
-}
-

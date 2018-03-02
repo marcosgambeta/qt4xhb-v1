@@ -36,13 +36,12 @@ void QObjectSlots::destroyed( QObject * obj )
   }
 }
 
-HB_FUNC( QOBJECT_ONDESTROYED )
+void QObjectSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QObjectSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "destroyed(QObject*)", "destroyed(QObject*)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

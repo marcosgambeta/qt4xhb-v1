@@ -44,23 +44,12 @@ void QStateSlots::propertiesAssigned()
   }
 }
 
-HB_FUNC( QSTATE_ONFINISHED )
+void QStateSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QStateSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "finished()", "finished()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QSTATE_ONPROPERTIESASSIGNED )
-{
-  if( s == NULL )
-  {
-    s = new QStateSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "propertiesAssigned()", "propertiesAssigned()" ) );
-}
-

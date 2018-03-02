@@ -44,23 +44,12 @@ void QAbstractEventDispatcherSlots::awake()
   }
 }
 
-HB_FUNC( QABSTRACTEVENTDISPATCHER_ONABOUTTOBLOCK )
+void QAbstractEventDispatcherSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QAbstractEventDispatcherSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "aboutToBlock()", "aboutToBlock()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QABSTRACTEVENTDISPATCHER_ONAWAKE )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractEventDispatcherSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "awake()", "awake()" ) );
-}
-

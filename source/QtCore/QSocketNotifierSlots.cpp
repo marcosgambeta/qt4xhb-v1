@@ -35,13 +35,12 @@ void QSocketNotifierSlots::activated( int socket )
   }
 }
 
-HB_FUNC( QSOCKETNOTIFIER_ONACTIVATED )
+void QSocketNotifierSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QSocketNotifierSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "activated(int)", "activated(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

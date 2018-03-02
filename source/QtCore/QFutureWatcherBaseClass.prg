@@ -433,4 +433,57 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_TOGGLEPAUSED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QFutureWatcherBaseSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QFUTUREWATCHERBASE_ONSTARTED )
+{
+  QFutureWatcherBaseSlots_connect_signal( "started()", "started()" );
+}
+
+HB_FUNC_STATIC( QFUTUREWATCHERBASE_ONFINISHED )
+{
+  QFutureWatcherBaseSlots_connect_signal( "finished()", "finished()" );
+}
+
+HB_FUNC_STATIC( QFUTUREWATCHERBASE_ONCANCELED )
+{
+  QFutureWatcherBaseSlots_connect_signal( "canceled()", "canceled()" );
+}
+
+HB_FUNC_STATIC( QFUTUREWATCHERBASE_ONPAUSED )
+{
+  QFutureWatcherBaseSlots_connect_signal( "paused()", "paused()" );
+}
+
+HB_FUNC_STATIC( QFUTUREWATCHERBASE_ONRESUMED )
+{
+  QFutureWatcherBaseSlots_connect_signal( "resumed()", "resumed()" );
+}
+
+HB_FUNC_STATIC( QFUTUREWATCHERBASE_ONRESULTREADYAT )
+{
+  QFutureWatcherBaseSlots_connect_signal( "resultReadyAt(int)", "resultReadyAt(int)" );
+}
+
+HB_FUNC_STATIC( QFUTUREWATCHERBASE_ONRESULTSREADYAT )
+{
+  QFutureWatcherBaseSlots_connect_signal( "resultsReadyAt(int,int)", "resultsReadyAt(int,int)" );
+}
+
+HB_FUNC_STATIC( QFUTUREWATCHERBASE_ONPROGRESSRANGECHANGED )
+{
+  QFutureWatcherBaseSlots_connect_signal( "progressRangeChanged(int,int)", "progressRangeChanged(int,int)" );
+}
+
+HB_FUNC_STATIC( QFUTUREWATCHERBASE_ONPROGRESSVALUECHANGED )
+{
+  QFutureWatcherBaseSlots_connect_signal( "progressValueChanged(int)", "progressValueChanged(int)" );
+}
+
+HB_FUNC_STATIC( QFUTUREWATCHERBASE_ONPROGRESSTEXTCHANGED )
+{
+  QFutureWatcherBaseSlots_connect_signal( "progressTextChanged(QString)", "progressTextChanged(QString)" );
+}
+
+
 #pragma ENDDUMP

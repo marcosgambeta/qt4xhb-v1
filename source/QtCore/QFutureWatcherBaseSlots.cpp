@@ -146,103 +146,12 @@ void QFutureWatcherBaseSlots::progressTextChanged( const QString & progressText 
   }
 }
 
-HB_FUNC( QFUTUREWATCHERBASE_ONSTARTED )
+void QFutureWatcherBaseSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QFutureWatcherBaseSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "started()", "started()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QFUTUREWATCHERBASE_ONFINISHED )
-{
-  if( s == NULL )
-  {
-    s = new QFutureWatcherBaseSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "finished()", "finished()" ) );
-}
-
-HB_FUNC( QFUTUREWATCHERBASE_ONCANCELED )
-{
-  if( s == NULL )
-  {
-    s = new QFutureWatcherBaseSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "canceled()", "canceled()" ) );
-}
-
-HB_FUNC( QFUTUREWATCHERBASE_ONPAUSED )
-{
-  if( s == NULL )
-  {
-    s = new QFutureWatcherBaseSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "paused()", "paused()" ) );
-}
-
-HB_FUNC( QFUTUREWATCHERBASE_ONRESUMED )
-{
-  if( s == NULL )
-  {
-    s = new QFutureWatcherBaseSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "resumed()", "resumed()" ) );
-}
-
-HB_FUNC( QFUTUREWATCHERBASE_ONRESULTREADYAT )
-{
-  if( s == NULL )
-  {
-    s = new QFutureWatcherBaseSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "resultReadyAt(int)", "resultReadyAt(int)" ) );
-}
-
-HB_FUNC( QFUTUREWATCHERBASE_ONRESULTSREADYAT )
-{
-  if( s == NULL )
-  {
-    s = new QFutureWatcherBaseSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "resultsReadyAt(int,int)", "resultsReadyAt(int,int)" ) );
-}
-
-HB_FUNC( QFUTUREWATCHERBASE_ONPROGRESSRANGECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QFutureWatcherBaseSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "progressRangeChanged(int,int)", "progressRangeChanged(int,int)" ) );
-}
-
-HB_FUNC( QFUTUREWATCHERBASE_ONPROGRESSVALUECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QFutureWatcherBaseSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "progressValueChanged(int)", "progressValueChanged(int)" ) );
-}
-
-HB_FUNC( QFUTUREWATCHERBASE_ONPROGRESSTEXTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QFutureWatcherBaseSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "progressTextChanged(QString)", "progressTextChanged(QString)" ) );
-}
-

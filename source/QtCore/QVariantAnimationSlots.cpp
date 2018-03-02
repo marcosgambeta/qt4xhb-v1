@@ -35,13 +35,12 @@ void QVariantAnimationSlots::valueChanged( const QVariant & value )
   }
 }
 
-HB_FUNC( QVARIANTANIMATION_ONVALUECHANGED )
+void QVariantAnimationSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QVariantAnimationSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "valueChanged(QVariant)", "valueChanged(QVariant)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

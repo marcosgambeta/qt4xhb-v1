@@ -33,13 +33,12 @@ void QAbstractTransitionSlots::triggered()
   }
 }
 
-HB_FUNC( QABSTRACTTRANSITION_ONTRIGGERED )
+void QAbstractTransitionSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QAbstractTransitionSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "triggered()", "triggered()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

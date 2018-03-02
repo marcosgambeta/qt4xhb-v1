@@ -48,23 +48,12 @@ void QFileSystemWatcherSlots::fileChanged( const QString & path )
   }
 }
 
-HB_FUNC( QFILESYSTEMWATCHER_ONDIRECTORYCHANGED )
+void QFileSystemWatcherSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QFileSystemWatcherSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "directoryChanged(QString)", "directoryChanged(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QFILESYSTEMWATCHER_ONFILECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QFileSystemWatcherSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "fileChanged(QString)", "fileChanged(QString)" ) );
-}
-

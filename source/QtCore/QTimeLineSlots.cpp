@@ -72,43 +72,12 @@ void QTimeLineSlots::valueChanged( qreal value )
   }
 }
 
-HB_FUNC( QTIMELINE_ONFINISHED )
+void QTimeLineSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QTimeLineSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "finished()", "finished()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QTIMELINE_ONFRAMECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QTimeLineSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "frameChanged(int)", "frameChanged(int)" ) );
-}
-
-HB_FUNC( QTIMELINE_ONSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QTimeLineSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "stateChanged(QTimeLine::State)", "stateChanged(QTimeLine::State)" ) );
-}
-
-HB_FUNC( QTIMELINE_ONVALUECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QTimeLineSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "valueChanged(qreal)", "valueChanged(qreal)" ) );
-}
-

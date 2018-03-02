@@ -74,43 +74,12 @@ void QAbstractAnimationSlots::stateChanged( QAbstractAnimation::State newState, 
   }
 }
 
-HB_FUNC( QABSTRACTANIMATION_ONCURRENTLOOPCHANGED )
+void QAbstractAnimationSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QAbstractAnimationSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "currentLoopChanged(int)", "currentLoopChanged(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QABSTRACTANIMATION_ONDIRECTIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractAnimationSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "directionChanged(QAbstractAnimation::Direction)", "directionChanged(QAbstractAnimation::Direction)" ) );
-}
-
-HB_FUNC( QABSTRACTANIMATION_ONFINISHED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractAnimationSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "finished()", "finished()" ) );
-}
-
-HB_FUNC( QABSTRACTANIMATION_ONSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractAnimationSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)", "stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)" ) );
-}
-

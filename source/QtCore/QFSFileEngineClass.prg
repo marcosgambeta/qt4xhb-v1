@@ -764,7 +764,7 @@ static QString currentPath ( const QString & fileName = QString() )
 */
 HB_FUNC_STATIC( QFSFILEENGINE_CURRENTPATH )
 {
-    if( ISNUMPAR(1) && ISOPTCHAR(1) )
+    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
   {
       RQSTRING( QFSFileEngine::currentPath ( OPQSTRING(1,QString()) ) );
   }

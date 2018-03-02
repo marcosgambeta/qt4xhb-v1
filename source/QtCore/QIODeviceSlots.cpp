@@ -68,43 +68,12 @@ void QIODeviceSlots::readyRead()
   }
 }
 
-HB_FUNC( QIODEVICE_ONABOUTTOCLOSE )
+void QIODeviceSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QIODeviceSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "aboutToClose()", "aboutToClose()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QIODEVICE_ONBYTESWRITTEN )
-{
-  if( s == NULL )
-  {
-    s = new QIODeviceSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "bytesWritten(qint64)", "bytesWritten(qint64)" ) );
-}
-
-HB_FUNC( QIODEVICE_ONREADCHANNELFINISHED )
-{
-  if( s == NULL )
-  {
-    s = new QIODeviceSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "readChannelFinished()", "readChannelFinished()" ) );
-}
-
-HB_FUNC( QIODEVICE_ONREADYREAD )
-{
-  if( s == NULL )
-  {
-    s = new QIODeviceSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "readyRead()", "readyRead()" ) );
-}
-

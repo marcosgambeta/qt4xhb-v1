@@ -33,13 +33,12 @@ void QCoreApplicationSlots::aboutToQuit()
   }
 }
 
-HB_FUNC( QCOREAPPLICATION_ONABOUTTOQUIT )
+void QCoreApplicationSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QCoreApplicationSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "aboutToQuit()", "aboutToQuit()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

@@ -1029,4 +1029,37 @@ HB_FUNC_STATIC( QPROCESS_SYSTEMENVIRONMENT )
   }
 }
 
+void QProcessSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QPROCESS_ONERROR )
+{
+  QProcessSlots_connect_signal( "error(QProcess::ProcessError)", "error(QProcess::ProcessError)" );
+}
+
+HB_FUNC_STATIC( QPROCESS_ONFINISHED )
+{
+  QProcessSlots_connect_signal( "finished(int,QProcess::ExitStatus)", "finished(int,QProcess::ExitStatus)" );
+}
+
+HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDERROR )
+{
+  QProcessSlots_connect_signal( "readyReadStandardError()", "readyReadStandardError()" );
+}
+
+HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDOUTPUT )
+{
+  QProcessSlots_connect_signal( "readyReadStandardOutput()", "readyReadStandardOutput()" );
+}
+
+HB_FUNC_STATIC( QPROCESS_ONSTARTED )
+{
+  QProcessSlots_connect_signal( "started()", "started()" );
+}
+
+HB_FUNC_STATIC( QPROCESS_ONSTATECHANGED )
+{
+  QProcessSlots_connect_signal( "stateChanged(QProcess::ProcessState)", "stateChanged(QProcess::ProcessState)" );
+}
+
+
 #pragma ENDDUMP

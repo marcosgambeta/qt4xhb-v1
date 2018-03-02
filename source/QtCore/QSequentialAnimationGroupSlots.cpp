@@ -35,13 +35,12 @@ void QSequentialAnimationGroupSlots::currentAnimationChanged( QAbstractAnimation
   }
 }
 
-HB_FUNC( QSEQUENTIALANIMATIONGROUP_ONCURRENTANIMATIONCHANGED )
+void QSequentialAnimationGroupSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QSequentialAnimationGroupSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "currentAnimationChanged(QAbstractAnimation*)", "currentAnimationChanged(QAbstractAnimation*)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

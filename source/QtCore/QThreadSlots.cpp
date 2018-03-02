@@ -44,23 +44,12 @@ void QThreadSlots::started()
   }
 }
 
-HB_FUNC( QTHREAD_ONFINISHED )
+void QThreadSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QThreadSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "finished()", "finished()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QTHREAD_ONSTARTED )
-{
-  if( s == NULL )
-  {
-    s = new QThreadSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "started()", "started()" ) );
-}
-

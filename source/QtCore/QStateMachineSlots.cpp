@@ -44,23 +44,12 @@ void QStateMachineSlots::stopped()
   }
 }
 
-HB_FUNC( QSTATEMACHINE_ONSTARTED )
+void QStateMachineSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QStateMachineSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "started()", "started()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QSTATEMACHINE_ONSTOPPED )
-{
-  if( s == NULL )
-  {
-    s = new QStateMachineSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "stopped()", "stopped()" ) );
-}
-

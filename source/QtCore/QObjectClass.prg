@@ -1707,7 +1707,7 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILD )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISOPTCHAR(1) )
+    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
     {
       QObject * ptr = obj->findChild<QObject *> ( OPQSTRING(1,QString()) );
       _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
@@ -2234,5 +2234,13 @@ HB_FUNC_STATIC( QOBJECT_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
+
+void QObjectSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QOBJECT_ONDESTROYED )
+{
+  QObjectSlots_connect_signal( "destroyed(QObject*)", "destroyed(QObject*)" );
+}
+
 
 #pragma ENDDUMP

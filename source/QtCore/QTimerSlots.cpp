@@ -33,13 +33,12 @@ void QTimerSlots::timeout()
   }
 }
 
-HB_FUNC( QTIMER_ONTIMEOUT )
+void QTimerSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QTimerSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "timeout()", "timeout()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
