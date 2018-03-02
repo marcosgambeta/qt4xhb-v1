@@ -108,63 +108,12 @@ void QAxScriptSlots::stateChanged( int state )
   }
 }
 
-HB_FUNC( QAXSCRIPT_ONENTERED )
+void QAxScriptSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QAxScriptSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "entered()", "entered()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QAXSCRIPT_ONERROR )
-{
-  if( s == NULL )
-  {
-    s = new QAxScriptSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "error(int,QString,int,QString)", "error(int,QString,int,QString)" ) );
-}
-
-HB_FUNC( QAXSCRIPT_ONFINISHED1 )
-{
-  if( s == NULL )
-  {
-    s = new QAxScriptSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "finished()", "finished()" ) );
-}
-
-HB_FUNC( QAXSCRIPT_ONFINISHED2 )
-{
-  if( s == NULL )
-  {
-    s = new QAxScriptSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "finished(QVariant)", "finished(QVariant)" ) );
-}
-
-HB_FUNC( QAXSCRIPT_ONFINISHED3 )
-{
-  if( s == NULL )
-  {
-    s = new QAxScriptSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "finished(int,QString,QString,QString)", "finished(int,QString,QString,QString)" ) );
-}
-
-HB_FUNC( QAXSCRIPT_ONSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAxScriptSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "stateChanged(int)", "stateChanged(int)" ) );
-}
-

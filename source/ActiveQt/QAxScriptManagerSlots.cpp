@@ -43,13 +43,12 @@ void QAxScriptManagerSlots::error( QAxScript * script, int code, const QString &
   }
 }
 
-HB_FUNC( QAXSCRIPTMANAGER_ONERROR )
+void QAxScriptManagerSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QAxScriptManagerSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "error(QAxScript*,int,QString,int,QString)", "error(QAxScript*,int,QString,int,QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

@@ -294,7 +294,7 @@ static bool registerEngine ( const QString & name, const QString & extension, co
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_REGISTERENGINE )
 {
-    if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) )
+    if( ISBETWEEN(2,3) && ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) )
   {
       RBOOL( QAxScriptManager::registerEngine ( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()) ) );
   }
@@ -318,5 +318,13 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPTFILEFILTER )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+
+void QAxScriptManagerSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QAXSCRIPTMANAGER_ONERROR )
+{
+  QAxScriptManagerSlots_connect_signal( "error(QAxScript*,int,QString,int,QString)", "error(QAxScript*,int,QString,int,QString)" );
+}
+
 
 #pragma ENDDUMP

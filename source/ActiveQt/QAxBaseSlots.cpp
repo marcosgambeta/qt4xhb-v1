@@ -71,33 +71,12 @@ void QAxBaseSlots::signal( const QString & name, int argc, void * argv )
   }
 }
 
-HB_FUNC( QAXBASE_ONEXCEPTION )
+void QAxBaseSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QAxBaseSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "exception(int,QString,QString,QString)", "exception(int,QString,QString,QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QAXBASE_ONPROPERTYCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAxBaseSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "propertyChanged(QString)", "propertyChanged(QString)" ) );
-}
-
-HB_FUNC( QAXBASE_ONSIGNAL )
-{
-  if( s == NULL )
-  {
-    s = new QAxBaseSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "signal(QString,int,void)", "signal(QString,int,void)" ) );
-}
-
