@@ -31,4 +31,8 @@ $method=|void|activateCurrentItem|
 $prototype=void filterIndices ( const QString & filter, const QString & wildcard = QString() )
 $method=|void|filterIndices|const QString &,const QString &=QString()
 
+$connectSignalFunction
+
+$signalMethod=|linkActivated(QUrl,QString)
+
 #pragma ENDDUMP
