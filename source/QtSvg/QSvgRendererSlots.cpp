@@ -33,13 +33,12 @@ void QSvgRendererSlots::repaintNeeded()
   }
 }
 
-HB_FUNC( QSVGRENDERER_ONREPAINTNEEDED )
+void QSvgRendererSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QSvgRendererSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "repaintNeeded()", "repaintNeeded()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
