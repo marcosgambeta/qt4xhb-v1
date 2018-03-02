@@ -44,23 +44,12 @@ void QScriptEngineDebuggerSlots::evaluationSuspended()
   }
 }
 
-HB_FUNC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONRESUMED )
+void QScriptEngineDebuggerSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QScriptEngineDebuggerSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "evaluationResumed()", "evaluationResumed()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONSUSPENDED )
-{
-  if( s == NULL )
-  {
-    s = new QScriptEngineDebuggerSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "evaluationSuspended()", "evaluationSuspended()" ) );
-}
-
