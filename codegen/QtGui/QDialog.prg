@@ -88,4 +88,10 @@ $method=|void|open|
 $prototype=virtual void reject ()
 $virtualMethod=|void|reject|
 
+$connectSignalFunction
+
+$signalMethod=|accepted()
+$signalMethod=|finished(int)
+$signalMethod=|rejected()
+
 #pragma ENDDUMP

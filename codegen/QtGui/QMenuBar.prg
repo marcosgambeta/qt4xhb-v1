@@ -161,4 +161,9 @@ $virtualMethod=|QSize|sizeHint|
 $prototype=virtual void setVisible ( bool visible )
 $virtualMethod=|void|setVisible|bool
 
+$connectSignalFunction
+
+$signalMethod=|hovered(QAction*)
+$signalMethod=|triggered(QAction*)
+
 #pragma ENDDUMP

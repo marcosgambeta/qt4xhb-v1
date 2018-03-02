@@ -13,5 +13,4 @@ $slot=|currentChanged( int index )
 $slot=|tabCloseRequested( int index )
 $endSlotsClass
 
-$signalMethod=|currentChanged(int)
-$signalMethod=|tabCloseRequested(int)
+$connectSignalFunction

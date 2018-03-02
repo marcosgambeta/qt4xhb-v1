@@ -142,4 +142,11 @@ $method=|void|setIconSize|const QSize &
 $prototype=void toggle ()
 $method=|void|toggle|
 
+$connectSignalFunction
+
+$signalMethod=|clicked(bool)
+$signalMethod=|pressed()
+$signalMethod=|released()
+$signalMethod=|toggled(bool)
+
 #pragma ENDDUMP

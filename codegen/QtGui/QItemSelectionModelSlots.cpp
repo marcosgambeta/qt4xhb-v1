@@ -15,7 +15,4 @@ $slot=|currentRowChanged( const QModelIndex & current, const QModelIndex & previ
 $slot=|selectionChanged( const QItemSelection & selected, const QItemSelection & deselected )
 $endSlotsClass
 
-$signalMethod=|currentChanged(QModelIndex,QModelIndex)
-$signalMethod=|currentColumnChanged(QModelIndex,QModelIndex)
-$signalMethod=|currentRowChanged(QModelIndex,QModelIndex)
-$signalMethod=|selectionChanged(QItemSelection,QItemSelection)
+$connectSignalFunction

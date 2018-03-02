@@ -227,4 +227,13 @@ $staticMethod=|QString|getItem|QWidget *,const QString &,const QString &,const Q
 $prototype=static QString getText ( QWidget * parent, const QString & title, const QString & label, QLineEdit::EchoMode mode = QLineEdit::Normal, const QString & text = QString(), bool * ok = 0, Qt::WindowFlags flags = 0 )
 $staticMethod=|QString|getText|QWidget *,const QString &,const QString &,QLineEdit::EchoMode=QLineEdit::Normal,const QString &=QString(),bool *=0,Qt::WindowFlags=0
 
+$connectSignalFunction
+
+$signalMethod=|doubleValueChanged(double)
+$signalMethod=|doubleValueSelected(double)
+$signalMethod=|intValueChanged(int)
+$signalMethod=|intValueSelected(int)
+$signalMethod=|textValueChanged(QString)
+$signalMethod=|textValueSelected(QString)
+
 #pragma ENDDUMP

@@ -100,4 +100,8 @@ $method=|void|setActiveWindow|QWidget *
 $prototype=void tile ()
 $method=|void|tile|
 
+$connectSignalFunction
+
+$signalMethod=|windowActivated(QWidget*)
+
 #pragma ENDDUMP

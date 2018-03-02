@@ -92,4 +92,8 @@ $virtualMethod=|int|exec|
 $prototype=virtual void setVisible ( bool visible )
 $virtualMethod=|void|setVisible|bool
 
+$connectSignalFunction
+
+$signalMethod=|accepted(QPrinter*)
+
 #pragma ENDDUMP

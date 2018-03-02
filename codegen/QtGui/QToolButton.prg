@@ -99,4 +99,8 @@ $method=|void|setToolButtonStyle|Qt::ToolButtonStyle
 $prototype=void showMenu ()
 $method=|void|showMenu|
 
+$connectSignalFunction
+
+$signalMethod=|triggered(QAction*)
+
 #pragma ENDDUMP

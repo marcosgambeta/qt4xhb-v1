@@ -1402,4 +1402,8 @@ $staticMethod=|QWidget *|mouseGrabber|
 $prototype=static void setTabOrder ( QWidget * first, QWidget * second )
 $staticMethod=|void|setTabOrder|QWidget *,QWidget *
 
+$connectSignalFunction
+
+$signalMethod=|customContextMenuRequested(QPoint)
+
 #pragma ENDDUMP

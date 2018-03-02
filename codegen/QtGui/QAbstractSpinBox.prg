@@ -186,4 +186,8 @@ $method=|void|stepDown|
 $prototype=void stepUp ()
 $method=|void|stepUp|
 
+$connectSignalFunction
+
+$signalMethod=|editingFinished()
+
 #pragma ENDDUMP

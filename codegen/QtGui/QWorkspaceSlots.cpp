@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=|windowActivated( QWidget * w )
 $endSlotsClass
 
-$signalMethod=|windowActivated(QWidget*)
+$connectSignalFunction

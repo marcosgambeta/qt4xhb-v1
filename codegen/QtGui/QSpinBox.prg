@@ -87,4 +87,9 @@ $method=|int|value|
 $prototype=void setValue ( int val )
 $method=|void|setValue|int
 
+$connectSignalFunction
+
+$signalMethod=|activated()
+$signalMethod=|activatedAmbiguously()
+
 #pragma ENDDUMP

@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=|customContextMenuRequested( const QPoint & pos )
 $endSlotsClass
 
-$signalMethod=|customContextMenuRequested(QPoint)
+$connectSignalFunction

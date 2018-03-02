@@ -435,4 +435,16 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_UNDO )
   }
 }
 
+$connectSignalFunction
+
+$signalMethod=|blockCountChanged(int)
+$signalMethod=|contentsChange(int,int,int)
+$signalMethod=|contentsChanged()
+$signalMethod=|cursorPositionChanged(QTextCursor)
+$signalMethod=|documentLayoutChanged()
+$signalMethod=|modificationChanged(bool)
+$signalMethod=|redoAvailable(bool)
+$signalMethod=|undoAvailable(bool)
+$signalMethod=|undoCommandAdded()
+
 #pragma ENDDUMP

@@ -329,4 +329,13 @@ $method=|void|setText|const QString &
 $prototype=void undo ()
 $method=|void|undo|
 
+$connectSignalFunction
+
+$signalMethod=|cursorPositionChanged(int,int)
+$signalMethod=|editingFinished()
+$signalMethod=|returnPressed()
+$signalMethod=|selectionChanged()
+$signalMethod=|textChanged(QString)
+$signalMethod=|textEdited(QString)
+
 #pragma ENDDUMP

@@ -324,4 +324,13 @@ $virtualMethod=|void|setRootIndex|const QModelIndex &
 $prototype=void update ( const QModelIndex & index )
 $method=|void|update|const QModelIndex &
 
+$connectSignalFunction
+
+$signalMethod=|activated(QModelIndex)
+$signalMethod=|clicked(QModelIndex)
+$signalMethod=|doubleClicked(QModelIndex)
+$signalMethod=|entered(QModelIndex)
+$signalMethod=|pressed(QModelIndex)
+$signalMethod=|viewportEntered()
+
 #pragma ENDDUMP

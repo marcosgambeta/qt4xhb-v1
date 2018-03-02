@@ -131,4 +131,11 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_VALIDATE )
 $prototype=void setValue ( double val )
 $method=|void|setValue|double
 
+$connectSignalFunction
+
+$beginGroup
+$signalMethod=|valueChanged(double)
+$signalMethod=|valueChanged(QString)
+$endGroup
+
 #pragma ENDDUMP

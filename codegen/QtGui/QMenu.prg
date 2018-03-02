@@ -324,4 +324,11 @@ HB_FUNC_STATIC( QMENU_EXEC )
   }
 }
 
+$connectSignalFunction
+
+$signalMethod=|aboutToHide()
+$signalMethod=|aboutToShow()
+$signalMethod=|hovered(QAction*)
+$signalMethod=|triggered(QAction*)
+
 #pragma ENDDUMP

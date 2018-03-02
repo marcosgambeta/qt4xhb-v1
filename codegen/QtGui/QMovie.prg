@@ -195,4 +195,14 @@ $method=|void|stop|
 $prototype=static QList<QByteArray> supportedFormats ()
 $staticMethod=|QList<QByteArray>|supportedFormats|
 
+$connectSignalFunction
+
+$signalMethod=|error(QImageReader::ImageReaderError)
+$signalMethod=|finished()
+$signalMethod=|frameChanged(int)
+$signalMethod=|resized(QSize)
+$signalMethod=|started()
+$signalMethod=|stateChanged(QMovie::MovieState)
+$signalMethod=|updated(QRect)
+
 #pragma ENDDUMP

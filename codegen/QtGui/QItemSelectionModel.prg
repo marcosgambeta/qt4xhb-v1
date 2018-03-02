@@ -150,4 +150,11 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECT )
 $prototype=void setCurrentIndex ( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
 $method=|void|setCurrentIndex|const QModelIndex &,QItemSelectionModel::SelectionFlags
 
+$connectSignalFunction
+
+$signalMethod=|currentChanged(QModelIndex,QModelIndex)
+$signalMethod=|currentColumnChanged(QModelIndex,QModelIndex)
+$signalMethod=|currentRowChanged(QModelIndex,QModelIndex)
+$signalMethod=|selectionChanged(QItemSelection,QItemSelection)
+
 #pragma ENDDUMP

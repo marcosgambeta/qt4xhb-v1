@@ -77,4 +77,8 @@ $virtualMethod=|QSize|minimumSizeHint|
 $prototype=virtual QSize sizeHint () const
 $virtualMethod=|QSize|sizeHint|
 
+$connectSignalFunction
+
+$signalMethod=|stateChanged(int)
+
 #pragma ENDDUMP

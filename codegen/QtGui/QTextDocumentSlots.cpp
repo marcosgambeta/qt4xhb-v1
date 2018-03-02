@@ -20,12 +20,4 @@ $slot=|undoAvailable( bool available )
 $slot=|undoCommandAdded()
 $endSlotsClass
 
-$signalMethod=|blockCountChanged(int)
-$signalMethod=|contentsChange(int,int,int)
-$signalMethod=|contentsChanged()
-$signalMethod=|cursorPositionChanged(QTextCursor)
-$signalMethod=|documentLayoutChanged()
-$signalMethod=|modificationChanged(bool)
-$signalMethod=|redoAvailable(bool)
-$signalMethod=|undoAvailable(bool)
-$signalMethod=|undoCommandAdded()
+$connectSignalFunction

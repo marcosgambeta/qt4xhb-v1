@@ -104,4 +104,9 @@ $method=|QWidget *|source|
 $prototype=QWidget * target () const
 $method=|QWidget *|target|
 
+$connectSignalFunction
+
+$signalMethod=|actionChanged(Qt::DropAction)
+$signalMethod=|targetChanged(QWidget*)
+
 #pragma ENDDUMP
