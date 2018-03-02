@@ -15,3 +15,5 @@ $endSlotsClass
 
 $signalMethod=|quit()
 $signalMethod=|warnings(QList<QDeclarativeError>)
+
+$connectSignalFunction

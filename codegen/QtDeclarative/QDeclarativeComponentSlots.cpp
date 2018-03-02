@@ -15,3 +15,5 @@ $endSlotsClass
 
 $signalMethod=|progressChanged(qreal)
 $signalMethod=|statusChanged(QDeclarativeComponent::Status)
+
+$connectSignalFunction

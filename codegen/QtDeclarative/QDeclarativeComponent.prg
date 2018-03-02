@@ -144,4 +144,6 @@ $prototype=static QDeclarativeComponentAttached *qmlAttachedProperties(QObject *
 %% TODO: implementar
 %% $staticMethod=|QDeclarativeComponentAttached *|qmlAttachedProperties|QObject *
 
+$connectSignalFunction
+
 #pragma ENDDUMP

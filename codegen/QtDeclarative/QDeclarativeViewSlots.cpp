@@ -15,3 +15,5 @@ $endSlotsClass
 
 $signalMethod=|sceneResized(QSize)
 $signalMethod=|statusChanged(QDeclarativeView::Status)
+
+$connectSignalFunction

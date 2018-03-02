@@ -107,4 +107,6 @@ $method=|QUrl|source|
 $prototype=Status status () const
 $method=|QDeclarativeView::Status|status|
 
+$connectSignalFunction
+
 #pragma ENDDUMP
