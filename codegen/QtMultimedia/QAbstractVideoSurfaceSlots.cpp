@@ -14,6 +14,4 @@ $slot=|surfaceFormatChanged( const QVideoSurfaceFormat & format )
 $slot=|supportedFormatsChanged()
 $endSlotsClass
 
-$signalMethod=|activeChanged(bool)
-$signalMethod=|surfaceFormatChanged(QVideoSurfaceFormat)
-$signalMethod=|supportedFormatsChanged()
+$connectSignalFunction

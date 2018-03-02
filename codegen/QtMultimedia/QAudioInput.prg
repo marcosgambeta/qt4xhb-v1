@@ -144,4 +144,9 @@ $method=|void|stop|
 $prototype=void suspend ()
 $method=|void|suspend|
 
+$connectSignalFunction
+
+$signalMethod=|stateChanged(QAudio::State)
+$signalMethod=|notify()
+
 #pragma ENDDUMP

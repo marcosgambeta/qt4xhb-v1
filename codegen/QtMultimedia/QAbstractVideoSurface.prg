@@ -70,4 +70,10 @@ $virtualMethod=|QList<QVideoFrame::PixelFormat>|supportedPixelFormats|QAbstractV
 $prototype=QVideoSurfaceFormat surfaceFormat () const
 $method=|QVideoSurfaceFormat|surfaceFormat|
 
+$connectSignalFunction
+
+$signalMethod=|activeChanged(bool)
+$signalMethod=|surfaceFormatChanged(QVideoSurfaceFormat)
+$signalMethod=|supportedFormatsChanged()
+
 #pragma ENDDUMP
