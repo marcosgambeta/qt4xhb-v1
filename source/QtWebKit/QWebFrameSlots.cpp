@@ -129,93 +129,12 @@ void QWebFrameSlots::urlChanged( const QUrl & url )
   }
 }
 
-HB_FUNC( QWEBFRAME_ONCONTENTSSIZECHANGED )
+void QWebFrameSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QWebFrameSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "contentsSizeChanged(QSize)", "contentsSizeChanged(QSize)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QWEBFRAME_ONICONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QWebFrameSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "iconChanged()", "iconChanged()" ) );
-}
-
-HB_FUNC( QWEBFRAME_ONINITIALLAYOUTCOMPLETED )
-{
-  if( s == NULL )
-  {
-    s = new QWebFrameSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "initialLayoutCompleted()", "initialLayoutCompleted()" ) );
-}
-
-HB_FUNC( QWEBFRAME_ONJAVASCRIPTWINDOWOBJECTCLEARED )
-{
-  if( s == NULL )
-  {
-    s = new QWebFrameSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "javaScriptWindowObjectCleared()", "javaScriptWindowObjectCleared()" ) );
-}
-
-HB_FUNC( QWEBFRAME_ONLOADFINISHED )
-{
-  if( s == NULL )
-  {
-    s = new QWebFrameSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "loadFinished(bool)", "loadFinished(bool)" ) );
-}
-
-HB_FUNC( QWEBFRAME_ONLOADSTARTED )
-{
-  if( s == NULL )
-  {
-    s = new QWebFrameSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "loadStarted()", "loadStarted()" ) );
-}
-
-HB_FUNC( QWEBFRAME_ONPAGECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QWebFrameSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "pageChanged()", "pageChanged()" ) );
-}
-
-HB_FUNC( QWEBFRAME_ONTITLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QWebFrameSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "titleChanged(QString)", "titleChanged(QString)" ) );
-}
-
-HB_FUNC( QWEBFRAME_ONURLCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QWebFrameSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "urlChanged(QUrl)", "urlChanged(QUrl)" ) );
-}
-

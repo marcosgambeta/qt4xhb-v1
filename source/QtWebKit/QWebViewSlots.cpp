@@ -133,93 +133,12 @@ void QWebViewSlots::urlChanged( const QUrl & url )
   }
 }
 
-HB_FUNC( QWEBVIEW_ONICONCHANGED )
+void QWebViewSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QWebViewSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "iconChanged()", "iconChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QWEBVIEW_ONLINKCLICKED )
-{
-  if( s == NULL )
-  {
-    s = new QWebViewSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "linkClicked(QUrl)", "linkClicked(QUrl)" ) );
-}
-
-HB_FUNC( QWEBVIEW_ONLOADFINISHED )
-{
-  if( s == NULL )
-  {
-    s = new QWebViewSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "loadFinished(bool)", "loadFinished(bool)" ) );
-}
-
-HB_FUNC( QWEBVIEW_ONLOADPROGRESS )
-{
-  if( s == NULL )
-  {
-    s = new QWebViewSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "loadProgress(int)", "loadProgress(int)" ) );
-}
-
-HB_FUNC( QWEBVIEW_ONLOADSTARTED )
-{
-  if( s == NULL )
-  {
-    s = new QWebViewSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "loadStarted()", "loadStarted()" ) );
-}
-
-HB_FUNC( QWEBVIEW_ONSELECTIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QWebViewSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "selectionChanged()", "selectionChanged()" ) );
-}
-
-HB_FUNC( QWEBVIEW_ONSTATUSBARMESSAGE )
-{
-  if( s == NULL )
-  {
-    s = new QWebViewSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "statusBarMessage(QString)", "statusBarMessage(QString)" ) );
-}
-
-HB_FUNC( QWEBVIEW_ONTITLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QWebViewSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "titleChanged(QString)", "titleChanged(QString)" ) );
-}
-
-HB_FUNC( QWEBVIEW_ONURLCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QWebViewSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "urlChanged(QUrl)", "urlChanged(QUrl)" ) );
-}
-

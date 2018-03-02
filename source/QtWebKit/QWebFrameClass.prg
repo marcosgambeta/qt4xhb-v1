@@ -827,7 +827,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETCONTENT )
 
   if( obj )
   {
-    if( ISBETWEEN(2,3) && ISQBYTEARRAY(1) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) )
+    if( ISBETWEEN(1,3) && ISQBYTEARRAY(1) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) )
     {
       obj->setContent ( *PQBYTEARRAY(1), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) _qt4xhb_itemGetPtr(3) );
     }
@@ -1179,5 +1179,53 @@ HB_FUNC_STATIC( QWEBFRAME_PRINT )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
+
+void QWebFrameSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QWEBFRAME_ONCONTENTSSIZECHANGED )
+{
+  QWebFrameSlots_connect_signal( "contentsSizeChanged(QSize)", "contentsSizeChanged(QSize)" );
+}
+
+HB_FUNC_STATIC( QWEBFRAME_ONICONCHANGED )
+{
+  QWebFrameSlots_connect_signal( "iconChanged()", "iconChanged()" );
+}
+
+HB_FUNC_STATIC( QWEBFRAME_ONINITIALLAYOUTCOMPLETED )
+{
+  QWebFrameSlots_connect_signal( "initialLayoutCompleted()", "initialLayoutCompleted()" );
+}
+
+HB_FUNC_STATIC( QWEBFRAME_ONJAVASCRIPTWINDOWOBJECTCLEARED )
+{
+  QWebFrameSlots_connect_signal( "javaScriptWindowObjectCleared()", "javaScriptWindowObjectCleared()" );
+}
+
+HB_FUNC_STATIC( QWEBFRAME_ONLOADFINISHED )
+{
+  QWebFrameSlots_connect_signal( "loadFinished(bool)", "loadFinished(bool)" );
+}
+
+HB_FUNC_STATIC( QWEBFRAME_ONLOADSTARTED )
+{
+  QWebFrameSlots_connect_signal( "loadStarted()", "loadStarted()" );
+}
+
+HB_FUNC_STATIC( QWEBFRAME_ONPAGECHANGED )
+{
+  QWebFrameSlots_connect_signal( "pageChanged()", "pageChanged()" );
+}
+
+HB_FUNC_STATIC( QWEBFRAME_ONTITLECHANGED )
+{
+  QWebFrameSlots_connect_signal( "titleChanged(QString)", "titleChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QWEBFRAME_ONURLCHANGED )
+{
+  QWebFrameSlots_connect_signal( "urlChanged(QUrl)", "urlChanged(QUrl)" );
+}
+
 
 #pragma ENDDUMP
