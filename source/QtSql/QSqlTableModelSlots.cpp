@@ -78,43 +78,12 @@ void QSqlTableModelSlots::primeInsert( int row, QSqlRecord & record )
   }
 }
 
-HB_FUNC( QSQLTABLEMODEL_ONBEFOREDELETE )
+void QSqlTableModelSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QSqlTableModelSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "beforeDelete(int)", "beforeDelete(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QSQLTABLEMODEL_ONBEFOREINSERT )
-{
-  if( s == NULL )
-  {
-    s = new QSqlTableModelSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "beforeInsert(QSqlRecord)", "beforeInsert(QSqlRecord)" ) );
-}
-
-HB_FUNC( QSQLTABLEMODEL_ONBEFOREUPDATE )
-{
-  if( s == NULL )
-  {
-    s = new QSqlTableModelSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "beforeUpdate(int,QSqlRecord)", "beforeUpdate(int,QSqlRecord)" ) );
-}
-
-HB_FUNC( QSQLTABLEMODEL_ONPRIMEINSERT )
-{
-  if( s == NULL )
-  {
-    s = new QSqlTableModelSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "primeInsert(int,QSqlRecord)", "primeInsert(int,QSqlRecord)" ) );
-}
-

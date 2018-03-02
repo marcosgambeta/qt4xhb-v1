@@ -35,13 +35,12 @@ void QSqlDriverSlots::notification( const QString & name )
   }
 }
 
-HB_FUNC( QSQLDRIVER_ONNOTIFICATION )
+void QSqlDriverSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QSqlDriverSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "notification(QString)", "notification(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

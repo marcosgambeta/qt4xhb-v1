@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QSQLDATABASE_EXEC )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISOPTCHAR(1) )
+    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
     {
       QSqlQuery * ptr = new QSqlQuery( obj->exec ( OPQSTRING(1,QString()) ) );
       _qt4xhb_createReturnClass ( ptr, "QSQLQUERY", true );
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QSQLDATABASE_SETCONNECTOPTIONS )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISOPTCHAR(1) )
+    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
     {
       obj->setConnectOptions ( OPQSTRING(1,QString()) );
     }
@@ -874,7 +874,7 @@ static bool contains ( const QString & connectionName = QLatin1String( defaultCo
 */
 HB_FUNC_STATIC( QSQLDATABASE_CONTAINS )
 {
-    if( ISNUMPAR(1) && ISOPTCHAR(1) )
+    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
   {
       RBOOL( QSqlDatabase::contains ( OPQSTRING(1,QLatin1String( QSqlDatabase::defaultConnection )) ) );
   }
@@ -889,7 +889,7 @@ static QSqlDatabase database ( const QString & connectionName = QLatin1String( d
 */
 HB_FUNC_STATIC( QSQLDATABASE_DATABASE )
 {
-    if( ISBETWEEN(1,2) && ISOPTCHAR(1) && ISOPTLOG(2) )
+    if( ISBETWEEN(0,2) && ISOPTCHAR(1) && ISOPTLOG(2) )
   {
       QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::database ( OPQSTRING(1,QLatin1String( QSqlDatabase::defaultConnection )), OPBOOL(2,true) ) );
       _qt4xhb_createReturnClass ( ptr, "QSQLDATABASE", true );
