@@ -46,23 +46,12 @@ void QAudioOutputSlots::stateChanged( QAudio::State state )
   }
 }
 
-HB_FUNC( QAUDIOOUTPUT_ONNOTIFY )
+void QAudioOutputSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QAudioOutputSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "notify()", "notify()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QAUDIOOUTPUT_ONSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAudioOutputSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "stateChanged(QAudio::State)", "stateChanged(QAudio::State)" ) );
-}
-

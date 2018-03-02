@@ -59,33 +59,12 @@ void QAbstractVideoSurfaceSlots::supportedFormatsChanged()
   }
 }
 
-HB_FUNC( QABSTRACTVIDEOSURFACE_ONACTIVECHANGED )
+void QAbstractVideoSurfaceSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QAbstractVideoSurfaceSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "activeChanged(bool)", "activeChanged(bool)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QABSTRACTVIDEOSURFACE_ONSURFACEFORMATCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractVideoSurfaceSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "surfaceFormatChanged(QVideoSurfaceFormat)", "surfaceFormatChanged(QVideoSurfaceFormat)" ) );
-}
-
-HB_FUNC( QABSTRACTVIDEOSURFACE_ONSUPPORTEDFORMATSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractVideoSurfaceSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "supportedFormatsChanged()", "supportedFormatsChanged()" ) );
-}
-

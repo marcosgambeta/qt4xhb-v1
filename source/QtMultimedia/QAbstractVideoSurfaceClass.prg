@@ -263,4 +263,22 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_SURFACEFORMAT )
   }
 }
 
+void QAbstractVideoSurfaceSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONACTIVECHANGED )
+{
+  QAbstractVideoSurfaceSlots_connect_signal( "activeChanged(bool)", "activeChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONSURFACEFORMATCHANGED )
+{
+  QAbstractVideoSurfaceSlots_connect_signal( "surfaceFormatChanged(QVideoSurfaceFormat)", "surfaceFormatChanged(QVideoSurfaceFormat)" );
+}
+
+HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONSUPPORTEDFORMATSCHANGED )
+{
+  QAbstractVideoSurfaceSlots_connect_signal( "supportedFormatsChanged()", "supportedFormatsChanged()" );
+}
+
+
 #pragma ENDDUMP

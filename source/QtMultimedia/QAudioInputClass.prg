@@ -474,4 +474,17 @@ HB_FUNC_STATIC( QAUDIOINPUT_SUSPEND )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QAudioInputSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QAUDIOINPUT_ONSTATECHANGED )
+{
+  QAudioInputSlots_connect_signal( "stateChanged(QAudio::State)", "stateChanged(QAudio::State)" );
+}
+
+HB_FUNC_STATIC( QAUDIOINPUT_ONNOTIFY )
+{
+  QAudioInputSlots_connect_signal( "notify()", "notify()" );
+}
+
+
 #pragma ENDDUMP
