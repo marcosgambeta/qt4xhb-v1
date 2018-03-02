@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=|notification( const QString & name )
 $endSlotsClass
 
-$signalMethod=|notification(QString)
+$connectSignalFunction

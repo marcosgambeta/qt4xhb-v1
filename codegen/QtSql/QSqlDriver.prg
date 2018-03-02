@@ -135,4 +135,8 @@ $virtualMethod=|QStringList|tables|QSql::TableType
 $prototype=bool unsubscribeFromNotification ( const QString & name )
 $method=|bool|unsubscribeFromNotification|const QString &
 
+$connectSignalFunction
+
+$signalMethod=|notification(QString)
+
 #pragma ENDDUMP
