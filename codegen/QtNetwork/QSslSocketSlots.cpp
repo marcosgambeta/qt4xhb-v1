@@ -16,8 +16,4 @@ $slot=|peerVerifyError( const QSslError & error )
 $slot=|sslErrors( const QList<QSslError> & errors )
 $endSlotsClass
 
-$signalMethod=|encrypted()
-$signalMethod=|encryptedBytesWritten(qint64)
-$signalMethod=|modeChanged(QSslSocket::SslMode)
-$signalMethod=|peerVerifyError(QSslError)
-$signalMethod=|sslErrors(QList<QSslError>)
+$connectSignalFunction

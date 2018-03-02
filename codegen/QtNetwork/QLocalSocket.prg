@@ -113,4 +113,11 @@ $virtualMethod=|bool|waitForBytesWritten|int=30000
 $prototype=virtual bool waitForReadyRead ( int msecs = 30000 )
 $virtualMethod=|bool|waitForReadyRead|int=30000
 
+$connectSignalFunction
+
+$signalMethod=|connected()
+$signalMethod=|disconnected()
+$signalMethod=|error(QLocalSocket::LocalSocketError)
+$signalMethod=|stateChanged(QLocalSocket::LocalSocketState)
+
 #pragma ENDDUMP

@@ -19,11 +19,4 @@ $slot=|readyRead()
 $slot=|stateChanged( int state )
 $endSlotsClass
 
-$signalMethod=|commandFinished(int,bool)
-$signalMethod=|commandStarted(int)
-$signalMethod=|dataTransferProgress(qint64,qint64)
-$signalMethod=|done(bool)
-$signalMethod=|listInfo(QUrlInfo)
-$signalMethod=|rawCommandReply(int,QString)
-$signalMethod=|readyRead()
-$signalMethod=|stateChanged(int)
+$connectSignalFunction

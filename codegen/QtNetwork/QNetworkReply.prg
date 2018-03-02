@@ -140,4 +140,13 @@ $method=|QUrl|url|
 $prototype=virtual void close ()
 $virtualMethod=|void|close|
 
+$connectSignalFunction
+
+$signalMethod=|downloadProgress(qint64,qint64)
+$signalMethod=|error(QNetworkReply::NetworkError)
+$signalMethod=|finished()
+$signalMethod=|metaDataChanged()
+$signalMethod=|sslErrors(QList<QSslError>)
+$signalMethod=|uploadProgress(qint64,qint64)
+
 #pragma ENDDUMP

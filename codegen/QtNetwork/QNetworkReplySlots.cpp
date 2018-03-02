@@ -17,9 +17,4 @@ $slot=|sslErrors( const QList<QSslError> & errors )
 $slot=|uploadProgress( qint64 bytesSent, qint64 bytesTotal )
 $endSlotsClass
 
-$signalMethod=|downloadProgress(qint64,qint64)
-$signalMethod=|error(QNetworkReply::NetworkError)
-$signalMethod=|finished()
-$signalMethod=|metaDataChanged()
-$signalMethod=|sslErrors(QList<QSslError>)
-$signalMethod=|uploadProgress(qint64,qint64)
+$connectSignalFunction

@@ -421,4 +421,12 @@ $staticMethod=|bool|supportsSsl|
 $prototype=QList<QSslCertificate> systemCaCertificates ()
 $method=|QList<QSslCertificate>|systemCaCertificates|
 
+$connectSignalFunction
+
+$signalMethod=|encrypted()
+$signalMethod=|encryptedBytesWritten(qint64)
+$signalMethod=|modeChanged(QSslSocket::SslMode)
+$signalMethod=|peerVerifyError(QSslError)
+$signalMethod=|sslErrors(QList<QSslError>)
+
 #pragma ENDDUMP
