@@ -236,4 +236,30 @@ $virtualMethod=|bool|event|QEvent *
 $prototype=bool shouldInterruptJavaScript ()
 $method=|bool|shouldInterruptJavaScript|
 
+$connectSignalFunction
+
+$signalMethod=|contentsChanged()
+$signalMethod=|databaseQuotaExceeded(QWebFrame*,QString)
+$signalMethod=|downloadRequested(QNetworkRequest)
+$signalMethod=|frameCreated(QWebFrame*)
+$signalMethod=|geometryChangeRequested(QRect)
+$signalMethod=|linkClicked(QUrl)
+$signalMethod=|linkHovered(QString,QString,QString)
+$signalMethod=|loadFinished(bool)
+$signalMethod=|loadProgress(int)
+$signalMethod=|loadStarted()
+$signalMethod=|menuBarVisibilityChangeRequested(bool)
+$signalMethod=|microFocusChanged()
+$signalMethod=|printRequested(QWebFrame*)
+$signalMethod=|repaintRequested(QRect)
+$signalMethod=|restoreFrameStateRequested(QWebFrame*)
+$signalMethod=|saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)
+$signalMethod=|scrollRequested(int,int,QRect)
+$signalMethod=|selectionChanged()
+$signalMethod=|statusBarMessage(QString)
+$signalMethod=|statusBarVisibilityChangeRequested(bool)
+$signalMethod=|toolBarVisibilityChangeRequested(bool)
+$signalMethod=|unsupportedContent(QNetworkReply*)
+$signalMethod=|windowCloseRequested()
+
 #pragma ENDDUMP

@@ -170,4 +170,15 @@ $method=|void|reload|
 $prototype=void stop ()
 $method=|void|stop|
 
+$connectSignalFunction
+
+$signalMethod=|iconChanged()
+$signalMethod=|linkClicked(QUrl)
+$signalMethod=|loadFinished(bool)
+$signalMethod=|loadProgress(int)
+$signalMethod=|loadStarted()
+$signalMethod=|statusBarMessage(QString)
+$signalMethod=|titleChanged(QString)
+$signalMethod=|urlChanged(QUrl)
+
 #pragma ENDDUMP
