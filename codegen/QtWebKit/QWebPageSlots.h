@@ -8,6 +8,9 @@ $header
 
 $includes
 
+#include <QWebFrame>
+#include <QNetworkReply>
+
 $beginSlotsClass
 $signal=|contentsChanged()
 $signal=|databaseQuotaExceeded( QWebFrame * frame, QString databaseName )
