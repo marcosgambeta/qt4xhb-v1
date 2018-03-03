@@ -26,8 +26,6 @@ CLASS QXmlStreamReader
    METHOD new
    METHOD delete
 
-   METHOD addData2
-   METHOD addData3
    METHOD addData
    METHOD addExtraNamespaceDeclaration
    METHOD addExtraNamespaceDeclarations
