@@ -27,8 +27,8 @@ void QFontComboBoxSlots::currentFontChanged( const QFont & font )
   PHB_ITEM cb = Signals_return_codeblock( object, "currentFontChanged(QFont)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pfont = hb_itemPutPtr( NULL, (QFont *) &font );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM pfont = Signals_return_object( (void *) &font, "QFONT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pfont );
     hb_itemRelease( psender );
     hb_itemRelease( pfont );

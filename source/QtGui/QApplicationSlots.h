@@ -23,6 +23,9 @@
 #include "qt4xhb_macros.h"
 #include "qt4xhb_signals.h"
 
+#include <QSessionManager>
+#include <QWidget>
+
 class QApplicationSlots: public QObject
 {
   Q_OBJECT

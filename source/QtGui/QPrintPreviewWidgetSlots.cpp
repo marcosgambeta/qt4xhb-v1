@@ -27,8 +27,8 @@ void QPrintPreviewWidgetSlots::paintRequested( QPrinter * printer )
   PHB_ITEM cb = Signals_return_codeblock( object, "paintRequested(QPrinter*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pprinter = hb_itemPutPtr( NULL, (QPrinter *) printer );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM pprinter = Signals_return_object( (void *) printer, "QPRINTER" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pprinter );
     hb_itemRelease( psender );
     hb_itemRelease( pprinter );
@@ -40,7 +40,7 @@ void QPrintPreviewWidgetSlots::previewChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "previewChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }

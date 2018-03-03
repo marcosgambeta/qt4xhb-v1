@@ -23,6 +23,8 @@
 #include "qt4xhb_macros.h"
 #include "qt4xhb_signals.h"
 
+#include <QWidget>
+
 class QStackedLayoutSlots: public QObject
 {
   Q_OBJECT

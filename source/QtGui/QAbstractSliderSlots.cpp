@@ -27,7 +27,7 @@ void QAbstractSliderSlots::actionTriggered( int action )
   PHB_ITEM cb = Signals_return_codeblock( object, "actionTriggered(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM paction = hb_itemPutNI( NULL, action );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, paction );
     hb_itemRelease( psender );
@@ -40,7 +40,7 @@ void QAbstractSliderSlots::rangeChanged( int min, int max )
   PHB_ITEM cb = Signals_return_codeblock( object, "rangeChanged(int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM pmin = hb_itemPutNI( NULL, min );
     PHB_ITEM pmax = hb_itemPutNI( NULL, max );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pmin, pmax );
@@ -55,7 +55,7 @@ void QAbstractSliderSlots::sliderMoved( int value )
   PHB_ITEM cb = Signals_return_codeblock( object, "sliderMoved(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
     hb_itemRelease( psender );
@@ -68,7 +68,7 @@ void QAbstractSliderSlots::sliderPressed()
   PHB_ITEM cb = Signals_return_codeblock( object, "sliderPressed()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -79,7 +79,7 @@ void QAbstractSliderSlots::sliderReleased()
   PHB_ITEM cb = Signals_return_codeblock( object, "sliderReleased()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -90,7 +90,7 @@ void QAbstractSliderSlots::valueChanged( int value )
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
     hb_itemRelease( psender );

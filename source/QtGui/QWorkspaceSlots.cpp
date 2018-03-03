@@ -27,8 +27,8 @@ void QWorkspaceSlots::windowActivated( QWidget * w )
   PHB_ITEM cb = Signals_return_codeblock( object, "windowActivated(QWidget*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pw = hb_itemPutPtr( NULL, (QWidget *) w );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM pw = Signals_return_qobject( w, "QWIDGET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pw );
     hb_itemRelease( psender );
     hb_itemRelease( pw );

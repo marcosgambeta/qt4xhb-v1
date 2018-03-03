@@ -23,6 +23,8 @@
 #include "qt4xhb_macros.h"
 #include "qt4xhb_signals.h"
 
+#include <QUndoStack>
+
 class QUndoGroupSlots: public QObject
 {
   Q_OBJECT

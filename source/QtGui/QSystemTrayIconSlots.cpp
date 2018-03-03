@@ -27,7 +27,7 @@ void QSystemTrayIconSlots::activated( QSystemTrayIcon::ActivationReason reason )
   PHB_ITEM cb = Signals_return_codeblock( object, "activated(QSystemTrayIcon::ActivationReason)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM preason = hb_itemPutNI( NULL, (int) reason );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, preason );
     hb_itemRelease( psender );
@@ -40,7 +40,7 @@ void QSystemTrayIconSlots::messageClicked()
   PHB_ITEM cb = Signals_return_codeblock( object, "messageClicked()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }

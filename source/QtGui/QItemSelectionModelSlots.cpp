@@ -27,9 +27,9 @@ void QItemSelectionModelSlots::currentChanged( const QModelIndex & current, cons
   PHB_ITEM cb = Signals_return_codeblock( object, "currentChanged(QModelIndex,QModelIndex)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pcurrent = hb_itemPutPtr( NULL, (QModelIndex *) &current );
-    PHB_ITEM pprevious = hb_itemPutPtr( NULL, (QModelIndex *) &previous );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM pcurrent = Signals_return_object( (void *) &current, "QMODELINDEX" );
+    PHB_ITEM pprevious = Signals_return_object( (void *) &previous, "QMODELINDEX" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pcurrent, pprevious );
     hb_itemRelease( psender );
     hb_itemRelease( pcurrent );
@@ -42,9 +42,9 @@ void QItemSelectionModelSlots::currentColumnChanged( const QModelIndex & current
   PHB_ITEM cb = Signals_return_codeblock( object, "currentColumnChanged(QModelIndex,QModelIndex)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pcurrent = hb_itemPutPtr( NULL, (QModelIndex *) &current );
-    PHB_ITEM pprevious = hb_itemPutPtr( NULL, (QModelIndex *) &previous );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM pcurrent = Signals_return_object( (void *) &current, "QMODELINDEX" );
+    PHB_ITEM pprevious = Signals_return_object( (void *) &previous, "QMODELINDEX" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pcurrent, pprevious );
     hb_itemRelease( psender );
     hb_itemRelease( pcurrent );
@@ -57,9 +57,9 @@ void QItemSelectionModelSlots::currentRowChanged( const QModelIndex & current, c
   PHB_ITEM cb = Signals_return_codeblock( object, "currentRowChanged(QModelIndex,QModelIndex)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pcurrent = hb_itemPutPtr( NULL, (QModelIndex *) &current );
-    PHB_ITEM pprevious = hb_itemPutPtr( NULL, (QModelIndex *) &previous );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM pcurrent = Signals_return_object( (void *) &current, "QMODELINDEX" );
+    PHB_ITEM pprevious = Signals_return_object( (void *) &previous, "QMODELINDEX" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pcurrent, pprevious );
     hb_itemRelease( psender );
     hb_itemRelease( pcurrent );
@@ -72,9 +72,9 @@ void QItemSelectionModelSlots::selectionChanged( const QItemSelection & selected
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged(QItemSelection,QItemSelection)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pselected = hb_itemPutPtr( NULL, (QItemSelection *) &selected );
-    PHB_ITEM pdeselected = hb_itemPutPtr( NULL, (QItemSelection *) &deselected );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM pselected = Signals_return_object( (void *) &selected, "QITEMSELECTION" );
+    PHB_ITEM pdeselected = Signals_return_object( (void *) &deselected, "QITEMSELECTION" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pselected, pdeselected );
     hb_itemRelease( psender );
     hb_itemRelease( pselected );

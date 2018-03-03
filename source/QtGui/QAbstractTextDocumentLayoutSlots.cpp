@@ -27,8 +27,8 @@ void QAbstractTextDocumentLayoutSlots::documentSizeChanged( const QSizeF & newSi
   PHB_ITEM cb = Signals_return_codeblock( object, "documentSizeChanged(QSizeF)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pnewSize = hb_itemPutPtr( NULL, (QSizeF *) &newSize );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM pnewSize = Signals_return_object( (void *) &newSize, "QSIZEF" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pnewSize );
     hb_itemRelease( psender );
     hb_itemRelease( pnewSize );
@@ -40,7 +40,7 @@ void QAbstractTextDocumentLayoutSlots::pageCountChanged( int newPages )
   PHB_ITEM cb = Signals_return_codeblock( object, "pageCountChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM pnewPages = hb_itemPutNI( NULL, newPages );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pnewPages );
     hb_itemRelease( psender );
@@ -53,8 +53,8 @@ void QAbstractTextDocumentLayoutSlots::update( const QRectF & rect )
   PHB_ITEM cb = Signals_return_codeblock( object, "update(QRectF)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM prect = hb_itemPutPtr( NULL, (QRectF *) &rect );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM prect = Signals_return_object( (void *) &rect, "QRECTF" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, prect );
     hb_itemRelease( psender );
     hb_itemRelease( prect );
@@ -66,8 +66,8 @@ void QAbstractTextDocumentLayoutSlots::updateBlock( const QTextBlock & block )
   PHB_ITEM cb = Signals_return_codeblock( object, "updateBlock(QTextBlock)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pblock = hb_itemPutPtr( NULL, (QTextBlock *) &block );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM pblock = Signals_return_object( (void *) &block, "QTEXTBLOCK" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pblock );
     hb_itemRelease( psender );
     hb_itemRelease( pblock );

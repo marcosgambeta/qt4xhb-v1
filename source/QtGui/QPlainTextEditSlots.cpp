@@ -27,7 +27,7 @@ void QPlainTextEditSlots::blockCountChanged( int newBlockCount )
   PHB_ITEM cb = Signals_return_codeblock( object, "blockCountChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM pnewBlockCount = hb_itemPutNI( NULL, newBlockCount );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pnewBlockCount );
     hb_itemRelease( psender );
@@ -40,7 +40,7 @@ void QPlainTextEditSlots::copyAvailable( bool yes )
   PHB_ITEM cb = Signals_return_codeblock( object, "copyAvailable(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM pyes = hb_itemPutL( NULL, yes );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pyes );
     hb_itemRelease( psender );
@@ -53,7 +53,7 @@ void QPlainTextEditSlots::cursorPositionChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "cursorPositionChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -64,7 +64,7 @@ void QPlainTextEditSlots::modificationChanged( bool changed )
   PHB_ITEM cb = Signals_return_codeblock( object, "modificationChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM pchanged = hb_itemPutL( NULL, changed );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pchanged );
     hb_itemRelease( psender );
@@ -77,7 +77,7 @@ void QPlainTextEditSlots::redoAvailable( bool available )
   PHB_ITEM cb = Signals_return_codeblock( object, "redoAvailable(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pavailable );
     hb_itemRelease( psender );
@@ -90,7 +90,7 @@ void QPlainTextEditSlots::selectionChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -101,7 +101,7 @@ void QPlainTextEditSlots::textChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "textChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -112,7 +112,7 @@ void QPlainTextEditSlots::undoAvailable( bool available )
   PHB_ITEM cb = Signals_return_codeblock( object, "undoAvailable(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pavailable );
     hb_itemRelease( psender );
@@ -125,8 +125,8 @@ void QPlainTextEditSlots::updateRequest( const QRect & rect, int dy )
   PHB_ITEM cb = Signals_return_codeblock( object, "updateRequest(QRect,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM prect = hb_itemPutPtr( NULL, (QRect *) &rect );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM prect = Signals_return_object( (void *) &rect, "QRECT" );
     PHB_ITEM pdy = hb_itemPutNI( NULL, dy );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, prect, pdy );
     hb_itemRelease( psender );

@@ -27,7 +27,7 @@ void QWizardPageSlots::completeChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "completeChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }

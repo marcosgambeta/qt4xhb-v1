@@ -27,7 +27,7 @@ void QGraphicsOpacityEffectSlots::opacityChanged( qreal opacity )
   PHB_ITEM cb = Signals_return_codeblock( object, "opacityChanged(qreal)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM popacity = hb_itemPutND( NULL, opacity );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, popacity );
     hb_itemRelease( psender );
@@ -40,8 +40,8 @@ void QGraphicsOpacityEffectSlots::opacityMaskChanged( const QBrush & mask )
   PHB_ITEM cb = Signals_return_codeblock( object, "opacityMaskChanged(QBrush)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pmask = hb_itemPutPtr( NULL, (QBrush *) &mask );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM pmask = Signals_return_object( (void *) &mask, "QBRUSH" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmask );
     hb_itemRelease( psender );
     hb_itemRelease( pmask );

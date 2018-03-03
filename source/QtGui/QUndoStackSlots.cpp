@@ -27,7 +27,7 @@ void QUndoStackSlots::canRedoChanged( bool canRedo )
   PHB_ITEM cb = Signals_return_codeblock( object, "canRedoChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM pcanRedo = hb_itemPutL( NULL, canRedo );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcanRedo );
     hb_itemRelease( psender );
@@ -40,7 +40,7 @@ void QUndoStackSlots::canUndoChanged( bool canUndo )
   PHB_ITEM cb = Signals_return_codeblock( object, "canUndoChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM pcanUndo = hb_itemPutL( NULL, canUndo );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcanUndo );
     hb_itemRelease( psender );
@@ -53,7 +53,7 @@ void QUndoStackSlots::cleanChanged( bool clean )
   PHB_ITEM cb = Signals_return_codeblock( object, "cleanChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM pclean = hb_itemPutL( NULL, clean );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pclean );
     hb_itemRelease( psender );
@@ -66,7 +66,7 @@ void QUndoStackSlots::indexChanged( int idx )
   PHB_ITEM cb = Signals_return_codeblock( object, "indexChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM pidx = hb_itemPutNI( NULL, idx );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pidx );
     hb_itemRelease( psender );
@@ -79,7 +79,7 @@ void QUndoStackSlots::redoTextChanged( const QString & redoText )
   PHB_ITEM cb = Signals_return_codeblock( object, "redoTextChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM predoText = hb_itemPutC( NULL, QSTRINGTOSTRING(redoText) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, predoText );
     hb_itemRelease( psender );
@@ -92,7 +92,7 @@ void QUndoStackSlots::undoTextChanged( const QString & undoText )
   PHB_ITEM cb = Signals_return_codeblock( object, "undoTextChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM pundoText = hb_itemPutC( NULL, QSTRINGTOSTRING(undoText) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pundoText );
     hb_itemRelease( psender );

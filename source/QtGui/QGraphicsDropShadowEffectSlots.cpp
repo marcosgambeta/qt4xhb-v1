@@ -27,7 +27,7 @@ void QGraphicsDropShadowEffectSlots::blurRadiusChanged( qreal blurRadius )
   PHB_ITEM cb = Signals_return_codeblock( object, "blurRadiusChanged(qreal)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM pblurRadius = hb_itemPutND( NULL, blurRadius );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pblurRadius );
     hb_itemRelease( psender );
@@ -40,8 +40,8 @@ void QGraphicsDropShadowEffectSlots::colorChanged( const QColor & color )
   PHB_ITEM cb = Signals_return_codeblock( object, "colorChanged(QColor)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pcolor = hb_itemPutPtr( NULL, (QColor *) &color );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcolor );
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
@@ -53,8 +53,8 @@ void QGraphicsDropShadowEffectSlots::offsetChanged( const QPointF & offset )
   PHB_ITEM cb = Signals_return_codeblock( object, "offsetChanged(QPointF)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM poffset = hb_itemPutPtr( NULL, (QPointF *) &offset );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM poffset = Signals_return_object( (void *) &offset, "QPOINTF" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, poffset );
     hb_itemRelease( psender );
     hb_itemRelease( poffset );

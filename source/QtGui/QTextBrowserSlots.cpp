@@ -27,8 +27,8 @@ void QTextBrowserSlots::anchorClicked( const QUrl & link )
   PHB_ITEM cb = Signals_return_codeblock( object, "anchorClicked(QUrl)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM plink = hb_itemPutPtr( NULL, (QUrl *) &link );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM plink = Signals_return_object( (void *) &link, "QURL" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, plink );
     hb_itemRelease( psender );
     hb_itemRelease( plink );
@@ -40,7 +40,7 @@ void QTextBrowserSlots::backwardAvailable( bool available )
   PHB_ITEM cb = Signals_return_codeblock( object, "backwardAvailable(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pavailable );
     hb_itemRelease( psender );
@@ -53,7 +53,7 @@ void QTextBrowserSlots::forwardAvailable( bool available )
   PHB_ITEM cb = Signals_return_codeblock( object, "forwardAvailable(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pavailable );
     hb_itemRelease( psender );
@@ -66,8 +66,8 @@ void QTextBrowserSlots::highlighted( const QUrl & link )
   PHB_ITEM cb = Signals_return_codeblock( object, "highlighted(QUrl)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM plink = hb_itemPutPtr( NULL, (QUrl *) &link );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM plink = Signals_return_object( (void *) &link, "QURL" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, plink );
     hb_itemRelease( psender );
     hb_itemRelease( plink );
@@ -79,7 +79,7 @@ void QTextBrowserSlots::highlighted( const QString & link )
   PHB_ITEM cb = Signals_return_codeblock( object, "highlighted(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM plink = hb_itemPutC( NULL, QSTRINGTOSTRING(link) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, plink );
     hb_itemRelease( psender );
@@ -92,7 +92,7 @@ void QTextBrowserSlots::historyChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "historyChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -103,8 +103,8 @@ void QTextBrowserSlots::sourceChanged( const QUrl & src )
   PHB_ITEM cb = Signals_return_codeblock( object, "sourceChanged(QUrl)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM psrc = hb_itemPutPtr( NULL, (QUrl *) &src );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psrc = Signals_return_object( (void *) &src, "QURL" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psrc );
     hb_itemRelease( psender );
     hb_itemRelease( psrc );

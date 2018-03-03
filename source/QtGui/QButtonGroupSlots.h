@@ -23,6 +23,8 @@
 #include "qt4xhb_macros.h"
 #include "qt4xhb_signals.h"
 
+#include <QAbstractButton>
+
 class QButtonGroupSlots: public QObject
 {
   Q_OBJECT

@@ -27,8 +27,8 @@ void QWidgetSlots::customContextMenuRequested( const QPoint & pos )
   PHB_ITEM cb = Signals_return_codeblock( object, "customContextMenuRequested(QPoint)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM ppos = hb_itemPutPtr( NULL, (QPoint *) &pos );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM ppos = Signals_return_object( (void *) &pos, "QPOINT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppos );
     hb_itemRelease( psender );
     hb_itemRelease( ppos );
