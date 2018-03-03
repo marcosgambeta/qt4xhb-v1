@@ -27,8 +27,8 @@ void QScriptEngineSlots::signalHandlerException( const QScriptValue & exception 
   PHB_ITEM cb = Signals_return_codeblock( object, "signalHandlerException(QScriptValue)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pexception = hb_itemPutPtr( NULL, (QScriptValue *) &exception );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM pexception = Signals_return_object( (void *) &exception, "QSCRIPTVALUE" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pexception );
     hb_itemRelease( psender );
     hb_itemRelease( pexception );
