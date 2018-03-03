@@ -27,8 +27,8 @@ void QObjectSlots::destroyed( QObject * obj )
   PHB_ITEM cb = Signals_return_codeblock( object, "destroyed(QObject*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pobj = hb_itemPutPtr( NULL, (QObject *) obj );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM pobj = Signals_return_qobject( obj, "QOBJECT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pobj );
     hb_itemRelease( psender );
     hb_itemRelease( pobj );

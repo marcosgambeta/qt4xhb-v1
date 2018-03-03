@@ -23,6 +23,8 @@
 #include "qt4xhb_macros.h"
 #include "qt4xhb_signals.h"
 
+#include <QWidget>
+
 class QSignalMapperSlots: public QObject
 {
   Q_OBJECT
