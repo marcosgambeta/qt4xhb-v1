@@ -48,23 +48,12 @@ void QLabelSlots::linkHovered( const QString & link )
   }
 }
 
-HB_FUNC( QLABEL_ONLINKACTIVATED )
+void QLabelSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QLabelSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "linkActivated(QString)", "linkActivated(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QLABEL_ONLINKHOVERED )
-{
-  if( s == NULL )
-  {
-    s = new QLabelSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "linkHovered(QString)", "linkHovered(QString)" ) );
-}
-

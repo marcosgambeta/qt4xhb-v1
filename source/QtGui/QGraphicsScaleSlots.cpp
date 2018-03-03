@@ -77,53 +77,12 @@ void QGraphicsScaleSlots::zScaleChanged()
   }
 }
 
-HB_FUNC( QGRAPHICSSCALE_ONORIGINCHANGED )
+void QGraphicsScaleSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QGraphicsScaleSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "originChanged()", "originChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QGRAPHICSSCALE_ONSCALECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QGraphicsScaleSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "scaleChanged()", "scaleChanged()" ) );
-}
-
-HB_FUNC( QGRAPHICSSCALE_ONXSCALECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QGraphicsScaleSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "xScaleChanged()", "xScaleChanged()" ) );
-}
-
-HB_FUNC( QGRAPHICSSCALE_ONYSCALECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QGraphicsScaleSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "yScaleChanged()", "yScaleChanged()" ) );
-}
-
-HB_FUNC( QGRAPHICSSCALE_ONZSCALECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QGraphicsScaleSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "zScaleChanged()", "zScaleChanged()" ) );
-}
-

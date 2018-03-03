@@ -107,73 +107,12 @@ void QApplicationSlots::saveStateRequest( QSessionManager & manager )
   }
 }
 
-HB_FUNC( QAPPLICATION_ONABOUTTORELEASEGPURESOURCES )
+void QApplicationSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QApplicationSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "aboutToReleaseGpuResources()", "aboutToReleaseGpuResources()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QAPPLICATION_ONABOUTTOUSEGPURESOURCES )
-{
-  if( s == NULL )
-  {
-    s = new QApplicationSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "aboutToUseGpuResources()", "aboutToUseGpuResources()" ) );
-}
-
-HB_FUNC( QAPPLICATION_ONCOMMITDATAREQUEST )
-{
-  if( s == NULL )
-  {
-    s = new QApplicationSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "commitDataRequest(QSessionManager)", "commitDataRequest(QSessionManager)" ) );
-}
-
-HB_FUNC( QAPPLICATION_ONFOCUSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QApplicationSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "focusChanged(QWidget*,QWidget*)", "focusChanged(QWidget*,QWidget*)" ) );
-}
-
-HB_FUNC( QAPPLICATION_ONFONTDATABASECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QApplicationSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "fontDatabaseChanged()", "fontDatabaseChanged()" ) );
-}
-
-HB_FUNC( QAPPLICATION_ONLASTWINDOWCLOSED )
-{
-  if( s == NULL )
-  {
-    s = new QApplicationSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "lastWindowClosed()", "lastWindowClosed()" ) );
-}
-
-HB_FUNC( QAPPLICATION_ONSAVESTATEREQUEST )
-{
-  if( s == NULL )
-  {
-    s = new QApplicationSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "saveStateRequest(QSessionManager)", "saveStateRequest(QSessionManager)" ) );
-}
-

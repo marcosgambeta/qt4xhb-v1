@@ -48,23 +48,12 @@ void QStackedLayoutSlots::setCurrentWidget( QWidget * widget )
   }
 }
 
-HB_FUNC( QSTACKEDLAYOUT_ONSETCURRENTINDEX )
+void QStackedLayoutSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QStackedLayoutSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "setCurrentIndex(int)", "setCurrentIndex(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QSTACKEDLAYOUT_ONSETCURRENTWIDGET )
-{
-  if( s == NULL )
-  {
-    s = new QStackedLayoutSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "setCurrentWidget(QWidget*)", "setCurrentWidget(QWidget*)" ) );
-}
-

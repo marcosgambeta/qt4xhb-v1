@@ -111,73 +111,12 @@ void QTextBrowserSlots::sourceChanged( const QUrl & src )
   }
 }
 
-HB_FUNC( QTEXTBROWSER_ONANCHORCLICKED )
+void QTextBrowserSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QTextBrowserSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "anchorClicked(QUrl)", "anchorClicked(QUrl)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QTEXTBROWSER_ONBACKWARDAVAILABLE )
-{
-  if( s == NULL )
-  {
-    s = new QTextBrowserSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "backwardAvailable(bool)", "backwardAvailable(bool)" ) );
-}
-
-HB_FUNC( QTEXTBROWSER_ONFORWARDAVAILABLE )
-{
-  if( s == NULL )
-  {
-    s = new QTextBrowserSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "forwardAvailable(bool)", "forwardAvailable(bool)" ) );
-}
-
-HB_FUNC( QTEXTBROWSER_ONHIGHLIGHTED1 )
-{
-  if( s == NULL )
-  {
-    s = new QTextBrowserSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "highlighted(QUrl)", "highlighted(QUrl)" ) );
-}
-
-HB_FUNC( QTEXTBROWSER_ONHIGHLIGHTED2 )
-{
-  if( s == NULL )
-  {
-    s = new QTextBrowserSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "highlighted(QString)", "highlighted(QString)" ) );
-}
-
-HB_FUNC( QTEXTBROWSER_ONHISTORYCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QTextBrowserSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "historyChanged()", "historyChanged()" ) );
-}
-
-HB_FUNC( QTEXTBROWSER_ONSOURCECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QTextBrowserSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "sourceChanged(QUrl)", "sourceChanged(QUrl)" ) );
-}
-

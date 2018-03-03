@@ -65,33 +65,12 @@ void QFileSystemModelSlots::rootPathChanged( const QString & newPath )
   }
 }
 
-HB_FUNC( QFILESYSTEMMODEL_ONDIRECTORYLOADED )
+void QFileSystemModelSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QFileSystemModelSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "directoryLoaded(QString)", "directoryLoaded(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QFILESYSTEMMODEL_ONFILERENAMED )
-{
-  if( s == NULL )
-  {
-    s = new QFileSystemModelSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "fileRenamed(QString,QString,QString)", "fileRenamed(QString,QString,QString)" ) );
-}
-
-HB_FUNC( QFILESYSTEMMODEL_ONROOTPATHCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QFileSystemModelSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "rootPathChanged(QString)", "rootPathChanged(QString)" ) );
-}
-

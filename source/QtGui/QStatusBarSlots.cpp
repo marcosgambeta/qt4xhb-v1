@@ -35,13 +35,12 @@ void QStatusBarSlots::messageChanged( const QString & message )
   }
 }
 
-HB_FUNC( QSTATUSBAR_ONMESSAGECHANGED )
+void QStatusBarSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QStatusBarSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "messageChanged(QString)", "messageChanged(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

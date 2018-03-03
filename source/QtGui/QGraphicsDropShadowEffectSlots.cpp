@@ -61,33 +61,12 @@ void QGraphicsDropShadowEffectSlots::offsetChanged( const QPointF & offset )
   }
 }
 
-HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_ONBLURRADIUSCHANGED )
+void QGraphicsDropShadowEffectSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QGraphicsDropShadowEffectSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "blurRadiusChanged(qreal)", "blurRadiusChanged(qreal)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_ONCOLORCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QGraphicsDropShadowEffectSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "colorChanged(QColor)", "colorChanged(QColor)" ) );
-}
-
-HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_ONOFFSETCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QGraphicsDropShadowEffectSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "offsetChanged(QPointF)", "offsetChanged(QPointF)" ) );
-}
-

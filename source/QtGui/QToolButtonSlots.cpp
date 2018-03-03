@@ -35,13 +35,12 @@ void QToolButtonSlots::triggered( QAction * action )
   }
 }
 
-HB_FUNC( QTOOLBUTTON_ONTRIGGERED )
+void QToolButtonSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QToolButtonSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "triggered(QAction*)", "triggered(QAction*)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

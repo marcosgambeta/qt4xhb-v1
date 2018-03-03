@@ -74,43 +74,12 @@ void QAbstractTextDocumentLayoutSlots::updateBlock( const QTextBlock & block )
   }
 }
 
-HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_ONDOCUMENTSIZECHANGED )
+void QAbstractTextDocumentLayoutSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QAbstractTextDocumentLayoutSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "documentSizeChanged(QSizeF)", "documentSizeChanged(QSizeF)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_ONPAGECOUNTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractTextDocumentLayoutSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "pageCountChanged(int)", "pageCountChanged(int)" ) );
-}
-
-HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATE )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractTextDocumentLayoutSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "update(QRectF)", "update(QRectF)" ) );
-}
-
-HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATEBLOCK )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractTextDocumentLayoutSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "updateBlock(QTextBlock)", "updateBlock(QTextBlock)" ) );
-}
-

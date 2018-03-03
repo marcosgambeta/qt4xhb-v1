@@ -44,23 +44,12 @@ void QShortcutSlots::activatedAmbiguously()
   }
 }
 
-HB_FUNC( QSHORTCUT_ONACTIVATED )
+void QShortcutSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QShortcutSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "activated()", "activated()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QSHORTCUT_ONACTIVATEDAMBIGUOUSLY )
-{
-  if( s == NULL )
-  {
-    s = new QShortcutSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "activatedAmbiguously()", "activatedAmbiguously()" ) );
-}
-

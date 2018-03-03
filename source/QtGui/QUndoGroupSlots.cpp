@@ -113,73 +113,12 @@ void QUndoGroupSlots::undoTextChanged( const QString & undoText )
   }
 }
 
-HB_FUNC( QUNDOGROUP_ONACTIVESTACKCHANGED )
+void QUndoGroupSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QUndoGroupSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "activeStackChanged(QUndoStack*)", "activeStackChanged(QUndoStack*)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QUNDOGROUP_ONCANREDOCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QUndoGroupSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "canRedoChanged(bool)", "canRedoChanged(bool)" ) );
-}
-
-HB_FUNC( QUNDOGROUP_ONCANUNDOCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QUndoGroupSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "canUndoChanged(bool)", "canUndoChanged(bool)" ) );
-}
-
-HB_FUNC( QUNDOGROUP_ONCLEANCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QUndoGroupSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "cleanChanged(bool)", "cleanChanged(bool)" ) );
-}
-
-HB_FUNC( QUNDOGROUP_ONINDEXCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QUndoGroupSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "indexChanged(int)", "indexChanged(int)" ) );
-}
-
-HB_FUNC( QUNDOGROUP_ONREDOTEXTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QUndoGroupSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "redoTextChanged(QString)", "redoTextChanged(QString)" ) );
-}
-
-HB_FUNC( QUNDOGROUP_ONUNDOTEXTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QUndoGroupSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "undoTextChanged(QString)", "undoTextChanged(QString)" ) );
-}
-

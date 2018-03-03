@@ -61,33 +61,12 @@ void QDateTimeEditSlots::timeChanged( const QTime & time )
   }
 }
 
-HB_FUNC( QDATETIMEEDIT_ONDATECHANGED )
+void QDateTimeEditSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QDateTimeEditSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "dateChanged(QDate)", "dateChanged(QDate)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QDATETIMEEDIT_ONDATETIMECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QDateTimeEditSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "dateTimeChanged(QDateTime)", "dateTimeChanged(QDateTime)" ) );
-}
-
-HB_FUNC( QDATETIMEEDIT_ONTIMECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QDateTimeEditSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "timeChanged(QTime)", "timeChanged(QTime)" ) );
-}
-

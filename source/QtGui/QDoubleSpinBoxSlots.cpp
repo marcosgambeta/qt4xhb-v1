@@ -48,23 +48,12 @@ void QDoubleSpinBoxSlots::valueChanged( const QString & text )
   }
 }
 
-HB_FUNC( QDOUBLESPINBOX_ONVALUECHANGED1 )
+void QDoubleSpinBoxSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QDoubleSpinBoxSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "valueChanged(double)", "valueChanged(double)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QDOUBLESPINBOX_ONVALUECHANGED2 )
-{
-  if( s == NULL )
-  {
-    s = new QDoubleSpinBoxSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "valueChanged(QString)", "valueChanged(QString)" ) );
-}
-

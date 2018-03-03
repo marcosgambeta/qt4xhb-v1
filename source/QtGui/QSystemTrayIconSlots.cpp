@@ -46,23 +46,12 @@ void QSystemTrayIconSlots::messageClicked()
   }
 }
 
-HB_FUNC( QSYSTEMTRAYICON_ONACTIVATED )
+void QSystemTrayIconSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QSystemTrayIconSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "activated(QSystemTrayIcon::ActivationReason)", "activated(QSystemTrayIcon::ActivationReason)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QSYSTEMTRAYICON_ONMESSAGECLICKED )
-{
-  if( s == NULL )
-  {
-    s = new QSystemTrayIconSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "messageClicked()", "messageClicked()" ) );
-}
-

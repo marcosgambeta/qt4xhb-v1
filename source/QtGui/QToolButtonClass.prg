@@ -412,4 +412,12 @@ HB_FUNC_STATIC( QTOOLBUTTON_SHOWMENU )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QToolButtonSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QTOOLBUTTON_ONTRIGGERED )
+{
+  QToolButtonSlots_connect_signal( "triggered(QAction*)", "triggered(QAction*)" );
+}
+
+
 #pragma ENDDUMP

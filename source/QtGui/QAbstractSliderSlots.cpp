@@ -98,63 +98,12 @@ void QAbstractSliderSlots::valueChanged( int value )
   }
 }
 
-HB_FUNC( QABSTRACTSLIDER_ONACTIONTRIGGERED )
+void QAbstractSliderSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QAbstractSliderSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "actionTriggered(int)", "actionTriggered(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QABSTRACTSLIDER_ONRANGECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractSliderSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "rangeChanged(int,int)", "rangeChanged(int,int)" ) );
-}
-
-HB_FUNC( QABSTRACTSLIDER_ONSLIDERMOVED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractSliderSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "sliderMoved(int)", "sliderMoved(int)" ) );
-}
-
-HB_FUNC( QABSTRACTSLIDER_ONSLIDERPRESSED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractSliderSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "sliderPressed()", "sliderPressed()" ) );
-}
-
-HB_FUNC( QABSTRACTSLIDER_ONSLIDERRELEASED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractSliderSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "sliderReleased()", "sliderReleased()" ) );
-}
-
-HB_FUNC( QABSTRACTSLIDER_ONVALUECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractSliderSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "valueChanged(int)", "valueChanged(int)" ) );
-}
-

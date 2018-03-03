@@ -48,23 +48,12 @@ void QFontDialogSlots::fontSelected( const QFont & font )
   }
 }
 
-HB_FUNC( QFONTDIALOG_ONCURRENTFONTCHANGED )
+void QFontDialogSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QFontDialogSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "currentFontChanged(QFont)", "currentFontChanged(QFont)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QFONTDIALOG_ONFONTSELECTED )
-{
-  if( s == NULL )
-  {
-    s = new QFontDialogSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "fontSelected(QFont)", "fontSelected(QFont)" ) );
-}
-

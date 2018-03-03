@@ -33,13 +33,12 @@ void QWizardPageSlots::completeChanged()
   }
 }
 
-HB_FUNC( QWIZARDPAGE_ONCOMPLETECHANGED )
+void QWizardPageSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QWizardPageSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "completeChanged()", "completeChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

@@ -48,23 +48,12 @@ void QGroupBoxSlots::toggled( bool on )
   }
 }
 
-HB_FUNC( QGROUPBOX_ONCLICKED )
+void QGroupBoxSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QGroupBoxSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "clicked(bool)", "clicked(bool)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QGROUPBOX_ONTOGGLED )
-{
-  if( s == NULL )
-  {
-    s = new QGroupBoxSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "toggled(bool)", "toggled(bool)" ) );
-}
-

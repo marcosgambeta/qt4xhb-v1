@@ -63,33 +63,12 @@ void QStyleSlots::tabMoved( int from, int to )
   }
 }
 
-HB_FUNC( QSTYLE_ONCURRENTCHANGED )
+void QStyleSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QStyleSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "currentChanged(int)", "currentChanged(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QSTYLE_ONTABCLOSEREQUESTED )
-{
-  if( s == NULL )
-  {
-    s = new QStyleSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "tabCloseRequested(int)", "tabCloseRequested(int)" ) );
-}
-
-HB_FUNC( QSTYLE_ONTABMOVED )
-{
-  if( s == NULL )
-  {
-    s = new QStyleSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "tabMoved(int,int)", "tabMoved(int,int)" ) );
-}
-

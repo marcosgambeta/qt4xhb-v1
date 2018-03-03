@@ -98,63 +98,12 @@ void QAbstractItemViewSlots::viewportEntered()
   }
 }
 
-HB_FUNC( QABSTRACTITEMVIEW_ONACTIVATED )
+void QAbstractItemViewSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QAbstractItemViewSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "activated(QModelIndex)", "activated(QModelIndex)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QABSTRACTITEMVIEW_ONCLICKED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractItemViewSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "clicked(QModelIndex)", "clicked(QModelIndex)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMVIEW_ONDOUBLECLICKED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractItemViewSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "doubleClicked(QModelIndex)", "doubleClicked(QModelIndex)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMVIEW_ONENTERED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractItemViewSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "entered(QModelIndex)", "entered(QModelIndex)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMVIEW_ONPRESSED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractItemViewSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "pressed(QModelIndex)", "pressed(QModelIndex)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMVIEW_ONVIEWPORTENTERED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractItemViewSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "viewportEntered()", "viewportEntered()" ) );
-}
-

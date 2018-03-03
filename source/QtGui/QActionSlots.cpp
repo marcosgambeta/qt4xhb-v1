@@ -70,43 +70,12 @@ void QActionSlots::triggered( bool checked )
   }
 }
 
-HB_FUNC( QACTION_ONCHANGED )
+void QActionSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QActionSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "changed()", "changed()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QACTION_ONHOVERED )
-{
-  if( s == NULL )
-  {
-    s = new QActionSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "hovered()", "hovered()" ) );
-}
-
-HB_FUNC( QACTION_ONTOGGLED )
-{
-  if( s == NULL )
-  {
-    s = new QActionSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "toggled(bool)", "toggled(bool)" ) );
-}
-
-HB_FUNC( QACTION_ONTRIGGERED )
-{
-  if( s == NULL )
-  {
-    s = new QActionSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "triggered(bool)", "triggered(bool)" ) );
-}
-

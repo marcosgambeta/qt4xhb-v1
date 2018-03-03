@@ -48,23 +48,12 @@ void QDragSlots::targetChanged( QWidget * newTarget )
   }
 }
 
-HB_FUNC( QDRAG_ONACTIONCHANGED )
+void QDragSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QDragSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "actionChanged(Qt::DropAction)", "actionChanged(Qt::DropAction)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QDRAG_ONTARGETCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QDragSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "targetChanged(QWidget*)", "targetChanged(QWidget*)" ) );
-}
-

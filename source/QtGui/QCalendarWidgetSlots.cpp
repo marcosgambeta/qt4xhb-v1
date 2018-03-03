@@ -74,43 +74,12 @@ void QCalendarWidgetSlots::selectionChanged()
   }
 }
 
-HB_FUNC( QCALENDARWIDGET_ONACTIVATED )
+void QCalendarWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QCalendarWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "activated(QDate)", "activated(QDate)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QCALENDARWIDGET_ONCLICKED )
-{
-  if( s == NULL )
-  {
-    s = new QCalendarWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "clicked(QDate)", "clicked(QDate)" ) );
-}
-
-HB_FUNC( QCALENDARWIDGET_ONCURRENTPAGECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QCalendarWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "currentPageChanged(int,int)", "currentPageChanged(int,int)" ) );
-}
-
-HB_FUNC( QCALENDARWIDGET_ONSELECTIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QCalendarWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "selectionChanged()", "selectionChanged()" ) );
-}
-

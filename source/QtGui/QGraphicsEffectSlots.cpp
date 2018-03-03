@@ -35,13 +35,12 @@ void QGraphicsEffectSlots::enabledChanged( bool enabled )
   }
 }
 
-HB_FUNC( QGRAPHICSEFFECT_ONENABLEDCHANGED )
+void QGraphicsEffectSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QGraphicsEffectSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "enabledChanged(bool)", "enabledChanged(bool)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

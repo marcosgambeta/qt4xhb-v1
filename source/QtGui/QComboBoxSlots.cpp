@@ -113,103 +113,12 @@ void QComboBoxSlots::highlighted( const QString & text )
   }
 }
 
-HB_FUNC( QCOMBOBOX_ONACTIVATED1 )
+void QComboBoxSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QComboBoxSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "activated(int)", "activated(int)" ) );
-}
-
-HB_FUNC( QCOMBOBOX_ONACTIVATED2 )
-{
-  if( s == NULL )
-  {
-    s = new QComboBoxSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "activated(QString)", "activated(QString)" ) );
-}
-
-HB_FUNC( QCOMBOBOX_ONCURRENTINDEXCHANGED1 )
-{
-  if( s == NULL )
-  {
-    s = new QComboBoxSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "currentIndexChanged(int)", "currentIndexChanged(int)" ) );
-}
-
-HB_FUNC( QCOMBOBOX_ONCURRENTINDEXCHANGED2 )
-{
-  if( s == NULL )
-  {
-    s = new QComboBoxSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "currentIndexChanged(QString)", "currentIndexChanged(QString)" ) );
-}
-
-HB_FUNC( QCOMBOBOX_ONEDITTEXTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QComboBoxSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "editTextChanged(QString)", "editTextChanged(QString)" ) );
-}
-
-HB_FUNC( QCOMBOBOX_ONHIGHLIGHTED1 )
-{
-  if( s == NULL )
-  {
-    s = new QComboBoxSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "highlighted(int)", "highlighted(int)" ) );
-}
-
-HB_FUNC( QCOMBOBOX_ONHIGHLIGHTED2 )
-{
-  if( s == NULL )
-  {
-    s = new QComboBoxSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "highlighted(QString)", "highlighted(QString)" ) );
-}
-
-
-HB_FUNC( QCOMBOBOX_ONACTIVATED )
-{
-  HB_FUNC_EXEC( QCOMBOBOX_ONACTIVATED1 );
-}
-
-HB_FUNC( QCOMBOBOX_ONACTIVATEDC )
-{
-  HB_FUNC_EXEC( QCOMBOBOX_ONACTIVATED2 );
-}
-
-HB_FUNC( QCOMBOBOX_ONCURRENTINDEXCHANGED )
-{
-  HB_FUNC_EXEC( QCOMBOBOX_ONCURRENTINDEXCHANGED1 );
-}
-
-HB_FUNC( QCOMBOBOX_ONCURRENTINDEXCHANGEDC )
-{
-  HB_FUNC_EXEC( QCOMBOBOX_ONCURRENTINDEXCHANGED2 );
-}
-
-HB_FUNC( QCOMBOBOX_ONHIGHLIGHTED )
-{
-  HB_FUNC_EXEC( QCOMBOBOX_ONHIGHLIGHTED1 );
-}
-
-HB_FUNC( QCOMBOBOX_ONHIGHLIGHTEDC )
-{
-  HB_FUNC_EXEC( QCOMBOBOX_ONHIGHLIGHTED2 );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }

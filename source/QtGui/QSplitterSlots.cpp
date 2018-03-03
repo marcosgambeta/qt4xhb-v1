@@ -37,13 +37,12 @@ void QSplitterSlots::splitterMoved( int pos, int index )
   }
 }
 
-HB_FUNC( QSPLITTER_ONSPLITTERMOVED )
+void QSplitterSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QSplitterSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "splitterMoved(int,int)", "splitterMoved(int,int)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

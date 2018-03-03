@@ -33,13 +33,12 @@ void QProgressDialogSlots::canceled()
   }
 }
 
-HB_FUNC( QPROGRESSDIALOG_ONCANCELED )
+void QProgressDialogSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QProgressDialogSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "canceled()", "canceled()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

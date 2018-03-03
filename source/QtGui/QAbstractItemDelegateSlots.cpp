@@ -63,33 +63,12 @@ void QAbstractItemDelegateSlots::sizeHintChanged( const QModelIndex & index )
   }
 }
 
-HB_FUNC( QABSTRACTITEMDELEGATE_ONCLOSEEDITOR )
+void QAbstractItemDelegateSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QAbstractItemDelegateSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)", "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QABSTRACTITEMDELEGATE_ONCOMMITDATA )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractItemDelegateSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "commitData(QWidget*)", "commitData(QWidget*)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMDELEGATE_ONSIZEHINTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractItemDelegateSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "sizeHintChanged(QModelIndex)", "sizeHintChanged(QModelIndex)" ) );
-}
-

@@ -48,23 +48,12 @@ void QGraphicsBlurEffectSlots::blurRadiusChanged( qreal radius )
   }
 }
 
-HB_FUNC( QGRAPHICSBLUREFFECT_ONBLURHINTSCHANGED )
+void QGraphicsBlurEffectSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QGraphicsBlurEffectSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "blurHintsChanged(QGraphicsBlurEffect::BlurHints)", "blurHintsChanged(QGraphicsBlurEffect::BlurHints)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QGRAPHICSBLUREFFECT_ONBLURRADIUSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QGraphicsBlurEffectSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "blurRadiusChanged(qreal)", "blurRadiusChanged(qreal)" ) );
-}
-

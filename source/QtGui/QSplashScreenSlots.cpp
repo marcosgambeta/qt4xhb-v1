@@ -35,13 +35,12 @@ void QSplashScreenSlots::messageChanged( const QString & message )
   }
 }
 
-HB_FUNC( QSPLASHSCREEN_ONMESSAGECHANGED )
+void QSplashScreenSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QSplashScreenSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "messageChanged(QString)", "messageChanged(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

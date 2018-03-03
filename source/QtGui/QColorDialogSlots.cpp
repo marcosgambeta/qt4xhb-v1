@@ -48,23 +48,12 @@ void QColorDialogSlots::currentColorChanged( const QColor & color )
   }
 }
 
-HB_FUNC( QCOLORDIALOG_ONCOLORSELECTED )
+void QColorDialogSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QColorDialogSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "colorSelected(QColor)", "colorSelected(QColor)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QCOLORDIALOG_ONCURRENTCOLORCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QColorDialogSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "currentColorChanged(QColor)", "currentColorChanged(QColor)" ) );
-}
-

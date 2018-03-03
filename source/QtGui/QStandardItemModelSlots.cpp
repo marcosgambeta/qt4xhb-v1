@@ -35,13 +35,12 @@ void QStandardItemModelSlots::itemChanged( QStandardItem * item )
   }
 }
 
-HB_FUNC( QSTANDARDITEMMODEL_ONITEMCHANGED )
+void QStandardItemModelSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QStandardItemModelSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "itemChanged(QStandardItem*)", "itemChanged(QStandardItem*)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

@@ -35,13 +35,12 @@ void QFontComboBoxSlots::currentFontChanged( const QFont & font )
   }
 }
 
-HB_FUNC( QFONTCOMBOBOX_ONCURRENTFONTCHANGED )
+void QFontComboBoxSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QFontComboBoxSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "currentFontChanged(QFont)", "currentFontChanged(QFont)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

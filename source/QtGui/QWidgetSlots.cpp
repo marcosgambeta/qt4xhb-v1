@@ -35,13 +35,12 @@ void QWidgetSlots::customContextMenuRequested( const QPoint & pos )
   }
 }
 
-HB_FUNC( QWIDGET_ONCUSTOMCONTEXTMENUREQUESTED )
+void QWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "customContextMenuRequested(QPoint)", "customContextMenuRequested(QPoint)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

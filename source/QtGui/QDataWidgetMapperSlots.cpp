@@ -35,13 +35,12 @@ void QDataWidgetMapperSlots::currentIndexChanged( int index )
   }
 }
 
-HB_FUNC( QDATAWIDGETMAPPER_ONCURRENTINDEXCHANGED )
+void QDataWidgetMapperSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QDataWidgetMapperSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "currentIndexChanged(int)", "currentIndexChanged(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

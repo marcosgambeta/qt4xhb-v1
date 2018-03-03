@@ -63,33 +63,12 @@ void QTabBarSlots::tabMoved( int from, int to )
   }
 }
 
-HB_FUNC( QTABBAR_ONCURRENTCHANGED )
+void QTabBarSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QTabBarSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "currentChanged(int)", "currentChanged(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QTABBAR_ONTABCLOSEREQUESTED )
-{
-  if( s == NULL )
-  {
-    s = new QTabBarSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "tabCloseRequested(int)", "tabCloseRequested(int)" ) );
-}
-
-HB_FUNC( QTABBAR_ONTABMOVED )
-{
-  if( s == NULL )
-  {
-    s = new QTabBarSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "tabMoved(int,int)", "tabMoved(int,int)" ) );
-}
-

@@ -152,103 +152,12 @@ void QListWidgetSlots::itemSelectionChanged()
   }
 }
 
-HB_FUNC( QLISTWIDGET_ONCURRENTITEMCHANGED )
+void QListWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QListWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "currentItemChanged(QListWidgetItem*,QListWidgetItem*)", "currentItemChanged(QListWidgetItem*,QListWidgetItem*)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QLISTWIDGET_ONCURRENTROWCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QListWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "currentRowChanged(int)", "currentRowChanged(int)" ) );
-}
-
-HB_FUNC( QLISTWIDGET_ONCURRENTTEXTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QListWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "currentTextChanged(QString)", "currentTextChanged(QString)" ) );
-}
-
-HB_FUNC( QLISTWIDGET_ONITEMACTIVATED )
-{
-  if( s == NULL )
-  {
-    s = new QListWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "itemActivated(QListWidgetItem*)", "itemActivated(QListWidgetItem*)" ) );
-}
-
-HB_FUNC( QLISTWIDGET_ONITEMCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QListWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "itemChanged(QListWidgetItem*)", "itemChanged(QListWidgetItem*)" ) );
-}
-
-HB_FUNC( QLISTWIDGET_ONITEMCLICKED )
-{
-  if( s == NULL )
-  {
-    s = new QListWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "itemClicked(QListWidgetItem*)", "itemClicked(QListWidgetItem*)" ) );
-}
-
-HB_FUNC( QLISTWIDGET_ONITEMDOUBLECLICKED )
-{
-  if( s == NULL )
-  {
-    s = new QListWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "itemDoubleClicked(QListWidgetItem*)", "itemDoubleClicked(QListWidgetItem*)" ) );
-}
-
-HB_FUNC( QLISTWIDGET_ONITEMENTERED )
-{
-  if( s == NULL )
-  {
-    s = new QListWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "itemEntered(QListWidgetItem*)", "itemEntered(QListWidgetItem*)" ) );
-}
-
-HB_FUNC( QLISTWIDGET_ONITEMPRESSED )
-{
-  if( s == NULL )
-  {
-    s = new QListWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "itemPressed(QListWidgetItem*)", "itemPressed(QListWidgetItem*)" ) );
-}
-
-HB_FUNC( QLISTWIDGET_ONITEMSELECTIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QListWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "itemSelectionChanged()", "itemSelectionChanged()" ) );
-}
-

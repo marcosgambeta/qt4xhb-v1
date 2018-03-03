@@ -48,23 +48,12 @@ void QTreeViewSlots::expanded( const QModelIndex & index )
   }
 }
 
-HB_FUNC( QTREEVIEW_ONCOLLAPSED )
+void QTreeViewSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QTreeViewSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "collapsed(QModelIndex)", "collapsed(QModelIndex)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QTREEVIEW_ONEXPANDED )
-{
-  if( s == NULL )
-  {
-    s = new QTreeViewSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "expanded(QModelIndex)", "expanded(QModelIndex)" ) );
-}
-

@@ -35,13 +35,12 @@ void QWorkspaceSlots::windowActivated( QWidget * w )
   }
 }
 
-HB_FUNC( QWORKSPACE_ONWINDOWACTIVATED )
+void QWorkspaceSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QWorkspaceSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "windowActivated(QWidget*)", "windowActivated(QWidget*)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

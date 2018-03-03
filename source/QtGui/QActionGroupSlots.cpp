@@ -48,23 +48,12 @@ void QActionGroupSlots::triggered( QAction * action )
   }
 }
 
-HB_FUNC( QACTIONGROUP_ONHOVERED )
+void QActionGroupSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QActionGroupSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "hovered(QAction*)", "hovered(QAction*)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QACTIONGROUP_ONTRIGGERED )
-{
-  if( s == NULL )
-  {
-    s = new QActionGroupSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "triggered(QAction*)", "triggered(QAction*)" ) );
-}
-

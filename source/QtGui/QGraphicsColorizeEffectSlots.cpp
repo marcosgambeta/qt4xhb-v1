@@ -48,23 +48,12 @@ void QGraphicsColorizeEffectSlots::strengthChanged( qreal strength )
   }
 }
 
-HB_FUNC( QGRAPHICSCOLORIZEEFFECT_ONCOLORCHANGED )
+void QGraphicsColorizeEffectSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QGraphicsColorizeEffectSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "colorChanged(QColor)", "colorChanged(QColor)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QGRAPHICSCOLORIZEEFFECT_ONSTRENGTHCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QGraphicsColorizeEffectSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "strengthChanged(qreal)", "strengthChanged(qreal)" ) );
-}
-

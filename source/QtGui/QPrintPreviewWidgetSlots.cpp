@@ -46,23 +46,12 @@ void QPrintPreviewWidgetSlots::previewChanged()
   }
 }
 
-HB_FUNC( QPRINTPREVIEWWIDGET_ONPAINTREQUESTED )
+void QPrintPreviewWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QPrintPreviewWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "paintRequested(QPrinter*)", "paintRequested(QPrinter*)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QPRINTPREVIEWWIDGET_ONPREVIEWCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QPrintPreviewWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "previewChanged()", "previewChanged()" ) );
-}
-

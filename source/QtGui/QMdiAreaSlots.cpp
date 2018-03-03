@@ -35,13 +35,12 @@ void QMdiAreaSlots::subWindowActivated( QMdiSubWindow * window )
   }
 }
 
-HB_FUNC( QMDIAREA_ONSUBWINDOWACTIVATED )
+void QMdiAreaSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QMdiAreaSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "subWindowActivated(QMdiSubWindow*)", "subWindowActivated(QMdiSubWindow*)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

@@ -33,13 +33,12 @@ void QAbstractSpinBoxSlots::editingFinished()
   }
 }
 
-HB_FUNC( QABSTRACTSPINBOX_ONEDITINGFINISHED )
+void QAbstractSpinBoxSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QAbstractSpinBoxSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "editingFinished()", "editingFinished()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

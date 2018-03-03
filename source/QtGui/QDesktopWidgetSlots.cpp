@@ -61,33 +61,12 @@ void QDesktopWidgetSlots::workAreaResized( int screen )
   }
 }
 
-HB_FUNC( QDESKTOPWIDGET_ONRESIZED )
+void QDesktopWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QDesktopWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "resized(int)", "resized(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QDESKTOPWIDGET_ONSCREENCOUNTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QDesktopWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "screenCountChanged(int)", "screenCountChanged(int)" ) );
-}
-
-HB_FUNC( QDESKTOPWIDGET_ONWORKAREARESIZED )
-{
-  if( s == NULL )
-  {
-    s = new QDesktopWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "workAreaResized(int)", "workAreaResized(int)" ) );
-}
-

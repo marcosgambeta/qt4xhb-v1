@@ -48,23 +48,12 @@ void QMenuBarSlots::triggered( QAction * action )
   }
 }
 
-HB_FUNC( QMENUBAR_ONHOVERED )
+void QMenuBarSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QMenuBarSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "hovered(QAction*)", "hovered(QAction*)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QMENUBAR_ONTRIGGERED )
-{
-  if( s == NULL )
-  {
-    s = new QMenuBarSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "triggered(QAction*)", "triggered(QAction*)" ) );
-}
-

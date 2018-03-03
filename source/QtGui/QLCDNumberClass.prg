@@ -575,4 +575,12 @@ HB_FUNC_STATIC( QLCDNUMBER_SETSMALLDECIMALPOINT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QLCDNumberSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QLCDNUMBER_ONOVERFLOW )
+{
+  QLCDNumberSlots_connect_signal( "overflow()", "overflow()" );
+}
+
+
 #pragma ENDDUMP

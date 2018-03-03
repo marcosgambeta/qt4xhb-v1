@@ -238,4 +238,22 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_HELPEVENT )
   }
 }
 
+void QAbstractItemDelegateSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCLOSEEDITOR )
+{
+  QAbstractItemDelegateSlots_connect_signal( "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)", "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)" );
+}
+
+HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCOMMITDATA )
+{
+  QAbstractItemDelegateSlots_connect_signal( "commitData(QWidget*)", "commitData(QWidget*)" );
+}
+
+HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONSIZEHINTCHANGED )
+{
+  QAbstractItemDelegateSlots_connect_signal( "sizeHintChanged(QModelIndex)", "sizeHintChanged(QModelIndex)" );
+}
+
+
 #pragma ENDDUMP

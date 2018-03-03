@@ -48,23 +48,12 @@ void QGraphicsOpacityEffectSlots::opacityMaskChanged( const QBrush & mask )
   }
 }
 
-HB_FUNC( QGRAPHICSOPACITYEFFECT_ONOPACITYCHANGED )
+void QGraphicsOpacityEffectSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QGraphicsOpacityEffectSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "opacityChanged(qreal)", "opacityChanged(qreal)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QGRAPHICSOPACITYEFFECT_ONOPACITYMASKCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QGraphicsOpacityEffectSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "opacityMaskChanged(QBrush)", "opacityMaskChanged(QBrush)" ) );
-}
-

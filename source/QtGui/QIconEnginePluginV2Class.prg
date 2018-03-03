@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QICONENGINEPLUGINV2_CREATE )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISOPTCHAR(1) )
+    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
     {
       QIconEngineV2 * ptr = obj->create ( OPQSTRING(1,QString()) );
       _qt4xhb_createReturnClass ( ptr, "QICONENGINEV2", false );

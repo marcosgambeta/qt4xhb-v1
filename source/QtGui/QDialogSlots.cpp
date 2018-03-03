@@ -57,33 +57,12 @@ void QDialogSlots::rejected()
   }
 }
 
-HB_FUNC( QDIALOG_ONACCEPTED )
+void QDialogSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QDialogSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "accepted()", "accepted()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QDIALOG_ONFINISHED )
-{
-  if( s == NULL )
-  {
-    s = new QDialogSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "finished(int)", "finished(int)" ) );
-}
-
-HB_FUNC( QDIALOG_ONREJECTED )
-{
-  if( s == NULL )
-  {
-    s = new QDialogSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "rejected()", "rejected()" ) );
-}
-

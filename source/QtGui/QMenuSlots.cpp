@@ -70,43 +70,12 @@ void QMenuSlots::triggered( QAction * action )
   }
 }
 
-HB_FUNC( QMENU_ONABOUTTOHIDE )
+void QMenuSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QMenuSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "aboutToHide()", "aboutToHide()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QMENU_ONABOUTTOSHOW )
-{
-  if( s == NULL )
-  {
-    s = new QMenuSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "aboutToShow()", "aboutToShow()" ) );
-}
-
-HB_FUNC( QMENU_ONHOVERED )
-{
-  if( s == NULL )
-  {
-    s = new QMenuSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "hovered(QAction*)", "hovered(QAction*)" ) );
-}
-
-HB_FUNC( QMENU_ONTRIGGERED )
-{
-  if( s == NULL )
-  {
-    s = new QMenuSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "triggered(QAction*)", "triggered(QAction*)" ) );
-}
-

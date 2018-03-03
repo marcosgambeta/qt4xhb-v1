@@ -33,13 +33,12 @@ void QLCDNumberSlots::overflow()
   }
 }
 
-HB_FUNC( QLCDNUMBER_ONOVERFLOW )
+void QLCDNumberSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QLCDNumberSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "overflow()", "overflow()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

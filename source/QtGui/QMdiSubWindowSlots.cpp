@@ -48,23 +48,12 @@ void QMdiSubWindowSlots::windowStateChanged( Qt::WindowStates oldState, Qt::Wind
   }
 }
 
-HB_FUNC( QMDISUBWINDOW_ONABOUTTOACTIVATE )
+void QMdiSubWindowSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QMdiSubWindowSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "aboutToActivate()", "aboutToActivate()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QMDISUBWINDOW_ONWINDOWSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QMdiSubWindowSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)", "windowStateChanged(Qt::WindowStates,Qt::WindowStates)" ) );
-}
-

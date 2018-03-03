@@ -35,13 +35,12 @@ void QProgressBarSlots::valueChanged( int value )
   }
 }
 
-HB_FUNC( QPROGRESSBAR_ONVALUECHANGED )
+void QProgressBarSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QProgressBarSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "valueChanged(int)", "valueChanged(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

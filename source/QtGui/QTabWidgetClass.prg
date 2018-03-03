@@ -1031,4 +1031,17 @@ HB_FUNC_STATIC( QTABWIDGET_SETCURRENTWIDGET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QTabWidgetSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QTABWIDGET_ONCURRENTCHANGED )
+{
+  QTabWidgetSlots_connect_signal( "currentChanged(int)", "currentChanged(int)" );
+}
+
+HB_FUNC_STATIC( QTABWIDGET_ONTABCLOSEREQUESTED )
+{
+  QTabWidgetSlots_connect_signal( "tabCloseRequested(int)", "tabCloseRequested(int)" );
+}
+
+
 #pragma ENDDUMP

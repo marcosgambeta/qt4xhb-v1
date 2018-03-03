@@ -135,93 +135,12 @@ void QPlainTextEditSlots::updateRequest( const QRect & rect, int dy )
   }
 }
 
-HB_FUNC( QPLAINTEXTEDIT_ONBLOCKCOUNTCHANGED )
+void QPlainTextEditSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QPlainTextEditSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "blockCountChanged(int)", "blockCountChanged(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QPLAINTEXTEDIT_ONCOPYAVAILABLE )
-{
-  if( s == NULL )
-  {
-    s = new QPlainTextEditSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "copyAvailable(bool)", "copyAvailable(bool)" ) );
-}
-
-HB_FUNC( QPLAINTEXTEDIT_ONCURSORPOSITIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QPlainTextEditSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "cursorPositionChanged()", "cursorPositionChanged()" ) );
-}
-
-HB_FUNC( QPLAINTEXTEDIT_ONMODIFICATIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QPlainTextEditSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "modificationChanged(bool)", "modificationChanged(bool)" ) );
-}
-
-HB_FUNC( QPLAINTEXTEDIT_ONREDOAVAILABLE )
-{
-  if( s == NULL )
-  {
-    s = new QPlainTextEditSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "redoAvailable(bool)", "redoAvailable(bool)" ) );
-}
-
-HB_FUNC( QPLAINTEXTEDIT_ONSELECTIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QPlainTextEditSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "selectionChanged()", "selectionChanged()" ) );
-}
-
-HB_FUNC( QPLAINTEXTEDIT_ONTEXTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QPlainTextEditSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "textChanged()", "textChanged()" ) );
-}
-
-HB_FUNC( QPLAINTEXTEDIT_ONUNDOAVAILABLE )
-{
-  if( s == NULL )
-  {
-    s = new QPlainTextEditSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "undoAvailable(bool)", "undoAvailable(bool)" ) );
-}
-
-HB_FUNC( QPLAINTEXTEDIT_ONUPDATEREQUEST )
-{
-  if( s == NULL )
-  {
-    s = new QPlainTextEditSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "updateRequest(QRect,int)", "updateRequest(QRect,int)" ) );
-}
-

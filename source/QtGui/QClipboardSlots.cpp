@@ -68,43 +68,12 @@ void QClipboardSlots::selectionChanged()
   }
 }
 
-HB_FUNC( QCLIPBOARD_ONCHANGED )
+void QClipboardSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QClipboardSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "changed(QClipboard::Mode)", "changed(QClipboard::Mode)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QCLIPBOARD_ONDATACHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QClipboardSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "dataChanged()", "dataChanged()" ) );
-}
-
-HB_FUNC( QCLIPBOARD_ONFINDBUFFERCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QClipboardSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "findBufferChanged()", "findBufferChanged()" ) );
-}
-
-HB_FUNC( QCLIPBOARD_ONSELECTIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QClipboardSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "selectionChanged()", "selectionChanged()" ) );
-}
-

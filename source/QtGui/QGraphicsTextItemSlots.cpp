@@ -48,23 +48,12 @@ void QGraphicsTextItemSlots::linkHovered( const QString & link )
   }
 }
 
-HB_FUNC( QGRAPHICSTEXTITEM_ONLINKACTIVATED )
+void QGraphicsTextItemSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QGraphicsTextItemSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "linkActivated(QString)", "linkActivated(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QGRAPHICSTEXTITEM_ONLINKHOVERED )
-{
-  if( s == NULL )
-  {
-    s = new QGraphicsTextItemSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "linkHovered(QString)", "linkHovered(QString)" ) );
-}
-

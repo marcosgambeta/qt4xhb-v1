@@ -33,13 +33,12 @@ void QGraphicsWidgetSlots::geometryChanged()
   }
 }
 
-HB_FUNC( QGRAPHICSWIDGET_ONGEOMETRYCHANGED )
+void QGraphicsWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QGraphicsWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "geometryChanged()", "geometryChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

@@ -48,23 +48,12 @@ void QStackedWidgetSlots::widgetRemoved( int index )
   }
 }
 
-HB_FUNC( QSTACKEDWIDGET_ONCURRENTCHANGED )
+void QStackedWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QStackedWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "currentChanged(int)", "currentChanged(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QSTACKEDWIDGET_ONWIDGETREMOVED )
-{
-  if( s == NULL )
-  {
-    s = new QStackedWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "widgetRemoved(int)", "widgetRemoved(int)" ) );
-}
-

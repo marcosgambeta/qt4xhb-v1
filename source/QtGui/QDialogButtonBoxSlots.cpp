@@ -68,43 +68,12 @@ void QDialogButtonBoxSlots::rejected()
   }
 }
 
-HB_FUNC( QDIALOGBUTTONBOX_ONACCEPTED )
+void QDialogButtonBoxSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QDialogButtonBoxSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "accepted()", "accepted()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QDIALOGBUTTONBOX_ONCLICKED )
-{
-  if( s == NULL )
-  {
-    s = new QDialogButtonBoxSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "clicked(QAbstractButton*)", "clicked(QAbstractButton*)" ) );
-}
-
-HB_FUNC( QDIALOGBUTTONBOX_ONHELPREQUESTED )
-{
-  if( s == NULL )
-  {
-    s = new QDialogButtonBoxSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "helpRequested()", "helpRequested()" ) );
-}
-
-HB_FUNC( QDIALOGBUTTONBOX_ONREJECTED )
-{
-  if( s == NULL )
-  {
-    s = new QDialogButtonBoxSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "rejected()", "rejected()" ) );
-}
-

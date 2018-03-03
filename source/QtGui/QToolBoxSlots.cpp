@@ -35,13 +35,12 @@ void QToolBoxSlots::currentChanged( int index )
   }
 }
 
-HB_FUNC( QTOOLBOX_ONCURRENTCHANGED )
+void QToolBoxSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QToolBoxSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "currentChanged(int)", "currentChanged(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

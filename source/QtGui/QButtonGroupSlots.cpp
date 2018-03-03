@@ -100,63 +100,12 @@ void QButtonGroupSlots::buttonReleased( int id )
   }
 }
 
-HB_FUNC( QBUTTONGROUP_ONBUTTONCLICKED1 )
+void QButtonGroupSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QButtonGroupSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "buttonClicked(QAbstractButton*)", "buttonClicked(QAbstractButton*)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QBUTTONGROUP_ONBUTTONCLICKED2 )
-{
-  if( s == NULL )
-  {
-    s = new QButtonGroupSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "buttonClicked(int)", "buttonClicked(int)" ) );
-}
-
-HB_FUNC( QBUTTONGROUP_ONBUTTONPRESSED1 )
-{
-  if( s == NULL )
-  {
-    s = new QButtonGroupSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "buttonPressed(QAbstractButton*)", "buttonPressed(QAbstractButton*)" ) );
-}
-
-HB_FUNC( QBUTTONGROUP_ONBUTTONPRESSED2 )
-{
-  if( s == NULL )
-  {
-    s = new QButtonGroupSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "buttonPressed(int)", "buttonPressed(int)" ) );
-}
-
-HB_FUNC( QBUTTONGROUP_ONBUTTONRELEASED1 )
-{
-  if( s == NULL )
-  {
-    s = new QButtonGroupSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "buttonReleased(QAbstractButton*)", "buttonReleased(QAbstractButton*)" ) );
-}
-
-HB_FUNC( QBUTTONGROUP_ONBUTTONRELEASED2 )
-{
-  if( s == NULL )
-  {
-    s = new QButtonGroupSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "buttonReleased(int)", "buttonReleased(int)" ) );
-}
-

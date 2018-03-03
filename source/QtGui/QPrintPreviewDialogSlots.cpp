@@ -35,13 +35,12 @@ void QPrintPreviewDialogSlots::paintRequested( QPrinter * printer )
   }
 }
 
-HB_FUNC( QPRINTPREVIEWDIALOG_ONPAINTREQUESTED )
+void QPrintPreviewDialogSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QPrintPreviewDialogSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "paintRequested(QPrinter*)", "paintRequested(QPrinter*)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

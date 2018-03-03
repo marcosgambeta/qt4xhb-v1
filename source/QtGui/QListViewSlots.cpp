@@ -58,13 +58,12 @@ void QListViewSlots::indexesMoved( const QModelIndexList & indexes )
   }
 }
 
-HB_FUNC( QLISTVIEW_ONINDEXESMOVED )
+void QListViewSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QListViewSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "indexesMoved(QModelIndexList)", "indexesMoved(QModelIndexList)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

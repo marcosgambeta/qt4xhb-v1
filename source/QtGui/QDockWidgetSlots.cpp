@@ -87,53 +87,12 @@ void QDockWidgetSlots::visibilityChanged( bool visible )
   }
 }
 
-HB_FUNC( QDOCKWIDGET_ONALLOWEDAREASCHANGED )
+void QDockWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QDockWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "allowedAreasChanged(Qt::DockWidgetAreas)", "allowedAreasChanged(Qt::DockWidgetAreas)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QDOCKWIDGET_ONDOCKLOCATIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QDockWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "dockLocationChanged(Qt::DockWidgetArea)", "dockLocationChanged(Qt::DockWidgetArea)" ) );
-}
-
-HB_FUNC( QDOCKWIDGET_ONFEATURESCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QDockWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "featuresChanged(QDockWidget::DockWidgetFeatures)", "featuresChanged(QDockWidget::DockWidgetFeatures)" ) );
-}
-
-HB_FUNC( QDOCKWIDGET_ONTOPLEVELCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QDockWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "topLevelChanged(bool)", "topLevelChanged(bool)" ) );
-}
-
-HB_FUNC( QDOCKWIDGET_ONVISIBILITYCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QDockWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "visibilityChanged(bool)", "visibilityChanged(bool)" ) );
-}
-

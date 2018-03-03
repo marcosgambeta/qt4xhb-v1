@@ -48,23 +48,12 @@ void QTabWidgetSlots::tabCloseRequested( int index )
   }
 }
 
-HB_FUNC( QTABWIDGET_ONCURRENTCHANGED )
+void QTabWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QTabWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "currentChanged(int)", "currentChanged(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QTABWIDGET_ONTABCLOSEREQUESTED )
-{
-  if( s == NULL )
-  {
-    s = new QTabWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "tabCloseRequested(int)", "tabCloseRequested(int)" ) );
-}
-

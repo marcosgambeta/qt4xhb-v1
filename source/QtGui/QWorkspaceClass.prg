@@ -461,4 +461,12 @@ HB_FUNC_STATIC( QWORKSPACE_TILE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QWorkspaceSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QWORKSPACE_ONWINDOWACTIVATED )
+{
+  QWorkspaceSlots_connect_signal( "windowActivated(QWidget*)", "windowActivated(QWidget*)" );
+}
+
+
 #pragma ENDDUMP

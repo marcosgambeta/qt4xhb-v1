@@ -55,33 +55,12 @@ void QGraphicsRotationSlots::originChanged()
   }
 }
 
-HB_FUNC( QGRAPHICSROTATION_ONANGLECHANGED )
+void QGraphicsRotationSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QGraphicsRotationSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "angleChanged()", "angleChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QGRAPHICSROTATION_ONAXISCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QGraphicsRotationSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "axisChanged()", "axisChanged()" ) );
-}
-
-HB_FUNC( QGRAPHICSROTATION_ONORIGINCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QGraphicsRotationSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "originChanged()", "originChanged()" ) );
-}
-

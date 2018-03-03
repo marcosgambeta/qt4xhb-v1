@@ -94,53 +94,12 @@ void QFileDialogSlots::filterSelected( const QString & filter )
   }
 }
 
-HB_FUNC( QFILEDIALOG_ONCURRENTCHANGED )
+void QFileDialogSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QFileDialogSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "currentChanged(QString)", "currentChanged(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QFILEDIALOG_ONDIRECTORYENTERED )
-{
-  if( s == NULL )
-  {
-    s = new QFileDialogSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "directoryEntered(QString)", "directoryEntered(QString)" ) );
-}
-
-HB_FUNC( QFILEDIALOG_ONFILESELECTED )
-{
-  if( s == NULL )
-  {
-    s = new QFileDialogSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "fileSelected(QString)", "fileSelected(QString)" ) );
-}
-
-HB_FUNC( QFILEDIALOG_ONFILESSELECTED )
-{
-  if( s == NULL )
-  {
-    s = new QFileDialogSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "filesSelected(QStringList)", "filesSelected(QStringList)" ) );
-}
-
-HB_FUNC( QFILEDIALOG_ONFILTERSELECTED )
-{
-  if( s == NULL )
-  {
-    s = new QFileDialogSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "filterSelected(QString)", "filterSelected(QString)" ) );
-}
-

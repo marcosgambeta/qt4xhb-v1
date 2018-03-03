@@ -82,33 +82,12 @@ void QGraphicsSceneSlots::selectionChanged()
   }
 }
 
-HB_FUNC( QGRAPHICSSCENE_ONCHANGED )
+void QGraphicsSceneSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QGraphicsSceneSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "changed(QList<QRectF>)", "changed(QList<QRectF>)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QGRAPHICSSCENE_ONSCENERECTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QGraphicsSceneSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "sceneRectChanged(QRectF)", "sceneRectChanged(QRectF)" ) );
-}
-
-HB_FUNC( QGRAPHICSSCENE_ONSELECTIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QGraphicsSceneSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "selectionChanged()", "selectionChanged()" ) );
-}
-

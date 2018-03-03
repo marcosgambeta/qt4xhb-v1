@@ -35,13 +35,12 @@ void QMessageBoxSlots::buttonClicked( QAbstractButton * button )
   }
 }
 
-HB_FUNC( QMESSAGEBOX_ONBUTTONCLICKED )
+void QMessageBoxSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QMessageBoxSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "buttonClicked(QAbstractButton*)", "buttonClicked(QAbstractButton*)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

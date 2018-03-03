@@ -35,13 +35,12 @@ void QColumnViewSlots::updatePreviewWidget( const QModelIndex & index )
   }
 }
 
-HB_FUNC( QCOLUMNVIEW_ONUPDATEPREVIEWWIDGET )
+void QColumnViewSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QColumnViewSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "updatePreviewWidget(QModelIndex)", "updatePreviewWidget(QModelIndex)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

@@ -177,113 +177,12 @@ void QHeaderViewSlots::sortIndicatorChanged( int logicalIndex, Qt::SortOrder ord
   }
 }
 
-HB_FUNC( QHEADERVIEW_ONGEOMETRIESCHANGED )
+void QHeaderViewSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QHeaderViewSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "geometriesChanged()", "geometriesChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QHEADERVIEW_ONSECTIONAUTORESIZE )
-{
-  if( s == NULL )
-  {
-    s = new QHeaderViewSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "sectionAutoResize(int,QHeaderView::ResizeMode)", "sectionAutoResize(int,QHeaderView::ResizeMode)" ) );
-}
-
-HB_FUNC( QHEADERVIEW_ONSECTIONCLICKED )
-{
-  if( s == NULL )
-  {
-    s = new QHeaderViewSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "sectionClicked(int)", "sectionClicked(int)" ) );
-}
-
-HB_FUNC( QHEADERVIEW_ONSECTIONCOUNTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QHeaderViewSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "sectionCountChanged(int,int)", "sectionCountChanged(int,int)" ) );
-}
-
-HB_FUNC( QHEADERVIEW_ONSECTIONDOUBLECLICKED )
-{
-  if( s == NULL )
-  {
-    s = new QHeaderViewSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "sectionDoubleClicked(int)", "sectionDoubleClicked(int)" ) );
-}
-
-HB_FUNC( QHEADERVIEW_ONSECTIONENTERED )
-{
-  if( s == NULL )
-  {
-    s = new QHeaderViewSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "sectionEntered(int)", "sectionEntered(int)" ) );
-}
-
-HB_FUNC( QHEADERVIEW_ONSECTIONHANDLEDOUBLECLICKED )
-{
-  if( s == NULL )
-  {
-    s = new QHeaderViewSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "sectionHandleDoubleClicked(int)", "sectionHandleDoubleClicked(int)" ) );
-}
-
-HB_FUNC( QHEADERVIEW_ONSECTIONMOVED )
-{
-  if( s == NULL )
-  {
-    s = new QHeaderViewSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "sectionMoved(int,int,int)", "sectionMoved(int,int,int)" ) );
-}
-
-HB_FUNC( QHEADERVIEW_ONSECTIONPRESSED )
-{
-  if( s == NULL )
-  {
-    s = new QHeaderViewSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "sectionPressed(int)", "sectionPressed(int)" ) );
-}
-
-HB_FUNC( QHEADERVIEW_ONSECTIONRESIZED )
-{
-  if( s == NULL )
-  {
-    s = new QHeaderViewSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "sectionResized(int,int,int)", "sectionResized(int,int,int)" ) );
-}
-
-HB_FUNC( QHEADERVIEW_ONSORTINDICATORCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QHeaderViewSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "sortIndicatorChanged(int,Qt::SortOrder)", "sortIndicatorChanged(int,Qt::SortOrder)" ) );
-}
-

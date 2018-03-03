@@ -5478,4 +5478,12 @@ HB_FUNC_STATIC( QWIDGET_SETTABORDER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QWidgetSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QWIDGET_ONCUSTOMCONTEXTMENUREQUESTED )
+{
+  QWidgetSlots_connect_signal( "customContextMenuRequested(QPoint)", "customContextMenuRequested(QPoint)" );
+}
+
+
 #pragma ENDDUMP

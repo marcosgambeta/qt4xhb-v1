@@ -35,13 +35,12 @@ void QPrintDialogSlots::accepted( QPrinter * printer )
   }
 }
 
-HB_FUNC( QPRINTDIALOG_ONACCEPTED )
+void QPrintDialogSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QPrintDialogSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "accepted(QPrinter*)", "accepted(QPrinter*)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

@@ -100,63 +100,12 @@ void QInputDialogSlots::textValueSelected( const QString & text )
   }
 }
 
-HB_FUNC( QINPUTDIALOG_ONDOUBLEVALUECHANGED )
+void QInputDialogSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QInputDialogSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "doubleValueChanged(double)", "doubleValueChanged(double)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QINPUTDIALOG_ONDOUBLEVALUESELECTED )
-{
-  if( s == NULL )
-  {
-    s = new QInputDialogSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "doubleValueSelected(double)", "doubleValueSelected(double)" ) );
-}
-
-HB_FUNC( QINPUTDIALOG_ONINTVALUECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QInputDialogSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "intValueChanged(int)", "intValueChanged(int)" ) );
-}
-
-HB_FUNC( QINPUTDIALOG_ONINTVALUESELECTED )
-{
-  if( s == NULL )
-  {
-    s = new QInputDialogSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "intValueSelected(int)", "intValueSelected(int)" ) );
-}
-
-HB_FUNC( QINPUTDIALOG_ONTEXTVALUECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QInputDialogSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "textValueChanged(QString)", "textValueChanged(QString)" ) );
-}
-
-HB_FUNC( QINPUTDIALOG_ONTEXTVALUESELECTED )
-{
-  if( s == NULL )
-  {
-    s = new QInputDialogSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "textValueSelected(QString)", "textValueSelected(QString)" ) );
-}
-

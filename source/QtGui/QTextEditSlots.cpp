@@ -107,73 +107,12 @@ void QTextEditSlots::undoAvailable( bool available )
   }
 }
 
-HB_FUNC( QTEXTEDIT_ONCOPYAVAILABLE )
+void QTextEditSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QTextEditSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "copyAvailable(bool)", "copyAvailable(bool)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QTEXTEDIT_ONCURRENTCHARFORMATCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QTextEditSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "currentCharFormatChanged(QTextCharFormat)", "currentCharFormatChanged(QTextCharFormat)" ) );
-}
-
-HB_FUNC( QTEXTEDIT_ONCURSORPOSITIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QTextEditSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "cursorPositionChanged()", "cursorPositionChanged()" ) );
-}
-
-HB_FUNC( QTEXTEDIT_ONREDOAVAILABLE )
-{
-  if( s == NULL )
-  {
-    s = new QTextEditSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "redoAvailable(bool)", "redoAvailable(bool)" ) );
-}
-
-HB_FUNC( QTEXTEDIT_ONSELECTIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QTextEditSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "selectionChanged()", "selectionChanged()" ) );
-}
-
-HB_FUNC( QTEXTEDIT_ONTEXTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QTextEditSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "textChanged()", "textChanged()" ) );
-}
-
-HB_FUNC( QTEXTEDIT_ONUNDOAVAILABLE )
-{
-  if( s == NULL )
-  {
-    s = new QTextEditSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "undoAvailable(bool)", "undoAvailable(bool)" ) );
-}
-

@@ -522,4 +522,17 @@ HB_FUNC_STATIC( QMENUBAR_SETVISIBLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QMenuBarSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QMENUBAR_ONHOVERED )
+{
+  QMenuBarSlots_connect_signal( "hovered(QAction*)", "hovered(QAction*)" );
+}
+
+HB_FUNC_STATIC( QMENUBAR_ONTRIGGERED )
+{
+  QMenuBarSlots_connect_signal( "triggered(QAction*)", "triggered(QAction*)" );
+}
+
+
 #pragma ENDDUMP
