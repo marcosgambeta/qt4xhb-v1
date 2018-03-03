@@ -27,7 +27,7 @@ void QSqlTableModelSlots::beforeDelete( int row )
   PHB_ITEM cb = Signals_return_codeblock( object, "beforeDelete(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM prow = hb_itemPutNI( NULL, row );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, prow );
     hb_itemRelease( psender );
@@ -40,8 +40,8 @@ void QSqlTableModelSlots::beforeInsert( QSqlRecord & record )
   PHB_ITEM cb = Signals_return_codeblock( object, "beforeInsert(QSqlRecord)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM precord = hb_itemPutPtr( NULL, (QSqlRecord *) &record );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM precord = Signals_return_object( (void *) &record, "QSQLRECORD" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, precord );
     hb_itemRelease( psender );
     hb_itemRelease( precord );
@@ -53,9 +53,9 @@ void QSqlTableModelSlots::beforeUpdate( int row, QSqlRecord & record )
   PHB_ITEM cb = Signals_return_codeblock( object, "beforeUpdate(int,QSqlRecord)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM prow = hb_itemPutNI( NULL, row );
-    PHB_ITEM precord = hb_itemPutPtr( NULL, (QSqlRecord *) &record );
+    PHB_ITEM precord = Signals_return_object( (void *) &record, "QSQLRECORD" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, prow, precord );
     hb_itemRelease( psender );
     hb_itemRelease( prow );
@@ -68,9 +68,9 @@ void QSqlTableModelSlots::primeInsert( int row, QSqlRecord & record )
   PHB_ITEM cb = Signals_return_codeblock( object, "primeInsert(int,QSqlRecord)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM prow = hb_itemPutNI( NULL, row );
-    PHB_ITEM precord = hb_itemPutPtr( NULL, (QSqlRecord *) &record );
+    PHB_ITEM precord = Signals_return_object( (void *) &record, "QSQLRECORD" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, prow, precord );
     hb_itemRelease( psender );
     hb_itemRelease( prow );
