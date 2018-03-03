@@ -620,4 +620,6 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOBJECTOWNERSHIP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QDeclarativeEngineSlots_connect_signal ( const QString & signal, const QString & slot );
+
 #pragma ENDDUMP

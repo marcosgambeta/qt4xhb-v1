@@ -27,8 +27,8 @@ void QDeclarativeViewSlots::sceneResized( QSize size )
   PHB_ITEM cb = Signals_return_codeblock( object, "sceneResized(QSize)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM psize = hb_itemPutPtr( NULL, (QSize *) &size );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psize = Signals_return_object( (void *) &size, "QSIZE" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psize );
     hb_itemRelease( psender );
     hb_itemRelease( psize );
@@ -40,7 +40,7 @@ void QDeclarativeViewSlots::statusChanged( QDeclarativeView::Status status )
   PHB_ITEM cb = Signals_return_codeblock( object, "statusChanged(QDeclarativeView::Status)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstatus );
     hb_itemRelease( psender );
@@ -68,3 +68,13 @@ HB_FUNC( QDECLARATIVEVIEW_ONSTATUSCHANGED )
   hb_retl( Signals_connection_disconnection( s, "statusChanged(QDeclarativeView::Status)", "statusChanged(QDeclarativeView::Status)" ) );
 }
 
+
+void QDeclarativeViewSlots_connect_signal ( const QString & signal, const QString & slot )
+{
+  if( s == NULL )
+  {
+    s = new QDeclarativeViewSlots( QCoreApplication::instance() );
+  }
+
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+}

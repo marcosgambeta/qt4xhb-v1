@@ -487,4 +487,6 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORSTRING )
 static QDeclarativeComponentAttached *qmlAttachedProperties(QObject *)
 */
 
+void QDeclarativeComponentSlots_connect_signal ( const QString & signal, const QString & slot );
+
 #pragma ENDDUMP

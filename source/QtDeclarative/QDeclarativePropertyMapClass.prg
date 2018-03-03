@@ -247,4 +247,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_VALUE )
   }
 }
 
+void QDeclarativePropertyMapSlots_connect_signal ( const QString & signal, const QString & slot );
+
 #pragma ENDDUMP

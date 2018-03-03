@@ -27,7 +27,7 @@ void QDeclarativeComponentSlots::progressChanged( qreal progress )
   PHB_ITEM cb = Signals_return_codeblock( object, "progressChanged(qreal)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM pprogress = hb_itemPutND( NULL, progress );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pprogress );
     hb_itemRelease( psender );
@@ -40,7 +40,7 @@ void QDeclarativeComponentSlots::statusChanged( QDeclarativeComponent::Status st
   PHB_ITEM cb = Signals_return_codeblock( object, "statusChanged(QDeclarativeComponent::Status)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstatus );
     hb_itemRelease( psender );
@@ -68,3 +68,13 @@ HB_FUNC( QDECLARATIVECOMPONENT_ONSTATUSCHANGED )
   hb_retl( Signals_connection_disconnection( s, "statusChanged(QDeclarativeComponent::Status)", "statusChanged(QDeclarativeComponent::Status)" ) );
 }
 
+
+void QDeclarativeComponentSlots_connect_signal ( const QString & signal, const QString & slot )
+{
+  if( s == NULL )
+  {
+    s = new QDeclarativeComponentSlots( QCoreApplication::instance() );
+  }
+
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+}

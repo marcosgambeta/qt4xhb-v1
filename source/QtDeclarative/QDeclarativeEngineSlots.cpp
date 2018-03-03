@@ -27,7 +27,7 @@ void QDeclarativeEngineSlots::quit()
   PHB_ITEM cb = Signals_return_codeblock( object, "quit()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -38,7 +38,7 @@ void QDeclarativeEngineSlots::warnings( const QList<QDeclarativeError> & warning
   PHB_ITEM cb = Signals_return_codeblock( object, "warnings(QList<QDeclarativeError>)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR" );
     PHB_ITEM pwarnings = hb_itemArrayNew(0);
     int i;
@@ -89,3 +89,13 @@ HB_FUNC( QDECLARATIVEENGINE_ONWARNINGS )
   hb_retl( Signals_connection_disconnection( s, "warnings(QList<QDeclarativeError>)", "warnings(QList<QDeclarativeError>)" ) );
 }
 
+
+void QDeclarativeEngineSlots_connect_signal ( const QString & signal, const QString & slot )
+{
+  if( s == NULL )
+  {
+    s = new QDeclarativeEngineSlots( QCoreApplication::instance() );
+  }
+
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+}

@@ -354,4 +354,6 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_STATUS )
   }
 }
 
+void QDeclarativeViewSlots_connect_signal ( const QString & signal, const QString & slot );
+
 #pragma ENDDUMP
