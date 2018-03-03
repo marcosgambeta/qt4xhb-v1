@@ -9,6 +9,7 @@ $header
 $includes
 
 #include <QSslError>
+#include <QNetworkReply>
 
 $beginSlotsClass
 $signal=|authenticationRequired( QNetworkReply * reply, QAuthenticator * authenticator )
