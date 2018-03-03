@@ -89,7 +89,9 @@ $method=|void|setValue|int
 
 $connectSignalFunction
 
-$signalMethod=|activated()
-$signalMethod=|activatedAmbiguously()
+$beginGroup
+$signalMethod=|valueChanged(int)
+$signalMethod=|valueChanged(QString)
+$endGroup
 
 #pragma ENDDUMP
