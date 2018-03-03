@@ -24,6 +24,7 @@
 #include "qt4xhb_signals.h"
 
 #include <QSslError>
+#include <QNetworkReply>
 
 class QNetworkAccessManagerSlots: public QObject
 {
