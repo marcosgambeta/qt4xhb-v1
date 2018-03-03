@@ -8,6 +8,8 @@ $header
 
 $includes
 
+#include <QWidget>
+
 $beginSlotsClass
 $signal=|mapped( int i )
 $signal=|mapped( const QString & s )
