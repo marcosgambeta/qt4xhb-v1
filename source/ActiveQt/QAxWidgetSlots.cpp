@@ -27,7 +27,7 @@ void QAxWidgetSlots::exception( int code, const QString & source, const QString 
   PHB_ITEM cb = Signals_return_codeblock( object, "exception(int,QString,QString,QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM pcode = hb_itemPutNI( NULL, code );
     PHB_ITEM psource = hb_itemPutC( NULL, QSTRINGTOSTRING(source) );
     PHB_ITEM pdesc = hb_itemPutC( NULL, QSTRINGTOSTRING(desc) );
@@ -46,7 +46,7 @@ void QAxWidgetSlots::propertyChanged( const QString & name )
   PHB_ITEM cb = Signals_return_codeblock( object, "propertyChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pname );
     hb_itemRelease( psender );
@@ -59,7 +59,7 @@ void QAxWidgetSlots::signal( const QString & name, int argc, void * argv )
   PHB_ITEM cb = Signals_return_codeblock( object, "signal(QString,int,void*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
     PHB_ITEM pargc = hb_itemPutNI( NULL, argc );
     PHB_ITEM pargv = hb_itemPutPtr( NULL, (void *) argv );
