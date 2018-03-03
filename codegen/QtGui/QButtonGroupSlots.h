@@ -8,6 +8,8 @@ $header
 
 $includes
 
+#include <QAbstractButton>
+
 $beginSlotsClass
 $signal=|buttonClicked( QAbstractButton * button )
 $signal=|buttonClicked( int id )

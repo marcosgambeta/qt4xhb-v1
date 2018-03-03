@@ -8,6 +8,8 @@ $header
 
 $includes
 
+#include <QAction>
+
 $beginSlotsClass
 $signal=|actionTriggered( QAction * action )
 $signal=|allowedAreasChanged( Qt::ToolBarAreas allowedAreas )

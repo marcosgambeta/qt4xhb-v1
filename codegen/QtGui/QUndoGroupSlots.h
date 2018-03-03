@@ -8,6 +8,8 @@ $header
 
 $includes
 
+#include <QUndoStack>
+
 $beginSlotsClass
 $signal=|activeStackChanged( QUndoStack * stack )
 $signal=|canRedoChanged( bool canRedo )

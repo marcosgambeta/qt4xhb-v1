@@ -8,6 +8,8 @@ $header
 
 $includes
 
+#include <QAction>
+
 $beginSlotsClass
 $signal=|triggered( QAction * action )
 $endSlotsClass

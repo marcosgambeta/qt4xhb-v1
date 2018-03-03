@@ -8,6 +8,8 @@ $header
 
 $includes
 
+#include <QWidget>
+
 $beginSlotsClass
 $signal=|actionChanged( Qt::DropAction action )
 $signal=|targetChanged( QWidget * newTarget )

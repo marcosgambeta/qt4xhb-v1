@@ -8,6 +8,8 @@ $header
 
 $includes
 
+#include <QMdiSubWindow>
+
 $beginSlotsClass
 $signal=|subWindowActivated( QMdiSubWindow * window )
 $endSlotsClass

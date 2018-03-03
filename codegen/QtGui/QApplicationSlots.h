@@ -8,6 +8,9 @@ $header
 
 $includes
 
+#include <QSessionManager>
+#include <QWidget>
+
 $beginSlotsClass
 $signal=|aboutToReleaseGpuResources()
 $signal=|aboutToUseGpuResources()

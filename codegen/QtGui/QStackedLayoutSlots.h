@@ -8,6 +8,8 @@ $header
 
 $includes
 
+#include <QWidget>
+
 $beginSlotsClass
 $signal=|setCurrentIndex( int index )
 $signal=|setCurrentWidget( QWidget * widget )
