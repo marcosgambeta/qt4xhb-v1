@@ -27,8 +27,8 @@ void QDesignerFormWindowInterfaceSlots::aboutToUnmanageWidget( QWidget * widget 
   PHB_ITEM cb = Signals_return_codeblock( object, "aboutToUnmanageWidget(QWidget*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pwidget = hb_itemPutPtr( NULL, (QWidget *) widget );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM pwidget = Signals_return_qobject( widget, "QWIDGET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pwidget );
     hb_itemRelease( psender );
     hb_itemRelease( pwidget );
@@ -40,8 +40,8 @@ void QDesignerFormWindowInterfaceSlots::activated( QWidget * widget )
   PHB_ITEM cb = Signals_return_codeblock( object, "activated(QWidget*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pwidget = hb_itemPutPtr( NULL, (QWidget *) widget );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM pwidget = Signals_return_qobject( widget, "QWIDGET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pwidget );
     hb_itemRelease( psender );
     hb_itemRelease( pwidget );
@@ -53,7 +53,7 @@ void QDesignerFormWindowInterfaceSlots::changed()
   PHB_ITEM cb = Signals_return_codeblock( object, "changed()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -64,7 +64,7 @@ void QDesignerFormWindowInterfaceSlots::featureChanged( QDesignerFormWindowInter
   PHB_ITEM cb = Signals_return_codeblock( object, "featureChanged(QDesignerFormWindowInterface::Feature)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM pfeature = hb_itemPutNI( NULL, (int) feature );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pfeature );
     hb_itemRelease( psender );
@@ -77,7 +77,7 @@ void QDesignerFormWindowInterfaceSlots::fileNameChanged( const QString & fileNam
   PHB_ITEM cb = Signals_return_codeblock( object, "fileNameChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     PHB_ITEM pfileName = hb_itemPutC( NULL, QSTRINGTOSTRING(fileName) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pfileName );
     hb_itemRelease( psender );
@@ -90,7 +90,7 @@ void QDesignerFormWindowInterfaceSlots::geometryChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "geometryChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -101,8 +101,8 @@ void QDesignerFormWindowInterfaceSlots::mainContainerChanged( QWidget * mainCont
   PHB_ITEM cb = Signals_return_codeblock( object, "mainContainerChanged(QWidget*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pmainContainer = hb_itemPutPtr( NULL, (QWidget *) mainContainer );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM pmainContainer = Signals_return_qobject( mainContainer, "QWIDGET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmainContainer );
     hb_itemRelease( psender );
     hb_itemRelease( pmainContainer );
@@ -114,8 +114,8 @@ void QDesignerFormWindowInterfaceSlots::objectRemoved( QObject * object2 )
   PHB_ITEM cb = Signals_return_codeblock( object, "objectRemoved(QObject*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pobject2 = hb_itemPutPtr( NULL, (QObject *) object2 );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM pobject2 = Signals_return_qobject( object2, "QOBJECT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pobject2 );
     hb_itemRelease( psender );
     hb_itemRelease( pobject2 );
@@ -127,7 +127,7 @@ void QDesignerFormWindowInterfaceSlots::resourceFilesChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "resourceFilesChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -138,7 +138,7 @@ void QDesignerFormWindowInterfaceSlots::selectionChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -149,8 +149,8 @@ void QDesignerFormWindowInterfaceSlots::widgetManaged( QWidget * widget )
   PHB_ITEM cb = Signals_return_codeblock( object, "widgetManaged(QWidget*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pwidget = hb_itemPutPtr( NULL, (QWidget *) widget );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM pwidget = Signals_return_qobject( widget, "QWIDGET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pwidget );
     hb_itemRelease( psender );
     hb_itemRelease( pwidget );
@@ -162,8 +162,8 @@ void QDesignerFormWindowInterfaceSlots::widgetRemoved( QWidget * widget )
   PHB_ITEM cb = Signals_return_codeblock( object, "widgetRemoved(QWidget*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pwidget = hb_itemPutPtr( NULL, (QWidget *) widget );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM pwidget = Signals_return_qobject( widget, "QWIDGET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pwidget );
     hb_itemRelease( psender );
     hb_itemRelease( pwidget );
@@ -175,8 +175,8 @@ void QDesignerFormWindowInterfaceSlots::widgetUnmanaged( QWidget * widget )
   PHB_ITEM cb = Signals_return_codeblock( object, "widgetUnmanaged(QWidget*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pwidget = hb_itemPutPtr( NULL, (QWidget *) widget );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM pwidget = Signals_return_qobject( widget, "QWIDGET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pwidget );
     hb_itemRelease( psender );
     hb_itemRelease( pwidget );
