@@ -30,9 +30,9 @@ PROCEDURE Main ()
    oDial := QDial():new(oWindow)
    oDial:move(20,20)
    oDial:setTooltip("Eu sou um Dial")
-   oDial:onActionTriggered( {|w,p|test(w,p)} )
-   oDial:onSliderPressed( {|w|test2(w)} )
-   oDial:onSliderReleased( {|w|test3(w)} )
+   oDial:onActionTriggered( {|oSender,nAction|test(oSender,nAction)} )
+   oDial:onSliderPressed( {|oSender|test2(oSender)} )
+   oDial:onSliderReleased( {|oSender|test3(oSender)} )
    oDial:show()
 
    oApp:exec()
@@ -43,24 +43,24 @@ PROCEDURE Main ()
 
 RETURN
 
-STATIC FUNCTION test (w,p)
+STATIC FUNCTION test (oSender,nAction)
 
    qout("action triggered")
-   qout(w)
-   qout(p)
+   qout(oSender)
+   qout(nAction)
 
 RETURN NIL
 
-STATIC FUNCTION test2 (w)
+STATIC FUNCTION test2 (oSender)
 
    qout("slider pressed")
-   qout(w)
+   qout(oSender)
 
 RETURN NIL
 
-STATIC FUNCTION test3 (w)
+STATIC FUNCTION test3 (oSender)
 
    qout("slider released")
-   qout(w)
+   qout(oSender)
 
 RETURN NIL

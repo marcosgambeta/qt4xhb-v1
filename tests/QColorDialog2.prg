@@ -45,7 +45,7 @@ STATIC FUNCTION ShowColorDialog (oWindow)
 
    oColorDialog := QColorDialog():new(oWindow)
 
-   oColorDialog:onColorSelected({|pWidget,pColor|ShowColorSelected(pColor)})
+   oColorDialog:onColorSelected({|oSender,oColor|ShowColorSelected(oColor)})
 
    oColorDialog:exec()
 
@@ -55,9 +55,7 @@ STATIC FUNCTION ShowColorDialog (oWindow)
 
 RETURN NIL
 
-STATIC FUNCTION ShowColorSelected (pColor)
-
-   LOCAL oColor := QColor():newFrom(pColor)
+STATIC FUNCTION ShowColorSelected (oColor)
 
    ? "name=",oColor:name()
    ? "red=",oColor:red()
