@@ -27,7 +27,7 @@ void QHelpContentModelSlots::contentsCreated()
   PHB_ITEM cb = Signals_return_codeblock( object, "contentsCreated()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QHELPCONTENTMODEL" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -38,7 +38,7 @@ void QHelpContentModelSlots::contentsCreationStarted()
   PHB_ITEM cb = Signals_return_codeblock( object, "contentsCreationStarted()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QHELPCONTENTMODEL" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
