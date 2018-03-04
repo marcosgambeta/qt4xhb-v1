@@ -27,7 +27,7 @@ void QFutureWatcherBaseSlots::started()
   PHB_ITEM cb = Signals_return_codeblock( object, "started()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QFUTUREWATCHERBASE" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -38,7 +38,7 @@ void QFutureWatcherBaseSlots::finished()
   PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QFUTUREWATCHERBASE" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -49,7 +49,7 @@ void QFutureWatcherBaseSlots::canceled()
   PHB_ITEM cb = Signals_return_codeblock( object, "canceled()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QFUTUREWATCHERBASE" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -60,7 +60,7 @@ void QFutureWatcherBaseSlots::paused()
   PHB_ITEM cb = Signals_return_codeblock( object, "paused()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QFUTUREWATCHERBASE" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -71,7 +71,7 @@ void QFutureWatcherBaseSlots::resumed()
   PHB_ITEM cb = Signals_return_codeblock( object, "resumed()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QFUTUREWATCHERBASE" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -82,7 +82,7 @@ void QFutureWatcherBaseSlots::resultReadyAt( int resultIndex )
   PHB_ITEM cb = Signals_return_codeblock( object, "resultReadyAt(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QFUTUREWATCHERBASE" );
     PHB_ITEM presultIndex = hb_itemPutNI( NULL, resultIndex );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, presultIndex );
     hb_itemRelease( psender );
@@ -95,7 +95,7 @@ void QFutureWatcherBaseSlots::resultsReadyAt( int beginIndex, int endIndex )
   PHB_ITEM cb = Signals_return_codeblock( object, "resultsReadyAt(int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QFUTUREWATCHERBASE" );
     PHB_ITEM pbeginIndex = hb_itemPutNI( NULL, beginIndex );
     PHB_ITEM pendIndex = hb_itemPutNI( NULL, endIndex );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pbeginIndex, pendIndex );
@@ -110,7 +110,7 @@ void QFutureWatcherBaseSlots::progressRangeChanged( int minimum, int maximum )
   PHB_ITEM cb = Signals_return_codeblock( object, "progressRangeChanged(int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QFUTUREWATCHERBASE" );
     PHB_ITEM pminimum = hb_itemPutNI( NULL, minimum );
     PHB_ITEM pmaximum = hb_itemPutNI( NULL, maximum );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pminimum, pmaximum );
@@ -125,7 +125,7 @@ void QFutureWatcherBaseSlots::progressValueChanged( int progressValue )
   PHB_ITEM cb = Signals_return_codeblock( object, "progressValueChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QFUTUREWATCHERBASE" );
     PHB_ITEM pprogressValue = hb_itemPutNI( NULL, progressValue );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pprogressValue );
     hb_itemRelease( psender );
@@ -138,7 +138,7 @@ void QFutureWatcherBaseSlots::progressTextChanged( const QString & progressText 
   PHB_ITEM cb = Signals_return_codeblock( object, "progressTextChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QFUTUREWATCHERBASE" );
     PHB_ITEM pprogressText = hb_itemPutC( NULL, QSTRINGTOSTRING(progressText) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pprogressText );
     hb_itemRelease( psender );

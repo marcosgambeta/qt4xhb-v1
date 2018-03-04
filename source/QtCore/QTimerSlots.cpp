@@ -27,7 +27,7 @@ void QTimerSlots::timeout()
   PHB_ITEM cb = Signals_return_codeblock( object, "timeout()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QTIMER" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }

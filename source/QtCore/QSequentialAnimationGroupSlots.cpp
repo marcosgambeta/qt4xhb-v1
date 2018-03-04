@@ -27,7 +27,7 @@ void QSequentialAnimationGroupSlots::currentAnimationChanged( QAbstractAnimation
   PHB_ITEM cb = Signals_return_codeblock( object, "currentAnimationChanged(QAbstractAnimation*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QSEQUENTIALANIMATIONGROUP" );
     PHB_ITEM pcurrent = Signals_return_qobject( current, "QABSTRACTANIMATION" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcurrent );
     hb_itemRelease( psender );
