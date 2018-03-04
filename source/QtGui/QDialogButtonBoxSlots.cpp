@@ -27,7 +27,7 @@ void QDialogButtonBoxSlots::accepted()
   PHB_ITEM cb = Signals_return_codeblock( object, "accepted()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QDIALOGBUTTONBOX" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -38,7 +38,7 @@ void QDialogButtonBoxSlots::clicked( QAbstractButton * button )
   PHB_ITEM cb = Signals_return_codeblock( object, "clicked(QAbstractButton*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QDIALOGBUTTONBOX" );
     PHB_ITEM pbutton = Signals_return_qobject( button, "QABSTRACTBUTTON" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pbutton );
     hb_itemRelease( psender );
@@ -51,7 +51,7 @@ void QDialogButtonBoxSlots::helpRequested()
   PHB_ITEM cb = Signals_return_codeblock( object, "helpRequested()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QDIALOGBUTTONBOX" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -62,7 +62,7 @@ void QDialogButtonBoxSlots::rejected()
   PHB_ITEM cb = Signals_return_codeblock( object, "rejected()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QDIALOGBUTTONBOX" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }

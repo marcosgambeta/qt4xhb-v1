@@ -27,7 +27,7 @@ void QAbstractSpinBoxSlots::editingFinished()
   PHB_ITEM cb = Signals_return_codeblock( object, "editingFinished()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QABSTRACTSPINBOX" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }

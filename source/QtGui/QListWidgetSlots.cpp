@@ -27,7 +27,7 @@ void QListWidgetSlots::currentItemChanged( QListWidgetItem * current, QListWidge
   PHB_ITEM cb = Signals_return_codeblock( object, "currentItemChanged(QListWidgetItem*,QListWidgetItem*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QLISTWIDGET" );
     PHB_ITEM pcurrent = Signals_return_object( (void *) current, "QLISTWIDGETITEM" );
     PHB_ITEM pprevious = Signals_return_object( (void *) previous, "QLISTWIDGETITEM" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pcurrent, pprevious );
@@ -42,7 +42,7 @@ void QListWidgetSlots::currentRowChanged( int currentRow )
   PHB_ITEM cb = Signals_return_codeblock( object, "currentRowChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QLISTWIDGET" );
     PHB_ITEM pcurrentRow = hb_itemPutNI( NULL, currentRow );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcurrentRow );
     hb_itemRelease( psender );
@@ -55,7 +55,7 @@ void QListWidgetSlots::currentTextChanged( const QString & currentText )
   PHB_ITEM cb = Signals_return_codeblock( object, "currentTextChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QLISTWIDGET" );
     PHB_ITEM pcurrentText = hb_itemPutC( NULL, QSTRINGTOSTRING(currentText) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcurrentText );
     hb_itemRelease( psender );
@@ -68,7 +68,7 @@ void QListWidgetSlots::itemActivated( QListWidgetItem * item )
   PHB_ITEM cb = Signals_return_codeblock( object, "itemActivated(QListWidgetItem*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QLISTWIDGET" );
     PHB_ITEM pitem = Signals_return_object( (void *) item, "QLISTWIDGETITEM" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pitem );
     hb_itemRelease( psender );
@@ -81,7 +81,7 @@ void QListWidgetSlots::itemChanged( QListWidgetItem * item )
   PHB_ITEM cb = Signals_return_codeblock( object, "itemChanged(QListWidgetItem*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QLISTWIDGET" );
     PHB_ITEM pitem = Signals_return_object( (void *) item, "QLISTWIDGETITEM" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pitem );
     hb_itemRelease( psender );
@@ -94,7 +94,7 @@ void QListWidgetSlots::itemClicked( QListWidgetItem * item )
   PHB_ITEM cb = Signals_return_codeblock( object, "itemClicked(QListWidgetItem*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QLISTWIDGET" );
     PHB_ITEM pitem = Signals_return_object( (void *) item, "QLISTWIDGETITEM" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pitem );
     hb_itemRelease( psender );
@@ -107,7 +107,7 @@ void QListWidgetSlots::itemDoubleClicked( QListWidgetItem * item )
   PHB_ITEM cb = Signals_return_codeblock( object, "itemDoubleClicked(QListWidgetItem*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QLISTWIDGET" );
     PHB_ITEM pitem = Signals_return_object( (void *) item, "QLISTWIDGETITEM" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pitem );
     hb_itemRelease( psender );
@@ -120,7 +120,7 @@ void QListWidgetSlots::itemEntered( QListWidgetItem * item )
   PHB_ITEM cb = Signals_return_codeblock( object, "itemEntered(QListWidgetItem*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QLISTWIDGET" );
     PHB_ITEM pitem = Signals_return_object( (void *) item, "QLISTWIDGETITEM" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pitem );
     hb_itemRelease( psender );
@@ -133,7 +133,7 @@ void QListWidgetSlots::itemPressed( QListWidgetItem * item )
   PHB_ITEM cb = Signals_return_codeblock( object, "itemPressed(QListWidgetItem*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QLISTWIDGET" );
     PHB_ITEM pitem = Signals_return_object( (void *) item, "QLISTWIDGETITEM" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pitem );
     hb_itemRelease( psender );
@@ -146,7 +146,7 @@ void QListWidgetSlots::itemSelectionChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "itemSelectionChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QLISTWIDGET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }

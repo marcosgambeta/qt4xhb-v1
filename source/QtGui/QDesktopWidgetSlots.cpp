@@ -27,7 +27,7 @@ void QDesktopWidgetSlots::resized( int screen )
   PHB_ITEM cb = Signals_return_codeblock( object, "resized(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QDESKTOPWIDGET" );
     PHB_ITEM pscreen = hb_itemPutNI( NULL, screen );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pscreen );
     hb_itemRelease( psender );
@@ -40,7 +40,7 @@ void QDesktopWidgetSlots::screenCountChanged( int newCount )
   PHB_ITEM cb = Signals_return_codeblock( object, "screenCountChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QDESKTOPWIDGET" );
     PHB_ITEM pnewCount = hb_itemPutNI( NULL, newCount );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pnewCount );
     hb_itemRelease( psender );
@@ -53,7 +53,7 @@ void QDesktopWidgetSlots::workAreaResized( int screen )
   PHB_ITEM cb = Signals_return_codeblock( object, "workAreaResized(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QDESKTOPWIDGET" );
     PHB_ITEM pscreen = hb_itemPutNI( NULL, screen );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pscreen );
     hb_itemRelease( psender );

@@ -27,7 +27,7 @@ void QInputDialogSlots::doubleValueChanged( double value )
   PHB_ITEM cb = Signals_return_codeblock( object, "doubleValueChanged(double)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QINPUTDIALOG" );
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
     hb_itemRelease( psender );
@@ -40,7 +40,7 @@ void QInputDialogSlots::doubleValueSelected( double value )
   PHB_ITEM cb = Signals_return_codeblock( object, "doubleValueSelected(double)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QINPUTDIALOG" );
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
     hb_itemRelease( psender );
@@ -53,7 +53,7 @@ void QInputDialogSlots::intValueChanged( int value )
   PHB_ITEM cb = Signals_return_codeblock( object, "intValueChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QINPUTDIALOG" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
     hb_itemRelease( psender );
@@ -66,7 +66,7 @@ void QInputDialogSlots::intValueSelected( int value )
   PHB_ITEM cb = Signals_return_codeblock( object, "intValueSelected(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QINPUTDIALOG" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
     hb_itemRelease( psender );
@@ -79,7 +79,7 @@ void QInputDialogSlots::textValueChanged( const QString & text )
   PHB_ITEM cb = Signals_return_codeblock( object, "textValueChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QINPUTDIALOG" );
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptext );
     hb_itemRelease( psender );
@@ -92,7 +92,7 @@ void QInputDialogSlots::textValueSelected( const QString & text )
   PHB_ITEM cb = Signals_return_codeblock( object, "textValueSelected(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QINPUTDIALOG" );
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptext );
     hb_itemRelease( psender );

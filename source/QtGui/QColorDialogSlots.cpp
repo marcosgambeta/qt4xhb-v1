@@ -27,7 +27,7 @@ void QColorDialogSlots::colorSelected( const QColor & color )
   PHB_ITEM cb = Signals_return_codeblock( object, "colorSelected(QColor)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QCOLORDIALOG" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcolor );
     hb_itemRelease( psender );
@@ -40,7 +40,7 @@ void QColorDialogSlots::currentColorChanged( const QColor & color )
   PHB_ITEM cb = Signals_return_codeblock( object, "currentColorChanged(QColor)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QCOLORDIALOG" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcolor );
     hb_itemRelease( psender );

@@ -27,7 +27,7 @@ void QGraphicsScaleSlots::originChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "originChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QGRAPHICSSCALE" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -38,7 +38,7 @@ void QGraphicsScaleSlots::scaleChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "scaleChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QGRAPHICSSCALE" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -49,7 +49,7 @@ void QGraphicsScaleSlots::xScaleChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "xScaleChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QGRAPHICSSCALE" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -60,7 +60,7 @@ void QGraphicsScaleSlots::yScaleChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "yScaleChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QGRAPHICSSCALE" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -71,7 +71,7 @@ void QGraphicsScaleSlots::zScaleChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "zScaleChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QGRAPHICSSCALE" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }

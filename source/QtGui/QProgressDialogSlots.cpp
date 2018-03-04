@@ -27,7 +27,7 @@ void QProgressDialogSlots::canceled()
   PHB_ITEM cb = Signals_return_codeblock( object, "canceled()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QPROGRESSDIALOG" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }

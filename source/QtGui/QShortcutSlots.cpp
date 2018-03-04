@@ -27,7 +27,7 @@ void QShortcutSlots::activated()
   PHB_ITEM cb = Signals_return_codeblock( object, "activated()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QSHORTCUT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -38,7 +38,7 @@ void QShortcutSlots::activatedAmbiguously()
   PHB_ITEM cb = Signals_return_codeblock( object, "activatedAmbiguously()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QSHORTCUT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }

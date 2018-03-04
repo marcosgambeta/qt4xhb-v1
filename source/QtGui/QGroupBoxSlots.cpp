@@ -27,7 +27,7 @@ void QGroupBoxSlots::clicked( bool checked )
   PHB_ITEM cb = Signals_return_codeblock( object, "clicked(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QGROUPBOX" );
     PHB_ITEM pchecked = hb_itemPutL( NULL, checked );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pchecked );
     hb_itemRelease( psender );
@@ -40,7 +40,7 @@ void QGroupBoxSlots::toggled( bool on )
   PHB_ITEM cb = Signals_return_codeblock( object, "toggled(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QGROUPBOX" );
     PHB_ITEM pon = hb_itemPutL( NULL, on );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pon );
     hb_itemRelease( psender );
