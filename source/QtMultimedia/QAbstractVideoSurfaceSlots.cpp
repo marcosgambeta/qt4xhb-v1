@@ -27,7 +27,7 @@ void QAbstractVideoSurfaceSlots::activeChanged( bool active )
   PHB_ITEM cb = Signals_return_codeblock( object, "activeChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QABSTRACTVIDEOSURFACE" );
     PHB_ITEM pactive = hb_itemPutL( NULL, active );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pactive );
     hb_itemRelease( psender );
@@ -40,7 +40,7 @@ void QAbstractVideoSurfaceSlots::surfaceFormatChanged( const QVideoSurfaceFormat
   PHB_ITEM cb = Signals_return_codeblock( object, "surfaceFormatChanged(QVideoSurfaceFormat)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QABSTRACTVIDEOSURFACE" );
     PHB_ITEM pformat = Signals_return_object( (void *) &format, "QVIDEOSURFACEFORMAT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pformat );
     hb_itemRelease( psender );
@@ -53,7 +53,7 @@ void QAbstractVideoSurfaceSlots::supportedFormatsChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "supportedFormatsChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QABSTRACTVIDEOSURFACE" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
