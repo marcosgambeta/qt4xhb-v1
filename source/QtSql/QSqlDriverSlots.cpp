@@ -27,7 +27,7 @@ void QSqlDriverSlots::notification( const QString & name )
   PHB_ITEM cb = Signals_return_codeblock( object, "notification(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QSQLDRIVER" );
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pname );
     hb_itemRelease( psender );
