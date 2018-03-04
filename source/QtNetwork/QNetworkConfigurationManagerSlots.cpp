@@ -27,7 +27,7 @@ void QNetworkConfigurationManagerSlots::configurationAdded( const QNetworkConfig
   PHB_ITEM cb = Signals_return_codeblock( object, "configurationAdded(QNetworkConfiguration)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QNETWORKCONFIGURATIONMANAGER" );
     PHB_ITEM pconfig = Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pconfig );
     hb_itemRelease( psender );
@@ -40,7 +40,7 @@ void QNetworkConfigurationManagerSlots::configurationChanged( const QNetworkConf
   PHB_ITEM cb = Signals_return_codeblock( object, "configurationChanged(QNetworkConfiguration)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QNETWORKCONFIGURATIONMANAGER" );
     PHB_ITEM pconfig = Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pconfig );
     hb_itemRelease( psender );
@@ -53,7 +53,7 @@ void QNetworkConfigurationManagerSlots::configurationRemoved( const QNetworkConf
   PHB_ITEM cb = Signals_return_codeblock( object, "configurationRemoved(QNetworkConfiguration)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QNETWORKCONFIGURATIONMANAGER" );
     PHB_ITEM pconfig = Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pconfig );
     hb_itemRelease( psender );
@@ -66,7 +66,7 @@ void QNetworkConfigurationManagerSlots::onlineStateChanged( bool isOnline )
   PHB_ITEM cb = Signals_return_codeblock( object, "onlineStateChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QNETWORKCONFIGURATIONMANAGER" );
     PHB_ITEM pisOnline = hb_itemPutL( NULL, isOnline );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pisOnline );
     hb_itemRelease( psender );
@@ -79,7 +79,7 @@ void QNetworkConfigurationManagerSlots::updateCompleted()
   PHB_ITEM cb = Signals_return_codeblock( object, "updateCompleted()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QNETWORKCONFIGURATIONMANAGER" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
