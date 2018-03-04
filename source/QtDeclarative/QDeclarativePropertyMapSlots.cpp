@@ -27,7 +27,7 @@ void QDeclarativePropertyMapSlots::valueChanged( const QString & key, const QVar
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(QString,QVariant)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QDECLARATIVEPROPERTYMAP" );
     PHB_ITEM pkey = hb_itemPutC( NULL, QSTRINGTOSTRING(key) );
     PHB_ITEM pvalue = Signals_return_object( (void *) &value, "QVARIANT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pkey, pvalue );
