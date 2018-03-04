@@ -89,7 +89,6 @@ CLASS QObject
    METHOD onApplicationPaletteChangeEvent
    METHOD onApplicationWindowIconChangeEvent
    METHOD onChildAddedEvent
-   METHOD onChildInsertedEvent
    METHOD onChildPolishedEvent
    METHOD onChildRemovedEvent
    METHOD onClipboardEvent
@@ -99,7 +98,6 @@ CLASS QObject
    METHOD onCursorChangeEvent
    METHOD onDeferredDeleteEvent
    METHOD onEnabledChangeEvent
-   METHOD onEnterEditFocusEvent
    METHOD onEnterWhatsThisModeEvent
    METHOD onFileOpenEvent
    METHOD onFontChangeEvent
@@ -131,7 +129,6 @@ CLASS QObject
    METHOD onLanguageChangeEvent
    METHOD onLayoutDirectionChangeEvent
    METHOD onLayoutRequestEvent
-   METHOD onLeaveEditFocusEvent
    METHOD onLeaveWhatsThisModeEvent
    METHOD onLocaleChangeEvent
    METHOD onNonClientAreaMouseButtonDblClickEvent
@@ -201,1253 +198,15 @@ CLASS QObject
    METHOD selfDestruction
    METHOD setSelfDestruction
 
+   METHOD connect
+   METHOD disconnect
+   METHOD disconnectAll
+   METHOD disconnectAllEvents
+   METHOD disconnectAllSignals
+
    DESTRUCTOR destroyObject
 
 END CLASS
-
-#include "QEvent.ch"
-
-METHOD onCloseEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_Close, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_Close)
-   ENDIF
-RETURN r
-
-METHOD onEnterEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_Enter, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_Enter)
-   ENDIF
-RETURN r
-
-METHOD onFocusInEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_FocusIn, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_FocusIn)
-   ENDIF
-RETURN r
-
-METHOD onFocusOutEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_FocusOut, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_FocusOut)
-   ENDIF
-RETURN r
-
-METHOD onHideEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_Hide, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_Hide)
-   ENDIF
-RETURN r
-
-METHOD onKeyPressEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_KeyPress, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_KeyPress)
-   ENDIF
-RETURN r
-
-METHOD onKeyReleaseEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_KeyRelease, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_KeyRelease)
-   ENDIF
-RETURN r
-
-METHOD onLeaveEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_Leave, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_Leave)
-   ENDIF
-RETURN r
-
-METHOD onShowEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_Show, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_Show)
-   ENDIF
-RETURN r
-
-METHOD onMouseButtonDblClickEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_MouseButtonDblClick, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_MouseButtonDblClick)
-   ENDIF
-RETURN r
-
-METHOD onMouseButtonPressEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_MouseButtonPress, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_MouseButtonPress)
-   ENDIF
-RETURN r
-
-METHOD onMouseButtonReleaseEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_MouseButtonRelease, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_MouseButtonRelease)
-   ENDIF
-RETURN r
-
-METHOD onMouseMoveEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_MouseMove, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_MouseMove)
-   ENDIF
-RETURN r
-
-METHOD onMoveEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_Move, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_Move)
-   ENDIF
-RETURN r
-
-METHOD onPaintEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_Paint, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_Paint)
-   ENDIF
-RETURN r
-
-METHOD onResizeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_Resize, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_Resize)
-   ENDIF
-RETURN r
-
-METHOD onDragEnterEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_DragEnter, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_DragEnter)
-   ENDIF
-RETURN r
-
-METHOD onDragLeaveEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_DragLeave, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_DragLeave)
-   ENDIF
-RETURN r
-
-METHOD onDragMoveEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_DragMove, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_DragMove)
-   ENDIF
-RETURN r
-
-METHOD onDropEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_Drop, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_Drop)
-   ENDIF
-RETURN r
-
-METHOD onAccessibilityDescriptionEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_AccessibilityDescription, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_AccessibilityDescription)
-   ENDIF
-RETURN r
-
-METHOD onAccessibilityHelpEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_AccessibilityHelp, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_AccessibilityHelp)
-   ENDIF
-RETURN r
-
-METHOD onAccessibilityPrepareEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_AccessibilityPrepare, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_AccessibilityPrepare)
-   ENDIF
-RETURN r
-
-METHOD onActionAddedEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_ActionAdded, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_ActionAdded)
-   ENDIF
-RETURN r
-
-METHOD onActionChangedEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_ActionChanged, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_ActionChanged)
-   ENDIF
-RETURN r
-
-METHOD onActionRemovedEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_ActionRemoved, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_ActionRemoved)
-   ENDIF
-RETURN r
-
-METHOD onActivationChangeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_ActivationChange, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_ActivationChange)
-   ENDIF
-RETURN r
-
-METHOD onApplicationActivateEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_ApplicationActivate, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_ApplicationActivate)
-   ENDIF
-RETURN r
-
-METHOD onApplicationActivatedEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_ApplicationActivated, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_ApplicationActivated)
-   ENDIF
-RETURN r
-
-METHOD onApplicationDeactivateEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_ApplicationDeactivate, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_ApplicationDeactivate)
-   ENDIF
-RETURN r
-
-METHOD onApplicationFontChangeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_ApplicationFontChange, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_ApplicationFontChange)
-   ENDIF
-RETURN r
-
-METHOD onApplicationLayoutDirectionChangeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_ApplicationLayoutDirectionChange, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_ApplicationLayoutDirectionChange)
-   ENDIF
-RETURN r
-
-METHOD onApplicationPaletteChangeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_ApplicationPaletteChange, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_ApplicationPaletteChange)
-   ENDIF
-RETURN r
-
-METHOD onApplicationWindowIconChangeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_ApplicationWindowIconChange, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_ApplicationWindowIconChange)
-   ENDIF
-RETURN r
-
-METHOD onChildAddedEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_ChildAdded, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_ChildAdded)
-   ENDIF
-RETURN r
-
-METHOD onChildInsertedEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_ChildInserted, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_ChildInserted)
-   ENDIF
-RETURN r
-
-METHOD onChildPolishedEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_ChildPolished, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_ChildPolished)
-   ENDIF
-RETURN r
-
-METHOD onChildRemovedEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_ChildRemoved, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_ChildRemoved)
-   ENDIF
-RETURN r
-
-METHOD onClipboardEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_Clipboard, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_Clipboard)
-   ENDIF
-RETURN r
-
-METHOD onCloseSoftwareInputPanelEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_CloseSoftwareInputPanel, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_CloseSoftwareInputPanel)
-   ENDIF
-RETURN r
-
-METHOD onContentsRectChangeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_ContentsRectChange, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_ContentsRectChange)
-   ENDIF
-RETURN r
-
-METHOD onContextMenuEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_ContextMenu, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_ContextMenu)
-   ENDIF
-RETURN r
-
-METHOD onCursorChangeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_CursorChange, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_CursorChange)
-   ENDIF
-RETURN r
-
-METHOD onDeferredDeleteEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_DeferredDelete, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_DeferredDelete)
-   ENDIF
-RETURN r
-
-METHOD onEnabledChangeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_EnabledChange, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_EnabledChange)
-   ENDIF
-RETURN r
-
-METHOD onEnterEditFocusEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_EnterEditFocus, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_EnterEditFocus)
-   ENDIF
-RETURN r
-
-METHOD onEnterWhatsThisModeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_EnterWhatsThisMode, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_EnterWhatsThisMode)
-   ENDIF
-RETURN r
-
-METHOD onFileOpenEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_FileOpen, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_FileOpen)
-   ENDIF
-RETURN r
-
-METHOD onFontChangeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_FontChange, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_FontChange)
-   ENDIF
-RETURN r
-
-METHOD onGrabKeyboardEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_GrabKeyboard, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_GrabKeyboard)
-   ENDIF
-RETURN r
-
-METHOD onGrabMouseEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_GrabMouse, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_GrabMouse)
-   ENDIF
-RETURN r
-
-METHOD onGraphicsSceneContextMenuEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_GraphicsSceneContextMenu, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_GraphicsSceneContextMenu)
-   ENDIF
-RETURN r
-
-METHOD onGraphicsSceneDragEnterEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_GraphicsSceneDragEnter, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_GraphicsSceneDragEnter)
-   ENDIF
-RETURN r
-
-METHOD onGraphicsSceneDragLeaveEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_GraphicsSceneDragLeave, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_GraphicsSceneDragLeave)
-   ENDIF
-RETURN r
-
-METHOD onGraphicsSceneDragMoveEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_GraphicsSceneDragMove, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_GraphicsSceneDragMove)
-   ENDIF
-RETURN r
-
-METHOD onGraphicsSceneDropEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_GraphicsSceneDrop, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_GraphicsSceneDrop)
-   ENDIF
-RETURN r
-
-METHOD onGraphicsSceneHelpEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_GraphicsSceneHelp, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_GraphicsSceneHelp)
-   ENDIF
-RETURN r
-
-METHOD onGraphicsSceneHoverEnterEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_GraphicsSceneHoverEnter, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_GraphicsSceneHoverEnter)
-   ENDIF
-RETURN r
-
-METHOD onGraphicsSceneHoverLeaveEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_GraphicsSceneHoverLeave, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_GraphicsSceneHoverLeave)
-   ENDIF
-RETURN r
-
-METHOD onGraphicsSceneHoverMoveEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_GraphicsSceneHoverMove, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_GraphicsSceneHoverMove)
-   ENDIF
-RETURN r
-
-METHOD onGraphicsSceneMouseDoubleClickEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_GraphicsSceneMouseDoubleClick, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_GraphicsSceneMouseDoubleClick)
-   ENDIF
-RETURN r
-
-METHOD onGraphicsSceneMouseMoveEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_GraphicsSceneMouseMove, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_GraphicsSceneMouseMove)
-   ENDIF
-RETURN r
-
-METHOD onGraphicsSceneMousePressEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_GraphicsSceneMousePress, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_GraphicsSceneMousePress)
-   ENDIF
-RETURN r
-
-METHOD onGraphicsSceneMouseReleaseEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_GraphicsSceneMouseRelease, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_GraphicsSceneMouseRelease)
-   ENDIF
-RETURN r
-
-METHOD onGraphicsSceneMoveEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_GraphicsSceneMove, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_GraphicsSceneMove)
-   ENDIF
-RETURN r
-
-METHOD onGraphicsSceneResizeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_GraphicsSceneResize, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_GraphicsSceneResize)
-   ENDIF
-RETURN r
-
-METHOD onGraphicsSceneWheelEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_GraphicsSceneWheel, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_GraphicsSceneWheel)
-   ENDIF
-RETURN r
-
-METHOD onHideToParentEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_HideToParent, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_HideToParent)
-   ENDIF
-RETURN r
-
-METHOD onHoverEnterEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_HoverEnter, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_HoverEnter)
-   ENDIF
-RETURN r
-
-METHOD onHoverLeaveEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_HoverLeave, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_HoverLeave)
-   ENDIF
-RETURN r
-
-METHOD onHoverMoveEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_HoverMove, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_HoverMove)
-   ENDIF
-RETURN r
-
-METHOD onIconDragEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_IconDrag, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_IconDrag)
-   ENDIF
-RETURN r
-
-METHOD onIconTextChangeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_IconTextChange, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_IconTextChange)
-   ENDIF
-RETURN r
-
-METHOD onInputMethodEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_InputMethod, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_InputMethod)
-   ENDIF
-RETURN r
-
-METHOD onLanguageChangeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_LanguageChange, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_LanguageChange)
-   ENDIF
-RETURN r
-
-METHOD onLayoutDirectionChangeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_LayoutDirectionChange, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_LayoutDirectionChange)
-   ENDIF
-RETURN r
-
-METHOD onLayoutRequestEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_LayoutRequest, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_LayoutRequest)
-   ENDIF
-RETURN r
-
-METHOD onLeaveEditFocusEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_LeaveEditFocus, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_LeaveEditFocus)
-   ENDIF
-RETURN r
-
-METHOD onLeaveWhatsThisModeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_LeaveWhatsThisMode, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_LeaveWhatsThisMode)
-   ENDIF
-RETURN r
-
-METHOD onLocaleChangeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_LocaleChange, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_LocaleChange)
-   ENDIF
-RETURN r
-
-METHOD onNonClientAreaMouseButtonDblClickEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_NonClientAreaMouseButtonDblClick, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_NonClientAreaMouseButtonDblClick)
-   ENDIF
-RETURN r
-
-METHOD onNonClientAreaMouseButtonPressEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_NonClientAreaMouseButtonPress, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_NonClientAreaMouseButtonPress)
-   ENDIF
-RETURN r
-
-METHOD onNonClientAreaMouseButtonReleaseEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_NonClientAreaMouseButtonRelease, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_NonClientAreaMouseButtonRelease)
-   ENDIF
-RETURN r
-
-METHOD onNonClientAreaMouseMoveEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_NonClientAreaMouseMove, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_NonClientAreaMouseMove)
-   ENDIF
-RETURN r
-
-METHOD onMacSizeChangeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_MacSizeChange, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_MacSizeChange)
-   ENDIF
-RETURN r
-
-METHOD onMenubarUpdatedEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_MenubarUpdated, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_MenubarUpdated)
-   ENDIF
-RETURN r
-
-METHOD onMetaCallEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_MetaCall, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_MetaCall)
-   ENDIF
-RETURN r
-
-METHOD onModifiedChangeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_ModifiedChange, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_ModifiedChange)
-   ENDIF
-RETURN r
-
-METHOD onMouseTrackingChangeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_MouseTrackingChange, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_MouseTrackingChange)
-   ENDIF
-RETURN r
-
-METHOD onPaletteChangeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_PaletteChange, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_PaletteChange)
-   ENDIF
-RETURN r
-
-METHOD onParentAboutToChangeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_ParentAboutToChange, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_ParentAboutToChange)
-   ENDIF
-RETURN r
-
-METHOD onParentChangeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_ParentChange, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_ParentChange)
-   ENDIF
-RETURN r
-
-METHOD onPolishEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_Polish, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_Polish)
-   ENDIF
-RETURN r
-
-METHOD onPolishRequestEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_PolishRequest, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_PolishRequest)
-   ENDIF
-RETURN r
-
-METHOD onQueryWhatsThisEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_QueryWhatsThis, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_QueryWhatsThis)
-   ENDIF
-RETURN r
-
-METHOD onRequestSoftwareInputPanelEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_RequestSoftwareInputPanel, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_RequestSoftwareInputPanel)
-   ENDIF
-RETURN r
-
-METHOD onShortcutEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_Shortcut, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_Shortcut)
-   ENDIF
-RETURN r
-
-METHOD onShortcutOverrideEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_ShortcutOverride, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_ShortcutOverride)
-   ENDIF
-RETURN r
-
-METHOD onShowToParentEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_ShowToParent, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_ShowToParent)
-   ENDIF
-RETURN r
-
-METHOD onSockActEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_SockAct, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_SockAct)
-   ENDIF
-RETURN r
-
-METHOD onStateMachineSignalEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_StateMachineSignal, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_StateMachineSignal)
-   ENDIF
-RETURN r
-
-METHOD onStateMachineWrappedEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_StateMachineWrapped, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_StateMachineWrapped)
-   ENDIF
-RETURN r
-
-METHOD onStatusTipEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_StatusTip, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_StatusTip)
-   ENDIF
-RETURN r
-
-METHOD onStyleChangeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_StyleChange, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_StyleChange)
-   ENDIF
-RETURN r
-
-METHOD onTabletMoveEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_TabletMove, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_TabletMove)
-   ENDIF
-RETURN r
-
-METHOD onTabletPressEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_TabletPress, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_TabletPress)
-   ENDIF
-RETURN r
-
-METHOD onTabletReleaseEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_TabletRelease, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_TabletRelease)
-   ENDIF
-RETURN r
-
-METHOD onOkRequestEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_OkRequest, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_OkRequest)
-   ENDIF
-RETURN r
-
-METHOD onTabletEnterProximityEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_TabletEnterProximity, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_TabletEnterProximity)
-   ENDIF
-RETURN r
-
-METHOD onTabletLeaveProximityEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_TabletLeaveProximity, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_TabletLeaveProximity)
-   ENDIF
-RETURN r
-
-METHOD onTimerEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_Timer, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_Timer)
-   ENDIF
-RETURN r
-
-METHOD onToolBarChangeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_ToolBarChange, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_ToolBarChange)
-   ENDIF
-RETURN r
-
-METHOD onToolTipEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_ToolTip, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_ToolTip)
-   ENDIF
-RETURN r
-
-METHOD onToolTipChangeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_ToolTipChange, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_ToolTipChange)
-   ENDIF
-RETURN r
-
-METHOD onUngrabKeyboardEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_UngrabKeyboard, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_UngrabKeyboard)
-   ENDIF
-RETURN r
-
-METHOD onUngrabMouseEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_UngrabMouse, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_UngrabMouse)
-   ENDIF
-RETURN r
-
-METHOD onUpdateLaterEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_UpdateLater, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_UpdateLater)
-   ENDIF
-RETURN r
-
-METHOD onUpdateRequestEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_UpdateRequest, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_UpdateRequest)
-   ENDIF
-RETURN r
-
-METHOD onWhatsThisEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_WhatsThis, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_WhatsThis)
-   ENDIF
-RETURN r
-
-METHOD onWhatsThisClickedEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_WhatsThisClicked, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_WhatsThisClicked)
-   ENDIF
-RETURN r
-
-METHOD onWheelEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_Wheel, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_Wheel)
-   ENDIF
-RETURN r
-
-METHOD onWinEventActEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_WinEventAct, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_WinEventAct)
-   ENDIF
-RETURN r
-
-METHOD onWindowActivateEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_WindowActivate, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_WindowActivate)
-   ENDIF
-RETURN r
-
-METHOD onWindowBlockedEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_WindowBlocked, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_WindowBlocked)
-   ENDIF
-RETURN r
-
-METHOD onWindowDeactivateEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_WindowDeactivate, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_WindowDeactivate)
-   ENDIF
-RETURN r
-
-METHOD onWindowIconChangeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_WindowIconChange, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_WindowIconChange)
-   ENDIF
-RETURN r
-
-METHOD onWindowStateChangeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_WindowStateChange, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_WindowStateChange)
-   ENDIF
-RETURN r
-
-METHOD onWindowTitleChangeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_WindowTitleChange, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_WindowTitleChange)
-   ENDIF
-RETURN r
-
-METHOD onWindowUnblockedEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_WindowUnblocked, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_WindowUnblocked)
-   ENDIF
-RETURN r
-
-METHOD onZOrderChangeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_ZOrderChange, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_ZOrderChange)
-   ENDIF
-RETURN r
-
-METHOD onKeyboardLayoutChangeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_KeyboardLayoutChange, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_KeyboardLayoutChange)
-   ENDIF
-RETURN r
-
-METHOD onDynamicPropertyChangeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_DynamicPropertyChange, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_DynamicPropertyChange)
-   ENDIF
-RETURN r
-
-METHOD onTouchBeginEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_TouchBegin, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_TouchBegin)
-   ENDIF
-RETURN r
-
-METHOD onTouchUpdateEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_TouchUpdate, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_TouchUpdate)
-   ENDIF
-RETURN r
-
-METHOD onTouchEndEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_TouchEnd, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_TouchEnd)
-   ENDIF
-RETURN r
-
-METHOD onWinIdChangeEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_WinIdChange, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_WinIdChange)
-   ENDIF
-RETURN r
-
-METHOD onGestureEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_Gesture, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_Gesture)
-   ENDIF
-RETURN r
-
-METHOD onGestureOverrideEvent (cb) CLASS QObject
-   LOCAL r := .F.
-   IF valtype(cb) == "B" .OR. valtype(cb) == "S"
-      r := QT_CONNECT_EVENT(::pointer, QEvent_GestureOverride, cb)
-   ELSEIF valtype(cb) == "U"
-      r := QT_DISCONNECT_EVENT(::pointer, QEvent_GestureOverride)
-   ENDIF
-RETURN r
 
 PROCEDURE destroyObject () CLASS QObject
    IF ::self_destruction
@@ -1465,7 +224,15 @@ RETURN
 
 #include <QWidget>
 #include <QVariant>
+#include <QEvent>
 #include <QThread>
+
+bool Events_connect_event ( QObject * object, int type, PHB_ITEM codeblock );
+bool Events_disconnect_event ( QObject * object, int type );
+void Events_disconnect_all_events ( QObject * object, bool children );
+void Signals_disconnect_all_signals ( QObject * object, bool children );
+void _qtxhb_processOnEventMethod (QEvent::Type event);
+void _qtxhb_processOnEventMethod2 (QEvent::Type event);
 
 /*
 QObject ( QObject * parent = 0 )
@@ -2233,6 +1000,777 @@ HB_FUNC_STATIC( QOBJECT_SETSELFDESTRUCTION )
   }
 
   hb_itemReturn( self );
+}
+
+HB_FUNC_STATIC( QOBJECT_DISCONNECTALL )
+{
+  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+  if( obj )
+  {
+    if( hb_pcount() == 0 )
+    {
+      Events_disconnect_all_events (obj, false);
+      Signals_disconnect_all_signals (obj, false);
+    }
+    else if( hb_pcount() == 1 && ISLOG(1) )
+    {
+      Events_disconnect_all_events (obj, PBOOL(1) );
+      Signals_disconnect_all_signals (obj, PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+HB_FUNC_STATIC( QOBJECT_DISCONNECTALLEVENTS )
+{
+  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+  if( obj )
+  {
+    if( hb_pcount() == 0 )
+    {
+      Events_disconnect_all_events (obj, false);
+    }
+    else if( hb_pcount() == 1 && ISLOG(1) )
+    {
+      Events_disconnect_all_events (obj, PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+HB_FUNC_STATIC( QOBJECT_DISCONNECTALLSIGNALS )
+{
+  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+  if( obj )
+  {
+    if( hb_pcount() == 0 )
+    {
+      Signals_disconnect_all_signals (obj, false);
+    }
+    else if( hb_pcount() == 1 && ISLOG(1) )
+    {
+      Signals_disconnect_all_signals (obj, PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+void _qtxhb_processOnEventMethod (QEvent::Type event)
+{
+  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+  if( hb_pcount() == 1 )
+  {
+    PHB_ITEM item = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+    if( item )
+    {
+      //hb_retl( Events_connect_event( obj, QEvent::Close, item ) );
+      hb_retl( Events_connect_event( obj, event, item ) );
+    }
+    else
+    {
+      hb_retl(0);
+    }
+  }
+  else if( hb_pcount() == 0 )
+  {
+    //hb_retl( Events_disconnect_event( obj, QEvent::Close ) );
+    hb_retl( Events_disconnect_event( obj, event ) );
+  }
+  else
+  {
+    hb_retl(0);
+  }
+}
+
+void _qtxhb_processOnEventMethod2 (QEvent::Type event)
+{
+  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+  if( hb_pcount() == 2 )
+  {
+    PHB_ITEM item = hb_itemNew( hb_param( 2, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+    if( item )
+    {
+      //hb_retl( Events_connect_event( obj, QEvent::Close, item ) );
+      hb_retl( Events_connect_event( obj, event, item ) );
+    }
+    else
+    {
+      hb_retl(0);
+    }
+  }
+  else if( hb_pcount() == 1 )
+  {
+    //hb_retl( Events_disconnect_event( obj, QEvent::Close ) );
+    hb_retl( Events_disconnect_event( obj, event ) );
+  }
+  else
+  {
+    hb_retl(0);
+  }
+}
+
+HB_FUNC_STATIC( QOBJECT_ONCLOSEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::Close );
+}
+HB_FUNC_STATIC( QOBJECT_ONENTEREVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::Enter );
+}
+HB_FUNC_STATIC( QOBJECT_ONFOCUSINEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::FocusIn );
+}
+HB_FUNC_STATIC( QOBJECT_ONFOCUSOUTEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::FocusOut );
+}
+HB_FUNC_STATIC( QOBJECT_ONHIDEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::Hide );
+}
+HB_FUNC_STATIC( QOBJECT_ONKEYPRESSEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::KeyPress );
+}
+HB_FUNC_STATIC( QOBJECT_ONKEYRELEASEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::KeyRelease );
+}
+HB_FUNC_STATIC( QOBJECT_ONLEAVEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::Leave );
+}
+HB_FUNC_STATIC( QOBJECT_ONSHOWEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::Show );
+}
+HB_FUNC_STATIC( QOBJECT_ONMOUSEBUTTONDBLCLICKEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::MouseButtonDblClick );
+}
+HB_FUNC_STATIC( QOBJECT_ONMOUSEBUTTONPRESSEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::MouseButtonPress );
+}
+HB_FUNC_STATIC( QOBJECT_ONMOUSEBUTTONRELEASEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::MouseButtonRelease );
+}
+HB_FUNC_STATIC( QOBJECT_ONMOUSEMOVEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::MouseMove );
+}
+HB_FUNC_STATIC( QOBJECT_ONMOVEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::Move );
+}
+HB_FUNC_STATIC( QOBJECT_ONPAINTEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::Paint );
+}
+HB_FUNC_STATIC( QOBJECT_ONRESIZEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::Resize );
+}
+HB_FUNC_STATIC( QOBJECT_ONDRAGENTEREVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::DragEnter );
+}
+HB_FUNC_STATIC( QOBJECT_ONDRAGLEAVEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::DragLeave );
+}
+HB_FUNC_STATIC( QOBJECT_ONDRAGMOVEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::DragMove );
+}
+HB_FUNC_STATIC( QOBJECT_ONDROPEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::Drop );
+}
+HB_FUNC_STATIC( QOBJECT_ONACCESSIBILITYDESCRIPTIONEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::AccessibilityDescription );
+}
+HB_FUNC_STATIC( QOBJECT_ONACCESSIBILITYHELPEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::AccessibilityHelp );
+}
+HB_FUNC_STATIC( QOBJECT_ONACCESSIBILITYPREPAREEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::AccessibilityPrepare );
+}
+HB_FUNC_STATIC( QOBJECT_ONACTIONADDEDEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::ActionAdded );
+}
+HB_FUNC_STATIC( QOBJECT_ONACTIONCHANGEDEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::ActionChanged );
+}
+HB_FUNC_STATIC( QOBJECT_ONACTIONREMOVEDEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::ActionRemoved );
+}
+HB_FUNC_STATIC( QOBJECT_ONACTIVATIONCHANGEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::ActivationChange );
+}
+HB_FUNC_STATIC( QOBJECT_ONAPPLICATIONACTIVATEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::ApplicationActivate );
+}
+HB_FUNC_STATIC( QOBJECT_ONAPPLICATIONACTIVATEDEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::ApplicationActivated );
+}
+HB_FUNC_STATIC( QOBJECT_ONAPPLICATIONDEACTIVATEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::ApplicationDeactivate );
+}
+HB_FUNC_STATIC( QOBJECT_ONAPPLICATIONFONTCHANGEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::ApplicationFontChange );
+}
+HB_FUNC_STATIC( QOBJECT_ONAPPLICATIONLAYOUTDIRECTIONCHANGEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::ApplicationLayoutDirectionChange );
+}
+HB_FUNC_STATIC( QOBJECT_ONAPPLICATIONPALETTECHANGEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::ApplicationPaletteChange );
+}
+HB_FUNC_STATIC( QOBJECT_ONAPPLICATIONWINDOWICONCHANGEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::ApplicationWindowIconChange );
+}
+HB_FUNC_STATIC( QOBJECT_ONCHILDADDEDEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::ChildAdded );
+}
+HB_FUNC_STATIC( QOBJECT_ONCHILDPOLISHEDEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::ChildPolished );
+}
+HB_FUNC_STATIC( QOBJECT_ONCHILDREMOVEDEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::ChildRemoved );
+}
+HB_FUNC_STATIC( QOBJECT_ONCLIPBOARDEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::Clipboard );
+}
+HB_FUNC_STATIC( QOBJECT_ONCLOSESOFTWAREINPUTPANELEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::CloseSoftwareInputPanel );
+}
+HB_FUNC_STATIC( QOBJECT_ONCONTENTSRECTCHANGEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::ContentsRectChange );
+}
+HB_FUNC_STATIC( QOBJECT_ONCONTEXTMENUEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::ContextMenu );
+}
+HB_FUNC_STATIC( QOBJECT_ONCURSORCHANGEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::CursorChange );
+}
+HB_FUNC_STATIC( QOBJECT_ONDEFERREDDELETEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::DeferredDelete );
+}
+HB_FUNC_STATIC( QOBJECT_ONENABLEDCHANGEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::EnabledChange );
+}
+HB_FUNC_STATIC( QOBJECT_ONENTERWHATSTHISMODEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::EnterWhatsThisMode );
+}
+HB_FUNC_STATIC( QOBJECT_ONFILEOPENEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::FileOpen );
+}
+HB_FUNC_STATIC( QOBJECT_ONFONTCHANGEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::FontChange );
+}
+HB_FUNC_STATIC( QOBJECT_ONGRABKEYBOARDEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::GrabKeyboard );
+}
+HB_FUNC_STATIC( QOBJECT_ONGRABMOUSEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::GrabMouse );
+}
+HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENECONTEXTMENUEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneContextMenu );
+}
+HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEDRAGENTEREVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneDragEnter );
+}
+HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEDRAGLEAVEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneDragLeave );
+}
+HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEDRAGMOVEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneDragMove );
+}
+HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEDROPEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneDrop );
+}
+HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEHELPEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneHelp );
+}
+HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEHOVERENTEREVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneHoverEnter );
+}
+HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEHOVERLEAVEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneHoverLeave );
+}
+HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEHOVERMOVEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneHoverMove );
+}
+HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEMOUSEDOUBLECLICKEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneMouseDoubleClick );
+}
+HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEMOUSEMOVEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneMouseMove );
+}
+HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEMOUSEPRESSEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneMousePress );
+}
+HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEMOUSERELEASEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneMouseRelease );
+}
+HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEMOVEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneMove );
+}
+HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENERESIZEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneResize );
+}
+HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEWHEELEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneWheel );
+}
+HB_FUNC_STATIC( QOBJECT_ONHIDETOPARENTEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::HideToParent );
+}
+HB_FUNC_STATIC( QOBJECT_ONHOVERENTEREVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::HoverEnter );
+}
+HB_FUNC_STATIC( QOBJECT_ONHOVERLEAVEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::HoverLeave );
+}
+HB_FUNC_STATIC( QOBJECT_ONHOVERMOVEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::HoverMove );
+}
+HB_FUNC_STATIC( QOBJECT_ONICONDRAGEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::IconDrag );
+}
+HB_FUNC_STATIC( QOBJECT_ONICONTEXTCHANGEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::IconTextChange );
+}
+HB_FUNC_STATIC( QOBJECT_ONINPUTMETHODEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::InputMethod );
+}
+HB_FUNC_STATIC( QOBJECT_ONLANGUAGECHANGEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::LanguageChange );
+}
+HB_FUNC_STATIC( QOBJECT_ONLAYOUTDIRECTIONCHANGEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::LayoutDirectionChange );
+}
+HB_FUNC_STATIC( QOBJECT_ONLAYOUTREQUESTEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::LayoutRequest );
+}
+HB_FUNC_STATIC( QOBJECT_ONLEAVEWHATSTHISMODEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::LeaveWhatsThisMode );
+}
+HB_FUNC_STATIC( QOBJECT_ONLOCALECHANGEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::LocaleChange );
+}
+HB_FUNC_STATIC( QOBJECT_ONNONCLIENTAREAMOUSEBUTTONDBLCLICKEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::NonClientAreaMouseButtonDblClick );
+}
+HB_FUNC_STATIC( QOBJECT_ONNONCLIENTAREAMOUSEBUTTONPRESSEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::NonClientAreaMouseButtonPress );
+}
+HB_FUNC_STATIC( QOBJECT_ONNONCLIENTAREAMOUSEBUTTONRELEASEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::NonClientAreaMouseButtonRelease );
+}
+HB_FUNC_STATIC( QOBJECT_ONNONCLIENTAREAMOUSEMOVEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::NonClientAreaMouseMove );
+}
+HB_FUNC_STATIC( QOBJECT_ONMACSIZECHANGEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::MacSizeChange );
+}
+HB_FUNC_STATIC( QOBJECT_ONMENUBARUPDATEDEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::MenubarUpdated );
+}
+HB_FUNC_STATIC( QOBJECT_ONMETACALLEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::MetaCall );
+}
+HB_FUNC_STATIC( QOBJECT_ONMODIFIEDCHANGEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::ModifiedChange );
+}
+HB_FUNC_STATIC( QOBJECT_ONMOUSETRACKINGCHANGEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::MouseTrackingChange );
+}
+HB_FUNC_STATIC( QOBJECT_ONPALETTECHANGEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::PaletteChange );
+}
+HB_FUNC_STATIC( QOBJECT_ONPARENTABOUTTOCHANGEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::ParentAboutToChange );
+}
+HB_FUNC_STATIC( QOBJECT_ONPARENTCHANGEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::ParentChange );
+}
+HB_FUNC_STATIC( QOBJECT_ONPOLISHEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::Polish );
+}
+HB_FUNC_STATIC( QOBJECT_ONPOLISHREQUESTEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::PolishRequest );
+}
+HB_FUNC_STATIC( QOBJECT_ONQUERYWHATSTHISEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::QueryWhatsThis );
+}
+HB_FUNC_STATIC( QOBJECT_ONREQUESTSOFTWAREINPUTPANELEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::RequestSoftwareInputPanel );
+}
+HB_FUNC_STATIC( QOBJECT_ONSHORTCUTEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::Shortcut );
+}
+HB_FUNC_STATIC( QOBJECT_ONSHORTCUTOVERRIDEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::ShortcutOverride );
+}
+HB_FUNC_STATIC( QOBJECT_ONSHOWTOPARENTEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::ShowToParent );
+}
+HB_FUNC_STATIC( QOBJECT_ONSOCKACTEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::SockAct );
+}
+HB_FUNC_STATIC( QOBJECT_ONSTATEMACHINESIGNALEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::StateMachineSignal );
+}
+HB_FUNC_STATIC( QOBJECT_ONSTATEMACHINEWRAPPEDEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::StateMachineWrapped );
+}
+HB_FUNC_STATIC( QOBJECT_ONSTATUSTIPEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::StatusTip );
+}
+HB_FUNC_STATIC( QOBJECT_ONSTYLECHANGEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::StyleChange );
+}
+HB_FUNC_STATIC( QOBJECT_ONTABLETMOVEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::TabletMove );
+}
+HB_FUNC_STATIC( QOBJECT_ONTABLETPRESSEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::TabletPress );
+}
+HB_FUNC_STATIC( QOBJECT_ONTABLETRELEASEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::TabletRelease );
+}
+HB_FUNC_STATIC( QOBJECT_ONOKREQUESTEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::OkRequest );
+}
+HB_FUNC_STATIC( QOBJECT_ONTABLETENTERPROXIMITYEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::TabletEnterProximity );
+}
+HB_FUNC_STATIC( QOBJECT_ONTABLETLEAVEPROXIMITYEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::TabletLeaveProximity );
+}
+HB_FUNC_STATIC( QOBJECT_ONTIMEREVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::Timer );
+}
+HB_FUNC_STATIC( QOBJECT_ONTOOLBARCHANGEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::ToolBarChange );
+}
+HB_FUNC_STATIC( QOBJECT_ONTOOLTIPEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::ToolTip );
+}
+HB_FUNC_STATIC( QOBJECT_ONTOOLTIPCHANGEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::ToolTipChange );
+}
+HB_FUNC_STATIC( QOBJECT_ONUNGRABKEYBOARDEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::UngrabKeyboard );
+}
+HB_FUNC_STATIC( QOBJECT_ONUNGRABMOUSEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::UngrabMouse );
+}
+HB_FUNC_STATIC( QOBJECT_ONUPDATELATEREVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::UpdateLater );
+}
+HB_FUNC_STATIC( QOBJECT_ONUPDATEREQUESTEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::UpdateRequest );
+}
+HB_FUNC_STATIC( QOBJECT_ONWHATSTHISEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::WhatsThis );
+}
+HB_FUNC_STATIC( QOBJECT_ONWHATSTHISCLICKEDEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::WhatsThisClicked );
+}
+HB_FUNC_STATIC( QOBJECT_ONWHEELEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::Wheel );
+}
+HB_FUNC_STATIC( QOBJECT_ONWINEVENTACTEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::WinEventAct );
+}
+HB_FUNC_STATIC( QOBJECT_ONWINDOWACTIVATEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::WindowActivate );
+}
+HB_FUNC_STATIC( QOBJECT_ONWINDOWBLOCKEDEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::WindowBlocked );
+}
+HB_FUNC_STATIC( QOBJECT_ONWINDOWDEACTIVATEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::WindowDeactivate );
+}
+HB_FUNC_STATIC( QOBJECT_ONWINDOWICONCHANGEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::WindowIconChange );
+}
+HB_FUNC_STATIC( QOBJECT_ONWINDOWSTATECHANGEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::WindowStateChange );
+}
+HB_FUNC_STATIC( QOBJECT_ONWINDOWTITLECHANGEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::WindowTitleChange );
+}
+HB_FUNC_STATIC( QOBJECT_ONWINDOWUNBLOCKEDEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::WindowUnblocked );
+}
+HB_FUNC_STATIC( QOBJECT_ONZORDERCHANGEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::ZOrderChange );
+}
+HB_FUNC_STATIC( QOBJECT_ONKEYBOARDLAYOUTCHANGEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::KeyboardLayoutChange );
+}
+HB_FUNC_STATIC( QOBJECT_ONDYNAMICPROPERTYCHANGEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::DynamicPropertyChange );
+}
+HB_FUNC_STATIC( QOBJECT_ONTOUCHBEGINEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::TouchBegin );
+}
+HB_FUNC_STATIC( QOBJECT_ONTOUCHUPDATEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::TouchUpdate );
+}
+HB_FUNC_STATIC( QOBJECT_ONTOUCHENDEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::TouchEnd );
+}
+HB_FUNC_STATIC( QOBJECT_ONWINIDCHANGEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::WinIdChange );
+}
+HB_FUNC_STATIC( QOBJECT_ONGESTUREEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::Gesture );
+}
+HB_FUNC_STATIC( QOBJECT_ONGESTUREOVERRIDEEVENT )
+{
+  _qtxhb_processOnEventMethod( QEvent::GestureOverride );
+}
+
+HB_FUNC_STATIC( QOBJECT_CONNECT )
+{
+  QObject * obj = (QObject *) _qt4xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(2) && ISCHAR(1) )
+    {
+      QString signal = hb_parc(1);
+      int pos = signal.indexOf("(");
+      QString method = signal.left(pos).toUpper();
+      method.prepend("ON");
+
+      PHB_DYNS pDynSym = hb_dynsymFindName( method.toLatin1().data() );
+
+      if( pDynSym )
+      {
+        hb_vmPushDynSym( pDynSym );
+        hb_vmPush( hb_stackSelfItem() );
+        PHB_ITEM codeblock = hb_param( 2, HB_IT_BLOCK | HB_IT_SYMBOL );
+        hb_vmPush( codeblock );
+        hb_vmSend( 1 );
+      }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS );
+      }
+    }
+    else if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      QString signal = hb_parc(1);
+      int pos = signal.indexOf("(");
+      QString method = signal.left(pos).toUpper();
+      method.prepend("ON");
+
+      PHB_DYNS pDynSym = hb_dynsymFindName( method.toLatin1().data() );
+
+      if( pDynSym )
+      {
+        hb_vmPushDynSym( pDynSym );
+        hb_vmPush( hb_stackSelfItem() );
+        hb_vmSend( 0 );
+      }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS );
+      }
+    }
+    else if( ISNUMPAR(2) && ISNUM(1) )
+    {
+      int event = hb_parni(1);
+      _qtxhb_processOnEventMethod2( (QEvent::Type) event );
+    }
+    else if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      int event = hb_parni(1);
+      _qtxhb_processOnEventMethod2( (QEvent::Type) event );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+HB_FUNC_STATIC( QOBJECT_DISCONNECT )
+{
+  QObject * obj = (QObject *) _qt4xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      QString signal = hb_parc(1);
+      int pos = signal.indexOf("(");
+      QString method = signal.left(pos).toUpper();
+      method.prepend("ON");
+
+      PHB_DYNS pDynSym = hb_dynsymFindName( method.toLatin1().data() );
+
+      if( pDynSym )
+      {
+        hb_vmPushDynSym( pDynSym );
+        hb_vmPush( hb_stackSelfItem() );
+        hb_vmSend( 0 );
+      }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS );
+      }
+    }
+    else if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      int event = hb_parni(1);
+      _qtxhb_processOnEventMethod2( (QEvent::Type) event );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
 }
 
 void QObjectSlots_connect_signal ( const QString & signal, const QString & slot );
