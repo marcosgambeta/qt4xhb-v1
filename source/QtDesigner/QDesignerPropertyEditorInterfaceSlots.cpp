@@ -27,7 +27,7 @@ void QDesignerPropertyEditorInterfaceSlots::propertyChanged( const QString & nam
   PHB_ITEM cb = Signals_return_codeblock( object, "propertyChanged(QString,QVariant)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( object, "QDESIGNERPROPERTYEDITORINTERFACE" );
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
     PHB_ITEM pvalue = Signals_return_object( (void *) &value, "QVARIANT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pname, pvalue );
