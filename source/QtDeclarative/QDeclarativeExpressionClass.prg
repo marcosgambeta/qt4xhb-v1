@@ -413,4 +413,10 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SOURCEFILE )
 
 void QDeclarativeExpressionSlots_connect_signal ( const QString & signal, const QString & slot );
 
+HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ONVALUECHANGED )
+{
+  QDeclarativeExpressionSlots_connect_signal( "valueChanged()", "valueChanged()" );
+}
+
+
 #pragma ENDDUMP

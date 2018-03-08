@@ -356,4 +356,15 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_STATUS )
 
 void QDeclarativeViewSlots_connect_signal ( const QString & signal, const QString & slot );
 
+HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSCENERESIZED )
+{
+  QDeclarativeViewSlots_connect_signal( "sceneResized(QSize)", "sceneResized(QSize)" );
+}
+
+HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSTATUSCHANGED )
+{
+  QDeclarativeViewSlots_connect_signal( "statusChanged(QDeclarativeView::Status)", "statusChanged(QDeclarativeView::Status)" );
+}
+
+
 #pragma ENDDUMP
