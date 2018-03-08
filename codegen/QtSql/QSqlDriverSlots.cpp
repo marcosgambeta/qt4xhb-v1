@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|notification( const QString & name )
 $endSlotsClass
-
-$connectSignalFunction
