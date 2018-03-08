@@ -13,5 +13,3 @@ $slot=|activeChanged( bool active )
 $slot=|surfaceFormatChanged( const QVideoSurfaceFormat & format )
 $slot=|supportedFormatsChanged()
 $endSlotsClass
-
-$connectSignalFunction
