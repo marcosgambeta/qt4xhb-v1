@@ -14,5 +14,3 @@ $slot=|mapped( const QString & s )
 $slot=|mapped( QWidget * w )
 $slot=|mapped( QObject * o )
 $endSlotsClass
-
-$connectSignalFunction

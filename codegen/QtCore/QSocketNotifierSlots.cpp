@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|activated( int socket )
 $endSlotsClass
-
-$connectSignalFunction

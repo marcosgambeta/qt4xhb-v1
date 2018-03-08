@@ -20,5 +20,3 @@ $slot=|progressRangeChanged( int minimum, int maximum )
 $slot=|progressValueChanged( int progressValue )
 $slot=|progressTextChanged( const QString & progressText )
 $endSlotsClass
-
-$connectSignalFunction

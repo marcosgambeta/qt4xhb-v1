@@ -16,5 +16,3 @@ $slot=|readyReadStandardOutput()
 $slot=|started()
 $slot=|stateChanged( QProcess::ProcessState newState )
 $endSlotsClass
-
-$connectSignalFunction

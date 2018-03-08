@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|destroyed( QObject * obj )
 $endSlotsClass
-
-$connectSignalFunction
