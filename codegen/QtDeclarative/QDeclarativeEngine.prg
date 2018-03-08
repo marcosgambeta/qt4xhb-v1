@@ -145,4 +145,7 @@ $staticMethod=|void|setObjectOwnership|QObject *,QDeclarativeEngine::ObjectOwner
 
 $connectSignalFunction
 
+$signalMethod=|quit()
+$signalMethod=|warnings(QList<QDeclarativeError>)
+
 #pragma ENDDUMP

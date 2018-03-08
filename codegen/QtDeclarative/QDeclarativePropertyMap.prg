@@ -68,4 +68,6 @@ $method=|QVariant|value|const QString &
 
 $connectSignalFunction
 
+$signalMethod=|valueChanged(QString,QVariant)
+
 #pragma ENDDUMP

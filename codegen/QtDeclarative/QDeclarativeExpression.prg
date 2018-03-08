@@ -121,4 +121,6 @@ $method=|QString|sourceFile|
 
 $connectSignalFunction
 
+$signalMethod=|valueChanged()
+
 #pragma ENDDUMP

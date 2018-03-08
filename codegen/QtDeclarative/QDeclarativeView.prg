@@ -109,4 +109,7 @@ $method=|QDeclarativeView::Status|status|
 
 $connectSignalFunction
 
+$signalMethod=|sceneResized(QSize)
+$signalMethod=|statusChanged(QDeclarativeView::Status)
+
 #pragma ENDDUMP
