@@ -27,7 +27,7 @@ void QAbstractTransitionSlots::triggered()
   PHB_ITEM cb = Signals_return_codeblock( object, "triggered()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QABSTRACTTRANSITION" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTTRANSITION" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }

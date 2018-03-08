@@ -27,7 +27,7 @@ void QSignalMapperSlots::mapped( int i )
   PHB_ITEM cb = Signals_return_codeblock( object, "mapped(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QSIGNALMAPPER" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSIGNALMAPPER" );
     PHB_ITEM pi = hb_itemPutNI( NULL, i );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pi );
     hb_itemRelease( psender );
@@ -40,7 +40,7 @@ void QSignalMapperSlots::mapped( const QString & s )
   PHB_ITEM cb = Signals_return_codeblock( object, "mapped(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QSIGNALMAPPER" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSIGNALMAPPER" );
     PHB_ITEM ps = hb_itemPutC( NULL, QSTRINGTOSTRING(s) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ps );
     hb_itemRelease( psender );
@@ -53,8 +53,8 @@ void QSignalMapperSlots::mapped( QWidget * w )
   PHB_ITEM cb = Signals_return_codeblock( object, "mapped(QWidget*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QSIGNALMAPPER" );
-    PHB_ITEM pw = Signals_return_qobject( w, "QWIDGET" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSIGNALMAPPER" );
+    PHB_ITEM pw = Signals_return_qobject( (QObject *) w, "QWIDGET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pw );
     hb_itemRelease( psender );
     hb_itemRelease( pw );
@@ -66,8 +66,8 @@ void QSignalMapperSlots::mapped( QObject * o )
   PHB_ITEM cb = Signals_return_codeblock( object, "mapped(QObject*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QSIGNALMAPPER" );
-    PHB_ITEM po = Signals_return_qobject( o, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSIGNALMAPPER" );
+    PHB_ITEM po = Signals_return_qobject( (QObject *) o, "QOBJECT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, po );
     hb_itemRelease( psender );
     hb_itemRelease( po );

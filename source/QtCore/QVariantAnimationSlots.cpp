@@ -27,7 +27,7 @@ void QVariantAnimationSlots::valueChanged( const QVariant & value )
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(QVariant)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QVARIANTANIMATION" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVARIANTANIMATION" );
     PHB_ITEM pvalue = Signals_return_object( (void *) &value, "QVARIANT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
     hb_itemRelease( psender );

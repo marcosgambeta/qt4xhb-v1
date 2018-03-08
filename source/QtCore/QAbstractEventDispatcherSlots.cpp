@@ -27,7 +27,7 @@ void QAbstractEventDispatcherSlots::aboutToBlock()
   PHB_ITEM cb = Signals_return_codeblock( object, "aboutToBlock()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QABSTRACTEVENTDISPATCHER" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTEVENTDISPATCHER" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -38,7 +38,7 @@ void QAbstractEventDispatcherSlots::awake()
   PHB_ITEM cb = Signals_return_codeblock( object, "awake()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QABSTRACTEVENTDISPATCHER" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTEVENTDISPATCHER" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
