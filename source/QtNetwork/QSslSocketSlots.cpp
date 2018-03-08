@@ -27,7 +27,7 @@ void QSslSocketSlots::encrypted()
   PHB_ITEM cb = Signals_return_codeblock( object, "encrypted()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QSSLSOCKET" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSSLSOCKET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -38,7 +38,7 @@ void QSslSocketSlots::encryptedBytesWritten( qint64 written )
   PHB_ITEM cb = Signals_return_codeblock( object, "encryptedBytesWritten(qint64)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QSSLSOCKET" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSSLSOCKET" );
     PHB_ITEM pwritten = hb_itemPutNLL( NULL, written );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pwritten );
     hb_itemRelease( psender );
@@ -51,7 +51,7 @@ void QSslSocketSlots::modeChanged( QSslSocket::SslMode mode )
   PHB_ITEM cb = Signals_return_codeblock( object, "modeChanged(QSslSocket::SslMode)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QSSLSOCKET" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSSLSOCKET" );
     PHB_ITEM pmode = hb_itemPutNI( NULL, (int) mode );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmode );
     hb_itemRelease( psender );
@@ -64,7 +64,7 @@ void QSslSocketSlots::peerVerifyError( const QSslError & error )
   PHB_ITEM cb = Signals_return_codeblock( object, "peerVerifyError(QSslError)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QSSLSOCKET" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSSLSOCKET" );
     PHB_ITEM perror = Signals_return_object( (void *) &error, "QSSLERROR" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, perror );
     hb_itemRelease( psender );
@@ -77,7 +77,7 @@ void QSslSocketSlots::sslErrors( const QList<QSslError> & errors )
   PHB_ITEM cb = Signals_return_codeblock( object, "sslErrors(QList<QSslError>)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QSSLSOCKET" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSSLSOCKET" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
     PHB_ITEM perrors = hb_itemArrayNew(0);
     int i;

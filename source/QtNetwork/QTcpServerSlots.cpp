@@ -27,7 +27,7 @@ void QTcpServerSlots::newConnection()
   PHB_ITEM cb = Signals_return_codeblock( object, "newConnection()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QTCPSERVER" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTCPSERVER" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }

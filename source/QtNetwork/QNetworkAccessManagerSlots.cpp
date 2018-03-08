@@ -27,8 +27,8 @@ void QNetworkAccessManagerSlots::authenticationRequired( QNetworkReply * reply, 
   PHB_ITEM cb = Signals_return_codeblock( object, "authenticationRequired(QNetworkReply*,QAuthenticator*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QNETWORKACCESSMANAGER" );
-    PHB_ITEM preply = Signals_return_qobject( reply, "QNETWORKREPLY" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKACCESSMANAGER" );
+    PHB_ITEM preply = Signals_return_qobject( (QObject *) reply, "QNETWORKREPLY" );
     PHB_ITEM pauthenticator = Signals_return_object( (void *) authenticator, "QAUTHENTICATOR" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, preply, pauthenticator );
     hb_itemRelease( psender );
@@ -42,8 +42,8 @@ void QNetworkAccessManagerSlots::finished( QNetworkReply * reply )
   PHB_ITEM cb = Signals_return_codeblock( object, "finished(QNetworkReply*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QNETWORKACCESSMANAGER" );
-    PHB_ITEM preply = Signals_return_qobject( reply, "QNETWORKREPLY" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKACCESSMANAGER" );
+    PHB_ITEM preply = Signals_return_qobject( (QObject *) reply, "QNETWORKREPLY" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, preply );
     hb_itemRelease( psender );
     hb_itemRelease( preply );
@@ -55,7 +55,7 @@ void QNetworkAccessManagerSlots::networkAccessibleChanged( QNetworkAccessManager
   PHB_ITEM cb = Signals_return_codeblock( object, "networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QNETWORKACCESSMANAGER" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKACCESSMANAGER" );
     PHB_ITEM paccessible = hb_itemPutNI( NULL, (int) accessible );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, paccessible );
     hb_itemRelease( psender );
@@ -68,7 +68,7 @@ void QNetworkAccessManagerSlots::proxyAuthenticationRequired( const QNetworkProx
   PHB_ITEM cb = Signals_return_codeblock( object, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QNETWORKACCESSMANAGER" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKACCESSMANAGER" );
     PHB_ITEM pproxy = Signals_return_object( (void *) &proxy, "QNETWORKPROXY" );
     PHB_ITEM pauthenticator = Signals_return_object( (void *) authenticator, "QAUTHENTICATOR" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pproxy, pauthenticator );
@@ -83,8 +83,8 @@ void QNetworkAccessManagerSlots::sslErrors( QNetworkReply * reply, const QList<Q
   PHB_ITEM cb = Signals_return_codeblock( object, "sslErrors(QNetworkReply*,QList<QSslError>)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QNETWORKACCESSMANAGER" );
-    PHB_ITEM preply = Signals_return_qobject( reply, "QNETWORKREPLY" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKACCESSMANAGER" );
+    PHB_ITEM preply = Signals_return_qobject( (QObject *) reply, "QNETWORKREPLY" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
     PHB_ITEM perrors = hb_itemArrayNew(0);
     int i;

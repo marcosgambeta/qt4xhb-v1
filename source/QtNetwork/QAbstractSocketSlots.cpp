@@ -27,7 +27,7 @@ void QAbstractSocketSlots::connected()
   PHB_ITEM cb = Signals_return_codeblock( object, "connected()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QABSTRACTSOCKET" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTSOCKET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -38,7 +38,7 @@ void QAbstractSocketSlots::disconnected()
   PHB_ITEM cb = Signals_return_codeblock( object, "disconnected()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QABSTRACTSOCKET" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTSOCKET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -49,7 +49,7 @@ void QAbstractSocketSlots::error( QAbstractSocket::SocketError socketError )
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QAbstractSocket::SocketError)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QABSTRACTSOCKET" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTSOCKET" );
     PHB_ITEM psocketError = hb_itemPutNI( NULL, (int) socketError );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psocketError );
     hb_itemRelease( psender );
@@ -62,7 +62,7 @@ void QAbstractSocketSlots::hostFound()
   PHB_ITEM cb = Signals_return_codeblock( object, "hostFound()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QABSTRACTSOCKET" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTSOCKET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -73,7 +73,7 @@ void QAbstractSocketSlots::proxyAuthenticationRequired( const QNetworkProxy & pr
   PHB_ITEM cb = Signals_return_codeblock( object, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QABSTRACTSOCKET" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTSOCKET" );
     PHB_ITEM pproxy = Signals_return_object( (void *) &proxy, "QNETWORKPROXY" );
     PHB_ITEM pauthenticator = Signals_return_object( (void *) authenticator, "QAUTHENTICATOR" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pproxy, pauthenticator );
@@ -88,7 +88,7 @@ void QAbstractSocketSlots::stateChanged( QAbstractSocket::SocketState socketStat
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QAbstractSocket::SocketState)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QABSTRACTSOCKET" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTSOCKET" );
     PHB_ITEM psocketState = hb_itemPutNI( NULL, (int) socketState );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psocketState );
     hb_itemRelease( psender );
