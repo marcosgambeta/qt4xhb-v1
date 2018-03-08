@@ -23,5 +23,3 @@ $slot=|widgetManaged( QWidget * widget )
 $slot=|widgetRemoved( QWidget * widget )
 $slot=|widgetUnmanaged( QWidget * widget )
 $endSlotsClass
-
-$connectSignalFunction
