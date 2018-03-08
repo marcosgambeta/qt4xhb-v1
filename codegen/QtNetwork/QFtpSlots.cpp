@@ -18,5 +18,3 @@ $slot=|rawCommandReply( int replyCode, const QString & detail )
 $slot=|readyRead()
 $slot=|stateChanged( int state )
 $endSlotsClass
-
-$connectSignalFunction

@@ -16,5 +16,3 @@ $slot=|opened()
 $slot=|preferredConfigurationChanged( const QNetworkConfiguration & config, bool isSeamless )
 $slot=|stateChanged( QNetworkSession::State state )
 $endSlotsClass
-
-$connectSignalFunction

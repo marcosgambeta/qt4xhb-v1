@@ -15,5 +15,3 @@ $slot=|modeChanged( QSslSocket::SslMode mode )
 $slot=|peerVerifyError( const QSslError & error )
 $slot=|sslErrors( const QList<QSslError> & errors )
 $endSlotsClass
-
-$connectSignalFunction

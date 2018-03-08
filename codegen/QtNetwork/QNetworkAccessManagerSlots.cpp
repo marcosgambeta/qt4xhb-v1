@@ -15,5 +15,3 @@ $slot=|networkAccessibleChanged( QNetworkAccessManager::NetworkAccessibility acc
 $slot=|proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator )
 $slot=|sslErrors( QNetworkReply * reply, const QList<QSslError> & errors )
 $endSlotsClass
-
-$connectSignalFunction

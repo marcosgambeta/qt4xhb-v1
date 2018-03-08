@@ -16,5 +16,3 @@ $slot=|metaDataChanged()
 $slot=|sslErrors( const QList<QSslError> & errors )
 $slot=|uploadProgress( qint64 bytesSent, qint64 bytesTotal )
 $endSlotsClass
-
-$connectSignalFunction

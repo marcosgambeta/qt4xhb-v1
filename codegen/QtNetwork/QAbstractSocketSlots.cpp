@@ -16,5 +16,3 @@ $slot=|hostFound()
 $slot=|proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator )
 $slot=|stateChanged( QAbstractSocket::SocketState socketState )
 $endSlotsClass
-
-$connectSignalFunction
