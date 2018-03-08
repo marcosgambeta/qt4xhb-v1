@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|error( QAxScript * script, int code, const QString & description, int sourcePosition, const QString & sourceText )
 $endSlotsClass
-
-$connectSignalFunction
