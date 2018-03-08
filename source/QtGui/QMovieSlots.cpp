@@ -27,7 +27,7 @@ void QMovieSlots::error( QImageReader::ImageReaderError error )
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QImageReader::ImageReaderError)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QMOVIE" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMOVIE" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, perror );
     hb_itemRelease( psender );
@@ -40,7 +40,7 @@ void QMovieSlots::finished()
   PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QMOVIE" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMOVIE" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -51,7 +51,7 @@ void QMovieSlots::frameChanged( int frameNumber )
   PHB_ITEM cb = Signals_return_codeblock( object, "frameChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QMOVIE" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMOVIE" );
     PHB_ITEM pframeNumber = hb_itemPutNI( NULL, frameNumber );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pframeNumber );
     hb_itemRelease( psender );
@@ -64,7 +64,7 @@ void QMovieSlots::resized( const QSize & size )
   PHB_ITEM cb = Signals_return_codeblock( object, "resized(QSize)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QMOVIE" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMOVIE" );
     PHB_ITEM psize = Signals_return_object( (void *) &size, "QSIZE" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psize );
     hb_itemRelease( psender );
@@ -77,7 +77,7 @@ void QMovieSlots::started()
   PHB_ITEM cb = Signals_return_codeblock( object, "started()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QMOVIE" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMOVIE" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -88,7 +88,7 @@ void QMovieSlots::stateChanged( QMovie::MovieState state )
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QMovie::MovieState)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QMOVIE" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMOVIE" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstate );
     hb_itemRelease( psender );
@@ -101,7 +101,7 @@ void QMovieSlots::updated( const QRect & rect )
   PHB_ITEM cb = Signals_return_codeblock( object, "updated(QRect)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QMOVIE" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMOVIE" );
     PHB_ITEM prect = Signals_return_object( (void *) &rect, "QRECT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, prect );
     hb_itemRelease( psender );

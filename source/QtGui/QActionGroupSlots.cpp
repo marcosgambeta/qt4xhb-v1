@@ -27,8 +27,8 @@ void QActionGroupSlots::hovered( QAction * action )
   PHB_ITEM cb = Signals_return_codeblock( object, "hovered(QAction*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QACTIONGROUP" );
-    PHB_ITEM paction = Signals_return_qobject( action, "QACTION" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QACTIONGROUP" );
+    PHB_ITEM paction = Signals_return_qobject( (QObject *) action, "QACTION" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, paction );
     hb_itemRelease( psender );
     hb_itemRelease( paction );
@@ -40,8 +40,8 @@ void QActionGroupSlots::triggered( QAction * action )
   PHB_ITEM cb = Signals_return_codeblock( object, "triggered(QAction*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QACTIONGROUP" );
-    PHB_ITEM paction = Signals_return_qobject( action, "QACTION" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QACTIONGROUP" );
+    PHB_ITEM paction = Signals_return_qobject( (QObject *) action, "QACTION" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, paction );
     hb_itemRelease( psender );
     hb_itemRelease( paction );

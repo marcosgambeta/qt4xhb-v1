@@ -27,7 +27,7 @@ void QApplicationSlots::aboutToReleaseGpuResources()
   PHB_ITEM cb = Signals_return_codeblock( object, "aboutToReleaseGpuResources()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QAPPLICATION" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAPPLICATION" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -38,7 +38,7 @@ void QApplicationSlots::aboutToUseGpuResources()
   PHB_ITEM cb = Signals_return_codeblock( object, "aboutToUseGpuResources()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QAPPLICATION" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAPPLICATION" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -49,8 +49,8 @@ void QApplicationSlots::commitDataRequest( QSessionManager & manager )
   PHB_ITEM cb = Signals_return_codeblock( object, "commitDataRequest(QSessionManager)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QAPPLICATION" );
-    PHB_ITEM pmanager = Signals_return_qobject( &manager, "QSESSIONMANAGER" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAPPLICATION" );
+    PHB_ITEM pmanager = Signals_return_qobject( (QObject *) &manager, "QSESSIONMANAGER" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmanager );
     hb_itemRelease( psender );
     hb_itemRelease( pmanager );
@@ -62,9 +62,9 @@ void QApplicationSlots::focusChanged( QWidget * old, QWidget * now )
   PHB_ITEM cb = Signals_return_codeblock( object, "focusChanged(QWidget*,QWidget*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QAPPLICATION" );
-    PHB_ITEM pold = Signals_return_qobject( old, "QWIDGET" );
-    PHB_ITEM pnow = Signals_return_qobject( now, "QWIDGET" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAPPLICATION" );
+    PHB_ITEM pold = Signals_return_qobject( (QObject *) old, "QWIDGET" );
+    PHB_ITEM pnow = Signals_return_qobject( (QObject *) now, "QWIDGET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pold, pnow );
     hb_itemRelease( psender );
     hb_itemRelease( pold );
@@ -77,7 +77,7 @@ void QApplicationSlots::fontDatabaseChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "fontDatabaseChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QAPPLICATION" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAPPLICATION" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -88,7 +88,7 @@ void QApplicationSlots::lastWindowClosed()
   PHB_ITEM cb = Signals_return_codeblock( object, "lastWindowClosed()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QAPPLICATION" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAPPLICATION" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -99,8 +99,8 @@ void QApplicationSlots::saveStateRequest( QSessionManager & manager )
   PHB_ITEM cb = Signals_return_codeblock( object, "saveStateRequest(QSessionManager)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QAPPLICATION" );
-    PHB_ITEM pmanager = Signals_return_qobject( &manager, "QSESSIONMANAGER" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAPPLICATION" );
+    PHB_ITEM pmanager = Signals_return_qobject( (QObject *) &manager, "QSESSIONMANAGER" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmanager );
     hb_itemRelease( psender );
     hb_itemRelease( pmanager );

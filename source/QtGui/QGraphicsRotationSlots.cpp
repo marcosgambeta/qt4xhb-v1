@@ -27,7 +27,7 @@ void QGraphicsRotationSlots::angleChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "angleChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QGRAPHICSROTATION" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSROTATION" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -38,7 +38,7 @@ void QGraphicsRotationSlots::axisChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "axisChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QGRAPHICSROTATION" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSROTATION" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -49,7 +49,7 @@ void QGraphicsRotationSlots::originChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "originChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QGRAPHICSROTATION" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSROTATION" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
