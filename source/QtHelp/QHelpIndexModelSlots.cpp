@@ -27,7 +27,7 @@ void QHelpIndexModelSlots::indexCreated()
   PHB_ITEM cb = Signals_return_codeblock( object, "indexCreated()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QHELPINDEXMODEL" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHELPINDEXMODEL" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -38,7 +38,7 @@ void QHelpIndexModelSlots::indexCreationStarted()
   PHB_ITEM cb = Signals_return_codeblock( object, "indexCreationStarted()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( object, "QHELPINDEXMODEL" );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHELPINDEXMODEL" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
