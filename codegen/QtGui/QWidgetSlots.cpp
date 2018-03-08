@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|customContextMenuRequested( const QPoint & pos )
 $endSlotsClass
-
-$connectSignalFunction

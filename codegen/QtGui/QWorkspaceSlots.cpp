@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|windowActivated( QWidget * w )
 $endSlotsClass
-
-$connectSignalFunction

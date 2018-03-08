@@ -19,5 +19,3 @@ $slot=|redoAvailable( bool available )
 $slot=|undoAvailable( bool available )
 $slot=|undoCommandAdded()
 $endSlotsClass
-
-$connectSignalFunction

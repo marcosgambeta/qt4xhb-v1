@@ -15,5 +15,3 @@ $slot=|fileSelected( const QString & file )
 $slot=|filesSelected( const QStringList & selected )
 $slot=|filterSelected( const QString & filter )
 $endSlotsClass
-
-$connectSignalFunction
