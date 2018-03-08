@@ -33,5 +33,3 @@ $slot=|toolBarVisibilityChangeRequested( bool visible )
 $slot=|unsupportedContent( QNetworkReply * reply )
 $slot=|windowCloseRequested()
 $endSlotsClass
-
-$connectSignalFunction
