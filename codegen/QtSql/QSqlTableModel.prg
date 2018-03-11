@@ -157,11 +157,11 @@ $virtualMethod=|bool|submit|
 $prototype=bool submitAll ()
 $method=|bool|submitAll|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|beforeDelete(int)
 $signalMethod=|beforeInsert(QSqlRecord)
 $signalMethod=|beforeUpdate(int,QSqlRecord)
 $signalMethod=|primeInsert(int,QSqlRecord)
+$endSignals
 
 #pragma ENDDUMP
