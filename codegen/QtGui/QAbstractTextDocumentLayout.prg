@@ -79,10 +79,10 @@ $prototype=void setPaintDevice ( QPaintDevice * device )
 $method=|void|setPaintDevice|QPaintDevice *
 
 $beginSignals
-$signalMethod=|documentSizeChanged(QSizeF)
-$signalMethod=|pageCountChanged(int)
-$signalMethod=|update(QRectF)
-$signalMethod=|updateBlock(QTextBlock)
+$signal=|documentSizeChanged(QSizeF)
+$signal=|pageCountChanged(int)
+$signal=|update(QRectF)
+$signal=|updateBlock(QTextBlock)
 $endSignals
 
 #pragma ENDDUMP

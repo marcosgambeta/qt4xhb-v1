@@ -177,7 +177,7 @@ $prototype=void setSmallDecimalPoint ( bool )
 $method=|void|setSmallDecimalPoint|bool
 
 $beginSignals
-$signalMethod=|overflow()
+$signal=|overflow()
 $endSignals
 
 #pragma ENDDUMP

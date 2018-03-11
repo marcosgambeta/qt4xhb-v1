@@ -1403,7 +1403,7 @@ $prototype=static void setTabOrder ( QWidget * first, QWidget * second )
 $staticMethod=|void|setTabOrder|QWidget *,QWidget *
 
 $beginSignals
-$signalMethod=|customContextMenuRequested(QPoint)
+$signal=|customContextMenuRequested(QPoint)
 $endSignals
 
 #pragma ENDDUMP

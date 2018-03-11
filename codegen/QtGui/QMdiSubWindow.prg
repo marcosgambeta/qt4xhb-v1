@@ -103,8 +103,8 @@ $prototype=void showSystemMenu ()
 $method=|void|showSystemMenu|
 
 $beginSignals
-$signalMethod=|aboutToActivate()
-$signalMethod=|windowStateChanged(Qt::WindowStates,Qt::WindowStates)
+$signal=|aboutToActivate()
+$signal=|windowStateChanged(Qt::WindowStates,Qt::WindowStates)
 $endSignals
 
 #pragma ENDDUMP

@@ -276,8 +276,8 @@ $prototype=void setDockNestingEnabled ( bool enabled ) const
 $method=|void|setDockNestingEnabled|bool
 
 $beginSignals
-$signalMethod=|iconSizeChanged(QSize)
-$signalMethod=|toolButtonStyleChanged(Qt::ToolButtonStyle)
+$signal=|iconSizeChanged(QSize)
+$signal=|toolButtonStyleChanged(Qt::ToolButtonStyle)
 $endSignals
 
 #pragma ENDDUMP

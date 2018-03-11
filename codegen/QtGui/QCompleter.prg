@@ -199,12 +199,12 @@ $method=|void|setWrapAround|bool
 
 $beginSignals
 $beginGroup
-$signalMethod=|activated(QString)
-$signalMethod=|activated(QModelIndex)
+$signal=|activated(QString)
+$signal=|activated(QModelIndex)
 $endGroup
 $beginGroup
-$signalMethod=|highlighted(QString)
-$signalMethod=|highlighted(QModelIndex)
+$signal=|highlighted(QString)
+$signal=|highlighted(QModelIndex)
 $endGroup
 $endSignals
 

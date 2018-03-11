@@ -228,12 +228,12 @@ $prototype=static QString getText ( QWidget * parent, const QString & title, con
 $staticMethod=|QString|getText|QWidget *,const QString &,const QString &,QLineEdit::EchoMode=QLineEdit::Normal,const QString &=QString(),bool *=0,Qt::WindowFlags=0
 
 $beginSignals
-$signalMethod=|doubleValueChanged(double)
-$signalMethod=|doubleValueSelected(double)
-$signalMethod=|intValueChanged(int)
-$signalMethod=|intValueSelected(int)
-$signalMethod=|textValueChanged(QString)
-$signalMethod=|textValueSelected(QString)
+$signal=|doubleValueChanged(double)
+$signal=|doubleValueSelected(double)
+$signal=|intValueChanged(int)
+$signal=|intValueSelected(int)
+$signal=|textValueChanged(QString)
+$signal=|textValueSelected(QString)
 $endSignals
 
 #pragma ENDDUMP

@@ -277,9 +277,9 @@ $prototype=void setCurrentIndex ( int index )
 $method=|void|setCurrentIndex|int
 
 $beginSignals
-$signalMethod=|currentChanged(int)
-$signalMethod=|tabCloseRequested(int)
-$signalMethod=|tabMoved(int,int)
+$signal=|currentChanged(int)
+$signal=|tabCloseRequested(int)
+$signal=|tabMoved(int,int)
 $endSignals
 
 #pragma ENDDUMP

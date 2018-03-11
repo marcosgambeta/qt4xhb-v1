@@ -221,8 +221,8 @@ $prototype=void setText ( const QString & )
 $method=|void|setText|const QString
 
 $beginSignals
-$signalMethod=|linkActivated(QString)
-$signalMethod=|linkHovered(QString)
+$signal=|linkActivated(QString)
+$signal=|linkHovered(QString)
 $endSignals
 
 #pragma ENDDUMP

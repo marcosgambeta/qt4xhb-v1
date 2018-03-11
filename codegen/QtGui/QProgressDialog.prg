@@ -153,7 +153,7 @@ $prototype=void setValue ( int progress )
 $method=|void|setValue|int
 
 $beginSignals
-$signalMethod=|canceled()
+$signal=|canceled()
 $endSignals
 
 #pragma ENDDUMP

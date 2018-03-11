@@ -280,7 +280,7 @@ $prototype=static StandardButton warning ( QWidget * parent, const QString & tit
 $staticMethod=|QMessageBox::StandardButton|warning|QWidget *,const QString &,const QString &,QMessageBox::StandardButtons=QMessageBox::Ok,QMessageBox::StandardButton=QMessageBox::NoButton
 
 $beginSignals
-$signalMethod=|buttonClicked(QAbstractButton*)
+$signal=|buttonClicked(QAbstractButton*)
 $endSignals
 
 #pragma ENDDUMP

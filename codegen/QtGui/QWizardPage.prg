@@ -100,7 +100,7 @@ $prototype=virtual bool validatePage ()
 $virtualMethod=|bool|validatePage|
 
 $beginSignals
-$signalMethod=|completeChanged()
+$signal=|completeChanged()
 $endSignals
 
 #pragma ENDDUMP

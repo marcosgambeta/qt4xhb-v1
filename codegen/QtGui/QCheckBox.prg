@@ -78,7 +78,7 @@ $prototype=virtual QSize sizeHint () const
 $virtualMethod=|QSize|sizeHint|
 
 $beginSignals
-$signalMethod=|stateChanged(int)
+$signal=|stateChanged(int)
 $endSignals
 
 #pragma ENDDUMP

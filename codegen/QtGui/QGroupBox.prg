@@ -99,8 +99,8 @@ $prototype=void setChecked ( bool checked )
 $method=|void|setChecked|bool
 
 $beginSignals
-$signalMethod=|clicked(bool)
-$signalMethod=|toggled(bool)
+$signal=|clicked(bool)
+$signal=|toggled(bool)
 $endSignals
 
 #pragma ENDDUMP

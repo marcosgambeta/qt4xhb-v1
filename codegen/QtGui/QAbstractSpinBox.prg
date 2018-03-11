@@ -187,7 +187,7 @@ $prototype=void stepUp ()
 $method=|void|stepUp|
 
 $beginSignals
-$signalMethod=|editingFinished()
+$signal=|editingFinished()
 $endSignals
 
 #pragma ENDDUMP

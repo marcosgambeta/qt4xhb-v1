@@ -66,9 +66,9 @@ $prototype=bool helpEvent ( QHelpEvent * event, QAbstractItemView * view, const 
 $method=|bool|helpEvent|QHelpEvent *,QAbstractItemView *,const QStyleOptionViewItem &,const QModelIndex &
 
 $beginSignals
-$signalMethod=|closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)
-$signalMethod=|commitData(QWidget*)
-$signalMethod=|sizeHintChanged(QModelIndex)
+$signal=|closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)
+$signal=|commitData(QWidget*)
+$signal=|sizeHintChanged(QModelIndex)
 $endSignals
 
 #pragma ENDDUMP

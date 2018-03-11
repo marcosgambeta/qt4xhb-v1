@@ -246,8 +246,8 @@ $prototype=void setCurrentWidget ( QWidget * widget )
 $method=|void|setCurrentWidget|QWidget *
 
 $beginSignals
-$signalMethod=|currentChanged(int)
-$signalMethod=|tabCloseRequested(int)
+$signal=|currentChanged(int)
+$signal=|tabCloseRequested(int)
 $endSignals
 
 #pragma ENDDUMP

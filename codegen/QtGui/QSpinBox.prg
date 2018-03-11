@@ -89,8 +89,8 @@ $method=|void|setValue|int
 
 $beginSignals
 $beginGroup
-$signalMethod=|valueChanged(int)
-$signalMethod=|valueChanged(QString)
+$signal=|valueChanged(int)
+$signal=|valueChanged(QString)
 $endGroup
 $endSignals
 

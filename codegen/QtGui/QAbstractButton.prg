@@ -143,10 +143,10 @@ $prototype=void toggle ()
 $method=|void|toggle|
 
 $beginSignals
-$signalMethod=|clicked(bool)
-$signalMethod=|pressed()
-$signalMethod=|released()
-$signalMethod=|toggled(bool)
+$signal=|clicked(bool)
+$signal=|pressed()
+$signal=|released()
+$signal=|toggled(bool)
 $endSignals
 
 #pragma ENDDUMP

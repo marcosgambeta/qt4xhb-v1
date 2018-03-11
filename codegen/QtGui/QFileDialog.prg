@@ -296,11 +296,11 @@ $prototype=static QString getSaveFileName ( QWidget * parent = 0, const QString 
 $staticMethod=|QString|getSaveFileName|QWidget *=0,const QString &=QString(),const QString &=QString(),const QString &=QString(),QString *=0,QFileDialog::Options=0
 
 $beginSignals
-$signalMethod=|currentChanged(QString)
-$signalMethod=|directoryEntered(QString)
-$signalMethod=|fileSelected(QString)
-$signalMethod=|filesSelected(QStringList)
-$signalMethod=|filterSelected(QString)
+$signal=|currentChanged(QString)
+$signal=|directoryEntered(QString)
+$signal=|fileSelected(QString)
+$signal=|filesSelected(QStringList)
+$signal=|filterSelected(QString)
 $endSignals
 
 #pragma ENDDUMP

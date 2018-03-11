@@ -101,7 +101,7 @@ $prototype=void tile ()
 $method=|void|tile|
 
 $beginSignals
-$signalMethod=|windowActivated(QWidget*)
+$signal=|windowActivated(QWidget*)
 $endSignals
 
 #pragma ENDDUMP

@@ -151,10 +151,10 @@ $prototype=void setCurrentIndex ( const QModelIndex & index, QItemSelectionModel
 $method=|void|setCurrentIndex|const QModelIndex &,QItemSelectionModel::SelectionFlags
 
 $beginSignals
-$signalMethod=|currentChanged(QModelIndex,QModelIndex)
-$signalMethod=|currentColumnChanged(QModelIndex,QModelIndex)
-$signalMethod=|currentRowChanged(QModelIndex,QModelIndex)
-$signalMethod=|selectionChanged(QItemSelection,QItemSelection)
+$signal=|currentChanged(QModelIndex,QModelIndex)
+$signal=|currentColumnChanged(QModelIndex,QModelIndex)
+$signal=|currentRowChanged(QModelIndex,QModelIndex)
+$signal=|selectionChanged(QItemSelection,QItemSelection)
 $endSignals
 
 #pragma ENDDUMP

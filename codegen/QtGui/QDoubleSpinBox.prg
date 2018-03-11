@@ -133,8 +133,8 @@ $method=|void|setValue|double
 
 $beginSignals
 $beginGroup
-$signalMethod=|valueChanged(double)
-$signalMethod=|valueChanged(QString)
+$signal=|valueChanged(double)
+$signal=|valueChanged(QString)
 $endGroup
 $endSignals
 

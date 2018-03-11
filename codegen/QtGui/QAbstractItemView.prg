@@ -325,12 +325,12 @@ $prototype=void update ( const QModelIndex & index )
 $method=|void|update|const QModelIndex &
 
 $beginSignals
-$signalMethod=|activated(QModelIndex)
-$signalMethod=|clicked(QModelIndex)
-$signalMethod=|doubleClicked(QModelIndex)
-$signalMethod=|entered(QModelIndex)
-$signalMethod=|pressed(QModelIndex)
-$signalMethod=|viewportEntered()
+$signal=|activated(QModelIndex)
+$signal=|clicked(QModelIndex)
+$signal=|doubleClicked(QModelIndex)
+$signal=|entered(QModelIndex)
+$signal=|pressed(QModelIndex)
+$signal=|viewportEntered()
 $endSignals
 
 #pragma ENDDUMP

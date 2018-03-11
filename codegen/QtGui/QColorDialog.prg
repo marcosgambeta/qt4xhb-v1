@@ -158,8 +158,8 @@ $prototype=static void setStandardColor ( int index, QRgb color
 $staticMethod=|void|setStandardColor|int,QRgb
 
 $beginSignals
-$signalMethod=|colorSelected(QColor)
-$signalMethod=|currentColorChanged(QColor)
+$signal=|colorSelected(QColor)
+$signal=|currentColorChanged(QColor)
 $endSignals
 
 #pragma ENDDUMP
