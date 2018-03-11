@@ -170,14 +170,14 @@ $prototype=void abort ()
 $method=|void|abort|
 
 $beginSignals
-$signalMethod=|commandFinished(int,bool)
-$signalMethod=|commandStarted(int)
-$signalMethod=|dataTransferProgress(qint64,qint64)
-$signalMethod=|done(bool)
-$signalMethod=|listInfo(QUrlInfo)
-$signalMethod=|rawCommandReply(int,QString)
-$signalMethod=|readyRead()
-$signalMethod=|stateChanged(int)
+$signal=|commandFinished(int,bool)
+$signal=|commandStarted(int)
+$signal=|dataTransferProgress(qint64,qint64)
+$signal=|done(bool)
+$signal=|listInfo(QUrlInfo)
+$signal=|rawCommandReply(int,QString)
+$signal=|readyRead()
+$signal=|stateChanged(int)
 $endSignals
 
 #pragma ENDDUMP

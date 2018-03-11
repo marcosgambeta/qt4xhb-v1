@@ -173,12 +173,12 @@ $prototype=virtual bool waitForReadyRead ( int msecs = 30000 )
 $virtualMethod=|bool|waitForReadyRead|int=30000
 
 $beginSignals
-$signalMethod=|connected()
-$signalMethod=|disconnected()
-$signalMethod=|error(QAbstractSocket::SocketError)
-$signalMethod=|hostFound()
-$signalMethod=|proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)
-$signalMethod=|stateChanged(QAbstractSocket::SocketState)
+$signal=|connected()
+$signal=|disconnected()
+$signal=|error(QAbstractSocket::SocketError)
+$signal=|hostFound()
+$signal=|proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)
+$signal=|stateChanged(QAbstractSocket::SocketState)
 $endSignals
 
 #pragma ENDDUMP

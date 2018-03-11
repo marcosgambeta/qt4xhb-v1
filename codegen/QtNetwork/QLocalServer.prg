@@ -89,7 +89,7 @@ $prototype=static bool removeServer ( const QString & name )
 $staticMethod=|bool|removeServer|const QString &
 
 $beginSignals
-$signalMethod=|newConnection()
+$signal=|newConnection()
 $endSignals
 
 #pragma ENDDUMP

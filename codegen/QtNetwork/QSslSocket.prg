@@ -422,11 +422,11 @@ $prototype=QList<QSslCertificate> systemCaCertificates ()
 $method=|QList<QSslCertificate>|systemCaCertificates|
 
 $beginSignals
-$signalMethod=|encrypted()
-$signalMethod=|encryptedBytesWritten(qint64)
-$signalMethod=|modeChanged(QSslSocket::SslMode)
-$signalMethod=|peerVerifyError(QSslError)
-$signalMethod=|sslErrors(QList<QSslError>)
+$signal=|encrypted()
+$signal=|encryptedBytesWritten(qint64)
+$signal=|modeChanged(QSslSocket::SslMode)
+$signal=|peerVerifyError(QSslError)
+$signal=|sslErrors(QList<QSslError>)
 $endSignals
 
 #pragma ENDDUMP

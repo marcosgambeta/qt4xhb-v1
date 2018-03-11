@@ -170,11 +170,11 @@ $prototype=void setProxyFactory ( QNetworkProxyFactory * factory )
 $method=|void|setProxyFactory|QNetworkProxyFactory *
 
 $beginSignals
-$signalMethod=|authenticationRequired(QNetworkReply*,QAuthenticator*)
-$signalMethod=|finished(QNetworkReply*)
-$signalMethod=|networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)
-$signalMethod=|proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)
-$signalMethod=|sslErrors(QNetworkReply*,QList<QSslError>)
+$signal=|authenticationRequired(QNetworkReply*,QAuthenticator*)
+$signal=|finished(QNetworkReply*)
+$signal=|networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)
+$signal=|proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)
+$signal=|sslErrors(QNetworkReply*,QList<QSslError>)
 $endSignals
 
 #pragma ENDDUMP

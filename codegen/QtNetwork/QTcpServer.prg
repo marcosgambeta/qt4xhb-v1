@@ -104,7 +104,7 @@ $prototype=bool waitForNewConnection ( int msec = 0, bool * timedOut = 0 )
 $method=|bool|waitForNewConnection|int=0,bool *=0
 
 $beginSignals
-$signalMethod=|newConnection()
+$signal=|newConnection()
 $endSignals
 
 #pragma ENDDUMP
