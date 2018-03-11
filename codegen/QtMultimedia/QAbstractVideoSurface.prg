@@ -71,9 +71,9 @@ $prototype=QVideoSurfaceFormat surfaceFormat () const
 $method=|QVideoSurfaceFormat|surfaceFormat|
 
 $beginSignals
-$signalMethod=|activeChanged(bool)
-$signalMethod=|surfaceFormatChanged(QVideoSurfaceFormat)
-$signalMethod=|supportedFormatsChanged()
+$signal=|activeChanged(bool)
+$signal=|surfaceFormatChanged(QVideoSurfaceFormat)
+$signal=|supportedFormatsChanged()
 $endSignals
 
 #pragma ENDDUMP
