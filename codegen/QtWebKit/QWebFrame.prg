@@ -305,15 +305,15 @@ $prototype=void print ( QPrinter * printer ) const
 $method=|void|print|QPrinter *
 
 $beginSignals
-$signalMethod=|contentsSizeChanged(QSize)
-$signalMethod=|iconChanged()
-$signalMethod=|initialLayoutCompleted()
-$signalMethod=|javaScriptWindowObjectCleared()
-$signalMethod=|loadFinished(bool)
-$signalMethod=|loadStarted()
-$signalMethod=|pageChanged()
-$signalMethod=|titleChanged(QString)
-$signalMethod=|urlChanged(QUrl)
+$signal=|contentsSizeChanged(QSize)
+$signal=|iconChanged()
+$signal=|initialLayoutCompleted()
+$signal=|javaScriptWindowObjectCleared()
+$signal=|loadFinished(bool)
+$signal=|loadStarted()
+$signal=|pageChanged()
+$signal=|titleChanged(QString)
+$signal=|urlChanged(QUrl)
 $endSignals
 
 #pragma ENDDUMP
