@@ -145,8 +145,8 @@ $prototype=static QDeclarativeComponentAttached *qmlAttachedProperties(QObject *
 %% $staticMethod=|QDeclarativeComponentAttached *|qmlAttachedProperties|QObject *
 
 $beginSignals
-$signalMethod=|progressChanged(qreal)
-$signalMethod=|statusChanged(QDeclarativeComponent::Status)
+$signal=|progressChanged(qreal)
+$signal=|statusChanged(QDeclarativeComponent::Status)
 $endSignals
 
 #pragma ENDDUMP

@@ -144,8 +144,8 @@ $prototype=static void setObjectOwnership ( QObject * object, ObjectOwnership ow
 $staticMethod=|void|setObjectOwnership|QObject *,QDeclarativeEngine::ObjectOwnership
 
 $beginSignals
-$signalMethod=|quit()
-$signalMethod=|warnings(QList<QDeclarativeError>)
+$signal=|quit()
+$signal=|warnings(QList<QDeclarativeError>)
 $endSignals
 
 #pragma ENDDUMP
