@@ -136,7 +136,7 @@ $prototype=bool unsubscribeFromNotification ( const QString & name )
 $method=|bool|unsubscribeFromNotification|const QString &
 
 $beginSignals
-$signalMethod=|notification(QString)
+$signal=|notification(QString)
 $endSignals
 
 #pragma ENDDUMP

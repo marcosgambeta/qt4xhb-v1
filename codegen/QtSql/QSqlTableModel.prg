@@ -158,10 +158,10 @@ $prototype=bool submitAll ()
 $method=|bool|submitAll|
 
 $beginSignals
-$signalMethod=|beforeDelete(int)
-$signalMethod=|beforeInsert(QSqlRecord)
-$signalMethod=|beforeUpdate(int,QSqlRecord)
-$signalMethod=|primeInsert(int,QSqlRecord)
+$signal=|beforeDelete(int)
+$signal=|beforeInsert(QSqlRecord)
+$signal=|beforeUpdate(int,QSqlRecord)
+$signal=|primeInsert(int,QSqlRecord)
 $endSignals
 
 #pragma ENDDUMP
