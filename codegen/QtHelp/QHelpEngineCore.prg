@@ -163,11 +163,11 @@ $staticMethod=|QVariant|metaData|const QString &,const QString &
 $prototype=static QString namespaceName ( const QString & documentationFileName )
 $staticMethod=|QString|namespaceName|const QString &
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|currentFilterChanged(QString)
 $signalMethod=|setupFinished()
 $signalMethod=|setupStarted()
 $signalMethod=|warning(QString)
+$endSignals
 
 #pragma ENDDUMP
