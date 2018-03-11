@@ -17,9 +17,6 @@ CLASS QWindowsMime
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD delete
-   METHOD registerMimeType
-
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
@@ -44,37 +41,9 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC_STATIC( QWINDOWSMIME_DELETE )
-{
-  QWindowsMime * obj = (QWindowsMime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 /*
 static int registerMimeType ( const QString & mime )
 */
-HB_FUNC_STATIC( QWINDOWSMIME_REGISTERMIMETYPE )
-{
-    if( ISNUMPAR(1) && ISCHAR(1) )
-  {
-      RINT( QWindowsMime::registerMimeType ( PQSTRING(1) ) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
 
 HB_FUNC_STATIC( QWINDOWSMIME_NEWFROM )
 {

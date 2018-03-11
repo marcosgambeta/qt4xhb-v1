@@ -6,6 +6,8 @@
 
 $header
 
+%% TODO: check compilation for Linux
+
 #include "hbclass.ch"
 
 CLASS QWindowsMime
@@ -13,8 +15,8 @@ CLASS QWindowsMime
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD delete
-   METHOD registerMimeType
+%%   METHOD delete
+%%   METHOD registerMimeType
 
    METHOD newFrom
    METHOD newFromObject
@@ -32,10 +34,10 @@ $destructor
 
 $includes
 
-$deleteMethod
+%% $deleteMethod
 
 $prototype=static int registerMimeType ( const QString & mime )
-$staticMethod=|int|registerMimeType|const QString &
+%% $staticMethod=|int|registerMimeType|const QString &
 
 $extraMethods
 
