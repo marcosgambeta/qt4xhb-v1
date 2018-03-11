@@ -304,8 +304,7 @@ $method=|QVariant|evaluateJavaScript|const QString &
 $prototype=void print ( QPrinter * printer ) const
 $method=|void|print|QPrinter *
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|contentsSizeChanged(QSize)
 $signalMethod=|iconChanged()
 $signalMethod=|initialLayoutCompleted()
@@ -315,5 +314,6 @@ $signalMethod=|loadStarted()
 $signalMethod=|pageChanged()
 $signalMethod=|titleChanged(QString)
 $signalMethod=|urlChanged(QUrl)
+$endSignals
 
 #pragma ENDDUMP

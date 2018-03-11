@@ -236,8 +236,7 @@ $virtualMethod=|bool|event|QEvent *
 $prototype=bool shouldInterruptJavaScript ()
 $method=|bool|shouldInterruptJavaScript|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|contentsChanged()
 $signalMethod=|databaseQuotaExceeded(QWebFrame*,QString)
 $signalMethod=|downloadRequested(QNetworkRequest)
@@ -261,5 +260,6 @@ $signalMethod=|statusBarVisibilityChangeRequested(bool)
 $signalMethod=|toolBarVisibilityChangeRequested(bool)
 $signalMethod=|unsupportedContent(QNetworkReply*)
 $signalMethod=|windowCloseRequested()
+$endSignals
 
 #pragma ENDDUMP
