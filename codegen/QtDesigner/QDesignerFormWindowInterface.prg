@@ -250,8 +250,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW )
   }
 }
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|aboutToUnmanageWidget(QWidget*)
 $signalMethod=|activated(QWidget*)
 $signalMethod=|changed()
@@ -265,5 +264,6 @@ $signalMethod=|selectionChanged()
 $signalMethod=|widgetManaged(QWidget*)
 $signalMethod=|widgetRemoved(QWidget*)
 $signalMethod=|widgetUnmanaged(QWidget*)
+$endSignals
 
 #pragma ENDDUMP
