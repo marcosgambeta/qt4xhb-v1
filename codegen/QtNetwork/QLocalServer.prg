@@ -88,8 +88,8 @@ $method=|bool|waitForNewConnection|int=0,bool *=0
 $prototype=static bool removeServer ( const QString & name )
 $staticMethod=|bool|removeServer|const QString &
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|newConnection()
+$endSignals
 
 #pragma ENDDUMP

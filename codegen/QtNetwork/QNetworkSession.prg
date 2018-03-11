@@ -117,13 +117,13 @@ $method=|void|reject|
 $prototype=void stop ()
 $method=|void|stop|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|closed()
 $signalMethod=|error(QNetworkSession::SessionError)
 $signalMethod=|newConfigurationActivated()
 $signalMethod=|opened()
 $signalMethod=|preferredConfigurationChanged(QNetworkConfiguration,bool)
 $signalMethod=|stateChanged(QNetworkSession::State)
+$endSignals
 
 #pragma ENDDUMP

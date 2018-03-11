@@ -103,8 +103,8 @@ $method=|int|socketDescriptor|
 $prototype=bool waitForNewConnection ( int msec = 0, bool * timedOut = 0 )
 $method=|bool|waitForNewConnection|int=0,bool *=0
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|newConnection()
+$endSignals
 
 #pragma ENDDUMP

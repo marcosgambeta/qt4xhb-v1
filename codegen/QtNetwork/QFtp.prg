@@ -169,8 +169,7 @@ $method=|QFtp::State|state|
 $prototype=void abort ()
 $method=|void|abort|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|commandFinished(int,bool)
 $signalMethod=|commandStarted(int)
 $signalMethod=|dataTransferProgress(qint64,qint64)
@@ -179,5 +178,6 @@ $signalMethod=|listInfo(QUrlInfo)
 $signalMethod=|rawCommandReply(int,QString)
 $signalMethod=|readyRead()
 $signalMethod=|stateChanged(int)
+$endSignals
 
 #pragma ENDDUMP
