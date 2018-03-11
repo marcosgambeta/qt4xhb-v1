@@ -275,13 +275,13 @@ HB_FUNC_STATIC( QPROCESS_STARTDETACHED )
 $prototype=static QStringList systemEnvironment ()
 $staticMethod=|QStringList|systemEnvironment|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|error(QProcess::ProcessError)
 $signalMethod=|finished(int,QProcess::ExitStatus)
 $signalMethod=|readyReadStandardError()
 $signalMethod=|readyReadStandardOutput()
 $signalMethod=|started()
 $signalMethod=|stateChanged(QProcess::ProcessState)
+$endSignals
 
 #pragma ENDDUMP

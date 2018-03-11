@@ -101,9 +101,9 @@ $virtualMethod=|void|wakeUp|
 $prototype=static QAbstractEventDispatcher * instance ( QThread * thread = 0 )
 $staticMethod=|QAbstractEventDispatcher *|instance|QThread *=0
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|aboutToBlock()
 $signalMethod=|awake()
+$endSignals
 
 #pragma ENDDUMP

@@ -46,8 +46,8 @@ $method=|bool|isEnabled|
 $prototype=void setEnabled(bool)
 $method=|void|setEnabled|bool
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|activated(int)
+$endSignals
 
 #pragma ENDDUMP

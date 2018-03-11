@@ -91,9 +91,9 @@ $staticMethod=|int|idealThreadCount|
 $prototype=void yieldCurrentThread()
 $method=|void|yieldCurrentThread|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|finished()
 $signalMethod=|started()
+$endSignals
 
 #pragma ENDDUMP
