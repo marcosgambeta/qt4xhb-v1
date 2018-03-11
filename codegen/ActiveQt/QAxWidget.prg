@@ -192,10 +192,10 @@ $virtualMethod=|void|setPropertyWritable|const char *,bool
 $prototype=QStringList verbs () const
 $method=|QStringList|verbs|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|exception(int,QString,QString,QString)
 $signalMethod=|propertyChanged(QString)
 $signalMethod=|signal(QString,int,void*)
+$endSignals
 
 #pragma ENDDUMP

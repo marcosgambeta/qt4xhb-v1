@@ -135,8 +135,8 @@ $staticMethod=|bool|registerEngine|const QString &,const QString &,const QString
 $prototype=static QString scriptFileFilter ()
 $staticMethod=|QString|scriptFileFilter|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|error(QAxScript*,int,QString,int,QString)
+$endSignals
 
 #pragma ENDDUMP
