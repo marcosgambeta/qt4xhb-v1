@@ -6,6 +6,8 @@
 
 $header
 
+%% TODO: WId in others OS's
+
 #include "hbclass.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
@@ -364,15 +366,7 @@ $prototype=QCursor cursor () const
 $method=|QCursor|cursor|
 
 $prototype=WId effectiveWinId () const
-HB_FUNC_STATIC( QWIDGET_EFFECTIVEWINID )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    WId r = obj->effectiveWinId ();
-    hb_retptr( r );
-  }
-}
+$method=|WId|effectiveWinId||#ifdef Q_OS_WIN
 
 $prototype=void ensurePolished () const
 $method=|void|ensurePolished|
@@ -1247,15 +1241,7 @@ $prototype=int width () const
 $method=|int|width|
 
 $prototype=WId winId () const
-HB_FUNC_STATIC( QWIDGET_WINID )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    WId r = obj->winId ();
-    hb_retptr( r );
-  }
-}
+$method=|WId|winId||#ifdef Q_OS_WIN
 
 $prototype=QWidget * window () const
 $method=|QWidget *|window|
@@ -1386,12 +1372,7 @@ $method=|int|widthMM|
 //=============================================================================
 
 $prototype=static QWidget * find ( WId id )
-HB_FUNC_STATIC( QWIDGET_FIND )
-{
-  WId par1 = (WId) hb_parptr(1);
-  QWidget * ptr = QWidget::find ( par1 );
-  _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-}
+$staticMethod=|QWidget *|find|WId|#ifdef Q_OS_WIN
 
 $prototype=static QWidget * keyboardGrabber ()
 $staticMethod=|QWidget *|keyboardGrabber|

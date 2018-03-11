@@ -804,12 +804,21 @@ WId effectiveWinId () const
 */
 HB_FUNC_STATIC( QWIDGET_EFFECTIVEWINID )
 {
+#ifdef Q_OS_WIN
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    WId r = obj->effectiveWinId ();
-    hb_retptr( r );
+    if( ISNUMPAR(0) )
+    {
+      hb_retptr( (void *) obj->effectiveWinId () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+#endif
 }
 
 /*
@@ -4570,12 +4579,21 @@ WId winId () const
 */
 HB_FUNC_STATIC( QWIDGET_WINID )
 {
+#ifdef Q_OS_WIN
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    WId r = obj->winId ();
-    hb_retptr( r );
+    if( ISNUMPAR(0) )
+    {
+      hb_retptr( (void *) obj->winId () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+#endif
 }
 
 /*
@@ -5424,9 +5442,17 @@ static QWidget * find ( WId id )
 */
 HB_FUNC_STATIC( QWIDGET_FIND )
 {
-  WId par1 = (WId) hb_parptr(1);
-  QWidget * ptr = QWidget::find ( par1 );
-  _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+#ifdef Q_OS_WIN
+    if( ISNUMPAR(1) && ISPOINTER(1) )
+  {
+      QWidget * ptr = QWidget::find ( (WId) hb_parptr(1) );
+      _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
 }
 
 /*
@@ -5484,6 +5510,5 @@ HB_FUNC_STATIC( QWIDGET_ONCUSTOMCONTEXTMENUREQUESTED )
 {
   QWidgetSlots_connect_signal( "customContextMenuRequested(QPoint)", "customContextMenuRequested(QPoint)" );
 }
-
 
 #pragma ENDDUMP
