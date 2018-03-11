@@ -136,7 +136,7 @@ $prototype=static QString scriptFileFilter ()
 $staticMethod=|QString|scriptFileFilter|
 
 $beginSignals
-$signalMethod=|error(QAxScript*,int,QString,int,QString)
+$signal=|error(QAxScript*,int,QString,int,QString)
 $endSignals
 
 #pragma ENDDUMP
