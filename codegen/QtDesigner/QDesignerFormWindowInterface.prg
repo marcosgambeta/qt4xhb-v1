@@ -251,19 +251,19 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW )
 }
 
 $beginSignals
-$signalMethod=|aboutToUnmanageWidget(QWidget*)
-$signalMethod=|activated(QWidget*)
-$signalMethod=|changed()
-$signalMethod=|featureChanged(QDesignerFormWindowInterface::Feature)
-$signalMethod=|fileNameChanged(QString)
-$signalMethod=|geometryChanged()
-$signalMethod=|mainContainerChanged(QWidget*)
-$signalMethod=|objectRemoved(QObject*)
-$signalMethod=|resourceFilesChanged()
-$signalMethod=|selectionChanged()
-$signalMethod=|widgetManaged(QWidget*)
-$signalMethod=|widgetRemoved(QWidget*)
-$signalMethod=|widgetUnmanaged(QWidget*)
+$signal=|aboutToUnmanageWidget(QWidget*)
+$signal=|activated(QWidget*)
+$signal=|changed()
+$signal=|featureChanged(QDesignerFormWindowInterface::Feature)
+$signal=|fileNameChanged(QString)
+$signal=|geometryChanged()
+$signal=|mainContainerChanged(QWidget*)
+$signal=|objectRemoved(QObject*)
+$signal=|resourceFilesChanged()
+$signal=|selectionChanged()
+$signal=|widgetManaged(QWidget*)
+$signal=|widgetRemoved(QWidget*)
+$signal=|widgetUnmanaged(QWidget*)
 $endSignals
 
 #pragma ENDDUMP
