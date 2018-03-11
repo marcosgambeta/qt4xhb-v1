@@ -435,8 +435,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_UNDO )
   }
 }
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|blockCountChanged(int)
 $signalMethod=|contentsChange(int,int,int)
 $signalMethod=|contentsChanged()
@@ -446,5 +445,6 @@ $signalMethod=|modificationChanged(bool)
 $signalMethod=|redoAvailable(bool)
 $signalMethod=|undoAvailable(bool)
 $signalMethod=|undoCommandAdded()
+$endSignals
 
 #pragma ENDDUMP

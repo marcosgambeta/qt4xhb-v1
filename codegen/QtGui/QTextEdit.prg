@@ -431,8 +431,7 @@ $method=|void|zoomIn|int=1
 $prototype=void zoomOut ( int range = 1 )
 $method=|void|zoomOut|int=1
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|copyAvailable(bool)
 $signalMethod=|currentCharFormatChanged(QTextCharFormat)
 $signalMethod=|cursorPositionChanged()
@@ -440,5 +439,6 @@ $signalMethod=|redoAvailable(bool)
 $signalMethod=|selectionChanged()
 $signalMethod=|textChanged()
 $signalMethod=|undoAvailable(bool)
+$endSignals
 
 #pragma ENDDUMP

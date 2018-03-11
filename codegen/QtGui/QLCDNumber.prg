@@ -176,8 +176,8 @@ $method=|void|setOctMode|
 $prototype=void setSmallDecimalPoint ( bool )
 $method=|void|setSmallDecimalPoint|bool
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|overflow()
+$endSignals
 
 #pragma ENDDUMP

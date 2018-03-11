@@ -319,8 +319,7 @@ $method=|void|removeRow|int
 $prototype=void scrollToItem ( const QTableWidgetItem * item, QAbstractItemView::ScrollHint hint = EnsureVisible )
 $method=|void|scrollToItem|const QTableWidgetItem *,QAbstractItemView::ScrollHint=QAbstractItemView::EnsureVisible
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|cellActivated(int,int)
 $signalMethod=|cellChanged(int,int)
 $signalMethod=|cellClicked(int,int)
@@ -336,5 +335,6 @@ $signalMethod=|itemDoubleClicked(QTableWidgetItem*)
 $signalMethod=|itemEntered(QTableWidgetItem*)
 $signalMethod=|itemPressed(QTableWidgetItem*)
 $signalMethod=|itemSelectionChanged()
+$endSignals
 
 #pragma ENDDUMP

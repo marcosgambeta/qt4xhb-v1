@@ -276,10 +276,10 @@ $virtualMethod=|QSize|sizeHint|
 $prototype=void setCurrentIndex ( int index )
 $method=|void|setCurrentIndex|int
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|currentChanged(int)
 $signalMethod=|tabCloseRequested(int)
 $signalMethod=|tabMoved(int,int)
+$endSignals
 
 #pragma ENDDUMP

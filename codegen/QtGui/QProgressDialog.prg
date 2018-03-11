@@ -152,8 +152,8 @@ $method=|void|setRange|int,int
 $prototype=void setValue ( int progress )
 $method=|void|setValue|int
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|canceled()
+$endSignals
 
 #pragma ENDDUMP

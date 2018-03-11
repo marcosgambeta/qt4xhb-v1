@@ -321,8 +321,7 @@ $method=|void|setPlainText|const QString &
 $prototype=void undo ()
 $method=|void|undo|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|blockCountChanged(int)
 $signalMethod=|copyAvailable(bool)
 $signalMethod=|cursorPositionChanged()
@@ -332,5 +331,6 @@ $signalMethod=|selectionChanged()
 $signalMethod=|textChanged()
 $signalMethod=|undoAvailable(bool)
 $signalMethod=|updateRequest(QRect,int)
+$endSignals
 
 #pragma ENDDUMP

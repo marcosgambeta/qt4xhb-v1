@@ -99,8 +99,8 @@ $method=|QString|title|
 $prototype=virtual bool validatePage ()
 $virtualMethod=|bool|validatePage|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|completeChanged()
+$endSignals
 
 #pragma ENDDUMP

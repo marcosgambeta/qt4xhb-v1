@@ -267,8 +267,7 @@ $method=|void|clear|
 $prototype=void scrollToItem ( const QListWidgetItem * item, QAbstractItemView::ScrollHint hint = EnsureVisible )
 $method=|void|scrollToItem|const QListWidgetItem *,QAbstractItemView::ScrollHint=QAbstractItemView::EnsureVisible
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|currentItemChanged(QListWidgetItem*,QListWidgetItem*)
 $signalMethod=|currentRowChanged(int)
 $signalMethod=|currentTextChanged(QString)
@@ -279,5 +278,6 @@ $signalMethod=|itemDoubleClicked(QListWidgetItem*)
 $signalMethod=|itemEntered(QListWidgetItem*)
 $signalMethod=|itemPressed(QListWidgetItem*)
 $signalMethod=|itemSelectionChanged()
+$endSignals
 
 #pragma ENDDUMP

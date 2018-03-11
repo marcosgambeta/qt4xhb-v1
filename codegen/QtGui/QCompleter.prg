@@ -197,8 +197,7 @@ $method=|void|setCompletionPrefix|const QString &
 $prototype=void setWrapAround ( bool wrap )
 $method=|void|setWrapAround|bool
 
-$connectSignalFunction
-
+$beginSignals
 $beginGroup
 $signalMethod=|activated(QString)
 $signalMethod=|activated(QModelIndex)
@@ -207,5 +206,6 @@ $beginGroup
 $signalMethod=|highlighted(QString)
 $signalMethod=|highlighted(QModelIndex)
 $endGroup
+$endSignals
 
 #pragma ENDDUMP

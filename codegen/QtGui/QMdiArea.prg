@@ -150,8 +150,8 @@ $method=|void|setActiveSubWindow|QMdiSubWindow *
 $prototype=void tileSubWindows ()
 $method=|void|tileSubWindows|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|subWindowActivated(QMdiSubWindow*)
+$endSignals
 
 #pragma ENDDUMP

@@ -125,11 +125,11 @@ HB_FUNC_STATIC( QCLIPBOARD_TEXT )
   }
 }
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|changed(QClipboard::Mode)
 $signalMethod=|dataChanged()
 $signalMethod=|findBufferChanged()
 $signalMethod=|selectionChanged()
+$endSignals
 
 #pragma ENDDUMP

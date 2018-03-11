@@ -321,8 +321,7 @@ $method=|void|setOffsetToLastSection|
 $prototype=void setOffsetToSectionPosition ( int visualIndex )
 $method=|void|setOffsetToSectionPosition|int
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|geometriesChanged()
 $signalMethod=|sectionAutoResize(int,QHeaderView::ResizeMode)
 $signalMethod=|sectionClicked(int)
@@ -334,5 +333,6 @@ $signalMethod=|sectionMoved(int,int,int)
 $signalMethod=|sectionPressed(int)
 $signalMethod=|sectionResized(int,int,int)
 $signalMethod=|sortIndicatorChanged(int,Qt::SortOrder)
+$endSignals
 
 #pragma ENDDUMP

@@ -87,11 +87,11 @@ $method=|int|value|
 $prototype=void setValue ( int val )
 $method=|void|setValue|int
 
-$connectSignalFunction
-
+$beginSignals
 $beginGroup
 $signalMethod=|valueChanged(int)
 $signalMethod=|valueChanged(QString)
 $endGroup
+$endSignals
 
 #pragma ENDDUMP

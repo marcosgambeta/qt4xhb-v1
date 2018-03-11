@@ -65,10 +65,10 @@ $virtualMethod=|void|updateEditorGeometry|QWidget *,const QStyleOptionViewItem &
 $prototype=bool helpEvent ( QHelpEvent * event, QAbstractItemView * view, const QStyleOptionViewItem & option, const QModelIndex & index )
 $method=|bool|helpEvent|QHelpEvent *,QAbstractItemView *,const QStyleOptionViewItem &,const QModelIndex &
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)
 $signalMethod=|commitData(QWidget*)
 $signalMethod=|sizeHintChanged(QModelIndex)
+$endSignals
 
 #pragma ENDDUMP

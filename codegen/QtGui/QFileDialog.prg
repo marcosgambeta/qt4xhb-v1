@@ -295,12 +295,12 @@ $staticMethod=|QStringList|getOpenFileNames|QWidget *=0,const QString &=QString(
 $prototype=static QString getSaveFileName ( QWidget * parent = 0, const QString & caption = QString(), const QString & dir = QString(), const QString & filter = QString(), QString * selectedFilter = 0, Options options = 0 )
 $staticMethod=|QString|getSaveFileName|QWidget *=0,const QString &=QString(),const QString &=QString(),const QString &=QString(),QString *=0,QFileDialog::Options=0
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|currentChanged(QString)
 $signalMethod=|directoryEntered(QString)
 $signalMethod=|fileSelected(QString)
 $signalMethod=|filesSelected(QStringList)
 $signalMethod=|filterSelected(QString)
+$endSignals
 
 #pragma ENDDUMP

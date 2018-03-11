@@ -275,9 +275,9 @@ $method=|void|setAnimated|bool
 $prototype=void setDockNestingEnabled ( bool enabled ) const
 $method=|void|setDockNestingEnabled|bool
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|iconSizeChanged(QSize)
 $signalMethod=|toolButtonStyleChanged(Qt::ToolButtonStyle)
+$endSignals
 
 #pragma ENDDUMP

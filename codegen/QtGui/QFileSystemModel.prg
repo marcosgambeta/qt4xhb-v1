@@ -253,10 +253,10 @@ $virtualMethod=|void|sort|int,Qt::SortOrder=Qt::AscendingOrder
 $prototype=virtual Qt::DropActions supportedDropActions () const
 $virtualMethod=|Qt::DropActions|supportedDropActions|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|directoryLoaded(QString)
 $signalMethod=|fileRenamed(QString,QString,QString)
 $signalMethod=|rootPathChanged(QString)
+$endSignals
 
 #pragma ENDDUMP

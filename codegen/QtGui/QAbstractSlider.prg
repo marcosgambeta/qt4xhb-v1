@@ -127,13 +127,13 @@ $method=|void|setOrientation|Qt::Orientation
 $prototype=void setValue ( int )
 $method=|void|setValue|int
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|actionTriggered(int)
 $signalMethod=|rangeChanged(int,int)
 $signalMethod=|sliderMoved(int)
 $signalMethod=|sliderPressed()
 $signalMethod=|sliderReleased()
 $signalMethod=|valueChanged(int)
+$endSignals
 
 #pragma ENDDUMP
