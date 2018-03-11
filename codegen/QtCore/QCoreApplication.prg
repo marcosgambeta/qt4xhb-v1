@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE )
 }
 
 $beginSignals
-$signalMethod=|aboutToQuit()
+$signal=|aboutToQuit()
 $endSignals
 
 #pragma ENDDUMP

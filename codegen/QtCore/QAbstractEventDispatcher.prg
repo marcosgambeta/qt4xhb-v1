@@ -102,8 +102,8 @@ $prototype=static QAbstractEventDispatcher * instance ( QThread * thread = 0 )
 $staticMethod=|QAbstractEventDispatcher *|instance|QThread *=0
 
 $beginSignals
-$signalMethod=|aboutToBlock()
-$signalMethod=|awake()
+$signal=|aboutToBlock()
+$signal=|awake()
 $endSignals
 
 #pragma ENDDUMP

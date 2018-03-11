@@ -104,16 +104,16 @@ $prototype=void togglePaused()
 $method=|void|togglePaused|
 
 $beginSignals
-$signalMethod=|started()
-$signalMethod=|finished()
-$signalMethod=|canceled()
-$signalMethod=|paused()
-$signalMethod=|resumed()
-$signalMethod=|resultReadyAt(int)
-$signalMethod=|resultsReadyAt(int,int)
-$signalMethod=|progressRangeChanged(int,int)
-$signalMethod=|progressValueChanged(int)
-$signalMethod=|progressTextChanged(QString)
+$signal=|started()
+$signal=|finished()
+$signal=|canceled()
+$signal=|paused()
+$signal=|resumed()
+$signal=|resultReadyAt(int)
+$signal=|resultsReadyAt(int,int)
+$signal=|progressRangeChanged(int,int)
+$signal=|progressValueChanged(int)
+$signal=|progressTextChanged(QString)
 $endSignals
 
 #pragma ENDDUMP

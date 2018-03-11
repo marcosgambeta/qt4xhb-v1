@@ -47,7 +47,7 @@ $prototype=void setEnabled(bool)
 $method=|void|setEnabled|bool
 
 $beginSignals
-$signalMethod=|activated(int)
+$signal=|activated(int)
 $endSignals
 
 #pragma ENDDUMP

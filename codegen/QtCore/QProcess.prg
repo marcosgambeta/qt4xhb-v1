@@ -276,12 +276,12 @@ $prototype=static QStringList systemEnvironment ()
 $staticMethod=|QStringList|systemEnvironment|
 
 $beginSignals
-$signalMethod=|error(QProcess::ProcessError)
-$signalMethod=|finished(int,QProcess::ExitStatus)
-$signalMethod=|readyReadStandardError()
-$signalMethod=|readyReadStandardOutput()
-$signalMethod=|started()
-$signalMethod=|stateChanged(QProcess::ProcessState)
+$signal=|error(QProcess::ProcessError)
+$signal=|finished(int,QProcess::ExitStatus)
+$signal=|readyReadStandardError()
+$signal=|readyReadStandardOutput()
+$signal=|started()
+$signal=|stateChanged(QProcess::ProcessState)
 $endSignals
 
 #pragma ENDDUMP
