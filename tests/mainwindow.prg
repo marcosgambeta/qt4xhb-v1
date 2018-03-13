@@ -211,7 +211,7 @@ RETURN self
 
 METHOD defineEvents () CLASS HMainWindow
 
-   ::onCloseEvent({|w,e|::CloseMainWindow(w,e)})
+   ::onCloseEvent({|oSender,oEvent|::CloseMainWindow(oSender,oEvent)})
 
 RETURN self
 
@@ -220,11 +220,10 @@ RETURN self
  realmente sair do programa
 */
 
-METHOD closeMainWindow (w,e) CLASS HMainWindow
+METHOD closeMainWindow (oSender,oCloseEvent) CLASS HMainWindow
 
    LOCAL oMB
    LOCAL nRet
-   LOCAL oEvent := QEvent():newfrom(e)
 
    oMB := QMessageBox():new(QMessageBox_Question,;
                             "Atenção",;
@@ -238,11 +237,11 @@ METHOD closeMainWindow (w,e) CLASS HMainWindow
    oMB:delete()
 
    IF nRet == QMessageBox_Yes
-      oEvent:accept()
+      oCloseEvent:accept()
    endif
 
    IF nRet == QMessageBox_No
-      oEvent:ignore()
+      oCloseEvent:ignore()
    endif
 
 RETURN .T.
