@@ -1,3 +1,7 @@
+int                                              |integer
+uint                                             |integer
+short                                            |integer
+ushort                                           |integer
 Q3Accel                                          |QObject
 Q3Action                                         |QObject
 Q3ActionGroup                                    |QObject
@@ -66,22 +70,22 @@ Q3VBoxLayout                                     |QObject
 Q3WhatsThis                                      |QObject
 Q3WidgetStack                                    |QObject
 Q3Wizard                                         |QObject
-QAbstractAnimation                               |QObject
+QAbstractAnimation                               |QObject|QtCore
 QAbstractAnimation::DeletionPolicy               |enum
 QAbstractAnimation::Direction                    |enum
 QAbstractAnimation::State                        |enum
 QAbstractButton                                  |QObject
-QAbstractEventDispatcher                         |QObject
+QAbstractEventDispatcher                         |QObject|QtCore
 QAbstractExtensionFactory                        |object
 QAbstractExtensionManager                        |object
-QAbstractFileEngine                              |object
+QAbstractFileEngine                              |object |QtCore
 QAbstractFileEngine::Extension                   |enum
 QAbstractFileEngine::FileFlags                   |enum
 QAbstractFileEngine::FileName                    |enum
 QAbstractFileEngine::FileOwner                   |enum
 QAbstractFileEngine::FileTime                    |enum
-QAbstractFileEngineHandler                       |object
-QAbstractFileEngineIterator                      |object
+QAbstractFileEngineHandler                       |object |QtCore
+QAbstractFileEngineIterator                      |object |QtCore
 QAbstractFontEngine                              |QObject
 QAbstractFontEngine::Capabilities                |enum
 QAbstractFontEngine::FontProperty                |enum
@@ -90,7 +94,7 @@ QAbstractFormBuilder                             |object
 QAbstractGraphicsShapeItem                       |object
 QAbstractItemDelegate                            |QObject
 QAbstractItemDelegate::EndEditHint               |enum
-QAbstractItemModel                               |QObject
+QAbstractItemModel                               |QObject|QtCore
 QAbstractItemView                                |QObject
 QAbstractItemView::DragDropMode                  |enum
 QAbstractItemView::EditTriggers                  |enum
@@ -98,7 +102,7 @@ QAbstractItemView::ScrollHint                    |enum
 QAbstractItemView::ScrollMode                    |enum
 QAbstractItemView::SelectionBehavior             |enum
 QAbstractItemView::SelectionMode                 |enum
-QAbstractListModel                               |QObject
+QAbstractListModel                               |QObject|QtCore
 QAbstractMessageHandler                          |QObject
 QAbstractNetworkCache                            |QObject
 QAbstractPrintDialog                             |QObject
@@ -117,10 +121,10 @@ QAbstractSpinBox                                 |QObject
 QAbstractSpinBox::ButtonSymbols                  |enum
 QAbstractSpinBox::CorrectionMode                 |enum
 QAbstractSpinBox::StepEnabled                    |enum
-QAbstractState                                   |QObject
-QAbstractTableModel                              |QObject
+QAbstractState                                   |QObject|QtCore
+QAbstractTableModel                              |QObject|QtCore
 QAbstractTextDocumentLayout                      |QObject
-QAbstractTransition                              |QObject
+QAbstractTransition                              |QObject|QtCore
 QAbstractUriResolver                             |QObject
 QAbstractVideoBuffer                             |object
 QAbstractVideoBuffer::HandleType                 |enum
@@ -153,10 +157,10 @@ QAction::Priority                                |enum
 QAction::SoftKeyRole                             |enum
 QActionEvent                                     |QEvent
 QActionGroup                                     |QObject
-QAnimationGroup                                  |QObject
+QAnimationGroup                                  |QObject|QtCore
 QApplication                                     |QObject
 QApplication::Type                               |enum
-QAtomicInt                                       |object
+QAtomicInt                                       |object |QtCore
 QAudio::Error                                    |enum
 QAudio::Mode                                     |enum
 QAudio::State                                    |enum
@@ -179,24 +183,24 @@ QAxScriptEngine                                  |QObject
 QAxScriptEngine::State                           |enum
 QAxScriptManager                                 |QObject
 QAxWidget                                        |QObject
-QBasicAtomicInt                                  |
-QBasicTimer                                      |object
-QBitArray                                        |object
+QBasicAtomicInt                                  |       |QtCore
+QBasicTimer                                      |object |QtCore
+QBitArray                                        |object |QtCore
 QBitmap                                          |object
 QBoxLayout                                       |QObject
 QBoxLayout::Direction                            |enum
 QBrush                                           |object
-QBuffer                                          |QObject
+QBuffer                                          |QObject|QtCore
 QBuffer::OpenMode                                |enum
 QButtonGroup                                     |QObject
-QByteArray                                       |object
-QByteArrayMatcher                                |object
+QByteArray                                       |object |QtCore
+QByteArrayMatcher                                |object |QtCore
 QCalendarWidget                                  |QObject
 QCalendarWidget::HorizontalHeaderFormat          |enum
 QCalendarWidget::SelectionMode                   |enum
 QCalendarWidget::VerticalHeaderFormat            |enum
 QCDEStyle                                        |QObject
-QChar                                            |object
+QChar                                            |object |QtCore
 QChar::Category                                  |enum
 QChar::Decomposition                             |enum
 QChar::Direction                                 |enum
@@ -204,7 +208,7 @@ QChar::Joining                                   |enum
 QChar::SpecialCharacter                          |enum
 QChar::UnicodeVersion                            |enum
 QCheckBox                                        |QObject
-QChildEvent                                      |QEvent
+QChildEvent                                      |QEvent |QtCore
 QCleanlooksStyle                                 |QObject
 QClipboard                                       |QObject
 QClipboard::Mode                                 |enum
@@ -232,21 +236,21 @@ QConicalGradient                                 |object
 QContextMenuEvent                                |QEvent
 QContextMenuEvent::Reason                        |enum
 QCopChannel                                      |QObject
-QCoreApplication                                 |QObject
+QCoreApplication                                 |QObject|QtCore
 QCoreApplication::Encoding                       |enum
-QCryptographicHash                               |object
+QCryptographicHash                               |object |QtCore
 QCryptographicHash::Algorithm                    |enum
 QCursor                                          |object
-QDataStream                                      |object
+QDataStream                                      |object |QtCore
 QDataStream::ByteOrder                           |enum
 QDataStream::FloatingPointPrecision              |enum
 QDataStream::Status                              |enum
 QDataWidgetMapper                                |QObject
 QDataWidgetMapper::SubmitPolicy                  |enum
-QDate                                            |object
+QDate                                            |object |QtCore
 QDate::MonthNameType                             |enum
 QDateEdit                                        |QObject
-QDateTime                                        |object
+QDateTime                                        |object |QtCore
 QDateTimeEdit                                    |QObject
 QDateTimeEdit::Section                           |enum
 QDateTimeEdit::Sections                          |enum
@@ -256,7 +260,7 @@ QDBusConnectionInterface                         |QObject
 QDBusInterface                                   |QObject
 QDBusPendingCallWatcher                          |QObject
 QDBusServiceWatcher                              |QObject
-QDebug                                           |object
+QDebug                                           |object |QtCore
 QDeclarativeComponent                            |QObject
 QDeclarativeComponent::Status                    |enum
 QDeclarativeContext                              |QObject
@@ -313,13 +317,13 @@ QDialogButtonBox                                 |QObject
 QDialogButtonBox::ButtonRole                     |enum
 QDialogButtonBox::StandardButton                 |enum
 QDialogButtonBox::StandardButtons                |enum
-QDir                                             |object
+QDir                                             |object |QtCore
 QDir::Filters                                    |enum
 QDir::IteratorFlags                              |enum
 QDir::SortFlags                                  |enum
 QDirectPainter                                   |QObject
 QDirectPainter::SurfaceFlag                      |enum
-QDirIterator                                     |object
+QDirIterator                                     |object |QtCore
 QDirIterator::IteratorFlags                      |enum
 QDirModel                                        |QObject
 QDockWidget                                      |QObject
@@ -352,20 +356,20 @@ QDragEnterEvent                                  |QEvent
 QDragLeaveEvent                                  |QEvent
 QDragMoveEvent                                   |QEvent
 QDropEvent                                       |QEvent
-QDynamicPropertyChangeEvent                      |QEvent
-QEasingCurve                                     |object
+QDynamicPropertyChangeEvent                      |QEvent |QtCore
+QEasingCurve                                     |object |QtCore
 QEasingCurve::Type                               |enum
-QElapsedTimer                                    |object
+QElapsedTimer                                    |object |QtCore
 QElapsedTimer::ClockType                         |enum
 QErrorMessage                                    |QObject
-QEvent                                           |QEvent
+QEvent                                           |QEvent |QtCore
 QEvent::Type                                     |enum
-QEventLoop                                       |QObject
+QEventLoop                                       |QObject|QtCore
 QEventLoop::ProcessEventsFlags                   |enum
-QEventTransition                                 |QObject
+QEventTransition                                 |QObject|QtCore
 QExtensionFactory                                |QObject
 QExtensionManager                                |QObject
-QFile                                            |QObject
+QFile                                            |QObject|QtCore
 QFile::FileError                                 |enum
 QFile::FileHandleFlags                           |enum
 QFile::Permissions                               |enum
@@ -378,11 +382,11 @@ QFileDialog::Options                             |enum
 QFileDialog::ViewMode                            |enum
 QFileIconProvider                                |object
 QFileIconProvider::IconType                      |enum
-QFileInfo                                        |object
+QFileInfo                                        |object |QtCore
 QFileOpenEvent                                   |QEvent
 QFileSystemModel                                 |QObject
-QFileSystemWatcher                               |QObject
-QFinalState                                      |QObject
+QFileSystemWatcher                               |QObject|QtCore
+QFinalState                                      |QObject|QtCore
 QFocusEvent                                      |QEvent
 QFocusFrame                                      |QObject
 QFont                                            |object
@@ -415,7 +419,7 @@ QFormLayout::RowWrapPolicy                       |enum
 QFrame                                           |QObject
 QFrame::Shadow                                   |enum
 QFrame::Shape                                    |enum
-QFSFileEngine                                    |object
+QFSFileEngine                                    |object |QtCore
 QFtp                                             |QObject
 QFtp::Command                                    |enum
 QFtp::Error                                      |enum
@@ -423,10 +427,10 @@ QFtp::State                                      |enum
 QFtp::TransferMode                               |enum
 QFtp::TransferType                               |enum
 QFuture                                          |object
-QFutureInterfaceBase                             |object
+QFutureInterfaceBase                             |object |QtCore
 QFutureInterfaceBase::State                      |enum
 QFutureWatcher                                   |QObject
-QFutureWatcherBase                               |
+QFutureWatcherBase                               ||QtCore
 QGenericPlugin                                   |QObject
 QGenericPluginFactory                            |object
 QGesture                                         |QObject
@@ -533,7 +537,7 @@ QHelpSearchQuery::FieldName                      |enum
 QHelpSearchQueryWidget                           |QObject
 QHelpSearchResultWidget                          |QObject
 QHideEvent                                       |QEvent
-QHistoryState                                    |QObject
+QHistoryState                                    |QObject|QtCore
 QHistoryState::HistoryType                       |enum
 QHostAddress                                     |object
 QHostAddress::SpecialAddress                     |enum
@@ -574,7 +578,7 @@ QInputDialog::InputMode                          |enum
 QInputEvent                                      |QEvent
 QInputMethodEvent                                |QEvent
 QIntValidator                                    |QObject
-QIODevice                                        |QObject
+QIODevice                                        |QObject|QtCore
 QIODevice::OpenMode                              |enum
 QItemDelegate                                    |QObject
 QItemEditorCreator                               |object
@@ -600,15 +604,15 @@ QLayoutItem                                      |object
 QLCDNumber                                       |QObject
 QLCDNumber::Mode                                 |enum
 QLCDNumber::SegmentStyle                         |enum
-QLibrary                                         |QObject
+QLibrary                                         |QObject|QtCore
 QLibrary::LoadHints                              |enum
-QLibraryInfo                                     |object
+QLibraryInfo                                     |object |QtCore
 QLibraryInfo::LibraryLocation                    |enum
-QLine                                            |object
+QLine                                            |object |QtCore
 QLinearGradient                                  |object
 QLineEdit                                        |QObject
 QLineEdit::EchoMode                              |enum
-QLineF                                           |object
+QLineF                                           |object |QtCore
 QListView                                        |QObject
 QListView::Flow                                  |enum
 QListView::LayoutMode                            |enum
@@ -618,7 +622,7 @@ QListView::ScrollHint                            |enum
 QListView::ViewMode                              |enum
 QListWidget                                      |QWidget
 QListWidgetItem                                  |item
-QLocale                                          |object
+QLocale                                          |object |QtCore
 QLocale::Country                                 |enum
 QLocale::CurrencySymbolFormat                    |enum
 QLocale::FormatType                              |enum
@@ -636,7 +640,7 @@ QMacNativeWidget                                 |QObject
 QMacStyle                                        |QObject
 QMainWindow                                      |QObject
 QMainWindow::DockOptions                         |enum
-QMargins                                         |object
+QMargins                                         |object |QtCore
 QMatrix                                          |object
 QMatrix3x3                                       |object
 QMatrix4x4                                       |object
@@ -654,17 +658,17 @@ QMessageBox::ButtonRole                          |enum
 QMessageBox::Icon                                |enum
 QMessageBox::StandardButton                      |enum
 QMessageBox::StandardButtons                     |enum
-QMetaClassInfo                                   |object
-QMetaEnum                                        |object
-QMetaMethod                                      |object
+QMetaClassInfo                                   |object |QtCore
+QMetaEnum                                        |object |QtCore
+QMetaMethod                                      |object |QtCore
 QMetaMethod::Access                              |enum
 QMetaMethod::MethodType                          |enum
-QMetaObject                                      |object
-QMetaProperty                                    |object
-QMetaType                                        |object
-QMimeData                                        |QObject
+QMetaObject                                      |object |QtCore
+QMetaProperty                                    |object |QtCore
+QMetaType                                        |object |QtCore
+QMimeData                                        |QObject|QtCore
 QMimeSource                                      |object
-QModelIndex                                      |object
+QModelIndex                                      |object |QtCore
 QMotifStyle                                      |QObject
 QMouseDriverPlugin                               |QObject
 QMouseEvent                                      |QEvent
@@ -673,9 +677,9 @@ QMoveEvent                                       |QEvent
 QMovie                                           |QObject
 QMovie::CacheMode                                |enum
 QMovie::MovieState                               |enum
-QMutex                                           |object
+QMutex                                           |object |QtCore
 QMutex::RecursionMode                            |enum
-QMutexLocker                                     |object
+QMutexLocker                                     |object |QtCore
 QNetworkAccessManager                            |QObject
 QNetworkAccessManager::NetworkAccessibility      |enum
 QNetworkAccessManager::Operation                 |enum
@@ -709,8 +713,8 @@ QNetworkRequest::Priority                        |enum
 QNetworkSession                                  |QObject
 QNetworkSession::SessionError                    |enum
 QNetworkSession::State                           |enum
-QObject                                          |QObject
-QObjectCleanupHandler                            |QObject
+QObject                                          |QObject|QtCore
+QObjectCleanupHandler                            |QObject|QtCore
 QPageSetupDialog                                 |QObject
 QPageSetupDialog::PageSetupDialogOption          |enum
 QPageSetupDialog::PageSetupDialogOptions         |enum
@@ -732,8 +736,8 @@ QPalette                                         |object
 QPalette::ColorGroup                             |enum
 QPalette::ColorRole                              |enum
 QPanGesture                                      |QObject
-QParallelAnimationGroup                          |QObject
-QPauseAnimation                                  |QObject
+QParallelAnimationGroup                          |QObject|QtCore
+QPauseAnimation                                  |QObject|QtCore
 QPen                                             |object
 QPicture                                         |object
 QPictureFormatPlugin                             |QObject
@@ -750,9 +754,9 @@ QPlatformGLContext                               |object
 QPlatformWindowFormat                            |object
 QPlatformWindowFormat::FormatOptions             |enum
 QPlatformWindowFormat::WindowApi                 |enum
-QPluginLoader                                    |QObject
-QPoint                                           |object
-QPointF                                          |object
+QPluginLoader                                    |QObject|QtCore
+QPoint                                           |object |QtCore
+QPointF                                          |object |QtCore
 QPolygon                                         |object
 QPolygonF                                        |object
 QPrintDialog                                     |QObject
@@ -777,17 +781,17 @@ QPrintPreviewDialog                              |QObject
 QPrintPreviewWidget                              |QObject
 QPrintPreviewWidget::ViewMode                    |enum
 QPrintPreviewWidget::ZoomMode                    |enum
-QProcess                                         |QObject
+QProcess                                         |QObject|QtCore
 QProcess::ExitStatus                             |enum
 QProcess::ProcessChannel                         |enum
 QProcess::ProcessChannelMode                     |enum
 QProcess::ProcessError                           |enum
 QProcess::ProcessState                           |enum
-QProcessEnvironment                              |object
+QProcessEnvironment                              |object |QtCore
 QProgressBar                                     |QObject
 QProgressBar::Direction                          |enum
 QProgressDialog                                  |QObject
-QPropertyAnimation                               |QObject
+QPropertyAnimation                               |QObject|QtCore
 QProxyModel                                      |QObject
 QProxyStyle                                      |QObject
 QPushButton                                      |QObject
@@ -796,12 +800,12 @@ QRadialGradient                                  |object
 QRadioButton                                     |QObject
 QRawFont                                         |object
 QRawFont::AntialiasingType                       |enum
-QReadLocker                                      |object
-QReadWriteLock                                   |object
+QReadLocker                                      |object |QtCore
+QReadWriteLock                                   |object |QtCore
 QReadWriteLock::RecursionMode                    |enum
-QRect                                            |object
-QRectF                                           |object
-QRegExp                                          |object
+QRect                                            |object |QtCore
+QRectF                                           |object |QtCore
+QRegExp                                          |object |QtCore
 QRegExp::CaretMode                               |enum
 QRegExp::PatternSyntax                           |enum
 QRegExpValidator                                 |QObject
@@ -811,10 +815,10 @@ QRegularExpression                               |
 QRegularExpressionMatch                          |
 QRegularExpressionMatchIterator                  |
 QResizeEvent                                     |QEvent
-QResource                                        |object
+QResource                                        |object |QtCore
 QRubberBand                                      |QObject
 QRubberBand::Shape                               |enum
-QRunnable                                        |object
+QRunnable                                        |object |QtCore
 QS60Style                                        |QObject
 QScreenDriverPlugin                              |QObject
 QScriptable                                      |object
@@ -846,27 +850,27 @@ QScriptValue::SpecialValue                       |enum
 QScriptValueIterator                             |object
 QScrollArea                                      |QObject
 QScrollBar                                       |QObject
-QSemaphore                                       |object
-QSequentialAnimationGroup                        |QObject
+QSemaphore                                       |object |QtCore
+QSequentialAnimationGroup                        |QObject|QtCore
 QSessionManager                                  |QObject
 QSessionManager::RestartHint                     |enum
-QSettings                                        |QObject
+QSettings                                        |QObject|QtCore
 QSettings::Format                                |enum
 QSettings::Scope                                 |enum
 QSettings::Status                                |enum
-QSharedData                                      |object
-QSharedMemory                                    |QObject
+QSharedData                                      |object |QtCore
+QSharedMemory                                    |QObject|QtCore
 QSharedMemory::AccessMode                        |enum
 QSharedMemory::SharedMemoryError                 |enum
 QShortcut                                        |QObject
 QShortcutEvent                                   |QEvent
 QShowEvent                                       |QEvent
-QSignalMapper                                    |QObject
+QSignalMapper                                    |QObject|QtCore
 QSignalSpy                                       |QObject
-QSignalTransition                                |QObject
+QSignalTransition                                |QObject|QtCore
 QSimpleXmlNodeModel                              |object
-QSize                                            |object
-QSizeF                                           |object
+QSize                                            |object |QtCore
+QSizeF                                           |object |QtCore
 QSizeGrip                                        |QObject
 QSizePolicy                                      |object
 QSizePolicy::ControlType                         |enum
@@ -874,7 +878,7 @@ QSizePolicy::ControlTypes                        |enum
 QSizePolicy::Policy                              |enum
 QSlider                                          |QObject
 QSlider::TickPosition                            |enum
-QSocketNotifier                                  |QObject
+QSocketNotifier                                  |QObject|QtCore
 QSocketNotifier::Type                            |enum
 QSortFilterProxyModel                            |QObject
 QSound                                           |QObject
@@ -929,9 +933,9 @@ QStackedLayout::StackingMode                     |enum
 QStackedWidget                                   |QObject
 QStandardItem                                    |item
 QStandardItemModel                               |QObject
-QState                                           |QObject
+QState                                           |QObject|QtCore
 QState::ChildMode                                |enum
-QStateMachine                                    |QObject
+QStateMachine                                    |QObject|QtCore
 QStateMachine::Error                             |enum
 QStateMachine::EventPriority                     |enum
 QStateMachine::RestorePolicy                     |enum
@@ -940,7 +944,7 @@ QStaticText::PerformanceHint                     |enum
 QStatusBar                                       |QObject
 QStatusTipEvent                                  |QEvent
 QStringListModel                                 |QObject
-QStringMatcher                                   |object
+QStringMatcher                                   |object |QtCore
 QStringRef                                       |object
 QStyle                                           |QObject
 QStyle::ComplexControl                           |enum
@@ -1009,10 +1013,10 @@ QSvgWidget                                       |QObject
 QSwipeGesture                                    |QObject
 QSwipeGesture::SwipeDirection                    |enum
 QSyntaxHighlighter                               |QObject
-QSysInfo                                         |object
-QSystemLocale                                    |object
+QSysInfo                                         |object |QtCore
+QSystemLocale                                    |object |QtCore
 QSystemLocale::QueryType                         |enum
-QSystemSemaphore                                 |object
+QSystemSemaphore                                 |object |QtCore
 QSystemSemaphore::AccessMode                     |enum
 QSystemSemaphore::SystemSemaphoreError           |enum
 QSystemTrayIcon                                  |QObject
@@ -1103,27 +1107,27 @@ QTapAndHoldGesture                               |QObject
 QTapGesture                                      |QObject
 QTcpServer                                       |QObject
 QTcpSocket                                       |QObject
-QTemporaryFile                                   |QObject
+QTemporaryFile                                   |QObject|QtCore
 QTestEventList                                   |object
 QTextBlock                                       |object
 QTextBlockFormat                                 |object
 QTextBlockGroup                                  |QObject
 QTextBlockUserData                               |object
-QTextBoundaryFinder                              |object
+QTextBoundaryFinder                              |object |QtCore
 QTextBoundaryFinder::BoundaryReasons             |enum
 QTextBoundaryFinder::BoundaryType                |enum
 QTextBrowser                                     |QObject
 QTextCharFormat                                  |object
 QTextCharFormat::UnderlineStyle                  |enum
 QTextCharFormat::VerticalAlignment               |enum
-QTextCodec                                       |object
+QTextCodec                                       |object |QtCore
 QTextCodec::ConversionFlags                      |enum
 QTextCodecPlugin                                 |QObject
 QTextCursor                                      |object
 QTextCursor::MoveMode                            |enum
 QTextCursor::MoveOperation                       |enum
 QTextCursor::SelectionType                       |enum
-QTextDecoder                                     |object
+QTextDecoder                                     |object |QtCore
 QTextDocument                                    |QObject
 QTextDocument::FindFlags                         |enum
 QTextDocument::MetaInformation                   |enum
@@ -1133,7 +1137,7 @@ QTextDocumentWriter                              |object
 QTextEdit                                        |QObject
 QTextEdit::AutoFormatting                        |enum
 QTextEdit::LineWrapMode                          |enum
-QTextEncoder                                     |object
+QTextEncoder                                     |object |QtCore
 QTextFormat                                      |object
 QTextFormat::PageBreakFlags                      |enum
 QTextFragment                                    |object
@@ -1160,7 +1164,7 @@ QTextObjectInterface                             |object
 QTextOption                                      |object
 QTextOption::Flags                               |enum
 QTextOption::WrapMode                            |enum
-QTextStream                                      |object
+QTextStream                                      |object |QtCore
 QTextStream::FieldAlignment                      |enum
 QTextStream::NumberFlags                         |enum
 QTextStream::RealNumberNotation                  |enum
@@ -1169,17 +1173,17 @@ QTextTable                                       |QObject
 QTextTableCell                                   |object
 QTextTableCellFormat                             |object
 QTextTableFormat                                 |object
-QThread                                          |QObject
+QThread                                          |QObject|QtCore
 QThread::Priority                                |enum
-QThreadPool                                      |QObject
-QTime                                            |object
+QThreadPool                                      |QObject|QtCore
+QTime                                            |object |QtCore
 QTimeEdit                                        |QObject
-QTimeLine                                        |QObject
+QTimeLine                                        |QObject|QtCore
 QTimeLine::CurveShape                            |enum
 QTimeLine::Direction                             |enum
 QTimeLine::State                                 |enum
-QTimer                                           |QObject
-QTimerEvent                                      |QEvent
+QTimer                                           |QObject|QtCore
+QTimerEvent                                      |QEvent |QtCore
 QtMsgType                                        |enum
 QToolBar                                         |QObject
 QToolBarChangeEvent                              |QEvent
@@ -1191,7 +1195,7 @@ QTouchEvent                                      |QEvent
 QTouchEvent::DeviceType                          |enum
 QTransform                                       |object
 QTransform::TransformationType                   |enum
-QTranslator                                      |QObject
+QTranslator                                      |QObject|QtCore
 QTreeView                                        |QObject
 QTreeView::ScrollHint                            |enum
 QTreeWidget                                      |QObject
@@ -1206,17 +1210,17 @@ QUndoCommand                                     |object
 QUndoGroup                                       |QObject
 QUndoStack                                       |QObject
 QUndoView                                        |QObject
-QUrl                                             |object
+QUrl                                             |object |QtCore
 QUrl::FormattingOptions                          |enum
 QUrl::ParsingMode                                |enum
 QUrlInfo                                         |object
-QUuid                                            |object
+QUuid                                            |object |QtCore
 QUuid::Variant                                   |enum
 QUuid::Version                                   |enum
 QValidator                                       |QObject
-QVariant                                         |object
+QVariant                                         |object |QtCore
 QVariant::Type                                   |enum
-QVariantAnimation                                |QObject
+QVariantAnimation                                |QObject|QtCore
 QVBoxLayout                                      |QObject
 QVector2D                                        |object
 QVector3D                                        |object
@@ -1227,7 +1231,7 @@ QVideoFrame::PixelFormat                         |enum
 QVideoSurfaceFormat                              |object
 QVideoSurfaceFormat::Direction                   |enum
 QVideoSurfaceFormat::YCbCrColorSpace             |enum
-QWaitCondition                                   |object
+QWaitCondition                                   |object |QtCore
 QWeakPointer                                     |object
 QWebDatabase                                     |object
 QWebElement                                      |object
@@ -1277,7 +1281,7 @@ QWizard::WizardStyle                             |enum
 QWizardPage                                      |QObject
 QWorkspace                                       |QObject
 QWorkspace::WindowOrder                          |enum
-QWriteLocker                                     |object
+QWriteLocker                                     |object |QtCore
 QWSClient                                        |QObject
 QWSEmbedWidget                                   |QObject
 QWSInputMethod                                   |QObject
@@ -1312,14 +1316,14 @@ QXmlSchema                                       |object
 QXmlSchemaValidator                              |object
 QXmlSerializer                                   |object
 QXmlSimpleReader                                 |object
-QXmlStreamAttribute                              |object
-QXmlStreamAttributes                             |object
-QXmlStreamEntityDeclaration                      |object
-QXmlStreamEntityResolver                         |object
-QXmlStreamNamespaceDeclaration                   |object
-QXmlStreamNotationDeclaration                    |object
-QXmlStreamReader                                 |object
+QXmlStreamAttribute                              |object |QtCore
+QXmlStreamAttributes                             |object |QtCore
+QXmlStreamEntityDeclaration                      |object |QtCore
+QXmlStreamEntityResolver                         |object |QtCore
+QXmlStreamNamespaceDeclaration                   |object |QtCore
+QXmlStreamNotationDeclaration                    |object |QtCore
+QXmlStreamReader                                 |object |QtCore
 QXmlStreamReader::Error                          |enum
 QXmlStreamReader::ReadElementTextBehaviour       |enum
 QXmlStreamReader::TokenType                      |enum
-QXmlStreamWriter                                 |object
+QXmlStreamWriter                                 |object |QtCore
