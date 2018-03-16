@@ -550,6 +550,21 @@ HB_FUNC_STATIC( QVARIANT_NEW )
   {
     HB_FUNC_EXEC( QVARIANT_NEW14 );
   }
+  else if( ISNUMPAR(1) && ISNUM(1) )
+  {
+    if( hb_param( 1, HB_IT_DOUBLE ) != NULL )
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW15 );
+    }
+    else if( hb_param( 1, HB_IT_LONG ) != NULL )
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW12 );
+    }
+    else
+    {
+      HB_FUNC_EXEC( QVARIANT_NEW10 );
+    }
+  }
   else if( ISNUMPAR(1) && ISQLOCALE(1) )
   {
     HB_FUNC_EXEC( QVARIANT_NEW2 );
