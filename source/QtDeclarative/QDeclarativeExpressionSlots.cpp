@@ -12,8 +12,6 @@
 
 #include "QDeclarativeExpressionSlots.h"
 
-static QDeclarativeExpressionSlots * s = NULL;
-
 QDeclarativeExpressionSlots::QDeclarativeExpressionSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -35,10 +33,21 @@ void QDeclarativeExpressionSlots::valueChanged()
 
 void QDeclarativeExpressionSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QDeclarativeExpressionSlots( QCoreApplication::instance() );
-  }
+  QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QDeclarativeExpressionSlots * s = obj->findChild<QDeclarativeExpressionSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QDeclarativeExpressionSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

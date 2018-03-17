@@ -12,8 +12,6 @@
 
 #include "QDeclarativeComponentSlots.h"
 
-static QDeclarativeComponentSlots * s = NULL;
-
 QDeclarativeComponentSlots::QDeclarativeComponentSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -50,10 +48,21 @@ void QDeclarativeComponentSlots::statusChanged( QDeclarativeComponent::Status st
 
 void QDeclarativeComponentSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QDeclarativeComponentSlots( QCoreApplication::instance() );
-  }
+  QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QDeclarativeComponentSlots * s = obj->findChild<QDeclarativeComponentSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QDeclarativeComponentSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

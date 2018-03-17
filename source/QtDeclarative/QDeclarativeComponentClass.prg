@@ -499,5 +499,4 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ONSTATUSCHANGED )
   QDeclarativeComponentSlots_connect_signal( "statusChanged(QDeclarativeComponent::Status)", "statusChanged(QDeclarativeComponent::Status)" );
 }
 
-
 #pragma ENDDUMP

@@ -418,5 +418,4 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ONVALUECHANGED )
   QDeclarativeExpressionSlots_connect_signal( "valueChanged()", "valueChanged()" );
 }
 
-
 #pragma ENDDUMP

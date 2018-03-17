@@ -366,5 +366,4 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSTATUSCHANGED )
   QDeclarativeViewSlots_connect_signal( "statusChanged(QDeclarativeView::Status)", "statusChanged(QDeclarativeView::Status)" );
 }
 
-
 #pragma ENDDUMP

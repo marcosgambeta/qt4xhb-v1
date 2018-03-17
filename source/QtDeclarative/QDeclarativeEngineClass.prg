@@ -632,5 +632,4 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ONWARNINGS )
   QDeclarativeEngineSlots_connect_signal( "warnings(QList<QDeclarativeError>)", "warnings(QList<QDeclarativeError>)" );
 }
 
-
 #pragma ENDDUMP
