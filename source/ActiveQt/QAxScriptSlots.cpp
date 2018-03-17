@@ -12,8 +12,6 @@
 
 #include "QAxScriptSlots.h"
 
-static QAxScriptSlots * s = NULL;
-
 QAxScriptSlots::QAxScriptSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -110,10 +108,21 @@ void QAxScriptSlots::stateChanged( int state )
 
 void QAxScriptSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QAxScriptSlots( QCoreApplication::instance() );
-  }
+  QAxScript * obj = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QAxScriptSlots * s = obj->findChild<QAxScriptSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QAxScriptSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

@@ -326,5 +326,4 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_ONERROR )
   QAxScriptManagerSlots_connect_signal( "error(QAxScript*,int,QString,int,QString)", "error(QAxScript*,int,QString,int,QString)" );
 }
 
-
 #pragma ENDDUMP
