@@ -68,5 +68,4 @@ HB_FUNC_STATIC( QHELPCONTENTWIDGET_ONLINKACTIVATED )
   QHelpContentWidgetSlots_connect_signal( "linkActivated(QUrl)", "linkActivated(QUrl)" );
 }
 
-
 #pragma ENDDUMP

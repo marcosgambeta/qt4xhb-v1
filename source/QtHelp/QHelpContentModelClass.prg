@@ -246,5 +246,4 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_ONCONTENTSCREATIONSTARTED )
   QHelpContentModelSlots_connect_signal( "contentsCreationStarted()", "contentsCreationStarted()" );
 }
 
-
 #pragma ENDDUMP

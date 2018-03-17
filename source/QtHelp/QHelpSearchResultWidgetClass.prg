@@ -86,5 +86,4 @@ HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_ONREQUESTSHOWLINK )
   QHelpSearchResultWidgetSlots_connect_signal( "requestShowLink(QUrl)", "requestShowLink(QUrl)" );
 }
 
-
 #pragma ENDDUMP

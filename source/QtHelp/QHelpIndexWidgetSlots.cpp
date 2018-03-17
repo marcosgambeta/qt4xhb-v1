@@ -12,8 +12,6 @@
 
 #include "QHelpIndexWidgetSlots.h"
 
-static QHelpIndexWidgetSlots * s = NULL;
-
 QHelpIndexWidgetSlots::QHelpIndexWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -39,10 +37,21 @@ void QHelpIndexWidgetSlots::linkActivated( const QUrl & link, const QString & ke
 
 void QHelpIndexWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QHelpIndexWidgetSlots( QCoreApplication::instance() );
-  }
+  QHelpIndexWidget * obj = (QHelpIndexWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QHelpIndexWidgetSlots * s = obj->findChild<QHelpIndexWidgetSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QHelpIndexWidgetSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

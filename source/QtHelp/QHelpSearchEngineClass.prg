@@ -319,5 +319,4 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_ONSEARCHINGSTARTED )
   QHelpSearchEngineSlots_connect_signal( "searchingStarted()", "searchingStarted()" );
 }
 
-
 #pragma ENDDUMP

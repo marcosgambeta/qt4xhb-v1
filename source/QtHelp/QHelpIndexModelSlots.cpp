@@ -12,8 +12,6 @@
 
 #include "QHelpIndexModelSlots.h"
 
-static QHelpIndexModelSlots * s = NULL;
-
 QHelpIndexModelSlots::QHelpIndexModelSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -46,10 +44,21 @@ void QHelpIndexModelSlots::indexCreationStarted()
 
 void QHelpIndexModelSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QHelpIndexModelSlots( QCoreApplication::instance() );
-  }
+  QHelpIndexModel * obj = (QHelpIndexModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QHelpIndexModelSlots * s = obj->findChild<QHelpIndexModelSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QHelpIndexModelSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
