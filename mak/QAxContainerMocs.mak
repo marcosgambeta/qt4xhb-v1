@@ -4,8 +4,8 @@
 # Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 #
 
-$(QT4XHB_OBJ_DIR)/QAxBaseSlotsMoc.cpp          : $(QT4XHB_SRC_DIR)/ActiveQt/QAxBaseSlots.h
-	$(MOC) $^ -o $@
+#$(QT4XHB_OBJ_DIR)/QAxBaseSlotsMoc.cpp          : $(QT4XHB_SRC_DIR)/ActiveQt/QAxBaseSlots.h
+#	$(MOC) $^ -o $@
 $(QT4XHB_OBJ_DIR)/QAxObjectSlotsMoc.cpp        : $(QT4XHB_SRC_DIR)/ActiveQt/QAxObjectSlots.h
 	$(MOC) $^ -o $@
 $(QT4XHB_OBJ_DIR)/QAxScriptSlotsMoc.cpp        : $(QT4XHB_SRC_DIR)/ActiveQt/QAxScriptSlots.h
