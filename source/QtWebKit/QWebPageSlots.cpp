@@ -12,8 +12,6 @@
 
 #include "QWebPageSlots.h"
 
-static QWebPageSlots * s = NULL;
-
 QWebPageSlots::QWebPageSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -325,10 +323,21 @@ void QWebPageSlots::windowCloseRequested()
 
 void QWebPageSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QWebPageSlots( QCoreApplication::instance() );
-  }
+  QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QWebPageSlots * s = obj->findChild<QWebPageSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QWebPageSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

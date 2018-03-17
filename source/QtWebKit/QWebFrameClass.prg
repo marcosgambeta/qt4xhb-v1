@@ -1227,5 +1227,4 @@ HB_FUNC_STATIC( QWEBFRAME_ONURLCHANGED )
   QWebFrameSlots_connect_signal( "urlChanged(QUrl)", "urlChanged(QUrl)" );
 }
 
-
 #pragma ENDDUMP

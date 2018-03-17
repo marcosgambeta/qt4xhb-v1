@@ -12,8 +12,6 @@
 
 #include "QGraphicsWebViewSlots.h"
 
-static QGraphicsWebViewSlots * s = NULL;
-
 QGraphicsWebViewSlots::QGraphicsWebViewSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -124,10 +122,21 @@ void QGraphicsWebViewSlots::urlChanged( const QUrl & url )
 
 void QGraphicsWebViewSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QGraphicsWebViewSlots( QCoreApplication::instance() );
-  }
+  QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QGraphicsWebViewSlots * s = obj->findChild<QGraphicsWebViewSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QGraphicsWebViewSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

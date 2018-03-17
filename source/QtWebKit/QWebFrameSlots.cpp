@@ -12,8 +12,6 @@
 
 #include "QWebFrameSlots.h"
 
-static QWebFrameSlots * s = NULL;
-
 QWebFrameSlots::QWebFrameSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -131,10 +129,21 @@ void QWebFrameSlots::urlChanged( const QUrl & url )
 
 void QWebFrameSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QWebFrameSlots( QCoreApplication::instance() );
-  }
+  QWebFrame * obj = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QWebFrameSlots * s = obj->findChild<QWebFrameSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QWebFrameSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
