@@ -765,5 +765,4 @@ HB_FUNC_STATIC( QTOOLBAR_ONVISIBILITYCHANGED )
   QToolBarSlots_connect_signal( "visibilityChanged(bool)", "visibilityChanged(bool)" );
 }
 
-
 #pragma ENDDUMP

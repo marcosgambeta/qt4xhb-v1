@@ -736,5 +736,4 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ONLINKHOVERED )
   QGraphicsTextItemSlots_connect_signal( "linkHovered(QString)", "linkHovered(QString)" );
 }
 
-
 #pragma ENDDUMP

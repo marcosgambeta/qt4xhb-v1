@@ -12,8 +12,6 @@
 
 #include "QApplicationSlots.h"
 
-static QApplicationSlots * s = NULL;
-
 QApplicationSlots::QApplicationSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -109,10 +107,21 @@ void QApplicationSlots::saveStateRequest( QSessionManager & manager )
 
 void QApplicationSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QApplicationSlots( QCoreApplication::instance() );
-  }
+  QApplication * obj = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QApplicationSlots * s = obj->findChild<QApplicationSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QApplicationSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

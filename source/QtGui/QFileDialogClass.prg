@@ -1303,5 +1303,4 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILTERSELECTED )
   QFileDialogSlots_connect_signal( "filterSelected(QString)", "filterSelected(QString)" );
 }
 
-
 #pragma ENDDUMP

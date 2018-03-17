@@ -12,8 +12,6 @@
 
 #include "QFontDialogSlots.h"
 
-static QFontDialogSlots * s = NULL;
-
 QFontDialogSlots::QFontDialogSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -50,10 +48,21 @@ void QFontDialogSlots::fontSelected( const QFont & font )
 
 void QFontDialogSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QFontDialogSlots( QCoreApplication::instance() );
-  }
+  QFontDialog * obj = (QFontDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QFontDialogSlots * s = obj->findChild<QFontDialogSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QFontDialogSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

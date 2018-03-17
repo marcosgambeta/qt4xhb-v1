@@ -947,5 +947,4 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMSELECTIONCHANGED )
   QListWidgetSlots_connect_signal( "itemSelectionChanged()", "itemSelectionChanged()" );
 }
 
-
 #pragma ENDDUMP

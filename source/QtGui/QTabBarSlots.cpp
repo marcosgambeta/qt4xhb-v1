@@ -12,8 +12,6 @@
 
 #include "QTabBarSlots.h"
 
-static QTabBarSlots * s = NULL;
-
 QTabBarSlots::QTabBarSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -65,10 +63,21 @@ void QTabBarSlots::tabMoved( int from, int to )
 
 void QTabBarSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QTabBarSlots( QCoreApplication::instance() );
-  }
+  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QTabBarSlots * s = obj->findChild<QTabBarSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QTabBarSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

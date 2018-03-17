@@ -740,5 +740,4 @@ HB_FUNC_STATIC( QSTYLE_ONTABMOVED )
   QStyleSlots_connect_signal( "tabMoved(int,int)", "tabMoved(int,int)" );
 }
 
-
 #pragma ENDDUMP

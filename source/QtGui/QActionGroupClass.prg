@@ -400,5 +400,4 @@ HB_FUNC_STATIC( QACTIONGROUP_ONTRIGGERED )
   QActionGroupSlots_connect_signal( "triggered(QAction*)", "triggered(QAction*)" );
 }
 
-
 #pragma ENDDUMP

@@ -12,8 +12,6 @@
 
 #include "QTextDocumentSlots.h"
 
-static QTextDocumentSlots * s = NULL;
-
 QTextDocumentSlots::QTextDocumentSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -139,10 +137,21 @@ void QTextDocumentSlots::undoCommandAdded()
 
 void QTextDocumentSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QTextDocumentSlots( QCoreApplication::instance() );
-  }
+  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QTextDocumentSlots * s = obj->findChild<QTextDocumentSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QTextDocumentSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

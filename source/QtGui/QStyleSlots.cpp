@@ -12,8 +12,6 @@
 
 #include "QStyleSlots.h"
 
-static QStyleSlots * s = NULL;
-
 QStyleSlots::QStyleSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -65,10 +63,21 @@ void QStyleSlots::tabMoved( int from, int to )
 
 void QStyleSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QStyleSlots( QCoreApplication::instance() );
-  }
+  QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QStyleSlots * s = obj->findChild<QStyleSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QStyleSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

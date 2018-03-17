@@ -394,5 +394,4 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONVISIBILITYCHANGED )
   QDockWidgetSlots_connect_signal( "visibilityChanged(bool)", "visibilityChanged(bool)" );
 }
 
-
 #pragma ENDDUMP

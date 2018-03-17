@@ -1361,5 +1361,4 @@ HB_FUNC_STATIC( QTREEVIEW_ONEXPANDED )
   QTreeViewSlots_connect_signal( "expanded(QModelIndex)", "expanded(QModelIndex)" );
 }
 
-
 #pragma ENDDUMP

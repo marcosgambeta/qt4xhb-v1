@@ -12,8 +12,6 @@
 
 #include "QGroupBoxSlots.h"
 
-static QGroupBoxSlots * s = NULL;
-
 QGroupBoxSlots::QGroupBoxSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -50,10 +48,21 @@ void QGroupBoxSlots::toggled( bool on )
 
 void QGroupBoxSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QGroupBoxSlots( QCoreApplication::instance() );
-  }
+  QGroupBox * obj = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QGroupBoxSlots * s = obj->findChild<QGroupBoxSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QGroupBoxSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

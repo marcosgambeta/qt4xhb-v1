@@ -319,5 +319,4 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_ONSETCURRENTWIDGET )
   QStackedLayoutSlots_connect_signal( "setCurrentWidget(QWidget*)", "setCurrentWidget(QWidget*)" );
 }
 
-
 #pragma ENDDUMP

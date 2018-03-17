@@ -12,8 +12,6 @@
 
 #include "QToolBoxSlots.h"
 
-static QToolBoxSlots * s = NULL;
-
 QToolBoxSlots::QToolBoxSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -37,10 +35,21 @@ void QToolBoxSlots::currentChanged( int index )
 
 void QToolBoxSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QToolBoxSlots( QCoreApplication::instance() );
-  }
+  QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QToolBoxSlots * s = obj->findChild<QToolBoxSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QToolBoxSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

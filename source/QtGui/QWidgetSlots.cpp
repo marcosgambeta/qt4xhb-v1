@@ -12,8 +12,6 @@
 
 #include "QWidgetSlots.h"
 
-static QWidgetSlots * s = NULL;
-
 QWidgetSlots::QWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -37,10 +35,21 @@ void QWidgetSlots::customContextMenuRequested( const QPoint & pos )
 
 void QWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QWidgetSlots( QCoreApplication::instance() );
-  }
+  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QWidgetSlots * s = obj->findChild<QWidgetSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QWidgetSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

@@ -12,8 +12,6 @@
 
 #include "QLabelSlots.h"
 
-static QLabelSlots * s = NULL;
-
 QLabelSlots::QLabelSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -50,10 +48,21 @@ void QLabelSlots::linkHovered( const QString & link )
 
 void QLabelSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QLabelSlots( QCoreApplication::instance() );
-  }
+  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QLabelSlots * s = obj->findChild<QLabelSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QLabelSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

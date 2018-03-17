@@ -197,5 +197,4 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_ONBLURRADIUSCHANGED )
   QGraphicsBlurEffectSlots_connect_signal( "blurRadiusChanged(qreal)", "blurRadiusChanged(qreal)" );
 }
 
-
 #pragma ENDDUMP

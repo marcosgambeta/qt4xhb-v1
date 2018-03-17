@@ -12,8 +12,6 @@
 
 #include "QActionSlots.h"
 
-static QActionSlots * s = NULL;
-
 QActionSlots::QActionSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -72,10 +70,21 @@ void QActionSlots::triggered( bool checked )
 
 void QActionSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QActionSlots( QCoreApplication::instance() );
-  }
+  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QActionSlots * s = obj->findChild<QActionSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QActionSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

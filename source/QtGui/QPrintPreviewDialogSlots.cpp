@@ -12,8 +12,6 @@
 
 #include "QPrintPreviewDialogSlots.h"
 
-static QPrintPreviewDialogSlots * s = NULL;
-
 QPrintPreviewDialogSlots::QPrintPreviewDialogSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -37,10 +35,21 @@ void QPrintPreviewDialogSlots::paintRequested( QPrinter * printer )
 
 void QPrintPreviewDialogSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QPrintPreviewDialogSlots( QCoreApplication::instance() );
-  }
+  QPrintPreviewDialog * obj = (QPrintPreviewDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QPrintPreviewDialogSlots * s = obj->findChild<QPrintPreviewDialogSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QPrintPreviewDialogSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

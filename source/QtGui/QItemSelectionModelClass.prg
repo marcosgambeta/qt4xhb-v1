@@ -605,5 +605,4 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONSELECTIONCHANGED )
   QItemSelectionModelSlots_connect_signal( "selectionChanged(QItemSelection,QItemSelection)", "selectionChanged(QItemSelection,QItemSelection)" );
 }
 
-
 #pragma ENDDUMP

@@ -1147,5 +1147,4 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMSELECTIONCHANGED )
   QTreeWidgetSlots_connect_signal( "itemSelectionChanged()", "itemSelectionChanged()" );
 }
 
-
 #pragma ENDDUMP

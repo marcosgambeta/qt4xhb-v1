@@ -1351,5 +1351,4 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMSELECTIONCHANGED )
   QTableWidgetSlots_connect_signal( "itemSelectionChanged()", "itemSelectionChanged()" );
 }
 
-
 #pragma ENDDUMP

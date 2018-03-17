@@ -493,5 +493,4 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONREJECTED )
   QDialogButtonBoxSlots_connect_signal( "rejected()", "rejected()" );
 }
 
-
 #pragma ENDDUMP

@@ -369,5 +369,4 @@ HB_FUNC_STATIC( QFONTDIALOG_ONFONTSELECTED )
   QFontDialogSlots_connect_signal( "fontSelected(QFont)", "fontSelected(QFont)" );
 }
 
-
 #pragma ENDDUMP

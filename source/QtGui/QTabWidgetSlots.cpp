@@ -12,8 +12,6 @@
 
 #include "QTabWidgetSlots.h"
 
-static QTabWidgetSlots * s = NULL;
-
 QTabWidgetSlots::QTabWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -50,10 +48,21 @@ void QTabWidgetSlots::tabCloseRequested( int index )
 
 void QTabWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QTabWidgetSlots( QCoreApplication::instance() );
-  }
+  QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QTabWidgetSlots * s = obj->findChild<QTabWidgetSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QTabWidgetSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

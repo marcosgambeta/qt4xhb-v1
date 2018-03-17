@@ -12,8 +12,6 @@
 
 #include "QActionGroupSlots.h"
 
-static QActionGroupSlots * s = NULL;
-
 QActionGroupSlots::QActionGroupSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -50,10 +48,21 @@ void QActionGroupSlots::triggered( QAction * action )
 
 void QActionGroupSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QActionGroupSlots( QCoreApplication::instance() );
-  }
+  QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QActionGroupSlots * s = obj->findChild<QActionGroupSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QActionGroupSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

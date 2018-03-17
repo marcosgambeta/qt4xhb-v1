@@ -12,8 +12,6 @@
 
 #include "QGraphicsSceneSlots.h"
 
-static QGraphicsSceneSlots * s = NULL;
-
 QGraphicsSceneSlots::QGraphicsSceneSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -84,10 +82,21 @@ void QGraphicsSceneSlots::selectionChanged()
 
 void QGraphicsSceneSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QGraphicsSceneSlots( QCoreApplication::instance() );
-  }
+  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QGraphicsSceneSlots * s = obj->findChild<QGraphicsSceneSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QGraphicsSceneSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

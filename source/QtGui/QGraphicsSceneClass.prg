@@ -2115,5 +2115,4 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ONSELECTIONCHANGED )
   QGraphicsSceneSlots_connect_signal( "selectionChanged()", "selectionChanged()" );
 }
 
-
 #pragma ENDDUMP

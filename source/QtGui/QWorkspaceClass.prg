@@ -468,5 +468,4 @@ HB_FUNC_STATIC( QWORKSPACE_ONWINDOWACTIVATED )
   QWorkspaceSlots_connect_signal( "windowActivated(QWidget*)", "windowActivated(QWidget*)" );
 }
 
-
 #pragma ENDDUMP

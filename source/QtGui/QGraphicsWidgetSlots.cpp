@@ -12,8 +12,6 @@
 
 #include "QGraphicsWidgetSlots.h"
 
-static QGraphicsWidgetSlots * s = NULL;
-
 QGraphicsWidgetSlots::QGraphicsWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -35,10 +33,21 @@ void QGraphicsWidgetSlots::geometryChanged()
 
 void QGraphicsWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QGraphicsWidgetSlots( QCoreApplication::instance() );
-  }
+  QGraphicsWidget * obj = (QGraphicsWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QGraphicsWidgetSlots * s = obj->findChild<QGraphicsWidgetSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QGraphicsWidgetSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

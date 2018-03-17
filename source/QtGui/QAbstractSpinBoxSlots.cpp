@@ -12,8 +12,6 @@
 
 #include "QAbstractSpinBoxSlots.h"
 
-static QAbstractSpinBoxSlots * s = NULL;
-
 QAbstractSpinBoxSlots::QAbstractSpinBoxSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -35,10 +33,21 @@ void QAbstractSpinBoxSlots::editingFinished()
 
 void QAbstractSpinBoxSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QAbstractSpinBoxSlots( QCoreApplication::instance() );
-  }
+  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QAbstractSpinBoxSlots * s = obj->findChild<QAbstractSpinBoxSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QAbstractSpinBoxSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

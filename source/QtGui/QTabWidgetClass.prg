@@ -1043,5 +1043,4 @@ HB_FUNC_STATIC( QTABWIDGET_ONTABCLOSEREQUESTED )
   QTabWidgetSlots_connect_signal( "tabCloseRequested(int)", "tabCloseRequested(int)" );
 }
 
-
 #pragma ENDDUMP

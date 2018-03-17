@@ -12,8 +12,6 @@
 
 #include "QWorkspaceSlots.h"
 
-static QWorkspaceSlots * s = NULL;
-
 QWorkspaceSlots::QWorkspaceSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -37,10 +35,21 @@ void QWorkspaceSlots::windowActivated( QWidget * w )
 
 void QWorkspaceSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QWorkspaceSlots( QCoreApplication::instance() );
-  }
+  QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QWorkspaceSlots * s = obj->findChild<QWorkspaceSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QWorkspaceSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

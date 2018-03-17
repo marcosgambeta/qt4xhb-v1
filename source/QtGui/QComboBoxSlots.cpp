@@ -12,8 +12,6 @@
 
 #include "QComboBoxSlots.h"
 
-static QComboBoxSlots * s = NULL;
-
 QComboBoxSlots::QComboBoxSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -115,10 +113,21 @@ void QComboBoxSlots::highlighted( const QString & text )
 
 void QComboBoxSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QComboBoxSlots( QCoreApplication::instance() );
-  }
+  QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QComboBoxSlots * s = obj->findChild<QComboBoxSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QComboBoxSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

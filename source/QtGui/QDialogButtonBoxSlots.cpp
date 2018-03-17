@@ -12,8 +12,6 @@
 
 #include "QDialogButtonBoxSlots.h"
 
-static QDialogButtonBoxSlots * s = NULL;
-
 QDialogButtonBoxSlots::QDialogButtonBoxSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -70,10 +68,21 @@ void QDialogButtonBoxSlots::rejected()
 
 void QDialogButtonBoxSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QDialogButtonBoxSlots( QCoreApplication::instance() );
-  }
+  QDialogButtonBox * obj = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QDialogButtonBoxSlots * s = obj->findChild<QDialogButtonBoxSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QDialogButtonBoxSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

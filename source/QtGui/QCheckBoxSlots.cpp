@@ -12,8 +12,6 @@
 
 #include "QCheckBoxSlots.h"
 
-static QCheckBoxSlots * s = NULL;
-
 QCheckBoxSlots::QCheckBoxSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -37,10 +35,21 @@ void QCheckBoxSlots::stateChanged( int state )
 
 void QCheckBoxSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QCheckBoxSlots( QCoreApplication::instance() );
-  }
+  QCheckBox * obj = (QCheckBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QCheckBoxSlots * s = obj->findChild<QCheckBoxSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QCheckBoxSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

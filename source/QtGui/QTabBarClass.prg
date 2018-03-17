@@ -1188,5 +1188,4 @@ HB_FUNC_STATIC( QTABBAR_ONTABMOVED )
   QTabBarSlots_connect_signal( "tabMoved(int,int)", "tabMoved(int,int)" );
 }
 
-
 #pragma ENDDUMP

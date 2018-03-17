@@ -1011,5 +1011,4 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONSELECTIONCHANGED )
   QCalendarWidgetSlots_connect_signal( "selectionChanged()", "selectionChanged()" );
 }
 
-
 #pragma ENDDUMP

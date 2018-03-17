@@ -12,8 +12,6 @@
 
 #include "QMainWindowSlots.h"
 
-static QMainWindowSlots * s = NULL;
-
 QMainWindowSlots::QMainWindowSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -50,10 +48,21 @@ void QMainWindowSlots::toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonSty
 
 void QMainWindowSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QMainWindowSlots( QCoreApplication::instance() );
-  }
+  QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QMainWindowSlots * s = obj->findChild<QMainWindowSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QMainWindowSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

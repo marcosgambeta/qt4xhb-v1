@@ -12,8 +12,6 @@
 
 #include "QDesktopWidgetSlots.h"
 
-static QDesktopWidgetSlots * s = NULL;
-
 QDesktopWidgetSlots::QDesktopWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -63,10 +61,21 @@ void QDesktopWidgetSlots::workAreaResized( int screen )
 
 void QDesktopWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QDesktopWidgetSlots( QCoreApplication::instance() );
-  }
+  QDesktopWidget * obj = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QDesktopWidgetSlots * s = obj->findChild<QDesktopWidgetSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QDesktopWidgetSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

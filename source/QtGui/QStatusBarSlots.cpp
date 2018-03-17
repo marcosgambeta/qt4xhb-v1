@@ -12,8 +12,6 @@
 
 #include "QStatusBarSlots.h"
 
-static QStatusBarSlots * s = NULL;
-
 QStatusBarSlots::QStatusBarSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -37,10 +35,21 @@ void QStatusBarSlots::messageChanged( const QString & message )
 
 void QStatusBarSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QStatusBarSlots( QCoreApplication::instance() );
-  }
+  QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QStatusBarSlots * s = obj->findChild<QStatusBarSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QStatusBarSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

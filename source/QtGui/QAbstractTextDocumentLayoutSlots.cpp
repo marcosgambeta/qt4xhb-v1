@@ -12,8 +12,6 @@
 
 #include "QAbstractTextDocumentLayoutSlots.h"
 
-static QAbstractTextDocumentLayoutSlots * s = NULL;
-
 QAbstractTextDocumentLayoutSlots::QAbstractTextDocumentLayoutSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -76,10 +74,21 @@ void QAbstractTextDocumentLayoutSlots::updateBlock( const QTextBlock & block )
 
 void QAbstractTextDocumentLayoutSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QAbstractTextDocumentLayoutSlots( QCoreApplication::instance() );
-  }
+  QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QAbstractTextDocumentLayoutSlots * s = obj->findChild<QAbstractTextDocumentLayoutSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QAbstractTextDocumentLayoutSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

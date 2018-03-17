@@ -12,8 +12,6 @@
 
 #include "QUndoGroupSlots.h"
 
-static QUndoGroupSlots * s = NULL;
-
 QUndoGroupSlots::QUndoGroupSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -115,10 +113,21 @@ void QUndoGroupSlots::undoTextChanged( const QString & undoText )
 
 void QUndoGroupSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QUndoGroupSlots( QCoreApplication::instance() );
-  }
+  QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QUndoGroupSlots * s = obj->findChild<QUndoGroupSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QUndoGroupSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

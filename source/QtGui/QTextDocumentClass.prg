@@ -1811,5 +1811,4 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONUNDOCOMMANDADDED )
   QTextDocumentSlots_connect_signal( "undoCommandAdded()", "undoCommandAdded()" );
 }
 
-
 #pragma ENDDUMP

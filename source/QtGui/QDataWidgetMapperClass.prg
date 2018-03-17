@@ -675,5 +675,4 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ONCURRENTINDEXCHANGED )
   QDataWidgetMapperSlots_connect_signal( "currentIndexChanged(int)", "currentIndexChanged(int)" );
 }
 
-
 #pragma ENDDUMP

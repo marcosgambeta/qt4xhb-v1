@@ -1075,5 +1075,4 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ONROOTPATHCHANGED )
   QFileSystemModelSlots_connect_signal( "rootPathChanged(QString)", "rootPathChanged(QString)" );
 }
 
-
 #pragma ENDDUMP

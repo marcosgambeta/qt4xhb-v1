@@ -1643,5 +1643,4 @@ HB_FUNC_STATIC( QAPPLICATION_ONSAVESTATEREQUEST )
   QApplicationSlots_connect_signal( "saveStateRequest(QSessionManager)", "saveStateRequest(QSessionManager)" );
 }
 
-
 #pragma ENDDUMP

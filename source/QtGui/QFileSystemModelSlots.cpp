@@ -12,8 +12,6 @@
 
 #include "QFileSystemModelSlots.h"
 
-static QFileSystemModelSlots * s = NULL;
-
 QFileSystemModelSlots::QFileSystemModelSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -67,10 +65,21 @@ void QFileSystemModelSlots::rootPathChanged( const QString & newPath )
 
 void QFileSystemModelSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QFileSystemModelSlots( QCoreApplication::instance() );
-  }
+  QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QFileSystemModelSlots * s = obj->findChild<QFileSystemModelSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QFileSystemModelSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

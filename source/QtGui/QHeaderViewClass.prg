@@ -1438,5 +1438,4 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSORTINDICATORCHANGED )
   QHeaderViewSlots_connect_signal( "sortIndicatorChanged(int,Qt::SortOrder)", "sortIndicatorChanged(int,Qt::SortOrder)" );
 }
 
-
 #pragma ENDDUMP

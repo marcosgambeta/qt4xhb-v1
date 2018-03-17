@@ -12,8 +12,6 @@
 
 #include "QItemSelectionModelSlots.h"
 
-static QItemSelectionModelSlots * s = NULL;
-
 QItemSelectionModelSlots::QItemSelectionModelSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -84,10 +82,21 @@ void QItemSelectionModelSlots::selectionChanged( const QItemSelection & selected
 
 void QItemSelectionModelSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QItemSelectionModelSlots( QCoreApplication::instance() );
-  }
+  QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QItemSelectionModelSlots * s = obj->findChild<QItemSelectionModelSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QItemSelectionModelSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

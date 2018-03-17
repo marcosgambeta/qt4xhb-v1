@@ -12,8 +12,6 @@
 
 #include "QGraphicsTextItemSlots.h"
 
-static QGraphicsTextItemSlots * s = NULL;
-
 QGraphicsTextItemSlots::QGraphicsTextItemSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -50,10 +48,21 @@ void QGraphicsTextItemSlots::linkHovered( const QString & link )
 
 void QGraphicsTextItemSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QGraphicsTextItemSlots( QCoreApplication::instance() );
-  }
+  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QGraphicsTextItemSlots * s = obj->findChild<QGraphicsTextItemSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QGraphicsTextItemSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

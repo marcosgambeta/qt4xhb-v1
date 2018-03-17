@@ -302,5 +302,4 @@ HB_FUNC_STATIC( QPRINTDIALOG_ONACCEPTED )
   QPrintDialogSlots_connect_signal( "accepted(QPrinter*)", "accepted(QPrinter*)" );
 }
 
-
 #pragma ENDDUMP

@@ -413,5 +413,4 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ONMESSAGECLICKED )
   QSystemTrayIconSlots_connect_signal( "messageClicked()", "messageClicked()" );
 }
 
-
 #pragma ENDDUMP

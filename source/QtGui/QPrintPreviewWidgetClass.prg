@@ -621,5 +621,4 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ONPREVIEWCHANGED )
   QPrintPreviewWidgetSlots_connect_signal( "previewChanged()", "previewChanged()" );
 }
 
-
 #pragma ENDDUMP

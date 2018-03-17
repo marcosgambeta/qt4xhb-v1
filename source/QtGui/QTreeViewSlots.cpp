@@ -12,8 +12,6 @@
 
 #include "QTreeViewSlots.h"
 
-static QTreeViewSlots * s = NULL;
-
 QTreeViewSlots::QTreeViewSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -50,10 +48,21 @@ void QTreeViewSlots::expanded( const QModelIndex & index )
 
 void QTreeViewSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QTreeViewSlots( QCoreApplication::instance() );
-  }
+  QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QTreeViewSlots * s = obj->findChild<QTreeViewSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QTreeViewSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

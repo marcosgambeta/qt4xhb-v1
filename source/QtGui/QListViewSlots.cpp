@@ -12,8 +12,6 @@
 
 #include "QListViewSlots.h"
 
-static QListViewSlots * s = NULL;
-
 QListViewSlots::QListViewSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -60,10 +58,21 @@ void QListViewSlots::indexesMoved( const QModelIndexList & indexes )
 
 void QListViewSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QListViewSlots( QCoreApplication::instance() );
-  }
+  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QListViewSlots * s = obj->findChild<QListViewSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QListViewSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

@@ -409,5 +409,4 @@ HB_FUNC_STATIC( QCOLUMNVIEW_ONUPDATEPREVIEWWIDGET )
   QColumnViewSlots_connect_signal( "updatePreviewWidget(QModelIndex)", "updatePreviewWidget(QModelIndex)" );
 }
 
-
 #pragma ENDDUMP

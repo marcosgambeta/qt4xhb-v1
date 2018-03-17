@@ -1134,5 +1134,4 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONTEXTVALUESELECTED )
   QInputDialogSlots_connect_signal( "textValueSelected(QString)", "textValueSelected(QString)" );
 }
 
-
 #pragma ENDDUMP

@@ -821,5 +821,4 @@ HB_FUNC_STATIC( QMOVIE_ONUPDATED )
   QMovieSlots_connect_signal( "updated(QRect)", "updated(QRect)" );
 }
 
-
 #pragma ENDDUMP
