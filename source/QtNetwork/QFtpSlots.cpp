@@ -12,8 +12,6 @@
 
 #include "QFtpSlots.h"
 
-static QFtpSlots * s = NULL;
-
 QFtpSlots::QFtpSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -132,10 +130,21 @@ void QFtpSlots::stateChanged( int state )
 
 void QFtpSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QFtpSlots( QCoreApplication::instance() );
-  }
+  QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QFtpSlots * s = obj->findChild<QFtpSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QFtpSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

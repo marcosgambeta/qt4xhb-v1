@@ -12,8 +12,6 @@
 
 #include "QNetworkSessionSlots.h"
 
-static QNetworkSessionSlots * s = NULL;
-
 QNetworkSessionSlots::QNetworkSessionSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -98,10 +96,21 @@ void QNetworkSessionSlots::stateChanged( QNetworkSession::State state )
 
 void QNetworkSessionSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QNetworkSessionSlots( QCoreApplication::instance() );
-  }
+  QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QNetworkSessionSlots * s = obj->findChild<QNetworkSessionSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QNetworkSessionSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

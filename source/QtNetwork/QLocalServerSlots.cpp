@@ -12,8 +12,6 @@
 
 #include "QLocalServerSlots.h"
 
-static QLocalServerSlots * s = NULL;
-
 QLocalServerSlots::QLocalServerSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -35,10 +33,21 @@ void QLocalServerSlots::newConnection()
 
 void QLocalServerSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QLocalServerSlots( QCoreApplication::instance() );
-  }
+  QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QLocalServerSlots * s = obj->findChild<QLocalServerSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QLocalServerSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

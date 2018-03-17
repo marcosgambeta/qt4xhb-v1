@@ -591,5 +591,4 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONSSLERRORS )
   QNetworkAccessManagerSlots_connect_signal( "sslErrors(QNetworkReply*,QList<QSslError>)", "sslErrors(QNetworkReply*,QList<QSslError>)" );
 }
 
-
 #pragma ENDDUMP

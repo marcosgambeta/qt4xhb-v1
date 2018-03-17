@@ -581,5 +581,4 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONUPLOADPROGRESS )
   QNetworkReplySlots_connect_signal( "uploadProgress(qint64,qint64)", "uploadProgress(qint64,qint64)" );
 }
 
-
 #pragma ENDDUMP

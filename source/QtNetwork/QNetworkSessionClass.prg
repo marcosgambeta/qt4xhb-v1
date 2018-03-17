@@ -531,5 +531,4 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONSTATECHANGED )
   QNetworkSessionSlots_connect_signal( "stateChanged(QNetworkSession::State)", "stateChanged(QNetworkSession::State)" );
 }
 
-
 #pragma ENDDUMP

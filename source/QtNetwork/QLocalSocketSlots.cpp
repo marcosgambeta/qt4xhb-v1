@@ -12,8 +12,6 @@
 
 #include "QLocalSocketSlots.h"
 
-static QLocalSocketSlots * s = NULL;
-
 QLocalSocketSlots::QLocalSocketSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -72,10 +70,21 @@ void QLocalSocketSlots::stateChanged( QLocalSocket::LocalSocketState socketState
 
 void QLocalSocketSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QLocalSocketSlots( QCoreApplication::instance() );
-  }
+  QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QLocalSocketSlots * s = obj->findChild<QLocalSocketSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QLocalSocketSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

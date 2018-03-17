@@ -12,8 +12,6 @@
 
 #include "QNetworkConfigurationManagerSlots.h"
 
-static QNetworkConfigurationManagerSlots * s = NULL;
-
 QNetworkConfigurationManagerSlots::QNetworkConfigurationManagerSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -87,10 +85,21 @@ void QNetworkConfigurationManagerSlots::updateCompleted()
 
 void QNetworkConfigurationManagerSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QNetworkConfigurationManagerSlots( QCoreApplication::instance() );
-  }
+  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QNetworkConfigurationManagerSlots * s = obj->findChild<QNetworkConfigurationManagerSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QNetworkConfigurationManagerSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

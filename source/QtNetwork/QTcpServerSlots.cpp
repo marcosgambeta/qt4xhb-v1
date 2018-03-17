@@ -12,8 +12,6 @@
 
 #include "QTcpServerSlots.h"
 
-static QTcpServerSlots * s = NULL;
-
 QTcpServerSlots::QTcpServerSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -35,10 +33,21 @@ void QTcpServerSlots::newConnection()
 
 void QTcpServerSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QTcpServerSlots( QCoreApplication::instance() );
-  }
+  QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QTcpServerSlots * s = obj->findChild<QTcpServerSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QTcpServerSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

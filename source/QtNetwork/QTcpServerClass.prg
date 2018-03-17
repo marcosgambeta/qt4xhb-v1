@@ -433,5 +433,4 @@ HB_FUNC_STATIC( QTCPSERVER_ONNEWCONNECTION )
   QTcpServerSlots_connect_signal( "newConnection()", "newConnection()" );
 }
 
-
 #pragma ENDDUMP

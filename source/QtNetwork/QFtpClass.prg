@@ -701,5 +701,4 @@ HB_FUNC_STATIC( QFTP_ONSTATECHANGED )
   QFtpSlots_connect_signal( "stateChanged(int)", "stateChanged(int)" );
 }
 
-
 #pragma ENDDUMP

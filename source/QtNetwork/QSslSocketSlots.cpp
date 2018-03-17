@@ -12,8 +12,6 @@
 
 #include "QSslSocketSlots.h"
 
-static QSslSocketSlots * s = NULL;
-
 QSslSocketSlots::QSslSocketSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -110,10 +108,21 @@ void QSslSocketSlots::sslErrors( const QList<QSslError> & errors )
 
 void QSslSocketSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QSslSocketSlots( QCoreApplication::instance() );
-  }
+  QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QSslSocketSlots * s = obj->findChild<QSslSocketSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QSslSocketSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
