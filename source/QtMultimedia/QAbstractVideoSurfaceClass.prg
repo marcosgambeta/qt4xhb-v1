@@ -280,5 +280,4 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONSUPPORTEDFORMATSCHANGED )
   QAbstractVideoSurfaceSlots_connect_signal( "supportedFormatsChanged()", "supportedFormatsChanged()" );
 }
 
-
 #pragma ENDDUMP

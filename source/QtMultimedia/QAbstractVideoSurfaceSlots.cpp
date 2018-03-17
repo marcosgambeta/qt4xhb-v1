@@ -12,8 +12,6 @@
 
 #include "QAbstractVideoSurfaceSlots.h"
 
-static QAbstractVideoSurfaceSlots * s = NULL;
-
 QAbstractVideoSurfaceSlots::QAbstractVideoSurfaceSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -61,10 +59,21 @@ void QAbstractVideoSurfaceSlots::supportedFormatsChanged()
 
 void QAbstractVideoSurfaceSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QAbstractVideoSurfaceSlots( QCoreApplication::instance() );
-  }
+  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QAbstractVideoSurfaceSlots * s = obj->findChild<QAbstractVideoSurfaceSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QAbstractVideoSurfaceSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
