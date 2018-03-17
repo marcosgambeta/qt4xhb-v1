@@ -485,5 +485,4 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_ONPROGRESSTEXTCHANGED )
   QFutureWatcherBaseSlots_connect_signal( "progressTextChanged(QString)", "progressTextChanged(QString)" );
 }
 
-
 #pragma ENDDUMP

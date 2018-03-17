@@ -12,8 +12,6 @@
 
 #include "QVariantAnimationSlots.h"
 
-static QVariantAnimationSlots * s = NULL;
-
 QVariantAnimationSlots::QVariantAnimationSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -37,10 +35,21 @@ void QVariantAnimationSlots::valueChanged( const QVariant & value )
 
 void QVariantAnimationSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QVariantAnimationSlots( QCoreApplication::instance() );
-  }
+  QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QVariantAnimationSlots * s = obj->findChild<QVariantAnimationSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QVariantAnimationSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

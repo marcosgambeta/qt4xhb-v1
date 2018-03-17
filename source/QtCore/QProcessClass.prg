@@ -1061,5 +1061,4 @@ HB_FUNC_STATIC( QPROCESS_ONSTATECHANGED )
   QProcessSlots_connect_signal( "stateChanged(QProcess::ProcessState)", "stateChanged(QProcess::ProcessState)" );
 }
 
-
 #pragma ENDDUMP

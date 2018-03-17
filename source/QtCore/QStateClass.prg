@@ -408,5 +408,4 @@ HB_FUNC_STATIC( QSTATE_ONPROPERTIESASSIGNED )
   QStateSlots_connect_signal( "propertiesAssigned()", "propertiesAssigned()" );
 }
 
-
 #pragma ENDDUMP

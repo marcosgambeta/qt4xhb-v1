@@ -798,5 +798,4 @@ HB_FUNC_STATIC( QIODEVICE_ONREADYREAD )
   QIODeviceSlots_connect_signal( "readyRead()", "readyRead()" );
 }
 
-
 #pragma ENDDUMP

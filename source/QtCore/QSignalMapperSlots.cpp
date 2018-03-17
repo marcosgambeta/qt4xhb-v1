@@ -12,8 +12,6 @@
 
 #include "QSignalMapperSlots.h"
 
-static QSignalMapperSlots * s = NULL;
-
 QSignalMapperSlots::QSignalMapperSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -76,10 +74,21 @@ void QSignalMapperSlots::mapped( QObject * o )
 
 void QSignalMapperSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QSignalMapperSlots( QCoreApplication::instance() );
-  }
+  QSignalMapper * obj = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QSignalMapperSlots * s = obj->findChild<QSignalMapperSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QSignalMapperSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

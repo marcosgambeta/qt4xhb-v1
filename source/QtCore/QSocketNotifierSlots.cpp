@@ -12,8 +12,6 @@
 
 #include "QSocketNotifierSlots.h"
 
-static QSocketNotifierSlots * s = NULL;
-
 QSocketNotifierSlots::QSocketNotifierSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -37,10 +35,21 @@ void QSocketNotifierSlots::activated( int socket )
 
 void QSocketNotifierSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QSocketNotifierSlots( QCoreApplication::instance() );
-  }
+  QSocketNotifier * obj = (QSocketNotifier *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QSocketNotifierSlots * s = obj->findChild<QSocketNotifierSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QSocketNotifierSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

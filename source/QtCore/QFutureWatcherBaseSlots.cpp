@@ -12,8 +12,6 @@
 
 #include "QFutureWatcherBaseSlots.h"
 
-static QFutureWatcherBaseSlots * s = NULL;
-
 QFutureWatcherBaseSlots::QFutureWatcherBaseSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -148,10 +146,21 @@ void QFutureWatcherBaseSlots::progressTextChanged( const QString & progressText 
 
 void QFutureWatcherBaseSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QFutureWatcherBaseSlots( QCoreApplication::instance() );
-  }
+  QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QFutureWatcherBaseSlots * s = obj->findChild<QFutureWatcherBaseSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QFutureWatcherBaseSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

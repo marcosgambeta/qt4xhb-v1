@@ -163,5 +163,4 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_ONACTIVATED )
   QSocketNotifierSlots_connect_signal( "activated(int)", "activated(int)" );
 }
 
-
 #pragma ENDDUMP

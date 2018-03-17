@@ -12,8 +12,6 @@
 
 #include "QObjectSlots.h"
 
-static QObjectSlots * s = NULL;
-
 QObjectSlots::QObjectSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -38,10 +36,21 @@ void QObjectSlots::destroyed( QObject * obj )
 
 void QObjectSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QObjectSlots( QCoreApplication::instance() );
-  }
+  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QObjectSlots * s = obj->findChild<QObjectSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QObjectSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

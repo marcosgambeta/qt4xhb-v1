@@ -355,5 +355,4 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_ONAWAKE )
   QAbstractEventDispatcherSlots_connect_signal( "awake()", "awake()" );
 }
 
-
 #pragma ENDDUMP

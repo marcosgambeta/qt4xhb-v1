@@ -12,8 +12,6 @@
 
 #include "QStateMachineSlots.h"
 
-static QStateMachineSlots * s = NULL;
-
 QStateMachineSlots::QStateMachineSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -46,10 +44,21 @@ void QStateMachineSlots::stopped()
 
 void QStateMachineSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QStateMachineSlots( QCoreApplication::instance() );
-  }
+  QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QStateMachineSlots * s = obj->findChild<QStateMachineSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QStateMachineSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

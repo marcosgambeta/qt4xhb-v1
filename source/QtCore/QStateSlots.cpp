@@ -12,8 +12,6 @@
 
 #include "QStateSlots.h"
 
-static QStateSlots * s = NULL;
-
 QStateSlots::QStateSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -46,10 +44,21 @@ void QStateSlots::propertiesAssigned()
 
 void QStateSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QStateSlots( QCoreApplication::instance() );
-  }
+  QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QStateSlots * s = obj->findChild<QStateSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QStateSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

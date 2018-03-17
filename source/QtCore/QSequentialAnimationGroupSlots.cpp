@@ -12,8 +12,6 @@
 
 #include "QSequentialAnimationGroupSlots.h"
 
-static QSequentialAnimationGroupSlots * s = NULL;
-
 QSequentialAnimationGroupSlots::QSequentialAnimationGroupSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -37,10 +35,21 @@ void QSequentialAnimationGroupSlots::currentAnimationChanged( QAbstractAnimation
 
 void QSequentialAnimationGroupSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QSequentialAnimationGroupSlots( QCoreApplication::instance() );
-  }
+  QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QSequentialAnimationGroupSlots * s = obj->findChild<QSequentialAnimationGroupSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QSequentialAnimationGroupSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

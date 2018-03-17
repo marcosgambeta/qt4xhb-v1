@@ -12,8 +12,6 @@
 
 #include "QThreadSlots.h"
 
-static QThreadSlots * s = NULL;
-
 QThreadSlots::QThreadSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -46,10 +44,21 @@ void QThreadSlots::started()
 
 void QThreadSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QThreadSlots( QCoreApplication::instance() );
-  }
+  QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QThreadSlots * s = obj->findChild<QThreadSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QThreadSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
