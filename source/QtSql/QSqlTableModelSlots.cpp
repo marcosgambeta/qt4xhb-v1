@@ -12,8 +12,6 @@
 
 #include "QSqlTableModelSlots.h"
 
-static QSqlTableModelSlots * s = NULL;
-
 QSqlTableModelSlots::QSqlTableModelSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -80,10 +78,21 @@ void QSqlTableModelSlots::primeInsert( int row, QSqlRecord & record )
 
 void QSqlTableModelSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QSqlTableModelSlots( QCoreApplication::instance() );
-  }
+  QSqlTableModel * obj = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QSqlTableModelSlots * s = obj->findChild<QSqlTableModelSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QSqlTableModelSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
