@@ -222,5 +222,4 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ONPROPERTYCHANGED )
   QDesignerPropertyEditorInterfaceSlots_connect_signal( "propertyChanged(QString,QVariant)", "propertyChanged(QString,QVariant)" );
 }
 
-
 #pragma ENDDUMP

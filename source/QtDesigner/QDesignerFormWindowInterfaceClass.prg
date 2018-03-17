@@ -1060,5 +1060,4 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ONWIDGETUNMANAGED )
   QDesignerFormWindowInterfaceSlots_connect_signal( "widgetUnmanaged(QWidget*)", "widgetUnmanaged(QWidget*)" );
 }
 
-
 #pragma ENDDUMP

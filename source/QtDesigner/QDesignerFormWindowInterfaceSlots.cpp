@@ -12,8 +12,6 @@
 
 #include "QDesignerFormWindowInterfaceSlots.h"
 
-static QDesignerFormWindowInterfaceSlots * s = NULL;
-
 QDesignerFormWindowInterfaceSlots::QDesignerFormWindowInterfaceSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -185,10 +183,21 @@ void QDesignerFormWindowInterfaceSlots::widgetUnmanaged( QWidget * widget )
 
 void QDesignerFormWindowInterfaceSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QDesignerFormWindowInterfaceSlots( QCoreApplication::instance() );
-  }
+  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QDesignerFormWindowInterfaceSlots * s = obj->findChild<QDesignerFormWindowInterfaceSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QDesignerFormWindowInterfaceSlots( obj );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
