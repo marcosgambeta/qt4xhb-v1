@@ -48,11 +48,13 @@ void QAbstractEventDispatcherSlots_connect_signal ( const QString & signal, cons
 
   if( obj )
   {
-    QAbstractEventDispatcherSlots * s = obj->findChild<QAbstractEventDispatcherSlots *>();
+    QAbstractEventDispatcherSlots * s = QCoreApplication::instance()->findChild<QAbstractEventDispatcherSlots *>();
 
     if( s == NULL )
     {
-      s = new QAbstractEventDispatcherSlots( obj );
+      s = new QAbstractEventDispatcherSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

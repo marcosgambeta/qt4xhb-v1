@@ -76,11 +76,13 @@ void QTimeLineSlots_connect_signal ( const QString & signal, const QString & slo
 
   if( obj )
   {
-    QTimeLineSlots * s = obj->findChild<QTimeLineSlots *>();
+    QTimeLineSlots * s = QCoreApplication::instance()->findChild<QTimeLineSlots *>();
 
     if( s == NULL )
     {
-      s = new QTimeLineSlots( obj );
+      s = new QTimeLineSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

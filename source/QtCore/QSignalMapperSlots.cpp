@@ -78,11 +78,13 @@ void QSignalMapperSlots_connect_signal ( const QString & signal, const QString &
 
   if( obj )
   {
-    QSignalMapperSlots * s = obj->findChild<QSignalMapperSlots *>();
+    QSignalMapperSlots * s = QCoreApplication::instance()->findChild<QSignalMapperSlots *>();
 
     if( s == NULL )
     {
-      s = new QSignalMapperSlots( obj );
+      s = new QSignalMapperSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

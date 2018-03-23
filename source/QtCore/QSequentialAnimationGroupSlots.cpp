@@ -39,11 +39,13 @@ void QSequentialAnimationGroupSlots_connect_signal ( const QString & signal, con
 
   if( obj )
   {
-    QSequentialAnimationGroupSlots * s = obj->findChild<QSequentialAnimationGroupSlots *>();
+    QSequentialAnimationGroupSlots * s = QCoreApplication::instance()->findChild<QSequentialAnimationGroupSlots *>();
 
     if( s == NULL )
     {
-      s = new QSequentialAnimationGroupSlots( obj );
+      s = new QSequentialAnimationGroupSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

@@ -100,11 +100,13 @@ void QProcessSlots_connect_signal ( const QString & signal, const QString & slot
 
   if( obj )
   {
-    QProcessSlots * s = obj->findChild<QProcessSlots *>();
+    QProcessSlots * s = QCoreApplication::instance()->findChild<QProcessSlots *>();
 
     if( s == NULL )
     {
-      s = new QProcessSlots( obj );
+      s = new QProcessSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

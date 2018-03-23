@@ -39,11 +39,13 @@ void QVariantAnimationSlots_connect_signal ( const QString & signal, const QStri
 
   if( obj )
   {
-    QVariantAnimationSlots * s = obj->findChild<QVariantAnimationSlots *>();
+    QVariantAnimationSlots * s = QCoreApplication::instance()->findChild<QVariantAnimationSlots *>();
 
     if( s == NULL )
     {
-      s = new QVariantAnimationSlots( obj );
+      s = new QVariantAnimationSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

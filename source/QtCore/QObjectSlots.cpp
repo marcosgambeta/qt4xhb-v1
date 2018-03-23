@@ -40,11 +40,13 @@ void QObjectSlots_connect_signal ( const QString & signal, const QString & slot 
 
   if( obj )
   {
-    QObjectSlots * s = obj->findChild<QObjectSlots *>();
+    QObjectSlots * s = QCoreApplication::instance()->findChild<QObjectSlots *>();
 
     if( s == NULL )
     {
-      s = new QObjectSlots( obj );
+      s = new QObjectSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

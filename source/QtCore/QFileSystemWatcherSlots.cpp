@@ -52,11 +52,13 @@ void QFileSystemWatcherSlots_connect_signal ( const QString & signal, const QStr
 
   if( obj )
   {
-    QFileSystemWatcherSlots * s = obj->findChild<QFileSystemWatcherSlots *>();
+    QFileSystemWatcherSlots * s = QCoreApplication::instance()->findChild<QFileSystemWatcherSlots *>();
 
     if( s == NULL )
     {
-      s = new QFileSystemWatcherSlots( obj );
+      s = new QFileSystemWatcherSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

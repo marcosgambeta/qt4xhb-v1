@@ -48,11 +48,13 @@ void QAbstractStateSlots_connect_signal ( const QString & signal, const QString 
 
   if( obj )
   {
-    QAbstractStateSlots * s = obj->findChild<QAbstractStateSlots *>();
+    QAbstractStateSlots * s = QCoreApplication::instance()->findChild<QAbstractStateSlots *>();
 
     if( s == NULL )
     {
-      s = new QAbstractStateSlots( obj );
+      s = new QAbstractStateSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

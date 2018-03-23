@@ -37,11 +37,13 @@ void QCoreApplicationSlots_connect_signal ( const QString & signal, const QStrin
 
   if( obj )
   {
-    QCoreApplicationSlots * s = obj->findChild<QCoreApplicationSlots *>();
+    QCoreApplicationSlots * s = QCoreApplication::instance()->findChild<QCoreApplicationSlots *>();
 
     if( s == NULL )
     {
-      s = new QCoreApplicationSlots( obj );
+      s = new QCoreApplicationSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

@@ -37,11 +37,13 @@ void QTimerSlots_connect_signal ( const QString & signal, const QString & slot )
 
   if( obj )
   {
-    QTimerSlots * s = obj->findChild<QTimerSlots *>();
+    QTimerSlots * s = QCoreApplication::instance()->findChild<QTimerSlots *>();
 
     if( s == NULL )
     {
-      s = new QTimerSlots( obj );
+      s = new QTimerSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

@@ -322,11 +322,13 @@ void QAbstractItemModelSlots_connect_signal ( const QString & signal, const QStr
 
   if( obj )
   {
-    QAbstractItemModelSlots * s = obj->findChild<QAbstractItemModelSlots *>();
+    QAbstractItemModelSlots * s = QCoreApplication::instance()->findChild<QAbstractItemModelSlots *>();
 
     if( s == NULL )
     {
-      s = new QAbstractItemModelSlots( obj );
+      s = new QAbstractItemModelSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

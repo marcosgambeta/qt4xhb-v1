@@ -48,11 +48,13 @@ void QStateSlots_connect_signal ( const QString & signal, const QString & slot )
 
   if( obj )
   {
-    QStateSlots * s = obj->findChild<QStateSlots *>();
+    QStateSlots * s = QCoreApplication::instance()->findChild<QStateSlots *>();
 
     if( s == NULL )
     {
-      s = new QStateSlots( obj );
+      s = new QStateSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

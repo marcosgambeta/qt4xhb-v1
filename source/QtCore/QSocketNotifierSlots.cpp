@@ -39,11 +39,13 @@ void QSocketNotifierSlots_connect_signal ( const QString & signal, const QString
 
   if( obj )
   {
-    QSocketNotifierSlots * s = obj->findChild<QSocketNotifierSlots *>();
+    QSocketNotifierSlots * s = QCoreApplication::instance()->findChild<QSocketNotifierSlots *>();
 
     if( s == NULL )
     {
-      s = new QSocketNotifierSlots( obj );
+      s = new QSocketNotifierSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

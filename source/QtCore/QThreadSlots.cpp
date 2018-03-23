@@ -48,11 +48,13 @@ void QThreadSlots_connect_signal ( const QString & signal, const QString & slot 
 
   if( obj )
   {
-    QThreadSlots * s = obj->findChild<QThreadSlots *>();
+    QThreadSlots * s = QCoreApplication::instance()->findChild<QThreadSlots *>();
 
     if( s == NULL )
     {
-      s = new QThreadSlots( obj );
+      s = new QThreadSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

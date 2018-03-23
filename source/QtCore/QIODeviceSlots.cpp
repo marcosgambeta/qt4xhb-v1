@@ -72,11 +72,13 @@ void QIODeviceSlots_connect_signal ( const QString & signal, const QString & slo
 
   if( obj )
   {
-    QIODeviceSlots * s = obj->findChild<QIODeviceSlots *>();
+    QIODeviceSlots * s = QCoreApplication::instance()->findChild<QIODeviceSlots *>();
 
     if( s == NULL )
     {
-      s = new QIODeviceSlots( obj );
+      s = new QIODeviceSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

@@ -150,11 +150,13 @@ void QFutureWatcherBaseSlots_connect_signal ( const QString & signal, const QStr
 
   if( obj )
   {
-    QFutureWatcherBaseSlots * s = obj->findChild<QFutureWatcherBaseSlots *>();
+    QFutureWatcherBaseSlots * s = QCoreApplication::instance()->findChild<QFutureWatcherBaseSlots *>();
 
     if( s == NULL )
     {
-      s = new QFutureWatcherBaseSlots( obj );
+      s = new QFutureWatcherBaseSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

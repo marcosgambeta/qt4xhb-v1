@@ -37,11 +37,13 @@ void QAbstractTransitionSlots_connect_signal ( const QString & signal, const QSt
 
   if( obj )
   {
-    QAbstractTransitionSlots * s = obj->findChild<QAbstractTransitionSlots *>();
+    QAbstractTransitionSlots * s = QCoreApplication::instance()->findChild<QAbstractTransitionSlots *>();
 
     if( s == NULL )
     {
-      s = new QAbstractTransitionSlots( obj );
+      s = new QAbstractTransitionSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );
