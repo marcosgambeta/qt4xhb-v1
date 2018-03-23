@@ -125,11 +125,13 @@ void QGraphicsObjectSlots_connect_signal ( const QString & signal, const QString
 
   if( obj )
   {
-    QGraphicsObjectSlots * s = obj->findChild<QGraphicsObjectSlots *>();
+    QGraphicsObjectSlots * s = QCoreApplication::instance()->findChild<QGraphicsObjectSlots *>();
 
     if( s == NULL )
     {
-      s = new QGraphicsObjectSlots( obj );
+      s = new QGraphicsObjectSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

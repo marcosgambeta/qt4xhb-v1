@@ -39,11 +39,13 @@ void QSplashScreenSlots_connect_signal ( const QString & signal, const QString &
 
   if( obj )
   {
-    QSplashScreenSlots * s = obj->findChild<QSplashScreenSlots *>();
+    QSplashScreenSlots * s = QCoreApplication::instance()->findChild<QSplashScreenSlots *>();
 
     if( s == NULL )
     {
-      s = new QSplashScreenSlots( obj );
+      s = new QSplashScreenSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

@@ -78,11 +78,13 @@ void QCalendarWidgetSlots_connect_signal ( const QString & signal, const QString
 
   if( obj )
   {
-    QCalendarWidgetSlots * s = obj->findChild<QCalendarWidgetSlots *>();
+    QCalendarWidgetSlots * s = QCoreApplication::instance()->findChild<QCalendarWidgetSlots *>();
 
     if( s == NULL )
     {
-      s = new QCalendarWidgetSlots( obj );
+      s = new QCalendarWidgetSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

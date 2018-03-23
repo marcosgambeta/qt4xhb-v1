@@ -69,11 +69,13 @@ void QFileSystemModelSlots_connect_signal ( const QString & signal, const QStrin
 
   if( obj )
   {
-    QFileSystemModelSlots * s = obj->findChild<QFileSystemModelSlots *>();
+    QFileSystemModelSlots * s = QCoreApplication::instance()->findChild<QFileSystemModelSlots *>();
 
     if( s == NULL )
     {
-      s = new QFileSystemModelSlots( obj );
+      s = new QFileSystemModelSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

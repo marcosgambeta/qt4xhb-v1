@@ -239,11 +239,13 @@ void QTableWidgetSlots_connect_signal ( const QString & signal, const QString & 
 
   if( obj )
   {
-    QTableWidgetSlots * s = obj->findChild<QTableWidgetSlots *>();
+    QTableWidgetSlots * s = QCoreApplication::instance()->findChild<QTableWidgetSlots *>();
 
     if( s == NULL )
     {
-      s = new QTableWidgetSlots( obj );
+      s = new QTableWidgetSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

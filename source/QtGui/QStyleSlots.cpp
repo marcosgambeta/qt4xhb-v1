@@ -67,11 +67,13 @@ void QStyleSlots_connect_signal ( const QString & signal, const QString & slot )
 
   if( obj )
   {
-    QStyleSlots * s = obj->findChild<QStyleSlots *>();
+    QStyleSlots * s = QCoreApplication::instance()->findChild<QStyleSlots *>();
 
     if( s == NULL )
     {
-      s = new QStyleSlots( obj );
+      s = new QStyleSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

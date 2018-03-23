@@ -78,11 +78,13 @@ void QAbstractTextDocumentLayoutSlots_connect_signal ( const QString & signal, c
 
   if( obj )
   {
-    QAbstractTextDocumentLayoutSlots * s = obj->findChild<QAbstractTextDocumentLayoutSlots *>();
+    QAbstractTextDocumentLayoutSlots * s = QCoreApplication::instance()->findChild<QAbstractTextDocumentLayoutSlots *>();
 
     if( s == NULL )
     {
-      s = new QAbstractTextDocumentLayoutSlots( obj );
+      s = new QAbstractTextDocumentLayoutSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

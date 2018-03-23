@@ -52,11 +52,13 @@ void QGraphicsTextItemSlots_connect_signal ( const QString & signal, const QStri
 
   if( obj )
   {
-    QGraphicsTextItemSlots * s = obj->findChild<QGraphicsTextItemSlots *>();
+    QGraphicsTextItemSlots * s = QCoreApplication::instance()->findChild<QGraphicsTextItemSlots *>();
 
     if( s == NULL )
     {
-      s = new QGraphicsTextItemSlots( obj );
+      s = new QGraphicsTextItemSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

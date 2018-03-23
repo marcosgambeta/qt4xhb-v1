@@ -52,11 +52,13 @@ void QGroupBoxSlots_connect_signal ( const QString & signal, const QString & slo
 
   if( obj )
   {
-    QGroupBoxSlots * s = obj->findChild<QGroupBoxSlots *>();
+    QGroupBoxSlots * s = QCoreApplication::instance()->findChild<QGroupBoxSlots *>();
 
     if( s == NULL )
     {
-      s = new QGroupBoxSlots( obj );
+      s = new QGroupBoxSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

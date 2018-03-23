@@ -50,11 +50,13 @@ void QSystemTrayIconSlots_connect_signal ( const QString & signal, const QString
 
   if( obj )
   {
-    QSystemTrayIconSlots * s = obj->findChild<QSystemTrayIconSlots *>();
+    QSystemTrayIconSlots * s = QCoreApplication::instance()->findChild<QSystemTrayIconSlots *>();
 
     if( s == NULL )
     {
-      s = new QSystemTrayIconSlots( obj );
+      s = new QSystemTrayIconSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

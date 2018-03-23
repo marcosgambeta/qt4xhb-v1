@@ -104,11 +104,13 @@ void QUndoStackSlots_connect_signal ( const QString & signal, const QString & sl
 
   if( obj )
   {
-    QUndoStackSlots * s = obj->findChild<QUndoStackSlots *>();
+    QUndoStackSlots * s = QCoreApplication::instance()->findChild<QUndoStackSlots *>();
 
     if( s == NULL )
     {
-      s = new QUndoStackSlots( obj );
+      s = new QUndoStackSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

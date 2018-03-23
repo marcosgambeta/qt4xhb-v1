@@ -39,11 +39,13 @@ void QStatusBarSlots_connect_signal ( const QString & signal, const QString & sl
 
   if( obj )
   {
-    QStatusBarSlots * s = obj->findChild<QStatusBarSlots *>();
+    QStatusBarSlots * s = QCoreApplication::instance()->findChild<QStatusBarSlots *>();
 
     if( s == NULL )
     {
-      s = new QStatusBarSlots( obj );
+      s = new QStatusBarSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

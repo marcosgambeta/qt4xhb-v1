@@ -65,11 +65,13 @@ void QDateTimeEditSlots_connect_signal ( const QString & signal, const QString &
 
   if( obj )
   {
-    QDateTimeEditSlots * s = obj->findChild<QDateTimeEditSlots *>();
+    QDateTimeEditSlots * s = QCoreApplication::instance()->findChild<QDateTimeEditSlots *>();
 
     if( s == NULL )
     {
-      s = new QDateTimeEditSlots( obj );
+      s = new QDateTimeEditSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

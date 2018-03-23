@@ -37,11 +37,13 @@ void QLCDNumberSlots_connect_signal ( const QString & signal, const QString & sl
 
   if( obj )
   {
-    QLCDNumberSlots * s = obj->findChild<QLCDNumberSlots *>();
+    QLCDNumberSlots * s = QCoreApplication::instance()->findChild<QLCDNumberSlots *>();
 
     if( s == NULL )
     {
-      s = new QLCDNumberSlots( obj );
+      s = new QLCDNumberSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

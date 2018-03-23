@@ -37,11 +37,13 @@ void QWizardPageSlots_connect_signal ( const QString & signal, const QString & s
 
   if( obj )
   {
-    QWizardPageSlots * s = obj->findChild<QWizardPageSlots *>();
+    QWizardPageSlots * s = QCoreApplication::instance()->findChild<QWizardPageSlots *>();
 
     if( s == NULL )
     {
-      s = new QWizardPageSlots( obj );
+      s = new QWizardPageSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

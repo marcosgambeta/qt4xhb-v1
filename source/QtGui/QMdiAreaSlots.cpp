@@ -39,11 +39,13 @@ void QMdiAreaSlots_connect_signal ( const QString & signal, const QString & slot
 
   if( obj )
   {
-    QMdiAreaSlots * s = obj->findChild<QMdiAreaSlots *>();
+    QMdiAreaSlots * s = QCoreApplication::instance()->findChild<QMdiAreaSlots *>();
 
     if( s == NULL )
     {
-      s = new QMdiAreaSlots( obj );
+      s = new QMdiAreaSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

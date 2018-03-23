@@ -72,11 +72,13 @@ void QDialogButtonBoxSlots_connect_signal ( const QString & signal, const QStrin
 
   if( obj )
   {
-    QDialogButtonBoxSlots * s = obj->findChild<QDialogButtonBoxSlots *>();
+    QDialogButtonBoxSlots * s = QCoreApplication::instance()->findChild<QDialogButtonBoxSlots *>();
 
     if( s == NULL )
     {
-      s = new QDialogButtonBoxSlots( obj );
+      s = new QDialogButtonBoxSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

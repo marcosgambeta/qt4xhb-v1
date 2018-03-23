@@ -52,11 +52,13 @@ void QSpinBoxSlots_connect_signal ( const QString & signal, const QString & slot
 
   if( obj )
   {
-    QSpinBoxSlots * s = obj->findChild<QSpinBoxSlots *>();
+    QSpinBoxSlots * s = QCoreApplication::instance()->findChild<QSpinBoxSlots *>();
 
     if( s == NULL )
     {
-      s = new QSpinBoxSlots( obj );
+      s = new QSpinBoxSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

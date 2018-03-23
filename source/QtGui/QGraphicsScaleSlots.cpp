@@ -81,11 +81,13 @@ void QGraphicsScaleSlots_connect_signal ( const QString & signal, const QString 
 
   if( obj )
   {
-    QGraphicsScaleSlots * s = obj->findChild<QGraphicsScaleSlots *>();
+    QGraphicsScaleSlots * s = QCoreApplication::instance()->findChild<QGraphicsScaleSlots *>();
 
     if( s == NULL )
     {
-      s = new QGraphicsScaleSlots( obj );
+      s = new QGraphicsScaleSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

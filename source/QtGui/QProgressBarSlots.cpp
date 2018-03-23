@@ -39,11 +39,13 @@ void QProgressBarSlots_connect_signal ( const QString & signal, const QString & 
 
   if( obj )
   {
-    QProgressBarSlots * s = obj->findChild<QProgressBarSlots *>();
+    QProgressBarSlots * s = QCoreApplication::instance()->findChild<QProgressBarSlots *>();
 
     if( s == NULL )
     {
-      s = new QProgressBarSlots( obj );
+      s = new QProgressBarSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

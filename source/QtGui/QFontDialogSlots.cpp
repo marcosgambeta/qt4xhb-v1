@@ -52,11 +52,13 @@ void QFontDialogSlots_connect_signal ( const QString & signal, const QString & s
 
   if( obj )
   {
-    QFontDialogSlots * s = obj->findChild<QFontDialogSlots *>();
+    QFontDialogSlots * s = QCoreApplication::instance()->findChild<QFontDialogSlots *>();
 
     if( s == NULL )
     {
-      s = new QFontDialogSlots( obj );
+      s = new QFontDialogSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

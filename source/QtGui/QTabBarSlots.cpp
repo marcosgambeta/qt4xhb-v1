@@ -67,11 +67,13 @@ void QTabBarSlots_connect_signal ( const QString & signal, const QString & slot 
 
   if( obj )
   {
-    QTabBarSlots * s = obj->findChild<QTabBarSlots *>();
+    QTabBarSlots * s = QCoreApplication::instance()->findChild<QTabBarSlots *>();
 
     if( s == NULL )
     {
-      s = new QTabBarSlots( obj );
+      s = new QTabBarSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

@@ -78,11 +78,13 @@ void QCompleterSlots_connect_signal ( const QString & signal, const QString & sl
 
   if( obj )
   {
-    QCompleterSlots * s = obj->findChild<QCompleterSlots *>();
+    QCompleterSlots * s = QCoreApplication::instance()->findChild<QCompleterSlots *>();
 
     if( s == NULL )
     {
-      s = new QCompleterSlots( obj );
+      s = new QCompleterSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

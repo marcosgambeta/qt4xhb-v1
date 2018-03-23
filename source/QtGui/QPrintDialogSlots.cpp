@@ -39,11 +39,13 @@ void QPrintDialogSlots_connect_signal ( const QString & signal, const QString & 
 
   if( obj )
   {
-    QPrintDialogSlots * s = obj->findChild<QPrintDialogSlots *>();
+    QPrintDialogSlots * s = QCoreApplication::instance()->findChild<QPrintDialogSlots *>();
 
     if( s == NULL )
     {
-      s = new QPrintDialogSlots( obj );
+      s = new QPrintDialogSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

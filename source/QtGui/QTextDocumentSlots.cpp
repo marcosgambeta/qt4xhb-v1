@@ -141,11 +141,13 @@ void QTextDocumentSlots_connect_signal ( const QString & signal, const QString &
 
   if( obj )
   {
-    QTextDocumentSlots * s = obj->findChild<QTextDocumentSlots *>();
+    QTextDocumentSlots * s = QCoreApplication::instance()->findChild<QTextDocumentSlots *>();
 
     if( s == NULL )
     {
-      s = new QTextDocumentSlots( obj );
+      s = new QTextDocumentSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

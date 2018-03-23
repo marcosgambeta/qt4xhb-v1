@@ -52,11 +52,13 @@ void QActionGroupSlots_connect_signal ( const QString & signal, const QString & 
 
   if( obj )
   {
-    QActionGroupSlots * s = obj->findChild<QActionGroupSlots *>();
+    QActionGroupSlots * s = QCoreApplication::instance()->findChild<QActionGroupSlots *>();
 
     if( s == NULL )
     {
-      s = new QActionGroupSlots( obj );
+      s = new QActionGroupSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

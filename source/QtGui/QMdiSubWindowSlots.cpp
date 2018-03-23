@@ -52,11 +52,13 @@ void QMdiSubWindowSlots_connect_signal ( const QString & signal, const QString &
 
   if( obj )
   {
-    QMdiSubWindowSlots * s = obj->findChild<QMdiSubWindowSlots *>();
+    QMdiSubWindowSlots * s = QCoreApplication::instance()->findChild<QMdiSubWindowSlots *>();
 
     if( s == NULL )
     {
-      s = new QMdiSubWindowSlots( obj );
+      s = new QMdiSubWindowSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

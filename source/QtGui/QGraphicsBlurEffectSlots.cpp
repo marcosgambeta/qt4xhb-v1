@@ -52,11 +52,13 @@ void QGraphicsBlurEffectSlots_connect_signal ( const QString & signal, const QSt
 
   if( obj )
   {
-    QGraphicsBlurEffectSlots * s = obj->findChild<QGraphicsBlurEffectSlots *>();
+    QGraphicsBlurEffectSlots * s = QCoreApplication::instance()->findChild<QGraphicsBlurEffectSlots *>();
 
     if( s == NULL )
     {
-      s = new QGraphicsBlurEffectSlots( obj );
+      s = new QGraphicsBlurEffectSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

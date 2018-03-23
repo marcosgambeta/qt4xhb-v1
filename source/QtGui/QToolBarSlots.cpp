@@ -130,11 +130,13 @@ void QToolBarSlots_connect_signal ( const QString & signal, const QString & slot
 
   if( obj )
   {
-    QToolBarSlots * s = obj->findChild<QToolBarSlots *>();
+    QToolBarSlots * s = QCoreApplication::instance()->findChild<QToolBarSlots *>();
 
     if( s == NULL )
     {
-      s = new QToolBarSlots( obj );
+      s = new QToolBarSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

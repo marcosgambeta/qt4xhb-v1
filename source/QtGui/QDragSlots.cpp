@@ -52,11 +52,13 @@ void QDragSlots_connect_signal ( const QString & signal, const QString & slot )
 
   if( obj )
   {
-    QDragSlots * s = obj->findChild<QDragSlots *>();
+    QDragSlots * s = QCoreApplication::instance()->findChild<QDragSlots *>();
 
     if( s == NULL )
     {
-      s = new QDragSlots( obj );
+      s = new QDragSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

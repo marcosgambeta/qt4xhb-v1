@@ -181,11 +181,13 @@ void QHeaderViewSlots_connect_signal ( const QString & signal, const QString & s
 
   if( obj )
   {
-    QHeaderViewSlots * s = obj->findChild<QHeaderViewSlots *>();
+    QHeaderViewSlots * s = QCoreApplication::instance()->findChild<QHeaderViewSlots *>();
 
     if( s == NULL )
     {
-      s = new QHeaderViewSlots( obj );
+      s = new QHeaderViewSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

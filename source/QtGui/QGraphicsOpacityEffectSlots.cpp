@@ -52,11 +52,13 @@ void QGraphicsOpacityEffectSlots_connect_signal ( const QString & signal, const 
 
   if( obj )
   {
-    QGraphicsOpacityEffectSlots * s = obj->findChild<QGraphicsOpacityEffectSlots *>();
+    QGraphicsOpacityEffectSlots * s = QCoreApplication::instance()->findChild<QGraphicsOpacityEffectSlots *>();
 
     if( s == NULL )
     {
-      s = new QGraphicsOpacityEffectSlots( obj );
+      s = new QGraphicsOpacityEffectSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

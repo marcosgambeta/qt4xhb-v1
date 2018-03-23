@@ -59,11 +59,13 @@ void QGraphicsRotationSlots_connect_signal ( const QString & signal, const QStri
 
   if( obj )
   {
-    QGraphicsRotationSlots * s = obj->findChild<QGraphicsRotationSlots *>();
+    QGraphicsRotationSlots * s = QCoreApplication::instance()->findChild<QGraphicsRotationSlots *>();
 
     if( s == NULL )
     {
-      s = new QGraphicsRotationSlots( obj );
+      s = new QGraphicsRotationSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

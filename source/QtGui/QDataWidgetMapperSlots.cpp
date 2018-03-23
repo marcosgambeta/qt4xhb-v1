@@ -39,11 +39,13 @@ void QDataWidgetMapperSlots_connect_signal ( const QString & signal, const QStri
 
   if( obj )
   {
-    QDataWidgetMapperSlots * s = obj->findChild<QDataWidgetMapperSlots *>();
+    QDataWidgetMapperSlots * s = QCoreApplication::instance()->findChild<QDataWidgetMapperSlots *>();
 
     if( s == NULL )
     {
-      s = new QDataWidgetMapperSlots( obj );
+      s = new QDataWidgetMapperSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

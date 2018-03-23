@@ -52,11 +52,13 @@ void QTabWidgetSlots_connect_signal ( const QString & signal, const QString & sl
 
   if( obj )
   {
-    QTabWidgetSlots * s = obj->findChild<QTabWidgetSlots *>();
+    QTabWidgetSlots * s = QCoreApplication::instance()->findChild<QTabWidgetSlots *>();
 
     if( s == NULL )
     {
-      s = new QTabWidgetSlots( obj );
+      s = new QTabWidgetSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

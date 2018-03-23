@@ -62,11 +62,13 @@ void QListViewSlots_connect_signal ( const QString & signal, const QString & slo
 
   if( obj )
   {
-    QListViewSlots * s = obj->findChild<QListViewSlots *>();
+    QListViewSlots * s = QCoreApplication::instance()->findChild<QListViewSlots *>();
 
     if( s == NULL )
     {
-      s = new QListViewSlots( obj );
+      s = new QListViewSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

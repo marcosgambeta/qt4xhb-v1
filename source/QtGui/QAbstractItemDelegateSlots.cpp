@@ -67,11 +67,13 @@ void QAbstractItemDelegateSlots_connect_signal ( const QString & signal, const Q
 
   if( obj )
   {
-    QAbstractItemDelegateSlots * s = obj->findChild<QAbstractItemDelegateSlots *>();
+    QAbstractItemDelegateSlots * s = QCoreApplication::instance()->findChild<QAbstractItemDelegateSlots *>();
 
     if( s == NULL )
     {
-      s = new QAbstractItemDelegateSlots( obj );
+      s = new QAbstractItemDelegateSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

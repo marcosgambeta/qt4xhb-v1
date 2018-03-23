@@ -39,11 +39,13 @@ void QWorkspaceSlots_connect_signal ( const QString & signal, const QString & sl
 
   if( obj )
   {
-    QWorkspaceSlots * s = obj->findChild<QWorkspaceSlots *>();
+    QWorkspaceSlots * s = QCoreApplication::instance()->findChild<QWorkspaceSlots *>();
 
     if( s == NULL )
     {
-      s = new QWorkspaceSlots( obj );
+      s = new QWorkspaceSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

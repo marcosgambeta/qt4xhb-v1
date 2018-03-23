@@ -139,11 +139,13 @@ void QPlainTextEditSlots_connect_signal ( const QString & signal, const QString 
 
   if( obj )
   {
-    QPlainTextEditSlots * s = obj->findChild<QPlainTextEditSlots *>();
+    QPlainTextEditSlots * s = QCoreApplication::instance()->findChild<QPlainTextEditSlots *>();
 
     if( s == NULL )
     {
-      s = new QPlainTextEditSlots( obj );
+      s = new QPlainTextEditSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

@@ -98,11 +98,13 @@ void QFileDialogSlots_connect_signal ( const QString & signal, const QString & s
 
   if( obj )
   {
-    QFileDialogSlots * s = obj->findChild<QFileDialogSlots *>();
+    QFileDialogSlots * s = QCoreApplication::instance()->findChild<QFileDialogSlots *>();
 
     if( s == NULL )
     {
-      s = new QFileDialogSlots( obj );
+      s = new QFileDialogSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

@@ -91,11 +91,13 @@ void QDockWidgetSlots_connect_signal ( const QString & signal, const QString & s
 
   if( obj )
   {
-    QDockWidgetSlots * s = obj->findChild<QDockWidgetSlots *>();
+    QDockWidgetSlots * s = QCoreApplication::instance()->findChild<QDockWidgetSlots *>();
 
     if( s == NULL )
     {
-      s = new QDockWidgetSlots( obj );
+      s = new QDockWidgetSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

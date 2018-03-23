@@ -72,11 +72,13 @@ void QClipboardSlots_connect_signal ( const QString & signal, const QString & sl
 
   if( obj )
   {
-    QClipboardSlots * s = obj->findChild<QClipboardSlots *>();
+    QClipboardSlots * s = QCoreApplication::instance()->findChild<QClipboardSlots *>();
 
     if( s == NULL )
     {
-      s = new QClipboardSlots( obj );
+      s = new QClipboardSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

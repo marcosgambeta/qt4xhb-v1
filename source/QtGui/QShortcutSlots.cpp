@@ -48,11 +48,13 @@ void QShortcutSlots_connect_signal ( const QString & signal, const QString & slo
 
   if( obj )
   {
-    QShortcutSlots * s = obj->findChild<QShortcutSlots *>();
+    QShortcutSlots * s = QCoreApplication::instance()->findChild<QShortcutSlots *>();
 
     if( s == NULL )
     {
-      s = new QShortcutSlots( obj );
+      s = new QShortcutSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

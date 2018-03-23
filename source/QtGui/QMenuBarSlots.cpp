@@ -52,11 +52,13 @@ void QMenuBarSlots_connect_signal ( const QString & signal, const QString & slot
 
   if( obj )
   {
-    QMenuBarSlots * s = obj->findChild<QMenuBarSlots *>();
+    QMenuBarSlots * s = QCoreApplication::instance()->findChild<QMenuBarSlots *>();
 
     if( s == NULL )
     {
-      s = new QMenuBarSlots( obj );
+      s = new QMenuBarSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

@@ -74,11 +74,13 @@ void QAbstractButtonSlots_connect_signal ( const QString & signal, const QString
 
   if( obj )
   {
-    QAbstractButtonSlots * s = obj->findChild<QAbstractButtonSlots *>();
+    QAbstractButtonSlots * s = QCoreApplication::instance()->findChild<QAbstractButtonSlots *>();
 
     if( s == NULL )
     {
-      s = new QAbstractButtonSlots( obj );
+      s = new QAbstractButtonSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

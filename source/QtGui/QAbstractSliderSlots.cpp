@@ -102,11 +102,13 @@ void QAbstractSliderSlots_connect_signal ( const QString & signal, const QString
 
   if( obj )
   {
-    QAbstractSliderSlots * s = obj->findChild<QAbstractSliderSlots *>();
+    QAbstractSliderSlots * s = QCoreApplication::instance()->findChild<QAbstractSliderSlots *>();
 
     if( s == NULL )
     {
-      s = new QAbstractSliderSlots( obj );
+      s = new QAbstractSliderSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

@@ -41,11 +41,13 @@ void QSplitterSlots_connect_signal ( const QString & signal, const QString & slo
 
   if( obj )
   {
-    QSplitterSlots * s = obj->findChild<QSplitterSlots *>();
+    QSplitterSlots * s = QCoreApplication::instance()->findChild<QSplitterSlots *>();
 
     if( s == NULL )
     {
-      s = new QSplitterSlots( obj );
+      s = new QSplitterSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

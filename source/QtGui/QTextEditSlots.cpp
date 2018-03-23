@@ -111,11 +111,13 @@ void QTextEditSlots_connect_signal ( const QString & signal, const QString & slo
 
   if( obj )
   {
-    QTextEditSlots * s = obj->findChild<QTextEditSlots *>();
+    QTextEditSlots * s = QCoreApplication::instance()->findChild<QTextEditSlots *>();
 
     if( s == NULL )
     {
-      s = new QTextEditSlots( obj );
+      s = new QTextEditSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

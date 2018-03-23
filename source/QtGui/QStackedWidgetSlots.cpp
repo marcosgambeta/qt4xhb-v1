@@ -52,11 +52,13 @@ void QStackedWidgetSlots_connect_signal ( const QString & signal, const QString 
 
   if( obj )
   {
-    QStackedWidgetSlots * s = obj->findChild<QStackedWidgetSlots *>();
+    QStackedWidgetSlots * s = QCoreApplication::instance()->findChild<QStackedWidgetSlots *>();
 
     if( s == NULL )
     {
-      s = new QStackedWidgetSlots( obj );
+      s = new QStackedWidgetSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

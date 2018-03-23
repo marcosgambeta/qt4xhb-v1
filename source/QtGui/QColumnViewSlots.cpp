@@ -39,11 +39,13 @@ void QColumnViewSlots_connect_signal ( const QString & signal, const QString & s
 
   if( obj )
   {
-    QColumnViewSlots * s = obj->findChild<QColumnViewSlots *>();
+    QColumnViewSlots * s = QCoreApplication::instance()->findChild<QColumnViewSlots *>();
 
     if( s == NULL )
     {
-      s = new QColumnViewSlots( obj );
+      s = new QColumnViewSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

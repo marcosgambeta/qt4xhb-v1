@@ -117,11 +117,13 @@ void QComboBoxSlots_connect_signal ( const QString & signal, const QString & slo
 
   if( obj )
   {
-    QComboBoxSlots * s = obj->findChild<QComboBoxSlots *>();
+    QComboBoxSlots * s = QCoreApplication::instance()->findChild<QComboBoxSlots *>();
 
     if( s == NULL )
     {
-      s = new QComboBoxSlots( obj );
+      s = new QComboBoxSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

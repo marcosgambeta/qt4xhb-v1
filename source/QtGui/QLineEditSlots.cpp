@@ -100,11 +100,13 @@ void QLineEditSlots_connect_signal ( const QString & signal, const QString & slo
 
   if( obj )
   {
-    QLineEditSlots * s = obj->findChild<QLineEditSlots *>();
+    QLineEditSlots * s = QCoreApplication::instance()->findChild<QLineEditSlots *>();
 
     if( s == NULL )
     {
-      s = new QLineEditSlots( obj );
+      s = new QLineEditSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

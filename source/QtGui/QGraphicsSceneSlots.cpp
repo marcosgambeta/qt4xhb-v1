@@ -86,11 +86,13 @@ void QGraphicsSceneSlots_connect_signal ( const QString & signal, const QString 
 
   if( obj )
   {
-    QGraphicsSceneSlots * s = obj->findChild<QGraphicsSceneSlots *>();
+    QGraphicsSceneSlots * s = QCoreApplication::instance()->findChild<QGraphicsSceneSlots *>();
 
     if( s == NULL )
     {
-      s = new QGraphicsSceneSlots( obj );
+      s = new QGraphicsSceneSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

@@ -74,11 +74,13 @@ void QActionSlots_connect_signal ( const QString & signal, const QString & slot 
 
   if( obj )
   {
-    QActionSlots * s = obj->findChild<QActionSlots *>();
+    QActionSlots * s = QCoreApplication::instance()->findChild<QActionSlots *>();
 
     if( s == NULL )
     {
-      s = new QActionSlots( obj );
+      s = new QActionSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

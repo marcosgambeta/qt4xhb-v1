@@ -104,11 +104,13 @@ void QInputDialogSlots_connect_signal ( const QString & signal, const QString & 
 
   if( obj )
   {
-    QInputDialogSlots * s = obj->findChild<QInputDialogSlots *>();
+    QInputDialogSlots * s = QCoreApplication::instance()->findChild<QInputDialogSlots *>();
 
     if( s == NULL )
     {
-      s = new QInputDialogSlots( obj );
+      s = new QInputDialogSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

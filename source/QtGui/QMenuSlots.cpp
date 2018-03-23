@@ -74,11 +74,13 @@ void QMenuSlots_connect_signal ( const QString & signal, const QString & slot )
 
   if( obj )
   {
-    QMenuSlots * s = obj->findChild<QMenuSlots *>();
+    QMenuSlots * s = QCoreApplication::instance()->findChild<QMenuSlots *>();
 
     if( s == NULL )
     {
-      s = new QMenuSlots( obj );
+      s = new QMenuSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

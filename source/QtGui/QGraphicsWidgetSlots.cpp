@@ -37,11 +37,13 @@ void QGraphicsWidgetSlots_connect_signal ( const QString & signal, const QString
 
   if( obj )
   {
-    QGraphicsWidgetSlots * s = obj->findChild<QGraphicsWidgetSlots *>();
+    QGraphicsWidgetSlots * s = QCoreApplication::instance()->findChild<QGraphicsWidgetSlots *>();
 
     if( s == NULL )
     {
-      s = new QGraphicsWidgetSlots( obj );
+      s = new QGraphicsWidgetSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

@@ -65,11 +65,13 @@ void QDesktopWidgetSlots_connect_signal ( const QString & signal, const QString 
 
   if( obj )
   {
-    QDesktopWidgetSlots * s = obj->findChild<QDesktopWidgetSlots *>();
+    QDesktopWidgetSlots * s = QCoreApplication::instance()->findChild<QDesktopWidgetSlots *>();
 
     if( s == NULL )
     {
-      s = new QDesktopWidgetSlots( obj );
+      s = new QDesktopWidgetSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

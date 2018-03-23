@@ -39,11 +39,13 @@ void QToolButtonSlots_connect_signal ( const QString & signal, const QString & s
 
   if( obj )
   {
-    QToolButtonSlots * s = obj->findChild<QToolButtonSlots *>();
+    QToolButtonSlots * s = QCoreApplication::instance()->findChild<QToolButtonSlots *>();
 
     if( s == NULL )
     {
-      s = new QToolButtonSlots( obj );
+      s = new QToolButtonSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

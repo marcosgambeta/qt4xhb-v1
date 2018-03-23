@@ -37,11 +37,13 @@ void QProgressDialogSlots_connect_signal ( const QString & signal, const QString
 
   if( obj )
   {
-    QProgressDialogSlots * s = obj->findChild<QProgressDialogSlots *>();
+    QProgressDialogSlots * s = QCoreApplication::instance()->findChild<QProgressDialogSlots *>();
 
     if( s == NULL )
     {
-      s = new QProgressDialogSlots( obj );
+      s = new QProgressDialogSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

@@ -39,11 +39,13 @@ void QMessageBoxSlots_connect_signal ( const QString & signal, const QString & s
 
   if( obj )
   {
-    QMessageBoxSlots * s = obj->findChild<QMessageBoxSlots *>();
+    QMessageBoxSlots * s = QCoreApplication::instance()->findChild<QMessageBoxSlots *>();
 
     if( s == NULL )
     {
-      s = new QMessageBoxSlots( obj );
+      s = new QMessageBoxSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

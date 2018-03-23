@@ -50,11 +50,13 @@ void QPrintPreviewWidgetSlots_connect_signal ( const QString & signal, const QSt
 
   if( obj )
   {
-    QPrintPreviewWidgetSlots * s = obj->findChild<QPrintPreviewWidgetSlots *>();
+    QPrintPreviewWidgetSlots * s = QCoreApplication::instance()->findChild<QPrintPreviewWidgetSlots *>();
 
     if( s == NULL )
     {
-      s = new QPrintPreviewWidgetSlots( obj );
+      s = new QPrintPreviewWidgetSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

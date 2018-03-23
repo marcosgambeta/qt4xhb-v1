@@ -65,11 +65,13 @@ void QGraphicsDropShadowEffectSlots_connect_signal ( const QString & signal, con
 
   if( obj )
   {
-    QGraphicsDropShadowEffectSlots * s = obj->findChild<QGraphicsDropShadowEffectSlots *>();
+    QGraphicsDropShadowEffectSlots * s = QCoreApplication::instance()->findChild<QGraphicsDropShadowEffectSlots *>();
 
     if( s == NULL )
     {
-      s = new QGraphicsDropShadowEffectSlots( obj );
+      s = new QGraphicsDropShadowEffectSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

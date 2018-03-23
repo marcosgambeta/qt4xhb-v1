@@ -39,11 +39,13 @@ void QCheckBoxSlots_connect_signal ( const QString & signal, const QString & slo
 
   if( obj )
   {
-    QCheckBoxSlots * s = obj->findChild<QCheckBoxSlots *>();
+    QCheckBoxSlots * s = QCoreApplication::instance()->findChild<QCheckBoxSlots *>();
 
     if( s == NULL )
     {
-      s = new QCheckBoxSlots( obj );
+      s = new QCheckBoxSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

@@ -52,11 +52,13 @@ void QGraphicsColorizeEffectSlots_connect_signal ( const QString & signal, const
 
   if( obj )
   {
-    QGraphicsColorizeEffectSlots * s = obj->findChild<QGraphicsColorizeEffectSlots *>();
+    QGraphicsColorizeEffectSlots * s = QCoreApplication::instance()->findChild<QGraphicsColorizeEffectSlots *>();
 
     if( s == NULL )
     {
-      s = new QGraphicsColorizeEffectSlots( obj );
+      s = new QGraphicsColorizeEffectSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

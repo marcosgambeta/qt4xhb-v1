@@ -102,11 +102,13 @@ void QAbstractItemViewSlots_connect_signal ( const QString & signal, const QStri
 
   if( obj )
   {
-    QAbstractItemViewSlots * s = obj->findChild<QAbstractItemViewSlots *>();
+    QAbstractItemViewSlots * s = QCoreApplication::instance()->findChild<QAbstractItemViewSlots *>();
 
     if( s == NULL )
     {
-      s = new QAbstractItemViewSlots( obj );
+      s = new QAbstractItemViewSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

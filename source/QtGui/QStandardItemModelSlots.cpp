@@ -39,11 +39,13 @@ void QStandardItemModelSlots_connect_signal ( const QString & signal, const QStr
 
   if( obj )
   {
-    QStandardItemModelSlots * s = obj->findChild<QStandardItemModelSlots *>();
+    QStandardItemModelSlots * s = QCoreApplication::instance()->findChild<QStandardItemModelSlots *>();
 
     if( s == NULL )
     {
-      s = new QStandardItemModelSlots( obj );
+      s = new QStandardItemModelSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

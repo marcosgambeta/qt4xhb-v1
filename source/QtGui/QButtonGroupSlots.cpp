@@ -104,11 +104,13 @@ void QButtonGroupSlots_connect_signal ( const QString & signal, const QString & 
 
   if( obj )
   {
-    QButtonGroupSlots * s = obj->findChild<QButtonGroupSlots *>();
+    QButtonGroupSlots * s = QCoreApplication::instance()->findChild<QButtonGroupSlots *>();
 
     if( s == NULL )
     {
-      s = new QButtonGroupSlots( obj );
+      s = new QButtonGroupSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

@@ -52,11 +52,13 @@ void QLabelSlots_connect_signal ( const QString & signal, const QString & slot )
 
   if( obj )
   {
-    QLabelSlots * s = obj->findChild<QLabelSlots *>();
+    QLabelSlots * s = QCoreApplication::instance()->findChild<QLabelSlots *>();
 
     if( s == NULL )
     {
-      s = new QLabelSlots( obj );
+      s = new QLabelSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

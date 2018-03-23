@@ -115,11 +115,13 @@ void QTextBrowserSlots_connect_signal ( const QString & signal, const QString & 
 
   if( obj )
   {
-    QTextBrowserSlots * s = obj->findChild<QTextBrowserSlots *>();
+    QTextBrowserSlots * s = QCoreApplication::instance()->findChild<QTextBrowserSlots *>();
 
     if( s == NULL )
     {
-      s = new QTextBrowserSlots( obj );
+      s = new QTextBrowserSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

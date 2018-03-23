@@ -52,11 +52,13 @@ void QColorDialogSlots_connect_signal ( const QString & signal, const QString & 
 
   if( obj )
   {
-    QColorDialogSlots * s = obj->findChild<QColorDialogSlots *>();
+    QColorDialogSlots * s = QCoreApplication::instance()->findChild<QColorDialogSlots *>();
 
     if( s == NULL )
     {
-      s = new QColorDialogSlots( obj );
+      s = new QColorDialogSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

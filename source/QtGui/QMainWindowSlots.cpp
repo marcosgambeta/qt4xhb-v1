@@ -52,11 +52,13 @@ void QMainWindowSlots_connect_signal ( const QString & signal, const QString & s
 
   if( obj )
   {
-    QMainWindowSlots * s = obj->findChild<QMainWindowSlots *>();
+    QMainWindowSlots * s = QCoreApplication::instance()->findChild<QMainWindowSlots *>();
 
     if( s == NULL )
     {
-      s = new QMainWindowSlots( obj );
+      s = new QMainWindowSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

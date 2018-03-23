@@ -156,11 +156,13 @@ void QListWidgetSlots_connect_signal ( const QString & signal, const QString & s
 
   if( obj )
   {
-    QListWidgetSlots * s = obj->findChild<QListWidgetSlots *>();
+    QListWidgetSlots * s = QCoreApplication::instance()->findChild<QListWidgetSlots *>();
 
     if( s == NULL )
     {
-      s = new QListWidgetSlots( obj );
+      s = new QListWidgetSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );
