@@ -112,11 +112,13 @@ void QAxScriptSlots_connect_signal ( const QString & signal, const QString & slo
 
   if( obj )
   {
-    QAxScriptSlots * s = obj->findChild<QAxScriptSlots *>();
+    QAxScriptSlots * s = QCoreApplication::instance()->findChild<QAxScriptSlots *>();
 
     if( s == NULL )
     {
-      s = new QAxScriptSlots( obj );
+      s = new QAxScriptSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

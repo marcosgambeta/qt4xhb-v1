@@ -75,11 +75,13 @@ void QAxObjectSlots_connect_signal ( const QString & signal, const QString & slo
 
   if( obj )
   {
-    QAxObjectSlots * s = obj->findChild<QAxObjectSlots *>();
+    QAxObjectSlots * s = QCoreApplication::instance()->findChild<QAxObjectSlots *>();
 
     if( s == NULL )
     {
-      s = new QAxObjectSlots( obj );
+      s = new QAxObjectSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );
