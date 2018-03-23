@@ -39,11 +39,13 @@ void QScriptEngineSlots_connect_signal ( const QString & signal, const QString &
 
   if( obj )
   {
-    QScriptEngineSlots * s = obj->findChild<QScriptEngineSlots *>();
+    QScriptEngineSlots * s = QCoreApplication::instance()->findChild<QScriptEngineSlots *>();
 
     if( s == NULL )
     {
-      s = new QScriptEngineSlots( obj );
+      s = new QScriptEngineSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );
