@@ -37,11 +37,13 @@ void QSvgRendererSlots_connect_signal ( const QString & signal, const QString & 
 
   if( obj )
   {
-    QSvgRendererSlots * s = obj->findChild<QSvgRendererSlots *>();
+    QSvgRendererSlots * s = QCoreApplication::instance()->findChild<QSvgRendererSlots *>();
 
     if( s == NULL )
     {
-      s = new QSvgRendererSlots( obj );
+      s = new QSvgRendererSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );
