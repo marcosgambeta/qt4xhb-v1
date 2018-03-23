@@ -48,11 +48,13 @@ void QScriptEngineDebuggerSlots_connect_signal ( const QString & signal, const Q
 
   if( obj )
   {
-    QScriptEngineDebuggerSlots * s = obj->findChild<QScriptEngineDebuggerSlots *>();
+    QScriptEngineDebuggerSlots * s = QCoreApplication::instance()->findChild<QScriptEngineDebuggerSlots *>();
 
     if( s == NULL )
     {
-      s = new QScriptEngineDebuggerSlots( obj );
+      s = new QScriptEngineDebuggerSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );
