@@ -133,11 +133,13 @@ void QWebFrameSlots_connect_signal ( const QString & signal, const QString & slo
 
   if( obj )
   {
-    QWebFrameSlots * s = obj->findChild<QWebFrameSlots *>();
+    QWebFrameSlots * s = QCoreApplication::instance()->findChild<QWebFrameSlots *>();
 
     if( s == NULL )
     {
-      s = new QWebFrameSlots( obj );
+      s = new QWebFrameSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

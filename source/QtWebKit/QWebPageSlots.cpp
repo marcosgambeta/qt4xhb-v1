@@ -327,11 +327,13 @@ void QWebPageSlots_connect_signal ( const QString & signal, const QString & slot
 
   if( obj )
   {
-    QWebPageSlots * s = obj->findChild<QWebPageSlots *>();
+    QWebPageSlots * s = QCoreApplication::instance()->findChild<QWebPageSlots *>();
 
     if( s == NULL )
     {
-      s = new QWebPageSlots( obj );
+      s = new QWebPageSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

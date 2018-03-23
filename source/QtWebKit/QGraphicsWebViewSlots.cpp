@@ -126,11 +126,13 @@ void QGraphicsWebViewSlots_connect_signal ( const QString & signal, const QStrin
 
   if( obj )
   {
-    QGraphicsWebViewSlots * s = obj->findChild<QGraphicsWebViewSlots *>();
+    QGraphicsWebViewSlots * s = QCoreApplication::instance()->findChild<QGraphicsWebViewSlots *>();
 
     if( s == NULL )
     {
-      s = new QGraphicsWebViewSlots( obj );
+      s = new QGraphicsWebViewSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

@@ -137,11 +137,13 @@ void QWebViewSlots_connect_signal ( const QString & signal, const QString & slot
 
   if( obj )
   {
-    QWebViewSlots * s = obj->findChild<QWebViewSlots *>();
+    QWebViewSlots * s = QCoreApplication::instance()->findChild<QWebViewSlots *>();
 
     if( s == NULL )
     {
-      s = new QWebViewSlots( obj );
+      s = new QWebViewSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );
