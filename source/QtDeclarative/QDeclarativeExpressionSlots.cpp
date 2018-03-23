@@ -37,11 +37,13 @@ void QDeclarativeExpressionSlots_connect_signal ( const QString & signal, const 
 
   if( obj )
   {
-    QDeclarativeExpressionSlots * s = obj->findChild<QDeclarativeExpressionSlots *>();
+    QDeclarativeExpressionSlots * s = QCoreApplication::instance()->findChild<QDeclarativeExpressionSlots *>();
 
     if( s == NULL )
     {
-      s = new QDeclarativeExpressionSlots( obj );
+      s = new QDeclarativeExpressionSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

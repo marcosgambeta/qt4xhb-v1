@@ -52,11 +52,13 @@ void QDeclarativeViewSlots_connect_signal ( const QString & signal, const QStrin
 
   if( obj )
   {
-    QDeclarativeViewSlots * s = obj->findChild<QDeclarativeViewSlots *>();
+    QDeclarativeViewSlots * s = QCoreApplication::instance()->findChild<QDeclarativeViewSlots *>();
 
     if( s == NULL )
     {
-      s = new QDeclarativeViewSlots( obj );
+      s = new QDeclarativeViewSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

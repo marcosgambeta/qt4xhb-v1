@@ -52,11 +52,13 @@ void QDeclarativeComponentSlots_connect_signal ( const QString & signal, const Q
 
   if( obj )
   {
-    QDeclarativeComponentSlots * s = obj->findChild<QDeclarativeComponentSlots *>();
+    QDeclarativeComponentSlots * s = QCoreApplication::instance()->findChild<QDeclarativeComponentSlots *>();
 
     if( s == NULL )
     {
-      s = new QDeclarativeComponentSlots( obj );
+      s = new QDeclarativeComponentSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );
