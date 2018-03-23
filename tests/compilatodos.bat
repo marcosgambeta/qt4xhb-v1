@@ -78,6 +78,9 @@ hbmk2 QProgressDialog         %1 %2 %3 ..\qt4xhb.hbc
 hbmk2 QPushButton1            %1 %2 %3 ..\qt4xhb.hbc
 hbmk2 QPushButton2            %1 %2 %3 ..\qt4xhb.hbc
 hbmk2 QPushButton3            %1 %2 %3 ..\qt4xhb.hbc
+hbmk2 QPushButton4            %1 %2 %3 ..\qt4xhb.hbc
+hbmk2 QPushButton5            %1 %2 %3 ..\qt4xhb.hbc
+hbmk2 QPushButton6            %1 %2 %3 ..\qt4xhb.hbc
 hbmk2 QRubberBand             %1 %2 %3 ..\qt4xhb.hbc
 hbmk2 QScrollBar              %1 %2 %3 ..\qt4xhb.hbc
 hbmk2 QShortcut               %1 %2 %3 ..\qt4xhb.hbc
@@ -87,6 +90,9 @@ hbmk2 QStatusBar              %1 %2 %3 ..\qt4xhb.hbc
 hbmk2 QTableWidget1           %1 %2 %3 ..\qt4xhb.hbc
 hbmk2 QTableWidget2           %1 %2 %3 ..\qt4xhb.hbc
 hbmk2 QTimeEdit               %1 %2 %3 ..\qt4xhb.hbc
+hbmk2 QTimer1                 %1 %2 %3 ..\qt4xhb.hbc
+hbmk2 QTimer2                 %1 %2 %3 ..\qt4xhb.hbc
+hbmk2 QTimer3                 %1 %2 %3 ..\qt4xhb.hbc
 hbmk2 QtSqlDemo               %1 %2 %3 ..\qt4xhb.hbc
 hbmk2 QUiLoader               %1 %2 %3 ..\qt4xhb.hbc
 hbmk2 QVBoxLayout             %1 %2 %3 ..\qt4xhb.hbc
