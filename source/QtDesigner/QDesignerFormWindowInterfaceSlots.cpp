@@ -187,11 +187,13 @@ void QDesignerFormWindowInterfaceSlots_connect_signal ( const QString & signal, 
 
   if( obj )
   {
-    QDesignerFormWindowInterfaceSlots * s = obj->findChild<QDesignerFormWindowInterfaceSlots *>();
+    QDesignerFormWindowInterfaceSlots * s = QCoreApplication::instance()->findChild<QDesignerFormWindowInterfaceSlots *>();
 
     if( s == NULL )
     {
-      s = new QDesignerFormWindowInterfaceSlots( obj );
+      s = new QDesignerFormWindowInterfaceSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

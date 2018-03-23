@@ -41,11 +41,13 @@ void QDesignerPropertyEditorInterfaceSlots_connect_signal ( const QString & sign
 
   if( obj )
   {
-    QDesignerPropertyEditorInterfaceSlots * s = obj->findChild<QDesignerPropertyEditorInterfaceSlots *>();
+    QDesignerPropertyEditorInterfaceSlots * s = QCoreApplication::instance()->findChild<QDesignerPropertyEditorInterfaceSlots *>();
 
     if( s == NULL )
     {
-      s = new QDesignerPropertyEditorInterfaceSlots( obj );
+      s = new QDesignerPropertyEditorInterfaceSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );
