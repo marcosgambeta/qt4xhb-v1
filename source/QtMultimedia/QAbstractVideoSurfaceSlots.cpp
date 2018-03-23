@@ -63,11 +63,13 @@ void QAbstractVideoSurfaceSlots_connect_signal ( const QString & signal, const Q
 
   if( obj )
   {
-    QAbstractVideoSurfaceSlots * s = obj->findChild<QAbstractVideoSurfaceSlots *>();
+    QAbstractVideoSurfaceSlots * s = QCoreApplication::instance()->findChild<QAbstractVideoSurfaceSlots *>();
 
     if( s == NULL )
     {
-      s = new QAbstractVideoSurfaceSlots( obj );
+      s = new QAbstractVideoSurfaceSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

@@ -50,11 +50,13 @@ void QAudioOutputSlots_connect_signal ( const QString & signal, const QString & 
 
   if( obj )
   {
-    QAudioOutputSlots * s = obj->findChild<QAudioOutputSlots *>();
+    QAudioOutputSlots * s = QCoreApplication::instance()->findChild<QAudioOutputSlots *>();
 
     if( s == NULL )
     {
-      s = new QAudioOutputSlots( obj );
+      s = new QAudioOutputSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );
