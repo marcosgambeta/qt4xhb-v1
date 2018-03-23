@@ -82,11 +82,13 @@ void QSqlTableModelSlots_connect_signal ( const QString & signal, const QString 
 
   if( obj )
   {
-    QSqlTableModelSlots * s = obj->findChild<QSqlTableModelSlots *>();
+    QSqlTableModelSlots * s = QCoreApplication::instance()->findChild<QSqlTableModelSlots *>();
 
     if( s == NULL )
     {
-      s = new QSqlTableModelSlots( obj );
+      s = new QSqlTableModelSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

@@ -39,11 +39,13 @@ void QSqlDriverSlots_connect_signal ( const QString & signal, const QString & sl
 
   if( obj )
   {
-    QSqlDriverSlots * s = obj->findChild<QSqlDriverSlots *>();
+    QSqlDriverSlots * s = QCoreApplication::instance()->findChild<QSqlDriverSlots *>();
 
     if( s == NULL )
     {
-      s = new QSqlDriverSlots( obj );
+      s = new QSqlDriverSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );
