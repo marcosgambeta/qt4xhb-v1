@@ -89,11 +89,13 @@ void QNetworkConfigurationManagerSlots_connect_signal ( const QString & signal, 
 
   if( obj )
   {
-    QNetworkConfigurationManagerSlots * s = obj->findChild<QNetworkConfigurationManagerSlots *>();
+    QNetworkConfigurationManagerSlots * s = QCoreApplication::instance()->findChild<QNetworkConfigurationManagerSlots *>();
 
     if( s == NULL )
     {
-      s = new QNetworkConfigurationManagerSlots( obj );
+      s = new QNetworkConfigurationManagerSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

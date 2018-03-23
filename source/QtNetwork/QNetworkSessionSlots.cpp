@@ -100,11 +100,13 @@ void QNetworkSessionSlots_connect_signal ( const QString & signal, const QString
 
   if( obj )
   {
-    QNetworkSessionSlots * s = obj->findChild<QNetworkSessionSlots *>();
+    QNetworkSessionSlots * s = QCoreApplication::instance()->findChild<QNetworkSessionSlots *>();
 
     if( s == NULL )
     {
-      s = new QNetworkSessionSlots( obj );
+      s = new QNetworkSessionSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

@@ -134,11 +134,13 @@ void QFtpSlots_connect_signal ( const QString & signal, const QString & slot )
 
   if( obj )
   {
-    QFtpSlots * s = obj->findChild<QFtpSlots *>();
+    QFtpSlots * s = QCoreApplication::instance()->findChild<QFtpSlots *>();
 
     if( s == NULL )
     {
-      s = new QFtpSlots( obj );
+      s = new QFtpSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

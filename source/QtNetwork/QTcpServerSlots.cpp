@@ -37,11 +37,13 @@ void QTcpServerSlots_connect_signal ( const QString & signal, const QString & sl
 
   if( obj )
   {
-    QTcpServerSlots * s = obj->findChild<QTcpServerSlots *>();
+    QTcpServerSlots * s = QCoreApplication::instance()->findChild<QTcpServerSlots *>();
 
     if( s == NULL )
     {
-      s = new QTcpServerSlots( obj );
+      s = new QTcpServerSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

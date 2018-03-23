@@ -100,11 +100,13 @@ void QAbstractSocketSlots_connect_signal ( const QString & signal, const QString
 
   if( obj )
   {
-    QAbstractSocketSlots * s = obj->findChild<QAbstractSocketSlots *>();
+    QAbstractSocketSlots * s = QCoreApplication::instance()->findChild<QAbstractSocketSlots *>();
 
     if( s == NULL )
     {
-      s = new QAbstractSocketSlots( obj );
+      s = new QAbstractSocketSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

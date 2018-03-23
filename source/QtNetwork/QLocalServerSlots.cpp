@@ -37,11 +37,13 @@ void QLocalServerSlots_connect_signal ( const QString & signal, const QString & 
 
   if( obj )
   {
-    QLocalServerSlots * s = obj->findChild<QLocalServerSlots *>();
+    QLocalServerSlots * s = QCoreApplication::instance()->findChild<QLocalServerSlots *>();
 
     if( s == NULL )
     {
-      s = new QLocalServerSlots( obj );
+      s = new QLocalServerSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

@@ -127,11 +127,13 @@ void QNetworkReplySlots_connect_signal ( const QString & signal, const QString &
 
   if( obj )
   {
-    QNetworkReplySlots * s = obj->findChild<QNetworkReplySlots *>();
+    QNetworkReplySlots * s = QCoreApplication::instance()->findChild<QNetworkReplySlots *>();
 
     if( s == NULL )
     {
-      s = new QNetworkReplySlots( obj );
+      s = new QNetworkReplySlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

@@ -74,11 +74,13 @@ void QLocalSocketSlots_connect_signal ( const QString & signal, const QString & 
 
   if( obj )
   {
-    QLocalSocketSlots * s = obj->findChild<QLocalSocketSlots *>();
+    QLocalSocketSlots * s = QCoreApplication::instance()->findChild<QLocalSocketSlots *>();
 
     if( s == NULL )
     {
-      s = new QLocalSocketSlots( obj );
+      s = new QLocalSocketSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );
