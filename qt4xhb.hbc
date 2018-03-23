@@ -18,7 +18,7 @@ description=Qt4xHb
 
 # bibliotecas do Qt4xHb
 {allwin}libs=hbqaxcontainer4
-{allwin}libs=hbqaxserver4
+#{allwin}libs=hbqaxserver4
 {allwin}libs=hbqtcore4
 {allwin}libs=hbqtdeclarative4
 {allwin}libs=hbqtdesigner4
@@ -46,7 +46,7 @@ description=Qt4xHb
 # bibliotecas do Qt Framework
 {allwin}libs=phonon4
 {allwin}libs=QAxContainer
-{allwin}libs=QAxServer
+#{allwin}libs=QAxServer
 {allwin}libs=Qt3Support4
 {allwin}libs=QtCLucene4
 {allwin}libs=QtCore4
