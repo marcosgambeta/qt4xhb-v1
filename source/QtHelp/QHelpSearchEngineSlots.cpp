@@ -72,11 +72,13 @@ void QHelpSearchEngineSlots_connect_signal ( const QString & signal, const QStri
 
   if( obj )
   {
-    QHelpSearchEngineSlots * s = obj->findChild<QHelpSearchEngineSlots *>();
+    QHelpSearchEngineSlots * s = QCoreApplication::instance()->findChild<QHelpSearchEngineSlots *>();
 
     if( s == NULL )
     {
-      s = new QHelpSearchEngineSlots( obj );
+      s = new QHelpSearchEngineSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

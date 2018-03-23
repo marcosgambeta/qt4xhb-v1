@@ -39,11 +39,13 @@ void QHelpSearchResultWidgetSlots_connect_signal ( const QString & signal, const
 
   if( obj )
   {
-    QHelpSearchResultWidgetSlots * s = obj->findChild<QHelpSearchResultWidgetSlots *>();
+    QHelpSearchResultWidgetSlots * s = QCoreApplication::instance()->findChild<QHelpSearchResultWidgetSlots *>();
 
     if( s == NULL )
     {
-      s = new QHelpSearchResultWidgetSlots( obj );
+      s = new QHelpSearchResultWidgetSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

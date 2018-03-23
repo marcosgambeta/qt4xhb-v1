@@ -74,11 +74,13 @@ void QHelpEngineCoreSlots_connect_signal ( const QString & signal, const QString
 
   if( obj )
   {
-    QHelpEngineCoreSlots * s = obj->findChild<QHelpEngineCoreSlots *>();
+    QHelpEngineCoreSlots * s = QCoreApplication::instance()->findChild<QHelpEngineCoreSlots *>();
 
     if( s == NULL )
     {
-      s = new QHelpEngineCoreSlots( obj );
+      s = new QHelpEngineCoreSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

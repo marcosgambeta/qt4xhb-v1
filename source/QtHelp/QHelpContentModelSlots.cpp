@@ -48,11 +48,13 @@ void QHelpContentModelSlots_connect_signal ( const QString & signal, const QStri
 
   if( obj )
   {
-    QHelpContentModelSlots * s = obj->findChild<QHelpContentModelSlots *>();
+    QHelpContentModelSlots * s = QCoreApplication::instance()->findChild<QHelpContentModelSlots *>();
 
     if( s == NULL )
     {
-      s = new QHelpContentModelSlots( obj );
+      s = new QHelpContentModelSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

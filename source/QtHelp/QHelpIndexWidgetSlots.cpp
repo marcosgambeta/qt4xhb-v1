@@ -41,11 +41,13 @@ void QHelpIndexWidgetSlots_connect_signal ( const QString & signal, const QStrin
 
   if( obj )
   {
-    QHelpIndexWidgetSlots * s = obj->findChild<QHelpIndexWidgetSlots *>();
+    QHelpIndexWidgetSlots * s = QCoreApplication::instance()->findChild<QHelpIndexWidgetSlots *>();
 
     if( s == NULL )
     {
-      s = new QHelpIndexWidgetSlots( obj );
+      s = new QHelpIndexWidgetSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );

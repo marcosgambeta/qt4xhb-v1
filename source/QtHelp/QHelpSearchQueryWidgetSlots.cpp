@@ -37,11 +37,13 @@ void QHelpSearchQueryWidgetSlots_connect_signal ( const QString & signal, const 
 
   if( obj )
   {
-    QHelpSearchQueryWidgetSlots * s = obj->findChild<QHelpSearchQueryWidgetSlots *>();
+    QHelpSearchQueryWidgetSlots * s = QCoreApplication::instance()->findChild<QHelpSearchQueryWidgetSlots *>();
 
     if( s == NULL )
     {
-      s = new QHelpSearchQueryWidgetSlots( obj );
+      s = new QHelpSearchQueryWidgetSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
     }
 
     hb_retl( Signals_connection_disconnection( s, signal, slot ) );
