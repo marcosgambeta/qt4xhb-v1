@@ -15,6 +15,7 @@ static Signals *s_signals = NULL;
 */
 Signals::Signals(QObject *parent) : QObject(parent)
 {
+  mutex = new QMutex();
 }
 
 /*
@@ -23,6 +24,7 @@ Signals::Signals(QObject *parent) : QObject(parent)
 Signals::~Signals()
 {
   Signals_release_codeblocks ();
+  delete mutex;
 }
 
 /*
@@ -272,7 +274,14 @@ void Signals_disconnect_all_signals (QObject * obj, bool children)
 */
 bool Signals_connection_disconnection ( QObject * s, QString signal, QString slot )
 {
+  if( s_signals == NULL )
+  {
+    s_signals = new Signals(QCoreApplication::instance());
+  }
+
   bool ret = false;
+
+  s_signals->mutex->lock();
 
   if( hb_pcount() == 1 )
   {
@@ -312,6 +321,9 @@ bool Signals_connection_disconnection ( QObject * s, QString signal, QString slo
       Signals_disconnect_signal( object, signal ); // se desconectado, remove
     }
   }
+
+  s_signals->mutex->unlock();
+
   return ret;
 }
 
