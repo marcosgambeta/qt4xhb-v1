@@ -17,6 +17,7 @@ static Events *s_events = NULL;
 */
 Events::Events(QObject *parent) : QObject(parent)
 {
+  mutex = new QMutex();
 }
 
 /*
@@ -25,6 +26,7 @@ Events::Events(QObject *parent) : QObject(parent)
 Events::~Events()
 {
   Events_release_codeblocks ();
+  delete mutex;
 }
 
 /*
@@ -87,6 +89,9 @@ bool Events_connect_event ( QObject * object, int type, PHB_ITEM codeblock )
   {
     object->installEventFilter(s_events);
   }
+
+  s_events->mutex->lock();
+
   // verifica se já está na lista
   int found = -1;
   for (i = 0; i < s_events->list1.size(); ++i)
@@ -98,7 +103,9 @@ bool Events_connect_event ( QObject * object, int type, PHB_ITEM codeblock )
       break;
     }
   }
+
   bool ret = false;
+
   // se nao encontrado na lista, adiciona
   if( found == -1 )
   {
@@ -122,6 +129,9 @@ bool Events_connect_event ( QObject * object, int type, PHB_ITEM codeblock )
     }
     ret = true;
   }
+
+  s_events->mutex->unlock();
+
   // retorna o resultado da operação
   //hb_retl( ret );
   return ret;

@@ -13,6 +13,7 @@
 #include <QEvent>
 #include <QList>
 #include <QCoreApplication>
+#include <QMutex>
 
 #include "hbapi.h"
 #include "hbapiitm.h"
@@ -40,7 +41,7 @@ class Events: public QObject
   QList<QEvent::Type> list2; // armazena tipo de evento
   QList<PHB_ITEM> list3;     // armazena codeblock
   QList<bool> list4;         // ativo (true) ou liberado (false)
-
+  QMutex * mutex;
   protected:
   bool eventFilter(QObject *obj, QEvent *event);
 
