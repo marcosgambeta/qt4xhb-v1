@@ -30,25 +30,9 @@ $includes
 $deleteMethod
 
 $prototype=QPointF scenePos () const
-HB_FUNC_STATIC( QGRAPHICSSCENEHELPEVENT_SCENEPOS )
-{
-  QGraphicsSceneHelpEvent * obj = (QGraphicsSceneHelpEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->scenePos () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|scenePos|
 
 $prototype=QPoint screenPos () const
-HB_FUNC_STATIC( QGRAPHICSSCENEHELPEVENT_SCREENPOS )
-{
-  QGraphicsSceneHelpEvent * obj = (QGraphicsSceneHelpEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->screenPos () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-}
+$method=|QPoint|screenPos|
 
 #pragma ENDDUMP
