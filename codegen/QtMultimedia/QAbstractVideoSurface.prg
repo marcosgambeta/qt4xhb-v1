@@ -12,7 +12,7 @@ $header
 REQUEST QVIDEOSURFACEFORMAT
 #endif
 
-CLASS QAbstractVideoSurface INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD error
@@ -29,9 +29,7 @@ CLASS QAbstractVideoSurface INHERIT QObject
    METHOD onSurfaceFormatChanged
    METHOD onSupportedFormatsChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
