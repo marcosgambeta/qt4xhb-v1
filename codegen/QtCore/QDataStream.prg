@@ -12,10 +12,7 @@ $header
 REQUEST QIODEVICE
 #endif
 
-CLASS QDataStream
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -35,15 +32,7 @@ CLASS QDataStream
    METHOD version
    METHOD writeRawData
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

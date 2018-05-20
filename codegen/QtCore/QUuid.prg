@@ -13,10 +13,7 @@ REQUEST QBYTEARRAY
 REQUEST QUUID
 #endif
 
-CLASS QUuid
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new1
    METHOD new2
@@ -34,15 +31,7 @@ CLASS QUuid
    METHOD fromRfc4122
    METHOD createUuid
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

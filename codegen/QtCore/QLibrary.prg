@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QLibrary INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -24,9 +24,7 @@ CLASS QLibrary INHERIT QObject
    METHOD resolve
    METHOD isLibrary
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -12,10 +12,7 @@ $header
 REQUEST QSTRINGREF
 #endif
 
-CLASS QXmlStreamAttributes
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -23,15 +20,7 @@ CLASS QXmlStreamAttributes
    METHOD hasAttribute
    METHOD value
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

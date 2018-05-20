@@ -12,10 +12,7 @@ $header
 REQUEST QMUTEX
 #endif
 
-CLASS QMutexLocker
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -23,15 +20,7 @@ CLASS QMutexLocker
    METHOD relock
    METHOD unlock
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

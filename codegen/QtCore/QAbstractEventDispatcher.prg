@@ -12,7 +12,7 @@ $header
 REQUEST QABSTRACTEVENTDISPATCHER
 #endif
 
-CLASS QAbstractEventDispatcher INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD filterEvent
@@ -31,9 +31,7 @@ CLASS QAbstractEventDispatcher INHERIT QObject
    METHOD onAboutToBlock
    METHOD onAwake
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

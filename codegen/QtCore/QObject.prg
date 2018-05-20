@@ -20,10 +20,7 @@ REQUEST QEVENT
 REQUEST QTIMEREVENT
 #endif
 
-CLASS QObject
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -195,21 +192,13 @@ CLASS QObject
 
    METHOD onDestroyed
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
    METHOD connect
    METHOD disconnect
    METHOD disconnectAll
    METHOD disconnectAllEvents
    METHOD disconnectAllSignals
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
@@ -334,8 +323,6 @@ $method=|QThread *|thread|
 
 $prototype=void deleteLater ()
 $method=|void|deleteLater|
-
-$extraMethods
 
 HB_FUNC_STATIC( QOBJECT_DISCONNECTALL )
 {
@@ -713,6 +700,8 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECT )
     }
   }
 }
+
+$extraMethods
 
 %%
 %% Signals

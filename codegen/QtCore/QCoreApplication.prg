@@ -12,7 +12,7 @@ $header
 REQUEST QCOREAPPLICATION
 #endif
 
-CLASS QCoreApplication INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -55,9 +55,7 @@ CLASS QCoreApplication INHERIT QObject
 
    METHOD onAboutToQuit
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

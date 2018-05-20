@@ -12,10 +12,7 @@ $header
 REQUEST QMUTEX
 #endif
 
-CLASS QFutureInterfaceBase
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -54,15 +51,7 @@ CLASS QFutureInterfaceBase
    METHOD waitForResume
    METHOD mutex
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

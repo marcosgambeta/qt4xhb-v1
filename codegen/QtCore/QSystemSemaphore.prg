@@ -8,10 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QSystemSemaphore
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -22,15 +19,7 @@ CLASS QSystemSemaphore
    METHOD release
    METHOD setKey
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

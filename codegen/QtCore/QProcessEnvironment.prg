@@ -12,10 +12,7 @@ $header
 REQUEST QPROCESSENVIRONMENT
 #endif
 
-CLASS QProcessEnvironment
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -29,15 +26,7 @@ CLASS QProcessEnvironment
    METHOD insert
    METHOD systemEnvironment
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -12,7 +12,7 @@ $header
 REQUEST QTHREADPOOL
 #endif
 
-CLASS QThreadPool INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -28,9 +28,7 @@ CLASS QThreadPool INHERIT QObject
    METHOD waitForDone
    METHOD globalInstance
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

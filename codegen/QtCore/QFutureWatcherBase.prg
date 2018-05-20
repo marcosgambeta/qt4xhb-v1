@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QFutureWatcherBase INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD progressValue
@@ -40,9 +40,7 @@ CLASS QFutureWatcherBase INHERIT QObject
    METHOD onProgressValueChanged
    METHOD onProgressTextChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

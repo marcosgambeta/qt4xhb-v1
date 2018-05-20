@@ -12,7 +12,7 @@ $header
 REQUEST QTHREAD
 #endif
 
-CLASS QThread INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -34,9 +34,7 @@ CLASS QThread INHERIT QObject
    METHOD onFinished
    METHOD onStarted
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

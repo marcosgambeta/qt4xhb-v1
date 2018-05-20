@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QTemporaryFile INHERIT QFile
+$beginClassFrom=QFile
 
    METHOD new
    METHOD delete
@@ -21,9 +21,7 @@ CLASS QTemporaryFile INHERIT QFile
 %%    METHOD createNativeFile
    METHOD createLocalFile
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

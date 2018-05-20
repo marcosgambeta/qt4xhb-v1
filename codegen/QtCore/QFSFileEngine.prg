@@ -13,7 +13,7 @@ REQUEST QDATETIME
 REQUEST QFILEINFO
 #endif
 
-CLASS QFSFileEngine INHERIT QAbstractFileEngine
+$beginClassFrom=QAbstractFileEngine
 
    METHOD new
    METHOD delete
@@ -52,9 +52,7 @@ CLASS QFSFileEngine INHERIT QAbstractFileEngine
    METHOD setCurrentPath
    METHOD tempPath
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -12,10 +12,7 @@ $header
 REQUEST QDATE
 #endif
 
-CLASS QLibraryInfo
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD licensee
    METHOD licensedProducts
@@ -23,15 +20,7 @@ CLASS QLibraryInfo
    METHOD buildDate
    METHOD location
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

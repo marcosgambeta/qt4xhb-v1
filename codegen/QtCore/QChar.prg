@@ -12,10 +12,7 @@ $header
 REQUEST QCHAR
 #endif
 
-CLASS QChar
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new1
    METHOD new2
@@ -57,15 +54,7 @@ CLASS QChar
    METHOD toUpper
    METHOD unicodeVersion
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

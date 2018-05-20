@@ -16,10 +16,7 @@ REQUEST QTIME
 REQUEST QLOCALE
 #endif
 
-CLASS QLocale
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD amText
@@ -99,15 +96,7 @@ CLASS QLocale
    METHOD setDefault
    METHOD system
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

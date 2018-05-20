@@ -13,10 +13,7 @@ REQUEST QDIR
 REQUEST QDATETIME
 #endif
 
-CLASS QFileInfo
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -63,15 +60,7 @@ CLASS QFileInfo
    METHOD suffix
    METHOD symLinkTarget
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

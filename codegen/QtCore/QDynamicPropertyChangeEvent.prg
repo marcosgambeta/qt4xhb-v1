@@ -12,15 +12,13 @@ $header
 REQUEST QBYTEARRAY
 #endif
 
-CLASS QDynamicPropertyChangeEvent INHERIT QEvent
+$beginClassFrom=QEvent
 
    METHOD new
    METHOD delete
    METHOD propertyName
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
