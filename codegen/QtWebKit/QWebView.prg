@@ -17,7 +17,7 @@ REQUEST QWEBSETTINGS
 REQUEST QURL
 #endif
 
-CLASS QWebView INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
@@ -60,9 +60,7 @@ CLASS QWebView INHERIT QWidget
    METHOD onTitleChanged
    METHOD onUrlChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

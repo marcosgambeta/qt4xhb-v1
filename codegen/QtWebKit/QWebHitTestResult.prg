@@ -17,10 +17,7 @@ REQUEST QPIXMAP
 REQUEST QPOINT
 #endif
 
-CLASS QWebHitTestResult
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -42,15 +39,7 @@ CLASS QWebHitTestResult
    METHOD pos
    METHOD title
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

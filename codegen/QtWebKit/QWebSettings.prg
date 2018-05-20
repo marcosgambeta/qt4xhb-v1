@@ -15,10 +15,7 @@ REQUEST QICON
 REQUEST QPIXMAP
 #endif
 
-CLASS QWebSettings
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD defaultTextEncoding
    METHOD fontFamily
@@ -56,15 +53,7 @@ CLASS QWebSettings
    METHOD setWebGraphic
    METHOD webGraphic
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

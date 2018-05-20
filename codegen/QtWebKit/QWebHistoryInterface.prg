@@ -12,7 +12,7 @@ $header
 REQUEST QWEBHISTORYINTERFACE
 #endif
 
-CLASS QWebHistoryInterface INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD addHistoryEntry
@@ -20,9 +20,7 @@ CLASS QWebHistoryInterface INHERIT QObject
    METHOD defaultInterface
    METHOD setDefaultInterface
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

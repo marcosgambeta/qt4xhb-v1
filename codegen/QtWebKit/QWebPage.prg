@@ -23,7 +23,7 @@ REQUEST QUNDOSTACK
 REQUEST QWIDGET
 #endif
 
-CLASS QWebPage INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -92,9 +92,7 @@ CLASS QWebPage INHERIT QObject
    METHOD onUnsupportedContent
    METHOD onWindowCloseRequested
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

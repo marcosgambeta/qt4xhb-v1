@@ -12,15 +12,13 @@ $header
 REQUEST QOBJECT
 #endif
 
-CLASS QWebPluginFactory INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD create
    METHOD refreshPlugins
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
