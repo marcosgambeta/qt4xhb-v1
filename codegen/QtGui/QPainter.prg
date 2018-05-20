@@ -530,88 +530,16 @@ $prototype=void drawLines ( const QPointF * pointPairs, int lineCount )
 $prototype=void drawLines ( const QPoint * pointPairs, int lineCount )
 
 $prototype=void drawLines ( const QVector<QPointF> & pointPairs )
-HB_FUNC_STATIC( QPAINTER_DRAWLINES5 )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QVector<QPointF> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    obj->drawLines ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|drawLines,drawLines5|const QVector<QPointF> &
 
 $prototype=void drawLines ( const QVector<QPoint> & pointPairs )
-HB_FUNC_STATIC( QPAINTER_DRAWLINES6 )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QVector<QPoint> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << *(QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    obj->drawLines ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|drawLines,drawLines6|const QVector<QPoint> &
 
 $prototype=void drawLines ( const QVector<QLineF> & lines )
-HB_FUNC_STATIC( QPAINTER_DRAWLINES7 )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QVector<QLineF> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << *(QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    obj->drawLines ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|drawLines,drawLines7|const QVector<QLineF> &
 
 $prototype=void drawLines ( const QVector<QLine> & lines )
-HB_FUNC_STATIC( QPAINTER_DRAWLINES8 )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QVector<QLine> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << *(QLine *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    obj->drawLines ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|drawLines,drawLines8|const QVector<QLine> &
 
 //[1]void drawLines ( const QLineF * lines, int lineCount )
 //[2]void drawLines ( const QLine * lines, int lineCount )
@@ -958,46 +886,10 @@ $prototype=void drawRects ( const QRectF * rectangles, int rectCount )
 $prototype=void drawRects ( const QRect * rectangles, int rectCount )
 
 $prototype=void drawRects ( const QVector<QRectF> & rectangles )
-HB_FUNC_STATIC( QPAINTER_DRAWRECTS3 )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QVector<QRectF> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << *(QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    obj->drawRects ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|drawRects,drawRects3|const QVector<QRectF> &
 
 $prototype=void drawRects ( const QVector<QRect> & rectangles )
-HB_FUNC_STATIC( QPAINTER_DRAWRECTS4 )
-{
-  QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QVector<QRect> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << *(QRect *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    obj->drawRects ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|drawRects,drawRects4|const QVector<QRect> &
 
 //[1]void drawRects ( const QRectF * rectangles, int rectCount )
 //[2]void drawRects ( const QRect * rectangles, int rectCount )
