@@ -14,7 +14,7 @@ REQUEST QSIZE
 REQUEST QICON
 #endif
 
-CLASS QTabWidget INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
@@ -63,9 +63,7 @@ CLASS QTabWidget INHERIT QWidget
    METHOD onCurrentChanged
    METHOD onTabCloseRequested
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

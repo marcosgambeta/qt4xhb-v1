@@ -16,7 +16,7 @@ REQUEST QGRAPHICSLAYOUTITEM
 REQUEST QSIZEPOLICY
 #endif
 
-CLASS QGraphicsLayoutItem INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD contentsRect
@@ -51,9 +51,7 @@ CLASS QGraphicsLayoutItem INHERIT QObject
    METHOD sizePolicy
    METHOD updateGeometry
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

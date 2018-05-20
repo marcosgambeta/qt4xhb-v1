@@ -77,7 +77,7 @@ REQUEST QWHEELEVENT
 REQUEST QWINDOWSTATECHANGEEVENT
 #endif
 
-CLASS QWidget INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -300,9 +300,7 @@ CLASS QWidget INHERIT QObject
 
    METHOD onCustomContextMenuRequested
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

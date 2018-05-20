@@ -12,7 +12,7 @@ $header
 %% #ifndef QT_NO_TABWIDGET
 %% #endif // QT_NO_TABWIDGET
 
-CLASS QStyleOptionTabWidgetFrame INHERIT QStyleOption
+$beginClassFrom=QStyleOption
 
    METHOD new
 %%   METHOD delete
@@ -31,9 +31,7 @@ CLASS QStyleOptionTabWidgetFrame INHERIT QStyleOption
    METHOD setRightCornerWidgetSize
    METHOD setLeftCornerWidgetSize
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

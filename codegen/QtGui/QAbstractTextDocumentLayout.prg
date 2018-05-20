@@ -16,7 +16,7 @@ REQUEST QTEXTOBJECTINTERFACE
 REQUEST QPAINTDEVICE
 #endif
 
-CLASS QAbstractTextDocumentLayout INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD anchorAt
    METHOD blockBoundingRect
@@ -35,9 +35,7 @@ CLASS QAbstractTextDocumentLayout INHERIT QObject
    METHOD onUpdate
    METHOD onUpdateBlock
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

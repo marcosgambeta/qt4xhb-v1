@@ -14,10 +14,7 @@ REQUEST QIODEVICE
 REQUEST QBYTEARRAY
 #endif
 
-CLASS QTextDocumentWriter
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -32,15 +29,7 @@ CLASS QTextDocumentWriter
    METHOD write
    METHOD supportedDocumentFormats
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

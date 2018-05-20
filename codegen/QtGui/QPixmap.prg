@@ -17,7 +17,7 @@ REQUEST QIMAGE
 REQUEST QTRANSFORM
 #endif
 
-CLASS QPixmap INHERIT QPaintDevice
+$beginClassFrom=QPaintDevice
 
    METHOD new1
    METHOD new2
@@ -63,9 +63,7 @@ CLASS QPixmap INHERIT QPaintDevice
    METHOD toVariant
    METHOD fromVariant
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -8,11 +8,9 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QItemEditorCreator INHERIT QItemEditorCreatorBase
+$beginClassFrom=QItemEditorCreatorBase
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

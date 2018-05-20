@@ -12,16 +12,14 @@ $header
 REQUEST QIMAGEIOHANDLER
 #endif
 
-CLASS QImageIOPlugin INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD capabilities
    METHOD create
    METHOD keys
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

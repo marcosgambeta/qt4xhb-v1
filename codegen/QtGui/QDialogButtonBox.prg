@@ -13,7 +13,7 @@ REQUEST QPUSHBUTTON
 REQUEST QABSTRACTBUTTON
 #endif
 
-CLASS QDialogButtonBox INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
@@ -36,9 +36,7 @@ CLASS QDialogButtonBox INHERIT QWidget
    METHOD onHelpRequested
    METHOD onRejected
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -15,10 +15,7 @@ REQUEST QPAINTERPATH
 REQUEST QPOLYGONF
 #endif
 
-CLASS QPainterPath
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -64,15 +61,7 @@ CLASS QPainterPath
    METHOD translated
    METHOD united
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

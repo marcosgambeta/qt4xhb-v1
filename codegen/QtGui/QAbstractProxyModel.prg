@@ -17,7 +17,7 @@ REQUEST QMIMEDATA
 REQUEST QSIZE
 #endif
 
-CLASS QAbstractProxyModel INHERIT QAbstractItemModel
+$beginClassFrom=QAbstractItemModel
 
    METHOD delete
    METHOD mapFromSource
@@ -43,9 +43,7 @@ CLASS QAbstractProxyModel INHERIT QAbstractItemModel
    METHOD submit
    METHOD supportedDropActions
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

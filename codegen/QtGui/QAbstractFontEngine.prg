@@ -12,7 +12,7 @@ $header
 REQUEST QVARIANT
 #endif
 
-CLASS QAbstractFontEngine INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
 %%   METHOD addGlyphOutlinesToPath
@@ -22,9 +22,7 @@ CLASS QAbstractFontEngine INHERIT QObject
 %%   METHOD getGlyphAdvances
    METHOD renderGlyph
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

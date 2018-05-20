@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QSpinBox INHERIT QAbstractSpinBox
+$beginClassFrom=QAbstractSpinBox
 
    METHOD new
    METHOD delete
@@ -30,9 +30,7 @@ CLASS QSpinBox INHERIT QAbstractSpinBox
    METHOD onValueChanged1
    METHOD onValueChanged2
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

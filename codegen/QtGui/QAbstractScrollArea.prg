@@ -14,7 +14,7 @@ REQUEST QSCROLLBAR
 REQUEST QSIZE
 #endif
 
-CLASS QAbstractScrollArea INHERIT QFrame
+$beginClassFrom=QFrame
 
    METHOD delete
    METHOD addScrollBarWidget
@@ -35,9 +35,7 @@ CLASS QAbstractScrollArea INHERIT QFrame
    METHOD minimumSizeHint
    METHOD sizeHint
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

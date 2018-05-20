@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QStyleOptionProgressBar INHERIT QStyleOption
+$beginClassFrom=QStyleOption
 
    METHOD new
 %%   METHOD delete
@@ -27,9 +27,7 @@ CLASS QStyleOptionProgressBar INHERIT QStyleOption
    METHOD setTextAlignment
    METHOD setTextVisible
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

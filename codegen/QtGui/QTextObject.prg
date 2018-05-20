@@ -13,16 +13,14 @@ REQUEST QTEXTDOCUMENT
 REQUEST QTEXTFORMAT
 #endif
 
-CLASS QTextObject INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD document
    METHOD format
    METHOD formatIndex
    METHOD objectIndex
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -14,7 +14,7 @@ REQUEST QBRUSH
 REQUEST QSIZE
 #endif
 
-CLASS QWorkspace INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
@@ -37,9 +37,7 @@ CLASS QWorkspace INHERIT QWidget
 
    METHOD onWindowActivated
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

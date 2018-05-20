@@ -12,16 +12,14 @@ $header
 REQUEST QREGION
 #endif
 
-CLASS QDecorationDefault INHERIT QDecoration
+$beginClassFrom=QDecoration
 
    METHOD new
    METHOD delete
    METHOD paint
    METHOD region
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

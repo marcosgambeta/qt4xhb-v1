@@ -31,7 +31,7 @@ REQUEST QSTYLE
 REQUEST QGRAPHICSVIEW
 #endif
 
-CLASS QGraphicsScene INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -102,9 +102,7 @@ CLASS QGraphicsScene INHERIT QObject
    METHOD onSceneRectChanged
    METHOD onSelectionChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

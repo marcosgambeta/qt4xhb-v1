@@ -20,7 +20,7 @@ REQUEST QSTYLE
 REQUEST QPAINTERPATH
 #endif
 
-CLASS QGraphicsWidget INHERIT QGraphicsObject,QGraphicsLayoutItem
+$beginClassFrom=QGraphicsObject,QGraphicsLayoutItem
 
    METHOD new
    METHOD delete
@@ -80,9 +80,7 @@ CLASS QGraphicsWidget INHERIT QGraphicsObject,QGraphicsLayoutItem
 
    METHOD onGeometryChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

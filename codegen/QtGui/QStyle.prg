@@ -18,7 +18,7 @@ REQUEST QPALETTE
 REQUEST QPOINT
 #endif
 
-CLASS QStyle INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD combinedLayoutSpacing
@@ -55,9 +55,7 @@ CLASS QStyle INHERIT QObject
    METHOD onTabCloseRequested
    METHOD onTabMoved
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

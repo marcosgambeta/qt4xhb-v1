@@ -12,16 +12,14 @@ $header
 REQUEST QPOINT
 #endif
 
-CLASS QHoverEvent INHERIT QEvent
+$beginClassFrom=QEvent
 
    METHOD new
    METHOD delete
    METHOD pos
    METHOD oldPos
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

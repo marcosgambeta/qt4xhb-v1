@@ -15,7 +15,7 @@ REQUEST QTABLEWIDGETSELECTIONRANGE
 REQUEST QRECT
 #endif
 
-CLASS QTableWidget INHERIT QTableView
+$beginClassFrom=QTableView
 
    METHOD new
    METHOD delete
@@ -81,9 +81,7 @@ CLASS QTableWidget INHERIT QTableView
    METHOD onItemPressed
    METHOD onItemSelectionChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

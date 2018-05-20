@@ -15,7 +15,7 @@ REQUEST QWIDGET
 REQUEST QSIZE
 #endif
 
-CLASS QMdiSubWindow INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD isShaded
@@ -38,9 +38,7 @@ CLASS QMdiSubWindow INHERIT QWidget
    METHOD onAboutToActivate
    METHOD onWindowStateChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

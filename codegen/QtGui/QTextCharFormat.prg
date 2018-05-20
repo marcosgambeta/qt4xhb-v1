@@ -14,7 +14,7 @@ REQUEST QPEN
 REQUEST QCOLOR
 #endif
 
-CLASS QTextCharFormat INHERIT QTextFormat
+$beginClassFrom=QTextFormat
 
    METHOD new
    METHOD delete
@@ -68,9 +68,7 @@ CLASS QTextCharFormat INHERIT QTextFormat
    METHOD underlineStyle
    METHOD verticalAlignment
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

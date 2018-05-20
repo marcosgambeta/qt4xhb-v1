@@ -14,7 +14,7 @@ REQUEST QPIXMAP
 REQUEST QRECT
 #endif
 
-CLASS QWindowsStyle INHERIT QCommonStyle
+$beginClassFrom=QCommonStyle
 
    METHOD new
    METHOD delete
@@ -29,9 +29,7 @@ CLASS QWindowsStyle INHERIT QCommonStyle
    METHOD subElementRect
    METHOD unpolish
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

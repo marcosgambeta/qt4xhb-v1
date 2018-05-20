@@ -12,7 +12,7 @@ $header
 REQUEST QPOINT
 #endif
 
-CLASS QWheelEvent INHERIT QInputEvent
+$beginClassFrom=QInputEvent
 
    METHOD new
    METHOD delete
@@ -26,9 +26,7 @@ CLASS QWheelEvent INHERIT QInputEvent
    METHOD buttons
    METHOD orientation
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

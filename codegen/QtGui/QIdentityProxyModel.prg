@@ -13,7 +13,7 @@ REQUEST QMODELINDEX
 REQUEST QITEMSELECTION
 #endif
 
-CLASS QIdentityProxyModel INHERIT QAbstractProxyModel
+$beginClassFrom=QAbstractProxyModel
 
    METHOD new
    METHOD delete
@@ -33,9 +33,7 @@ CLASS QIdentityProxyModel INHERIT QAbstractProxyModel
    METHOD rowCount
    METHOD setSourceModel
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

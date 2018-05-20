@@ -16,7 +16,7 @@ REQUEST QICON
 REQUEST QSIZE
 #endif
 
-CLASS QMenu INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
@@ -57,9 +57,7 @@ CLASS QMenu INHERIT QWidget
    METHOD onHovered
    METHOD onTriggered
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

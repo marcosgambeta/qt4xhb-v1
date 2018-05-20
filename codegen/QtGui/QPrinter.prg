@@ -20,7 +20,7 @@ REQUEST QPRINTENGINE
 REQUEST QPAINTENGINE
 #endif
 
-CLASS QPrinter INHERIT QPaintDevice
+$beginClassFrom=QPaintDevice
 
    METHOD new
    METHOD delete
@@ -80,9 +80,7 @@ CLASS QPrinter INHERIT QPaintDevice
    METHOD winPageSize
    METHOD paintEngine
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

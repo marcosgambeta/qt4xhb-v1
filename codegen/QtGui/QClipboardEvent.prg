@@ -12,15 +12,13 @@ $header
 %% REQUEST QEVENTPRIVATE
 %% #endif
 
-CLASS QClipboardEvent INHERIT QEvent
+$beginClassFrom=QEvent
 
 %%   METHOD new
    METHOD delete
 %%   METHOD data
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -12,7 +12,7 @@ $header
 REQUEST QTEXTDOCUMENT
 #endif
 
-CLASS QSyntaxHighlighter INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD document
@@ -20,9 +20,7 @@ CLASS QSyntaxHighlighter INHERIT QObject
    METHOD rehighlight
    METHOD rehighlightBlock
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

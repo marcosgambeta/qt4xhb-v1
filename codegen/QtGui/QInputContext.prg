@@ -15,7 +15,7 @@ REQUEST QFONT
 REQUEST QTEXTFORMAT
 #endif
 
-CLASS QInputContext INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD actions
@@ -33,9 +33,7 @@ CLASS QInputContext INHERIT QObject
    METHOD update
    METHOD widgetDestroyed
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

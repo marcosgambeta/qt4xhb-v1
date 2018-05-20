@@ -14,7 +14,7 @@ REQUEST QPOINTF
 REQUEST QMOUSEEVENT
 #endif
 
-CLASS QMouseEvent INHERIT QInputEvent
+$beginClassFrom=QInputEvent
 
    METHOD new
    METHOD delete
@@ -30,9 +30,7 @@ CLASS QMouseEvent INHERIT QInputEvent
    METHOD posF
    METHOD createExtendedMouseEvent
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

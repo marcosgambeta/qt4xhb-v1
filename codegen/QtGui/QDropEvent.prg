@@ -15,7 +15,7 @@ REQUEST QWIDGET
 REQUEST QBYTEARRAY
 #endif
 
-CLASS QDropEvent INHERIT QEvent,QMimeSource
+$beginClassFrom=QEvent,QMimeSource
 
    METHOD new
    METHOD delete
@@ -33,9 +33,7 @@ CLASS QDropEvent INHERIT QEvent,QMimeSource
    METHOD format
    METHOD provides
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

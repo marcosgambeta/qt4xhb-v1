@@ -19,7 +19,7 @@ REQUEST QSTATUSBAR
 REQUEST QDOCKWIDGET
 #endif
 
-CLASS QMainWindow INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
@@ -71,9 +71,7 @@ CLASS QMainWindow INHERIT QWidget
    METHOD onIconSizeChanged
    METHOD onToolButtonStyleChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

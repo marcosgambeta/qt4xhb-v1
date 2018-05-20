@@ -12,7 +12,7 @@ $header
 REQUEST QPRINTER
 #endif
 
-CLASS QAbstractPrintDialog INHERIT QDialog
+$beginClassFrom=QDialog
 
    METHOD exec
    METHOD fromPage
@@ -25,9 +25,7 @@ CLASS QAbstractPrintDialog INHERIT QDialog
    METHOD setPrintRange
    METHOD toPage
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

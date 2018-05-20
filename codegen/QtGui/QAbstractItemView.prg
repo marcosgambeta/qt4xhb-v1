@@ -19,7 +19,7 @@ REQUEST QRECT
 REQUEST QVARIANT
 #endif
 
-CLASS QAbstractItemView INHERIT QAbstractScrollArea
+$beginClassFrom=QAbstractScrollArea
 
    METHOD delete
    METHOD alternatingRowColors
@@ -95,9 +95,7 @@ CLASS QAbstractItemView INHERIT QAbstractScrollArea
    METHOD onPressed
    METHOD onViewportEntered
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

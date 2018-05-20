@@ -15,7 +15,7 @@ REQUEST QSIZE
 REQUEST QPALETTE
 #endif
 
-CLASS QCleanlooksStyle INHERIT QWindowsStyle
+$beginClassFrom=QWindowsStyle
 
    METHOD new
    METHOD delete
@@ -37,9 +37,7 @@ CLASS QCleanlooksStyle INHERIT QWindowsStyle
    METHOD subElementRect
    METHOD unpolish
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

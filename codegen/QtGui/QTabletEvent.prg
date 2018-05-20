@@ -13,7 +13,7 @@ REQUEST QPOINT
 REQUEST QPOINTF
 #endif
 
-CLASS QTabletEvent INHERIT QInputEvent
+$beginClassFrom=QInputEvent
 
    METHOD new
    METHOD delete
@@ -36,9 +36,7 @@ CLASS QTabletEvent INHERIT QInputEvent
    METHOD xTilt
    METHOD yTilt
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

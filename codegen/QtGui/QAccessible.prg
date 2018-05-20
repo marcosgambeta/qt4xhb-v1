@@ -12,25 +12,14 @@ $header
 REQUEST QACCESSIBLEINTERFACE
 #endif
 
-CLASS QAccessible
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD isActive
    METHOD queryAccessibleInterface
    METHOD setRootObject
    METHOD updateAccessibility
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

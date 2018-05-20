@@ -8,13 +8,11 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QDateEdit INHERIT QDateTimeEdit
+$beginClassFrom=QDateTimeEdit
 
    METHOD new
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

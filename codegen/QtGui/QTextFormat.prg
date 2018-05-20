@@ -23,10 +23,7 @@ REQUEST QTEXTTABLECELLFORMAT
 REQUEST QTEXTTABLEFORMAT
 #endif
 
-CLASS QTextFormat
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -74,15 +71,7 @@ CLASS QTextFormat
    METHOD toTableFormat
    METHOD type
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

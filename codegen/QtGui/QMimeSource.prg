@@ -12,25 +12,14 @@ $header
 REQUEST QBYTEARRAY
 #endif
 
-CLASS QMimeSource
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD delete
    METHOD encodedData
    METHOD format
    METHOD provides
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

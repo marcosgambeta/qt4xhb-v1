@@ -16,7 +16,7 @@ REQUEST QSTANDARDITEM
 REQUEST QMIMEDATA
 #endif
 
-CLASS QStandardItemModel INHERIT QAbstractItemModel
+$beginClassFrom=QAbstractItemModel
 
    METHOD new
    METHOD delete
@@ -70,9 +70,7 @@ CLASS QStandardItemModel INHERIT QAbstractItemModel
 
    METHOD onItemChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

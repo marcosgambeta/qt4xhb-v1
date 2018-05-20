@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QSessionManager INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD allowsErrorInteraction
    METHOD allowsInteraction
@@ -26,9 +26,7 @@ CLASS QSessionManager INHERIT QObject
    METHOD setRestartCommand
    METHOD setRestartHint
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

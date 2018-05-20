@@ -14,7 +14,7 @@ REQUEST QSIZE
 REQUEST QSPACERITEM
 #endif
 
-CLASS QSpacerItem INHERIT QLayoutItem
+$beginClassFrom=QLayoutItem
 
    METHOD new
    METHOD changeSize
@@ -27,9 +27,7 @@ CLASS QSpacerItem INHERIT QLayoutItem
    METHOD sizeHint
    METHOD spacerItem
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -14,7 +14,7 @@ REQUEST QPOINTF
 REQUEST QWIDGET
 #endif
 
-CLASS QGestureEvent INHERIT QEvent
+$beginClassFrom=QEvent
 
    METHOD new
    METHOD delete
@@ -30,9 +30,7 @@ CLASS QGestureEvent INHERIT QEvent
    METHOD setWidget
    METHOD widget
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -12,7 +12,7 @@ $header
 REQUEST QBITMAP
 #endif
 
-CLASS QBitmap INHERIT QPixmap
+$beginClassFrom=QPixmap
 
    METHOD new
    METHOD delete
@@ -23,9 +23,7 @@ CLASS QBitmap INHERIT QPixmap
    METHOD toVariant
    METHOD fromVariant
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

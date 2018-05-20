@@ -13,7 +13,7 @@ REQUEST QSIZE
 REQUEST QICONENGINEV2
 #endif
 
-CLASS QIconEngineV2 INHERIT QIconEngine
+$beginClassFrom=QIconEngine
 
    METHOD delete
    METHOD availableSizes
@@ -24,9 +24,7 @@ CLASS QIconEngineV2 INHERIT QIconEngine
    METHOD virtual_hook
    METHOD write
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

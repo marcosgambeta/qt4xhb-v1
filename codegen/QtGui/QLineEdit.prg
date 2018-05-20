@@ -17,7 +17,7 @@ REQUEST QVALIDATOR
 REQUEST QVARIANT
 #endif
 
-CLASS QLineEdit INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
@@ -88,9 +88,7 @@ CLASS QLineEdit INHERIT QWidget
    METHOD onTextChanged
    METHOD onTextEdited
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

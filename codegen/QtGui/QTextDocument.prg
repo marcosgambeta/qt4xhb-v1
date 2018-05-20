@@ -23,7 +23,7 @@ REQUEST QVARIANT
 REQUEST QTEXTFRAME
 #endif
 
-CLASS QTextDocument INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -106,9 +106,7 @@ CLASS QTextDocument INHERIT QObject
    METHOD onUndoAvailable
    METHOD onUndoCommandAdded
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

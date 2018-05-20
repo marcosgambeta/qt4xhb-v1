@@ -12,7 +12,7 @@ $header
 REQUEST QPOINTF
 #endif
 
-CLASS QConicalGradient INHERIT QGradient
+$beginClassFrom=QGradient
 
    METHOD new
    METHOD angle
@@ -20,9 +20,7 @@ CLASS QConicalGradient INHERIT QGradient
    METHOD setAngle
    METHOD setCenter
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

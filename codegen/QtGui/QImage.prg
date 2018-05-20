@@ -16,7 +16,7 @@ REQUEST QSIZE
 REQUEST QTRANSFORM
 #endif
 
-CLASS QImage INHERIT QPaintDevice
+$beginClassFrom=QPaintDevice
 
    METHOD new
    METHOD delete
@@ -79,9 +79,7 @@ CLASS QImage INHERIT QPaintDevice
    METHOD toVariant
    METHOD fromVariant
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

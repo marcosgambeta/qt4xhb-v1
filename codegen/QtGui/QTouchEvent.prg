@@ -12,16 +12,14 @@ $header
 REQUEST QWIDGET
 #endif
 
-CLASS QTouchEvent INHERIT QInputEvent
+$beginClassFrom=QInputEvent
 
    METHOD delete
    METHOD widget
    METHOD deviceType
    METHOD touchPointStates
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

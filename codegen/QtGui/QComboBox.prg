@@ -21,7 +21,7 @@ REQUEST QVALIDATOR
 REQUEST QABSTRACTITEMVIEW
 #endif
 
-CLASS QComboBox INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
@@ -101,9 +101,7 @@ CLASS QComboBox INHERIT QWidget
    METHOD onHighlighted
    METHOD onHighlightedC
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

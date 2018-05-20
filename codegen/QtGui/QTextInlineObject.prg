@@ -13,10 +13,7 @@ REQUEST QTEXTFORMAT
 REQUEST QRECTF
 #endif
 
-CLASS QTextInlineObject
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -34,15 +31,7 @@ CLASS QTextInlineObject
    METHOD textPosition
    METHOD width
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

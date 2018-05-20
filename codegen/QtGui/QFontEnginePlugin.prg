@@ -13,16 +13,14 @@ REQUEST QFONTENGINEINFO
 REQUEST QABSTRACTFONTENGINE
 #endif
 
-CLASS QFontEnginePlugin INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD availableFontEngines
    METHOD create
    METHOD keys
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

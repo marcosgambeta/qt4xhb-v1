@@ -14,7 +14,7 @@ REQUEST QSIZE
 REQUEST QRECT
 #endif
 
-CLASS QCommonStyle INHERIT QStyle
+$beginClassFrom=QStyle
 
    METHOD new
    METHOD delete
@@ -32,9 +32,7 @@ CLASS QCommonStyle INHERIT QStyle
    METHOD subElementRect
    METHOD unpolish
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

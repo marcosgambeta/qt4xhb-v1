@@ -8,16 +8,14 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QAccessibleEvent INHERIT QEvent
+$beginClassFrom=QEvent
 
    METHOD new
    METHOD child
    METHOD setValue
    METHOD value
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

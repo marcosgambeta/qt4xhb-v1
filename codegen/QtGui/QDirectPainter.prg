@@ -14,7 +14,7 @@ REQUEST QRECT
 %% REQUEST UCHAR
 #endif
 
-CLASS QDirectPainter INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -37,9 +37,7 @@ CLASS QDirectPainter INHERIT QObject
    METHOD screenWidth
    METHOD unlock
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -13,10 +13,7 @@ REQUEST QRECT
 REQUEST QSIZE
 #endif
 
-CLASS QFontMetrics
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -44,15 +41,7 @@ CLASS QFontMetrics
    METHOD width
    METHOD xHeight
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

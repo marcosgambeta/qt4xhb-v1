@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QTextTableCellFormat INHERIT QTextCharFormat
+$beginClassFrom=QTextCharFormat
 
    METHOD new
    METHOD delete
@@ -23,9 +23,7 @@ CLASS QTextTableCellFormat INHERIT QTextCharFormat
    METHOD setTopPadding
    METHOD topPadding
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

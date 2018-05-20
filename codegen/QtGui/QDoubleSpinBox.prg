@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QDoubleSpinBox INHERIT QAbstractSpinBox
+$beginClassFrom=QAbstractSpinBox
 
    METHOD new
    METHOD cleanText
@@ -35,9 +35,7 @@ CLASS QDoubleSpinBox INHERIT QAbstractSpinBox
    METHOD onValueChanged1
    METHOD onValueChanged2
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

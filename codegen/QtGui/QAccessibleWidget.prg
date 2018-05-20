@@ -12,7 +12,7 @@ $header
 REQUEST QRECT
 #endif
 
-CLASS QAccessibleWidget INHERIT QAccessibleObject
+$beginClassFrom=QAccessibleObject
 
    METHOD new
    METHOD actionText
@@ -27,9 +27,7 @@ CLASS QAccessibleWidget INHERIT QAccessibleObject
    METHOD text
    METHOD userActionCount
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -17,7 +17,7 @@ REQUEST QMIMEDATA
 REQUEST QSIZE
 #endif
 
-CLASS QSortFilterProxyModel INHERIT QAbstractProxyModel
+$beginClassFrom=QAbstractProxyModel
 
    METHOD new
    METHOD delete
@@ -72,9 +72,7 @@ CLASS QSortFilterProxyModel INHERIT QAbstractProxyModel
    METHOD setFilterRegExp
    METHOD setFilterWildcard
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

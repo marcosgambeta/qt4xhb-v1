@@ -12,7 +12,7 @@ $header
 REQUEST QINPUTCONTEXT
 #endif
 
-CLASS QInputContextPlugin INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD create
@@ -21,9 +21,7 @@ CLASS QInputContextPlugin INHERIT QObject
    METHOD keys
    METHOD languages
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

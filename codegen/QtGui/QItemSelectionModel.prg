@@ -13,7 +13,7 @@ REQUEST QMODELINDEX
 REQUEST QABSTRACTITEMMODEL
 #endif
 
-CLASS QItemSelectionModel INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -40,9 +40,7 @@ CLASS QItemSelectionModel INHERIT QObject
    METHOD onCurrentRowChanged
    METHOD onSelectionChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

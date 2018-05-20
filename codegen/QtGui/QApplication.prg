@@ -23,7 +23,7 @@ REQUEST QSTYLE
 REQUEST QICON
 #endif
 
-CLASS QApplication INHERIT QCoreApplication
+$beginClassFrom=QCoreApplication
 
    METHOD new
    METHOD delete
@@ -109,9 +109,7 @@ CLASS QApplication INHERIT QCoreApplication
    METHOD onLastWindowClosed
    METHOD onSaveStateRequest
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

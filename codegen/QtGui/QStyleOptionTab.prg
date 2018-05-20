@@ -12,7 +12,7 @@ $header
 %% #ifndef QT_NO_TABBAR
 %% #endif // QT_NO_TABBAR
 
-CLASS QStyleOptionTab INHERIT QStyleOption
+$beginClassFrom=QStyleOption
 
    METHOD new
 %%   METHOD delete
@@ -33,9 +33,7 @@ CLASS QStyleOptionTab INHERIT QStyleOption
    METHOD setSelectedPosition
    METHOD setCornerWidgets
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

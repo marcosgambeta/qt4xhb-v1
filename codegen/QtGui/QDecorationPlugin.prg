@@ -12,15 +12,13 @@ $header
 REQUEST QDECORATION
 #endif
 
-CLASS QDecorationPlugin INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD create
    METHOD keys
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

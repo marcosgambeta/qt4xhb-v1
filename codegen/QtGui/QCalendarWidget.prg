@@ -14,7 +14,7 @@ REQUEST QDATE
 REQUEST QSIZE
 #endif
 
-CLASS QCalendarWidget INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
@@ -64,9 +64,7 @@ CLASS QCalendarWidget INHERIT QWidget
    METHOD onCurrentPageChanged
    METHOD onSelectionChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

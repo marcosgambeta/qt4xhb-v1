@@ -12,16 +12,14 @@ $header
 REQUEST QERRORMESSAGE
 #endif
 
-CLASS QErrorMessage INHERIT QDialog
+$beginClassFrom=QDialog
 
    METHOD new
    METHOD delete
    METHOD showMessage
    METHOD qtHandler
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

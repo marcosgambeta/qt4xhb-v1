@@ -14,7 +14,7 @@ REQUEST QSIZE
 REQUEST QWIDGET
 #endif
 
-CLASS QWidgetItem INHERIT QLayoutItem
+$beginClassFrom=QLayoutItem
 
    METHOD new
    METHOD delete
@@ -29,9 +29,7 @@ CLASS QWidgetItem INHERIT QLayoutItem
    METHOD sizeHint
    METHOD widget
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

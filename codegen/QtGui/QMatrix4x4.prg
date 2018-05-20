@@ -20,10 +20,7 @@ REQUEST QMATRIX3X3
 REQUEST QTRANSFORM
 #endif
 
-CLASS QMatrix4x4
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new1
    METHOD new3
@@ -55,15 +52,7 @@ CLASS QMatrix4x4
    METHOD translate
    METHOD transposed
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -19,10 +19,7 @@ REQUEST QTEXTDOCUMENT
 REQUEST QTEXTDOCUMENTFRAGMENT
 #endif
 
-CLASS QTextCursor
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -84,15 +81,7 @@ CLASS QTextCursor
    METHOD verticalMovementX
    METHOD visualNavigation
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

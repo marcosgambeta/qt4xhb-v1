@@ -12,10 +12,7 @@ $header
 REQUEST QREGION
 #endif
 
-CLASS QDecoration
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD delete
    METHOD buildSysMenu
@@ -28,15 +25,7 @@ CLASS QDecoration
    METHOD startMove
    METHOD startResize
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

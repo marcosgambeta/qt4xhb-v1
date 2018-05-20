@@ -12,7 +12,7 @@ $header
 REQUEST QSIZE
 #endif
 
-CLASS QInputDialog INHERIT QDialog
+$beginClassFrom=QDialog
 
    METHOD new
    METHOD delete
@@ -71,9 +71,7 @@ CLASS QInputDialog INHERIT QDialog
    METHOD onTextValueChanged
    METHOD onTextValueSelected
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

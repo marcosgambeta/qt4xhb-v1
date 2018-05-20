@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QPushButton INHERIT QAbstractButton
+$beginClassFrom=QAbstractButton
 
    METHOD new
    METHOD delete
@@ -20,9 +20,7 @@ CLASS QPushButton INHERIT QAbstractButton
    METHOD setFlat
    METHOD showMenu
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

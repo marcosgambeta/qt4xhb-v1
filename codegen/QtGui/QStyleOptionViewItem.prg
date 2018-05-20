@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QStyleOptionViewItem INHERIT QStyleOption
+$beginClassFrom=QStyleOption
 
    METHOD new
 %%   METHOD delete
@@ -29,9 +29,7 @@ CLASS QStyleOptionViewItem INHERIT QStyleOption
    METHOD setFont
    METHOD setShowDecorationSelected
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

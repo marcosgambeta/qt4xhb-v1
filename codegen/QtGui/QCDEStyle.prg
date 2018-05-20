@@ -12,7 +12,7 @@ $header
 REQUEST QPALETTE
 #endif
 
-CLASS QCDEStyle INHERIT QMotifStyle
+$beginClassFrom=QMotifStyle
 
    METHOD new
    METHOD delete
@@ -21,9 +21,7 @@ CLASS QCDEStyle INHERIT QMotifStyle
    METHOD pixelMetric
    METHOD standardPalette
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

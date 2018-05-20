@@ -18,7 +18,7 @@ REQUEST QRECT
 REQUEST QSIZE
 #endif
 
-CLASS QMovie INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -60,9 +60,7 @@ CLASS QMovie INHERIT QObject
    METHOD onStateChanged
    METHOD onUpdated
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

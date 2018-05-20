@@ -12,7 +12,7 @@ $header
 REQUEST QKEYEVENT
 #endif
 
-CLASS QKeyEvent INHERIT QInputEvent
+$beginClassFrom=QInputEvent
 
    METHOD new
    METHOD delete
@@ -27,9 +27,7 @@ CLASS QKeyEvent INHERIT QInputEvent
    METHOD text
    METHOD createExtendedKeyEvent
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

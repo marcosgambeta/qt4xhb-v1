@@ -13,10 +13,7 @@ REQUEST QPOINT
 REQUEST QIMAGE
 #endif
 
-CLASS QPlatformCursorImage
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -24,15 +21,7 @@ CLASS QPlatformCursorImage
    METHOD image
    METHOD set
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

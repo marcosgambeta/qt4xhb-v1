@@ -12,10 +12,7 @@ $header
 REQUEST QFONTENGINE
 #endif
 
-CLASS QPlatformFontDatabase
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD delete
    METHOD addApplicationFont
@@ -26,15 +23,7 @@ CLASS QPlatformFontDatabase
    METHOD registerFont
    METHOD registerQPF2Font
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

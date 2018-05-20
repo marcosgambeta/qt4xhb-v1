@@ -12,7 +12,7 @@ $header
 REQUEST QPOINTF
 #endif
 
-CLASS QRadialGradient INHERIT QGradient
+$beginClassFrom=QGradient
 
    METHOD new
    METHOD delete
@@ -27,9 +27,7 @@ CLASS QRadialGradient INHERIT QGradient
    METHOD focalRadius
    METHOD setFocalRadius
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

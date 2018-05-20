@@ -16,10 +16,7 @@ REQUEST QVECTOR2D
 REQUEST QVECTOR4D
 #endif
 
-CLASS QVector3D
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -44,15 +41,7 @@ CLASS QVector3D
    METHOD dotProduct
    METHOD normal
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

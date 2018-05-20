@@ -15,7 +15,7 @@ REQUEST QPIXMAP
 REQUEST QRECT
 #endif
 
-CLASS QMotifStyle INHERIT QCommonStyle
+$beginClassFrom=QCommonStyle
 
    METHOD new
    METHOD delete
@@ -34,9 +34,7 @@ CLASS QMotifStyle INHERIT QCommonStyle
    METHOD subControlRect
    METHOD subElementRect
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

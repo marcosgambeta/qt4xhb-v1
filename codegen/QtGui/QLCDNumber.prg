@@ -12,7 +12,7 @@ $header
 REQUEST QSIZE
 #endif
 
-CLASS QLCDNumber INHERIT QFrame
+$beginClassFrom=QFrame
 
    METHOD new
    METHOD delete
@@ -41,9 +41,7 @@ CLASS QLCDNumber INHERIT QFrame
 
    METHOD onOverflow
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

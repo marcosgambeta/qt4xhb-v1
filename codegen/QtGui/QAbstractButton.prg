@@ -15,7 +15,7 @@ REQUEST QSIZE
 REQUEST QKEYSEQUENCE
 #endif
 
-CLASS QAbstractButton INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD delete
    METHOD autoExclusive
@@ -50,9 +50,7 @@ CLASS QAbstractButton INHERIT QWidget
    METHOD onReleased
    METHOD onToggled
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

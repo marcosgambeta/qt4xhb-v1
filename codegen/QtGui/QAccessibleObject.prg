@@ -13,7 +13,7 @@ REQUEST QOBJECT
 REQUEST QRECT
 #endif
 
-CLASS QAccessibleObject INHERIT QAccessibleInterface
+$beginClassFrom=QAccessibleInterface
 
    METHOD actionText
    METHOD doAction
@@ -23,9 +23,7 @@ CLASS QAccessibleObject INHERIT QAccessibleInterface
    METHOD setText
    METHOD userActionCount
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

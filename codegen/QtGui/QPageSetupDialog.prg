@@ -12,7 +12,7 @@ $header
 REQUEST QPRINTER
 #endif
 
-CLASS QPageSetupDialog INHERIT QDialog
+$beginClassFrom=QDialog
 
    METHOD new
    METHOD open
@@ -23,9 +23,7 @@ CLASS QPageSetupDialog INHERIT QDialog
    METHOD testOption
    METHOD setVisible
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

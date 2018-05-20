@@ -17,7 +17,7 @@ REQUEST QBYTEARRAY
 REQUEST QURL
 #endif
 
-CLASS QFileDialog INHERIT QDialog
+$beginClassFrom=QDialog
 
    METHOD new
    METHOD delete
@@ -79,9 +79,7 @@ CLASS QFileDialog INHERIT QDialog
    METHOD onFilesSelected
    METHOD onFilterSelected
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

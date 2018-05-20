@@ -14,10 +14,7 @@ REQUEST QPOLYGONF
 REQUEST QPOLYGON
 #endif
 
-CLASS QPolygonF
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -33,15 +30,7 @@ CLASS QPolygonF
    METHOD translated
    METHOD united
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

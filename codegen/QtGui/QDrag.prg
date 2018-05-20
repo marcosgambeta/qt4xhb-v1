@@ -15,7 +15,7 @@ REQUEST QPIXMAP
 REQUEST QWIDGET
 #endif
 
-CLASS QDrag INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -33,9 +33,7 @@ CLASS QDrag INHERIT QObject
    METHOD onActionChanged
    METHOD onTargetChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

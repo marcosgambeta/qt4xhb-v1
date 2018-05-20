@@ -12,7 +12,7 @@ $header
 REQUEST QTEXTLENGTH
 #endif
 
-CLASS QTextTableFormat INHERIT QTextFrameFormat
+$beginClassFrom=QTextFrameFormat
 
    METHOD new
    METHOD delete
@@ -30,9 +30,7 @@ CLASS QTextTableFormat INHERIT QTextFrameFormat
    METHOD setColumnWidthConstraints
    METHOD setHeaderRowCount
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

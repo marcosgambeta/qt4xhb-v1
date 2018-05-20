@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QStyleOptionFrame INHERIT QStyleOption
+$beginClassFrom=QStyleOption
 
    METHOD new
 %%   METHOD delete
@@ -19,9 +19,7 @@ CLASS QStyleOptionFrame INHERIT QStyleOption
    METHOD setLineWidth
    METHOD setMidLineWidth
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
