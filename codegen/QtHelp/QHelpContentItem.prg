@@ -13,10 +13,7 @@ REQUEST QHELPCONTENTITEM
 REQUEST QURL
 #endif
 
-CLASS QHelpContentItem
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD delete
    METHOD child
@@ -27,15 +24,7 @@ CLASS QHelpContentItem
    METHOD title
    METHOD url
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
