@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QSqlIndex INHERIT QSqlRecord
+$beginClassFrom=QSqlRecord
 
    METHOD new
    METHOD delete
@@ -20,9 +20,7 @@ CLASS QSqlIndex INHERIT QSqlRecord
    METHOD setDescending
    METHOD setName
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

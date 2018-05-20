@@ -12,15 +12,13 @@ $header
 REQUEST QSQLDRIVER
 #endif
 
-CLASS QSqlDriverPlugin INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD create
    METHOD keys
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

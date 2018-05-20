@@ -14,7 +14,7 @@ REQUEST QSQLINDEX
 REQUEST QVARIANT
 #endif
 
-CLASS QSqlTableModel INHERIT QSqlQueryModel
+$beginClassFrom=QSqlQueryModel
 
    METHOD new
    METHOD delete
@@ -53,9 +53,7 @@ CLASS QSqlTableModel INHERIT QSqlQueryModel
    METHOD onBeforeUpdate
    METHOD onPrimeInsert
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

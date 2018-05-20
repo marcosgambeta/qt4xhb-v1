@@ -14,7 +14,7 @@ REQUEST QSQLTABLEMODEL
 REQUEST QVARIANT
 #endif
 
-CLASS QSqlRelationalTableModel INHERIT QSqlTableModel
+$beginClassFrom=QSqlTableModel
 
    METHOD new
    METHOD delete
@@ -29,9 +29,7 @@ CLASS QSqlRelationalTableModel INHERIT QSqlTableModel
    METHOD setTable
    METHOD revertRow
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

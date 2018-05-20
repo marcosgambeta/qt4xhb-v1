@@ -16,7 +16,7 @@ REQUEST QSQLINDEX
 REQUEST QSQLRECORD
 #endif
 
-CLASS QSqlDriver INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD beginTransaction
@@ -46,9 +46,7 @@ CLASS QSqlDriver INHERIT QObject
 
    METHOD onNotification
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

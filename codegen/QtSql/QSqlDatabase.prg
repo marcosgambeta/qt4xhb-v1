@@ -17,10 +17,7 @@ REQUEST QSQLRECORD
 REQUEST QSQLDATABASE
 #endif
 
-CLASS QSqlDatabase
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -64,15 +61,7 @@ CLASS QSqlDatabase
    METHOD registerSqlDriver
    METHOD removeDatabase
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
