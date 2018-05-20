@@ -39,14 +39,7 @@ $prototype=QPointF pos () const
 $method=|QPointF|pos|
 
 $prototype=Reason reason () const
-HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_REASON )
-{
-  QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->reason () );
-  }
-}
+$method=|QGraphicsSceneContextMenuEvent::Reason|reason|
 
 $prototype=QPointF scenePos () const
 $method=|QPointF|scenePos|
