@@ -13,7 +13,7 @@ REQUEST QNETWORKCACHEMETADATA
 REQUEST QIODEVICE
 #endif
 
-CLASS QNetworkDiskCache INHERIT QAbstractNetworkCache
+$beginClassFrom=QAbstractNetworkCache
 
    METHOD new
    METHOD delete
@@ -31,9 +31,7 @@ CLASS QNetworkDiskCache INHERIT QAbstractNetworkCache
    METHOD updateMetaData
    METHOD clear
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

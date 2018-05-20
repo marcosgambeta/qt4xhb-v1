@@ -14,10 +14,7 @@ REQUEST QHOSTADDRESS
 REQUEST QNETWORKINTERFACE
 #endif
 
-CLASS QNetworkInterface
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -33,15 +30,7 @@ CLASS QNetworkInterface
    METHOD interfaceFromIndex
    METHOD interfaceFromName
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -12,10 +12,7 @@ $header
 REQUEST QHOSTADDRESS
 #endif
 
-CLASS QNetworkAddressEntry
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -28,15 +25,7 @@ CLASS QNetworkAddressEntry
    METHOD setNetmask
    METHOD setPrefixLength
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

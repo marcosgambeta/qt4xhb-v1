@@ -13,7 +13,7 @@ REQUEST QIODEVICE
 REQUEST QBYTEARRAY
 #endif
 
-CLASS QFtp INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -53,9 +53,7 @@ CLASS QFtp INHERIT QObject
    METHOD onReadyRead
    METHOD onStateChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

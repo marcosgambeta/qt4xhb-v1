@@ -14,10 +14,7 @@ REQUEST QBYTEARRAY
 REQUEST QNETWORKCOOKIE
 #endif
 
-CLASS QNetworkCookie
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -39,15 +36,7 @@ CLASS QNetworkCookie
    METHOD value
    METHOD parseCookies
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

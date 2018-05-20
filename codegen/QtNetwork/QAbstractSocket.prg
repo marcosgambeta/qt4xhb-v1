@@ -14,7 +14,7 @@ REQUEST QNETWORKPROXY
 REQUEST QVARIANT
 #endif
 
-CLASS QAbstractSocket INHERIT QIODevice
+$beginClassFrom=QIODevice
 
    METHOD new
    METHOD delete
@@ -58,9 +58,7 @@ CLASS QAbstractSocket INHERIT QIODevice
    METHOD onProxyAuthenticationRequired
    METHOD onStateChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

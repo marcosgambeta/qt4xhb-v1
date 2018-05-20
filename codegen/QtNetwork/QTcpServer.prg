@@ -14,7 +14,7 @@ REQUEST QNETWORKPROXY
 REQUEST QHOSTADDRESS
 #endif
 
-CLASS QTcpServer INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -37,9 +37,7 @@ CLASS QTcpServer INHERIT QObject
 
    METHOD onNewConnection
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

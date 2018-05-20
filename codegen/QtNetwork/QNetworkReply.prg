@@ -17,7 +17,7 @@ REQUEST QSSLCONFIGURATION
 REQUEST QURL
 #endif
 
-CLASS QNetworkReply INHERIT QIODevice
+$beginClassFrom=QIODevice
 
    METHOD delete
    METHOD abort
@@ -47,9 +47,7 @@ CLASS QNetworkReply INHERIT QIODevice
    METHOD onSslErrors
    METHOD onUploadProgress
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
