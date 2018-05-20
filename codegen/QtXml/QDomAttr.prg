@@ -12,7 +12,7 @@ $header
 REQUEST QDOMELEMENT
 #endif
 
-CLASS QDomAttr INHERIT QDomNode
+$beginClassFrom=QDomNode
 
    METHOD new
    METHOD name
@@ -22,9 +22,7 @@ CLASS QDomAttr INHERIT QDomNode
    METHOD specified
    METHOD value
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

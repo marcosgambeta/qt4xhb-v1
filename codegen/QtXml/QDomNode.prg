@@ -27,10 +27,7 @@ REQUEST QDOMPROCESSINGINSTRUCTION
 REQUEST QDOMTEXT
 #endif
 
-CLASS QDomNode
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -97,15 +94,7 @@ CLASS QDomNode
    METHOD toProcessingInstruction
    METHOD toText
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

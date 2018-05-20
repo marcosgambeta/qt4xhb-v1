@@ -12,15 +12,13 @@ $header
 REQUEST QDOMTEXT
 #endif
 
-CLASS QDomText INHERIT QDomCharacterData
+$beginClassFrom=QDomCharacterData
 
    METHOD new
    METHOD nodeType
    METHOD splitText
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

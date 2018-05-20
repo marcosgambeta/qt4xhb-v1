@@ -8,14 +8,12 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QDomEntityReference INHERIT QDomNode
+$beginClassFrom=QDomNode
 
    METHOD new
    METHOD nodeType
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
