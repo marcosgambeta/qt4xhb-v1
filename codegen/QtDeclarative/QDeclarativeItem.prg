@@ -14,7 +14,7 @@ REQUEST QRECTF
 REQUEST QSCRIPTVALUE
 #endif
 
-CLASS QDeclarativeItem INHERIT QGraphicsObject,QDeclarativeParserStatus
+$beginClassFrom=QGraphicsObject,QDeclarativeParserStatus
 
    METHOD new
    METHOD delete
@@ -38,9 +38,7 @@ CLASS QDeclarativeItem INHERIT QGraphicsObject,QDeclarativeParserStatus
    METHOD smooth
    METHOD transformOrigin
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

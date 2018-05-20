@@ -16,7 +16,7 @@ REQUEST QURL
 %% REQUEST QDECLARATIVECOMPONENTATTACHED
 #endif
 
-CLASS QDeclarativeComponent INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -40,9 +40,7 @@ CLASS QDeclarativeComponent INHERIT QObject
    METHOD onProgressChanged
    METHOD onStatusChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -16,7 +16,7 @@ REQUEST QDECLARATIVEENGINE
 REQUEST QDECLARATIVECONTEXT
 #endif
 
-CLASS QDeclarativeContext INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -31,9 +31,7 @@ CLASS QDeclarativeContext INHERIT QObject
    METHOD setContextObject
    METHOD setContextProperty
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
