@@ -12,7 +12,7 @@ $header
 REQUEST QGLSHADER
 #endif
 
-CLASS QGLShaderProgram INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -93,9 +93,7 @@ CLASS QGLShaderProgram INHERIT QObject
    METHOD uniformLocation
    METHOD hasOpenGLShaderPrograms
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

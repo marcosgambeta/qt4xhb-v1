@@ -15,10 +15,7 @@ REQUEST QCOLOR
 REQUEST QGLCONTEXT
 #endif
 
-CLASS QGLContext
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -43,15 +40,7 @@ CLASS QGLContext
    METHOD setTextureCacheLimit
    METHOD textureCacheLimit
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
