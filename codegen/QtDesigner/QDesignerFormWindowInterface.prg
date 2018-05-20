@@ -17,7 +17,7 @@ REQUEST QWIDGET
 REQUEST QDESIGNERFORMWINDOWINTERFACE
 #endif
 
-CLASS QDesignerFormWindowInterface INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD delete
    METHOD absoluteDir
@@ -74,9 +74,7 @@ CLASS QDesignerFormWindowInterface INHERIT QWidget
    METHOD onAboutToUnmanageWidget
    METHOD onResourceFilesChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
