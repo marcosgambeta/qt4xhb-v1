@@ -15,7 +15,7 @@ REQUEST QMATRIX
 REQUEST QRECT
 #endif
 
-CLASS QSvgRenderer INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -35,9 +35,7 @@ CLASS QSvgRenderer INHERIT QObject
 
    METHOD onRepaintNeeded
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

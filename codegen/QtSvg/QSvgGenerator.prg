@@ -15,7 +15,7 @@ REQUEST QRECT
 REQUEST QRECTF
 #endif
 
-CLASS QSvgGenerator INHERIT QPaintDevice
+$beginClassFrom=QPaintDevice
 
    METHOD new
    METHOD delete
@@ -35,9 +35,7 @@ CLASS QSvgGenerator INHERIT QPaintDevice
    METHOD viewBox
    METHOD viewBoxF
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

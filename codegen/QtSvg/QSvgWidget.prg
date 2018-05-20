@@ -13,7 +13,7 @@ REQUEST QSVGRENDERER
 REQUEST QSIZE
 #endif
 
-CLASS QSvgWidget INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
@@ -21,9 +21,7 @@ CLASS QSvgWidget INHERIT QWidget
    METHOD sizeHint
    METHOD load
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

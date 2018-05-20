@@ -14,7 +14,7 @@ REQUEST QSVGRENDERER
 REQUEST QRECTF
 #endif
 
-CLASS QGraphicsSvgItem INHERIT QGraphicsObject
+$beginClassFrom=QGraphicsObject
 
    METHOD new
    METHOD elementId
@@ -27,9 +27,7 @@ CLASS QGraphicsSvgItem INHERIT QGraphicsObject
    METHOD paint
    METHOD type
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
