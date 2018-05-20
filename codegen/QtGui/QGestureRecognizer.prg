@@ -37,15 +37,7 @@ $prototype=virtual QGesture * create ( QObject * target )
 $virtualMethod=|QGesture *|create|QObject *
 
 $prototype=virtual Result recognize ( QGesture * gesture, QObject * watched, QEvent * event ) = 0
-HB_FUNC_STATIC( QGESTURERECOGNIZER_RECOGNIZE )
-{
-  QGestureRecognizer * obj = (QGestureRecognizer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QGesture * par1 = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( (int) obj->recognize ( par1, PQOBJECT(2), PQEVENT(3) ) );
-  }
-}
+$virtualMethod=|QGestureRecognizer::Result|recognize|QGesture *,QObject *,QEvent *
 
 $prototype=virtual void reset ( QGesture * gesture )
 $virtualMethod=|void|reset|QGesture *
