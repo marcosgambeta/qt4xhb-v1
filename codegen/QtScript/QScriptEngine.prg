@@ -16,7 +16,7 @@ REQUEST QSCRIPTSTRING
 REQUEST QSCRIPTSYNTAXCHECKRESULT
 #endif
 
-CLASS QScriptEngine INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -56,9 +56,7 @@ CLASS QScriptEngine INHERIT QObject
 
    METHOD onSignalHandlerException
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
