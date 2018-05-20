@@ -13,7 +13,7 @@ REQUEST QVARIANT
 REQUEST QAXOBJECT
 #endif
 
-CLASS QAxObject INHERIT QObject,QAxBase
+$beginClassFrom=QObject,QAxBase
 
    METHOD new
    METHOD delete
@@ -37,9 +37,7 @@ CLASS QAxObject INHERIT QObject,QAxBase
    METHOD onPropertyChanged
    METHOD onSignal
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -13,7 +13,7 @@ REQUEST QVARIANT
 REQUEST QAXSCRIPT
 #endif
 
-CLASS QAxScriptManager INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -28,9 +28,7 @@ CLASS QAxScriptManager INHERIT QObject
 
    METHOD onError
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
