@@ -41,14 +41,7 @@ $prototype=Spread spread () const
 $method=|QGradient::Spread|spread|
 
 $prototype=Type type () const
-HB_FUNC_STATIC( QGRADIENT_TYPE )
-{
-  QGradient * obj = (QGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->type () );
-  }
-}
+$method=|QGradient::Type|type|
 
 $extraMethods
 
