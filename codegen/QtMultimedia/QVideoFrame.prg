@@ -8,12 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT4XHB_NO_REQUESTS
-%% TODO: corrigir
-%% REQUEST UCHAR
-REQUEST QVARIANT
-REQUEST QSIZE
-#endif
+$addRequests
 
 $beginClass
 
