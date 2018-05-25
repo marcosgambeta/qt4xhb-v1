@@ -8,13 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT4XHB_NO_REQUESTS
-REQUEST QRECTF
-REQUEST QSIZEF
-REQUEST QGRAPHICSITEM
-REQUEST QGRAPHICSLAYOUTITEM
-REQUEST QSIZEPOLICY
-#endif
+$addRequests
 
 $beginClassFrom=QObject
 

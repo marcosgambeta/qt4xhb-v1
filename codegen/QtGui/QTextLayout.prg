@@ -8,14 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT4XHB_NO_REQUESTS
-REQUEST QRECTF
-REQUEST QTEXTLINE
-REQUEST QFONT
-REQUEST QGLYPHRUN
-REQUEST QPOINTF
-REQUEST QTEXTOPTION
-#endif
+$addRequests
 
 $beginClass
 

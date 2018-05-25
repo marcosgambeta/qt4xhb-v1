@@ -12,6 +12,8 @@ $header
 %% #ifndef QT_NO_TABBAR
 %% #endif // QT_NO_TABBAR
 
+$addRequests
+
 $beginClassFrom=QStyleOption
 
    METHOD new

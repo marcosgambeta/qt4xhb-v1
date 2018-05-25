@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT4XHB_NO_REQUESTS
-REQUEST QRECTF
-REQUEST QPOLYGONF
-REQUEST QPOLYGON
-#endif
+$addRequests
 
 $beginClass
 

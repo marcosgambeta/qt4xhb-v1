@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT4XHB_NO_REQUESTS
-REQUEST QGRAPHICSPROXYWIDGET
-REQUEST QRECTF
-REQUEST QWIDGET
-#endif
+$addRequests
 
 $beginClassFrom=QGraphicsWidget
 

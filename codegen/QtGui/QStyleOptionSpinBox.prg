@@ -12,6 +12,8 @@ $header
 %% #ifndef QT_NO_SPINBOX
 %% #endif // QT_NO_SPINBOX
 
+$addRequests
+
 $beginClassFrom=QStyleOptionComplex
 
    METHOD new

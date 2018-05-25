@@ -8,14 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT4XHB_NO_REQUESTS
-REQUEST QREGEXP
-REQUEST QMODELINDEX
-REQUEST QVARIANT
-REQUEST QITEMSELECTION
-REQUEST QMIMEDATA
-REQUEST QSIZE
-#endif
+$addRequests
 
 $beginClassFrom=QAbstractProxyModel
 

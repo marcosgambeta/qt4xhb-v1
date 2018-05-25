@@ -12,13 +12,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT4XHB_NO_REQUESTS
-REQUEST QRECT
-REQUEST QRECTF
-REQUEST QSIZEF
-REQUEST QPRINTENGINE
-REQUEST QPAINTENGINE
-#endif
+$addRequests
 
 $beginClassFrom=QPaintDevice
 

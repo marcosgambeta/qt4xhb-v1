@@ -12,6 +12,8 @@ $header
 %% #ifndef QT_NO_TOOLBAR
 %% #endif // QT_NO_TOOLBAR
 
+$addRequests
+
 $beginClassFrom=QStyleOption
 
    METHOD new

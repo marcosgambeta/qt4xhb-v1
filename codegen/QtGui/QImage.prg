@@ -8,13 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT4XHB_NO_REQUESTS
-REQUEST QIMAGE
-REQUEST QPOINT
-REQUEST QRECT
-REQUEST QSIZE
-REQUEST QTRANSFORM
-#endif
+$addRequests
 
 $beginClassFrom=QPaintDevice
 

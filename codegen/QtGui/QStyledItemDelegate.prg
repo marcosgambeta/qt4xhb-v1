@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT4XHB_NO_REQUESTS
-REQUEST QITEMEDITORFACTORY
-REQUEST QWIDGET
-REQUEST QSIZE
-#endif
+$addRequests
 
 $beginClassFrom=QAbstractItemDelegate
 

@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT4XHB_NO_REQUESTS
-REQUEST QWIDGET
-REQUEST QSCROLLBAR
-REQUEST QSIZE
-#endif
+$addRequests
 
 $beginClassFrom=QFrame
 

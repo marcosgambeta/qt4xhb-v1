@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT4XHB_NO_REQUESTS
-REQUEST QVARIANT
-REQUEST QOBJECT
-REQUEST QRECT
-#endif
+$addRequests
 
 $beginClassFrom=QAccessible
 

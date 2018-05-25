@@ -10,6 +10,8 @@ $header
 
 #include "hbclass.ch"
 
+$addRequests
+
 $beginClass
 
 %%   METHOD delete

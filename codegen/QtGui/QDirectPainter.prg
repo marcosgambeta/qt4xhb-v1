@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT4XHB_NO_REQUESTS
-REQUEST QREGION
-REQUEST QRECT
-%% REQUEST UCHAR
-#endif
+$addRequests
 
 $beginClassFrom=QObject
 

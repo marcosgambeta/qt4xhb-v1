@@ -15,6 +15,8 @@ $header
 %% #ifndef QT_NO_RUBBERBAND
 %% #endif // QT_NO_RUBBERBAND
 
+$addRequests
+
 $beginClassFrom=QStyleOption
 
    METHOD new

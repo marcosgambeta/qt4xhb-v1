@@ -8,12 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT4XHB_NO_REQUESTS
-REQUEST QPIXMAP
-REQUEST QRECT
-REQUEST QSIZE
-REQUEST QPALETTE
-#endif
+$addRequests
 
 $beginClassFrom=QWindowsStyle
 

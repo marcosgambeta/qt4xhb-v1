@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT4XHB_NO_REQUESTS
-REQUEST QRECT
-REQUEST QSIZE
-REQUEST QSPACERITEM
-#endif
+$addRequests
 
 $beginClassFrom=QLayoutItem
 

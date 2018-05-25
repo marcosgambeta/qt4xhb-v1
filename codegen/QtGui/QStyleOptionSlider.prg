@@ -12,6 +12,8 @@ $header
 %% #ifndef QT_NO_SLIDER
 %% #endif // QT_NO_SLIDER
 
+$addRequests
+
 $beginClassFrom=QStyleOptionComplex
 
    METHOD new
