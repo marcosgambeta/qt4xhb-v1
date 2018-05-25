@@ -8,12 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT4XHB_NO_REQUESTS
-REQUEST QPAINTDEVICE
-REQUEST QGLFORMAT
-REQUEST QCOLOR
-REQUEST QGLCONTEXT
-#endif
+$addRequests
 
 $beginClass
 
