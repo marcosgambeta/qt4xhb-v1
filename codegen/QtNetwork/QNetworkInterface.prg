@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT4XHB_NO_REQUESTS
-REQUEST QNETWORKADDRESSENTRY
-REQUEST QHOSTADDRESS
-REQUEST QNETWORKINTERFACE
-#endif
+$addRequests
 
 $beginClass
 
