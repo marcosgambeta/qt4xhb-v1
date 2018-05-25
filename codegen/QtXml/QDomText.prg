@@ -8,9 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT4XHB_NO_REQUESTS
-REQUEST QDOMTEXT
-#endif
+$addRequests
 
 $beginClassFrom=QDomCharacterData
 
