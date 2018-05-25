@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT4XHB_NO_REQUESTS
-REQUEST QDECLARATIVEITEM
-REQUEST QRECTF
-REQUEST QSCRIPTVALUE
-#endif
+$addRequests
 
 $beginClassFrom=QGraphicsObject,QDeclarativeParserStatus
 
