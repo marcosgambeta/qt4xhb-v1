@@ -8,13 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT4XHB_NO_REQUESTS
-REQUEST QSQLRESULT
-REQUEST QVARIANT
-REQUEST QSQLERROR
-REQUEST QSQLINDEX
-REQUEST QSQLRECORD
-#endif
+$addRequests
 
 $beginClassFrom=QObject
 
