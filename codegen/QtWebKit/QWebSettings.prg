@@ -8,12 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT4XHB_NO_REQUESTS
-REQUEST QURL
-REQUEST QWEBSETTINGS
-REQUEST QICON
-REQUEST QPIXMAP
-#endif
+$addRequests
 
 $beginClass
 

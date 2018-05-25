@@ -8,14 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT4XHB_NO_REQUESTS
-REQUEST QWEBHISTORY
-REQUEST QICON
-REQUEST QWEBPAGE
-REQUEST QACTION
-REQUEST QWEBSETTINGS
-REQUEST QURL
-#endif
+$addRequests
 
 $beginClassFrom=QWidget
 
