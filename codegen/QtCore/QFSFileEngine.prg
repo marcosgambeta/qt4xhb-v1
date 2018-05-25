@@ -8,10 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT4XHB_NO_REQUESTS
-REQUEST QDATETIME
-REQUEST QFILEINFO
-#endif
+$addRequests
 
 $beginClassFrom=QAbstractFileEngine
 
