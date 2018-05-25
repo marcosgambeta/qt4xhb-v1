@@ -8,9 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT4XHB_NO_REQUESTS
-REQUEST QURL
-#endif
+$addRequests
 
 $beginClassFrom=QObject
 
