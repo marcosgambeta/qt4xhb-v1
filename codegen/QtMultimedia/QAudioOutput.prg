@@ -31,8 +31,7 @@ $beginClassFrom=QObject
    METHOD stop
    METHOD suspend
 
-   METHOD onNotify
-   METHOD onStateChanged
+$addSignals
 
 $endClass
 

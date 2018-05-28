@@ -23,9 +23,7 @@ $beginClassFrom=QObject
    METHOD supportedPixelFormats
    METHOD surfaceFormat
 
-   METHOD onActiveChanged
-   METHOD onSurfaceFormatChanged
-   METHOD onSupportedFormatsChanged
+$addSignals
 
 $endClass
 
