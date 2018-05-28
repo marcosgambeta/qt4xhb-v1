@@ -55,29 +55,7 @@ $beginClassFrom=QObject
    METHOD event
    METHOD shouldInterruptJavaScript
 
-   METHOD onContentsChanged
-   METHOD onDatabaseQuotaExceeded
-   METHOD onDownloadRequested
-   METHOD onFrameCreated
-   METHOD onGeometryChangeRequested
-   METHOD onLinkClicked
-   METHOD onLinkHovered
-   METHOD onLoadFinished
-   METHOD onLoadProgress
-   METHOD onLoadStarted
-   METHOD onMenuBarVisibilityChangeRequested
-   METHOD onMicroFocusChanged
-   METHOD onPrintRequested
-   METHOD onRepaintRequested
-   METHOD onRestoreFrameStateRequested
-   METHOD onSaveFrameStateRequested
-   METHOD onScrollRequested
-   METHOD onSelectionChanged
-   METHOD onStatusBarMessage
-   METHOD onStatusBarVisibilityChangeRequested
-   METHOD onToolBarVisibilityChangeRequested
-   METHOD onUnsupportedContent
-   METHOD onWindowCloseRequested
+$addSignals
 
 $endClass
 

@@ -58,15 +58,7 @@ $beginClassFrom=QObject
    METHOD evaluateJavaScript
    METHOD print
 
-   METHOD onContentsSizeChanged
-   METHOD onIconChanged
-   METHOD onInitialLayoutCompleted
-   METHOD onJavaScriptWindowObjectCleared
-   METHOD onLoadFinished
-   METHOD onLoadStarted
-   METHOD onPageChanged
-   METHOD onTitleChanged
-   METHOD onUrlChanged
+$addSignals
 
 $endClass
 

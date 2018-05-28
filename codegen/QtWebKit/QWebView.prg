@@ -43,15 +43,7 @@ $beginClassFrom=QWidget
    METHOD reload
    METHOD stop
 
-   METHOD onIconChanged
-   METHOD onLinkClicked
-   METHOD onLoadFinished
-   METHOD onLoadProgress
-   METHOD onLoadStarted
-   METHOD onSelectionChanged
-   METHOD onStatusBarMessage
-   METHOD onTitleChanged
-   METHOD onUrlChanged
+$addSignals
 
 $endClass
 
