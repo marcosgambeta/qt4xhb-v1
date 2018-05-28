@@ -40,10 +40,7 @@ $beginClassFrom=QObject
    METHOD metaData
    METHOD namespaceName
 
-   METHOD onCurrentFilterChanged
-   METHOD onSetupFinished
-   METHOD onSetupStarted
-   METHOD onWarning
+$addSignals
 
 $endClass
 
