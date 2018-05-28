@@ -26,8 +26,7 @@ $beginClassFrom=QObject
    METHOD wakeUp
    METHOD instance
 
-   METHOD onAboutToBlock
-   METHOD onAwake
+$addSignals
 
 $endClass
 

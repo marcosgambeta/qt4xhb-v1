@@ -51,7 +51,7 @@ $beginClassFrom=QObject
    METHOD testAttribute
    METHOD translate
 
-   METHOD onAboutToQuit
+$addSignals
 
 $endClass
 

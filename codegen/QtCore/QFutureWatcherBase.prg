@@ -31,16 +31,7 @@ $beginClassFrom=QObject
    METHOD resume
    METHOD togglePaused
 
-   METHOD onStarted
-   METHOD onFinished
-   METHOD onCanceled
-   METHOD onPaused
-   METHOD onResumed
-   METHOD onResultReadyAt
-   METHOD onResultsReadyAt
-   METHOD onProgressRangeChanged
-   METHOD onProgressValueChanged
-   METHOD onProgressTextChanged
+$addSignals
 
 $endClass
 

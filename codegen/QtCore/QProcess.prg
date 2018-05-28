@@ -55,12 +55,7 @@ $beginClassFrom=QIODevice
    METHOD startDetached
    METHOD systemEnvironment
 
-   METHOD onError
-   METHOD onFinished
-   METHOD onReadyReadStandardError
-   METHOD onReadyReadStandardOutput
-   METHOD onStarted
-   METHOD onStateChanged
+$addSignals
 
 $endClass
 

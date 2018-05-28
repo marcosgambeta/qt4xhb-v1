@@ -29,8 +29,7 @@ $beginClassFrom=QObject
    METHOD idealThreadCount
    METHOD yieldCurrentThread
 
-   METHOD onFinished
-   METHOD onStarted
+$addSignals
 
 $endClass
 

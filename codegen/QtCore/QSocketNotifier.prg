@@ -19,7 +19,7 @@ $beginClassFrom=QObject
    METHOD isEnabled
    METHOD setEnabled
 
-   METHOD onActivated
+$addSignals
 
 $endClass
 

@@ -180,7 +180,7 @@ $beginClass
    METHOD onGestureEvent
    METHOD onGestureOverrideEvent
 
-   METHOD onDestroyed
+$addSignals
 
    METHOD connect
    METHOD disconnect
