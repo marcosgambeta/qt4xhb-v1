@@ -31,8 +31,7 @@ $beginClassFrom=QObject
    METHOD errorString
 %%   METHOD qmlAttachedProperties
 
-   METHOD onProgressChanged
-   METHOD onStatusChanged
+$addSignals
 
 $endClass
 
