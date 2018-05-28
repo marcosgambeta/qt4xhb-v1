@@ -28,7 +28,7 @@ $beginClassFrom=QObject
    METHOD waitForNewConnection
    METHOD removeServer
 
-   METHOD onNewConnection
+$addSignals
 
 $endClass
 

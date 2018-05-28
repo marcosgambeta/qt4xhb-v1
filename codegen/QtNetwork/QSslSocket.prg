@@ -70,11 +70,7 @@ $beginClassFrom=QTcpSocket
    METHOD supportsSsl
    METHOD systemCaCertificates
 
-   METHOD onEncrypted
-   METHOD onEncryptedBytesWritten
-   METHOD onModeChanged
-   METHOD onPeerVerifyError
-   METHOD onSslErrors
+$addSignals
 
 $endClass
 

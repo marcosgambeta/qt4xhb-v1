@@ -31,7 +31,7 @@ $beginClassFrom=QObject
    METHOD socketDescriptor
    METHOD waitForNewConnection
 
-   METHOD onNewConnection
+$addSignals
 
 $endClass
 

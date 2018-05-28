@@ -34,12 +34,7 @@ $beginClassFrom=QObject
    METHOD reject
    METHOD stop
 
-   METHOD onClosed
-   METHOD onError
-   METHOD onNewConfigurationActivated
-   METHOD onOpened
-   METHOD onPreferredConfigurationChanged
-   METHOD onStateChanged
+$addSignals
 
 $endClass
 

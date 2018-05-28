@@ -41,14 +41,7 @@ $beginClassFrom=QObject
    METHOD state
    METHOD abort
 
-   METHOD onCommandFinished
-   METHOD onCommandStarted
-   METHOD onDataTransferProgress
-   METHOD onDone
-   METHOD onListInfo
-   METHOD onRawCommandReply
-   METHOD onReadyRead
-   METHOD onStateChanged
+$addSignals
 
 $endClass
 

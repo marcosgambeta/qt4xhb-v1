@@ -33,12 +33,7 @@ $beginClassFrom=QIODevice
    METHOD url
    METHOD close
 
-   METHOD onDownloadProgress
-   METHOD onError
-   METHOD onFinished
-   METHOD onMetaDataChanged
-   METHOD onSslErrors
-   METHOD onUploadProgress
+$addSignals
 
 $endClass
 

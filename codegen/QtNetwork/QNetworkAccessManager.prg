@@ -34,11 +34,7 @@ $beginClassFrom=QObject
    METHOD setProxy
    METHOD setProxyFactory
 
-   METHOD onAuthenticationRequired
-   METHOD onFinished
-   METHOD onNetworkAccessibleChanged
-   METHOD onProxyAuthenticationRequired
-   METHOD onSslErrors
+$addSignals
 
 $endClass
 

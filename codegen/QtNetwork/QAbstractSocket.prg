@@ -47,12 +47,7 @@ $beginClassFrom=QIODevice
    METHOD waitForBytesWritten
    METHOD waitForReadyRead
 
-   METHOD onConnected
-   METHOD onDisconnected
-   METHOD onError
-   METHOD onHostFound
-   METHOD onProxyAuthenticationRequired
-   METHOD onStateChanged
+$addSignals
 
 $endClass
 
