@@ -43,9 +43,7 @@ $beginClassFrom=QObject
    METHOD visualPos
    METHOD visualRect
 
-   METHOD onCurrentChanged
-   METHOD onTabCloseRequested
-   METHOD onTabMoved
+$addSignals
 
 $endClass
 

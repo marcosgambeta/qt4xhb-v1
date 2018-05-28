@@ -46,10 +46,7 @@ $beginClassFrom=QWidget
    METHOD exec4
    METHOD exec
 
-   METHOD onAboutToHide
-   METHOD onAboutToShow
-   METHOD onHovered
-   METHOD onTriggered
+$addSignals
 
 $endClass
 

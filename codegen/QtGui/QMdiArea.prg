@@ -43,7 +43,7 @@ $beginClassFrom=QAbstractScrollArea
    METHOD setActiveSubWindow
    METHOD tileSubWindows
 
-   METHOD onSubWindowActivated
+$addSignals
 
 $endClass
 

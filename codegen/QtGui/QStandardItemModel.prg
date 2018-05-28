@@ -62,7 +62,7 @@ $beginClassFrom=QAbstractItemModel
    METHOD mimeData
    METHOD dropMimeData
 
-   METHOD onItemChanged
+$addSignals
 
 $endClass
 

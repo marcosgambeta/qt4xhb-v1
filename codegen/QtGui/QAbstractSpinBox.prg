@@ -47,7 +47,7 @@ $beginClassFrom=QWidget
    METHOD stepDown
    METHOD stepUp
 
-   METHOD onEditingFinished
+$addSignals
 
 $endClass
 

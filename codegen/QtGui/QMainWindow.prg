@@ -59,8 +59,7 @@ $beginClassFrom=QWidget
    METHOD setAnimated
    METHOD setDockNestingEnabled
 
-   METHOD onIconSizeChanged
-   METHOD onToolButtonStyleChanged
+$addSignals
 
 $endClass
 

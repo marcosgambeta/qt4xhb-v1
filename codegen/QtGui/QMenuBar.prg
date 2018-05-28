@@ -31,8 +31,7 @@ $beginClassFrom=QWidget
    METHOD sizeHint
    METHOD setVisible
 
-   METHOD onHovered
-   METHOD onTriggered
+$addSignals
 
 $endClass
 

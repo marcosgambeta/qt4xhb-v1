@@ -44,13 +44,7 @@ $beginClassFrom=QObject
    METHOD stop
    METHOD supportedFormats
 
-   METHOD onError
-   METHOD onFinished
-   METHOD onFrameChanged
-   METHOD onResized
-   METHOD onStarted
-   METHOD onStateChanged
-   METHOD onUpdated
+$addSignals
 
 $endClass
 

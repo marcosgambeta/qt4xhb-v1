@@ -68,7 +68,7 @@ $beginClassFrom=QGraphicsObject,QGraphicsLayoutItem
    METHOD close
    METHOD setTabOrder
 
-   METHOD onGeometryChanged
+$addSignals
 
 $endClass
 

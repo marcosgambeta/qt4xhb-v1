@@ -29,8 +29,7 @@ $beginClassFrom=QDialog
    METHOD setCustomColor
    METHOD setStandardColor
 
-   METHOD onColorSelected
-   METHOD onCurrentColorChanged
+$addSignals
 
 $endClass
 

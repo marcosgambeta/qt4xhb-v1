@@ -28,9 +28,7 @@ $beginClassFrom=QWidget
    METHOD open
    METHOD reject
 
-   METHOD onAccepted
-   METHOD onFinished
-   METHOD onRejected
+$addSignals
 
 $endClass
 

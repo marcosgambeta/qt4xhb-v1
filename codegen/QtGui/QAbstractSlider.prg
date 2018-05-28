@@ -38,12 +38,7 @@ $beginClassFrom=QWidget
    METHOD setOrientation
    METHOD setValue
 
-   METHOD onActionTriggered
-   METHOD onRangeChanged
-   METHOD onSliderMoved
-   METHOD onSliderPressed
-   METHOD onSliderReleased
-   METHOD onValueChanged
+$addSignals
 
 $endClass
 

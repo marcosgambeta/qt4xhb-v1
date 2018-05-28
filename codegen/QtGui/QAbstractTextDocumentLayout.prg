@@ -24,10 +24,7 @@ $beginClassFrom=QObject
    METHOD registerHandler
    METHOD setPaintDevice
 
-   METHOD onDocumentSizeChanged
-   METHOD onPageCountChanged
-   METHOD onUpdate
-   METHOD onUpdateBlock
+$addSignals
 
 $endClass
 

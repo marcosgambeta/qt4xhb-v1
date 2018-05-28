@@ -51,8 +51,7 @@ $beginClassFrom=QFrame
    METHOD setPixmap
    METHOD setText
 
-   METHOD onLinkActivated
-   METHOD onLinkHovered
+$addSignals
 
 $endClass
 

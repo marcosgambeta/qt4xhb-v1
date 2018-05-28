@@ -28,10 +28,7 @@ $beginClassFrom=QObject
    METHOD text2
    METHOD text
 
-   METHOD onChanged
-   METHOD onDataChanged
-   METHOD onFindBufferChanged
-   METHOD onSelectionChanged
+$addSignals
 
 $endClass
 

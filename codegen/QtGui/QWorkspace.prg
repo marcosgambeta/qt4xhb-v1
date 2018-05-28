@@ -31,7 +31,7 @@ $beginClassFrom=QWidget
    METHOD setActiveWindow
    METHOD tile
 
-   METHOD onWindowActivated
+$addSignals
 
 $endClass
 

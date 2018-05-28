@@ -70,10 +70,7 @@ $beginClassFrom=QObject
    METHOD toggle
    METHOD trigger
 
-   METHOD onChanged
-   METHOD onHovered
-   METHOD onToggled
-   METHOD onTriggered
+$addSignals
 
 $endClass
 

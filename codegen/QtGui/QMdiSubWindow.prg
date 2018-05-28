@@ -30,8 +30,7 @@ $beginClassFrom=QWidget
    METHOD showShaded
    METHOD showSystemMenu
 
-   METHOD onAboutToActivate
-   METHOD onWindowStateChanged
+$addSignals
 
 $endClass
 

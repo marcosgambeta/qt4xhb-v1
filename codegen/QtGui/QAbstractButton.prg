@@ -40,10 +40,7 @@ $beginClassFrom=QWidget
    METHOD setIconSize
    METHOD toggle
 
-   METHOD onClicked
-   METHOD onPressed
-   METHOD onReleased
-   METHOD onToggled
+$addSignals
 
 $endClass
 

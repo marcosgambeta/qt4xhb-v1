@@ -37,7 +37,7 @@ $beginClassFrom=QFrame
    METHOD setOctMode
    METHOD setSmallDecimalPoint
 
-   METHOD onOverflow
+$addSignals
 
 $endClass
 

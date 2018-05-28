@@ -66,11 +66,7 @@ $beginClassFrom=QDialog
    METHOD getOpenFileNames
    METHOD getSaveFileName
 
-   METHOD onCurrentChanged
-   METHOD onDirectoryEntered
-   METHOD onFileSelected
-   METHOD onFilesSelected
-   METHOD onFilterSelected
+$addSignals
 
 $endClass
 

@@ -56,8 +56,7 @@ $beginClassFrom=QWidget
    METHOD setCurrentIndex
    METHOD setCurrentWidget
 
-   METHOD onCurrentChanged
-   METHOD onTabCloseRequested
+$addSignals
 
 $endClass
 

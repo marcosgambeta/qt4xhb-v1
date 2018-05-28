@@ -233,7 +233,7 @@ $beginClassFrom=QObject
    METHOD mouseGrabber
    METHOD setTabOrder
 
-   METHOD onCustomContextMenuRequested
+$addSignals
 
 $endClass
 

@@ -62,12 +62,7 @@ $beginClassFrom=QDialog
    METHOD getItem
    METHOD getText
 
-   METHOD onDoubleValueChanged
-   METHOD onDoubleValueSelected
-   METHOD onIntValueChanged
-   METHOD onIntValueSelected
-   METHOD onTextValueChanged
-   METHOD onTextValueSelected
+$addSignals
 
 $endClass
 

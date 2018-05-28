@@ -31,7 +31,7 @@ $beginClassFrom=QWidget
    METHOD title
    METHOD validatePage
 
-   METHOD onCompleteChanged
+$addSignals
 
 $endClass
 

@@ -24,8 +24,7 @@ $beginClassFrom=QDialog
    METHOD setVisible
    METHOD getFont
 
-   METHOD onCurrentFontChanged
-   METHOD onFontSelected
+$addSignals
 
 $endClass
 

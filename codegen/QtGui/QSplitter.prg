@@ -40,7 +40,7 @@ $beginClassFrom=QFrame
    METHOD minimumSizeHint
    METHOD sizeHint
 
-   METHOD onSplitterMoved
+$addSignals
 
 $endClass
 

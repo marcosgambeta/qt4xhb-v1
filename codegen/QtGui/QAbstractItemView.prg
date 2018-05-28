@@ -79,12 +79,7 @@ $beginClassFrom=QAbstractScrollArea
    METHOD setRootIndex
    METHOD update
 
-   METHOD onActivated
-   METHOD onClicked
-   METHOD onDoubleClicked
-   METHOD onEntered
-   METHOD onPressed
-   METHOD onViewportEntered
+$addSignals
 
 $endClass
 

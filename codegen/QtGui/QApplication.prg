@@ -88,13 +88,7 @@ $beginClassFrom=QCoreApplication
    METHOD widgetAt
    METHOD windowIcon
 
-   METHOD onAboutToReleaseGpuResources
-   METHOD onAboutToUseGpuResources
-   METHOD onCommitDataRequest
-   METHOD onFocusChanged
-   METHOD onFontDatabaseChanged
-   METHOD onLastWindowClosed
-   METHOD onSaveStateRequest
+$addSignals
 
 $endClass
 

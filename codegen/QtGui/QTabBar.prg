@@ -62,9 +62,7 @@ $beginClassFrom=QWidget
    METHOD sizeHint
    METHOD setCurrentIndex
 
-   METHOD onCurrentChanged
-   METHOD onTabCloseRequested
-   METHOD onTabMoved
+$addSignals
 
 $endClass
 

@@ -71,17 +71,7 @@ $beginClassFrom=QAbstractItemView
    METHOD setOffsetToLastSection
    METHOD setOffsetToSectionPosition
 
-   METHOD onGeometriesChanged
-   METHOD onSectionAutoResize
-   METHOD onSectionClicked
-   METHOD onSectionCountChanged
-   METHOD onSectionDoubleClicked
-   METHOD onSectionEntered
-   METHOD onSectionHandleDoubleClicked
-   METHOD onSectionMoved
-   METHOD onSectionPressed
-   METHOD onSectionResized
-   METHOD onSortIndicatorChanged
+$addSignals
 
 $endClass
 

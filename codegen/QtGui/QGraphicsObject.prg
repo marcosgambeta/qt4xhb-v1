@@ -15,15 +15,7 @@ $beginClassFrom=QObject,QGraphicsItem
    METHOD grabGesture
    METHOD ungrabGesture
 
-   METHOD onEnabledChanged
-   METHOD onOpacityChanged
-   METHOD onParentChanged
-   METHOD onRotationChanged
-   METHOD onScaleChanged
-   METHOD onVisibleChanged
-   METHOD onXChanged
-   METHOD onYChanged
-   METHOD onZChanged
+$addSignals
 
 $endClass
 

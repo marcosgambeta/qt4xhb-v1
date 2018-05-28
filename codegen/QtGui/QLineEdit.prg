@@ -74,12 +74,7 @@ $beginClassFrom=QWidget
    METHOD setText
    METHOD undo
 
-   METHOD onCursorPositionChanged
-   METHOD onEditingFinished
-   METHOD onReturnPressed
-   METHOD onSelectionChanged
-   METHOD onTextChanged
-   METHOD onTextEdited
+$addSignals
 
 $endClass
 

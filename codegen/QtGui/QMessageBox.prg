@@ -51,7 +51,7 @@ $beginClassFrom=QDialog
    METHOD question
    METHOD warning
 
-   METHOD onButtonClicked
+$addSignals
 
 $endClass
 
