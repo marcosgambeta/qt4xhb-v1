@@ -28,7 +28,7 @@ $beginClassFrom=QObject
    METHOD load
    METHOD render
 
-   METHOD onRepaintNeeded
+$addSignals
 
 $endClass
 
