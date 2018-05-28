@@ -44,10 +44,7 @@ $beginClassFrom=QSqlQueryModel
    METHOD submit
    METHOD submitAll
 
-   METHOD onBeforeDelete
-   METHOD onBeforeInsert
-   METHOD onBeforeUpdate
-   METHOD onPrimeInsert
+$addSignals
 
 $endClass
 
