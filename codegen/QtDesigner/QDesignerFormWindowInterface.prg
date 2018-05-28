@@ -53,19 +53,7 @@ $beginClassFrom=QWidget
    METHOD unmanageWidget
    METHOD findFormWindow
 
-   METHOD onSelectionChanged
-   METHOD onActivated
-   METHOD onChanged
-   METHOD onFeatureChanged
-   METHOD onFileNameChanged
-   METHOD onGeometryChanged
-   METHOD onMainContainerChanged
-   METHOD onObjectRemoved
-   METHOD onWidgetManaged
-   METHOD onWidgetRemoved
-   METHOD onWidgetUnmanaged
-   METHOD onAboutToUnmanageWidget
-   METHOD onResourceFilesChanged
+$addSignals
 
 $endClass
 
