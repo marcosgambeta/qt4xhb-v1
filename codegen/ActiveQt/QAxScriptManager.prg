@@ -23,7 +23,7 @@ $beginClassFrom=QObject
    METHOD registerEngine
    METHOD scriptFileFilter
 
-   METHOD onError
+$addSignals
 
 $endClass
 
