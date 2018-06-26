@@ -12,7 +12,7 @@ $header
 
 $addRequests
 
-$beginClass
+$beginClassFrom=
 
 %%   METHOD delete
 %%   METHOD registerMimeType

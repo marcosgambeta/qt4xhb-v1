@@ -10,7 +10,7 @@ $header
 
 $addRequests
 
-$beginClass
+$beginClassFrom=
 
    METHOD create
    METHOD keys
@@ -24,11 +24,7 @@ $destructor
 $includes
 
 $prototype=QObject * create ( const QString & key, const QString & specification )
-HB_FUNC_STATIC( QGENERICPLUGINFACTORY_CREATE )
-{
-  QObject * ptr = QGenericPluginFactory::create ( PQSTRING(1), PQSTRING(2) );
-  _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-}
+$method=|QObject *|create|const QString &,const QString &
 
 $prototype=static QStringList keys ()
 $staticMethod=|QStringList|keys|
