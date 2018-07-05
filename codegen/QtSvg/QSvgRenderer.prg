@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD animated
-   METHOD boundsOnElement
-   METHOD defaultSize
-   METHOD elementExists
-   METHOD framesPerSecond
-   METHOD isValid
-   METHOD matrixForElement
-   METHOD setFramesPerSecond
-   METHOD setViewBox
-   METHOD viewBox
-   METHOD viewBoxF
-   METHOD load
-   METHOD render
+$addMethods
 
 $addSignals
 

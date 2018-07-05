@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=QGraphicsObject
 
-   METHOD new
-   METHOD elementId
-   METHOD maximumCacheSize
-   METHOD renderer
-   METHOD setElementId
-   METHOD setMaximumCacheSize
-   METHOD setSharedRenderer
-   METHOD boundingRect
-   METHOD paint
-   METHOD type
+$addMethods
 
 $endClass
 
