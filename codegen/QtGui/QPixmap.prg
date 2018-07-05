@@ -12,49 +12,7 @@ $addRequests
 
 $beginClassFrom=QPaintDevice
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new5
-   METHOD new6
-   METHOD new
-   METHOD delete
-   METHOD cacheKey
-   METHOD convertFromImage
-   METHOD copy
-   METHOD createHeuristicMask
-   METHOD createMaskFromColor
-   METHOD depth
-   METHOD detach
-   METHOD fill
-   METHOD hasAlpha
-   METHOD hasAlphaChannel
-   METHOD height
-   METHOD isNull
-   METHOD isQBitmap
-   METHOD load
-   METHOD loadFromData
-   METHOD mask
-   METHOD rect
-   METHOD save
-   METHOD scaled
-   METHOD scaledToHeight
-   METHOD scaledToWidth
-   METHOD scroll
-   METHOD setMask
-   METHOD size
-   METHOD swap
-   METHOD toImage
-   METHOD transformed
-   METHOD width
-   METHOD defaultDepth
-   METHOD fromImage
-   METHOD fromImageReader
-   METHOD grabWidget
-   METHOD grabWindow
-   METHOD trueMatrix
-   METHOD toVariant
-   METHOD fromVariant
+$addMethods
 
 $endClass
 

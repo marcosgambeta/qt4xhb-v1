@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=QGradient
 
-   METHOD new
-   METHOD angle
-   METHOD center
-   METHOD setAngle
-   METHOD setCenter
+$addMethods
 
 $endClass
 

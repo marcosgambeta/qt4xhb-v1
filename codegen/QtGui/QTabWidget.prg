@@ -12,49 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD new
-   METHOD delete
-   METHOD addTab
-   METHOD clear
-   METHOD cornerWidget
-   METHOD count
-   METHOD currentIndex
-   METHOD currentWidget
-   METHOD documentMode
-   METHOD elideMode
-   METHOD iconSize
-   METHOD indexOf
-   METHOD insertTab
-   METHOD isMovable
-   METHOD isTabEnabled
-   METHOD removeTab
-   METHOD setCornerWidget
-   METHOD setDocumentMode
-   METHOD setElideMode
-   METHOD setIconSize
-   METHOD setMovable
-   METHOD setTabEnabled
-   METHOD setTabIcon
-   METHOD setTabPosition
-   METHOD setTabShape
-   METHOD setTabText
-   METHOD setTabToolTip
-   METHOD setTabWhatsThis
-   METHOD setTabsClosable
-   METHOD setUsesScrollButtons
-   METHOD tabIcon
-   METHOD tabPosition
-   METHOD tabShape
-   METHOD tabText
-   METHOD tabToolTip
-   METHOD tabWhatsThis
-   METHOD tabsClosable
-   METHOD usesScrollButtons
-   METHOD widget
-   METHOD minimumSizeHint
-   METHOD sizeHint
-   METHOD setCurrentIndex
-   METHOD setCurrentWidget
+$addMethods
 
 $addSignals
 

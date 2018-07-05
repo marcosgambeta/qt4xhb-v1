@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD exec
-   METHOD hotSpot
-   METHOD mimeData
-   METHOD pixmap
-   METHOD setDragCursor
-   METHOD setHotSpot
-   METHOD setMimeData
-   METHOD setPixmap
-   METHOD source
-   METHOD target
+$addMethods
 
 $addSignals
 

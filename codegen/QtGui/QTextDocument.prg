@@ -12,76 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD addResource
-   METHOD adjustSize
-   METHOD allFormats
-   METHOD availableRedoSteps
-   METHOD availableUndoSteps
-   METHOD begin
-   METHOD blockCount
-   METHOD characterAt
-   METHOD characterCount
-   METHOD clear
-   METHOD clearUndoRedoStacks
-   METHOD clone
-   METHOD defaultCursorMoveStyle
-   METHOD defaultFont
-   METHOD defaultStyleSheet
-   METHOD defaultTextOption
-   METHOD documentLayout
-   METHOD documentMargin
-   METHOD drawContents
-   METHOD end
-   METHOD find
-   METHOD findBlock
-   METHOD findBlockByLineNumber
-   METHOD findBlockByNumber
-   METHOD firstBlock
-   METHOD idealWidth
-   METHOD indentWidth
-   METHOD isEmpty
-   METHOD isModified
-   METHOD isRedoAvailable
-   METHOD isUndoAvailable
-   METHOD isUndoRedoEnabled
-   METHOD lastBlock
-   METHOD lineCount
-   METHOD markContentsDirty
-   METHOD maximumBlockCount
-   METHOD metaInformation
-   METHOD object
-   METHOD objectForFormat
-   METHOD pageCount
-   METHOD pageSize
-   METHOD print
-   METHOD resource
-   METHOD revision
-   METHOD rootFrame
-   METHOD setDefaultCursorMoveStyle
-   METHOD setDefaultFont
-   METHOD setDefaultStyleSheet
-   METHOD setDefaultTextOption
-   METHOD setDocumentLayout
-   METHOD setDocumentMargin
-   METHOD setHtml
-   METHOD setIndentWidth
-   METHOD setMaximumBlockCount
-   METHOD setMetaInformation
-   METHOD setPageSize
-   METHOD setPlainText
-   METHOD setTextWidth
-   METHOD setUndoRedoEnabled
-   METHOD setUseDesignMetrics
-   METHOD size
-   METHOD textWidth
-   METHOD toHtml
-   METHOD toPlainText
-   METHOD useDesignMetrics
-   METHOD redo
-   METHOD setModified
-   METHOD undo
+$addMethods
 
 $addSignals
 

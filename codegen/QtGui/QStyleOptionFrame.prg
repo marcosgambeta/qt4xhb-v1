@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=QStyleOption
 
-   METHOD new
-%%   METHOD delete
-
-   METHOD lineWidth
-   METHOD midLineWidth
-
-   METHOD setLineWidth
-   METHOD setMidLineWidth
+$addMethods
 
 $endClass
 

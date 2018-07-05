@@ -12,13 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD availableGeometry
-   METHOD isVirtualDesktop
-   METHOD primaryScreen
-   METHOD screen
-   METHOD screenCount
-   METHOD screenGeometry
-   METHOD screenNumber
+$addMethods
 
 $addSignals
 

@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractItemDelegate
 
-   METHOD new
-   METHOD delete
-   METHOD displayText
-   METHOD itemEditorFactory
-   METHOD setItemEditorFactory
-   METHOD createEditor
-   METHOD paint
-   METHOD setEditorData
-   METHOD setModelData
-   METHOD sizeHint
-   METHOD updateEditorGeometry
+$addMethods
 
 $endClass
 

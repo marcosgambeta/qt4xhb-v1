@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=QInputEvent
 
-   METHOD delete
-   METHOD widget
-   METHOD deviceType
-   METHOD touchPointStates
+$addMethods
 
 $endClass
 

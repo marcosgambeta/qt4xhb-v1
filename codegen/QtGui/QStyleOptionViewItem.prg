@@ -12,24 +12,7 @@ $addRequests
 
 $beginClassFrom=QStyleOption
 
-   METHOD new
-%%   METHOD delete
-
-   METHOD displayAlignment
-   METHOD decorationAlignment
-   METHOD textElideMode
-   METHOD decorationPosition
-   METHOD decorationSize
-   METHOD font
-   METHOD showDecorationSelected
-
-   METHOD setDisplayAlignment
-   METHOD setDecorationAlignment
-   METHOD setTextElideMode
-   METHOD setDecorationPosition
-   METHOD setDecorationSize
-   METHOD setFont
-   METHOD setShowDecorationSelected
+$addMethods
 
 $endClass
 

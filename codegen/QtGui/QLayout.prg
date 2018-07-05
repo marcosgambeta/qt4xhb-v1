@@ -12,39 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject,QLayoutItem
 
-   METHOD activate
-   METHOD addItem
-   METHOD addWidget
-   METHOD contentsMargins
-   METHOD contentsRect
-   METHOD count
-   METHOD expandingDirections
-   METHOD getContentsMargins
-   METHOD indexOf
-   METHOD isEnabled
-   METHOD itemAt
-   METHOD maximumSize
-   METHOD menuBar
-   METHOD minimumSize
-   METHOD parentWidget
-   METHOD removeItem
-   METHOD removeWidget
-   METHOD setAlignment
-   METHOD setContentsMargins
-   METHOD setEnabled
-   METHOD setMenuBar
-   METHOD setSizeConstraint
-   METHOD setSpacing
-   METHOD sizeConstraint
-   METHOD spacing
-   METHOD takeAt
-   METHOD update
-   METHOD geometry
-   METHOD invalidate
-   METHOD isEmpty
-   METHOD layout
-   METHOD setGeometry
-   METHOD closestAcceptableSize
+$addMethods
 
 $endClass
 

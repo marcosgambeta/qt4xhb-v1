@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=QEvent,QMimeSource
 
-   METHOD new
-   METHOD delete
-   METHOD acceptProposedAction
-   METHOD dropAction
-   METHOD keyboardModifiers
-   METHOD mimeData
-   METHOD mouseButtons
-   METHOD pos
-   METHOD possibleActions
-   METHOD proposedAction
-   METHOD setDropAction
-   METHOD source
-   METHOD encodedData
-   METHOD format
-   METHOD provides
+$addMethods
 
 $endClass
 

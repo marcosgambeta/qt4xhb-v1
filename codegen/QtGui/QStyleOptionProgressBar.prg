@@ -12,22 +12,7 @@ $addRequests
 
 $beginClassFrom=QStyleOption
 
-   METHOD new
-%%   METHOD delete
-
-   METHOD minimum
-   METHOD maximum
-   METHOD progress
-   METHOD text
-   METHOD textAlignment
-   METHOD textVisible
-
-   METHOD setMinimum
-   METHOD setMaximum
-   METHOD setProgress
-   METHOD setText
-   METHOD setTextAlignment
-   METHOD setTextVisible
+$addMethods
 
 $endClass
 

@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractListModel
 
-   METHOD new
-   METHOD setStringList
-   METHOD stringList
-   METHOD data
-   METHOD flags
-   METHOD insertRows
-   METHOD removeRows
-   METHOD rowCount
-   METHOD setData
-   METHOD sort
-   METHOD supportedDropActions
+$addMethods
 
 $endClass
 

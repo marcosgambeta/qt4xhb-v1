@@ -12,22 +12,7 @@ $addRequests
 
 $beginClassFrom=QAccessible
 
-   METHOD delete
-   METHOD actionText
-   METHOD childAt
-   METHOD childCount
-   METHOD doAction
-   METHOD indexOfChild
-   METHOD invokeMethod
-   METHOD isValid
-   METHOD object
-   METHOD rect
-   METHOD relationTo
-   METHOD role
-   METHOD setText
-   METHOD state
-   METHOD text
-   METHOD userActionCount
+$addMethods
 
 $endClass
 

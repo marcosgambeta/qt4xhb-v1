@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=QDialog
 
-   METHOD exec
-   METHOD fromPage
-   METHOD maxPage
-   METHOD minPage
-   METHOD printRange
-   METHOD printer
-   METHOD setFromTo
-   METHOD setMinMax
-   METHOD setPrintRange
-   METHOD toPage
+$addMethods
 
 $endClass
 

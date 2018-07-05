@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD isDefault
-   METHOD isNull
-   METHOD printerName
-   METHOD supportedPaperSizes
-   METHOD availablePrinters
-   METHOD defaultPrinter
+$addMethods
 
 $endClass
 

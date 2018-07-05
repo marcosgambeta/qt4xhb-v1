@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD actions
-   METHOD filterEvent
-   METHOD focusWidget
-   METHOD font
-   METHOD identifierName
-   METHOD isComposing
-   METHOD language
-   METHOD mouseHandler
-   METHOD reset
-   METHOD sendEvent
-   METHOD setFocusWidget
-   METHOD standardFormat
-   METHOD update
-   METHOD widgetDestroyed
+$addMethods
 
 $endClass
 

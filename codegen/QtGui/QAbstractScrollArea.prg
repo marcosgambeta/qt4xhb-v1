@@ -12,24 +12,7 @@ $addRequests
 
 $beginClassFrom=QFrame
 
-   METHOD delete
-   METHOD addScrollBarWidget
-   METHOD cornerWidget
-   METHOD horizontalScrollBar
-   METHOD horizontalScrollBarPolicy
-   METHOD maximumViewportSize
-   METHOD scrollBarWidgets
-   METHOD setCornerWidget
-   METHOD setHorizontalScrollBar
-   METHOD setHorizontalScrollBarPolicy
-   METHOD setVerticalScrollBar
-   METHOD setVerticalScrollBarPolicy
-   METHOD setViewport
-   METHOD verticalScrollBar
-   METHOD verticalScrollBarPolicy
-   METHOD viewport
-   METHOD minimumSizeHint
-   METHOD sizeHint
+$addMethods
 
 $endClass
 

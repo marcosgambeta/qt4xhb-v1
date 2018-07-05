@@ -12,13 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractButton
 
-   METHOD new
-   METHOD checkState
-   METHOD isTristate
-   METHOD setCheckState
-   METHOD setTristate
-   METHOD minimumSizeHint
-   METHOD sizeHint
+$addMethods
 
 $addSignals
 

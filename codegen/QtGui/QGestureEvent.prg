@@ -12,19 +12,7 @@ $addRequests
 
 $beginClassFrom=QEvent
 
-   METHOD new
-   METHOD delete
-   METHOD accept
-   METHOD activeGestures
-   METHOD canceledGestures
-   METHOD gesture
-   METHOD gestures
-   METHOD ignore
-   METHOD isAccepted
-   METHOD mapToGraphicsScene
-   METHOD setAccepted
-   METHOD setWidget
-   METHOD widget
+$addMethods
 
 $endClass
 

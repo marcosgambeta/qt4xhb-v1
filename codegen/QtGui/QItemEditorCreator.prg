@@ -12,6 +12,8 @@ $addRequests
 
 $beginClassFrom=QItemEditorCreatorBase
 
+$addMethods
+
 $endClass
 
 $destructor

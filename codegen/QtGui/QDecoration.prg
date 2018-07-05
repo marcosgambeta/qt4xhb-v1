@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD buildSysMenu
-   METHOD menuTriggered
-   METHOD paint
-   METHOD region
-   METHOD regionAt
-   METHOD regionClicked
-   METHOD regionDoubleClicked
-   METHOD startMove
-   METHOD startResize
+$addMethods
 
 $endClass
 

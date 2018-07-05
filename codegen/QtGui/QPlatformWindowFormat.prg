@@ -12,54 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD accum
-   METHOD accumBufferSize
-   METHOD alpha
-   METHOD alphaBufferSize
-   METHOD blueBufferSize
-   METHOD depth
-   METHOD depthBufferSize
-   METHOD directRendering
-   METHOD doubleBuffer
-   METHOD greenBufferSize
-   METHOD hasWindowSurface
-   METHOD redBufferSize
-   METHOD rgba
-   METHOD sampleBuffers
-   METHOD samples
-   METHOD setAccum
-   METHOD setAccumBufferSize
-   METHOD setAlpha
-   METHOD setAlphaBufferSize
-   METHOD setBlueBufferSize
-   METHOD setDepth
-   METHOD setDepthBufferSize
-   METHOD setDirectRendering
-   METHOD setDoubleBuffer
-   METHOD setGreenBufferSize
-   METHOD setOption
-   METHOD setRedBufferSize
-   METHOD setRgba
-   METHOD setSampleBuffers
-   METHOD setSamples
-   METHOD setSharedContext
-   METHOD setStencil
-   METHOD setStencilBufferSize
-   METHOD setStereo
-   METHOD setSwapInterval
-   METHOD setWindowApi
-   METHOD setWindowSurface
-   METHOD sharedGLContext
-   METHOD stencil
-   METHOD stencilBufferSize
-   METHOD stereo
-   METHOD swapInterval
-   METHOD testOption
-   METHOD windowApi
-   METHOD defaultFormat
-   METHOD setDefaultFormat
+$addMethods
 
 $endClass
 

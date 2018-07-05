@@ -19,14 +19,7 @@ $addRequests
 
 $beginClassFrom=QStyleOption
 
-   METHOD new
-%%   METHOD delete
-
-   METHOD shape
-   METHOD opaque
-
-   METHOD setShape
-   METHOD setOpaque
+$addMethods
 
 $endClass
 

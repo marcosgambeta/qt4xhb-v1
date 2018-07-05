@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=QDialog
 
-   METHOD new
-   METHOD open
-   METHOD options
-   METHOD printer
-   METHOD setOption
-   METHOD setOptions
-   METHOD testOption
-   METHOD setVisible
+$addMethods
 
 $endClass
 

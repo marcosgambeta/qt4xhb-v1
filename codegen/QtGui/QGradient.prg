@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD coordinateMode
-   METHOD setColorAt
-   METHOD setCoordinateMode
-   METHOD setSpread
-   METHOD spread
-   METHOD type
+$addMethods
 
 $endClass
 

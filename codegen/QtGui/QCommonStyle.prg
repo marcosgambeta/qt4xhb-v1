@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=QStyle
 
-   METHOD new
-   METHOD delete
-   METHOD drawComplexControl
-   METHOD drawControl
-   METHOD drawPrimitive
-   METHOD generatedIconPixmap
-   METHOD hitTestComplexControl
-   METHOD pixelMetric
-   METHOD polish
-   METHOD sizeFromContents
-   METHOD standardPixmap
-   METHOD styleHint
-   METHOD subControlRect
-   METHOD subElementRect
-   METHOD unpolish
+$addMethods
 
 $endClass
 

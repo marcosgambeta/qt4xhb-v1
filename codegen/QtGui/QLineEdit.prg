@@ -12,67 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD new
-   METHOD delete
-   METHOD alignment
-   METHOD backspace
-   METHOD completer
-   METHOD createStandardContextMenu
-   METHOD cursorBackward
-   METHOD cursorForward
-   METHOD cursorPosition
-   METHOD cursorPositionAt
-   METHOD cursorWordBackward
-   METHOD cursorWordForward
-   METHOD del
-   METHOD deselect
-   METHOD displayText
-   METHOD dragEnabled
-   METHOD echoMode
-   METHOD end
-   METHOD getTextMargins
-   METHOD hasAcceptableInput
-   METHOD hasFrame
-   METHOD hasSelectedText
-   METHOD home
-   METHOD inputMask
-   METHOD insert
-   METHOD isModified
-   METHOD isReadOnly
-   METHOD isRedoAvailable
-   METHOD isUndoAvailable
-   METHOD maxLength
-   METHOD placeholderText
-   METHOD minimumSizeHint
-   METHOD selectedText
-   METHOD selectionStart
-   METHOD setAlignment
-   METHOD setCompleter
-   METHOD setCursorPosition
-   METHOD setDragEnabled
-   METHOD setEchoMode
-   METHOD setFrame
-   METHOD setInputMask
-   METHOD setMaxLength
-   METHOD setModified
-   METHOD setPlaceholderText
-   METHOD setReadOnly
-   METHOD setSelection
-   METHOD setTextMargins
-   METHOD setValidator
-   METHOD sizeHint
-   METHOD text
-   METHOD textMargins
-   METHOD validator
-   METHOD event
-   METHOD inputMethodQuery
-   METHOD copy
-   METHOD cut
-   METHOD paste
-   METHOD redo
-   METHOD selectAll
-   METHOD setText
-   METHOD undo
+$addMethods
 
 $addSignals
 

@@ -12,40 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD new
-   METHOD delete
-   METHOD alignment
-   METHOD buttonSymbols
-   METHOD correctionMode
-   METHOD fixup
-   METHOD hasAcceptableInput
-   METHOD hasFrame
-   METHOD interpretText
-   METHOD isAccelerated
-   METHOD isReadOnly
-   METHOD keyboardTracking
-   METHOD setAccelerated
-   METHOD setAlignment
-   METHOD setButtonSymbols
-   METHOD setCorrectionMode
-   METHOD setFrame
-   METHOD setKeyboardTracking
-   METHOD setReadOnly
-   METHOD setSpecialValueText
-   METHOD setWrapping
-   METHOD specialValueText
-   METHOD stepBy
-   METHOD text
-   METHOD validate
-   METHOD wrapping
-   METHOD event
-   METHOD inputMethodQuery
-   METHOD minimumSizeHint
-   METHOD sizeHint
-   METHOD clear
-   METHOD selectAll
-   METHOD stepDown
-   METHOD stepUp
+$addMethods
 
 $addSignals
 

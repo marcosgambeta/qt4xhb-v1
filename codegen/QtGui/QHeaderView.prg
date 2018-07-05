@@ -12,64 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractItemView
 
-   METHOD new
-   METHOD delete
-   METHOD cascadingSectionResizes
-   METHOD count
-   METHOD defaultAlignment
-   METHOD defaultSectionSize
-   METHOD hiddenSectionCount
-   METHOD hideSection
-   METHOD highlightSections
-   METHOD isClickable
-   METHOD isMovable
-   METHOD isSectionHidden
-   METHOD isSortIndicatorShown
-   METHOD length
-   METHOD logicalIndex
-   METHOD logicalIndexAt
-   METHOD minimumSectionSize
-   METHOD moveSection
-   METHOD offset
-   METHOD orientation
-   METHOD resizeMode
-   METHOD resizeSection
-   METHOD resizeSections
-   METHOD restoreState
-   METHOD saveState
-   METHOD sectionPosition
-   METHOD sectionSize
-   METHOD sectionSizeHint
-   METHOD sectionViewportPosition
-   METHOD sectionsHidden
-   METHOD sectionsMoved
-   METHOD setCascadingSectionResizes
-   METHOD setClickable
-   METHOD setDefaultAlignment
-   METHOD setDefaultSectionSize
-   METHOD setHighlightSections
-   METHOD setMinimumSectionSize
-   METHOD setMovable
-   METHOD setResizeMode
-   METHOD setSectionHidden
-   METHOD setSortIndicator
-   METHOD setSortIndicatorShown
-   METHOD setStretchLastSection
-   METHOD showSection
-   METHOD sortIndicatorOrder
-   METHOD sortIndicatorSection
-   METHOD stretchLastSection
-   METHOD stretchSectionCount
-   METHOD swapSections
-   METHOD visualIndex
-   METHOD visualIndexAt
-   METHOD reset
-   METHOD setModel
-   METHOD sizeHint
-   METHOD headerDataChanged
-   METHOD setOffset
-   METHOD setOffsetToLastSection
-   METHOD setOffsetToSectionPosition
+$addMethods
 
 $addSignals
 

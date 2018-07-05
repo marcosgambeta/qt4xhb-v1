@@ -12,29 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractItemModel
 
-   METHOD delete
-   METHOD mapFromSource
-   METHOD mapSelectionFromSource
-   METHOD mapSelectionToSource
-   METHOD mapToSource
-   METHOD setSourceModel
-   METHOD sourceModel
-   METHOD buddy
-   METHOD canFetchMore
-   METHOD data
-   METHOD fetchMore
-   METHOD flags
-   METHOD hasChildren
-   METHOD headerData
-   METHOD mimeData
-   METHOD mimeTypes
-   METHOD revert
-   METHOD setData
-   METHOD setHeaderData
-   METHOD sort
-   METHOD span
-   METHOD submit
-   METHOD supportedDropActions
+$addMethods
 
 $endClass
 

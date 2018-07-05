@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=QLayoutItem
 
-   METHOD new
-   METHOD changeSize
-   METHOD expandingDirections
-   METHOD geometry
-   METHOD isEmpty
-   METHOD maximumSize
-   METHOD minimumSize
-   METHOD setGeometry
-   METHOD sizeHint
-   METHOD spacerItem
+$addMethods
 
 $endClass
 

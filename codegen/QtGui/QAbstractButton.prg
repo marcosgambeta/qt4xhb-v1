@@ -12,33 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD delete
-   METHOD autoExclusive
-   METHOD autoRepeat
-   METHOD autoRepeatDelay
-   METHOD autoRepeatInterval
-   METHOD group
-   METHOD icon
-   METHOD iconSize
-   METHOD isCheckable
-   METHOD isChecked
-   METHOD isDown
-   METHOD setAutoExclusive
-   METHOD setAutoRepeat
-   METHOD setAutoRepeatDelay
-   METHOD setAutoRepeatInterval
-   METHOD setCheckable
-   METHOD setDown
-   METHOD setIcon
-   METHOD setShortcut
-   METHOD setText
-   METHOD shortcut
-   METHOD text
-   METHOD animateClick
-   METHOD click
-   METHOD setChecked
-   METHOD setIconSize
-   METHOD toggle
+$addMethods
 
 $addSignals
 

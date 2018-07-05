@@ -12,9 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractButton
 
-   METHOD new
-   METHOD minimumSizeHint
-   METHOD sizeHint
+$addMethods
 
 $endClass
 

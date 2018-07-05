@@ -12,55 +12,7 @@ $addRequests
 
 $beginClassFrom=QDialog
 
-   METHOD new
-   METHOD delete
-   METHOD cancelButtonText
-   METHOD comboBoxItems
-   METHOD doubleDecimals
-   METHOD doubleMaximum
-   METHOD doubleMinimum
-   METHOD doubleValue
-   METHOD inputMode
-   METHOD intMaximum
-   METHOD intMinimum
-   METHOD intStep
-   METHOD intValue
-   METHOD isComboBoxEditable
-   METHOD labelText
-   METHOD okButtonText
-   METHOD open
-   METHOD options
-   METHOD setCancelButtonText
-   METHOD setComboBoxEditable
-   METHOD setComboBoxItems
-   METHOD setDoubleDecimals
-   METHOD setDoubleMaximum
-   METHOD setDoubleMinimum
-   METHOD setDoubleRange
-   METHOD setDoubleValue
-   METHOD setInputMode
-   METHOD setIntMaximum
-   METHOD setIntMinimum
-   METHOD setIntRange
-   METHOD setIntStep
-   METHOD setIntValue
-   METHOD setLabelText
-   METHOD setOkButtonText
-   METHOD setOption
-   METHOD setOptions
-   METHOD setTextEchoMode
-   METHOD setTextValue
-   METHOD testOption
-   METHOD textEchoMode
-   METHOD textValue
-   METHOD done
-   METHOD minimumSizeHint
-   METHOD setVisible
-   METHOD sizeHint
-   METHOD getDouble
-   METHOD getInt
-   METHOD getItem
-   METHOD getText
+$addMethods
 
 $addSignals
 

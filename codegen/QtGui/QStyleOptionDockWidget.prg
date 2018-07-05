@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=QStyleOption
 
-   METHOD new
-%%   METHOD delete
-
-   METHOD title
-   METHOD closable
-   METHOD movable
-   METHOD floatable
-
-   METHOD setTitle
-   METHOD setClosable
-   METHOD setMovable
-   METHOD setFloatable
+$addMethods
 
 $endClass
 

@@ -12,31 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD delete
-   METHOD hasTracking
-   METHOD invertedAppearance
-   METHOD invertedControls
-   METHOD isSliderDown
-   METHOD maximum
-   METHOD minimum
-   METHOD orientation
-   METHOD pageStep
-   METHOD setInvertedAppearance
-   METHOD setInvertedControls
-   METHOD setMaximum
-   METHOD setMinimum
-   METHOD setPageStep
-   METHOD setRange
-   METHOD setSingleStep
-   METHOD setSliderDown
-   METHOD setSliderPosition
-   METHOD setTracking
-   METHOD singleStep
-   METHOD sliderPosition
-   METHOD triggerAction
-   METHOD value
-   METHOD setOrientation
-   METHOD setValue
+$addMethods
 
 $addSignals
 

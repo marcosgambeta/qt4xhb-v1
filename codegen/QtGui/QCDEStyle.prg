@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=QMotifStyle
 
-   METHOD new
-   METHOD delete
-   METHOD drawControl
-   METHOD drawPrimitive
-   METHOD pixelMetric
-   METHOD standardPalette
+$addMethods
 
 $endClass
 

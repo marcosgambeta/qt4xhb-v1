@@ -12,26 +12,7 @@ $addRequests
 
 $beginClassFrom=QInputEvent
 
-   METHOD new
-   METHOD delete
-   METHOD pos
-   METHOD globalPos
-   METHOD hiResGlobalPos
-   METHOD x
-   METHOD y
-   METHOD globalX
-   METHOD globalY
-   METHOD hiResGlobalX
-   METHOD hiResGlobalY
-   METHOD device
-   METHOD pointerType
-   METHOD uniqueId
-   METHOD pressure
-   METHOD z
-   METHOD tangentialPressure
-   METHOD rotation
-   METHOD xTilt
-   METHOD yTilt
+$addMethods
 
 $endClass
 

@@ -12,57 +12,7 @@ $addRequests
 
 $beginClassFrom=QTextFormat
 
-   METHOD new
-   METHOD delete
-   METHOD anchorHref
-   METHOD anchorNames
-   METHOD font
-   METHOD fontCapitalization
-   METHOD fontFamily
-   METHOD fontFixedPitch
-   METHOD fontHintingPreference
-   METHOD fontItalic
-   METHOD fontKerning
-   METHOD fontLetterSpacing
-   METHOD fontOverline
-   METHOD fontPointSize
-   METHOD fontStrikeOut
-   METHOD fontStyleHint
-   METHOD fontStyleStrategy
-   METHOD fontUnderline
-   METHOD fontWeight
-   METHOD fontWordSpacing
-   METHOD isAnchor
-   METHOD isValid
-   METHOD setAnchor
-   METHOD setAnchorHref
-   METHOD setAnchorNames
-   METHOD setFont
-   METHOD setFontCapitalization
-   METHOD setFontFamily
-   METHOD setFontFixedPitch
-   METHOD setFontHintingPreference
-   METHOD setFontItalic
-   METHOD setFontKerning
-   METHOD setFontLetterSpacing
-   METHOD setFontOverline
-   METHOD setFontPointSize
-   METHOD setFontStrikeOut
-   METHOD setFontStyleHint
-   METHOD setFontStyleStrategy
-   METHOD setFontUnderline
-   METHOD setFontWeight
-   METHOD setFontWordSpacing
-   METHOD setTextOutline
-   METHOD setToolTip
-   METHOD setUnderlineColor
-   METHOD setUnderlineStyle
-   METHOD setVerticalAlignment
-   METHOD textOutline
-   METHOD toolTip
-   METHOD underlineColor
-   METHOD underlineStyle
-   METHOD verticalAlignment
+$addMethods
 
 $endClass
 

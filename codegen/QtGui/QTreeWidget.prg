@@ -12,47 +12,7 @@ $addRequests
 
 $beginClassFrom=QTreeView
 
-   METHOD new
-   METHOD delete
-   METHOD addTopLevelItem
-   METHOD addTopLevelItems
-   METHOD closePersistentEditor
-   METHOD columnCount
-   METHOD currentColumn
-   METHOD currentItem
-   METHOD editItem
-   METHOD findItems
-   METHOD headerItem
-   METHOD indexOfTopLevelItem
-   METHOD insertTopLevelItem
-   METHOD insertTopLevelItems
-   METHOD invisibleRootItem
-   METHOD isFirstItemColumnSpanned
-   METHOD itemAbove
-   METHOD itemAt
-   METHOD itemBelow
-   METHOD itemWidget
-   METHOD openPersistentEditor
-   METHOD removeItemWidget
-   METHOD selectedItems
-   METHOD setColumnCount
-   METHOD setCurrentItem
-   METHOD setFirstItemColumnSpanned
-   METHOD setHeaderItem
-   METHOD setHeaderLabel
-   METHOD setHeaderLabels
-   METHOD setItemWidget
-   METHOD sortColumn
-   METHOD sortItems
-   METHOD takeTopLevelItem
-   METHOD topLevelItem
-   METHOD topLevelItemCount
-   METHOD visualItemRect
-   METHOD setSelectionModel
-   METHOD clear
-   METHOD collapseItem
-   METHOD expandItem
-   METHOD scrollToItem
+$addMethods
 
 $addSignals
 

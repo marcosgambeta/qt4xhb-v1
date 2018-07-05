@@ -12,22 +12,7 @@ $addRequests
 
 $beginClassFrom=QCommonStyle
 
-   METHOD new
-   METHOD delete
-   METHOD setUseHighlightColors
-   METHOD useHighlightColors
-   METHOD drawComplexControl
-   METHOD drawControl
-   METHOD drawPrimitive
-   METHOD event
-   METHOD pixelMetric
-   METHOD polish
-   METHOD sizeFromContents
-   METHOD standardPalette
-   METHOD standardPixmap
-   METHOD styleHint
-   METHOD subControlRect
-   METHOD subElementRect
+$addMethods
 
 $endClass
 

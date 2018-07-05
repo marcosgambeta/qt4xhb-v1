@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=QTextCharFormat
 
-   METHOD new
-   METHOD delete
-   METHOD bottomPadding
-   METHOD isValid
-   METHOD leftPadding
-   METHOD rightPadding
-   METHOD setBottomPadding
-   METHOD setLeftPadding
-   METHOD setPadding
-   METHOD setRightPadding
-   METHOD setTopPadding
-   METHOD topPadding
+$addMethods
 
 $endClass
 

@@ -12,8 +12,7 @@ $addRequests
 
 $beginClassFrom=QWindowsXPStyle
 
-   METHOD new
-   METHOD delete
+$addMethods
 
 $endClass
 

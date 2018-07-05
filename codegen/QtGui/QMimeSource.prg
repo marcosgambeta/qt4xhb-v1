@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD encodedData
-   METHOD format
-   METHOD provides
+$addMethods
 
 $endClass
 

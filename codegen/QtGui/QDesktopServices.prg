@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD displayName
-   METHOD openUrl
-   METHOD setUrlHandler
-   METHOD storageLocation
-   METHOD unsetUrlHandler
+$addMethods
 
 $endClass
 

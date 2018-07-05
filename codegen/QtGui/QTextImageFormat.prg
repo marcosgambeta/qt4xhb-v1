@@ -12,15 +12,7 @@ $addRequests
 
 $beginClassFrom=QTextCharFormat
 
-   METHOD new
-   METHOD delete
-   METHOD height
-   METHOD isValid
-   METHOD name
-   METHOD setHeight
-   METHOD setName
-   METHOD setWidth
-   METHOD width
+$addMethods
 
 $endClass
 

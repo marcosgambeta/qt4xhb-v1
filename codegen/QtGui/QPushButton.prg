@@ -12,15 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractButton
 
-   METHOD new
-   METHOD delete
-   METHOD autoDefault
-   METHOD isDefault
-   METHOD isFlat
-   METHOD setAutoDefault
-   METHOD setDefault
-   METHOD setFlat
-   METHOD showMenu
+$addMethods
 
 $endClass
 

@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD addApplicationFont
-   METHOD fontDir
-   METHOD fontEngine
-   METHOD populateFontDatabase
-   METHOD releaseHandle
-   METHOD registerFont
-   METHOD registerQPF2Font
+$addMethods
 
 $endClass
 

@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD charFormat
-   METHOD charFormatIndex
-   METHOD contains
-   METHOD glyphRuns
-   METHOD isValid
-   METHOD length
-   METHOD position
-   METHOD text
+$addMethods
 
 $endClass
 

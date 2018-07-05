@@ -16,63 +16,7 @@ $addRequests
 
 $beginClassFrom=QPaintDevice
 
-   METHOD new
-   METHOD delete
-   METHOD abort
-   METHOD collateCopies
-   METHOD colorMode
-   METHOD copyCount
-   METHOD creator
-   METHOD docName
-   METHOD doubleSidedPrinting
-   METHOD duplex
-   METHOD fontEmbeddingEnabled
-   METHOD fromPage
-   METHOD fullPage
-   METHOD isValid
-   METHOD newPage
-   METHOD orientation
-   METHOD outputFileName
-   METHOD outputFormat
-   METHOD pageOrder
-   METHOD pageRect
-   METHOD paperRect
-   METHOD paperSize
-   METHOD paperSource
-   METHOD printEngine
-   METHOD printProgram
-   METHOD printRange
-   METHOD printerName
-   METHOD printerState
-   METHOD resolution
-   METHOD setCollateCopies
-   METHOD setColorMode
-   METHOD setCopyCount
-   METHOD setCreator
-   METHOD setDocName
-   METHOD setDoubleSidedPrinting
-   METHOD setDuplex
-   METHOD setFontEmbeddingEnabled
-   METHOD setFromTo
-   METHOD setFullPage
-   METHOD setOrientation
-   METHOD setOutputFileName
-   METHOD setOutputFormat
-   METHOD setPageMargins
-   METHOD setPageOrder
-   METHOD setPaperSize
-   METHOD setPaperSource
-   METHOD setPrintProgram
-   METHOD setPrintRange
-   METHOD setPrinterName
-   METHOD setResolution
-   METHOD setWinPageSize
-   METHOD supportedPaperSources
-   METHOD supportedResolutions
-   METHOD supportsMultipleCopies
-   METHOD toPage
-   METHOD winPageSize
-   METHOD paintEngine
+$addMethods
 
 $endClass
 

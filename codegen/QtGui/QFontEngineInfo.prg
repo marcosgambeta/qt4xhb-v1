@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD family
-   METHOD pixelSize
-   METHOD setFamily
-   METHOD setPixelSize
-   METHOD setStyle
-   METHOD setWeight
-   METHOD setWritingSystems
-   METHOD style
-   METHOD weight
-   METHOD writingSystems
+$addMethods
 
 $endClass
 

@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD actualSize
-   METHOD addFile
-   METHOD addPixmap
-   METHOD paint
-   METHOD pixmap
+$addMethods
 
 $endClass
 

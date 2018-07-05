@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD document
-   METHOD format
-   METHOD formatIndex
-   METHOD objectIndex
+$addMethods
 
 $endClass
 

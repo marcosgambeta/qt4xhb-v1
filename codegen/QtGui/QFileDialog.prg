@@ -12,59 +12,7 @@ $addRequests
 
 $beginClassFrom=QDialog
 
-   METHOD new
-   METHOD delete
-   METHOD acceptMode
-   METHOD confirmOverwrite
-   METHOD defaultSuffix
-   METHOD directory
-   METHOD fileMode
-   METHOD filter
-   METHOD history
-   METHOD iconProvider
-   METHOD isNameFilterDetailsVisible
-   METHOD isReadOnly
-   METHOD itemDelegate
-   METHOD labelText
-   METHOD nameFilters
-   METHOD open
-   METHOD options
-   METHOD proxyModel
-   METHOD resolveSymlinks
-   METHOD restoreState
-   METHOD saveState
-   METHOD selectFile
-   METHOD selectNameFilter
-   METHOD selectedFiles
-   METHOD selectedNameFilter
-   METHOD setAcceptMode
-   METHOD setConfirmOverwrite
-   METHOD setDefaultSuffix
-   METHOD setDirectory
-   METHOD setFileMode
-   METHOD setFilter
-   METHOD setHistory
-   METHOD setIconProvider
-   METHOD setItemDelegate
-   METHOD setLabelText
-   METHOD setNameFilter
-   METHOD setNameFilterDetailsVisible
-   METHOD setNameFilters
-   METHOD setOption
-   METHOD setOptions
-   METHOD setProxyModel
-   METHOD setReadOnly
-   METHOD setResolveSymlinks
-   METHOD setSidebarUrls
-   METHOD setViewMode
-   METHOD sidebarUrls
-   METHOD testOption
-   METHOD viewMode
-   METHOD setVisible
-   METHOD getExistingDirectory
-   METHOD getOpenFileName
-   METHOD getOpenFileNames
-   METHOD getSaveFileName
+$addMethods
 
 $addSignals
 

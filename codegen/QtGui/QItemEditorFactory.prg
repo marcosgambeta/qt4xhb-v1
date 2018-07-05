@@ -12,13 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD createEditor
-   METHOD registerEditor
-   METHOD valuePropertyName
-   METHOD defaultFactory
-   METHOD setDefaultFactory
+$addMethods
 
 $endClass
 

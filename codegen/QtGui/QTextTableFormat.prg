@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=QTextFrameFormat
 
-   METHOD new
-   METHOD delete
-   METHOD alignment
-   METHOD cellPadding
-   METHOD cellSpacing
-   METHOD clearColumnWidthConstraints
-   METHOD columnWidthConstraints
-   METHOD columns
-   METHOD headerRowCount
-   METHOD isValid
-   METHOD setAlignment
-   METHOD setCellPadding
-   METHOD setCellSpacing
-   METHOD setColumnWidthConstraints
-   METHOD setHeaderRowCount
+$addMethods
 
 $endClass
 

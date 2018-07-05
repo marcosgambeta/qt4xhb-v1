@@ -12,24 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD new
-   METHOD delete
-   METHOD activeAction
-   METHOD addAction
-   METHOD addMenu
-   METHOD addSeparator
-   METHOD clear
-   METHOD insertMenu
-   METHOD insertSeparator
-   METHOD isDefaultUp
-   METHOD isNativeMenuBar
-   METHOD setActiveAction
-   METHOD setDefaultUp
-   METHOD setNativeMenuBar
-   METHOD heightForWidth
-   METHOD minimumSizeHint
-   METHOD sizeHint
-   METHOD setVisible
+$addMethods
 
 $addSignals
 

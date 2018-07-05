@@ -12,42 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD m11
-   METHOD m12
-   METHOD m13
-   METHOD m21
-   METHOD m22
-   METHOD m23
-   METHOD m31
-   METHOD m32
-   METHOD m33
-   METHOD adjoint
-   METHOD determinant
-   METHOD dx
-   METHOD dy
-   METHOD inverted
-   METHOD isAffine
-   METHOD isIdentity
-   METHOD isInvertible
-   METHOD isRotating
-   METHOD isScaling
-   METHOD isTranslating
-   METHOD map1
-   METHOD map10
-   METHOD map
-   METHOD mapRect
-   METHOD mapToPolygon
-   METHOD reset
-   METHOD setMatrix
-   METHOD transposed
-   METHOD type
-   METHOD fromScale
-   METHOD fromTranslate
-   METHOD quadToQuad
-   METHOD quadToSquare
-   METHOD squareToQuad
+$addMethods
 
 $endClass
 

@@ -12,13 +12,7 @@ $addRequests
 
 $beginClassFrom=QAccessibleInterface
 
-   METHOD actionText
-   METHOD doAction
-   METHOD isValid
-   METHOD object
-   METHOD rect
-   METHOD setText
-   METHOD userActionCount
+$addMethods
 
 $endClass
 

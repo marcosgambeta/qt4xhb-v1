@@ -12,26 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD allocatedRegion
-   METHOD endPainting
-   METHOD flush
-   METHOD geometry
-   METHOD lower
-   METHOD raise
-   METHOD regionChanged
-   METHOD requestedRegion
-   METHOD setGeometry
-   METHOD setRegion
-   METHOD startPainting
-   METHOD frameBuffer
-   METHOD linestep
-   METHOD lock
-   METHOD screenDepth
-   METHOD screenHeight
-   METHOD screenWidth
-   METHOD unlock
+$addMethods
 
 $endClass
 

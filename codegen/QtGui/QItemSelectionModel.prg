@@ -12,25 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD columnIntersectsSelection
-   METHOD currentIndex
-   METHOD hasSelection
-   METHOD isColumnSelected
-   METHOD isRowSelected
-   METHOD isSelected
-   METHOD model
-   METHOD rowIntersectsSelection
-   METHOD selectedColumns
-   METHOD selectedIndexes
-   METHOD selectedRows
-   METHOD selection
-   METHOD clear
-   METHOD clearSelection
-   METHOD reset
-   METHOD select
-   METHOD setCurrentIndex
+$addMethods
 
 $addSignals
 

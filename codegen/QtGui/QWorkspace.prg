@@ -12,24 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD new
-   METHOD delete
-   METHOD activeWindow
-   METHOD addWindow
-   METHOD background
-   METHOD scrollBarsEnabled
-   METHOD setBackground
-   METHOD setScrollBarsEnabled
-   METHOD windowList
-   METHOD sizeHint
-   METHOD activateNextWindow
-   METHOD activatePreviousWindow
-   METHOD arrangeIcons
-   METHOD cascade
-   METHOD closeActiveWindow
-   METHOD closeAllWindows
-   METHOD setActiveWindow
-   METHOD tile
+$addMethods
 
 $addSignals
 

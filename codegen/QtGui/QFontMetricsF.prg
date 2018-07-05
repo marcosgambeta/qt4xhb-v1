@@ -12,31 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD ascent
-   METHOD averageCharWidth
-   METHOD boundingRect
-   METHOD descent
-   METHOD elidedText
-   METHOD height
-   METHOD inFont
-   METHOD inFontUcs4
-   METHOD leading
-   METHOD leftBearing
-   METHOD lineSpacing
-   METHOD lineWidth
-   METHOD maxWidth
-   METHOD minLeftBearing
-   METHOD minRightBearing
-   METHOD overlinePos
-   METHOD rightBearing
-   METHOD size
-   METHOD strikeOutPos
-   METHOD tightBoundingRect
-   METHOD underlinePos
-   METHOD width
-   METHOD xHeight
+$addMethods
 
 $endClass
 

@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=QIconEngine
 
-   METHOD delete
-   METHOD availableSizes
-   METHOD clone
-   METHOD iconName
-   METHOD key
-   METHOD read
-   METHOD virtual_hook
-   METHOD write
+$addMethods
 
 $endClass
 

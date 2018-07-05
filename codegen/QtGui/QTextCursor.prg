@@ -12,65 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD anchor
-   METHOD atBlockEnd
-   METHOD atBlockStart
-   METHOD atEnd
-   METHOD atStart
-   METHOD beginEditBlock
-   METHOD block
-   METHOD blockCharFormat
-   METHOD blockFormat
-   METHOD blockNumber
-   METHOD charFormat
-   METHOD clearSelection
-   METHOD columnNumber
-   METHOD createList
-   METHOD currentFrame
-   METHOD currentList
-   METHOD currentTable
-   METHOD deleteChar
-   METHOD deletePreviousChar
-   METHOD document
-   METHOD endEditBlock
-   METHOD hasComplexSelection
-   METHOD hasSelection
-   METHOD insertBlock
-   METHOD insertFragment
-   METHOD insertFrame
-   METHOD insertHtml
-   METHOD insertImage
-   METHOD insertList
-   METHOD insertTable
-   METHOD insertText
-   METHOD isCopyOf
-   METHOD isNull
-   METHOD joinPreviousEditBlock
-   METHOD keepPositionOnInsert
-   METHOD mergeBlockCharFormat
-   METHOD mergeBlockFormat
-   METHOD mergeCharFormat
-   METHOD movePosition
-   METHOD position
-   METHOD positionInBlock
-   METHOD removeSelectedText
-   METHOD select
-   METHOD selectedTableCells
-   METHOD selectedText
-   METHOD selection
-   METHOD selectionEnd
-   METHOD selectionStart
-   METHOD setBlockCharFormat
-   METHOD setBlockFormat
-   METHOD setCharFormat
-   METHOD setKeepPositionOnInsert
-   METHOD setPosition
-   METHOD setVerticalMovementX
-   METHOD setVisualNavigation
-   METHOD verticalMovementX
-   METHOD visualNavigation
+$addMethods
 
 $endClass
 

@@ -12,24 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD bottom
-   METHOD bottomRight
-   METHOD contains
-   METHOD height
-   METHOD indexes
-   METHOD intersected
-   METHOD intersects
-   METHOD isEmpty
-   METHOD isValid
-   METHOD left
-   METHOD model
-   METHOD parent
-   METHOD right
-   METHOD top
-   METHOD topLeft
-   METHOD width
+$addMethods
 
 $endClass
 

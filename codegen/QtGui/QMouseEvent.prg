@@ -12,19 +12,7 @@ $addRequests
 
 $beginClassFrom=QInputEvent
 
-   METHOD new
-   METHOD delete
-   METHOD pos
-   METHOD globalPos
-   METHOD x
-   METHOD y
-   METHOD globalX
-   METHOD globalY
-   METHOD button
-   METHOD buttons
-   METHOD hasExtendedInfo
-   METHOD posF
-   METHOD createExtendedMouseEvent
+$addMethods
 
 $endClass
 

@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD isActive
-   METHOD queryAccessibleInterface
-   METHOD setRootObject
-   METHOD updateAccessibility
+$addMethods
 
 $endClass
 

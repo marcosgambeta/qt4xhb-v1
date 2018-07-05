@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=QInputEvent
 
-   METHOD new
-   METHOD delete
-   METHOD delta
-   METHOD pos
-   METHOD globalPos
-   METHOD x
-   METHOD y
-   METHOD globalX
-   METHOD globalY
-   METHOD buttons
-   METHOD orientation
+$addMethods
 
 $endClass
 

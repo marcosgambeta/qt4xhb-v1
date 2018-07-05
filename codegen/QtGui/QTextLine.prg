@@ -12,35 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD ascent
-   METHOD cursorToX1
-   METHOD cursorToX2
-   METHOD cursorToX
-   METHOD descent
-   METHOD height
-   METHOD horizontalAdvance
-   METHOD isValid
-   METHOD leading
-   METHOD leadingIncluded
-   METHOD lineNumber
-   METHOD naturalTextRect
-   METHOD naturalTextWidth
-   METHOD position
-   METHOD rect
-   METHOD setLeadingIncluded
-   METHOD setLineWidth
-   METHOD setNumColumns1
-   METHOD setNumColumns2
-   METHOD setNumColumns
-   METHOD setPosition
-   METHOD textLength
-   METHOD textStart
-   METHOD width
-   METHOD x
-   METHOD xToCursor
-   METHOD y
+$addMethods
 
 $endClass
 

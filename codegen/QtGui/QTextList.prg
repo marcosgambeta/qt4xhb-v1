@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=QTextBlockGroup
 
-   METHOD delete
-   METHOD add
-   METHOD count
-   METHOD format
-   METHOD item
-   METHOD itemNumber
-   METHOD itemText
-   METHOD remove
-   METHOD removeItem
-   METHOD setFormat
+$addMethods
 
 $endClass
 

@@ -12,66 +12,7 @@ $addRequests
 
 $beginClassFrom=QPaintDevice
 
-   METHOD new
-   METHOD delete
-
-   METHOD allGray
-   METHOD bitPlaneCount
-   METHOD byteCount
-   METHOD bytesPerLine
-   METHOD cacheKey
-   METHOD color
-   METHOD colorCount
-   METHOD colorTable
-   METHOD convertToFormat
-   METHOD copy
-   METHOD createAlphaMask
-   METHOD createHeuristicMask
-   METHOD createMaskFromColor
-   METHOD depth
-   METHOD dotsPerMeterX
-   METHOD dotsPerMeterY
-   METHOD fill1
-   METHOD fill2
-   METHOD fill3
-   METHOD fill
-   METHOD format
-   METHOD hasAlphaChannel
-   METHOD height
-   METHOD invertPixels
-   METHOD isGrayscale
-   METHOD isNull
-   METHOD load
-   METHOD loadFromData
-   METHOD mirrored
-   METHOD offset
-   METHOD pixel
-   METHOD pixelIndex
-   METHOD rect
-   METHOD rgbSwapped
-   METHOD save
-   METHOD scaled
-   METHOD scaledToHeight
-   METHOD scaledToWidth
-   METHOD setColor
-   METHOD setColorCount
-   METHOD setColorTable
-   METHOD setDotsPerMeterX
-   METHOD setDotsPerMeterY
-   METHOD setOffset
-   METHOD setPixel
-   METHOD setText
-   METHOD size
-   METHOD swap
-   METHOD text
-   METHOD textKeys
-   METHOD transformed
-   METHOD valid
-   METHOD width
-   METHOD fromData
-   METHOD trueMatrix
-   METHOD toVariant
-   METHOD fromVariant
+$addMethods
 
 $endClass
 

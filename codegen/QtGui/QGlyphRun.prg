@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD clear
-   METHOD glyphIndexes
-   METHOD overline
-   METHOD positions
-   METHOD rawFont
-   METHOD setGlyphIndexes
-   METHOD setOverline
-   METHOD setPositions
-   METHOD setRawFont
-   METHOD setStrikeOut
-   METHOD setUnderline
-   METHOD strikeOut
-   METHOD underline
+$addMethods
 
 $endClass
 

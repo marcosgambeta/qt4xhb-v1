@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=QTextFormat
 
-   METHOD new
-   METHOD delete
-   METHOD indent
-   METHOD isValid
-   METHOD numberPrefix
-   METHOD numberSuffix
-   METHOD setIndent
-   METHOD setNumberPrefix
-   METHOD setNumberSuffix
-   METHOD setStyle
-   METHOD style
+$addMethods
 
 $endClass
 

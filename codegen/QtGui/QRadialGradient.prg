@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=QGradient
 
-   METHOD new
-   METHOD delete
-   METHOD center
-   METHOD setCenter
-   METHOD focalPoint
-   METHOD setFocalPoint
-   METHOD radius
-   METHOD setRadius
-   METHOD centerRadius
-   METHOD setCenterRadius
-   METHOD focalRadius
-   METHOD setFocalRadius
+$addMethods
 
 $endClass
 

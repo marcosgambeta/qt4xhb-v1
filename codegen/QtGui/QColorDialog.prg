@@ -12,22 +12,7 @@ $addRequests
 
 $beginClassFrom=QDialog
 
-   METHOD new
-   METHOD delete
-   METHOD currentColor
-   METHOD open
-   METHOD options
-   METHOD selectedColor
-   METHOD setCurrentColor
-   METHOD setOption
-   METHOD setOptions
-   METHOD testOption
-   METHOD setVisible
-   METHOD customColor
-   METHOD customCount
-   METHOD getColor
-   METHOD setCustomColor
-   METHOD setStandardColor
+$addMethods
 
 $addSignals
 

@@ -12,34 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD advancesForGlyphIndexes1
-   METHOD advancesForGlyphIndexes
-   METHOD alphaMapForGlyph
-   METHOD ascent
-   METHOD averageCharWidth
-   METHOD descent
-   METHOD familyName
-   METHOD fontTable
-   METHOD glyphIndexesForString
-   METHOD hintingPreference
-   METHOD isValid
-   METHOD leading
-   METHOD loadFromData
-   METHOD loadFromFile
-   METHOD maxCharWidth
-   METHOD pathForGlyph
-   METHOD pixelSize
-   METHOD setPixelSize
-   METHOD style
-   METHOD styleName
-   METHOD supportedWritingSystems
-   METHOD supportsCharacter
-   METHOD unitsPerEm
-   METHOD weight
-   METHOD xHeight
-   METHOD fromFont
+$addMethods
 
 $endClass
 

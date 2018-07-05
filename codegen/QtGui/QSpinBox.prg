@@ -12,22 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractSpinBox
 
-   METHOD new
-   METHOD delete
-   METHOD cleanText
-   METHOD maximum
-   METHOD minimum
-   METHOD prefix
-   METHOD setMaximum
-   METHOD setMinimum
-   METHOD setPrefix
-   METHOD setRange
-   METHOD setSingleStep
-   METHOD setSuffix
-   METHOD singleStep
-   METHOD suffix
-   METHOD value
-   METHOD setValue
+$addMethods
 
 $addSignals
 

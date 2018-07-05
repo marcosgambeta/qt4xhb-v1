@@ -12,20 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD colorCount
-   METHOD depth
-   METHOD height
-   METHOD heightMM
-   METHOD logicalDpiX
-   METHOD logicalDpiY
-   METHOD numColors
-   METHOD paintEngine
-   METHOD paintingActive
-   METHOD physicalDpiX
-   METHOD physicalDpiY
-   METHOD width
-   METHOD widthMM
+$addMethods
 
 $endClass
 

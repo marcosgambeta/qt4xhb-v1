@@ -16,16 +16,7 @@ $addRequests
 
 $beginClassFrom=QStyleOption
 
-   METHOD new
-%%   METHOD delete
-
-   METHOD shape
-   METHOD tabBarRect
-   METHOD selectedTabRect
-
-   METHOD setShape
-   METHOD setTabBarRect
-   METHOD setSelectedTabRect
+$addMethods
 
 $endClass
 

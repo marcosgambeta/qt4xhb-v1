@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD availableFontEngines
-   METHOD create
-   METHOD keys
+$addMethods
 
 $endClass
 

@@ -12,28 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD distanceToLine
-   METHOD distanceToPlane
-   METHOD isNull
-   METHOD length
-   METHOD lengthSquared
-   METHOD normalize
-   METHOD normalized
-   METHOD setX
-   METHOD setY
-   METHOD setZ
-   METHOD toPoint
-   METHOD toPointF
-   METHOD toVector2D
-   METHOD toVector4D
-   METHOD x
-   METHOD y
-   METHOD z
-   METHOD crossProduct
-   METHOD dotProduct
-   METHOD normal
+$addMethods
 
 $endClass
 

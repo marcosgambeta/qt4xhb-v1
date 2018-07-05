@@ -12,55 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractItemModel
 
-   METHOD new
-   METHOD delete
-   METHOD index
-   METHOD parent
-   METHOD rowCount
-   METHOD columnCount
-   METHOD hasChildren
-   METHOD data
-   METHOD setData
-   METHOD headerData
-   METHOD setHeaderData
-   METHOD insertRows
-   METHOD insertColumns
-   METHOD removeRows
-   METHOD removeColumns
-   METHOD flags
-   METHOD supportedDropActions
-   METHOD clear
-   METHOD sort
-   METHOD itemFromIndex
-   METHOD indexFromItem
-   METHOD item
-   METHOD setItem
-   METHOD invisibleRootItem
-   METHOD horizontalHeaderItem
-   METHOD setHorizontalHeaderItem
-   METHOD verticalHeaderItem
-   METHOD setVerticalHeaderItem
-   METHOD setHorizontalHeaderLabels
-   METHOD setVerticalHeaderLabels
-   METHOD setRowCount
-   METHOD setColumnCount
-   METHOD appendRow
-   METHOD appendColumn
-   METHOD insertRow
-   METHOD insertColumn
-   METHOD takeItem
-   METHOD takeRow
-   METHOD takeColumn
-   METHOD takeHorizontalHeaderItem
-   METHOD takeVerticalHeaderItem
-   METHOD itemPrototype
-   METHOD setItemPrototype
-   METHOD findItems
-   METHOD sortRole
-   METHOD setSortRole
-   METHOD mimeTypes
-   METHOD mimeData
-   METHOD dropMimeData
+$addMethods
 
 $addSignals
 

@@ -12,48 +12,7 @@ $addRequests
 
 $beginClassFrom=QDialog
 
-   METHOD new
-   METHOD delete
-   METHOD addPage
-   METHOD button
-   METHOD buttonText
-   METHOD currentId
-   METHOD currentPage
-   METHOD field
-   METHOD hasVisitedPage
-   METHOD nextId
-   METHOD options
-   METHOD page
-   METHOD pageIds
-   METHOD pixmap
-   METHOD removePage
-   METHOD setButton
-   METHOD setButtonLayout
-   METHOD setButtonText
-   METHOD setDefaultProperty
-   METHOD setField
-   METHOD setOption
-   METHOD setOptions
-   METHOD setPage
-   METHOD setPixmap
-   METHOD setSideWidget
-   METHOD setStartId
-   METHOD setSubTitleFormat
-   METHOD setTitleFormat
-   METHOD setWizardStyle
-   METHOD sideWidget
-   METHOD startId
-   METHOD subTitleFormat
-   METHOD testOption
-   METHOD titleFormat
-   METHOD validateCurrentPage
-   METHOD visitedPages
-   METHOD wizardStyle
-   METHOD setVisible
-   METHOD sizeHint
-   METHOD back
-   METHOD next
-   METHOD restart
+$addMethods
 
 $addSignals
 

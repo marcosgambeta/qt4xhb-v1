@@ -14,8 +14,7 @@ $addRequests
 
 $beginClassFrom=
 
-%%   METHOD delete
-%%   METHOD registerMimeType
+$addMethods
 
 $endClass
 

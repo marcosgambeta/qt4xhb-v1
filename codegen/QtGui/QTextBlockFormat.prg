@@ -12,30 +12,7 @@ $addRequests
 
 $beginClassFrom=QTextFormat
 
-   METHOD new
-   METHOD delete
-   METHOD alignment
-   METHOD bottomMargin
-   METHOD indent
-   METHOD isValid
-   METHOD leftMargin
-   METHOD lineHeight
-   METHOD lineHeightType
-   METHOD nonBreakableLines
-   METHOD pageBreakPolicy
-   METHOD rightMargin
-   METHOD setAlignment
-   METHOD setBottomMargin
-   METHOD setIndent
-   METHOD setLeftMargin
-   METHOD setLineHeight
-   METHOD setNonBreakableLines
-   METHOD setPageBreakPolicy
-   METHOD setRightMargin
-   METHOD setTextIndent
-   METHOD setTopMargin
-   METHOD textIndent
-   METHOD topMargin
+$addMethods
 
 $endClass
 

@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD new
-   METHOD alignment
-   METHOD isCheckable
-   METHOD isChecked
-   METHOD isFlat
-   METHOD setAlignment
-   METHOD setCheckable
-   METHOD setFlat
-   METHOD setTitle
-   METHOD title
-   METHOD minimumSizeHint
-   METHOD setChecked
+$addMethods
 
 $addSignals
 

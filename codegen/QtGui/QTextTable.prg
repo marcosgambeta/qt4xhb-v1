@@ -12,23 +12,7 @@ $addRequests
 
 $beginClassFrom=QTextFrame
 
-   METHOD delete
-   METHOD appendColumns
-   METHOD appendRows
-   METHOD cellAt
-   METHOD columns
-   METHOD format
-   METHOD insertColumns
-   METHOD insertRows
-   METHOD mergeCells
-   METHOD removeColumns
-   METHOD removeRows
-   METHOD resize
-   METHOD rowEnd
-   METHOD rowStart
-   METHOD rows
-   METHOD setFormat
-   METHOD splitCell
+$addMethods
 
 $endClass
 

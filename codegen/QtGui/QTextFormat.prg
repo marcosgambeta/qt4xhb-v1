@@ -12,51 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD background
-   METHOD boolProperty
-   METHOD brushProperty
-   METHOD clearBackground
-   METHOD clearForeground
-   METHOD clearProperty
-   METHOD colorProperty
-   METHOD doubleProperty
-   METHOD foreground
-   METHOD hasProperty
-   METHOD intProperty
-   METHOD isBlockFormat
-   METHOD isCharFormat
-   METHOD isFrameFormat
-   METHOD isImageFormat
-   METHOD isListFormat
-   METHOD isTableCellFormat
-   METHOD isTableFormat
-   METHOD isValid
-   METHOD layoutDirection
-   METHOD lengthProperty
-   METHOD lengthVectorProperty
-   METHOD merge
-   METHOD objectIndex
-   METHOD objectType
-   METHOD penProperty
-   METHOD property
-   METHOD propertyCount
-   METHOD setBackground
-   METHOD setForeground
-   METHOD setLayoutDirection
-   METHOD setObjectIndex
-   METHOD setObjectType
-   METHOD setProperty
-   METHOD stringProperty
-   METHOD toBlockFormat
-   METHOD toCharFormat
-   METHOD toFrameFormat
-   METHOD toImageFormat
-   METHOD toListFormat
-   METHOD toTableCellFormat
-   METHOD toTableFormat
-   METHOD type
+$addMethods
 
 $endClass
 

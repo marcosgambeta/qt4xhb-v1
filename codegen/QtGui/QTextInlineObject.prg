@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD ascent
-   METHOD descent
-   METHOD format
-   METHOD formatIndex
-   METHOD height
-   METHOD isValid
-   METHOD rect
-   METHOD setAscent
-   METHOD setDescent
-   METHOD setWidth
-   METHOD textDirection
-   METHOD textPosition
-   METHOD width
+$addMethods
 
 $endClass
 

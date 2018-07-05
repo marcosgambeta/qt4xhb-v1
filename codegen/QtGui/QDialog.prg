@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD new
-   METHOD delete
-   METHOD isSizeGripEnabled
-   METHOD result
-   METHOD setModal
-   METHOD setResult
-   METHOD setSizeGripEnabled
-   METHOD minimumSizeHint
-   METHOD setVisible
-   METHOD sizeHint
-   METHOD accept
-   METHOD done
-   METHOD exec
-   METHOD open
-   METHOD reject
+$addMethods
 
 $addSignals
 

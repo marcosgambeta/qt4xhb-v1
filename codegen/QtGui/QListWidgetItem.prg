@@ -12,43 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD background
-   METHOD checkState
-   METHOD clone
-   METHOD data
-   METHOD flags
-   METHOD font
-   METHOD foreground
-   METHOD icon
-   METHOD isHidden
-   METHOD isSelected
-   METHOD listWidget
-   METHOD read
-   METHOD setBackground
-   METHOD setCheckState
-   METHOD setData
-   METHOD setFlags
-   METHOD setFont
-   METHOD setForeground
-   METHOD setHidden
-   METHOD setIcon
-   METHOD setSelected
-   METHOD setSizeHint
-   METHOD setStatusTip
-   METHOD setText
-   METHOD setTextAlignment
-   METHOD setToolTip
-   METHOD setWhatsThis
-   METHOD sizeHint
-   METHOD statusTip
-   METHOD text
-   METHOD textAlignment
-   METHOD toolTip
-   METHOD type
-   METHOD whatsThis
-   METHOD write
+$addMethods
 
 $endClass
 

@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=QDecoration
 
-   METHOD new
-   METHOD delete
-   METHOD paint
-   METHOD region
+$addMethods
 
 $endClass
 

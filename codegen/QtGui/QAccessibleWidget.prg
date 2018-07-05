@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=QAccessibleObject
 
-   METHOD new
-   METHOD actionText
-   METHOD childAt
-   METHOD childCount
-   METHOD doAction
-   METHOD indexOfChild
-   METHOD rect
-   METHOD relationTo
-   METHOD role
-   METHOD state
-   METHOD text
-   METHOD userActionCount
+$addMethods
 
 $endClass
 

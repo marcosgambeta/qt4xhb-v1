@@ -12,22 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD alignment
-   METHOD flags
-   METHOD setAlignment
-   METHOD setFlags
-   METHOD setTabArray
-   METHOD setTabStop
-   METHOD setTextDirection
-   METHOD setUseDesignMetrics
-   METHOD setWrapMode
-   METHOD tabArray
-   METHOD tabStop
-   METHOD textDirection
-   METHOD useDesignMetrics
-   METHOD wrapMode
+$addMethods
 
 $endClass
 

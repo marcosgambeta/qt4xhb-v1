@@ -12,30 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD bold
-   METHOD families
-   METHOD font
-   METHOD isBitmapScalable
-   METHOD isFixedPitch
-   METHOD isScalable
-   METHOD isSmoothlyScalable
-   METHOD italic
-   METHOD pointSizes
-   METHOD smoothSizes
-   METHOD styleString
-   METHOD styles
-   METHOD weight
-   METHOD writingSystems
-   METHOD addApplicationFont
-   METHOD addApplicationFontFromData
-   METHOD applicationFontFamilies
-   METHOD removeAllApplicationFonts
-   METHOD removeApplicationFont
-   METHOD standardSizes
-   METHOD supportsThreadedFontRendering
-   METHOD writingSystemName
-   METHOD writingSystemSample
+$addMethods
 
 $endClass
 

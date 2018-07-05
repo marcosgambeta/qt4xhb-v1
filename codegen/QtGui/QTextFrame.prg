@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=QTextObject
 
-   METHOD new
-   METHOD delete
-   METHOD childFrames
-   METHOD firstCursorPosition
-   METHOD firstPosition
-   METHOD frameFormat
-   METHOD lastCursorPosition
-   METHOD lastPosition
-   METHOD parentFrame
-   METHOD setFrameFormat
+$addMethods
 
 $endClass
 

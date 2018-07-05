@@ -12,8 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD create
-   METHOD keys
+$addMethods
 
 $endClass
 

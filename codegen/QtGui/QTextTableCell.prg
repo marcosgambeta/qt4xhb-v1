@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD column
-   METHOD columnSpan
-   METHOD firstCursorPosition
-   METHOD format
-   METHOD isValid
-   METHOD lastCursorPosition
-   METHOD row
-   METHOD rowSpan
-   METHOD setFormat
-   METHOD tableCellFormatIndex
+$addMethods
 
 $endClass
 

@@ -12,52 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractItemModel
 
-   METHOD new
-   METHOD delete
-   METHOD fileIcon
-   METHOD fileInfo
-   METHOD fileName
-   METHOD filePath
-   METHOD filter
-   METHOD iconProvider
-   METHOD isDir
-   METHOD isReadOnly
-   METHOD lastModified
-   METHOD mkdir
-   METHOD myComputer
-   METHOD nameFilterDisables
-   METHOD nameFilters
-   METHOD permissions
-   METHOD remove
-   METHOD resolveSymlinks
-   METHOD rmdir
-   METHOD rootDirectory
-   METHOD rootPath
-   METHOD setFilter
-   METHOD setIconProvider
-   METHOD setNameFilterDisables
-   METHOD setNameFilters
-   METHOD setReadOnly
-   METHOD setResolveSymlinks
-   METHOD setRootPath
-   METHOD size
-   METHOD type
-   METHOD canFetchMore
-   METHOD columnCount
-   METHOD data
-   METHOD dropMimeData
-   METHOD fetchMore
-   METHOD flags
-   METHOD hasChildren
-   METHOD headerData
-   METHOD index
-   METHOD mimeData
-   METHOD mimeTypes
-   METHOD parent
-   METHOD rowCount
-   METHOD setData
-   METHOD sort
-   METHOD supportedDropActions
+$addMethods
 
 $addSignals
 

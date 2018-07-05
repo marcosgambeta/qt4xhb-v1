@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD allowsErrorInteraction
-   METHOD allowsInteraction
-   METHOD cancel
-   METHOD discardCommand
-   METHOD isPhase2
-   METHOD release
-   METHOD requestPhase2
-   METHOD restartCommand
-   METHOD restartHint
-   METHOD sessionId
-   METHOD sessionKey
-   METHOD setDiscardCommand
-   METHOD setManagerProperty
-   METHOD setRestartCommand
-   METHOD setRestartHint
+$addMethods
 
 $endClass
 

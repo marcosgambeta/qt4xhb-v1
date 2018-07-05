@@ -12,20 +12,7 @@ $addRequests
 
 $beginClassFrom=QWindowsStyle
 
-   METHOD new
-   METHOD delete
-   METHOD drawComplexControl
-   METHOD drawControl
-   METHOD drawPrimitive
-   METHOD pixelMetric
-   METHOD polish
-   METHOD sizeFromContents
-   METHOD standardPalette
-   METHOD standardPixmap
-   METHOD styleHint
-   METHOD subControlRect
-   METHOD subElementRect
-   METHOD unpolish
+$addMethods
 
 $endClass
 

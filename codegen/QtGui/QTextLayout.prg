@@ -12,41 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD beginLayout
-   METHOD boundingRect
-   METHOD cacheEnabled
-   METHOD clearAdditionalFormats
-   METHOD clearLayout
-   METHOD createLine
-   METHOD cursorMoveStyle
-   METHOD drawCursor
-   METHOD endLayout
-   METHOD font
-   METHOD glyphRuns
-   METHOD isValidCursorPosition
-   METHOD leftCursorPosition
-   METHOD lineAt
-   METHOD lineCount
-   METHOD lineForTextPosition
-   METHOD maximumWidth
-   METHOD minimumWidth
-   METHOD nextCursorPosition
-   METHOD position
-   METHOD preeditAreaPosition
-   METHOD preeditAreaText
-   METHOD previousCursorPosition
-   METHOD rightCursorPosition
-   METHOD setCacheEnabled
-   METHOD setCursorMoveStyle
-   METHOD setFont
-   METHOD setPosition
-   METHOD setPreeditArea
-   METHOD setText
-   METHOD setTextOption
-   METHOD text
-   METHOD textOption
+$addMethods
 
 $endClass
 

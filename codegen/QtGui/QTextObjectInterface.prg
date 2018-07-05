@@ -12,9 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD drawObject
-   METHOD intrinsicSize
+$addMethods
 
 $endClass
 

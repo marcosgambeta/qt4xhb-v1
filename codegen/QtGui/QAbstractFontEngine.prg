@@ -12,13 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-%%   METHOD addGlyphOutlinesToPath
-   METHOD capabilities
-%%   METHOD convertStringToGlyphIndices
-   METHOD fontProperty
-%%   METHOD getGlyphAdvances
-   METHOD renderGlyph
+$addMethods
 
 $endClass
 

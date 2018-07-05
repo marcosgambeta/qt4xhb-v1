@@ -12,9 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject,QAccessible
 
-   METHOD delete
-   METHOD create
-   METHOD keys
+$addMethods
 
 $endClass
 
