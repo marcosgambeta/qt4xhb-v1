@@ -12,8 +12,7 @@ $addRequests
 
 $beginClassFrom=QListView
 
-   METHOD activateCurrentItem
-   METHOD filterIndices
+$addMethods
 
 $addSignals
 

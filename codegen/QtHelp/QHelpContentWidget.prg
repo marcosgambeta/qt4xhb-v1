@@ -12,7 +12,7 @@ $addRequests
 
 $beginClassFrom=QTreeView
 
-   METHOD indexOf
+$addMethods
 
 $addSignals
 
