@@ -12,28 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD bindTexture
-   METHOD create
-   METHOD deleteTexture
-   METHOD device
-   METHOD doneCurrent
-   METHOD drawTexture
-   METHOD format
-   METHOD getProcAddress
-   METHOD isSharing
-   METHOD isValid
-   METHOD makeCurrent
-   METHOD overlayTransparentColor
-   METHOD requestedFormat
-   METHOD reset
-   METHOD setFormat
-   METHOD swapBuffers
-   METHOD areSharing
-   METHOD currentContext
-   METHOD setTextureCacheLimit
-   METHOD textureCacheLimit
+$addMethods
 
 $endClass
 

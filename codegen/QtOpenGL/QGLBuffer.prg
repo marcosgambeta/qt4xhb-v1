@@ -12,22 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD allocate
-   METHOD bind
-   METHOD bufferId
-   METHOD create
-   METHOD destroy
-   METHOD isCreated
-   METHOD map
-   METHOD read
-   METHOD setUsagePattern
-   METHOD size
-   METHOD type
-   METHOD unmap
-   METHOD usagePattern
-   METHOD release
+$addMethods
 
 $endClass
 

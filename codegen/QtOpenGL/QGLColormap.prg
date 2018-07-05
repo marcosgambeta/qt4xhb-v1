@@ -12,15 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD entryColor
-   METHOD entryRgb
-   METHOD find
-   METHOD findNearest
-   METHOD isEmpty
-   METHOD setEntry
-   METHOD size
+$addMethods
 
 $endClass
 
