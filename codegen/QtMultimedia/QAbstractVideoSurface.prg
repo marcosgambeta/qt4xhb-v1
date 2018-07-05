@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD error
-   METHOD isActive
-   METHOD isFormatSupported
-   METHOD nearestFormat
-   METHOD present
-   METHOD start
-   METHOD stop
-   METHOD supportedPixelFormats
-   METHOD surfaceFormat
+$addMethods
 
 $addSignals
 
