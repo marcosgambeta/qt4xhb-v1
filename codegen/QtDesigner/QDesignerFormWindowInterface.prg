@@ -12,46 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD delete
-   METHOD absoluteDir
-   METHOD addResourceFile
-   METHOD author
-   METHOD comment
-   METHOD contents
-   METHOD core
-   METHOD cursor
-   METHOD emitSelectionChanged
-   METHOD exportMacro
-   METHOD features
-   METHOD fileName
-   METHOD grid
-   METHOD hasFeature
-   METHOD includeHints
-   METHOD isDirty
-   METHOD isManaged
-   METHOD layoutDefault
-   METHOD mainContainer
-   METHOD pixmapFunction
-   METHOD removeResourceFile
-   METHOD resourceFiles
-   METHOD setAuthor
-   METHOD setComment
-   METHOD setExportMacro
-   METHOD setIncludeHints
-   METHOD setLayoutDefault
-   METHOD setLayoutFunction
-   METHOD setMainContainer
-   METHOD setPixmapFunction
-   METHOD clearSelection
-   METHOD manageWidget
-   METHOD selectWidget
-   METHOD setContents
-   METHOD setDirty
-   METHOD setFeatures
-   METHOD setFileName
-   METHOD setGrid
-   METHOD unmanageWidget
-   METHOD findFormWindow
+$addMethods
 
 $addSignals
 
