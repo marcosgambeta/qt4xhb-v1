@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD displayColumn
-   METHOD indexColumn
-   METHOD isValid
-   METHOD tableName
+$addMethods
 
 $endClass
 

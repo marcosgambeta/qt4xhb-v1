@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=QSqlTableModel
 
-   METHOD new
-   METHOD delete
-   METHOD relation
-   METHOD relationModel
-   METHOD setRelation
-   METHOD clear
-   METHOD data
-   METHOD removeColumns
-   METHOD select
-   METHOD setData
-   METHOD setTable
-   METHOD revertRow
+$addMethods
 
 $endClass
 

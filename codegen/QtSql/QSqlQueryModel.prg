@@ -12,22 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractTableModel
 
-   METHOD new
-   METHOD delete
-   METHOD clear
-   METHOD lastError
-   METHOD query
-   METHOD record
-   METHOD setQuery
-   METHOD canFetchMore
-   METHOD columnCount
-   METHOD data
-   METHOD fetchMore
-   METHOD headerData
-   METHOD insertColumns
-   METHOD removeColumns
-   METHOD rowCount
-   METHOD setHeaderData
+$addMethods
 
 $endClass
 

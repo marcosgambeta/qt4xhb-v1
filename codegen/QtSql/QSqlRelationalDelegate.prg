@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=QItemDelegate
 
-   METHOD new
-   METHOD delete
-   METHOD createEditor
-   METHOD setEditorData
-   METHOD setModelData
+$addMethods
 
 $endClass
 

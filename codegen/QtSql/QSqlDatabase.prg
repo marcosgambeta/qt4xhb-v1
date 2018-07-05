@@ -12,47 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD close
-   METHOD commit
-   METHOD connectOptions
-   METHOD connectionName
-   METHOD databaseName
-   METHOD driver
-   METHOD driverName
-   METHOD exec
-   METHOD hostName
-   METHOD isOpen
-   METHOD isOpenError
-   METHOD isValid
-   METHOD lastError
-   METHOD numericalPrecisionPolicy
-   METHOD open
-   METHOD password
-   METHOD port
-   METHOD primaryIndex
-   METHOD record
-   METHOD rollback
-   METHOD setConnectOptions
-   METHOD setDatabaseName
-   METHOD setHostName
-   METHOD setNumericalPrecisionPolicy
-   METHOD setPassword
-   METHOD setPort
-   METHOD setUserName
-   METHOD tables
-   METHOD transaction
-   METHOD userName
-   METHOD addDatabase
-   METHOD cloneDatabase
-   METHOD connectionNames
-   METHOD contains
-   METHOD database
-   METHOD drivers
-   METHOD isDriverAvailable
-   METHOD registerSqlDriver
-   METHOD removeDatabase
+$addMethods
 
 $endClass
 
