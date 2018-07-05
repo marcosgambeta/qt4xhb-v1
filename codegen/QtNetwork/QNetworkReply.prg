@@ -12,26 +12,7 @@ $addRequests
 
 $beginClassFrom=QIODevice
 
-   METHOD delete
-   METHOD abort
-   METHOD attribute
-   METHOD error
-   METHOD hasRawHeader
-   METHOD header
-   METHOD ignoreSslErrors
-   METHOD isFinished
-   METHOD isRunning
-   METHOD manager
-   METHOD operation
-   METHOD rawHeader
-   METHOD rawHeaderList
-   METHOD readBufferSize
-   METHOD request
-   METHOD setReadBufferSize
-   METHOD setSslConfiguration
-   METHOD sslConfiguration
-   METHOD url
-   METHOD close
+$addMethods
 
 $addSignals
 

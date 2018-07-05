@@ -12,25 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD domain
-   METHOD expirationDate
-   METHOD isHttpOnly
-   METHOD isSecure
-   METHOD isSessionCookie
-   METHOD name
-   METHOD path
-   METHOD setDomain
-   METHOD setExpirationDate
-   METHOD setHttpOnly
-   METHOD setName
-   METHOD setPath
-   METHOD setSecure
-   METHOD setValue
-   METHOD toRawForm
-   METHOD value
-   METHOD parseCookies
+$addMethods
 
 $endClass
 

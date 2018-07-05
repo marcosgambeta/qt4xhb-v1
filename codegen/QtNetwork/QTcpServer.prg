@@ -12,24 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD close
-   METHOD errorString
-   METHOD hasPendingConnections
-   METHOD isListening
-   METHOD listen
-   METHOD maxPendingConnections
-   METHOD nextPendingConnection
-   METHOD proxy
-   METHOD serverAddress
-   METHOD serverError
-   METHOD serverPort
-   METHOD setMaxPendingConnections
-   METHOD setProxy
-   METHOD setSocketDescriptor
-   METHOD socketDescriptor
-   METHOD waitForNewConnection
+$addMethods
 
 $addSignals
 

@@ -12,23 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD addresses
-   METHOD error
-   METHOD errorString
-   METHOD hostName
-   METHOD lookupId
-   METHOD setAddresses
-   METHOD setError
-   METHOD setErrorString
-   METHOD setHostName
-   METHOD setLookupId
-   METHOD abortHostLookup
-   METHOD fromName
-   METHOD localDomainName
-   METHOD localHostName
-   METHOD lookupHost
+$addMethods
 
 $endClass
 

@@ -12,37 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD group
-   METHOD isDir
-   METHOD isExecutable
-   METHOD isFile
-   METHOD isReadable
-   METHOD isSymLink
-   METHOD isValid
-   METHOD isWritable
-   METHOD lastModified
-   METHOD lastRead
-   METHOD name
-   METHOD owner
-   METHOD permissions
-   METHOD setDir
-   METHOD setFile
-   METHOD setGroup
-   METHOD setLastModified
-   METHOD setLastRead
-   METHOD setName
-   METHOD setOwner
-   METHOD setPermissions
-   METHOD setReadable
-   METHOD setSize
-   METHOD setSymLink
-   METHOD setWritable
-   METHOD size
-   METHOD equal
-   METHOD greaterThan
-   METHOD lessThan
+$addMethods
 
 $endClass
 

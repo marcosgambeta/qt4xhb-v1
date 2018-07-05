@@ -12,19 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD bearerName
-   METHOD bearerType
-   METHOD bearerTypeName
-   METHOD children
-   METHOD identifier
-   METHOD isRoamingAvailable
-   METHOD isValid
-   METHOD name
-   METHOD purpose
-   METHOD state
-   METHOD type
+$addMethods
 
 $endClass
 

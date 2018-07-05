@@ -12,28 +12,7 @@ $addRequests
 
 $beginClassFrom=QIODevice
 
-   METHOD new
-   METHOD delete
-   METHOD abort
-   METHOD connectToServer
-   METHOD disconnectFromServer
-   METHOD error
-   METHOD flush
-   METHOD fullServerName
-   METHOD isValid
-   METHOD readBufferSize
-   METHOD serverName
-   METHOD setReadBufferSize
-   METHOD state
-   METHOD waitForConnected
-   METHOD waitForDisconnected
-   METHOD bytesAvailable
-   METHOD bytesToWrite
-   METHOD canReadLine
-   METHOD close
-   METHOD isSequential
-   METHOD waitForBytesWritten
-   METHOD waitForReadyRead
+$addMethods
 
 $addSignals
 

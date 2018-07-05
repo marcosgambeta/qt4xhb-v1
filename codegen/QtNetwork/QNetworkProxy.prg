@@ -12,24 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD capabilities
-   METHOD hostName
-   METHOD isCachingProxy
-   METHOD isTransparentProxy
-   METHOD password
-   METHOD port
-   METHOD setCapabilities
-   METHOD setHostName
-   METHOD setPassword
-   METHOD setPort
-   METHOD setType
-   METHOD setUser
-   METHOD type
-   METHOD user
-   METHOD applicationProxy
-   METHOD setApplicationProxy
+$addMethods
 
 $endClass
 

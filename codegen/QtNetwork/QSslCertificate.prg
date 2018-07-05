@@ -12,24 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD clear
-   METHOD digest
-   METHOD effectiveDate
-   METHOD expiryDate
-   METHOD isNull
-   METHOD isValid
-   METHOD issuerInfo
-   METHOD publicKey
-   METHOD serialNumber
-   METHOD subjectInfo
-   METHOD toDer
-   METHOD toPem
-   METHOD version
-   METHOD fromData
-   METHOD fromDevice
-   METHOD fromPath
+$addMethods
 
 $endClass
 

@@ -12,27 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD activeTime
-   METHOD bytesReceived
-   METHOD bytesWritten
-   METHOD configuration
-   METHOD error
-   METHOD errorString
-   METHOD interface
-   METHOD isOpen
-   METHOD sessionProperty
-   METHOD setSessionProperty
-   METHOD state
-   METHOD waitForOpened
-   METHOD accept
-   METHOD close
-   METHOD ignore
-   METHOD migrate
-   METHOD open
-   METHOD reject
-   METHOD stop
+$addMethods
 
 $addSignals
 

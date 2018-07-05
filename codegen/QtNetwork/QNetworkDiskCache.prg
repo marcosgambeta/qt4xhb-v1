@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractNetworkCache
 
-   METHOD new
-   METHOD delete
-   METHOD cacheDirectory
-   METHOD fileMetaData
-   METHOD maximumCacheSize
-   METHOD setCacheDirectory
-   METHOD setMaximumCacheSize
-   METHOD cacheSize
-   METHOD data
-   METHOD insert
-   METHOD metaData
-   METHOD prepare
-   METHOD remove
-   METHOD updateMetaData
-   METHOD clear
+$addMethods
 
 $endClass
 

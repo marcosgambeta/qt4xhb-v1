@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD broadcast
-   METHOD ip
-   METHOD netmask
-   METHOD prefixLength
-   METHOD setBroadcast
-   METHOD setIp
-   METHOD setNetmask
-   METHOD setPrefixLength
+$addMethods
 
 $endClass
 

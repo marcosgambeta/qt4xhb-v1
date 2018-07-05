@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD queryProxy
-   METHOD proxyForQuery
-   METHOD setApplicationProxyFactory
-   METHOD setUseSystemConfiguration
-   METHOD systemProxyForQuery
+$addMethods
 
 $endClass
 

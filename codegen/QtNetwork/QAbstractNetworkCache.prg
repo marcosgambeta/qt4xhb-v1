@@ -12,15 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD cacheSize
-   METHOD data
-   METHOD insert
-   METHOD metaData
-   METHOD prepare
-   METHOD remove
-   METHOD updateMetaData
-   METHOD clear
+$addMethods
 
 $endClass
 

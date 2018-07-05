@@ -12,26 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new2
-%%   METHOD new3
-%%   METHOD new4
-%%   METHOD new5
-   METHOD new8
-   METHOD new
-   METHOD delete
-   METHOD clear
-   METHOD isInSubnet
-   METHOD isNull
-   METHOD protocol
-   METHOD scopeId
-%%   METHOD setAddress2
-%%   METHOD setAddress3
-%%   METHOD setAddress5
-   METHOD setAddress
-   METHOD setScopeId
-   METHOD toIPv4Address
-%%   METHOD toIPv6Address
-   METHOD toString
+$addMethods
 
 $endClass
 

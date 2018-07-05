@@ -12,27 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD activeConfiguration
-   METHOD cache
-   METHOD configuration
-   METHOD cookieJar
-   METHOD deleteResource
-   METHOD get
-   METHOD head
-   METHOD networkAccessible
-   METHOD post
-   METHOD proxy
-   METHOD proxyFactory
-   METHOD put
-   METHOD sendCustomRequest
-   METHOD setCache
-   METHOD setConfiguration
-   METHOD setCookieJar
-   METHOD setNetworkAccessible
-   METHOD setProxy
-   METHOD setProxyFactory
+$addMethods
 
 $addSignals
 

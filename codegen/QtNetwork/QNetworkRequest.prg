@@ -12,24 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD attribute
-   METHOD hasRawHeader
-   METHOD header
-   METHOD originatingObject
-   METHOD priority
-   METHOD rawHeader
-   METHOD rawHeaderList
-   METHOD setAttribute
-   METHOD setHeader
-   METHOD setOriginatingObject
-   METHOD setPriority
-   METHOD setRawHeader
-   METHOD setSslConfiguration
-   METHOD setUrl
-   METHOD sslConfiguration
-   METHOD url
+$addMethods
 
 $endClass
 

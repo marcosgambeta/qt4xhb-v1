@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD authenticationMethod
-   METHOD encryptionMethod
-   METHOD isNull
-   METHOD keyExchangeMethod
-   METHOD name
-   METHOD protocol
-   METHOD protocolString
-   METHOD supportedBits
-   METHOD usedBits
+$addMethods
 
 $endClass
 

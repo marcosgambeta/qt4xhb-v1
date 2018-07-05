@@ -12,63 +12,7 @@ $addRequests
 
 $beginClassFrom=QTcpSocket
 
-   METHOD new
-   METHOD delete
-   METHOD abort
-   METHOD addCaCertificate
-   METHOD addCaCertificates
-   METHOD caCertificates
-   METHOD ciphers
-   METHOD connectToHostEncrypted
-   METHOD encryptedBytesAvailable
-   METHOD encryptedBytesToWrite
-   METHOD flush
-   METHOD ignoreSslErrors
-   METHOD isEncrypted
-   METHOD localCertificate
-   METHOD mode
-   METHOD peerCertificate
-   METHOD peerCertificateChain
-   METHOD peerVerifyDepth
-   METHOD peerVerifyMode
-   METHOD privateKey
-   METHOD protocol
-   METHOD sessionCipher
-   METHOD setCaCertificates
-   METHOD setCiphers
-   METHOD setLocalCertificate
-   METHOD setPeerVerifyDepth
-   METHOD setPeerVerifyMode
-   METHOD setPrivateKey
-   METHOD setProtocol
-   METHOD setReadBufferSize
-   METHOD setSocketDescriptor
-   METHOD setSocketOption
-   METHOD setSslConfiguration
-   METHOD socketOption
-   METHOD sslConfiguration
-   METHOD sslErrors
-   METHOD waitForConnected
-   METHOD waitForDisconnected
-   METHOD waitForEncrypted
-   METHOD atEnd
-   METHOD bytesAvailable
-   METHOD bytesToWrite
-   METHOD canReadLine
-   METHOD close
-   METHOD waitForBytesWritten
-   METHOD waitForReadyRead
-   METHOD startClientEncryption
-   METHOD startServerEncryption
-   METHOD addDefaultCaCertificate
-   METHOD addDefaultCaCertificates
-   METHOD defaultCaCertificates
-   METHOD defaultCiphers
-   METHOD setDefaultCaCertificates
-   METHOD setDefaultCiphers
-   METHOD supportedCiphers
-   METHOD supportsSsl
-   METHOD systemCaCertificates
+$addMethods
 
 $addSignals
 

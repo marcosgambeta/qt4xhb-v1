@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD allConfigurations
-   METHOD capabilities
-   METHOD configurationFromIdentifier
-   METHOD defaultConfiguration
-   METHOD isOnline
-   METHOD updateConfigurations
+$addMethods
 
 $addSignals
 

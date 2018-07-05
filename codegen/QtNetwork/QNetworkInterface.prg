@@ -12,19 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD addressEntries
-   METHOD flags
-   METHOD hardwareAddress
-   METHOD humanReadableName
-   METHOD index
-   METHOD isValid
-   METHOD name
-   METHOD allAddresses
-   METHOD allInterfaces
-   METHOD interfaceFromIndex
-   METHOD interfaceFromName
+$addMethods
 
 $endClass
 

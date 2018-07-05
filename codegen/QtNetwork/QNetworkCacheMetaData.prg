@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD expirationDate
-   METHOD isValid
-   METHOD lastModified
-   METHOD saveToDisk
-   METHOD setExpirationDate
-   METHOD setLastModified
-   METHOD setSaveToDisk
-   METHOD setUrl
-   METHOD url
+$addMethods
 
 $endClass
 

@@ -12,34 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD bytesAvailable
-   METHOD cd
-   METHOD clearPendingCommands
-   METHOD close
-   METHOD connectToHost
-   METHOD currentCommand
-   METHOD currentDevice
-   METHOD currentId
-   METHOD error
-   METHOD errorString
-   METHOD get
-   METHOD hasPendingCommands
-   METHOD list
-   METHOD login
-   METHOD mkdir
-   METHOD put
-   METHOD rawCommand
-   METHOD read
-   METHOD readAll
-   METHOD remove
-   METHOD rename
-   METHOD rmdir
-   METHOD setProxy
-   METHOD setTransferMode
-   METHOD state
-   METHOD abort
+$addMethods
 
 $addSignals
 

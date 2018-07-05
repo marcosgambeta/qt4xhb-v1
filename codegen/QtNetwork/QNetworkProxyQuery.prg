@@ -12,20 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD localPort
-   METHOD peerHostName
-   METHOD peerPort
-   METHOD protocolTag
-   METHOD queryType
-   METHOD setLocalPort
-   METHOD setPeerHostName
-   METHOD setPeerPort
-   METHOD setProtocolTag
-   METHOD setQueryType
-   METHOD setUrl
-   METHOD url
+$addMethods
 
 $endClass
 

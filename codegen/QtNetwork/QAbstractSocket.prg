@@ -12,40 +12,7 @@ $addRequests
 
 $beginClassFrom=QIODevice
 
-   METHOD new
-   METHOD delete
-   METHOD abort
-   METHOD connectToHost1
-   METHOD connectToHost2
-   METHOD disconnectFromHost
-   METHOD error
-   METHOD flush
-   METHOD isValid
-   METHOD localAddress
-   METHOD localPort
-   METHOD peerAddress
-   METHOD peerName
-   METHOD peerPort
-   METHOD proxy
-   METHOD readBufferSize
-   METHOD setProxy
-   METHOD setReadBufferSize
-   METHOD setSocketDescriptor
-   METHOD setSocketOption
-   METHOD socketDescriptor
-   METHOD socketOption
-   METHOD socketType
-   METHOD state
-   METHOD waitForConnected
-   METHOD waitForDisconnected
-   METHOD atEnd
-   METHOD bytesAvailable
-   METHOD bytesToWrite
-   METHOD canReadLine
-   METHOD close
-   METHOD isSequential
-   METHOD waitForBytesWritten
-   METHOD waitForReadyRead
+$addMethods
 
 $addSignals
 

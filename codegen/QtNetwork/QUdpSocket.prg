@@ -12,13 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractSocket
 
-   METHOD new
-   METHOD delete
-   METHOD bind
-   METHOD hasPendingDatagrams
-   METHOD pendingDatagramSize
-%%   METHOD readDatagram
-   METHOD writeDatagram
+$addMethods
 
 $endClass
 

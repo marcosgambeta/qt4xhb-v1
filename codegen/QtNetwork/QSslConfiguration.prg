@@ -12,28 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD caCertificates
-   METHOD ciphers
-   METHOD isNull
-   METHOD localCertificate
-   METHOD peerCertificate
-   METHOD peerCertificateChain
-   METHOD peerVerifyDepth
-   METHOD peerVerifyMode
-   METHOD privateKey
-   METHOD protocol
-   METHOD sessionCipher
-   METHOD setCaCertificates
-   METHOD setCiphers
-   METHOD setLocalCertificate
-   METHOD setPeerVerifyDepth
-   METHOD setPeerVerifyMode
-   METHOD setPrivateKey
-   METHOD setProtocol
-   METHOD defaultConfiguration
-   METHOD setDefaultConfiguration
+$addMethods
 
 $endClass
 
