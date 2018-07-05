@@ -12,26 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD addDelay
-   METHOD addKeyClick1
-   METHOD addKeyClick2
-   METHOD addKeyClick
-   METHOD addKeyClicks
-   METHOD addKeyPress1
-   METHOD addKeyPress2
-   METHOD addKeyPress
-   METHOD addKeyRelease1
-   METHOD addKeyRelease2
-   METHOD addKeyRelease
-   METHOD addMouseClick
-   METHOD addMouseDClick
-   METHOD addMouseMove
-   METHOD addMousePress
-   METHOD addMouseRelease
-   METHOD clear
-   METHOD simulate
+$addMethods
 
 $endClass
 
