@@ -12,15 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD registerTypedef
-   METHOD type
-   METHOD typeName
-   METHOD isRegistered
-   METHOD construct
-   METHOD destroy
-   METHOD unregisterType
-   METHOD save
-   METHOD load
+$addMethods
 
 $endClass
 

@@ -12,15 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD currentFileInfo
-   METHOD currentFileName
-   METHOD currentFilePath
-   METHOD filters
-   METHOD hasNext
-   METHOD nameFilters
-   METHOD next
-   METHOD path
+$addMethods
 
 $endClass
 

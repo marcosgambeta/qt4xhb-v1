@@ -12,34 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD blockSignals
-   METHOD children
-   METHOD dumpObjectInfo
-   METHOD dumpObjectTree
-   METHOD dynamicPropertyNames
-   METHOD event
-   METHOD eventFilter
-   METHOD findChild
-   METHOD findChildren
-   METHOD inherits
-   METHOD installEventFilter
-   METHOD isWidgetType
-   METHOD killTimer
-   METHOD metaObject
-   METHOD moveToThread
-   METHOD objectName
-   METHOD parent
-   METHOD property
-   METHOD removeEventFilter
-   METHOD setObjectName
-   METHOD setParent
-   METHOD setProperty
-   METHOD signalsBlocked
-   METHOD startTimer
-   METHOD thread
-   METHOD deleteLater
+$addMethods
 
    METHOD onCloseEvent
    METHOD onEnterEvent

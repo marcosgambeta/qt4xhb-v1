@@ -12,33 +12,7 @@ $addRequests
 
 $beginClassFrom=QIODevice
 
-   METHOD new
-   METHOD delete
-   METHOD error
-   METHOD fileName
-   METHOD flush
-   METHOD handle
-   METHOD setFileName
-   METHOD unmap
-   METHOD unsetError
-   METHOD atEnd
-   METHOD close
-   METHOD isSequential
-   METHOD open
-   METHOD pos
-   METHOD seek
-   METHOD size
-   METHOD copy
-   METHOD decodeName
-   METHOD encodeName
-   METHOD exists
-   METHOD link
-   METHOD permissions
-   METHOD remove
-   METHOD rename
-   METHOD resize
-   METHOD setPermissions
-   METHOD symLinkTarget
+$addMethods
 
 $endClass
 

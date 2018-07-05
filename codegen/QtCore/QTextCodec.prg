@@ -12,26 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD canEncode
-   METHOD toUnicode
-   METHOD fromUnicode
-   METHOD makeDecoder
-   METHOD makeEncoder
-   METHOD name
-   METHOD aliases
-   METHOD mibEnum
-   METHOD codecForName
-   METHOD codecForMib
-   METHOD availableCodecs
-   METHOD availableMibs
-   METHOD codecForLocale
-   METHOD setCodecForLocale
-   METHOD codecForTr
-   METHOD setCodecForTr
-   METHOD codecForCStrings
-   METHOD setCodecForCStrings
-   METHOD codecForHtml
-   METHOD codecForUtfText
+$addMethods
 
 $endClass
 

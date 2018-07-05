@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD isEmpty
-   METHOD clear
-   METHOD contains
-   METHOD remove
-   METHOD value
-   METHOD toStringList
-   METHOD keys
-   METHOD insert
-   METHOD systemEnvironment
+$addMethods
 
 $endClass
 

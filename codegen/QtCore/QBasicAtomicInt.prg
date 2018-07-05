@@ -12,29 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD ref
-   METHOD deref
-   METHOD testAndSetRelaxed
-   METHOD testAndSetAcquire
-   METHOD testAndSetRelease
-   METHOD testAndSetOrdered
-   METHOD fetchAndStoreRelaxed
-   METHOD fetchAndStoreAcquire
-   METHOD fetchAndStoreRelease
-   METHOD fetchAndStoreOrdered
-   METHOD fetchAndAddRelaxed
-   METHOD fetchAndAddAcquire
-   METHOD fetchAndAddRelease
-   METHOD fetchAndAddOrdered
-   METHOD isReferenceCountingNative
-   METHOD isReferenceCountingWaitFree
-   METHOD isTestAndSetNative
-   METHOD isTestAndSetWaitFree
-   METHOD isFetchAndStoreNative
-   METHOD isFetchAndStoreWaitFree
-   METHOD isFetchAndAddNative
-   METHOD isFetchAndAddWaitFree
+$addMethods
 
 $endClass
 

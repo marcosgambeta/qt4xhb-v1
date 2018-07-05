@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD maybeSpace
-   METHOD nospace
-   METHOD space
+$addMethods
 
 $endClass
 

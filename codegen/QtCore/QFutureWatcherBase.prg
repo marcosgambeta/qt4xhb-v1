@@ -12,24 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD progressValue
-   METHOD progressMinimum
-   METHOD progressMaximum
-   METHOD progressText
-   METHOD isStarted
-   METHOD isFinished
-   METHOD isRunning
-   METHOD isCanceled
-   METHOD isPaused
-   METHOD waitForFinished
-   METHOD setPendingResultsLimit
-   METHOD event
-   METHOD cancel
-   METHOD setPaused
-   METHOD pause
-   METHOD resume
-   METHOD togglePaused
+$addMethods
 
 $addSignals
 

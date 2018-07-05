@@ -12,42 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractFileEngine
 
-   METHOD new
-   METHOD delete
-   METHOD open
-   METHOD caseSensitive
-   METHOD close
-   METHOD copy
-   METHOD fileFlags
-   METHOD fileName
-   METHOD fileTime
-   METHOD flush
-   METHOD handle
-   METHOD isRelativePath
-   METHOD isSequential
-   METHOD link
-   METHOD mkdir
-   METHOD owner
-   METHOD ownerId
-   METHOD pos
-   METHOD read
-   METHOD readLine
-   METHOD remove
-   METHOD rename
-   METHOD rmdir
-   METHOD seek
-   METHOD setFileName
-   METHOD setPermissions
-   METHOD setSize
-   METHOD size
-   METHOD supportsExtension
-   METHOD write
-   METHOD currentPath
-   METHOD drives
-   METHOD homePath
-   METHOD rootPath
-   METHOD setCurrentPath
-   METHOD tempPath
+$addMethods
 
 $endClass
 

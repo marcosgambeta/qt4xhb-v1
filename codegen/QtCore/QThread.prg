@@ -12,22 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD exit
-   METHOD isFinished
-   METHOD isRunning
-   METHOD priority
-   METHOD setPriority
-   METHOD setStackSize
-   METHOD stackSize
-   METHOD event
-   METHOD quit
-   METHOD start
-   METHOD terminate
-   METHOD currentThread
-   METHOD idealThreadCount
-   METHOD yieldCurrentThread
+$addMethods
 
 $addSignals
 

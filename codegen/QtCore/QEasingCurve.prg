@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD amplitude
-   METHOD overshoot
-   METHOD period
-   METHOD setAmplitude
-   METHOD setOvershoot
-   METHOD setPeriod
-   METHOD setType
-   METHOD type
+$addMethods
 
 $endClass
 

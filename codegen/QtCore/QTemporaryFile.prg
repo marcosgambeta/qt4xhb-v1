@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=QFile
 
-   METHOD new
-   METHOD delete
-   METHOD autoRemove
-   METHOD fileTemplate
-   METHOD open
-   METHOD setAutoRemove
-   METHOD setFileTemplate
-   METHOD fileName
-%%    METHOD createNativeFile
-   METHOD createLocalFile
+$addMethods
 
 $endClass
 

@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
-   METHOD new
-   METHOD delete
-   METHOD toString
-   METHOD toByteArray
-   METHOD toRfc4122
-   METHOD isNull
-   METHOD variant
-   METHOD version
-   METHOD fromRfc4122
-   METHOD createUuid
+$addMethods
 
 $endClass
 

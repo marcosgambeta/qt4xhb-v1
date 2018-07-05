@@ -12,42 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD reportStarted
-   METHOD reportFinished
-   METHOD reportCanceled
-   METHOD reportResultsReady
-   METHOD setRunnable
-   METHOD setFilterMode
-   METHOD setProgressRange
-   METHOD progressMinimum
-   METHOD progressMaximum
-   METHOD isProgressUpdateNeeded
-   METHOD setProgressValue
-   METHOD progressValue
-   METHOD setProgressValueAndText
-   METHOD progressText
-   METHOD setExpectedResultCount
-   METHOD expectedResultCount
-   METHOD resultCount
-   METHOD queryState
-   METHOD isRunning
-   METHOD isStarted
-   METHOD isCanceled
-   METHOD isFinished
-   METHOD isPaused
-   METHOD isThrottled
-   METHOD isResultReadyAt
-   METHOD cancel
-   METHOD setPaused
-   METHOD togglePaused
-   METHOD setThrottled
-   METHOD waitForFinished
-   METHOD waitForNextResult
-   METHOD waitForResult
-   METHOD waitForResume
-   METHOD mutex
+$addMethods
 
 $endClass
 

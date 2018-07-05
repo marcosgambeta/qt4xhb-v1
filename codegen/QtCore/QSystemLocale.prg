@@ -12,9 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD fallbackLocale
-   METHOD query
+$addMethods
 
 $endClass
 

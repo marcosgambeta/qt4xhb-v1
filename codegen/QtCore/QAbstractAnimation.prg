@@ -12,24 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD currentLoop
-   METHOD currentLoopTime
-   METHOD currentTime
-   METHOD direction
-   METHOD duration
-   METHOD group
-   METHOD loopCount
-   METHOD setDirection
-   METHOD setLoopCount
-   METHOD state
-   METHOD totalDuration
-   METHOD pause
-   METHOD resume
-   METHOD setCurrentTime
-   METHOD setPaused
-   METHOD start
-   METHOD stop
+$addMethods
 
 $addSignals
 

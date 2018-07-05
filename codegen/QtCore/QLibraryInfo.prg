@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD licensee
-   METHOD licensedProducts
-   METHOD buildKey
-   METHOD buildDate
-   METHOD location
+$addMethods
 
 $endClass
 

@@ -12,45 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
-   METHOD new6
-   METHOD new7
-   METHOD new8
-   METHOD new9
-   METHOD new10
-   METHOD new
-   METHOD delete
-   METHOD category
-   METHOD decompositionTag
-   METHOD digitValue
-   METHOD direction
-   METHOD hasMirrored
-   METHOD isDigit
-   METHOD isHighSurrogate
-   METHOD isLetter
-   METHOD isLetterOrNumber
-   METHOD isLowSurrogate
-   METHOD isLower
-   METHOD isMark
-   METHOD isNull
-   METHOD isNumber
-   METHOD isPrint
-   METHOD isPunct
-   METHOD isSpace
-   METHOD isSymbol
-   METHOD isTitleCase
-   METHOD isUpper
-   METHOD joining
-   METHOD mirroredChar
-   METHOD toCaseFolded
-   METHOD toLower
-   METHOD toTitleCase
-   METHOD toUpper
-   METHOD unicodeVersion
+$addMethods
 
 $endClass
 

@@ -12,9 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD fromUnicode
+$addMethods
 
 $endClass
 

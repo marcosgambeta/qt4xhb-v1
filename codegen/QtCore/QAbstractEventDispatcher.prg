@@ -12,19 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD filterEvent
-   METHOD flush
-   METHOD hasPendingEvents
-   METHOD interrupt
-   METHOD processEvents
-   METHOD registerSocketNotifier
-   METHOD registerTimer
-   METHOD unregisterSocketNotifier
-   METHOD unregisterTimer
-   METHOD unregisterTimers
-   METHOD wakeUp
-   METHOD instance
+$addMethods
 
 $addSignals
 

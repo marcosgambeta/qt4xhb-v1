@@ -12,77 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD addEncodedQueryItem
-   METHOD addQueryItem
-   METHOD allEncodedQueryItemValues
-   METHOD allQueryItemValues
-   METHOD authority
-   METHOD clear
-   METHOD encodedFragment
-   METHOD encodedHost
-   METHOD encodedPassword
-   METHOD encodedPath
-   METHOD encodedQuery
-   METHOD encodedQueryItemValue
-   METHOD encodedUserName
-   METHOD errorString
-   METHOD fragment
-   METHOD hasEncodedQueryItem
-   METHOD hasFragment
-   METHOD hasQuery
-   METHOD hasQueryItem
-   METHOD host
-   METHOD isEmpty
-   METHOD isLocalFile
-   METHOD isParentOf
-   METHOD isRelative
-   METHOD isValid
-   METHOD password
-   METHOD path
-   METHOD port
-   METHOD queryItemValue
-   METHOD removeAllEncodedQueryItems
-   METHOD removeAllQueryItems
-   METHOD removeEncodedQueryItem
-   METHOD removeQueryItem
-   METHOD resolved
-   METHOD scheme
-   METHOD setAuthority
-   METHOD setEncodedFragment
-   METHOD setEncodedHost
-   METHOD setEncodedPassword
-   METHOD setEncodedPath
-   METHOD setEncodedQuery
-   METHOD setEncodedUrl
-   METHOD setEncodedUserName
-   METHOD setFragment
-   METHOD setHost
-   METHOD setPassword
-   METHOD setPath
-   METHOD setPort
-   METHOD setQueryDelimiters
-   METHOD setScheme
-   METHOD setUrl
-   METHOD setUserInfo
-   METHOD setUserName
-   METHOD swap
-   METHOD toEncoded
-   METHOD toLocalFile
-   METHOD toString
-   METHOD topLevelDomain
-   METHOD userInfo
-   METHOD userName
-   METHOD fromAce
-   METHOD fromEncoded
-   METHOD fromLocalFile
-   METHOD fromPercentEncoding
-   METHOD fromUserInput
-   METHOD idnWhitelist
-   METHOD setIdnWhitelist
-   METHOD toAce
-   METHOD toPercentEncoding
+$addMethods
 
 $endClass
 
