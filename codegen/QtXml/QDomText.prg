@@ -12,9 +12,7 @@ $addRequests
 
 $beginClassFrom=QDomCharacterData
 
-   METHOD new
-   METHOD nodeType
-   METHOD splitText
+$addMethods
 
 $endClass
 

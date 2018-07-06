@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=QDomNode
 
-   METHOD new
-   METHOD appendData
-   METHOD data
-   METHOD deleteData
-   METHOD insertData
-   METHOD length
-   METHOD nodeType
-   METHOD replaceData
-   METHOD setData
-   METHOD substringData
+$addMethods
 
 $endClass
 

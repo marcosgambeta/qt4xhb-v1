@@ -12,8 +12,7 @@ $addRequests
 
 $beginClassFrom=QDomText
 
-   METHOD new
-   METHOD nodeType
+$addMethods
 
 $endClass
 

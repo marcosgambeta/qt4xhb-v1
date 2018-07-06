@@ -12,8 +12,7 @@ $addRequests
 
 $beginClassFrom=QDomCharacterData
 
-   METHOD new
-   METHOD nodeType
+$addMethods
 
 $endClass
 

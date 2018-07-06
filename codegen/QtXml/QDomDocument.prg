@@ -12,37 +12,7 @@ $addRequests
 
 $beginClassFrom=QDomNode
 
-   METHOD new
-   METHOD delete
-   METHOD createAttribute
-   METHOD createAttributeNS
-   METHOD createCDATASection
-   METHOD createComment
-   METHOD createDocumentFragment
-   METHOD createElement
-   METHOD createElementNS
-   METHOD createEntityReference
-   METHOD createProcessingInstruction
-   METHOD createTextNode
-   METHOD doctype
-   METHOD documentElement
-   METHOD elementById
-   METHOD elementsByTagName
-   METHOD elementsByTagNameNS
-   METHOD implementation
-   METHOD importNode
-   METHOD nodeType
-   //METHOD setContent1
-   //METHOD setContent2
-   //METHOD setContent3
-   //METHOD setContent4
-   //METHOD setContent5
-   //METHOD setContent6
-   //METHOD setContent7
-   //METHOD setContent8
-   //METHOD setContent
-   METHOD toByteArray
-   METHOD toString
+$addMethods
 
 $endClass
 
