@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD displayName
-   METHOD expectedSize
-   METHOD fileName
-   METHOD name
-   METHOD origin
-   METHOD size
-   METHOD removeAllDatabases
-   METHOD removeDatabase
+$addMethods
 
 $endClass
 

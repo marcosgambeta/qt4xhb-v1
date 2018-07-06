@@ -12,9 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD create
-   METHOD refreshPlugins
+$addMethods
 
 $endClass
 

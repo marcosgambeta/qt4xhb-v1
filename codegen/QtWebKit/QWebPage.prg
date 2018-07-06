@@ -12,48 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD action
-   METHOD bytesReceived
-   METHOD createStandardContextMenu
-   METHOD currentFrame
-%%   METHOD extension
-   METHOD findText
-   METHOD focusNextPrevChild
-   METHOD forwardUnsupportedContent
-   METHOD frameAt
-   METHOD history
-   METHOD inputMethodQuery
-   METHOD isContentEditable
-   METHOD isModified
-   METHOD linkDelegationPolicy
-   METHOD mainFrame
-   METHOD networkAccessManager
-   METHOD palette
-   METHOD pluginFactory
-   METHOD preferredContentsSize
-   METHOD selectedText
-   METHOD setContentEditable
-   METHOD setForwardUnsupportedContent
-   METHOD setLinkDelegationPolicy
-   METHOD setNetworkAccessManager
-   METHOD setPalette
-   METHOD setPluginFactory
-   METHOD setPreferredContentsSize
-   METHOD setView
-   METHOD setViewportSize
-   METHOD settings
-   METHOD supportsExtension
-   METHOD swallowContextMenuEvent
-   METHOD totalBytes
-   METHOD triggerAction
-   METHOD undoStack
-   METHOD updatePositionDependentActions
-   METHOD view
-   METHOD viewportSize
-   METHOD event
-   METHOD shouldInterruptJavaScript
+$addMethods
 
 $addSignals
 

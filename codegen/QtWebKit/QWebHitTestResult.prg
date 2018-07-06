@@ -12,25 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD alternateText
-   METHOD boundingRect
-   METHOD element
-   METHOD enclosingBlockElement
-   METHOD frame
-   METHOD imageUrl
-   METHOD isContentEditable
-   METHOD isContentSelected
-   METHOD isNull
-   METHOD linkElement
-   METHOD linkTargetFrame
-   METHOD linkText
-   METHOD linkTitle
-   METHOD linkUrl
-   METHOD pixmap
-   METHOD pos
-   METHOD title
+$addMethods
 
 $endClass
 

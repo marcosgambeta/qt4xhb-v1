@@ -12,36 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD new
-   METHOD delete
-   METHOD findText
-   METHOD history
-   METHOD icon
-   METHOD isModified
-   METHOD load
-   METHOD page
-   METHOD pageAction
-   METHOD renderHints
-   METHOD selectedText
-   METHOD setContent
-   METHOD setHtml
-   METHOD setPage
-   METHOD setRenderHint
-   METHOD setRenderHints
-   METHOD setTextSizeMultiplier
-   METHOD setUrl
-   METHOD setZoomFactor
-   METHOD settings
-   METHOD textSizeMultiplier
-   METHOD title
-   METHOD triggerPageAction
-   METHOD url
-   METHOD zoomFactor
-   METHOD back
-   METHOD forward
-   METHOD print
-   METHOD reload
-   METHOD stop
+$addMethods
 
 $addSignals
 
