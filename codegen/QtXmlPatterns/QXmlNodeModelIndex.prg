@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD additionalData
-   METHOD data
-   METHOD internalPointer
-   METHOD isNull
-   METHOD model
+$addMethods
 
 $endClass
 
