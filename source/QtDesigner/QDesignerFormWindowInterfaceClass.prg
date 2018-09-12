@@ -13,12 +13,12 @@
 #include "hbclass.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QDIR
 REQUEST QDESIGNERFORMEDITORINTERFACE
 REQUEST QDESIGNERFORMWINDOWCURSORINTERFACE
+REQUEST QDESIGNERFORMWINDOWINTERFACE
+REQUEST QDIR
 REQUEST QPOINT
 REQUEST QWIDGET
-REQUEST QDESIGNERFORMWINDOWINTERFACE
 #endif
 
 CLASS QDesignerFormWindowInterface INHERIT QWidget
@@ -64,7 +64,7 @@ CLASS QDesignerFormWindowInterface INHERIT QWidget
    METHOD unmanageWidget
    METHOD findFormWindow
 
-   METHOD onSelectionChanged
+   METHOD onAboutToUnmanageWidget
    METHOD onActivated
    METHOD onChanged
    METHOD onFeatureChanged
@@ -72,11 +72,11 @@ CLASS QDesignerFormWindowInterface INHERIT QWidget
    METHOD onGeometryChanged
    METHOD onMainContainerChanged
    METHOD onObjectRemoved
+   METHOD onResourceFilesChanged
+   METHOD onSelectionChanged
    METHOD onWidgetManaged
    METHOD onWidgetRemoved
    METHOD onWidgetUnmanaged
-   METHOD onAboutToUnmanageWidget
-   METHOD onResourceFilesChanged
 
    DESTRUCTOR destroyObject
 
