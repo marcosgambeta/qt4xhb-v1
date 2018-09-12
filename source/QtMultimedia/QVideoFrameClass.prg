@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QVARIANT
 REQUEST QSIZE
+REQUEST QVARIANT
 #endif
 
 CLASS QVideoFrame
@@ -24,9 +24,6 @@ CLASS QVideoFrame
 
    METHOD new
    METHOD delete
-   METHOD bits1
-   METHOD bits2
-   METHOD bits
    METHOD bytesPerLine
    METHOD endTime
    METHOD fieldType
