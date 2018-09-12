@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QVARIANT
 REQUEST QAXOBJECT
+REQUEST QVARIANT
 #endif
 
 CLASS QAxBase
@@ -23,7 +23,6 @@ CLASS QAxBase
    DATA self_destruction INIT .F.
 
    METHOD delete
-
    METHOD asVariant
    METHOD clear
    METHOD control
@@ -38,10 +37,6 @@ CLASS QAxBase
    METHOD setControl
    METHOD setPropertyWritable
    METHOD verbs
-
-   METHOD onException
-   METHOD onPropertyChanged
-   METHOD onSignal
 
    METHOD newFrom
    METHOD newFromObject
