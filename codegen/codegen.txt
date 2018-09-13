@@ -1335,3 +1335,4 @@ QXmlStreamReader::Error                          |enum
 QXmlStreamReader::ReadElementTextBehaviour       |enum
 QXmlStreamReader::TokenType                      |enum
 QXmlStreamWriter                                 |object   |QtCore
+QGLFormat::OpenGLVersionFlags                    |enum
