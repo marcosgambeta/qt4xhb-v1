@@ -55,6 +55,7 @@ HB_FUNC_STATIC( QGLFORMAT_NEW )
   }
 }
 
+$prototype=~QGLFormat()
 $deleteMethod
 
 $prototype=bool accum () const
@@ -198,19 +199,11 @@ $method=|int|swapInterval|
 $prototype=bool testOption ( QGL::FormatOptions opt ) const
 $method=|bool|testOption|QGL::FormatOptions
 
-$prototype=QGLFormat defaultFormat ()
-HB_FUNC_STATIC( QGLFORMAT_DEFAULTFORMAT )
-{
-  QGLFormat * ptr = new QGLFormat( QGLFormat::defaultFormat () );
-  _qt4xhb_createReturnClass ( ptr, "QGLFORMAT" );
-}
+$prototype=static QGLFormat defaultFormat ()
+$staticMethod=|QGLFormat|defaultFormat|
 
-$prototype=QGLFormat defaultOverlayFormat ()
-HB_FUNC_STATIC( QGLFORMAT_DEFAULTOVERLAYFORMAT )
-{
-  QGLFormat * ptr = new QGLFormat( QGLFormat::defaultOverlayFormat () );
-  _qt4xhb_createReturnClass ( ptr, "QGLFORMAT" );
-}
+$prototype=static QGLFormat defaultOverlayFormat ()
+$staticMethod=|QGLFormat|defaultOverlayFormat|
 
 $prototype=static bool hasOpenGL ()
 $staticMethod=|bool|hasOpenGL|
@@ -219,24 +212,25 @@ $prototype=static bool hasOpenGLOverlays ()
 $staticMethod=|bool|hasOpenGLOverlays|
 
 $prototype=static OpenGLVersionFlags openGLVersionFlags ()
-HB_FUNC_STATIC( QGLFORMAT_OPENGLVERSIONFLAGS )
-{
-  hb_retni( (int) QGLFormat::openGLVersionFlags () );
-}
+$staticMethod=|QGLFormat::OpenGLVersionFlags|openGLVersionFlags|
 
-$prototype=void setDefaultFormat ( const QGLFormat & f )
-HB_FUNC_STATIC( QGLFORMAT_SETDEFAULTFORMAT )
-{
-  QGLFormat::setDefaultFormat ( *PQGLFORMAT(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$prototype=static void setDefaultFormat ( const QGLFormat & f )
+$staticMethod=|void|setDefaultFormat|const QGLFormat &
 
-$prototype=void setDefaultOverlayFormat ( const QGLFormat & f )
-HB_FUNC_STATIC( QGLFORMAT_SETDEFAULTOVERLAYFORMAT )
-{
-  QGLFormat::setDefaultOverlayFormat ( *PQGLFORMAT(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$prototype=static void setDefaultOverlayFormat ( const QGLFormat & f )
+$staticMethod=|void|setDefaultOverlayFormat|const QGLFormat &
+
+%% #if defined(Q_WS_QPA)
+
+$prototype=static QGLFormat fromPlatformWindowFormat(const QPlatformWindowFormat &format)
+$staticMethod=|QGLFormat|fromPlatformWindowFormat|const QPlatformWindowFormat &|#if defined(Q_WS_QPA)
+
+$prototype=static QPlatformWindowFormat toPlatformWindowFormat(const QGLFormat &format)
+$staticMethod=|QPlatformWindowFormat|toPlatformWindowFormat|const QGLFormat &|#if defined(Q_WS_QPA)
+
+%% #endif
+
+$prototype=void detach() (private)
 
 $extraMethods
 

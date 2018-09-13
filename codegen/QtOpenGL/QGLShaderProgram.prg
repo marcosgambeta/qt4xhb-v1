@@ -84,6 +84,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=addShaderFromSourceCode
 
 $prototype=bool addShaderFromSourceFile ( QGLShader::ShaderType type, const QString & fileName )
 $method=|bool|addShaderFromSourceFile|QGLShader::ShaderType,const QString &
@@ -120,6 +121,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_ATTRIBUTELOCATION )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=attributeLocation
 
 $prototype=bool bind ()
 $method=|bool|bind|
@@ -156,6 +158,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_BINDATTRIBUTELOCATION )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=bindAttributeLocation
 
 $prototype=void disableAttributeArray ( int location )
 $internalMethod=|void|disableAttributeArray,disableAttributeArray1|int
@@ -181,6 +184,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_DISABLEATTRIBUTEARRAY )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=disableAttributeArray
 
 $prototype=void enableAttributeArray ( int location )
 $internalMethod=|void|enableAttributeArray,enableAttributeArray1|int
@@ -206,6 +210,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_ENABLEATTRIBUTEARRAY )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=enableAttributeArray
 
 $prototype=GLenum geometryInputType () const
 $method=|GLenum|geometryInputType|
@@ -255,6 +260,7 @@ $method=|void|removeShader|QGLShader *
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEARRAY )
 {
 }
+$addMethod=setAttributeArray
 
 $prototype=void setAttributeBuffer ( int location, GLenum type, int offset, int tupleSize, int stride = 0 )
 $internalMethod=|void|setAttributeBuffer,setAttributeBuffer1|int,GLenum,int,int,int=0
@@ -280,6 +286,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEBUFFER )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setAttributeBuffer
 
 $prototype=void setAttributeValue ( int location, GLfloat value )
 $method=|void|setAttributeValue,setAttributeValue1|int,GLfloat
@@ -379,6 +386,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setAttributeValue
 
 $prototype=void setGeometryInputType ( GLenum inputType )
 $method=|void|setGeometryInputType|GLenum
@@ -533,6 +541,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setUniformValue
 
 //[01]void setUniformValueArray ( int location, const GLfloat * values, int count, int tupleSize )
 //[02]void setUniformValueArray ( int location, const GLint * values, int count )
@@ -570,6 +579,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE )
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUEARRAY )
 {
 }
+$addMethod=setUniformValueArray
 
 $prototype=QList<QGLShader *> shaders () const
 $method=|QList<QGLShader *>|shaders|
@@ -606,6 +616,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_UNIFORMLOCATION )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=uniformLocation
 
 $prototype=static bool hasOpenGLShaderPrograms ( const QGLContext * context = 0 )
 $staticMethod=|bool|hasOpenGLShaderPrograms|const QGLContext *=0
