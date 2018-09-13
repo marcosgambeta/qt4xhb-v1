@@ -14,6 +14,7 @@
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QGLFORMAT
+REQUEST QPLATFORMWINDOWFORMAT
 #endif
 
 CLASS QGLFormat
@@ -77,6 +78,8 @@ CLASS QGLFormat
    METHOD openGLVersionFlags
    METHOD setDefaultFormat
    METHOD setDefaultOverlayFormat
+   METHOD fromPlatformWindowFormat
+   METHOD toPlatformWindowFormat
 
    METHOD newFrom
    METHOD newFromObject
@@ -153,6 +156,9 @@ HB_FUNC_STATIC( QGLFORMAT_NEW )
   }
 }
 
+/*
+~QGLFormat()
+*/
 HB_FUNC_STATIC( QGLFORMAT_DELETE )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -1157,21 +1163,35 @@ HB_FUNC_STATIC( QGLFORMAT_TESTOPTION )
 }
 
 /*
-QGLFormat defaultFormat ()
+static QGLFormat defaultFormat ()
 */
 HB_FUNC_STATIC( QGLFORMAT_DEFAULTFORMAT )
 {
-  QGLFormat * ptr = new QGLFormat( QGLFormat::defaultFormat () );
-  _qt4xhb_createReturnClass ( ptr, "QGLFORMAT" );
+    if( ISNUMPAR(0) )
+  {
+      QGLFormat * ptr = new QGLFormat( QGLFormat::defaultFormat () );
+      _qt4xhb_createReturnClass ( ptr, "QGLFORMAT", true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
-QGLFormat defaultOverlayFormat ()
+static QGLFormat defaultOverlayFormat ()
 */
 HB_FUNC_STATIC( QGLFORMAT_DEFAULTOVERLAYFORMAT )
 {
-  QGLFormat * ptr = new QGLFormat( QGLFormat::defaultOverlayFormat () );
-  _qt4xhb_createReturnClass ( ptr, "QGLFORMAT" );
+    if( ISNUMPAR(0) )
+  {
+      QGLFormat * ptr = new QGLFormat( QGLFormat::defaultOverlayFormat () );
+      _qt4xhb_createReturnClass ( ptr, "QGLFORMAT", true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -1209,26 +1229,89 @@ static OpenGLVersionFlags openGLVersionFlags ()
 */
 HB_FUNC_STATIC( QGLFORMAT_OPENGLVERSIONFLAGS )
 {
-  hb_retni( (int) QGLFormat::openGLVersionFlags () );
+    if( ISNUMPAR(0) )
+  {
+      RENUM( QGLFormat::openGLVersionFlags () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
-void setDefaultFormat ( const QGLFormat & f )
+static void setDefaultFormat ( const QGLFormat & f )
 */
 HB_FUNC_STATIC( QGLFORMAT_SETDEFAULTFORMAT )
 {
-  QGLFormat::setDefaultFormat ( *PQGLFORMAT(1) );
+    if( ISNUMPAR(1) && ISQGLFORMAT(1) )
+  {
+      QGLFormat::setDefaultFormat ( *PQGLFORMAT(1) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
-void setDefaultOverlayFormat ( const QGLFormat & f )
+static void setDefaultOverlayFormat ( const QGLFormat & f )
 */
 HB_FUNC_STATIC( QGLFORMAT_SETDEFAULTOVERLAYFORMAT )
 {
-  QGLFormat::setDefaultOverlayFormat ( *PQGLFORMAT(1) );
+    if( ISNUMPAR(1) && ISQGLFORMAT(1) )
+  {
+      QGLFormat::setDefaultOverlayFormat ( *PQGLFORMAT(1) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
+
+/*
+static QGLFormat fromPlatformWindowFormat(const QPlatformWindowFormat &format)
+*/
+HB_FUNC_STATIC( QGLFORMAT_FROMPLATFORMWINDOWFORMAT )
+{
+#if defined(Q_WS_QPA)
+    if( ISNUMPAR(1) && ISQPLATFORMWINDOWFORMAT(1) )
+  {
+      QGLFormat * ptr = new QGLFormat( QGLFormat::fromPlatformWindowFormat ( *PQPLATFORMWINDOWFORMAT(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QGLFORMAT", true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+}
+
+/*
+static QPlatformWindowFormat toPlatformWindowFormat(const QGLFormat &format)
+*/
+HB_FUNC_STATIC( QGLFORMAT_TOPLATFORMWINDOWFORMAT )
+{
+#if defined(Q_WS_QPA)
+    if( ISNUMPAR(1) && ISQGLFORMAT(1) )
+  {
+      QPlatformWindowFormat * ptr = new QPlatformWindowFormat( QGLFormat::toPlatformWindowFormat ( *PQGLFORMAT(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QPLATFORMWINDOWFORMAT", true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+}
+
+/*
+void detach() (private)
+*/
 
 HB_FUNC_STATIC( QGLFORMAT_NEWFROM )
 {
