@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QWEBPAGE
 REQUEST QSIZE
+REQUEST QWEBPAGE
 #endif
 
 CLASS QWebInspector INHERIT QWidget
