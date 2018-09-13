@@ -12,6 +12,9 @@
 
 #include "hbclass.ch"
 
+#ifndef QT4XHB_NO_REQUESTS
+#endif
+
 CLASS QXmlNamespaceSupport
 
    DATA pointer
@@ -22,11 +25,9 @@ CLASS QXmlNamespaceSupport
    METHOD popContext
    METHOD prefix
    METHOD prefixes
-   //METHOD processName
    METHOD pushContext
    METHOD reset
    METHOD setPrefix
-   //METHOD splitName
    METHOD uri
 
    METHOD newFrom
