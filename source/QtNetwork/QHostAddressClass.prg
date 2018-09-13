@@ -12,14 +12,17 @@
 
 #include "hbclass.ch"
 
+#ifndef QT4XHB_NO_REQUESTS
+#endif
+
 CLASS QHostAddress
 
    DATA pointer
    DATA self_destruction INIT .F.
 
+   METHOD new
    METHOD new2
    METHOD new8
-   METHOD new
    METHOD delete
    METHOD clear
    METHOD isInSubnet
