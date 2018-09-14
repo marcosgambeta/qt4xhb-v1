@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QPOINT
 REQUEST QLINE
+REQUEST QPOINT
 #endif
 
 CLASS QLine

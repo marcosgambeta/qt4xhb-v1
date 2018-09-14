@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QDATETIME
 REQUEST QABSTRACTFILEENGINE
+REQUEST QDATETIME
 #endif
 
 CLASS QAbstractFileEngine
@@ -43,7 +43,6 @@ CLASS QAbstractFileEngine
    METHOD owner
    METHOD ownerId
    METHOD pos
-   //METHOD readLine
    METHOD remove
    METHOD rename
    METHOD rmdir

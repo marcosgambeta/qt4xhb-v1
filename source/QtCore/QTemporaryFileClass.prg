@@ -12,6 +12,10 @@
 
 #include "hbclass.ch"
 
+#ifndef QT4XHB_NO_REQUESTS
+REQUEST QTEMPORARYFILE
+#endif
+
 CLASS QTemporaryFile INHERIT QFile
 
    METHOD new

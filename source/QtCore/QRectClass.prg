@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QRECT
 REQUEST QPOINT
+REQUEST QRECT
 REQUEST QSIZE
 #endif
 
