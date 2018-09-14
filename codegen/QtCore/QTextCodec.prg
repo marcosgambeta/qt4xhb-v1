@@ -46,6 +46,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CANENCODE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=canEncode
 
 $prototype=QString toUnicode(const QByteArray&) const
 $internalMethod=|QString|toUnicode,toUnicode1|const QByteArray &
@@ -76,6 +77,7 @@ HB_FUNC_STATIC( QTEXTCODEC_TOUNICODE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=toUnicode
 
 $prototype=QByteArray fromUnicode(const QString& uc) const
 $internalMethod=|QByteArray|fromUnicode,fromUnicode1|const QString &
@@ -102,6 +104,7 @@ HB_FUNC_STATIC( QTEXTCODEC_FROMUNICODE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=fromUnicode
 
 $prototype=QTextDecoder* makeDecoder() const
 $internalMethod=|QTextDecoder *|makeDecoder,makeDecoder1|
@@ -127,6 +130,7 @@ HB_FUNC_STATIC( QTEXTCODEC_MAKEDECODER )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=makeDecoder
 
 $prototype=QTextEncoder* makeEncoder() const
 $internalMethod=|QTextEncoder *|makeEncoder,makeEncoder1|
@@ -152,6 +156,7 @@ HB_FUNC_STATIC( QTEXTCODEC_MAKEENCODER )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=makeEncoder
 
 $prototype=virtual QByteArray name() const = 0
 $virtualMethod=|QByteArray|name|
@@ -186,6 +191,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORNAME )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=codecForName
 
 $prototype=static QTextCodec* codecForMib(int mib)
 $staticMethod=|QTextCodec *|codecForMib|int
@@ -238,6 +244,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORHTML )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=codecForHtml
 
 $prototype=static QTextCodec *codecForUtfText(const QByteArray &ba)
 $internalStaticMethod=|QTextCodec *|codecForUtfText,codecForUtfText1|const QByteArray &
@@ -263,6 +270,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORUTFTEXT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=codecForUtfText
 
 $extraMethods
 

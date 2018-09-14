@@ -36,6 +36,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_NEW )
   QCoreApplication * o = new QCoreApplication( argc, argv );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
+$addMethod=new
 
 $deleteMethod
 
@@ -123,6 +124,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_POSTEVENT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=postEvent
 
 $prototype=static void processEvents ( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
 $internalStaticMethod=|void|processEvents,processEvents1|QEventLoop::ProcessEventsFlags=QEventLoop::AllEvents
@@ -148,6 +150,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_PROCESSEVENTS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=processEvents
 
 $prototype=static void removeLibraryPath ( const QString & path )
 $staticMethod=|void|removeLibraryPath|const QString &
@@ -176,6 +179,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_REMOVEPOSTEDEVENTS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=removePostedEvents
 
 $prototype=static void removeTranslator ( QTranslator * translationFile )
 $staticMethod=|void|removeTranslator|QTranslator *
@@ -207,6 +211,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SENDPOSTEDEVENTS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=sendPostedEvents
 
 $prototype=static void setApplicationName ( const QString & application )
 $staticMethod=|void|setApplicationName|const QString &
@@ -256,6 +261,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=translate
 
 $beginSignals
 $signal=|aboutToQuit()

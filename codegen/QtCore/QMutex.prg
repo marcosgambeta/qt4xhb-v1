@@ -54,6 +54,7 @@ HB_FUNC_STATIC( QMUTEX_TRYLOCK )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=tryLock
 
 $prototype=void unlock ()
 $method=|void|unlock|

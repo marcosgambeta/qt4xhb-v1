@@ -112,6 +112,7 @@ HB_FUNC_STATIC( QTIME_TOSTRING )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=toString
 
 $prototype=static QTime currentTime()
 $staticMethod=|QTime|currentTime|
@@ -140,6 +141,7 @@ HB_FUNC_STATIC( QTIME_FROMSTRING )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=fromString
 
 $prototype=bool isValid() const
 $internalMethod=|bool|isValid,isValid1|
@@ -165,6 +167,7 @@ HB_FUNC_STATIC( QTIME_ISVALID )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=isValid
 
 $extraMethods
 

@@ -59,6 +59,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_APPEND )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=append
 
 $prototype=bool hasAttribute(const QString & qualifiedName) const
 $internalMethod=|bool|hasAttribute,hasAttribute1|const QString &
@@ -92,6 +93,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=hasAttribute
 
 $prototype=QStringRef value(const QString & namespaceUri, const QString & name) const
 $internalMethod=|QStringRef|value,value1|const QString &,const QString &
@@ -141,6 +143,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=value
 
 $extraMethods
 

@@ -79,6 +79,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORREAD )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=tryLockForRead
 
 $prototype=bool tryLockForWrite ()
 $internalMethod=|bool|tryLockForWrite,tryLockForWrite1|
@@ -104,6 +105,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORWRITE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=tryLockForWrite
 
 $prototype=void unlock ()
 $method=|void|unlock|

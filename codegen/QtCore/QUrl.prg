@@ -172,6 +172,7 @@ HB_FUNC_STATIC( QURL_PORT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=port
 
 $prototype=QString queryItemValue ( const QString & key ) const
 $method=|QString|queryItemValue|const QString &
@@ -236,6 +237,7 @@ HB_FUNC_STATIC( QURL_SETENCODEDURL )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setEncodeUrl
 
 $prototype=void setEncodedUserName ( const QByteArray & userName )
 $method=|void|setEncodedUserName|const QByteArray &
@@ -285,6 +287,7 @@ HB_FUNC_STATIC( QURL_SETURL )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setUrl
 
 $prototype=void setUserInfo ( const QString & userInfo )
 $method=|void|setUserInfo|const QString &
@@ -340,6 +343,7 @@ HB_FUNC_STATIC( QURL_FROMENCODED )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=fromEncoded
 
 $prototype=static QUrl fromLocalFile ( const QString & localFile )
 $staticMethod=|QUrl|fromLocalFile|const QString &

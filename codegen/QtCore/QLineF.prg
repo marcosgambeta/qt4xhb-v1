@@ -152,6 +152,7 @@ HB_FUNC_STATIC( QLINEF_TRANSLATE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=translate
 
 $prototype=QLineF translated(const QPointF & offset) const
 $internalMethod=|QLineF|translated,translated1|const QPointF &
@@ -177,6 +178,7 @@ HB_FUNC_STATIC( QLINEF_TRANSLATED )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=translated
 
 $prototype=QLineF unitVector() const
 $method=|QLineF|unitVector|

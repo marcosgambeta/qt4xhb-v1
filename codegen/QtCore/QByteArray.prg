@@ -120,6 +120,7 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=append
 
 $prototype=char at ( int i ) const
 $method=|char|at|int
@@ -168,6 +169,7 @@ HB_FUNC_STATIC( QBYTEARRAY_CONTAINS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=contains
 
 $prototype=int count ( const QByteArray & ba ) const
 $internalMethod=|int|count,count1|const QByteArray &
@@ -209,6 +211,7 @@ HB_FUNC_STATIC( QBYTEARRAY_COUNT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=count
 
 //[1]char * data ()
 //[2]const char * data () const
@@ -250,6 +253,7 @@ HB_FUNC_STATIC( QBYTEARRAY_ENDSWITH )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=endsWith
 
 $prototype=QByteArray & fill ( char ch, int size = -1 )
 $method=|QByteArray &|fill|char,int=-1
@@ -294,6 +298,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=indexOf
 
 $prototype=QByteArray & insert ( int i, const QByteArray & ba )
 $method=|QByteArray &|insert,insert1|int,const QByteArray &
@@ -339,6 +344,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INSERT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=insert
 
 $prototype=bool isEmpty () const
 $method=|bool|isEmpty|
@@ -386,6 +392,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=lastIndexOf
 
 $prototype=QByteArray left ( int len ) const
 $method=|QByteArray|left|int
@@ -439,6 +446,7 @@ HB_FUNC_STATIC( QBYTEARRAY_PREPEND )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=prepend
 
 $prototype=void push_back ( const QByteArray & other )
 $internalMethod=|void|push_back,push_back1|const QByteArray &
@@ -472,6 +480,7 @@ HB_FUNC_STATIC( QBYTEARRAY_PUSH_BACK )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=push_back
 
 $prototype=void push_front ( const QByteArray & other )
 $internalMethod=|void|push_front,push_front1|const QByteArray &
@@ -505,6 +514,7 @@ HB_FUNC_STATIC( QBYTEARRAY_PUSH_FRONT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=push_front
 
 $prototype=QByteArray & remove ( int pos, int len )
 $method=|QByteArray &|remove|int,int
@@ -632,6 +642,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=replace
 
 $prototype=void reserve ( int size )
 $method=|void|reserve|int
@@ -719,6 +730,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setNum
 
 $prototype=QByteArray & setRawData ( const char * data, uint size )
 $method=|QByteArray &|setRawData|const char *,uint
@@ -767,6 +779,7 @@ HB_FUNC_STATIC( QBYTEARRAY_STARTSWITH )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=startsWith
 
 $prototype=QByteArray toBase64 () const
 $method=|QByteArray|toBase64|

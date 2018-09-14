@@ -88,6 +88,7 @@ HB_FUNC_STATIC( QBITARRAY_COUNT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=count
 
 $prototype=bool fill ( bool value, int size = -1 )
 $internalMethod=|bool|fill,fill1|bool,int=-1
@@ -113,6 +114,7 @@ HB_FUNC_STATIC( QBITARRAY_FILL )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=fill
 
 $prototype=bool isEmpty () const
 $method=|bool|isEmpty|
@@ -147,6 +149,7 @@ HB_FUNC_STATIC( QBITARRAY_SETBIT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setBit
 
 $prototype=int size () const
 $method=|int|size|
