@@ -9,6 +9,10 @@ $header
 #include "hbclass.ch"
 
 $addRequests
+$addRequest=QChildEvent
+$addRequest=QDynamicPropertyChangeEvent
+$addRequest=QEvent
+$addRequest=QTimerEvent
 
 $beginClassFrom=
 
