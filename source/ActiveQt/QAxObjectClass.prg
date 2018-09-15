@@ -13,7 +13,6 @@
 #include "hbclass.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QAXOBJECT
 REQUEST QVARIANT
 #endif
 
