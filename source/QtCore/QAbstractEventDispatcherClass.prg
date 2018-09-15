@@ -13,7 +13,6 @@
 #include "hbclass.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QABSTRACTEVENTDISPATCHER
 #endif
 
 CLASS QAbstractEventDispatcher INHERIT QObject
