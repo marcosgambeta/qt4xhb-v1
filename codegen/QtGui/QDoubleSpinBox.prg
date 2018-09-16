@@ -92,6 +92,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_FIXUP )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
+$addMethod=fixup
 
 $prototype=virtual QValidator::State validate ( QString & text, int & pos ) const
 %% TODO: revisar implementacao e corrigir
@@ -106,6 +107,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_VALIDATE )
     hb_retni( (int) obj->validate ( par1, par2 ) );
   }
 }
+$addMethod=validate
 
 $prototype=void setValue ( double val )
 $method=|void|setValue|double

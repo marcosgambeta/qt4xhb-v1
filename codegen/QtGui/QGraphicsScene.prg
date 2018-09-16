@@ -96,6 +96,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDELLIPSE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=addEllipse
 
 $prototype=void addItem ( QGraphicsItem * item )
 $method=|void|addItem|QGraphicsItem *
@@ -124,6 +125,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDLINE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=addLine
 
 $prototype=QGraphicsPathItem * addPath ( const QPainterPath & path, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
 $method=|QGraphicsPathItem *|addPath|const QPainterPath &,const QPen &=QPen(),const QBrush &=QBrush()
@@ -158,6 +160,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDRECT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=addRect
 
 $prototype=QGraphicsSimpleTextItem * addSimpleText ( const QString & text, const QFont & font = QFont() )
 $method=|QGraphicsSimpleTextItem *|addSimpleText|const QString &,const QFont &=QFont()
@@ -228,6 +231,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_INVALIDATE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=invalidate
 
 $prototype=bool isActive () const
 $method=|bool|isActive|
@@ -259,6 +263,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMAT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=itemAt
 
 $prototype=ItemIndexMethod itemIndexMethod () const
 $method=|QGraphicsScene::ItemIndexMethod|itemIndexMethod|
@@ -327,6 +332,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=items
 
 $prototype=QRectF itemsBoundingRect () const
 $method=|QRectF|itemsBoundingRect|
@@ -409,6 +415,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETSCENERECT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setSceneRect
 
 $prototype=void setSelectionArea ( const QPainterPath & path, const QTransform & deviceTransform )
 $internalMethod=|void|setSelectionArea,setSelectionArea1|const QPainterPath &,const QTransform &
@@ -434,6 +441,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETSELECTIONAREA )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setSelectionArea
 
 $prototype=void setSortCacheEnabled ( bool enabled )
 $method=|void|setSortCacheEnabled|bool
@@ -474,6 +482,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_UPDATE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=update
 
 $prototype=QList<QGraphicsView *> views () const
 $method=|QList<QGraphicsView *>|views|

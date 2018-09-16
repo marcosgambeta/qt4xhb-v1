@@ -101,6 +101,7 @@ HB_FUNC_STATIC( QPAINTER_BOUNDINGRECT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=boundingRect
 
 $prototype=const QBrush & brush () const
 $method=|const QBrush &|brush|
@@ -158,6 +159,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWARC )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=drawArc
 
 $prototype=void drawChord ( const QRectF & rectangle, int startAngle, int spanAngle )
 $internalMethod=|void|drawChord,drawChord1|const QRectF &,int,int
@@ -191,6 +193,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWCHORD )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=drawChord
 
 $prototype=void drawConvexPolygon ( const QPointF * points, int pointCount )
 
@@ -222,6 +225,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWCONVEXPOLYGON )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=drawConvexPolygon
 
 $prototype=void drawEllipse ( const QRectF & rectangle )
 $internalMethod=|void|drawEllipse,drawEllipse1|const QRectF &
@@ -271,6 +275,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWELLIPSE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=drawEllipse
 
 $prototype=void drawImage ( const QRectF & target, const QImage & image, const QRectF & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
 $internalMethod=|void|drawImage,drawImage1|const QRectF &,const QImage &,const QRectF &,Qt::ImageConversionFlags=Qt::AutoColor
@@ -352,6 +357,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=drawImage
 
 $prototype=void drawLine ( const QLineF & line )
 $internalMethod=|void|drawLine,drawLine1|const QLineF &
@@ -401,6 +407,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWLINE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=drawLine
 
 $prototype=void drawLines ( const QLineF * lines, int lineCount )
 
@@ -436,6 +443,7 @@ $method=|void|drawLines,drawLines8|const QVector<QLine> &
 HB_FUNC_STATIC( QPAINTER_DRAWLINES )
 {
 }
+$addMethod=drawLines
 
 $prototype=void drawPath ( const QPainterPath & path )
 $method=|void|drawPath|const QPainterPath &
@@ -472,6 +480,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPICTURE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=drawPicture
 
 $prototype=void drawPie ( const QRectF & rectangle, int startAngle, int spanAngle )
 $internalMethod=|void|drawPie,drawPie1|const QRectF &,int,int
@@ -505,6 +514,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=drawPie
 
 $prototype=void drawPixmap ( const QRectF & target, const QPixmap & pixmap, const QRectF & source )
 $internalMethod=|void|drawPixmap,drawPixmap1|const QRectF &,const QPixmap &,const QRectF &
@@ -602,6 +612,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIXMAP )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=drawPixmap
 
 $prototype=void drawPoint ( const QPointF & position )
 $internalMethod=|void|drawPoint,drawPoint1|const QPointF &
@@ -635,6 +646,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOINT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=drawPoint
 
 $prototype=void drawPoints ( const QPointF * points, int pointCount )
 
@@ -666,6 +678,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOINTS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=drawPoints
 
 $prototype=void drawPolygon ( const QPointF * points, int pointCount, Qt::FillRule fillRule = Qt::OddEvenFill )
 
@@ -697,6 +710,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOLYGON )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=drawPolygon
 
 $prototype=void drawPolyline ( const QPointF * points, int pointCount )
 
@@ -728,6 +742,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOLYLINE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=drawPolyline
 
 $prototype=void drawRect ( const QRectF & rectangle )
 $internalMethod=|void|drawRect,drawRect1|const QRectF &
@@ -761,6 +776,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWRECT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=drawRect
 
 $prototype=void drawRects ( const QRectF * rectangles, int rectCount )
 
@@ -782,6 +798,7 @@ $method=|void|drawRects,drawRects4|const QVector<QRect> &
 HB_FUNC_STATIC( QPAINTER_DRAWRECTS )
 {
 }
+$addMethod=drawRects
 
 $prototype=void drawRoundedRect ( const QRectF & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
 $internalMethod=|void|drawRoundedRect,drawRoundedRect1|const QRectF &,qreal,qreal,Qt::SizeMode=Qt::AbsoluteSize
@@ -815,6 +832,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWROUNDEDRECT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=drawRoundedRect
 
 $prototype=void drawStaticText ( const QPointF & topLeftPosition, const QStaticText & staticText )
 $internalMethod=|void|drawStaticText,drawStaticText1|const QPointF &,const QStaticText &
@@ -848,6 +866,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWSTATICTEXT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=drawStaticText
 
 $prototype=void drawText ( const QPointF & position, const QString & text )
 $internalMethod=|void|drawText,drawText1|const QPointF &,const QString &
@@ -913,6 +932,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWTEXT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=drawText
 
 $prototype=void drawTiledPixmap ( const QRectF & rectangle, const QPixmap & pixmap, const QPointF & position = QPointF() )
 $internalMethod=|void|drawTiledPixmap,drawTiledPixmap1|const QRectF &,const QPixmap &,const QPointF &=QPointF()
@@ -946,6 +966,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWTILEDPIXMAP )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=drawTiledPixmap
 
 $prototype=bool end ()
 $method=|bool|end|
@@ -985,6 +1006,7 @@ HB_FUNC_STATIC( QPAINTER_ERASERECT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=eraseRect
 
 $prototype=void fillPath ( const QPainterPath & path, const QBrush & brush )
 $method=|void|fillPath|const QPainterPath &,const QBrush &
@@ -1093,6 +1115,7 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=fillRect
 
 $prototype=const QFont & font () const
 $method=|const QFont &|font|
@@ -1172,6 +1195,7 @@ HB_FUNC_STATIC( QPAINTER_SETBRUSH )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setBrush
 
 $prototype=void setBrushOrigin ( const QPointF & position )
 $internalMethod=|void|setBrushOrigin,setBrushOrigin1|const QPointF &
@@ -1205,6 +1229,7 @@ HB_FUNC_STATIC( QPAINTER_SETBRUSHORIGIN )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setBrushOrigin
 
 $prototype=void setClipPath ( const QPainterPath & path, Qt::ClipOperation operation = Qt::ReplaceClip )
 $method=|void|setClipPath|const QPainterPath &,Qt::ClipOperation=Qt::ReplaceClip
@@ -1241,6 +1266,7 @@ HB_FUNC_STATIC( QPAINTER_SETCLIPRECT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setClipRect
 
 $prototype=void setClipRegion ( const QRegion & region, Qt::ClipOperation operation = Qt::ReplaceClip )
 $method=|void|setClipRegion|const QRegion &,Qt::ClipOperation=Qt::ReplaceClip
@@ -1292,6 +1318,7 @@ HB_FUNC_STATIC( QPAINTER_SETPEN )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setPen
 
 $prototype=void setRenderHint ( RenderHint hint, bool on = true )
 $method=|void|setRenderHint|QPainter::RenderHint,bool=true
@@ -1329,6 +1356,7 @@ HB_FUNC_STATIC( QPAINTER_SETVIEWPORT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setViewport
 
 $prototype=void setWindow ( const QRect & rectangle )
 $internalMethod=|void|setWindow,setWindow1|const QRect &
@@ -1354,6 +1382,7 @@ HB_FUNC_STATIC( QPAINTER_SETWINDOW )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setWindow
 
 $prototype=void setWorldMatrixEnabled ( bool enable )
 $method=|void|setWorldMatrixEnabled|bool
@@ -1405,6 +1434,7 @@ HB_FUNC_STATIC( QPAINTER_TRANSLATE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=translate
 
 $prototype=bool viewTransformEnabled () const
 $method=|bool|viewTransformEnabled|

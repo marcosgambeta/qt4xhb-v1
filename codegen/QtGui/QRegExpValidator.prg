@@ -66,5 +66,6 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_VALIDATE ) // TODO: revisar implementacao e cor
     hb_retni( (int) obj->validate ( par1, par2 ) );
   }
 }
+$addMethod=validate
 
 #pragma ENDDUMP

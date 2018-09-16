@@ -89,5 +89,6 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_VALIDATE )
     hb_retni( (int) obj->validate ( par1, par2 ) );
   }
 }
+$addMethod=validate
 
 #pragma ENDDUMP

@@ -99,6 +99,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETHEIGHT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setHeight
 
 $prototype=void setLeftMargin ( qreal margin )
 $method=|void|setLeftMargin|qreal
@@ -145,6 +146,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETWIDTH )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setWidth
 
 $prototype=qreal topMargin () const
 $method=|qreal|topMargin|

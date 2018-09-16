@@ -11,6 +11,47 @@ $header
 #include "hbclass.ch"
 
 $addRequests
+$addRequest=QAccessibleEvent
+$addRequest=QActionEvent
+$addRequest=QClipboardEvent
+$addRequest=QCloseEvent
+$addRequest=QContextMenuEvent
+$addRequest=QDragEnterEvent
+$addRequest=QDragLeaveEvent
+$addRequest=QDragMoveEvent
+$addRequest=QDropEvent
+$addRequest=QFileOpenEvent
+$addRequest=QFocusEvent
+$addRequest=QGestureEvent
+$addRequest=QGraphicsSceneContextMenuEvent
+$addRequest=QGraphicsSceneDragDropEvent
+$addRequest=QGraphicsSceneEvent
+$addRequest=QGraphicsSceneHelpEvent
+$addRequest=QGraphicsSceneHoverEvent
+$addRequest=QGraphicsSceneMouseEvent
+$addRequest=QgraphicsSceneMoveEvent
+$addRequest=QGraphicsSceneResizeEvent
+$addRequest=QGraphicsSceneWheelEvent
+$addRequest=QHelpEvent
+$addRequest=QHideEvent
+$addRequest=QHoverEvent
+$addRequest=QIconDragEvent
+$addRequest=QInputEvent
+$addRequest=QInputMethodEvent
+$addRequest=QKeyEvent
+$addRequest=QMouseEvent
+$addRequest=QMoveEvent
+$addRequest=QPaintEvent
+$addRequest=QResizeEvent
+$addRequest=QShortcutEvent
+$addRequest=QShowEvent
+$addRequest=QStatusTipEvent
+$addRequest=QTabletEvent
+$addRequest=QToolBarChangeEvent
+$addRequest=QTouchEvent
+$addRequest=QWhatsThisClickedEvent
+$addRequest=QWheelEvent
+$addRequest=QWindowStateChangeEvent
 
 $beginClassFrom=QObject
 
@@ -97,6 +138,7 @@ HB_FUNC_STATIC( QWIDGET_CHILDAT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=childAt
 
 $prototype=QRect childrenRect () const
 $method=|QRect|childrenRect|
@@ -191,6 +233,7 @@ HB_FUNC_STATIC( QWIDGET_GRABMOUSE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=grabMouse
 
 $prototype=int grabShortcut ( const QKeySequence & key, Qt::ShortcutContext context = Qt::WindowShortcut )
 $method=|int|grabShortcut|const QKeySequence &,Qt::ShortcutContext=Qt::WindowShortcut
@@ -342,6 +385,7 @@ HB_FUNC_STATIC( QWIDGET_MOVE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=move
 
 $prototype=QWidget * nativeParentWidget () const
 $method=|QWidget *|nativeParentWidget|
@@ -408,6 +452,7 @@ HB_FUNC_STATIC( QWIDGET_RENDER )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=render
 
 $prototype=void repaint ( int x, int y, int w, int h )
 $internalMethod=|void|repaint,repaint1|int,int,int,int
@@ -441,6 +486,7 @@ HB_FUNC_STATIC( QWIDGET_REPAINT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=repaint
 
 $prototype=void resize ( const QSize & )
 $internalMethod=|void|resize,resize1|const QSize &
@@ -466,6 +512,7 @@ HB_FUNC_STATIC( QWIDGET_RESIZE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=resize
 
 $prototype=bool restoreGeometry ( const QByteArray & geometry )
 $method=|bool|restoreGeometry|const QByteArray &
@@ -497,6 +544,7 @@ HB_FUNC_STATIC( QWIDGET_SCROLL )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=scroll
 
 $prototype=void setAcceptDrops ( bool on )
 $method=|void|setAcceptDrops|bool
@@ -540,6 +588,7 @@ HB_FUNC_STATIC( QWIDGET_SETBASESIZE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setBaseSize
 
 $prototype=void setContentsMargins ( int left, int top, int right, int bottom )
 $internalMethod=|void|setContentsMargins,setContentsMargins1|int,int,int,int
@@ -565,6 +614,7 @@ HB_FUNC_STATIC( QWIDGET_SETCONTENTSMARGINS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setContentsMargins
 
 $prototype=void setContextMenuPolicy ( Qt::ContextMenuPolicy policy )
 $method=|void|setContextMenuPolicy|Qt::ContextMenuPolicy
@@ -599,6 +649,7 @@ HB_FUNC_STATIC( QWIDGET_SETFIXEDSIZE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setFixedSize
 
 $prototype=void setFixedWidth ( int w )
 $method=|void|setFixedWidth|int
@@ -627,6 +678,7 @@ HB_FUNC_STATIC( QWIDGET_SETFOCUS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setFocus
 
 $prototype=void setFocusPolicy ( Qt::FocusPolicy policy )
 $method=|void|setFocusPolicy|Qt::FocusPolicy
@@ -664,6 +716,7 @@ HB_FUNC_STATIC( QWIDGET_SETGEOMETRY )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setGeometry
 
 $prototype=void setGraphicsEffect ( QGraphicsEffect * effect )
 $method=|void|setGraphicsEffect|QGraphicsEffect *
@@ -707,6 +760,7 @@ HB_FUNC_STATIC( QWIDGET_SETMASK )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setMask
 
 $prototype=void setMaximumHeight ( int maxh )
 $method=|void|setMaximumHeight|int
@@ -735,6 +789,7 @@ HB_FUNC_STATIC( QWIDGET_SETMAXIMUMSIZE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setMaximumSize
 
 $prototype=void setMaximumWidth ( int maxw )
 $method=|void|setMaximumWidth|int
@@ -766,6 +821,7 @@ HB_FUNC_STATIC( QWIDGET_SETMINIMUMSIZE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setMinimumSize
 
 $prototype=void setMinimumWidth ( int minw )
 $method=|void|setMinimumWidth|int
@@ -800,6 +856,7 @@ HB_FUNC_STATIC( QWIDGET_SETPARENT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setParent
 
 $prototype=void setShortcutAutoRepeat ( int id, bool enable = true )
 $method=|void|setShortcutAutoRepeat|int,bool=true
@@ -831,6 +888,7 @@ HB_FUNC_STATIC( QWIDGET_SETSIZEINCREMENT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setSizeIncrement
 
 $prototype=void setSizePolicy ( QSizePolicy & )
 $internalMethod=|void|setSizePolicy,setSizePolicy1|QSizePolicy &
@@ -856,6 +914,7 @@ HB_FUNC_STATIC( QWIDGET_SETSIZEPOLICY )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setSizePolicy
 
 $prototype=void setStatusTip ( const QString & )
 $method=|void|setStatusTip|const QString &
@@ -981,6 +1040,7 @@ HB_FUNC_STATIC( QWIDGET_UPDATE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=update
 
 $prototype=void updateGeometry ()
 $method=|void|updateGeometry|

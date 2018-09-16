@@ -54,6 +54,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_ENDPAINTING )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=endPainting
 
 $prototype=void flush ( const QRegion & region )
 $method=|void|flush|const QRegion &

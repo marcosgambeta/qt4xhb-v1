@@ -75,6 +75,7 @@ HB_FUNC_STATIC( QMATRIX4X4_NEW )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=new
 
 $deleteMethod
 
@@ -142,6 +143,7 @@ HB_FUNC_STATIC( QMATRIX4X4_MAP )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=map
 
 $prototype=QRect mapRect ( const QRect & rect ) const
 $internalMethod=|QRect|mapRect,mapRect1|const QRect &
@@ -167,6 +169,7 @@ HB_FUNC_STATIC( QMATRIX4X4_MAPRECT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=mapRect
 
 $prototype=QVector3D mapVector ( const QVector3D & vector ) const
 $method=|QVector3D|mapVector|const QVector3D &
@@ -209,6 +212,7 @@ HB_FUNC_STATIC( QMATRIX4X4_ORTHO )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=ortho
 
 $prototype=void perspective ( qreal angle, qreal aspect, qreal nearPlane, qreal farPlane )
 $method=|void|perspective|qreal,qreal,qreal,qreal
@@ -245,6 +249,7 @@ HB_FUNC_STATIC( QMATRIX4X4_ROTATE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=rotate
 
 $prototype=QVector4D row ( int index ) const
 $method=|QVector4D|row|int
@@ -289,6 +294,7 @@ HB_FUNC_STATIC( QMATRIX4X4_SCALE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=scale
 
 $prototype=void setColumn ( int index, const QVector4D & value )
 $method=|void|setColumn|int,const QVector4D &
@@ -323,6 +329,7 @@ HB_FUNC_STATIC( QMATRIX4X4_TOTRANSFORM )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=toTransform
 
 $prototype=void translate ( const QVector3D & vector )
 $internalMethod=|void|translate,translate1|const QVector3D &
@@ -356,6 +363,7 @@ HB_FUNC_STATIC( QMATRIX4X4_TRANSLATE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=translate
 
 $prototype=QMatrix4x4 transposed () const
 $method=|QMatrix4x4|transposed|

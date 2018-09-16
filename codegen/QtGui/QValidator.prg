@@ -37,6 +37,7 @@ HB_FUNC_STATIC( QVALIDATOR_FIXUP ) // TODO: revisar a implementacao e corrigir
 
   hb_itemReturn( hb_stackSelfItem() );
 }
+$addMethod=fixup
 
 $prototype=QLocale locale () const
 $method=|QLocale|locale|
@@ -56,5 +57,6 @@ HB_FUNC_STATIC( QVALIDATOR_VALIDATE ) // TODO: revisar a implementacao e corrigi
     hb_retni( (int) obj->validate ( par1, par2 ) );
   }
 }
+$addMethod=validate
 
 #pragma ENDDUMP

@@ -75,6 +75,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_FIXUP ) // TODO: revisar a implementacao e corrigi
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
+$addMethod=fixup
 
 $prototype=virtual QValidator::State validate ( QString & input, int & pos ) const
 HB_FUNC_STATIC( QINTVALIDATOR_VALIDATE ) // TODO: revisar a implementacao e corrigir
@@ -87,5 +88,6 @@ HB_FUNC_STATIC( QINTVALIDATOR_VALIDATE ) // TODO: revisar a implementacao e corr
     hb_retni( (int) obj->validate ( par1, par2 ) );
   }
 }
+$addMethod=validate
 
 #pragma ENDDUMP

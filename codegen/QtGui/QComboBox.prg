@@ -64,6 +64,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ADDITEM )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=addItem
 
 $prototype=void addItems ( const QStringList & texts )
 $method=|void|addItems|const QStringList &
@@ -122,6 +123,7 @@ HB_FUNC_STATIC( QCOMBOBOX_INSERTITEM )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=insertItem
 
 $prototype=void insertItems ( int index, const QStringList & list )
 $method=|void|insertItems|int,const QStringList &

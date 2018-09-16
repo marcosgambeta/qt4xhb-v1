@@ -120,6 +120,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=select
 
 $prototype=void setCurrentIndex ( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
 $method=|void|setCurrentIndex|const QModelIndex &,QItemSelectionModel::SelectionFlags

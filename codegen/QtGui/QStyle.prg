@@ -94,6 +94,7 @@ HB_FUNC_STATIC( QSTYLE_POLISH )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=polish
 
 $prototype=const QStyle * proxy () const
 $method=|const QStyle *|proxy|
@@ -140,6 +141,7 @@ HB_FUNC_STATIC( QSTYLE_UNPOLISH )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=unpolish
 
 $prototype=QRect alignedRect ( Qt::LayoutDirection direction, Qt::Alignment alignment, const QSize & size, const QRect & rectangle )
 $method=|QRect|alignedRect|Qt::LayoutDirection,Qt::Alignment,const QSize &,const QRect &

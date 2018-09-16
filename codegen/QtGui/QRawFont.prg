@@ -77,6 +77,7 @@ HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES )
 {
   HB_FUNC_EXEC( QRAWFONT_ADVANCESFORGLYPHINDEXES1 );
 }
+$addMethod=advancesForGlyphIndexes
 
 $prototype=QImage alphaMapForGlyph ( quint32 glyphIndex, AntialiasingType antialiasingType = SubPixelAntialiasing, const QTransform & transform = QTransform() ) const
 $method=|QImage|alphaMapForGlyph|quint32,QRawFont::AntialiasingType=QRawFont::SubPixelAntialiasing,const QTransform &=QTransform()
@@ -159,6 +160,7 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTSCHARACTER )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=supportsCharacter
 
 $prototype=qreal unitsPerEm () const
 $method=|qreal|unitsPerEm|

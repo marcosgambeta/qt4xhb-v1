@@ -86,6 +86,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ADDBUTTON )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=addButton
 
 $prototype=QAbstractButton * button ( StandardButton which ) const
 $method=|QAbstractButton *|button|QMessageBox::StandardButton
@@ -147,6 +148,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETDEFAULTBUTTON )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setDefaultButton
 
 $prototype=void setDetailedText ( const QString & text )
 $method=|void|setDetailedText|const QString &
@@ -175,6 +177,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETESCAPEBUTTON )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setEscapeButton
 
 $prototype=void setIcon ( Icon )
 $method=|void|setIcon|QMessageBox::Icon

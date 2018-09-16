@@ -71,6 +71,7 @@ HB_FUNC_STATIC( QWINDOWSXPSTYLE_POLISH )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=polish
 
 $prototype=virtual QSize sizeFromContents ( ContentsType ct, const QStyleOption * option, const QSize & contentsSize, const QWidget * widget = 0 ) const
 $virtualMethod=|QSize|sizeFromContents|QStyle::ContentsType,const QStyleOption *,const QSize &,const QWidget *=0
@@ -114,5 +115,6 @@ HB_FUNC_STATIC( QWINDOWSXPSTYLE_UNPOLISH )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=unpolish
 
 #pragma ENDDUMP

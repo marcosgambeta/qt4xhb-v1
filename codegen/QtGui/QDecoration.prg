@@ -57,6 +57,7 @@ HB_FUNC_STATIC( QDECORATION_REGION )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=region
 
 $prototype=virtual int regionAt ( const QWidget * widget, const QPoint & point )
 $virtualMethod=|int|regionAt|const QWidget *,const QPoint &

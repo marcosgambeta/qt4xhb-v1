@@ -200,6 +200,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERREGEXP )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setFilterRegExp
 
 $prototype=void setFilterWildcard ( const QString & pattern )
 $method=|void|setFilterWildcard|const QString &

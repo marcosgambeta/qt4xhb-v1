@@ -215,6 +215,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=map
 
 $prototype=QRectF mapRect ( const QRectF & rectangle ) const
 $internalMethod=|QRectF|mapRect,mapRect1|const QRectF &
@@ -240,6 +241,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAPRECT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=mapRect
 
 $prototype=QPolygon mapToPolygon ( const QRect & rectangle ) const
 $method=|QPolygon|mapToPolygon|const QRect &

@@ -157,6 +157,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=find
 
 $prototype=QTextBlock findBlock ( int pos ) const
 $method=|QTextBlock|findBlock|int
@@ -314,6 +315,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_REDO )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=redo
 
 $prototype=void setModified ( bool m = true )
 $method=|void|setModified|bool=true
@@ -342,6 +344,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_UNDO )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=undo
 
 $beginSignals
 $signal=|blockCountChanged(int)

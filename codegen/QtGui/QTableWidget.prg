@@ -108,6 +108,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ITEMAT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=itemAt
 
 $prototype=void openPersistentEditor ( QTableWidgetItem * item )
 $method=|void|openPersistentEditor|QTableWidgetItem *
@@ -157,6 +158,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SETCURRENTCELL )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setCurrentCell
 
 $prototype=void setCurrentItem ( QTableWidgetItem * item )
 $internalMethod=|void|setCurrentItem,setCurrentItem1|QTableWidgetItem *
@@ -182,6 +184,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SETCURRENTITEM )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setCurrentItem
 
 $prototype=void setHorizontalHeaderItem ( int column, QTableWidgetItem * item )
 $method=|void|setHorizontalHeaderItem|int,QTableWidgetItem *

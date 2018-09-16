@@ -56,6 +56,7 @@ HB_FUNC_STATIC( QTEXTLINE_CURSORTOX )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=cursorToX
 
 $prototype=qreal descent () const
 $method=|qreal|descent|
@@ -120,6 +121,7 @@ HB_FUNC_STATIC( QTEXTLINE_SETNUMCOLUMNS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setNumColumns
 
 $prototype=void setPosition ( const QPointF & pos )
 $method=|void|setPosition|const QPointF &

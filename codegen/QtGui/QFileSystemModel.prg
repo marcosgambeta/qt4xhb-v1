@@ -163,6 +163,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_INDEX )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=index
 
 $prototype=virtual QMimeData * mimeData ( const QModelIndexList & indexes ) const
 HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMEDATA )
@@ -176,6 +177,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMEDATA )
     _qt4xhb_createReturnClass ( ptr, "QMIMEDATA" );
   }
 }
+$addMethod=mimeData
 
 $prototype=virtual QStringList mimeTypes () const
 $virtualMethod=|QStringList|mimeTypes|

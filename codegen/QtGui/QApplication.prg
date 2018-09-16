@@ -54,6 +54,7 @@ HB_FUNC_STATIC( QAPPLICATION_NEW )
   QApplication * o = new QApplication( argc, argv );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
+$addMethod=new
 
 $deleteMethod
 
@@ -170,6 +171,7 @@ HB_FUNC_STATIC( QAPPLICATION_FONT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=font
 
 $prototype=static QFontMetrics fontMetrics ()
 $staticMethod=|QFontMetrics|fontMetrics|
@@ -239,6 +241,7 @@ HB_FUNC_STATIC( QAPPLICATION_PALETTE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=palette
 
 $prototype=static Qt::KeyboardModifiers queryKeyboardModifiers ()
 $staticMethod=|Qt::KeyboardModifiers|queryKeyboardModifiers|
@@ -321,6 +324,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETSTYLE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setStyle
 
 $prototype=static void setWheelScrollLines ( int )
 $staticMethod=|void|setWheelScrollLines|int
@@ -364,6 +368,7 @@ HB_FUNC_STATIC( QAPPLICATION_TOPLEVELAT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=topLevelAt
 
 $prototype=static QWidgetList topLevelWidgets ()
 $staticMethod=|QWidgetList|topLevelWidgets|
@@ -398,6 +403,7 @@ HB_FUNC_STATIC( QAPPLICATION_WIDGETAT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=widgetAt
 
 $prototype=static QIcon windowIcon ()
 $staticMethod=|QIcon|windowIcon|

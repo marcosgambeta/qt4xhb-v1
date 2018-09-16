@@ -142,6 +142,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_CREATELIST )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=createList
 
 $prototype=QTextFrame * currentFrame () const
 $method=|QTextFrame *|currentFrame|
@@ -202,6 +203,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTBLOCK )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=insertBlock
 
 $prototype=void insertFragment ( const QTextDocumentFragment & fragment )
 $method=|void|insertFragment|const QTextDocumentFragment &
@@ -252,6 +254,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=insertImage
 
 $prototype=QTextList * insertList ( const QTextListFormat & format )
 $internalMethod=|QTextList *|insertList,insertList1|const QTextListFormat &
@@ -277,6 +280,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTLIST )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=insertList
 
 $prototype=QTextTable * insertTable ( int rows, int columns, const QTextTableFormat & format )
 $internalMethod=|QTextTable *|insertTable,insertTable1|int,int,const QTextTableFormat &
@@ -302,6 +306,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTTABLE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=insertTable
 
 $prototype=void insertText ( const QString & text )
 $internalMethod=|void|insertText,insertText1|const QString &
@@ -327,6 +332,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTTEXT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=insertText
 
 $prototype=bool isCopyOf ( const QTextCursor & other ) const
 $method=|bool|isCopyOf|const QTextCursor &

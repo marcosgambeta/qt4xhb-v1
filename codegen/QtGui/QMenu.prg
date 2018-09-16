@@ -118,6 +118,7 @@ HB_FUNC_STATIC( QMENU_ADDACTION )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=addAction
 
 $prototype=QAction * addMenu ( QMenu * menu )
 $internalMethod=|QAction *|addMenu,addMenu1|QMenu *
@@ -151,6 +152,7 @@ HB_FUNC_STATIC( QMENU_ADDMENU )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=addMenu
 
 $prototype=QAction * addSeparator ()
 $method=|QAction *|addSeparator|
@@ -235,6 +237,7 @@ HB_FUNC_STATIC( QMENU_EXEC3 )
   QAction * ptr = QMenu::exec ( par1, *PQPOINT(2), PQACTION(3), PQWIDGET(4) );
   _qt4xhb_createReturnClass ( ptr, "QACTION" );
 }
+$addMethod=exec3
 
 $prototype=QAction * exec ( QList<QAction *> actions, const QPoint & pos, QAction * at = 0 )
 HB_FUNC_STATIC( QMENU_EXEC4 )
@@ -251,6 +254,7 @@ HB_FUNC_STATIC( QMENU_EXEC4 )
   QAction * ptr = QMenu::exec ( par1, *PQPOINT(2), par3 );
   _qt4xhb_createReturnClass ( ptr, "QACTION" );
 }
+$addMethod=exec4
 
 //[1]QAction * exec ()
 //[2]QAction * exec ( const QPoint & p, QAction * action = 0 )
@@ -280,6 +284,7 @@ HB_FUNC_STATIC( QMENU_EXEC )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=exec
 
 $beginSignals
 $signal=|aboutToHide()

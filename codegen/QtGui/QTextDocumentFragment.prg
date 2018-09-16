@@ -92,6 +92,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOHTML )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=toHtml
 
 $prototype=QString toPlainText () const
 $method=|QString|toPlainText|
@@ -120,6 +121,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMHTML )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=fromHtml
 
 $prototype=static QTextDocumentFragment fromPlainText ( const QString & plainText )
 $staticMethod=|QTextDocumentFragment|fromPlainText|const QString &

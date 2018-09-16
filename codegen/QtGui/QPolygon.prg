@@ -45,6 +45,7 @@ HB_FUNC_STATIC( QPOLYGON_NEW4 )
   QPolygon * o = new QPolygon ( par1 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
+$addMethod=new4
 
 $prototype=QPolygon ( const QRect & rectangle, bool closed = false )
 $internalConstructor=|new5|const QRect &,bool=false
@@ -118,6 +119,7 @@ HB_FUNC_STATIC( QPOLYGON_POINT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=point
 
 $prototype=void putPoints ( int index, int nPoints, int firstx, int firsty, ... )
 %% TODO: implementar ?
@@ -132,6 +134,7 @@ HB_FUNC_STATIC( QPOLYGON_PUTPOINTS )
 {
   HB_FUNC_EXEC( QPOLYGON_PUTPOINTS2 );
 }
+$addMethod=putPoints
 
 $prototype=void setPoint ( int index, int x, int y )
 $internalMethod=|void|setPoint,setPoint1|int,int,int
@@ -157,6 +160,7 @@ HB_FUNC_STATIC( QPOLYGON_SETPOINT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setPoint
 
 $prototype=QPolygon subtracted ( const QPolygon & r ) const
 $method=|QPolygon|subtracted|const QPolygon &
@@ -188,6 +192,7 @@ HB_FUNC_STATIC( QPOLYGON_TRANSLATE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=translate
 
 $prototype=QPolygon translated ( int dx, int dy ) const
 $internalMethod=|QPolygon|translated,translated1|int,int
@@ -213,6 +218,7 @@ HB_FUNC_STATIC( QPOLYGON_TRANSLATED )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=translated
 
 $prototype=QPolygon united ( const QPolygon & r ) const
 $method=|QPolygon|united|const QPolygon &

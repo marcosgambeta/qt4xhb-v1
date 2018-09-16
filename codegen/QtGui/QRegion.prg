@@ -110,6 +110,7 @@ HB_FUNC_STATIC( QREGION_CONTAINS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=contains
 
 $prototype=QRegion intersected ( const QRegion & r ) const
 $internalMethod=|QRegion|intersected,intersected1|const QRegion &
@@ -135,6 +136,7 @@ HB_FUNC_STATIC( QREGION_INTERSECTED )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=intersected
 
 $prototype=bool intersects ( const QRegion & region ) const
 $internalMethod=|bool|intersects,intersects1|const QRegion &
@@ -160,6 +162,7 @@ HB_FUNC_STATIC( QREGION_INTERSECTS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=intersects
 
 $prototype=bool isEmpty () const
 $method=|bool|isEmpty|
@@ -200,6 +203,7 @@ HB_FUNC_STATIC( QREGION_TRANSLATE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=translate
 
 $prototype=QRegion translated ( int dx, int dy ) const
 $internalMethod=|QRegion|translated,translated1|int,int
@@ -225,6 +229,7 @@ HB_FUNC_STATIC( QREGION_TRANSLATED )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=translated
 
 $prototype=QRegion united ( const QRegion & r ) const
 $internalMethod=|QRegion|united,united1|const QRegion &
@@ -250,6 +255,7 @@ HB_FUNC_STATIC( QREGION_UNITED )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=united
 
 $prototype=QRegion xored ( const QRegion & r ) const
 $method=|QRegion|xored|const QRegion &

@@ -98,6 +98,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMAT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=itemAt
 
 $prototype=QTreeWidgetItem *  itemBelow ( const QTreeWidgetItem * item ) const
 $method=|QTreeWidgetItem *|itemBelow|const QTreeWidgetItem *
@@ -149,6 +150,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SETCURRENTITEM )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setCurrentItem
 
 $prototype=void setFirstItemColumnSpanned ( const QTreeWidgetItem * item, bool span )
 $method=|void|setFirstItemColumnSpanned|const QTreeWidgetItem *,bool

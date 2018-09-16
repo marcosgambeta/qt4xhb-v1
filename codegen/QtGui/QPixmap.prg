@@ -81,6 +81,7 @@ HB_FUNC_STATIC( QPIXMAP_NEW )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=new
 
 $deleteMethod
 
@@ -114,6 +115,7 @@ HB_FUNC_STATIC( QPIXMAP_COPY )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=copy
 
 $prototype=QBitmap createHeuristicMask ( bool clipTight = true ) const
 $method=|QBitmap|createHeuristicMask|bool=true
@@ -142,6 +144,7 @@ HB_FUNC_STATIC( QPIXMAP_CREATEMASKFROMCOLOR )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=createMaskFromColor
 
 $prototype=int depth () const
 $method=|int|depth|
@@ -181,6 +184,7 @@ HB_FUNC_STATIC( QPIXMAP_FILL )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=fill
 
 $prototype=bool hasAlpha () const
 $method=|bool|hasAlpha|
@@ -224,6 +228,7 @@ HB_FUNC_STATIC( QPIXMAP_LOADFROMDATA )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=loadFromData
 
 $prototype=QBitmap mask () const
 $method=|QBitmap|mask|
@@ -255,6 +260,7 @@ HB_FUNC_STATIC( QPIXMAP_SAVE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=save
 
 $prototype=QPixmap scaled ( const QSize & size, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
 $internalMethod=|QPixmap|scaled,scaled1|const QSize &,Qt::AspectRatioMode=Qt::IgnoreAspectRatio,Qt::TransformationMode=Qt::FastTransformation
@@ -280,6 +286,7 @@ HB_FUNC_STATIC( QPIXMAP_SCALED )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=scaled
 
 $prototype=QPixmap scaledToHeight ( int height, Qt::TransformationMode mode = Qt::FastTransformation ) const
 $method=|QPixmap|scaledToHeight|int,Qt::TransformationMode=Qt::FastTransformation
@@ -311,6 +318,7 @@ HB_FUNC_STATIC( QPIXMAP_SCROLL )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=scroll
 
 $prototype=void setMask ( const QBitmap & mask )
 $method=|void|setMask|const QBitmap &
@@ -348,6 +356,7 @@ HB_FUNC_STATIC( QPIXMAP_TRANSFORMED )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=transformed
 
 $prototype=int width () const
 $method=|int|width|
@@ -385,6 +394,7 @@ HB_FUNC_STATIC( QPIXMAP_GRABWIDGET )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=grabWidget
 
 $prototype=static QPixmap grabWindow ( WId window, int x = 0, int y = 0, int width = -1, int height = -1 )
 HB_FUNC_STATIC( QPIXMAP_GRABWINDOW )
@@ -393,6 +403,7 @@ HB_FUNC_STATIC( QPIXMAP_GRABWINDOW )
   QPixmap * ptr = new QPixmap( QPixmap::grabWindow ( par1, OPINT(2,0), OPINT(3,0), OPINT(4,-1), OPINT(5,-1) ) );
   _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
 }
+$addMethod=grabWindow
 
 $prototype=static QTransform trueMatrix ( const QTransform & matrix, int width, int height )
 $internalStaticMethod=|QTransform|trueMatrix,trueMatrix1|const QTransform &,int,int
@@ -418,6 +429,7 @@ HB_FUNC_STATIC( QPIXMAP_TRUEMATRIX )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=trueMatrix
 
 $variantMethods
 

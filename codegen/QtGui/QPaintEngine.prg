@@ -51,6 +51,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWELLIPSE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=drawEllipse
 
 $prototype=virtual void drawImage ( const QRectF & rectangle, const QImage & image, const QRectF & sr, Qt::ImageConversionFlags flags = Qt::AutoColor )
 $virtualMethod=|void|drawImage|const QRectF &,const QImage &,const QRectF &,Qt::ImageConversionFlags=Qt::AutoColor
@@ -61,6 +62,7 @@ $virtualMethod=|void|drawImage|const QRectF &,const QImage &,const QRectF &,Qt::
 HB_FUNC_STATIC( QPAINTENGINE_DRAWLINES )
 {
 }
+$addMethod=drawLines
 
 $prototype=virtual void drawPath ( const QPainterPath & path )
 $virtualMethod=|void|drawPath|const QPainterPath &
@@ -74,6 +76,7 @@ $virtualMethod=|void|drawPixmap|const QRectF &,const QPixmap &,const QRectF &
 HB_FUNC_STATIC( QPAINTENGINE_DRAWPOINTS )
 {
 }
+$addMethod=drawPoints
 
 //[1]virtual void drawPolygon ( const QPointF * points, int pointCount, PolygonDrawMode mode )
 //[2]virtual void drawPolygon ( const QPoint * points, int pointCount, PolygonDrawMode mode )
@@ -81,6 +84,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWPOINTS )
 HB_FUNC_STATIC( QPAINTENGINE_DRAWPOLYGON )
 {
 }
+$addMethod=drawPolygon
 
 //[1]virtual void drawRects ( const QRectF * rects, int rectCount )
 //[2]virtual void drawRects ( const QRect * rects, int rectCount )
@@ -88,6 +92,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWPOLYGON )
 HB_FUNC_STATIC( QPAINTENGINE_DRAWRECTS )
 {
 }
+$addMethod=drawRects
 
 $prototype=virtual void drawTextItem ( const QPointF & p, const QTextItem & textItem )
 $virtualMethod=|void|drawTextItem|const QPointF &,const QTextItem &

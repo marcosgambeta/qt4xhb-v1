@@ -52,6 +52,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_FIXUP )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
+$addMethod=fixup
 
 $prototype=bool hasAcceptableInput () const
 $method=|bool|hasAcceptableInput|
@@ -120,6 +121,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_VALIDATE )
     hb_retni( (int) obj->validate ( par1, par2 ) );
   }
 }
+$addMethod=validate
 
 $prototype=bool wrapping () const
 $method=|bool|wrapping|

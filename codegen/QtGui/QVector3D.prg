@@ -119,6 +119,7 @@ HB_FUNC_STATIC( QVECTOR3D_DISTANCETOPLANE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=distanceToPlane
 
 $prototype=bool isNull () const
 $method=|bool|isNull|
@@ -195,6 +196,7 @@ HB_FUNC_STATIC( QVECTOR3D_NORMAL )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=normal
 
 // TODO: implementar função ?
 // bool qFuzzyCompare ( const QVector3D & v1, const QVector3D & v2 )

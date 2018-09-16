@@ -115,6 +115,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_RESIZE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=resize
 
 $prototype=void setAttribute ( Qt::WidgetAttribute attribute, bool on = true )
 $method=|void|setAttribute|Qt::WidgetAttribute,bool=true
@@ -221,6 +222,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETGEOMETRY )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setGeometry
 
 $prototype=virtual QPainterPath shape () const
 $virtualMethod=|QPainterPath|shape|

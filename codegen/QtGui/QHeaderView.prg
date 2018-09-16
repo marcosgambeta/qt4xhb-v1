@@ -100,6 +100,7 @@ HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=logicalIndexAt
 
 $prototype=int minimumSectionSize () const
 $method=|int|minimumSectionSize|
@@ -191,6 +192,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETRESIZEMODE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setResizeMode
 
 $prototype=void setSectionHidden ( int logicalIndex, bool hide )
 $method=|void|setSectionHidden|int,bool

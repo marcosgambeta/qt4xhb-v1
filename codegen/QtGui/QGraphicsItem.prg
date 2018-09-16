@@ -119,6 +119,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ENSUREVISIBLE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=ensureVisible
 
 $prototype=bool filtersChildEvents () const
 $method=|bool|filtersChildEvents|
@@ -203,6 +204,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISOBSCURED )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=isObscured
 
 $prototype=virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 $virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
@@ -287,6 +289,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMITEM )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=mapFromItem
 
 $prototype=QPointF mapFromParent ( const QPointF & point ) const
 $internalMethod=|QPointF|mapFromParent,mapFromParent1|const QPointF &
@@ -344,6 +347,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMPARENT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=mapFromParent
 
 $prototype=QPointF mapFromScene ( const QPointF & point ) const
 $internalMethod=|QPointF|mapFromScene,mapFromScene1|const QPointF &
@@ -401,6 +405,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMSCENE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=mapFromScene
 
 $prototype=QRectF mapRectFromItem ( const QGraphicsItem * item, const QRectF & rect ) const
 $internalMethod=|QRectF|mapRectFromItem,mapRectFromItem1|const QGraphicsItem *,const QRectF &
@@ -426,6 +431,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMITEM )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=mapRectFromItem
 
 $prototype=QRectF mapRectFromParent ( const QRectF & rect ) const
 $internalMethod=|QRectF|mapRectFromParent,mapRectFromParent1|const QRectF &
@@ -451,6 +457,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMPARENT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=mapRectFromParent
 
 $prototype=QRectF mapRectFromScene ( const QRectF & rect ) const
 $internalMethod=|QRectF|mapRectFromScene,mapRectFromScene1|const QRectF &
@@ -476,6 +483,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMSCENE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=mapRectFromScene
 
 $prototype=QRectF mapRectToItem ( const QGraphicsItem * item, const QRectF & rect ) const
 $internalMethod=|QRectF|mapRectToItem,mapRectToItem1|const QGraphicsItem *,const QRectF &
@@ -501,6 +509,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOITEM )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=mapRectToItem
 
 $prototype=QRectF mapRectToParent ( const QRectF & rect ) const
 $internalMethod=|QRectF|mapRectToParent,mapRectToParent1|const QRectF &
@@ -526,6 +535,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOPARENT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=mapRectToParent
 
 $prototype=QRectF mapRectToScene ( const QRectF & rect ) const
 $internalMethod=|QRectF|mapRectToScene,mapRectToScene1|const QRectF &
@@ -551,6 +561,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOSCENE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=mapRectToScene
 
 $prototype=QPointF mapToItem ( const QGraphicsItem * item, const QPointF & point ) const
 $internalMethod=|QPointF|mapToItem,mapToItem1|const QGraphicsItem *,const QPointF &
@@ -608,6 +619,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOITEM )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=mapToItem
 
 $prototype=QPointF mapToParent ( const QPointF & point ) const
 $internalMethod=|QPointF|mapToParent,mapToParent1|const QPointF &
@@ -665,6 +677,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOPARENT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=mapToParent
 
 $prototype=QPointF mapToScene ( const QPointF & point ) const
 $internalMethod=|QPointF|mapToScene,mapToScene1|const QPointF &
@@ -722,6 +735,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOSCENE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=mapToScene
 
 $prototype=void moveBy ( qreal dx, qreal dy )
 $method=|void|moveBy|qreal,qreal
@@ -867,6 +881,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETPOS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setPos
 
 $prototype=void setRotation ( qreal angle )
 $method=|void|setRotation|qreal
@@ -907,6 +922,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETTRANSFORMORIGINPOINT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setTransformOriginPoint
 
 $prototype=void setTransformations ( const QList<QGraphicsTransform *> & transformations )
 $method=|void|setTransformations|const QList<QGraphicsTransform *> &
@@ -946,6 +962,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TOGRAPHICSOBJECT )
 {
   HB_FUNC_EXEC( QGRAPHICSITEM_TOGRAPHICSOBJECT1 );
 }
+$addMethod=toGraphicsObject
 
 $prototype=QString toolTip () const
 $method=|QString|toolTip|
@@ -1001,6 +1018,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_UPDATE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=update
 
 $prototype=QGraphicsWidget * window () const
 $method=|QGraphicsWidget *|window|

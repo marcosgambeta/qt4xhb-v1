@@ -78,6 +78,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_OPEN )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=open
 
 $prototype=ColorDialogOptions options () const
 $method=|QColorDialog::ColorDialogOptions|options|
@@ -130,6 +131,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_GETCOLOR )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=getColor
 
 $prototype=static void setCustomColor ( int index, QRgb color )
 $staticMethod=|void|setCustomColor|int,QRgb
