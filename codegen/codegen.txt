@@ -1336,3 +1336,7 @@ QXmlStreamReader::ReadElementTextBehaviour       |enum
 QXmlStreamReader::TokenType                      |enum
 QXmlStreamWriter                                 |object   |QtCore
 QGLFormat::OpenGLVersionFlags                    |enum
+QGestureRecognizer::Result                       |enum
+QGradient::Type                                  |enum
+QGraphicsSceneContextMenuEvent::Reason           |enum
+QImageIOPlugin::Capabilities                     |enum
