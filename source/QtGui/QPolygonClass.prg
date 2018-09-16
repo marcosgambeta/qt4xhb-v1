@@ -13,9 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QRECT
-REQUEST QPOLYGON
 REQUEST QPOINT
+REQUEST QRECT
 #endif
 
 CLASS QPolygon
@@ -23,8 +22,8 @@ CLASS QPolygon
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new4
    METHOD new
+   METHOD new4
    METHOD delete
    METHOD boundingRect
    METHOD containsPoint

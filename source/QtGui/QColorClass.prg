@@ -13,7 +13,6 @@
 #include "hbclass.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QCOLOR
 #endif
 
 CLASS QColor
@@ -21,11 +20,11 @@ CLASS QColor
    DATA pointer
    DATA self_destruction INIT .F.
 
+   METHOD new
    METHOD new3
    METHOD new4
    METHOD new5
    METHOD new7
-   METHOD new
    METHOD delete
    METHOD alpha
    METHOD alphaF

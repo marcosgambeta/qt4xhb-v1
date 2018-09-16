@@ -53,8 +53,20 @@ QObject * create ( const QString & key, const QString & specification )
 */
 HB_FUNC_STATIC( QGENERICPLUGINFACTORY_CREATE )
 {
-  QObject * ptr = QGenericPluginFactory::create ( PQSTRING(1), PQSTRING(2) );
-  _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+  QGenericPluginFactory * obj = (QGenericPluginFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+  if( obj )
+  {
+    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+    {
+      QObject * ptr = obj->create ( PQSTRING(1), PQSTRING(2) );
+      _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
 }
 
 /*

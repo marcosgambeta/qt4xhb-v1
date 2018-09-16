@@ -12,14 +12,15 @@
 
 #include "hbclass.ch"
 
+#ifndef QT4XHB_NO_REQUESTS
+#endif
+
 CLASS QStyleOptionFrame INHERIT QStyleOption
 
    METHOD new
-
    METHOD lineWidth
-   METHOD midLineWidth
-
    METHOD setLineWidth
+   METHOD midLineWidth
    METHOD setMidLineWidth
 
    DESTRUCTOR destroyObject

@@ -12,22 +12,24 @@
 
 #include "hbclass.ch"
 
+#ifndef QT4XHB_NO_REQUESTS
+REQUEST QSIZE
+#endif
+
 CLASS QStyleOptionTabWidgetFrame INHERIT QStyleOption
 
    METHOD new
-
    METHOD lineWidth
-   METHOD midLineWidth
-   METHOD shape
-   METHOD tabBarSize
-   METHOD rightCornerWidgetSize
-   METHOD leftCornerWidgetSize
-
    METHOD setLineWidth
+   METHOD midLineWidth
    METHOD setMidLineWidth
+   METHOD shape
    METHOD setShape
+   METHOD tabBarSize
    METHOD setTabBarSize
+   METHOD rightCornerWidgetSize
    METHOD setRightCornerWidgetSize
+   METHOD leftCornerWidgetSize
    METHOD setLeftCornerWidgetSize
 
    DESTRUCTOR destroyObject

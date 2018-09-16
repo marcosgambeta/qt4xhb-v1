@@ -13,9 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QRECTF
-REQUEST QPOLYGONF
 REQUEST QPOLYGON
+REQUEST QRECTF
 #endif
 
 CLASS QPolygonF
@@ -25,7 +24,6 @@ CLASS QPolygonF
 
    METHOD new
    METHOD delete
-
    METHOD boundingRect
    METHOD containsPoint
    METHOD intersected

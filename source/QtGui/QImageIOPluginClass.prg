@@ -64,9 +64,17 @@ virtual Capabilities capabilities ( QIODevice * device, const QByteArray & forma
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_CAPABILITIES )
 {
   QImageIOPlugin * obj = (QImageIOPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->capabilities ( PQIODEVICE(1), *PQBYTEARRAY(2) ) );
+    if( ISNUMPAR(2) && ISQIODEVICE(1) && ISQBYTEARRAY(2) )
+    {
+      RENUM( obj->capabilities ( PQIODEVICE(1), *PQBYTEARRAY(2) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -76,11 +84,18 @@ virtual QImageIOHandler * create ( QIODevice * device, const QByteArray & format
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_CREATE )
 {
   QImageIOPlugin * obj = (QImageIOPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QImageIOHandler * ptr = obj->create ( PQIODEVICE(1), par2 );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGEIOHANDLER" );
+    if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISQBYTEARRAY(2)||ISNIL(2)) )
+    {
+      QImageIOHandler * ptr = obj->create ( PQIODEVICE(1), ISNIL(2)? QByteArray() : *(QByteArray *) _qt4xhb_itemGetPtr(2) );
+      _qt4xhb_createReturnClass ( ptr, "QIMAGEIOHANDLER", false );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

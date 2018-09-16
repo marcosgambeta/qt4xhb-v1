@@ -12,24 +12,27 @@
 
 #include "hbclass.ch"
 
+#ifndef QT4XHB_NO_REQUESTS
+REQUEST QFONT
+REQUEST QSIZE
+#endif
+
 CLASS QStyleOptionViewItem INHERIT QStyleOption
 
    METHOD new
-
    METHOD displayAlignment
-   METHOD decorationAlignment
-   METHOD textElideMode
-   METHOD decorationPosition
-   METHOD decorationSize
-   METHOD font
-   METHOD showDecorationSelected
-
    METHOD setDisplayAlignment
+   METHOD decorationAlignment
    METHOD setDecorationAlignment
+   METHOD textElideMode
    METHOD setTextElideMode
+   METHOD decorationPosition
    METHOD setDecorationPosition
+   METHOD decorationSize
    METHOD setDecorationSize
+   METHOD font
    METHOD setFont
+   METHOD showDecorationSelected
    METHOD setShowDecorationSelected
 
    DESTRUCTOR destroyObject

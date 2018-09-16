@@ -12,6 +12,9 @@
 
 #include "hbclass.ch"
 
+#ifndef QT4XHB_NO_REQUESTS
+#endif
+
 CLASS QStyleHintReturnVariant INHERIT QStyleHintReturn
 
    METHOD new

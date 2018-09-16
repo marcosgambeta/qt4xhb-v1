@@ -98,10 +98,17 @@ virtual Result recognize ( QGesture * gesture, QObject * watched, QEvent * event
 HB_FUNC_STATIC( QGESTURERECOGNIZER_RECOGNIZE )
 {
   QGestureRecognizer * obj = (QGestureRecognizer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QGesture * par1 = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( (int) obj->recognize ( par1, PQOBJECT(2), PQEVENT(3) ) );
+    if( ISNUMPAR(3) && ISQGESTURE(1) && ISQOBJECT(2) && ISQEVENT(3) )
+    {
+      RENUM( obj->recognize ( PQGESTURE(1), PQOBJECT(2), PQEVENT(3) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

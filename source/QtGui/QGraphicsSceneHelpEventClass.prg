@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QPOINTF
 REQUEST QPOINT
+REQUEST QPOINTF
 #endif
 
 CLASS QGraphicsSceneHelpEvent INHERIT QGraphicsSceneEvent
@@ -64,10 +64,18 @@ QPointF scenePos () const
 HB_FUNC_STATIC( QGRAPHICSSCENEHELPEVENT_SCENEPOS )
 {
   QGraphicsSceneHelpEvent * obj = (QGraphicsSceneHelpEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->scenePos () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    if( ISNUMPAR(0) )
+    {
+      QPointF * ptr = new QPointF( obj->scenePos () );
+      _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -77,10 +85,18 @@ QPoint screenPos () const
 HB_FUNC_STATIC( QGRAPHICSSCENEHELPEVENT_SCREENPOS )
 {
   QGraphicsSceneHelpEvent * obj = (QGraphicsSceneHelpEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QPoint * ptr = new QPoint( obj->screenPos () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+    if( ISNUMPAR(0) )
+    {
+      QPoint * ptr = new QPoint( obj->screenPos () );
+      _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

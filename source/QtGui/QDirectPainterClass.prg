@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QREGION
 REQUEST QRECT
+REQUEST QREGION
 #endif
 
 CLASS QDirectPainter INHERIT QObject
@@ -32,7 +32,6 @@ CLASS QDirectPainter INHERIT QObject
    METHOD setGeometry
    METHOD setRegion
    METHOD startPainting
-   METHOD frameBuffer
    METHOD linestep
    METHOD lock
    METHOD screenDepth

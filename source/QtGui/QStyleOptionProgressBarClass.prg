@@ -12,22 +12,23 @@
 
 #include "hbclass.ch"
 
+#ifndef QT4XHB_NO_REQUESTS
+#endif
+
 CLASS QStyleOptionProgressBar INHERIT QStyleOption
 
    METHOD new
-
    METHOD minimum
-   METHOD maximum
-   METHOD progress
-   METHOD text
-   METHOD textAlignment
-   METHOD textVisible
-
    METHOD setMinimum
+   METHOD maximum
    METHOD setMaximum
+   METHOD progress
    METHOD setProgress
+   METHOD text
    METHOD setText
+   METHOD textAlignment
    METHOD setTextAlignment
+   METHOD textVisible
    METHOD setTextVisible
 
    DESTRUCTOR destroyObject

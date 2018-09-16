@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QPOINTF
 REQUEST QPOINT
+REQUEST QPOINTF
 #endif
 
 CLASS QGraphicsSceneContextMenuEvent INHERIT QGraphicsSceneEvent
@@ -108,9 +108,17 @@ Reason reason () const
 HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_REASON )
 {
   QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->reason () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->reason () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

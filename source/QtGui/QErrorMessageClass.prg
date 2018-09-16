@@ -13,7 +13,6 @@
 #include "hbclass.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QERRORMESSAGE
 #endif
 
 CLASS QErrorMessage INHERIT QDialog

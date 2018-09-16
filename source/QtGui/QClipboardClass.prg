@@ -33,7 +33,6 @@ CLASS QClipboard INHERIT QObject
    METHOD setText
    METHOD supportsFindBuffer
    METHOD supportsSelection
-   METHOD text2
    METHOD text
 
    METHOD onChanged

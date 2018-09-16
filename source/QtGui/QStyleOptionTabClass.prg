@@ -12,24 +12,26 @@
 
 #include "hbclass.ch"
 
+#ifndef QT4XHB_NO_REQUESTS
+REQUEST QICON
+#endif
+
 CLASS QStyleOptionTab INHERIT QStyleOption
 
    METHOD new
-
    METHOD shape
-   METHOD text
-   METHOD icon
-   METHOD row
-   METHOD position
-   METHOD selectedPosition
-   METHOD cornerWidgets
-
    METHOD setShape
+   METHOD text
    METHOD setText
+   METHOD icon
    METHOD setIcon
+   METHOD row
    METHOD setRow
+   METHOD position
    METHOD setPosition
+   METHOD selectedPosition
    METHOD setSelectedPosition
+   METHOD cornerWidgets
    METHOD setCornerWidgets
 
    DESTRUCTOR destroyObject

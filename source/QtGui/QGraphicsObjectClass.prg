@@ -12,6 +12,9 @@
 
 #include "hbclass.ch"
 
+#ifndef QT4XHB_NO_REQUESTS
+#endif
+
 CLASS QGraphicsObject INHERIT QObject,QGraphicsItem
 
    METHOD grabGesture

@@ -13,7 +13,7 @@
 #include "hbclass.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QIMAGE
+REQUEST QMATRIX
 REQUEST QPOINT
 REQUEST QRECT
 REQUEST QSIZE
@@ -24,7 +24,6 @@ CLASS QImage INHERIT QPaintDevice
 
    METHOD new
    METHOD delete
-
    METHOD allGray
    METHOD bitPlaneCount
    METHOD byteCount
