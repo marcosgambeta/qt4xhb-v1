@@ -104,14 +104,18 @@ HB_FUNC_STATIC( QUILOADER_ADDPLUGINPATH )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
+#endif
       obj->addPluginPath ( PQSTRING(1) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -126,14 +130,18 @@ HB_FUNC_STATIC( QUILOADER_AVAILABLELAYOUTS )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQSTRINGLIST( obj->availableLayouts () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -146,14 +154,18 @@ HB_FUNC_STATIC( QUILOADER_AVAILABLEWIDGETS )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQSTRINGLIST( obj->availableWidgets () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -166,14 +178,18 @@ HB_FUNC_STATIC( QUILOADER_CLEARPLUGINPATHS )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       obj->clearPluginPaths ();
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -188,15 +204,19 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTION )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,2) && (ISQOBJECT(1)||ISNIL(1)) && ISOPTCHAR(2) )
     {
+#endif
       QAction * ptr = obj->createAction ( OPQOBJECT(1,0), OPQSTRING(2,QString()) );
       _qt4xhb_createReturnQObjectClass ( ptr, "QACTION" );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -209,15 +229,19 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTIONGROUP )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,2) && (ISQOBJECT(1)||ISNIL(1)) && ISOPTCHAR(2) )
     {
+#endif
       QActionGroup * ptr = obj->createActionGroup ( OPQOBJECT(1,0), OPQSTRING(2,QString()) );
       _qt4xhb_createReturnQObjectClass ( ptr, "QACTIONGROUP" );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -230,15 +254,19 @@ HB_FUNC_STATIC( QUILOADER_CREATELAYOUT )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,3) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) && ISOPTCHAR(3) )
     {
+#endif
       QLayout * ptr = obj->createLayout ( PQSTRING(1), OPQOBJECT(2,0), OPQSTRING(3,QString()) );
       _qt4xhb_createReturnQObjectClass ( ptr, "QLAYOUT" );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -251,15 +279,19 @@ HB_FUNC_STATIC( QUILOADER_CREATEWIDGET )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,3) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) && ISOPTCHAR(3) )
     {
+#endif
       QWidget * ptr = obj->createWidget ( PQSTRING(1), OPQWIDGET(2,0), OPQSTRING(3,QString()) );
       _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -272,14 +304,18 @@ HB_FUNC_STATIC( QUILOADER_ISLANGUAGECHANGEENABLED )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isLanguageChangeEnabled () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -292,15 +328,19 @@ HB_FUNC_STATIC( QUILOADER_LOAD )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISQWIDGET(2)||ISNIL(2)) )
     {
+#endif
       QWidget * ptr = obj->load ( PQIODEVICE(1), OPQWIDGET(2,0) );
       _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -313,14 +353,18 @@ HB_FUNC_STATIC( QUILOADER_PLUGINPATHS )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQSTRINGLIST( obj->pluginPaths () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -333,14 +377,18 @@ HB_FUNC_STATIC( QUILOADER_SETLANGUAGECHANGEENABLED )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
     {
+#endif
       obj->setLanguageChangeEnabled ( PBOOL(1) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -355,14 +403,18 @@ HB_FUNC_STATIC( QUILOADER_SETWORKINGDIRECTORY )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQDIR(1) )
     {
+#endif
       obj->setWorkingDirectory ( *PQDIR(1) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -377,15 +429,19 @@ HB_FUNC_STATIC( QUILOADER_WORKINGDIRECTORY )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QDir * ptr = new QDir( obj->workingDirectory () );
       _qt4xhb_createReturnClass ( ptr, "QDIR", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
