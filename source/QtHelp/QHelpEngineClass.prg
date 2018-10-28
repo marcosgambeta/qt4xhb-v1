@@ -96,15 +96,19 @@ HB_FUNC_STATIC( QHELPENGINE_CONTENTMODEL )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QHelpContentModel * ptr = obj->contentModel ();
       _qt4xhb_createReturnQObjectClass ( ptr, "QHELPCONTENTMODEL" );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -117,15 +121,19 @@ HB_FUNC_STATIC( QHELPENGINE_CONTENTWIDGET )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QHelpContentWidget * ptr = obj->contentWidget ();
       _qt4xhb_createReturnQObjectClass ( ptr, "QHELPCONTENTWIDGET" );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -138,15 +146,19 @@ HB_FUNC_STATIC( QHELPENGINE_INDEXMODEL )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QHelpIndexModel * ptr = obj->indexModel ();
       _qt4xhb_createReturnQObjectClass ( ptr, "QHELPINDEXMODEL" );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -159,15 +171,19 @@ HB_FUNC_STATIC( QHELPENGINE_INDEXWIDGET )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QHelpIndexWidget * ptr = obj->indexWidget ();
       _qt4xhb_createReturnQObjectClass ( ptr, "QHELPINDEXWIDGET" );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -180,15 +196,19 @@ HB_FUNC_STATIC( QHELPENGINE_SEARCHENGINE )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QHelpSearchEngine * ptr = obj->searchEngine ();
       _qt4xhb_createReturnQObjectClass ( ptr, "QHELPSEARCHENGINE" );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
