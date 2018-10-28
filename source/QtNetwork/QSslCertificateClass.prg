@@ -146,14 +146,18 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_CLEAR )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       obj->clear ();
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -168,15 +172,19 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_DIGEST )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
+#endif
       QByteArray * ptr = new QByteArray( obj->digest ( ISNIL(1)? (QCryptographicHash::Algorithm) QCryptographicHash::Md5 : (QCryptographicHash::Algorithm) hb_parni(1) ) );
       _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -189,15 +197,19 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_EFFECTIVEDATE )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QDateTime * ptr = new QDateTime( obj->effectiveDate () );
       _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -210,15 +222,19 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_EXPIRYDATE )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QDateTime * ptr = new QDateTime( obj->expiryDate () );
       _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -231,14 +247,18 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISNULL )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isNull () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -251,14 +271,18 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISVALID )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isValid () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -316,15 +340,19 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_PUBLICKEY )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QSslKey * ptr = new QSslKey( obj->publicKey () );
       _qt4xhb_createReturnClass ( ptr, "QSSLKEY", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -337,15 +365,19 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SERIALNUMBER )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QByteArray * ptr = new QByteArray( obj->serialNumber () );
       _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -403,15 +435,19 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_TODER )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QByteArray * ptr = new QByteArray( obj->toDer () );
       _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -424,15 +460,19 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_TOPEM )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QByteArray * ptr = new QByteArray( obj->toPem () );
       _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -445,15 +485,19 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_VERSION )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QByteArray * ptr = new QByteArray( obj->version () );
       _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -466,8 +510,10 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDATA )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && ISOPTNUM(2) )
     {
+#endif
       QList<QSslCertificate> list = obj->fromData ( *PQBYTEARRAY(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -498,11 +544,13 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDATA )
         }
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -515,8 +563,10 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDEVICE )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQIODEVICE(1) && ISOPTNUM(2) )
     {
+#endif
       QList<QSslCertificate> list = obj->fromDevice ( PQIODEVICE(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -547,11 +597,13 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDEVICE )
         }
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -564,8 +616,10 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_FROMPATH )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
+#endif
       QList<QSslCertificate> list = obj->fromPath ( PQSTRING(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2), ISNIL(3)? (QRegExp::PatternSyntax) QRegExp::FixedString : (QRegExp::PatternSyntax) hb_parni(3) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -596,11 +650,13 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_FROMPATH )
         }
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 

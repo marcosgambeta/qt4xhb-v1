@@ -123,8 +123,10 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QList<QNetworkAddressEntry> list = obj->addressEntries ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKADDRESSENTRY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -155,11 +157,13 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
         }
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -172,14 +176,18 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_FLAGS )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RENUM( obj->flags () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -192,14 +200,18 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_HARDWAREADDRESS )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQSTRING( obj->hardwareAddress () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -212,14 +224,18 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_HUMANREADABLENAME )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQSTRING( obj->humanReadableName () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -232,14 +248,18 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_INDEX )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RINT( obj->index () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -252,14 +272,18 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ISVALID )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isValid () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -272,14 +296,18 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NAME )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQSTRING( obj->name () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -292,8 +320,10 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLADDRESSES )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QList<QHostAddress> list = obj->allAddresses ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QHOSTADDRESS" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -324,11 +354,13 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLADDRESSES )
         }
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -341,8 +373,10 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLINTERFACES )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QList<QNetworkInterface> list = obj->allInterfaces ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKINTERFACE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -373,11 +407,13 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLINTERFACES )
         }
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
