@@ -117,16 +117,20 @@ HB_FUNC_STATIC( QCOREAPPLICATION_FILTEREVENT )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISPOINTER(1) && ISNUM(2) )
     {
+#endif
       long par2;
       RBOOL( obj->filterEvent ( (void *) hb_parptr(1), &par2 ) );
       hb_stornl( par2, 2 );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -139,14 +143,18 @@ HB_FUNC_STATIC( QCOREAPPLICATION_NOTIFY )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQOBJECT(1) && ISQEVENT(2) )
     {
+#endif
       RBOOL( obj->notify ( PQOBJECT(1), PQEVENT(2) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -159,14 +167,18 @@ HB_FUNC_STATIC( QCOREAPPLICATION_QUIT )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       obj->quit ();
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
