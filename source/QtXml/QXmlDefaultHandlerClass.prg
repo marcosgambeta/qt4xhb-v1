@@ -107,14 +107,18 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ATTRIBUTEDECL )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(5) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) && ISCHAR(4) && ISCHAR(5) )
     {
+#endif
       RBOOL( obj->attributeDecl ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -127,14 +131,18 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_CHARACTERS )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
+#endif
       RBOOL( obj->characters ( PQSTRING(1) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -147,14 +155,18 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_COMMENT )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
+#endif
       RBOOL( obj->comment ( PQSTRING(1) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -167,14 +179,18 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDCDATA )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->endCDATA () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -187,14 +203,18 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDDTD )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->endDTD () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -207,14 +227,18 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDDOCUMENT )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->endDocument () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -227,14 +251,18 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDELEMENT )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) )
     {
+#endif
       RBOOL( obj->endElement ( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -247,14 +275,18 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDENTITY )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
+#endif
       RBOOL( obj->endEntity ( PQSTRING(1) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -267,14 +299,18 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDPREFIXMAPPING )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
+#endif
       RBOOL( obj->endPrefixMapping ( PQSTRING(1) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -287,14 +323,18 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ERROR )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1) )
     {
+#endif
       RBOOL( obj->error ( *PQXMLPARSEEXCEPTION(1) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -307,14 +347,18 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ERRORSTRING )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQSTRING( obj->errorString () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -327,14 +371,18 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_EXTERNALENTITYDECL )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) )
     {
+#endif
       RBOOL( obj->externalEntityDecl ( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -347,14 +395,18 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_FATALERROR )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1) )
     {
+#endif
       RBOOL( obj->fatalError ( *PQXMLPARSEEXCEPTION(1) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -367,14 +419,18 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_IGNORABLEWHITESPACE )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
+#endif
       RBOOL( obj->ignorableWhitespace ( PQSTRING(1) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -387,14 +443,18 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_INTERNALENTITYDECL )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
     {
+#endif
       RBOOL( obj->internalEntityDecl ( PQSTRING(1), PQSTRING(2) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -407,14 +467,18 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_NOTATIONDECL )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) )
     {
+#endif
       RBOOL( obj->notationDecl ( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -427,14 +491,18 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_PROCESSINGINSTRUCTION )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
     {
+#endif
       RBOOL( obj->processingInstruction ( PQSTRING(1), PQSTRING(2) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -447,14 +515,18 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_SETDOCUMENTLOCATOR )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQXMLLOCATOR(1) )
     {
+#endif
       obj->setDocumentLocator ( PQXMLLOCATOR(1) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -469,14 +541,18 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_SKIPPEDENTITY )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
+#endif
       RBOOL( obj->skippedEntity ( PQSTRING(1) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -489,14 +565,18 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTCDATA )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->startCDATA () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -509,14 +589,18 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTDTD )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) )
     {
+#endif
       RBOOL( obj->startDTD ( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -529,14 +613,18 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTDOCUMENT )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->startDocument () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -549,14 +637,18 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTELEMENT )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(4) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) && ISQXMLATTRIBUTES(4) )
     {
+#endif
       RBOOL( obj->startElement ( PQSTRING(1), PQSTRING(2), PQSTRING(3), *PQXMLATTRIBUTES(4) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -569,14 +661,18 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTENTITY )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
+#endif
       RBOOL( obj->startEntity ( PQSTRING(1) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -589,14 +685,18 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTPREFIXMAPPING )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
     {
+#endif
       RBOOL( obj->startPrefixMapping ( PQSTRING(1), PQSTRING(2) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -609,14 +709,18 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_UNPARSEDENTITYDECL )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(4) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) && ISCHAR(4) )
     {
+#endif
       RBOOL( obj->unparsedEntityDecl ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -629,14 +733,18 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_WARNING )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1) )
     {
+#endif
       RBOOL( obj->warning ( *PQXMLPARSEEXCEPTION(1) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 

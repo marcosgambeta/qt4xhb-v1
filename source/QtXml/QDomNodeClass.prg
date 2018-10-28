@@ -187,15 +187,19 @@ HB_FUNC_STATIC( QDOMNODE_APPENDCHILD )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQDOMNODE(1) )
     {
+#endif
       QDomNode * ptr = new QDomNode( obj->appendChild ( *PQDOMNODE(1) ) );
       _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -208,15 +212,19 @@ HB_FUNC_STATIC( QDOMNODE_ATTRIBUTES )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->attributes () );
       _qt4xhb_createReturnClass ( ptr, "QDOMNAMEDNODEMAP", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -229,15 +237,19 @@ HB_FUNC_STATIC( QDOMNODE_CHILDNODES )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QDomNodeList * ptr = new QDomNodeList( obj->childNodes () );
       _qt4xhb_createReturnClass ( ptr, "QDOMNODELIST", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -250,14 +262,18 @@ HB_FUNC_STATIC( QDOMNODE_CLEAR )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       obj->clear ();
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -272,15 +288,19 @@ HB_FUNC_STATIC( QDOMNODE_CLONENODE )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
     {
+#endif
       QDomNode * ptr = new QDomNode( obj->cloneNode ( OPBOOL(1,true) ) );
       _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -293,14 +313,18 @@ HB_FUNC_STATIC( QDOMNODE_COLUMNNUMBER )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RINT( obj->columnNumber () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -313,15 +337,19 @@ HB_FUNC_STATIC( QDOMNODE_FIRSTCHILD )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QDomNode * ptr = new QDomNode( obj->firstChild () );
       _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -334,15 +362,19 @@ HB_FUNC_STATIC( QDOMNODE_FIRSTCHILDELEMENT )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
     {
+#endif
       QDomElement * ptr = new QDomElement( obj->firstChildElement ( OPQSTRING(1,QString()) ) );
       _qt4xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -355,14 +387,18 @@ HB_FUNC_STATIC( QDOMNODE_HASATTRIBUTES )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->hasAttributes () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -375,14 +411,18 @@ HB_FUNC_STATIC( QDOMNODE_HASCHILDNODES )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->hasChildNodes () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -395,15 +435,19 @@ HB_FUNC_STATIC( QDOMNODE_INSERTAFTER )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQDOMNODE(1) && ISQDOMNODE(2) )
     {
+#endif
       QDomNode * ptr = new QDomNode( obj->insertAfter ( *PQDOMNODE(1), *PQDOMNODE(2) ) );
       _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -416,15 +460,19 @@ HB_FUNC_STATIC( QDOMNODE_INSERTBEFORE )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQDOMNODE(1) && ISQDOMNODE(2) )
     {
+#endif
       QDomNode * ptr = new QDomNode( obj->insertBefore ( *PQDOMNODE(1), *PQDOMNODE(2) ) );
       _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -437,14 +485,18 @@ HB_FUNC_STATIC( QDOMNODE_ISATTR )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isAttr () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -457,14 +509,18 @@ HB_FUNC_STATIC( QDOMNODE_ISCDATASECTION )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isCDATASection () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -477,14 +533,18 @@ HB_FUNC_STATIC( QDOMNODE_ISCHARACTERDATA )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isCharacterData () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -497,14 +557,18 @@ HB_FUNC_STATIC( QDOMNODE_ISCOMMENT )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isComment () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -517,14 +581,18 @@ HB_FUNC_STATIC( QDOMNODE_ISDOCUMENT )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isDocument () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -537,14 +605,18 @@ HB_FUNC_STATIC( QDOMNODE_ISDOCUMENTFRAGMENT )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isDocumentFragment () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -557,14 +629,18 @@ HB_FUNC_STATIC( QDOMNODE_ISDOCUMENTTYPE )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isDocumentType () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -577,14 +653,18 @@ HB_FUNC_STATIC( QDOMNODE_ISELEMENT )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isElement () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -597,14 +677,18 @@ HB_FUNC_STATIC( QDOMNODE_ISENTITY )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isEntity () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -617,14 +701,18 @@ HB_FUNC_STATIC( QDOMNODE_ISENTITYREFERENCE )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isEntityReference () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -637,14 +725,18 @@ HB_FUNC_STATIC( QDOMNODE_ISNOTATION )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isNotation () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -657,14 +749,18 @@ HB_FUNC_STATIC( QDOMNODE_ISNULL )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isNull () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -677,14 +773,18 @@ HB_FUNC_STATIC( QDOMNODE_ISPROCESSINGINSTRUCTION )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isProcessingInstruction () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -697,14 +797,18 @@ HB_FUNC_STATIC( QDOMNODE_ISSUPPORTED )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
     {
+#endif
       RBOOL( obj->isSupported ( PQSTRING(1), PQSTRING(2) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -717,14 +821,18 @@ HB_FUNC_STATIC( QDOMNODE_ISTEXT )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isText () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -737,15 +845,19 @@ HB_FUNC_STATIC( QDOMNODE_LASTCHILD )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QDomNode * ptr = new QDomNode( obj->lastChild () );
       _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -758,15 +870,19 @@ HB_FUNC_STATIC( QDOMNODE_LASTCHILDELEMENT )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
     {
+#endif
       QDomElement * ptr = new QDomElement( obj->lastChildElement ( OPQSTRING(1,QString()) ) );
       _qt4xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -779,14 +895,18 @@ HB_FUNC_STATIC( QDOMNODE_LINENUMBER )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RINT( obj->lineNumber () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -799,14 +919,18 @@ HB_FUNC_STATIC( QDOMNODE_LOCALNAME )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQSTRING( obj->localName () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -819,15 +943,19 @@ HB_FUNC_STATIC( QDOMNODE_NAMEDITEM )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
+#endif
       QDomNode * ptr = new QDomNode( obj->namedItem ( PQSTRING(1) ) );
       _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -840,14 +968,18 @@ HB_FUNC_STATIC( QDOMNODE_NAMESPACEURI )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQSTRING( obj->namespaceURI () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -860,15 +992,19 @@ HB_FUNC_STATIC( QDOMNODE_NEXTSIBLING )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QDomNode * ptr = new QDomNode( obj->nextSibling () );
       _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -881,15 +1017,19 @@ HB_FUNC_STATIC( QDOMNODE_NEXTSIBLINGELEMENT )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
     {
+#endif
       QDomElement * ptr = new QDomElement( obj->nextSiblingElement ( OPQSTRING(1,QString()) ) );
       _qt4xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -902,14 +1042,18 @@ HB_FUNC_STATIC( QDOMNODE_NODENAME )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQSTRING( obj->nodeName () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -922,14 +1066,18 @@ HB_FUNC_STATIC( QDOMNODE_NODETYPE )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RENUM( obj->nodeType () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -942,14 +1090,18 @@ HB_FUNC_STATIC( QDOMNODE_NODEVALUE )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQSTRING( obj->nodeValue () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -962,14 +1114,18 @@ HB_FUNC_STATIC( QDOMNODE_NORMALIZE )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       obj->normalize ();
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -984,15 +1140,19 @@ HB_FUNC_STATIC( QDOMNODE_OWNERDOCUMENT )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QDomDocument * ptr = new QDomDocument( obj->ownerDocument () );
       _qt4xhb_createReturnClass ( ptr, "QDOMDOCUMENT", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -1005,15 +1165,19 @@ HB_FUNC_STATIC( QDOMNODE_PARENTNODE )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QDomNode * ptr = new QDomNode( obj->parentNode () );
       _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -1026,14 +1190,18 @@ HB_FUNC_STATIC( QDOMNODE_PREFIX )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQSTRING( obj->prefix () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -1046,15 +1214,19 @@ HB_FUNC_STATIC( QDOMNODE_PREVIOUSSIBLING )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QDomNode * ptr = new QDomNode( obj->previousSibling () );
       _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -1067,15 +1239,19 @@ HB_FUNC_STATIC( QDOMNODE_PREVIOUSSIBLINGELEMENT )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
     {
+#endif
       QDomElement * ptr = new QDomElement( obj->previousSiblingElement ( OPQSTRING(1,QString()) ) );
       _qt4xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -1088,15 +1264,19 @@ HB_FUNC_STATIC( QDOMNODE_REMOVECHILD )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQDOMNODE(1) )
     {
+#endif
       QDomNode * ptr = new QDomNode( obj->removeChild ( *PQDOMNODE(1) ) );
       _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -1109,15 +1289,19 @@ HB_FUNC_STATIC( QDOMNODE_REPLACECHILD )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQDOMNODE(1) && ISQDOMNODE(2) )
     {
+#endif
       QDomNode * ptr = new QDomNode( obj->replaceChild ( *PQDOMNODE(1), *PQDOMNODE(2) ) );
       _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -1179,14 +1363,18 @@ HB_FUNC_STATIC( QDOMNODE_SETNODEVALUE )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
+#endif
       obj->setNodeValue ( PQSTRING(1) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1201,14 +1389,18 @@ HB_FUNC_STATIC( QDOMNODE_SETPREFIX )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
+#endif
       obj->setPrefix ( PQSTRING(1) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1223,15 +1415,19 @@ HB_FUNC_STATIC( QDOMNODE_TOATTR )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QDomAttr * ptr = new QDomAttr( obj->toAttr () );
       _qt4xhb_createReturnClass ( ptr, "QDOMATTR", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -1244,15 +1440,19 @@ HB_FUNC_STATIC( QDOMNODE_TOCDATASECTION )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QDomCDATASection * ptr = new QDomCDATASection( obj->toCDATASection () );
       _qt4xhb_createReturnClass ( ptr, "QDOMCDATASECTION", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -1265,15 +1465,19 @@ HB_FUNC_STATIC( QDOMNODE_TOCHARACTERDATA )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QDomCharacterData * ptr = new QDomCharacterData( obj->toCharacterData () );
       _qt4xhb_createReturnClass ( ptr, "QDOMCHARACTERDATA", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -1286,15 +1490,19 @@ HB_FUNC_STATIC( QDOMNODE_TOCOMMENT )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QDomComment * ptr = new QDomComment( obj->toComment () );
       _qt4xhb_createReturnClass ( ptr, "QDOMCOMMENT", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -1307,15 +1515,19 @@ HB_FUNC_STATIC( QDOMNODE_TODOCUMENT )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QDomDocument * ptr = new QDomDocument( obj->toDocument () );
       _qt4xhb_createReturnClass ( ptr, "QDOMDOCUMENT", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -1328,15 +1540,19 @@ HB_FUNC_STATIC( QDOMNODE_TODOCUMENTFRAGMENT )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QDomDocumentFragment * ptr = new QDomDocumentFragment( obj->toDocumentFragment () );
       _qt4xhb_createReturnClass ( ptr, "QDOMDOCUMENTFRAGMENT", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -1349,15 +1565,19 @@ HB_FUNC_STATIC( QDOMNODE_TODOCUMENTTYPE )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QDomDocumentType * ptr = new QDomDocumentType( obj->toDocumentType () );
       _qt4xhb_createReturnClass ( ptr, "QDOMDOCUMENTTYPE", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -1370,15 +1590,19 @@ HB_FUNC_STATIC( QDOMNODE_TOELEMENT )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QDomElement * ptr = new QDomElement( obj->toElement () );
       _qt4xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -1391,15 +1615,19 @@ HB_FUNC_STATIC( QDOMNODE_TOENTITY )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QDomEntity * ptr = new QDomEntity( obj->toEntity () );
       _qt4xhb_createReturnClass ( ptr, "QDOMENTITY", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -1412,15 +1640,19 @@ HB_FUNC_STATIC( QDOMNODE_TOENTITYREFERENCE )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QDomEntityReference * ptr = new QDomEntityReference( obj->toEntityReference () );
       _qt4xhb_createReturnClass ( ptr, "QDOMENTITYREFERENCE", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -1433,15 +1665,19 @@ HB_FUNC_STATIC( QDOMNODE_TONOTATION )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QDomNotation * ptr = new QDomNotation( obj->toNotation () );
       _qt4xhb_createReturnClass ( ptr, "QDOMNOTATION", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -1454,15 +1690,19 @@ HB_FUNC_STATIC( QDOMNODE_TOPROCESSINGINSTRUCTION )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QDomProcessingInstruction * ptr = new QDomProcessingInstruction( obj->toProcessingInstruction () );
       _qt4xhb_createReturnClass ( ptr, "QDOMPROCESSINGINSTRUCTION", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -1475,15 +1715,19 @@ HB_FUNC_STATIC( QDOMNODE_TOTEXT )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QDomText * ptr = new QDomText( obj->toText () );
       _qt4xhb_createReturnClass ( ptr, "QDOMTEXT", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 

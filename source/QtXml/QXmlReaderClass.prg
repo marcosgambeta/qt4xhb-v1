@@ -97,15 +97,19 @@ HB_FUNC_STATIC( QXMLREADER_DTDHANDLER )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QXmlDTDHandler * ptr = obj->DTDHandler ();
       _qt4xhb_createReturnClass ( ptr, "QXMLDTDHANDLER", false );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -118,15 +122,19 @@ HB_FUNC_STATIC( QXMLREADER_CONTENTHANDLER )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QXmlContentHandler * ptr = obj->contentHandler ();
       _qt4xhb_createReturnClass ( ptr, "QXMLCONTENTHANDLER", false );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -139,15 +147,19 @@ HB_FUNC_STATIC( QXMLREADER_DECLHANDLER )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QXmlDeclHandler * ptr = obj->declHandler ();
       _qt4xhb_createReturnClass ( ptr, "QXMLDECLHANDLER", false );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -160,15 +172,19 @@ HB_FUNC_STATIC( QXMLREADER_ENTITYRESOLVER )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QXmlEntityResolver * ptr = obj->entityResolver ();
       _qt4xhb_createReturnClass ( ptr, "QXMLENTITYRESOLVER", false );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -181,15 +197,19 @@ HB_FUNC_STATIC( QXMLREADER_ERRORHANDLER )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QXmlErrorHandler * ptr = obj->errorHandler ();
       _qt4xhb_createReturnClass ( ptr, "QXMLERRORHANDLER", false );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -202,16 +222,20 @@ HB_FUNC_STATIC( QXMLREADER_FEATURE )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTLOG(2) )
     {
+#endif
       bool par2;
       RBOOL( obj->feature ( PQSTRING(1), &par2 ) );
       hb_storl( par2, 2 );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -224,14 +248,18 @@ HB_FUNC_STATIC( QXMLREADER_HASFEATURE )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
+#endif
       RBOOL( obj->hasFeature ( PQSTRING(1) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -244,14 +272,18 @@ HB_FUNC_STATIC( QXMLREADER_HASPROPERTY )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
+#endif
       RBOOL( obj->hasProperty ( PQSTRING(1) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -264,15 +296,19 @@ HB_FUNC_STATIC( QXMLREADER_LEXICALHANDLER )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QXmlLexicalHandler * ptr = obj->lexicalHandler ();
       _qt4xhb_createReturnClass ( ptr, "QXMLLEXICALHANDLER", false );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -285,14 +321,18 @@ HB_FUNC_STATIC( QXMLREADER_PARSE )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQXMLINPUTSOURCE(1) )
     {
+#endif
       RBOOL( obj->parse ( PQXMLINPUTSOURCE(1) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -305,16 +345,20 @@ HB_FUNC_STATIC( QXMLREADER_PROPERTY )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTLOG(2) )
     {
+#endif
       bool par2;
       hb_retptr( (void *) obj->property ( PQSTRING(1), &par2 ) );
       hb_storl( par2, 2 );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -327,14 +371,18 @@ HB_FUNC_STATIC( QXMLREADER_SETCONTENTHANDLER )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQXMLCONTENTHANDLER(1) )
     {
+#endif
       obj->setContentHandler ( PQXMLCONTENTHANDLER(1) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -349,14 +397,18 @@ HB_FUNC_STATIC( QXMLREADER_SETDTDHANDLER )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQXMLDTDHANDLER(1) )
     {
+#endif
       obj->setDTDHandler ( PQXMLDTDHANDLER(1) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -371,14 +423,18 @@ HB_FUNC_STATIC( QXMLREADER_SETDECLHANDLER )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQXMLDECLHANDLER(1) )
     {
+#endif
       obj->setDeclHandler ( PQXMLDECLHANDLER(1) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -393,14 +449,18 @@ HB_FUNC_STATIC( QXMLREADER_SETENTITYRESOLVER )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQXMLENTITYRESOLVER(1) )
     {
+#endif
       obj->setEntityResolver ( PQXMLENTITYRESOLVER(1) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -415,14 +475,18 @@ HB_FUNC_STATIC( QXMLREADER_SETERRORHANDLER )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQXMLERRORHANDLER(1) )
     {
+#endif
       obj->setErrorHandler ( PQXMLERRORHANDLER(1) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -437,14 +501,18 @@ HB_FUNC_STATIC( QXMLREADER_SETFEATURE )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISCHAR(1) && ISLOG(2) )
     {
+#endif
       obj->setFeature ( PQSTRING(1), PBOOL(2) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -459,14 +527,18 @@ HB_FUNC_STATIC( QXMLREADER_SETLEXICALHANDLER )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQXMLLEXICALHANDLER(1) )
     {
+#endif
       obj->setLexicalHandler ( PQXMLLEXICALHANDLER(1) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -481,14 +553,18 @@ HB_FUNC_STATIC( QXMLREADER_SETPROPERTY )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISCHAR(1) && ISPOINTER(2) )
     {
+#endif
       obj->setProperty ( PQSTRING(1), (void *) hb_parptr(2) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );

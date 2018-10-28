@@ -76,14 +76,18 @@ HB_FUNC_STATIC( QXMLERRORHANDLER_ERROR )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1) )
     {
+#endif
       RBOOL( obj->error ( *PQXMLPARSEEXCEPTION(1) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -96,14 +100,18 @@ HB_FUNC_STATIC( QXMLERRORHANDLER_ERRORSTRING )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQSTRING( obj->errorString () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -116,14 +124,18 @@ HB_FUNC_STATIC( QXMLERRORHANDLER_FATALERROR )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1) )
     {
+#endif
       RBOOL( obj->fatalError ( *PQXMLPARSEEXCEPTION(1) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -136,14 +148,18 @@ HB_FUNC_STATIC( QXMLERRORHANDLER_WARNING )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1) )
     {
+#endif
       RBOOL( obj->warning ( *PQXMLPARSEEXCEPTION(1) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
