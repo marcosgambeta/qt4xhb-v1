@@ -83,14 +83,18 @@ HB_FUNC_STATIC( QDECORATIONDEFAULT_PAINT )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(2,4) && ISQPAINTER(1) && ISQWIDGET(2) && ISOPTNUM(3) && ISOPTNUM(4) )
     {
+#endif
       RBOOL( obj->paint ( PQPAINTER(1), PQWIDGET(2), OPINT(3,QDecoration::All), ISNIL(4)? (QDecoration::DecorationState) QDecoration::Normal : (QDecoration::DecorationState) hb_parni(4) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -103,15 +107,19 @@ HB_FUNC_STATIC( QDECORATIONDEFAULT_REGION )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(2,3) && ISQWIDGET(1) && ISQRECT(2) && ISOPTNUM(3) )
     {
+#endif
       QRegion * ptr = new QRegion( obj->region ( PQWIDGET(1), *PQRECT(2), OPINT(3,QDecoration::All) ) );
       _qt4xhb_createReturnClass ( ptr, "QREGION", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 

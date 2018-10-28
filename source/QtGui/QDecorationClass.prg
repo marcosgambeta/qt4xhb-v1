@@ -82,14 +82,18 @@ HB_FUNC_STATIC( QDECORATION_BUILDSYSMENU )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQWIDGET(1) && ISQMENU(2) )
     {
+#endif
       obj->buildSysMenu ( PQWIDGET(1), PQMENU(2) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -104,14 +108,18 @@ HB_FUNC_STATIC( QDECORATION_MENUTRIGGERED )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQWIDGET(1) && ISQACTION(2) )
     {
+#endif
       obj->menuTriggered ( PQWIDGET(1), PQACTION(2) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -126,14 +134,18 @@ HB_FUNC_STATIC( QDECORATION_PAINT )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(2,4) && ISQPAINTER(1) && ISQWIDGET(2) && ISOPTNUM(3) && ISOPTNUM(4) )
     {
+#endif
       RBOOL( obj->paint ( PQPAINTER(1), PQWIDGET(2), OPINT(3,QDecoration::All), ISNIL(4)? (QDecoration::DecorationState) QDecoration::Normal : (QDecoration::DecorationState) hb_parni(4) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -193,14 +205,18 @@ HB_FUNC_STATIC( QDECORATION_REGIONAT )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQWIDGET(1) && ISQPOINT(2) )
     {
+#endif
       RINT( obj->regionAt ( PQWIDGET(1), *PQPOINT(2) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -213,14 +229,18 @@ HB_FUNC_STATIC( QDECORATION_REGIONCLICKED )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQWIDGET(1) && ISNUM(2) )
     {
+#endif
       obj->regionClicked ( PQWIDGET(1), PINT(2) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -235,14 +255,18 @@ HB_FUNC_STATIC( QDECORATION_REGIONDOUBLECLICKED )
 
   if( obj )
   {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQWIDGET(1) && ISNUM(2) )
     {
+#endif
       obj->regionDoubleClicked ( PQWIDGET(1), PINT(2) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
