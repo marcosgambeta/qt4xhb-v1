@@ -637,15 +637,19 @@ static QByteArray encodeName ( const QString & fileName )
 */
 HB_FUNC_STATIC( QFILE_ENCODENAME )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
+#endif
       QByteArray * ptr = new QByteArray( QFile::encodeName ( PQSTRING(1) ) );
       _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*

@@ -1422,14 +1422,18 @@ static Type nameToType ( const char * name )
 */
 HB_FUNC_STATIC( QVARIANT_NAMETOTYPE )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
+#endif
       RENUM( QVariant::nameToType ( PCONSTCHAR(1) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1437,14 +1441,18 @@ static const char * typeToName ( Type typ )
 */
 HB_FUNC_STATIC( QVARIANT_TYPETONAME )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
   {
+#endif
       hb_retc( (const char *) QVariant::typeToName ( (QVariant::Type) hb_parni(1) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 HB_FUNC_STATIC( QVARIANT_NEWFROM )

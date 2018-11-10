@@ -440,15 +440,19 @@ static QTextCodec* codecForMib(int mib)
 */
 HB_FUNC_STATIC( QTEXTCODEC_CODECFORMIB )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
   {
+#endif
       QTextCodec * ptr = QTextCodec::codecForMib ( PINT(1) );
       _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC", false );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -456,8 +460,10 @@ static QList<QByteArray> availableCodecs()
 */
 HB_FUNC_STATIC( QTEXTCODEC_AVAILABLECODECS )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QList<QByteArray> list = QTextCodec::availableCodecs ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -488,11 +494,13 @@ HB_FUNC_STATIC( QTEXTCODEC_AVAILABLECODECS )
         }
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -500,15 +508,19 @@ static QList<int> availableMibs()
 */
 HB_FUNC_STATIC( QTEXTCODEC_AVAILABLEMIBS )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QList<int> list = QTextCodec::availableMibs ();
       _qt4xhb_convert_qlist_int_to_array ( list );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -516,15 +528,19 @@ static QTextCodec* codecForLocale()
 */
 HB_FUNC_STATIC( QTEXTCODEC_CODECFORLOCALE )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QTextCodec * ptr = QTextCodec::codecForLocale ();
       _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC", false );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -532,14 +548,18 @@ static void setCodecForLocale(QTextCodec *c)
 */
 HB_FUNC_STATIC( QTEXTCODEC_SETCODECFORLOCALE )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQTEXTCODEC(1) )
   {
+#endif
       QTextCodec::setCodecForLocale ( PQTEXTCODEC(1) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -549,15 +569,19 @@ static QTextCodec* codecForTr()
 */
 HB_FUNC_STATIC( QTEXTCODEC_CODECFORTR )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QTextCodec * ptr = QTextCodec::codecForTr ();
       _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC", false );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -565,14 +589,18 @@ static void setCodecForTr(QTextCodec *c)
 */
 HB_FUNC_STATIC( QTEXTCODEC_SETCODECFORTR )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQTEXTCODEC(1) )
   {
+#endif
       QTextCodec::setCodecForTr ( PQTEXTCODEC(1) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -582,15 +610,19 @@ static QTextCodec* codecForCStrings()
 */
 HB_FUNC_STATIC( QTEXTCODEC_CODECFORCSTRINGS )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QTextCodec * ptr = QTextCodec::codecForCStrings ();
       _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC", false );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -598,14 +630,18 @@ static void setCodecForCStrings(QTextCodec *c)
 */
 HB_FUNC_STATIC( QTEXTCODEC_SETCODECFORCSTRINGS )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQTEXTCODEC(1) )
   {
+#endif
       QTextCodec::setCodecForCStrings ( PQTEXTCODEC(1) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 
   hb_itemReturn( hb_stackSelfItem() );
 }

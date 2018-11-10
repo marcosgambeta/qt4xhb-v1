@@ -318,14 +318,18 @@ static bool registerResource ( const QString & rccFileName, const QString & mapR
 */
 HB_FUNC_STATIC( QRESOURCE_REGISTERRESOURCE )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
   {
+#endif
       RBOOL( QResource::registerResource ( PQSTRING(1), OPQSTRING(2,QString()) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -333,14 +337,18 @@ static bool unregisterResource ( const QString & rccFileName, const QString & ma
 */
 HB_FUNC_STATIC( QRESOURCE_UNREGISTERRESOURCE )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
   {
+#endif
       RBOOL( QResource::unregisterResource ( PQSTRING(1), OPQSTRING(2,QString()) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 HB_FUNC_STATIC( QRESOURCE_NEWFROM )

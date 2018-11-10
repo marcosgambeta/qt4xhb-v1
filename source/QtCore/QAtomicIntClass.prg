@@ -464,14 +464,18 @@ static bool isFetchAndAddNative ()
 */
 HB_FUNC_STATIC( QATOMICINT_ISFETCHANDADDNATIVE )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RBOOL( QAtomicInt::isFetchAndAddNative () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -479,14 +483,18 @@ static bool isFetchAndAddWaitFree ()
 */
 HB_FUNC_STATIC( QATOMICINT_ISFETCHANDADDWAITFREE )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RBOOL( QAtomicInt::isFetchAndAddWaitFree () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -494,14 +502,18 @@ static bool isFetchAndStoreNative ()
 */
 HB_FUNC_STATIC( QATOMICINT_ISFETCHANDSTORENATIVE )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RBOOL( QAtomicInt::isFetchAndStoreNative () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -509,14 +521,18 @@ static bool isFetchAndStoreWaitFree ()
 */
 HB_FUNC_STATIC( QATOMICINT_ISFETCHANDSTOREWAITFREE )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RBOOL( QAtomicInt::isFetchAndStoreWaitFree () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -524,14 +540,18 @@ static bool isReferenceCountingNative ()
 */
 HB_FUNC_STATIC( QATOMICINT_ISREFERENCECOUNTINGNATIVE )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RBOOL( QAtomicInt::isReferenceCountingNative () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -539,14 +559,18 @@ static bool isReferenceCountingWaitFree ()
 */
 HB_FUNC_STATIC( QATOMICINT_ISREFERENCECOUNTINGWAITFREE )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RBOOL( QAtomicInt::isReferenceCountingWaitFree () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -554,14 +578,18 @@ static bool isTestAndSetNative ()
 */
 HB_FUNC_STATIC( QATOMICINT_ISTESTANDSETNATIVE )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RBOOL( QAtomicInt::isTestAndSetNative () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -569,14 +597,18 @@ static bool isTestAndSetWaitFree ()
 */
 HB_FUNC_STATIC( QATOMICINT_ISTESTANDSETWAITFREE )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RBOOL( QAtomicInt::isTestAndSetWaitFree () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 HB_FUNC_STATIC( QATOMICINT_NEWFROM )

@@ -190,15 +190,19 @@ static QByteArray hash ( const QByteArray & data, Algorithm method )
 */
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_HASH )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISNUM(2) )
   {
+#endif
       QByteArray * ptr = new QByteArray( QCryptographicHash::hash ( *PQBYTEARRAY(1), (QCryptographicHash::Algorithm) hb_parni(2) ) );
       _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_NEWFROM )

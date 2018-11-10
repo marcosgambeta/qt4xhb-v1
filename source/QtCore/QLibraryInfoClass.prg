@@ -56,14 +56,18 @@ static QString licensee()
 */
 HB_FUNC_STATIC( QLIBRARYINFO_LICENSEE )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RQSTRING( QLibraryInfo::licensee () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -71,14 +75,18 @@ static QString licensedProducts()
 */
 HB_FUNC_STATIC( QLIBRARYINFO_LICENSEDPRODUCTS )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RQSTRING( QLibraryInfo::licensedProducts () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -86,14 +94,18 @@ static QString buildKey()
 */
 HB_FUNC_STATIC( QLIBRARYINFO_BUILDKEY )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RQSTRING( QLibraryInfo::buildKey () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -101,15 +113,19 @@ static QDate buildDate()
 */
 HB_FUNC_STATIC( QLIBRARYINFO_BUILDDATE )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QDate * ptr = new QDate( QLibraryInfo::buildDate () );
       _qt4xhb_createReturnClass ( ptr, "QDATE", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -117,14 +133,18 @@ static QString location(LibraryLocation)
 */
 HB_FUNC_STATIC( QLIBRARYINFO_LOCATION )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
   {
+#endif
       RQSTRING( QLibraryInfo::location ( (QLibraryInfo::LibraryLocation) hb_parni(1) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 HB_FUNC_STATIC( QLIBRARYINFO_NEWFROM )

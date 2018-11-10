@@ -1073,14 +1073,18 @@ static void addSearchPath(const QString & prefix, const QString & path)
 */
 HB_FUNC_STATIC( QDIR_ADDSEARCHPATH )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
+#endif
       QDir::addSearchPath ( PQSTRING(1), PQSTRING(2) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1090,14 +1094,18 @@ static QString cleanPath(const QString & path)
 */
 HB_FUNC_STATIC( QDIR_CLEANPATH )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
+#endif
       RQSTRING( QDir::cleanPath ( PQSTRING(1) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1105,15 +1113,19 @@ static QDir current()
 */
 HB_FUNC_STATIC( QDIR_CURRENT )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QDir * ptr = new QDir( QDir::current () );
       _qt4xhb_createReturnClass ( ptr, "QDIR", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1121,14 +1133,18 @@ static QString currentPath()
 */
 HB_FUNC_STATIC( QDIR_CURRENTPATH )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RQSTRING( QDir::currentPath () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1136,8 +1152,10 @@ static QFileInfoList drives()
 */
 HB_FUNC_STATIC( QDIR_DRIVES )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QFileInfoList list = QDir::drives ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -1168,11 +1186,13 @@ HB_FUNC_STATIC( QDIR_DRIVES )
         }
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1180,14 +1200,18 @@ static QString fromNativeSeparators(const QString & pathName)
 */
 HB_FUNC_STATIC( QDIR_FROMNATIVESEPARATORS )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
+#endif
       RQSTRING( QDir::fromNativeSeparators ( PQSTRING(1) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1195,15 +1219,19 @@ static QDir home()
 */
 HB_FUNC_STATIC( QDIR_HOME )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QDir * ptr = new QDir( QDir::home () );
       _qt4xhb_createReturnClass ( ptr, "QDIR", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1211,14 +1239,18 @@ static QString homePath()
 */
 HB_FUNC_STATIC( QDIR_HOMEPATH )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RQSTRING( QDir::homePath () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1226,14 +1258,18 @@ static bool isAbsolutePath(const QString & path)
 */
 HB_FUNC_STATIC( QDIR_ISABSOLUTEPATH )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
+#endif
       RBOOL( QDir::isAbsolutePath ( PQSTRING(1) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1241,14 +1277,18 @@ static bool isRelativePath(const QString & path)
 */
 HB_FUNC_STATIC( QDIR_ISRELATIVEPATH )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
+#endif
       RBOOL( QDir::isRelativePath ( PQSTRING(1) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1293,15 +1333,19 @@ static QDir root()
 */
 HB_FUNC_STATIC( QDIR_ROOT )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QDir * ptr = new QDir( QDir::root () );
       _qt4xhb_createReturnClass ( ptr, "QDIR", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1309,14 +1353,18 @@ static QString rootPath()
 */
 HB_FUNC_STATIC( QDIR_ROOTPATH )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RQSTRING( QDir::rootPath () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1324,14 +1372,18 @@ static QStringList searchPaths(const QString & prefix)
 */
 HB_FUNC_STATIC( QDIR_SEARCHPATHS )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
+#endif
       RQSTRINGLIST( QDir::searchPaths ( PQSTRING(1) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1339,15 +1391,19 @@ static QChar separator()
 */
 HB_FUNC_STATIC( QDIR_SEPARATOR )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QChar * ptr = new QChar( QDir::separator () );
       _qt4xhb_createReturnClass ( ptr, "QCHAR", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1355,14 +1411,18 @@ static bool setCurrent(const QString & path)
 */
 HB_FUNC_STATIC( QDIR_SETCURRENT )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
+#endif
       RBOOL( QDir::setCurrent ( PQSTRING(1) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1370,14 +1430,18 @@ static void setSearchPaths(const QString & prefix, const QStringList & searchPat
 */
 HB_FUNC_STATIC( QDIR_SETSEARCHPATHS )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISCHAR(1) && ISARRAY(2) )
   {
+#endif
       QDir::setSearchPaths ( PQSTRING(1), PQSTRINGLIST(2) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1387,15 +1451,19 @@ static QDir temp()
 */
 HB_FUNC_STATIC( QDIR_TEMP )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QDir * ptr = new QDir( QDir::temp () );
       _qt4xhb_createReturnClass ( ptr, "QDIR", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1403,14 +1471,18 @@ static QString tempPath()
 */
 HB_FUNC_STATIC( QDIR_TEMPPATH )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RQSTRING( QDir::tempPath () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1418,14 +1490,18 @@ static QString toNativeSeparators(const QString & pathName)
 */
 HB_FUNC_STATIC( QDIR_TONATIVESEPARATORS )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
+#endif
       RQSTRING( QDir::toNativeSeparators ( PQSTRING(1) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 HB_FUNC_STATIC( QDIR_NEWFROM )

@@ -872,14 +872,18 @@ static QString currentPath ( const QString & fileName = QString() )
 */
 HB_FUNC_STATIC( QFSFILEENGINE_CURRENTPATH )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
   {
+#endif
       RQSTRING( QFSFileEngine::currentPath ( OPQSTRING(1,QString()) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -940,14 +944,18 @@ static QString homePath ()
 */
 HB_FUNC_STATIC( QFSFILEENGINE_HOMEPATH )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RQSTRING( QFSFileEngine::homePath () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -955,14 +963,18 @@ static QString rootPath ()
 */
 HB_FUNC_STATIC( QFSFILEENGINE_ROOTPATH )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RQSTRING( QFSFileEngine::rootPath () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -970,14 +982,18 @@ static bool setCurrentPath ( const QString & path )
 */
 HB_FUNC_STATIC( QFSFILEENGINE_SETCURRENTPATH )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
+#endif
       RBOOL( QFSFileEngine::setCurrentPath ( PQSTRING(1) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -985,14 +1001,18 @@ static QString tempPath ()
 */
 HB_FUNC_STATIC( QFSFILEENGINE_TEMPPATH )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RQSTRING( QFSFileEngine::tempPath () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 #pragma ENDDUMP
