@@ -814,14 +814,18 @@ static bool equal ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 */
 HB_FUNC_STATIC( QURLINFO_EQUAL )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISQURLINFO(1) && ISQURLINFO(2) && ISNUM(3) )
   {
+#endif
       RBOOL( QUrlInfo::equal ( *PQURLINFO(1), *PQURLINFO(2), PINT(3) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -829,14 +833,18 @@ static bool greaterThan ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 */
 HB_FUNC_STATIC( QURLINFO_GREATERTHAN )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISQURLINFO(1) && ISQURLINFO(2) && ISNUM(3) )
   {
+#endif
       RBOOL( QUrlInfo::greaterThan ( *PQURLINFO(1), *PQURLINFO(2), PINT(3) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -844,14 +852,18 @@ static bool lessThan ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 */
 HB_FUNC_STATIC( QURLINFO_LESSTHAN )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISQURLINFO(1) && ISQURLINFO(2) && ISNUM(3) )
   {
+#endif
       RBOOL( QUrlInfo::lessThan ( *PQURLINFO(1), *PQURLINFO(2), PINT(3) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 HB_FUNC_STATIC( QURLINFO_NEWFROM )

@@ -484,15 +484,19 @@ static QNetworkProxy applicationProxy ()
 */
 HB_FUNC_STATIC( QNETWORKPROXY_APPLICATIONPROXY )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QNetworkProxy * ptr = new QNetworkProxy( QNetworkProxy::applicationProxy () );
       _qt4xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -500,14 +504,18 @@ static void setApplicationProxy ( const QNetworkProxy & networkProxy )
 */
 HB_FUNC_STATIC( QNETWORKPROXY_SETAPPLICATIONPROXY )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQNETWORKPROXY(1) )
   {
+#endif
       QNetworkProxy::setApplicationProxy ( *PQNETWORKPROXY(1) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 
   hb_itemReturn( hb_stackSelfItem() );
 }
