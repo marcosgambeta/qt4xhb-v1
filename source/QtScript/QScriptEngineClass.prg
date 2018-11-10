@@ -1008,15 +1008,19 @@ static QScriptSyntaxCheckResult checkSyntax ( const QString & program )
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_CHECKSYNTAX )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
+#endif
       QScriptSyntaxCheckResult * ptr = new QScriptSyntaxCheckResult( QScriptEngine::checkSyntax ( PQSTRING(1) ) );
       _qt4xhb_createReturnClass ( ptr, "QSCRIPTSYNTAXCHECKRESULT", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 void QScriptEngineSlots_connect_signal ( const QString & signal, const QString & slot );
