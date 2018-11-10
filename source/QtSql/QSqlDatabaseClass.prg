@@ -958,15 +958,19 @@ static QSqlDatabase cloneDatabase ( const QSqlDatabase & other, const QString & 
 */
 HB_FUNC_STATIC( QSQLDATABASE_CLONEDATABASE )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQSQLDATABASE(1) && ISCHAR(2) )
   {
+#endif
       QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::cloneDatabase ( *PQSQLDATABASE(1), PQSTRING(2) ) );
       _qt4xhb_createReturnClass ( ptr, "QSQLDATABASE", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -974,14 +978,18 @@ static QStringList connectionNames ()
 */
 HB_FUNC_STATIC( QSQLDATABASE_CONNECTIONNAMES )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RQSTRINGLIST( QSqlDatabase::connectionNames () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -989,14 +997,18 @@ static bool contains ( const QString & connectionName = QLatin1String( defaultCo
 */
 HB_FUNC_STATIC( QSQLDATABASE_CONTAINS )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
   {
+#endif
       RBOOL( QSqlDatabase::contains ( OPQSTRING(1,QLatin1String( QSqlDatabase::defaultConnection )) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1004,15 +1016,19 @@ static QSqlDatabase database ( const QString & connectionName = QLatin1String( d
 */
 HB_FUNC_STATIC( QSQLDATABASE_DATABASE )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,2) && ISOPTCHAR(1) && ISOPTLOG(2) )
   {
+#endif
       QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::database ( OPQSTRING(1,QLatin1String( QSqlDatabase::defaultConnection )), OPBOOL(2,true) ) );
       _qt4xhb_createReturnClass ( ptr, "QSQLDATABASE", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1020,14 +1036,18 @@ static QStringList drivers ()
 */
 HB_FUNC_STATIC( QSQLDATABASE_DRIVERS )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RQSTRINGLIST( QSqlDatabase::drivers () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1035,14 +1055,18 @@ static bool isDriverAvailable ( const QString & name )
 */
 HB_FUNC_STATIC( QSQLDATABASE_ISDRIVERAVAILABLE )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
+#endif
       RBOOL( QSqlDatabase::isDriverAvailable ( PQSTRING(1) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1050,14 +1074,18 @@ static void registerSqlDriver ( const QString & name, QSqlDriverCreatorBase * cr
 */
 HB_FUNC_STATIC( QSQLDATABASE_REGISTERSQLDRIVER )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISCHAR(1) && ISQSQLDRIVERCREATORBASE(2) )
   {
+#endif
       QSqlDatabase::registerSqlDriver ( PQSTRING(1), PQSQLDRIVERCREATORBASE(2) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1067,14 +1095,18 @@ static void removeDatabase ( const QString & connectionName )
 */
 HB_FUNC_STATIC( QSQLDATABASE_REMOVEDATABASE )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
+#endif
       QSqlDatabase::removeDatabase ( PQSTRING(1) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 
   hb_itemReturn( hb_stackSelfItem() );
 }
