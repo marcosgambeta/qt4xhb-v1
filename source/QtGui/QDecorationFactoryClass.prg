@@ -53,15 +53,19 @@ static QDecoration * create ( const QString & key )
 */
 HB_FUNC_STATIC( QDECORATIONFACTORY_CREATE )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
+#endif
       QDecoration * ptr = QDecorationFactory::create ( PQSTRING(1) );
       _qt4xhb_createReturnClass ( ptr, "QDECORATION", false );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -69,14 +73,18 @@ static QStringList keys ()
 */
 HB_FUNC_STATIC( QDECORATIONFACTORY_KEYS )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RQSTRINGLIST( QDecorationFactory::keys () );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 HB_FUNC_STATIC( QDECORATIONFACTORY_NEWFROM )

@@ -277,14 +277,18 @@ static void startMove ( QWidget * widget )
 */
 HB_FUNC_STATIC( QDECORATION_STARTMOVE )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
+#endif
       QDecoration::startMove ( PQWIDGET(1) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -294,14 +298,18 @@ static void startResize ( QWidget * widget )
 */
 HB_FUNC_STATIC( QDECORATION_STARTRESIZE )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
+#endif
       QDecoration::startResize ( PQWIDGET(1) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 
   hb_itemReturn( hb_stackSelfItem() );
 }

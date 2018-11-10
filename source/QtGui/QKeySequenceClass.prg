@@ -274,15 +274,19 @@ static QKeySequence fromString ( const QString & str, SequenceFormat format = Po
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_FROMSTRING )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
   {
+#endif
       QKeySequence * ptr = new QKeySequence( QKeySequence::fromString ( PQSTRING(1), ISNIL(2)? (QKeySequence::SequenceFormat) QKeySequence::PortableText : (QKeySequence::SequenceFormat) hb_parni(2) ) );
       _qt4xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -290,8 +294,10 @@ static QList<QKeySequence> keyBindings ( StandardKey key )
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_KEYBINDINGS )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
   {
+#endif
       QList<QKeySequence> list = QKeySequence::keyBindings ( (QKeySequence::StandardKey) hb_parni(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QKEYSEQUENCE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -322,11 +328,13 @@ HB_FUNC_STATIC( QKEYSEQUENCE_KEYBINDINGS )
         }
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -334,15 +342,19 @@ static QKeySequence mnemonic ( const QString & text )
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_MNEMONIC )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
+#endif
       QKeySequence * ptr = new QKeySequence( QKeySequence::mnemonic ( PQSTRING(1) ) );
       _qt4xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 HB_FUNC_STATIC( QKEYSEQUENCE_NEWFROM )

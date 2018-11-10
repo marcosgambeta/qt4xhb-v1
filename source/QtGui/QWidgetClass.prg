@@ -6255,10 +6255,34 @@ static QWidget * find ( WId id )
 HB_FUNC_STATIC( QWIDGET_FIND )
 {
 #ifdef Q_OS_WIN
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISPOINTER(1) )
   {
+#endif
       QWidget * ptr = QWidget::find ( (WId) hb_parptr(1) );
       _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+#endif
+}
+
+/*
+static QWidget * keyboardGrabber ()
+*/
+HB_FUNC_STATIC( QWIDGET_KEYBOARDGRABBER )
+{
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+  {
+#endif
+      QWidget * ptr = QWidget::keyboardGrabber ();
+      _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
@@ -6268,35 +6292,23 @@ HB_FUNC_STATIC( QWIDGET_FIND )
 }
 
 /*
-static QWidget * keyboardGrabber ()
-*/
-HB_FUNC_STATIC( QWIDGET_KEYBOARDGRABBER )
-{
-    if( ISNUMPAR(0) )
-  {
-      QWidget * ptr = QWidget::keyboardGrabber ();
-      _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
-
-/*
 static QWidget * mouseGrabber ()
 */
 HB_FUNC_STATIC( QWIDGET_MOUSEGRABBER )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QWidget * ptr = QWidget::mouseGrabber ();
       _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -6304,14 +6316,18 @@ static void setTabOrder ( QWidget * first, QWidget * second )
 */
 HB_FUNC_STATIC( QWIDGET_SETTABORDER )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQWIDGET(1) && ISQWIDGET(2) )
   {
+#endif
       QWidget::setTabOrder ( PQWIDGET(1), PQWIDGET(2) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 
   hb_itemReturn( hb_stackSelfItem() );
 }

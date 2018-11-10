@@ -241,14 +241,18 @@ static void split ( const QItemSelectionRange & range, const QItemSelectionRange
 */
 HB_FUNC_STATIC( QITEMSELECTION_SPLIT )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISQITEMSELECTIONRANGE(1) && ISQITEMSELECTIONRANGE(2) && ISQITEMSELECTION(3) )
   {
+#endif
       QItemSelection::split ( *PQITEMSELECTIONRANGE(1), *PQITEMSELECTIONRANGE(2), PQITEMSELECTION(3) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 
   hb_itemReturn( hb_stackSelfItem() );
 }

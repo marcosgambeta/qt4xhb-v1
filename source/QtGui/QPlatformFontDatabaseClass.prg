@@ -201,14 +201,18 @@ static void registerFont ( const QString & familyName, const QString & foundryNa
 */
 HB_FUNC_STATIC( QPLATFORMFONTDATABASE_REGISTERFONT )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(10) && ISCHAR(1) && ISCHAR(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISLOG(6) && ISLOG(7) && ISNUM(8) && ISQSUPPORTEDWRITINGSYSTEMS(9) && ISPOINTER(10) )
   {
+#endif
       QPlatformFontDatabase::registerFont ( PQSTRING(1), PQSTRING(2), (QFont::Weight) hb_parni(3), (QFont::Style) hb_parni(4), (QFont::Stretch) hb_parni(5), PBOOL(6), PBOOL(7), PINT(8), *PQSUPPORTEDWRITINGSYSTEMS(9), (void *) hb_parptr(10) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -218,14 +222,18 @@ static void registerQPF2Font ( const QByteArray & dataArray, void * handle )
 */
 HB_FUNC_STATIC( QPLATFORMFONTDATABASE_REGISTERQPF2FONT )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISPOINTER(2) )
   {
+#endif
       QPlatformFontDatabase::registerQPF2Font ( *PQBYTEARRAY(1), (void *) hb_parptr(2) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -353,15 +353,19 @@ static QMouseEvent *createExtendedMouseEvent(Type type, const QPointF &pos,const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_CREATEEXTENDEDMOUSEEVENT )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(6) && ISNUM(1) && ISQPOINTF(2) && ISQPOINT(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) )
   {
+#endif
       QMouseEvent * ptr = QMouseEvent::createExtendedMouseEvent ( (QEvent::Type) hb_parni(1), *PQPOINTF(2), *PQPOINT(3), (Qt::MouseButton) hb_parni(4), (Qt::MouseButtons) hb_parni(5), (Qt::KeyboardModifiers) hb_parni(6) );
       _qt4xhb_createReturnClass ( ptr, "QMOUSEEVENT" );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 #pragma ENDDUMP

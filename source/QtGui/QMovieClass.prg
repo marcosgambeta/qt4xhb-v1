@@ -857,8 +857,10 @@ static QList<QByteArray> supportedFormats ()
 */
 HB_FUNC_STATIC( QMOVIE_SUPPORTEDFORMATS )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QList<QByteArray> list = QMovie::supportedFormats ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -889,11 +891,13 @@ HB_FUNC_STATIC( QMOVIE_SUPPORTEDFORMATS )
         }
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 void QMovieSlots_connect_signal ( const QString & signal, const QString & slot );

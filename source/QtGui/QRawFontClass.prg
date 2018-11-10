@@ -837,15 +837,19 @@ static QRawFont fromFont ( const QFont & font, QFontDatabase::WritingSystem writ
 */
 HB_FUNC_STATIC( QRAWFONT_FROMFONT )
 {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQFONT(1) && ISOPTNUM(2) )
   {
+#endif
       QRawFont * ptr = new QRawFont( QRawFont::fromFont ( *PQFONT(1), ISNIL(2)? (QFontDatabase::WritingSystem) QFontDatabase::Any : (QFontDatabase::WritingSystem) hb_parni(2) ) );
       _qt4xhb_createReturnClass ( ptr, "QRAWFONT", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 HB_FUNC_STATIC( QRAWFONT_NEWFROM )
