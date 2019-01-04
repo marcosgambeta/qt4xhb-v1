@@ -40,6 +40,8 @@ PRGFLAGS = -n -w3 -gc3
 ifeq ($(HBCOMP),xharbour)
    PRGFLAGS = -n -w2
 endif
+# ative a linha abaixo para compilar sem REQUEST <ClassName>
+# PRGFLAGS += -DQT4XHB_NO_REQUESTS
 
 CC = g++
 
