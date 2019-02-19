@@ -25,9 +25,9 @@ $destructor
 
 $includes
 
-#include <QSqlError>
-#include <QSqlQuery>
-#include <QSqlRecord>
+#include <QtSql/QSqlError>
+#include <QtSql/QSqlQuery>
+#include <QtSql/QSqlRecord>
 
 $prototype=QSqlQueryModel ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
