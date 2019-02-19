@@ -58,7 +58,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QAudioDeviceInfo>
+#include <QtMultimedia/QAudioDeviceInfo>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

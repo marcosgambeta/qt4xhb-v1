@@ -45,13 +45,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QAbstractVideoSurface>
+#include <QtMultimedia/QAbstractVideoSurface>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QVideoSurfaceFormat>
+#include <QtMultimedia/QVideoSurfaceFormat>
 
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_DELETE )
 {

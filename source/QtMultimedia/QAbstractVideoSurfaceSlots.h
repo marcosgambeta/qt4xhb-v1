@@ -13,11 +13,11 @@
 #ifndef QABSTRACTVIDEOSURFACESLOTS_H
 #define QABSTRACTVIDEOSURFACESLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QAbstractVideoSurface>
+#include <QtMultimedia/QAbstractVideoSurface>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

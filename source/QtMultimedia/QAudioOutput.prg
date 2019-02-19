@@ -53,7 +53,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QAudioOutput>
+#include <QtMultimedia/QAudioOutput>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
