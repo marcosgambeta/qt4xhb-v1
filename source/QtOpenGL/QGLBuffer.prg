@@ -55,7 +55,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QGLBuffer>
+#include <QtOpenGL/QGLBuffer>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

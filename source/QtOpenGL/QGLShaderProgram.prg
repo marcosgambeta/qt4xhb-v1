@@ -109,7 +109,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QGLShaderProgram>
+#include <QtOpenGL/QGLShaderProgram>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

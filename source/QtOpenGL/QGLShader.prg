@@ -44,7 +44,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QGLShader>
+#include <QtOpenGL/QGLShader>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

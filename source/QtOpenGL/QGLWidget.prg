@@ -61,7 +61,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QGLWidget>
+#include <QtOpenGL/QGLWidget>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

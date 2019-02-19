@@ -99,7 +99,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QGLFunctions>
+#include <QtOpenGL/QGLFunctions>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
