@@ -51,16 +51,16 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QUiLoader>
+#include <QtUiTools/QUiLoader>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QStringList>
-#include <QDir>
-#include <QAction>
-#include <QLayout>
+#include <QtCore/QStringList>
+#include <QtCore/QDir>
+#include <QtGui/QAction>
+#include <QtGui/QLayout>
 
 /*
 QUiLoader ( QObject * parent = 0 )
