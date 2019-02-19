@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QAction>
+#include <QtGui/QAction>
 
 $deleteMethod
 

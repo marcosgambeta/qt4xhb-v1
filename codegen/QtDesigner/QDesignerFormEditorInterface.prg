@@ -25,12 +25,12 @@ $destructor
 
 $includes
 
-#include <QDesignerActionEditorInterface>
-#include <QExtensionManager>
-#include <QDesignerFormWindowManagerInterface>
-#include <QDesignerObjectInspectorInterface>
-#include <QDesignerPropertyEditorInterface>
-#include <QDesignerWidgetBoxInterface>
+#include <QtDesigner/QDesignerActionEditorInterface>
+#include <QtDesigner/QExtensionManager>
+#include <QtDesigner/QDesignerFormWindowManagerInterface>
+#include <QtDesigner/QDesignerObjectInspectorInterface>
+#include <QtDesigner/QDesignerPropertyEditorInterface>
+#include <QtDesigner/QDesignerWidgetBoxInterface>
 
 $prototype=QDesignerFormEditorInterface ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
