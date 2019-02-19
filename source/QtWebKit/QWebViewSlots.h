@@ -13,11 +13,11 @@
 #ifndef QWEBVIEWSLOTS_H
 #define QWEBVIEWSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QWebView>
+#include <QtWebKit/QWebView>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

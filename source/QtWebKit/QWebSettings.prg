@@ -77,13 +77,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QWebSettings>
+#include <QtWebKit/QWebSettings>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QUrl>
+#include <QtCore/QUrl>
 
 /*
 QString defaultTextEncoding () const

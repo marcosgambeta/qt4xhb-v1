@@ -50,13 +50,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QWebDatabase>
+#include <QtWebKit/QWebDatabase>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QWebSecurityOrigin>
+#include <QtWebKit/QWebSecurityOrigin>
 
 /*
 QWebDatabase ( const QWebDatabase & other )

@@ -76,15 +76,15 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QWebView>
+#include <QtWebKit/QWebView>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QWidget>
-#include <QUrl>
-#include <QAction>
+#include <QtGui/QWidget>
+#include <QtCore/QUrl>
+#include <QtGui/QAction>
 
 /*
 QWebView ( QWidget * parent = 0 )

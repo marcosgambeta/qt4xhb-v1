@@ -96,15 +96,15 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QWebFrame>
+#include <QtWebKit/QWebFrame>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QWebElement>
-#include <QWebSecurityOrigin>
-#include <QWebPage>
+#include <QtWebKit/QWebElement>
+#include <QtWebKit/QWebSecurityOrigin>
+#include <QtWebKit/QWebPage>
 
 /*
 void addToJavaScriptWindowObject ( const QString & name, QObject * object )

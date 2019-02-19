@@ -53,14 +53,14 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QWebSecurityOrigin>
+#include <QtWebKit/QWebSecurityOrigin>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QStringList>
-#include <QWebDatabase>
+#include <QtCore/QStringList>
+#include <QtWebKit/QWebDatabase>
 
 /*
 QWebSecurityOrigin ( const QWebSecurityOrigin & other )

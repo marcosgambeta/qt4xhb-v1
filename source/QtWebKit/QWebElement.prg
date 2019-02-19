@@ -98,13 +98,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QWebElement>
+#include <QtWebKit/QWebElement>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QWebFrame>
+#include <QtWebKit/QWebFrame>
 
 /*
 QWebElement ()

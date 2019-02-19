@@ -35,7 +35,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QWebHistoryInterface>
+#include <QtWebKit/QWebHistoryInterface>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

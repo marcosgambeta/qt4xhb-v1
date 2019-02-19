@@ -57,7 +57,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QWebHistory>
+#include <QtWebKit/QWebHistory>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

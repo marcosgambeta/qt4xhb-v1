@@ -107,18 +107,18 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QWebPage>
+#include <QtWebKit/QWebPage>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QVariant>
-#include <QAction>
-#include <QMenu>
-#include <QWebFrame>
-#include <QWebPluginFactory>
-#include <QUndoStack>
+#include <QtCore/QVariant>
+#include <QtGui/QAction>
+#include <QtGui/QMenu>
+#include <QtWebKit/QWebFrame>
+#include <QtWebKit/QWebPluginFactory>
+#include <QtGui/QUndoStack>
 
 /*
 QWebPage ( QObject * parent = 0 )

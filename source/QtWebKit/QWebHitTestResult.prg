@@ -64,13 +64,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QWebHitTestResult>
+#include <QtWebKit/QWebHitTestResult>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QWebElement>
+#include <QtWebKit/QWebElement>
 
 /*
 QWebHitTestResult ()

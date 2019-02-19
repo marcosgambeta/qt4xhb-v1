@@ -38,7 +38,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QWebInspector>
+#include <QtWebKit/QWebInspector>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
