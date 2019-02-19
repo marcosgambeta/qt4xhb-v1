@@ -52,13 +52,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QScriptClassPropertyIterator>
+#include <QtScript/QScriptClassPropertyIterator>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QScriptString>
+#include <QtScript/QScriptString>
 
 HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_DELETE )
 {

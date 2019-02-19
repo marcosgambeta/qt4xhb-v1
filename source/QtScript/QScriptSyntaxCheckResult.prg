@@ -45,7 +45,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QScriptSyntaxCheckResult>
+#include <QtScript/QScriptSyntaxCheckResult>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

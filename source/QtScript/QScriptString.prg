@@ -43,7 +43,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QScriptString>
+#include <QtScript/QScriptString>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

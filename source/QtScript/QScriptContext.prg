@@ -58,14 +58,14 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QScriptContext>
+#include <QtScript/QScriptContext>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QStringList>
-#include <QScriptEngine>
+#include <QtCore/QStringList>
+#include <QtScript/QScriptEngine>
 
 HB_FUNC_STATIC( QSCRIPTCONTEXT_DELETE )
 {

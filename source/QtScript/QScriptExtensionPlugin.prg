@@ -35,13 +35,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QScriptExtensionPlugin>
+#include <QtScript/QScriptExtensionPlugin>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QScriptValue>
+#include <QtScript/QScriptValue>
 
 HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_DELETE )
 {

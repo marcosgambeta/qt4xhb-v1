@@ -55,13 +55,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QScriptValueIterator>
+#include <QtScript/QScriptValueIterator>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QScriptString>
+#include <QtScript/QScriptString>
 
 /*
 QScriptValueIterator ( const QScriptValue & object )

@@ -55,13 +55,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QScriptEngineAgent>
+#include <QtScript/QScriptEngineAgent>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QScriptEngine>
+#include <QtScript/QScriptEngine>
 
 /*
 QScriptEngineAgent ( QScriptEngine * engine )
