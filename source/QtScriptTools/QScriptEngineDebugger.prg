@@ -50,16 +50,16 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QScriptEngineDebugger>
+#include <QtScriptTools/QScriptEngineDebugger>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QAction>
-#include <QMenu>
-#include <QToolBar>
-#include <QMainWindow>
+#include <QtGui/QAction>
+#include <QtGui/QMenu>
+#include <QtGui/QToolBar>
+#include <QtGui/QMainWindow>
 
 /*
 QScriptEngineDebugger ( QObject * parent = 0 )
