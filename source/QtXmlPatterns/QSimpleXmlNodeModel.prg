@@ -41,13 +41,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QSimpleXmlNodeModel>
+#include <QtXmlPatterns/QSimpleXmlNodeModel>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QVector>
+#include <QtCore/QVector>
 
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_DELETE )
 {

@@ -45,13 +45,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QXmlResultItems>
+#include <QtXmlPatterns/QXmlResultItems>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QXmlItem>
+#include <QtXmlPatterns/QXmlItem>
 
 /*
 QXmlResultItems ()

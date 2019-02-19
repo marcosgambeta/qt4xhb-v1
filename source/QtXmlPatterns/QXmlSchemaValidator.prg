@@ -56,16 +56,16 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QXmlSchemaValidator>
+#include <QtXmlPatterns/QXmlSchemaValidator>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QXmlSchema>
-#include <QAbstractMessageHandler>
-#include <QNetworkAccessManager>
-#include <QAbstractUriResolver>
+#include <QtXmlPatterns/QXmlSchema>
+#include <QtXmlPatterns/QAbstractMessageHandler>
+#include <QtNetwork/QNetworkAccessManager>
+#include <QtXmlPatterns/QAbstractUriResolver>
 
 /*
 QXmlSchemaValidator ()

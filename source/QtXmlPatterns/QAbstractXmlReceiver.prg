@@ -52,7 +52,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QAbstractXmlReceiver>
+#include <QtXmlPatterns/QAbstractXmlReceiver>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -48,16 +48,16 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QAbstractXmlNodeModel>
+#include <QtXmlPatterns/QAbstractXmlNodeModel>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QVariant>
-#include <QUrl>
-#include <QVector>
-#include <QSourceLocation>
+#include <QtCore/QVariant>
+#include <QtCore/QUrl>
+#include <QtCore/QVector>
+#include <QtXmlPatterns/QSourceLocation>
 
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_DELETE )
 {

@@ -61,15 +61,15 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QXmlQuery>
+#include <QtXmlPatterns/QXmlQuery>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QAbstractMessageHandler>
-#include <QNetworkAccessManager>
-#include <QAbstractUriResolver>
+#include <QtXmlPatterns/QAbstractMessageHandler>
+#include <QtNetwork/QNetworkAccessManager>
+#include <QtXmlPatterns/QAbstractUriResolver>
 
 /*
 QXmlQuery ()

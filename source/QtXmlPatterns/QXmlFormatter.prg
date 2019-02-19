@@ -44,7 +44,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QXmlFormatter>
+#include <QtXmlPatterns/QXmlFormatter>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
