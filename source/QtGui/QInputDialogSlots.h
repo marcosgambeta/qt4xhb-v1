@@ -13,11 +13,11 @@
 #ifndef QINPUTDIALOGSLOTS_H
 #define QINPUTDIALOGSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QInputDialog>
+#include <QtGui/QInputDialog>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

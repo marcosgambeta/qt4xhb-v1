@@ -34,7 +34,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QAccessibleEvent>
+#include <QtGui/QAccessibleEvent>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

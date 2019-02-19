@@ -79,14 +79,14 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QPixmap>
+#include <QtGui/QPixmap>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QBitmap>
-#include <QVariant>
+#include <QtGui/QBitmap>
+#include <QtCore/QVariant>
 
 /*
 QPixmap ()

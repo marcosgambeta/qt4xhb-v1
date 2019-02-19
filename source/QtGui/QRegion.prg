@@ -55,13 +55,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QRegion>
+#include <QtGui/QRegion>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QVector>
+#include <QtCore/QVector>
 
 /*
 QRegion ()

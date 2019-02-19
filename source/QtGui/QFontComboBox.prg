@@ -43,7 +43,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QFontComboBox>
+#include <QtGui/QFontComboBox>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -59,7 +59,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QProgressDialog>
+#include <QtGui/QProgressDialog>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -31,7 +31,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDateEdit>
+#include <QtGui/QDateEdit>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

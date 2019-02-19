@@ -39,7 +39,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QIntValidator>
+#include <QtGui/QIntValidator>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

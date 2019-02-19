@@ -13,11 +13,11 @@
 #ifndef QGRAPHICSSCALESLOTS_H
 #define QGRAPHICSSCALESLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QGraphicsScale>
+#include <QtGui/QGraphicsScale>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

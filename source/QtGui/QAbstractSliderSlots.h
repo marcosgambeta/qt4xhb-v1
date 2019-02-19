@@ -13,11 +13,11 @@
 #ifndef QABSTRACTSLIDERSLOTS_H
 #define QABSTRACTSLIDERSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QAbstractSlider>
+#include <QtGui/QAbstractSlider>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

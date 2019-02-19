@@ -36,7 +36,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QPaintEvent>
+#include <QtGui/QPaintEvent>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

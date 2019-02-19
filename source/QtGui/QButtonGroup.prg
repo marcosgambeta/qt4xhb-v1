@@ -50,13 +50,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QButtonGroup>
+#include <QtGui/QButtonGroup>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QAbstractButton>
+#include <QtGui/QAbstractButton>
 
 /*
 QButtonGroup ( QObject * parent = 0 )

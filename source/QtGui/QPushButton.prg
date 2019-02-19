@@ -39,7 +39,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QPushButton>
+#include <QtGui/QPushButton>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

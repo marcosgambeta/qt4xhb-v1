@@ -61,14 +61,14 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QImageIOHandler>
+#include <QtGui/QImageIOHandler>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QRect>
-#include <QVariant>
+#include <QtCore/QRect>
+#include <QtCore/QVariant>
 
 HB_FUNC_STATIC( QIMAGEIOHANDLER_DELETE )
 {

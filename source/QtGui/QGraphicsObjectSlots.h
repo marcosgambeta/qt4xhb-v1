@@ -13,11 +13,11 @@
 #ifndef QGRAPHICSOBJECTSLOTS_H
 #define QGRAPHICSOBJECTSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QGraphicsObject>
+#include <QtGui/QGraphicsObject>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -43,7 +43,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QRadialGradient>
+#include <QtGui/QRadialGradient>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

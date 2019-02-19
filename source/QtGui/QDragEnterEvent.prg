@@ -32,7 +32,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDragEnterEvent>
+#include <QtGui/QDragEnterEvent>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -61,7 +61,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QPaintEngine>
+#include <QtGui/QPaintEngine>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

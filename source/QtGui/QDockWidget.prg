@@ -52,13 +52,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDockWidget>
+#include <QtGui/QDockWidget>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QAction>
+#include <QtGui/QAction>
 
 /*
 QDockWidget ( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags = 0 )

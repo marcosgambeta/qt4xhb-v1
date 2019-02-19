@@ -34,7 +34,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QRadioButton>
+#include <QtGui/QRadioButton>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

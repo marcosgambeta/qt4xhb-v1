@@ -128,13 +128,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QColor>
+#include <QtGui/QColor>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QVariant>
+#include <QtCore/QVariant>
 
 /*
 QColor ()

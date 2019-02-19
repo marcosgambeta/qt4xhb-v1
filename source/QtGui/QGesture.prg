@@ -41,7 +41,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QGesture>
+#include <QtGui/QGesture>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

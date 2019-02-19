@@ -125,22 +125,22 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QApplication>
+#include <QtGui/QApplication>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QFont>
-#include <QLocale>
-#include <QIcon>
-#include <QSessionManager>
-#include <QFontMetrics>
-#include <QPalette>
-#include <QInputContext>
-#include <QClipboard>
-#include <QDesktopWidget>
-#include <QStyle>
+#include <QtGui/QFont>
+#include <QtCore/QLocale>
+#include <QtGui/QIcon>
+#include <QtGui/QSessionManager>
+#include <QtGui/QFontMetrics>
+#include <QtGui/QPalette>
+#include <QtGui/QInputContext>
+#include <QtGui/QClipboard>
+#include <QtGui/QDesktopWidget>
+#include <QtGui/QStyle>
 
 //QApplication ( int & argc, char ** argv )
 //QApplication ( int & argc, char ** argv, bool GUIenabled )

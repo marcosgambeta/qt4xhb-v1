@@ -56,7 +56,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QPolygon>
+#include <QtGui/QPolygon>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -13,11 +13,11 @@
 #ifndef QPROGRESSDIALOGSLOTS_H
 #define QPROGRESSDIALOGSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QProgressDialog>
+#include <QtGui/QProgressDialog>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

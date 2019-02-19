@@ -67,14 +67,14 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QToolBar>
+#include <QtGui/QToolBar>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QIcon>
-#include <QAction>
+#include <QtGui/QIcon>
+#include <QtGui/QAction>
 
 /*
 QToolBar ( const QString & title, QWidget * parent = 0 )

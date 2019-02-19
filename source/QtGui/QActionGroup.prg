@@ -47,7 +47,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QActionGroup>
+#include <QtGui/QActionGroup>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

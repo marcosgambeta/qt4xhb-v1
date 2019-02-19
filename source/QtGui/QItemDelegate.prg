@@ -37,7 +37,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QItemDelegate>
+#include <QtGui/QItemDelegate>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

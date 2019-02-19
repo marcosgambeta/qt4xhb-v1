@@ -46,7 +46,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QGroupBox>
+#include <QtGui/QGroupBox>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

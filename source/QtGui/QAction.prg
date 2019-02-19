@@ -100,13 +100,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QAction>
+#include <QtGui/QAction>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QMenu>
+#include <QtGui/QMenu>
 
 /*
 QAction ( QObject * parent )

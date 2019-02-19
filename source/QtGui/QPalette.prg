@@ -74,7 +74,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QPalette>
+#include <QtGui/QPalette>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

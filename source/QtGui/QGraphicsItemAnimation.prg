@@ -56,15 +56,15 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QGraphicsItemAnimation>
+#include <QtGui/QGraphicsItemAnimation>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QMatrix>
-#include <QPointF>
-#include <QTimeLine>
+#include <QtGui/QMatrix>
+#include <QtCore/QPointF>
+#include <QtCore/QTimeLine>
 
 /*
 QGraphicsItemAnimation ( QObject * parent = 0 )

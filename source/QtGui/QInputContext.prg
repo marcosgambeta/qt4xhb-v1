@@ -49,13 +49,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QInputContext>
+#include <QtGui/QInputContext>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QTextFormat>
+#include <QtGui/QTextFormat>
 
 HB_FUNC_STATIC( QINPUTCONTEXT_DELETE )
 {

@@ -40,14 +40,14 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QAbstractGraphicsShapeItem>
+#include <QtGui/QAbstractGraphicsShapeItem>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QBrush>
-#include <QPen>
+#include <QtGui/QBrush>
+#include <QtGui/QPen>
 
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_DELETE )
 {

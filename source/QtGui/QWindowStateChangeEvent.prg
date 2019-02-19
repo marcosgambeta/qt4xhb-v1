@@ -34,7 +34,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QWindowStateChangeEvent>
+#include <QtGui/QWindowStateChangeEvent>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -104,16 +104,16 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QLineEdit>
+#include <QtGui/QLineEdit>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QVariant>
-#include <QCompleter>
-#include <QMenu>
-#include <QValidator>
+#include <QtCore/QVariant>
+#include <QtGui/QCompleter>
+#include <QtGui/QMenu>
+#include <QtGui/QValidator>
 
 /*
 QLineEdit ( QWidget * parent = 0 )

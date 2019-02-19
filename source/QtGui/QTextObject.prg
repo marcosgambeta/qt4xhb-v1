@@ -36,13 +36,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QTextObject>
+#include <QtGui/QTextObject>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QTextDocument>
+#include <QtGui/QTextDocument>
 
 /*
 QTextDocument * document () const

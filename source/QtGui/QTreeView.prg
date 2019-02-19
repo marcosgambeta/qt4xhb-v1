@@ -95,13 +95,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QTreeView>
+#include <QtGui/QTreeView>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QHeaderView>
+#include <QtGui/QHeaderView>
 
 /*
 QTreeView ( QWidget * parent = 0 )

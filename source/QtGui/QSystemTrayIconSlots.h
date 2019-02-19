@@ -13,11 +13,11 @@
 #ifndef QSYSTEMTRAYICONSLOTS_H
 #define QSYSTEMTRAYICONSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QSystemTrayIcon>
+#include <QtGui/QSystemTrayIcon>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

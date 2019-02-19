@@ -53,7 +53,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QWorkspace>
+#include <QtGui/QWorkspace>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

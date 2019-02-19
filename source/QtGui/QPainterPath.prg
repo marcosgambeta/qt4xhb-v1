@@ -85,7 +85,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QPainterPath>
+#include <QtGui/QPainterPath>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

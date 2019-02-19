@@ -55,7 +55,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QGraphicsLinearLayout>
+#include <QtGui/QGraphicsLinearLayout>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

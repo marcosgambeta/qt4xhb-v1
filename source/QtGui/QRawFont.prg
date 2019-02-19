@@ -71,13 +71,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QRawFont>
+#include <QtGui/QRawFont>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QImage>
+#include <QtGui/QImage>
 
 /*
 QRawFont ()

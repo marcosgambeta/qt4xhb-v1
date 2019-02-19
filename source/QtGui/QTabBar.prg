@@ -90,14 +90,14 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QTabBar>
+#include <QtGui/QTabBar>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QVariant>
-#include <QIcon>
+#include <QtCore/QVariant>
+#include <QtGui/QIcon>
 
 /*
 QTabBar ( QWidget * parent = 0 )

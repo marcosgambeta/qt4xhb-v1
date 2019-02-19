@@ -47,7 +47,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QIconEngine>
+#include <QtGui/QIconEngine>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

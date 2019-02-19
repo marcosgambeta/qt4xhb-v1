@@ -54,7 +54,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDoubleSpinBox>
+#include <QtGui/QDoubleSpinBox>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

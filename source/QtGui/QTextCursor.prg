@@ -106,17 +106,17 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QTextCursor>
+#include <QtGui/QTextCursor>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QTextBlock>
-#include <QTextDocumentFragment>
-#include <QTextList>
-#include <QTextTable>
-#include <QTextDocument>
+#include <QtGui/QTextBlock>
+#include <QtGui/QTextDocumentFragment>
+#include <QtGui/QTextList>
+#include <QtGui/QTextTable>
+#include <QtGui/QTextDocument>
 
 /*
 QTextCursor ()

@@ -86,13 +86,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QStandardItemModel>
+#include <QtGui/QStandardItemModel>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QMimeData>
+#include <QtCore/QMimeData>
 
 /*
 QStandardItemModel(QObject *parent = 0)

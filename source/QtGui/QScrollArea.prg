@@ -45,7 +45,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QScrollArea>
+#include <QtGui/QScrollArea>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

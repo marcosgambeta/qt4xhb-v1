@@ -13,11 +13,11 @@
 #ifndef QBUTTONGROUPSLOTS_H
 #define QBUTTONGROUPSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QButtonGroup>
+#include <QtGui/QButtonGroup>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

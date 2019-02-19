@@ -73,14 +73,14 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QMessageBox>
+#include <QtGui/QMessageBox>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QPushButton>
-#include <QAbstractButton>
+#include <QtGui/QPushButton>
+#include <QtGui/QAbstractButton>
 
 /*
 QMessageBox ( QWidget * parent = 0 )

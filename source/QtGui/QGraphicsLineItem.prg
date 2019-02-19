@@ -47,13 +47,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QGraphicsLineItem>
+#include <QtGui/QGraphicsLineItem>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QPen>
+#include <QtGui/QPen>
 
 /*
 QGraphicsLineItem ( QGraphicsItem * parent = 0 )

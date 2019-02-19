@@ -79,13 +79,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QTableView>
+#include <QtGui/QTableView>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QHeaderView>
+#include <QtGui/QHeaderView>
 
 /*
 QTableView ( QWidget * parent = 0 )

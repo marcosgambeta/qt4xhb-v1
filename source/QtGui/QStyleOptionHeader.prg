@@ -50,7 +50,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QStyleOptionHeader>
+#include <QtGui/QStyleOptionHeader>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

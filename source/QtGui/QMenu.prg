@@ -72,7 +72,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QMenu>
+#include <QtGui/QMenu>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

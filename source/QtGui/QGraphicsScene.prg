@@ -118,18 +118,18 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QGraphicsScene>
+#include <QtGui/QGraphicsScene>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QVariant>
-#include <QPalette>
-#include <QGraphicsWidget>
-#include <QGraphicsTextItem>
-#include <QGraphicsProxyWidget>
-#include <QStyle>
+#include <QtCore/QVariant>
+#include <QtGui/QPalette>
+#include <QtGui/QGraphicsWidget>
+#include <QtGui/QGraphicsTextItem>
+#include <QtGui/QGraphicsProxyWidget>
+#include <QtGui/QStyle>
 
 /*
 QGraphicsScene ( QObject * parent = 0 )

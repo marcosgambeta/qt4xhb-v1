@@ -44,7 +44,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QFileIconProvider>
+#include <QtGui/QFileIconProvider>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

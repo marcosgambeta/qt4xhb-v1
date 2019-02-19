@@ -39,7 +39,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QIconEngineV2>
+#include <QtGui/QIconEngineV2>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

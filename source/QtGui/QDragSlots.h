@@ -13,11 +13,11 @@
 #ifndef QDRAGSLOTS_H
 #define QDRAGSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QDrag>
+#include <QtGui/QDrag>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -38,7 +38,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QWindowsMime>
+#include <QtGui/QWindowsMime>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

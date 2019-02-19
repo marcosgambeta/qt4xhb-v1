@@ -42,7 +42,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDecorationFactory>
+#include <QtGui/QDecorationFactory>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

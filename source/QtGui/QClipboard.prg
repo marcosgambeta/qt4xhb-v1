@@ -52,15 +52,15 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QClipboard>
+#include <QtGui/QClipboard>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QImage>
-#include <QMimeData>
-#include <QPixmap>
+#include <QtGui/QImage>
+#include <QtCore/QMimeData>
+#include <QtGui/QPixmap>
 
 /*
 void clear ( Mode mode = Clipboard )

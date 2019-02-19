@@ -13,11 +13,11 @@
 #ifndef QGRAPHICSTEXTITEMSLOTS_H
 #define QGRAPHICSTEXTITEMSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QGraphicsTextItem>
+#include <QtGui/QGraphicsTextItem>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

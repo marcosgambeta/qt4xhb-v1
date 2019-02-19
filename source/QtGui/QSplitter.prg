@@ -63,7 +63,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QSplitter>
+#include <QtGui/QSplitter>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

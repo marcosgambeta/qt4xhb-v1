@@ -47,13 +47,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QGraphicsSceneDragDropEvent>
+#include <QtGui/QGraphicsSceneDragDropEvent>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QMimeData>
+#include <QtCore/QMimeData>
 
 HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_DELETE )
 {

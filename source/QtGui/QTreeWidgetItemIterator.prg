@@ -41,7 +41,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QTreeWidgetItemIterator>
+#include <QtGui/QTreeWidgetItemIterator>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

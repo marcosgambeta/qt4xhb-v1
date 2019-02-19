@@ -189,16 +189,16 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QGraphicsItem>
+#include <QtGui/QGraphicsItem>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QCursor>
-#include <QGraphicsEffect>
-#include <QGraphicsWidget>
-#include <QGraphicsScene>
+#include <QtGui/QCursor>
+#include <QtGui/QGraphicsEffect>
+#include <QtGui/QGraphicsWidget>
+#include <QtGui/QGraphicsScene>
 
 HB_FUNC_STATIC( QGRAPHICSITEM_DELETE )
 {

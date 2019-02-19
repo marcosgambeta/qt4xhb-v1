@@ -13,11 +13,11 @@
 #ifndef QSTACKEDWIDGETSLOTS_H
 #define QSTACKEDWIDGETSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QStackedWidget>
+#include <QtGui/QStackedWidget>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

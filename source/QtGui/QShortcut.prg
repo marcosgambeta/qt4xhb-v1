@@ -49,7 +49,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QShortcut>
+#include <QtGui/QShortcut>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

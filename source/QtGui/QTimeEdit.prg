@@ -31,7 +31,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QTimeEdit>
+#include <QtGui/QTimeEdit>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -48,7 +48,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QFrame>
+#include <QtGui/QFrame>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

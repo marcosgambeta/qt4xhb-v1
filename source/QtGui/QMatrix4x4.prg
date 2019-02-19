@@ -76,14 +76,14 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QMatrix4x4>
+#include <QtGui/QMatrix4x4>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QMatrix>
-#include <QTransform>
+#include <QtGui/QMatrix>
+#include <QtGui/QTransform>
 
 /*
 QMatrix4x4 ()

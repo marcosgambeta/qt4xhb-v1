@@ -95,13 +95,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QGraphicsWidget>
+#include <QtGui/QGraphicsWidget>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QStyle>
+#include <QtGui/QStyle>
 
 /*
 QGraphicsWidget ( QGraphicsItem * parent = 0, Qt::WindowFlags wFlags = 0 )

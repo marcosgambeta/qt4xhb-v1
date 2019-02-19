@@ -54,7 +54,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QFontInfo>
+#include <QtGui/QFontInfo>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -47,7 +47,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QTableWidgetSelectionRange>
+#include <QtGui/QTableWidgetSelectionRange>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

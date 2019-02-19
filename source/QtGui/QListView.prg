@@ -69,7 +69,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QListView>
+#include <QtGui/QListView>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -123,7 +123,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QStandardItem>
+#include <QtGui/QStandardItem>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -63,13 +63,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QBrush>
+#include <QtGui/QBrush>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QVariant>
+#include <QtCore/QVariant>
 
 /*
 QBrush ()

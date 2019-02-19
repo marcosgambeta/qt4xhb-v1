@@ -101,14 +101,14 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QFont>
+#include <QtGui/QFont>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QStringList>
-#include <QVariant>
+#include <QtCore/QStringList>
+#include <QtCore/QVariant>
 
 /*
 QFont ()

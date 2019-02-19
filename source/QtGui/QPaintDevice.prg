@@ -54,7 +54,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QPaintDevice>
+#include <QtGui/QPaintDevice>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

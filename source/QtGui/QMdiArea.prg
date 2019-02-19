@@ -65,13 +65,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QMdiArea>
+#include <QtGui/QMdiArea>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QMdiSubWindow>
+#include <QtGui/QMdiSubWindow>
 
 /*
 QMdiArea ( QWidget * parent = 0 )

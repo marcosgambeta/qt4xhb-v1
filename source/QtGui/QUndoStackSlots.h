@@ -13,11 +13,11 @@
 #ifndef QUNDOSTACKSLOTS_H
 #define QUNDOSTACKSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QUndoStack>
+#include <QtGui/QUndoStack>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -40,7 +40,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QSound>
+#include <QtGui/QSound>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

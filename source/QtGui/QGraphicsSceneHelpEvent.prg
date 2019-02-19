@@ -35,7 +35,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QGraphicsSceneHelpEvent>
+#include <QtGui/QGraphicsSceneHelpEvent>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

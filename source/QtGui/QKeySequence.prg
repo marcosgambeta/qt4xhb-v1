@@ -48,13 +48,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QKeySequence>
+#include <QtGui/QKeySequence>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QList>
+#include <QtCore/QList>
 
 /*
 QKeySequence ()

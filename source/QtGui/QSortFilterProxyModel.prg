@@ -88,16 +88,16 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QSortFilterProxyModel>
+#include <QtGui/QSortFilterProxyModel>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QItemSelection>
-#include <QStringList>
-#include <QSize>
-#include <QMimeData>
+#include <QtGui/QItemSelection>
+#include <QtCore/QStringList>
+#include <QtCore/QSize>
+#include <QtCore/QMimeData>
 
 /*
 QSortFilterProxyModel ( QObject * parent = 0 )

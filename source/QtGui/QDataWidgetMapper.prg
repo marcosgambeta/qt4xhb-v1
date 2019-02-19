@@ -64,14 +64,14 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDataWidgetMapper>
+#include <QtGui/QDataWidgetMapper>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QModelIndex>
-#include <QAbstractItemDelegate>
+#include <QtCore/QModelIndex>
+#include <QtGui/QAbstractItemDelegate>
 
 /*
 QDataWidgetMapper ( QObject * parent = 0 )

@@ -95,15 +95,15 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QFileDialog>
+#include <QtGui/QFileDialog>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QUrl>
-#include <QAbstractItemDelegate>
-#include <QAbstractProxyModel>
+#include <QtCore/QUrl>
+#include <QtGui/QAbstractItemDelegate>
+#include <QtGui/QAbstractProxyModel>
 
 /*
 QFileDialog ( QWidget * parent, Qt::WindowFlags flags )

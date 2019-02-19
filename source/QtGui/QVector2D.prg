@@ -59,14 +59,14 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QVector2D>
+#include <QtGui/QVector2D>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QVector3D>
-#include <QVector4D>
+#include <QtGui/QVector3D>
+#include <QtGui/QVector4D>
 
 /*
 QVector2D ()

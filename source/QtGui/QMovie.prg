@@ -76,14 +76,14 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QMovie>
+#include <QtGui/QMovie>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QColor>
-#include <QPixmap>
+#include <QtGui/QColor>
+#include <QtGui/QPixmap>
 
 /*
 QMovie ( QObject * parent = 0 )

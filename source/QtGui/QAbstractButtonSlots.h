@@ -13,11 +13,11 @@
 #ifndef QABSTRACTBUTTONSLOTS_H
 #define QABSTRACTBUTTONSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QAbstractButton>
+#include <QtGui/QAbstractButton>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -50,13 +50,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QTextTable>
+#include <QtGui/QTextTable>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QTextCursor>
+#include <QtGui/QTextCursor>
 
 HB_FUNC_STATIC( QTEXTTABLE_DELETE )
 {

@@ -43,7 +43,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QGraphicsRectItem>
+#include <QtGui/QGraphicsRectItem>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

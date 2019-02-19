@@ -13,11 +13,11 @@
 #ifndef QABSTRACTITEMVIEWSLOTS_H
 #define QABSTRACTITEMVIEWSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QAbstractItemView>
+#include <QtGui/QAbstractItemView>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

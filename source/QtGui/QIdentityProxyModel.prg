@@ -49,13 +49,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QIdentityProxyModel>
+#include <QtGui/QIdentityProxyModel>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QItemSelection>
+#include <QtGui/QItemSelection>
 
 /*
 QIdentityProxyModel ( QObject * parent = 0 )

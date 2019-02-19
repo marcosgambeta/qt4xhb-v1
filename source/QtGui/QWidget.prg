@@ -313,20 +313,20 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QWidget>
+#include <QtGui/QWidget>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QIcon>
-#include <QVariant>
-#include <QLocale>
-#include <QGraphicsEffect>
-#include <QGraphicsProxyWidget>
-#include <QInputContext>
-#include <QLayout>
-#include <QStyle>
+#include <QtGui/QIcon>
+#include <QtCore/QVariant>
+#include <QtCore/QLocale>
+#include <QtGui/QGraphicsEffect>
+#include <QtGui/QGraphicsProxyWidget>
+#include <QtGui/QInputContext>
+#include <QtGui/QLayout>
+#include <QtGui/QStyle>
 
 /*
 QWidget ( QWidget * parent = 0, Qt::WindowFlags f = 0 )

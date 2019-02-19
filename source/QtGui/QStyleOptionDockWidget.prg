@@ -39,7 +39,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QStyleOptionDockWidget>
+#include <QtGui/QStyleOptionDockWidget>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

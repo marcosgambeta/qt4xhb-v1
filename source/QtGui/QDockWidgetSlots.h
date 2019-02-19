@@ -13,11 +13,11 @@
 #ifndef QDOCKWIDGETSLOTS_H
 #define QDOCKWIDGETSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QDockWidget>
+#include <QtGui/QDockWidget>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

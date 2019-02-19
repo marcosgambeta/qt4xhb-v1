@@ -52,7 +52,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QTabletEvent>
+#include <QtGui/QTabletEvent>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

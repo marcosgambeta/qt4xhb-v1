@@ -44,7 +44,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QStyleOptionGroupBox>
+#include <QtGui/QStyleOptionGroupBox>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -29,7 +29,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QTextBlockGroup>
+#include <QtGui/QTextBlockGroup>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -33,7 +33,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QStyleOptionSizeGrip>
+#include <QtGui/QStyleOptionSizeGrip>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

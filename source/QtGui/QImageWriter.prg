@@ -62,7 +62,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QImageWriter>
+#include <QtGui/QImageWriter>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

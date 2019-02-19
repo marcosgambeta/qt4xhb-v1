@@ -45,7 +45,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QSessionManager>
+#include <QtGui/QSessionManager>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

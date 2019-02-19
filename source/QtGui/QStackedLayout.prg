@@ -45,7 +45,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QStackedLayout>
+#include <QtGui/QStackedLayout>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

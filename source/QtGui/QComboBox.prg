@@ -117,15 +117,15 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QComboBox>
+#include <QtGui/QComboBox>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QCompleter>
-#include <QLineEdit>
-#include <QAbstractItemView>
+#include <QtGui/QCompleter>
+#include <QtGui/QLineEdit>
+#include <QtGui/QAbstractItemView>
 
 /*
 QComboBox ( QWidget * parent = 0 )

@@ -44,7 +44,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QMimeSource>
+#include <QtGui/QMimeSource>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

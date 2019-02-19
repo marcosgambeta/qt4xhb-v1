@@ -13,11 +13,11 @@
 #ifndef QGRAPHICSCOLORIZEEFFECTSLOTS_H
 #define QGRAPHICSCOLORIZEEFFECTSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QGraphicsColorizeEffect>
+#include <QtGui/QGraphicsColorizeEffect>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

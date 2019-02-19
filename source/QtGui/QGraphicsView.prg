@@ -101,13 +101,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QGraphicsView>
+#include <QtGui/QGraphicsView>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QVariant>
+#include <QtCore/QVariant>
 
 /*
 QGraphicsView ( QWidget * parent = 0 )

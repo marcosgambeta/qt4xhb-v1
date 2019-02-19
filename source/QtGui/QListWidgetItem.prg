@@ -82,7 +82,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QListWidgetItem>
+#include <QtGui/QListWidgetItem>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -13,11 +13,11 @@
 #ifndef QTOOLBARSLOTS_H
 #define QTOOLBARSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QToolBar>
+#include <QtGui/QToolBar>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

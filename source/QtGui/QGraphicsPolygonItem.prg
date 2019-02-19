@@ -46,7 +46,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QGraphicsPolygonItem>
+#include <QtGui/QGraphicsPolygonItem>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

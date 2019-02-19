@@ -42,7 +42,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QWheelEvent>
+#include <QtGui/QWheelEvent>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

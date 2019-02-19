@@ -72,14 +72,14 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QCompleter>
+#include <QtGui/QCompleter>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QStringList>
-#include <QAbstractItemView>
+#include <QtCore/QStringList>
+#include <QtGui/QAbstractItemView>
 
 /*
 QCompleter ( QObject * parent = 0 )

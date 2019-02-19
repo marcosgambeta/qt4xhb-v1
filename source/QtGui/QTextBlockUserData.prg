@@ -40,7 +40,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QTextBlockUserData>
+#include <QtGui/QTextBlockUserData>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

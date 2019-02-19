@@ -13,11 +13,11 @@
 #ifndef QMESSAGEBOXSLOTS_H
 #define QMESSAGEBOXSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QMessageBox>
+#include <QtGui/QMessageBox>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

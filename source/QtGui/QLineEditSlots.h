@@ -13,11 +13,11 @@
 #ifndef QLINEEDITSLOTS_H
 #define QLINEEDITSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QLineEdit>
+#include <QtGui/QLineEdit>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

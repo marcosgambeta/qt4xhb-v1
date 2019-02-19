@@ -66,13 +66,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QAbstractButton>
+#include <QtGui/QAbstractButton>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QButtonGroup>
+#include <QtGui/QButtonGroup>
 
 HB_FUNC_STATIC( QABSTRACTBUTTON_DELETE )
 {

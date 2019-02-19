@@ -35,7 +35,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDecorationDefault>
+#include <QtGui/QDecorationDefault>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

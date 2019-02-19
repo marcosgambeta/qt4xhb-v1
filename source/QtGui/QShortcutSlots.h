@@ -13,11 +13,11 @@
 #ifndef QSHORTCUTSLOTS_H
 #define QSHORTCUTSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QShortcut>
+#include <QtGui/QShortcut>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

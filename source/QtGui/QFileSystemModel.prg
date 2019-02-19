@@ -87,13 +87,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QFileSystemModel>
+#include <QtGui/QFileSystemModel>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QDateTime>
+#include <QtCore/QDateTime>
 
 /*
 QFileSystemModel(QObject * parent = 0)

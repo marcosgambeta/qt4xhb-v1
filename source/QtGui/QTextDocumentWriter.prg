@@ -54,13 +54,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QTextDocumentWriter>
+#include <QtGui/QTextDocumentWriter>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QList>
+#include <QtCore/QList>
 
 /*
 QTextDocumentWriter ()

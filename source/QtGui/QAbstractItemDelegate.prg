@@ -45,7 +45,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QAbstractItemDelegate>
+#include <QtGui/QAbstractItemDelegate>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

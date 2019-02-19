@@ -49,15 +49,15 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDrag>
+#include <QtGui/QDrag>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QPoint>
-#include <QPixmap>
-#include <QMimeData>
+#include <QtCore/QPoint>
+#include <QtGui/QPixmap>
+#include <QtCore/QMimeData>
 
 /*
 QDrag ( QWidget * dragSource )

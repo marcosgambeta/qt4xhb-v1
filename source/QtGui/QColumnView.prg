@@ -52,7 +52,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QColumnView>
+#include <QtGui/QColumnView>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

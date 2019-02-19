@@ -52,13 +52,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDialogButtonBox>
+#include <QtGui/QDialogButtonBox>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QPushButton>
+#include <QtGui/QPushButton>
 
 /*
 QDialogButtonBox ( QWidget * parent = 0 )

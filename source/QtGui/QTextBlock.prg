@@ -75,14 +75,14 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QTextBlock>
+#include <QtGui/QTextBlock>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QTextDocument>
-#include <QTextList>
+#include <QtGui/QTextDocument>
+#include <QtGui/QTextList>
 
 /*
 QTextBlock ( const QTextBlock & other )

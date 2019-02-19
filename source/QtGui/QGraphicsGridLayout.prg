@@ -77,7 +77,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QGraphicsGridLayout>
+#include <QtGui/QGraphicsGridLayout>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

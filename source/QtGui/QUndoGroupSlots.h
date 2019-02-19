@@ -13,11 +13,11 @@
 #ifndef QUNDOGROUPSLOTS_H
 #define QUNDOGROUPSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QUndoGroup>
+#include <QtGui/QUndoGroup>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

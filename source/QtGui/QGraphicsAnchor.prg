@@ -36,7 +36,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QGraphicsAnchor>
+#include <QtGui/QGraphicsAnchor>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

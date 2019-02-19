@@ -84,14 +84,14 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QWizard>
+#include <QtGui/QWizard>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QVariant>
-#include <QAbstractButton>
+#include <QtCore/QVariant>
+#include <QtGui/QAbstractButton>
 
 /*
 QWizard ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )

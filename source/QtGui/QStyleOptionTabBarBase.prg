@@ -38,7 +38,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QStyleOptionTabBarBase>
+#include <QtGui/QStyleOptionTabBarBase>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

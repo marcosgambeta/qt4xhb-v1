@@ -55,7 +55,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QStyleOptionSlider>
+#include <QtGui/QStyleOptionSlider>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

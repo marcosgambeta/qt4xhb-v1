@@ -66,7 +66,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QGraphicsLayoutItem>
+#include <QtGui/QGraphicsLayoutItem>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

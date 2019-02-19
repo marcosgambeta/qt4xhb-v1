@@ -105,13 +105,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QPlainTextEdit>
+#include <QtGui/QPlainTextEdit>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QMenu>
+#include <QtGui/QMenu>
 
 /*
 QPlainTextEdit ( QWidget * parent = 0 )

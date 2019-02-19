@@ -96,7 +96,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QTextFormat>
+#include <QtGui/QTextFormat>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -34,7 +34,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QTapGesture>
+#include <QtGui/QTapGesture>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -80,13 +80,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QCalendarWidget>
+#include <QtGui/QCalendarWidget>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QTextCharFormat>
+#include <QtGui/QTextCharFormat>
 
 /*
 QCalendarWidget ( QWidget * parent = 0 )

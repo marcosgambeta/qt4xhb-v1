@@ -41,7 +41,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QStyleOptionButton>
+#include <QtGui/QStyleOptionButton>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

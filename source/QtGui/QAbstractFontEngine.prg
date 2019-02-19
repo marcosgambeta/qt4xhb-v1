@@ -35,7 +35,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QAbstractFontEngine>
+#include <QtGui/QAbstractFontEngine>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -34,7 +34,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QStyleOptionFocusRect>
+#include <QtGui/QStyleOptionFocusRect>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

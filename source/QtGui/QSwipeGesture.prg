@@ -35,7 +35,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QSwipeGesture>
+#include <QtGui/QSwipeGesture>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

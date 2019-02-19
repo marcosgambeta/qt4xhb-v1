@@ -13,11 +13,11 @@
 #ifndef QPRINTPREVIEWWIDGETSLOTS_H
 #define QPRINTPREVIEWWIDGETSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QPrintPreviewWidget>
+#include <QtGui/QPrintPreviewWidget>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -121,17 +121,17 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QTextDocument>
+#include <QtGui/QTextDocument>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QTextBlock>
-#include <QTextOption>
-#include <QTextCursor>
-#include <QVariant>
-#include <QAbstractTextDocumentLayout>
+#include <QtGui/QTextBlock>
+#include <QtGui/QTextOption>
+#include <QtGui/QTextCursor>
+#include <QtCore/QVariant>
+#include <QtGui/QAbstractTextDocumentLayout>
 
 /*
 QTextDocument ( QObject * parent = 0 )

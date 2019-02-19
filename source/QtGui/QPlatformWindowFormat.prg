@@ -88,7 +88,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QPlatformWindowFormat>
+#include <QtGui/QPlatformWindowFormat>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

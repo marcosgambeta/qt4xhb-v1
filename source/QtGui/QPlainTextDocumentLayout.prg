@@ -43,7 +43,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QPlainTextDocumentLayout>
+#include <QtGui/QPlainTextDocumentLayout>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -45,7 +45,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QWidgetItem>
+#include <QtGui/QWidgetItem>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -13,11 +13,11 @@
 #ifndef QSTACKEDLAYOUTSLOTS_H
 #define QSTACKEDLAYOUTSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QStackedLayout>
+#include <QtGui/QStackedLayout>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

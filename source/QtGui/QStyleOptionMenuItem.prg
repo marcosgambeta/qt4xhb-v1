@@ -54,7 +54,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QStyleOptionMenuItem>
+#include <QtGui/QStyleOptionMenuItem>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

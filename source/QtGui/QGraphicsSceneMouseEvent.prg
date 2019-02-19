@@ -45,7 +45,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QGraphicsSceneMouseEvent>
+#include <QtGui/QGraphicsSceneMouseEvent>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

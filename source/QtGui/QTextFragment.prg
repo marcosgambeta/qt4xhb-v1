@@ -51,7 +51,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QTextFragment>
+#include <QtGui/QTextFragment>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

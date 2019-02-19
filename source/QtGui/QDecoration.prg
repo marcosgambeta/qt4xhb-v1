@@ -50,7 +50,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDecoration>
+#include <QtGui/QDecoration>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

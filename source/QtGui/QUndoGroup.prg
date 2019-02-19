@@ -56,14 +56,14 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QUndoGroup>
+#include <QtGui/QUndoGroup>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QUndoStack>
-#include <QAction>
+#include <QtGui/QUndoStack>
+#include <QtGui/QAction>
 
 /*
 QUndoGroup ( QObject * parent = 0 )

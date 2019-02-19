@@ -47,7 +47,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QTextItem>
+#include <QtGui/QTextItem>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

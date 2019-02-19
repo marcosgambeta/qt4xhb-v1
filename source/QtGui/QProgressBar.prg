@@ -58,7 +58,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QProgressBar>
+#include <QtGui/QProgressBar>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

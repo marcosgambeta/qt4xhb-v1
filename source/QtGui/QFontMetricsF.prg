@@ -66,7 +66,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QFontMetricsF>
+#include <QtGui/QFontMetricsF>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

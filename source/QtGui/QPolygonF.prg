@@ -53,7 +53,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QPolygonF>
+#include <QtGui/QPolygonF>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

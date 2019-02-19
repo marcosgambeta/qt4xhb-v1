@@ -44,7 +44,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QStyledItemDelegate>
+#include <QtGui/QStyledItemDelegate>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

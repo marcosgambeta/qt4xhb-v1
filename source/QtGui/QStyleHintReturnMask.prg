@@ -32,7 +32,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QStyleHintReturnMask>
+#include <QtGui/QStyleHintReturnMask>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -13,11 +13,11 @@
 #ifndef QSPLASHSCREENSLOTS_H
 #define QSPLASHSCREENSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QSplashScreen>
+#include <QtGui/QSplashScreen>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

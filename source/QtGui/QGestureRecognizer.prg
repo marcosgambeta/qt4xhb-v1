@@ -46,13 +46,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QGestureRecognizer>
+#include <QtGui/QGestureRecognizer>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QGesture>
+#include <QtGui/QGesture>
 
 HB_FUNC_STATIC( QGESTURERECOGNIZER_DELETE )
 {

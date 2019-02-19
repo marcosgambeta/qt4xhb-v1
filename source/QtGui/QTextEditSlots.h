@@ -13,11 +13,11 @@
 #ifndef QTEXTEDITSLOTS_H
 #define QTEXTEDITSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QTextEdit>
+#include <QtGui/QTextEdit>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

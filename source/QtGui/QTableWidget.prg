@@ -97,7 +97,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QTableWidget>
+#include <QtGui/QTableWidget>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

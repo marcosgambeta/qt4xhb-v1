@@ -57,7 +57,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QItemSelectionModel>
+#include <QtGui/QItemSelectionModel>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

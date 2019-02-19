@@ -52,14 +52,14 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QToolButton>
+#include <QtGui/QToolButton>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QAction>
-#include <QMenu>
+#include <QtGui/QAction>
+#include <QtGui/QMenu>
 
 /*
 QToolButton ( QWidget * parent = 0 )

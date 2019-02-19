@@ -103,7 +103,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QTreeWidgetItem>
+#include <QtGui/QTreeWidgetItem>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

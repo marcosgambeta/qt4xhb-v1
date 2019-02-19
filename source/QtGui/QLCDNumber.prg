@@ -57,7 +57,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QLCDNumber>
+#include <QtGui/QLCDNumber>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

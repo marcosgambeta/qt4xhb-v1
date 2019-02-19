@@ -44,7 +44,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QPrintDialog>
+#include <QtGui/QPrintDialog>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

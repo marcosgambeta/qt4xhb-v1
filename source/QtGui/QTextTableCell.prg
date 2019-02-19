@@ -53,13 +53,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QTextTableCell>
+#include <QtGui/QTextTableCell>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QTextCursor>
+#include <QtGui/QTextCursor>
 
 /*
 QTextTableCell ()

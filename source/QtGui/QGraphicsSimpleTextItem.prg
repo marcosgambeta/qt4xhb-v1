@@ -46,13 +46,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QGraphicsSimpleTextItem>
+#include <QtGui/QGraphicsSimpleTextItem>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QFont>
+#include <QtGui/QFont>
 
 /*
 QGraphicsSimpleTextItem ( QGraphicsItem * parent = 0 )

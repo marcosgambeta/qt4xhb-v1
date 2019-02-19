@@ -36,13 +36,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QSyntaxHighlighter>
+#include <QtGui/QSyntaxHighlighter>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QTextDocument>
+#include <QtGui/QTextDocument>
 
 //[1]QSyntaxHighlighter ( QObject * parent )
 //[2]QSyntaxHighlighter ( QTextDocument * parent )

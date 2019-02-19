@@ -13,11 +13,11 @@
 #ifndef QMDIAREASLOTS_H
 #define QMDIAREASLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QMdiArea>
+#include <QtGui/QMdiArea>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

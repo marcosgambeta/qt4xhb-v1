@@ -76,13 +76,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QLabel>
+#include <QtGui/QLabel>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QMovie>
+#include <QtGui/QMovie>
 
 /*
 QLabel ( QWidget * parent = 0, Qt::WindowFlags f = 0 )

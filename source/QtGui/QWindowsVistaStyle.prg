@@ -32,7 +32,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QWindowsVistaStyle>
+#include <QtGui/QWindowsVistaStyle>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

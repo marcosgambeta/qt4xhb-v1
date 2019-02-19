@@ -40,7 +40,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QGraphicsSceneHoverEvent>
+#include <QtGui/QGraphicsSceneHoverEvent>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

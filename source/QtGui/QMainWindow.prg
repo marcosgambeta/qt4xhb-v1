@@ -87,16 +87,16 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QMainWindow>
+#include <QtGui/QMainWindow>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QToolBar>
-#include <QMenu>
-#include <QMenuBar>
-#include <QStatusBar>
+#include <QtGui/QToolBar>
+#include <QtGui/QMenu>
+#include <QtGui/QMenuBar>
+#include <QtGui/QStatusBar>
 
 /*
 QMainWindow ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )

@@ -69,15 +69,15 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QGraphicsTextItem>
+#include <QtGui/QGraphicsTextItem>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QFont>
-#include <QTextCursor>
-#include <QTextDocument>
+#include <QtGui/QFont>
+#include <QtGui/QTextCursor>
+#include <QtGui/QTextDocument>
 
 /*
 QGraphicsTextItem ( QGraphicsItem * parent = 0 )

@@ -36,7 +36,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDragMoveEvent>
+#include <QtGui/QDragMoveEvent>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

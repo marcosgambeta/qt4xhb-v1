@@ -62,13 +62,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QLayoutItem>
+#include <QtGui/QLayoutItem>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QLayout>
+#include <QtGui/QLayout>
 
 HB_FUNC_STATIC( QLAYOUTITEM_DELETE )
 {

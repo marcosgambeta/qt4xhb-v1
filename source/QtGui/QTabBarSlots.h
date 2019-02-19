@@ -13,11 +13,11 @@
 #ifndef QTABBARSLOTS_H
 #define QTABBARSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QTabBar>
+#include <QtGui/QTabBar>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -44,7 +44,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QStyleOptionTabWidgetFrame>
+#include <QtGui/QStyleOptionTabWidgetFrame>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

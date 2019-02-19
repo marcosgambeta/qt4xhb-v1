@@ -13,11 +13,11 @@
 #ifndef QCOMBOBOXSLOTS_H
 #define QCOMBOBOXSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QComboBox>
+#include <QtGui/QComboBox>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -54,7 +54,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QToolBox>
+#include <QtGui/QToolBox>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

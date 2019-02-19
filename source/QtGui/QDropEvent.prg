@@ -49,7 +49,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDropEvent>
+#include <QtGui/QDropEvent>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

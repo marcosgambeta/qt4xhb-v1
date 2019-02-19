@@ -43,14 +43,14 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QUndoView>
+#include <QtGui/QUndoView>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QUndoGroup>
-#include <QUndoStack>
+#include <QtGui/QUndoGroup>
+#include <QtGui/QUndoStack>
 
 /*
 QUndoView ( QWidget * parent = 0 )

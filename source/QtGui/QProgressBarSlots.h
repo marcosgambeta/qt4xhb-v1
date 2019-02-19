@@ -13,11 +13,11 @@
 #ifndef QPROGRESSBARSLOTS_H
 #define QPROGRESSBARSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QProgressBar>
+#include <QtGui/QProgressBar>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

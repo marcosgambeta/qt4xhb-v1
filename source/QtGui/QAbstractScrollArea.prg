@@ -51,13 +51,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QAbstractScrollArea>
+#include <QtGui/QAbstractScrollArea>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QScrollBar>
+#include <QtGui/QScrollBar>
 
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_DELETE )
 {

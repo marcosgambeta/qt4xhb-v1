@@ -36,7 +36,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QRubberBand>
+#include <QtGui/QRubberBand>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
