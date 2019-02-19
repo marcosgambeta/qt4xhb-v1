@@ -35,7 +35,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDomProcessingInstruction>
+#include <QtXml/QDomProcessingInstruction>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

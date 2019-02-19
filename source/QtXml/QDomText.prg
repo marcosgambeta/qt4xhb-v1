@@ -33,7 +33,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDomText>
+#include <QtXml/QDomText>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

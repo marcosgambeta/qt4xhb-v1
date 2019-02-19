@@ -59,7 +59,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QXmlDefaultHandler>
+#include <QtXml/QXmlDefaultHandler>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -67,7 +67,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDomElement>
+#include <QtXml/QDomElement>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

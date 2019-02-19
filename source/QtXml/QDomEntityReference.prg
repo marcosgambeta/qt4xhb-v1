@@ -32,7 +32,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDomEntityReference>
+#include <QtXml/QDomEntityReference>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -48,7 +48,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QXmlLexicalHandler>
+#include <QtXml/QXmlLexicalHandler>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
