@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QXmlNamePool>
+#include <QtXmlPatterns/QXmlNamePool>
 
 $prototype=QXmlName ()
 $internalConstructor=|new1|
