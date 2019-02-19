@@ -13,11 +13,11 @@
 #ifndef QHELPCONTENTWIDGETSLOTS_H
 #define QHELPCONTENTWIDGETSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QHelpContentWidget>
+#include <QtHelp/QHelpContentWidget>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

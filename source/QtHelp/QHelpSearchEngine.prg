@@ -48,14 +48,14 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QHelpSearchEngine>
+#include <QtHelp/QHelpSearchEngine>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QHelpSearchQueryWidget>
-#include <QHelpSearchResultWidget>
+#include <QtHelp/QHelpSearchQueryWidget>
+#include <QtHelp/QHelpSearchResultWidget>
 
 /*
 QHelpSearchEngine ( QHelpEngineCore * helpEngine, QObject * parent = 0 )

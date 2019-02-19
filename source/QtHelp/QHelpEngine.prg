@@ -42,17 +42,17 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QHelpEngine>
+#include <QtHelp/QHelpEngine>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QHelpContentModel>
-#include <QHelpContentWidget>
-#include <QHelpIndexModel>
-#include <QHelpIndexWidget>
-#include <QHelpSearchEngine>
+#include <QtHelp/QHelpContentModel>
+#include <QtHelp/QHelpContentWidget>
+#include <QtHelp/QHelpIndexModel>
+#include <QtHelp/QHelpIndexWidget>
+#include <QtHelp/QHelpSearchEngine>
 
 /*
 QHelpEngine ( const QString & collectionFile, QObject * parent = 0 )

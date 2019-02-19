@@ -13,11 +13,11 @@
 #ifndef QHELPENGINECORESLOTS_H
 #define QHELPENGINECORESLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QHelpEngineCore>
+#include <QtHelp/QHelpEngineCore>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -65,13 +65,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QHelpEngineCore>
+#include <QtHelp/QHelpEngineCore>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QStringList>
+#include <QtCore/QStringList>
 
 /*
 QHelpEngineCore ( const QString & collectionFile, QObject * parent = 0 )

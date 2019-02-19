@@ -13,11 +13,11 @@
 #ifndef QHELPSEARCHQUERYWIDGETSLOTS_H
 #define QHELPSEARCHQUERYWIDGETSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QHelpSearchQueryWidget>
+#include <QtHelp/QHelpSearchQueryWidget>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
