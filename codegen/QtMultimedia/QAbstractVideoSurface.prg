@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QVideoSurfaceFormat>
+#include <QtMultimedia/QVideoSurfaceFormat>
 
 $deleteMethod
 
