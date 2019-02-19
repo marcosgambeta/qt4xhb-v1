@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QGesture>
+#include <QtGui/QGesture>
 
 $prototype=QGestureEvent ( const QList<QGesture *> & gestures )
 $constructor=|new|const QList<QGesture *> &

@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QTextFormat>
+#include <QtGui/QTextFormat>
 
 $deleteMethod
 

@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QTextDocument>
+#include <QtGui/QTextDocument>
 
 //[1]QSyntaxHighlighter ( QObject * parent )
 //[2]QSyntaxHighlighter ( QTextDocument * parent )

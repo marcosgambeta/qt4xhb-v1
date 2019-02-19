@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QDateTime>
+#include <QtCore/QDateTime>
 
 $prototype=QFileSystemModel(QObject * parent = 0)
 $constructor=|new|QObject *=0

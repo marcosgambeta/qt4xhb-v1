@@ -25,10 +25,10 @@ $destructor
 
 $includes
 
-#include <QItemSelection>
-#include <QStringList>
-#include <QSize>
-#include <QMimeData>
+#include <QtGui/QItemSelection>
+#include <QtCore/QStringList>
+#include <QtCore/QSize>
+#include <QtCore/QMimeData>
 
 $prototype=QSortFilterProxyModel ( QObject * parent = 0 )
 $constructor=|new|QObject *=0

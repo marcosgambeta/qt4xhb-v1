@@ -29,7 +29,7 @@ $destructor
 
 $includes
 
-#include <QList>
+#include <QtCore/QList>
 
 $prototype=QPrinter ( PrinterMode mode = ScreenResolution )
 $internalConstructor=|new1|QPrinter::PrinterMode=QPrinter::ScreenResolution

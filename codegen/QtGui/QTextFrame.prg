@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QTextCursor>
+#include <QtGui/QTextCursor>
 
 $prototype=QTextFrame ( QTextDocument * document )
 $constructor=|new|QTextDocument *

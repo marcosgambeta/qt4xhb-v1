@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-#include <QUndoGroup>
-#include <QUndoStack>
+#include <QtGui/QUndoGroup>
+#include <QtGui/QUndoStack>
 
 $prototype=QUndoView ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0

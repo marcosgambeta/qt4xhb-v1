@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QHeaderView>
+#include <QtGui/QHeaderView>
 
 $prototype=QTableView ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0

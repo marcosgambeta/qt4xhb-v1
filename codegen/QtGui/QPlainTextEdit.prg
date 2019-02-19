@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QMenu>
+#include <QtGui/QMenu>
 
 $prototype=QPlainTextEdit ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0

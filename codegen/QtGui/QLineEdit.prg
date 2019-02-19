@@ -27,10 +27,10 @@ $destructor
 
 $includes
 
-#include <QVariant>
-#include <QCompleter>
-#include <QMenu>
-#include <QValidator>
+#include <QtCore/QVariant>
+#include <QtGui/QCompleter>
+#include <QtGui/QMenu>
+#include <QtGui/QValidator>
 
 $prototype=QLineEdit ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0

@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-#include <QAction>
-#include <QMenu>
+#include <QtGui/QAction>
+#include <QtGui/QMenu>
 
 $prototype=QToolButton ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0

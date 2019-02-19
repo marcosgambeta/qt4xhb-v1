@@ -27,12 +27,12 @@ $destructor
 
 $includes
 
-#include <QVariant>
-#include <QPalette>
-#include <QGraphicsWidget>
-#include <QGraphicsTextItem>
-#include <QGraphicsProxyWidget>
-#include <QStyle>
+#include <QtCore/QVariant>
+#include <QtGui/QPalette>
+#include <QtGui/QGraphicsWidget>
+#include <QtGui/QGraphicsTextItem>
+#include <QtGui/QGraphicsProxyWidget>
+#include <QtGui/QStyle>
 
 $prototype=QGraphicsScene ( QObject * parent = 0 )
 $internalConstructor=|new1|QObject *=0

@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QUrl>
+#include <QtCore/QUrl>
 
 $prototype=QFileOpenEvent(const QString &file)
 $internalConstructor=|new1|const QString &

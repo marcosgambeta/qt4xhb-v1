@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QInputContext>
+#include <QtGui/QInputContext>
 
 $deleteMethod
 

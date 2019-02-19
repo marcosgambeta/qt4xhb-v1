@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QButtonGroup>
+#include <QtGui/QButtonGroup>
 
 $deleteMethod
 

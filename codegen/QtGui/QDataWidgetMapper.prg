@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-#include <QModelIndex>
-#include <QAbstractItemDelegate>
+#include <QtCore/QModelIndex>
+#include <QtGui/QAbstractItemDelegate>
 
 $prototype=QDataWidgetMapper ( QObject * parent = 0 )
 $constructor=|new|QObject *=0

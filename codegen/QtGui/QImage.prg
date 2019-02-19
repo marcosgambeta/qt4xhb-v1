@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-#include <QStringList>
-#include <QColor>
+#include <QtCore/QStringList>
+#include <QtGui/QColor>
 
 $prototype=QImage ()
 $internalConstructor=|new1|

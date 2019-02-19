@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-#include <QTextDocument>
-#include <QTextList>
+#include <QtGui/QTextDocument>
+#include <QtGui/QTextList>
 
 $prototype=QTextBlock ( const QTextBlock & other )
 $constructor=|new|const QTextBlock &

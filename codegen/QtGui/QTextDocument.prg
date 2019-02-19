@@ -27,11 +27,11 @@ $destructor
 
 $includes
 
-#include <QTextBlock>
-#include <QTextOption>
-#include <QTextCursor>
-#include <QVariant>
-#include <QAbstractTextDocumentLayout>
+#include <QtGui/QTextBlock>
+#include <QtGui/QTextOption>
+#include <QtGui/QTextCursor>
+#include <QtCore/QVariant>
+#include <QtGui/QAbstractTextDocumentLayout>
 
 $prototype=QTextDocument ( QObject * parent = 0 )
 $internalConstructor=|new1|QObject *=0

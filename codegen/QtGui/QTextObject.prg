@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QTextDocument>
+#include <QtGui/QTextDocument>
 
 $prototype=QTextDocument * document () const
 $method=|QTextDocument *|document|

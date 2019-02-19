@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QMdiSubWindow>
+#include <QtGui/QMdiSubWindow>
 
 $prototype=QMdiArea ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0

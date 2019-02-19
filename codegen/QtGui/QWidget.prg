@@ -70,14 +70,14 @@ $destructor
 
 $includes
 
-#include <QIcon>
-#include <QVariant>
-#include <QLocale>
-#include <QGraphicsEffect>
-#include <QGraphicsProxyWidget>
-#include <QInputContext>
-#include <QLayout>
-#include <QStyle>
+#include <QtGui/QIcon>
+#include <QtCore/QVariant>
+#include <QtCore/QLocale>
+#include <QtGui/QGraphicsEffect>
+#include <QtGui/QGraphicsProxyWidget>
+#include <QtGui/QInputContext>
+#include <QtGui/QLayout>
+#include <QtGui/QStyle>
 
 $prototype=QWidget ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 $constructor=|new|QWidget *=0,Qt::WindowFlags=0
