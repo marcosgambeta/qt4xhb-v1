@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QDateTime>
+#include <QtCore/QDateTime>
 
 $prototype=QFSFileEngine ()
 $internalConstructor=|new1|

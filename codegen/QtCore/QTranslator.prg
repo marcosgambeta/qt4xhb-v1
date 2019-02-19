@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QLocale>
+#include <QtCore/QLocale>
 
 $prototype=QTranslator(QObject * parent = 0)
 $constructor=|new|QObject *=0
