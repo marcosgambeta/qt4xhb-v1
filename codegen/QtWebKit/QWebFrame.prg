@@ -27,9 +27,9 @@ $destructor
 
 $includes
 
-#include <QWebElement>
-#include <QWebSecurityOrigin>
-#include <QWebPage>
+#include <QtWebKit/QWebElement>
+#include <QtWebKit/QWebSecurityOrigin>
+#include <QtWebKit/QWebPage>
 
 $prototype=void addToJavaScriptWindowObject ( const QString & name, QObject * object )
 $internalMethod=|void|addToJavaScriptWindowObject,addToJavaScriptWindowObject1|const QString &,QObject *

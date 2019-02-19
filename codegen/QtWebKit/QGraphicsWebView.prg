@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QAction>
+#include <QtGui/QAction>
 
 $prototype=QGraphicsWebView ( QGraphicsItem * parent = 0 )
 $constructor=|new|QGraphicsItem *=0
