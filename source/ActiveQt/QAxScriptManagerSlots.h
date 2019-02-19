@@ -13,11 +13,11 @@
 #ifndef QAXSCRIPTMANAGERSLOTS_H
 #define QAXSCRIPTMANAGERSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QAxScriptManager>
+#include <ActiveQt/QAxScriptManager>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

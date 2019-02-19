@@ -56,14 +56,14 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QAxBase>
+#include <ActiveQt/QAxBase>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QStringList>
-#include <QAxObject>
+#include <QtCore/QStringList>
+#include <ActiveQt/QAxObject>
 
 HB_FUNC_STATIC( QAXBASE_DELETE )
 {

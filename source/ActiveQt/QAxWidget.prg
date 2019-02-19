@@ -58,13 +58,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QAxWidget>
+#include <ActiveQt/QAxWidget>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QAxObject>
+#include <ActiveQt/QAxObject>
 
 /*
 QAxWidget ( QWidget * parent = 0, Qt::WindowFlags f = 0 )

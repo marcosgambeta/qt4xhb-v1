@@ -13,11 +13,11 @@
 #ifndef QAXWIDGETSLOTS_H
 #define QAXWIDGETSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QAxWidget>
+#include <ActiveQt/QAxWidget>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
