@@ -54,13 +54,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDeclarativeComponent>
+#include <QtDeclarative/QDeclarativeComponent>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QDeclarativeContext>
+#include <QtDeclarative/QDeclarativeContext>
 
 /*
 QDeclarativeComponent(QObject *parent = 0);

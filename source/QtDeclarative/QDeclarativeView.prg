@@ -51,16 +51,16 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDeclarativeView>
+#include <QtDeclarative/QDeclarativeView>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QDeclarativeError>
-#include <QDeclarativeEngine>
-#include <QDeclarativeContext>
-#include <QGraphicsObject>
+#include <QtDeclarative/QDeclarativeError>
+#include <QtDeclarative/QDeclarativeEngine>
+#include <QtDeclarative/QDeclarativeContext>
+#include <QtGui/QGraphicsObject>
 
 /*
 QDeclarativeView ( QWidget * parent = 0 )

@@ -53,14 +53,14 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDeclarativeExpression>
+#include <QtDeclarative/QDeclarativeExpression>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QDeclarativeContext>
-#include <QDeclarativeEngine>
+#include <QtDeclarative/QDeclarativeContext>
+#include <QtDeclarative/QDeclarativeEngine>
 
 /*
 QDeclarativeExpression ()

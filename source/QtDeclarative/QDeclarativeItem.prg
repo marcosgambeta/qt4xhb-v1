@@ -53,7 +53,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDeclarativeItem>
+#include <QtDeclarative/QDeclarativeItem>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

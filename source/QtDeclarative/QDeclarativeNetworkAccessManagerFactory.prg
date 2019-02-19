@@ -42,13 +42,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDeclarativeNetworkAccessManagerFactory>
+#include <QtDeclarative/QDeclarativeNetworkAccessManagerFactory>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QNetworkAccessManager>
+#include <QtNetwork/QNetworkAccessManager>
 
 HB_FUNC_STATIC( QDECLARATIVENETWORKACCESSMANAGERFACTORY_DELETE )
 {

@@ -13,11 +13,11 @@
 #ifndef QDECLARATIVEEXPRESSIONSLOTS_H
 #define QDECLARATIVEEXPRESSIONSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QDeclarativeExpression>
+#include <QtDeclarative/QDeclarativeExpression>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

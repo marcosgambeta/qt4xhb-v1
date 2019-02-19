@@ -65,15 +65,15 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDeclarativeEngine>
+#include <QtDeclarative/QDeclarativeEngine>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QStringList>
-#include <QNetworkAccessManager>
-#include <QDeclarativeContext>
+#include <QtCore/QStringList>
+#include <QtNetwork/QNetworkAccessManager>
+#include <QtDeclarative/QDeclarativeContext>
 
 /*
 QDeclarativeEngine ( QObject * parent = 0 )

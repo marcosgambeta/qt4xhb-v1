@@ -43,7 +43,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDeclarativePropertyMap>
+#include <QtDeclarative/QDeclarativePropertyMap>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

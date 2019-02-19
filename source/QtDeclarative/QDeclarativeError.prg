@@ -52,7 +52,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDeclarativeError>
+#include <QtDeclarative/QDeclarativeError>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
