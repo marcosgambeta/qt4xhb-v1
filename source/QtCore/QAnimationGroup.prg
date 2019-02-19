@@ -40,7 +40,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QAnimationGroup>
+#include <QtCore/QAnimationGroup>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

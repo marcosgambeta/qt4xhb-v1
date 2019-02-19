@@ -95,7 +95,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDir>
+#include <QtCore/QDir>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

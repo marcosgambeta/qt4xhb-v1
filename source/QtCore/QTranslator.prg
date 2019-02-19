@@ -35,13 +35,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QTranslator>
+#include <QtCore/QTranslator>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QLocale>
+#include <QtCore/QLocale>
 
 /*
 QTranslator(QObject * parent = 0)

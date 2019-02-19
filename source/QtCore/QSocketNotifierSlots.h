@@ -13,11 +13,11 @@
 #ifndef QSOCKETNOTIFIERSLOTS_H
 #define QSOCKETNOTIFIERSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QSocketNotifier>
+#include <QtCore/QSocketNotifier>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

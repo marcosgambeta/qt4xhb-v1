@@ -34,7 +34,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QAbstractListModel>
+#include <QtCore/QAbstractListModel>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

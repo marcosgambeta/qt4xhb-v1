@@ -37,7 +37,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QHistoryState>
+#include <QtCore/QHistoryState>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

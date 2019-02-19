@@ -100,7 +100,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QXmlStreamReader>
+#include <QtCore/QXmlStreamReader>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

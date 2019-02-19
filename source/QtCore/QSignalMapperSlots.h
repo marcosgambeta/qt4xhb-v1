@@ -13,11 +13,11 @@
 #ifndef QSIGNALMAPPERSLOTS_H
 #define QSIGNALMAPPERSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QSignalMapper>
+#include <QtCore/QSignalMapper>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

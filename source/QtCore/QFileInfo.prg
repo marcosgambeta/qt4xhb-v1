@@ -85,14 +85,14 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QFileInfo>
+#include <QtCore/QFileInfo>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QDir>
-#include <QDateTime>
+#include <QtCore/QDir>
+#include <QtCore/QDateTime>
 
 /*
 QFileInfo()

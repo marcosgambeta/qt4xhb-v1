@@ -49,7 +49,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QPointF>
+#include <QtCore/QPointF>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

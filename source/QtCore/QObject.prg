@@ -219,16 +219,16 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QObject>
+#include <QtCore/QObject>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QWidget>
-#include <QVariant>
-#include <QEvent>
-#include <QThread>
+#include <QtGui/QWidget>
+#include <QtCore/QVariant>
+#include <QtCore/QEvent>
+#include <QtCore/QThread>
 
 bool Events_connect_event ( QObject * object, int type, PHB_ITEM codeblock );
 bool Events_disconnect_event ( QObject * object, int type );

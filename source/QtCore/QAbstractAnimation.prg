@@ -54,13 +54,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QAbstractAnimation>
+#include <QtCore/QAbstractAnimation>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QAnimationGroup>
+#include <QtCore/QAnimationGroup>
 
 HB_FUNC_STATIC( QABSTRACTANIMATION_DELETE )
 {

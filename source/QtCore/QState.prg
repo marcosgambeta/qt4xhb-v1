@@ -48,15 +48,15 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QState>
+#include <QtCore/QState>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QVariant>
-#include <QSignalTransition>
-#include <QAbstractTransition>
+#include <QtCore/QVariant>
+#include <QtCore/QSignalTransition>
+#include <QtCore/QAbstractTransition>
 
 /*
 QState ( QState * parent = 0 )

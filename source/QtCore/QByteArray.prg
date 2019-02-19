@@ -147,14 +147,14 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QByteArray>
+#include <QtCore/QByteArray>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QString>
-#include <QList>
+#include <QtCore/QString>
+#include <QtCore/QList>
 
 /*
 QByteArray ()

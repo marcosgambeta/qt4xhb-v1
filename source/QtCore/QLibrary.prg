@@ -43,7 +43,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QLibrary>
+#include <QtCore/QLibrary>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

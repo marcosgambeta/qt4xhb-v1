@@ -45,7 +45,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QSemaphore>
+#include <QtCore/QSemaphore>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

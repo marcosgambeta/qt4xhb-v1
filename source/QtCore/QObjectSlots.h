@@ -13,11 +13,11 @@
 #ifndef QOBJECTSLOTS_H
 #define QOBJECTSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QObject>
+#include <QtCore/QObject>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

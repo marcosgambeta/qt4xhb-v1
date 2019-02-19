@@ -47,7 +47,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QPoint>
+#include <QtCore/QPoint>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

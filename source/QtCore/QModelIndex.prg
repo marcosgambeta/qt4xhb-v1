@@ -54,7 +54,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QModelIndex>
+#include <QtCore/QModelIndex>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

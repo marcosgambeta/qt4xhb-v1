@@ -40,13 +40,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QSequentialAnimationGroup>
+#include <QtCore/QSequentialAnimationGroup>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QPauseAnimation>
+#include <QtCore/QPauseAnimation>
 
 /*
 QSequentialAnimationGroup ( QObject * parent = 0 )

@@ -45,7 +45,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QReadLocker>
+#include <QtCore/QReadLocker>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

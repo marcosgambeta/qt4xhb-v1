@@ -56,14 +56,14 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QMimeData>
+#include <QtCore/QMimeData>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QStringList>
-#include <QUrl>
+#include <QtCore/QStringList>
+#include <QtCore/QUrl>
 
 /*
 QMimeData ()

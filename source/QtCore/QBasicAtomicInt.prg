@@ -62,7 +62,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QBasicAtomicInt>
+#include <QtCore/QBasicAtomicInt>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

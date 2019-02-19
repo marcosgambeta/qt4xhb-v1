@@ -72,13 +72,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QAbstractFileEngine>
+#include <QtCore/QAbstractFileEngine>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QDateTime>
+#include <QtCore/QDateTime>
 
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_DELETE )
 {

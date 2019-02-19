@@ -45,7 +45,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QVariantAnimation>
+#include <QtCore/QVariantAnimation>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

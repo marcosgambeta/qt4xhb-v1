@@ -55,7 +55,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QUuid>
+#include <QtCore/QUuid>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -41,13 +41,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QFileSystemWatcher>
+#include <QtCore/QFileSystemWatcher>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QStringList>
+#include <QtCore/QStringList>
 
 /*
 QFileSystemWatcher(QObject * parent = 0)

@@ -45,7 +45,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QXmlStreamAttributes>
+#include <QtCore/QXmlStreamAttributes>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

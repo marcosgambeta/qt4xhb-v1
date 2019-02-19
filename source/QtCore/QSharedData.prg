@@ -41,7 +41,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QSharedData>
+#include <QtCore/QSharedData>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

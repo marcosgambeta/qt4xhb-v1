@@ -76,7 +76,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QFutureInterfaceBase>
+#include <QtCore/QFutureInterfaceBase>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

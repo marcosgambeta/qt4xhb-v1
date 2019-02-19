@@ -43,7 +43,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QWaitCondition>
+#include <QtCore/QWaitCondition>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -13,11 +13,11 @@
 #ifndef QABSTRACTITEMMODELSLOTS_H
 #define QABSTRACTITEMMODELSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QAbstractItemModel>
+#include <QtCore/QAbstractItemModel>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

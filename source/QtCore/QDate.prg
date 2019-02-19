@@ -67,7 +67,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDate>
+#include <QtCore/QDate>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

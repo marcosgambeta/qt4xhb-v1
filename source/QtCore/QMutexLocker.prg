@@ -45,7 +45,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QMutexLocker>
+#include <QtCore/QMutexLocker>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

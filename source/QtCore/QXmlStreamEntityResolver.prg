@@ -41,7 +41,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QXmlStreamEntityResolver>
+#include <QtCore/QXmlStreamEntityResolver>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

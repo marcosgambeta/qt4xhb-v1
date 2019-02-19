@@ -13,11 +13,11 @@
 #ifndef QPROCESSSLOTS_H
 #define QPROCESSSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QProcess>
+#include <QtCore/QProcess>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

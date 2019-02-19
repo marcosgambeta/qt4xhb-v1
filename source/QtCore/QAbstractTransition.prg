@@ -46,15 +46,15 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QAbstractTransition>
+#include <QtCore/QAbstractTransition>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QStateMachine>
-#include <QState>
-#include <QAbstractState>
+#include <QtCore/QStateMachine>
+#include <QtCore/QState>
+#include <QtCore/QAbstractState>
 
 HB_FUNC_STATIC( QABSTRACTTRANSITION_DELETE )
 {

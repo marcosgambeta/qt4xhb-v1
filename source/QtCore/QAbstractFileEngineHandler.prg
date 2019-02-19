@@ -42,7 +42,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QAbstractFileEngineHandler>
+#include <QtCore/QAbstractFileEngineHandler>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

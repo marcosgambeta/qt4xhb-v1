@@ -127,34 +127,34 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QVariant>
+#include <QtCore/QVariant>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QLocale>
-#include <QRegExp>
-#include <QEasingCurve>
-#include <QDataStream>
-#include <QByteArray>
-#include <QBitArray>
-#include <QString>
-#include <QLatin1String>
-#include <QStringList>
-#include <QChar>
-#include <QDate>
-#include <QTime>
-#include <QDateTime>
-#include <QSize>
-#include <QSizeF>
-#include <QPoint>
-#include <QPointF>
-#include <QLine>
-#include <QLineF>
-#include <QRect>
-#include <QRectF>
-#include <QUrl>
+#include <QtCore/QLocale>
+#include <QtCore/QRegExp>
+#include <QtCore/QEasingCurve>
+#include <QtCore/QDataStream>
+#include <QtCore/QByteArray>
+#include <QtCore/QBitArray>
+#include <QtCore/QString>
+#include <QtCore/QLatin1String>
+#include <QtCore/QStringList>
+#include <QtCore/QChar>
+#include <QtCore/QDate>
+#include <QtCore/QTime>
+#include <QtCore/QDateTime>
+#include <QtCore/QSize>
+#include <QtCore/QSizeF>
+#include <QtCore/QPoint>
+#include <QtCore/QPointF>
+#include <QtCore/QLine>
+#include <QtCore/QLineF>
+#include <QtCore/QRect>
+#include <QtCore/QRectF>
+#include <QtCore/QUrl>
 
 /*
 QVariant ()

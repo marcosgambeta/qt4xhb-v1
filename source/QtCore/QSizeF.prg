@@ -54,7 +54,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QSizeF>
+#include <QtCore/QSizeF>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

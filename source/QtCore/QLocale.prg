@@ -120,14 +120,14 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QLocale>
+#include <QtCore/QLocale>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QDate>
-#include <QStringList>
+#include <QtCore/QDate>
+#include <QtCore/QStringList>
 
 /*
 QLocale ()

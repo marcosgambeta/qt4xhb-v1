@@ -13,11 +13,11 @@
 #ifndef QSEQUENTIALANIMATIONGROUPSLOTS_H
 #define QSEQUENTIALANIMATIONGROUPSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QSequentialAnimationGroup>
+#include <QtCore/QSequentialAnimationGroup>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

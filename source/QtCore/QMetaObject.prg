@@ -74,17 +74,17 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QMetaObject>
+#include <QtCore/QMetaObject>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QMetaClassInfo>
-#include <QMetaMethod>
-#include <QMetaEnum>
-#include <QMetaProperty>
-#include <QByteArray>
+#include <QtCore/QMetaClassInfo>
+#include <QtCore/QMetaMethod>
+#include <QtCore/QMetaEnum>
+#include <QtCore/QMetaProperty>
+#include <QtCore/QByteArray>
 
 HB_FUNC_STATIC( QMETAOBJECT_DELETE )
 {
