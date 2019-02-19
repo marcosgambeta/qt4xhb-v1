@@ -25,10 +25,10 @@ $destructor
 
 $includes
 
-#include <QStringList>
-#include <QDir>
-#include <QAction>
-#include <QLayout>
+#include <QtCore/QStringList>
+#include <QtCore/QDir>
+#include <QtGui/QAction>
+#include <QtGui/QLayout>
 
 $prototype=QUiLoader ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
