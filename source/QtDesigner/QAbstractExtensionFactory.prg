@@ -42,7 +42,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QAbstractExtensionFactory>
+#include <QtDesigner/QAbstractExtensionFactory>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

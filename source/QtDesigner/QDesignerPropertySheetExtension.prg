@@ -56,13 +56,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDesignerPropertySheetExtension>
+#include <QtDesigner/QDesignerPropertySheetExtension>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QVariant>
+#include <QtCore/QVariant>
 
 HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_DELETE )
 {

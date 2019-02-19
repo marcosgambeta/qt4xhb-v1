@@ -34,13 +34,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDesignerObjectInspectorInterface>
+#include <QtDesigner/QDesignerObjectInspectorInterface>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QDesignerFormEditorInterface>
+#include <QtDesigner/QDesignerFormEditorInterface>
 
 HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_DELETE )
 {

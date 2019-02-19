@@ -13,11 +13,11 @@
 #ifndef QDESIGNERPROPERTYEDITORINTERFACESLOTS_H
 #define QDESIGNERPROPERTYEDITORINTERFACESLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QDesignerPropertyEditorInterface>
+#include <QtDesigner/QDesignerPropertyEditorInterface>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

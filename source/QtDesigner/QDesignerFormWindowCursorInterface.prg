@@ -53,13 +53,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDesignerFormWindowCursorInterface>
+#include <QtDesigner/QDesignerFormWindowCursorInterface>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QDesignerFormWindowInterface>
+#include <QtDesigner/QDesignerFormWindowInterface>
 
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_DELETE )
 {

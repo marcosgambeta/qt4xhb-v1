@@ -47,7 +47,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QAbstractFormBuilder>
+#include <QtDesigner/QAbstractFormBuilder>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

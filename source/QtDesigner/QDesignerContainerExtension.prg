@@ -48,7 +48,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDesignerContainerExtension>
+#include <QtDesigner/QDesignerContainerExtension>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

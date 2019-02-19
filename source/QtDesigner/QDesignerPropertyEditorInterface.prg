@@ -42,13 +42,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDesignerPropertyEditorInterface>
+#include <QtDesigner/QDesignerPropertyEditorInterface>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QDesignerFormEditorInterface>
+#include <QtDesigner/QDesignerFormEditorInterface>
 
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_DELETE )
 {

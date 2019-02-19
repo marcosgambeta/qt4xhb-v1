@@ -42,7 +42,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDesignerCustomWidgetCollectionInterface>
+#include <QtDesigner/QDesignerCustomWidgetCollectionInterface>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -55,7 +55,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDesignerMemberSheetExtension>
+#include <QtDesigner/QDesignerMemberSheetExtension>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

@@ -43,13 +43,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDesignerTaskMenuExtension>
+#include <QtDesigner/QDesignerTaskMenuExtension>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QAction>
+#include <QtGui/QAction>
 
 HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_DELETE )
 {

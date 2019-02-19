@@ -44,7 +44,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QAbstractExtensionManager>
+#include <QtDesigner/QAbstractExtensionManager>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

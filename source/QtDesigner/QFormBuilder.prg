@@ -38,7 +38,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QFormBuilder>
+#include <QtDesigner/QFormBuilder>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

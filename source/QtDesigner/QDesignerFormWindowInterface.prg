@@ -89,14 +89,14 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDesignerFormWindowInterface>
+#include <QtDesigner/QDesignerFormWindowInterface>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QDir>
-#include <QDesignerFormEditorInterface>
+#include <QtCore/QDir>
+#include <QtDesigner/QDesignerFormEditorInterface>
 
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_DELETE )
 {

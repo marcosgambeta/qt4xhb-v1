@@ -50,18 +50,18 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QDesignerFormEditorInterface>
+#include <QtDesigner/QDesignerFormEditorInterface>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QDesignerActionEditorInterface>
-#include <QExtensionManager>
-#include <QDesignerFormWindowManagerInterface>
-#include <QDesignerObjectInspectorInterface>
-#include <QDesignerPropertyEditorInterface>
-#include <QDesignerWidgetBoxInterface>
+#include <QtDesigner/QDesignerActionEditorInterface>
+#include <QtDesigner/QExtensionManager>
+#include <QtDesigner/QDesignerFormWindowManagerInterface>
+#include <QtDesigner/QDesignerObjectInspectorInterface>
+#include <QtDesigner/QDesignerPropertyEditorInterface>
+#include <QtDesigner/QDesignerWidgetBoxInterface>
 
 /*
 QDesignerFormEditorInterface ( QObject * parent = 0 )

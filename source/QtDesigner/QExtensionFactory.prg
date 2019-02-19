@@ -36,13 +36,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QExtensionFactory>
+#include <QtDesigner/QExtensionFactory>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QExtensionManager>
+#include <QtDesigner/QExtensionManager>
 
 /*
 QExtensionFactory ( QExtensionManager * parent = 0 )
