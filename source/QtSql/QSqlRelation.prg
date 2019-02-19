@@ -44,7 +44,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QSqlRelation>
+#include <QtSql/QSqlRelation>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

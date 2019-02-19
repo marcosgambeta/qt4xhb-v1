@@ -50,15 +50,15 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QSqlQueryModel>
+#include <QtSql/QSqlQueryModel>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QSqlError>
-#include <QSqlQuery>
-#include <QSqlRecord>
+#include <QtSql/QSqlError>
+#include <QtSql/QSqlQuery>
+#include <QtSql/QSqlRecord>
 
 /*
 QSqlQueryModel ( QObject * parent = 0 )

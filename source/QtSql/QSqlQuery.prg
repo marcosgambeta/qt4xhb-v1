@@ -79,16 +79,16 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QSqlQuery>
+#include <QtSql/QSqlQuery>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QVariant>
-#include <QSqlError>
-#include <QSqlRecord>
-#include <QSqlDriver>
+#include <QtCore/QVariant>
+#include <QtSql/QSqlError>
+#include <QtSql/QSqlRecord>
+#include <QtSql/QSqlDriver>
 
 /*
 QSqlQuery ( QSqlResult * result )

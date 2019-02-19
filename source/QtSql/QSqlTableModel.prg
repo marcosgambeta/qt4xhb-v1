@@ -69,13 +69,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QSqlTableModel>
+#include <QtSql/QSqlTableModel>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QSqlIndex>
+#include <QtSql/QSqlIndex>
 
 /*
 QSqlTableModel ( QObject * parent = 0, QSqlDatabase db = QSqlDatabase() )

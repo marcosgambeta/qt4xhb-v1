@@ -85,18 +85,18 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QSqlDatabase>
+#include <QtSql/QSqlDatabase>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QSqlQuery>
-#include <QSqlError>
-#include <QStringList>
-#include <QSqlIndex>
-#include <QSqlRecord>
-#include <QSqlDriver>
+#include <QtSql/QSqlQuery>
+#include <QtSql/QSqlError>
+#include <QtCore/QStringList>
+#include <QtSql/QSqlIndex>
+#include <QtSql/QSqlRecord>
+#include <QtSql/QSqlDriver>
 
 /*
 QSqlDatabase ()

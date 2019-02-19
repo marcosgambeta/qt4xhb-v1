@@ -62,16 +62,16 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QSqlDriver>
+#include <QtSql/QSqlDriver>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QSqlError>
-#include <QSqlIndex>
-#include <QSqlRecord>
-#include <QVariant>
+#include <QtSql/QSqlError>
+#include <QtSql/QSqlIndex>
+#include <QtSql/QSqlRecord>
+#include <QtCore/QVariant>
 
 HB_FUNC_STATIC( QSQLDRIVER_DELETE )
 {

@@ -42,13 +42,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QSqlDriverCreatorBase>
+#include <QtSql/QSqlDriverCreatorBase>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QSqlDriver>
+#include <QtSql/QSqlDriver>
 
 HB_FUNC_STATIC( QSQLDRIVERCREATORBASE_DELETE )
 {
