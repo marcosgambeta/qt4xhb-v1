@@ -27,9 +27,9 @@ $destructor
 
 $includes
 
-#include <QSslKey>
-#include <QSslCipher>
-#include <QSslConfiguration>
+#include <QtNetwork/QSslKey>
+#include <QtNetwork/QSslCipher>
+#include <QtNetwork/QSslConfiguration>
 
 $prototype=QSslSocket ( QObject * parent = 0 )
 $constructor=|new|QObject *=0

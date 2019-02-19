@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QSslConfiguration>
+#include <QtNetwork/QSslConfiguration>
 
 $prototype=QNetworkRequest ( const QUrl & url = QUrl() )
 $internalConstructor=|new1|const QUrl &=QUrl()

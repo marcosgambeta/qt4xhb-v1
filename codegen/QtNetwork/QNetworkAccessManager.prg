@@ -27,11 +27,11 @@ $destructor
 
 $includes
 
-#include <QNetworkConfiguration>
-#include <QNetworkProxy>
-#include <QAbstractNetworkCache>
-#include <QNetworkCookieJar>
-#include <QNetworkReply>
+#include <QtNetwork/QNetworkConfiguration>
+#include <QtNetwork/QNetworkProxy>
+#include <QtNetwork/QAbstractNetworkCache>
+#include <QtNetwork/QNetworkCookieJar>
+#include <QtNetwork/QNetworkReply>
 
 $prototype=QNetworkAccessManager ( QObject * parent = 0 )
 $constructor=|new|QObject *=0

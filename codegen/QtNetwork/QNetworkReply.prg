@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QSslConfiguration>
+#include <QtNetwork/QSslConfiguration>
 
 $deleteMethod
 

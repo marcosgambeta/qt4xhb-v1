@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-#include <QDateTime>
-#include <QSslKey>
+#include <QtCore/QDateTime>
+#include <QtNetwork/QSslKey>
 
 $prototype=QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
 $internalConstructor=|new1|QIODevice *,QSsl::EncodingFormat=QSsl::Pem
