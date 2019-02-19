@@ -13,11 +13,11 @@
 #ifndef QNETWORKACCESSMANAGERSLOTS_H
 #define QNETWORKACCESSMANAGERSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QNetworkAccessManager>
+#include <QtNetwork/QNetworkAccessManager>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

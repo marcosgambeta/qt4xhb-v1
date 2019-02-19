@@ -13,11 +13,11 @@
 #ifndef QFTPSLOTS_H
 #define QFTPSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QFtp>
+#include <QtNetwork/QFtp>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

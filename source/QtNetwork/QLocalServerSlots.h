@@ -13,11 +13,11 @@
 #ifndef QLOCALSERVERSLOTS_H
 #define QLOCALSERVERSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QLocalServer>
+#include <QtNetwork/QLocalServer>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"

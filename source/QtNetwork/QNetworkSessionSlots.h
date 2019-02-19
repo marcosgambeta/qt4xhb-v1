@@ -13,11 +13,11 @@
 #ifndef QNETWORKSESSIONSLOTS_H
 #define QNETWORKSESSIONSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QNetworkSession>
+#include <QtNetwork/QNetworkSession>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
