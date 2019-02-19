@@ -43,13 +43,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QGraphicsSvgItem>
+#include <QtSvg/QGraphicsSvgItem>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QSvgRenderer>
+#include <QtSvg/QSvgRenderer>
 
 /*
 QGraphicsSvgItem ( QGraphicsItem * parent = 0 )

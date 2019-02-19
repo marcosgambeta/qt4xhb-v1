@@ -37,13 +37,13 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <QSvgWidget>
+#include <QtSvg/QSvgWidget>
 
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-#include <QSvgRenderer>
+#include <QtSvg/QSvgRenderer>
 
 /*
 QSvgWidget ( QWidget * parent = 0 )
