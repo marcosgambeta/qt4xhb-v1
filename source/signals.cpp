@@ -47,7 +47,8 @@ bool Signals_connect_signal ( QObject * object, QString signal, PHB_ITEM codeblo
   }
   // verifica se já está na lista
   int found = -1;
-  for (i = 0; i < s_signals->list1.size(); ++i)
+  const int listsize = s_signals->list1.size();
+  for (i = 0; i < listsize; ++i)
   {
     if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) && ( s_signals->list2.at(i) == signal ) && ( (bool) s_signals->list4.at(i) == true ) )
     {
@@ -104,7 +105,8 @@ bool Signals_disconnect_signal ( QObject * object, QString signal )
   }
   bool ret = false;
   // remove sinal da lista de sinais
-  for (i = 0; i < s_signals->list1.size(); ++i)
+  const int listsize = s_signals->list1.size();
+  for (i = 0; i < listsize; ++i)
   {
     if( (QObject *) s_signals->list1.at(i) == (QObject *) object )
     {
@@ -144,7 +146,8 @@ bool Signals_is_signal_connected ( QObject * object, QString signal )
   bool found = false;
   // verifica se já está na lista
   //int i;
-  for (int i = 0; i < s_signals->list1.size(); ++i)
+  const int listsize = s_signals->list1.size();
+  for (int i = 0; i < listsize; ++i)
   {
     if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) && ( s_signals->list2.at(i) == signal ) && ( (bool) s_signals->list4.at(i) == true ) )
     {
@@ -169,7 +172,8 @@ PHB_ITEM Signals_return_codeblock ( QObject * object, QString signal )
   int i;
   int found = -1;
   // localiza sinal na lista de sinais
-  for (i = 0; i < s_signals->list1.size(); ++i)
+  const int listsize = s_signals->list1.size();
+  for (i = 0; i < listsize; ++i)
   {
     if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) && ( s_signals->list2.at(i) == signal ) && ( (bool) s_signals->list4.at(i) == true ) )
     {
@@ -196,7 +200,8 @@ void Signals_release_codeblocks ()
 {
   if( s_signals )
   {
-    for (int i = 0; i < s_signals->list1.size(); ++i)
+    const int listsize = s_signals->list1.size();
+    for (int i = 0; i < listsize; ++i)
     {
       if( (bool) s_signals->list4.at(i) == true )
       {
@@ -225,7 +230,8 @@ void Signals_disconnect_all_signals (QObject * obj, bool children)
     if( !children )
     {
       // percorre toda a lista de sinais
-      for (int i = 0; i < s_signals->list1.size(); ++i)
+      const int listsize = s_signals->list1.size();
+      for (int i = 0; i < listsize; ++i)
       {
         // elimina sinais ativos (true) ligados ao objeto (obj)
         if( ( (QObject *) s_signals->list1.at(i) == (QObject *) obj ) &&
@@ -247,10 +253,12 @@ void Signals_disconnect_all_signals (QObject * obj, bool children)
       // adiciona o pai na lista
       list << obj;
       // percorre toda a lista de objetos
-      for (int i = 0; i < list.size(); ++i)
+      const int listsize = list.size();
+      for (int i = 0; i < listsize; ++i)
       {
         // percorre toda a lista de sinais
-        for (int ii = 0; ii < s_signals->list1.size(); ++ii)
+        const int listsize2 = s_signals->list1.size();
+        for (int ii = 0; ii < listsize2; ++ii)
         {
           // elimina sinais ativos (true) ligados ao objeto list.at(i)
           if( ( (QObject *) s_signals->list1.at(ii) == (QObject *) list.at(i) ) &&
@@ -358,7 +366,8 @@ HB_FUNC( QTXHB_SIGNALS_SIZE_ACTIVE )
     // inicializa contador
     int count = 0;
     // percorre toda a lista de sinais
-    for (int i = 0; i < s_signals->list1.size(); ++i)
+    const int listsize = s_signals->list1.size();
+    for (int i = 0; i < listsize; ++i)
     {
       if( s_signals->list4.at(i) )
       {
