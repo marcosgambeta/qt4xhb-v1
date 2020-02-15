@@ -36,11 +36,10 @@ bool Events::eventFilter(QObject *obj, QEvent *event)
 {
   QEvent::Type eventtype = event->type();
   int found = -1;
-  for (int i = 0; i < list1.size(); ++i)
+  const int listsize = list1.size();
+  for (int i = 0; i < listsize; ++i)
   {
-    if( ( (QObject *) list1.at(i) == (QObject *) obj ) &&
-        ( (QEvent::Type) list2.at(i) == (QEvent::Type) eventtype ) &&
-        ( (bool) list4.at(i) == true ) )
+    if( ( (QObject *) list1.at(i) == (QObject *) obj ) && ( (QEvent::Type) list2.at(i) == (QEvent::Type) eventtype ) && ( (bool) list4.at(i) == true ) )
         { found = i; break; }
   }
   // se não encontrado na lista, propaga o evento
@@ -94,7 +93,8 @@ bool Events_connect_event ( QObject * object, int type, PHB_ITEM codeblock )
 
   // verifica se já está na lista
   int found = -1;
-  for (i = 0; i < s_events->list1.size(); ++i)
+  const int listsize = s_events->list1.size();
+  for (i = 0; i < listsize; ++i)
   {
     if( ( (QObject *) s_events->list1.at(i) == (QObject *) object ) && ( (QEvent::Type) s_events->list2.at(i) == (QEvent::Type) type ) && ( (bool) s_events->list4.at(i) == true ) )
     {
@@ -159,7 +159,8 @@ bool Events_disconnect_event ( QObject * object, int type )
   }
   bool ret = false;
   // remove evento da lista de eventos
-  for (i = 0; i < s_events->list1.size(); ++i)
+  const int listsize = s_events->list1.size();
+  for (i = 0; i < listsize; ++i)
   {
     if( (QObject *) s_events->list1.at(i) == (QObject *) object )
     {
@@ -193,7 +194,8 @@ void Events_release_codeblocks ()
 {
   if( s_events )
   {
-    for (int i = 0; i < s_events->list1.size(); ++i)
+    const int listsize = s_events->list1.size();
+    for (int i = 0; i < listsize; ++i)
     {
       if( (bool) s_events->list4.at(i) == true )
       {
@@ -219,7 +221,8 @@ void Events_disconnect_all_events (QObject * obj, bool children)
     if( !children )
     {
       // percorre toda a lista de eventos
-      for (int i = 0; i < s_events->list1.size(); ++i)
+      const int listsize = s_events->list1.size();
+      for (int i = 0; i < listsize; ++i)
       {
         // elimina eventos ativos (true) ligados ao objeto (obj)
         if( ( (QObject *) s_events->list1.at(i) == (QObject *) obj ) && ( (bool) s_events->list4.at(i) == true ) )
@@ -244,10 +247,12 @@ void Events_disconnect_all_events (QObject * obj, bool children)
       // adiciona o pai na lista
       list << obj;
       // percorre toda a lista de objetos
-      for (int i = 0; i < list.size(); ++i)
+      const int listsize = list.size();
+      for (int i = 0; i < listsize; ++i)
       {
         // percorre toda a lista de eventos
-        for (int ii = 0; ii < s_events->list1.size(); ++ii)
+        const int listsize2 = s_events->list1.size();
+        for (int ii = 0; ii < listsize2; ++ii)
         {
           // elimina eventos ativos (true) ligados ao objeto list.at(i)
           if( ( (QObject *) s_events->list1.at(ii) == (QObject *) list.at(i) ) && ( (bool) s_events->list4.at(ii) == true ) )
