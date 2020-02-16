@@ -40,8 +40,8 @@ class Events: public QObject
   QList<QObject*> list1;     // armazena ponteiro do objeto
   QList<QEvent::Type> list2; // armazena tipo de evento
   QList<PHB_ITEM> list3;     // armazena codeblock
-  QList<bool> list4;         // ativo (true) ou liberado (false)
   QMutex * mutex;
+
   protected:
   bool eventFilter(QObject *obj, QEvent *event);
 
