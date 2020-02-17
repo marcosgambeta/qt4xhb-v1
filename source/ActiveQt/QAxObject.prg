@@ -57,6 +57,8 @@ RETURN
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
+#include "qt4xhb_events.h"
+#include "qt4xhb_signals.h"
 
 #include <QtCore/QStringList>
 
@@ -117,6 +119,8 @@ HB_FUNC_STATIC( QAXOBJECT_DELETE )
 
   if( obj )
   {
+    Events_disconnect_all_events (obj, true);
+    Signals_disconnect_all_signals (obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
