@@ -49,8 +49,6 @@ STATIC FUNCTION ShowColorDialog (oWindow)
 
    oColorDialog:exec()
 
-   oColorDialog:onColorSelected()
-
    oColorDialog:delete()
 
 RETURN NIL
