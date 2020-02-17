@@ -48,7 +48,7 @@ $prototype=QScriptValue ( uint value )
 $constructor=|new6|uint
 
 $prototype=QScriptValue ( qsreal value )
-$constructor=|new7|qsreal
+%% TODO: $constructor=|new7|qsreal
 
 $prototype=QScriptValue ( const QString & value )
 $constructor=|new8|const QString &
@@ -192,7 +192,7 @@ $prototype=QScriptValue data () const
 $method=|QScriptValue|data|
 
 $prototype=QScriptEngine * engine () const
-$method=|QScriptEngine *|engine|
+%% TODO: $method=|QScriptEngine *|engine|
 
 $prototype=bool equals ( const QScriptValue & other ) const
 $method=|bool|equals|const QScriptValue &
@@ -276,10 +276,10 @@ $prototype=qint32 toInt32 () const
 $method=|qint32|toInt32|
 
 $prototype=qsreal toInteger () const
-$method=|qsreal|toInteger|
+%% TODO: $method=|qsreal|toInteger|
 
 $prototype=qsreal toNumber () const
-$method=|qsreal|toNumber|
+%% TODO: $method=|qsreal|toNumber|
 
 $prototype=QObject * toQObject () const
 $method=|QObject *|toQObject|
