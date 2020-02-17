@@ -37,6 +37,8 @@ RETURN
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
+#include "qt4xhb_events.h"
+#include "qt4xhb_signals.h"
 
 /*
 virtual void initializeEngine ( QDeclarativeEngine * engine, const char * uri )
