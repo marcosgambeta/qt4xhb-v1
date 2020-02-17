@@ -26,7 +26,7 @@ $destructor
 $includes
 
 $prototype=QTextInlineObject ( int i, QTextEngine * e )
-$constructor=|new|int,QTextEngine *
+%% TODO: $constructor=|new|int,QTextEngine *
 
 $deleteMethod
 

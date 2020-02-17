@@ -95,13 +95,13 @@ $prototype=Qt::Alignment formAlignment () const
 $method=|Qt::Alignment|formAlignment|
 
 $prototype=void getItemPosition ( int index, int * rowPtr, ItemRole * rolePtr ) const
-$method=|void|getItemPosition|int,int *,QFormLayout::ItemRole *
+%% TODO: $method=|void|getItemPosition|int,int *,QFormLayout::ItemRole *
 
 $prototype=void getLayoutPosition ( QLayout * layout, int * rowPtr, ItemRole * rolePtr ) const
-$method=|void|getLayoutPosition|QLayout *,int *,QFormLayout::ItemRole *
+%% TODO: $method=|void|getLayoutPosition|QLayout *,int *,QFormLayout::ItemRole *
 
 $prototype=void getWidgetPosition ( QWidget * widget, int * rowPtr, ItemRole * rolePtr ) const
-$method=|void|getWidgetPosition|QWidget *,int *,QFormLayout::ItemRole *
+%% TODO: $method=|void|getWidgetPosition|QWidget *,int *,QFormLayout::ItemRole *
 
 $prototype=int horizontalSpacing () const
 $method=|int|horizontalSpacing|
