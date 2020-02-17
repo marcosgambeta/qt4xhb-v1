@@ -100,16 +100,6 @@ RETURN SELF
 
 METHOD delete () CLASS ImageViewer
 
-   ::oOpenAct:onTriggered()
-   ::oPrintAct:onTriggered()
-   ::oExitAct:onTriggered()
-   ::oZoomInAct:onTriggered()
-   ::oZoomOutAct:onTriggered()
-   ::oNormalSizeAct:onTriggered()
-   ::oFitToWindowAct:OnTriggered()
-   ::oAboutAct:onTriggered()
-   ::oAboutQtAct:onTriggered()
-
    ::super:delete()
 
 RETURN NIL

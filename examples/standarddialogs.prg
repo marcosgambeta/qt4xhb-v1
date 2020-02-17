@@ -485,23 +485,6 @@ RETURN NIL
 
 METHOD delete () CLASS Dialog
 
-   // desconecta sinais
-   ::oIntegerButton:onClicked()
-   ::oDoubleButton:onClicked()
-   ::oItemButton:onClicked()
-   ::oTextButton:onClicked()
-   ::oColorButton:onClicked()
-   ::oFontButton:onClicked()
-   ::oDirectoryButton:onClicked()
-   ::oOpenFileNameButton:onClicked()
-   ::oOpenFileNamesButton:onClicked()
-   ::oSaveFileNameButton:onClicked()
-   ::oCriticalButton:onClicked()
-   ::oInformationButton:onClicked()
-   ::oQuestionButton:onClicked()
-   ::oWarningButton:onClicked()
-   ::oErrorButton:onClicked()
-
    // destrói objeto
    ::super:delete()
 

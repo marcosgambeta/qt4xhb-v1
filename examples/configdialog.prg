@@ -175,10 +175,6 @@ RETURN NIL
 
 METHOD delete () CLASS ConfigDialog
 
-   // desconecta sinais
-   ::oCloseButton:onClicked()
-   ::oContentsWidget:onCurrentItemChanged()
-
    // destrói o objeto ConfigDialog
    ::super:delete()
 

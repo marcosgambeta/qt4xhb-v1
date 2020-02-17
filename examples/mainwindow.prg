@@ -41,8 +41,6 @@ PROCEDURE Main ()
 
    oApp:exec()
 
-   oMainWindow:disconnectAll(.T.)
-
    oMainWindow:delete()
 
    oApp:delete()

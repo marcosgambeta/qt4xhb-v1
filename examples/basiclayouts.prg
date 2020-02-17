@@ -169,11 +169,6 @@ RETURN NIL
 
 METHOD delete () CLASS Dialog
 
-   // desconecta sinais
-   ::oButtonBox:onAccepted()
-   ::oButtonBox:onRejected()
-   ::oExitAction:onTriggered()
-
    // destroi o objeto
    ::super:delete()
 
