@@ -46,7 +46,6 @@ class Signals: public QObject
   QList<QObject*> list1; // armazena ponteiro do objeto
   QList<QString> list2;  // armazena assinatura do sinal
   QList<PHB_ITEM> list3; // armazena codeblock
-  QList<bool> list4;     // ativo (true) ou liberado (false)
   QMutex * mutex;
 };
 
