@@ -27,7 +27,7 @@ void QAudioInputSlots::stateChanged( QAudio::State state )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAUDIOINPUT" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstate );
+    hb_vmEvalBlockV( cb, 2, psender, pstate );
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }
@@ -39,7 +39,7 @@ void QAudioInputSlots::notify()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAUDIOINPUT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
