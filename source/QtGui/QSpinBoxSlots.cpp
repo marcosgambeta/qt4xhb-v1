@@ -27,7 +27,7 @@ void QSpinBoxSlots::valueChanged( int i )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSPINBOX" );
     PHB_ITEM pi = hb_itemPutNI( NULL, i );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pi );
+    hb_vmEvalBlockV( cb, 2, psender, pi );
     hb_itemRelease( psender );
     hb_itemRelease( pi );
   }
@@ -40,7 +40,7 @@ void QSpinBoxSlots::valueChanged( const QString & text )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSPINBOX" );
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptext );
+    hb_vmEvalBlockV( cb, 2, psender, ptext );
     hb_itemRelease( psender );
     hb_itemRelease( ptext );
   }
