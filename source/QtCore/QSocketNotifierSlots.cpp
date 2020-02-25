@@ -27,7 +27,7 @@ void QSocketNotifierSlots::activated( int socket )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSOCKETNOTIFIER" );
     PHB_ITEM psocket = hb_itemPutNI( NULL, socket );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psocket );
+    hb_vmEvalBlockV( cb, 2, psender, psocket );
     hb_itemRelease( psender );
     hb_itemRelease( psocket );
   }

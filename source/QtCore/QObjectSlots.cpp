@@ -27,7 +27,7 @@ void QObjectSlots::destroyed( QObject * obj )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QOBJECT" );
     PHB_ITEM pobj = Signals_return_qobject( (QObject *) obj, "QOBJECT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pobj );
+    hb_vmEvalBlockV( cb, 2, psender, pobj );
     hb_itemRelease( psender );
     hb_itemRelease( pobj );
     Signals_disconnect_signal( object, "destroyed(QObject*)" );
