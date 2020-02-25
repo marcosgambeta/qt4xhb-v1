@@ -28,7 +28,7 @@ void QFtpSlots::commandFinished( int id, bool error )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFTP" );
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
     PHB_ITEM perror = hb_itemPutL( NULL, error );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pid, perror );
+    hb_vmEvalBlockV( cb, 3, psender, pid, perror );
     hb_itemRelease( psender );
     hb_itemRelease( pid );
     hb_itemRelease( perror );
@@ -42,7 +42,7 @@ void QFtpSlots::commandStarted( int id )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFTP" );
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pid );
+    hb_vmEvalBlockV( cb, 2, psender, pid );
     hb_itemRelease( psender );
     hb_itemRelease( pid );
   }
@@ -56,7 +56,7 @@ void QFtpSlots::dataTransferProgress( qint64 done, qint64 total )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFTP" );
     PHB_ITEM pdone = hb_itemPutNLL( NULL, done );
     PHB_ITEM ptotal = hb_itemPutNLL( NULL, total );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pdone, ptotal );
+    hb_vmEvalBlockV( cb, 3, psender, pdone, ptotal );
     hb_itemRelease( psender );
     hb_itemRelease( pdone );
     hb_itemRelease( ptotal );
@@ -70,7 +70,7 @@ void QFtpSlots::done( bool error )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFTP" );
     PHB_ITEM perror = hb_itemPutL( NULL, error );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, perror );
+    hb_vmEvalBlockV( cb, 2, psender, perror );
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }
@@ -83,7 +83,7 @@ void QFtpSlots::listInfo( const QUrlInfo & i )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFTP" );
     PHB_ITEM pi = Signals_return_object( (void *) &i, "QURLINFO" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pi );
+    hb_vmEvalBlockV( cb, 2, psender, pi );
     hb_itemRelease( psender );
     hb_itemRelease( pi );
   }
@@ -97,7 +97,7 @@ void QFtpSlots::rawCommandReply( int replyCode, const QString & detail )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFTP" );
     PHB_ITEM preplyCode = hb_itemPutNI( NULL, replyCode );
     PHB_ITEM pdetail = hb_itemPutC( NULL, QSTRINGTOSTRING(detail) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, preplyCode, pdetail );
+    hb_vmEvalBlockV( cb, 3, psender, preplyCode, pdetail );
     hb_itemRelease( psender );
     hb_itemRelease( preplyCode );
     hb_itemRelease( pdetail );
@@ -110,7 +110,7 @@ void QFtpSlots::readyRead()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFTP" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -122,7 +122,7 @@ void QFtpSlots::stateChanged( int state )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFTP" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, state );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstate );
+    hb_vmEvalBlockV( cb, 2, psender, pstate );
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }
