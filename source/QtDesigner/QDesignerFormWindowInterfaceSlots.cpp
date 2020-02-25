@@ -27,7 +27,7 @@ void QDesignerFormWindowInterfaceSlots::aboutToUnmanageWidget( QWidget * widget 
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
     PHB_ITEM pwidget = Signals_return_qobject( (QObject *) widget, "QWIDGET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pwidget );
+    hb_vmEvalBlockV( cb, 2, psender, pwidget );
     hb_itemRelease( psender );
     hb_itemRelease( pwidget );
   }
@@ -40,7 +40,7 @@ void QDesignerFormWindowInterfaceSlots::activated( QWidget * widget )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
     PHB_ITEM pwidget = Signals_return_qobject( (QObject *) widget, "QWIDGET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pwidget );
+    hb_vmEvalBlockV( cb, 2, psender, pwidget );
     hb_itemRelease( psender );
     hb_itemRelease( pwidget );
   }
@@ -52,7 +52,7 @@ void QDesignerFormWindowInterfaceSlots::changed()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -64,7 +64,7 @@ void QDesignerFormWindowInterfaceSlots::featureChanged( QDesignerFormWindowInter
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
     PHB_ITEM pfeature = hb_itemPutNI( NULL, (int) feature );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pfeature );
+    hb_vmEvalBlockV( cb, 2, psender, pfeature );
     hb_itemRelease( psender );
     hb_itemRelease( pfeature );
   }
@@ -77,7 +77,7 @@ void QDesignerFormWindowInterfaceSlots::fileNameChanged( const QString & fileNam
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
     PHB_ITEM pfileName = hb_itemPutC( NULL, QSTRINGTOSTRING(fileName) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pfileName );
+    hb_vmEvalBlockV( cb, 2, psender, pfileName );
     hb_itemRelease( psender );
     hb_itemRelease( pfileName );
   }
@@ -89,7 +89,7 @@ void QDesignerFormWindowInterfaceSlots::geometryChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -101,7 +101,7 @@ void QDesignerFormWindowInterfaceSlots::mainContainerChanged( QWidget * mainCont
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
     PHB_ITEM pmainContainer = Signals_return_qobject( (QObject *) mainContainer, "QWIDGET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmainContainer );
+    hb_vmEvalBlockV( cb, 2, psender, pmainContainer );
     hb_itemRelease( psender );
     hb_itemRelease( pmainContainer );
   }
@@ -114,7 +114,7 @@ void QDesignerFormWindowInterfaceSlots::objectRemoved( QObject * object2 )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
     PHB_ITEM pobject2 = Signals_return_qobject( (QObject *) object2, "QOBJECT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pobject2 );
+    hb_vmEvalBlockV( cb, 2, psender, pobject2 );
     hb_itemRelease( psender );
     hb_itemRelease( pobject2 );
   }
@@ -126,7 +126,7 @@ void QDesignerFormWindowInterfaceSlots::resourceFilesChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -137,7 +137,7 @@ void QDesignerFormWindowInterfaceSlots::selectionChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -149,7 +149,7 @@ void QDesignerFormWindowInterfaceSlots::widgetManaged( QWidget * widget )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
     PHB_ITEM pwidget = Signals_return_qobject( (QObject *) widget, "QWIDGET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pwidget );
+    hb_vmEvalBlockV( cb, 2, psender, pwidget );
     hb_itemRelease( psender );
     hb_itemRelease( pwidget );
   }
@@ -162,7 +162,7 @@ void QDesignerFormWindowInterfaceSlots::widgetRemoved( QWidget * widget )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
     PHB_ITEM pwidget = Signals_return_qobject( (QObject *) widget, "QWIDGET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pwidget );
+    hb_vmEvalBlockV( cb, 2, psender, pwidget );
     hb_itemRelease( psender );
     hb_itemRelease( pwidget );
   }
@@ -175,7 +175,7 @@ void QDesignerFormWindowInterfaceSlots::widgetUnmanaged( QWidget * widget )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
     PHB_ITEM pwidget = Signals_return_qobject( (QObject *) widget, "QWIDGET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pwidget );
+    hb_vmEvalBlockV( cb, 2, psender, pwidget );
     hb_itemRelease( psender );
     hb_itemRelease( pwidget );
   }
