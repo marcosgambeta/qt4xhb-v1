@@ -158,8 +158,7 @@ HB_FUNC_STATIC( QMETAMETHOD_PARAMETERTYPES )
       QList<QByteArray> list = obj->parameterTypes ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -211,8 +210,7 @@ HB_FUNC_STATIC( QMETAMETHOD_PARAMETERNAMES )
       QList<QByteArray> list = obj->parameterNames ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {

@@ -314,8 +314,7 @@ HB_FUNC_STATIC( QOBJECT_CHILDREN )
       QObjectList list = obj->children ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QOBJECT" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -415,8 +414,7 @@ HB_FUNC_STATIC( QOBJECT_DYNAMICPROPERTYNAMES )
       QList<QByteArray> list = obj->dynamicPropertyNames ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -537,8 +535,7 @@ void QObject_findChildren1 ()
       QList<QObject *> list = obj->findChildren<QObject *> ( OPQSTRING(1,QString()) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QOBJECT" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -575,8 +572,7 @@ void QObject_findChildren2 ()
       QList<QObject *> list = obj->findChildren<QObject *> ( *PQREGEXP(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QOBJECT" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {

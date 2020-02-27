@@ -1953,8 +1953,7 @@ HB_FUNC_STATIC( QLOCALE_WEEKDAYS )
 #endif
       QList<Qt::DayOfWeek> list = obj->weekdays ();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
         hb_arrayAddForward( pArray, pItem );
@@ -2041,8 +2040,7 @@ HB_FUNC_STATIC( QLOCALE_MATCHINGLOCALES )
       QList<QLocale> list = QLocale::matchingLocales ( (QLocale::Language) hb_parni(1), (QLocale::Script) hb_parni(2), (QLocale::Country) hb_parni(3) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QLOCALE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {

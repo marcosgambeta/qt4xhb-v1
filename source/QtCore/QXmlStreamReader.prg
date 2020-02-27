@@ -616,8 +616,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ENTITYDECLARATIONS )
       QXmlStreamEntityDeclarations list = obj->entityDeclarations ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QXMLSTREAMENTITYECLARATION" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -1103,8 +1102,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NAMESPACEDECLARATIONS )
       QXmlStreamNamespaceDeclarations list = obj->namespaceDeclarations ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QXMLSTREAMNAMESPACEDECLARATION" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -1205,8 +1203,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NOTATIONDECLARATIONS )
       QXmlStreamNotationDeclarations list = obj->notationDeclarations ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QXMLSTREAMNOTATIONECLARATION" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
