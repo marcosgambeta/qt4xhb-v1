@@ -78,8 +78,7 @@ void QNetworkReplySlots::sslErrors( const QList<QSslError> & errors )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKREPLY" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
     PHB_ITEM perrors = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<errors.count();i++)
+    for( int i = 0; i < errors.count(); i++ )
     {
       if( pDynSym )
       {
