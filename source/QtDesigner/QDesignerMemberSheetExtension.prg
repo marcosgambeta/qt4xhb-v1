@@ -310,8 +310,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERNAMES )
       QList<QByteArray> list = obj->parameterNames ( PINT(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -363,8 +362,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERTYPES )
       QList<QByteArray> list = obj->parameterTypes ( PINT(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
