@@ -272,8 +272,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_BUTTONS )
       QList<QAbstractButton *> list = obj->buttons ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTBUTTON" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {

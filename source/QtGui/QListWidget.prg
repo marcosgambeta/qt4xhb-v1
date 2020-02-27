@@ -333,8 +333,7 @@ HB_FUNC_STATIC( QLISTWIDGET_FINDITEMS )
       QList<QListWidgetItem *> list = obj->findItems ( PQSTRING(1), (Qt::MatchFlags) hb_parni(2) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QLISTWIDGETITEM" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -654,8 +653,7 @@ HB_FUNC_STATIC( QLISTWIDGET_SELECTEDITEMS )
       QList<QListWidgetItem *> list = obj->selectedItems ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QLISTWIDGETITEM" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {

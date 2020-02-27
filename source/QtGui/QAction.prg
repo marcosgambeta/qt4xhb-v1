@@ -247,8 +247,7 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDGRAPHICSWIDGETS )
       QList<QGraphicsWidget *> list = obj->associatedGraphicsWidgets ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSWIDGET" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -296,8 +295,7 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDWIDGETS )
       QList<QWidget *> list = obj->associatedWidgets ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QWIDGET" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -1310,8 +1308,7 @@ HB_FUNC_STATIC( QACTION_SHORTCUTS )
       QList<QKeySequence> list = obj->shortcuts ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QKEYSEQUENCE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {

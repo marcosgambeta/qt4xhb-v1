@@ -453,8 +453,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_CHILDITEMS )
       QList<QGraphicsItem *> list = obj->childItems ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -626,8 +625,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDINGITEMS )
       QList<QGraphicsItem *> list = obj->collidingItems ( ISNIL(1)? (Qt::ItemSelectionMode) Qt::IntersectsItemShape : (Qt::ItemSelectionMode) hb_parni(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -4241,8 +4239,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TRANSFORMATIONS )
       QList<QGraphicsTransform *> list = obj->transformations ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSTRANSFORM" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {

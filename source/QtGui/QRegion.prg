@@ -399,8 +399,7 @@ HB_FUNC_STATIC( QREGION_RECTS )
       QVector<QRect> list = obj->rects ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QRECT" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {

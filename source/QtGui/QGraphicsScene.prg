@@ -661,8 +661,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_COLLIDINGITEMS )
       QList<QGraphicsItem *> list = obj->collidingItems ( PQGRAPHICSITEM(1), ISNIL(2)? (Qt::ItemSelectionMode) Qt::IntersectsItemShape : (Qt::ItemSelectionMode) hb_parni(2) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -1081,8 +1080,7 @@ void QGraphicsScene_items1 ()
       QList<QGraphicsItem *> list = obj->items ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -1119,8 +1117,7 @@ void QGraphicsScene_items2 ()
       QList<QGraphicsItem *> list = obj->items ( (Qt::SortOrder) hb_parni(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -1157,8 +1154,7 @@ void QGraphicsScene_items3 ()
       QList<QGraphicsItem *> list = obj->items ( *PQPOINTF(1), (Qt::ItemSelectionMode) hb_parni(2), (Qt::SortOrder) hb_parni(3), ISNIL(4)? QTransform() : *(QTransform *) _qt4xhb_itemGetPtr(4) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -1195,8 +1191,7 @@ void QGraphicsScene_items4 ()
       QList<QGraphicsItem *> list = obj->items ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), (Qt::ItemSelectionMode) hb_parni(5), (Qt::SortOrder) hb_parni(6), ISNIL(7)? QTransform() : *(QTransform *) _qt4xhb_itemGetPtr(7) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -1233,8 +1228,7 @@ void QGraphicsScene_items5 ()
       QList<QGraphicsItem *> list = obj->items ( *PQRECTF(1), (Qt::ItemSelectionMode) hb_parni(2), (Qt::SortOrder) hb_parni(3), ISNIL(4)? QTransform() : *(QTransform *) _qt4xhb_itemGetPtr(4) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -1271,8 +1265,7 @@ void QGraphicsScene_items6 ()
       QList<QGraphicsItem *> list = obj->items ( *PQPOLYGONF(1), (Qt::ItemSelectionMode) hb_parni(2), (Qt::SortOrder) hb_parni(3), ISNIL(4)? QTransform() : *(QTransform *) _qt4xhb_itemGetPtr(4) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -1309,8 +1302,7 @@ void QGraphicsScene_items7 ()
       QList<QGraphicsItem *> list = obj->items ( *PQPAINTERPATH(1), (Qt::ItemSelectionMode) hb_parni(2), (Qt::SortOrder) hb_parni(3), ISNIL(4)? QTransform() : *(QTransform *) _qt4xhb_itemGetPtr(4) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -1547,8 +1539,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SELECTEDITEMS )
       QList<QGraphicsItem *> list = obj->selectedItems ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -2179,8 +2170,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_VIEWS )
       QList<QGraphicsView *> list = obj->views ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSVIEW" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {

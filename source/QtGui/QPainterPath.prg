@@ -1387,8 +1387,7 @@ void QPainterPath_toFillPolygons1 ()
       QList<QPolygonF> list = obj->toFillPolygons ( *PQTRANSFORM(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QPOLYGONF" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -1429,8 +1428,7 @@ void QPainterPath_toFillPolygons2 ()
       QList<QPolygonF> list = obj->toFillPolygons ( ISNIL(1)? QMatrix() : *(QMatrix *) _qt4xhb_itemGetPtr(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QPOLYGONF" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -1515,8 +1513,7 @@ void QPainterPath_toSubpathPolygons1 ()
       QList<QPolygonF> list = obj->toSubpathPolygons ( *PQTRANSFORM(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QPOLYGONF" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -1557,8 +1554,7 @@ void QPainterPath_toSubpathPolygons2 ()
       QList<QPolygonF> list = obj->toSubpathPolygons ( ISNIL(1)? QMatrix() : *(QMatrix *) _qt4xhb_itemGetPtr(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QPOLYGONF" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {

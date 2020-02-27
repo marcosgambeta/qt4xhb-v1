@@ -603,8 +603,7 @@ void QGraphicsView_items1 ()
       QList<QGraphicsItem *> list = obj->items ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -641,8 +640,7 @@ void QGraphicsView_items2 ()
       QList<QGraphicsItem *> list = obj->items ( *PQPOINT(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -679,8 +677,7 @@ void QGraphicsView_items3 ()
       QList<QGraphicsItem *> list = obj->items ( PINT(1), PINT(2) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -717,8 +714,7 @@ void QGraphicsView_items4 ()
       QList<QGraphicsItem *> list = obj->items ( PINT(1), PINT(2), PINT(3), PINT(4), ISNIL(5)? (Qt::ItemSelectionMode) Qt::IntersectsItemShape : (Qt::ItemSelectionMode) hb_parni(5) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -755,8 +751,7 @@ void QGraphicsView_items5 ()
       QList<QGraphicsItem *> list = obj->items ( *PQRECT(1), ISNIL(2)? (Qt::ItemSelectionMode) Qt::IntersectsItemShape : (Qt::ItemSelectionMode) hb_parni(2) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -793,8 +788,7 @@ void QGraphicsView_items6 ()
       QList<QGraphicsItem *> list = obj->items ( *PQPOLYGON(1), ISNIL(2)? (Qt::ItemSelectionMode) Qt::IntersectsItemShape : (Qt::ItemSelectionMode) hb_parni(2) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -831,8 +825,7 @@ void QGraphicsView_items7 ()
       QList<QGraphicsItem *> list = obj->items ( *PQPAINTERPATH(1), ISNIL(2)? (Qt::ItemSelectionMode) Qt::IntersectsItemShape : (Qt::ItemSelectionMode) hb_parni(2) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {

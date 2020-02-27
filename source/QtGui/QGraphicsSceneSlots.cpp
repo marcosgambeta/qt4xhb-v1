@@ -28,8 +28,7 @@ void QGraphicsSceneSlots::changed( const QList<QRectF> & region )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSSCENE" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QRECTF" );
     PHB_ITEM pregion = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<region.count();i++)
+    for( int i = 0; i < region.count(); i++ )
     {
       if( pDynSym )
       {

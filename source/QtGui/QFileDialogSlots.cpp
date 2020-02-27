@@ -66,8 +66,7 @@ void QFileDialogSlots::filesSelected( const QStringList & selected )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFILEDIALOG" );
     PHB_ITEM pselected = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<selected.count();i++)
+    for( int i = 0; i < selected.count(); i++ )
     {
       PHB_ITEM pTempItem = hb_itemPutC( NULL, QSTRINGTOSTRING(selected [i]) );
       hb_arrayAddForward( pselected, pTempItem );

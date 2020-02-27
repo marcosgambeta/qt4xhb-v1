@@ -157,8 +157,7 @@ HB_FUNC_STATIC( QGLYPHRUN_GLYPHINDEXES )
 #endif
       QVector<quint32> list = obj->glyphIndexes ();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         PHB_ITEM pItem = hb_itemPutNI( NULL, (quint32) list[i] );
         hb_arrayAddForward( pArray, pItem );
@@ -215,8 +214,7 @@ HB_FUNC_STATIC( QGLYPHRUN_POSITIONS )
       QVector<QPointF> list = obj->positions ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QPOINTF" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
