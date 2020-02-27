@@ -39,8 +39,7 @@ void QDeclarativeEngineSlots::warnings( const QList<QDeclarativeError> & warning
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDECLARATIVEENGINE" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR" );
     PHB_ITEM pwarnings = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<warnings.count();i++)
+    for( int i = 0; i < warnings.count(); i++ )
     {
       if( pDynSym )
       {
