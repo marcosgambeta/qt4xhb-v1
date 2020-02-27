@@ -130,8 +130,7 @@ HB_FUNC_STATIC( QWEBHISTORY_BACKITEMS )
       QList<QWebHistoryItem> list = obj->backItems ( PINT(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QWEBHISTORYITEM" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -381,8 +380,7 @@ HB_FUNC_STATIC( QWEBHISTORY_FORWARDITEMS )
       QList<QWebHistoryItem> list = obj->forwardItems ( PINT(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QWEBHISTORYITEM" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -485,8 +483,7 @@ HB_FUNC_STATIC( QWEBHISTORY_ITEMS )
       QList<QWebHistoryItem> list = obj->items ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QWEBHISTORYITEM" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
