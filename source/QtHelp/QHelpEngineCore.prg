@@ -368,8 +368,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILES )
       QList<QUrl> list = obj->files ( PQSTRING(1), PQSTRINGLIST(2), OPQSTRING(3,QString()) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QURL" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
