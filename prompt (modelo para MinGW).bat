@@ -1,7 +1,7 @@
 rem
-rem Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+rem Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 rem
-rem Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+rem Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 rem
 rem Prompt de comando para utilização do Qt4xHb com MinGW.
 rem
