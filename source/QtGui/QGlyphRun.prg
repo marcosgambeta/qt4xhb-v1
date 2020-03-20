@@ -289,15 +289,15 @@ HB_FUNC_STATIC( QGLYPHRUN_SETGLYPHINDEXES )
     {
 #endif
       QVector<quint32> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-quint32 temp1;
-for (i1=0;i1<nLen1;i1++)
-{
-  temp1 = (quint32) hb_arrayGetNI(aList1, i1+1);
-  par1 << temp1;
-}
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aList1);
+      quint32 temp1;
+      for (i1=0;i1<nLen1;i1++)
+      {
+        temp1 = (quint32) hb_arrayGetNI(aList1, i1+1);
+        par1 << temp1;
+      }
       obj->setGlyphIndexes ( par1 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -351,13 +351,13 @@ HB_FUNC_STATIC( QGLYPHRUN_SETPOSITIONS )
     {
 #endif
       QVector<QPointF> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-  par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aList1);
+      for (i1=0;i1<nLen1;i1++)
+      {
+        par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      }
       obj->setPositions ( par1 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

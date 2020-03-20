@@ -583,7 +583,7 @@ void QItemSelectionModel_select1 ()
 
   if( obj )
   {
-      obj->select ( *PQMODELINDEX(1), (QItemSelectionModel::SelectionFlags) hb_parni(2) );
+    obj->select ( *PQMODELINDEX(1), (QItemSelectionModel::SelectionFlags) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -598,7 +598,7 @@ void QItemSelectionModel_select2 ()
 
   if( obj )
   {
-      obj->select ( *PQITEMSELECTION(1), (QItemSelectionModel::SelectionFlags) hb_parni(2) );
+    obj->select ( *PQITEMSELECTION(1), (QItemSelectionModel::SelectionFlags) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

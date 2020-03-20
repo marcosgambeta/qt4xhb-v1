@@ -228,13 +228,13 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_ADDACTIONS )
     {
 #endif
       QList<QAction *> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-  par1 << (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aList1);
+      for (i1=0;i1<nLen1;i1++)
+      {
+        par1 << (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      }
       obj->addActions ( par1 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -386,14 +386,14 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_GETWINDOWFRAMEMARGINS )
     {
 #endif
       qreal par1;
-qreal par2;
-qreal par3;
-qreal par4;
+      qreal par2;
+      qreal par3;
+      qreal par4;
       obj->getWindowFrameMargins ( &par1, &par2, &par3, &par4 );
       hb_stornd( par1, 1 );
-hb_stornd( par2, 2 );
-hb_stornd( par3, 3 );
-hb_stornd( par4, 4 );
+      hb_stornd( par2, 2 );
+      hb_stornd( par3, 3 );
+      hb_stornd( par4, 4 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -470,13 +470,13 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_INSERTACTIONS )
     {
 #endif
       QList<QAction *> par2;
-PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-int i2;
-int nLen2 = hb_arrayLen(aList2);
-for (i2=0;i2<nLen2;i2++)
-{
-  par2 << (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
-}
+      PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
+      int i2;
+      int nLen2 = hb_arrayLen(aList2);
+      for (i2=0;i2<nLen2;i2++)
+      {
+        par2 << (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
+      }
       obj->insertActions ( PQACTION(1), par2 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -700,7 +700,7 @@ void QGraphicsWidget_resize1 ()
 
   if( obj )
   {
-      obj->resize ( *PQSIZEF(1) );
+    obj->resize ( *PQSIZEF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -715,7 +715,7 @@ void QGraphicsWidget_resize2 ()
 
   if( obj )
   {
-      obj->resize ( PQREAL(1), PQREAL(2) );
+    obj->resize ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1391,14 +1391,14 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_GETCONTENTSMARGINS )
     {
 #endif
       qreal par1;
-qreal par2;
-qreal par3;
-qreal par4;
+      qreal par2;
+      qreal par3;
+      qreal par4;
       obj->getContentsMargins ( &par1, &par2, &par3, &par4 );
       hb_stornd( par1, 1 );
-hb_stornd( par2, 2 );
-hb_stornd( par3, 3 );
-hb_stornd( par4, 4 );
+      hb_stornd( par2, 2 );
+      hb_stornd( par3, 3 );
+      hb_stornd( par4, 4 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1446,7 +1446,7 @@ void QGraphicsWidget_setGeometry1 ()
 
   if( obj )
   {
-      obj->setGeometry ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+    obj->setGeometry ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1461,7 +1461,7 @@ void QGraphicsWidget_setGeometry2 ()
 
   if( obj )
   {
-      obj->setGeometry ( *PQRECTF(1) );
+    obj->setGeometry ( *PQRECTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1565,10 +1565,10 @@ static void setTabOrder ( QGraphicsWidget * first, QGraphicsWidget * second )
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETTABORDER )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQGRAPHICSWIDGET(1) && ISQGRAPHICSWIDGET(2) )
+  if( ISNUMPAR(2) && ISQGRAPHICSWIDGET(1) && ISQGRAPHICSWIDGET(2) )
   {
 #endif
-      QGraphicsWidget::setTabOrder ( PQGRAPHICSWIDGET(1), PQGRAPHICSWIDGET(2) );
+    QGraphicsWidget::setTabOrder ( PQGRAPHICSWIDGET(1), PQGRAPHICSWIDGET(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

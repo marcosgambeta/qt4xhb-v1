@@ -571,8 +571,8 @@ void QPrinter_pageRect1 ()
 
   if( obj )
   {
-      QRect * ptr = new QRect( obj->pageRect () );
-      _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    QRect * ptr = new QRect( obj->pageRect () );
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -585,8 +585,8 @@ void QPrinter_pageRect2 ()
 
   if( obj )
   {
-      QRectF * ptr = new QRectF( obj->pageRect ( (QPrinter::Unit) hb_parni(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    QRectF * ptr = new QRectF( obj->pageRect ( (QPrinter::Unit) hb_parni(1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -618,8 +618,8 @@ void QPrinter_paperRect1 ()
 
   if( obj )
   {
-      QRect * ptr = new QRect( obj->paperRect () );
-      _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    QRect * ptr = new QRect( obj->paperRect () );
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -632,8 +632,8 @@ void QPrinter_paperRect2 ()
 
   if( obj )
   {
-      QRectF * ptr = new QRectF( obj->paperRect ( (QPrinter::Unit) hb_parni(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    QRectF * ptr = new QRectF( obj->paperRect ( (QPrinter::Unit) hb_parni(1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -665,7 +665,7 @@ void QPrinter_paperSize1 ()
 
   if( obj )
   {
-      RENUM( obj->paperSize () );
+    RENUM( obj->paperSize () );
   }
 }
 
@@ -678,8 +678,8 @@ void QPrinter_paperSize2 ()
 
   if( obj )
   {
-      QSizeF * ptr = new QSizeF( obj->paperSize ( (QPrinter::Unit) hb_parni(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+    QSizeF * ptr = new QSizeF( obj->paperSize ( (QPrinter::Unit) hb_parni(1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
 
@@ -1270,7 +1270,7 @@ void QPrinter_setPaperSize1 ()
 
   if( obj )
   {
-      obj->setPaperSize ( (QPrinter::PaperSize) hb_parni(1) );
+    obj->setPaperSize ( (QPrinter::PaperSize) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1285,7 +1285,7 @@ void QPrinter_setPaperSize2 ()
 
   if( obj )
   {
-      obj->setPaperSize ( *PQSIZEF(1), (QPrinter::Unit) hb_parni(2) );
+    obj->setPaperSize ( *PQSIZEF(1), (QPrinter::Unit) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

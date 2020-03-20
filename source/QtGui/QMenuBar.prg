@@ -131,8 +131,8 @@ void QMenuBar_addAction1 ()
 
   if( obj )
   {
-      QAction * ptr = obj->addAction ( PQSTRING(1) );
-      _qt4xhb_createReturnQObjectClass ( ptr, "QACTION" );
+    QAction * ptr = obj->addAction ( PQSTRING(1) );
+    _qt4xhb_createReturnQObjectClass ( ptr, "QACTION" );
   }
 }
 
@@ -145,8 +145,8 @@ void QMenuBar_addAction2 ()
 
   if( obj )
   {
-      QAction * ptr = obj->addAction ( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3) );
-      _qt4xhb_createReturnQObjectClass ( ptr, "QACTION" );
+    QAction * ptr = obj->addAction ( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3) );
+    _qt4xhb_createReturnQObjectClass ( ptr, "QACTION" );
   }
 }
 
@@ -159,7 +159,7 @@ void QMenuBar_addAction3 ()
 
   if( obj )
   {
-      obj->addAction ( PQACTION(1) );
+    obj->addAction ( PQACTION(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -198,8 +198,8 @@ void QMenuBar_addMenu1 ()
 
   if( obj )
   {
-      QAction * ptr = obj->addMenu ( PQMENU(1) );
-      _qt4xhb_createReturnQObjectClass ( ptr, "QACTION" );
+    QAction * ptr = obj->addMenu ( PQMENU(1) );
+    _qt4xhb_createReturnQObjectClass ( ptr, "QACTION" );
   }
 }
 
@@ -212,8 +212,8 @@ void QMenuBar_addMenu2 ()
 
   if( obj )
   {
-      QMenu * ptr = obj->addMenu ( PQSTRING(1) );
-      _qt4xhb_createReturnQObjectClass ( ptr, "QMENU" );
+    QMenu * ptr = obj->addMenu ( PQSTRING(1) );
+    _qt4xhb_createReturnQObjectClass ( ptr, "QMENU" );
   }
 }
 
@@ -226,8 +226,8 @@ void QMenuBar_addMenu3 ()
 
   if( obj )
   {
-      QMenu * ptr = obj->addMenu ( ISOBJECT(1)? *(QIcon *) _qt4xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) );
-      _qt4xhb_createReturnQObjectClass ( ptr, "QMENU" );
+    QMenu * ptr = obj->addMenu ( ISOBJECT(1)? *(QIcon *) _qt4xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) );
+    _qt4xhb_createReturnQObjectClass ( ptr, "QMENU" );
   }
 }
 

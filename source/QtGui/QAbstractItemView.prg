@@ -489,8 +489,8 @@ void QAbstractItemView_itemDelegate1 ()
 
   if( obj )
   {
-      QAbstractItemDelegate * ptr = obj->itemDelegate ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QABSTRACTITEMDELEGATE" );
+    QAbstractItemDelegate * ptr = obj->itemDelegate ();
+    _qt4xhb_createReturnQObjectClass ( ptr, "QABSTRACTITEMDELEGATE" );
   }
 }
 
@@ -503,8 +503,8 @@ void QAbstractItemView_itemDelegate2 ()
 
   if( obj )
   {
-      QAbstractItemDelegate * ptr = obj->itemDelegate ( *PQMODELINDEX(1) );
-      _qt4xhb_createReturnQObjectClass ( ptr, "QABSTRACTITEMDELEGATE" );
+    QAbstractItemDelegate * ptr = obj->itemDelegate ( *PQMODELINDEX(1) );
+    _qt4xhb_createReturnQObjectClass ( ptr, "QABSTRACTITEMDELEGATE" );
   }
 }
 

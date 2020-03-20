@@ -86,7 +86,7 @@ void QErrorMessage_showMessage1 ()
 
   if( obj )
   {
-      obj->showMessage ( PQSTRING(1) );
+    obj->showMessage ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -101,7 +101,7 @@ void QErrorMessage_showMessage2 ()
 
   if( obj )
   {
-      obj->showMessage ( PQSTRING(1), PQSTRING(2) );
+    obj->showMessage ( PQSTRING(1), PQSTRING(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

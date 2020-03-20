@@ -170,7 +170,7 @@ void QGraphicsPixmapItem_setOffset1 ()
 
   if( obj )
   {
-      obj->setOffset ( *PQPOINTF(1) );
+    obj->setOffset ( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -185,7 +185,7 @@ void QGraphicsPixmapItem_setOffset2 ()
 
   if( obj )
   {
-      obj->setOffset ( PQREAL(1), PQREAL(2) );
+    obj->setOffset ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

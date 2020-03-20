@@ -105,7 +105,7 @@ void QDrag_exec1 ()
 
   if( obj )
   {
-      RENUM( obj->exec ( ISNIL(1)? (Qt::DropActions) Qt::MoveAction : (Qt::DropActions) hb_parni(1) ) );
+    RENUM( obj->exec ( ISNIL(1)? (Qt::DropActions) Qt::MoveAction : (Qt::DropActions) hb_parni(1) ) );
   }
 }
 
@@ -118,7 +118,7 @@ void QDrag_exec2 ()
 
   if( obj )
   {
-      RENUM( obj->exec ( (Qt::DropActions) hb_parni(1), (Qt::DropAction) hb_parni(2) ) );
+    RENUM( obj->exec ( (Qt::DropActions) hb_parni(1), (Qt::DropAction) hb_parni(2) ) );
   }
 }
 

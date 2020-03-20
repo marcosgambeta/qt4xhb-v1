@@ -429,10 +429,10 @@ static bool isSystemTrayAvailable ()
 HB_FUNC_STATIC( QSYSTEMTRAYICON_ISSYSTEMTRAYAVAILABLE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RBOOL( QSystemTrayIcon::isSystemTrayAvailable () );
+    RBOOL( QSystemTrayIcon::isSystemTrayAvailable () );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -448,10 +448,10 @@ static bool supportsMessages ()
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SUPPORTSMESSAGES )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RBOOL( QSystemTrayIcon::supportsMessages () );
+    RBOOL( QSystemTrayIcon::supportsMessages () );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

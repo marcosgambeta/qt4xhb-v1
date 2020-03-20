@@ -207,7 +207,7 @@ void QRadialGradient_setCenter1 ()
 
   if( obj )
   {
-      obj->setCenter ( *PQPOINTF(1) );
+    obj->setCenter ( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -222,7 +222,7 @@ void QRadialGradient_setCenter2 ()
 
   if( obj )
   {
-      obj->setCenter ( PQREAL(1), PQREAL(2) );
+    obj->setCenter ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -281,7 +281,7 @@ void QRadialGradient_setFocalPoint1 ()
 
   if( obj )
   {
-      obj->setFocalPoint ( *PQPOINTF(1) );
+    obj->setFocalPoint ( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -296,7 +296,7 @@ void QRadialGradient_setFocalPoint2 ()
 
   if( obj )
   {
-      obj->setFocalPoint ( PQREAL(1), PQREAL(2) );
+    obj->setFocalPoint ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

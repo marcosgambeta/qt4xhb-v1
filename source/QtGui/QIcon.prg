@@ -388,7 +388,7 @@ void QIcon_paint1 ()
 
   if( obj )
   {
-      obj->paint ( PQPAINTER(1), *PQRECT(2), ISNIL(3)? (Qt::Alignment) Qt::AlignCenter : (Qt::Alignment) hb_parni(3), ISNIL(4)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(4), ISNIL(5)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(5) );
+    obj->paint ( PQPAINTER(1), *PQRECT(2), ISNIL(3)? (Qt::Alignment) Qt::AlignCenter : (Qt::Alignment) hb_parni(3), ISNIL(4)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(4), ISNIL(5)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(5) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -403,7 +403,7 @@ void QIcon_paint2 ()
 
   if( obj )
   {
-      obj->paint ( PQPAINTER(1), PINT(2), PINT(3), PINT(4), PINT(5), ISNIL(6)? (Qt::Alignment) Qt::AlignCenter : (Qt::Alignment) hb_parni(6), ISNIL(7)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(7), ISNIL(8)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(8) );
+    obj->paint ( PQPAINTER(1), PINT(2), PINT(3), PINT(4), PINT(5), ISNIL(6)? (Qt::Alignment) Qt::AlignCenter : (Qt::Alignment) hb_parni(6), ISNIL(7)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(7), ISNIL(8)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(8) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -437,8 +437,8 @@ void QIcon_pixmap1 ()
 
   if( obj )
   {
-      QPixmap * ptr = new QPixmap( obj->pixmap ( *PQSIZE(1), ISNIL(2)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(2), ISNIL(3)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(3) ) );
-      _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
+    QPixmap * ptr = new QPixmap( obj->pixmap ( *PQSIZE(1), ISNIL(2)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(2), ISNIL(3)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(3) ) );
+    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
 
@@ -451,8 +451,8 @@ void QIcon_pixmap2 ()
 
   if( obj )
   {
-      QPixmap * ptr = new QPixmap( obj->pixmap ( PINT(1), PINT(2), ISNIL(3)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(3), ISNIL(4)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(4) ) );
-      _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
+    QPixmap * ptr = new QPixmap( obj->pixmap ( PINT(1), PINT(2), ISNIL(3)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(3), ISNIL(4)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(4) ) );
+    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
 
@@ -465,8 +465,8 @@ void QIcon_pixmap3 ()
 
   if( obj )
   {
-      QPixmap * ptr = new QPixmap( obj->pixmap ( PINT(1), ISNIL(2)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(2), ISNIL(3)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(3) ) );
-      _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
+    QPixmap * ptr = new QPixmap( obj->pixmap ( PINT(1), ISNIL(2)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(2), ISNIL(3)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(3) ) );
+    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
 
@@ -525,10 +525,10 @@ static bool hasThemeIcon ( const QString & name )
 HB_FUNC_STATIC( QICON_HASTHEMEICON )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      RBOOL( QIcon::hasThemeIcon ( PQSTRING(1) ) );
+    RBOOL( QIcon::hasThemeIcon ( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -544,10 +544,10 @@ static void setThemeName ( const QString & name )
 HB_FUNC_STATIC( QICON_SETTHEMENAME )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      QIcon::setThemeName ( PQSTRING(1) );
+    QIcon::setThemeName ( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -565,10 +565,10 @@ static void setThemeSearchPaths ( const QStringList & paths )
 HB_FUNC_STATIC( QICON_SETTHEMESEARCHPATHS )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+  if( ISNUMPAR(1) && ISARRAY(1) )
   {
 #endif
-      QIcon::setThemeSearchPaths ( PQSTRINGLIST(1) );
+    QIcon::setThemeSearchPaths ( PQSTRINGLIST(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -586,10 +586,10 @@ static QString themeName ()
 HB_FUNC_STATIC( QICON_THEMENAME )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQSTRING( QIcon::themeName () );
+    RQSTRING( QIcon::themeName () );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -605,10 +605,10 @@ static QStringList themeSearchPaths ()
 HB_FUNC_STATIC( QICON_THEMESEARCHPATHS )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQSTRINGLIST( QIcon::themeSearchPaths () );
+    RQSTRINGLIST( QIcon::themeSearchPaths () );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

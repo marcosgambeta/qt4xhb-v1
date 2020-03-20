@@ -144,7 +144,7 @@ void QPlatformCursorImage_set1 ()
 
   if( obj )
   {
-      obj->set ( PCONSTUCHAR(1), PCONSTUCHAR(2), PINT(3), PINT(4), PINT(5), PINT(6) );
+    obj->set ( PCONSTUCHAR(1), PCONSTUCHAR(2), PINT(3), PINT(4), PINT(5), PINT(6) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -159,7 +159,7 @@ void QPlatformCursorImage_set2 ()
 
   if( obj )
   {
-      obj->set ( *PQIMAGE(1), PINT(2), PINT(3) );
+    obj->set ( *PQIMAGE(1), PINT(2), PINT(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -174,7 +174,7 @@ void QPlatformCursorImage_set3 ()
 
   if( obj )
   {
-      obj->set ( (Qt::CursorShape) hb_parni(1) );
+    obj->set ( (Qt::CursorShape) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

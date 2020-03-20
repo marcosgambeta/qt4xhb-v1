@@ -60,8 +60,8 @@ void QDesktopWidget_availableGeometry1 ()
 
   if( obj )
   {
-      QRect * ptr = new QRect( obj->availableGeometry ( OPINT(1,-1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    QRect * ptr = new QRect( obj->availableGeometry ( OPINT(1,-1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -74,8 +74,8 @@ void QDesktopWidget_availableGeometry2 ()
 
   if( obj )
   {
-      QRect * ptr = new QRect( obj->availableGeometry ( PQWIDGET(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    QRect * ptr = new QRect( obj->availableGeometry ( PQWIDGET(1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -88,8 +88,8 @@ void QDesktopWidget_availableGeometry3 ()
 
   if( obj )
   {
-      QRect * ptr = new QRect( obj->availableGeometry ( *PQPOINT(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    QRect * ptr = new QRect( obj->availableGeometry ( *PQPOINT(1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -223,8 +223,8 @@ void QDesktopWidget_screenGeometry1 ()
 
   if( obj )
   {
-      QRect * ptr = new QRect( obj->screenGeometry ( OPINT(1,-1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    QRect * ptr = new QRect( obj->screenGeometry ( OPINT(1,-1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -237,8 +237,8 @@ void QDesktopWidget_screenGeometry2 ()
 
   if( obj )
   {
-      QRect * ptr = new QRect( obj->screenGeometry ( PQWIDGET(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    QRect * ptr = new QRect( obj->screenGeometry ( PQWIDGET(1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -251,8 +251,8 @@ void QDesktopWidget_screenGeometry3 ()
 
   if( obj )
   {
-      QRect * ptr = new QRect( obj->screenGeometry ( *PQPOINT(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    QRect * ptr = new QRect( obj->screenGeometry ( *PQPOINT(1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -289,7 +289,7 @@ void QDesktopWidget_screenNumber1 ()
 
   if( obj )
   {
-      RINT( obj->screenNumber ( OPQWIDGET(1,0) ) );
+    RINT( obj->screenNumber ( OPQWIDGET(1,0) ) );
   }
 }
 
@@ -302,7 +302,7 @@ void QDesktopWidget_screenNumber2 ()
 
   if( obj )
   {
-      RINT( obj->screenNumber ( *PQPOINT(1) ) );
+    RINT( obj->screenNumber ( *PQPOINT(1) ) );
   }
 }
 

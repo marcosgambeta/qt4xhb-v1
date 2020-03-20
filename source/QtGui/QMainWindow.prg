@@ -144,7 +144,7 @@ void QMainWindow_addDockWidget1 ()
 
   if( obj )
   {
-      obj->addDockWidget ( (Qt::DockWidgetArea) hb_parni(1), PQDOCKWIDGET(2) );
+    obj->addDockWidget ( (Qt::DockWidgetArea) hb_parni(1), PQDOCKWIDGET(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -159,7 +159,7 @@ void QMainWindow_addDockWidget2 ()
 
   if( obj )
   {
-      obj->addDockWidget ( (Qt::DockWidgetArea) hb_parni(1), PQDOCKWIDGET(2), (Qt::Orientation) hb_parni(3) );
+    obj->addDockWidget ( (Qt::DockWidgetArea) hb_parni(1), PQDOCKWIDGET(2), (Qt::Orientation) hb_parni(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -193,7 +193,7 @@ void QMainWindow_addToolBar1 ()
 
   if( obj )
   {
-      obj->addToolBar ( (Qt::ToolBarArea) hb_parni(1), PQTOOLBAR(2) );
+    obj->addToolBar ( (Qt::ToolBarArea) hb_parni(1), PQTOOLBAR(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -208,7 +208,7 @@ void QMainWindow_addToolBar2 ()
 
   if( obj )
   {
-      obj->addToolBar ( PQTOOLBAR(1) );
+    obj->addToolBar ( PQTOOLBAR(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -223,8 +223,8 @@ void QMainWindow_addToolBar3 ()
 
   if( obj )
   {
-      QToolBar * ptr = obj->addToolBar ( PQSTRING(1) );
-      _qt4xhb_createReturnQObjectClass ( ptr, "QTOOLBAR" );
+    QToolBar * ptr = obj->addToolBar ( PQSTRING(1) );
+    _qt4xhb_createReturnQObjectClass ( ptr, "QTOOLBAR" );
   }
 }
 

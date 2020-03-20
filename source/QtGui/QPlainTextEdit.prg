@@ -375,8 +375,8 @@ void QPlainTextEdit_cursorRect1 ()
 
   if( obj )
   {
-      QRect * ptr = new QRect( obj->cursorRect ( *PQTEXTCURSOR(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    QRect * ptr = new QRect( obj->cursorRect ( *PQTEXTCURSOR(1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -389,8 +389,8 @@ void QPlainTextEdit_cursorRect2 ()
 
   if( obj )
   {
-      QRect * ptr = new QRect( obj->cursorRect () );
-      _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    QRect * ptr = new QRect( obj->cursorRect () );
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 

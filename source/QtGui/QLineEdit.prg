@@ -589,14 +589,14 @@ HB_FUNC_STATIC( QLINEEDIT_GETTEXTMARGINS )
     {
 #endif
       int par1;
-int par2;
-int par3;
-int par4;
+      int par2;
+      int par3;
+      int par4;
       obj->getTextMargins ( &par1, &par2, &par3, &par4 );
       hb_storni( par1, 1 );
-hb_storni( par2, 2 );
-hb_storni( par3, 3 );
-hb_storni( par4, 4 );
+      hb_storni( par2, 2 );
+      hb_storni( par3, 3 );
+      hb_storni( par4, 4 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1295,7 +1295,7 @@ void QLineEdit_setTextMargins1 ()
 
   if( obj )
   {
-      obj->setTextMargins ( PINT(1), PINT(2), PINT(3), PINT(4) );
+    obj->setTextMargins ( PINT(1), PINT(2), PINT(3), PINT(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1310,7 +1310,7 @@ void QLineEdit_setTextMargins2 ()
 
   if( obj )
   {
-      obj->setTextMargins ( *PQMARGINS(1) );
+    obj->setTextMargins ( *PQMARGINS(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

@@ -83,13 +83,13 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_DOACTION )
     {
 #endif
       QVariantList par3;
-PHB_ITEM aList3 = hb_param(3, HB_IT_ARRAY);
-int i3;
-int nLen3 = hb_arrayLen(aList3);
-for (i3=0;i3<nLen3;i3++)
-{
-  par3 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, i3+1 ), "POINTER", 0 ) );
-}
+      PHB_ITEM aList3 = hb_param(3, HB_IT_ARRAY);
+      int i3;
+      int nLen3 = hb_arrayLen(aList3);
+      for (i3=0;i3<nLen3;i3++)
+      {
+        par3 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, i3+1 ), "POINTER", 0 ) );
+      }
       RBOOL( obj->doAction ( PINT(1), PINT(2), par3 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

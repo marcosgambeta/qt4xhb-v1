@@ -1019,13 +1019,13 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MIMEDATA )
     {
 #endif
       QModelIndexList par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-  par1 << *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aList1);
+      for (i1=0;i1<nLen1;i1++)
+      {
+        par1 << *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      }
       QMimeData * ptr = obj->mimeData ( par1 );
       _qt4xhb_createReturnQObjectClass ( ptr, "QMIMEDATA" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1369,7 +1369,7 @@ void QSortFilterProxyModel_setFilterRegExp1 ()
 
   if( obj )
   {
-      obj->setFilterRegExp ( *PQREGEXP(1) );
+    obj->setFilterRegExp ( *PQREGEXP(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1384,7 +1384,7 @@ void QSortFilterProxyModel_setFilterRegExp2 ()
 
   if( obj )
   {
-      obj->setFilterRegExp ( PQSTRING(1) );
+    obj->setFilterRegExp ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

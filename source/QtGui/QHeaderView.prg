@@ -468,7 +468,7 @@ void QHeaderView_logicalIndexAt1 ()
 
   if( obj )
   {
-      RINT( obj->logicalIndexAt ( PINT(1) ) );
+    RINT( obj->logicalIndexAt ( PINT(1) ) );
   }
 }
 
@@ -481,7 +481,7 @@ void QHeaderView_logicalIndexAt2 ()
 
   if( obj )
   {
-      RINT( obj->logicalIndexAt ( PINT(1), PINT(2) ) );
+    RINT( obj->logicalIndexAt ( PINT(1), PINT(2) ) );
   }
 }
 
@@ -494,7 +494,7 @@ void QHeaderView_logicalIndexAt3 ()
 
   if( obj )
   {
-      RINT( obj->logicalIndexAt ( *PQPOINT(1) ) );
+    RINT( obj->logicalIndexAt ( *PQPOINT(1) ) );
   }
 }
 
@@ -1080,7 +1080,7 @@ void QHeaderView_setResizeMode1 ()
 
   if( obj )
   {
-      obj->setResizeMode ( (QHeaderView::ResizeMode) hb_parni(1) );
+    obj->setResizeMode ( (QHeaderView::ResizeMode) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1095,7 +1095,7 @@ void QHeaderView_setResizeMode2 ()
 
   if( obj )
   {
-      obj->setResizeMode ( PINT(1), (QHeaderView::ResizeMode) hb_parni(2) );
+    obj->setResizeMode ( PINT(1), (QHeaderView::ResizeMode) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

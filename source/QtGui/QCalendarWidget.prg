@@ -162,8 +162,8 @@ void QCalendarWidget_dateTextFormat2 ()
 
   if( obj )
   {
-      QTextCharFormat * ptr = new QTextCharFormat( obj->dateTextFormat ( *PQDATE(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT", true );
+    QTextCharFormat * ptr = new QTextCharFormat( obj->dateTextFormat ( *PQDATE(1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT", true );
   }
 }
 

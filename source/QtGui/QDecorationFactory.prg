@@ -54,11 +54,11 @@ static QDecoration * create ( const QString & key )
 HB_FUNC_STATIC( QDECORATIONFACTORY_CREATE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      QDecoration * ptr = QDecorationFactory::create ( PQSTRING(1) );
-      _qt4xhb_createReturnClass ( ptr, "QDECORATION", false );
+    QDecoration * ptr = QDecorationFactory::create ( PQSTRING(1) );
+    _qt4xhb_createReturnClass ( ptr, "QDECORATION", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -74,10 +74,10 @@ static QStringList keys ()
 HB_FUNC_STATIC( QDECORATIONFACTORY_KEYS )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQSTRINGLIST( QDecorationFactory::keys () );
+    RQSTRINGLIST( QDecorationFactory::keys () );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

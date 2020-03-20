@@ -158,16 +158,16 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_DOACTION )
     {
 #endif
       QVariantList par3;
-if( ISARRAY(3) )
-{
-  PHB_ITEM aList3 = hb_param(3, HB_IT_ARRAY);
-  int i3;
-  int nLen3 = hb_arrayLen(aList3);
-  for (i3=0;i3<nLen3;i3++)
-  {
-    par3 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, i3+1 ), "POINTER", 0 ) );
-  }
-}
+      if( ISARRAY(3) )
+      {
+        PHB_ITEM aList3 = hb_param(3, HB_IT_ARRAY);
+        int i3;
+        int nLen3 = hb_arrayLen(aList3);
+        for (i3=0;i3<nLen3;i3++)
+        {
+          par3 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, i3+1 ), "POINTER", 0 ) );
+        }
+      }
       RBOOL( obj->doAction ( PINT(1), PINT(2), par3 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -217,16 +217,16 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_INVOKEMETHOD )
     {
 #endif
       QVariantList par3;
-if( ISARRAY(3) )
-{
-  PHB_ITEM aList3 = hb_param(3, HB_IT_ARRAY);
-  int i3;
-  int nLen3 = hb_arrayLen(aList3);
-  for (i3=0;i3<nLen3;i3++)
-  {
-    par3 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, i3+1 ), "POINTER", 0 ) );
-  }
-}
+      if( ISARRAY(3) )
+      {
+        PHB_ITEM aList3 = hb_param(3, HB_IT_ARRAY);
+        int i3;
+        int nLen3 = hb_arrayLen(aList3);
+        for (i3=0;i3<nLen3;i3++)
+        {
+          par3 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, i3+1 ), "POINTER", 0 ) );
+        }
+      }
       QVariant * ptr = new QVariant( obj->invokeMethod ( (QAccessible::Method) hb_parni(1), OPINT(2,0), par3 ) );
       _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

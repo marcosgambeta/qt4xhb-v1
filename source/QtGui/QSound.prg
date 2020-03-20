@@ -237,10 +237,10 @@ static bool isAvailable ()
 HB_FUNC_STATIC( QSOUND_ISAVAILABLE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RBOOL( QSound::isAvailable () );
+    RBOOL( QSound::isAvailable () );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -259,7 +259,7 @@ void QSound_play1 ()
 
   if( obj )
   {
-      obj->play ();
+    obj->play ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -271,7 +271,7 @@ static void play ( const QString & filename )
 void QSound_play2 ()
 {
 
-      QSound::play ( PQSTRING(1) );
+  QSound::play ( PQSTRING(1) );
 
   hb_itemReturn( hb_stackSelfItem() );
 }

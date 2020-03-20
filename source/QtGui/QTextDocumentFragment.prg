@@ -167,7 +167,7 @@ void QTextDocumentFragment_toHtml1 ()
 
   if( obj )
   {
-      RQSTRING( obj->toHtml ( *PQBYTEARRAY(1) ) );
+    RQSTRING( obj->toHtml ( *PQBYTEARRAY(1) ) );
   }
 }
 
@@ -180,7 +180,7 @@ void QTextDocumentFragment_toHtml2 ()
 
   if( obj )
   {
-      RQSTRING( obj->toHtml () );
+    RQSTRING( obj->toHtml () );
   }
 }
 
@@ -233,8 +233,8 @@ static QTextDocumentFragment fromHtml ( const QString & text )
 void QTextDocumentFragment_fromHtml1 ()
 {
 
-      QTextDocumentFragment * ptr = new QTextDocumentFragment( QTextDocumentFragment::fromHtml ( PQSTRING(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );
+  QTextDocumentFragment * ptr = new QTextDocumentFragment( QTextDocumentFragment::fromHtml ( PQSTRING(1) ) );
+  _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );
 }
 
 /*
@@ -243,8 +243,8 @@ static QTextDocumentFragment fromHtml ( const QString & text, const QTextDocumen
 void QTextDocumentFragment_fromHtml2 ()
 {
 
-      QTextDocumentFragment * ptr = new QTextDocumentFragment( QTextDocumentFragment::fromHtml ( PQSTRING(1), PQTEXTDOCUMENT(2) ) );
-      _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );
+  QTextDocumentFragment * ptr = new QTextDocumentFragment( QTextDocumentFragment::fromHtml ( PQSTRING(1), PQTEXTDOCUMENT(2) ) );
+  _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );
 }
 
 //[1]QTextDocumentFragment fromHtml ( const QString & text )
@@ -272,11 +272,11 @@ static QTextDocumentFragment fromPlainText ( const QString & plainText )
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMPLAINTEXT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      QTextDocumentFragment * ptr = new QTextDocumentFragment( QTextDocumentFragment::fromPlainText ( PQSTRING(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );
+    QTextDocumentFragment * ptr = new QTextDocumentFragment( QTextDocumentFragment::fromPlainText ( PQSTRING(1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

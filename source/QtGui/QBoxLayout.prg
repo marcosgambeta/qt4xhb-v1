@@ -505,7 +505,7 @@ void QBoxLayout_setStretchFactor1 ()
 
   if( obj )
   {
-      RBOOL( obj->setStretchFactor ( PQWIDGET(1), PINT(2) ) );
+    RBOOL( obj->setStretchFactor ( PQWIDGET(1), PINT(2) ) );
   }
 }
 
@@ -518,7 +518,7 @@ void QBoxLayout_setStretchFactor2 ()
 
   if( obj )
   {
-      RBOOL( obj->setStretchFactor ( PQLAYOUT(1), PINT(2) ) );
+    RBOOL( obj->setStretchFactor ( PQLAYOUT(1), PINT(2) ) );
   }
 }
 

@@ -158,8 +158,8 @@ void QDecoration_region1 ()
 
   if( obj )
   {
-      QRegion * ptr = new QRegion( obj->region ( PQWIDGET(1), *PQRECT(2), OPINT(3,QDecoration::All) ) );
-      _qt4xhb_createReturnClass ( ptr, "QREGION", true );
+    QRegion * ptr = new QRegion( obj->region ( PQWIDGET(1), *PQRECT(2), OPINT(3,QDecoration::All) ) );
+    _qt4xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }
 
@@ -172,8 +172,8 @@ void QDecoration_region2 ()
 
   if( obj )
   {
-      QRegion * ptr = new QRegion( obj->region ( PQWIDGET(1), OPINT(2,QDecoration::All) ) );
-      _qt4xhb_createReturnClass ( ptr, "QREGION", true );
+    QRegion * ptr = new QRegion( obj->region ( PQWIDGET(1), OPINT(2,QDecoration::All) ) );
+    _qt4xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }
 
@@ -278,10 +278,10 @@ static void startMove ( QWidget * widget )
 HB_FUNC_STATIC( QDECORATION_STARTMOVE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+  if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
 #endif
-      QDecoration::startMove ( PQWIDGET(1) );
+    QDecoration::startMove ( PQWIDGET(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -299,10 +299,10 @@ static void startResize ( QWidget * widget )
 HB_FUNC_STATIC( QDECORATION_STARTRESIZE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+  if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
 #endif
-      QDecoration::startResize ( PQWIDGET(1) );
+    QDecoration::startResize ( PQWIDGET(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

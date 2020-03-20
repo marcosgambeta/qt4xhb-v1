@@ -91,14 +91,14 @@ QPolygonF ( const QVector<QPointF> & points )
 */
 void QPolygonF_new4 ()
 {
-      QVector<QPointF> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-  par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
+  QVector<QPointF> par1;
+  PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+  int i1;
+  int nLen1 = hb_arrayLen(aList1);
+  for (i1=0;i1<nLen1;i1++)
+  {
+    par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+  }
   QPolygonF * o = new QPolygonF ( par1 );
   _qt4xhb_returnNewObject( o, true );
 }
@@ -360,7 +360,7 @@ void QPolygonF_translate1 ()
 
   if( obj )
   {
-      obj->translate ( *PQPOINTF(1) );
+    obj->translate ( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -375,7 +375,7 @@ void QPolygonF_translate2 ()
 
   if( obj )
   {
-      obj->translate ( PQREAL(1), PQREAL(2) );
+    obj->translate ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -409,8 +409,8 @@ void QPolygonF_translated1 ()
 
   if( obj )
   {
-      QPolygonF * ptr = new QPolygonF( obj->translated ( *PQPOINTF(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QPOLYGONF", true );
+    QPolygonF * ptr = new QPolygonF( obj->translated ( *PQPOINTF(1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
 
@@ -423,8 +423,8 @@ void QPolygonF_translated2 ()
 
   if( obj )
   {
-      QPolygonF * ptr = new QPolygonF( obj->translated ( PQREAL(1), PQREAL(2) ) );
-      _qt4xhb_createReturnClass ( ptr, "QPOLYGONF", true );
+    QPolygonF * ptr = new QPolygonF( obj->translated ( PQREAL(1), PQREAL(2) ) );
+    _qt4xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
 

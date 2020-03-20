@@ -607,8 +607,8 @@ void QImageReader_read1 ()
 
   if( obj )
   {
-      QImage * ptr = new QImage( obj->read () );
-      _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
+    QImage * ptr = new QImage( obj->read () );
+    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
 }
 
@@ -621,7 +621,7 @@ void QImageReader_read2 ()
 
   if( obj )
   {
-      RBOOL( obj->read ( PQIMAGE(1) ) );
+    RBOOL( obj->read ( PQIMAGE(1) ) );
   }
 }
 
@@ -1084,7 +1084,7 @@ void QImageReader_imageFormat1 ()
 
   if( obj )
   {
-      RENUM( obj->imageFormat () );
+    RENUM( obj->imageFormat () );
   }
 }
 
@@ -1094,8 +1094,8 @@ static QByteArray imageFormat ( const QString & fileName )
 void QImageReader_imageFormat2 ()
 {
 
-      QByteArray * ptr = new QByteArray( QImageReader::imageFormat ( PQSTRING(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+  QByteArray * ptr = new QByteArray( QImageReader::imageFormat ( PQSTRING(1) ) );
+  _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 }
 
 /*
@@ -1104,8 +1104,8 @@ static QByteArray imageFormat ( QIODevice * device )
 void QImageReader_imageFormat3 ()
 {
 
-      QByteArray * ptr = new QByteArray( QImageReader::imageFormat ( PQIODEVICE(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+  QByteArray * ptr = new QByteArray( QImageReader::imageFormat ( PQIODEVICE(1) ) );
+  _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 }
 
 //[1]QImage::Format imageFormat () const

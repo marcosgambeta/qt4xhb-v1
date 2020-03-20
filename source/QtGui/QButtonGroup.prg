@@ -104,7 +104,7 @@ void QButtonGroup_addButton1 ()
 
   if( obj )
   {
-      obj->addButton ( PQABSTRACTBUTTON(1) );
+    obj->addButton ( PQABSTRACTBUTTON(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -119,7 +119,7 @@ void QButtonGroup_addButton2 ()
 
   if( obj )
   {
-      obj->addButton ( PQABSTRACTBUTTON(1), PINT(2) );
+    obj->addButton ( PQABSTRACTBUTTON(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

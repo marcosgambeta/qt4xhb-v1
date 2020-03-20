@@ -175,15 +175,15 @@ HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES1 )
     {
 #endif
       QVector<quint32> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-quint32 temp1;
-for (i1=0;i1<nLen1;i1++)
-{
-  temp1 = (quint32) hb_arrayGetNI(aList1, i1+1);
-  par1 << temp1;
-}
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aList1);
+      quint32 temp1;
+      for (i1=0;i1<nLen1;i1++)
+      {
+        temp1 = (quint32) hb_arrayGetNI(aList1, i1+1);
+        par1 << temp1;
+      }
       QVector<QPointF> list = obj->advancesForGlyphIndexes ( par1 );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QPOINTF" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -721,7 +721,7 @@ void QRawFont_supportsCharacter1 ()
 
   if( obj )
   {
-      RBOOL( obj->supportsCharacter ( *PQCHAR(1) ) );
+    RBOOL( obj->supportsCharacter ( *PQCHAR(1) ) );
   }
 }
 
@@ -734,7 +734,7 @@ void QRawFont_supportsCharacter2 ()
 
   if( obj )
   {
-      RBOOL( obj->supportsCharacter ( PQUINT32(1) ) );
+    RBOOL( obj->supportsCharacter ( PQUINT32(1) ) );
   }
 }
 
@@ -835,11 +835,11 @@ static QRawFont fromFont ( const QFont & font, QFontDatabase::WritingSystem writ
 HB_FUNC_STATIC( QRAWFONT_FROMFONT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQFONT(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISQFONT(1) && ISOPTNUM(2) )
   {
 #endif
-      QRawFont * ptr = new QRawFont( QRawFont::fromFont ( *PQFONT(1), ISNIL(2)? (QFontDatabase::WritingSystem) QFontDatabase::Any : (QFontDatabase::WritingSystem) hb_parni(2) ) );
-      _qt4xhb_createReturnClass ( ptr, "QRAWFONT", true );
+    QRawFont * ptr = new QRawFont( QRawFont::fromFont ( *PQFONT(1), ISNIL(2)? (QFontDatabase::WritingSystem) QFontDatabase::Any : (QFontDatabase::WritingSystem) hb_parni(2) ) );
+    _qt4xhb_createReturnClass ( ptr, "QRAWFONT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

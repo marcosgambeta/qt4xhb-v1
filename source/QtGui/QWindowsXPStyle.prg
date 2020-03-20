@@ -202,7 +202,7 @@ void QWindowsXPStyle_polish1 ()
 
   if( obj )
   {
-      obj->polish ( PQAPPLICATION(1) );
+    obj->polish ( PQAPPLICATION(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -217,7 +217,7 @@ void QWindowsXPStyle_polish2 ()
 
   if( obj )
   {
-      obj->polish ( PQWIDGET(1) );
+    obj->polish ( PQWIDGET(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -232,7 +232,7 @@ void QWindowsXPStyle_polish3 ()
 
   if( obj )
   {
-      obj->polish ( *PQPALETTE(1) );
+    obj->polish ( *PQPALETTE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -420,7 +420,7 @@ void QWindowsXPStyle_unpolish1 ()
 
   if( obj )
   {
-      obj->unpolish ( PQAPPLICATION(1) );
+    obj->unpolish ( PQAPPLICATION(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -435,7 +435,7 @@ void QWindowsXPStyle_unpolish2 ()
 
   if( obj )
   {
-      obj->unpolish ( PQWIDGET(1) );
+    obj->unpolish ( PQWIDGET(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

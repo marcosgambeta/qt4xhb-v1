@@ -141,7 +141,7 @@ void QDialogButtonBox_addButton1 ()
 
   if( obj )
   {
-      obj->addButton ( PQABSTRACTBUTTON(1), (QDialogButtonBox::ButtonRole) hb_parni(2) );
+    obj->addButton ( PQABSTRACTBUTTON(1), (QDialogButtonBox::ButtonRole) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -156,8 +156,8 @@ void QDialogButtonBox_addButton2 ()
 
   if( obj )
   {
-      QPushButton * ptr = obj->addButton ( PQSTRING(1), (QDialogButtonBox::ButtonRole) hb_parni(2) );
-      _qt4xhb_createReturnQObjectClass ( ptr, "QPUSHBUTTON" );
+    QPushButton * ptr = obj->addButton ( PQSTRING(1), (QDialogButtonBox::ButtonRole) hb_parni(2) );
+    _qt4xhb_createReturnQObjectClass ( ptr, "QPUSHBUTTON" );
   }
 }
 
@@ -170,8 +170,8 @@ void QDialogButtonBox_addButton3 ()
 
   if( obj )
   {
-      QPushButton * ptr = obj->addButton ( (QDialogButtonBox::StandardButton) hb_parni(1) );
-      _qt4xhb_createReturnQObjectClass ( ptr, "QPUSHBUTTON" );
+    QPushButton * ptr = obj->addButton ( (QDialogButtonBox::StandardButton) hb_parni(1) );
+    _qt4xhb_createReturnQObjectClass ( ptr, "QPUSHBUTTON" );
   }
 }
 

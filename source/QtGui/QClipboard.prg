@@ -398,7 +398,7 @@ void QClipboard_text1 ()
 
   if( obj )
   {
-      RQSTRING( obj->text ( ISNIL(1)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(1) ) );
+    RQSTRING( obj->text ( ISNIL(1)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(1) ) );
   }
 }
 

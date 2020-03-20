@@ -84,7 +84,7 @@ void QDragMoveEvent_accept1 ()
 
   if( obj )
   {
-      obj->accept ( *PQRECT(1) );
+    obj->accept ( *PQRECT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -99,7 +99,7 @@ void QDragMoveEvent_accept2 ()
 
   if( obj )
   {
-      obj->accept ();
+    obj->accept ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -158,7 +158,7 @@ void QDragMoveEvent_ignore1 ()
 
   if( obj )
   {
-      obj->ignore ( *PQRECT(1) );
+    obj->ignore ( *PQRECT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -173,7 +173,7 @@ void QDragMoveEvent_ignore2 ()
 
   if( obj )
   {
-      obj->ignore ();
+    obj->ignore ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );

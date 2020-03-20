@@ -197,8 +197,8 @@ void QFontMetrics_boundingRect1 ()
 
   if( obj )
   {
-      QRect * ptr = new QRect( obj->boundingRect ( *PQCHAR(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    QRect * ptr = new QRect( obj->boundingRect ( *PQCHAR(1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -211,8 +211,8 @@ void QFontMetrics_boundingRect2 ()
 
   if( obj )
   {
-      QRect * ptr = new QRect( obj->boundingRect ( PQSTRING(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    QRect * ptr = new QRect( obj->boundingRect ( PQSTRING(1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -225,10 +225,10 @@ void QFontMetrics_boundingRect3 ()
 
   if( obj )
   {
-       int par8;
-      QRect * ptr = new QRect( obj->boundingRect ( PINT(1), PINT(2), PINT(3), PINT(4), PINT(5), PQSTRING(6), OPINT(7,0), &par8 ) );
-      _qt4xhb_createReturnClass ( ptr, "QRECT", true );
-       hb_storni( par8, 8 );
+    int par8;
+    QRect * ptr = new QRect( obj->boundingRect ( PINT(1), PINT(2), PINT(3), PINT(4), PINT(5), PQSTRING(6), OPINT(7,0), &par8 ) );
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    hb_storni( par8, 8 );
   }
 }
 
@@ -241,10 +241,10 @@ void QFontMetrics_boundingRect4 ()
 
   if( obj )
   {
-       int par5;
-      QRect * ptr = new QRect( obj->boundingRect ( *PQRECT(1), PINT(2), PQSTRING(3), OPINT(4,0), &par5 ) );
-      _qt4xhb_createReturnClass ( ptr, "QRECT", true );
-       hb_storni( par5, 5 );
+    int par5;
+    QRect * ptr = new QRect( obj->boundingRect ( *PQRECT(1), PINT(2), PQSTRING(3), OPINT(4,0), &par5 ) );
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    hb_storni( par5, 5 );
   }
 }
 
@@ -722,7 +722,7 @@ void QFontMetrics_width1 ()
 
   if( obj )
   {
-      RINT( obj->width ( PQSTRING(1), OPINT(2,-1) ) );
+    RINT( obj->width ( PQSTRING(1), OPINT(2,-1) ) );
   }
 }
 
@@ -735,7 +735,7 @@ void QFontMetrics_width2 ()
 
   if( obj )
   {
-      RINT( obj->width ( *PQCHAR(1) ) );
+    RINT( obj->width ( *PQCHAR(1) ) );
   }
 }
 

@@ -283,11 +283,11 @@ static QPrinterInfo defaultPrinter ()
 HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPRINTER )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QPrinterInfo * ptr = new QPrinterInfo( QPrinterInfo::defaultPrinter () );
-      _qt4xhb_createReturnClass ( ptr, "QPRINTERINFO", true );
+    QPrinterInfo * ptr = new QPrinterInfo( QPrinterInfo::defaultPrinter () );
+    _qt4xhb_createReturnClass ( ptr, "QPRINTERINFO", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

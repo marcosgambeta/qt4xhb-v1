@@ -79,10 +79,10 @@ static QStringList keys ()
 HB_FUNC_STATIC( QGENERICPLUGINFACTORY_KEYS )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQSTRINGLIST( QGenericPluginFactory::keys () );
+    RQSTRINGLIST( QGenericPluginFactory::keys () );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

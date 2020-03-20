@@ -170,7 +170,7 @@ void QGridLayout_addLayout1 ()
 
   if( obj )
   {
-      obj->addLayout ( PQLAYOUT(1), PINT(2), PINT(3), ISNIL(4)? (Qt::Alignment) 0 : (Qt::Alignment) hb_parni(4) );
+    obj->addLayout ( PQLAYOUT(1), PINT(2), PINT(3), ISNIL(4)? (Qt::Alignment) 0 : (Qt::Alignment) hb_parni(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -185,7 +185,7 @@ void QGridLayout_addLayout2 ()
 
   if( obj )
   {
-      obj->addLayout ( PQLAYOUT(1), PINT(2), PINT(3), PINT(4), PINT(5), ISNIL(6)? (Qt::Alignment) 0 : (Qt::Alignment) hb_parni(6) );
+    obj->addLayout ( PQLAYOUT(1), PINT(2), PINT(3), PINT(4), PINT(5), ISNIL(6)? (Qt::Alignment) 0 : (Qt::Alignment) hb_parni(6) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -219,7 +219,7 @@ void QGridLayout_addWidget1 ()
 
   if( obj )
   {
-      obj->addWidget ( PQWIDGET(1), PINT(2), PINT(3), ISNIL(4)? (Qt::Alignment) 0 : (Qt::Alignment) hb_parni(4) );
+    obj->addWidget ( PQWIDGET(1), PINT(2), PINT(3), ISNIL(4)? (Qt::Alignment) 0 : (Qt::Alignment) hb_parni(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -234,7 +234,7 @@ void QGridLayout_addWidget2 ()
 
   if( obj )
   {
-      obj->addWidget ( PQWIDGET(1), PINT(2), PINT(3), PINT(4), PINT(5), ISNIL(6)? (Qt::Alignment) 0 : (Qt::Alignment) hb_parni(6) );
+    obj->addWidget ( PQWIDGET(1), PINT(2), PINT(3), PINT(4), PINT(5), ISNIL(6)? (Qt::Alignment) 0 : (Qt::Alignment) hb_parni(6) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -370,14 +370,14 @@ HB_FUNC_STATIC( QGRIDLAYOUT_GETITEMPOSITION )
     {
 #endif
       int par2;
-int par3;
-int par4;
-int par5;
+      int par3;
+      int par4;
+      int par5;
       obj->getItemPosition ( PINT(1), &par2, &par3, &par4, &par5 );
       hb_storni( par2, 2 );
-hb_storni( par3, 3 );
-hb_storni( par4, 4 );
-hb_storni( par5, 5 );
+      hb_storni( par3, 3 );
+      hb_storni( par4, 4 );
+      hb_storni( par5, 5 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

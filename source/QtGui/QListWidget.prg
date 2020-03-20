@@ -126,7 +126,7 @@ void QListWidget_addItem1 ()
 
   if( obj )
   {
-      obj->addItem ( PQSTRING(1) );
+    obj->addItem ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -141,7 +141,7 @@ void QListWidget_addItem2 ()
 
   if( obj )
   {
-      obj->addItem ( PQLISTWIDGETITEM(1) );
+    obj->addItem ( PQLISTWIDGETITEM(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -374,7 +374,7 @@ void QListWidget_insertItem1 ()
 
   if( obj )
   {
-      obj->insertItem ( PINT(1), PQLISTWIDGETITEM(2) );
+    obj->insertItem ( PINT(1), PQLISTWIDGETITEM(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -389,7 +389,7 @@ void QListWidget_insertItem2 ()
 
   if( obj )
   {
-      obj->insertItem ( PINT(1), PQSTRING(2) );
+    obj->insertItem ( PINT(1), PQSTRING(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -498,8 +498,8 @@ void QListWidget_itemAt1 ()
 
   if( obj )
   {
-      QListWidgetItem * ptr = obj->itemAt ( *PQPOINT(1) );
-      _qt4xhb_createReturnClass ( ptr, "QLISTWIDGETITEM", false );
+    QListWidgetItem * ptr = obj->itemAt ( *PQPOINT(1) );
+    _qt4xhb_createReturnClass ( ptr, "QLISTWIDGETITEM", false );
   }
 }
 
@@ -512,8 +512,8 @@ void QListWidget_itemAt2 ()
 
   if( obj )
   {
-      QListWidgetItem * ptr = obj->itemAt ( PINT(1), PINT(2) );
-      _qt4xhb_createReturnClass ( ptr, "QLISTWIDGETITEM", false );
+    QListWidgetItem * ptr = obj->itemAt ( PINT(1), PINT(2) );
+    _qt4xhb_createReturnClass ( ptr, "QLISTWIDGETITEM", false );
   }
 }
 
@@ -694,7 +694,7 @@ void QListWidget_setCurrentItem1 ()
 
   if( obj )
   {
-      obj->setCurrentItem ( PQLISTWIDGETITEM(1) );
+    obj->setCurrentItem ( PQLISTWIDGETITEM(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -709,7 +709,7 @@ void QListWidget_setCurrentItem2 ()
 
   if( obj )
   {
-      obj->setCurrentItem ( PQLISTWIDGETITEM(1), (QItemSelectionModel::SelectionFlags) hb_parni(2) );
+    obj->setCurrentItem ( PQLISTWIDGETITEM(1), (QItemSelectionModel::SelectionFlags) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -743,7 +743,7 @@ void QListWidget_setCurrentRow1 ()
 
   if( obj )
   {
-      obj->setCurrentRow ( PINT(1) );
+    obj->setCurrentRow ( PINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -758,7 +758,7 @@ void QListWidget_setCurrentRow2 ()
 
   if( obj )
   {
-      obj->setCurrentRow ( PINT(1), (QItemSelectionModel::SelectionFlags) hb_parni(2) );
+    obj->setCurrentRow ( PINT(1), (QItemSelectionModel::SelectionFlags) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

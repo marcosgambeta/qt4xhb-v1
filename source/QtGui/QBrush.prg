@@ -345,7 +345,7 @@ void QBrush_setColor1 ()
 
   if( obj )
   {
-      obj->setColor ( ISOBJECT(1)? *(QColor *) _qt4xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
+    obj->setColor ( ISOBJECT(1)? *(QColor *) _qt4xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -360,7 +360,7 @@ void QBrush_setColor2 ()
 
   if( obj )
   {
-      obj->setColor ( (Qt::GlobalColor) hb_parni(1) );
+    obj->setColor ( (Qt::GlobalColor) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

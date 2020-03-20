@@ -117,7 +117,7 @@ void QPaintEngine_drawEllipse1 ()
 
   if( obj )
   {
-      obj->drawEllipse ( *PQRECTF(1) );
+    obj->drawEllipse ( *PQRECTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -132,7 +132,7 @@ void QPaintEngine_drawEllipse2 ()
 
   if( obj )
   {
-      obj->drawEllipse ( *PQRECT(1) );
+    obj->drawEllipse ( *PQRECT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

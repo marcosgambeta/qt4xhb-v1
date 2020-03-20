@@ -1269,11 +1269,11 @@ static QPlatformWindowFormat defaultFormat ()
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_DEFAULTFORMAT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QPlatformWindowFormat * ptr = new QPlatformWindowFormat( QPlatformWindowFormat::defaultFormat () );
-      _qt4xhb_createReturnClass ( ptr, "QPLATFORMWINDOWFORMAT", true );
+    QPlatformWindowFormat * ptr = new QPlatformWindowFormat( QPlatformWindowFormat::defaultFormat () );
+    _qt4xhb_createReturnClass ( ptr, "QPLATFORMWINDOWFORMAT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1289,10 +1289,10 @@ static void setDefaultFormat ( const QPlatformWindowFormat & f )
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETDEFAULTFORMAT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPLATFORMWINDOWFORMAT(1) )
+  if( ISNUMPAR(1) && ISQPLATFORMWINDOWFORMAT(1) )
   {
 #endif
-      QPlatformWindowFormat::setDefaultFormat ( *PQPLATFORMWINDOWFORMAT(1) );
+    QPlatformWindowFormat::setDefaultFormat ( *PQPLATFORMWINDOWFORMAT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

@@ -324,10 +324,10 @@ static QFont getFont(bool *ok, const QFont &initial, QWidget *parent, const QStr
 void QFontDialog_getFont1 ()
 {
 
-       bool par1;
-      QFont * ptr = new QFont( QFontDialog::getFont ( &par1, *PQFONT(2), PQWIDGET(3), PQSTRING(4), (QFontDialog::FontDialogOptions) hb_parni(5) ) );
-      _qt4xhb_createReturnClass ( ptr, "QFONT", true );
-       hb_storl( par1, 1 );
+  bool par1;
+  QFont * ptr = new QFont( QFontDialog::getFont ( &par1, *PQFONT(2), PQWIDGET(3), PQSTRING(4), (QFontDialog::FontDialogOptions) hb_parni(5) ) );
+  _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+  hb_storl( par1, 1 );
 }
 
 /*
@@ -336,10 +336,10 @@ static QFont getFont(bool *ok, const QFont &initial, QWidget *parent, const QStr
 void QFontDialog_getFont2 ()
 {
 
-       bool par1;
-      QFont * ptr = new QFont( QFontDialog::getFont ( &par1, *PQFONT(2), PQWIDGET(3), PQSTRING(4) ) );
-      _qt4xhb_createReturnClass ( ptr, "QFONT", true );
-       hb_storl( par1, 1 );
+  bool par1;
+  QFont * ptr = new QFont( QFontDialog::getFont ( &par1, *PQFONT(2), PQWIDGET(3), PQSTRING(4) ) );
+  _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+  hb_storl( par1, 1 );
 }
 
 /*
@@ -348,10 +348,10 @@ static QFont getFont(bool *ok, const QFont &initial, QWidget *parent = 0)
 void QFontDialog_getFont3 ()
 {
 
-       bool par1;
-      QFont * ptr = new QFont( QFontDialog::getFont ( &par1, *PQFONT(2), OPQWIDGET(3,0) ) );
-      _qt4xhb_createReturnClass ( ptr, "QFONT", true );
-       hb_storl( par1, 1 );
+  bool par1;
+  QFont * ptr = new QFont( QFontDialog::getFont ( &par1, *PQFONT(2), OPQWIDGET(3,0) ) );
+  _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+  hb_storl( par1, 1 );
 }
 
 /*
@@ -360,10 +360,10 @@ static QFont getFont(bool *ok, QWidget *parent = 0)
 void QFontDialog_getFont4 ()
 {
 
-       bool par1;
-      QFont * ptr = new QFont( QFontDialog::getFont ( &par1, OPQWIDGET(2,0) ) );
-      _qt4xhb_createReturnClass ( ptr, "QFONT", true );
-       hb_storl( par1, 1 );
+  bool par1;
+  QFont * ptr = new QFont( QFontDialog::getFont ( &par1, OPQWIDGET(2,0) ) );
+  _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+  hb_storl( par1, 1 );
 }
 
 //[1]static QFont getFont(bool *ok, const QFont &initial, QWidget *parent, const QString &title,FontDialogOptions options)
