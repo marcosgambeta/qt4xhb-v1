@@ -108,7 +108,7 @@ void QSqlIndex_append1 ()
 
   if( obj )
   {
-      obj->append ( *PQSQLFIELD(1) );
+    obj->append ( *PQSQLFIELD(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -123,7 +123,7 @@ void QSqlIndex_append2 ()
 
   if( obj )
   {
-      obj->append ( *PQSQLFIELD(1), PBOOL(2) );
+    obj->append ( *PQSQLFIELD(1), PBOOL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
