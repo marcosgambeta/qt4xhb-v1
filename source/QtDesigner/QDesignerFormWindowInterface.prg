@@ -525,10 +525,10 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_LAYOUTDEFAULT )
     {
 #endif
       int par1;
-int par2;
+      int par2;
       obj->layoutDefault ( &par1, &par2 );
       hb_storni( par1, 1 );
-hb_storni( par2, 2 );
+      hb_storni( par2, 2 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -935,7 +935,7 @@ void QDesignerFormWindowInterface_setContents1 ()
 
   if( obj )
   {
-      obj->setContents ( PQIODEVICE(1) );
+    obj->setContents ( PQIODEVICE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -950,7 +950,7 @@ void QDesignerFormWindowInterface_setContents2 ()
 
   if( obj )
   {
-      obj->setContents ( PQSTRING(1) );
+    obj->setContents ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1111,8 +1111,8 @@ static QDesignerFormWindowInterface * findFormWindow ( QWidget * widget )
 void QDesignerFormWindowInterface_findFormWindow1 ()
 {
 
-      QDesignerFormWindowInterface * ptr = QDesignerFormWindowInterface::findFormWindow ( PQWIDGET(1) );
-      _qt4xhb_createReturnQObjectClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
+  QDesignerFormWindowInterface * ptr = QDesignerFormWindowInterface::findFormWindow ( PQWIDGET(1) );
+  _qt4xhb_createReturnQObjectClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
 }
 
 /*
@@ -1121,8 +1121,8 @@ static QDesignerFormWindowInterface * findFormWindow ( QObject * object )
 void QDesignerFormWindowInterface_findFormWindow2 ()
 {
 
-      QDesignerFormWindowInterface * ptr = QDesignerFormWindowInterface::findFormWindow ( PQOBJECT(1) );
-      _qt4xhb_createReturnQObjectClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
+  QDesignerFormWindowInterface * ptr = QDesignerFormWindowInterface::findFormWindow ( PQOBJECT(1) );
+  _qt4xhb_createReturnQObjectClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
 }
 
 //[1]QDesignerFormWindowInterface * findFormWindow ( QWidget * widget )
