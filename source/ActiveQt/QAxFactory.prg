@@ -459,10 +459,10 @@ static bool isServer ()
 HB_FUNC_STATIC( QAXFACTORY_ISSERVER )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RBOOL( QAxFactory::isServer () );
+    RBOOL( QAxFactory::isServer () );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -478,10 +478,10 @@ static bool registerActiveObject ( QObject * object )
 HB_FUNC_STATIC( QAXFACTORY_REGISTERACTIVEOBJECT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+  if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
 #endif
-      RBOOL( QAxFactory::registerActiveObject ( PQOBJECT(1) ) );
+    RBOOL( QAxFactory::registerActiveObject ( PQOBJECT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -497,10 +497,10 @@ static QString serverDirPath ()
 HB_FUNC_STATIC( QAXFACTORY_SERVERDIRPATH )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQSTRING( QAxFactory::serverDirPath () );
+    RQSTRING( QAxFactory::serverDirPath () );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -516,10 +516,10 @@ static QString serverFilePath ()
 HB_FUNC_STATIC( QAXFACTORY_SERVERFILEPATH )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQSTRING( QAxFactory::serverFilePath () );
+    RQSTRING( QAxFactory::serverFilePath () );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -535,10 +535,10 @@ static bool startServer ( ServerType type = MultipleInstances )
 HB_FUNC_STATIC( QAXFACTORY_STARTSERVER )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
 #endif
-      RBOOL( QAxFactory::startServer ( ISNIL(1)? (QAxFactory::ServerType) QAxFactory::MultipleInstances : (QAxFactory::ServerType) hb_parni(1) ) );
+    RBOOL( QAxFactory::startServer ( ISNIL(1)? (QAxFactory::ServerType) QAxFactory::MultipleInstances : (QAxFactory::ServerType) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -554,10 +554,10 @@ static bool stopServer ()
 HB_FUNC_STATIC( QAXFACTORY_STOPSERVER )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RBOOL( QAxFactory::stopServer () );
+    RBOOL( QAxFactory::stopServer () );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
