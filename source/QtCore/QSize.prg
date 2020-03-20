@@ -267,7 +267,7 @@ void QSize_scale1 ()
 
   if( obj )
   {
-      obj->scale ( PINT(1), PINT(2), (Qt::AspectRatioMode) hb_parni(3) );
+    obj->scale ( PINT(1), PINT(2), (Qt::AspectRatioMode) hb_parni(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -282,7 +282,7 @@ void QSize_scale2 ()
 
   if( obj )
   {
-      obj->scale ( *PQSIZE(1), (Qt::AspectRatioMode) hb_parni(2) );
+    obj->scale ( *PQSIZE(1), (Qt::AspectRatioMode) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

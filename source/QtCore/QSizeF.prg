@@ -283,7 +283,7 @@ void QSizeF_scale1 ()
 
   if( obj )
   {
-      obj->scale ( PQREAL(1), PQREAL(2), (Qt::AspectRatioMode) hb_parni(3) );
+    obj->scale ( PQREAL(1), PQREAL(2), (Qt::AspectRatioMode) hb_parni(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -298,7 +298,7 @@ void QSizeF_scale2 ()
 
   if( obj )
   {
-      obj->scale ( *PQSIZEF(1), (Qt::AspectRatioMode) hb_parni(2) );
+    obj->scale ( *PQSIZEF(1), (Qt::AspectRatioMode) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

@@ -395,14 +395,14 @@ QVariant ( const QList<QVariant> & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW27 )
 {
-      QList<QVariant> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-  par1 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
+  QList<QVariant> par1;
+  PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+  int i1;
+  int nLen1 = hb_arrayLen(aList1);
+  for (i1=0;i1<nLen1;i1++)
+  {
+    par1 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+  }
   QVariant * o = new QVariant ( par1 );
   _qt4xhb_returnNewObject( o, true );
 }
@@ -1423,10 +1423,10 @@ static Type nameToType ( const char * name )
 HB_FUNC_STATIC( QVARIANT_NAMETOTYPE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      RENUM( QVariant::nameToType ( PCONSTCHAR(1) ) );
+    RENUM( QVariant::nameToType ( PCONSTCHAR(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1442,10 +1442,10 @@ static const char * typeToName ( Type typ )
 HB_FUNC_STATIC( QVARIANT_TYPETONAME )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-      hb_retc( (const char *) QVariant::typeToName ( (QVariant::Type) hb_parni(1) ) );
+    hb_retc( (const char *) QVariant::typeToName ( (QVariant::Type) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

@@ -291,7 +291,7 @@ void QProcessEnvironment_insert1 ()
 
   if( obj )
   {
-      obj->insert ( PQSTRING(1), PQSTRING(2) );
+    obj->insert ( PQSTRING(1), PQSTRING(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -306,7 +306,7 @@ void QProcessEnvironment_insert2 ()
 
   if( obj )
   {
-      obj->insert ( *PQPROCESSENVIRONMENT(1) );
+    obj->insert ( *PQPROCESSENVIRONMENT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -337,11 +337,11 @@ static QProcessEnvironment systemEnvironment()
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_SYSTEMENVIRONMENT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QProcessEnvironment * ptr = new QProcessEnvironment( QProcessEnvironment::systemEnvironment () );
-      _qt4xhb_createReturnClass ( ptr, "QPROCESSENVIRONMENT", true );
+    QProcessEnvironment * ptr = new QProcessEnvironment( QProcessEnvironment::systemEnvironment () );
+    _qt4xhb_createReturnClass ( ptr, "QPROCESSENVIRONMENT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

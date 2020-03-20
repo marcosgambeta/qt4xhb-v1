@@ -321,7 +321,7 @@ void QThreadPool_waitForDone1 ()
 
   if( obj )
   {
-      obj->waitForDone ();
+    obj->waitForDone ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -336,7 +336,7 @@ void QThreadPool_waitForDone2 ()
 
   if( obj )
   {
-      RBOOL( obj->waitForDone ( PINT(1) ) );
+    RBOOL( obj->waitForDone ( PINT(1) ) );
   }
 }
 
@@ -365,11 +365,11 @@ static QThreadPool * globalInstance ()
 HB_FUNC_STATIC( QTHREADPOOL_GLOBALINSTANCE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QThreadPool * ptr = QThreadPool::globalInstance ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QTHREADPOOL" );
+    QThreadPool * ptr = QThreadPool::globalInstance ();
+    _qt4xhb_createReturnQObjectClass ( ptr, "QTHREADPOOL" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

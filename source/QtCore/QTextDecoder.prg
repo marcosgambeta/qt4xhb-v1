@@ -111,7 +111,7 @@ void QTextDecoder_toUnicode1 ()
 
   if( obj )
   {
-      RQSTRING( obj->toUnicode ( PCONSTCHAR(1), PINT(2) ) );
+    RQSTRING( obj->toUnicode ( PCONSTCHAR(1), PINT(2) ) );
   }
 }
 
@@ -124,7 +124,7 @@ void QTextDecoder_toUnicode2 ()
 
   if( obj )
   {
-      obj->toUnicode ( NULL, PCONSTCHAR(2), PINT(3) );
+    obj->toUnicode ( NULL, PCONSTCHAR(2), PINT(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -139,7 +139,7 @@ void QTextDecoder_toUnicode3 ()
 
   if( obj )
   {
-      RQSTRING( obj->toUnicode ( *PQBYTEARRAY(1) ) );
+    RQSTRING( obj->toUnicode ( *PQBYTEARRAY(1) ) );
   }
 }
 

@@ -94,7 +94,7 @@ void QCryptographicHash_addData1 ()
 
   if( obj )
   {
-      obj->addData ( PCONSTCHAR(1), PINT(2) );
+    obj->addData ( PCONSTCHAR(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -109,7 +109,7 @@ void QCryptographicHash_addData2 ()
 
   if( obj )
   {
-      obj->addData ( *PQBYTEARRAY(1) );
+    obj->addData ( *PQBYTEARRAY(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -191,11 +191,11 @@ static QByteArray hash ( const QByteArray & data, Algorithm method )
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_HASH )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISNUM(2) )
+  if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISNUM(2) )
   {
 #endif
-      QByteArray * ptr = new QByteArray( QCryptographicHash::hash ( *PQBYTEARRAY(1), (QCryptographicHash::Algorithm) hb_parni(2) ) );
-      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    QByteArray * ptr = new QByteArray( QCryptographicHash::hash ( *PQBYTEARRAY(1), (QCryptographicHash::Algorithm) hb_parni(2) ) );
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

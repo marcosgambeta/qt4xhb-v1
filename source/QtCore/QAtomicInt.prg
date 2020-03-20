@@ -465,10 +465,10 @@ static bool isFetchAndAddNative ()
 HB_FUNC_STATIC( QATOMICINT_ISFETCHANDADDNATIVE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RBOOL( QAtomicInt::isFetchAndAddNative () );
+    RBOOL( QAtomicInt::isFetchAndAddNative () );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -484,10 +484,10 @@ static bool isFetchAndAddWaitFree ()
 HB_FUNC_STATIC( QATOMICINT_ISFETCHANDADDWAITFREE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RBOOL( QAtomicInt::isFetchAndAddWaitFree () );
+    RBOOL( QAtomicInt::isFetchAndAddWaitFree () );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -503,10 +503,10 @@ static bool isFetchAndStoreNative ()
 HB_FUNC_STATIC( QATOMICINT_ISFETCHANDSTORENATIVE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RBOOL( QAtomicInt::isFetchAndStoreNative () );
+    RBOOL( QAtomicInt::isFetchAndStoreNative () );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -522,10 +522,10 @@ static bool isFetchAndStoreWaitFree ()
 HB_FUNC_STATIC( QATOMICINT_ISFETCHANDSTOREWAITFREE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RBOOL( QAtomicInt::isFetchAndStoreWaitFree () );
+    RBOOL( QAtomicInt::isFetchAndStoreWaitFree () );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -541,10 +541,10 @@ static bool isReferenceCountingNative ()
 HB_FUNC_STATIC( QATOMICINT_ISREFERENCECOUNTINGNATIVE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RBOOL( QAtomicInt::isReferenceCountingNative () );
+    RBOOL( QAtomicInt::isReferenceCountingNative () );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -560,10 +560,10 @@ static bool isReferenceCountingWaitFree ()
 HB_FUNC_STATIC( QATOMICINT_ISREFERENCECOUNTINGWAITFREE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RBOOL( QAtomicInt::isReferenceCountingWaitFree () );
+    RBOOL( QAtomicInt::isReferenceCountingWaitFree () );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -579,10 +579,10 @@ static bool isTestAndSetNative ()
 HB_FUNC_STATIC( QATOMICINT_ISTESTANDSETNATIVE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RBOOL( QAtomicInt::isTestAndSetNative () );
+    RBOOL( QAtomicInt::isTestAndSetNative () );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -598,10 +598,10 @@ static bool isTestAndSetWaitFree ()
 HB_FUNC_STATIC( QATOMICINT_ISTESTANDSETWAITFREE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RBOOL( QAtomicInt::isTestAndSetWaitFree () );
+    RBOOL( QAtomicInt::isTestAndSetWaitFree () );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

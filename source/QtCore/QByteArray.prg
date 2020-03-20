@@ -540,7 +540,7 @@ void QByteArray_contains1 ()
 
   if( obj )
   {
-      RBOOL( obj->contains ( *PQBYTEARRAY(1) ) );
+    RBOOL( obj->contains ( *PQBYTEARRAY(1) ) );
   }
 }
 
@@ -553,7 +553,7 @@ void QByteArray_contains2 ()
 
   if( obj )
   {
-      RBOOL( obj->contains ( PCONSTCHAR(1) ) );
+    RBOOL( obj->contains ( PCONSTCHAR(1) ) );
   }
 }
 
@@ -566,7 +566,7 @@ void QByteArray_contains3 ()
 
   if( obj )
   {
-      RBOOL( obj->contains ( PCHAR(1) ) );
+    RBOOL( obj->contains ( PCHAR(1) ) );
   }
 }
 
@@ -603,7 +603,7 @@ void QByteArray_count1 ()
 
   if( obj )
   {
-      RINT( obj->count ( *PQBYTEARRAY(1) ) );
+    RINT( obj->count ( *PQBYTEARRAY(1) ) );
   }
 }
 
@@ -616,7 +616,7 @@ void QByteArray_count2 ()
 
   if( obj )
   {
-      RINT( obj->count ( PCONSTCHAR(1) ) );
+    RINT( obj->count ( PCONSTCHAR(1) ) );
   }
 }
 
@@ -629,7 +629,7 @@ void QByteArray_count3 ()
 
   if( obj )
   {
-      RINT( obj->count ( PCHAR(1) ) );
+    RINT( obj->count ( PCHAR(1) ) );
   }
 }
 
@@ -642,7 +642,7 @@ void QByteArray_count4 ()
 
   if( obj )
   {
-      RINT( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -692,7 +692,7 @@ void QByteArray_endsWith1 ()
 
   if( obj )
   {
-      RBOOL( obj->endsWith ( *PQBYTEARRAY(1) ) );
+    RBOOL( obj->endsWith ( *PQBYTEARRAY(1) ) );
   }
 }
 
@@ -705,7 +705,7 @@ void QByteArray_endsWith2 ()
 
   if( obj )
   {
-      RBOOL( obj->endsWith ( PCONSTCHAR(1) ) );
+    RBOOL( obj->endsWith ( PCONSTCHAR(1) ) );
   }
 }
 
@@ -718,7 +718,7 @@ void QByteArray_endsWith3 ()
 
   if( obj )
   {
-      RBOOL( obj->endsWith ( PCHAR(1) ) );
+    RBOOL( obj->endsWith ( PCHAR(1) ) );
   }
 }
 
@@ -1461,7 +1461,7 @@ void QByteArray_push_back1 ()
 
   if( obj )
   {
-      obj->push_back ( *PQBYTEARRAY(1) );
+    obj->push_back ( *PQBYTEARRAY(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1476,7 +1476,7 @@ void QByteArray_push_back2 ()
 
   if( obj )
   {
-      obj->push_back ( PCONSTCHAR(1) );
+    obj->push_back ( PCONSTCHAR(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1491,7 +1491,7 @@ void QByteArray_push_back3 ()
 
   if( obj )
   {
-      obj->push_back ( PCHAR(1) );
+    obj->push_back ( PCHAR(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1530,7 +1530,7 @@ void QByteArray_push_front1 ()
 
   if( obj )
   {
-      obj->push_front ( *PQBYTEARRAY(1) );
+    obj->push_front ( *PQBYTEARRAY(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1545,7 +1545,7 @@ void QByteArray_push_front2 ()
 
   if( obj )
   {
-      obj->push_front ( PCONSTCHAR(1) );
+    obj->push_front ( PCONSTCHAR(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1560,7 +1560,7 @@ void QByteArray_push_front3 ()
 
   if( obj )
   {
-      obj->push_front ( PCHAR(1) );
+    obj->push_front ( PCHAR(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2583,7 +2583,7 @@ void QByteArray_startsWith1 ()
 
   if( obj )
   {
-      RBOOL( obj->startsWith ( *PQBYTEARRAY(1) ) );
+    RBOOL( obj->startsWith ( *PQBYTEARRAY(1) ) );
   }
 }
 
@@ -2596,7 +2596,7 @@ void QByteArray_startsWith2 ()
 
   if( obj )
   {
-      RBOOL( obj->startsWith ( PCONSTCHAR(1) ) );
+    RBOOL( obj->startsWith ( PCONSTCHAR(1) ) );
   }
 }
 
@@ -2609,7 +2609,7 @@ void QByteArray_startsWith3 ()
 
   if( obj )
   {
-      RBOOL( obj->startsWith ( PCHAR(1) ) );
+    RBOOL( obj->startsWith ( PCHAR(1) ) );
   }
 }
 
@@ -3079,11 +3079,11 @@ static QByteArray fromBase64 ( const QByteArray & base64 )
 HB_FUNC_STATIC( QBYTEARRAY_FROMBASE64 )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+  if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
 #endif
-      QByteArray * ptr = new QByteArray( QByteArray::fromBase64 ( *PQBYTEARRAY(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    QByteArray * ptr = new QByteArray( QByteArray::fromBase64 ( *PQBYTEARRAY(1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -3099,11 +3099,11 @@ static QByteArray fromHex ( const QByteArray & hexEncoded )
 HB_FUNC_STATIC( QBYTEARRAY_FROMHEX )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+  if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
 #endif
-      QByteArray * ptr = new QByteArray( QByteArray::fromHex ( *PQBYTEARRAY(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    QByteArray * ptr = new QByteArray( QByteArray::fromHex ( *PQBYTEARRAY(1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -3119,11 +3119,11 @@ static QByteArray fromPercentEncoding ( const QByteArray & input, char percent =
 HB_FUNC_STATIC( QBYTEARRAY_FROMPERCENTENCODING )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && ISOPTNUM(2) )
   {
 #endif
-      QByteArray * ptr = new QByteArray( QByteArray::fromPercentEncoding ( *PQBYTEARRAY(1), OPCHAR(2,'%') ) );
-      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    QByteArray * ptr = new QByteArray( QByteArray::fromPercentEncoding ( *PQBYTEARRAY(1), OPCHAR(2,'%') ) );
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -3139,11 +3139,11 @@ static QByteArray fromRawData ( const char * data, int size )
 HB_FUNC_STATIC( QBYTEARRAY_FROMRAWDATA )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+  if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
 #endif
-      QByteArray * ptr = new QByteArray( QByteArray::fromRawData ( PCONSTCHAR(1), PINT(2) ) );
-      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    QByteArray * ptr = new QByteArray( QByteArray::fromRawData ( PCONSTCHAR(1), PINT(2) ) );
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -3159,11 +3159,11 @@ static QByteArray number ( int n, int base = 10 )
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER1 )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
   {
 #endif
-      QByteArray * ptr = new QByteArray( QByteArray::number ( PINT(1), OPINT(2,10) ) );
-      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    QByteArray * ptr = new QByteArray( QByteArray::number ( PINT(1), OPINT(2,10) ) );
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -3179,11 +3179,11 @@ static QByteArray number ( uint n, int base = 10 )
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER2 )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
   {
 #endif
-      QByteArray * ptr = new QByteArray( QByteArray::number ( PUINT(1), OPINT(2,10) ) );
-      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    QByteArray * ptr = new QByteArray( QByteArray::number ( PUINT(1), OPINT(2,10) ) );
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -3199,11 +3199,11 @@ static QByteArray number ( qlonglong n, int base = 10 )
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER3 )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
   {
 #endif
-      QByteArray * ptr = new QByteArray( QByteArray::number ( PQLONGLONG(1), OPINT(2,10) ) );
-      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    QByteArray * ptr = new QByteArray( QByteArray::number ( PQLONGLONG(1), OPINT(2,10) ) );
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -3219,11 +3219,11 @@ static QByteArray number ( qulonglong n, int base = 10 )
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER4 )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
   {
 #endif
-      QByteArray * ptr = new QByteArray( QByteArray::number ( PQULONGLONG(1), OPINT(2,10) ) );
-      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    QByteArray * ptr = new QByteArray( QByteArray::number ( PQULONGLONG(1), OPINT(2,10) ) );
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -3239,11 +3239,11 @@ static QByteArray number ( double n, char f = 'g', int prec = 6 )
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER5 )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && ISOPTNUM(3) )
   {
 #endif
-      QByteArray * ptr = new QByteArray( QByteArray::number ( PDOUBLE(1), OPCHAR(2,'g'), OPINT(3,6) ) );
-      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    QByteArray * ptr = new QByteArray( QByteArray::number ( PDOUBLE(1), OPCHAR(2,'g'), OPINT(3,6) ) );
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

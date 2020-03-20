@@ -443,7 +443,7 @@ void QTime_toString1 ()
 
   if( obj )
   {
-      RQSTRING( obj->toString ( PQSTRING(1) ) );
+    RQSTRING( obj->toString ( PQSTRING(1) ) );
   }
 }
 
@@ -456,7 +456,7 @@ void QTime_toString2 ()
 
   if( obj )
   {
-      RQSTRING( obj->toString ( ISNIL(1)? (Qt::DateFormat) Qt::TextDate : (Qt::DateFormat) hb_parni(1) ) );
+    RQSTRING( obj->toString ( ISNIL(1)? (Qt::DateFormat) Qt::TextDate : (Qt::DateFormat) hb_parni(1) ) );
   }
 }
 
@@ -485,11 +485,11 @@ static QTime currentTime()
 HB_FUNC_STATIC( QTIME_CURRENTTIME )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QTime * ptr = new QTime( QTime::currentTime () );
-      _qt4xhb_createReturnClass ( ptr, "QTIME", true );
+    QTime * ptr = new QTime( QTime::currentTime () );
+    _qt4xhb_createReturnClass ( ptr, "QTIME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -505,8 +505,8 @@ static QTime fromString(const QString & string, Qt::DateFormat format = Qt::Text
 void QTime_fromString1 ()
 {
 
-      QTime * ptr = new QTime( QTime::fromString ( PQSTRING(1), ISNIL(2)? (Qt::DateFormat) Qt::TextDate : (Qt::DateFormat) hb_parni(2) ) );
-      _qt4xhb_createReturnClass ( ptr, "QTIME", true );
+  QTime * ptr = new QTime( QTime::fromString ( PQSTRING(1), ISNIL(2)? (Qt::DateFormat) Qt::TextDate : (Qt::DateFormat) hb_parni(2) ) );
+  _qt4xhb_createReturnClass ( ptr, "QTIME", true );
 }
 
 /*
@@ -518,8 +518,8 @@ void QTime_fromString2 ()
 
   if( obj )
   {
-      QTime * ptr = new QTime( obj->fromString ( PQSTRING(1), PQSTRING(2) ) );
-      _qt4xhb_createReturnClass ( ptr, "QTIME", true );
+    QTime * ptr = new QTime( obj->fromString ( PQSTRING(1), PQSTRING(2) ) );
+    _qt4xhb_createReturnClass ( ptr, "QTIME", true );
   }
 }
 
@@ -551,7 +551,7 @@ void QTime_isValid1 ()
 
   if( obj )
   {
-      RBOOL( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -561,7 +561,7 @@ static bool isValid(int h, int m, int s, int ms = 0)
 void QTime_isValid2 ()
 {
 
-      RBOOL( QTime::isValid ( PINT(1), PINT(2), PINT(3), OPINT(4,0) ) );
+  RBOOL( QTime::isValid ( PINT(1), PINT(2), PINT(3), OPINT(4,0) ) );
 }
 
 //[1]bool isValid() const

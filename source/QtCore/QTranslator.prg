@@ -113,7 +113,7 @@ void QTranslator_load1 ()
 
   if( obj )
   {
-      RBOOL( obj->load ( PQSTRING(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) ) );
+    RBOOL( obj->load ( PQSTRING(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) ) );
   }
 }
 
@@ -126,7 +126,7 @@ void QTranslator_load2 ()
 
   if( obj )
   {
-      RBOOL( obj->load ( *PQLOCALE(1), PQSTRING(2), OPQSTRING(3,QString()), OPQSTRING(4,QString()), OPQSTRING(5,QString()) ) );
+    RBOOL( obj->load ( *PQLOCALE(1), PQSTRING(2), OPQSTRING(3,QString()), OPQSTRING(4,QString()), OPQSTRING(5,QString()) ) );
   }
 }
 

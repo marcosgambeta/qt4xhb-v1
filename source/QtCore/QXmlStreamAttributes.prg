@@ -93,7 +93,7 @@ void QXmlStreamAttributes_append1 ()
 
   if( obj )
   {
-      obj->append ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
+    obj->append ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -108,7 +108,7 @@ void QXmlStreamAttributes_append2 ()
 
   if( obj )
   {
-      obj->append ( *PQXMLSTREAMATTRIBUTE(1) );
+    obj->append ( *PQXMLSTREAMATTRIBUTE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -123,7 +123,7 @@ void QXmlStreamAttributes_append3 ()
 
   if( obj )
   {
-      obj->append ( PQSTRING(1), PQSTRING(2) );
+    obj->append ( PQSTRING(1), PQSTRING(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -162,7 +162,7 @@ void QXmlStreamAttributes_hasAttribute1 ()
 
   if( obj )
   {
-      RBOOL( obj->hasAttribute ( PQSTRING(1) ) );
+    RBOOL( obj->hasAttribute ( PQSTRING(1) ) );
   }
 }
 
@@ -175,7 +175,7 @@ void QXmlStreamAttributes_hasAttribute2 ()
 
   if( obj )
   {
-      RBOOL( obj->hasAttribute ( *PQLATIN1STRING(1) ) );
+    RBOOL( obj->hasAttribute ( *PQLATIN1STRING(1) ) );
   }
 }
 
@@ -188,7 +188,7 @@ void QXmlStreamAttributes_hasAttribute3 ()
 
   if( obj )
   {
-      RBOOL( obj->hasAttribute ( PQSTRING(1), PQSTRING(2) ) );
+    RBOOL( obj->hasAttribute ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
 
@@ -225,8 +225,8 @@ void QXmlStreamAttributes_value1 ()
 
   if( obj )
   {
-      QStringRef * ptr = new QStringRef( obj->value ( PQSTRING(1), PQSTRING(2) ) );
-      _qt4xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+    QStringRef * ptr = new QStringRef( obj->value ( PQSTRING(1), PQSTRING(2) ) );
+    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF", true );
   }
 }
 
@@ -239,8 +239,8 @@ void QXmlStreamAttributes_value2 ()
 
   if( obj )
   {
-      QStringRef * ptr = new QStringRef( obj->value ( PQSTRING(1), *PQLATIN1STRING(2) ) );
-      _qt4xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+    QStringRef * ptr = new QStringRef( obj->value ( PQSTRING(1), *PQLATIN1STRING(2) ) );
+    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF", true );
   }
 }
 
@@ -253,8 +253,8 @@ void QXmlStreamAttributes_value3 ()
 
   if( obj )
   {
-      QStringRef * ptr = new QStringRef( obj->value ( *PQLATIN1STRING(1), *PQLATIN1STRING(2) ) );
-      _qt4xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+    QStringRef * ptr = new QStringRef( obj->value ( *PQLATIN1STRING(1), *PQLATIN1STRING(2) ) );
+    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF", true );
   }
 }
 
@@ -267,8 +267,8 @@ void QXmlStreamAttributes_value4 ()
 
   if( obj )
   {
-      QStringRef * ptr = new QStringRef( obj->value ( PQSTRING(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+    QStringRef * ptr = new QStringRef( obj->value ( PQSTRING(1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF", true );
   }
 }
 
@@ -281,8 +281,8 @@ void QXmlStreamAttributes_value5 ()
 
   if( obj )
   {
-      QStringRef * ptr = new QStringRef( obj->value ( *PQLATIN1STRING(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+    QStringRef * ptr = new QStringRef( obj->value ( *PQLATIN1STRING(1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF", true );
   }
 }
 

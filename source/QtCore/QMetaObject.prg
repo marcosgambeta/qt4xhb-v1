@@ -696,10 +696,10 @@ static bool checkConnectArgs ( const char * signal, const char * method )
 HB_FUNC_STATIC( QMETAOBJECT_CHECKCONNECTARGS )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+  if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
 #endif
-      RBOOL( QMetaObject::checkConnectArgs ( PCONSTCHAR(1), PCONSTCHAR(2) ) );
+    RBOOL( QMetaObject::checkConnectArgs ( PCONSTCHAR(1), PCONSTCHAR(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -715,10 +715,10 @@ static void connectSlotsByName ( QObject * object )
 HB_FUNC_STATIC( QMETAOBJECT_CONNECTSLOTSBYNAME )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+  if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
 #endif
-      QMetaObject::connectSlotsByName ( PQOBJECT(1) );
+    QMetaObject::connectSlotsByName ( PQOBJECT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -753,7 +753,7 @@ static bool invokeMethod ( QObject * obj, const char * member, QGenericArgument 
 
 HB_FUNC_STATIC( QMETAOBJECT_INVOKEMETHOD )
 {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
 }
 
 /*
@@ -762,11 +762,11 @@ static QByteArray normalizedSignature ( const char * method )
 HB_FUNC_STATIC( QMETAOBJECT_NORMALIZEDSIGNATURE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      QByteArray * ptr = new QByteArray( QMetaObject::normalizedSignature ( PCONSTCHAR(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    QByteArray * ptr = new QByteArray( QMetaObject::normalizedSignature ( PCONSTCHAR(1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -782,11 +782,11 @@ static QByteArray normalizedType ( const char * type )
 HB_FUNC_STATIC( QMETAOBJECT_NORMALIZEDTYPE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      QByteArray * ptr = new QByteArray( QMetaObject::normalizedType ( PCONSTCHAR(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    QByteArray * ptr = new QByteArray( QMetaObject::normalizedType ( PCONSTCHAR(1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

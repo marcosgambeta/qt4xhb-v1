@@ -266,7 +266,7 @@ void QLibrary_setFileNameAndVersion1 ()
 
   if( obj )
   {
-      obj->setFileNameAndVersion ( PQSTRING(1), PINT(2) );
+    obj->setFileNameAndVersion ( PQSTRING(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -281,7 +281,7 @@ void QLibrary_setFileNameAndVersion2 ()
 
   if( obj )
   {
-      obj->setFileNameAndVersion ( PQSTRING(1), PQSTRING(2) );
+    obj->setFileNameAndVersion ( PQSTRING(1), PQSTRING(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -389,7 +389,7 @@ void QLibrary_resolve1 ()
 
   if( obj )
   {
-      hb_retptr( (void *) obj->resolve ( PCONSTCHAR(1) ) );
+    hb_retptr( (void *) obj->resolve ( PCONSTCHAR(1) ) );
   }
 }
 
@@ -399,7 +399,7 @@ static void *resolve(const QString &fileName, const char *symbol)
 void QLibrary_resolve2 ()
 {
 
-      hb_retptr( (void *) QLibrary::resolve ( PQSTRING(1), PCONSTCHAR(2) ) );
+  hb_retptr( (void *) QLibrary::resolve ( PQSTRING(1), PCONSTCHAR(2) ) );
 }
 
 /*
@@ -408,7 +408,7 @@ static void *resolve(const QString &fileName, int verNum, const char *symbol)
 void QLibrary_resolve3 ()
 {
 
-      hb_retptr( (void *) QLibrary::resolve ( PQSTRING(1), PINT(2), PCONSTCHAR(3) ) );
+  hb_retptr( (void *) QLibrary::resolve ( PQSTRING(1), PINT(2), PCONSTCHAR(3) ) );
 }
 
 /*
@@ -417,7 +417,7 @@ static void *resolve(const QString &fileName, const QString &version, const char
 void QLibrary_resolve4 ()
 {
 
-      hb_retptr( (void *) QLibrary::resolve ( PQSTRING(1), PQSTRING(2), PCONSTCHAR(3) ) );
+  hb_retptr( (void *) QLibrary::resolve ( PQSTRING(1), PQSTRING(2), PCONSTCHAR(3) ) );
 }
 
 //[1]void *resolve(const char *symbol)
@@ -455,10 +455,10 @@ static bool isLibrary(const QString &fileName)
 HB_FUNC_STATIC( QLIBRARY_ISLIBRARY )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      RBOOL( QLibrary::isLibrary ( PQSTRING(1) ) );
+    RBOOL( QLibrary::isLibrary ( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

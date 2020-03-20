@@ -94,7 +94,7 @@ void QSignalMapper_setMapping1 ()
 
   if( obj )
   {
-      obj->setMapping ( PQOBJECT(1), PINT(2) );
+    obj->setMapping ( PQOBJECT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -109,7 +109,7 @@ void QSignalMapper_setMapping2 ()
 
   if( obj )
   {
-      obj->setMapping ( PQOBJECT(1), PQSTRING(2) );
+    obj->setMapping ( PQOBJECT(1), PQSTRING(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -124,7 +124,7 @@ void QSignalMapper_setMapping3 ()
 
   if( obj )
   {
-      obj->setMapping ( PQOBJECT(1), PQWIDGET(2) );
+    obj->setMapping ( PQOBJECT(1), PQWIDGET(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -139,7 +139,7 @@ void QSignalMapper_setMapping4 ()
 
   if( obj )
   {
-      obj->setMapping ( PQOBJECT(1), PQOBJECT(2) );
+    obj->setMapping ( PQOBJECT(1), PQOBJECT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -209,8 +209,8 @@ void QSignalMapper_mapping1 ()
 
   if( obj )
   {
-      QObject * ptr = obj->mapping ( PINT(1) );
-      _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+    QObject * ptr = obj->mapping ( PINT(1) );
+    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -223,8 +223,8 @@ void QSignalMapper_mapping2 ()
 
   if( obj )
   {
-      QObject * ptr = obj->mapping ( PQSTRING(1) );
-      _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+    QObject * ptr = obj->mapping ( PQSTRING(1) );
+    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -237,8 +237,8 @@ void QSignalMapper_mapping3 ()
 
   if( obj )
   {
-      QObject * ptr = obj->mapping ( PQWIDGET(1) );
-      _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+    QObject * ptr = obj->mapping ( PQWIDGET(1) );
+    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -251,8 +251,8 @@ void QSignalMapper_mapping4 ()
 
   if( obj )
   {
-      QObject * ptr = obj->mapping ( PQOBJECT(1) );
-      _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+    QObject * ptr = obj->mapping ( PQOBJECT(1) );
+    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -294,7 +294,7 @@ void QSignalMapper_map1 ()
 
   if( obj )
   {
-      obj->map ();
+    obj->map ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -309,7 +309,7 @@ void QSignalMapper_map2 ()
 
   if( obj )
   {
-      obj->map ( PQOBJECT(1) );
+    obj->map ( PQOBJECT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

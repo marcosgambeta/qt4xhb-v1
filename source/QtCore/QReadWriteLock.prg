@@ -167,7 +167,7 @@ void QReadWriteLock_tryLockForRead1 ()
 
   if( obj )
   {
-      RBOOL( obj->tryLockForRead () );
+    RBOOL( obj->tryLockForRead () );
   }
 }
 
@@ -180,7 +180,7 @@ void QReadWriteLock_tryLockForRead2 ()
 
   if( obj )
   {
-      RBOOL( obj->tryLockForRead ( PINT(1) ) );
+    RBOOL( obj->tryLockForRead ( PINT(1) ) );
   }
 }
 
@@ -212,7 +212,7 @@ void QReadWriteLock_tryLockForWrite1 ()
 
   if( obj )
   {
-      RBOOL( obj->tryLockForWrite () );
+    RBOOL( obj->tryLockForWrite () );
   }
 }
 
@@ -225,7 +225,7 @@ void QReadWriteLock_tryLockForWrite2 ()
 
   if( obj )
   {
-      RBOOL( obj->tryLockForWrite ( PINT(1) ) );
+    RBOOL( obj->tryLockForWrite ( PINT(1) ) );
   }
 }
 

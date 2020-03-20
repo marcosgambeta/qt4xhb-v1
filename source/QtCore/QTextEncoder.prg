@@ -112,8 +112,8 @@ void QTextEncoder_fromUnicode1 ()
 
   if( obj )
   {
-      QByteArray * ptr = new QByteArray( obj->fromUnicode ( PQSTRING(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    QByteArray * ptr = new QByteArray( obj->fromUnicode ( PQSTRING(1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
   }
 }
 
@@ -126,8 +126,8 @@ void QTextEncoder_fromUnicode2 ()
 
   if( obj )
   {
-      QByteArray * ptr = new QByteArray( obj->fromUnicode ( PQCHAR(1), PINT(2) ) );
-      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    QByteArray * ptr = new QByteArray( obj->fromUnicode ( PQCHAR(1), PINT(2) ) );
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
   }
 }
 

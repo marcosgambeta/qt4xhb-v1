@@ -118,7 +118,7 @@ void QMutex_tryLock1 ()
 
   if( obj )
   {
-      RBOOL( obj->tryLock () );
+    RBOOL( obj->tryLock () );
   }
 }
 
@@ -131,7 +131,7 @@ void QMutex_tryLock2 ()
 
   if( obj )
   {
-      RBOOL( obj->tryLock ( PINT(1) ) );
+    RBOOL( obj->tryLock ( PINT(1) ) );
   }
 }
 

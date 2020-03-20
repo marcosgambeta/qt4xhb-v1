@@ -607,10 +607,10 @@ static QString escape ( const QString & str )
 HB_FUNC_STATIC( QREGEXP_ESCAPE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      RQSTRING( QRegExp::escape ( PQSTRING(1) ) );
+    RQSTRING( QRegExp::escape ( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

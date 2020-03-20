@@ -374,11 +374,11 @@ static QThread * currentThread()
 HB_FUNC_STATIC( QTHREAD_CURRENTTHREAD )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QThread * ptr = QThread::currentThread ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QTHREAD" );
+    QThread * ptr = QThread::currentThread ();
+    _qt4xhb_createReturnQObjectClass ( ptr, "QTHREAD" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -394,10 +394,10 @@ static int idealThreadCount()
 HB_FUNC_STATIC( QTHREAD_IDEALTHREADCOUNT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RINT( QThread::idealThreadCount () );
+    RINT( QThread::idealThreadCount () );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

@@ -462,7 +462,7 @@ void QLine_translate1 ()
 
   if( obj )
   {
-      obj->translate ( *PQPOINT(1) );
+    obj->translate ( *PQPOINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -477,7 +477,7 @@ void QLine_translate2 ()
 
   if( obj )
   {
-      obj->translate ( PINT(1), PINT(2) );
+    obj->translate ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -511,8 +511,8 @@ void QLine_translated1 ()
 
   if( obj )
   {
-      QLine * ptr = new QLine( obj->translated ( *PQPOINT(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QLINE", true );
+    QLine * ptr = new QLine( obj->translated ( *PQPOINT(1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QLINE", true );
   }
 }
 
@@ -525,8 +525,8 @@ void QLine_translated2 ()
 
   if( obj )
   {
-      QLine * ptr = new QLine( obj->translated ( PINT(1), PINT(2) ) );
-      _qt4xhb_createReturnClass ( ptr, "QLINE", true );
+    QLine * ptr = new QLine( obj->translated ( PINT(1), PINT(2) ) );
+    _qt4xhb_createReturnClass ( ptr, "QLINE", true );
   }
 }
 

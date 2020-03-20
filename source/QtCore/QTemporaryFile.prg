@@ -285,8 +285,8 @@ static QTemporaryFile * createLocalFile(QFile & file)
 void QTemporaryFile_createLocalFile1 ()
 {
 
-      QTemporaryFile * ptr = QTemporaryFile::createLocalFile ( *PQFILE(1) );
-      _qt4xhb_createReturnQObjectClass ( ptr, "QTEMPORARYFILE" );
+  QTemporaryFile * ptr = QTemporaryFile::createLocalFile ( *PQFILE(1) );
+  _qt4xhb_createReturnQObjectClass ( ptr, "QTEMPORARYFILE" );
 }
 
 /*
@@ -295,8 +295,8 @@ static QTemporaryFile * createLocalFile(const QString & fileName)
 void QTemporaryFile_createLocalFile2 ()
 {
 
-      QTemporaryFile * ptr = QTemporaryFile::createLocalFile ( PQSTRING(1) );
-      _qt4xhb_createReturnQObjectClass ( ptr, "QTEMPORARYFILE" );
+  QTemporaryFile * ptr = QTemporaryFile::createLocalFile ( PQSTRING(1) );
+  _qt4xhb_createReturnQObjectClass ( ptr, "QTEMPORARYFILE" );
 }
 
 //[1]static QTemporaryFile * createLocalFile(QFile & file)

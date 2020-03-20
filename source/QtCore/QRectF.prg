@@ -360,7 +360,7 @@ void QRectF_contains1 ()
 
   if( obj )
   {
-      RBOOL( obj->contains ( *PQPOINTF(1) ) );
+    RBOOL( obj->contains ( *PQPOINTF(1) ) );
   }
 }
 
@@ -373,7 +373,7 @@ void QRectF_contains2 ()
 
   if( obj )
   {
-      RBOOL( obj->contains ( PQREAL(1), PQREAL(2) ) );
+    RBOOL( obj->contains ( PQREAL(1), PQREAL(2) ) );
   }
 }
 
@@ -386,7 +386,7 @@ void QRectF_contains3 ()
 
   if( obj )
   {
-      RBOOL( obj->contains ( *PQRECTF(1) ) );
+    RBOOL( obj->contains ( *PQRECTF(1) ) );
   }
 }
 
@@ -428,14 +428,14 @@ HB_FUNC_STATIC( QRECTF_GETCOORDS )
     {
 #endif
       qreal par1;
-qreal par2;
-qreal par3;
-qreal par4;
+      qreal par2;
+      qreal par3;
+      qreal par4;
       obj->getCoords ( &par1, &par2, &par3, &par4 );
       hb_stornd( par1, 1 );
-hb_stornd( par2, 2 );
-hb_stornd( par3, 3 );
-hb_stornd( par4, 4 );
+      hb_stornd( par2, 2 );
+      hb_stornd( par3, 3 );
+      hb_stornd( par4, 4 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -462,14 +462,14 @@ HB_FUNC_STATIC( QRECTF_GETRECT )
     {
 #endif
       qreal par1;
-qreal par2;
-qreal par3;
-qreal par4;
+      qreal par2;
+      qreal par3;
+      qreal par4;
       obj->getRect ( &par1, &par2, &par3, &par4 );
       hb_stornd( par1, 1 );
-hb_stornd( par2, 2 );
-hb_stornd( par3, 3 );
-hb_stornd( par4, 4 );
+      hb_stornd( par2, 2 );
+      hb_stornd( par3, 3 );
+      hb_stornd( par4, 4 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -816,7 +816,7 @@ void QRectF_moveTo1 ()
 
   if( obj )
   {
-      obj->moveTo ( PQREAL(1), PQREAL(2) );
+    obj->moveTo ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -831,7 +831,7 @@ void QRectF_moveTo2 ()
 
   if( obj )
   {
-      obj->moveTo ( *PQPOINTF(1) );
+    obj->moveTo ( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1531,7 +1531,7 @@ void QRectF_translate1 ()
 
   if( obj )
   {
-      obj->translate ( PQREAL(1), PQREAL(2) );
+    obj->translate ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1546,7 +1546,7 @@ void QRectF_translate2 ()
 
   if( obj )
   {
-      obj->translate ( *PQPOINTF(1) );
+    obj->translate ( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1580,8 +1580,8 @@ void QRectF_translated1 ()
 
   if( obj )
   {
-      QRectF * ptr = new QRectF( obj->translated ( PQREAL(1), PQREAL(2) ) );
-      _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    QRectF * ptr = new QRectF( obj->translated ( PQREAL(1), PQREAL(2) ) );
+    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -1594,8 +1594,8 @@ void QRectF_translated2 ()
 
   if( obj )
   {
-      QRectF * ptr = new QRectF( obj->translated ( *PQPOINTF(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    QRectF * ptr = new QRectF( obj->translated ( *PQPOINTF(1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 

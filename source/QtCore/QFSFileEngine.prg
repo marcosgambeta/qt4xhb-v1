@@ -139,7 +139,7 @@ void QFSFileEngine_open1 ()
 
   if( obj )
   {
-      RBOOL( obj->open ( (QIODevice::OpenMode) hb_parni(1), (FILE *) hb_parptr(2) ) );
+    RBOOL( obj->open ( (QIODevice::OpenMode) hb_parni(1), (FILE *) hb_parptr(2) ) );
   }
 }
 
@@ -152,7 +152,7 @@ void QFSFileEngine_open2 ()
 
   if( obj )
   {
-      RBOOL( obj->open ( (QIODevice::OpenMode) hb_parni(1), PINT(2) ) );
+    RBOOL( obj->open ( (QIODevice::OpenMode) hb_parni(1), PINT(2) ) );
   }
 }
 
@@ -165,7 +165,7 @@ void QFSFileEngine_open3 ()
 
   if( obj )
   {
-      RBOOL( obj->open ( (QIODevice::OpenMode) hb_parni(1), PINT(2), (QFile::FileHandleFlags) hb_parni(3) ) );
+    RBOOL( obj->open ( (QIODevice::OpenMode) hb_parni(1), PINT(2), (QFile::FileHandleFlags) hb_parni(3) ) );
   }
 }
 
@@ -178,7 +178,7 @@ void QFSFileEngine_open4 ()
 
   if( obj )
   {
-      RBOOL( obj->open ( (QIODevice::OpenMode) hb_parni(1), (FILE *) hb_parptr(2), (QFile::FileHandleFlags) hb_parni(3) ) );
+    RBOOL( obj->open ( (QIODevice::OpenMode) hb_parni(1), (FILE *) hb_parptr(2), (QFile::FileHandleFlags) hb_parni(3) ) );
   }
 }
 
@@ -873,10 +873,10 @@ static QString currentPath ( const QString & fileName = QString() )
 HB_FUNC_STATIC( QFSFILEENGINE_CURRENTPATH )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
+  if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
   {
 #endif
-      RQSTRING( QFSFileEngine::currentPath ( OPQSTRING(1,QString()) ) );
+    RQSTRING( QFSFileEngine::currentPath ( OPQSTRING(1,QString()) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -944,10 +944,10 @@ static QString homePath ()
 HB_FUNC_STATIC( QFSFILEENGINE_HOMEPATH )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQSTRING( QFSFileEngine::homePath () );
+    RQSTRING( QFSFileEngine::homePath () );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -963,10 +963,10 @@ static QString rootPath ()
 HB_FUNC_STATIC( QFSFILEENGINE_ROOTPATH )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQSTRING( QFSFileEngine::rootPath () );
+    RQSTRING( QFSFileEngine::rootPath () );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -982,10 +982,10 @@ static bool setCurrentPath ( const QString & path )
 HB_FUNC_STATIC( QFSFILEENGINE_SETCURRENTPATH )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      RBOOL( QFSFileEngine::setCurrentPath ( PQSTRING(1) ) );
+    RBOOL( QFSFileEngine::setCurrentPath ( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1001,10 +1001,10 @@ static QString tempPath ()
 HB_FUNC_STATIC( QFSFILEENGINE_TEMPPATH )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQSTRING( QFSFileEngine::tempPath () );
+    RQSTRING( QFSFileEngine::tempPath () );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

@@ -668,7 +668,7 @@ void QDateTime_toString1 ()
 
   if( obj )
   {
-      RQSTRING( obj->toString ( PQSTRING(1) ) );
+    RQSTRING( obj->toString ( PQSTRING(1) ) );
   }
 }
 
@@ -681,7 +681,7 @@ void QDateTime_toString2 ()
 
   if( obj )
   {
-      RQSTRING( obj->toString ( ISNIL(1)? (Qt::DateFormat) Qt::TextDate : (Qt::DateFormat) hb_parni(1) ) );
+    RQSTRING( obj->toString ( ISNIL(1)? (Qt::DateFormat) Qt::TextDate : (Qt::DateFormat) hb_parni(1) ) );
   }
 }
 
@@ -784,11 +784,11 @@ static QDateTime currentDateTime ()
 HB_FUNC_STATIC( QDATETIME_CURRENTDATETIME )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QDateTime * ptr = new QDateTime( QDateTime::currentDateTime () );
-      _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+    QDateTime * ptr = new QDateTime( QDateTime::currentDateTime () );
+    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -804,11 +804,11 @@ static QDateTime currentDateTimeUtc ()
 HB_FUNC_STATIC( QDATETIME_CURRENTDATETIMEUTC )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QDateTime * ptr = new QDateTime( QDateTime::currentDateTimeUtc () );
-      _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+    QDateTime * ptr = new QDateTime( QDateTime::currentDateTimeUtc () );
+    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -824,10 +824,10 @@ static qint64 currentMSecsSinceEpoch ()
 HB_FUNC_STATIC( QDATETIME_CURRENTMSECSSINCEEPOCH )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQINT64( QDateTime::currentMSecsSinceEpoch () );
+    RQINT64( QDateTime::currentMSecsSinceEpoch () );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -843,11 +843,11 @@ static QDateTime fromMSecsSinceEpoch ( qint64 msecs )
 HB_FUNC_STATIC( QDATETIME_FROMMSECSSINCEEPOCH )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-      QDateTime * ptr = new QDateTime( QDateTime::fromMSecsSinceEpoch ( PQINT64(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+    QDateTime * ptr = new QDateTime( QDateTime::fromMSecsSinceEpoch ( PQINT64(1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -863,8 +863,8 @@ static QDateTime fromString ( const QString & string, Qt::DateFormat format = Qt
 void QDateTime_fromString1 ()
 {
 
-      QDateTime * ptr = new QDateTime( QDateTime::fromString ( PQSTRING(1), ISNIL(2)? (Qt::DateFormat) Qt::TextDate : (Qt::DateFormat) hb_parni(2) ) );
-      _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+  QDateTime * ptr = new QDateTime( QDateTime::fromString ( PQSTRING(1), ISNIL(2)? (Qt::DateFormat) Qt::TextDate : (Qt::DateFormat) hb_parni(2) ) );
+  _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
 }
 
 /*
@@ -873,8 +873,8 @@ static QDateTime fromString ( const QString & string, const QString & format )
 void QDateTime_fromString2 ()
 {
 
-      QDateTime * ptr = new QDateTime( QDateTime::fromString ( PQSTRING(1), PQSTRING(2) ) );
-      _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+  QDateTime * ptr = new QDateTime( QDateTime::fromString ( PQSTRING(1), PQSTRING(2) ) );
+  _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
 }
 
 //[1]QDateTime fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
@@ -902,11 +902,11 @@ static QDateTime fromTime_t ( uint seconds )
 HB_FUNC_STATIC( QDATETIME_FROMTIME_T )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-      QDateTime * ptr = new QDateTime( QDateTime::fromTime_t ( PUINT(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+    QDateTime * ptr = new QDateTime( QDateTime::fromTime_t ( PUINT(1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

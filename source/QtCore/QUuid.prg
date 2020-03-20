@@ -311,11 +311,11 @@ static QUuid fromRfc4122(const QByteArray &)
 HB_FUNC_STATIC( QUUID_FROMRFC4122 )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+  if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
 #endif
-      QUuid * ptr = new QUuid( QUuid::fromRfc4122 ( *PQBYTEARRAY(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QUUID", true );
+    QUuid * ptr = new QUuid( QUuid::fromRfc4122 ( *PQBYTEARRAY(1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QUUID", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -331,11 +331,11 @@ static QUuid createUuid()
 HB_FUNC_STATIC( QUUID_CREATEUUID )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QUuid * ptr = new QUuid( QUuid::createUuid () );
-      _qt4xhb_createReturnClass ( ptr, "QUUID", true );
+    QUuid * ptr = new QUuid( QUuid::createUuid () );
+    _qt4xhb_createReturnClass ( ptr, "QUUID", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

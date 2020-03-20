@@ -211,7 +211,7 @@ void QXmlStreamReader_addData1 ()
 
   if( obj )
   {
-      obj->addData ( *PQBYTEARRAY(1) );
+    obj->addData ( *PQBYTEARRAY(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -226,7 +226,7 @@ void QXmlStreamReader_addData2 ()
 
   if( obj )
   {
-      obj->addData ( PQSTRING(1) );
+    obj->addData ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -241,7 +241,7 @@ void QXmlStreamReader_addData3 ()
 
   if( obj )
   {
-      obj->addData ( PCONSTCHAR(1) );
+    obj->addData ( PCONSTCHAR(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -307,13 +307,13 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ADDEXTRANAMESPACEDECLARATIONS )
     {
 #endif
       QXmlStreamNamespaceDeclarations par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-  par1 << *(QXmlStreamNamespaceDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aList1);
+      for (i1=0;i1<nLen1;i1++)
+      {
+        par1 << *(QXmlStreamNamespaceDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      }
       obj->addExtraNamespaceDeclarations ( par1 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

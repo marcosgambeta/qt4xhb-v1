@@ -346,35 +346,35 @@ void QDir_entryInfoList1 ()
 
   if( obj )
   {
-      QFileInfoList list = obj->entryInfoList ( PQSTRINGLIST(1), ISNIL(2)? (QDir::Filters) QDir::NoFilter : (QDir::Filters) hb_parni(2), ISNIL(3)? (QDir::SortFlags) QDir::NoSort : (QDir::SortFlags) hb_parni(3) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+    QFileInfoList list = obj->entryInfoList ( PQSTRINGLIST(1), ISNIL(2)? (QDir::Filters) QDir::NoFilter : (QDir::Filters) hb_parni(2), ISNIL(3)? (QDir::SortFlags) QDir::NoSort : (QDir::SortFlags) hb_parni(3) );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
+    if( pDynSym )
+    {
+      for( int i = 0; i < list.count(); i++ )
       {
-        for( int i = 0; i < list.count(); i++ )
-        {
-          hb_vmPushDynSym( pDynSym );
-          hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QFileInfo *) new QFileInfo( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemNew( NULL );
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
-        }
+        hb_vmPushDynSym( pDynSym );
+        hb_vmPushNil();
+        hb_vmDo( 0 );
+        PHB_ITEM pObject = hb_itemNew( NULL );
+        hb_itemCopy( pObject, hb_stackReturnItem() );
+        PHB_ITEM pItem = hb_itemNew( NULL );
+        hb_itemPutPtr( pItem, (QFileInfo *) new QFileInfo( list[i] ) );
+        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+        hb_itemRelease( pItem );
+        PHB_ITEM pDestroy = hb_itemNew( NULL );
+        hb_itemPutL( pDestroy, true );
+        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
+        hb_itemRelease( pDestroy );
+        hb_arrayAddForward( pArray, pObject );
+        hb_itemRelease( pObject );
       }
-      else
-      {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QFILEINFO", HB_ERR_ARGS_BASEPARAMS );
-      }
-      hb_itemReturnRelease(pArray);
+    }
+    else
+    {
+      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QFILEINFO", HB_ERR_ARGS_BASEPARAMS );
+    }
+    hb_itemReturnRelease(pArray);
   }
 }
 
@@ -387,35 +387,35 @@ void QDir_entryInfoList2 ()
 
   if( obj )
   {
-      QFileInfoList list = obj->entryInfoList ( ISNIL(1)? (QDir::Filters) QDir::NoFilter : (QDir::Filters) hb_parni(1), ISNIL(2)? (QDir::SortFlags) QDir::NoSort : (QDir::SortFlags) hb_parni(2) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+    QFileInfoList list = obj->entryInfoList ( ISNIL(1)? (QDir::Filters) QDir::NoFilter : (QDir::Filters) hb_parni(1), ISNIL(2)? (QDir::SortFlags) QDir::NoSort : (QDir::SortFlags) hb_parni(2) );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
+    if( pDynSym )
+    {
+      for( int i = 0; i < list.count(); i++ )
       {
-        for( int i = 0; i < list.count(); i++ )
-        {
-          hb_vmPushDynSym( pDynSym );
-          hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QFileInfo *) new QFileInfo( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemNew( NULL );
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
-        }
+        hb_vmPushDynSym( pDynSym );
+        hb_vmPushNil();
+        hb_vmDo( 0 );
+        PHB_ITEM pObject = hb_itemNew( NULL );
+        hb_itemCopy( pObject, hb_stackReturnItem() );
+        PHB_ITEM pItem = hb_itemNew( NULL );
+        hb_itemPutPtr( pItem, (QFileInfo *) new QFileInfo( list[i] ) );
+        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+        hb_itemRelease( pItem );
+        PHB_ITEM pDestroy = hb_itemNew( NULL );
+        hb_itemPutL( pDestroy, true );
+        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
+        hb_itemRelease( pDestroy );
+        hb_arrayAddForward( pArray, pObject );
+        hb_itemRelease( pObject );
       }
-      else
-      {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QFILEINFO", HB_ERR_ARGS_BASEPARAMS );
-      }
-      hb_itemReturnRelease(pArray);
+    }
+    else
+    {
+      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QFILEINFO", HB_ERR_ARGS_BASEPARAMS );
+    }
+    hb_itemReturnRelease(pArray);
   }
 }
 
@@ -447,7 +447,7 @@ void QDir_entryList1 ()
 
   if( obj )
   {
-      RQSTRINGLIST( obj->entryList ( PQSTRINGLIST(1), ISNIL(2)? (QDir::Filters) QDir::NoFilter : (QDir::Filters) hb_parni(2), ISNIL(3)? (QDir::SortFlags) QDir::NoSort : (QDir::SortFlags) hb_parni(3) ) );
+    RQSTRINGLIST( obj->entryList ( PQSTRINGLIST(1), ISNIL(2)? (QDir::Filters) QDir::NoFilter : (QDir::Filters) hb_parni(2), ISNIL(3)? (QDir::SortFlags) QDir::NoSort : (QDir::SortFlags) hb_parni(3) ) );
   }
 }
 
@@ -460,7 +460,7 @@ void QDir_entryList2 ()
 
   if( obj )
   {
-      RQSTRINGLIST( obj->entryList ( ISNIL(1)? (QDir::Filters) QDir::NoFilter : (QDir::Filters) hb_parni(1), ISNIL(2)? (QDir::SortFlags) QDir::NoSort : (QDir::SortFlags) hb_parni(2) ) );
+    RQSTRINGLIST( obj->entryList ( ISNIL(1)? (QDir::Filters) QDir::NoFilter : (QDir::Filters) hb_parni(1), ISNIL(2)? (QDir::SortFlags) QDir::NoSort : (QDir::SortFlags) hb_parni(2) ) );
   }
 }
 
@@ -492,7 +492,7 @@ void QDir_exists1 ()
 
   if( obj )
   {
-      RBOOL( obj->exists ( PQSTRING(1) ) );
+    RBOOL( obj->exists ( PQSTRING(1) ) );
   }
 }
 
@@ -505,7 +505,7 @@ void QDir_exists2 ()
 
   if( obj )
   {
-      RBOOL( obj->exists () );
+    RBOOL( obj->exists () );
   }
 }
 
@@ -1072,10 +1072,10 @@ static void addSearchPath(const QString & prefix, const QString & path)
 HB_FUNC_STATIC( QDIR_ADDSEARCHPATH )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+  if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
 #endif
-      QDir::addSearchPath ( PQSTRING(1), PQSTRING(2) );
+    QDir::addSearchPath ( PQSTRING(1), PQSTRING(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1093,10 +1093,10 @@ static QString cleanPath(const QString & path)
 HB_FUNC_STATIC( QDIR_CLEANPATH )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      RQSTRING( QDir::cleanPath ( PQSTRING(1) ) );
+    RQSTRING( QDir::cleanPath ( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1112,11 +1112,11 @@ static QDir current()
 HB_FUNC_STATIC( QDIR_CURRENT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QDir * ptr = new QDir( QDir::current () );
-      _qt4xhb_createReturnClass ( ptr, "QDIR", true );
+    QDir * ptr = new QDir( QDir::current () );
+    _qt4xhb_createReturnClass ( ptr, "QDIR", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1132,10 +1132,10 @@ static QString currentPath()
 HB_FUNC_STATIC( QDIR_CURRENTPATH )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQSTRING( QDir::currentPath () );
+    RQSTRING( QDir::currentPath () );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1151,38 +1151,38 @@ static QFileInfoList drives()
 HB_FUNC_STATIC( QDIR_DRIVES )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QFileInfoList list = QDir::drives ();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+    QFileInfoList list = QDir::drives ();
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
+    if( pDynSym )
+    {
+      for( int i = 0; i < list.count(); i++ )
       {
-        for( int i = 0; i < list.count(); i++ )
-        {
-          hb_vmPushDynSym( pDynSym );
-          hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QFileInfo *) new QFileInfo( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemNew( NULL );
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
-        }
+        hb_vmPushDynSym( pDynSym );
+        hb_vmPushNil();
+        hb_vmDo( 0 );
+        PHB_ITEM pObject = hb_itemNew( NULL );
+        hb_itemCopy( pObject, hb_stackReturnItem() );
+        PHB_ITEM pItem = hb_itemNew( NULL );
+        hb_itemPutPtr( pItem, (QFileInfo *) new QFileInfo( list[i] ) );
+        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+        hb_itemRelease( pItem );
+        PHB_ITEM pDestroy = hb_itemNew( NULL );
+        hb_itemPutL( pDestroy, true );
+        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
+        hb_itemRelease( pDestroy );
+        hb_arrayAddForward( pArray, pObject );
+        hb_itemRelease( pObject );
       }
-      else
-      {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QFILEINFO", HB_ERR_ARGS_BASEPARAMS );
-      }
-      hb_itemReturnRelease(pArray);
+    }
+    else
+    {
+      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QFILEINFO", HB_ERR_ARGS_BASEPARAMS );
+    }
+    hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1198,10 +1198,10 @@ static QString fromNativeSeparators(const QString & pathName)
 HB_FUNC_STATIC( QDIR_FROMNATIVESEPARATORS )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      RQSTRING( QDir::fromNativeSeparators ( PQSTRING(1) ) );
+    RQSTRING( QDir::fromNativeSeparators ( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1217,11 +1217,11 @@ static QDir home()
 HB_FUNC_STATIC( QDIR_HOME )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QDir * ptr = new QDir( QDir::home () );
-      _qt4xhb_createReturnClass ( ptr, "QDIR", true );
+    QDir * ptr = new QDir( QDir::home () );
+    _qt4xhb_createReturnClass ( ptr, "QDIR", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1237,10 +1237,10 @@ static QString homePath()
 HB_FUNC_STATIC( QDIR_HOMEPATH )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQSTRING( QDir::homePath () );
+    RQSTRING( QDir::homePath () );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1256,10 +1256,10 @@ static bool isAbsolutePath(const QString & path)
 HB_FUNC_STATIC( QDIR_ISABSOLUTEPATH )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      RBOOL( QDir::isAbsolutePath ( PQSTRING(1) ) );
+    RBOOL( QDir::isAbsolutePath ( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1275,10 +1275,10 @@ static bool isRelativePath(const QString & path)
 HB_FUNC_STATIC( QDIR_ISRELATIVEPATH )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      RBOOL( QDir::isRelativePath ( PQSTRING(1) ) );
+    RBOOL( QDir::isRelativePath ( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1294,7 +1294,7 @@ static bool match(const QString & filter, const QString & fileName)
 void QDir_match1 ()
 {
 
-      RBOOL( QDir::match ( PQSTRING(1), PQSTRING(2) ) );
+  RBOOL( QDir::match ( PQSTRING(1), PQSTRING(2) ) );
 }
 
 /*
@@ -1303,7 +1303,7 @@ static bool match(const QStringList & filters, const QString & fileName)
 void QDir_match2 ()
 {
 
-      RBOOL( QDir::match ( PQSTRINGLIST(1), PQSTRING(2) ) );
+  RBOOL( QDir::match ( PQSTRINGLIST(1), PQSTRING(2) ) );
 }
 
 //[1]bool match(const QString & filter, const QString & fileName)
@@ -1331,11 +1331,11 @@ static QDir root()
 HB_FUNC_STATIC( QDIR_ROOT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QDir * ptr = new QDir( QDir::root () );
-      _qt4xhb_createReturnClass ( ptr, "QDIR", true );
+    QDir * ptr = new QDir( QDir::root () );
+    _qt4xhb_createReturnClass ( ptr, "QDIR", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1351,10 +1351,10 @@ static QString rootPath()
 HB_FUNC_STATIC( QDIR_ROOTPATH )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQSTRING( QDir::rootPath () );
+    RQSTRING( QDir::rootPath () );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1370,10 +1370,10 @@ static QStringList searchPaths(const QString & prefix)
 HB_FUNC_STATIC( QDIR_SEARCHPATHS )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      RQSTRINGLIST( QDir::searchPaths ( PQSTRING(1) ) );
+    RQSTRINGLIST( QDir::searchPaths ( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1389,11 +1389,11 @@ static QChar separator()
 HB_FUNC_STATIC( QDIR_SEPARATOR )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QChar * ptr = new QChar( QDir::separator () );
-      _qt4xhb_createReturnClass ( ptr, "QCHAR", true );
+    QChar * ptr = new QChar( QDir::separator () );
+    _qt4xhb_createReturnClass ( ptr, "QCHAR", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1409,10 +1409,10 @@ static bool setCurrent(const QString & path)
 HB_FUNC_STATIC( QDIR_SETCURRENT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      RBOOL( QDir::setCurrent ( PQSTRING(1) ) );
+    RBOOL( QDir::setCurrent ( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1428,10 +1428,10 @@ static void setSearchPaths(const QString & prefix, const QStringList & searchPat
 HB_FUNC_STATIC( QDIR_SETSEARCHPATHS )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISARRAY(2) )
+  if( ISNUMPAR(2) && ISCHAR(1) && ISARRAY(2) )
   {
 #endif
-      QDir::setSearchPaths ( PQSTRING(1), PQSTRINGLIST(2) );
+    QDir::setSearchPaths ( PQSTRING(1), PQSTRINGLIST(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1449,11 +1449,11 @@ static QDir temp()
 HB_FUNC_STATIC( QDIR_TEMP )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QDir * ptr = new QDir( QDir::temp () );
-      _qt4xhb_createReturnClass ( ptr, "QDIR", true );
+    QDir * ptr = new QDir( QDir::temp () );
+    _qt4xhb_createReturnClass ( ptr, "QDIR", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1469,10 +1469,10 @@ static QString tempPath()
 HB_FUNC_STATIC( QDIR_TEMPPATH )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQSTRING( QDir::tempPath () );
+    RQSTRING( QDir::tempPath () );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1488,10 +1488,10 @@ static QString toNativeSeparators(const QString & pathName)
 HB_FUNC_STATIC( QDIR_TONATIVESEPARATORS )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      RQSTRING( QDir::toNativeSeparators ( PQSTRING(1) ) );
+    RQSTRING( QDir::toNativeSeparators ( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

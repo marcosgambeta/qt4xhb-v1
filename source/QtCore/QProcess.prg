@@ -692,7 +692,7 @@ void QProcess_start1 ()
 
   if( obj )
   {
-      obj->start ( PQSTRING(1), PQSTRINGLIST(2), ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) );
+    obj->start ( PQSTRING(1), PQSTRINGLIST(2), ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -707,7 +707,7 @@ void QProcess_start2 ()
 
   if( obj )
   {
-      obj->start ( PQSTRING(1), ISNIL(2)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(2) );
+    obj->start ( PQSTRING(1), ISNIL(2)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1080,7 +1080,7 @@ static int execute ( const QString & program, const QStringList & arguments )
 void QProcess_execute1 ()
 {
 
-      RINT( QProcess::execute ( PQSTRING(1), PQSTRINGLIST(2) ) );
+  RINT( QProcess::execute ( PQSTRING(1), PQSTRINGLIST(2) ) );
 }
 
 /*
@@ -1089,7 +1089,7 @@ static int execute ( const QString & program )
 void QProcess_execute2 ()
 {
 
-      RINT( QProcess::execute ( PQSTRING(1) ) );
+  RINT( QProcess::execute ( PQSTRING(1) ) );
 }
 
 //[1]int execute ( const QString & program, const QStringList & arguments )
@@ -1117,7 +1117,7 @@ static bool startDetached ( const QString & program, const QStringList & argumen
 void QProcess_startDetached1 ()
 {
 
-      RBOOL( QProcess::startDetached ( PQSTRING(1), PQSTRINGLIST(2), PQSTRING(3), NULL ) );
+  RBOOL( QProcess::startDetached ( PQSTRING(1), PQSTRINGLIST(2), PQSTRING(3), NULL ) );
 }
 
 /*
@@ -1126,7 +1126,7 @@ static bool startDetached ( const QString & program, const QStringList & argumen
 void QProcess_startDetached2 ()
 {
 
-      RBOOL( QProcess::startDetached ( PQSTRING(1), PQSTRINGLIST(2) ) );
+  RBOOL( QProcess::startDetached ( PQSTRING(1), PQSTRINGLIST(2) ) );
 }
 
 /*
@@ -1135,7 +1135,7 @@ static bool startDetached ( const QString & program )
 void QProcess_startDetached3 ()
 {
 
-      RBOOL( QProcess::startDetached ( PQSTRING(1) ) );
+  RBOOL( QProcess::startDetached ( PQSTRING(1) ) );
 }
 
 //[1]bool startDetached ( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = 0 )
@@ -1168,10 +1168,10 @@ static QStringList systemEnvironment ()
 HB_FUNC_STATIC( QPROCESS_SYSTEMENVIRONMENT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQSTRINGLIST( QProcess::systemEnvironment () );
+    RQSTRINGLIST( QProcess::systemEnvironment () );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
