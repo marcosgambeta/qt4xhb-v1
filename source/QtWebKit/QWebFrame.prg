@@ -117,7 +117,7 @@ void QWebFrame_addToJavaScriptWindowObject1 ()
 
   if( obj )
   {
-      obj->addToJavaScriptWindowObject ( PQSTRING(1), PQOBJECT(2) );
+    obj->addToJavaScriptWindowObject ( PQSTRING(1), PQOBJECT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -132,7 +132,7 @@ void QWebFrame_addToJavaScriptWindowObject2 ()
 
   if( obj )
   {
-      obj->addToJavaScriptWindowObject ( PQSTRING(1), PQOBJECT(2), (QScriptEngine::ValueOwnership) hb_parni(3) );
+    obj->addToJavaScriptWindowObject ( PQSTRING(1), PQOBJECT(2), (QScriptEngine::ValueOwnership) hb_parni(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -462,7 +462,7 @@ void QWebFrame_load1 ()
 
   if( obj )
   {
-      obj->load ( *PQURL(1) );
+    obj->load ( *PQURL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -477,7 +477,7 @@ void QWebFrame_load2 ()
 
   if( obj )
   {
-      obj->load ( *PQNETWORKREQUEST(1), ISNIL(2)? (QNetworkAccessManager::Operation) QNetworkAccessManager::GetOperation : (QNetworkAccessManager::Operation) hb_parni(2), ISNIL(3)? QByteArray() : *(QByteArray *) _qt4xhb_itemGetPtr(3) );
+    obj->load ( *PQNETWORKREQUEST(1), ISNIL(2)? (QNetworkAccessManager::Operation) QNetworkAccessManager::GetOperation : (QNetworkAccessManager::Operation) hb_parni(2), ISNIL(3)? QByteArray() : *(QByteArray *) _qt4xhb_itemGetPtr(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -586,7 +586,7 @@ void QWebFrame_render1 ()
 
   if( obj )
   {
-      obj->render ( PQPAINTER(1) );
+    obj->render ( PQPAINTER(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -601,7 +601,7 @@ void QWebFrame_render2 ()
 
   if( obj )
   {
-      obj->render ( PQPAINTER(1), *PQREGION(2) );
+    obj->render ( PQPAINTER(1), *PQREGION(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -616,7 +616,7 @@ void QWebFrame_render3 ()
 
   if( obj )
   {
-      obj->render ( PQPAINTER(1), (QWebFrame::RenderLayer) hb_parni(2), ISNIL(3)? QRegion() : *(QRegion *) _qt4xhb_itemGetPtr(3) );
+    obj->render ( PQPAINTER(1), (QWebFrame::RenderLayer) hb_parni(2), ISNIL(3)? QRegion() : *(QRegion *) _qt4xhb_itemGetPtr(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
