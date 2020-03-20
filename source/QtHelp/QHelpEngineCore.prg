@@ -413,7 +413,7 @@ void QHelpEngineCore_filterAttributes1 ()
 
   if( obj )
   {
-      RQSTRINGLIST( obj->filterAttributes () );
+    RQSTRINGLIST( obj->filterAttributes () );
   }
 }
 
@@ -426,7 +426,7 @@ void QHelpEngineCore_filterAttributes2 ()
 
   if( obj )
   {
-      RQSTRINGLIST( obj->filterAttributes ( PQSTRING(1) ) );
+    RQSTRINGLIST( obj->filterAttributes ( PQSTRING(1) ) );
   }
 }
 
@@ -726,11 +726,11 @@ static QVariant metaData ( const QString & documentationFileName, const QString 
 HB_FUNC_STATIC( QHELPENGINECORE_METADATA )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+  if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
 #endif
-      QVariant * ptr = new QVariant( QHelpEngineCore::metaData ( PQSTRING(1), PQSTRING(2) ) );
-      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    QVariant * ptr = new QVariant( QHelpEngineCore::metaData ( PQSTRING(1), PQSTRING(2) ) );
+    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -746,10 +746,10 @@ static QString namespaceName ( const QString & documentationFileName )
 HB_FUNC_STATIC( QHELPENGINECORE_NAMESPACENAME )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      RQSTRING( QHelpEngineCore::namespaceName ( PQSTRING(1) ) );
+    RQSTRING( QHelpEngineCore::namespaceName ( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
