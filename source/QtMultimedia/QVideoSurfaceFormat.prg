@@ -472,7 +472,7 @@ void QVideoSurfaceFormat_setFrameSize1 ()
 
   if( obj )
   {
-      obj->setFrameSize ( *PQSIZE(1) );
+    obj->setFrameSize ( *PQSIZE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -487,7 +487,7 @@ void QVideoSurfaceFormat_setFrameSize2 ()
 
   if( obj )
   {
-      obj->setFrameSize ( PINT(1), PINT(2) );
+    obj->setFrameSize ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -521,7 +521,7 @@ void QVideoSurfaceFormat_setPixelAspectRatio1 ()
 
   if( obj )
   {
-      obj->setPixelAspectRatio ( *PQSIZE(1) );
+    obj->setPixelAspectRatio ( *PQSIZE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -536,7 +536,7 @@ void QVideoSurfaceFormat_setPixelAspectRatio2 ()
 
   if( obj )
   {
-      obj->setPixelAspectRatio ( PINT(1), PINT(2) );
+    obj->setPixelAspectRatio ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

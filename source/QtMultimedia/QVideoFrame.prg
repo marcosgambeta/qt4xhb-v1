@@ -698,10 +698,10 @@ static QImage::Format imageFormatFromPixelFormat ( PixelFormat format )
 HB_FUNC_STATIC( QVIDEOFRAME_IMAGEFORMATFROMPIXELFORMAT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-      RENUM( QVideoFrame::imageFormatFromPixelFormat ( (QVideoFrame::PixelFormat) hb_parni(1) ) );
+    RENUM( QVideoFrame::imageFormatFromPixelFormat ( (QVideoFrame::PixelFormat) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -717,10 +717,10 @@ static PixelFormat pixelFormatFromImageFormat ( QImage::Format format )
 HB_FUNC_STATIC( QVIDEOFRAME_PIXELFORMATFROMIMAGEFORMAT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-      RENUM( QVideoFrame::pixelFormatFromImageFormat ( (QImage::Format) hb_parni(1) ) );
+    RENUM( QVideoFrame::pixelFormatFromImageFormat ( (QImage::Format) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
