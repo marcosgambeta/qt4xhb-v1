@@ -146,7 +146,7 @@ void QXmlNamespaceSupport_prefixes1 ()
 
   if( obj )
   {
-      RQSTRINGLIST( obj->prefixes () );
+    RQSTRINGLIST( obj->prefixes () );
   }
 }
 
@@ -159,7 +159,7 @@ void QXmlNamespaceSupport_prefixes2 ()
 
   if( obj )
   {
-      RQSTRINGLIST( obj->prefixes ( PQSTRING(1) ) );
+    RQSTRINGLIST( obj->prefixes ( PQSTRING(1) ) );
   }
 }
 
