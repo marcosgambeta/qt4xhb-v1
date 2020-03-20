@@ -201,7 +201,7 @@ void QDeclarativeProperty_connectNotifySignal1 ()
 
   if( obj )
   {
-      RBOOL( obj->connectNotifySignal ( PQOBJECT(1), PCONSTCHAR(2) ) );
+    RBOOL( obj->connectNotifySignal ( PQOBJECT(1), PCONSTCHAR(2) ) );
   }
 }
 
@@ -214,7 +214,7 @@ void QDeclarativeProperty_connectNotifySignal2 ()
 
   if( obj )
   {
-      RBOOL( obj->connectNotifySignal ( PQOBJECT(1), PINT(2) ) );
+    RBOOL( obj->connectNotifySignal ( PQOBJECT(1), PINT(2) ) );
   }
 }
 
@@ -681,8 +681,8 @@ void QDeclarativeProperty_read1 ()
 
   if( obj )
   {
-      QVariant * ptr = new QVariant( obj->read () );
-      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    QVariant * ptr = new QVariant( obj->read () );
+    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -692,8 +692,8 @@ static QVariant read ( QObject * object, const QString & name )
 void QDeclarativeProperty_read2 ()
 {
 
-      QVariant * ptr = new QVariant( QDeclarativeProperty::read ( PQOBJECT(1), PQSTRING(2) ) );
-      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+  QVariant * ptr = new QVariant( QDeclarativeProperty::read ( PQOBJECT(1), PQSTRING(2) ) );
+  _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
 }
 
 /*
@@ -702,8 +702,8 @@ static QVariant read ( QObject * object, const QString & name, QDeclarativeConte
 void QDeclarativeProperty_read3 ()
 {
 
-      QVariant * ptr = new QVariant( QDeclarativeProperty::read ( PQOBJECT(1), PQSTRING(2), PQDECLARATIVECONTEXT(3) ) );
-      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+  QVariant * ptr = new QVariant( QDeclarativeProperty::read ( PQOBJECT(1), PQSTRING(2), PQDECLARATIVECONTEXT(3) ) );
+  _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
 }
 
 /*
@@ -712,8 +712,8 @@ static QVariant read ( QObject * object, const QString & name, QDeclarativeEngin
 void QDeclarativeProperty_read4 ()
 {
 
-      QVariant * ptr = new QVariant( QDeclarativeProperty::read ( PQOBJECT(1), PQSTRING(2), PQDECLARATIVEENGINE(3) ) );
-      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+  QVariant * ptr = new QVariant( QDeclarativeProperty::read ( PQOBJECT(1), PQSTRING(2), PQDECLARATIVEENGINE(3) ) );
+  _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
 }
 
 //[1]QVariant read () const
@@ -754,7 +754,7 @@ void QDeclarativeProperty_write1 ()
 
   if( obj )
   {
-      RBOOL( obj->write ( *PQVARIANT(1) ) );
+    RBOOL( obj->write ( *PQVARIANT(1) ) );
   }
 }
 
@@ -764,7 +764,7 @@ static bool write ( QObject * object, const QString & name, const QVariant & val
 void QDeclarativeProperty_write2 ()
 {
 
-      RBOOL( QDeclarativeProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3) ) );
+  RBOOL( QDeclarativeProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3) ) );
 }
 
 /*
@@ -773,7 +773,7 @@ static bool write ( QObject * object, const QString & name, const QVariant & val
 void QDeclarativeProperty_write3 ()
 {
 
-      RBOOL( QDeclarativeProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQDECLARATIVECONTEXT(4) ) );
+  RBOOL( QDeclarativeProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQDECLARATIVECONTEXT(4) ) );
 }
 
 /*
@@ -782,7 +782,7 @@ static bool write ( QObject * object, const QString & name, const QVariant & val
 void QDeclarativeProperty_write4 ()
 {
 
-      RBOOL( QDeclarativeProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQDECLARATIVEENGINE(4) ) );
+  RBOOL( QDeclarativeProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQDECLARATIVEENGINE(4) ) );
 }
 
 //[1]bool write ( const QVariant & value ) const

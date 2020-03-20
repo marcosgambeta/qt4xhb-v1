@@ -347,7 +347,7 @@ void QDeclarativeContext_setContextProperty1 ()
 
   if( obj )
   {
-      obj->setContextProperty ( PQSTRING(1), PQOBJECT(2) );
+    obj->setContextProperty ( PQSTRING(1), PQOBJECT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -362,7 +362,7 @@ void QDeclarativeContext_setContextProperty2 ()
 
   if( obj )
   {
-      obj->setContextProperty ( PQSTRING(1), *PQVARIANT(2) );
+    obj->setContextProperty ( PQSTRING(1), *PQVARIANT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
