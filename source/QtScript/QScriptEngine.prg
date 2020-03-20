@@ -324,8 +324,8 @@ void QScriptEngine_evaluate1 ()
 
   if( obj )
   {
-      QScriptValue * ptr = new QScriptValue( obj->evaluate ( PQSTRING(1), OPQSTRING(2,QString()), OPINT(3,1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
+    QScriptValue * ptr = new QScriptValue( obj->evaluate ( PQSTRING(1), OPQSTRING(2,QString()), OPINT(3,1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
   }
 }
 
@@ -338,8 +338,8 @@ void QScriptEngine_evaluate2 ()
 
   if( obj )
   {
-      QScriptValue * ptr = new QScriptValue( obj->evaluate ( *PQSCRIPTPROGRAM(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
+    QScriptValue * ptr = new QScriptValue( obj->evaluate ( *PQSCRIPTPROGRAM(1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
   }
 }
 
@@ -544,8 +544,8 @@ void QScriptEngine_newRegExp1 ()
 
   if( obj )
   {
-      QScriptValue * ptr = new QScriptValue( obj->newRegExp ( *PQREGEXP(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
+    QScriptValue * ptr = new QScriptValue( obj->newRegExp ( *PQREGEXP(1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
   }
 }
 
@@ -558,8 +558,8 @@ void QScriptEngine_newRegExp2 ()
 
   if( obj )
   {
-      QScriptValue * ptr = new QScriptValue( obj->newRegExp ( PQSTRING(1), PQSTRING(2) ) );
-      _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
+    QScriptValue * ptr = new QScriptValue( obj->newRegExp ( PQSTRING(1), PQSTRING(2) ) );
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
   }
 }
 
@@ -591,8 +591,8 @@ void QScriptEngine_newVariant1 ()
 
   if( obj )
   {
-      QScriptValue * ptr = new QScriptValue( obj->newVariant ( *PQVARIANT(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
+    QScriptValue * ptr = new QScriptValue( obj->newVariant ( *PQVARIANT(1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
   }
 }
 
@@ -605,8 +605,8 @@ void QScriptEngine_newVariant2 ()
 
   if( obj )
   {
-      QScriptValue * ptr = new QScriptValue( obj->newVariant ( *PQSCRIPTVALUE(1), *PQVARIANT(2) ) );
-      _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
+    QScriptValue * ptr = new QScriptValue( obj->newVariant ( *PQSCRIPTVALUE(1), *PQVARIANT(2) ) );
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
   }
 }
 
@@ -1013,11 +1013,11 @@ static QScriptSyntaxCheckResult checkSyntax ( const QString & program )
 HB_FUNC_STATIC( QSCRIPTENGINE_CHECKSYNTAX )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      QScriptSyntaxCheckResult * ptr = new QScriptSyntaxCheckResult( QScriptEngine::checkSyntax ( PQSTRING(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QSCRIPTSYNTAXCHECKRESULT", true );
+    QScriptSyntaxCheckResult * ptr = new QScriptSyntaxCheckResult( QScriptEngine::checkSyntax ( PQSTRING(1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTSYNTAXCHECKRESULT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
