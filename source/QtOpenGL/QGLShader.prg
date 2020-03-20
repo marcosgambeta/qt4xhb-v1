@@ -355,10 +355,10 @@ static bool hasOpenGLShaders ( ShaderType type, const QGLContext * context = 0 )
 HB_FUNC_STATIC( QGLSHADER_HASOPENGLSHADERS )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && (ISQGLCONTEXT(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISNUM(1) && (ISQGLCONTEXT(2)||ISNIL(2)) )
   {
 #endif
-      RBOOL( QGLShader::hasOpenGLShaders ( (QGLShader::ShaderType) hb_parni(1), ISNIL(2)? 0 : (QGLContext *) _qt4xhb_itemGetPtr(2) ) );
+    RBOOL( QGLShader::hasOpenGLShaders ( (QGLShader::ShaderType) hb_parni(1), ISNIL(2)? 0 : (QGLContext *) _qt4xhb_itemGetPtr(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

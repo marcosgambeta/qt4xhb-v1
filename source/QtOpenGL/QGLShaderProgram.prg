@@ -548,7 +548,7 @@ void QGLShaderProgram_disableAttributeArray1 ()
 
   if( obj )
   {
-      obj->disableAttributeArray ( PINT(1) );
+    obj->disableAttributeArray ( PINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -563,7 +563,7 @@ void QGLShaderProgram_disableAttributeArray2 ()
 
   if( obj )
   {
-      obj->disableAttributeArray ( PCONSTCHAR(1) );
+    obj->disableAttributeArray ( PCONSTCHAR(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -597,7 +597,7 @@ void QGLShaderProgram_enableAttributeArray1 ()
 
   if( obj )
   {
-      obj->enableAttributeArray ( PINT(1) );
+    obj->enableAttributeArray ( PINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -612,7 +612,7 @@ void QGLShaderProgram_enableAttributeArray2 ()
 
   if( obj )
   {
-      obj->enableAttributeArray ( PCONSTCHAR(1) );
+    obj->enableAttributeArray ( PCONSTCHAR(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -931,7 +931,7 @@ void QGLShaderProgram_setAttributeBuffer1 ()
 
   if( obj )
   {
-      obj->setAttributeBuffer ( PINT(1), PGLENUM(2), PINT(3), PINT(4), OPINT(5,0) );
+    obj->setAttributeBuffer ( PINT(1), PGLENUM(2), PINT(3), PINT(4), OPINT(5,0) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -946,7 +946,7 @@ void QGLShaderProgram_setAttributeBuffer2 ()
 
   if( obj )
   {
-      obj->setAttributeBuffer ( PCONSTCHAR(1), PGLENUM(2), PINT(3), PINT(4), OPINT(5,0) );
+    obj->setAttributeBuffer ( PCONSTCHAR(1), PGLENUM(2), PINT(3), PINT(4), OPINT(5,0) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2256,10 +2256,10 @@ static bool hasOpenGLShaderPrograms ( const QGLContext * context = 0 )
 HB_FUNC_STATIC( QGLSHADERPROGRAM_HASOPENGLSHADERPROGRAMS )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQGLCONTEXT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQGLCONTEXT(1)||ISNIL(1)) )
   {
 #endif
-      RBOOL( QGLShaderProgram::hasOpenGLShaderPrograms ( ISNIL(1)? 0 : (QGLContext *) _qt4xhb_itemGetPtr(1) ) );
+    RBOOL( QGLShaderProgram::hasOpenGLShaderPrograms ( ISNIL(1)? 0 : (QGLContext *) _qt4xhb_itemGetPtr(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

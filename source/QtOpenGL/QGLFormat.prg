@@ -1355,11 +1355,11 @@ static QGLFormat defaultFormat ()
 HB_FUNC_STATIC( QGLFORMAT_DEFAULTFORMAT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QGLFormat * ptr = new QGLFormat( QGLFormat::defaultFormat () );
-      _qt4xhb_createReturnClass ( ptr, "QGLFORMAT", true );
+    QGLFormat * ptr = new QGLFormat( QGLFormat::defaultFormat () );
+    _qt4xhb_createReturnClass ( ptr, "QGLFORMAT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1375,11 +1375,11 @@ static QGLFormat defaultOverlayFormat ()
 HB_FUNC_STATIC( QGLFORMAT_DEFAULTOVERLAYFORMAT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QGLFormat * ptr = new QGLFormat( QGLFormat::defaultOverlayFormat () );
-      _qt4xhb_createReturnClass ( ptr, "QGLFORMAT", true );
+    QGLFormat * ptr = new QGLFormat( QGLFormat::defaultOverlayFormat () );
+    _qt4xhb_createReturnClass ( ptr, "QGLFORMAT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1395,10 +1395,10 @@ static bool hasOpenGL ()
 HB_FUNC_STATIC( QGLFORMAT_HASOPENGL )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RBOOL( QGLFormat::hasOpenGL () );
+    RBOOL( QGLFormat::hasOpenGL () );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1414,10 +1414,10 @@ static bool hasOpenGLOverlays ()
 HB_FUNC_STATIC( QGLFORMAT_HASOPENGLOVERLAYS )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RBOOL( QGLFormat::hasOpenGLOverlays () );
+    RBOOL( QGLFormat::hasOpenGLOverlays () );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1433,10 +1433,10 @@ static OpenGLVersionFlags openGLVersionFlags ()
 HB_FUNC_STATIC( QGLFORMAT_OPENGLVERSIONFLAGS )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RENUM( QGLFormat::openGLVersionFlags () );
+    RENUM( QGLFormat::openGLVersionFlags () );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1452,10 +1452,10 @@ static void setDefaultFormat ( const QGLFormat & f )
 HB_FUNC_STATIC( QGLFORMAT_SETDEFAULTFORMAT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQGLFORMAT(1) )
+  if( ISNUMPAR(1) && ISQGLFORMAT(1) )
   {
 #endif
-      QGLFormat::setDefaultFormat ( *PQGLFORMAT(1) );
+    QGLFormat::setDefaultFormat ( *PQGLFORMAT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1473,10 +1473,10 @@ static void setDefaultOverlayFormat ( const QGLFormat & f )
 HB_FUNC_STATIC( QGLFORMAT_SETDEFAULTOVERLAYFORMAT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQGLFORMAT(1) )
+  if( ISNUMPAR(1) && ISQGLFORMAT(1) )
   {
 #endif
-      QGLFormat::setDefaultOverlayFormat ( *PQGLFORMAT(1) );
+    QGLFormat::setDefaultOverlayFormat ( *PQGLFORMAT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1495,11 +1495,11 @@ HB_FUNC_STATIC( QGLFORMAT_FROMPLATFORMWINDOWFORMAT )
 {
 #if defined(Q_WS_QPA)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPLATFORMWINDOWFORMAT(1) )
+  if( ISNUMPAR(1) && ISQPLATFORMWINDOWFORMAT(1) )
   {
 #endif
-      QGLFormat * ptr = new QGLFormat( QGLFormat::fromPlatformWindowFormat ( *PQPLATFORMWINDOWFORMAT(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QGLFORMAT", true );
+    QGLFormat * ptr = new QGLFormat( QGLFormat::fromPlatformWindowFormat ( *PQPLATFORMWINDOWFORMAT(1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QGLFORMAT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1517,11 +1517,11 @@ HB_FUNC_STATIC( QGLFORMAT_TOPLATFORMWINDOWFORMAT )
 {
 #if defined(Q_WS_QPA)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQGLFORMAT(1) )
+  if( ISNUMPAR(1) && ISQGLFORMAT(1) )
   {
 #endif
-      QPlatformWindowFormat * ptr = new QPlatformWindowFormat( QGLFormat::toPlatformWindowFormat ( *PQGLFORMAT(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QPLATFORMWINDOWFORMAT", true );
+    QPlatformWindowFormat * ptr = new QPlatformWindowFormat( QGLFormat::toPlatformWindowFormat ( *PQGLFORMAT(1) ) );
+    _qt4xhb_createReturnClass ( ptr, "QPLATFORMWINDOWFORMAT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
