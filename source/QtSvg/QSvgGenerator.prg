@@ -352,7 +352,7 @@ void QSvgGenerator_setViewBox1 ()
 
   if( obj )
   {
-      obj->setViewBox ( *PQRECT(1) );
+    obj->setViewBox ( *PQRECT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -367,7 +367,7 @@ void QSvgGenerator_setViewBox2 ()
 
   if( obj )
   {
-      obj->setViewBox ( *PQRECTF(1) );
+    obj->setViewBox ( *PQRECTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
