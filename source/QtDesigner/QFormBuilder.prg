@@ -30,7 +30,7 @@ CLASS QFormBuilder INHERIT QAbstractFormBuilder
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFormBuilder
+PROCEDURE destroyObject() CLASS QFormBuilder
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -51,7 +51,7 @@ HB_FUNC_STATIC( QFORMBUILDER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QFormBuilder * o = new QFormBuilder ();
+    QFormBuilder * o = new QFormBuilder();
     _qt4xhb_returnNewObject( o, true );
   }
   else
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QFORMBUILDER_ADDPLUGINPATH )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->addPluginPath ( PQSTRING(1) );
+      obj->addPluginPath( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QFORMBUILDER_CLEARPLUGINPATHS )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clearPluginPaths ();
+      obj->clearPluginPaths();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QFORMBUILDER_CUSTOMWIDGETS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QDesignerCustomWidgetInterface *> list = obj->customWidgets ();
+      QList<QDesignerCustomWidgetInterface *> list = obj->customWidgets();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QDESIGNERCUSTOMWIDGETINTERFACE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QFORMBUILDER_PLUGINPATHS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->pluginPaths () );
+      RQSTRINGLIST( obj->pluginPaths() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QFORMBUILDER_SETPLUGINPATH )
     if( ISNUMPAR(1) && ISARRAY(1) )
     {
 #endif
-      obj->setPluginPath ( PQSTRINGLIST(1) );
+      obj->setPluginPath( PQSTRINGLIST(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

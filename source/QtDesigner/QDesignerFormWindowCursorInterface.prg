@@ -45,7 +45,7 @@ CLASS QDesignerFormWindowCursorInterface
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDesignerFormWindowCursorInterface
+PROCEDURE destroyObject() CLASS QDesignerFormWindowCursorInterface
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -91,8 +91,8 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_CURRENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->current ();
-      _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->current();
+      _qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -116,8 +116,8 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_FORMWINDOW )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDesignerFormWindowInterface * ptr = obj->formWindow ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
+      QDesignerFormWindowInterface * ptr = obj->formWindow();
+      _qt4xhb_createReturnQObjectClass( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_HASSELECTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasSelection () );
+      RBOOL( obj->hasSelection() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_ISWIDGETSELECTED )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      RBOOL( obj->isWidgetSelected ( PQWIDGET(1) ) );
+      RBOOL( obj->isWidgetSelected( PQWIDGET(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_MOVEPOSITION )
     if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
     {
 #endif
-      RBOOL( obj->movePosition ( (QDesignerFormWindowCursorInterface::MoveOperation) hb_parni(1), ISNIL(2)? (QDesignerFormWindowCursorInterface::MoveMode) QDesignerFormWindowCursorInterface::MoveAnchor : (QDesignerFormWindowCursorInterface::MoveMode) hb_parni(2) ) );
+      RBOOL( obj->movePosition( (QDesignerFormWindowCursorInterface::MoveOperation) hb_parni(1), ISNIL(2)? (QDesignerFormWindowCursorInterface::MoveMode) QDesignerFormWindowCursorInterface::MoveAnchor : (QDesignerFormWindowCursorInterface::MoveMode) hb_parni(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_POSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->position () );
+      RINT( obj->position() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -237,8 +237,8 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SELECTEDWIDGET )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QWidget * ptr = obj->selectedWidget ( PINT(1) );
-      _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->selectedWidget( PINT(1) );
+      _qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SELECTEDWIDGETCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->selectedWidgetCount () );
+      RINT( obj->selectedWidgetCount() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SETPOSITION )
     if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
     {
 #endif
-      obj->setPosition ( PINT(1), ISNIL(2)? (QDesignerFormWindowCursorInterface::MoveMode) QDesignerFormWindowCursorInterface::MoveAnchor : (QDesignerFormWindowCursorInterface::MoveMode) hb_parni(2) );
+      obj->setPosition( PINT(1), ISNIL(2)? (QDesignerFormWindowCursorInterface::MoveMode) QDesignerFormWindowCursorInterface::MoveAnchor : (QDesignerFormWindowCursorInterface::MoveMode) hb_parni(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -312,8 +312,8 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_WIDGET )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QWidget * ptr = obj->widget ( PINT(1) );
-      _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->widget( PINT(1) );
+      _qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_WIDGETCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->widgetCount () );
+      RINT( obj->widgetCount() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

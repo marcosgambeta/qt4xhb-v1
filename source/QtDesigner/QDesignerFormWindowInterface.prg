@@ -81,7 +81,7 @@ CLASS QDesignerFormWindowInterface INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDesignerFormWindowInterface
+PROCEDURE destroyObject() CLASS QDesignerFormWindowInterface
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -106,8 +106,8 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -132,8 +132,8 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ABSOLUTEDIR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDir * ptr = new QDir( obj->absoluteDir () );
-      _qt4xhb_createReturnClass ( ptr, "QDIR", true );
+      QDir * ptr = new QDir( obj->absoluteDir() );
+      _qt4xhb_createReturnClass( ptr, "QDIR", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ADDRESOURCEFILE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->addResourceFile ( PQSTRING(1) );
+      obj->addResourceFile( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_AUTHOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->author () );
+      RQSTRING( obj->author() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_COMMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->comment () );
+      RQSTRING( obj->comment() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_CONTENTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->contents () );
+      RQSTRING( obj->contents() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -255,8 +255,8 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_CORE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDesignerFormEditorInterface * ptr = obj->core ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QDESIGNERFORMEDITORINTERFACE" );
+      QDesignerFormEditorInterface * ptr = obj->core();
+      _qt4xhb_createReturnQObjectClass( ptr, "QDESIGNERFORMEDITORINTERFACE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -280,8 +280,8 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_CURSOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDesignerFormWindowCursorInterface * ptr = obj->cursor ();
-      _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMWINDOWCURSORINTERFACE", false );
+      QDesignerFormWindowCursorInterface * ptr = obj->cursor();
+      _qt4xhb_createReturnClass( ptr, "QDESIGNERFORMWINDOWCURSORINTERFACE", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_EMITSELECTIONCHANGED )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->emitSelectionChanged ();
+      obj->emitSelectionChanged();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_EXPORTMACRO )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->exportMacro () );
+      RQSTRING( obj->exportMacro() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FEATURES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->features () );
+      RENUM( obj->features() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FILENAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->fileName () );
+      RQSTRING( obj->fileName() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -403,8 +403,8 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_GRID )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->grid () );
-      _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+      QPoint * ptr = new QPoint( obj->grid() );
+      _qt4xhb_createReturnClass( ptr, "QPOINT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_HASFEATURE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->hasFeature ( (QDesignerFormWindowInterface::Feature) hb_parni(1) ) );
+      RBOOL( obj->hasFeature( (QDesignerFormWindowInterface::Feature) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_INCLUDEHINTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->includeHints () );
+      RQSTRINGLIST( obj->includeHints() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ISDIRTY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isDirty () );
+      RBOOL( obj->isDirty() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ISMANAGED )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      RBOOL( obj->isManaged ( PQWIDGET(1) ) );
+      RBOOL( obj->isManaged( PQWIDGET(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -526,7 +526,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_LAYOUTDEFAULT )
 #endif
       int par1;
       int par2;
-      obj->layoutDefault ( &par1, &par2 );
+      obj->layoutDefault( &par1, &par2 );
       hb_storni( par1, 1 );
       hb_storni( par2, 2 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -554,8 +554,8 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_MAINCONTAINER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->mainContainer ();
-      _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->mainContainer();
+      _qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -579,7 +579,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_PIXMAPFUNCTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->pixmapFunction () );
+      RQSTRING( obj->pixmapFunction() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -603,7 +603,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_REMOVERESOURCEFILE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->removeResourceFile ( PQSTRING(1) );
+      obj->removeResourceFile( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -629,7 +629,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_RESOURCEFILES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->resourceFiles () );
+      RQSTRINGLIST( obj->resourceFiles() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -653,7 +653,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETAUTHOR )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setAuthor ( PQSTRING(1) );
+      obj->setAuthor( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -679,7 +679,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETCOMMENT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setComment ( PQSTRING(1) );
+      obj->setComment( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -705,7 +705,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETEXPORTMACRO )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setExportMacro ( PQSTRING(1) );
+      obj->setExportMacro( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -731,7 +731,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETINCLUDEHINTS )
     if( ISNUMPAR(1) && ISARRAY(1) )
     {
 #endif
-      obj->setIncludeHints ( PQSTRINGLIST(1) );
+      obj->setIncludeHints( PQSTRINGLIST(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -757,7 +757,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETLAYOUTDEFAULT )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->setLayoutDefault ( PINT(1), PINT(2) );
+      obj->setLayoutDefault( PINT(1), PINT(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -783,7 +783,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETLAYOUTFUNCTION )
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
     {
 #endif
-      obj->setLayoutFunction ( PQSTRING(1), PQSTRING(2) );
+      obj->setLayoutFunction( PQSTRING(1), PQSTRING(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -809,7 +809,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETMAINCONTAINER )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->setMainContainer ( PQWIDGET(1) );
+      obj->setMainContainer( PQWIDGET(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -835,7 +835,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETPIXMAPFUNCTION )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setPixmapFunction ( PQSTRING(1) );
+      obj->setPixmapFunction( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -861,7 +861,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_CLEARSELECTION )
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
     {
 #endif
-      obj->clearSelection ( OPBOOL(1,true) );
+      obj->clearSelection( OPBOOL(1,true) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -887,7 +887,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_MANAGEWIDGET )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->manageWidget ( PQWIDGET(1) );
+      obj->manageWidget( PQWIDGET(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -913,7 +913,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SELECTWIDGET )
     if( ISBETWEEN(1,2) && ISQWIDGET(1) && ISOPTLOG(2) )
     {
 #endif
-      obj->selectWidget ( PQWIDGET(1), OPBOOL(2,true) );
+      obj->selectWidget( PQWIDGET(1), OPBOOL(2,true) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -929,13 +929,13 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SELECTWIDGET )
 /*
 virtual void setContents ( QIODevice * device ) = 0
 */
-void QDesignerFormWindowInterface_setContents1 ()
+void QDesignerFormWindowInterface_setContents1()
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    obj->setContents ( PQIODEVICE(1) );
+    obj->setContents( PQIODEVICE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -944,13 +944,13 @@ void QDesignerFormWindowInterface_setContents1 ()
 /*
 virtual void setContents ( const QString & contents ) = 0
 */
-void QDesignerFormWindowInterface_setContents2 ()
+void QDesignerFormWindowInterface_setContents2()
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    obj->setContents ( PQSTRING(1) );
+    obj->setContents( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -988,7 +988,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETDIRTY )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setDirty ( PBOOL(1) );
+      obj->setDirty( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1014,7 +1014,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETFEATURES )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setFeatures ( (QDesignerFormWindowInterface::Feature) hb_parni(1) );
+      obj->setFeatures( (QDesignerFormWindowInterface::Feature) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1040,7 +1040,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETFILENAME )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setFileName ( PQSTRING(1) );
+      obj->setFileName( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1066,7 +1066,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETGRID )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      obj->setGrid ( *PQPOINT(1) );
+      obj->setGrid( *PQPOINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1092,7 +1092,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_UNMANAGEWIDGET )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->unmanageWidget ( PQWIDGET(1) );
+      obj->unmanageWidget( PQWIDGET(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1108,21 +1108,21 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_UNMANAGEWIDGET )
 /*
 static QDesignerFormWindowInterface * findFormWindow ( QWidget * widget )
 */
-void QDesignerFormWindowInterface_findFormWindow1 ()
+void QDesignerFormWindowInterface_findFormWindow1()
 {
 
-  QDesignerFormWindowInterface * ptr = QDesignerFormWindowInterface::findFormWindow ( PQWIDGET(1) );
-  _qt4xhb_createReturnQObjectClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
+  QDesignerFormWindowInterface * ptr = QDesignerFormWindowInterface::findFormWindow( PQWIDGET(1) );
+  _qt4xhb_createReturnQObjectClass( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
 }
 
 /*
 static QDesignerFormWindowInterface * findFormWindow ( QObject * object )
 */
-void QDesignerFormWindowInterface_findFormWindow2 ()
+void QDesignerFormWindowInterface_findFormWindow2()
 {
 
-  QDesignerFormWindowInterface * ptr = QDesignerFormWindowInterface::findFormWindow ( PQOBJECT(1) );
-  _qt4xhb_createReturnQObjectClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
+  QDesignerFormWindowInterface * ptr = QDesignerFormWindowInterface::findFormWindow( PQOBJECT(1) );
+  _qt4xhb_createReturnQObjectClass( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
 }
 
 //[1]QDesignerFormWindowInterface * findFormWindow ( QWidget * widget )
@@ -1144,7 +1144,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW )
   }
 }
 
-void QDesignerFormWindowInterfaceSlots_connect_signal ( const QString & signal, const QString & slot );
+void QDesignerFormWindowInterfaceSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ONABOUTTOUNMANAGEWIDGET )
 {

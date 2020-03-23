@@ -36,7 +36,7 @@ CLASS QAbstractExtensionManager
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractExtensionManager
+PROCEDURE destroyObject() CLASS QAbstractExtensionManager
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -80,8 +80,8 @@ HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_EXTENSION )
     if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
     {
 #endif
-      QObject * ptr = obj->extension ( PQOBJECT(1), PQSTRING(2) );
-      _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->extension( PQOBJECT(1), PQSTRING(2) );
+      _qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_REGISTEREXTENSIONS )
     if( ISNUMPAR(2) && ISQABSTRACTEXTENSIONFACTORY(1) && ISCHAR(2) )
     {
 #endif
-      obj->registerExtensions ( PQABSTRACTEXTENSIONFACTORY(1), PQSTRING(2) );
+      obj->registerExtensions( PQABSTRACTEXTENSIONFACTORY(1), PQSTRING(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_UNREGISTEREXTENSIONS )
     if( ISNUMPAR(2) && ISQABSTRACTEXTENSIONFACTORY(1) && ISCHAR(2) )
     {
 #endif
-      obj->unregisterExtensions ( PQABSTRACTEXTENSIONFACTORY(1), PQSTRING(2) );
+      obj->unregisterExtensions( PQABSTRACTEXTENSIONFACTORY(1), PQSTRING(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

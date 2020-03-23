@@ -26,7 +26,7 @@ CLASS QDesignerObjectInspectorInterface INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDesignerObjectInspectorInterface
+PROCEDURE destroyObject() CLASS QDesignerObjectInspectorInterface
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -50,8 +50,8 @@ HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -76,8 +76,8 @@ HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_CORE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDesignerFormEditorInterface * ptr = obj->core ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QDESIGNERFORMEDITORINTERFACE" );
+      QDesignerFormEditorInterface * ptr = obj->core();
+      _qt4xhb_createReturnQObjectClass( ptr, "QDESIGNERFORMEDITORINTERFACE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_SETFORMWINDOW )
     if( ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1) )
     {
 #endif
-      obj->setFormWindow ( PQDESIGNERFORMWINDOWINTERFACE(1) );
+      obj->setFormWindow( PQDESIGNERFORMWINDOWINTERFACE(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

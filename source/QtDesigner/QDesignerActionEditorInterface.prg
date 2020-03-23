@@ -27,7 +27,7 @@ CLASS QDesignerActionEditorInterface INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDesignerActionEditorInterface
+PROCEDURE destroyObject() CLASS QDesignerActionEditorInterface
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -51,8 +51,8 @@ HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -77,8 +77,8 @@ HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_CORE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDesignerFormEditorInterface * ptr = obj->core ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QDESIGNERFORMEDITORINTERFACE" );
+      QDesignerFormEditorInterface * ptr = obj->core();
+      _qt4xhb_createReturnQObjectClass( ptr, "QDESIGNERFORMEDITORINTERFACE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_MANAGEACTION )
     if( ISNUMPAR(1) && ISQACTION(1) )
     {
 #endif
-      obj->manageAction ( PQACTION(1) );
+      obj->manageAction( PQACTION(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_SETFORMWINDOW )
     if( ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1) )
     {
 #endif
-      obj->setFormWindow ( PQDESIGNERFORMWINDOWINTERFACE(1) );
+      obj->setFormWindow( PQDESIGNERFORMWINDOWINTERFACE(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
