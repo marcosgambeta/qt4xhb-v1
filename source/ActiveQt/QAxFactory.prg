@@ -47,7 +47,7 @@ CLASS QAxFactory INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAxFactory
+PROCEDURE destroyObject() CLASS QAxFactory
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -69,8 +69,8 @@ HB_FUNC_STATIC( QAXFACTORY_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -95,8 +95,8 @@ HB_FUNC_STATIC( QAXFACTORY_APPID )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUuid * ptr = new QUuid( obj->appID () );
-      _qt4xhb_createReturnClass ( ptr, "QUUID", true );
+      QUuid * ptr = new QUuid( obj->appID() );
+      _qt4xhb_createReturnClass( ptr, "QUUID", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -120,8 +120,8 @@ HB_FUNC_STATIC( QAXFACTORY_CLASSID )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QUuid * ptr = new QUuid( obj->classID ( PQSTRING(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QUUID", true );
+      QUuid * ptr = new QUuid( obj->classID( PQSTRING(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QUUID", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,8 +145,8 @@ HB_FUNC_STATIC( QAXFACTORY_CREATEOBJECT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QObject * ptr = obj->createObject ( PQSTRING(1) );
-      _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->createObject( PQSTRING(1) );
+      _qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,8 +170,8 @@ HB_FUNC_STATIC( QAXFACTORY_EVENTSID )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QUuid * ptr = new QUuid( obj->eventsID ( PQSTRING(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QUUID", true );
+      QUuid * ptr = new QUuid( obj->eventsID( PQSTRING(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QUUID", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QAXFACTORY_EXPOSETOSUPERCLASS )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RQSTRING( obj->exposeToSuperClass ( PQSTRING(1) ) );
+      RQSTRING( obj->exposeToSuperClass( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QAXFACTORY_FEATURELIST )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->featureList () );
+      RQSTRINGLIST( obj->featureList() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QAXFACTORY_HASSTOCKEVENTS )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->hasStockEvents ( PQSTRING(1) ) );
+      RBOOL( obj->hasStockEvents( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -267,8 +267,8 @@ HB_FUNC_STATIC( QAXFACTORY_INTERFACEID )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QUuid * ptr = new QUuid( obj->interfaceID ( PQSTRING(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QUUID", true );
+      QUuid * ptr = new QUuid( obj->interfaceID( PQSTRING(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QUUID", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QAXFACTORY_ISSERVICE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isService () );
+      RBOOL( obj->isService() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -316,8 +316,8 @@ HB_FUNC_STATIC( QAXFACTORY_METAOBJECT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      const QMetaObject * ptr = obj->metaObject ( PQSTRING(1) );
-      _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT", false );
+      const QMetaObject * ptr = obj->metaObject( PQSTRING(1) );
+      _qt4xhb_createReturnClass( ptr, "QMETAOBJECT", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QAXFACTORY_REGISTERCLASS )
     if( ISNUMPAR(2) && ISCHAR(1) && ISQSETTINGS(2) )
     {
 #endif
-      obj->registerClass ( PQSTRING(1), PQSETTINGS(2) );
+      obj->registerClass( PQSTRING(1), PQSETTINGS(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QAXFACTORY_STAYTOPLEVEL )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->stayTopLevel ( PQSTRING(1) ) );
+      RBOOL( obj->stayTopLevel( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -391,8 +391,8 @@ HB_FUNC_STATIC( QAXFACTORY_TYPELIBID )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUuid * ptr = new QUuid( obj->typeLibID () );
-      _qt4xhb_createReturnClass ( ptr, "QUUID", true );
+      QUuid * ptr = new QUuid( obj->typeLibID() );
+      _qt4xhb_createReturnClass( ptr, "QUUID", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QAXFACTORY_UNREGISTERCLASS )
     if( ISNUMPAR(2) && ISCHAR(1) && ISQSETTINGS(2) )
     {
 #endif
-      obj->unregisterClass ( PQSTRING(1), PQSETTINGS(2) );
+      obj->unregisterClass( PQSTRING(1), PQSETTINGS(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QAXFACTORY_VALIDATELICENSEKEY )
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
     {
 #endif
-      RBOOL( obj->validateLicenseKey ( PQSTRING(1), PQSTRING(2) ) );
+      RBOOL( obj->validateLicenseKey( PQSTRING(1), PQSTRING(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QAXFACTORY_ISSERVER )
   if( ISNUMPAR(0) )
   {
 #endif
-    RBOOL( QAxFactory::isServer () );
+    RBOOL( QAxFactory::isServer() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QAXFACTORY_REGISTERACTIVEOBJECT )
   if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
 #endif
-    RBOOL( QAxFactory::registerActiveObject ( PQOBJECT(1) ) );
+    RBOOL( QAxFactory::registerActiveObject( PQOBJECT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QAXFACTORY_SERVERDIRPATH )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRING( QAxFactory::serverDirPath () );
+    RQSTRING( QAxFactory::serverDirPath() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QAXFACTORY_SERVERFILEPATH )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRING( QAxFactory::serverFilePath () );
+    RQSTRING( QAxFactory::serverFilePath() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QAXFACTORY_STARTSERVER )
   if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
 #endif
-    RBOOL( QAxFactory::startServer ( ISNIL(1)? (QAxFactory::ServerType) QAxFactory::MultipleInstances : (QAxFactory::ServerType) hb_parni(1) ) );
+    RBOOL( QAxFactory::startServer( ISNIL(1)? (QAxFactory::ServerType) QAxFactory::MultipleInstances : (QAxFactory::ServerType) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QAXFACTORY_STOPSERVER )
   if( ISNUMPAR(0) )
   {
 #endif
-    RBOOL( QAxFactory::stopServer () );
+    RBOOL( QAxFactory::stopServer() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

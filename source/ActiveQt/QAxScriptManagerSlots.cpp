@@ -25,7 +25,7 @@ void QAxScriptManagerSlots::error( QAxScript * script, int code, const QString &
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QAxScript*,int,QString,int,QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAXSCRIPTMANAGER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAXSCRIPTMANAGER" );
     PHB_ITEM pscript = Signals_return_qobject( (QObject *) script, "QAXSCRIPT" );
     PHB_ITEM pcode = hb_itemPutNI( NULL, code );
     PHB_ITEM pdescription = hb_itemPutC( NULL, QSTRINGTOSTRING(description) );
@@ -41,7 +41,7 @@ void QAxScriptManagerSlots::error( QAxScript * script, int code, const QString &
   }
 }
 
-void QAxScriptManagerSlots_connect_signal ( const QString & signal, const QString & slot )
+void QAxScriptManagerSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QAxScriptManager * obj = (QAxScriptManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
