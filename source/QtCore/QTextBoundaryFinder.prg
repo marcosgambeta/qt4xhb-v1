@@ -44,7 +44,7 @@ CLASS QTextBoundaryFinder
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextBoundaryFinder
+PROCEDURE destroyObject() CLASS QTextBoundaryFinder
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -61,27 +61,27 @@ RETURN
 /*
 QTextBoundaryFinder()
 */
-void QTextBoundaryFinder_new1 ()
+void QTextBoundaryFinder_new1()
 {
-  QTextBoundaryFinder * o = new QTextBoundaryFinder ();
+  QTextBoundaryFinder * o = new QTextBoundaryFinder();
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QTextBoundaryFinder(const QTextBoundaryFinder &other)
 */
-void QTextBoundaryFinder_new2 ()
+void QTextBoundaryFinder_new2()
 {
-  QTextBoundaryFinder * o = new QTextBoundaryFinder ( *PQTEXTBOUNDARYFINDER(1) );
+  QTextBoundaryFinder * o = new QTextBoundaryFinder( *PQTEXTBOUNDARYFINDER(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QTextBoundaryFinder(BoundaryType type, const QString &string)
 */
-void QTextBoundaryFinder_new3 ()
+void QTextBoundaryFinder_new3()
 {
-  QTextBoundaryFinder * o = new QTextBoundaryFinder ( (QTextBoundaryFinder::BoundaryType) hb_parni(1), PQSTRING(2) );
+  QTextBoundaryFinder * o = new QTextBoundaryFinder( (QTextBoundaryFinder::BoundaryType) hb_parni(1), PQSTRING(2) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_STRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->string () );
+      RQSTRING( obj->string() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TOSTART )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->toStart ();
+      obj->toStart();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TOEND )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->toEnd ();
+      obj->toEnd();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_POSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->position () );
+      RINT( obj->position() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_SETPOSITION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setPosition ( PINT(1) );
+      obj->setPosition( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TONEXTBOUNDARY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->toNextBoundary () );
+      RINT( obj->toNextBoundary() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TOPREVIOUSBOUNDARY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->toPreviousBoundary () );
+      RINT( obj->toPreviousBoundary() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_ISATBOUNDARY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isAtBoundary () );
+      RBOOL( obj->isAtBoundary() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_BOUNDARYREASONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->boundaryReasons () );
+      RENUM( obj->boundaryReasons() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

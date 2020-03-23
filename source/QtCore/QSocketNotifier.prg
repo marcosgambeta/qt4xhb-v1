@@ -30,7 +30,7 @@ CLASS QSocketNotifier INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSocketNotifier
+PROCEDURE destroyObject() CLASS QSocketNotifier
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -53,7 +53,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_NEW )
 {
   if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
-    QSocketNotifier * o = new QSocketNotifier ( PINT(1), (QSocketNotifier::Type) hb_parni(2), OPQOBJECT(3,0) );
+    QSocketNotifier * o = new QSocketNotifier( PINT(1), (QSocketNotifier::Type) hb_parni(2), OPQOBJECT(3,0) );
     _qt4xhb_returnNewObject( o, false );
   }
   else
@@ -68,8 +68,8 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_SOCKET )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->socket () );
+      RINT( obj->socket() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_ISENABLED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isEnabled () );
+      RBOOL( obj->isEnabled() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_SETENABLED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setEnabled ( PBOOL(1) );
+      obj->setEnabled( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_SETENABLED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QSocketNotifierSlots_connect_signal ( const QString & signal, const QString & slot );
+void QSocketNotifierSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QSOCKETNOTIFIER_ONACTIVATED )
 {

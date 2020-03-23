@@ -30,7 +30,7 @@ CLASS QAbstractState INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractState
+PROCEDURE destroyObject() CLASS QAbstractState
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -55,8 +55,8 @@ HB_FUNC_STATIC( QABSTRACTSTATE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -81,8 +81,8 @@ HB_FUNC_STATIC( QABSTRACTSTATE_MACHINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QStateMachine * ptr = obj->machine ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QSTATEMACHINE" );
+      QStateMachine * ptr = obj->machine();
+      _qt4xhb_createReturnQObjectClass( ptr, "QSTATEMACHINE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -106,8 +106,8 @@ HB_FUNC_STATIC( QABSTRACTSTATE_PARENTSTATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QState * ptr = obj->parentState ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QSTATE" );
+      QState * ptr = obj->parentState();
+      _qt4xhb_createReturnQObjectClass( ptr, "QSTATE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_PARENTSTATE )
   }
 }
 
-void QAbstractStateSlots_connect_signal ( const QString & signal, const QString & slot );
+void QAbstractStateSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QABSTRACTSTATE_ONENTERED )
 {

@@ -41,7 +41,7 @@ CLASS QEasingCurve
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QEasingCurve
+PROCEDURE destroyObject() CLASS QEasingCurve
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -58,18 +58,18 @@ RETURN
 /*
 QEasingCurve ( Type type = Linear )
 */
-void QEasingCurve_new1 ()
+void QEasingCurve_new1()
 {
-  QEasingCurve * o = new QEasingCurve ( ISNIL(1)? (QEasingCurve::Type) QEasingCurve::Linear : (QEasingCurve::Type) hb_parni(1) );
+  QEasingCurve * o = new QEasingCurve( ISNIL(1)? (QEasingCurve::Type) QEasingCurve::Linear : (QEasingCurve::Type) hb_parni(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QEasingCurve ( const QEasingCurve & other )
 */
-void QEasingCurve_new2 ()
+void QEasingCurve_new2()
 {
-  QEasingCurve * o = new QEasingCurve ( *PQEASINGCURVE(1) );
+  QEasingCurve * o = new QEasingCurve( *PQEASINGCURVE(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QEASINGCURVE_AMPLITUDE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->amplitude () );
+      RQREAL( obj->amplitude() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QEASINGCURVE_OVERSHOOT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->overshoot () );
+      RQREAL( obj->overshoot() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QEASINGCURVE_PERIOD )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->period () );
+      RQREAL( obj->period() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SETAMPLITUDE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setAmplitude ( PQREAL(1) );
+      obj->setAmplitude( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SETOVERSHOOT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setOvershoot ( PQREAL(1) );
+      obj->setOvershoot( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SETPERIOD )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setPeriod ( PQREAL(1) );
+      obj->setPeriod( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SETTYPE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setType ( (QEasingCurve::Type) hb_parni(1) );
+      obj->setType( (QEasingCurve::Type) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QEASINGCURVE_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

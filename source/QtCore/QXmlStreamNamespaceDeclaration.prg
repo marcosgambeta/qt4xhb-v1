@@ -36,7 +36,7 @@ CLASS QXmlStreamNamespaceDeclaration
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlStreamNamespaceDeclaration
+PROCEDURE destroyObject() CLASS QXmlStreamNamespaceDeclaration
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -53,27 +53,27 @@ RETURN
 /*
 QXmlStreamNamespaceDeclaration()
 */
-void QXmlStreamNamespaceDeclaration_new1 ()
+void QXmlStreamNamespaceDeclaration_new1()
 {
-  QXmlStreamNamespaceDeclaration * o = new QXmlStreamNamespaceDeclaration ();
+  QXmlStreamNamespaceDeclaration * o = new QXmlStreamNamespaceDeclaration();
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & other)
 */
-void QXmlStreamNamespaceDeclaration_new2 ()
+void QXmlStreamNamespaceDeclaration_new2()
 {
-  QXmlStreamNamespaceDeclaration * o = new QXmlStreamNamespaceDeclaration ( *PQXMLSTREAMNAMESPACEDECLARATION(1) );
+  QXmlStreamNamespaceDeclaration * o = new QXmlStreamNamespaceDeclaration( *PQXMLSTREAMNAMESPACEDECLARATION(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QXmlStreamNamespaceDeclaration(const QString & prefix, const QString & namespaceUri)
 */
-void QXmlStreamNamespaceDeclaration_new3 ()
+void QXmlStreamNamespaceDeclaration_new3()
 {
-  QXmlStreamNamespaceDeclaration * o = new QXmlStreamNamespaceDeclaration ( PQSTRING(1), PQSTRING(2) );
+  QXmlStreamNamespaceDeclaration * o = new QXmlStreamNamespaceDeclaration( PQSTRING(1), PQSTRING(2) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -131,8 +131,8 @@ HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NAMESPACEURI )
     if( ISNUMPAR(0) )
     {
 #endif
-      QStringRef * ptr = new QStringRef( obj->namespaceUri () );
-      _qt4xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+      QStringRef * ptr = new QStringRef( obj->namespaceUri() );
+      _qt4xhb_createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,8 +156,8 @@ HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_PREFIX )
     if( ISNUMPAR(0) )
     {
 #endif
-      QStringRef * ptr = new QStringRef( obj->prefix () );
-      _qt4xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+      QStringRef * ptr = new QStringRef( obj->prefix() );
+      _qt4xhb_createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

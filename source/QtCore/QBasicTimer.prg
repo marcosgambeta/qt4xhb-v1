@@ -37,7 +37,7 @@ CLASS QBasicTimer
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QBasicTimer
+PROCEDURE destroyObject() CLASS QBasicTimer
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QBASICTIMER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QBasicTimer * o = new QBasicTimer ();
+    QBasicTimer * o = new QBasicTimer();
     _qt4xhb_returnNewObject( o, true );
   }
   else
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QBASICTIMER_ISACTIVE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isActive () );
+      RBOOL( obj->isActive() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QBASICTIMER_START )
     if( ISNUMPAR(2) && ISNUM(1) && ISQOBJECT(2) )
     {
 #endif
-      obj->start ( PINT(1), PQOBJECT(2) );
+      obj->start( PINT(1), PQOBJECT(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QBASICTIMER_STOP )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->stop ();
+      obj->stop();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QBASICTIMER_TIMERID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->timerId () );
+      RINT( obj->timerId() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

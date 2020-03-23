@@ -35,7 +35,7 @@ CLASS QRunnable
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QRunnable
+PROCEDURE destroyObject() CLASS QRunnable
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QRUNNABLE_AUTODELETE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->autoDelete () );
+      RBOOL( obj->autoDelete() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QRUNNABLE_RUN )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->run ();
+      obj->run();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QRUNNABLE_SETAUTODELETE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setAutoDelete ( PBOOL(1) );
+      obj->setAutoDelete( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

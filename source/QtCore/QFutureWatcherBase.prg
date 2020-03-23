@@ -51,7 +51,7 @@ CLASS QFutureWatcherBase INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFutureWatcherBase
+PROCEDURE destroyObject() CLASS QFutureWatcherBase
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSVALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->progressValue () );
+      RINT( obj->progressValue() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSMINIMUM )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->progressMinimum () );
+      RINT( obj->progressMinimum() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSMAXIMUM )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->progressMaximum () );
+      RINT( obj->progressMaximum() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->progressText () );
+      RQSTRING( obj->progressText() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISSTARTED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isStarted () );
+      RBOOL( obj->isStarted() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISFINISHED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isFinished () );
+      RBOOL( obj->isFinished() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISRUNNING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isRunning () );
+      RBOOL( obj->isRunning() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISCANCELED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isCanceled () );
+      RBOOL( obj->isCanceled() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISPAUSED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isPaused () );
+      RBOOL( obj->isPaused() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_WAITFORFINISHED )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->waitForFinished ();
+      obj->waitForFinished();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_SETPENDINGRESULTSLIMIT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setPendingResultsLimit ( PINT(1) );
+      obj->setPendingResultsLimit( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_EVENT )
     if( ISNUMPAR(1) && ISQEVENT(1) )
     {
 #endif
-      RBOOL( obj->event ( PQEVENT(1) ) );
+      RBOOL( obj->event( PQEVENT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_CANCEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->cancel ();
+      obj->cancel();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_SETPAUSED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setPaused ( PBOOL(1) );
+      obj->setPaused( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_PAUSE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->pause ();
+      obj->pause();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_RESUME )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->resume ();
+      obj->resume();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_TOGGLEPAUSED )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->togglePaused ();
+      obj->togglePaused();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_TOGGLEPAUSED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QFutureWatcherBaseSlots_connect_signal ( const QString & signal, const QString & slot );
+void QFutureWatcherBaseSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_ONSTARTED )
 {

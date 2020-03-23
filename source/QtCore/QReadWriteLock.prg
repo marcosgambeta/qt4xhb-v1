@@ -38,7 +38,7 @@ CLASS QReadWriteLock
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QReadWriteLock
+PROCEDURE destroyObject() CLASS QReadWriteLock
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -55,18 +55,18 @@ RETURN
 /*
 QReadWriteLock ()
 */
-void QReadWriteLock_new1 ()
+void QReadWriteLock_new1()
 {
-  QReadWriteLock * o = new QReadWriteLock ();
+  QReadWriteLock * o = new QReadWriteLock();
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QReadWriteLock ( RecursionMode recursionMode )
 */
-void QReadWriteLock_new2 ()
+void QReadWriteLock_new2()
 {
-  QReadWriteLock * o = new QReadWriteLock ( (QReadWriteLock::RecursionMode) hb_parni(1) );
+  QReadWriteLock * o = new QReadWriteLock( (QReadWriteLock::RecursionMode) hb_parni(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_LOCKFORREAD )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->lockForRead ();
+      obj->lockForRead();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_LOCKFORWRITE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->lockForWrite ();
+      obj->lockForWrite();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,26 +161,26 @@ HB_FUNC_STATIC( QREADWRITELOCK_LOCKFORWRITE )
 /*
 bool tryLockForRead ()
 */
-void QReadWriteLock_tryLockForRead1 ()
+void QReadWriteLock_tryLockForRead1()
 {
   QReadWriteLock * obj = (QReadWriteLock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RBOOL( obj->tryLockForRead () );
+    RBOOL( obj->tryLockForRead() );
   }
 }
 
 /*
 bool tryLockForRead ( int timeout )
 */
-void QReadWriteLock_tryLockForRead2 ()
+void QReadWriteLock_tryLockForRead2()
 {
   QReadWriteLock * obj = (QReadWriteLock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RBOOL( obj->tryLockForRead ( PINT(1) ) );
+    RBOOL( obj->tryLockForRead( PINT(1) ) );
   }
 }
 
@@ -206,26 +206,26 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORREAD )
 /*
 bool tryLockForWrite ()
 */
-void QReadWriteLock_tryLockForWrite1 ()
+void QReadWriteLock_tryLockForWrite1()
 {
   QReadWriteLock * obj = (QReadWriteLock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RBOOL( obj->tryLockForWrite () );
+    RBOOL( obj->tryLockForWrite() );
   }
 }
 
 /*
 bool tryLockForWrite ( int timeout )
 */
-void QReadWriteLock_tryLockForWrite2 ()
+void QReadWriteLock_tryLockForWrite2()
 {
   QReadWriteLock * obj = (QReadWriteLock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RBOOL( obj->tryLockForWrite ( PINT(1) ) );
+    RBOOL( obj->tryLockForWrite( PINT(1) ) );
   }
 }
 
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_UNLOCK )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->unlock ();
+      obj->unlock();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

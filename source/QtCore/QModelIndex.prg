@@ -46,7 +46,7 @@ CLASS QModelIndex
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QModelIndex
+PROCEDURE destroyObject() CLASS QModelIndex
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -63,18 +63,18 @@ RETURN
 /*
 QModelIndex ()
 */
-void QModelIndex_new1 ()
+void QModelIndex_new1()
 {
-  QModelIndex * o = new QModelIndex ();
+  QModelIndex * o = new QModelIndex();
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QModelIndex ( const QModelIndex & other )
 */
-void QModelIndex_new2 ()
+void QModelIndex_new2()
 {
-  QModelIndex * o = new QModelIndex ( *PQMODELINDEX(1) );
+  QModelIndex * o = new QModelIndex( *PQMODELINDEX(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -127,8 +127,8 @@ HB_FUNC_STATIC( QMODELINDEX_CHILD )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->child ( PINT(1), PINT(2) ) );
-      _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      QModelIndex * ptr = new QModelIndex( obj->child( PINT(1), PINT(2) ) );
+      _qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QMODELINDEX_COLUMN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->column () );
+      RINT( obj->column() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,8 +176,8 @@ HB_FUNC_STATIC( QMODELINDEX_DATA )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->data ( OPINT(1,Qt::DisplayRole) ) );
-      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->data( OPINT(1,Qt::DisplayRole) ) );
+      _qt4xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QMODELINDEX_FLAGS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->flags () );
+      RENUM( obj->flags() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QMODELINDEX_INTERNALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->internalId () );
+      RQINT64( obj->internalId() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QMODELINDEX_INTERNALPOINTER )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retptr( (void *) obj->internalPointer () );
+      hb_retptr( (void *) obj->internalPointer() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QMODELINDEX_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -297,8 +297,8 @@ HB_FUNC_STATIC( QMODELINDEX_MODEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QAbstractItemModel * ptr = obj->model ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QABSTRACTITEMMODEL" );
+      const QAbstractItemModel * ptr = obj->model();
+      _qt4xhb_createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -322,8 +322,8 @@ HB_FUNC_STATIC( QMODELINDEX_PARENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->parent () );
-      _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      QModelIndex * ptr = new QModelIndex( obj->parent() );
+      _qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QMODELINDEX_ROW )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->row () );
+      RINT( obj->row() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -371,8 +371,8 @@ HB_FUNC_STATIC( QMODELINDEX_SIBLING )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->sibling ( PINT(1), PINT(2) ) );
-      _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      QModelIndex * ptr = new QModelIndex( obj->sibling( PINT(1), PINT(2) ) );
+      _qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

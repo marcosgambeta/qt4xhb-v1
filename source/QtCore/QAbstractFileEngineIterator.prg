@@ -41,7 +41,7 @@ CLASS QAbstractFileEngineIterator
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractFileEngineIterator
+PROCEDURE destroyObject() CLASS QAbstractFileEngineIterator
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -85,8 +85,8 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_CURRENTFILEINFO )
     if( ISNUMPAR(0) )
     {
 #endif
-      QFileInfo * ptr = new QFileInfo( obj->currentFileInfo () );
-      _qt4xhb_createReturnClass ( ptr, "QFILEINFO", true );
+      QFileInfo * ptr = new QFileInfo( obj->currentFileInfo() );
+      _qt4xhb_createReturnClass( ptr, "QFILEINFO", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_CURRENTFILENAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->currentFileName () );
+      RQSTRING( obj->currentFileName() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_CURRENTFILEPATH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->currentFilePath () );
+      RQSTRING( obj->currentFilePath() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_FILTERS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->filters () );
+      RENUM( obj->filters() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_HASNEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasNext () );
+      RBOOL( obj->hasNext() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_NAMEFILTERS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->nameFilters () );
+      RQSTRINGLIST( obj->nameFilters() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_NEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->next () );
+      RQSTRING( obj->next() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_PATH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->path () );
+      RQSTRING( obj->path() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

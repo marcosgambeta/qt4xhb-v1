@@ -47,7 +47,7 @@ CLASS QUuid
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QUuid
+PROCEDURE destroyObject() CLASS QUuid
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -66,7 +66,7 @@ QUuid()
 */
 HB_FUNC_STATIC( QUUID_NEW1 )
 {
-  QUuid * o = new QUuid ();
+  QUuid * o = new QUuid();
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -75,7 +75,7 @@ QUuid(uint l, ushort w1, ushort w2, uchar b1, uchar b2, uchar b3, uchar b4, ucha
 */
 HB_FUNC_STATIC( QUUID_NEW2 )
 {
-  QUuid * o = new QUuid ( PUINT(1), PUSHORT(2), PUSHORT(3), PUCHAR(4), PUCHAR(5), PUCHAR(6), PUCHAR(7), PUCHAR(8), PUCHAR(9), PUCHAR(10), PUCHAR(11) );
+  QUuid * o = new QUuid( PUINT(1), PUSHORT(2), PUSHORT(3), PUCHAR(4), PUCHAR(5), PUCHAR(6), PUCHAR(7), PUCHAR(8), PUCHAR(9), PUCHAR(10), PUCHAR(11) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -84,7 +84,7 @@ QUuid(const QString &)
 */
 HB_FUNC_STATIC( QUUID_NEW3 )
 {
-  QUuid * o = new QUuid ( PQSTRING(1) );
+  QUuid * o = new QUuid( PQSTRING(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -93,7 +93,7 @@ QUuid(const char *)
 */
 HB_FUNC_STATIC( QUUID_NEW4 )
 {
-  QUuid * o = new QUuid ( PCONSTCHAR(1) );
+  QUuid * o = new QUuid( PCONSTCHAR(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -102,7 +102,7 @@ QUuid(const QByteArray &)
 */
 HB_FUNC_STATIC( QUUID_NEW5 )
 {
-  QUuid * o = new QUuid ( *PQBYTEARRAY(1) );
+  QUuid * o = new QUuid( *PQBYTEARRAY(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QUUID_TOSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->toString () );
+      RQSTRING( obj->toString() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,8 +196,8 @@ HB_FUNC_STATIC( QUUID_TOBYTEARRAY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->toByteArray () );
-      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      QByteArray * ptr = new QByteArray( obj->toByteArray() );
+      _qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -221,8 +221,8 @@ HB_FUNC_STATIC( QUUID_TORFC4122 )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->toRfc4122 () );
-      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      QByteArray * ptr = new QByteArray( obj->toRfc4122() );
+      _qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QUUID_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QUUID_VARIANT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->variant () );
+      RENUM( obj->variant() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QUUID_VERSION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->version () );
+      RENUM( obj->version() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -314,8 +314,8 @@ HB_FUNC_STATIC( QUUID_FROMRFC4122 )
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
 #endif
-    QUuid * ptr = new QUuid( QUuid::fromRfc4122 ( *PQBYTEARRAY(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QUUID", true );
+    QUuid * ptr = new QUuid( QUuid::fromRfc4122( *PQBYTEARRAY(1) ) );
+    _qt4xhb_createReturnClass( ptr, "QUUID", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -334,8 +334,8 @@ HB_FUNC_STATIC( QUUID_CREATEUUID )
   if( ISNUMPAR(0) )
   {
 #endif
-    QUuid * ptr = new QUuid( QUuid::createUuid () );
-    _qt4xhb_createReturnClass ( ptr, "QUUID", true );
+    QUuid * ptr = new QUuid( QUuid::createUuid() );
+    _qt4xhb_createReturnClass( ptr, "QUUID", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

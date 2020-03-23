@@ -49,7 +49,7 @@ CLASS QDataStream
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDataStream
+PROCEDURE destroyObject() CLASS QDataStream
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -66,36 +66,36 @@ RETURN
 /*
 QDataStream ()
 */
-void QDataStream_new1 ()
+void QDataStream_new1()
 {
-  QDataStream * o = new QDataStream ();
+  QDataStream * o = new QDataStream();
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QDataStream ( QIODevice * d )
 */
-void QDataStream_new2 ()
+void QDataStream_new2()
 {
-  QDataStream * o = new QDataStream ( PQIODEVICE(1) );
+  QDataStream * o = new QDataStream( PQIODEVICE(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QDataStream ( QByteArray * a, QIODevice::OpenMode mode )
 */
-void QDataStream_new3 ()
+void QDataStream_new3()
 {
-  QDataStream * o = new QDataStream ( PQBYTEARRAY(1), (QIODevice::OpenMode) hb_parni(2) );
+  QDataStream * o = new QDataStream( PQBYTEARRAY(1), (QIODevice::OpenMode) hb_parni(2) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QDataStream ( const QByteArray & a )
 */
-void QDataStream_new4 ()
+void QDataStream_new4()
 {
-  QDataStream * o = new QDataStream ( *PQBYTEARRAY(1) );
+  QDataStream * o = new QDataStream( *PQBYTEARRAY(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QDATASTREAM_ATEND )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->atEnd () );
+      RBOOL( obj->atEnd() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QDATASTREAM_BYTEORDER )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->byteOrder () );
+      RENUM( obj->byteOrder() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,8 +206,8 @@ HB_FUNC_STATIC( QDATASTREAM_DEVICE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QIODevice * ptr = obj->device ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QIODEVICE" );
+      QIODevice * ptr = obj->device();
+      _qt4xhb_createReturnQObjectClass( ptr, "QIODEVICE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QDATASTREAM_FLOATINGPOINTPRECISION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->floatingPointPrecision () );
+      RENUM( obj->floatingPointPrecision() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QDATASTREAM_READRAWDATA )
     if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
     {
 #endif
-      RINT( obj->readRawData ( (char *) hb_parc(1), PINT(2) ) );
+      RINT( obj->readRawData( (char *) hb_parc(1), PINT(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QDATASTREAM_RESETSTATUS )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->resetStatus ();
+      obj->resetStatus();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QDATASTREAM_SETBYTEORDER )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setByteOrder ( (QDataStream::ByteOrder) hb_parni(1) );
+      obj->setByteOrder( (QDataStream::ByteOrder) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QDATASTREAM_SETDEVICE )
     if( ISNUMPAR(1) && ISQIODEVICE(1) )
     {
 #endif
-      obj->setDevice ( PQIODEVICE(1) );
+      obj->setDevice( PQIODEVICE(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QDATASTREAM_SETFLOATINGPOINTPRECISION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setFloatingPointPrecision ( (QDataStream::FloatingPointPrecision) hb_parni(1) );
+      obj->setFloatingPointPrecision( (QDataStream::FloatingPointPrecision) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QDATASTREAM_SETSTATUS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setStatus ( (QDataStream::Status) hb_parni(1) );
+      obj->setStatus( (QDataStream::Status) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QDATASTREAM_SETVERSION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setVersion ( PINT(1) );
+      obj->setVersion( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QDATASTREAM_SKIPRAWDATA )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RINT( obj->skipRawData ( PINT(1) ) );
+      RINT( obj->skipRawData( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QDATASTREAM_STATUS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->status () );
+      RENUM( obj->status() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QDATASTREAM_VERSION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->version () );
+      RINT( obj->version() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QDATASTREAM_WRITERAWDATA )
     if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
     {
 #endif
-      RINT( obj->writeRawData ( PCONSTCHAR(1), PINT(2) ) );
+      RINT( obj->writeRawData( PCONSTCHAR(1), PINT(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

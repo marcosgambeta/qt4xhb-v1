@@ -62,7 +62,7 @@ CLASS QCoreApplication INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCoreApplication
+PROCEDURE destroyObject() CLASS QCoreApplication
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -99,8 +99,8 @@ HB_FUNC_STATIC( QCOREAPPLICATION_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_FILTEREVENT )
     {
 #endif
       long par2;
-      RBOOL( obj->filterEvent ( (void *) hb_parptr(1), &par2 ) );
+      RBOOL( obj->filterEvent( (void *) hb_parptr(1), &par2 ) );
       hb_stornl( par2, 2 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_NOTIFY )
     if( ISNUMPAR(2) && ISQOBJECT(1) && ISQEVENT(2) )
     {
 #endif
-      RBOOL( obj->notify ( PQOBJECT(1), PQEVENT(2) ) );
+      RBOOL( obj->notify( PQOBJECT(1), PQEVENT(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_QUIT )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->quit ();
+      obj->quit();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ADDLIBRARYPATH )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-    QCoreApplication::addLibraryPath ( PQSTRING(1) );
+    QCoreApplication::addLibraryPath( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONDIRPATH )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRING( QCoreApplication::applicationDirPath () );
+    RQSTRING( QCoreApplication::applicationDirPath() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONFILEPATH )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRING( QCoreApplication::applicationFilePath () );
+    RQSTRING( QCoreApplication::applicationFilePath() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONNAME )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRING( QCoreApplication::applicationName () );
+    RQSTRING( QCoreApplication::applicationName() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONPID )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQINT64( QCoreApplication::applicationPid () );
+    RQINT64( QCoreApplication::applicationPid() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONVERSION )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRING( QCoreApplication::applicationVersion () );
+    RQSTRING( QCoreApplication::applicationVersion() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ARGUMENTS )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRINGLIST( QCoreApplication::arguments () );
+    RQSTRINGLIST( QCoreApplication::arguments() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_CLOSINGDOWN )
   if( ISNUMPAR(0) )
   {
 #endif
-    RBOOL( QCoreApplication::closingDown () );
+    RBOOL( QCoreApplication::closingDown() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_EXEC )
   if( ISNUMPAR(0) )
   {
 #endif
-    RINT( QCoreApplication::exec () );
+    RINT( QCoreApplication::exec() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_EXIT )
   if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
 #endif
-    QCoreApplication::exit ( OPINT(1,0) );
+    QCoreApplication::exit( OPINT(1,0) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_FLUSH )
   if( ISNUMPAR(0) )
   {
 #endif
-    QCoreApplication::flush ();
+    QCoreApplication::flush();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_HASPENDINGEVENTS )
   if( ISNUMPAR(0) )
   {
 #endif
-    RBOOL( QCoreApplication::hasPendingEvents () );
+    RBOOL( QCoreApplication::hasPendingEvents() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_INSTALLTRANSLATOR )
   if( ISNUMPAR(1) && ISQTRANSLATOR(1) )
   {
 #endif
-    QCoreApplication::installTranslator ( PQTRANSLATOR(1) );
+    QCoreApplication::installTranslator( PQTRANSLATOR(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -452,8 +452,8 @@ HB_FUNC_STATIC( QCOREAPPLICATION_INSTANCE )
   if( ISNUMPAR(0) )
   {
 #endif
-    QCoreApplication * ptr = QCoreApplication::instance ();
-    _qt4xhb_createReturnQObjectClass ( ptr, "QCOREAPPLICATION" );
+    QCoreApplication * ptr = QCoreApplication::instance();
+    _qt4xhb_createReturnQObjectClass( ptr, "QCOREAPPLICATION" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_LIBRARYPATHS )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRINGLIST( QCoreApplication::libraryPaths () );
+    RQSTRINGLIST( QCoreApplication::libraryPaths() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ORGANIZATIONDOMAIN )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRING( QCoreApplication::organizationDomain () );
+    RQSTRING( QCoreApplication::organizationDomain() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ORGANIZATIONNAME )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRING( QCoreApplication::organizationName () );
+    RQSTRING( QCoreApplication::organizationName() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -523,10 +523,10 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ORGANIZATIONNAME )
 /*
 static void postEvent ( QObject * receiver, QEvent * event )
 */
-void QCoreApplication_postEvent1 ()
+void QCoreApplication_postEvent1()
 {
 
-  QCoreApplication::postEvent ( PQOBJECT(1), PQEVENT(2) );
+  QCoreApplication::postEvent( PQOBJECT(1), PQEVENT(2) );
 
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -534,10 +534,10 @@ void QCoreApplication_postEvent1 ()
 /*
 static void postEvent ( QObject * receiver, QEvent * event, int priority )
 */
-void QCoreApplication_postEvent2 ()
+void QCoreApplication_postEvent2()
 {
 
-  QCoreApplication::postEvent ( PQOBJECT(1), PQEVENT(2), PINT(3) );
+  QCoreApplication::postEvent( PQOBJECT(1), PQEVENT(2), PINT(3) );
 
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -564,10 +564,10 @@ HB_FUNC_STATIC( QCOREAPPLICATION_POSTEVENT )
 /*
 static void processEvents ( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
 */
-void QCoreApplication_processEvents1 ()
+void QCoreApplication_processEvents1()
 {
 
-  QCoreApplication::processEvents ( ISNIL(1)? (QEventLoop::ProcessEventsFlags) QEventLoop::AllEvents : (QEventLoop::ProcessEventsFlags) hb_parni(1) );
+  QCoreApplication::processEvents( ISNIL(1)? (QEventLoop::ProcessEventsFlags) QEventLoop::AllEvents : (QEventLoop::ProcessEventsFlags) hb_parni(1) );
 
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -575,10 +575,10 @@ void QCoreApplication_processEvents1 ()
 /*
 static void processEvents ( QEventLoop::ProcessEventsFlags flags, int maxtime )
 */
-void QCoreApplication_processEvents2 ()
+void QCoreApplication_processEvents2()
 {
 
-  QCoreApplication::processEvents ( (QEventLoop::ProcessEventsFlags) hb_parni(1), PINT(2) );
+  QCoreApplication::processEvents( (QEventLoop::ProcessEventsFlags) hb_parni(1), PINT(2) );
 
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -611,7 +611,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_REMOVELIBRARYPATH )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-    QCoreApplication::removeLibraryPath ( PQSTRING(1) );
+    QCoreApplication::removeLibraryPath( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -626,10 +626,10 @@ HB_FUNC_STATIC( QCOREAPPLICATION_REMOVELIBRARYPATH )
 /*
 static void removePostedEvents ( QObject * receiver )
 */
-void QCoreApplication_removePostedEvents1 ()
+void QCoreApplication_removePostedEvents1()
 {
 
-  QCoreApplication::removePostedEvents ( PQOBJECT(1) );
+  QCoreApplication::removePostedEvents( PQOBJECT(1) );
 
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -637,10 +637,10 @@ void QCoreApplication_removePostedEvents1 ()
 /*
 static void removePostedEvents ( QObject * receiver, int eventType )
 */
-void QCoreApplication_removePostedEvents2 ()
+void QCoreApplication_removePostedEvents2()
 {
 
-  QCoreApplication::removePostedEvents ( PQOBJECT(1), PINT(2) );
+  QCoreApplication::removePostedEvents( PQOBJECT(1), PINT(2) );
 
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -673,7 +673,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_REMOVETRANSLATOR )
   if( ISNUMPAR(1) && ISQTRANSLATOR(1) )
   {
 #endif
-    QCoreApplication::removeTranslator ( PQTRANSLATOR(1) );
+    QCoreApplication::removeTranslator( PQTRANSLATOR(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -694,7 +694,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SENDEVENT )
   if( ISNUMPAR(2) && ISQOBJECT(1) && ISQEVENT(2) )
   {
 #endif
-    RBOOL( QCoreApplication::sendEvent ( PQOBJECT(1), PQEVENT(2) ) );
+    RBOOL( QCoreApplication::sendEvent( PQOBJECT(1), PQEVENT(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -707,10 +707,10 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SENDEVENT )
 /*
 static void sendPostedEvents ( QObject * receiver, int event_type )
 */
-void QCoreApplication_sendPostedEvents1 ()
+void QCoreApplication_sendPostedEvents1()
 {
 
-  QCoreApplication::sendPostedEvents ( PQOBJECT(1), PINT(2) );
+  QCoreApplication::sendPostedEvents( PQOBJECT(1), PINT(2) );
 
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -718,10 +718,10 @@ void QCoreApplication_sendPostedEvents1 ()
 /*
 static void sendPostedEvents ()
 */
-void QCoreApplication_sendPostedEvents2 ()
+void QCoreApplication_sendPostedEvents2()
 {
 
-  QCoreApplication::sendPostedEvents ();
+  QCoreApplication::sendPostedEvents();
 
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -754,7 +754,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SETAPPLICATIONNAME )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-    QCoreApplication::setApplicationName ( PQSTRING(1) );
+    QCoreApplication::setApplicationName( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -775,7 +775,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SETAPPLICATIONVERSION )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-    QCoreApplication::setApplicationVersion ( PQSTRING(1) );
+    QCoreApplication::setApplicationVersion( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -796,7 +796,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SETATTRIBUTE )
   if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
   {
 #endif
-    QCoreApplication::setAttribute ( (Qt::ApplicationAttribute) hb_parni(1), OPBOOL(2,true) );
+    QCoreApplication::setAttribute( (Qt::ApplicationAttribute) hb_parni(1), OPBOOL(2,true) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -817,7 +817,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SETLIBRARYPATHS )
   if( ISNUMPAR(1) && ISARRAY(1) )
   {
 #endif
-    QCoreApplication::setLibraryPaths ( PQSTRINGLIST(1) );
+    QCoreApplication::setLibraryPaths( PQSTRINGLIST(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -838,7 +838,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SETORGANIZATIONDOMAIN )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-    QCoreApplication::setOrganizationDomain ( PQSTRING(1) );
+    QCoreApplication::setOrganizationDomain( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -859,7 +859,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SETORGANIZATIONNAME )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-    QCoreApplication::setOrganizationName ( PQSTRING(1) );
+    QCoreApplication::setOrganizationName( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -880,7 +880,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_STARTINGUP )
   if( ISNUMPAR(0) )
   {
 #endif
-    RBOOL( QCoreApplication::startingUp () );
+    RBOOL( QCoreApplication::startingUp() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -899,7 +899,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_TESTATTRIBUTE )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-    RBOOL( QCoreApplication::testAttribute ( (Qt::ApplicationAttribute) hb_parni(1) ) );
+    RBOOL( QCoreApplication::testAttribute( (Qt::ApplicationAttribute) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -912,19 +912,19 @@ HB_FUNC_STATIC( QCOREAPPLICATION_TESTATTRIBUTE )
 /*
 static QString translate ( const char * context, const char * sourceText, const char * disambiguation, Encoding encoding, int n )
 */
-void QCoreApplication_translate1 ()
+void QCoreApplication_translate1()
 {
 
-  RQSTRING( QCoreApplication::translate ( PCONSTCHAR(1), PCONSTCHAR(2), PCONSTCHAR(3), (QCoreApplication::Encoding) hb_parni(4), PINT(5) ) );
+  RQSTRING( QCoreApplication::translate( PCONSTCHAR(1), PCONSTCHAR(2), PCONSTCHAR(3), (QCoreApplication::Encoding) hb_parni(4), PINT(5) ) );
 }
 
 /*
 static QString translate ( const char * context, const char * sourceText, const char * disambiguation = 0, Encoding encoding = CodecForTr )
 */
-void QCoreApplication_translate2 ()
+void QCoreApplication_translate2()
 {
 
-  RQSTRING( QCoreApplication::translate ( PCONSTCHAR(1), PCONSTCHAR(2), OPCONSTCHAR(3,0), ISNIL(4)? (QCoreApplication::Encoding) QCoreApplication::CodecForTr : (QCoreApplication::Encoding) hb_parni(4) ) );
+  RQSTRING( QCoreApplication::translate( PCONSTCHAR(1), PCONSTCHAR(2), OPCONSTCHAR(3,0), ISNIL(4)? (QCoreApplication::Encoding) QCoreApplication::CodecForTr : (QCoreApplication::Encoding) hb_parni(4) ) );
 }
 
 //[1]QString translate ( const char * context, const char * sourceText, const char * disambiguation, Encoding encoding, int n )
@@ -946,7 +946,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE )
   }
 }
 
-void QCoreApplicationSlots_connect_signal ( const QString & signal, const QString & slot );
+void QCoreApplicationSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QCOREAPPLICATION_ONABOUTTOQUIT )
 {

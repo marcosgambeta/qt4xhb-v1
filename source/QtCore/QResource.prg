@@ -45,7 +45,7 @@ CLASS QResource
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QResource
+PROCEDURE destroyObject() CLASS QResource
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QRESOURCE_NEW )
 {
   if( ISBETWEEN(0,2) && ISOPTCHAR(1) && (ISQLOCALE(2)||ISNIL(2)) )
   {
-    QResource * o = new QResource ( OPQSTRING(1,QString()), ISNIL(2)? QLocale() : *(QLocale *) _qt4xhb_itemGetPtr(2) );
+    QResource * o = new QResource( OPQSTRING(1,QString()), ISNIL(2)? QLocale() : *(QLocale *) _qt4xhb_itemGetPtr(2) );
     _qt4xhb_returnNewObject( o, true );
   }
   else
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QRESOURCE_ABSOLUTEFILEPATH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->absoluteFilePath () );
+      RQSTRING( obj->absoluteFilePath() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QRESOURCE_DATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retc( (const char *) obj->data () );
+      hb_retc( (const char *) obj->data() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QRESOURCE_FILENAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->fileName () );
+      RQSTRING( obj->fileName() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QRESOURCE_ISCOMPRESSED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isCompressed () );
+      RBOOL( obj->isCompressed() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QRESOURCE_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,8 +225,8 @@ HB_FUNC_STATIC( QRESOURCE_LOCALE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QLocale * ptr = new QLocale( obj->locale () );
-      _qt4xhb_createReturnClass ( ptr, "QLOCALE", true );
+      QLocale * ptr = new QLocale( obj->locale() );
+      _qt4xhb_createReturnClass( ptr, "QLOCALE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QRESOURCE_SETFILENAME )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setFileName ( PQSTRING(1) );
+      obj->setFileName( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QRESOURCE_SETLOCALE )
     if( ISNUMPAR(1) && ISQLOCALE(1) )
     {
 #endif
-      obj->setLocale ( *PQLOCALE(1) );
+      obj->setLocale( *PQLOCALE(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QRESOURCE_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->size () );
+      RQINT64( obj->size() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QRESOURCE_REGISTERRESOURCE )
   if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
   {
 #endif
-    RBOOL( QResource::registerResource ( PQSTRING(1), OPQSTRING(2,QString()) ) );
+    RBOOL( QResource::registerResource( PQSTRING(1), OPQSTRING(2,QString()) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QRESOURCE_UNREGISTERRESOURCE )
   if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
   {
 #endif
-    RBOOL( QResource::unregisterResource ( PQSTRING(1), OPQSTRING(2,QString()) ) );
+    RBOOL( QResource::unregisterResource( PQSTRING(1), OPQSTRING(2,QString()) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

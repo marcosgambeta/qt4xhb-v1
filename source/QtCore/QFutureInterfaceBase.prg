@@ -68,7 +68,7 @@ CLASS QFutureInterfaceBase
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFutureInterfaceBase
+PROCEDURE destroyObject() CLASS QFutureInterfaceBase
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -85,18 +85,18 @@ RETURN
 /*
 QFutureInterfaceBase(State initialState = NoState)
 */
-void QFutureInterfaceBase_new1 ()
+void QFutureInterfaceBase_new1()
 {
-  QFutureInterfaceBase * o = new QFutureInterfaceBase ( ISNIL(1)? (QFutureInterfaceBase::State) QFutureInterfaceBase::NoState : (QFutureInterfaceBase::State) hb_parni(1) );
+  QFutureInterfaceBase * o = new QFutureInterfaceBase( ISNIL(1)? (QFutureInterfaceBase::State) QFutureInterfaceBase::NoState : (QFutureInterfaceBase::State) hb_parni(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QFutureInterfaceBase(const QFutureInterfaceBase &other)
 */
-void QFutureInterfaceBase_new2 ()
+void QFutureInterfaceBase_new2()
 {
-  QFutureInterfaceBase * o = new QFutureInterfaceBase ( *PQFUTUREINTERFACEBASE(1) );
+  QFutureInterfaceBase * o = new QFutureInterfaceBase( *PQFUTUREINTERFACEBASE(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_REPORTSTARTED )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->reportStarted ();
+      obj->reportStarted();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_REPORTFINISHED )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->reportFinished ();
+      obj->reportFinished();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_REPORTCANCELED )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->reportCanceled ();
+      obj->reportCanceled();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_REPORTRESULTSREADY )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->reportResultsReady ( PINT(1), PINT(2) );
+      obj->reportResultsReady( PINT(1), PINT(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETRUNNABLE )
     if( ISNUMPAR(1) && ISQRUNNABLE(1) )
     {
 #endif
-      obj->setRunnable ( PQRUNNABLE(1) );
+      obj->setRunnable( PQRUNNABLE(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETFILTERMODE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setFilterMode ( PBOOL(1) );
+      obj->setFilterMode( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPROGRESSRANGE )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->setProgressRange ( PINT(1), PINT(2) );
+      obj->setProgressRange( PINT(1), PINT(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_PROGRESSMINIMUM )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->progressMinimum () );
+      RINT( obj->progressMinimum() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_PROGRESSMAXIMUM )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->progressMaximum () );
+      RINT( obj->progressMaximum() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISPROGRESSUPDATENEEDED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isProgressUpdateNeeded () );
+      RBOOL( obj->isProgressUpdateNeeded() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPROGRESSVALUE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setProgressValue ( PINT(1) );
+      obj->setProgressValue( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_PROGRESSVALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->progressValue () );
+      RINT( obj->progressValue() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPROGRESSVALUEANDTEXT )
     if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
     {
 #endif
-      obj->setProgressValueAndText ( PINT(1), PQSTRING(2) );
+      obj->setProgressValueAndText( PINT(1), PQSTRING(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_PROGRESSTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->progressText () );
+      RQSTRING( obj->progressText() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETEXPECTEDRESULTCOUNT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setExpectedResultCount ( PINT(1) );
+      obj->setExpectedResultCount( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -529,7 +529,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_EXPECTEDRESULTCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->expectedResultCount () );
+      RINT( obj->expectedResultCount() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_RESULTCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->resultCount () );
+      RINT( obj->resultCount() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_QUERYSTATE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->queryState ( (QFutureInterfaceBase::State) hb_parni(1) ) );
+      RBOOL( obj->queryState( (QFutureInterfaceBase::State) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -601,7 +601,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISRUNNING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isRunning () );
+      RBOOL( obj->isRunning() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -625,7 +625,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISSTARTED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isStarted () );
+      RBOOL( obj->isStarted() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -649,7 +649,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISCANCELED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isCanceled () );
+      RBOOL( obj->isCanceled() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -673,7 +673,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISFINISHED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isFinished () );
+      RBOOL( obj->isFinished() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -697,7 +697,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISPAUSED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isPaused () );
+      RBOOL( obj->isPaused() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -721,7 +721,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISTHROTTLED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isThrottled () );
+      RBOOL( obj->isThrottled() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -745,7 +745,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISRESULTREADYAT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isResultReadyAt ( PINT(1) ) );
+      RBOOL( obj->isResultReadyAt( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -769,7 +769,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_CANCEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->cancel ();
+      obj->cancel();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -795,7 +795,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPAUSED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setPaused ( PBOOL(1) );
+      obj->setPaused( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -821,7 +821,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_TOGGLEPAUSED )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->togglePaused ();
+      obj->togglePaused();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -847,7 +847,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETTHROTTLED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setThrottled ( PBOOL(1) );
+      obj->setThrottled( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -873,7 +873,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_WAITFORFINISHED )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->waitForFinished ();
+      obj->waitForFinished();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -899,7 +899,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_WAITFORNEXTRESULT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->waitForNextResult () );
+      RBOOL( obj->waitForNextResult() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -923,7 +923,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_WAITFORRESULT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->waitForResult ( PINT(1) );
+      obj->waitForResult( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -949,7 +949,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_WAITFORRESUME )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->waitForResume ();
+      obj->waitForResume();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -975,8 +975,8 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_MUTEX )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMutex * ptr = obj->mutex ();
-      _qt4xhb_createReturnClass ( ptr, "QMUTEX", false );
+      QMutex * ptr = obj->mutex();
+      _qt4xhb_createReturnClass( ptr, "QMUTEX", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

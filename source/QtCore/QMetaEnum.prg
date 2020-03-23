@@ -47,7 +47,7 @@ CLASS QMetaEnum
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMetaEnum
+PROCEDURE destroyObject() CLASS QMetaEnum
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QMETAENUM_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QMetaEnum * o = new QMetaEnum ();
+    QMetaEnum * o = new QMetaEnum();
     _qt4xhb_returnNewObject( o, true );
   }
   else
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QMETAENUM_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retc( (const char *) obj->name () );
+      hb_retc( (const char *) obj->name() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QMETAENUM_ISFLAG )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isFlag () );
+      RBOOL( obj->isFlag() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QMETAENUM_KEYCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->keyCount () );
+      RINT( obj->keyCount() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QMETAENUM_KEY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      hb_retc( (const char *) obj->key ( PINT(1) ) );
+      hb_retc( (const char *) obj->key( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QMETAENUM_VALUE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RINT( obj->value ( PINT(1) ) );
+      RINT( obj->value( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QMETAENUM_SCOPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retc( (const char *) obj->scope () );
+      hb_retc( (const char *) obj->scope() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QMETAENUM_KEYTOVALUE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RINT( obj->keyToValue ( PCONSTCHAR(1) ) );
+      RINT( obj->keyToValue( PCONSTCHAR(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QMETAENUM_VALUETOKEY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      hb_retc( (const char *) obj->valueToKey ( PINT(1) ) );
+      hb_retc( (const char *) obj->valueToKey( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QMETAENUM_KEYSTOVALUE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RINT( obj->keysToValue ( PCONSTCHAR(1) ) );
+      RINT( obj->keysToValue( PCONSTCHAR(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -323,8 +323,8 @@ HB_FUNC_STATIC( QMETAENUM_VALUETOKEYS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->valueToKeys ( PINT(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      QByteArray * ptr = new QByteArray( obj->valueToKeys( PINT(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -348,8 +348,8 @@ HB_FUNC_STATIC( QMETAENUM_ENCLOSINGMETAOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QMetaObject * ptr = obj->enclosingMetaObject ();
-      _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT", false );
+      const QMetaObject * ptr = obj->enclosingMetaObject();
+      _qt4xhb_createReturnClass( ptr, "QMETAOBJECT", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QMETAENUM_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

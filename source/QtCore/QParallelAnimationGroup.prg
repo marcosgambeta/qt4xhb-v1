@@ -25,7 +25,7 @@ CLASS QParallelAnimationGroup INHERIT QAnimationGroup
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QParallelAnimationGroup
+PROCEDURE destroyObject() CLASS QParallelAnimationGroup
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -48,7 +48,7 @@ HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QParallelAnimationGroup * o = new QParallelAnimationGroup ( OPQOBJECT(1,0) );
+    QParallelAnimationGroup * o = new QParallelAnimationGroup( OPQOBJECT(1,0) );
     _qt4xhb_returnNewObject( o, false );
   }
   else
@@ -63,8 +63,8 @@ HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_DURATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->duration () );
+      RINT( obj->duration() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

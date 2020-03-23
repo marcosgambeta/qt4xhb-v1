@@ -35,7 +35,7 @@ CLASS QWaitCondition
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWaitCondition
+PROCEDURE destroyObject() CLASS QWaitCondition
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QWAITCONDITION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QWaitCondition * o = new QWaitCondition ();
+    QWaitCondition * o = new QWaitCondition();
     _qt4xhb_returnNewObject( o, true );
   }
   else
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QWAITCONDITION_WAKEALL )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->wakeAll ();
+      obj->wakeAll();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QWAITCONDITION_WAKEONE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->wakeOne ();
+      obj->wakeOne();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

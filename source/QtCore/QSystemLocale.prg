@@ -36,7 +36,7 @@ CLASS QSystemLocale
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSystemLocale
+PROCEDURE destroyObject() CLASS QSystemLocale
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QSYSTEMLOCALE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QSystemLocale * o = new QSystemLocale ();
+    QSystemLocale * o = new QSystemLocale();
     _qt4xhb_returnNewObject( o, true );
   }
   else
@@ -79,8 +79,8 @@ HB_FUNC_STATIC( QSYSTEMLOCALE_FALLBACKLOCALE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QLocale * ptr = new QLocale( obj->fallbackLocale () );
-      _qt4xhb_createReturnClass ( ptr, "QLOCALE", true );
+      QLocale * ptr = new QLocale( obj->fallbackLocale() );
+      _qt4xhb_createReturnClass( ptr, "QLOCALE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -104,8 +104,8 @@ HB_FUNC_STATIC( QSYSTEMLOCALE_QUERY )
     if( ISNUMPAR(2) && ISNUM(1) && ISQVARIANT(2) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->query ( (QSystemLocale::QueryType) hb_parni(1), *PQVARIANT(2) ) );
-      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->query( (QSystemLocale::QueryType) hb_parni(1), *PQVARIANT(2) ) );
+      _qt4xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -37,7 +37,7 @@ CLASS QMetaClassInfo
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMetaClassInfo
+PROCEDURE destroyObject() CLASS QMetaClassInfo
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QMETACLASSINFO_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QMetaClassInfo * o = new QMetaClassInfo ();
+    QMetaClassInfo * o = new QMetaClassInfo();
     _qt4xhb_returnNewObject( o, true );
   }
   else
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QMETACLASSINFO_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retc( (const char *) obj->name () );
+      hb_retc( (const char *) obj->name() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QMETACLASSINFO_VALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retc( (const char *) obj->value () );
+      hb_retc( (const char *) obj->value() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,8 +145,8 @@ HB_FUNC_STATIC( QMETACLASSINFO_ENCLOSINGMETAOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QMetaObject * ptr = obj->enclosingMetaObject ();
-      _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT", false );
+      const QMetaObject * ptr = obj->enclosingMetaObject();
+      _qt4xhb_createReturnClass( ptr, "QMETAOBJECT", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

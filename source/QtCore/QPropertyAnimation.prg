@@ -30,7 +30,7 @@ CLASS QPropertyAnimation INHERIT QVariantAnimation
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPropertyAnimation
+PROCEDURE destroyObject() CLASS QPropertyAnimation
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -49,18 +49,18 @@ RETURN
 /*
 QPropertyAnimation ( QObject * parent = 0 )
 */
-void QPropertyAnimation_new1 ()
+void QPropertyAnimation_new1()
 {
-  QPropertyAnimation * o = new QPropertyAnimation ( OPQOBJECT(1,0) );
+  QPropertyAnimation * o = new QPropertyAnimation( OPQOBJECT(1,0) );
   _qt4xhb_returnNewObject( o, false );
 }
 
 /*
 QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
 */
-void QPropertyAnimation_new2 ()
+void QPropertyAnimation_new2()
 {
-  QPropertyAnimation * o = new QPropertyAnimation ( PQOBJECT(1), *PQBYTEARRAY(2), OPQOBJECT(3,0) );
+  QPropertyAnimation * o = new QPropertyAnimation( PQOBJECT(1), *PQBYTEARRAY(2), OPQOBJECT(3,0) );
   _qt4xhb_returnNewObject( o, false );
 }
 
@@ -89,8 +89,8 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -115,8 +115,8 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_PROPERTYNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->propertyName () );
-      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      QByteArray * ptr = new QByteArray( obj->propertyName() );
+      _qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_SETPROPERTYNAME )
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
     {
 #endif
-      obj->setPropertyName ( *PQBYTEARRAY(1) );
+      obj->setPropertyName( *PQBYTEARRAY(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_SETTARGETOBJECT )
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
 #endif
-      obj->setTargetObject ( PQOBJECT(1) );
+      obj->setTargetObject( PQOBJECT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,8 +192,8 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_TARGETOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->targetObject ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->targetObject();
+      _qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

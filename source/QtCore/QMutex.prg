@@ -36,7 +36,7 @@ CLASS QMutex
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMutex
+PROCEDURE destroyObject() CLASS QMutex
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QMUTEX_NEW )
 {
   if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
-    QMutex * o = new QMutex ( ISNIL(1)? (QMutex::RecursionMode) QMutex::NonRecursive : (QMutex::RecursionMode) hb_parni(1) );
+    QMutex * o = new QMutex( ISNIL(1)? (QMutex::RecursionMode) QMutex::NonRecursive : (QMutex::RecursionMode) hb_parni(1) );
     _qt4xhb_returnNewObject( o, true );
   }
   else
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QMUTEX_LOCK )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->lock ();
+      obj->lock();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -112,26 +112,26 @@ HB_FUNC_STATIC( QMUTEX_LOCK )
 /*
 bool tryLock ()
 */
-void QMutex_tryLock1 ()
+void QMutex_tryLock1()
 {
   QMutex * obj = (QMutex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RBOOL( obj->tryLock () );
+    RBOOL( obj->tryLock() );
   }
 }
 
 /*
 bool tryLock ( int timeout )
 */
-void QMutex_tryLock2 ()
+void QMutex_tryLock2()
 {
   QMutex * obj = (QMutex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RBOOL( obj->tryLock ( PINT(1) ) );
+    RBOOL( obj->tryLock( PINT(1) ) );
   }
 }
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QMUTEX_UNLOCK )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->unlock ();
+      obj->unlock();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

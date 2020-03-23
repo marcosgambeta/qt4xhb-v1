@@ -26,7 +26,7 @@ CLASS QDynamicPropertyChangeEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDynamicPropertyChangeEvent
+PROCEDURE destroyObject() CLASS QDynamicPropertyChangeEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -47,7 +47,7 @@ HB_FUNC_STATIC( QDYNAMICPROPERTYCHANGEEVENT_NEW )
 {
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    QDynamicPropertyChangeEvent * o = new QDynamicPropertyChangeEvent ( *PQBYTEARRAY(1) );
+    QDynamicPropertyChangeEvent * o = new QDynamicPropertyChangeEvent( *PQBYTEARRAY(1) );
     _qt4xhb_returnNewObject( o, false );
   }
   else
@@ -86,8 +86,8 @@ HB_FUNC_STATIC( QDYNAMICPROPERTYCHANGEEVENT_PROPERTYNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->propertyName () );
-      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      QByteArray * ptr = new QByteArray( obj->propertyName() );
+      _qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

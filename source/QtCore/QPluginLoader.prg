@@ -34,7 +34,7 @@ CLASS QPluginLoader INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPluginLoader
+PROCEDURE destroyObject() CLASS QPluginLoader
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -53,18 +53,18 @@ RETURN
 /*
 QPluginLoader ( QObject * parent = 0 )
 */
-void QPluginLoader_new1 ()
+void QPluginLoader_new1()
 {
-  QPluginLoader * o = new QPluginLoader ( OPQOBJECT(1,0) );
+  QPluginLoader * o = new QPluginLoader( OPQOBJECT(1,0) );
   _qt4xhb_returnNewObject( o, false );
 }
 
 /*
 QPluginLoader ( const QString & fileName, QObject * parent = 0 )
 */
-void QPluginLoader_new2 ()
+void QPluginLoader_new2()
 {
-  QPluginLoader * o = new QPluginLoader ( PQSTRING(1), OPQOBJECT(2,0) );
+  QPluginLoader * o = new QPluginLoader( PQSTRING(1), OPQOBJECT(2,0) );
   _qt4xhb_returnNewObject( o, false );
 }
 
@@ -93,8 +93,8 @@ HB_FUNC_STATIC( QPLUGINLOADER_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_ERRORSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->errorString () );
+      RQSTRING( obj->errorString() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_FILENAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->fileName () );
+      RQSTRING( obj->fileName() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,8 +167,8 @@ HB_FUNC_STATIC( QPLUGINLOADER_INSTANCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->instance ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->instance();
+      _qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_ISLOADED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isLoaded () );
+      RBOOL( obj->isLoaded() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_LOAD )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->load () );
+      RBOOL( obj->load() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_LOADHINTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->loadHints () );
+      RENUM( obj->loadHints() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_SETFILENAME )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setFileName ( PQSTRING(1) );
+      obj->setFileName( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_SETLOADHINTS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setLoadHints ( (QLibrary::LoadHints) hb_parni(1) );
+      obj->setLoadHints( (QLibrary::LoadHints) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_UNLOAD )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->unload () );
+      RBOOL( obj->unload() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

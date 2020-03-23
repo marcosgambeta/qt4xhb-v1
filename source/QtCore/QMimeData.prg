@@ -48,7 +48,7 @@ CLASS QMimeData INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMimeData
+PROCEDURE destroyObject() CLASS QMimeData
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QMIMEDATA_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QMimeData * o = new QMimeData ();
+    QMimeData * o = new QMimeData();
     _qt4xhb_returnNewObject( o, false );
   }
   else
@@ -89,8 +89,8 @@ HB_FUNC_STATIC( QMIMEDATA_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QMIMEDATA_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,8 +141,8 @@ HB_FUNC_STATIC( QMIMEDATA_COLORDATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->colorData () );
-      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->colorData() );
+      _qt4xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,8 +166,8 @@ HB_FUNC_STATIC( QMIMEDATA_DATA )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->data ( PQSTRING(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      QByteArray * ptr = new QByteArray( obj->data( PQSTRING(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QMIMEDATA_FORMATS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->formats () );
+      RQSTRINGLIST( obj->formats() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasColor () );
+      RBOOL( obj->hasColor() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASFORMAT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->hasFormat ( PQSTRING(1) ) );
+      RBOOL( obj->hasFormat( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASHTML )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasHtml () );
+      RBOOL( obj->hasHtml() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASIMAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasImage () );
+      RBOOL( obj->hasImage() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasText () );
+      RBOOL( obj->hasText() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASURLS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasUrls () );
+      RBOOL( obj->hasUrls() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QMIMEDATA_HTML )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->html () );
+      RQSTRING( obj->html() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -383,8 +383,8 @@ HB_FUNC_STATIC( QMIMEDATA_IMAGEDATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->imageData () );
-      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->imageData() );
+      _qt4xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QMIMEDATA_REMOVEFORMAT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->removeFormat ( PQSTRING(1) );
+      obj->removeFormat( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QMIMEDATA_SETCOLORDATA )
     if( ISNUMPAR(1) && ISQVARIANT(1) )
     {
 #endif
-      obj->setColorData ( *PQVARIANT(1) );
+      obj->setColorData( *PQVARIANT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QMIMEDATA_SETDATA )
     if( ISNUMPAR(2) && ISCHAR(1) && ISQBYTEARRAY(2) )
     {
 #endif
-      obj->setData ( PQSTRING(1), *PQBYTEARRAY(2) );
+      obj->setData( PQSTRING(1), *PQBYTEARRAY(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QMIMEDATA_SETHTML )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setHtml ( PQSTRING(1) );
+      obj->setHtml( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QMIMEDATA_SETIMAGEDATA )
     if( ISNUMPAR(1) && ISQVARIANT(1) )
     {
 #endif
-      obj->setImageData ( *PQVARIANT(1) );
+      obj->setImageData( *PQVARIANT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QMIMEDATA_SETTEXT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setText ( PQSTRING(1) );
+      obj->setText( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QMIMEDATA_SETURLS )
       {
         par1 << *(QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
-      obj->setUrls ( par1 );
+      obj->setUrls( par1 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -598,7 +598,7 @@ HB_FUNC_STATIC( QMIMEDATA_TEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->text () );
+      RQSTRING( obj->text() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QMIMEDATA_URLS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QUrl> list = obj->urls ();
+      QList<QUrl> list = obj->urls();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QURL" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -635,7 +635,7 @@ HB_FUNC_STATIC( QMIMEDATA_URLS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QUrl *) new QUrl ( list[i] ) );
+          hb_itemPutPtr( pItem, (QUrl *) new QUrl( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );

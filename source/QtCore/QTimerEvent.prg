@@ -25,7 +25,7 @@ CLASS QTimerEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTimerEvent
+PROCEDURE destroyObject() CLASS QTimerEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -46,7 +46,7 @@ HB_FUNC_STATIC( QTIMEREVENT_NEW )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    QTimerEvent * o = new QTimerEvent ( PINT(1) );
+    QTimerEvent * o = new QTimerEvent( PINT(1) );
     _qt4xhb_returnNewObject( o, false );
   }
   else
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QTIMEREVENT_TIMERID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->timerId () );
+      RINT( obj->timerId() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

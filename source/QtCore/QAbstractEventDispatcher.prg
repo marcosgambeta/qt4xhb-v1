@@ -38,7 +38,7 @@ CLASS QAbstractEventDispatcher INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractEventDispatcher
+PROCEDURE destroyObject() CLASS QAbstractEventDispatcher
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -60,8 +60,8 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FILTEREVENT )
     if( ISNUMPAR(1) && ISPOINTER(1) )
     {
 #endif
-      RBOOL( obj->filterEvent ( (void *) hb_parptr(1) ) );
+      RBOOL( obj->filterEvent( (void *) hb_parptr(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FLUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->flush ();
+      obj->flush();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_HASPENDINGEVENTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasPendingEvents () );
+      RBOOL( obj->hasPendingEvents() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INTERRUPT )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->interrupt ();
+      obj->interrupt();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_PROCESSEVENTS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->processEvents ( (QEventLoop::ProcessEventsFlags) hb_parni(1) ) );
+      RBOOL( obj->processEvents( (QEventLoop::ProcessEventsFlags) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERSOCKETNOTIFIER )
     if( ISNUMPAR(1) && ISQSOCKETNOTIFIER(1) )
     {
 #endif
-      obj->registerSocketNotifier ( PQSOCKETNOTIFIER(1) );
+      obj->registerSocketNotifier( PQSOCKETNOTIFIER(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,26 +226,26 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERSOCKETNOTIFIER )
 /*
 int registerTimer ( int interval, QObject * object )
 */
-void QAbstractEventDispatcher_registerTimer1 ()
+void QAbstractEventDispatcher_registerTimer1()
 {
   QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RINT( obj->registerTimer ( PINT(1), PQOBJECT(2) ) );
+    RINT( obj->registerTimer( PINT(1), PQOBJECT(2) ) );
   }
 }
 
 /*
 virtual void registerTimer ( int timerId, int interval, QObject * object ) = 0
 */
-void QAbstractEventDispatcher_registerTimer2 ()
+void QAbstractEventDispatcher_registerTimer2()
 {
   QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    obj->registerTimer ( PINT(1), PINT(2), PQOBJECT(3) );
+    obj->registerTimer( PINT(1), PINT(2), PQOBJECT(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERSOCKETNOTIFIER )
     if( ISNUMPAR(1) && ISQSOCKETNOTIFIER(1) )
     {
 #endif
-      obj->unregisterSocketNotifier ( PQSOCKETNOTIFIER(1) );
+      obj->unregisterSocketNotifier( PQSOCKETNOTIFIER(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMER )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->unregisterTimer ( PINT(1) ) );
+      RBOOL( obj->unregisterTimer( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMERS )
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
 #endif
-      RBOOL( obj->unregisterTimers ( PQOBJECT(1) ) );
+      RBOOL( obj->unregisterTimers( PQOBJECT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_WAKEUP )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->wakeUp ();
+      obj->wakeUp();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -379,8 +379,8 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INSTANCE )
   if( ISBETWEEN(0,1) && (ISQTHREAD(1)||ISNIL(1)) )
   {
 #endif
-    QAbstractEventDispatcher * ptr = QAbstractEventDispatcher::instance ( OPQTHREAD(1,0) );
-    _qt4xhb_createReturnQObjectClass ( ptr, "QABSTRACTEVENTDISPATCHER" );
+    QAbstractEventDispatcher * ptr = QAbstractEventDispatcher::instance( OPQTHREAD(1,0) );
+    _qt4xhb_createReturnQObjectClass( ptr, "QABSTRACTEVENTDISPATCHER" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INSTANCE )
 #endif
 }
 
-void QAbstractEventDispatcherSlots_connect_signal ( const QString & signal, const QString & slot );
+void QAbstractEventDispatcherSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_ONABOUTTOBLOCK )
 {

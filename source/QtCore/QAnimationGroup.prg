@@ -32,7 +32,7 @@ CLASS QAnimationGroup INHERIT QAbstractAnimation
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAnimationGroup
+PROCEDURE destroyObject() CLASS QAnimationGroup
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -54,8 +54,8 @@ HB_FUNC_STATIC( QANIMATIONGROUP_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_ADDANIMATION )
     if( ISNUMPAR(1) && ISQABSTRACTANIMATION(1) )
     {
 #endif
-      obj->addAnimation ( PQABSTRACTANIMATION(1) );
+      obj->addAnimation( PQABSTRACTANIMATION(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -106,8 +106,8 @@ HB_FUNC_STATIC( QANIMATIONGROUP_ANIMATIONAT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QAbstractAnimation * ptr = obj->animationAt ( PINT(1) );
-      _qt4xhb_createReturnQObjectClass ( ptr, "QABSTRACTANIMATION" );
+      QAbstractAnimation * ptr = obj->animationAt( PINT(1) );
+      _qt4xhb_createReturnQObjectClass( ptr, "QABSTRACTANIMATION" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_ANIMATIONCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->animationCount () );
+      RINT( obj->animationCount() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_INDEXOFANIMATION )
     if( ISNUMPAR(1) && ISQABSTRACTANIMATION(1) )
     {
 #endif
-      RINT( obj->indexOfAnimation ( PQABSTRACTANIMATION(1) ) );
+      RINT( obj->indexOfAnimation( PQABSTRACTANIMATION(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_INSERTANIMATION )
     if( ISNUMPAR(2) && ISNUM(1) && ISQABSTRACTANIMATION(2) )
     {
 #endif
-      obj->insertAnimation ( PINT(1), PQABSTRACTANIMATION(2) );
+      obj->insertAnimation( PINT(1), PQABSTRACTANIMATION(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_REMOVEANIMATION )
     if( ISNUMPAR(1) && ISQABSTRACTANIMATION(1) )
     {
 #endif
-      obj->removeAnimation ( PQABSTRACTANIMATION(1) );
+      obj->removeAnimation( PQABSTRACTANIMATION(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -257,8 +257,8 @@ HB_FUNC_STATIC( QANIMATIONGROUP_TAKEANIMATION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QAbstractAnimation * ptr = obj->takeAnimation ( PINT(1) );
-      _qt4xhb_createReturnQObjectClass ( ptr, "QABSTRACTANIMATION" );
+      QAbstractAnimation * ptr = obj->takeAnimation( PINT(1) );
+      _qt4xhb_createReturnQObjectClass( ptr, "QABSTRACTANIMATION" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

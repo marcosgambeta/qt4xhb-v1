@@ -33,7 +33,7 @@ CLASS QSharedData
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSharedData
+PROCEDURE destroyObject() CLASS QSharedData
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -50,18 +50,18 @@ RETURN
 /*
 QSharedData ()
 */
-void QSharedData_new1 ()
+void QSharedData_new1()
 {
-  QSharedData * o = new QSharedData ();
+  QSharedData * o = new QSharedData();
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QSharedData ( const QSharedData & other )
 */
-void QSharedData_new2 ()
+void QSharedData_new2()
 {
-  QSharedData * o = new QSharedData ( *PQSHAREDDATA(1) );
+  QSharedData * o = new QSharedData( *PQSHAREDDATA(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 

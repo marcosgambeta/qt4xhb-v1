@@ -50,7 +50,7 @@ CLASS QTime
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTime
+PROCEDURE destroyObject() CLASS QTime
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -67,18 +67,18 @@ RETURN
 /*
 QTime()
 */
-void QTime_new1 ()
+void QTime_new1()
 {
-  QTime * o = new QTime ();
+  QTime * o = new QTime();
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QTime(int h, int m, int s = 0, int ms = 0)
 */
-void QTime_new2 ()
+void QTime_new2()
 {
-  QTime * o = new QTime ( PINT(1), PINT(2), OPINT(3,0), OPINT(4,0) );
+  QTime * o = new QTime( PINT(1), PINT(2), OPINT(3,0), OPINT(4,0) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -131,8 +131,8 @@ HB_FUNC_STATIC( QTIME_ADDMSECS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QTime * ptr = new QTime( obj->addMSecs ( PINT(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QTIME", true );
+      QTime * ptr = new QTime( obj->addMSecs( PINT(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QTIME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,8 +156,8 @@ HB_FUNC_STATIC( QTIME_ADDSECS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QTime * ptr = new QTime( obj->addSecs ( PINT(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QTIME", true );
+      QTime * ptr = new QTime( obj->addSecs( PINT(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QTIME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QTIME_ELAPSED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->elapsed () );
+      RINT( obj->elapsed() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QTIME_HOUR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->hour () );
+      RINT( obj->hour() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QTIME_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QTIME_MINUTE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->minute () );
+      RINT( obj->minute() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QTIME_MSEC )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->msec () );
+      RINT( obj->msec() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QTIME_MSECSTO )
     if( ISNUMPAR(1) && ISQTIME(1) )
     {
 #endif
-      RINT( obj->msecsTo ( *PQTIME(1) ) );
+      RINT( obj->msecsTo( *PQTIME(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QTIME_RESTART )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->restart () );
+      RINT( obj->restart() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QTIME_SECOND )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->second () );
+      RINT( obj->second() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QTIME_SECSTO )
     if( ISNUMPAR(1) && ISQTIME(1) )
     {
 #endif
-      RINT( obj->secsTo ( *PQTIME(1) ) );
+      RINT( obj->secsTo( *PQTIME(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QTIME_SETHMS )
     if( ISBETWEEN(3,4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
     {
 #endif
-      RBOOL( obj->setHMS ( PINT(1), PINT(2), PINT(3), OPINT(4,0) ) );
+      RBOOL( obj->setHMS( PINT(1), PINT(2), PINT(3), OPINT(4,0) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QTIME_START )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->start ();
+      obj->start();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -437,26 +437,26 @@ HB_FUNC_STATIC( QTIME_START )
 /*
 QString toString(const QString & format) const
 */
-void QTime_toString1 ()
+void QTime_toString1()
 {
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RQSTRING( obj->toString ( PQSTRING(1) ) );
+    RQSTRING( obj->toString( PQSTRING(1) ) );
   }
 }
 
 /*
 QString toString(Qt::DateFormat format = Qt::TextDate) const
 */
-void QTime_toString2 ()
+void QTime_toString2()
 {
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RQSTRING( obj->toString ( ISNIL(1)? (Qt::DateFormat) Qt::TextDate : (Qt::DateFormat) hb_parni(1) ) );
+    RQSTRING( obj->toString( ISNIL(1)? (Qt::DateFormat) Qt::TextDate : (Qt::DateFormat) hb_parni(1) ) );
   }
 }
 
@@ -488,8 +488,8 @@ HB_FUNC_STATIC( QTIME_CURRENTTIME )
   if( ISNUMPAR(0) )
   {
 #endif
-    QTime * ptr = new QTime( QTime::currentTime () );
-    _qt4xhb_createReturnClass ( ptr, "QTIME", true );
+    QTime * ptr = new QTime( QTime::currentTime() );
+    _qt4xhb_createReturnClass( ptr, "QTIME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -502,24 +502,24 @@ HB_FUNC_STATIC( QTIME_CURRENTTIME )
 /*
 static QTime fromString(const QString & string, Qt::DateFormat format = Qt::TextDate)
 */
-void QTime_fromString1 ()
+void QTime_fromString1()
 {
 
-  QTime * ptr = new QTime( QTime::fromString ( PQSTRING(1), ISNIL(2)? (Qt::DateFormat) Qt::TextDate : (Qt::DateFormat) hb_parni(2) ) );
-  _qt4xhb_createReturnClass ( ptr, "QTIME", true );
+  QTime * ptr = new QTime( QTime::fromString( PQSTRING(1), ISNIL(2)? (Qt::DateFormat) Qt::TextDate : (Qt::DateFormat) hb_parni(2) ) );
+  _qt4xhb_createReturnClass( ptr, "QTIME", true );
 }
 
 /*
 QTime fromString(const QString & string, const QString & format)
 */
-void QTime_fromString2 ()
+void QTime_fromString2()
 {
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    QTime * ptr = new QTime( obj->fromString ( PQSTRING(1), PQSTRING(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QTIME", true );
+    QTime * ptr = new QTime( obj->fromString( PQSTRING(1), PQSTRING(2) ) );
+    _qt4xhb_createReturnClass( ptr, "QTIME", true );
   }
 }
 
@@ -545,23 +545,23 @@ HB_FUNC_STATIC( QTIME_FROMSTRING )
 /*
 bool isValid() const
 */
-void QTime_isValid1 ()
+void QTime_isValid1()
 {
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RBOOL( obj->isValid () );
+    RBOOL( obj->isValid() );
   }
 }
 
 /*
 static bool isValid(int h, int m, int s, int ms = 0)
 */
-void QTime_isValid2 ()
+void QTime_isValid2()
 {
 
-  RBOOL( QTime::isValid ( PINT(1), PINT(2), PINT(3), OPINT(4,0) ) );
+  RBOOL( QTime::isValid( PINT(1), PINT(2), PINT(3), OPINT(4,0) ) );
 }
 
 //[1]bool isValid() const

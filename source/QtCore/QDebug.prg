@@ -36,7 +36,7 @@ CLASS QDebug
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDebug
+PROCEDURE destroyObject() CLASS QDebug
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -53,9 +53,9 @@ RETURN
 /*
 QDebug ( QIODevice * device )
 */
-void QDebug_new1 ()
+void QDebug_new1()
 {
-  QDebug * o = new QDebug ( PQIODEVICE(1) );
+  QDebug * o = new QDebug( PQIODEVICE(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -66,18 +66,18 @@ QDebug ( QString * string )
 /*
 QDebug ( QtMsgType type )
 */
-void QDebug_new3 ()
+void QDebug_new3()
 {
-  QDebug * o = new QDebug ( (QtMsgType) hb_parni(1) );
+  QDebug * o = new QDebug( (QtMsgType) hb_parni(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QDebug ( const QDebug & other )
 */
-void QDebug_new4 ()
+void QDebug_new4()
 {
-  QDebug * o = new QDebug ( *PQDEBUG(1) );
+  QDebug * o = new QDebug( *PQDEBUG(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -136,8 +136,8 @@ HB_FUNC_STATIC( QDEBUG_MAYBESPACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDebug * ptr = &obj->maybeSpace ();
-      _qt4xhb_createReturnClass ( ptr, "QDEBUG", false );
+      QDebug * ptr = &obj->maybeSpace();
+      _qt4xhb_createReturnClass( ptr, "QDEBUG", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,8 +161,8 @@ HB_FUNC_STATIC( QDEBUG_NOSPACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDebug * ptr = &obj->nospace ();
-      _qt4xhb_createReturnClass ( ptr, "QDEBUG", false );
+      QDebug * ptr = &obj->nospace();
+      _qt4xhb_createReturnClass( ptr, "QDEBUG", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,8 +186,8 @@ HB_FUNC_STATIC( QDEBUG_SPACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDebug * ptr = &obj->space ();
-      _qt4xhb_createReturnClass ( ptr, "QDEBUG", false );
+      QDebug * ptr = &obj->space();
+      _qt4xhb_createReturnClass( ptr, "QDEBUG", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

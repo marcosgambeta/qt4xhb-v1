@@ -29,7 +29,7 @@ CLASS QHistoryState INHERIT QAbstractState
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHistoryState
+PROCEDURE destroyObject() CLASS QHistoryState
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -48,18 +48,18 @@ RETURN
 /*
 QHistoryState(QState *parent = 0)
 */
-void QHistoryState_new1 ()
+void QHistoryState_new1()
 {
-  QHistoryState * o = new QHistoryState ( OPQSTATE(1,0) );
+  QHistoryState * o = new QHistoryState( OPQSTATE(1,0) );
   _qt4xhb_returnNewObject( o, false );
 }
 
 /*
 QHistoryState(HistoryType type, QState *parent = 0)
 */
-void QHistoryState_new2 ()
+void QHistoryState_new2()
 {
-  QHistoryState * o = new QHistoryState ( (QHistoryState::HistoryType) hb_parni(1), OPQSTATE(2,0) );
+  QHistoryState * o = new QHistoryState( (QHistoryState::HistoryType) hb_parni(1), OPQSTATE(2,0) );
   _qt4xhb_returnNewObject( o, false );
 }
 
@@ -88,8 +88,8 @@ HB_FUNC_STATIC( QHISTORYSTATE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -114,8 +114,8 @@ HB_FUNC_STATIC( QHISTORYSTATE_DEFAULTSTATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractState * ptr = obj->defaultState ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QABSTRACTSTATE" );
+      QAbstractState * ptr = obj->defaultState();
+      _qt4xhb_createReturnQObjectClass( ptr, "QABSTRACTSTATE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_SETDEFAULTSTATE )
     if( ISNUMPAR(1) && ISQABSTRACTSTATE(1) )
     {
 #endif
-      obj->setDefaultState ( PQABSTRACTSTATE(1) );
+      obj->setDefaultState( PQABSTRACTSTATE(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_HISTORYTYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->historyType () );
+      RENUM( obj->historyType() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_SETHISTORYTYPE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setHistoryType ( (QHistoryState::HistoryType) hb_parni(1) );
+      obj->setHistoryType( (QHistoryState::HistoryType) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

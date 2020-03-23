@@ -34,7 +34,7 @@ CLASS QAbstractFileEngineHandler
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractFileEngineHandler
+PROCEDURE destroyObject() CLASS QAbstractFileEngineHandler
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -78,8 +78,8 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEHANDLER_CREATE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QAbstractFileEngine * ptr = obj->create ( PQSTRING(1) );
-      _qt4xhb_createReturnClass ( ptr, "QABSTRACTFILEENGINE", false );
+      QAbstractFileEngine * ptr = obj->create( PQSTRING(1) );
+      _qt4xhb_createReturnClass( ptr, "QABSTRACTFILEENGINE", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

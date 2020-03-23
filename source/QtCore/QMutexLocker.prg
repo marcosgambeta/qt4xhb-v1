@@ -37,7 +37,7 @@ CLASS QMutexLocker
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMutexLocker
+PROCEDURE destroyObject() CLASS QMutexLocker
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QMUTEXLOCKER_NEW )
 {
   if( ISNUMPAR(1) && ISQMUTEX(1) )
   {
-    QMutexLocker * o = new QMutexLocker ( PQMUTEX(1) );
+    QMutexLocker * o = new QMutexLocker( PQMUTEX(1) );
     _qt4xhb_returnNewObject( o, true );
   }
   else
@@ -97,8 +97,8 @@ HB_FUNC_STATIC( QMUTEXLOCKER_MUTEX )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMutex * ptr = obj->mutex ();
-      _qt4xhb_createReturnClass ( ptr, "QMUTEX", false );
+      QMutex * ptr = obj->mutex();
+      _qt4xhb_createReturnClass( ptr, "QMUTEX", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QMUTEXLOCKER_RELOCK )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->relock ();
+      obj->relock();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QMUTEXLOCKER_UNLOCK )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->unlock ();
+      obj->unlock();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -37,7 +37,7 @@ CLASS QSemaphore
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSemaphore
+PROCEDURE destroyObject() CLASS QSemaphore
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QSEMAPHORE_NEW )
 {
   if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
-    QSemaphore * o = new QSemaphore ( OPINT(1,0) );
+    QSemaphore * o = new QSemaphore( OPINT(1,0) );
     _qt4xhb_returnNewObject( o, true );
   }
   else
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QSEMAPHORE_ACQUIRE )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      obj->acquire ( OPINT(1,1) );
+      obj->acquire( OPINT(1,1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QSEMAPHORE_AVAILABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->available () );
+      RINT( obj->available() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QSEMAPHORE_RELEASE )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      obj->release ( OPINT(1,1) );
+      obj->release( OPINT(1,1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,26 +163,26 @@ HB_FUNC_STATIC( QSEMAPHORE_RELEASE )
 /*
 bool tryAcquire ( int n = 1 )
 */
-void QSemaphore_tryAcquire1 ()
+void QSemaphore_tryAcquire1()
 {
   QSemaphore * obj = (QSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RBOOL( obj->tryAcquire ( OPINT(1,1) ) );
+    RBOOL( obj->tryAcquire( OPINT(1,1) ) );
   }
 }
 
 /*
 bool tryAcquire ( int n, int timeout )
 */
-void QSemaphore_tryAcquire2 ()
+void QSemaphore_tryAcquire2()
 {
   QSemaphore * obj = (QSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RBOOL( obj->tryAcquire ( PINT(1), PINT(2) ) );
+    RBOOL( obj->tryAcquire( PINT(1), PINT(2) ) );
   }
 }
 

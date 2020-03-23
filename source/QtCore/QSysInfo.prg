@@ -32,7 +32,7 @@ CLASS QSysInfo
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSysInfo
+PROCEDURE destroyObject() CLASS QSysInfo
    IF ::self_destruction
       ::delete()
    ENDIF

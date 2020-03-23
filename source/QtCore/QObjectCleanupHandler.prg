@@ -29,7 +29,7 @@ CLASS QObjectCleanupHandler INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QObjectCleanupHandler
+PROCEDURE destroyObject() CLASS QObjectCleanupHandler
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -52,7 +52,7 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QObjectCleanupHandler * o = new QObjectCleanupHandler ();
+    QObjectCleanupHandler * o = new QObjectCleanupHandler();
     _qt4xhb_returnNewObject( o, false );
   }
   else
@@ -67,8 +67,8 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -93,8 +93,8 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_ADD )
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
 #endif
-      QObject * ptr = obj->add ( PQOBJECT(1) );
-      _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->add( PQOBJECT(1) );
+      _qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_REMOVE )
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
 #endif
-      obj->remove ( PQOBJECT(1) );
+      obj->remove( PQOBJECT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_ISEMPTY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isEmpty () );
+      RBOOL( obj->isEmpty() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -39,7 +39,7 @@ CLASS QXmlStreamEntityDeclaration
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlStreamEntityDeclaration
+PROCEDURE destroyObject() CLASS QXmlStreamEntityDeclaration
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -56,18 +56,18 @@ RETURN
 /*
 QXmlStreamEntityDeclaration()
 */
-void QXmlStreamEntityDeclaration_new1 ()
+void QXmlStreamEntityDeclaration_new1()
 {
-  QXmlStreamEntityDeclaration * o = new QXmlStreamEntityDeclaration ();
+  QXmlStreamEntityDeclaration * o = new QXmlStreamEntityDeclaration();
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & other)
 */
-void QXmlStreamEntityDeclaration_new2 ()
+void QXmlStreamEntityDeclaration_new2()
 {
-  QXmlStreamEntityDeclaration * o = new QXmlStreamEntityDeclaration ( *PQXMLSTREAMENTITYDECLARATION(1) );
+  QXmlStreamEntityDeclaration * o = new QXmlStreamEntityDeclaration( *PQXMLSTREAMENTITYDECLARATION(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -120,8 +120,8 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QStringRef * ptr = new QStringRef( obj->name () );
-      _qt4xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+      QStringRef * ptr = new QStringRef( obj->name() );
+      _qt4xhb_createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,8 +145,8 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NOTATIONNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QStringRef * ptr = new QStringRef( obj->notationName () );
-      _qt4xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+      QStringRef * ptr = new QStringRef( obj->notationName() );
+      _qt4xhb_createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,8 +170,8 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_PUBLICID )
     if( ISNUMPAR(0) )
     {
 #endif
-      QStringRef * ptr = new QStringRef( obj->publicId () );
-      _qt4xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+      QStringRef * ptr = new QStringRef( obj->publicId() );
+      _qt4xhb_createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,8 +195,8 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_SYSTEMID )
     if( ISNUMPAR(0) )
     {
 #endif
-      QStringRef * ptr = new QStringRef( obj->systemId () );
-      _qt4xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+      QStringRef * ptr = new QStringRef( obj->systemId() );
+      _qt4xhb_createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,8 +220,8 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_VALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QStringRef * ptr = new QStringRef( obj->value () );
-      _qt4xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+      QStringRef * ptr = new QStringRef( obj->value() );
+      _qt4xhb_createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

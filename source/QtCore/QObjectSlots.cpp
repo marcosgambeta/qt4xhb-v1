@@ -25,7 +25,7 @@ void QObjectSlots::destroyed( QObject * obj )
   PHB_ITEM cb = Signals_return_codeblock( object, "destroyed(QObject*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QOBJECT" );
     PHB_ITEM pobj = Signals_return_qobject( (QObject *) obj, "QOBJECT" );
     hb_vmEvalBlockV( cb, 2, psender, pobj );
     hb_itemRelease( psender );
@@ -34,7 +34,7 @@ void QObjectSlots::destroyed( QObject * obj )
   }
 }
 
-void QObjectSlots_connect_signal ( const QString & signal, const QString & slot )
+void QObjectSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

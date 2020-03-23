@@ -24,7 +24,7 @@ CLASS QFinalState INHERIT QAbstractState
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFinalState
+PROCEDURE destroyObject() CLASS QFinalState
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -47,7 +47,7 @@ HB_FUNC_STATIC( QFINALSTATE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQSTATE(1)||ISNIL(1)) )
   {
-    QFinalState * o = new QFinalState ( OPQSTATE(1,0) );
+    QFinalState * o = new QFinalState( OPQSTATE(1,0) );
     _qt4xhb_returnNewObject( o, false );
   }
   else
@@ -62,8 +62,8 @@ HB_FUNC_STATIC( QFINALSTATE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
