@@ -27,7 +27,7 @@ CLASS QDecorationDefault INHERIT QDecoration
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDecorationDefault
+PROCEDURE destroyObject() CLASS QDecorationDefault
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -48,7 +48,7 @@ HB_FUNC_STATIC( QDECORATIONDEFAULT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QDecorationDefault * o = new QDecorationDefault ();
+    QDecorationDefault * o = new QDecorationDefault();
     _qt4xhb_returnNewObject( o, true );
   }
   else
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QDECORATIONDEFAULT_PAINT )
     if( ISBETWEEN(2,4) && ISQPAINTER(1) && ISQWIDGET(2) && ISOPTNUM(3) && ISOPTNUM(4) )
     {
 #endif
-      RBOOL( obj->paint ( PQPAINTER(1), PQWIDGET(2), OPINT(3,QDecoration::All), ISNIL(4)? (QDecoration::DecorationState) QDecoration::Normal : (QDecoration::DecorationState) hb_parni(4) ) );
+      RBOOL( obj->paint( PQPAINTER(1), PQWIDGET(2), OPINT(3,QDecoration::All), ISNIL(4)? (QDecoration::DecorationState) QDecoration::Normal : (QDecoration::DecorationState) hb_parni(4) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -111,8 +111,8 @@ HB_FUNC_STATIC( QDECORATIONDEFAULT_REGION )
     if( ISBETWEEN(2,3) && ISQWIDGET(1) && ISQRECT(2) && ISOPTNUM(3) )
     {
 #endif
-      QRegion * ptr = new QRegion( obj->region ( PQWIDGET(1), *PQRECT(2), OPINT(3,QDecoration::All) ) );
-      _qt4xhb_createReturnClass ( ptr, "QREGION", true );
+      QRegion * ptr = new QRegion( obj->region( PQWIDGET(1), *PQRECT(2), OPINT(3,QDecoration::All) ) );
+      _qt4xhb_createReturnClass( ptr, "QREGION", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

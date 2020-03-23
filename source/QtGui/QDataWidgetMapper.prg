@@ -56,7 +56,7 @@ CLASS QDataWidgetMapper INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDataWidgetMapper
+PROCEDURE destroyObject() CLASS QDataWidgetMapper
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QDataWidgetMapper * o = new QDataWidgetMapper ( OPQOBJECT(1,0) );
+    QDataWidgetMapper * o = new QDataWidgetMapper( OPQOBJECT(1,0) );
     _qt4xhb_returnNewObject( o, false );
   }
   else
@@ -97,8 +97,8 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -113,13 +113,13 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_DELETE )
 /*
 void addMapping ( QWidget * widget, int section )
 */
-void QDataWidgetMapper_addMapping1 ()
+void QDataWidgetMapper_addMapping1()
 {
   QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    obj->addMapping ( PQWIDGET(1), PINT(2) );
+    obj->addMapping( PQWIDGET(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -128,13 +128,13 @@ void QDataWidgetMapper_addMapping1 ()
 /*
 void addMapping ( QWidget * widget, int section, const QByteArray & propertyName )
 */
-void QDataWidgetMapper_addMapping2 ()
+void QDataWidgetMapper_addMapping2()
 {
   QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    obj->addMapping ( PQWIDGET(1), PINT(2), *PQBYTEARRAY(3) );
+    obj->addMapping( PQWIDGET(1), PINT(2), *PQBYTEARRAY(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_CLEARMAPPING )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clearMapping ();
+      obj->clearMapping();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_CURRENTINDEX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->currentIndex () );
+      RINT( obj->currentIndex() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,8 +222,8 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ITEMDELEGATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractItemDelegate * ptr = obj->itemDelegate ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QABSTRACTITEMDELEGATE" );
+      QAbstractItemDelegate * ptr = obj->itemDelegate();
+      _qt4xhb_createReturnQObjectClass( ptr, "QABSTRACTITEMDELEGATE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -247,8 +247,8 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDPROPERTYNAME )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->mappedPropertyName ( PQWIDGET(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      QByteArray * ptr = new QByteArray( obj->mappedPropertyName( PQWIDGET(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDSECTION )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      RINT( obj->mappedSection ( PQWIDGET(1) ) );
+      RINT( obj->mappedSection( PQWIDGET(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -296,8 +296,8 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDWIDGETAT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QWidget * ptr = obj->mappedWidgetAt ( PINT(1) );
-      _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->mappedWidgetAt( PINT(1) );
+      _qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -321,8 +321,8 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MODEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractItemModel * ptr = obj->model ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QABSTRACTITEMMODEL" );
+      QAbstractItemModel * ptr = obj->model();
+      _qt4xhb_createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ORIENTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->orientation () );
+      RENUM( obj->orientation() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_REMOVEMAPPING )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->removeMapping ( PQWIDGET(1) );
+      obj->removeMapping( PQWIDGET(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -396,8 +396,8 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ROOTINDEX )
     if( ISNUMPAR(0) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->rootIndex () );
-      _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      QModelIndex * ptr = new QModelIndex( obj->rootIndex() );
+      _qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETITEMDELEGATE )
     if( ISNUMPAR(1) && ISQABSTRACTITEMDELEGATE(1) )
     {
 #endif
-      obj->setItemDelegate ( PQABSTRACTITEMDELEGATE(1) );
+      obj->setItemDelegate( PQABSTRACTITEMDELEGATE(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETMODEL )
     if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
     {
 #endif
-      obj->setModel ( PQABSTRACTITEMMODEL(1) );
+      obj->setModel( PQABSTRACTITEMMODEL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETORIENTATION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setOrientation ( (Qt::Orientation) hb_parni(1) );
+      obj->setOrientation( (Qt::Orientation) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETROOTINDEX )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      obj->setRootIndex ( *PQMODELINDEX(1) );
+      obj->setRootIndex( *PQMODELINDEX(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETSUBMITPOLICY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setSubmitPolicy ( (QDataWidgetMapper::SubmitPolicy) hb_parni(1) );
+      obj->setSubmitPolicy( (QDataWidgetMapper::SubmitPolicy) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SUBMITPOLICY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->submitPolicy () );
+      RENUM( obj->submitPolicy() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -575,7 +575,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_REVERT )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->revert ();
+      obj->revert();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -601,7 +601,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETCURRENTINDEX )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setCurrentIndex ( PINT(1) );
+      obj->setCurrentIndex( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -627,7 +627,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETCURRENTMODELINDEX )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      obj->setCurrentModelIndex ( *PQMODELINDEX(1) );
+      obj->setCurrentModelIndex( *PQMODELINDEX(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -653,7 +653,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SUBMIT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->submit () );
+      RBOOL( obj->submit() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -677,7 +677,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOFIRST )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->toFirst ();
+      obj->toFirst();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -703,7 +703,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOLAST )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->toLast ();
+      obj->toLast();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -729,7 +729,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TONEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->toNext ();
+      obj->toNext();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -755,7 +755,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOPREVIOUS )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->toPrevious ();
+      obj->toPrevious();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -768,7 +768,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOPREVIOUS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QDataWidgetMapperSlots_connect_signal ( const QString & signal, const QString & slot );
+void QDataWidgetMapperSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_ONCURRENTINDEXCHANGED )
 {

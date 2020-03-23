@@ -26,7 +26,7 @@ CLASS QAccessibleEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAccessibleEvent
+PROCEDURE destroyObject() CLASS QAccessibleEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -47,7 +47,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_NEW )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    QAccessibleEvent * o = new QAccessibleEvent ( (QAccessibleEvent::Type) hb_parni(1), PINT(2) );
+    QAccessibleEvent * o = new QAccessibleEvent( (QAccessibleEvent::Type) hb_parni(1), PINT(2) );
     _qt4xhb_returnNewObject( o, false );
   }
   else
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_CHILD )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->child () );
+      RINT( obj->child() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_SETVALUE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setValue ( PQSTRING(1) );
+      obj->setValue( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_VALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->value () );
+      RQSTRING( obj->value() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -29,7 +29,7 @@ CLASS QInputContextPlugin INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QInputContextPlugin
+PROCEDURE destroyObject() CLASS QInputContextPlugin
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -53,8 +53,8 @@ HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -79,8 +79,8 @@ HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_CREATE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QInputContext * ptr = obj->create ( PQSTRING(1) );
-      _qt4xhb_createReturnQObjectClass ( ptr, "QINPUTCONTEXT" );
+      QInputContext * ptr = obj->create( PQSTRING(1) );
+      _qt4xhb_createReturnQObjectClass( ptr, "QINPUTCONTEXT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_DESCRIPTION )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RQSTRING( obj->description ( PQSTRING(1) ) );
+      RQSTRING( obj->description( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_DISPLAYNAME )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RQSTRING( obj->displayName ( PQSTRING(1) ) );
+      RQSTRING( obj->displayName( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_KEYS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->keys () );
+      RQSTRINGLIST( obj->keys() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_LANGUAGES )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RQSTRINGLIST( obj->languages ( PQSTRING(1) ) );
+      RQSTRINGLIST( obj->languages( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

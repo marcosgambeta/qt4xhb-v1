@@ -31,7 +31,7 @@ CLASS QGraphicsEffect INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsEffect
+PROCEDURE destroyObject() CLASS QGraphicsEffect
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -53,8 +53,8 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -79,8 +79,8 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->boundingRect () );
-      _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+      QRectF * ptr = new QRectF( obj->boundingRect() );
+      _qt4xhb_createReturnClass( ptr, "QRECTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -104,8 +104,8 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECTFOR )
     if( ISNUMPAR(1) && ISQRECTF(1) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->boundingRectFor ( *PQRECTF(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+      QRectF * ptr = new QRectF( obj->boundingRectFor( *PQRECTF(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QRECTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_ISENABLED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isEnabled () );
+      RBOOL( obj->isEnabled() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_SETENABLED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setEnabled ( PBOOL(1) );
+      obj->setEnabled( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_UPDATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->update ();
+      obj->update();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_UPDATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QGraphicsEffectSlots_connect_signal ( const QString & signal, const QString & slot );
+void QGraphicsEffectSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QGRAPHICSEFFECT_ONENABLEDCHANGED )
 {

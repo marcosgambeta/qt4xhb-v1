@@ -39,7 +39,7 @@ CLASS QGraphicsEllipseItem INHERIT QAbstractGraphicsShapeItem
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsEllipseItem
+PROCEDURE destroyObject() CLASS QGraphicsEllipseItem
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -56,27 +56,27 @@ RETURN
 /*
 QGraphicsEllipseItem ( QGraphicsItem * parent = 0 )
 */
-void QGraphicsEllipseItem_new1 ()
+void QGraphicsEllipseItem_new1()
 {
-  QGraphicsEllipseItem * o = new QGraphicsEllipseItem ( ISNIL(1)? 0 : (QGraphicsItem *) _qt4xhb_itemGetPtr(1) );
+  QGraphicsEllipseItem * o = new QGraphicsEllipseItem( ISNIL(1)? 0 : (QGraphicsItem *) _qt4xhb_itemGetPtr(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QGraphicsEllipseItem ( const QRectF & rect, QGraphicsItem * parent = 0 )
 */
-void QGraphicsEllipseItem_new2 ()
+void QGraphicsEllipseItem_new2()
 {
-  QGraphicsEllipseItem * o = new QGraphicsEllipseItem ( *PQRECTF(1), ISNIL(2)? 0 : (QGraphicsItem *) _qt4xhb_itemGetPtr(2) );
+  QGraphicsEllipseItem * o = new QGraphicsEllipseItem( *PQRECTF(1), ISNIL(2)? 0 : (QGraphicsItem *) _qt4xhb_itemGetPtr(2) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QGraphicsEllipseItem ( qreal x, qreal y, qreal width, qreal height, QGraphicsItem * parent = 0 )
 */
-void QGraphicsEllipseItem_new3 ()
+void QGraphicsEllipseItem_new3()
 {
-  QGraphicsEllipseItem * o = new QGraphicsEllipseItem ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), ISNIL(5)? 0 : (QGraphicsItem *) _qt4xhb_itemGetPtr(5) );
+  QGraphicsEllipseItem * o = new QGraphicsEllipseItem( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), ISNIL(5)? 0 : (QGraphicsItem *) _qt4xhb_itemGetPtr(5) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -134,8 +134,8 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_RECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->rect () );
-      _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+      QRectF * ptr = new QRectF( obj->rect() );
+      _qt4xhb_createReturnClass( ptr, "QRECTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,13 +149,13 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_RECT )
 /*
 void setRect ( const QRectF & rect )
 */
-void QGraphicsEllipseItem_setRect1 ()
+void QGraphicsEllipseItem_setRect1()
 {
   QGraphicsEllipseItem * obj = (QGraphicsEllipseItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    obj->setRect ( *PQRECTF(1) );
+    obj->setRect( *PQRECTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -164,13 +164,13 @@ void QGraphicsEllipseItem_setRect1 ()
 /*
 void setRect ( qreal x, qreal y, qreal width, qreal height )
 */
-void QGraphicsEllipseItem_setRect2 ()
+void QGraphicsEllipseItem_setRect2()
 {
   QGraphicsEllipseItem * obj = (QGraphicsEllipseItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    obj->setRect ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+    obj->setRect( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SETSPANANGLE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setSpanAngle ( PINT(1) );
+      obj->setSpanAngle( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SETSTARTANGLE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setStartAngle ( PINT(1) );
+      obj->setStartAngle( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SPANANGLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->spanAngle () );
+      RINT( obj->spanAngle() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_STARTANGLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->startAngle () );
+      RINT( obj->startAngle() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -308,8 +308,8 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_BOUNDINGRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->boundingRect () );
-      _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+      QRectF * ptr = new QRectF( obj->boundingRect() );
+      _qt4xhb_createReturnClass( ptr, "QRECTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_CONTAINS )
     if( ISNUMPAR(1) && ISQPOINTF(1) )
     {
 #endif
-      RBOOL( obj->contains ( *PQPOINTF(1) ) );
+      RBOOL( obj->contains( *PQPOINTF(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_ISOBSCUREDBY )
     if( ISNUMPAR(1) && ISQGRAPHICSITEM(1) )
     {
 #endif
-      RBOOL( obj->isObscuredBy ( PQGRAPHICSITEM(1) ) );
+      RBOOL( obj->isObscuredBy( PQGRAPHICSITEM(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -381,8 +381,8 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_OPAQUEAREA )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->opaqueArea () );
-      _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+      QPainterPath * ptr = new QPainterPath( obj->opaqueArea() );
+      _qt4xhb_createReturnClass( ptr, "QPAINTERPATH", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_PAINT )
     if( ISBETWEEN(2,3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3)||ISNIL(3)) )
     {
 #endif
-      obj->paint ( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,0) );
+      obj->paint( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,0) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -432,8 +432,8 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SHAPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->shape () );
-      _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+      QPainterPath * ptr = new QPainterPath( obj->shape() );
+      _qt4xhb_createReturnClass( ptr, "QPAINTERPATH", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->type () );
+      RINT( obj->type() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

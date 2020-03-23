@@ -27,7 +27,7 @@ CLASS QCommandLinkButton INHERIT QPushButton
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCommandLinkButton
+PROCEDURE destroyObject() CLASS QCommandLinkButton
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -46,27 +46,27 @@ RETURN
 /*
 QCommandLinkButton ( QWidget * parent = 0 )
 */
-void QCommandLinkButton_new1 ()
+void QCommandLinkButton_new1()
 {
-  QCommandLinkButton * o = new QCommandLinkButton ( OPQWIDGET(1,0) );
+  QCommandLinkButton * o = new QCommandLinkButton( OPQWIDGET(1,0) );
   _qt4xhb_returnNewObject( o, false );
 }
 
 /*
 QCommandLinkButton ( const QString & text, QWidget * parent = 0 )
 */
-void QCommandLinkButton_new2 ()
+void QCommandLinkButton_new2()
 {
-  QCommandLinkButton * o = new QCommandLinkButton ( PQSTRING(1), OPQWIDGET(2,0) );
+  QCommandLinkButton * o = new QCommandLinkButton( PQSTRING(1), OPQWIDGET(2,0) );
   _qt4xhb_returnNewObject( o, false );
 }
 
 /*
 QCommandLinkButton ( const QString & text, const QString & description, QWidget * parent = 0 )
 */
-void QCommandLinkButton_new3 ()
+void QCommandLinkButton_new3()
 {
-  QCommandLinkButton * o = new QCommandLinkButton ( PQSTRING(1), PQSTRING(2), OPQWIDGET(3,0) );
+  QCommandLinkButton * o = new QCommandLinkButton( PQSTRING(1), PQSTRING(2), OPQWIDGET(3,0) );
   _qt4xhb_returnNewObject( o, false );
 }
 
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DESCRIPTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->description () );
+      RQSTRING( obj->description() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETDESCRIPTION )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setDescription ( PQSTRING(1) );
+      obj->setDescription( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_ISFLAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isFlat () );
+      RBOOL( obj->isFlat() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETFLAT )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setFlat ( PBOOL(1) );
+      obj->setFlat( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

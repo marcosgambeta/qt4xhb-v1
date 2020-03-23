@@ -34,7 +34,7 @@ CLASS QAccessibleBridge
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAccessibleBridge
+PROCEDURE destroyObject() CLASS QAccessibleBridge
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QACCESSIBLEBRIDGE_NOTIFYACCESSIBILITYUPDATE )
     if( ISNUMPAR(3) && ISNUM(1) && ISQACCESSIBLEINTERFACE(2) && ISNUM(3) )
     {
 #endif
-      obj->notifyAccessibilityUpdate ( PINT(1), PQACCESSIBLEINTERFACE(2), PINT(3) );
+      obj->notifyAccessibilityUpdate( PINT(1), PQACCESSIBLEINTERFACE(2), PINT(3) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QACCESSIBLEBRIDGE_SETROOTOBJECT )
     if( ISNUMPAR(1) && ISQACCESSIBLEINTERFACE(1) )
     {
 #endif
-      obj->setRootObject ( PQACCESSIBLEINTERFACE(1) );
+      obj->setRootObject( PQACCESSIBLEINTERFACE(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

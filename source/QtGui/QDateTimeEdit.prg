@@ -81,7 +81,7 @@ CLASS QDateTimeEdit INHERIT QAbstractSpinBox
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDateTimeEdit
+PROCEDURE destroyObject() CLASS QDateTimeEdit
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -102,36 +102,36 @@ RETURN
 /*
 QDateTimeEdit ( QWidget * parent = 0 )
 */
-void QDateTimeEdit_new1 ()
+void QDateTimeEdit_new1()
 {
-  QDateTimeEdit * o = new QDateTimeEdit ( OPQWIDGET(1,0) );
+  QDateTimeEdit * o = new QDateTimeEdit( OPQWIDGET(1,0) );
   _qt4xhb_returnNewObject( o, false );
 }
 
 /*
 QDateTimeEdit ( const QDateTime & datetime, QWidget * parent = 0 )
 */
-void QDateTimeEdit_new2 ()
+void QDateTimeEdit_new2()
 {
-  QDateTimeEdit * o = new QDateTimeEdit ( *PQDATETIME(1), OPQWIDGET(2,0) );
+  QDateTimeEdit * o = new QDateTimeEdit( *PQDATETIME(1), OPQWIDGET(2,0) );
   _qt4xhb_returnNewObject( o, false );
 }
 
 /*
 QDateTimeEdit ( const QDate & date, QWidget * parent = 0 )
 */
-void QDateTimeEdit_new3 ()
+void QDateTimeEdit_new3()
 {
-  QDateTimeEdit * o = new QDateTimeEdit ( *PQDATE(1), OPQWIDGET(2,0) );
+  QDateTimeEdit * o = new QDateTimeEdit( *PQDATE(1), OPQWIDGET(2,0) );
   _qt4xhb_returnNewObject( o, false );
 }
 
 /*
 QDateTimeEdit ( const QTime & time, QWidget * parent = 0 )
 */
-void QDateTimeEdit_new4 ()
+void QDateTimeEdit_new4()
 {
-  QDateTimeEdit * o = new QDateTimeEdit ( *PQTIME(1), OPQWIDGET(2,0) );
+  QDateTimeEdit * o = new QDateTimeEdit( *PQTIME(1), OPQWIDGET(2,0) );
   _qt4xhb_returnNewObject( o, false );
 }
 
@@ -170,8 +170,8 @@ HB_FUNC_STATIC( QDATETIMEEDIT_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CALENDARPOPUP )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->calendarPopup () );
+      RBOOL( obj->calendarPopup() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,8 +220,8 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CALENDARWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QCalendarWidget * ptr = obj->calendarWidget ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QCALENDARWIDGET" );
+      QCalendarWidget * ptr = obj->calendarWidget();
+      _qt4xhb_createReturnQObjectClass( ptr, "QCALENDARWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMAXIMUMDATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clearMaximumDate ();
+      obj->clearMaximumDate();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMAXIMUMDATETIME )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clearMaximumDateTime ();
+      obj->clearMaximumDateTime();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMAXIMUMTIME )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clearMaximumTime ();
+      obj->clearMaximumTime();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMINIMUMDATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clearMinimumDate ();
+      obj->clearMinimumDate();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMINIMUMDATETIME )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clearMinimumDateTime ();
+      obj->clearMinimumDateTime();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMINIMUMTIME )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clearMinimumTime ();
+      obj->clearMinimumTime();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CURRENTSECTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->currentSection () );
+      RENUM( obj->currentSection() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CURRENTSECTIONINDEX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->currentSectionIndex () );
+      RINT( obj->currentSectionIndex() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -449,8 +449,8 @@ HB_FUNC_STATIC( QDATETIMEEDIT_DATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDate * ptr = new QDate( obj->date () );
-      _qt4xhb_createReturnClass ( ptr, "QDATE", true );
+      QDate * ptr = new QDate( obj->date() );
+      _qt4xhb_createReturnClass( ptr, "QDATE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -474,8 +474,8 @@ HB_FUNC_STATIC( QDATETIMEEDIT_DATETIME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->dateTime () );
-      _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+      QDateTime * ptr = new QDateTime( obj->dateTime() );
+      _qt4xhb_createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_DISPLAYFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->displayFormat () );
+      RQSTRING( obj->displayFormat() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -523,7 +523,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_DISPLAYEDSECTIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->displayedSections () );
+      RENUM( obj->displayedSections() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -547,8 +547,8 @@ HB_FUNC_STATIC( QDATETIMEEDIT_MAXIMUMDATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDate * ptr = new QDate( obj->maximumDate () );
-      _qt4xhb_createReturnClass ( ptr, "QDATE", true );
+      QDate * ptr = new QDate( obj->maximumDate() );
+      _qt4xhb_createReturnClass( ptr, "QDATE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -572,8 +572,8 @@ HB_FUNC_STATIC( QDATETIMEEDIT_MAXIMUMDATETIME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->maximumDateTime () );
-      _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+      QDateTime * ptr = new QDateTime( obj->maximumDateTime() );
+      _qt4xhb_createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -597,8 +597,8 @@ HB_FUNC_STATIC( QDATETIMEEDIT_MAXIMUMTIME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTime * ptr = new QTime( obj->maximumTime () );
-      _qt4xhb_createReturnClass ( ptr, "QTIME", true );
+      QTime * ptr = new QTime( obj->maximumTime() );
+      _qt4xhb_createReturnClass( ptr, "QTIME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -622,8 +622,8 @@ HB_FUNC_STATIC( QDATETIMEEDIT_MINIMUMDATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDate * ptr = new QDate( obj->minimumDate () );
-      _qt4xhb_createReturnClass ( ptr, "QDATE", true );
+      QDate * ptr = new QDate( obj->minimumDate() );
+      _qt4xhb_createReturnClass( ptr, "QDATE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -647,8 +647,8 @@ HB_FUNC_STATIC( QDATETIMEEDIT_MINIMUMDATETIME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->minimumDateTime () );
-      _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+      QDateTime * ptr = new QDateTime( obj->minimumDateTime() );
+      _qt4xhb_createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -672,8 +672,8 @@ HB_FUNC_STATIC( QDATETIMEEDIT_MINIMUMTIME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTime * ptr = new QTime( obj->minimumTime () );
-      _qt4xhb_createReturnClass ( ptr, "QTIME", true );
+      QTime * ptr = new QTime( obj->minimumTime() );
+      _qt4xhb_createReturnClass( ptr, "QTIME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -697,7 +697,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SECTIONAT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RENUM( obj->sectionAt ( PINT(1) ) );
+      RENUM( obj->sectionAt( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -721,7 +721,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SECTIONCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->sectionCount () );
+      RINT( obj->sectionCount() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -745,7 +745,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SECTIONTEXT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->sectionText ( (QDateTimeEdit::Section) hb_parni(1) ) );
+      RQSTRING( obj->sectionText( (QDateTimeEdit::Section) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -769,7 +769,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETCALENDARPOPUP )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setCalendarPopup ( PBOOL(1) );
+      obj->setCalendarPopup( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -795,7 +795,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETCALENDARWIDGET )
     if( ISNUMPAR(1) && ISQCALENDARWIDGET(1) )
     {
 #endif
-      obj->setCalendarWidget ( PQCALENDARWIDGET(1) );
+      obj->setCalendarWidget( PQCALENDARWIDGET(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -821,7 +821,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETCURRENTSECTION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setCurrentSection ( (QDateTimeEdit::Section) hb_parni(1) );
+      obj->setCurrentSection( (QDateTimeEdit::Section) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -847,7 +847,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETCURRENTSECTIONINDEX )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setCurrentSectionIndex ( PINT(1) );
+      obj->setCurrentSectionIndex( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -873,7 +873,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETDATERANGE )
     if( ISNUMPAR(2) && ISQDATE(1) && ISQDATE(2) )
     {
 #endif
-      obj->setDateRange ( *PQDATE(1), *PQDATE(2) );
+      obj->setDateRange( *PQDATE(1), *PQDATE(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -899,7 +899,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETDATETIMERANGE )
     if( ISNUMPAR(2) && ISQDATETIME(1) && ISQDATETIME(2) )
     {
 #endif
-      obj->setDateTimeRange ( *PQDATETIME(1), *PQDATETIME(2) );
+      obj->setDateTimeRange( *PQDATETIME(1), *PQDATETIME(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -925,7 +925,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETDISPLAYFORMAT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setDisplayFormat ( PQSTRING(1) );
+      obj->setDisplayFormat( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -951,7 +951,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETMAXIMUMDATE )
     if( ISNUMPAR(1) && ISQDATE(1) )
     {
 #endif
-      obj->setMaximumDate ( *PQDATE(1) );
+      obj->setMaximumDate( *PQDATE(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -977,7 +977,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETMAXIMUMDATETIME )
     if( ISNUMPAR(1) && ISQDATETIME(1) )
     {
 #endif
-      obj->setMaximumDateTime ( *PQDATETIME(1) );
+      obj->setMaximumDateTime( *PQDATETIME(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1003,7 +1003,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETMAXIMUMTIME )
     if( ISNUMPAR(1) && ISQTIME(1) )
     {
 #endif
-      obj->setMaximumTime ( *PQTIME(1) );
+      obj->setMaximumTime( *PQTIME(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1029,7 +1029,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETMINIMUMDATE )
     if( ISNUMPAR(1) && ISQDATE(1) )
     {
 #endif
-      obj->setMinimumDate ( *PQDATE(1) );
+      obj->setMinimumDate( *PQDATE(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1055,7 +1055,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETMINIMUMDATETIME )
     if( ISNUMPAR(1) && ISQDATETIME(1) )
     {
 #endif
-      obj->setMinimumDateTime ( *PQDATETIME(1) );
+      obj->setMinimumDateTime( *PQDATETIME(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1081,7 +1081,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETMINIMUMTIME )
     if( ISNUMPAR(1) && ISQTIME(1) )
     {
 #endif
-      obj->setMinimumTime ( *PQTIME(1) );
+      obj->setMinimumTime( *PQTIME(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1107,7 +1107,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETSELECTEDSECTION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setSelectedSection ( (QDateTimeEdit::Section) hb_parni(1) );
+      obj->setSelectedSection( (QDateTimeEdit::Section) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1133,7 +1133,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETTIMERANGE )
     if( ISNUMPAR(2) && ISQTIME(1) && ISQTIME(2) )
     {
 #endif
-      obj->setTimeRange ( *PQTIME(1), *PQTIME(2) );
+      obj->setTimeRange( *PQTIME(1), *PQTIME(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1159,7 +1159,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETTIMESPEC )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setTimeSpec ( (Qt::TimeSpec) hb_parni(1) );
+      obj->setTimeSpec( (Qt::TimeSpec) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1185,8 +1185,8 @@ HB_FUNC_STATIC( QDATETIMEEDIT_TIME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTime * ptr = new QTime( obj->time () );
-      _qt4xhb_createReturnClass ( ptr, "QTIME", true );
+      QTime * ptr = new QTime( obj->time() );
+      _qt4xhb_createReturnClass( ptr, "QTIME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1210,7 +1210,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_TIMESPEC )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->timeSpec () );
+      RENUM( obj->timeSpec() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1234,7 +1234,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1260,7 +1260,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_EVENT )
     if( ISNUMPAR(1) && ISQEVENT(1) )
     {
 #endif
-      RBOOL( obj->event ( PQEVENT(1) ) );
+      RBOOL( obj->event( PQEVENT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1284,8 +1284,8 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint () );
-      _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->sizeHint() );
+      _qt4xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1309,7 +1309,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_STEPBY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->stepBy ( PINT(1) );
+      obj->stepBy( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1335,7 +1335,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETDATE )
     if( ISNUMPAR(1) && ISQDATE(1) )
     {
 #endif
-      obj->setDate ( *PQDATE(1) );
+      obj->setDate( *PQDATE(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1361,7 +1361,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETDATETIME )
     if( ISNUMPAR(1) && ISQDATETIME(1) )
     {
 #endif
-      obj->setDateTime ( *PQDATETIME(1) );
+      obj->setDateTime( *PQDATETIME(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1387,7 +1387,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETTIME )
     if( ISNUMPAR(1) && ISQTIME(1) )
     {
 #endif
-      obj->setTime ( *PQTIME(1) );
+      obj->setTime( *PQTIME(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1400,7 +1400,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETTIME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QDateTimeEditSlots_connect_signal ( const QString & signal, const QString & slot );
+void QDateTimeEditSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QDATETIMEEDIT_ONDATECHANGED )
 {

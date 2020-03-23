@@ -26,7 +26,7 @@ CLASS QIconEnginePlugin INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QIconEnginePlugin
+PROCEDURE destroyObject() CLASS QIconEnginePlugin
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -48,8 +48,8 @@ HB_FUNC_STATIC( QICONENGINEPLUGIN_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -74,8 +74,8 @@ HB_FUNC_STATIC( QICONENGINEPLUGIN_CREATE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QIconEngine * ptr = obj->create ( PQSTRING(1) );
-      _qt4xhb_createReturnClass ( ptr, "QICONENGINE", false );
+      QIconEngine * ptr = obj->create( PQSTRING(1) );
+      _qt4xhb_createReturnClass( ptr, "QICONENGINE", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QICONENGINEPLUGIN_KEYS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->keys () );
+      RQSTRINGLIST( obj->keys() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

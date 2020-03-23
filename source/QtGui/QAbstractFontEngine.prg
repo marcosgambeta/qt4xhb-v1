@@ -27,7 +27,7 @@ CLASS QAbstractFontEngine INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractFontEngine
+PROCEDURE destroyObject() CLASS QAbstractFontEngine
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -49,8 +49,8 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_CAPABILITIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->capabilities () );
+      RENUM( obj->capabilities() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -107,8 +107,8 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_FONTPROPERTY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->fontProperty ( (QAbstractFontEngine::FontProperty) hb_parni(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->fontProperty( (QAbstractFontEngine::FontProperty) hb_parni(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_RENDERGLYPH )
     if( ISNUMPAR(5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISCHAR(5) )
     {
 #endif
-      RBOOL( obj->renderGlyph ( PUINT(1), PINT(2), PINT(3), PINT(4), (uchar *) hb_parc(5) ) );
+      RBOOL( obj->renderGlyph( PUINT(1), PINT(2), PINT(3), PINT(4), (uchar *) hb_parc(5) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

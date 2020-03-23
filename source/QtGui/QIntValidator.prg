@@ -31,7 +31,7 @@ CLASS QIntValidator INHERIT QValidator
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QIntValidator
+PROCEDURE destroyObject() CLASS QIntValidator
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -50,18 +50,18 @@ RETURN
 /*
 QIntValidator ( QObject * parent = 0 )
 */
-void QIntValidator_new1 ()
+void QIntValidator_new1()
 {
-  QIntValidator * o = new QIntValidator ( OPQOBJECT(1,0) );
+  QIntValidator * o = new QIntValidator( OPQOBJECT(1,0) );
   _qt4xhb_returnNewObject( o, false );
 }
 
 /*
 QIntValidator ( int minimum, int maximum, QObject * parent )
 */
-void QIntValidator_new2 ()
+void QIntValidator_new2()
 {
-  QIntValidator * o = new QIntValidator ( PINT(1), PINT(2), PQOBJECT(3) );
+  QIntValidator * o = new QIntValidator( PINT(1), PINT(2), PQOBJECT(3) );
   _qt4xhb_returnNewObject( o, false );
 }
 
@@ -90,8 +90,8 @@ HB_FUNC_STATIC( QINTVALIDATOR_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_BOTTOM )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->bottom () );
+      RINT( obj->bottom() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_SETBOTTOM )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setBottom ( PINT(1) );
+      obj->setBottom( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_SETRANGE )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->setRange ( PINT(1), PINT(2) );
+      obj->setRange( PINT(1), PINT(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_SETTOP )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setTop ( PINT(1) );
+      obj->setTop( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_TOP )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->top () );
+      RINT( obj->top() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

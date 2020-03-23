@@ -32,7 +32,7 @@ CLASS QGraphicsSceneWheelEvent INHERIT QGraphicsSceneEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsSceneWheelEvent
+PROCEDURE destroyObject() CLASS QGraphicsSceneWheelEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_BUTTONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->buttons () );
+      RENUM( obj->buttons() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_DELTA )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->delta () );
+      RINT( obj->delta() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_MODIFIERS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->modifiers () );
+      RENUM( obj->modifiers() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_ORIENTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->orientation () );
+      RENUM( obj->orientation() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,8 +172,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_POS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->pos () );
-      _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+      QPointF * ptr = new QPointF( obj->pos() );
+      _qt4xhb_createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -197,8 +197,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_SCENEPOS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->scenePos () );
-      _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+      QPointF * ptr = new QPointF( obj->scenePos() );
+      _qt4xhb_createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,8 +222,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_SCREENPOS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->screenPos () );
-      _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+      QPoint * ptr = new QPoint( obj->screenPos() );
+      _qt4xhb_createReturnClass( ptr, "QPOINT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

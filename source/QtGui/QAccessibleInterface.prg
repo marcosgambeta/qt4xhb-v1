@@ -41,7 +41,7 @@ CLASS QAccessibleInterface INHERIT QAccessible
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAccessibleInterface
+PROCEDURE destroyObject() CLASS QAccessibleInterface
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_ACTIONTEXT )
     if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
     {
 #endif
-      RQSTRING( obj->actionText ( PINT(1), (QAccessible::Text) hb_parni(2), PINT(3) ) );
+      RQSTRING( obj->actionText( PINT(1), (QAccessible::Text) hb_parni(2), PINT(3) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_CHILDAT )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      RINT( obj->childAt ( PINT(1), PINT(2) ) );
+      RINT( obj->childAt( PINT(1), PINT(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_CHILDCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->childCount () );
+      RINT( obj->childCount() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_DOACTION )
           par3 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, i3+1 ), "POINTER", 0 ) );
         }
       }
-      RBOOL( obj->doAction ( PINT(1), PINT(2), par3 ) );
+      RBOOL( obj->doAction( PINT(1), PINT(2), par3 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_INDEXOFCHILD )
     if( ISNUMPAR(1) && ISQACCESSIBLEINTERFACE(1) )
     {
 #endif
-      RINT( obj->indexOfChild ( PQACCESSIBLEINTERFACE(1) ) );
+      RINT( obj->indexOfChild( PQACCESSIBLEINTERFACE(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,8 +227,8 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_INVOKEMETHOD )
           par3 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, i3+1 ), "POINTER", 0 ) );
         }
       }
-      QVariant * ptr = new QVariant( obj->invokeMethod ( (QAccessible::Method) hb_parni(1), OPINT(2,0), par3 ) );
-      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->invokeMethod( (QAccessible::Method) hb_parni(1), OPINT(2,0), par3 ) );
+      _qt4xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -276,8 +276,8 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_OBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->object ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->object();
+      _qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -301,8 +301,8 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_RECT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QRect * ptr = new QRect( obj->rect ( PINT(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+      QRect * ptr = new QRect( obj->rect( PINT(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QRECT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_RELATIONTO )
     if( ISNUMPAR(3) && ISNUM(1) && ISQACCESSIBLEINTERFACE(2) && ISNUM(3) )
     {
 #endif
-      RENUM( obj->relationTo ( PINT(1), PQACCESSIBLEINTERFACE(2), PINT(3) ) );
+      RENUM( obj->relationTo( PINT(1), PQACCESSIBLEINTERFACE(2), PINT(3) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_ROLE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RENUM( obj->role ( PINT(1) ) );
+      RENUM( obj->role( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_SETTEXT )
     if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISCHAR(3) )
     {
 #endif
-      obj->setText ( (QAccessible::Text) hb_parni(1), PINT(2), PQSTRING(3) );
+      obj->setText( (QAccessible::Text) hb_parni(1), PINT(2), PQSTRING(3) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_STATE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RENUM( obj->state ( PINT(1) ) );
+      RENUM( obj->state( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_TEXT )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      RQSTRING( obj->text ( (QAccessible::Text) hb_parni(1), PINT(2) ) );
+      RQSTRING( obj->text( (QAccessible::Text) hb_parni(1), PINT(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_USERACTIONCOUNT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RINT( obj->userActionCount ( PINT(1) ) );
+      RINT( obj->userActionCount( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

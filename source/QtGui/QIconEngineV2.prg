@@ -31,7 +31,7 @@ CLASS QIconEngineV2 INHERIT QIconEngine
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QIconEngineV2
+PROCEDURE destroyObject() CLASS QIconEngineV2
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QICONENGINEV2_AVAILABLESIZES )
     if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTNUM(2) )
     {
 #endif
-      QList<QSize> list = obj->availableSizes ( ISNIL(1)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(1), ISNIL(2)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(2) );
+      QList<QSize> list = obj->availableSizes( ISNIL(1)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(1), ISNIL(2)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(2) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSIZE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QICONENGINEV2_AVAILABLESIZES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QSize *) new QSize ( list[i] ) );
+          hb_itemPutPtr( pItem, (QSize *) new QSize( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -127,8 +127,8 @@ HB_FUNC_STATIC( QICONENGINEV2_CLONE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QIconEngineV2 * ptr = obj->clone ();
-      _qt4xhb_createReturnClass ( ptr, "QICONENGINEV2", false );
+      QIconEngineV2 * ptr = obj->clone();
+      _qt4xhb_createReturnClass( ptr, "QICONENGINEV2", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QICONENGINEV2_ICONNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->iconName () );
+      RQSTRING( obj->iconName() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QICONENGINEV2_KEY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->key () );
+      RQSTRING( obj->key() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QICONENGINEV2_READ )
     if( ISNUMPAR(1) && ISQDATASTREAM(1) )
     {
 #endif
-      RBOOL( obj->read ( *PQDATASTREAM(1) ) );
+      RBOOL( obj->read( *PQDATASTREAM(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QICONENGINEV2_VIRTUAL_HOOK )
     if( ISNUMPAR(2) && ISNUM(1) && ISPOINTER(2) )
     {
 #endif
-      obj->virtual_hook ( PINT(1), (void *) hb_parptr(2) );
+      obj->virtual_hook( PINT(1), (void *) hb_parptr(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QICONENGINEV2_WRITE )
     if( ISNUMPAR(1) && ISQDATASTREAM(1) )
     {
 #endif
-      RBOOL( obj->write ( *PQDATASTREAM(1) ) );
+      RBOOL( obj->write( *PQDATASTREAM(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

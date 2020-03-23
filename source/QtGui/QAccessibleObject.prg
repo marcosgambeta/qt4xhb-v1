@@ -31,7 +31,7 @@ CLASS QAccessibleObject INHERIT QAccessibleInterface
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAccessibleObject
+PROCEDURE destroyObject() CLASS QAccessibleObject
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_ACTIONTEXT )
     if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
     {
 #endif
-      RQSTRING( obj->actionText ( PINT(1), (QAccessibleObject::Text) hb_parni(2), PINT(3) ) );
+      RQSTRING( obj->actionText( PINT(1), (QAccessibleObject::Text) hb_parni(2), PINT(3) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_DOACTION )
       {
         par3 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, i3+1 ), "POINTER", 0 ) );
       }
-      RBOOL( obj->doAction ( PINT(1), PINT(2), par3 ) );
+      RBOOL( obj->doAction( PINT(1), PINT(2), par3 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -138,8 +138,8 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_OBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->object ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->object();
+      _qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,8 +163,8 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_RECT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QRect * ptr = new QRect( obj->rect ( PINT(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+      QRect * ptr = new QRect( obj->rect( PINT(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QRECT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_SETTEXT )
     if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISCHAR(3) )
     {
 #endif
-      obj->setText ( (QAccessibleObject::Text) hb_parni(1), PINT(2), PQSTRING(3) );
+      obj->setText( (QAccessibleObject::Text) hb_parni(1), PINT(2), PQSTRING(3) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_USERACTIONCOUNT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RINT( obj->userActionCount ( PINT(1) ) );
+      RINT( obj->userActionCount( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -36,7 +36,7 @@ CLASS QDesktopServices
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDesktopServices
+PROCEDURE destroyObject() CLASS QDesktopServices
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QDESKTOPSERVICES_DISPLAYNAME )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-    RQSTRING( QDesktopServices::displayName ( (QDesktopServices::StandardLocation) hb_parni(1) ) );
+    RQSTRING( QDesktopServices::displayName( (QDesktopServices::StandardLocation) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QDESKTOPSERVICES_OPENURL )
   if( ISNUMPAR(1) && ISQURL(1) )
   {
 #endif
-    RBOOL( QDesktopServices::openUrl ( *PQURL(1) ) );
+    RBOOL( QDesktopServices::openUrl( *PQURL(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QDESKTOPSERVICES_SETURLHANDLER )
   if( ISNUMPAR(3) && ISCHAR(1) && ISQOBJECT(2) && ISCHAR(3) )
   {
 #endif
-    QDesktopServices::setUrlHandler ( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3) );
+    QDesktopServices::setUrlHandler( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QDESKTOPSERVICES_STORAGELOCATION )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-    RQSTRING( QDesktopServices::storageLocation ( (QDesktopServices::StandardLocation) hb_parni(1) ) );
+    RQSTRING( QDesktopServices::storageLocation( (QDesktopServices::StandardLocation) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QDESKTOPSERVICES_UNSETURLHANDLER )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-    QDesktopServices::unsetUrlHandler ( PQSTRING(1) );
+    QDesktopServices::unsetUrlHandler( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

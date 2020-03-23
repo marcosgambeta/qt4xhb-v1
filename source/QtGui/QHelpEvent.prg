@@ -31,7 +31,7 @@ CLASS QHelpEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHelpEvent
+PROCEDURE destroyObject() CLASS QHelpEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -52,7 +52,7 @@ HB_FUNC_STATIC( QHELPEVENT_NEW )
 {
   if( ISNUMPAR(3) && ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) )
   {
-    QHelpEvent * o = new QHelpEvent ( (QEvent::Type) hb_parni(1), *PQPOINT(2), *PQPOINT(3) );
+    QHelpEvent * o = new QHelpEvent( (QEvent::Type) hb_parni(1), *PQPOINT(2), *PQPOINT(3) );
     _qt4xhb_returnNewObject( o, false );
   }
   else
@@ -91,8 +91,8 @@ HB_FUNC_STATIC( QHELPEVENT_GLOBALPOS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QPoint * ptr = &obj->globalPos ();
-      _qt4xhb_createReturnClass ( ptr, "QPOINT", false );
+      const QPoint * ptr = &obj->globalPos();
+      _qt4xhb_createReturnClass( ptr, "QPOINT", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QHELPEVENT_GLOBALX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->globalX () );
+      RINT( obj->globalX() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QHELPEVENT_GLOBALY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->globalY () );
+      RINT( obj->globalY() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,8 +164,8 @@ HB_FUNC_STATIC( QHELPEVENT_POS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QPoint * ptr = &obj->pos ();
-      _qt4xhb_createReturnClass ( ptr, "QPOINT", false );
+      const QPoint * ptr = &obj->pos();
+      _qt4xhb_createReturnClass( ptr, "QPOINT", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QHELPEVENT_X )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->x () );
+      RINT( obj->x() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QHELPEVENT_Y )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->y () );
+      RINT( obj->y() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

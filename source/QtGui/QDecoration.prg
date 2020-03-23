@@ -42,7 +42,7 @@ CLASS QDecoration
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDecoration
+PROCEDURE destroyObject() CLASS QDecoration
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QDECORATION_BUILDSYSMENU )
     if( ISNUMPAR(2) && ISQWIDGET(1) && ISQMENU(2) )
     {
 #endif
-      obj->buildSysMenu ( PQWIDGET(1), PQMENU(2) );
+      obj->buildSysMenu( PQWIDGET(1), PQMENU(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QDECORATION_MENUTRIGGERED )
     if( ISNUMPAR(2) && ISQWIDGET(1) && ISQACTION(2) )
     {
 #endif
-      obj->menuTriggered ( PQWIDGET(1), PQACTION(2) );
+      obj->menuTriggered( PQWIDGET(1), PQACTION(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QDECORATION_PAINT )
     if( ISBETWEEN(2,4) && ISQPAINTER(1) && ISQWIDGET(2) && ISOPTNUM(3) && ISOPTNUM(4) )
     {
 #endif
-      RBOOL( obj->paint ( PQPAINTER(1), PQWIDGET(2), OPINT(3,QDecoration::All), ISNIL(4)? (QDecoration::DecorationState) QDecoration::Normal : (QDecoration::DecorationState) hb_parni(4) ) );
+      RBOOL( obj->paint( PQPAINTER(1), PQWIDGET(2), OPINT(3,QDecoration::All), ISNIL(4)? (QDecoration::DecorationState) QDecoration::Normal : (QDecoration::DecorationState) hb_parni(4) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,28 +152,28 @@ HB_FUNC_STATIC( QDECORATION_PAINT )
 /*
 virtual QRegion region ( const QWidget * widget, const QRect & rectangle, int decorationRegion = All ) = 0
 */
-void QDecoration_region1 ()
+void QDecoration_region1()
 {
   QDecoration * obj = (QDecoration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    QRegion * ptr = new QRegion( obj->region ( PQWIDGET(1), *PQRECT(2), OPINT(3,QDecoration::All) ) );
-    _qt4xhb_createReturnClass ( ptr, "QREGION", true );
+    QRegion * ptr = new QRegion( obj->region( PQWIDGET(1), *PQRECT(2), OPINT(3,QDecoration::All) ) );
+    _qt4xhb_createReturnClass( ptr, "QREGION", true );
   }
 }
 
 /*
 QRegion region ( const QWidget * widget, int decorationRegion = All )
 */
-void QDecoration_region2 ()
+void QDecoration_region2()
 {
   QDecoration * obj = (QDecoration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    QRegion * ptr = new QRegion( obj->region ( PQWIDGET(1), OPINT(2,QDecoration::All) ) );
-    _qt4xhb_createReturnClass ( ptr, "QREGION", true );
+    QRegion * ptr = new QRegion( obj->region( PQWIDGET(1), OPINT(2,QDecoration::All) ) );
+    _qt4xhb_createReturnClass( ptr, "QREGION", true );
   }
 }
 
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QDECORATION_REGIONAT )
     if( ISNUMPAR(2) && ISQWIDGET(1) && ISQPOINT(2) )
     {
 #endif
-      RINT( obj->regionAt ( PQWIDGET(1), *PQPOINT(2) ) );
+      RINT( obj->regionAt( PQWIDGET(1), *PQPOINT(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QDECORATION_REGIONCLICKED )
     if( ISNUMPAR(2) && ISQWIDGET(1) && ISNUM(2) )
     {
 #endif
-      obj->regionClicked ( PQWIDGET(1), PINT(2) );
+      obj->regionClicked( PQWIDGET(1), PINT(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QDECORATION_REGIONDOUBLECLICKED )
     if( ISNUMPAR(2) && ISQWIDGET(1) && ISNUM(2) )
     {
 #endif
-      obj->regionDoubleClicked ( PQWIDGET(1), PINT(2) );
+      obj->regionDoubleClicked( PQWIDGET(1), PINT(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QDECORATION_STARTMOVE )
   if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
 #endif
-    QDecoration::startMove ( PQWIDGET(1) );
+    QDecoration::startMove( PQWIDGET(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QDECORATION_STARTRESIZE )
   if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
 #endif
-    QDecoration::startResize ( PQWIDGET(1) );
+    QDecoration::startResize( PQWIDGET(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

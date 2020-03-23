@@ -27,7 +27,7 @@ CLASS QImageIOPlugin INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QImageIOPlugin
+PROCEDURE destroyObject() CLASS QImageIOPlugin
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -49,8 +49,8 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_CAPABILITIES )
     if( ISNUMPAR(2) && ISQIODEVICE(1) && ISQBYTEARRAY(2) )
     {
 #endif
-      RENUM( obj->capabilities ( PQIODEVICE(1), *PQBYTEARRAY(2) ) );
+      RENUM( obj->capabilities( PQIODEVICE(1), *PQBYTEARRAY(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -99,8 +99,8 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_CREATE )
     if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISQBYTEARRAY(2)||ISNIL(2)) )
     {
 #endif
-      QImageIOHandler * ptr = obj->create ( PQIODEVICE(1), ISNIL(2)? QByteArray() : *(QByteArray *) _qt4xhb_itemGetPtr(2) );
-      _qt4xhb_createReturnClass ( ptr, "QIMAGEIOHANDLER", false );
+      QImageIOHandler * ptr = obj->create( PQIODEVICE(1), ISNIL(2)? QByteArray() : *(QByteArray *) _qt4xhb_itemGetPtr(2) );
+      _qt4xhb_createReturnClass( ptr, "QIMAGEIOHANDLER", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_KEYS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->keys () );
+      RQSTRINGLIST( obj->keys() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

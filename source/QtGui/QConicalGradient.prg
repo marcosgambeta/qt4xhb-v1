@@ -28,7 +28,7 @@ CLASS QConicalGradient INHERIT QGradient
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QConicalGradient
+PROCEDURE destroyObject() CLASS QConicalGradient
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -45,27 +45,27 @@ RETURN
 /*
 QConicalGradient()
 */
-void QConicalGradient_new1 ()
+void QConicalGradient_new1()
 {
-  QConicalGradient * o = new QConicalGradient ();
+  QConicalGradient * o = new QConicalGradient();
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QConicalGradient(const QPointF &center, qreal startAngle)
 */
-void QConicalGradient_new2 ()
+void QConicalGradient_new2()
 {
-  QConicalGradient * o = new QConicalGradient ( *PQPOINTF(1), PQREAL(2) );
+  QConicalGradient * o = new QConicalGradient( *PQPOINTF(1), PQREAL(2) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QConicalGradient(qreal cx, qreal cy, qreal startAngle)
 */
-void QConicalGradient_new3 ()
+void QConicalGradient_new3()
 {
-  QConicalGradient * o = new QConicalGradient ( PQREAL(1), PQREAL(2), PQREAL(3) );
+  QConicalGradient * o = new QConicalGradient( PQREAL(1), PQREAL(2), PQREAL(3) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_ANGLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->angle () );
+      RQREAL( obj->angle() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -130,8 +130,8 @@ HB_FUNC_STATIC( QCONICALGRADIENT_CENTER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->center () );
-      _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+      QPointF * ptr = new QPointF( obj->center() );
+      _qt4xhb_createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_SETANGLE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setAngle ( PQREAL(1) );
+      obj->setAngle( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,13 +171,13 @@ HB_FUNC_STATIC( QCONICALGRADIENT_SETANGLE )
 /*
 void setCenter ( const QPointF & center )
 */
-void QConicalGradient_setCenter1 ()
+void QConicalGradient_setCenter1()
 {
   QConicalGradient * obj = (QConicalGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    obj->setCenter ( *PQPOINTF(1) );
+    obj->setCenter( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -186,13 +186,13 @@ void QConicalGradient_setCenter1 ()
 /*
 void setCenter ( qreal x, qreal y )
 */
-void QConicalGradient_setCenter2 ()
+void QConicalGradient_setCenter2()
 {
   QConicalGradient * obj = (QConicalGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    obj->setCenter ( PQREAL(1), PQREAL(2) );
+    obj->setCenter( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

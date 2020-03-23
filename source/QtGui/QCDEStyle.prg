@@ -29,7 +29,7 @@ CLASS QCDEStyle INHERIT QMotifStyle
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCDEStyle
+PROCEDURE destroyObject() CLASS QCDEStyle
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -52,7 +52,7 @@ HB_FUNC_STATIC( QCDESTYLE_NEW )
 {
   if( ISBETWEEN(0,1) && ISOPTLOG(1) )
   {
-    QCDEStyle * o = new QCDEStyle ( OPBOOL(1,false) );
+    QCDEStyle * o = new QCDEStyle( OPBOOL(1,false) );
     _qt4xhb_returnNewObject( o, false );
   }
   else
@@ -67,8 +67,8 @@ HB_FUNC_STATIC( QCDESTYLE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QCDESTYLE_DRAWCONTROL )
     if( ISBETWEEN(3,4) && ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && (ISQWIDGET(4)||ISNIL(4)) )
     {
 #endif
-      obj->drawControl ( (QStyle::ControlElement) hb_parni(1), PQSTYLEOPTION(2), PQPAINTER(3), OPQWIDGET(4,0) );
+      obj->drawControl( (QStyle::ControlElement) hb_parni(1), PQSTYLEOPTION(2), PQPAINTER(3), OPQWIDGET(4,0) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QCDESTYLE_DRAWPRIMITIVE )
     if( ISBETWEEN(3,4) && ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && (ISQWIDGET(4)||ISNIL(4)) )
     {
 #endif
-      obj->drawPrimitive ( (QStyle::PrimitiveElement) hb_parni(1), PQSTYLEOPTION(2), PQPAINTER(3), OPQWIDGET(4,0) );
+      obj->drawPrimitive( (QStyle::PrimitiveElement) hb_parni(1), PQSTYLEOPTION(2), PQPAINTER(3), OPQWIDGET(4,0) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QCDESTYLE_PIXELMETRIC )
     if( ISBETWEEN(1,3) && ISNUM(1) && (ISQSTYLEOPTION(2)||ISNIL(2)) && (ISQWIDGET(3)||ISNIL(3)) )
     {
 #endif
-      RINT( obj->pixelMetric ( (QStyle::PixelMetric) hb_parni(1), ISNIL(2)? 0 : (QStyleOption *) _qt4xhb_itemGetPtr(2), OPQWIDGET(3,0) ) );
+      RINT( obj->pixelMetric( (QStyle::PixelMetric) hb_parni(1), ISNIL(2)? 0 : (QStyleOption *) _qt4xhb_itemGetPtr(2), OPQWIDGET(3,0) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,8 +169,8 @@ HB_FUNC_STATIC( QCDESTYLE_STANDARDPALETTE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPalette * ptr = new QPalette( obj->standardPalette () );
-      _qt4xhb_createReturnClass ( ptr, "QPALETTE", true );
+      QPalette * ptr = new QPalette( obj->standardPalette() );
+      _qt4xhb_createReturnClass( ptr, "QPALETTE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

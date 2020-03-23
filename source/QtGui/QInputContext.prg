@@ -41,7 +41,7 @@ CLASS QInputContext INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QInputContext
+PROCEDURE destroyObject() CLASS QInputContext
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -65,8 +65,8 @@ HB_FUNC_STATIC( QINPUTCONTEXT_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_ACTIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QAction *> list = obj->actions ();
+      QList<QAction *> list = obj->actions();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QACTION" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_FILTEREVENT )
     if( ISNUMPAR(1) && ISQEVENT(1) )
     {
 #endif
-      RBOOL( obj->filterEvent ( PQEVENT(1) ) );
+      RBOOL( obj->filterEvent( PQEVENT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,8 +163,8 @@ HB_FUNC_STATIC( QINPUTCONTEXT_FOCUSWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->focusWidget ();
-      _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->focusWidget();
+      _qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,8 +188,8 @@ HB_FUNC_STATIC( QINPUTCONTEXT_FONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QFont * ptr = new QFont( obj->font () );
-      _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+      QFont * ptr = new QFont( obj->font() );
+      _qt4xhb_createReturnClass( ptr, "QFONT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_IDENTIFIERNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->identifierName () );
+      RQSTRING( obj->identifierName() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_ISCOMPOSING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isComposing () );
+      RBOOL( obj->isComposing() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_LANGUAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->language () );
+      RQSTRING( obj->language() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_MOUSEHANDLER )
     if( ISNUMPAR(2) && ISNUM(1) && ISQMOUSEEVENT(2) )
     {
 #endif
-      obj->mouseHandler ( PINT(1), PQMOUSEEVENT(2) );
+      obj->mouseHandler( PINT(1), PQMOUSEEVENT(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_RESET )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->reset ();
+      obj->reset();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_SENDEVENT )
     if( ISNUMPAR(1) && ISQINPUTMETHODEVENT(1) )
     {
 #endif
-      obj->sendEvent ( *PQINPUTMETHODEVENT(1) );
+      obj->sendEvent( *PQINPUTMETHODEVENT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_SETFOCUSWIDGET )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->setFocusWidget ( PQWIDGET(1) );
+      obj->setFocusWidget( PQWIDGET(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -389,8 +389,8 @@ HB_FUNC_STATIC( QINPUTCONTEXT_STANDARDFORMAT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QTextFormat * ptr = new QTextFormat( obj->standardFormat ( (QInputContext::StandardFormat) hb_parni(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QTEXTFORMAT", true );
+      QTextFormat * ptr = new QTextFormat( obj->standardFormat( (QInputContext::StandardFormat) hb_parni(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QTEXTFORMAT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_UPDATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->update ();
+      obj->update();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_WIDGETDESTROYED )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->widgetDestroyed ( PQWIDGET(1) );
+      obj->widgetDestroyed( PQWIDGET(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

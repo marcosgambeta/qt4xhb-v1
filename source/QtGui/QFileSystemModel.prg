@@ -79,7 +79,7 @@ CLASS QFileSystemModel INHERIT QAbstractItemModel
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFileSystemModel
+PROCEDURE destroyObject() CLASS QFileSystemModel
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QFileSystemModel * o = new QFileSystemModel ( OPQOBJECT(1,0) );
+    QFileSystemModel * o = new QFileSystemModel( OPQOBJECT(1,0) );
     _qt4xhb_returnNewObject( o, false );
   }
   else
@@ -119,8 +119,8 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -145,8 +145,8 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEICON )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QIcon * ptr = new QIcon( obj->fileIcon ( *PQMODELINDEX(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QICON", true );
+      QIcon * ptr = new QIcon( obj->fileIcon( *PQMODELINDEX(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QICON", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,8 +170,8 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEINFO )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QFileInfo * ptr = new QFileInfo( obj->fileInfo ( *PQMODELINDEX(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QFILEINFO", true );
+      QFileInfo * ptr = new QFileInfo( obj->fileInfo( *PQMODELINDEX(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QFILEINFO", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILENAME )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      RQSTRING( obj->fileName ( *PQMODELINDEX(1) ) );
+      RQSTRING( obj->fileName( *PQMODELINDEX(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEPATH )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      RQSTRING( obj->filePath ( *PQMODELINDEX(1) ) );
+      RQSTRING( obj->filePath( *PQMODELINDEX(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILTER )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->filter () );
+      RENUM( obj->filter() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -267,8 +267,8 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ICONPROVIDER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QFileIconProvider * ptr = obj->iconProvider ();
-      _qt4xhb_createReturnClass ( ptr, "QFILEICONPROVIDER", false );
+      QFileIconProvider * ptr = obj->iconProvider();
+      _qt4xhb_createReturnClass( ptr, "QFILEICONPROVIDER", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ISDIR )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      RBOOL( obj->isDir ( *PQMODELINDEX(1) ) );
+      RBOOL( obj->isDir( *PQMODELINDEX(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ISREADONLY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isReadOnly () );
+      RBOOL( obj->isReadOnly() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -340,8 +340,8 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_LASTMODIFIED )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->lastModified ( *PQMODELINDEX(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+      QDateTime * ptr = new QDateTime( obj->lastModified( *PQMODELINDEX(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -365,8 +365,8 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MKDIR )
     if( ISNUMPAR(2) && ISQMODELINDEX(1) && ISCHAR(2) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->mkdir ( *PQMODELINDEX(1), PQSTRING(2) ) );
-      _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      QModelIndex * ptr = new QModelIndex( obj->mkdir( *PQMODELINDEX(1), PQSTRING(2) ) );
+      _qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -390,8 +390,8 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MYCOMPUTER )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->myComputer ( OPINT(1,Qt::DisplayRole) ) );
-      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->myComputer( OPINT(1,Qt::DisplayRole) ) );
+      _qt4xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_NAMEFILTERDISABLES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->nameFilterDisables () );
+      RBOOL( obj->nameFilterDisables() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_NAMEFILTERS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->nameFilters () );
+      RQSTRINGLIST( obj->nameFilters() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_PERMISSIONS )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      RENUM( obj->permissions ( *PQMODELINDEX(1) ) );
+      RENUM( obj->permissions( *PQMODELINDEX(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_REMOVE )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      RBOOL( obj->remove ( *PQMODELINDEX(1) ) );
+      RBOOL( obj->remove( *PQMODELINDEX(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_RESOLVESYMLINKS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->resolveSymlinks () );
+      RBOOL( obj->resolveSymlinks() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_RMDIR )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      RBOOL( obj->rmdir ( *PQMODELINDEX(1) ) );
+      RBOOL( obj->rmdir( *PQMODELINDEX(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -559,8 +559,8 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ROOTDIRECTORY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDir * ptr = new QDir( obj->rootDirectory () );
-      _qt4xhb_createReturnClass ( ptr, "QDIR", true );
+      QDir * ptr = new QDir( obj->rootDirectory() );
+      _qt4xhb_createReturnClass( ptr, "QDIR", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -584,7 +584,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ROOTPATH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->rootPath () );
+      RQSTRING( obj->rootPath() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -608,7 +608,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETFILTER )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setFilter ( (QDir::Filters) hb_parni(1) );
+      obj->setFilter( (QDir::Filters) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -634,7 +634,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETICONPROVIDER )
     if( ISNUMPAR(1) && ISQFILEICONPROVIDER(1) )
     {
 #endif
-      obj->setIconProvider ( PQFILEICONPROVIDER(1) );
+      obj->setIconProvider( PQFILEICONPROVIDER(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -660,7 +660,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETNAMEFILTERDISABLES )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setNameFilterDisables ( PBOOL(1) );
+      obj->setNameFilterDisables( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -686,7 +686,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETNAMEFILTERS )
     if( ISNUMPAR(1) && ISARRAY(1) )
     {
 #endif
-      obj->setNameFilters ( PQSTRINGLIST(1) );
+      obj->setNameFilters( PQSTRINGLIST(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -712,7 +712,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETREADONLY )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setReadOnly ( PBOOL(1) );
+      obj->setReadOnly( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -738,7 +738,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETRESOLVESYMLINKS )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setResolveSymlinks ( PBOOL(1) );
+      obj->setResolveSymlinks( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -764,8 +764,8 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETROOTPATH )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->setRootPath ( PQSTRING(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      QModelIndex * ptr = new QModelIndex( obj->setRootPath( PQSTRING(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -789,7 +789,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SIZE )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      RQINT64( obj->size ( *PQMODELINDEX(1) ) );
+      RQINT64( obj->size( *PQMODELINDEX(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -813,7 +813,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_TYPE )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      RQSTRING( obj->type ( *PQMODELINDEX(1) ) );
+      RQSTRING( obj->type( *PQMODELINDEX(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -837,7 +837,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_CANFETCHMORE )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      RBOOL( obj->canFetchMore ( *PQMODELINDEX(1) ) );
+      RBOOL( obj->canFetchMore( *PQMODELINDEX(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -861,7 +861,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_COLUMNCOUNT )
     if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||ISNIL(1)) )
     {
 #endif
-      RINT( obj->columnCount ( ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt4xhb_itemGetPtr(1) ) );
+      RINT( obj->columnCount( ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt4xhb_itemGetPtr(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -885,8 +885,8 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_DATA )
     if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && ISOPTNUM(2) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->data ( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
-      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->data( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
+      _qt4xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -910,7 +910,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_DROPMIMEDATA )
     if( ISNUMPAR(5) && ISQMIMEDATA(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISQMODELINDEX(5) )
     {
 #endif
-      RBOOL( obj->dropMimeData ( PQMIMEDATA(1), (Qt::DropAction) hb_parni(2), PINT(3), PINT(4), *PQMODELINDEX(5) ) );
+      RBOOL( obj->dropMimeData( PQMIMEDATA(1), (Qt::DropAction) hb_parni(2), PINT(3), PINT(4), *PQMODELINDEX(5) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -934,7 +934,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FETCHMORE )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      obj->fetchMore ( *PQMODELINDEX(1) );
+      obj->fetchMore( *PQMODELINDEX(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -960,7 +960,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FLAGS )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      RENUM( obj->flags ( *PQMODELINDEX(1) ) );
+      RENUM( obj->flags( *PQMODELINDEX(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -984,7 +984,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_HASCHILDREN )
     if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||ISNIL(1)) )
     {
 #endif
-      RBOOL( obj->hasChildren ( ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt4xhb_itemGetPtr(1) ) );
+      RBOOL( obj->hasChildren( ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt4xhb_itemGetPtr(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1008,8 +1008,8 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_HEADERDATA )
     if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && ISOPTNUM(3) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->headerData ( PINT(1), (Qt::Orientation) hb_parni(2), OPINT(3,Qt::DisplayRole) ) );
-      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->headerData( PINT(1), (Qt::Orientation) hb_parni(2), OPINT(3,Qt::DisplayRole) ) );
+      _qt4xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1023,28 +1023,28 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_HEADERDATA )
 /*
 QModelIndex index ( const QString & path, int column = 0 ) const
 */
-void QFileSystemModel_index1 ()
+void QFileSystemModel_index1()
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    QModelIndex * ptr = new QModelIndex( obj->index ( PQSTRING(1), OPINT(2,0) ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    QModelIndex * ptr = new QModelIndex( obj->index( PQSTRING(1), OPINT(2,0) ) );
+    _qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
   }
 }
 
 /*
 virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 */
-void QFileSystemModel_index2 ()
+void QFileSystemModel_index2()
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    QModelIndex * ptr = new QModelIndex( obj->index ( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt4xhb_itemGetPtr(3) ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    QModelIndex * ptr = new QModelIndex( obj->index( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt4xhb_itemGetPtr(3) ) );
+    _qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
   }
 }
 
@@ -1095,7 +1095,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMETYPES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->mimeTypes () );
+      RQSTRINGLIST( obj->mimeTypes() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1119,8 +1119,8 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_PARENT )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->parent ( *PQMODELINDEX(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      QModelIndex * ptr = new QModelIndex( obj->parent( *PQMODELINDEX(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1144,7 +1144,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ROWCOUNT )
     if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||ISNIL(1)) )
     {
 #endif
-      RINT( obj->rowCount ( ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt4xhb_itemGetPtr(1) ) );
+      RINT( obj->rowCount( ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt4xhb_itemGetPtr(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1168,7 +1168,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETDATA )
     if( ISBETWEEN(2,3) && ISQMODELINDEX(1) && ISQVARIANT(2) && ISOPTNUM(3) )
     {
 #endif
-      RBOOL( obj->setData ( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
+      RBOOL( obj->setData( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1192,7 +1192,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SORT )
     if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
     {
 #endif
-      obj->sort ( PINT(1), ISNIL(2)? (Qt::SortOrder) Qt::AscendingOrder : (Qt::SortOrder) hb_parni(2) );
+      obj->sort( PINT(1), ISNIL(2)? (Qt::SortOrder) Qt::AscendingOrder : (Qt::SortOrder) hb_parni(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1218,7 +1218,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SUPPORTEDDROPACTIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->supportedDropActions () );
+      RENUM( obj->supportedDropActions() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1229,7 +1229,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SUPPORTEDDROPACTIONS )
   }
 }
 
-void QFileSystemModelSlots_connect_signal ( const QString & signal, const QString & slot );
+void QFileSystemModelSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ONDIRECTORYLOADED )
 {

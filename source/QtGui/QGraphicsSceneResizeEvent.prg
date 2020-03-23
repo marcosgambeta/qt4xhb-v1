@@ -27,7 +27,7 @@ CLASS QGraphicsSceneResizeEvent INHERIT QGraphicsSceneEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsSceneResizeEvent
+PROCEDURE destroyObject() CLASS QGraphicsSceneResizeEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -48,7 +48,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QGraphicsSceneResizeEvent * o = new QGraphicsSceneResizeEvent ();
+    QGraphicsSceneResizeEvent * o = new QGraphicsSceneResizeEvent();
     _qt4xhb_returnNewObject( o, false );
   }
   else
@@ -87,8 +87,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_NEWSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->newSize () );
-      _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+      QSizeF * ptr = new QSizeF( obj->newSize() );
+      _qt4xhb_createReturnClass( ptr, "QSIZEF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -112,8 +112,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_OLDSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->oldSize () );
-      _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+      QSizeF * ptr = new QSizeF( obj->oldSize() );
+      _qt4xhb_createReturnClass( ptr, "QSIZEF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

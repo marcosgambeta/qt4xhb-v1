@@ -35,7 +35,7 @@ CLASS QAccessibleWidget INHERIT QAccessibleObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAccessibleWidget
+PROCEDURE destroyObject() CLASS QAccessibleWidget
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_NEW )
 {
   if( ISBETWEEN(1,3) && ISQWIDGET(1) && ISOPTNUM(2) && ISOPTCHAR(3) )
   {
-    QAccessibleWidget * o = new QAccessibleWidget ( PQWIDGET(1), ISNIL(2)? (QAccessible::Role) QAccessible::Client : (QAccessible::Role) hb_parni(2), OPQSTRING(3,QString()) );
+    QAccessibleWidget * o = new QAccessibleWidget( PQWIDGET(1), ISNIL(2)? (QAccessible::Role) QAccessible::Client : (QAccessible::Role) hb_parni(2), OPQSTRING(3,QString()) );
     _qt4xhb_returnNewObject( o, true );
   }
   else
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_ACTIONTEXT )
     if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
     {
 #endif
-      RQSTRING( obj->actionText ( PINT(1), (QAccessible::Text) hb_parni(2), PINT(3) ) );
+      RQSTRING( obj->actionText( PINT(1), (QAccessible::Text) hb_parni(2), PINT(3) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILDAT )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      RINT( obj->childAt ( PINT(1), PINT(2) ) );
+      RINT( obj->childAt( PINT(1), PINT(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILDCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->childCount () );
+      RINT( obj->childCount() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_DOACTION )
       {
         par3 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, i3+1 ), "POINTER", 0 ) );
       }
-      RBOOL( obj->doAction ( PINT(1), PINT(2), par3 ) );
+      RBOOL( obj->doAction( PINT(1), PINT(2), par3 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_INDEXOFCHILD )
     if( ISNUMPAR(1) && ISQACCESSIBLEINTERFACE(1) )
     {
 #endif
-      RINT( obj->indexOfChild ( PQACCESSIBLEINTERFACE(1) ) );
+      RINT( obj->indexOfChild( PQACCESSIBLEINTERFACE(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,8 +206,8 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_RECT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QRect * ptr = new QRect( obj->rect ( PINT(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+      QRect * ptr = new QRect( obj->rect( PINT(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QRECT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_RELATIONTO )
     if( ISNUMPAR(3) && ISNUM(1) && ISQACCESSIBLEINTERFACE(2) && ISNUM(3) )
     {
 #endif
-      RENUM( obj->relationTo ( PINT(1), PQACCESSIBLEINTERFACE(2), PINT(3) ) );
+      RENUM( obj->relationTo( PINT(1), PQACCESSIBLEINTERFACE(2), PINT(3) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_ROLE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RENUM( obj->role ( PINT(1) ) );
+      RENUM( obj->role( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_STATE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RENUM( obj->state ( PINT(1) ) );
+      RENUM( obj->state( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_TEXT )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      RQSTRING( obj->text ( (QAccessible::Text) hb_parni(1), PINT(2) ) );
+      RQSTRING( obj->text( (QAccessible::Text) hb_parni(1), PINT(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_USERACTIONCOUNT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RINT( obj->userActionCount ( PINT(1) ) );
+      RINT( obj->userActionCount( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

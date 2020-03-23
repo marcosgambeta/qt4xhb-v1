@@ -38,7 +38,7 @@ CLASS QGraphicsSimpleTextItem INHERIT QAbstractGraphicsShapeItem
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsSimpleTextItem
+PROCEDURE destroyObject() CLASS QGraphicsSimpleTextItem
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -57,18 +57,18 @@ RETURN
 /*
 QGraphicsSimpleTextItem ( QGraphicsItem * parent = 0 )
 */
-void QGraphicsSimpleTextItem_new1 ()
+void QGraphicsSimpleTextItem_new1()
 {
-  QGraphicsSimpleTextItem * o = new QGraphicsSimpleTextItem ( ISNIL(1)? 0 : (QGraphicsItem *) _qt4xhb_itemGetPtr(1) );
+  QGraphicsSimpleTextItem * o = new QGraphicsSimpleTextItem( ISNIL(1)? 0 : (QGraphicsItem *) _qt4xhb_itemGetPtr(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QGraphicsSimpleTextItem ( const QString & text, QGraphicsItem * parent = 0 )
 */
-void QGraphicsSimpleTextItem_new2 ()
+void QGraphicsSimpleTextItem_new2()
 {
-  QGraphicsSimpleTextItem * o = new QGraphicsSimpleTextItem ( PQSTRING(1), ISNIL(2)? 0 : (QGraphicsItem *) _qt4xhb_itemGetPtr(2) );
+  QGraphicsSimpleTextItem * o = new QGraphicsSimpleTextItem( PQSTRING(1), ISNIL(2)? 0 : (QGraphicsItem *) _qt4xhb_itemGetPtr(2) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -121,8 +121,8 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_FONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QFont * ptr = new QFont( obj->font () );
-      _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+      QFont * ptr = new QFont( obj->font() );
+      _qt4xhb_createReturnClass( ptr, "QFONT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SETFONT )
     if( ISNUMPAR(1) && ISQFONT(1) )
     {
 #endif
-      obj->setFont ( *PQFONT(1) );
+      obj->setFont( *PQFONT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SETTEXT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setText ( PQSTRING(1) );
+      obj->setText( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_TEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->text () );
+      RQSTRING( obj->text() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,8 +222,8 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_BOUNDINGRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->boundingRect () );
-      _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+      QRectF * ptr = new QRectF( obj->boundingRect() );
+      _qt4xhb_createReturnClass( ptr, "QRECTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_CONTAINS )
     if( ISNUMPAR(1) && ISQPOINTF(1) )
     {
 #endif
-      RBOOL( obj->contains ( *PQPOINTF(1) ) );
+      RBOOL( obj->contains( *PQPOINTF(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_ISOBSCUREDBY )
     if( ISNUMPAR(1) && ISQGRAPHICSITEM(1) )
     {
 #endif
-      RBOOL( obj->isObscuredBy ( PQGRAPHICSITEM(1) ) );
+      RBOOL( obj->isObscuredBy( PQGRAPHICSITEM(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -295,8 +295,8 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_OPAQUEAREA )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->opaqueArea () );
-      _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+      QPainterPath * ptr = new QPainterPath( obj->opaqueArea() );
+      _qt4xhb_createReturnClass( ptr, "QPAINTERPATH", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_PAINT )
     if( ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ISQWIDGET(3) )
     {
 #endif
-      obj->paint ( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), PQWIDGET(3) );
+      obj->paint( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), PQWIDGET(3) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -346,8 +346,8 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SHAPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->shape () );
-      _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+      QPainterPath * ptr = new QPainterPath( obj->shape() );
+      _qt4xhb_createReturnClass( ptr, "QPAINTERPATH", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->type () );
+      RINT( obj->type() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

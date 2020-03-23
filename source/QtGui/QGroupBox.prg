@@ -38,7 +38,7 @@ CLASS QGroupBox INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGroupBox
+PROCEDURE destroyObject() CLASS QGroupBox
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -57,18 +57,18 @@ RETURN
 /*
 QGroupBox ( QWidget * parent = 0 )
 */
-void QGroupBox_new1 ()
+void QGroupBox_new1()
 {
-  QGroupBox * o = new QGroupBox ( OPQWIDGET(1,0) );
+  QGroupBox * o = new QGroupBox( OPQWIDGET(1,0) );
   _qt4xhb_returnNewObject( o, false );
 }
 
 /*
 QGroupBox ( const QString & title, QWidget * parent = 0 )
 */
-void QGroupBox_new2 ()
+void QGroupBox_new2()
 {
-  QGroupBox * o = new QGroupBox ( PQSTRING(1), OPQWIDGET(2,0) );
+  QGroupBox * o = new QGroupBox( PQSTRING(1), OPQWIDGET(2,0) );
   _qt4xhb_returnNewObject( o, false );
 }
 
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QGROUPBOX_ALIGNMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->alignment () );
+      RENUM( obj->alignment() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QGROUPBOX_ISCHECKABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isCheckable () );
+      RBOOL( obj->isCheckable() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QGROUPBOX_ISCHECKED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isChecked () );
+      RBOOL( obj->isChecked() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QGROUPBOX_ISFLAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isFlat () );
+      RBOOL( obj->isFlat() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QGROUPBOX_SETALIGNMENT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setAlignment ( PINT(1) );
+      obj->setAlignment( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QGROUPBOX_SETCHECKABLE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setCheckable ( PBOOL(1) );
+      obj->setCheckable( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QGROUPBOX_SETFLAT )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setFlat ( PBOOL(1) );
+      obj->setFlat( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QGROUPBOX_SETTITLE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setTitle ( PQSTRING(1) );
+      obj->setTitle( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QGROUPBOX_TITLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->title () );
+      RQSTRING( obj->title() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -328,8 +328,8 @@ HB_FUNC_STATIC( QGROUPBOX_MINIMUMSIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->minimumSizeHint () );
-      _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->minimumSizeHint() );
+      _qt4xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QGROUPBOX_SETCHECKED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setChecked ( PBOOL(1) );
+      obj->setChecked( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QGROUPBOX_SETCHECKED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QGroupBoxSlots_connect_signal ( const QString & signal, const QString & slot );
+void QGroupBoxSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QGROUPBOX_ONCLICKED )
 {

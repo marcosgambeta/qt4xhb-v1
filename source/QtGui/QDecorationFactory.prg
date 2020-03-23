@@ -34,7 +34,7 @@ CLASS QDecorationFactory
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDecorationFactory
+PROCEDURE destroyObject() CLASS QDecorationFactory
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -57,8 +57,8 @@ HB_FUNC_STATIC( QDECORATIONFACTORY_CREATE )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-    QDecoration * ptr = QDecorationFactory::create ( PQSTRING(1) );
-    _qt4xhb_createReturnClass ( ptr, "QDECORATION", false );
+    QDecoration * ptr = QDecorationFactory::create( PQSTRING(1) );
+    _qt4xhb_createReturnClass( ptr, "QDECORATION", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QDECORATIONFACTORY_KEYS )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRINGLIST( QDecorationFactory::keys () );
+    RQSTRINGLIST( QDecorationFactory::keys() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

@@ -28,7 +28,7 @@ CLASS QGraphicsAnchor INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsAnchor
+PROCEDURE destroyObject() CLASS QGraphicsAnchor
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -50,8 +50,8 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSIZEPOLICY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setSizePolicy ( (QSizePolicy::Policy) hb_parni(1) );
+      obj->setSizePolicy( (QSizePolicy::Policy) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSPACING )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setSpacing ( PQREAL(1) );
+      obj->setSpacing( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SIZEPOLICY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->sizePolicy () );
+      RENUM( obj->sizePolicy() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SPACING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->spacing () );
+      RQREAL( obj->spacing() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_UNSETSPACING )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->unsetSpacing ();
+      obj->unsetSpacing();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

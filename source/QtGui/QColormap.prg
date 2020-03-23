@@ -41,7 +41,7 @@ CLASS QColormap
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QColormap
+PROCEDURE destroyObject() CLASS QColormap
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QCOLORMAP_NEW )
 {
   if( ISNUMPAR(1) && ISQCOLORMAP(1) )
   {
-    QColormap * o = new QColormap ( *PQCOLORMAP(1) );
+    QColormap * o = new QColormap( *PQCOLORMAP(1) );
     _qt4xhb_returnNewObject( o, true );
   }
   else
@@ -103,8 +103,8 @@ HB_FUNC_STATIC( QCOLORMAP_COLORAT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QColor * ptr = new QColor( obj->colorAt ( PUINT(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+      QColor * ptr = new QColor( obj->colorAt( PUINT(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QCOLORMAP_COLORMAP )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QVector<QColor> list = obj->colormap ();
+      const QVector<QColor> list = obj->colormap();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QCOLOR" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QCOLORMAP_COLORMAP )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QColor *) new QColor ( list[i] ) );
+          hb_itemPutPtr( pItem, (QColor *) new QColor( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QCOLORMAP_DEPTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->depth () );
+      RINT( obj->depth() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QCOLORMAP_MODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->mode () );
+      RENUM( obj->mode() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QCOLORMAP_PIXEL )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      RUINT( obj->pixel ( ISOBJECT(1)? *(QColor *) _qt4xhb_itemGetPtr(1) : QColor(hb_parc(1)) ) );
+      RUINT( obj->pixel( ISOBJECT(1)? *(QColor *) _qt4xhb_itemGetPtr(1) : QColor(hb_parc(1)) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QCOLORMAP_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->size () );
+      RINT( obj->size() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -272,8 +272,8 @@ HB_FUNC_STATIC( QCOLORMAP_INSTANCE )
   if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
 #endif
-    QColormap * ptr = new QColormap( QColormap::instance ( OPINT(1,-1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLORMAP", true );
+    QColormap * ptr = new QColormap( QColormap::instance( OPINT(1,-1) ) );
+    _qt4xhb_createReturnClass( ptr, "QCOLORMAP", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

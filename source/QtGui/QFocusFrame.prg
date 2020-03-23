@@ -26,7 +26,7 @@ CLASS QFocusFrame INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFocusFrame
+PROCEDURE destroyObject() CLASS QFocusFrame
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -49,7 +49,7 @@ HB_FUNC_STATIC( QFOCUSFRAME_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QFocusFrame * o = new QFocusFrame ( OPQWIDGET(1,0) );
+    QFocusFrame * o = new QFocusFrame( OPQWIDGET(1,0) );
     _qt4xhb_returnNewObject( o, false );
   }
   else
@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QFOCUSFRAME_SETWIDGET )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->setWidget ( PQWIDGET(1) );
+      obj->setWidget( PQWIDGET(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -97,8 +97,8 @@ HB_FUNC_STATIC( QFOCUSFRAME_WIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->widget ();
-      _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->widget();
+      _qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

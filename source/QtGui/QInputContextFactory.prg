@@ -38,7 +38,7 @@ CLASS QInputContextFactory
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QInputContextFactory
+PROCEDURE destroyObject() CLASS QInputContextFactory
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -84,8 +84,8 @@ HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_CREATE )
     if( ISNUMPAR(2) && ISCHAR(1) && ISQOBJECT(2) )
     {
 #endif
-      QInputContext * ptr = obj->create ( PQSTRING(1), PQOBJECT(2) );
-      _qt4xhb_createReturnQObjectClass ( ptr, "QINPUTCONTEXT" );
+      QInputContext * ptr = obj->create( PQSTRING(1), PQOBJECT(2) );
+      _qt4xhb_createReturnQObjectClass( ptr, "QINPUTCONTEXT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_DESCRIPTION )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-    RQSTRING( QInputContextFactory::description ( PQSTRING(1) ) );
+    RQSTRING( QInputContextFactory::description( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_DISPLAYNAME )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-    RQSTRING( QInputContextFactory::displayName ( PQSTRING(1) ) );
+    RQSTRING( QInputContextFactory::displayName( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_KEYS )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRINGLIST( QInputContextFactory::keys () );
+    RQSTRINGLIST( QInputContextFactory::keys() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_LANGUAGES )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-    RQSTRINGLIST( QInputContextFactory::languages ( PQSTRING(1) ) );
+    RQSTRINGLIST( QInputContextFactory::languages( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

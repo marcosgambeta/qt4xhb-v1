@@ -44,7 +44,7 @@ CLASS QColumnView INHERIT QAbstractItemView
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QColumnView
+PROCEDURE destroyObject() CLASS QColumnView
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QColumnView * o = new QColumnView ( OPQWIDGET(1,0) );
+    QColumnView * o = new QColumnView( OPQWIDGET(1,0) );
     _qt4xhb_returnNewObject( o, false );
   }
   else
@@ -82,8 +82,8 @@ HB_FUNC_STATIC( QCOLUMNVIEW_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -108,8 +108,8 @@ HB_FUNC_STATIC( QCOLUMNVIEW_COLUMNWIDTHS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<int> list = obj->columnWidths ();
-      _qt4xhb_convert_qlist_int_to_array ( list );
+      QList<int> list = obj->columnWidths();
+      _qt4xhb_convert_qlist_int_to_array( list );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,8 +133,8 @@ HB_FUNC_STATIC( QCOLUMNVIEW_PREVIEWWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->previewWidget ();
-      _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->previewWidget();
+      _qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_RESIZEGRIPSVISIBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->resizeGripsVisible () );
+      RBOOL( obj->resizeGripsVisible() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SETCOLUMNWIDTHS )
         temp1 = hb_arrayGetNI(aList1, i1+1);
         par1 << temp1;
       }
-      obj->setColumnWidths ( par1 );
+      obj->setColumnWidths( par1 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SETPREVIEWWIDGET )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->setPreviewWidget ( PQWIDGET(1) );
+      obj->setPreviewWidget( PQWIDGET(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SETRESIZEGRIPSVISIBLE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setResizeGripsVisible ( PBOOL(1) );
+      obj->setResizeGripsVisible( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -270,8 +270,8 @@ HB_FUNC_STATIC( QCOLUMNVIEW_INDEXAT )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->indexAt ( *PQPOINT(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      QModelIndex * ptr = new QModelIndex( obj->indexAt( *PQPOINT(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SCROLLTO )
     if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && ISOPTNUM(2) )
     {
 #endif
-      obj->scrollTo ( *PQMODELINDEX(1), ISNIL(2)? (QColumnView::ScrollHint) QColumnView::EnsureVisible : (QColumnView::ScrollHint) hb_parni(2) );
+      obj->scrollTo( *PQMODELINDEX(1), ISNIL(2)? (QColumnView::ScrollHint) QColumnView::EnsureVisible : (QColumnView::ScrollHint) hb_parni(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SELECTALL )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->selectAll ();
+      obj->selectAll();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SETMODEL )
     if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
     {
 #endif
-      obj->setModel ( PQABSTRACTITEMMODEL(1) );
+      obj->setModel( PQABSTRACTITEMMODEL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SETROOTINDEX )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      obj->setRootIndex ( *PQMODELINDEX(1) );
+      obj->setRootIndex( *PQMODELINDEX(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SETSELECTIONMODEL )
     if( ISNUMPAR(1) && ISQITEMSELECTIONMODEL(1) )
     {
 #endif
-      obj->setSelectionModel ( PQITEMSELECTIONMODEL(1) );
+      obj->setSelectionModel( PQITEMSELECTIONMODEL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -425,8 +425,8 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint () );
-      _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->sizeHint() );
+      _qt4xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -450,8 +450,8 @@ HB_FUNC_STATIC( QCOLUMNVIEW_VISUALRECT )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QRect * ptr = new QRect( obj->visualRect ( *PQMODELINDEX(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+      QRect * ptr = new QRect( obj->visualRect( *PQMODELINDEX(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QRECT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_VISUALRECT )
   }
 }
 
-void QColumnViewSlots_connect_signal ( const QString & signal, const QString & slot );
+void QColumnViewSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QCOLUMNVIEW_ONUPDATEPREVIEWWIDGET )
 {

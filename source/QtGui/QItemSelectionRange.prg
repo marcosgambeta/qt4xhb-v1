@@ -51,7 +51,7 @@ CLASS QItemSelectionRange
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QItemSelectionRange
+PROCEDURE destroyObject() CLASS QItemSelectionRange
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -68,36 +68,36 @@ RETURN
 /*
 QItemSelectionRange ()
 */
-void QItemSelectionRange_new1 ()
+void QItemSelectionRange_new1()
 {
-  QItemSelectionRange * o = new QItemSelectionRange ();
+  QItemSelectionRange * o = new QItemSelectionRange();
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QItemSelectionRange ( const QItemSelectionRange & other )
 */
-void QItemSelectionRange_new2 ()
+void QItemSelectionRange_new2()
 {
-  QItemSelectionRange * o = new QItemSelectionRange ( *PQITEMSELECTIONRANGE(1) );
+  QItemSelectionRange * o = new QItemSelectionRange( *PQITEMSELECTIONRANGE(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QItemSelectionRange ( const QModelIndex & topLeft, const QModelIndex & bottomRight )
 */
-void QItemSelectionRange_new3 ()
+void QItemSelectionRange_new3()
 {
-  QItemSelectionRange * o = new QItemSelectionRange ( *PQMODELINDEX(1), *PQMODELINDEX(2) );
+  QItemSelectionRange * o = new QItemSelectionRange( *PQMODELINDEX(1), *PQMODELINDEX(2) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QItemSelectionRange ( const QModelIndex & index )
 */
-void QItemSelectionRange_new4 ()
+void QItemSelectionRange_new4()
 {
-  QItemSelectionRange * o = new QItemSelectionRange ( *PQMODELINDEX(1) );
+  QItemSelectionRange * o = new QItemSelectionRange( *PQMODELINDEX(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_BOTTOM )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->bottom () );
+      RINT( obj->bottom() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,8 +184,8 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_BOTTOMRIGHT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->bottomRight () );
-      _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      QModelIndex * ptr = new QModelIndex( obj->bottomRight() );
+      _qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,26 +199,26 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_BOTTOMRIGHT )
 /*
 bool contains ( const QModelIndex & index ) const
 */
-void QItemSelectionRange_contains1 ()
+void QItemSelectionRange_contains1()
 {
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RBOOL( obj->contains ( *PQMODELINDEX(1) ) );
+    RBOOL( obj->contains( *PQMODELINDEX(1) ) );
   }
 }
 
 /*
 bool contains ( int row, int column, const QModelIndex & parentIndex ) const
 */
-void QItemSelectionRange_contains2 ()
+void QItemSelectionRange_contains2()
 {
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RBOOL( obj->contains ( PINT(1), PINT(2), *PQMODELINDEX(3) ) );
+    RBOOL( obj->contains( PINT(1), PINT(2), *PQMODELINDEX(3) ) );
   }
 }
 
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_HEIGHT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->height () );
+      RINT( obj->height() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_INDEXES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QModelIndexList list = obj->indexes ();
+      QModelIndexList list = obj->indexes();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -330,8 +330,8 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTED )
     if( ISNUMPAR(1) && ISQITEMSELECTIONRANGE(1) )
     {
 #endif
-      QItemSelectionRange * ptr = new QItemSelectionRange( obj->intersected ( *PQITEMSELECTIONRANGE(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QITEMSELECTIONRANGE", true );
+      QItemSelectionRange * ptr = new QItemSelectionRange( obj->intersected( *PQITEMSELECTIONRANGE(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QITEMSELECTIONRANGE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTS )
     if( ISNUMPAR(1) && ISQITEMSELECTIONRANGE(1) )
     {
 #endif
-      RBOOL( obj->intersects ( *PQITEMSELECTIONRANGE(1) ) );
+      RBOOL( obj->intersects( *PQITEMSELECTIONRANGE(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_ISEMPTY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isEmpty () );
+      RBOOL( obj->isEmpty() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_LEFT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->left () );
+      RINT( obj->left() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -451,8 +451,8 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_MODEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QAbstractItemModel * ptr = obj->model ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QABSTRACTITEMMODEL" );
+      const QAbstractItemModel * ptr = obj->model();
+      _qt4xhb_createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -476,8 +476,8 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_PARENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->parent () );
-      _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      QModelIndex * ptr = new QModelIndex( obj->parent() );
+      _qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_RIGHT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->right () );
+      RINT( obj->right() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_TOP )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->top () );
+      RINT( obj->top() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -549,8 +549,8 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_TOPLEFT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->topLeft () );
-      _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      QModelIndex * ptr = new QModelIndex( obj->topLeft() );
+      _qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -574,7 +574,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_WIDTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->width () );
+      RINT( obj->width() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -35,7 +35,7 @@ CLASS QGraphicsPathItem INHERIT QAbstractGraphicsShapeItem
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsPathItem
+PROCEDURE destroyObject() CLASS QGraphicsPathItem
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -52,18 +52,18 @@ RETURN
 /*
 QGraphicsPathItem ( QGraphicsItem * parent = 0 )
 */
-void QGraphicsPathItem_new1 ()
+void QGraphicsPathItem_new1()
 {
-  QGraphicsPathItem * o = new QGraphicsPathItem ( ISNIL(1)? 0 : (QGraphicsItem *) _qt4xhb_itemGetPtr(1) );
+  QGraphicsPathItem * o = new QGraphicsPathItem( ISNIL(1)? 0 : (QGraphicsItem *) _qt4xhb_itemGetPtr(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QGraphicsPathItem ( const QPainterPath & path, QGraphicsItem * parent = 0 )
 */
-void QGraphicsPathItem_new2 ()
+void QGraphicsPathItem_new2()
 {
-  QGraphicsPathItem * o = new QGraphicsPathItem ( *PQPAINTERPATH(1), ISNIL(2)? 0 : (QGraphicsItem *) _qt4xhb_itemGetPtr(2) );
+  QGraphicsPathItem * o = new QGraphicsPathItem( *PQPAINTERPATH(1), ISNIL(2)? 0 : (QGraphicsItem *) _qt4xhb_itemGetPtr(2) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -116,8 +116,8 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_PATH )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->path () );
-      _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+      QPainterPath * ptr = new QPainterPath( obj->path() );
+      _qt4xhb_createReturnClass( ptr, "QPAINTERPATH", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_SETPATH )
     if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
     {
 #endif
-      obj->setPath ( *PQPAINTERPATH(1) );
+      obj->setPath( *PQPAINTERPATH(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,8 +167,8 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_BOUNDINGRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->boundingRect () );
-      _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+      QRectF * ptr = new QRectF( obj->boundingRect() );
+      _qt4xhb_createReturnClass( ptr, "QRECTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_CONTAINS )
     if( ISNUMPAR(1) && ISQPOINTF(1) )
     {
 #endif
-      RBOOL( obj->contains ( *PQPOINTF(1) ) );
+      RBOOL( obj->contains( *PQPOINTF(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_ISOBSCUREDBY )
     if( ISNUMPAR(1) && ISQGRAPHICSITEM(1) )
     {
 #endif
-      RBOOL( obj->isObscuredBy ( PQGRAPHICSITEM(1) ) );
+      RBOOL( obj->isObscuredBy( PQGRAPHICSITEM(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -240,8 +240,8 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_OPAQUEAREA )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->opaqueArea () );
-      _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+      QPainterPath * ptr = new QPainterPath( obj->opaqueArea() );
+      _qt4xhb_createReturnClass( ptr, "QPAINTERPATH", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_PAINT )
     if( ISBETWEEN(2,3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3)||ISNIL(3)) )
     {
 #endif
-      obj->paint ( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,0) );
+      obj->paint( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,0) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -291,8 +291,8 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_SHAPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->shape () );
-      _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+      QPainterPath * ptr = new QPainterPath( obj->shape() );
+      _qt4xhb_createReturnClass( ptr, "QPAINTERPATH", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->type () );
+      RINT( obj->type() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

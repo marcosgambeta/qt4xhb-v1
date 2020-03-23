@@ -36,7 +36,7 @@ CLASS QAccessible
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAccessible
+PROCEDURE destroyObject() CLASS QAccessible
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QACCESSIBLE_ISACTIVE )
   if( ISNUMPAR(0) )
   {
 #endif
-    RBOOL( QAccessible::isActive () );
+    RBOOL( QAccessible::isActive() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -78,8 +78,8 @@ HB_FUNC_STATIC( QACCESSIBLE_QUERYACCESSIBLEINTERFACE )
   if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
 #endif
-    QAccessibleInterface * ptr = QAccessible::queryAccessibleInterface ( PQOBJECT(1) );
-    _qt4xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE", false );
+    QAccessibleInterface * ptr = QAccessible::queryAccessibleInterface( PQOBJECT(1) );
+    _qt4xhb_createReturnClass( ptr, "QACCESSIBLEINTERFACE", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QACCESSIBLE_SETROOTOBJECT )
   if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
 #endif
-    QAccessible::setRootObject ( PQOBJECT(1) );
+    QAccessible::setRootObject( PQOBJECT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QACCESSIBLE_UPDATEACCESSIBILITY )
   if( ISNUMPAR(3) && ISQOBJECT(1) && ISNUM(2) && ISNUM(3) )
   {
 #endif
-    QAccessible::updateAccessibility ( PQOBJECT(1), PINT(2), (QAccessible::Event) hb_parni(3) );
+    QAccessible::updateAccessibility( PQOBJECT(1), PINT(2), (QAccessible::Event) hb_parni(3) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

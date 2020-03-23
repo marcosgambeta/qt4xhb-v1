@@ -43,7 +43,7 @@ CLASS QAbstractScrollArea INHERIT QFrame
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractScrollArea
+PROCEDURE destroyObject() CLASS QAbstractScrollArea
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -67,8 +67,8 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_ADDSCROLLBARWIDGET )
     if( ISNUMPAR(2) && ISQWIDGET(1) && ISNUM(2) )
     {
 #endif
-      obj->addScrollBarWidget ( PQWIDGET(1), (Qt::Alignment) hb_parni(2) );
+      obj->addScrollBarWidget( PQWIDGET(1), (Qt::Alignment) hb_parni(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -119,8 +119,8 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_CORNERWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->cornerWidget ();
-      _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->cornerWidget();
+      _qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,8 +144,8 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScrollBar * ptr = obj->horizontalScrollBar ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QSCROLLBAR" );
+      QScrollBar * ptr = obj->horizontalScrollBar();
+      _qt4xhb_createReturnQObjectClass( ptr, "QSCROLLBAR" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBARPOLICY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->horizontalScrollBarPolicy () );
+      RENUM( obj->horizontalScrollBarPolicy() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,8 +193,8 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_MAXIMUMVIEWPORTSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->maximumViewportSize () );
-      _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->maximumViewportSize() );
+      _qt4xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SCROLLBARWIDGETS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QWidgetList list = obj->scrollBarWidgets ( (Qt::Alignment) hb_parni(1) );
+      QWidgetList list = obj->scrollBarWidgets( (Qt::Alignment) hb_parni(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QWIDGET" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETCORNERWIDGET )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->setCornerWidget ( PQWIDGET(1) );
+      obj->setCornerWidget( PQWIDGET(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBAR )
     if( ISNUMPAR(1) && ISQSCROLLBAR(1) )
     {
 #endif
-      obj->setHorizontalScrollBar ( PQSCROLLBAR(1) );
+      obj->setHorizontalScrollBar( PQSCROLLBAR(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBARPOLICY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setHorizontalScrollBarPolicy ( (Qt::ScrollBarPolicy) hb_parni(1) );
+      obj->setHorizontalScrollBarPolicy( (Qt::ScrollBarPolicy) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVERTICALSCROLLBAR )
     if( ISNUMPAR(1) && ISQSCROLLBAR(1) )
     {
 #endif
-      obj->setVerticalScrollBar ( PQSCROLLBAR(1) );
+      obj->setVerticalScrollBar( PQSCROLLBAR(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVERTICALSCROLLBARPOLICY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setVerticalScrollBarPolicy ( (Qt::ScrollBarPolicy) hb_parni(1) );
+      obj->setVerticalScrollBarPolicy( (Qt::ScrollBarPolicy) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVIEWPORT )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->setViewport ( PQWIDGET(1) );
+      obj->setViewport( PQWIDGET(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -422,8 +422,8 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VERTICALSCROLLBAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScrollBar * ptr = obj->verticalScrollBar ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QSCROLLBAR" );
+      QScrollBar * ptr = obj->verticalScrollBar();
+      _qt4xhb_createReturnQObjectClass( ptr, "QSCROLLBAR" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VERTICALSCROLLBARPOLICY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->verticalScrollBarPolicy () );
+      RENUM( obj->verticalScrollBarPolicy() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -471,8 +471,8 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VIEWPORT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->viewport ();
-      _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->viewport();
+      _qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -496,8 +496,8 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_MINIMUMSIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->minimumSizeHint () );
-      _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->minimumSizeHint() );
+      _qt4xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -521,8 +521,8 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint () );
-      _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->sizeHint() );
+      _qt4xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

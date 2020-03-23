@@ -34,7 +34,7 @@ CLASS QGenericPluginFactory
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGenericPluginFactory
+PROCEDURE destroyObject() CLASS QGenericPluginFactory
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -61,8 +61,8 @@ HB_FUNC_STATIC( QGENERICPLUGINFACTORY_CREATE )
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
     {
 #endif
-      QObject * ptr = obj->create ( PQSTRING(1), PQSTRING(2) );
-      _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->create( PQSTRING(1), PQSTRING(2) );
+      _qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QGENERICPLUGINFACTORY_KEYS )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRINGLIST( QGenericPluginFactory::keys () );
+    RQSTRINGLIST( QGenericPluginFactory::keys() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

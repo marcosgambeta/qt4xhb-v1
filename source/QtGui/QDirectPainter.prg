@@ -43,7 +43,7 @@ CLASS QDirectPainter INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDirectPainter
+PROCEDURE destroyObject() CLASS QDirectPainter
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQOBJECT(1)||ISNIL(1)) && ISOPTNUM(2) )
   {
-    QDirectPainter * o = new QDirectPainter ( OPQOBJECT(1,0), ISNIL(2)? (QDirectPainter::SurfaceFlag) QDirectPainter::NonReserved : (QDirectPainter::SurfaceFlag) hb_parni(2) );
+    QDirectPainter * o = new QDirectPainter( OPQOBJECT(1,0), ISNIL(2)? (QDirectPainter::SurfaceFlag) QDirectPainter::NonReserved : (QDirectPainter::SurfaceFlag) hb_parni(2) );
     _qt4xhb_returnNewObject( o, false );
   }
   else
@@ -81,8 +81,8 @@ HB_FUNC_STATIC( QDIRECTPAINTER_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -107,8 +107,8 @@ HB_FUNC_STATIC( QDIRECTPAINTER_ALLOCATEDREGION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRegion * ptr = new QRegion( obj->allocatedRegion () );
-      _qt4xhb_createReturnClass ( ptr, "QREGION", true );
+      QRegion * ptr = new QRegion( obj->allocatedRegion() );
+      _qt4xhb_createReturnClass( ptr, "QREGION", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -122,13 +122,13 @@ HB_FUNC_STATIC( QDIRECTPAINTER_ALLOCATEDREGION )
 /*
 void endPainting ()
 */
-void QDirectPainter_endPainting1 ()
+void QDirectPainter_endPainting1()
 {
   QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    obj->endPainting ();
+    obj->endPainting();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -137,13 +137,13 @@ void QDirectPainter_endPainting1 ()
 /*
 void endPainting ( const QRegion & region )
 */
-void QDirectPainter_endPainting2 ()
+void QDirectPainter_endPainting2()
 {
   QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    obj->endPainting ( *PQREGION(1) );
+    obj->endPainting( *PQREGION(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_FLUSH )
     if( ISNUMPAR(1) && ISQREGION(1) )
     {
 #endif
-      obj->flush ( *PQREGION(1) );
+      obj->flush( *PQREGION(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,8 +207,8 @@ HB_FUNC_STATIC( QDIRECTPAINTER_GEOMETRY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->geometry () );
-      _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+      QRect * ptr = new QRect( obj->geometry() );
+      _qt4xhb_createReturnClass( ptr, "QRECT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_LOWER )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->lower ();
+      obj->lower();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_RAISE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->raise ();
+      obj->raise();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_REGIONCHANGED )
     if( ISNUMPAR(1) && ISQREGION(1) )
     {
 #endif
-      obj->regionChanged ( *PQREGION(1) );
+      obj->regionChanged( *PQREGION(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -310,8 +310,8 @@ HB_FUNC_STATIC( QDIRECTPAINTER_REQUESTEDREGION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRegion * ptr = new QRegion( obj->requestedRegion () );
-      _qt4xhb_createReturnClass ( ptr, "QREGION", true );
+      QRegion * ptr = new QRegion( obj->requestedRegion() );
+      _qt4xhb_createReturnClass( ptr, "QREGION", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_SETGEOMETRY )
     if( ISNUMPAR(1) && ISQRECT(1) )
     {
 #endif
-      obj->setGeometry ( *PQRECT(1) );
+      obj->setGeometry( *PQRECT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_SETREGION )
     if( ISNUMPAR(1) && ISQREGION(1) )
     {
 #endif
-      obj->setRegion ( *PQREGION(1) );
+      obj->setRegion( *PQREGION(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_STARTPAINTING )
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
     {
 #endif
-      obj->startPainting ( OPBOOL(1,true) );
+      obj->startPainting( OPBOOL(1,true) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_LINESTEP )
   if( ISNUMPAR(0) )
   {
 #endif
-    RINT( QDirectPainter::linestep () );
+    RINT( QDirectPainter::linestep() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_LOCK )
   if( ISNUMPAR(0) )
   {
 #endif
-    QDirectPainter::lock ();
+    QDirectPainter::lock();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_SCREENDEPTH )
   if( ISNUMPAR(0) )
   {
 #endif
-    RINT( QDirectPainter::screenDepth () );
+    RINT( QDirectPainter::screenDepth() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_SCREENHEIGHT )
   if( ISNUMPAR(0) )
   {
 #endif
-    RINT( QDirectPainter::screenHeight () );
+    RINT( QDirectPainter::screenHeight() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_SCREENWIDTH )
   if( ISNUMPAR(0) )
   {
 #endif
-    RINT( QDirectPainter::screenWidth () );
+    RINT( QDirectPainter::screenWidth() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_UNLOCK )
   if( ISNUMPAR(0) )
   {
 #endif
-    QDirectPainter::unlock ();
+    QDirectPainter::unlock();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

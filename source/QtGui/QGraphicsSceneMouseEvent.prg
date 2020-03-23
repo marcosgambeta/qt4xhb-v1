@@ -37,7 +37,7 @@ CLASS QGraphicsSceneMouseEvent INHERIT QGraphicsSceneEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsSceneMouseEvent
+PROCEDURE destroyObject() CLASS QGraphicsSceneMouseEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTON )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->button () );
+      RENUM( obj->button() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -105,8 +105,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNPOS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->buttonDownPos ( (Qt::MouseButton) hb_parni(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+      QPointF * ptr = new QPointF( obj->buttonDownPos( (Qt::MouseButton) hb_parni(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -130,8 +130,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCENEPOS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->buttonDownScenePos ( (Qt::MouseButton) hb_parni(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+      QPointF * ptr = new QPointF( obj->buttonDownScenePos( (Qt::MouseButton) hb_parni(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,8 +155,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCREENPOS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->buttonDownScreenPos ( (Qt::MouseButton) hb_parni(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+      QPoint * ptr = new QPoint( obj->buttonDownScreenPos( (Qt::MouseButton) hb_parni(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QPOINT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->buttons () );
+      RENUM( obj->buttons() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,8 +204,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_LASTPOS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->lastPos () );
-      _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+      QPointF * ptr = new QPointF( obj->lastPos() );
+      _qt4xhb_createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -229,8 +229,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_LASTSCENEPOS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->lastScenePos () );
-      _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+      QPointF * ptr = new QPointF( obj->lastScenePos() );
+      _qt4xhb_createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -254,8 +254,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_LASTSCREENPOS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->lastScreenPos () );
-      _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+      QPoint * ptr = new QPoint( obj->lastScreenPos() );
+      _qt4xhb_createReturnClass( ptr, "QPOINT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_MODIFIERS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->modifiers () );
+      RENUM( obj->modifiers() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -303,8 +303,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_POS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->pos () );
-      _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+      QPointF * ptr = new QPointF( obj->pos() );
+      _qt4xhb_createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -328,8 +328,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_SCENEPOS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->scenePos () );
-      _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+      QPointF * ptr = new QPointF( obj->scenePos() );
+      _qt4xhb_createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -353,8 +353,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_SCREENPOS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->screenPos () );
-      _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+      QPoint * ptr = new QPoint( obj->screenPos() );
+      _qt4xhb_createReturnClass( ptr, "QPOINT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

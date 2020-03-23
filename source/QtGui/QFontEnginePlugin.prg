@@ -28,7 +28,7 @@ CLASS QFontEnginePlugin INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFontEnginePlugin
+PROCEDURE destroyObject() CLASS QFontEnginePlugin
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -50,8 +50,8 @@ HB_FUNC_STATIC( QFONTENGINEPLUGIN_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QFONTENGINEPLUGIN_AVAILABLEFONTENGINES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QFontEngineInfo> list = obj->availableFontEngines ();
+      QList<QFontEngineInfo> list = obj->availableFontEngines();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QFONTENGINEINFO" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QFONTENGINEPLUGIN_AVAILABLEFONTENGINES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QFontEngineInfo *) new QFontEngineInfo ( list[i] ) );
+          hb_itemPutPtr( pItem, (QFontEngineInfo *) new QFontEngineInfo( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -128,8 +128,8 @@ HB_FUNC_STATIC( QFONTENGINEPLUGIN_CREATE )
     if( ISNUMPAR(1) && ISQFONTENGINEINFO(1) )
     {
 #endif
-      QAbstractFontEngine * ptr = obj->create ( *PQFONTENGINEINFO(1) );
-      _qt4xhb_createReturnQObjectClass ( ptr, "QABSTRACTFONTENGINE" );
+      QAbstractFontEngine * ptr = obj->create( *PQFONTENGINEINFO(1) );
+      _qt4xhb_createReturnQObjectClass( ptr, "QABSTRACTFONTENGINE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QFONTENGINEPLUGIN_KEYS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->keys () );
+      RQSTRINGLIST( obj->keys() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

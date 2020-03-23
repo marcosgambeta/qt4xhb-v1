@@ -43,7 +43,7 @@ CLASS QFontEngineInfo
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFontEngineInfo
+PROCEDURE destroyObject() CLASS QFontEngineInfo
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -60,27 +60,27 @@ RETURN
 /*
 QFontEngineInfo ()
 */
-void QFontEngineInfo_new1 ()
+void QFontEngineInfo_new1()
 {
-  QFontEngineInfo * o = new QFontEngineInfo ();
+  QFontEngineInfo * o = new QFontEngineInfo();
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QFontEngineInfo ( const QString & family )
 */
-void QFontEngineInfo_new2 ()
+void QFontEngineInfo_new2()
 {
-  QFontEngineInfo * o = new QFontEngineInfo ( PQSTRING(1) );
+  QFontEngineInfo * o = new QFontEngineInfo( PQSTRING(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QFontEngineInfo ( const QFontEngineInfo & other )
 */
-void QFontEngineInfo_new3 ()
+void QFontEngineInfo_new3()
 {
-  QFontEngineInfo * o = new QFontEngineInfo ( *PQFONTENGINEINFO(1) );
+  QFontEngineInfo * o = new QFontEngineInfo( *PQFONTENGINEINFO(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_FAMILY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->family () );
+      RQSTRING( obj->family() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_PIXELSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->pixelSize () );
+      RQREAL( obj->pixelSize() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_SETFAMILY )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setFamily ( PQSTRING(1) );
+      obj->setFamily( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_SETPIXELSIZE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setPixelSize ( PQREAL(1) );
+      obj->setPixelSize( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_SETSTYLE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setStyle ( (QFont::Style) hb_parni(1) );
+      obj->setStyle( (QFont::Style) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_SETWEIGHT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setWeight ( PINT(1) );
+      obj->setWeight( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_SETWRITINGSYSTEMS )
       {
         par1 << (QFontDatabase::WritingSystem) hb_arrayGetNI(aList1, i1+1);
       }
-      obj->setWritingSystems ( par1 );
+      obj->setWritingSystems( par1 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_STYLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->style () );
+      RENUM( obj->style() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_WEIGHT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->weight () );
+      RINT( obj->weight() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_WRITINGSYSTEMS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QFontDatabase::WritingSystem> list = obj->writingSystems ();
+      QList<QFontDatabase::WritingSystem> list = obj->writingSystems();
       PHB_ITEM pArray = hb_itemArrayNew(0);
       for( int i = 0; i < list.count(); i++ )
       {

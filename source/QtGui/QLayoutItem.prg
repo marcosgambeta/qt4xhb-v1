@@ -54,7 +54,7 @@ CLASS QLayoutItem
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QLayoutItem
+PROCEDURE destroyObject() CLASS QLayoutItem
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_ALIGNMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->alignment () );
+      RENUM( obj->alignment() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_CONTROLTYPES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->controlTypes () );
+      RENUM( obj->controlTypes() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_EXPANDINGDIRECTIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->expandingDirections () );
+      RENUM( obj->expandingDirections() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,8 +172,8 @@ HB_FUNC_STATIC( QLAYOUTITEM_GEOMETRY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->geometry () );
-      _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+      QRect * ptr = new QRect( obj->geometry() );
+      _qt4xhb_createReturnClass( ptr, "QRECT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_HASHEIGHTFORWIDTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasHeightForWidth () );
+      RBOOL( obj->hasHeightForWidth() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_HEIGHTFORWIDTH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RINT( obj->heightForWidth ( PINT(1) ) );
+      RINT( obj->heightForWidth( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_INVALIDATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->invalidate ();
+      obj->invalidate();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_ISEMPTY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isEmpty () );
+      RBOOL( obj->isEmpty() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -295,8 +295,8 @@ HB_FUNC_STATIC( QLAYOUTITEM_LAYOUT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QLayout * ptr = obj->layout ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QLAYOUT" );
+      QLayout * ptr = obj->layout();
+      _qt4xhb_createReturnQObjectClass( ptr, "QLAYOUT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -320,8 +320,8 @@ HB_FUNC_STATIC( QLAYOUTITEM_MAXIMUMSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->maximumSize () );
-      _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->maximumSize() );
+      _qt4xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_MINIMUMHEIGHTFORWIDTH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RINT( obj->minimumHeightForWidth ( PINT(1) ) );
+      RINT( obj->minimumHeightForWidth( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -369,8 +369,8 @@ HB_FUNC_STATIC( QLAYOUTITEM_MINIMUMSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->minimumSize () );
-      _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->minimumSize() );
+      _qt4xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_SETALIGNMENT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setAlignment ( (Qt::Alignment) hb_parni(1) );
+      obj->setAlignment( (Qt::Alignment) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_SETGEOMETRY )
     if( ISNUMPAR(1) && ISQRECT(1) )
     {
 #endif
-      obj->setGeometry ( *PQRECT(1) );
+      obj->setGeometry( *PQRECT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -446,8 +446,8 @@ HB_FUNC_STATIC( QLAYOUTITEM_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint () );
-      _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->sizeHint() );
+      _qt4xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -471,8 +471,8 @@ HB_FUNC_STATIC( QLAYOUTITEM_SPACERITEM )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSpacerItem * ptr = obj->spacerItem ();
-      _qt4xhb_createReturnClass ( ptr, "QSPACERITEM", false );
+      QSpacerItem * ptr = obj->spacerItem();
+      _qt4xhb_createReturnClass( ptr, "QSPACERITEM", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -496,8 +496,8 @@ HB_FUNC_STATIC( QLAYOUTITEM_WIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->widget ();
-      _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->widget();
+      _qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

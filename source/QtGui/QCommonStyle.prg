@@ -40,7 +40,7 @@ CLASS QCommonStyle INHERIT QStyle
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCommonStyle
+PROCEDURE destroyObject() CLASS QCommonStyle
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QCOMMONSTYLE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QCommonStyle * o = new QCommonStyle ();
+    QCommonStyle * o = new QCommonStyle();
     _qt4xhb_returnNewObject( o, false );
   }
   else
@@ -78,8 +78,8 @@ HB_FUNC_STATIC( QCOMMONSTYLE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QCOMMONSTYLE_DRAWCOMPLEXCONTROL )
     if( ISBETWEEN(3,4) && ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && ISQPAINTER(3) && (ISQWIDGET(4)||ISNIL(4)) )
     {
 #endif
-      obj->drawComplexControl ( (QStyle::ComplexControl) hb_parni(1), PQSTYLEOPTIONCOMPLEX(2), PQPAINTER(3), OPQWIDGET(4,0) );
+      obj->drawComplexControl( (QStyle::ComplexControl) hb_parni(1), PQSTYLEOPTIONCOMPLEX(2), PQPAINTER(3), OPQWIDGET(4,0) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QCOMMONSTYLE_DRAWCONTROL )
     if( ISBETWEEN(3,4) && ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && (ISQWIDGET(4)||ISNIL(4)) )
     {
 #endif
-      obj->drawControl ( (QStyle::ControlElement) hb_parni(1), PQSTYLEOPTION(2), PQPAINTER(3), OPQWIDGET(4,0) );
+      obj->drawControl( (QStyle::ControlElement) hb_parni(1), PQSTYLEOPTION(2), PQPAINTER(3), OPQWIDGET(4,0) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QCOMMONSTYLE_DRAWPRIMITIVE )
     if( ISBETWEEN(3,4) && ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && (ISQWIDGET(4)||ISNIL(4)) )
     {
 #endif
-      obj->drawPrimitive ( (QStyle::PrimitiveElement) hb_parni(1), PQSTYLEOPTION(2), PQPAINTER(3), OPQWIDGET(4,0) );
+      obj->drawPrimitive( (QStyle::PrimitiveElement) hb_parni(1), PQSTYLEOPTION(2), PQPAINTER(3), OPQWIDGET(4,0) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,8 +182,8 @@ HB_FUNC_STATIC( QCOMMONSTYLE_GENERATEDICONPIXMAP )
     if( ISNUMPAR(3) && ISNUM(1) && ISQPIXMAP(2) && ISQSTYLEOPTION(3) )
     {
 #endif
-      QPixmap * ptr = new QPixmap( obj->generatedIconPixmap ( (QIcon::Mode) hb_parni(1), *PQPIXMAP(2), PQSTYLEOPTION(3) ) );
-      _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
+      QPixmap * ptr = new QPixmap( obj->generatedIconPixmap( (QIcon::Mode) hb_parni(1), *PQPIXMAP(2), PQSTYLEOPTION(3) ) );
+      _qt4xhb_createReturnClass( ptr, "QPIXMAP", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QCOMMONSTYLE_HITTESTCOMPLEXCONTROL )
     if( ISBETWEEN(3,4) && ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && ISQPOINT(3) && (ISQWIDGET(4)||ISNIL(4)) )
     {
 #endif
-      RENUM( obj->hitTestComplexControl ( (QStyle::ComplexControl) hb_parni(1), PQSTYLEOPTIONCOMPLEX(2), *PQPOINT(3), OPQWIDGET(4,0) ) );
+      RENUM( obj->hitTestComplexControl( (QStyle::ComplexControl) hb_parni(1), PQSTYLEOPTIONCOMPLEX(2), *PQPOINT(3), OPQWIDGET(4,0) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QCOMMONSTYLE_PIXELMETRIC )
     if( ISBETWEEN(1,3) && ISNUM(1) && (ISQSTYLEOPTION(2)||ISNIL(2)) && (ISQWIDGET(3)||ISNIL(3)) )
     {
 #endif
-      RINT( obj->pixelMetric ( (QStyle::PixelMetric) hb_parni(1), ISNIL(2)? 0 : (QStyleOption *) _qt4xhb_itemGetPtr(2), OPQWIDGET(3,0) ) );
+      RINT( obj->pixelMetric( (QStyle::PixelMetric) hb_parni(1), ISNIL(2)? 0 : (QStyleOption *) _qt4xhb_itemGetPtr(2), OPQWIDGET(3,0) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,13 +245,13 @@ HB_FUNC_STATIC( QCOMMONSTYLE_PIXELMETRIC )
 /*
 virtual void polish ( QPalette & pal )
 */
-void QCommonStyle_polish1 ()
+void QCommonStyle_polish1()
 {
   QCommonStyle * obj = (QCommonStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    obj->polish ( *PQPALETTE(1) );
+    obj->polish( *PQPALETTE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -260,13 +260,13 @@ void QCommonStyle_polish1 ()
 /*
 virtual void polish ( QApplication * app )
 */
-void QCommonStyle_polish2 ()
+void QCommonStyle_polish2()
 {
   QCommonStyle * obj = (QCommonStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    obj->polish ( PQAPPLICATION(1) );
+    obj->polish( PQAPPLICATION(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -275,13 +275,13 @@ void QCommonStyle_polish2 ()
 /*
 virtual void polish ( QWidget * widget )
 */
-void QCommonStyle_polish3 ()
+void QCommonStyle_polish3()
 {
   QCommonStyle * obj = (QCommonStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    obj->polish ( PQWIDGET(1) );
+    obj->polish( PQWIDGET(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -324,8 +324,8 @@ HB_FUNC_STATIC( QCOMMONSTYLE_SIZEFROMCONTENTS )
     if( ISBETWEEN(3,4) && ISNUM(1) && ISQSTYLEOPTION(2) && ISQSIZE(3) && (ISQWIDGET(4)||ISNIL(4)) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeFromContents ( (QStyle::ContentsType) hb_parni(1), PQSTYLEOPTION(2), *PQSIZE(3), OPQWIDGET(4,0) ) );
-      _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->sizeFromContents( (QStyle::ContentsType) hb_parni(1), PQSTYLEOPTION(2), *PQSIZE(3), OPQWIDGET(4,0) ) );
+      _qt4xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -349,8 +349,8 @@ HB_FUNC_STATIC( QCOMMONSTYLE_STANDARDPIXMAP )
     if( ISBETWEEN(1,3) && ISNUM(1) && (ISQSTYLEOPTION(2)||ISNIL(2)) && (ISQWIDGET(3)||ISNIL(3)) )
     {
 #endif
-      QPixmap * ptr = new QPixmap( obj->standardPixmap ( (QStyle::StandardPixmap) hb_parni(1), ISNIL(2)? 0 : (QStyleOption *) _qt4xhb_itemGetPtr(2), OPQWIDGET(3,0) ) );
-      _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
+      QPixmap * ptr = new QPixmap( obj->standardPixmap( (QStyle::StandardPixmap) hb_parni(1), ISNIL(2)? 0 : (QStyleOption *) _qt4xhb_itemGetPtr(2), OPQWIDGET(3,0) ) );
+      _qt4xhb_createReturnClass( ptr, "QPIXMAP", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QCOMMONSTYLE_STYLEHINT )
     if( ISBETWEEN(1,4) && ISNUM(1) && (ISQSTYLEOPTION(2)||ISNIL(2)) && (ISQWIDGET(3)||ISNIL(3)) && (ISQSTYLEHINTRETURN(4)||ISNIL(4)) )
     {
 #endif
-      RINT( obj->styleHint ( (QStyle::StyleHint) hb_parni(1), ISNIL(2)? 0 : (QStyleOption *) _qt4xhb_itemGetPtr(2), OPQWIDGET(3,0), ISNIL(4)? 0 : (QStyleHintReturn *) _qt4xhb_itemGetPtr(4) ) );
+      RINT( obj->styleHint( (QStyle::StyleHint) hb_parni(1), ISNIL(2)? 0 : (QStyleOption *) _qt4xhb_itemGetPtr(2), OPQWIDGET(3,0), ISNIL(4)? 0 : (QStyleHintReturn *) _qt4xhb_itemGetPtr(4) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -398,8 +398,8 @@ HB_FUNC_STATIC( QCOMMONSTYLE_SUBCONTROLRECT )
     if( ISBETWEEN(3,4) && ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && ISNUM(3) && (ISQWIDGET(4)||ISNIL(4)) )
     {
 #endif
-      QRect * ptr = new QRect( obj->subControlRect ( (QStyle::ComplexControl) hb_parni(1), PQSTYLEOPTIONCOMPLEX(2), (QStyle::SubControl) hb_parni(3), OPQWIDGET(4,0) ) );
-      _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+      QRect * ptr = new QRect( obj->subControlRect( (QStyle::ComplexControl) hb_parni(1), PQSTYLEOPTIONCOMPLEX(2), (QStyle::SubControl) hb_parni(3), OPQWIDGET(4,0) ) );
+      _qt4xhb_createReturnClass( ptr, "QRECT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -423,8 +423,8 @@ HB_FUNC_STATIC( QCOMMONSTYLE_SUBELEMENTRECT )
     if( ISBETWEEN(2,3) && ISNUM(1) && ISQSTYLEOPTION(2) && (ISQWIDGET(3)||ISNIL(3)) )
     {
 #endif
-      QRect * ptr = new QRect( obj->subElementRect ( (QStyle::SubElement) hb_parni(1), PQSTYLEOPTION(2), OPQWIDGET(3,0) ) );
-      _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+      QRect * ptr = new QRect( obj->subElementRect( (QStyle::SubElement) hb_parni(1), PQSTYLEOPTION(2), OPQWIDGET(3,0) ) );
+      _qt4xhb_createReturnClass( ptr, "QRECT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -438,13 +438,13 @@ HB_FUNC_STATIC( QCOMMONSTYLE_SUBELEMENTRECT )
 /*
 virtual void unpolish ( QWidget * widget )
 */
-void QCommonStyle_unpolish1 ()
+void QCommonStyle_unpolish1()
 {
   QCommonStyle * obj = (QCommonStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    obj->unpolish ( PQWIDGET(1) );
+    obj->unpolish( PQWIDGET(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -453,13 +453,13 @@ void QCommonStyle_unpolish1 ()
 /*
 virtual void unpolish ( QApplication * application )
 */
-void QCommonStyle_unpolish2 ()
+void QCommonStyle_unpolish2()
 {
   QCommonStyle * obj = (QCommonStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    obj->unpolish ( PQAPPLICATION(1) );
+    obj->unpolish( PQAPPLICATION(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

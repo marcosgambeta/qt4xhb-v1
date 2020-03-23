@@ -32,7 +32,7 @@ CLASS QGraphicsColorizeEffect INHERIT QGraphicsEffect
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsColorizeEffect
+PROCEDURE destroyObject() CLASS QGraphicsColorizeEffect
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -55,7 +55,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QGraphicsColorizeEffect * o = new QGraphicsColorizeEffect ( OPQOBJECT(1,0) );
+    QGraphicsColorizeEffect * o = new QGraphicsColorizeEffect( OPQOBJECT(1,0) );
     _qt4xhb_returnNewObject( o, false );
   }
   else
@@ -70,8 +70,8 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -96,8 +96,8 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_COLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->color () );
-      _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+      QColor * ptr = new QColor( obj->color() );
+      _qt4xhb_createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_STRENGTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->strength () );
+      RQREAL( obj->strength() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setColor ( ISOBJECT(1)? *(QColor *) _qt4xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setColor( ISOBJECT(1)? *(QColor *) _qt4xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETSTRENGTH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setStrength ( PQREAL(1) );
+      obj->setStrength( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETSTRENGTH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QGraphicsColorizeEffectSlots_connect_signal ( const QString & signal, const QString & slot );
+void QGraphicsColorizeEffectSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_ONCOLORCHANGED )
 {

@@ -23,7 +23,7 @@ CLASS QDateEdit INHERIT QDateTimeEdit
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDateEdit
+PROCEDURE destroyObject() CLASS QDateEdit
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -42,18 +42,18 @@ RETURN
 /*
 QDateEdit ( QWidget * parent = 0 )
 */
-void QDateEdit_new1 ()
+void QDateEdit_new1()
 {
-  QDateEdit * o = new QDateEdit ( OPQWIDGET(1,0) );
+  QDateEdit * o = new QDateEdit( OPQWIDGET(1,0) );
   _qt4xhb_returnNewObject( o, false );
 }
 
 /*
 QDateEdit ( const QDate & date, QWidget * parent = 0 )
 */
-void QDateEdit_new2 ()
+void QDateEdit_new2()
 {
-  QDateEdit * o = new QDateEdit ( *PQDATE(1), OPQWIDGET(2,0) );
+  QDateEdit * o = new QDateEdit( *PQDATE(1), OPQWIDGET(2,0) );
   _qt4xhb_returnNewObject( o, false );
 }
 

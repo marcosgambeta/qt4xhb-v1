@@ -26,7 +26,7 @@ CLASS QInputEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QInputEvent
+PROCEDURE destroyObject() CLASS QInputEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -47,7 +47,7 @@ HB_FUNC_STATIC( QINPUTEVENT_NEW )
 {
   if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
   {
-    QInputEvent * o = new QInputEvent ( (QEvent::Type) hb_parni(1), ISNIL(2)? (Qt::KeyboardModifiers) Qt::NoModifier : (Qt::KeyboardModifiers) hb_parni(2) );
+    QInputEvent * o = new QInputEvent( (QEvent::Type) hb_parni(1), ISNIL(2)? (Qt::KeyboardModifiers) Qt::NoModifier : (Qt::KeyboardModifiers) hb_parni(2) );
     _qt4xhb_returnNewObject( o, false );
   }
   else
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QINPUTEVENT_MODIFIERS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->modifiers () );
+      RENUM( obj->modifiers() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QINPUTEVENT_SETMODIFIERS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setModifiers ( (Qt::KeyboardModifiers) hb_parni(1) );
+      obj->setModifiers( (Qt::KeyboardModifiers) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
