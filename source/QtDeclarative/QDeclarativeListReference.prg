@@ -45,7 +45,7 @@ CLASS QDeclarativeListReference
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDeclarativeListReference
+PROCEDURE destroyObject() CLASS QDeclarativeListReference
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -62,18 +62,18 @@ RETURN
 /*
 QDeclarativeListReference ()
 */
-void QDeclarativeListReference_new1 ()
+void QDeclarativeListReference_new1()
 {
-  QDeclarativeListReference * o = new QDeclarativeListReference ();
+  QDeclarativeListReference * o = new QDeclarativeListReference();
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QDeclarativeListReference ( QObject * object, const char * property, QDeclarativeEngine * engine = 0 )
 */
-void QDeclarativeListReference_new2 ()
+void QDeclarativeListReference_new2()
 {
-  QDeclarativeListReference * o = new QDeclarativeListReference ( PQOBJECT(1), PCONSTCHAR(2), OPQDECLARATIVEENGINE(3,0) );
+  QDeclarativeListReference * o = new QDeclarativeListReference( PQOBJECT(1), PCONSTCHAR(2), OPQDECLARATIVEENGINE(3,0) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_APPEND )
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
 #endif
-      RBOOL( obj->append ( PQOBJECT(1) ) );
+      RBOOL( obj->append( PQOBJECT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,8 +133,8 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_AT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QObject * ptr = obj->at ( PINT(1) );
-      _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->at( PINT(1) );
+      _qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANAPPEND )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->canAppend () );
+      RBOOL( obj->canAppend() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->canAt () );
+      RBOOL( obj->canAt() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANCLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->canClear () );
+      RBOOL( obj->canClear() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->canCount () );
+      RBOOL( obj->canCount() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->clear () );
+      RBOOL( obj->clear() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_COUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->count () );
+      RINT( obj->count() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -326,8 +326,8 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_LISTELEMENTTYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QMetaObject * ptr = obj->listElementType ();
-      _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT", false );
+      const QMetaObject * ptr = obj->listElementType();
+      _qt4xhb_createReturnClass( ptr, "QMETAOBJECT", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -351,8 +351,8 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_OBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->object ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->object();
+      _qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

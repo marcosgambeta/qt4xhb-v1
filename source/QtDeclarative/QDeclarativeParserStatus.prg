@@ -33,7 +33,7 @@ CLASS QDeclarativeParserStatus
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDeclarativeParserStatus
+PROCEDURE destroyObject() CLASS QDeclarativeParserStatus
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QDECLARATIVEPARSERSTATUS_CLASSBEGIN )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->classBegin ();
+      obj->classBegin();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QDECLARATIVEPARSERSTATUS_COMPONENTCOMPLETE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->componentComplete ();
+      obj->componentComplete();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

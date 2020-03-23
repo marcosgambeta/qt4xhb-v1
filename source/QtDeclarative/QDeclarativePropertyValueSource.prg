@@ -33,7 +33,7 @@ CLASS QDeclarativePropertyValueSource
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDeclarativePropertyValueSource
+PROCEDURE destroyObject() CLASS QDeclarativePropertyValueSource
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYVALUESOURCE_SETTARGET )
     if( ISNUMPAR(1) && ISQDECLARATIVEPROPERTY(1) )
     {
 #endif
-      obj->setTarget ( *PQDECLARATIVEPROPERTY(1) );
+      obj->setTarget( *PQDECLARATIVEPROPERTY(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

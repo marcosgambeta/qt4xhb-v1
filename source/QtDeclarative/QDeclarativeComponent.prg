@@ -46,7 +46,7 @@ CLASS QDeclarativeComponent INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDeclarativeComponent
+PROCEDURE destroyObject() CLASS QDeclarativeComponent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -67,36 +67,36 @@ RETURN
 /*
 QDeclarativeComponent(QObject *parent = 0);
 */
-void QDeclarativeComponent_new1 ()
+void QDeclarativeComponent_new1()
 {
-  QDeclarativeComponent * o = new QDeclarativeComponent ( OPQOBJECT(1,0) );
+  QDeclarativeComponent * o = new QDeclarativeComponent( OPQOBJECT(1,0) );
   _qt4xhb_returnNewObject( o, false );
 }
 
 /*
 QDeclarativeComponent(QDeclarativeEngine *, QObject *parent=0)
 */
-void QDeclarativeComponent_new2 ()
+void QDeclarativeComponent_new2()
 {
-  QDeclarativeComponent * o = new QDeclarativeComponent ( PQDECLARATIVEENGINE(1), OPQOBJECT(2,0) );
+  QDeclarativeComponent * o = new QDeclarativeComponent( PQDECLARATIVEENGINE(1), OPQOBJECT(2,0) );
   _qt4xhb_returnNewObject( o, false );
 }
 
 /*
 QDeclarativeComponent(QDeclarativeEngine *, const QString &fileName, QObject *parent = 0)
 */
-void QDeclarativeComponent_new3 ()
+void QDeclarativeComponent_new3()
 {
-  QDeclarativeComponent * o = new QDeclarativeComponent ( PQDECLARATIVEENGINE(1), PQSTRING(2), OPQOBJECT(3,0) );
+  QDeclarativeComponent * o = new QDeclarativeComponent( PQDECLARATIVEENGINE(1), PQSTRING(2), OPQOBJECT(3,0) );
   _qt4xhb_returnNewObject( o, false );
 }
 
 /*
 QDeclarativeComponent(QDeclarativeEngine *, const QUrl &url, QObject *parent = 0)
 */
-void QDeclarativeComponent_new4 ()
+void QDeclarativeComponent_new4()
 {
-  QDeclarativeComponent * o = new QDeclarativeComponent ( PQDECLARATIVEENGINE(1), *PQURL(2), OPQOBJECT(3,0) );
+  QDeclarativeComponent * o = new QDeclarativeComponent( PQDECLARATIVEENGINE(1), *PQURL(2), OPQOBJECT(3,0) );
   _qt4xhb_returnNewObject( o, false );
 }
 
@@ -135,8 +135,8 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -161,8 +161,8 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_BEGINCREATE )
     if( ISNUMPAR(1) && ISQDECLARATIVECONTEXT(1) )
     {
 #endif
-      QObject * ptr = obj->beginCreate ( PQDECLARATIVECONTEXT(1) );
-      _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->beginCreate( PQDECLARATIVECONTEXT(1) );
+      _qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_COMPLETECREATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->completeCreate ();
+      obj->completeCreate();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,8 +212,8 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATE )
     if( ISBETWEEN(0,1) && (ISQDECLARATIVECONTEXT(1)||ISNIL(1)) )
     {
 #endif
-      QObject * ptr = obj->create ( OPQDECLARATIVECONTEXT(1,0) );
-      _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->create( OPQDECLARATIVECONTEXT(1,0) );
+      _qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -237,8 +237,8 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATIONCONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDeclarativeContext * ptr = obj->creationContext ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QDECLARATIVECONTEXT" );
+      QDeclarativeContext * ptr = obj->creationContext();
+      _qt4xhb_createReturnQObjectClass( ptr, "QDECLARATIVECONTEXT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QDeclarativeError> list = obj->errors ();
+      QList<QDeclarativeError> list = obj->errors();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QDeclarativeError *) new QDeclarativeError ( list[i] ) );
+          hb_itemPutPtr( pItem, (QDeclarativeError *) new QDeclarativeError( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isError () );
+      RBOOL( obj->isError() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISLOADING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isLoading () );
+      RBOOL( obj->isLoading() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISREADY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isReady () );
+      RBOOL( obj->isReady() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_LOADURL )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      obj->loadUrl ( *PQURL(1) );
+      obj->loadUrl( *PQURL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_PROGRESS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->progress () );
+      RQREAL( obj->progress() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_SETDATA )
     if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQURL(2) )
     {
 #endif
-      obj->setData ( *PQBYTEARRAY(1), *PQURL(2) );
+      obj->setData( *PQBYTEARRAY(1), *PQURL(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_STATUS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->status () );
+      RENUM( obj->status() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -510,8 +510,8 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_URL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->url () );
-      _qt4xhb_createReturnClass ( ptr, "QURL", true );
+      QUrl * ptr = new QUrl( obj->url() );
+      _qt4xhb_createReturnClass( ptr, "QURL", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->errorString () );
+      RQSTRING( obj->errorString() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -550,7 +550,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORSTRING )
 static QDeclarativeComponentAttached *qmlAttachedProperties(QObject *)
 */
 
-void QDeclarativeComponentSlots_connect_signal ( const QString & signal, const QString & slot );
+void QDeclarativeComponentSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ONPROGRESSCHANGED )
 {
