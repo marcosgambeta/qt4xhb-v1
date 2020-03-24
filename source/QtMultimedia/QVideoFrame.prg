@@ -58,7 +58,7 @@ CLASS QVideoFrame
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QVideoFrame
+PROCEDURE destroyObject() CLASS QVideoFrame
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -77,45 +77,45 @@ RETURN
 /*
 QVideoFrame ()
 */
-void QVideoFrame_new1 ()
+void QVideoFrame_new1()
 {
-  QVideoFrame * o = new QVideoFrame ();
+  QVideoFrame * o = new QVideoFrame();
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QVideoFrame ( QAbstractVideoBuffer * buffer, const QSize & size, PixelFormat format )
 */
-void QVideoFrame_new2 ()
+void QVideoFrame_new2()
 {
-  QVideoFrame * o = new QVideoFrame ( PQABSTRACTVIDEOBUFFER(1), *PQSIZE(2), (QVideoFrame::PixelFormat) hb_parni(3) );
+  QVideoFrame * o = new QVideoFrame( PQABSTRACTVIDEOBUFFER(1), *PQSIZE(2), (QVideoFrame::PixelFormat) hb_parni(3) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QVideoFrame ( int bytes, const QSize & size, int bytesPerLine, PixelFormat format )
 */
-void QVideoFrame_new3 ()
+void QVideoFrame_new3()
 {
-  QVideoFrame * o = new QVideoFrame ( PINT(1), *PQSIZE(2), PINT(3), (QVideoFrame::PixelFormat) hb_parni(4) );
+  QVideoFrame * o = new QVideoFrame( PINT(1), *PQSIZE(2), PINT(3), (QVideoFrame::PixelFormat) hb_parni(4) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QVideoFrame ( const QImage & image )
 */
-void QVideoFrame_new4 ()
+void QVideoFrame_new4()
 {
-  QVideoFrame * o = new QVideoFrame ( *PQIMAGE(1) );
+  QVideoFrame * o = new QVideoFrame( *PQIMAGE(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QVideoFrame ( const QVideoFrame & other )
 */
-void QVideoFrame_new5 ()
+void QVideoFrame_new5()
 {
-  QVideoFrame * o = new QVideoFrame ( *PQVIDEOFRAME(1) );
+  QVideoFrame * o = new QVideoFrame( *PQVIDEOFRAME(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_BYTESPERLINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->bytesPerLine () );
+      RINT( obj->bytesPerLine() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_ENDTIME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->endTime () );
+      RQINT64( obj->endTime() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_FIELDTYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->fieldType () );
+      RENUM( obj->fieldType() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,8 +263,8 @@ HB_FUNC_STATIC( QVIDEOFRAME_HANDLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->handle () );
-      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->handle() );
+      _qt4xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_HANDLETYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->handleType () );
+      RENUM( obj->handleType() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_HEIGHT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->height () );
+      RINT( obj->height() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_ISMAPPED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isMapped () );
+      RBOOL( obj->isMapped() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_ISREADABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isReadable () );
+      RBOOL( obj->isReadable() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_ISWRITABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isWritable () );
+      RBOOL( obj->isWritable() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_MAP )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->map ( (QAbstractVideoBuffer::MapMode) hb_parni(1) ) );
+      RBOOL( obj->map( (QAbstractVideoBuffer::MapMode) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_MAPMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->mapMode () );
+      RENUM( obj->mapMode() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_MAPPEDBYTES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->mappedBytes () );
+      RINT( obj->mappedBytes() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_PIXELFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->pixelFormat () );
+      RENUM( obj->pixelFormat() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_SETENDTIME )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setEndTime ( PQINT64(1) );
+      obj->setEndTime( PQINT64(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_SETFIELDTYPE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setFieldType ( (QVideoFrame::FieldType) hb_parni(1) );
+      obj->setFieldType( (QVideoFrame::FieldType) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_SETSTARTTIME )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setStartTime ( PQINT64(1) );
+      obj->setStartTime( PQINT64(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -606,8 +606,8 @@ HB_FUNC_STATIC( QVIDEOFRAME_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->size () );
-      _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->size() );
+      _qt4xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -631,7 +631,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_STARTTIME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->startTime () );
+      RQINT64( obj->startTime() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -655,7 +655,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_UNMAP )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->unmap ();
+      obj->unmap();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -681,7 +681,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_WIDTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->width () );
+      RINT( obj->width() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -701,7 +701,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_IMAGEFORMATFROMPIXELFORMAT )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-    RENUM( QVideoFrame::imageFormatFromPixelFormat ( (QVideoFrame::PixelFormat) hb_parni(1) ) );
+    RENUM( QVideoFrame::imageFormatFromPixelFormat( (QVideoFrame::PixelFormat) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -720,7 +720,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_PIXELFORMATFROMIMAGEFORMAT )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-    RENUM( QVideoFrame::pixelFormatFromImageFormat ( (QImage::Format) hb_parni(1) ) );
+    RENUM( QVideoFrame::pixelFormatFromImageFormat( (QImage::Format) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

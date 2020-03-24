@@ -37,7 +37,7 @@ CLASS QAbstractVideoBuffer
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractVideoBuffer
+PROCEDURE destroyObject() CLASS QAbstractVideoBuffer
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -83,8 +83,8 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_HANDLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->handle () );
-      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->handle() );
+      _qt4xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_HANDLETYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->handleType () );
+      RENUM( obj->handleType() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_MAPMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->mapMode () );
+      RENUM( obj->mapMode() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_UNMAP )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->unmap ();
+      obj->unmap();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
