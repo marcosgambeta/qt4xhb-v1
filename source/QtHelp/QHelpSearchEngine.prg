@@ -40,7 +40,7 @@ CLASS QHelpSearchEngine INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHelpSearchEngine
+PROCEDURE destroyObject() CLASS QHelpSearchEngine
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_NEW )
 {
   if( ISBETWEEN(1,2) && ISQHELPENGINECORE(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    QHelpSearchEngine * o = new QHelpSearchEngine ( PQHELPENGINECORE(1), OPQOBJECT(2,0) );
+    QHelpSearchEngine * o = new QHelpSearchEngine( PQHELPENGINECORE(1), OPQOBJECT(2,0) );
     _qt4xhb_returnNewObject( o, false );
   }
   else
@@ -81,8 +81,8 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_HITCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->hitCount () );
+      RINT( obj->hitCount() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QHelpSearchQuery> list = obj->query ();
+      QList<QHelpSearchQuery> list = obj->query();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QHELPSEARCHQUERY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERY )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QHelpSearchQuery *) new QHelpSearchQuery ( list[i] ) );
+          hb_itemPutPtr( pItem, (QHelpSearchQuery *) new QHelpSearchQuery( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -183,8 +183,8 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERYWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QHelpSearchQueryWidget * ptr = obj->queryWidget ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QHELPSEARCHQUERYWIDGET" );
+      QHelpSearchQueryWidget * ptr = obj->queryWidget();
+      _qt4xhb_createReturnQObjectClass( ptr, "QHELPSEARCHQUERYWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -208,8 +208,8 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_RESULTWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QHelpSearchResultWidget * ptr = obj->resultWidget ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QHELPSEARCHRESULTWIDGET" );
+      QHelpSearchResultWidget * ptr = obj->resultWidget();
+      _qt4xhb_createReturnQObjectClass( ptr, "QHELPSEARCHRESULTWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_CANCELINDEXING )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->cancelIndexing ();
+      obj->cancelIndexing();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_CANCELSEARCHING )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->cancelSearching ();
+      obj->cancelSearching();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_REINDEXDOCUMENTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->reindexDocumentation ();
+      obj->reindexDocumentation();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_SEARCH )
       {
         par1 << *(QHelpSearchQuery *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
-      obj->search ( par1 );
+      obj->search( par1 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_SEARCH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QHelpSearchEngineSlots_connect_signal ( const QString & signal, const QString & slot );
+void QHelpSearchEngineSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QHELPSEARCHENGINE_ONINDEXINGFINISHED )
 {

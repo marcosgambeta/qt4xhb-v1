@@ -37,7 +37,7 @@ CLASS QHelpContentModel INHERIT QAbstractItemModel
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHelpContentModel
+PROCEDURE destroyObject() CLASS QHelpContentModel
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -59,8 +59,8 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -85,8 +85,8 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_CONTENTITEMAT )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QHelpContentItem * ptr = obj->contentItemAt ( *PQMODELINDEX(1) );
-      _qt4xhb_createReturnClass ( ptr, "QHELPCONTENTITEM", false );
+      QHelpContentItem * ptr = obj->contentItemAt( *PQMODELINDEX(1) );
+      _qt4xhb_createReturnClass( ptr, "QHELPCONTENTITEM", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_CREATECONTENTS )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->createContents ( PQSTRING(1) );
+      obj->createContents( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_ISCREATINGCONTENTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isCreatingContents () );
+      RBOOL( obj->isCreatingContents() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_COLUMNCOUNT )
     if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||ISNIL(1)) )
     {
 #endif
-      RINT( obj->columnCount ( ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt4xhb_itemGetPtr(1) ) );
+      RINT( obj->columnCount( ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt4xhb_itemGetPtr(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,8 +184,8 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_DATA )
     if( ISNUMPAR(2) && ISQMODELINDEX(1) && ISNUM(2) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->data ( *PQMODELINDEX(1), PINT(2) ) );
-      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->data( *PQMODELINDEX(1), PINT(2) ) );
+      _qt4xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,8 +209,8 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_INDEX )
     if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->index ( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt4xhb_itemGetPtr(3) ) );
-      _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      QModelIndex * ptr = new QModelIndex( obj->index( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt4xhb_itemGetPtr(3) ) );
+      _qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -234,8 +234,8 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_PARENT )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->parent ( *PQMODELINDEX(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      QModelIndex * ptr = new QModelIndex( obj->parent( *PQMODELINDEX(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_ROWCOUNT )
     if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||ISNIL(1)) )
     {
 #endif
-      RINT( obj->rowCount ( ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt4xhb_itemGetPtr(1) ) );
+      RINT( obj->rowCount( ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt4xhb_itemGetPtr(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_ROWCOUNT )
   }
 }
 
-void QHelpContentModelSlots_connect_signal ( const QString & signal, const QString & slot );
+void QHelpContentModelSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QHELPCONTENTMODEL_ONCONTENTSCREATED )
 {
