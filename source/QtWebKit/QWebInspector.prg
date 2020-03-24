@@ -30,7 +30,7 @@ CLASS QWebInspector INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWebInspector
+PROCEDURE destroyObject() CLASS QWebInspector
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -53,7 +53,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QWebInspector * o = new QWebInspector ( OPQWIDGET(1,0) );
+    QWebInspector * o = new QWebInspector( OPQWIDGET(1,0) );
     _qt4xhb_returnNewObject( o, false );
   }
   else
@@ -68,8 +68,8 @@ HB_FUNC_STATIC( QWEBINSPECTOR_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -94,8 +94,8 @@ HB_FUNC_STATIC( QWEBINSPECTOR_PAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebPage * ptr = obj->page ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QWEBPAGE" );
+      QWebPage * ptr = obj->page();
+      _qt4xhb_createReturnQObjectClass( ptr, "QWEBPAGE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_SETPAGE )
     if( ISNUMPAR(1) && ISQWEBPAGE(1) )
     {
 #endif
-      obj->setPage ( PQWEBPAGE(1) );
+      obj->setPage( PQWEBPAGE(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_EVENT )
     if( ISNUMPAR(1) && ISQEVENT(1) )
     {
 #endif
-      RBOOL( obj->event ( PQEVENT(1) ) );
+      RBOOL( obj->event( PQEVENT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,8 +169,8 @@ HB_FUNC_STATIC( QWEBINSPECTOR_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint () );
-      _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->sizeHint() );
+      _qt4xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

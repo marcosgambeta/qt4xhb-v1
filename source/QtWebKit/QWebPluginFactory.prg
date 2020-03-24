@@ -26,7 +26,7 @@ CLASS QWebPluginFactory INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWebPluginFactory
+PROCEDURE destroyObject() CLASS QWebPluginFactory
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -48,8 +48,8 @@ HB_FUNC_STATIC( QWEBPLUGINFACTORY_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -74,8 +74,8 @@ HB_FUNC_STATIC( QWEBPLUGINFACTORY_CREATE )
     if( ISNUMPAR(4) && ISCHAR(1) && ISQURL(2) && ISARRAY(3) && ISARRAY(4) )
     {
 #endif
-      QObject * ptr = obj->create ( PQSTRING(1), *PQURL(2), PQSTRINGLIST(3), PQSTRINGLIST(4) );
-      _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->create( PQSTRING(1), *PQURL(2), PQSTRINGLIST(3), PQSTRINGLIST(4) );
+      _qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QWEBPLUGINFACTORY_REFRESHPLUGINS )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->refreshPlugins ();
+      obj->refreshPlugins();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

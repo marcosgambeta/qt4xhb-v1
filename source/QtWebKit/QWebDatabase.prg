@@ -42,7 +42,7 @@ CLASS QWebDatabase
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWebDatabase
+PROCEDURE destroyObject() CLASS QWebDatabase
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QWEBDATABASE_NEW )
 {
   if( ISNUMPAR(1) && ISQWEBDATABASE(1) )
   {
-    QWebDatabase * o = new QWebDatabase ( *PQWEBDATABASE(1) );
+    QWebDatabase * o = new QWebDatabase( *PQWEBDATABASE(1) );
     _qt4xhb_returnNewObject( o, true );
   }
   else
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QWEBDATABASE_DISPLAYNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->displayName () );
+      RQSTRING( obj->displayName() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QWEBDATABASE_EXPECTEDSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->expectedSize () );
+      RQINT64( obj->expectedSize() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QWEBDATABASE_FILENAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->fileName () );
+      RQSTRING( obj->fileName() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QWEBDATABASE_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->name () );
+      RQSTRING( obj->name() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,8 +200,8 @@ HB_FUNC_STATIC( QWEBDATABASE_ORIGIN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebSecurityOrigin * ptr = new QWebSecurityOrigin( obj->origin () );
-      _qt4xhb_createReturnClass ( ptr, "QWEBSECURITYORIGIN", true );
+      QWebSecurityOrigin * ptr = new QWebSecurityOrigin( obj->origin() );
+      _qt4xhb_createReturnClass( ptr, "QWEBSECURITYORIGIN", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QWEBDATABASE_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->size () );
+      RQINT64( obj->size() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QWEBDATABASE_REMOVEALLDATABASES )
   if( ISNUMPAR(0) )
   {
 #endif
-    QWebDatabase::removeAllDatabases ();
+    QWebDatabase::removeAllDatabases();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QWEBDATABASE_REMOVEDATABASE )
   if( ISNUMPAR(1) && ISQWEBDATABASE(1) )
   {
 #endif
-    QWebDatabase::removeDatabase ( *PQWEBDATABASE(1) );
+    QWebDatabase::removeDatabase( *PQWEBDATABASE(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
