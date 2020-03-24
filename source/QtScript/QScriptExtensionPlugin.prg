@@ -27,7 +27,7 @@ CLASS QScriptExtensionPlugin INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QScriptExtensionPlugin
+PROCEDURE destroyObject() CLASS QScriptExtensionPlugin
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -51,8 +51,8 @@ HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -77,8 +77,8 @@ HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_SETUPPACKAGE )
     if( ISNUMPAR(2) && ISCHAR(1) && ISQSCRIPTENGINE(2) )
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->setupPackage ( PQSTRING(1), PQSCRIPTENGINE(2) ) );
-      _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
+      QScriptValue * ptr = new QScriptValue( obj->setupPackage( PQSTRING(1), PQSCRIPTENGINE(2) ) );
+      _qt4xhb_createReturnClass( ptr, "QSCRIPTVALUE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_INITIALIZE )
     if( ISNUMPAR(2) && ISCHAR(1) && ISQSCRIPTENGINE(2) )
     {
 #endif
-      obj->initialize ( PQSTRING(1), PQSCRIPTENGINE(2) );
+      obj->initialize( PQSTRING(1), PQSCRIPTENGINE(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_KEYS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->keys () );
+      RQSTRINGLIST( obj->keys() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

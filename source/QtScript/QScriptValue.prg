@@ -81,7 +81,7 @@ CLASS QScriptValue
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QScriptValue
+PROCEDURE destroyObject() CLASS QScriptValue
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -104,7 +104,7 @@ QScriptValue ()
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW1 )
 {
-  QScriptValue * o = new QScriptValue ();
+  QScriptValue * o = new QScriptValue();
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -113,7 +113,7 @@ QScriptValue ( const QScriptValue & other )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW2 )
 {
-  QScriptValue * o = new QScriptValue ( *PQSCRIPTVALUE(1) );
+  QScriptValue * o = new QScriptValue( *PQSCRIPTVALUE(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -122,7 +122,7 @@ QScriptValue ( SpecialValue value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW3 )
 {
-  QScriptValue * o = new QScriptValue ( (QScriptValue::SpecialValue) hb_parni(1) );
+  QScriptValue * o = new QScriptValue( (QScriptValue::SpecialValue) hb_parni(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -131,7 +131,7 @@ QScriptValue ( bool value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW4 )
 {
-  QScriptValue * o = new QScriptValue ( PBOOL(1) );
+  QScriptValue * o = new QScriptValue( PBOOL(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -140,7 +140,7 @@ QScriptValue ( int value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW5 )
 {
-  QScriptValue * o = new QScriptValue ( PINT(1) );
+  QScriptValue * o = new QScriptValue( PINT(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -149,7 +149,7 @@ QScriptValue ( uint value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW6 )
 {
-  QScriptValue * o = new QScriptValue ( PUINT(1) );
+  QScriptValue * o = new QScriptValue( PUINT(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -162,7 +162,7 @@ QScriptValue ( const QString & value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW8 )
 {
-  QScriptValue * o = new QScriptValue ( PQSTRING(1) );
+  QScriptValue * o = new QScriptValue( PQSTRING(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -171,7 +171,7 @@ QScriptValue ( const char * value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW10 )
 {
-  QScriptValue * o = new QScriptValue ( PCONSTCHAR(1) );
+  QScriptValue * o = new QScriptValue( PCONSTCHAR(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -271,8 +271,8 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CALL2 )
     if( ISNUMPAR(2) && ISQSCRIPTVALUE(1) && ISQSCRIPTVALUE(2) )
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->call ( *PQSCRIPTVALUE(1), *PQSCRIPTVALUE(2) ) );
-      _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
+      QScriptValue * ptr = new QScriptValue( obj->call( *PQSCRIPTVALUE(1), *PQSCRIPTVALUE(2) ) );
+      _qt4xhb_createReturnClass( ptr, "QSCRIPTVALUE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -339,8 +339,8 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT2 )
     if( ISNUMPAR(1) && ISQSCRIPTVALUE(1) )
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->construct ( *PQSCRIPTVALUE(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
+      QScriptValue * ptr = new QScriptValue( obj->construct( *PQSCRIPTVALUE(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QSCRIPTVALUE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -383,8 +383,8 @@ HB_FUNC_STATIC( QSCRIPTVALUE_DATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->data () );
-      _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
+      QScriptValue * ptr = new QScriptValue( obj->data() );
+      _qt4xhb_createReturnClass( ptr, "QSCRIPTVALUE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_EQUALS )
     if( ISNUMPAR(1) && ISQSCRIPTVALUE(1) )
     {
 #endif
-      RBOOL( obj->equals ( *PQSCRIPTVALUE(1) ) );
+      RBOOL( obj->equals( *PQSCRIPTVALUE(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_INSTANCEOF )
     if( ISNUMPAR(1) && ISQSCRIPTVALUE(1) )
     {
 #endif
-      RBOOL( obj->instanceOf ( *PQSCRIPTVALUE(1) ) );
+      RBOOL( obj->instanceOf( *PQSCRIPTVALUE(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISARRAY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isArray () );
+      RBOOL( obj->isArray() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISBOOL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isBool () );
+      RBOOL( obj->isBool() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISDATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isDate () );
+      RBOOL( obj->isDate() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isError () );
+      RBOOL( obj->isError() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISFUNCTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isFunction () );
+      RBOOL( obj->isFunction() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -604,7 +604,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISNUMBER )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNumber () );
+      RBOOL( obj->isNumber() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -628,7 +628,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isObject () );
+      RBOOL( obj->isObject() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -652,7 +652,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISQMETAOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isQMetaObject () );
+      RBOOL( obj->isQMetaObject() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -676,7 +676,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISQOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isQObject () );
+      RBOOL( obj->isQObject() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -700,7 +700,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISREGEXP )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isRegExp () );
+      RBOOL( obj->isRegExp() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -724,7 +724,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isString () );
+      RBOOL( obj->isString() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -748,7 +748,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISUNDEFINED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isUndefined () );
+      RBOOL( obj->isUndefined() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -772,7 +772,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -796,7 +796,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISVARIANT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isVariant () );
+      RBOOL( obj->isVariant() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -820,7 +820,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_LESSTHAN )
     if( ISNUMPAR(1) && ISQSCRIPTVALUE(1) )
     {
 #endif
-      RBOOL( obj->lessThan ( *PQSCRIPTVALUE(1) ) );
+      RBOOL( obj->lessThan( *PQSCRIPTVALUE(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -844,8 +844,8 @@ HB_FUNC_STATIC( QSCRIPTVALUE_PROTOTYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->prototype () );
-      _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
+      QScriptValue * ptr = new QScriptValue( obj->prototype() );
+      _qt4xhb_createReturnClass( ptr, "QSCRIPTVALUE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -869,8 +869,8 @@ HB_FUNC_STATIC( QSCRIPTVALUE_SCRIPTCLASS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScriptClass * ptr = obj->scriptClass ();
-      _qt4xhb_createReturnClass ( ptr, "QSCRIPTCLASS", false );
+      QScriptClass * ptr = obj->scriptClass();
+      _qt4xhb_createReturnClass( ptr, "QSCRIPTCLASS", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -894,7 +894,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_SETDATA )
     if( ISNUMPAR(1) && ISQSCRIPTVALUE(1) )
     {
 #endif
-      obj->setData ( *PQSCRIPTVALUE(1) );
+      obj->setData( *PQSCRIPTVALUE(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -920,7 +920,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_SETPROTOTYPE )
     if( ISNUMPAR(1) && ISQSCRIPTVALUE(1) )
     {
 #endif
-      obj->setPrototype ( *PQSCRIPTVALUE(1) );
+      obj->setPrototype( *PQSCRIPTVALUE(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -946,7 +946,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_SETSCRIPTCLASS )
     if( ISNUMPAR(1) && ISQSCRIPTCLASS(1) )
     {
 #endif
-      obj->setScriptClass ( PQSCRIPTCLASS(1) );
+      obj->setScriptClass( PQSCRIPTCLASS(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -972,7 +972,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_STRICTLYEQUALS )
     if( ISNUMPAR(1) && ISQSCRIPTVALUE(1) )
     {
 #endif
-      RBOOL( obj->strictlyEquals ( *PQSCRIPTVALUE(1) ) );
+      RBOOL( obj->strictlyEquals( *PQSCRIPTVALUE(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -996,7 +996,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOBOOL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->toBool () );
+      RBOOL( obj->toBool() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1020,8 +1020,8 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TODATETIME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->toDateTime () );
-      _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+      QDateTime * ptr = new QDateTime( obj->toDateTime() );
+      _qt4xhb_createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1045,7 +1045,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOINT32 )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT32( obj->toInt32 () );
+      RQINT32( obj->toInt32() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1077,8 +1077,8 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOQOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->toQObject ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->toQObject();
+      _qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1102,8 +1102,8 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOREGEXP )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRegExp * ptr = new QRegExp( obj->toRegExp () );
-      _qt4xhb_createReturnClass ( ptr, "QREGEXP", true );
+      QRegExp * ptr = new QRegExp( obj->toRegExp() );
+      _qt4xhb_createReturnClass( ptr, "QREGEXP", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1127,7 +1127,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->toString () );
+      RQSTRING( obj->toString() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1151,7 +1151,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOUINT16 )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQUINT16( obj->toUInt16 () );
+      RQUINT16( obj->toUInt16() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1175,7 +1175,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOUINT32 )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQUINT32( obj->toUInt32 () );
+      RQUINT32( obj->toUInt32() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1199,8 +1199,8 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOVARIANT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->toVariant () );
-      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->toVariant() );
+      _qt4xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

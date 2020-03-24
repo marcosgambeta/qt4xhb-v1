@@ -44,7 +44,7 @@ CLASS QScriptClassPropertyIterator
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QScriptClassPropertyIterator
+PROCEDURE destroyObject() CLASS QScriptClassPropertyIterator
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_FLAGS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->flags () );
+      RENUM( obj->flags() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_HASNEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasNext () );
+      RBOOL( obj->hasNext() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_HASPREVIOUS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasPrevious () );
+      RBOOL( obj->hasPrevious() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_ID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RUINT( obj->id () );
+      RUINT( obj->id() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,8 +186,8 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScriptString * ptr = new QScriptString( obj->name () );
-      _qt4xhb_createReturnClass ( ptr, "QSCRIPTSTRING", true );
+      QScriptString * ptr = new QScriptString( obj->name() );
+      _qt4xhb_createReturnClass( ptr, "QSCRIPTSTRING", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_NEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->next ();
+      obj->next();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -237,8 +237,8 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_OBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->object () );
-      _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
+      QScriptValue * ptr = new QScriptValue( obj->object() );
+      _qt4xhb_createReturnClass( ptr, "QSCRIPTVALUE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_PREVIOUS )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->previous ();
+      obj->previous();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_TOBACK )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->toBack ();
+      obj->toBack();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_TOFRONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->toFront ();
+      obj->toFront();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

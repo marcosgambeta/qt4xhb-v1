@@ -37,7 +37,7 @@ CLASS QScriptProgram
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QScriptProgram
+PROCEDURE destroyObject() CLASS QScriptProgram
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -54,9 +54,9 @@ RETURN
 /*
 QScriptProgram ()
 */
-void QScriptProgram_new1 ()
+void QScriptProgram_new1()
 {
-  QScriptProgram * o = new QScriptProgram ();
+  QScriptProgram * o = new QScriptProgram();
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -67,9 +67,9 @@ QScriptProgram ( const QString & sourceCode, const QString fileName = QString(),
 /*
 QScriptProgram ( const QScriptProgram & other )
 */
-void QScriptProgram_new3 ()
+void QScriptProgram_new3()
 {
-  QScriptProgram * o = new QScriptProgram ( *PQSCRIPTPROGRAM(1) );
+  QScriptProgram * o = new QScriptProgram( *PQSCRIPTPROGRAM(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_FILENAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->fileName () );
+      RQSTRING( obj->fileName() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_FIRSTLINENUMBER )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->firstLineNumber () );
+      RINT( obj->firstLineNumber() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_SOURCECODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->sourceCode () );
+      RQSTRING( obj->sourceCode() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
