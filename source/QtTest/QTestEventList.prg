@@ -51,7 +51,7 @@ CLASS QTestEventList
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTestEventList
+PROCEDURE destroyObject() CLASS QTestEventList
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -68,18 +68,18 @@ RETURN
 /*
 QTestEventList ()
 */
-void QTestEventList_new1 ()
+void QTestEventList_new1()
 {
-  QTestEventList * o = new QTestEventList ();
+  QTestEventList * o = new QTestEventList();
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QTestEventList ( const QTestEventList & other )
 */
-void QTestEventList_new2 ()
+void QTestEventList_new2()
 {
-  QTestEventList * o = new QTestEventList ( *PQTESTEVENTLIST(1) );
+  QTestEventList * o = new QTestEventList( *PQTESTEVENTLIST(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDDELAY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->addDelay ( PINT(1) );
+      obj->addDelay( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICK1 )
     if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
 #endif
-      obj->addKeyClick ( (Qt::Key) hb_parni(1), ISNIL(2)? (Qt::KeyboardModifiers) Qt::NoModifier : (Qt::KeyboardModifiers) hb_parni(2), OPINT(3,-1) );
+      obj->addKeyClick( (Qt::Key) hb_parni(1), ISNIL(2)? (Qt::KeyboardModifiers) Qt::NoModifier : (Qt::KeyboardModifiers) hb_parni(2), OPINT(3,-1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICK2 )
     if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
 #endif
-      obj->addKeyClick ( PCHAR(1), ISNIL(2)? (Qt::KeyboardModifiers) Qt::NoModifier : (Qt::KeyboardModifiers) hb_parni(2), OPINT(3,-1) );
+      obj->addKeyClick( PCHAR(1), ISNIL(2)? (Qt::KeyboardModifiers) Qt::NoModifier : (Qt::KeyboardModifiers) hb_parni(2), OPINT(3,-1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICKS )
     if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
 #endif
-      obj->addKeyClicks ( PQSTRING(1), ISNIL(2)? (Qt::KeyboardModifiers) Qt::NoModifier : (Qt::KeyboardModifiers) hb_parni(2), OPINT(3,-1) );
+      obj->addKeyClicks( PQSTRING(1), ISNIL(2)? (Qt::KeyboardModifiers) Qt::NoModifier : (Qt::KeyboardModifiers) hb_parni(2), OPINT(3,-1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYPRESS1 )
     if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
 #endif
-      obj->addKeyPress ( (Qt::Key) hb_parni(1), ISNIL(2)? (Qt::KeyboardModifiers) Qt::NoModifier : (Qt::KeyboardModifiers) hb_parni(2), OPINT(3,-1) );
+      obj->addKeyPress( (Qt::Key) hb_parni(1), ISNIL(2)? (Qt::KeyboardModifiers) Qt::NoModifier : (Qt::KeyboardModifiers) hb_parni(2), OPINT(3,-1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYPRESS2 )
     if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
 #endif
-      obj->addKeyPress ( PCHAR(1), ISNIL(2)? (Qt::KeyboardModifiers) Qt::NoModifier : (Qt::KeyboardModifiers) hb_parni(2), OPINT(3,-1) );
+      obj->addKeyPress( PCHAR(1), ISNIL(2)? (Qt::KeyboardModifiers) Qt::NoModifier : (Qt::KeyboardModifiers) hb_parni(2), OPINT(3,-1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYRELEASE1 )
     if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
 #endif
-      obj->addKeyRelease ( (Qt::Key) hb_parni(1), ISNIL(2)? (Qt::KeyboardModifiers) Qt::NoModifier : (Qt::KeyboardModifiers) hb_parni(2), OPINT(3,-1) );
+      obj->addKeyRelease( (Qt::Key) hb_parni(1), ISNIL(2)? (Qt::KeyboardModifiers) Qt::NoModifier : (Qt::KeyboardModifiers) hb_parni(2), OPINT(3,-1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYRELEASE2 )
     if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
 #endif
-      obj->addKeyRelease ( PCHAR(1), ISNIL(2)? (Qt::KeyboardModifiers) Qt::NoModifier : (Qt::KeyboardModifiers) hb_parni(2), OPINT(3,-1) );
+      obj->addKeyRelease( PCHAR(1), ISNIL(2)? (Qt::KeyboardModifiers) Qt::NoModifier : (Qt::KeyboardModifiers) hb_parni(2), OPINT(3,-1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSECLICK )
     if( ISBETWEEN(1,4) && ISNUM(1) && ISOPTNUM(2) && (ISQPOINT(3)||ISNIL(3)) && ISOPTNUM(4) )
     {
 #endif
-      obj->addMouseClick ( (Qt::MouseButton) hb_parni(1), ISNIL(2)? (Qt::KeyboardModifiers) 0 : (Qt::KeyboardModifiers) hb_parni(2), ISNIL(3)? QPoint() : *(QPoint *) _qt4xhb_itemGetPtr(3), OPINT(4,-1) );
+      obj->addMouseClick( (Qt::MouseButton) hb_parni(1), ISNIL(2)? (Qt::KeyboardModifiers) 0 : (Qt::KeyboardModifiers) hb_parni(2), ISNIL(3)? QPoint() : *(QPoint *) _qt4xhb_itemGetPtr(3), OPINT(4,-1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSEDCLICK )
     if( ISBETWEEN(1,4) && ISNUM(1) && ISOPTNUM(2) && (ISQPOINT(3)||ISNIL(3)) && ISOPTNUM(4) )
     {
 #endif
-      obj->addMouseDClick ( (Qt::MouseButton) hb_parni(1), ISNIL(2)? (Qt::KeyboardModifiers) 0 : (Qt::KeyboardModifiers) hb_parni(2), ISNIL(3)? QPoint() : *(QPoint *) _qt4xhb_itemGetPtr(3), OPINT(4,-1) );
+      obj->addMouseDClick( (Qt::MouseButton) hb_parni(1), ISNIL(2)? (Qt::KeyboardModifiers) 0 : (Qt::KeyboardModifiers) hb_parni(2), ISNIL(3)? QPoint() : *(QPoint *) _qt4xhb_itemGetPtr(3), OPINT(4,-1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSEMOVE )
     if( ISBETWEEN(0,2) && (ISQPOINT(1)||ISNIL(1)) && ISOPTNUM(2) )
     {
 #endif
-      obj->addMouseMove ( ISNIL(1)? QPoint() : *(QPoint *) _qt4xhb_itemGetPtr(1), OPINT(2,-1) );
+      obj->addMouseMove( ISNIL(1)? QPoint() : *(QPoint *) _qt4xhb_itemGetPtr(1), OPINT(2,-1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSEPRESS )
     if( ISBETWEEN(1,4) && ISNUM(1) && ISOPTNUM(2) && (ISQPOINT(3)||ISNIL(3)) && ISOPTNUM(4) )
     {
 #endif
-      obj->addMousePress ( (Qt::MouseButton) hb_parni(1), ISNIL(2)? (Qt::KeyboardModifiers) 0 : (Qt::KeyboardModifiers) hb_parni(2), ISNIL(3)? QPoint() : *(QPoint *) _qt4xhb_itemGetPtr(3), OPINT(4,-1) );
+      obj->addMousePress( (Qt::MouseButton) hb_parni(1), ISNIL(2)? (Qt::KeyboardModifiers) 0 : (Qt::KeyboardModifiers) hb_parni(2), ISNIL(3)? QPoint() : *(QPoint *) _qt4xhb_itemGetPtr(3), OPINT(4,-1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSERELEASE )
     if( ISBETWEEN(1,4) && ISNUM(1) && ISOPTNUM(2) && (ISQPOINT(3)||ISNIL(3)) && ISOPTNUM(4) )
     {
 #endif
-      obj->addMouseRelease ( (Qt::MouseButton) hb_parni(1), ISNIL(2)? (Qt::KeyboardModifiers) 0 : (Qt::KeyboardModifiers) hb_parni(2), ISNIL(3)? QPoint() : *(QPoint *) _qt4xhb_itemGetPtr(3), OPINT(4,-1) );
+      obj->addMouseRelease( (Qt::MouseButton) hb_parni(1), ISNIL(2)? (Qt::KeyboardModifiers) 0 : (Qt::KeyboardModifiers) hb_parni(2), ISNIL(3)? QPoint() : *(QPoint *) _qt4xhb_itemGetPtr(3), OPINT(4,-1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_SIMULATE )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->simulate ( PQWIDGET(1) );
+      obj->simulate( PQWIDGET(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
