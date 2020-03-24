@@ -24,7 +24,7 @@ CLASS QDomComment INHERIT QDomCharacterData
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDomComment
+PROCEDURE destroyObject() CLASS QDomComment
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -41,18 +41,18 @@ RETURN
 /*
 QDomComment ()
 */
-void QDomComment_new1 ()
+void QDomComment_new1()
 {
-  QDomComment * o = new QDomComment ();
+  QDomComment * o = new QDomComment();
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QDomComment ( const QDomComment & x )
 */
-void QDomComment_new2 ()
+void QDomComment_new2()
 {
-  QDomComment * o = new QDomComment ( *PQDOMCOMMENT(1) );
+  QDomComment * o = new QDomComment( *PQDOMCOMMENT(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QDOMCOMMENT_NODETYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->nodeType () );
+      RENUM( obj->nodeType() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

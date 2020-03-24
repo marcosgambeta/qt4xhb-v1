@@ -46,7 +46,7 @@ CLASS QDomNamedNodeMap
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDomNamedNodeMap
+PROCEDURE destroyObject() CLASS QDomNamedNodeMap
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -63,18 +63,18 @@ RETURN
 /*
 QDomNamedNodeMap ()
 */
-void QDomNamedNodeMap_new1 ()
+void QDomNamedNodeMap_new1()
 {
-  QDomNamedNodeMap * o = new QDomNamedNodeMap ();
+  QDomNamedNodeMap * o = new QDomNamedNodeMap();
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QDomNamedNodeMap ( const QDomNamedNodeMap & n )
 */
-void QDomNamedNodeMap_new2 ()
+void QDomNamedNodeMap_new2()
 {
-  QDomNamedNodeMap * o = new QDomNamedNodeMap ( *PQDOMNAMEDNODEMAP(1) );
+  QDomNamedNodeMap * o = new QDomNamedNodeMap( *PQDOMNAMEDNODEMAP(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_CONTAINS )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->contains ( PQSTRING(1) ) );
+      RBOOL( obj->contains( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_COUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->count () );
+      RINT( obj->count() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_ISEMPTY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isEmpty () );
+      RBOOL( obj->isEmpty() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,8 +199,8 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_ITEM )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QDomNode * ptr = new QDomNode( obj->item ( PINT(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+      QDomNode * ptr = new QDomNode( obj->item( PINT(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QDOMNODE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_LENGTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RUINT( obj->length () );
+      RUINT( obj->length() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -248,8 +248,8 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NAMEDITEM )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QDomNode * ptr = new QDomNode( obj->namedItem ( PQSTRING(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+      QDomNode * ptr = new QDomNode( obj->namedItem( PQSTRING(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QDOMNODE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -273,8 +273,8 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NAMEDITEMNS )
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
     {
 #endif
-      QDomNode * ptr = new QDomNode( obj->namedItemNS ( PQSTRING(1), PQSTRING(2) ) );
-      _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+      QDomNode * ptr = new QDomNode( obj->namedItemNS( PQSTRING(1), PQSTRING(2) ) );
+      _qt4xhb_createReturnClass( ptr, "QDOMNODE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -298,8 +298,8 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_REMOVENAMEDITEM )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QDomNode * ptr = new QDomNode( obj->removeNamedItem ( PQSTRING(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+      QDomNode * ptr = new QDomNode( obj->removeNamedItem( PQSTRING(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QDOMNODE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -323,8 +323,8 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_REMOVENAMEDITEMNS )
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
     {
 #endif
-      QDomNode * ptr = new QDomNode( obj->removeNamedItemNS ( PQSTRING(1), PQSTRING(2) ) );
-      _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+      QDomNode * ptr = new QDomNode( obj->removeNamedItemNS( PQSTRING(1), PQSTRING(2) ) );
+      _qt4xhb_createReturnClass( ptr, "QDOMNODE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -348,8 +348,8 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SETNAMEDITEM )
     if( ISNUMPAR(1) && ISQDOMNODE(1) )
     {
 #endif
-      QDomNode * ptr = new QDomNode( obj->setNamedItem ( *PQDOMNODE(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+      QDomNode * ptr = new QDomNode( obj->setNamedItem( *PQDOMNODE(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QDOMNODE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -373,8 +373,8 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SETNAMEDITEMNS )
     if( ISNUMPAR(1) && ISQDOMNODE(1) )
     {
 #endif
-      QDomNode * ptr = new QDomNode( obj->setNamedItemNS ( *PQDOMNODE(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+      QDomNode * ptr = new QDomNode( obj->setNamedItemNS( *PQDOMNODE(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QDOMNODE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->size () );
+      RINT( obj->size() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

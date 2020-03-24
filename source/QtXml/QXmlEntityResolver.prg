@@ -33,7 +33,7 @@ CLASS QXmlEntityResolver
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlEntityResolver
+PROCEDURE destroyObject() CLASS QXmlEntityResolver
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QXMLENTITYRESOLVER_ERRORSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->errorString () );
+      RQSTRING( obj->errorString() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

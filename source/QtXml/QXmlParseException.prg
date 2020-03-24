@@ -38,7 +38,7 @@ CLASS QXmlParseException
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlParseException
+PROCEDURE destroyObject() CLASS QXmlParseException
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -55,18 +55,18 @@ RETURN
 /*
 QXmlParseException ( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString() )
 */
-void QXmlParseException_new1 ()
+void QXmlParseException_new1()
 {
-  QXmlParseException * o = new QXmlParseException ( OPQSTRING(1,QString()), OPINT(2,-1), OPINT(3,-1), OPQSTRING(4,QString()), OPQSTRING(5,QString()) );
+  QXmlParseException * o = new QXmlParseException( OPQSTRING(1,QString()), OPINT(2,-1), OPINT(3,-1), OPQSTRING(4,QString()), OPQSTRING(5,QString()) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QXmlParseException ( const QXmlParseException & other )
 */
-void QXmlParseException_new2 ()
+void QXmlParseException_new2()
 {
-  QXmlParseException * o = new QXmlParseException ( *PQXMLPARSEEXCEPTION(1) );
+  QXmlParseException * o = new QXmlParseException( *PQXMLPARSEEXCEPTION(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_COLUMNNUMBER )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->columnNumber () );
+      RINT( obj->columnNumber() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_LINENUMBER )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->lineNumber () );
+      RINT( obj->lineNumber() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_MESSAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->message () );
+      RQSTRING( obj->message() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_PUBLICID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->publicId () );
+      RQSTRING( obj->publicId() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_SYSTEMID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->systemId () );
+      RQSTRING( obj->systemId() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

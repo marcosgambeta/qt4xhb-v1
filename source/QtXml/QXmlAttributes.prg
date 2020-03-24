@@ -43,7 +43,7 @@ CLASS QXmlAttributes
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlAttributes
+PROCEDURE destroyObject() CLASS QXmlAttributes
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QXmlAttributes * o = new QXmlAttributes ();
+    QXmlAttributes * o = new QXmlAttributes();
     _qt4xhb_returnNewObject( o, true );
   }
   else
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_APPEND )
     if( ISNUMPAR(4) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) && ISCHAR(4) )
     {
 #endif
-      obj->append ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4) );
+      obj->append( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_COUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->count () );
+      RINT( obj->count() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,39 +169,39 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_COUNT )
 /*
 int index ( const QString & qName ) const
 */
-void QXmlAttributes_index1 ()
+void QXmlAttributes_index1()
 {
   QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RINT( obj->index ( PQSTRING(1) ) );
+    RINT( obj->index( PQSTRING(1) ) );
   }
 }
 
 /*
 int index ( const QLatin1String & qName ) const
 */
-void QXmlAttributes_index2 ()
+void QXmlAttributes_index2()
 {
   QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RINT( obj->index ( *PQLATIN1STRING(1) ) );
+    RINT( obj->index( *PQLATIN1STRING(1) ) );
   }
 }
 
 /*
 int index ( const QString & uri, const QString & localPart ) const
 */
-void QXmlAttributes_index3 ()
+void QXmlAttributes_index3()
 {
   QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RINT( obj->index ( PQSTRING(1), PQSTRING(2) ) );
+    RINT( obj->index( PQSTRING(1), PQSTRING(2) ) );
   }
 }
 
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_LENGTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->length () );
+      RINT( obj->length() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_LOCALNAME )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->localName ( PINT(1) ) );
+      RQSTRING( obj->localName( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_QNAME )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->qName ( PINT(1) ) );
+      RQSTRING( obj->qName( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -304,39 +304,39 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_QNAME )
 /*
 QString type ( int index ) const
 */
-void QXmlAttributes_type1 ()
+void QXmlAttributes_type1()
 {
   QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RQSTRING( obj->type ( PINT(1) ) );
+    RQSTRING( obj->type( PINT(1) ) );
   }
 }
 
 /*
 QString type ( const QString & qName ) const
 */
-void QXmlAttributes_type2 ()
+void QXmlAttributes_type2()
 {
   QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RQSTRING( obj->type ( PQSTRING(1) ) );
+    RQSTRING( obj->type( PQSTRING(1) ) );
   }
 }
 
 /*
 QString type ( const QString & uri, const QString & localName ) const
 */
-void QXmlAttributes_type3 ()
+void QXmlAttributes_type3()
 {
   QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RQSTRING( obj->type ( PQSTRING(1), PQSTRING(2) ) );
+    RQSTRING( obj->type( PQSTRING(1), PQSTRING(2) ) );
   }
 }
 
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_URI )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->uri ( PINT(1) ) );
+      RQSTRING( obj->uri( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -391,52 +391,52 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_URI )
 /*
 QString value ( int index ) const
 */
-void QXmlAttributes_value1 ()
+void QXmlAttributes_value1()
 {
   QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RQSTRING( obj->value ( PINT(1) ) );
+    RQSTRING( obj->value( PINT(1) ) );
   }
 }
 
 /*
 QString value ( const QString & qName ) const
 */
-void QXmlAttributes_value2 ()
+void QXmlAttributes_value2()
 {
   QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RQSTRING( obj->value ( PQSTRING(1) ) );
+    RQSTRING( obj->value( PQSTRING(1) ) );
   }
 }
 
 /*
 QString value ( const QLatin1String & qName ) const
 */
-void QXmlAttributes_value3 ()
+void QXmlAttributes_value3()
 {
   QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RQSTRING( obj->value ( *PQLATIN1STRING(1) ) );
+    RQSTRING( obj->value( *PQLATIN1STRING(1) ) );
   }
 }
 
 /*
 QString value ( const QString & uri, const QString & localName ) const
 */
-void QXmlAttributes_value4 ()
+void QXmlAttributes_value4()
 {
   QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RQSTRING( obj->value ( PQSTRING(1), PQSTRING(2) ) );
+    RQSTRING( obj->value( PQSTRING(1), PQSTRING(2) ) );
   }
 }
 

@@ -40,7 +40,7 @@ CLASS QDomNodeList
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDomNodeList
+PROCEDURE destroyObject() CLASS QDomNodeList
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -57,18 +57,18 @@ RETURN
 /*
 QDomNodeList ()
 */
-void QDomNodeList_new1 ()
+void QDomNodeList_new1()
 {
-  QDomNodeList * o = new QDomNodeList ();
+  QDomNodeList * o = new QDomNodeList();
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QDomNodeList ( const QDomNodeList & n )
 */
-void QDomNodeList_new2 ()
+void QDomNodeList_new2()
 {
-  QDomNodeList * o = new QDomNodeList ( *PQDOMNODELIST(1) );
+  QDomNodeList * o = new QDomNodeList( *PQDOMNODELIST(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -121,8 +121,8 @@ HB_FUNC_STATIC( QDOMNODELIST_AT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QDomNode * ptr = new QDomNode( obj->at ( PINT(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+      QDomNode * ptr = new QDomNode( obj->at( PINT(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QDOMNODE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QDOMNODELIST_COUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->count () );
+      RINT( obj->count() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QDOMNODELIST_ISEMPTY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isEmpty () );
+      RBOOL( obj->isEmpty() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,8 +194,8 @@ HB_FUNC_STATIC( QDOMNODELIST_ITEM )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QDomNode * ptr = new QDomNode( obj->item ( PINT(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+      QDomNode * ptr = new QDomNode( obj->item( PINT(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QDOMNODE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QDOMNODELIST_LENGTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RUINT( obj->length () );
+      RUINT( obj->length() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QDOMNODELIST_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->size () );
+      RINT( obj->size() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

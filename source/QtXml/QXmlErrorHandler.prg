@@ -36,7 +36,7 @@ CLASS QXmlErrorHandler
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlErrorHandler
+PROCEDURE destroyObject() CLASS QXmlErrorHandler
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QXMLERRORHANDLER_ERROR )
     if( ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1) )
     {
 #endif
-      RBOOL( obj->error ( *PQXMLPARSEEXCEPTION(1) ) );
+      RBOOL( obj->error( *PQXMLPARSEEXCEPTION(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QXMLERRORHANDLER_ERRORSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->errorString () );
+      RQSTRING( obj->errorString() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QXMLERRORHANDLER_FATALERROR )
     if( ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1) )
     {
 #endif
-      RBOOL( obj->fatalError ( *PQXMLPARSEEXCEPTION(1) ) );
+      RBOOL( obj->fatalError( *PQXMLPARSEEXCEPTION(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QXMLERRORHANDLER_WARNING )
     if( ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1) )
     {
 #endif
-      RBOOL( obj->warning ( *PQXMLPARSEEXCEPTION(1) ) );
+      RBOOL( obj->warning( *PQXMLPARSEEXCEPTION(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

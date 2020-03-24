@@ -41,7 +41,7 @@ CLASS QDomImplementation
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDomImplementation
+PROCEDURE destroyObject() CLASS QDomImplementation
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -58,18 +58,18 @@ RETURN
 /*
 QDomImplementation ()
 */
-void QDomImplementation_new1 ()
+void QDomImplementation_new1()
 {
-  QDomImplementation * o = new QDomImplementation ();
+  QDomImplementation * o = new QDomImplementation();
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QDomImplementation ( const QDomImplementation & x )
 */
-void QDomImplementation_new2 ()
+void QDomImplementation_new2()
 {
-  QDomImplementation * o = new QDomImplementation ( *PQDOMIMPLEMENTATION(1) );
+  QDomImplementation * o = new QDomImplementation( *PQDOMIMPLEMENTATION(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -122,8 +122,8 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENT )
     if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISQDOMDOCUMENTTYPE(3) )
     {
 #endif
-      QDomDocument * ptr = new QDomDocument( obj->createDocument ( PQSTRING(1), PQSTRING(2), *PQDOMDOCUMENTTYPE(3) ) );
-      _qt4xhb_createReturnClass ( ptr, "QDOMDOCUMENT", true );
+      QDomDocument * ptr = new QDomDocument( obj->createDocument( PQSTRING(1), PQSTRING(2), *PQDOMDOCUMENTTYPE(3) ) );
+      _qt4xhb_createReturnClass( ptr, "QDOMDOCUMENT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -147,8 +147,8 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENTTYPE )
     if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) )
     {
 #endif
-      QDomDocumentType * ptr = new QDomDocumentType( obj->createDocumentType ( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
-      _qt4xhb_createReturnClass ( ptr, "QDOMDOCUMENTTYPE", true );
+      QDomDocumentType * ptr = new QDomDocumentType( obj->createDocumentType( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
+      _qt4xhb_createReturnClass( ptr, "QDOMDOCUMENTTYPE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_HASFEATURE )
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
     {
 #endif
-      RBOOL( obj->hasFeature ( PQSTRING(1), PQSTRING(2) ) );
+      RBOOL( obj->hasFeature( PQSTRING(1), PQSTRING(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_INVALIDDATAPOLICY )
   if( ISNUMPAR(0) )
   {
 #endif
-    RENUM( QDomImplementation::invalidDataPolicy () );
+    RENUM( QDomImplementation::invalidDataPolicy() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_SETINVALIDDATAPOLICY )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-    QDomImplementation::setInvalidDataPolicy ( (QDomImplementation::InvalidDataPolicy) hb_parni(1) );
+    QDomImplementation::setInvalidDataPolicy( (QDomImplementation::InvalidDataPolicy) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
