@@ -34,7 +34,7 @@ CLASS QSqlDriverCreatorBase
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSqlDriverCreatorBase
+PROCEDURE destroyObject() CLASS QSqlDriverCreatorBase
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -80,8 +80,8 @@ HB_FUNC_STATIC( QSQLDRIVERCREATORBASE_CREATEOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSqlDriver * ptr = obj->createObject ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QSQLDRIVER" );
+      QSqlDriver * ptr = obj->createObject();
+      _qt4xhb_createReturnQObjectClass( ptr, "QSQLDRIVER" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

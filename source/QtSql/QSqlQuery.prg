@@ -71,7 +71,7 @@ CLASS QSqlQuery
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSqlQuery
+PROCEDURE destroyObject() CLASS QSqlQuery
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -93,36 +93,36 @@ RETURN
 /*
 QSqlQuery ( QSqlResult * result )
 */
-void QSqlQuery_new1 ()
+void QSqlQuery_new1()
 {
-  QSqlQuery * o = new QSqlQuery ( PQSQLRESULT(1) );
+  QSqlQuery * o = new QSqlQuery( PQSQLRESULT(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QSqlQuery ( const QString & query = QString(), QSqlDatabase db = QSqlDatabase() )
 */
-void QSqlQuery_new2 ()
+void QSqlQuery_new2()
 {
-  QSqlQuery * o = new QSqlQuery ( OPQSTRING(1,QString()), ISNIL(2)? QSqlDatabase() : *(QSqlDatabase *) _qt4xhb_itemGetPtr(2) );
+  QSqlQuery * o = new QSqlQuery( OPQSTRING(1,QString()), ISNIL(2)? QSqlDatabase() : *(QSqlDatabase *) _qt4xhb_itemGetPtr(2) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QSqlQuery ( QSqlDatabase db )
 */
-void QSqlQuery_new3 ()
+void QSqlQuery_new3()
 {
-  QSqlQuery * o = new QSqlQuery ( *PQSQLDATABASE(1) );
+  QSqlQuery * o = new QSqlQuery( *PQSQLDATABASE(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QSqlQuery ( const QSqlQuery & other )
 */
-void QSqlQuery_new4 ()
+void QSqlQuery_new4()
 {
-  QSqlQuery * o = new QSqlQuery ( *PQSQLQUERY(1) );
+  QSqlQuery * o = new QSqlQuery( *PQSQLQUERY(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QSQLQUERY_ADDBINDVALUE )
     if( ISBETWEEN(1,2) && ISQVARIANT(1) && ISOPTNUM(2) )
     {
 #endif
-      obj->addBindValue ( *PQVARIANT(1), ISNIL(2)? (QSql::ParamType) QSql::In : (QSql::ParamType) hb_parni(2) );
+      obj->addBindValue( *PQVARIANT(1), ISNIL(2)? (QSql::ParamType) QSql::In : (QSql::ParamType) hb_parni(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QSQLQUERY_AT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->at () );
+      RINT( obj->at() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,13 +225,13 @@ HB_FUNC_STATIC( QSQLQUERY_AT )
 /*
 void bindValue ( const QString & placeholder, const QVariant & val, QSql::ParamType paramType = QSql::In )
 */
-void QSqlQuery_bindValue1 ()
+void QSqlQuery_bindValue1()
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    obj->bindValue ( PQSTRING(1), *PQVARIANT(2), ISNIL(3)? (QSql::ParamType) QSql::In : (QSql::ParamType) hb_parni(3) );
+    obj->bindValue( PQSTRING(1), *PQVARIANT(2), ISNIL(3)? (QSql::ParamType) QSql::In : (QSql::ParamType) hb_parni(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -240,13 +240,13 @@ void QSqlQuery_bindValue1 ()
 /*
 void bindValue ( int pos, const QVariant & val, QSql::ParamType paramType = QSql::In )
 */
-void QSqlQuery_bindValue2 ()
+void QSqlQuery_bindValue2()
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    obj->bindValue ( PINT(1), *PQVARIANT(2), ISNIL(3)? (QSql::ParamType) QSql::In : (QSql::ParamType) hb_parni(3) );
+    obj->bindValue( PINT(1), *PQVARIANT(2), ISNIL(3)? (QSql::ParamType) QSql::In : (QSql::ParamType) hb_parni(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -274,28 +274,28 @@ HB_FUNC_STATIC( QSQLQUERY_BINDVALUE )
 /*
 QVariant boundValue ( const QString & placeholder ) const
 */
-void QSqlQuery_boundValue1 ()
+void QSqlQuery_boundValue1()
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->boundValue ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    QVariant * ptr = new QVariant( obj->boundValue( PQSTRING(1) ) );
+    _qt4xhb_createReturnClass( ptr, "QVARIANT", true );
   }
 }
 
 /*
 QVariant boundValue ( int pos ) const
 */
-void QSqlQuery_boundValue2 ()
+void QSqlQuery_boundValue2()
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->boundValue ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    QVariant * ptr = new QVariant( obj->boundValue( PINT(1) ) );
+    _qt4xhb_createReturnClass( ptr, "QVARIANT", true );
   }
 }
 
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QSQLQUERY_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -357,8 +357,8 @@ HB_FUNC_STATIC( QSQLQUERY_DRIVER )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QSqlDriver * ptr = obj->driver ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QSQLDRIVER" );
+      const QSqlDriver * ptr = obj->driver();
+      _qt4xhb_createReturnQObjectClass( ptr, "QSQLDRIVER" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -372,26 +372,26 @@ HB_FUNC_STATIC( QSQLQUERY_DRIVER )
 /*
 bool exec ( const QString & query )
 */
-void QSqlQuery_exec1 ()
+void QSqlQuery_exec1()
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RBOOL( obj->exec ( PQSTRING(1) ) );
+    RBOOL( obj->exec( PQSTRING(1) ) );
   }
 }
 
 /*
 bool exec ()
 */
-void QSqlQuery_exec2 ()
+void QSqlQuery_exec2()
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RBOOL( obj->exec () );
+    RBOOL( obj->exec() );
   }
 }
 
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QSQLQUERY_EXECBATCH )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      RBOOL( obj->execBatch ( ISNIL(1)? (QSqlQuery::BatchExecutionMode) QSqlQuery::ValuesAsRows : (QSqlQuery::BatchExecutionMode) hb_parni(1) ) );
+      RBOOL( obj->execBatch( ISNIL(1)? (QSqlQuery::BatchExecutionMode) QSqlQuery::ValuesAsRows : (QSqlQuery::BatchExecutionMode) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QSQLQUERY_EXECUTEDQUERY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->executedQuery () );
+      RQSTRING( obj->executedQuery() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QSQLQUERY_FINISH )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->finish ();
+      obj->finish();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QSQLQUERY_FIRST )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->first () );
+      RBOOL( obj->first() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISACTIVE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isActive () );
+      RBOOL( obj->isActive() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -549,7 +549,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISFORWARDONLY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isForwardOnly () );
+      RBOOL( obj->isForwardOnly() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -573,7 +573,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISNULL )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isNull ( PINT(1) ) );
+      RBOOL( obj->isNull( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISSELECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isSelect () );
+      RBOOL( obj->isSelect() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -645,7 +645,7 @@ HB_FUNC_STATIC( QSQLQUERY_LAST )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->last () );
+      RBOOL( obj->last() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -669,8 +669,8 @@ HB_FUNC_STATIC( QSQLQUERY_LASTERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSqlError * ptr = new QSqlError( obj->lastError () );
-      _qt4xhb_createReturnClass ( ptr, "QSQLERROR", true );
+      QSqlError * ptr = new QSqlError( obj->lastError() );
+      _qt4xhb_createReturnClass( ptr, "QSQLERROR", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -694,8 +694,8 @@ HB_FUNC_STATIC( QSQLQUERY_LASTINSERTID )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->lastInsertId () );
-      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->lastInsertId() );
+      _qt4xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -719,7 +719,7 @@ HB_FUNC_STATIC( QSQLQUERY_LASTQUERY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->lastQuery () );
+      RQSTRING( obj->lastQuery() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -743,7 +743,7 @@ HB_FUNC_STATIC( QSQLQUERY_NEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->next () );
+      RBOOL( obj->next() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -767,7 +767,7 @@ HB_FUNC_STATIC( QSQLQUERY_NEXTRESULT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->nextResult () );
+      RBOOL( obj->nextResult() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -791,7 +791,7 @@ HB_FUNC_STATIC( QSQLQUERY_NUMROWSAFFECTED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->numRowsAffected () );
+      RINT( obj->numRowsAffected() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -815,7 +815,7 @@ HB_FUNC_STATIC( QSQLQUERY_NUMERICALPRECISIONPOLICY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->numericalPrecisionPolicy () );
+      RENUM( obj->numericalPrecisionPolicy() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -839,7 +839,7 @@ HB_FUNC_STATIC( QSQLQUERY_PREPARE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->prepare ( PQSTRING(1) ) );
+      RBOOL( obj->prepare( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -863,7 +863,7 @@ HB_FUNC_STATIC( QSQLQUERY_PREVIOUS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->previous () );
+      RBOOL( obj->previous() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -887,8 +887,8 @@ HB_FUNC_STATIC( QSQLQUERY_RECORD )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSqlRecord * ptr = new QSqlRecord( obj->record () );
-      _qt4xhb_createReturnClass ( ptr, "QSQLRECORD", true );
+      QSqlRecord * ptr = new QSqlRecord( obj->record() );
+      _qt4xhb_createReturnClass( ptr, "QSQLRECORD", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -912,8 +912,8 @@ HB_FUNC_STATIC( QSQLQUERY_RESULT )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QSqlResult * ptr = obj->result ();
-      _qt4xhb_createReturnClass ( ptr, "QSQLRESULT", false );
+      const QSqlResult * ptr = obj->result();
+      _qt4xhb_createReturnClass( ptr, "QSQLRESULT", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -937,7 +937,7 @@ HB_FUNC_STATIC( QSQLQUERY_SEEK )
     if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
     {
 #endif
-      RBOOL( obj->seek ( PINT(1), OPBOOL(2,false) ) );
+      RBOOL( obj->seek( PINT(1), OPBOOL(2,false) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -961,7 +961,7 @@ HB_FUNC_STATIC( QSQLQUERY_SETFORWARDONLY )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setForwardOnly ( PBOOL(1) );
+      obj->setForwardOnly( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -987,7 +987,7 @@ HB_FUNC_STATIC( QSQLQUERY_SETNUMERICALPRECISIONPOLICY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setNumericalPrecisionPolicy ( (QSql::NumericalPrecisionPolicy) hb_parni(1) );
+      obj->setNumericalPrecisionPolicy( (QSql::NumericalPrecisionPolicy) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1013,7 +1013,7 @@ HB_FUNC_STATIC( QSQLQUERY_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->size () );
+      RINT( obj->size() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1037,8 +1037,8 @@ HB_FUNC_STATIC( QSQLQUERY_VALUE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->value ( PINT(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->value( PINT(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -25,7 +25,7 @@ void QSqlDriverSlots::notification( const QString & name )
   PHB_ITEM cb = Signals_return_codeblock( object, "notification(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSQLDRIVER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSQLDRIVER" );
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
     hb_vmEvalBlockV( cb, 2, psender, pname );
     hb_itemRelease( psender );
@@ -33,7 +33,7 @@ void QSqlDriverSlots::notification( const QString & name )
   }
 }
 
-void QSqlDriverSlots_connect_signal ( const QString & signal, const QString & slot )
+void QSqlDriverSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
