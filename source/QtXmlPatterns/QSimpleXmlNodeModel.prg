@@ -33,7 +33,7 @@ CLASS QSimpleXmlNodeModel INHERIT QAbstractXmlNodeModel
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSimpleXmlNodeModel
+PROCEDURE destroyObject() CLASS QSimpleXmlNodeModel
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -79,8 +79,8 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMEPOOL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QXmlNamePool * ptr = &obj->namePool ();
-      _qt4xhb_createReturnClass ( ptr, "QXMLNAMEPOOL", false );
+      QXmlNamePool * ptr = &obj->namePool();
+      _qt4xhb_createReturnClass( ptr, "QXMLNAMEPOOL", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -104,8 +104,8 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_BASEURI )
     if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->baseUri ( *PQXMLNODEMODELINDEX(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QURL", true );
+      QUrl * ptr = new QUrl( obj->baseUri( *PQXMLNODEMODELINDEX(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QURL", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -129,8 +129,8 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_ELEMENTBYID )
     if( ISNUMPAR(1) && ISQXMLNAME(1) )
     {
 #endif
-      QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->elementById ( *PQXMLNAME(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QXMLNODEMODELINDEX", true );
+      QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->elementById( *PQXMLNAME(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QXMLNODEMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMESPACEBINDINGS )
     if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
     {
 #endif
-      QVector<QXmlName> list = obj->namespaceBindings ( *PQXMLNODEMODELINDEX(1) );
+      QVector<QXmlName> list = obj->namespaceBindings( *PQXMLNODEMODELINDEX(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QXMLNAME" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMESPACEBINDINGS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QXmlName *) new QXmlName ( list[i] ) );
+          hb_itemPutPtr( pItem, (QXmlName *) new QXmlName( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NODESBYIDREF )
     if( ISNUMPAR(1) && ISQXMLNAME(1) )
     {
 #endif
-      QVector<QXmlNodeModelIndex> list = obj->nodesByIdref ( *PQXMLNAME(1) );
+      QVector<QXmlNodeModelIndex> list = obj->nodesByIdref( *PQXMLNAME(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QXMLNODEMODELINDEX" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NODESBYIDREF )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QXmlNodeModelIndex *) new QXmlNodeModelIndex ( list[i] ) );
+          hb_itemPutPtr( pItem, (QXmlNodeModelIndex *) new QXmlNodeModelIndex( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_STRINGVALUE )
     if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
     {
 #endif
-      RQSTRING( obj->stringValue ( *PQXMLNODEMODELINDEX(1) ) );
+      RQSTRING( obj->stringValue( *PQXMLNODEMODELINDEX(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

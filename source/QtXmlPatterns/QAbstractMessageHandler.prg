@@ -24,7 +24,7 @@ CLASS QAbstractMessageHandler INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractMessageHandler
+PROCEDURE destroyObject() CLASS QAbstractMessageHandler
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -46,8 +46,8 @@ HB_FUNC_STATIC( QABSTRACTMESSAGEHANDLER_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QABSTRACTMESSAGEHANDLER_MESSAGE )
     if( ISBETWEEN(2,4) && ISNUM(1) && ISCHAR(2) && (ISQURL(3)||ISNIL(3)) && (ISQSOURCELOCATION(4)||ISNIL(4)) )
     {
 #endif
-      obj->message ( (QtMsgType) hb_parni(1), PQSTRING(2), ISNIL(3)? QUrl() : *(QUrl *) _qt4xhb_itemGetPtr(3), ISNIL(4)? QSourceLocation() : *(QSourceLocation *) _qt4xhb_itemGetPtr(4) );
+      obj->message( (QtMsgType) hb_parni(1), PQSTRING(2), ISNIL(3)? QUrl() : *(QUrl *) _qt4xhb_itemGetPtr(3), ISNIL(4)? QSourceLocation() : *(QSourceLocation *) _qt4xhb_itemGetPtr(4) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

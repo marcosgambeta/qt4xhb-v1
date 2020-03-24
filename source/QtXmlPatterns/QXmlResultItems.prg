@@ -37,7 +37,7 @@ CLASS QXmlResultItems
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlResultItems
+PROCEDURE destroyObject() CLASS QXmlResultItems
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QXmlResultItems * o = new QXmlResultItems ();
+    QXmlResultItems * o = new QXmlResultItems();
     _qt4xhb_returnNewObject( o, true );
   }
   else
@@ -99,8 +99,8 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_CURRENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QXmlItem * ptr = new QXmlItem( obj->current () );
-      _qt4xhb_createReturnClass ( ptr, "QXMLITEM", true );
+      QXmlItem * ptr = new QXmlItem( obj->current() );
+      _qt4xhb_createReturnClass( ptr, "QXMLITEM", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_HASERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasError () );
+      RBOOL( obj->hasError() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -148,8 +148,8 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_NEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QXmlItem * ptr = new QXmlItem( obj->next () );
-      _qt4xhb_createReturnClass ( ptr, "QXMLITEM", true );
+      QXmlItem * ptr = new QXmlItem( obj->next() );
+      _qt4xhb_createReturnClass( ptr, "QXMLITEM", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

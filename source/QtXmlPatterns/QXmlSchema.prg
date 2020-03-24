@@ -48,7 +48,7 @@ CLASS QXmlSchema
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlSchema
+PROCEDURE destroyObject() CLASS QXmlSchema
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -69,18 +69,18 @@ RETURN
 /*
 QXmlSchema ()
 */
-void QXmlSchema_new1 ()
+void QXmlSchema_new1()
 {
-  QXmlSchema * o = new QXmlSchema ();
+  QXmlSchema * o = new QXmlSchema();
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QXmlSchema ( const QXmlSchema & other )
 */
-void QXmlSchema_new2 ()
+void QXmlSchema_new2()
 {
-  QXmlSchema * o = new QXmlSchema ( *PQXMLSCHEMA(1) );
+  QXmlSchema * o = new QXmlSchema( *PQXMLSCHEMA(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -133,8 +133,8 @@ HB_FUNC_STATIC( QXMLSCHEMA_DOCUMENTURI )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->documentUri () );
-      _qt4xhb_createReturnClass ( ptr, "QURL", true );
+      QUrl * ptr = new QUrl( obj->documentUri() );
+      _qt4xhb_createReturnClass( ptr, "QURL", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,39 +172,39 @@ HB_FUNC_STATIC( QXMLSCHEMA_ISVALID )
 /*
 bool load ( const QUrl & source )
 */
-void QXmlSchema_load1 ()
+void QXmlSchema_load1()
 {
   QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RBOOL( obj->load ( *PQURL(1) ) );
+    RBOOL( obj->load( *PQURL(1) ) );
   }
 }
 
 /*
 bool load ( QIODevice * source, const QUrl & documentUri = QUrl() )
 */
-void QXmlSchema_load2 ()
+void QXmlSchema_load2()
 {
   QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RBOOL( obj->load ( PQIODEVICE(1), ISNIL(2)? QUrl() : *(QUrl *) _qt4xhb_itemGetPtr(2) ) );
+    RBOOL( obj->load( PQIODEVICE(1), ISNIL(2)? QUrl() : *(QUrl *) _qt4xhb_itemGetPtr(2) ) );
   }
 }
 
 /*
 bool load ( const QByteArray & data, const QUrl & documentUri = QUrl() )
 */
-void QXmlSchema_load3 ()
+void QXmlSchema_load3()
 {
   QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RBOOL( obj->load ( *PQBYTEARRAY(1), ISNIL(2)? QUrl() : *(QUrl *) _qt4xhb_itemGetPtr(2) ) );
+    RBOOL( obj->load( *PQBYTEARRAY(1), ISNIL(2)? QUrl() : *(QUrl *) _qt4xhb_itemGetPtr(2) ) );
   }
 }
 
@@ -245,8 +245,8 @@ HB_FUNC_STATIC( QXMLSCHEMA_MESSAGEHANDLER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractMessageHandler * ptr = obj->messageHandler ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QABSTRACTMESSAGEHANDLER" );
+      QAbstractMessageHandler * ptr = obj->messageHandler();
+      _qt4xhb_createReturnQObjectClass( ptr, "QABSTRACTMESSAGEHANDLER" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -270,8 +270,8 @@ HB_FUNC_STATIC( QXMLSCHEMA_NAMEPOOL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QXmlNamePool * ptr = new QXmlNamePool( obj->namePool () );
-      _qt4xhb_createReturnClass ( ptr, "QXMLNAMEPOOL", true );
+      QXmlNamePool * ptr = new QXmlNamePool( obj->namePool() );
+      _qt4xhb_createReturnClass( ptr, "QXMLNAMEPOOL", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -295,8 +295,8 @@ HB_FUNC_STATIC( QXMLSCHEMA_NETWORKACCESSMANAGER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QNetworkAccessManager * ptr = obj->networkAccessManager ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QNETWORKACCESSMANAGER" );
+      QNetworkAccessManager * ptr = obj->networkAccessManager();
+      _qt4xhb_createReturnQObjectClass( ptr, "QNETWORKACCESSMANAGER" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_SETMESSAGEHANDLER )
     if( ISNUMPAR(1) && ISQABSTRACTMESSAGEHANDLER(1) )
     {
 #endif
-      obj->setMessageHandler ( PQABSTRACTMESSAGEHANDLER(1) );
+      obj->setMessageHandler( PQABSTRACTMESSAGEHANDLER(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_SETNETWORKACCESSMANAGER )
     if( ISNUMPAR(1) && ISQNETWORKACCESSMANAGER(1) )
     {
 #endif
-      obj->setNetworkAccessManager ( PQNETWORKACCESSMANAGER(1) );
+      obj->setNetworkAccessManager( PQNETWORKACCESSMANAGER(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_SETURIRESOLVER )
     if( ISNUMPAR(1) && ISQABSTRACTURIRESOLVER(1) )
     {
 #endif
-      obj->setUriResolver ( PQABSTRACTURIRESOLVER(1) );
+      obj->setUriResolver( PQABSTRACTURIRESOLVER(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -398,8 +398,8 @@ HB_FUNC_STATIC( QXMLSCHEMA_URIRESOLVER )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QAbstractUriResolver * ptr = obj->uriResolver ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QABSTRACTURIRESOLVER" );
+      const QAbstractUriResolver * ptr = obj->uriResolver();
+      _qt4xhb_createReturnQObjectClass( ptr, "QABSTRACTURIRESOLVER" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
