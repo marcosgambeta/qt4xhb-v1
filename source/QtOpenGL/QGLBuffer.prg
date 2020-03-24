@@ -47,7 +47,7 @@ CLASS QGLBuffer
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGLBuffer
+PROCEDURE destroyObject() CLASS QGLBuffer
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -64,27 +64,27 @@ RETURN
 /*
 QGLBuffer ()
 */
-void QGLBuffer_new1 ()
+void QGLBuffer_new1()
 {
-  QGLBuffer * o = new QGLBuffer ();
+  QGLBuffer * o = new QGLBuffer();
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QGLBuffer ( QGLBuffer::Type type )
 */
-void QGLBuffer_new2 ()
+void QGLBuffer_new2()
 {
-  QGLBuffer * o = new QGLBuffer ( (QGLBuffer::Type) hb_parni(1) );
+  QGLBuffer * o = new QGLBuffer( (QGLBuffer::Type) hb_parni(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QGLBuffer ( const QGLBuffer & other )
 */
-void QGLBuffer_new3 ()
+void QGLBuffer_new3()
 {
-  QGLBuffer * o = new QGLBuffer ( *PQGLBUFFER(1) );
+  QGLBuffer * o = new QGLBuffer( *PQGLBUFFER(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -132,13 +132,13 @@ HB_FUNC_STATIC( QGLBUFFER_DELETE )
 /*
 void allocate ( const void * data, int count )
 */
-void QGLBuffer_allocate1 ()
+void QGLBuffer_allocate1()
 {
   QGLBuffer * obj = (QGLBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    obj->allocate ( (const void *) hb_parptr(1), PINT(2) );
+    obj->allocate( (const void *) hb_parptr(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -147,13 +147,13 @@ void QGLBuffer_allocate1 ()
 /*
 void allocate ( int count )
 */
-void QGLBuffer_allocate2 ()
+void QGLBuffer_allocate2()
 {
   QGLBuffer * obj = (QGLBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    obj->allocate ( PINT(1) );
+    obj->allocate( PINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QGLBUFFER_BIND )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->bind () );
+      RBOOL( obj->bind() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QGLBUFFER_BUFFERID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RGLUINT( obj->bufferId () );
+      RGLUINT( obj->bufferId() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QGLBUFFER_CREATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->create () );
+      RBOOL( obj->create() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QGLBUFFER_DESTROY )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->destroy ();
+      obj->destroy();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QGLBUFFER_ISCREATED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isCreated () );
+      RBOOL( obj->isCreated() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QGLBUFFER_MAP )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      hb_retptr( (void *) obj->map ( (QGLBuffer::Access) hb_parni(1) ) );
+      hb_retptr( (void *) obj->map( (QGLBuffer::Access) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QGLBUFFER_READ )
     if( ISNUMPAR(3) && ISNUM(1) && ISPOINTER(2) && ISNUM(3) )
     {
 #endif
-      RBOOL( obj->read ( PINT(1), (void *) hb_parptr(2), PINT(3) ) );
+      RBOOL( obj->read( PINT(1), (void *) hb_parptr(2), PINT(3) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QGLBUFFER_SETUSAGEPATTERN )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setUsagePattern ( (QGLBuffer::UsagePattern) hb_parni(1) );
+      obj->setUsagePattern( (QGLBuffer::UsagePattern) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QGLBUFFER_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->size () );
+      RINT( obj->size() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QGLBUFFER_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QGLBUFFER_UNMAP )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->unmap () );
+      RBOOL( obj->unmap() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QGLBUFFER_USAGEPATTERN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->usagePattern () );
+      RENUM( obj->usagePattern() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -473,13 +473,13 @@ HB_FUNC_STATIC( QGLBUFFER_USAGEPATTERN )
 /*
 void release ()
 */
-void QGLBuffer_release1 ()
+void QGLBuffer_release1()
 {
   QGLBuffer * obj = (QGLBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    obj->release ();
+    obj->release();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -488,10 +488,10 @@ void QGLBuffer_release1 ()
 /*
 static void release ( QGLBuffer::Type type )
 */
-void QGLBuffer_release2 ()
+void QGLBuffer_release2()
 {
 
-  QGLBuffer::release ( (QGLBuffer::Type) hb_parni(1) );
+  QGLBuffer::release( (QGLBuffer::Type) hb_parni(1) );
 
   hb_itemReturn( hb_stackSelfItem() );
 }
