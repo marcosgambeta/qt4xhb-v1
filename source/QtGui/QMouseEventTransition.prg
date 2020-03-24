@@ -31,7 +31,7 @@ CLASS QMouseEventTransition INHERIT QEventTransition
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMouseEventTransition
+PROCEDURE destroyObject() CLASS QMouseEventTransition
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -52,18 +52,18 @@ RETURN
 /*
 QMouseEventTransition ( QState * sourceState = 0 )
 */
-void QMouseEventTransition_new1 ()
+void QMouseEventTransition_new1()
 {
-  QMouseEventTransition * o = new QMouseEventTransition ( OPQSTATE(1,0) );
+  QMouseEventTransition * o = new QMouseEventTransition( OPQSTATE(1,0) );
   _qt4xhb_returnNewObject( o, false );
 }
 
 /*
 QMouseEventTransition ( QObject * object, QEvent::Type type, Qt::MouseButton button, QState * sourceState = 0 )
 */
-void QMouseEventTransition_new2 ()
+void QMouseEventTransition_new2()
 {
-  QMouseEventTransition * o = new QMouseEventTransition ( PQOBJECT(1), (QEvent::Type) hb_parni(2), (Qt::MouseButton) hb_parni(3), OPQSTATE(4,0) );
+  QMouseEventTransition * o = new QMouseEventTransition( PQOBJECT(1), (QEvent::Type) hb_parni(2), (Qt::MouseButton) hb_parni(3), OPQSTATE(4,0) );
   _qt4xhb_returnNewObject( o, false );
 }
 
@@ -92,8 +92,8 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_BUTTON )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->button () );
+      RENUM( obj->button() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,8 +142,8 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_HITTESTPATH )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->hitTestPath () );
-      _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+      QPainterPath * ptr = new QPainterPath( obj->hitTestPath() );
+      _qt4xhb_createReturnClass( ptr, "QPAINTERPATH", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_MODIFIERMASK )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->modifierMask () );
+      RENUM( obj->modifierMask() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_SETBUTTON )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setButton ( (Qt::MouseButton) hb_parni(1) );
+      obj->setButton( (Qt::MouseButton) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_SETHITTESTPATH )
     if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
     {
 #endif
-      obj->setHitTestPath ( *PQPAINTERPATH(1) );
+      obj->setHitTestPath( *PQPAINTERPATH(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_SETMODIFIERMASK )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setModifierMask ( (Qt::KeyboardModifiers) hb_parni(1) );
+      obj->setModifierMask( (Qt::KeyboardModifiers) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

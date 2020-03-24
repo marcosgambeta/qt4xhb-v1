@@ -41,7 +41,7 @@ CLASS QUndoCommand
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QUndoCommand
+PROCEDURE destroyObject() CLASS QUndoCommand
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -58,18 +58,18 @@ RETURN
 /*
 QUndoCommand ( QUndoCommand * parent = 0 )
 */
-void QUndoCommand_new1 ()
+void QUndoCommand_new1()
 {
-  QUndoCommand * o = new QUndoCommand ( ISNIL(1)? 0 : (QUndoCommand *) _qt4xhb_itemGetPtr(1) );
+  QUndoCommand * o = new QUndoCommand( ISNIL(1)? 0 : (QUndoCommand *) _qt4xhb_itemGetPtr(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QUndoCommand ( const QString & text, QUndoCommand * parent = 0 )
 */
-void QUndoCommand_new2 ()
+void QUndoCommand_new2()
 {
-  QUndoCommand * o = new QUndoCommand ( PQSTRING(1), ISNIL(2)? 0 : (QUndoCommand *) _qt4xhb_itemGetPtr(2) );
+  QUndoCommand * o = new QUndoCommand( PQSTRING(1), ISNIL(2)? 0 : (QUndoCommand *) _qt4xhb_itemGetPtr(2) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -122,8 +122,8 @@ HB_FUNC_STATIC( QUNDOCOMMAND_CHILD )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      const QUndoCommand * ptr = obj->child ( PINT(1) );
-      _qt4xhb_createReturnClass ( ptr, "QUNDOCOMMAND", false );
+      const QUndoCommand * ptr = obj->child( PINT(1) );
+      _qt4xhb_createReturnClass( ptr, "QUNDOCOMMAND", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_CHILDCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->childCount () );
+      RINT( obj->childCount() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_ID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->id () );
+      RINT( obj->id() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_MERGEWITH )
     if( ISNUMPAR(1) && ISQUNDOCOMMAND(1) )
     {
 #endif
-      RBOOL( obj->mergeWith ( PQUNDOCOMMAND(1) ) );
+      RBOOL( obj->mergeWith( PQUNDOCOMMAND(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_REDO )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->redo ();
+      obj->redo();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_SETTEXT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setText ( PQSTRING(1) );
+      obj->setText( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_TEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->text () );
+      RQSTRING( obj->text() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_UNDO )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->undo ();
+      obj->undo();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

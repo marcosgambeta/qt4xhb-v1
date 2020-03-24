@@ -25,7 +25,7 @@ void QWorkspaceSlots::windowActivated( QWidget * w )
   PHB_ITEM cb = Signals_return_codeblock( object, "windowActivated(QWidget*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWORKSPACE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWORKSPACE" );
     PHB_ITEM pw = Signals_return_qobject( (QObject *) w, "QWIDGET" );
     hb_vmEvalBlockV( cb, 2, psender, pw );
     hb_itemRelease( psender );
@@ -33,7 +33,7 @@ void QWorkspaceSlots::windowActivated( QWidget * w )
   }
 }
 
-void QWorkspaceSlots_connect_signal ( const QString & signal, const QString & slot )
+void QWorkspaceSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

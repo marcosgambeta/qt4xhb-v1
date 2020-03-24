@@ -28,7 +28,7 @@ CLASS QShortcutEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QShortcutEvent
+PROCEDURE destroyObject() CLASS QShortcutEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -49,7 +49,7 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_NEW )
 {
   if( ISBETWEEN(2,3) && ISQKEYSEQUENCE(1) && ISNUM(2) && ISOPTLOG(3) )
   {
-    QShortcutEvent * o = new QShortcutEvent ( *PQKEYSEQUENCE(1), PINT(2), OPBOOL(3,false) );
+    QShortcutEvent * o = new QShortcutEvent( *PQKEYSEQUENCE(1), PINT(2), OPBOOL(3,false) );
     _qt4xhb_returnNewObject( o, false );
   }
   else
@@ -88,8 +88,8 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_KEY )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QKeySequence * ptr = &obj->key ();
-      _qt4xhb_createReturnClass ( ptr, "QKEYSEQUENCE", false );
+      const QKeySequence * ptr = &obj->key();
+      _qt4xhb_createReturnClass( ptr, "QKEYSEQUENCE", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_SHORTCUTID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->shortcutId () );
+      RINT( obj->shortcutId() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_ISAMBIGUOUS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isAmbiguous () );
+      RBOOL( obj->isAmbiguous() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

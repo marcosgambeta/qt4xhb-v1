@@ -36,7 +36,7 @@ CLASS QStatusBar INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStatusBar
+PROCEDURE destroyObject() CLASS QStatusBar
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QSTATUSBAR_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QStatusBar * o = new QStatusBar ( OPQWIDGET(1,0) );
+    QStatusBar * o = new QStatusBar( OPQWIDGET(1,0) );
     _qt4xhb_returnNewObject( o, false );
   }
   else
@@ -74,8 +74,8 @@ HB_FUNC_STATIC( QSTATUSBAR_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QSTATUSBAR_ADDPERMANENTWIDGET )
     if( ISBETWEEN(1,2) && ISQWIDGET(1) && ISOPTNUM(2) )
     {
 #endif
-      obj->addPermanentWidget ( PQWIDGET(1), OPINT(2,0) );
+      obj->addPermanentWidget( PQWIDGET(1), OPINT(2,0) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QSTATUSBAR_ADDWIDGET )
     if( ISBETWEEN(1,2) && ISQWIDGET(1) && ISOPTNUM(2) )
     {
 #endif
-      obj->addWidget ( PQWIDGET(1), OPINT(2,0) );
+      obj->addWidget( PQWIDGET(1), OPINT(2,0) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QSTATUSBAR_CURRENTMESSAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->currentMessage () );
+      RQSTRING( obj->currentMessage() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QSTATUSBAR_INSERTPERMANENTWIDGET )
     if( ISBETWEEN(2,3) && ISNUM(1) && ISQWIDGET(2) && ISOPTNUM(3) )
     {
 #endif
-      RINT( obj->insertPermanentWidget ( PINT(1), PQWIDGET(2), OPINT(3,0) ) );
+      RINT( obj->insertPermanentWidget( PINT(1), PQWIDGET(2), OPINT(3,0) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QSTATUSBAR_INSERTWIDGET )
     if( ISBETWEEN(2,3) && ISNUM(1) && ISQWIDGET(2) && ISOPTNUM(3) )
     {
 #endif
-      RINT( obj->insertWidget ( PINT(1), PQWIDGET(2), OPINT(3,0) ) );
+      RINT( obj->insertWidget( PINT(1), PQWIDGET(2), OPINT(3,0) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QSTATUSBAR_ISSIZEGRIPENABLED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isSizeGripEnabled () );
+      RBOOL( obj->isSizeGripEnabled() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QSTATUSBAR_REMOVEWIDGET )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->removeWidget ( PQWIDGET(1) );
+      obj->removeWidget( PQWIDGET(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QSTATUSBAR_SETSIZEGRIPENABLED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setSizeGripEnabled ( PBOOL(1) );
+      obj->setSizeGripEnabled( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QSTATUSBAR_CLEARMESSAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clearMessage ();
+      obj->clearMessage();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QSTATUSBAR_SHOWMESSAGE )
     if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
     {
 #endif
-      obj->showMessage ( PQSTRING(1), OPINT(2,0) );
+      obj->showMessage( PQSTRING(1), OPINT(2,0) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QSTATUSBAR_SHOWMESSAGE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QStatusBarSlots_connect_signal ( const QString & signal, const QString & slot );
+void QStatusBarSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QSTATUSBAR_ONMESSAGECHANGED )
 {

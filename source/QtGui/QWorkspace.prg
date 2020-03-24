@@ -45,7 +45,7 @@ CLASS QWorkspace INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWorkspace
+PROCEDURE destroyObject() CLASS QWorkspace
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QWORKSPACE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QWorkspace * o = new QWorkspace ( OPQWIDGET(1,0) );
+    QWorkspace * o = new QWorkspace( OPQWIDGET(1,0) );
     _qt4xhb_returnNewObject( o, false );
   }
   else
@@ -83,8 +83,8 @@ HB_FUNC_STATIC( QWORKSPACE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -109,8 +109,8 @@ HB_FUNC_STATIC( QWORKSPACE_ACTIVEWINDOW )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->activeWindow ();
-      _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->activeWindow();
+      _qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -134,8 +134,8 @@ HB_FUNC_STATIC( QWORKSPACE_ADDWINDOW )
     if( ISBETWEEN(1,2) && ISQWIDGET(1) && ISOPTNUM(2) )
     {
 #endif
-      QWidget * ptr = obj->addWindow ( PQWIDGET(1), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-      _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->addWindow( PQWIDGET(1), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+      _qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -159,8 +159,8 @@ HB_FUNC_STATIC( QWORKSPACE_BACKGROUND )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBrush * ptr = new QBrush( obj->background () );
-      _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
+      QBrush * ptr = new QBrush( obj->background() );
+      _qt4xhb_createReturnClass( ptr, "QBRUSH", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QWORKSPACE_SCROLLBARSENABLED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->scrollBarsEnabled () );
+      RBOOL( obj->scrollBarsEnabled() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QWORKSPACE_SETBACKGROUND )
     if( ISNUMPAR(1) && ISQBRUSH(1) )
     {
 #endif
-      obj->setBackground ( *PQBRUSH(1) );
+      obj->setBackground( *PQBRUSH(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QWORKSPACE_SETSCROLLBARSENABLED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setScrollBarsEnabled ( PBOOL(1) );
+      obj->setScrollBarsEnabled( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QWORKSPACE_WINDOWLIST )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      QWidgetList list = obj->windowList ( ISNIL(1)? (QWorkspace::WindowOrder) QWorkspace::CreationOrder : (QWorkspace::WindowOrder) hb_parni(1) );
+      QWidgetList list = obj->windowList( ISNIL(1)? (QWorkspace::WindowOrder) QWorkspace::CreationOrder : (QWorkspace::WindowOrder) hb_parni(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QWIDGET" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -308,8 +308,8 @@ HB_FUNC_STATIC( QWORKSPACE_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint () );
-      _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->sizeHint() );
+      _qt4xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QWORKSPACE_ACTIVATENEXTWINDOW )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->activateNextWindow ();
+      obj->activateNextWindow();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QWORKSPACE_ACTIVATEPREVIOUSWINDOW )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->activatePreviousWindow ();
+      obj->activatePreviousWindow();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QWORKSPACE_ARRANGEICONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->arrangeIcons ();
+      obj->arrangeIcons();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QWORKSPACE_CASCADE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->cascade ();
+      obj->cascade();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QWORKSPACE_CLOSEACTIVEWINDOW )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->closeActiveWindow ();
+      obj->closeActiveWindow();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QWORKSPACE_CLOSEALLWINDOWS )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->closeAllWindows ();
+      obj->closeAllWindows();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QWORKSPACE_SETACTIVEWINDOW )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->setActiveWindow ( PQWIDGET(1) );
+      obj->setActiveWindow( PQWIDGET(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QWORKSPACE_TILE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->tile ();
+      obj->tile();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QWORKSPACE_TILE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QWorkspaceSlots_connect_signal ( const QString & signal, const QString & slot );
+void QWorkspaceSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QWORKSPACE_ONWINDOWACTIVATED )
 {

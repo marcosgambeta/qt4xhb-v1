@@ -39,7 +39,7 @@ CLASS QTextItem
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextItem
+PROCEDURE destroyObject() CLASS QTextItem
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QTEXTITEM_ASCENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->ascent () );
+      RQREAL( obj->ascent() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QTEXTITEM_DESCENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->descent () );
+      RQREAL( obj->descent() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -131,8 +131,8 @@ HB_FUNC_STATIC( QTEXTITEM_FONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QFont * ptr = new QFont( obj->font () );
-      _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+      QFont * ptr = new QFont( obj->font() );
+      _qt4xhb_createReturnClass( ptr, "QFONT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QTEXTITEM_RENDERFLAGS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->renderFlags () );
+      RENUM( obj->renderFlags() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QTEXTITEM_TEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->text () );
+      RQSTRING( obj->text() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QTEXTITEM_WIDTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->width () );
+      RQREAL( obj->width() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

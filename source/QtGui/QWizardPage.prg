@@ -43,7 +43,7 @@ CLASS QWizardPage INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWizardPage
+PROCEDURE destroyObject() CLASS QWizardPage
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QWizardPage * o = new QWizardPage ( OPQWIDGET(1,0) );
+    QWizardPage * o = new QWizardPage( OPQWIDGET(1,0) );
     _qt4xhb_returnNewObject( o, false );
   }
   else
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_BUTTONTEXT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->buttonText ( (QWizard::WizardButton) hb_parni(1) ) );
+      RQSTRING( obj->buttonText( (QWizard::WizardButton) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_CLEANUPPAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->cleanupPage ();
+      obj->cleanupPage();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_INITIALIZEPAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->initializePage ();
+      obj->initializePage();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_ISCOMMITPAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isCommitPage () );
+      RBOOL( obj->isCommitPage() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_ISCOMPLETE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isComplete () );
+      RBOOL( obj->isComplete() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_ISFINALPAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isFinalPage () );
+      RBOOL( obj->isFinalPage() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_NEXTID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->nextId () );
+      RINT( obj->nextId() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -260,8 +260,8 @@ HB_FUNC_STATIC( QWIZARDPAGE_PIXMAP )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QPixmap * ptr = new QPixmap( obj->pixmap ( (QWizard::WizardPixmap) hb_parni(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
+      QPixmap * ptr = new QPixmap( obj->pixmap( (QWizard::WizardPixmap) hb_parni(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QPIXMAP", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETBUTTONTEXT )
     if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
     {
 #endif
-      obj->setButtonText ( (QWizard::WizardButton) hb_parni(1), PQSTRING(2) );
+      obj->setButtonText( (QWizard::WizardButton) hb_parni(1), PQSTRING(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETCOMMITPAGE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setCommitPage ( PBOOL(1) );
+      obj->setCommitPage( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETFINALPAGE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setFinalPage ( PBOOL(1) );
+      obj->setFinalPage( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETPIXMAP )
     if( ISNUMPAR(2) && ISNUM(1) && ISQPIXMAP(2) )
     {
 #endif
-      obj->setPixmap ( (QWizard::WizardPixmap) hb_parni(1), *PQPIXMAP(2) );
+      obj->setPixmap( (QWizard::WizardPixmap) hb_parni(1), *PQPIXMAP(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETSUBTITLE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setSubTitle ( PQSTRING(1) );
+      obj->setSubTitle( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETTITLE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setTitle ( PQSTRING(1) );
+      obj->setTitle( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_SUBTITLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->subTitle () );
+      RQSTRING( obj->subTitle() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_TITLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->title () );
+      RQSTRING( obj->title() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_VALIDATEPAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->validatePage () );
+      RBOOL( obj->validatePage() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_VALIDATEPAGE )
   }
 }
 
-void QWizardPageSlots_connect_signal ( const QString & signal, const QString & slot );
+void QWizardPageSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QWIZARDPAGE_ONCOMPLETECHANGED )
 {

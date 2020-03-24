@@ -31,7 +31,7 @@ CLASS QTextImageFormat INHERIT QTextCharFormat
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextImageFormat
+PROCEDURE destroyObject() CLASS QTextImageFormat
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -52,7 +52,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QTextImageFormat * o = new QTextImageFormat ();
+    QTextImageFormat * o = new QTextImageFormat();
     _qt4xhb_returnNewObject( o, true );
   }
   else
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_HEIGHT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->height () );
+      RQREAL( obj->height() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->name () );
+      RQSTRING( obj->name() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETHEIGHT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setHeight ( PQREAL(1) );
+      obj->setHeight( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETNAME )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setName ( PQSTRING(1) );
+      obj->setName( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETWIDTH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setWidth ( PQREAL(1) );
+      obj->setWidth( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_WIDTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->width () );
+      RQREAL( obj->width() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

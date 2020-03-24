@@ -76,7 +76,7 @@ CLASS QTextCharFormat INHERIT QTextFormat
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextCharFormat
+PROCEDURE destroyObject() CLASS QTextCharFormat
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QTextCharFormat * o = new QTextCharFormat ();
+    QTextCharFormat * o = new QTextCharFormat();
     _qt4xhb_returnNewObject( o, true );
   }
   else
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_ANCHORHREF )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->anchorHref () );
+      RQSTRING( obj->anchorHref() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_ANCHORNAMES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->anchorNames () );
+      RQSTRINGLIST( obj->anchorNames() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,8 +184,8 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QFont * ptr = new QFont( obj->font () );
-      _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+      QFont * ptr = new QFont( obj->font() );
+      _qt4xhb_createReturnClass( ptr, "QFONT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTCAPITALIZATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->fontCapitalization () );
+      RENUM( obj->fontCapitalization() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTFAMILY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->fontFamily () );
+      RQSTRING( obj->fontFamily() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTFIXEDPITCH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->fontFixedPitch () );
+      RBOOL( obj->fontFixedPitch() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTHINTINGPREFERENCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->fontHintingPreference () );
+      RENUM( obj->fontHintingPreference() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTITALIC )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->fontItalic () );
+      RBOOL( obj->fontItalic() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTKERNING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->fontKerning () );
+      RBOOL( obj->fontKerning() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTLETTERSPACING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->fontLetterSpacing () );
+      RQREAL( obj->fontLetterSpacing() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTOVERLINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->fontOverline () );
+      RBOOL( obj->fontOverline() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTPOINTSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->fontPointSize () );
+      RQREAL( obj->fontPointSize() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTRIKEOUT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->fontStrikeOut () );
+      RBOOL( obj->fontStrikeOut() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTYLEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->fontStyleHint () );
+      RENUM( obj->fontStyleHint() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTYLESTRATEGY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->fontStyleStrategy () );
+      RENUM( obj->fontStyleStrategy() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTUNDERLINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->fontUnderline () );
+      RBOOL( obj->fontUnderline() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTWEIGHT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->fontWeight () );
+      RINT( obj->fontWeight() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTWORDSPACING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->fontWordSpacing () );
+      RQREAL( obj->fontWordSpacing() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_ISANCHOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isAnchor () );
+      RBOOL( obj->isAnchor() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -593,7 +593,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -617,7 +617,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETANCHOR )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setAnchor ( PBOOL(1) );
+      obj->setAnchor( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -643,7 +643,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETANCHORHREF )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setAnchorHref ( PQSTRING(1) );
+      obj->setAnchorHref( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -669,7 +669,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETANCHORNAMES )
     if( ISNUMPAR(1) && ISARRAY(1) )
     {
 #endif
-      obj->setAnchorNames ( PQSTRINGLIST(1) );
+      obj->setAnchorNames( PQSTRINGLIST(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -695,7 +695,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONT )
     if( ISNUMPAR(1) && ISQFONT(1) )
     {
 #endif
-      obj->setFont ( *PQFONT(1) );
+      obj->setFont( *PQFONT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -721,7 +721,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTCAPITALIZATION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setFontCapitalization ( (QFont::Capitalization) hb_parni(1) );
+      obj->setFontCapitalization( (QFont::Capitalization) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -747,7 +747,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTFAMILY )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setFontFamily ( PQSTRING(1) );
+      obj->setFontFamily( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -773,7 +773,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTFIXEDPITCH )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setFontFixedPitch ( PBOOL(1) );
+      obj->setFontFixedPitch( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -799,7 +799,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTHINTINGPREFERENCE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setFontHintingPreference ( (QFont::HintingPreference) hb_parni(1) );
+      obj->setFontHintingPreference( (QFont::HintingPreference) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -825,7 +825,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTITALIC )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setFontItalic ( PBOOL(1) );
+      obj->setFontItalic( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -851,7 +851,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTKERNING )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setFontKerning ( PBOOL(1) );
+      obj->setFontKerning( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -877,7 +877,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTLETTERSPACING )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setFontLetterSpacing ( PQREAL(1) );
+      obj->setFontLetterSpacing( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -903,7 +903,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTOVERLINE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setFontOverline ( PBOOL(1) );
+      obj->setFontOverline( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -929,7 +929,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTPOINTSIZE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setFontPointSize ( PQREAL(1) );
+      obj->setFontPointSize( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -955,7 +955,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTSTRIKEOUT )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setFontStrikeOut ( PBOOL(1) );
+      obj->setFontStrikeOut( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -981,7 +981,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTSTYLEHINT )
     if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
     {
 #endif
-      obj->setFontStyleHint ( (QFont::StyleHint) hb_parni(1), ISNIL(2)? (QFont::StyleStrategy) QFont::PreferDefault : (QFont::StyleStrategy) hb_parni(2) );
+      obj->setFontStyleHint( (QFont::StyleHint) hb_parni(1), ISNIL(2)? (QFont::StyleStrategy) QFont::PreferDefault : (QFont::StyleStrategy) hb_parni(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1007,7 +1007,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTSTYLESTRATEGY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setFontStyleStrategy ( (QFont::StyleStrategy) hb_parni(1) );
+      obj->setFontStyleStrategy( (QFont::StyleStrategy) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1033,7 +1033,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTUNDERLINE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setFontUnderline ( PBOOL(1) );
+      obj->setFontUnderline( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1059,7 +1059,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTWEIGHT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setFontWeight ( PINT(1) );
+      obj->setFontWeight( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1085,7 +1085,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTWORDSPACING )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setFontWordSpacing ( PQREAL(1) );
+      obj->setFontWordSpacing( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1111,7 +1111,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETTEXTOUTLINE )
     if( ISNUMPAR(1) && ISQPEN(1) )
     {
 #endif
-      obj->setTextOutline ( *PQPEN(1) );
+      obj->setTextOutline( *PQPEN(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1137,7 +1137,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETTOOLTIP )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setToolTip ( PQSTRING(1) );
+      obj->setToolTip( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1163,7 +1163,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETUNDERLINECOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setUnderlineColor ( ISOBJECT(1)? *(QColor *) _qt4xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setUnderlineColor( ISOBJECT(1)? *(QColor *) _qt4xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1189,7 +1189,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETUNDERLINESTYLE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setUnderlineStyle ( (QTextCharFormat::UnderlineStyle) hb_parni(1) );
+      obj->setUnderlineStyle( (QTextCharFormat::UnderlineStyle) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1215,7 +1215,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETVERTICALALIGNMENT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setVerticalAlignment ( (QTextCharFormat::VerticalAlignment) hb_parni(1) );
+      obj->setVerticalAlignment( (QTextCharFormat::VerticalAlignment) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1241,8 +1241,8 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_TEXTOUTLINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPen * ptr = new QPen( obj->textOutline () );
-      _qt4xhb_createReturnClass ( ptr, "QPEN", true );
+      QPen * ptr = new QPen( obj->textOutline() );
+      _qt4xhb_createReturnClass( ptr, "QPEN", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1266,7 +1266,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_TOOLTIP )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->toolTip () );
+      RQSTRING( obj->toolTip() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1290,8 +1290,8 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_UNDERLINECOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->underlineColor () );
-      _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+      QColor * ptr = new QColor( obj->underlineColor() );
+      _qt4xhb_createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1315,7 +1315,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_UNDERLINESTYLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->underlineStyle () );
+      RENUM( obj->underlineStyle() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1339,7 +1339,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_VERTICALALIGNMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->verticalAlignment () );
+      RENUM( obj->verticalAlignment() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

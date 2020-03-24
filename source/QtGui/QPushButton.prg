@@ -31,7 +31,7 @@ CLASS QPushButton INHERIT QAbstractButton
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPushButton
+PROCEDURE destroyObject() CLASS QPushButton
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -50,27 +50,27 @@ RETURN
 /*
 QPushButton ( QWidget * parent = 0 )
 */
-void QPushButton_new1 ()
+void QPushButton_new1()
 {
-  QPushButton * o = new QPushButton ( OPQWIDGET(1,0) );
+  QPushButton * o = new QPushButton( OPQWIDGET(1,0) );
   _qt4xhb_returnNewObject( o, false );
 }
 
 /*
 QPushButton ( const QString & text, QWidget * parent = 0 )
 */
-void QPushButton_new2 ()
+void QPushButton_new2()
 {
-  QPushButton * o = new QPushButton ( PQSTRING(1), OPQWIDGET(2,0) );
+  QPushButton * o = new QPushButton( PQSTRING(1), OPQWIDGET(2,0) );
   _qt4xhb_returnNewObject( o, false );
 }
 
 /*
 QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = 0 )
 */
-void QPushButton_new3 ()
+void QPushButton_new3()
 {
-  QPushButton * o = new QPushButton ( ISOBJECT(1)? *(QIcon *) _qt4xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), OPQWIDGET(3,0) );
+  QPushButton * o = new QPushButton( ISOBJECT(1)? *(QIcon *) _qt4xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), OPQWIDGET(3,0) );
   _qt4xhb_returnNewObject( o, false );
 }
 
@@ -104,8 +104,8 @@ HB_FUNC_STATIC( QPUSHBUTTON_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_AUTODEFAULT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->autoDefault () );
+      RBOOL( obj->autoDefault() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_ISDEFAULT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isDefault () );
+      RBOOL( obj->isDefault() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_ISFLAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isFlat () );
+      RBOOL( obj->isFlat() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_SETAUTODEFAULT )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setAutoDefault ( PBOOL(1) );
+      obj->setAutoDefault( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_SETDEFAULT )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setDefault ( PBOOL(1) );
+      obj->setDefault( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_SETFLAT )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setFlat ( PBOOL(1) );
+      obj->setFlat( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_SHOWMENU )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->showMenu ();
+      obj->showMenu();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -28,7 +28,7 @@ CLASS QStyleOptionToolBox INHERIT QStyleOption
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStyleOptionToolBox
+PROCEDURE destroyObject() CLASS QStyleOptionToolBox
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -45,18 +45,18 @@ RETURN
 /*
 QStyleOptionToolBox()
 */
-void QStyleOptionToolBox_new1 ()
+void QStyleOptionToolBox_new1()
 {
-  QStyleOptionToolBox * o = new QStyleOptionToolBox ();
+  QStyleOptionToolBox * o = new QStyleOptionToolBox();
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QStyleOptionToolBox(const QStyleOptionToolBox &other)
 */
-void QStyleOptionToolBox_new2 ()
+void QStyleOptionToolBox_new2()
 {
-  QStyleOptionToolBox * o = new QStyleOptionToolBox ( *PQSTYLEOPTIONTOOLBOX(1) );
+  QStyleOptionToolBox * o = new QStyleOptionToolBox( *PQSTYLEOPTIONTOOLBOX(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_TEXT )
   {
     if( ISNUMPAR(0) )
     {
-      RQSTRING( obj->text  );
+      RQSTRING( obj->text );
     }
     else
     {
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SETTEXT )
   {
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
-      obj->text = PQSTRING(1);
+      obj->text= PQSTRING(1);
     }
     else
     {
@@ -133,8 +133,8 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_ICON )
   {
     if( ISNUMPAR(0) )
     {
-      QIcon * ptr = new QIcon( obj->icon  );
-      _qt4xhb_createReturnClass ( ptr, "QICON", true );
+      QIcon * ptr = new QIcon( obj->icon );
+      _qt4xhb_createReturnClass( ptr, "QICON", true );
     }
     else
     {
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SETICON )
   {
     if( ISNUMPAR(1) && ISQICON(1) )
     {
-      obj->icon = *PQICON(1);
+      obj->icon= *PQICON(1);
     }
     else
     {

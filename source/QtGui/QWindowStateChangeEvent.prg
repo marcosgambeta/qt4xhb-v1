@@ -26,7 +26,7 @@ CLASS QWindowStateChangeEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWindowStateChangeEvent
+PROCEDURE destroyObject() CLASS QWindowStateChangeEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -43,18 +43,18 @@ RETURN
 /*
 QWindowStateChangeEvent(Qt::WindowStates aOldState)
 */
-void QWindowStateChangeEvent_new1 ()
+void QWindowStateChangeEvent_new1()
 {
-  QWindowStateChangeEvent * o = new QWindowStateChangeEvent ( (Qt::WindowStates) hb_parni(1) );
+  QWindowStateChangeEvent * o = new QWindowStateChangeEvent( (Qt::WindowStates) hb_parni(1) );
   _qt4xhb_returnNewObject( o, false );
 }
 
 /*
 QWindowStateChangeEvent(Qt::WindowStates aOldState, bool isOverride)
 */
-void QWindowStateChangeEvent_new2 ()
+void QWindowStateChangeEvent_new2()
 {
-  QWindowStateChangeEvent * o = new QWindowStateChangeEvent ( (Qt::WindowStates) hb_parni(1), PBOOL(2) );
+  QWindowStateChangeEvent * o = new QWindowStateChangeEvent( (Qt::WindowStates) hb_parni(1), PBOOL(2) );
   _qt4xhb_returnNewObject( o, false );
 }
 
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_OLDSTATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->oldState () );
+      RENUM( obj->oldState() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_ISOVERRIDE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isOverride () );
+      RBOOL( obj->isOverride() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

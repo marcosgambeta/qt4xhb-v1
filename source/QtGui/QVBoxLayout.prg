@@ -24,7 +24,7 @@ CLASS QVBoxLayout INHERIT QBoxLayout
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QVBoxLayout
+PROCEDURE destroyObject() CLASS QVBoxLayout
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -43,18 +43,18 @@ RETURN
 /*
 QVBoxLayout ()
 */
-void QVBoxLayout_new1 ()
+void QVBoxLayout_new1()
 {
-  QVBoxLayout * o = new QVBoxLayout ();
+  QVBoxLayout * o = new QVBoxLayout();
   _qt4xhb_returnNewObject( o, false );
 }
 
 /*
 QVBoxLayout ( QWidget * parent )
 */
-void QVBoxLayout_new2 ()
+void QVBoxLayout_new2()
 {
-  QVBoxLayout * o = new QVBoxLayout ( PQWIDGET(1) );
+  QVBoxLayout * o = new QVBoxLayout( PQWIDGET(1) );
   _qt4xhb_returnNewObject( o, false );
 }
 
@@ -83,8 +83,8 @@ HB_FUNC_STATIC( QVBOXLAYOUT_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

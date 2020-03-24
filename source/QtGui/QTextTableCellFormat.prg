@@ -34,7 +34,7 @@ CLASS QTextTableCellFormat INHERIT QTextCharFormat
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextTableCellFormat
+PROCEDURE destroyObject() CLASS QTextTableCellFormat
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -55,7 +55,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QTextTableCellFormat * o = new QTextTableCellFormat ();
+    QTextTableCellFormat * o = new QTextTableCellFormat();
     _qt4xhb_returnNewObject( o, true );
   }
   else
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_BOTTOMPADDING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->bottomPadding () );
+      RQREAL( obj->bottomPadding() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_LEFTPADDING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->leftPadding () );
+      RQREAL( obj->leftPadding() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_RIGHTPADDING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->rightPadding () );
+      RQREAL( obj->rightPadding() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETBOTTOMPADDING )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setBottomPadding ( PQREAL(1) );
+      obj->setBottomPadding( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETLEFTPADDING )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setLeftPadding ( PQREAL(1) );
+      obj->setLeftPadding( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETPADDING )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setPadding ( PQREAL(1) );
+      obj->setPadding( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETRIGHTPADDING )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setRightPadding ( PQREAL(1) );
+      obj->setRightPadding( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETTOPPADDING )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setTopPadding ( PQREAL(1) );
+      obj->setTopPadding( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_TOPPADDING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->topPadding () );
+      RQREAL( obj->topPadding() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

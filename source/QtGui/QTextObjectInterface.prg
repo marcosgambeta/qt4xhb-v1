@@ -35,7 +35,7 @@ CLASS QTextObjectInterface
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextObjectInterface
+PROCEDURE destroyObject() CLASS QTextObjectInterface
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_DRAWOBJECT )
     if( ISNUMPAR(5) && ISQPAINTER(1) && ISQRECTF(2) && ISQTEXTDOCUMENT(3) && ISNUM(4) && ISQTEXTFORMAT(5) )
     {
 #endif
-      obj->drawObject ( PQPAINTER(1), *PQRECTF(2), PQTEXTDOCUMENT(3), PINT(4), *PQTEXTFORMAT(5) );
+      obj->drawObject( PQPAINTER(1), *PQRECTF(2), PQTEXTDOCUMENT(3), PINT(4), *PQTEXTFORMAT(5) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -105,8 +105,8 @@ HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_INTRINSICSIZE )
     if( ISNUMPAR(3) && ISQTEXTDOCUMENT(1) && ISNUM(2) && ISQTEXTFORMAT(3) )
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->intrinsicSize ( PQTEXTDOCUMENT(1), PINT(2), *PQTEXTFORMAT(3) ) );
-      _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+      QSizeF * ptr = new QSizeF( obj->intrinsicSize( PQTEXTDOCUMENT(1), PINT(2), *PQTEXTFORMAT(3) ) );
+      _qt4xhb_createReturnClass( ptr, "QSIZEF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

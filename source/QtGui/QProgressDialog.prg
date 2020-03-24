@@ -51,7 +51,7 @@ CLASS QProgressDialog INHERIT QDialog
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QProgressDialog
+PROCEDURE destroyObject() CLASS QProgressDialog
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -70,18 +70,18 @@ RETURN
 /*
 QProgressDialog ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
-void QProgressDialog_new1 ()
+void QProgressDialog_new1()
 {
-  QProgressDialog * o = new QProgressDialog ( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+  QProgressDialog * o = new QProgressDialog( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
   _qt4xhb_returnNewObject( o, false );
 }
 
 /*
 QProgressDialog ( const QString & labelText, const QString & cancelButtonText, int minimum, int maximum, QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
-void QProgressDialog_new2 ()
+void QProgressDialog_new2()
 {
-  QProgressDialog * o = new QProgressDialog ( PQSTRING(1), PQSTRING(2), PINT(3), PINT(4), OPQWIDGET(5,0), ISNIL(6)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(6) );
+  QProgressDialog * o = new QProgressDialog( PQSTRING(1), PQSTRING(2), PINT(3), PINT(4), OPQWIDGET(5,0), ISNIL(6)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(6) );
   _qt4xhb_returnNewObject( o, false );
 }
 
@@ -110,8 +110,8 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_AUTOCLOSE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->autoClose () );
+      RBOOL( obj->autoClose() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_AUTORESET )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->autoReset () );
+      RBOOL( obj->autoReset() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_LABELTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->labelText () );
+      RQSTRING( obj->labelText() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_MAXIMUM )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->maximum () );
+      RINT( obj->maximum() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_MINIMUM )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->minimum () );
+      RINT( obj->minimum() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_MINIMUMDURATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->minimumDuration () );
+      RINT( obj->minimumDuration() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_OPEN )
     if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
     {
 #endif
-      obj->open ( PQOBJECT(1), PCONSTCHAR(2) );
+      obj->open( PQOBJECT(1), PCONSTCHAR(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETAUTOCLOSE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setAutoClose ( PBOOL(1) );
+      obj->setAutoClose( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETAUTORESET )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setAutoReset ( PBOOL(1) );
+      obj->setAutoReset( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETBAR )
     if( ISNUMPAR(1) && ISQPROGRESSBAR(1) )
     {
 #endif
-      obj->setBar ( PQPROGRESSBAR(1) );
+      obj->setBar( PQPROGRESSBAR(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETCANCELBUTTON )
     if( ISNUMPAR(1) && ISQPUSHBUTTON(1) )
     {
 #endif
-      obj->setCancelButton ( PQPUSHBUTTON(1) );
+      obj->setCancelButton( PQPUSHBUTTON(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETLABEL )
     if( ISNUMPAR(1) && ISQLABEL(1) )
     {
 #endif
-      obj->setLabel ( PQLABEL(1) );
+      obj->setLabel( PQLABEL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_VALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->value () );
+      RINT( obj->value() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_WASCANCELED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->wasCanceled () );
+      RBOOL( obj->wasCanceled() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -484,8 +484,8 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint () );
-      _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->sizeHint() );
+      _qt4xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -509,7 +509,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_CANCEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->cancel ();
+      obj->cancel();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_RESET )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->reset ();
+      obj->reset();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETCANCELBUTTONTEXT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setCancelButtonText ( PQSTRING(1) );
+      obj->setCancelButtonText( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETLABELTEXT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setLabelText ( PQSTRING(1) );
+      obj->setLabelText( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -613,7 +613,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETMAXIMUM )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMaximum ( PINT(1) );
+      obj->setMaximum( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -639,7 +639,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETMINIMUM )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMinimum ( PINT(1) );
+      obj->setMinimum( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -665,7 +665,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETMINIMUMDURATION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMinimumDuration ( PINT(1) );
+      obj->setMinimumDuration( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -691,7 +691,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETRANGE )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->setRange ( PINT(1), PINT(2) );
+      obj->setRange( PINT(1), PINT(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -717,7 +717,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETVALUE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setValue ( PINT(1) );
+      obj->setValue( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -730,7 +730,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETVALUE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QProgressDialogSlots_connect_signal ( const QString & signal, const QString & slot );
+void QProgressDialogSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QPROGRESSDIALOG_ONCANCELED )
 {

@@ -57,7 +57,7 @@ CLASS QVector3D
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QVector3D
+PROCEDURE destroyObject() CLASS QVector3D
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -77,63 +77,63 @@ RETURN
 /*
 QVector3D ()
 */
-void QVector3D_new1 ()
+void QVector3D_new1()
 {
-  QVector3D * o = new QVector3D ();
+  QVector3D * o = new QVector3D();
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QVector3D ( qreal xpos, qreal ypos, qreal zpos )
 */
-void QVector3D_new2 ()
+void QVector3D_new2()
 {
-  QVector3D * o = new QVector3D ( PQREAL(1), PQREAL(2), PQREAL(3) );
+  QVector3D * o = new QVector3D( PQREAL(1), PQREAL(2), PQREAL(3) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QVector3D ( const QPoint & point )
 */
-void QVector3D_new3 ()
+void QVector3D_new3()
 {
-  QVector3D * o = new QVector3D ( *PQPOINT(1) );
+  QVector3D * o = new QVector3D( *PQPOINT(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QVector3D ( const QPointF & point )
 */
-void QVector3D_new4 ()
+void QVector3D_new4()
 {
-  QVector3D * o = new QVector3D ( *PQPOINTF(1) );
+  QVector3D * o = new QVector3D( *PQPOINTF(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QVector3D ( const QVector2D & vector )
 */
-void QVector3D_new5 ()
+void QVector3D_new5()
 {
-  QVector3D * o = new QVector3D ( *PQVECTOR2D(1) );
+  QVector3D * o = new QVector3D( *PQVECTOR2D(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QVector3D ( const QVector2D & vector, qreal zpos )
 */
-void QVector3D_new6 ()
+void QVector3D_new6()
 {
-  QVector3D * o = new QVector3D ( *PQVECTOR2D(1), PQREAL(2) );
+  QVector3D * o = new QVector3D( *PQVECTOR2D(1), PQREAL(2) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QVector3D ( const QVector4D & vector )
 */
-void QVector3D_new7 ()
+void QVector3D_new7()
 {
-  QVector3D * o = new QVector3D ( *PQVECTOR4D(1) );
+  QVector3D * o = new QVector3D( *PQVECTOR4D(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QVECTOR3D_DISTANCETOLINE )
     if( ISNUMPAR(2) && ISQVECTOR3D(1) && ISQVECTOR3D(2) )
     {
 #endif
-      RQREAL( obj->distanceToLine ( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
+      RQREAL( obj->distanceToLine( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,26 +225,26 @@ HB_FUNC_STATIC( QVECTOR3D_DISTANCETOLINE )
 /*
 qreal distanceToPlane ( const QVector3D & plane, const QVector3D & normal ) const
 */
-void QVector3D_distanceToPlane1 ()
+void QVector3D_distanceToPlane1()
 {
   QVector3D * obj = (QVector3D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RQREAL( obj->distanceToPlane ( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
+    RQREAL( obj->distanceToPlane( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
   }
 }
 
 /*
 qreal distanceToPlane ( const QVector3D & plane1, const QVector3D & plane2, const QVector3D & plane3 ) const
 */
-void QVector3D_distanceToPlane2 ()
+void QVector3D_distanceToPlane2()
 {
   QVector3D * obj = (QVector3D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RQREAL( obj->distanceToPlane ( *PQVECTOR3D(1), *PQVECTOR3D(2), *PQVECTOR3D(3) ) );
+    RQREAL( obj->distanceToPlane( *PQVECTOR3D(1), *PQVECTOR3D(2), *PQVECTOR3D(3) ) );
   }
 }
 
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QVECTOR3D_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QVECTOR3D_LENGTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->length () );
+      RQREAL( obj->length() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QVECTOR3D_LENGTHSQUARED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->lengthSquared () );
+      RQREAL( obj->lengthSquared() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QVECTOR3D_NORMALIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->normalize ();
+      obj->normalize();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -378,8 +378,8 @@ HB_FUNC_STATIC( QVECTOR3D_NORMALIZED )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVector3D * ptr = new QVector3D( obj->normalized () );
-      _qt4xhb_createReturnClass ( ptr, "QVECTOR3D", true );
+      QVector3D * ptr = new QVector3D( obj->normalized() );
+      _qt4xhb_createReturnClass( ptr, "QVECTOR3D", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QVECTOR3D_SETX )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setX ( PQREAL(1) );
+      obj->setX( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QVECTOR3D_SETY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setY ( PQREAL(1) );
+      obj->setY( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QVECTOR3D_SETZ )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setZ ( PQREAL(1) );
+      obj->setZ( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -481,8 +481,8 @@ HB_FUNC_STATIC( QVECTOR3D_TOPOINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->toPoint () );
-      _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+      QPoint * ptr = new QPoint( obj->toPoint() );
+      _qt4xhb_createReturnClass( ptr, "QPOINT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -506,8 +506,8 @@ HB_FUNC_STATIC( QVECTOR3D_TOPOINTF )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->toPointF () );
-      _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+      QPointF * ptr = new QPointF( obj->toPointF() );
+      _qt4xhb_createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -531,8 +531,8 @@ HB_FUNC_STATIC( QVECTOR3D_TOVECTOR2D )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVector2D * ptr = new QVector2D( obj->toVector2D () );
-      _qt4xhb_createReturnClass ( ptr, "QVECTOR2D", true );
+      QVector2D * ptr = new QVector2D( obj->toVector2D() );
+      _qt4xhb_createReturnClass( ptr, "QVECTOR2D", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -556,8 +556,8 @@ HB_FUNC_STATIC( QVECTOR3D_TOVECTOR4D )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVector4D * ptr = new QVector4D( obj->toVector4D () );
-      _qt4xhb_createReturnClass ( ptr, "QVECTOR4D", true );
+      QVector4D * ptr = new QVector4D( obj->toVector4D() );
+      _qt4xhb_createReturnClass( ptr, "QVECTOR4D", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -581,7 +581,7 @@ HB_FUNC_STATIC( QVECTOR3D_X )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->x () );
+      RQREAL( obj->x() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -605,7 +605,7 @@ HB_FUNC_STATIC( QVECTOR3D_Y )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->y () );
+      RQREAL( obj->y() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -629,7 +629,7 @@ HB_FUNC_STATIC( QVECTOR3D_Z )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->z () );
+      RQREAL( obj->z() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -649,8 +649,8 @@ HB_FUNC_STATIC( QVECTOR3D_CROSSPRODUCT )
   if( ISNUMPAR(2) && ISQVECTOR3D(1) && ISQVECTOR3D(2) )
   {
 #endif
-    QVector3D * ptr = new QVector3D( QVector3D::crossProduct ( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVECTOR3D", true );
+    QVector3D * ptr = new QVector3D( QVector3D::crossProduct( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
+    _qt4xhb_createReturnClass( ptr, "QVECTOR3D", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -669,7 +669,7 @@ HB_FUNC_STATIC( QVECTOR3D_DOTPRODUCT )
   if( ISNUMPAR(2) && ISQVECTOR3D(1) && ISQVECTOR3D(2) )
   {
 #endif
-    RQREAL( QVector3D::dotProduct ( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
+    RQREAL( QVector3D::dotProduct( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -682,21 +682,21 @@ HB_FUNC_STATIC( QVECTOR3D_DOTPRODUCT )
 /*
 static QVector3D normal ( const QVector3D & v1, const QVector3D & v2 )
 */
-void QVector3D_normal1 ()
+void QVector3D_normal1()
 {
 
-  QVector3D * ptr = new QVector3D( QVector3D::normal ( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
-  _qt4xhb_createReturnClass ( ptr, "QVECTOR3D", true );
+  QVector3D * ptr = new QVector3D( QVector3D::normal( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
+  _qt4xhb_createReturnClass( ptr, "QVECTOR3D", true );
 }
 
 /*
 static QVector3D normal ( const QVector3D & v1, const QVector3D & v2, const QVector3D & v3 )
 */
-void QVector3D_normal2 ()
+void QVector3D_normal2()
 {
 
-  QVector3D * ptr = new QVector3D( QVector3D::normal ( *PQVECTOR3D(1), *PQVECTOR3D(2), *PQVECTOR3D(3) ) );
-  _qt4xhb_createReturnClass ( ptr, "QVECTOR3D", true );
+  QVector3D * ptr = new QVector3D( QVector3D::normal( *PQVECTOR3D(1), *PQVECTOR3D(2), *PQVECTOR3D(3) ) );
+  _qt4xhb_createReturnClass( ptr, "QVECTOR3D", true );
 }
 
 //[1]QVector3D normal ( const QVector3D & v1, const QVector3D & v2 )

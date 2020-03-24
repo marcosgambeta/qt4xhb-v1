@@ -44,7 +44,7 @@ CLASS QSystemTrayIcon INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSystemTrayIcon
+PROCEDURE destroyObject() CLASS QSystemTrayIcon
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -65,18 +65,18 @@ RETURN
 /*
 QSystemTrayIcon ( QObject * parent = 0 )
 */
-void QSystemTrayIcon_new1 ()
+void QSystemTrayIcon_new1()
 {
-  QSystemTrayIcon * o = new QSystemTrayIcon ( OPQOBJECT(1,0) );
+  QSystemTrayIcon * o = new QSystemTrayIcon( OPQOBJECT(1,0) );
   _qt4xhb_returnNewObject( o, false );
 }
 
 /*
 QSystemTrayIcon ( const QIcon & icon, QObject * parent = 0 )
 */
-void QSystemTrayIcon_new2 ()
+void QSystemTrayIcon_new2()
 {
-  QSystemTrayIcon * o = new QSystemTrayIcon ( ISOBJECT(1)? *(QIcon *) _qt4xhb_itemGetPtr(1) : QIcon(hb_parc(1)), OPQOBJECT(2,0) );
+  QSystemTrayIcon * o = new QSystemTrayIcon( ISOBJECT(1)? *(QIcon *) _qt4xhb_itemGetPtr(1) : QIcon(hb_parc(1)), OPQOBJECT(2,0) );
   _qt4xhb_returnNewObject( o, false );
 }
 
@@ -105,8 +105,8 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -131,8 +131,8 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_CONTEXTMENU )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMenu * ptr = obj->contextMenu ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QMENU" );
+      QMenu * ptr = obj->contextMenu();
+      _qt4xhb_createReturnQObjectClass( ptr, "QMENU" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,8 +156,8 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_GEOMETRY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->geometry () );
-      _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+      QRect * ptr = new QRect( obj->geometry() );
+      _qt4xhb_createReturnClass( ptr, "QRECT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,8 +181,8 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ICON )
     if( ISNUMPAR(0) )
     {
 #endif
-      QIcon * ptr = new QIcon( obj->icon () );
-      _qt4xhb_createReturnClass ( ptr, "QICON", true );
+      QIcon * ptr = new QIcon( obj->icon() );
+      _qt4xhb_createReturnClass( ptr, "QICON", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ISVISIBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isVisible () );
+      RBOOL( obj->isVisible() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SETCONTEXTMENU )
     if( ISNUMPAR(1) && ISQMENU(1) )
     {
 #endif
-      obj->setContextMenu ( PQMENU(1) );
+      obj->setContextMenu( PQMENU(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SETICON )
     if( ISNUMPAR(1) && (ISQICON(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setIcon ( ISOBJECT(1)? *(QIcon *) _qt4xhb_itemGetPtr(1) : QIcon(hb_parc(1)) );
+      obj->setIcon( ISOBJECT(1)? *(QIcon *) _qt4xhb_itemGetPtr(1) : QIcon(hb_parc(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SETTOOLTIP )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setToolTip ( PQSTRING(1) );
+      obj->setToolTip( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOWMESSAGE )
     if( ISBETWEEN(2,4) && ISCHAR(1) && ISCHAR(2) && ISOPTNUM(3) && ISOPTNUM(4) )
     {
 #endif
-      obj->showMessage ( PQSTRING(1), PQSTRING(2), ISNIL(3)? (QSystemTrayIcon::MessageIcon) QSystemTrayIcon::Information : (QSystemTrayIcon::MessageIcon) hb_parni(3), OPINT(4,10000) );
+      obj->showMessage( PQSTRING(1), PQSTRING(2), ISNIL(3)? (QSystemTrayIcon::MessageIcon) QSystemTrayIcon::Information : (QSystemTrayIcon::MessageIcon) hb_parni(3), OPINT(4,10000) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_TOOLTIP )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->toolTip () );
+      RQSTRING( obj->toolTip() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_HIDE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->hide ();
+      obj->hide();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SETVISIBLE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setVisible ( PBOOL(1) );
+      obj->setVisible( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOW )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->show ();
+      obj->show();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ISSYSTEMTRAYAVAILABLE )
   if( ISNUMPAR(0) )
   {
 #endif
-    RBOOL( QSystemTrayIcon::isSystemTrayAvailable () );
+    RBOOL( QSystemTrayIcon::isSystemTrayAvailable() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SUPPORTSMESSAGES )
   if( ISNUMPAR(0) )
   {
 #endif
-    RBOOL( QSystemTrayIcon::supportsMessages () );
+    RBOOL( QSystemTrayIcon::supportsMessages() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SUPPORTSMESSAGES )
 #endif
 }
 
-void QSystemTrayIconSlots_connect_signal ( const QString & signal, const QString & slot );
+void QSystemTrayIconSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QSYSTEMTRAYICON_ONACTIVATED )
 {

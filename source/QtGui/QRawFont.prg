@@ -63,7 +63,7 @@ CLASS QRawFont
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QRawFont
+PROCEDURE destroyObject() CLASS QRawFont
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -82,36 +82,36 @@ RETURN
 /*
 QRawFont ()
 */
-void QRawFont_new1 ()
+void QRawFont_new1()
 {
-  QRawFont * o = new QRawFont ();
+  QRawFont * o = new QRawFont();
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QRawFont ( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
 */
-void QRawFont_new2 ()
+void QRawFont_new2()
 {
-  QRawFont * o = new QRawFont ( PQSTRING(1), PQREAL(2), ISNIL(3)? (QFont::HintingPreference) QFont::PreferDefaultHinting : (QFont::HintingPreference) hb_parni(3) );
+  QRawFont * o = new QRawFont( PQSTRING(1), PQREAL(2), ISNIL(3)? (QFont::HintingPreference) QFont::PreferDefaultHinting : (QFont::HintingPreference) hb_parni(3) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QRawFont ( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
 */
-void QRawFont_new3 ()
+void QRawFont_new3()
 {
-  QRawFont * o = new QRawFont ( *PQBYTEARRAY(1), PQREAL(2), ISNIL(3)? (QFont::HintingPreference) QFont::PreferDefaultHinting : (QFont::HintingPreference) hb_parni(3) );
+  QRawFont * o = new QRawFont( *PQBYTEARRAY(1), PQREAL(2), ISNIL(3)? (QFont::HintingPreference) QFont::PreferDefaultHinting : (QFont::HintingPreference) hb_parni(3) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QRawFont ( const QRawFont & other )
 */
-void QRawFont_new4 ()
+void QRawFont_new4()
 {
-  QRawFont * o = new QRawFont ( *PQRAWFONT(1) );
+  QRawFont * o = new QRawFont( *PQRAWFONT(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES1 )
         temp1 = (quint32) hb_arrayGetNI(aList1, i1+1);
         par1 << temp1;
       }
-      QVector<QPointF> list = obj->advancesForGlyphIndexes ( par1 );
+      QVector<QPointF> list = obj->advancesForGlyphIndexes( par1 );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QPOINTF" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES1 )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QPointF *) new QPointF ( list[i] ) );
+          hb_itemPutPtr( pItem, (QPointF *) new QPointF( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -244,8 +244,8 @@ HB_FUNC_STATIC( QRAWFONT_ALPHAMAPFORGLYPH )
     if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && (ISQTRANSFORM(3)||ISNIL(3)) )
     {
 #endif
-      QImage * ptr = new QImage( obj->alphaMapForGlyph ( PQUINT32(1), ISNIL(2)? (QRawFont::AntialiasingType) QRawFont::SubPixelAntialiasing : (QRawFont::AntialiasingType) hb_parni(2), ISNIL(3)? QTransform() : *(QTransform *) _qt4xhb_itemGetPtr(3) ) );
-      _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
+      QImage * ptr = new QImage( obj->alphaMapForGlyph( PQUINT32(1), ISNIL(2)? (QRawFont::AntialiasingType) QRawFont::SubPixelAntialiasing : (QRawFont::AntialiasingType) hb_parni(2), ISNIL(3)? QTransform() : *(QTransform *) _qt4xhb_itemGetPtr(3) ) );
+      _qt4xhb_createReturnClass( ptr, "QIMAGE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QRAWFONT_ASCENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->ascent () );
+      RQREAL( obj->ascent() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QRAWFONT_AVERAGECHARWIDTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->averageCharWidth () );
+      RQREAL( obj->averageCharWidth() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QRAWFONT_DESCENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->descent () );
+      RQREAL( obj->descent() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QRAWFONT_FAMILYNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->familyName () );
+      RQSTRING( obj->familyName() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -365,8 +365,8 @@ HB_FUNC_STATIC( QRAWFONT_FONTTABLE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->fontTable ( PCONSTCHAR(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      QByteArray * ptr = new QByteArray( obj->fontTable( PCONSTCHAR(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QRAWFONT_GLYPHINDEXESFORSTRING )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QVector<quint32> list = obj->glyphIndexesForString ( PQSTRING(1) );
+      QVector<quint32> list = obj->glyphIndexesForString( PQSTRING(1) );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       for( int i = 0; i < list.count(); i++ )
       {
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QRAWFONT_HINTINGPREFERENCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->hintingPreference () );
+      RENUM( obj->hintingPreference() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QRAWFONT_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QRAWFONT_LEADING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->leading () );
+      RQREAL( obj->leading() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QRAWFONT_LOADFROMDATA )
     if( ISNUMPAR(3) && ISQBYTEARRAY(1) && ISNUM(2) && ISNUM(3) )
     {
 #endif
-      obj->loadFromData ( *PQBYTEARRAY(1), PQREAL(2), (QFont::HintingPreference) hb_parni(3) );
+      obj->loadFromData( *PQBYTEARRAY(1), PQREAL(2), (QFont::HintingPreference) hb_parni(3) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QRAWFONT_LOADFROMFILE )
     if( ISNUMPAR(3) && ISCHAR(1) && ISNUM(2) && ISNUM(3) )
     {
 #endif
-      obj->loadFromFile ( PQSTRING(1), PQREAL(2), (QFont::HintingPreference) hb_parni(3) );
+      obj->loadFromFile( PQSTRING(1), PQREAL(2), (QFont::HintingPreference) hb_parni(3) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -546,7 +546,7 @@ HB_FUNC_STATIC( QRAWFONT_MAXCHARWIDTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->maxCharWidth () );
+      RQREAL( obj->maxCharWidth() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -570,8 +570,8 @@ HB_FUNC_STATIC( QRAWFONT_PATHFORGLYPH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->pathForGlyph ( PQUINT32(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+      QPainterPath * ptr = new QPainterPath( obj->pathForGlyph( PQUINT32(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QPAINTERPATH", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QRAWFONT_PIXELSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->pixelSize () );
+      RQREAL( obj->pixelSize() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -619,7 +619,7 @@ HB_FUNC_STATIC( QRAWFONT_SETPIXELSIZE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setPixelSize ( PQREAL(1) );
+      obj->setPixelSize( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -645,7 +645,7 @@ HB_FUNC_STATIC( QRAWFONT_STYLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->style () );
+      RENUM( obj->style() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -669,7 +669,7 @@ HB_FUNC_STATIC( QRAWFONT_STYLENAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->styleName () );
+      RQSTRING( obj->styleName() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -693,7 +693,7 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTEDWRITINGSYSTEMS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QFontDatabase::WritingSystem> list = obj->supportedWritingSystems ();
+      QList<QFontDatabase::WritingSystem> list = obj->supportedWritingSystems();
       PHB_ITEM pArray = hb_itemArrayNew(0);
       for( int i = 0; i < list.count(); i++ )
       {
@@ -715,26 +715,26 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTEDWRITINGSYSTEMS )
 /*
 bool supportsCharacter ( QChar character ) const
 */
-void QRawFont_supportsCharacter1 ()
+void QRawFont_supportsCharacter1()
 {
   QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RBOOL( obj->supportsCharacter ( *PQCHAR(1) ) );
+    RBOOL( obj->supportsCharacter( *PQCHAR(1) ) );
   }
 }
 
 /*
 bool supportsCharacter ( quint32 ucs4 ) const
 */
-void QRawFont_supportsCharacter2 ()
+void QRawFont_supportsCharacter2()
 {
   QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RBOOL( obj->supportsCharacter ( PQUINT32(1) ) );
+    RBOOL( obj->supportsCharacter( PQUINT32(1) ) );
   }
 }
 
@@ -770,7 +770,7 @@ HB_FUNC_STATIC( QRAWFONT_UNITSPEREM )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->unitsPerEm () );
+      RQREAL( obj->unitsPerEm() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -794,7 +794,7 @@ HB_FUNC_STATIC( QRAWFONT_WEIGHT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->weight () );
+      RINT( obj->weight() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -818,7 +818,7 @@ HB_FUNC_STATIC( QRAWFONT_XHEIGHT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->xHeight () );
+      RQREAL( obj->xHeight() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -838,8 +838,8 @@ HB_FUNC_STATIC( QRAWFONT_FROMFONT )
   if( ISBETWEEN(1,2) && ISQFONT(1) && ISOPTNUM(2) )
   {
 #endif
-    QRawFont * ptr = new QRawFont( QRawFont::fromFont ( *PQFONT(1), ISNIL(2)? (QFontDatabase::WritingSystem) QFontDatabase::Any : (QFontDatabase::WritingSystem) hb_parni(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QRAWFONT", true );
+    QRawFont * ptr = new QRawFont( QRawFont::fromFont( *PQFONT(1), ISNIL(2)? (QFontDatabase::WritingSystem) QFontDatabase::Any : (QFontDatabase::WritingSystem) hb_parni(2) ) );
+    _qt4xhb_createReturnClass( ptr, "QRAWFONT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

@@ -24,7 +24,7 @@ CLASS QStyleHintReturnVariant INHERIT QStyleHintReturn
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStyleHintReturnVariant
+PROCEDURE destroyObject() CLASS QStyleHintReturnVariant
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -45,7 +45,7 @@ HB_FUNC_STATIC( QSTYLEHINTRETURNVARIANT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QStyleHintReturnVariant * o = new QStyleHintReturnVariant ();
+    QStyleHintReturnVariant * o = new QStyleHintReturnVariant();
     _qt4xhb_returnNewObject( o, true );
   }
   else

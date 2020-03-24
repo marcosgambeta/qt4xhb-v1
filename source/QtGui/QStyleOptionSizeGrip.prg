@@ -25,7 +25,7 @@ CLASS QStyleOptionSizeGrip INHERIT QStyleOptionComplex
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStyleOptionSizeGrip
+PROCEDURE destroyObject() CLASS QStyleOptionSizeGrip
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -42,18 +42,18 @@ RETURN
 /*
 QStyleOptionSizeGrip()
 */
-void QStyleOptionSizeGrip_new1 ()
+void QStyleOptionSizeGrip_new1()
 {
-  QStyleOptionSizeGrip * o = new QStyleOptionSizeGrip ();
+  QStyleOptionSizeGrip * o = new QStyleOptionSizeGrip();
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QStyleOptionSizeGrip(const QStyleOptionSizeGrip &other)
 */
-void QStyleOptionSizeGrip_new2 ()
+void QStyleOptionSizeGrip_new2()
 {
-  QStyleOptionSizeGrip * o = new QStyleOptionSizeGrip ( *PQSTYLEOPTIONSIZEGRIP(1) );
+  QStyleOptionSizeGrip * o = new QStyleOptionSizeGrip( *PQSTYLEOPTIONSIZEGRIP(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_CORNER )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->corner  );
+      RENUM( obj->corner );
     }
     else
     {
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_SETCORNER )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->corner = (Qt::Corner) hb_parni(1);
+      obj->corner= (Qt::Corner) hb_parni(1);
     }
     else
     {

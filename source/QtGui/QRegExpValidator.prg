@@ -28,7 +28,7 @@ CLASS QRegExpValidator INHERIT QValidator
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QRegExpValidator
+PROCEDURE destroyObject() CLASS QRegExpValidator
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -47,18 +47,18 @@ RETURN
 /*
 QRegExpValidator ( QObject * parent = 0 )
 */
-void QRegExpValidator_new1 ()
+void QRegExpValidator_new1()
 {
-  QRegExpValidator * o = new QRegExpValidator ( OPQOBJECT(1,0) );
+  QRegExpValidator * o = new QRegExpValidator( OPQOBJECT(1,0) );
   _qt4xhb_returnNewObject( o, false );
 }
 
 /*
 QRegExpValidator ( const QRegExp & rx, QObject * parent )
 */
-void QRegExpValidator_new2 ()
+void QRegExpValidator_new2()
 {
-  QRegExpValidator * o = new QRegExpValidator ( *PQREGEXP(1), PQOBJECT(2) );
+  QRegExpValidator * o = new QRegExpValidator( *PQREGEXP(1), PQOBJECT(2) );
   _qt4xhb_returnNewObject( o, false );
 }
 
@@ -87,8 +87,8 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -113,8 +113,8 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_REGEXP )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QRegExp * ptr = &obj->regExp ();
-      _qt4xhb_createReturnClass ( ptr, "QREGEXP", false );
+      const QRegExp * ptr = &obj->regExp();
+      _qt4xhb_createReturnClass( ptr, "QREGEXP", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_SETREGEXP )
     if( ISNUMPAR(1) && ISQREGEXP(1) )
     {
 #endif
-      obj->setRegExp ( *PQREGEXP(1) );
+      obj->setRegExp( *PQREGEXP(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

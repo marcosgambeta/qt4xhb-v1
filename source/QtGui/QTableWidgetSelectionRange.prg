@@ -39,7 +39,7 @@ CLASS QTableWidgetSelectionRange
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTableWidgetSelectionRange
+PROCEDURE destroyObject() CLASS QTableWidgetSelectionRange
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -56,27 +56,27 @@ RETURN
 /*
 QTableWidgetSelectionRange ()
 */
-void QTableWidgetSelectionRange_new1 ()
+void QTableWidgetSelectionRange_new1()
 {
-  QTableWidgetSelectionRange * o = new QTableWidgetSelectionRange ();
+  QTableWidgetSelectionRange * o = new QTableWidgetSelectionRange();
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QTableWidgetSelectionRange ( int top, int left, int bottom, int right )
 */
-void QTableWidgetSelectionRange_new2 ()
+void QTableWidgetSelectionRange_new2()
 {
-  QTableWidgetSelectionRange * o = new QTableWidgetSelectionRange ( PINT(1), PINT(2), PINT(3), PINT(4) );
+  QTableWidgetSelectionRange * o = new QTableWidgetSelectionRange( PINT(1), PINT(2), PINT(3), PINT(4) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QTableWidgetSelectionRange ( const QTableWidgetSelectionRange & other )
 */
-void QTableWidgetSelectionRange_new3 ()
+void QTableWidgetSelectionRange_new3()
 {
-  QTableWidgetSelectionRange * o = new QTableWidgetSelectionRange ( *PQTABLEWIDGETSELECTIONRANGE(1) );
+  QTableWidgetSelectionRange * o = new QTableWidgetSelectionRange( *PQTABLEWIDGETSELECTIONRANGE(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_BOTTOMROW )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->bottomRow () );
+      RINT( obj->bottomRow() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_COLUMNCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->columnCount () );
+      RINT( obj->columnCount() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_LEFTCOLUMN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->leftColumn () );
+      RINT( obj->leftColumn() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_RIGHTCOLUMN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->rightColumn () );
+      RINT( obj->rightColumn() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_ROWCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->rowCount () );
+      RINT( obj->rowCount() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_TOPROW )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->topRow () );
+      RINT( obj->topRow() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

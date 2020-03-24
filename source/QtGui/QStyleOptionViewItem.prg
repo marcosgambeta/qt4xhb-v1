@@ -39,7 +39,7 @@ CLASS QStyleOptionViewItem INHERIT QStyleOption
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStyleOptionViewItem
+PROCEDURE destroyObject() CLASS QStyleOptionViewItem
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -56,18 +56,18 @@ RETURN
 /*
 QStyleOptionViewItem()
 */
-void QStyleOptionViewItem_new1 ()
+void QStyleOptionViewItem_new1()
 {
-  QStyleOptionViewItem * o = new QStyleOptionViewItem ();
+  QStyleOptionViewItem * o = new QStyleOptionViewItem();
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QStyleOptionViewItem(const QStyleOptionViewItem &other)
 */
-void QStyleOptionViewItem_new2 ()
+void QStyleOptionViewItem_new2()
 {
-  QStyleOptionViewItem * o = new QStyleOptionViewItem ( *PQSTYLEOPTIONVIEWITEM(1) );
+  QStyleOptionViewItem * o = new QStyleOptionViewItem( *PQSTYLEOPTIONVIEWITEM(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_DISPLAYALIGNMENT )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->displayAlignment  );
+      RENUM( obj->displayAlignment );
     }
     else
     {
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETDISPLAYALIGNMENT )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->displayAlignment = (Qt::Alignment) hb_parni(1);
+      obj->displayAlignment= (Qt::Alignment) hb_parni(1);
     }
     else
     {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_DECORATIONALIGNMENT )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->decorationAlignment  );
+      RENUM( obj->decorationAlignment );
     }
     else
     {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETDECORATIONALIGNMENT )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->decorationAlignment = (Qt::Alignment) hb_parni(1);
+      obj->decorationAlignment= (Qt::Alignment) hb_parni(1);
     }
     else
     {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_TEXTELIDEMODE )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->textElideMode  );
+      RENUM( obj->textElideMode );
     }
     else
     {
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETTEXTELIDEMODE )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->textElideMode = (Qt::TextElideMode) hb_parni(1);
+      obj->textElideMode= (Qt::TextElideMode) hb_parni(1);
     }
     else
     {
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_DECORATIONPOSITION )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->decorationPosition  );
+      RENUM( obj->decorationPosition );
     }
     else
     {
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETDECORATIONPOSITION )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->decorationPosition = (QStyleOptionViewItem::Position) hb_parni(1);
+      obj->decorationPosition= (QStyleOptionViewItem::Position) hb_parni(1);
     }
     else
     {
@@ -258,8 +258,8 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_DECORATIONSIZE )
   {
     if( ISNUMPAR(0) )
     {
-      QSize * ptr = new QSize( obj->decorationSize  );
-      _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->decorationSize );
+      _qt4xhb_createReturnClass( ptr, "QSIZE", true );
     }
     else
     {
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETDECORATIONSIZE )
   {
     if( ISNUMPAR(1) && ISQSIZE(1) )
     {
-      obj->decorationSize = *PQSIZE(1);
+      obj->decorationSize= *PQSIZE(1);
     }
     else
     {
@@ -297,8 +297,8 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_FONT )
   {
     if( ISNUMPAR(0) )
     {
-      QFont * ptr = new QFont( obj->font  );
-      _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+      QFont * ptr = new QFont( obj->font );
+      _qt4xhb_createReturnClass( ptr, "QFONT", true );
     }
     else
     {
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETFONT )
   {
     if( ISNUMPAR(1) && ISQFONT(1) )
     {
-      obj->font = *PQFONT(1);
+      obj->font= *PQFONT(1);
     }
     else
     {
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SHOWDECORATIONSELECTED )
   {
     if( ISNUMPAR(0) )
     {
-      RBOOL( obj->showDecorationSelected  );
+      RBOOL( obj->showDecorationSelected );
     }
     else
     {
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETSHOWDECORATIONSELECTED )
   {
     if( ISNUMPAR(1) && ISLOG(1) )
     {
-      obj->showDecorationSelected = PBOOL(1);
+      obj->showDecorationSelected= PBOOL(1);
     }
     else
     {

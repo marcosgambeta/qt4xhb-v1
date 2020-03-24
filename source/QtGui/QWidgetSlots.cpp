@@ -25,7 +25,7 @@ void QWidgetSlots::customContextMenuRequested( const QPoint & pos )
   PHB_ITEM cb = Signals_return_codeblock( object, "customContextMenuRequested(QPoint)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWIDGET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWIDGET" );
     PHB_ITEM ppos = Signals_return_object( (void *) &pos, "QPOINT" );
     hb_vmEvalBlockV( cb, 2, psender, ppos );
     hb_itemRelease( psender );
@@ -33,7 +33,7 @@ void QWidgetSlots::customContextMenuRequested( const QPoint & pos )
   }
 }
 
-void QWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
+void QWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

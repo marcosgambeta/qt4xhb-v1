@@ -44,7 +44,7 @@ CLASS QTabletEvent INHERIT QInputEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTabletEvent
+PROCEDURE destroyObject() CLASS QTabletEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QTABLETEVENT_NEW )
 {
   if( ISNUMPAR(14) && ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) && ISQPOINTF(4) && ISNUM(5) && ISNUM(6) && ISNUM(7) && ISNUM(8) && ISNUM(9) && ISNUM(10) && ISNUM(11) && ISNUM(12) && ISNUM(13) && ISNUM(14) )
   {
-    QTabletEvent * o = new QTabletEvent ( (QEvent::Type) hb_parni(1), *PQPOINT(2), *PQPOINT(3), *PQPOINTF(4), PINT(5), PINT(6), PQREAL(7), PINT(8), PINT(9), PQREAL(10), PQREAL(11), PINT(12), (Qt::KeyboardModifiers) hb_parni(13), PQINT64(14) );
+    QTabletEvent * o = new QTabletEvent( (QEvent::Type) hb_parni(1), *PQPOINT(2), *PQPOINT(3), *PQPOINTF(4), PINT(5), PINT(6), PQREAL(7), PINT(8), PINT(9), PQREAL(10), PQREAL(11), PINT(12), (Qt::KeyboardModifiers) hb_parni(13), PQINT64(14) );
     _qt4xhb_returnNewObject( o, false );
   }
   else
@@ -104,8 +104,8 @@ HB_FUNC_STATIC( QTABLETEVENT_POS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QPoint * ptr = &obj->pos ();
-      _qt4xhb_createReturnClass ( ptr, "QPOINT", false );
+      const QPoint * ptr = &obj->pos();
+      _qt4xhb_createReturnClass( ptr, "QPOINT", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -129,8 +129,8 @@ HB_FUNC_STATIC( QTABLETEVENT_GLOBALPOS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QPoint * ptr = &obj->globalPos ();
-      _qt4xhb_createReturnClass ( ptr, "QPOINT", false );
+      const QPoint * ptr = &obj->globalPos();
+      _qt4xhb_createReturnClass( ptr, "QPOINT", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,8 +154,8 @@ HB_FUNC_STATIC( QTABLETEVENT_HIRESGLOBALPOS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QPointF * ptr = &obj->hiResGlobalPos ();
-      _qt4xhb_createReturnClass ( ptr, "QPOINTF", false );
+      const QPointF * ptr = &obj->hiResGlobalPos();
+      _qt4xhb_createReturnClass( ptr, "QPOINTF", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QTABLETEVENT_X )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->x () );
+      RINT( obj->x() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QTABLETEVENT_Y )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->y () );
+      RINT( obj->y() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QTABLETEVENT_GLOBALX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->globalX () );
+      RINT( obj->globalX() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QTABLETEVENT_GLOBALY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->globalY () );
+      RINT( obj->globalY() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QTABLETEVENT_HIRESGLOBALX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->hiResGlobalX () );
+      RQREAL( obj->hiResGlobalX() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QTABLETEVENT_HIRESGLOBALY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->hiResGlobalY () );
+      RQREAL( obj->hiResGlobalY() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QTABLETEVENT_DEVICE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->device () );
+      RENUM( obj->device() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QTABLETEVENT_POINTERTYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->pointerType () );
+      RENUM( obj->pointerType() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QTABLETEVENT_UNIQUEID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->uniqueId () );
+      RQINT64( obj->uniqueId() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QTABLETEVENT_PRESSURE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->pressure () );
+      RQREAL( obj->pressure() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QTABLETEVENT_Z )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->z () );
+      RINT( obj->z() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QTABLETEVENT_TANGENTIALPRESSURE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->tangentialPressure () );
+      RQREAL( obj->tangentialPressure() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QTABLETEVENT_ROTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->rotation () );
+      RQREAL( obj->rotation() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QTABLETEVENT_XTILT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->xTilt () );
+      RINT( obj->xTilt() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QTABLETEVENT_YTILT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->yTilt () );
+      RINT( obj->yTilt() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

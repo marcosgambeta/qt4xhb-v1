@@ -38,7 +38,7 @@ CLASS QPlatformCursorImage
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPlatformCursorImage
+PROCEDURE destroyObject() CLASS QPlatformCursorImage
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_NEW )
 {
   if( ISNUMPAR(6) && ISCHAR(1) && ISCHAR(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) )
   {
-    QPlatformCursorImage * o = new QPlatformCursorImage ( PCONSTUCHAR(1), PCONSTUCHAR(2), PINT(3), PINT(4), PINT(5), PINT(6) );
+    QPlatformCursorImage * o = new QPlatformCursorImage( PCONSTUCHAR(1), PCONSTUCHAR(2), PINT(3), PINT(4), PINT(5), PINT(6) );
     _qt4xhb_returnNewObject( o, true );
   }
   else
@@ -98,8 +98,8 @@ HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_HOTSPOT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->hotspot () );
-      _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+      QPoint * ptr = new QPoint( obj->hotspot() );
+      _qt4xhb_createReturnClass( ptr, "QPOINT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -123,8 +123,8 @@ HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_IMAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QImage * ptr = obj->image ();
-      _qt4xhb_createReturnClass ( ptr, "QIMAGE", false );
+      QImage * ptr = obj->image();
+      _qt4xhb_createReturnClass( ptr, "QIMAGE", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -138,13 +138,13 @@ HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_IMAGE )
 /*
 void set ( const uchar * data, const uchar * mask, int width, int height, int hx, int hy )
 */
-void QPlatformCursorImage_set1 ()
+void QPlatformCursorImage_set1()
 {
   QPlatformCursorImage * obj = (QPlatformCursorImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    obj->set ( PCONSTUCHAR(1), PCONSTUCHAR(2), PINT(3), PINT(4), PINT(5), PINT(6) );
+    obj->set( PCONSTUCHAR(1), PCONSTUCHAR(2), PINT(3), PINT(4), PINT(5), PINT(6) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -153,13 +153,13 @@ void QPlatformCursorImage_set1 ()
 /*
 void set ( const QImage & image, int hx, int hy )
 */
-void QPlatformCursorImage_set2 ()
+void QPlatformCursorImage_set2()
 {
   QPlatformCursorImage * obj = (QPlatformCursorImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    obj->set ( *PQIMAGE(1), PINT(2), PINT(3) );
+    obj->set( *PQIMAGE(1), PINT(2), PINT(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -168,13 +168,13 @@ void QPlatformCursorImage_set2 ()
 /*
 void set ( Qt::CursorShape id )
 */
-void QPlatformCursorImage_set3 ()
+void QPlatformCursorImage_set3()
 {
   QPlatformCursorImage * obj = (QPlatformCursorImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    obj->set ( (Qt::CursorShape) hb_parni(1) );
+    obj->set( (Qt::CursorShape) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

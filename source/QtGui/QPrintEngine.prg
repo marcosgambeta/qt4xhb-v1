@@ -39,7 +39,7 @@ CLASS QPrintEngine
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPrintEngine
+PROCEDURE destroyObject() CLASS QPrintEngine
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QPRINTENGINE_ABORT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->abort () );
+      RBOOL( obj->abort() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QPRINTENGINE_METRIC )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RINT( obj->metric ( (QPaintDevice::PaintDeviceMetric) hb_parni(1) ) );
+      RINT( obj->metric( (QPaintDevice::PaintDeviceMetric) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QPRINTENGINE_NEWPAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->newPage () );
+      RBOOL( obj->newPage() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QPRINTENGINE_PRINTERSTATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->printerState () );
+      RENUM( obj->printerState() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -179,8 +179,8 @@ HB_FUNC_STATIC( QPRINTENGINE_PROPERTY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->property ( (QPrintEngine::PrintEnginePropertyKey) hb_parni(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->property( (QPrintEngine::PrintEnginePropertyKey) hb_parni(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QPRINTENGINE_SETPROPERTY )
     if( ISNUMPAR(2) && ISNUM(1) && ISQVARIANT(2) )
     {
 #endif
-      obj->setProperty ( (QPrintEngine::PrintEnginePropertyKey) hb_parni(1), *PQVARIANT(2) );
+      obj->setProperty( (QPrintEngine::PrintEnginePropertyKey) hb_parni(1), *PQVARIANT(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

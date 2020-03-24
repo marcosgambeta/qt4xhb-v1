@@ -31,7 +31,7 @@ CLASS QPageSetupDialog INHERIT QDialog
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPageSetupDialog
+PROCEDURE destroyObject() CLASS QPageSetupDialog
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -54,7 +54,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW )
 {
   if( ISBETWEEN(1,2) && ISQPRINTER(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    QPageSetupDialog * o = new QPageSetupDialog ( PQPRINTER(1), OPQWIDGET(2,0) );
+    QPageSetupDialog * o = new QPageSetupDialog( PQPRINTER(1), OPQWIDGET(2,0) );
     _qt4xhb_returnNewObject( o, false );
   }
   else
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_OPEN )
     if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
     {
 #endif
-      obj->open ( PQOBJECT(1), PCONSTCHAR(2) );
+      obj->open( PQOBJECT(1), PCONSTCHAR(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_OPTIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->options () );
+      RENUM( obj->options() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,8 +126,8 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_PRINTER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPrinter * ptr = obj->printer ();
-      _qt4xhb_createReturnClass ( ptr, "QPRINTER", false );
+      QPrinter * ptr = obj->printer();
+      _qt4xhb_createReturnClass( ptr, "QPRINTER", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_SETOPTION )
     if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
     {
 #endif
-      obj->setOption ( (QPageSetupDialog::PageSetupDialogOption) hb_parni(1), OPBOOL(2,true) );
+      obj->setOption( (QPageSetupDialog::PageSetupDialogOption) hb_parni(1), OPBOOL(2,true) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_SETOPTIONS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setOptions ( (QPageSetupDialog::PageSetupDialogOptions) hb_parni(1) );
+      obj->setOptions( (QPageSetupDialog::PageSetupDialogOptions) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_TESTOPTION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->testOption ( (QPageSetupDialog::PageSetupDialogOption) hb_parni(1) ) );
+      RBOOL( obj->testOption( (QPageSetupDialog::PageSetupDialogOption) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_SETVISIBLE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setVisible ( PBOOL(1) );
+      obj->setVisible( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

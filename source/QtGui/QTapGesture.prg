@@ -26,7 +26,7 @@ CLASS QTapGesture INHERIT QGesture
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTapGesture
+PROCEDURE destroyObject() CLASS QTapGesture
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -48,8 +48,8 @@ HB_FUNC_STATIC( QTAPGESTURE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -74,8 +74,8 @@ HB_FUNC_STATIC( QTAPGESTURE_POSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->position () );
-      _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+      QPointF * ptr = new QPointF( obj->position() );
+      _qt4xhb_createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QTAPGESTURE_SETPOSITION )
     if( ISNUMPAR(1) && ISQPOINTF(1) )
     {
 #endif
-      obj->setPosition ( *PQPOINTF(1) );
+      obj->setPosition( *PQPOINTF(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

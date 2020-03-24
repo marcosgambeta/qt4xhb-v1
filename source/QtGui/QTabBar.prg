@@ -82,7 +82,7 @@ CLASS QTabBar INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTabBar
+PROCEDURE destroyObject() CLASS QTabBar
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QTABBAR_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QTabBar * o = new QTabBar ( OPQWIDGET(1,0) );
+    QTabBar * o = new QTabBar( OPQWIDGET(1,0) );
     _qt4xhb_returnNewObject( o, false );
   }
   else
@@ -123,8 +123,8 @@ HB_FUNC_STATIC( QTABBAR_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -139,26 +139,26 @@ HB_FUNC_STATIC( QTABBAR_DELETE )
 /*
 int addTab ( const QString & text )
 */
-void QTabBar_addTab1 ()
+void QTabBar_addTab1()
 {
   QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RINT( obj->addTab ( PQSTRING(1) ) );
+    RINT( obj->addTab( PQSTRING(1) ) );
   }
 }
 
 /*
 int addTab ( const QIcon & icon, const QString & text )
 */
-void QTabBar_addTab2 ()
+void QTabBar_addTab2()
 {
   QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RINT( obj->addTab ( ISOBJECT(1)? *(QIcon *) _qt4xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) ) );
+    RINT( obj->addTab( ISOBJECT(1)? *(QIcon *) _qt4xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) ) );
   }
 }
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QTABBAR_COUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->count () );
+      RINT( obj->count() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QTABBAR_CURRENTINDEX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->currentIndex () );
+      RINT( obj->currentIndex() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QTABBAR_DOCUMENTMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->documentMode () );
+      RBOOL( obj->documentMode() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QTABBAR_DRAWBASE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->drawBase () );
+      RBOOL( obj->drawBase() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QTABBAR_ELIDEMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->elideMode () );
+      RENUM( obj->elideMode() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QTABBAR_EXPANDING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->expanding () );
+      RBOOL( obj->expanding() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -338,8 +338,8 @@ HB_FUNC_STATIC( QTABBAR_ICONSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->iconSize () );
-      _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->iconSize() );
+      _qt4xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -353,26 +353,26 @@ HB_FUNC_STATIC( QTABBAR_ICONSIZE )
 /*
 int insertTab ( int index, const QString & text )
 */
-void QTabBar_insertTab1 ()
+void QTabBar_insertTab1()
 {
   QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RINT( obj->insertTab ( PINT(1), PQSTRING(2) ) );
+    RINT( obj->insertTab( PINT(1), PQSTRING(2) ) );
   }
 }
 
 /*
 int insertTab ( int index, const QIcon & icon, const QString & text )
 */
-void QTabBar_insertTab2 ()
+void QTabBar_insertTab2()
 {
   QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    RINT( obj->insertTab ( PINT(1), ISOBJECT(2)? *(QIcon *) _qt4xhb_itemGetPtr(2) : QIcon(hb_parc(2)), PQSTRING(3) ) );
+    RINT( obj->insertTab( PINT(1), ISOBJECT(2)? *(QIcon *) _qt4xhb_itemGetPtr(2) : QIcon(hb_parc(2)), PQSTRING(3) ) );
   }
 }
 
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QTABBAR_ISMOVABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isMovable () );
+      RBOOL( obj->isMovable() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QTABBAR_ISTABENABLED )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isTabEnabled ( PINT(1) ) );
+      RBOOL( obj->isTabEnabled( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QTABBAR_MOVETAB )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->moveTab ( PINT(1), PINT(2) );
+      obj->moveTab( PINT(1), PINT(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QTABBAR_REMOVETAB )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->removeTab ( PINT(1) );
+      obj->removeTab( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QTABBAR_SELECTIONBEHAVIORONREMOVE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->selectionBehaviorOnRemove () );
+      RENUM( obj->selectionBehaviorOnRemove() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QTABBAR_SETDOCUMENTMODE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setDocumentMode ( PBOOL(1) );
+      obj->setDocumentMode( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -558,7 +558,7 @@ HB_FUNC_STATIC( QTABBAR_SETDRAWBASE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setDrawBase ( PBOOL(1) );
+      obj->setDrawBase( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -584,7 +584,7 @@ HB_FUNC_STATIC( QTABBAR_SETELIDEMODE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setElideMode ( (Qt::TextElideMode) hb_parni(1) );
+      obj->setElideMode( (Qt::TextElideMode) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -610,7 +610,7 @@ HB_FUNC_STATIC( QTABBAR_SETEXPANDING )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setExpanding ( PBOOL(1) );
+      obj->setExpanding( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QTABBAR_SETICONSIZE )
     if( ISNUMPAR(1) && ISQSIZE(1) )
     {
 #endif
-      obj->setIconSize ( *PQSIZE(1) );
+      obj->setIconSize( *PQSIZE(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -662,7 +662,7 @@ HB_FUNC_STATIC( QTABBAR_SETMOVABLE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setMovable ( PBOOL(1) );
+      obj->setMovable( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -688,7 +688,7 @@ HB_FUNC_STATIC( QTABBAR_SETSELECTIONBEHAVIORONREMOVE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setSelectionBehaviorOnRemove ( (QTabBar::SelectionBehavior) hb_parni(1) );
+      obj->setSelectionBehaviorOnRemove( (QTabBar::SelectionBehavior) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -714,7 +714,7 @@ HB_FUNC_STATIC( QTABBAR_SETSHAPE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setShape ( (QTabBar::Shape) hb_parni(1) );
+      obj->setShape( (QTabBar::Shape) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -740,7 +740,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABBUTTON )
     if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQWIDGET(3) )
     {
 #endif
-      obj->setTabButton ( PINT(1), (QTabBar::ButtonPosition) hb_parni(2), PQWIDGET(3) );
+      obj->setTabButton( PINT(1), (QTabBar::ButtonPosition) hb_parni(2), PQWIDGET(3) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -766,7 +766,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABDATA )
     if( ISNUMPAR(2) && ISNUM(1) && ISQVARIANT(2) )
     {
 #endif
-      obj->setTabData ( PINT(1), *PQVARIANT(2) );
+      obj->setTabData( PINT(1), *PQVARIANT(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -792,7 +792,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABENABLED )
     if( ISNUMPAR(2) && ISNUM(1) && ISLOG(2) )
     {
 #endif
-      obj->setTabEnabled ( PINT(1), PBOOL(2) );
+      obj->setTabEnabled( PINT(1), PBOOL(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -818,7 +818,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABICON )
     if( ISNUMPAR(2) && ISNUM(1) && (ISQICON(2)||ISCHAR(2)) )
     {
 #endif
-      obj->setTabIcon ( PINT(1), ISOBJECT(2)? *(QIcon *) _qt4xhb_itemGetPtr(2) : QIcon(hb_parc(2)) );
+      obj->setTabIcon( PINT(1), ISOBJECT(2)? *(QIcon *) _qt4xhb_itemGetPtr(2) : QIcon(hb_parc(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -844,7 +844,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABTEXT )
     if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
     {
 #endif
-      obj->setTabText ( PINT(1), PQSTRING(2) );
+      obj->setTabText( PINT(1), PQSTRING(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -870,7 +870,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABTEXTCOLOR )
     if( ISNUMPAR(2) && ISNUM(1) && (ISQCOLOR(2)||ISCHAR(2)) )
     {
 #endif
-      obj->setTabTextColor ( PINT(1), ISOBJECT(2)? *(QColor *) _qt4xhb_itemGetPtr(2) : QColor(hb_parc(2)) );
+      obj->setTabTextColor( PINT(1), ISOBJECT(2)? *(QColor *) _qt4xhb_itemGetPtr(2) : QColor(hb_parc(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -896,7 +896,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABTOOLTIP )
     if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
     {
 #endif
-      obj->setTabToolTip ( PINT(1), PQSTRING(2) );
+      obj->setTabToolTip( PINT(1), PQSTRING(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -922,7 +922,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABWHATSTHIS )
     if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
     {
 #endif
-      obj->setTabWhatsThis ( PINT(1), PQSTRING(2) );
+      obj->setTabWhatsThis( PINT(1), PQSTRING(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -948,7 +948,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABSCLOSABLE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setTabsClosable ( PBOOL(1) );
+      obj->setTabsClosable( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -974,7 +974,7 @@ HB_FUNC_STATIC( QTABBAR_SETUSESSCROLLBUTTONS )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setUsesScrollButtons ( PBOOL(1) );
+      obj->setUsesScrollButtons( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1000,7 +1000,7 @@ HB_FUNC_STATIC( QTABBAR_SHAPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->shape () );
+      RENUM( obj->shape() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1024,7 +1024,7 @@ HB_FUNC_STATIC( QTABBAR_TABAT )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      RINT( obj->tabAt ( *PQPOINT(1) ) );
+      RINT( obj->tabAt( *PQPOINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1048,8 +1048,8 @@ HB_FUNC_STATIC( QTABBAR_TABBUTTON )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      QWidget * ptr = obj->tabButton ( PINT(1), (QTabBar::ButtonPosition) hb_parni(2) );
-      _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->tabButton( PINT(1), (QTabBar::ButtonPosition) hb_parni(2) );
+      _qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1073,8 +1073,8 @@ HB_FUNC_STATIC( QTABBAR_TABDATA )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->tabData ( PINT(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->tabData( PINT(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1098,8 +1098,8 @@ HB_FUNC_STATIC( QTABBAR_TABICON )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QIcon * ptr = new QIcon( obj->tabIcon ( PINT(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QICON", true );
+      QIcon * ptr = new QIcon( obj->tabIcon( PINT(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QICON", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1123,8 +1123,8 @@ HB_FUNC_STATIC( QTABBAR_TABRECT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QRect * ptr = new QRect( obj->tabRect ( PINT(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+      QRect * ptr = new QRect( obj->tabRect( PINT(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QRECT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1148,7 +1148,7 @@ HB_FUNC_STATIC( QTABBAR_TABTEXT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->tabText ( PINT(1) ) );
+      RQSTRING( obj->tabText( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1172,8 +1172,8 @@ HB_FUNC_STATIC( QTABBAR_TABTEXTCOLOR )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QColor * ptr = new QColor( obj->tabTextColor ( PINT(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+      QColor * ptr = new QColor( obj->tabTextColor( PINT(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1197,7 +1197,7 @@ HB_FUNC_STATIC( QTABBAR_TABTOOLTIP )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->tabToolTip ( PINT(1) ) );
+      RQSTRING( obj->tabToolTip( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1221,7 +1221,7 @@ HB_FUNC_STATIC( QTABBAR_TABWHATSTHIS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->tabWhatsThis ( PINT(1) ) );
+      RQSTRING( obj->tabWhatsThis( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1245,7 +1245,7 @@ HB_FUNC_STATIC( QTABBAR_TABSCLOSABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->tabsClosable () );
+      RBOOL( obj->tabsClosable() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1269,7 +1269,7 @@ HB_FUNC_STATIC( QTABBAR_USESSCROLLBUTTONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->usesScrollButtons () );
+      RBOOL( obj->usesScrollButtons() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1293,8 +1293,8 @@ HB_FUNC_STATIC( QTABBAR_MINIMUMSIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->minimumSizeHint () );
-      _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->minimumSizeHint() );
+      _qt4xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1318,8 +1318,8 @@ HB_FUNC_STATIC( QTABBAR_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint () );
-      _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->sizeHint() );
+      _qt4xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1343,7 +1343,7 @@ HB_FUNC_STATIC( QTABBAR_SETCURRENTINDEX )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setCurrentIndex ( PINT(1) );
+      obj->setCurrentIndex( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1356,7 +1356,7 @@ HB_FUNC_STATIC( QTABBAR_SETCURRENTINDEX )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QTabBarSlots_connect_signal ( const QString & signal, const QString & slot );
+void QTabBarSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QTABBAR_ONCURRENTCHANGED )
 {

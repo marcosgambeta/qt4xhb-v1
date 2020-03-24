@@ -39,7 +39,7 @@ CLASS QPrinterInfo
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPrinterInfo
+PROCEDURE destroyObject() CLASS QPrinterInfo
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -56,27 +56,27 @@ RETURN
 /*
 QPrinterInfo ()
 */
-void QPrinterInfo_new1 ()
+void QPrinterInfo_new1()
 {
-  QPrinterInfo * o = new QPrinterInfo ();
+  QPrinterInfo * o = new QPrinterInfo();
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QPrinterInfo ( const QPrinterInfo & src )
 */
-void QPrinterInfo_new2 ()
+void QPrinterInfo_new2()
 {
-  QPrinterInfo * o = new QPrinterInfo ( *PQPRINTERINFO(1) );
+  QPrinterInfo * o = new QPrinterInfo( *PQPRINTERINFO(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QPrinterInfo ( const QPrinter & printer )
 */
-void QPrinterInfo_new3 ()
+void QPrinterInfo_new3()
 {
-  QPrinterInfo * o = new QPrinterInfo ( *PQPRINTER(1) );
+  QPrinterInfo * o = new QPrinterInfo( *PQPRINTER(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QPRINTERINFO_ISDEFAULT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isDefault () );
+      RBOOL( obj->isDefault() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QPRINTERINFO_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QPRINTERINFO_PRINTERNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->printerName () );
+      RQSTRING( obj->printerName() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAPERSIZES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QPrinter::PaperSize> list = obj->supportedPaperSizes ();
+      QList<QPrinter::PaperSize> list = obj->supportedPaperSizes();
       PHB_ITEM pArray = hb_itemArrayNew(0);
       for( int i = 0; i < list.count(); i++ )
       {
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QPrinterInfo> list = obj->availablePrinters ();
+      QList<QPrinterInfo> list = obj->availablePrinters();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QPRINTERINFO" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QPrinterInfo *) new QPrinterInfo ( list[i] ) );
+          hb_itemPutPtr( pItem, (QPrinterInfo *) new QPrinterInfo( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -286,8 +286,8 @@ HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPRINTER )
   if( ISNUMPAR(0) )
   {
 #endif
-    QPrinterInfo * ptr = new QPrinterInfo( QPrinterInfo::defaultPrinter () );
-    _qt4xhb_createReturnClass ( ptr, "QPRINTERINFO", true );
+    QPrinterInfo * ptr = new QPrinterInfo( QPrinterInfo::defaultPrinter() );
+    _qt4xhb_createReturnClass( ptr, "QPRINTERINFO", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

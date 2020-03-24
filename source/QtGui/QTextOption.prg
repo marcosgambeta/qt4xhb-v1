@@ -47,7 +47,7 @@ CLASS QTextOption
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextOption
+PROCEDURE destroyObject() CLASS QTextOption
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -64,27 +64,27 @@ RETURN
 /*
 QTextOption ()
 */
-void QTextOption_new1 ()
+void QTextOption_new1()
 {
-  QTextOption * o = new QTextOption ();
+  QTextOption * o = new QTextOption();
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QTextOption ( Qt::Alignment alignment )
 */
-void QTextOption_new2 ()
+void QTextOption_new2()
 {
-  QTextOption * o = new QTextOption ( (Qt::Alignment) hb_parni(1) );
+  QTextOption * o = new QTextOption( (Qt::Alignment) hb_parni(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QTextOption ( const QTextOption & other )
 */
-void QTextOption_new3 ()
+void QTextOption_new3()
 {
-  QTextOption * o = new QTextOption ( *PQTEXTOPTION(1) );
+  QTextOption * o = new QTextOption( *PQTEXTOPTION(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QTEXTOPTION_ALIGNMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->alignment () );
+      RENUM( obj->alignment() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QTEXTOPTION_FLAGS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->flags () );
+      RENUM( obj->flags() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QTEXTOPTION_SETALIGNMENT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setAlignment ( (Qt::Alignment) hb_parni(1) );
+      obj->setAlignment( (Qt::Alignment) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QTEXTOPTION_SETFLAGS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setFlags ( (QTextOption::Flags) hb_parni(1) );
+      obj->setFlags( (QTextOption::Flags) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QTEXTOPTION_SETTABARRAY )
         temp1 = hb_arrayGetND(aList1, i1+1);
         par1 << temp1;
       }
-      obj->setTabArray ( par1 );
+      obj->setTabArray( par1 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QTEXTOPTION_SETTABSTOP )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setTabStop ( PQREAL(1) );
+      obj->setTabStop( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QTEXTOPTION_SETTEXTDIRECTION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setTextDirection ( (Qt::LayoutDirection) hb_parni(1) );
+      obj->setTextDirection( (Qt::LayoutDirection) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QTEXTOPTION_SETUSEDESIGNMETRICS )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setUseDesignMetrics ( PBOOL(1) );
+      obj->setUseDesignMetrics( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QTEXTOPTION_SETWRAPMODE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setWrapMode ( (QTextOption::WrapMode) hb_parni(1) );
+      obj->setWrapMode( (QTextOption::WrapMode) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -382,8 +382,8 @@ HB_FUNC_STATIC( QTEXTOPTION_TABARRAY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<qreal> list = obj->tabArray ();
-      _qt4xhb_convert_qlist_qreal_to_array ( list );
+      QList<qreal> list = obj->tabArray();
+      _qt4xhb_convert_qlist_qreal_to_array( list );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QTEXTOPTION_TABSTOP )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->tabStop () );
+      RQREAL( obj->tabStop() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QTEXTOPTION_TEXTDIRECTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->textDirection () );
+      RENUM( obj->textDirection() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QTEXTOPTION_USEDESIGNMETRICS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->useDesignMetrics () );
+      RBOOL( obj->useDesignMetrics() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QTEXTOPTION_WRAPMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->wrapMode () );
+      RENUM( obj->wrapMode() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

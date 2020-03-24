@@ -34,7 +34,7 @@ CLASS QWheelEvent INHERIT QInputEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWheelEvent
+PROCEDURE destroyObject() CLASS QWheelEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -51,18 +51,18 @@ RETURN
 /*
 QWheelEvent(const QPoint &pos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
 */
-void QWheelEvent_new1 ()
+void QWheelEvent_new1()
 {
-  QWheelEvent * o = new QWheelEvent ( *PQPOINT(1), PINT(2), (Qt::MouseButtons) hb_parni(3), (Qt::KeyboardModifiers) hb_parni(4), ISNIL(5)? (Qt::Orientation) Qt::Vertical : (Qt::Orientation) hb_parni(5) );
+  QWheelEvent * o = new QWheelEvent( *PQPOINT(1), PINT(2), (Qt::MouseButtons) hb_parni(3), (Qt::KeyboardModifiers) hb_parni(4), ISNIL(5)? (Qt::Orientation) Qt::Vertical : (Qt::Orientation) hb_parni(5) );
   _qt4xhb_returnNewObject( o, false );
 }
 
 /*
 QWheelEvent(const QPoint &pos, const QPoint& globalPos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
 */
-void QWheelEvent_new2 ()
+void QWheelEvent_new2()
 {
-  QWheelEvent * o = new QWheelEvent ( *PQPOINT(1), *PQPOINT(2), PINT(3), (Qt::MouseButtons) hb_parni(4), (Qt::KeyboardModifiers) hb_parni(5), ISNIL(6)? (Qt::Orientation) Qt::Vertical : (Qt::Orientation) hb_parni(6) );
+  QWheelEvent * o = new QWheelEvent( *PQPOINT(1), *PQPOINT(2), PINT(3), (Qt::MouseButtons) hb_parni(4), (Qt::KeyboardModifiers) hb_parni(5), ISNIL(6)? (Qt::Orientation) Qt::Vertical : (Qt::Orientation) hb_parni(6) );
   _qt4xhb_returnNewObject( o, false );
 }
 
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QWHEELEVENT_DELTA )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->delta () );
+      RINT( obj->delta() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -139,8 +139,8 @@ HB_FUNC_STATIC( QWHEELEVENT_POS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QPoint * ptr = &obj->pos ();
-      _qt4xhb_createReturnClass ( ptr, "QPOINT", false );
+      const QPoint * ptr = &obj->pos();
+      _qt4xhb_createReturnClass( ptr, "QPOINT", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,8 +164,8 @@ HB_FUNC_STATIC( QWHEELEVENT_GLOBALPOS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QPoint * ptr = &obj->globalPos ();
-      _qt4xhb_createReturnClass ( ptr, "QPOINT", false );
+      const QPoint * ptr = &obj->globalPos();
+      _qt4xhb_createReturnClass( ptr, "QPOINT", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QWHEELEVENT_X )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->x () );
+      RINT( obj->x() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QWHEELEVENT_Y )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->y () );
+      RINT( obj->y() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QWHEELEVENT_GLOBALX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->globalX () );
+      RINT( obj->globalX() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QWHEELEVENT_GLOBALY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->globalY () );
+      RINT( obj->globalY() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QWHEELEVENT_BUTTONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->buttons () );
+      RENUM( obj->buttons() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QWHEELEVENT_ORIENTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->orientation () );
+      RENUM( obj->orientation() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

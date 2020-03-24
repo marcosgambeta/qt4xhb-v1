@@ -71,7 +71,7 @@ CLASS QTableView INHERIT QAbstractItemView
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTableView
+PROCEDURE destroyObject() CLASS QTableView
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QTABLEVIEW_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QTableView * o = new QTableView ( OPQWIDGET(1,0) );
+    QTableView * o = new QTableView( OPQWIDGET(1,0) );
     _qt4xhb_returnNewObject( o, false );
   }
   else
@@ -111,8 +111,8 @@ HB_FUNC_STATIC( QTABLEVIEW_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QTABLEVIEW_CLEARSPANS )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clearSpans ();
+      obj->clearSpans();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QTABLEVIEW_COLUMNAT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RINT( obj->columnAt ( PINT(1) ) );
+      RINT( obj->columnAt( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QTABLEVIEW_COLUMNSPAN )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      RINT( obj->columnSpan ( PINT(1), PINT(2) ) );
+      RINT( obj->columnSpan( PINT(1), PINT(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QTABLEVIEW_COLUMNVIEWPORTPOSITION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RINT( obj->columnViewportPosition ( PINT(1) ) );
+      RINT( obj->columnViewportPosition( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QTABLEVIEW_COLUMNWIDTH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RINT( obj->columnWidth ( PINT(1) ) );
+      RINT( obj->columnWidth( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QTABLEVIEW_GRIDSTYLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->gridStyle () );
+      RENUM( obj->gridStyle() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -283,8 +283,8 @@ HB_FUNC_STATIC( QTABLEVIEW_HORIZONTALHEADER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QHeaderView * ptr = obj->horizontalHeader ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QHEADERVIEW" );
+      QHeaderView * ptr = obj->horizontalHeader();
+      _qt4xhb_createReturnQObjectClass( ptr, "QHEADERVIEW" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ISCOLUMNHIDDEN )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isColumnHidden ( PINT(1) ) );
+      RBOOL( obj->isColumnHidden( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ISCORNERBUTTONENABLED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isCornerButtonEnabled () );
+      RBOOL( obj->isCornerButtonEnabled() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ISROWHIDDEN )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isRowHidden ( PINT(1) ) );
+      RBOOL( obj->isRowHidden( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ISSORTINGENABLED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isSortingEnabled () );
+      RBOOL( obj->isSortingEnabled() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ROWAT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RINT( obj->rowAt ( PINT(1) ) );
+      RINT( obj->rowAt( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ROWHEIGHT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RINT( obj->rowHeight ( PINT(1) ) );
+      RINT( obj->rowHeight( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ROWSPAN )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      RINT( obj->rowSpan ( PINT(1), PINT(2) ) );
+      RINT( obj->rowSpan( PINT(1), PINT(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ROWVIEWPORTPOSITION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RINT( obj->rowViewportPosition ( PINT(1) ) );
+      RINT( obj->rowViewportPosition( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETCOLUMNHIDDEN )
     if( ISNUMPAR(2) && ISNUM(1) && ISLOG(2) )
     {
 #endif
-      obj->setColumnHidden ( PINT(1), PBOOL(2) );
+      obj->setColumnHidden( PINT(1), PBOOL(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -526,7 +526,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETCOLUMNWIDTH )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->setColumnWidth ( PINT(1), PINT(2) );
+      obj->setColumnWidth( PINT(1), PINT(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETCORNERBUTTONENABLED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setCornerButtonEnabled ( PBOOL(1) );
+      obj->setCornerButtonEnabled( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -578,7 +578,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETGRIDSTYLE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setGridStyle ( (Qt::PenStyle) hb_parni(1) );
+      obj->setGridStyle( (Qt::PenStyle) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -604,7 +604,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETHORIZONTALHEADER )
     if( ISNUMPAR(1) && ISQHEADERVIEW(1) )
     {
 #endif
-      obj->setHorizontalHeader ( PQHEADERVIEW(1) );
+      obj->setHorizontalHeader( PQHEADERVIEW(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -630,7 +630,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETROWHEIGHT )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->setRowHeight ( PINT(1), PINT(2) );
+      obj->setRowHeight( PINT(1), PINT(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -656,7 +656,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETROWHIDDEN )
     if( ISNUMPAR(2) && ISNUM(1) && ISLOG(2) )
     {
 #endif
-      obj->setRowHidden ( PINT(1), PBOOL(2) );
+      obj->setRowHidden( PINT(1), PBOOL(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -682,7 +682,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETSORTINGENABLED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setSortingEnabled ( PBOOL(1) );
+      obj->setSortingEnabled( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -708,7 +708,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETSPAN )
     if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
     {
 #endif
-      obj->setSpan ( PINT(1), PINT(2), PINT(3), PINT(4) );
+      obj->setSpan( PINT(1), PINT(2), PINT(3), PINT(4) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -734,7 +734,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETVERTICALHEADER )
     if( ISNUMPAR(1) && ISQHEADERVIEW(1) )
     {
 #endif
-      obj->setVerticalHeader ( PQHEADERVIEW(1) );
+      obj->setVerticalHeader( PQHEADERVIEW(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -760,7 +760,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETWORDWRAP )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setWordWrap ( PBOOL(1) );
+      obj->setWordWrap( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -786,7 +786,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SHOWGRID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->showGrid () );
+      RBOOL( obj->showGrid() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -810,7 +810,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SORTBYCOLUMN )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->sortByColumn ( PINT(1), (Qt::SortOrder) hb_parni(2) );
+      obj->sortByColumn( PINT(1), (Qt::SortOrder) hb_parni(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -836,8 +836,8 @@ HB_FUNC_STATIC( QTABLEVIEW_VERTICALHEADER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QHeaderView * ptr = obj->verticalHeader ();
-      _qt4xhb_createReturnQObjectClass ( ptr, "QHEADERVIEW" );
+      QHeaderView * ptr = obj->verticalHeader();
+      _qt4xhb_createReturnQObjectClass( ptr, "QHEADERVIEW" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -861,7 +861,7 @@ HB_FUNC_STATIC( QTABLEVIEW_WORDWRAP )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->wordWrap () );
+      RBOOL( obj->wordWrap() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -885,8 +885,8 @@ HB_FUNC_STATIC( QTABLEVIEW_INDEXAT )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->indexAt ( *PQPOINT(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      QModelIndex * ptr = new QModelIndex( obj->indexAt( *PQPOINT(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -910,7 +910,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETMODEL )
     if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
     {
 #endif
-      obj->setModel ( PQABSTRACTITEMMODEL(1) );
+      obj->setModel( PQABSTRACTITEMMODEL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -936,7 +936,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETROOTINDEX )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      obj->setRootIndex ( *PQMODELINDEX(1) );
+      obj->setRootIndex( *PQMODELINDEX(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -962,7 +962,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETSELECTIONMODEL )
     if( ISNUMPAR(1) && ISQITEMSELECTIONMODEL(1) )
     {
 #endif
-      obj->setSelectionModel ( PQITEMSELECTIONMODEL(1) );
+      obj->setSelectionModel( PQITEMSELECTIONMODEL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -988,7 +988,7 @@ HB_FUNC_STATIC( QTABLEVIEW_HIDECOLUMN )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->hideColumn ( PINT(1) );
+      obj->hideColumn( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1014,7 +1014,7 @@ HB_FUNC_STATIC( QTABLEVIEW_HIDEROW )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->hideRow ( PINT(1) );
+      obj->hideRow( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1040,7 +1040,7 @@ HB_FUNC_STATIC( QTABLEVIEW_RESIZECOLUMNTOCONTENTS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->resizeColumnToContents ( PINT(1) );
+      obj->resizeColumnToContents( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1066,7 +1066,7 @@ HB_FUNC_STATIC( QTABLEVIEW_RESIZECOLUMNSTOCONTENTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->resizeColumnsToContents ();
+      obj->resizeColumnsToContents();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1092,7 +1092,7 @@ HB_FUNC_STATIC( QTABLEVIEW_RESIZEROWTOCONTENTS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->resizeRowToContents ( PINT(1) );
+      obj->resizeRowToContents( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1118,7 +1118,7 @@ HB_FUNC_STATIC( QTABLEVIEW_RESIZEROWSTOCONTENTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->resizeRowsToContents ();
+      obj->resizeRowsToContents();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1144,7 +1144,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SELECTCOLUMN )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->selectColumn ( PINT(1) );
+      obj->selectColumn( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1170,7 +1170,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SELECTROW )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->selectRow ( PINT(1) );
+      obj->selectRow( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1196,7 +1196,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETSHOWGRID )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setShowGrid ( PBOOL(1) );
+      obj->setShowGrid( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1222,7 +1222,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SHOWCOLUMN )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->showColumn ( PINT(1) );
+      obj->showColumn( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1248,7 +1248,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SHOWROW )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->showRow ( PINT(1) );
+      obj->showRow( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

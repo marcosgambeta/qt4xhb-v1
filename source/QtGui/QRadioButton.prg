@@ -26,7 +26,7 @@ CLASS QRadioButton INHERIT QAbstractButton
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QRadioButton
+PROCEDURE destroyObject() CLASS QRadioButton
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -45,18 +45,18 @@ RETURN
 /*
 QRadioButton ( QWidget * parent = 0 )
 */
-void QRadioButton_new1 ()
+void QRadioButton_new1()
 {
-  QRadioButton * o = new QRadioButton ( OPQWIDGET(1,0) );
+  QRadioButton * o = new QRadioButton( OPQWIDGET(1,0) );
   _qt4xhb_returnNewObject( o, false );
 }
 
 /*
 QRadioButton ( const QString & text, QWidget * parent = 0 )
 */
-void QRadioButton_new2 ()
+void QRadioButton_new2()
 {
-  QRadioButton * o = new QRadioButton ( PQSTRING(1), OPQWIDGET(2,0) );
+  QRadioButton * o = new QRadioButton( PQSTRING(1), OPQWIDGET(2,0) );
   _qt4xhb_returnNewObject( o, false );
 }
 
@@ -92,8 +92,8 @@ HB_FUNC_STATIC( QRADIOBUTTON_MINIMUMSIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->minimumSizeHint () );
-      _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->minimumSizeHint() );
+      _qt4xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -117,8 +117,8 @@ HB_FUNC_STATIC( QRADIOBUTTON_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint () );
-      _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->sizeHint() );
+      _qt4xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

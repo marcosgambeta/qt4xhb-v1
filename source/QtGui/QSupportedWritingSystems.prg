@@ -35,7 +35,7 @@ CLASS QSupportedWritingSystems
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSupportedWritingSystems
+PROCEDURE destroyObject() CLASS QSupportedWritingSystems
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -52,18 +52,18 @@ RETURN
 /*
 QSupportedWritingSystems ()
 */
-void QSupportedWritingSystems_new1 ()
+void QSupportedWritingSystems_new1()
 {
-  QSupportedWritingSystems * o = new QSupportedWritingSystems ();
+  QSupportedWritingSystems * o = new QSupportedWritingSystems();
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QSupportedWritingSystems ( const QSupportedWritingSystems & other )
 */
-void QSupportedWritingSystems_new2 ()
+void QSupportedWritingSystems_new2()
 {
-  QSupportedWritingSystems * o = new QSupportedWritingSystems ( *PQSUPPORTEDWRITINGSYSTEMS(1) );
+  QSupportedWritingSystems * o = new QSupportedWritingSystems( *PQSUPPORTEDWRITINGSYSTEMS(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_SETSUPPORTED )
     if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
     {
 #endif
-      obj->setSupported ( (QFontDatabase::WritingSystem) hb_parni(1), OPBOOL(2,true) );
+      obj->setSupported( (QFontDatabase::WritingSystem) hb_parni(1), OPBOOL(2,true) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_SUPPORTED )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->supported ( (QFontDatabase::WritingSystem) hb_parni(1) ) );
+      RBOOL( obj->supported( (QFontDatabase::WritingSystem) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

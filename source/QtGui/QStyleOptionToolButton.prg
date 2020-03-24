@@ -43,7 +43,7 @@ CLASS QStyleOptionToolButton INHERIT QStyleOptionComplex
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStyleOptionToolButton
+PROCEDURE destroyObject() CLASS QStyleOptionToolButton
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -60,18 +60,18 @@ RETURN
 /*
 QStyleOptionToolButton()
 */
-void QStyleOptionToolButton_new1 ()
+void QStyleOptionToolButton_new1()
 {
-  QStyleOptionToolButton * o = new QStyleOptionToolButton ();
+  QStyleOptionToolButton * o = new QStyleOptionToolButton();
   _qt4xhb_returnNewObject( o, true );
 }
 
 /*
 QStyleOptionToolButton(const QStyleOptionToolButton &other)
 */
-void QStyleOptionToolButton_new2 ()
+void QStyleOptionToolButton_new2()
 {
-  QStyleOptionToolButton * o = new QStyleOptionToolButton ( *PQSTYLEOPTIONTOOLBUTTON(1) );
+  QStyleOptionToolButton * o = new QStyleOptionToolButton( *PQSTYLEOPTIONTOOLBUTTON(1) );
   _qt4xhb_returnNewObject( o, true );
 }
 
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_FEATURES )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->features  );
+      RENUM( obj->features );
     }
     else
     {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETFEATURES )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->features = (QStyleOptionToolButton::ToolButtonFeatures) hb_parni(1);
+      obj->features= (QStyleOptionToolButton::ToolButtonFeatures) hb_parni(1);
     }
     else
     {
@@ -148,8 +148,8 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_ICON )
   {
     if( ISNUMPAR(0) )
     {
-      QIcon * ptr = new QIcon( obj->icon  );
-      _qt4xhb_createReturnClass ( ptr, "QICON", true );
+      QIcon * ptr = new QIcon( obj->icon );
+      _qt4xhb_createReturnClass( ptr, "QICON", true );
     }
     else
     {
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETICON )
   {
     if( ISNUMPAR(1) && ISQICON(1) )
     {
-      obj->icon = *PQICON(1);
+      obj->icon= *PQICON(1);
     }
     else
     {
@@ -187,8 +187,8 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_ICONSIZE )
   {
     if( ISNUMPAR(0) )
     {
-      QSize * ptr = new QSize( obj->iconSize  );
-      _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->iconSize );
+      _qt4xhb_createReturnClass( ptr, "QSIZE", true );
     }
     else
     {
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETICONSIZE )
   {
     if( ISNUMPAR(1) && ISQSIZE(1) )
     {
-      obj->iconSize = *PQSIZE(1);
+      obj->iconSize= *PQSIZE(1);
     }
     else
     {
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_TEXT )
   {
     if( ISNUMPAR(0) )
     {
-      RQSTRING( obj->text  );
+      RQSTRING( obj->text );
     }
     else
     {
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETTEXT )
   {
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
-      obj->text = PQSTRING(1);
+      obj->text= PQSTRING(1);
     }
     else
     {
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_ARROWTYPE )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->arrowType  );
+      RENUM( obj->arrowType );
     }
     else
     {
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETARROWTYPE )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->arrowType = (Qt::ArrowType) hb_parni(1);
+      obj->arrowType= (Qt::ArrowType) hb_parni(1);
     }
     else
     {
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_TOOLBUTTONSTYLE )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->toolButtonStyle  );
+      RENUM( obj->toolButtonStyle );
     }
     else
     {
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETTOOLBUTTONSTYLE )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->toolButtonStyle = (Qt::ToolButtonStyle) hb_parni(1);
+      obj->toolButtonStyle= (Qt::ToolButtonStyle) hb_parni(1);
     }
     else
     {
@@ -340,8 +340,8 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_POS )
   {
     if( ISNUMPAR(0) )
     {
-      QPoint * ptr = new QPoint( obj->pos  );
-      _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+      QPoint * ptr = new QPoint( obj->pos );
+      _qt4xhb_createReturnClass( ptr, "QPOINT", true );
     }
     else
     {
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETPOS )
   {
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
-      obj->pos = *PQPOINT(1);
+      obj->pos= *PQPOINT(1);
     }
     else
     {
@@ -379,8 +379,8 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_FONT )
   {
     if( ISNUMPAR(0) )
     {
-      QFont * ptr = new QFont( obj->font  );
-      _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+      QFont * ptr = new QFont( obj->font );
+      _qt4xhb_createReturnClass( ptr, "QFONT", true );
     }
     else
     {
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETFONT )
   {
     if( ISNUMPAR(1) && ISQFONT(1) )
     {
-      obj->font = *PQFONT(1);
+      obj->font= *PQFONT(1);
     }
     else
     {

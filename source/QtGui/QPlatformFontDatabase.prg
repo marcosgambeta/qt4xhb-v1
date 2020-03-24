@@ -40,7 +40,7 @@ CLASS QPlatformFontDatabase
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPlatformFontDatabase
+PROCEDURE destroyObject() CLASS QPlatformFontDatabase
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_ADDAPPLICATIONFONT )
     if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISCHAR(2) )
     {
 #endif
-      RQSTRINGLIST( obj->addApplicationFont ( *PQBYTEARRAY(1), PQSTRING(2) ) );
+      RQSTRINGLIST( obj->addApplicationFont( *PQBYTEARRAY(1), PQSTRING(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_FONTDIR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->fontDir () );
+      RQSTRING( obj->fontDir() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -132,8 +132,8 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_FONTENGINE )
     if( ISNUMPAR(3) && ISQBYTEARRAY(1) && ISNUM(2) && ISNUM(3) )
     {
 #endif
-      QFontEngine * ptr = obj->fontEngine ( *PQBYTEARRAY(1), PQREAL(2), (QFont::HintingPreference) hb_parni(3) );
-      _qt4xhb_createReturnClass ( ptr, "QFONTENGINE", false );
+      QFontEngine * ptr = obj->fontEngine( *PQBYTEARRAY(1), PQREAL(2), (QFont::HintingPreference) hb_parni(3) );
+      _qt4xhb_createReturnClass( ptr, "QFONTENGINE", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_POPULATEFONTDATABASE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->populateFontDatabase ();
+      obj->populateFontDatabase();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_RELEASEHANDLE )
     if( ISNUMPAR(1) && ISPOINTER(1) )
     {
 #endif
-      obj->releaseHandle ( (void *) hb_parptr(1) );
+      obj->releaseHandle( (void *) hb_parptr(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_REGISTERFONT )
   if( ISNUMPAR(10) && ISCHAR(1) && ISCHAR(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISLOG(6) && ISLOG(7) && ISNUM(8) && ISQSUPPORTEDWRITINGSYSTEMS(9) && ISPOINTER(10) )
   {
 #endif
-    QPlatformFontDatabase::registerFont ( PQSTRING(1), PQSTRING(2), (QFont::Weight) hb_parni(3), (QFont::Style) hb_parni(4), (QFont::Stretch) hb_parni(5), PBOOL(6), PBOOL(7), PINT(8), *PQSUPPORTEDWRITINGSYSTEMS(9), (void *) hb_parptr(10) );
+    QPlatformFontDatabase::registerFont( PQSTRING(1), PQSTRING(2), (QFont::Weight) hb_parni(3), (QFont::Style) hb_parni(4), (QFont::Stretch) hb_parni(5), PBOOL(6), PBOOL(7), PINT(8), *PQSUPPORTEDWRITINGSYSTEMS(9), (void *) hb_parptr(10) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_REGISTERQPF2FONT )
   if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISPOINTER(2) )
   {
 #endif
-    QPlatformFontDatabase::registerQPF2Font ( *PQBYTEARRAY(1), (void *) hb_parptr(2) );
+    QPlatformFontDatabase::registerQPF2Font( *PQBYTEARRAY(1), (void *) hb_parptr(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

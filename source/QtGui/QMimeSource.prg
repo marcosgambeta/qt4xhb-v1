@@ -36,7 +36,7 @@ CLASS QMimeSource
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMimeSource
+PROCEDURE destroyObject() CLASS QMimeSource
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -80,8 +80,8 @@ HB_FUNC_STATIC( QMIMESOURCE_ENCODEDDATA )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->encodedData ( PCONSTCHAR(1) ) );
-      _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      QByteArray * ptr = new QByteArray( obj->encodedData( PCONSTCHAR(1) ) );
+      _qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QMIMESOURCE_FORMAT )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      hb_retc( (const char *) obj->format ( OPINT(1,0) ) );
+      hb_retc( (const char *) obj->format( OPINT(1,0) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QMIMESOURCE_PROVIDES )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->provides ( PCONSTCHAR(1) ) );
+      RBOOL( obj->provides( PCONSTCHAR(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

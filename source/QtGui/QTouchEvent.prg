@@ -27,7 +27,7 @@ CLASS QTouchEvent INHERIT QInputEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTouchEvent
+PROCEDURE destroyObject() CLASS QTouchEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -71,8 +71,8 @@ HB_FUNC_STATIC( QTOUCHEVENT_WIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->widget ();
-      _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->widget();
+      _qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QTOUCHEVENT_DEVICETYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->deviceType () );
+      RENUM( obj->deviceType() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QTOUCHEVENT_TOUCHPOINTSTATES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->touchPointStates () );
+      RENUM( obj->touchPointStates() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
