@@ -25,13 +25,13 @@ void QTcpServerSlots::newConnection()
   PHB_ITEM cb = Signals_return_codeblock( object, "newConnection()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTCPSERVER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTCPSERVER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QTcpServerSlots_connect_signal ( const QString & signal, const QString & slot )
+void QTcpServerSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
