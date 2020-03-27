@@ -44,7 +44,7 @@ RETURN
 
 HB_FUNC_STATIC( QWEBPLUGINFACTORY_DELETE )
 {
-  QWebPluginFactory * obj = (QWebPluginFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWebPluginFactory * obj = (QWebPluginFactory *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -66,7 +66,7 @@ virtual QObject * create ( const QString & mimeType, const QUrl & url, const QSt
 */
 HB_FUNC_STATIC( QWEBPLUGINFACTORY_CREATE )
 {
-  QWebPluginFactory * obj = (QWebPluginFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWebPluginFactory * obj = (QWebPluginFactory *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -91,7 +91,7 @@ virtual void refreshPlugins ()
 */
 HB_FUNC_STATIC( QWEBPLUGINFACTORY_REFRESHPLUGINS )
 {
-  QWebPluginFactory * obj = (QWebPluginFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWebPluginFactory * obj = (QWebPluginFactory *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
