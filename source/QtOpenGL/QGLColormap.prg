@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_NEW )
 
 HB_FUNC_STATIC( QGLCOLORMAP_DELETE )
 {
-  QGLColormap * obj = (QGLColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGLColormap * obj = (QGLColormap *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -114,7 +114,7 @@ QColor entryColor ( int idx ) const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_ENTRYCOLOR )
 {
-  QGLColormap * obj = (QGLColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGLColormap * obj = (QGLColormap *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -139,7 +139,7 @@ QRgb entryRgb ( int idx ) const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_ENTRYRGB )
 {
-  QGLColormap * obj = (QGLColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGLColormap * obj = (QGLColormap *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -163,7 +163,7 @@ int find ( QRgb color ) const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_FIND )
 {
-  QGLColormap * obj = (QGLColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGLColormap * obj = (QGLColormap *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -187,7 +187,7 @@ int findNearest ( QRgb color ) const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_FINDNEAREST )
 {
-  QGLColormap * obj = (QGLColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGLColormap * obj = (QGLColormap *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -211,7 +211,7 @@ bool isEmpty () const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_ISEMPTY )
 {
-  QGLColormap * obj = (QGLColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGLColormap * obj = (QGLColormap *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -235,7 +235,7 @@ void setEntry ( int idx, QRgb color )
 */
 void QGLColormap_setEntry1()
 {
-  QGLColormap * obj = (QGLColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGLColormap * obj = (QGLColormap *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -250,7 +250,7 @@ void setEntry ( int idx, const QColor & color )
 */
 void QGLColormap_setEntry2()
 {
-  QGLColormap * obj = (QGLColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGLColormap * obj = (QGLColormap *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -284,7 +284,7 @@ int size () const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_SIZE )
 {
-  QGLColormap * obj = (QGLColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGLColormap * obj = (QGLColormap *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

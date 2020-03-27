@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QGLCONTEXT_NEW )
 
 HB_FUNC_STATIC( QGLCONTEXT_DELETE )
 {
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGLContext * obj = (QGLContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -108,7 +108,7 @@ GLuint bindTexture ( const QImage & image, GLenum target, GLint format, BindOpti
 */
 void QGLContext_bindTexture1()
 {
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGLContext * obj = (QGLContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -121,7 +121,7 @@ GLuint bindTexture ( const QString & fileName )
 */
 void QGLContext_bindTexture2()
 {
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGLContext * obj = (QGLContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -134,7 +134,7 @@ GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint 
 */
 void QGLContext_bindTexture3()
 {
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGLContext * obj = (QGLContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -147,7 +147,7 @@ GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLin
 */
 void QGLContext_bindTexture4()
 {
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGLContext * obj = (QGLContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -160,7 +160,7 @@ GLuint bindTexture ( const QPixmap & pixmap, GLenum target, GLint format, BindOp
 */
 void QGLContext_bindTexture5()
 {
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGLContext * obj = (QGLContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -207,7 +207,7 @@ virtual bool create ( const QGLContext * shareContext = 0 )
 */
 HB_FUNC_STATIC( QGLCONTEXT_CREATE )
 {
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGLContext * obj = (QGLContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -231,7 +231,7 @@ void deleteTexture ( GLuint id )
 */
 HB_FUNC_STATIC( QGLCONTEXT_DELETETEXTURE )
 {
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGLContext * obj = (QGLContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -257,7 +257,7 @@ QPaintDevice * device () const
 */
 HB_FUNC_STATIC( QGLCONTEXT_DEVICE )
 {
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGLContext * obj = (QGLContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -282,7 +282,7 @@ virtual void doneCurrent ()
 */
 HB_FUNC_STATIC( QGLCONTEXT_DONECURRENT )
 {
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGLContext * obj = (QGLContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -308,7 +308,7 @@ void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget
 */
 void QGLContext_drawTexture1()
 {
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGLContext * obj = (QGLContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -323,7 +323,7 @@ void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget
 */
 void QGLContext_drawTexture2()
 {
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGLContext * obj = (QGLContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -357,7 +357,7 @@ QGLFormat format () const
 */
 HB_FUNC_STATIC( QGLCONTEXT_FORMAT )
 {
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGLContext * obj = (QGLContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -382,7 +382,7 @@ void * getProcAddress ( const QString & proc ) const
 */
 HB_FUNC_STATIC( QGLCONTEXT_GETPROCADDRESS )
 {
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGLContext * obj = (QGLContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -406,7 +406,7 @@ bool isSharing () const
 */
 HB_FUNC_STATIC( QGLCONTEXT_ISSHARING )
 {
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGLContext * obj = (QGLContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -430,7 +430,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QGLCONTEXT_ISVALID )
 {
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGLContext * obj = (QGLContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -454,7 +454,7 @@ virtual void makeCurrent ()
 */
 HB_FUNC_STATIC( QGLCONTEXT_MAKECURRENT )
 {
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGLContext * obj = (QGLContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -480,7 +480,7 @@ QColor overlayTransparentColor () const
 */
 HB_FUNC_STATIC( QGLCONTEXT_OVERLAYTRANSPARENTCOLOR )
 {
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGLContext * obj = (QGLContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -505,7 +505,7 @@ QGLFormat requestedFormat () const
 */
 HB_FUNC_STATIC( QGLCONTEXT_REQUESTEDFORMAT )
 {
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGLContext * obj = (QGLContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -530,7 +530,7 @@ void reset ()
 */
 HB_FUNC_STATIC( QGLCONTEXT_RESET )
 {
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGLContext * obj = (QGLContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -556,7 +556,7 @@ void setFormat ( const QGLFormat & format )
 */
 HB_FUNC_STATIC( QGLCONTEXT_SETFORMAT )
 {
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGLContext * obj = (QGLContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -582,7 +582,7 @@ virtual void swapBuffers () const
 */
 HB_FUNC_STATIC( QGLCONTEXT_SWAPBUFFERS )
 {
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGLContext * obj = (QGLContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
