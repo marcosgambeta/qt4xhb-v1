@@ -45,7 +45,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTURIRESOLVER_DELETE )
 {
-  QAbstractUriResolver * obj = (QAbstractUriResolver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractUriResolver * obj = (QAbstractUriResolver *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -67,7 +67,7 @@ virtual QUrl resolve ( const QUrl & relative, const QUrl & baseURI ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTURIRESOLVER_RESOLVE )
 {
-  QAbstractUriResolver * obj = (QAbstractUriResolver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractUriResolver * obj = (QAbstractUriResolver *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -51,7 +51,7 @@ RETURN
 
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_DELETE )
 {
-  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -71,7 +71,7 @@ QXmlNamePool & namePool () const
 */
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMEPOOL )
 {
-  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -96,7 +96,7 @@ virtual QUrl baseUri ( const QXmlNodeModelIndex & node ) const
 */
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_BASEURI )
 {
-  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -121,7 +121,7 @@ virtual QXmlNodeModelIndex elementById ( const QXmlName & id ) const
 */
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_ELEMENTBYID )
 {
-  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -146,7 +146,7 @@ virtual QVector<QXmlName> namespaceBindings ( const QXmlNodeModelIndex & node ) 
 */
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMESPACEBINDINGS )
 {
-  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -198,7 +198,7 @@ virtual QVector<QXmlNodeModelIndex> nodesByIdref ( const QXmlName & idref ) cons
 */
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NODESBYIDREF )
 {
-  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -250,7 +250,7 @@ virtual QString stringValue ( const QXmlNodeModelIndex & node ) const
 */
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_STRINGVALUE )
 {
-  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

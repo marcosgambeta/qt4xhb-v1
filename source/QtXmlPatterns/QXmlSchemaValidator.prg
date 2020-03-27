@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEW )
 
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_DELETE )
 {
-  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -126,7 +126,7 @@ QAbstractMessageHandler * messageHandler () const
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_MESSAGEHANDLER )
 {
-  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -151,7 +151,7 @@ QXmlNamePool namePool () const
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NAMEPOOL )
 {
-  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -176,7 +176,7 @@ QNetworkAccessManager * networkAccessManager () const
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NETWORKACCESSMANAGER )
 {
-  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -201,7 +201,7 @@ QXmlSchema schema () const
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SCHEMA )
 {
-  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -226,7 +226,7 @@ void setMessageHandler ( QAbstractMessageHandler * handler )
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETMESSAGEHANDLER )
 {
-  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -252,7 +252,7 @@ void setNetworkAccessManager ( QNetworkAccessManager * manager )
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETNETWORKACCESSMANAGER )
 {
-  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -278,7 +278,7 @@ void setSchema ( const QXmlSchema & schema )
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETSCHEMA )
 {
-  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -304,7 +304,7 @@ void setUriResolver ( const QAbstractUriResolver * resolver )
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETURIRESOLVER )
 {
-  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -330,7 +330,7 @@ const QAbstractUriResolver * uriResolver () const
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_URIRESOLVER )
 {
-  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -355,7 +355,7 @@ bool validate ( const QUrl & source ) const
 */
 void QXmlSchemaValidator_validate1()
 {
-  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -368,7 +368,7 @@ bool validate ( QIODevice * source, const QUrl & documentUri = QUrl() ) const
 */
 void QXmlSchemaValidator_validate2()
 {
-  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -381,7 +381,7 @@ bool validate ( const QByteArray & data, const QUrl & documentUri = QUrl() ) con
 */
 void QXmlSchemaValidator_validate3()
 {
-  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

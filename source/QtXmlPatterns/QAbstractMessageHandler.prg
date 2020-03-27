@@ -42,7 +42,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTMESSAGEHANDLER_DELETE )
 {
-  QAbstractMessageHandler * obj = (QAbstractMessageHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractMessageHandler * obj = (QAbstractMessageHandler *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -64,7 +64,7 @@ void message ( QtMsgType type, const QString & description, const QUrl & identif
 */
 HB_FUNC_STATIC( QABSTRACTMESSAGEHANDLER_MESSAGE )
 {
-  QAbstractMessageHandler * obj = (QAbstractMessageHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractMessageHandler * obj = (QAbstractMessageHandler *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

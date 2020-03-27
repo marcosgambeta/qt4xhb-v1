@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QXMLNAMEPOOL_NEW )
 
 HB_FUNC_STATIC( QXMLNAMEPOOL_DELETE )
 {
-  QXmlNamePool * obj = (QXmlNamePool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlNamePool * obj = (QXmlNamePool *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

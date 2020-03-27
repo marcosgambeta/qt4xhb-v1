@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_NEW )
 
 HB_FUNC_STATIC( QXMLSCHEMA_DELETE )
 {
-  QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlSchema * obj = (QXmlSchema *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -125,7 +125,7 @@ QUrl documentUri () const
 */
 HB_FUNC_STATIC( QXMLSCHEMA_DOCUMENTURI )
 {
-  QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlSchema * obj = (QXmlSchema *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -150,7 +150,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QXMLSCHEMA_ISVALID )
 {
-  QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlSchema * obj = (QXmlSchema *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -174,7 +174,7 @@ bool load ( const QUrl & source )
 */
 void QXmlSchema_load1()
 {
-  QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlSchema * obj = (QXmlSchema *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -187,7 +187,7 @@ bool load ( QIODevice * source, const QUrl & documentUri = QUrl() )
 */
 void QXmlSchema_load2()
 {
-  QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlSchema * obj = (QXmlSchema *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -200,7 +200,7 @@ bool load ( const QByteArray & data, const QUrl & documentUri = QUrl() )
 */
 void QXmlSchema_load3()
 {
-  QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlSchema * obj = (QXmlSchema *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -237,7 +237,7 @@ QAbstractMessageHandler * messageHandler () const
 */
 HB_FUNC_STATIC( QXMLSCHEMA_MESSAGEHANDLER )
 {
-  QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlSchema * obj = (QXmlSchema *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -262,7 +262,7 @@ QXmlNamePool namePool () const
 */
 HB_FUNC_STATIC( QXMLSCHEMA_NAMEPOOL )
 {
-  QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlSchema * obj = (QXmlSchema *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -287,7 +287,7 @@ QNetworkAccessManager * networkAccessManager () const
 */
 HB_FUNC_STATIC( QXMLSCHEMA_NETWORKACCESSMANAGER )
 {
-  QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlSchema * obj = (QXmlSchema *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -312,7 +312,7 @@ void setMessageHandler ( QAbstractMessageHandler * handler )
 */
 HB_FUNC_STATIC( QXMLSCHEMA_SETMESSAGEHANDLER )
 {
-  QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlSchema * obj = (QXmlSchema *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -338,7 +338,7 @@ void setNetworkAccessManager ( QNetworkAccessManager * manager )
 */
 HB_FUNC_STATIC( QXMLSCHEMA_SETNETWORKACCESSMANAGER )
 {
-  QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlSchema * obj = (QXmlSchema *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -364,7 +364,7 @@ void setUriResolver ( const QAbstractUriResolver * resolver )
 */
 HB_FUNC_STATIC( QXMLSCHEMA_SETURIRESOLVER )
 {
-  QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlSchema * obj = (QXmlSchema *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -390,7 +390,7 @@ const QAbstractUriResolver * uriResolver () const
 */
 HB_FUNC_STATIC( QXMLSCHEMA_URIRESOLVER )
 {
-  QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlSchema * obj = (QXmlSchema *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

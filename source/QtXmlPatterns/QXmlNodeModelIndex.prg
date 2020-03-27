@@ -94,7 +94,7 @@ qint64 additionalData () const
 */
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_ADDITIONALDATA )
 {
-  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -118,7 +118,7 @@ qint64 data () const
 */
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_DATA )
 {
-  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -142,7 +142,7 @@ void * internalPointer () const
 */
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_INTERNALPOINTER )
 {
-  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -166,7 +166,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_ISNULL )
 {
-  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -190,7 +190,7 @@ const QAbstractXmlNodeModel * model () const
 */
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_MODEL )
 {
-  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

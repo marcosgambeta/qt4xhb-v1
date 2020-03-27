@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QXMLITEM_NEW )
 
 HB_FUNC_STATIC( QXMLITEM_DELETE )
 {
-  QXmlItem * obj = (QXmlItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlItem * obj = (QXmlItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -143,7 +143,7 @@ bool isAtomicValue () const
 */
 HB_FUNC_STATIC( QXMLITEM_ISATOMICVALUE )
 {
-  QXmlItem * obj = (QXmlItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlItem * obj = (QXmlItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -167,7 +167,7 @@ bool isNode () const
 */
 HB_FUNC_STATIC( QXMLITEM_ISNODE )
 {
-  QXmlItem * obj = (QXmlItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlItem * obj = (QXmlItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -191,7 +191,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QXMLITEM_ISNULL )
 {
-  QXmlItem * obj = (QXmlItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlItem * obj = (QXmlItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -215,7 +215,7 @@ QVariant toAtomicValue () const
 */
 HB_FUNC_STATIC( QXMLITEM_TOATOMICVALUE )
 {
-  QXmlItem * obj = (QXmlItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlItem * obj = (QXmlItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -240,7 +240,7 @@ QXmlNodeModelIndex toNodeModelIndex () const
 */
 HB_FUNC_STATIC( QXMLITEM_TONODEMODELINDEX )
 {
-  QXmlItem * obj = (QXmlItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlItem * obj = (QXmlItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

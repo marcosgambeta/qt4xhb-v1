@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QXMLQUERY_NEW )
 
 HB_FUNC_STATIC( QXMLQUERY_DELETE )
 {
-  QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlQuery * obj = (QXmlQuery *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -158,7 +158,7 @@ void bindVariable ( const QXmlName & name, const QXmlItem & value )
 */
 void QXmlQuery_bindVariable1()
 {
-  QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlQuery * obj = (QXmlQuery *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -173,7 +173,7 @@ void bindVariable ( const QXmlName & name, QIODevice * device )
 */
 void QXmlQuery_bindVariable2()
 {
-  QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlQuery * obj = (QXmlQuery *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -188,7 +188,7 @@ void bindVariable ( const QXmlName & name, const QXmlQuery & query )
 */
 void QXmlQuery_bindVariable3()
 {
-  QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlQuery * obj = (QXmlQuery *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -203,7 +203,7 @@ void bindVariable ( const QString & localName, const QXmlItem & value )
 */
 void QXmlQuery_bindVariable4()
 {
-  QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlQuery * obj = (QXmlQuery *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -218,7 +218,7 @@ void bindVariable ( const QString & localName, QIODevice * device )
 */
 void QXmlQuery_bindVariable5()
 {
-  QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlQuery * obj = (QXmlQuery *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -233,7 +233,7 @@ void bindVariable ( const QString & localName, const QXmlQuery & query )
 */
 void QXmlQuery_bindVariable6()
 {
-  QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlQuery * obj = (QXmlQuery *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -287,7 +287,7 @@ void evaluateTo ( QXmlResultItems * result ) const
 */
 void QXmlQuery_evaluateTo1()
 {
-  QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlQuery * obj = (QXmlQuery *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -302,7 +302,7 @@ bool evaluateTo ( QAbstractXmlReceiver * callback ) const
 */
 void QXmlQuery_evaluateTo2()
 {
-  QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlQuery * obj = (QXmlQuery *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -323,7 +323,7 @@ bool evaluateTo ( QIODevice * target ) const
 */
 void QXmlQuery_evaluateTo5()
 {
-  QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlQuery * obj = (QXmlQuery *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -362,7 +362,7 @@ QXmlName initialTemplateName () const
 */
 HB_FUNC_STATIC( QXMLQUERY_INITIALTEMPLATENAME )
 {
-  QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlQuery * obj = (QXmlQuery *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -387,7 +387,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QXMLQUERY_ISVALID )
 {
-  QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlQuery * obj = (QXmlQuery *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -411,7 +411,7 @@ QAbstractMessageHandler * messageHandler () const
 */
 HB_FUNC_STATIC( QXMLQUERY_MESSAGEHANDLER )
 {
-  QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlQuery * obj = (QXmlQuery *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -436,7 +436,7 @@ QXmlNamePool namePool () const
 */
 HB_FUNC_STATIC( QXMLQUERY_NAMEPOOL )
 {
-  QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlQuery * obj = (QXmlQuery *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -461,7 +461,7 @@ QNetworkAccessManager * networkAccessManager () const
 */
 HB_FUNC_STATIC( QXMLQUERY_NETWORKACCESSMANAGER )
 {
-  QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlQuery * obj = (QXmlQuery *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -486,7 +486,7 @@ QueryLanguage queryLanguage () const
 */
 HB_FUNC_STATIC( QXMLQUERY_QUERYLANGUAGE )
 {
-  QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlQuery * obj = (QXmlQuery *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -510,7 +510,7 @@ void setFocus ( const QXmlItem & item )
 */
 void QXmlQuery_setFocus1()
 {
-  QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlQuery * obj = (QXmlQuery *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -525,7 +525,7 @@ bool setFocus ( const QUrl & documentURI )
 */
 void QXmlQuery_setFocus2()
 {
-  QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlQuery * obj = (QXmlQuery *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -538,7 +538,7 @@ bool setFocus ( QIODevice * document )
 */
 void QXmlQuery_setFocus3()
 {
-  QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlQuery * obj = (QXmlQuery *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -551,7 +551,7 @@ bool setFocus ( const QString & focus )
 */
 void QXmlQuery_setFocus4()
 {
-  QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlQuery * obj = (QXmlQuery *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -593,7 +593,7 @@ void setInitialTemplateName ( const QXmlName & name )
 */
 void QXmlQuery_setInitialTemplateName1()
 {
-  QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlQuery * obj = (QXmlQuery *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -608,7 +608,7 @@ void setInitialTemplateName ( const QString & localName )
 */
 void QXmlQuery_setInitialTemplateName2()
 {
-  QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlQuery * obj = (QXmlQuery *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -642,7 +642,7 @@ void setMessageHandler ( QAbstractMessageHandler * aMessageHandler )
 */
 HB_FUNC_STATIC( QXMLQUERY_SETMESSAGEHANDLER )
 {
-  QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlQuery * obj = (QXmlQuery *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -668,7 +668,7 @@ void setNetworkAccessManager ( QNetworkAccessManager * newManager )
 */
 HB_FUNC_STATIC( QXMLQUERY_SETNETWORKACCESSMANAGER )
 {
-  QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlQuery * obj = (QXmlQuery *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -694,7 +694,7 @@ void setQuery ( QIODevice * sourceCode, const QUrl & documentURI = QUrl() )
 */
 void QXmlQuery_setQuery1()
 {
-  QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlQuery * obj = (QXmlQuery *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -709,7 +709,7 @@ void setQuery ( const QUrl & queryURI, const QUrl & baseURI = QUrl() )
 */
 void QXmlQuery_setQuery2()
 {
-  QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlQuery * obj = (QXmlQuery *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -724,7 +724,7 @@ void setQuery ( const QString & sourceCode, const QUrl & documentURI = QUrl() )
 */
 void QXmlQuery_setQuery3()
 {
-  QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlQuery * obj = (QXmlQuery *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -763,7 +763,7 @@ void setUriResolver ( const QAbstractUriResolver * resolver )
 */
 HB_FUNC_STATIC( QXMLQUERY_SETURIRESOLVER )
 {
-  QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlQuery * obj = (QXmlQuery *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -789,7 +789,7 @@ const QAbstractUriResolver * uriResolver () const
 */
 HB_FUNC_STATIC( QXMLQUERY_URIRESOLVER )
 {
-  QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlQuery * obj = (QXmlQuery *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
