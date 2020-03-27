@@ -130,7 +130,7 @@ void QFtpSlots::stateChanged( int state )
 
 void QFtpSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFtp * obj = (QFtp *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

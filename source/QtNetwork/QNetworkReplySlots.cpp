@@ -122,7 +122,7 @@ void QNetworkReplySlots::uploadProgress( qint64 bytesSent, qint64 bytesTotal )
 
 void QNetworkReplySlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QNetworkReply * obj = (QNetworkReply *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
