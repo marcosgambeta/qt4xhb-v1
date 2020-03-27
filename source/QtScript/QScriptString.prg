@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QSCRIPTSTRING_NEW )
 
 HB_FUNC_STATIC( QSCRIPTSTRING_DELETE )
 {
-  QScriptString * obj = (QScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QScriptString * obj = (QScriptString *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -108,7 +108,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QSCRIPTSTRING_ISVALID )
 {
-  QScriptString * obj = (QScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QScriptString * obj = (QScriptString *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -132,7 +132,7 @@ QString toString () const
 */
 HB_FUNC_STATIC( QSCRIPTSTRING_TOSTRING )
 {
-  QScriptString * obj = (QScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QScriptString * obj = (QScriptString *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
