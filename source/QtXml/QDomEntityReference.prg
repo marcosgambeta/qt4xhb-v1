@@ -80,7 +80,7 @@ QDomNode::NodeType nodeType () const
 */
 HB_FUNC_STATIC( QDOMENTITYREFERENCE_NODETYPE )
 {
-  QDomEntityReference * obj = (QDomEntityReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDomEntityReference * obj = (QDomEntityReference *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

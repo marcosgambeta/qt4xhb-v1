@@ -80,7 +80,7 @@ QDomNode::NodeType nodeType () cons
 */
 HB_FUNC_STATIC( QDOMCOMMENT_NODETYPE )
 {
-  QDomComment * obj = (QDomComment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDomComment * obj = (QDomComment *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
