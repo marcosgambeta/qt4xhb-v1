@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_NEW )
 
 HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_DELETE )
 {
-  QDeclarativeImageProvider * obj = (QDeclarativeImageProvider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeImageProvider * obj = (QDeclarativeImageProvider *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -90,7 +90,7 @@ ImageType imageType () const
 */
 HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_IMAGETYPE )
 {
-  QDeclarativeImageProvider * obj = (QDeclarativeImageProvider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeImageProvider * obj = (QDeclarativeImageProvider *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -114,7 +114,7 @@ virtual QImage requestImage ( const QString & id, QSize * size, const QSize & re
 */
 HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_REQUESTIMAGE )
 {
-  QDeclarativeImageProvider * obj = (QDeclarativeImageProvider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeImageProvider * obj = (QDeclarativeImageProvider *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -139,7 +139,7 @@ virtual QPixmap requestPixmap ( const QString & id, QSize * size, const QSize & 
 */
 HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_REQUESTPIXMAP )
 {
-  QDeclarativeImageProvider * obj = (QDeclarativeImageProvider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeImageProvider * obj = (QDeclarativeImageProvider *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

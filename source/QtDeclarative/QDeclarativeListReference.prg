@@ -101,7 +101,7 @@ bool append ( QObject * object ) const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_APPEND )
 {
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -125,7 +125,7 @@ QObject * at ( int index ) const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_AT )
 {
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -150,7 +150,7 @@ bool canAppend () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANAPPEND )
 {
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -174,7 +174,7 @@ bool canAt () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANAT )
 {
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -198,7 +198,7 @@ bool canClear () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANCLEAR )
 {
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -222,7 +222,7 @@ bool canCount () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANCOUNT )
 {
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -246,7 +246,7 @@ bool clear () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CLEAR )
 {
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -270,7 +270,7 @@ int count () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_COUNT )
 {
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -294,7 +294,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_ISVALID )
 {
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -318,7 +318,7 @@ const QMetaObject * listElementType () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_LISTELEMENTTYPE )
 {
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -343,7 +343,7 @@ QObject * object () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_OBJECT )
 {
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

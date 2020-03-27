@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW )
 
 HB_FUNC_STATIC( QDECLARATIVEVIEW_DELETE )
 {
-  QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeView * obj = (QDeclarativeView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -125,7 +125,7 @@ QDeclarativeEngine * engine () const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ENGINE )
 {
-  QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeView * obj = (QDeclarativeView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -150,7 +150,7 @@ QList<QDeclarativeError> errors () const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
 {
-  QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeView * obj = (QDeclarativeView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -202,7 +202,7 @@ QSize initialSize () const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_INITIALSIZE )
 {
-  QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeView * obj = (QDeclarativeView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -227,7 +227,7 @@ ResizeMode resizeMode () const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_RESIZEMODE )
 {
-  QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeView * obj = (QDeclarativeView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -251,7 +251,7 @@ QDeclarativeContext * rootContext () const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTCONTEXT )
 {
-  QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeView * obj = (QDeclarativeView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -276,7 +276,7 @@ QGraphicsObject * rootObject () const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTOBJECT )
 {
-  QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeView * obj = (QDeclarativeView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -301,7 +301,7 @@ void setResizeMode ( ResizeMode )
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_SETRESIZEMODE )
 {
-  QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeView * obj = (QDeclarativeView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -327,7 +327,7 @@ void setSource ( const QUrl & url )
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_SETSOURCE )
 {
-  QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeView * obj = (QDeclarativeView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -353,7 +353,7 @@ QUrl source () const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_SOURCE )
 {
-  QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeView * obj = (QDeclarativeView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -378,7 +378,7 @@ Status status () const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_STATUS )
 {
-  QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeView * obj = (QDeclarativeView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

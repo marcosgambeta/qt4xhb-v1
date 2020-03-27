@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_NEW )
 
 HB_FUNC_STATIC( QDECLARATIVEERROR_DELETE )
 {
-  QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeError * obj = (QDeclarativeError *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -117,7 +117,7 @@ int column () const
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_COLUMN )
 {
-  QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeError * obj = (QDeclarativeError *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -141,7 +141,7 @@ QString description () const
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_DESCRIPTION )
 {
-  QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeError * obj = (QDeclarativeError *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -165,7 +165,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_ISVALID )
 {
-  QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeError * obj = (QDeclarativeError *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -189,7 +189,7 @@ int line () const
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_LINE )
 {
-  QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeError * obj = (QDeclarativeError *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -213,7 +213,7 @@ void setColumn ( int column )
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_SETCOLUMN )
 {
-  QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeError * obj = (QDeclarativeError *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -239,7 +239,7 @@ void setDescription ( const QString & description )
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_SETDESCRIPTION )
 {
-  QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeError * obj = (QDeclarativeError *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -265,7 +265,7 @@ void setLine ( int line )
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_SETLINE )
 {
-  QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeError * obj = (QDeclarativeError *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -291,7 +291,7 @@ void setUrl ( const QUrl & url )
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_SETURL )
 {
-  QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeError * obj = (QDeclarativeError *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -317,7 +317,7 @@ QString toString () const
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_TOSTRING )
 {
-  QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeError * obj = (QDeclarativeError *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -341,7 +341,7 @@ QUrl url () const
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_URL )
 {
-  QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeError * obj = (QDeclarativeError *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

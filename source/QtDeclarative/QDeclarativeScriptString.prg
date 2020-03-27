@@ -98,7 +98,7 @@ QDeclarativeContext * context () const
 */
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_CONTEXT )
 {
-  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -123,7 +123,7 @@ QObject * scopeObject () const
 */
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SCOPEOBJECT )
 {
-  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -148,7 +148,7 @@ QString script () const
 */
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SCRIPT )
 {
-  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -172,7 +172,7 @@ void setContext ( QDeclarativeContext * context )
 */
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETCONTEXT )
 {
-  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -198,7 +198,7 @@ void setScopeObject ( QObject * object )
 */
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETSCOPEOBJECT )
 {
-  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -224,7 +224,7 @@ void setScript ( const QString & script )
 */
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETSCRIPT )
 {
-  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

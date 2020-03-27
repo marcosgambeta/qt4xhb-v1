@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_NEW )
 
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_DELETE )
 {
-  QDeclarativeContext * obj = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeContext * obj = (QDeclarativeContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -117,7 +117,7 @@ QUrl baseUrl () const
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_BASEURL )
 {
-  QDeclarativeContext * obj = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeContext * obj = (QDeclarativeContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -142,7 +142,7 @@ QObject * contextObject () const
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_CONTEXTOBJECT )
 {
-  QDeclarativeContext * obj = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeContext * obj = (QDeclarativeContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -167,7 +167,7 @@ QVariant contextProperty ( const QString & name ) const
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_CONTEXTPROPERTY )
 {
-  QDeclarativeContext * obj = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeContext * obj = (QDeclarativeContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -192,7 +192,7 @@ QDeclarativeEngine * engine () const
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_ENGINE )
 {
-  QDeclarativeContext * obj = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeContext * obj = (QDeclarativeContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -217,7 +217,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_ISVALID )
 {
-  QDeclarativeContext * obj = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeContext * obj = (QDeclarativeContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -241,7 +241,7 @@ QDeclarativeContext * parentContext () const
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_PARENTCONTEXT )
 {
-  QDeclarativeContext * obj = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeContext * obj = (QDeclarativeContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -266,7 +266,7 @@ QUrl resolvedUrl ( const QUrl & src )
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_RESOLVEDURL )
 {
-  QDeclarativeContext * obj = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeContext * obj = (QDeclarativeContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -291,7 +291,7 @@ void setBaseUrl ( const QUrl & baseUrl )
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETBASEURL )
 {
-  QDeclarativeContext * obj = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeContext * obj = (QDeclarativeContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -317,7 +317,7 @@ void setContextObject ( QObject * object )
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETCONTEXTOBJECT )
 {
-  QDeclarativeContext * obj = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeContext * obj = (QDeclarativeContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -343,7 +343,7 @@ void setContextProperty ( const QString & name, QObject * value )
 */
 void QDeclarativeContext_setContextProperty1()
 {
-  QDeclarativeContext * obj = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeContext * obj = (QDeclarativeContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -358,7 +358,7 @@ void setContextProperty ( const QString & name, const QVariant & value )
 */
 void QDeclarativeContext_setContextProperty2()
 {
-  QDeclarativeContext * obj = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeContext * obj = (QDeclarativeContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
