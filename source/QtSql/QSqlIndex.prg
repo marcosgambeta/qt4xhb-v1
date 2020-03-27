@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QSQLINDEX_NEW )
 
 HB_FUNC_STATIC( QSQLINDEX_DELETE )
 {
-  QSqlIndex * obj = (QSqlIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlIndex * obj = (QSqlIndex *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -104,7 +104,7 @@ void append ( const QSqlField & field )
 */
 void QSqlIndex_append1()
 {
-  QSqlIndex * obj = (QSqlIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlIndex * obj = (QSqlIndex *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -119,7 +119,7 @@ void append ( const QSqlField & field, bool desc )
 */
 void QSqlIndex_append2()
 {
-  QSqlIndex * obj = (QSqlIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlIndex * obj = (QSqlIndex *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -153,7 +153,7 @@ QString cursorName () const
 */
 HB_FUNC_STATIC( QSQLINDEX_CURSORNAME )
 {
-  QSqlIndex * obj = (QSqlIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlIndex * obj = (QSqlIndex *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -177,7 +177,7 @@ bool isDescending ( int i ) const
 */
 HB_FUNC_STATIC( QSQLINDEX_ISDESCENDING )
 {
-  QSqlIndex * obj = (QSqlIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlIndex * obj = (QSqlIndex *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -201,7 +201,7 @@ QString name () const
 */
 HB_FUNC_STATIC( QSQLINDEX_NAME )
 {
-  QSqlIndex * obj = (QSqlIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlIndex * obj = (QSqlIndex *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -225,7 +225,7 @@ void setCursorName ( const QString & cursorName )
 */
 HB_FUNC_STATIC( QSQLINDEX_SETCURSORNAME )
 {
-  QSqlIndex * obj = (QSqlIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlIndex * obj = (QSqlIndex *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -251,7 +251,7 @@ void setDescending ( int i, bool desc )
 */
 HB_FUNC_STATIC( QSQLINDEX_SETDESCENDING )
 {
-  QSqlIndex * obj = (QSqlIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlIndex * obj = (QSqlIndex *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -277,7 +277,7 @@ void setName ( const QString & name )
 */
 HB_FUNC_STATIC( QSQLINDEX_SETNAME )
 {
-  QSqlIndex * obj = (QSqlIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlIndex * obj = (QSqlIndex *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

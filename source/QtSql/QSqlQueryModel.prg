@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_NEW )
 
 HB_FUNC_STATIC( QSQLQUERYMODEL_DELETE )
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -102,7 +102,7 @@ virtual void clear ()
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_CLEAR )
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -128,7 +128,7 @@ QSqlError lastError () const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_LASTERROR )
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -153,7 +153,7 @@ QSqlQuery query () const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_QUERY )
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -178,7 +178,7 @@ QSqlRecord record ( int row ) const
 */
 void QSqlQueryModel_record1()
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -192,7 +192,7 @@ QSqlRecord record () const
 */
 void QSqlQueryModel_record2()
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -225,7 +225,7 @@ void setQuery ( const QSqlQuery & query )
 */
 void QSqlQueryModel_setQuery1()
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -240,7 +240,7 @@ void setQuery ( const QString & query, const QSqlDatabase & db = QSqlDatabase() 
 */
 void QSqlQueryModel_setQuery2()
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -274,7 +274,7 @@ virtual bool canFetchMore ( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_CANFETCHMORE )
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -298,7 +298,7 @@ virtual int columnCount ( const QModelIndex & index = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_COLUMNCOUNT )
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -322,7 +322,7 @@ virtual QVariant data ( const QModelIndex & item, int role = Qt::DisplayRole ) c
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_DATA )
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -347,7 +347,7 @@ virtual void fetchMore ( const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_FETCHMORE )
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -373,7 +373,7 @@ virtual QVariant headerData ( int section, Qt::Orientation orientation, int role
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_HEADERDATA )
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -398,7 +398,7 @@ virtual bool insertColumns ( int column, int count, const QModelIndex & parent =
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_INSERTCOLUMNS )
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -422,7 +422,7 @@ virtual bool removeColumns ( int column, int count, const QModelIndex & parent =
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_REMOVECOLUMNS )
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -446,7 +446,7 @@ virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_ROWCOUNT )
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -470,7 +470,7 @@ virtual bool setHeaderData ( int section, Qt::Orientation orientation, const QVa
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_SETHEADERDATA )
 {
-  QSqlQueryModel * obj = (QSqlQueryModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlQueryModel * obj = (QSqlQueryModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

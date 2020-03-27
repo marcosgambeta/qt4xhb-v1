@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_NEW )
 
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_DELETE )
 {
-  QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -93,7 +93,7 @@ QSqlRelation relation ( int column ) const
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_RELATION )
 {
-  QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -118,7 +118,7 @@ virtual QSqlTableModel * relationModel ( int column ) const
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_RELATIONMODEL )
 {
-  QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -143,7 +143,7 @@ virtual void setRelation ( int column, const QSqlRelation & relation )
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETRELATION )
 {
-  QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -169,7 +169,7 @@ virtual void clear ()
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_CLEAR )
 {
-  QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -195,7 +195,7 @@ virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) 
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_DATA )
 {
-  QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -220,7 +220,7 @@ virtual bool removeColumns ( int column, int count, const QModelIndex & parent =
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_REMOVECOLUMNS )
 {
-  QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -244,7 +244,7 @@ virtual bool select ()
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SELECT )
 {
-  QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -268,7 +268,7 @@ virtual bool setData ( const QModelIndex & index, const QVariant & value, int ro
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETDATA )
 {
-  QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -292,7 +292,7 @@ virtual void setTable ( const QString & table )
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETTABLE )
 {
-  QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -318,7 +318,7 @@ virtual void revertRow ( int row )
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_REVERTROW )
 {
-  QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -50,7 +50,7 @@ RETURN
 
 HB_FUNC_STATIC( QSQLRESULT_DELETE )
 {
-  QSqlResult * obj = (QSqlResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlResult * obj = (QSqlResult *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -70,7 +70,7 @@ virtual QVariant handle () const
 */
 HB_FUNC_STATIC( QSQLRESULT_HANDLE )
 {
-  QSqlResult * obj = (QSqlResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlResult * obj = (QSqlResult *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
