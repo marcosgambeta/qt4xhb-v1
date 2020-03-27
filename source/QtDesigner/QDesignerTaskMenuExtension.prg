@@ -53,7 +53,7 @@ RETURN
 
 HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_DELETE )
 {
-  QDesignerTaskMenuExtension * obj = (QDesignerTaskMenuExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDesignerTaskMenuExtension * obj = (QDesignerTaskMenuExtension *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -73,7 +73,7 @@ virtual QAction * preferredEditAction () const
 */
 HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_PREFERREDEDITACTION )
 {
-  QDesignerTaskMenuExtension * obj = (QDesignerTaskMenuExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDesignerTaskMenuExtension * obj = (QDesignerTaskMenuExtension *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -98,7 +98,7 @@ virtual QList<QAction *> taskActions () const = 0
 */
 HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_TASKACTIONS )
 {
-  QDesignerTaskMenuExtension * obj = (QDesignerTaskMenuExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDesignerTaskMenuExtension * obj = (QDesignerTaskMenuExtension *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

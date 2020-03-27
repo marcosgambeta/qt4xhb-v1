@@ -46,7 +46,7 @@ RETURN
 
 HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_DELETE )
 {
-  QDesignerObjectInspectorInterface * obj = (QDesignerObjectInspectorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDesignerObjectInspectorInterface * obj = (QDesignerObjectInspectorInterface *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -68,7 +68,7 @@ virtual QDesignerFormEditorInterface * core () const
 */
 HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_CORE )
 {
-  QDesignerObjectInspectorInterface * obj = (QDesignerObjectInspectorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDesignerObjectInspectorInterface * obj = (QDesignerObjectInspectorInterface *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -93,7 +93,7 @@ virtual void setFormWindow ( QDesignerFormWindowInterface * formWindow ) = 0
 */
 HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_SETFORMWINDOW )
 {
-  QDesignerObjectInspectorInterface * obj = (QDesignerObjectInspectorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDesignerObjectInspectorInterface * obj = (QDesignerObjectInspectorInterface *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

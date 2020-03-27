@@ -50,7 +50,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTEXTENSIONFACTORY_DELETE )
 {
-  QAbstractExtensionFactory * obj = (QAbstractExtensionFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractExtensionFactory * obj = (QAbstractExtensionFactory *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -70,7 +70,7 @@ virtual QObject * extension ( QObject * object, const QString & iid ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTEXTENSIONFACTORY_EXTENSION )
 {
-  QAbstractExtensionFactory * obj = (QAbstractExtensionFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractExtensionFactory * obj = (QAbstractExtensionFactory *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

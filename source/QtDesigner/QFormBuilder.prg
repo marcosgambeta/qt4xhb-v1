@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QFORMBUILDER_NEW )
 
 HB_FUNC_STATIC( QFORMBUILDER_DELETE )
 {
-  QFormBuilder * obj = (QFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFormBuilder * obj = (QFormBuilder *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -82,7 +82,7 @@ void addPluginPath ( const QString & pluginPath )
 */
 HB_FUNC_STATIC( QFORMBUILDER_ADDPLUGINPATH )
 {
-  QFormBuilder * obj = (QFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFormBuilder * obj = (QFormBuilder *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -108,7 +108,7 @@ void clearPluginPaths ()
 */
 HB_FUNC_STATIC( QFORMBUILDER_CLEARPLUGINPATHS )
 {
-  QFormBuilder * obj = (QFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFormBuilder * obj = (QFormBuilder *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -134,7 +134,7 @@ QList<QDesignerCustomWidgetInterface *> customWidgets () const
 */
 HB_FUNC_STATIC( QFORMBUILDER_CUSTOMWIDGETS )
 {
-  QFormBuilder * obj = (QFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFormBuilder * obj = (QFormBuilder *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -182,7 +182,7 @@ QStringList pluginPaths () const
 */
 HB_FUNC_STATIC( QFORMBUILDER_PLUGINPATHS )
 {
-  QFormBuilder * obj = (QFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFormBuilder * obj = (QFormBuilder *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -206,7 +206,7 @@ void setPluginPath ( const QStringList & pluginPaths )
 */
 HB_FUNC_STATIC( QFORMBUILDER_SETPLUGINPATH )
 {
-  QFormBuilder * obj = (QFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFormBuilder * obj = (QFormBuilder *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
