@@ -55,7 +55,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_DELETE )
 {
-  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -75,7 +75,7 @@ virtual QVariant handle () const
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_HANDLE )
 {
-  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -100,7 +100,7 @@ HandleType handleType () const
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_HANDLETYPE )
 {
-  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -128,7 +128,7 @@ virtual MapMode mapMode () const = 0
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_MAPMODE )
 {
-  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -152,7 +152,7 @@ virtual void unmap () = 0
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_UNMAP )
 {
-  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

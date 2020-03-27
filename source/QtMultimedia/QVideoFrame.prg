@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW )
 
 HB_FUNC_STATIC( QVIDEOFRAME_DELETE )
 {
-  QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVideoFrame * obj = (QVideoFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -183,7 +183,7 @@ int bytesPerLine () const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_BYTESPERLINE )
 {
-  QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVideoFrame * obj = (QVideoFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -207,7 +207,7 @@ qint64 endTime () const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_ENDTIME )
 {
-  QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVideoFrame * obj = (QVideoFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -231,7 +231,7 @@ FieldType fieldType () const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_FIELDTYPE )
 {
-  QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVideoFrame * obj = (QVideoFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -255,7 +255,7 @@ QVariant handle () const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_HANDLE )
 {
-  QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVideoFrame * obj = (QVideoFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -280,7 +280,7 @@ QAbstractVideoBuffer::HandleType handleType () const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_HANDLETYPE )
 {
-  QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVideoFrame * obj = (QVideoFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -304,7 +304,7 @@ int height () const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_HEIGHT )
 {
-  QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVideoFrame * obj = (QVideoFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -328,7 +328,7 @@ bool isMapped () const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_ISMAPPED )
 {
-  QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVideoFrame * obj = (QVideoFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -352,7 +352,7 @@ bool isReadable () const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_ISREADABLE )
 {
-  QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVideoFrame * obj = (QVideoFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -376,7 +376,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_ISVALID )
 {
-  QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVideoFrame * obj = (QVideoFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -400,7 +400,7 @@ bool isWritable () const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_ISWRITABLE )
 {
-  QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVideoFrame * obj = (QVideoFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -424,7 +424,7 @@ bool map ( QAbstractVideoBuffer::MapMode mode )
 */
 HB_FUNC_STATIC( QVIDEOFRAME_MAP )
 {
-  QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVideoFrame * obj = (QVideoFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -448,7 +448,7 @@ QAbstractVideoBuffer::MapMode mapMode () const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_MAPMODE )
 {
-  QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVideoFrame * obj = (QVideoFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -472,7 +472,7 @@ int mappedBytes () const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_MAPPEDBYTES )
 {
-  QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVideoFrame * obj = (QVideoFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -496,7 +496,7 @@ PixelFormat pixelFormat () const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_PIXELFORMAT )
 {
-  QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVideoFrame * obj = (QVideoFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -520,7 +520,7 @@ void setEndTime ( qint64 time )
 */
 HB_FUNC_STATIC( QVIDEOFRAME_SETENDTIME )
 {
-  QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVideoFrame * obj = (QVideoFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -546,7 +546,7 @@ void setFieldType ( FieldType field )
 */
 HB_FUNC_STATIC( QVIDEOFRAME_SETFIELDTYPE )
 {
-  QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVideoFrame * obj = (QVideoFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -572,7 +572,7 @@ void setStartTime ( qint64 time )
 */
 HB_FUNC_STATIC( QVIDEOFRAME_SETSTARTTIME )
 {
-  QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVideoFrame * obj = (QVideoFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -598,7 +598,7 @@ QSize size () const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_SIZE )
 {
-  QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVideoFrame * obj = (QVideoFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -623,7 +623,7 @@ qint64 startTime () const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_STARTTIME )
 {
-  QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVideoFrame * obj = (QVideoFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -647,7 +647,7 @@ void unmap ()
 */
 HB_FUNC_STATIC( QVIDEOFRAME_UNMAP )
 {
-  QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVideoFrame * obj = (QVideoFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -673,7 +673,7 @@ int width () const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_WIDTH )
 {
-  QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVideoFrame * obj = (QVideoFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
