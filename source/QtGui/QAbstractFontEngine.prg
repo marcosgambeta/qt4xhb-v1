@@ -45,7 +45,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTFONTENGINE_DELETE )
 {
-  QAbstractFontEngine * obj = (QAbstractFontEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractFontEngine * obj = (QAbstractFontEngine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -71,7 +71,7 @@ virtual Capabilities capabilities () const = 0
 */
 HB_FUNC_STATIC( QABSTRACTFONTENGINE_CAPABILITIES )
 {
-  QAbstractFontEngine * obj = (QAbstractFontEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractFontEngine * obj = (QAbstractFontEngine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -99,7 +99,7 @@ virtual QVariant fontProperty ( FontProperty property ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTFONTENGINE_FONTPROPERTY )
 {
-  QAbstractFontEngine * obj = (QAbstractFontEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractFontEngine * obj = (QAbstractFontEngine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -128,7 +128,7 @@ virtual bool renderGlyph ( uint glyph, int depth, int bytesPerLine, int height, 
 */
 HB_FUNC_STATIC( QABSTRACTFONTENGINE_RENDERGLYPH )
 {
-  QAbstractFontEngine * obj = (QAbstractFontEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractFontEngine * obj = (QAbstractFontEngine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_DELETE )
 {
-  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -89,7 +89,7 @@ BlurHints blurHints () const
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURHINTS )
 {
-  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -113,7 +113,7 @@ qreal blurRadius () const
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURRADIUS )
 {
-  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -137,7 +137,7 @@ virtual QRectF boundingRectFor ( const QRectF & rect ) const
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BOUNDINGRECTFOR )
 {
-  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -162,7 +162,7 @@ void setBlurHints ( BlurHints hints )
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_SETBLURHINTS )
 {
-  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -188,7 +188,7 @@ void setBlurRadius ( qreal blurRadius )
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_SETBLURRADIUS )
 {
-  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

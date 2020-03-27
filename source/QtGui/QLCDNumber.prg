@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QLCDNUMBER_NEW )
 
 HB_FUNC_STATIC( QLCDNUMBER_DELETE )
 {
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLCDNumber * obj = (QLCDNumber *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -126,7 +126,7 @@ bool checkOverflow ( double num ) const
 */
 HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW1 )
 {
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLCDNumber * obj = (QLCDNumber *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -150,7 +150,7 @@ bool checkOverflow ( int num ) const
 */
 HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW2 )
 {
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLCDNumber * obj = (QLCDNumber *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -189,7 +189,7 @@ int digitCount () const
 */
 HB_FUNC_STATIC( QLCDNUMBER_DIGITCOUNT )
 {
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLCDNumber * obj = (QLCDNumber *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -213,7 +213,7 @@ int intValue () const
 */
 HB_FUNC_STATIC( QLCDNUMBER_INTVALUE )
 {
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLCDNumber * obj = (QLCDNumber *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -237,7 +237,7 @@ Mode mode () const
 */
 HB_FUNC_STATIC( QLCDNUMBER_MODE )
 {
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLCDNumber * obj = (QLCDNumber *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -261,7 +261,7 @@ SegmentStyle segmentStyle () const
 */
 HB_FUNC_STATIC( QLCDNUMBER_SEGMENTSTYLE )
 {
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLCDNumber * obj = (QLCDNumber *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -285,7 +285,7 @@ void setDigitCount ( int numDigits )
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETDIGITCOUNT )
 {
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLCDNumber * obj = (QLCDNumber *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -311,7 +311,7 @@ void setMode ( Mode )
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETMODE )
 {
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLCDNumber * obj = (QLCDNumber *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -337,7 +337,7 @@ void setSegmentStyle ( SegmentStyle )
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETSEGMENTSTYLE )
 {
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLCDNumber * obj = (QLCDNumber *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -363,7 +363,7 @@ bool smallDecimalPoint () const
 */
 HB_FUNC_STATIC( QLCDNUMBER_SMALLDECIMALPOINT )
 {
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLCDNumber * obj = (QLCDNumber *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -387,7 +387,7 @@ double value () const
 */
 HB_FUNC_STATIC( QLCDNUMBER_VALUE )
 {
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLCDNumber * obj = (QLCDNumber *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -411,7 +411,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QLCDNUMBER_SIZEHINT )
 {
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLCDNumber * obj = (QLCDNumber *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -436,7 +436,7 @@ void display ( const QString & s )
 */
 HB_FUNC_STATIC( QLCDNUMBER_DISPLAY1 )
 {
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLCDNumber * obj = (QLCDNumber *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -462,7 +462,7 @@ void display ( double num )
 */
 HB_FUNC_STATIC( QLCDNUMBER_DISPLAY2 )
 {
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLCDNumber * obj = (QLCDNumber *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -488,7 +488,7 @@ void display ( int num )
 */
 HB_FUNC_STATIC( QLCDNUMBER_DISPLAY3 )
 {
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLCDNumber * obj = (QLCDNumber *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -534,7 +534,7 @@ void setBinMode ()
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETBINMODE )
 {
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLCDNumber * obj = (QLCDNumber *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -560,7 +560,7 @@ void setDecMode ()
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETDECMODE )
 {
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLCDNumber * obj = (QLCDNumber *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -586,7 +586,7 @@ void setHexMode ()
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETHEXMODE )
 {
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLCDNumber * obj = (QLCDNumber *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -612,7 +612,7 @@ void setOctMode ()
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETOCTMODE )
 {
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLCDNumber * obj = (QLCDNumber *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -638,7 +638,7 @@ void setSmallDecimalPoint ( bool )
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETSMALLDECIMALPOINT )
 {
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLCDNumber * obj = (QLCDNumber *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

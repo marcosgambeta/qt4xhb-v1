@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QCDESTYLE_NEW )
 
 HB_FUNC_STATIC( QCDESTYLE_DELETE )
 {
-  QCDEStyle * obj = (QCDEStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCDEStyle * obj = (QCDEStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -85,7 +85,7 @@ virtual void drawControl ( ControlElement element, const QStyleOption * opt, QPa
 */
 HB_FUNC_STATIC( QCDESTYLE_DRAWCONTROL )
 {
-  QCDEStyle * obj = (QCDEStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCDEStyle * obj = (QCDEStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -111,7 +111,7 @@ virtual void drawPrimitive ( PrimitiveElement pe, const QStyleOption * opt, QPai
 */
 HB_FUNC_STATIC( QCDESTYLE_DRAWPRIMITIVE )
 {
-  QCDEStyle * obj = (QCDEStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCDEStyle * obj = (QCDEStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -137,7 +137,7 @@ virtual int pixelMetric ( PixelMetric metric, const QStyleOption * option = 0, c
 */
 HB_FUNC_STATIC( QCDESTYLE_PIXELMETRIC )
 {
-  QCDEStyle * obj = (QCDEStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCDEStyle * obj = (QCDEStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -161,7 +161,7 @@ virtual QPalette standardPalette () const
 */
 HB_FUNC_STATIC( QCDESTYLE_STANDARDPALETTE )
 {
-  QCDEStyle * obj = (QCDEStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCDEStyle * obj = (QCDEStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

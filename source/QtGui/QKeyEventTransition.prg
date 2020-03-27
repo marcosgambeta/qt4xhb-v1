@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW )
 
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_DELETE )
 {
-  QKeyEventTransition * obj = (QKeyEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QKeyEventTransition * obj = (QKeyEventTransition *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -105,7 +105,7 @@ int key () const
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_KEY )
 {
-  QKeyEventTransition * obj = (QKeyEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QKeyEventTransition * obj = (QKeyEventTransition *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -129,7 +129,7 @@ Qt::KeyboardModifiers modifierMask () const
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_MODIFIERMASK )
 {
-  QKeyEventTransition * obj = (QKeyEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QKeyEventTransition * obj = (QKeyEventTransition *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -153,7 +153,7 @@ void setKey ( int key )
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_SETKEY )
 {
-  QKeyEventTransition * obj = (QKeyEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QKeyEventTransition * obj = (QKeyEventTransition *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -179,7 +179,7 @@ void setModifierMask ( Qt::KeyboardModifiers modifierMask )
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_SETMODIFIERMASK )
 {
-  QKeyEventTransition * obj = (QKeyEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QKeyEventTransition * obj = (QKeyEventTransition *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW )
 
 HB_FUNC_STATIC( QKEYSEQUENCE_DELETE )
 {
-  QKeySequence * obj = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QKeySequence * obj = (QKeySequence *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -178,7 +178,7 @@ uint count () const
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_COUNT )
 {
-  QKeySequence * obj = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QKeySequence * obj = (QKeySequence *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -202,7 +202,7 @@ bool isEmpty () const
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_ISEMPTY )
 {
-  QKeySequence * obj = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QKeySequence * obj = (QKeySequence *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -226,7 +226,7 @@ SequenceMatch matches ( const QKeySequence & seq ) const
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_MATCHES )
 {
-  QKeySequence * obj = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QKeySequence * obj = (QKeySequence *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -250,7 +250,7 @@ QString toString ( SequenceFormat format = PortableText ) const
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_TOSTRING )
 {
-  QKeySequence * obj = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QKeySequence * obj = (QKeySequence *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

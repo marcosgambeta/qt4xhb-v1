@@ -74,7 +74,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_DELETE )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -96,7 +96,7 @@ virtual QModelIndex mapFromSource ( const QModelIndex & sourceIndex ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MAPFROMSOURCE )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -121,7 +121,7 @@ virtual QItemSelection mapSelectionFromSource ( const QItemSelection & sourceSel
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MAPSELECTIONFROMSOURCE )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -146,7 +146,7 @@ virtual QItemSelection mapSelectionToSource ( const QItemSelection & proxySelect
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MAPSELECTIONTOSOURCE )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -171,7 +171,7 @@ virtual QModelIndex mapToSource ( const QModelIndex & proxyIndex ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MAPTOSOURCE )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -196,7 +196,7 @@ virtual void setSourceModel ( QAbstractItemModel * sourceModel )
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SETSOURCEMODEL )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -222,7 +222,7 @@ QAbstractItemModel * sourceModel () const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SOURCEMODEL )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -247,7 +247,7 @@ virtual QModelIndex buddy ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_BUDDY )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -272,7 +272,7 @@ virtual bool canFetchMore ( const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_CANFETCHMORE )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -296,7 +296,7 @@ virtual QVariant data ( const QModelIndex & proxyIndex, int role = Qt::DisplayRo
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_DATA )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -321,7 +321,7 @@ virtual void fetchMore ( const QModelIndex & parent )
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_FETCHMORE )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -347,7 +347,7 @@ virtual Qt::ItemFlags flags ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_FLAGS )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -371,7 +371,7 @@ virtual bool hasChildren ( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_HASCHILDREN )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -395,7 +395,7 @@ virtual QVariant headerData ( int section, Qt::Orientation orientation, int role
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_HEADERDATA )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -420,7 +420,7 @@ virtual QMimeData * mimeData ( const QModelIndexList & indexes ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MIMEDATA )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -453,7 +453,7 @@ virtual QStringList mimeTypes () const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MIMETYPES )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -477,7 +477,7 @@ virtual void revert ()
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_REVERT )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -503,7 +503,7 @@ virtual bool setData ( const QModelIndex & index, const QVariant & value, int ro
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SETDATA )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -527,7 +527,7 @@ virtual bool setHeaderData ( int section, Qt::Orientation orientation, const QVa
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SETHEADERDATA )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -551,7 +551,7 @@ virtual void sort ( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SORT )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -577,7 +577,7 @@ virtual QSize span ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SPAN )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -602,7 +602,7 @@ virtual bool submit ()
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SUBMIT )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -626,7 +626,7 @@ virtual Qt::DropActions supportedDropActions () const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SUPPORTEDDROPACTIONS )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

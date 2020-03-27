@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QPAINTEVENT_NEW )
 
 HB_FUNC_STATIC( QPAINTEVENT_DELETE )
 {
-  QPaintEvent * obj = (QPaintEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPaintEvent * obj = (QPaintEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -101,7 +101,7 @@ const QRect & rect () const
 */
 HB_FUNC_STATIC( QPAINTEVENT_RECT )
 {
-  QPaintEvent * obj = (QPaintEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPaintEvent * obj = (QPaintEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -126,7 +126,7 @@ const QRegion & region () const
 */
 HB_FUNC_STATIC( QPAINTEVENT_REGION )
 {
-  QPaintEvent * obj = (QPaintEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPaintEvent * obj = (QPaintEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

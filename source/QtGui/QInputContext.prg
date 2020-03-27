@@ -61,7 +61,7 @@ RETURN
 
 HB_FUNC_STATIC( QINPUTCONTEXT_DELETE )
 {
-  QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QInputContext * obj = (QInputContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -83,7 +83,7 @@ virtual QList<QAction *> actions ()
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_ACTIONS )
 {
-  QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QInputContext * obj = (QInputContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -131,7 +131,7 @@ virtual bool filterEvent ( const QEvent * event )
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_FILTEREVENT )
 {
-  QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QInputContext * obj = (QInputContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -155,7 +155,7 @@ QWidget * focusWidget () const
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_FOCUSWIDGET )
 {
-  QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QInputContext * obj = (QInputContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -180,7 +180,7 @@ virtual QFont font () const
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_FONT )
 {
-  QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QInputContext * obj = (QInputContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -205,7 +205,7 @@ virtual QString identifierName () = 0
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_IDENTIFIERNAME )
 {
-  QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QInputContext * obj = (QInputContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -229,7 +229,7 @@ virtual bool isComposing () const = 0
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_ISCOMPOSING )
 {
-  QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QInputContext * obj = (QInputContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -253,7 +253,7 @@ virtual QString language () = 0
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_LANGUAGE )
 {
-  QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QInputContext * obj = (QInputContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -277,7 +277,7 @@ virtual void mouseHandler ( int x, QMouseEvent * event )
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_MOUSEHANDLER )
 {
-  QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QInputContext * obj = (QInputContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -303,7 +303,7 @@ virtual void reset () = 0
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_RESET )
 {
-  QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QInputContext * obj = (QInputContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -329,7 +329,7 @@ void sendEvent ( const QInputMethodEvent & event )
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_SENDEVENT )
 {
-  QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QInputContext * obj = (QInputContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -355,7 +355,7 @@ virtual void setFocusWidget ( QWidget * widget )
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_SETFOCUSWIDGET )
 {
-  QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QInputContext * obj = (QInputContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -381,7 +381,7 @@ QTextFormat standardFormat ( StandardFormat s ) const
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_STANDARDFORMAT )
 {
-  QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QInputContext * obj = (QInputContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -406,7 +406,7 @@ virtual void update ()
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_UPDATE )
 {
-  QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QInputContext * obj = (QInputContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -432,7 +432,7 @@ virtual void widgetDestroyed ( QWidget * widget )
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_WIDGETDESTROYED )
 {
-  QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QInputContext * obj = (QInputContext *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QREGION_NEW )
 
 HB_FUNC_STATIC( QREGION_DELETE )
 {
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRegion * obj = (QRegion *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -178,7 +178,7 @@ QRect boundingRect () const
 */
 HB_FUNC_STATIC( QREGION_BOUNDINGRECT )
 {
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRegion * obj = (QRegion *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -203,7 +203,7 @@ bool contains ( const QPoint & p ) const
 */
 void QRegion_contains1()
 {
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRegion * obj = (QRegion *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -216,7 +216,7 @@ bool contains ( const QRect & r ) const
 */
 void QRegion_contains2()
 {
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRegion * obj = (QRegion *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -248,7 +248,7 @@ QRegion intersected ( const QRegion & r ) const
 */
 void QRegion_intersected1()
 {
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRegion * obj = (QRegion *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -262,7 +262,7 @@ QRegion intersected ( const QRect & rect ) const
 */
 void QRegion_intersected2()
 {
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRegion * obj = (QRegion *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -295,7 +295,7 @@ bool intersects ( const QRegion & region ) const
 */
 void QRegion_intersects1()
 {
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRegion * obj = (QRegion *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -308,7 +308,7 @@ bool intersects ( const QRect & rect ) const
 */
 void QRegion_intersects2()
 {
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRegion * obj = (QRegion *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -340,7 +340,7 @@ bool isEmpty () const
 */
 HB_FUNC_STATIC( QREGION_ISEMPTY )
 {
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRegion * obj = (QRegion *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -364,7 +364,7 @@ int rectCount () const
 */
 HB_FUNC_STATIC( QREGION_RECTCOUNT )
 {
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRegion * obj = (QRegion *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -388,7 +388,7 @@ QVector<QRect> rects () const
 */
 HB_FUNC_STATIC( QREGION_RECTS )
 {
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRegion * obj = (QRegion *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -440,7 +440,7 @@ QRegion subtracted ( const QRegion & r ) const
 */
 HB_FUNC_STATIC( QREGION_SUBTRACTED )
 {
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRegion * obj = (QRegion *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -465,7 +465,7 @@ void swap ( QRegion & other )
 */
 HB_FUNC_STATIC( QREGION_SWAP )
 {
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRegion * obj = (QRegion *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -491,7 +491,7 @@ void translate ( int dx, int dy )
 */
 void QRegion_translate1()
 {
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRegion * obj = (QRegion *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -506,7 +506,7 @@ void translate ( const QPoint & point )
 */
 void QRegion_translate2()
 {
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRegion * obj = (QRegion *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -540,7 +540,7 @@ QRegion translated ( int dx, int dy ) const
 */
 void QRegion_translated1()
 {
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRegion * obj = (QRegion *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -554,7 +554,7 @@ QRegion translated ( const QPoint & p ) const
 */
 void QRegion_translated2()
 {
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRegion * obj = (QRegion *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -587,7 +587,7 @@ QRegion united ( const QRegion & r ) const
 */
 void QRegion_united1()
 {
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRegion * obj = (QRegion *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -601,7 +601,7 @@ QRegion united ( const QRect & rect ) const
 */
 void QRegion_united2()
 {
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRegion * obj = (QRegion *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -634,7 +634,7 @@ QRegion xored ( const QRegion & r ) const
 */
 HB_FUNC_STATIC( QREGION_XORED )
 {
-  QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRegion * obj = (QRegion *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

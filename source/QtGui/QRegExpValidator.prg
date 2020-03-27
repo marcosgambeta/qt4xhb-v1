@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
 
 HB_FUNC_STATIC( QREGEXPVALIDATOR_DELETE )
 {
-  QRegExpValidator * obj = (QRegExpValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRegExpValidator * obj = (QRegExpValidator *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -105,7 +105,7 @@ const QRegExp & regExp () const
 */
 HB_FUNC_STATIC( QREGEXPVALIDATOR_REGEXP )
 {
-  QRegExpValidator * obj = (QRegExpValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRegExpValidator * obj = (QRegExpValidator *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -130,7 +130,7 @@ void setRegExp ( const QRegExp & rx )
 */
 HB_FUNC_STATIC( QREGEXPVALIDATOR_SETREGEXP )
 {
-  QRegExpValidator * obj = (QRegExpValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRegExpValidator * obj = (QRegExpValidator *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

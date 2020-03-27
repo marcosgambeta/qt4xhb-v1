@@ -53,7 +53,7 @@ QObject * create ( const QString & key, const QString & specification )
 */
 HB_FUNC_STATIC( QGENERICPLUGINFACTORY_CREATE )
 {
-  QGenericPluginFactory * obj = (QGenericPluginFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGenericPluginFactory * obj = (QGenericPluginFactory *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

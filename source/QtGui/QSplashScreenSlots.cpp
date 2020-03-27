@@ -35,7 +35,7 @@ void QSplashScreenSlots::messageChanged( const QString & message )
 
 void QSplashScreenSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSplashScreen * obj = (QSplashScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSplashScreen * obj = (QSplashScreen *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -90,7 +90,7 @@ QAbstractSpinBox::ButtonSymbols buttonSymbols
 */
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_BUTTONSYMBOLS )
 {
-  QStyleOptionSpinBox * obj = (QStyleOptionSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionSpinBox * obj = (QStyleOptionSpinBox *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_BUTTONSYMBOLS )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_SETBUTTONSYMBOLS )
 {
-  QStyleOptionSpinBox * obj = (QStyleOptionSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionSpinBox * obj = (QStyleOptionSpinBox *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -128,7 +128,7 @@ QAbstractSpinBox::StepEnabled stepEnabled
 */
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_STEPENABLED )
 {
-  QStyleOptionSpinBox * obj = (QStyleOptionSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionSpinBox * obj = (QStyleOptionSpinBox *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_STEPENABLED )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_SETSTEPENABLED )
 {
-  QStyleOptionSpinBox * obj = (QStyleOptionSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionSpinBox * obj = (QStyleOptionSpinBox *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -166,7 +166,7 @@ bool frame
 */
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_FRAME )
 {
-  QStyleOptionSpinBox * obj = (QStyleOptionSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionSpinBox * obj = (QStyleOptionSpinBox *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_FRAME )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_SETFRAME )
 {
-  QStyleOptionSpinBox * obj = (QStyleOptionSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionSpinBox * obj = (QStyleOptionSpinBox *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

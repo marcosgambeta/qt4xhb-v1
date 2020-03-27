@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QICONDRAGEVENT_NEW )
 
 HB_FUNC_STATIC( QICONDRAGEVENT_DELETE )
 {
-  QIconDragEvent * obj = (QIconDragEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIconDragEvent * obj = (QIconDragEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -95,7 +95,7 @@ QFont currentFont () const
 */
 HB_FUNC_STATIC( QFONTDIALOG_CURRENTFONT )
 {
-  QFontDialog * obj = (QFontDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFontDialog * obj = (QFontDialog *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -120,7 +120,7 @@ void open ( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QFONTDIALOG_OPEN )
 {
-  QFontDialog * obj = (QFontDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFontDialog * obj = (QFontDialog *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -146,7 +146,7 @@ FontDialogOptions options () const
 */
 HB_FUNC_STATIC( QFONTDIALOG_OPTIONS )
 {
-  QFontDialog * obj = (QFontDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFontDialog * obj = (QFontDialog *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -170,7 +170,7 @@ QFont selectedFont () const
 */
 HB_FUNC_STATIC( QFONTDIALOG_SELECTEDFONT )
 {
-  QFontDialog * obj = (QFontDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFontDialog * obj = (QFontDialog *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -195,7 +195,7 @@ void setCurrentFont ( const QFont & font )
 */
 HB_FUNC_STATIC( QFONTDIALOG_SETCURRENTFONT )
 {
-  QFontDialog * obj = (QFontDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFontDialog * obj = (QFontDialog *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -221,7 +221,7 @@ void setOption ( FontDialogOption option, bool on = true )
 */
 HB_FUNC_STATIC( QFONTDIALOG_SETOPTION )
 {
-  QFontDialog * obj = (QFontDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFontDialog * obj = (QFontDialog *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -247,7 +247,7 @@ void setOptions ( FontDialogOptions options )
 */
 HB_FUNC_STATIC( QFONTDIALOG_SETOPTIONS )
 {
-  QFontDialog * obj = (QFontDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFontDialog * obj = (QFontDialog *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -273,7 +273,7 @@ bool testOption ( FontDialogOption option ) const
 */
 HB_FUNC_STATIC( QFONTDIALOG_TESTOPTION )
 {
-  QFontDialog * obj = (QFontDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFontDialog * obj = (QFontDialog *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -297,7 +297,7 @@ virtual void setVisible ( bool visible )
 */
 HB_FUNC_STATIC( QFONTDIALOG_SETVISIBLE )
 {
-  QFontDialog * obj = (QFontDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFontDialog * obj = (QFontDialog *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

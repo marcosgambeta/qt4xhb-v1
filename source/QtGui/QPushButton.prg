@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_NEW )
 
 HB_FUNC_STATIC( QPUSHBUTTON_DELETE )
 {
-  QPushButton * obj = (QPushButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPushButton * obj = (QPushButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -122,7 +122,7 @@ bool autoDefault () const
 */
 HB_FUNC_STATIC( QPUSHBUTTON_AUTODEFAULT )
 {
-  QPushButton * obj = (QPushButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPushButton * obj = (QPushButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -146,7 +146,7 @@ bool isDefault () const
 */
 HB_FUNC_STATIC( QPUSHBUTTON_ISDEFAULT )
 {
-  QPushButton * obj = (QPushButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPushButton * obj = (QPushButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -170,7 +170,7 @@ bool isFlat () const
 */
 HB_FUNC_STATIC( QPUSHBUTTON_ISFLAT )
 {
-  QPushButton * obj = (QPushButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPushButton * obj = (QPushButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -194,7 +194,7 @@ void setAutoDefault ( bool )
 */
 HB_FUNC_STATIC( QPUSHBUTTON_SETAUTODEFAULT )
 {
-  QPushButton * obj = (QPushButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPushButton * obj = (QPushButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -220,7 +220,7 @@ void setDefault ( bool )
 */
 HB_FUNC_STATIC( QPUSHBUTTON_SETDEFAULT )
 {
-  QPushButton * obj = (QPushButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPushButton * obj = (QPushButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -246,7 +246,7 @@ void setFlat ( bool )
 */
 HB_FUNC_STATIC( QPUSHBUTTON_SETFLAT )
 {
-  QPushButton * obj = (QPushButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPushButton * obj = (QPushButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -272,7 +272,7 @@ void showMenu ()
 */
 HB_FUNC_STATIC( QPUSHBUTTON_SHOWMENU )
 {
-  QPushButton * obj = (QPushButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPushButton * obj = (QPushButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

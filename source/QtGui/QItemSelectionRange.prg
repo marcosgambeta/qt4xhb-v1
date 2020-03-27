@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW )
 
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_DELETE )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -152,7 +152,7 @@ int bottom () const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_BOTTOM )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -176,7 +176,7 @@ QModelIndex bottomRight () const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_BOTTOMRIGHT )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -201,7 +201,7 @@ bool contains ( const QModelIndex & index ) const
 */
 void QItemSelectionRange_contains1()
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -214,7 +214,7 @@ bool contains ( int row, int column, const QModelIndex & parentIndex ) const
 */
 void QItemSelectionRange_contains2()
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -246,7 +246,7 @@ int height () const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_HEIGHT )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -270,7 +270,7 @@ QModelIndexList indexes () const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_INDEXES )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -322,7 +322,7 @@ QItemSelectionRange intersected ( const QItemSelectionRange & other ) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTED )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -347,7 +347,7 @@ bool intersects ( const QItemSelectionRange & other ) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTS )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -371,7 +371,7 @@ bool isEmpty () const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_ISEMPTY )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -395,7 +395,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_ISVALID )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -419,7 +419,7 @@ int left () const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_LEFT )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -443,7 +443,7 @@ const QAbstractItemModel * model () const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_MODEL )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -468,7 +468,7 @@ QModelIndex parent () const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_PARENT )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -493,7 +493,7 @@ int right () const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_RIGHT )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -517,7 +517,7 @@ int top () const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_TOP )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -541,7 +541,7 @@ QModelIndex topLeft () const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_TOPLEFT )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -566,7 +566,7 @@ int width () const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_WIDTH )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemSelectionRange * obj = (QItemSelectionRange *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

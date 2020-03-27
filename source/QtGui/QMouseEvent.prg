@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_NEW )
 
 HB_FUNC_STATIC( QMOUSEEVENT_DELETE )
 {
-  QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMouseEvent * obj = (QMouseEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -110,7 +110,7 @@ const QPoint &pos() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_POS )
 {
-  QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMouseEvent * obj = (QMouseEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -135,7 +135,7 @@ const QPoint &globalPos() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_GLOBALPOS )
 {
-  QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMouseEvent * obj = (QMouseEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -160,7 +160,7 @@ int x() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_X )
 {
-  QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMouseEvent * obj = (QMouseEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -184,7 +184,7 @@ int y() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_Y )
 {
-  QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMouseEvent * obj = (QMouseEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -208,7 +208,7 @@ int globalX() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_GLOBALX )
 {
-  QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMouseEvent * obj = (QMouseEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -232,7 +232,7 @@ int globalY() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_GLOBALY )
 {
-  QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMouseEvent * obj = (QMouseEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -256,7 +256,7 @@ Qt::MouseButton button() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_BUTTON )
 {
-  QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMouseEvent * obj = (QMouseEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -280,7 +280,7 @@ Qt::MouseButtons buttons() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_BUTTONS )
 {
-  QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMouseEvent * obj = (QMouseEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -304,7 +304,7 @@ bool hasExtendedInfo() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_HASEXTENDEDINFO )
 {
-  QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMouseEvent * obj = (QMouseEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -328,7 +328,7 @@ QPointF posF() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_POSF )
 {
-  QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMouseEvent * obj = (QMouseEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

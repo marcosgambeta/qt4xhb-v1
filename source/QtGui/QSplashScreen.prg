@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_NEW )
 
 HB_FUNC_STATIC( QSPLASHSCREEN_DELETE )
 {
-  QSplashScreen * obj = (QSplashScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSplashScreen * obj = (QSplashScreen *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -110,7 +110,7 @@ void finish ( QWidget * mainWin )
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_FINISH )
 {
-  QSplashScreen * obj = (QSplashScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSplashScreen * obj = (QSplashScreen *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -136,7 +136,7 @@ const QPixmap pixmap () const
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_PIXMAP )
 {
-  QSplashScreen * obj = (QSplashScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSplashScreen * obj = (QSplashScreen *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -161,7 +161,7 @@ void repaint ()
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_REPAINT )
 {
-  QSplashScreen * obj = (QSplashScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSplashScreen * obj = (QSplashScreen *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -187,7 +187,7 @@ void setPixmap ( const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_SETPIXMAP )
 {
-  QSplashScreen * obj = (QSplashScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSplashScreen * obj = (QSplashScreen *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -213,7 +213,7 @@ void clearMessage ()
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_CLEARMESSAGE )
 {
-  QSplashScreen * obj = (QSplashScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSplashScreen * obj = (QSplashScreen *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -239,7 +239,7 @@ void showMessage ( const QString & message, int alignment = Qt::AlignLeft, const
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_SHOWMESSAGE )
 {
-  QSplashScreen * obj = (QSplashScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSplashScreen * obj = (QSplashScreen *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

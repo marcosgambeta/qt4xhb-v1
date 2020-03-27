@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QTEXTFRAME_NEW )
 
 HB_FUNC_STATIC( QTEXTFRAME_DELETE )
 {
-  QTextFrame * obj = (QTextFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextFrame * obj = (QTextFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -92,7 +92,7 @@ QList<QTextFrame *> childFrames () const
 */
 HB_FUNC_STATIC( QTEXTFRAME_CHILDFRAMES )
 {
-  QTextFrame * obj = (QTextFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextFrame * obj = (QTextFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -140,7 +140,7 @@ QTextCursor firstCursorPosition () const
 */
 HB_FUNC_STATIC( QTEXTFRAME_FIRSTCURSORPOSITION )
 {
-  QTextFrame * obj = (QTextFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextFrame * obj = (QTextFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -165,7 +165,7 @@ int firstPosition () const
 */
 HB_FUNC_STATIC( QTEXTFRAME_FIRSTPOSITION )
 {
-  QTextFrame * obj = (QTextFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextFrame * obj = (QTextFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -189,7 +189,7 @@ QTextFrameFormat frameFormat () const
 */
 HB_FUNC_STATIC( QTEXTFRAME_FRAMEFORMAT )
 {
-  QTextFrame * obj = (QTextFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextFrame * obj = (QTextFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -214,7 +214,7 @@ QTextCursor lastCursorPosition () const
 */
 HB_FUNC_STATIC( QTEXTFRAME_LASTCURSORPOSITION )
 {
-  QTextFrame * obj = (QTextFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextFrame * obj = (QTextFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -239,7 +239,7 @@ int lastPosition () const
 */
 HB_FUNC_STATIC( QTEXTFRAME_LASTPOSITION )
 {
-  QTextFrame * obj = (QTextFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextFrame * obj = (QTextFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -263,7 +263,7 @@ QTextFrame * parentFrame () const
 */
 HB_FUNC_STATIC( QTEXTFRAME_PARENTFRAME )
 {
-  QTextFrame * obj = (QTextFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextFrame * obj = (QTextFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -288,7 +288,7 @@ void setFrameFormat ( const QTextFrameFormat & format )
 */
 HB_FUNC_STATIC( QTEXTFRAME_SETFRAMEFORMAT )
 {
-  QTextFrame * obj = (QTextFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextFrame * obj = (QTextFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

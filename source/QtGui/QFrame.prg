@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QFRAME_NEW )
 
 HB_FUNC_STATIC( QFRAME_DELETE )
 {
-  QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFrame * obj = (QFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -96,7 +96,7 @@ QRect frameRect () const
 */
 HB_FUNC_STATIC( QFRAME_FRAMERECT )
 {
-  QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFrame * obj = (QFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -121,7 +121,7 @@ Shadow frameShadow () const
 */
 HB_FUNC_STATIC( QFRAME_FRAMESHADOW )
 {
-  QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFrame * obj = (QFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -145,7 +145,7 @@ Shape frameShape () const
 */
 HB_FUNC_STATIC( QFRAME_FRAMESHAPE )
 {
-  QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFrame * obj = (QFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -169,7 +169,7 @@ int frameStyle () const
 */
 HB_FUNC_STATIC( QFRAME_FRAMESTYLE )
 {
-  QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFrame * obj = (QFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -193,7 +193,7 @@ int frameWidth () const
 */
 HB_FUNC_STATIC( QFRAME_FRAMEWIDTH )
 {
-  QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFrame * obj = (QFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -217,7 +217,7 @@ int lineWidth () const
 */
 HB_FUNC_STATIC( QFRAME_LINEWIDTH )
 {
-  QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFrame * obj = (QFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -241,7 +241,7 @@ int midLineWidth () const
 */
 HB_FUNC_STATIC( QFRAME_MIDLINEWIDTH )
 {
-  QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFrame * obj = (QFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -265,7 +265,7 @@ void setFrameRect ( const QRect & )
 */
 HB_FUNC_STATIC( QFRAME_SETFRAMERECT )
 {
-  QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFrame * obj = (QFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -291,7 +291,7 @@ void setFrameShadow ( Shadow )
 */
 HB_FUNC_STATIC( QFRAME_SETFRAMESHADOW )
 {
-  QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFrame * obj = (QFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -317,7 +317,7 @@ void setFrameShape ( Shape )
 */
 HB_FUNC_STATIC( QFRAME_SETFRAMESHAPE )
 {
-  QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFrame * obj = (QFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -343,7 +343,7 @@ void setFrameStyle ( int style )
 */
 HB_FUNC_STATIC( QFRAME_SETFRAMESTYLE )
 {
-  QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFrame * obj = (QFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -369,7 +369,7 @@ void setLineWidth ( int )
 */
 HB_FUNC_STATIC( QFRAME_SETLINEWIDTH )
 {
-  QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFrame * obj = (QFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -395,7 +395,7 @@ void setMidLineWidth ( int )
 */
 HB_FUNC_STATIC( QFRAME_SETMIDLINEWIDTH )
 {
-  QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFrame * obj = (QFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -421,7 +421,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QFRAME_SIZEHINT )
 {
-  QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFrame * obj = (QFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

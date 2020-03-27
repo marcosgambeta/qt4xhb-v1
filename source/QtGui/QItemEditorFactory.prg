@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_NEW )
 
 HB_FUNC_STATIC( QITEMEDITORFACTORY_DELETE )
 {
-  QItemEditorFactory * obj = (QItemEditorFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemEditorFactory * obj = (QItemEditorFactory *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -92,7 +92,7 @@ virtual QWidget * createEditor ( QVariant::Type type, QWidget * parent ) const
 */
 HB_FUNC_STATIC( QITEMEDITORFACTORY_CREATEEDITOR )
 {
-  QItemEditorFactory * obj = (QItemEditorFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemEditorFactory * obj = (QItemEditorFactory *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -117,7 +117,7 @@ void registerEditor ( QVariant::Type type, QItemEditorCreatorBase * creator )
 */
 HB_FUNC_STATIC( QITEMEDITORFACTORY_REGISTEREDITOR )
 {
-  QItemEditorFactory * obj = (QItemEditorFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemEditorFactory * obj = (QItemEditorFactory *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -143,7 +143,7 @@ virtual QByteArray valuePropertyName ( QVariant::Type type ) const
 */
 HB_FUNC_STATIC( QITEMEDITORFACTORY_VALUEPROPERTYNAME )
 {
-  QItemEditorFactory * obj = (QItemEditorFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemEditorFactory * obj = (QItemEditorFactory *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

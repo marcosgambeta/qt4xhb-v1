@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QMOTIFSTYLE_NEW )
 
 HB_FUNC_STATIC( QMOTIFSTYLE_DELETE )
 {
-  QMotifStyle * obj = (QMotifStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMotifStyle * obj = (QMotifStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -98,7 +98,7 @@ void setUseHighlightColors ( bool arg )
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_SETUSEHIGHLIGHTCOLORS )
 {
-  QMotifStyle * obj = (QMotifStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMotifStyle * obj = (QMotifStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -124,7 +124,7 @@ bool useHighlightColors () const
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_USEHIGHLIGHTCOLORS )
 {
-  QMotifStyle * obj = (QMotifStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMotifStyle * obj = (QMotifStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -148,7 +148,7 @@ virtual void drawComplexControl ( ComplexControl cc, const QStyleOptionComplex *
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_DRAWCOMPLEXCONTROL )
 {
-  QMotifStyle * obj = (QMotifStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMotifStyle * obj = (QMotifStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -174,7 +174,7 @@ virtual void drawControl ( ControlElement element, const QStyleOption * opt, QPa
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_DRAWCONTROL )
 {
-  QMotifStyle * obj = (QMotifStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMotifStyle * obj = (QMotifStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -200,7 +200,7 @@ virtual void drawPrimitive ( PrimitiveElement pe, const QStyleOption * opt, QPai
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_DRAWPRIMITIVE )
 {
-  QMotifStyle * obj = (QMotifStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMotifStyle * obj = (QMotifStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -226,7 +226,7 @@ virtual bool event ( QEvent * e )
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_EVENT )
 {
-  QMotifStyle * obj = (QMotifStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMotifStyle * obj = (QMotifStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -250,7 +250,7 @@ virtual int pixelMetric ( PixelMetric pm, const QStyleOption * opt = 0, const QW
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_PIXELMETRIC )
 {
-  QMotifStyle * obj = (QMotifStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMotifStyle * obj = (QMotifStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -274,7 +274,7 @@ virtual void polish ( QPalette & pal )
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_POLISH )
 {
-  QMotifStyle * obj = (QMotifStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMotifStyle * obj = (QMotifStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -300,7 +300,7 @@ virtual QSize sizeFromContents ( ContentsType ct, const QStyleOption * opt, cons
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_SIZEFROMCONTENTS )
 {
-  QMotifStyle * obj = (QMotifStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMotifStyle * obj = (QMotifStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -325,7 +325,7 @@ virtual QPalette standardPalette () const
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_STANDARDPALETTE )
 {
-  QMotifStyle * obj = (QMotifStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMotifStyle * obj = (QMotifStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -350,7 +350,7 @@ virtual QPixmap standardPixmap ( StandardPixmap standardPixmap, const QStyleOpti
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_STANDARDPIXMAP )
 {
-  QMotifStyle * obj = (QMotifStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMotifStyle * obj = (QMotifStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -375,7 +375,7 @@ virtual int styleHint ( StyleHint hint, const QStyleOption * opt = 0, const QWid
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_STYLEHINT )
 {
-  QMotifStyle * obj = (QMotifStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMotifStyle * obj = (QMotifStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -399,7 +399,7 @@ virtual QRect subControlRect ( ComplexControl cc, const QStyleOptionComplex * op
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_SUBCONTROLRECT )
 {
-  QMotifStyle * obj = (QMotifStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMotifStyle * obj = (QMotifStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -424,7 +424,7 @@ virtual QRect subElementRect ( SubElement sr, const QStyleOption * opt, const QW
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_SUBELEMENTRECT )
 {
-  QMotifStyle * obj = (QMotifStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMotifStyle * obj = (QMotifStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

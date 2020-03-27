@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_NEW )
 
 HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_DELETE )
 {
-  QWhatsThisClickedEvent * obj = (QWhatsThisClickedEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWhatsThisClickedEvent * obj = (QWhatsThisClickedEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -77,7 +77,7 @@ QString href() const
 */
 HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_HREF )
 {
-  QWhatsThisClickedEvent * obj = (QWhatsThisClickedEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWhatsThisClickedEvent * obj = (QWhatsThisClickedEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

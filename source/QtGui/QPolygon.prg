@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QPOLYGON_NEW )
 
 HB_FUNC_STATIC( QPOLYGON_DELETE )
 {
-  QPolygon * obj = (QPolygon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPolygon * obj = (QPolygon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -171,7 +171,7 @@ QRect boundingRect () const
 */
 HB_FUNC_STATIC( QPOLYGON_BOUNDINGRECT )
 {
-  QPolygon * obj = (QPolygon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPolygon * obj = (QPolygon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -196,7 +196,7 @@ bool containsPoint ( const QPoint & point, Qt::FillRule fillRule ) const
 */
 HB_FUNC_STATIC( QPOLYGON_CONTAINSPOINT )
 {
-  QPolygon * obj = (QPolygon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPolygon * obj = (QPolygon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -220,7 +220,7 @@ QPolygon intersected ( const QPolygon & r ) const
 */
 HB_FUNC_STATIC( QPOLYGON_INTERSECTED )
 {
-  QPolygon * obj = (QPolygon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPolygon * obj = (QPolygon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -245,7 +245,7 @@ void point ( int index, int * x, int * y ) const
 */
 void QPolygon_point1()
 {
-  QPolygon * obj = (QPolygon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPolygon * obj = (QPolygon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -264,7 +264,7 @@ QPoint point ( int index ) const
 */
 void QPolygon_point2()
 {
-  QPolygon * obj = (QPolygon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPolygon * obj = (QPolygon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -301,7 +301,7 @@ void putPoints ( int index, int nPoints, const QPolygon & fromPolygon, int fromI
 */
 HB_FUNC_STATIC( QPOLYGON_PUTPOINTS2 )
 {
-  QPolygon * obj = (QPolygon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPolygon * obj = (QPolygon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -335,7 +335,7 @@ void setPoint ( int index, int x, int y )
 */
 void QPolygon_setPoint1()
 {
-  QPolygon * obj = (QPolygon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPolygon * obj = (QPolygon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -350,7 +350,7 @@ void setPoint ( int index, const QPoint & point )
 */
 void QPolygon_setPoint2()
 {
-  QPolygon * obj = (QPolygon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPolygon * obj = (QPolygon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -384,7 +384,7 @@ QPolygon subtracted ( const QPolygon & r ) const
 */
 HB_FUNC_STATIC( QPOLYGON_SUBTRACTED )
 {
-  QPolygon * obj = (QPolygon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPolygon * obj = (QPolygon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -409,7 +409,7 @@ void swap ( QPolygon & other )
 */
 HB_FUNC_STATIC( QPOLYGON_SWAP )
 {
-  QPolygon * obj = (QPolygon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPolygon * obj = (QPolygon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -435,7 +435,7 @@ void translate ( int dx, int dy )
 */
 void QPolygon_translate1()
 {
-  QPolygon * obj = (QPolygon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPolygon * obj = (QPolygon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -450,7 +450,7 @@ void translate ( const QPoint & offset )
 */
 void QPolygon_translate2()
 {
-  QPolygon * obj = (QPolygon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPolygon * obj = (QPolygon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -484,7 +484,7 @@ QPolygon translated ( int dx, int dy ) const
 */
 void QPolygon_translated1()
 {
-  QPolygon * obj = (QPolygon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPolygon * obj = (QPolygon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -498,7 +498,7 @@ QPolygon translated ( const QPoint & offset ) const
 */
 void QPolygon_translated2()
 {
-  QPolygon * obj = (QPolygon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPolygon * obj = (QPolygon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -531,7 +531,7 @@ QPolygon united ( const QPolygon & r ) const
 */
 HB_FUNC_STATIC( QPOLYGON_UNITED )
 {
-  QPolygon * obj = (QPolygon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPolygon * obj = (QPolygon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -70,7 +70,7 @@ virtual QString actionText ( int action, Text t, int child ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_ACTIONTEXT )
 {
-  QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAccessibleWidget * obj = (QAccessibleWidget *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -94,7 +94,7 @@ virtual int childAt ( int x, int y ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILDAT )
 {
-  QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAccessibleWidget * obj = (QAccessibleWidget *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -118,7 +118,7 @@ virtual int childCount () const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILDCOUNT )
 {
-  QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAccessibleWidget * obj = (QAccessibleWidget *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -142,7 +142,7 @@ virtual bool doAction ( int action, int child, const QVariantList & params )
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_DOACTION )
 {
-  QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAccessibleWidget * obj = (QAccessibleWidget *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -174,7 +174,7 @@ virtual int indexOfChild ( const QAccessibleInterface * child ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_INDEXOFCHILD )
 {
-  QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAccessibleWidget * obj = (QAccessibleWidget *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -198,7 +198,7 @@ virtual QRect rect ( int child ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_RECT )
 {
-  QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAccessibleWidget * obj = (QAccessibleWidget *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -223,7 +223,7 @@ virtual Relation relationTo ( int child, const QAccessibleInterface * other, int
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_RELATIONTO )
 {
-  QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAccessibleWidget * obj = (QAccessibleWidget *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -247,7 +247,7 @@ virtual Role role ( int child ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_ROLE )
 {
-  QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAccessibleWidget * obj = (QAccessibleWidget *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -271,7 +271,7 @@ virtual State state ( int child ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_STATE )
 {
-  QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAccessibleWidget * obj = (QAccessibleWidget *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -295,7 +295,7 @@ virtual QString text ( Text t, int child ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_TEXT )
 {
-  QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAccessibleWidget * obj = (QAccessibleWidget *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -319,7 +319,7 @@ virtual int userActionCount ( int child ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_USERACTIONCOUNT )
 {
-  QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAccessibleWidget * obj = (QAccessibleWidget *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

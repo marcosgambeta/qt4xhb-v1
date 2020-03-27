@@ -47,7 +47,7 @@ RETURN
 
 HB_FUNC_STATIC( QICONENGINEV2_DELETE )
 {
-  QIconEngineV2 * obj = (QIconEngineV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIconEngineV2 * obj = (QIconEngineV2 *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -67,7 +67,7 @@ QList<QSize> availableSizes ( QIcon::Mode mode = QIcon::Normal, QIcon::State sta
 */
 HB_FUNC_STATIC( QICONENGINEV2_AVAILABLESIZES )
 {
-  QIconEngineV2 * obj = (QIconEngineV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIconEngineV2 * obj = (QIconEngineV2 *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -119,7 +119,7 @@ virtual QIconEngineV2 * clone () const
 */
 HB_FUNC_STATIC( QICONENGINEV2_CLONE )
 {
-  QIconEngineV2 * obj = (QIconEngineV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIconEngineV2 * obj = (QIconEngineV2 *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -144,7 +144,7 @@ QString iconName ()
 */
 HB_FUNC_STATIC( QICONENGINEV2_ICONNAME )
 {
-  QIconEngineV2 * obj = (QIconEngineV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIconEngineV2 * obj = (QIconEngineV2 *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -168,7 +168,7 @@ virtual QString key () const
 */
 HB_FUNC_STATIC( QICONENGINEV2_KEY )
 {
-  QIconEngineV2 * obj = (QIconEngineV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIconEngineV2 * obj = (QIconEngineV2 *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -192,7 +192,7 @@ virtual bool read ( QDataStream & in )
 */
 HB_FUNC_STATIC( QICONENGINEV2_READ )
 {
-  QIconEngineV2 * obj = (QIconEngineV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIconEngineV2 * obj = (QIconEngineV2 *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -216,7 +216,7 @@ virtual void virtual_hook ( int id, void * data )
 */
 HB_FUNC_STATIC( QICONENGINEV2_VIRTUAL_HOOK )
 {
-  QIconEngineV2 * obj = (QIconEngineV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIconEngineV2 * obj = (QIconEngineV2 *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -242,7 +242,7 @@ virtual bool write ( QDataStream & out ) const
 */
 HB_FUNC_STATIC( QICONENGINEV2_WRITE )
 {
-  QIconEngineV2 * obj = (QIconEngineV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIconEngineV2 * obj = (QIconEngineV2 *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

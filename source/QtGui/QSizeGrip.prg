@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QSIZEGRIP_NEW )
 
 HB_FUNC_STATIC( QSIZEGRIP_DELETE )
 {
-  QSizeGrip * obj = (QSizeGrip *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSizeGrip * obj = (QSizeGrip *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -83,7 +83,7 @@ virtual void setVisible ( bool visible )
 */
 HB_FUNC_STATIC( QSIZEGRIP_SETVISIBLE )
 {
-  QSizeGrip * obj = (QSizeGrip *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSizeGrip * obj = (QSizeGrip *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -109,7 +109,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QSIZEGRIP_SIZEHINT )
 {
-  QSizeGrip * obj = (QSizeGrip *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSizeGrip * obj = (QSizeGrip *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

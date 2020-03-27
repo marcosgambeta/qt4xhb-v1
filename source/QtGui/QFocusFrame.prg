@@ -63,7 +63,7 @@ void setWidget ( QWidget * widget )
 */
 HB_FUNC_STATIC( QFOCUSFRAME_SETWIDGET )
 {
-  QFocusFrame * obj = (QFocusFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFocusFrame * obj = (QFocusFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -89,7 +89,7 @@ QWidget * widget () const
 */
 HB_FUNC_STATIC( QFOCUSFRAME_WIDGET )
 {
-  QFocusFrame * obj = (QFocusFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFocusFrame * obj = (QFocusFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

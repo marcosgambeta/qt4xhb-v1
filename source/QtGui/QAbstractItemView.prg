@@ -121,7 +121,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_DELETE )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -143,7 +143,7 @@ bool alternatingRowColors () const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ALTERNATINGROWCOLORS )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -167,7 +167,7 @@ int autoScrollMargin () const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_AUTOSCROLLMARGIN )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -191,7 +191,7 @@ void closePersistentEditor ( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_CLOSEPERSISTENTEDITOR )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -217,7 +217,7 @@ QModelIndex currentIndex () const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_CURRENTINDEX )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -242,7 +242,7 @@ Qt::DropAction defaultDropAction () const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_DEFAULTDROPACTION )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -266,7 +266,7 @@ DragDropMode dragDropMode () const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_DRAGDROPMODE )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -290,7 +290,7 @@ bool dragDropOverwriteMode () const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_DRAGDROPOVERWRITEMODE )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -314,7 +314,7 @@ bool dragEnabled () const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_DRAGENABLED )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -338,7 +338,7 @@ EditTriggers editTriggers () const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_EDITTRIGGERS )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -362,7 +362,7 @@ bool hasAutoScroll () const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_HASAUTOSCROLL )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -386,7 +386,7 @@ ScrollMode horizontalScrollMode () const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_HORIZONTALSCROLLMODE )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -410,7 +410,7 @@ QSize iconSize () const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ICONSIZE )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -435,7 +435,7 @@ virtual QModelIndex indexAt ( const QPoint & point ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_INDEXAT )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -460,7 +460,7 @@ QWidget * indexWidget ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_INDEXWIDGET )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -485,7 +485,7 @@ QAbstractItemDelegate * itemDelegate () const
 */
 void QAbstractItemView_itemDelegate1()
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -499,7 +499,7 @@ QAbstractItemDelegate * itemDelegate ( const QModelIndex & index ) const
 */
 void QAbstractItemView_itemDelegate2()
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -532,7 +532,7 @@ QAbstractItemDelegate * itemDelegateForColumn ( int column ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATEFORCOLUMN )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -557,7 +557,7 @@ QAbstractItemDelegate * itemDelegateForRow ( int row ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATEFORROW )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -582,7 +582,7 @@ virtual void keyboardSearch ( const QString & search )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_KEYBOARDSEARCH )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -608,7 +608,7 @@ QAbstractItemModel * model () const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_MODEL )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -633,7 +633,7 @@ void openPersistentEditor ( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_OPENPERSISTENTEDITOR )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -659,7 +659,7 @@ QModelIndex rootIndex () const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ROOTINDEX )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -684,7 +684,7 @@ virtual void scrollTo ( const QModelIndex & index, ScrollHint hint = EnsureVisib
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SCROLLTO )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -710,7 +710,7 @@ QAbstractItemView::SelectionBehavior selectionBehavior () const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTIONBEHAVIOR )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -734,7 +734,7 @@ QAbstractItemView::SelectionMode selectionMode () const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTIONMODE )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -758,7 +758,7 @@ QItemSelectionModel * selectionModel () const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTIONMODEL )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -783,7 +783,7 @@ void setAlternatingRowColors ( bool enable )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETALTERNATINGROWCOLORS )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -809,7 +809,7 @@ void setAutoScroll ( bool enable )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETAUTOSCROLL )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -835,7 +835,7 @@ void setAutoScrollMargin ( int margin )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETAUTOSCROLLMARGIN )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -861,7 +861,7 @@ void setDefaultDropAction ( Qt::DropAction dropAction )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETDEFAULTDROPACTION )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -887,7 +887,7 @@ void setDragDropMode ( DragDropMode behavior )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETDRAGDROPMODE )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -913,7 +913,7 @@ void setDragDropOverwriteMode ( bool overwrite )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETDRAGDROPOVERWRITEMODE )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -939,7 +939,7 @@ void setDragEnabled ( bool enable )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETDRAGENABLED )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -965,7 +965,7 @@ void setDropIndicatorShown ( bool enable )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETDROPINDICATORSHOWN )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -991,7 +991,7 @@ void setEditTriggers ( EditTriggers triggers )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETEDITTRIGGERS )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1017,7 +1017,7 @@ void setHorizontalScrollMode ( ScrollMode mode )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETHORIZONTALSCROLLMODE )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1043,7 +1043,7 @@ void setIconSize ( const QSize & size )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETICONSIZE )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1069,7 +1069,7 @@ void setIndexWidget ( const QModelIndex & index, QWidget * widget )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETINDEXWIDGET )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1095,7 +1095,7 @@ void setItemDelegate ( QAbstractItemDelegate * delegate )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETITEMDELEGATE )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1121,7 +1121,7 @@ void setItemDelegateForColumn ( int column, QAbstractItemDelegate * delegate )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETITEMDELEGATEFORCOLUMN )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1147,7 +1147,7 @@ void setItemDelegateForRow ( int row, QAbstractItemDelegate * delegate )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETITEMDELEGATEFORROW )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1173,7 +1173,7 @@ virtual void setModel ( QAbstractItemModel * model )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETMODEL )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1199,7 +1199,7 @@ void setSelectionBehavior ( QAbstractItemView::SelectionBehavior behavior )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETSELECTIONBEHAVIOR )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1225,7 +1225,7 @@ void setSelectionMode ( QAbstractItemView::SelectionMode mode )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETSELECTIONMODE )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1251,7 +1251,7 @@ virtual void setSelectionModel ( QItemSelectionModel * selectionModel )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETSELECTIONMODEL )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1277,7 +1277,7 @@ void setTabKeyNavigation ( bool enable )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETTABKEYNAVIGATION )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1303,7 +1303,7 @@ void setTextElideMode ( Qt::TextElideMode mode )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETTEXTELIDEMODE )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1329,7 +1329,7 @@ void setVerticalScrollMode ( ScrollMode mode )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETVERTICALSCROLLMODE )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1355,7 +1355,7 @@ bool showDropIndicator () const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SHOWDROPINDICATOR )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1379,7 +1379,7 @@ virtual int sizeHintForColumn ( int column ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SIZEHINTFORCOLUMN )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1403,7 +1403,7 @@ QSize sizeHintForIndex ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SIZEHINTFORINDEX )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1428,7 +1428,7 @@ virtual int sizeHintForRow ( int row ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SIZEHINTFORROW )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1452,7 +1452,7 @@ bool tabKeyNavigation () const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_TABKEYNAVIGATION )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1476,7 +1476,7 @@ Qt::TextElideMode textElideMode () const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_TEXTELIDEMODE )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1500,7 +1500,7 @@ ScrollMode verticalScrollMode () const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_VERTICALSCROLLMODE )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1524,7 +1524,7 @@ virtual QRect visualRect ( const QModelIndex & index ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_VISUALRECT )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1549,7 +1549,7 @@ virtual QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_INPUTMETHODQUERY )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1574,7 +1574,7 @@ void clearSelection ()
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_CLEARSELECTION )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1600,7 +1600,7 @@ void edit ( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_EDIT )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1626,7 +1626,7 @@ virtual void reset ()
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_RESET )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1652,7 +1652,7 @@ void scrollToBottom ()
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SCROLLTOBOTTOM )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1678,7 +1678,7 @@ void scrollToTop ()
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SCROLLTOTOP )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1704,7 +1704,7 @@ virtual void selectAll ()
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTALL )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1730,7 +1730,7 @@ void setCurrentIndex ( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETCURRENTINDEX )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1756,7 +1756,7 @@ virtual void setRootIndex ( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETROOTINDEX )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1782,7 +1782,7 @@ void update ( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_UPDATE )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

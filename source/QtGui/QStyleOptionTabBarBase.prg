@@ -91,7 +91,7 @@ QTabBar::Shape shape
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SHAPE )
 {
-  QStyleOptionTabBarBase * obj = (QStyleOptionTabBarBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionTabBarBase * obj = (QStyleOptionTabBarBase *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SHAPE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SETSHAPE )
 {
-  QStyleOptionTabBarBase * obj = (QStyleOptionTabBarBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionTabBarBase * obj = (QStyleOptionTabBarBase *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -129,7 +129,7 @@ QRect tabBarRect
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_TABBARRECT )
 {
-  QStyleOptionTabBarBase * obj = (QStyleOptionTabBarBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionTabBarBase * obj = (QStyleOptionTabBarBase *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_TABBARRECT )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SETTABBARRECT )
 {
-  QStyleOptionTabBarBase * obj = (QStyleOptionTabBarBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionTabBarBase * obj = (QStyleOptionTabBarBase *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -168,7 +168,7 @@ QRect selectedTabRect
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SELECTEDTABRECT )
 {
-  QStyleOptionTabBarBase * obj = (QStyleOptionTabBarBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionTabBarBase * obj = (QStyleOptionTabBarBase *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SELECTEDTABRECT )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SETSELECTEDTABRECT )
 {
-  QStyleOptionTabBarBase * obj = (QStyleOptionTabBarBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionTabBarBase * obj = (QStyleOptionTabBarBase *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

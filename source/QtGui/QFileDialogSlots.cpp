@@ -93,7 +93,7 @@ void QFileDialogSlots::filterSelected( const QString & filter )
 
 void QFileDialogSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFileDialog * obj = (QFileDialog *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

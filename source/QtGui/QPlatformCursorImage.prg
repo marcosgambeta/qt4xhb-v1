@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_NEW )
 
 HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_DELETE )
 {
-  QPlatformCursorImage * obj = (QPlatformCursorImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPlatformCursorImage * obj = (QPlatformCursorImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -90,7 +90,7 @@ QPoint hotspot ()
 */
 HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_HOTSPOT )
 {
-  QPlatformCursorImage * obj = (QPlatformCursorImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPlatformCursorImage * obj = (QPlatformCursorImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -115,7 +115,7 @@ QImage * image ()
 */
 HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_IMAGE )
 {
-  QPlatformCursorImage * obj = (QPlatformCursorImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPlatformCursorImage * obj = (QPlatformCursorImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -140,7 +140,7 @@ void set ( const uchar * data, const uchar * mask, int width, int height, int hx
 */
 void QPlatformCursorImage_set1()
 {
-  QPlatformCursorImage * obj = (QPlatformCursorImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPlatformCursorImage * obj = (QPlatformCursorImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -155,7 +155,7 @@ void set ( const QImage & image, int hx, int hy )
 */
 void QPlatformCursorImage_set2()
 {
-  QPlatformCursorImage * obj = (QPlatformCursorImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPlatformCursorImage * obj = (QPlatformCursorImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -170,7 +170,7 @@ void set ( Qt::CursorShape id )
 */
 void QPlatformCursorImage_set3()
 {
-  QPlatformCursorImage * obj = (QPlatformCursorImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPlatformCursorImage * obj = (QPlatformCursorImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW )
 
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_DELETE )
 {
-  QContextMenuEvent * obj = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QContextMenuEvent * obj = (QContextMenuEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -119,7 +119,7 @@ const QPoint & globalPos () const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALPOS )
 {
-  QContextMenuEvent * obj = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QContextMenuEvent * obj = (QContextMenuEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -144,7 +144,7 @@ int globalX () const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALX )
 {
-  QContextMenuEvent * obj = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QContextMenuEvent * obj = (QContextMenuEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -168,7 +168,7 @@ int globalY () const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALY )
 {
-  QContextMenuEvent * obj = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QContextMenuEvent * obj = (QContextMenuEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -192,7 +192,7 @@ const QPoint & pos () const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_POS )
 {
-  QContextMenuEvent * obj = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QContextMenuEvent * obj = (QContextMenuEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -217,7 +217,7 @@ Reason reason () const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_REASON )
 {
-  QContextMenuEvent * obj = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QContextMenuEvent * obj = (QContextMenuEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -241,7 +241,7 @@ int x () const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_X )
 {
-  QContextMenuEvent * obj = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QContextMenuEvent * obj = (QContextMenuEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -265,7 +265,7 @@ int y () const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_Y )
 {
-  QContextMenuEvent * obj = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QContextMenuEvent * obj = (QContextMenuEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

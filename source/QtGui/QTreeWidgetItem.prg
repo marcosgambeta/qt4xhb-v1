@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_NEW )
 
 HB_FUNC_STATIC( QTREEWIDGETITEM_DELETE )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -266,7 +266,7 @@ void addChild ( QTreeWidgetItem * child )
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_ADDCHILD )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -292,7 +292,7 @@ void addChildren ( const QList<QTreeWidgetItem *> & children )
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_ADDCHILDREN )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -326,7 +326,7 @@ QBrush background ( int column ) const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_BACKGROUND )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -351,7 +351,7 @@ Qt::CheckState checkState ( int column ) const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_CHECKSTATE )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -375,7 +375,7 @@ QTreeWidgetItem * child ( int index ) const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_CHILD )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -400,7 +400,7 @@ int childCount () const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_CHILDCOUNT )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -424,7 +424,7 @@ QTreeWidgetItem::ChildIndicatorPolicy childIndicatorPolicy () const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_CHILDINDICATORPOLICY )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -448,7 +448,7 @@ virtual QTreeWidgetItem * clone () const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_CLONE )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -473,7 +473,7 @@ int columnCount () const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_COLUMNCOUNT )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -497,7 +497,7 @@ virtual QVariant data ( int column, int role ) const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_DATA )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -522,7 +522,7 @@ Qt::ItemFlags flags () const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_FLAGS )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -546,7 +546,7 @@ QFont font ( int column ) const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_FONT )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -571,7 +571,7 @@ QBrush foreground ( int column ) const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_FOREGROUND )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -596,7 +596,7 @@ QIcon icon ( int column ) const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_ICON )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -621,7 +621,7 @@ int indexOfChild ( QTreeWidgetItem * child ) const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_INDEXOFCHILD )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -645,7 +645,7 @@ void insertChild ( int index, QTreeWidgetItem * child )
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_INSERTCHILD )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -671,7 +671,7 @@ void insertChildren ( int index, const QList<QTreeWidgetItem *> & children )
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_INSERTCHILDREN )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -705,7 +705,7 @@ bool isDisabled () const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_ISDISABLED )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -729,7 +729,7 @@ bool isExpanded () const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_ISEXPANDED )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -753,7 +753,7 @@ bool isFirstColumnSpanned () const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_ISFIRSTCOLUMNSPANNED )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -777,7 +777,7 @@ bool isHidden () const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_ISHIDDEN )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -801,7 +801,7 @@ bool isSelected () const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_ISSELECTED )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -825,7 +825,7 @@ QTreeWidgetItem * parent () const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_PARENT )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -850,7 +850,7 @@ virtual void read ( QDataStream & in )
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_READ )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -876,7 +876,7 @@ void removeChild ( QTreeWidgetItem * child )
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_REMOVECHILD )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -902,7 +902,7 @@ void setBackground ( int column, const QBrush & brush )
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_SETBACKGROUND )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -928,7 +928,7 @@ void setCheckState ( int column, Qt::CheckState state )
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_SETCHECKSTATE )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -954,7 +954,7 @@ void setChildIndicatorPolicy ( QTreeWidgetItem::ChildIndicatorPolicy policy )
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_SETCHILDINDICATORPOLICY )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -980,7 +980,7 @@ virtual void setData ( int column, int role, const QVariant & value )
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_SETDATA )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1006,7 +1006,7 @@ void setDisabled ( bool disabled )
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_SETDISABLED )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1032,7 +1032,7 @@ void setExpanded ( bool expand )
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_SETEXPANDED )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1058,7 +1058,7 @@ void setFirstColumnSpanned ( bool span )
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_SETFIRSTCOLUMNSPANNED )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1084,7 +1084,7 @@ void setFlags ( Qt::ItemFlags flags )
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_SETFLAGS )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1110,7 +1110,7 @@ void setFont ( int column, const QFont & font )
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_SETFONT )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1136,7 +1136,7 @@ void setForeground ( int column, const QBrush & brush )
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_SETFOREGROUND )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1162,7 +1162,7 @@ void setHidden ( bool hide )
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_SETHIDDEN )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1188,7 +1188,7 @@ void setIcon ( int column, const QIcon & icon )
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_SETICON )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1214,7 +1214,7 @@ void setSelected ( bool select )
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_SETSELECTED )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1240,7 +1240,7 @@ void setSizeHint ( int column, const QSize & size )
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_SETSIZEHINT )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1266,7 +1266,7 @@ void setStatusTip ( int column, const QString & statusTip )
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_SETSTATUSTIP )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1292,7 +1292,7 @@ void setText ( int column, const QString & text )
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_SETTEXT )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1318,7 +1318,7 @@ void setTextAlignment ( int column, int alignment )
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_SETTEXTALIGNMENT )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1344,7 +1344,7 @@ void setToolTip ( int column, const QString & toolTip )
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_SETTOOLTIP )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1370,7 +1370,7 @@ void setWhatsThis ( int column, const QString & whatsThis )
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_SETWHATSTHIS )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1396,7 +1396,7 @@ QSize sizeHint ( int column ) const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_SIZEHINT )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1421,7 +1421,7 @@ void sortChildren ( int column, Qt::SortOrder order )
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_SORTCHILDREN )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1447,7 +1447,7 @@ QString statusTip ( int column ) const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_STATUSTIP )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1471,7 +1471,7 @@ QTreeWidgetItem * takeChild ( int index )
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_TAKECHILD )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1496,7 +1496,7 @@ QList<QTreeWidgetItem *> takeChildren ()
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_TAKECHILDREN )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1544,7 +1544,7 @@ QString text ( int column ) const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_TEXT )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1568,7 +1568,7 @@ int textAlignment ( int column ) const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_TEXTALIGNMENT )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1592,7 +1592,7 @@ QString toolTip ( int column ) const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_TOOLTIP )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1616,7 +1616,7 @@ QTreeWidget * treeWidget () const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_TREEWIDGET )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1641,7 +1641,7 @@ int type () const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_TYPE )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1665,7 +1665,7 @@ QString whatsThis ( int column ) const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_WHATSTHIS )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1689,7 +1689,7 @@ prototype=virtual void write ( QDataStream & out ) const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_WRITE )
 {
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

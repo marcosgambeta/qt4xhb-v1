@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_NEW )
 
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_DELETE )
 {
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextTableCellFormat * obj = (QTextTableCellFormat *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -86,7 +86,7 @@ qreal bottomPadding () const
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_BOTTOMPADDING )
 {
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextTableCellFormat * obj = (QTextTableCellFormat *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -110,7 +110,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_ISVALID )
 {
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextTableCellFormat * obj = (QTextTableCellFormat *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -134,7 +134,7 @@ qreal leftPadding () const
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_LEFTPADDING )
 {
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextTableCellFormat * obj = (QTextTableCellFormat *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -158,7 +158,7 @@ qreal rightPadding () const
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_RIGHTPADDING )
 {
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextTableCellFormat * obj = (QTextTableCellFormat *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -182,7 +182,7 @@ void setBottomPadding ( qreal padding )
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETBOTTOMPADDING )
 {
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextTableCellFormat * obj = (QTextTableCellFormat *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -208,7 +208,7 @@ void setLeftPadding ( qreal padding )
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETLEFTPADDING )
 {
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextTableCellFormat * obj = (QTextTableCellFormat *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -234,7 +234,7 @@ void setPadding ( qreal padding )
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETPADDING )
 {
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextTableCellFormat * obj = (QTextTableCellFormat *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -260,7 +260,7 @@ void setRightPadding ( qreal padding )
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETRIGHTPADDING )
 {
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextTableCellFormat * obj = (QTextTableCellFormat *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -286,7 +286,7 @@ void setTopPadding ( qreal padding )
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETTOPPADDING )
 {
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextTableCellFormat * obj = (QTextTableCellFormat *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -312,7 +312,7 @@ qreal topPadding () const
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_TOPPADDING )
 {
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextTableCellFormat * obj = (QTextTableCellFormat *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QICON_NEW )
 
 HB_FUNC_STATIC( QICON_DELETE )
 {
-  QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIcon * obj = (QIcon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -183,7 +183,7 @@ QSize actualSize ( const QSize & size, Mode mode = Normal, State state = Off ) c
 */
 HB_FUNC_STATIC( QICON_ACTUALSIZE )
 {
-  QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIcon * obj = (QIcon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -208,7 +208,7 @@ void addFile ( const QString & fileName, const QSize & size = QSize(), Mode mode
 */
 HB_FUNC_STATIC( QICON_ADDFILE )
 {
-  QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIcon * obj = (QIcon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -234,7 +234,7 @@ void addPixmap ( const QPixmap & pixmap, Mode mode = Normal, State state = Off )
 */
 HB_FUNC_STATIC( QICON_ADDPIXMAP )
 {
-  QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIcon * obj = (QIcon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -260,7 +260,7 @@ QList<QSize> availableSizes ( Mode mode = Normal, State state = Off ) const
 */
 HB_FUNC_STATIC( QICON_AVAILABLESIZES )
 {
-  QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIcon * obj = (QIcon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -312,7 +312,7 @@ qint64 cacheKey () const
 */
 HB_FUNC_STATIC( QICON_CACHEKEY )
 {
-  QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIcon * obj = (QIcon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -336,7 +336,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QICON_ISNULL )
 {
-  QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIcon * obj = (QIcon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -360,7 +360,7 @@ QString name () const
 */
 HB_FUNC_STATIC( QICON_NAME )
 {
-  QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIcon * obj = (QIcon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -384,7 +384,7 @@ void paint ( QPainter * painter, const QRect & rect, Qt::Alignment alignment = Q
 */
 void QIcon_paint1()
 {
-  QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIcon * obj = (QIcon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -399,7 +399,7 @@ void paint ( QPainter * painter, int x, int y, int w, int h, Qt::Alignment align
 */
 void QIcon_paint2()
 {
-  QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIcon * obj = (QIcon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -433,7 +433,7 @@ QPixmap pixmap ( const QSize & size, Mode mode = Normal, State state = Off ) con
 */
 void QIcon_pixmap1()
 {
-  QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIcon * obj = (QIcon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -447,7 +447,7 @@ QPixmap pixmap ( int w, int h, Mode mode = Normal, State state = Off ) const
 */
 void QIcon_pixmap2()
 {
-  QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIcon * obj = (QIcon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -461,7 +461,7 @@ QPixmap pixmap ( int extent, Mode mode = Normal, State state = Off ) const
 */
 void QIcon_pixmap3()
 {
-  QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIcon * obj = (QIcon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -499,7 +499,7 @@ QIcon fromTheme ( const QString & name, const QIcon & fallback = QIcon() )
 */
 HB_FUNC_STATIC( QICON_FROMTHEME )
 {
-  QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIcon * obj = (QIcon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

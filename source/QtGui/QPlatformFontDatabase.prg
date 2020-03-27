@@ -56,7 +56,7 @@ RETURN
 
 HB_FUNC_STATIC( QPLATFORMFONTDATABASE_DELETE )
 {
-  QPlatformFontDatabase * obj = (QPlatformFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPlatformFontDatabase * obj = (QPlatformFontDatabase *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -76,7 +76,7 @@ virtual QStringList addApplicationFont ( const QByteArray & fontData, const QStr
 */
 HB_FUNC_STATIC( QPLATFORMFONTDATABASE_ADDAPPLICATIONFONT )
 {
-  QPlatformFontDatabase * obj = (QPlatformFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPlatformFontDatabase * obj = (QPlatformFontDatabase *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -100,7 +100,7 @@ virtual QString fontDir () const
 */
 HB_FUNC_STATIC( QPLATFORMFONTDATABASE_FONTDIR )
 {
-  QPlatformFontDatabase * obj = (QPlatformFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPlatformFontDatabase * obj = (QPlatformFontDatabase *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -124,7 +124,7 @@ virtual QFontEngine * fontEngine ( const QByteArray & fontData, qreal pixelSize,
 */
 HB_FUNC_STATIC( QPLATFORMFONTDATABASE_FONTENGINE )
 {
-  QPlatformFontDatabase * obj = (QPlatformFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPlatformFontDatabase * obj = (QPlatformFontDatabase *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -149,7 +149,7 @@ virtual void populateFontDatabase ()
 */
 HB_FUNC_STATIC( QPLATFORMFONTDATABASE_POPULATEFONTDATABASE )
 {
-  QPlatformFontDatabase * obj = (QPlatformFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPlatformFontDatabase * obj = (QPlatformFontDatabase *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -175,7 +175,7 @@ virtual void releaseHandle ( void * handle )
 */
 HB_FUNC_STATIC( QPLATFORMFONTDATABASE_RELEASEHANDLE )
 {
-  QPlatformFontDatabase * obj = (QPlatformFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPlatformFontDatabase * obj = (QPlatformFontDatabase *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

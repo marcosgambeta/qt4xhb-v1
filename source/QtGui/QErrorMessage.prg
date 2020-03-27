@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QERRORMESSAGE_NEW )
 
 HB_FUNC_STATIC( QERRORMESSAGE_DELETE )
 {
-  QErrorMessage * obj = (QErrorMessage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QErrorMessage * obj = (QErrorMessage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -82,7 +82,7 @@ void showMessage ( const QString & message )
 */
 void QErrorMessage_showMessage1()
 {
-  QErrorMessage * obj = (QErrorMessage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QErrorMessage * obj = (QErrorMessage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -97,7 +97,7 @@ void showMessage ( const QString & message, const QString & type )
 */
 void QErrorMessage_showMessage2()
 {
-  QErrorMessage * obj = (QErrorMessage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QErrorMessage * obj = (QErrorMessage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -131,7 +131,7 @@ QErrorMessage * qtHandler ()
 */
 HB_FUNC_STATIC( QERRORMESSAGE_QTHANDLER )
 {
-  QErrorMessage * obj = (QErrorMessage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QErrorMessage * obj = (QErrorMessage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

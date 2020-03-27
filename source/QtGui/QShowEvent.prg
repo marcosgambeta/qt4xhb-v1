@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QSHOWEVENT_NEW )
 
 HB_FUNC_STATIC( QSHOWEVENT_DELETE )
 {
-  QShowEvent * obj = (QShowEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QShowEvent * obj = (QShowEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

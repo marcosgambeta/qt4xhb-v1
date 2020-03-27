@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QKEYEVENT_NEW )
 
 HB_FUNC_STATIC( QKEYEVENT_DELETE )
 {
-  QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QKeyEvent * obj = (QKeyEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -86,7 +86,7 @@ int count () const
 */
 HB_FUNC_STATIC( QKEYEVENT_COUNT )
 {
-  QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QKeyEvent * obj = (QKeyEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -110,7 +110,7 @@ bool isAutoRepeat () const
 */
 HB_FUNC_STATIC( QKEYEVENT_ISAUTOREPEAT )
 {
-  QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QKeyEvent * obj = (QKeyEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -134,7 +134,7 @@ int key () const
 */
 HB_FUNC_STATIC( QKEYEVENT_KEY )
 {
-  QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QKeyEvent * obj = (QKeyEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -158,7 +158,7 @@ bool matches ( QKeySequence::StandardKey key ) const
 */
 HB_FUNC_STATIC( QKEYEVENT_MATCHES )
 {
-  QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QKeyEvent * obj = (QKeyEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -182,7 +182,7 @@ Qt::KeyboardModifiers modifiers () const
 */
 HB_FUNC_STATIC( QKEYEVENT_MODIFIERS )
 {
-  QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QKeyEvent * obj = (QKeyEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -206,7 +206,7 @@ quint32 nativeModifiers () const
 */
 HB_FUNC_STATIC( QKEYEVENT_NATIVEMODIFIERS )
 {
-  QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QKeyEvent * obj = (QKeyEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -230,7 +230,7 @@ quint32 nativeScanCode () const
 */
 HB_FUNC_STATIC( QKEYEVENT_NATIVESCANCODE )
 {
-  QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QKeyEvent * obj = (QKeyEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -254,7 +254,7 @@ quint32 nativeVirtualKey () const
 */
 HB_FUNC_STATIC( QKEYEVENT_NATIVEVIRTUALKEY )
 {
-  QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QKeyEvent * obj = (QKeyEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -278,7 +278,7 @@ QString text () const
 */
 HB_FUNC_STATIC( QKEYEVENT_TEXT )
 {
-  QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QKeyEvent * obj = (QKeyEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

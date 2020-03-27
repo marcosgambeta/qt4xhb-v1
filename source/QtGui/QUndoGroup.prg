@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QUNDOGROUP_NEW )
 
 HB_FUNC_STATIC( QUNDOGROUP_DELETE )
 {
-  QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QUndoGroup * obj = (QUndoGroup *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -107,7 +107,7 @@ QUndoStack * activeStack () const
 */
 HB_FUNC_STATIC( QUNDOGROUP_ACTIVESTACK )
 {
-  QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QUndoGroup * obj = (QUndoGroup *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -132,7 +132,7 @@ void addStack ( QUndoStack * stack )
 */
 HB_FUNC_STATIC( QUNDOGROUP_ADDSTACK )
 {
-  QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QUndoGroup * obj = (QUndoGroup *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -158,7 +158,7 @@ bool canRedo () const
 */
 HB_FUNC_STATIC( QUNDOGROUP_CANREDO )
 {
-  QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QUndoGroup * obj = (QUndoGroup *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -182,7 +182,7 @@ bool canUndo () const
 */
 HB_FUNC_STATIC( QUNDOGROUP_CANUNDO )
 {
-  QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QUndoGroup * obj = (QUndoGroup *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -206,7 +206,7 @@ QAction * createRedoAction ( QObject * parent, const QString & prefix = QString(
 */
 HB_FUNC_STATIC( QUNDOGROUP_CREATEREDOACTION )
 {
-  QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QUndoGroup * obj = (QUndoGroup *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -231,7 +231,7 @@ QAction * createUndoAction ( QObject * parent, const QString & prefix = QString(
 */
 HB_FUNC_STATIC( QUNDOGROUP_CREATEUNDOACTION )
 {
-  QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QUndoGroup * obj = (QUndoGroup *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -256,7 +256,7 @@ bool isClean () const
 */
 HB_FUNC_STATIC( QUNDOGROUP_ISCLEAN )
 {
-  QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QUndoGroup * obj = (QUndoGroup *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -280,7 +280,7 @@ QString redoText () const
 */
 HB_FUNC_STATIC( QUNDOGROUP_REDOTEXT )
 {
-  QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QUndoGroup * obj = (QUndoGroup *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -304,7 +304,7 @@ void removeStack ( QUndoStack * stack )
 */
 HB_FUNC_STATIC( QUNDOGROUP_REMOVESTACK )
 {
-  QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QUndoGroup * obj = (QUndoGroup *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -330,7 +330,7 @@ QList<QUndoStack *> stacks () const
 */
 HB_FUNC_STATIC( QUNDOGROUP_STACKS )
 {
-  QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QUndoGroup * obj = (QUndoGroup *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -378,7 +378,7 @@ QString undoText () const
 */
 HB_FUNC_STATIC( QUNDOGROUP_UNDOTEXT )
 {
-  QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QUndoGroup * obj = (QUndoGroup *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -402,7 +402,7 @@ void redo ()
 */
 HB_FUNC_STATIC( QUNDOGROUP_REDO )
 {
-  QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QUndoGroup * obj = (QUndoGroup *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -428,7 +428,7 @@ void setActiveStack ( QUndoStack * stack )
 */
 HB_FUNC_STATIC( QUNDOGROUP_SETACTIVESTACK )
 {
-  QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QUndoGroup * obj = (QUndoGroup *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -454,7 +454,7 @@ void undo ()
 */
 HB_FUNC_STATIC( QUNDOGROUP_UNDO )
 {
-  QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QUndoGroup * obj = (QUndoGroup *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

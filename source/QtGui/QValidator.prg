@@ -46,7 +46,7 @@ RETURN
 
 HB_FUNC_STATIC( QVALIDATOR_DELETE )
 {
-  QValidator * obj = (QValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QValidator * obj = (QValidator *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -84,7 +84,7 @@ QLocale locale () const
 */
 HB_FUNC_STATIC( QVALIDATOR_LOCALE )
 {
-  QValidator * obj = (QValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QValidator * obj = (QValidator *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -109,7 +109,7 @@ void setLocale ( const QLocale & locale )
 */
 HB_FUNC_STATIC( QVALIDATOR_SETLOCALE )
 {
-  QValidator * obj = (QValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QValidator * obj = (QValidator *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

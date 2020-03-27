@@ -99,7 +99,7 @@ QString description () const
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DESCRIPTION )
 {
-  QCommandLinkButton * obj = (QCommandLinkButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCommandLinkButton * obj = (QCommandLinkButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -123,7 +123,7 @@ void setDescription ( const QString & description )
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETDESCRIPTION )
 {
-  QCommandLinkButton * obj = (QCommandLinkButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCommandLinkButton * obj = (QCommandLinkButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -149,7 +149,7 @@ bool isFlat () const
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_ISFLAT )
 {
-  QCommandLinkButton * obj = (QCommandLinkButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCommandLinkButton * obj = (QCommandLinkButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -173,7 +173,7 @@ void setFlat ( bool )
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETFLAT )
 {
-  QCommandLinkButton * obj = (QCommandLinkButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCommandLinkButton * obj = (QCommandLinkButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -51,7 +51,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_DELETE )
 {
-  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -71,7 +71,7 @@ QBrush brush () const
 */
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_BRUSH )
 {
-  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -96,7 +96,7 @@ QPen pen () const
 */
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_PEN )
 {
-  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -121,7 +121,7 @@ void setBrush ( const QBrush & brush )
 */
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_SETBRUSH )
 {
-  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -147,7 +147,7 @@ void setPen ( const QPen & pen )
 */
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_SETPEN )
 {
-  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -173,7 +173,7 @@ virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_ISOBSCUREDBY )
 {
-  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -197,7 +197,7 @@ virtual QPainterPath opaqueArea () const
 */
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_OPAQUEAREA )
 {
-  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

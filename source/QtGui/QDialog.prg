@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QDIALOG_NEW )
 
 HB_FUNC_STATIC( QDIALOG_DELETE )
 {
-  QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDialog * obj = (QDialog *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -98,7 +98,7 @@ bool isSizeGripEnabled () const
 */
 HB_FUNC_STATIC( QDIALOG_ISSIZEGRIPENABLED )
 {
-  QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDialog * obj = (QDialog *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -122,7 +122,7 @@ int result () const
 */
 HB_FUNC_STATIC( QDIALOG_RESULT )
 {
-  QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDialog * obj = (QDialog *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -146,7 +146,7 @@ void setModal ( bool modal )
 */
 HB_FUNC_STATIC( QDIALOG_SETMODAL )
 {
-  QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDialog * obj = (QDialog *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -172,7 +172,7 @@ void setResult ( int i )
 */
 HB_FUNC_STATIC( QDIALOG_SETRESULT )
 {
-  QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDialog * obj = (QDialog *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -198,7 +198,7 @@ void setSizeGripEnabled ( bool )
 */
 HB_FUNC_STATIC( QDIALOG_SETSIZEGRIPENABLED )
 {
-  QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDialog * obj = (QDialog *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -224,7 +224,7 @@ virtual QSize minimumSizeHint () const
 */
 HB_FUNC_STATIC( QDIALOG_MINIMUMSIZEHINT )
 {
-  QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDialog * obj = (QDialog *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -249,7 +249,7 @@ virtual void setVisible ( bool visible )
 */
 HB_FUNC_STATIC( QDIALOG_SETVISIBLE )
 {
-  QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDialog * obj = (QDialog *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -275,7 +275,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QDIALOG_SIZEHINT )
 {
-  QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDialog * obj = (QDialog *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -300,7 +300,7 @@ virtual void accept ()
 */
 HB_FUNC_STATIC( QDIALOG_ACCEPT )
 {
-  QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDialog * obj = (QDialog *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -326,7 +326,7 @@ virtual void done ( int r )
 */
 HB_FUNC_STATIC( QDIALOG_DONE )
 {
-  QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDialog * obj = (QDialog *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -352,7 +352,7 @@ int exec ()
 */
 HB_FUNC_STATIC( QDIALOG_EXEC )
 {
-  QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDialog * obj = (QDialog *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -376,7 +376,7 @@ void open ()
 */
 HB_FUNC_STATIC( QDIALOG_OPEN )
 {
-  QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDialog * obj = (QDialog *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -402,7 +402,7 @@ virtual void reject ()
 */
 HB_FUNC_STATIC( QDIALOG_REJECT )
 {
-  QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDialog * obj = (QDialog *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

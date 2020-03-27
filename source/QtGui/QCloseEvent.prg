@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QCLOSEEVENT_NEW )
 
 HB_FUNC_STATIC( QCLOSEEVENT_DELETE )
 {
-  QCloseEvent * obj = (QCloseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCloseEvent * obj = (QCloseEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

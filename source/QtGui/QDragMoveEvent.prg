@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_NEW )
 
 HB_FUNC_STATIC( QDRAGMOVEEVENT_DELETE )
 {
-  QDragMoveEvent * obj = (QDragMoveEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDragMoveEvent * obj = (QDragMoveEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -80,7 +80,7 @@ void accept ( const QRect & rectangle )
 */
 void QDragMoveEvent_accept1()
 {
-  QDragMoveEvent * obj = (QDragMoveEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDragMoveEvent * obj = (QDragMoveEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -95,7 +95,7 @@ void accept ()
 */
 void QDragMoveEvent_accept2()
 {
-  QDragMoveEvent * obj = (QDragMoveEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDragMoveEvent * obj = (QDragMoveEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -129,7 +129,7 @@ QRect answerRect () const
 */
 HB_FUNC_STATIC( QDRAGMOVEEVENT_ANSWERRECT )
 {
-  QDragMoveEvent * obj = (QDragMoveEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDragMoveEvent * obj = (QDragMoveEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -154,7 +154,7 @@ void ignore ( const QRect & rectangle )
 */
 void QDragMoveEvent_ignore1()
 {
-  QDragMoveEvent * obj = (QDragMoveEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDragMoveEvent * obj = (QDragMoveEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -169,7 +169,7 @@ void ignore ()
 */
 void QDragMoveEvent_ignore2()
 {
-  QDragMoveEvent * obj = (QDragMoveEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDragMoveEvent * obj = (QDragMoveEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

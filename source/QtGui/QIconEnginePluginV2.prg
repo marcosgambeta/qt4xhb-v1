@@ -44,7 +44,7 @@ RETURN
 
 HB_FUNC_STATIC( QICONENGINEPLUGINV2_DELETE )
 {
-  QIconEnginePluginV2 * obj = (QIconEnginePluginV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIconEnginePluginV2 * obj = (QIconEnginePluginV2 *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -66,7 +66,7 @@ virtual QIconEngineV2 * create ( const QString & filename = QString() ) = 0
 */
 HB_FUNC_STATIC( QICONENGINEPLUGINV2_CREATE )
 {
-  QIconEnginePluginV2 * obj = (QIconEnginePluginV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIconEnginePluginV2 * obj = (QIconEnginePluginV2 *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -91,7 +91,7 @@ virtual QStringList keys () const = 0
 */
 HB_FUNC_STATIC( QICONENGINEPLUGINV2_KEYS )
 {
-  QIconEnginePluginV2 * obj = (QIconEnginePluginV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIconEnginePluginV2 * obj = (QIconEnginePluginV2 *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

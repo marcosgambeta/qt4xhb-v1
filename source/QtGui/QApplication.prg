@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QAPPLICATION_NEW )
 
 HB_FUNC_STATIC( QAPPLICATION_DELETE )
 {
-  QApplication * obj = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QApplication * obj = (QApplication *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -188,7 +188,7 @@ virtual void commitData ( QSessionManager & manager )
 */
 HB_FUNC_STATIC( QAPPLICATION_COMMITDATA )
 {
-  QApplication * obj = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QApplication * obj = (QApplication *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -214,7 +214,7 @@ QInputContext * inputContext () const
 */
 HB_FUNC_STATIC( QAPPLICATION_INPUTCONTEXT )
 {
-  QApplication * obj = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QApplication * obj = (QApplication *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -239,7 +239,7 @@ bool isSessionRestored () const
 */
 HB_FUNC_STATIC( QAPPLICATION_ISSESSIONRESTORED )
 {
-  QApplication * obj = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QApplication * obj = (QApplication *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -263,7 +263,7 @@ virtual void saveState ( QSessionManager & manager )
 */
 HB_FUNC_STATIC( QAPPLICATION_SAVESTATE )
 {
-  QApplication * obj = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QApplication * obj = (QApplication *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -289,7 +289,7 @@ QString sessionId () const
 */
 HB_FUNC_STATIC( QAPPLICATION_SESSIONID )
 {
-  QApplication * obj = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QApplication * obj = (QApplication *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -313,7 +313,7 @@ QString sessionKey () const
 */
 HB_FUNC_STATIC( QAPPLICATION_SESSIONKEY )
 {
-  QApplication * obj = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QApplication * obj = (QApplication *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -337,7 +337,7 @@ void setInputContext ( QInputContext * inputContext )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETINPUTCONTEXT )
 {
-  QApplication * obj = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QApplication * obj = (QApplication *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -363,7 +363,7 @@ QString styleSheet () const
 */
 HB_FUNC_STATIC( QAPPLICATION_STYLESHEET )
 {
-  QApplication * obj = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QApplication * obj = (QApplication *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -387,7 +387,7 @@ virtual bool notify ( QObject * receiver, QEvent * e )
 */
 HB_FUNC_STATIC( QAPPLICATION_NOTIFY )
 {
-  QApplication * obj = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QApplication * obj = (QApplication *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -411,7 +411,7 @@ void aboutQt ()
 */
 HB_FUNC_STATIC( QAPPLICATION_ABOUTQT )
 {
-  QApplication * obj = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QApplication * obj = (QApplication *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -437,7 +437,7 @@ void closeAllWindows ()
 */
 HB_FUNC_STATIC( QAPPLICATION_CLOSEALLWINDOWS )
 {
-  QApplication * obj = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QApplication * obj = (QApplication *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -463,7 +463,7 @@ void setStyleSheet ( const QString & sheet )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETSTYLESHEET )
 {
-  QApplication * obj = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QApplication * obj = (QApplication *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

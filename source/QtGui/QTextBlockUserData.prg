@@ -48,7 +48,7 @@ RETURN
 
 HB_FUNC_STATIC( QTEXTBLOCKUSERDATA_DELETE )
 {
-  QTextBlockUserData * obj = (QTextBlockUserData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextBlockUserData * obj = (QTextBlockUserData *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

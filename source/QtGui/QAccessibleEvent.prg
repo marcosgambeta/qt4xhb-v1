@@ -61,7 +61,7 @@ int child () const
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_CHILD )
 {
-  QAccessibleEvent * obj = (QAccessibleEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAccessibleEvent * obj = (QAccessibleEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -85,7 +85,7 @@ void setValue ( const QString & text )
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_SETVALUE )
 {
-  QAccessibleEvent * obj = (QAccessibleEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAccessibleEvent * obj = (QAccessibleEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -111,7 +111,7 @@ QString value () const
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_VALUE )
 {
-  QAccessibleEvent * obj = (QAccessibleEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAccessibleEvent * obj = (QAccessibleEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

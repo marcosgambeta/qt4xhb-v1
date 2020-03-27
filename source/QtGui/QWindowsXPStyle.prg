@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QWINDOWSXPSTYLE_NEW )
 
 HB_FUNC_STATIC( QWINDOWSXPSTYLE_DELETE )
 {
-  QWindowsXPStyle * obj = (QWindowsXPStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindowsXPStyle * obj = (QWindowsXPStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -96,7 +96,7 @@ virtual void drawComplexControl ( ComplexControl cc, const QStyleOptionComplex *
 */
 HB_FUNC_STATIC( QWINDOWSXPSTYLE_DRAWCOMPLEXCONTROL )
 {
-  QWindowsXPStyle * obj = (QWindowsXPStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindowsXPStyle * obj = (QWindowsXPStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -122,7 +122,7 @@ virtual void drawControl ( ControlElement element, const QStyleOption * option, 
 */
 HB_FUNC_STATIC( QWINDOWSXPSTYLE_DRAWCONTROL )
 {
-  QWindowsXPStyle * obj = (QWindowsXPStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindowsXPStyle * obj = (QWindowsXPStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -148,7 +148,7 @@ virtual void drawPrimitive ( PrimitiveElement pe, const QStyleOption * option, Q
 */
 HB_FUNC_STATIC( QWINDOWSXPSTYLE_DRAWPRIMITIVE )
 {
-  QWindowsXPStyle * obj = (QWindowsXPStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindowsXPStyle * obj = (QWindowsXPStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -174,7 +174,7 @@ virtual int pixelMetric ( PixelMetric pm, const QStyleOption * option = 0, const
 */
 HB_FUNC_STATIC( QWINDOWSXPSTYLE_PIXELMETRIC )
 {
-  QWindowsXPStyle * obj = (QWindowsXPStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindowsXPStyle * obj = (QWindowsXPStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -198,7 +198,7 @@ virtual void polish ( QApplication * app )
 */
 void QWindowsXPStyle_polish1()
 {
-  QWindowsXPStyle * obj = (QWindowsXPStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindowsXPStyle * obj = (QWindowsXPStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -213,7 +213,7 @@ virtual void polish ( QWidget * widget )
 */
 void QWindowsXPStyle_polish2()
 {
-  QWindowsXPStyle * obj = (QWindowsXPStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindowsXPStyle * obj = (QWindowsXPStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -228,7 +228,7 @@ virtual void polish ( QPalette & pal )
 */
 void QWindowsXPStyle_polish3()
 {
-  QWindowsXPStyle * obj = (QWindowsXPStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindowsXPStyle * obj = (QWindowsXPStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -267,7 +267,7 @@ virtual QSize sizeFromContents ( ContentsType ct, const QStyleOption * option, c
 */
 HB_FUNC_STATIC( QWINDOWSXPSTYLE_SIZEFROMCONTENTS )
 {
-  QWindowsXPStyle * obj = (QWindowsXPStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindowsXPStyle * obj = (QWindowsXPStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -292,7 +292,7 @@ virtual QPalette standardPalette () const
 */
 HB_FUNC_STATIC( QWINDOWSXPSTYLE_STANDARDPALETTE )
 {
-  QWindowsXPStyle * obj = (QWindowsXPStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindowsXPStyle * obj = (QWindowsXPStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -317,7 +317,7 @@ virtual QPixmap standardPixmap ( StandardPixmap standardPixmap, const QStyleOpti
 */
 HB_FUNC_STATIC( QWINDOWSXPSTYLE_STANDARDPIXMAP )
 {
-  QWindowsXPStyle * obj = (QWindowsXPStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindowsXPStyle * obj = (QWindowsXPStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -342,7 +342,7 @@ virtual int styleHint ( StyleHint hint, const QStyleOption * option = 0, const Q
 */
 HB_FUNC_STATIC( QWINDOWSXPSTYLE_STYLEHINT )
 {
-  QWindowsXPStyle * obj = (QWindowsXPStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindowsXPStyle * obj = (QWindowsXPStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -366,7 +366,7 @@ virtual QRect subControlRect ( ComplexControl cc, const QStyleOptionComplex * op
 */
 HB_FUNC_STATIC( QWINDOWSXPSTYLE_SUBCONTROLRECT )
 {
-  QWindowsXPStyle * obj = (QWindowsXPStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindowsXPStyle * obj = (QWindowsXPStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -391,7 +391,7 @@ virtual QRect subElementRect ( SubElement sr, const QStyleOption * option, const
 */
 HB_FUNC_STATIC( QWINDOWSXPSTYLE_SUBELEMENTRECT )
 {
-  QWindowsXPStyle * obj = (QWindowsXPStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindowsXPStyle * obj = (QWindowsXPStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -416,7 +416,7 @@ virtual void unpolish ( QApplication * app )
 */
 void QWindowsXPStyle_unpolish1()
 {
-  QWindowsXPStyle * obj = (QWindowsXPStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindowsXPStyle * obj = (QWindowsXPStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -431,7 +431,7 @@ virtual void unpolish ( QWidget * widget )
 */
 void QWindowsXPStyle_unpolish2()
 {
-  QWindowsXPStyle * obj = (QWindowsXPStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindowsXPStyle * obj = (QWindowsXPStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

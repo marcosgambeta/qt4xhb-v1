@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QTEXTLINE_NEW )
 
 HB_FUNC_STATIC( QTEXTLINE_DELETE )
 {
-  QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextLine * obj = (QTextLine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -114,7 +114,7 @@ qreal ascent () const
 */
 HB_FUNC_STATIC( QTEXTLINE_ASCENT )
 {
-  QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextLine * obj = (QTextLine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -138,7 +138,7 @@ qreal cursorToX ( int * cursorPos, Edge edge = Leading ) const
 */
 HB_FUNC_STATIC( QTEXTLINE_CURSORTOX1 )
 {
-  QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextLine * obj = (QTextLine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -164,7 +164,7 @@ qreal cursorToX ( int cursorPos, Edge edge = Leading ) const
 */
 HB_FUNC_STATIC( QTEXTLINE_CURSORTOX2 )
 {
-  QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextLine * obj = (QTextLine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -207,7 +207,7 @@ qreal descent () const
 */
 HB_FUNC_STATIC( QTEXTLINE_DESCENT )
 {
-  QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextLine * obj = (QTextLine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -231,7 +231,7 @@ qreal height () const
 */
 HB_FUNC_STATIC( QTEXTLINE_HEIGHT )
 {
-  QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextLine * obj = (QTextLine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -255,7 +255,7 @@ qreal horizontalAdvance () const
 */
 HB_FUNC_STATIC( QTEXTLINE_HORIZONTALADVANCE )
 {
-  QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextLine * obj = (QTextLine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -279,7 +279,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QTEXTLINE_ISVALID )
 {
-  QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextLine * obj = (QTextLine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -303,7 +303,7 @@ qreal leading () const
 */
 HB_FUNC_STATIC( QTEXTLINE_LEADING )
 {
-  QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextLine * obj = (QTextLine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -327,7 +327,7 @@ bool leadingIncluded () const
 */
 HB_FUNC_STATIC( QTEXTLINE_LEADINGINCLUDED )
 {
-  QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextLine * obj = (QTextLine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -351,7 +351,7 @@ int lineNumber () const
 */
 HB_FUNC_STATIC( QTEXTLINE_LINENUMBER )
 {
-  QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextLine * obj = (QTextLine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -375,7 +375,7 @@ QRectF naturalTextRect () const
 */
 HB_FUNC_STATIC( QTEXTLINE_NATURALTEXTRECT )
 {
-  QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextLine * obj = (QTextLine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -400,7 +400,7 @@ qreal naturalTextWidth () const
 */
 HB_FUNC_STATIC( QTEXTLINE_NATURALTEXTWIDTH )
 {
-  QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextLine * obj = (QTextLine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -424,7 +424,7 @@ QPointF position () const
 */
 HB_FUNC_STATIC( QTEXTLINE_POSITION )
 {
-  QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextLine * obj = (QTextLine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -449,7 +449,7 @@ QRectF rect () const
 */
 HB_FUNC_STATIC( QTEXTLINE_RECT )
 {
-  QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextLine * obj = (QTextLine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -474,7 +474,7 @@ void setLeadingIncluded ( bool included )
 */
 HB_FUNC_STATIC( QTEXTLINE_SETLEADINGINCLUDED )
 {
-  QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextLine * obj = (QTextLine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -500,7 +500,7 @@ void setLineWidth ( qreal width )
 */
 HB_FUNC_STATIC( QTEXTLINE_SETLINEWIDTH )
 {
-  QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextLine * obj = (QTextLine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -526,7 +526,7 @@ void setNumColumns ( int numColumns )
 */
 HB_FUNC_STATIC( QTEXTLINE_SETNUMCOLUMNS1 )
 {
-  QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextLine * obj = (QTextLine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -552,7 +552,7 @@ void setNumColumns ( int numColumns, qreal alignmentWidth )
 */
 HB_FUNC_STATIC( QTEXTLINE_SETNUMCOLUMNS2 )
 {
-  QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextLine * obj = (QTextLine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -597,7 +597,7 @@ void setPosition ( const QPointF & pos )
 */
 HB_FUNC_STATIC( QTEXTLINE_SETPOSITION )
 {
-  QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextLine * obj = (QTextLine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -623,7 +623,7 @@ int textLength () const
 */
 HB_FUNC_STATIC( QTEXTLINE_TEXTLENGTH )
 {
-  QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextLine * obj = (QTextLine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -647,7 +647,7 @@ int textStart () const
 */
 HB_FUNC_STATIC( QTEXTLINE_TEXTSTART )
 {
-  QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextLine * obj = (QTextLine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -671,7 +671,7 @@ qreal width () const
 */
 HB_FUNC_STATIC( QTEXTLINE_WIDTH )
 {
-  QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextLine * obj = (QTextLine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -695,7 +695,7 @@ qreal x () const
 */
 HB_FUNC_STATIC( QTEXTLINE_X )
 {
-  QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextLine * obj = (QTextLine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -719,7 +719,7 @@ int xToCursor ( qreal x, CursorPosition cpos = CursorBetweenCharacters ) const
 */
 HB_FUNC_STATIC( QTEXTLINE_XTOCURSOR )
 {
-  QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextLine * obj = (QTextLine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -743,7 +743,7 @@ qreal y () const
 */
 HB_FUNC_STATIC( QTEXTLINE_Y )
 {
-  QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextLine * obj = (QTextLine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

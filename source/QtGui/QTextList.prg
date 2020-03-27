@@ -52,7 +52,7 @@ RETURN
 
 HB_FUNC_STATIC( QTEXTLIST_DELETE )
 {
-  QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextList * obj = (QTextList *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -74,7 +74,7 @@ void add ( const QTextBlock & block )
 */
 HB_FUNC_STATIC( QTEXTLIST_ADD )
 {
-  QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextList * obj = (QTextList *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -100,7 +100,7 @@ int count () const
 */
 HB_FUNC_STATIC( QTEXTLIST_COUNT )
 {
-  QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextList * obj = (QTextList *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -124,7 +124,7 @@ QTextListFormat format () const
 */
 HB_FUNC_STATIC( QTEXTLIST_FORMAT )
 {
-  QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextList * obj = (QTextList *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -149,7 +149,7 @@ QTextBlock item ( int i ) const
 */
 HB_FUNC_STATIC( QTEXTLIST_ITEM )
 {
-  QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextList * obj = (QTextList *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -174,7 +174,7 @@ int itemNumber ( const QTextBlock & block ) const
 */
 HB_FUNC_STATIC( QTEXTLIST_ITEMNUMBER )
 {
-  QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextList * obj = (QTextList *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -198,7 +198,7 @@ QString itemText ( const QTextBlock & block ) const
 */
 HB_FUNC_STATIC( QTEXTLIST_ITEMTEXT )
 {
-  QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextList * obj = (QTextList *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -222,7 +222,7 @@ void remove ( const QTextBlock & block )
 */
 HB_FUNC_STATIC( QTEXTLIST_REMOVE )
 {
-  QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextList * obj = (QTextList *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -248,7 +248,7 @@ void removeItem ( int i )
 */
 HB_FUNC_STATIC( QTEXTLIST_REMOVEITEM )
 {
-  QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextList * obj = (QTextList *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -274,7 +274,7 @@ void setFormat ( const QTextListFormat & format )
 */
 HB_FUNC_STATIC( QTEXTLIST_SETFORMAT )
 {
-  QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextList * obj = (QTextList *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

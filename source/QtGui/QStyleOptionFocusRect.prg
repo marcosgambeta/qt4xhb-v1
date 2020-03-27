@@ -87,7 +87,7 @@ QColor backgroundColor
 */
 HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_BACKGROUNDCOLOR )
 {
-  QStyleOptionFocusRect * obj = (QStyleOptionFocusRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionFocusRect * obj = (QStyleOptionFocusRect *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_BACKGROUNDCOLOR )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_SETBACKGROUNDCOLOR )
 {
-  QStyleOptionFocusRect * obj = (QStyleOptionFocusRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionFocusRect * obj = (QStyleOptionFocusRect *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

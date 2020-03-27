@@ -69,7 +69,7 @@ RETURN
 
 HB_FUNC_STATIC( QPAINTENGINE_DELETE )
 {
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPaintEngine * obj = (QPaintEngine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -89,7 +89,7 @@ virtual bool begin ( QPaintDevice * pdev ) = 0
 */
 HB_FUNC_STATIC( QPAINTENGINE_BEGIN )
 {
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPaintEngine * obj = (QPaintEngine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -113,7 +113,7 @@ virtual void drawEllipse ( const QRectF & rect )
 */
 void QPaintEngine_drawEllipse1()
 {
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPaintEngine * obj = (QPaintEngine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -128,7 +128,7 @@ virtual void drawEllipse ( const QRect & rect )
 */
 void QPaintEngine_drawEllipse2()
 {
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPaintEngine * obj = (QPaintEngine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -162,7 +162,7 @@ virtual void drawImage ( const QRectF & rectangle, const QImage & image, const Q
 */
 HB_FUNC_STATIC( QPAINTENGINE_DRAWIMAGE )
 {
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPaintEngine * obj = (QPaintEngine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -195,7 +195,7 @@ virtual void drawPath ( const QPainterPath & path )
 */
 HB_FUNC_STATIC( QPAINTENGINE_DRAWPATH )
 {
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPaintEngine * obj = (QPaintEngine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -221,7 +221,7 @@ virtual void drawPixmap ( const QRectF & r, const QPixmap & pm, const QRectF & s
 */
 HB_FUNC_STATIC( QPAINTENGINE_DRAWPIXMAP )
 {
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPaintEngine * obj = (QPaintEngine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -268,7 +268,7 @@ virtual void drawTextItem ( const QPointF & p, const QTextItem & textItem )
 */
 HB_FUNC_STATIC( QPAINTENGINE_DRAWTEXTITEM )
 {
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPaintEngine * obj = (QPaintEngine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -294,7 +294,7 @@ virtual void drawTiledPixmap ( const QRectF & rect, const QPixmap & pixmap, cons
 */
 HB_FUNC_STATIC( QPAINTENGINE_DRAWTILEDPIXMAP )
 {
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPaintEngine * obj = (QPaintEngine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -320,7 +320,7 @@ virtual bool end () = 0
 */
 HB_FUNC_STATIC( QPAINTENGINE_END )
 {
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPaintEngine * obj = (QPaintEngine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -344,7 +344,7 @@ bool hasFeature ( PaintEngineFeatures feature ) const
 */
 HB_FUNC_STATIC( QPAINTENGINE_HASFEATURE )
 {
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPaintEngine * obj = (QPaintEngine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -368,7 +368,7 @@ bool isActive () const
 */
 HB_FUNC_STATIC( QPAINTENGINE_ISACTIVE )
 {
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPaintEngine * obj = (QPaintEngine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -392,7 +392,7 @@ QPaintDevice * paintDevice () const
 */
 HB_FUNC_STATIC( QPAINTENGINE_PAINTDEVICE )
 {
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPaintEngine * obj = (QPaintEngine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -417,7 +417,7 @@ QPainter * painter () const
 */
 HB_FUNC_STATIC( QPAINTENGINE_PAINTER )
 {
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPaintEngine * obj = (QPaintEngine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -442,7 +442,7 @@ void setActive ( bool state )
 */
 HB_FUNC_STATIC( QPAINTENGINE_SETACTIVE )
 {
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPaintEngine * obj = (QPaintEngine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -468,7 +468,7 @@ virtual Type type () const = 0
 */
 HB_FUNC_STATIC( QPAINTENGINE_TYPE )
 {
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPaintEngine * obj = (QPaintEngine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -492,7 +492,7 @@ virtual void updateState ( const QPaintEngineState & state ) = 0
 */
 HB_FUNC_STATIC( QPAINTENGINE_UPDATESTATE )
 {
-  QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPaintEngine * obj = (QPaintEngine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QBRUSH_NEW )
 
 HB_FUNC_STATIC( QBRUSH_DELETE )
 {
-  QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -242,7 +242,7 @@ const QColor & color () const
 */
 HB_FUNC_STATIC( QBRUSH_COLOR )
 {
-  QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -267,7 +267,7 @@ const QGradient * gradient () const
 */
 HB_FUNC_STATIC( QBRUSH_GRADIENT )
 {
-  QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -292,7 +292,7 @@ bool isOpaque () const
 */
 HB_FUNC_STATIC( QBRUSH_ISOPAQUE )
 {
-  QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -316,7 +316,7 @@ const QMatrix & matrix () const
 */
 HB_FUNC_STATIC( QBRUSH_MATRIX )
 {
-  QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -341,7 +341,7 @@ void setColor ( const QColor & color )
 */
 void QBrush_setColor1()
 {
-  QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -356,7 +356,7 @@ void setColor ( Qt::GlobalColor color )
 */
 void QBrush_setColor2()
 {
-  QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -390,7 +390,7 @@ void setMatrix ( const QMatrix & matrix )
 */
 HB_FUNC_STATIC( QBRUSH_SETMATRIX )
 {
-  QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -416,7 +416,7 @@ void setStyle ( Qt::BrushStyle style )
 */
 HB_FUNC_STATIC( QBRUSH_SETSTYLE )
 {
-  QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -442,7 +442,7 @@ void setTexture ( const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QBRUSH_SETTEXTURE )
 {
-  QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -468,7 +468,7 @@ void setTextureImage ( const QImage & image )
 */
 HB_FUNC_STATIC( QBRUSH_SETTEXTUREIMAGE )
 {
-  QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -494,7 +494,7 @@ void setTransform ( const QTransform & matrix )
 */
 HB_FUNC_STATIC( QBRUSH_SETTRANSFORM )
 {
-  QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -520,7 +520,7 @@ Qt::BrushStyle style () const
 */
 HB_FUNC_STATIC( QBRUSH_STYLE )
 {
-  QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -544,7 +544,7 @@ QPixmap texture () const
 */
 HB_FUNC_STATIC( QBRUSH_TEXTURE )
 {
-  QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -569,7 +569,7 @@ QImage textureImage () const
 */
 HB_FUNC_STATIC( QBRUSH_TEXTUREIMAGE )
 {
-  QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -594,7 +594,7 @@ QTransform transform () const
 */
 HB_FUNC_STATIC( QBRUSH_TRANSFORM )
 {
-  QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

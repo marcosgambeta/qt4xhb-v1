@@ -63,7 +63,7 @@ void QStyleSlots::tabMoved( int from, int to )
 
 void QStyleSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyle * obj = (QStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -94,7 +94,7 @@ ButtonFeatures features
 */
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_FEATURES )
 {
-  QStyleOptionButton * obj = (QStyleOptionButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionButton * obj = (QStyleOptionButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_FEATURES )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_SETFEATURES )
 {
-  QStyleOptionButton * obj = (QStyleOptionButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionButton * obj = (QStyleOptionButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -132,7 +132,7 @@ QString text
 */
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_TEXT )
 {
-  QStyleOptionButton * obj = (QStyleOptionButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionButton * obj = (QStyleOptionButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_TEXT )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_SETTEXT )
 {
-  QStyleOptionButton * obj = (QStyleOptionButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionButton * obj = (QStyleOptionButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -170,7 +170,7 @@ QIcon icon
 */
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_ICON )
 {
-  QStyleOptionButton * obj = (QStyleOptionButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionButton * obj = (QStyleOptionButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_ICON )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_SETICON )
 {
-  QStyleOptionButton * obj = (QStyleOptionButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionButton * obj = (QStyleOptionButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -209,7 +209,7 @@ QSize iconSize
 */
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_ICONSIZE )
 {
-  QStyleOptionButton * obj = (QStyleOptionButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionButton * obj = (QStyleOptionButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_ICONSIZE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_SETICONSIZE )
 {
-  QStyleOptionButton * obj = (QStyleOptionButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionButton * obj = (QStyleOptionButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QIMAGE_NEW )
 
 HB_FUNC_STATIC( QIMAGE_DELETE )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -279,7 +279,7 @@ bool allGray () const
 */
 HB_FUNC_STATIC( QIMAGE_ALLGRAY )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -303,7 +303,7 @@ int bitPlaneCount () const
 */
 HB_FUNC_STATIC( QIMAGE_BITPLANECOUNT )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -327,7 +327,7 @@ int byteCount () const
 */
 HB_FUNC_STATIC( QIMAGE_BYTECOUNT )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -351,7 +351,7 @@ int bytesPerLine () const
 */
 HB_FUNC_STATIC( QIMAGE_BYTESPERLINE )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -375,7 +375,7 @@ qint64 cacheKey () const
 */
 HB_FUNC_STATIC( QIMAGE_CACHEKEY )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -399,7 +399,7 @@ QRgb color ( int i ) const
 */
 HB_FUNC_STATIC( QIMAGE_COLOR )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -423,7 +423,7 @@ int colorCount () const
 */
 HB_FUNC_STATIC( QIMAGE_COLORCOUNT )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -447,7 +447,7 @@ QVector<QRgb> colorTable () const
 */
 HB_FUNC_STATIC( QIMAGE_COLORTABLE )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -479,7 +479,7 @@ QImage convertToFormat ( Format format, Qt::ImageConversionFlags flags = Qt::Aut
 */
 void QImage_convertToFormat1()
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -493,7 +493,7 @@ QImage convertToFormat ( Format format, const QVector<QRgb> & colorTable, Qt::Im
 */
 void QImage_convertToFormat2()
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -536,7 +536,7 @@ QImage copy ( const QRect & rectangle = QRect() ) const
 */
 void QImage_copy1()
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -550,7 +550,7 @@ QImage copy ( int x, int y, int width, int height ) const
 */
 void QImage_copy2()
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -583,7 +583,7 @@ QImage createAlphaMask ( Qt::ImageConversionFlags flags = Qt::AutoColor ) const
 */
 HB_FUNC_STATIC( QIMAGE_CREATEALPHAMASK )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -608,7 +608,7 @@ QImage createHeuristicMask ( bool clipTight = true ) const
 */
 HB_FUNC_STATIC( QIMAGE_CREATEHEURISTICMASK )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -633,7 +633,7 @@ QImage createMaskFromColor ( QRgb color, Qt::MaskMode mode = Qt::MaskInColor ) c
 */
 HB_FUNC_STATIC( QIMAGE_CREATEMASKFROMCOLOR )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -658,7 +658,7 @@ int depth () const
 */
 HB_FUNC_STATIC( QIMAGE_DEPTH )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -682,7 +682,7 @@ int dotsPerMeterX () const
 */
 HB_FUNC_STATIC( QIMAGE_DOTSPERMETERX )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -706,7 +706,7 @@ int dotsPerMeterY () const
 */
 HB_FUNC_STATIC( QIMAGE_DOTSPERMETERY )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -730,7 +730,7 @@ void fill ( uint pixelValue )
 */
 HB_FUNC_STATIC( QIMAGE_FILL1 )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -756,7 +756,7 @@ void fill ( Qt::GlobalColor color )
 */
 HB_FUNC_STATIC( QIMAGE_FILL2 )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -782,7 +782,7 @@ void fill ( const QColor & color )
 */
 HB_FUNC_STATIC( QIMAGE_FILL3 )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -832,7 +832,7 @@ Format format () const
 */
 HB_FUNC_STATIC( QIMAGE_FORMAT )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -856,7 +856,7 @@ bool hasAlphaChannel () const
 */
 HB_FUNC_STATIC( QIMAGE_HASALPHACHANNEL )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -880,7 +880,7 @@ int height () const
 */
 HB_FUNC_STATIC( QIMAGE_HEIGHT )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -904,7 +904,7 @@ void invertPixels ( InvertMode mode = InvertRgb )
 */
 HB_FUNC_STATIC( QIMAGE_INVERTPIXELS )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -930,7 +930,7 @@ bool isGrayscale () const
 */
 HB_FUNC_STATIC( QIMAGE_ISGRAYSCALE )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -954,7 +954,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QIMAGE_ISNULL )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -978,7 +978,7 @@ bool load ( const QString & fileName, const char * format = 0 )
 */
 void QImage_load1()
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -991,7 +991,7 @@ bool load ( QIODevice * device, const char * format )
 */
 void QImage_load2()
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1023,7 +1023,7 @@ bool loadFromData ( const uchar * data, int len, const char * format = 0 )
 */
 void QImage_loadFromData1()
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1036,7 +1036,7 @@ bool loadFromData ( const QByteArray & data, const char * format = 0 )
 */
 void QImage_loadFromData2()
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1068,7 +1068,7 @@ QImage mirrored ( bool horizontal = false, bool vertical = true ) const
 */
 HB_FUNC_STATIC( QIMAGE_MIRRORED )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1093,7 +1093,7 @@ QPoint offset () const
 */
 HB_FUNC_STATIC( QIMAGE_OFFSET )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1118,7 +1118,7 @@ QRgb pixel ( const QPoint & position ) const
 */
 void QImage_pixel1()
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1131,7 +1131,7 @@ QRgb pixel ( int x, int y ) const
 */
 void QImage_pixel2()
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1163,7 +1163,7 @@ int pixelIndex ( const QPoint & position ) const
 */
 void QImage_pixelIndex1()
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1176,7 +1176,7 @@ int pixelIndex ( int x, int y ) const
 */
 void QImage_pixelIndex2()
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1208,7 +1208,7 @@ QRect rect () const
 */
 HB_FUNC_STATIC( QIMAGE_RECT )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1233,7 +1233,7 @@ QImage rgbSwapped () const
 */
 HB_FUNC_STATIC( QIMAGE_RGBSWAPPED )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1258,7 +1258,7 @@ bool save ( const QString & fileName, const char * format = 0, int quality = -1 
 */
 void QImage_save1()
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1271,7 +1271,7 @@ bool save ( QIODevice * device, const char * format = 0, int quality = -1 ) cons
 */
 void QImage_save2()
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1303,7 +1303,7 @@ QImage scaled ( const QSize & size, Qt::AspectRatioMode aspectRatioMode = Qt::Ig
 */
 void QImage_scaled1()
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1317,7 +1317,7 @@ QImage scaled ( int width, int height, Qt::AspectRatioMode aspectRatioMode = Qt:
 */
 void QImage_scaled2()
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1350,7 +1350,7 @@ QImage scaledToHeight ( int height, Qt::TransformationMode mode = Qt::FastTransf
 */
 HB_FUNC_STATIC( QIMAGE_SCALEDTOHEIGHT )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1375,7 +1375,7 @@ QImage scaledToWidth ( int width, Qt::TransformationMode mode = Qt::FastTransfor
 */
 HB_FUNC_STATIC( QIMAGE_SCALEDTOWIDTH )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1409,7 +1409,7 @@ void setColor ( int index, QRgb colorValue )
 */
 HB_FUNC_STATIC( QIMAGE_SETCOLOR )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1435,7 +1435,7 @@ void setColorCount ( int colorCount )
 */
 HB_FUNC_STATIC( QIMAGE_SETCOLORCOUNT )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1461,7 +1461,7 @@ void setColorTable ( const QVector<QRgb> colors )
 */
 HB_FUNC_STATIC( QIMAGE_SETCOLORTABLE )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1497,7 +1497,7 @@ void setDotsPerMeterX ( int x )
 */
 HB_FUNC_STATIC( QIMAGE_SETDOTSPERMETERX )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1523,7 +1523,7 @@ void setDotsPerMeterY ( int y )
 */
 HB_FUNC_STATIC( QIMAGE_SETDOTSPERMETERY )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1549,7 +1549,7 @@ void setOffset ( const QPoint & offset )
 */
 HB_FUNC_STATIC( QIMAGE_SETOFFSET )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1575,7 +1575,7 @@ void setPixel ( const QPoint & position, uint index_or_rgb )
 */
 void QImage_setPixel1()
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1590,7 +1590,7 @@ void setPixel ( int x, int y, uint index_or_rgb )
 */
 void QImage_setPixel2()
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1624,7 +1624,7 @@ void setText ( const QString & key, const QString & text )
 */
 HB_FUNC_STATIC( QIMAGE_SETTEXT )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1650,7 +1650,7 @@ QSize size () const
 */
 HB_FUNC_STATIC( QIMAGE_SIZE )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1675,7 +1675,7 @@ void swap ( QImage & other )
 */
 HB_FUNC_STATIC( QIMAGE_SWAP )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1701,7 +1701,7 @@ QString text ( const QString & key = QString() ) const
 */
 HB_FUNC_STATIC( QIMAGE_TEXT )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1725,7 +1725,7 @@ QStringList textKeys () const
 */
 HB_FUNC_STATIC( QIMAGE_TEXTKEYS )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1749,7 +1749,7 @@ QImage transformed ( const QMatrix & matrix, Qt::TransformationMode mode = Qt::F
 */
 void QImage_transformed1()
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1763,7 +1763,7 @@ QImage transformed ( const QTransform & matrix, Qt::TransformationMode mode = Qt
 */
 void QImage_transformed2()
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1796,7 +1796,7 @@ bool valid ( const QPoint & pos ) const
 */
 void QImage_valid1()
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1809,7 +1809,7 @@ bool valid ( int x, int y ) const
 */
 void QImage_valid2()
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1841,7 +1841,7 @@ int width () const
 */
 HB_FUNC_STATIC( QIMAGE_WIDTH )
 {
-  QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImage * obj = (QImage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

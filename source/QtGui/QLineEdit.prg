@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QLINEEDIT_NEW )
 
 HB_FUNC_STATIC( QLINEEDIT_DELETE )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -178,7 +178,7 @@ Qt::Alignment alignment () const
 */
 HB_FUNC_STATIC( QLINEEDIT_ALIGNMENT )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -202,7 +202,7 @@ void backspace ()
 */
 HB_FUNC_STATIC( QLINEEDIT_BACKSPACE )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -228,7 +228,7 @@ QCompleter * completer () const
 */
 HB_FUNC_STATIC( QLINEEDIT_COMPLETER )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -253,7 +253,7 @@ QMenu * createStandardContextMenu ()
 */
 HB_FUNC_STATIC( QLINEEDIT_CREATESTANDARDCONTEXTMENU )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -278,7 +278,7 @@ void cursorBackward ( bool mark, int steps = 1 )
 */
 HB_FUNC_STATIC( QLINEEDIT_CURSORBACKWARD )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -304,7 +304,7 @@ void cursorForward ( bool mark, int steps = 1 )
 */
 HB_FUNC_STATIC( QLINEEDIT_CURSORFORWARD )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -330,7 +330,7 @@ int cursorPosition () const
 */
 HB_FUNC_STATIC( QLINEEDIT_CURSORPOSITION )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -354,7 +354,7 @@ int cursorPositionAt ( const QPoint & pos )
 */
 HB_FUNC_STATIC( QLINEEDIT_CURSORPOSITIONAT )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -378,7 +378,7 @@ void cursorWordBackward ( bool mark )
 */
 HB_FUNC_STATIC( QLINEEDIT_CURSORWORDBACKWARD )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -404,7 +404,7 @@ void cursorWordForward ( bool mark )
 */
 HB_FUNC_STATIC( QLINEEDIT_CURSORWORDFORWARD )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -430,7 +430,7 @@ void del ()
 */
 HB_FUNC_STATIC( QLINEEDIT_DEL )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -456,7 +456,7 @@ void deselect ()
 */
 HB_FUNC_STATIC( QLINEEDIT_DESELECT )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -482,7 +482,7 @@ QString displayText () const
 */
 HB_FUNC_STATIC( QLINEEDIT_DISPLAYTEXT )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -506,7 +506,7 @@ bool dragEnabled () const
 */
 HB_FUNC_STATIC( QLINEEDIT_DRAGENABLED )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -530,7 +530,7 @@ EchoMode echoMode () const
 */
 HB_FUNC_STATIC( QLINEEDIT_ECHOMODE )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -554,7 +554,7 @@ void end ( bool mark )
 */
 HB_FUNC_STATIC( QLINEEDIT_END )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -580,7 +580,7 @@ void getTextMargins ( int * left, int * top, int * right, int * bottom ) const
 */
 HB_FUNC_STATIC( QLINEEDIT_GETTEXTMARGINS )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -614,7 +614,7 @@ bool hasAcceptableInput () const
 */
 HB_FUNC_STATIC( QLINEEDIT_HASACCEPTABLEINPUT )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -638,7 +638,7 @@ bool hasFrame () const
 */
 HB_FUNC_STATIC( QLINEEDIT_HASFRAME )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -662,7 +662,7 @@ bool hasSelectedText () const
 */
 HB_FUNC_STATIC( QLINEEDIT_HASSELECTEDTEXT )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -686,7 +686,7 @@ void home ( bool mark )
 */
 HB_FUNC_STATIC( QLINEEDIT_HOME )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -712,7 +712,7 @@ QString inputMask () const
 */
 HB_FUNC_STATIC( QLINEEDIT_INPUTMASK )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -736,7 +736,7 @@ void insert ( const QString & newText )
 */
 HB_FUNC_STATIC( QLINEEDIT_INSERT )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -762,7 +762,7 @@ bool isModified () const
 */
 HB_FUNC_STATIC( QLINEEDIT_ISMODIFIED )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -786,7 +786,7 @@ bool isReadOnly () const
 */
 HB_FUNC_STATIC( QLINEEDIT_ISREADONLY )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -810,7 +810,7 @@ bool isRedoAvailable () const
 */
 HB_FUNC_STATIC( QLINEEDIT_ISREDOAVAILABLE )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -834,7 +834,7 @@ bool isUndoAvailable () const
 */
 HB_FUNC_STATIC( QLINEEDIT_ISUNDOAVAILABLE )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -858,7 +858,7 @@ int maxLength () const
 */
 HB_FUNC_STATIC( QLINEEDIT_MAXLENGTH )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -882,7 +882,7 @@ QString placeholderText () const
 */
 HB_FUNC_STATIC( QLINEEDIT_PLACEHOLDERTEXT )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -906,7 +906,7 @@ virtual QSize minimumSizeHint () const
 */
 HB_FUNC_STATIC( QLINEEDIT_MINIMUMSIZEHINT )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -931,7 +931,7 @@ QString selectedText () const
 */
 HB_FUNC_STATIC( QLINEEDIT_SELECTEDTEXT )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -955,7 +955,7 @@ int selectionStart () const
 */
 HB_FUNC_STATIC( QLINEEDIT_SELECTIONSTART )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -979,7 +979,7 @@ void setAlignment ( Qt::Alignment flag )
 */
 HB_FUNC_STATIC( QLINEEDIT_SETALIGNMENT )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1005,7 +1005,7 @@ void setCompleter ( QCompleter * c )
 */
 HB_FUNC_STATIC( QLINEEDIT_SETCOMPLETER )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1031,7 +1031,7 @@ void setCursorPosition ( int )
 */
 HB_FUNC_STATIC( QLINEEDIT_SETCURSORPOSITION )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1057,7 +1057,7 @@ void setDragEnabled ( bool b )
 */
 HB_FUNC_STATIC( QLINEEDIT_SETDRAGENABLED )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1083,7 +1083,7 @@ void setEchoMode ( EchoMode )
 */
 HB_FUNC_STATIC( QLINEEDIT_SETECHOMODE )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1109,7 +1109,7 @@ void setFrame ( bool )
 */
 HB_FUNC_STATIC( QLINEEDIT_SETFRAME )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1135,7 +1135,7 @@ void setInputMask ( const QString & inputMask )
 */
 HB_FUNC_STATIC( QLINEEDIT_SETINPUTMASK )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1161,7 +1161,7 @@ void setMaxLength ( int )
 */
 HB_FUNC_STATIC( QLINEEDIT_SETMAXLENGTH )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1187,7 +1187,7 @@ void setModified ( bool )
 */
 HB_FUNC_STATIC( QLINEEDIT_SETMODIFIED )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1213,7 +1213,7 @@ void setPlaceholderText ( const QString & )
 */
 HB_FUNC_STATIC( QLINEEDIT_SETPLACEHOLDERTEXT )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1239,7 +1239,7 @@ void setReadOnly ( bool )
 */
 HB_FUNC_STATIC( QLINEEDIT_SETREADONLY )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1265,7 +1265,7 @@ void setSelection ( int start, int length )
 */
 HB_FUNC_STATIC( QLINEEDIT_SETSELECTION )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1291,7 +1291,7 @@ void setTextMargins ( int left, int top, int right, int bottom )
 */
 void QLineEdit_setTextMargins1()
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1306,7 +1306,7 @@ void setTextMargins ( const QMargins & margins )
 */
 void QLineEdit_setTextMargins2()
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1340,7 +1340,7 @@ void setValidator ( const QValidator * v )
 */
 HB_FUNC_STATIC( QLINEEDIT_SETVALIDATOR )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1366,7 +1366,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QLINEEDIT_SIZEHINT )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1391,7 +1391,7 @@ QString text () const
 */
 HB_FUNC_STATIC( QLINEEDIT_TEXT )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1415,7 +1415,7 @@ QMargins textMargins () const
 */
 HB_FUNC_STATIC( QLINEEDIT_TEXTMARGINS )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1440,7 +1440,7 @@ const QValidator * validator () const
 */
 HB_FUNC_STATIC( QLINEEDIT_VALIDATOR )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1465,7 +1465,7 @@ virtual bool event ( QEvent * e )
 */
 HB_FUNC_STATIC( QLINEEDIT_EVENT )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1489,7 +1489,7 @@ virtual QVariant inputMethodQuery ( Qt::InputMethodQuery property ) const
 */
 HB_FUNC_STATIC( QLINEEDIT_INPUTMETHODQUERY )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1514,7 +1514,7 @@ void copy () const
 */
 HB_FUNC_STATIC( QLINEEDIT_COPY )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1540,7 +1540,7 @@ void cut ()
 */
 HB_FUNC_STATIC( QLINEEDIT_CUT )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1566,7 +1566,7 @@ void paste ()
 */
 HB_FUNC_STATIC( QLINEEDIT_PASTE )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1592,7 +1592,7 @@ void redo ()
 */
 HB_FUNC_STATIC( QLINEEDIT_REDO )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1618,7 +1618,7 @@ void selectAll ()
 */
 HB_FUNC_STATIC( QLINEEDIT_SELECTALL )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1644,7 +1644,7 @@ void setText ( const QString & )
 */
 HB_FUNC_STATIC( QLINEEDIT_SETTEXT )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1670,7 +1670,7 @@ void undo ()
 */
 HB_FUNC_STATIC( QLINEEDIT_UNDO )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

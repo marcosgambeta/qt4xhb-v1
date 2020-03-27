@@ -104,7 +104,7 @@ ToolButtonFeatures features
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_FEATURES )
 {
-  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_FEATURES )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETFEATURES )
 {
-  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -142,7 +142,7 @@ QIcon icon
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_ICON )
 {
-  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_ICON )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETICON )
 {
-  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -181,7 +181,7 @@ QSize iconSize
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_ICONSIZE )
 {
-  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_ICONSIZE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETICONSIZE )
 {
-  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -220,7 +220,7 @@ QString text
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_TEXT )
 {
-  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_TEXT )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETTEXT )
 {
-  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -258,7 +258,7 @@ Qt::ArrowType arrowType
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_ARROWTYPE )
 {
-  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_ARROWTYPE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETARROWTYPE )
 {
-  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -296,7 +296,7 @@ Qt::ToolButtonStyle toolButtonStyle
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_TOOLBUTTONSTYLE )
 {
-  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_TOOLBUTTONSTYLE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETTOOLBUTTONSTYLE )
 {
-  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -334,7 +334,7 @@ QPoint pos
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_POS )
 {
-  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_POS )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETPOS )
 {
-  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -373,7 +373,7 @@ QFont font
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_FONT )
 {
-  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_FONT )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETFONT )
 {
-  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

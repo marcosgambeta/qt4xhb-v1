@@ -35,7 +35,7 @@ void QWorkspaceSlots::windowActivated( QWidget * w )
 
 void QWorkspaceSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWorkspace * obj = (QWorkspace *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -52,7 +52,7 @@ RETURN
 
 HB_FUNC_STATIC( QITEMEDITORCREATORBASE_DELETE )
 {
-  QItemEditorCreatorBase * obj = (QItemEditorCreatorBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemEditorCreatorBase * obj = (QItemEditorCreatorBase *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -72,7 +72,7 @@ virtual QWidget * createWidget ( QWidget * parent ) const = 0
 */
 HB_FUNC_STATIC( QITEMEDITORCREATORBASE_CREATEWIDGET )
 {
-  QItemEditorCreatorBase * obj = (QItemEditorCreatorBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemEditorCreatorBase * obj = (QItemEditorCreatorBase *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -97,7 +97,7 @@ virtual QByteArray valuePropertyName () const = 0
 */
 HB_FUNC_STATIC( QITEMEDITORCREATORBASE_VALUEPROPERTYNAME )
 {
-  QItemEditorCreatorBase * obj = (QItemEditorCreatorBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemEditorCreatorBase * obj = (QItemEditorCreatorBase *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

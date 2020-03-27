@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QVBOXLAYOUT_NEW )
 
 HB_FUNC_STATIC( QVBOXLAYOUT_DELETE )
 {
-  QVBoxLayout * obj = (QVBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVBoxLayout * obj = (QVBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_NEW )
 
 HB_FUNC_STATIC( QFILEICONPROVIDER_DELETE )
 {
-  QFileIconProvider * obj = (QFileIconProvider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFileIconProvider * obj = (QFileIconProvider *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -88,7 +88,7 @@ virtual QIcon icon(IconType type) const
 */
 void QFileIconProvider_icon1()
 {
-  QFileIconProvider * obj = (QFileIconProvider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFileIconProvider * obj = (QFileIconProvider *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -102,7 +102,7 @@ virtual QIcon icon(const QFileInfo & info) const
 */
 void QFileIconProvider_icon2()
 {
-  QFileIconProvider * obj = (QFileIconProvider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFileIconProvider * obj = (QFileIconProvider *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -135,7 +135,7 @@ virtual QString type(const QFileInfo & info) const
 */
 HB_FUNC_STATIC( QFILEICONPROVIDER_TYPE )
 {
-  QFileIconProvider * obj = (QFileIconProvider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFileIconProvider * obj = (QFileIconProvider *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

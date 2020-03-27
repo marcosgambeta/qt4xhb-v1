@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_DELETE )
 {
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsLineItem * obj = (QGraphicsLineItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -128,7 +128,7 @@ QLineF line () const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_LINE )
 {
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsLineItem * obj = (QGraphicsLineItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -153,7 +153,7 @@ QPen pen () const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_PEN )
 {
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsLineItem * obj = (QGraphicsLineItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -178,7 +178,7 @@ void setLine ( const QLineF & line )
 */
 void QGraphicsLineItem_setLine1()
 {
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsLineItem * obj = (QGraphicsLineItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -193,7 +193,7 @@ void setLine ( qreal x1, qreal y1, qreal x2, qreal y2 )
 */
 void QGraphicsLineItem_setLine2()
 {
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsLineItem * obj = (QGraphicsLineItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -227,7 +227,7 @@ void setPen ( const QPen & pen )
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETPEN )
 {
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsLineItem * obj = (QGraphicsLineItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -253,7 +253,7 @@ virtual QRectF boundingRect () const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_BOUNDINGRECT )
 {
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsLineItem * obj = (QGraphicsLineItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -278,7 +278,7 @@ virtual bool contains ( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_CONTAINS )
 {
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsLineItem * obj = (QGraphicsLineItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -302,7 +302,7 @@ virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_ISOBSCUREDBY )
 {
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsLineItem * obj = (QGraphicsLineItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -326,7 +326,7 @@ virtual QPainterPath opaqueArea () const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_OPAQUEAREA )
 {
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsLineItem * obj = (QGraphicsLineItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -351,7 +351,7 @@ virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_PAINT )
 {
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsLineItem * obj = (QGraphicsLineItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -377,7 +377,7 @@ virtual QPainterPath shape () const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_SHAPE )
 {
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsLineItem * obj = (QGraphicsLineItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -402,7 +402,7 @@ virtual int type () const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_TYPE )
 {
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsLineItem * obj = (QGraphicsLineItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

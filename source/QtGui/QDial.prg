@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QDIAL_NEW )
 
 HB_FUNC_STATIC( QDIAL_DELETE )
 {
-  QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDial * obj = (QDial *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -90,7 +90,7 @@ int notchSize () const
 */
 HB_FUNC_STATIC( QDIAL_NOTCHSIZE )
 {
-  QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDial * obj = (QDial *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -114,7 +114,7 @@ qreal notchTarget () const
 */
 HB_FUNC_STATIC( QDIAL_NOTCHTARGET )
 {
-  QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDial * obj = (QDial *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -138,7 +138,7 @@ bool notchesVisible () const
 */
 HB_FUNC_STATIC( QDIAL_NOTCHESVISIBLE )
 {
-  QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDial * obj = (QDial *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -162,7 +162,7 @@ void setNotchTarget ( double target )
 */
 HB_FUNC_STATIC( QDIAL_SETNOTCHTARGET )
 {
-  QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDial * obj = (QDial *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -188,7 +188,7 @@ bool wrapping () const
 */
 HB_FUNC_STATIC( QDIAL_WRAPPING )
 {
-  QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDial * obj = (QDial *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -212,7 +212,7 @@ virtual QSize minimumSizeHint () const
 */
 HB_FUNC_STATIC( QDIAL_MINIMUMSIZEHINT )
 {
-  QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDial * obj = (QDial *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -237,7 +237,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QDIAL_SIZEHINT )
 {
-  QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDial * obj = (QDial *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -262,7 +262,7 @@ void setNotchesVisible ( bool visible )
 */
 HB_FUNC_STATIC( QDIAL_SETNOTCHESVISIBLE )
 {
-  QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDial * obj = (QDial *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -288,7 +288,7 @@ void setWrapping ( bool on )
 */
 HB_FUNC_STATIC( QDIAL_SETWRAPPING )
 {
-  QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDial * obj = (QDial *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

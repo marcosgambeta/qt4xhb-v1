@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_NEW )
 
 HB_FUNC_STATIC( QTEXTFRAGMENT_DELETE )
 {
-  QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextFragment * obj = (QTextFragment *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -116,7 +116,7 @@ QTextCharFormat charFormat () const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMAT )
 {
-  QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextFragment * obj = (QTextFragment *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -141,7 +141,7 @@ int charFormatIndex () const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMATINDEX )
 {
-  QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextFragment * obj = (QTextFragment *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -165,7 +165,7 @@ bool contains ( int position ) const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_CONTAINS )
 {
-  QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextFragment * obj = (QTextFragment *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -189,7 +189,7 @@ QList<QGlyphRun> glyphRuns () const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
 {
-  QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextFragment * obj = (QTextFragment *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -241,7 +241,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_ISVALID )
 {
-  QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextFragment * obj = (QTextFragment *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -265,7 +265,7 @@ int length () const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_LENGTH )
 {
-  QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextFragment * obj = (QTextFragment *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -289,7 +289,7 @@ int position () const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_POSITION )
 {
-  QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextFragment * obj = (QTextFragment *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -313,7 +313,7 @@ QString text () const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_TEXT )
 {
-  QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextFragment * obj = (QTextFragment *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

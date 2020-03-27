@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW )
 
 HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_DELETE )
 {
-  QWindowStateChangeEvent * obj = (QWindowStateChangeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindowStateChangeEvent * obj = (QWindowStateChangeEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -99,7 +99,7 @@ Qt::WindowStates oldState() const
 */
 HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_OLDSTATE )
 {
-  QWindowStateChangeEvent * obj = (QWindowStateChangeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindowStateChangeEvent * obj = (QWindowStateChangeEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -123,7 +123,7 @@ bool isOverride() const
 */
 HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_ISOVERRIDE )
 {
-  QWindowStateChangeEvent * obj = (QWindowStateChangeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindowStateChangeEvent * obj = (QWindowStateChangeEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

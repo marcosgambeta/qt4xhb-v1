@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QSTATUSTIPEVENT_NEW )
 
 HB_FUNC_STATIC( QSTATUSTIPEVENT_DELETE )
 {
-  QStatusTipEvent * obj = (QStatusTipEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStatusTipEvent * obj = (QStatusTipEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -77,7 +77,7 @@ QString tip() const
 */
 HB_FUNC_STATIC( QSTATUSTIPEVENT_TIP )
 {
-  QStatusTipEvent * obj = (QStatusTipEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStatusTipEvent * obj = (QStatusTipEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

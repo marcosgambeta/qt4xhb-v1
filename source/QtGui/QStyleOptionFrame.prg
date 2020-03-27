@@ -88,7 +88,7 @@ int lineWidth
 */
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_LINEWIDTH )
 {
-  QStyleOptionFrame * obj = (QStyleOptionFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionFrame * obj = (QStyleOptionFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_LINEWIDTH )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_SETLINEWIDTH )
 {
-  QStyleOptionFrame * obj = (QStyleOptionFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionFrame * obj = (QStyleOptionFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -126,7 +126,7 @@ int midLineWidth
 */
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_MIDLINEWIDTH )
 {
-  QStyleOptionFrame * obj = (QStyleOptionFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionFrame * obj = (QStyleOptionFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_MIDLINEWIDTH )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_SETMIDLINEWIDTH )
 {
-  QStyleOptionFrame * obj = (QStyleOptionFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionFrame * obj = (QStyleOptionFrame *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -85,7 +85,7 @@ void QWizardSlots::pageRemoved( int id )
 
 void QWizardSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWizard * obj = (QWizard *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

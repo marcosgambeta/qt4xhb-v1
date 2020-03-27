@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_DELETE )
 {
-  QGraphicsSceneResizeEvent * obj = (QGraphicsSceneResizeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsSceneResizeEvent * obj = (QGraphicsSceneResizeEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -79,7 +79,7 @@ QSizeF newSize () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_NEWSIZE )
 {
-  QGraphicsSceneResizeEvent * obj = (QGraphicsSceneResizeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsSceneResizeEvent * obj = (QGraphicsSceneResizeEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -104,7 +104,7 @@ QSizeF oldSize () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_OLDSIZE )
 {
-  QGraphicsSceneResizeEvent * obj = (QGraphicsSceneResizeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsSceneResizeEvent * obj = (QGraphicsSceneResizeEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

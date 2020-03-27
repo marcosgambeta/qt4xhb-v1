@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QGRAPHICSRECTITEM_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSRECTITEM_DELETE )
 {
-  QGraphicsRectItem * obj = (QGraphicsRectItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsRectItem * obj = (QGraphicsRectItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -122,7 +122,7 @@ QRectF rect () const
 */
 HB_FUNC_STATIC( QGRAPHICSRECTITEM_RECT )
 {
-  QGraphicsRectItem * obj = (QGraphicsRectItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsRectItem * obj = (QGraphicsRectItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -147,7 +147,7 @@ void setRect ( const QRectF & rect )
 */
 void QGraphicsRectItem_setRect1()
 {
-  QGraphicsRectItem * obj = (QGraphicsRectItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsRectItem * obj = (QGraphicsRectItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -162,7 +162,7 @@ void setRect ( qreal x, qreal y, qreal width, qreal height )
 */
 void QGraphicsRectItem_setRect2()
 {
-  QGraphicsRectItem * obj = (QGraphicsRectItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsRectItem * obj = (QGraphicsRectItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -196,7 +196,7 @@ virtual QRectF boundingRect () const
 */
 HB_FUNC_STATIC( QGRAPHICSRECTITEM_BOUNDINGRECT )
 {
-  QGraphicsRectItem * obj = (QGraphicsRectItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsRectItem * obj = (QGraphicsRectItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -221,7 +221,7 @@ virtual bool contains ( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QGRAPHICSRECTITEM_CONTAINS )
 {
-  QGraphicsRectItem * obj = (QGraphicsRectItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsRectItem * obj = (QGraphicsRectItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -245,7 +245,7 @@ virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSRECTITEM_ISOBSCUREDBY )
 {
-  QGraphicsRectItem * obj = (QGraphicsRectItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsRectItem * obj = (QGraphicsRectItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -269,7 +269,7 @@ virtual QPainterPath opaqueArea () const
 */
 HB_FUNC_STATIC( QGRAPHICSRECTITEM_OPAQUEAREA )
 {
-  QGraphicsRectItem * obj = (QGraphicsRectItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsRectItem * obj = (QGraphicsRectItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -294,7 +294,7 @@ virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option
 */
 HB_FUNC_STATIC( QGRAPHICSRECTITEM_PAINT )
 {
-  QGraphicsRectItem * obj = (QGraphicsRectItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsRectItem * obj = (QGraphicsRectItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -320,7 +320,7 @@ virtual QPainterPath shape () const
 */
 HB_FUNC_STATIC( QGRAPHICSRECTITEM_SHAPE )
 {
-  QGraphicsRectItem * obj = (QGraphicsRectItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsRectItem * obj = (QGraphicsRectItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -345,7 +345,7 @@ virtual int type () const
 */
 HB_FUNC_STATIC( QGRAPHICSRECTITEM_TYPE )
 {
-  QGraphicsRectItem * obj = (QGraphicsRectItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsRectItem * obj = (QGraphicsRectItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

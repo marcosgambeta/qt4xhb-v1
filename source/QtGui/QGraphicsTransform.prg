@@ -42,7 +42,7 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSTRANSFORM_DELETE )
 {
-  QGraphicsTransform * obj = (QGraphicsTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTransform * obj = (QGraphicsTransform *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -64,7 +64,7 @@ virtual void applyTo ( QMatrix4x4 * matrix ) const = 0
 */
 HB_FUNC_STATIC( QGRAPHICSTRANSFORM_APPLYTO )
 {
-  QGraphicsTransform * obj = (QGraphicsTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTransform * obj = (QGraphicsTransform *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

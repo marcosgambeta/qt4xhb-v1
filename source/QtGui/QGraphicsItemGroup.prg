@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_DELETE )
 {
-  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -85,7 +85,7 @@ void addToGroup ( QGraphicsItem * item )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_ADDTOGROUP )
 {
-  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -111,7 +111,7 @@ void removeFromGroup ( QGraphicsItem * item )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_REMOVEFROMGROUP )
 {
-  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -137,7 +137,7 @@ virtual QRectF boundingRect () const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_BOUNDINGRECT )
 {
-  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -162,7 +162,7 @@ virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_ISOBSCUREDBY )
 {
-  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -186,7 +186,7 @@ virtual QPainterPath opaqueArea () const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_OPAQUEAREA )
 {
-  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -211,7 +211,7 @@ virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_PAINT )
 {
-  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -237,7 +237,7 @@ virtual int type () const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_TYPE )
 {
-  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

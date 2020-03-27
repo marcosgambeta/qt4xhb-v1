@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_NEW )
 
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_DELETE )
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextDocumentWriter * obj = (QTextDocumentWriter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -135,7 +135,7 @@ QTextCodec * codec () const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_CODEC )
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextDocumentWriter * obj = (QTextDocumentWriter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -160,7 +160,7 @@ QIODevice * device () const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_DEVICE )
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextDocumentWriter * obj = (QTextDocumentWriter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -185,7 +185,7 @@ QString fileName () const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_FILENAME )
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextDocumentWriter * obj = (QTextDocumentWriter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -209,7 +209,7 @@ QByteArray format () const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_FORMAT )
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextDocumentWriter * obj = (QTextDocumentWriter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -234,7 +234,7 @@ void setCodec ( QTextCodec * codec )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETCODEC )
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextDocumentWriter * obj = (QTextDocumentWriter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -260,7 +260,7 @@ void setDevice ( QIODevice * device )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETDEVICE )
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextDocumentWriter * obj = (QTextDocumentWriter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -286,7 +286,7 @@ void setFileName ( const QString & fileName )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETFILENAME )
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextDocumentWriter * obj = (QTextDocumentWriter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -312,7 +312,7 @@ void setFormat ( const QByteArray & format )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETFORMAT )
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextDocumentWriter * obj = (QTextDocumentWriter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -338,7 +338,7 @@ bool write ( const QTextDocument * document )
 */
 void QTextDocumentWriter_write1()
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextDocumentWriter * obj = (QTextDocumentWriter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -351,7 +351,7 @@ bool write ( const QTextDocumentFragment & fragment )
 */
 void QTextDocumentWriter_write2()
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextDocumentWriter * obj = (QTextDocumentWriter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -383,7 +383,7 @@ QList<QByteArray> supportedDocumentFormats ()
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SUPPORTEDDOCUMENTFORMATS )
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextDocumentWriter * obj = (QTextDocumentWriter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

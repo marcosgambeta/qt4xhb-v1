@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_NEW )
 */
 HB_FUNC_STATIC( QSTYLEOPTION_DELETE )
 {
-  QStyleOption * obj = (QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOption * obj = (QStyleOption *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -128,7 +128,7 @@ void init(const QWidget *w)
 */
 HB_FUNC_STATIC( QSTYLEOPTION_INIT )
 {
-  QStyleOption * obj = (QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOption * obj = (QStyleOption *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -154,7 +154,7 @@ void initFrom(const QWidget *w)
 */
 HB_FUNC_STATIC( QSTYLEOPTION_INITFROM )
 {
-  QStyleOption * obj = (QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOption * obj = (QStyleOption *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -180,7 +180,7 @@ int version
 */
 HB_FUNC_STATIC( QSTYLEOPTION_VERSION )
 {
-  QStyleOption * obj = (QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOption * obj = (QStyleOption *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_VERSION )
 }
 HB_FUNC_STATIC( QSTYLEOPTION_SETVERSION )
 {
-  QStyleOption * obj = (QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOption * obj = (QStyleOption *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -218,7 +218,7 @@ int type
 */
 HB_FUNC_STATIC( QSTYLEOPTION_TYPE )
 {
-  QStyleOption * obj = (QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOption * obj = (QStyleOption *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_TYPE )
 }
 HB_FUNC_STATIC( QSTYLEOPTION_SETTYPE )
 {
-  QStyleOption * obj = (QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOption * obj = (QStyleOption *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -256,7 +256,7 @@ QStyle::State state
 */
 HB_FUNC_STATIC( QSTYLEOPTION_STATE )
 {
-  QStyleOption * obj = (QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOption * obj = (QStyleOption *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_STATE )
 }
 HB_FUNC_STATIC( QSTYLEOPTION_SETSTATE )
 {
-  QStyleOption * obj = (QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOption * obj = (QStyleOption *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -294,7 +294,7 @@ Qt::LayoutDirection direction
 */
 HB_FUNC_STATIC( QSTYLEOPTION_DIRECTION )
 {
-  QStyleOption * obj = (QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOption * obj = (QStyleOption *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_DIRECTION )
 }
 HB_FUNC_STATIC( QSTYLEOPTION_SETDIRECTION )
 {
-  QStyleOption * obj = (QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOption * obj = (QStyleOption *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -332,7 +332,7 @@ QRect rect
 */
 HB_FUNC_STATIC( QSTYLEOPTION_RECT )
 {
-  QStyleOption * obj = (QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOption * obj = (QStyleOption *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_RECT )
 }
 HB_FUNC_STATIC( QSTYLEOPTION_SETRECT )
 {
-  QStyleOption * obj = (QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOption * obj = (QStyleOption *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -371,7 +371,7 @@ QFontMetrics fontMetrics
 */
 HB_FUNC_STATIC( QSTYLEOPTION_FONTMETRICS )
 {
-  QStyleOption * obj = (QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOption * obj = (QStyleOption *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_FONTMETRICS )
 }
 HB_FUNC_STATIC( QSTYLEOPTION_SETFONTMETRICS )
 {
-  QStyleOption * obj = (QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOption * obj = (QStyleOption *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -410,7 +410,7 @@ QPalette palette
 */
 HB_FUNC_STATIC( QSTYLEOPTION_PALETTE )
 {
-  QStyleOption * obj = (QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOption * obj = (QStyleOption *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_PALETTE )
 }
 HB_FUNC_STATIC( QSTYLEOPTION_SETPALETTE )
 {
-  QStyleOption * obj = (QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOption * obj = (QStyleOption *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

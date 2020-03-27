@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSSCENE_DELETE )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -208,7 +208,7 @@ QGraphicsItem * activePanel () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_ACTIVEPANEL )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -233,7 +233,7 @@ QGraphicsWidget * activeWindow () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_ACTIVEWINDOW )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -258,7 +258,7 @@ QGraphicsEllipseItem * addEllipse ( const QRectF & rect, const QPen & pen = QPen
 */
 void QGraphicsScene_addEllipse1()
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -272,7 +272,7 @@ QGraphicsEllipseItem * addEllipse ( qreal x, qreal y, qreal w, qreal h, const QP
 */
 void QGraphicsScene_addEllipse2()
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -305,7 +305,7 @@ void addItem ( QGraphicsItem * item )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_ADDITEM )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -331,7 +331,7 @@ QGraphicsLineItem * addLine ( const QLineF & line, const QPen & pen = QPen() )
 */
 void QGraphicsScene_addLine1()
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -345,7 +345,7 @@ QGraphicsLineItem * addLine ( qreal x1, qreal y1, qreal x2, qreal y2, const QPen
 */
 void QGraphicsScene_addLine2()
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -378,7 +378,7 @@ QGraphicsPathItem * addPath ( const QPainterPath & path, const QPen & pen = QPen
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_ADDPATH )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -403,7 +403,7 @@ QGraphicsPixmapItem * addPixmap ( const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_ADDPIXMAP )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -428,7 +428,7 @@ QGraphicsPolygonItem * addPolygon ( const QPolygonF & polygon, const QPen & pen 
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_ADDPOLYGON )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -453,7 +453,7 @@ QGraphicsRectItem * addRect ( const QRectF & rect, const QPen & pen = QPen(), co
 */
 void QGraphicsScene_addRect1()
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -467,7 +467,7 @@ QGraphicsRectItem * addRect ( qreal x, qreal y, qreal w, qreal h, const QPen & p
 */
 void QGraphicsScene_addRect2()
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -500,7 +500,7 @@ QGraphicsSimpleTextItem * addSimpleText ( const QString & text, const QFont & fo
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_ADDSIMPLETEXT )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -525,7 +525,7 @@ QGraphicsTextItem * addText ( const QString & text, const QFont & font = QFont()
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_ADDTEXT )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -550,7 +550,7 @@ QGraphicsProxyWidget * addWidget ( QWidget * widget, Qt::WindowFlags wFlags = 0 
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_ADDWIDGET )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -575,7 +575,7 @@ QBrush backgroundBrush () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_BACKGROUNDBRUSH )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -600,7 +600,7 @@ int bspTreeDepth () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_BSPTREEDEPTH )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -624,7 +624,7 @@ void clearFocus ()
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_CLEARFOCUS )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -650,7 +650,7 @@ QList<QGraphicsItem *> collidingItems ( const QGraphicsItem * item, Qt::ItemSele
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_COLLIDINGITEMS )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -698,7 +698,7 @@ QGraphicsItemGroup * createItemGroup ( const QList<QGraphicsItem *> & items )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_CREATEITEMGROUP )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -731,7 +731,7 @@ void destroyItemGroup ( QGraphicsItemGroup * group )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_DESTROYITEMGROUP )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -757,7 +757,7 @@ QGraphicsItem * focusItem () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_FOCUSITEM )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -782,7 +782,7 @@ QFont font () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_FONT )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -807,7 +807,7 @@ QBrush foregroundBrush () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_FOREGROUNDBRUSH )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -832,7 +832,7 @@ bool hasFocus () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_HASFOCUS )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -856,7 +856,7 @@ qreal height () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_HEIGHT )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -880,7 +880,7 @@ virtual QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_INPUTMETHODQUERY )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -905,7 +905,7 @@ void invalidate ( qreal x, qreal y, qreal w, qreal h, SceneLayers layers = AllLa
 */
 void QGraphicsScene_invalidate1()
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -920,7 +920,7 @@ void invalidate ( const QRectF & rect = QRectF(), SceneLayers layers = AllLayers
 */
 void QGraphicsScene_invalidate2()
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -954,7 +954,7 @@ bool isActive () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_ISACTIVE )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -978,7 +978,7 @@ bool isSortCacheEnabled () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_ISSORTCACHEENABLED )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1002,7 +1002,7 @@ QGraphicsItem * itemAt ( const QPointF & position, const QTransform & deviceTran
 */
 void QGraphicsScene_itemAt1()
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1016,7 +1016,7 @@ QGraphicsItem * itemAt ( qreal x, qreal y, const QTransform & deviceTransform ) 
 */
 void QGraphicsScene_itemAt2()
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1049,7 +1049,7 @@ ItemIndexMethod itemIndexMethod () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMINDEXMETHOD )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1073,7 +1073,7 @@ QList<QGraphicsItem *> items () const
 */
 void QGraphicsScene_items1()
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1110,7 +1110,7 @@ QList<QGraphicsItem *> items ( Qt::SortOrder order ) const
 */
 void QGraphicsScene_items2()
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1147,7 +1147,7 @@ QList<QGraphicsItem *> items ( const QPointF & pos, Qt::ItemSelectionMode mode, 
 */
 void QGraphicsScene_items3()
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1184,7 +1184,7 @@ QList<QGraphicsItem *> items ( qreal x, qreal y, qreal w, qreal h, Qt::ItemSelec
 */
 void QGraphicsScene_items4()
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1221,7 +1221,7 @@ QList<QGraphicsItem *> items ( const QRectF & rect, Qt::ItemSelectionMode mode, 
 */
 void QGraphicsScene_items5()
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1258,7 +1258,7 @@ QList<QGraphicsItem *> items ( const QPolygonF & polygon, Qt::ItemSelectionMode 
 */
 void QGraphicsScene_items6()
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1295,7 +1295,7 @@ QList<QGraphicsItem *> items ( const QPainterPath & path, Qt::ItemSelectionMode 
 */
 void QGraphicsScene_items7()
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1376,7 +1376,7 @@ QRectF itemsBoundingRect () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMSBOUNDINGRECT )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1401,7 +1401,7 @@ QGraphicsItem * mouseGrabberItem () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_MOUSEGRABBERITEM )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1426,7 +1426,7 @@ QPalette palette () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_PALETTE )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1451,7 +1451,7 @@ void removeItem ( QGraphicsItem * item )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_REMOVEITEM )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1477,7 +1477,7 @@ void render ( QPainter * painter, const QRectF & target = QRectF(), const QRectF
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_RENDER )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1503,7 +1503,7 @@ QRectF sceneRect () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_SCENERECT )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1528,7 +1528,7 @@ QList<QGraphicsItem *> selectedItems () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_SELECTEDITEMS )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1576,7 +1576,7 @@ QPainterPath selectionArea () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_SELECTIONAREA )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1601,7 +1601,7 @@ bool sendEvent ( QGraphicsItem * item, QEvent * event )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_SENDEVENT )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1625,7 +1625,7 @@ void setActivePanel ( QGraphicsItem * item )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_SETACTIVEPANEL )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1651,7 +1651,7 @@ void setActiveWindow ( QGraphicsWidget * widget )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_SETACTIVEWINDOW )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1677,7 +1677,7 @@ void setBackgroundBrush ( const QBrush & brush )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_SETBACKGROUNDBRUSH )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1703,7 +1703,7 @@ void setBspTreeDepth ( int depth )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_SETBSPTREEDEPTH )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1729,7 +1729,7 @@ void setFocus ( Qt::FocusReason focusReason = Qt::OtherFocusReason )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_SETFOCUS )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1755,7 +1755,7 @@ void setFocusItem ( QGraphicsItem * item, Qt::FocusReason focusReason = Qt::Othe
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_SETFOCUSITEM )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1781,7 +1781,7 @@ void setFont ( const QFont & font )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_SETFONT )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1807,7 +1807,7 @@ void setForegroundBrush ( const QBrush & brush )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_SETFOREGROUNDBRUSH )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1833,7 +1833,7 @@ void setItemIndexMethod ( ItemIndexMethod method )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_SETITEMINDEXMETHOD )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1859,7 +1859,7 @@ void setPalette ( const QPalette & palette )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_SETPALETTE )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1885,7 +1885,7 @@ void setSceneRect ( const QRectF & rect )
 */
 void QGraphicsScene_setSceneRect1()
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1900,7 +1900,7 @@ void setSceneRect ( qreal x, qreal y, qreal w, qreal h )
 */
 void QGraphicsScene_setSceneRect2()
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1934,7 +1934,7 @@ void setSelectionArea ( const QPainterPath & path, const QTransform & deviceTran
 */
 void QGraphicsScene_setSelectionArea1()
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1949,7 +1949,7 @@ void setSelectionArea ( const QPainterPath & path, Qt::ItemSelectionMode mode, c
 */
 void QGraphicsScene_setSelectionArea2()
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1983,7 +1983,7 @@ void setSortCacheEnabled ( bool enabled )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_SETSORTCACHEENABLED )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -2009,7 +2009,7 @@ void setStickyFocus ( bool enabled )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_SETSTICKYFOCUS )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -2035,7 +2035,7 @@ void setStyle ( QStyle * style )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_SETSTYLE )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -2061,7 +2061,7 @@ bool stickyFocus () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_STICKYFOCUS )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -2085,7 +2085,7 @@ QStyle * style () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_STYLE )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -2110,7 +2110,7 @@ void update ( qreal x, qreal y, qreal w, qreal h )
 */
 void QGraphicsScene_update1()
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -2125,7 +2125,7 @@ void update ( const QRectF & rect = QRectF() )
 */
 void QGraphicsScene_update2()
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -2159,7 +2159,7 @@ QList<QGraphicsView *> views () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_VIEWS )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -2207,7 +2207,7 @@ qreal width () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_WIDTH )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -2231,7 +2231,7 @@ void advance ()
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_ADVANCE )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -2257,7 +2257,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_CLEAR )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -2283,7 +2283,7 @@ void clearSelection ()
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_CLEARSELECTION )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

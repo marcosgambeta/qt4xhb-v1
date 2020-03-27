@@ -50,7 +50,7 @@ virtual QString actionText ( int action, Text t, int child ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_ACTIONTEXT )
 {
-  QAccessibleObject * obj = (QAccessibleObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAccessibleObject * obj = (QAccessibleObject *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -74,7 +74,7 @@ virtual bool doAction ( int action, int child, const QVariantList & params )
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_DOACTION )
 {
-  QAccessibleObject * obj = (QAccessibleObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAccessibleObject * obj = (QAccessibleObject *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -106,7 +106,7 @@ virtual bool isValid () const
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_ISVALID )
 {
-  QAccessibleObject * obj = (QAccessibleObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAccessibleObject * obj = (QAccessibleObject *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -130,7 +130,7 @@ virtual QObject * object () const
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_OBJECT )
 {
-  QAccessibleObject * obj = (QAccessibleObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAccessibleObject * obj = (QAccessibleObject *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -155,7 +155,7 @@ virtual QRect rect ( int child ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_RECT )
 {
-  QAccessibleObject * obj = (QAccessibleObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAccessibleObject * obj = (QAccessibleObject *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -180,7 +180,7 @@ virtual void setText ( Text t, int child, const QString & text )
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_SETTEXT )
 {
-  QAccessibleObject * obj = (QAccessibleObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAccessibleObject * obj = (QAccessibleObject *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -206,7 +206,7 @@ virtual int userActionCount ( int child ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_USERACTIONCOUNT )
 {
-  QAccessibleObject * obj = (QAccessibleObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAccessibleObject * obj = (QAccessibleObject *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

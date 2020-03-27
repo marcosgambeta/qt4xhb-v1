@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_NEW )
 
 HB_FUNC_STATIC( QBOXLAYOUT_DELETE )
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -113,7 +113,7 @@ void addLayout ( QLayout * layout, int stretch = 0 )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_ADDLAYOUT )
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -139,7 +139,7 @@ void addSpacerItem ( QSpacerItem * spacerItem )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_ADDSPACERITEM )
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -165,7 +165,7 @@ void addSpacing ( int size )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_ADDSPACING )
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -191,7 +191,7 @@ void addStretch ( int stretch = 0 )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_ADDSTRETCH )
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -217,7 +217,7 @@ void addStrut ( int size )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_ADDSTRUT )
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -243,7 +243,7 @@ void addWidget ( QWidget * widget, int stretch = 0, Qt::Alignment alignment = 0 
 */
 HB_FUNC_STATIC( QBOXLAYOUT_ADDWIDGET )
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -269,7 +269,7 @@ Direction direction () const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_DIRECTION )
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -293,7 +293,7 @@ void insertLayout ( int index, QLayout * layout, int stretch = 0 )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_INSERTLAYOUT )
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -319,7 +319,7 @@ void insertSpacerItem ( int index, QSpacerItem * spacerItem )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_INSERTSPACERITEM )
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -345,7 +345,7 @@ void insertSpacing ( int index, int size )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_INSERTSPACING )
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -371,7 +371,7 @@ void insertStretch ( int index, int stretch = 0 )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_INSERTSTRETCH )
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -397,7 +397,7 @@ void insertWidget ( int index, QWidget * widget, int stretch = 0, Qt::Alignment 
 */
 HB_FUNC_STATIC( QBOXLAYOUT_INSERTWIDGET )
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -423,7 +423,7 @@ void setDirection ( Direction direction )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_SETDIRECTION )
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -449,7 +449,7 @@ void setSpacing ( int spacing )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_SETSPACING )
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -475,7 +475,7 @@ void setStretch ( int index, int stretch )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_SETSTRETCH )
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -501,7 +501,7 @@ bool setStretchFactor ( QWidget * widget, int stretch )
 */
 void QBoxLayout_setStretchFactor1()
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -514,7 +514,7 @@ bool setStretchFactor ( QLayout * layout, int stretch )
 */
 void QBoxLayout_setStretchFactor2()
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -546,7 +546,7 @@ int spacing () const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_SPACING )
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -570,7 +570,7 @@ int stretch ( int index ) const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_STRETCH )
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -594,7 +594,7 @@ virtual void addItem ( QLayoutItem * item )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_ADDITEM )
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -620,7 +620,7 @@ virtual int count () const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_COUNT )
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -644,7 +644,7 @@ virtual Qt::Orientations expandingDirections () const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_EXPANDINGDIRECTIONS )
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -668,7 +668,7 @@ virtual bool hasHeightForWidth () const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_HASHEIGHTFORWIDTH )
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -692,7 +692,7 @@ virtual int heightForWidth ( int w ) const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_HEIGHTFORWIDTH )
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -716,7 +716,7 @@ virtual void invalidate ()
 */
 HB_FUNC_STATIC( QBOXLAYOUT_INVALIDATE )
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -742,7 +742,7 @@ virtual QLayoutItem * itemAt ( int index ) const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_ITEMAT )
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -767,7 +767,7 @@ virtual QSize maximumSize () const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_MAXIMUMSIZE )
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -792,7 +792,7 @@ virtual int minimumHeightForWidth ( int w ) const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_MINIMUMHEIGHTFORWIDTH )
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -816,7 +816,7 @@ virtual QSize minimumSize () const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_MINIMUMSIZE )
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -841,7 +841,7 @@ virtual void setGeometry ( const QRect & r )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_SETGEOMETRY )
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -867,7 +867,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_SIZEHINT )
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -892,7 +892,7 @@ virtual QLayoutItem * takeAt ( int index )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_TAKEAT )
 {
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBoxLayout * obj = (QBoxLayout *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

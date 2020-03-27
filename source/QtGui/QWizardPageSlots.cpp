@@ -33,7 +33,7 @@ void QWizardPageSlots::completeChanged()
 
 void QWizardPageSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWizardPage * obj = (QWizardPage *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

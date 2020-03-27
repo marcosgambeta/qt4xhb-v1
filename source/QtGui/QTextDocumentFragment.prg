@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW )
 
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_DELETE )
 {
-  QTextDocumentFragment * obj = (QTextDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextDocumentFragment * obj = (QTextDocumentFragment *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -139,7 +139,7 @@ bool isEmpty () const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_ISEMPTY )
 {
-  QTextDocumentFragment * obj = (QTextDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextDocumentFragment * obj = (QTextDocumentFragment *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -163,7 +163,7 @@ QString toHtml ( const QByteArray & encoding ) const
 */
 void QTextDocumentFragment_toHtml1()
 {
-  QTextDocumentFragment * obj = (QTextDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextDocumentFragment * obj = (QTextDocumentFragment *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -176,7 +176,7 @@ QString toHtml () const
 */
 void QTextDocumentFragment_toHtml2()
 {
-  QTextDocumentFragment * obj = (QTextDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextDocumentFragment * obj = (QTextDocumentFragment *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -208,7 +208,7 @@ QString toPlainText () const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOPLAINTEXT )
 {
-  QTextDocumentFragment * obj = (QTextDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextDocumentFragment * obj = (QTextDocumentFragment *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

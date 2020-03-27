@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_NEW )
 
 HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_DELETE )
 {
-  QSupportedWritingSystems * obj = (QSupportedWritingSystems *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSupportedWritingSystems * obj = (QSupportedWritingSystems *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -108,7 +108,7 @@ void setSupported ( QFontDatabase::WritingSystem writingSystem, bool support = t
 */
 HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_SETSUPPORTED )
 {
-  QSupportedWritingSystems * obj = (QSupportedWritingSystems *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSupportedWritingSystems * obj = (QSupportedWritingSystems *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -134,7 +134,7 @@ bool supported ( QFontDatabase::WritingSystem writingSystem ) const
 */
 HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_SUPPORTED )
 {
-  QSupportedWritingSystems * obj = (QSupportedWritingSystems *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSupportedWritingSystems * obj = (QSupportedWritingSystems *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

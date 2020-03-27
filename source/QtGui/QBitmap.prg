@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QBITMAP_NEW )
 
 HB_FUNC_STATIC( QBITMAP_DELETE )
 {
-  QBitmap * obj = (QBitmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBitmap * obj = (QBitmap *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -147,7 +147,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QBITMAP_CLEAR )
 {
-  QBitmap * obj = (QBitmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBitmap * obj = (QBitmap *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -173,7 +173,7 @@ QBitmap transformed ( const QTransform & matrix ) const
 */
 HB_FUNC_STATIC( QBITMAP_TRANSFORMED )
 {
-  QBitmap * obj = (QBitmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBitmap * obj = (QBitmap *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

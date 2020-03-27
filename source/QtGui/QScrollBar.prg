@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QSCROLLBAR_NEW )
 
 HB_FUNC_STATIC( QSCROLLBAR_DELETE )
 {
-  QScrollBar * obj = (QScrollBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QScrollBar * obj = (QScrollBar *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -104,7 +104,7 @@ virtual bool event ( QEvent * event )
 */
 HB_FUNC_STATIC( QSCROLLBAR_EVENT )
 {
-  QScrollBar * obj = (QScrollBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QScrollBar * obj = (QScrollBar *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -128,7 +128,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QSCROLLBAR_SIZEHINT )
 {
-  QScrollBar * obj = (QScrollBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QScrollBar * obj = (QScrollBar *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

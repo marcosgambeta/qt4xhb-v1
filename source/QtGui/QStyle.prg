@@ -80,7 +80,7 @@ RETURN
 
 HB_FUNC_STATIC( QSTYLE_DELETE )
 {
-  QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyle * obj = (QStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -102,7 +102,7 @@ int combinedLayoutSpacing ( QSizePolicy::ControlTypes controls1, QSizePolicy::Co
 */
 HB_FUNC_STATIC( QSTYLE_COMBINEDLAYOUTSPACING )
 {
-  QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyle * obj = (QStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -126,7 +126,7 @@ virtual void drawComplexControl ( ComplexControl control, const QStyleOptionComp
 */
 HB_FUNC_STATIC( QSTYLE_DRAWCOMPLEXCONTROL )
 {
-  QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyle * obj = (QStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -152,7 +152,7 @@ virtual void drawControl ( ControlElement element, const QStyleOption * option, 
 */
 HB_FUNC_STATIC( QSTYLE_DRAWCONTROL )
 {
-  QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyle * obj = (QStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -178,7 +178,7 @@ virtual void drawItemPixmap ( QPainter * painter, const QRect & rectangle, int a
 */
 HB_FUNC_STATIC( QSTYLE_DRAWITEMPIXMAP )
 {
-  QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyle * obj = (QStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -204,7 +204,7 @@ virtual void drawItemText ( QPainter * painter, const QRect & rectangle, int ali
 */
 HB_FUNC_STATIC( QSTYLE_DRAWITEMTEXT )
 {
-  QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyle * obj = (QStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -230,7 +230,7 @@ virtual void drawPrimitive ( PrimitiveElement element, const QStyleOption * opti
 */
 HB_FUNC_STATIC( QSTYLE_DRAWPRIMITIVE )
 {
-  QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyle * obj = (QStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -256,7 +256,7 @@ virtual QPixmap generatedIconPixmap ( QIcon::Mode iconMode, const QPixmap & pixm
 */
 HB_FUNC_STATIC( QSTYLE_GENERATEDICONPIXMAP )
 {
-  QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyle * obj = (QStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -281,7 +281,7 @@ virtual SubControl hitTestComplexControl ( ComplexControl control, const QStyleO
 */
 HB_FUNC_STATIC( QSTYLE_HITTESTCOMPLEXCONTROL )
 {
-  QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyle * obj = (QStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -305,7 +305,7 @@ virtual QRect itemPixmapRect ( const QRect & rectangle, int alignment, const QPi
 */
 HB_FUNC_STATIC( QSTYLE_ITEMPIXMAPRECT )
 {
-  QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyle * obj = (QStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -330,7 +330,7 @@ virtual QRect itemTextRect ( const QFontMetrics & metrics, const QRect & rectang
 */
 HB_FUNC_STATIC( QSTYLE_ITEMTEXTRECT )
 {
-  QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyle * obj = (QStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -355,7 +355,7 @@ int layoutSpacing ( QSizePolicy::ControlType control1, QSizePolicy::ControlType 
 */
 HB_FUNC_STATIC( QSTYLE_LAYOUTSPACING )
 {
-  QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyle * obj = (QStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -379,7 +379,7 @@ virtual int pixelMetric ( PixelMetric metric, const QStyleOption * option = 0, c
 */
 HB_FUNC_STATIC( QSTYLE_PIXELMETRIC )
 {
-  QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyle * obj = (QStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -403,7 +403,7 @@ virtual void polish ( QWidget * widget )
 */
 void QStyle_polish1()
 {
-  QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyle * obj = (QStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -418,7 +418,7 @@ virtual void polish ( QApplication * application )
 */
 void QStyle_polish2()
 {
-  QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyle * obj = (QStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -433,7 +433,7 @@ virtual void polish ( QPalette & palette )
 */
 void QStyle_polish3()
 {
-  QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyle * obj = (QStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -472,7 +472,7 @@ const QStyle * proxy () const
 */
 HB_FUNC_STATIC( QSTYLE_PROXY )
 {
-  QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyle * obj = (QStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -497,7 +497,7 @@ virtual QSize sizeFromContents ( ContentsType type, const QStyleOption * option,
 */
 HB_FUNC_STATIC( QSTYLE_SIZEFROMCONTENTS )
 {
-  QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyle * obj = (QStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -522,7 +522,7 @@ QIcon standardIcon ( StandardPixmap standardIcon, const QStyleOption * option = 
 */
 HB_FUNC_STATIC( QSTYLE_STANDARDICON )
 {
-  QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyle * obj = (QStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -547,7 +547,7 @@ virtual QPalette standardPalette () const
 */
 HB_FUNC_STATIC( QSTYLE_STANDARDPALETTE )
 {
-  QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyle * obj = (QStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -572,7 +572,7 @@ virtual int styleHint ( StyleHint hint, const QStyleOption * option = 0, const Q
 */
 HB_FUNC_STATIC( QSTYLE_STYLEHINT )
 {
-  QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyle * obj = (QStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -596,7 +596,7 @@ virtual QRect subControlRect ( ComplexControl control, const QStyleOptionComplex
 */
 HB_FUNC_STATIC( QSTYLE_SUBCONTROLRECT )
 {
-  QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyle * obj = (QStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -621,7 +621,7 @@ virtual QRect subElementRect ( SubElement element, const QStyleOption * option, 
 */
 HB_FUNC_STATIC( QSTYLE_SUBELEMENTRECT )
 {
-  QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyle * obj = (QStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -646,7 +646,7 @@ virtual void unpolish ( QWidget * widget )
 */
 HB_FUNC_STATIC( QSTYLE_UNPOLISH1 )
 {
-  QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyle * obj = (QStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -672,7 +672,7 @@ virtual void unpolish ( QApplication * application )
 */
 HB_FUNC_STATIC( QSTYLE_UNPOLISH2 )
 {
-  QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyle * obj = (QStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -717,7 +717,7 @@ QRect alignedRect ( Qt::LayoutDirection direction, Qt::Alignment alignment, cons
 */
 HB_FUNC_STATIC( QSTYLE_ALIGNEDRECT )
 {
-  QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyle * obj = (QStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

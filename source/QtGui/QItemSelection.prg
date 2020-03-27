@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QITEMSELECTION_NEW )
 
 HB_FUNC_STATIC( QITEMSELECTION_DELETE )
 {
-  QItemSelection * obj = (QItemSelection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemSelection * obj = (QItemSelection *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -112,7 +112,7 @@ bool contains ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QITEMSELECTION_CONTAINS )
 {
-  QItemSelection * obj = (QItemSelection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemSelection * obj = (QItemSelection *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -136,7 +136,7 @@ QModelIndexList indexes () const
 */
 HB_FUNC_STATIC( QITEMSELECTION_INDEXES )
 {
-  QItemSelection * obj = (QItemSelection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemSelection * obj = (QItemSelection *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -188,7 +188,7 @@ void merge ( const QItemSelection & other, QItemSelectionModel::SelectionFlags c
 */
 HB_FUNC_STATIC( QITEMSELECTION_MERGE )
 {
-  QItemSelection * obj = (QItemSelection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemSelection * obj = (QItemSelection *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -214,7 +214,7 @@ void select ( const QModelIndex & topLeft, const QModelIndex & bottomRight )
 */
 HB_FUNC_STATIC( QITEMSELECTION_SELECT )
 {
-  QItemSelection * obj = (QItemSelection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemSelection * obj = (QItemSelection *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

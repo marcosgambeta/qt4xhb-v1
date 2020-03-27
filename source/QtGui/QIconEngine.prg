@@ -55,7 +55,7 @@ RETURN
 
 HB_FUNC_STATIC( QICONENGINE_DELETE )
 {
-  QIconEngine * obj = (QIconEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIconEngine * obj = (QIconEngine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -75,7 +75,7 @@ virtual QSize actualSize ( const QSize & size, QIcon::Mode mode, QIcon::State st
 */
 HB_FUNC_STATIC( QICONENGINE_ACTUALSIZE )
 {
-  QIconEngine * obj = (QIconEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIconEngine * obj = (QIconEngine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -100,7 +100,7 @@ virtual void addFile ( const QString & fileName, const QSize & size, QIcon::Mode
 */
 HB_FUNC_STATIC( QICONENGINE_ADDFILE )
 {
-  QIconEngine * obj = (QIconEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIconEngine * obj = (QIconEngine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -126,7 +126,7 @@ virtual void addPixmap ( const QPixmap & pixmap, QIcon::Mode mode, QIcon::State 
 */
 HB_FUNC_STATIC( QICONENGINE_ADDPIXMAP )
 {
-  QIconEngine * obj = (QIconEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIconEngine * obj = (QIconEngine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -152,7 +152,7 @@ virtual void paint ( QPainter * painter, const QRect & rect, QIcon::Mode mode, Q
 */
 HB_FUNC_STATIC( QICONENGINE_PAINT )
 {
-  QIconEngine * obj = (QIconEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIconEngine * obj = (QIconEngine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -178,7 +178,7 @@ virtual QPixmap pixmap ( const QSize & size, QIcon::Mode mode, QIcon::State stat
 */
 HB_FUNC_STATIC( QICONENGINE_PIXMAP )
 {
-  QIconEngine * obj = (QIconEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIconEngine * obj = (QIconEngine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QINPUTEVENT_NEW )
 
 HB_FUNC_STATIC( QINPUTEVENT_DELETE )
 {
-  QInputEvent * obj = (QInputEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QInputEvent * obj = (QInputEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -78,7 +78,7 @@ Qt::KeyboardModifiers modifiers() const
 */
 HB_FUNC_STATIC( QINPUTEVENT_MODIFIERS )
 {
-  QInputEvent * obj = (QInputEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QInputEvent * obj = (QInputEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -102,7 +102,7 @@ void setModifiers(Qt::KeyboardModifiers amodifiers)
 */
 HB_FUNC_STATIC( QINPUTEVENT_SETMODIFIERS )
 {
-  QInputEvent * obj = (QInputEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QInputEvent * obj = (QInputEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

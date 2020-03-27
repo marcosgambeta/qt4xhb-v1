@@ -235,7 +235,7 @@ void QTableWidgetSlots::itemSelectionChanged()
 
 void QTableWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTableWidget * obj = (QTableWidget *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

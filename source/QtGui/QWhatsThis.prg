@@ -57,7 +57,7 @@ RETURN
 
 HB_FUNC_STATIC( QWHATSTHIS_DELETE )
 {
-  QWhatsThis * obj = (QWhatsThis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWhatsThis * obj = (QWhatsThis *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

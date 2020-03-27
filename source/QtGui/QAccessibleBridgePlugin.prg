@@ -44,7 +44,7 @@ RETURN
 
 HB_FUNC_STATIC( QACCESSIBLEBRIDGEPLUGIN_DELETE )
 {
-  QAccessibleBridgePlugin * obj = (QAccessibleBridgePlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAccessibleBridgePlugin * obj = (QAccessibleBridgePlugin *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -66,7 +66,7 @@ virtual QAccessibleBridge * create ( const QString & key ) = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEBRIDGEPLUGIN_CREATE )
 {
-  QAccessibleBridgePlugin * obj = (QAccessibleBridgePlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAccessibleBridgePlugin * obj = (QAccessibleBridgePlugin *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -91,7 +91,7 @@ virtual QStringList keys () const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEBRIDGEPLUGIN_KEYS )
 {
-  QAccessibleBridgePlugin * obj = (QAccessibleBridgePlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAccessibleBridgePlugin * obj = (QAccessibleBridgePlugin *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

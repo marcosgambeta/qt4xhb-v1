@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QWINDOWSVISTASTYLE_NEW )
 
 HB_FUNC_STATIC( QWINDOWSVISTASTYLE_DELETE )
 {
-  QWindowsVistaStyle * obj = (QWindowsVistaStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindowsVistaStyle * obj = (QWindowsVistaStyle *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

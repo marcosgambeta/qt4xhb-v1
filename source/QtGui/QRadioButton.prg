@@ -84,7 +84,7 @@ virtual QSize minimumSizeHint () const
 */
 HB_FUNC_STATIC( QRADIOBUTTON_MINIMUMSIZEHINT )
 {
-  QRadioButton * obj = (QRadioButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRadioButton * obj = (QRadioButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -109,7 +109,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QRADIOBUTTON_SIZEHINT )
 {
-  QRadioButton * obj = (QRadioButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRadioButton * obj = (QRadioButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

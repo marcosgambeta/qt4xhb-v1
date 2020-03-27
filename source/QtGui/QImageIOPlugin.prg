@@ -45,7 +45,7 @@ RETURN
 
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_DELETE )
 {
-  QImageIOPlugin * obj = (QImageIOPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImageIOPlugin * obj = (QImageIOPlugin *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -67,7 +67,7 @@ virtual Capabilities capabilities ( QIODevice * device, const QByteArray & forma
 */
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_CAPABILITIES )
 {
-  QImageIOPlugin * obj = (QImageIOPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImageIOPlugin * obj = (QImageIOPlugin *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -91,7 +91,7 @@ virtual QImageIOHandler * create ( QIODevice * device, const QByteArray & format
 */
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_CREATE )
 {
-  QImageIOPlugin * obj = (QImageIOPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImageIOPlugin * obj = (QImageIOPlugin *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -116,7 +116,7 @@ virtual QStringList keys () const = 0
 */
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_KEYS )
 {
-  QImageIOPlugin * obj = (QImageIOPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImageIOPlugin * obj = (QImageIOPlugin *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

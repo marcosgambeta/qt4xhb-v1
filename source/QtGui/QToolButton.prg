@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_NEW )
 
 HB_FUNC_STATIC( QTOOLBUTTON_DELETE )
 {
-  QToolButton * obj = (QToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QToolButton * obj = (QToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -103,7 +103,7 @@ Qt::ArrowType arrowType () const
 */
 HB_FUNC_STATIC( QTOOLBUTTON_ARROWTYPE )
 {
-  QToolButton * obj = (QToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QToolButton * obj = (QToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -127,7 +127,7 @@ bool autoRaise () const
 */
 HB_FUNC_STATIC( QTOOLBUTTON_AUTORAISE )
 {
-  QToolButton * obj = (QToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QToolButton * obj = (QToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -151,7 +151,7 @@ QAction * defaultAction () const
 */
 HB_FUNC_STATIC( QTOOLBUTTON_DEFAULTACTION )
 {
-  QToolButton * obj = (QToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QToolButton * obj = (QToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -176,7 +176,7 @@ QMenu * menu () const
 */
 HB_FUNC_STATIC( QTOOLBUTTON_MENU )
 {
-  QToolButton * obj = (QToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QToolButton * obj = (QToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -201,7 +201,7 @@ ToolButtonPopupMode popupMode () const
 */
 HB_FUNC_STATIC( QTOOLBUTTON_POPUPMODE )
 {
-  QToolButton * obj = (QToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QToolButton * obj = (QToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -225,7 +225,7 @@ void setArrowType ( Qt::ArrowType type )
 */
 HB_FUNC_STATIC( QTOOLBUTTON_SETARROWTYPE )
 {
-  QToolButton * obj = (QToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QToolButton * obj = (QToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -251,7 +251,7 @@ void setAutoRaise ( bool enable )
 */
 HB_FUNC_STATIC( QTOOLBUTTON_SETAUTORAISE )
 {
-  QToolButton * obj = (QToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QToolButton * obj = (QToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -277,7 +277,7 @@ void setMenu ( QMenu * menu )
 */
 HB_FUNC_STATIC( QTOOLBUTTON_SETMENU )
 {
-  QToolButton * obj = (QToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QToolButton * obj = (QToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -303,7 +303,7 @@ void setPopupMode ( ToolButtonPopupMode mode )
 */
 HB_FUNC_STATIC( QTOOLBUTTON_SETPOPUPMODE )
 {
-  QToolButton * obj = (QToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QToolButton * obj = (QToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -329,7 +329,7 @@ Qt::ToolButtonStyle toolButtonStyle () const
 */
 HB_FUNC_STATIC( QTOOLBUTTON_TOOLBUTTONSTYLE )
 {
-  QToolButton * obj = (QToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QToolButton * obj = (QToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -353,7 +353,7 @@ virtual QSize minimumSizeHint () const
 */
 HB_FUNC_STATIC( QTOOLBUTTON_MINIMUMSIZEHINT )
 {
-  QToolButton * obj = (QToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QToolButton * obj = (QToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -378,7 +378,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QTOOLBUTTON_SIZEHINT )
 {
-  QToolButton * obj = (QToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QToolButton * obj = (QToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -403,7 +403,7 @@ void setDefaultAction ( QAction * action )
 */
 HB_FUNC_STATIC( QTOOLBUTTON_SETDEFAULTACTION )
 {
-  QToolButton * obj = (QToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QToolButton * obj = (QToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -429,7 +429,7 @@ void setToolButtonStyle ( Qt::ToolButtonStyle style )
 */
 HB_FUNC_STATIC( QTOOLBUTTON_SETTOOLBUTTONSTYLE )
 {
-  QToolButton * obj = (QToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QToolButton * obj = (QToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -455,7 +455,7 @@ void showMenu ()
 */
 HB_FUNC_STATIC( QTOOLBUTTON_SHOWMENU )
 {
-  QToolButton * obj = (QToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QToolButton * obj = (QToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

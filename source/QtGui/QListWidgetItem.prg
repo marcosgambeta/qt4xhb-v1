@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_NEW )
 
 HB_FUNC_STATIC( QLISTWIDGETITEM_DELETE )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -175,7 +175,7 @@ QBrush background () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_BACKGROUND )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -200,7 +200,7 @@ Qt::CheckState checkState () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_CHECKSTATE )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -224,7 +224,7 @@ virtual QListWidgetItem * clone () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_CLONE )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -249,7 +249,7 @@ virtual QVariant data ( int role ) const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_DATA )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -274,7 +274,7 @@ Qt::ItemFlags flags () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_FLAGS )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -298,7 +298,7 @@ QFont font () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_FONT )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -323,7 +323,7 @@ QBrush foreground () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_FOREGROUND )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -348,7 +348,7 @@ QIcon icon () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_ICON )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -373,7 +373,7 @@ bool isHidden () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_ISHIDDEN )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -397,7 +397,7 @@ bool isSelected () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_ISSELECTED )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -421,7 +421,7 @@ QListWidget * listWidget () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_LISTWIDGET )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -446,7 +446,7 @@ virtual void read ( QDataStream & in )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_READ )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -472,7 +472,7 @@ void setBackground ( const QBrush & brush )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETBACKGROUND )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -498,7 +498,7 @@ void setCheckState ( Qt::CheckState state )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETCHECKSTATE )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -524,7 +524,7 @@ virtual void setData ( int role, const QVariant & value )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETDATA )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -550,7 +550,7 @@ void setFlags ( Qt::ItemFlags flags )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETFLAGS )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -576,7 +576,7 @@ void setFont ( const QFont & font )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETFONT )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -602,7 +602,7 @@ void setForeground ( const QBrush & brush )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETFOREGROUND )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -628,7 +628,7 @@ void setHidden ( bool hide )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETHIDDEN )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -654,7 +654,7 @@ void setIcon ( const QIcon & icon )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETICON )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -680,7 +680,7 @@ void setSelected ( bool select )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETSELECTED )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -706,7 +706,7 @@ void setSizeHint ( const QSize & size )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETSIZEHINT )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -732,7 +732,7 @@ void setStatusTip ( const QString & statusTip )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETSTATUSTIP )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -758,7 +758,7 @@ void setText ( const QString & text )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETTEXT )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -784,7 +784,7 @@ void setTextAlignment ( int alignment )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETTEXTALIGNMENT )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -810,7 +810,7 @@ void setToolTip ( const QString & toolTip )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETTOOLTIP )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -836,7 +836,7 @@ void setWhatsThis ( const QString & whatsThis )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETWHATSTHIS )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -862,7 +862,7 @@ QSize sizeHint () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SIZEHINT )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -887,7 +887,7 @@ QString statusTip () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_STATUSTIP )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -911,7 +911,7 @@ QString text () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_TEXT )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -935,7 +935,7 @@ int textAlignment () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_TEXTALIGNMENT )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -959,7 +959,7 @@ QString toolTip () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_TOOLTIP )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -983,7 +983,7 @@ int type () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_TYPE )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1007,7 +1007,7 @@ QString whatsThis () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_WHATSTHIS )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1031,7 +1031,7 @@ virtual void write ( QDataStream & out ) const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_WRITE )
 {
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidgetItem * obj = (QListWidgetItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

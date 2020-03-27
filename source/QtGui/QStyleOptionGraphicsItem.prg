@@ -112,7 +112,7 @@ QRectF exposedRect
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_EXPOSEDRECT )
 {
-  QStyleOptionGraphicsItem * obj = (QStyleOptionGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionGraphicsItem * obj = (QStyleOptionGraphicsItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_EXPOSEDRECT )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_SETEXPOSEDRECT )
 {
-  QStyleOptionGraphicsItem * obj = (QStyleOptionGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionGraphicsItem * obj = (QStyleOptionGraphicsItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -151,7 +151,7 @@ QMatrix matrix
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_MATRIX )
 {
-  QStyleOptionGraphicsItem * obj = (QStyleOptionGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionGraphicsItem * obj = (QStyleOptionGraphicsItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_MATRIX )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_SETMATRIX )
 {
-  QStyleOptionGraphicsItem * obj = (QStyleOptionGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionGraphicsItem * obj = (QStyleOptionGraphicsItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -190,7 +190,7 @@ qreal levelOfDetail
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_LEVELOFDETAIL )
 {
-  QStyleOptionGraphicsItem * obj = (QStyleOptionGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionGraphicsItem * obj = (QStyleOptionGraphicsItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_LEVELOFDETAIL )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_SETLEVELOFDETAIL )
 {
-  QStyleOptionGraphicsItem * obj = (QStyleOptionGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionGraphicsItem * obj = (QStyleOptionGraphicsItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

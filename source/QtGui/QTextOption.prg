@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QTEXTOPTION_NEW )
 
 HB_FUNC_STATIC( QTEXTOPTION_DELETE )
 {
-  QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextOption * obj = (QTextOption *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -134,7 +134,7 @@ Qt::Alignment alignment () const
 */
 HB_FUNC_STATIC( QTEXTOPTION_ALIGNMENT )
 {
-  QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextOption * obj = (QTextOption *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -158,7 +158,7 @@ Flags flags () const
 */
 HB_FUNC_STATIC( QTEXTOPTION_FLAGS )
 {
-  QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextOption * obj = (QTextOption *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -182,7 +182,7 @@ void setAlignment ( Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QTEXTOPTION_SETALIGNMENT )
 {
-  QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextOption * obj = (QTextOption *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -208,7 +208,7 @@ void setFlags ( Flags flags )
 */
 HB_FUNC_STATIC( QTEXTOPTION_SETFLAGS )
 {
-  QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextOption * obj = (QTextOption *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -234,7 +234,7 @@ void setTabArray ( QList<qreal> tabStops )
 */
 HB_FUNC_STATIC( QTEXTOPTION_SETTABARRAY )
 {
-  QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextOption * obj = (QTextOption *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -270,7 +270,7 @@ void setTabStop ( qreal tabStop )
 */
 HB_FUNC_STATIC( QTEXTOPTION_SETTABSTOP )
 {
-  QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextOption * obj = (QTextOption *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -296,7 +296,7 @@ void setTextDirection ( Qt::LayoutDirection direction )
 */
 HB_FUNC_STATIC( QTEXTOPTION_SETTEXTDIRECTION )
 {
-  QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextOption * obj = (QTextOption *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -322,7 +322,7 @@ void setUseDesignMetrics ( bool enable )
 */
 HB_FUNC_STATIC( QTEXTOPTION_SETUSEDESIGNMETRICS )
 {
-  QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextOption * obj = (QTextOption *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -348,7 +348,7 @@ void setWrapMode ( WrapMode mode )
 */
 HB_FUNC_STATIC( QTEXTOPTION_SETWRAPMODE )
 {
-  QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextOption * obj = (QTextOption *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -374,7 +374,7 @@ QList<qreal> tabArray () const
 */
 HB_FUNC_STATIC( QTEXTOPTION_TABARRAY )
 {
-  QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextOption * obj = (QTextOption *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -399,7 +399,7 @@ qreal tabStop () const
 */
 HB_FUNC_STATIC( QTEXTOPTION_TABSTOP )
 {
-  QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextOption * obj = (QTextOption *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -423,7 +423,7 @@ Qt::LayoutDirection textDirection () const
 */
 HB_FUNC_STATIC( QTEXTOPTION_TEXTDIRECTION )
 {
-  QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextOption * obj = (QTextOption *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -447,7 +447,7 @@ bool useDesignMetrics () const
 */
 HB_FUNC_STATIC( QTEXTOPTION_USEDESIGNMETRICS )
 {
-  QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextOption * obj = (QTextOption *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -471,7 +471,7 @@ WrapMode wrapMode () const
 */
 HB_FUNC_STATIC( QTEXTOPTION_WRAPMODE )
 {
-  QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextOption * obj = (QTextOption *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

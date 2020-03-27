@@ -56,7 +56,7 @@ RETURN
 
 HB_FUNC_STATIC( QGESTURERECOGNIZER_DELETE )
 {
-  QGestureRecognizer * obj = (QGestureRecognizer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGestureRecognizer * obj = (QGestureRecognizer *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -76,7 +76,7 @@ virtual QGesture * create ( QObject * target )
 */
 HB_FUNC_STATIC( QGESTURERECOGNIZER_CREATE )
 {
-  QGestureRecognizer * obj = (QGestureRecognizer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGestureRecognizer * obj = (QGestureRecognizer *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -101,7 +101,7 @@ virtual Result recognize ( QGesture * gesture, QObject * watched, QEvent * event
 */
 HB_FUNC_STATIC( QGESTURERECOGNIZER_RECOGNIZE )
 {
-  QGestureRecognizer * obj = (QGestureRecognizer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGestureRecognizer * obj = (QGestureRecognizer *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -125,7 +125,7 @@ virtual void reset ( QGesture * gesture )
 */
 HB_FUNC_STATIC( QGESTURERECOGNIZER_RESET )
 {
-  QGestureRecognizer * obj = (QGestureRecognizer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGestureRecognizer * obj = (QGestureRecognizer *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

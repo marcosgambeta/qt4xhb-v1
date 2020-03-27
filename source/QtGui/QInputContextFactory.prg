@@ -56,7 +56,7 @@ RETURN
 
 HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_DELETE )
 {
-  QInputContextFactory * obj = (QInputContextFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QInputContextFactory * obj = (QInputContextFactory *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -76,7 +76,7 @@ QInputContext * create ( const QString & key, QObject * parent )
 */
 HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_CREATE )
 {
-  QInputContextFactory * obj = (QInputContextFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QInputContextFactory * obj = (QInputContextFactory *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

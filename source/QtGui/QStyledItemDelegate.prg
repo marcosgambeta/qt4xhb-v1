@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_NEW )
 
 HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_DELETE )
 {
-  QStyledItemDelegate * obj = (QStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyledItemDelegate * obj = (QStyledItemDelegate *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -92,7 +92,7 @@ virtual QString displayText ( const QVariant & value, const QLocale & locale ) c
 */
 HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_DISPLAYTEXT )
 {
-  QStyledItemDelegate * obj = (QStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyledItemDelegate * obj = (QStyledItemDelegate *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -116,7 +116,7 @@ QItemEditorFactory * itemEditorFactory () const
 */
 HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_ITEMEDITORFACTORY )
 {
-  QStyledItemDelegate * obj = (QStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyledItemDelegate * obj = (QStyledItemDelegate *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -141,7 +141,7 @@ void setItemEditorFactory ( QItemEditorFactory * factory )
 */
 HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_SETITEMEDITORFACTORY )
 {
-  QStyledItemDelegate * obj = (QStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyledItemDelegate * obj = (QStyledItemDelegate *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -167,7 +167,7 @@ virtual QWidget * createEditor ( QWidget * parent, const QStyleOptionViewItem & 
 */
 HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_CREATEEDITOR )
 {
-  QStyledItemDelegate * obj = (QStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyledItemDelegate * obj = (QStyledItemDelegate *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -192,7 +192,7 @@ virtual void paint ( QPainter * painter, const QStyleOptionViewItem & option, co
 */
 HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_PAINT )
 {
-  QStyledItemDelegate * obj = (QStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyledItemDelegate * obj = (QStyledItemDelegate *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -218,7 +218,7 @@ virtual void setEditorData ( QWidget * editor, const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_SETEDITORDATA )
 {
-  QStyledItemDelegate * obj = (QStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyledItemDelegate * obj = (QStyledItemDelegate *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -244,7 +244,7 @@ virtual void setModelData ( QWidget * editor, QAbstractItemModel * model, const 
 */
 HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_SETMODELDATA )
 {
-  QStyledItemDelegate * obj = (QStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyledItemDelegate * obj = (QStyledItemDelegate *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -270,7 +270,7 @@ virtual QSize sizeHint ( const QStyleOptionViewItem & option, const QModelIndex 
 */
 HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_SIZEHINT )
 {
-  QStyledItemDelegate * obj = (QStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyledItemDelegate * obj = (QStyledItemDelegate *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -295,7 +295,7 @@ virtual void updateEditorGeometry ( QWidget * editor, const QStyleOptionViewItem
 */
 HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_UPDATEEDITORGEOMETRY )
 {
-  QStyledItemDelegate * obj = (QStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyledItemDelegate * obj = (QStyledItemDelegate *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

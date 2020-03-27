@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_DELETE )
 {
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -113,7 +113,7 @@ QFont font () const
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_FONT )
 {
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -138,7 +138,7 @@ void setFont ( const QFont & font )
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SETFONT )
 {
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -164,7 +164,7 @@ void setText ( const QString & text )
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SETTEXT )
 {
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -190,7 +190,7 @@ QString text () const
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_TEXT )
 {
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -214,7 +214,7 @@ virtual QRectF boundingRect () const
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_BOUNDINGRECT )
 {
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -239,7 +239,7 @@ virtual bool contains ( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_CONTAINS )
 {
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -263,7 +263,7 @@ virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_ISOBSCUREDBY )
 {
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -287,7 +287,7 @@ virtual QPainterPath opaqueArea () const
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_OPAQUEAREA )
 {
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -312,7 +312,7 @@ virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_PAINT )
 {
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -338,7 +338,7 @@ virtual QPainterPath shape () const
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SHAPE )
 {
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -363,7 +363,7 @@ virtual int type () const
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_TYPE )
 {
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

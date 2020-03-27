@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW )
 
 HB_FUNC_STATIC( QSYSTEMTRAYICON_DELETE )
 {
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -123,7 +123,7 @@ QMenu * contextMenu () const
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_CONTEXTMENU )
 {
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -148,7 +148,7 @@ QRect geometry () const
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_GEOMETRY )
 {
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -173,7 +173,7 @@ QIcon icon () const
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_ICON )
 {
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -198,7 +198,7 @@ bool isVisible () const
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_ISVISIBLE )
 {
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -222,7 +222,7 @@ void setContextMenu ( QMenu * menu )
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SETCONTEXTMENU )
 {
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -248,7 +248,7 @@ void setIcon ( const QIcon & icon )
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SETICON )
 {
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -274,7 +274,7 @@ void setToolTip ( const QString & tip )
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SETTOOLTIP )
 {
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -300,7 +300,7 @@ void showMessage ( const QString & title, const QString & message, MessageIcon i
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOWMESSAGE )
 {
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -326,7 +326,7 @@ QString toolTip () const
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_TOOLTIP )
 {
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -350,7 +350,7 @@ void hide ()
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_HIDE )
 {
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -376,7 +376,7 @@ void setVisible ( bool visible )
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SETVISIBLE )
 {
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -402,7 +402,7 @@ void show ()
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOW )
 {
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

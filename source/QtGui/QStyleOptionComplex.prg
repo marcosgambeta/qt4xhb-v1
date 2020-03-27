@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_NEW )
 
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_DELETE )
 {
-  QStyleOptionComplex * obj = (QStyleOptionComplex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionComplex * obj = (QStyleOptionComplex *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -101,7 +101,7 @@ QStyle::SubControls subControls
 */
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SUBCONTROLS )
 {
-  QStyleOptionComplex * obj = (QStyleOptionComplex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionComplex * obj = (QStyleOptionComplex *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SUBCONTROLS )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SETSUBCONTROLS )
 {
-  QStyleOptionComplex * obj = (QStyleOptionComplex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionComplex * obj = (QStyleOptionComplex *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -139,7 +139,7 @@ QStyle::SubControls activeSubControls
 */
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_ACTIVESUBCONTROLS )
 {
-  QStyleOptionComplex * obj = (QStyleOptionComplex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionComplex * obj = (QStyleOptionComplex *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_ACTIVESUBCONTROLS )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SETACTIVESUBCONTROLS )
 {
-  QStyleOptionComplex * obj = (QStyleOptionComplex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOptionComplex * obj = (QStyleOptionComplex *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

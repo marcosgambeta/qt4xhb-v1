@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DELETE )
 {
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -142,7 +142,7 @@ void adjustSize ()
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ADJUSTSIZE )
 {
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -168,7 +168,7 @@ QColor defaultTextColor () const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DEFAULTTEXTCOLOR )
 {
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -193,7 +193,7 @@ QTextDocument * document () const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DOCUMENT )
 {
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -218,7 +218,7 @@ QFont font () const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_FONT )
 {
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -243,7 +243,7 @@ bool openExternalLinks () const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_OPENEXTERNALLINKS )
 {
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -267,7 +267,7 @@ void setDefaultTextColor ( const QColor & col )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETDEFAULTTEXTCOLOR )
 {
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -293,7 +293,7 @@ void setDocument ( QTextDocument * document )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETDOCUMENT )
 {
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -319,7 +319,7 @@ void setFont ( const QFont & font )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETFONT )
 {
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -345,7 +345,7 @@ void setHtml ( const QString & text )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETHTML )
 {
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -371,7 +371,7 @@ void setOpenExternalLinks ( bool open )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETOPENEXTERNALLINKS )
 {
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -397,7 +397,7 @@ void setPlainText ( const QString & text )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETPLAINTEXT )
 {
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -423,7 +423,7 @@ void setTabChangesFocus ( bool b )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTABCHANGESFOCUS )
 {
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -449,7 +449,7 @@ void setTextCursor ( const QTextCursor & cursor )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTCURSOR )
 {
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -475,7 +475,7 @@ void setTextInteractionFlags ( Qt::TextInteractionFlags flags )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTINTERACTIONFLAGS )
 {
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -501,7 +501,7 @@ void setTextWidth ( qreal width )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTWIDTH )
 {
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -527,7 +527,7 @@ bool tabChangesFocus () const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TABCHANGESFOCUS )
 {
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -551,7 +551,7 @@ QTextCursor textCursor () const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTCURSOR )
 {
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -576,7 +576,7 @@ Qt::TextInteractionFlags textInteractionFlags () const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTINTERACTIONFLAGS )
 {
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -600,7 +600,7 @@ qreal textWidth () const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTWIDTH )
 {
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -624,7 +624,7 @@ QString toHtml () const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOHTML )
 {
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -648,7 +648,7 @@ QString toPlainText () const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOPLAINTEXT )
 {
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -672,7 +672,7 @@ virtual QRectF boundingRect () const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_BOUNDINGRECT )
 {
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -697,7 +697,7 @@ virtual bool contains ( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_CONTAINS )
 {
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -721,7 +721,7 @@ virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ISOBSCUREDBY )
 {
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -745,7 +745,7 @@ virtual QPainterPath opaqueArea () const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_OPAQUEAREA )
 {
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -770,7 +770,7 @@ virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_PAINT )
 {
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -796,7 +796,7 @@ virtual QPainterPath shape () const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SHAPE )
 {
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -821,7 +821,7 @@ virtual int type () const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TYPE )
 {
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

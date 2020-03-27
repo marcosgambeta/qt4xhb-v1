@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_NEW )
 
 HB_FUNC_STATIC( QIMAGEWRITER_DELETE )
 {
-  QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImageWriter * obj = (QImageWriter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -141,7 +141,7 @@ bool canWrite () const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_CANWRITE )
 {
-  QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImageWriter * obj = (QImageWriter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -165,7 +165,7 @@ int compression () const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_COMPRESSION )
 {
-  QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImageWriter * obj = (QImageWriter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -189,7 +189,7 @@ QIODevice * device () const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_DEVICE )
 {
-  QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImageWriter * obj = (QImageWriter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -214,7 +214,7 @@ ImageWriterError error () const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_ERROR )
 {
-  QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImageWriter * obj = (QImageWriter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -238,7 +238,7 @@ QString errorString () const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_ERRORSTRING )
 {
-  QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImageWriter * obj = (QImageWriter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -262,7 +262,7 @@ QString fileName () const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_FILENAME )
 {
-  QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImageWriter * obj = (QImageWriter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -286,7 +286,7 @@ QByteArray format () const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_FORMAT )
 {
-  QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImageWriter * obj = (QImageWriter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -311,7 +311,7 @@ float gamma () const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_GAMMA )
 {
-  QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImageWriter * obj = (QImageWriter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -335,7 +335,7 @@ int quality () const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_QUALITY )
 {
-  QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImageWriter * obj = (QImageWriter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -359,7 +359,7 @@ void setCompression ( int compression )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SETCOMPRESSION )
 {
-  QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImageWriter * obj = (QImageWriter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -385,7 +385,7 @@ void setDevice ( QIODevice * device )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SETDEVICE )
 {
-  QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImageWriter * obj = (QImageWriter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -411,7 +411,7 @@ void setFileName ( const QString & fileName )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SETFILENAME )
 {
-  QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImageWriter * obj = (QImageWriter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -437,7 +437,7 @@ void setFormat ( const QByteArray & format )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SETFORMAT )
 {
-  QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImageWriter * obj = (QImageWriter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -463,7 +463,7 @@ void setGamma ( float gamma )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SETGAMMA )
 {
-  QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImageWriter * obj = (QImageWriter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -489,7 +489,7 @@ void setQuality ( int quality )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SETQUALITY )
 {
-  QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImageWriter * obj = (QImageWriter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -515,7 +515,7 @@ void setText ( const QString & key, const QString & text )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SETTEXT )
 {
-  QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImageWriter * obj = (QImageWriter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -541,7 +541,7 @@ bool supportsOption ( QImageIOHandler::ImageOption option ) const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTSOPTION )
 {
-  QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImageWriter * obj = (QImageWriter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -565,7 +565,7 @@ bool write ( const QImage & image )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_WRITE )
 {
-  QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImageWriter * obj = (QImageWriter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -589,7 +589,7 @@ QList<QByteArray> supportedImageFormats ()
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTEDIMAGEFORMATS )
 {
-  QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QImageWriter * obj = (QImageWriter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

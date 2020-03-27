@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_NEW )
 
 HB_FUNC_STATIC( QDIRECTPAINTER_DELETE )
 {
-  QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDirectPainter * obj = (QDirectPainter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -99,7 +99,7 @@ QRegion allocatedRegion () const
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_ALLOCATEDREGION )
 {
-  QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDirectPainter * obj = (QDirectPainter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -124,7 +124,7 @@ void endPainting ()
 */
 void QDirectPainter_endPainting1()
 {
-  QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDirectPainter * obj = (QDirectPainter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -139,7 +139,7 @@ void endPainting ( const QRegion & region )
 */
 void QDirectPainter_endPainting2()
 {
-  QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDirectPainter * obj = (QDirectPainter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -173,7 +173,7 @@ void flush ( const QRegion & region )
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_FLUSH )
 {
-  QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDirectPainter * obj = (QDirectPainter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -199,7 +199,7 @@ QRect geometry () const
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_GEOMETRY )
 {
-  QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDirectPainter * obj = (QDirectPainter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -224,7 +224,7 @@ void lower ()
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_LOWER )
 {
-  QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDirectPainter * obj = (QDirectPainter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -250,7 +250,7 @@ void raise ()
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_RAISE )
 {
-  QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDirectPainter * obj = (QDirectPainter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -276,7 +276,7 @@ virtual void regionChanged ( const QRegion & newRegion )
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_REGIONCHANGED )
 {
-  QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDirectPainter * obj = (QDirectPainter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -302,7 +302,7 @@ QRegion requestedRegion () const
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_REQUESTEDREGION )
 {
-  QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDirectPainter * obj = (QDirectPainter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -327,7 +327,7 @@ void setGeometry ( const QRect & rectangle )
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_SETGEOMETRY )
 {
-  QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDirectPainter * obj = (QDirectPainter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -353,7 +353,7 @@ void setRegion ( const QRegion & region )
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_SETREGION )
 {
-  QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDirectPainter * obj = (QDirectPainter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -379,7 +379,7 @@ void startPainting ( bool lockDisplay = true )
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_STARTPAINTING )
 {
-  QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDirectPainter * obj = (QDirectPainter *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

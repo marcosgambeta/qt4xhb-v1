@@ -51,7 +51,7 @@ RETURN
 
 HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_DELETE )
 {
-  QTextObjectInterface * obj = (QTextObjectInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextObjectInterface * obj = (QTextObjectInterface *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -71,7 +71,7 @@ virtual void drawObject ( QPainter * painter, const QRectF & rect, QTextDocument
 */
 HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_DRAWOBJECT )
 {
-  QTextObjectInterface * obj = (QTextObjectInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextObjectInterface * obj = (QTextObjectInterface *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -97,7 +97,7 @@ virtual QSizeF intrinsicSize ( QTextDocument * doc, int posInDocument, const QTe
 */
 HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_INTRINSICSIZE )
 {
-  QTextObjectInterface * obj = (QTextObjectInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextObjectInterface * obj = (QTextObjectInterface *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

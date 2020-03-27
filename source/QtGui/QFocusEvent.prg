@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_NEW )
 
 HB_FUNC_STATIC( QFOCUSEVENT_DELETE )
 {
-  QFocusEvent * obj = (QFocusEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFocusEvent * obj = (QFocusEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -79,7 +79,7 @@ bool gotFocus () const
 */
 HB_FUNC_STATIC( QFOCUSEVENT_GOTFOCUS )
 {
-  QFocusEvent * obj = (QFocusEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFocusEvent * obj = (QFocusEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -103,7 +103,7 @@ bool lostFocus () const
 */
 HB_FUNC_STATIC( QFOCUSEVENT_LOSTFOCUS )
 {
-  QFocusEvent * obj = (QFocusEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFocusEvent * obj = (QFocusEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -127,7 +127,7 @@ Qt::FocusReason reason () const
 */
 HB_FUNC_STATIC( QFOCUSEVENT_REASON )
 {
-  QFocusEvent * obj = (QFocusEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFocusEvent * obj = (QFocusEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

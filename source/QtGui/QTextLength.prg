@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QTEXTLENGTH_NEW )
 
 HB_FUNC_STATIC( QTEXTLENGTH_DELETE )
 {
-  QTextLength * obj = (QTextLength *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextLength * obj = (QTextLength *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -109,7 +109,7 @@ qreal rawValue () const
 */
 HB_FUNC_STATIC( QTEXTLENGTH_RAWVALUE )
 {
-  QTextLength * obj = (QTextLength *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextLength * obj = (QTextLength *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -133,7 +133,7 @@ Type type () const
 */
 HB_FUNC_STATIC( QTEXTLENGTH_TYPE )
 {
-  QTextLength * obj = (QTextLength *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextLength * obj = (QTextLength *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -157,7 +157,7 @@ qreal value ( qreal maximumLength ) const
 */
 HB_FUNC_STATIC( QTEXTLENGTH_VALUE )
 {
-  QTextLength * obj = (QTextLength *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextLength * obj = (QTextLength *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

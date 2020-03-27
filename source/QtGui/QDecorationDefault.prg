@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QDECORATIONDEFAULT_NEW )
 
 HB_FUNC_STATIC( QDECORATIONDEFAULT_DELETE )
 {
-  QDecorationDefault * obj = (QDecorationDefault *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDecorationDefault * obj = (QDecorationDefault *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -79,7 +79,7 @@ virtual bool paint ( QPainter * painter, const QWidget * widget, int decorationR
 */
 HB_FUNC_STATIC( QDECORATIONDEFAULT_PAINT )
 {
-  QDecorationDefault * obj = (QDecorationDefault *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDecorationDefault * obj = (QDecorationDefault *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -103,7 +103,7 @@ virtual QRegion region ( const QWidget * widget, const QRect & rect, int decorat
 */
 HB_FUNC_STATIC( QDECORATIONDEFAULT_REGION )
 {
-  QDecorationDefault * obj = (QDecorationDefault *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDecorationDefault * obj = (QDecorationDefault *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

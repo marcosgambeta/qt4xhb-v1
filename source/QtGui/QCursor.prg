@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QCURSOR_NEW )
 
 HB_FUNC_STATIC( QCURSOR_DELETE )
 {
-  QCursor * obj = (QCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCursor * obj = (QCursor *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -171,7 +171,7 @@ const QBitmap * bitmap () const
 */
 HB_FUNC_STATIC( QCURSOR_BITMAP )
 {
-  QCursor * obj = (QCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCursor * obj = (QCursor *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -196,7 +196,7 @@ QPoint hotSpot () const
 */
 HB_FUNC_STATIC( QCURSOR_HOTSPOT )
 {
-  QCursor * obj = (QCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCursor * obj = (QCursor *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -221,7 +221,7 @@ const QBitmap * mask () const
 */
 HB_FUNC_STATIC( QCURSOR_MASK )
 {
-  QCursor * obj = (QCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCursor * obj = (QCursor *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -246,7 +246,7 @@ QPixmap pixmap () const
 */
 HB_FUNC_STATIC( QCURSOR_PIXMAP )
 {
-  QCursor * obj = (QCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCursor * obj = (QCursor *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -271,7 +271,7 @@ void setShape ( Qt::CursorShape shape )
 */
 HB_FUNC_STATIC( QCURSOR_SETSHAPE )
 {
-  QCursor * obj = (QCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCursor * obj = (QCursor *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -297,7 +297,7 @@ Qt::CursorShape shape () const
 */
 HB_FUNC_STATIC( QCURSOR_SHAPE )
 {
-  QCursor * obj = (QCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCursor * obj = (QCursor *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

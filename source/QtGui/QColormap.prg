@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QCOLORMAP_NEW )
 
 HB_FUNC_STATIC( QCOLORMAP_DELETE )
 {
-  QColormap * obj = (QColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QColormap * obj = (QColormap *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -95,7 +95,7 @@ const QColor colorAt ( uint pixel ) const
 */
 HB_FUNC_STATIC( QCOLORMAP_COLORAT )
 {
-  QColormap * obj = (QColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QColormap * obj = (QColormap *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -120,7 +120,7 @@ const QVector<QColor> colormap () const
 */
 HB_FUNC_STATIC( QCOLORMAP_COLORMAP )
 {
-  QColormap * obj = (QColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QColormap * obj = (QColormap *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -172,7 +172,7 @@ int depth () const
 */
 HB_FUNC_STATIC( QCOLORMAP_DEPTH )
 {
-  QColormap * obj = (QColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QColormap * obj = (QColormap *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -196,7 +196,7 @@ Mode mode () const
 */
 HB_FUNC_STATIC( QCOLORMAP_MODE )
 {
-  QColormap * obj = (QColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QColormap * obj = (QColormap *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -220,7 +220,7 @@ uint pixel ( const QColor & color ) const
 */
 HB_FUNC_STATIC( QCOLORMAP_PIXEL )
 {
-  QColormap * obj = (QColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QColormap * obj = (QColormap *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -244,7 +244,7 @@ int size () const
 */
 HB_FUNC_STATIC( QCOLORMAP_SIZE )
 {
-  QColormap * obj = (QColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QColormap * obj = (QColormap *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
