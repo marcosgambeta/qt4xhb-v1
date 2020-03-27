@@ -50,7 +50,7 @@ void createIndex ( const QString & customFilterName )
 */
 HB_FUNC_STATIC( QHELPINDEXMODEL_CREATEINDEX )
 {
-  QHelpIndexModel * obj = (QHelpIndexModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHelpIndexModel * obj = (QHelpIndexModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -76,7 +76,7 @@ QModelIndex filter ( const QString & filter, const QString & wildcard = QString(
 */
 HB_FUNC_STATIC( QHELPINDEXMODEL_FILTER )
 {
-  QHelpIndexModel * obj = (QHelpIndexModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHelpIndexModel * obj = (QHelpIndexModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -101,7 +101,7 @@ bool isCreatingIndex () const
 */
 HB_FUNC_STATIC( QHELPINDEXMODEL_ISCREATINGINDEX )
 {
-  QHelpIndexModel * obj = (QHelpIndexModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHelpIndexModel * obj = (QHelpIndexModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

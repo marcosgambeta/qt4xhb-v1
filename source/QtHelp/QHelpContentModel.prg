@@ -55,7 +55,7 @@ RETURN
 
 HB_FUNC_STATIC( QHELPCONTENTMODEL_DELETE )
 {
-  QHelpContentModel * obj = (QHelpContentModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHelpContentModel * obj = (QHelpContentModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -77,7 +77,7 @@ QHelpContentItem * contentItemAt ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_CONTENTITEMAT )
 {
-  QHelpContentModel * obj = (QHelpContentModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHelpContentModel * obj = (QHelpContentModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -102,7 +102,7 @@ void createContents ( const QString & customFilterName )
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_CREATECONTENTS )
 {
-  QHelpContentModel * obj = (QHelpContentModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHelpContentModel * obj = (QHelpContentModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -128,7 +128,7 @@ bool isCreatingContents () const
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_ISCREATINGCONTENTS )
 {
-  QHelpContentModel * obj = (QHelpContentModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHelpContentModel * obj = (QHelpContentModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -152,7 +152,7 @@ virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_COLUMNCOUNT )
 {
-  QHelpContentModel * obj = (QHelpContentModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHelpContentModel * obj = (QHelpContentModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -176,7 +176,7 @@ virtual QVariant data ( const QModelIndex & index, int role ) const
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_DATA )
 {
-  QHelpContentModel * obj = (QHelpContentModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHelpContentModel * obj = (QHelpContentModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -201,7 +201,7 @@ virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QM
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_INDEX )
 {
-  QHelpContentModel * obj = (QHelpContentModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHelpContentModel * obj = (QHelpContentModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -226,7 +226,7 @@ virtual QModelIndex parent ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_PARENT )
 {
-  QHelpContentModel * obj = (QHelpContentModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHelpContentModel * obj = (QHelpContentModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -251,7 +251,7 @@ virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_ROWCOUNT )
 {
-  QHelpContentModel * obj = (QHelpContentModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHelpContentModel * obj = (QHelpContentModel *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

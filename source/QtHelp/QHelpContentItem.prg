@@ -58,7 +58,7 @@ RETURN
 
 HB_FUNC_STATIC( QHELPCONTENTITEM_DELETE )
 {
-  QHelpContentItem * obj = (QHelpContentItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHelpContentItem * obj = (QHelpContentItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -78,7 +78,7 @@ QHelpContentItem * child ( int row ) const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_CHILD )
 {
-  QHelpContentItem * obj = (QHelpContentItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHelpContentItem * obj = (QHelpContentItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -103,7 +103,7 @@ int childCount () const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDCOUNT )
 {
-  QHelpContentItem * obj = (QHelpContentItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHelpContentItem * obj = (QHelpContentItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -127,7 +127,7 @@ int childPosition ( QHelpContentItem * child ) const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDPOSITION )
 {
-  QHelpContentItem * obj = (QHelpContentItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHelpContentItem * obj = (QHelpContentItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -151,7 +151,7 @@ QHelpContentItem * parent () const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_PARENT )
 {
-  QHelpContentItem * obj = (QHelpContentItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHelpContentItem * obj = (QHelpContentItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -176,7 +176,7 @@ int row () const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_ROW )
 {
-  QHelpContentItem * obj = (QHelpContentItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHelpContentItem * obj = (QHelpContentItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -200,7 +200,7 @@ QString title () const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_TITLE )
 {
-  QHelpContentItem * obj = (QHelpContentItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHelpContentItem * obj = (QHelpContentItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -224,7 +224,7 @@ QUrl url () const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_URL )
 {
-  QHelpContentItem * obj = (QHelpContentItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHelpContentItem * obj = (QHelpContentItem *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

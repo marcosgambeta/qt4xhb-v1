@@ -68,7 +68,7 @@ void QHelpSearchEngineSlots::searchingStarted()
 
 void QHelpSearchEngineSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpSearchEngine * obj = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHelpSearchEngine * obj = (QHelpSearchEngine *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
