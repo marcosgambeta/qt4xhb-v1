@@ -43,7 +43,7 @@ void QAxScriptManagerSlots::error( QAxScript * script, int code, const QString &
 
 void QAxScriptManagerSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAxScriptManager * obj = (QAxScriptManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAxScriptManager * obj = (QAxScriptManager *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

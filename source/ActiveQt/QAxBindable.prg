@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QAXBINDABLE_NEW )
 
 HB_FUNC_STATIC( QAXBINDABLE_DELETE )
 {
-  QAxBindable * obj = (QAxBindable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAxBindable * obj = (QAxBindable *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -90,7 +90,7 @@ virtual QAxAggregated * createAggregate ()
 */
 HB_FUNC_STATIC( QAXBINDABLE_CREATEAGGREGATE )
 {
-  QAxBindable * obj = (QAxBindable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAxBindable * obj = (QAxBindable *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -115,7 +115,7 @@ virtual bool readData ( QIODevice * source, const QString & format )
 */
 HB_FUNC_STATIC( QAXBINDABLE_READDATA )
 {
-  QAxBindable * obj = (QAxBindable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAxBindable * obj = (QAxBindable *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -139,7 +139,7 @@ void reportError ( int code, const QString & src, const QString & desc, const QS
 */
 HB_FUNC_STATIC( QAXBINDABLE_REPORTERROR )
 {
-  QAxBindable * obj = (QAxBindable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAxBindable * obj = (QAxBindable *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -165,7 +165,7 @@ virtual bool writeData ( QIODevice * sink )
 */
 HB_FUNC_STATIC( QAXBINDABLE_WRITEDATA )
 {
-  QAxBindable * obj = (QAxBindable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAxBindable * obj = (QAxBindable *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_NEW )
 
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_DELETE )
 {
-  QAxScriptManager * obj = (QAxScriptManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAxScriptManager * obj = (QAxScriptManager *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -94,7 +94,7 @@ void addObject ( QAxBase * object )
 */
 void QAxScriptManager_addObject1()
 {
-  QAxScriptManager * obj = (QAxScriptManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAxScriptManager * obj = (QAxScriptManager *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -109,7 +109,7 @@ void addObject ( QObject * object )
 */
 void QAxScriptManager_addObject2()
 {
-  QAxScriptManager * obj = (QAxScriptManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAxScriptManager * obj = (QAxScriptManager *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -143,7 +143,7 @@ QVariant call ( const QString & function, const QVariant & var1 = QVariant(), co
 */
 void QAxScriptManager_call1()
 {
-  QAxScriptManager * obj = (QAxScriptManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAxScriptManager * obj = (QAxScriptManager *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -157,7 +157,7 @@ QVariant call ( const QString & function, QList<QVariant> & arguments )
 */
 void QAxScriptManager_call2()
 {
-  QAxScriptManager * obj = (QAxScriptManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAxScriptManager * obj = (QAxScriptManager *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -190,7 +190,7 @@ QStringList functions ( QAxScript::FunctionFlags flags = QAxScript::FunctionName
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_FUNCTIONS )
 {
-  QAxScriptManager * obj = (QAxScriptManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAxScriptManager * obj = (QAxScriptManager *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -214,7 +214,7 @@ QAxScript * load ( const QString & code, const QString & name, const QString & l
 */
 void QAxScriptManager_load1()
 {
-  QAxScriptManager * obj = (QAxScriptManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAxScriptManager * obj = (QAxScriptManager *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -228,7 +228,7 @@ QAxScript * load ( const QString & file, const QString & name )
 */
 void QAxScriptManager_load2()
 {
-  QAxScriptManager * obj = (QAxScriptManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAxScriptManager * obj = (QAxScriptManager *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -261,7 +261,7 @@ QAxScript * script ( const QString & name ) const
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPT )
 {
-  QAxScriptManager * obj = (QAxScriptManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAxScriptManager * obj = (QAxScriptManager *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -286,7 +286,7 @@ QStringList scriptNames () const
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPTNAMES )
 {
-  QAxScriptManager * obj = (QAxScriptManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAxScriptManager * obj = (QAxScriptManager *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
