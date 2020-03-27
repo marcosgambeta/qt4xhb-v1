@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QDIRITERATOR_NEW )
 
 HB_FUNC_STATIC( QDIRITERATOR_DELETE )
 {
-  QDirIterator * obj = (QDirIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDirIterator * obj = (QDirIterator *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -141,7 +141,7 @@ QFileInfo fileInfo () const
 */
 HB_FUNC_STATIC( QDIRITERATOR_FILEINFO )
 {
-  QDirIterator * obj = (QDirIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDirIterator * obj = (QDirIterator *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -166,7 +166,7 @@ QString fileName () const
 */
 HB_FUNC_STATIC( QDIRITERATOR_FILENAME )
 {
-  QDirIterator * obj = (QDirIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDirIterator * obj = (QDirIterator *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -190,7 +190,7 @@ QString filePath () const
 */
 HB_FUNC_STATIC( QDIRITERATOR_FILEPATH )
 {
-  QDirIterator * obj = (QDirIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDirIterator * obj = (QDirIterator *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -214,7 +214,7 @@ bool hasNext () const
 */
 HB_FUNC_STATIC( QDIRITERATOR_HASNEXT )
 {
-  QDirIterator * obj = (QDirIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDirIterator * obj = (QDirIterator *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -238,7 +238,7 @@ QString next ()
 */
 HB_FUNC_STATIC( QDIRITERATOR_NEXT )
 {
-  QDirIterator * obj = (QDirIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDirIterator * obj = (QDirIterator *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -262,7 +262,7 @@ QString path () const
 */
 HB_FUNC_STATIC( QDIRITERATOR_PATH )
 {
-  QDirIterator * obj = (QDirIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDirIterator * obj = (QDirIterator *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

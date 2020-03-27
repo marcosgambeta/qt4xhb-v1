@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QTIME_NEW )
 
 HB_FUNC_STATIC( QTIME_DELETE )
 {
-  QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTime * obj = (QTime *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -123,7 +123,7 @@ QTime addMSecs(int ms) const
 */
 HB_FUNC_STATIC( QTIME_ADDMSECS )
 {
-  QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTime * obj = (QTime *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -148,7 +148,7 @@ QTime addSecs(int s) const
 */
 HB_FUNC_STATIC( QTIME_ADDSECS )
 {
-  QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTime * obj = (QTime *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -173,7 +173,7 @@ int elapsed() const
 */
 HB_FUNC_STATIC( QTIME_ELAPSED )
 {
-  QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTime * obj = (QTime *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -197,7 +197,7 @@ int hour() const
 */
 HB_FUNC_STATIC( QTIME_HOUR )
 {
-  QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTime * obj = (QTime *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -221,7 +221,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QTIME_ISNULL )
 {
-  QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTime * obj = (QTime *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -245,7 +245,7 @@ int minute() const
 */
 HB_FUNC_STATIC( QTIME_MINUTE )
 {
-  QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTime * obj = (QTime *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -269,7 +269,7 @@ int msec() const
 */
 HB_FUNC_STATIC( QTIME_MSEC )
 {
-  QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTime * obj = (QTime *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -293,7 +293,7 @@ int msecsTo(const QTime & t) const
 */
 HB_FUNC_STATIC( QTIME_MSECSTO )
 {
-  QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTime * obj = (QTime *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -317,7 +317,7 @@ int restart()
 */
 HB_FUNC_STATIC( QTIME_RESTART )
 {
-  QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTime * obj = (QTime *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -341,7 +341,7 @@ int second() const
 */
 HB_FUNC_STATIC( QTIME_SECOND )
 {
-  QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTime * obj = (QTime *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -365,7 +365,7 @@ int secsTo(const QTime & t) const
 */
 HB_FUNC_STATIC( QTIME_SECSTO )
 {
-  QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTime * obj = (QTime *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -389,7 +389,7 @@ bool setHMS(int h, int m, int s, int ms = 0)
 */
 HB_FUNC_STATIC( QTIME_SETHMS )
 {
-  QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTime * obj = (QTime *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -413,7 +413,7 @@ void start()
 */
 HB_FUNC_STATIC( QTIME_START )
 {
-  QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTime * obj = (QTime *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -439,7 +439,7 @@ QString toString(const QString & format) const
 */
 void QTime_toString1()
 {
-  QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTime * obj = (QTime *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -452,7 +452,7 @@ QString toString(Qt::DateFormat format = Qt::TextDate) const
 */
 void QTime_toString2()
 {
-  QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTime * obj = (QTime *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -514,7 +514,7 @@ QTime fromString(const QString & string, const QString & format)
 */
 void QTime_fromString2()
 {
-  QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTime * obj = (QTime *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -547,7 +547,7 @@ bool isValid() const
 */
 void QTime_isValid1()
 {
-  QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTime * obj = (QTime *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -662,7 +662,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
 
 HB_FUNC_STATIC( QVARIANT_DELETE )
 {
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariant * obj = (QVariant *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -682,7 +682,7 @@ bool canConvert ( Type t ) const
 */
 HB_FUNC_STATIC( QVARIANT_CANCONVERT )
 {
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariant * obj = (QVariant *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -706,7 +706,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QVARIANT_CLEAR )
 {
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariant * obj = (QVariant *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -732,7 +732,7 @@ bool convert ( Type t )
 */
 HB_FUNC_STATIC( QVARIANT_CONVERT )
 {
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariant * obj = (QVariant *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -756,7 +756,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QVARIANT_ISNULL )
 {
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariant * obj = (QVariant *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -780,7 +780,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QVARIANT_ISVALID )
 {
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariant * obj = (QVariant *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -804,7 +804,7 @@ QBitArray toBitArray () const
 */
 HB_FUNC_STATIC( QVARIANT_TOBITARRAY )
 {
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariant * obj = (QVariant *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -829,7 +829,7 @@ bool toBool () const
 */
 HB_FUNC_STATIC( QVARIANT_TOBOOL )
 {
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariant * obj = (QVariant *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -853,7 +853,7 @@ QByteArray toByteArray () const
 */
 HB_FUNC_STATIC( QVARIANT_TOBYTEARRAY )
 {
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariant * obj = (QVariant *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -878,7 +878,7 @@ QChar toChar () const
 */
 HB_FUNC_STATIC( QVARIANT_TOCHAR )
 {
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariant * obj = (QVariant *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -903,7 +903,7 @@ QDate toDate () const
 */
 HB_FUNC_STATIC( QVARIANT_TODATE )
 {
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariant * obj = (QVariant *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -928,7 +928,7 @@ QDateTime toDateTime () const
 */
 HB_FUNC_STATIC( QVARIANT_TODATETIME )
 {
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariant * obj = (QVariant *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -953,7 +953,7 @@ QEasingCurve toEasingCurve () const
 */
 HB_FUNC_STATIC( QVARIANT_TOEASINGCURVE )
 {
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariant * obj = (QVariant *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -978,7 +978,7 @@ QLine toLine () const
 */
 HB_FUNC_STATIC( QVARIANT_TOLINE )
 {
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariant * obj = (QVariant *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1003,7 +1003,7 @@ QLineF toLineF () const
 */
 HB_FUNC_STATIC( QVARIANT_TOLINEF )
 {
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariant * obj = (QVariant *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1028,7 +1028,7 @@ QList<QVariant> toList () const
 */
 HB_FUNC_STATIC( QVARIANT_TOLIST )
 {
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariant * obj = (QVariant *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1052,7 +1052,7 @@ QLocale toLocale () const
 */
 HB_FUNC_STATIC( QVARIANT_TOLOCALE )
 {
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariant * obj = (QVariant *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1077,7 +1077,7 @@ QPoint toPoint () const
 */
 HB_FUNC_STATIC( QVARIANT_TOPOINT )
 {
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariant * obj = (QVariant *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1102,7 +1102,7 @@ QPointF toPointF () const
 */
 HB_FUNC_STATIC( QVARIANT_TOPOINTF )
 {
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariant * obj = (QVariant *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1127,7 +1127,7 @@ QRect toRect () const
 */
 HB_FUNC_STATIC( QVARIANT_TORECT )
 {
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariant * obj = (QVariant *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1152,7 +1152,7 @@ QRectF toRectF () const
 */
 HB_FUNC_STATIC( QVARIANT_TORECTF )
 {
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariant * obj = (QVariant *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1177,7 +1177,7 @@ QRegExp toRegExp () const
 */
 HB_FUNC_STATIC( QVARIANT_TOREGEXP )
 {
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariant * obj = (QVariant *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1202,7 +1202,7 @@ QSize toSize () const
 */
 HB_FUNC_STATIC( QVARIANT_TOSIZE )
 {
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariant * obj = (QVariant *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1227,7 +1227,7 @@ QSizeF toSizeF () const
 */
 HB_FUNC_STATIC( QVARIANT_TOSIZEF )
 {
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariant * obj = (QVariant *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1252,7 +1252,7 @@ QString toString () const
 */
 HB_FUNC_STATIC( QVARIANT_TOSTRING )
 {
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariant * obj = (QVariant *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1276,7 +1276,7 @@ QStringList toStringList () const
 */
 HB_FUNC_STATIC( QVARIANT_TOSTRINGLIST )
 {
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariant * obj = (QVariant *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1300,7 +1300,7 @@ QTime toTime () const
 */
 HB_FUNC_STATIC( QVARIANT_TOTIME )
 {
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariant * obj = (QVariant *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1325,7 +1325,7 @@ QUrl toUrl () const
 */
 HB_FUNC_STATIC( QVARIANT_TOURL )
 {
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariant * obj = (QVariant *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1350,7 +1350,7 @@ Type type () const
 */
 HB_FUNC_STATIC( QVARIANT_TYPE )
 {
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariant * obj = (QVariant *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1374,7 +1374,7 @@ const char * typeName () const
 */
 HB_FUNC_STATIC( QVARIANT_TYPENAME )
 {
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariant * obj = (QVariant *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1398,7 +1398,7 @@ int userType () const
 */
 HB_FUNC_STATIC( QVARIANT_USERTYPE )
 {
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariant * obj = (QVariant *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

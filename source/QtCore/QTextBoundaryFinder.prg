@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW )
 
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_DELETE )
 {
-  QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextBoundaryFinder * obj = (QTextBoundaryFinder *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -136,7 +136,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_ISVALID )
 {
-  QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextBoundaryFinder * obj = (QTextBoundaryFinder *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -160,7 +160,7 @@ BoundaryType type() const
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TYPE )
 {
-  QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextBoundaryFinder * obj = (QTextBoundaryFinder *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -184,7 +184,7 @@ QString string() const
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_STRING )
 {
-  QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextBoundaryFinder * obj = (QTextBoundaryFinder *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -208,7 +208,7 @@ void toStart()
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TOSTART )
 {
-  QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextBoundaryFinder * obj = (QTextBoundaryFinder *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -234,7 +234,7 @@ void toEnd()
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TOEND )
 {
-  QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextBoundaryFinder * obj = (QTextBoundaryFinder *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -260,7 +260,7 @@ int position() const
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_POSITION )
 {
-  QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextBoundaryFinder * obj = (QTextBoundaryFinder *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -284,7 +284,7 @@ void setPosition(int position)
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_SETPOSITION )
 {
-  QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextBoundaryFinder * obj = (QTextBoundaryFinder *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -310,7 +310,7 @@ int toNextBoundary()
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TONEXTBOUNDARY )
 {
-  QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextBoundaryFinder * obj = (QTextBoundaryFinder *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -334,7 +334,7 @@ int toPreviousBoundary()
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TOPREVIOUSBOUNDARY )
 {
-  QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextBoundaryFinder * obj = (QTextBoundaryFinder *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -358,7 +358,7 @@ bool isAtBoundary() const
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_ISATBOUNDARY )
 {
-  QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextBoundaryFinder * obj = (QTextBoundaryFinder *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -382,7 +382,7 @@ BoundaryReasons boundaryReasons() const
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_BOUNDARYREASONS )
 {
-  QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextBoundaryFinder * obj = (QTextBoundaryFinder *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

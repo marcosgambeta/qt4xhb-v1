@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QMUTEX_NEW )
 
 HB_FUNC_STATIC( QMUTEX_DELETE )
 {
-  QMutex * obj = (QMutex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMutex * obj = (QMutex *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -88,7 +88,7 @@ void lock ()
 */
 HB_FUNC_STATIC( QMUTEX_LOCK )
 {
-  QMutex * obj = (QMutex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMutex * obj = (QMutex *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -114,7 +114,7 @@ bool tryLock ()
 */
 void QMutex_tryLock1()
 {
-  QMutex * obj = (QMutex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMutex * obj = (QMutex *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -127,7 +127,7 @@ bool tryLock ( int timeout )
 */
 void QMutex_tryLock2()
 {
-  QMutex * obj = (QMutex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMutex * obj = (QMutex *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -159,7 +159,7 @@ void unlock ()
 */
 HB_FUNC_STATIC( QMUTEX_UNLOCK )
 {
-  QMutex * obj = (QMutex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMutex * obj = (QMutex *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

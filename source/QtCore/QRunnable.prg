@@ -51,7 +51,7 @@ RETURN
 
 HB_FUNC_STATIC( QRUNNABLE_DELETE )
 {
-  QRunnable * obj = (QRunnable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRunnable * obj = (QRunnable *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -71,7 +71,7 @@ bool autoDelete () const
 */
 HB_FUNC_STATIC( QRUNNABLE_AUTODELETE )
 {
-  QRunnable * obj = (QRunnable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRunnable * obj = (QRunnable *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -95,7 +95,7 @@ virtual void run () = 0
 */
 HB_FUNC_STATIC( QRUNNABLE_RUN )
 {
-  QRunnable * obj = (QRunnable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRunnable * obj = (QRunnable *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -121,7 +121,7 @@ void setAutoDelete ( bool autoDelete )
 */
 HB_FUNC_STATIC( QRUNNABLE_SETAUTODELETE )
 {
-  QRunnable * obj = (QRunnable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRunnable * obj = (QRunnable *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

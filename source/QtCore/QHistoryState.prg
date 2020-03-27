@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_NEW )
 
 HB_FUNC_STATIC( QHISTORYSTATE_DELETE )
 {
-  QHistoryState * obj = (QHistoryState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHistoryState * obj = (QHistoryState *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -106,7 +106,7 @@ QAbstractState *defaultState() const
 */
 HB_FUNC_STATIC( QHISTORYSTATE_DEFAULTSTATE )
 {
-  QHistoryState * obj = (QHistoryState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHistoryState * obj = (QHistoryState *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -131,7 +131,7 @@ void setDefaultState(QAbstractState *state)
 */
 HB_FUNC_STATIC( QHISTORYSTATE_SETDEFAULTSTATE )
 {
-  QHistoryState * obj = (QHistoryState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHistoryState * obj = (QHistoryState *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -157,7 +157,7 @@ HistoryType historyType() const
 */
 HB_FUNC_STATIC( QHISTORYSTATE_HISTORYTYPE )
 {
-  QHistoryState * obj = (QHistoryState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHistoryState * obj = (QHistoryState *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -181,7 +181,7 @@ void setHistoryType(HistoryType type)
 */
 HB_FUNC_STATIC( QHISTORYSTATE_SETHISTORYTYPE )
 {
-  QHistoryState * obj = (QHistoryState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHistoryState * obj = (QHistoryState *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

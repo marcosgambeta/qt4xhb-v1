@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NEW )
 
 HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_DELETE )
 {
-  QXmlStreamNotationDeclaration * obj = (QXmlStreamNotationDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlStreamNotationDeclaration * obj = (QXmlStreamNotationDeclaration *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -110,7 +110,7 @@ QStringRef name() const
 */
 HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NAME )
 {
-  QXmlStreamNotationDeclaration * obj = (QXmlStreamNotationDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlStreamNotationDeclaration * obj = (QXmlStreamNotationDeclaration *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -135,7 +135,7 @@ QStringRef publicId() const
 */
 HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_PUBLICID )
 {
-  QXmlStreamNotationDeclaration * obj = (QXmlStreamNotationDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlStreamNotationDeclaration * obj = (QXmlStreamNotationDeclaration *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -160,7 +160,7 @@ QStringRef systemId() const
 */
 HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_SYSTEMID )
 {
-  QXmlStreamNotationDeclaration * obj = (QXmlStreamNotationDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlStreamNotationDeclaration * obj = (QXmlStreamNotationDeclaration *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

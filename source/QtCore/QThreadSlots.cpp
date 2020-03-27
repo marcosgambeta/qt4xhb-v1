@@ -44,7 +44,7 @@ void QThreadSlots::started()
 
 void QThreadSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QThread * obj = (QThread *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

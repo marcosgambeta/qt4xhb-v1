@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QMETAMETHOD_NEW )
 
 HB_FUNC_STATIC( QMETAMETHOD_DELETE )
 {
-  QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMetaMethod * obj = (QMetaMethod *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -99,7 +99,7 @@ const char *signature() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_SIGNATURE )
 {
-  QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMetaMethod * obj = (QMetaMethod *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -123,7 +123,7 @@ const char *typeName() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_TYPENAME )
 {
-  QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMetaMethod * obj = (QMetaMethod *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -147,7 +147,7 @@ QList<QByteArray> parameterTypes() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_PARAMETERTYPES )
 {
-  QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMetaMethod * obj = (QMetaMethod *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -199,7 +199,7 @@ QList<QByteArray> parameterNames() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_PARAMETERNAMES )
 {
-  QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMetaMethod * obj = (QMetaMethod *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -251,7 +251,7 @@ const char *tag() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_TAG )
 {
-  QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMetaMethod * obj = (QMetaMethod *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -275,7 +275,7 @@ Access access() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_ACCESS )
 {
-  QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMetaMethod * obj = (QMetaMethod *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -299,7 +299,7 @@ MethodType methodType() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_METHODTYPE )
 {
-  QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMetaMethod * obj = (QMetaMethod *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -323,7 +323,7 @@ int attributes() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_ATTRIBUTES )
 {
-  QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMetaMethod * obj = (QMetaMethod *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -347,7 +347,7 @@ int methodIndex() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_METHODINDEX )
 {
-  QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMetaMethod * obj = (QMetaMethod *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -371,7 +371,7 @@ int revision() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_REVISION )
 {
-  QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMetaMethod * obj = (QMetaMethod *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -395,7 +395,7 @@ const QMetaObject *enclosingMetaObject() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_ENCLOSINGMETAOBJECT )
 {
-  QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMetaMethod * obj = (QMetaMethod *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

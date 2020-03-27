@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_NEW )
 
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_DELETE )
 {
-  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -85,7 +85,7 @@ QObject* add(QObject* object)
 */
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_ADD )
 {
-  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -110,7 +110,7 @@ void remove(QObject *object)
 */
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_REMOVE )
 {
-  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -136,7 +136,7 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_ISEMPTY )
 {
-  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -160,7 +160,7 @@ void clear()
 */
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_CLEAR )
 {
-  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

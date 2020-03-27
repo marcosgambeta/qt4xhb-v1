@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QEVENTTRANSITION_NEW )
 
 HB_FUNC_STATIC( QEVENTTRANSITION_DELETE )
 {
-  QEventTransition * obj = (QEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QEventTransition * obj = (QEventTransition *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -106,7 +106,7 @@ QObject * eventSource() const
 */
 HB_FUNC_STATIC( QEVENTTRANSITION_EVENTSOURCE )
 {
-  QEventTransition * obj = (QEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QEventTransition * obj = (QEventTransition *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -131,7 +131,7 @@ QEvent::Type eventType() const
 */
 HB_FUNC_STATIC( QEVENTTRANSITION_EVENTTYPE )
 {
-  QEventTransition * obj = (QEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QEventTransition * obj = (QEventTransition *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -155,7 +155,7 @@ void setEventSource(QObject * object)
 */
 HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTSOURCE )
 {
-  QEventTransition * obj = (QEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QEventTransition * obj = (QEventTransition *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -181,7 +181,7 @@ void setEventType(QEvent::Type type)
 */
 HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTTYPE )
 {
-  QEventTransition * obj = (QEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QEventTransition * obj = (QEventTransition *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

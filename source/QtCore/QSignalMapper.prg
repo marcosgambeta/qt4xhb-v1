@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_NEW )
 
 HB_FUNC_STATIC( QSIGNALMAPPER_DELETE )
 {
-  QSignalMapper * obj = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSignalMapper * obj = (QSignalMapper *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -90,7 +90,7 @@ void setMapping(QObject *sender, int id)
 */
 void QSignalMapper_setMapping1()
 {
-  QSignalMapper * obj = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSignalMapper * obj = (QSignalMapper *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -105,7 +105,7 @@ void setMapping(QObject *sender, const QString &text)
 */
 void QSignalMapper_setMapping2()
 {
-  QSignalMapper * obj = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSignalMapper * obj = (QSignalMapper *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -120,7 +120,7 @@ void setMapping(QObject *sender, QWidget *widget)
 */
 void QSignalMapper_setMapping3()
 {
-  QSignalMapper * obj = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSignalMapper * obj = (QSignalMapper *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -135,7 +135,7 @@ void setMapping(QObject *sender, QObject *object)
 */
 void QSignalMapper_setMapping4()
 {
-  QSignalMapper * obj = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSignalMapper * obj = (QSignalMapper *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -179,7 +179,7 @@ void removeMappings(QObject *sender)
 */
 HB_FUNC_STATIC( QSIGNALMAPPER_REMOVEMAPPINGS )
 {
-  QSignalMapper * obj = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSignalMapper * obj = (QSignalMapper *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -205,7 +205,7 @@ QObject *mapping(int id) const
 */
 void QSignalMapper_mapping1()
 {
-  QSignalMapper * obj = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSignalMapper * obj = (QSignalMapper *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -219,7 +219,7 @@ QObject *mapping(const QString &text) const
 */
 void QSignalMapper_mapping2()
 {
-  QSignalMapper * obj = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSignalMapper * obj = (QSignalMapper *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -233,7 +233,7 @@ QObject *mapping(QWidget *widget) const
 */
 void QSignalMapper_mapping3()
 {
-  QSignalMapper * obj = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSignalMapper * obj = (QSignalMapper *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -247,7 +247,7 @@ QObject *mapping(QObject *object) const
 */
 void QSignalMapper_mapping4()
 {
-  QSignalMapper * obj = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSignalMapper * obj = (QSignalMapper *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -290,7 +290,7 @@ void map()
 */
 void QSignalMapper_map1()
 {
-  QSignalMapper * obj = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSignalMapper * obj = (QSignalMapper *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -305,7 +305,7 @@ void map(QObject *sender)
 */
 void QSignalMapper_map2()
 {
-  QSignalMapper * obj = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSignalMapper * obj = (QSignalMapper *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

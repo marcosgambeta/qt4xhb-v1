@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEW )
 
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_DELETE )
 {
-  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -112,7 +112,7 @@ QStringRef name() const
 */
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NAME )
 {
-  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -137,7 +137,7 @@ QStringRef notationName() const
 */
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NOTATIONNAME )
 {
-  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -162,7 +162,7 @@ QStringRef publicId() const
 */
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_PUBLICID )
 {
-  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -187,7 +187,7 @@ QStringRef systemId() const
 */
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_SYSTEMID )
 {
-  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -212,7 +212,7 @@ QStringRef value() const
 */
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_VALUE )
 {
-  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

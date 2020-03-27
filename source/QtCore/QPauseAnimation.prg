@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QPAUSEANIMATION_NEW )
 
 HB_FUNC_STATIC( QPAUSEANIMATION_DELETE )
 {
-  QPauseAnimation * obj = (QPauseAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPauseAnimation * obj = (QPauseAnimation *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -103,7 +103,7 @@ void setDuration ( int msecs )
 */
 HB_FUNC_STATIC( QPAUSEANIMATION_SETDURATION )
 {
-  QPauseAnimation * obj = (QPauseAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPauseAnimation * obj = (QPauseAnimation *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -129,7 +129,7 @@ virtual int duration () const
 */
 HB_FUNC_STATIC( QPAUSEANIMATION_DURATION )
 {
-  QPauseAnimation * obj = (QPauseAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPauseAnimation * obj = (QPauseAnimation *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

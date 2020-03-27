@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_NEW )
 
 HB_FUNC_STATIC( QREADWRITELOCK_DELETE )
 {
-  QReadWriteLock * obj = (QReadWriteLock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QReadWriteLock * obj = (QReadWriteLock *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -111,7 +111,7 @@ void lockForRead ()
 */
 HB_FUNC_STATIC( QREADWRITELOCK_LOCKFORREAD )
 {
-  QReadWriteLock * obj = (QReadWriteLock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QReadWriteLock * obj = (QReadWriteLock *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -137,7 +137,7 @@ void lockForWrite ()
 */
 HB_FUNC_STATIC( QREADWRITELOCK_LOCKFORWRITE )
 {
-  QReadWriteLock * obj = (QReadWriteLock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QReadWriteLock * obj = (QReadWriteLock *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -163,7 +163,7 @@ bool tryLockForRead ()
 */
 void QReadWriteLock_tryLockForRead1()
 {
-  QReadWriteLock * obj = (QReadWriteLock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QReadWriteLock * obj = (QReadWriteLock *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -176,7 +176,7 @@ bool tryLockForRead ( int timeout )
 */
 void QReadWriteLock_tryLockForRead2()
 {
-  QReadWriteLock * obj = (QReadWriteLock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QReadWriteLock * obj = (QReadWriteLock *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -208,7 +208,7 @@ bool tryLockForWrite ()
 */
 void QReadWriteLock_tryLockForWrite1()
 {
-  QReadWriteLock * obj = (QReadWriteLock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QReadWriteLock * obj = (QReadWriteLock *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -221,7 +221,7 @@ bool tryLockForWrite ( int timeout )
 */
 void QReadWriteLock_tryLockForWrite2()
 {
-  QReadWriteLock * obj = (QReadWriteLock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QReadWriteLock * obj = (QReadWriteLock *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -253,7 +253,7 @@ void unlock ()
 */
 HB_FUNC_STATIC( QREADWRITELOCK_UNLOCK )
 {
-  QReadWriteLock * obj = (QReadWriteLock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QReadWriteLock * obj = (QReadWriteLock *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

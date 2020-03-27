@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QSHAREDDATA_NEW )
 
 HB_FUNC_STATIC( QSHAREDDATA_DELETE )
 {
-  QSharedData * obj = (QSharedData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSharedData * obj = (QSharedData *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

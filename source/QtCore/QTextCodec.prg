@@ -73,7 +73,7 @@ bool canEncode(QChar) const
 */
 void QTextCodec_canEncode1()
 {
-  QTextCodec * obj = (QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextCodec * obj = (QTextCodec *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -86,7 +86,7 @@ bool canEncode(const QString&) const
 */
 void QTextCodec_canEncode2()
 {
-  QTextCodec * obj = (QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextCodec * obj = (QTextCodec *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -118,7 +118,7 @@ QString toUnicode(const QByteArray&) const
 */
 void QTextCodec_toUnicode1()
 {
-  QTextCodec * obj = (QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextCodec * obj = (QTextCodec *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -131,7 +131,7 @@ QString toUnicode(const char* chars) const
 */
 void QTextCodec_toUnicode2()
 {
-  QTextCodec * obj = (QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextCodec * obj = (QTextCodec *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -168,7 +168,7 @@ QByteArray fromUnicode(const QString& uc) const
 */
 void QTextCodec_fromUnicode1()
 {
-  QTextCodec * obj = (QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextCodec * obj = (QTextCodec *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -205,7 +205,7 @@ QTextDecoder* makeDecoder() const
 */
 void QTextCodec_makeDecoder1()
 {
-  QTextCodec * obj = (QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextCodec * obj = (QTextCodec *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -219,7 +219,7 @@ QTextDecoder* makeDecoder(ConversionFlags flags) const
 */
 void QTextCodec_makeDecoder2()
 {
-  QTextCodec * obj = (QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextCodec * obj = (QTextCodec *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -252,7 +252,7 @@ QTextEncoder* makeEncoder() const
 */
 void QTextCodec_makeEncoder1()
 {
-  QTextCodec * obj = (QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextCodec * obj = (QTextCodec *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -266,7 +266,7 @@ QTextEncoder* makeEncoder(ConversionFlags flags) const
 */
 void QTextCodec_makeEncoder2()
 {
-  QTextCodec * obj = (QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextCodec * obj = (QTextCodec *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -299,7 +299,7 @@ virtual QByteArray name() const = 0
 */
 HB_FUNC_STATIC( QTEXTCODEC_NAME )
 {
-  QTextCodec * obj = (QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextCodec * obj = (QTextCodec *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -324,7 +324,7 @@ virtual QList<QByteArray> aliases() const
 */
 HB_FUNC_STATIC( QTEXTCODEC_ALIASES )
 {
-  QTextCodec * obj = (QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextCodec * obj = (QTextCodec *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -376,7 +376,7 @@ virtual int mibEnum() const = 0
 */
 HB_FUNC_STATIC( QTEXTCODEC_MIBENUM )
 {
-  QTextCodec * obj = (QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextCodec * obj = (QTextCodec *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QCHILDEVENT_NEW )
 
 HB_FUNC_STATIC( QCHILDEVENT_DELETE )
 {
-  QChildEvent * obj = (QChildEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QChildEvent * obj = (QChildEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -81,7 +81,7 @@ bool added() const
 */
 HB_FUNC_STATIC( QCHILDEVENT_ADDED )
 {
-  QChildEvent * obj = (QChildEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QChildEvent * obj = (QChildEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -105,7 +105,7 @@ QObject * child() const
 */
 HB_FUNC_STATIC( QCHILDEVENT_CHILD )
 {
-  QChildEvent * obj = (QChildEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QChildEvent * obj = (QChildEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -130,7 +130,7 @@ bool polished() const
 */
 HB_FUNC_STATIC( QCHILDEVENT_POLISHED )
 {
-  QChildEvent * obj = (QChildEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QChildEvent * obj = (QChildEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -154,7 +154,7 @@ bool removed() const
 */
 HB_FUNC_STATIC( QCHILDEVENT_REMOVED )
 {
-  QChildEvent * obj = (QChildEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QChildEvent * obj = (QChildEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

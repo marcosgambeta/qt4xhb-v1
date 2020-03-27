@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QTEXTENCODER_NEW )
 
 HB_FUNC_STATIC( QTEXTENCODER_DELETE )
 {
-  QTextEncoder * obj = (QTextEncoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextEncoder * obj = (QTextEncoder *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -108,7 +108,7 @@ QByteArray fromUnicode(const QString & str)
 */
 void QTextEncoder_fromUnicode1()
 {
-  QTextEncoder * obj = (QTextEncoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextEncoder * obj = (QTextEncoder *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -122,7 +122,7 @@ QByteArray fromUnicode(const QChar * uc, int len)
 */
 void QTextEncoder_fromUnicode2()
 {
-  QTextEncoder * obj = (QTextEncoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextEncoder * obj = (QTextEncoder *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

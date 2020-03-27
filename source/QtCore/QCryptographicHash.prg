@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_NEW )
 
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_DELETE )
 {
-  QCryptographicHash * obj = (QCryptographicHash *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCryptographicHash * obj = (QCryptographicHash *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -90,7 +90,7 @@ void addData ( const char * data, int length )
 */
 void QCryptographicHash_addData1()
 {
-  QCryptographicHash * obj = (QCryptographicHash *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCryptographicHash * obj = (QCryptographicHash *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -105,7 +105,7 @@ void addData ( const QByteArray & data )
 */
 void QCryptographicHash_addData2()
 {
-  QCryptographicHash * obj = (QCryptographicHash *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCryptographicHash * obj = (QCryptographicHash *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -139,7 +139,7 @@ void reset ()
 */
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_RESET )
 {
-  QCryptographicHash * obj = (QCryptographicHash *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCryptographicHash * obj = (QCryptographicHash *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -165,7 +165,7 @@ QByteArray result () const
 */
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_RESULT )
 {
-  QCryptographicHash * obj = (QCryptographicHash *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCryptographicHash * obj = (QCryptographicHash *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_NEW )
 
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_DELETE )
 {
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -89,7 +89,7 @@ void append(const QString & namespaceUri, const QString & name, const QString & 
 */
 void QXmlStreamAttributes_append1()
 {
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -104,7 +104,7 @@ void append(const QXmlStreamAttribute & attribute)
 */
 void QXmlStreamAttributes_append2()
 {
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -119,7 +119,7 @@ void append(const QString & qualifiedName, const QString & value)
 */
 void QXmlStreamAttributes_append3()
 {
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -158,7 +158,7 @@ bool hasAttribute(const QString & qualifiedName) const
 */
 void QXmlStreamAttributes_hasAttribute1()
 {
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -171,7 +171,7 @@ bool hasAttribute(QLatin1String qualifiedName) const
 */
 void QXmlStreamAttributes_hasAttribute2()
 {
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -184,7 +184,7 @@ bool hasAttribute(const QString & namespaceUri, const QString & name) const
 */
 void QXmlStreamAttributes_hasAttribute3()
 {
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -221,7 +221,7 @@ QStringRef value(const QString & namespaceUri, const QString & name) const
 */
 void QXmlStreamAttributes_value1()
 {
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -235,7 +235,7 @@ QStringRef value(const QString & namespaceUri, QLatin1String name) const
 */
 void QXmlStreamAttributes_value2()
 {
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -249,7 +249,7 @@ QStringRef value(QLatin1String namespaceUri, QLatin1String name) const
 */
 void QXmlStreamAttributes_value3()
 {
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -263,7 +263,7 @@ QStringRef value(const QString & qualifiedName) const
 */
 void QXmlStreamAttributes_value4()
 {
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -277,7 +277,7 @@ QStringRef value(QLatin1String qualifiedName) const
 */
 void QXmlStreamAttributes_value5()
 {
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

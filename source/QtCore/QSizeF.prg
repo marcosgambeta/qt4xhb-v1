@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QSIZEF_NEW )
 
 HB_FUNC_STATIC( QSIZEF_DELETE )
 {
-  QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSizeF * obj = (QSizeF *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -133,7 +133,7 @@ QSizeF boundedTo ( const QSizeF & otherSize ) const
 */
 HB_FUNC_STATIC( QSIZEF_BOUNDEDTO )
 {
-  QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSizeF * obj = (QSizeF *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -158,7 +158,7 @@ QSizeF expandedTo ( const QSizeF & otherSize ) const
 */
 HB_FUNC_STATIC( QSIZEF_EXPANDEDTO )
 {
-  QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSizeF * obj = (QSizeF *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -183,7 +183,7 @@ qreal height () const
 */
 HB_FUNC_STATIC( QSIZEF_HEIGHT )
 {
-  QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSizeF * obj = (QSizeF *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -207,7 +207,7 @@ bool isEmpty () const
 */
 HB_FUNC_STATIC( QSIZEF_ISEMPTY )
 {
-  QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSizeF * obj = (QSizeF *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -231,7 +231,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QSIZEF_ISNULL )
 {
-  QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSizeF * obj = (QSizeF *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -255,7 +255,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QSIZEF_ISVALID )
 {
-  QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSizeF * obj = (QSizeF *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -279,7 +279,7 @@ void scale ( qreal width, qreal height, Qt::AspectRatioMode mode )
 */
 void QSizeF_scale1()
 {
-  QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSizeF * obj = (QSizeF *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -294,7 +294,7 @@ void scale ( const QSizeF & size, Qt::AspectRatioMode mode )
 */
 void QSizeF_scale2()
 {
-  QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSizeF * obj = (QSizeF *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -328,7 +328,7 @@ void setHeight ( qreal height )
 */
 HB_FUNC_STATIC( QSIZEF_SETHEIGHT )
 {
-  QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSizeF * obj = (QSizeF *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -354,7 +354,7 @@ void setWidth ( qreal width )
 */
 HB_FUNC_STATIC( QSIZEF_SETWIDTH )
 {
-  QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSizeF * obj = (QSizeF *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -380,7 +380,7 @@ QSize toSize () const
 */
 HB_FUNC_STATIC( QSIZEF_TOSIZE )
 {
-  QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSizeF * obj = (QSizeF *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -405,7 +405,7 @@ void transpose ()
 */
 HB_FUNC_STATIC( QSIZEF_TRANSPOSE )
 {
-  QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSizeF * obj = (QSizeF *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -431,7 +431,7 @@ qreal width () const
 */
 HB_FUNC_STATIC( QSIZEF_WIDTH )
 {
-  QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSizeF * obj = (QSizeF *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

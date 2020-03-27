@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QSTRINGMATCHER_NEW )
 
 HB_FUNC_STATIC( QSTRINGMATCHER_DELETE )
 {
-  QStringMatcher * obj = (QStringMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStringMatcher * obj = (QStringMatcher *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -139,7 +139,7 @@ void setPattern(const QString &pattern)
 */
 HB_FUNC_STATIC( QSTRINGMATCHER_SETPATTERN )
 {
-  QStringMatcher * obj = (QStringMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStringMatcher * obj = (QStringMatcher *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -165,7 +165,7 @@ void setCaseSensitivity(Qt::CaseSensitivity cs)
 */
 HB_FUNC_STATIC( QSTRINGMATCHER_SETCASESENSITIVITY )
 {
-  QStringMatcher * obj = (QStringMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStringMatcher * obj = (QStringMatcher *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -191,7 +191,7 @@ int indexIn(const QString &str, int from = 0) const
 */
 void QStringMatcher_indexIn1()
 {
-  QStringMatcher * obj = (QStringMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStringMatcher * obj = (QStringMatcher *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -204,7 +204,7 @@ int indexIn(const QChar *str, int length, int from = 0) const
 */
 void QStringMatcher_indexIn2()
 {
-  QStringMatcher * obj = (QStringMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStringMatcher * obj = (QStringMatcher *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -236,7 +236,7 @@ QString pattern() const
 */
 HB_FUNC_STATIC( QSTRINGMATCHER_PATTERN )
 {
-  QStringMatcher * obj = (QStringMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStringMatcher * obj = (QStringMatcher *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -260,7 +260,7 @@ Qt::CaseSensitivity caseSensitivity() const
 */
 HB_FUNC_STATIC( QSTRINGMATCHER_CASESENSITIVITY )
 {
-  QStringMatcher * obj = (QStringMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStringMatcher * obj = (QStringMatcher *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

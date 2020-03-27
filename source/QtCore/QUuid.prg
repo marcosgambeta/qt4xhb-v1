@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QUUID_NEW )
 
 HB_FUNC_STATIC( QUUID_DELETE )
 {
-  QUuid * obj = (QUuid *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QUuid * obj = (QUuid *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -164,7 +164,7 @@ QString toString() const;
 */
 HB_FUNC_STATIC( QUUID_TOSTRING )
 {
-  QUuid * obj = (QUuid *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QUuid * obj = (QUuid *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -188,7 +188,7 @@ QByteArray toByteArray() const
 */
 HB_FUNC_STATIC( QUUID_TOBYTEARRAY )
 {
-  QUuid * obj = (QUuid *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QUuid * obj = (QUuid *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -213,7 +213,7 @@ QByteArray toRfc4122() const
 */
 HB_FUNC_STATIC( QUUID_TORFC4122 )
 {
-  QUuid * obj = (QUuid *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QUuid * obj = (QUuid *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -238,7 +238,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QUUID_ISNULL )
 {
-  QUuid * obj = (QUuid *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QUuid * obj = (QUuid *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -262,7 +262,7 @@ QUuid::Variant variant() const
 */
 HB_FUNC_STATIC( QUUID_VARIANT )
 {
-  QUuid * obj = (QUuid *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QUuid * obj = (QUuid *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -286,7 +286,7 @@ QUuid::Version version() const
 */
 HB_FUNC_STATIC( QUUID_VERSION )
 {
-  QUuid * obj = (QUuid *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QUuid * obj = (QUuid *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

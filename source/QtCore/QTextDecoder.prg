@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QTEXTDECODER_NEW )
 
 HB_FUNC_STATIC( QTEXTDECODER_DELETE )
 {
-  QTextDecoder * obj = (QTextDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextDecoder * obj = (QTextDecoder *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -107,7 +107,7 @@ QString toUnicode(const char * chars, int len)
 */
 void QTextDecoder_toUnicode1()
 {
-  QTextDecoder * obj = (QTextDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextDecoder * obj = (QTextDecoder *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -120,7 +120,7 @@ void toUnicode(QString * target, const char * chars, int len)
 */
 void QTextDecoder_toUnicode2()
 {
-  QTextDecoder * obj = (QTextDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextDecoder * obj = (QTextDecoder *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -135,7 +135,7 @@ QString toUnicode(const QByteArray & ba)
 */
 void QTextDecoder_toUnicode3()
 {
-  QTextDecoder * obj = (QTextDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextDecoder * obj = (QTextDecoder *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -96,7 +96,7 @@ void QProcessSlots::stateChanged( QProcess::ProcessState newState )
 
 void QProcessSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QProcess * obj = (QProcess *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

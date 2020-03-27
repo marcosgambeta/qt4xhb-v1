@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QTIMEREVENT_NEW )
 
 HB_FUNC_STATIC( QTIMEREVENT_DELETE )
 {
-  QTimerEvent * obj = (QTimerEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTimerEvent * obj = (QTimerEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -77,7 +77,7 @@ int timerId() const
 */
 HB_FUNC_STATIC( QTIMEREVENT_TIMERID )
 {
-  QTimerEvent * obj = (QTimerEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTimerEvent * obj = (QTimerEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

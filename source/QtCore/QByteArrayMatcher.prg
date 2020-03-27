@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW )
 
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_DELETE )
 {
-  QByteArrayMatcher * obj = (QByteArrayMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QByteArrayMatcher * obj = (QByteArrayMatcher *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -138,7 +138,7 @@ int indexIn ( const QByteArray & ba, int from = 0 ) const
 */
 void QByteArrayMatcher_indexIn1()
 {
-  QByteArrayMatcher * obj = (QByteArrayMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QByteArrayMatcher * obj = (QByteArrayMatcher *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -151,7 +151,7 @@ int indexIn ( const char * str, int len, int from = 0 ) const
 */
 void QByteArrayMatcher_indexIn2()
 {
-  QByteArrayMatcher * obj = (QByteArrayMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QByteArrayMatcher * obj = (QByteArrayMatcher *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -183,7 +183,7 @@ QByteArray pattern () const
 */
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_PATTERN )
 {
-  QByteArrayMatcher * obj = (QByteArrayMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QByteArrayMatcher * obj = (QByteArrayMatcher *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -208,7 +208,7 @@ void setPattern ( const QByteArray & pattern )
 */
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_SETPATTERN )
 {
-  QByteArrayMatcher * obj = (QByteArrayMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QByteArrayMatcher * obj = (QByteArrayMatcher *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

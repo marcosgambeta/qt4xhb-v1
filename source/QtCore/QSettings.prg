@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QSETTINGS_NEW )
 
 HB_FUNC_STATIC( QSETTINGS_DELETE )
 {
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSettings * obj = (QSettings *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -177,7 +177,7 @@ QStringList allKeys () const
 */
 HB_FUNC_STATIC( QSETTINGS_ALLKEYS )
 {
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSettings * obj = (QSettings *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -201,7 +201,7 @@ QString applicationName () const
 */
 HB_FUNC_STATIC( QSETTINGS_APPLICATIONNAME )
 {
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSettings * obj = (QSettings *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -225,7 +225,7 @@ void beginGroup ( const QString & prefix )
 */
 HB_FUNC_STATIC( QSETTINGS_BEGINGROUP )
 {
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSettings * obj = (QSettings *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -251,7 +251,7 @@ int beginReadArray ( const QString & prefix )
 */
 HB_FUNC_STATIC( QSETTINGS_BEGINREADARRAY )
 {
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSettings * obj = (QSettings *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -275,7 +275,7 @@ void beginWriteArray ( const QString & prefix, int size = -1 )
 */
 HB_FUNC_STATIC( QSETTINGS_BEGINWRITEARRAY )
 {
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSettings * obj = (QSettings *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -301,7 +301,7 @@ QStringList childGroups () const
 */
 HB_FUNC_STATIC( QSETTINGS_CHILDGROUPS )
 {
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSettings * obj = (QSettings *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -325,7 +325,7 @@ QStringList childKeys () const
 */
 HB_FUNC_STATIC( QSETTINGS_CHILDKEYS )
 {
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSettings * obj = (QSettings *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -349,7 +349,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QSETTINGS_CLEAR )
 {
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSettings * obj = (QSettings *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -375,7 +375,7 @@ bool contains ( const QString & key ) const
 */
 HB_FUNC_STATIC( QSETTINGS_CONTAINS )
 {
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSettings * obj = (QSettings *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -399,7 +399,7 @@ void endArray ()
 */
 HB_FUNC_STATIC( QSETTINGS_ENDARRAY )
 {
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSettings * obj = (QSettings *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -425,7 +425,7 @@ void endGroup ()
 */
 HB_FUNC_STATIC( QSETTINGS_ENDGROUP )
 {
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSettings * obj = (QSettings *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -451,7 +451,7 @@ bool fallbacksEnabled () const
 */
 HB_FUNC_STATIC( QSETTINGS_FALLBACKSENABLED )
 {
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSettings * obj = (QSettings *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -475,7 +475,7 @@ QString fileName () const
 */
 HB_FUNC_STATIC( QSETTINGS_FILENAME )
 {
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSettings * obj = (QSettings *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -499,7 +499,7 @@ Format format () const
 */
 HB_FUNC_STATIC( QSETTINGS_FORMAT )
 {
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSettings * obj = (QSettings *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -523,7 +523,7 @@ QString group () const
 */
 HB_FUNC_STATIC( QSETTINGS_GROUP )
 {
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSettings * obj = (QSettings *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -547,7 +547,7 @@ QTextCodec * iniCodec () const
 */
 HB_FUNC_STATIC( QSETTINGS_INICODEC )
 {
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSettings * obj = (QSettings *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -572,7 +572,7 @@ bool isWritable () const
 */
 HB_FUNC_STATIC( QSETTINGS_ISWRITABLE )
 {
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSettings * obj = (QSettings *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -596,7 +596,7 @@ QString organizationName () const
 */
 HB_FUNC_STATIC( QSETTINGS_ORGANIZATIONNAME )
 {
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSettings * obj = (QSettings *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -620,7 +620,7 @@ void remove ( const QString & key )
 */
 HB_FUNC_STATIC( QSETTINGS_REMOVE )
 {
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSettings * obj = (QSettings *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -646,7 +646,7 @@ Scope scope () const
 */
 HB_FUNC_STATIC( QSETTINGS_SCOPE )
 {
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSettings * obj = (QSettings *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -670,7 +670,7 @@ void setArrayIndex ( int i )
 */
 HB_FUNC_STATIC( QSETTINGS_SETARRAYINDEX )
 {
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSettings * obj = (QSettings *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -696,7 +696,7 @@ void setFallbacksEnabled ( bool b )
 */
 HB_FUNC_STATIC( QSETTINGS_SETFALLBACKSENABLED )
 {
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSettings * obj = (QSettings *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -722,7 +722,7 @@ void setIniCodec ( QTextCodec * codec )
 */
 void QSettings_setIniCodec1()
 {
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSettings * obj = (QSettings *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -737,7 +737,7 @@ void setIniCodec ( const char * codecName )
 */
 void QSettings_setIniCodec2()
 {
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSettings * obj = (QSettings *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -771,7 +771,7 @@ void setValue ( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QSETTINGS_SETVALUE )
 {
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSettings * obj = (QSettings *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -797,7 +797,7 @@ Status status () const
 */
 HB_FUNC_STATIC( QSETTINGS_STATUS )
 {
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSettings * obj = (QSettings *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -821,7 +821,7 @@ void sync ()
 */
 HB_FUNC_STATIC( QSETTINGS_SYNC )
 {
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSettings * obj = (QSettings *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -847,7 +847,7 @@ QVariant value ( const QString & key, const QVariant & defaultValue = QVariant()
 */
 HB_FUNC_STATIC( QSETTINGS_VALUE )
 {
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSettings * obj = (QSettings *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

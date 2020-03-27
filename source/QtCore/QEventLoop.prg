@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QEVENTLOOP_NEW )
 
 HB_FUNC_STATIC( QEVENTLOOP_DELETE )
 {
-  QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QEventLoop * obj = (QEventLoop *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -86,7 +86,7 @@ int exec ( ProcessEventsFlags flags = AllEvents )
 */
 HB_FUNC_STATIC( QEVENTLOOP_EXEC )
 {
-  QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QEventLoop * obj = (QEventLoop *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -110,7 +110,7 @@ void exit ( int returnCode = 0 )
 */
 HB_FUNC_STATIC( QEVENTLOOP_EXIT )
 {
-  QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QEventLoop * obj = (QEventLoop *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -136,7 +136,7 @@ bool isRunning () const
 */
 HB_FUNC_STATIC( QEVENTLOOP_ISRUNNING )
 {
-  QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QEventLoop * obj = (QEventLoop *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -160,7 +160,7 @@ bool processEvents ( ProcessEventsFlags flags = AllEvents )
 */
 void QEventLoop_processEvents1()
 {
-  QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QEventLoop * obj = (QEventLoop *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -173,7 +173,7 @@ void processEvents ( ProcessEventsFlags flags, int maxTime )
 */
 void QEventLoop_processEvents2()
 {
-  QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QEventLoop * obj = (QEventLoop *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -207,7 +207,7 @@ void wakeUp ()
 */
 HB_FUNC_STATIC( QEVENTLOOP_WAKEUP )
 {
-  QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QEventLoop * obj = (QEventLoop *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -233,7 +233,7 @@ void quit ()
 */
 HB_FUNC_STATIC( QEVENTLOOP_QUIT )
 {
-  QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QEventLoop * obj = (QEventLoop *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

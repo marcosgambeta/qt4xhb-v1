@@ -50,7 +50,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTFILEENGINEHANDLER_DELETE )
 {
-  QAbstractFileEngineHandler * obj = (QAbstractFileEngineHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractFileEngineHandler * obj = (QAbstractFileEngineHandler *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -70,7 +70,7 @@ virtual QAbstractFileEngine * create ( const QString & fileName ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINEHANDLER_CREATE )
 {
-  QAbstractFileEngineHandler * obj = (QAbstractFileEngineHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractFileEngineHandler * obj = (QAbstractFileEngineHandler *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

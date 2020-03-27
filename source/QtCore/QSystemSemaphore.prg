@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_NEW )
 
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_DELETE )
 {
-  QSystemSemaphore * obj = (QSystemSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSystemSemaphore * obj = (QSystemSemaphore *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -91,7 +91,7 @@ bool acquire ()
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ACQUIRE )
 {
-  QSystemSemaphore * obj = (QSystemSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSystemSemaphore * obj = (QSystemSemaphore *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -115,7 +115,7 @@ SystemSemaphoreError error () const
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ERROR )
 {
-  QSystemSemaphore * obj = (QSystemSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSystemSemaphore * obj = (QSystemSemaphore *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -139,7 +139,7 @@ QString errorString () const
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ERRORSTRING )
 {
-  QSystemSemaphore * obj = (QSystemSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSystemSemaphore * obj = (QSystemSemaphore *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -163,7 +163,7 @@ QString key () const
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_KEY )
 {
-  QSystemSemaphore * obj = (QSystemSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSystemSemaphore * obj = (QSystemSemaphore *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -187,7 +187,7 @@ bool release ( int n = 1 )
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_RELEASE )
 {
-  QSystemSemaphore * obj = (QSystemSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSystemSemaphore * obj = (QSystemSemaphore *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -211,7 +211,7 @@ void setKey ( const QString & key, int initialValue = 0, AccessMode mode = Open 
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_SETKEY )
 {
-  QSystemSemaphore * obj = (QSystemSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSystemSemaphore * obj = (QSystemSemaphore *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

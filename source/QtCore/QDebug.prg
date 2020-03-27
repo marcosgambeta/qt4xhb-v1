@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QDEBUG_NEW )
 
 HB_FUNC_STATIC( QDEBUG_DELETE )
 {
-  QDebug * obj = (QDebug *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDebug * obj = (QDebug *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -128,7 +128,7 @@ QDebug & maybeSpace ()
 */
 HB_FUNC_STATIC( QDEBUG_MAYBESPACE )
 {
-  QDebug * obj = (QDebug *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDebug * obj = (QDebug *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -153,7 +153,7 @@ QDebug & nospace ()
 */
 HB_FUNC_STATIC( QDEBUG_NOSPACE )
 {
-  QDebug * obj = (QDebug *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDebug * obj = (QDebug *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -178,7 +178,7 @@ QDebug & space ()
 */
 HB_FUNC_STATIC( QDEBUG_SPACE )
 {
-  QDebug * obj = (QDebug *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDebug * obj = (QDebug *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

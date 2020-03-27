@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QDYNAMICPROPERTYCHANGEEVENT_NEW )
 
 HB_FUNC_STATIC( QDYNAMICPROPERTYCHANGEEVENT_DELETE )
 {
-  QDynamicPropertyChangeEvent * obj = (QDynamicPropertyChangeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDynamicPropertyChangeEvent * obj = (QDynamicPropertyChangeEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -78,7 +78,7 @@ QByteArray propertyName () const
 */
 HB_FUNC_STATIC( QDYNAMICPROPERTYCHANGEEVENT_PROPERTYNAME )
 {
-  QDynamicPropertyChangeEvent * obj = (QDynamicPropertyChangeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDynamicPropertyChangeEvent * obj = (QDynamicPropertyChangeEvent *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

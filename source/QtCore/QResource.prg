@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QRESOURCE_NEW )
 
 HB_FUNC_STATIC( QRESOURCE_DELETE )
 {
-  QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QResource * obj = (QResource *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -97,7 +97,7 @@ QString absoluteFilePath () const
 */
 HB_FUNC_STATIC( QRESOURCE_ABSOLUTEFILEPATH )
 {
-  QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QResource * obj = (QResource *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -121,7 +121,7 @@ const uchar * data () const
 */
 HB_FUNC_STATIC( QRESOURCE_DATA )
 {
-  QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QResource * obj = (QResource *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -145,7 +145,7 @@ QString fileName () const
 */
 HB_FUNC_STATIC( QRESOURCE_FILENAME )
 {
-  QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QResource * obj = (QResource *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -169,7 +169,7 @@ bool isCompressed () const
 */
 HB_FUNC_STATIC( QRESOURCE_ISCOMPRESSED )
 {
-  QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QResource * obj = (QResource *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -193,7 +193,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QRESOURCE_ISVALID )
 {
-  QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QResource * obj = (QResource *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -217,7 +217,7 @@ QLocale locale () const
 */
 HB_FUNC_STATIC( QRESOURCE_LOCALE )
 {
-  QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QResource * obj = (QResource *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -242,7 +242,7 @@ void setFileName ( const QString & file )
 */
 HB_FUNC_STATIC( QRESOURCE_SETFILENAME )
 {
-  QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QResource * obj = (QResource *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -268,7 +268,7 @@ void setLocale ( const QLocale & locale )
 */
 HB_FUNC_STATIC( QRESOURCE_SETLOCALE )
 {
-  QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QResource * obj = (QResource *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -294,7 +294,7 @@ qint64 size () const
 */
 HB_FUNC_STATIC( QRESOURCE_SIZE )
 {
-  QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QResource * obj = (QResource *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

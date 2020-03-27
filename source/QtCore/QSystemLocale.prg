@@ -71,7 +71,7 @@ virtual QLocale fallbackLocale () const
 */
 HB_FUNC_STATIC( QSYSTEMLOCALE_FALLBACKLOCALE )
 {
-  QSystemLocale * obj = (QSystemLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSystemLocale * obj = (QSystemLocale *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -96,7 +96,7 @@ virtual QVariant query ( QueryType type, QVariant in ) const
 */
 HB_FUNC_STATIC( QSYSTEMLOCALE_QUERY )
 {
-  QSystemLocale * obj = (QSystemLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSystemLocale * obj = (QSystemLocale *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

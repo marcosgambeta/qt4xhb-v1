@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QDATE_NEW )
 
 HB_FUNC_STATIC( QDATE_DELETE )
 {
-  QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDate * obj = (QDate *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -132,7 +132,7 @@ QDate addDays ( int ndays ) const
 */
 HB_FUNC_STATIC( QDATE_ADDDAYS )
 {
-  QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDate * obj = (QDate *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -157,7 +157,7 @@ QDate addMonths ( int nmonths ) const
 */
 HB_FUNC_STATIC( QDATE_ADDMONTHS )
 {
-  QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDate * obj = (QDate *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -182,7 +182,7 @@ QDate addYears ( int nyears ) const
 */
 HB_FUNC_STATIC( QDATE_ADDYEARS )
 {
-  QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDate * obj = (QDate *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -207,7 +207,7 @@ int day () const
 */
 HB_FUNC_STATIC( QDATE_DAY )
 {
-  QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDate * obj = (QDate *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -231,7 +231,7 @@ int dayOfWeek () const
 */
 HB_FUNC_STATIC( QDATE_DAYOFWEEK )
 {
-  QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDate * obj = (QDate *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -255,7 +255,7 @@ int dayOfYear () const
 */
 HB_FUNC_STATIC( QDATE_DAYOFYEAR )
 {
-  QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDate * obj = (QDate *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -279,7 +279,7 @@ int daysInMonth () const
 */
 HB_FUNC_STATIC( QDATE_DAYSINMONTH )
 {
-  QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDate * obj = (QDate *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -303,7 +303,7 @@ int daysInYear () const
 */
 HB_FUNC_STATIC( QDATE_DAYSINYEAR )
 {
-  QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDate * obj = (QDate *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -327,7 +327,7 @@ int daysTo ( const QDate & d ) const
 */
 HB_FUNC_STATIC( QDATE_DAYSTO )
 {
-  QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDate * obj = (QDate *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -351,7 +351,7 @@ void getDate ( int * year, int * month, int * day )
 */
 HB_FUNC_STATIC( QDATE_GETDATE )
 {
-  QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDate * obj = (QDate *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -383,7 +383,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QDATE_ISNULL )
 {
-  QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDate * obj = (QDate *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -407,7 +407,7 @@ int month () const
 */
 HB_FUNC_STATIC( QDATE_MONTH )
 {
-  QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDate * obj = (QDate *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -431,7 +431,7 @@ bool setDate ( int year, int month, int day )
 */
 HB_FUNC_STATIC( QDATE_SETDATE )
 {
-  QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDate * obj = (QDate *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -455,7 +455,7 @@ int toJulianDay () const
 */
 HB_FUNC_STATIC( QDATE_TOJULIANDAY )
 {
-  QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDate * obj = (QDate *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -479,7 +479,7 @@ QString toString ( const QString & format ) const
 */
 void QDate_toString1()
 {
-  QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDate * obj = (QDate *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -492,7 +492,7 @@ QString toString ( Qt::DateFormat format = Qt::TextDate ) const
 */
 void QDate_toString2()
 {
-  QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDate * obj = (QDate *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -524,7 +524,7 @@ int weekNumber ( int * yearNumber = 0 ) const
 */
 HB_FUNC_STATIC( QDATE_WEEKNUMBER )
 {
-  QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDate * obj = (QDate *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -550,7 +550,7 @@ int year () const
 */
 HB_FUNC_STATIC( QDATE_YEAR )
 {
-  QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDate * obj = (QDate *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -672,7 +672,7 @@ bool isValid () const
 */
 void QDate_isValid1()
 {
-  QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDate * obj = (QDate *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

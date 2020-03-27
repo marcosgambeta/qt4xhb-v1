@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QWAITCONDITION_NEW )
 
 HB_FUNC_STATIC( QWAITCONDITION_DELETE )
 {
-  QWaitCondition * obj = (QWaitCondition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWaitCondition * obj = (QWaitCondition *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -87,7 +87,7 @@ void wakeAll ()
 */
 HB_FUNC_STATIC( QWAITCONDITION_WAKEALL )
 {
-  QWaitCondition * obj = (QWaitCondition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWaitCondition * obj = (QWaitCondition *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -113,7 +113,7 @@ void wakeOne ()
 */
 HB_FUNC_STATIC( QWAITCONDITION_WAKEONE )
 {
-  QWaitCondition * obj = (QWaitCondition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWaitCondition * obj = (QWaitCondition *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

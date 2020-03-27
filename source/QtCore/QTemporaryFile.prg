@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_NEW )
 
 HB_FUNC_STATIC( QTEMPORARYFILE_DELETE )
 {
-  QTemporaryFile * obj = (QTemporaryFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTemporaryFile * obj = (QTemporaryFile *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -136,7 +136,7 @@ bool autoRemove() const
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_AUTOREMOVE )
 {
-  QTemporaryFile * obj = (QTemporaryFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTemporaryFile * obj = (QTemporaryFile *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -160,7 +160,7 @@ QString fileTemplate() const
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_FILETEMPLATE )
 {
-  QTemporaryFile * obj = (QTemporaryFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTemporaryFile * obj = (QTemporaryFile *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -184,7 +184,7 @@ bool open()
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_OPEN )
 {
-  QTemporaryFile * obj = (QTemporaryFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTemporaryFile * obj = (QTemporaryFile *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -208,7 +208,7 @@ void setAutoRemove(bool b)
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_SETAUTOREMOVE )
 {
-  QTemporaryFile * obj = (QTemporaryFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTemporaryFile * obj = (QTemporaryFile *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -234,7 +234,7 @@ void setFileTemplate(const QString & name)
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_SETFILETEMPLATE )
 {
-  QTemporaryFile * obj = (QTemporaryFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTemporaryFile * obj = (QTemporaryFile *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -260,7 +260,7 @@ virtual QString fileName() const
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_FILENAME )
 {
-  QTemporaryFile * obj = (QTemporaryFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTemporaryFile * obj = (QTemporaryFile *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

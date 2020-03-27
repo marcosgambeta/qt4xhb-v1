@@ -51,7 +51,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTSTATE_DELETE )
 {
-  QAbstractState * obj = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractState * obj = (QAbstractState *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -73,7 +73,7 @@ QStateMachine * machine () const
 */
 HB_FUNC_STATIC( QABSTRACTSTATE_MACHINE )
 {
-  QAbstractState * obj = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractState * obj = (QAbstractState *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -98,7 +98,7 @@ QState * parentState () const
 */
 HB_FUNC_STATIC( QABSTRACTSTATE_PARENTSTATE )
 {
-  QAbstractState * obj = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractState * obj = (QAbstractState *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
