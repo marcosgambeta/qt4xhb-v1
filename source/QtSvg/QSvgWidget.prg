@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QSVGWIDGET_NEW )
 
 HB_FUNC_STATIC( QSVGWIDGET_DELETE )
 {
-  QSvgWidget * obj = (QSvgWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSvgWidget * obj = (QSvgWidget *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -108,7 +108,7 @@ QSvgRenderer * renderer () const
 */
 HB_FUNC_STATIC( QSVGWIDGET_RENDERER )
 {
-  QSvgWidget * obj = (QSvgWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSvgWidget * obj = (QSvgWidget *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -133,7 +133,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QSVGWIDGET_SIZEHINT )
 {
-  QSvgWidget * obj = (QSvgWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSvgWidget * obj = (QSvgWidget *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -158,7 +158,7 @@ void load ( const QString & file )
 */
 void QSvgWidget_load1()
 {
-  QSvgWidget * obj = (QSvgWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSvgWidget * obj = (QSvgWidget *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -173,7 +173,7 @@ void load ( const QByteArray & contents )
 */
 void QSvgWidget_load2()
 {
-  QSvgWidget * obj = (QSvgWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSvgWidget * obj = (QSvgWidget *) _qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
