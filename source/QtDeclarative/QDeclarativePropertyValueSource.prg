@@ -49,7 +49,7 @@ RETURN
 
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYVALUESOURCE_DELETE )
 {
-  QDeclarativePropertyValueSource * obj = (QDeclarativePropertyValueSource *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativePropertyValueSource * obj = (QDeclarativePropertyValueSource *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -69,7 +69,7 @@ virtual void setTarget ( const QDeclarativeProperty & property ) = 0
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYVALUESOURCE_SETTARGET )
 {
-  QDeclarativePropertyValueSource * obj = (QDeclarativePropertyValueSource *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativePropertyValueSource * obj = (QDeclarativePropertyValueSource *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

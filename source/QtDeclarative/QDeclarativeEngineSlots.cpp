@@ -68,7 +68,7 @@ void QDeclarativeEngineSlots::warnings( const QList<QDeclarativeError> & warning
 
 void QDeclarativeEngineSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeEngine * obj = (QDeclarativeEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -48,7 +48,7 @@ void QDeclarativeComponentSlots::statusChanged( QDeclarativeComponent::Status st
 
 void QDeclarativeComponentSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = (QDeclarativeComponent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

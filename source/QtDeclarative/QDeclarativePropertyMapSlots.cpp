@@ -37,7 +37,7 @@ void QDeclarativePropertyMapSlots::valueChanged( const QString & key, const QVar
 
 void QDeclarativePropertyMapSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

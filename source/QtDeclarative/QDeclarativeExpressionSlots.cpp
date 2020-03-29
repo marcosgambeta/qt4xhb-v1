@@ -33,7 +33,7 @@ void QDeclarativeExpressionSlots::valueChanged()
 
 void QDeclarativeExpressionSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDeclarativeExpression * obj = (QDeclarativeExpression *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeExpression * obj = (QDeclarativeExpression *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
