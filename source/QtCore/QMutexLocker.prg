@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QMUTEXLOCKER_NEW )
   if( ISNUMPAR(1) && ISQMUTEX(1) )
   {
     QMutexLocker * o = new QMutexLocker( PQMUTEX(1) );
-    _qt4xhb_returnNewObject( o, true );
+    Qt4xHb::_qt4xhb_returnNewObject( o, true );
   }
   else
   {
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QMUTEXLOCKER_NEW )
 
 HB_FUNC_STATIC( QMUTEXLOCKER_DELETE )
 {
-  QMutexLocker * obj = (QMutexLocker *) _qt4xhb_itemGetPtrStackSelfItem();
+  QMutexLocker * obj = (QMutexLocker *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -89,7 +89,7 @@ QMutex * mutex () const
 */
 HB_FUNC_STATIC( QMUTEXLOCKER_MUTEX )
 {
-  QMutexLocker * obj = (QMutexLocker *) _qt4xhb_itemGetPtrStackSelfItem();
+  QMutexLocker * obj = (QMutexLocker *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QMUTEXLOCKER_MUTEX )
     {
 #endif
       QMutex * ptr = obj->mutex();
-      _qt4xhb_createReturnClass( ptr, "QMUTEX", false );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QMUTEX", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -114,7 +114,7 @@ void relock ()
 */
 HB_FUNC_STATIC( QMUTEXLOCKER_RELOCK )
 {
-  QMutexLocker * obj = (QMutexLocker *) _qt4xhb_itemGetPtrStackSelfItem();
+  QMutexLocker * obj = (QMutexLocker *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -140,7 +140,7 @@ void unlock ()
 */
 HB_FUNC_STATIC( QMUTEXLOCKER_UNLOCK )
 {
-  QMutexLocker * obj = (QMutexLocker *) _qt4xhb_itemGetPtrStackSelfItem();
+  QMutexLocker * obj = (QMutexLocker *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

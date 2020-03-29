@@ -44,7 +44,7 @@ void QStateSlots::propertiesAssigned()
 
 void QStateSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QState * obj = (QState *) _qt4xhb_itemGetPtrStackSelfItem();
+  QState * obj = (QState *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -52,7 +52,7 @@ QSignalTransition(QState *sourceState = 0)
 void QSignalTransition_new1()
 {
   QSignalTransition * o = new QSignalTransition( OPQSTATE(1,0) );
-  _qt4xhb_returnNewObject( o, false );
+  Qt4xHb::_qt4xhb_returnNewObject( o, false );
 }
 
 /*
@@ -61,7 +61,7 @@ QSignalTransition(QObject *sender, const char *signal,QState *sourceState = 0)
 void QSignalTransition_new2()
 {
   QSignalTransition * o = new QSignalTransition( PQOBJECT(1), PCONSTCHAR(2), OPQSTATE(3,0) );
-  _qt4xhb_returnNewObject( o, false );
+  Qt4xHb::_qt4xhb_returnNewObject( o, false );
 }
 
 //[1]QSignalTransition(QState *sourceState = 0)
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_NEW )
 
 HB_FUNC_STATIC( QSIGNALTRANSITION_DELETE )
 {
-  QSignalTransition * obj = (QSignalTransition *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSignalTransition * obj = (QSignalTransition *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -107,7 +107,7 @@ QObject *senderObject() const
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_SENDEROBJECT )
 {
-  QSignalTransition * obj = (QSignalTransition *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSignalTransition * obj = (QSignalTransition *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_SENDEROBJECT )
     {
 #endif
       QObject * ptr = obj->senderObject();
-      _qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -132,7 +132,7 @@ void setSenderObject(QObject *sender)
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_SETSENDEROBJECT )
 {
-  QSignalTransition * obj = (QSignalTransition *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSignalTransition * obj = (QSignalTransition *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -158,7 +158,7 @@ QByteArray signal() const
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_SIGNAL )
 {
-  QSignalTransition * obj = (QSignalTransition *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSignalTransition * obj = (QSignalTransition *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_SIGNAL )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->signal() );
-      _qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,7 +183,7 @@ void setSignal(const QByteArray &signal)
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_SETSIGNAL )
 {
-  QSignalTransition * obj = (QSignalTransition *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSignalTransition * obj = (QSignalTransition *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

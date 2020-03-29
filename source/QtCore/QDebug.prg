@@ -56,7 +56,7 @@ QDebug ( QIODevice * device )
 void QDebug_new1()
 {
   QDebug * o = new QDebug( PQIODEVICE(1) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -69,7 +69,7 @@ QDebug ( QtMsgType type )
 void QDebug_new3()
 {
   QDebug * o = new QDebug( (QtMsgType) hb_parni(1) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -78,7 +78,7 @@ QDebug ( const QDebug & other )
 void QDebug_new4()
 {
   QDebug * o = new QDebug( *PQDEBUG(1) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 //[1]QDebug ( QIODevice * device )
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QDEBUG_NEW )
 
 HB_FUNC_STATIC( QDEBUG_DELETE )
 {
-  QDebug * obj = (QDebug *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDebug * obj = (QDebug *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -128,7 +128,7 @@ QDebug & maybeSpace ()
 */
 HB_FUNC_STATIC( QDEBUG_MAYBESPACE )
 {
-  QDebug * obj = (QDebug *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDebug * obj = (QDebug *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QDEBUG_MAYBESPACE )
     {
 #endif
       QDebug * ptr = &obj->maybeSpace();
-      _qt4xhb_createReturnClass( ptr, "QDEBUG", false );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QDEBUG", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -153,7 +153,7 @@ QDebug & nospace ()
 */
 HB_FUNC_STATIC( QDEBUG_NOSPACE )
 {
-  QDebug * obj = (QDebug *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDebug * obj = (QDebug *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QDEBUG_NOSPACE )
     {
 #endif
       QDebug * ptr = &obj->nospace();
-      _qt4xhb_createReturnClass( ptr, "QDEBUG", false );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QDEBUG", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,7 +178,7 @@ QDebug & space ()
 */
 HB_FUNC_STATIC( QDEBUG_SPACE )
 {
-  QDebug * obj = (QDebug *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDebug * obj = (QDebug *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QDEBUG_SPACE )
     {
 #endif
       QDebug * ptr = &obj->space();
-      _qt4xhb_createReturnClass( ptr, "QDEBUG", false );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QDEBUG", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

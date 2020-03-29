@@ -90,12 +90,12 @@ HB_FUNC_STATIC( QCOREAPPLICATION_NEW )
   argc = hb_cmdargARGC();
   argv = hb_cmdargARGV();
   QCoreApplication * o = new QCoreApplication( argc, argv );
-  _qt4xhb_storePointerAndFlag ( o, false );
+  Qt4xHb::_qt4xhb_storePointerAndFlag ( o, false );
 }
 
 HB_FUNC_STATIC( QCOREAPPLICATION_DELETE )
 {
-  QCoreApplication * obj = (QCoreApplication *) _qt4xhb_itemGetPtrStackSelfItem();
+  QCoreApplication * obj = (QCoreApplication *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -117,7 +117,7 @@ bool filterEvent ( void * message, long * result )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_FILTEREVENT )
 {
-  QCoreApplication * obj = (QCoreApplication *) _qt4xhb_itemGetPtrStackSelfItem();
+  QCoreApplication * obj = (QCoreApplication *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -143,7 +143,7 @@ virtual bool notify ( QObject * receiver, QEvent * event )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_NOTIFY )
 {
-  QCoreApplication * obj = (QCoreApplication *) _qt4xhb_itemGetPtrStackSelfItem();
+  QCoreApplication * obj = (QCoreApplication *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -167,7 +167,7 @@ void quit ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_QUIT )
 {
-  QCoreApplication * obj = (QCoreApplication *) _qt4xhb_itemGetPtrStackSelfItem();
+  QCoreApplication * obj = (QCoreApplication *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_INSTANCE )
   {
 #endif
     QCoreApplication * ptr = QCoreApplication::instance();
-    _qt4xhb_createReturnQObjectClass( ptr, "QCOREAPPLICATION" );
+    Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QCOREAPPLICATION" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

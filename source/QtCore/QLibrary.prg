@@ -57,7 +57,7 @@ QLibrary(QObject *parent = 0)
 void QLibrary_new1()
 {
   QLibrary * o = new QLibrary( OPQOBJECT(1,0) );
-  _qt4xhb_returnNewObject( o, false );
+  Qt4xHb::_qt4xhb_returnNewObject( o, false );
 }
 
 /*
@@ -66,7 +66,7 @@ QLibrary(const QString& fileName, QObject *parent = 0)
 void QLibrary_new2()
 {
   QLibrary * o = new QLibrary( PQSTRING(1), OPQOBJECT(2,0) );
-  _qt4xhb_returnNewObject( o, false );
+  Qt4xHb::_qt4xhb_returnNewObject( o, false );
 }
 
 /*
@@ -75,7 +75,7 @@ QLibrary(const QString& fileName, int verNum, QObject *parent = 0)
 void QLibrary_new3()
 {
   QLibrary * o = new QLibrary( PQSTRING(1), PINT(2), OPQOBJECT(3,0) );
-  _qt4xhb_returnNewObject( o, false );
+  Qt4xHb::_qt4xhb_returnNewObject( o, false );
 }
 
 /*
@@ -84,7 +84,7 @@ QLibrary(const QString& fileName, const QString &version, QObject *parent = 0)
 void QLibrary_new4()
 {
   QLibrary * o = new QLibrary( PQSTRING(1), PQSTRING(2), OPQOBJECT(3,0) );
-  _qt4xhb_returnNewObject( o, false );
+  Qt4xHb::_qt4xhb_returnNewObject( o, false );
 }
 
 //[1]QLibrary(QObject *parent = 0)
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QLIBRARY_NEW )
 
 HB_FUNC_STATIC( QLIBRARY_DELETE )
 {
-  QLibrary * obj = (QLibrary *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLibrary * obj = (QLibrary *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -140,7 +140,7 @@ bool load()
 */
 HB_FUNC_STATIC( QLIBRARY_LOAD )
 {
-  QLibrary * obj = (QLibrary *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLibrary * obj = (QLibrary *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -164,7 +164,7 @@ bool unload()
 */
 HB_FUNC_STATIC( QLIBRARY_UNLOAD )
 {
-  QLibrary * obj = (QLibrary *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLibrary * obj = (QLibrary *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -188,7 +188,7 @@ bool isLoaded() const
 */
 HB_FUNC_STATIC( QLIBRARY_ISLOADED )
 {
-  QLibrary * obj = (QLibrary *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLibrary * obj = (QLibrary *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -212,7 +212,7 @@ void setFileName(const QString &fileName)
 */
 HB_FUNC_STATIC( QLIBRARY_SETFILENAME )
 {
-  QLibrary * obj = (QLibrary *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLibrary * obj = (QLibrary *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -238,7 +238,7 @@ QString fileName() const
 */
 HB_FUNC_STATIC( QLIBRARY_FILENAME )
 {
-  QLibrary * obj = (QLibrary *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLibrary * obj = (QLibrary *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -262,7 +262,7 @@ void setFileNameAndVersion(const QString &fileName, int verNum)
 */
 void QLibrary_setFileNameAndVersion1()
 {
-  QLibrary * obj = (QLibrary *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLibrary * obj = (QLibrary *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -277,7 +277,7 @@ void setFileNameAndVersion(const QString &fileName, const QString &version)
 */
 void QLibrary_setFileNameAndVersion2()
 {
-  QLibrary * obj = (QLibrary *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLibrary * obj = (QLibrary *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -311,7 +311,7 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QLIBRARY_ERRORSTRING )
 {
-  QLibrary * obj = (QLibrary *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLibrary * obj = (QLibrary *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -335,7 +335,7 @@ void setLoadHints(LoadHints hints)
 */
 HB_FUNC_STATIC( QLIBRARY_SETLOADHINTS )
 {
-  QLibrary * obj = (QLibrary *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLibrary * obj = (QLibrary *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -361,7 +361,7 @@ LoadHints loadHints() const
 */
 HB_FUNC_STATIC( QLIBRARY_LOADHINTS )
 {
-  QLibrary * obj = (QLibrary *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLibrary * obj = (QLibrary *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -385,7 +385,7 @@ void *resolve(const char *symbol)
 */
 void QLibrary_resolve1()
 {
-  QLibrary * obj = (QLibrary *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLibrary * obj = (QLibrary *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -80,7 +80,7 @@ QLineF()
 void QLineF_new1()
 {
   QLineF * o = new QLineF();
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -89,7 +89,7 @@ QLineF(const QPointF & p1, const QPointF & p2)
 void QLineF_new2()
 {
   QLineF * o = new QLineF( *PQPOINTF(1), *PQPOINTF(2) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -98,7 +98,7 @@ QLineF(qreal x1, qreal y1, qreal x2, qreal y2)
 void QLineF_new3()
 {
   QLineF * o = new QLineF( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -107,7 +107,7 @@ QLineF(const QLine & line)
 void QLineF_new4()
 {
   QLineF * o = new QLineF( *PQLINE(1) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 //[1]QLineF()
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QLINEF_NEW )
 
 HB_FUNC_STATIC( QLINEF_DELETE )
 {
-  QLineF * obj = (QLineF *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLineF * obj = (QLineF *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -161,7 +161,7 @@ QPointF p1() const
 */
 HB_FUNC_STATIC( QLINEF_P1 )
 {
-  QLineF * obj = (QLineF *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLineF * obj = (QLineF *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QLINEF_P1 )
     {
 #endif
       QPointF * ptr = new QPointF( obj->p1() );
-      _qt4xhb_createReturnClass( ptr, "QPOINTF", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,7 +186,7 @@ QPointF p2() const
 */
 HB_FUNC_STATIC( QLINEF_P2 )
 {
-  QLineF * obj = (QLineF *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLineF * obj = (QLineF *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QLINEF_P2 )
     {
 #endif
       QPointF * ptr = new QPointF( obj->p2() );
-      _qt4xhb_createReturnClass( ptr, "QPOINTF", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,7 +211,7 @@ qreal x1() const
 */
 HB_FUNC_STATIC( QLINEF_X1 )
 {
-  QLineF * obj = (QLineF *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLineF * obj = (QLineF *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -235,7 +235,7 @@ qreal x2() const
 */
 HB_FUNC_STATIC( QLINEF_X2 )
 {
-  QLineF * obj = (QLineF *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLineF * obj = (QLineF *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -259,7 +259,7 @@ qreal y1() const
 */
 HB_FUNC_STATIC( QLINEF_Y1 )
 {
-  QLineF * obj = (QLineF *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLineF * obj = (QLineF *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -283,7 +283,7 @@ qreal y2() const
 */
 HB_FUNC_STATIC( QLINEF_Y2 )
 {
-  QLineF * obj = (QLineF *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLineF * obj = (QLineF *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -307,7 +307,7 @@ qreal angle() const
 */
 HB_FUNC_STATIC( QLINEF_ANGLE )
 {
-  QLineF * obj = (QLineF *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLineF * obj = (QLineF *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -331,7 +331,7 @@ qreal angleTo(const QLineF & line) const
 */
 HB_FUNC_STATIC( QLINEF_ANGLETO )
 {
-  QLineF * obj = (QLineF *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLineF * obj = (QLineF *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -355,7 +355,7 @@ qreal dx() const
 */
 HB_FUNC_STATIC( QLINEF_DX )
 {
-  QLineF * obj = (QLineF *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLineF * obj = (QLineF *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -379,7 +379,7 @@ qreal dy() const
 */
 HB_FUNC_STATIC( QLINEF_DY )
 {
-  QLineF * obj = (QLineF *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLineF * obj = (QLineF *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -403,7 +403,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QLINEF_ISNULL )
 {
-  QLineF * obj = (QLineF *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLineF * obj = (QLineF *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -427,7 +427,7 @@ qreal length() const
 */
 HB_FUNC_STATIC( QLINEF_LENGTH )
 {
-  QLineF * obj = (QLineF *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLineF * obj = (QLineF *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -451,7 +451,7 @@ QLineF normalVector() const
 */
 HB_FUNC_STATIC( QLINEF_NORMALVECTOR )
 {
-  QLineF * obj = (QLineF *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLineF * obj = (QLineF *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QLINEF_NORMALVECTOR )
     {
 #endif
       QLineF * ptr = new QLineF( obj->normalVector() );
-      _qt4xhb_createReturnClass( ptr, "QLINEF", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QLINEF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -476,7 +476,7 @@ QPointF pointAt(qreal t) const
 */
 HB_FUNC_STATIC( QLINEF_POINTAT )
 {
-  QLineF * obj = (QLineF *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLineF * obj = (QLineF *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QLINEF_POINTAT )
     {
 #endif
       QPointF * ptr = new QPointF( obj->pointAt( PQREAL(1) ) );
-      _qt4xhb_createReturnClass( ptr, "QPOINTF", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -501,7 +501,7 @@ void setP1(const QPointF & p1)
 */
 HB_FUNC_STATIC( QLINEF_SETP1 )
 {
-  QLineF * obj = (QLineF *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLineF * obj = (QLineF *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -527,7 +527,7 @@ void setP2(const QPointF & p2)
 */
 HB_FUNC_STATIC( QLINEF_SETP2 )
 {
-  QLineF * obj = (QLineF *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLineF * obj = (QLineF *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -553,7 +553,7 @@ void setAngle(qreal angle)
 */
 HB_FUNC_STATIC( QLINEF_SETANGLE )
 {
-  QLineF * obj = (QLineF *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLineF * obj = (QLineF *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -579,7 +579,7 @@ void setLength(qreal length)
 */
 HB_FUNC_STATIC( QLINEF_SETLENGTH )
 {
-  QLineF * obj = (QLineF *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLineF * obj = (QLineF *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -605,7 +605,7 @@ void setLine(qreal x1, qreal y1, qreal x2, qreal y2)
 */
 HB_FUNC_STATIC( QLINEF_SETLINE )
 {
-  QLineF * obj = (QLineF *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLineF * obj = (QLineF *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -631,7 +631,7 @@ void setPoints(const QPointF & p1, const QPointF & p2)
 */
 HB_FUNC_STATIC( QLINEF_SETPOINTS )
 {
-  QLineF * obj = (QLineF *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLineF * obj = (QLineF *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -657,7 +657,7 @@ QLine toLine() const
 */
 HB_FUNC_STATIC( QLINEF_TOLINE )
 {
-  QLineF * obj = (QLineF *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLineF * obj = (QLineF *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -666,7 +666,7 @@ HB_FUNC_STATIC( QLINEF_TOLINE )
     {
 #endif
       QLine * ptr = new QLine( obj->toLine() );
-      _qt4xhb_createReturnClass( ptr, "QLINE", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QLINE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -682,7 +682,7 @@ void translate(const QPointF & offset)
 */
 void QLineF_translate1()
 {
-  QLineF * obj = (QLineF *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLineF * obj = (QLineF *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -697,7 +697,7 @@ void translate(qreal dx, qreal dy)
 */
 void QLineF_translate2()
 {
-  QLineF * obj = (QLineF *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLineF * obj = (QLineF *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -731,12 +731,12 @@ QLineF translated(const QPointF & offset) const
 */
 void QLineF_translated1()
 {
-  QLineF * obj = (QLineF *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLineF * obj = (QLineF *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QLineF * ptr = new QLineF( obj->translated( *PQPOINTF(1) ) );
-    _qt4xhb_createReturnClass( ptr, "QLINEF", true );
+    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QLINEF", true );
   }
 }
 
@@ -745,12 +745,12 @@ QLineF translated(qreal dx, qreal dy) const
 */
 void QLineF_translated2()
 {
-  QLineF * obj = (QLineF *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLineF * obj = (QLineF *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QLineF * ptr = new QLineF( obj->translated( PQREAL(1), PQREAL(2) ) );
-    _qt4xhb_createReturnClass( ptr, "QLINEF", true );
+    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QLINEF", true );
   }
 }
 
@@ -778,7 +778,7 @@ QLineF unitVector() const
 */
 HB_FUNC_STATIC( QLINEF_UNITVECTOR )
 {
-  QLineF * obj = (QLineF *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLineF * obj = (QLineF *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -787,7 +787,7 @@ HB_FUNC_STATIC( QLINEF_UNITVECTOR )
     {
 #endif
       QLineF * ptr = new QLineF( obj->unitVector() );
-      _qt4xhb_createReturnClass( ptr, "QLINEF", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QLINEF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -808,7 +808,7 @@ HB_FUNC_STATIC( QLINEF_FROMPOLAR )
   {
 #endif
     QLineF * ptr = new QLineF( QLineF::fromPolar( PQREAL(1), PQREAL(2) ) );
-    _qt4xhb_createReturnClass( ptr, "QLINEF", true );
+    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QLINEF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

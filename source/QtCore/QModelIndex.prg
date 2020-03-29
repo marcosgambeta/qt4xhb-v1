@@ -66,7 +66,7 @@ QModelIndex ()
 void QModelIndex_new1()
 {
   QModelIndex * o = new QModelIndex();
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -75,7 +75,7 @@ QModelIndex ( const QModelIndex & other )
 void QModelIndex_new2()
 {
   QModelIndex * o = new QModelIndex( *PQMODELINDEX(1) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 //[1]QModelIndex ()
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QMODELINDEX_NEW )
 
 HB_FUNC_STATIC( QMODELINDEX_DELETE )
 {
-  QModelIndex * obj = (QModelIndex *) _qt4xhb_itemGetPtrStackSelfItem();
+  QModelIndex * obj = (QModelIndex *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -119,7 +119,7 @@ QModelIndex child ( int row, int column ) const
 */
 HB_FUNC_STATIC( QMODELINDEX_CHILD )
 {
-  QModelIndex * obj = (QModelIndex *) _qt4xhb_itemGetPtrStackSelfItem();
+  QModelIndex * obj = (QModelIndex *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QMODELINDEX_CHILD )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->child( PINT(1), PINT(2) ) );
-      _qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,7 +144,7 @@ int column () const
 */
 HB_FUNC_STATIC( QMODELINDEX_COLUMN )
 {
-  QModelIndex * obj = (QModelIndex *) _qt4xhb_itemGetPtrStackSelfItem();
+  QModelIndex * obj = (QModelIndex *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -168,7 +168,7 @@ QVariant data ( int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QMODELINDEX_DATA )
 {
-  QModelIndex * obj = (QModelIndex *) _qt4xhb_itemGetPtrStackSelfItem();
+  QModelIndex * obj = (QModelIndex *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QMODELINDEX_DATA )
     {
 #endif
       QVariant * ptr = new QVariant( obj->data( OPINT(1,Qt::DisplayRole) ) );
-      _qt4xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,7 +193,7 @@ Qt::ItemFlags flags () const
 */
 HB_FUNC_STATIC( QMODELINDEX_FLAGS )
 {
-  QModelIndex * obj = (QModelIndex *) _qt4xhb_itemGetPtrStackSelfItem();
+  QModelIndex * obj = (QModelIndex *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -217,7 +217,7 @@ qint64 internalId () const
 */
 HB_FUNC_STATIC( QMODELINDEX_INTERNALID )
 {
-  QModelIndex * obj = (QModelIndex *) _qt4xhb_itemGetPtrStackSelfItem();
+  QModelIndex * obj = (QModelIndex *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -241,7 +241,7 @@ void * internalPointer () const
 */
 HB_FUNC_STATIC( QMODELINDEX_INTERNALPOINTER )
 {
-  QModelIndex * obj = (QModelIndex *) _qt4xhb_itemGetPtrStackSelfItem();
+  QModelIndex * obj = (QModelIndex *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -265,7 +265,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QMODELINDEX_ISVALID )
 {
-  QModelIndex * obj = (QModelIndex *) _qt4xhb_itemGetPtrStackSelfItem();
+  QModelIndex * obj = (QModelIndex *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -289,7 +289,7 @@ const QAbstractItemModel * model () const
 */
 HB_FUNC_STATIC( QMODELINDEX_MODEL )
 {
-  QModelIndex * obj = (QModelIndex *) _qt4xhb_itemGetPtrStackSelfItem();
+  QModelIndex * obj = (QModelIndex *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QMODELINDEX_MODEL )
     {
 #endif
       const QAbstractItemModel * ptr = obj->model();
-      _qt4xhb_createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
+      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -314,7 +314,7 @@ QModelIndex parent () const
 */
 HB_FUNC_STATIC( QMODELINDEX_PARENT )
 {
-  QModelIndex * obj = (QModelIndex *) _qt4xhb_itemGetPtrStackSelfItem();
+  QModelIndex * obj = (QModelIndex *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QMODELINDEX_PARENT )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->parent() );
-      _qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -339,7 +339,7 @@ int row () const
 */
 HB_FUNC_STATIC( QMODELINDEX_ROW )
 {
-  QModelIndex * obj = (QModelIndex *) _qt4xhb_itemGetPtrStackSelfItem();
+  QModelIndex * obj = (QModelIndex *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -363,7 +363,7 @@ QModelIndex sibling ( int row, int column ) const
 */
 HB_FUNC_STATIC( QMODELINDEX_SIBLING )
 {
-  QModelIndex * obj = (QModelIndex *) _qt4xhb_itemGetPtrStackSelfItem();
+  QModelIndex * obj = (QModelIndex *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QMODELINDEX_SIBLING )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->sibling( PINT(1), PINT(2) ) );
-      _qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

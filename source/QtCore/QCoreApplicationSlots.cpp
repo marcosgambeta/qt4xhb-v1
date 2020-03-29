@@ -33,7 +33,7 @@ void QCoreApplicationSlots::aboutToQuit()
 
 void QCoreApplicationSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QCoreApplication * obj = (QCoreApplication *) _qt4xhb_itemGetPtrStackSelfItem();
+  QCoreApplication * obj = (QCoreApplication *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

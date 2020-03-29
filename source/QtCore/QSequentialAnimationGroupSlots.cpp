@@ -35,7 +35,7 @@ void QSequentialAnimationGroupSlots::currentAnimationChanged( QAbstractAnimation
 
 void QSequentialAnimationGroupSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

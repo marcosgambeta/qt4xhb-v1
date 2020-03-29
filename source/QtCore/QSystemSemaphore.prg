@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_NEW )
   if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
   {
     QSystemSemaphore * o = new QSystemSemaphore( PQSTRING(1), OPINT(2,0), ISNIL(3)? (QSystemSemaphore::AccessMode) QSystemSemaphore::Open : (QSystemSemaphore::AccessMode) hb_parni(3) );
-    _qt4xhb_returnNewObject( o, true );
+    Qt4xHb::_qt4xhb_returnNewObject( o, true );
   }
   else
   {
@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_NEW )
 
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_DELETE )
 {
-  QSystemSemaphore * obj = (QSystemSemaphore *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSystemSemaphore * obj = (QSystemSemaphore *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -91,7 +91,7 @@ bool acquire ()
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ACQUIRE )
 {
-  QSystemSemaphore * obj = (QSystemSemaphore *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSystemSemaphore * obj = (QSystemSemaphore *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -115,7 +115,7 @@ SystemSemaphoreError error () const
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ERROR )
 {
-  QSystemSemaphore * obj = (QSystemSemaphore *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSystemSemaphore * obj = (QSystemSemaphore *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -139,7 +139,7 @@ QString errorString () const
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ERRORSTRING )
 {
-  QSystemSemaphore * obj = (QSystemSemaphore *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSystemSemaphore * obj = (QSystemSemaphore *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -163,7 +163,7 @@ QString key () const
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_KEY )
 {
-  QSystemSemaphore * obj = (QSystemSemaphore *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSystemSemaphore * obj = (QSystemSemaphore *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -187,7 +187,7 @@ bool release ( int n = 1 )
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_RELEASE )
 {
-  QSystemSemaphore * obj = (QSystemSemaphore *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSystemSemaphore * obj = (QSystemSemaphore *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -211,7 +211,7 @@ void setKey ( const QString & key, int initialValue = 0, AccessMode mode = Open 
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_SETKEY )
 {
-  QSystemSemaphore * obj = (QSystemSemaphore *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSystemSemaphore * obj = (QSystemSemaphore *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

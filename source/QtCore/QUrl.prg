@@ -125,7 +125,7 @@ QUrl ()
 void QUrl_new1()
 {
   QUrl * o = new QUrl();
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -134,7 +134,7 @@ QUrl ( const QString & url )
 void QUrl_new2()
 {
   QUrl * o = new QUrl( PQSTRING(1) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -143,7 +143,7 @@ QUrl ( const QUrl & other )
 void QUrl_new3()
 {
   QUrl * o = new QUrl( *PQURL(1) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -152,7 +152,7 @@ QUrl ( const QString & url, ParsingMode parsingMode )
 void QUrl_new4()
 {
   QUrl * o = new QUrl( PQSTRING(1), (QUrl::ParsingMode) hb_parni(2) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 //[1]QUrl ()
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QURL_NEW )
 
 HB_FUNC_STATIC( QURL_DELETE )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -206,7 +206,7 @@ void addEncodedQueryItem ( const QByteArray & key, const QByteArray & value )
 */
 HB_FUNC_STATIC( QURL_ADDENCODEDQUERYITEM )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -232,7 +232,7 @@ void addQueryItem ( const QString & key, const QString & value )
 */
 HB_FUNC_STATIC( QURL_ADDQUERYITEM )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -258,7 +258,7 @@ QList<QByteArray> allEncodedQueryItemValues ( const QByteArray & key ) const
 */
 HB_FUNC_STATIC( QURL_ALLENCODEDQUERYITEMVALUES )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -310,7 +310,7 @@ QStringList allQueryItemValues ( const QString & key ) const
 */
 HB_FUNC_STATIC( QURL_ALLQUERYITEMVALUES )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -334,7 +334,7 @@ QString authority () const
 */
 HB_FUNC_STATIC( QURL_AUTHORITY )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -358,7 +358,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QURL_CLEAR )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -384,7 +384,7 @@ QByteArray encodedFragment () const
 */
 HB_FUNC_STATIC( QURL_ENCODEDFRAGMENT )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QURL_ENCODEDFRAGMENT )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->encodedFragment() );
-      _qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -409,7 +409,7 @@ QByteArray encodedHost () const
 */
 HB_FUNC_STATIC( QURL_ENCODEDHOST )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QURL_ENCODEDHOST )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->encodedHost() );
-      _qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -434,7 +434,7 @@ QByteArray encodedPassword () const
 */
 HB_FUNC_STATIC( QURL_ENCODEDPASSWORD )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QURL_ENCODEDPASSWORD )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->encodedPassword() );
-      _qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -459,7 +459,7 @@ QByteArray encodedPath () const
 */
 HB_FUNC_STATIC( QURL_ENCODEDPATH )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QURL_ENCODEDPATH )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->encodedPath() );
-      _qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -484,7 +484,7 @@ QByteArray encodedQuery () const
 */
 HB_FUNC_STATIC( QURL_ENCODEDQUERY )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QURL_ENCODEDQUERY )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->encodedQuery() );
-      _qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -509,7 +509,7 @@ QByteArray encodedQueryItemValue ( const QByteArray & key ) const
 */
 HB_FUNC_STATIC( QURL_ENCODEDQUERYITEMVALUE )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -518,7 +518,7 @@ HB_FUNC_STATIC( QURL_ENCODEDQUERYITEMVALUE )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->encodedQueryItemValue( *PQBYTEARRAY(1) ) );
-      _qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -534,7 +534,7 @@ QByteArray encodedUserName () const
 */
 HB_FUNC_STATIC( QURL_ENCODEDUSERNAME )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QURL_ENCODEDUSERNAME )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->encodedUserName() );
-      _qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -559,7 +559,7 @@ QString errorString () const
 */
 HB_FUNC_STATIC( QURL_ERRORSTRING )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -583,7 +583,7 @@ QString fragment () const
 */
 HB_FUNC_STATIC( QURL_FRAGMENT )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -607,7 +607,7 @@ bool hasEncodedQueryItem ( const QByteArray & key ) const
 */
 HB_FUNC_STATIC( QURL_HASENCODEDQUERYITEM )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -631,7 +631,7 @@ bool hasFragment () const
 */
 HB_FUNC_STATIC( QURL_HASFRAGMENT )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -655,7 +655,7 @@ bool hasQuery () const
 */
 HB_FUNC_STATIC( QURL_HASQUERY )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -679,7 +679,7 @@ bool hasQueryItem ( const QString & key ) const
 */
 HB_FUNC_STATIC( QURL_HASQUERYITEM )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -703,7 +703,7 @@ QString host () const
 */
 HB_FUNC_STATIC( QURL_HOST )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -727,7 +727,7 @@ bool isEmpty () const
 */
 HB_FUNC_STATIC( QURL_ISEMPTY )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -751,7 +751,7 @@ bool isLocalFile () const
 */
 HB_FUNC_STATIC( QURL_ISLOCALFILE )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -775,7 +775,7 @@ bool isParentOf ( const QUrl & childUrl ) const
 */
 HB_FUNC_STATIC( QURL_ISPARENTOF )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -799,7 +799,7 @@ bool isRelative () const
 */
 HB_FUNC_STATIC( QURL_ISRELATIVE )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -823,7 +823,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QURL_ISVALID )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -847,7 +847,7 @@ QString password () const
 */
 HB_FUNC_STATIC( QURL_PASSWORD )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -871,7 +871,7 @@ QString path () const
 */
 HB_FUNC_STATIC( QURL_PATH )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -895,7 +895,7 @@ int port () const
 */
 void QUrl_port1()
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -908,7 +908,7 @@ int port ( int defaultPort ) const
 */
 void QUrl_port2()
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -940,7 +940,7 @@ QString queryItemValue ( const QString & key ) const
 */
 HB_FUNC_STATIC( QURL_QUERYITEMVALUE )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -964,7 +964,7 @@ void removeAllEncodedQueryItems ( const QByteArray & key )
 */
 HB_FUNC_STATIC( QURL_REMOVEALLENCODEDQUERYITEMS )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -990,7 +990,7 @@ void removeAllQueryItems ( const QString & key )
 */
 HB_FUNC_STATIC( QURL_REMOVEALLQUERYITEMS )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1016,7 +1016,7 @@ void removeEncodedQueryItem ( const QByteArray & key )
 */
 HB_FUNC_STATIC( QURL_REMOVEENCODEDQUERYITEM )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1042,7 +1042,7 @@ void removeQueryItem ( const QString & key )
 */
 HB_FUNC_STATIC( QURL_REMOVEQUERYITEM )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1068,7 +1068,7 @@ QUrl resolved ( const QUrl & relative ) const
 */
 HB_FUNC_STATIC( QURL_RESOLVED )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1077,7 +1077,7 @@ HB_FUNC_STATIC( QURL_RESOLVED )
     {
 #endif
       QUrl * ptr = new QUrl( obj->resolved( *PQURL(1) ) );
-      _qt4xhb_createReturnClass( ptr, "QURL", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QURL", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1093,7 +1093,7 @@ QString scheme () const
 */
 HB_FUNC_STATIC( QURL_SCHEME )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1117,7 +1117,7 @@ void setAuthority ( const QString & authority )
 */
 HB_FUNC_STATIC( QURL_SETAUTHORITY )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1143,7 +1143,7 @@ void setEncodedFragment ( const QByteArray & fragment )
 */
 HB_FUNC_STATIC( QURL_SETENCODEDFRAGMENT )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1169,7 +1169,7 @@ void setEncodedHost ( const QByteArray & host )
 */
 HB_FUNC_STATIC( QURL_SETENCODEDHOST )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1195,7 +1195,7 @@ void setEncodedPassword ( const QByteArray & password )
 */
 HB_FUNC_STATIC( QURL_SETENCODEDPASSWORD )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1221,7 +1221,7 @@ void setEncodedPath ( const QByteArray & path )
 */
 HB_FUNC_STATIC( QURL_SETENCODEDPATH )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1247,7 +1247,7 @@ void setEncodedQuery ( const QByteArray & query )
 */
 HB_FUNC_STATIC( QURL_SETENCODEDQUERY )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1273,7 +1273,7 @@ void setEncodedUrl ( const QByteArray & encodedUrl )
 */
 void QUrl_setEncodedUrl1()
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1288,7 +1288,7 @@ void setEncodedUrl ( const QByteArray & encodedUrl, ParsingMode parsingMode )
 */
 void QUrl_setEncodedUrl2()
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1322,7 +1322,7 @@ void setEncodedUserName ( const QByteArray & userName )
 */
 HB_FUNC_STATIC( QURL_SETENCODEDUSERNAME )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1348,7 +1348,7 @@ void setFragment ( const QString & fragment )
 */
 HB_FUNC_STATIC( QURL_SETFRAGMENT )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1374,7 +1374,7 @@ void setHost ( const QString & host )
 */
 HB_FUNC_STATIC( QURL_SETHOST )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1400,7 +1400,7 @@ void setPassword ( const QString & password )
 */
 HB_FUNC_STATIC( QURL_SETPASSWORD )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1426,7 +1426,7 @@ void setPath ( const QString & path )
 */
 HB_FUNC_STATIC( QURL_SETPATH )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1452,7 +1452,7 @@ void setPort ( int port )
 */
 HB_FUNC_STATIC( QURL_SETPORT )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1478,7 +1478,7 @@ void setQueryDelimiters ( char valueDelimiter, char pairDelimiter )
 */
 HB_FUNC_STATIC( QURL_SETQUERYDELIMITERS )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1504,7 +1504,7 @@ void setScheme ( const QString & scheme )
 */
 HB_FUNC_STATIC( QURL_SETSCHEME )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1530,7 +1530,7 @@ void setUrl ( const QString & url )
 */
 void QUrl_setUrl1()
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1545,7 +1545,7 @@ void setUrl ( const QString & url, ParsingMode parsingMode )
 */
 void QUrl_setUrl2()
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1579,7 +1579,7 @@ void setUserInfo ( const QString & userInfo )
 */
 HB_FUNC_STATIC( QURL_SETUSERINFO )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1605,7 +1605,7 @@ void setUserName ( const QString & userName )
 */
 HB_FUNC_STATIC( QURL_SETUSERNAME )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1631,7 +1631,7 @@ void swap ( QUrl & other )
 */
 HB_FUNC_STATIC( QURL_SWAP )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1657,7 +1657,7 @@ QByteArray toEncoded ( FormattingOptions options = None ) const
 */
 HB_FUNC_STATIC( QURL_TOENCODED )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1666,7 +1666,7 @@ HB_FUNC_STATIC( QURL_TOENCODED )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->toEncoded( ISNIL(1)? (QUrl::FormattingOptions) QUrl::None : (QUrl::FormattingOptions) hb_parni(1) ) );
-      _qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1682,7 +1682,7 @@ QString toLocalFile () const
 */
 HB_FUNC_STATIC( QURL_TOLOCALFILE )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1706,7 +1706,7 @@ QString toString ( FormattingOptions options = None ) const
 */
 HB_FUNC_STATIC( QURL_TOSTRING )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1730,7 +1730,7 @@ QString topLevelDomain () const
 */
 HB_FUNC_STATIC( QURL_TOPLEVELDOMAIN )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1754,7 +1754,7 @@ QString userInfo () const
 */
 HB_FUNC_STATIC( QURL_USERINFO )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1778,7 +1778,7 @@ QString userName () const
 */
 HB_FUNC_STATIC( QURL_USERNAME )
 {
-  QUrl * obj = (QUrl *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUrl * obj = (QUrl *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1823,7 +1823,7 @@ void QUrl_fromEncoded1()
 {
 
   QUrl * ptr = new QUrl( QUrl::fromEncoded( *PQBYTEARRAY(1) ) );
-  _qt4xhb_createReturnClass( ptr, "QURL", true );
+  Qt4xHb::_qt4xhb_createReturnClass( ptr, "QURL", true );
 }
 
 /*
@@ -1833,7 +1833,7 @@ void QUrl_fromEncoded2()
 {
 
   QUrl * ptr = new QUrl( QUrl::fromEncoded( *PQBYTEARRAY(1), (QUrl::ParsingMode) hb_parni(2) ) );
-  _qt4xhb_createReturnClass( ptr, "QURL", true );
+  Qt4xHb::_qt4xhb_createReturnClass( ptr, "QURL", true );
 }
 
 //[1]QUrl fromEncoded ( const QByteArray & input )
@@ -1865,7 +1865,7 @@ HB_FUNC_STATIC( QURL_FROMLOCALFILE )
   {
 #endif
     QUrl * ptr = new QUrl( QUrl::fromLocalFile( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass( ptr, "QURL", true );
+    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QURL", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1904,7 +1904,7 @@ HB_FUNC_STATIC( QURL_FROMUSERINPUT )
   {
 #endif
     QUrl * ptr = new QUrl( QUrl::fromUserInput( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass( ptr, "QURL", true );
+    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QURL", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1964,7 +1964,7 @@ HB_FUNC_STATIC( QURL_TOACE )
   {
 #endif
     QByteArray * ptr = new QByteArray( QUrl::toAce( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1983,8 +1983,8 @@ HB_FUNC_STATIC( QURL_TOPERCENTENCODING )
   if( ISBETWEEN(1,3) && ISCHAR(1) && (ISQBYTEARRAY(2)||ISNIL(2)) && (ISQBYTEARRAY(3)||ISNIL(3)) )
   {
 #endif
-    QByteArray * ptr = new QByteArray( QUrl::toPercentEncoding( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) _qt4xhb_itemGetPtr(2), ISNIL(3)? QByteArray() : *(QByteArray *) _qt4xhb_itemGetPtr(3) ) );
-    _qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+    QByteArray * ptr = new QByteArray( QUrl::toPercentEncoding( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt4xHb::_qt4xhb_itemGetPtr(2), ISNIL(3)? QByteArray() : *(QByteArray *) Qt4xHb::_qt4xhb_itemGetPtr(3) ) );
+    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

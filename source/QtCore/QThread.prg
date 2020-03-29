@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QTHREAD_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QThread * o = new QThread( OPQOBJECT(1,0) );
-    _qt4xhb_returnNewObject( o, false );
+    Qt4xHb::_qt4xhb_returnNewObject( o, false );
   }
   else
   {
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QTHREAD_NEW )
 
 HB_FUNC_STATIC( QTHREAD_DELETE )
 {
-  QThread * obj = (QThread *) _qt4xhb_itemGetPtrStackSelfItem();
+  QThread * obj = (QThread *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -97,7 +97,7 @@ void exit(int returnCode = 0)
 */
 HB_FUNC_STATIC( QTHREAD_EXIT )
 {
-  QThread * obj = (QThread *) _qt4xhb_itemGetPtrStackSelfItem();
+  QThread * obj = (QThread *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -123,7 +123,7 @@ bool isFinished() const
 */
 HB_FUNC_STATIC( QTHREAD_ISFINISHED )
 {
-  QThread * obj = (QThread *) _qt4xhb_itemGetPtrStackSelfItem();
+  QThread * obj = (QThread *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -147,7 +147,7 @@ bool isRunning() const
 */
 HB_FUNC_STATIC( QTHREAD_ISRUNNING )
 {
-  QThread * obj = (QThread *) _qt4xhb_itemGetPtrStackSelfItem();
+  QThread * obj = (QThread *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -171,7 +171,7 @@ Priority priority() const
 */
 HB_FUNC_STATIC( QTHREAD_PRIORITY )
 {
-  QThread * obj = (QThread *) _qt4xhb_itemGetPtrStackSelfItem();
+  QThread * obj = (QThread *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -195,7 +195,7 @@ void setPriority(Priority priority)
 */
 HB_FUNC_STATIC( QTHREAD_SETPRIORITY )
 {
-  QThread * obj = (QThread *) _qt4xhb_itemGetPtrStackSelfItem();
+  QThread * obj = (QThread *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -221,7 +221,7 @@ void setStackSize(uint stackSize)
 */
 HB_FUNC_STATIC( QTHREAD_SETSTACKSIZE )
 {
-  QThread * obj = (QThread *) _qt4xhb_itemGetPtrStackSelfItem();
+  QThread * obj = (QThread *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -247,7 +247,7 @@ uint stackSize() const
 */
 HB_FUNC_STATIC( QTHREAD_STACKSIZE )
 {
-  QThread * obj = (QThread *) _qt4xhb_itemGetPtrStackSelfItem();
+  QThread * obj = (QThread *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -271,7 +271,7 @@ virtual bool event(QEvent * event)
 */
 HB_FUNC_STATIC( QTHREAD_EVENT )
 {
-  QThread * obj = (QThread *) _qt4xhb_itemGetPtrStackSelfItem();
+  QThread * obj = (QThread *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -295,7 +295,7 @@ void quit()
 */
 HB_FUNC_STATIC( QTHREAD_QUIT )
 {
-  QThread * obj = (QThread *) _qt4xhb_itemGetPtrStackSelfItem();
+  QThread * obj = (QThread *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -321,7 +321,7 @@ void start(Priority priority = InheritPriority)
 */
 HB_FUNC_STATIC( QTHREAD_START )
 {
-  QThread * obj = (QThread *) _qt4xhb_itemGetPtrStackSelfItem();
+  QThread * obj = (QThread *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -347,7 +347,7 @@ void terminate()
 */
 HB_FUNC_STATIC( QTHREAD_TERMINATE )
 {
-  QThread * obj = (QThread *) _qt4xhb_itemGetPtrStackSelfItem();
+  QThread * obj = (QThread *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QTHREAD_CURRENTTHREAD )
   {
 #endif
     QThread * ptr = QThread::currentThread();
-    _qt4xhb_createReturnQObjectClass( ptr, "QTHREAD" );
+    Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QTHREAD" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -412,7 +412,7 @@ void yieldCurrentThread()
 */
 HB_FUNC_STATIC( QTHREAD_YIELDCURRENTTHREAD )
 {
-  QThread * obj = (QThread *) _qt4xhb_itemGetPtrStackSelfItem();
+  QThread * obj = (QThread *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

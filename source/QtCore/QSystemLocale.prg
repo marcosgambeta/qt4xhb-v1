@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QSYSTEMLOCALE_NEW )
   if( ISNUMPAR(0) )
   {
     QSystemLocale * o = new QSystemLocale();
-    _qt4xhb_returnNewObject( o, true );
+    Qt4xHb::_qt4xhb_returnNewObject( o, true );
   }
   else
   {
@@ -71,7 +71,7 @@ virtual QLocale fallbackLocale () const
 */
 HB_FUNC_STATIC( QSYSTEMLOCALE_FALLBACKLOCALE )
 {
-  QSystemLocale * obj = (QSystemLocale *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSystemLocale * obj = (QSystemLocale *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QSYSTEMLOCALE_FALLBACKLOCALE )
     {
 #endif
       QLocale * ptr = new QLocale( obj->fallbackLocale() );
-      _qt4xhb_createReturnClass( ptr, "QLOCALE", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QLOCALE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -96,7 +96,7 @@ virtual QVariant query ( QueryType type, QVariant in ) const
 */
 HB_FUNC_STATIC( QSYSTEMLOCALE_QUERY )
 {
-  QSystemLocale * obj = (QSystemLocale *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSystemLocale * obj = (QSystemLocale *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QSYSTEMLOCALE_QUERY )
     {
 #endif
       QVariant * ptr = new QVariant( obj->query( (QSystemLocale::QueryType) hb_parni(1), *PQVARIANT(2) ) );
-      _qt4xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

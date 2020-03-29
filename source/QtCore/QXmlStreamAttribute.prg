@@ -60,7 +60,7 @@ QXmlStreamAttribute()
 void QXmlStreamAttribute_new1()
 {
   QXmlStreamAttribute * o = new QXmlStreamAttribute();
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -69,7 +69,7 @@ QXmlStreamAttribute(const QString & qualifiedName, const QString & value)
 void QXmlStreamAttribute_new2()
 {
   QXmlStreamAttribute * o = new QXmlStreamAttribute( PQSTRING(1), PQSTRING(2) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -78,7 +78,7 @@ QXmlStreamAttribute(const QString & namespaceUri, const QString & name, const QS
 void QXmlStreamAttribute_new3()
 {
   QXmlStreamAttribute * o = new QXmlStreamAttribute( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -87,7 +87,7 @@ QXmlStreamAttribute(const QXmlStreamAttribute & other)
 void QXmlStreamAttribute_new4()
 {
   QXmlStreamAttribute * o = new QXmlStreamAttribute( *PQXMLSTREAMATTRIBUTE(1) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 //[1]QXmlStreamAttribute()
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW )
 
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_DELETE )
 {
-  QXmlStreamAttribute * obj = (QXmlStreamAttribute *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlStreamAttribute * obj = (QXmlStreamAttribute *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -141,7 +141,7 @@ bool isDefault() const
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_ISDEFAULT )
 {
-  QXmlStreamAttribute * obj = (QXmlStreamAttribute *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlStreamAttribute * obj = (QXmlStreamAttribute *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -165,7 +165,7 @@ QStringRef name() const
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NAME )
 {
-  QXmlStreamAttribute * obj = (QXmlStreamAttribute *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlStreamAttribute * obj = (QXmlStreamAttribute *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NAME )
     {
 #endif
       QStringRef * ptr = new QStringRef( obj->name() );
-      _qt4xhb_createReturnClass( ptr, "QSTRINGREF", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,7 +190,7 @@ QStringRef namespaceUri() const
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NAMESPACEURI )
 {
-  QXmlStreamAttribute * obj = (QXmlStreamAttribute *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlStreamAttribute * obj = (QXmlStreamAttribute *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NAMESPACEURI )
     {
 #endif
       QStringRef * ptr = new QStringRef( obj->namespaceUri() );
-      _qt4xhb_createReturnClass( ptr, "QSTRINGREF", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,7 +215,7 @@ QStringRef prefix() const
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_PREFIX )
 {
-  QXmlStreamAttribute * obj = (QXmlStreamAttribute *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlStreamAttribute * obj = (QXmlStreamAttribute *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_PREFIX )
     {
 #endif
       QStringRef * ptr = new QStringRef( obj->prefix() );
-      _qt4xhb_createReturnClass( ptr, "QSTRINGREF", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -240,7 +240,7 @@ QStringRef qualifiedName() const
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_QUALIFIEDNAME )
 {
-  QXmlStreamAttribute * obj = (QXmlStreamAttribute *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlStreamAttribute * obj = (QXmlStreamAttribute *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_QUALIFIEDNAME )
     {
 #endif
       QStringRef * ptr = new QStringRef( obj->qualifiedName() );
-      _qt4xhb_createReturnClass( ptr, "QSTRINGREF", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -265,7 +265,7 @@ QStringRef value() const
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_VALUE )
 {
-  QXmlStreamAttribute * obj = (QXmlStreamAttribute *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlStreamAttribute * obj = (QXmlStreamAttribute *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_VALUE )
     {
 #endif
       QStringRef * ptr = new QStringRef( obj->value() );
-      _qt4xhb_createReturnClass( ptr, "QSTRINGREF", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

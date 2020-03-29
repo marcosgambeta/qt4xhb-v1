@@ -74,7 +74,7 @@ void QAbstractAnimationSlots::stateChanged( QAbstractAnimation::State newState, 
 
 void QAbstractAnimationSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractAnimation * obj = (QAbstractAnimation *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractAnimation * obj = (QAbstractAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

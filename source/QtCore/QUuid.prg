@@ -67,7 +67,7 @@ QUuid()
 HB_FUNC_STATIC( QUUID_NEW1 )
 {
   QUuid * o = new QUuid();
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -76,7 +76,7 @@ QUuid(uint l, ushort w1, ushort w2, uchar b1, uchar b2, uchar b3, uchar b4, ucha
 HB_FUNC_STATIC( QUUID_NEW2 )
 {
   QUuid * o = new QUuid( PUINT(1), PUSHORT(2), PUSHORT(3), PUCHAR(4), PUCHAR(5), PUCHAR(6), PUCHAR(7), PUCHAR(8), PUCHAR(9), PUCHAR(10), PUCHAR(11) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -85,7 +85,7 @@ QUuid(const QString &)
 HB_FUNC_STATIC( QUUID_NEW3 )
 {
   QUuid * o = new QUuid( PQSTRING(1) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -94,7 +94,7 @@ QUuid(const char *)
 HB_FUNC_STATIC( QUUID_NEW4 )
 {
   QUuid * o = new QUuid( PCONSTCHAR(1) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -103,7 +103,7 @@ QUuid(const QByteArray &)
 HB_FUNC_STATIC( QUUID_NEW5 )
 {
   QUuid * o = new QUuid( *PQBYTEARRAY(1) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QUUID_NEW )
 
 HB_FUNC_STATIC( QUUID_DELETE )
 {
-  QUuid * obj = (QUuid *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUuid * obj = (QUuid *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -164,7 +164,7 @@ QString toString() const;
 */
 HB_FUNC_STATIC( QUUID_TOSTRING )
 {
-  QUuid * obj = (QUuid *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUuid * obj = (QUuid *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -188,7 +188,7 @@ QByteArray toByteArray() const
 */
 HB_FUNC_STATIC( QUUID_TOBYTEARRAY )
 {
-  QUuid * obj = (QUuid *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUuid * obj = (QUuid *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QUUID_TOBYTEARRAY )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->toByteArray() );
-      _qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,7 +213,7 @@ QByteArray toRfc4122() const
 */
 HB_FUNC_STATIC( QUUID_TORFC4122 )
 {
-  QUuid * obj = (QUuid *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUuid * obj = (QUuid *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QUUID_TORFC4122 )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->toRfc4122() );
-      _qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,7 +238,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QUUID_ISNULL )
 {
-  QUuid * obj = (QUuid *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUuid * obj = (QUuid *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -262,7 +262,7 @@ QUuid::Variant variant() const
 */
 HB_FUNC_STATIC( QUUID_VARIANT )
 {
-  QUuid * obj = (QUuid *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUuid * obj = (QUuid *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -286,7 +286,7 @@ QUuid::Version version() const
 */
 HB_FUNC_STATIC( QUUID_VERSION )
 {
-  QUuid * obj = (QUuid *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUuid * obj = (QUuid *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QUUID_FROMRFC4122 )
   {
 #endif
     QUuid * ptr = new QUuid( QUuid::fromRfc4122( *PQBYTEARRAY(1) ) );
-    _qt4xhb_createReturnClass( ptr, "QUUID", true );
+    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QUUID", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QUUID_CREATEUUID )
   {
 #endif
     QUuid * ptr = new QUuid( QUuid::createUuid() );
-    _qt4xhb_createReturnClass( ptr, "QUUID", true );
+    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QUUID", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

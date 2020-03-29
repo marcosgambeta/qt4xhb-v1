@@ -44,7 +44,7 @@ void QAbstractEventDispatcherSlots::awake()
 
 void QAbstractEventDispatcherSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

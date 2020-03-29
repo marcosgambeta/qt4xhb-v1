@@ -82,7 +82,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_DELETE )
 {
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngine * obj = (QAbstractFileEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -102,7 +102,7 @@ bool atEnd () const
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_ATEND )
 {
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngine * obj = (QAbstractFileEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -126,7 +126,7 @@ virtual bool caseSensitive () const
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_CASESENSITIVE )
 {
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngine * obj = (QAbstractFileEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -150,7 +150,7 @@ virtual bool close ()
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_CLOSE )
 {
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngine * obj = (QAbstractFileEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -174,7 +174,7 @@ virtual bool copy ( const QString & newName )
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_COPY )
 {
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngine * obj = (QAbstractFileEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -198,7 +198,7 @@ virtual QStringList entryList ( QDir::Filters filters, const QStringList & filte
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_ENTRYLIST )
 {
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngine * obj = (QAbstractFileEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -222,7 +222,7 @@ QFile::FileError error () const
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_ERROR )
 {
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngine * obj = (QAbstractFileEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -246,7 +246,7 @@ QString errorString () const
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_ERRORSTRING )
 {
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngine * obj = (QAbstractFileEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -270,7 +270,7 @@ virtual FileFlags fileFlags ( FileFlags type = FileInfoAll ) const
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_FILEFLAGS )
 {
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngine * obj = (QAbstractFileEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -294,7 +294,7 @@ virtual QString fileName ( FileName file = DefaultName ) const
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_FILENAME )
 {
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngine * obj = (QAbstractFileEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -318,7 +318,7 @@ virtual QDateTime fileTime ( FileTime time ) const
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_FILETIME )
 {
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngine * obj = (QAbstractFileEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_FILETIME )
     {
 #endif
       QDateTime * ptr = new QDateTime( obj->fileTime( (QAbstractFileEngine::FileTime) hb_parni(1) ) );
-      _qt4xhb_createReturnClass( ptr, "QDATETIME", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -343,7 +343,7 @@ virtual bool flush ()
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_FLUSH )
 {
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngine * obj = (QAbstractFileEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -367,7 +367,7 @@ virtual int handle () const
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_HANDLE )
 {
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngine * obj = (QAbstractFileEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -391,7 +391,7 @@ virtual bool isRelativePath () const
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_ISRELATIVEPATH )
 {
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngine * obj = (QAbstractFileEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -415,7 +415,7 @@ virtual bool isSequential () const
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_ISSEQUENTIAL )
 {
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngine * obj = (QAbstractFileEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -439,7 +439,7 @@ virtual bool link ( const QString & newName )
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_LINK )
 {
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngine * obj = (QAbstractFileEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -463,7 +463,7 @@ virtual bool mkdir ( const QString & dirName, bool createParentDirectories ) con
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_MKDIR )
 {
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngine * obj = (QAbstractFileEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -487,7 +487,7 @@ virtual bool open ( QIODevice::OpenMode mode )
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_OPEN )
 {
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngine * obj = (QAbstractFileEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -511,7 +511,7 @@ virtual QString owner ( FileOwner owner ) const
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_OWNER )
 {
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngine * obj = (QAbstractFileEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -535,7 +535,7 @@ virtual uint ownerId ( FileOwner owner ) const
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_OWNERID )
 {
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngine * obj = (QAbstractFileEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -559,7 +559,7 @@ virtual qint64 pos () const
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_POS )
 {
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngine * obj = (QAbstractFileEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -587,7 +587,7 @@ virtual bool remove ()
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_REMOVE )
 {
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngine * obj = (QAbstractFileEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -611,7 +611,7 @@ virtual bool rename ( const QString & newName )
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_RENAME )
 {
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngine * obj = (QAbstractFileEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -635,7 +635,7 @@ virtual bool rmdir ( const QString & dirName, bool recurseParentDirectories ) co
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_RMDIR )
 {
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngine * obj = (QAbstractFileEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -659,7 +659,7 @@ virtual bool seek ( qint64 offset )
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_SEEK )
 {
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngine * obj = (QAbstractFileEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -683,7 +683,7 @@ virtual void setFileName ( const QString & file )
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_SETFILENAME )
 {
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngine * obj = (QAbstractFileEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -709,7 +709,7 @@ virtual bool setPermissions ( uint perms )
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_SETPERMISSIONS )
 {
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngine * obj = (QAbstractFileEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -733,7 +733,7 @@ virtual bool setSize ( qint64 size )
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_SETSIZE )
 {
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngine * obj = (QAbstractFileEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -757,7 +757,7 @@ virtual qint64 size () const
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_SIZE )
 {
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngine * obj = (QAbstractFileEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -781,7 +781,7 @@ virtual bool supportsExtension ( Extension extension ) const
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_SUPPORTSEXTENSION )
 {
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngine * obj = (QAbstractFileEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -805,7 +805,7 @@ virtual qint64 write ( const char * data, qint64 len )
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_WRITE )
 {
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngine * obj = (QAbstractFileEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -834,7 +834,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_CREATE )
   {
 #endif
     QAbstractFileEngine * ptr = QAbstractFileEngine::create( PQSTRING(1) );
-    _qt4xhb_createReturnClass( ptr, "QABSTRACTFILEENGINE", false );
+    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QABSTRACTFILEENGINE", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

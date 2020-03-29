@@ -57,7 +57,7 @@ QFileSystemWatcher(QObject * parent = 0)
 void QFileSystemWatcher_new1()
 {
   QFileSystemWatcher * o = new QFileSystemWatcher( OPQOBJECT(1,0) );
-  _qt4xhb_returnNewObject( o, false );
+  Qt4xHb::_qt4xhb_returnNewObject( o, false );
 }
 
 /*
@@ -66,7 +66,7 @@ QFileSystemWatcher(const QStringList & paths, QObject * parent = 0)
 void QFileSystemWatcher_new2()
 {
   QFileSystemWatcher * o = new QFileSystemWatcher( PQSTRINGLIST(1), OPQOBJECT(2,0) );
-  _qt4xhb_returnNewObject( o, false );
+  Qt4xHb::_qt4xhb_returnNewObject( o, false );
 }
 
 //[1]QFileSystemWatcher(QObject * parent = 0)
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW )
 
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_DELETE )
 {
-  QFileSystemWatcher * obj = (QFileSystemWatcher *) _qt4xhb_itemGetPtrStackSelfItem();
+  QFileSystemWatcher * obj = (QFileSystemWatcher *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -112,7 +112,7 @@ void addPath ( const QString & path )
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_ADDPATH )
 {
-  QFileSystemWatcher * obj = (QFileSystemWatcher *) _qt4xhb_itemGetPtrStackSelfItem();
+  QFileSystemWatcher * obj = (QFileSystemWatcher *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -138,7 +138,7 @@ void addPaths ( const QStringList & paths )
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_ADDPATHS )
 {
-  QFileSystemWatcher * obj = (QFileSystemWatcher *) _qt4xhb_itemGetPtrStackSelfItem();
+  QFileSystemWatcher * obj = (QFileSystemWatcher *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -164,7 +164,7 @@ QStringList directories () const
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_DIRECTORIES )
 {
-  QFileSystemWatcher * obj = (QFileSystemWatcher *) _qt4xhb_itemGetPtrStackSelfItem();
+  QFileSystemWatcher * obj = (QFileSystemWatcher *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -188,7 +188,7 @@ QStringList files () const
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_FILES )
 {
-  QFileSystemWatcher * obj = (QFileSystemWatcher *) _qt4xhb_itemGetPtrStackSelfItem();
+  QFileSystemWatcher * obj = (QFileSystemWatcher *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -212,7 +212,7 @@ void removePath ( const QString & path )
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_REMOVEPATH )
 {
-  QFileSystemWatcher * obj = (QFileSystemWatcher *) _qt4xhb_itemGetPtrStackSelfItem();
+  QFileSystemWatcher * obj = (QFileSystemWatcher *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -238,7 +238,7 @@ void removePaths ( const QStringList & paths )
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_REMOVEPATHS )
 {
-  QFileSystemWatcher * obj = (QFileSystemWatcher *) _qt4xhb_itemGetPtrStackSelfItem();
+  QFileSystemWatcher * obj = (QFileSystemWatcher *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
