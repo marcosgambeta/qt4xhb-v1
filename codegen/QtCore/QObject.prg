@@ -571,7 +571,7 @@ $eventMethod=GestureOverride
 
 HB_FUNC_STATIC( QOBJECT_CONNECT )
 {
-  QObject * obj = (QObject *) _qt4xhb_itemGetPtrStackSelfItem();
+  QObject * obj = (QObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
 
 HB_FUNC_STATIC( QOBJECT_DISCONNECT )
 {
-  QObject * obj = (QObject *) _qt4xhb_itemGetPtrStackSelfItem();
+  QObject * obj = (QObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
