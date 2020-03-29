@@ -108,7 +108,7 @@ void QAxScriptSlots::stateChanged( int state )
 
 void QAxScriptSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAxScript * obj = (QAxScript *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAxScript * obj = (QAxScript *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

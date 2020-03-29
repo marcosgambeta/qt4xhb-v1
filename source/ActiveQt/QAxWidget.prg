@@ -74,7 +74,7 @@ QAxWidget ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 void QAxWidget_new1()
 {
   QAxWidget * o = new QAxWidget( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-  _qt4xhb_returnNewObject( o, false );
+  Qt4xHb::_qt4xhb_returnNewObject( o, false );
 }
 
 /*
@@ -83,7 +83,7 @@ QAxWidget ( const QString & c, QWidget * parent = 0, Qt::WindowFlags f = 0 )
 void QAxWidget_new2()
 {
   QAxWidget * o = new QAxWidget( PQSTRING(1), OPQWIDGET(2,0), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
-  _qt4xhb_returnNewObject( o, false );
+  Qt4xHb::_qt4xhb_returnNewObject( o, false );
 }
 
 /*
@@ -92,7 +92,7 @@ QAxWidget ( IUnknown * iface, QWidget * parent = 0, Qt::WindowFlags f = 0 )
 void QAxWidget_new3()
 {
   QAxWidget * o = new QAxWidget( (IUnknown *) hb_parptr(1), OPQWIDGET(2,0), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
-  _qt4xhb_returnNewObject( o, false );
+  Qt4xHb::_qt4xhb_returnNewObject( o, false );
 }
 
 //[1]QAxWidget ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QAXWIDGET_NEW )
 
 HB_FUNC_STATIC( QAXWIDGET_DELETE )
 {
-  QAxWidget * obj = (QAxWidget *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -145,7 +145,7 @@ virtual QAxAggregated * createAggregate ()
 */
 HB_FUNC_STATIC( QAXWIDGET_CREATEAGGREGATE )
 {
-  QAxWidget * obj = (QAxWidget *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QAXWIDGET_CREATEAGGREGATE )
     {
 #endif
       QAxAggregated * ptr = obj->createAggregate();
-      _qt4xhb_createReturnClass( ptr, "QAXAGGREGATED", false );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QAXAGGREGATED", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,7 +170,7 @@ bool doVerb ( const QString & verb )
 */
 HB_FUNC_STATIC( QAXWIDGET_DOVERB )
 {
-  QAxWidget * obj = (QAxWidget *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -194,7 +194,7 @@ virtual void clear ()
 */
 HB_FUNC_STATIC( QAXWIDGET_CLEAR )
 {
-  QAxWidget * obj = (QAxWidget *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -220,7 +220,7 @@ virtual QSize minimumSizeHint () const
 */
 HB_FUNC_STATIC( QAXWIDGET_MINIMUMSIZEHINT )
 {
-  QAxWidget * obj = (QAxWidget *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QAXWIDGET_MINIMUMSIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
-      _qt4xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,7 +245,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QAXWIDGET_SIZEHINT )
 {
-  QAxWidget * obj = (QAxWidget *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QAXWIDGET_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      _qt4xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -273,7 +273,7 @@ QVariant asVariant () const
 */
 HB_FUNC_STATIC( QAXWIDGET_ASVARIANT )
 {
-  QAxWidget * obj = (QAxWidget *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QAXWIDGET_ASVARIANT )
     {
 #endif
       QVariant * ptr = new QVariant( obj->asVariant() );
-      _qt4xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -298,7 +298,7 @@ QString control () const
 */
 HB_FUNC_STATIC( QAXWIDGET_CONTROL )
 {
-  QAxWidget * obj = (QAxWidget *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -322,7 +322,7 @@ void disableClassInfo ()
 */
 HB_FUNC_STATIC( QAXWIDGET_DISABLECLASSINFO )
 {
-  QAxWidget * obj = (QAxWidget *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -348,7 +348,7 @@ void disableEventSink ()
 */
 HB_FUNC_STATIC( QAXWIDGET_DISABLEEVENTSINK )
 {
-  QAxWidget * obj = (QAxWidget *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -374,7 +374,7 @@ void disableMetaObject ()
 */
 HB_FUNC_STATIC( QAXWIDGET_DISABLEMETAOBJECT )
 {
-  QAxWidget * obj = (QAxWidget *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -400,12 +400,12 @@ QVariant dynamicCall ( const char * function, const QVariant & var1 = QVariant()
 */
 void QAxWidget_dynamicCall1()
 {
-  QAxWidget * obj = (QAxWidget *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->dynamicCall( PCONSTCHAR(1), ISNIL(2)? QVariant() : *(QVariant *) _qt4xhb_itemGetPtr(2), ISNIL(3)? QVariant() : *(QVariant *) _qt4xhb_itemGetPtr(3), ISNIL(4)? QVariant() : *(QVariant *) _qt4xhb_itemGetPtr(4), ISNIL(5)? QVariant() : *(QVariant *) _qt4xhb_itemGetPtr(5), ISNIL(6)? QVariant() : *(QVariant *) _qt4xhb_itemGetPtr(6), ISNIL(7)? QVariant() : *(QVariant *) _qt4xhb_itemGetPtr(7), ISNIL(8)? QVariant() : *(QVariant *) _qt4xhb_itemGetPtr(8), ISNIL(9)? QVariant() : *(QVariant *) _qt4xhb_itemGetPtr(9) ) );
-    _qt4xhb_createReturnClass( ptr, "QVARIANT", true );
+    QVariant * ptr = new QVariant( obj->dynamicCall( PCONSTCHAR(1), ISNIL(2)? QVariant() : *(QVariant *) Qt4xHb::_qt4xhb_itemGetPtr(2), ISNIL(3)? QVariant() : *(QVariant *) Qt4xHb::_qt4xhb_itemGetPtr(3), ISNIL(4)? QVariant() : *(QVariant *) Qt4xHb::_qt4xhb_itemGetPtr(4), ISNIL(5)? QVariant() : *(QVariant *) Qt4xHb::_qt4xhb_itemGetPtr(5), ISNIL(6)? QVariant() : *(QVariant *) Qt4xHb::_qt4xhb_itemGetPtr(6), ISNIL(7)? QVariant() : *(QVariant *) Qt4xHb::_qt4xhb_itemGetPtr(7), ISNIL(8)? QVariant() : *(QVariant *) Qt4xHb::_qt4xhb_itemGetPtr(8), ISNIL(9)? QVariant() : *(QVariant *) Qt4xHb::_qt4xhb_itemGetPtr(9) ) );
+    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QVARIANT", true );
   }
 }
 
@@ -414,12 +414,12 @@ QVariant dynamicCall ( const char * function, QList<QVariant> & vars )
 */
 void QAxWidget_dynamicCall2()
 {
-  QAxWidget * obj = (QAxWidget *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->dynamicCall( PCONSTCHAR(1), PQVARIANTLIST(2) ) );
-    _qt4xhb_createReturnClass( ptr, "QVARIANT", true );
+    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QVARIANT", true );
   }
 }
 
@@ -447,7 +447,7 @@ QString generateDocumentation ()
 */
 HB_FUNC_STATIC( QAXWIDGET_GENERATEDOCUMENTATION )
 {
-  QAxWidget * obj = (QAxWidget *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -471,7 +471,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QAXWIDGET_ISNULL )
 {
-  QAxWidget * obj = (QAxWidget *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -495,7 +495,7 @@ virtual bool propertyWritable ( const char * prop ) const
 */
 HB_FUNC_STATIC( QAXWIDGET_PROPERTYWRITABLE )
 {
-  QAxWidget * obj = (QAxWidget *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -519,12 +519,12 @@ QAxObject * querySubObject ( const char * name, const QVariant & var1 = QVariant
 */
 void QAxWidget_querySubObject1()
 {
-  QAxWidget * obj = (QAxWidget *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QAxObject * ptr = obj->querySubObject( PCONSTCHAR(1), ISNIL(2)? QVariant() : *(QVariant *) _qt4xhb_itemGetPtr(2), ISNIL(3)? QVariant() : *(QVariant *) _qt4xhb_itemGetPtr(3), ISNIL(4)? QVariant() : *(QVariant *) _qt4xhb_itemGetPtr(4), ISNIL(5)? QVariant() : *(QVariant *) _qt4xhb_itemGetPtr(5), ISNIL(6)? QVariant() : *(QVariant *) _qt4xhb_itemGetPtr(6), ISNIL(7)? QVariant() : *(QVariant *) _qt4xhb_itemGetPtr(7), ISNIL(8)? QVariant() : *(QVariant *) _qt4xhb_itemGetPtr(8), ISNIL(9)? QVariant() : *(QVariant *) _qt4xhb_itemGetPtr(9) );
-    _qt4xhb_createReturnQObjectClass( ptr, "QAXOBJECT" );
+    QAxObject * ptr = obj->querySubObject( PCONSTCHAR(1), ISNIL(2)? QVariant() : *(QVariant *) Qt4xHb::_qt4xhb_itemGetPtr(2), ISNIL(3)? QVariant() : *(QVariant *) Qt4xHb::_qt4xhb_itemGetPtr(3), ISNIL(4)? QVariant() : *(QVariant *) Qt4xHb::_qt4xhb_itemGetPtr(4), ISNIL(5)? QVariant() : *(QVariant *) Qt4xHb::_qt4xhb_itemGetPtr(5), ISNIL(6)? QVariant() : *(QVariant *) Qt4xHb::_qt4xhb_itemGetPtr(6), ISNIL(7)? QVariant() : *(QVariant *) Qt4xHb::_qt4xhb_itemGetPtr(7), ISNIL(8)? QVariant() : *(QVariant *) Qt4xHb::_qt4xhb_itemGetPtr(8), ISNIL(9)? QVariant() : *(QVariant *) Qt4xHb::_qt4xhb_itemGetPtr(9) );
+    Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QAXOBJECT" );
   }
 }
 
@@ -533,12 +533,12 @@ QAxObject * querySubObject ( const char * name, QList<QVariant> & vars )
 */
 void QAxWidget_querySubObject2()
 {
-  QAxWidget * obj = (QAxWidget *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QAxObject * ptr = obj->querySubObject( PCONSTCHAR(1), PQVARIANTLIST(2) );
-    _qt4xhb_createReturnQObjectClass( ptr, "QAXOBJECT" );
+    Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QAXOBJECT" );
   }
 }
 
@@ -566,7 +566,7 @@ bool setControl ( const QString & )
 */
 HB_FUNC_STATIC( QAXWIDGET_SETCONTROL )
 {
-  QAxWidget * obj = (QAxWidget *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -590,7 +590,7 @@ virtual void setPropertyWritable ( const char * prop, bool ok )
 */
 HB_FUNC_STATIC( QAXWIDGET_SETPROPERTYWRITABLE )
 {
-  QAxWidget * obj = (QAxWidget *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -616,7 +616,7 @@ QStringList verbs () const
 */
 HB_FUNC_STATIC( QAXWIDGET_VERBS )
 {
-  QAxWidget * obj = (QAxWidget *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
