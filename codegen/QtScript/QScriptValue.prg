@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CALL1 )
       par2 << *(QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
     }
     QScriptValue * ptr = new QScriptValue( obj->call ( par1, par2 ) );
-    Qt4xHb::_qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+    Qt4xHb::createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT1 )
       par1 << *(QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
     }
     QScriptValue * ptr = new QScriptValue( obj->construct ( par1 ) );
-    Qt4xHb::_qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+    Qt4xHb::createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
 
