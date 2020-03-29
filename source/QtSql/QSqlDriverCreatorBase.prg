@@ -52,7 +52,7 @@ RETURN
 
 HB_FUNC_STATIC( QSQLDRIVERCREATORBASE_DELETE )
 {
-  QSqlDriverCreatorBase * obj = (QSqlDriverCreatorBase *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSqlDriverCreatorBase * obj = (QSqlDriverCreatorBase *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -72,7 +72,7 @@ virtual QSqlDriver * createObject () const = 0
 */
 HB_FUNC_STATIC( QSQLDRIVERCREATORBASE_CREATEOBJECT )
 {
-  QSqlDriverCreatorBase * obj = (QSqlDriverCreatorBase *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSqlDriverCreatorBase * obj = (QSqlDriverCreatorBase *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QSQLDRIVERCREATORBASE_CREATEOBJECT )
     {
 #endif
       QSqlDriver * ptr = obj->createObject();
-      _qt4xhb_createReturnQObjectClass( ptr, "QSQLDRIVER" );
+      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QSQLDRIVER" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

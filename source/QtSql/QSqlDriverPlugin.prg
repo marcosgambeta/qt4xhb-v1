@@ -46,7 +46,7 @@ RETURN
 
 HB_FUNC_STATIC( QSQLDRIVERPLUGIN_DELETE )
 {
-  QSqlDriverPlugin * obj = (QSqlDriverPlugin *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSqlDriverPlugin * obj = (QSqlDriverPlugin *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -68,7 +68,7 @@ virtual QSqlDriver * create ( const QString & key ) = 0
 */
 HB_FUNC_STATIC( QSQLDRIVERPLUGIN_CREATE )
 {
-  QSqlDriverPlugin * obj = (QSqlDriverPlugin *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSqlDriverPlugin * obj = (QSqlDriverPlugin *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QSQLDRIVERPLUGIN_CREATE )
     {
 #endif
       QSqlDriver * ptr = obj->create( PQSTRING(1) );
-      _qt4xhb_createReturnQObjectClass( ptr, "QSQLDRIVER" );
+      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QSQLDRIVER" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -93,7 +93,7 @@ virtual QStringList keys () const = 0
 */
 HB_FUNC_STATIC( QSQLDRIVERPLUGIN_KEYS )
 {
-  QSqlDriverPlugin * obj = (QSqlDriverPlugin *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSqlDriverPlugin * obj = (QSqlDriverPlugin *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

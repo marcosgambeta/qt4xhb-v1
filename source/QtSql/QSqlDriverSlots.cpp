@@ -35,7 +35,7 @@ void QSqlDriverSlots::notification( const QString & name )
 
 void QSqlDriverSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSqlDriver * obj = (QSqlDriver *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSqlDriver * obj = (QSqlDriver *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
