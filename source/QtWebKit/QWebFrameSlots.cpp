@@ -129,7 +129,7 @@ void QWebFrameSlots::urlChanged( const QUrl & url )
 
 void QWebFrameSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QWebFrame * obj = (QWebFrame *) _qt4xhb_itemGetPtrStackSelfItem();
+  QWebFrame * obj = (QWebFrame *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

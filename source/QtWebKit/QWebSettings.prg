@@ -90,7 +90,7 @@ QString defaultTextEncoding () const
 */
 HB_FUNC_STATIC( QWEBSETTINGS_DEFAULTTEXTENCODING )
 {
-  QWebSettings * obj = (QWebSettings *) _qt4xhb_itemGetPtrStackSelfItem();
+  QWebSettings * obj = (QWebSettings *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -114,7 +114,7 @@ QString fontFamily ( FontFamily which ) const
 */
 HB_FUNC_STATIC( QWEBSETTINGS_FONTFAMILY )
 {
-  QWebSettings * obj = (QWebSettings *) _qt4xhb_itemGetPtrStackSelfItem();
+  QWebSettings * obj = (QWebSettings *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -138,7 +138,7 @@ int fontSize ( FontSize type ) const
 */
 HB_FUNC_STATIC( QWEBSETTINGS_FONTSIZE )
 {
-  QWebSettings * obj = (QWebSettings *) _qt4xhb_itemGetPtrStackSelfItem();
+  QWebSettings * obj = (QWebSettings *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -162,7 +162,7 @@ QString localStoragePath () const
 */
 HB_FUNC_STATIC( QWEBSETTINGS_LOCALSTORAGEPATH )
 {
-  QWebSettings * obj = (QWebSettings *) _qt4xhb_itemGetPtrStackSelfItem();
+  QWebSettings * obj = (QWebSettings *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -186,7 +186,7 @@ void resetAttribute ( WebAttribute attribute )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_RESETATTRIBUTE )
 {
-  QWebSettings * obj = (QWebSettings *) _qt4xhb_itemGetPtrStackSelfItem();
+  QWebSettings * obj = (QWebSettings *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -212,7 +212,7 @@ void resetFontFamily ( FontFamily which )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_RESETFONTFAMILY )
 {
-  QWebSettings * obj = (QWebSettings *) _qt4xhb_itemGetPtrStackSelfItem();
+  QWebSettings * obj = (QWebSettings *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -238,7 +238,7 @@ void resetFontSize ( FontSize type )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_RESETFONTSIZE )
 {
-  QWebSettings * obj = (QWebSettings *) _qt4xhb_itemGetPtrStackSelfItem();
+  QWebSettings * obj = (QWebSettings *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -264,7 +264,7 @@ void setAttribute ( WebAttribute attribute, bool on )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETATTRIBUTE )
 {
-  QWebSettings * obj = (QWebSettings *) _qt4xhb_itemGetPtrStackSelfItem();
+  QWebSettings * obj = (QWebSettings *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -290,7 +290,7 @@ void setDefaultTextEncoding ( const QString & encoding )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETDEFAULTTEXTENCODING )
 {
-  QWebSettings * obj = (QWebSettings *) _qt4xhb_itemGetPtrStackSelfItem();
+  QWebSettings * obj = (QWebSettings *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -316,7 +316,7 @@ void setFontFamily ( FontFamily which, const QString & family )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETFONTFAMILY )
 {
-  QWebSettings * obj = (QWebSettings *) _qt4xhb_itemGetPtrStackSelfItem();
+  QWebSettings * obj = (QWebSettings *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -342,7 +342,7 @@ void setFontSize ( FontSize type, int size )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETFONTSIZE )
 {
-  QWebSettings * obj = (QWebSettings *) _qt4xhb_itemGetPtrStackSelfItem();
+  QWebSettings * obj = (QWebSettings *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -368,7 +368,7 @@ void setLocalStoragePath ( const QString & path )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETLOCALSTORAGEPATH )
 {
-  QWebSettings * obj = (QWebSettings *) _qt4xhb_itemGetPtrStackSelfItem();
+  QWebSettings * obj = (QWebSettings *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -394,7 +394,7 @@ void setUserStyleSheetUrl ( const QUrl & location )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETUSERSTYLESHEETURL )
 {
-  QWebSettings * obj = (QWebSettings *) _qt4xhb_itemGetPtrStackSelfItem();
+  QWebSettings * obj = (QWebSettings *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -420,7 +420,7 @@ bool testAttribute ( WebAttribute attribute ) const
 */
 HB_FUNC_STATIC( QWEBSETTINGS_TESTATTRIBUTE )
 {
-  QWebSettings * obj = (QWebSettings *) _qt4xhb_itemGetPtrStackSelfItem();
+  QWebSettings * obj = (QWebSettings *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -444,7 +444,7 @@ QUrl userStyleSheetUrl () const
 */
 HB_FUNC_STATIC( QWEBSETTINGS_USERSTYLESHEETURL )
 {
-  QWebSettings * obj = (QWebSettings *) _qt4xhb_itemGetPtrStackSelfItem();
+  QWebSettings * obj = (QWebSettings *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_USERSTYLESHEETURL )
     {
 #endif
       QUrl * ptr = new QUrl( obj->userStyleSheetUrl() );
-      _qt4xhb_createReturnClass( ptr, "QURL", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QURL", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_GLOBALSETTINGS )
   {
 #endif
     QWebSettings * ptr = QWebSettings::globalSettings();
-    _qt4xhb_createReturnClass( ptr, "QWEBSETTINGS", false );
+    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QWEBSETTINGS", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -576,7 +576,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_ICONFORURL )
   {
 #endif
     QIcon * ptr = new QIcon( QWebSettings::iconForUrl( *PQURL(1) ) );
-    _qt4xhb_createReturnClass( ptr, "QICON", true );
+    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QICON", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -859,7 +859,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_WEBGRAPHIC )
   {
 #endif
     QPixmap * ptr = new QPixmap( QWebSettings::webGraphic( (QWebSettings::WebGraphic) hb_parni(1) ) );
-    _qt4xhb_createReturnClass( ptr, "QPIXMAP", true );
+    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPIXMAP", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

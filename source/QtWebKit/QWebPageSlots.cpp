@@ -323,7 +323,7 @@ void QWebPageSlots::windowCloseRequested()
 
 void QWebPageSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QWebPage * obj = (QWebPage *) _qt4xhb_itemGetPtrStackSelfItem();
+  QWebPage * obj = (QWebPage *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

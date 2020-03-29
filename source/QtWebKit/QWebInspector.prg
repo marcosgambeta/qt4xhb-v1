@@ -54,7 +54,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_NEW )
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     QWebInspector * o = new QWebInspector( OPQWIDGET(1,0) );
-    _qt4xhb_returnNewObject( o, false );
+    Qt4xHb::_qt4xhb_returnNewObject( o, false );
   }
   else
   {
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_NEW )
 
 HB_FUNC_STATIC( QWEBINSPECTOR_DELETE )
 {
-  QWebInspector * obj = (QWebInspector *) _qt4xhb_itemGetPtrStackSelfItem();
+  QWebInspector * obj = (QWebInspector *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -86,7 +86,7 @@ QWebPage * page () const
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_PAGE )
 {
-  QWebInspector * obj = (QWebInspector *) _qt4xhb_itemGetPtrStackSelfItem();
+  QWebInspector * obj = (QWebInspector *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_PAGE )
     {
 #endif
       QWebPage * ptr = obj->page();
-      _qt4xhb_createReturnQObjectClass( ptr, "QWEBPAGE" );
+      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QWEBPAGE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -111,7 +111,7 @@ void setPage ( QWebPage * page )
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_SETPAGE )
 {
-  QWebInspector * obj = (QWebInspector *) _qt4xhb_itemGetPtrStackSelfItem();
+  QWebInspector * obj = (QWebInspector *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -137,7 +137,7 @@ virtual bool event ( QEvent * ev )
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_EVENT )
 {
-  QWebInspector * obj = (QWebInspector *) _qt4xhb_itemGetPtrStackSelfItem();
+  QWebInspector * obj = (QWebInspector *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -161,7 +161,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_SIZEHINT )
 {
-  QWebInspector * obj = (QWebInspector *) _qt4xhb_itemGetPtrStackSelfItem();
+  QWebInspector * obj = (QWebInspector *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      _qt4xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

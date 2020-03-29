@@ -122,7 +122,7 @@ void QGraphicsWebViewSlots::urlChanged( const QUrl & url )
 
 void QGraphicsWebViewSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWebView * obj = (QGraphicsWebView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
