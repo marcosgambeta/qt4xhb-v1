@@ -33,7 +33,7 @@ void QHelpSearchQueryWidgetSlots::search()
 
 void QHelpSearchQueryWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpSearchQueryWidget * obj = (QHelpSearchQueryWidget *) _qt4xhb_itemGetPtrStackSelfItem();
+  QHelpSearchQueryWidget * obj = (QHelpSearchQueryWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

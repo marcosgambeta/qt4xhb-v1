@@ -44,7 +44,7 @@ void QHelpIndexModelSlots::indexCreationStarted()
 
 void QHelpIndexModelSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpIndexModel * obj = (QHelpIndexModel *) _qt4xhb_itemGetPtrStackSelfItem();
+  QHelpIndexModel * obj = (QHelpIndexModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

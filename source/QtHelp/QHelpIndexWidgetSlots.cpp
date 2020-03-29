@@ -37,7 +37,7 @@ void QHelpIndexWidgetSlots::linkActivated( const QUrl & link, const QString & ke
 
 void QHelpIndexWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpIndexWidget * obj = (QHelpIndexWidget *) _qt4xhb_itemGetPtrStackSelfItem();
+  QHelpIndexWidget * obj = (QHelpIndexWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

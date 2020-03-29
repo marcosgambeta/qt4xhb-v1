@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QHELPENGINE_NEW )
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QHelpEngine * o = new QHelpEngine( PQSTRING(1), OPQOBJECT(2,0) );
-    _qt4xhb_returnNewObject( o, false );
+    Qt4xHb::_qt4xhb_returnNewObject( o, false );
   }
   else
   {
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QHELPENGINE_NEW )
 
 HB_FUNC_STATIC( QHELPENGINE_DELETE )
 {
-  QHelpEngine * obj = (QHelpEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QHelpEngine * obj = (QHelpEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -96,7 +96,7 @@ QHelpContentModel * contentModel () const
 */
 HB_FUNC_STATIC( QHELPENGINE_CONTENTMODEL )
 {
-  QHelpEngine * obj = (QHelpEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QHelpEngine * obj = (QHelpEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QHELPENGINE_CONTENTMODEL )
     {
 #endif
       QHelpContentModel * ptr = obj->contentModel();
-      _qt4xhb_createReturnQObjectClass( ptr, "QHELPCONTENTMODEL" );
+      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QHELPCONTENTMODEL" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -121,7 +121,7 @@ QHelpContentWidget * contentWidget ()
 */
 HB_FUNC_STATIC( QHELPENGINE_CONTENTWIDGET )
 {
-  QHelpEngine * obj = (QHelpEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QHelpEngine * obj = (QHelpEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QHELPENGINE_CONTENTWIDGET )
     {
 #endif
       QHelpContentWidget * ptr = obj->contentWidget();
-      _qt4xhb_createReturnQObjectClass( ptr, "QHELPCONTENTWIDGET" );
+      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QHELPCONTENTWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,7 +146,7 @@ QHelpIndexModel * indexModel () const
 */
 HB_FUNC_STATIC( QHELPENGINE_INDEXMODEL )
 {
-  QHelpEngine * obj = (QHelpEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QHelpEngine * obj = (QHelpEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QHELPENGINE_INDEXMODEL )
     {
 #endif
       QHelpIndexModel * ptr = obj->indexModel();
-      _qt4xhb_createReturnQObjectClass( ptr, "QHELPINDEXMODEL" );
+      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QHELPINDEXMODEL" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,7 +171,7 @@ QHelpIndexWidget * indexWidget ()
 */
 HB_FUNC_STATIC( QHELPENGINE_INDEXWIDGET )
 {
-  QHelpEngine * obj = (QHelpEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QHelpEngine * obj = (QHelpEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QHELPENGINE_INDEXWIDGET )
     {
 #endif
       QHelpIndexWidget * ptr = obj->indexWidget();
-      _qt4xhb_createReturnQObjectClass( ptr, "QHELPINDEXWIDGET" );
+      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QHELPINDEXWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,7 +196,7 @@ QHelpSearchEngine * searchEngine ()
 */
 HB_FUNC_STATIC( QHELPENGINE_SEARCHENGINE )
 {
-  QHelpEngine * obj = (QHelpEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QHelpEngine * obj = (QHelpEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QHELPENGINE_SEARCHENGINE )
     {
 #endif
       QHelpSearchEngine * ptr = obj->searchEngine();
-      _qt4xhb_createReturnQObjectClass( ptr, "QHELPSEARCHENGINE" );
+      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QHELPSEARCHENGINE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
