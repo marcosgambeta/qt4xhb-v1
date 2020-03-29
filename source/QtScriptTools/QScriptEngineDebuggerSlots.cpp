@@ -44,7 +44,7 @@ void QScriptEngineDebuggerSlots::evaluationSuspended()
 
 void QScriptEngineDebuggerSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt4xhb_itemGetPtrStackSelfItem();
+  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
