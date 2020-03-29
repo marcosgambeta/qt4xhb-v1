@@ -44,7 +44,7 @@ RETURN
 
 HB_FUNC_STATIC( QGENERICPLUGIN_DELETE )
 {
-  QGenericPlugin * obj = (QGenericPlugin *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGenericPlugin * obj = (QGenericPlugin *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -66,7 +66,7 @@ virtual QObject * create ( const QString & key, const QString & specification ) 
 */
 HB_FUNC_STATIC( QGENERICPLUGIN_CREATE )
 {
-  QGenericPlugin * obj = (QGenericPlugin *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGenericPlugin * obj = (QGenericPlugin *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QGENERICPLUGIN_CREATE )
     {
 #endif
       QObject * ptr = obj->create( PQSTRING(1), PQSTRING(2) );
-      _qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -91,7 +91,7 @@ virtual QStringList keys () const = 0
 */
 HB_FUNC_STATIC( QGENERICPLUGIN_KEYS )
 {
-  QGenericPlugin * obj = (QGenericPlugin *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGenericPlugin * obj = (QGenericPlugin *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QGraphicsItemAnimation * o = new QGraphicsItemAnimation( OPQOBJECT(1,0) );
-    _qt4xhb_returnNewObject( o, false );
+    Qt4xHb::_qt4xhb_returnNewObject( o, false );
   }
   else
   {
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_DELETE )
 {
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -108,7 +108,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_CLEAR )
 {
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -134,7 +134,7 @@ qreal horizontalScaleAt ( qreal step ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_HORIZONTALSCALEAT )
 {
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -158,7 +158,7 @@ qreal horizontalShearAt ( qreal step ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_HORIZONTALSHEARAT )
 {
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -182,7 +182,7 @@ QGraphicsItem * item () const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_ITEM )
 {
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_ITEM )
     {
 #endif
       QGraphicsItem * ptr = obj->item();
-      _qt4xhb_createReturnClass( ptr, "QGRAPHICSITEM", false );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QGRAPHICSITEM", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,7 +207,7 @@ QMatrix matrixAt ( qreal step ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_MATRIXAT )
 {
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_MATRIXAT )
     {
 #endif
       QMatrix * ptr = new QMatrix( obj->matrixAt( PQREAL(1) ) );
-      _qt4xhb_createReturnClass( ptr, "QMATRIX", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QMATRIX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -232,7 +232,7 @@ QPointF posAt ( qreal step ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_POSAT )
 {
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_POSAT )
     {
 #endif
       QPointF * ptr = new QPointF( obj->posAt( PQREAL(1) ) );
-      _qt4xhb_createReturnClass( ptr, "QPOINTF", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -257,7 +257,7 @@ qreal rotationAt ( qreal step ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_ROTATIONAT )
 {
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -281,7 +281,7 @@ void setItem ( QGraphicsItem * item )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETITEM )
 {
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -307,7 +307,7 @@ void setPosAt ( qreal step, const QPointF & point )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETPOSAT )
 {
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -333,7 +333,7 @@ void setRotationAt ( qreal step, qreal angle )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETROTATIONAT )
 {
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -359,7 +359,7 @@ void setScaleAt ( qreal step, qreal sx, qreal sy )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETSCALEAT )
 {
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -385,7 +385,7 @@ void setShearAt ( qreal step, qreal sh, qreal sv )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETSHEARAT )
 {
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -411,7 +411,7 @@ void setTimeLine ( QTimeLine * timeLine )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETTIMELINE )
 {
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -437,7 +437,7 @@ void setTranslationAt ( qreal step, qreal dx, qreal dy )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETTRANSLATIONAT )
 {
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -463,7 +463,7 @@ QTimeLine * timeLine () const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_TIMELINE )
 {
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_TIMELINE )
     {
 #endif
       QTimeLine * ptr = obj->timeLine();
-      _qt4xhb_createReturnQObjectClass( ptr, "QTIMELINE" );
+      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QTIMELINE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -488,7 +488,7 @@ qreal verticalScaleAt ( qreal step ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_VERTICALSCALEAT )
 {
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -512,7 +512,7 @@ qreal verticalShearAt ( qreal step ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_VERTICALSHEARAT )
 {
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -536,7 +536,7 @@ qreal xTranslationAt ( qreal step ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_XTRANSLATIONAT )
 {
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -560,7 +560,7 @@ qreal yTranslationAt ( qreal step ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_YTRANSLATIONAT )
 {
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -584,7 +584,7 @@ void setStep ( qreal step )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETSTEP )
 {
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -77,7 +77,7 @@ QBrush ()
 void QBrush_new1()
 {
   QBrush * o = new QBrush();
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -86,7 +86,7 @@ QBrush ( Qt::BrushStyle style )
 void QBrush_new2()
 {
   QBrush * o = new QBrush( (Qt::BrushStyle) hb_parni(1) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -94,8 +94,8 @@ QBrush ( const QColor & color, Qt::BrushStyle style = Qt::SolidPattern )
 */
 void QBrush_new3()
 {
-  QBrush * o = new QBrush( ISOBJECT(1)? *(QColor *) _qt4xhb_itemGetPtr(1) : QColor(hb_parc(1)), ISNIL(2)? (Qt::BrushStyle) Qt::SolidPattern : (Qt::BrushStyle) hb_parni(2) );
-  _qt4xhb_returnNewObject( o, true );
+  QBrush * o = new QBrush( ISOBJECT(1)? *(QColor *) Qt4xHb::_qt4xhb_itemGetPtr(1) : QColor(hb_parc(1)), ISNIL(2)? (Qt::BrushStyle) Qt::SolidPattern : (Qt::BrushStyle) hb_parni(2) );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -104,7 +104,7 @@ QBrush ( Qt::GlobalColor color, Qt::BrushStyle style = Qt::SolidPattern )
 void QBrush_new4()
 {
   QBrush * o = new QBrush( (Qt::GlobalColor) hb_parni(1), ISNIL(2)? (Qt::BrushStyle) Qt::SolidPattern : (Qt::BrushStyle) hb_parni(2) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -112,8 +112,8 @@ QBrush ( const QColor & color, const QPixmap & pixmap )
 */
 void QBrush_new5()
 {
-  QBrush * o = new QBrush( ISOBJECT(1)? *(QColor *) _qt4xhb_itemGetPtr(1) : QColor(hb_parc(1)), *PQPIXMAP(2) );
-  _qt4xhb_returnNewObject( o, true );
+  QBrush * o = new QBrush( ISOBJECT(1)? *(QColor *) Qt4xHb::_qt4xhb_itemGetPtr(1) : QColor(hb_parc(1)), *PQPIXMAP(2) );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -122,7 +122,7 @@ QBrush ( Qt::GlobalColor color, const QPixmap & pixmap )
 void QBrush_new6()
 {
   QBrush * o = new QBrush( (Qt::GlobalColor) hb_parni(1), *PQPIXMAP(2) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -131,7 +131,7 @@ QBrush ( const QPixmap & pixmap )
 void QBrush_new7()
 {
   QBrush * o = new QBrush( *PQPIXMAP(1) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -140,7 +140,7 @@ QBrush ( const QImage & image )
 void QBrush_new8()
 {
   QBrush * o = new QBrush( *PQIMAGE(1) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -149,7 +149,7 @@ QBrush ( const QBrush & other )
 void QBrush_new9()
 {
   QBrush * o = new QBrush( *PQBRUSH(1) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -158,7 +158,7 @@ QBrush ( const QGradient & gradient )
 void QBrush_new10()
 {
   QBrush * o = new QBrush( *PQGRADIENT(1) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 //[01]QBrush ()
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QBRUSH_NEW )
 
 HB_FUNC_STATIC( QBRUSH_DELETE )
 {
-  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
+  QBrush * obj = (QBrush *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -242,7 +242,7 @@ const QColor & color () const
 */
 HB_FUNC_STATIC( QBRUSH_COLOR )
 {
-  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
+  QBrush * obj = (QBrush *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QBRUSH_COLOR )
     {
 #endif
       const QColor * ptr = &obj->color();
-      _qt4xhb_createReturnClass( ptr, "QCOLOR", false );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QCOLOR", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -267,7 +267,7 @@ const QGradient * gradient () const
 */
 HB_FUNC_STATIC( QBRUSH_GRADIENT )
 {
-  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
+  QBrush * obj = (QBrush *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QBRUSH_GRADIENT )
     {
 #endif
       const QGradient * ptr = obj->gradient();
-      _qt4xhb_createReturnClass( ptr, "QGRADIENT", false );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QGRADIENT", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,7 +292,7 @@ bool isOpaque () const
 */
 HB_FUNC_STATIC( QBRUSH_ISOPAQUE )
 {
-  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
+  QBrush * obj = (QBrush *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -316,7 +316,7 @@ const QMatrix & matrix () const
 */
 HB_FUNC_STATIC( QBRUSH_MATRIX )
 {
-  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
+  QBrush * obj = (QBrush *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QBRUSH_MATRIX )
     {
 #endif
       const QMatrix * ptr = &obj->matrix();
-      _qt4xhb_createReturnClass( ptr, "QMATRIX", false );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QMATRIX", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -341,11 +341,11 @@ void setColor ( const QColor & color )
 */
 void QBrush_setColor1()
 {
-  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
+  QBrush * obj = (QBrush *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setColor( ISOBJECT(1)? *(QColor *) _qt4xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
+    obj->setColor( ISOBJECT(1)? *(QColor *) Qt4xHb::_qt4xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -356,7 +356,7 @@ void setColor ( Qt::GlobalColor color )
 */
 void QBrush_setColor2()
 {
-  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
+  QBrush * obj = (QBrush *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -390,7 +390,7 @@ void setMatrix ( const QMatrix & matrix )
 */
 HB_FUNC_STATIC( QBRUSH_SETMATRIX )
 {
-  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
+  QBrush * obj = (QBrush *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -416,7 +416,7 @@ void setStyle ( Qt::BrushStyle style )
 */
 HB_FUNC_STATIC( QBRUSH_SETSTYLE )
 {
-  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
+  QBrush * obj = (QBrush *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -442,7 +442,7 @@ void setTexture ( const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QBRUSH_SETTEXTURE )
 {
-  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
+  QBrush * obj = (QBrush *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -468,7 +468,7 @@ void setTextureImage ( const QImage & image )
 */
 HB_FUNC_STATIC( QBRUSH_SETTEXTUREIMAGE )
 {
-  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
+  QBrush * obj = (QBrush *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -494,7 +494,7 @@ void setTransform ( const QTransform & matrix )
 */
 HB_FUNC_STATIC( QBRUSH_SETTRANSFORM )
 {
-  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
+  QBrush * obj = (QBrush *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -520,7 +520,7 @@ Qt::BrushStyle style () const
 */
 HB_FUNC_STATIC( QBRUSH_STYLE )
 {
-  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
+  QBrush * obj = (QBrush *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -544,7 +544,7 @@ QPixmap texture () const
 */
 HB_FUNC_STATIC( QBRUSH_TEXTURE )
 {
-  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
+  QBrush * obj = (QBrush *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QBRUSH_TEXTURE )
     {
 #endif
       QPixmap * ptr = new QPixmap( obj->texture() );
-      _qt4xhb_createReturnClass( ptr, "QPIXMAP", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPIXMAP", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -569,7 +569,7 @@ QImage textureImage () const
 */
 HB_FUNC_STATIC( QBRUSH_TEXTUREIMAGE )
 {
-  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
+  QBrush * obj = (QBrush *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -578,7 +578,7 @@ HB_FUNC_STATIC( QBRUSH_TEXTUREIMAGE )
     {
 #endif
       QImage * ptr = new QImage( obj->textureImage() );
-      _qt4xhb_createReturnClass( ptr, "QIMAGE", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QIMAGE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -594,7 +594,7 @@ QTransform transform () const
 */
 HB_FUNC_STATIC( QBRUSH_TRANSFORM )
 {
-  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
+  QBrush * obj = (QBrush *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -603,7 +603,7 @@ HB_FUNC_STATIC( QBRUSH_TRANSFORM )
     {
 #endif
       QTransform * ptr = new QTransform( obj->transform() );
-      _qt4xhb_createReturnClass( ptr, "QTRANSFORM", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QTRANSFORM", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -619,13 +619,13 @@ QVariant toVariant()
 */
 void QBrush_toVariant1()
 {
-  QBrush * obj = (QBrush *) _qt4xhb_itemGetPtrStackSelfItem();
+  QBrush * obj = (QBrush *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QVariant * variant = new QVariant();
     variant->setValue<QBrush>( *obj );
-    _qt4xhb_createReturnClass( variant, "QVARIANT", true );
+    Qt4xHb::_qt4xhb_createReturnClass( variant, "QVARIANT", true );
   }
 }
 
@@ -637,7 +637,7 @@ void QBrush_toVariant2()
   QBrush * brush = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QVariant * variant = new QVariant();
   variant->setValue<QBrush>( *brush );
-  _qt4xhb_createReturnClass( variant, "QVARIANT", true );
+  Qt4xHb::_qt4xhb_createReturnClass( variant, "QVARIANT", true );
 }
 
 //[1]QVariant toVariant()
@@ -668,7 +668,7 @@ HB_FUNC_STATIC( QBRUSH_FROMVARIANT )
   {
     QVariant * variant = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QBrush * brush = new QBrush( variant->value<QBrush>() );
-    _qt4xhb_createReturnClass( brush, "QBRUSH", true );
+    Qt4xHb::_qt4xhb_createReturnClass( brush, "QBRUSH", true );
   }
   else
   {

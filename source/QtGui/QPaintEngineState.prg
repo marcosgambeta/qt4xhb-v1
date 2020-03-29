@@ -74,7 +74,7 @@ RETURN
 
 HB_FUNC_STATIC( QPAINTENGINESTATE_DELETE )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -94,7 +94,7 @@ QBrush backgroundBrush () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_BACKGROUNDBRUSH )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_BACKGROUNDBRUSH )
     {
 #endif
       QBrush * ptr = new QBrush( obj->backgroundBrush() );
-      _qt4xhb_createReturnClass( ptr, "QBRUSH", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBRUSH", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -119,7 +119,7 @@ Qt::BGMode backgroundMode () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_BACKGROUNDMODE )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -143,7 +143,7 @@ QBrush brush () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSH )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSH )
     {
 #endif
       QBrush * ptr = new QBrush( obj->brush() );
-      _qt4xhb_createReturnClass( ptr, "QBRUSH", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBRUSH", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,7 +168,7 @@ bool brushNeedsResolving () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSHNEEDSRESOLVING )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -192,7 +192,7 @@ QPointF brushOrigin () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSHORIGIN )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSHORIGIN )
     {
 #endif
       QPointF * ptr = new QPointF( obj->brushOrigin() );
-      _qt4xhb_createReturnClass( ptr, "QPOINTF", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -217,7 +217,7 @@ Qt::ClipOperation clipOperation () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPOPERATION )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -241,7 +241,7 @@ QPainterPath clipPath () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPPATH )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPPATH )
     {
 #endif
       QPainterPath * ptr = new QPainterPath( obj->clipPath() );
-      _qt4xhb_createReturnClass( ptr, "QPAINTERPATH", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPAINTERPATH", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -266,7 +266,7 @@ QRegion clipRegion () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPREGION )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPREGION )
     {
 #endif
       QRegion * ptr = new QRegion( obj->clipRegion() );
-      _qt4xhb_createReturnClass( ptr, "QREGION", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QREGION", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -291,7 +291,7 @@ QPainter::CompositionMode compositionMode () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_COMPOSITIONMODE )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -315,7 +315,7 @@ QFont font () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_FONT )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_FONT )
     {
 #endif
       QFont * ptr = new QFont( obj->font() );
-      _qt4xhb_createReturnClass( ptr, "QFONT", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QFONT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -340,7 +340,7 @@ bool isClipEnabled () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_ISCLIPENABLED )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -364,7 +364,7 @@ qreal opacity () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_OPACITY )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -388,7 +388,7 @@ QPainter * painter () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_PAINTER )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_PAINTER )
     {
 #endif
       QPainter * ptr = obj->painter();
-      _qt4xhb_createReturnClass( ptr, "QPAINTER", false );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPAINTER", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -413,7 +413,7 @@ QPen pen () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_PEN )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_PEN )
     {
 #endif
       QPen * ptr = new QPen( obj->pen() );
-      _qt4xhb_createReturnClass( ptr, "QPEN", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPEN", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -438,7 +438,7 @@ bool penNeedsResolving () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_PENNEEDSRESOLVING )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -462,7 +462,7 @@ QPainter::RenderHints renderHints () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_RENDERHINTS )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -486,7 +486,7 @@ QPaintEngine::DirtyFlags state () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_STATE )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -510,7 +510,7 @@ QTransform transform () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_TRANSFORM )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPaintEngineState * obj = (QPaintEngineState *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_TRANSFORM )
     {
 #endif
       QTransform * ptr = new QTransform( obj->transform() );
-      _qt4xhb_createReturnClass( ptr, "QTRANSFORM", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QTRANSFORM", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

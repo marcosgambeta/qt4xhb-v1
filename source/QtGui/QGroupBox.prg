@@ -60,7 +60,7 @@ QGroupBox ( QWidget * parent = 0 )
 void QGroupBox_new1()
 {
   QGroupBox * o = new QGroupBox( OPQWIDGET(1,0) );
-  _qt4xhb_returnNewObject( o, false );
+  Qt4xHb::_qt4xhb_returnNewObject( o, false );
 }
 
 /*
@@ -69,7 +69,7 @@ QGroupBox ( const QString & title, QWidget * parent = 0 )
 void QGroupBox_new2()
 {
   QGroupBox * o = new QGroupBox( PQSTRING(1), OPQWIDGET(2,0) );
-  _qt4xhb_returnNewObject( o, false );
+  Qt4xHb::_qt4xhb_returnNewObject( o, false );
 }
 
 //[1]QGroupBox ( QWidget * parent = 0 )
@@ -96,7 +96,7 @@ Qt::Alignment alignment () const
 */
 HB_FUNC_STATIC( QGROUPBOX_ALIGNMENT )
 {
-  QGroupBox * obj = (QGroupBox *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGroupBox * obj = (QGroupBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -120,7 +120,7 @@ bool isCheckable () const
 */
 HB_FUNC_STATIC( QGROUPBOX_ISCHECKABLE )
 {
-  QGroupBox * obj = (QGroupBox *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGroupBox * obj = (QGroupBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -144,7 +144,7 @@ bool isChecked () const
 */
 HB_FUNC_STATIC( QGROUPBOX_ISCHECKED )
 {
-  QGroupBox * obj = (QGroupBox *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGroupBox * obj = (QGroupBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -168,7 +168,7 @@ bool isFlat () const
 */
 HB_FUNC_STATIC( QGROUPBOX_ISFLAT )
 {
-  QGroupBox * obj = (QGroupBox *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGroupBox * obj = (QGroupBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -192,7 +192,7 @@ void setAlignment ( int alignment )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETALIGNMENT )
 {
-  QGroupBox * obj = (QGroupBox *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGroupBox * obj = (QGroupBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -218,7 +218,7 @@ void setCheckable ( bool checkable )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETCHECKABLE )
 {
-  QGroupBox * obj = (QGroupBox *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGroupBox * obj = (QGroupBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -244,7 +244,7 @@ void setFlat ( bool flat )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETFLAT )
 {
-  QGroupBox * obj = (QGroupBox *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGroupBox * obj = (QGroupBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -270,7 +270,7 @@ void setTitle ( const QString & title )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETTITLE )
 {
-  QGroupBox * obj = (QGroupBox *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGroupBox * obj = (QGroupBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -296,7 +296,7 @@ QString title () const
 */
 HB_FUNC_STATIC( QGROUPBOX_TITLE )
 {
-  QGroupBox * obj = (QGroupBox *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGroupBox * obj = (QGroupBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -320,7 +320,7 @@ virtual QSize minimumSizeHint () const
 */
 HB_FUNC_STATIC( QGROUPBOX_MINIMUMSIZEHINT )
 {
-  QGroupBox * obj = (QGroupBox *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGroupBox * obj = (QGroupBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QGROUPBOX_MINIMUMSIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
-      _qt4xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -345,7 +345,7 @@ void setChecked ( bool checked )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETCHECKED )
 {
-  QGroupBox * obj = (QGroupBox *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGroupBox * obj = (QGroupBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

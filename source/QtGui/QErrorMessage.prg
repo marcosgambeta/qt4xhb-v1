@@ -50,7 +50,7 @@ HB_FUNC_STATIC( QERRORMESSAGE_NEW )
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     QErrorMessage * o = new QErrorMessage( OPQWIDGET(1,0) );
-    _qt4xhb_returnNewObject( o, false );
+    Qt4xHb::_qt4xhb_returnNewObject( o, false );
   }
   else
   {
@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QERRORMESSAGE_NEW )
 
 HB_FUNC_STATIC( QERRORMESSAGE_DELETE )
 {
-  QErrorMessage * obj = (QErrorMessage *) _qt4xhb_itemGetPtrStackSelfItem();
+  QErrorMessage * obj = (QErrorMessage *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -82,7 +82,7 @@ void showMessage ( const QString & message )
 */
 void QErrorMessage_showMessage1()
 {
-  QErrorMessage * obj = (QErrorMessage *) _qt4xhb_itemGetPtrStackSelfItem();
+  QErrorMessage * obj = (QErrorMessage *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -97,7 +97,7 @@ void showMessage ( const QString & message, const QString & type )
 */
 void QErrorMessage_showMessage2()
 {
-  QErrorMessage * obj = (QErrorMessage *) _qt4xhb_itemGetPtrStackSelfItem();
+  QErrorMessage * obj = (QErrorMessage *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -131,7 +131,7 @@ QErrorMessage * qtHandler ()
 */
 HB_FUNC_STATIC( QERRORMESSAGE_QTHANDLER )
 {
-  QErrorMessage * obj = (QErrorMessage *) _qt4xhb_itemGetPtrStackSelfItem();
+  QErrorMessage * obj = (QErrorMessage *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QERRORMESSAGE_QTHANDLER )
     {
 #endif
       QErrorMessage * ptr = obj->qtHandler();
-      _qt4xhb_createReturnQObjectClass( ptr, "QERRORMESSAGE" );
+      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QERRORMESSAGE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

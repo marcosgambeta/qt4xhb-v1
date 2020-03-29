@@ -35,7 +35,7 @@ void QFontComboBoxSlots::currentFontChanged( const QFont & font )
 
 void QFontComboBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QFontComboBox * obj = (QFontComboBox *) _qt4xhb_itemGetPtrStackSelfItem();
+  QFontComboBox * obj = (QFontComboBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

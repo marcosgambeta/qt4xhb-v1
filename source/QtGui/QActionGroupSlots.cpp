@@ -48,7 +48,7 @@ void QActionGroupSlots::triggered( QAction * action )
 
 void QActionGroupSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QActionGroup * obj = (QActionGroup *) _qt4xhb_itemGetPtrStackSelfItem();
+  QActionGroup * obj = (QActionGroup *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

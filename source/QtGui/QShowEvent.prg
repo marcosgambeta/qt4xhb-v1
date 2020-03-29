@@ -46,7 +46,7 @@ HB_FUNC_STATIC( QSHOWEVENT_NEW )
   if( ISNUMPAR(0) )
   {
     QShowEvent * o = new QShowEvent();
-    _qt4xhb_returnNewObject( o, false );
+    Qt4xHb::_qt4xhb_returnNewObject( o, false );
   }
   else
   {
@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QSHOWEVENT_NEW )
 
 HB_FUNC_STATIC( QSHOWEVENT_DELETE )
 {
-  QShowEvent * obj = (QShowEvent *) _qt4xhb_itemGetPtrStackSelfItem();
+  QShowEvent * obj = (QShowEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

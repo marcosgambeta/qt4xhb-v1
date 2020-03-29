@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QSOUND_NEW )
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QSound * o = new QSound( PQSTRING(1), OPQOBJECT(2,0) );
-    _qt4xhb_returnNewObject( o, false );
+    Qt4xHb::_qt4xhb_returnNewObject( o, false );
   }
   else
   {
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QSOUND_NEW )
 
 HB_FUNC_STATIC( QSOUND_DELETE )
 {
-  QSound * obj = (QSound *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSound * obj = (QSound *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -88,7 +88,7 @@ QString fileName () const
 */
 HB_FUNC_STATIC( QSOUND_FILENAME )
 {
-  QSound * obj = (QSound *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSound * obj = (QSound *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -112,7 +112,7 @@ bool isFinished () const
 */
 HB_FUNC_STATIC( QSOUND_ISFINISHED )
 {
-  QSound * obj = (QSound *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSound * obj = (QSound *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -136,7 +136,7 @@ int loops () const
 */
 HB_FUNC_STATIC( QSOUND_LOOPS )
 {
-  QSound * obj = (QSound *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSound * obj = (QSound *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -160,7 +160,7 @@ int loopsRemaining () const
 */
 HB_FUNC_STATIC( QSOUND_LOOPSREMAINING )
 {
-  QSound * obj = (QSound *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSound * obj = (QSound *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -184,7 +184,7 @@ void setLoops ( int number )
 */
 HB_FUNC_STATIC( QSOUND_SETLOOPS )
 {
-  QSound * obj = (QSound *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSound * obj = (QSound *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -210,7 +210,7 @@ void stop ()
 */
 HB_FUNC_STATIC( QSOUND_STOP )
 {
-  QSound * obj = (QSound *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSound * obj = (QSound *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -255,7 +255,7 @@ void play ()
 */
 void QSound_play1()
 {
-  QSound * obj = (QSound *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSound * obj = (QSound *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

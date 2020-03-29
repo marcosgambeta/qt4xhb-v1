@@ -53,7 +53,7 @@ QPrintPreviewDialog ( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags 
 void QPrintPreviewDialog_new1()
 {
   QPrintPreviewDialog * o = new QPrintPreviewDialog( PQPRINTER(1), OPQWIDGET(2,0), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
-  _qt4xhb_returnNewObject( o, false );
+  Qt4xHb::_qt4xhb_returnNewObject( o, false );
 }
 
 /*
@@ -62,7 +62,7 @@ QPrintPreviewDialog ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 void QPrintPreviewDialog_new2()
 {
   QPrintPreviewDialog * o = new QPrintPreviewDialog( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-  _qt4xhb_returnNewObject( o, false );
+  Qt4xHb::_qt4xhb_returnNewObject( o, false );
 }
 
 //[1]QPrintPreviewDialog ( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_NEW )
 
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_DELETE )
 {
-  QPrintPreviewDialog * obj = (QPrintPreviewDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPrintPreviewDialog * obj = (QPrintPreviewDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -108,7 +108,7 @@ void open ( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_OPEN )
 {
-  QPrintPreviewDialog * obj = (QPrintPreviewDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPrintPreviewDialog * obj = (QPrintPreviewDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -134,7 +134,7 @@ QPrinter * printer ()
 */
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_PRINTER )
 {
-  QPrintPreviewDialog * obj = (QPrintPreviewDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPrintPreviewDialog * obj = (QPrintPreviewDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_PRINTER )
     {
 #endif
       QPrinter * ptr = obj->printer();
-      _qt4xhb_createReturnClass( ptr, "QPRINTER", false );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPRINTER", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -159,7 +159,7 @@ virtual void done ( int result )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_DONE )
 {
-  QPrintPreviewDialog * obj = (QPrintPreviewDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPrintPreviewDialog * obj = (QPrintPreviewDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -185,7 +185,7 @@ virtual void setVisible ( bool visible )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_SETVISIBLE )
 {
-  QPrintPreviewDialog * obj = (QPrintPreviewDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPrintPreviewDialog * obj = (QPrintPreviewDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -44,7 +44,7 @@ RETURN
 
 HB_FUNC_STATIC( QTAPGESTURE_DELETE )
 {
-  QTapGesture * obj = (QTapGesture *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTapGesture * obj = (QTapGesture *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -66,7 +66,7 @@ QPointF position () const
 */
 HB_FUNC_STATIC( QTAPGESTURE_POSITION )
 {
-  QTapGesture * obj = (QTapGesture *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTapGesture * obj = (QTapGesture *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QTAPGESTURE_POSITION )
     {
 #endif
       QPointF * ptr = new QPointF( obj->position() );
-      _qt4xhb_createReturnClass( ptr, "QPOINTF", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -91,7 +91,7 @@ void setPosition ( const QPointF & pos )
 */
 HB_FUNC_STATIC( QTAPGESTURE_SETPOSITION )
 {
-  QTapGesture * obj = (QTapGesture *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTapGesture * obj = (QTapGesture *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

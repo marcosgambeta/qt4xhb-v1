@@ -58,7 +58,7 @@ RETURN
 
 HB_FUNC_STATIC( QDECORATION_DELETE )
 {
-  QDecoration * obj = (QDecoration *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDecoration * obj = (QDecoration *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -78,7 +78,7 @@ virtual void buildSysMenu ( QWidget * widget, QMenu * menu )
 */
 HB_FUNC_STATIC( QDECORATION_BUILDSYSMENU )
 {
-  QDecoration * obj = (QDecoration *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDecoration * obj = (QDecoration *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -104,7 +104,7 @@ void menuTriggered ( QWidget * widget, QAction * action )
 */
 HB_FUNC_STATIC( QDECORATION_MENUTRIGGERED )
 {
-  QDecoration * obj = (QDecoration *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDecoration * obj = (QDecoration *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -130,7 +130,7 @@ virtual bool paint ( QPainter * painter, const QWidget * widget, int decorationR
 */
 HB_FUNC_STATIC( QDECORATION_PAINT )
 {
-  QDecoration * obj = (QDecoration *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDecoration * obj = (QDecoration *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -154,12 +154,12 @@ virtual QRegion region ( const QWidget * widget, const QRect & rectangle, int de
 */
 void QDecoration_region1()
 {
-  QDecoration * obj = (QDecoration *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDecoration * obj = (QDecoration *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QRegion * ptr = new QRegion( obj->region( PQWIDGET(1), *PQRECT(2), OPINT(3,QDecoration::All) ) );
-    _qt4xhb_createReturnClass( ptr, "QREGION", true );
+    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QREGION", true );
   }
 }
 
@@ -168,12 +168,12 @@ QRegion region ( const QWidget * widget, int decorationRegion = All )
 */
 void QDecoration_region2()
 {
-  QDecoration * obj = (QDecoration *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDecoration * obj = (QDecoration *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QRegion * ptr = new QRegion( obj->region( PQWIDGET(1), OPINT(2,QDecoration::All) ) );
-    _qt4xhb_createReturnClass( ptr, "QREGION", true );
+    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QREGION", true );
   }
 }
 
@@ -201,7 +201,7 @@ virtual int regionAt ( const QWidget * widget, const QPoint & point )
 */
 HB_FUNC_STATIC( QDECORATION_REGIONAT )
 {
-  QDecoration * obj = (QDecoration *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDecoration * obj = (QDecoration *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -225,7 +225,7 @@ virtual void regionClicked ( QWidget * widget, int region )
 */
 HB_FUNC_STATIC( QDECORATION_REGIONCLICKED )
 {
-  QDecoration * obj = (QDecoration *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDecoration * obj = (QDecoration *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -251,7 +251,7 @@ virtual void regionDoubleClicked ( QWidget * widget, int region )
 */
 HB_FUNC_STATIC( QDECORATION_REGIONDOUBLECLICKED )
 {
-  QDecoration * obj = (QDecoration *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDecoration * obj = (QDecoration *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

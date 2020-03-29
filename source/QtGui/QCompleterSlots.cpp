@@ -74,7 +74,7 @@ void QCompleterSlots::highlighted( const QModelIndex & index )
 
 void QCompleterSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QCompleter * obj = (QCompleter *) _qt4xhb_itemGetPtrStackSelfItem();
+  QCompleter * obj = (QCompleter *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

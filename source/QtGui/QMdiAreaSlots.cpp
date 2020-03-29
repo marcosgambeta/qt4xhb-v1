@@ -35,7 +35,7 @@ void QMdiAreaSlots::subWindowActivated( QMdiSubWindow * window )
 
 void QMdiAreaSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QMdiArea * obj = (QMdiArea *) _qt4xhb_itemGetPtrStackSelfItem();
+  QMdiArea * obj = (QMdiArea *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

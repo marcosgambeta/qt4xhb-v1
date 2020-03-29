@@ -74,7 +74,7 @@ void QAbstractTextDocumentLayoutSlots::updateBlock( const QTextBlock & block )
 
 void QAbstractTextDocumentLayoutSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

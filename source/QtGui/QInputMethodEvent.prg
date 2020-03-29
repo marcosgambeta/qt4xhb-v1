@@ -47,7 +47,7 @@ QInputMethodEvent ()
 void QInputMethodEvent_new1()
 {
   QInputMethodEvent * o = new QInputMethodEvent();
-  _qt4xhb_returnNewObject( o, false );
+  Qt4xHb::_qt4xhb_returnNewObject( o, false );
 }
 
 /*
@@ -60,7 +60,7 @@ QInputMethodEvent ( const QInputMethodEvent & other )
 void QInputMethodEvent_new3()
 {
   QInputMethodEvent * o = new QInputMethodEvent( *PQINPUTMETHODEVENT(1) );
-  _qt4xhb_returnNewObject( o, false );
+  Qt4xHb::_qt4xhb_returnNewObject( o, false );
 }
 
 //[1]QInputMethodEvent ()
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW )
 
 HB_FUNC_STATIC( QINPUTMETHODEVENT_DELETE )
 {
-  QInputMethodEvent * obj = (QInputMethodEvent *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputMethodEvent * obj = (QInputMethodEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -113,7 +113,7 @@ int replacementLength () const
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTLENGTH )
 {
-  QInputMethodEvent * obj = (QInputMethodEvent *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputMethodEvent * obj = (QInputMethodEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -137,7 +137,7 @@ int replacementStart () const
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTSTART )
 {
-  QInputMethodEvent * obj = (QInputMethodEvent *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputMethodEvent * obj = (QInputMethodEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -161,7 +161,7 @@ void setCommitString ( const QString & commitString, int replaceFrom = 0, int re
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_SETCOMMITSTRING )
 {
-  QInputMethodEvent * obj = (QInputMethodEvent *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputMethodEvent * obj = (QInputMethodEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

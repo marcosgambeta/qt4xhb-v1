@@ -33,7 +33,7 @@ void QGraphicsWidgetSlots::geometryChanged()
 
 void QGraphicsWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

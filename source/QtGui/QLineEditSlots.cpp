@@ -96,7 +96,7 @@ void QLineEditSlots::textEdited( const QString & text )
 
 void QLineEditSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QLineEdit * obj = (QLineEdit *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLineEdit * obj = (QLineEdit *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

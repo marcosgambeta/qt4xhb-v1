@@ -65,7 +65,7 @@ void QFileSystemModelSlots::rootPathChanged( const QString & newPath )
 
 void QFileSystemModelSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) _qt4xhb_itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

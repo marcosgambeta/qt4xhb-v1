@@ -70,7 +70,7 @@ void QActionSlots::triggered( bool checked )
 
 void QActionSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAction * obj = (QAction *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

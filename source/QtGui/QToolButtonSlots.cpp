@@ -35,7 +35,7 @@ void QToolButtonSlots::triggered( QAction * action )
 
 void QToolButtonSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QToolButton * obj = (QToolButton *) _qt4xhb_itemGetPtrStackSelfItem();
+  QToolButton * obj = (QToolButton *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

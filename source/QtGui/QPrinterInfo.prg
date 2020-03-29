@@ -59,7 +59,7 @@ QPrinterInfo ()
 void QPrinterInfo_new1()
 {
   QPrinterInfo * o = new QPrinterInfo();
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -68,7 +68,7 @@ QPrinterInfo ( const QPrinterInfo & src )
 void QPrinterInfo_new2()
 {
   QPrinterInfo * o = new QPrinterInfo( *PQPRINTERINFO(1) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -77,7 +77,7 @@ QPrinterInfo ( const QPrinter & printer )
 void QPrinterInfo_new3()
 {
   QPrinterInfo * o = new QPrinterInfo( *PQPRINTER(1) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 //[1]QPrinterInfo ()
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QPRINTERINFO_NEW )
 
 HB_FUNC_STATIC( QPRINTERINFO_DELETE )
 {
-  QPrinterInfo * obj = (QPrinterInfo *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPrinterInfo * obj = (QPrinterInfo *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -126,7 +126,7 @@ bool isDefault () const
 */
 HB_FUNC_STATIC( QPRINTERINFO_ISDEFAULT )
 {
-  QPrinterInfo * obj = (QPrinterInfo *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPrinterInfo * obj = (QPrinterInfo *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -150,7 +150,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QPRINTERINFO_ISNULL )
 {
-  QPrinterInfo * obj = (QPrinterInfo *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPrinterInfo * obj = (QPrinterInfo *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -174,7 +174,7 @@ QString printerName () const
 */
 HB_FUNC_STATIC( QPRINTERINFO_PRINTERNAME )
 {
-  QPrinterInfo * obj = (QPrinterInfo *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPrinterInfo * obj = (QPrinterInfo *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -198,7 +198,7 @@ QList<QPrinter::PaperSize> supportedPaperSizes () const
 */
 HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAPERSIZES )
 {
-  QPrinterInfo * obj = (QPrinterInfo *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPrinterInfo * obj = (QPrinterInfo *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -230,7 +230,7 @@ QList<QPrinterInfo> availablePrinters ()
 */
 HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERS )
 {
-  QPrinterInfo * obj = (QPrinterInfo *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPrinterInfo * obj = (QPrinterInfo *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPRINTER )
   {
 #endif
     QPrinterInfo * ptr = new QPrinterInfo( QPrinterInfo::defaultPrinter() );
-    _qt4xhb_createReturnClass( ptr, "QPRINTERINFO", true );
+    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPRINTERINFO", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

@@ -48,7 +48,7 @@ QStyleOptionToolBox()
 void QStyleOptionToolBox_new1()
 {
   QStyleOptionToolBox * o = new QStyleOptionToolBox();
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -57,7 +57,7 @@ QStyleOptionToolBox(const QStyleOptionToolBox &other)
 void QStyleOptionToolBox_new2()
 {
   QStyleOptionToolBox * o = new QStyleOptionToolBox( *PQSTYLEOPTIONTOOLBOX(1) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -89,7 +89,7 @@ QString text
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_TEXT )
 {
-  QStyleOptionToolBox * obj = (QStyleOptionToolBox *) _qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionToolBox * obj = (QStyleOptionToolBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_TEXT )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SETTEXT )
 {
-  QStyleOptionToolBox * obj = (QStyleOptionToolBox *) _qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionToolBox * obj = (QStyleOptionToolBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -127,14 +127,14 @@ QIcon icon
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_ICON )
 {
-  QStyleOptionToolBox * obj = (QStyleOptionToolBox *) _qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionToolBox * obj = (QStyleOptionToolBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
     if( ISNUMPAR(0) )
     {
       QIcon * ptr = new QIcon( obj->icon );
-      _qt4xhb_createReturnClass( ptr, "QICON", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QICON", true );
     }
     else
     {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_ICON )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SETICON )
 {
-  QStyleOptionToolBox * obj = (QStyleOptionToolBox *) _qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionToolBox * obj = (QStyleOptionToolBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -57,7 +57,7 @@ void QDialogSlots::rejected()
 
 void QDialogSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDialog * obj = (QDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDialog * obj = (QDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

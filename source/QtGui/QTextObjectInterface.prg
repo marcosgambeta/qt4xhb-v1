@@ -51,7 +51,7 @@ RETURN
 
 HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_DELETE )
 {
-  QTextObjectInterface * obj = (QTextObjectInterface *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTextObjectInterface * obj = (QTextObjectInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -71,7 +71,7 @@ virtual void drawObject ( QPainter * painter, const QRectF & rect, QTextDocument
 */
 HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_DRAWOBJECT )
 {
-  QTextObjectInterface * obj = (QTextObjectInterface *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTextObjectInterface * obj = (QTextObjectInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -97,7 +97,7 @@ virtual QSizeF intrinsicSize ( QTextDocument * doc, int posInDocument, const QTe
 */
 HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_INTRINSICSIZE )
 {
-  QTextObjectInterface * obj = (QTextObjectInterface *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTextObjectInterface * obj = (QTextObjectInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_INTRINSICSIZE )
     {
 #endif
       QSizeF * ptr = new QSizeF( obj->intrinsicSize( PQTEXTDOCUMENT(1), PINT(2), *PQTEXTFORMAT(3) ) );
-      _qt4xhb_createReturnClass( ptr, "QSIZEF", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSIZEF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

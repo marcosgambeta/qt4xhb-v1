@@ -45,7 +45,7 @@ QStyleOptionSizeGrip()
 void QStyleOptionSizeGrip_new1()
 {
   QStyleOptionSizeGrip * o = new QStyleOptionSizeGrip();
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -54,7 +54,7 @@ QStyleOptionSizeGrip(const QStyleOptionSizeGrip &other)
 void QStyleOptionSizeGrip_new2()
 {
   QStyleOptionSizeGrip * o = new QStyleOptionSizeGrip( *PQSTYLEOPTIONSIZEGRIP(1) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -86,7 +86,7 @@ Qt::Corner corner
 */
 HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_CORNER )
 {
-  QStyleOptionSizeGrip * obj = (QStyleOptionSizeGrip *) _qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionSizeGrip * obj = (QStyleOptionSizeGrip *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_CORNER )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_SETCORNER )
 {
-  QStyleOptionSizeGrip * obj = (QStyleOptionSizeGrip *) _qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionSizeGrip * obj = (QStyleOptionSizeGrip *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

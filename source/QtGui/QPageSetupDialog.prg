@@ -55,7 +55,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW )
   if( ISBETWEEN(1,2) && ISQPRINTER(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
     QPageSetupDialog * o = new QPageSetupDialog( PQPRINTER(1), OPQWIDGET(2,0) );
-    _qt4xhb_returnNewObject( o, false );
+    Qt4xHb::_qt4xhb_returnNewObject( o, false );
   }
   else
   {
@@ -68,7 +68,7 @@ void open ( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_OPEN )
 {
-  QPageSetupDialog * obj = (QPageSetupDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPageSetupDialog * obj = (QPageSetupDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -94,7 +94,7 @@ PageSetupDialogOptions options () const
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_OPTIONS )
 {
-  QPageSetupDialog * obj = (QPageSetupDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPageSetupDialog * obj = (QPageSetupDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -118,7 +118,7 @@ QPrinter * printer ()
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_PRINTER )
 {
-  QPageSetupDialog * obj = (QPageSetupDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPageSetupDialog * obj = (QPageSetupDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_PRINTER )
     {
 #endif
       QPrinter * ptr = obj->printer();
-      _qt4xhb_createReturnClass( ptr, "QPRINTER", false );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPRINTER", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -143,7 +143,7 @@ void setOption ( PageSetupDialogOption option, bool on = true )
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_SETOPTION )
 {
-  QPageSetupDialog * obj = (QPageSetupDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPageSetupDialog * obj = (QPageSetupDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -169,7 +169,7 @@ void setOptions ( PageSetupDialogOptions options )
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_SETOPTIONS )
 {
-  QPageSetupDialog * obj = (QPageSetupDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPageSetupDialog * obj = (QPageSetupDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -195,7 +195,7 @@ bool testOption ( PageSetupDialogOption option ) const
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_TESTOPTION )
 {
-  QPageSetupDialog * obj = (QPageSetupDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPageSetupDialog * obj = (QPageSetupDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -219,7 +219,7 @@ virtual void setVisible ( bool visible )
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_SETVISIBLE )
 {
-  QPageSetupDialog * obj = (QPageSetupDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPageSetupDialog * obj = (QPageSetupDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

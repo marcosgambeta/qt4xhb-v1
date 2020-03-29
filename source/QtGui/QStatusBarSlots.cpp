@@ -35,7 +35,7 @@ void QStatusBarSlots::messageChanged( const QString & message )
 
 void QStatusBarSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QStatusBar * obj = (QStatusBar *) _qt4xhb_itemGetPtrStackSelfItem();
+  QStatusBar * obj = (QStatusBar *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

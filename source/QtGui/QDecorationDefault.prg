@@ -49,7 +49,7 @@ HB_FUNC_STATIC( QDECORATIONDEFAULT_NEW )
   if( ISNUMPAR(0) )
   {
     QDecorationDefault * o = new QDecorationDefault();
-    _qt4xhb_returnNewObject( o, true );
+    Qt4xHb::_qt4xhb_returnNewObject( o, true );
   }
   else
   {
@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QDECORATIONDEFAULT_NEW )
 
 HB_FUNC_STATIC( QDECORATIONDEFAULT_DELETE )
 {
-  QDecorationDefault * obj = (QDecorationDefault *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDecorationDefault * obj = (QDecorationDefault *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -79,7 +79,7 @@ virtual bool paint ( QPainter * painter, const QWidget * widget, int decorationR
 */
 HB_FUNC_STATIC( QDECORATIONDEFAULT_PAINT )
 {
-  QDecorationDefault * obj = (QDecorationDefault *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDecorationDefault * obj = (QDecorationDefault *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -103,7 +103,7 @@ virtual QRegion region ( const QWidget * widget, const QRect & rect, int decorat
 */
 HB_FUNC_STATIC( QDECORATIONDEFAULT_REGION )
 {
-  QDecorationDefault * obj = (QDecorationDefault *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDecorationDefault * obj = (QDecorationDefault *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QDECORATIONDEFAULT_REGION )
     {
 #endif
       QRegion * ptr = new QRegion( obj->region( PQWIDGET(1), *PQRECT(2), OPINT(3,QDecoration::All) ) );
-      _qt4xhb_createReturnClass( ptr, "QREGION", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QREGION", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

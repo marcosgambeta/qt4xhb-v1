@@ -35,7 +35,7 @@ void QPrintPreviewDialogSlots::paintRequested( QPrinter * printer )
 
 void QPrintPreviewDialogSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QPrintPreviewDialog * obj = (QPrintPreviewDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPrintPreviewDialog * obj = (QPrintPreviewDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

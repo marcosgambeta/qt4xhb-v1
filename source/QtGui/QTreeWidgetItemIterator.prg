@@ -53,7 +53,7 @@ QTreeWidgetItemIterator ( const QTreeWidgetItemIterator & it )
 void QTreeWidgetItemIterator_new1()
 {
   QTreeWidgetItemIterator * o = new QTreeWidgetItemIterator( *PQTREEWIDGETITEMITERATOR(1) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -62,7 +62,7 @@ QTreeWidgetItemIterator ( QTreeWidget * widget, IteratorFlags flags = All )
 void QTreeWidgetItemIterator_new2()
 {
   QTreeWidgetItemIterator * o = new QTreeWidgetItemIterator( PQTREEWIDGET(1), ISNIL(2)? (QTreeWidgetItemIterator::IteratorFlags) QTreeWidgetItemIterator::All : (QTreeWidgetItemIterator::IteratorFlags) hb_parni(2) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -71,7 +71,7 @@ QTreeWidgetItemIterator ( QTreeWidgetItem * item, IteratorFlags flags = All )
 void QTreeWidgetItemIterator_new3()
 {
   QTreeWidgetItemIterator * o = new QTreeWidgetItemIterator( PQTREEWIDGETITEM(1), ISNIL(2)? (QTreeWidgetItemIterator::IteratorFlags) QTreeWidgetItemIterator::All : (QTreeWidgetItemIterator::IteratorFlags) hb_parni(2) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 //[1]QTreeWidgetItemIterator ( const QTreeWidgetItemIterator & it )
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW )
 
 HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_DELETE )
 {
-  QTreeWidgetItemIterator * obj = (QTreeWidgetItemIterator *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTreeWidgetItemIterator * obj = (QTreeWidgetItemIterator *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

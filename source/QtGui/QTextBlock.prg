@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_NEW )
   if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
   {
     QTextBlock * o = new QTextBlock( *PQTEXTBLOCK(1) );
-    _qt4xhb_returnNewObject( o, true );
+    Qt4xHb::_qt4xhb_returnNewObject( o, true );
   }
   else
   {
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_NEW )
 
 HB_FUNC_STATIC( QTEXTBLOCK_DELETE )
 {
-  QTextBlock * obj = (QTextBlock *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTextBlock * obj = (QTextBlock *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -122,7 +122,7 @@ QTextBlockFormat blockFormat () const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_BLOCKFORMAT )
 {
-  QTextBlock * obj = (QTextBlock *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTextBlock * obj = (QTextBlock *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_BLOCKFORMAT )
     {
 #endif
       QTextBlockFormat * ptr = new QTextBlockFormat( obj->blockFormat() );
-      _qt4xhb_createReturnClass( ptr, "QTEXTBLOCKFORMAT", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QTEXTBLOCKFORMAT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -147,7 +147,7 @@ int blockFormatIndex () const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_BLOCKFORMATINDEX )
 {
-  QTextBlock * obj = (QTextBlock *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTextBlock * obj = (QTextBlock *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -171,7 +171,7 @@ int blockNumber () const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_BLOCKNUMBER )
 {
-  QTextBlock * obj = (QTextBlock *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTextBlock * obj = (QTextBlock *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -195,7 +195,7 @@ QTextCharFormat charFormat () const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_CHARFORMAT )
 {
-  QTextBlock * obj = (QTextBlock *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTextBlock * obj = (QTextBlock *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_CHARFORMAT )
     {
 #endif
       QTextCharFormat * ptr = new QTextCharFormat( obj->charFormat() );
-      _qt4xhb_createReturnClass( ptr, "QTEXTCHARFORMAT", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QTEXTCHARFORMAT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,7 +220,7 @@ int charFormatIndex () const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_CHARFORMATINDEX )
 {
-  QTextBlock * obj = (QTextBlock *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTextBlock * obj = (QTextBlock *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -244,7 +244,7 @@ void clearLayout ()
 */
 HB_FUNC_STATIC( QTEXTBLOCK_CLEARLAYOUT )
 {
-  QTextBlock * obj = (QTextBlock *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTextBlock * obj = (QTextBlock *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -270,7 +270,7 @@ bool contains ( int position ) const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_CONTAINS )
 {
-  QTextBlock * obj = (QTextBlock *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTextBlock * obj = (QTextBlock *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -294,7 +294,7 @@ const QTextDocument * document () const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_DOCUMENT )
 {
-  QTextBlock * obj = (QTextBlock *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTextBlock * obj = (QTextBlock *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_DOCUMENT )
     {
 #endif
       const QTextDocument * ptr = obj->document();
-      _qt4xhb_createReturnQObjectClass( ptr, "QTEXTDOCUMENT" );
+      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QTEXTDOCUMENT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -319,7 +319,7 @@ int firstLineNumber () const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_FIRSTLINENUMBER )
 {
-  QTextBlock * obj = (QTextBlock *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTextBlock * obj = (QTextBlock *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -343,7 +343,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_ISVALID )
 {
-  QTextBlock * obj = (QTextBlock *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTextBlock * obj = (QTextBlock *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -367,7 +367,7 @@ bool isVisible () const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_ISVISIBLE )
 {
-  QTextBlock * obj = (QTextBlock *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTextBlock * obj = (QTextBlock *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -391,7 +391,7 @@ QTextLayout * layout () const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_LAYOUT )
 {
-  QTextBlock * obj = (QTextBlock *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTextBlock * obj = (QTextBlock *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_LAYOUT )
     {
 #endif
       QTextLayout * ptr = obj->layout();
-      _qt4xhb_createReturnClass( ptr, "QTEXTLAYOUT", false );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QTEXTLAYOUT", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -416,7 +416,7 @@ int length () const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_LENGTH )
 {
-  QTextBlock * obj = (QTextBlock *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTextBlock * obj = (QTextBlock *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -440,7 +440,7 @@ int lineCount () const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_LINECOUNT )
 {
-  QTextBlock * obj = (QTextBlock *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTextBlock * obj = (QTextBlock *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -464,7 +464,7 @@ QTextBlock next () const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_NEXT )
 {
-  QTextBlock * obj = (QTextBlock *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTextBlock * obj = (QTextBlock *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_NEXT )
     {
 #endif
       QTextBlock * ptr = new QTextBlock( obj->next() );
-      _qt4xhb_createReturnClass( ptr, "QTEXTBLOCK", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QTEXTBLOCK", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -489,7 +489,7 @@ int position () const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_POSITION )
 {
-  QTextBlock * obj = (QTextBlock *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTextBlock * obj = (QTextBlock *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -513,7 +513,7 @@ QTextBlock previous () const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_PREVIOUS )
 {
-  QTextBlock * obj = (QTextBlock *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTextBlock * obj = (QTextBlock *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -522,7 +522,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_PREVIOUS )
     {
 #endif
       QTextBlock * ptr = new QTextBlock( obj->previous() );
-      _qt4xhb_createReturnClass( ptr, "QTEXTBLOCK", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QTEXTBLOCK", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -538,7 +538,7 @@ int revision () const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_REVISION )
 {
-  QTextBlock * obj = (QTextBlock *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTextBlock * obj = (QTextBlock *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -562,7 +562,7 @@ void setLineCount ( int count )
 */
 HB_FUNC_STATIC( QTEXTBLOCK_SETLINECOUNT )
 {
-  QTextBlock * obj = (QTextBlock *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTextBlock * obj = (QTextBlock *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -588,7 +588,7 @@ void setRevision ( int rev )
 */
 HB_FUNC_STATIC( QTEXTBLOCK_SETREVISION )
 {
-  QTextBlock * obj = (QTextBlock *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTextBlock * obj = (QTextBlock *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -614,7 +614,7 @@ void setUserData ( QTextBlockUserData * data )
 */
 HB_FUNC_STATIC( QTEXTBLOCK_SETUSERDATA )
 {
-  QTextBlock * obj = (QTextBlock *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTextBlock * obj = (QTextBlock *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -640,7 +640,7 @@ void setUserState ( int state )
 */
 HB_FUNC_STATIC( QTEXTBLOCK_SETUSERSTATE )
 {
-  QTextBlock * obj = (QTextBlock *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTextBlock * obj = (QTextBlock *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -666,7 +666,7 @@ void setVisible ( bool visible )
 */
 HB_FUNC_STATIC( QTEXTBLOCK_SETVISIBLE )
 {
-  QTextBlock * obj = (QTextBlock *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTextBlock * obj = (QTextBlock *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -692,7 +692,7 @@ QString text () const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_TEXT )
 {
-  QTextBlock * obj = (QTextBlock *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTextBlock * obj = (QTextBlock *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -716,7 +716,7 @@ Qt::LayoutDirection textDirection () const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_TEXTDIRECTION )
 {
-  QTextBlock * obj = (QTextBlock *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTextBlock * obj = (QTextBlock *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -740,7 +740,7 @@ QTextList * textList () const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_TEXTLIST )
 {
-  QTextBlock * obj = (QTextBlock *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTextBlock * obj = (QTextBlock *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -749,7 +749,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_TEXTLIST )
     {
 #endif
       QTextList * ptr = obj->textList();
-      _qt4xhb_createReturnQObjectClass( ptr, "QTEXTLIST" );
+      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QTEXTLIST" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -765,7 +765,7 @@ QTextBlockUserData * userData () const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_USERDATA )
 {
-  QTextBlock * obj = (QTextBlock *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTextBlock * obj = (QTextBlock *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -774,7 +774,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_USERDATA )
     {
 #endif
       QTextBlockUserData * ptr = obj->userData();
-      _qt4xhb_createReturnClass( ptr, "QTEXTBLOCKUSERDATA", false );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QTEXTBLOCKUSERDATA", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -790,7 +790,7 @@ int userState () const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_USERSTATE )
 {
-  QTextBlock * obj = (QTextBlock *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTextBlock * obj = (QTextBlock *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

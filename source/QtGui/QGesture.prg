@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QGESTURE_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QGesture * o = new QGesture( OPQOBJECT(1,0) );
-    _qt4xhb_returnNewObject( o, false );
+    Qt4xHb::_qt4xhb_returnNewObject( o, false );
   }
   else
   {
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QGESTURE_NEW )
 
 HB_FUNC_STATIC( QGESTURE_DELETE )
 {
-  QGesture * obj = (QGesture *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGesture * obj = (QGesture *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -89,7 +89,7 @@ GestureCancelPolicy gestureCancelPolicy () const
 */
 HB_FUNC_STATIC( QGESTURE_GESTURECANCELPOLICY )
 {
-  QGesture * obj = (QGesture *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGesture * obj = (QGesture *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -113,7 +113,7 @@ Qt::GestureType gestureType () const
 */
 HB_FUNC_STATIC( QGESTURE_GESTURETYPE )
 {
-  QGesture * obj = (QGesture *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGesture * obj = (QGesture *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -137,7 +137,7 @@ bool hasHotSpot () const
 */
 HB_FUNC_STATIC( QGESTURE_HASHOTSPOT )
 {
-  QGesture * obj = (QGesture *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGesture * obj = (QGesture *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -161,7 +161,7 @@ QPointF hotSpot () const
 */
 HB_FUNC_STATIC( QGESTURE_HOTSPOT )
 {
-  QGesture * obj = (QGesture *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGesture * obj = (QGesture *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QGESTURE_HOTSPOT )
     {
 #endif
       QPointF * ptr = new QPointF( obj->hotSpot() );
-      _qt4xhb_createReturnClass( ptr, "QPOINTF", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,7 +186,7 @@ void setGestureCancelPolicy ( GestureCancelPolicy policy )
 */
 HB_FUNC_STATIC( QGESTURE_SETGESTURECANCELPOLICY )
 {
-  QGesture * obj = (QGesture *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGesture * obj = (QGesture *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -212,7 +212,7 @@ void setHotSpot ( const QPointF & value )
 */
 HB_FUNC_STATIC( QGESTURE_SETHOTSPOT )
 {
-  QGesture * obj = (QGesture *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGesture * obj = (QGesture *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -238,7 +238,7 @@ Qt::GestureState state () const
 */
 HB_FUNC_STATIC( QGESTURE_STATE )
 {
-  QGesture * obj = (QGesture *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGesture * obj = (QGesture *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -262,7 +262,7 @@ void unsetHotSpot ()
 */
 HB_FUNC_STATIC( QGESTURE_UNSETHOTSPOT )
 {
-  QGesture * obj = (QGesture *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGesture * obj = (QGesture *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

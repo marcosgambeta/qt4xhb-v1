@@ -152,7 +152,7 @@ void QListWidgetSlots::itemSelectionChanged()
 
 void QListWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QListWidget * obj = (QListWidget *) _qt4xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -62,7 +62,7 @@ RETURN
 
 HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_DELETE )
 {
-  QSyntaxHighlighter * obj = (QSyntaxHighlighter *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSyntaxHighlighter * obj = (QSyntaxHighlighter *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -84,7 +84,7 @@ QTextDocument * document () const
 */
 HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_DOCUMENT )
 {
-  QSyntaxHighlighter * obj = (QSyntaxHighlighter *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSyntaxHighlighter * obj = (QSyntaxHighlighter *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_DOCUMENT )
     {
 #endif
       QTextDocument * ptr = obj->document();
-      _qt4xhb_createReturnQObjectClass( ptr, "QTEXTDOCUMENT" );
+      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QTEXTDOCUMENT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -109,7 +109,7 @@ void setDocument ( QTextDocument * doc )
 */
 HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_SETDOCUMENT )
 {
-  QSyntaxHighlighter * obj = (QSyntaxHighlighter *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSyntaxHighlighter * obj = (QSyntaxHighlighter *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -135,7 +135,7 @@ void rehighlight ()
 */
 HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_REHIGHLIGHT )
 {
-  QSyntaxHighlighter * obj = (QSyntaxHighlighter *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSyntaxHighlighter * obj = (QSyntaxHighlighter *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -161,7 +161,7 @@ void rehighlightBlock ( const QTextBlock & block )
 */
 HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_REHIGHLIGHTBLOCK )
 {
-  QSyntaxHighlighter * obj = (QSyntaxHighlighter *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSyntaxHighlighter * obj = (QSyntaxHighlighter *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

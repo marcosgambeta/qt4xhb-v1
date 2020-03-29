@@ -82,7 +82,7 @@ void QItemSelectionModelSlots::selectionChanged( const QItemSelection & selected
 
 void QItemSelectionModelSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QItemSelectionModel * obj = (QItemSelectionModel *) _qt4xhb_itemGetPtrStackSelfItem();
+  QItemSelectionModel * obj = (QItemSelectionModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

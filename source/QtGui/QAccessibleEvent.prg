@@ -48,7 +48,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_NEW )
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
     QAccessibleEvent * o = new QAccessibleEvent( (QAccessibleEvent::Type) hb_parni(1), PINT(2) );
-    _qt4xhb_returnNewObject( o, false );
+    Qt4xHb::_qt4xhb_returnNewObject( o, false );
   }
   else
   {
@@ -61,7 +61,7 @@ int child () const
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_CHILD )
 {
-  QAccessibleEvent * obj = (QAccessibleEvent *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAccessibleEvent * obj = (QAccessibleEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -85,7 +85,7 @@ void setValue ( const QString & text )
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_SETVALUE )
 {
-  QAccessibleEvent * obj = (QAccessibleEvent *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAccessibleEvent * obj = (QAccessibleEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -111,7 +111,7 @@ QString value () const
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_VALUE )
 {
-  QAccessibleEvent * obj = (QAccessibleEvent *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAccessibleEvent * obj = (QAccessibleEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

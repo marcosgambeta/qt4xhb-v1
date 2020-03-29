@@ -100,7 +100,7 @@ void QInputDialogSlots::textValueSelected( const QString & text )
 
 void QInputDialogSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -35,7 +35,7 @@ void QMessageBoxSlots::buttonClicked( QAbstractButton * button )
 
 void QMessageBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QMessageBox * obj = (QMessageBox *) _qt4xhb_itemGetPtrStackSelfItem();
+  QMessageBox * obj = (QMessageBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

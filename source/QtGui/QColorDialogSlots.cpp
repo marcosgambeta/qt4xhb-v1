@@ -48,7 +48,7 @@ void QColorDialogSlots::currentColorChanged( const QColor & color )
 
 void QColorDialogSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QColorDialog * obj = (QColorDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QColorDialog * obj = (QColorDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

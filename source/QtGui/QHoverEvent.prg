@@ -49,7 +49,7 @@ HB_FUNC_STATIC( QHOVEREVENT_NEW )
   if( ISNUMPAR(3) && ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) )
   {
     QHoverEvent * o = new QHoverEvent( (QEvent::Type) hb_parni(1), *PQPOINT(2), *PQPOINT(3) );
-    _qt4xhb_returnNewObject( o, false );
+    Qt4xHb::_qt4xhb_returnNewObject( o, false );
   }
   else
   {
@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QHOVEREVENT_NEW )
 
 HB_FUNC_STATIC( QHOVEREVENT_DELETE )
 {
-  QHoverEvent * obj = (QHoverEvent *) _qt4xhb_itemGetPtrStackSelfItem();
+  QHoverEvent * obj = (QHoverEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -79,7 +79,7 @@ const QPoint & pos () const
 */
 HB_FUNC_STATIC( QHOVEREVENT_POS )
 {
-  QHoverEvent * obj = (QHoverEvent *) _qt4xhb_itemGetPtrStackSelfItem();
+  QHoverEvent * obj = (QHoverEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QHOVEREVENT_POS )
     {
 #endif
       const QPoint * ptr = &obj->pos();
-      _qt4xhb_createReturnClass( ptr, "QPOINT", false );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPOINT", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -104,7 +104,7 @@ const QPoint & oldPos () const
 */
 HB_FUNC_STATIC( QHOVEREVENT_OLDPOS )
 {
-  QHoverEvent * obj = (QHoverEvent *) _qt4xhb_itemGetPtrStackSelfItem();
+  QHoverEvent * obj = (QHoverEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QHOVEREVENT_OLDPOS )
     {
 #endif
       const QPoint * ptr = &obj->oldPos();
-      _qt4xhb_createReturnClass( ptr, "QPOINT", false );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPOINT", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

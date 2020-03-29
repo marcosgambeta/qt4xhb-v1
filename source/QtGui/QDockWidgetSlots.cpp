@@ -87,7 +87,7 @@ void QDockWidgetSlots::visibilityChanged( bool visible )
 
 void QDockWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDockWidget * obj = (QDockWidget *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDockWidget * obj = (QDockWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -47,7 +47,7 @@ HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_NEW )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
     QWhatsThisClickedEvent * o = new QWhatsThisClickedEvent( PQSTRING(1) );
-    _qt4xhb_returnNewObject( o, false );
+    Qt4xHb::_qt4xhb_returnNewObject( o, false );
   }
   else
   {
@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_NEW )
 
 HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_DELETE )
 {
-  QWhatsThisClickedEvent * obj = (QWhatsThisClickedEvent *) _qt4xhb_itemGetPtrStackSelfItem();
+  QWhatsThisClickedEvent * obj = (QWhatsThisClickedEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -77,7 +77,7 @@ QString href() const
 */
 HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_HREF )
 {
-  QWhatsThisClickedEvent * obj = (QWhatsThisClickedEvent *) _qt4xhb_itemGetPtrStackSelfItem();
+  QWhatsThisClickedEvent * obj = (QWhatsThisClickedEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

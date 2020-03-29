@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QGraphicsOpacityEffect * o = new QGraphicsOpacityEffect( OPQOBJECT(1,0) );
-    _qt4xhb_returnNewObject( o, false );
+    Qt4xHb::_qt4xhb_returnNewObject( o, false );
   }
   else
   {
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_DELETE )
 {
-  QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -88,7 +88,7 @@ qreal opacity () const
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITY )
 {
-  QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -112,7 +112,7 @@ QBrush opacityMask () const
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITYMASK )
 {
-  QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITYMASK )
     {
 #endif
       QBrush * ptr = new QBrush( obj->opacityMask() );
-      _qt4xhb_createReturnClass( ptr, "QBRUSH", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBRUSH", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,7 +137,7 @@ void setOpacity ( qreal opacity )
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_SETOPACITY )
 {
-  QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -163,7 +163,7 @@ void setOpacityMask ( const QBrush & mask )
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_SETOPACITYMASK )
 {
-  QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

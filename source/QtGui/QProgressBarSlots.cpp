@@ -35,7 +35,7 @@ void QProgressBarSlots::valueChanged( int value )
 
 void QProgressBarSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QProgressBar * obj = (QProgressBar *) _qt4xhb_itemGetPtrStackSelfItem();
+  QProgressBar * obj = (QProgressBar *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

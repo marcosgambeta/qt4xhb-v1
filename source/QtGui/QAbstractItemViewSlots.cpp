@@ -98,7 +98,7 @@ void QAbstractItemViewSlots::viewportEntered()
 
 void QAbstractItemViewSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemView * obj = (QAbstractItemView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

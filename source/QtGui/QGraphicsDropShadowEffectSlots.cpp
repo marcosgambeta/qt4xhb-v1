@@ -61,7 +61,7 @@ void QGraphicsDropShadowEffectSlots::offsetChanged( const QPointF & offset )
 
 void QGraphicsDropShadowEffectSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

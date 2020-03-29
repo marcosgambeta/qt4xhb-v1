@@ -46,7 +46,7 @@ RETURN
 
 HB_FUNC_STATIC( QVALIDATOR_DELETE )
 {
-  QValidator * obj = (QValidator *) _qt4xhb_itemGetPtrStackSelfItem();
+  QValidator * obj = (QValidator *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -84,7 +84,7 @@ QLocale locale () const
 */
 HB_FUNC_STATIC( QVALIDATOR_LOCALE )
 {
-  QValidator * obj = (QValidator *) _qt4xhb_itemGetPtrStackSelfItem();
+  QValidator * obj = (QValidator *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QVALIDATOR_LOCALE )
     {
 #endif
       QLocale * ptr = new QLocale( obj->locale() );
-      _qt4xhb_createReturnClass( ptr, "QLOCALE", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QLOCALE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -109,7 +109,7 @@ void setLocale ( const QLocale & locale )
 */
 HB_FUNC_STATIC( QVALIDATOR_SETLOCALE )
 {
-  QValidator * obj = (QValidator *) _qt4xhb_itemGetPtrStackSelfItem();
+  QValidator * obj = (QValidator *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -61,7 +61,7 @@ void QDateTimeEditSlots::timeChanged( const QTime & time )
 
 void QDateTimeEditSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDateTimeEdit * obj = (QDateTimeEdit *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDateTimeEdit * obj = (QDateTimeEdit *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

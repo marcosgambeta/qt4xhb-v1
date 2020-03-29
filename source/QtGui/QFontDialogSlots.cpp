@@ -48,7 +48,7 @@ void QFontDialogSlots::fontSelected( const QFont & font )
 
 void QFontDialogSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QFontDialog * obj = (QFontDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QFontDialog * obj = (QFontDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

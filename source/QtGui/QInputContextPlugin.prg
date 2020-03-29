@@ -49,7 +49,7 @@ RETURN
 
 HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_DELETE )
 {
-  QInputContextPlugin * obj = (QInputContextPlugin *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputContextPlugin * obj = (QInputContextPlugin *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -71,7 +71,7 @@ virtual QInputContext * create ( const QString & key ) = 0
 */
 HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_CREATE )
 {
-  QInputContextPlugin * obj = (QInputContextPlugin *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputContextPlugin * obj = (QInputContextPlugin *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_CREATE )
     {
 #endif
       QInputContext * ptr = obj->create( PQSTRING(1) );
-      _qt4xhb_createReturnQObjectClass( ptr, "QINPUTCONTEXT" );
+      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QINPUTCONTEXT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -96,7 +96,7 @@ virtual QString description ( const QString & key ) = 0
 */
 HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_DESCRIPTION )
 {
-  QInputContextPlugin * obj = (QInputContextPlugin *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputContextPlugin * obj = (QInputContextPlugin *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -120,7 +120,7 @@ virtual QString displayName ( const QString & key ) = 0
 */
 HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_DISPLAYNAME )
 {
-  QInputContextPlugin * obj = (QInputContextPlugin *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputContextPlugin * obj = (QInputContextPlugin *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -144,7 +144,7 @@ virtual QStringList keys () const = 0
 */
 HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_KEYS )
 {
-  QInputContextPlugin * obj = (QInputContextPlugin *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputContextPlugin * obj = (QInputContextPlugin *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -168,7 +168,7 @@ virtual QStringList languages ( const QString & key ) = 0
 */
 HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_LANGUAGES )
 {
-  QInputContextPlugin * obj = (QInputContextPlugin *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputContextPlugin * obj = (QInputContextPlugin *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

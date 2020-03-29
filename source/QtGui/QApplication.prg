@@ -161,12 +161,12 @@ HB_FUNC_STATIC( QAPPLICATION_NEW )
   argc = hb_cmdargARGC();
   argv = hb_cmdargARGV();
   QApplication * o = new QApplication( argc, argv );
-  _qt4xhb_storePointerAndFlag ( o, false );
+  Qt4xHb::_qt4xhb_storePointerAndFlag ( o, false );
 }
 
 HB_FUNC_STATIC( QAPPLICATION_DELETE )
 {
-  QApplication * obj = (QApplication *) _qt4xhb_itemGetPtrStackSelfItem();
+  QApplication * obj = (QApplication *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -188,7 +188,7 @@ virtual void commitData ( QSessionManager & manager )
 */
 HB_FUNC_STATIC( QAPPLICATION_COMMITDATA )
 {
-  QApplication * obj = (QApplication *) _qt4xhb_itemGetPtrStackSelfItem();
+  QApplication * obj = (QApplication *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -214,7 +214,7 @@ QInputContext * inputContext () const
 */
 HB_FUNC_STATIC( QAPPLICATION_INPUTCONTEXT )
 {
-  QApplication * obj = (QApplication *) _qt4xhb_itemGetPtrStackSelfItem();
+  QApplication * obj = (QApplication *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QAPPLICATION_INPUTCONTEXT )
     {
 #endif
       QInputContext * ptr = obj->inputContext();
-      _qt4xhb_createReturnQObjectClass( ptr, "QINPUTCONTEXT" );
+      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QINPUTCONTEXT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,7 +239,7 @@ bool isSessionRestored () const
 */
 HB_FUNC_STATIC( QAPPLICATION_ISSESSIONRESTORED )
 {
-  QApplication * obj = (QApplication *) _qt4xhb_itemGetPtrStackSelfItem();
+  QApplication * obj = (QApplication *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -263,7 +263,7 @@ virtual void saveState ( QSessionManager & manager )
 */
 HB_FUNC_STATIC( QAPPLICATION_SAVESTATE )
 {
-  QApplication * obj = (QApplication *) _qt4xhb_itemGetPtrStackSelfItem();
+  QApplication * obj = (QApplication *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -289,7 +289,7 @@ QString sessionId () const
 */
 HB_FUNC_STATIC( QAPPLICATION_SESSIONID )
 {
-  QApplication * obj = (QApplication *) _qt4xhb_itemGetPtrStackSelfItem();
+  QApplication * obj = (QApplication *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -313,7 +313,7 @@ QString sessionKey () const
 */
 HB_FUNC_STATIC( QAPPLICATION_SESSIONKEY )
 {
-  QApplication * obj = (QApplication *) _qt4xhb_itemGetPtrStackSelfItem();
+  QApplication * obj = (QApplication *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -337,7 +337,7 @@ void setInputContext ( QInputContext * inputContext )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETINPUTCONTEXT )
 {
-  QApplication * obj = (QApplication *) _qt4xhb_itemGetPtrStackSelfItem();
+  QApplication * obj = (QApplication *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -363,7 +363,7 @@ QString styleSheet () const
 */
 HB_FUNC_STATIC( QAPPLICATION_STYLESHEET )
 {
-  QApplication * obj = (QApplication *) _qt4xhb_itemGetPtrStackSelfItem();
+  QApplication * obj = (QApplication *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -387,7 +387,7 @@ virtual bool notify ( QObject * receiver, QEvent * e )
 */
 HB_FUNC_STATIC( QAPPLICATION_NOTIFY )
 {
-  QApplication * obj = (QApplication *) _qt4xhb_itemGetPtrStackSelfItem();
+  QApplication * obj = (QApplication *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -411,7 +411,7 @@ void aboutQt ()
 */
 HB_FUNC_STATIC( QAPPLICATION_ABOUTQT )
 {
-  QApplication * obj = (QApplication *) _qt4xhb_itemGetPtrStackSelfItem();
+  QApplication * obj = (QApplication *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -437,7 +437,7 @@ void closeAllWindows ()
 */
 HB_FUNC_STATIC( QAPPLICATION_CLOSEALLWINDOWS )
 {
-  QApplication * obj = (QApplication *) _qt4xhb_itemGetPtrStackSelfItem();
+  QApplication * obj = (QApplication *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -463,7 +463,7 @@ void setStyleSheet ( const QString & sheet )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETSTYLESHEET )
 {
-  QApplication * obj = (QApplication *) _qt4xhb_itemGetPtrStackSelfItem();
+  QApplication * obj = (QApplication *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QAPPLICATION_ACTIVEMODALWIDGET )
   {
 #endif
     QWidget * ptr = QApplication::activeModalWidget();
-    _qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
+    Qt4xHb::_qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QAPPLICATION_ACTIVEPOPUPWIDGET )
   {
 #endif
     QWidget * ptr = QApplication::activePopupWidget();
-    _qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
+    Qt4xHb::_qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -534,7 +534,7 @@ HB_FUNC_STATIC( QAPPLICATION_ACTIVEWINDOW )
   {
 #endif
     QWidget * ptr = QApplication::activeWindow();
-    _qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
+    Qt4xHb::_qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -660,7 +660,7 @@ HB_FUNC_STATIC( QAPPLICATION_CLIPBOARD )
   {
 #endif
     QClipboard * ptr = QApplication::clipboard();
-    _qt4xhb_createReturnQObjectClass( ptr, "QCLIPBOARD" );
+    Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QCLIPBOARD" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -718,7 +718,7 @@ HB_FUNC_STATIC( QAPPLICATION_DESKTOP )
   {
 #endif
     QDesktopWidget * ptr = QApplication::desktop();
-    _qt4xhb_createReturnQObjectClass( ptr, "QDESKTOPWIDGET" );
+    Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QDESKTOPWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -795,7 +795,7 @@ HB_FUNC_STATIC( QAPPLICATION_FOCUSWIDGET )
   {
 #endif
     QWidget * ptr = QApplication::focusWidget();
-    _qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
+    Qt4xHb::_qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -812,7 +812,7 @@ void QApplication_font1()
 {
 
   QFont * ptr = new QFont( QApplication::font() );
-  _qt4xhb_createReturnClass( ptr, "QFONT", true );
+  Qt4xHb::_qt4xhb_createReturnClass( ptr, "QFONT", true );
 }
 
 /*
@@ -822,7 +822,7 @@ void QApplication_font2()
 {
 
   QFont * ptr = new QFont( QApplication::font( PQWIDGET(1) ) );
-  _qt4xhb_createReturnClass( ptr, "QFONT", true );
+  Qt4xHb::_qt4xhb_createReturnClass( ptr, "QFONT", true );
 }
 
 /*
@@ -832,7 +832,7 @@ void QApplication_font3()
 {
 
   QFont * ptr = new QFont( QApplication::font( PCONSTCHAR(1) ) );
-  _qt4xhb_createReturnClass( ptr, "QFONT", true );
+  Qt4xHb::_qt4xhb_createReturnClass( ptr, "QFONT", true );
 }
 
 //[1]QFont font ()
@@ -869,7 +869,7 @@ HB_FUNC_STATIC( QAPPLICATION_FONTMETRICS )
   {
 #endif
     QFontMetrics * ptr = new QFontMetrics( QApplication::fontMetrics() );
-    _qt4xhb_createReturnClass( ptr, "QFONTMETRICS", true );
+    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QFONTMETRICS", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -889,7 +889,7 @@ HB_FUNC_STATIC( QAPPLICATION_GLOBALSTRUT )
   {
 #endif
     QSize * ptr = new QSize( QApplication::globalStrut() );
-    _qt4xhb_createReturnClass( ptr, "QSIZE", true );
+    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1004,7 +1004,7 @@ HB_FUNC_STATIC( QAPPLICATION_KEYBOARDINPUTLOCALE )
   {
 #endif
     QLocale * ptr = new QLocale( QApplication::keyboardInputLocale() );
-    _qt4xhb_createReturnClass( ptr, "QLOCALE", true );
+    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QLOCALE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1081,7 +1081,7 @@ HB_FUNC_STATIC( QAPPLICATION_OVERRIDECURSOR )
   {
 #endif
     QCursor * ptr = QApplication::overrideCursor();
-    _qt4xhb_createReturnClass( ptr, "QCURSOR", false );
+    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QCURSOR", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1098,7 +1098,7 @@ void QApplication_palette1()
 {
 
   QPalette * ptr = new QPalette( QApplication::palette() );
-  _qt4xhb_createReturnClass( ptr, "QPALETTE", true );
+  Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPALETTE", true );
 }
 
 /*
@@ -1108,7 +1108,7 @@ void QApplication_palette2()
 {
 
   QPalette * ptr = new QPalette( QApplication::palette( PQWIDGET(1) ) );
-  _qt4xhb_createReturnClass( ptr, "QPALETTE", true );
+  Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPALETTE", true );
 }
 
 /*
@@ -1118,7 +1118,7 @@ void QApplication_palette3()
 {
 
   QPalette * ptr = new QPalette( QApplication::palette( PCONSTCHAR(1) ) );
-  _qt4xhb_createReturnClass( ptr, "QPALETTE", true );
+  Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPALETTE", true );
 }
 
 //[1]QPalette palette ()
@@ -1558,7 +1558,7 @@ void QApplication_setStyle2()
 {
 
   QStyle * ptr = QApplication::setStyle( PQSTRING(1) );
-  _qt4xhb_createReturnQObjectClass( ptr, "QSTYLE" );
+  Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QSTYLE" );
 }
 
 //[1]void setStyle ( QStyle * style )
@@ -1610,7 +1610,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETWINDOWICON )
   if( ISNUMPAR(1) && (ISQICON(1)||ISCHAR(1)) )
   {
 #endif
-    QApplication::setWindowIcon( ISOBJECT(1)? *(QIcon *) _qt4xhb_itemGetPtr(1) : QIcon(hb_parc(1)) );
+    QApplication::setWindowIcon( ISOBJECT(1)? *(QIcon *) Qt4xHb::_qt4xhb_itemGetPtr(1) : QIcon(hb_parc(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1670,7 +1670,7 @@ HB_FUNC_STATIC( QAPPLICATION_STYLE )
   {
 #endif
     QStyle * ptr = QApplication::style();
-    _qt4xhb_createReturnQObjectClass( ptr, "QSTYLE" );
+    Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QSTYLE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1708,7 +1708,7 @@ void QApplication_topLevelAt1()
 {
 
   QWidget * ptr = QApplication::topLevelAt( *PQPOINT(1) );
-  _qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
+  Qt4xHb::_qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 }
 
 /*
@@ -1718,7 +1718,7 @@ void QApplication_topLevelAt2()
 {
 
   QWidget * ptr = QApplication::topLevelAt( PINT(1), PINT(2) );
-  _qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
+  Qt4xHb::_qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 }
 
 //[1]QWidget * topLevelAt ( const QPoint & point )
@@ -1828,7 +1828,7 @@ void QApplication_widgetAt1()
 {
 
   QWidget * ptr = QApplication::widgetAt( *PQPOINT(1) );
-  _qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
+  Qt4xHb::_qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 }
 
 /*
@@ -1838,7 +1838,7 @@ void QApplication_widgetAt2()
 {
 
   QWidget * ptr = QApplication::widgetAt( PINT(1), PINT(2) );
-  _qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
+  Qt4xHb::_qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 }
 
 //[1]QWidget * widgetAt ( const QPoint & point )
@@ -1870,7 +1870,7 @@ HB_FUNC_STATIC( QAPPLICATION_WINDOWICON )
   {
 #endif
     QIcon * ptr = new QIcon( QApplication::windowIcon() );
-    _qt4xhb_createReturnClass( ptr, "QICON", true );
+    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QICON", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

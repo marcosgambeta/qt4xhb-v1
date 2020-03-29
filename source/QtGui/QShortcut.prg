@@ -63,7 +63,7 @@ QShortcut(QWidget * parent)
 void QShortcut_new1()
 {
   QShortcut * o = new QShortcut( PQWIDGET(1) );
-  _qt4xhb_returnNewObject( o, false );
+  Qt4xHb::_qt4xhb_returnNewObject( o, false );
 }
 
 /*
@@ -72,7 +72,7 @@ QShortcut(const QKeySequence & key, QWidget * parent, const char * member = 0, c
 void QShortcut_new2()
 {
   QShortcut * o = new QShortcut( *PQKEYSEQUENCE(1), PQWIDGET(2), OPCONSTCHAR(3,0), OPCONSTCHAR(4,0), ISNIL(5)? (Qt::ShortcutContext) Qt::WindowShortcut : (Qt::ShortcutContext) hb_parni(5) );
-  _qt4xhb_returnNewObject( o, false );
+  Qt4xHb::_qt4xhb_returnNewObject( o, false );
 }
 
 //[1]QShortcut(QWidget * parent)
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QSHORTCUT_NEW )
 
 HB_FUNC_STATIC( QSHORTCUT_DELETE )
 {
-  QShortcut * obj = (QShortcut *) _qt4xhb_itemGetPtrStackSelfItem();
+  QShortcut * obj = (QShortcut *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -118,7 +118,7 @@ bool autoRepeat() const
 */
 HB_FUNC_STATIC( QSHORTCUT_AUTOREPEAT )
 {
-  QShortcut * obj = (QShortcut *) _qt4xhb_itemGetPtrStackSelfItem();
+  QShortcut * obj = (QShortcut *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -142,7 +142,7 @@ Qt::ShortcutContext context() const
 */
 HB_FUNC_STATIC( QSHORTCUT_CONTEXT )
 {
-  QShortcut * obj = (QShortcut *) _qt4xhb_itemGetPtrStackSelfItem();
+  QShortcut * obj = (QShortcut *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -166,7 +166,7 @@ int id() const
 */
 HB_FUNC_STATIC( QSHORTCUT_ID )
 {
-  QShortcut * obj = (QShortcut *) _qt4xhb_itemGetPtrStackSelfItem();
+  QShortcut * obj = (QShortcut *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -190,7 +190,7 @@ bool isEnabled() const
 */
 HB_FUNC_STATIC( QSHORTCUT_ISENABLED )
 {
-  QShortcut * obj = (QShortcut *) _qt4xhb_itemGetPtrStackSelfItem();
+  QShortcut * obj = (QShortcut *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -214,7 +214,7 @@ QKeySequence key() const
 */
 HB_FUNC_STATIC( QSHORTCUT_KEY )
 {
-  QShortcut * obj = (QShortcut *) _qt4xhb_itemGetPtrStackSelfItem();
+  QShortcut * obj = (QShortcut *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QSHORTCUT_KEY )
     {
 #endif
       QKeySequence * ptr = new QKeySequence( obj->key() );
-      _qt4xhb_createReturnClass( ptr, "QKEYSEQUENCE", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QKEYSEQUENCE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,7 +239,7 @@ QWidget * parentWidget() const
 */
 HB_FUNC_STATIC( QSHORTCUT_PARENTWIDGET )
 {
-  QShortcut * obj = (QShortcut *) _qt4xhb_itemGetPtrStackSelfItem();
+  QShortcut * obj = (QShortcut *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QSHORTCUT_PARENTWIDGET )
     {
 #endif
       QWidget * ptr = obj->parentWidget();
-      _qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::_qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -264,7 +264,7 @@ void setAutoRepeat(bool on)
 */
 HB_FUNC_STATIC( QSHORTCUT_SETAUTOREPEAT )
 {
-  QShortcut * obj = (QShortcut *) _qt4xhb_itemGetPtrStackSelfItem();
+  QShortcut * obj = (QShortcut *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -290,7 +290,7 @@ void setContext(Qt::ShortcutContext context)
 */
 HB_FUNC_STATIC( QSHORTCUT_SETCONTEXT )
 {
-  QShortcut * obj = (QShortcut *) _qt4xhb_itemGetPtrStackSelfItem();
+  QShortcut * obj = (QShortcut *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -316,7 +316,7 @@ void setEnabled(bool enable)
 */
 HB_FUNC_STATIC( QSHORTCUT_SETENABLED )
 {
-  QShortcut * obj = (QShortcut *) _qt4xhb_itemGetPtrStackSelfItem();
+  QShortcut * obj = (QShortcut *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -342,7 +342,7 @@ void setKey(const QKeySequence & key)
 */
 HB_FUNC_STATIC( QSHORTCUT_SETKEY )
 {
-  QShortcut * obj = (QShortcut *) _qt4xhb_itemGetPtrStackSelfItem();
+  QShortcut * obj = (QShortcut *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -368,7 +368,7 @@ void setWhatsThis(const QString & text)
 */
 HB_FUNC_STATIC( QSHORTCUT_SETWHATSTHIS )
 {
-  QShortcut * obj = (QShortcut *) _qt4xhb_itemGetPtrStackSelfItem();
+  QShortcut * obj = (QShortcut *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -394,7 +394,7 @@ QString whatsThis() const
 */
 HB_FUNC_STATIC( QSHORTCUT_WHATSTHIS )
 {
-  QShortcut * obj = (QShortcut *) _qt4xhb_itemGetPtrStackSelfItem();
+  QShortcut * obj = (QShortcut *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

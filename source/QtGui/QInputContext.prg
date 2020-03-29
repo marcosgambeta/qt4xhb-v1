@@ -61,7 +61,7 @@ RETURN
 
 HB_FUNC_STATIC( QINPUTCONTEXT_DELETE )
 {
-  QInputContext * obj = (QInputContext *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputContext * obj = (QInputContext *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -83,7 +83,7 @@ virtual QList<QAction *> actions ()
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_ACTIONS )
 {
-  QInputContext * obj = (QInputContext *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputContext * obj = (QInputContext *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -131,7 +131,7 @@ virtual bool filterEvent ( const QEvent * event )
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_FILTEREVENT )
 {
-  QInputContext * obj = (QInputContext *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputContext * obj = (QInputContext *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -155,7 +155,7 @@ QWidget * focusWidget () const
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_FOCUSWIDGET )
 {
-  QInputContext * obj = (QInputContext *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputContext * obj = (QInputContext *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_FOCUSWIDGET )
     {
 #endif
       QWidget * ptr = obj->focusWidget();
-      _qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::_qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,7 +180,7 @@ virtual QFont font () const
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_FONT )
 {
-  QInputContext * obj = (QInputContext *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputContext * obj = (QInputContext *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_FONT )
     {
 #endif
       QFont * ptr = new QFont( obj->font() );
-      _qt4xhb_createReturnClass( ptr, "QFONT", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QFONT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,7 +205,7 @@ virtual QString identifierName () = 0
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_IDENTIFIERNAME )
 {
-  QInputContext * obj = (QInputContext *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputContext * obj = (QInputContext *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -229,7 +229,7 @@ virtual bool isComposing () const = 0
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_ISCOMPOSING )
 {
-  QInputContext * obj = (QInputContext *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputContext * obj = (QInputContext *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -253,7 +253,7 @@ virtual QString language () = 0
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_LANGUAGE )
 {
-  QInputContext * obj = (QInputContext *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputContext * obj = (QInputContext *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -277,7 +277,7 @@ virtual void mouseHandler ( int x, QMouseEvent * event )
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_MOUSEHANDLER )
 {
-  QInputContext * obj = (QInputContext *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputContext * obj = (QInputContext *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -303,7 +303,7 @@ virtual void reset () = 0
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_RESET )
 {
-  QInputContext * obj = (QInputContext *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputContext * obj = (QInputContext *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -329,7 +329,7 @@ void sendEvent ( const QInputMethodEvent & event )
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_SENDEVENT )
 {
-  QInputContext * obj = (QInputContext *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputContext * obj = (QInputContext *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -355,7 +355,7 @@ virtual void setFocusWidget ( QWidget * widget )
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_SETFOCUSWIDGET )
 {
-  QInputContext * obj = (QInputContext *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputContext * obj = (QInputContext *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -381,7 +381,7 @@ QTextFormat standardFormat ( StandardFormat s ) const
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_STANDARDFORMAT )
 {
-  QInputContext * obj = (QInputContext *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputContext * obj = (QInputContext *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_STANDARDFORMAT )
     {
 #endif
       QTextFormat * ptr = new QTextFormat( obj->standardFormat( (QInputContext::StandardFormat) hb_parni(1) ) );
-      _qt4xhb_createReturnClass( ptr, "QTEXTFORMAT", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QTEXTFORMAT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -406,7 +406,7 @@ virtual void update ()
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_UPDATE )
 {
-  QInputContext * obj = (QInputContext *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputContext * obj = (QInputContext *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -432,7 +432,7 @@ virtual void widgetDestroyed ( QWidget * widget )
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_WIDGETDESTROYED )
 {
-  QInputContext * obj = (QInputContext *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputContext * obj = (QInputContext *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

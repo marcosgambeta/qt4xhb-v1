@@ -68,7 +68,7 @@ void QClipboardSlots::selectionChanged()
 
 void QClipboardSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QClipboard * obj = (QClipboard *) _qt4xhb_itemGetPtrStackSelfItem();
+  QClipboard * obj = (QClipboard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -35,7 +35,7 @@ void QToolBoxSlots::currentChanged( int index )
 
 void QToolBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QToolBox * obj = (QToolBox *) _qt4xhb_itemGetPtrStackSelfItem();
+  QToolBox * obj = (QToolBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

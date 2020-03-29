@@ -51,7 +51,7 @@ HB_FUNC_STATIC( QSIZEGRIP_NEW )
   if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
     QSizeGrip * o = new QSizeGrip( PQWIDGET(1) );
-    _qt4xhb_returnNewObject( o, false );
+    Qt4xHb::_qt4xhb_returnNewObject( o, false );
   }
   else
   {
@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QSIZEGRIP_NEW )
 
 HB_FUNC_STATIC( QSIZEGRIP_DELETE )
 {
-  QSizeGrip * obj = (QSizeGrip *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSizeGrip * obj = (QSizeGrip *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -83,7 +83,7 @@ virtual void setVisible ( bool visible )
 */
 HB_FUNC_STATIC( QSIZEGRIP_SETVISIBLE )
 {
-  QSizeGrip * obj = (QSizeGrip *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSizeGrip * obj = (QSizeGrip *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -109,7 +109,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QSIZEGRIP_SIZEHINT )
 {
-  QSizeGrip * obj = (QSizeGrip *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSizeGrip * obj = (QSizeGrip *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QSIZEGRIP_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      _qt4xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

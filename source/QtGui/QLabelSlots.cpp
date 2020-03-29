@@ -48,7 +48,7 @@ void QLabelSlots::linkHovered( const QString & link )
 
 void QLabelSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QLabel * obj = (QLabel *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLabel * obj = (QLabel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

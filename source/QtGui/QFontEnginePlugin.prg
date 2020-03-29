@@ -46,7 +46,7 @@ RETURN
 
 HB_FUNC_STATIC( QFONTENGINEPLUGIN_DELETE )
 {
-  QFontEnginePlugin * obj = (QFontEnginePlugin *) _qt4xhb_itemGetPtrStackSelfItem();
+  QFontEnginePlugin * obj = (QFontEnginePlugin *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -68,7 +68,7 @@ virtual QList<QFontEngineInfo> availableFontEngines () const = 0
 */
 HB_FUNC_STATIC( QFONTENGINEPLUGIN_AVAILABLEFONTENGINES )
 {
-  QFontEnginePlugin * obj = (QFontEnginePlugin *) _qt4xhb_itemGetPtrStackSelfItem();
+  QFontEnginePlugin * obj = (QFontEnginePlugin *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -120,7 +120,7 @@ virtual QAbstractFontEngine * create ( const QFontEngineInfo & info ) = 0
 */
 HB_FUNC_STATIC( QFONTENGINEPLUGIN_CREATE )
 {
-  QFontEnginePlugin * obj = (QFontEnginePlugin *) _qt4xhb_itemGetPtrStackSelfItem();
+  QFontEnginePlugin * obj = (QFontEnginePlugin *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QFONTENGINEPLUGIN_CREATE )
     {
 #endif
       QAbstractFontEngine * ptr = obj->create( *PQFONTENGINEINFO(1) );
-      _qt4xhb_createReturnQObjectClass( ptr, "QABSTRACTFONTENGINE" );
+      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QABSTRACTFONTENGINE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,7 +145,7 @@ virtual QStringList keys () const
 */
 HB_FUNC_STATIC( QFONTENGINEPLUGIN_KEYS )
 {
-  QFontEnginePlugin * obj = (QFontEnginePlugin *) _qt4xhb_itemGetPtrStackSelfItem();
+  QFontEnginePlugin * obj = (QFontEnginePlugin *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

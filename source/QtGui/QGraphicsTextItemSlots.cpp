@@ -48,7 +48,7 @@ void QGraphicsTextItemSlots::linkHovered( const QString & link )
 
 void QGraphicsTextItemSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsTextItem * obj = (QGraphicsTextItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

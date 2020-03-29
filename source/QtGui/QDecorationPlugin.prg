@@ -44,7 +44,7 @@ RETURN
 
 HB_FUNC_STATIC( QDECORATIONPLUGIN_DELETE )
 {
-  QDecorationPlugin * obj = (QDecorationPlugin *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDecorationPlugin * obj = (QDecorationPlugin *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -66,7 +66,7 @@ virtual QDecoration * create ( const QString & key ) = 0
 */
 HB_FUNC_STATIC( QDECORATIONPLUGIN_CREATE )
 {
-  QDecorationPlugin * obj = (QDecorationPlugin *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDecorationPlugin * obj = (QDecorationPlugin *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QDECORATIONPLUGIN_CREATE )
     {
 #endif
       QDecoration * ptr = obj->create( PQSTRING(1) );
-      _qt4xhb_createReturnClass( ptr, "QDECORATION", false );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QDECORATION", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -91,7 +91,7 @@ virtual QStringList keys () const = 0
 */
 HB_FUNC_STATIC( QDECORATIONPLUGIN_KEYS )
 {
-  QDecorationPlugin * obj = (QDecorationPlugin *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDecorationPlugin * obj = (QDecorationPlugin *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

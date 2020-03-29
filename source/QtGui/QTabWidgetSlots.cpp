@@ -48,7 +48,7 @@ void QTabWidgetSlots::tabCloseRequested( int index )
 
 void QTabWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTabWidget * obj = (QTabWidget *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTabWidget * obj = (QTabWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

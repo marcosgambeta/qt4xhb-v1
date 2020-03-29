@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_NEW )
   if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTNUM(2) )
   {
     QInputDialog * o = new QInputDialog( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-    _qt4xhb_returnNewObject( o, false );
+    Qt4xHb::_qt4xhb_returnNewObject( o, false );
   }
   else
   {
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_NEW )
 
 HB_FUNC_STATIC( QINPUTDIALOG_DELETE )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -135,7 +135,7 @@ QString cancelButtonText () const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_CANCELBUTTONTEXT )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -159,7 +159,7 @@ QStringList comboBoxItems () const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_COMBOBOXITEMS )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -183,7 +183,7 @@ int doubleDecimals () const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEDECIMALS )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -207,7 +207,7 @@ double doubleMaximum () const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEMAXIMUM )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -231,7 +231,7 @@ double doubleMinimum () const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEMINIMUM )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -255,7 +255,7 @@ double doubleValue () const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEVALUE )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -279,7 +279,7 @@ InputMode inputMode () const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_INPUTMODE )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -303,7 +303,7 @@ int intMaximum () const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_INTMAXIMUM )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -327,7 +327,7 @@ int intMinimum () const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_INTMINIMUM )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -351,7 +351,7 @@ int intStep () const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_INTSTEP )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -375,7 +375,7 @@ int intValue () const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_INTVALUE )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -399,7 +399,7 @@ bool isComboBoxEditable () const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_ISCOMBOBOXEDITABLE )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -423,7 +423,7 @@ QString labelText () const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_LABELTEXT )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -447,7 +447,7 @@ QString okButtonText () const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_OKBUTTONTEXT )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -471,7 +471,7 @@ void open ( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_OPEN )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -497,7 +497,7 @@ InputDialogOptions options () const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_OPTIONS )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -521,7 +521,7 @@ void setCancelButtonText ( const QString & text )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETCANCELBUTTONTEXT )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -547,7 +547,7 @@ void setComboBoxEditable ( bool editable )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETCOMBOBOXEDITABLE )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -573,7 +573,7 @@ void setComboBoxItems ( const QStringList & items )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETCOMBOBOXITEMS )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -599,7 +599,7 @@ void setDoubleDecimals ( int decimals )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETDOUBLEDECIMALS )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -625,7 +625,7 @@ void setDoubleMaximum ( double max )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETDOUBLEMAXIMUM )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -651,7 +651,7 @@ void setDoubleMinimum ( double min )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETDOUBLEMINIMUM )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -677,7 +677,7 @@ void setDoubleRange ( double min, double max )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETDOUBLERANGE )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -703,7 +703,7 @@ void setDoubleValue ( double value )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETDOUBLEVALUE )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -729,7 +729,7 @@ void setInputMode ( InputMode mode )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETINPUTMODE )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -755,7 +755,7 @@ void setIntMaximum ( int max )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETINTMAXIMUM )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -781,7 +781,7 @@ void setIntMinimum ( int min )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETINTMINIMUM )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -807,7 +807,7 @@ void setIntRange ( int min, int max )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETINTRANGE )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -833,7 +833,7 @@ void setIntStep ( int step )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETINTSTEP )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -859,7 +859,7 @@ void setIntValue ( int value )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETINTVALUE )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -885,7 +885,7 @@ void setLabelText ( const QString & text )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETLABELTEXT )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -911,7 +911,7 @@ void setOkButtonText ( const QString & text )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETOKBUTTONTEXT )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -937,7 +937,7 @@ void setOption ( InputDialogOption option, bool on = true )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETOPTION )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -963,7 +963,7 @@ void setOptions ( InputDialogOptions options )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETOPTIONS )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -989,7 +989,7 @@ void setTextEchoMode ( QLineEdit::EchoMode mode )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETTEXTECHOMODE )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1015,7 +1015,7 @@ void setTextValue ( const QString & text )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETTEXTVALUE )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1041,7 +1041,7 @@ bool testOption ( InputDialogOption option ) const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_TESTOPTION )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1065,7 +1065,7 @@ QLineEdit::EchoMode textEchoMode () const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_TEXTECHOMODE )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1089,7 +1089,7 @@ QString textValue () const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_TEXTVALUE )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1113,7 +1113,7 @@ virtual void done ( int result )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_DONE )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1139,7 +1139,7 @@ virtual QSize minimumSizeHint () const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_MINIMUMSIZEHINT )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1148,7 +1148,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_MINIMUMSIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
-      _qt4xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1164,7 +1164,7 @@ virtual void setVisible ( bool visible )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETVISIBLE )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1190,7 +1190,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SIZEHINT )
 {
-  QInputDialog * obj = (QInputDialog *) _qt4xhb_itemGetPtrStackSelfItem();
+  QInputDialog * obj = (QInputDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1199,7 +1199,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      _qt4xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -50,7 +50,7 @@ virtual QString actionText ( int action, Text t, int child ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_ACTIONTEXT )
 {
-  QAccessibleObject * obj = (QAccessibleObject *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAccessibleObject * obj = (QAccessibleObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -74,7 +74,7 @@ virtual bool doAction ( int action, int child, const QVariantList & params )
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_DOACTION )
 {
-  QAccessibleObject * obj = (QAccessibleObject *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAccessibleObject * obj = (QAccessibleObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -106,7 +106,7 @@ virtual bool isValid () const
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_ISVALID )
 {
-  QAccessibleObject * obj = (QAccessibleObject *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAccessibleObject * obj = (QAccessibleObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -130,7 +130,7 @@ virtual QObject * object () const
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_OBJECT )
 {
-  QAccessibleObject * obj = (QAccessibleObject *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAccessibleObject * obj = (QAccessibleObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_OBJECT )
     {
 #endif
       QObject * ptr = obj->object();
-      _qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,7 +155,7 @@ virtual QRect rect ( int child ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_RECT )
 {
-  QAccessibleObject * obj = (QAccessibleObject *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAccessibleObject * obj = (QAccessibleObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_RECT )
     {
 #endif
       QRect * ptr = new QRect( obj->rect( PINT(1) ) );
-      _qt4xhb_createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QRECT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,7 +180,7 @@ virtual void setText ( Text t, int child, const QString & text )
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_SETTEXT )
 {
-  QAccessibleObject * obj = (QAccessibleObject *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAccessibleObject * obj = (QAccessibleObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -206,7 +206,7 @@ virtual int userActionCount ( int child ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_USERACTIONCOUNT )
 {
-  QAccessibleObject * obj = (QAccessibleObject *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAccessibleObject * obj = (QAccessibleObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

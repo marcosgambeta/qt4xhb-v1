@@ -50,7 +50,7 @@ QKeyEventTransition ( QState * sourceState = 0 )
 void QKeyEventTransition_new1()
 {
   QKeyEventTransition * o = new QKeyEventTransition( OPQSTATE(1,0) );
-  _qt4xhb_returnNewObject( o, false );
+  Qt4xHb::_qt4xhb_returnNewObject( o, false );
 }
 
 /*
@@ -59,7 +59,7 @@ QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sou
 void QKeyEventTransition_new2()
 {
   QKeyEventTransition * o = new QKeyEventTransition( PQOBJECT(1), (QEvent::Type) hb_parni(2), PINT(3), OPQSTATE(4,0) );
-  _qt4xhb_returnNewObject( o, false );
+  Qt4xHb::_qt4xhb_returnNewObject( o, false );
 }
 
 //[1]QKeyEventTransition ( QState * sourceState = 0 )
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW )
 
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_DELETE )
 {
-  QKeyEventTransition * obj = (QKeyEventTransition *) _qt4xhb_itemGetPtrStackSelfItem();
+  QKeyEventTransition * obj = (QKeyEventTransition *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -105,7 +105,7 @@ int key () const
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_KEY )
 {
-  QKeyEventTransition * obj = (QKeyEventTransition *) _qt4xhb_itemGetPtrStackSelfItem();
+  QKeyEventTransition * obj = (QKeyEventTransition *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -129,7 +129,7 @@ Qt::KeyboardModifiers modifierMask () const
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_MODIFIERMASK )
 {
-  QKeyEventTransition * obj = (QKeyEventTransition *) _qt4xhb_itemGetPtrStackSelfItem();
+  QKeyEventTransition * obj = (QKeyEventTransition *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -153,7 +153,7 @@ void setKey ( int key )
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_SETKEY )
 {
-  QKeyEventTransition * obj = (QKeyEventTransition *) _qt4xhb_itemGetPtrStackSelfItem();
+  QKeyEventTransition * obj = (QKeyEventTransition *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -179,7 +179,7 @@ void setModifierMask ( Qt::KeyboardModifiers modifierMask )
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_SETMODIFIERMASK )
 {
-  QKeyEventTransition * obj = (QKeyEventTransition *) _qt4xhb_itemGetPtrStackSelfItem();
+  QKeyEventTransition * obj = (QKeyEventTransition *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

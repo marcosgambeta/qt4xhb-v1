@@ -46,7 +46,7 @@ void QSystemTrayIconSlots::messageClicked()
 
 void QSystemTrayIconSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSystemTrayIcon * obj = (QSystemTrayIcon *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

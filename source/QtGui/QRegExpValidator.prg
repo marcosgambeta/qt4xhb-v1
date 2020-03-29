@@ -50,7 +50,7 @@ QRegExpValidator ( QObject * parent = 0 )
 void QRegExpValidator_new1()
 {
   QRegExpValidator * o = new QRegExpValidator( OPQOBJECT(1,0) );
-  _qt4xhb_returnNewObject( o, false );
+  Qt4xHb::_qt4xhb_returnNewObject( o, false );
 }
 
 /*
@@ -59,7 +59,7 @@ QRegExpValidator ( const QRegExp & rx, QObject * parent )
 void QRegExpValidator_new2()
 {
   QRegExpValidator * o = new QRegExpValidator( *PQREGEXP(1), PQOBJECT(2) );
-  _qt4xhb_returnNewObject( o, false );
+  Qt4xHb::_qt4xhb_returnNewObject( o, false );
 }
 
 //[1]QRegExpValidator ( QObject * parent = 0 )
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
 
 HB_FUNC_STATIC( QREGEXPVALIDATOR_DELETE )
 {
-  QRegExpValidator * obj = (QRegExpValidator *) _qt4xhb_itemGetPtrStackSelfItem();
+  QRegExpValidator * obj = (QRegExpValidator *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -105,7 +105,7 @@ const QRegExp & regExp () const
 */
 HB_FUNC_STATIC( QREGEXPVALIDATOR_REGEXP )
 {
-  QRegExpValidator * obj = (QRegExpValidator *) _qt4xhb_itemGetPtrStackSelfItem();
+  QRegExpValidator * obj = (QRegExpValidator *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_REGEXP )
     {
 #endif
       const QRegExp * ptr = &obj->regExp();
-      _qt4xhb_createReturnClass( ptr, "QREGEXP", false );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QREGEXP", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -130,7 +130,7 @@ void setRegExp ( const QRegExp & rx )
 */
 HB_FUNC_STATIC( QREGEXPVALIDATOR_SETREGEXP )
 {
-  QRegExpValidator * obj = (QRegExpValidator *) _qt4xhb_itemGetPtrStackSelfItem();
+  QRegExpValidator * obj = (QRegExpValidator *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

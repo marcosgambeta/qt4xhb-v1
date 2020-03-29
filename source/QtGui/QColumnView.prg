@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_NEW )
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     QColumnView * o = new QColumnView( OPQWIDGET(1,0) );
-    _qt4xhb_returnNewObject( o, false );
+    Qt4xHb::_qt4xhb_returnNewObject( o, false );
   }
   else
   {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_NEW )
 
 HB_FUNC_STATIC( QCOLUMNVIEW_DELETE )
 {
-  QColumnView * obj = (QColumnView *) _qt4xhb_itemGetPtrStackSelfItem();
+  QColumnView * obj = (QColumnView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -100,7 +100,7 @@ QList<int> columnWidths () const
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_COLUMNWIDTHS )
 {
-  QColumnView * obj = (QColumnView *) _qt4xhb_itemGetPtrStackSelfItem();
+  QColumnView * obj = (QColumnView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_COLUMNWIDTHS )
     {
 #endif
       QList<int> list = obj->columnWidths();
-      _qt4xhb_convert_qlist_int_to_array( list );
+      Qt4xHb::_qt4xhb_convert_qlist_int_to_array( list );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -125,7 +125,7 @@ QWidget * previewWidget () const
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_PREVIEWWIDGET )
 {
-  QColumnView * obj = (QColumnView *) _qt4xhb_itemGetPtrStackSelfItem();
+  QColumnView * obj = (QColumnView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_PREVIEWWIDGET )
     {
 #endif
       QWidget * ptr = obj->previewWidget();
-      _qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::_qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -150,7 +150,7 @@ bool resizeGripsVisible () const
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_RESIZEGRIPSVISIBLE )
 {
-  QColumnView * obj = (QColumnView *) _qt4xhb_itemGetPtrStackSelfItem();
+  QColumnView * obj = (QColumnView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -174,7 +174,7 @@ void setColumnWidths ( const QList<int> & list )
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_SETCOLUMNWIDTHS )
 {
-  QColumnView * obj = (QColumnView *) _qt4xhb_itemGetPtrStackSelfItem();
+  QColumnView * obj = (QColumnView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -210,7 +210,7 @@ void setPreviewWidget ( QWidget * widget )
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_SETPREVIEWWIDGET )
 {
-  QColumnView * obj = (QColumnView *) _qt4xhb_itemGetPtrStackSelfItem();
+  QColumnView * obj = (QColumnView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -236,7 +236,7 @@ void setResizeGripsVisible ( bool visible )
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_SETRESIZEGRIPSVISIBLE )
 {
-  QColumnView * obj = (QColumnView *) _qt4xhb_itemGetPtrStackSelfItem();
+  QColumnView * obj = (QColumnView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -262,7 +262,7 @@ virtual QModelIndex indexAt ( const QPoint & point ) const
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_INDEXAT )
 {
-  QColumnView * obj = (QColumnView *) _qt4xhb_itemGetPtrStackSelfItem();
+  QColumnView * obj = (QColumnView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_INDEXAT )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->indexAt( *PQPOINT(1) ) );
-      _qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -287,7 +287,7 @@ virtual void scrollTo ( const QModelIndex & index, ScrollHint hint = EnsureVisib
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_SCROLLTO )
 {
-  QColumnView * obj = (QColumnView *) _qt4xhb_itemGetPtrStackSelfItem();
+  QColumnView * obj = (QColumnView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -313,7 +313,7 @@ virtual void selectAll ()
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_SELECTALL )
 {
-  QColumnView * obj = (QColumnView *) _qt4xhb_itemGetPtrStackSelfItem();
+  QColumnView * obj = (QColumnView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -339,7 +339,7 @@ virtual void setModel ( QAbstractItemModel * model )
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_SETMODEL )
 {
-  QColumnView * obj = (QColumnView *) _qt4xhb_itemGetPtrStackSelfItem();
+  QColumnView * obj = (QColumnView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -365,7 +365,7 @@ virtual void setRootIndex ( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_SETROOTINDEX )
 {
-  QColumnView * obj = (QColumnView *) _qt4xhb_itemGetPtrStackSelfItem();
+  QColumnView * obj = (QColumnView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -391,7 +391,7 @@ virtual void setSelectionModel ( QItemSelectionModel * newSelectionModel )
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_SETSELECTIONMODEL )
 {
-  QColumnView * obj = (QColumnView *) _qt4xhb_itemGetPtrStackSelfItem();
+  QColumnView * obj = (QColumnView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -417,7 +417,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_SIZEHINT )
 {
-  QColumnView * obj = (QColumnView *) _qt4xhb_itemGetPtrStackSelfItem();
+  QColumnView * obj = (QColumnView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      _qt4xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -442,7 +442,7 @@ virtual QRect visualRect ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_VISUALRECT )
 {
-  QColumnView * obj = (QColumnView *) _qt4xhb_itemGetPtrStackSelfItem();
+  QColumnView * obj = (QColumnView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_VISUALRECT )
     {
 #endif
       QRect * ptr = new QRect( obj->visualRect( *PQMODELINDEX(1) ) );
-      _qt4xhb_createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QRECT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

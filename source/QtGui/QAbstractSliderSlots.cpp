@@ -98,7 +98,7 @@ void QAbstractSliderSlots::valueChanged( int value )
 
 void QAbstractSliderSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractSlider * obj = (QAbstractSlider *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSlider * obj = (QAbstractSlider *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

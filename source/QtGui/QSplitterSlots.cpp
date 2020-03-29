@@ -37,7 +37,7 @@ void QSplitterSlots::splitterMoved( int pos, int index )
 
 void QSplitterSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSplitter * obj = (QSplitter *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSplitter * obj = (QSplitter *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

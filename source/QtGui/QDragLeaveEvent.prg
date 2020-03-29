@@ -46,7 +46,7 @@ HB_FUNC_STATIC( QDRAGLEAVEEVENT_NEW )
   if( ISNUMPAR(0) )
   {
     QDragLeaveEvent * o = new QDragLeaveEvent();
-    _qt4xhb_returnNewObject( o, false );
+    Qt4xHb::_qt4xhb_returnNewObject( o, false );
   }
   else
   {
@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QDRAGLEAVEEVENT_NEW )
 
 HB_FUNC_STATIC( QDRAGLEAVEEVENT_DELETE )
 {
-  QDragLeaveEvent * obj = (QDragLeaveEvent *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDragLeaveEvent * obj = (QDragLeaveEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

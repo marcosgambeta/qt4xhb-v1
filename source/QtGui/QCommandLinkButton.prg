@@ -49,7 +49,7 @@ QCommandLinkButton ( QWidget * parent = 0 )
 void QCommandLinkButton_new1()
 {
   QCommandLinkButton * o = new QCommandLinkButton( OPQWIDGET(1,0) );
-  _qt4xhb_returnNewObject( o, false );
+  Qt4xHb::_qt4xhb_returnNewObject( o, false );
 }
 
 /*
@@ -58,7 +58,7 @@ QCommandLinkButton ( const QString & text, QWidget * parent = 0 )
 void QCommandLinkButton_new2()
 {
   QCommandLinkButton * o = new QCommandLinkButton( PQSTRING(1), OPQWIDGET(2,0) );
-  _qt4xhb_returnNewObject( o, false );
+  Qt4xHb::_qt4xhb_returnNewObject( o, false );
 }
 
 /*
@@ -67,7 +67,7 @@ QCommandLinkButton ( const QString & text, const QString & description, QWidget 
 void QCommandLinkButton_new3()
 {
   QCommandLinkButton * o = new QCommandLinkButton( PQSTRING(1), PQSTRING(2), OPQWIDGET(3,0) );
-  _qt4xhb_returnNewObject( o, false );
+  Qt4xHb::_qt4xhb_returnNewObject( o, false );
 }
 
 //[1]QCommandLinkButton ( QWidget * parent = 0 )
@@ -99,7 +99,7 @@ QString description () const
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DESCRIPTION )
 {
-  QCommandLinkButton * obj = (QCommandLinkButton *) _qt4xhb_itemGetPtrStackSelfItem();
+  QCommandLinkButton * obj = (QCommandLinkButton *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -123,7 +123,7 @@ void setDescription ( const QString & description )
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETDESCRIPTION )
 {
-  QCommandLinkButton * obj = (QCommandLinkButton *) _qt4xhb_itemGetPtrStackSelfItem();
+  QCommandLinkButton * obj = (QCommandLinkButton *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -149,7 +149,7 @@ bool isFlat () const
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_ISFLAT )
 {
-  QCommandLinkButton * obj = (QCommandLinkButton *) _qt4xhb_itemGetPtrStackSelfItem();
+  QCommandLinkButton * obj = (QCommandLinkButton *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -173,7 +173,7 @@ void setFlat ( bool )
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETFLAT )
 {
-  QCommandLinkButton * obj = (QCommandLinkButton *) _qt4xhb_itemGetPtrStackSelfItem();
+  QCommandLinkButton * obj = (QCommandLinkButton *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

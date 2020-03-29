@@ -70,7 +70,7 @@ void QAbstractButtonSlots::toggled( bool checked )
 
 void QAbstractButtonSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractButton * obj = (QAbstractButton *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractButton * obj = (QAbstractButton *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

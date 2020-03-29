@@ -53,7 +53,7 @@ HB_FUNC_STATIC( QITEMDELEGATE_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QItemDelegate * o = new QItemDelegate( OPQOBJECT(1,0) );
-    _qt4xhb_returnNewObject( o, false );
+    Qt4xHb::_qt4xhb_returnNewObject( o, false );
   }
   else
   {
@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QITEMDELEGATE_NEW )
 
 HB_FUNC_STATIC( QITEMDELEGATE_DELETE )
 {
-  QItemDelegate * obj = (QItemDelegate *) _qt4xhb_itemGetPtrStackSelfItem();
+  QItemDelegate * obj = (QItemDelegate *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -85,7 +85,7 @@ bool hasClipping () const
 */
 HB_FUNC_STATIC( QITEMDELEGATE_HASCLIPPING )
 {
-  QItemDelegate * obj = (QItemDelegate *) _qt4xhb_itemGetPtrStackSelfItem();
+  QItemDelegate * obj = (QItemDelegate *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -109,7 +109,7 @@ QItemEditorFactory * itemEditorFactory () const
 */
 HB_FUNC_STATIC( QITEMDELEGATE_ITEMEDITORFACTORY )
 {
-  QItemDelegate * obj = (QItemDelegate *) _qt4xhb_itemGetPtrStackSelfItem();
+  QItemDelegate * obj = (QItemDelegate *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QITEMDELEGATE_ITEMEDITORFACTORY )
     {
 #endif
       QItemEditorFactory * ptr = obj->itemEditorFactory();
-      _qt4xhb_createReturnClass( ptr, "QITEMEDITORFACTORY", false );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QITEMEDITORFACTORY", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -134,7 +134,7 @@ void setClipping ( bool clip )
 */
 HB_FUNC_STATIC( QITEMDELEGATE_SETCLIPPING )
 {
-  QItemDelegate * obj = (QItemDelegate *) _qt4xhb_itemGetPtrStackSelfItem();
+  QItemDelegate * obj = (QItemDelegate *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -160,7 +160,7 @@ void setItemEditorFactory ( QItemEditorFactory * factory )
 */
 HB_FUNC_STATIC( QITEMDELEGATE_SETITEMEDITORFACTORY )
 {
-  QItemDelegate * obj = (QItemDelegate *) _qt4xhb_itemGetPtrStackSelfItem();
+  QItemDelegate * obj = (QItemDelegate *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

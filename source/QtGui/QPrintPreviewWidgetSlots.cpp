@@ -46,7 +46,7 @@ void QPrintPreviewWidgetSlots::previewChanged()
 
 void QPrintPreviewWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt4xhb_itemGetPtrStackSelfItem();
+  QPrintPreviewWidget * obj = (QPrintPreviewWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

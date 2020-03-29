@@ -47,7 +47,7 @@ QStyleOptionRubberBand()
 void QStyleOptionRubberBand_new1()
 {
   QStyleOptionRubberBand * o = new QStyleOptionRubberBand();
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -56,7 +56,7 @@ QStyleOptionRubberBand(const QStyleOptionRubberBand &other)
 void QStyleOptionRubberBand_new2()
 {
   QStyleOptionRubberBand * o = new QStyleOptionRubberBand( *PQSTYLEOPTIONRUBBERBAND(1) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -88,7 +88,7 @@ QRubberBand::Shape shape
 */
 HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_SHAPE )
 {
-  QStyleOptionRubberBand * obj = (QStyleOptionRubberBand *) _qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionRubberBand * obj = (QStyleOptionRubberBand *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_SHAPE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_SETSHAPE )
 {
-  QStyleOptionRubberBand * obj = (QStyleOptionRubberBand *) _qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionRubberBand * obj = (QStyleOptionRubberBand *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -126,7 +126,7 @@ bool opaque
 */
 HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_OPAQUE )
 {
-  QStyleOptionRubberBand * obj = (QStyleOptionRubberBand *) _qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionRubberBand * obj = (QStyleOptionRubberBand *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_OPAQUE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_SETOPAQUE )
 {
-  QStyleOptionRubberBand * obj = (QStyleOptionRubberBand *) _qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionRubberBand * obj = (QStyleOptionRubberBand *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

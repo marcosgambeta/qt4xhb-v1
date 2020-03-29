@@ -57,7 +57,7 @@ RETURN
 
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_DELETE )
 {
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAccessibleInterface * obj = (QAccessibleInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -77,7 +77,7 @@ virtual QString actionText ( int action, Text t, int child ) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_ACTIONTEXT )
 {
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAccessibleInterface * obj = (QAccessibleInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -101,7 +101,7 @@ virtual int childAt ( int x, int y ) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_CHILDAT )
 {
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAccessibleInterface * obj = (QAccessibleInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -125,7 +125,7 @@ virtual int childCount () const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_CHILDCOUNT )
 {
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAccessibleInterface * obj = (QAccessibleInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -149,7 +149,7 @@ virtual bool doAction ( int action, int child, const QVariantList & params = QVa
 */
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_DOACTION )
 {
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAccessibleInterface * obj = (QAccessibleInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -184,7 +184,7 @@ virtual int indexOfChild ( const QAccessibleInterface * child ) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_INDEXOFCHILD )
 {
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAccessibleInterface * obj = (QAccessibleInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -208,7 +208,7 @@ QVariant invokeMethod ( Method method, int child = 0, const QVariantList & param
 */
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_INVOKEMETHOD )
 {
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAccessibleInterface * obj = (QAccessibleInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_INVOKEMETHOD )
         }
       }
       QVariant * ptr = new QVariant( obj->invokeMethod( (QAccessible::Method) hb_parni(1), OPINT(2,0), par3 ) );
-      _qt4xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,7 +244,7 @@ virtual bool isValid () const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_ISVALID )
 {
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAccessibleInterface * obj = (QAccessibleInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -268,7 +268,7 @@ virtual QObject * object () const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_OBJECT )
 {
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAccessibleInterface * obj = (QAccessibleInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_OBJECT )
     {
 #endif
       QObject * ptr = obj->object();
-      _qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -293,7 +293,7 @@ virtual QRect rect ( int child ) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_RECT )
 {
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAccessibleInterface * obj = (QAccessibleInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_RECT )
     {
 #endif
       QRect * ptr = new QRect( obj->rect( PINT(1) ) );
-      _qt4xhb_createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QRECT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -318,7 +318,7 @@ virtual Relation relationTo ( int child, const QAccessibleInterface * other, int
 */
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_RELATIONTO )
 {
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAccessibleInterface * obj = (QAccessibleInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -342,7 +342,7 @@ virtual Role role ( int child ) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_ROLE )
 {
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAccessibleInterface * obj = (QAccessibleInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -366,7 +366,7 @@ virtual void setText ( Text t, int child, const QString & text ) = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_SETTEXT )
 {
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAccessibleInterface * obj = (QAccessibleInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -392,7 +392,7 @@ virtual State state ( int child ) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_STATE )
 {
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAccessibleInterface * obj = (QAccessibleInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -416,7 +416,7 @@ virtual QString text ( Text t, int child ) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_TEXT )
 {
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAccessibleInterface * obj = (QAccessibleInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -440,7 +440,7 @@ virtual int userActionCount ( int child ) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_USERACTIONCOUNT )
 {
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAccessibleInterface * obj = (QAccessibleInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

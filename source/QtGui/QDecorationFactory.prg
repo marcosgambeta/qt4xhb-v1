@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QDECORATIONFACTORY_CREATE )
   {
 #endif
     QDecoration * ptr = QDecorationFactory::create( PQSTRING(1) );
-    _qt4xhb_createReturnClass( ptr, "QDECORATION", false );
+    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QDECORATION", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
