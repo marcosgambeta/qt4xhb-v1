@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QMENU_EXEC3 )
     par1 << (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
   }
   QAction * ptr = QMenu::exec ( par1, *PQPOINT(2), PQACTION(3), PQWIDGET(4) );
-  Qt4xHb::_qt4xhb_createReturnClass ( ptr, "QACTION" );
+  Qt4xHb::createReturnClass ( ptr, "QACTION" );
 }
 $addMethod=exec3
 
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QMENU_EXEC4 )
   }
   QAction * par3 = ISNIL(3)? 0 : (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
   QAction * ptr = QMenu::exec ( par1, *PQPOINT(2), par3 );
-  Qt4xHb::_qt4xhb_createReturnClass ( ptr, "QACTION" );
+  Qt4xHb::createReturnClass ( ptr, "QACTION" );
 }
 $addMethod=exec4
 

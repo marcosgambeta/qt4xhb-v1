@@ -46,7 +46,7 @@ HB_FUNC_STATIC( QPOLYGON_NEW4 )
     par1 << *(QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
   }
   QPolygon * o = new QPolygon ( par1 );
-  Qt4xHb::_qt4xhb_storePointerAndFlag ( o, true );
+  Qt4xHb::storePointerAndFlag ( o, true );
 }
 $addMethod=new4
 
