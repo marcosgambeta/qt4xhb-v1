@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QUILOADER_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QUiLoader * o = new QUiLoader( OPQOBJECT(1,0) );
-    _qt4xhb_returnNewObject( o, false );
+    Qt4xHb::_qt4xhb_returnNewObject( o, false );
   }
   else
   {
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QUILOADER_NEW )
 
 HB_FUNC_STATIC( QUILOADER_DELETE )
 {
-  QUiLoader * obj = (QUiLoader *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUiLoader * obj = (QUiLoader *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -104,7 +104,7 @@ void addPluginPath ( const QString & path )
 */
 HB_FUNC_STATIC( QUILOADER_ADDPLUGINPATH )
 {
-  QUiLoader * obj = (QUiLoader *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUiLoader * obj = (QUiLoader *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -130,7 +130,7 @@ QStringList availableLayouts () const
 */
 HB_FUNC_STATIC( QUILOADER_AVAILABLELAYOUTS )
 {
-  QUiLoader * obj = (QUiLoader *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUiLoader * obj = (QUiLoader *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -154,7 +154,7 @@ QStringList availableWidgets () const
 */
 HB_FUNC_STATIC( QUILOADER_AVAILABLEWIDGETS )
 {
-  QUiLoader * obj = (QUiLoader *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUiLoader * obj = (QUiLoader *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -178,7 +178,7 @@ void clearPluginPaths ()
 */
 HB_FUNC_STATIC( QUILOADER_CLEARPLUGINPATHS )
 {
-  QUiLoader * obj = (QUiLoader *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUiLoader * obj = (QUiLoader *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -204,7 +204,7 @@ virtual QAction * createAction ( QObject * parent = 0, const QString & name = QS
 */
 HB_FUNC_STATIC( QUILOADER_CREATEACTION )
 {
-  QUiLoader * obj = (QUiLoader *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUiLoader * obj = (QUiLoader *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTION )
     {
 #endif
       QAction * ptr = obj->createAction( OPQOBJECT(1,0), OPQSTRING(2,QString()) );
-      _qt4xhb_createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QACTION" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -229,7 +229,7 @@ virtual QActionGroup * createActionGroup ( QObject * parent = 0, const QString &
 */
 HB_FUNC_STATIC( QUILOADER_CREATEACTIONGROUP )
 {
-  QUiLoader * obj = (QUiLoader *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUiLoader * obj = (QUiLoader *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTIONGROUP )
     {
 #endif
       QActionGroup * ptr = obj->createActionGroup( OPQOBJECT(1,0), OPQSTRING(2,QString()) );
-      _qt4xhb_createReturnQObjectClass( ptr, "QACTIONGROUP" );
+      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QACTIONGROUP" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -254,7 +254,7 @@ virtual QLayout * createLayout ( const QString & className, QObject * parent = 0
 */
 HB_FUNC_STATIC( QUILOADER_CREATELAYOUT )
 {
-  QUiLoader * obj = (QUiLoader *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUiLoader * obj = (QUiLoader *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QUILOADER_CREATELAYOUT )
     {
 #endif
       QLayout * ptr = obj->createLayout( PQSTRING(1), OPQOBJECT(2,0), OPQSTRING(3,QString()) );
-      _qt4xhb_createReturnQObjectClass( ptr, "QLAYOUT" );
+      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QLAYOUT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,7 +279,7 @@ virtual QWidget * createWidget ( const QString & className, QWidget * parent = 0
 */
 HB_FUNC_STATIC( QUILOADER_CREATEWIDGET )
 {
-  QUiLoader * obj = (QUiLoader *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUiLoader * obj = (QUiLoader *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEWIDGET )
     {
 #endif
       QWidget * ptr = obj->createWidget( PQSTRING(1), OPQWIDGET(2,0), OPQSTRING(3,QString()) );
-      _qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::_qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -304,7 +304,7 @@ bool isLanguageChangeEnabled () const
 */
 HB_FUNC_STATIC( QUILOADER_ISLANGUAGECHANGEENABLED )
 {
-  QUiLoader * obj = (QUiLoader *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUiLoader * obj = (QUiLoader *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -328,7 +328,7 @@ QWidget * load ( QIODevice * device, QWidget * parentWidget = 0 )
 */
 HB_FUNC_STATIC( QUILOADER_LOAD )
 {
-  QUiLoader * obj = (QUiLoader *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUiLoader * obj = (QUiLoader *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QUILOADER_LOAD )
     {
 #endif
       QWidget * ptr = obj->load( PQIODEVICE(1), OPQWIDGET(2,0) );
-      _qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::_qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -353,7 +353,7 @@ QStringList pluginPaths () const
 */
 HB_FUNC_STATIC( QUILOADER_PLUGINPATHS )
 {
-  QUiLoader * obj = (QUiLoader *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUiLoader * obj = (QUiLoader *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -377,7 +377,7 @@ void setLanguageChangeEnabled ( bool enabled )
 */
 HB_FUNC_STATIC( QUILOADER_SETLANGUAGECHANGEENABLED )
 {
-  QUiLoader * obj = (QUiLoader *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUiLoader * obj = (QUiLoader *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -403,7 +403,7 @@ void setWorkingDirectory ( const QDir & dir )
 */
 HB_FUNC_STATIC( QUILOADER_SETWORKINGDIRECTORY )
 {
-  QUiLoader * obj = (QUiLoader *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUiLoader * obj = (QUiLoader *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -429,7 +429,7 @@ QDir workingDirectory () const
 */
 HB_FUNC_STATIC( QUILOADER_WORKINGDIRECTORY )
 {
-  QUiLoader * obj = (QUiLoader *) _qt4xhb_itemGetPtrStackSelfItem();
+  QUiLoader * obj = (QUiLoader *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QUILOADER_WORKINGDIRECTORY )
     {
 #endif
       QDir * ptr = new QDir( obj->workingDirectory() );
-      _qt4xhb_createReturnClass( ptr, "QDIR", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QDIR", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
