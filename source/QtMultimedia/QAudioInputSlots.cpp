@@ -46,7 +46,7 @@ void QAudioInputSlots::notify()
 
 void QAudioInputSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAudioInput * obj = (QAudioInput *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAudioInput * obj = (QAudioInput *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
