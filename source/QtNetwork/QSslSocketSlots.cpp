@@ -107,7 +107,7 @@ void QSslSocketSlots::sslErrors( const QList<QSslError> & errors )
 
 void QSslSocketSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSslSocket * obj = (QSslSocket *) _qt4xhb_itemGetPtrStackSelfItem();
+  QSslSocket * obj = (QSslSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

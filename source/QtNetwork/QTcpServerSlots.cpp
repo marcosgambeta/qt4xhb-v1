@@ -33,7 +33,7 @@ void QTcpServerSlots::newConnection()
 
 void QTcpServerSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTcpServer * obj = (QTcpServer *) _qt4xhb_itemGetPtrStackSelfItem();
+  QTcpServer * obj = (QTcpServer *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

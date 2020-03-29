@@ -70,7 +70,7 @@ void QLocalSocketSlots::stateChanged( QLocalSocket::LocalSocketState socketState
 
 void QLocalSocketSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QLocalSocket * obj = (QLocalSocket *) _qt4xhb_itemGetPtrStackSelfItem();
+  QLocalSocket * obj = (QLocalSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
