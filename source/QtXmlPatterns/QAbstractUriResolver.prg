@@ -45,7 +45,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTURIRESOLVER_DELETE )
 {
-  QAbstractUriResolver * obj = (QAbstractUriResolver *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractUriResolver * obj = (QAbstractUriResolver *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -67,7 +67,7 @@ virtual QUrl resolve ( const QUrl & relative, const QUrl & baseURI ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTURIRESOLVER_RESOLVE )
 {
-  QAbstractUriResolver * obj = (QAbstractUriResolver *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractUriResolver * obj = (QAbstractUriResolver *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QABSTRACTURIRESOLVER_RESOLVE )
     {
 #endif
       QUrl * ptr = new QUrl( obj->resolve( *PQURL(1), *PQURL(2) ) );
-      _qt4xhb_createReturnClass( ptr, "QURL", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QURL", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
