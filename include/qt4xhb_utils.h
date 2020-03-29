@@ -15,6 +15,9 @@
 #include <QMetaObject>
 #include <QVariant>
 
+namespace Qt4xHb
+{
+
 void _qt4xhb_createReturnClass ( void * ptr, const char * classname );
 void _qt4xhb_createReturnClass ( const void * ptr, const char * classname );
 void _qt4xhb_createReturnClass ( void * ptr, const char * classname, bool destroy );
@@ -57,5 +60,7 @@ QStringList _qt4xhb_convert_array_parameter_to_qstringlist ( int numpar );
 QVariantList _qt4xhb_convert_array_parameter_to_qvariantlist ( int numpar );
 void _qt4xhb_convert_qvariantlist_to_array ( const QVariantList list );
 //void _qt4xhb_convert_qlist_qbluetoothuuid_to_array ( const QList<QBluetoothUuid> list );
+
+}
 
 #endif /* QT4XHB_UTILS_H */
