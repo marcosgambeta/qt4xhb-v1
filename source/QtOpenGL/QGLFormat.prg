@@ -110,7 +110,7 @@ QGLFormat ()
 void QGLFormat_new1()
 {
   QGLFormat * o = new QGLFormat();
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -119,7 +119,7 @@ QGLFormat ( QGL::FormatOptions options, int plane = 0 )
 void QGLFormat_new2()
 {
   QGLFormat * o = new QGLFormat( (QGL::FormatOptions) hb_parni(1), OPINT(2,0) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -128,7 +128,7 @@ QGLFormat ( const QGLFormat & other )
 void QGLFormat_new3()
 {
   QGLFormat * o = new QGLFormat( *PQGLFORMAT(1) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 //[1]QGLFormat ()
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QGLFORMAT_NEW )
 */
 HB_FUNC_STATIC( QGLFORMAT_DELETE )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -180,7 +180,7 @@ bool accum () const
 */
 HB_FUNC_STATIC( QGLFORMAT_ACCUM )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -204,7 +204,7 @@ int accumBufferSize () const
 */
 HB_FUNC_STATIC( QGLFORMAT_ACCUMBUFFERSIZE )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -228,7 +228,7 @@ bool alpha () const
 */
 HB_FUNC_STATIC( QGLFORMAT_ALPHA )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -252,7 +252,7 @@ int alphaBufferSize () const
 */
 HB_FUNC_STATIC( QGLFORMAT_ALPHABUFFERSIZE )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -276,7 +276,7 @@ int blueBufferSize () const
 */
 HB_FUNC_STATIC( QGLFORMAT_BLUEBUFFERSIZE )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -300,7 +300,7 @@ bool depth () const
 */
 HB_FUNC_STATIC( QGLFORMAT_DEPTH )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -324,7 +324,7 @@ int depthBufferSize () const
 */
 HB_FUNC_STATIC( QGLFORMAT_DEPTHBUFFERSIZE )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -348,7 +348,7 @@ bool directRendering () const
 */
 HB_FUNC_STATIC( QGLFORMAT_DIRECTRENDERING )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -372,7 +372,7 @@ bool doubleBuffer () const
 */
 HB_FUNC_STATIC( QGLFORMAT_DOUBLEBUFFER )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -396,7 +396,7 @@ int greenBufferSize () const
 */
 HB_FUNC_STATIC( QGLFORMAT_GREENBUFFERSIZE )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -420,7 +420,7 @@ bool hasOverlay () const
 */
 HB_FUNC_STATIC( QGLFORMAT_HASOVERLAY )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -444,7 +444,7 @@ int majorVersion () const
 */
 HB_FUNC_STATIC( QGLFORMAT_MAJORVERSION )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -468,7 +468,7 @@ int minorVersion () const
 */
 HB_FUNC_STATIC( QGLFORMAT_MINORVERSION )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -492,7 +492,7 @@ int plane () const
 */
 HB_FUNC_STATIC( QGLFORMAT_PLANE )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -516,7 +516,7 @@ OpenGLContextProfile profile () const
 */
 HB_FUNC_STATIC( QGLFORMAT_PROFILE )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -540,7 +540,7 @@ int redBufferSize () const
 */
 HB_FUNC_STATIC( QGLFORMAT_REDBUFFERSIZE )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -564,7 +564,7 @@ bool rgba () const
 */
 HB_FUNC_STATIC( QGLFORMAT_RGBA )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -588,7 +588,7 @@ bool sampleBuffers () const
 */
 HB_FUNC_STATIC( QGLFORMAT_SAMPLEBUFFERS )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -612,7 +612,7 @@ int samples () const
 */
 HB_FUNC_STATIC( QGLFORMAT_SAMPLES )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -636,7 +636,7 @@ void setAccum ( bool enable )
 */
 HB_FUNC_STATIC( QGLFORMAT_SETACCUM )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -662,7 +662,7 @@ void setAccumBufferSize ( int size )
 */
 HB_FUNC_STATIC( QGLFORMAT_SETACCUMBUFFERSIZE )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -688,7 +688,7 @@ void setAlpha ( bool enable )
 */
 HB_FUNC_STATIC( QGLFORMAT_SETALPHA )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -714,7 +714,7 @@ void setAlphaBufferSize ( int size )
 */
 HB_FUNC_STATIC( QGLFORMAT_SETALPHABUFFERSIZE )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -740,7 +740,7 @@ void setBlueBufferSize ( int size )
 */
 HB_FUNC_STATIC( QGLFORMAT_SETBLUEBUFFERSIZE )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -766,7 +766,7 @@ void setDepth ( bool enable )
 */
 HB_FUNC_STATIC( QGLFORMAT_SETDEPTH )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -792,7 +792,7 @@ void setDepthBufferSize ( int size )
 */
 HB_FUNC_STATIC( QGLFORMAT_SETDEPTHBUFFERSIZE )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -818,7 +818,7 @@ void setDirectRendering ( bool enable )
 */
 HB_FUNC_STATIC( QGLFORMAT_SETDIRECTRENDERING )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -844,7 +844,7 @@ void setDoubleBuffer ( bool enable )
 */
 HB_FUNC_STATIC( QGLFORMAT_SETDOUBLEBUFFER )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -870,7 +870,7 @@ void setGreenBufferSize ( int size )
 */
 HB_FUNC_STATIC( QGLFORMAT_SETGREENBUFFERSIZE )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -896,7 +896,7 @@ void setOption ( QGL::FormatOptions opt )
 */
 HB_FUNC_STATIC( QGLFORMAT_SETOPTION )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -922,7 +922,7 @@ void setOverlay ( bool enable )
 */
 HB_FUNC_STATIC( QGLFORMAT_SETOVERLAY )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -948,7 +948,7 @@ void setPlane ( int plane )
 */
 HB_FUNC_STATIC( QGLFORMAT_SETPLANE )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -974,7 +974,7 @@ void setProfile ( OpenGLContextProfile profile )
 */
 HB_FUNC_STATIC( QGLFORMAT_SETPROFILE )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1000,7 +1000,7 @@ void setRedBufferSize ( int size )
 */
 HB_FUNC_STATIC( QGLFORMAT_SETREDBUFFERSIZE )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1026,7 +1026,7 @@ void setRgba ( bool enable )
 */
 HB_FUNC_STATIC( QGLFORMAT_SETRGBA )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1052,7 +1052,7 @@ void setSampleBuffers ( bool enable )
 */
 HB_FUNC_STATIC( QGLFORMAT_SETSAMPLEBUFFERS )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1078,7 +1078,7 @@ void setSamples ( int numSamples )
 */
 HB_FUNC_STATIC( QGLFORMAT_SETSAMPLES )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1104,7 +1104,7 @@ void setStencil ( bool enable )
 */
 HB_FUNC_STATIC( QGLFORMAT_SETSTENCIL )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1130,7 +1130,7 @@ void setStencilBufferSize ( int size )
 */
 HB_FUNC_STATIC( QGLFORMAT_SETSTENCILBUFFERSIZE )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1156,7 +1156,7 @@ void setStereo ( bool enable )
 */
 HB_FUNC_STATIC( QGLFORMAT_SETSTEREO )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1182,7 +1182,7 @@ void setSwapInterval ( int interval )
 */
 HB_FUNC_STATIC( QGLFORMAT_SETSWAPINTERVAL )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1208,7 +1208,7 @@ void setVersion ( int major, int minor )
 */
 HB_FUNC_STATIC( QGLFORMAT_SETVERSION )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1234,7 +1234,7 @@ bool stencil () const
 */
 HB_FUNC_STATIC( QGLFORMAT_STENCIL )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1258,7 +1258,7 @@ int stencilBufferSize () const
 */
 HB_FUNC_STATIC( QGLFORMAT_STENCILBUFFERSIZE )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1282,7 +1282,7 @@ bool stereo () const
 */
 HB_FUNC_STATIC( QGLFORMAT_STEREO )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1306,7 +1306,7 @@ int swapInterval () const
 */
 HB_FUNC_STATIC( QGLFORMAT_SWAPINTERVAL )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1330,7 +1330,7 @@ bool testOption ( QGL::FormatOptions opt ) const
 */
 HB_FUNC_STATIC( QGLFORMAT_TESTOPTION )
 {
-  QGLFormat * obj = (QGLFormat *) _qt4xhb_itemGetPtrStackSelfItem();
+  QGLFormat * obj = (QGLFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1359,7 +1359,7 @@ HB_FUNC_STATIC( QGLFORMAT_DEFAULTFORMAT )
   {
 #endif
     QGLFormat * ptr = new QGLFormat( QGLFormat::defaultFormat() );
-    _qt4xhb_createReturnClass( ptr, "QGLFORMAT", true );
+    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QGLFORMAT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1379,7 +1379,7 @@ HB_FUNC_STATIC( QGLFORMAT_DEFAULTOVERLAYFORMAT )
   {
 #endif
     QGLFormat * ptr = new QGLFormat( QGLFormat::defaultOverlayFormat() );
-    _qt4xhb_createReturnClass( ptr, "QGLFORMAT", true );
+    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QGLFORMAT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1499,7 +1499,7 @@ HB_FUNC_STATIC( QGLFORMAT_FROMPLATFORMWINDOWFORMAT )
   {
 #endif
     QGLFormat * ptr = new QGLFormat( QGLFormat::fromPlatformWindowFormat( *PQPLATFORMWINDOWFORMAT(1) ) );
-    _qt4xhb_createReturnClass( ptr, "QGLFORMAT", true );
+    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QGLFORMAT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1521,7 +1521,7 @@ HB_FUNC_STATIC( QGLFORMAT_TOPLATFORMWINDOWFORMAT )
   {
 #endif
     QPlatformWindowFormat * ptr = new QPlatformWindowFormat( QGLFormat::toPlatformWindowFormat( *PQGLFORMAT(1) ) );
-    _qt4xhb_createReturnClass( ptr, "QPLATFORMWINDOWFORMAT", true );
+    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPLATFORMWINDOWFORMAT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
