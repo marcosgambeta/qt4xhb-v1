@@ -14,6 +14,9 @@
 #include <QWidget>
 #include <QVariant>
 
+namespace Qt4xHb
+{
+
 /*
   cria um objeto da classe 'classname', com o ponteiro 'ptr'
 */
@@ -647,4 +650,6 @@ void _qt4xhb_convert_qvariantlist_to_array ( const QVariantList list )
   }
 
   hb_itemReturnRelease(pArray);
+}
+
 }
