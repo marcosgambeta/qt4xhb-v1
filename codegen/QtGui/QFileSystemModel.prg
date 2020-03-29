@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMEDATA )
   {
     QModelIndexList * par1 = (QModelIndexList *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QMimeData * ptr = obj->mimeData ( *par1 );
-    _qt4xhb_createReturnClass ( ptr, "QMIMEDATA" );
+    Qt4xHb::_qt4xhb_createReturnClass ( ptr, "QMIMEDATA" );
   }
 }
 $addMethod=mimeData

@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QPIXMAP_GRABWINDOW )
 {
   WId par1 = (WId) hb_parptr(1);
   QPixmap * ptr = new QPixmap( QPixmap::grabWindow ( par1, OPINT(2,0), OPINT(3,0), OPINT(4,-1), OPINT(5,-1) ) );
-  _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
+  Qt4xHb::_qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
 }
 $addMethod=grabWindow
 
