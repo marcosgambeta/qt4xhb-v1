@@ -71,7 +71,7 @@ void QAxWidgetSlots::signal( const QString & name, int argc, void * argv )
 
 void QAxWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAxWidget * obj = (QAxWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAxWidget * obj = (QAxWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

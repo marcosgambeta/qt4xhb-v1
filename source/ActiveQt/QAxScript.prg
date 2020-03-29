@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QAXSCRIPT_NEW )
   if( ISNUMPAR(2) && ISCHAR(1) && ISQAXSCRIPTMANAGER(2) )
   {
     QAxScript * o = new QAxScript( PQSTRING(1), PQAXSCRIPTMANAGER(2) );
-    Qt4xHb::_qt4xhb_returnNewObject( o, false );
+    Qt4xHb::returnNewObject( o, false );
   }
   else
   {
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QAXSCRIPT_NEW )
 
 HB_FUNC_STATIC( QAXSCRIPT_DELETE )
 {
-  QAxScript * obj = (QAxScript *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAxScript * obj = (QAxScript *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -97,12 +97,12 @@ QVariant call ( const QString & function, const QVariant & var1 = QVariant(), co
 */
 void QAxScript_call1()
 {
-  QAxScript * obj = (QAxScript *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAxScript * obj = (QAxScript *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->call( PQSTRING(1), ISNIL(2)? QVariant() : *(QVariant *) Qt4xHb::_qt4xhb_itemGetPtr(2), ISNIL(3)? QVariant() : *(QVariant *) Qt4xHb::_qt4xhb_itemGetPtr(3), ISNIL(4)? QVariant() : *(QVariant *) Qt4xHb::_qt4xhb_itemGetPtr(4), ISNIL(5)? QVariant() : *(QVariant *) Qt4xHb::_qt4xhb_itemGetPtr(5), ISNIL(6)? QVariant() : *(QVariant *) Qt4xHb::_qt4xhb_itemGetPtr(6), ISNIL(7)? QVariant() : *(QVariant *) Qt4xHb::_qt4xhb_itemGetPtr(7), ISNIL(8)? QVariant() : *(QVariant *) Qt4xHb::_qt4xhb_itemGetPtr(8), ISNIL(9)? QVariant() : *(QVariant *) Qt4xHb::_qt4xhb_itemGetPtr(9) ) );
-    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QVARIANT", true );
+    QVariant * ptr = new QVariant( obj->call( PQSTRING(1), ISNIL(2)? QVariant() : *(QVariant *) Qt4xHb::itemGetPtr(2), ISNIL(3)? QVariant() : *(QVariant *) Qt4xHb::itemGetPtr(3), ISNIL(4)? QVariant() : *(QVariant *) Qt4xHb::itemGetPtr(4), ISNIL(5)? QVariant() : *(QVariant *) Qt4xHb::itemGetPtr(5), ISNIL(6)? QVariant() : *(QVariant *) Qt4xHb::itemGetPtr(6), ISNIL(7)? QVariant() : *(QVariant *) Qt4xHb::itemGetPtr(7), ISNIL(8)? QVariant() : *(QVariant *) Qt4xHb::itemGetPtr(8), ISNIL(9)? QVariant() : *(QVariant *) Qt4xHb::itemGetPtr(9) ) );
+    Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
   }
 }
 
@@ -111,12 +111,12 @@ QVariant call ( const QString & function, QList<QVariant> & arguments )
 */
 void QAxScript_call2()
 {
-  QAxScript * obj = (QAxScript *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAxScript * obj = (QAxScript *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->call( PQSTRING(1), PQVARIANTLIST(2) ) );
-    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QVARIANT", true );
+    Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
   }
 }
 
@@ -144,7 +144,7 @@ QStringList functions ( FunctionFlags flags = FunctionNames ) const
 */
 HB_FUNC_STATIC( QAXSCRIPT_FUNCTIONS )
 {
-  QAxScript * obj = (QAxScript *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAxScript * obj = (QAxScript *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -168,7 +168,7 @@ bool load ( const QString & code, const QString & language = QString() )
 */
 HB_FUNC_STATIC( QAXSCRIPT_LOAD )
 {
-  QAxScript * obj = (QAxScript *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAxScript * obj = (QAxScript *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -192,7 +192,7 @@ QString scriptCode () const
 */
 HB_FUNC_STATIC( QAXSCRIPT_SCRIPTCODE )
 {
-  QAxScript * obj = (QAxScript *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAxScript * obj = (QAxScript *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -216,7 +216,7 @@ QAxScriptEngine * scriptEngine () const
 */
 HB_FUNC_STATIC( QAXSCRIPT_SCRIPTENGINE )
 {
-  QAxScript * obj = (QAxScript *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAxScript * obj = (QAxScript *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QAXSCRIPT_SCRIPTENGINE )
     {
 #endif
       QAxScriptEngine * ptr = obj->scriptEngine();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QAXSCRIPTENGINE" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QAXSCRIPTENGINE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -241,7 +241,7 @@ QString scriptName () const
 */
 HB_FUNC_STATIC( QAXSCRIPT_SCRIPTNAME )
 {
-  QAxScript * obj = (QAxScript *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAxScript * obj = (QAxScript *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
