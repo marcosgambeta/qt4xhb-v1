@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QMUTEX_NEW )
   if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
     QMutex * o = new QMutex( ISNIL(1)? (QMutex::RecursionMode) QMutex::NonRecursive : (QMutex::RecursionMode) hb_parni(1) );
-    Qt4xHb::_qt4xhb_returnNewObject( o, true );
+    Qt4xHb::returnNewObject( o, true );
   }
   else
   {
@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QMUTEX_NEW )
 
 HB_FUNC_STATIC( QMUTEX_DELETE )
 {
-  QMutex * obj = (QMutex *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMutex * obj = (QMutex *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -88,7 +88,7 @@ void lock ()
 */
 HB_FUNC_STATIC( QMUTEX_LOCK )
 {
-  QMutex * obj = (QMutex *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMutex * obj = (QMutex *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -114,7 +114,7 @@ bool tryLock ()
 */
 void QMutex_tryLock1()
 {
-  QMutex * obj = (QMutex *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMutex * obj = (QMutex *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -127,7 +127,7 @@ bool tryLock ( int timeout )
 */
 void QMutex_tryLock2()
 {
-  QMutex * obj = (QMutex *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMutex * obj = (QMutex *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -159,7 +159,7 @@ void unlock ()
 */
 HB_FUNC_STATIC( QMUTEX_UNLOCK )
 {
-  QMutex * obj = (QMutex *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMutex * obj = (QMutex *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

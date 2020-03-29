@@ -68,7 +68,7 @@ void QIODeviceSlots::readyRead()
 
 void QIODeviceSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QIODevice * obj = (QIODevice *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -49,7 +49,7 @@ RETURN
 
 HB_FUNC_STATIC( QXMLSTREAMENTITYRESOLVER_DELETE )
 {
-  QXmlStreamEntityResolver * obj = (QXmlStreamEntityResolver *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlStreamEntityResolver * obj = (QXmlStreamEntityResolver *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -69,7 +69,7 @@ virtual QString resolveUndeclaredEntity(const QString & name)
 */
 HB_FUNC_STATIC( QXMLSTREAMENTITYRESOLVER_RESOLVEUNDECLAREDENTITY )
 {
-  QXmlStreamEntityResolver * obj = (QXmlStreamEntityResolver *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlStreamEntityResolver * obj = (QXmlStreamEntityResolver *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

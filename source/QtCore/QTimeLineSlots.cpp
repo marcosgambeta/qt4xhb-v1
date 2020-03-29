@@ -72,7 +72,7 @@ void QTimeLineSlots::valueChanged( qreal value )
 
 void QTimeLineSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTimeLine * obj = (QTimeLine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTimeLine * obj = (QTimeLine *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

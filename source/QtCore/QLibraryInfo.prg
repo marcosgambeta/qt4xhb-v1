@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QLIBRARYINFO_BUILDDATE )
   {
 #endif
     QDate * ptr = new QDate( QLibraryInfo::buildDate() );
-    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QDATE", true );
+    Qt4xHb::createReturnClass( ptr, "QDATE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

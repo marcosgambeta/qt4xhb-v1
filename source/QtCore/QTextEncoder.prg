@@ -55,7 +55,7 @@ QTextEncoder(const QTextCodec * codec)
 void QTextEncoder_new1()
 {
   QTextEncoder * o = new QTextEncoder( PQTEXTCODEC(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -64,7 +64,7 @@ QTextEncoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
 void QTextEncoder_new2()
 {
   QTextEncoder * o = new QTextEncoder( PQTEXTCODEC(1), (QTextCodec::ConversionFlags) hb_parni(2) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QTextEncoder(const QTextCodec * codec)
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QTEXTENCODER_NEW )
 
 HB_FUNC_STATIC( QTEXTENCODER_DELETE )
 {
-  QTextEncoder * obj = (QTextEncoder *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTextEncoder * obj = (QTextEncoder *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -108,12 +108,12 @@ QByteArray fromUnicode(const QString & str)
 */
 void QTextEncoder_fromUnicode1()
 {
-  QTextEncoder * obj = (QTextEncoder *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTextEncoder * obj = (QTextEncoder *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->fromUnicode( PQSTRING(1) ) );
-    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+    Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
   }
 }
 
@@ -122,12 +122,12 @@ QByteArray fromUnicode(const QChar * uc, int len)
 */
 void QTextEncoder_fromUnicode2()
 {
-  QTextEncoder * obj = (QTextEncoder *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTextEncoder * obj = (QTextEncoder *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->fromUnicode( PQCHAR(1), PINT(2) ) );
-    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+    Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
   }
 }
 

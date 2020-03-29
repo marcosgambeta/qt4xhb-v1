@@ -44,7 +44,7 @@ void QThreadSlots::started()
 
 void QThreadSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QThread * obj = (QThread *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QThread * obj = (QThread *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

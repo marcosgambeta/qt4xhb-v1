@@ -51,7 +51,7 @@ RETURN
 
 HB_FUNC_STATIC( QRUNNABLE_DELETE )
 {
-  QRunnable * obj = (QRunnable *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QRunnable * obj = (QRunnable *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -71,7 +71,7 @@ bool autoDelete () const
 */
 HB_FUNC_STATIC( QRUNNABLE_AUTODELETE )
 {
-  QRunnable * obj = (QRunnable *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QRunnable * obj = (QRunnable *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -95,7 +95,7 @@ virtual void run () = 0
 */
 HB_FUNC_STATIC( QRUNNABLE_RUN )
 {
-  QRunnable * obj = (QRunnable *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QRunnable * obj = (QRunnable *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -121,7 +121,7 @@ void setAutoDelete ( bool autoDelete )
 */
 HB_FUNC_STATIC( QRUNNABLE_SETAUTODELETE )
 {
-  QRunnable * obj = (QRunnable *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QRunnable * obj = (QRunnable *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

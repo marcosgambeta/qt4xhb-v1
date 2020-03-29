@@ -36,7 +36,7 @@ void QObjectSlots::destroyed( QObject * obj )
 
 void QObjectSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QObject * obj = (QObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QObject * obj = (QObject *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

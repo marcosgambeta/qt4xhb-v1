@@ -88,7 +88,7 @@ RETURN
 
 HB_FUNC_STATIC( QMETAOBJECT_DELETE )
 {
-  QMetaObject * obj = (QMetaObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMetaObject * obj = (QMetaObject *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -108,7 +108,7 @@ QMetaClassInfo classInfo ( int index ) const
 */
 HB_FUNC_STATIC( QMETAOBJECT_CLASSINFO )
 {
-  QMetaObject * obj = (QMetaObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMetaObject * obj = (QMetaObject *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CLASSINFO )
     {
 #endif
       QMetaClassInfo * ptr = new QMetaClassInfo( obj->classInfo( PINT(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QMETACLASSINFO", true );
+      Qt4xHb::createReturnClass( ptr, "QMETACLASSINFO", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,7 +133,7 @@ int classInfoCount () const
 */
 HB_FUNC_STATIC( QMETAOBJECT_CLASSINFOCOUNT )
 {
-  QMetaObject * obj = (QMetaObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMetaObject * obj = (QMetaObject *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -157,7 +157,7 @@ int classInfoOffset () const
 */
 HB_FUNC_STATIC( QMETAOBJECT_CLASSINFOOFFSET )
 {
-  QMetaObject * obj = (QMetaObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMetaObject * obj = (QMetaObject *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -181,7 +181,7 @@ const char * className () const
 */
 HB_FUNC_STATIC( QMETAOBJECT_CLASSNAME )
 {
-  QMetaObject * obj = (QMetaObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMetaObject * obj = (QMetaObject *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -205,7 +205,7 @@ QMetaMethod constructor ( int index ) const
 */
 HB_FUNC_STATIC( QMETAOBJECT_CONSTRUCTOR )
 {
-  QMetaObject * obj = (QMetaObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMetaObject * obj = (QMetaObject *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CONSTRUCTOR )
     {
 #endif
       QMetaMethod * ptr = new QMetaMethod( obj->constructor( PINT(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QMETAMETHOD", true );
+      Qt4xHb::createReturnClass( ptr, "QMETAMETHOD", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -230,7 +230,7 @@ int constructorCount () const
 */
 HB_FUNC_STATIC( QMETAOBJECT_CONSTRUCTORCOUNT )
 {
-  QMetaObject * obj = (QMetaObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMetaObject * obj = (QMetaObject *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -254,7 +254,7 @@ QMetaEnum enumerator ( int index ) const
 */
 HB_FUNC_STATIC( QMETAOBJECT_ENUMERATOR )
 {
-  QMetaObject * obj = (QMetaObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMetaObject * obj = (QMetaObject *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QMETAOBJECT_ENUMERATOR )
     {
 #endif
       QMetaEnum * ptr = new QMetaEnum( obj->enumerator( PINT(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QMETAENUM", true );
+      Qt4xHb::createReturnClass( ptr, "QMETAENUM", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,7 +279,7 @@ int enumeratorCount () const
 */
 HB_FUNC_STATIC( QMETAOBJECT_ENUMERATORCOUNT )
 {
-  QMetaObject * obj = (QMetaObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMetaObject * obj = (QMetaObject *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -303,7 +303,7 @@ int enumeratorOffset () const
 */
 HB_FUNC_STATIC( QMETAOBJECT_ENUMERATOROFFSET )
 {
-  QMetaObject * obj = (QMetaObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMetaObject * obj = (QMetaObject *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -327,7 +327,7 @@ int indexOfClassInfo ( const char * name ) const
 */
 HB_FUNC_STATIC( QMETAOBJECT_INDEXOFCLASSINFO )
 {
-  QMetaObject * obj = (QMetaObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMetaObject * obj = (QMetaObject *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -351,7 +351,7 @@ int indexOfConstructor ( const char * constructor ) const
 */
 HB_FUNC_STATIC( QMETAOBJECT_INDEXOFCONSTRUCTOR )
 {
-  QMetaObject * obj = (QMetaObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMetaObject * obj = (QMetaObject *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -375,7 +375,7 @@ int indexOfEnumerator ( const char * name ) const
 */
 HB_FUNC_STATIC( QMETAOBJECT_INDEXOFENUMERATOR )
 {
-  QMetaObject * obj = (QMetaObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMetaObject * obj = (QMetaObject *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -399,7 +399,7 @@ int indexOfMethod ( const char * method ) const
 */
 HB_FUNC_STATIC( QMETAOBJECT_INDEXOFMETHOD )
 {
-  QMetaObject * obj = (QMetaObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMetaObject * obj = (QMetaObject *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -423,7 +423,7 @@ int indexOfProperty ( const char * name ) const
 */
 HB_FUNC_STATIC( QMETAOBJECT_INDEXOFPROPERTY )
 {
-  QMetaObject * obj = (QMetaObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMetaObject * obj = (QMetaObject *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -447,7 +447,7 @@ int indexOfSignal ( const char * signal ) const
 */
 HB_FUNC_STATIC( QMETAOBJECT_INDEXOFSIGNAL )
 {
-  QMetaObject * obj = (QMetaObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMetaObject * obj = (QMetaObject *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -471,7 +471,7 @@ int indexOfSlot ( const char * slot ) const
 */
 HB_FUNC_STATIC( QMETAOBJECT_INDEXOFSLOT )
 {
-  QMetaObject * obj = (QMetaObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMetaObject * obj = (QMetaObject *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -495,7 +495,7 @@ QMetaMethod method ( int index ) const
 */
 HB_FUNC_STATIC( QMETAOBJECT_METHOD )
 {
-  QMetaObject * obj = (QMetaObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMetaObject * obj = (QMetaObject *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QMETAOBJECT_METHOD )
     {
 #endif
       QMetaMethod * ptr = new QMetaMethod( obj->method( PINT(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QMETAMETHOD", true );
+      Qt4xHb::createReturnClass( ptr, "QMETAMETHOD", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -520,7 +520,7 @@ int methodCount () const
 */
 HB_FUNC_STATIC( QMETAOBJECT_METHODCOUNT )
 {
-  QMetaObject * obj = (QMetaObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMetaObject * obj = (QMetaObject *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -544,7 +544,7 @@ int methodOffset () const
 */
 HB_FUNC_STATIC( QMETAOBJECT_METHODOFFSET )
 {
-  QMetaObject * obj = (QMetaObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMetaObject * obj = (QMetaObject *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -572,7 +572,7 @@ QMetaProperty property ( int index ) const
 */
 HB_FUNC_STATIC( QMETAOBJECT_PROPERTY )
 {
-  QMetaObject * obj = (QMetaObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMetaObject * obj = (QMetaObject *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -581,7 +581,7 @@ HB_FUNC_STATIC( QMETAOBJECT_PROPERTY )
     {
 #endif
       QMetaProperty * ptr = new QMetaProperty( obj->property( PINT(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QMETAPROPERTY", true );
+      Qt4xHb::createReturnClass( ptr, "QMETAPROPERTY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -597,7 +597,7 @@ int propertyCount () const
 */
 HB_FUNC_STATIC( QMETAOBJECT_PROPERTYCOUNT )
 {
-  QMetaObject * obj = (QMetaObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMetaObject * obj = (QMetaObject *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -621,7 +621,7 @@ int propertyOffset () const
 */
 HB_FUNC_STATIC( QMETAOBJECT_PROPERTYOFFSET )
 {
-  QMetaObject * obj = (QMetaObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMetaObject * obj = (QMetaObject *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -645,7 +645,7 @@ const QMetaObject * superClass () const
 */
 HB_FUNC_STATIC( QMETAOBJECT_SUPERCLASS )
 {
-  QMetaObject * obj = (QMetaObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMetaObject * obj = (QMetaObject *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -654,7 +654,7 @@ HB_FUNC_STATIC( QMETAOBJECT_SUPERCLASS )
     {
 #endif
       const QMetaObject * ptr = obj->superClass();
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QMETAOBJECT", false );
+      Qt4xHb::createReturnClass( ptr, "QMETAOBJECT", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -670,7 +670,7 @@ QMetaProperty userProperty () const
 */
 HB_FUNC_STATIC( QMETAOBJECT_USERPROPERTY )
 {
-  QMetaObject * obj = (QMetaObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMetaObject * obj = (QMetaObject *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -679,7 +679,7 @@ HB_FUNC_STATIC( QMETAOBJECT_USERPROPERTY )
     {
 #endif
       QMetaProperty * ptr = new QMetaProperty( obj->userProperty() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QMETAPROPERTY", true );
+      Qt4xHb::createReturnClass( ptr, "QMETAPROPERTY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -766,7 +766,7 @@ HB_FUNC_STATIC( QMETAOBJECT_NORMALIZEDSIGNATURE )
   {
 #endif
     QByteArray * ptr = new QByteArray( QMetaObject::normalizedSignature( PCONSTCHAR(1) ) );
-    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+    Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -786,7 +786,7 @@ HB_FUNC_STATIC( QMETAOBJECT_NORMALIZEDTYPE )
   {
 #endif
     QByteArray * ptr = new QByteArray( QMetaObject::normalizedType( PCONSTCHAR(1) ) );
-    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+    Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

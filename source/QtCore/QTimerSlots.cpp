@@ -33,7 +33,7 @@ void QTimerSlots::timeout()
 
 void QTimerSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTimer * obj = (QTimer *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTimer * obj = (QTimer *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -55,7 +55,7 @@ RETURN
 
 HB_FUNC_STATIC( QVARIANTANIMATION_DELETE )
 {
-  QVariantAnimation * obj = (QVariantAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QVariantAnimation * obj = (QVariantAnimation *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -77,7 +77,7 @@ QVariant currentValue () const
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_CURRENTVALUE )
 {
-  QVariantAnimation * obj = (QVariantAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QVariantAnimation * obj = (QVariantAnimation *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_CURRENTVALUE )
     {
 #endif
       QVariant * ptr = new QVariant( obj->currentValue() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -102,7 +102,7 @@ QEasingCurve easingCurve () const
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_EASINGCURVE )
 {
-  QVariantAnimation * obj = (QVariantAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QVariantAnimation * obj = (QVariantAnimation *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_EASINGCURVE )
     {
 #endif
       QEasingCurve * ptr = new QEasingCurve( obj->easingCurve() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QEASINGCURVE", true );
+      Qt4xHb::createReturnClass( ptr, "QEASINGCURVE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -127,7 +127,7 @@ QVariant endValue () const
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_ENDVALUE )
 {
-  QVariantAnimation * obj = (QVariantAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QVariantAnimation * obj = (QVariantAnimation *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_ENDVALUE )
     {
 #endif
       QVariant * ptr = new QVariant( obj->endValue() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,7 +152,7 @@ QVariant keyValueAt ( qreal step ) const
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_KEYVALUEAT )
 {
-  QVariantAnimation * obj = (QVariantAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QVariantAnimation * obj = (QVariantAnimation *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_KEYVALUEAT )
     {
 #endif
       QVariant * ptr = new QVariant( obj->keyValueAt( PQREAL(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,7 +177,7 @@ void setDuration ( int msecs )
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_SETDURATION )
 {
-  QVariantAnimation * obj = (QVariantAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QVariantAnimation * obj = (QVariantAnimation *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -203,7 +203,7 @@ void setEasingCurve ( const QEasingCurve & easing )
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_SETEASINGCURVE )
 {
-  QVariantAnimation * obj = (QVariantAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QVariantAnimation * obj = (QVariantAnimation *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -229,7 +229,7 @@ void setEndValue ( const QVariant & value )
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_SETENDVALUE )
 {
-  QVariantAnimation * obj = (QVariantAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QVariantAnimation * obj = (QVariantAnimation *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -255,7 +255,7 @@ void setKeyValueAt ( qreal step, const QVariant & value )
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_SETKEYVALUEAT )
 {
-  QVariantAnimation * obj = (QVariantAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QVariantAnimation * obj = (QVariantAnimation *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -281,7 +281,7 @@ void setStartValue ( const QVariant & value )
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_SETSTARTVALUE )
 {
-  QVariantAnimation * obj = (QVariantAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QVariantAnimation * obj = (QVariantAnimation *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -307,7 +307,7 @@ QVariant startValue () const
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_STARTVALUE )
 {
-  QVariantAnimation * obj = (QVariantAnimation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QVariantAnimation * obj = (QVariantAnimation *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_STARTVALUE )
     {
 #endif
       QVariant * ptr = new QVariant( obj->startValue() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

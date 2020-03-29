@@ -47,7 +47,7 @@ HB_FUNC_STATIC( QTIMEREVENT_NEW )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
     QTimerEvent * o = new QTimerEvent( PINT(1) );
-    Qt4xHb::_qt4xhb_returnNewObject( o, false );
+    Qt4xHb::returnNewObject( o, false );
   }
   else
   {
@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QTIMEREVENT_NEW )
 
 HB_FUNC_STATIC( QTIMEREVENT_DELETE )
 {
-  QTimerEvent * obj = (QTimerEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTimerEvent * obj = (QTimerEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -77,7 +77,7 @@ int timerId() const
 */
 HB_FUNC_STATIC( QTIMEREVENT_TIMERID )
 {
-  QTimerEvent * obj = (QTimerEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTimerEvent * obj = (QTimerEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

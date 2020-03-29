@@ -70,7 +70,7 @@ RETURN
 
 HB_FUNC_STATIC( QBASICATOMICINT_DELETE )
 {
-  QBasicAtomicInt * obj = (QBasicAtomicInt *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QBasicAtomicInt * obj = (QBasicAtomicInt *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -90,7 +90,7 @@ bool ref()
 */
 HB_FUNC_STATIC( QBASICATOMICINT_REF )
 {
-  QBasicAtomicInt * obj = (QBasicAtomicInt *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QBasicAtomicInt * obj = (QBasicAtomicInt *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -114,7 +114,7 @@ bool deref()
 */
 HB_FUNC_STATIC( QBASICATOMICINT_DEREF )
 {
-  QBasicAtomicInt * obj = (QBasicAtomicInt *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QBasicAtomicInt * obj = (QBasicAtomicInt *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -138,7 +138,7 @@ bool testAndSetRelaxed(int expectedValue, int newValue)
 */
 HB_FUNC_STATIC( QBASICATOMICINT_TESTANDSETRELAXED )
 {
-  QBasicAtomicInt * obj = (QBasicAtomicInt *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QBasicAtomicInt * obj = (QBasicAtomicInt *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -162,7 +162,7 @@ bool testAndSetAcquire(int expectedValue, int newValue)
 */
 HB_FUNC_STATIC( QBASICATOMICINT_TESTANDSETACQUIRE )
 {
-  QBasicAtomicInt * obj = (QBasicAtomicInt *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QBasicAtomicInt * obj = (QBasicAtomicInt *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -186,7 +186,7 @@ bool testAndSetRelease(int expectedValue, int newValue)
 */
 HB_FUNC_STATIC( QBASICATOMICINT_TESTANDSETRELEASE )
 {
-  QBasicAtomicInt * obj = (QBasicAtomicInt *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QBasicAtomicInt * obj = (QBasicAtomicInt *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -210,7 +210,7 @@ bool testAndSetOrdered(int expectedValue, int newValue)
 */
 HB_FUNC_STATIC( QBASICATOMICINT_TESTANDSETORDERED )
 {
-  QBasicAtomicInt * obj = (QBasicAtomicInt *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QBasicAtomicInt * obj = (QBasicAtomicInt *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -234,7 +234,7 @@ int fetchAndStoreRelaxed(int newValue)
 */
 HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDSTORERELAXED )
 {
-  QBasicAtomicInt * obj = (QBasicAtomicInt *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QBasicAtomicInt * obj = (QBasicAtomicInt *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -258,7 +258,7 @@ int fetchAndStoreAcquire(int newValue)
 */
 HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDSTOREACQUIRE )
 {
-  QBasicAtomicInt * obj = (QBasicAtomicInt *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QBasicAtomicInt * obj = (QBasicAtomicInt *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -282,7 +282,7 @@ int fetchAndStoreRelease(int newValue)
 */
 HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDSTORERELEASE )
 {
-  QBasicAtomicInt * obj = (QBasicAtomicInt *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QBasicAtomicInt * obj = (QBasicAtomicInt *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -306,7 +306,7 @@ int fetchAndStoreOrdered(int newValue)
 */
 HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDSTOREORDERED )
 {
-  QBasicAtomicInt * obj = (QBasicAtomicInt *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QBasicAtomicInt * obj = (QBasicAtomicInt *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -330,7 +330,7 @@ int fetchAndAddRelaxed(int valueToAdd)
 */
 HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDADDRELAXED )
 {
-  QBasicAtomicInt * obj = (QBasicAtomicInt *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QBasicAtomicInt * obj = (QBasicAtomicInt *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -354,7 +354,7 @@ int fetchAndAddAcquire(int valueToAdd)
 */
 HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDADDACQUIRE )
 {
-  QBasicAtomicInt * obj = (QBasicAtomicInt *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QBasicAtomicInt * obj = (QBasicAtomicInt *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -378,7 +378,7 @@ int fetchAndAddRelease(int valueToAdd)
 */
 HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDADDRELEASE )
 {
-  QBasicAtomicInt * obj = (QBasicAtomicInt *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QBasicAtomicInt * obj = (QBasicAtomicInt *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -402,7 +402,7 @@ int fetchAndAddOrdered(int valueToAdd)
 */
 HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDADDORDERED )
 {
-  QBasicAtomicInt * obj = (QBasicAtomicInt *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QBasicAtomicInt * obj = (QBasicAtomicInt *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

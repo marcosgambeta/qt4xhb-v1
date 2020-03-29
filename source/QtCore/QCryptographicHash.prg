@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_NEW )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
     QCryptographicHash * o = new QCryptographicHash( (QCryptographicHash::Algorithm) hb_parni(1) );
-    Qt4xHb::_qt4xhb_returnNewObject( o, true );
+    Qt4xHb::returnNewObject( o, true );
   }
   else
   {
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_NEW )
 
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_DELETE )
 {
-  QCryptographicHash * obj = (QCryptographicHash *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QCryptographicHash * obj = (QCryptographicHash *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -90,7 +90,7 @@ void addData ( const char * data, int length )
 */
 void QCryptographicHash_addData1()
 {
-  QCryptographicHash * obj = (QCryptographicHash *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QCryptographicHash * obj = (QCryptographicHash *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -105,7 +105,7 @@ void addData ( const QByteArray & data )
 */
 void QCryptographicHash_addData2()
 {
-  QCryptographicHash * obj = (QCryptographicHash *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QCryptographicHash * obj = (QCryptographicHash *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -139,7 +139,7 @@ void reset ()
 */
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_RESET )
 {
-  QCryptographicHash * obj = (QCryptographicHash *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QCryptographicHash * obj = (QCryptographicHash *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -165,7 +165,7 @@ QByteArray result () const
 */
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_RESULT )
 {
-  QCryptographicHash * obj = (QCryptographicHash *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QCryptographicHash * obj = (QCryptographicHash *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_RESULT )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->result() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_HASH )
   {
 #endif
     QByteArray * ptr = new QByteArray( QCryptographicHash::hash( *PQBYTEARRAY(1), (QCryptographicHash::Algorithm) hb_parni(2) ) );
-    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+    Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

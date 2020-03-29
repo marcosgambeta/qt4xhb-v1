@@ -51,7 +51,7 @@ QHistoryState(QState *parent = 0)
 void QHistoryState_new1()
 {
   QHistoryState * o = new QHistoryState( OPQSTATE(1,0) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, false );
+  Qt4xHb::returnNewObject( o, false );
 }
 
 /*
@@ -60,7 +60,7 @@ QHistoryState(HistoryType type, QState *parent = 0)
 void QHistoryState_new2()
 {
   QHistoryState * o = new QHistoryState( (QHistoryState::HistoryType) hb_parni(1), OPQSTATE(2,0) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, false );
+  Qt4xHb::returnNewObject( o, false );
 }
 
 //[1]QHistoryState(QState *parent = 0)
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_NEW )
 
 HB_FUNC_STATIC( QHISTORYSTATE_DELETE )
 {
-  QHistoryState * obj = (QHistoryState *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QHistoryState * obj = (QHistoryState *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -106,7 +106,7 @@ QAbstractState *defaultState() const
 */
 HB_FUNC_STATIC( QHISTORYSTATE_DEFAULTSTATE )
 {
-  QHistoryState * obj = (QHistoryState *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QHistoryState * obj = (QHistoryState *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_DEFAULTSTATE )
     {
 #endif
       QAbstractState * ptr = obj->defaultState();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QABSTRACTSTATE" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTSTATE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -131,7 +131,7 @@ void setDefaultState(QAbstractState *state)
 */
 HB_FUNC_STATIC( QHISTORYSTATE_SETDEFAULTSTATE )
 {
-  QHistoryState * obj = (QHistoryState *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QHistoryState * obj = (QHistoryState *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -157,7 +157,7 @@ HistoryType historyType() const
 */
 HB_FUNC_STATIC( QHISTORYSTATE_HISTORYTYPE )
 {
-  QHistoryState * obj = (QHistoryState *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QHistoryState * obj = (QHistoryState *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -181,7 +181,7 @@ void setHistoryType(HistoryType type)
 */
 HB_FUNC_STATIC( QHISTORYSTATE_SETHISTORYTYPE )
 {
-  QHistoryState * obj = (QHistoryState *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QHistoryState * obj = (QHistoryState *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

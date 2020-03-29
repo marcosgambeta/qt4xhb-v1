@@ -50,7 +50,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTFILEENGINEHANDLER_DELETE )
 {
-  QAbstractFileEngineHandler * obj = (QAbstractFileEngineHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngineHandler * obj = (QAbstractFileEngineHandler *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -70,7 +70,7 @@ virtual QAbstractFileEngine * create ( const QString & fileName ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINEHANDLER_CREATE )
 {
-  QAbstractFileEngineHandler * obj = (QAbstractFileEngineHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFileEngineHandler * obj = (QAbstractFileEngineHandler *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEHANDLER_CREATE )
     {
 #endif
       QAbstractFileEngine * ptr = obj->create( PQSTRING(1) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QABSTRACTFILEENGINE", false );
+      Qt4xHb::createReturnClass( ptr, "QABSTRACTFILEENGINE", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

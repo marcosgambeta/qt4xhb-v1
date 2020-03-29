@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QEVENT_NEW )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
     QEvent * o = new QEvent( (QEvent::Type) hb_parni(1) );
-    Qt4xHb::_qt4xhb_returnNewObject( o, false );
+    Qt4xHb::returnNewObject( o, false );
   }
   else
   {
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QEVENT_NEW )
 
 HB_FUNC_STATIC( QEVENT_DELETE )
 {
-  QEvent * obj = (QEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QEvent * obj = (QEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -92,7 +92,7 @@ void accept ()
 */
 HB_FUNC_STATIC( QEVENT_ACCEPT )
 {
-  QEvent * obj = (QEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QEvent * obj = (QEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -118,7 +118,7 @@ void ignore ()
 */
 HB_FUNC_STATIC( QEVENT_IGNORE )
 {
-  QEvent * obj = (QEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QEvent * obj = (QEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -144,7 +144,7 @@ bool isAccepted () const
 */
 HB_FUNC_STATIC( QEVENT_ISACCEPTED )
 {
-  QEvent * obj = (QEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QEvent * obj = (QEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -168,7 +168,7 @@ void setAccepted ( bool accepted )
 */
 HB_FUNC_STATIC( QEVENT_SETACCEPTED )
 {
-  QEvent * obj = (QEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QEvent * obj = (QEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -194,7 +194,7 @@ bool spontaneous () const
 */
 HB_FUNC_STATIC( QEVENT_SPONTANEOUS )
 {
-  QEvent * obj = (QEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QEvent * obj = (QEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -218,7 +218,7 @@ Type type () const
 */
 HB_FUNC_STATIC( QEVENT_TYPE )
 {
-  QEvent * obj = (QEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QEvent * obj = (QEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

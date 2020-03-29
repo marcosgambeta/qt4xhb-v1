@@ -35,7 +35,7 @@ void QSocketNotifierSlots::activated( int socket )
 
 void QSocketNotifierSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSocketNotifier * obj = (QSocketNotifier *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSocketNotifier * obj = (QSocketNotifier *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

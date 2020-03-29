@@ -59,7 +59,7 @@ QXmlStreamEntityDeclaration()
 void QXmlStreamEntityDeclaration_new1()
 {
   QXmlStreamEntityDeclaration * o = new QXmlStreamEntityDeclaration();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -68,7 +68,7 @@ QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & other)
 void QXmlStreamEntityDeclaration_new2()
 {
   QXmlStreamEntityDeclaration * o = new QXmlStreamEntityDeclaration( *PQXMLSTREAMENTITYDECLARATION(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QXmlStreamEntityDeclaration()
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEW )
 
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_DELETE )
 {
-  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -112,7 +112,7 @@ QStringRef name() const
 */
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NAME )
 {
-  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NAME )
     {
 #endif
       QStringRef * ptr = new QStringRef( obj->name() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSTRINGREF", true );
+      Qt4xHb::createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,7 +137,7 @@ QStringRef notationName() const
 */
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NOTATIONNAME )
 {
-  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NOTATIONNAME )
     {
 #endif
       QStringRef * ptr = new QStringRef( obj->notationName() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSTRINGREF", true );
+      Qt4xHb::createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -162,7 +162,7 @@ QStringRef publicId() const
 */
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_PUBLICID )
 {
-  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_PUBLICID )
     {
 #endif
       QStringRef * ptr = new QStringRef( obj->publicId() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSTRINGREF", true );
+      Qt4xHb::createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,7 +187,7 @@ QStringRef systemId() const
 */
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_SYSTEMID )
 {
-  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_SYSTEMID )
     {
 #endif
       QStringRef * ptr = new QStringRef( obj->systemId() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSTRINGREF", true );
+      Qt4xHb::createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,7 +212,7 @@ QStringRef value() const
 */
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_VALUE )
 {
-  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_VALUE )
     {
 #endif
       QStringRef * ptr = new QStringRef( obj->value() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSTRINGREF", true );
+      Qt4xHb::createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

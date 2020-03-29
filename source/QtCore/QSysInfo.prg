@@ -48,7 +48,7 @@ RETURN
 
 HB_FUNC_STATIC( QSYSINFO_DELETE )
 {
-  QSysInfo * obj = (QSysInfo *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSysInfo * obj = (QSysInfo *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

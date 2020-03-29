@@ -62,7 +62,7 @@ QMargins ()
 void QMargins_new1()
 {
   QMargins * o = new QMargins();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -71,7 +71,7 @@ QMargins ( int left, int top, int right, int bottom )
 void QMargins_new2()
 {
   QMargins * o = new QMargins( PINT(1), PINT(2), PINT(3), PINT(4) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QMargins ()
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QMARGINS_NEW )
 
 HB_FUNC_STATIC( QMARGINS_DELETE )
 {
-  QMargins * obj = (QMargins *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMargins * obj = (QMargins *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -115,7 +115,7 @@ int bottom () const
 */
 HB_FUNC_STATIC( QMARGINS_BOTTOM )
 {
-  QMargins * obj = (QMargins *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMargins * obj = (QMargins *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -139,7 +139,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QMARGINS_ISNULL )
 {
-  QMargins * obj = (QMargins *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMargins * obj = (QMargins *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -163,7 +163,7 @@ int left () const
 */
 HB_FUNC_STATIC( QMARGINS_LEFT )
 {
-  QMargins * obj = (QMargins *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMargins * obj = (QMargins *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -187,7 +187,7 @@ int right () const
 */
 HB_FUNC_STATIC( QMARGINS_RIGHT )
 {
-  QMargins * obj = (QMargins *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMargins * obj = (QMargins *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -211,7 +211,7 @@ void setBottom ( int bottom )
 */
 HB_FUNC_STATIC( QMARGINS_SETBOTTOM )
 {
-  QMargins * obj = (QMargins *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMargins * obj = (QMargins *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -237,7 +237,7 @@ void setLeft ( int left )
 */
 HB_FUNC_STATIC( QMARGINS_SETLEFT )
 {
-  QMargins * obj = (QMargins *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMargins * obj = (QMargins *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -263,7 +263,7 @@ void setRight ( int right )
 */
 HB_FUNC_STATIC( QMARGINS_SETRIGHT )
 {
-  QMargins * obj = (QMargins *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMargins * obj = (QMargins *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -289,7 +289,7 @@ void setTop ( int Top )
 */
 HB_FUNC_STATIC( QMARGINS_SETTOP )
 {
-  QMargins * obj = (QMargins *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMargins * obj = (QMargins *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -315,7 +315,7 @@ int top () const
 */
 HB_FUNC_STATIC( QMARGINS_TOP )
 {
-  QMargins * obj = (QMargins *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMargins * obj = (QMargins *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

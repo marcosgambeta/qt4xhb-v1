@@ -62,7 +62,7 @@ QProcessEnvironment()
 void QProcessEnvironment_new1()
 {
   QProcessEnvironment * o = new QProcessEnvironment();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -71,7 +71,7 @@ QProcessEnvironment(const QProcessEnvironment &other)
 void QProcessEnvironment_new2()
 {
   QProcessEnvironment * o = new QProcessEnvironment( *PQPROCESSENVIRONMENT(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QProcessEnvironment()
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW )
 
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_DELETE )
 {
-  QProcessEnvironment * obj = (QProcessEnvironment *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QProcessEnvironment * obj = (QProcessEnvironment *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -115,7 +115,7 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_ISEMPTY )
 {
-  QProcessEnvironment * obj = (QProcessEnvironment *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QProcessEnvironment * obj = (QProcessEnvironment *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -139,7 +139,7 @@ void clear()
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_CLEAR )
 {
-  QProcessEnvironment * obj = (QProcessEnvironment *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QProcessEnvironment * obj = (QProcessEnvironment *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -165,7 +165,7 @@ bool contains(const QString &name) const
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_CONTAINS )
 {
-  QProcessEnvironment * obj = (QProcessEnvironment *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QProcessEnvironment * obj = (QProcessEnvironment *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -189,7 +189,7 @@ void remove(const QString &name)
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_REMOVE )
 {
-  QProcessEnvironment * obj = (QProcessEnvironment *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QProcessEnvironment * obj = (QProcessEnvironment *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -215,7 +215,7 @@ QString value(const QString &name, const QString &defaultValue = QString()) cons
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_VALUE )
 {
-  QProcessEnvironment * obj = (QProcessEnvironment *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QProcessEnvironment * obj = (QProcessEnvironment *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -239,7 +239,7 @@ QStringList toStringList() const
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_TOSTRINGLIST )
 {
-  QProcessEnvironment * obj = (QProcessEnvironment *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QProcessEnvironment * obj = (QProcessEnvironment *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -263,7 +263,7 @@ QStringList keys() const
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_KEYS )
 {
-  QProcessEnvironment * obj = (QProcessEnvironment *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QProcessEnvironment * obj = (QProcessEnvironment *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -287,7 +287,7 @@ void insert(const QString &name, const QString &value)
 */
 void QProcessEnvironment_insert1()
 {
-  QProcessEnvironment * obj = (QProcessEnvironment *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QProcessEnvironment * obj = (QProcessEnvironment *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -302,7 +302,7 @@ void insert(const QProcessEnvironment &e)
 */
 void QProcessEnvironment_insert2()
 {
-  QProcessEnvironment * obj = (QProcessEnvironment *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QProcessEnvironment * obj = (QProcessEnvironment *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_SYSTEMENVIRONMENT )
   {
 #endif
     QProcessEnvironment * ptr = new QProcessEnvironment( QProcessEnvironment::systemEnvironment() );
-    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPROCESSENVIRONMENT", true );
+    Qt4xHb::createReturnClass( ptr, "QPROCESSENVIRONMENT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

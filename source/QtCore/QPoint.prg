@@ -59,7 +59,7 @@ QPoint()
 void QPoint_new1()
 {
   QPoint * o = new QPoint();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -68,7 +68,7 @@ QPoint(int xpos, int ypos)
 void QPoint_new2()
 {
   QPoint * o = new QPoint( PINT(1), PINT(2) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QPoint()
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QPOINT_NEW )
 
 HB_FUNC_STATIC( QPOINT_DELETE )
 {
-  QPoint * obj = (QPoint *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPoint * obj = (QPoint *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -112,7 +112,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QPOINT_ISNULL )
 {
-  QPoint * obj = (QPoint *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPoint * obj = (QPoint *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -136,7 +136,7 @@ int manhattanLength() const
 */
 HB_FUNC_STATIC( QPOINT_MANHATTANLENGTH )
 {
-  QPoint * obj = (QPoint *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPoint * obj = (QPoint *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -160,7 +160,7 @@ void setX(int x)
 */
 HB_FUNC_STATIC( QPOINT_SETX )
 {
-  QPoint * obj = (QPoint *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPoint * obj = (QPoint *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -186,7 +186,7 @@ void setY(int y)
 */
 HB_FUNC_STATIC( QPOINT_SETY )
 {
-  QPoint * obj = (QPoint *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPoint * obj = (QPoint *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -212,7 +212,7 @@ int x() const
 */
 HB_FUNC_STATIC( QPOINT_X )
 {
-  QPoint * obj = (QPoint *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPoint * obj = (QPoint *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -236,7 +236,7 @@ int y() const
 */
 HB_FUNC_STATIC( QPOINT_Y )
 {
-  QPoint * obj = (QPoint *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPoint * obj = (QPoint *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -53,7 +53,7 @@ QSharedData ()
 void QSharedData_new1()
 {
   QSharedData * o = new QSharedData();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -62,7 +62,7 @@ QSharedData ( const QSharedData & other )
 void QSharedData_new2()
 {
   QSharedData * o = new QSharedData( *PQSHAREDDATA(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QSharedData ()
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QSHAREDDATA_NEW )
 
 HB_FUNC_STATIC( QSHAREDDATA_DELETE )
 {
-  QSharedData * obj = (QSharedData *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSharedData * obj = (QSharedData *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

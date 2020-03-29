@@ -74,7 +74,7 @@ void QSignalMapperSlots::mapped( QObject * o )
 
 void QSignalMapperSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSignalMapper * obj = (QSignalMapper *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSignalMapper * obj = (QSignalMapper *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

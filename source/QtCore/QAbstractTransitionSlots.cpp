@@ -33,7 +33,7 @@ void QAbstractTransitionSlots::triggered()
 
 void QAbstractTransitionSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractTransition * obj = (QAbstractTransition *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractTransition * obj = (QAbstractTransition *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

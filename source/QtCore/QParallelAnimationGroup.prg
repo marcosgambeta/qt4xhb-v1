@@ -49,7 +49,7 @@ HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QParallelAnimationGroup * o = new QParallelAnimationGroup( OPQOBJECT(1,0) );
-    Qt4xHb::_qt4xhb_returnNewObject( o, false );
+    Qt4xHb::returnNewObject( o, false );
   }
   else
   {
@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_NEW )
 
 HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_DELETE )
 {
-  QParallelAnimationGroup * obj = (QParallelAnimationGroup *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QParallelAnimationGroup * obj = (QParallelAnimationGroup *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -81,7 +81,7 @@ virtual int duration () const
 */
 HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_DURATION )
 {
-  QParallelAnimationGroup * obj = (QParallelAnimationGroup *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QParallelAnimationGroup * obj = (QParallelAnimationGroup *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -146,7 +146,7 @@ void QFutureWatcherBaseSlots::progressTextChanged( const QString & progressText 
 
 void QFutureWatcherBaseSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QFutureWatcherBase * obj = (QFutureWatcherBase *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFutureWatcherBase * obj = (QFutureWatcherBase *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

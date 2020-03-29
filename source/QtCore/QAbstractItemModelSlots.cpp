@@ -318,7 +318,7 @@ void QAbstractItemModelSlots::rowsRemoved( const QModelIndex & parent, int start
 
 void QAbstractItemModelSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

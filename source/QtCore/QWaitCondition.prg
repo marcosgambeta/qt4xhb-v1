@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QWAITCONDITION_NEW )
   if( ISNUMPAR(0) )
   {
     QWaitCondition * o = new QWaitCondition();
-    Qt4xHb::_qt4xhb_returnNewObject( o, true );
+    Qt4xHb::returnNewObject( o, true );
   }
   else
   {
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QWAITCONDITION_NEW )
 
 HB_FUNC_STATIC( QWAITCONDITION_DELETE )
 {
-  QWaitCondition * obj = (QWaitCondition *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWaitCondition * obj = (QWaitCondition *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -87,7 +87,7 @@ void wakeAll ()
 */
 HB_FUNC_STATIC( QWAITCONDITION_WAKEALL )
 {
-  QWaitCondition * obj = (QWaitCondition *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWaitCondition * obj = (QWaitCondition *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -113,7 +113,7 @@ void wakeOne ()
 */
 HB_FUNC_STATIC( QWAITCONDITION_WAKEONE )
 {
-  QWaitCondition * obj = (QWaitCondition *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWaitCondition * obj = (QWaitCondition *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -53,7 +53,7 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_NEW )
   if( ISNUMPAR(0) )
   {
     QObjectCleanupHandler * o = new QObjectCleanupHandler();
-    Qt4xHb::_qt4xhb_returnNewObject( o, false );
+    Qt4xHb::returnNewObject( o, false );
   }
   else
   {
@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_NEW )
 
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_DELETE )
 {
-  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -85,7 +85,7 @@ QObject* add(QObject* object)
 */
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_ADD )
 {
-  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_ADD )
     {
 #endif
       QObject * ptr = obj->add( PQOBJECT(1) );
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -110,7 +110,7 @@ void remove(QObject *object)
 */
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_REMOVE )
 {
-  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -136,7 +136,7 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_ISEMPTY )
 {
-  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -160,7 +160,7 @@ void clear()
 */
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_CLEAR )
 {
-  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

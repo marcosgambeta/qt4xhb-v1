@@ -56,7 +56,7 @@ QPluginLoader ( QObject * parent = 0 )
 void QPluginLoader_new1()
 {
   QPluginLoader * o = new QPluginLoader( OPQOBJECT(1,0) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, false );
+  Qt4xHb::returnNewObject( o, false );
 }
 
 /*
@@ -65,7 +65,7 @@ QPluginLoader ( const QString & fileName, QObject * parent = 0 )
 void QPluginLoader_new2()
 {
   QPluginLoader * o = new QPluginLoader( PQSTRING(1), OPQOBJECT(2,0) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, false );
+  Qt4xHb::returnNewObject( o, false );
 }
 
 //[1]QPluginLoader ( QObject * parent = 0 )
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_NEW )
 
 HB_FUNC_STATIC( QPLUGINLOADER_DELETE )
 {
-  QPluginLoader * obj = (QPluginLoader *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPluginLoader * obj = (QPluginLoader *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -111,7 +111,7 @@ QString errorString () const
 */
 HB_FUNC_STATIC( QPLUGINLOADER_ERRORSTRING )
 {
-  QPluginLoader * obj = (QPluginLoader *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPluginLoader * obj = (QPluginLoader *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -135,7 +135,7 @@ QString fileName () const
 */
 HB_FUNC_STATIC( QPLUGINLOADER_FILENAME )
 {
-  QPluginLoader * obj = (QPluginLoader *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPluginLoader * obj = (QPluginLoader *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -159,7 +159,7 @@ QObject * instance ()
 */
 HB_FUNC_STATIC( QPLUGINLOADER_INSTANCE )
 {
-  QPluginLoader * obj = (QPluginLoader *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPluginLoader * obj = (QPluginLoader *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_INSTANCE )
     {
 #endif
       QObject * ptr = obj->instance();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,7 +184,7 @@ bool isLoaded () const
 */
 HB_FUNC_STATIC( QPLUGINLOADER_ISLOADED )
 {
-  QPluginLoader * obj = (QPluginLoader *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPluginLoader * obj = (QPluginLoader *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -208,7 +208,7 @@ bool load ()
 */
 HB_FUNC_STATIC( QPLUGINLOADER_LOAD )
 {
-  QPluginLoader * obj = (QPluginLoader *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPluginLoader * obj = (QPluginLoader *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -232,7 +232,7 @@ QLibrary::LoadHints loadHints () const
 */
 HB_FUNC_STATIC( QPLUGINLOADER_LOADHINTS )
 {
-  QPluginLoader * obj = (QPluginLoader *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPluginLoader * obj = (QPluginLoader *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -256,7 +256,7 @@ void setFileName ( const QString & fileName )
 */
 HB_FUNC_STATIC( QPLUGINLOADER_SETFILENAME )
 {
-  QPluginLoader * obj = (QPluginLoader *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPluginLoader * obj = (QPluginLoader *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -282,7 +282,7 @@ void setLoadHints ( QLibrary::LoadHints loadHints )
 */
 HB_FUNC_STATIC( QPLUGINLOADER_SETLOADHINTS )
 {
-  QPluginLoader * obj = (QPluginLoader *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPluginLoader * obj = (QPluginLoader *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -308,7 +308,7 @@ bool unload ()
 */
 HB_FUNC_STATIC( QPLUGINLOADER_UNLOAD )
 {
-  QPluginLoader * obj = (QPluginLoader *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPluginLoader * obj = (QPluginLoader *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

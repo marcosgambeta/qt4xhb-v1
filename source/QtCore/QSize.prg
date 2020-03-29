@@ -64,7 +64,7 @@ QSize ()
 void QSize_new1()
 {
   QSize * o = new QSize();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -73,7 +73,7 @@ QSize ( int width, int height )
 void QSize_new2()
 {
   QSize * o = new QSize( PINT(1), PINT(2) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QSize ()
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QSIZE_NEW )
 
 HB_FUNC_STATIC( QSIZE_DELETE )
 {
-  QSize * obj = (QSize *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSize * obj = (QSize *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -117,7 +117,7 @@ QSize boundedTo ( const QSize & otherSize ) const
 */
 HB_FUNC_STATIC( QSIZE_BOUNDEDTO )
 {
-  QSize * obj = (QSize *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSize * obj = (QSize *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QSIZE_BOUNDEDTO )
     {
 #endif
       QSize * ptr = new QSize( obj->boundedTo( *PQSIZE(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,7 +142,7 @@ QSize expandedTo ( const QSize & otherSize ) const
 */
 HB_FUNC_STATIC( QSIZE_EXPANDEDTO )
 {
-  QSize * obj = (QSize *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSize * obj = (QSize *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QSIZE_EXPANDEDTO )
     {
 #endif
       QSize * ptr = new QSize( obj->expandedTo( *PQSIZE(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,7 +167,7 @@ int height () const
 */
 HB_FUNC_STATIC( QSIZE_HEIGHT )
 {
-  QSize * obj = (QSize *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSize * obj = (QSize *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -191,7 +191,7 @@ bool isEmpty () const
 */
 HB_FUNC_STATIC( QSIZE_ISEMPTY )
 {
-  QSize * obj = (QSize *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSize * obj = (QSize *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -215,7 +215,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QSIZE_ISNULL )
 {
-  QSize * obj = (QSize *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSize * obj = (QSize *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -239,7 +239,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QSIZE_ISVALID )
 {
-  QSize * obj = (QSize *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSize * obj = (QSize *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -263,7 +263,7 @@ void scale ( int width, int height, Qt::AspectRatioMode mode )
 */
 void QSize_scale1()
 {
-  QSize * obj = (QSize *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSize * obj = (QSize *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -278,7 +278,7 @@ void scale ( const QSize & size, Qt::AspectRatioMode mode )
 */
 void QSize_scale2()
 {
-  QSize * obj = (QSize *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSize * obj = (QSize *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -312,7 +312,7 @@ void setHeight ( int height )
 */
 HB_FUNC_STATIC( QSIZE_SETHEIGHT )
 {
-  QSize * obj = (QSize *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSize * obj = (QSize *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -338,7 +338,7 @@ void setWidth ( int width )
 */
 HB_FUNC_STATIC( QSIZE_SETWIDTH )
 {
-  QSize * obj = (QSize *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSize * obj = (QSize *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -364,7 +364,7 @@ void transpose ()
 */
 HB_FUNC_STATIC( QSIZE_TRANSPOSE )
 {
-  QSize * obj = (QSize *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSize * obj = (QSize *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -390,7 +390,7 @@ int width () const
 */
 HB_FUNC_STATIC( QSIZE_WIDTH )
 {
-  QSize * obj = (QSize *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSize * obj = (QSize *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

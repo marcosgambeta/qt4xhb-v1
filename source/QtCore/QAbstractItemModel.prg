@@ -102,7 +102,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_DELETE )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -124,7 +124,7 @@ virtual QModelIndex buddy ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_BUDDY )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_BUDDY )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->buddy( *PQMODELINDEX(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,7 +149,7 @@ virtual bool canFetchMore ( const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_CANFETCHMORE )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -173,7 +173,7 @@ virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_COLUMNCOUNT )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_COLUMNCOUNT )
     if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||ISNIL(1)) )
     {
 #endif
-      RINT( obj->columnCount( ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt4xHb::_qt4xhb_itemGetPtr(1) ) );
+      RINT( obj->columnCount( ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt4xHb::itemGetPtr(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -197,7 +197,7 @@ virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) 
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_DATA )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_DATA )
     {
 #endif
       QVariant * ptr = new QVariant( obj->data( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,7 +222,7 @@ virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int r
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_DROPMIMEDATA )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -246,7 +246,7 @@ virtual void fetchMore ( const QModelIndex & parent )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_FETCHMORE )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -272,7 +272,7 @@ virtual Qt::ItemFlags flags ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_FLAGS )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -296,7 +296,7 @@ virtual bool hasChildren ( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_HASCHILDREN )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_HASCHILDREN )
     if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||ISNIL(1)) )
     {
 #endif
-      RBOOL( obj->hasChildren( ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt4xHb::_qt4xhb_itemGetPtr(1) ) );
+      RBOOL( obj->hasChildren( ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt4xHb::itemGetPtr(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -320,7 +320,7 @@ bool hasIndex ( int row, int column, const QModelIndex & parent = QModelIndex() 
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_HASINDEX )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_HASINDEX )
     if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
 #endif
-      RBOOL( obj->hasIndex( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt4xHb::_qt4xhb_itemGetPtr(3) ) );
+      RBOOL( obj->hasIndex( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt4xHb::itemGetPtr(3) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -344,7 +344,7 @@ virtual QVariant headerData ( int section, Qt::Orientation orientation, int role
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_HEADERDATA )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_HEADERDATA )
     {
 #endif
       QVariant * ptr = new QVariant( obj->headerData( PINT(1), (Qt::Orientation) hb_parni(2), OPINT(3,Qt::DisplayRole) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -369,7 +369,7 @@ virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QM
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_INDEX )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -377,8 +377,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INDEX )
     if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->index( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt4xHb::_qt4xhb_itemGetPtr(3) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
+      QModelIndex * ptr = new QModelIndex( obj->index( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt4xHb::itemGetPtr(3) ) );
+      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -394,7 +394,7 @@ bool insertColumn ( int column, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTCOLUMN )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTCOLUMN )
     if( ISBETWEEN(1,2) && ISNUM(1) && (ISQMODELINDEX(2)||ISNIL(2)) )
     {
 #endif
-      RBOOL( obj->insertColumn( PINT(1), ISNIL(2)? QModelIndex() : *(QModelIndex *) Qt4xHb::_qt4xhb_itemGetPtr(2) ) );
+      RBOOL( obj->insertColumn( PINT(1), ISNIL(2)? QModelIndex() : *(QModelIndex *) Qt4xHb::itemGetPtr(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -418,7 +418,7 @@ virtual bool insertColumns ( int column, int count, const QModelIndex & parent =
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTCOLUMNS )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTCOLUMNS )
     if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
 #endif
-      RBOOL( obj->insertColumns( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt4xHb::_qt4xhb_itemGetPtr(3) ) );
+      RBOOL( obj->insertColumns( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt4xHb::itemGetPtr(3) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -442,7 +442,7 @@ bool insertRow ( int row, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTROW )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTROW )
     if( ISBETWEEN(1,2) && ISNUM(1) && (ISQMODELINDEX(2)||ISNIL(2)) )
     {
 #endif
-      RBOOL( obj->insertRow( PINT(1), ISNIL(2)? QModelIndex() : *(QModelIndex *) Qt4xHb::_qt4xhb_itemGetPtr(2) ) );
+      RBOOL( obj->insertRow( PINT(1), ISNIL(2)? QModelIndex() : *(QModelIndex *) Qt4xHb::itemGetPtr(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -466,7 +466,7 @@ virtual bool insertRows ( int row, int count, const QModelIndex & parent = QMode
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTROWS )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTROWS )
     if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
 #endif
-      RBOOL( obj->insertRows( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt4xHb::_qt4xhb_itemGetPtr(3) ) );
+      RBOOL( obj->insertRows( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt4xHb::itemGetPtr(3) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -490,7 +490,7 @@ virtual QModelIndexList match ( const QModelIndex & start, int role, const QVari
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_MATCH )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -542,7 +542,7 @@ virtual QMimeData * mimeData ( const QModelIndexList & indexes ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_MIMEDATA )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -559,7 +559,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_MIMEDATA )
         par1 << *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
       QMimeData * ptr = obj->mimeData( par1 );
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QMIMEDATA" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QMIMEDATA" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -575,7 +575,7 @@ virtual QStringList mimeTypes () const
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_MIMETYPES )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -599,7 +599,7 @@ virtual QModelIndex parent ( const QModelIndex & index ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_PARENT )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -608,7 +608,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_PARENT )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->parent( *PQMODELINDEX(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -624,7 +624,7 @@ bool removeColumn ( int column, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVECOLUMN )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVECOLUMN )
     if( ISBETWEEN(1,2) && ISNUM(1) && (ISQMODELINDEX(2)||ISNIL(2)) )
     {
 #endif
-      RBOOL( obj->removeColumn( PINT(1), ISNIL(2)? QModelIndex() : *(QModelIndex *) Qt4xHb::_qt4xhb_itemGetPtr(2) ) );
+      RBOOL( obj->removeColumn( PINT(1), ISNIL(2)? QModelIndex() : *(QModelIndex *) Qt4xHb::itemGetPtr(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -648,7 +648,7 @@ virtual bool removeColumns ( int column, int count, const QModelIndex & parent =
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVECOLUMNS )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -656,7 +656,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVECOLUMNS )
     if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
 #endif
-      RBOOL( obj->removeColumns( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt4xHb::_qt4xhb_itemGetPtr(3) ) );
+      RBOOL( obj->removeColumns( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt4xHb::itemGetPtr(3) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -672,7 +672,7 @@ bool removeRow ( int row, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVEROW )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -680,7 +680,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVEROW )
     if( ISBETWEEN(1,2) && ISNUM(1) && (ISQMODELINDEX(2)||ISNIL(2)) )
     {
 #endif
-      RBOOL( obj->removeRow( PINT(1), ISNIL(2)? QModelIndex() : *(QModelIndex *) Qt4xHb::_qt4xhb_itemGetPtr(2) ) );
+      RBOOL( obj->removeRow( PINT(1), ISNIL(2)? QModelIndex() : *(QModelIndex *) Qt4xHb::itemGetPtr(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -696,7 +696,7 @@ virtual bool removeRows ( int row, int count, const QModelIndex & parent = QMode
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVEROWS )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -704,7 +704,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVEROWS )
     if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
 #endif
-      RBOOL( obj->removeRows( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt4xHb::_qt4xhb_itemGetPtr(3) ) );
+      RBOOL( obj->removeRows( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt4xHb::itemGetPtr(3) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -720,7 +720,7 @@ virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ROWCOUNT )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -728,7 +728,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ROWCOUNT )
     if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||ISNIL(1)) )
     {
 #endif
-      RINT( obj->rowCount( ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt4xHb::_qt4xhb_itemGetPtr(1) ) );
+      RINT( obj->rowCount( ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt4xHb::itemGetPtr(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -744,7 +744,7 @@ virtual bool setData ( const QModelIndex & index, const QVariant & value, int ro
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETDATA )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -768,7 +768,7 @@ virtual bool setHeaderData ( int section, Qt::Orientation orientation, const QVa
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETHEADERDATA )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -792,7 +792,7 @@ void setSupportedDragActions ( Qt::DropActions actions )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETSUPPORTEDDRAGACTIONS )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -818,7 +818,7 @@ QModelIndex sibling ( int row, int column, const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_SIBLING )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -827,7 +827,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SIBLING )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->sibling( PINT(1), PINT(2), *PQMODELINDEX(3) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -843,7 +843,7 @@ virtual void sort ( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_SORT )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -869,7 +869,7 @@ virtual QSize span ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_SPAN )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -878,7 +878,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SPAN )
     {
 #endif
       QSize * ptr = new QSize( obj->span( *PQMODELINDEX(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -894,7 +894,7 @@ Qt::DropActions supportedDragActions () const
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUPPORTEDDRAGACTIONS )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -918,7 +918,7 @@ virtual Qt::DropActions supportedDropActions () const
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUPPORTEDDROPACTIONS )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -942,7 +942,7 @@ virtual void revert ()
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_REVERT )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -968,7 +968,7 @@ virtual bool submit ()
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUBMIT )
 {
-  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemModel * obj = (QAbstractItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

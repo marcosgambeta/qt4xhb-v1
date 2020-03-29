@@ -44,7 +44,7 @@ void QAbstractStateSlots::exited()
 
 void QAbstractStateSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractState * obj = (QAbstractState *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractState * obj = (QAbstractState *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -96,7 +96,7 @@ void QProcessSlots::stateChanged( QProcess::ProcessState newState )
 
 void QProcessSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

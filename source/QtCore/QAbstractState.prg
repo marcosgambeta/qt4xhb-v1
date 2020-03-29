@@ -51,7 +51,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTSTATE_DELETE )
 {
-  QAbstractState * obj = (QAbstractState *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractState * obj = (QAbstractState *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -73,7 +73,7 @@ QStateMachine * machine () const
 */
 HB_FUNC_STATIC( QABSTRACTSTATE_MACHINE )
 {
-  QAbstractState * obj = (QAbstractState *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractState * obj = (QAbstractState *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_MACHINE )
     {
 #endif
       QStateMachine * ptr = obj->machine();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QSTATEMACHINE" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QSTATEMACHINE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -98,7 +98,7 @@ QState * parentState () const
 */
 HB_FUNC_STATIC( QABSTRACTSTATE_PARENTSTATE )
 {
-  QAbstractState * obj = (QAbstractState *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractState * obj = (QAbstractState *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_PARENTSTATE )
     {
 #endif
       QState * ptr = obj->parentState();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QSTATE" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QSTATE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

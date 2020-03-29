@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QBASICTIMER_NEW )
   if( ISNUMPAR(0) )
   {
     QBasicTimer * o = new QBasicTimer();
-    Qt4xHb::_qt4xhb_returnNewObject( o, true );
+    Qt4xHb::returnNewObject( o, true );
   }
   else
   {
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QBASICTIMER_NEW )
 
 HB_FUNC_STATIC( QBASICTIMER_DELETE )
 {
-  QBasicTimer * obj = (QBasicTimer *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QBasicTimer * obj = (QBasicTimer *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -89,7 +89,7 @@ bool isActive () const
 */
 HB_FUNC_STATIC( QBASICTIMER_ISACTIVE )
 {
-  QBasicTimer * obj = (QBasicTimer *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QBasicTimer * obj = (QBasicTimer *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -113,7 +113,7 @@ void start ( int msec, QObject * object )
 */
 HB_FUNC_STATIC( QBASICTIMER_START )
 {
-  QBasicTimer * obj = (QBasicTimer *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QBasicTimer * obj = (QBasicTimer *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -139,7 +139,7 @@ void stop ()
 */
 HB_FUNC_STATIC( QBASICTIMER_STOP )
 {
-  QBasicTimer * obj = (QBasicTimer *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QBasicTimer * obj = (QBasicTimer *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -165,7 +165,7 @@ int timerId () const
 */
 HB_FUNC_STATIC( QBASICTIMER_TIMERID )
 {
-  QBasicTimer * obj = (QBasicTimer *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QBasicTimer * obj = (QBasicTimer *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

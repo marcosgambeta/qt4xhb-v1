@@ -51,7 +51,7 @@ HB_FUNC_STATIC( QCHILDEVENT_NEW )
   if( ISNUMPAR(2) && ISNUM(1) && ISQOBJECT(2) )
   {
     QChildEvent * o = new QChildEvent( (QEvent::Type) hb_parni(1), PQOBJECT(2) );
-    Qt4xHb::_qt4xhb_returnNewObject( o, false );
+    Qt4xHb::returnNewObject( o, false );
   }
   else
   {
@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QCHILDEVENT_NEW )
 
 HB_FUNC_STATIC( QCHILDEVENT_DELETE )
 {
-  QChildEvent * obj = (QChildEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QChildEvent * obj = (QChildEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -81,7 +81,7 @@ bool added() const
 */
 HB_FUNC_STATIC( QCHILDEVENT_ADDED )
 {
-  QChildEvent * obj = (QChildEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QChildEvent * obj = (QChildEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -105,7 +105,7 @@ QObject * child() const
 */
 HB_FUNC_STATIC( QCHILDEVENT_CHILD )
 {
-  QChildEvent * obj = (QChildEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QChildEvent * obj = (QChildEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QCHILDEVENT_CHILD )
     {
 #endif
       QObject * ptr = obj->child();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -130,7 +130,7 @@ bool polished() const
 */
 HB_FUNC_STATIC( QCHILDEVENT_POLISHED )
 {
-  QChildEvent * obj = (QChildEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QChildEvent * obj = (QChildEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -154,7 +154,7 @@ bool removed() const
 */
 HB_FUNC_STATIC( QCHILDEVENT_REMOVED )
 {
-  QChildEvent * obj = (QChildEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QChildEvent * obj = (QChildEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
