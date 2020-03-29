@@ -52,7 +52,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_DELETE )
 {
-  QAbstractExtensionManager * obj = (QAbstractExtensionManager *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractExtensionManager * obj = (QAbstractExtensionManager *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -72,7 +72,7 @@ virtual QObject * extension ( QObject * object, const QString & iid ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_EXTENSION )
 {
-  QAbstractExtensionManager * obj = (QAbstractExtensionManager *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractExtensionManager * obj = (QAbstractExtensionManager *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_EXTENSION )
     {
 #endif
       QObject * ptr = obj->extension( PQOBJECT(1), PQSTRING(2) );
-      _qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -97,7 +97,7 @@ virtual void registerExtensions ( QAbstractExtensionFactory * factory, const QSt
 */
 HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_REGISTEREXTENSIONS )
 {
-  QAbstractExtensionManager * obj = (QAbstractExtensionManager *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractExtensionManager * obj = (QAbstractExtensionManager *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -123,7 +123,7 @@ virtual void unregisterExtensions ( QAbstractExtensionFactory * factory, const Q
 */
 HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_UNREGISTEREXTENSIONS )
 {
-  QAbstractExtensionManager * obj = (QAbstractExtensionManager *) _qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractExtensionManager * obj = (QAbstractExtensionManager *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
