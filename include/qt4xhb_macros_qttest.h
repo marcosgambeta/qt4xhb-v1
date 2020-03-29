@@ -13,10 +13,10 @@
 #ifndef QT4XHB_MACROS_QTTEST_H
 #define QT4XHB_MACROS_QTTEST_H
 
-#define ISQTESTEVENTLIST(n)                                 Qt4xHb::_qt4xhb_isObjectDerivedFrom(n,"QTestEventList")
+#define ISQTESTEVENTLIST(n)                                 Qt4xHb::isObjectDerivedFrom(n,"QTestEventList")
 
-#define PQTESTEVENTLIST(n)                                  (QTestEventList *) Qt4xHb::_qt4xhb_itemGetPtr(n)
+#define PQTESTEVENTLIST(n)                                  (QTestEventList *) Qt4xHb::itemGetPtr(n)
 
-#define OPQTESTEVENTLIST(n,v)                               ISNIL(n)? v : (QTestEventList *) Qt4xHb::_qt4xhb_itemGetPtr(n)
+#define OPQTESTEVENTLIST(n,v)                               ISNIL(n)? v : (QTestEventList *) Qt4xHb::itemGetPtr(n)
 
 #endif /* QT4XHB_MACROS_QTTEST_H */
