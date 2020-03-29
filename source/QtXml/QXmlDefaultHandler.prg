@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_NEW )
   if( ISNUMPAR(0) )
   {
     QXmlDefaultHandler * o = new QXmlDefaultHandler();
-    _qt4xhb_returnNewObject( o, true );
+    Qt4xHb::_qt4xhb_returnNewObject( o, true );
   }
   else
   {
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_NEW )
 
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_DELETE )
 {
-  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -103,7 +103,7 @@ virtual bool attributeDecl ( const QString & eName, const QString & aName, const
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ATTRIBUTEDECL )
 {
-  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -127,7 +127,7 @@ virtual bool characters ( const QString & ch )
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_CHARACTERS )
 {
-  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -151,7 +151,7 @@ virtual bool comment ( const QString & ch )
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_COMMENT )
 {
-  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -175,7 +175,7 @@ virtual bool endCDATA ()
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDCDATA )
 {
-  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -199,7 +199,7 @@ virtual bool endDTD ()
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDDTD )
 {
-  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -223,7 +223,7 @@ virtual bool endDocument ()
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDDOCUMENT )
 {
-  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -247,7 +247,7 @@ virtual bool endElement ( const QString & namespaceURI, const QString & localNam
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDELEMENT )
 {
-  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -271,7 +271,7 @@ virtual bool endEntity ( const QString & name )
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDENTITY )
 {
-  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -295,7 +295,7 @@ virtual bool endPrefixMapping ( const QString & prefix )
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDPREFIXMAPPING )
 {
-  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -319,7 +319,7 @@ virtual bool error ( const QXmlParseException & exception )
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ERROR )
 {
-  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -343,7 +343,7 @@ virtual QString errorString () const
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ERRORSTRING )
 {
-  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -367,7 +367,7 @@ virtual bool externalEntityDecl ( const QString & name, const QString & publicId
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_EXTERNALENTITYDECL )
 {
-  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -391,7 +391,7 @@ virtual bool fatalError ( const QXmlParseException & exception )
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_FATALERROR )
 {
-  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -415,7 +415,7 @@ virtual bool ignorableWhitespace ( const QString & ch )
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_IGNORABLEWHITESPACE )
 {
-  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -439,7 +439,7 @@ virtual bool internalEntityDecl ( const QString & name, const QString & value )
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_INTERNALENTITYDECL )
 {
-  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -463,7 +463,7 @@ virtual bool notationDecl ( const QString & name, const QString & publicId, cons
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_NOTATIONDECL )
 {
-  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -487,7 +487,7 @@ virtual bool processingInstruction ( const QString & target, const QString & dat
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_PROCESSINGINSTRUCTION )
 {
-  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -511,7 +511,7 @@ virtual void setDocumentLocator ( QXmlLocator * locator )
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_SETDOCUMENTLOCATOR )
 {
-  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -537,7 +537,7 @@ virtual bool skippedEntity ( const QString & name )
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_SKIPPEDENTITY )
 {
-  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -561,7 +561,7 @@ virtual bool startCDATA ()
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTCDATA )
 {
-  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -585,7 +585,7 @@ virtual bool startDTD ( const QString & name, const QString & publicId, const QS
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTDTD )
 {
-  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -609,7 +609,7 @@ virtual bool startDocument ()
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTDOCUMENT )
 {
-  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -633,7 +633,7 @@ virtual bool startElement ( const QString & namespaceURI, const QString & localN
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTELEMENT )
 {
-  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -657,7 +657,7 @@ virtual bool startEntity ( const QString & name )
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTENTITY )
 {
-  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -681,7 +681,7 @@ virtual bool startPrefixMapping ( const QString & prefix, const QString & uri )
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTPREFIXMAPPING )
 {
-  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -705,7 +705,7 @@ virtual bool unparsedEntityDecl ( const QString & name, const QString & publicId
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_UNPARSEDENTITYDECL )
 {
-  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -729,7 +729,7 @@ virtual bool warning ( const QXmlParseException & exception )
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_WARNING )
 {
-  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

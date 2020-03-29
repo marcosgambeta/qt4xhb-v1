@@ -60,7 +60,7 @@ QDomNodeList ()
 void QDomNodeList_new1()
 {
   QDomNodeList * o = new QDomNodeList();
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -69,7 +69,7 @@ QDomNodeList ( const QDomNodeList & n )
 void QDomNodeList_new2()
 {
   QDomNodeList * o = new QDomNodeList( *PQDOMNODELIST(1) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 //[1]QDomNodeList ()
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QDOMNODELIST_NEW )
 
 HB_FUNC_STATIC( QDOMNODELIST_DELETE )
 {
-  QDomNodeList * obj = (QDomNodeList *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDomNodeList * obj = (QDomNodeList *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -113,7 +113,7 @@ QDomNode at ( int index ) const
 */
 HB_FUNC_STATIC( QDOMNODELIST_AT )
 {
-  QDomNodeList * obj = (QDomNodeList *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDomNodeList * obj = (QDomNodeList *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QDOMNODELIST_AT )
     {
 #endif
       QDomNode * ptr = new QDomNode( obj->at( PINT(1) ) );
-      _qt4xhb_createReturnClass( ptr, "QDOMNODE", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QDOMNODE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -138,7 +138,7 @@ int count () const
 */
 HB_FUNC_STATIC( QDOMNODELIST_COUNT )
 {
-  QDomNodeList * obj = (QDomNodeList *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDomNodeList * obj = (QDomNodeList *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -162,7 +162,7 @@ bool isEmpty () const
 */
 HB_FUNC_STATIC( QDOMNODELIST_ISEMPTY )
 {
-  QDomNodeList * obj = (QDomNodeList *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDomNodeList * obj = (QDomNodeList *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -186,7 +186,7 @@ QDomNode item ( int index ) const
 */
 HB_FUNC_STATIC( QDOMNODELIST_ITEM )
 {
-  QDomNodeList * obj = (QDomNodeList *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDomNodeList * obj = (QDomNodeList *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QDOMNODELIST_ITEM )
     {
 #endif
       QDomNode * ptr = new QDomNode( obj->item( PINT(1) ) );
-      _qt4xhb_createReturnClass( ptr, "QDOMNODE", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QDOMNODE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,7 +211,7 @@ uint length () const
 */
 HB_FUNC_STATIC( QDOMNODELIST_LENGTH )
 {
-  QDomNodeList * obj = (QDomNodeList *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDomNodeList * obj = (QDomNodeList *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -235,7 +235,7 @@ int size () const
 */
 HB_FUNC_STATIC( QDOMNODELIST_SIZE )
 {
-  QDomNodeList * obj = (QDomNodeList *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDomNodeList * obj = (QDomNodeList *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

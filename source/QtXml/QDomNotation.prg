@@ -46,7 +46,7 @@ QDomNotation ()
 void QDomNotation_new1()
 {
   QDomNotation * o = new QDomNotation();
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -55,7 +55,7 @@ QDomNotation ( const QDomNotation & x )
 void QDomNotation_new2()
 {
   QDomNotation * o = new QDomNotation( *PQDOMNOTATION(1) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 //[1]QDomNotation ()
@@ -82,7 +82,7 @@ QDomNode::NodeType nodeType () const
 */
 HB_FUNC_STATIC( QDOMNOTATION_NODETYPE )
 {
-  QDomNotation * obj = (QDomNotation *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDomNotation * obj = (QDomNotation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -106,7 +106,7 @@ QString publicId () const
 */
 HB_FUNC_STATIC( QDOMNOTATION_PUBLICID )
 {
-  QDomNotation * obj = (QDomNotation *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDomNotation * obj = (QDomNotation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -130,7 +130,7 @@ QString systemId () const
 */
 HB_FUNC_STATIC( QDOMNOTATION_SYSTEMID )
 {
-  QDomNotation * obj = (QDomNotation *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDomNotation * obj = (QDomNotation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

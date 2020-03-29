@@ -51,7 +51,7 @@ RETURN
 
 HB_FUNC_STATIC( QXMLDTDHANDLER_DELETE )
 {
-  QXmlDTDHandler * obj = (QXmlDTDHandler *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlDTDHandler * obj = (QXmlDTDHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -71,7 +71,7 @@ virtual QString errorString () const = 0
 */
 HB_FUNC_STATIC( QXMLDTDHANDLER_ERRORSTRING )
 {
-  QXmlDTDHandler * obj = (QXmlDTDHandler *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlDTDHandler * obj = (QXmlDTDHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -95,7 +95,7 @@ virtual bool notationDecl ( const QString & name, const QString & publicId, cons
 */
 HB_FUNC_STATIC( QXMLDTDHANDLER_NOTATIONDECL )
 {
-  QXmlDTDHandler * obj = (QXmlDTDHandler *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlDTDHandler * obj = (QXmlDTDHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -119,7 +119,7 @@ virtual bool unparsedEntityDecl ( const QString & name, const QString & publicId
 */
 HB_FUNC_STATIC( QXMLDTDHANDLER_UNPARSEDENTITYDECL )
 {
-  QXmlDTDHandler * obj = (QXmlDTDHandler *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlDTDHandler * obj = (QXmlDTDHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

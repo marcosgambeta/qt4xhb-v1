@@ -44,7 +44,7 @@ QDomComment ()
 void QDomComment_new1()
 {
   QDomComment * o = new QDomComment();
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -53,7 +53,7 @@ QDomComment ( const QDomComment & x )
 void QDomComment_new2()
 {
   QDomComment * o = new QDomComment( *PQDOMCOMMENT(1) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 //[1]QDomComment ()
@@ -80,7 +80,7 @@ QDomNode::NodeType nodeType () cons
 */
 HB_FUNC_STATIC( QDOMCOMMENT_NODETYPE )
 {
-  QDomComment * obj = (QDomComment *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDomComment * obj = (QDomComment *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -50,7 +50,7 @@ RETURN
 
 HB_FUNC_STATIC( QXMLLOCATOR_DELETE )
 {
-  QXmlLocator * obj = (QXmlLocator *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlLocator * obj = (QXmlLocator *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -70,7 +70,7 @@ virtual int columnNumber () const = 0
 */
 HB_FUNC_STATIC( QXMLLOCATOR_COLUMNNUMBER )
 {
-  QXmlLocator * obj = (QXmlLocator *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlLocator * obj = (QXmlLocator *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -94,7 +94,7 @@ virtual int lineNumber () const = 0
 */
 HB_FUNC_STATIC( QXMLLOCATOR_LINENUMBER )
 {
-  QXmlLocator * obj = (QXmlLocator *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlLocator * obj = (QXmlLocator *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -49,7 +49,7 @@ RETURN
 
 HB_FUNC_STATIC( QXMLENTITYRESOLVER_DELETE )
 {
-  QXmlEntityResolver * obj = (QXmlEntityResolver *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlEntityResolver * obj = (QXmlEntityResolver *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -69,7 +69,7 @@ virtual QString errorString () const = 0
 */
 HB_FUNC_STATIC( QXMLENTITYRESOLVER_ERRORSTRING )
 {
-  QXmlEntityResolver * obj = (QXmlEntityResolver *) _qt4xhb_itemGetPtrStackSelfItem();
+  QXmlEntityResolver * obj = (QXmlEntityResolver *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

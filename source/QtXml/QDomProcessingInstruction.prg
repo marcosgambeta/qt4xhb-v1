@@ -47,7 +47,7 @@ QDomProcessingInstruction ()
 void QDomProcessingInstruction_new1()
 {
   QDomProcessingInstruction * o = new QDomProcessingInstruction();
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 /*
@@ -56,7 +56,7 @@ QDomProcessingInstruction ( const QDomProcessingInstruction & x )
 void QDomProcessingInstruction_new2()
 {
   QDomProcessingInstruction * o = new QDomProcessingInstruction( *PQDOMPROCESSINGINSTRUCTION(1) );
-  _qt4xhb_returnNewObject( o, true );
+  Qt4xHb::_qt4xhb_returnNewObject( o, true );
 }
 
 //[1]QDomProcessingInstruction ()
@@ -83,7 +83,7 @@ QString data () const
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_DATA )
 {
-  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -107,7 +107,7 @@ QDomNode::NodeType nodeType () const
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NODETYPE )
 {
-  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -131,7 +131,7 @@ void setData ( const QString & d )
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_SETDATA )
 {
-  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -157,7 +157,7 @@ QString target () const
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_TARGET )
 {
-  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) _qt4xhb_itemGetPtrStackSelfItem();
+  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
