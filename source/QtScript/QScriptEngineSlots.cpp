@@ -35,7 +35,7 @@ void QScriptEngineSlots::signalHandlerException( const QScriptValue & exception 
 
 void QScriptEngineSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QScriptEngine * obj = (QScriptEngine *) _qt4xhb_itemGetPtrStackSelfItem();
+  QScriptEngine * obj = (QScriptEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {

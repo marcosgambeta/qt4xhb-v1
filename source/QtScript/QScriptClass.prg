@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_NEW )
   if( ISNUMPAR(1) && ISQSCRIPTENGINE(1) )
   {
     QScriptClass * o = new QScriptClass( PQSCRIPTENGINE(1) );
-    _qt4xhb_returnNewObject( o, true );
+    Qt4xHb::_qt4xhb_returnNewObject( o, true );
   }
   else
   {
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_NEW )
 
 HB_FUNC_STATIC( QSCRIPTCLASS_DELETE )
 {
-  QScriptClass * obj = (QScriptClass *) _qt4xhb_itemGetPtrStackSelfItem();
+  QScriptClass * obj = (QScriptClass *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -100,7 +100,7 @@ virtual QVariant extension ( Extension extension, const QVariant & argument = QV
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_EXTENSION )
 {
-  QScriptClass * obj = (QScriptClass *) _qt4xhb_itemGetPtrStackSelfItem();
+  QScriptClass * obj = (QScriptClass *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -108,8 +108,8 @@ HB_FUNC_STATIC( QSCRIPTCLASS_EXTENSION )
     if( ISBETWEEN(1,2) && ISNUM(1) && (ISQVARIANT(2)||ISNIL(2)) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->extension( (QScriptClass::Extension) hb_parni(1), ISNIL(2)? QVariant() : *(QVariant *) _qt4xhb_itemGetPtr(2) ) );
-      _qt4xhb_createReturnClass( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->extension( (QScriptClass::Extension) hb_parni(1), ISNIL(2)? QVariant() : *(QVariant *) Qt4xHb::_qt4xhb_itemGetPtr(2) ) );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -125,7 +125,7 @@ virtual QString name () const
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_NAME )
 {
-  QScriptClass * obj = (QScriptClass *) _qt4xhb_itemGetPtrStackSelfItem();
+  QScriptClass * obj = (QScriptClass *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -149,7 +149,7 @@ virtual QScriptClassPropertyIterator * newIterator ( const QScriptValue & object
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_NEWITERATOR )
 {
-  QScriptClass * obj = (QScriptClass *) _qt4xhb_itemGetPtrStackSelfItem();
+  QScriptClass * obj = (QScriptClass *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_NEWITERATOR )
     {
 #endif
       QScriptClassPropertyIterator * ptr = obj->newIterator( *PQSCRIPTVALUE(1) );
-      _qt4xhb_createReturnClass( ptr, "QSCRIPTCLASSPROPERTYITERATOR", false );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSCRIPTCLASSPROPERTYITERATOR", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,7 +174,7 @@ virtual QScriptValue property ( const QScriptValue & object, const QScriptString
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_PROPERTY )
 {
-  QScriptClass * obj = (QScriptClass *) _qt4xhb_itemGetPtrStackSelfItem();
+  QScriptClass * obj = (QScriptClass *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_PROPERTY )
     {
 #endif
       QScriptValue * ptr = new QScriptValue( obj->property( *PQSCRIPTVALUE(1), *PQSCRIPTSTRING(2), PUINT(3) ) );
-      _qt4xhb_createReturnClass( ptr, "QSCRIPTVALUE", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSCRIPTVALUE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,7 +199,7 @@ virtual QScriptValue::PropertyFlags propertyFlags ( const QScriptValue & object,
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_PROPERTYFLAGS )
 {
-  QScriptClass * obj = (QScriptClass *) _qt4xhb_itemGetPtrStackSelfItem();
+  QScriptClass * obj = (QScriptClass *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -223,7 +223,7 @@ virtual QScriptValue prototype () const
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_PROTOTYPE )
 {
-  QScriptClass * obj = (QScriptClass *) _qt4xhb_itemGetPtrStackSelfItem();
+  QScriptClass * obj = (QScriptClass *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_PROTOTYPE )
     {
 #endif
       QScriptValue * ptr = new QScriptValue( obj->prototype() );
-      _qt4xhb_createReturnClass( ptr, "QSCRIPTVALUE", true );
+      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSCRIPTVALUE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -252,7 +252,7 @@ virtual void setProperty ( QScriptValue & object, const QScriptString & name, ui
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_SETPROPERTY )
 {
-  QScriptClass * obj = (QScriptClass *) _qt4xhb_itemGetPtrStackSelfItem();
+  QScriptClass * obj = (QScriptClass *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -278,7 +278,7 @@ virtual bool supportsExtension ( Extension extension ) const
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_SUPPORTSEXTENSION )
 {
-  QScriptClass * obj = (QScriptClass *) _qt4xhb_itemGetPtrStackSelfItem();
+  QScriptClass * obj = (QScriptClass *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
