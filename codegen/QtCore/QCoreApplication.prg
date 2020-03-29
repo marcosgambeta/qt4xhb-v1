@@ -37,7 +37,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_NEW )
   argc = hb_cmdargARGC();
   argv = hb_cmdargARGV();
   QCoreApplication * o = new QCoreApplication( argc, argv );
-  Qt4xHb::_qt4xhb_storePointerAndFlag ( o, false );
+  Qt4xHb::storePointerAndFlag ( o, false );
 }
 $addMethod=new
 
