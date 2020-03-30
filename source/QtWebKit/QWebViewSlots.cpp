@@ -133,7 +133,7 @@ void QWebViewSlots::urlChanged( const QUrl & url )
 
 void QWebViewSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QWebView * obj = (QWebView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWebView * obj = (QWebView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

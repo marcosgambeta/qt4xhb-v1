@@ -78,7 +78,7 @@ QWebHitTestResult ()
 void QWebHitTestResult_new1()
 {
   QWebHitTestResult * o = new QWebHitTestResult();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -87,7 +87,7 @@ QWebHitTestResult ( const QWebHitTestResult & other )
 void QWebHitTestResult_new2()
 {
   QWebHitTestResult * o = new QWebHitTestResult( *PQWEBHITTESTRESULT(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QWebHitTestResult ()
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_NEW )
 
 HB_FUNC_STATIC( QWEBHITTESTRESULT_DELETE )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -131,7 +131,7 @@ QString alternateText () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_ALTERNATETEXT )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -155,7 +155,7 @@ QRect boundingRect () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_BOUNDINGRECT )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_BOUNDINGRECT )
     {
 #endif
       QRect * ptr = new QRect( obj->boundingRect() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass( ptr, "QRECT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,7 +180,7 @@ QWebElement element () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_ELEMENT )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ELEMENT )
     {
 #endif
       QWebElement * ptr = new QWebElement( obj->element() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QWEBELEMENT", true );
+      Qt4xHb::createReturnClass( ptr, "QWEBELEMENT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,7 +205,7 @@ QWebElement enclosingBlockElement () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_ENCLOSINGBLOCKELEMENT )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ENCLOSINGBLOCKELEMENT )
     {
 #endif
       QWebElement * ptr = new QWebElement( obj->enclosingBlockElement() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QWEBELEMENT", true );
+      Qt4xHb::createReturnClass( ptr, "QWEBELEMENT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -230,7 +230,7 @@ QWebFrame * frame () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_FRAME )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_FRAME )
     {
 #endif
       QWebFrame * ptr = obj->frame();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QWEBFRAME" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QWEBFRAME" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -255,7 +255,7 @@ QUrl imageUrl () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_IMAGEURL )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_IMAGEURL )
     {
 #endif
       QUrl * ptr = new QUrl( obj->imageUrl() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QURL", true );
+      Qt4xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -280,7 +280,7 @@ bool isContentEditable () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_ISCONTENTEDITABLE )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -304,7 +304,7 @@ bool isContentSelected () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_ISCONTENTSELECTED )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -328,7 +328,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_ISNULL )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -352,7 +352,7 @@ QWebElement linkElement () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKELEMENT )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKELEMENT )
     {
 #endif
       QWebElement * ptr = new QWebElement( obj->linkElement() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QWEBELEMENT", true );
+      Qt4xHb::createReturnClass( ptr, "QWEBELEMENT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -377,7 +377,7 @@ QWebFrame * linkTargetFrame () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTARGETFRAME )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTARGETFRAME )
     {
 #endif
       QWebFrame * ptr = obj->linkTargetFrame();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QWEBFRAME" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QWEBFRAME" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -402,7 +402,7 @@ QString linkText () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTEXT )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -426,7 +426,7 @@ QUrl linkTitle () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTITLE )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTITLE )
     {
 #endif
       QUrl * ptr = new QUrl( obj->linkTitle() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QURL", true );
+      Qt4xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -451,7 +451,7 @@ QUrl linkUrl () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKURL )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKURL )
     {
 #endif
       QUrl * ptr = new QUrl( obj->linkUrl() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QURL", true );
+      Qt4xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -476,7 +476,7 @@ QPixmap pixmap () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_PIXMAP )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_PIXMAP )
     {
 #endif
       QPixmap * ptr = new QPixmap( obj->pixmap() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPIXMAP", true );
+      Qt4xHb::createReturnClass( ptr, "QPIXMAP", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -501,7 +501,7 @@ QPoint pos () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_POS )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_POS )
     {
 #endif
       QPoint * ptr = new QPoint( obj->pos() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPOINT", true );
+      Qt4xHb::createReturnClass( ptr, "QPOINT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -526,7 +526,7 @@ QString title () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_TITLE )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWebHitTestResult * obj = (QWebHitTestResult *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
