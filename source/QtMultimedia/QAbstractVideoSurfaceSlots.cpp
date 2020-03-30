@@ -59,7 +59,7 @@ void QAbstractVideoSurfaceSlots::supportedFormatsChanged()
 
 void QAbstractVideoSurfaceSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

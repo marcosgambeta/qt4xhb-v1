@@ -66,8 +66,8 @@ QAudioOutput ( const QAudioFormat & format = QAudioFormat(), QObject * parent = 
 */
 void QAudioOutput_new1()
 {
-  QAudioOutput * o = new QAudioOutput( ISNIL(1)? QAudioFormat() : *(QAudioFormat *) Qt4xHb::_qt4xhb_itemGetPtr(1), OPQOBJECT(2,0) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, false );
+  QAudioOutput * o = new QAudioOutput( ISNIL(1)? QAudioFormat() : *(QAudioFormat *) Qt4xHb::itemGetPtr(1), OPQOBJECT(2,0) );
+  Qt4xHb::returnNewObject( o, false );
 }
 
 /*
@@ -75,8 +75,8 @@ QAudioOutput ( const QAudioDeviceInfo & audioDevice, const QAudioFormat & format
 */
 void QAudioOutput_new2()
 {
-  QAudioOutput * o = new QAudioOutput( *PQAUDIODEVICEINFO(1), ISNIL(2)? QAudioFormat() : *(QAudioFormat *) Qt4xHb::_qt4xhb_itemGetPtr(2), OPQOBJECT(3,0) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, false );
+  QAudioOutput * o = new QAudioOutput( *PQAUDIODEVICEINFO(1), ISNIL(2)? QAudioFormat() : *(QAudioFormat *) Qt4xHb::itemGetPtr(2), OPQOBJECT(3,0) );
+  Qt4xHb::returnNewObject( o, false );
 }
 
 //[1]QAudioOutput ( const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_NEW )
 
 HB_FUNC_STATIC( QAUDIOOUTPUT_DELETE )
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -122,7 +122,7 @@ int bufferSize () const
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_BUFFERSIZE )
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -146,7 +146,7 @@ int bytesFree () const
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_BYTESFREE )
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -170,7 +170,7 @@ qint64 elapsedUSecs () const
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_ELAPSEDUSECS )
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -194,7 +194,7 @@ QAudio::Error error () const
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_ERROR )
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -218,7 +218,7 @@ QAudioFormat format () const
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_FORMAT )
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_FORMAT )
     {
 #endif
       QAudioFormat * ptr = new QAudioFormat( obj->format() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QAUDIOFORMAT", true );
+      Qt4xHb::createReturnClass( ptr, "QAUDIOFORMAT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -243,7 +243,7 @@ int notifyInterval () const
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_NOTIFYINTERVAL )
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -267,7 +267,7 @@ int periodSize () const
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_PERIODSIZE )
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -291,7 +291,7 @@ qint64 processedUSecs () const
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_PROCESSEDUSECS )
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -315,7 +315,7 @@ void reset ()
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_RESET )
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -341,7 +341,7 @@ void resume ()
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_RESUME )
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -367,7 +367,7 @@ void setBufferSize ( int value )
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_SETBUFFERSIZE )
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -393,7 +393,7 @@ void setNotifyInterval ( int ms )
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_SETNOTIFYINTERVAL )
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -419,7 +419,7 @@ void start ( QIODevice * device )
 */
 void QAudioOutput_start1()
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -434,12 +434,12 @@ QIODevice * start ()
 */
 void QAudioOutput_start2()
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QIODevice * ptr = obj->start();
-    Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QIODEVICE" );
+    Qt4xHb::createReturnQObjectClass( ptr, "QIODEVICE" );
   }
 }
 
@@ -467,7 +467,7 @@ QAudio::State state () const
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_STATE )
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -491,7 +491,7 @@ void stop ()
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_STOP )
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -517,7 +517,7 @@ void suspend ()
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_SUSPEND )
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAudioOutput * obj = (QAudioOutput *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
