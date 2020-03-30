@@ -53,7 +53,7 @@ QXmlNamePool ()
 void QXmlNamePool_new1()
 {
   QXmlNamePool * o = new QXmlNamePool();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -62,7 +62,7 @@ QXmlNamePool ( const QXmlNamePool & other )
 void QXmlNamePool_new2()
 {
   QXmlNamePool * o = new QXmlNamePool( *PQXMLNAMEPOOL(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QXmlNamePool ()
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QXMLNAMEPOOL_NEW )
 
 HB_FUNC_STATIC( QXMLNAMEPOOL_DELETE )
 {
-  QXmlNamePool * obj = (QXmlNamePool *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlNamePool * obj = (QXmlNamePool *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

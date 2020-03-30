@@ -73,7 +73,7 @@ QXmlSchemaValidator ()
 void QXmlSchemaValidator_new1()
 {
   QXmlSchemaValidator * o = new QXmlSchemaValidator();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -82,7 +82,7 @@ QXmlSchemaValidator ( const QXmlSchema & schema )
 void QXmlSchemaValidator_new2()
 {
   QXmlSchemaValidator * o = new QXmlSchemaValidator( *PQXMLSCHEMA(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QXmlSchemaValidator ()
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEW )
 
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_DELETE )
 {
-  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -126,7 +126,7 @@ QAbstractMessageHandler * messageHandler () const
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_MESSAGEHANDLER )
 {
-  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_MESSAGEHANDLER )
     {
 #endif
       QAbstractMessageHandler * ptr = obj->messageHandler();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QABSTRACTMESSAGEHANDLER" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTMESSAGEHANDLER" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,7 +151,7 @@ QXmlNamePool namePool () const
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NAMEPOOL )
 {
-  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NAMEPOOL )
     {
 #endif
       QXmlNamePool * ptr = new QXmlNamePool( obj->namePool() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QXMLNAMEPOOL", true );
+      Qt4xHb::createReturnClass( ptr, "QXMLNAMEPOOL", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,7 +176,7 @@ QNetworkAccessManager * networkAccessManager () const
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NETWORKACCESSMANAGER )
 {
-  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NETWORKACCESSMANAGER )
     {
 #endif
       QNetworkAccessManager * ptr = obj->networkAccessManager();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QNETWORKACCESSMANAGER" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QNETWORKACCESSMANAGER" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,7 +201,7 @@ QXmlSchema schema () const
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SCHEMA )
 {
-  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SCHEMA )
     {
 #endif
       QXmlSchema * ptr = new QXmlSchema( obj->schema() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QXMLSCHEMA", true );
+      Qt4xHb::createReturnClass( ptr, "QXMLSCHEMA", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,7 +226,7 @@ void setMessageHandler ( QAbstractMessageHandler * handler )
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETMESSAGEHANDLER )
 {
-  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -252,7 +252,7 @@ void setNetworkAccessManager ( QNetworkAccessManager * manager )
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETNETWORKACCESSMANAGER )
 {
-  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -278,7 +278,7 @@ void setSchema ( const QXmlSchema & schema )
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETSCHEMA )
 {
-  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -304,7 +304,7 @@ void setUriResolver ( const QAbstractUriResolver * resolver )
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETURIRESOLVER )
 {
-  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -330,7 +330,7 @@ const QAbstractUriResolver * uriResolver () const
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_URIRESOLVER )
 {
-  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_URIRESOLVER )
     {
 #endif
       const QAbstractUriResolver * ptr = obj->uriResolver();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QABSTRACTURIRESOLVER" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTURIRESOLVER" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -355,7 +355,7 @@ bool validate ( const QUrl & source ) const
 */
 void QXmlSchemaValidator_validate1()
 {
-  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -368,11 +368,11 @@ bool validate ( QIODevice * source, const QUrl & documentUri = QUrl() ) const
 */
 void QXmlSchemaValidator_validate2()
 {
-  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->validate( PQIODEVICE(1), ISNIL(2)? QUrl() : *(QUrl *) Qt4xHb::_qt4xhb_itemGetPtr(2) ) );
+    RBOOL( obj->validate( PQIODEVICE(1), ISNIL(2)? QUrl() : *(QUrl *) Qt4xHb::itemGetPtr(2) ) );
   }
 }
 
@@ -381,11 +381,11 @@ bool validate ( const QByteArray & data, const QUrl & documentUri = QUrl() ) con
 */
 void QXmlSchemaValidator_validate3()
 {
-  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->validate( *PQBYTEARRAY(1), ISNIL(2)? QUrl() : *(QUrl *) Qt4xHb::_qt4xhb_itemGetPtr(2) ) );
+    RBOOL( obj->validate( *PQBYTEARRAY(1), ISNIL(2)? QUrl() : *(QUrl *) Qt4xHb::itemGetPtr(2) ) );
   }
 }
 

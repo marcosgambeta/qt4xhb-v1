@@ -58,7 +58,7 @@ QXmlNodeModelIndex ()
 void QXmlNodeModelIndex_new1()
 {
   QXmlNodeModelIndex * o = new QXmlNodeModelIndex();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -67,7 +67,7 @@ QXmlNodeModelIndex ( const QXmlNodeModelIndex & other )
 void QXmlNodeModelIndex_new2()
 {
   QXmlNodeModelIndex * o = new QXmlNodeModelIndex( *PQXMLNODEMODELINDEX(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QXmlNodeModelIndex ()
@@ -94,7 +94,7 @@ qint64 additionalData () const
 */
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_ADDITIONALDATA )
 {
-  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -118,7 +118,7 @@ qint64 data () const
 */
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_DATA )
 {
-  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -142,7 +142,7 @@ void * internalPointer () const
 */
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_INTERNALPOINTER )
 {
-  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -166,7 +166,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_ISNULL )
 {
-  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -190,7 +190,7 @@ const QAbstractXmlNodeModel * model () const
 */
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_MODEL )
 {
-  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_MODEL )
     {
 #endif
       const QAbstractXmlNodeModel * ptr = obj->model();
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QABSTRACTXMLNODEMODEL", false );
+      Qt4xHb::createReturnClass( ptr, "QABSTRACTXMLNODEMODEL", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
