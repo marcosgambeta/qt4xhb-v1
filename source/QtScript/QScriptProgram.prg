@@ -57,7 +57,7 @@ QScriptProgram ()
 void QScriptProgram_new1()
 {
   QScriptProgram * o = new QScriptProgram();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -70,7 +70,7 @@ QScriptProgram ( const QScriptProgram & other )
 void QScriptProgram_new3()
 {
   QScriptProgram * o = new QScriptProgram( *PQSCRIPTPROGRAM(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QScriptProgram ()
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW )
 
 HB_FUNC_STATIC( QSCRIPTPROGRAM_DELETE )
 {
-  QScriptProgram * obj = (QScriptProgram *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QScriptProgram * obj = (QScriptProgram *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -115,7 +115,7 @@ QString fileName () const
 */
 HB_FUNC_STATIC( QSCRIPTPROGRAM_FILENAME )
 {
-  QScriptProgram * obj = (QScriptProgram *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QScriptProgram * obj = (QScriptProgram *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -139,7 +139,7 @@ int firstLineNumber () const
 */
 HB_FUNC_STATIC( QSCRIPTPROGRAM_FIRSTLINENUMBER )
 {
-  QScriptProgram * obj = (QScriptProgram *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QScriptProgram * obj = (QScriptProgram *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -163,7 +163,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QSCRIPTPROGRAM_ISNULL )
 {
-  QScriptProgram * obj = (QScriptProgram *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QScriptProgram * obj = (QScriptProgram *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -187,7 +187,7 @@ QString sourceCode () const
 */
 HB_FUNC_STATIC( QSCRIPTPROGRAM_SOURCECODE )
 {
-  QScriptProgram * obj = (QScriptProgram *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QScriptProgram * obj = (QScriptProgram *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
