@@ -66,7 +66,7 @@ QNetworkCacheMetaData ()
 void QNetworkCacheMetaData_new1()
 {
   QNetworkCacheMetaData * o = new QNetworkCacheMetaData();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -75,7 +75,7 @@ QNetworkCacheMetaData ( const QNetworkCacheMetaData & other )
 void QNetworkCacheMetaData_new2()
 {
   QNetworkCacheMetaData * o = new QNetworkCacheMetaData( *PQNETWORKCACHEMETADATA(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QNetworkCacheMetaData ()
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_NEW )
 
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_DELETE )
 {
-  QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -119,7 +119,7 @@ QDateTime expirationDate () const
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_EXPIRATIONDATE )
 {
-  QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_EXPIRATIONDATE )
     {
 #endif
       QDateTime * ptr = new QDateTime( obj->expirationDate() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QDATETIME", true );
+      Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,7 +144,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_ISVALID )
 {
-  QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -168,7 +168,7 @@ QDateTime lastModified () const
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_LASTMODIFIED )
 {
-  QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_LASTMODIFIED )
     {
 #endif
       QDateTime * ptr = new QDateTime( obj->lastModified() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QDATETIME", true );
+      Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,7 +193,7 @@ bool saveToDisk () const
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SAVETODISK )
 {
-  QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -217,7 +217,7 @@ void setExpirationDate ( const QDateTime & dateTime )
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETEXPIRATIONDATE )
 {
-  QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -243,7 +243,7 @@ void setLastModified ( const QDateTime & dateTime )
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETLASTMODIFIED )
 {
-  QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -269,7 +269,7 @@ void setSaveToDisk ( bool allow )
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETSAVETODISK )
 {
-  QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -295,7 +295,7 @@ void setUrl ( const QUrl & url )
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETURL )
 {
-  QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -321,7 +321,7 @@ QUrl url () const
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_URL )
 {
-  QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_URL )
     {
 #endif
       QUrl * ptr = new QUrl( obj->url() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QURL", true );
+      Qt4xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

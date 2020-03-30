@@ -75,7 +75,7 @@ QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
 void QSslCertificate_new1()
 {
   QSslCertificate * o = new QSslCertificate( PQIODEVICE(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -83,8 +83,8 @@ QSslCertificate ( const QByteArray & data = QByteArray(), QSsl::EncodingFormat f
 */
 void QSslCertificate_new2()
 {
-  QSslCertificate * o = new QSslCertificate( ISNIL(1)? QByteArray() : *(QByteArray *) Qt4xHb::_qt4xhb_itemGetPtr(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  QSslCertificate * o = new QSslCertificate( ISNIL(1)? QByteArray() : *(QByteArray *) Qt4xHb::itemGetPtr(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2) );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -93,7 +93,7 @@ QSslCertificate ( const QSslCertificate & other )
 void QSslCertificate_new3()
 {
   QSslCertificate * o = new QSslCertificate( *PQSSLCERTIFICATE(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_NEW )
 
 HB_FUNC_STATIC( QSSLCERTIFICATE_DELETE )
 {
-  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -142,7 +142,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_CLEAR )
 {
-  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -168,7 +168,7 @@ QByteArray digest ( QCryptographicHash::Algorithm algorithm = QCryptographicHash
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_DIGEST )
 {
-  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_DIGEST )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->digest( ISNIL(1)? (QCryptographicHash::Algorithm) QCryptographicHash::Md5 : (QCryptographicHash::Algorithm) hb_parni(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,7 +193,7 @@ QDateTime effectiveDate () const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_EFFECTIVEDATE )
 {
-  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_EFFECTIVEDATE )
     {
 #endif
       QDateTime * ptr = new QDateTime( obj->effectiveDate() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QDATETIME", true );
+      Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -218,7 +218,7 @@ QDateTime expiryDate () const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_EXPIRYDATE )
 {
-  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_EXPIRYDATE )
     {
 #endif
       QDateTime * ptr = new QDateTime( obj->expiryDate() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QDATETIME", true );
+      Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -243,7 +243,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_ISNULL )
 {
-  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -267,7 +267,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_ISVALID )
 {
-  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -291,7 +291,7 @@ QString issuerInfo ( SubjectInfo subject ) const
 */
 void QSslCertificate_issuerInfo1()
 {
-  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -304,7 +304,7 @@ QString issuerInfo ( const QByteArray & tag ) const
 */
 void QSslCertificate_issuerInfo2()
 {
-  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -336,7 +336,7 @@ QSslKey publicKey () const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_PUBLICKEY )
 {
-  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_PUBLICKEY )
     {
 #endif
       QSslKey * ptr = new QSslKey( obj->publicKey() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSSLKEY", true );
+      Qt4xHb::createReturnClass( ptr, "QSSLKEY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -361,7 +361,7 @@ QByteArray serialNumber () const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_SERIALNUMBER )
 {
-  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SERIALNUMBER )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->serialNumber() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -386,7 +386,7 @@ QString subjectInfo ( SubjectInfo subject ) const
 */
 void QSslCertificate_subjectInfo1()
 {
-  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -399,7 +399,7 @@ QString subjectInfo ( const QByteArray & tag ) const
 */
 void QSslCertificate_subjectInfo2()
 {
-  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -431,7 +431,7 @@ QByteArray toDer () const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_TODER )
 {
-  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_TODER )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->toDer() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -456,7 +456,7 @@ QByteArray toPem () const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_TOPEM )
 {
-  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_TOPEM )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->toPem() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -481,7 +481,7 @@ QByteArray version () const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_VERSION )
 {
-  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_VERSION )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->version() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -506,7 +506,7 @@ QList<QSslCertificate> fromData ( const QByteArray & data, QSsl::EncodingFormat 
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDATA )
 {
-  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -558,7 +558,7 @@ QList<QSslCertificate> fromDevice ( QIODevice * device, QSsl::EncodingFormat for
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDEVICE )
 {
-  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -610,7 +610,7 @@ QList<QSslCertificate> fromPath ( const QString & path, QSsl::EncodingFormat for
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_FROMPATH )
 {
-  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSslCertificate * obj = (QSslCertificate *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

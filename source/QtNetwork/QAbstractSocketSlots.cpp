@@ -96,7 +96,7 @@ void QAbstractSocketSlots::stateChanged( QAbstractSocket::SocketState socketStat
 
 void QAbstractSocketSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

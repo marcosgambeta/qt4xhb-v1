@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QFTP_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QFtp * o = new QFtp( OPQOBJECT(1,0) );
-    Qt4xHb::_qt4xhb_returnNewObject( o, false );
+    Qt4xHb::returnNewObject( o, false );
   }
   else
   {
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QFTP_NEW )
 
 HB_FUNC_STATIC( QFTP_DELETE )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -117,7 +117,7 @@ qint64 bytesAvailable () const
 */
 HB_FUNC_STATIC( QFTP_BYTESAVAILABLE )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -141,7 +141,7 @@ int cd ( const QString & dir )
 */
 HB_FUNC_STATIC( QFTP_CD )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -165,7 +165,7 @@ void clearPendingCommands ()
 */
 HB_FUNC_STATIC( QFTP_CLEARPENDINGCOMMANDS )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -191,7 +191,7 @@ int close ()
 */
 HB_FUNC_STATIC( QFTP_CLOSE )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -215,7 +215,7 @@ int connectToHost ( const QString & host, quint16 port = 21 )
 */
 HB_FUNC_STATIC( QFTP_CONNECTTOHOST )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -239,7 +239,7 @@ Command currentCommand () const
 */
 HB_FUNC_STATIC( QFTP_CURRENTCOMMAND )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -263,7 +263,7 @@ QIODevice * currentDevice () const
 */
 HB_FUNC_STATIC( QFTP_CURRENTDEVICE )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QFTP_CURRENTDEVICE )
     {
 #endif
       QIODevice * ptr = obj->currentDevice();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QIODEVICE" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QIODEVICE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -288,7 +288,7 @@ int currentId () const
 */
 HB_FUNC_STATIC( QFTP_CURRENTID )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -312,7 +312,7 @@ Error error () const
 */
 HB_FUNC_STATIC( QFTP_ERROR )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -336,7 +336,7 @@ QString errorString () const
 */
 HB_FUNC_STATIC( QFTP_ERRORSTRING )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -360,7 +360,7 @@ int get ( const QString & file, QIODevice * dev = 0, TransferType type = Binary 
 */
 HB_FUNC_STATIC( QFTP_GET )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -384,7 +384,7 @@ bool hasPendingCommands () const
 */
 HB_FUNC_STATIC( QFTP_HASPENDINGCOMMANDS )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -408,7 +408,7 @@ int list ( const QString & dir = QString() )
 */
 HB_FUNC_STATIC( QFTP_LIST )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -432,7 +432,7 @@ int login ( const QString & user = QString(), const QString & password = QString
 */
 HB_FUNC_STATIC( QFTP_LOGIN )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -456,7 +456,7 @@ int mkdir ( const QString & dir )
 */
 HB_FUNC_STATIC( QFTP_MKDIR )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -480,7 +480,7 @@ int put ( QIODevice * dev, const QString & file, TransferType type = Binary )
 */
 void QFtp_put1()
 {
-  QFtp * obj = (QFtp *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -493,7 +493,7 @@ int put ( const QByteArray & data, const QString & file, TransferType type = Bin
 */
 void QFtp_put2()
 {
-  QFtp * obj = (QFtp *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -525,7 +525,7 @@ int rawCommand ( const QString & command )
 */
 HB_FUNC_STATIC( QFTP_RAWCOMMAND )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -549,7 +549,7 @@ qint64 read ( char * data, qint64 maxlen )
 */
 HB_FUNC_STATIC( QFTP_READ )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -573,7 +573,7 @@ QByteArray readAll ()
 */
 HB_FUNC_STATIC( QFTP_READALL )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -582,7 +582,7 @@ HB_FUNC_STATIC( QFTP_READALL )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->readAll() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -598,7 +598,7 @@ int remove ( const QString & file )
 */
 HB_FUNC_STATIC( QFTP_REMOVE )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -622,7 +622,7 @@ int rename ( const QString & oldname, const QString & newname )
 */
 HB_FUNC_STATIC( QFTP_RENAME )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -646,7 +646,7 @@ int rmdir ( const QString & dir )
 */
 HB_FUNC_STATIC( QFTP_RMDIR )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -670,7 +670,7 @@ int setProxy ( const QString & host, quint16 port )
 */
 HB_FUNC_STATIC( QFTP_SETPROXY )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -694,7 +694,7 @@ int setTransferMode ( TransferMode mode )
 */
 HB_FUNC_STATIC( QFTP_SETTRANSFERMODE )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -718,7 +718,7 @@ State state () const
 */
 HB_FUNC_STATIC( QFTP_STATE )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -742,7 +742,7 @@ void abort ()
 */
 HB_FUNC_STATIC( QFTP_ABORT )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

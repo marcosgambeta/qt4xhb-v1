@@ -85,7 +85,7 @@ void QNetworkConfigurationManagerSlots::updateCompleted()
 
 void QNetworkConfigurationManagerSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

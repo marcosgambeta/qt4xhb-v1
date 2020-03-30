@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_NEW )
   if( ISNUMPAR(2) && ISNUM(1) && ISQOBJECT(2) )
   {
     QAbstractSocket * o = new QAbstractSocket( (QAbstractSocket::SocketType) hb_parni(1), PQOBJECT(2) );
-    Qt4xHb::_qt4xhb_returnNewObject( o, false );
+    Qt4xHb::returnNewObject( o, false );
   }
   else
   {
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_NEW )
 
 HB_FUNC_STATIC( QABSTRACTSOCKET_DELETE )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -125,7 +125,7 @@ void abort ()
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_ABORT )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -151,7 +151,7 @@ void connectToHost ( const QString & hostName, quint16 port, OpenMode openMode =
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_CONNECTTOHOST1 )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -177,7 +177,7 @@ void connectToHost ( const QHostAddress & address, quint16 port, OpenMode openMo
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_CONNECTTOHOST2 )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -203,7 +203,7 @@ void disconnectFromHost ()
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_DISCONNECTFROMHOST )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -229,7 +229,7 @@ SocketError error () const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_ERROR )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -253,7 +253,7 @@ bool flush ()
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_FLUSH )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -277,7 +277,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_ISVALID )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -301,7 +301,7 @@ QHostAddress localAddress () const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_LOCALADDRESS )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_LOCALADDRESS )
     {
 #endif
       QHostAddress * ptr = new QHostAddress( obj->localAddress() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QHOSTADDRESS", true );
+      Qt4xHb::createReturnClass( ptr, "QHOSTADDRESS", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -326,7 +326,7 @@ quint16 localPort () const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_LOCALPORT )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -350,7 +350,7 @@ QHostAddress peerAddress () const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_PEERADDRESS )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PEERADDRESS )
     {
 #endif
       QHostAddress * ptr = new QHostAddress( obj->peerAddress() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QHOSTADDRESS", true );
+      Qt4xHb::createReturnClass( ptr, "QHOSTADDRESS", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -375,7 +375,7 @@ QString peerName () const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_PEERNAME )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -399,7 +399,7 @@ quint16 peerPort () const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_PEERPORT )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -423,7 +423,7 @@ QNetworkProxy proxy () const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_PROXY )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PROXY )
     {
 #endif
       QNetworkProxy * ptr = new QNetworkProxy( obj->proxy() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QNETWORKPROXY", true );
+      Qt4xHb::createReturnClass( ptr, "QNETWORKPROXY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -448,7 +448,7 @@ qint64 readBufferSize () const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_READBUFFERSIZE )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -472,7 +472,7 @@ void setProxy ( const QNetworkProxy & networkProxy )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_SETPROXY )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -498,7 +498,7 @@ void setReadBufferSize ( qint64 size )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_SETREADBUFFERSIZE )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -524,7 +524,7 @@ bool setSocketDescriptor ( int socketDescriptor, SocketState socketState = Conne
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_SETSOCKETDESCRIPTOR )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -548,7 +548,7 @@ void setSocketOption ( QAbstractSocket::SocketOption option, const QVariant & va
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_SETSOCKETOPTION )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -574,7 +574,7 @@ int socketDescriptor () const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETDESCRIPTOR )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -598,7 +598,7 @@ QVariant socketOption ( QAbstractSocket::SocketOption option )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETOPTION )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -607,7 +607,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETOPTION )
     {
 #endif
       QVariant * ptr = new QVariant( obj->socketOption( (QAbstractSocket::SocketOption) hb_parni(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -623,7 +623,7 @@ SocketType socketType () const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETTYPE )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -647,7 +647,7 @@ SocketState state () const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_STATE )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -671,7 +671,7 @@ bool waitForConnected ( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORCONNECTED )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -695,7 +695,7 @@ bool waitForDisconnected ( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORDISCONNECTED )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -719,7 +719,7 @@ virtual bool atEnd () const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_ATEND )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -743,7 +743,7 @@ virtual qint64 bytesAvailable () const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_BYTESAVAILABLE )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -767,7 +767,7 @@ virtual qint64 bytesToWrite () const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_BYTESTOWRITE )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -791,7 +791,7 @@ virtual bool canReadLine () const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_CANREADLINE )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -815,7 +815,7 @@ virtual void close ()
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_CLOSE )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -841,7 +841,7 @@ virtual bool isSequential () const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_ISSEQUENTIAL )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -865,7 +865,7 @@ virtual bool waitForBytesWritten ( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORBYTESWRITTEN )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -889,7 +889,7 @@ virtual bool waitForReadyRead ( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORREADYREAD )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

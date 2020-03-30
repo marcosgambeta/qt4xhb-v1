@@ -52,7 +52,7 @@ HB_FUNC_STATIC( QUDPSOCKET_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QUdpSocket * o = new QUdpSocket( OPQOBJECT(1,0) );
-    Qt4xHb::_qt4xhb_returnNewObject( o, false );
+    Qt4xHb::returnNewObject( o, false );
   }
   else
   {
@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QUDPSOCKET_NEW )
 
 HB_FUNC_STATIC( QUDPSOCKET_DELETE )
 {
-  QUdpSocket * obj = (QUdpSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QUdpSocket * obj = (QUdpSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -84,7 +84,7 @@ bool bind ( const QHostAddress & address, quint16 port )
 */
 void QUdpSocket_bind1()
 {
-  QUdpSocket * obj = (QUdpSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QUdpSocket * obj = (QUdpSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -97,7 +97,7 @@ bool bind ( const QHostAddress & address, quint16 port, BindMode mode )
 */
 void QUdpSocket_bind2()
 {
-  QUdpSocket * obj = (QUdpSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QUdpSocket * obj = (QUdpSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -110,7 +110,7 @@ bool bind ( quint16 port = 0 )
 */
 void QUdpSocket_bind3()
 {
-  QUdpSocket * obj = (QUdpSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QUdpSocket * obj = (QUdpSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -123,7 +123,7 @@ bool bind ( quint16 port, BindMode mode )
 */
 void QUdpSocket_bind4()
 {
-  QUdpSocket * obj = (QUdpSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QUdpSocket * obj = (QUdpSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -165,7 +165,7 @@ bool hasPendingDatagrams () const
 */
 HB_FUNC_STATIC( QUDPSOCKET_HASPENDINGDATAGRAMS )
 {
-  QUdpSocket * obj = (QUdpSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QUdpSocket * obj = (QUdpSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -189,7 +189,7 @@ qint64 pendingDatagramSize () const
 */
 HB_FUNC_STATIC( QUDPSOCKET_PENDINGDATAGRAMSIZE )
 {
-  QUdpSocket * obj = (QUdpSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QUdpSocket * obj = (QUdpSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -217,7 +217,7 @@ qint64 writeDatagram ( const char * data, qint64 size, const QHostAddress & addr
 */
 void QUdpSocket_writeDatagram1()
 {
-  QUdpSocket * obj = (QUdpSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QUdpSocket * obj = (QUdpSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -230,7 +230,7 @@ qint64 writeDatagram ( const QByteArray & datagram, const QHostAddress & host, q
 */
 void QUdpSocket_writeDatagram2()
 {
-  QUdpSocket * obj = (QUdpSocket *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QUdpSocket * obj = (QUdpSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

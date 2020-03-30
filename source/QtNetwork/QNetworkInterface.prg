@@ -66,7 +66,7 @@ QNetworkInterface ()
 void QNetworkInterface_new1()
 {
   QNetworkInterface * o = new QNetworkInterface();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -75,7 +75,7 @@ QNetworkInterface ( const QNetworkInterface & other )
 void QNetworkInterface_new2()
 {
   QNetworkInterface * o = new QNetworkInterface( *PQNETWORKINTERFACE(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QNetworkInterface ()
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NEW )
 
 HB_FUNC_STATIC( QNETWORKINTERFACE_DELETE )
 {
-  QNetworkInterface * obj = (QNetworkInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = (QNetworkInterface *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -119,7 +119,7 @@ QList<QNetworkAddressEntry> addressEntries () const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
 {
-  QNetworkInterface * obj = (QNetworkInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = (QNetworkInterface *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -171,7 +171,7 @@ InterfaceFlags flags () const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_FLAGS )
 {
-  QNetworkInterface * obj = (QNetworkInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = (QNetworkInterface *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -195,7 +195,7 @@ QString hardwareAddress () const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_HARDWAREADDRESS )
 {
-  QNetworkInterface * obj = (QNetworkInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = (QNetworkInterface *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -219,7 +219,7 @@ QString humanReadableName () const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_HUMANREADABLENAME )
 {
-  QNetworkInterface * obj = (QNetworkInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = (QNetworkInterface *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -243,7 +243,7 @@ int index () const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_INDEX )
 {
-  QNetworkInterface * obj = (QNetworkInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = (QNetworkInterface *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -267,7 +267,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_ISVALID )
 {
-  QNetworkInterface * obj = (QNetworkInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = (QNetworkInterface *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -291,7 +291,7 @@ QString name () const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_NAME )
 {
-  QNetworkInterface * obj = (QNetworkInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = (QNetworkInterface *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -315,7 +315,7 @@ QList<QHostAddress> allAddresses ()
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_ALLADDRESSES )
 {
-  QNetworkInterface * obj = (QNetworkInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = (QNetworkInterface *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -367,7 +367,7 @@ QList<QNetworkInterface> allInterfaces ()
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_ALLINTERFACES )
 {
-  QNetworkInterface * obj = (QNetworkInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = (QNetworkInterface *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEFROMINDEX )
   {
 #endif
     QNetworkInterface * ptr = new QNetworkInterface( QNetworkInterface::interfaceFromIndex( PINT(1) ) );
-    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QNETWORKINTERFACE", true );
+    Qt4xHb::createReturnClass( ptr, "QNETWORKINTERFACE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEFROMNAME )
   {
 #endif
     QNetworkInterface * ptr = new QNetworkInterface( QNetworkInterface::interfaceFromName( PQSTRING(1) ) );
-    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QNETWORKINTERFACE", true );
+    Qt4xHb::createReturnClass( ptr, "QNETWORKINTERFACE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

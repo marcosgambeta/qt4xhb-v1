@@ -130,7 +130,7 @@ void QFtpSlots::stateChanged( int state )
 
 void QFtpSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

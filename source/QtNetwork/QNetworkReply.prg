@@ -75,7 +75,7 @@ RETURN
 
 HB_FUNC_STATIC( QNETWORKREPLY_DELETE )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -97,7 +97,7 @@ virtual void abort () = 0
 */
 HB_FUNC_STATIC( QNETWORKREPLY_ABORT )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -123,7 +123,7 @@ QVariant attribute ( QNetworkRequest::Attribute code ) const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_ATTRIBUTE )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ATTRIBUTE )
     {
 #endif
       QVariant * ptr = new QVariant( obj->attribute( (QNetworkRequest::Attribute) hb_parni(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -148,7 +148,7 @@ NetworkError error () const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_ERROR )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -172,7 +172,7 @@ bool hasRawHeader ( const QByteArray & headerName ) const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_HASRAWHEADER )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -196,7 +196,7 @@ QVariant header ( QNetworkRequest::KnownHeaders header ) const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_HEADER )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_HEADER )
     {
 #endif
       QVariant * ptr = new QVariant( obj->header( (QNetworkRequest::KnownHeaders) hb_parni(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -221,7 +221,7 @@ void ignoreSslErrors ( const QList<QSslError> & errors )
 */
 void QNetworkReply_ignoreSslErrors1()
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -244,7 +244,7 @@ virtual void ignoreSslErrors ()
 */
 void QNetworkReply_ignoreSslErrors2()
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -278,7 +278,7 @@ bool isFinished () const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_ISFINISHED )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -302,7 +302,7 @@ bool isRunning () const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_ISRUNNING )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -326,7 +326,7 @@ QNetworkAccessManager * manager () const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_MANAGER )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_MANAGER )
     {
 #endif
       QNetworkAccessManager * ptr = obj->manager();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QNETWORKACCESSMANAGER" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QNETWORKACCESSMANAGER" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -351,7 +351,7 @@ QNetworkAccessManager::Operation operation () const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_OPERATION )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -375,7 +375,7 @@ QByteArray rawHeader ( const QByteArray & headerName ) const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADER )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADER )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->rawHeader( *PQBYTEARRAY(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -400,7 +400,7 @@ QList<QByteArray> rawHeaderList () const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADERLIST )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -452,7 +452,7 @@ qint64 readBufferSize () const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_READBUFFERSIZE )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -476,7 +476,7 @@ QNetworkRequest request () const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_REQUEST )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_REQUEST )
     {
 #endif
       QNetworkRequest * ptr = new QNetworkRequest( obj->request() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QNETWORKREQUEST", true );
+      Qt4xHb::createReturnClass( ptr, "QNETWORKREQUEST", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -501,7 +501,7 @@ virtual void setReadBufferSize ( qint64 size )
 */
 HB_FUNC_STATIC( QNETWORKREPLY_SETREADBUFFERSIZE )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -527,7 +527,7 @@ void setSslConfiguration ( const QSslConfiguration & config )
 */
 HB_FUNC_STATIC( QNETWORKREPLY_SETSSLCONFIGURATION )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -553,7 +553,7 @@ QSslConfiguration sslConfiguration () const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_SSLCONFIGURATION )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_SSLCONFIGURATION )
     {
 #endif
       QSslConfiguration * ptr = new QSslConfiguration( obj->sslConfiguration() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSSLCONFIGURATION", true );
+      Qt4xHb::createReturnClass( ptr, "QSSLCONFIGURATION", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -578,7 +578,7 @@ QUrl url () const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_URL )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_URL )
     {
 #endif
       QUrl * ptr = new QUrl( obj->url() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QURL", true );
+      Qt4xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -603,7 +603,7 @@ virtual void close ()
 */
 HB_FUNC_STATIC( QNETWORKREPLY_CLOSE )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

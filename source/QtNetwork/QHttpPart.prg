@@ -57,7 +57,7 @@ QHttpPart ()
 void QHttpPart_new1()
 {
   QHttpPart * o = new QHttpPart();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -66,7 +66,7 @@ QHttpPart ( const QHttpPart & other )
 void QHttpPart_new2()
 {
   QHttpPart * o = new QHttpPart( *PQHTTPPART(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QHttpPart ()
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QHTTPPART_NEW )
 
 HB_FUNC_STATIC( QHTTPPART_DELETE )
 {
-  QHttpPart * obj = (QHttpPart *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QHttpPart * obj = (QHttpPart *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -110,7 +110,7 @@ void setBody ( const QByteArray & body )
 */
 HB_FUNC_STATIC( QHTTPPART_SETBODY )
 {
-  QHttpPart * obj = (QHttpPart *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QHttpPart * obj = (QHttpPart *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -136,7 +136,7 @@ void setBodyDevice ( QIODevice * device )
 */
 HB_FUNC_STATIC( QHTTPPART_SETBODYDEVICE )
 {
-  QHttpPart * obj = (QHttpPart *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QHttpPart * obj = (QHttpPart *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -162,7 +162,7 @@ void setHeader ( QNetworkRequest::KnownHeaders header, const QVariant & value )
 */
 HB_FUNC_STATIC( QHTTPPART_SETHEADER )
 {
-  QHttpPart * obj = (QHttpPart *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QHttpPart * obj = (QHttpPart *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -188,7 +188,7 @@ void setRawHeader ( const QByteArray & headerName, const QByteArray & headerValu
 */
 HB_FUNC_STATIC( QHTTPPART_SETRAWHEADER )
 {
-  QHttpPart * obj = (QHttpPart *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QHttpPart * obj = (QHttpPart *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -96,7 +96,7 @@ void QNetworkSessionSlots::stateChanged( QNetworkSession::State state )
 
 void QNetworkSessionSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QNetworkSession * obj = (QNetworkSession *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkSession * obj = (QNetworkSession *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

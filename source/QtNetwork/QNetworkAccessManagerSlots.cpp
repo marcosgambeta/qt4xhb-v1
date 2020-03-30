@@ -115,7 +115,7 @@ void QNetworkAccessManagerSlots::sslErrors( QNetworkReply * reply, const QList<Q
 
 void QNetworkAccessManagerSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QNetworkAccessManager * obj = (QNetworkAccessManager *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QNetworkAccessManager * obj = (QNetworkAccessManager *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -51,7 +51,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_DELETE )
 {
-  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -73,7 +73,7 @@ virtual qint64 cacheSize () const = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_CACHESIZE )
 {
-  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -97,7 +97,7 @@ virtual QIODevice * data ( const QUrl & url ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_DATA )
 {
-  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_DATA )
     {
 #endif
       QIODevice * ptr = obj->data( *PQURL(1) );
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QIODEVICE" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QIODEVICE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -122,7 +122,7 @@ virtual void insert ( QIODevice * device ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_INSERT )
 {
-  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -148,7 +148,7 @@ virtual QNetworkCacheMetaData metaData ( const QUrl & url ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_METADATA )
 {
-  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_METADATA )
     {
 #endif
       QNetworkCacheMetaData * ptr = new QNetworkCacheMetaData( obj->metaData( *PQURL(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QNETWORKCACHEMETADATA", true );
+      Qt4xHb::createReturnClass( ptr, "QNETWORKCACHEMETADATA", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -173,7 +173,7 @@ virtual QIODevice * prepare ( const QNetworkCacheMetaData & metaData ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_PREPARE )
 {
-  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_PREPARE )
     {
 #endif
       QIODevice * ptr = obj->prepare( *PQNETWORKCACHEMETADATA(1) );
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QIODEVICE" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QIODEVICE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -198,7 +198,7 @@ virtual bool remove ( const QUrl & url ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_REMOVE )
 {
-  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -222,7 +222,7 @@ virtual void updateMetaData ( const QNetworkCacheMetaData & metaData ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_UPDATEMETADATA )
 {
-  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -248,7 +248,7 @@ virtual void clear () = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_CLEAR )
 {
-  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

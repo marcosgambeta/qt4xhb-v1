@@ -57,7 +57,7 @@ QSslError ()
 void QSslError_new1()
 {
   QSslError * o = new QSslError();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -66,7 +66,7 @@ QSslError ( SslError error )
 void QSslError_new2()
 {
   QSslError * o = new QSslError( (QSslError::SslError) hb_parni(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -75,7 +75,7 @@ QSslError ( SslError error, const QSslCertificate & certificate )
 void QSslError_new3()
 {
   QSslError * o = new QSslError( (QSslError::SslError) hb_parni(1), *PQSSLCERTIFICATE(2) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -84,7 +84,7 @@ QSslError ( const QSslError & other )
 void QSslError_new4()
 {
   QSslError * o = new QSslError( *PQSSLERROR(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QSslError ()
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QSSLERROR_NEW )
 
 HB_FUNC_STATIC( QSSLERROR_DELETE )
 {
-  QSslError * obj = (QSslError *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSslError * obj = (QSslError *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -138,7 +138,7 @@ QSslCertificate certificate () const
 */
 HB_FUNC_STATIC( QSSLERROR_CERTIFICATE )
 {
-  QSslError * obj = (QSslError *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSslError * obj = (QSslError *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QSSLERROR_CERTIFICATE )
     {
 #endif
       QSslCertificate * ptr = new QSslCertificate( obj->certificate() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSSLCERTIFICATE", true );
+      Qt4xHb::createReturnClass( ptr, "QSSLCERTIFICATE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,7 +163,7 @@ SslError error () const
 */
 HB_FUNC_STATIC( QSSLERROR_ERROR )
 {
-  QSslError * obj = (QSslError *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSslError * obj = (QSslError *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -187,7 +187,7 @@ QString errorString () const
 */
 HB_FUNC_STATIC( QSSLERROR_ERRORSTRING )
 {
-  QSslError * obj = (QSslError *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSslError * obj = (QSslError *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
