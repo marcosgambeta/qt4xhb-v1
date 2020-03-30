@@ -57,7 +57,7 @@ QMouseEvent(Type type, const QPoint &pos, Qt::MouseButton button,Qt::MouseButton
 void QMouseEvent_new1()
 {
   QMouseEvent * o = new QMouseEvent( (QEvent::Type) hb_parni(1), *PQPOINT(2), (Qt::MouseButton) hb_parni(3), (Qt::MouseButtons) hb_parni(4), (Qt::KeyboardModifiers) hb_parni(5) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, false );
+  Qt4xHb::returnNewObject( o, false );
 }
 
 /*
@@ -66,7 +66,7 @@ QMouseEvent(Type type, const QPoint &pos, const QPoint &globalPos,Qt::MouseButto
 void QMouseEvent_new2()
 {
   QMouseEvent * o = new QMouseEvent( (QEvent::Type) hb_parni(1), *PQPOINT(2), *PQPOINT(3), (Qt::MouseButton) hb_parni(4), (Qt::MouseButtons) hb_parni(5), (Qt::KeyboardModifiers) hb_parni(6) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, false );
+  Qt4xHb::returnNewObject( o, false );
 }
 
 //[1]QMouseEvent(Type type, const QPoint &pos, Qt::MouseButton button,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_NEW )
 
 HB_FUNC_STATIC( QMOUSEEVENT_DELETE )
 {
-  QMouseEvent * obj = (QMouseEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMouseEvent * obj = (QMouseEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -110,7 +110,7 @@ const QPoint &pos() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_POS )
 {
-  QMouseEvent * obj = (QMouseEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMouseEvent * obj = (QMouseEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_POS )
     {
 #endif
       const QPoint * ptr = &obj->pos();
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPOINT", false );
+      Qt4xHb::createReturnClass( ptr, "QPOINT", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,7 +135,7 @@ const QPoint &globalPos() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_GLOBALPOS )
 {
-  QMouseEvent * obj = (QMouseEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMouseEvent * obj = (QMouseEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_GLOBALPOS )
     {
 #endif
       const QPoint * ptr = &obj->globalPos();
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPOINT", false );
+      Qt4xHb::createReturnClass( ptr, "QPOINT", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,7 +160,7 @@ int x() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_X )
 {
-  QMouseEvent * obj = (QMouseEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMouseEvent * obj = (QMouseEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -184,7 +184,7 @@ int y() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_Y )
 {
-  QMouseEvent * obj = (QMouseEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMouseEvent * obj = (QMouseEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -208,7 +208,7 @@ int globalX() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_GLOBALX )
 {
-  QMouseEvent * obj = (QMouseEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMouseEvent * obj = (QMouseEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -232,7 +232,7 @@ int globalY() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_GLOBALY )
 {
-  QMouseEvent * obj = (QMouseEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMouseEvent * obj = (QMouseEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -256,7 +256,7 @@ Qt::MouseButton button() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_BUTTON )
 {
-  QMouseEvent * obj = (QMouseEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMouseEvent * obj = (QMouseEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -280,7 +280,7 @@ Qt::MouseButtons buttons() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_BUTTONS )
 {
-  QMouseEvent * obj = (QMouseEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMouseEvent * obj = (QMouseEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -304,7 +304,7 @@ bool hasExtendedInfo() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_HASEXTENDEDINFO )
 {
-  QMouseEvent * obj = (QMouseEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMouseEvent * obj = (QMouseEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -328,7 +328,7 @@ QPointF posF() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_POSF )
 {
-  QMouseEvent * obj = (QMouseEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMouseEvent * obj = (QMouseEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_POSF )
     {
 #endif
       QPointF * ptr = new QPointF( obj->posF() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPOINTF", true );
+      Qt4xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_CREATEEXTENDEDMOUSEEVENT )
   {
 #endif
     QMouseEvent * ptr = QMouseEvent::createExtendedMouseEvent( (QEvent::Type) hb_parni(1), *PQPOINTF(2), *PQPOINT(3), (Qt::MouseButton) hb_parni(4), (Qt::MouseButtons) hb_parni(5), (Qt::KeyboardModifiers) hb_parni(6) );
-    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QMOUSEEVENT" );
+    Qt4xHb::createReturnClass( ptr, "QMOUSEEVENT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

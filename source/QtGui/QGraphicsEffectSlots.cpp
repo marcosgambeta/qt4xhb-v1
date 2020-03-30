@@ -35,7 +35,7 @@ void QGraphicsEffectSlots::enabledChanged( bool enabled )
 
 void QGraphicsEffectSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsEffect * obj = (QGraphicsEffect *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

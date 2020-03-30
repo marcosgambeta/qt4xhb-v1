@@ -54,7 +54,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_NEW )
   if( ISNUMPAR(2) && ISNUM(1) && ISQSPLITTER(2) )
   {
     QSplitterHandle * o = new QSplitterHandle( (Qt::Orientation) hb_parni(1), PQSPLITTER(2) );
-    Qt4xHb::_qt4xhb_returnNewObject( o, false );
+    Qt4xHb::returnNewObject( o, false );
   }
   else
   {
@@ -67,7 +67,7 @@ bool opaqueResize () const
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_OPAQUERESIZE )
 {
-  QSplitterHandle * obj = (QSplitterHandle *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSplitterHandle * obj = (QSplitterHandle *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -91,7 +91,7 @@ Qt::Orientation orientation () const
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_ORIENTATION )
 {
-  QSplitterHandle * obj = (QSplitterHandle *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSplitterHandle * obj = (QSplitterHandle *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -115,7 +115,7 @@ void setOrientation ( Qt::Orientation orientation )
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_SETORIENTATION )
 {
-  QSplitterHandle * obj = (QSplitterHandle *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSplitterHandle * obj = (QSplitterHandle *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -141,7 +141,7 @@ QSplitter * splitter () const
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_SPLITTER )
 {
-  QSplitterHandle * obj = (QSplitterHandle *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSplitterHandle * obj = (QSplitterHandle *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_SPLITTER )
     {
 #endif
       QSplitter * ptr = obj->splitter();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QSPLITTER" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QSPLITTER" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,7 +166,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_SIZEHINT )
 {
-  QSplitterHandle * obj = (QSplitterHandle *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QSplitterHandle * obj = (QSplitterHandle *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

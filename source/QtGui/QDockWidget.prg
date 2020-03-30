@@ -68,7 +68,7 @@ QDockWidget ( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags
 void QDockWidget_new1()
 {
   QDockWidget * o = new QDockWidget( PQSTRING(1), OPQWIDGET(2,0), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, false );
+  Qt4xHb::returnNewObject( o, false );
 }
 
 /*
@@ -77,7 +77,7 @@ QDockWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 void QDockWidget_new2()
 {
   QDockWidget * o = new QDockWidget( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, false );
+  Qt4xHb::returnNewObject( o, false );
 }
 
 //[1]QDockWidget ( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_NEW )
 
 HB_FUNC_STATIC( QDOCKWIDGET_DELETE )
 {
-  QDockWidget * obj = (QDockWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDockWidget * obj = (QDockWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -123,7 +123,7 @@ Qt::DockWidgetAreas allowedAreas () const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_ALLOWEDAREAS )
 {
-  QDockWidget * obj = (QDockWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDockWidget * obj = (QDockWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -147,7 +147,7 @@ DockWidgetFeatures features () const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_FEATURES )
 {
-  QDockWidget * obj = (QDockWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDockWidget * obj = (QDockWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -171,7 +171,7 @@ bool isAreaAllowed ( Qt::DockWidgetArea area ) const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_ISAREAALLOWED )
 {
-  QDockWidget * obj = (QDockWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDockWidget * obj = (QDockWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -195,7 +195,7 @@ bool isFloating () const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_ISFLOATING )
 {
-  QDockWidget * obj = (QDockWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDockWidget * obj = (QDockWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -219,7 +219,7 @@ void setAllowedAreas ( Qt::DockWidgetAreas areas )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_SETALLOWEDAREAS )
 {
-  QDockWidget * obj = (QDockWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDockWidget * obj = (QDockWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -245,7 +245,7 @@ void setFeatures ( DockWidgetFeatures features )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_SETFEATURES )
 {
-  QDockWidget * obj = (QDockWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDockWidget * obj = (QDockWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -271,7 +271,7 @@ void setFloating ( bool floating )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_SETFLOATING )
 {
-  QDockWidget * obj = (QDockWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDockWidget * obj = (QDockWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -297,7 +297,7 @@ void setTitleBarWidget ( QWidget * widget )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_SETTITLEBARWIDGET )
 {
-  QDockWidget * obj = (QDockWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDockWidget * obj = (QDockWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -323,7 +323,7 @@ void setWidget ( QWidget * widget )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_SETWIDGET )
 {
-  QDockWidget * obj = (QDockWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDockWidget * obj = (QDockWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -349,7 +349,7 @@ QWidget * titleBarWidget () const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_TITLEBARWIDGET )
 {
-  QDockWidget * obj = (QDockWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDockWidget * obj = (QDockWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_TITLEBARWIDGET )
     {
 #endif
       QWidget * ptr = obj->titleBarWidget();
-      Qt4xHb::_qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -374,7 +374,7 @@ QAction * toggleViewAction () const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_TOGGLEVIEWACTION )
 {
-  QDockWidget * obj = (QDockWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDockWidget * obj = (QDockWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_TOGGLEVIEWACTION )
     {
 #endif
       QAction * ptr = obj->toggleViewAction();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -399,7 +399,7 @@ QWidget * widget () const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_WIDGET )
 {
-  QDockWidget * obj = (QDockWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDockWidget * obj = (QDockWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_WIDGET )
     {
 #endif
       QWidget * ptr = obj->widget();
-      Qt4xHb::_qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

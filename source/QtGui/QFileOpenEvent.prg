@@ -50,7 +50,7 @@ QFileOpenEvent(const QString &file)
 void QFileOpenEvent_new1()
 {
   QFileOpenEvent * o = new QFileOpenEvent( PQSTRING(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, false );
+  Qt4xHb::returnNewObject( o, false );
 }
 
 /*
@@ -59,7 +59,7 @@ QFileOpenEvent(const QUrl &url)
 void QFileOpenEvent_new2()
 {
   QFileOpenEvent * o = new QFileOpenEvent( *PQURL(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, false );
+  Qt4xHb::returnNewObject( o, false );
 }
 
 //[1]QFileOpenEvent(const QString &file)
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QFILEOPENEVENT_NEW )
 
 HB_FUNC_STATIC( QFILEOPENEVENT_DELETE )
 {
-  QFileOpenEvent * obj = (QFileOpenEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFileOpenEvent * obj = (QFileOpenEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -103,7 +103,7 @@ QString file () const
 */
 HB_FUNC_STATIC( QFILEOPENEVENT_FILE )
 {
-  QFileOpenEvent * obj = (QFileOpenEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFileOpenEvent * obj = (QFileOpenEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -127,7 +127,7 @@ bool openFile ( QFile & file, QIODevice::OpenMode flags ) const
 */
 HB_FUNC_STATIC( QFILEOPENEVENT_OPENFILE )
 {
-  QFileOpenEvent * obj = (QFileOpenEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFileOpenEvent * obj = (QFileOpenEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -151,7 +151,7 @@ QUrl url () const
 */
 HB_FUNC_STATIC( QFILEOPENEVENT_URL )
 {
-  QFileOpenEvent * obj = (QFileOpenEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QFileOpenEvent * obj = (QFileOpenEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QFILEOPENEVENT_URL )
     {
 #endif
       QUrl * ptr = new QUrl( obj->url() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QURL", true );
+      Qt4xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -52,7 +52,7 @@ RETURN
 
 HB_FUNC_STATIC( QITEMEDITORCREATORBASE_DELETE )
 {
-  QItemEditorCreatorBase * obj = (QItemEditorCreatorBase *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QItemEditorCreatorBase * obj = (QItemEditorCreatorBase *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -72,7 +72,7 @@ virtual QWidget * createWidget ( QWidget * parent ) const = 0
 */
 HB_FUNC_STATIC( QITEMEDITORCREATORBASE_CREATEWIDGET )
 {
-  QItemEditorCreatorBase * obj = (QItemEditorCreatorBase *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QItemEditorCreatorBase * obj = (QItemEditorCreatorBase *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QITEMEDITORCREATORBASE_CREATEWIDGET )
     {
 #endif
       QWidget * ptr = obj->createWidget( PQWIDGET(1) );
-      Qt4xHb::_qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -97,7 +97,7 @@ virtual QByteArray valuePropertyName () const = 0
 */
 HB_FUNC_STATIC( QITEMEDITORCREATORBASE_VALUEPROPERTYNAME )
 {
-  QItemEditorCreatorBase * obj = (QItemEditorCreatorBase *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QItemEditorCreatorBase * obj = (QItemEditorCreatorBase *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QITEMEDITORCREATORBASE_VALUEPROPERTYNAME )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->valuePropertyName() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

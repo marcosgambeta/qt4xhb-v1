@@ -48,7 +48,7 @@ void QTreeViewSlots::expanded( const QModelIndex & index )
 
 void QTreeViewSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

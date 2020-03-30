@@ -57,7 +57,7 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_DELETE )
 {
-  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -77,7 +77,7 @@ void acceptProposedAction ()
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_ACCEPTPROPOSEDACTION )
 {
-  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -103,7 +103,7 @@ Qt::MouseButtons buttons () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_BUTTONS )
 {
-  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -127,7 +127,7 @@ Qt::DropAction dropAction () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_DROPACTION )
 {
-  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -151,7 +151,7 @@ const QMimeData * mimeData () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_MIMEDATA )
 {
-  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_MIMEDATA )
     {
 #endif
       const QMimeData * ptr = obj->mimeData();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QMIMEDATA" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QMIMEDATA" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,7 +176,7 @@ Qt::KeyboardModifiers modifiers () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_MODIFIERS )
 {
-  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -200,7 +200,7 @@ QPointF pos () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_POS )
 {
-  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_POS )
     {
 #endif
       QPointF * ptr = new QPointF( obj->pos() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPOINTF", true );
+      Qt4xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,7 +225,7 @@ Qt::DropActions possibleActions () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_POSSIBLEACTIONS )
 {
-  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -249,7 +249,7 @@ Qt::DropAction proposedAction () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_PROPOSEDACTION )
 {
-  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -273,7 +273,7 @@ QPointF scenePos () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SCENEPOS )
 {
-  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SCENEPOS )
     {
 #endif
       QPointF * ptr = new QPointF( obj->scenePos() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPOINTF", true );
+      Qt4xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -298,7 +298,7 @@ QPoint screenPos () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SCREENPOS )
 {
-  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SCREENPOS )
     {
 #endif
       QPoint * ptr = new QPoint( obj->screenPos() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPOINT", true );
+      Qt4xHb::createReturnClass( ptr, "QPOINT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -323,7 +323,7 @@ void setDropAction ( Qt::DropAction action )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SETDROPACTION )
 {
-  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -349,7 +349,7 @@ QWidget * source () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SOURCE )
 {
-  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SOURCE )
     {
 #endif
       QWidget * ptr = obj->source();
-      Qt4xHb::_qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

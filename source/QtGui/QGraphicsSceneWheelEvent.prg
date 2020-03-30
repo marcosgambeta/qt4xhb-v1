@@ -48,7 +48,7 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_DELETE )
 {
-  QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -68,7 +68,7 @@ Qt::MouseButtons buttons () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_BUTTONS )
 {
-  QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -92,7 +92,7 @@ int delta () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_DELTA )
 {
-  QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -116,7 +116,7 @@ Qt::KeyboardModifiers modifiers () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_MODIFIERS )
 {
-  QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -140,7 +140,7 @@ Qt::Orientation orientation () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_ORIENTATION )
 {
-  QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -164,7 +164,7 @@ QPointF pos () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_POS )
 {
-  QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_POS )
     {
 #endif
       QPointF * ptr = new QPointF( obj->pos() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPOINTF", true );
+      Qt4xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,7 +189,7 @@ QPointF scenePos () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_SCENEPOS )
 {
-  QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_SCENEPOS )
     {
 #endif
       QPointF * ptr = new QPointF( obj->scenePos() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPOINTF", true );
+      Qt4xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,7 +214,7 @@ QPoint screenPos () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_SCREENPOS )
 {
-  QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_SCREENPOS )
     {
 #endif
       QPoint * ptr = new QPoint( obj->screenPos() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPOINT", true );
+      Qt4xHb::createReturnClass( ptr, "QPOINT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

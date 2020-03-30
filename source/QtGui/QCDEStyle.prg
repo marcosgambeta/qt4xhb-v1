@@ -53,7 +53,7 @@ HB_FUNC_STATIC( QCDESTYLE_NEW )
   if( ISBETWEEN(0,1) && ISOPTLOG(1) )
   {
     QCDEStyle * o = new QCDEStyle( OPBOOL(1,false) );
-    Qt4xHb::_qt4xhb_returnNewObject( o, false );
+    Qt4xHb::returnNewObject( o, false );
   }
   else
   {
@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QCDESTYLE_NEW )
 
 HB_FUNC_STATIC( QCDESTYLE_DELETE )
 {
-  QCDEStyle * obj = (QCDEStyle *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QCDEStyle * obj = (QCDEStyle *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -85,7 +85,7 @@ virtual void drawControl ( ControlElement element, const QStyleOption * opt, QPa
 */
 HB_FUNC_STATIC( QCDESTYLE_DRAWCONTROL )
 {
-  QCDEStyle * obj = (QCDEStyle *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QCDEStyle * obj = (QCDEStyle *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -111,7 +111,7 @@ virtual void drawPrimitive ( PrimitiveElement pe, const QStyleOption * opt, QPai
 */
 HB_FUNC_STATIC( QCDESTYLE_DRAWPRIMITIVE )
 {
-  QCDEStyle * obj = (QCDEStyle *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QCDEStyle * obj = (QCDEStyle *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -137,7 +137,7 @@ virtual int pixelMetric ( PixelMetric metric, const QStyleOption * option = 0, c
 */
 HB_FUNC_STATIC( QCDESTYLE_PIXELMETRIC )
 {
-  QCDEStyle * obj = (QCDEStyle *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QCDEStyle * obj = (QCDEStyle *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QCDESTYLE_PIXELMETRIC )
     if( ISBETWEEN(1,3) && ISNUM(1) && (ISQSTYLEOPTION(2)||ISNIL(2)) && (ISQWIDGET(3)||ISNIL(3)) )
     {
 #endif
-      RINT( obj->pixelMetric( (QStyle::PixelMetric) hb_parni(1), ISNIL(2)? 0 : (QStyleOption *) Qt4xHb::_qt4xhb_itemGetPtr(2), OPQWIDGET(3,0) ) );
+      RINT( obj->pixelMetric( (QStyle::PixelMetric) hb_parni(1), ISNIL(2)? 0 : (QStyleOption *) Qt4xHb::itemGetPtr(2), OPQWIDGET(3,0) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,7 +161,7 @@ virtual QPalette standardPalette () const
 */
 HB_FUNC_STATIC( QCDESTYLE_STANDARDPALETTE )
 {
-  QCDEStyle * obj = (QCDEStyle *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QCDEStyle * obj = (QCDEStyle *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QCDESTYLE_STANDARDPALETTE )
     {
 #endif
       QPalette * ptr = new QPalette( obj->standardPalette() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPALETTE", true );
+      Qt4xHb::createReturnClass( ptr, "QPALETTE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

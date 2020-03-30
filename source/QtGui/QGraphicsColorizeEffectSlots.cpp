@@ -48,7 +48,7 @@ void QGraphicsColorizeEffectSlots::strengthChanged( qreal strength )
 
 void QGraphicsColorizeEffectSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -35,7 +35,7 @@ void QCheckBoxSlots::stateChanged( int state )
 
 void QCheckBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QCheckBox * obj = (QCheckBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QCheckBox * obj = (QCheckBox *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

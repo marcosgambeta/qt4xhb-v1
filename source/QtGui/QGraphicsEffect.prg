@@ -49,7 +49,7 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSEFFECT_DELETE )
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsEffect * obj = (QGraphicsEffect *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -71,7 +71,7 @@ QRectF boundingRect () const
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECT )
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsEffect * obj = (QGraphicsEffect *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECT )
     {
 #endif
       QRectF * ptr = new QRectF( obj->boundingRect() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QRECTF", true );
+      Qt4xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -96,7 +96,7 @@ virtual QRectF boundingRectFor ( const QRectF & rect ) const
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECTFOR )
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsEffect * obj = (QGraphicsEffect *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECTFOR )
     {
 #endif
       QRectF * ptr = new QRectF( obj->boundingRectFor( *PQRECTF(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QRECTF", true );
+      Qt4xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -121,7 +121,7 @@ bool isEnabled () const
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_ISENABLED )
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsEffect * obj = (QGraphicsEffect *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -145,7 +145,7 @@ void setEnabled ( bool enable )
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_SETENABLED )
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsEffect * obj = (QGraphicsEffect *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -171,7 +171,7 @@ void update ()
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_UPDATE )
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsEffect * obj = (QGraphicsEffect *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

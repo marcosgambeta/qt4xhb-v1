@@ -45,7 +45,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTFONTENGINE_DELETE )
 {
-  QAbstractFontEngine * obj = (QAbstractFontEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFontEngine * obj = (QAbstractFontEngine *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -71,7 +71,7 @@ virtual Capabilities capabilities () const = 0
 */
 HB_FUNC_STATIC( QABSTRACTFONTENGINE_CAPABILITIES )
 {
-  QAbstractFontEngine * obj = (QAbstractFontEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFontEngine * obj = (QAbstractFontEngine *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -99,7 +99,7 @@ virtual QVariant fontProperty ( FontProperty property ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTFONTENGINE_FONTPROPERTY )
 {
-  QAbstractFontEngine * obj = (QAbstractFontEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFontEngine * obj = (QAbstractFontEngine *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_FONTPROPERTY )
     {
 #endif
       QVariant * ptr = new QVariant( obj->fontProperty( (QAbstractFontEngine::FontProperty) hb_parni(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,7 +128,7 @@ virtual bool renderGlyph ( uint glyph, int depth, int bytesPerLine, int height, 
 */
 HB_FUNC_STATIC( QABSTRACTFONTENGINE_RENDERGLYPH )
 {
-  QAbstractFontEngine * obj = (QAbstractFontEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFontEngine * obj = (QAbstractFontEngine *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -68,7 +68,7 @@ void QDialogButtonBoxSlots::rejected()
 
 void QDialogButtonBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDialogButtonBox * obj = (QDialogButtonBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDialogButtonBox * obj = (QDialogButtonBox *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

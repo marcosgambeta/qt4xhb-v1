@@ -48,7 +48,7 @@ QStyleOptionComplex(int version = QStyleOptionComplex::Version, int type = SO_Co
 void QStyleOptionComplex_new1()
 {
   QStyleOptionComplex * o = new QStyleOptionComplex( OPINT(1,QStyleOptionComplex::Version), OPINT(2,QStyleOptionComplex::SO_Complex) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -57,7 +57,7 @@ QStyleOptionComplex(const QStyleOptionComplex &other)
 void QStyleOptionComplex_new2()
 {
   QStyleOptionComplex * o = new QStyleOptionComplex( *PQSTYLEOPTIONCOMPLEX(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QStyleOptionComplex(int version = QStyleOptionComplex::Version, int type = SO_Complex)
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_NEW )
 
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_DELETE )
 {
-  QStyleOptionComplex * obj = (QStyleOptionComplex *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionComplex * obj = (QStyleOptionComplex *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -101,7 +101,7 @@ QStyle::SubControls subControls
 */
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SUBCONTROLS )
 {
-  QStyleOptionComplex * obj = (QStyleOptionComplex *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionComplex * obj = (QStyleOptionComplex *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SUBCONTROLS )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SETSUBCONTROLS )
 {
-  QStyleOptionComplex * obj = (QStyleOptionComplex *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionComplex * obj = (QStyleOptionComplex *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -139,7 +139,7 @@ QStyle::SubControls activeSubControls
 */
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_ACTIVESUBCONTROLS )
 {
-  QStyleOptionComplex * obj = (QStyleOptionComplex *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionComplex * obj = (QStyleOptionComplex *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_ACTIVESUBCONTROLS )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SETACTIVESUBCONTROLS )
 {
-  QStyleOptionComplex * obj = (QStyleOptionComplex *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionComplex * obj = (QStyleOptionComplex *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -74,7 +74,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_DELETE )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -96,7 +96,7 @@ virtual QModelIndex mapFromSource ( const QModelIndex & sourceIndex ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MAPFROMSOURCE )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MAPFROMSOURCE )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->mapFromSource( *PQMODELINDEX(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -121,7 +121,7 @@ virtual QItemSelection mapSelectionFromSource ( const QItemSelection & sourceSel
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MAPSELECTIONFROMSOURCE )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MAPSELECTIONFROMSOURCE )
     {
 #endif
       QItemSelection * ptr = new QItemSelection( obj->mapSelectionFromSource( *PQITEMSELECTION(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QITEMSELECTION", true );
+      Qt4xHb::createReturnClass( ptr, "QITEMSELECTION", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,7 +146,7 @@ virtual QItemSelection mapSelectionToSource ( const QItemSelection & proxySelect
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MAPSELECTIONTOSOURCE )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MAPSELECTIONTOSOURCE )
     {
 #endif
       QItemSelection * ptr = new QItemSelection( obj->mapSelectionToSource( *PQITEMSELECTION(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QITEMSELECTION", true );
+      Qt4xHb::createReturnClass( ptr, "QITEMSELECTION", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,7 +171,7 @@ virtual QModelIndex mapToSource ( const QModelIndex & proxyIndex ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MAPTOSOURCE )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MAPTOSOURCE )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->mapToSource( *PQMODELINDEX(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,7 +196,7 @@ virtual void setSourceModel ( QAbstractItemModel * sourceModel )
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SETSOURCEMODEL )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -222,7 +222,7 @@ QAbstractItemModel * sourceModel () const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SOURCEMODEL )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SOURCEMODEL )
     {
 #endif
       QAbstractItemModel * ptr = obj->sourceModel();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -247,7 +247,7 @@ virtual QModelIndex buddy ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_BUDDY )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_BUDDY )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->buddy( *PQMODELINDEX(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -272,7 +272,7 @@ virtual bool canFetchMore ( const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_CANFETCHMORE )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -296,7 +296,7 @@ virtual QVariant data ( const QModelIndex & proxyIndex, int role = Qt::DisplayRo
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_DATA )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_DATA )
     {
 #endif
       QVariant * ptr = new QVariant( obj->data( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -321,7 +321,7 @@ virtual void fetchMore ( const QModelIndex & parent )
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_FETCHMORE )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -347,7 +347,7 @@ virtual Qt::ItemFlags flags ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_FLAGS )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -371,7 +371,7 @@ virtual bool hasChildren ( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_HASCHILDREN )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_HASCHILDREN )
     if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||ISNIL(1)) )
     {
 #endif
-      RBOOL( obj->hasChildren( ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt4xHb::_qt4xhb_itemGetPtr(1) ) );
+      RBOOL( obj->hasChildren( ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt4xHb::itemGetPtr(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -395,7 +395,7 @@ virtual QVariant headerData ( int section, Qt::Orientation orientation, int role
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_HEADERDATA )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_HEADERDATA )
     {
 #endif
       QVariant * ptr = new QVariant( obj->headerData( PINT(1), (Qt::Orientation) hb_parni(2), PINT(3) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -420,7 +420,7 @@ virtual QMimeData * mimeData ( const QModelIndexList & indexes ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MIMEDATA )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MIMEDATA )
         par1 << *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
       QMimeData * ptr = obj->mimeData( par1 );
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QMIMEDATA" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QMIMEDATA" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -453,7 +453,7 @@ virtual QStringList mimeTypes () const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MIMETYPES )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -477,7 +477,7 @@ virtual void revert ()
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_REVERT )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -503,7 +503,7 @@ virtual bool setData ( const QModelIndex & index, const QVariant & value, int ro
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SETDATA )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -527,7 +527,7 @@ virtual bool setHeaderData ( int section, Qt::Orientation orientation, const QVa
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SETHEADERDATA )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -551,7 +551,7 @@ virtual void sort ( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SORT )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -577,7 +577,7 @@ virtual QSize span ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SPAN )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -586,7 +586,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SPAN )
     {
 #endif
       QSize * ptr = new QSize( obj->span( *PQMODELINDEX(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -602,7 +602,7 @@ virtual bool submit ()
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SUBMIT )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -626,7 +626,7 @@ virtual Qt::DropActions supportedDropActions () const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SUPPORTEDDROPACTIONS )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractProxyModel * obj = (QAbstractProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

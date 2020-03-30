@@ -48,7 +48,7 @@ void QMainWindowSlots::toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonSty
 
 void QMainWindowSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -52,7 +52,7 @@ QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos,
 void QContextMenuEvent_new1()
 {
   QContextMenuEvent * o = new QContextMenuEvent( (QContextMenuEvent::Reason) hb_parni(1), *PQPOINT(2), *PQPOINT(3), (Qt::KeyboardModifiers) hb_parni(4) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, false );
+  Qt4xHb::returnNewObject( o, false );
 }
 
 /*
@@ -61,7 +61,7 @@ QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos 
 void QContextMenuEvent_new2()
 {
   QContextMenuEvent * o = new QContextMenuEvent( (QContextMenuEvent::Reason) hb_parni(1), *PQPOINT(2), *PQPOINT(3) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, false );
+  Qt4xHb::returnNewObject( o, false );
 }
 
 /*
@@ -70,7 +70,7 @@ QContextMenuEvent ( Reason reason, const QPoint & pos )
 void QContextMenuEvent_new3()
 {
   QContextMenuEvent * o = new QContextMenuEvent( (QContextMenuEvent::Reason) hb_parni(1), *PQPOINT(2) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, false );
+  Qt4xHb::returnNewObject( o, false );
 }
 
 //[1]QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos, Qt::KeyboardModifiers modifiers )
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW )
 
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_DELETE )
 {
-  QContextMenuEvent * obj = (QContextMenuEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QContextMenuEvent * obj = (QContextMenuEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -119,7 +119,7 @@ const QPoint & globalPos () const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALPOS )
 {
-  QContextMenuEvent * obj = (QContextMenuEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QContextMenuEvent * obj = (QContextMenuEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALPOS )
     {
 #endif
       const QPoint * ptr = &obj->globalPos();
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPOINT", false );
+      Qt4xHb::createReturnClass( ptr, "QPOINT", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,7 +144,7 @@ int globalX () const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALX )
 {
-  QContextMenuEvent * obj = (QContextMenuEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QContextMenuEvent * obj = (QContextMenuEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -168,7 +168,7 @@ int globalY () const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALY )
 {
-  QContextMenuEvent * obj = (QContextMenuEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QContextMenuEvent * obj = (QContextMenuEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -192,7 +192,7 @@ const QPoint & pos () const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_POS )
 {
-  QContextMenuEvent * obj = (QContextMenuEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QContextMenuEvent * obj = (QContextMenuEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_POS )
     {
 #endif
       const QPoint * ptr = &obj->pos();
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPOINT", false );
+      Qt4xHb::createReturnClass( ptr, "QPOINT", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -217,7 +217,7 @@ Reason reason () const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_REASON )
 {
-  QContextMenuEvent * obj = (QContextMenuEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QContextMenuEvent * obj = (QContextMenuEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -241,7 +241,7 @@ int x () const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_X )
 {
-  QContextMenuEvent * obj = (QContextMenuEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QContextMenuEvent * obj = (QContextMenuEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -265,7 +265,7 @@ int y () const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_Y )
 {
-  QContextMenuEvent * obj = (QContextMenuEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QContextMenuEvent * obj = (QContextMenuEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

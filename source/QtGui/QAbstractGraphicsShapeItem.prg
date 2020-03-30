@@ -51,7 +51,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_DELETE )
 {
-  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -71,7 +71,7 @@ QBrush brush () const
 */
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_BRUSH )
 {
-  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_BRUSH )
     {
 #endif
       QBrush * ptr = new QBrush( obj->brush() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBRUSH", true );
+      Qt4xHb::createReturnClass( ptr, "QBRUSH", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -96,7 +96,7 @@ QPen pen () const
 */
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_PEN )
 {
-  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_PEN )
     {
 #endif
       QPen * ptr = new QPen( obj->pen() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPEN", true );
+      Qt4xHb::createReturnClass( ptr, "QPEN", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -121,7 +121,7 @@ void setBrush ( const QBrush & brush )
 */
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_SETBRUSH )
 {
-  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -147,7 +147,7 @@ void setPen ( const QPen & pen )
 */
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_SETPEN )
 {
-  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -173,7 +173,7 @@ virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_ISOBSCUREDBY )
 {
-  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -197,7 +197,7 @@ virtual QPainterPath opaqueArea () const
 */
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_OPAQUEAREA )
 {
-  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_OPAQUEAREA )
     {
 #endif
       QPainterPath * ptr = new QPainterPath( obj->opaqueArea() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPAINTERPATH", true );
+      Qt4xHb::createReturnClass( ptr, "QPAINTERPATH", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

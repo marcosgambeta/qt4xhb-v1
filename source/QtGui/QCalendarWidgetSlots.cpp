@@ -74,7 +74,7 @@ void QCalendarWidgetSlots::selectionChanged()
 
 void QCalendarWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QCalendarWidget * obj = (QCalendarWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QCalendarWidget * obj = (QCalendarWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

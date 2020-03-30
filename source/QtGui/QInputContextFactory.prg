@@ -56,7 +56,7 @@ RETURN
 
 HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_DELETE )
 {
-  QInputContextFactory * obj = (QInputContextFactory *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QInputContextFactory * obj = (QInputContextFactory *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -76,7 +76,7 @@ QInputContext * create ( const QString & key, QObject * parent )
 */
 HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_CREATE )
 {
-  QInputContextFactory * obj = (QInputContextFactory *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QInputContextFactory * obj = (QInputContextFactory *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_CREATE )
     {
 #endif
       QInputContext * ptr = obj->create( PQSTRING(1), PQOBJECT(2) );
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QINPUTCONTEXT" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QINPUTCONTEXT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

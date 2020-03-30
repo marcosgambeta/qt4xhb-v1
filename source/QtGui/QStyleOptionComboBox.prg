@@ -58,7 +58,7 @@ QStyleOptionComboBox()
 void QStyleOptionComboBox_new1()
 {
   QStyleOptionComboBox * o = new QStyleOptionComboBox();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -67,7 +67,7 @@ QStyleOptionComboBox(const QStyleOptionComboBox &other)
 void QStyleOptionComboBox_new2()
 {
   QStyleOptionComboBox * o = new QStyleOptionComboBox( *PQSTYLEOPTIONCOMBOBOX(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -99,7 +99,7 @@ bool editable
 */
 HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_EDITABLE )
 {
-  QStyleOptionComboBox * obj = (QStyleOptionComboBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionComboBox * obj = (QStyleOptionComboBox *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_EDITABLE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_SETEDITABLE )
 {
-  QStyleOptionComboBox * obj = (QStyleOptionComboBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionComboBox * obj = (QStyleOptionComboBox *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -137,14 +137,14 @@ QRect popupRect
 */
 HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_POPUPRECT )
 {
-  QStyleOptionComboBox * obj = (QStyleOptionComboBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionComboBox * obj = (QStyleOptionComboBox *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     if( ISNUMPAR(0) )
     {
       QRect * ptr = new QRect( obj->popupRect );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass( ptr, "QRECT", true );
     }
     else
     {
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_POPUPRECT )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_SETPOPUPRECT )
 {
-  QStyleOptionComboBox * obj = (QStyleOptionComboBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionComboBox * obj = (QStyleOptionComboBox *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -176,7 +176,7 @@ bool frame
 */
 HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_FRAME )
 {
-  QStyleOptionComboBox * obj = (QStyleOptionComboBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionComboBox * obj = (QStyleOptionComboBox *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_FRAME )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_SETFRAME )
 {
-  QStyleOptionComboBox * obj = (QStyleOptionComboBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionComboBox * obj = (QStyleOptionComboBox *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -214,7 +214,7 @@ QString currentText
 */
 HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_CURRENTTEXT )
 {
-  QStyleOptionComboBox * obj = (QStyleOptionComboBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionComboBox * obj = (QStyleOptionComboBox *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_CURRENTTEXT )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_SETCURRENTTEXT )
 {
-  QStyleOptionComboBox * obj = (QStyleOptionComboBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionComboBox * obj = (QStyleOptionComboBox *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -252,14 +252,14 @@ QIcon currentIcon
 */
 HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_CURRENTICON )
 {
-  QStyleOptionComboBox * obj = (QStyleOptionComboBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionComboBox * obj = (QStyleOptionComboBox *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     if( ISNUMPAR(0) )
     {
       QIcon * ptr = new QIcon( obj->currentIcon );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QICON", true );
+      Qt4xHb::createReturnClass( ptr, "QICON", true );
     }
     else
     {
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_CURRENTICON )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_SETCURRENTICON )
 {
-  QStyleOptionComboBox * obj = (QStyleOptionComboBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionComboBox * obj = (QStyleOptionComboBox *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -291,14 +291,14 @@ QSize iconSize
 */
 HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_ICONSIZE )
 {
-  QStyleOptionComboBox * obj = (QStyleOptionComboBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionComboBox * obj = (QStyleOptionComboBox *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     if( ISNUMPAR(0) )
     {
       QSize * ptr = new QSize( obj->iconSize );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
     }
     else
     {
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_ICONSIZE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_SETICONSIZE )
 {
-  QStyleOptionComboBox * obj = (QStyleOptionComboBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionComboBox * obj = (QStyleOptionComboBox *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

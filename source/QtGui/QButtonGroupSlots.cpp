@@ -100,7 +100,7 @@ void QButtonGroupSlots::buttonReleased( int id )
 
 void QButtonGroupSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QButtonGroup * obj = (QButtonGroup *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QButtonGroup * obj = (QButtonGroup *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

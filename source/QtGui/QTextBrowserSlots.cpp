@@ -111,7 +111,7 @@ void QTextBrowserSlots::sourceChanged( const QUrl & src )
 
 void QTextBrowserSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTextBrowser * obj = (QTextBrowser *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTextBrowser * obj = (QTextBrowser *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

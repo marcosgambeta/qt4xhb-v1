@@ -35,7 +35,7 @@ void QWorkspaceSlots::windowActivated( QWidget * w )
 
 void QWorkspaceSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QWorkspace * obj = (QWorkspace *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWorkspace * obj = (QWorkspace *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

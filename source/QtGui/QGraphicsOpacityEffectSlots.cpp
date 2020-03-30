@@ -48,7 +48,7 @@ void QGraphicsOpacityEffectSlots::opacityMaskChanged( const QBrush & mask )
 
 void QGraphicsOpacityEffectSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

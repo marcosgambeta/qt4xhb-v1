@@ -53,7 +53,7 @@ QIntValidator ( QObject * parent = 0 )
 void QIntValidator_new1()
 {
   QIntValidator * o = new QIntValidator( OPQOBJECT(1,0) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, false );
+  Qt4xHb::returnNewObject( o, false );
 }
 
 /*
@@ -62,7 +62,7 @@ QIntValidator ( int minimum, int maximum, QObject * parent )
 void QIntValidator_new2()
 {
   QIntValidator * o = new QIntValidator( PINT(1), PINT(2), PQOBJECT(3) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, false );
+  Qt4xHb::returnNewObject( o, false );
 }
 
 //[1]QIntValidator ( QObject * parent = 0 )
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_NEW )
 
 HB_FUNC_STATIC( QINTVALIDATOR_DELETE )
 {
-  QIntValidator * obj = (QIntValidator *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QIntValidator * obj = (QIntValidator *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -108,7 +108,7 @@ int bottom () const
 */
 HB_FUNC_STATIC( QINTVALIDATOR_BOTTOM )
 {
-  QIntValidator * obj = (QIntValidator *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QIntValidator * obj = (QIntValidator *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -132,7 +132,7 @@ void setBottom ( int )
 */
 HB_FUNC_STATIC( QINTVALIDATOR_SETBOTTOM )
 {
-  QIntValidator * obj = (QIntValidator *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QIntValidator * obj = (QIntValidator *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -158,7 +158,7 @@ virtual void setRange ( int bottom, int top )
 */
 HB_FUNC_STATIC( QINTVALIDATOR_SETRANGE )
 {
-  QIntValidator * obj = (QIntValidator *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QIntValidator * obj = (QIntValidator *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -184,7 +184,7 @@ void setTop ( int )
 */
 HB_FUNC_STATIC( QINTVALIDATOR_SETTOP )
 {
-  QIntValidator * obj = (QIntValidator *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QIntValidator * obj = (QIntValidator *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -210,7 +210,7 @@ int top () const
 */
 HB_FUNC_STATIC( QINTVALIDATOR_TOP )
 {
-  QIntValidator * obj = (QIntValidator *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QIntValidator * obj = (QIntValidator *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

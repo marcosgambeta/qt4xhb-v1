@@ -55,7 +55,7 @@ HB_FUNC_STATIC( QSTYLEHINTRETURN_NEW )
   if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTNUM(2) )
   {
     QStyleHintReturn * o = new QStyleHintReturn( OPINT(1,QStyleOption::Version), OPINT(2,QStyleHintReturn::SH_Default) );
-    Qt4xHb::_qt4xhb_returnNewObject( o, true );
+    Qt4xHb::returnNewObject( o, true );
   }
   else
   {
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QSTYLEHINTRETURN_NEW )
 
 HB_FUNC_STATIC( QSTYLEHINTRETURN_DELETE )
 {
-  QStyleHintReturn * obj = (QStyleHintReturn *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleHintReturn * obj = (QStyleHintReturn *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

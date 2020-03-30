@@ -59,7 +59,7 @@ QStyleOptionViewItem()
 void QStyleOptionViewItem_new1()
 {
   QStyleOptionViewItem * o = new QStyleOptionViewItem();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -68,7 +68,7 @@ QStyleOptionViewItem(const QStyleOptionViewItem &other)
 void QStyleOptionViewItem_new2()
 {
   QStyleOptionViewItem * o = new QStyleOptionViewItem( *PQSTYLEOPTIONVIEWITEM(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -100,7 +100,7 @@ Qt::Alignment displayAlignment
 */
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_DISPLAYALIGNMENT )
 {
-  QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_DISPLAYALIGNMENT )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETDISPLAYALIGNMENT )
 {
-  QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -138,7 +138,7 @@ Qt::Alignment decorationAlignment
 */
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_DECORATIONALIGNMENT )
 {
-  QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_DECORATIONALIGNMENT )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETDECORATIONALIGNMENT )
 {
-  QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -176,7 +176,7 @@ Qt::TextElideMode textElideMode
 */
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_TEXTELIDEMODE )
 {
-  QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_TEXTELIDEMODE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETTEXTELIDEMODE )
 {
-  QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -214,7 +214,7 @@ Position decorationPosition
 */
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_DECORATIONPOSITION )
 {
-  QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_DECORATIONPOSITION )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETDECORATIONPOSITION )
 {
-  QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -252,14 +252,14 @@ QSize decorationSize
 */
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_DECORATIONSIZE )
 {
-  QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     if( ISNUMPAR(0) )
     {
       QSize * ptr = new QSize( obj->decorationSize );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
     }
     else
     {
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_DECORATIONSIZE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETDECORATIONSIZE )
 {
-  QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -291,14 +291,14 @@ QFont font
 */
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_FONT )
 {
-  QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     if( ISNUMPAR(0) )
     {
       QFont * ptr = new QFont( obj->font );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QFONT", true );
+      Qt4xHb::createReturnClass( ptr, "QFONT", true );
     }
     else
     {
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_FONT )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETFONT )
 {
-  QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -330,7 +330,7 @@ bool showDecorationSelected
 */
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SHOWDECORATIONSELECTED )
 {
-  QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SHOWDECORATIONSELECTED )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETSHOWDECORATIONSELECTED )
 {
-  QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

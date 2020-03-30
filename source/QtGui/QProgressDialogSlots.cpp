@@ -33,7 +33,7 @@ void QProgressDialogSlots::canceled()
 
 void QProgressDialogSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QProgressDialog * obj = (QProgressDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QProgressDialog * obj = (QProgressDialog *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

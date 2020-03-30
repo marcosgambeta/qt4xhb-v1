@@ -74,7 +74,7 @@ QVector2D ()
 void QVector2D_new1()
 {
   QVector2D * o = new QVector2D();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -83,7 +83,7 @@ QVector2D ( qreal xpos, qreal ypos )
 void QVector2D_new2()
 {
   QVector2D * o = new QVector2D( PQREAL(1), PQREAL(2) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -92,7 +92,7 @@ QVector2D ( const QPoint & point )
 void QVector2D_new3()
 {
   QVector2D * o = new QVector2D( *PQPOINT(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -101,7 +101,7 @@ QVector2D ( const QPointF & point )
 void QVector2D_new4()
 {
   QVector2D * o = new QVector2D( *PQPOINTF(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -110,7 +110,7 @@ QVector2D ( const QVector3D & vector )
 void QVector2D_new5()
 {
   QVector2D * o = new QVector2D( *PQVECTOR3D(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -119,7 +119,7 @@ QVector2D ( const QVector4D & vector )
 void QVector2D_new6()
 {
   QVector2D * o = new QVector2D( *PQVECTOR4D(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QVector2D ()
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QVECTOR2D_NEW )
 
 HB_FUNC_STATIC( QVECTOR2D_DELETE )
 {
-  QVector2D * obj = (QVector2D *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QVector2D * obj = (QVector2D *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -183,7 +183,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QVECTOR2D_ISNULL )
 {
-  QVector2D * obj = (QVector2D *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QVector2D * obj = (QVector2D *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -207,7 +207,7 @@ qreal length () const
 */
 HB_FUNC_STATIC( QVECTOR2D_LENGTH )
 {
-  QVector2D * obj = (QVector2D *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QVector2D * obj = (QVector2D *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -231,7 +231,7 @@ qreal lengthSquared () const
 */
 HB_FUNC_STATIC( QVECTOR2D_LENGTHSQUARED )
 {
-  QVector2D * obj = (QVector2D *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QVector2D * obj = (QVector2D *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -255,7 +255,7 @@ void normalize ()
 */
 HB_FUNC_STATIC( QVECTOR2D_NORMALIZE )
 {
-  QVector2D * obj = (QVector2D *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QVector2D * obj = (QVector2D *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -281,7 +281,7 @@ QVector2D normalized () const
 */
 HB_FUNC_STATIC( QVECTOR2D_NORMALIZED )
 {
-  QVector2D * obj = (QVector2D *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QVector2D * obj = (QVector2D *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QVECTOR2D_NORMALIZED )
     {
 #endif
       QVector2D * ptr = new QVector2D( obj->normalized() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QVECTOR2D", true );
+      Qt4xHb::createReturnClass( ptr, "QVECTOR2D", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -306,7 +306,7 @@ void setX ( qreal x )
 */
 HB_FUNC_STATIC( QVECTOR2D_SETX )
 {
-  QVector2D * obj = (QVector2D *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QVector2D * obj = (QVector2D *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -332,7 +332,7 @@ void setY ( qreal y )
 */
 HB_FUNC_STATIC( QVECTOR2D_SETY )
 {
-  QVector2D * obj = (QVector2D *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QVector2D * obj = (QVector2D *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -358,7 +358,7 @@ QPoint toPoint () const
 */
 HB_FUNC_STATIC( QVECTOR2D_TOPOINT )
 {
-  QVector2D * obj = (QVector2D *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QVector2D * obj = (QVector2D *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QVECTOR2D_TOPOINT )
     {
 #endif
       QPoint * ptr = new QPoint( obj->toPoint() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPOINT", true );
+      Qt4xHb::createReturnClass( ptr, "QPOINT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -383,7 +383,7 @@ QPointF toPointF () const
 */
 HB_FUNC_STATIC( QVECTOR2D_TOPOINTF )
 {
-  QVector2D * obj = (QVector2D *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QVector2D * obj = (QVector2D *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QVECTOR2D_TOPOINTF )
     {
 #endif
       QPointF * ptr = new QPointF( obj->toPointF() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPOINTF", true );
+      Qt4xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -408,7 +408,7 @@ QVector3D toVector3D () const
 */
 HB_FUNC_STATIC( QVECTOR2D_TOVECTOR3D )
 {
-  QVector2D * obj = (QVector2D *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QVector2D * obj = (QVector2D *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QVECTOR2D_TOVECTOR3D )
     {
 #endif
       QVector3D * ptr = new QVector3D( obj->toVector3D() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QVECTOR3D", true );
+      Qt4xHb::createReturnClass( ptr, "QVECTOR3D", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -433,7 +433,7 @@ QVector4D toVector4D () const
 */
 HB_FUNC_STATIC( QVECTOR2D_TOVECTOR4D )
 {
-  QVector2D * obj = (QVector2D *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QVector2D * obj = (QVector2D *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QVECTOR2D_TOVECTOR4D )
     {
 #endif
       QVector4D * ptr = new QVector4D( obj->toVector4D() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QVECTOR4D", true );
+      Qt4xHb::createReturnClass( ptr, "QVECTOR4D", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -458,7 +458,7 @@ qreal x () const
 */
 HB_FUNC_STATIC( QVECTOR2D_X )
 {
-  QVector2D * obj = (QVector2D *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QVector2D * obj = (QVector2D *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -482,7 +482,7 @@ qreal y () const
 */
 HB_FUNC_STATIC( QVECTOR2D_Y )
 {
-  QVector2D * obj = (QVector2D *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QVector2D * obj = (QVector2D *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QGraphicsBlurEffect * o = new QGraphicsBlurEffect( OPQOBJECT(1,0) );
-    Qt4xHb::_qt4xhb_returnNewObject( o, false );
+    Qt4xHb::returnNewObject( o, false );
   }
   else
   {
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_DELETE )
 {
-  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -89,7 +89,7 @@ BlurHints blurHints () const
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURHINTS )
 {
-  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -113,7 +113,7 @@ qreal blurRadius () const
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURRADIUS )
 {
-  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -137,7 +137,7 @@ virtual QRectF boundingRectFor ( const QRectF & rect ) const
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BOUNDINGRECTFOR )
 {
-  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BOUNDINGRECTFOR )
     {
 #endif
       QRectF * ptr = new QRectF( obj->boundingRectFor( *PQRECTF(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QRECTF", true );
+      Qt4xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -162,7 +162,7 @@ void setBlurHints ( BlurHints hints )
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_SETBLURHINTS )
 {
-  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -188,7 +188,7 @@ void setBlurRadius ( qreal blurRadius )
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_SETBLURRADIUS )
 {
-  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

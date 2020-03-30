@@ -235,7 +235,7 @@ void QTableWidgetSlots::itemSelectionChanged()
 
 void QTableWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

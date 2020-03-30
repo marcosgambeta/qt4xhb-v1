@@ -77,7 +77,7 @@ void QGraphicsScaleSlots::zScaleChanged()
 
 void QGraphicsScaleSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsScale * obj = (QGraphicsScale *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsScale * obj = (QGraphicsScale *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

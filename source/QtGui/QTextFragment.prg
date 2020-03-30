@@ -63,7 +63,7 @@ QTextFragment ()
 void QTextFragment_new1()
 {
   QTextFragment * o = new QTextFragment();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -72,7 +72,7 @@ QTextFragment ( const QTextFragment & other )
 void QTextFragment_new2()
 {
   QTextFragment * o = new QTextFragment( *PQTEXTFRAGMENT(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QTextFragment ()
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_NEW )
 
 HB_FUNC_STATIC( QTEXTFRAGMENT_DELETE )
 {
-  QTextFragment * obj = (QTextFragment *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTextFragment * obj = (QTextFragment *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -116,7 +116,7 @@ QTextCharFormat charFormat () const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMAT )
 {
-  QTextFragment * obj = (QTextFragment *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTextFragment * obj = (QTextFragment *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMAT )
     {
 #endif
       QTextCharFormat * ptr = new QTextCharFormat( obj->charFormat() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QTEXTCHARFORMAT", true );
+      Qt4xHb::createReturnClass( ptr, "QTEXTCHARFORMAT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,7 +141,7 @@ int charFormatIndex () const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMATINDEX )
 {
-  QTextFragment * obj = (QTextFragment *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTextFragment * obj = (QTextFragment *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -165,7 +165,7 @@ bool contains ( int position ) const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_CONTAINS )
 {
-  QTextFragment * obj = (QTextFragment *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTextFragment * obj = (QTextFragment *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -189,7 +189,7 @@ QList<QGlyphRun> glyphRuns () const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
 {
-  QTextFragment * obj = (QTextFragment *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTextFragment * obj = (QTextFragment *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -241,7 +241,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_ISVALID )
 {
-  QTextFragment * obj = (QTextFragment *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTextFragment * obj = (QTextFragment *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -265,7 +265,7 @@ int length () const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_LENGTH )
 {
-  QTextFragment * obj = (QTextFragment *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTextFragment * obj = (QTextFragment *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -289,7 +289,7 @@ int position () const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_POSITION )
 {
-  QTextFragment * obj = (QTextFragment *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTextFragment * obj = (QTextFragment *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -313,7 +313,7 @@ QString text () const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_TEXT )
 {
-  QTextFragment * obj = (QTextFragment *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTextFragment * obj = (QTextFragment *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

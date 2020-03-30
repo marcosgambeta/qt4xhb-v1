@@ -112,8 +112,8 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQGRAPHICSITEM(1)||ISNIL(1)) && ISOPTNUM(2) )
   {
-    QGraphicsWidget * o = new QGraphicsWidget( ISNIL(1)? 0 : (QGraphicsItem *) Qt4xHb::_qt4xhb_itemGetPtr(1), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-    Qt4xHb::_qt4xhb_returnNewObject( o, false );
+    QGraphicsWidget * o = new QGraphicsWidget( ISNIL(1)? 0 : (QGraphicsItem *) Qt4xHb::itemGetPtr(1), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+    Qt4xHb::returnNewObject( o, false );
   }
   else
   {
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSWIDGET_DELETE )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -145,7 +145,7 @@ QList<QAction *> actions () const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_ACTIONS )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -193,7 +193,7 @@ void addAction ( QAction * action )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_ADDACTION )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -219,7 +219,7 @@ void addActions ( QList<QAction *> actions )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_ADDACTIONS )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -253,7 +253,7 @@ void adjustSize ()
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_ADJUSTSIZE )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -279,7 +279,7 @@ bool autoFillBackground () const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_AUTOFILLBACKGROUND )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -303,7 +303,7 @@ Qt::FocusPolicy focusPolicy () const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_FOCUSPOLICY )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -327,7 +327,7 @@ QGraphicsWidget * focusWidget () const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_FOCUSWIDGET )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_FOCUSWIDGET )
     {
 #endif
       QGraphicsWidget * ptr = obj->focusWidget();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QGRAPHICSWIDGET" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QGRAPHICSWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -352,7 +352,7 @@ QFont font () const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_FONT )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_FONT )
     {
 #endif
       QFont * ptr = new QFont( obj->font() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QFONT", true );
+      Qt4xHb::createReturnClass( ptr, "QFONT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -377,7 +377,7 @@ void getWindowFrameMargins ( qreal * left, qreal * top, qreal * right, qreal * b
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_GETWINDOWFRAMEMARGINS )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -411,7 +411,7 @@ int grabShortcut ( const QKeySequence & sequence, Qt::ShortcutContext context = 
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_GRABSHORTCUT )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -435,7 +435,7 @@ void insertAction ( QAction * before, QAction * action )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_INSERTACTION )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -461,7 +461,7 @@ void insertActions ( QAction * before, QList<QAction *> actions )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_INSERTACTIONS )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -495,7 +495,7 @@ bool isActiveWindow () const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_ISACTIVEWINDOW )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -519,7 +519,7 @@ QGraphicsLayout * layout () const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_LAYOUT )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_LAYOUT )
     {
 #endif
       QGraphicsLayout * ptr = obj->layout();
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QGRAPHICSLAYOUT", false );
+      Qt4xHb::createReturnClass( ptr, "QGRAPHICSLAYOUT", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -544,7 +544,7 @@ Qt::LayoutDirection layoutDirection () const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_LAYOUTDIRECTION )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -568,7 +568,7 @@ virtual void paintWindowFrame ( QPainter * painter, const QStyleOptionGraphicsIt
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_PAINTWINDOWFRAME )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -594,7 +594,7 @@ QPalette palette () const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_PALETTE )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -603,7 +603,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_PALETTE )
     {
 #endif
       QPalette * ptr = new QPalette( obj->palette() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPALETTE", true );
+      Qt4xHb::createReturnClass( ptr, "QPALETTE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -619,7 +619,7 @@ QRectF rect () const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_RECT )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -628,7 +628,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_RECT )
     {
 #endif
       QRectF * ptr = new QRectF( obj->rect() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QRECTF", true );
+      Qt4xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -644,7 +644,7 @@ void releaseShortcut ( int id )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_RELEASESHORTCUT )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -670,7 +670,7 @@ void removeAction ( QAction * action )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_REMOVEACTION )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -696,7 +696,7 @@ void resize ( const QSizeF & size )
 */
 void QGraphicsWidget_resize1()
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -711,7 +711,7 @@ void resize ( qreal w, qreal h )
 */
 void QGraphicsWidget_resize2()
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -745,7 +745,7 @@ void setAttribute ( Qt::WidgetAttribute attribute, bool on = true )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETATTRIBUTE )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -771,7 +771,7 @@ void setAutoFillBackground ( bool enabled )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETAUTOFILLBACKGROUND )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -797,7 +797,7 @@ void setContentsMargins ( qreal left, qreal top, qreal right, qreal bottom )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETCONTENTSMARGINS )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -823,7 +823,7 @@ void setFocusPolicy ( Qt::FocusPolicy policy )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETFOCUSPOLICY )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -849,7 +849,7 @@ void setFont ( const QFont & font )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETFONT )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -875,7 +875,7 @@ void setLayout ( QGraphicsLayout * layout )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETLAYOUT )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -901,7 +901,7 @@ void setLayoutDirection ( Qt::LayoutDirection direction )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETLAYOUTDIRECTION )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -927,7 +927,7 @@ void setPalette ( const QPalette & palette )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETPALETTE )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -953,7 +953,7 @@ void setShortcutAutoRepeat ( int id, bool enabled = true )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETSHORTCUTAUTOREPEAT )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -979,7 +979,7 @@ void setShortcutEnabled ( int id, bool enabled = true )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETSHORTCUTENABLED )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1005,7 +1005,7 @@ void setStyle ( QStyle * style )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETSTYLE )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1031,7 +1031,7 @@ void setWindowFlags ( Qt::WindowFlags wFlags )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETWINDOWFLAGS )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1057,7 +1057,7 @@ void setWindowFrameMargins ( qreal left, qreal top, qreal right, qreal bottom )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETWINDOWFRAMEMARGINS )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1083,7 +1083,7 @@ void setWindowTitle ( const QString & title )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETWINDOWTITLE )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1109,7 +1109,7 @@ QSizeF size () const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SIZE )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1118,7 +1118,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SIZE )
     {
 #endif
       QSizeF * ptr = new QSizeF( obj->size() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSIZEF", true );
+      Qt4xHb::createReturnClass( ptr, "QSIZEF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1134,7 +1134,7 @@ QStyle * style () const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_STYLE )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1143,7 +1143,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_STYLE )
     {
 #endif
       QStyle * ptr = obj->style();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QSTYLE" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QSTYLE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1159,7 +1159,7 @@ bool testAttribute ( Qt::WidgetAttribute attribute ) const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_TESTATTRIBUTE )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1183,7 +1183,7 @@ void unsetLayoutDirection ()
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_UNSETLAYOUTDIRECTION )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1209,7 +1209,7 @@ void unsetWindowFrameMargins ()
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_UNSETWINDOWFRAMEMARGINS )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1235,7 +1235,7 @@ Qt::WindowFlags windowFlags () const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWFLAGS )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1259,7 +1259,7 @@ QRectF windowFrameGeometry () const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWFRAMEGEOMETRY )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1268,7 +1268,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWFRAMEGEOMETRY )
     {
 #endif
       QRectF * ptr = new QRectF( obj->windowFrameGeometry() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QRECTF", true );
+      Qt4xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1284,7 +1284,7 @@ QRectF windowFrameRect () const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWFRAMERECT )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1293,7 +1293,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWFRAMERECT )
     {
 #endif
       QRectF * ptr = new QRectF( obj->windowFrameRect() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QRECTF", true );
+      Qt4xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1309,7 +1309,7 @@ QString windowTitle () const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWTITLE )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1333,7 +1333,7 @@ Qt::WindowType windowType () const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWTYPE )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1357,7 +1357,7 @@ virtual QRectF boundingRect () const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_BOUNDINGRECT )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1366,7 +1366,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_BOUNDINGRECT )
     {
 #endif
       QRectF * ptr = new QRectF( obj->boundingRect() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QRECTF", true );
+      Qt4xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1382,7 +1382,7 @@ virtual void getContentsMargins ( qreal * left, qreal * top, qreal * right, qrea
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_GETCONTENTSMARGINS )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1416,7 +1416,7 @@ virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_PAINT )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1442,7 +1442,7 @@ void setGeometry ( qreal x, qreal y, qreal w, qreal h )
 */
 void QGraphicsWidget_setGeometry1()
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1457,7 +1457,7 @@ virtual void setGeometry ( const QRectF & rect )
 */
 void QGraphicsWidget_setGeometry2()
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1491,7 +1491,7 @@ virtual QPainterPath shape () const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SHAPE )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1500,7 +1500,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SHAPE )
     {
 #endif
       QPainterPath * ptr = new QPainterPath( obj->shape() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPAINTERPATH", true );
+      Qt4xHb::createReturnClass( ptr, "QPAINTERPATH", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1516,7 +1516,7 @@ virtual int type () const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_TYPE )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1540,7 +1540,7 @@ bool close ()
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_CLOSE )
 {
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = (QGraphicsWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

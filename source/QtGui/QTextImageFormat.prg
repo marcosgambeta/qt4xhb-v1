@@ -53,7 +53,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NEW )
   if( ISNUMPAR(0) )
   {
     QTextImageFormat * o = new QTextImageFormat();
-    Qt4xHb::_qt4xhb_returnNewObject( o, true );
+    Qt4xHb::returnNewObject( o, true );
   }
   else
   {
@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NEW )
 
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_DELETE )
 {
-  QTextImageFormat * obj = (QTextImageFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTextImageFormat * obj = (QTextImageFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -83,7 +83,7 @@ qreal height () const
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_HEIGHT )
 {
-  QTextImageFormat * obj = (QTextImageFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTextImageFormat * obj = (QTextImageFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -107,7 +107,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_ISVALID )
 {
-  QTextImageFormat * obj = (QTextImageFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTextImageFormat * obj = (QTextImageFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -131,7 +131,7 @@ QString name () const
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NAME )
 {
-  QTextImageFormat * obj = (QTextImageFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTextImageFormat * obj = (QTextImageFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -155,7 +155,7 @@ void setHeight ( qreal height )
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETHEIGHT )
 {
-  QTextImageFormat * obj = (QTextImageFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTextImageFormat * obj = (QTextImageFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -181,7 +181,7 @@ void setName ( const QString & name )
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETNAME )
 {
-  QTextImageFormat * obj = (QTextImageFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTextImageFormat * obj = (QTextImageFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -207,7 +207,7 @@ void setWidth ( qreal width )
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETWIDTH )
 {
-  QTextImageFormat * obj = (QTextImageFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTextImageFormat * obj = (QTextImageFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -233,7 +233,7 @@ qreal width () const
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_WIDTH )
 {
-  QTextImageFormat * obj = (QTextImageFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTextImageFormat * obj = (QTextImageFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

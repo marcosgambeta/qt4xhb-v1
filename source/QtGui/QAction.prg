@@ -116,7 +116,7 @@ QAction ( QObject * parent )
 void QAction_new1()
 {
   QAction * o = new QAction( PQOBJECT(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, false );
+  Qt4xHb::returnNewObject( o, false );
 }
 
 /*
@@ -125,7 +125,7 @@ QAction ( const QString & text, QObject * parent )
 void QAction_new2()
 {
   QAction * o = new QAction( PQSTRING(1), PQOBJECT(2) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, false );
+  Qt4xHb::returnNewObject( o, false );
 }
 
 /*
@@ -133,8 +133,8 @@ QAction ( const QIcon & icon, const QString & text, QObject * parent )
 */
 void QAction_new3()
 {
-  QAction * o = new QAction( ISOBJECT(1)? *(QIcon *) Qt4xHb::_qt4xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), PQOBJECT(3) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, false );
+  QAction * o = new QAction( ISOBJECT(1)? *(QIcon *) Qt4xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), PQOBJECT(3) );
+  Qt4xHb::returnNewObject( o, false );
 }
 
 //[1]QAction ( QObject * parent )
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QACTION_NEW )
 
 HB_FUNC_STATIC( QACTION_DELETE )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -185,7 +185,7 @@ QActionGroup * actionGroup () const
 */
 HB_FUNC_STATIC( QACTION_ACTIONGROUP )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QACTION_ACTIONGROUP )
     {
 #endif
       QActionGroup * ptr = obj->actionGroup();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QACTIONGROUP" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QACTIONGROUP" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -210,7 +210,7 @@ void activate ( ActionEvent event )
 */
 HB_FUNC_STATIC( QACTION_ACTIVATE )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -236,7 +236,7 @@ QList<QGraphicsWidget *> associatedGraphicsWidgets () const
 */
 HB_FUNC_STATIC( QACTION_ASSOCIATEDGRAPHICSWIDGETS )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -284,7 +284,7 @@ QList<QWidget *> associatedWidgets () const
 */
 HB_FUNC_STATIC( QACTION_ASSOCIATEDWIDGETS )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -332,7 +332,7 @@ bool autoRepeat () const
 */
 HB_FUNC_STATIC( QACTION_AUTOREPEAT )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -356,7 +356,7 @@ QVariant data () const
 */
 HB_FUNC_STATIC( QACTION_DATA )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QACTION_DATA )
     {
 #endif
       QVariant * ptr = new QVariant( obj->data() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -381,7 +381,7 @@ QFont font () const
 */
 HB_FUNC_STATIC( QACTION_FONT )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QACTION_FONT )
     {
 #endif
       QFont * ptr = new QFont( obj->font() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QFONT", true );
+      Qt4xHb::createReturnClass( ptr, "QFONT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -406,7 +406,7 @@ QIcon icon () const
 */
 HB_FUNC_STATIC( QACTION_ICON )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QACTION_ICON )
     {
 #endif
       QIcon * ptr = new QIcon( obj->icon() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QICON", true );
+      Qt4xHb::createReturnClass( ptr, "QICON", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -431,7 +431,7 @@ QString iconText () const
 */
 HB_FUNC_STATIC( QACTION_ICONTEXT )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -455,7 +455,7 @@ bool isCheckable () const
 */
 HB_FUNC_STATIC( QACTION_ISCHECKABLE )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -479,7 +479,7 @@ bool isChecked () const
 */
 HB_FUNC_STATIC( QACTION_ISCHECKED )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -503,7 +503,7 @@ bool isEnabled () const
 */
 HB_FUNC_STATIC( QACTION_ISENABLED )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -527,7 +527,7 @@ bool isIconVisibleInMenu () const
 */
 HB_FUNC_STATIC( QACTION_ISICONVISIBLEINMENU )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -551,7 +551,7 @@ bool isSeparator () const
 */
 HB_FUNC_STATIC( QACTION_ISSEPARATOR )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -575,7 +575,7 @@ bool isVisible () const
 */
 HB_FUNC_STATIC( QACTION_ISVISIBLE )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -599,7 +599,7 @@ QMenu * menu () const
 */
 HB_FUNC_STATIC( QACTION_MENU )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -608,7 +608,7 @@ HB_FUNC_STATIC( QACTION_MENU )
     {
 #endif
       QMenu * ptr = obj->menu();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QMENU" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QMENU" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -624,7 +624,7 @@ MenuRole menuRole () const
 */
 HB_FUNC_STATIC( QACTION_MENUROLE )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -648,7 +648,7 @@ QWidget * parentWidget () const
 */
 HB_FUNC_STATIC( QACTION_PARENTWIDGET )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -657,7 +657,7 @@ HB_FUNC_STATIC( QACTION_PARENTWIDGET )
     {
 #endif
       QWidget * ptr = obj->parentWidget();
-      Qt4xHb::_qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -673,7 +673,7 @@ Priority priority () const
 */
 HB_FUNC_STATIC( QACTION_PRIORITY )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -697,7 +697,7 @@ void setActionGroup ( QActionGroup * group )
 */
 HB_FUNC_STATIC( QACTION_SETACTIONGROUP )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -723,7 +723,7 @@ void setAutoRepeat ( bool )
 */
 HB_FUNC_STATIC( QACTION_SETAUTOREPEAT )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -749,7 +749,7 @@ void setCheckable ( bool )
 */
 HB_FUNC_STATIC( QACTION_SETCHECKABLE )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -775,7 +775,7 @@ void setData ( const QVariant & userData )
 */
 HB_FUNC_STATIC( QACTION_SETDATA )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -801,7 +801,7 @@ void setFont ( const QFont & font )
 */
 HB_FUNC_STATIC( QACTION_SETFONT )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -827,7 +827,7 @@ void setIcon ( const QIcon & icon )
 */
 HB_FUNC_STATIC( QACTION_SETICON )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -835,7 +835,7 @@ HB_FUNC_STATIC( QACTION_SETICON )
     if( ISNUMPAR(1) && (ISQICON(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setIcon( ISOBJECT(1)? *(QIcon *) Qt4xHb::_qt4xhb_itemGetPtr(1) : QIcon(hb_parc(1)) );
+      obj->setIcon( ISOBJECT(1)? *(QIcon *) Qt4xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -853,7 +853,7 @@ void setIconText ( const QString & text )
 */
 HB_FUNC_STATIC( QACTION_SETICONTEXT )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -879,7 +879,7 @@ void setIconVisibleInMenu ( bool visible )
 */
 HB_FUNC_STATIC( QACTION_SETICONVISIBLEINMENU )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -905,7 +905,7 @@ void setMenu ( QMenu * menu )
 */
 HB_FUNC_STATIC( QACTION_SETMENU )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -931,7 +931,7 @@ void setMenuRole ( MenuRole menuRole )
 */
 HB_FUNC_STATIC( QACTION_SETMENUROLE )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -957,7 +957,7 @@ void setPriority ( Priority priority )
 */
 HB_FUNC_STATIC( QACTION_SETPRIORITY )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -983,7 +983,7 @@ void setSeparator ( bool b )
 */
 HB_FUNC_STATIC( QACTION_SETSEPARATOR )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1009,7 +1009,7 @@ void setShortcut ( const QKeySequence & shortcut )
 */
 HB_FUNC_STATIC( QACTION_SETSHORTCUT )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1035,7 +1035,7 @@ void setShortcutContext ( Qt::ShortcutContext context )
 */
 HB_FUNC_STATIC( QACTION_SETSHORTCUTCONTEXT )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1061,7 +1061,7 @@ void setShortcuts ( const QList<QKeySequence> & shortcuts )
 */
 void QAction_setShortcuts1()
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1084,7 +1084,7 @@ void setShortcuts ( QKeySequence::StandardKey key )
 */
 void QAction_setShortcuts2()
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1118,7 +1118,7 @@ void setSoftKeyRole ( SoftKeyRole softKeyRole )
 */
 HB_FUNC_STATIC( QACTION_SETSOFTKEYROLE )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1144,7 +1144,7 @@ void setStatusTip ( const QString & statusTip )
 */
 HB_FUNC_STATIC( QACTION_SETSTATUSTIP )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1170,7 +1170,7 @@ void setText ( const QString & text )
 */
 HB_FUNC_STATIC( QACTION_SETTEXT )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1196,7 +1196,7 @@ void setToolTip ( const QString & tip )
 */
 HB_FUNC_STATIC( QACTION_SETTOOLTIP )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1222,7 +1222,7 @@ void setWhatsThis ( const QString & what )
 */
 HB_FUNC_STATIC( QACTION_SETWHATSTHIS )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1248,7 +1248,7 @@ QKeySequence shortcut () const
 */
 HB_FUNC_STATIC( QACTION_SHORTCUT )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1257,7 +1257,7 @@ HB_FUNC_STATIC( QACTION_SHORTCUT )
     {
 #endif
       QKeySequence * ptr = new QKeySequence( obj->shortcut() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QKEYSEQUENCE", true );
+      Qt4xHb::createReturnClass( ptr, "QKEYSEQUENCE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1273,7 +1273,7 @@ Qt::ShortcutContext shortcutContext () const
 */
 HB_FUNC_STATIC( QACTION_SHORTCUTCONTEXT )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1297,7 +1297,7 @@ QList<QKeySequence> shortcuts () const
 */
 HB_FUNC_STATIC( QACTION_SHORTCUTS )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1349,7 +1349,7 @@ bool showStatusText ( QWidget * widget = 0 )
 */
 HB_FUNC_STATIC( QACTION_SHOWSTATUSTEXT )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1373,7 +1373,7 @@ SoftKeyRole softKeyRole () const
 */
 HB_FUNC_STATIC( QACTION_SOFTKEYROLE )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1397,7 +1397,7 @@ QString statusTip () const
 */
 HB_FUNC_STATIC( QACTION_STATUSTIP )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1421,7 +1421,7 @@ QString text () const
 */
 HB_FUNC_STATIC( QACTION_TEXT )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1445,7 +1445,7 @@ QString toolTip () const
 */
 HB_FUNC_STATIC( QACTION_TOOLTIP )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1469,7 +1469,7 @@ QString whatsThis () const
 */
 HB_FUNC_STATIC( QACTION_WHATSTHIS )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1493,7 +1493,7 @@ void hover ()
 */
 HB_FUNC_STATIC( QACTION_HOVER )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1519,7 +1519,7 @@ void setChecked ( bool )
 */
 HB_FUNC_STATIC( QACTION_SETCHECKED )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1545,7 +1545,7 @@ void setDisabled ( bool b )
 */
 HB_FUNC_STATIC( QACTION_SETDISABLED )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1571,7 +1571,7 @@ void setEnabled ( bool )
 */
 HB_FUNC_STATIC( QACTION_SETENABLED )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1597,7 +1597,7 @@ void setVisible ( bool )
 */
 HB_FUNC_STATIC( QACTION_SETVISIBLE )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1623,7 +1623,7 @@ void toggle ()
 */
 HB_FUNC_STATIC( QACTION_TOGGLE )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1649,7 +1649,7 @@ void trigger ()
 */
 HB_FUNC_STATIC( QACTION_TRIGGER )
 {
-  QAction * obj = (QAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAction * obj = (QAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

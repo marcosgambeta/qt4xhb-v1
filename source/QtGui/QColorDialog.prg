@@ -64,7 +64,7 @@ QColorDialog ( QWidget * parent = 0 )
 void QColorDialog_new1()
 {
   QColorDialog * o = new QColorDialog( OPQWIDGET(1,0) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, false );
+  Qt4xHb::returnNewObject( o, false );
 }
 
 /*
@@ -72,8 +72,8 @@ QColorDialog ( const QColor & initial, QWidget * parent = 0 )
 */
 void QColorDialog_new2()
 {
-  QColorDialog * o = new QColorDialog( ISOBJECT(1)? *(QColor *) Qt4xHb::_qt4xhb_itemGetPtr(1) : QColor(hb_parc(1)), OPQWIDGET(2,0) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, false );
+  QColorDialog * o = new QColorDialog( ISOBJECT(1)? *(QColor *) Qt4xHb::itemGetPtr(1) : QColor(hb_parc(1)), OPQWIDGET(2,0) );
+  Qt4xHb::returnNewObject( o, false );
 }
 
 //[1]QColorDialog ( QWidget * parent = 0 )
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_NEW )
 
 HB_FUNC_STATIC( QCOLORDIALOG_DELETE )
 {
-  QColorDialog * obj = (QColorDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QColorDialog * obj = (QColorDialog *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -119,7 +119,7 @@ QColor currentColor () const
 */
 HB_FUNC_STATIC( QCOLORDIALOG_CURRENTCOLOR )
 {
-  QColorDialog * obj = (QColorDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QColorDialog * obj = (QColorDialog *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_CURRENTCOLOR )
     {
 #endif
       QColor * ptr = new QColor( obj->currentColor() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QCOLOR", true );
+      Qt4xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,7 +144,7 @@ void open ()
 */
 void QColorDialog_open1()
 {
-  QColorDialog * obj = (QColorDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QColorDialog * obj = (QColorDialog *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -159,7 +159,7 @@ void open ( QObject * receiver, const char * member )
 */
 void QColorDialog_open2()
 {
-  QColorDialog * obj = (QColorDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QColorDialog * obj = (QColorDialog *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -193,7 +193,7 @@ ColorDialogOptions options () const
 */
 HB_FUNC_STATIC( QCOLORDIALOG_OPTIONS )
 {
-  QColorDialog * obj = (QColorDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QColorDialog * obj = (QColorDialog *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -217,7 +217,7 @@ QColor selectedColor () const
 */
 HB_FUNC_STATIC( QCOLORDIALOG_SELECTEDCOLOR )
 {
-  QColorDialog * obj = (QColorDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QColorDialog * obj = (QColorDialog *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_SELECTEDCOLOR )
     {
 #endif
       QColor * ptr = new QColor( obj->selectedColor() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QCOLOR", true );
+      Qt4xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -242,7 +242,7 @@ void setCurrentColor ( const QColor & color )
 */
 HB_FUNC_STATIC( QCOLORDIALOG_SETCURRENTCOLOR )
 {
-  QColorDialog * obj = (QColorDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QColorDialog * obj = (QColorDialog *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_SETCURRENTCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setCurrentColor( ISOBJECT(1)? *(QColor *) Qt4xHb::_qt4xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setCurrentColor( ISOBJECT(1)? *(QColor *) Qt4xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -268,7 +268,7 @@ void setOption ( ColorDialogOption option, bool on = true )
 */
 HB_FUNC_STATIC( QCOLORDIALOG_SETOPTION )
 {
-  QColorDialog * obj = (QColorDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QColorDialog * obj = (QColorDialog *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -294,7 +294,7 @@ void setOptions ( ColorDialogOptions options )
 */
 HB_FUNC_STATIC( QCOLORDIALOG_SETOPTIONS )
 {
-  QColorDialog * obj = (QColorDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QColorDialog * obj = (QColorDialog *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -320,7 +320,7 @@ bool testOption ( ColorDialogOption option ) const
 */
 HB_FUNC_STATIC( QCOLORDIALOG_TESTOPTION )
 {
-  QColorDialog * obj = (QColorDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QColorDialog * obj = (QColorDialog *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -344,7 +344,7 @@ virtual void setVisible ( bool visible )
 */
 HB_FUNC_STATIC( QCOLORDIALOG_SETVISIBLE )
 {
-  QColorDialog * obj = (QColorDialog *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QColorDialog * obj = (QColorDialog *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -409,8 +409,8 @@ static QColor getColor ( const QColor & initial, QWidget * parent, const QString
 void QColorDialog_getColor1()
 {
 
-  QColor * ptr = new QColor( QColorDialog::getColor( ISOBJECT(1)? *(QColor *) Qt4xHb::_qt4xhb_itemGetPtr(1) : QColor(hb_parc(1)), PQWIDGET(2), PQSTRING(3), ISNIL(4)? (QColorDialog::ColorDialogOptions) 0 : (QColorDialog::ColorDialogOptions) hb_parni(4) ) );
-  Qt4xHb::_qt4xhb_createReturnClass( ptr, "QCOLOR", true );
+  QColor * ptr = new QColor( QColorDialog::getColor( ISOBJECT(1)? *(QColor *) Qt4xHb::itemGetPtr(1) : QColor(hb_parc(1)), PQWIDGET(2), PQSTRING(3), ISNIL(4)? (QColorDialog::ColorDialogOptions) 0 : (QColorDialog::ColorDialogOptions) hb_parni(4) ) );
+  Qt4xHb::createReturnClass( ptr, "QCOLOR", true );
 }
 
 /*
@@ -419,8 +419,8 @@ static QColor getColor ( const QColor & initial = Qt::white, QWidget * parent = 
 void QColorDialog_getColor2()
 {
 
-  QColor * ptr = new QColor( QColorDialog::getColor( ISNIL(1)? Qt::white : *(QColor *) Qt4xHb::_qt4xhb_itemGetPtr(1), OPQWIDGET(2,0) ) );
-  Qt4xHb::_qt4xhb_createReturnClass( ptr, "QCOLOR", true );
+  QColor * ptr = new QColor( QColorDialog::getColor( ISNIL(1)? Qt::white : *(QColor *) Qt4xHb::itemGetPtr(1), OPQWIDGET(2,0) ) );
+  Qt4xHb::createReturnClass( ptr, "QCOLOR", true );
 }
 
 //[1]QColor getColor ( const QColor & initial, QWidget * parent, const QString & title, ColorDialogOptions options = 0 )

@@ -74,7 +74,7 @@ QIcon ()
 void QIcon_new1()
 {
   QIcon * o = new QIcon();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -83,7 +83,7 @@ QIcon ( const QPixmap & pixmap )
 void QIcon_new2()
 {
   QIcon * o = new QIcon( *PQPIXMAP(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -91,8 +91,8 @@ QIcon ( const QIcon & other )
 */
 void QIcon_new3()
 {
-  QIcon * o = new QIcon( ISOBJECT(1)? *(QIcon *) Qt4xHb::_qt4xhb_itemGetPtr(1) : QIcon(hb_parc(1)) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  QIcon * o = new QIcon( ISOBJECT(1)? *(QIcon *) Qt4xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -101,7 +101,7 @@ QIcon ( const QString & fileName )
 void QIcon_new4()
 {
   QIcon * o = new QIcon( PQSTRING(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -110,7 +110,7 @@ QIcon ( QIconEngine * engine )
 void QIcon_new5()
 {
   QIcon * o = new QIcon( PQICONENGINE(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -119,7 +119,7 @@ QIcon ( QIconEngineV2 * engine )
 void QIcon_new6()
 {
   QIcon * o = new QIcon( PQICONENGINEV2(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QIcon ()
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QICON_NEW )
 
 HB_FUNC_STATIC( QICON_DELETE )
 {
-  QIcon * obj = (QIcon *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QIcon * obj = (QIcon *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -183,7 +183,7 @@ QSize actualSize ( const QSize & size, Mode mode = Normal, State state = Off ) c
 */
 HB_FUNC_STATIC( QICON_ACTUALSIZE )
 {
-  QIcon * obj = (QIcon *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QIcon * obj = (QIcon *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QICON_ACTUALSIZE )
     {
 #endif
       QSize * ptr = new QSize( obj->actualSize( *PQSIZE(1), ISNIL(2)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(2), ISNIL(3)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(3) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -208,7 +208,7 @@ void addFile ( const QString & fileName, const QSize & size = QSize(), Mode mode
 */
 HB_FUNC_STATIC( QICON_ADDFILE )
 {
-  QIcon * obj = (QIcon *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QIcon * obj = (QIcon *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QICON_ADDFILE )
     if( ISBETWEEN(1,4) && ISCHAR(1) && (ISQSIZE(2)||ISNIL(2)) && ISOPTNUM(3) && ISOPTNUM(4) )
     {
 #endif
-      obj->addFile( PQSTRING(1), ISNIL(2)? QSize() : *(QSize *) Qt4xHb::_qt4xhb_itemGetPtr(2), ISNIL(3)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(3), ISNIL(4)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(4) );
+      obj->addFile( PQSTRING(1), ISNIL(2)? QSize() : *(QSize *) Qt4xHb::itemGetPtr(2), ISNIL(3)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(3), ISNIL(4)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(4) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -234,7 +234,7 @@ void addPixmap ( const QPixmap & pixmap, Mode mode = Normal, State state = Off )
 */
 HB_FUNC_STATIC( QICON_ADDPIXMAP )
 {
-  QIcon * obj = (QIcon *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QIcon * obj = (QIcon *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -260,7 +260,7 @@ QList<QSize> availableSizes ( Mode mode = Normal, State state = Off ) const
 */
 HB_FUNC_STATIC( QICON_AVAILABLESIZES )
 {
-  QIcon * obj = (QIcon *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QIcon * obj = (QIcon *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -312,7 +312,7 @@ qint64 cacheKey () const
 */
 HB_FUNC_STATIC( QICON_CACHEKEY )
 {
-  QIcon * obj = (QIcon *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QIcon * obj = (QIcon *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -336,7 +336,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QICON_ISNULL )
 {
-  QIcon * obj = (QIcon *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QIcon * obj = (QIcon *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -360,7 +360,7 @@ QString name () const
 */
 HB_FUNC_STATIC( QICON_NAME )
 {
-  QIcon * obj = (QIcon *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QIcon * obj = (QIcon *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -384,7 +384,7 @@ void paint ( QPainter * painter, const QRect & rect, Qt::Alignment alignment = Q
 */
 void QIcon_paint1()
 {
-  QIcon * obj = (QIcon *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QIcon * obj = (QIcon *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -399,7 +399,7 @@ void paint ( QPainter * painter, int x, int y, int w, int h, Qt::Alignment align
 */
 void QIcon_paint2()
 {
-  QIcon * obj = (QIcon *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QIcon * obj = (QIcon *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -433,12 +433,12 @@ QPixmap pixmap ( const QSize & size, Mode mode = Normal, State state = Off ) con
 */
 void QIcon_pixmap1()
 {
-  QIcon * obj = (QIcon *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QIcon * obj = (QIcon *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QPixmap * ptr = new QPixmap( obj->pixmap( *PQSIZE(1), ISNIL(2)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(2), ISNIL(3)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(3) ) );
-    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPIXMAP", true );
+    Qt4xHb::createReturnClass( ptr, "QPIXMAP", true );
   }
 }
 
@@ -447,12 +447,12 @@ QPixmap pixmap ( int w, int h, Mode mode = Normal, State state = Off ) const
 */
 void QIcon_pixmap2()
 {
-  QIcon * obj = (QIcon *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QIcon * obj = (QIcon *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QPixmap * ptr = new QPixmap( obj->pixmap( PINT(1), PINT(2), ISNIL(3)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(3), ISNIL(4)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(4) ) );
-    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPIXMAP", true );
+    Qt4xHb::createReturnClass( ptr, "QPIXMAP", true );
   }
 }
 
@@ -461,12 +461,12 @@ QPixmap pixmap ( int extent, Mode mode = Normal, State state = Off ) const
 */
 void QIcon_pixmap3()
 {
-  QIcon * obj = (QIcon *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QIcon * obj = (QIcon *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QPixmap * ptr = new QPixmap( obj->pixmap( PINT(1), ISNIL(2)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(2), ISNIL(3)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(3) ) );
-    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPIXMAP", true );
+    Qt4xHb::createReturnClass( ptr, "QPIXMAP", true );
   }
 }
 
@@ -499,7 +499,7 @@ QIcon fromTheme ( const QString & name, const QIcon & fallback = QIcon() )
 */
 HB_FUNC_STATIC( QICON_FROMTHEME )
 {
-  QIcon * obj = (QIcon *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QIcon * obj = (QIcon *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -507,8 +507,8 @@ HB_FUNC_STATIC( QICON_FROMTHEME )
     if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQICON(2)||ISNIL(2)) )
     {
 #endif
-      QIcon * ptr = new QIcon( obj->fromTheme( PQSTRING(1), ISNIL(2)? QIcon() : *(QIcon *) Qt4xHb::_qt4xhb_itemGetPtr(2) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QICON", true );
+      QIcon * ptr = new QIcon( obj->fromTheme( PQSTRING(1), ISNIL(2)? QIcon() : *(QIcon *) Qt4xHb::itemGetPtr(2) ) );
+      Qt4xHb::createReturnClass( ptr, "QICON", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -623,13 +623,13 @@ QVariant toVariant()
 */
 void QIcon_toVariant1()
 {
-  QIcon * obj = (QIcon *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QIcon * obj = (QIcon *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QVariant * variant = new QVariant();
     variant->setValue<QIcon>( *obj );
-    Qt4xHb::_qt4xhb_createReturnClass( variant, "QVARIANT", true );
+    Qt4xHb::createReturnClass( variant, "QVARIANT", true );
   }
 }
 
@@ -641,7 +641,7 @@ void QIcon_toVariant2()
   QIcon * icon = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QVariant * variant = new QVariant();
   variant->setValue<QIcon>( *icon );
-  Qt4xHb::_qt4xhb_createReturnClass( variant, "QVARIANT", true );
+  Qt4xHb::createReturnClass( variant, "QVARIANT", true );
 }
 
 //[1]QVariant toVariant()
@@ -672,7 +672,7 @@ HB_FUNC_STATIC( QICON_FROMVARIANT )
   {
     QVariant * variant = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QIcon * icon = new QIcon( variant->value<QIcon>() );
-    Qt4xHb::_qt4xhb_createReturnClass( icon, "QICON", true );
+    Qt4xHb::createReturnClass( icon, "QICON", true );
   }
   else
   {

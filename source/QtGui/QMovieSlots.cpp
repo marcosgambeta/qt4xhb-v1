@@ -109,7 +109,7 @@ void QMovieSlots::updated( const QRect & rect )
 
 void QMovieSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QMovie * obj = (QMovie *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMovie * obj = (QMovie *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -53,7 +53,7 @@ HB_FUNC_STATIC( QWIDGETACTION_NEW )
   if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
     QWidgetAction * o = new QWidgetAction( PQOBJECT(1) );
-    Qt4xHb::_qt4xhb_returnNewObject( o, false );
+    Qt4xHb::returnNewObject( o, false );
   }
   else
   {
@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QWIDGETACTION_NEW )
 
 HB_FUNC_STATIC( QWIDGETACTION_DELETE )
 {
-  QWidgetAction * obj = (QWidgetAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWidgetAction * obj = (QWidgetAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -85,7 +85,7 @@ QWidget * defaultWidget () const
 */
 HB_FUNC_STATIC( QWIDGETACTION_DEFAULTWIDGET )
 {
-  QWidgetAction * obj = (QWidgetAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWidgetAction * obj = (QWidgetAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QWIDGETACTION_DEFAULTWIDGET )
     {
 #endif
       QWidget * ptr = obj->defaultWidget();
-      Qt4xHb::_qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -110,7 +110,7 @@ void releaseWidget ( QWidget * widget )
 */
 HB_FUNC_STATIC( QWIDGETACTION_RELEASEWIDGET )
 {
-  QWidgetAction * obj = (QWidgetAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWidgetAction * obj = (QWidgetAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -136,7 +136,7 @@ QWidget * requestWidget ( QWidget * parent )
 */
 HB_FUNC_STATIC( QWIDGETACTION_REQUESTWIDGET )
 {
-  QWidgetAction * obj = (QWidgetAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWidgetAction * obj = (QWidgetAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QWIDGETACTION_REQUESTWIDGET )
     {
 #endif
       QWidget * ptr = obj->requestWidget( PQWIDGET(1) );
-      Qt4xHb::_qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,7 +161,7 @@ void setDefaultWidget ( QWidget * widget )
 */
 HB_FUNC_STATIC( QWIDGETACTION_SETDEFAULTWIDGET )
 {
-  QWidgetAction * obj = (QWidgetAction *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWidgetAction * obj = (QWidgetAction *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

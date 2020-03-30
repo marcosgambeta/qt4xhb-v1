@@ -48,7 +48,7 @@ void QMdiSubWindowSlots::windowStateChanged( Qt::WindowStates oldState, Qt::Wind
 
 void QMdiSubWindowSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QMdiSubWindow * obj = (QMdiSubWindow *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMdiSubWindow * obj = (QMdiSubWindow *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

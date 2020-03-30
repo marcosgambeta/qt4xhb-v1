@@ -62,7 +62,7 @@ RETURN
 
 HB_FUNC_STATIC( QPAINTDEVICE_DELETE )
 {
-  QPaintDevice * obj = (QPaintDevice *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPaintDevice * obj = (QPaintDevice *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -82,7 +82,7 @@ int colorCount () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_COLORCOUNT )
 {
-  QPaintDevice * obj = (QPaintDevice *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPaintDevice * obj = (QPaintDevice *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -106,7 +106,7 @@ int depth () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_DEPTH )
 {
-  QPaintDevice * obj = (QPaintDevice *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPaintDevice * obj = (QPaintDevice *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -130,7 +130,7 @@ int height () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_HEIGHT )
 {
-  QPaintDevice * obj = (QPaintDevice *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPaintDevice * obj = (QPaintDevice *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -154,7 +154,7 @@ int heightMM () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_HEIGHTMM )
 {
-  QPaintDevice * obj = (QPaintDevice *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPaintDevice * obj = (QPaintDevice *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -178,7 +178,7 @@ int logicalDpiX () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_LOGICALDPIX )
 {
-  QPaintDevice * obj = (QPaintDevice *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPaintDevice * obj = (QPaintDevice *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -202,7 +202,7 @@ int logicalDpiY () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_LOGICALDPIY )
 {
-  QPaintDevice * obj = (QPaintDevice *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPaintDevice * obj = (QPaintDevice *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -226,7 +226,7 @@ int numColors () const (deprecated)
 */
 HB_FUNC_STATIC( QPAINTDEVICE_NUMCOLORS )
 {
-  QPaintDevice * obj = (QPaintDevice *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPaintDevice * obj = (QPaintDevice *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -250,7 +250,7 @@ virtual QPaintEngine * paintEngine () const = 0
 */
 HB_FUNC_STATIC( QPAINTDEVICE_PAINTENGINE )
 {
-  QPaintDevice * obj = (QPaintDevice *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPaintDevice * obj = (QPaintDevice *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QPAINTDEVICE_PAINTENGINE )
     {
 #endif
       QPaintEngine * ptr = obj->paintEngine();
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPAINTENGINE", false );
+      Qt4xHb::createReturnClass( ptr, "QPAINTENGINE", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -275,7 +275,7 @@ bool paintingActive () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_PAINTINGACTIVE )
 {
-  QPaintDevice * obj = (QPaintDevice *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPaintDevice * obj = (QPaintDevice *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -299,7 +299,7 @@ int physicalDpiX () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_PHYSICALDPIX )
 {
-  QPaintDevice * obj = (QPaintDevice *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPaintDevice * obj = (QPaintDevice *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -323,7 +323,7 @@ int physicalDpiY () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_PHYSICALDPIY )
 {
-  QPaintDevice * obj = (QPaintDevice *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPaintDevice * obj = (QPaintDevice *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -347,7 +347,7 @@ int width () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_WIDTH )
 {
-  QPaintDevice * obj = (QPaintDevice *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPaintDevice * obj = (QPaintDevice *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -371,7 +371,7 @@ int widthMM () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_WIDTHMM )
 {
-  QPaintDevice * obj = (QPaintDevice *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPaintDevice * obj = (QPaintDevice *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

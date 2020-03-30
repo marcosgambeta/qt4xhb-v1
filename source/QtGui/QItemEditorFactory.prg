@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_NEW )
   if( ISNUMPAR(0) )
   {
     QItemEditorFactory * o = new QItemEditorFactory();
-    Qt4xHb::_qt4xhb_returnNewObject( o, true );
+    Qt4xHb::returnNewObject( o, true );
   }
   else
   {
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_NEW )
 
 HB_FUNC_STATIC( QITEMEDITORFACTORY_DELETE )
 {
-  QItemEditorFactory * obj = (QItemEditorFactory *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QItemEditorFactory * obj = (QItemEditorFactory *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -92,7 +92,7 @@ virtual QWidget * createEditor ( QVariant::Type type, QWidget * parent ) const
 */
 HB_FUNC_STATIC( QITEMEDITORFACTORY_CREATEEDITOR )
 {
-  QItemEditorFactory * obj = (QItemEditorFactory *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QItemEditorFactory * obj = (QItemEditorFactory *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_CREATEEDITOR )
     {
 #endif
       QWidget * ptr = obj->createEditor( (QVariant::Type) hb_parni(1), PQWIDGET(2) );
-      Qt4xHb::_qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -117,7 +117,7 @@ void registerEditor ( QVariant::Type type, QItemEditorCreatorBase * creator )
 */
 HB_FUNC_STATIC( QITEMEDITORFACTORY_REGISTEREDITOR )
 {
-  QItemEditorFactory * obj = (QItemEditorFactory *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QItemEditorFactory * obj = (QItemEditorFactory *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -143,7 +143,7 @@ virtual QByteArray valuePropertyName ( QVariant::Type type ) const
 */
 HB_FUNC_STATIC( QITEMEDITORFACTORY_VALUEPROPERTYNAME )
 {
-  QItemEditorFactory * obj = (QItemEditorFactory *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QItemEditorFactory * obj = (QItemEditorFactory *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_VALUEPROPERTYNAME )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->valuePropertyName( (QVariant::Type) hb_parni(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_DEFAULTFACTORY )
   {
 #endif
     const QItemEditorFactory * ptr = QItemEditorFactory::defaultFactory();
-    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QITEMEDITORFACTORY", false );
+    Qt4xHb::createReturnClass( ptr, "QITEMEDITORFACTORY", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

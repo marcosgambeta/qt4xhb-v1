@@ -137,7 +137,7 @@ void QTextDocumentSlots::undoCommandAdded()
 
 void QTextDocumentSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTextDocument * obj = (QTextDocument *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTextDocument * obj = (QTextDocument *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -126,7 +126,7 @@ void QToolBarSlots::visibilityChanged( bool visible )
 
 void QToolBarSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QToolBar * obj = (QToolBar *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QToolBar * obj = (QToolBar *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

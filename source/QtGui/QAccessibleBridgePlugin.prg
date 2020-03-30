@@ -44,7 +44,7 @@ RETURN
 
 HB_FUNC_STATIC( QACCESSIBLEBRIDGEPLUGIN_DELETE )
 {
-  QAccessibleBridgePlugin * obj = (QAccessibleBridgePlugin *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAccessibleBridgePlugin * obj = (QAccessibleBridgePlugin *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -66,7 +66,7 @@ virtual QAccessibleBridge * create ( const QString & key ) = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEBRIDGEPLUGIN_CREATE )
 {
-  QAccessibleBridgePlugin * obj = (QAccessibleBridgePlugin *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAccessibleBridgePlugin * obj = (QAccessibleBridgePlugin *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QACCESSIBLEBRIDGEPLUGIN_CREATE )
     {
 #endif
       QAccessibleBridge * ptr = obj->create( PQSTRING(1) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QACCESSIBLEBRIDGE", false );
+      Qt4xHb::createReturnClass( ptr, "QACCESSIBLEBRIDGE", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -91,7 +91,7 @@ virtual QStringList keys () const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEBRIDGEPLUGIN_KEYS )
 {
-  QAccessibleBridgePlugin * obj = (QAccessibleBridgePlugin *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAccessibleBridgePlugin * obj = (QAccessibleBridgePlugin *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

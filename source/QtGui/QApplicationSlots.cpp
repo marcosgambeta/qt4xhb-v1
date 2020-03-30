@@ -107,7 +107,7 @@ void QApplicationSlots::saveStateRequest( QSessionManager & manager )
 
 void QApplicationSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QApplication * obj = (QApplication *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QApplication * obj = (QApplication *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

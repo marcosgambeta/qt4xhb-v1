@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QTREEVIEW_NEW )
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     QTreeView * o = new QTreeView( OPQWIDGET(1,0) );
-    Qt4xHb::_qt4xhb_returnNewObject( o, false );
+    Qt4xHb::returnNewObject( o, false );
   }
   else
   {
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QTREEVIEW_NEW )
 
 HB_FUNC_STATIC( QTREEVIEW_DELETE )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -145,7 +145,7 @@ bool allColumnsShowFocus () const
 */
 HB_FUNC_STATIC( QTREEVIEW_ALLCOLUMNSSHOWFOCUS )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -169,7 +169,7 @@ int autoExpandDelay () const
 */
 HB_FUNC_STATIC( QTREEVIEW_AUTOEXPANDDELAY )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -193,7 +193,7 @@ int columnAt ( int x ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_COLUMNAT )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -217,7 +217,7 @@ int columnViewportPosition ( int column ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_COLUMNVIEWPORTPOSITION )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -241,7 +241,7 @@ int columnWidth ( int column ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_COLUMNWIDTH )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -265,7 +265,7 @@ bool expandsOnDoubleClick () const
 */
 HB_FUNC_STATIC( QTREEVIEW_EXPANDSONDOUBLECLICK )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -289,7 +289,7 @@ QHeaderView * header () const
 */
 HB_FUNC_STATIC( QTREEVIEW_HEADER )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QTREEVIEW_HEADER )
     {
 #endif
       QHeaderView * ptr = obj->header();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QHEADERVIEW" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QHEADERVIEW" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -314,7 +314,7 @@ int indentation () const
 */
 HB_FUNC_STATIC( QTREEVIEW_INDENTATION )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -338,7 +338,7 @@ QModelIndex indexAbove ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_INDEXABOVE )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QTREEVIEW_INDEXABOVE )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->indexAbove( *PQMODELINDEX(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -363,7 +363,7 @@ QModelIndex indexBelow ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_INDEXBELOW )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QTREEVIEW_INDEXBELOW )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->indexBelow( *PQMODELINDEX(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -388,7 +388,7 @@ bool isAnimated () const
 */
 HB_FUNC_STATIC( QTREEVIEW_ISANIMATED )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -412,7 +412,7 @@ bool isColumnHidden ( int column ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_ISCOLUMNHIDDEN )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -436,7 +436,7 @@ bool isExpanded ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_ISEXPANDED )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -460,7 +460,7 @@ bool isFirstColumnSpanned ( int row, const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_ISFIRSTCOLUMNSPANNED )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -484,7 +484,7 @@ bool isHeaderHidden () const
 */
 HB_FUNC_STATIC( QTREEVIEW_ISHEADERHIDDEN )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -508,7 +508,7 @@ bool isRowHidden ( int row, const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_ISROWHIDDEN )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -532,7 +532,7 @@ bool isSortingEnabled () const
 */
 HB_FUNC_STATIC( QTREEVIEW_ISSORTINGENABLED )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -556,7 +556,7 @@ bool itemsExpandable () const
 */
 HB_FUNC_STATIC( QTREEVIEW_ITEMSEXPANDABLE )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -580,7 +580,7 @@ bool rootIsDecorated () const
 */
 HB_FUNC_STATIC( QTREEVIEW_ROOTISDECORATED )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -604,7 +604,7 @@ void setAllColumnsShowFocus ( bool enable )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETALLCOLUMNSSHOWFOCUS )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -630,7 +630,7 @@ void setAnimated ( bool enable )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETANIMATED )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -656,7 +656,7 @@ void setAutoExpandDelay ( int delay )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETAUTOEXPANDDELAY )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -682,7 +682,7 @@ void setColumnHidden ( int column, bool hide )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETCOLUMNHIDDEN )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -708,7 +708,7 @@ void setColumnWidth ( int column, int width )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETCOLUMNWIDTH )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -734,7 +734,7 @@ void setExpanded ( const QModelIndex & index, bool expanded )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETEXPANDED )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -760,7 +760,7 @@ void setExpandsOnDoubleClick ( bool enable )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETEXPANDSONDOUBLECLICK )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -786,7 +786,7 @@ void setFirstColumnSpanned ( int row, const QModelIndex & parent, bool span )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETFIRSTCOLUMNSPANNED )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -812,7 +812,7 @@ void setHeader ( QHeaderView * header )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETHEADER )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -838,7 +838,7 @@ void setHeaderHidden ( bool hide )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETHEADERHIDDEN )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -864,7 +864,7 @@ void setIndentation ( int i )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETINDENTATION )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -890,7 +890,7 @@ void setItemsExpandable ( bool enable )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETITEMSEXPANDABLE )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -916,7 +916,7 @@ void setRootIsDecorated ( bool show )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETROOTISDECORATED )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -942,7 +942,7 @@ void setRowHidden ( int row, const QModelIndex & parent, bool hide )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETROWHIDDEN )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -968,7 +968,7 @@ void setSortingEnabled ( bool enable )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETSORTINGENABLED )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -994,7 +994,7 @@ void setUniformRowHeights ( bool uniform )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETUNIFORMROWHEIGHTS )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1020,7 +1020,7 @@ void setWordWrap ( bool on )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETWORDWRAP )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1046,7 +1046,7 @@ void sortByColumn ( int column, Qt::SortOrder order )
 */
 HB_FUNC_STATIC( QTREEVIEW_SORTBYCOLUMN )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1072,7 +1072,7 @@ bool uniformRowHeights () const
 */
 HB_FUNC_STATIC( QTREEVIEW_UNIFORMROWHEIGHTS )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1096,7 +1096,7 @@ bool wordWrap () const
 */
 HB_FUNC_STATIC( QTREEVIEW_WORDWRAP )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1120,7 +1120,7 @@ virtual void dataChanged ( const QModelIndex & topLeft, const QModelIndex & bott
 */
 HB_FUNC_STATIC( QTREEVIEW_DATACHANGED )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1146,7 +1146,7 @@ virtual QModelIndex indexAt ( const QPoint & point ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_INDEXAT )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1155,7 +1155,7 @@ HB_FUNC_STATIC( QTREEVIEW_INDEXAT )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->indexAt( *PQPOINT(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1171,7 +1171,7 @@ virtual void keyboardSearch ( const QString & search )
 */
 HB_FUNC_STATIC( QTREEVIEW_KEYBOARDSEARCH )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1197,7 +1197,7 @@ virtual void reset ()
 */
 HB_FUNC_STATIC( QTREEVIEW_RESET )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1223,7 +1223,7 @@ virtual void scrollTo ( const QModelIndex & index, ScrollHint hint = EnsureVisib
 */
 HB_FUNC_STATIC( QTREEVIEW_SCROLLTO )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1249,7 +1249,7 @@ virtual void selectAll ()
 */
 HB_FUNC_STATIC( QTREEVIEW_SELECTALL )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1275,7 +1275,7 @@ virtual void setModel ( QAbstractItemModel * model )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETMODEL )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1301,7 +1301,7 @@ virtual void setRootIndex ( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETROOTINDEX )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1327,7 +1327,7 @@ virtual void setSelectionModel ( QItemSelectionModel * selectionModel )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETSELECTIONMODEL )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1353,7 +1353,7 @@ virtual QRect visualRect ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_VISUALRECT )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1362,7 +1362,7 @@ HB_FUNC_STATIC( QTREEVIEW_VISUALRECT )
     {
 #endif
       QRect * ptr = new QRect( obj->visualRect( *PQMODELINDEX(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass( ptr, "QRECT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1378,7 +1378,7 @@ void collapse ( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QTREEVIEW_COLLAPSE )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1404,7 +1404,7 @@ void collapseAll ()
 */
 HB_FUNC_STATIC( QTREEVIEW_COLLAPSEALL )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1430,7 +1430,7 @@ void expand ( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QTREEVIEW_EXPAND )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1456,7 +1456,7 @@ void expandAll ()
 */
 HB_FUNC_STATIC( QTREEVIEW_EXPANDALL )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1482,7 +1482,7 @@ void expandToDepth ( int depth )
 */
 HB_FUNC_STATIC( QTREEVIEW_EXPANDTODEPTH )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1508,7 +1508,7 @@ void hideColumn ( int column )
 */
 HB_FUNC_STATIC( QTREEVIEW_HIDECOLUMN )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1534,7 +1534,7 @@ void resizeColumnToContents ( int column )
 */
 HB_FUNC_STATIC( QTREEVIEW_RESIZECOLUMNTOCONTENTS )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1560,7 +1560,7 @@ void showColumn ( int column )
 */
 HB_FUNC_STATIC( QTREEVIEW_SHOWCOLUMN )
 {
-  QTreeView * obj = (QTreeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTreeView * obj = (QTreeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

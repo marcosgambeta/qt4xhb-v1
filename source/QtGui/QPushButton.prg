@@ -53,7 +53,7 @@ QPushButton ( QWidget * parent = 0 )
 void QPushButton_new1()
 {
   QPushButton * o = new QPushButton( OPQWIDGET(1,0) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, false );
+  Qt4xHb::returnNewObject( o, false );
 }
 
 /*
@@ -62,7 +62,7 @@ QPushButton ( const QString & text, QWidget * parent = 0 )
 void QPushButton_new2()
 {
   QPushButton * o = new QPushButton( PQSTRING(1), OPQWIDGET(2,0) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, false );
+  Qt4xHb::returnNewObject( o, false );
 }
 
 /*
@@ -70,8 +70,8 @@ QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = 0 )
 */
 void QPushButton_new3()
 {
-  QPushButton * o = new QPushButton( ISOBJECT(1)? *(QIcon *) Qt4xHb::_qt4xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), OPQWIDGET(3,0) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, false );
+  QPushButton * o = new QPushButton( ISOBJECT(1)? *(QIcon *) Qt4xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), OPQWIDGET(3,0) );
+  Qt4xHb::returnNewObject( o, false );
 }
 
 //[1]QPushButton ( QWidget * parent = 0 )
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_NEW )
 
 HB_FUNC_STATIC( QPUSHBUTTON_DELETE )
 {
-  QPushButton * obj = (QPushButton *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPushButton * obj = (QPushButton *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -122,7 +122,7 @@ bool autoDefault () const
 */
 HB_FUNC_STATIC( QPUSHBUTTON_AUTODEFAULT )
 {
-  QPushButton * obj = (QPushButton *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPushButton * obj = (QPushButton *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -146,7 +146,7 @@ bool isDefault () const
 */
 HB_FUNC_STATIC( QPUSHBUTTON_ISDEFAULT )
 {
-  QPushButton * obj = (QPushButton *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPushButton * obj = (QPushButton *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -170,7 +170,7 @@ bool isFlat () const
 */
 HB_FUNC_STATIC( QPUSHBUTTON_ISFLAT )
 {
-  QPushButton * obj = (QPushButton *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPushButton * obj = (QPushButton *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -194,7 +194,7 @@ void setAutoDefault ( bool )
 */
 HB_FUNC_STATIC( QPUSHBUTTON_SETAUTODEFAULT )
 {
-  QPushButton * obj = (QPushButton *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPushButton * obj = (QPushButton *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -220,7 +220,7 @@ void setDefault ( bool )
 */
 HB_FUNC_STATIC( QPUSHBUTTON_SETDEFAULT )
 {
-  QPushButton * obj = (QPushButton *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPushButton * obj = (QPushButton *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -246,7 +246,7 @@ void setFlat ( bool )
 */
 HB_FUNC_STATIC( QPUSHBUTTON_SETFLAT )
 {
-  QPushButton * obj = (QPushButton *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPushButton * obj = (QPushButton *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -272,7 +272,7 @@ void showMenu ()
 */
 HB_FUNC_STATIC( QPUSHBUTTON_SHOWMENU )
 {
-  QPushButton * obj = (QPushButton *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPushButton * obj = (QPushButton *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

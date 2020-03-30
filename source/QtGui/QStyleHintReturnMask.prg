@@ -46,7 +46,7 @@ HB_FUNC_STATIC( QSTYLEHINTRETURNMASK_NEW )
   if( ISNUMPAR(0) )
   {
     QStyleHintReturnMask * o = new QStyleHintReturnMask();
-    Qt4xHb::_qt4xhb_returnNewObject( o, true );
+    Qt4xHb::returnNewObject( o, true );
   }
   else
   {
@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QSTYLEHINTRETURNMASK_NEW )
 
 HB_FUNC_STATIC( QSTYLEHINTRETURNMASK_DELETE )
 {
-  QStyleHintReturnMask * obj = (QStyleHintReturnMask *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleHintReturnMask * obj = (QStyleHintReturnMask *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

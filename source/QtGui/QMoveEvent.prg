@@ -49,7 +49,7 @@ HB_FUNC_STATIC( QMOVEEVENT_NEW )
   if( ISNUMPAR(2) && ISQPOINT(1) && ISQPOINT(2) )
   {
     QMoveEvent * o = new QMoveEvent( *PQPOINT(1), *PQPOINT(2) );
-    Qt4xHb::_qt4xhb_returnNewObject( o, false );
+    Qt4xHb::returnNewObject( o, false );
   }
   else
   {
@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QMOVEEVENT_NEW )
 
 HB_FUNC_STATIC( QMOVEEVENT_DELETE )
 {
-  QMoveEvent * obj = (QMoveEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMoveEvent * obj = (QMoveEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -79,7 +79,7 @@ const QPoint & oldPos () const
 */
 HB_FUNC_STATIC( QMOVEEVENT_OLDPOS )
 {
-  QMoveEvent * obj = (QMoveEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMoveEvent * obj = (QMoveEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QMOVEEVENT_OLDPOS )
     {
 #endif
       const QPoint * ptr = &obj->oldPos();
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPOINT", false );
+      Qt4xHb::createReturnClass( ptr, "QPOINT", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -104,7 +104,7 @@ const QPoint & pos () const
 */
 HB_FUNC_STATIC( QMOVEEVENT_POS )
 {
-  QMoveEvent * obj = (QMoveEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMoveEvent * obj = (QMoveEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QMOVEEVENT_POS )
     {
 #endif
       const QPoint * ptr = &obj->pos();
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPOINT", false );
+      Qt4xHb::createReturnClass( ptr, "QPOINT", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

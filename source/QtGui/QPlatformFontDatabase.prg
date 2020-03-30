@@ -56,7 +56,7 @@ RETURN
 
 HB_FUNC_STATIC( QPLATFORMFONTDATABASE_DELETE )
 {
-  QPlatformFontDatabase * obj = (QPlatformFontDatabase *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformFontDatabase * obj = (QPlatformFontDatabase *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -76,7 +76,7 @@ virtual QStringList addApplicationFont ( const QByteArray & fontData, const QStr
 */
 HB_FUNC_STATIC( QPLATFORMFONTDATABASE_ADDAPPLICATIONFONT )
 {
-  QPlatformFontDatabase * obj = (QPlatformFontDatabase *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformFontDatabase * obj = (QPlatformFontDatabase *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -100,7 +100,7 @@ virtual QString fontDir () const
 */
 HB_FUNC_STATIC( QPLATFORMFONTDATABASE_FONTDIR )
 {
-  QPlatformFontDatabase * obj = (QPlatformFontDatabase *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformFontDatabase * obj = (QPlatformFontDatabase *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -124,7 +124,7 @@ virtual QFontEngine * fontEngine ( const QByteArray & fontData, qreal pixelSize,
 */
 HB_FUNC_STATIC( QPLATFORMFONTDATABASE_FONTENGINE )
 {
-  QPlatformFontDatabase * obj = (QPlatformFontDatabase *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformFontDatabase * obj = (QPlatformFontDatabase *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_FONTENGINE )
     {
 #endif
       QFontEngine * ptr = obj->fontEngine( *PQBYTEARRAY(1), PQREAL(2), (QFont::HintingPreference) hb_parni(3) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QFONTENGINE", false );
+      Qt4xHb::createReturnClass( ptr, "QFONTENGINE", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,7 +149,7 @@ virtual void populateFontDatabase ()
 */
 HB_FUNC_STATIC( QPLATFORMFONTDATABASE_POPULATEFONTDATABASE )
 {
-  QPlatformFontDatabase * obj = (QPlatformFontDatabase *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformFontDatabase * obj = (QPlatformFontDatabase *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -175,7 +175,7 @@ virtual void releaseHandle ( void * handle )
 */
 HB_FUNC_STATIC( QPLATFORMFONTDATABASE_RELEASEHANDLE )
 {
-  QPlatformFontDatabase * obj = (QPlatformFontDatabase *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformFontDatabase * obj = (QPlatformFontDatabase *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

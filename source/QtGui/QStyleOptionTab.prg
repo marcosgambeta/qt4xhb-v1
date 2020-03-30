@@ -58,7 +58,7 @@ QStyleOptionTab()
 void QStyleOptionTab_new1()
 {
   QStyleOptionTab * o = new QStyleOptionTab();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -67,7 +67,7 @@ QStyleOptionTab(const QStyleOptionTab &other)
 void QStyleOptionTab_new2()
 {
   QStyleOptionTab * o = new QStyleOptionTab( *PQSTYLEOPTIONTAB(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -99,7 +99,7 @@ QTabBar::Shape shape
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_SHAPE )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SHAPE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETSHAPE )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -137,7 +137,7 @@ QString text
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_TEXT )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_TEXT )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETTEXT )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -175,14 +175,14 @@ QIcon icon
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_ICON )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     if( ISNUMPAR(0) )
     {
       QIcon * ptr = new QIcon( obj->icon );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QICON", true );
+      Qt4xHb::createReturnClass( ptr, "QICON", true );
     }
     else
     {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_ICON )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETICON )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -214,7 +214,7 @@ int row
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_ROW )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_ROW )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETROW )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -252,7 +252,7 @@ TabPosition position
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_POSITION )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_POSITION )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETPOSITION )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -290,7 +290,7 @@ SelectedPosition selectedPosition
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_SELECTEDPOSITION )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SELECTEDPOSITION )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETSELECTEDPOSITION )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -328,7 +328,7 @@ CornerWidgets cornerWidgets
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_CORNERWIDGETS )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_CORNERWIDGETS )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETCORNERWIDGETS )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

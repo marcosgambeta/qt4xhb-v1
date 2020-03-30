@@ -47,7 +47,7 @@ QStyleOptionFrame()
 void QStyleOptionFrame_new1()
 {
   QStyleOptionFrame * o = new QStyleOptionFrame();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -56,7 +56,7 @@ QStyleOptionFrame(const QStyleOptionFrame &other)
 void QStyleOptionFrame_new2()
 {
   QStyleOptionFrame * o = new QStyleOptionFrame( *PQSTYLEOPTIONFRAME(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -88,7 +88,7 @@ int lineWidth
 */
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_LINEWIDTH )
 {
-  QStyleOptionFrame * obj = (QStyleOptionFrame *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionFrame * obj = (QStyleOptionFrame *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_LINEWIDTH )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_SETLINEWIDTH )
 {
-  QStyleOptionFrame * obj = (QStyleOptionFrame *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionFrame * obj = (QStyleOptionFrame *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -126,7 +126,7 @@ int midLineWidth
 */
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_MIDLINEWIDTH )
 {
-  QStyleOptionFrame * obj = (QStyleOptionFrame *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionFrame * obj = (QStyleOptionFrame *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_MIDLINEWIDTH )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_SETMIDLINEWIDTH )
 {
-  QStyleOptionFrame * obj = (QStyleOptionFrame *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStyleOptionFrame * obj = (QStyleOptionFrame *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

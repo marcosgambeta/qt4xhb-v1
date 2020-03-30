@@ -54,8 +54,8 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||ISNIL(1)) )
   {
-    QGraphicsItemGroup * o = new QGraphicsItemGroup( ISNIL(1)? 0 : (QGraphicsItem *) Qt4xHb::_qt4xhb_itemGetPtr(1) );
-    Qt4xHb::_qt4xhb_returnNewObject( o, true );
+    QGraphicsItemGroup * o = new QGraphicsItemGroup( ISNIL(1)? 0 : (QGraphicsItem *) Qt4xHb::itemGetPtr(1) );
+    Qt4xHb::returnNewObject( o, true );
   }
   else
   {
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_DELETE )
 {
-  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -85,7 +85,7 @@ void addToGroup ( QGraphicsItem * item )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_ADDTOGROUP )
 {
-  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -111,7 +111,7 @@ void removeFromGroup ( QGraphicsItem * item )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_REMOVEFROMGROUP )
 {
-  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -137,7 +137,7 @@ virtual QRectF boundingRect () const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_BOUNDINGRECT )
 {
-  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_BOUNDINGRECT )
     {
 #endif
       QRectF * ptr = new QRectF( obj->boundingRect() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QRECTF", true );
+      Qt4xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -162,7 +162,7 @@ virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_ISOBSCUREDBY )
 {
-  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -186,7 +186,7 @@ virtual QPainterPath opaqueArea () const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_OPAQUEAREA )
 {
-  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_OPAQUEAREA )
     {
 #endif
       QPainterPath * ptr = new QPainterPath( obj->opaqueArea() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPAINTERPATH", true );
+      Qt4xHb::createReturnClass( ptr, "QPAINTERPATH", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,7 +211,7 @@ virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_PAINT )
 {
-  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -237,7 +237,7 @@ virtual int type () const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_TYPE )
 {
-  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsItemGroup * obj = (QGraphicsItemGroup *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

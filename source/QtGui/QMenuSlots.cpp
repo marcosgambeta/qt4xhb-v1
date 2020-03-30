@@ -70,7 +70,7 @@ void QMenuSlots::triggered( QAction * action )
 
 void QMenuSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QMenu * obj = (QMenu *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMenu * obj = (QMenu *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

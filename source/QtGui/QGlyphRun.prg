@@ -68,7 +68,7 @@ QGlyphRun ()
 void QGlyphRun_new1()
 {
   QGlyphRun * o = new QGlyphRun();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -77,7 +77,7 @@ QGlyphRun ( const QGlyphRun & other )
 void QGlyphRun_new2()
 {
   QGlyphRun * o = new QGlyphRun( *PQGLYPHRUN(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QGlyphRun ()
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QGLYPHRUN_NEW )
 
 HB_FUNC_STATIC( QGLYPHRUN_DELETE )
 {
-  QGlyphRun * obj = (QGlyphRun *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGlyphRun * obj = (QGlyphRun *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -121,7 +121,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QGLYPHRUN_CLEAR )
 {
-  QGlyphRun * obj = (QGlyphRun *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGlyphRun * obj = (QGlyphRun *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -147,7 +147,7 @@ QVector<quint32> glyphIndexes () const
 */
 HB_FUNC_STATIC( QGLYPHRUN_GLYPHINDEXES )
 {
-  QGlyphRun * obj = (QGlyphRun *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGlyphRun * obj = (QGlyphRun *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -179,7 +179,7 @@ bool overline () const
 */
 HB_FUNC_STATIC( QGLYPHRUN_OVERLINE )
 {
-  QGlyphRun * obj = (QGlyphRun *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGlyphRun * obj = (QGlyphRun *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -203,7 +203,7 @@ QVector<QPointF> positions () const
 */
 HB_FUNC_STATIC( QGLYPHRUN_POSITIONS )
 {
-  QGlyphRun * obj = (QGlyphRun *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGlyphRun * obj = (QGlyphRun *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -255,7 +255,7 @@ QRawFont rawFont () const
 */
 HB_FUNC_STATIC( QGLYPHRUN_RAWFONT )
 {
-  QGlyphRun * obj = (QGlyphRun *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGlyphRun * obj = (QGlyphRun *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QGLYPHRUN_RAWFONT )
     {
 #endif
       QRawFont * ptr = new QRawFont( obj->rawFont() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QRAWFONT", true );
+      Qt4xHb::createReturnClass( ptr, "QRAWFONT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -280,7 +280,7 @@ void setGlyphIndexes ( const QVector<quint32> & glyphIndexes )
 */
 HB_FUNC_STATIC( QGLYPHRUN_SETGLYPHINDEXES )
 {
-  QGlyphRun * obj = (QGlyphRun *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGlyphRun * obj = (QGlyphRun *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -316,7 +316,7 @@ void setOverline ( bool overline )
 */
 HB_FUNC_STATIC( QGLYPHRUN_SETOVERLINE )
 {
-  QGlyphRun * obj = (QGlyphRun *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGlyphRun * obj = (QGlyphRun *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -342,7 +342,7 @@ void setPositions ( const QVector<QPointF> & positions )
 */
 HB_FUNC_STATIC( QGLYPHRUN_SETPOSITIONS )
 {
-  QGlyphRun * obj = (QGlyphRun *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGlyphRun * obj = (QGlyphRun *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -376,7 +376,7 @@ void setRawFont ( const QRawFont & rawFont )
 */
 HB_FUNC_STATIC( QGLYPHRUN_SETRAWFONT )
 {
-  QGlyphRun * obj = (QGlyphRun *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGlyphRun * obj = (QGlyphRun *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -402,7 +402,7 @@ void setStrikeOut ( bool strikeOut )
 */
 HB_FUNC_STATIC( QGLYPHRUN_SETSTRIKEOUT )
 {
-  QGlyphRun * obj = (QGlyphRun *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGlyphRun * obj = (QGlyphRun *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -428,7 +428,7 @@ void setUnderline ( bool underline )
 */
 HB_FUNC_STATIC( QGLYPHRUN_SETUNDERLINE )
 {
-  QGlyphRun * obj = (QGlyphRun *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGlyphRun * obj = (QGlyphRun *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -454,7 +454,7 @@ bool strikeOut () const
 */
 HB_FUNC_STATIC( QGLYPHRUN_STRIKEOUT )
 {
-  QGlyphRun * obj = (QGlyphRun *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGlyphRun * obj = (QGlyphRun *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -478,7 +478,7 @@ bool underline () const
 */
 HB_FUNC_STATIC( QGLYPHRUN_UNDERLINE )
 {
-  QGlyphRun * obj = (QGlyphRun *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGlyphRun * obj = (QGlyphRun *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

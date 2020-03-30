@@ -135,7 +135,7 @@ void QPlainTextEditSlots::updateRequest( const QRect & rect, int dy )
 
 void QPlainTextEditSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QPlainTextEdit * obj = (QPlainTextEdit *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlainTextEdit * obj = (QPlainTextEdit *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QWIZARD_NEW )
   if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTNUM(2) )
   {
     QWizard * o = new QWizard( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-    Qt4xHb::_qt4xhb_returnNewObject( o, false );
+    Qt4xHb::returnNewObject( o, false );
   }
   else
   {
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QWIZARD_NEW )
 
 HB_FUNC_STATIC( QWIZARD_DELETE )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -135,7 +135,7 @@ int addPage ( QWizardPage * page )
 */
 HB_FUNC_STATIC( QWIZARD_ADDPAGE )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -159,7 +159,7 @@ QAbstractButton * button ( WizardButton which ) const
 */
 HB_FUNC_STATIC( QWIZARD_BUTTON )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QWIZARD_BUTTON )
     {
 #endif
       QAbstractButton * ptr = obj->button( (QWizard::WizardButton) hb_parni(1) );
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QABSTRACTBUTTON" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTBUTTON" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,7 +184,7 @@ QString buttonText ( WizardButton which ) const
 */
 HB_FUNC_STATIC( QWIZARD_BUTTONTEXT )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -208,7 +208,7 @@ int currentId () const
 */
 HB_FUNC_STATIC( QWIZARD_CURRENTID )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -232,7 +232,7 @@ QWizardPage * currentPage () const
 */
 HB_FUNC_STATIC( QWIZARD_CURRENTPAGE )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QWIZARD_CURRENTPAGE )
     {
 #endif
       QWizardPage * ptr = obj->currentPage();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QWIZARDPAGE" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QWIZARDPAGE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -257,7 +257,7 @@ QVariant field ( const QString & name ) const
 */
 HB_FUNC_STATIC( QWIZARD_FIELD )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QWIZARD_FIELD )
     {
 #endif
       QVariant * ptr = new QVariant( obj->field( PQSTRING(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -282,7 +282,7 @@ bool hasVisitedPage ( int id ) const
 */
 HB_FUNC_STATIC( QWIZARD_HASVISITEDPAGE )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -306,7 +306,7 @@ virtual int nextId () const
 */
 HB_FUNC_STATIC( QWIZARD_NEXTID )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -330,7 +330,7 @@ WizardOptions options () const
 */
 HB_FUNC_STATIC( QWIZARD_OPTIONS )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -354,7 +354,7 @@ QWizardPage * page ( int id ) const
 */
 HB_FUNC_STATIC( QWIZARD_PAGE )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QWIZARD_PAGE )
     {
 #endif
       QWizardPage * ptr = obj->page( PINT(1) );
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QWIZARDPAGE" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QWIZARDPAGE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -379,7 +379,7 @@ QList<int> pageIds () const
 */
 HB_FUNC_STATIC( QWIZARD_PAGEIDS )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QWIZARD_PAGEIDS )
     {
 #endif
       QList<int> list = obj->pageIds();
-      Qt4xHb::_qt4xhb_convert_qlist_int_to_array( list );
+      Qt4xHb::convert_qlist_int_to_array( list );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -404,7 +404,7 @@ QPixmap pixmap ( WizardPixmap which ) const
 */
 HB_FUNC_STATIC( QWIZARD_PIXMAP )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QWIZARD_PIXMAP )
     {
 #endif
       QPixmap * ptr = new QPixmap( obj->pixmap( (QWizard::WizardPixmap) hb_parni(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPIXMAP", true );
+      Qt4xHb::createReturnClass( ptr, "QPIXMAP", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -429,7 +429,7 @@ void removePage ( int id )
 */
 HB_FUNC_STATIC( QWIZARD_REMOVEPAGE )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -455,7 +455,7 @@ void setButton ( WizardButton which, QAbstractButton * button )
 */
 HB_FUNC_STATIC( QWIZARD_SETBUTTON )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -481,7 +481,7 @@ void setButtonLayout ( const QList<WizardButton> & layout )
 */
 HB_FUNC_STATIC( QWIZARD_SETBUTTONLAYOUT )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -515,7 +515,7 @@ void setButtonText ( WizardButton which, const QString & text )
 */
 HB_FUNC_STATIC( QWIZARD_SETBUTTONTEXT )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -541,7 +541,7 @@ void setDefaultProperty ( const char * className, const char * property, const c
 */
 HB_FUNC_STATIC( QWIZARD_SETDEFAULTPROPERTY )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -567,7 +567,7 @@ void setField ( const QString & name, const QVariant & value )
 */
 HB_FUNC_STATIC( QWIZARD_SETFIELD )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -593,7 +593,7 @@ void setOption ( WizardOption option, bool on = true )
 */
 HB_FUNC_STATIC( QWIZARD_SETOPTION )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -619,7 +619,7 @@ void setOptions ( WizardOptions options )
 */
 HB_FUNC_STATIC( QWIZARD_SETOPTIONS )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -645,7 +645,7 @@ void setPage ( int id, QWizardPage * page )
 */
 HB_FUNC_STATIC( QWIZARD_SETPAGE )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -671,7 +671,7 @@ void setPixmap ( WizardPixmap which, const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QWIZARD_SETPIXMAP )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -697,7 +697,7 @@ void setSideWidget ( QWidget * widget )
 */
 HB_FUNC_STATIC( QWIZARD_SETSIDEWIDGET )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -723,7 +723,7 @@ void setStartId ( int id )
 */
 HB_FUNC_STATIC( QWIZARD_SETSTARTID )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -749,7 +749,7 @@ void setSubTitleFormat ( Qt::TextFormat format )
 */
 HB_FUNC_STATIC( QWIZARD_SETSUBTITLEFORMAT )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -775,7 +775,7 @@ void setTitleFormat ( Qt::TextFormat format )
 */
 HB_FUNC_STATIC( QWIZARD_SETTITLEFORMAT )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -801,7 +801,7 @@ void setWizardStyle ( WizardStyle style )
 */
 HB_FUNC_STATIC( QWIZARD_SETWIZARDSTYLE )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -827,7 +827,7 @@ QWidget * sideWidget () const
 */
 HB_FUNC_STATIC( QWIZARD_SIDEWIDGET )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -836,7 +836,7 @@ HB_FUNC_STATIC( QWIZARD_SIDEWIDGET )
     {
 #endif
       QWidget * ptr = obj->sideWidget();
-      Qt4xHb::_qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -852,7 +852,7 @@ int startId () const
 */
 HB_FUNC_STATIC( QWIZARD_STARTID )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -876,7 +876,7 @@ Qt::TextFormat subTitleFormat () const
 */
 HB_FUNC_STATIC( QWIZARD_SUBTITLEFORMAT )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -900,7 +900,7 @@ bool testOption ( WizardOption option ) const
 */
 HB_FUNC_STATIC( QWIZARD_TESTOPTION )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -924,7 +924,7 @@ Qt::TextFormat titleFormat () const
 */
 HB_FUNC_STATIC( QWIZARD_TITLEFORMAT )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -948,7 +948,7 @@ virtual bool validateCurrentPage ()
 */
 HB_FUNC_STATIC( QWIZARD_VALIDATECURRENTPAGE )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -972,7 +972,7 @@ QList<int> visitedPages () const
 */
 HB_FUNC_STATIC( QWIZARD_VISITEDPAGES )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -981,7 +981,7 @@ HB_FUNC_STATIC( QWIZARD_VISITEDPAGES )
     {
 #endif
       QList<int> list = obj->visitedPages();
-      Qt4xHb::_qt4xhb_convert_qlist_int_to_array( list );
+      Qt4xHb::convert_qlist_int_to_array( list );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -997,7 +997,7 @@ WizardStyle wizardStyle () const
 */
 HB_FUNC_STATIC( QWIZARD_WIZARDSTYLE )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1021,7 +1021,7 @@ virtual void setVisible ( bool visible )
 */
 HB_FUNC_STATIC( QWIZARD_SETVISIBLE )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1047,7 +1047,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QWIZARD_SIZEHINT )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1056,7 +1056,7 @@ HB_FUNC_STATIC( QWIZARD_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1072,7 +1072,7 @@ void back ()
 */
 HB_FUNC_STATIC( QWIZARD_BACK )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1098,7 +1098,7 @@ void next ()
 */
 HB_FUNC_STATIC( QWIZARD_NEXT )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1124,7 +1124,7 @@ void restart ()
 */
 HB_FUNC_STATIC( QWIZARD_RESTART )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

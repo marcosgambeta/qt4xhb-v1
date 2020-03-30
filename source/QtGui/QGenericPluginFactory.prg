@@ -53,7 +53,7 @@ QObject * create ( const QString & key, const QString & specification )
 */
 HB_FUNC_STATIC( QGENERICPLUGINFACTORY_CREATE )
 {
-  QGenericPluginFactory * obj = (QGenericPluginFactory *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGenericPluginFactory * obj = (QGenericPluginFactory *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QGENERICPLUGINFACTORY_CREATE )
     {
 #endif
       QObject * ptr = obj->create( PQSTRING(1), PQSTRING(2) );
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

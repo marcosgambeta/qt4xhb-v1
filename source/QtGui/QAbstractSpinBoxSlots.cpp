@@ -33,7 +33,7 @@ void QAbstractSpinBoxSlots::editingFinished()
 
 void QAbstractSpinBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

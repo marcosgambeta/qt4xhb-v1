@@ -71,7 +71,7 @@ QItemSelectionRange ()
 void QItemSelectionRange_new1()
 {
   QItemSelectionRange * o = new QItemSelectionRange();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -80,7 +80,7 @@ QItemSelectionRange ( const QItemSelectionRange & other )
 void QItemSelectionRange_new2()
 {
   QItemSelectionRange * o = new QItemSelectionRange( *PQITEMSELECTIONRANGE(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -89,7 +89,7 @@ QItemSelectionRange ( const QModelIndex & topLeft, const QModelIndex & bottomRig
 void QItemSelectionRange_new3()
 {
   QItemSelectionRange * o = new QItemSelectionRange( *PQMODELINDEX(1), *PQMODELINDEX(2) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -98,7 +98,7 @@ QItemSelectionRange ( const QModelIndex & index )
 void QItemSelectionRange_new4()
 {
   QItemSelectionRange * o = new QItemSelectionRange( *PQMODELINDEX(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QItemSelectionRange ()
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW )
 
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_DELETE )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -152,7 +152,7 @@ int bottom () const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_BOTTOM )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -176,7 +176,7 @@ QModelIndex bottomRight () const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_BOTTOMRIGHT )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_BOTTOMRIGHT )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->bottomRight() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,7 +201,7 @@ bool contains ( const QModelIndex & index ) const
 */
 void QItemSelectionRange_contains1()
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -214,7 +214,7 @@ bool contains ( int row, int column, const QModelIndex & parentIndex ) const
 */
 void QItemSelectionRange_contains2()
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -246,7 +246,7 @@ int height () const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_HEIGHT )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -270,7 +270,7 @@ QModelIndexList indexes () const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_INDEXES )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -322,7 +322,7 @@ QItemSelectionRange intersected ( const QItemSelectionRange & other ) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTED )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTED )
     {
 #endif
       QItemSelectionRange * ptr = new QItemSelectionRange( obj->intersected( *PQITEMSELECTIONRANGE(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QITEMSELECTIONRANGE", true );
+      Qt4xHb::createReturnClass( ptr, "QITEMSELECTIONRANGE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -347,7 +347,7 @@ bool intersects ( const QItemSelectionRange & other ) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTS )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -371,7 +371,7 @@ bool isEmpty () const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_ISEMPTY )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -395,7 +395,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_ISVALID )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -419,7 +419,7 @@ int left () const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_LEFT )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -443,7 +443,7 @@ const QAbstractItemModel * model () const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_MODEL )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_MODEL )
     {
 #endif
       const QAbstractItemModel * ptr = obj->model();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -468,7 +468,7 @@ QModelIndex parent () const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_PARENT )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_PARENT )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->parent() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -493,7 +493,7 @@ int right () const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_RIGHT )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -517,7 +517,7 @@ int top () const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_TOP )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -541,7 +541,7 @@ QModelIndex topLeft () const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_TOPLEFT )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -550,7 +550,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_TOPLEFT )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->topLeft() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -566,7 +566,7 @@ int width () const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_WIDTH )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QItemSelectionRange * obj = (QItemSelectionRange *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

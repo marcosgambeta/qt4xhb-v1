@@ -81,7 +81,7 @@ void QGraphicsSceneSlots::selectionChanged()
 
 void QGraphicsSceneSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsScene * obj = (QGraphicsScene *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

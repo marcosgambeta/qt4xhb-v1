@@ -49,7 +49,7 @@ HB_FUNC_STATIC( QRESIZEEVENT_NEW )
   if( ISNUMPAR(2) && ISQSIZE(1) && ISQSIZE(2) )
   {
     QResizeEvent * o = new QResizeEvent( *PQSIZE(1), *PQSIZE(2) );
-    Qt4xHb::_qt4xhb_returnNewObject( o, false );
+    Qt4xHb::returnNewObject( o, false );
   }
   else
   {
@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QRESIZEEVENT_NEW )
 
 HB_FUNC_STATIC( QRESIZEEVENT_DELETE )
 {
-  QResizeEvent * obj = (QResizeEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QResizeEvent * obj = (QResizeEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -79,7 +79,7 @@ const QSize &size() const
 */
 HB_FUNC_STATIC( QRESIZEEVENT_SIZE )
 {
-  QResizeEvent * obj = (QResizeEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QResizeEvent * obj = (QResizeEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QRESIZEEVENT_SIZE )
     {
 #endif
       const QSize * ptr = &obj->size();
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSIZE", false );
+      Qt4xHb::createReturnClass( ptr, "QSIZE", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -104,7 +104,7 @@ const QSize &oldSize()const
 */
 HB_FUNC_STATIC( QRESIZEEVENT_OLDSIZE )
 {
-  QResizeEvent * obj = (QResizeEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QResizeEvent * obj = (QResizeEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QRESIZEEVENT_OLDSIZE )
     {
 #endif
       const QSize * ptr = &obj->oldSize();
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSIZE", false );
+      Qt4xHb::createReturnClass( ptr, "QSIZE", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

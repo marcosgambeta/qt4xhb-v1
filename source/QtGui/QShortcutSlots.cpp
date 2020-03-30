@@ -44,7 +44,7 @@ void QShortcutSlots::activatedAmbiguously()
 
 void QShortcutSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QShortcut * obj = (QShortcut *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QShortcut * obj = (QShortcut *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

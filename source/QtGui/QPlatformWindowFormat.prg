@@ -100,7 +100,7 @@ QPlatformWindowFormat ()
 void QPlatformWindowFormat_new1()
 {
   QPlatformWindowFormat * o = new QPlatformWindowFormat();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -109,7 +109,7 @@ QPlatformWindowFormat ( FormatOptions options )
 void QPlatformWindowFormat_new2()
 {
   QPlatformWindowFormat * o = new QPlatformWindowFormat( (QPlatformWindowFormat::FormatOptions) hb_parni(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -118,7 +118,7 @@ QPlatformWindowFormat ( const QPlatformWindowFormat & other )
 void QPlatformWindowFormat_new3()
 {
   QPlatformWindowFormat * o = new QPlatformWindowFormat( *PQPLATFORMWINDOWFORMAT(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QPlatformWindowFormat ()
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_NEW )
 
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_DELETE )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -167,7 +167,7 @@ bool accum () const
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_ACCUM )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -191,7 +191,7 @@ int accumBufferSize () const
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_ACCUMBUFFERSIZE )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -215,7 +215,7 @@ bool alpha () const
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_ALPHA )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -239,7 +239,7 @@ int alphaBufferSize () const
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_ALPHABUFFERSIZE )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -263,7 +263,7 @@ int blueBufferSize () const
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_BLUEBUFFERSIZE )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -287,7 +287,7 @@ bool depth () const
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_DEPTH )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -311,7 +311,7 @@ int depthBufferSize () const
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_DEPTHBUFFERSIZE )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -335,7 +335,7 @@ bool directRendering () const
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_DIRECTRENDERING )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -359,7 +359,7 @@ bool doubleBuffer () const
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_DOUBLEBUFFER )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -383,7 +383,7 @@ int greenBufferSize () const
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_GREENBUFFERSIZE )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -407,7 +407,7 @@ bool hasWindowSurface () const
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_HASWINDOWSURFACE )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -431,7 +431,7 @@ int redBufferSize () const
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_REDBUFFERSIZE )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -455,7 +455,7 @@ bool rgba () const
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_RGBA )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -479,7 +479,7 @@ bool sampleBuffers () const
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SAMPLEBUFFERS )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -503,7 +503,7 @@ int samples () const
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SAMPLES )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -527,7 +527,7 @@ void setAccum ( bool enable )
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETACCUM )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -553,7 +553,7 @@ void setAccumBufferSize ( int size )
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETACCUMBUFFERSIZE )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -579,7 +579,7 @@ void setAlpha ( bool enable )
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETALPHA )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -605,7 +605,7 @@ void setAlphaBufferSize ( int size )
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETALPHABUFFERSIZE )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -631,7 +631,7 @@ void setBlueBufferSize ( int size )
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETBLUEBUFFERSIZE )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -657,7 +657,7 @@ void setDepth ( bool enable )
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETDEPTH )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -683,7 +683,7 @@ void setDepthBufferSize ( int size )
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETDEPTHBUFFERSIZE )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -709,7 +709,7 @@ void setDirectRendering ( bool enable )
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETDIRECTRENDERING )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -735,7 +735,7 @@ void setDoubleBuffer ( bool enable )
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETDOUBLEBUFFER )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -761,7 +761,7 @@ void setGreenBufferSize ( int size )
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETGREENBUFFERSIZE )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -787,7 +787,7 @@ void setOption ( QPlatformWindowFormat::FormatOptions opt )
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETOPTION )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -813,7 +813,7 @@ void setRedBufferSize ( int size )
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETREDBUFFERSIZE )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -839,7 +839,7 @@ void setRgba ( bool enable )
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETRGBA )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -865,7 +865,7 @@ void setSampleBuffers ( bool enable )
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETSAMPLEBUFFERS )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -891,7 +891,7 @@ void setSamples ( int numSamples )
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETSAMPLES )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -917,7 +917,7 @@ void setSharedContext ( QPlatformGLContext * context )
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETSHAREDCONTEXT )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -943,7 +943,7 @@ void setStencil ( bool enable )
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETSTENCIL )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -969,7 +969,7 @@ void setStencilBufferSize ( int size )
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETSTENCILBUFFERSIZE )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -995,7 +995,7 @@ void setStereo ( bool enable )
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETSTEREO )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1021,7 +1021,7 @@ void setSwapInterval ( int interval )
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETSWAPINTERVAL )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1047,7 +1047,7 @@ void setWindowApi ( QPlatformWindowFormat::WindowApi api )
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETWINDOWAPI )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1073,7 +1073,7 @@ void setWindowSurface ( bool enable )
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETWINDOWSURFACE )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1099,7 +1099,7 @@ QPlatformGLContext * sharedGLContext () const
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SHAREDGLCONTEXT )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1108,7 +1108,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SHAREDGLCONTEXT )
     {
 #endif
       QPlatformGLContext * ptr = obj->sharedGLContext();
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPLATFORMGLCONTEXT", false );
+      Qt4xHb::createReturnClass( ptr, "QPLATFORMGLCONTEXT", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1124,7 +1124,7 @@ bool stencil () const
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_STENCIL )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1148,7 +1148,7 @@ int stencilBufferSize () const
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_STENCILBUFFERSIZE )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1172,7 +1172,7 @@ bool stereo () const
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_STEREO )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1196,7 +1196,7 @@ int swapInterval () const
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SWAPINTERVAL )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1220,7 +1220,7 @@ bool testOption ( QPlatformWindowFormat::FormatOptions opt ) const
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_TESTOPTION )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1244,7 +1244,7 @@ WindowApi windowApi () const
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_WINDOWAPI )
 {
-  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QPlatformWindowFormat * obj = (QPlatformWindowFormat *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1273,7 +1273,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_DEFAULTFORMAT )
   {
 #endif
     QPlatformWindowFormat * ptr = new QPlatformWindowFormat( QPlatformWindowFormat::defaultFormat() );
-    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPLATFORMWINDOWFORMAT", true );
+    Qt4xHb::createReturnClass( ptr, "QPLATFORMWINDOWFORMAT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

@@ -46,7 +46,7 @@ QVBoxLayout ()
 void QVBoxLayout_new1()
 {
   QVBoxLayout * o = new QVBoxLayout();
-  Qt4xHb::_qt4xhb_returnNewObject( o, false );
+  Qt4xHb::returnNewObject( o, false );
 }
 
 /*
@@ -55,7 +55,7 @@ QVBoxLayout ( QWidget * parent )
 void QVBoxLayout_new2()
 {
   QVBoxLayout * o = new QVBoxLayout( PQWIDGET(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, false );
+  Qt4xHb::returnNewObject( o, false );
 }
 
 //[1]QVBoxLayout ()
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QVBOXLAYOUT_NEW )
 
 HB_FUNC_STATIC( QVBOXLAYOUT_DELETE )
 {
-  QVBoxLayout * obj = (QVBoxLayout *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QVBoxLayout * obj = (QVBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

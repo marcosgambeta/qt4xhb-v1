@@ -55,7 +55,7 @@ void grabGesture ( Qt::GestureType gesture, Qt::GestureFlags flags = Qt::Gesture
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_GRABGESTURE )
 {
-  QGraphicsObject * obj = (QGraphicsObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsObject * obj = (QGraphicsObject *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -81,7 +81,7 @@ void ungrabGesture ( Qt::GestureType gesture )
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_UNGRABGESTURE )
 {
-  QGraphicsObject * obj = (QGraphicsObject *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QGraphicsObject * obj = (QGraphicsObject *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

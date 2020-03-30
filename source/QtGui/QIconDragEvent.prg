@@ -46,7 +46,7 @@ HB_FUNC_STATIC( QICONDRAGEVENT_NEW )
   if( ISNUMPAR(0) )
   {
     QIconDragEvent * o = new QIconDragEvent();
-    Qt4xHb::_qt4xhb_returnNewObject( o, false );
+    Qt4xHb::returnNewObject( o, false );
   }
   else
   {
@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QICONDRAGEVENT_NEW )
 
 HB_FUNC_STATIC( QICONDRAGEVENT_DELETE )
 {
-  QIconDragEvent * obj = (QIconDragEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QIconDragEvent * obj = (QIconDragEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

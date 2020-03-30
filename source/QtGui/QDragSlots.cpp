@@ -48,7 +48,7 @@ void QDragSlots::targetChanged( QWidget * newTarget )
 
 void QDragSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDrag * obj = (QDrag *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDrag * obj = (QDrag *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

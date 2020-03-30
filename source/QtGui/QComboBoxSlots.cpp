@@ -113,7 +113,7 @@ void QComboBoxSlots::highlighted( const QString & text )
 
 void QComboBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QComboBox * obj = (QComboBox *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QComboBox * obj = (QComboBox *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

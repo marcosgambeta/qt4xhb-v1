@@ -100,7 +100,7 @@ void QUndoStackSlots::undoTextChanged( const QString & undoText )
 
 void QUndoStackSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QUndoStack * obj = (QUndoStack *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QUndoStack * obj = (QUndoStack *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

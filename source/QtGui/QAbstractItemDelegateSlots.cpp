@@ -63,7 +63,7 @@ void QAbstractItemDelegateSlots::sizeHintChanged( const QModelIndex & index )
 
 void QAbstractItemDelegateSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

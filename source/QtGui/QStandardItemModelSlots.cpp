@@ -35,7 +35,7 @@ void QStandardItemModelSlots::itemChanged( QStandardItem * item )
 
 void QStandardItemModelSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QStandardItemModel * obj = (QStandardItemModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QStandardItemModel * obj = (QStandardItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

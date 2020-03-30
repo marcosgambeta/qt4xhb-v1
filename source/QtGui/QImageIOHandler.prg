@@ -72,7 +72,7 @@ RETURN
 
 HB_FUNC_STATIC( QIMAGEIOHANDLER_DELETE )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -92,7 +92,7 @@ virtual bool canRead () const = 0
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_CANREAD )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -116,7 +116,7 @@ virtual int currentImageNumber () const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGENUMBER )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -140,7 +140,7 @@ virtual QRect currentImageRect () const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGERECT )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGERECT )
     {
 #endif
       QRect * ptr = new QRect( obj->currentImageRect() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass( ptr, "QRECT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,7 +165,7 @@ QIODevice * device () const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_DEVICE )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_DEVICE )
     {
 #endif
       QIODevice * ptr = obj->device();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QIODEVICE" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QIODEVICE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,7 +190,7 @@ QByteArray format () const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_FORMAT )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_FORMAT )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->format() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,7 +215,7 @@ virtual int imageCount () const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_IMAGECOUNT )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -239,7 +239,7 @@ virtual bool jumpToImage ( int imageNumber )
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTOIMAGE )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -263,7 +263,7 @@ virtual bool jumpToNextImage ()
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTONEXTIMAGE )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -287,7 +287,7 @@ virtual int loopCount () const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_LOOPCOUNT )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -311,7 +311,7 @@ virtual int nextImageDelay () const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_NEXTIMAGEDELAY )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -335,7 +335,7 @@ virtual QVariant option ( ImageOption option ) const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_OPTION )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_OPTION )
     {
 #endif
       QVariant * ptr = new QVariant( obj->option( (QImageIOHandler::ImageOption) hb_parni(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -360,7 +360,7 @@ virtual bool read ( QImage * image ) = 0
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_READ )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -384,7 +384,7 @@ void setDevice ( QIODevice * device )
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_SETDEVICE )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -410,7 +410,7 @@ void setFormat ( const QByteArray & format )
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_SETFORMAT )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -436,7 +436,7 @@ virtual void setOption ( ImageOption option, const QVariant & value )
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_SETOPTION )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -462,7 +462,7 @@ virtual bool supportsOption ( ImageOption option ) const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_SUPPORTSOPTION )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -486,7 +486,7 @@ virtual bool write ( const QImage & image )
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_WRITE )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QImageIOHandler * obj = (QImageIOHandler *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -48,7 +48,7 @@ HB_FUNC_STATIC( QWINDOWSVISTASTYLE_NEW )
   if( ISNUMPAR(0) )
   {
     QWindowsVistaStyle * o = new QWindowsVistaStyle();
-    Qt4xHb::_qt4xhb_returnNewObject( o, false );
+    Qt4xHb::returnNewObject( o, false );
   }
   else
   {
@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QWINDOWSVISTASTYLE_NEW )
 
 HB_FUNC_STATIC( QWINDOWSVISTASTYLE_DELETE )
 {
-  QWindowsVistaStyle * obj = (QWindowsVistaStyle *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QWindowsVistaStyle * obj = (QWindowsVistaStyle *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

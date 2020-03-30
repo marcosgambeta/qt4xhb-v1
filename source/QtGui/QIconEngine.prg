@@ -55,7 +55,7 @@ RETURN
 
 HB_FUNC_STATIC( QICONENGINE_DELETE )
 {
-  QIconEngine * obj = (QIconEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QIconEngine * obj = (QIconEngine *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -75,7 +75,7 @@ virtual QSize actualSize ( const QSize & size, QIcon::Mode mode, QIcon::State st
 */
 HB_FUNC_STATIC( QICONENGINE_ACTUALSIZE )
 {
-  QIconEngine * obj = (QIconEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QIconEngine * obj = (QIconEngine *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QICONENGINE_ACTUALSIZE )
     {
 #endif
       QSize * ptr = new QSize( obj->actualSize( *PQSIZE(1), (QIcon::Mode) hb_parni(2), (QIcon::State) hb_parni(3) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -100,7 +100,7 @@ virtual void addFile ( const QString & fileName, const QSize & size, QIcon::Mode
 */
 HB_FUNC_STATIC( QICONENGINE_ADDFILE )
 {
-  QIconEngine * obj = (QIconEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QIconEngine * obj = (QIconEngine *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -126,7 +126,7 @@ virtual void addPixmap ( const QPixmap & pixmap, QIcon::Mode mode, QIcon::State 
 */
 HB_FUNC_STATIC( QICONENGINE_ADDPIXMAP )
 {
-  QIconEngine * obj = (QIconEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QIconEngine * obj = (QIconEngine *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -152,7 +152,7 @@ virtual void paint ( QPainter * painter, const QRect & rect, QIcon::Mode mode, Q
 */
 HB_FUNC_STATIC( QICONENGINE_PAINT )
 {
-  QIconEngine * obj = (QIconEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QIconEngine * obj = (QIconEngine *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -178,7 +178,7 @@ virtual QPixmap pixmap ( const QSize & size, QIcon::Mode mode, QIcon::State stat
 */
 HB_FUNC_STATIC( QICONENGINE_PIXMAP )
 {
-  QIconEngine * obj = (QIconEngine *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QIconEngine * obj = (QIconEngine *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QICONENGINE_PIXMAP )
     {
 #endif
       QPixmap * ptr = new QPixmap( obj->pixmap( *PQSIZE(1), (QIcon::Mode) hb_parni(2), (QIcon::State) hb_parni(3) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QPIXMAP", true );
+      Qt4xHb::createReturnClass( ptr, "QPIXMAP", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -46,7 +46,7 @@ HB_FUNC_STATIC( QDRAGENTEREVENT_NEW )
   if( ISNUMPAR(5) && ISQPOINT(1) && ISNUM(2) && ISQMIMEDATA(3) && ISNUM(4) && ISNUM(5) )
   {
     QDragEnterEvent * o = new QDragEnterEvent( *PQPOINT(1), (Qt::DropActions) hb_parni(2), PQMIMEDATA(3), (Qt::MouseButtons) hb_parni(4), (Qt::KeyboardModifiers) hb_parni(5) );
-    Qt4xHb::_qt4xhb_returnNewObject( o, false );
+    Qt4xHb::returnNewObject( o, false );
   }
   else
   {
@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QDRAGENTEREVENT_NEW )
 
 HB_FUNC_STATIC( QDRAGENTEREVENT_DELETE )
 {
-  QDragEnterEvent * obj = (QDragEnterEvent *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDragEnterEvent * obj = (QDragEnterEvent *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

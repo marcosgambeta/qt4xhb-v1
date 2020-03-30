@@ -52,7 +52,7 @@ RETURN
 
 HB_FUNC_STATIC( QMIMESOURCE_DELETE )
 {
-  QMimeSource * obj = (QMimeSource *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMimeSource * obj = (QMimeSource *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -72,7 +72,7 @@ virtual QByteArray encodedData ( const char * format ) const = 0
 */
 HB_FUNC_STATIC( QMIMESOURCE_ENCODEDDATA )
 {
-  QMimeSource * obj = (QMimeSource *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMimeSource * obj = (QMimeSource *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QMIMESOURCE_ENCODEDDATA )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->encodedData( PCONSTCHAR(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -97,7 +97,7 @@ virtual const char * format ( int i = 0 ) const = 0
 */
 HB_FUNC_STATIC( QMIMESOURCE_FORMAT )
 {
-  QMimeSource * obj = (QMimeSource *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMimeSource * obj = (QMimeSource *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -121,7 +121,7 @@ virtual bool provides ( const char * mimeType ) const
 */
 HB_FUNC_STATIC( QMIMESOURCE_PROVIDES )
 {
-  QMimeSource * obj = (QMimeSource *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QMimeSource * obj = (QMimeSource *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
