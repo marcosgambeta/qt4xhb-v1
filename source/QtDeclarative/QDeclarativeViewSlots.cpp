@@ -48,7 +48,7 @@ void QDeclarativeViewSlots::statusChanged( QDeclarativeView::Status status )
 
 void QDeclarativeViewSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDeclarativeView * obj = (QDeclarativeView *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeView * obj = (QDeclarativeView *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

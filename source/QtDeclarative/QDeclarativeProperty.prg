@@ -77,7 +77,7 @@ QDeclarativeProperty ()
 void QDeclarativeProperty_new1()
 {
   QDeclarativeProperty * o = new QDeclarativeProperty();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -86,7 +86,7 @@ QDeclarativeProperty ( QObject * obj )
 void QDeclarativeProperty_new2()
 {
   QDeclarativeProperty * o = new QDeclarativeProperty( PQOBJECT(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -95,7 +95,7 @@ QDeclarativeProperty ( QObject * obj, QDeclarativeContext * ctxt )
 void QDeclarativeProperty_new3()
 {
   QDeclarativeProperty * o = new QDeclarativeProperty( PQOBJECT(1), PQDECLARATIVECONTEXT(2) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -104,7 +104,7 @@ QDeclarativeProperty ( QObject * obj, QDeclarativeEngine * engine )
 void QDeclarativeProperty_new4()
 {
   QDeclarativeProperty * o = new QDeclarativeProperty( PQOBJECT(1), PQDECLARATIVEENGINE(2) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -113,7 +113,7 @@ QDeclarativeProperty ( QObject * obj, const QString & name )
 void QDeclarativeProperty_new5()
 {
   QDeclarativeProperty * o = new QDeclarativeProperty( PQOBJECT(1), PQSTRING(2) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -122,7 +122,7 @@ QDeclarativeProperty ( QObject * obj, const QString & name, QDeclarativeContext 
 void QDeclarativeProperty_new6()
 {
   QDeclarativeProperty * o = new QDeclarativeProperty( PQOBJECT(1), PQSTRING(2), PQDECLARATIVECONTEXT(3) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -131,7 +131,7 @@ QDeclarativeProperty ( QObject * obj, const QString & name, QDeclarativeEngine *
 void QDeclarativeProperty_new7()
 {
   QDeclarativeProperty * o = new QDeclarativeProperty( PQOBJECT(1), PQSTRING(2), PQDECLARATIVEENGINE(3) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -140,7 +140,7 @@ QDeclarativeProperty ( const QDeclarativeProperty & other )
 void QDeclarativeProperty_new8()
 {
   QDeclarativeProperty * o = new QDeclarativeProperty( *PQDECLARATIVEPROPERTY(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QDeclarativeProperty ()
@@ -197,7 +197,7 @@ bool connectNotifySignal ( QObject * dest, const char * slot ) const
 */
 void QDeclarativeProperty_connectNotifySignal1()
 {
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -210,7 +210,7 @@ bool connectNotifySignal ( QObject * dest, int method ) const
 */
 void QDeclarativeProperty_connectNotifySignal2()
 {
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -242,7 +242,7 @@ bool hasNotifySignal () const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_HASNOTIFYSIGNAL )
 {
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -266,7 +266,7 @@ int index () const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_INDEX )
 {
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -290,7 +290,7 @@ bool isDesignable () const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISDESIGNABLE )
 {
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -314,7 +314,7 @@ bool isProperty () const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISPROPERTY )
 {
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -338,7 +338,7 @@ bool isResettable () const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISRESETTABLE )
 {
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -362,7 +362,7 @@ bool isSignalProperty () const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISSIGNALPROPERTY )
 {
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -386,7 +386,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISVALID )
 {
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -410,7 +410,7 @@ bool isWritable () const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISWRITABLE )
 {
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -434,7 +434,7 @@ QMetaMethod method () const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_METHOD )
 {
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_METHOD )
     {
 #endif
       QMetaMethod * ptr = new QMetaMethod( obj->method() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QMETAMETHOD", true );
+      Qt4xHb::createReturnClass( ptr, "QMETAMETHOD", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -459,7 +459,7 @@ QString name () const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NAME )
 {
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -483,7 +483,7 @@ bool needsNotifySignal () const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEEDSNOTIFYSIGNAL )
 {
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -507,7 +507,7 @@ QObject * object () const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_OBJECT )
 {
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -516,7 +516,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_OBJECT )
     {
 #endif
       QObject * ptr = obj->object();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -532,7 +532,7 @@ QMetaProperty property () const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTY )
 {
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTY )
     {
 #endif
       QMetaProperty * ptr = new QMetaProperty( obj->property() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QMETAPROPERTY", true );
+      Qt4xHb::createReturnClass( ptr, "QMETAPROPERTY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -557,7 +557,7 @@ int propertyType () const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTYTYPE )
 {
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -581,7 +581,7 @@ PropertyTypeCategory propertyTypeCategory () const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTYTYPECATEGORY )
 {
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -605,7 +605,7 @@ const char * propertyTypeName () const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTYTYPENAME )
 {
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -629,7 +629,7 @@ bool reset () const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_RESET )
 {
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -653,7 +653,7 @@ Type type () const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_TYPE )
 {
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -677,12 +677,12 @@ QVariant read () const
 */
 void QDeclarativeProperty_read1()
 {
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->read() );
-    Qt4xHb::_qt4xhb_createReturnClass( ptr, "QVARIANT", true );
+    Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
   }
 }
 
@@ -693,7 +693,7 @@ void QDeclarativeProperty_read2()
 {
 
   QVariant * ptr = new QVariant( QDeclarativeProperty::read( PQOBJECT(1), PQSTRING(2) ) );
-  Qt4xHb::_qt4xhb_createReturnClass( ptr, "QVARIANT", true );
+  Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 }
 
 /*
@@ -703,7 +703,7 @@ void QDeclarativeProperty_read3()
 {
 
   QVariant * ptr = new QVariant( QDeclarativeProperty::read( PQOBJECT(1), PQSTRING(2), PQDECLARATIVECONTEXT(3) ) );
-  Qt4xHb::_qt4xhb_createReturnClass( ptr, "QVARIANT", true );
+  Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 }
 
 /*
@@ -713,7 +713,7 @@ void QDeclarativeProperty_read4()
 {
 
   QVariant * ptr = new QVariant( QDeclarativeProperty::read( PQOBJECT(1), PQSTRING(2), PQDECLARATIVEENGINE(3) ) );
-  Qt4xHb::_qt4xhb_createReturnClass( ptr, "QVARIANT", true );
+  Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 }
 
 //[1]QVariant read () const
@@ -750,7 +750,7 @@ bool write ( const QVariant & value ) const
 */
 void QDeclarativeProperty_write1()
 {
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = (QDeclarativeProperty *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

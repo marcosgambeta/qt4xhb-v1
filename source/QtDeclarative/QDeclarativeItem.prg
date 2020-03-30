@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_NEW )
   if( ISBETWEEN(0,1) && (ISQDECLARATIVEITEM(1)||ISNIL(1)) )
   {
     QDeclarativeItem * o = new QDeclarativeItem( OPQDECLARATIVEITEM(1,0) );
-    Qt4xHb::_qt4xhb_returnNewObject( o, false );
+    Qt4xHb::returnNewObject( o, false );
   }
   else
   {
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_NEW )
 
 HB_FUNC_STATIC( QDECLARATIVEITEM_DELETE )
 {
-  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -101,7 +101,7 @@ qreal baselineOffset () const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_BASELINEOFFSET )
 {
-  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -125,7 +125,7 @@ QDeclarativeItem * childAt ( qreal x, qreal y ) const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDAT )
 {
-  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDAT )
     {
 #endif
       QDeclarativeItem * ptr = obj->childAt( PQREAL(1), PQREAL(2) );
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QDECLARATIVEITEM" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QDECLARATIVEITEM" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -150,7 +150,7 @@ QRectF childrenRect ()
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDRENRECT )
 {
-  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDRENRECT )
     {
 #endif
       QRectF * ptr = new QRectF( obj->childrenRect() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QRECTF", true );
+      Qt4xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,7 +175,7 @@ bool clip () const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_CLIP )
 {
-  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -199,7 +199,7 @@ void forceActiveFocus ()
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_FORCEACTIVEFOCUS )
 {
-  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -225,7 +225,7 @@ qreal implicitHeight () const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_IMPLICITHEIGHT )
 {
-  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -249,7 +249,7 @@ qreal implicitWidth () const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_IMPLICITWIDTH )
 {
-  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -273,7 +273,7 @@ bool keepMouseGrab () const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_KEEPMOUSEGRAB )
 {
-  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -297,7 +297,7 @@ QScriptValue mapFromItem ( const QScriptValue & item, qreal x, qreal y ) const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_MAPFROMITEM )
 {
-  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_MAPFROMITEM )
     {
 #endif
       QScriptValue * ptr = new QScriptValue( obj->mapFromItem( *PQSCRIPTVALUE(1), PQREAL(2), PQREAL(3) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSCRIPTVALUE", true );
+      Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -322,7 +322,7 @@ QScriptValue mapToItem ( const QScriptValue & item, qreal x, qreal y ) const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_MAPTOITEM )
 {
-  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_MAPTOITEM )
     {
 #endif
       QScriptValue * ptr = new QScriptValue( obj->mapToItem( *PQSCRIPTVALUE(1), PQREAL(2), PQREAL(3) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QSCRIPTVALUE", true );
+      Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -347,7 +347,7 @@ QDeclarativeItem * parentItem () const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_PARENTITEM )
 {
-  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_PARENTITEM )
     {
 #endif
       QDeclarativeItem * ptr = obj->parentItem();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QDECLARATIVEITEM" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QDECLARATIVEITEM" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -372,7 +372,7 @@ void setBaselineOffset ( qreal )
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_SETBASELINEOFFSET )
 {
-  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -398,7 +398,7 @@ void setClip ( bool )
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_SETCLIP )
 {
-  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -424,7 +424,7 @@ void setKeepMouseGrab ( bool keep )
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_SETKEEPMOUSEGRAB )
 {
-  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -450,7 +450,7 @@ void setParentItem ( QDeclarativeItem * parent )
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_SETPARENTITEM )
 {
-  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -476,7 +476,7 @@ void setSmooth ( bool smooth )
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_SETSMOOTH )
 {
-  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -502,7 +502,7 @@ void setTransformOrigin ( TransformOrigin origin )
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_SETTRANSFORMORIGIN )
 {
-  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -528,7 +528,7 @@ bool smooth () const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_SMOOTH )
 {
-  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -552,7 +552,7 @@ TransformOrigin transformOrigin () const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_TRANSFORMORIGIN )
 {
-  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeItem * obj = (QDeclarativeItem *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

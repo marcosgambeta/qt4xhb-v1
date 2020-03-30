@@ -65,7 +65,7 @@ QDeclarativeListReference ()
 void QDeclarativeListReference_new1()
 {
   QDeclarativeListReference * o = new QDeclarativeListReference();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -74,7 +74,7 @@ QDeclarativeListReference ( QObject * object, const char * property, QDeclarativ
 void QDeclarativeListReference_new2()
 {
   QDeclarativeListReference * o = new QDeclarativeListReference( PQOBJECT(1), PCONSTCHAR(2), OPQDECLARATIVEENGINE(3,0) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QDeclarativeListReference ()
@@ -101,7 +101,7 @@ bool append ( QObject * object ) const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_APPEND )
 {
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeListReference * obj = (QDeclarativeListReference *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -125,7 +125,7 @@ QObject * at ( int index ) const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_AT )
 {
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeListReference * obj = (QDeclarativeListReference *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_AT )
     {
 #endif
       QObject * ptr = obj->at( PINT(1) );
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -150,7 +150,7 @@ bool canAppend () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANAPPEND )
 {
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeListReference * obj = (QDeclarativeListReference *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -174,7 +174,7 @@ bool canAt () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANAT )
 {
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeListReference * obj = (QDeclarativeListReference *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -198,7 +198,7 @@ bool canClear () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANCLEAR )
 {
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeListReference * obj = (QDeclarativeListReference *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -222,7 +222,7 @@ bool canCount () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANCOUNT )
 {
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeListReference * obj = (QDeclarativeListReference *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -246,7 +246,7 @@ bool clear () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CLEAR )
 {
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeListReference * obj = (QDeclarativeListReference *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -270,7 +270,7 @@ int count () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_COUNT )
 {
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeListReference * obj = (QDeclarativeListReference *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -294,7 +294,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_ISVALID )
 {
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeListReference * obj = (QDeclarativeListReference *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -318,7 +318,7 @@ const QMetaObject * listElementType () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_LISTELEMENTTYPE )
 {
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeListReference * obj = (QDeclarativeListReference *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_LISTELEMENTTYPE )
     {
 #endif
       const QMetaObject * ptr = obj->listElementType();
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QMETAOBJECT", false );
+      Qt4xHb::createReturnClass( ptr, "QMETAOBJECT", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -343,7 +343,7 @@ QObject * object () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_OBJECT )
 {
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeListReference * obj = (QDeclarativeListReference *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_OBJECT )
     {
 #endif
       QObject * ptr = obj->object();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

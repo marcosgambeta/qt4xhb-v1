@@ -62,7 +62,7 @@ QDeclarativeScriptString ()
 void QDeclarativeScriptString_new1()
 {
   QDeclarativeScriptString * o = new QDeclarativeScriptString();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -71,7 +71,7 @@ QDeclarativeScriptString ( const QDeclarativeScriptString & other )
 void QDeclarativeScriptString_new2()
 {
   QDeclarativeScriptString * o = new QDeclarativeScriptString( *PQDECLARATIVESCRIPTSTRING(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QDeclarativeScriptString ()
@@ -98,7 +98,7 @@ QDeclarativeContext * context () const
 */
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_CONTEXT )
 {
-  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_CONTEXT )
     {
 #endif
       QDeclarativeContext * ptr = obj->context();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QDECLARATIVECONTEXT" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QDECLARATIVECONTEXT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -123,7 +123,7 @@ QObject * scopeObject () const
 */
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SCOPEOBJECT )
 {
-  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SCOPEOBJECT )
     {
 #endif
       QObject * ptr = obj->scopeObject();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -148,7 +148,7 @@ QString script () const
 */
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SCRIPT )
 {
-  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -172,7 +172,7 @@ void setContext ( QDeclarativeContext * context )
 */
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETCONTEXT )
 {
-  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -198,7 +198,7 @@ void setScopeObject ( QObject * object )
 */
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETSCOPEOBJECT )
 {
-  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -224,7 +224,7 @@ void setScript ( const QString & script )
 */
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETSCRIPT )
 {
-  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
