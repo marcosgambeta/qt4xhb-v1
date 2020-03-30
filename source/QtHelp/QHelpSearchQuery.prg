@@ -52,7 +52,7 @@ QHelpSearchQuery ()
 void QHelpSearchQuery_new1()
 {
   QHelpSearchQuery * o = new QHelpSearchQuery();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -61,7 +61,7 @@ QHelpSearchQuery ( FieldName field, const QStringList & wordList )
 void QHelpSearchQuery_new2()
 {
   QHelpSearchQuery * o = new QHelpSearchQuery( (QHelpSearchQuery::FieldName) hb_parni(1), PQSTRINGLIST(2) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QHelpSearchQuery ()

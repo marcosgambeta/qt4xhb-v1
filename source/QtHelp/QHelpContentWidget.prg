@@ -47,7 +47,7 @@ QModelIndex indexOf ( const QUrl & link )
 */
 HB_FUNC_STATIC( QHELPCONTENTWIDGET_INDEXOF )
 {
-  QHelpContentWidget * obj = (QHelpContentWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QHelpContentWidget * obj = (QHelpContentWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QHELPCONTENTWIDGET_INDEXOF )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->indexOf( *PQURL(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

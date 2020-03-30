@@ -44,7 +44,7 @@ void QHelpContentModelSlots::contentsCreationStarted()
 
 void QHelpContentModelSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpContentModel * obj = (QHelpContentModel *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QHelpContentModel * obj = (QHelpContentModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

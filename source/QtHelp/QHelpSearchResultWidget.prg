@@ -45,7 +45,7 @@ RETURN
 
 HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_DELETE )
 {
-  QHelpSearchResultWidget * obj = (QHelpSearchResultWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QHelpSearchResultWidget * obj = (QHelpSearchResultWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -67,7 +67,7 @@ QUrl linkAt ( const QPoint & point )
 */
 HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_LINKAT )
 {
-  QHelpSearchResultWidget * obj = (QHelpSearchResultWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QHelpSearchResultWidget * obj = (QHelpSearchResultWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_LINKAT )
     {
 #endif
       QUrl * ptr = new QUrl( obj->linkAt( *PQPOINT(1) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QURL", true );
+      Qt4xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -35,7 +35,7 @@ void QHelpSearchResultWidgetSlots::requestShowLink( const QUrl & link )
 
 void QHelpSearchResultWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpSearchResultWidget * obj = (QHelpSearchResultWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QHelpSearchResultWidget * obj = (QHelpSearchResultWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

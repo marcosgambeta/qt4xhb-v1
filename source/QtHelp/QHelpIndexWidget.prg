@@ -47,7 +47,7 @@ void activateCurrentItem ()
 */
 HB_FUNC_STATIC( QHELPINDEXWIDGET_ACTIVATECURRENTITEM )
 {
-  QHelpIndexWidget * obj = (QHelpIndexWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QHelpIndexWidget * obj = (QHelpIndexWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -73,7 +73,7 @@ void filterIndices ( const QString & filter, const QString & wildcard = QString(
 */
 HB_FUNC_STATIC( QHELPINDEXWIDGET_FILTERINDICES )
 {
-  QHelpIndexWidget * obj = (QHelpIndexWidget *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QHelpIndexWidget * obj = (QHelpIndexWidget *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -70,7 +70,7 @@ void QHelpEngineCoreSlots::warning( const QString & msg )
 
 void QHelpEngineCoreSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpEngineCore * obj = (QHelpEngineCore *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = (QHelpEngineCore *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
