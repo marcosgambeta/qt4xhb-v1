@@ -183,7 +183,7 @@ void QDesignerFormWindowInterfaceSlots::widgetUnmanaged( QWidget * widget )
 
 void QDesignerFormWindowInterfaceSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

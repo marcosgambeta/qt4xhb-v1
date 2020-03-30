@@ -54,7 +54,7 @@ HB_FUNC_STATIC( QEXTENSIONFACTORY_NEW )
   if( ISBETWEEN(0,1) && (ISQEXTENSIONMANAGER(1)||ISNIL(1)) )
   {
     QExtensionFactory * o = new QExtensionFactory( OPQEXTENSIONMANAGER(1,0) );
-    Qt4xHb::_qt4xhb_returnNewObject( o, false );
+    Qt4xHb::returnNewObject( o, false );
   }
   else
   {
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QEXTENSIONFACTORY_NEW )
 
 HB_FUNC_STATIC( QEXTENSIONFACTORY_DELETE )
 {
-  QExtensionFactory * obj = (QExtensionFactory *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QExtensionFactory * obj = (QExtensionFactory *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -86,7 +86,7 @@ QExtensionManager * extensionManager () const
 */
 HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSIONMANAGER )
 {
-  QExtensionFactory * obj = (QExtensionFactory *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QExtensionFactory * obj = (QExtensionFactory *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSIONMANAGER )
     {
 #endif
       QExtensionManager * ptr = obj->extensionManager();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QEXTENSIONMANAGER" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QEXTENSIONMANAGER" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -111,7 +111,7 @@ virtual QObject * extension ( QObject * object, const QString & iid ) const
 */
 HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSION )
 {
-  QExtensionFactory * obj = (QExtensionFactory *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QExtensionFactory * obj = (QExtensionFactory *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSION )
     {
 #endif
       QObject * ptr = obj->extension( PQOBJECT(1), PQSTRING(2) );
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

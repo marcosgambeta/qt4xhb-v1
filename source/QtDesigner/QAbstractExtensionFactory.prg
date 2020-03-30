@@ -50,7 +50,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTEXTENSIONFACTORY_DELETE )
 {
-  QAbstractExtensionFactory * obj = (QAbstractExtensionFactory *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractExtensionFactory * obj = (QAbstractExtensionFactory *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -70,7 +70,7 @@ virtual QObject * extension ( QObject * object, const QString & iid ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTEXTENSIONFACTORY_EXTENSION )
 {
-  QAbstractExtensionFactory * obj = (QAbstractExtensionFactory *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractExtensionFactory * obj = (QAbstractExtensionFactory *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QABSTRACTEXTENSIONFACTORY_EXTENSION )
     {
 #endif
       QObject * ptr = obj->extension( PQOBJECT(1), PQSTRING(2) );
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

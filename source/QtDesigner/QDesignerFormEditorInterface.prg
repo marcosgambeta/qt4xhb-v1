@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QDesignerFormEditorInterface * o = new QDesignerFormEditorInterface( OPQOBJECT(1,0) );
-    Qt4xHb::_qt4xhb_returnNewObject( o, false );
+    Qt4xHb::returnNewObject( o, false );
   }
   else
   {
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_NEW )
 
 HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_DELETE )
 {
-  QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -105,7 +105,7 @@ QDesignerActionEditorInterface * actionEditor () const
 */
 HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_ACTIONEDITOR )
 {
-  QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_ACTIONEDITOR )
     {
 #endif
       QDesignerActionEditorInterface * ptr = obj->actionEditor();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QDESIGNERACTIONEDITORINTERFACE" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QDESIGNERACTIONEDITORINTERFACE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -130,7 +130,7 @@ QExtensionManager * extensionManager () const
 */
 HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_EXTENSIONMANAGER )
 {
-  QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_EXTENSIONMANAGER )
     {
 #endif
       QExtensionManager * ptr = obj->extensionManager();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QEXTENSIONMANAGER" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QEXTENSIONMANAGER" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,7 +155,7 @@ QDesignerFormWindowManagerInterface * formWindowManager () const
 */
 HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_FORMWINDOWMANAGER )
 {
-  QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_FORMWINDOWMANAGER )
     {
 #endif
       QDesignerFormWindowManagerInterface * ptr = obj->formWindowManager();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,7 +180,7 @@ QDesignerObjectInspectorInterface * objectInspector () const
 */
 HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_OBJECTINSPECTOR )
 {
-  QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_OBJECTINSPECTOR )
     {
 #endif
       QDesignerObjectInspectorInterface * ptr = obj->objectInspector();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QDESIGNEROBJECTINSPECTORINTERFACE" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QDESIGNEROBJECTINSPECTORINTERFACE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,7 +205,7 @@ QDesignerPropertyEditorInterface * propertyEditor () const
 */
 HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_PROPERTYEDITOR )
 {
-  QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_PROPERTYEDITOR )
     {
 #endif
       QDesignerPropertyEditorInterface * ptr = obj->propertyEditor();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QDESIGNERPROPERTYEDITORINTERFACE" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QDESIGNERPROPERTYEDITORINTERFACE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -230,7 +230,7 @@ void setActionEditor ( QDesignerActionEditorInterface * actionEditor )
 */
 HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_SETACTIONEDITOR )
 {
-  QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -256,7 +256,7 @@ void setObjectInspector ( QDesignerObjectInspectorInterface * objectInspector )
 */
 HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_SETOBJECTINSPECTOR )
 {
-  QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -282,7 +282,7 @@ void setPropertyEditor ( QDesignerPropertyEditorInterface * propertyEditor )
 */
 HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_SETPROPERTYEDITOR )
 {
-  QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -308,7 +308,7 @@ void setWidgetBox ( QDesignerWidgetBoxInterface * widgetBox )
 */
 HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_SETWIDGETBOX )
 {
-  QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -334,7 +334,7 @@ QWidget * topLevel () const
 */
 HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_TOPLEVEL )
 {
-  QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_TOPLEVEL )
     {
 #endif
       QWidget * ptr = obj->topLevel();
-      Qt4xHb::_qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -359,7 +359,7 @@ QDesignerWidgetBoxInterface * widgetBox () const
 */
 HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_WIDGETBOX )
 {
-  QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_WIDGETBOX )
     {
 #endif
       QDesignerWidgetBoxInterface * ptr = obj->widgetBox();
-      Qt4xHb::_qt4xhb_createReturnQObjectClass( ptr, "QDESIGNERWIDGETBOXINTERFACE" );
+      Qt4xHb::createReturnQObjectClass( ptr, "QDESIGNERWIDGETBOXINTERFACE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

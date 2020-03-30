@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_NEW )
   if( ISNUMPAR(0) )
   {
     QAbstractFormBuilder * o = new QAbstractFormBuilder();
-    Qt4xHb::_qt4xhb_returnNewObject( o, true );
+    Qt4xHb::returnNewObject( o, true );
   }
   else
   {
@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_NEW )
 
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_DELETE )
 {
-  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -91,7 +91,7 @@ virtual QWidget * load ( QIODevice * device, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_LOAD )
 {
-  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_LOAD )
     {
 #endif
       QWidget * ptr = obj->load( PQIODEVICE(1), OPQWIDGET(2,0) );
-      Qt4xHb::_qt4xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -116,7 +116,7 @@ virtual void save ( QIODevice * device, QWidget * widget )
 */
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_SAVE )
 {
-  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -142,7 +142,7 @@ void setWorkingDirectory ( const QDir & directory )
 */
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_SETWORKINGDIRECTORY )
 {
-  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -168,7 +168,7 @@ QDir workingDirectory () const
 */
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_WORKINGDIRECTORY )
 {
-  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_WORKINGDIRECTORY )
     {
 #endif
       QDir * ptr = new QDir( obj->workingDirectory() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QDIR", true );
+      Qt4xHb::createReturnClass( ptr, "QDIR", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
