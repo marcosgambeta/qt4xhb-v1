@@ -44,7 +44,7 @@ QDomDocumentFragment ()
 void QDomDocumentFragment_new1()
 {
   QDomDocumentFragment * o = new QDomDocumentFragment();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -53,7 +53,7 @@ QDomDocumentFragment ( const QDomDocumentFragment & x )
 void QDomDocumentFragment_new2()
 {
   QDomDocumentFragment * o = new QDomDocumentFragment( *PQDOMDOCUMENTFRAGMENT(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QDomDocumentFragment ()
@@ -80,7 +80,7 @@ QDomNode::NodeType nodeType () const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NODETYPE )
 {
-  QDomDocumentFragment * obj = (QDomDocumentFragment *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDomDocumentFragment * obj = (QDomDocumentFragment *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

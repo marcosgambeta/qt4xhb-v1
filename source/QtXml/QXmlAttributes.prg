@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_NEW )
   if( ISNUMPAR(0) )
   {
     QXmlAttributes * o = new QXmlAttributes();
-    Qt4xHb::_qt4xhb_returnNewObject( o, true );
+    Qt4xHb::returnNewObject( o, true );
   }
   else
   {
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_NEW )
 
 HB_FUNC_STATIC( QXMLATTRIBUTES_DELETE )
 {
-  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -95,7 +95,7 @@ void append ( const QString & qName, const QString & uri, const QString & localP
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_APPEND )
 {
-  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -121,7 +121,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_CLEAR )
 {
-  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -147,7 +147,7 @@ int count () const
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_COUNT )
 {
-  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -171,7 +171,7 @@ int index ( const QString & qName ) const
 */
 void QXmlAttributes_index1()
 {
-  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -184,7 +184,7 @@ int index ( const QLatin1String & qName ) const
 */
 void QXmlAttributes_index2()
 {
-  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -197,7 +197,7 @@ int index ( const QString & uri, const QString & localPart ) const
 */
 void QXmlAttributes_index3()
 {
-  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -234,7 +234,7 @@ int length () const
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_LENGTH )
 {
-  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -258,7 +258,7 @@ QString localName ( int index ) const
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_LOCALNAME )
 {
-  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -282,7 +282,7 @@ QString qName ( int index ) const
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_QNAME )
 {
-  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -306,7 +306,7 @@ QString type ( int index ) const
 */
 void QXmlAttributes_type1()
 {
-  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -319,7 +319,7 @@ QString type ( const QString & qName ) const
 */
 void QXmlAttributes_type2()
 {
-  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -332,7 +332,7 @@ QString type ( const QString & uri, const QString & localName ) const
 */
 void QXmlAttributes_type3()
 {
-  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -369,7 +369,7 @@ QString uri ( int index ) const
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_URI )
 {
-  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -393,7 +393,7 @@ QString value ( int index ) const
 */
 void QXmlAttributes_value1()
 {
-  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -406,7 +406,7 @@ QString value ( const QString & qName ) const
 */
 void QXmlAttributes_value2()
 {
-  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -419,7 +419,7 @@ QString value ( const QLatin1String & qName ) const
 */
 void QXmlAttributes_value3()
 {
-  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -432,7 +432,7 @@ QString value ( const QString & uri, const QString & localName ) const
 */
 void QXmlAttributes_value4()
 {
-  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = (QXmlAttributes *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

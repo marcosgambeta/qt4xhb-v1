@@ -61,7 +61,7 @@ QDomImplementation ()
 void QDomImplementation_new1()
 {
   QDomImplementation * o = new QDomImplementation();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -70,7 +70,7 @@ QDomImplementation ( const QDomImplementation & x )
 void QDomImplementation_new2()
 {
   QDomImplementation * o = new QDomImplementation( *PQDOMIMPLEMENTATION(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QDomImplementation ()
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW )
 
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_DELETE )
 {
-  QDomImplementation * obj = (QDomImplementation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDomImplementation * obj = (QDomImplementation *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -114,7 +114,7 @@ QDomDocument createDocument ( const QString & nsURI, const QString & qName, cons
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENT )
 {
-  QDomImplementation * obj = (QDomImplementation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDomImplementation * obj = (QDomImplementation *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENT )
     {
 #endif
       QDomDocument * ptr = new QDomDocument( obj->createDocument( PQSTRING(1), PQSTRING(2), *PQDOMDOCUMENTTYPE(3) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QDOMDOCUMENT", true );
+      Qt4xHb::createReturnClass( ptr, "QDOMDOCUMENT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -139,7 +139,7 @@ QDomDocumentType createDocumentType ( const QString & qName, const QString & pub
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENTTYPE )
 {
-  QDomImplementation * obj = (QDomImplementation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDomImplementation * obj = (QDomImplementation *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENTTYPE )
     {
 #endif
       QDomDocumentType * ptr = new QDomDocumentType( obj->createDocumentType( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QDOMDOCUMENTTYPE", true );
+      Qt4xHb::createReturnClass( ptr, "QDOMDOCUMENTTYPE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,7 +164,7 @@ bool hasFeature ( const QString & feature, const QString & version ) const
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_HASFEATURE )
 {
-  QDomImplementation * obj = (QDomImplementation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDomImplementation * obj = (QDomImplementation *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -188,7 +188,7 @@ bool isNull ()
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_ISNULL )
 {
-  QDomImplementation * obj = (QDomImplementation *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDomImplementation * obj = (QDomImplementation *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

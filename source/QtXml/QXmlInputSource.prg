@@ -59,7 +59,7 @@ QXmlInputSource ()
 void QXmlInputSource_new1()
 {
   QXmlInputSource * o = new QXmlInputSource();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -68,7 +68,7 @@ QXmlInputSource ( QIODevice * dev )
 void QXmlInputSource_new2()
 {
   QXmlInputSource * o = new QXmlInputSource( PQIODEVICE(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QXmlInputSource ()
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW )
 
 HB_FUNC_STATIC( QXMLINPUTSOURCE_DELETE )
 {
-  QXmlInputSource * obj = (QXmlInputSource *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlInputSource * obj = (QXmlInputSource *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -112,7 +112,7 @@ virtual QString data () const
 */
 HB_FUNC_STATIC( QXMLINPUTSOURCE_DATA )
 {
-  QXmlInputSource * obj = (QXmlInputSource *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlInputSource * obj = (QXmlInputSource *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -136,7 +136,7 @@ virtual void fetchData ()
 */
 HB_FUNC_STATIC( QXMLINPUTSOURCE_FETCHDATA )
 {
-  QXmlInputSource * obj = (QXmlInputSource *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlInputSource * obj = (QXmlInputSource *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -162,7 +162,7 @@ virtual QChar next ()
 */
 HB_FUNC_STATIC( QXMLINPUTSOURCE_NEXT )
 {
-  QXmlInputSource * obj = (QXmlInputSource *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlInputSource * obj = (QXmlInputSource *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_NEXT )
     {
 #endif
       QChar * ptr = new QChar( obj->next() );
-      Qt4xHb::_qt4xhb_createReturnClass( ptr, "QCHAR", true );
+      Qt4xHb::createReturnClass( ptr, "QCHAR", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,7 +187,7 @@ virtual void reset ()
 */
 HB_FUNC_STATIC( QXMLINPUTSOURCE_RESET )
 {
-  QXmlInputSource * obj = (QXmlInputSource *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlInputSource * obj = (QXmlInputSource *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -213,7 +213,7 @@ virtual void setData ( const QString & dat )
 */
 void QXmlInputSource_setData1()
 {
-  QXmlInputSource * obj = (QXmlInputSource *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlInputSource * obj = (QXmlInputSource *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -228,7 +228,7 @@ virtual void setData ( const QByteArray & dat )
 */
 void QXmlInputSource_setData2()
 {
-  QXmlInputSource * obj = (QXmlInputSource *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QXmlInputSource * obj = (QXmlInputSource *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -44,7 +44,7 @@ QDomCDATASection ()
 void QDomCDATASection_new1()
 {
   QDomCDATASection * o = new QDomCDATASection();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -53,7 +53,7 @@ QDomCDATASection ( const QDomCDATASection & x )
 void QDomCDATASection_new2()
 {
   QDomCDATASection * o = new QDomCDATASection( *PQDOMCDATASECTION(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QDomCDATASection ()
@@ -80,7 +80,7 @@ QDomNode::NodeType nodeType () const
 */
 HB_FUNC_STATIC( QDOMCDATASECTION_NODETYPE )
 {
-  QDomCDATASection * obj = (QDomCDATASection *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QDomCDATASection * obj = (QDomCDATASection *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
