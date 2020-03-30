@@ -71,7 +71,7 @@ QTestEventList ()
 void QTestEventList_new1()
 {
   QTestEventList * o = new QTestEventList();
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -80,7 +80,7 @@ QTestEventList ( const QTestEventList & other )
 void QTestEventList_new2()
 {
   QTestEventList * o = new QTestEventList( *PQTESTEVENTLIST(1) );
-  Qt4xHb::_qt4xhb_returnNewObject( o, true );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 //[1]QTestEventList ()
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_NEW )
 
 HB_FUNC_STATIC( QTESTEVENTLIST_DELETE )
 {
-  QTestEventList * obj = (QTestEventList *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTestEventList * obj = (QTestEventList *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -124,7 +124,7 @@ void addDelay ( int msecs )
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDDELAY )
 {
-  QTestEventList * obj = (QTestEventList *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTestEventList * obj = (QTestEventList *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -150,7 +150,7 @@ void addKeyClick ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifi
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICK1 )
 {
-  QTestEventList * obj = (QTestEventList *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTestEventList * obj = (QTestEventList *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -176,7 +176,7 @@ void addKeyClick ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier,
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICK2 )
 {
-  QTestEventList * obj = (QTestEventList *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTestEventList * obj = (QTestEventList *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -221,7 +221,7 @@ void addKeyClicks ( const QString & keys, Qt::KeyboardModifiers modifiers = Qt::
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICKS )
 {
-  QTestEventList * obj = (QTestEventList *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTestEventList * obj = (QTestEventList *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -247,7 +247,7 @@ void addKeyPress ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifi
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYPRESS1 )
 {
-  QTestEventList * obj = (QTestEventList *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTestEventList * obj = (QTestEventList *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -273,7 +273,7 @@ void addKeyPress ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier,
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYPRESS2 )
 {
-  QTestEventList * obj = (QTestEventList *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTestEventList * obj = (QTestEventList *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -318,7 +318,7 @@ void addKeyRelease ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModi
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYRELEASE1 )
 {
-  QTestEventList * obj = (QTestEventList *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTestEventList * obj = (QTestEventList *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -344,7 +344,7 @@ void addKeyRelease ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifie
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYRELEASE2 )
 {
-  QTestEventList * obj = (QTestEventList *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTestEventList * obj = (QTestEventList *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -389,7 +389,7 @@ void addMouseClick ( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSECLICK )
 {
-  QTestEventList * obj = (QTestEventList *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTestEventList * obj = (QTestEventList *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSECLICK )
     if( ISBETWEEN(1,4) && ISNUM(1) && ISOPTNUM(2) && (ISQPOINT(3)||ISNIL(3)) && ISOPTNUM(4) )
     {
 #endif
-      obj->addMouseClick( (Qt::MouseButton) hb_parni(1), ISNIL(2)? (Qt::KeyboardModifiers) 0 : (Qt::KeyboardModifiers) hb_parni(2), ISNIL(3)? QPoint() : *(QPoint *) Qt4xHb::_qt4xhb_itemGetPtr(3), OPINT(4,-1) );
+      obj->addMouseClick( (Qt::MouseButton) hb_parni(1), ISNIL(2)? (Qt::KeyboardModifiers) 0 : (Qt::KeyboardModifiers) hb_parni(2), ISNIL(3)? QPoint() : *(QPoint *) Qt4xHb::itemGetPtr(3), OPINT(4,-1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -415,7 +415,7 @@ void addMouseDClick ( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSEDCLICK )
 {
-  QTestEventList * obj = (QTestEventList *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTestEventList * obj = (QTestEventList *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSEDCLICK )
     if( ISBETWEEN(1,4) && ISNUM(1) && ISOPTNUM(2) && (ISQPOINT(3)||ISNIL(3)) && ISOPTNUM(4) )
     {
 #endif
-      obj->addMouseDClick( (Qt::MouseButton) hb_parni(1), ISNIL(2)? (Qt::KeyboardModifiers) 0 : (Qt::KeyboardModifiers) hb_parni(2), ISNIL(3)? QPoint() : *(QPoint *) Qt4xHb::_qt4xhb_itemGetPtr(3), OPINT(4,-1) );
+      obj->addMouseDClick( (Qt::MouseButton) hb_parni(1), ISNIL(2)? (Qt::KeyboardModifiers) 0 : (Qt::KeyboardModifiers) hb_parni(2), ISNIL(3)? QPoint() : *(QPoint *) Qt4xHb::itemGetPtr(3), OPINT(4,-1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -441,7 +441,7 @@ void addMouseMove ( QPoint pos = QPoint(), int delay = -1 )
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSEMOVE )
 {
-  QTestEventList * obj = (QTestEventList *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTestEventList * obj = (QTestEventList *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSEMOVE )
     if( ISBETWEEN(0,2) && (ISQPOINT(1)||ISNIL(1)) && ISOPTNUM(2) )
     {
 #endif
-      obj->addMouseMove( ISNIL(1)? QPoint() : *(QPoint *) Qt4xHb::_qt4xhb_itemGetPtr(1), OPINT(2,-1) );
+      obj->addMouseMove( ISNIL(1)? QPoint() : *(QPoint *) Qt4xHb::itemGetPtr(1), OPINT(2,-1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -467,7 +467,7 @@ void addMousePress ( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSEPRESS )
 {
-  QTestEventList * obj = (QTestEventList *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTestEventList * obj = (QTestEventList *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSEPRESS )
     if( ISBETWEEN(1,4) && ISNUM(1) && ISOPTNUM(2) && (ISQPOINT(3)||ISNIL(3)) && ISOPTNUM(4) )
     {
 #endif
-      obj->addMousePress( (Qt::MouseButton) hb_parni(1), ISNIL(2)? (Qt::KeyboardModifiers) 0 : (Qt::KeyboardModifiers) hb_parni(2), ISNIL(3)? QPoint() : *(QPoint *) Qt4xHb::_qt4xhb_itemGetPtr(3), OPINT(4,-1) );
+      obj->addMousePress( (Qt::MouseButton) hb_parni(1), ISNIL(2)? (Qt::KeyboardModifiers) 0 : (Qt::KeyboardModifiers) hb_parni(2), ISNIL(3)? QPoint() : *(QPoint *) Qt4xHb::itemGetPtr(3), OPINT(4,-1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -493,7 +493,7 @@ void addMouseRelease ( Qt::MouseButton button, Qt::KeyboardModifiers modifiers =
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSERELEASE )
 {
-  QTestEventList * obj = (QTestEventList *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTestEventList * obj = (QTestEventList *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSERELEASE )
     if( ISBETWEEN(1,4) && ISNUM(1) && ISOPTNUM(2) && (ISQPOINT(3)||ISNIL(3)) && ISOPTNUM(4) )
     {
 #endif
-      obj->addMouseRelease( (Qt::MouseButton) hb_parni(1), ISNIL(2)? (Qt::KeyboardModifiers) 0 : (Qt::KeyboardModifiers) hb_parni(2), ISNIL(3)? QPoint() : *(QPoint *) Qt4xHb::_qt4xhb_itemGetPtr(3), OPINT(4,-1) );
+      obj->addMouseRelease( (Qt::MouseButton) hb_parni(1), ISNIL(2)? (Qt::KeyboardModifiers) 0 : (Qt::KeyboardModifiers) hb_parni(2), ISNIL(3)? QPoint() : *(QPoint *) Qt4xHb::itemGetPtr(3), OPINT(4,-1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -519,7 +519,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_CLEAR )
 {
-  QTestEventList * obj = (QTestEventList *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTestEventList * obj = (QTestEventList *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -545,7 +545,7 @@ void simulate ( QWidget * w )
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_SIMULATE )
 {
-  QTestEventList * obj = (QTestEventList *) Qt4xHb::_qt4xhb_itemGetPtrStackSelfItem();
+  QTestEventList * obj = (QTestEventList *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
