@@ -45,12 +45,15 @@ $internalConstructor=|new6|const QSize &,QGLFramebufferObject::Attachment,GLenum
 
 %% TODO: conflict between [1] and [6]
 %% TODO: conflict between [2] and [5]
-//[1]QGLFramebufferObject ( const QSize & size, GLenum target = GL_TEXTURE_2D )
-//[2]QGLFramebufferObject ( int width, int height, GLenum target = GL_TEXTURE_2D )
-//[3]QGLFramebufferObject ( const QSize & size, const QGLFramebufferObjectFormat & format )
-//[4]QGLFramebufferObject ( int width, int height, const QGLFramebufferObjectFormat & format )
-//[5]QGLFramebufferObject ( int width, int height, Attachment attachment, GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
-//[6]QGLFramebufferObject ( const QSize & size, Attachment attachment, GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
+
+/*
+[1]QGLFramebufferObject ( const QSize & size, GLenum target = GL_TEXTURE_2D )
+[2]QGLFramebufferObject ( int width, int height, GLenum target = GL_TEXTURE_2D )
+[3]QGLFramebufferObject ( const QSize & size, const QGLFramebufferObjectFormat & format )
+[4]QGLFramebufferObject ( int width, int height, const QGLFramebufferObjectFormat & format )
+[5]QGLFramebufferObject ( int width, int height, Attachment attachment, GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
+[6]QGLFramebufferObject ( const QSize & size, Attachment attachment, GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
+*/
 
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW )
 {
@@ -98,8 +101,10 @@ $internalMethod=|void|drawTexture,drawTexture1|const QRectF &,GLuint,GLenum=GL_T
 $prototype=void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 $internalMethod=|void|drawTexture,drawTexture2|const QPointF &,GLuint,GLenum=GL_TEXTURE_2D
 
-//[1]void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
-//[2]void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
+/*
+[1]void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
+[2]void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
+*/
 
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_DRAWTEXTURE )
 {
