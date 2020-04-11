@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QTestEventList ( const QTestEventList & other )
 $internalConstructor=|new2|const QTestEventList &
 
-//[1]QTestEventList ()
-//[2]QTestEventList ( const QTestEventList & other )
+/*
+[1]QTestEventList ()
+[2]QTestEventList ( const QTestEventList & other )
+*/
 
 HB_FUNC_STATIC( QTESTEVENTLIST_NEW )
 {
@@ -61,8 +63,10 @@ $method=|void|addKeyClick,addKeyClick1|Qt::Key,Qt::KeyboardModifiers=Qt::NoModif
 $prototype=void addKeyClick ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 $method=|void|addKeyClick,addKeyClick2|char,Qt::KeyboardModifiers=Qt::NoModifier,int=-1
 
-//[1]void addKeyClick ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
-//[2]void addKeyClick ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+/*
+[1]void addKeyClick ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+[2]void addKeyClick ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+*/
 
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICK )
 {
@@ -90,8 +94,10 @@ $method=|void|addKeyPress,addKeyPress1|Qt::Key,Qt::KeyboardModifiers=Qt::NoModif
 $prototype=void addKeyPress ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 $method=|void|addKeyPress,addKeyPress2|char,Qt::KeyboardModifiers=Qt::NoModifier,int=-1
 
-//[1]void addKeyPress ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
-//[2]void addKeyPress ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+/*
+[1]void addKeyPress ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+[2]void addKeyPress ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+*/
 
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYPRESS )
 {
@@ -116,8 +122,10 @@ $method=|void|addKeyRelease,addKeyRelease1|Qt::Key,Qt::KeyboardModifiers=Qt::NoM
 $prototype=void addKeyRelease ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 $method=|void|addKeyRelease,addKeyRelease2|char,Qt::KeyboardModifiers=Qt::NoModifier,int=-1
 
-//[1]void addKeyRelease ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
-//[2]void addKeyRelease ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+/*
+[1]void addKeyRelease ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+[2]void addKeyRelease ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+*/
 
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYRELEASE )
 {
