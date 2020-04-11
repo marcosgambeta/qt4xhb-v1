@@ -68,8 +68,10 @@ $internalMethod=|QNetworkReply *|post,post1|const QNetworkRequest &,QIODevice *
 $prototype=QNetworkReply * post ( const QNetworkRequest & request, const QByteArray & data )
 $internalMethod=|QNetworkReply *|post,post2|const QNetworkRequest &,const QByteArray &
 
-//[1]QNetworkReply * post ( const QNetworkRequest & request, QIODevice * data )
-//[2]QNetworkReply * post ( const QNetworkRequest & request, const QByteArray & data )
+/*
+[1]QNetworkReply * post ( const QNetworkRequest & request, QIODevice * data )
+[2]QNetworkReply * post ( const QNetworkRequest & request, const QByteArray & data )
+*/
 
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_POST )
 {
@@ -99,8 +101,10 @@ $internalMethod=|QNetworkReply *|put,put1|const QNetworkRequest &,QIODevice *
 $prototype=QNetworkReply * put ( const QNetworkRequest & request, const QByteArray & data )
 $internalMethod=|QNetworkReply *|put,put2|const QNetworkRequest &,const QByteArray &
 
-//[1]QNetworkReply * put ( const QNetworkRequest & request, QIODevice * data )
-//[2]QNetworkReply * put ( const QNetworkRequest & request, const QByteArray & data )
+/*
+[1]QNetworkReply * put ( const QNetworkRequest & request, QIODevice * data )
+[2]QNetworkReply * put ( const QNetworkRequest & request, const QByteArray & data )
+*/
 
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PUT )
 {

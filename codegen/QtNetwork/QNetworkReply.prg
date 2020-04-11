@@ -52,8 +52,10 @@ $internalMethod=|void|ignoreSslErrors,ignoreSslErrors1|const QList<QSslError> &
 $prototype=virtual void ignoreSslErrors ()
 $internalVirtualMethod=|void|ignoreSslErrors,ignoreSslErrors2|
 
-//[1]void ignoreSslErrors ( const QList<QSslError> & errors )
-//[2]virtual void ignoreSslErrors ()
+/*
+[1]void ignoreSslErrors ( const QList<QSslError> & errors )
+[2]virtual void ignoreSslErrors ()
+*/
 
 HB_FUNC_STATIC( QNETWORKREPLY_IGNORESSLERRORS )
 {

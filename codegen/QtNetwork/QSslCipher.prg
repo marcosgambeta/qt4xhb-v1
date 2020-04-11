@@ -34,9 +34,11 @@ $internalConstructor=|new2|const QString &,QSsl::SslProtocol
 $prototype=QSslCipher ( const QSslCipher & other )
 $internalConstructor=|new3|const QSslCipher &
 
-//[1]QSslCipher ()
-//[2]QSslCipher ( const QString & name, QSsl::SslProtocol protocol )
-//[3]QSslCipher ( const QSslCipher & other )
+/*
+[1]QSslCipher ()
+[2]QSslCipher ( const QString & name, QSsl::SslProtocol protocol )
+[3]QSslCipher ( const QSslCipher & other )
+*/
 
 HB_FUNC_STATIC( QSSLCIPHER_NEW )
 {

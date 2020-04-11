@@ -83,8 +83,10 @@ $internalMethod=|int|put,put1|QIODevice *,const QString &,QFtp::TransferType=QFt
 $prototype=int put ( const QByteArray & data, const QString & file, TransferType type = Binary )
 $internalMethod=|int|put,put2|const QByteArray &,const QString &,QFtp::TransferType=QFtp::Binary
 
-//[1]int put ( QIODevice * dev, const QString & file, TransferType type = Binary )
-//[2]int put ( const QByteArray & data, const QString & file, TransferType type = Binary )
+/*
+[1]int put ( QIODevice * dev, const QString & file, TransferType type = Binary )
+[2]int put ( const QByteArray & data, const QString & file, TransferType type = Binary )
+*/
 
 HB_FUNC_STATIC( QFTP_PUT )
 {

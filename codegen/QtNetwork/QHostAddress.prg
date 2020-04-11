@@ -52,14 +52,16 @@ $internalConstructor=|new7|const QHostAddress &
 $prototype=QHostAddress ( SpecialAddress address )
 $constructor=|new8|QHostAddress::SpecialAddress
 
-//[1]QHostAddress ()
-//[2]QHostAddress ( quint32 ip4Addr )
-//[3]QHostAddress ( quint8 * ip6Addr )
-//[4]QHostAddress ( const Q_IPV6ADDR & ip6Addr )
-//[5]QHostAddress ( const sockaddr * sockaddr )
-//[6]QHostAddress ( const QString & address )
-//[7]QHostAddress ( const QHostAddress & address )
-//[8]QHostAddress ( SpecialAddress address )
+/*
+[1]QHostAddress ()
+[2]QHostAddress ( quint32 ip4Addr )
+[3]QHostAddress ( quint8 * ip6Addr )
+[4]QHostAddress ( const Q_IPV6ADDR & ip6Addr )
+[5]QHostAddress ( const sockaddr * sockaddr )
+[6]QHostAddress ( const QString & address )
+[7]QHostAddress ( const QHostAddress & address )
+[8]QHostAddress ( SpecialAddress address )
+*/
 
 HB_FUNC_STATIC( QHOSTADDRESS_NEW )
 {
@@ -101,8 +103,10 @@ $prototype=bool isInSubnet ( const QPair<QHostAddress, int> & subnet ) const
 %% TODO: implementar
 %% $internalMethod=|bool|isInSubnet,isInSubnet2|const QPair<QHostAddress, int> &
 
-//[1]bool isInSubnet ( const QHostAddress & subnet, int netmask ) const
-//[2]bool isInSubnet ( const QPair<QHostAddress, int> & subnet ) const
+/*
+[1]bool isInSubnet ( const QHostAddress & subnet, int netmask ) const
+[2]bool isInSubnet ( const QPair<QHostAddress, int> & subnet ) const
+*/
 
 HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET )
 {
@@ -147,11 +151,13 @@ $prototype=void setAddress ( const sockaddr * sockaddr )
 %% TODO: implementar 'const sockaddr *'
 %% $method=|void|setAddress,setAddress5|const sockaddr *
 
-//[1]void setAddress ( quint32 ip4Addr )
-//[2]void setAddress ( quint8 * ip6Addr )
-//[3]void setAddress ( const Q_IPV6ADDR & ip6Addr )
-//[4]bool setAddress ( const QString & address )
-//[5]void setAddress ( const sockaddr * sockaddr )
+/*
+[1]void setAddress ( quint32 ip4Addr )
+[2]void setAddress ( quint8 * ip6Addr )
+[3]void setAddress ( const Q_IPV6ADDR & ip6Addr )
+[4]bool setAddress ( const QString & address )
+[5]void setAddress ( const sockaddr * sockaddr )
+*/
 
 %% TODO: completar implementação
 HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS )

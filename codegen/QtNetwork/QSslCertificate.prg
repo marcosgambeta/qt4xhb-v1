@@ -37,9 +37,11 @@ $internalConstructor=|new2|const QByteArray &=QByteArray(),QSsl::EncodingFormat=
 $prototype=QSslCertificate ( const QSslCertificate & other )
 $internalConstructor=|new3|const QSslCertificate &
 
-//[1]QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
-//[2]QSslCertificate ( const QByteArray & data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem )
-//[3]QSslCertificate ( const QSslCertificate & other )
+/*
+[1]QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
+[2]QSslCertificate ( const QByteArray & data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem )
+[3]QSslCertificate ( const QSslCertificate & other )
+*/
 
 HB_FUNC_STATIC( QSSLCERTIFICATE_NEW )
 {
@@ -87,8 +89,10 @@ $internalMethod=|QString|issuerInfo,issuerInfo1|QSslCertificate::SubjectInfo
 $prototype=QString issuerInfo ( const QByteArray & tag ) const
 $internalMethod=|QString|issuerInfo,issuerInfo2|const QByteArray &
 
-//[1]QString issuerInfo ( SubjectInfo subject ) const
-//[2]QString issuerInfo ( const QByteArray & tag ) const
+/*
+[1]QString issuerInfo ( SubjectInfo subject ) const
+[2]QString issuerInfo ( const QByteArray & tag ) const
+*/
 
 HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFO )
 {
@@ -118,8 +122,10 @@ $internalMethod=|QString|subjectInfo,subjectInfo1|QSslCertificate::SubjectInfo
 $prototype=QString subjectInfo ( const QByteArray & tag ) const
 $internalMethod=|QString|subjectInfo,subjectInfo2|const QByteArray &
 
-//[1]QString subjectInfo ( SubjectInfo subject ) const
-//[2]QString subjectInfo ( const QByteArray & tag ) const
+/*
+[1]QString subjectInfo ( SubjectInfo subject ) const
+[2]QString subjectInfo ( const QByteArray & tag ) const
+*/
 
 HB_FUNC_STATIC( QSSLCERTIFICATE_SUBJECTINFO )
 {

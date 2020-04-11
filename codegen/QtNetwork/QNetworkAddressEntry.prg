@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QNetworkAddressEntry ( const QNetworkAddressEntry & other )
 $internalConstructor=|new2|const QNetworkAddressEntry &
 
-//[1]QNetworkAddressEntry ()
-//[2]QNetworkAddressEntry ( const QNetworkAddressEntry & other )
+/*
+[1]QNetworkAddressEntry ()
+[2]QNetworkAddressEntry ( const QNetworkAddressEntry & other )
+*/
 
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW )
 {
