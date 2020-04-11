@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QSharedData ( const QSharedData & other )
 $internalConstructor=|new2|const QSharedData &
 
-//[1]QSharedData ()
-//[2]QSharedData ( const QSharedData & other )
+/*
+[1]QSharedData ()
+[2]QSharedData ( const QSharedData & other )
+*/
 
 HB_FUNC_STATIC( QSHAREDDATA_NEW )
 {

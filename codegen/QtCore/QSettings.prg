@@ -42,11 +42,13 @@ $internalConstructor=|new4|const QString &,QSettings::Format,QObject *=0
 $prototype=QSettings ( QObject * parent = 0 )
 $internalConstructor=|new5|QObject *=0
 
-//[1]QSettings ( const QString & organization, const QString & application = QString(), QObject * parent = 0 )
-//[2]QSettings ( Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
-//[3]QSettings ( Format format, Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
-//[4]QSettings ( const QString & fileName, Format format, QObject * parent = 0 )
-//[5]QSettings ( QObject * parent = 0 )
+/*
+[1]QSettings ( const QString & organization, const QString & application = QString(), QObject * parent = 0 )
+[2]QSettings ( Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
+[3]QSettings ( Format format, Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
+[4]QSettings ( const QString & fileName, Format format, QObject * parent = 0 )
+[5]QSettings ( QObject * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QSETTINGS_NEW )
 {
@@ -150,8 +152,10 @@ $internalMethod=|void|setIniCodec,setIniCodec1|QTextCodec *
 $prototype=void setIniCodec ( const char * codecName )
 $internalMethod=|void|setIniCodec,setIniCodec2|const char *
 
-//[1]void setIniCodec ( QTextCodec * codec )
-//[2]void setIniCodec ( const char * codecName )
+/*
+[1]void setIniCodec ( QTextCodec * codec )
+[2]void setIniCodec ( const char * codecName )
+*/
 
 HB_FUNC_STATIC( QSETTINGS_SETINICODEC )
 {

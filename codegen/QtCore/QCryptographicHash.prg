@@ -36,8 +36,10 @@ $internalMethod=|void|addData,addData1|const char *,int
 $prototype=void addData ( const QByteArray & data )
 $internalMethod=|void|addData,addData2|const QByteArray &
 
-//[1]void addData ( const char * data, int length )
-//[2]void addData ( const QByteArray & data )
+/*
+[1]void addData ( const char * data, int length )
+[2]void addData ( const QByteArray & data )
+*/
 
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_ADDDATA )
 {

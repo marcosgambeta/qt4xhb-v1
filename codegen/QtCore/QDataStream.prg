@@ -37,10 +37,12 @@ $internalConstructor=|new3|QByteArray *,QIODevice::OpenMode
 $prototype=QDataStream ( const QByteArray & a )
 $internalConstructor=|new4|const QByteArray &
 
-//[1]QDataStream ()
-//[2]QDataStream ( QIODevice * d )
-//[3]QDataStream ( QByteArray * a, QIODevice::OpenMode mode )
-//[4]QDataStream ( const QByteArray & a )
+/*
+[1]QDataStream ()
+[2]QDataStream ( QIODevice * d )
+[3]QDataStream ( QByteArray * a, QIODevice::OpenMode mode )
+[4]QDataStream ( const QByteArray & a )
+*/
 
 HB_FUNC_STATIC( QDATASTREAM_NEW )
 {

@@ -39,8 +39,10 @@ $internalMethod=|bool|tryLock,tryLock1|
 $prototype=bool tryLock ( int timeout )
 $internalMethod=|bool|tryLock,tryLock2|int
 
-//[1]bool tryLock ()
-//[2]bool tryLock ( int timeout )
+/*
+[1]bool tryLock ()
+[2]bool tryLock ( int timeout )
+*/
 
 HB_FUNC_STATIC( QMUTEX_TRYLOCK )
 {

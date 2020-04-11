@@ -34,9 +34,11 @@ $internalConstructor=|new2|QObject *
 $prototype=QFile ( const QString & name, QObject * parent )
 $internalConstructor=|new3|const QString &,QObject *
 
-//[1]QFile ( const QString & name )
-//[2]QFile ( QObject * parent )
-//[3]QFile ( const QString & name, QObject * parent )
+/*
+[1]QFile ( const QString & name )
+[2]QFile ( QObject * parent )
+[3]QFile ( const QString & name, QObject * parent )
+*/
 
 HB_FUNC_STATIC( QFILE_NEW )
 {
@@ -107,12 +109,14 @@ $prototype=bool open ( const RFile & f, OpenMode mode, FileHandleFlags handleFla
 $prototype=virtual bool open ( OpenMode mode )
 $internalVirtualMethod=|bool|open,open6|QIODevice::OpenMode
 
-//[1]bool open ( FILE * fh, OpenMode mode )
-//[2]bool open ( FILE * fh, OpenMode mode, FileHandleFlags handleFlags )
-//[3]bool open ( int fd, OpenMode mode )
-//[4]bool open ( int fd, OpenMode mode, FileHandleFlags handleFlags )
-//[5]bool open ( const RFile & f, OpenMode mode, FileHandleFlags handleFlags = DontCloseHandle )
-//[6]virtual bool open ( OpenMode mode )
+/*
+[1]bool open ( FILE * fh, OpenMode mode )
+[2]bool open ( FILE * fh, OpenMode mode, FileHandleFlags handleFlags )
+[3]bool open ( int fd, OpenMode mode )
+[4]bool open ( int fd, OpenMode mode, FileHandleFlags handleFlags )
+[5]bool open ( const RFile & f, OpenMode mode, FileHandleFlags handleFlags = DontCloseHandle )
+[6]virtual bool open ( OpenMode mode )
+*/
 
 %% TODO: implementar
 HB_FUNC_STATIC( QFILE_OPEN )
@@ -159,8 +163,10 @@ $internalMethod=|bool|copy,copy1|const QString &
 $prototype=static bool copy ( const QString & fileName, const QString & newName )
 $internalStaticMethod=|bool|copy,copy2|const QString &,const QString &
 
-//[1]bool copy ( const QString & newName )
-//[2]bool copy ( const QString & fileName, const QString & newName )
+/*
+[1]bool copy ( const QString & newName )
+[2]bool copy ( const QString & fileName, const QString & newName )
+*/
 
 HB_FUNC_STATIC( QFILE_COPY )
 {
@@ -185,8 +191,10 @@ $internalStaticMethod=|QString|decodeName,decodeName1|const QByteArray &
 $prototype=static QString decodeName ( const char * localFileName )
 $internalStaticMethod=|QString|decodeName,decodeName2|const char *
 
-//[1]QString decodeName ( const QByteArray & localFileName )
-//[2]QString decodeName ( const char * localFileName )
+/*
+[1]QString decodeName ( const QByteArray & localFileName )
+[2]QString decodeName ( const char * localFileName )
+*/
 
 HB_FUNC_STATIC( QFILE_DECODENAME )
 {
@@ -214,8 +222,10 @@ $internalMethod=|bool|exists,exists1|
 $prototype=static bool exists ( const QString & fileName )
 $internalStaticMethod=|bool|exists,exists2|const QString &
 
-//[1]bool exists () const
-//[2]bool exists ( const QString & fileName )
+/*
+[1]bool exists () const
+[2]bool exists ( const QString & fileName )
+*/
 
 HB_FUNC_STATIC( QFILE_EXISTS )
 {
@@ -240,8 +250,10 @@ $internalMethod=|bool|link,link1|const QString &
 $prototype=static bool link ( const QString & fileName, const QString & linkName )
 $internalStaticMethod=|bool|link,link2|const QString &,const QString &
 
-//[1]bool link ( const QString & linkName )
-//[2]bool link ( const QString & fileName, const QString & linkName )
+/*
+[1]bool link ( const QString & linkName )
+[2]bool link ( const QString & fileName, const QString & linkName )
+*/
 
 HB_FUNC_STATIC( QFILE_LINK )
 {
@@ -266,8 +278,10 @@ $internalMethod=|QFile::Permissions|permissions,permissions1|
 $prototype=static Permissions permissions ( const QString & fileName )
 $internalStaticMethod=|QFile::Permissions|permissions,permissions2|const QString &
 
-//[1]Permissions permissions () const
-//[2]Permissions permissions ( const QString & fileName )
+/*
+[1]Permissions permissions () const
+[2]Permissions permissions ( const QString & fileName )
+*/
 
 HB_FUNC_STATIC( QFILE_PERMISSIONS )
 {
@@ -292,8 +306,10 @@ $internalMethod=|bool|remove,remove1|
 $prototype=static bool remove ( const QString & fileName )
 $internalStaticMethod=|bool|remove,remove2|const QString &
 
-//[1]bool remove ()
-//[2]bool remove ( const QString & fileName )
+/*
+[1]bool remove ()
+[2]bool remove ( const QString & fileName )
+*/
 
 HB_FUNC_STATIC( QFILE_REMOVE )
 {
@@ -318,8 +334,10 @@ $internalMethod=|bool|rename,rename1|const QString &
 $prototype=static bool rename ( const QString & oldName, const QString & newName )
 $internalStaticMethod=|bool|rename,rename2|const QString &,const QString &
 
-//[1]bool rename ( const QString & newName )
-//[2]bool rename ( const QString & oldName, const QString & newName )
+/*
+[1]bool rename ( const QString & newName )
+[2]bool rename ( const QString & oldName, const QString & newName )
+*/
 
 HB_FUNC_STATIC( QFILE_RENAME )
 {
@@ -344,8 +362,10 @@ $internalMethod=|bool|resize,resize1|qint64
 $prototype=static bool resize ( const QString & fileName, qint64 sz )
 $internalStaticMethod=|bool|resize,resize2|const QString &,qint64
 
-//[1]bool resize ( qint64 sz )
-//[2]bool resize ( const QString & fileName, qint64 sz )
+/*
+[1]bool resize ( qint64 sz )
+[2]bool resize ( const QString & fileName, qint64 sz )
+*/
 
 HB_FUNC_STATIC( QFILE_RESIZE )
 {
@@ -370,8 +390,10 @@ $internalMethod=|bool|setPermissions,setPermissions1|QFile::Permissions
 $prototype=static bool setPermissions ( const QString & fileName, Permissions permissions )
 $internalStaticMethod=|bool|setPermissions,setPermissions2|const QString &,QFile::Permissions
 
-//[1]bool setPermissions ( Permissions permissions )
-//[2]bool setPermissions ( const QString & fileName, Permissions permissions )
+/*
+[1]bool setPermissions ( Permissions permissions )
+[2]bool setPermissions ( const QString & fileName, Permissions permissions )
+*/
 
 HB_FUNC_STATIC( QFILE_SETPERMISSIONS )
 {
@@ -396,8 +418,10 @@ $internalMethod=|QString|symLinkTarget,symLinkTarget1|
 $prototype=static QString symLinkTarget ( const QString & fileName )
 $internalStaticMethod=|QString|symLinkTarget,symLinkTarget2|const QString &
 
-//[1]QString symLinkTarget () const
-//[2]QString symLinkTarget ( const QString & fileName )
+/*
+[1]QString symLinkTarget () const
+[2]QString symLinkTarget ( const QString & fileName )
+*/
 
 HB_FUNC_STATIC( QFILE_SYMLINKTARGET )
 {

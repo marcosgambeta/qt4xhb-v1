@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QReadWriteLock ( RecursionMode recursionMode )
 $internalConstructor=|new2|QReadWriteLock::RecursionMode
 
-//[1]QReadWriteLock ()
-//[2]QReadWriteLock ( RecursionMode recursionMode )
+/*
+[1]QReadWriteLock ()
+[2]QReadWriteLock ( RecursionMode recursionMode )
+*/
 
 HB_FUNC_STATIC( QREADWRITELOCK_NEW )
 {
@@ -64,8 +66,10 @@ $internalMethod=|bool|tryLockForRead,tryLockForRead1|
 $prototype=bool tryLockForRead ( int timeout )
 $internalMethod=|bool|tryLockForRead,tryLockForRead2|int
 
-//[1]bool tryLockForRead ()
-//[2]bool tryLockForRead ( int timeout )
+/*
+[1]bool tryLockForRead ()
+[2]bool tryLockForRead ( int timeout )
+*/
 
 HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORREAD )
 {
@@ -90,8 +94,10 @@ $internalMethod=|bool|tryLockForWrite,tryLockForWrite1|
 $prototype=bool tryLockForWrite ( int timeout )
 $internalMethod=|bool|tryLockForWrite,tryLockForWrite2|int
 
-//[1]bool tryLockForWrite ()
-//[2]bool tryLockForWrite ( int timeout )
+/*
+[1]bool tryLockForWrite ()
+[2]bool tryLockForWrite ( int timeout )
+*/
 
 HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORWRITE )
 {

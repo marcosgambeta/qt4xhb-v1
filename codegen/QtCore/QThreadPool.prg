@@ -63,8 +63,10 @@ $internalMethod=|void|waitForDone,waitForDone1|
 $prototype=bool waitForDone ( int msecs )
 $internalMethod=|bool|waitForDone,waitForDone2|int
 
-//[1]void waitForDone ()
-//[2]bool waitForDone ( int msecs )
+/*
+[1]void waitForDone ()
+[2]bool waitForDone ( int msecs )
+*/
 
 HB_FUNC_STATIC( QTHREADPOOL_WAITFORDONE )
 {

@@ -109,8 +109,10 @@ $internalStaticMethod=|void|postEvent,postEvent1|QObject *,QEvent *
 $prototype=static void postEvent ( QObject * receiver, QEvent * event, int priority )
 $internalStaticMethod=|void|postEvent,postEvent2|QObject *,QEvent *,int
 
-//[1]void postEvent ( QObject * receiver, QEvent * event )
-//[2]void postEvent ( QObject * receiver, QEvent * event, int priority )
+/*
+[1]void postEvent ( QObject * receiver, QEvent * event )
+[2]void postEvent ( QObject * receiver, QEvent * event, int priority )
+*/
 
 HB_FUNC_STATIC( QCOREAPPLICATION_POSTEVENT )
 {
@@ -135,8 +137,10 @@ $internalStaticMethod=|void|processEvents,processEvents1|QEventLoop::ProcessEven
 $prototype=static void processEvents ( QEventLoop::ProcessEventsFlags flags, int maxtime )
 $internalStaticMethod=|void|processEvents,processEvents2|QEventLoop::ProcessEventsFlags,int
 
-//[1]void processEvents ( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
-//[2]void processEvents ( QEventLoop::ProcessEventsFlags flags, int maxtime )
+/*
+[1]void processEvents ( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
+[2]void processEvents ( QEventLoop::ProcessEventsFlags flags, int maxtime )
+*/
 
 HB_FUNC_STATIC( QCOREAPPLICATION_PROCESSEVENTS )
 {
@@ -164,8 +168,10 @@ $internalStaticMethod=|void|removePostedEvents,removePostedEvents1|QObject *
 $prototype=static void removePostedEvents ( QObject * receiver, int eventType )
 $internalStaticMethod=|void|removePostedEvents,removePostedEvents2|QObject *,int
 
-//[1]void removePostedEvents ( QObject * receiver )
-//[2]void removePostedEvents ( QObject * receiver, int eventType )
+/*
+[1]void removePostedEvents ( QObject * receiver )
+[2]void removePostedEvents ( QObject * receiver, int eventType )
+*/
 
 HB_FUNC_STATIC( QCOREAPPLICATION_REMOVEPOSTEDEVENTS )
 {
@@ -196,8 +202,10 @@ $internalStaticMethod=|void|sendPostedEvents,sendPostedEvents1|QObject *,int
 $prototype=static void sendPostedEvents ()
 $internalStaticMethod=|void|sendPostedEvents,sendPostedEvents2|
 
-//[1]void sendPostedEvents ( QObject * receiver, int event_type )
-//[2]void sendPostedEvents ()
+/*
+[1]void sendPostedEvents ( QObject * receiver, int event_type )
+[2]void sendPostedEvents ()
+*/
 
 HB_FUNC_STATIC( QCOREAPPLICATION_SENDPOSTEDEVENTS )
 {
@@ -246,8 +254,10 @@ $internalStaticMethod=|QString|translate,translate1|const char *,const char *,co
 $prototype=static QString translate ( const char * context, const char * sourceText, const char * disambiguation = 0, Encoding encoding = CodecForTr )
 $internalStaticMethod=|QString|translate,translate2|const char *,const char *,const char *=0,QCoreApplication::Encoding=QCoreApplication::CodecForTr
 
-//[1]QString translate ( const char * context, const char * sourceText, const char * disambiguation, Encoding encoding, int n )
-//[2]QString translate ( const char * context, const char * sourceText, const char * disambiguation = 0, Encoding encoding = CodecForTr )
+/*
+[1]QString translate ( const char * context, const char * sourceText, const char * disambiguation, Encoding encoding, int n )
+[2]QString translate ( const char * context, const char * sourceText, const char * disambiguation = 0, Encoding encoding = CodecForTr )
+*/
 
 HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE )
 {

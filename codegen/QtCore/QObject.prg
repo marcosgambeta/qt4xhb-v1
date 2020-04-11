@@ -224,8 +224,10 @@ $internalMethod=|QList<QObject *>|findChildren<QObject *>,findChildren1|const QS
 $prototype=QList<T> findChildren ( const QRegExp & regExp ) const
 $internalMethod=|QList<QObject *>|findChildren<QObject *>,findChildren2|const QRegExp &
 
-//[1]QList<T> findChildren ( const QString & name = QString() ) const
-//[2]QList<T> findChildren ( const QRegExp & regExp ) const
+/*
+[1]QList<T> findChildren ( const QString & name = QString() ) const
+[2]QList<T> findChildren ( const QRegExp & regExp ) const
+*/
 
 HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
 {

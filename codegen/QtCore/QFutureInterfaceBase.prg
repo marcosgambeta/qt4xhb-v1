@@ -31,8 +31,10 @@ $internalConstructor=|new1|QFutureInterfaceBase::State=QFutureInterfaceBase::NoS
 $prototype=QFutureInterfaceBase(const QFutureInterfaceBase &other)
 $internalConstructor=|new2|const QFutureInterfaceBase &
 
-//[1]QFutureInterfaceBase(State initialState = NoState)
-//[2]QFutureInterfaceBase(const QFutureInterfaceBase &other)
+/*
+[1]QFutureInterfaceBase(State initialState = NoState)
+[2]QFutureInterfaceBase(const QFutureInterfaceBase &other)
+*/
 
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_NEW )
 {

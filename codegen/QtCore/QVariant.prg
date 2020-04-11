@@ -160,44 +160,46 @@ $constructor=|new37|const QRectF &
 $prototype=QVariant ( const QUrl & val )
 $constructor=|new38|const QUrl &
 
-//[1]QVariant ()
-//[2]QVariant ( const QLocale & l )
-//[3]QVariant ( const QRegExp & regExp )
-//[4]QVariant ( const QEasingCurve & val )
-//[5]QVariant ( Qt::GlobalColor color )
-//[6]QVariant ( Type type )
-//[7]QVariant ( int typeOrUserType, const void * copy )
-//[8]QVariant ( const QVariant & p )
-//[9]QVariant ( QDataStream & s )
-//[10]QVariant ( int val )
-//[11]QVariant ( uint val )
-//[12]QVariant ( qlonglong val )
-//[13]QVariant ( qulonglong val )
-//[14]QVariant ( bool val )
-//[15]QVariant ( double val )
-//[16]QVariant ( float val )
-//[17]QVariant ( const char * val )
-//[18]QVariant ( const QByteArray & val )
-//[19]QVariant ( const QBitArray & val )
-//[20]QVariant ( const QString & val )
-//[21]QVariant ( const QLatin1String & val )
-//[22]QVariant ( const QStringList & val )
-//[23]QVariant ( const QChar & c )
-//[24]QVariant ( const QDate & val )
-//[25]QVariant ( const QTime & val )
-//[26]QVariant ( const QDateTime & val )
-//[27]QVariant ( const QList<QVariant> & val )
-//[28]QVariant ( const QMap<QString, QVariant> & val )
-//[29]QVariant ( const QHash<QString, QVariant> & val )
-//[30]QVariant ( const QSize & val )
-//[31]QVariant ( const QSizeF & val )
-//[32]QVariant ( const QPoint & val )
-//[33]QVariant ( const QPointF & val )
-//[34]QVariant ( const QLine & val )
-//[35]QVariant ( const QLineF & val )
-//[36]QVariant ( const QRect & val )
-//[37]QVariant ( const QRectF & val )
-//[38]QVariant ( const QUrl & val )
+/*
+[1]QVariant ()
+[2]QVariant ( const QLocale & l )
+[3]QVariant ( const QRegExp & regExp )
+[4]QVariant ( const QEasingCurve & val )
+[5]QVariant ( Qt::GlobalColor color )
+[6]QVariant ( Type type )
+[7]QVariant ( int typeOrUserType, const void * copy )
+[8]QVariant ( const QVariant & p )
+[9]QVariant ( QDataStream & s )
+[10]QVariant ( int val )
+[11]QVariant ( uint val )
+[12]QVariant ( qlonglong val )
+[13]QVariant ( qulonglong val )
+[14]QVariant ( bool val )
+[15]QVariant ( double val )
+[16]QVariant ( float val )
+[17]QVariant ( const char * val )
+[18]QVariant ( const QByteArray & val )
+[19]QVariant ( const QBitArray & val )
+[20]QVariant ( const QString & val )
+[21]QVariant ( const QLatin1String & val )
+[22]QVariant ( const QStringList & val )
+[23]QVariant ( const QChar & c )
+[24]QVariant ( const QDate & val )
+[25]QVariant ( const QTime & val )
+[26]QVariant ( const QDateTime & val )
+[27]QVariant ( const QList<QVariant> & val )
+[28]QVariant ( const QMap<QString, QVariant> & val )
+[29]QVariant ( const QHash<QString, QVariant> & val )
+[30]QVariant ( const QSize & val )
+[31]QVariant ( const QSizeF & val )
+[32]QVariant ( const QPoint & val )
+[33]QVariant ( const QPointF & val )
+[34]QVariant ( const QLine & val )
+[35]QVariant ( const QLineF & val )
+[36]QVariant ( const QRect & val )
+[37]QVariant ( const QRectF & val )
+[38]QVariant ( const QUrl & val )
+*/
 
 %% TODO: completar reconhecimento de parâmetros
 
@@ -338,8 +340,10 @@ $method=|bool|canConvert|QVariant::Type
 %% $prototype=bool canConvert () const
 %% $method=|bool|canConvert,canConvert2|
 
-%% //[1]bool canConvert ( Type t ) const
-%% //[2]bool canConvert () const
+%% /*
+%% [1]bool canConvert ( Type t ) const
+%% [2]bool canConvert () const
+%% */
 
 %% HB_FUNC_STATIC( QVARIANT_CANCONVERT )
 %% {

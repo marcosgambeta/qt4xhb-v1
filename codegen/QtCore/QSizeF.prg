@@ -34,9 +34,11 @@ $internalConstructor=|new2|const QSize &
 $prototype=QSizeF ( qreal width, qreal height )
 $internalConstructor=|new3|qreal,qreal
 
-//[1]QSizeF ()
-//[2]QSizeF ( const QSize & size )
-//[3]QSizeF ( qreal width, qreal height )
+/*
+[1]QSizeF ()
+[2]QSizeF ( const QSize & size )
+[3]QSizeF ( qreal width, qreal height )
+*/
 
 HB_FUNC_STATIC( QSIZEF_NEW )
 {
@@ -84,8 +86,10 @@ $internalMethod=|void|scale,scale1|qreal,qreal,Qt::AspectRatioMode
 $prototype=void scale ( const QSizeF & size, Qt::AspectRatioMode mode )
 $internalMethod=|void|scale,scale2|const QSizeF &,Qt::AspectRatioMode
 
-//[1]void scale ( qreal width, qreal height, Qt::AspectRatioMode mode )
-//[2]void scale ( const QSizeF & size, Qt::AspectRatioMode mode )
+/*
+[1]void scale ( qreal width, qreal height, Qt::AspectRatioMode mode )
+[2]void scale ( const QSizeF & size, Qt::AspectRatioMode mode )
+*/
 
 HB_FUNC_STATIC( QSIZEF_SCALE )
 {

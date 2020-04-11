@@ -38,10 +38,12 @@ $internalConstructor=|new3|QtMsgType
 $prototype=QDebug ( const QDebug & other )
 $internalConstructor=|new4|const QDebug &
 
-//[1]QDebug ( QIODevice * device )
-//[2]QDebug ( QString * string )
-//[3]QDebug ( QtMsgType type )
-//[4]QDebug ( const QDebug & other )
+/*
+[1]QDebug ( QIODevice * device )
+[2]QDebug ( QString * string )
+[3]QDebug ( QtMsgType type )
+[4]QDebug ( const QDebug & other )
+*/
 
 HB_FUNC_STATIC( QDEBUG_NEW )
 {

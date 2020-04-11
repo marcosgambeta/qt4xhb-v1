@@ -38,10 +38,12 @@ $prototype=QTextBoundaryFinder(BoundaryType type, const QChar *chars, int length
 %% TODO: implementar
 %% $internalConstructor=|new4|QTextBoundaryFinder::BoundaryType,const QChar *,int,unsigned char *=0,int=0
 
-//[1]QTextBoundaryFinder()
-//[2]QTextBoundaryFinder(const QTextBoundaryFinder &other)
-//[3]QTextBoundaryFinder(BoundaryType type, const QString &string)
-//[4]QTextBoundaryFinder(BoundaryType type, const QChar *chars, int length, unsigned char *buffer = 0, int bufferSize = 0)
+/*
+[1]QTextBoundaryFinder()
+[2]QTextBoundaryFinder(const QTextBoundaryFinder &other)
+[3]QTextBoundaryFinder(BoundaryType type, const QString &string)
+[4]QTextBoundaryFinder(BoundaryType type, const QChar *chars, int length, unsigned char *buffer = 0, int bufferSize = 0)
+*/
 
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW )
 {

@@ -45,9 +45,11 @@ $prototype=bool load(const uchar * data, int len, const QString & directory = QS
 %% TODO: fix
 %% $internalMethod=|bool|load,load3|const uchar *,int,const QString &=QString()
 
-//[1]bool load(const QString & filename, const QString & directory = QString(), const QString & search_delimiters = QString(), const QString & suffix = QString())
-//[2]bool load(const QLocale & locale, const QString & filename, const QString & prefix = QString(), const QString & directory = QString(), const QString & suffix = QString())
-//[3]bool load(const uchar * data, int len, const QString & directory = QString())
+/*
+[1]bool load(const QString & filename, const QString & directory = QString(), const QString & search_delimiters = QString(), const QString & suffix = QString())
+[2]bool load(const QLocale & locale, const QString & filename, const QString & prefix = QString(), const QString & directory = QString(), const QString & suffix = QString())
+[3]bool load(const uchar * data, int len, const QString & directory = QString())
+*/
 
 HB_FUNC_STATIC( QTRANSLATOR_LOAD )
 {
