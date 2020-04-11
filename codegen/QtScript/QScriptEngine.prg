@@ -35,8 +35,10 @@ $internalConstructor=|new1|
 $prototype=QScriptEngine ( QObject * parent )
 $internalConstructor=|new2|QObject *
 
-//[1]QScriptEngine ()
-//[2]QScriptEngine ( QObject * parent )
+/*
+[1]QScriptEngine ()
+[2]QScriptEngine ( QObject * parent )
+*/
 
 HB_FUNC_STATIC( QSCRIPTENGINE_NEW )
 {
@@ -83,8 +85,10 @@ $internalMethod=|QScriptValue|evaluate,evaluate1|const QString &,const QString &
 $prototype=QScriptValue evaluate ( const QScriptProgram & program )
 $internalMethod=|QScriptValue|evaluate,evaluate2|const QScriptProgram &
 
-//[1]QScriptValue evaluate ( const QString & program, const QString & fileName = QString(), int lineNumber = 1 )
-//[2]QScriptValue evaluate ( const QScriptProgram & program )
+/*
+[1]QScriptValue evaluate ( const QString & program, const QString & fileName = QString(), int lineNumber = 1 )
+[2]QScriptValue evaluate ( const QScriptProgram & program )
+*/
 
 HB_FUNC_STATIC( QSCRIPTENGINE_EVALUATE )
 {
@@ -129,8 +133,10 @@ $internalMethod=|QScriptValue|newRegExp,newRegExp1|const QRegExp &
 $prototype=QScriptValue newRegExp ( const QString & pattern, const QString & flags )
 $internalMethod=|QScriptValue|newRegExp,newRegExp2|const QString &,const QString &
 
-//[1]QScriptValue newRegExp ( const QRegExp & regexp )
-//[2]QScriptValue newRegExp ( const QString & pattern, const QString & flags )
+/*
+[1]QScriptValue newRegExp ( const QRegExp & regexp )
+[2]QScriptValue newRegExp ( const QString & pattern, const QString & flags )
+*/
 
 HB_FUNC_STATIC( QSCRIPTENGINE_NEWREGEXP )
 {
@@ -154,8 +160,10 @@ $internalMethod=|QScriptValue|newVariant,newVariant1|const QVariant &
 $prototype=QScriptValue newVariant ( const QScriptValue & object, const QVariant & value )
 $internalMethod=|QScriptValue|newVariant,newVariant2|const QScriptValue &,const QVariant &
 
-//[1]QScriptValue newVariant ( const QVariant & value )
-//[2]QScriptValue newVariant ( const QScriptValue & object, const QVariant & value )
+/*
+[1]QScriptValue newVariant ( const QVariant & value )
+[2]QScriptValue newVariant ( const QScriptValue & object, const QVariant & value )
+*/
 
 HB_FUNC_STATIC( QSCRIPTENGINE_NEWVARIANT )
 {

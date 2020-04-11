@@ -53,19 +53,24 @@ $prototype=QScriptValue ( qsreal value )
 $prototype=QScriptValue ( const QString & value )
 $constructor=|new8|const QString &
 
+$prototype=QScriptValue ( const QLatin1String & value )
+%% TODO: $constructor=|new9|const QLatin1String &
+
 $prototype=QScriptValue ( const char * value )
 $constructor=|new10|const char *
 
-//[01]QScriptValue ()
-//[02]QScriptValue ( const QScriptValue & other )
-//[03]QScriptValue ( SpecialValue value )
-//[04]QScriptValue ( bool value )
-//[05]QScriptValue ( int value )
-//[06]QScriptValue ( uint value )
-//[07]QScriptValue ( qsreal value )
-//[08]QScriptValue ( const QString & value )
-//[09]QScriptValue ( const QLatin1String & value )
-//[10]QScriptValue ( const char * value )
+/*
+[01]QScriptValue ()
+[02]QScriptValue ( const QScriptValue & other )
+[03]QScriptValue ( SpecialValue value )
+[04]QScriptValue ( bool value )
+[05]QScriptValue ( int value )
+[06]QScriptValue ( uint value )
+[07]QScriptValue ( qsreal value )
+[08]QScriptValue ( const QString & value )
+[09]QScriptValue ( const QLatin1String & value )
+[10]QScriptValue ( const char * value )
+*/
 
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW )
 {
@@ -98,10 +103,12 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=new
 
 $deleteMethod
 
 $prototype=QScriptValue call ( const QScriptValue & thisObject = QScriptValue(), const QScriptValueList & args = QScriptValueList() )
+%% TODO: code generator
 HB_FUNC_STATIC( QSCRIPTVALUE_CALL1 )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -121,14 +128,17 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CALL1 )
     Qt4xHb::createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
+$addMethod=call1
 
 $prototype=QScriptValue call ( const QScriptValue & thisObject, const QScriptValue & arguments )
 $method=|QScriptValue|call,call2|const QScriptValue &,const QScriptValue &
 
-//[1]QScriptValue call ( const QScriptValue & thisObject = QScriptValue(), const QScriptValueList & args = QScriptValueList() )
-//[2]QScriptValue call ( const QScriptValue & thisObject, const QScriptValue & arguments )
+/*
+[1]QScriptValue call ( const QScriptValue & thisObject = QScriptValue(), const QScriptValueList & args = QScriptValueList() )
+[2]QScriptValue call ( const QScriptValue & thisObject, const QScriptValue & arguments )
+*/
 
-// TODO: QScripValueList = array ?
+%% TODO: QScripValueList = array ?
 
 HB_FUNC_STATIC( QSCRIPTVALUE_CALL )
 {
@@ -145,8 +155,10 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CALL )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=call
 
 $prototype=QScriptValue construct ( const QScriptValueList & args = QScriptValueList() )
+%% TODO: code generator
 HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT1 )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -165,12 +177,15 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT1 )
     Qt4xHb::createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
+$addMethod=construct1
 
 $prototype=QScriptValue construct ( const QScriptValue & arguments )
 $method=|QScriptValue|construct,construct2|const QScriptValue &
 
-//[1]QScriptValue construct ( const QScriptValueList & args = QScriptValueList() )
-//[2]QScriptValue construct ( const QScriptValue & arguments )
+/*
+[1]QScriptValue construct ( const QScriptValueList & args = QScriptValueList() )
+[2]QScriptValue construct ( const QScriptValue & arguments )
+*/
 
 HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT )
 {
@@ -187,6 +202,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=construct
 
 $prototype=QScriptValue data () const
 $method=|QScriptValue|data|
