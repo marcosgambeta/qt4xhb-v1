@@ -41,10 +41,12 @@ $internalConstructor=|new3|QDeclarativeEngine *,const QString &,QObject *=0
 $prototype=QDeclarativeComponent(QDeclarativeEngine *, const QUrl &url, QObject *parent = 0)
 $internalConstructor=|new4|QDeclarativeEngine *,const QUrl &,QObject *=0
 
-//[1]QDeclarativeComponent(QObject *parent = 0);
-//[2]QDeclarativeComponent(QDeclarativeEngine *, QObject *parent=0);
-//[3]QDeclarativeComponent(QDeclarativeEngine *, const QString &fileName, QObject *parent = 0);
-//[4]QDeclarativeComponent(QDeclarativeEngine *, const QUrl &url, QObject *parent = 0);
+/*
+[1]QDeclarativeComponent(QObject *parent = 0);
+[2]QDeclarativeComponent(QDeclarativeEngine *, QObject *parent=0);
+[3]QDeclarativeComponent(QDeclarativeEngine *, const QString &fileName, QObject *parent = 0);
+[4]QDeclarativeComponent(QDeclarativeEngine *, const QUrl &url, QObject *parent = 0);
+*/
 
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW )
 {
