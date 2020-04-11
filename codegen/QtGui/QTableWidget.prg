@@ -33,8 +33,10 @@ $internalConstructor=|new1|QWidget *=0
 $prototype=QTableWidget ( int rows, int columns, QWidget * parent = 0 )
 $internalConstructor=|new2|int,int,QWidget *=0
 
-//[1]QTableWidget ( QWidget * parent = 0 )
-//[2]QTableWidget ( int rows, int columns, QWidget * parent = 0 )
+/*
+[1]QTableWidget ( QWidget * parent = 0 )
+[2]QTableWidget ( int rows, int columns, QWidget * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QTABLEWIDGET_NEW )
 {
@@ -93,8 +95,10 @@ $internalMethod=|QTableWidgetItem *|itemAt,itemAt1|const QPoint &
 $prototype=QTableWidgetItem * itemAt ( int ax, int ay ) const
 $internalMethod=|QTableWidgetItem *|itemAt,itemAt2|int,int
 
-//[1]QTableWidgetItem * itemAt ( const QPoint & point ) const
-//[2]QTableWidgetItem * itemAt ( int ax, int ay ) const
+/*
+[1]QTableWidgetItem * itemAt ( const QPoint & point ) const
+[2]QTableWidgetItem * itemAt ( int ax, int ay ) const
+*/
 
 HB_FUNC_STATIC( QTABLEWIDGET_ITEMAT )
 {
@@ -143,8 +147,10 @@ $internalMethod=|void|setCurrentCell,setCurrentCell1|int,int
 $prototype=void setCurrentCell ( int row, int column, QItemSelectionModel::SelectionFlags command )
 $internalMethod=|void|setCurrentCell,setCurrentCell2|int,int,QItemSelectionModel::SelectionFlags
 
-//[1]void setCurrentCell ( int row, int column )
-//[2]void setCurrentCell ( int row, int column, QItemSelectionModel::SelectionFlags command )
+/*
+[1]void setCurrentCell ( int row, int column )
+[2]void setCurrentCell ( int row, int column, QItemSelectionModel::SelectionFlags command )
+*/
 
 HB_FUNC_STATIC( QTABLEWIDGET_SETCURRENTCELL )
 {
@@ -169,8 +175,10 @@ $internalMethod=|void|setCurrentItem,setCurrentItem1|QTableWidgetItem *
 $prototype=void setCurrentItem ( QTableWidgetItem * item, QItemSelectionModel::SelectionFlags command )
 $internalMethod=|void|setCurrentItem,setCurrentItem2|QTableWidgetItem *,QItemSelectionModel::SelectionFlags
 
-//[1]void setCurrentItem ( QTableWidgetItem * item )
-//[2]void setCurrentItem ( QTableWidgetItem * item, QItemSelectionModel::SelectionFlags command )
+/*
+[1]void setCurrentItem ( QTableWidgetItem * item )
+[2]void setCurrentItem ( QTableWidgetItem * item, QItemSelectionModel::SelectionFlags command )
+*/
 
 HB_FUNC_STATIC( QTABLEWIDGET_SETCURRENTITEM )
 {

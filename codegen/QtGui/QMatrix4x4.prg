@@ -46,12 +46,14 @@ $constructor=|new5|const QTransform &
 $prototype=QMatrix4x4 ( const QMatrix & matrix )
 %% TODO: implementar ?
 
-//[1]QMatrix4x4 ()
-//[2]QMatrix4x4 ( const qreal * values )
-//[3]QMatrix4x4 ( qreal m11, qreal m12, qreal m13, qreal m14, qreal m21, qreal m22, qreal m23, qreal m24, qreal m31, qreal m32, qreal m33, qreal m34, qreal m41, qreal m42, qreal m43, qreal m44 )
-//[4]QMatrix4x4 ( const QGenericMatrix<N, M, qreal> & matrix )
-//[5]QMatrix4x4 ( const QTransform & transform )
-//[6]QMatrix4x4 ( const QMatrix & matrix )
+/*
+[1]QMatrix4x4 ()
+[2]QMatrix4x4 ( const qreal * values )
+[3]QMatrix4x4 ( qreal m11, qreal m12, qreal m13, qreal m14, qreal m21, qreal m22, qreal m23, qreal m24, qreal m31, qreal m32, qreal m33, qreal m34, qreal m41, qreal m42, qreal m43, qreal m44 )
+[4]QMatrix4x4 ( const QGenericMatrix<N, M, qreal> & matrix )
+[5]QMatrix4x4 ( const QTransform & transform )
+[6]QMatrix4x4 ( const QMatrix & matrix )
+*/
 
 %% TODO: implementar caso 2 (receber uma array de valores numéricos)
 
@@ -69,10 +71,10 @@ HB_FUNC_STATIC( QMATRIX4X4_NEW )
   {
     HB_FUNC_EXEC( QMATRIX4X4_NEW5 );
   }
-  //else if( ISNUMPAR(1) && ISQMATRIX(1) )
-  //{
-  //  HB_FUNC_EXEC( QMATRIX4X4_NEW6 );
-  //}
+%%  //else if( ISNUMPAR(1) && ISQMATRIX(1) )
+%%  //{
+%%  //  HB_FUNC_EXEC( QMATRIX4X4_NEW6 );
+%%  //}
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
@@ -118,10 +120,12 @@ $internalMethod=|QVector3D|map,map3|const QVector3D &
 $prototype=QVector4D map ( const QVector4D & point ) const
 $internalMethod=|QVector4D|map,map4|const QVector4D &
 
-//[1]QPoint map ( const QPoint & point ) const
-//[2]QPointF map ( const QPointF & point ) const
-//[3]QVector3D map ( const QVector3D & point ) const
-//[4]QVector4D map ( const QVector4D & point ) const
+/*
+[1]QPoint map ( const QPoint & point ) const
+[2]QPointF map ( const QPointF & point ) const
+[3]QVector3D map ( const QVector3D & point ) const
+[4]QVector4D map ( const QVector4D & point ) const
+*/
 
 HB_FUNC_STATIC( QMATRIX4X4_MAP )
 {
@@ -154,8 +158,10 @@ $internalMethod=|QRect|mapRect,mapRect1|const QRect &
 $prototype=QRectF mapRect ( const QRectF & rect ) const
 $internalMethod=|QRectF|mapRect,mapRect2|const QRectF &
 
-//[1]QRect mapRect ( const QRect & rect ) const
-//[2]QRectF mapRect ( const QRectF & rect ) const
+/*
+[1]QRect mapRect ( const QRect & rect ) const
+[2]QRectF mapRect ( const QRectF & rect ) const
+*/
 
 HB_FUNC_STATIC( QMATRIX4X4_MAPRECT )
 {
@@ -192,9 +198,11 @@ $internalMethod=|void|ortho,ortho2|const QRect &
 $prototype=void ortho ( const QRectF & rect )
 $internalMethod=|void|ortho,ortho3|const QRectF &
 
-//[1]void ortho ( qreal left, qreal right, qreal bottom, qreal top, qreal nearPlane, qreal farPlane )
-//[2]void ortho ( const QRect & rect )
-//[3]void ortho ( const QRectF & rect )
+/*
+[1]void ortho ( qreal left, qreal right, qreal bottom, qreal top, qreal nearPlane, qreal farPlane )
+[2]void ortho ( const QRect & rect )
+[3]void ortho ( const QRectF & rect )
+*/
 
 HB_FUNC_STATIC( QMATRIX4X4_ORTHO )
 {
@@ -229,9 +237,11 @@ $internalMethod=|void|rotate,rotate2|const QQuaternion &
 $prototype=void rotate ( qreal angle, qreal x, qreal y, qreal z = 0.0f )
 $internalMethod=|void|rotate,rotate3|qreal,qreal,qreal,qreal=0.0f
 
-//[1]void rotate ( qreal angle, const QVector3D & vector )
-//[2]void rotate ( const QQuaternion & quaternion )
-//[3]void rotate ( qreal angle, qreal x, qreal y, qreal z = 0.0f )
+/*
+[1]void rotate ( qreal angle, const QVector3D & vector )
+[2]void rotate ( const QQuaternion & quaternion )
+[3]void rotate ( qreal angle, qreal x, qreal y, qreal z = 0.0f )
+*/
 
 HB_FUNC_STATIC( QMATRIX4X4_ROTATE )
 {
@@ -269,10 +279,12 @@ $internalMethod=|void|scale,scale3|qreal,qreal,qreal
 $prototype=void scale ( qreal factor )
 $internalMethod=|void|scale,scale4|qreal
 
-//[1]void scale ( const QVector3D & vector )
-//[2]void scale ( qreal x, qreal y )
-//[3]void scale ( qreal x, qreal y, qreal z )
-//[4]void scale ( qreal factor )
+/*
+[1]void scale ( const QVector3D & vector )
+[2]void scale ( qreal x, qreal y )
+[3]void scale ( qreal x, qreal y, qreal z )
+[4]void scale ( qreal factor )
+*/
 
 HB_FUNC_STATIC( QMATRIX4X4_SCALE )
 {
@@ -314,8 +326,10 @@ $internalMethod=|QTransform|toTransform,toTransform1|
 $prototype=QTransform toTransform ( qreal distanceToPlane ) const
 $internalMethod=|QTransform|toTransform,toTransform2|qreal
 
-//[1]QTransform toTransform () const
-//[2]QTransform toTransform ( qreal distanceToPlane ) const
+/*
+[1]QTransform toTransform () const
+[2]QTransform toTransform ( qreal distanceToPlane ) const
+*/
 
 HB_FUNC_STATIC( QMATRIX4X4_TOTRANSFORM )
 {
@@ -343,9 +357,11 @@ $internalMethod=|void|translate,translate2|qreal,qreal
 $prototype=void translate ( qreal x, qreal y, qreal z )
 $internalMethod=|void|translate,translate3|qreal,qreal,qreal
 
-//[1]void translate ( const QVector3D & vector )
-//[2]void translate ( qreal x, qreal y )
-//[3]void translate ( qreal x, qreal y, qreal z )
+/*
+[1]void translate ( const QVector3D & vector )
+[2]void translate ( qreal x, qreal y )
+[3]void translate ( qreal x, qreal y, qreal z )
+*/
 
 HB_FUNC_STATIC( QMATRIX4X4_TRANSLATE )
 {

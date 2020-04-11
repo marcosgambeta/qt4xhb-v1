@@ -39,8 +39,10 @@ $internalMethod=|void|endPainting,endPainting1|
 $prototype=void endPainting ( const QRegion & region )
 $internalMethod=|void|endPainting,endPainting2|const QRegion &
 
-//[1]void endPainting ()
-//[2]void endPainting ( const QRegion & region )
+/*
+[1]void endPainting ()
+[2]void endPainting ( const QRegion & region )
+*/
 
 HB_FUNC_STATIC( QDIRECTPAINTER_ENDPAINTING )
 {

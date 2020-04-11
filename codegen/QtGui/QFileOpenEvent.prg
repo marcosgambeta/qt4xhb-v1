@@ -33,8 +33,10 @@ $internalConstructor=|new1|const QString &
 $prototype=QFileOpenEvent(const QUrl &url)
 $internalConstructor=|new2|const QUrl &
 
-//[1]QFileOpenEvent(const QString &file)
-//[2]QFileOpenEvent(const QUrl &url)
+/*
+[1]QFileOpenEvent(const QString &file)
+[2]QFileOpenEvent(const QUrl &url)
+*/
 
 HB_FUNC_STATIC( QFILEOPENEVENT_NEW )
 {

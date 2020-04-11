@@ -66,8 +66,10 @@ $internalMethod=|void|setDashPattern,setDashPattern1|Qt::PenStyle
 $prototype=void setDashPattern ( const QVector<qreal> & dashPattern )
 $internalMethod=|void|setDashPattern,setDashPattern2|const QVector<qreal> &
 
-//[1]void setDashPattern ( Qt::PenStyle style )
-//[2]void setDashPattern ( const QVector<qreal> & dashPattern )
+/*
+[1]void setDashPattern ( Qt::PenStyle style )
+[2]void setDashPattern ( const QVector<qreal> & dashPattern )
+*/
 
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHPATTERN )
 {

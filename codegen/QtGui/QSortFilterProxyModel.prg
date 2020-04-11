@@ -185,8 +185,10 @@ $internalMethod=|void|setFilterRegExp,setFilterRegExp1|const QRegExp &
 $prototype=void setFilterRegExp ( const QString & pattern )
 $internalMethod=|void|setFilterRegExp,setFilterRegExp2|const QString &
 
-//[1]void setFilterRegExp ( const QRegExp & regExp )
-//[2]void setFilterRegExp ( const QString & pattern )
+/*
+[1]void setFilterRegExp ( const QRegExp & regExp )
+[2]void setFilterRegExp ( const QString & pattern )
+*/
 
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERREGEXP )
 {

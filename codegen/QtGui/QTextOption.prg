@@ -34,9 +34,11 @@ $internalConstructor=|new2|Qt::Alignment
 $prototype=QTextOption ( const QTextOption & other )
 $internalConstructor=|new3|const QTextOption &
 
-//[1]QTextOption ()
-//[2]QTextOption ( Qt::Alignment alignment )
-//[3]QTextOption ( const QTextOption & other )
+/*
+[1]QTextOption ()
+[2]QTextOption ( Qt::Alignment alignment )
+[3]QTextOption ( const QTextOption & other )
+*/
 
 HB_FUNC_STATIC( QTEXTOPTION_NEW )
 {

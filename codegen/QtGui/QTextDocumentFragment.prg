@@ -37,10 +37,12 @@ $internalConstructor=|new3|const QTextCursor &
 $prototype=QTextDocumentFragment ( const QTextDocumentFragment & other )
 $internalConstructor=|new4|const QTextDocumentFragment &
 
-//[1]QTextDocumentFragment ()
-//[2]QTextDocumentFragment ( const QTextDocument * document )
-//[3]QTextDocumentFragment ( const QTextCursor & cursor )
-//[4]QTextDocumentFragment ( const QTextDocumentFragment & other )
+/*
+[1]QTextDocumentFragment ()
+[2]QTextDocumentFragment ( const QTextDocument * document )
+[3]QTextDocumentFragment ( const QTextCursor & cursor )
+[4]QTextDocumentFragment ( const QTextDocumentFragment & other )
+*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW )
 {
@@ -77,8 +79,10 @@ $internalMethod=|QString|toHtml,toHtml1|const QByteArray &
 $prototype=QString toHtml () const
 $internalMethod=|QString|toHtml,toHtml2|
 
-//[1]QString toHtml ( const QByteArray & encoding ) const
-//[2]QString toHtml () const
+/*
+[1]QString toHtml ( const QByteArray & encoding ) const
+[2]QString toHtml () const
+*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOHTML )
 {
@@ -106,8 +110,10 @@ $internalStaticMethod=|QTextDocumentFragment|fromHtml,fromHtml1|const QString &
 $prototype=static QTextDocumentFragment fromHtml ( const QString & text, const QTextDocument * resourceProvider )
 $internalStaticMethod=|QTextDocumentFragment|fromHtml,fromHtml2|const QString &,const QTextDocument *
 
-//[1]QTextDocumentFragment fromHtml ( const QString & text )
-//[2]QTextDocumentFragment fromHtml ( const QString & text, const QTextDocument * resourceProvider )
+/*
+[1]QTextDocumentFragment fromHtml ( const QString & text )
+[2]QTextDocumentFragment fromHtml ( const QString & text, const QTextDocument * resourceProvider )
+*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMHTML )
 {

@@ -37,10 +37,12 @@ $internalConstructor=|new3|qreal,qreal,qreal,qreal,qreal,qreal
 $prototype=QTransform ( const QMatrix & matrix )
 $internalConstructor=|new4|const QMatrix &
 
-//[1]QTransform ()
-//[2]QTransform ( qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33 = 1.0 )
-//[3]QTransform ( qreal m11, qreal m12, qreal m21, qreal m22, qreal dx, qreal dy )
-//[4]QTransform ( const QMatrix & matrix )
+/*
+[1]QTransform ()
+[2]QTransform ( qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33 = 1.0 )
+[3]QTransform ( qreal m11, qreal m12, qreal m21, qreal m22, qreal dx, qreal dy )
+[4]QTransform ( const QMatrix & matrix )
+*/
 
 HB_FUNC_STATIC( QTRANSFORM_NEW )
 {
@@ -158,16 +160,18 @@ $internalMethod=|QPainterPath|map,map9|const QPainterPath &
 $prototype=void map ( int x, int y, int * tx, int * ty ) const
 $method=|void|map,map10|int,int,int *,int *
 
-//[01]void map ( qreal x, qreal y, qreal * tx, qreal * ty ) const
-//[02]QPointF map ( const QPointF & p ) const
-//[03]QPoint map ( const QPoint & point ) const
-//[04]QLine map ( const QLine & l ) const
-//[05]QLineF map ( const QLineF & line ) const
-//[06]QPolygonF map ( const QPolygonF & polygon ) const
-//[07]QPolygon map ( const QPolygon & polygon ) const
-//[08]QRegion map ( const QRegion & region ) const
-//[09]QPainterPath map ( const QPainterPath & path ) const
-//[10]void map ( int x, int y, int * tx, int * ty ) const
+/*
+[01]void map ( qreal x, qreal y, qreal * tx, qreal * ty ) const
+[02]QPointF map ( const QPointF & p ) const
+[03]QPoint map ( const QPoint & point ) const
+[04]QLine map ( const QLine & l ) const
+[05]QLineF map ( const QLineF & line ) const
+[06]QPolygonF map ( const QPolygonF & polygon ) const
+[07]QPolygon map ( const QPolygon & polygon ) const
+[08]QRegion map ( const QRegion & region ) const
+[09]QPainterPath map ( const QPainterPath & path ) const
+[10]void map ( int x, int y, int * tx, int * ty ) const
+*/
 
 %% TODO: resolver conflito entre [1] e [10] (identificar se é qreal ou int)
 
@@ -226,8 +230,10 @@ $internalMethod=|QRectF|mapRect,mapRect1|const QRectF &
 $prototype=QRect mapRect ( const QRect & rectangle ) const
 $internalMethod=|QRect|mapRect,mapRect2|const QRect &
 
-//[1]QRectF mapRect ( const QRectF & rectangle ) const
-//[2]QRect mapRect ( const QRect & rectangle ) const
+/*
+[1]QRectF mapRect ( const QRectF & rectangle ) const
+[2]QRect mapRect ( const QRect & rectangle ) const
+*/
 
 HB_FUNC_STATIC( QTRANSFORM_MAPRECT )
 {

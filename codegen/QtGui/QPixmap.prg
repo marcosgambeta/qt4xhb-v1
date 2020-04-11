@@ -46,12 +46,14 @@ $constructor=|new5|const QPixmap &
 $prototype=QPixmap ( const QSize & size )
 $constructor=|new6|const QSize &
 
-//[1]QPixmap ()
-//[2]QPixmap ( int width, int height )
-//[3]QPixmap ( const QString & fileName, const char * format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor )
-//[4]QPixmap ( const char * const[] xpm )
-//[5]QPixmap ( const QPixmap & pixmap )
-//[6]QPixmap ( const QSize & size )
+/*
+[1]QPixmap ()
+[2]QPixmap ( int width, int height )
+[3]QPixmap ( const QString & fileName, const char * format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor )
+[4]QPixmap ( const char * const[] xpm )
+[5]QPixmap ( const QPixmap & pixmap )
+[6]QPixmap ( const QSize & size )
+*/
 
 HB_FUNC_STATIC( QPIXMAP_NEW )
 {
@@ -100,8 +102,10 @@ $internalMethod=|QPixmap|copy,copy1|const QRect &=QRect()
 $prototype=QPixmap copy ( int x, int y, int width, int height ) const
 $internalMethod=|QPixmap|copy,copy2|int,int,int,int
 
-//[1]QPixmap copy ( const QRect & rectangle = QRect() ) const
-//[2]QPixmap copy ( int x, int y, int width, int height ) const
+/*
+[1]QPixmap copy ( const QRect & rectangle = QRect() ) const
+[2]QPixmap copy ( int x, int y, int width, int height ) const
+*/
 
 HB_FUNC_STATIC( QPIXMAP_COPY )
 {
@@ -129,8 +133,10 @@ $internalMethod=|QBitmap|createMaskFromColor,createMaskFromColor1|const QColor &
 $prototype=QBitmap createMaskFromColor ( const QColor & maskColor ) const
 $internalMethod=|QBitmap|createMaskFromColor,createMaskFromColor2|const QColor &
 
-//[1]QBitmap createMaskFromColor ( const QColor & maskColor, Qt::MaskMode mode ) const
-//[2]QBitmap createMaskFromColor ( const QColor & maskColor ) const
+/*
+[1]QBitmap createMaskFromColor ( const QColor & maskColor, Qt::MaskMode mode ) const
+[2]QBitmap createMaskFromColor ( const QColor & maskColor ) const
+*/
 
 HB_FUNC_STATIC( QPIXMAP_CREATEMASKFROMCOLOR )
 {
@@ -164,9 +170,11 @@ $internalMethod=|void|fill,fill2|const QWidget *,const QPoint &
 $prototype=void fill ( const QWidget * widget, int x, int y )
 $internalMethod=|void|fill,fill3|const QWidget *,int,int
 
-//[1]void fill ( const QColor & color = Qt::white )
-//[2]void fill ( const QWidget * widget, const QPoint & offset )
-//[3]void fill ( const QWidget * widget, int x, int y )
+/*
+[1]void fill ( const QColor & color = Qt::white )
+[2]void fill ( const QWidget * widget, const QPoint & offset )
+[3]void fill ( const QWidget * widget, int x, int y )
+*/
 
 HB_FUNC_STATIC( QPIXMAP_FILL )
 {
@@ -213,8 +221,10 @@ $internalMethod=|bool|loadFromData,loadFromData1|const uchar *,uint,const char *
 $prototype=bool loadFromData ( const QByteArray & data, const char * format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor )
 $internalMethod=|bool|loadFromData,loadFromData2|const QByteArray &,const char *=0,Qt::ImageConversionFlags=Qt::AutoColor
 
-//[1]bool loadFromData ( const uchar * data, uint len, const char * format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor )
-//[2]bool loadFromData ( const QByteArray & data, const char * format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor )
+/*
+[1]bool loadFromData ( const uchar * data, uint len, const char * format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor )
+[2]bool loadFromData ( const QByteArray & data, const char * format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor )
+*/
 
 HB_FUNC_STATIC( QPIXMAP_LOADFROMDATA )
 {
@@ -245,8 +255,10 @@ $internalMethod=|bool|save,save1|const QString &,const char *=0,int=-1
 $prototype=bool save ( QIODevice * device, const char * format = 0, int quality = -1 ) const
 $internalMethod=|bool|save,save2|QIODevice *,const char *=0,int=-1
 
-//[1]bool save ( const QString & fileName, const char * format = 0, int quality = -1 ) const
-//[2]bool save ( QIODevice * device, const char * format = 0, int quality = -1 ) const
+/*
+[1]bool save ( const QString & fileName, const char * format = 0, int quality = -1 ) const
+[2]bool save ( QIODevice * device, const char * format = 0, int quality = -1 ) const
+*/
 
 HB_FUNC_STATIC( QPIXMAP_SAVE )
 {
@@ -271,8 +283,10 @@ $internalMethod=|QPixmap|scaled,scaled1|const QSize &,Qt::AspectRatioMode=Qt::Ig
 $prototype=QPixmap scaled ( int width, int height, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
 $internalMethod=|QPixmap|scaled,scaled2|int,int,Qt::AspectRatioMode=Qt::IgnoreAspectRatio,Qt::TransformationMode=Qt::FastTransformation
 
-//[1]QPixmap scaled ( const QSize & size, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
-//[2]QPixmap scaled ( int width, int height, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
+/*
+[1]QPixmap scaled ( const QSize & size, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
+[2]QPixmap scaled ( int width, int height, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
+*/
 
 HB_FUNC_STATIC( QPIXMAP_SCALED )
 {
@@ -303,8 +317,10 @@ $internalMethod=|void|scroll,scroll1|int,int,int,int,int,int,QRegion *=0
 $prototype=void scroll ( int dx, int dy, const QRect & rect, QRegion * exposed = 0 )
 $internalMethod=|void|scroll,scroll2|int,int,const QRect &,QRegion *=0
 
-//[1]void scroll ( int dx, int dy, int x, int y, int width, int height, QRegion * exposed = 0 )
-//[2]void scroll ( int dx, int dy, const QRect & rect, QRegion * exposed = 0 )
+/*
+[1]void scroll ( int dx, int dy, int x, int y, int width, int height, QRegion * exposed = 0 )
+[2]void scroll ( int dx, int dy, const QRect & rect, QRegion * exposed = 0 )
+*/
 
 HB_FUNC_STATIC( QPIXMAP_SCROLL )
 {
@@ -341,8 +357,10 @@ $internalMethod=|QPixmap|transformed,transformed1|const QTransform &,Qt::Transfo
 $prototype=QPixmap transformed ( const QMatrix & matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
 $internalMethod=|QPixmap|transformed,transformed2|const QMatrix &,Qt::TransformationMode=Qt::FastTransformation
 
-//[1]QPixmap transformed ( const QTransform & transform, Qt::TransformationMode mode = Qt::FastTransformation ) const
-//[2]QPixmap transformed ( const QMatrix & matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
+/*
+[1]QPixmap transformed ( const QTransform & transform, Qt::TransformationMode mode = Qt::FastTransformation ) const
+[2]QPixmap transformed ( const QMatrix & matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
+*/
 
 HB_FUNC_STATIC( QPIXMAP_TRANSFORMED )
 {
@@ -379,8 +397,10 @@ $internalStaticMethod=|QPixmap|grabWidget,grabWidget1|QWidget *,const QRect &
 $prototype=static QPixmap grabWidget ( QWidget * widget, int x = 0, int y = 0, int width = -1, int height = -1 )
 $internalStaticMethod=|QPixmap|grabWidget,grabWidget2|QWidget *,int=0,int=0,int=-1,int=-1
 
-//[1]QPixmap grabWidget ( QWidget * widget, const QRect & rectangle )
-//[2]QPixmap grabWidget ( QWidget * widget, int x = 0, int y = 0, int width = -1, int height = -1 )
+/*
+[1]QPixmap grabWidget ( QWidget * widget, const QRect & rectangle )
+[2]QPixmap grabWidget ( QWidget * widget, int x = 0, int y = 0, int width = -1, int height = -1 )
+*/
 
 HB_FUNC_STATIC( QPIXMAP_GRABWIDGET )
 {
@@ -400,6 +420,7 @@ HB_FUNC_STATIC( QPIXMAP_GRABWIDGET )
 $addMethod=grabWidget
 
 $prototype=static QPixmap grabWindow ( WId window, int x = 0, int y = 0, int width = -1, int height = -1 )
+%% TODO: code generator
 HB_FUNC_STATIC( QPIXMAP_GRABWINDOW )
 {
   WId par1 = (WId) hb_parptr(1);
@@ -414,8 +435,10 @@ $internalStaticMethod=|QTransform|trueMatrix,trueMatrix1|const QTransform &,int,
 $prototype=static QMatrix trueMatrix ( const QMatrix & m, int w, int h )
 $internalStaticMethod=|QMatrix|trueMatrix,trueMatrix2|const QMatrix &,int,int
 
-//[1]QTransform trueMatrix ( const QTransform & matrix, int width, int height )
-//[2]QMatrix trueMatrix ( const QMatrix & m, int w, int h )
+/*
+[1]QTransform trueMatrix ( const QTransform & matrix, int width, int height )
+[2]QMatrix trueMatrix ( const QMatrix & m, int w, int h )
+*/
 
 HB_FUNC_STATIC( QPIXMAP_TRUEMATRIX )
 {

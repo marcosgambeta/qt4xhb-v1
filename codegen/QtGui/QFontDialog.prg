@@ -33,8 +33,10 @@ $internalConstructor=|new1|QWidget *=0
 $prototype=QFontDialog(const QFont &initial, QWidget *parent = 0)
 $internalConstructor=|new2|const QFont &,QWidget *=0
 
-//[1]QFontDialog(QWidget *parent = 0)
-//[2]QFontDialog(const QFont &initial, QWidget *parent = 0)
+/*
+[1]QFontDialog(QWidget *parent = 0)
+[2]QFontDialog(const QFont &initial, QWidget *parent = 0)
+*/
 
 HB_FUNC_STATIC( QFONTDIALOG_NEW )
 {
@@ -91,10 +93,12 @@ $internalStaticMethod=|QFont|getFont,getFont3|bool *,const QFont &,QWidget *=0
 $prototype=static QFont getFont(bool *ok, QWidget *parent = 0)
 $internalStaticMethod=|QFont|getFont,getFont4|bool *,QWidget *=0
 
-//[1]static QFont getFont(bool *ok, const QFont &initial, QWidget *parent, const QString &title,FontDialogOptions options)
-//[2]static QFont getFont(bool *ok, const QFont &initial, QWidget *parent, const QString &title)
-//[3]static QFont getFont(bool *ok, const QFont &initial, QWidget *parent = 0)
-//[4]static QFont getFont(bool *ok, QWidget *parent = 0)
+/*
+[1]static QFont getFont(bool *ok, const QFont &initial, QWidget *parent, const QString &title,FontDialogOptions options)
+[2]static QFont getFont(bool *ok, const QFont &initial, QWidget *parent, const QString &title)
+[3]static QFont getFont(bool *ok, const QFont &initial, QWidget *parent = 0)
+[4]static QFont getFont(bool *ok, QWidget *parent = 0)
+*/
 
 HB_FUNC_STATIC( QFONTDIALOG_GETFONT )
 {

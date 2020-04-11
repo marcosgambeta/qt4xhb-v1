@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QSupportedWritingSystems ( const QSupportedWritingSystems & other )
 $internalConstructor=|new2|const QSupportedWritingSystems &
 
-//[1]QSupportedWritingSystems ()
-//[2]QSupportedWritingSystems ( const QSupportedWritingSystems & other )
+/*
+[1]QSupportedWritingSystems ()
+[2]QSupportedWritingSystems ( const QSupportedWritingSystems & other )
+*/
 
 HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_NEW )
 {

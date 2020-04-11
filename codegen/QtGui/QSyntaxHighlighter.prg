@@ -27,19 +27,21 @@ $includes
 
 #include <QtGui/QTextDocument>
 
-//[1]QSyntaxHighlighter ( QObject * parent )
-//[2]QSyntaxHighlighter ( QTextDocument * parent )
-//[3]QSyntaxHighlighter ( QTextEdit * parent )
+/*
+[1]QSyntaxHighlighter ( QObject * parent )
+[2]QSyntaxHighlighter ( QTextDocument * parent )
+[3]QSyntaxHighlighter ( QTextEdit * parent )
+*/
 
-//HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_NEW )
-//{
-//  if( ISNUMPAR(1) && ISQOBJECT(1) )
-//  {
-//    HB_FUNC_EXEC(QSYNTAXHIGHLIGHTER_NEW1 );
-//    //HB_FUNC_EXEC(QSYNTAXHIGHLIGHTER_NEW2 ); // TODO: implementar
-//    //HB_FUNC_EXEC(QSYNTAXHIGHLIGHTER_NEW3 ); // TODO: implementar
-//  }
-//}
+%% //HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_NEW )
+%% //{
+%% //  if( ISNUMPAR(1) && ISQOBJECT(1) )
+%% //  {
+%% //    HB_FUNC_EXEC(QSYNTAXHIGHLIGHTER_NEW1 );
+%% //    //HB_FUNC_EXEC(QSYNTAXHIGHLIGHTER_NEW2 ); // TODO: implementar
+%% //    //HB_FUNC_EXEC(QSYNTAXHIGHLIGHTER_NEW3 ); // TODO: implementar
+%% //  }
+%% //}
 
 $deleteMethod
 

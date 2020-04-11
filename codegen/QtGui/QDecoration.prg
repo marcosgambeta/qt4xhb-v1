@@ -42,8 +42,10 @@ $internalVirtualMethod=|QRegion|region,region1|const QWidget *,const QRect &,int
 $prototype=QRegion region ( const QWidget * widget, int decorationRegion = All )
 $internalMethod=|QRegion|region,region2|const QWidget *,int=QDecoration::All
 
-//[1]virtual QRegion region ( const QWidget * widget, const QRect & rectangle, int decorationRegion = All ) = 0
-//[2]QRegion region ( const QWidget * widget, int decorationRegion = All )
+/*
+[1]virtual QRegion region ( const QWidget * widget, const QRect & rectangle, int decorationRegion = All ) = 0
+[2]QRegion region ( const QWidget * widget, int decorationRegion = All )
+*/
 
 HB_FUNC_STATIC( QDECORATION_REGION )
 {

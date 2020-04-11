@@ -49,13 +49,15 @@ $internalConstructor=|new6|const QVector2D &,qreal
 $prototype=QVector3D ( const QVector4D & vector )
 $internalConstructor=|new7|const QVector4D &
 
-//[1]QVector3D ()
-//[2]QVector3D ( qreal xpos, qreal ypos, qreal zpos )
-//[3]QVector3D ( const QPoint & point )
-//[4]QVector3D ( const QPointF & point )
-//[5]QVector3D ( const QVector2D & vector )
-//[6]QVector3D ( const QVector2D & vector, qreal zpos )
-//[7]QVector3D ( const QVector4D & vector )
+/*
+[1]QVector3D ()
+[2]QVector3D ( qreal xpos, qreal ypos, qreal zpos )
+[3]QVector3D ( const QPoint & point )
+[4]QVector3D ( const QPointF & point )
+[5]QVector3D ( const QVector2D & vector )
+[6]QVector3D ( const QVector2D & vector, qreal zpos )
+[7]QVector3D ( const QVector4D & vector )
+*/
 
 HB_FUNC_STATIC( QVECTOR3D_NEW )
 {
@@ -104,8 +106,10 @@ $internalMethod=|qreal|distanceToPlane,distanceToPlane1|const QVector3D &,const 
 $prototype=qreal distanceToPlane ( const QVector3D & plane1, const QVector3D & plane2, const QVector3D & plane3 ) const
 $internalMethod=|qreal|distanceToPlane,distanceToPlane2|const QVector3D &,const QVector3D &,const QVector3D &
 
-//[1]qreal distanceToPlane ( const QVector3D & plane, const QVector3D & normal ) const
-//[2]qreal distanceToPlane ( const QVector3D & plane1, const QVector3D & plane2, const QVector3D & plane3 ) const
+/*
+[1]qreal distanceToPlane ( const QVector3D & plane, const QVector3D & normal ) const
+[2]qreal distanceToPlane ( const QVector3D & plane1, const QVector3D & plane2, const QVector3D & plane3 ) const
+*/
 
 HB_FUNC_STATIC( QVECTOR3D_DISTANCETOPLANE )
 {
@@ -181,8 +185,10 @@ $internalStaticMethod=|QVector3D|normal,normal1|const QVector3D &,const QVector3
 $prototype=static QVector3D normal ( const QVector3D & v1, const QVector3D & v2, const QVector3D & v3 )
 $internalStaticMethod=|QVector3D|normal,normal2|const QVector3D &,const QVector3D &,const QVector3D &
 
-//[1]QVector3D normal ( const QVector3D & v1, const QVector3D & v2 )
-//[2]QVector3D normal ( const QVector3D & v1, const QVector3D & v2, const QVector3D & v3 )
+/*
+[1]QVector3D normal ( const QVector3D & v1, const QVector3D & v2 )
+[2]QVector3D normal ( const QVector3D & v1, const QVector3D & v2, const QVector3D & v3 )
+*/
 
 HB_FUNC_STATIC( QVECTOR3D_NORMAL )
 {
@@ -201,8 +207,8 @@ HB_FUNC_STATIC( QVECTOR3D_NORMAL )
 }
 $addMethod=normal
 
-// TODO: implementar função ?
-// bool qFuzzyCompare ( const QVector3D & v1, const QVector3D & v2 )
+%% TODO: implementar função ?
+%% bool qFuzzyCompare ( const QVector3D & v1, const QVector3D & v2 )
 
 $extraMethods
 

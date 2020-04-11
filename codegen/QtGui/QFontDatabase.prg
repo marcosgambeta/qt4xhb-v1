@@ -66,8 +66,10 @@ $internalMethod=|QString|styleString,styleString1|const QFont &
 $prototype=QString styleString ( const QFontInfo & fontInfo )
 $internalMethod=|QString|styleString,styleString2|const QFontInfo &
 
-//[1]QString styleString ( const QFont & font )
-//[2]QString styleString ( const QFontInfo & fontInfo )
+/*
+[1]QString styleString ( const QFont & font )
+[2]QString styleString ( const QFontInfo & fontInfo )
+*/
 
 HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING )
 {
@@ -98,8 +100,10 @@ $internalMethod=|QList<QFontDatabase::WritingSystem>|writingSystems,writingSyste
 $prototype=QList<WritingSystem> writingSystems ( const QString & family ) const
 $internalMethod=|QList<QFontDatabase::WritingSystem>|writingSystems,writingSystems2|const QString &
 
-//[1]QList<WritingSystem> writingSystems () const
-//[2]QList<WritingSystem> writingSystems ( const QString & family ) const
+/*
+[1]QList<WritingSystem> writingSystems () const
+[2]QList<WritingSystem> writingSystems ( const QString & family ) const
+*/
 
 HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMS )
 {

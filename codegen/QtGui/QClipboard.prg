@@ -86,8 +86,10 @@ HB_FUNC_STATIC( QCLIPBOARD_TEXT2 )
   }
 }
 
-//[1]QString text ( Mode mode = Clipboard ) const
-//[2]QString text ( QString & subtype, Mode mode = Clipboard ) const
+/*
+[1]QString text ( Mode mode = Clipboard ) const
+[2]QString text ( QString & subtype, Mode mode = Clipboard ) const
+*/
 
 HB_FUNC_STATIC( QCLIPBOARD_TEXT )
 {

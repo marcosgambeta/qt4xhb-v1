@@ -31,8 +31,10 @@ $internalConstructor=|new1|QObject *=0
 $prototype=QRegExpValidator ( const QRegExp & rx, QObject * parent )
 $internalConstructor=|new2|const QRegExp &,QObject *
 
-//[1]QRegExpValidator ( QObject * parent = 0 )
-//[2]QRegExpValidator ( const QRegExp & rx, QObject * parent )
+/*
+[1]QRegExpValidator ( QObject * parent = 0 )
+[2]QRegExpValidator ( const QRegExp & rx, QObject * parent )
+*/
 
 HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
 {
@@ -59,7 +61,8 @@ $prototype=void setRegExp ( const QRegExp & rx )
 $method=|void|setRegExp|const QRegExp &
 
 $prototype=virtual QValidator::State validate ( QString & input, int & pos ) const
-HB_FUNC_STATIC( QREGEXPVALIDATOR_VALIDATE ) // TODO: revisar implementacao e corrigir
+%% TODO: revisar implementacao e corrigir
+HB_FUNC_STATIC( QREGEXPVALIDATOR_VALIDATE )
 {
   QRegExpValidator * obj = (QRegExpValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

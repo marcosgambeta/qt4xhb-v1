@@ -45,9 +45,11 @@ $internalMethod=|void|set,set2|const QImage &,int,int
 $prototype=void set ( Qt::CursorShape id )
 $internalMethod=|void|set,set3|Qt::CursorShape
 
-//[1]void set ( const uchar * data, const uchar * mask, int width, int height, int hx, int hy )
-//[2]void set ( const QImage & image, int hx, int hy )
-//[3]void set ( Qt::CursorShape id )
+/*
+[1]void set ( const uchar * data, const uchar * mask, int width, int height, int hx, int hy )
+[2]void set ( const QImage & image, int hx, int hy )
+[3]void set ( Qt::CursorShape id )
+*/
 
 HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_SET )
 {

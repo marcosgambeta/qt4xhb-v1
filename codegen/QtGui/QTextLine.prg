@@ -39,8 +39,10 @@ $method=|qreal|cursorToX,cursorToX1|int *,QTextLine::Edge=QTextLine::Leading
 $prototype=qreal cursorToX ( int cursorPos, Edge edge = Leading ) const
 $method=|qreal|cursorToX,cursorToX2|int,QTextLine::Edge=QTextLine::Leading
 
-//[1]qreal cursorToX ( int * cursorPos, Edge edge = Leading ) const
-//[2]qreal cursorToX ( int cursorPos, Edge edge = Leading ) const
+/*
+[1]qreal cursorToX ( int * cursorPos, Edge edge = Leading ) const
+[2]qreal cursorToX ( int cursorPos, Edge edge = Leading ) const
+*/
 
 %% TODO: resolver conflito
 
@@ -106,8 +108,10 @@ $method=|void|setNumColumns,setNumColumns1|int
 $prototype=void setNumColumns ( int numColumns, qreal alignmentWidth )
 $method=|void|setNumColumns,setNumColumns2|int,qreal
 
-//[1]void setNumColumns ( int numColumns )
-//[2]void setNumColumns ( int numColumns, qreal alignmentWidth )
+/*
+[1]void setNumColumns ( int numColumns )
+[2]void setNumColumns ( int numColumns, qreal alignmentWidth )
+*/
 
 HB_FUNC_STATIC( QTEXTLINE_SETNUMCOLUMNS )
 {

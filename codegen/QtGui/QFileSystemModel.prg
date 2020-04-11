@@ -148,8 +148,10 @@ $internalMethod=|QModelIndex|index,index1|const QString &,int=0
 $prototype=virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 $internalVirtualMethod=|QModelIndex|index,index2|int,int,const QModelIndex &=QModelIndex()
 
-//[1]QModelIndex index ( const QString & path, int column = 0 ) const
-//[2]virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
+/*
+[1]QModelIndex index ( const QString & path, int column = 0 ) const
+[2]virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
+*/
 
 HB_FUNC_STATIC( QFILESYSTEMMODEL_INDEX )
 {
@@ -169,6 +171,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_INDEX )
 $addMethod=index
 
 $prototype=virtual QMimeData * mimeData ( const QModelIndexList & indexes ) const
+%% TODO:
 HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMEDATA )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

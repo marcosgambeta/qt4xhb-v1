@@ -62,21 +62,23 @@ $internalConstructor=|new10|const char *,const char *=0
 $prototype=QImage ( const QImage & image )
 $internalConstructor=|new11|const QImage &
 
-//[01]QImage ()
-//[02]QImage ( const QSize & size, Format format )
-//[03]QImage ( int width, int height, Format format )
+/*
+[01]QImage ()
+[02]QImage ( const QSize & size, Format format )
+[03]QImage ( int width, int height, Format format )
 %% TODO: conflict between [4] and [5]
-//[04]QImage ( uchar * data, int width, int height, Format format )
-//[05]QImage ( const uchar * data, int width, int height, Format format )
+[04]QImage ( uchar * data, int width, int height, Format format )
+[05]QImage ( const uchar * data, int width, int height, Format format )
 %% TODO: conflict between [6] and [7]
-//[06]QImage ( uchar * data, int width, int height, int bytesPerLine, Format format )
-//[07]QImage ( const uchar * data, int width, int height, int bytesPerLine, Format format )
+[06]QImage ( uchar * data, int width, int height, int bytesPerLine, Format format )
+[07]QImage ( const uchar * data, int width, int height, int bytesPerLine, Format format )
 %% TODO: implement
-//[08]QImage ( const char * const[] xpm )
+[08]QImage ( const char * const[] xpm )
 %% TODO: conflict between [9] and [10]
-//[09]QImage ( const QString & fileName, const char * format = 0 )
-//[10]QImage ( const char * fileName, const char * format = 0 )
-//[11]QImage ( const QImage & image )
+[09]QImage ( const QString & fileName, const char * format = 0 )
+[10]QImage ( const char * fileName, const char * format = 0 )
+[11]QImage ( const QImage & image )
+*/
 
 HB_FUNC_STATIC( QIMAGE_NEW )
 {
@@ -158,8 +160,10 @@ $internalMethod=|QImage|convertToFormat,convertToFormat1|QImage::Format,Qt::Imag
 $prototype=QImage convertToFormat ( Format format, const QVector<QRgb> & colorTable, Qt::ImageConversionFlags flags = Qt::AutoColor ) const
 $internalMethod=|QImage|convertToFormat,convertToFormat2|QImage::Format,const QVector<QRgb> &,Qt::ImageConversionFlags=Qt::AutoColor
 
-//[1]QImage convertToFormat ( Format format, Qt::ImageConversionFlags flags = Qt::AutoColor ) const
-//[2]QImage convertToFormat ( Format format, const QVector<QRgb> & colorTable, Qt::ImageConversionFlags flags = Qt::AutoColor ) const
+/*
+[1]QImage convertToFormat ( Format format, Qt::ImageConversionFlags flags = Qt::AutoColor ) const
+[2]QImage convertToFormat ( Format format, const QVector<QRgb> & colorTable, Qt::ImageConversionFlags flags = Qt::AutoColor ) const
+*/
 
 HB_FUNC_STATIC( QIMAGE_CONVERTTOFORMAT )
 {
@@ -184,8 +188,10 @@ $internalMethod=|QImage|copy,copy1|const QRect &=QRect()
 $prototype=QImage copy ( int x, int y, int width, int height ) const
 $internalMethod=|QImage|copy,copy2|int,int,int,int
 
-//[1]QImage copy ( const QRect & rectangle = QRect() ) const
-//[2]QImage copy ( int x, int y, int width, int height ) const
+/*
+[1]QImage copy ( const QRect & rectangle = QRect() ) const
+[2]QImage copy ( int x, int y, int width, int height ) const
+*/
 
 HB_FUNC_STATIC( QIMAGE_COPY )
 {
@@ -232,9 +238,11 @@ $prototype=void fill ( const QColor & color )
 $method=|void|fill,fill3|const QColor &
 
 %% TODO: conflict between [1] and [2]
-//[1]void fill ( uint pixelValue )
-//[2]void fill ( Qt::GlobalColor color )
-//[3]void fill ( const QColor & color )
+/*
+[1]void fill ( uint pixelValue )
+[2]void fill ( Qt::GlobalColor color )
+[3]void fill ( const QColor & color )
+*/
 
 HB_FUNC_STATIC( QIMAGE_FILL )
 {
@@ -281,8 +289,10 @@ $internalMethod=|bool|load,load1|const QString &,const char *=0
 $prototype=bool load ( QIODevice * device, const char * format )
 $internalMethod=|bool|load,load2|QIODevice *,const char *
 
-//[1]bool load ( const QString & fileName, const char * format = 0 )
-//[2]bool load ( QIODevice * device, const char * format )
+/*
+[1]bool load ( const QString & fileName, const char * format = 0 )
+[2]bool load ( QIODevice * device, const char * format )
+*/
 
 HB_FUNC_STATIC( QIMAGE_LOAD )
 {
@@ -307,8 +317,10 @@ $internalMethod=|bool|loadFromData,loadFromData1|const uchar *,int,const char *=
 $prototype=bool loadFromData ( const QByteArray & data, const char * format = 0 )
 $internalMethod=|bool|loadFromData,loadFromData2|const QByteArray &,const char *=0
 
-//[1]bool loadFromData ( const uchar * data, int len, const char * format = 0 )
-//[2]bool loadFromData ( const QByteArray & data, const char * format = 0 )
+/*
+[1]bool loadFromData ( const uchar * data, int len, const char * format = 0 )
+[2]bool loadFromData ( const QByteArray & data, const char * format = 0 )
+*/
 
 HB_FUNC_STATIC( QIMAGE_LOADFROMDATA )
 {
@@ -339,8 +351,10 @@ $internalMethod=|QRgb|pixel,pixel1|const QPoint &
 $prototype=QRgb pixel ( int x, int y ) const
 $internalMethod=|QRgb|pixel,pixel2|int,int
 
-//[1]QRgb pixel ( const QPoint & position ) const
-//[2]QRgb pixel ( int x, int y ) const
+/*
+[1]QRgb pixel ( const QPoint & position ) const
+[2]QRgb pixel ( int x, int y ) const
+*/
 
 HB_FUNC_STATIC( QIMAGE_PIXEL )
 {
@@ -365,8 +379,10 @@ $internalMethod=|int|pixelIndex,pixelIndex1|const QPoint &
 $prototype=int pixelIndex ( int x, int y ) const
 $internalMethod=|int|pixelIndex,pixelIndex2|int,int
 
-//[1]int pixelIndex ( const QPoint & position ) const
-//[2]int pixelIndex ( int x, int y ) const
+/*
+[1]int pixelIndex ( const QPoint & position ) const
+[2]int pixelIndex ( int x, int y ) const
+*/
 
 HB_FUNC_STATIC( QIMAGE_PIXELINDEX )
 {
@@ -397,8 +413,10 @@ $internalMethod=|bool|save,save1|const QString &,const char *=0,int=-1
 $prototype=bool save ( QIODevice * device, const char * format = 0, int quality = -1 ) const
 $internalMethod=|bool|save,save2|QIODevice *,const char *=0,int=-1
 
-//[1]bool save ( const QString & fileName, const char * format = 0, int quality = -1 ) const
-//[2]bool save ( QIODevice * device, const char * format = 0, int quality = -1 ) const
+/*
+[1]bool save ( const QString & fileName, const char * format = 0, int quality = -1 ) const
+[2]bool save ( QIODevice * device, const char * format = 0, int quality = -1 ) const
+*/
 
 HB_FUNC_STATIC( QIMAGE_SAVE )
 {
@@ -423,8 +441,10 @@ $internalMethod=|QImage|scaled,scaled1|const QSize &,Qt::AspectRatioMode=Qt::Ign
 $prototype=QImage scaled ( int width, int height, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
 $internalMethod=|QImage|scaled,scaled2|int,int,Qt::AspectRatioMode=Qt::IgnoreAspectRatio,Qt::TransformationMode=Qt::FastTransformation
 
-//[1]QImage scaled ( const QSize & size, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
-//[2]QImage scaled ( int width, int height, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
+/*
+[1]QImage scaled ( const QSize & size, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
+[2]QImage scaled ( int width, int height, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
+*/
 
 HB_FUNC_STATIC( QIMAGE_SCALED )
 {
@@ -449,14 +469,17 @@ $method=|QImage|scaledToHeight|int,Qt::TransformationMode=Qt::FastTransformation
 $prototype=QImage scaledToWidth ( int width, Qt::TransformationMode mode = Qt::FastTransformation ) const
 $method=|QImage|scaledToWidth|int,Qt::TransformationMode=Qt::FastTransformation
 
-// TODO: implementar
-//[1]uchar * scanLine ( int i )
-//[2]const uchar * scanLine ( int i ) const
+%% TODO: implementar
 
-//HB_FUNC_STATIC( QIMAGE_SCANLINE )
-//{
-//  HB_FUNC_EXEC( QIMAGE_SCANLINE1 );
-//}
+/*
+[1]uchar * scanLine ( int i )
+[2]const uchar * scanLine ( int i ) const
+*/
+
+%% //HB_FUNC_STATIC( QIMAGE_SCANLINE )
+%% //{
+%% //  HB_FUNC_EXEC( QIMAGE_SCANLINE1 );
+%% //}
 
 $prototype=void setColor ( int index, QRgb colorValue )
 $method=|void|setColor|int,QRgb
@@ -482,8 +505,10 @@ $internalMethod=|void|setPixel,setPixel1|const QPoint &,uint
 $prototype=void setPixel ( int x, int y, uint index_or_rgb )
 $internalMethod=|void|setPixel,setPixel2|int,int,uint
 
-//[1]void setPixel ( const QPoint & position, uint index_or_rgb )
-//[2]void setPixel ( int x, int y, uint index_or_rgb )
+/*
+[1]void setPixel ( const QPoint & position, uint index_or_rgb )
+[2]void setPixel ( int x, int y, uint index_or_rgb )
+*/
 
 HB_FUNC_STATIC( QIMAGE_SETPIXEL )
 {
@@ -523,8 +548,10 @@ $internalMethod=|QImage|transformed,transformed1|const QMatrix &,Qt::Transformat
 $prototype=QImage transformed ( const QTransform & matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
 $internalMethod=|QImage|transformed,transformed2|const QTransform &,Qt::TransformationMode=Qt::FastTransformation
 
-//[1]QImage transformed ( const QMatrix & matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
-//[2]QImage transformed ( const QTransform & matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
+/*
+[1]QImage transformed ( const QMatrix & matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
+[2]QImage transformed ( const QTransform & matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
+*/
 
 HB_FUNC_STATIC( QIMAGE_TRANSFORMED )
 {
@@ -549,8 +576,10 @@ $internalMethod=|bool|valid,valid1|const QPoint &
 $prototype=bool valid ( int x, int y ) const
 $internalMethod=|bool|valid,valid2|int,int
 
-//[1]bool valid ( const QPoint & pos ) const
-//[2]bool valid ( int x, int y ) const
+/*
+[1]bool valid ( const QPoint & pos ) const
+[2]bool valid ( int x, int y ) const
+*/
 
 HB_FUNC_STATIC( QIMAGE_VALID )
 {
@@ -578,8 +607,10 @@ $internalStaticMethod=|QImage|fromData,fromData1|const uchar *,int,const char *=
 $prototype=static QImage fromData ( const QByteArray & data, const char * format = 0 )
 $internalStaticMethod=|QImage|fromData,fromData2|const QByteArray &,const char *=0
 
-//[1]QImage fromData ( const uchar * data, int size, const char * format = 0 )
-//[2]QImage fromData ( const QByteArray & data, const char * format = 0 )
+/*
+[1]QImage fromData ( const uchar * data, int size, const char * format = 0 )
+[2]QImage fromData ( const QByteArray & data, const char * format = 0 )
+*/
 
 HB_FUNC_STATIC( QIMAGE_FROMDATA )
 {
@@ -604,8 +635,10 @@ $internalStaticMethod=|QMatrix|trueMatrix,trueMatrix1|const QMatrix &,int,int
 $prototype=static QTransform trueMatrix ( const QTransform & matrix, int width, int height )
 $internalStaticMethod=|QTransform|trueMatrix,trueMatrix2|const QTransform &,int,int
 
-//[1]QMatrix trueMatrix ( const QMatrix & matrix, int width, int height )
-//[2]QTransform trueMatrix ( const QTransform & matrix, int width, int height )
+/*
+[1]QMatrix trueMatrix ( const QMatrix & matrix, int width, int height )
+[2]QTransform trueMatrix ( const QTransform & matrix, int width, int height )
+*/
 
 HB_FUNC_STATIC( QIMAGE_TRUEMATRIX )
 {

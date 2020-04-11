@@ -66,9 +66,11 @@ $internalVirtualMethod=|void|polish,polish2|QApplication *
 $prototype=virtual void polish ( QPalette & pal )
 $internalVirtualMethod=|void|polish,polish3|QPalette &
 
-//[1]virtual void polish ( QWidget * widget )
-//[2]virtual void polish ( QApplication * app )
-//[3]virtual void polish ( QPalette & pal )
+/*
+[1]virtual void polish ( QWidget * widget )
+[2]virtual void polish ( QApplication * app )
+[3]virtual void polish ( QPalette & pal )
+*/
 
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_POLISH )
 {
@@ -115,8 +117,10 @@ $internalVirtualMethod=|void|unpolish,unpolish1|QWidget *
 $prototype=virtual void unpolish ( QApplication * app )
 $internalVirtualMethod=|void|unpolish,unpolish2|QApplication *
 
-//[1]virtual void unpolish ( QWidget * widget )
-//[2]virtual void unpolish ( QApplication * app )
+/*
+[1]virtual void unpolish ( QWidget * widget )
+[2]virtual void unpolish ( QApplication * app )
+*/
 
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_UNPOLISH )
 {

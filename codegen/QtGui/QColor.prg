@@ -48,15 +48,17 @@ $internalConstructor=|new6|const QColor &
 $prototype=QColor ( Qt::GlobalColor color )
 $constructor=|new7|Qt::GlobalColor
 
-//[1]QColor ()
-//[2]QColor ( int r, int g, int b, int a = 255 )
-//[3]QColor ( QRgb color )
-//[4]QColor ( const QString & name )
-//[5]QColor ( const char * name )
-//[6]QColor ( const QColor & color )
-//[7]QColor ( Qt::GlobalColor color )
+/*
+[1]QColor ()
+[2]QColor ( int r, int g, int b, int a = 255 )
+[3]QColor ( QRgb color )
+[4]QColor ( const QString & name )
+[5]QColor ( const char * name )
+[6]QColor ( const QColor & color )
+[7]QColor ( Qt::GlobalColor color )
+*/
 
-// TODO: conflitos entre [3] e [7] e [4] e [5]
+%% TODO: conflitos entre [3] e [7] e [4] e [5]
 
 HB_FUNC_STATIC( QCOLOR_NEW )
 {
@@ -276,8 +278,10 @@ $internalMethod=|void|setRgb,setRgb1|int,int,int,int=255
 $prototype=void setRgb ( QRgb rgb )
 $internalMethod=|void|setRgb,setRgb2|QRgb
 
-//[1]void setRgb ( int r, int g, int b, int a = 255 )
-//[2]void setRgb ( QRgb rgb )
+/*
+[1]void setRgb ( int r, int g, int b, int a = 255 )
+[2]void setRgb ( QRgb rgb )
+*/
 
 HB_FUNC_STATIC( QCOLOR_SETRGB )
 {
@@ -356,8 +360,10 @@ $internalStaticMethod=|QColor|fromRgb,fromRgb1|QRgb
 $prototype=static QColor fromRgb ( int r, int g, int b, int a = 255 )
 $internalStaticMethod=|QColor|fromRgb,fromRgb2|int,int,int,int=255
 
-//[1]static QColor fromRgb ( QRgb rgb )
-//[2]static QColor fromRgb ( int r, int g, int b, int a = 255 )
+/*
+[1]static QColor fromRgb ( QRgb rgb )
+[2]static QColor fromRgb ( int r, int g, int b, int a = 255 )
+*/
 
 HB_FUNC_STATIC( QCOLOR_FROMRGB )
 {
@@ -411,8 +417,10 @@ HB_FUNC( QGRAY2 )
   RINT( qGray ( (QRgb) hb_parni(1) ) );
 }
 
-//[1]int qGray ( int r, int g, int b )
-//[2]int qGray ( QRgb rgb )
+/*
+[1]int qGray ( int r, int g, int b )
+[2]int qGray ( QRgb rgb )
+*/
 
 HB_FUNC( QGRAY )
 {

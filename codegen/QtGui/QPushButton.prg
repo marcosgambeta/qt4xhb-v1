@@ -34,9 +34,11 @@ $internalConstructor=|new2|const QString &,QWidget *=0
 $prototype=QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = 0 )
 $internalConstructor=|new3|const QIcon &,const QString &,QWidget *=0
 
-//[1]QPushButton ( QWidget * parent = 0 )
-//[2]QPushButton ( const QString & text, QWidget * parent = 0 )
-//[3]QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = 0 )
+/*
+[1]QPushButton ( QWidget * parent = 0 )
+[2]QPushButton ( const QString & text, QWidget * parent = 0 )
+[3]QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QPUSHBUTTON_NEW )
 {

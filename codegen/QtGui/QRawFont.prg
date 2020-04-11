@@ -39,10 +39,12 @@ $internalConstructor=|new3|const QByteArray &,qreal,QFont::HintingPreference=QFo
 $prototype=QRawFont ( const QRawFont & other )
 $internalConstructor=|new4|const QRawFont &
 
-//[1]QRawFont ()
-//[2]QRawFont ( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
-//[3]QRawFont ( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
-//[4]QRawFont ( const QRawFont & other )
+/*
+[1]QRawFont ()
+[2]QRawFont ( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
+[3]QRawFont ( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
+[4]QRawFont ( const QRawFont & other )
+*/
 
 HB_FUNC_STATIC( QRAWFONT_NEW )
 {
@@ -73,8 +75,10 @@ $deleteMethod
 $prototype=QVector<QPointF> advancesForGlyphIndexes ( const QVector<quint32> & glyphIndexes ) const
 $method=|QVector<QPointF>|advancesForGlyphIndexes,advancesForGlyphIndexes1|const QVector<quint32> &
 
-//[1]QVector<QPointF> advancesForGlyphIndexes ( const QVector<quint32> & glyphIndexes ) const
-//[2]bool advancesForGlyphIndexes ( const quint32 * glyphIndexes, QPointF * advances, int numGlyphs ) const
+/*
+[1]QVector<QPointF> advancesForGlyphIndexes ( const QVector<quint32> & glyphIndexes ) const
+[2]bool advancesForGlyphIndexes ( const quint32 * glyphIndexes, QPointF * advances, int numGlyphs ) const
+*/
 
 HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES )
 {
@@ -145,8 +149,10 @@ $internalMethod=|bool|supportsCharacter,supportsCharacter1|QChar
 $prototype=bool supportsCharacter ( quint32 ucs4 ) const
 $internalMethod=|bool|supportsCharacter,supportsCharacter2|quint32
 
-//[1]bool supportsCharacter ( QChar character ) const
-//[2]bool supportsCharacter ( quint32 ucs4 ) const
+/*
+[1]bool supportsCharacter ( QChar character ) const
+[2]bool supportsCharacter ( quint32 ucs4 ) const
+*/
 
 HB_FUNC_STATIC( QRAWFONT_SUPPORTSCHARACTER )
 {

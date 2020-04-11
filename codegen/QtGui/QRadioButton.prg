@@ -31,8 +31,10 @@ $internalConstructor=|new1|QWidget *=0
 $prototype=QRadioButton ( const QString & text, QWidget * parent = 0 )
 $internalConstructor=|new2|const QString &,QWidget *=0
 
-//[1]QRadioButton ( QWidget * parent = 0 )
-//[2]QRadioButton ( const QString & text, QWidget * parent = 0 )
+/*
+[1]QRadioButton ( QWidget * parent = 0 )
+[2]QRadioButton ( const QString & text, QWidget * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QRADIOBUTTON_NEW )
 {

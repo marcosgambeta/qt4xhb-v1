@@ -31,8 +31,10 @@ $internalConstructor=|new1|Qt::WindowStates
 $prototype=QWindowStateChangeEvent(Qt::WindowStates aOldState, bool isOverride)
 $internalConstructor=|new2|Qt::WindowStates,bool
 
-//[1]QWindowStateChangeEvent(Qt::WindowStates aOldState)
-//[2]QWindowStateChangeEvent(Qt::WindowStates aOldState, bool isOverride)
+/*
+[1]QWindowStateChangeEvent(Qt::WindowStates aOldState)
+[2]QWindowStateChangeEvent(Qt::WindowStates aOldState, bool isOverride)
+*/
 
 HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW )
 {

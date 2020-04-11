@@ -34,9 +34,11 @@ $internalConstructor=|new2|QPlatformWindowFormat::FormatOptions
 $prototype=QPlatformWindowFormat ( const QPlatformWindowFormat & other )
 $internalConstructor=|new3|const QPlatformWindowFormat &
 
-//[1]QPlatformWindowFormat ()
-//[2]QPlatformWindowFormat ( FormatOptions options )
-//[3]QPlatformWindowFormat ( const QPlatformWindowFormat & other )
+/*
+[1]QPlatformWindowFormat ()
+[2]QPlatformWindowFormat ( FormatOptions options )
+[3]QPlatformWindowFormat ( const QPlatformWindowFormat & other )
+*/
 
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_NEW )
 {

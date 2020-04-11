@@ -39,8 +39,10 @@ $internalConstructor=|new1|QObject *=0
 $prototype=QTextDocument ( const QString & text, QObject * parent = 0 )
 $internalConstructor=|new2|const QString &,QObject *=0
 
-//[1]QTextDocument ( QObject * parent = 0 )
-//[2]QTextDocument ( const QString & text, QObject * parent = 0 )
+/*
+[1]QTextDocument ( QObject * parent = 0 )
+[2]QTextDocument ( const QString & text, QObject * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENT_NEW )
 {
@@ -132,10 +134,12 @@ $internalMethod=|QTextCursor|find,find3|const QString &,int=0,QTextDocument::Fin
 $prototype=QTextCursor find ( const QRegExp & expr, int position = 0, FindFlags options = 0 ) const
 $internalMethod=|QTextCursor|find,find4|const QRegExp &,int=0,QTextDocument::FindFlags=0
 
-//[1]QTextCursor find ( const QString & subString, const QTextCursor & cursor, FindFlags options = 0 ) const
-//[2]QTextCursor find ( const QRegExp & expr, const QTextCursor & cursor, FindFlags options = 0 ) const
-//[3]QTextCursor find ( const QString & subString, int position = 0, FindFlags options = 0 ) const
-//[4]QTextCursor find ( const QRegExp & expr, int position = 0, FindFlags options = 0 ) const
+/*
+[1]QTextCursor find ( const QString & subString, const QTextCursor & cursor, FindFlags options = 0 ) const
+[2]QTextCursor find ( const QRegExp & expr, const QTextCursor & cursor, FindFlags options = 0 ) const
+[3]QTextCursor find ( const QString & subString, int position = 0, FindFlags options = 0 ) const
+[4]QTextCursor find ( const QRegExp & expr, int position = 0, FindFlags options = 0 ) const
+*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENT_FIND )
 {
@@ -300,8 +304,10 @@ $internalMethod=|void|redo,redo1|QTextCursor *
 $prototype=void redo ()
 $internalMethod=|void|redo,redo2|
 
-//[1]void redo ( QTextCursor * cursor )
-//[2]void redo ()
+/*
+[1]void redo ( QTextCursor * cursor )
+[2]void redo ()
+*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENT_REDO )
 {
@@ -329,8 +335,10 @@ $internalMethod=|void|undo,undo1|QTextCursor *
 $prototype=void undo ()
 $internalMethod=|void|undo,undo2|
 
-//[1]void undo ( QTextCursor * cursor )
-//[2]void undo ()
+/*
+[1]void undo ( QTextCursor * cursor )
+[2]void undo ()
+*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENT_UNDO )
 {

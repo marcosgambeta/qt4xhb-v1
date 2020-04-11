@@ -38,8 +38,10 @@ $internalConstructor=|new1|QWidget *=0
 $prototype=QLineEdit ( const QString & contents, QWidget * parent = 0 )
 $internalConstructor=|new2|const QString &,QWidget *=0
 
-//[1]QLineEdit ( QWidget * parent = 0 )
-//[2]QLineEdit ( const QString & contents, QWidget * parent = 0 )
+/*
+[1]QLineEdit ( QWidget * parent = 0 )
+[2]QLineEdit ( const QString & contents, QWidget * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QLINEEDIT_NEW )
 {
@@ -197,8 +199,10 @@ $internalMethod=|void|setTextMargins,setTextMargins1|int,int,int,int
 $prototype=void setTextMargins ( const QMargins & margins )
 $internalMethod=|void|setTextMargins,setTextMargins2|const QMargins &
 
-//[1]void setTextMargins ( int left, int top, int right, int bottom )
-//[2]void setTextMargins ( const QMargins & margins )
+/*
+[1]void setTextMargins ( int left, int top, int right, int bottom )
+[2]void setTextMargins ( const QMargins & margins )
+*/
 
 HB_FUNC_STATIC( QLINEEDIT_SETTEXTMARGINS )
 {

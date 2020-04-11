@@ -34,9 +34,11 @@ $internalConstructor=|new2|const QPointF &,qreal
 $prototype=QConicalGradient(qreal cx, qreal cy, qreal startAngle)
 $internalConstructor=|new3|qreal,qreal,qreal
 
-//[1]QConicalGradient()
-//[2]QConicalGradient(const QPointF &center, qreal startAngle)
-//[3]QConicalGradient(qreal cx, qreal cy, qreal startAngle)
+/*
+[1]QConicalGradient()
+[2]QConicalGradient(const QPointF &center, qreal startAngle)
+[3]QConicalGradient(qreal cx, qreal cy, qreal startAngle)
+*/
 
 HB_FUNC_STATIC( QCONICALGRADIENT_NEW )
 {
@@ -73,8 +75,10 @@ $internalMethod=|void|setCenter,setCenter1|const QPointF &
 $prototype=void setCenter ( qreal x, qreal y )
 $internalMethod=|void|setCenter,setCenter2|qreal,qreal
 
-//[1]void setCenter ( const QPointF & center )
-//[2]void setCenter ( qreal x, qreal y )
+/*
+[1]void setCenter ( const QPointF & center )
+[2]void setCenter ( qreal x, qreal y )
+*/
 
 HB_FUNC_STATIC( QCONICALGRADIENT_SETCENTER )
 {

@@ -45,12 +45,14 @@ $internalConstructor=|new5|const QBitmap &
 $prototype=QRegion ( const QRect & r, RegionType t = Rectangle )
 $internalConstructor=|new6|const QRect &,QRegion::RegionType=QRegion::Rectangle
 
-//[1]QRegion ()
-//[2]QRegion ( int x, int y, int w, int h, RegionType t = Rectangle )
-//[3]QRegion ( const QPolygon & a, Qt::FillRule fillRule = Qt::OddEvenFill )
-//[4]QRegion ( const QRegion & r )
-//[5]QRegion ( const QBitmap & bm )
-//[6]QRegion ( const QRect & r, RegionType t = Rectangle )
+/*
+[1]QRegion ()
+[2]QRegion ( int x, int y, int w, int h, RegionType t = Rectangle )
+[3]QRegion ( const QPolygon & a, Qt::FillRule fillRule = Qt::OddEvenFill )
+[4]QRegion ( const QRegion & r )
+[5]QRegion ( const QBitmap & bm )
+[6]QRegion ( const QRect & r, RegionType t = Rectangle )
+*/
 
 HB_FUNC_STATIC( QREGION_NEW )
 {
@@ -95,8 +97,10 @@ $internalMethod=|bool|contains,contains1|const QPoint &
 $prototype=bool contains ( const QRect & r ) const
 $internalMethod=|bool|contains,contains2|const QRect &
 
-//[1]bool contains ( const QPoint & p ) const
-//[2]bool contains ( const QRect & r ) const
+/*
+[1]bool contains ( const QPoint & p ) const
+[2]bool contains ( const QRect & r ) const
+*/
 
 HB_FUNC_STATIC( QREGION_CONTAINS )
 {
@@ -121,8 +125,10 @@ $internalMethod=|QRegion|intersected,intersected1|const QRegion &
 $prototype=QRegion intersected ( const QRect & rect ) const
 $internalMethod=|QRegion|intersected,intersected2|const QRect &
 
-//[1]QRegion intersected ( const QRegion & r ) const
-//[2]QRegion intersected ( const QRect & rect ) const
+/*
+[1]QRegion intersected ( const QRegion & r ) const
+[2]QRegion intersected ( const QRect & rect ) const
+*/
 
 HB_FUNC_STATIC( QREGION_INTERSECTED )
 {
@@ -147,8 +153,10 @@ $internalMethod=|bool|intersects,intersects1|const QRegion &
 $prototype=bool intersects ( const QRect & rect ) const
 $internalMethod=|bool|intersects,intersects2|const QRect &
 
-//[1]bool intersects ( const QRegion & region ) const
-//[2]bool intersects ( const QRect & rect ) const
+/*
+[1]bool intersects ( const QRegion & region ) const
+[2]bool intersects ( const QRect & rect ) const
+*/
 
 HB_FUNC_STATIC( QREGION_INTERSECTS )
 {
@@ -188,8 +196,10 @@ $internalMethod=|void|translate,translate1|int,int
 $prototype=void translate ( const QPoint & point )
 $internalMethod=|void|translate,translate2|const QPoint &
 
-//[1]void translate ( int dx, int dy )
-//[2]void translate ( const QPoint & point )
+/*
+[1]void translate ( int dx, int dy )
+[2]void translate ( const QPoint & point )
+*/
 
 HB_FUNC_STATIC( QREGION_TRANSLATE )
 {
@@ -214,8 +224,10 @@ $internalMethod=|QRegion|translated,translated1|int,int
 $prototype=QRegion translated ( const QPoint & p ) const
 $internalMethod=|QRegion|translated,translated2|const QPoint &
 
-//[1]QRegion translated ( int dx, int dy ) const
-//[2]QRegion translated ( const QPoint & p ) const
+/*
+[1]QRegion translated ( int dx, int dy ) const
+[2]QRegion translated ( const QPoint & p ) const
+*/
 
 HB_FUNC_STATIC( QREGION_TRANSLATED )
 {
@@ -240,8 +252,10 @@ $internalMethod=|QRegion|united,united1|const QRegion &
 $prototype=QRegion united ( const QRect & rect ) const
 $internalMethod=|QRegion|united,united2|const QRect &
 
-//[1]QRegion united ( const QRegion & r ) const
-//[2]QRegion united ( const QRect & rect ) const
+/*
+[1]QRegion united ( const QRegion & r ) const
+[2]QRegion united ( const QRect & rect ) const
+*/
 
 HB_FUNC_STATIC( QREGION_UNITED )
 {

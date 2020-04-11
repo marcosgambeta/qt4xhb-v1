@@ -34,9 +34,11 @@ $internalConstructor=|new2|const QPrinterInfo &
 $prototype=QPrinterInfo ( const QPrinter & printer )
 $internalConstructor=|new3|const QPrinter &
 
-//[1]QPrinterInfo ()
-//[2]QPrinterInfo ( const QPrinterInfo & src )
-//[3]QPrinterInfo ( const QPrinter & printer )
+/*
+[1]QPrinterInfo ()
+[2]QPrinterInfo ( const QPrinterInfo & src )
+[3]QPrinterInfo ( const QPrinter & printer )
+*/
 
 HB_FUNC_STATIC( QPRINTERINFO_NEW )
 {

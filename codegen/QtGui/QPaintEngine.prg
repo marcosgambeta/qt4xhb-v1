@@ -36,8 +36,10 @@ $internalVirtualMethod=|void|drawEllipse,drawEllipse1|const QRectF &
 $prototype=virtual void drawEllipse ( const QRect & rect )
 $internalVirtualMethod=|void|drawEllipse,drawEllipse2|const QRect &
 
-//[1]virtual void drawEllipse ( const QRectF & rect )
-//[2]virtual void drawEllipse ( const QRect & rect )
+/*
+[1]virtual void drawEllipse ( const QRectF & rect )
+[2]virtual void drawEllipse ( const QRect & rect )
+*/
 
 HB_FUNC_STATIC( QPAINTENGINE_DRAWELLIPSE )
 {
@@ -59,8 +61,10 @@ $addMethod=drawEllipse
 $prototype=virtual void drawImage ( const QRectF & rectangle, const QImage & image, const QRectF & sr, Qt::ImageConversionFlags flags = Qt::AutoColor )
 $virtualMethod=|void|drawImage|const QRectF &,const QImage &,const QRectF &,Qt::ImageConversionFlags=Qt::AutoColor
 
-//[1]virtual void drawLines ( const QLineF * lines, int lineCount )
-//[2]virtual void drawLines ( const QLine * lines, int lineCount )
+/*
+[1]virtual void drawLines ( const QLineF * lines, int lineCount )
+[2]virtual void drawLines ( const QLine * lines, int lineCount )
+*/
 
 HB_FUNC_STATIC( QPAINTENGINE_DRAWLINES )
 {
@@ -73,24 +77,30 @@ $virtualMethod=|void|drawPath|const QPainterPath &
 $prototype=virtual void drawPixmap ( const QRectF & r, const QPixmap & pm, const QRectF & sr ) = 0
 $virtualMethod=|void|drawPixmap|const QRectF &,const QPixmap &,const QRectF &
 
-//[1]virtual void drawPoints ( const QPointF * points, int pointCount )
-//[2]virtual void drawPoints ( const QPoint * points, int pointCount )
+/*
+[1]virtual void drawPoints ( const QPointF * points, int pointCount )
+[2]virtual void drawPoints ( const QPoint * points, int pointCount )
+*/
 
 HB_FUNC_STATIC( QPAINTENGINE_DRAWPOINTS )
 {
 }
 $addMethod=drawPoints
 
-//[1]virtual void drawPolygon ( const QPointF * points, int pointCount, PolygonDrawMode mode )
-//[2]virtual void drawPolygon ( const QPoint * points, int pointCount, PolygonDrawMode mode )
+/*
+[1]virtual void drawPolygon ( const QPointF * points, int pointCount, PolygonDrawMode mode )
+[2]virtual void drawPolygon ( const QPoint * points, int pointCount, PolygonDrawMode mode )
+*/
 
 HB_FUNC_STATIC( QPAINTENGINE_DRAWPOLYGON )
 {
 }
 $addMethod=drawPolygon
 
-//[1]virtual void drawRects ( const QRectF * rects, int rectCount )
-//[2]virtual void drawRects ( const QRect * rects, int rectCount )
+/*
+[1]virtual void drawRects ( const QRectF * rects, int rectCount )
+[2]virtual void drawRects ( const QRect * rects, int rectCount )
+*/
 
 HB_FUNC_STATIC( QPAINTENGINE_DRAWRECTS )
 {

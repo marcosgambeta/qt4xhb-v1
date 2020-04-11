@@ -77,8 +77,10 @@ $internalMethod=|QAbstractItemDelegate *|itemDelegate,itemDelegate1|
 $prototype=QAbstractItemDelegate * itemDelegate ( const QModelIndex & index ) const
 $internalMethod=|QAbstractItemDelegate *|itemDelegate,itemDelegate2|const QModelIndex &
 
-//[1]QAbstractItemDelegate * itemDelegate () const
-//[2]QAbstractItemDelegate * itemDelegate ( const QModelIndex & index ) const
+/*
+[1]QAbstractItemDelegate * itemDelegate () const
+[2]QAbstractItemDelegate * itemDelegate ( const QModelIndex & index ) const
+*/
 
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATE )
 {

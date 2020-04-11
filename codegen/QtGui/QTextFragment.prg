@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QTextFragment ( const QTextFragment & other )
 $internalConstructor=|new2|const QTextFragment &
 
-//[1]QTextFragment ()
-//[2]QTextFragment ( const QTextFragment & other )
+/*
+[1]QTextFragment ()
+[2]QTextFragment ( const QTextFragment & other )
+*/
 
 HB_FUNC_STATIC( QTEXTFRAGMENT_NEW )
 {

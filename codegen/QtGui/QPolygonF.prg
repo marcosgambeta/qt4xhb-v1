@@ -43,12 +43,14 @@ $internalConstructor=|new5|const QRectF &
 $prototype=QPolygonF ( const QPolygon & polygon )
 $internalConstructor=|new6|const QPolygon &
 
-//[1]QPolygonF ()
-//[2]QPolygonF ( int size )
-//[3]QPolygonF ( const QPolygonF & polygon )
-//[4]QPolygonF ( const QVector<QPointF> & points )
-//[5]QPolygonF ( const QRectF & rectangle )
-//[6]QPolygonF ( const QPolygon & polygon )
+/*
+[1]QPolygonF ()
+[2]QPolygonF ( int size )
+[3]QPolygonF ( const QPolygonF & polygon )
+[4]QPolygonF ( const QVector<QPointF> & points )
+[5]QPolygonF ( const QRectF & rectangle )
+[6]QPolygonF ( const QPolygon & polygon )
+*/
 
 HB_FUNC_STATIC( QPOLYGONF_NEW )
 {
@@ -111,8 +113,10 @@ $internalMethod=|void|translate,translate1|const QPointF &
 $prototype=void translate ( qreal dx, qreal dy )
 $internalMethod=|void|translate,translate2|qreal,qreal
 
-//[1]void translate ( const QPointF & offset )
-//[2]void translate ( qreal dx, qreal dy )
+/*
+[1]void translate ( const QPointF & offset )
+[2]void translate ( qreal dx, qreal dy )
+*/
 
 HB_FUNC_STATIC( QPOLYGONF_TRANSLATE )
 {
@@ -137,8 +141,10 @@ $internalMethod=|QPolygonF|translated,translated1|const QPointF &
 $prototype=QPolygonF translated ( qreal dx, qreal dy ) const
 $internalMethod=|QPolygonF|translated,translated2|qreal,qreal
 
-//[1]QPolygonF translated ( const QPointF & offset ) const
-//[2]QPolygonF translated ( qreal dx, qreal dy ) const
+/*
+[1]QPolygonF translated ( const QPointF & offset ) const
+[2]QPolygonF translated ( qreal dx, qreal dy ) const
+*/
 
 HB_FUNC_STATIC( QPOLYGONF_TRANSLATED )
 {

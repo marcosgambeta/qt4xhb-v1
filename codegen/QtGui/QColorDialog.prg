@@ -33,8 +33,10 @@ $internalConstructor=|new1|QWidget *=0
 $prototype=QColorDialog ( const QColor & initial, QWidget * parent = 0 )
 $internalConstructor=|new2|const QColor &,QWidget *=0
 
-//[1]QColorDialog ( QWidget * parent = 0 )
-//[2]QColorDialog ( const QColor & initial, QWidget * parent = 0 )
+/*
+[1]QColorDialog ( QWidget * parent = 0 )
+[2]QColorDialog ( const QColor & initial, QWidget * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QCOLORDIALOG_NEW )
 {
@@ -63,8 +65,10 @@ $internalMethod=|void|open,open1|
 $prototype=void open ( QObject * receiver, const char * member )
 $internalMethod=|void|open,open2|QObject *,const char *
 
-//[1]void open ()
-//[2]void open ( QObject * receiver, const char * member )
+/*
+[1]void open ()
+[2]void open ( QObject * receiver, const char * member )
+*/
 
 HB_FUNC_STATIC( QCOLORDIALOG_OPEN )
 {
@@ -116,8 +120,10 @@ $internalStaticMethod=|QColor|getColor,getColor1|const QColor &,QWidget *,const 
 $prototype=static QColor getColor ( const QColor & initial = Qt::white, QWidget * parent = 0 )
 $internalStaticMethod=|QColor|getColor,getColor2|const QColor &=Qt::white,QWidget *=0
 
-//[1]QColor getColor ( const QColor & initial, QWidget * parent, const QString & title, ColorDialogOptions options = 0 )
-//[2]QColor getColor ( const QColor & initial = Qt::white, QWidget * parent = 0 )
+/*
+[1]QColor getColor ( const QColor & initial, QWidget * parent, const QString & title, ColorDialogOptions options = 0 )
+[2]QColor getColor ( const QColor & initial = Qt::white, QWidget * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QCOLORDIALOG_GETCOLOR )
 {

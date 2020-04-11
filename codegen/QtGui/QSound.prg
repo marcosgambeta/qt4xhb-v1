@@ -57,8 +57,10 @@ $internalMethod=|void|play,play1|
 $prototype=static void play ( const QString & filename )
 $internalStaticMethod=|void|play,play2|const QString &
 
-//[1]void play ()
-//[2]void play ( const QString & filename )
+/*
+[1]void play ()
+[2]void play ( const QString & filename )
+*/
 
 HB_FUNC_STATIC( QSOUND_PLAY )
 {

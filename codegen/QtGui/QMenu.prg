@@ -33,8 +33,10 @@ $internalConstructor=|new1|QWidget *=0
 $prototype=QMenu ( const QString & title, QWidget * parent = 0 )
 $internalConstructor=|new2|const QString &,QWidget *=0
 
-//[1]QMenu ( QWidget * parent = 0 )
-//[2]QMenu ( const QString & title, QWidget * parent = 0 )
+/*
+[1]QMenu ( QWidget * parent = 0 )
+[2]QMenu ( const QString & title, QWidget * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QMENU_NEW )
 {
@@ -80,11 +82,13 @@ $internalMethod=|QAction *|addAction,addAction4b|const QIcon &,const QString &,c
 $prototype=void addAction ( QAction * action )
 $internalMethod=|void|addAction,addAction5|QAction *
 
-//[1]QAction * addAction ( const QString & text )
-//[2]QAction * addAction ( const QIcon & icon, const QString & text )
-//[3]QAction * addAction ( const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
-//[4]QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
-//[5]void addAction ( QAction * action )
+/*
+[1]QAction * addAction ( const QString & text )
+[2]QAction * addAction ( const QIcon & icon, const QString & text )
+[3]QAction * addAction ( const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
+[4]QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
+[5]void addAction ( QAction * action )
+*/
 
 HB_FUNC_STATIC( QMENU_ADDACTION )
 {
@@ -132,9 +136,11 @@ $internalMethod=|QMenu *|addMenu,addMenu2|const QString &
 $prototype=QMenu * addMenu ( const QIcon & icon, const QString & title )
 $internalMethod=|QMenu *|addMenu,addMenu3|const QIcon &,const QString &
 
-//[1]QAction * addMenu ( QMenu * menu )
-//[2]QMenu * addMenu ( const QString & title )
-//[3]QMenu * addMenu ( const QIcon & icon, const QString & title )
+/*
+[1]QAction * addMenu ( QMenu * menu )
+[2]QMenu * addMenu ( const QString & title )
+[3]QMenu * addMenu ( const QIcon & icon, const QString & title )
+*/
 
 HB_FUNC_STATIC( QMENU_ADDMENU )
 {
@@ -259,10 +265,12 @@ HB_FUNC_STATIC( QMENU_EXEC4 )
 }
 $addMethod=exec4
 
-//[1]QAction * exec ()
-//[2]QAction * exec ( const QPoint & p, QAction * action = 0 )
-//[3]QAction * exec ( QList<QAction *> actions, const QPoint & pos, QAction * at, QWidget * parent )
-//[4]QAction * exec ( QList<QAction *> actions, const QPoint & pos, QAction * at = 0 )
+/*
+[1]QAction * exec ()
+[2]QAction * exec ( const QPoint & p, QAction * action = 0 )
+[3]QAction * exec ( QList<QAction *> actions, const QPoint & pos, QAction * at, QWidget * parent )
+[4]QAction * exec ( QList<QAction *> actions, const QPoint & pos, QAction * at = 0 )
+*/
 
 HB_FUNC_STATIC( QMENU_EXEC )
 {

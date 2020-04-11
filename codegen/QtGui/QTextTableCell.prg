@@ -33,8 +33,10 @@ $internalConstructor=|new1|
 $prototype=QTextTableCell ( const QTextTableCell & other )
 $internalConstructor=|new2|const QTextTableCell &
 
-//[1]QTextTableCell ()
-//[2]QTextTableCell ( const QTextTableCell & other )
+/*
+[1]QTextTableCell ()
+[2]QTextTableCell ( const QTextTableCell & other )
+*/
 
 HB_FUNC_STATIC( QTEXTTABLECELL_NEW )
 {
