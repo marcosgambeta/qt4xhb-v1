@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QAudioDeviceInfo ( const QAudioDeviceInfo & other )
 $internalConstructor=|new2|const QAudioDeviceInfo &
 
-//[1]QAudioDeviceInfo ()
-//[2]QAudioDeviceInfo ( const QAudioDeviceInfo & other )
+/*
+[1]QAudioDeviceInfo ()
+[2]QAudioDeviceInfo ( const QAudioDeviceInfo & other )
+*/
 
 HB_FUNC_STATIC( QAUDIODEVICEINFO_NEW )
 {

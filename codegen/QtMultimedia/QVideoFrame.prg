@@ -42,11 +42,13 @@ $internalConstructor=|new4|const QImage &
 $prototype=QVideoFrame ( const QVideoFrame & other )
 $internalConstructor=|new5|const QVideoFrame &
 
-//[1]QVideoFrame ()
-//[2]QVideoFrame ( QAbstractVideoBuffer * buffer, const QSize & size, PixelFormat format )
-//[3]QVideoFrame ( int bytes, const QSize & size, int bytesPerLine, PixelFormat format )
-//[4]QVideoFrame ( const QImage & image )
-//[5]QVideoFrame ( const QVideoFrame & other )
+/*
+[1]QVideoFrame ()
+[2]QVideoFrame ( QAbstractVideoBuffer * buffer, const QSize & size, PixelFormat format )
+[3]QVideoFrame ( int bytes, const QSize & size, int bytesPerLine, PixelFormat format )
+[4]QVideoFrame ( const QImage & image )
+[5]QVideoFrame ( const QVideoFrame & other )
+*/
 
 HB_FUNC_STATIC( QVIDEOFRAME_NEW )
 {
@@ -86,8 +88,10 @@ $prototype=uchar * bits ()
 $prototype=const uchar * bits () const
 %% $method=|const uchar *|bits,bits2|
 
-%% //[1]uchar * bits ()
-%% //[2]const uchar * bits () const
+%% /*
+%% [1]uchar * bits ()
+%% [2]const uchar * bits () const
+%% */
 
 %% HB_FUNC_STATIC( QVIDEOFRAME_BITS )
 %% {
