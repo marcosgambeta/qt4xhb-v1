@@ -42,10 +42,12 @@ $internalConstructor=|new3|QSqlDatabase
 $prototype=QSqlQuery ( const QSqlQuery & other )
 $internalConstructor=|new4|const QSqlQuery &
 
-//[1]QSqlQuery ( QSqlResult * result )
-//[2]QSqlQuery ( const QString & query = QString(), QSqlDatabase db = QSqlDatabase() )
-//[3]QSqlQuery ( QSqlDatabase db )
-//[4]QSqlQuery ( const QSqlQuery & other )
+/*
+[1]QSqlQuery ( QSqlResult * result )
+[2]QSqlQuery ( const QString & query = QString(), QSqlDatabase db = QSqlDatabase() )
+[3]QSqlQuery ( QSqlDatabase db )
+[4]QSqlQuery ( const QSqlQuery & other )
+*/
 
 HB_FUNC_STATIC( QSQLQUERY_NEW )
 {
@@ -85,8 +87,10 @@ $internalMethod=|void|bindValue,bindValue1|const QString &,const QVariant &,QSql
 $prototype=void bindValue ( int pos, const QVariant & val, QSql::ParamType paramType = QSql::In )
 $internalMethod=|void|bindValue,bindValue2|int,const QVariant &,QSql::ParamType=QSql::In
 
-//[1]void bindValue ( const QString & placeholder, const QVariant & val, QSql::ParamType paramType = QSql::In )
-//[2]void bindValue ( int pos, const QVariant & val, QSql::ParamType paramType = QSql::In )
+/*
+[1]void bindValue ( const QString & placeholder, const QVariant & val, QSql::ParamType paramType = QSql::In )
+[2]void bindValue ( int pos, const QVariant & val, QSql::ParamType paramType = QSql::In )
+*/
 
 HB_FUNC_STATIC( QSQLQUERY_BINDVALUE )
 {
@@ -110,8 +114,10 @@ $internalMethod=|QVariant|boundValue,boundValue1|const QString &
 $prototype=QVariant boundValue ( int pos ) const
 $internalMethod=|QVariant|boundValue,boundValue2|int
 
-//[1]QVariant boundValue ( const QString & placeholder ) const
-//[2]QVariant boundValue ( int pos ) const
+/*
+[1]QVariant boundValue ( const QString & placeholder ) const
+[2]QVariant boundValue ( int pos ) const
+*/
 
 HB_FUNC_STATIC( QSQLQUERY_BOUNDVALUE )
 {
@@ -141,8 +147,10 @@ $internalMethod=|bool|exec,exec1|const QString &
 $prototype=bool exec ()
 $internalMethod=|bool|exec,exec2|
 
-//[1]bool exec ( const QString & query )
-//[2]bool exec ()
+/*
+[1]bool exec ( const QString & query )
+[2]bool exec ()
+*/
 
 HB_FUNC_STATIC( QSQLQUERY_EXEC )
 {

@@ -31,8 +31,10 @@ $internalConstructor=|new1|const QString &=QString(),const QString &=QString(),Q
 $prototype=QSqlError ( const QSqlError & other )
 $internalConstructor=|new2|const QSqlError &
 
-//[1]QSqlError ( const QString & driverText = QString(), const QString & databaseText = QString(), ErrorType type = NoError, int number = -1 )
-//[2]QSqlError ( const QSqlError & other )
+/*
+[1]QSqlError ( const QString & driverText = QString(), const QString & databaseText = QString(), ErrorType type = NoError, int number = -1 )
+[2]QSqlError ( const QSqlError & other )
+*/
 
 HB_FUNC_STATIC( QSQLERROR_NEW )
 {

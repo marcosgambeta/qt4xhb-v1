@@ -34,8 +34,10 @@ $internalConstructor=|new1|
 $prototype=QSqlRecord ( const QSqlRecord & other )
 $internalConstructor=|new2|const QSqlRecord &
 
-//[1]QSqlRecord ()
-//[2]QSqlRecord ( const QSqlRecord & other )
+/*
+[1]QSqlRecord ()
+[2]QSqlRecord ( const QSqlRecord & other )
+*/
 
 HB_FUNC_STATIC( QSQLRECORD_NEW )
 {
@@ -76,8 +78,10 @@ $internalMethod=|QSqlField|field,field1|int
 $prototype=QSqlField field ( const QString & name ) const
 $internalMethod=|QSqlField|field,field2|const QString &
 
-//[1]QSqlField field ( int index ) const
-//[2]QSqlField field ( const QString & name ) const
+/*
+[1]QSqlField field ( int index ) const
+[2]QSqlField field ( const QString & name ) const
+*/
 
 HB_FUNC_STATIC( QSQLRECORD_FIELD )
 {
@@ -113,8 +117,10 @@ $internalMethod=|bool|isGenerated,isGenerated1|const QString &
 $prototype=bool isGenerated ( int index ) const
 $internalMethod=|bool|isGenerated,isGenerated2|int
 
-//[1]bool isGenerated ( const QString & name ) const
-//[2]bool isGenerated ( int index ) const
+/*
+[1]bool isGenerated ( const QString & name ) const
+[2]bool isGenerated ( int index ) const
+*/
 
 HB_FUNC_STATIC( QSQLRECORD_ISGENERATED )
 {
@@ -138,8 +144,10 @@ $internalMethod=|bool|isNull,isNull1|const QString &
 $prototype=bool isNull ( int index ) const
 $internalMethod=|bool|isNull,isNull2|int
 
-//[1]bool isNull ( const QString & name ) const
-//[2]bool isNull ( int index ) const
+/*
+[1]bool isNull ( const QString & name ) const
+[2]bool isNull ( int index ) const
+*/
 
 HB_FUNC_STATIC( QSQLRECORD_ISNULL )
 {
@@ -169,8 +177,10 @@ $internalMethod=|void|setGenerated,setGenerated1|const QString &,bool
 $prototype=void setGenerated ( int index, bool generated )
 $internalMethod=|void|setGenerated,setGenerated2|int,bool
 
-//[1]void setGenerated ( const QString & name, bool generated )
-//[2]void setGenerated ( int index, bool generated )
+/*
+[1]void setGenerated ( const QString & name, bool generated )
+[2]void setGenerated ( int index, bool generated )
+*/
 
 HB_FUNC_STATIC( QSQLRECORD_SETGENERATED )
 {
@@ -194,8 +204,10 @@ $internalMethod=|void|setNull,setNull1|int
 $prototype=void setNull ( const QString & name )
 $internalMethod=|void|setNull,setNull2|const QString &
 
-//[1]void setNull ( int index )
-//[2]void setNull ( const QString & name )
+/*
+[1]void setNull ( int index )
+[2]void setNull ( const QString & name )
+*/
 
 HB_FUNC_STATIC( QSQLRECORD_SETNULL )
 {
@@ -219,8 +231,10 @@ $internalMethod=|void|setValue,setValue1|int,const QVariant &
 $prototype=void setValue ( const QString & name, const QVariant & val )
 $internalMethod=|void|setValue,setValue2|const QString &,const QVariant &
 
-//[1]void setValue ( int index, const QVariant & val )
-//[2]void setValue ( const QString & name, const QVariant & val )
+/*
+[1]void setValue ( int index, const QVariant & val )
+[2]void setValue ( const QString & name, const QVariant & val )
+*/
 
 HB_FUNC_STATIC( QSQLRECORD_SETVALUE )
 {
@@ -244,8 +258,10 @@ $internalMethod=|QVariant|value,value1|int
 $prototype=QVariant value ( const QString & name ) const
 $internalMethod=|QVariant|value,value2|const QString &
 
-//[1]QVariant value ( int index ) const
-//[2]QVariant value ( const QString & name ) const
+/*
+[1]QVariant value ( int index ) const
+[2]QVariant value ( const QString & name ) const
+*/
 
 HB_FUNC_STATIC( QSQLRECORD_VALUE )
 {
