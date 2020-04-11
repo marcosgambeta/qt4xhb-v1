@@ -134,8 +134,10 @@ $internalVirtualMethod=|void|setContents,setContents1|QIODevice *
 $prototype=virtual void setContents ( const QString & contents ) = 0
 $internalVirtualMethod=|void|setContents,setContents2|const QString &
 
-//[1]virtual void setContents ( QIODevice * device ) = 0
-//[2]virtual void setContents ( const QString & contents ) = 0
+/*
+[1]virtual void setContents ( QIODevice * device ) = 0
+[2]virtual void setContents ( const QString & contents ) = 0
+*/
 
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS )
 {
@@ -174,8 +176,10 @@ $internalStaticMethod=|QDesignerFormWindowInterface *|findFormWindow,findFormWin
 $prototype=static QDesignerFormWindowInterface * findFormWindow ( QObject * object )
 $internalStaticMethod=|QDesignerFormWindowInterface *|findFormWindow,findFormWindow2|QObject *
 
-//[1]QDesignerFormWindowInterface * findFormWindow ( QWidget * widget )
-//[2]QDesignerFormWindowInterface * findFormWindow ( QObject * object )
+/*
+[1]QDesignerFormWindowInterface * findFormWindow ( QWidget * widget )
+[2]QDesignerFormWindowInterface * findFormWindow ( QObject * object )
+*/
 
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW )
 {
