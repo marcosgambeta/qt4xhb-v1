@@ -37,8 +37,10 @@ $internalMethod=|void|addToJavaScriptWindowObject,addToJavaScriptWindowObject1|c
 $prototype=void addToJavaScriptWindowObject ( const QString & name, QObject * object, QScriptEngine::ValueOwnership own )
 $internalMethod=|void|addToJavaScriptWindowObject,addToJavaScriptWindowObject2|const QString &,QObject *,QScriptEngine::ValueOwnership
 
-//[1]void addToJavaScriptWindowObject ( const QString & name, QObject * object )
-//[2]void addToJavaScriptWindowObject ( const QString & name, QObject * object, QScriptEngine::ValueOwnership own )
+/*
+[1]void addToJavaScriptWindowObject ( const QString & name, QObject * object )
+[2]void addToJavaScriptWindowObject ( const QString & name, QObject * object, QScriptEngine::ValueOwnership own )
+*/
 
 HB_FUNC_STATIC( QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT )
 {
@@ -95,8 +97,10 @@ $internalMethod=|void|load,load1|const QUrl &
 $prototype=void load ( const QNetworkRequest & req, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
 $internalMethod=|void|load,load2|const QNetworkRequest &,QNetworkAccessManager::Operation=QNetworkAccessManager::GetOperation,const QByteArray &=QByteArray()
 
-//[1]void load ( const QUrl & url )
-//[2]void load ( const QNetworkRequest & req, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
+/*
+[1]void load ( const QUrl & url )
+[2]void load ( const QNetworkRequest & req, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
+*/
 
 HB_FUNC_STATIC( QWEBFRAME_LOAD )
 {
@@ -132,9 +136,11 @@ $internalMethod=|void|render,render2|QPainter *,const QRegion &
 $prototype=void render ( QPainter * painter, RenderLayer layer, const QRegion & clip = QRegion() )
 $internalMethod=|void|render,render3|QPainter *,QWebFrame::RenderLayer,const QRegion &=QRegion()
 
-//[1]void render ( QPainter * painter )
-//[2]void render ( QPainter * painter, const QRegion & clip )
-//[3]void render ( QPainter * painter, RenderLayer layer, const QRegion & clip = QRegion() )
+/*
+[1]void render ( QPainter * painter )
+[2]void render ( QPainter * painter, const QRegion & clip )
+[3]void render ( QPainter * painter, RenderLayer layer, const QRegion & clip = QRegion() )
+*/
 
 HB_FUNC_STATIC( QWEBFRAME_RENDER )
 {
