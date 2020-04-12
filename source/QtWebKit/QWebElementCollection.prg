@@ -81,9 +81,11 @@ void QWebElementCollection_new3()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QWebElementCollection ()
-//[2]QWebElementCollection ( const QWebElement & contextElement, const QString & query )
-//[3]QWebElementCollection ( const QWebElementCollection & other )
+/*
+[1]QWebElementCollection ()
+[2]QWebElementCollection ( const QWebElement & contextElement, const QString & query )
+[3]QWebElementCollection ( const QWebElementCollection & other )
+*/
 
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW )
 {
