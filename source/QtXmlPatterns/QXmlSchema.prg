@@ -84,8 +84,10 @@ void QXmlSchema_new2()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QXmlSchema ()
-//[2]QXmlSchema ( const QXmlSchema & other )
+/*
+[1]QXmlSchema ()
+[2]QXmlSchema ( const QXmlSchema & other )
+*/
 
 HB_FUNC_STATIC( QXMLSCHEMA_NEW )
 {
@@ -208,9 +210,11 @@ void QXmlSchema_load3()
   }
 }
 
-//[1]bool load ( const QUrl & source )
-//[2]bool load ( QIODevice * source, const QUrl & documentUri = QUrl() )
-//[3]bool load ( const QByteArray & data, const QUrl & documentUri = QUrl() )
+/*
+[1]bool load ( const QUrl & source )
+[2]bool load ( QIODevice * source, const QUrl & documentUri = QUrl() )
+[3]bool load ( const QByteArray & data, const QUrl & documentUri = QUrl() )
+*/
 
 HB_FUNC_STATIC( QXMLSCHEMA_LOAD )
 {
