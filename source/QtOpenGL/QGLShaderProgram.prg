@@ -135,8 +135,10 @@ void QGLShaderProgram_new2()
   Qt4xHb::returnNewObject( o, false );
 }
 
-//[1]QGLShaderProgram ( QObject * parent = 0 )
-//[2]QGLShaderProgram ( const QGLContext * context, QObject * parent = 0 )
+/*
+[1]QGLShaderProgram ( QObject * parent = 0 )
+[2]QGLShaderProgram ( const QGLContext * context, QObject * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QGLSHADERPROGRAM_NEW )
 {
@@ -269,9 +271,11 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE3 )
   }
 }
 
-//[1]bool addShaderFromSourceCode ( QGLShader::ShaderType type, const char * source )
-//[2]bool addShaderFromSourceCode ( QGLShader::ShaderType type, const QByteArray & source )
-//[3]bool addShaderFromSourceCode ( QGLShader::ShaderType type, const QString & source )
+/*
+[1]bool addShaderFromSourceCode ( QGLShader::ShaderType type, const char * source )
+[2]bool addShaderFromSourceCode ( QGLShader::ShaderType type, const QByteArray & source )
+[3]bool addShaderFromSourceCode ( QGLShader::ShaderType type, const QString & source )
+*/
 
 HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE )
 {
@@ -389,9 +393,11 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_ATTRIBUTELOCATION3 )
   }
 }
 
-//[1]int attributeLocation ( const char * name ) const
-//[2]int attributeLocation ( const QByteArray & name ) const
-//[3]int attributeLocation ( const QString & name ) const
+/*
+[1]int attributeLocation ( const char * name ) const
+[2]int attributeLocation ( const QByteArray & name ) const
+[3]int attributeLocation ( const QString & name ) const
+*/
 
 HB_FUNC_STATIC( QGLSHADERPROGRAM_ATTRIBUTELOCATION )
 {
@@ -515,9 +521,11 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_BINDATTRIBUTELOCATION3 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void bindAttributeLocation ( const char * name, int location )
-//[2]void bindAttributeLocation ( const QByteArray & name, int location )
-//[3]void bindAttributeLocation ( const QString & name, int location )
+/*
+[1]void bindAttributeLocation ( const char * name, int location )
+[2]void bindAttributeLocation ( const QByteArray & name, int location )
+[3]void bindAttributeLocation ( const QString & name, int location )
+*/
 
 HB_FUNC_STATIC( QGLSHADERPROGRAM_BINDATTRIBUTELOCATION )
 {
@@ -569,8 +577,10 @@ void QGLShaderProgram_disableAttributeArray2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void disableAttributeArray ( int location )
-//[2]void disableAttributeArray ( const char * name )
+/*
+[1]void disableAttributeArray ( int location )
+[2]void disableAttributeArray ( const char * name )
+*/
 
 HB_FUNC_STATIC( QGLSHADERPROGRAM_DISABLEATTRIBUTEARRAY )
 {
@@ -618,8 +628,10 @@ void QGLShaderProgram_enableAttributeArray2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void enableAttributeArray ( int location )
-//[2]void enableAttributeArray ( const char * name )
+/*
+[1]void enableAttributeArray ( int location )
+[2]void enableAttributeArray ( const char * name )
+*/
 
 HB_FUNC_STATIC( QGLSHADERPROGRAM_ENABLEATTRIBUTEARRAY )
 {
@@ -907,16 +919,18 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_REMOVESHADER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[01]void setAttributeArray ( int location, const GLfloat * values, int tupleSize, int stride = 0 )
-//[02]void setAttributeArray ( int location, const QVector2D * values, int stride = 0 )
-//[03]void setAttributeArray ( int location, const QVector3D * values, int stride = 0 )
-//[04]void setAttributeArray ( int location, const QVector4D * values, int stride = 0 )
-//[05]void setAttributeArray ( int location, GLenum type, const void * values, int tupleSize, int stride = 0 )
-//[06]void setAttributeArray ( const char * name, const GLfloat * values, int tupleSize, int stride = 0 )
-//[07]void setAttributeArray ( const char * name, const QVector2D * values, int stride = 0 )
-//[08]void setAttributeArray ( const char * name, const QVector3D * values, int stride = 0 )
-//[09]void setAttributeArray ( const char * name, const QVector4D * values, int stride = 0 )
-//[10]void setAttributeArray ( const char * name, GLenum type, const void * values, int tupleSize, int stride = 0 )
+/*
+[01]void setAttributeArray ( int location, const GLfloat * values, int tupleSize, int stride = 0 )
+[02]void setAttributeArray ( int location, const QVector2D * values, int stride = 0 )
+[03]void setAttributeArray ( int location, const QVector3D * values, int stride = 0 )
+[04]void setAttributeArray ( int location, const QVector4D * values, int stride = 0 )
+[05]void setAttributeArray ( int location, GLenum type, const void * values, int tupleSize, int stride = 0 )
+[06]void setAttributeArray ( const char * name, const GLfloat * values, int tupleSize, int stride = 0 )
+[07]void setAttributeArray ( const char * name, const QVector2D * values, int stride = 0 )
+[08]void setAttributeArray ( const char * name, const QVector3D * values, int stride = 0 )
+[09]void setAttributeArray ( const char * name, const QVector4D * values, int stride = 0 )
+[10]void setAttributeArray ( const char * name, GLenum type, const void * values, int tupleSize, int stride = 0 )
+*/
 
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEARRAY )
 {
@@ -952,8 +966,10 @@ void QGLShaderProgram_setAttributeBuffer2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setAttributeBuffer ( int location, GLenum type, int offset, int tupleSize, int stride = 0 )
-//[2]void setAttributeBuffer ( const char * name, GLenum type, int offset, int tupleSize, int stride = 0 )
+/*
+[1]void setAttributeBuffer ( int location, GLenum type, int offset, int tupleSize, int stride = 0 )
+[2]void setAttributeBuffer ( const char * name, GLenum type, int offset, int tupleSize, int stride = 0 )
+*/
 
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEBUFFER )
 {
@@ -1231,24 +1247,26 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE17 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[01]void setAttributeValue ( int location, GLfloat value )
-//[02]void setAttributeValue ( int location, GLfloat x, GLfloat y )
-//[03]void setAttributeValue ( int location, GLfloat x, GLfloat y, GLfloat z )
-//[04]void setAttributeValue ( int location, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
-//[05]void setAttributeValue ( int location, const QVector2D & value )
-//[06]void setAttributeValue ( int location, const QVector3D & value )
-//[07]void setAttributeValue ( int location, const QVector4D & value )
-//[08]void setAttributeValue ( int location, const QColor & value )
-//[09]void setAttributeValue ( int location, const GLfloat * values, int columns, int rows )
-//[10]void setAttributeValue ( const char * name, GLfloat value )
-//[11]void setAttributeValue ( const char * name, GLfloat x, GLfloat y )
-//[12]void setAttributeValue ( const char * name, GLfloat x, GLfloat y, GLfloat z )
-//[13]void setAttributeValue ( const char * name, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
-//[14]void setAttributeValue ( const char * name, const QVector2D & value )
-//[15]void setAttributeValue ( const char * name, const QVector3D & value )
-//[16]void setAttributeValue ( const char * name, const QVector4D & value )
-//[17]void setAttributeValue ( const char * name, const QColor & value )
-//[18]void setAttributeValue ( const char * name, const GLfloat * values, int columns, int rows )
+/*
+[01]void setAttributeValue ( int location, GLfloat value )
+[02]void setAttributeValue ( int location, GLfloat x, GLfloat y )
+[03]void setAttributeValue ( int location, GLfloat x, GLfloat y, GLfloat z )
+[04]void setAttributeValue ( int location, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
+[05]void setAttributeValue ( int location, const QVector2D & value )
+[06]void setAttributeValue ( int location, const QVector3D & value )
+[07]void setAttributeValue ( int location, const QVector4D & value )
+[08]void setAttributeValue ( int location, const QColor & value )
+[09]void setAttributeValue ( int location, const GLfloat * values, int columns, int rows )
+[10]void setAttributeValue ( const char * name, GLfloat value )
+[11]void setAttributeValue ( const char * name, GLfloat x, GLfloat y )
+[12]void setAttributeValue ( const char * name, GLfloat x, GLfloat y, GLfloat z )
+[13]void setAttributeValue ( const char * name, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
+[14]void setAttributeValue ( const char * name, const QVector2D & value )
+[15]void setAttributeValue ( const char * name, const QVector3D & value )
+[16]void setAttributeValue ( const char * name, const QVector4D & value )
+[17]void setAttributeValue ( const char * name, const QColor & value )
+[18]void setAttributeValue ( const char * name, const GLfloat * values, int columns, int rows )
+*/
 
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE )
 {
@@ -2000,60 +2018,62 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE54 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[01]void setUniformValue ( int location, GLfloat value )
-//[02]void setUniformValue ( const char * name, const QPointF & point )
-//[03]void setUniformValue ( const char * name, const QSize & size )
-//[04]void setUniformValue ( const char * name, const QSizeF & size )
-//[05]void setUniformValue ( const char * name, const QMatrix2x2 & value )
-//[06]void setUniformValue ( const char * name, const QMatrix2x3 & value )
-//[07]void setUniformValue ( const char * name, const QMatrix2x4 & value )
-//[08]void setUniformValue ( const char * name, const QMatrix3x2 & value )
-//[09]void setUniformValue ( const char * name, const QMatrix3x3 & value )
-//[10]void setUniformValue ( const char * name, const QMatrix3x4 & value )
-//[11]void setUniformValue ( const char * name, const QMatrix4x2 & value )
-//[12]void setUniformValue ( const char * name, const QMatrix4x3 & value )
-//[13]void setUniformValue ( const char * name, const QMatrix4x4 & value )
-//[14]void setUniformValue ( int location, const GLfloat[2][2] value )
-//[15]void setUniformValue ( int location, const GLfloat[3][3] value )
-//[16]void setUniformValue ( int location, const GLfloat[4][4] value )
-//[17]void setUniformValue ( const char * name, const GLfloat[2][2] value )
-//[18]void setUniformValue ( const char * name, const GLfloat[3][3] value )
-//[19]void setUniformValue ( const char * name, const GLfloat[4][4] value )
-//[20]void setUniformValue ( const char * name, const QTransform & value )
-//[21]void setUniformValue ( int location, GLint value )
-//[22]void setUniformValue ( int location, GLuint value )
-//[23]void setUniformValue ( int location, GLfloat x, GLfloat y )
-//[24]void setUniformValue ( int location, GLfloat x, GLfloat y, GLfloat z )
-//[25]void setUniformValue ( int location, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
-//[26]void setUniformValue ( int location, const QVector2D & value )
-//[27]void setUniformValue ( int location, const QVector3D & value )
-//[28]void setUniformValue ( int location, const QVector4D & value )
-//[29]void setUniformValue ( int location, const QColor & color )
-//[30]void setUniformValue ( int location, const QPoint & point )
-//[31]void setUniformValue ( int location, const QPointF & point )
-//[32]void setUniformValue ( int location, const QSize & size )
-//[33]void setUniformValue ( int location, const QSizeF & size )
-//[34]void setUniformValue ( int location, const QMatrix2x2 & value )
-//[35]void setUniformValue ( int location, const QMatrix2x3 & value )
-//[36]void setUniformValue ( int location, const QMatrix2x4 & value )
-//[37]void setUniformValue ( int location, const QMatrix3x2 & value )
-//[38]void setUniformValue ( int location, const QMatrix3x3 & value )
-//[39]void setUniformValue ( int location, const QMatrix3x4 & value )
-//[40]void setUniformValue ( int location, const QMatrix4x2 & value )
-//[41]void setUniformValue ( int location, const QMatrix4x3 & value )
-//[42]void setUniformValue ( int location, const QMatrix4x4 & value )
-//[43]void setUniformValue ( int location, const QTransform & value )
-//[44]void setUniformValue ( const char * name, GLfloat value )
-//[45]void setUniformValue ( const char * name, GLint value )
-//[46]void setUniformValue ( const char * name, GLuint value )
-//[47]void setUniformValue ( const char * name, GLfloat x, GLfloat y )
-//[48]void setUniformValue ( const char * name, GLfloat x, GLfloat y, GLfloat z )
-//[49]void setUniformValue ( const char * name, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
-//[50]void setUniformValue ( const char * name, const QVector2D & value )
-//[51]void setUniformValue ( const char * name, const QVector3D & value )
-//[52]void setUniformValue ( const char * name, const QVector4D & value )
-//[53]void setUniformValue ( const char * name, const QColor & color )
-//[54]void setUniformValue ( const char * name, const QPoint & point )
+/*
+[01]void setUniformValue ( int location, GLfloat value )
+[02]void setUniformValue ( const char * name, const QPointF & point )
+[03]void setUniformValue ( const char * name, const QSize & size )
+[04]void setUniformValue ( const char * name, const QSizeF & size )
+[05]void setUniformValue ( const char * name, const QMatrix2x2 & value )
+[06]void setUniformValue ( const char * name, const QMatrix2x3 & value )
+[07]void setUniformValue ( const char * name, const QMatrix2x4 & value )
+[08]void setUniformValue ( const char * name, const QMatrix3x2 & value )
+[09]void setUniformValue ( const char * name, const QMatrix3x3 & value )
+[10]void setUniformValue ( const char * name, const QMatrix3x4 & value )
+[11]void setUniformValue ( const char * name, const QMatrix4x2 & value )
+[12]void setUniformValue ( const char * name, const QMatrix4x3 & value )
+[13]void setUniformValue ( const char * name, const QMatrix4x4 & value )
+[14]void setUniformValue ( int location, const GLfloat[2][2] value )
+[15]void setUniformValue ( int location, const GLfloat[3][3] value )
+[16]void setUniformValue ( int location, const GLfloat[4][4] value )
+[17]void setUniformValue ( const char * name, const GLfloat[2][2] value )
+[18]void setUniformValue ( const char * name, const GLfloat[3][3] value )
+[19]void setUniformValue ( const char * name, const GLfloat[4][4] value )
+[20]void setUniformValue ( const char * name, const QTransform & value )
+[21]void setUniformValue ( int location, GLint value )
+[22]void setUniformValue ( int location, GLuint value )
+[23]void setUniformValue ( int location, GLfloat x, GLfloat y )
+[24]void setUniformValue ( int location, GLfloat x, GLfloat y, GLfloat z )
+[25]void setUniformValue ( int location, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
+[26]void setUniformValue ( int location, const QVector2D & value )
+[27]void setUniformValue ( int location, const QVector3D & value )
+[28]void setUniformValue ( int location, const QVector4D & value )
+[29]void setUniformValue ( int location, const QColor & color )
+[30]void setUniformValue ( int location, const QPoint & point )
+[31]void setUniformValue ( int location, const QPointF & point )
+[32]void setUniformValue ( int location, const QSize & size )
+[33]void setUniformValue ( int location, const QSizeF & size )
+[34]void setUniformValue ( int location, const QMatrix2x2 & value )
+[35]void setUniformValue ( int location, const QMatrix2x3 & value )
+[36]void setUniformValue ( int location, const QMatrix2x4 & value )
+[37]void setUniformValue ( int location, const QMatrix3x2 & value )
+[38]void setUniformValue ( int location, const QMatrix3x3 & value )
+[39]void setUniformValue ( int location, const QMatrix3x4 & value )
+[40]void setUniformValue ( int location, const QMatrix4x2 & value )
+[41]void setUniformValue ( int location, const QMatrix4x3 & value )
+[42]void setUniformValue ( int location, const QMatrix4x4 & value )
+[43]void setUniformValue ( int location, const QTransform & value )
+[44]void setUniformValue ( const char * name, GLfloat value )
+[45]void setUniformValue ( const char * name, GLint value )
+[46]void setUniformValue ( const char * name, GLuint value )
+[47]void setUniformValue ( const char * name, GLfloat x, GLfloat y )
+[48]void setUniformValue ( const char * name, GLfloat x, GLfloat y, GLfloat z )
+[49]void setUniformValue ( const char * name, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
+[50]void setUniformValue ( const char * name, const QVector2D & value )
+[51]void setUniformValue ( const char * name, const QVector3D & value )
+[52]void setUniformValue ( const char * name, const QVector4D & value )
+[53]void setUniformValue ( const char * name, const QColor & color )
+[54]void setUniformValue ( const char * name, const QPoint & point )
+*/
 
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE )
 {
@@ -2071,36 +2091,38 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE )
   }
 }
 
-//[01]void setUniformValueArray ( int location, const GLfloat * values, int count, int tupleSize )
-//[02]void setUniformValueArray ( int location, const GLint * values, int count )
-//[03]void setUniformValueArray ( int location, const GLuint * values, int count )
-//[04]void setUniformValueArray ( int location, const QVector2D * values, int count )
-//[05]void setUniformValueArray ( int location, const QVector3D * values, int count )
-//[06]void setUniformValueArray ( int location, const QVector4D * values, int count )
-//[07]void setUniformValueArray ( int location, const QMatrix2x2 * values, int count )
-//[08]void setUniformValueArray ( int location, const QMatrix2x3 * values, int count )
-//[09]void setUniformValueArray ( int location, const QMatrix2x4 * values, int count )
-//[10]void setUniformValueArray ( int location, const QMatrix3x2 * values, int count )
-//[11]void setUniformValueArray ( int location, const QMatrix3x3 * values, int count )
-//[12]void setUniformValueArray ( int location, const QMatrix3x4 * values, int count )
-//[13]void setUniformValueArray ( int location, const QMatrix4x2 * values, int count )
-//[14]void setUniformValueArray ( int location, const QMatrix4x3 * values, int count )
-//[15]void setUniformValueArray ( int location, const QMatrix4x4 * values, int count )
-//[16]void setUniformValueArray ( const char * name, const GLint * values, int count )
-//[17]void setUniformValueArray ( const char * name, const GLuint * values, int count )
-//[18]void setUniformValueArray ( const char * name, const GLfloat * values, int count, int tupleSize )
-//[19]void setUniformValueArray ( const char * name, const QVector2D * values, int count )
-//[20]void setUniformValueArray ( const char * name, const QVector3D * values, int count )
-//[21]void setUniformValueArray ( const char * name, const QVector4D * values, int count )
-//[22]void setUniformValueArray ( const char * name, const QMatrix2x2 * values, int count )
-//[23]void setUniformValueArray ( const char * name, const QMatrix2x3 * values, int count )
-//[24]void setUniformValueArray ( const char * name, const QMatrix2x4 * values, int count )
-//[25]void setUniformValueArray ( const char * name, const QMatrix3x2 * values, int count )
-//[26]void setUniformValueArray ( const char * name, const QMatrix3x3 * values, int count )
-//[27]void setUniformValueArray ( const char * name, const QMatrix3x4 * values, int count )
-//[28]void setUniformValueArray ( const char * name, const QMatrix4x2 * values, int count )
-//[29]void setUniformValueArray ( const char * name, const QMatrix4x3 * values, int count )
-//[30]void setUniformValueArray ( const char * name, const QMatrix4x4 * values, int count )
+/*
+[01]void setUniformValueArray ( int location, const GLfloat * values, int count, int tupleSize )
+[02]void setUniformValueArray ( int location, const GLint * values, int count )
+[03]void setUniformValueArray ( int location, const GLuint * values, int count )
+[04]void setUniformValueArray ( int location, const QVector2D * values, int count )
+[05]void setUniformValueArray ( int location, const QVector3D * values, int count )
+[06]void setUniformValueArray ( int location, const QVector4D * values, int count )
+[07]void setUniformValueArray ( int location, const QMatrix2x2 * values, int count )
+[08]void setUniformValueArray ( int location, const QMatrix2x3 * values, int count )
+[09]void setUniformValueArray ( int location, const QMatrix2x4 * values, int count )
+[10]void setUniformValueArray ( int location, const QMatrix3x2 * values, int count )
+[11]void setUniformValueArray ( int location, const QMatrix3x3 * values, int count )
+[12]void setUniformValueArray ( int location, const QMatrix3x4 * values, int count )
+[13]void setUniformValueArray ( int location, const QMatrix4x2 * values, int count )
+[14]void setUniformValueArray ( int location, const QMatrix4x3 * values, int count )
+[15]void setUniformValueArray ( int location, const QMatrix4x4 * values, int count )
+[16]void setUniformValueArray ( const char * name, const GLint * values, int count )
+[17]void setUniformValueArray ( const char * name, const GLuint * values, int count )
+[18]void setUniformValueArray ( const char * name, const GLfloat * values, int count, int tupleSize )
+[19]void setUniformValueArray ( const char * name, const QVector2D * values, int count )
+[20]void setUniformValueArray ( const char * name, const QVector3D * values, int count )
+[21]void setUniformValueArray ( const char * name, const QVector4D * values, int count )
+[22]void setUniformValueArray ( const char * name, const QMatrix2x2 * values, int count )
+[23]void setUniformValueArray ( const char * name, const QMatrix2x3 * values, int count )
+[24]void setUniformValueArray ( const char * name, const QMatrix2x4 * values, int count )
+[25]void setUniformValueArray ( const char * name, const QMatrix3x2 * values, int count )
+[26]void setUniformValueArray ( const char * name, const QMatrix3x3 * values, int count )
+[27]void setUniformValueArray ( const char * name, const QMatrix3x4 * values, int count )
+[28]void setUniformValueArray ( const char * name, const QMatrix4x2 * values, int count )
+[29]void setUniformValueArray ( const char * name, const QMatrix4x3 * values, int count )
+[30]void setUniformValueArray ( const char * name, const QMatrix4x4 * values, int count )
+*/
 
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUEARRAY )
 {
@@ -2226,9 +2248,11 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_UNIFORMLOCATION3 )
   }
 }
 
-//[1]int uniformLocation ( const char * name ) const
-//[2]int uniformLocation ( const QByteArray & name ) const
-//[3]int uniformLocation ( const QString & name ) const
+/*
+[1]int uniformLocation ( const char * name ) const
+[2]int uniformLocation ( const QByteArray & name ) const
+[3]int uniformLocation ( const QString & name ) const
+*/
 
 HB_FUNC_STATIC( QGLSHADERPROGRAM_UNIFORMLOCATION )
 {

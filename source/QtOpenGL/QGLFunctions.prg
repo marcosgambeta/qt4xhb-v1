@@ -123,8 +123,10 @@ void QGLFunctions_new2()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QGLFunctions ()
-//[2]QGLFunctions ( const QGLContext * context )
+/*
+[1]QGLFunctions ()
+[2]QGLFunctions ( const QGLContext * context )
+*/
 
 HB_FUNC_STATIC( QGLFUNCTIONS_NEW )
 {
