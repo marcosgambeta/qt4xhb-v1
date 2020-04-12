@@ -75,8 +75,10 @@ void QSqlError_new2()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QSqlError ( const QString & driverText = QString(), const QString & databaseText = QString(), ErrorType type = NoError, int number = -1 )
-//[2]QSqlError ( const QSqlError & other )
+/*
+[1]QSqlError ( const QString & driverText = QString(), const QString & databaseText = QString(), ErrorType type = NoError, int number = -1 )
+[2]QSqlError ( const QSqlError & other )
+*/
 
 HB_FUNC_STATIC( QSQLERROR_NEW )
 {
