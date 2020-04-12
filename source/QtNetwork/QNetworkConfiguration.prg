@@ -76,8 +76,10 @@ void QNetworkConfiguration_new2()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QNetworkConfiguration ()
-//[2]QNetworkConfiguration ( const QNetworkConfiguration & other )
+/*
+[1]QNetworkConfiguration ()
+[2]QNetworkConfiguration ( const QNetworkConfiguration & other )
+*/
 
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW )
 {

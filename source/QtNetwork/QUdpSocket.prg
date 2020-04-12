@@ -131,10 +131,12 @@ void QUdpSocket_bind4()
   }
 }
 
-//[1]bool bind ( const QHostAddress & address, quint16 port )
-//[2]bool bind ( const QHostAddress & address, quint16 port, BindMode mode )
-//[3]bool bind ( quint16 port = 0 )
-//[4]bool bind ( quint16 port, BindMode mode )
+/*
+[1]bool bind ( const QHostAddress & address, quint16 port )
+[2]bool bind ( const QHostAddress & address, quint16 port, BindMode mode )
+[3]bool bind ( quint16 port = 0 )
+[4]bool bind ( quint16 port, BindMode mode )
+*/
 
 HB_FUNC_STATIC( QUDPSOCKET_BIND )
 {
@@ -238,8 +240,10 @@ void QUdpSocket_writeDatagram2()
   }
 }
 
-//[1]qint64 writeDatagram ( const char * data, qint64 size, const QHostAddress & address, quint16 port )
-//[2]qint64 writeDatagram ( const QByteArray & datagram, const QHostAddress & host, quint16 port )
+/*
+[1]qint64 writeDatagram ( const char * data, qint64 size, const QHostAddress & address, quint16 port )
+[2]qint64 writeDatagram ( const QByteArray & datagram, const QHostAddress & host, quint16 port )
+*/
 
 HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM )
 {

@@ -88,8 +88,10 @@ void QNetworkRequest_new2()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QNetworkRequest ( const QUrl & url = QUrl() )
-//[2]QNetworkRequest ( const QNetworkRequest & other )
+/*
+[1]QNetworkRequest ( const QUrl & url = QUrl() )
+[2]QNetworkRequest ( const QNetworkRequest & other )
+*/
 
 HB_FUNC_STATIC( QNETWORKREQUEST_NEW )
 {

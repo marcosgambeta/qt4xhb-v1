@@ -78,8 +78,10 @@ void QNetworkCacheMetaData_new2()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QNetworkCacheMetaData ()
-//[2]QNetworkCacheMetaData ( const QNetworkCacheMetaData & other )
+/*
+[1]QNetworkCacheMetaData ()
+[2]QNetworkCacheMetaData ( const QNetworkCacheMetaData & other )
+*/
 
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_NEW )
 {

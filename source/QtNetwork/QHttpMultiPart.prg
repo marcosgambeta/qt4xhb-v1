@@ -63,8 +63,10 @@ void QHttpMultiPart_new2()
   Qt4xHb::returnNewObject( o, false );
 }
 
-//[1]QHttpMultiPart ( QObject * parent = 0 )
-//[2]QHttpMultiPart ( ContentType contentType, QObject * parent = 0 )
+/*
+[1]QHttpMultiPart ( QObject * parent = 0 )
+[2]QHttpMultiPart ( ContentType contentType, QObject * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QHTTPMULTIPART_NEW )
 {

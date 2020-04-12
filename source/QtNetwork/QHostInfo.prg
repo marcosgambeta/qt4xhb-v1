@@ -81,8 +81,10 @@ void QHostInfo_new2()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QHostInfo ( int id = -1 )
-//[2]QHostInfo ( const QHostInfo & other )
+/*
+[1]QHostInfo ( int id = -1 )
+[2]QHostInfo ( const QHostInfo & other )
+*/
 
 HB_FUNC_STATIC( QHOSTINFO_NEW )
 {

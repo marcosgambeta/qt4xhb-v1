@@ -86,8 +86,10 @@ void QNetworkCookie_new2()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QNetworkCookie ( const QByteArray & name = QByteArray(), const QByteArray & value = QByteArray() )
-//[2]QNetworkCookie ( const QNetworkCookie & other )
+/*
+[1]QNetworkCookie ( const QByteArray & name = QByteArray(), const QByteArray & value = QByteArray() )
+[2]QNetworkCookie ( const QNetworkCookie & other )
+*/
 
 HB_FUNC_STATIC( QNETWORKCOOKIE_NEW )
 {

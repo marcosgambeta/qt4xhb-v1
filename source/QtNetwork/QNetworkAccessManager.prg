@@ -339,8 +339,10 @@ void QNetworkAccessManager_post2()
   }
 }
 
-//[1]QNetworkReply * post ( const QNetworkRequest & request, QIODevice * data )
-//[2]QNetworkReply * post ( const QNetworkRequest & request, const QByteArray & data )
+/*
+[1]QNetworkReply * post ( const QNetworkRequest & request, QIODevice * data )
+[2]QNetworkReply * post ( const QNetworkRequest & request, const QByteArray & data )
+*/
 
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_POST )
 {
@@ -436,8 +438,10 @@ void QNetworkAccessManager_put2()
   }
 }
 
-//[1]QNetworkReply * put ( const QNetworkRequest & request, QIODevice * data )
-//[2]QNetworkReply * put ( const QNetworkRequest & request, const QByteArray & data )
+/*
+[1]QNetworkReply * put ( const QNetworkRequest & request, QIODevice * data )
+[2]QNetworkReply * put ( const QNetworkRequest & request, const QByteArray & data )
+*/
 
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PUT )
 {

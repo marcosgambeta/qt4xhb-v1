@@ -234,8 +234,10 @@ void QSslSocket_addCaCertificates2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]bool addCaCertificates ( const QString & path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString )
-//[2]void addCaCertificates ( const QList<QSslCertificate> & certificates )
+/*
+[1]bool addCaCertificates ( const QString & path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString )
+[2]void addCaCertificates ( const QList<QSslCertificate> & certificates )
+*/
 
 HB_FUNC_STATIC( QSSLSOCKET_ADDCACERTIFICATES )
 {
@@ -387,8 +389,10 @@ void QSslSocket_connectToHostEncrypted2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void connectToHostEncrypted ( const QString & hostName, quint16 port, OpenMode mode = ReadWrite )
-//[2]void connectToHostEncrypted ( const QString & hostName, quint16 port, const QString & sslPeerName, OpenMode mode = ReadWrite )
+/*
+[1]void connectToHostEncrypted ( const QString & hostName, quint16 port, OpenMode mode = ReadWrite )
+[2]void connectToHostEncrypted ( const QString & hostName, quint16 port, const QString & sslPeerName, OpenMode mode = ReadWrite )
+*/
 
 HB_FUNC_STATIC( QSSLSOCKET_CONNECTTOHOSTENCRYPTED )
 {
@@ -516,8 +520,10 @@ void QSslSocket_ignoreSslErrors2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void ignoreSslErrors ( const QList<QSslError> & errors )
-//[2]void ignoreSslErrors ()
+/*
+[1]void ignoreSslErrors ( const QList<QSslError> & errors )
+[2]void ignoreSslErrors ()
+*/
 
 HB_FUNC_STATIC( QSSLSOCKET_IGNORESSLERRORS )
 {
@@ -879,8 +885,10 @@ void QSslSocket_setCiphers2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setCiphers ( const QList<QSslCipher> & ciphers )
-//[2]void setCiphers ( const QString & ciphers )
+/*
+[1]void setCiphers ( const QList<QSslCipher> & ciphers )
+[2]void setCiphers ( const QString & ciphers )
+*/
 
 HB_FUNC_STATIC( QSSLSOCKET_SETCIPHERS )
 {
@@ -928,8 +936,10 @@ void QSslSocket_setLocalCertificate2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setLocalCertificate ( const QSslCertificate & certificate )
-//[2]void setLocalCertificate ( const QString & path, QSsl::EncodingFormat format = QSsl::Pem )
+/*
+[1]void setLocalCertificate ( const QSslCertificate & certificate )
+[2]void setLocalCertificate ( const QString & path, QSsl::EncodingFormat format = QSsl::Pem )
+*/
 
 HB_FUNC_STATIC( QSSLSOCKET_SETLOCALCERTIFICATE )
 {
@@ -1029,8 +1039,10 @@ void QSslSocket_setPrivateKey2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setPrivateKey ( const QSslKey & key )
-//[2]void setPrivateKey ( const QString & fileName, QSsl::KeyAlgorithm algorithm = QSsl::Rsa, QSsl::EncodingFormat format = QSsl::Pem, const QByteArray & passPhrase = QByteArray() )
+/*
+[1]void setPrivateKey ( const QSslKey & key )
+[2]void setPrivateKey ( const QString & fileName, QSsl::KeyAlgorithm algorithm = QSsl::Rsa, QSsl::EncodingFormat format = QSsl::Pem, const QByteArray & passPhrase = QByteArray() )
+*/
 
 HB_FUNC_STATIC( QSSLSOCKET_SETPRIVATEKEY )
 {
@@ -1625,8 +1637,10 @@ void QSslSocket_addDefaultCaCertificates2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]bool addDefaultCaCertificates ( const QString & path, QSsl::EncodingFormat encoding = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString )
-//[2]void addDefaultCaCertificates ( const QList<QSslCertificate> & certificates )
+/*
+[1]bool addDefaultCaCertificates ( const QString & path, QSsl::EncodingFormat encoding = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString )
+[2]void addDefaultCaCertificates ( const QList<QSslCertificate> & certificates )
+*/
 
 HB_FUNC_STATIC( QSSLSOCKET_ADDDEFAULTCACERTIFICATES )
 {
