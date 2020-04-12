@@ -33,9 +33,14 @@ CLASS QScriptValue
    METHOD new6
    METHOD new8
    METHOD new10
+   METHOD new
    METHOD delete
+   METHOD call1
    METHOD call2
+   METHOD call
+   METHOD construct1
    METHOD construct2
+   METHOD construct
    METHOD data
    METHOD equals
    METHOD instanceOf
@@ -167,6 +172,10 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW8 )
 }
 
 /*
+QScriptValue ( const QLatin1String & value )
+*/
+
+/*
 QScriptValue ( const char * value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW10 )
@@ -175,16 +184,18 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW10 )
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[01]QScriptValue ()
-//[02]QScriptValue ( const QScriptValue & other )
-//[03]QScriptValue ( SpecialValue value )
-//[04]QScriptValue ( bool value )
-//[05]QScriptValue ( int value )
-//[06]QScriptValue ( uint value )
-//[07]QScriptValue ( qsreal value )
-//[08]QScriptValue ( const QString & value )
-//[09]QScriptValue ( const QLatin1String & value )
-//[10]QScriptValue ( const char * value )
+/*
+[01]QScriptValue ()
+[02]QScriptValue ( const QScriptValue & other )
+[03]QScriptValue ( SpecialValue value )
+[04]QScriptValue ( bool value )
+[05]QScriptValue ( int value )
+[06]QScriptValue ( uint value )
+[07]QScriptValue ( qsreal value )
+[08]QScriptValue ( const QString & value )
+[09]QScriptValue ( const QLatin1String & value )
+[10]QScriptValue ( const char * value )
+*/
 
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW )
 {
@@ -283,10 +294,10 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CALL2 )
   }
 }
 
-//[1]QScriptValue call ( const QScriptValue & thisObject = QScriptValue(), const QScriptValueList & args = QScriptValueList() )
-//[2]QScriptValue call ( const QScriptValue & thisObject, const QScriptValue & arguments )
-
-// TODO: QScripValueList = array ?
+/*
+[1]QScriptValue call ( const QScriptValue & thisObject = QScriptValue(), const QScriptValueList & args = QScriptValueList() )
+[2]QScriptValue call ( const QScriptValue & thisObject, const QScriptValue & arguments )
+*/
 
 HB_FUNC_STATIC( QSCRIPTVALUE_CALL )
 {
@@ -351,8 +362,10 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT2 )
   }
 }
 
-//[1]QScriptValue construct ( const QScriptValueList & args = QScriptValueList() )
-//[2]QScriptValue construct ( const QScriptValue & arguments )
+/*
+[1]QScriptValue construct ( const QScriptValueList & args = QScriptValueList() )
+[2]QScriptValue construct ( const QScriptValue & arguments )
+*/
 
 HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT )
 {
