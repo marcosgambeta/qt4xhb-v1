@@ -956,8 +956,10 @@ void QDesignerFormWindowInterface_setContents2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]virtual void setContents ( QIODevice * device ) = 0
-//[2]virtual void setContents ( const QString & contents ) = 0
+/*
+[1]virtual void setContents ( QIODevice * device ) = 0
+[2]virtual void setContents ( const QString & contents ) = 0
+*/
 
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS )
 {
@@ -1125,8 +1127,10 @@ void QDesignerFormWindowInterface_findFormWindow2()
   Qt4xHb::createReturnQObjectClass( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
 }
 
-//[1]QDesignerFormWindowInterface * findFormWindow ( QWidget * widget )
-//[2]QDesignerFormWindowInterface * findFormWindow ( QObject * object )
+/*
+[1]QDesignerFormWindowInterface * findFormWindow ( QWidget * widget )
+[2]QDesignerFormWindowInterface * findFormWindow ( QObject * object )
+*/
 
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW )
 {
