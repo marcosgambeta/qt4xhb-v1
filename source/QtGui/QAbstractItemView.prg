@@ -508,8 +508,10 @@ void QAbstractItemView_itemDelegate2()
   }
 }
 
-//[1]QAbstractItemDelegate * itemDelegate () const
-//[2]QAbstractItemDelegate * itemDelegate ( const QModelIndex & index ) const
+/*
+[1]QAbstractItemDelegate * itemDelegate () const
+[2]QAbstractItemDelegate * itemDelegate ( const QModelIndex & index ) const
+*/
 
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATE )
 {

@@ -109,8 +109,10 @@ void QRubberBand_move2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void move ( int x, int y )
-//[2]void move ( const QPoint & p )
+/*
+[1]void move ( int x, int y )
+[2]void move ( const QPoint & p )
+*/
 
 HB_FUNC_STATIC( QRUBBERBAND_MOVE )
 {
@@ -158,8 +160,10 @@ void QRubberBand_resize2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void resize ( int width, int height )
-//[2]void resize ( const QSize & size )
+/*
+[1]void resize ( int width, int height )
+[2]void resize ( const QSize & size )
+*/
 
 HB_FUNC_STATIC( QRUBBERBAND_RESIZE )
 {
@@ -207,8 +211,10 @@ void QRubberBand_setGeometry2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setGeometry ( const QRect & rect )
-//[2]void setGeometry ( int x, int y, int width, int height )
+/*
+[1]void setGeometry ( const QRect & rect )
+[2]void setGeometry ( int x, int y, int width, int height )
+*/
 
 HB_FUNC_STATIC( QRUBBERBAND_SETGEOMETRY )
 {

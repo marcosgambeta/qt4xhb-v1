@@ -199,15 +199,15 @@ HB_FUNC_STATIC( QCOLOR_NEW7 )
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QColor ()
-//[2]QColor ( int r, int g, int b, int a = 255 )
-//[3]QColor ( QRgb color )
-//[4]QColor ( const QString & name )
-//[5]QColor ( const char * name )
-//[6]QColor ( const QColor & color )
-//[7]QColor ( Qt::GlobalColor color )
-
-// TODO: conflitos entre [3] e [7] e [4] e [5]
+/*
+[1]QColor ()
+[2]QColor ( int r, int g, int b, int a = 255 )
+[3]QColor ( QRgb color )
+[4]QColor ( const QString & name )
+[5]QColor ( const char * name )
+[6]QColor ( const QColor & color )
+[7]QColor ( Qt::GlobalColor color )
+*/
 
 HB_FUNC_STATIC( QCOLOR_NEW )
 {
@@ -1801,8 +1801,10 @@ void QColor_setRgb2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setRgb ( int r, int g, int b, int a = 255 )
-//[2]void setRgb ( QRgb rgb )
+/*
+[1]void setRgb ( int r, int g, int b, int a = 255 )
+[2]void setRgb ( QRgb rgb )
+*/
 
 HB_FUNC_STATIC( QCOLOR_SETRGB )
 {
@@ -2251,8 +2253,10 @@ void QColor_fromRgb2()
   Qt4xHb::createReturnClass( ptr, "QCOLOR", true );
 }
 
-//[1]static QColor fromRgb ( QRgb rgb )
-//[2]static QColor fromRgb ( int r, int g, int b, int a = 255 )
+/*
+[1]static QColor fromRgb ( QRgb rgb )
+[2]static QColor fromRgb ( int r, int g, int b, int a = 255 )
+*/
 
 HB_FUNC_STATIC( QCOLOR_FROMRGB )
 {
@@ -2361,8 +2365,10 @@ HB_FUNC( QGRAY2 )
   RINT( qGray ( (QRgb) hb_parni(1) ) );
 }
 
-//[1]int qGray ( int r, int g, int b )
-//[2]int qGray ( QRgb rgb )
+/*
+[1]int qGray ( int r, int g, int b )
+[2]int qGray ( QRgb rgb )
+*/
 
 HB_FUNC( QGRAY )
 {

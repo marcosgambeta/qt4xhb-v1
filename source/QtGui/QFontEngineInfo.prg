@@ -84,9 +84,11 @@ void QFontEngineInfo_new3()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QFontEngineInfo ()
-//[2]QFontEngineInfo ( const QString & family )
-//[3]QFontEngineInfo ( const QFontEngineInfo & other )
+/*
+[1]QFontEngineInfo ()
+[2]QFontEngineInfo ( const QString & family )
+[3]QFontEngineInfo ( const QFontEngineInfo & other )
+*/
 
 HB_FUNC_STATIC( QFONTENGINEINFO_NEW )
 {

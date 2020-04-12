@@ -62,8 +62,10 @@ void QRegExpValidator_new2()
   Qt4xHb::returnNewObject( o, false );
 }
 
-//[1]QRegExpValidator ( QObject * parent = 0 )
-//[2]QRegExpValidator ( const QRegExp & rx, QObject * parent )
+/*
+[1]QRegExpValidator ( QObject * parent = 0 )
+[2]QRegExpValidator ( const QRegExp & rx, QObject * parent )
+*/
 
 HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
 {
@@ -154,7 +156,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_SETREGEXP )
 /*
 virtual QValidator::State validate ( QString & input, int & pos ) const
 */
-HB_FUNC_STATIC( QREGEXPVALIDATOR_VALIDATE ) // TODO: revisar implementacao e corrigir
+HB_FUNC_STATIC( QREGEXPVALIDATOR_VALIDATE )
 {
   QRegExpValidator * obj = (QRegExpValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

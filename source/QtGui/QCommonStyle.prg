@@ -287,9 +287,11 @@ void QCommonStyle_polish3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]virtual void polish ( QPalette & pal )
-//[2]virtual void polish ( QApplication * app )
-//[3]virtual void polish ( QWidget * widget )
+/*
+[1]virtual void polish ( QPalette & pal )
+[2]virtual void polish ( QApplication * app )
+[3]virtual void polish ( QWidget * widget )
+*/
 
 HB_FUNC_STATIC( QCOMMONSTYLE_POLISH )
 {
@@ -465,8 +467,10 @@ void QCommonStyle_unpolish2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]virtual void unpolish ( QWidget * widget )
-//[2]virtual void unpolish ( QApplication * application )
+/*
+[1]virtual void unpolish ( QWidget * widget )
+[2]virtual void unpolish ( QApplication * application )
+*/
 
 HB_FUNC_STATIC( QCOMMONSTYLE_UNPOLISH )
 {

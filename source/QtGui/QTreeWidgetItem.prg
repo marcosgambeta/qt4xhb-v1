@@ -190,15 +190,17 @@ void QTreeWidgetItem_new9()
   Qt4xHb::returnNewObject( o, false );
 }
 
-//[1]QTreeWidgetItem ( int type = Type )
-//[2]QTreeWidgetItem ( const QStringList & strings, int type = Type )
-//[3]QTreeWidgetItem ( QTreeWidget * parent, int type = Type )
-//[4]QTreeWidgetItem ( QTreeWidget * parent, const QStringList & strings, int type = Type )
-//[5]QTreeWidgetItem ( QTreeWidget * parent, QTreeWidgetItem * preceding, int type = Type )
-//[6]QTreeWidgetItem ( QTreeWidgetItem * parent, int type = Type )
-//[7]QTreeWidgetItem ( QTreeWidgetItem * parent, const QStringList & strings, int type = Type )
-//[8]QTreeWidgetItem ( QTreeWidgetItem * parent, QTreeWidgetItem * preceding, int type = Type )
-//[9]QTreeWidgetItem ( const QTreeWidgetItem & other )
+/*
+[1]QTreeWidgetItem ( int type = Type )
+[2]QTreeWidgetItem ( const QStringList & strings, int type = Type )
+[3]QTreeWidgetItem ( QTreeWidget * parent, int type = Type )
+[4]QTreeWidgetItem ( QTreeWidget * parent, const QStringList & strings, int type = Type )
+[5]QTreeWidgetItem ( QTreeWidget * parent, QTreeWidgetItem * preceding, int type = Type )
+[6]QTreeWidgetItem ( QTreeWidgetItem * parent, int type = Type )
+[7]QTreeWidgetItem ( QTreeWidgetItem * parent, const QStringList & strings, int type = Type )
+[8]QTreeWidgetItem ( QTreeWidgetItem * parent, QTreeWidgetItem * preceding, int type = Type )
+[9]QTreeWidgetItem ( const QTreeWidgetItem & other )
+*/
 
 HB_FUNC_STATIC( QTREEWIDGETITEM_NEW )
 {

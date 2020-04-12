@@ -113,9 +113,11 @@ void QTextLayout_new3()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QTextLayout ()
-//[2]QTextLayout ( const QString & text )
-//[3]QTextLayout ( const QString & text, const QFont & font, QPaintDevice * paintdevice = 0 )
+/*
+[1]QTextLayout ()
+[2]QTextLayout ( const QString & text )
+[3]QTextLayout ( const QString & text, const QFont & font, QPaintDevice * paintdevice = 0 )
+*/
 
 HB_FUNC_STATIC( QTEXTLAYOUT_NEW )
 {
@@ -360,8 +362,10 @@ void QTextLayout_drawCursor2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void drawCursor ( QPainter * painter, const QPointF & position, int cursorPosition, int width ) const
-//[2]void drawCursor ( QPainter * painter, const QPointF & position, int cursorPosition ) const
+/*
+[1]void drawCursor ( QPainter * painter, const QPointF & position, int cursorPosition, int width ) const
+[2]void drawCursor ( QPainter * painter, const QPointF & position, int cursorPosition ) const
+*/
 
 HB_FUNC_STATIC( QTEXTLAYOUT_DRAWCURSOR )
 {

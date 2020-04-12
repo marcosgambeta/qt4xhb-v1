@@ -60,8 +60,10 @@ void QRadioButton_new2()
   Qt4xHb::returnNewObject( o, false );
 }
 
-//[1]QRadioButton ( QWidget * parent = 0 )
-//[2]QRadioButton ( const QString & text, QWidget * parent = 0 )
+/*
+[1]QRadioButton ( QWidget * parent = 0 )
+[2]QRadioButton ( const QString & text, QWidget * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QRADIOBUTTON_NEW )
 {

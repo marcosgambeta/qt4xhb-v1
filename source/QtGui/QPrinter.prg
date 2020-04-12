@@ -118,8 +118,10 @@ void QPrinter_new2()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QPrinter ( PrinterMode mode = ScreenResolution )
-//[2]QPrinter ( const QPrinterInfo & printer, PrinterMode mode = ScreenResolution )
+/*
+[1]QPrinter ( PrinterMode mode = ScreenResolution )
+[2]QPrinter ( const QPrinterInfo & printer, PrinterMode mode = ScreenResolution )
+*/
 
 HB_FUNC_STATIC( QPRINTER_NEW )
 {
@@ -590,8 +592,10 @@ void QPrinter_pageRect2()
   }
 }
 
-//[1]QRect pageRect () const
-//[2]QRectF pageRect ( Unit unit ) const
+/*
+[1]QRect pageRect () const
+[2]QRectF pageRect ( Unit unit ) const
+*/
 
 HB_FUNC_STATIC( QPRINTER_PAGERECT )
 {
@@ -637,8 +641,10 @@ void QPrinter_paperRect2()
   }
 }
 
-//[1]QRect paperRect () const
-//[2]QRectF paperRect ( Unit unit ) const
+/*
+[1]QRect paperRect () const
+[2]QRectF paperRect ( Unit unit ) const
+*/
 
 HB_FUNC_STATIC( QPRINTER_PAPERRECT )
 {
@@ -683,8 +689,10 @@ void QPrinter_paperSize2()
   }
 }
 
-//[1]PaperSize paperSize () const
-//[2]QSizeF paperSize ( Unit unit ) const
+/*
+[1]PaperSize paperSize () const
+[2]QSizeF paperSize ( Unit unit ) const
+*/
 
 HB_FUNC_STATIC( QPRINTER_PAPERSIZE )
 {
@@ -1291,8 +1299,10 @@ void QPrinter_setPaperSize2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setPaperSize ( PaperSize newPaperSize )
-//[2]void setPaperSize ( const QSizeF & paperSize, Unit unit )
+/*
+[1]void setPaperSize ( PaperSize newPaperSize )
+[2]void setPaperSize ( const QSizeF & paperSize, Unit unit )
+*/
 
 HB_FUNC_STATIC( QPRINTER_SETPAPERSIZE )
 {

@@ -121,9 +121,11 @@ void QPlatformWindowFormat_new3()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QPlatformWindowFormat ()
-//[2]QPlatformWindowFormat ( FormatOptions options )
-//[3]QPlatformWindowFormat ( const QPlatformWindowFormat & other )
+/*
+[1]QPlatformWindowFormat ()
+[2]QPlatformWindowFormat ( FormatOptions options )
+[3]QPlatformWindowFormat ( const QPlatformWindowFormat & other )
+*/
 
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_NEW )
 {

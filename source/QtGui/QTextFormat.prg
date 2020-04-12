@@ -129,9 +129,11 @@ void QTextFormat_new3()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QTextFormat ()
-//[2]QTextFormat ( int type )
-//[3]QTextFormat ( const QTextFormat & other )
+/*
+[1]QTextFormat ()
+[2]QTextFormat ( int type )
+[3]QTextFormat ( const QTextFormat & other )
+*/
 
 HB_FUNC_STATIC( QTEXTFORMAT_NEW )
 {
@@ -1053,8 +1055,10 @@ void QTextFormat_setProperty2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setProperty ( int propertyId, const QVariant & value )
-//[2]void setProperty ( int propertyId, const QVector<QTextLength> & value )
+/*
+[1]void setProperty ( int propertyId, const QVariant & value )
+[2]void setProperty ( int propertyId, const QVector<QTextLength> & value )
+*/
 
 HB_FUNC_STATIC( QTEXTFORMAT_SETPROPERTY )
 {

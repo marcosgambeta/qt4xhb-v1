@@ -58,8 +58,10 @@ void QWindowStateChangeEvent_new2()
   Qt4xHb::returnNewObject( o, false );
 }
 
-//[1]QWindowStateChangeEvent(Qt::WindowStates aOldState)
-//[2]QWindowStateChangeEvent(Qt::WindowStates aOldState, bool isOverride)
+/*
+[1]QWindowStateChangeEvent(Qt::WindowStates aOldState)
+[2]QWindowStateChangeEvent(Qt::WindowStates aOldState, bool isOverride)
+*/
 
 HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW )
 {

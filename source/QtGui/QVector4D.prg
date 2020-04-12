@@ -146,14 +146,16 @@ void QVector4D_new8()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QVector4D ()
-//[2]QVector4D ( qreal xpos, qreal ypos, qreal zpos, qreal wpos )
-//[3]QVector4D ( const QPoint & point )
-//[4]QVector4D ( const QPointF & point )
-//[5]QVector4D ( const QVector2D & vector )
-//[6]QVector4D ( const QVector2D & vector, qreal zpos, qreal wpos )
-//[7]QVector4D ( const QVector3D & vector )
-//[8]QVector4D ( const QVector3D & vector, qreal wpos )
+/*
+[1]QVector4D ()
+[2]QVector4D ( qreal xpos, qreal ypos, qreal zpos, qreal wpos )
+[3]QVector4D ( const QPoint & point )
+[4]QVector4D ( const QPointF & point )
+[5]QVector4D ( const QVector2D & vector )
+[6]QVector4D ( const QVector2D & vector, qreal zpos, qreal wpos )
+[7]QVector4D ( const QVector3D & vector )
+[8]QVector4D ( const QVector3D & vector, qreal wpos )
+*/
 
 HB_FUNC_STATIC( QVECTOR4D_NEW )
 {

@@ -115,11 +115,13 @@ void QPolygon_new5()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QPolygon ()
-//[2]QPolygon ( int size )
-//[3]QPolygon ( const QPolygon & polygon )
-//[4]QPolygon ( const QVector<QPoint> & points )
-//[5]QPolygon ( const QRect & rectangle, bool closed = false )
+/*
+[1]QPolygon ()
+[2]QPolygon ( int size )
+[3]QPolygon ( const QPolygon & polygon )
+[4]QPolygon ( const QVector<QPoint> & points )
+[5]QPolygon ( const QRect & rectangle, bool closed = false )
+*/
 
 HB_FUNC_STATIC( QPOLYGON_NEW )
 {
@@ -273,8 +275,10 @@ void QPolygon_point2()
   }
 }
 
-//[1]void point ( int index, int * x, int * y ) const
-//[2]QPoint point ( int index ) const
+/*
+[1]void point ( int index, int * x, int * y ) const
+[2]QPoint point ( int index ) const
+*/
 
 HB_FUNC_STATIC( QPOLYGON_POINT )
 {
@@ -322,8 +326,10 @@ HB_FUNC_STATIC( QPOLYGON_PUTPOINTS2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void putPoints ( int index, int nPoints, int firstx, int firsty, ... )
-//[2]void putPoints ( int index, int nPoints, const QPolygon & fromPolygon, int fromIndex = 0 )
+/*
+[1]void putPoints ( int index, int nPoints, int firstx, int firsty, ... )
+[2]void putPoints ( int index, int nPoints, const QPolygon & fromPolygon, int fromIndex = 0 )
+*/
 
 HB_FUNC_STATIC( QPOLYGON_PUTPOINTS )
 {
@@ -360,8 +366,10 @@ void QPolygon_setPoint2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setPoint ( int index, int x, int y )
-//[2]void setPoint ( int index, const QPoint & point )
+/*
+[1]void setPoint ( int index, int x, int y )
+[2]void setPoint ( int index, const QPoint & point )
+*/
 
 HB_FUNC_STATIC( QPOLYGON_SETPOINT )
 {
@@ -460,8 +468,10 @@ void QPolygon_translate2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void translate ( int dx, int dy )
-//[2]void translate ( const QPoint & offset )
+/*
+[1]void translate ( int dx, int dy )
+[2]void translate ( const QPoint & offset )
+*/
 
 HB_FUNC_STATIC( QPOLYGON_TRANSLATE )
 {
@@ -507,8 +517,10 @@ void QPolygon_translated2()
   }
 }
 
-//[1]QPolygon translated ( int dx, int dy ) const
-//[2]QPolygon translated ( const QPoint & offset ) const
+/*
+[1]QPolygon translated ( int dx, int dy ) const
+[2]QPolygon translated ( const QPoint & offset ) const
+*/
 
 HB_FUNC_STATIC( QPOLYGON_TRANSLATED )
 {

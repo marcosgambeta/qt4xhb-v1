@@ -66,8 +66,10 @@ void QCheckBox_new2()
   Qt4xHb::returnNewObject( o, false );
 }
 
-//[1]QCheckBox ( QWidget * parent = 0 )
-//[2]QCheckBox ( const QString & text, QWidget * parent = 0 )
+/*
+[1]QCheckBox ( QWidget * parent = 0 )
+[2]QCheckBox ( const QString & text, QWidget * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QCHECKBOX_NEW )
 {

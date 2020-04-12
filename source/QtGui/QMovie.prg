@@ -114,9 +114,11 @@ void QMovie_new3()
   Qt4xHb::returnNewObject( o, false );
 }
 
-//[1]QMovie ( QObject * parent = 0 )
-//[2]QMovie ( QIODevice * device, const QByteArray & format = QByteArray(), QObject * parent = 0 )
-//[3]QMovie ( const QString & fileName, const QByteArray & format = QByteArray(), QObject * parent = 0 )
+/*
+[1]QMovie ( QObject * parent = 0 )
+[2]QMovie ( QIODevice * device, const QByteArray & format = QByteArray(), QObject * parent = 0 )
+[3]QMovie ( const QString & fileName, const QByteArray & format = QByteArray(), QObject * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QMOVIE_NEW )
 {

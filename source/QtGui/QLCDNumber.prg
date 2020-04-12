@@ -83,8 +83,10 @@ void QLCDNumber_new2()
   Qt4xHb::returnNewObject( o, false );
 }
 
-//[1]QLCDNumber ( QWidget * parent = 0 )
-//[2]QLCDNumber ( uint numDigits, QWidget * parent = 0 )
+/*
+[1]QLCDNumber ( QWidget * parent = 0 )
+[2]QLCDNumber ( uint numDigits, QWidget * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QLCDNUMBER_NEW )
 {
@@ -169,8 +171,10 @@ HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW2 )
   }
 }
 
-//[1]bool checkOverflow ( double num ) const
-//[2]bool checkOverflow ( int num ) const
+/*
+[1]bool checkOverflow ( double num ) const
+[2]bool checkOverflow ( int num ) const
+*/
 
 HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW )
 {
@@ -509,9 +513,11 @@ HB_FUNC_STATIC( QLCDNUMBER_DISPLAY3 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void display ( const QString & s )
-//[2]void display ( double num )
-//[3]void display ( int num )
+/*
+[1]void display ( const QString & s )
+[2]void display ( double num )
+[3]void display ( int num )
+*/
 
 HB_FUNC_STATIC( QLCDNUMBER_DISPLAY )
 {

@@ -276,8 +276,10 @@ void QSound_play2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void play ()
-//[2]void play ( const QString & filename )
+/*
+[1]void play ()
+[2]void play ( const QString & filename )
+*/
 
 HB_FUNC_STATIC( QSOUND_PLAY )
 {

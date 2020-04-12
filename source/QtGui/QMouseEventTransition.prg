@@ -67,8 +67,10 @@ void QMouseEventTransition_new2()
   Qt4xHb::returnNewObject( o, false );
 }
 
-//[1]QMouseEventTransition ( QState * sourceState = 0 )
-//[2]QMouseEventTransition ( QObject * object, QEvent::Type type, Qt::MouseButton button, QState * sourceState = 0 )
+/*
+[1]QMouseEventTransition ( QState * sourceState = 0 )
+[2]QMouseEventTransition ( QObject * object, QEvent::Type type, Qt::MouseButton button, QState * sourceState = 0 )
+*/
 
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_NEW )
 {

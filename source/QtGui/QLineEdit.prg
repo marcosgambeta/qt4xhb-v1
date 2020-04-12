@@ -135,8 +135,10 @@ void QLineEdit_new2()
   Qt4xHb::returnNewObject( o, false );
 }
 
-//[1]QLineEdit ( QWidget * parent = 0 )
-//[2]QLineEdit ( const QString & contents, QWidget * parent = 0 )
+/*
+[1]QLineEdit ( QWidget * parent = 0 )
+[2]QLineEdit ( const QString & contents, QWidget * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QLINEEDIT_NEW )
 {
@@ -1316,8 +1318,10 @@ void QLineEdit_setTextMargins2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setTextMargins ( int left, int top, int right, int bottom )
-//[2]void setTextMargins ( const QMargins & margins )
+/*
+[1]void setTextMargins ( int left, int top, int right, int bottom )
+[2]void setTextMargins ( const QMargins & margins )
+*/
 
 HB_FUNC_STATIC( QLINEEDIT_SETTEXTMARGINS )
 {

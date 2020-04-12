@@ -62,8 +62,10 @@ void QFileOpenEvent_new2()
   Qt4xHb::returnNewObject( o, false );
 }
 
-//[1]QFileOpenEvent(const QString &file)
-//[2]QFileOpenEvent(const QUrl &url)
+/*
+[1]QFileOpenEvent(const QString &file)
+[2]QFileOpenEvent(const QUrl &url)
+*/
 
 HB_FUNC_STATIC( QFILEOPENEVENT_NEW )
 {

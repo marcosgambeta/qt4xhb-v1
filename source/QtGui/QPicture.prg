@@ -67,8 +67,10 @@ void QPicture_new2()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QPicture ( int formatVersion = -1 )
-//[2]QPicture ( const QPicture & pic )
+/*
+[1]QPicture ( int formatVersion = -1 )
+[2]QPicture ( const QPicture & pic )
+*/
 
 HB_FUNC_STATIC( QPICTURE_NEW )
 {
@@ -202,8 +204,10 @@ void QPicture_load2()
   }
 }
 
-//[1]bool load ( const QString & fileName, const char * format = 0 )
-//[2]bool load ( QIODevice * dev, const char * format = 0 )
+/*
+[1]bool load ( const QString & fileName, const char * format = 0 )
+[2]bool load ( QIODevice * dev, const char * format = 0 )
+*/
 
 HB_FUNC_STATIC( QPICTURE_LOAD )
 {
@@ -271,8 +275,10 @@ void QPicture_save2()
   }
 }
 
-//[1]bool save ( const QString & fileName, const char * format = 0 )
-//[2]bool save ( QIODevice * dev, const char * format = 0 )
+/*
+[1]bool save ( const QString & fileName, const char * format = 0 )
+[2]bool save ( QIODevice * dev, const char * format = 0 )
+*/
 
 HB_FUNC_STATIC( QPICTURE_SAVE )
 {

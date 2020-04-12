@@ -75,8 +75,10 @@ void QTextFragment_new2()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QTextFragment ()
-//[2]QTextFragment ( const QTextFragment & other )
+/*
+[1]QTextFragment ()
+[2]QTextFragment ( const QTextFragment & other )
+*/
 
 HB_FUNC_STATIC( QTEXTFRAGMENT_NEW )
 {

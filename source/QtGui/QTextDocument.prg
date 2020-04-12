@@ -153,8 +153,10 @@ void QTextDocument_new2()
   Qt4xHb::returnNewObject( o, false );
 }
 
-//[1]QTextDocument ( QObject * parent = 0 )
-//[2]QTextDocument ( const QString & text, QObject * parent = 0 )
+/*
+[1]QTextDocument ( QObject * parent = 0 )
+[2]QTextDocument ( const QString & text, QObject * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENT_NEW )
 {
@@ -772,10 +774,12 @@ void QTextDocument_find4()
   }
 }
 
-//[1]QTextCursor find ( const QString & subString, const QTextCursor & cursor, FindFlags options = 0 ) const
-//[2]QTextCursor find ( const QRegExp & expr, const QTextCursor & cursor, FindFlags options = 0 ) const
-//[3]QTextCursor find ( const QString & subString, int position = 0, FindFlags options = 0 ) const
-//[4]QTextCursor find ( const QRegExp & expr, int position = 0, FindFlags options = 0 ) const
+/*
+[1]QTextCursor find ( const QString & subString, const QTextCursor & cursor, FindFlags options = 0 ) const
+[2]QTextCursor find ( const QRegExp & expr, const QTextCursor & cursor, FindFlags options = 0 ) const
+[3]QTextCursor find ( const QString & subString, int position = 0, FindFlags options = 0 ) const
+[4]QTextCursor find ( const QRegExp & expr, int position = 0, FindFlags options = 0 ) const
+*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENT_FIND )
 {
@@ -1932,8 +1936,10 @@ void QTextDocument_redo2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void redo ( QTextCursor * cursor )
-//[2]void redo ()
+/*
+[1]void redo ( QTextCursor * cursor )
+[2]void redo ()
+*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENT_REDO )
 {
@@ -2007,8 +2013,10 @@ void QTextDocument_undo2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void undo ( QTextCursor * cursor )
-//[2]void undo ()
+/*
+[1]void undo ( QTextCursor * cursor )
+[2]void undo ()
+*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENT_UNDO )
 {

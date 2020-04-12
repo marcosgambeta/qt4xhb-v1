@@ -149,8 +149,10 @@ void QDirectPainter_endPainting2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void endPainting ()
-//[2]void endPainting ( const QRegion & region )
+/*
+[1]void endPainting ()
+[2]void endPainting ( const QRegion & region )
+*/
 
 HB_FUNC_STATIC( QDIRECTPAINTER_ENDPAINTING )
 {

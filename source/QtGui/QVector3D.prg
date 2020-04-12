@@ -137,13 +137,15 @@ void QVector3D_new7()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QVector3D ()
-//[2]QVector3D ( qreal xpos, qreal ypos, qreal zpos )
-//[3]QVector3D ( const QPoint & point )
-//[4]QVector3D ( const QPointF & point )
-//[5]QVector3D ( const QVector2D & vector )
-//[6]QVector3D ( const QVector2D & vector, qreal zpos )
-//[7]QVector3D ( const QVector4D & vector )
+/*
+[1]QVector3D ()
+[2]QVector3D ( qreal xpos, qreal ypos, qreal zpos )
+[3]QVector3D ( const QPoint & point )
+[4]QVector3D ( const QPointF & point )
+[5]QVector3D ( const QVector2D & vector )
+[6]QVector3D ( const QVector2D & vector, qreal zpos )
+[7]QVector3D ( const QVector4D & vector )
+*/
 
 HB_FUNC_STATIC( QVECTOR3D_NEW )
 {
@@ -248,8 +250,10 @@ void QVector3D_distanceToPlane2()
   }
 }
 
-//[1]qreal distanceToPlane ( const QVector3D & plane, const QVector3D & normal ) const
-//[2]qreal distanceToPlane ( const QVector3D & plane1, const QVector3D & plane2, const QVector3D & plane3 ) const
+/*
+[1]qreal distanceToPlane ( const QVector3D & plane, const QVector3D & normal ) const
+[2]qreal distanceToPlane ( const QVector3D & plane1, const QVector3D & plane2, const QVector3D & plane3 ) const
+*/
 
 HB_FUNC_STATIC( QVECTOR3D_DISTANCETOPLANE )
 {
@@ -699,8 +703,10 @@ void QVector3D_normal2()
   Qt4xHb::createReturnClass( ptr, "QVECTOR3D", true );
 }
 
-//[1]QVector3D normal ( const QVector3D & v1, const QVector3D & v2 )
-//[2]QVector3D normal ( const QVector3D & v1, const QVector3D & v2, const QVector3D & v3 )
+/*
+[1]QVector3D normal ( const QVector3D & v1, const QVector3D & v2 )
+[2]QVector3D normal ( const QVector3D & v1, const QVector3D & v2, const QVector3D & v3 )
+*/
 
 HB_FUNC_STATIC( QVECTOR3D_NORMAL )
 {
@@ -717,9 +723,6 @@ HB_FUNC_STATIC( QVECTOR3D_NORMAL )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
-
-// TODO: implementar função ?
-// bool qFuzzyCompare ( const QVector3D & v1, const QVector3D & v2 )
 
 HB_FUNC_STATIC( QVECTOR3D_NEWFROM )
 {

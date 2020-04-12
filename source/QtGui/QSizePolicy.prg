@@ -90,9 +90,11 @@ void QSizePolicy_new3()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QSizePolicy ()
-//[2]QSizePolicy ( Policy horizontal, Policy vertical )
-//[3]QSizePolicy ( Policy horizontal, Policy vertical, ControlType type )
+/*
+[1]QSizePolicy ()
+[2]QSizePolicy ( Policy horizontal, Policy vertical )
+[3]QSizePolicy ( Policy horizontal, Policy vertical, ControlType type )
+*/
 
 HB_FUNC_STATIC( QSIZEPOLICY_NEW )
 {

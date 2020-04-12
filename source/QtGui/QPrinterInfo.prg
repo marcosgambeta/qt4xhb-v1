@@ -80,9 +80,11 @@ void QPrinterInfo_new3()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QPrinterInfo ()
-//[2]QPrinterInfo ( const QPrinterInfo & src )
-//[3]QPrinterInfo ( const QPrinter & printer )
+/*
+[1]QPrinterInfo ()
+[2]QPrinterInfo ( const QPrinterInfo & src )
+[3]QPrinterInfo ( const QPrinter & printer )
+*/
 
 HB_FUNC_STATIC( QPRINTERINFO_NEW )
 {

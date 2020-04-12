@@ -108,10 +108,12 @@ void QFontMetricsF_new4()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QFontMetricsF ( const QFont & font )
-//[2]QFontMetricsF ( const QFont & font, QPaintDevice * paintdevice )
-//[3]QFontMetricsF ( const QFontMetrics & fontMetrics )
-//[4]QFontMetricsF ( const QFontMetricsF & fm )
+/*
+[1]QFontMetricsF ( const QFont & font )
+[2]QFontMetricsF ( const QFont & font, QPaintDevice * paintdevice )
+[3]QFontMetricsF ( const QFontMetrics & fontMetrics )
+[4]QFontMetricsF ( const QFontMetricsF & fm )
+*/
 
 HB_FUNC_STATIC( QFONTMETRICSF_NEW )
 {
@@ -246,9 +248,11 @@ void QFontMetricsF_boundingRect3()
   }
 }
 
-//[1]QRectF boundingRect ( const QString & text ) const
-//[2]QRectF boundingRect ( QChar ch ) const
-//[3]QRectF boundingRect ( const QRectF & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
+/*
+[1]QRectF boundingRect ( const QString & text ) const
+[2]QRectF boundingRect ( QChar ch ) const
+[3]QRectF boundingRect ( const QRectF & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
+*/
 
 HB_FUNC_STATIC( QFONTMETRICSF_BOUNDINGRECT )
 {
@@ -732,8 +736,10 @@ void QFontMetricsF_width2()
   }
 }
 
-//[1]qreal width ( const QString & text ) const
-//[2]qreal width ( QChar ch ) const
+/*
+[1]qreal width ( const QString & text ) const
+[2]qreal width ( QChar ch ) const
+*/
 
 HB_FUNC_STATIC( QFONTMETRICSF_WIDTH )
 {

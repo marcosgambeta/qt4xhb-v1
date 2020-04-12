@@ -121,12 +121,14 @@ void QPolygonF_new6()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QPolygonF ()
-//[2]QPolygonF ( int size )
-//[3]QPolygonF ( const QPolygonF & polygon )
-//[4]QPolygonF ( const QVector<QPointF> & points )
-//[5]QPolygonF ( const QRectF & rectangle )
-//[6]QPolygonF ( const QPolygon & polygon )
+/*
+[1]QPolygonF ()
+[2]QPolygonF ( int size )
+[3]QPolygonF ( const QPolygonF & polygon )
+[4]QPolygonF ( const QVector<QPointF> & points )
+[5]QPolygonF ( const QRectF & rectangle )
+[6]QPolygonF ( const QPolygon & polygon )
+*/
 
 HB_FUNC_STATIC( QPOLYGONF_NEW )
 {
@@ -381,8 +383,10 @@ void QPolygonF_translate2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void translate ( const QPointF & offset )
-//[2]void translate ( qreal dx, qreal dy )
+/*
+[1]void translate ( const QPointF & offset )
+[2]void translate ( qreal dx, qreal dy )
+*/
 
 HB_FUNC_STATIC( QPOLYGONF_TRANSLATE )
 {
@@ -428,8 +432,10 @@ void QPolygonF_translated2()
   }
 }
 
-//[1]QPolygonF translated ( const QPointF & offset ) const
-//[2]QPolygonF translated ( qreal dx, qreal dy ) const
+/*
+[1]QPolygonF translated ( const QPointF & offset ) const
+[2]QPolygonF translated ( qreal dx, qreal dy ) const
+*/
 
 HB_FUNC_STATIC( QPOLYGONF_TRANSLATED )
 {

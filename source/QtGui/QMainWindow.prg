@@ -165,8 +165,10 @@ void QMainWindow_addDockWidget2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget )
-//[2]void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget, Qt::Orientation orientation )
+/*
+[1]void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget )
+[2]void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget, Qt::Orientation orientation )
+*/
 
 HB_FUNC_STATIC( QMAINWINDOW_ADDDOCKWIDGET )
 {
@@ -228,9 +230,11 @@ void QMainWindow_addToolBar3()
   }
 }
 
-//[1]void addToolBar ( Qt::ToolBarArea area, QToolBar * toolbar )
-//[2]void addToolBar ( QToolBar * toolbar )
-//[3]QToolBar * addToolBar ( const QString & title )
+/*
+[1]void addToolBar ( Qt::ToolBarArea area, QToolBar * toolbar )
+[2]void addToolBar ( QToolBar * toolbar )
+[3]QToolBar * addToolBar ( const QString & title )
+*/
 
 HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBAR )
 {

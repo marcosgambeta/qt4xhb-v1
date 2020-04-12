@@ -65,8 +65,10 @@ void QIntValidator_new2()
   Qt4xHb::returnNewObject( o, false );
 }
 
-//[1]QIntValidator ( QObject * parent = 0 )
-//[2]QIntValidator ( int minimum, int maximum, QObject * parent )
+/*
+[1]QIntValidator ( QObject * parent = 0 )
+[2]QIntValidator ( int minimum, int maximum, QObject * parent )
+*/
 
 HB_FUNC_STATIC( QINTVALIDATOR_NEW )
 {

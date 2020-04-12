@@ -173,9 +173,11 @@ void QTextTable_cellAt3()
   }
 }
 
-//[1]QTextTableCell cellAt ( int row, int column ) const
-//[2]QTextTableCell cellAt ( int position ) const
-//[3]QTextTableCell cellAt ( const QTextCursor & cursor ) const
+/*
+[1]QTextTableCell cellAt ( int row, int column ) const
+[2]QTextTableCell cellAt ( int position ) const
+[3]QTextTableCell cellAt ( const QTextCursor & cursor ) const
+*/
 
 HB_FUNC_STATIC( QTEXTTABLE_CELLAT )
 {
@@ -328,8 +330,10 @@ void QTextTable_mergeCells2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void mergeCells ( int row, int column, int numRows, int numCols )
-//[2]void mergeCells ( const QTextCursor & cursor )
+/*
+[1]void mergeCells ( int row, int column, int numRows, int numCols )
+[2]void mergeCells ( const QTextCursor & cursor )
+*/
 
 HB_FUNC_STATIC( QTEXTTABLE_MERGECELLS )
 {

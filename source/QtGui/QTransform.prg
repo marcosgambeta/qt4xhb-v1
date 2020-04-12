@@ -127,10 +127,12 @@ void QTransform_new4()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QTransform ()
-//[2]QTransform ( qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33 = 1.0 )
-//[3]QTransform ( qreal m11, qreal m12, qreal m21, qreal m22, qreal dx, qreal dy )
-//[4]QTransform ( const QMatrix & matrix )
+/*
+[1]QTransform ()
+[2]QTransform ( qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33 = 1.0 )
+[3]QTransform ( qreal m11, qreal m12, qreal m21, qreal m22, qreal dx, qreal dy )
+[4]QTransform ( const QMatrix & matrix )
+*/
 
 HB_FUNC_STATIC( QTRANSFORM_NEW )
 {
@@ -829,16 +831,18 @@ HB_FUNC_STATIC( QTRANSFORM_MAP10 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[01]void map ( qreal x, qreal y, qreal * tx, qreal * ty ) const
-//[02]QPointF map ( const QPointF & p ) const
-//[03]QPoint map ( const QPoint & point ) const
-//[04]QLine map ( const QLine & l ) const
-//[05]QLineF map ( const QLineF & line ) const
-//[06]QPolygonF map ( const QPolygonF & polygon ) const
-//[07]QPolygon map ( const QPolygon & polygon ) const
-//[08]QRegion map ( const QRegion & region ) const
-//[09]QPainterPath map ( const QPainterPath & path ) const
-//[10]void map ( int x, int y, int * tx, int * ty ) const
+/*
+[01]void map ( qreal x, qreal y, qreal * tx, qreal * ty ) const
+[02]QPointF map ( const QPointF & p ) const
+[03]QPoint map ( const QPoint & point ) const
+[04]QLine map ( const QLine & l ) const
+[05]QLineF map ( const QLineF & line ) const
+[06]QPolygonF map ( const QPolygonF & polygon ) const
+[07]QPolygon map ( const QPolygon & polygon ) const
+[08]QRegion map ( const QRegion & region ) const
+[09]QPainterPath map ( const QPainterPath & path ) const
+[10]void map ( int x, int y, int * tx, int * ty ) const
+*/
 
 HB_FUNC_STATIC( QTRANSFORM_MAP )
 {
@@ -916,8 +920,10 @@ void QTransform_mapRect2()
   }
 }
 
-//[1]QRectF mapRect ( const QRectF & rectangle ) const
-//[2]QRect mapRect ( const QRect & rectangle ) const
+/*
+[1]QRectF mapRect ( const QRectF & rectangle ) const
+[2]QRect mapRect ( const QRect & rectangle ) const
+*/
 
 HB_FUNC_STATIC( QTRANSFORM_MAPRECT )
 {

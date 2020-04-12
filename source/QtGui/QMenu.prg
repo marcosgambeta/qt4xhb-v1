@@ -98,8 +98,10 @@ void QMenu_new2()
   Qt4xHb::returnNewObject( o, false );
 }
 
-//[1]QMenu ( QWidget * parent = 0 )
-//[2]QMenu ( const QString & title, QWidget * parent = 0 )
+/*
+[1]QMenu ( QWidget * parent = 0 )
+[2]QMenu ( const QString & title, QWidget * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QMENU_NEW )
 {
@@ -302,11 +304,13 @@ void QMenu_addAction5()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]QAction * addAction ( const QString & text )
-//[2]QAction * addAction ( const QIcon & icon, const QString & text )
-//[3]QAction * addAction ( const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
-//[4]QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
-//[5]void addAction ( QAction * action )
+/*
+[1]QAction * addAction ( const QString & text )
+[2]QAction * addAction ( const QIcon & icon, const QString & text )
+[3]QAction * addAction ( const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
+[4]QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
+[5]void addAction ( QAction * action )
+*/
 
 HB_FUNC_STATIC( QMENU_ADDACTION )
 {
@@ -386,9 +390,11 @@ void QMenu_addMenu3()
   }
 }
 
-//[1]QAction * addMenu ( QMenu * menu )
-//[2]QMenu * addMenu ( const QString & title )
-//[3]QMenu * addMenu ( const QIcon & icon, const QString & title )
+/*
+[1]QAction * addMenu ( QMenu * menu )
+[2]QMenu * addMenu ( const QString & title )
+[3]QMenu * addMenu ( const QIcon & icon, const QString & title )
+*/
 
 HB_FUNC_STATIC( QMENU_ADDMENU )
 {
@@ -1024,10 +1030,12 @@ HB_FUNC_STATIC( QMENU_EXEC4 )
   Qt4xHb::createReturnClass ( ptr, "QACTION" );
 }
 
-//[1]QAction * exec ()
-//[2]QAction * exec ( const QPoint & p, QAction * action = 0 )
-//[3]QAction * exec ( QList<QAction *> actions, const QPoint & pos, QAction * at, QWidget * parent )
-//[4]QAction * exec ( QList<QAction *> actions, const QPoint & pos, QAction * at = 0 )
+/*
+[1]QAction * exec ()
+[2]QAction * exec ( const QPoint & p, QAction * action = 0 )
+[3]QAction * exec ( QList<QAction *> actions, const QPoint & pos, QAction * at, QWidget * parent )
+[4]QAction * exec ( QList<QAction *> actions, const QPoint & pos, QAction * at = 0 )
+*/
 
 HB_FUNC_STATIC( QMENU_EXEC )
 {

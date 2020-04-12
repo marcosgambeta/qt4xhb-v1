@@ -69,9 +69,11 @@ void QConicalGradient_new3()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QConicalGradient()
-//[2]QConicalGradient(const QPointF &center, qreal startAngle)
-//[3]QConicalGradient(qreal cx, qreal cy, qreal startAngle)
+/*
+[1]QConicalGradient()
+[2]QConicalGradient(const QPointF &center, qreal startAngle)
+[3]QConicalGradient(qreal cx, qreal cy, qreal startAngle)
+*/
 
 HB_FUNC_STATIC( QCONICALGRADIENT_NEW )
 {
@@ -198,8 +200,10 @@ void QConicalGradient_setCenter2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setCenter ( const QPointF & center )
-//[2]void setCenter ( qreal x, qreal y )
+/*
+[1]void setCenter ( const QPointF & center )
+[2]void setCenter ( qreal x, qreal y )
+*/
 
 HB_FUNC_STATIC( QCONICALGRADIENT_SETCENTER )
 {

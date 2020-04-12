@@ -1390,8 +1390,10 @@ void QSortFilterProxyModel_setFilterRegExp2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setFilterRegExp ( const QRegExp & regExp )
-//[2]void setFilterRegExp ( const QString & pattern )
+/*
+[1]void setFilterRegExp ( const QRegExp & regExp )
+[2]void setFilterRegExp ( const QString & pattern )
+*/
 
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERREGEXP )
 {

@@ -125,8 +125,10 @@ void QFileDialog_new2()
   Qt4xHb::returnNewObject( o, false );
 }
 
-//[1]QFileDialog ( QWidget * parent, Qt::WindowFlags flags )
-//[2]QFileDialog ( QWidget * parent = 0, const QString & caption = QString(), const QString & directory = QString(), const QString & filter = QString() )
+/*
+[1]QFileDialog ( QWidget * parent, Qt::WindowFlags flags )
+[2]QFileDialog ( QWidget * parent = 0, const QString & caption = QString(), const QString & directory = QString(), const QString & filter = QString() )
+*/
 
 HB_FUNC_STATIC( QFILEDIALOG_NEW )
 {
@@ -834,8 +836,10 @@ void QFileDialog_setDirectory2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setDirectory ( const QString & directory )
-//[2]void setDirectory ( const QDir & directory )
+/*
+[1]void setDirectory ( const QString & directory )
+[2]void setDirectory ( const QDir & directory )
+*/
 
 HB_FUNC_STATIC( QFILEDIALOG_SETDIRECTORY )
 {

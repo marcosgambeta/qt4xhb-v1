@@ -88,10 +88,12 @@ void QTextDocumentFragment_new4()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QTextDocumentFragment ()
-//[2]QTextDocumentFragment ( const QTextDocument * document )
-//[3]QTextDocumentFragment ( const QTextCursor & cursor )
-//[4]QTextDocumentFragment ( const QTextDocumentFragment & other )
+/*
+[1]QTextDocumentFragment ()
+[2]QTextDocumentFragment ( const QTextDocument * document )
+[3]QTextDocumentFragment ( const QTextCursor & cursor )
+[4]QTextDocumentFragment ( const QTextDocumentFragment & other )
+*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW )
 {
@@ -184,8 +186,10 @@ void QTextDocumentFragment_toHtml2()
   }
 }
 
-//[1]QString toHtml ( const QByteArray & encoding ) const
-//[2]QString toHtml () const
+/*
+[1]QString toHtml ( const QByteArray & encoding ) const
+[2]QString toHtml () const
+*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOHTML )
 {
@@ -247,8 +251,10 @@ void QTextDocumentFragment_fromHtml2()
   Qt4xHb::createReturnClass( ptr, "QTEXTDOCUMENTFRAGMENT", true );
 }
 
-//[1]QTextDocumentFragment fromHtml ( const QString & text )
-//[2]QTextDocumentFragment fromHtml ( const QString & text, const QTextDocument * resourceProvider )
+/*
+[1]QTextDocumentFragment fromHtml ( const QString & text )
+[2]QTextDocumentFragment fromHtml ( const QString & text, const QTextDocument * resourceProvider )
+*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMHTML )
 {

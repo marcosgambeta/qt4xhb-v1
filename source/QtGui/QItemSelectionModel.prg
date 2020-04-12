@@ -83,8 +83,10 @@ void QItemSelectionModel_new2()
   Qt4xHb::returnNewObject( o, false );
 }
 
-//[1]QItemSelectionModel ( QAbstractItemModel * model )
-//[2]QItemSelectionModel ( QAbstractItemModel * model, QObject * parent )
+/*
+[1]QItemSelectionModel ( QAbstractItemModel * model )
+[2]QItemSelectionModel ( QAbstractItemModel * model, QObject * parent )
+*/
 
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_NEW )
 {
@@ -604,8 +606,10 @@ void QItemSelectionModel_select2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]virtual void select ( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
-//[2]virtual void select ( const QItemSelection & selection, QItemSelectionModel::SelectionFlags command )
+/*
+[1]virtual void select ( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
+[2]virtual void select ( const QItemSelection & selection, QItemSelectionModel::SelectionFlags command )
+*/
 
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECT )
 {

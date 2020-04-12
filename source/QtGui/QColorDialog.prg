@@ -76,8 +76,10 @@ void QColorDialog_new2()
   Qt4xHb::returnNewObject( o, false );
 }
 
-//[1]QColorDialog ( QWidget * parent = 0 )
-//[2]QColorDialog ( const QColor & initial, QWidget * parent = 0 )
+/*
+[1]QColorDialog ( QWidget * parent = 0 )
+[2]QColorDialog ( const QColor & initial, QWidget * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QCOLORDIALOG_NEW )
 {
@@ -169,8 +171,10 @@ void QColorDialog_open2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void open ()
-//[2]void open ( QObject * receiver, const char * member )
+/*
+[1]void open ()
+[2]void open ( QObject * receiver, const char * member )
+*/
 
 HB_FUNC_STATIC( QCOLORDIALOG_OPEN )
 {
@@ -423,8 +427,10 @@ void QColorDialog_getColor2()
   Qt4xHb::createReturnClass( ptr, "QCOLOR", true );
 }
 
-//[1]QColor getColor ( const QColor & initial, QWidget * parent, const QString & title, ColorDialogOptions options = 0 )
-//[2]QColor getColor ( const QColor & initial = Qt::white, QWidget * parent = 0 )
+/*
+[1]QColor getColor ( const QColor & initial, QWidget * parent, const QString & title, ColorDialogOptions options = 0 )
+[2]QColor getColor ( const QColor & initial = Qt::white, QWidget * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QCOLORDIALOG_GETCOLOR )
 {

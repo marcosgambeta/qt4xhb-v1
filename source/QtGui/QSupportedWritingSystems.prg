@@ -67,8 +67,10 @@ void QSupportedWritingSystems_new2()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QSupportedWritingSystems ()
-//[2]QSupportedWritingSystems ( const QSupportedWritingSystems & other )
+/*
+[1]QSupportedWritingSystems ()
+[2]QSupportedWritingSystems ( const QSupportedWritingSystems & other )
+*/
 
 HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_NEW )
 {

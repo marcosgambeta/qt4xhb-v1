@@ -129,8 +129,10 @@ void QGraphicsView_new2()
   Qt4xHb::returnNewObject( o, false );
 }
 
-//[1]QGraphicsView ( QWidget * parent = 0 )
-//[2]QGraphicsView ( QGraphicsScene * scene, QWidget * parent = 0 )
+/*
+[1]QGraphicsView ( QWidget * parent = 0 )
+[2]QGraphicsView ( QGraphicsScene * scene, QWidget * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_NEW )
 {
@@ -285,9 +287,11 @@ void QGraphicsView_centerOn3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void centerOn ( const QPointF & pos )
-//[2]void centerOn ( qreal x, qreal y )
-//[3]void centerOn ( const QGraphicsItem * item )
+/*
+[1]void centerOn ( const QPointF & pos )
+[2]void centerOn ( qreal x, qreal y )
+[3]void centerOn ( const QGraphicsItem * item )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_CENTERON )
 {
@@ -378,9 +382,11 @@ void QGraphicsView_ensureVisible3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void ensureVisible ( const QRectF & rect, int xmargin = 50, int ymargin = 50 )
-//[2]void ensureVisible ( qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50 )
-//[3]void ensureVisible ( const QGraphicsItem * item, int xmargin = 50, int ymargin = 50 )
+/*
+[1]void ensureVisible ( const QRectF & rect, int xmargin = 50, int ymargin = 50 )
+[2]void ensureVisible ( qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50 )
+[3]void ensureVisible ( const QGraphicsItem * item, int xmargin = 50, int ymargin = 50 )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_ENSUREVISIBLE )
 {
@@ -447,9 +453,11 @@ void QGraphicsView_fitInView3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void fitInView ( const QRectF & rect, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
-//[2]void fitInView ( qreal x, qreal y, qreal w, qreal h, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
-//[3]void fitInView ( const QGraphicsItem * item, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
+/*
+[1]void fitInView ( const QRectF & rect, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
+[2]void fitInView ( qreal x, qreal y, qreal w, qreal h, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
+[3]void fitInView ( const QGraphicsItem * item, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_FITINVIEW )
 {
@@ -572,8 +580,10 @@ void QGraphicsView_itemAt2()
   }
 }
 
-//[1]QGraphicsItem * itemAt ( const QPoint & pos ) const
-//[2]QGraphicsItem * itemAt ( int x, int y ) const
+/*
+[1]QGraphicsItem * itemAt ( const QPoint & pos ) const
+[2]QGraphicsItem * itemAt ( int x, int y ) const
+*/
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMAT )
 {
@@ -850,13 +860,15 @@ void QGraphicsView_items7()
   }
 }
 
-//[1]QList<QGraphicsItem *> items () const
-//[2]QList<QGraphicsItem *> items ( const QPoint & pos ) const
-//[3]QList<QGraphicsItem *> items ( int x, int y ) const
-//[4]QList<QGraphicsItem *> items ( int x, int y, int w, int h, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
-//[5]QList<QGraphicsItem *> items ( const QRect & rect, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
-//[6]QList<QGraphicsItem *> items ( const QPolygon & polygon, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
-//[7]QList<QGraphicsItem *> items ( const QPainterPath & path, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
+/*
+[1]QList<QGraphicsItem *> items () const
+[2]QList<QGraphicsItem *> items ( const QPoint & pos ) const
+[3]QList<QGraphicsItem *> items ( int x, int y ) const
+[4]QList<QGraphicsItem *> items ( int x, int y, int w, int h, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
+[5]QList<QGraphicsItem *> items ( const QRect & rect, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
+[6]QList<QGraphicsItem *> items ( const QPolygon & polygon, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
+[7]QList<QGraphicsItem *> items ( const QPainterPath & path, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
+*/
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS )
 {
@@ -978,12 +990,14 @@ void QGraphicsView_mapFromScene6()
   }
 }
 
-//[1]QPoint mapFromScene ( const QPointF & point ) const
-//[2]QPolygon mapFromScene ( const QRectF & rect ) const
-//[3]QPolygon mapFromScene ( const QPolygonF & polygon ) const
-//[4]QPainterPath mapFromScene ( const QPainterPath & path ) const
-//[5]QPoint mapFromScene ( qreal x, qreal y ) const
-//[6]QPolygon mapFromScene ( qreal x, qreal y, qreal w, qreal h ) const
+/*
+[1]QPoint mapFromScene ( const QPointF & point ) const
+[2]QPolygon mapFromScene ( const QRectF & rect ) const
+[3]QPolygon mapFromScene ( const QPolygonF & polygon ) const
+[4]QPainterPath mapFromScene ( const QPainterPath & path ) const
+[5]QPoint mapFromScene ( qreal x, qreal y ) const
+[6]QPolygon mapFromScene ( qreal x, qreal y, qreal w, qreal h ) const
+*/
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_MAPFROMSCENE )
 {
@@ -1101,12 +1115,14 @@ void QGraphicsView_mapToScene6()
   }
 }
 
-//[1]QPointF mapToScene ( const QPoint & point ) const
-//[2]QPolygonF mapToScene ( const QRect & rect ) const
-//[3]QPolygonF mapToScene ( const QPolygon & polygon ) const
-//[4]QPainterPath mapToScene ( const QPainterPath & path ) const
-//[5]QPointF mapToScene ( int x, int y ) const
-//[6]QPolygonF mapToScene ( int x, int y, int w, int h ) const
+/*
+[1]QPointF mapToScene ( const QPoint & point ) const
+[2]QPolygonF mapToScene ( const QRect & rect ) const
+[3]QPolygonF mapToScene ( const QPolygon & polygon ) const
+[4]QPainterPath mapToScene ( const QPainterPath & path ) const
+[5]QPointF mapToScene ( int x, int y ) const
+[6]QPolygonF mapToScene ( int x, int y, int w, int h ) const
+*/
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_MAPTOSCENE )
 {
@@ -1861,8 +1877,10 @@ void QGraphicsView_setSceneRect2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setSceneRect ( const QRectF & rect )
-//[2]void setSceneRect ( qreal x, qreal y, qreal w, qreal h )
+/*
+[1]void setSceneRect ( const QRectF & rect )
+[2]void setSceneRect ( qreal x, qreal y, qreal w, qreal h )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETSCENERECT )
 {

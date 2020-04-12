@@ -180,9 +180,11 @@ void QPlatformCursorImage_set3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void set ( const uchar * data, const uchar * mask, int width, int height, int hx, int hy )
-//[2]void set ( const QImage & image, int hx, int hy )
-//[3]void set ( Qt::CursorShape id )
+/*
+[1]void set ( const uchar * data, const uchar * mask, int width, int height, int hx, int hy )
+[2]void set ( const QImage & image, int hx, int hy )
+[3]void set ( Qt::CursorShape id )
+*/
 
 HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_SET )
 {

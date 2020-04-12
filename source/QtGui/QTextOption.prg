@@ -88,9 +88,11 @@ void QTextOption_new3()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QTextOption ()
-//[2]QTextOption ( Qt::Alignment alignment )
-//[3]QTextOption ( const QTextOption & other )
+/*
+[1]QTextOption ()
+[2]QTextOption ( Qt::Alignment alignment )
+[3]QTextOption ( const QTextOption & other )
+*/
 
 HB_FUNC_STATIC( QTEXTOPTION_NEW )
 {

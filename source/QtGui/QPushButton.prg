@@ -74,9 +74,11 @@ void QPushButton_new3()
   Qt4xHb::returnNewObject( o, false );
 }
 
-//[1]QPushButton ( QWidget * parent = 0 )
-//[2]QPushButton ( const QString & text, QWidget * parent = 0 )
-//[3]QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = 0 )
+/*
+[1]QPushButton ( QWidget * parent = 0 )
+[2]QPushButton ( const QString & text, QWidget * parent = 0 )
+[3]QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QPUSHBUTTON_NEW )
 {
