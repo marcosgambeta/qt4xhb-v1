@@ -56,8 +56,10 @@ void QDomComment_new2()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QDomComment ()
-//[2]QDomComment ( const QDomComment & x )
+/*
+[1]QDomComment ()
+[2]QDomComment ( const QDomComment & x )
+*/
 
 HB_FUNC_STATIC( QDOMCOMMENT_NEW )
 {

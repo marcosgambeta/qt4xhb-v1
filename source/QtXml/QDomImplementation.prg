@@ -73,8 +73,10 @@ void QDomImplementation_new2()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QDomImplementation ()
-//[2]QDomImplementation ( const QDomImplementation & x )
+/*
+[1]QDomImplementation ()
+[2]QDomImplementation ( const QDomImplementation & x )
+*/
 
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW )
 {

@@ -71,8 +71,10 @@ void QXmlInputSource_new2()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QXmlInputSource ()
-//[2]QXmlInputSource ( QIODevice * dev )
+/*
+[1]QXmlInputSource ()
+[2]QXmlInputSource ( QIODevice * dev )
+*/
 
 HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW )
 {
@@ -238,8 +240,10 @@ void QXmlInputSource_setData2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]virtual void setData ( const QString & dat )
-//[2]virtual void setData ( const QByteArray & dat )
+/*
+[1]virtual void setData ( const QString & dat )
+[2]virtual void setData ( const QByteArray & dat )
+*/
 
 HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA )
 {
