@@ -65,8 +65,10 @@ void QSharedData_new2()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QSharedData ()
-//[2]QSharedData ( const QSharedData & other )
+/*
+[1]QSharedData ()
+[2]QSharedData ( const QSharedData & other )
+*/
 
 HB_FUNC_STATIC( QSHAREDDATA_NEW )
 {

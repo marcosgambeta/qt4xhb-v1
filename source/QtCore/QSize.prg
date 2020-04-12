@@ -76,8 +76,10 @@ void QSize_new2()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QSize ()
-//[2]QSize ( int width, int height )
+/*
+[1]QSize ()
+[2]QSize ( int width, int height )
+*/
 
 HB_FUNC_STATIC( QSIZE_NEW )
 {
@@ -288,8 +290,10 @@ void QSize_scale2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void scale ( int width, int height, Qt::AspectRatioMode mode )
-//[2]void scale ( const QSize & size, Qt::AspectRatioMode mode )
+/*
+[1]void scale ( int width, int height, Qt::AspectRatioMode mode )
+[2]void scale ( const QSize & size, Qt::AspectRatioMode mode )
+*/
 
 HB_FUNC_STATIC( QSIZE_SCALE )
 {

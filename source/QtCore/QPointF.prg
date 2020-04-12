@@ -82,9 +82,11 @@ void QPointF_new3()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QPointF()
-//[2]QPointF(const QPoint & point)
-//[3]QPointF(qreal xpos, qreal ypos)
+/*
+[1]QPointF()
+[2]QPointF(const QPoint & point)
+[3]QPointF(qreal xpos, qreal ypos)
+*/
 
 HB_FUNC_STATIC( QPOINTF_NEW )
 {

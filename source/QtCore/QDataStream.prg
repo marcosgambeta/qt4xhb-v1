@@ -99,10 +99,12 @@ void QDataStream_new4()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QDataStream ()
-//[2]QDataStream ( QIODevice * d )
-//[3]QDataStream ( QByteArray * a, QIODevice::OpenMode mode )
-//[4]QDataStream ( const QByteArray & a )
+/*
+[1]QDataStream ()
+[2]QDataStream ( QIODevice * d )
+[3]QDataStream ( QByteArray * a, QIODevice::OpenMode mode )
+[4]QDataStream ( const QByteArray & a )
+*/
 
 HB_FUNC_STATIC( QDATASTREAM_NEW )
 {

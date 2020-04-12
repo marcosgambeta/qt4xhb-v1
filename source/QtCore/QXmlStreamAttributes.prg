@@ -129,9 +129,11 @@ void QXmlStreamAttributes_append3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void append(const QString & namespaceUri, const QString & name, const QString & value)
-//[2]void append(const QXmlStreamAttribute & attribute)
-//[3]void append(const QString & qualifiedName, const QString & value)
+/*
+[1]void append(const QString & namespaceUri, const QString & name, const QString & value)
+[2]void append(const QXmlStreamAttribute & attribute)
+[3]void append(const QString & qualifiedName, const QString & value)
+*/
 
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_APPEND )
 {
@@ -192,9 +194,11 @@ void QXmlStreamAttributes_hasAttribute3()
   }
 }
 
-//[1]bool hasAttribute(const QString & qualifiedName) const
-//[2]bool hasAttribute(QLatin1String qualifiedName) const
-//[3]bool hasAttribute(const QString & namespaceUri, const QString & name) const
+/*
+[1]bool hasAttribute(const QString & qualifiedName) const
+[2]bool hasAttribute(QLatin1String qualifiedName) const
+[3]bool hasAttribute(const QString & namespaceUri, const QString & name) const
+*/
 
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE )
 {
@@ -286,11 +290,13 @@ void QXmlStreamAttributes_value5()
   }
 }
 
-//[1]QStringRef value(const QString & namespaceUri, const QString & name) const
-//[2]QStringRef value(const QString & namespaceUri, QLatin1String name) const
-//[3]QStringRef value(QLatin1String namespaceUri, QLatin1String name) const
-//[4]QStringRef value(const QString & qualifiedName) const
-//[5]QStringRef value(QLatin1String qualifiedName) const
+/*
+[1]QStringRef value(const QString & namespaceUri, const QString & name) const
+[2]QStringRef value(const QString & namespaceUri, QLatin1String name) const
+[3]QStringRef value(QLatin1String namespaceUri, QLatin1String name) const
+[4]QStringRef value(const QString & qualifiedName) const
+[5]QStringRef value(QLatin1String qualifiedName) const
+*/
 
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE )
 {

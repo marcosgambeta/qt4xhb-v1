@@ -91,8 +91,10 @@ void QDate_new2()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QDate ()
-//[2]QDate ( int y, int m, int d )
+/*
+[1]QDate ()
+[2]QDate ( int y, int m, int d )
+*/
 
 HB_FUNC_STATIC( QDATE_NEW )
 {
@@ -500,8 +502,10 @@ void QDate_toString2()
   }
 }
 
-//[1]QString toString ( const QString & format ) const
-//[2]QString toString ( Qt::DateFormat format = Qt::TextDate ) const
+/*
+[1]QString toString ( const QString & format ) const
+[2]QString toString ( Qt::DateFormat format = Qt::TextDate ) const
+*/
 
 HB_FUNC_STATIC( QDATE_TOSTRING )
 {
@@ -629,8 +633,10 @@ void QDate_fromString2()
   Qt4xHb::createReturnClass( ptr, "QDATE", true );
 }
 
-//[1]QDate fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
-//[2]QDate fromString ( const QString & string, const QString & format )
+/*
+[1]QDate fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
+[2]QDate fromString ( const QString & string, const QString & format )
+*/
 
 HB_FUNC_STATIC( QDATE_FROMSTRING )
 {
@@ -689,8 +695,10 @@ void QDate_isValid2()
   RBOOL( QDate::isValid( PINT(1), PINT(2), PINT(3) ) );
 }
 
-//[1]bool isValid () const
-//[2]bool isValid ( int year, int month, int day )
+/*
+[1]bool isValid () const
+[2]bool isValid ( int year, int month, int day )
+*/
 
 HB_FUNC_STATIC( QDATE_ISVALID )
 {
@@ -726,8 +734,10 @@ void QDate_longDayName2()
   RQSTRING( QDate::longDayName( PINT(1), (QDate::MonthNameType) hb_parni(2) ) );
 }
 
-//[1]QString longDayName ( int weekday )
-//[2]QString longDayName ( int weekday, MonthNameType type )
+/*
+[1]QString longDayName ( int weekday )
+[2]QString longDayName ( int weekday, MonthNameType type )
+*/
 
 HB_FUNC_STATIC( QDATE_LONGDAYNAME )
 {
@@ -763,8 +773,10 @@ void QDate_longMonthName2()
   RQSTRING( QDate::longMonthName( PINT(1), (QDate::MonthNameType) hb_parni(2) ) );
 }
 
-//[1]QString longMonthName ( int month )
-//[2]QString longMonthName ( int month, MonthNameType type )
+/*
+[1]QString longMonthName ( int month )
+[2]QString longMonthName ( int month, MonthNameType type )
+*/
 
 HB_FUNC_STATIC( QDATE_LONGMONTHNAME )
 {
@@ -800,8 +812,10 @@ void QDate_shortDayName2()
   RQSTRING( QDate::shortDayName( PINT(1), (QDate::MonthNameType) hb_parni(2) ) );
 }
 
-//[1]QString shortDayName ( int weekday )
-//[2]QString shortDayName ( int weekday, MonthNameType type )
+/*
+[1]QString shortDayName ( int weekday )
+[2]QString shortDayName ( int weekday, MonthNameType type )
+*/
 
 HB_FUNC_STATIC( QDATE_SHORTDAYNAME )
 {
@@ -837,8 +851,10 @@ void QDate_shortMonthName2()
   RQSTRING( QDate::shortMonthName( PINT(1), (QDate::MonthNameType) hb_parni(2) ) );
 }
 
-//[1]QString shortMonthName ( int month )
-//[2]QString shortMonthName ( int month, MonthNameType type )
+/*
+[1]QString shortMonthName ( int month )
+[2]QString shortMonthName ( int month, MonthNameType type )
+*/
 
 HB_FUNC_STATIC( QDATE_SHORTMONTHNAME )
 {

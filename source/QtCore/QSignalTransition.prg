@@ -64,8 +64,10 @@ void QSignalTransition_new2()
   Qt4xHb::returnNewObject( o, false );
 }
 
-//[1]QSignalTransition(QState *sourceState = 0)
-//[2]QSignalTransition(QObject *sender, const char *signal,QState *sourceState = 0)
+/*
+[1]QSignalTransition(QState *sourceState = 0)
+[2]QSignalTransition(QObject *sender, const char *signal,QState *sourceState = 0)
+*/
 
 HB_FUNC_STATIC( QSIGNALTRANSITION_NEW )
 {

@@ -90,10 +90,12 @@ void QXmlStreamAttribute_new4()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QXmlStreamAttribute()
-//[2]QXmlStreamAttribute(const QString & qualifiedName, const QString & value)
-//[3]QXmlStreamAttribute(const QString & namespaceUri, const QString & name, const QString & value)
-//[4]QXmlStreamAttribute(const QXmlStreamAttribute & other)
+/*
+[1]QXmlStreamAttribute()
+[2]QXmlStreamAttribute(const QString & qualifiedName, const QString & value)
+[3]QXmlStreamAttribute(const QString & namespaceUri, const QString & name, const QString & value)
+[4]QXmlStreamAttribute(const QXmlStreamAttribute & other)
+*/
 
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW )
 {

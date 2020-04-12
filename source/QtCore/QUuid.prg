@@ -110,12 +110,14 @@ HB_FUNC_STATIC( QUUID_NEW5 )
 QUuid(const GUID &guid)
 */
 
-//[1]QUuid()
-//[2]QUuid(uint l, ushort w1, ushort w2, uchar b1, uchar b2, uchar b3, uchar b4, uchar b5, uchar b6, uchar b7, uchar b8)
-//[3]QUuid(const QString &)
-//[4]QUuid(const char *)
-//[5]QUuid(const QByteArray &)
-//[6]QUuid(const GUID &guid)
+/*
+[1]QUuid()
+[2]QUuid(uint l, ushort w1, ushort w2, uchar b1, uchar b2, uchar b3, uchar b4, uchar b5, uchar b6, uchar b7, uchar b8)
+[3]QUuid(const QString &)
+[4]QUuid(const char *)
+[5]QUuid(const QByteArray &)
+[6]QUuid(const GUID &guid)
+*/
 
 HB_FUNC_STATIC( QUUID_NEW )
 {

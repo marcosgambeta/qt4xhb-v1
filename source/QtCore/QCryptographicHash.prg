@@ -115,8 +115,10 @@ void QCryptographicHash_addData2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void addData ( const char * data, int length )
-//[2]void addData ( const QByteArray & data )
+/*
+[1]void addData ( const char * data, int length )
+[2]void addData ( const QByteArray & data )
+*/
 
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_ADDDATA )
 {

@@ -100,8 +100,10 @@ void QFutureInterfaceBase_new2()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QFutureInterfaceBase(State initialState = NoState)
-//[2]QFutureInterfaceBase(const QFutureInterfaceBase &other)
+/*
+[1]QFutureInterfaceBase(State initialState = NoState)
+[2]QFutureInterfaceBase(const QFutureInterfaceBase &other)
+*/
 
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_NEW )
 {

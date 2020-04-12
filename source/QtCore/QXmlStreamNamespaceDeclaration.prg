@@ -77,9 +77,11 @@ void QXmlStreamNamespaceDeclaration_new3()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QXmlStreamNamespaceDeclaration()
-//[2]QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & other)
-//[3]QXmlStreamNamespaceDeclaration(const QString & prefix, const QString & namespaceUri)
+/*
+[1]QXmlStreamNamespaceDeclaration()
+[2]QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & other)
+[3]QXmlStreamNamespaceDeclaration(const QString & prefix, const QString & namespaceUri)
+*/
 
 HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEW )
 {

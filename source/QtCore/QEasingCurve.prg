@@ -73,8 +73,10 @@ void QEasingCurve_new2()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QEasingCurve(Type type = Linear)
-//[2]QEasingCurve(const QEasingCurve & other)
+/*
+[1]QEasingCurve(Type type = Linear)
+[2]QEasingCurve(const QEasingCurve & other)
+*/
 
 HB_FUNC_STATIC( QEASINGCURVE_NEW )
 {

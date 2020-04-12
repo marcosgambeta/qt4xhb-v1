@@ -83,10 +83,12 @@ void QTemporaryFile_new4()
   Qt4xHb::returnNewObject( o, false );
 }
 
-//[1]QTemporaryFile()
-//[2]QTemporaryFile(const QString & templateName)
-//[3]QTemporaryFile(QObject * parent)
-//[4]QTemporaryFile(const QString & templateName, QObject * parent)
+/*
+[1]QTemporaryFile()
+[2]QTemporaryFile(const QString & templateName)
+[3]QTemporaryFile(QObject * parent)
+[4]QTemporaryFile(const QString & templateName, QObject * parent)
+*/
 
 HB_FUNC_STATIC( QTEMPORARYFILE_NEW )
 {
@@ -280,6 +282,11 @@ HB_FUNC_STATIC( QTEMPORARYFILE_FILENAME )
 }
 
 /*
+[1]static QTemporaryFile * createNativeFile(QFile & file)
+[2]static QTemporaryFile * createNativeFile(const QString & fileName)
+*/
+
+/*
 static QTemporaryFile * createLocalFile(QFile & file)
 */
 void QTemporaryFile_createLocalFile1()
@@ -299,8 +306,10 @@ void QTemporaryFile_createLocalFile2()
   Qt4xHb::createReturnQObjectClass( ptr, "QTEMPORARYFILE" );
 }
 
-//[1]static QTemporaryFile * createLocalFile(QFile & file)
-//[2]static QTemporaryFile * createLocalFile(const QString & fileName)
+/*
+[1]static QTemporaryFile * createLocalFile(QFile & file)
+[2]static QTemporaryFile * createLocalFile(const QString & fileName)
+*/
 
 HB_FUNC_STATIC( QTEMPORARYFILE_CREATELOCALFILE )
 {

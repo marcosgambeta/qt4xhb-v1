@@ -340,8 +340,10 @@ void QThreadPool_waitForDone2()
   }
 }
 
-//[1]void waitForDone ()
-//[2]bool waitForDone ( int msecs )
+/*
+[1]void waitForDone ()
+[2]bool waitForDone ( int msecs )
+*/
 
 HB_FUNC_STATIC( QTHREADPOOL_WAITFORDONE )
 {

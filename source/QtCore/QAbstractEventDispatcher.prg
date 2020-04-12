@@ -251,8 +251,10 @@ void QAbstractEventDispatcher_registerTimer2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]int registerTimer ( int interval, QObject * object )
-//[2]virtual void registerTimer ( int timerId, int interval, QObject * object ) = 0
+/*
+[1]int registerTimer ( int interval, QObject * object )
+[2]virtual void registerTimer ( int timerId, int interval, QObject * object ) = 0
+*/
 
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER )
 {

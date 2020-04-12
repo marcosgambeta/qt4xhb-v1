@@ -69,8 +69,10 @@ void QFileSystemWatcher_new2()
   Qt4xHb::returnNewObject( o, false );
 }
 
-//[1]QFileSystemWatcher(QObject * parent = 0)
-//[2]QFileSystemWatcher(const QStringList & paths, QObject * parent = 0)
+/*
+[1]QFileSystemWatcher(QObject * parent = 0)
+[2]QFileSystemWatcher(const QStringList & paths, QObject * parent = 0)
+*/
 
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW )
 {

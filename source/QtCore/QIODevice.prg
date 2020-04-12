@@ -73,6 +73,11 @@ RETURN
 #include "qt4xhb_events.h"
 #include "qt4xhb_signals.h"
 
+/*
+[1]QIODevice ()
+[2]QIODevice ( QObject * parent )
+*/
+
 HB_FUNC_STATIC( QIODEVICE_DELETE )
 {
   QIODevice * obj = (QIODevice *) Qt4xHb::itemGetPtrStackSelfItem();
@@ -457,8 +462,10 @@ void QIODevice_peek2()
   }
 }
 
-//[1]qint64 peek ( char * data, qint64 maxSize )
-//[2]QByteArray peek ( qint64 maxSize )
+/*
+[1]qint64 peek ( char * data, qint64 maxSize )
+[2]QByteArray peek ( qint64 maxSize )
+*/
 
 HB_FUNC_STATIC( QIODEVICE_PEEK )
 {
@@ -551,8 +558,10 @@ void QIODevice_read2()
   }
 }
 
-//[1]qint64 read ( char * data, qint64 maxSize )
-//[2]QByteArray read ( qint64 maxSize )
+/*
+[1]qint64 read ( char * data, qint64 maxSize )
+[2]QByteArray read ( qint64 maxSize )
+*/
 
 HB_FUNC_STATIC( QIODEVICE_READ )
 {
@@ -622,8 +631,10 @@ void QIODevice_readLine2()
   }
 }
 
-//[1]qint64 readLine ( char * data, qint64 maxSize )
-//[2]QByteArray readLine ( qint64 maxSize = 0 )
+/*
+[1]qint64 readLine ( char * data, qint64 maxSize )
+[2]QByteArray readLine ( qint64 maxSize = 0 )
+*/
 
 HB_FUNC_STATIC( QIODEVICE_READLINE )
 {
@@ -852,9 +863,11 @@ void QIODevice_write3()
   }
 }
 
-//[1]qint64 write ( const char * data, qint64 maxSize )
-//[2]qint64 write ( const char * data )
-//[3]qint64 write ( const QByteArray & byteArray )
+/*
+[1]qint64 write ( const char * data, qint64 maxSize )
+[2]qint64 write ( const char * data )
+[3]qint64 write ( const QByteArray & byteArray )
+*/
 
 HB_FUNC_STATIC( QIODEVICE_WRITE )
 {

@@ -78,8 +78,10 @@ void QModelIndex_new2()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QModelIndex ()
-//[2]QModelIndex ( const QModelIndex & other )
+/*
+[1]QModelIndex ()
+[2]QModelIndex ( const QModelIndex & other )
+*/
 
 HB_FUNC_STATIC( QMODELINDEX_NEW )
 {

@@ -71,8 +71,10 @@ void QXmlStreamEntityDeclaration_new2()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QXmlStreamEntityDeclaration()
-//[2]QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & other)
+/*
+[1]QXmlStreamEntityDeclaration()
+[2]QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & other)
+*/
 
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEW )
 {

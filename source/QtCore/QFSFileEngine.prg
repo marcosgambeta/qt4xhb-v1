@@ -94,8 +94,10 @@ void QFSFileEngine_new2()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QFSFileEngine ()
-//[2]QFSFileEngine ( const QString & file )
+/*
+[1]QFSFileEngine ()
+[2]QFSFileEngine ( const QString & file )
+*/
 
 HB_FUNC_STATIC( QFSFILEENGINE_NEW )
 {
@@ -186,11 +188,13 @@ void QFSFileEngine_open4()
 bool open ( QIODevice::OpenMode openMode, const RFile & file, QFile::FileHandleFlags handleFlags )
 */
 
-//[1]bool open ( QIODevice::OpenMode openMode, FILE * fh )
-//[2]bool open ( QIODevice::OpenMode openMode, int fd )
-//[3]bool open ( QIODevice::OpenMode openMode, int fd, QFile::FileHandleFlags handleFlags )
-//[4]bool open ( QIODevice::OpenMode openMode, FILE * fh, QFile::FileHandleFlags handleFlags )
-//[5]bool open ( QIODevice::OpenMode openMode, const RFile & file, QFile::FileHandleFlags handleFlags )
+/*
+[1]bool open ( QIODevice::OpenMode openMode, FILE * fh )
+[2]bool open ( QIODevice::OpenMode openMode, int fd )
+[3]bool open ( QIODevice::OpenMode openMode, int fd, QFile::FileHandleFlags handleFlags )
+[4]bool open ( QIODevice::OpenMode openMode, FILE * fh, QFile::FileHandleFlags handleFlags )
+[5]bool open ( QIODevice::OpenMode openMode, const RFile & file, QFile::FileHandleFlags handleFlags )
+*/
 
 HB_FUNC_STATIC( QFSFILEENGINE_OPEN )
 {

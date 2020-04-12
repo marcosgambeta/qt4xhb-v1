@@ -155,10 +155,12 @@ void QUrl_new4()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QUrl ()
-//[2]QUrl ( const QString & url )
-//[3]QUrl ( const QUrl & other )
-//[4]QUrl ( const QString & url, ParsingMode parsingMode )
+/*
+[1]QUrl ()
+[2]QUrl ( const QString & url )
+[3]QUrl ( const QUrl & other )
+[4]QUrl ( const QString & url, ParsingMode parsingMode )
+*/
 
 HB_FUNC_STATIC( QURL_NEW )
 {
@@ -916,8 +918,10 @@ void QUrl_port2()
   }
 }
 
-//[1]int port () const
-//[2]int port ( int defaultPort ) const
+/*
+[1]int port () const
+[2]int port ( int defaultPort ) const
+*/
 
 HB_FUNC_STATIC( QURL_PORT )
 {
@@ -1298,8 +1302,10 @@ void QUrl_setEncodedUrl2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setEncodedUrl ( const QByteArray & encodedUrl )
-//[2]void setEncodedUrl ( const QByteArray & encodedUrl, ParsingMode parsingMode )
+/*
+[1]void setEncodedUrl ( const QByteArray & encodedUrl )
+[2]void setEncodedUrl ( const QByteArray & encodedUrl, ParsingMode parsingMode )
+*/
 
 HB_FUNC_STATIC( QURL_SETENCODEDURL )
 {
@@ -1555,8 +1561,10 @@ void QUrl_setUrl2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setUrl ( const QString & url )
-//[2]void setUrl ( const QString & url, ParsingMode parsingMode )
+/*
+[1]void setUrl ( const QString & url )
+[2]void setUrl ( const QString & url, ParsingMode parsingMode )
+*/
 
 HB_FUNC_STATIC( QURL_SETURL )
 {
@@ -1836,8 +1844,10 @@ void QUrl_fromEncoded2()
   Qt4xHb::createReturnClass( ptr, "QURL", true );
 }
 
-//[1]QUrl fromEncoded ( const QByteArray & input )
-//[2]QUrl fromEncoded ( const QByteArray & input, ParsingMode parsingMode )
+/*
+[1]QUrl fromEncoded ( const QByteArray & input )
+[2]QUrl fromEncoded ( const QByteArray & input, ParsingMode parsingMode )
+*/
 
 HB_FUNC_STATIC( QURL_FROMENCODED )
 {
