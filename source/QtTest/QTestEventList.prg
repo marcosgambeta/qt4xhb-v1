@@ -83,8 +83,10 @@ void QTestEventList_new2()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QTestEventList ()
-//[2]QTestEventList ( const QTestEventList & other )
+/*
+[1]QTestEventList ()
+[2]QTestEventList ( const QTestEventList & other )
+*/
 
 HB_FUNC_STATIC( QTESTEVENTLIST_NEW )
 {
@@ -197,8 +199,10 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICK2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void addKeyClick ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
-//[2]void addKeyClick ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+/*
+[1]void addKeyClick ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+[2]void addKeyClick ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+*/
 
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICK )
 {
@@ -294,8 +298,10 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYPRESS2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void addKeyPress ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
-//[2]void addKeyPress ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+/*
+[1]void addKeyPress ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+[2]void addKeyPress ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+*/
 
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYPRESS )
 {
@@ -365,8 +371,10 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYRELEASE2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void addKeyRelease ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
-//[2]void addKeyRelease ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+/*
+[1]void addKeyRelease ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+[2]void addKeyRelease ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+*/
 
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYRELEASE )
 {
