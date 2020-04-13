@@ -67,6 +67,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_NEW )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=new
 
 $deleteMethod
 
@@ -201,6 +202,7 @@ $prototype=bool setContent ( QXmlInputSource * source, QXmlReader * reader, QStr
 %%   }
 %%
 %% }
+%% $addMethod=setContext
 
 $prototype=QByteArray toByteArray ( int indent = 1 ) const
 $method=|QByteArray|toByteArray|int=1
