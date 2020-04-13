@@ -27,10 +27,10 @@ $destructor
 
 $includes
 
-/*
-[1]QIODevice ()
-[2]QIODevice ( QObject * parent )
-*/
+%% /*
+%% [1]QIODevice ()
+%% [2]QIODevice ( QObject * parent )
+%% */
 
 %% //HB_FUNC_STATIC( QIODEVICE_NEW )
 %% //{

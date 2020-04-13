@@ -67,6 +67,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_NEW )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=new
 
 $deleteMethod
 
@@ -96,10 +97,10 @@ $virtualMethod=|QString|fileName|
 %% $prototype=static QTemporaryFile * createNativeFile(const QString & fileName)
 %% $internalStaticMethod=|QTemporaryFile *|createNativeFile,createNativeFile2|const QString &
 
-/*
-[1]static QTemporaryFile * createNativeFile(QFile & file)
-[2]static QTemporaryFile * createNativeFile(const QString & fileName)
-*/
+%% /*
+%% [1]static QTemporaryFile * createNativeFile(QFile & file)
+%% [2]static QTemporaryFile * createNativeFile(const QString & fileName)
+%% */
 
 %% HB_FUNC_STATIC( QTEMPORARYFILE_CREATENATIVEFILE )
 %% {
