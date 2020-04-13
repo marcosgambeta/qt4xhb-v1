@@ -73,11 +73,6 @@ RETURN
 #include "qt4xhb_events.h"
 #include "qt4xhb_signals.h"
 
-/*
-[1]QIODevice ()
-[2]QIODevice ( QObject * parent )
-*/
-
 HB_FUNC_STATIC( QIODEVICE_DELETE )
 {
   QIODevice * obj = (QIODevice *) Qt4xHb::itemGetPtrStackSelfItem();

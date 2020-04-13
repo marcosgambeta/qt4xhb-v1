@@ -282,11 +282,6 @@ HB_FUNC_STATIC( QTEMPORARYFILE_FILENAME )
 }
 
 /*
-[1]static QTemporaryFile * createNativeFile(QFile & file)
-[2]static QTemporaryFile * createNativeFile(const QString & fileName)
-*/
-
-/*
 static QTemporaryFile * createLocalFile(QFile & file)
 */
 void QTemporaryFile_createLocalFile1()
