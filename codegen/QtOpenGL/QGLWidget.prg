@@ -59,6 +59,7 @@ HB_FUNC_STATIC( QGLWIDGET_NEW )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=new
 
 $deleteMethod
 
@@ -85,7 +86,8 @@ $internalMethod=|GLuint|bindTexture,bindTexture5|const QString &
 [5]GLuint bindTexture ( const QString & fileName )
 */
 
-HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE ) // TODO: resolver conflitos 1/2 com 3/4
+%% TODO: resolver conflitos 1/2 com 3/4
+HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE )
 {
   if( ISBETWEEN(1,3) && ISQIMAGE(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
@@ -112,6 +114,7 @@ HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE ) // TODO: resolver conflitos 1/2 com 3/4
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=bindTexture
 
 $prototype=const QGLColormap & colormap () const
 $method=|const QGLColormap &|colormap|
@@ -154,6 +157,7 @@ HB_FUNC_STATIC( QGLWIDGET_DRAWTEXTURE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=drawTexture
 
 $prototype=QGLFormat format () const
 $method=|QGLFormat|format|
@@ -211,6 +215,7 @@ HB_FUNC_STATIC( QGLWIDGET_RENDERTEXT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=renderText
 
 $prototype=void setColormap ( const QGLColormap & cmap )
 $method=|void|setColormap|const QGLColormap &

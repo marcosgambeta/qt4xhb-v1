@@ -59,6 +59,7 @@ HB_FUNC_STATIC( QGLBUFFER_NEW )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=new
 
 $deleteMethod
 
@@ -88,6 +89,7 @@ HB_FUNC_STATIC( QGLBUFFER_ALLOCATE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=allocate
 
 $prototype=bool bind ()
 $method=|bool|bind|
@@ -151,6 +153,7 @@ HB_FUNC_STATIC( QGLBUFFER_RELEASE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=release
 
 $extraMethods
 

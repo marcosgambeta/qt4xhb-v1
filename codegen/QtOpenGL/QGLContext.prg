@@ -80,6 +80,7 @@ HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=bindTexture
 
 $prototype=virtual bool create ( const QGLContext * shareContext = 0 )
 $virtualMethod=|bool|create|const QGLContext *=0
@@ -119,6 +120,7 @@ HB_FUNC_STATIC( QGLCONTEXT_DRAWTEXTURE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=drawTexture
 
 $prototype=QGLFormat format () const
 $method=|QGLFormat|format|
