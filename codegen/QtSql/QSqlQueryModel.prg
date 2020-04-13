@@ -69,6 +69,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_RECORD )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=record
 
 $prototype=void setQuery ( const QSqlQuery & query )
 $internalMethod=|void|setQuery,setQuery1|const QSqlQuery &
@@ -96,6 +97,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_SETQUERY )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setQuery
 
 $prototype=virtual bool canFetchMore ( const QModelIndex & parent = QModelIndex() ) const
 $virtualMethod=|bool|canFetchMore|const QModelIndex &=QModelIndex()

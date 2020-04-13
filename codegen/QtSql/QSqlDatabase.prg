@@ -58,6 +58,7 @@ HB_FUNC_STATIC( QSQLDATABASE_NEW )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=new
 
 $deleteMethod
 
@@ -129,6 +130,7 @@ HB_FUNC_STATIC( QSQLDATABASE_OPEN )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=open
 
 $prototype=QString password () const
 $method=|QString|password|
@@ -258,6 +260,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ADDDATABASE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=addDatabase
 
 $prototype=static QSqlDatabase cloneDatabase ( const QSqlDatabase & other, const QString & connectionName )
 $staticMethod=|QSqlDatabase|cloneDatabase|const QSqlDatabase &,const QString &

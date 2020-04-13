@@ -51,6 +51,7 @@ HB_FUNC_STATIC( QSQLINDEX_NEW )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=new
 
 $deleteMethod
 
@@ -80,6 +81,7 @@ HB_FUNC_STATIC( QSQLINDEX_APPEND )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=append
 
 $prototype=QString cursorName () const
 $method=|QString|cursorName|
