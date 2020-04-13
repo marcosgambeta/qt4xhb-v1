@@ -46,12 +46,6 @@ RETURN
 
 #include <QtGui/QTextDocument>
 
-/*
-[1]QSyntaxHighlighter ( QObject * parent )
-[2]QSyntaxHighlighter ( QTextDocument * parent )
-[3]QSyntaxHighlighter ( QTextEdit * parent )
-*/
-
 HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_DELETE )
 {
   QSyntaxHighlighter * obj = (QSyntaxHighlighter *) Qt4xHb::itemGetPtrStackSelfItem();

@@ -49,10 +49,6 @@ CLASS QMenu INHERIT QWidget
    METHOD setTitle
    METHOD title
    METHOD sizeHint
-   METHOD exec1
-   METHOD exec2
-   METHOD exec3
-   METHOD exec4
    METHOD exec
 
    METHOD onAboutToHide
@@ -948,86 +944,73 @@ HB_FUNC_STATIC( QMENU_SIZEHINT )
 /*
 QAction * exec ()
 */
-HB_FUNC_STATIC( QMENU_EXEC1 )
+void QMenu_exec1()
 {
   QMenu * obj = (QMenu *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-#ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
-    {
-#endif
-      QAction * ptr = obj->exec();
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
-#ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-#endif
+    QAction * ptr = obj->exec();
+    Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
   }
 }
 
 /*
 QAction * exec ( const QPoint & p, QAction * action = 0 )
 */
-HB_FUNC_STATIC( QMENU_EXEC2 )
+void QMenu_exec2()
 {
   QMenu * obj = (QMenu *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-#ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQPOINT(1) && (ISQACTION(2)||ISNIL(2)) )
-    {
-#endif
-      QAction * ptr = obj->exec( *PQPOINT(1), OPQACTION(2,0) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
-#ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-#endif
+    QAction * ptr = obj->exec( *PQPOINT(1), OPQACTION(2,0) );
+    Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
   }
 }
 
 /*
 QAction * exec ( QList<QAction *> actions, const QPoint & pos, QAction * at, QWidget * parent )
 */
-HB_FUNC_STATIC( QMENU_EXEC3 )
+void QMenu_exec3()
 {
-  QList<QAction *> par1;
-  PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-  int i1;
-  int nLen1 = hb_arrayLen(aList1);
-  for (i1=0;i1<nLen1;i1++)
+  QMenu * obj = (QMenu *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
   {
-    par1 << (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    QList<QAction *> par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    for (i1=0;i1<nLen1;i1++)
+    {
+      par1 << (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    }
+    QAction * ptr = obj->exec( par1, *PQPOINT(2), PQACTION(3), PQWIDGET(4) );
+    Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
   }
-  QAction * ptr = QMenu::exec ( par1, *PQPOINT(2), PQACTION(3), PQWIDGET(4) );
-  Qt4xHb::createReturnClass ( ptr, "QACTION" );
 }
 
 /*
 QAction * exec ( QList<QAction *> actions, const QPoint & pos, QAction * at = 0 )
 */
-HB_FUNC_STATIC( QMENU_EXEC4 )
+void QMenu_exec4()
 {
-  QList<QAction *> par1;
-  PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-  int i1;
-  int nLen1 = hb_arrayLen(aList1);
-  for (i1=0;i1<nLen1;i1++)
+  QMenu * obj = (QMenu *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
   {
-    par1 << (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    QList<QAction *> par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    for (i1=0;i1<nLen1;i1++)
+    {
+      par1 << (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    }
+    QAction * ptr = obj->exec( par1, *PQPOINT(2), OPQACTION(3,0) );
+    Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
   }
-  QAction * par3 = ISNIL(3)? 0 : (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QAction * ptr = QMenu::exec ( par1, *PQPOINT(2), par3 );
-  Qt4xHb::createReturnClass ( ptr, "QACTION" );
 }
 
 /*
@@ -1041,19 +1024,19 @@ HB_FUNC_STATIC( QMENU_EXEC )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QMENU_EXEC1 );
+    QMenu_exec1();
   }
   else if( ISBETWEEN(1,2) && ISQPOINT(1) && (ISQACTION(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QMENU_EXEC2 );
+    QMenu_exec2();
   }
   else if( ISNUMPAR(4) && ISARRAY(1) && ISQPOINT(2) && ISQACTION(3) && ISQWIDGET(4) )
   {
-    HB_FUNC_EXEC( QMENU_EXEC1 );
+    QMenu_exec3();
   }
   else if( ISBETWEEN(2,3) && ISARRAY(1) && ISQPOINT(2) && (ISQACTION(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QMENU_EXEC2 );
+    QMenu_exec4();
   }
   else
   {

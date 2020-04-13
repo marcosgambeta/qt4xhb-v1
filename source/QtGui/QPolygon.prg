@@ -23,7 +23,6 @@ CLASS QPolygon
    DATA self_destruction INIT .F.
 
    METHOD new
-   METHOD new4
    METHOD delete
    METHOD boundingRect
    METHOD containsPoint
@@ -92,7 +91,7 @@ void QPolygon_new3()
 /*
 QPolygon ( const QVector<QPoint> & points )
 */
-HB_FUNC_STATIC( QPOLYGON_NEW4 )
+void QPolygon_new4()
 {
   QVector<QPoint> par1;
   PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
@@ -102,8 +101,8 @@ HB_FUNC_STATIC( QPOLYGON_NEW4 )
   {
     par1 << *(QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
   }
-  QPolygon * o = new QPolygon ( par1 );
-  Qt4xHb::storePointerAndFlag ( o, true );
+  QPolygon * o = new QPolygon( par1 );
+  Qt4xHb::returnNewObject( o, true );
 }
 
 /*
@@ -139,7 +138,7 @@ HB_FUNC_STATIC( QPOLYGON_NEW )
   }
   else if( ISNUMPAR(1) && ISARRAY(1) )
   {
-    HB_FUNC_EXEC( QPOLYGON_NEW4 );
+    QPolygon_new4();
   }
   else if( ISBETWEEN(1,2) && ISQRECT(1) && (ISLOG(2)||ISNIL(2)) )
   {

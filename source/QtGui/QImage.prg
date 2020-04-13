@@ -1416,11 +1416,6 @@ HB_FUNC_STATIC( QIMAGE_SCALEDTOWIDTH )
 }
 
 /*
-[1]uchar * scanLine ( int i )
-[2]const uchar * scanLine ( int i ) const
-*/
-
-/*
 void setColor ( int index, QRgb colorValue )
 */
 HB_FUNC_STATIC( QIMAGE_SETCOLOR )
