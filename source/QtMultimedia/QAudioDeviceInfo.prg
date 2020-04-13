@@ -82,8 +82,10 @@ void QAudioDeviceInfo_new2()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QAudioDeviceInfo ()
-//[2]QAudioDeviceInfo ( const QAudioDeviceInfo & other )
+/*
+[1]QAudioDeviceInfo ()
+[2]QAudioDeviceInfo ( const QAudioDeviceInfo & other )
+*/
 
 HB_FUNC_STATIC( QAUDIODEVICEINFO_NEW )
 {

@@ -119,11 +119,13 @@ void QVideoFrame_new5()
   Qt4xHb::returnNewObject( o, true );
 }
 
-//[1]QVideoFrame ()
-//[2]QVideoFrame ( QAbstractVideoBuffer * buffer, const QSize & size, PixelFormat format )
-//[3]QVideoFrame ( int bytes, const QSize & size, int bytesPerLine, PixelFormat format )
-//[4]QVideoFrame ( const QImage & image )
-//[5]QVideoFrame ( const QVideoFrame & other )
+/*
+[1]QVideoFrame ()
+[2]QVideoFrame ( QAbstractVideoBuffer * buffer, const QSize & size, PixelFormat format )
+[3]QVideoFrame ( int bytes, const QSize & size, int bytesPerLine, PixelFormat format )
+[4]QVideoFrame ( const QImage & image )
+[5]QVideoFrame ( const QVideoFrame & other )
+*/
 
 HB_FUNC_STATIC( QVIDEOFRAME_NEW )
 {
