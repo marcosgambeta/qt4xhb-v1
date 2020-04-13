@@ -214,7 +214,7 @@ void QGLWidget_bindTexture5()
 [5]GLuint bindTexture ( const QString & fileName )
 */
 
-HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE ) // TODO: resolver conflitos 1/2 com 3/4
+HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE )
 {
   if( ISBETWEEN(1,3) && ISQIMAGE(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
