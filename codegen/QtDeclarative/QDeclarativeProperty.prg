@@ -99,6 +99,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=new
 
 $prototype=bool connectNotifySignal ( QObject * dest, const char * slot ) const
 $internalMethod=|bool|connectNotifySignal,connectNotifySignal1|QObject *,const char *
@@ -126,6 +127,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_CONNECTNOTIFYSIGNAL )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=connectNotifySignal
 
 $prototype=bool hasNotifySignal () const
 $method=|bool|hasNotifySignal|
@@ -223,6 +225,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_READ )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=read
 
 $prototype=bool write ( const QVariant & value ) const
 $internalMethod=|bool|write,write1|const QVariant &
@@ -266,6 +269,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_WRITE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=write
 
 $extraMethods
 
