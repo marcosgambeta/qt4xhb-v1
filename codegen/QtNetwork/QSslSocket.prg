@@ -68,6 +68,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ADDCACERTIFICATES )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=addCaCertificates
 
 $prototype=QList<QSslCertificate> caCertificates () const
 $method=|QList<QSslCertificate>|caCertificates|
@@ -101,6 +102,7 @@ HB_FUNC_STATIC( QSSLSOCKET_CONNECTTOHOSTENCRYPTED )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=connectToHostEncrypted
 
 $prototype=qint64 encryptedBytesAvailable () const
 $method=|qint64|encryptedBytesAvailable|
@@ -137,6 +139,7 @@ HB_FUNC_STATIC( QSSLSOCKET_IGNORESSLERRORS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=ignoreSslErrors
 
 $prototype=bool isEncrypted () const
 $method=|bool|isEncrypted|
@@ -197,6 +200,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETCIPHERS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setCiphers
 
 $prototype=void setLocalCertificate ( const QSslCertificate & certificate )
 $internalMethod=|void|setLocalCertificate,setLocalCertificate1|const QSslCertificate &
@@ -224,6 +228,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETLOCALCERTIFICATE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setLocalCertificate
 
 $prototype=void setPeerVerifyDepth ( int depth )
 $method=|void|setPeerVerifyDepth|int
@@ -257,6 +262,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETPRIVATEKEY )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setPrivateKey
 
 $prototype=void setProtocol ( QSsl::SslProtocol protocol )
 $method=|void|setProtocol|QSsl::SslProtocol
@@ -347,6 +353,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ADDDEFAULTCACERTIFICATES )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=addDefaultCaCertificates
 
 $prototype=QList<QSslCertificate> defaultCaCertificates ()
 $method=|QList<QSslCertificate>|defaultCaCertificates|

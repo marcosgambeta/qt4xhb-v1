@@ -72,6 +72,7 @@ HB_FUNC_STATIC( QUDPSOCKET_BIND )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=bind
 
 $prototype=bool hasPendingDatagrams () const
 $method=|bool|hasPendingDatagrams|
@@ -109,5 +110,6 @@ HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=writeDatagram
 
 #pragma ENDDUMP

@@ -88,6 +88,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_POST )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=post
 
 $prototype=QNetworkProxy proxy () const
 $method=|QNetworkProxy|proxy|
@@ -121,6 +122,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PUT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=put
 
 $prototype=QNetworkReply * sendCustomRequest ( const QNetworkRequest & request, const QByteArray & verb, QIODevice * data = 0 )
 $method=|QNetworkReply *|sendCustomRequest|const QNetworkRequest &,const QByteArray &,QIODevice *=0

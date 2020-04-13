@@ -103,6 +103,7 @@ HB_FUNC_STATIC( QFTP_PUT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=put
 
 $prototype=int rawCommand ( const QString & command )
 $method=|int|rawCommand|const QString &

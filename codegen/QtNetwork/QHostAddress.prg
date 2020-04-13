@@ -90,6 +90,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=new
 
 $deleteMethod
 
@@ -123,6 +124,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=isInSubnet
 
 $prototype=bool isNull () const
 $method=|bool|isNull|
@@ -175,6 +177,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setAddress
 
 $prototype=void setScopeId ( const QString & id )
 $method=|void|setScopeId|const QString &

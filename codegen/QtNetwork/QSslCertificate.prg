@@ -62,6 +62,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_NEW )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=new
 
 $deleteMethod
 
@@ -109,6 +110,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFO )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=issuerInfo
 
 $prototype=QSslKey publicKey () const
 $method=|QSslKey|publicKey|
@@ -142,6 +144,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SUBJECTINFO )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=subjectInfo
 
 $prototype=QByteArray toDer () const
 $method=|QByteArray|toDer|
