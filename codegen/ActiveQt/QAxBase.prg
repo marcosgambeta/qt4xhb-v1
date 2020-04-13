@@ -78,6 +78,7 @@ HB_FUNC_STATIC( QAXBASE_DYNAMICCALL )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=dynamicCall
 
 $prototype=QString generateDocumentation ()
 $method=|QString|generateDocumentation|
@@ -114,6 +115,7 @@ HB_FUNC_STATIC( QAXBASE_QUERYSUBOBJECT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=querySubObject
 
 $prototype=bool setControl ( const QString & )
 $method=|bool|setControl|const QString &

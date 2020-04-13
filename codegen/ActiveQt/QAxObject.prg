@@ -63,6 +63,7 @@ HB_FUNC_STATIC( QAXOBJECT_NEW )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=new
 
 $deleteMethod
 
@@ -116,6 +117,7 @@ HB_FUNC_STATIC( QAXOBJECT_DYNAMICCALL )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=dynamicCall
 
 $prototype=QString generateDocumentation ()
 $method=|QString|generateDocumentation|
@@ -152,6 +154,7 @@ HB_FUNC_STATIC( QAXOBJECT_QUERYSUBOBJECT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=querySubObject
 
 $prototype=bool setControl ( const QString & )
 $method=|bool|setControl|const QString &
