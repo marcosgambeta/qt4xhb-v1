@@ -61,6 +61,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_NEW )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=new
 
 $deleteMethod
 
@@ -126,6 +127,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETFRAMESIZE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setFrameSize
 
 $prototype=void setPixelAspectRatio ( const QSize & ratio )
 $internalMethod=|void|setPixelAspectRatio,setPixelAspectRatio1|const QSize &
@@ -153,6 +155,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETPIXELASPECTRATIO )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setPixelAspectRatio
 
 $prototype=void setProperty ( const char * name, const QVariant & value )
 $method=|void|setProperty|const char *,const QVariant &
