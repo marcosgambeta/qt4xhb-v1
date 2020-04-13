@@ -28,7 +28,8 @@ $includes
 $deleteMethod
 
 $prototype=virtual void fixup ( QString & input ) const
-HB_FUNC_STATIC( QVALIDATOR_FIXUP ) // TODO: revisar a implementacao e corrigir
+%% TODO: revisar a implementacao e corrigir
+HB_FUNC_STATIC( QVALIDATOR_FIXUP )
 {
   QValidator * obj = (QValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
@@ -49,7 +50,8 @@ $prototype=void setLocale ( const QLocale & locale )
 $method=|void|setLocale|const QLocale &
 
 $prototype=virtual State validate ( QString & input, int & pos ) const = 0
-HB_FUNC_STATIC( QVALIDATOR_VALIDATE ) // TODO: revisar a implementacao e corrigir
+%% TODO: revisar a implementacao e corrigir
+HB_FUNC_STATIC( QVALIDATOR_VALIDATE )
 {
   QValidator * obj = (QValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

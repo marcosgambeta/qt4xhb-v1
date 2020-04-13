@@ -127,6 +127,7 @@ HB_FUNC_STATIC( QIMAGE_NEW )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=new
 
 $deleteMethod
 
@@ -471,10 +472,10 @@ $method=|QImage|scaledToWidth|int,Qt::TransformationMode=Qt::FastTransformation
 
 %% TODO: implementar
 
-/*
-[1]uchar * scanLine ( int i )
-[2]const uchar * scanLine ( int i ) const
-*/
+%% /*
+%% [1]uchar * scanLine ( int i )
+%% [2]const uchar * scanLine ( int i ) const
+%% */
 
 %% //HB_FUNC_STATIC( QIMAGE_SCANLINE )
 %% //{

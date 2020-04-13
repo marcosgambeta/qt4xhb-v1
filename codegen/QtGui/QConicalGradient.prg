@@ -59,6 +59,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_NEW )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=new
 
 $prototype=qreal angle () const
 $method=|qreal|angle|

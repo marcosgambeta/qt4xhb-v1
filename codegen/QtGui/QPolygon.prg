@@ -35,21 +35,7 @@ $prototype=QPolygon ( const QPolygon & polygon )
 $internalConstructor=|new3|const QPolygon &
 
 $prototype=QPolygon ( const QVector<QPoint> & points )
-%% TODO: code generator
-HB_FUNC_STATIC( QPOLYGON_NEW4 )
-{
-  QVector<QPoint> par1;
-  PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-  int i1;
-  int nLen1 = hb_arrayLen(aList1);
-  for (i1=0;i1<nLen1;i1++)
-  {
-    par1 << *(QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-  }
-  QPolygon * o = new QPolygon ( par1 );
-  Qt4xHb::storePointerAndFlag ( o, true );
-}
-$addMethod=new4
+$internalConstructor=|new4|const QVector<QPoint> &
 
 $prototype=QPolygon ( const QRect & rectangle, bool closed = false )
 $internalConstructor=|new5|const QRect &,bool=false
@@ -78,7 +64,7 @@ HB_FUNC_STATIC( QPOLYGON_NEW )
   }
   else if( ISNUMPAR(1) && ISARRAY(1) )
   {
-    HB_FUNC_EXEC( QPOLYGON_NEW4 );
+    QPolygon_new4();
   }
   else if( ISBETWEEN(1,2) && ISQRECT(1) && (ISLOG(2)||ISNIL(2)) )
   {
@@ -89,6 +75,7 @@ HB_FUNC_STATIC( QPOLYGON_NEW )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=new
 
 $deleteMethod
 

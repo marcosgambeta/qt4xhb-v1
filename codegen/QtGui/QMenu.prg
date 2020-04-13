@@ -53,6 +53,7 @@ HB_FUNC_STATIC( QMENU_NEW )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=new
 
 $deleteMethod
 
@@ -227,43 +228,16 @@ $prototype=virtual QSize sizeHint () const
 $virtualMethod=|QSize|sizeHint|
 
 $prototype=QAction * exec ()
-$method=|QAction *|exec,exec1|
+$internalMethod=|QAction *|exec,exec1|
 
 $prototype=QAction * exec ( const QPoint & p, QAction * action = 0 )
-$method=|QAction *|exec,exec2|const QPoint &,QAction *=0
+$internalMethod=|QAction *|exec,exec2|const QPoint &,QAction *=0
 
 $prototype=QAction * exec ( QList<QAction *> actions, const QPoint & pos, QAction * at, QWidget * parent )
-HB_FUNC_STATIC( QMENU_EXEC3 )
-{
-  QList<QAction *> par1;
-  PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-  int i1;
-  int nLen1 = hb_arrayLen(aList1);
-  for (i1=0;i1<nLen1;i1++)
-  {
-    par1 << (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-  }
-  QAction * ptr = QMenu::exec ( par1, *PQPOINT(2), PQACTION(3), PQWIDGET(4) );
-  Qt4xHb::createReturnClass ( ptr, "QACTION" );
-}
-$addMethod=exec3
+$internalMethod=|QAction *|exec,exec3|QList<QAction *>,const QPoint &,QAction *,QWidget *
 
 $prototype=QAction * exec ( QList<QAction *> actions, const QPoint & pos, QAction * at = 0 )
-HB_FUNC_STATIC( QMENU_EXEC4 )
-{
-  QList<QAction *> par1;
-  PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-  int i1;
-  int nLen1 = hb_arrayLen(aList1);
-  for (i1=0;i1<nLen1;i1++)
-  {
-    par1 << (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-  }
-  QAction * par3 = ISNIL(3)? 0 : (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QAction * ptr = QMenu::exec ( par1, *PQPOINT(2), par3 );
-  Qt4xHb::createReturnClass ( ptr, "QACTION" );
-}
-$addMethod=exec4
+$internalMethod=|QAction *|exec,exec4|QList<QAction *>,const QPoint &,QAction *=0
 
 /*
 [1]QAction * exec ()
@@ -276,19 +250,19 @@ HB_FUNC_STATIC( QMENU_EXEC )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QMENU_EXEC1 );
+    QMenu_exec1();
   }
   else if( ISBETWEEN(1,2) && ISQPOINT(1) && (ISQACTION(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QMENU_EXEC2 );
+    QMenu_exec2();
   }
   else if( ISNUMPAR(4) && ISARRAY(1) && ISQPOINT(2) && ISQACTION(3) && ISQWIDGET(4) )
   {
-    HB_FUNC_EXEC( QMENU_EXEC1 );
+    QMenu_exec3();
   }
   else if( ISBETWEEN(2,3) && ISARRAY(1) && ISQPOINT(2) && (ISQACTION(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QMENU_EXEC2 );
+    QMenu_exec4();
   }
   else
   {

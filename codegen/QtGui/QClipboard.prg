@@ -85,6 +85,7 @@ HB_FUNC_STATIC( QCLIPBOARD_TEXT2 )
     RQSTRING( obj->text ( par1, (QClipboard::Mode) hb_parni(2) ) );
   }
 }
+$addMethod=text2
 
 /*
 [1]QString text ( Mode mode = Clipboard ) const
