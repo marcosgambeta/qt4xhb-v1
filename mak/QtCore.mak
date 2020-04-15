@@ -8,7 +8,7 @@
 OBJECTS_QTCORE =
 OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstractlistmodel$(OBJEXT)
 OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstractlistmodelMoc$(OBJEXT)
-OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstractlistmodelbin$(OBJEXT)
+#OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstractlistmodelbin$(OBJEXT)
 OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstractlistmodelcls$(OBJEXT)
 OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodel$(OBJEXT)
 OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodelMoc$(OBJEXT)

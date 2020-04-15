@@ -43,7 +43,7 @@ HAbstractListModel::HAbstractListModel (QObject * parent) : QAbstractListModel (
   getVHFGColorCB = NULL;
 }
 
-HAbstractListModel::~HAbstractListModel ()
+HAbstractListModel::~HAbstractListModel()
 {
   // linhas
   if( rowCountCB )
@@ -153,7 +153,7 @@ HAbstractListModel::~HAbstractListModel ()
 
 // linhas
 
-void HAbstractListModel::setRowCountCB ( PHB_ITEM block )
+void HAbstractListModel::setRowCountCB( PHB_ITEM block )
 {
   if( rowCountCB )
   {
@@ -167,7 +167,7 @@ void HAbstractListModel::setRowCountCB ( PHB_ITEM block )
 
 // células
 
-void HAbstractListModel::setDisplayRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setDisplayRoleCB( PHB_ITEM block )
 {
   if( getFieldCB )
   {
@@ -179,7 +179,7 @@ void HAbstractListModel::setDisplayRoleCB ( PHB_ITEM block )
   }
 }
 
-void HAbstractListModel::setDecorationRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setDecorationRoleCB( PHB_ITEM block )
 {
   if( getFieldDecorationCB )
   {
@@ -191,7 +191,7 @@ void HAbstractListModel::setDecorationRoleCB ( PHB_ITEM block )
   }
 }
 
-void HAbstractListModel::setEditRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setEditRoleCB( PHB_ITEM block )
 {
   if( getFieldEditCB )
   {
@@ -203,7 +203,7 @@ void HAbstractListModel::setEditRoleCB ( PHB_ITEM block )
   }
 }
 
-void HAbstractListModel::setToolTipRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setToolTipRoleCB( PHB_ITEM block )
 {
   if( getFieldToolTipCB )
   {
@@ -215,7 +215,7 @@ void HAbstractListModel::setToolTipRoleCB ( PHB_ITEM block )
   }
 }
 
-void HAbstractListModel::setStatusTipRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setStatusTipRoleCB( PHB_ITEM block )
 {
   if( getFieldStatusTipCB )
   {
@@ -227,7 +227,7 @@ void HAbstractListModel::setStatusTipRoleCB ( PHB_ITEM block )
   }
 }
 
-void HAbstractListModel::setWhatsThisRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setWhatsThisRoleCB( PHB_ITEM block )
 {
   if( getFieldWhatsThisCB )
   {
@@ -239,7 +239,7 @@ void HAbstractListModel::setWhatsThisRoleCB ( PHB_ITEM block )
   }
 }
 
-void HAbstractListModel::setSizeHintRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setSizeHintRoleCB( PHB_ITEM block )
 {
   if( getFieldSizeHintCB )
   {
@@ -251,7 +251,7 @@ void HAbstractListModel::setSizeHintRoleCB ( PHB_ITEM block )
   }
 }
 
-void HAbstractListModel::setFontRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setFontRoleCB( PHB_ITEM block )
 {
   if( getFieldFontCB )
   {
@@ -263,7 +263,7 @@ void HAbstractListModel::setFontRoleCB ( PHB_ITEM block )
   }
 }
 
-void HAbstractListModel::setTextAlignmentRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setTextAlignmentRoleCB( PHB_ITEM block )
 {
   if( getFieldAlignCB )
   {
@@ -275,7 +275,7 @@ void HAbstractListModel::setTextAlignmentRoleCB ( PHB_ITEM block )
   }
 }
 
-void HAbstractListModel::setBackgroundRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setBackgroundRoleCB( PHB_ITEM block )
 {
   if( getFieldBGColorCB )
   {
@@ -287,7 +287,7 @@ void HAbstractListModel::setBackgroundRoleCB ( PHB_ITEM block )
   }
 }
 
-void HAbstractListModel::setForegroundRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setForegroundRoleCB( PHB_ITEM block )
 {
   if( getFieldFGColorCB )
   {
@@ -301,7 +301,7 @@ void HAbstractListModel::setForegroundRoleCB ( PHB_ITEM block )
 
 // cabeçalho horizontal
 
-void HAbstractListModel::setHorizontalHeaderDisplayRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setHorizontalHeaderDisplayRoleCB( PHB_ITEM block )
 {
   if( getHHCB )
   {
@@ -313,7 +313,7 @@ void HAbstractListModel::setHorizontalHeaderDisplayRoleCB ( PHB_ITEM block )
   }
 }
 
-void HAbstractListModel::setHorizontalHeaderDecorationRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setHorizontalHeaderDecorationRoleCB( PHB_ITEM block )
 {
   if( getHHDecorationCB )
   {
@@ -325,7 +325,7 @@ void HAbstractListModel::setHorizontalHeaderDecorationRoleCB ( PHB_ITEM block )
   }
 }
 
-void HAbstractListModel::setHorizontalHeaderFontRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setHorizontalHeaderFontRoleCB( PHB_ITEM block )
 {
   if( getHHFontCB )
   {
@@ -337,7 +337,7 @@ void HAbstractListModel::setHorizontalHeaderFontRoleCB ( PHB_ITEM block )
   }
 }
 
-void HAbstractListModel::setHorizontalHeaderTextAlignmentRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setHorizontalHeaderTextAlignmentRoleCB( PHB_ITEM block )
 {
   if( getHHAlignCB )
   {
@@ -349,7 +349,7 @@ void HAbstractListModel::setHorizontalHeaderTextAlignmentRoleCB ( PHB_ITEM block
   }
 }
 
-void HAbstractListModel::setHorizontalHeaderBackgroundRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setHorizontalHeaderBackgroundRoleCB( PHB_ITEM block )
 {
   if( getHHBGColorCB )
   {
@@ -361,7 +361,7 @@ void HAbstractListModel::setHorizontalHeaderBackgroundRoleCB ( PHB_ITEM block )
   }
 }
 
-void HAbstractListModel::setHorizontalHeaderForegroundRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setHorizontalHeaderForegroundRoleCB( PHB_ITEM block )
 {
   if( getHHFGColorCB )
   {
@@ -375,7 +375,7 @@ void HAbstractListModel::setHorizontalHeaderForegroundRoleCB ( PHB_ITEM block )
 
 // cabeçalho vertical
 
-void HAbstractListModel::setVerticalHeaderDisplayRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setVerticalHeaderDisplayRoleCB( PHB_ITEM block )
 {
   if( getVHCB )
   {
@@ -387,7 +387,7 @@ void HAbstractListModel::setVerticalHeaderDisplayRoleCB ( PHB_ITEM block )
   }
 }
 
-void HAbstractListModel::setVerticalHeaderDecorationRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setVerticalHeaderDecorationRoleCB( PHB_ITEM block )
 {
   if( getVHDecorationCB )
   {
@@ -399,7 +399,7 @@ void HAbstractListModel::setVerticalHeaderDecorationRoleCB ( PHB_ITEM block )
   }
 }
 
-void HAbstractListModel::setVerticalHeaderFontRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setVerticalHeaderFontRoleCB( PHB_ITEM block )
 {
   if( getVHFontCB )
   {
@@ -411,7 +411,7 @@ void HAbstractListModel::setVerticalHeaderFontRoleCB ( PHB_ITEM block )
   }
 }
 
-void HAbstractListModel::setVerticalHeaderTextAlignmentRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setVerticalHeaderTextAlignmentRoleCB( PHB_ITEM block )
 {
   if( getVHAlignCB )
   {
@@ -423,7 +423,7 @@ void HAbstractListModel::setVerticalHeaderTextAlignmentRoleCB ( PHB_ITEM block )
   }
 }
 
-void HAbstractListModel::setVerticalHeaderBackgroundRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setVerticalHeaderBackgroundRoleCB( PHB_ITEM block )
 {
   if( getVHBGColorCB )
   {
@@ -435,7 +435,7 @@ void HAbstractListModel::setVerticalHeaderBackgroundRoleCB ( PHB_ITEM block )
   }
 }
 
-void HAbstractListModel::setVerticalHeaderForegroundRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setVerticalHeaderForegroundRoleCB( PHB_ITEM block )
 {
   if( getVHFGColorCB )
   {

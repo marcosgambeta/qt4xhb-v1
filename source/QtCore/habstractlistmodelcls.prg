@@ -49,7 +49,7 @@ CLASS HAbstractListModel INHERIT QAbstractListModel
 
 END CLASS
 
-METHOD destroyObject () CLASS HAbstractListModel
+METHOD destroyObject() CLASS HAbstractListModel
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -60,3 +60,724 @@ END CLASS
 
 CLASS HArrayListModel INHERIT HAbstractListModel
 END CLASS
+
+#pragma BEGINDUMP
+
+#include <habstractlistmodel.h>
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_macros.h"
+#include "qt4xhb_utils.h"
+#include "qt4xhb_events.h"
+#include "qt4xhb_signals.h"
+
+/*
+HAbstractListModel( QObject * parent = 0 )
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_NEW )
+{
+  HAbstractListModel * o = new HAbstractListModel( OPQOBJECT(1,0) );
+  Qt4xHb::returnNewObject( o, false );
+}
+
+/*
+virtual ~HAbstractListModel()
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_DELETE )
+{
+  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
+    delete obj;
+    obj = NULL;
+    PHB_ITEM self = hb_stackSelfItem();
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
+    hb_objSendMsg( self, "_pointer", 1, ptr );
+    hb_itemRelease( ptr );
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+  linhas
+*/
+
+/*
+void setRowCountCB ( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETROWCOUNTCB )
+{
+  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setRowCountCB( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+  células
+*/
+
+/*
+void setDisplayRoleCB ( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETDISPLAYROLECB )
+{
+  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setDisplayRoleCB( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void setDecorationRoleCB ( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETDECORATIONROLECB )
+{
+  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setDecorationRoleCB( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void setEditRoleCB ( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETEDITROLECB )
+{
+  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setEditRoleCB( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void setToolTipRoleCB ( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETTOOLTIPROLECB )
+{
+  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setToolTipRoleCB( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void setStatusTipRoleCB ( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETSTATUSTIPROLECB )
+{
+  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setStatusTipRoleCB( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void setWhatsThisRoleCB ( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETWHATSTHISROLECB )
+{
+  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setWhatsThisRoleCB( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void setSizeHintRoleCB ( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETSIZEHINTROLECB )
+{
+  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setSizeHintRoleCB( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void setFontRoleCB ( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETFONTROLECB )
+{
+  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setFontRoleCB( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void setTextAlignmentRoleCB ( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETTEXTALIGNMENTROLECB )
+{
+  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setTextAlignmentRoleCB( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void setBackgroundRoleCB ( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETBACKGROUNDROLECB )
+{
+  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setBackgroundRoleCB( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void setForegroundRoleCB ( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETFOREGROUNDROLECB )
+{
+  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setForegroundRoleCB( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+  cabeçalho horizontal
+*/
+
+/*
+void setHorizontalHeaderDisplayRoleCB ( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERDISPLAYROLECB )
+{
+  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setHorizontalHeaderDisplayRoleCB( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void setHorizontalHeaderDecorationRoleCB ( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERDECORATIONROLECB )
+{
+  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setHorizontalHeaderDecorationRoleCB( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void setHorizontalHeaderFontRoleCB ( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERFONTROLECB )
+{
+  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setHorizontalHeaderFontRoleCB( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void setHorizontalHeaderTextAlignmentRoleCB ( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERTEXTALIGNMENTROLECB )
+{
+  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setHorizontalHeaderTextAlignmentRoleCB( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void setHorizontalHeaderBackgroundRoleCB ( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERBACKGROUNDROLECB )
+{
+  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setHorizontalHeaderBackgroundRoleCB( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void setHorizontalHeaderForegroundRoleCB ( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERFOREGROUNDROLECB )
+{
+  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setHorizontalHeaderForegroundRoleCB( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+  cabeçalho vertical
+*/
+
+/*
+void setVerticalHeaderDisplayRoleCB ( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERDISPLAYROLECB )
+{
+  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setVerticalHeaderDisplayRoleCB( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void setVerticalHeaderDecorationRoleCB ( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERDECORATIONROLECB )
+{
+  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setVerticalHeaderDecorationRoleCB( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void setVerticalHeaderFontRoleCB ( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERFONTROLECB )
+{
+  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setVerticalHeaderFontRoleCB( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void setVerticalHeaderTextAlignmentRoleCB ( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERTEXTALIGNMENTROLECB )
+{
+  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setVerticalHeaderTextAlignmentRoleCB( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void setVerticalHeaderBackgroundRoleCB ( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERBACKGROUNDROLECB )
+{
+  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setVerticalHeaderBackgroundRoleCB( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void setVerticalHeaderForegroundRoleCB ( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERFOREGROUNDROLECB )
+{
+  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setVerticalHeaderForegroundRoleCB( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const
+*/
+
+/*
+QVariant headerData( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
+*/
+
+/*
+int rowCount ( const QModelIndex & parent = QModelIndex() ) const
+*/
+
+/*
+void reloadData()
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_RELOADDATA )
+{
+  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      obj->reloadData();
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+#pragma ENDDUMP
