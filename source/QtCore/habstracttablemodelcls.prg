@@ -790,7 +790,7 @@ HB_FUNC( HABSTRACTTABLEMODEL_RELOADDATA )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->reloadData();
