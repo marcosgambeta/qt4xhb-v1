@@ -21,7 +21,7 @@ HAbstractTableModelV2::HAbstractTableModelV2 (QObject * parent) : QAbstractTable
   setDataBlock = NULL;
 }
 
-HAbstractTableModelV2::~HAbstractTableModelV2 ()
+HAbstractTableModelV2::~HAbstractTableModelV2()
 {
   if( rowCountBlock )
   {
@@ -60,7 +60,7 @@ HAbstractTableModelV2::~HAbstractTableModelV2 ()
   }
 }
 
-void HAbstractTableModelV2::setRowCountCB ( PHB_ITEM block )
+void HAbstractTableModelV2::setRowCountCB( PHB_ITEM block )
 {
   if( rowCountBlock )
   {
@@ -72,7 +72,7 @@ void HAbstractTableModelV2::setRowCountCB ( PHB_ITEM block )
   }
 }
 
-void HAbstractTableModelV2::setColumnCountCB ( PHB_ITEM block )
+void HAbstractTableModelV2::setColumnCountCB( PHB_ITEM block )
 {
   if( columnCountBlock )
   {
@@ -84,7 +84,7 @@ void HAbstractTableModelV2::setColumnCountCB ( PHB_ITEM block )
   }
 }
 
-void HAbstractTableModelV2::setDataCB ( PHB_ITEM block )
+void HAbstractTableModelV2::setDataCB( PHB_ITEM block )
 {
   if( dataBlock )
   {
@@ -96,7 +96,7 @@ void HAbstractTableModelV2::setDataCB ( PHB_ITEM block )
   }
 }
 
-void HAbstractTableModelV2::setHeaderDataCB ( PHB_ITEM block )
+void HAbstractTableModelV2::setHeaderDataCB( PHB_ITEM block )
 {
   if( headerDataBlock )
   {
@@ -108,7 +108,7 @@ void HAbstractTableModelV2::setHeaderDataCB ( PHB_ITEM block )
   }
 }
 
-void HAbstractTableModelV2::setFlagsCB ( PHB_ITEM block )
+void HAbstractTableModelV2::setFlagsCB( PHB_ITEM block )
 {
   if( flagsBlock )
   {
@@ -120,7 +120,7 @@ void HAbstractTableModelV2::setFlagsCB ( PHB_ITEM block )
   }
 }
 
-void HAbstractTableModelV2::setSetDataCB ( PHB_ITEM block )
+void HAbstractTableModelV2::setSetDataCB( PHB_ITEM block )
 {
   if( setDataBlock )
   {
@@ -230,7 +230,7 @@ QVariant HAbstractTableModelV2::headerData( int section, Qt::Orientation orienta
   }
 }
 
-Qt::ItemFlags HAbstractTableModelV2::flags(const QModelIndex &index) const
+Qt::ItemFlags HAbstractTableModelV2::flags( const QModelIndex &index ) const
 {
   Qt::ItemFlags flags = Qt::ItemIsSelectable | Qt::ItemIsEnabled;
 
@@ -256,7 +256,7 @@ Qt::ItemFlags HAbstractTableModelV2::flags(const QModelIndex &index) const
   }
 }
 
-bool HAbstractTableModelV2::setData(const QModelIndex &index, const QVariant &value, int role)
+bool HAbstractTableModelV2::setData( const QModelIndex &index, const QVariant &value, int role )
 {
   bool success = false;
 
