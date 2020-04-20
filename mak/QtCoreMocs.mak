@@ -4,7 +4,7 @@
 # Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 #
 
-$(QT4XHB_OBJ_DIR)/habstractlistmodelMoc.cpp             : $(QT4XHB_SRC_DIR)/QtCore/habstractlistmodel.h
+$(QT4XHB_OBJ_DIR)/HAbstractListModelMoc.cpp             : $(QT4XHB_SRC_DIR)/QtCore/HAbstractListModel.h
 	$(MOC) $^ -o $@
 $(QT4XHB_OBJ_DIR)/habstracttablemodelMoc.cpp            : $(QT4XHB_SRC_DIR)/QtCore/habstracttablemodel.h
 	$(MOC) $^ -o $@

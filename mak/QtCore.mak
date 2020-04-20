@@ -6,10 +6,9 @@
 
 # QtCore
 OBJECTS_QTCORE =
-OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstractlistmodel$(OBJEXT)
-OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstractlistmodelMoc$(OBJEXT)
-#OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstractlistmodelbin$(OBJEXT)
-OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstractlistmodelcls$(OBJEXT)
+OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/HAbstractListModel$(OBJEXT)
+OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/HAbstractListModelMoc$(OBJEXT)
+OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/HAbstractListModelClass$(OBJEXT)
 OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodel$(OBJEXT)
 OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodelMoc$(OBJEXT)
 #OBJECTS_QTCORE += $(QT4XHB_OBJ_DIR)/habstracttablemodelbin$(OBJEXT)
