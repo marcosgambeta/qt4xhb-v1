@@ -104,6 +104,7 @@
 #define PCONSTCHAR(n)                                       (const char *) hb_parc(n)
 #define PCONSTUCHAR(n)                                      (const uchar *) hb_parc(n)
 #define PQRGB(n)                                            (uint) hb_parni(n)
+#define PBLOCKORSYMBOL(n)                                   hb_param( n, HB_IT_BLOCK | HB_IT_SYMBOL )
 
 // macros for optional parameters
 #define OPBOOL(n,v)                                         (bool) ISNIL(n)? v : hb_parl(n)
