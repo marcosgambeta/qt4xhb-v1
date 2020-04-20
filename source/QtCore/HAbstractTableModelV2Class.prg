@@ -90,7 +90,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETROWCOUNTCB )
     if( ISNUMPAR(1) )
     {
 #endif
-      obj->setRowCountCB( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+      obj->setRowCountCB( PBLOCKORSYMBOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETCOLUMNCOUNTCB )
     if( ISNUMPAR(1) )
     {
 #endif
-      obj->setColumnCountCB( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+      obj->setColumnCountCB( PBLOCKORSYMBOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETDATACB )
     if( ISNUMPAR(1) )
     {
 #endif
-      obj->setDataCB( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+      obj->setDataCB( PBLOCKORSYMBOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETHEADERDATACB )
     if( ISNUMPAR(1) )
     {
 #endif
-      obj->setHeaderDataCB( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+      obj->setHeaderDataCB( PBLOCKORSYMBOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETFLAGSCB )
     if( ISNUMPAR(1) )
     {
 #endif
-      obj->setFlagsCB( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+      obj->setFlagsCB( PBLOCKORSYMBOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETSETDATACB )
     if( ISNUMPAR(1) )
     {
 #endif
-      obj->setSetDataCB( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+      obj->setSetDataCB( PBLOCKORSYMBOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
