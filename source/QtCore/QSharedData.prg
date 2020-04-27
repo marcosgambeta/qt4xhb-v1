@@ -52,8 +52,8 @@ QSharedData ()
 */
 void QSharedData_new1()
 {
-  QSharedData * o = new QSharedData();
-  Qt4xHb::returnNewObject( o, true );
+  QSharedData * obj = new QSharedData();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -61,8 +61,8 @@ QSharedData ( const QSharedData & other )
 */
 void QSharedData_new2()
 {
-  QSharedData * o = new QSharedData( *PQSHAREDDATA(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QSharedData * obj = new QSharedData( *PQSHAREDDATA(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

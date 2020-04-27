@@ -57,8 +57,8 @@ QReadWriteLock ()
 */
 void QReadWriteLock_new1()
 {
-  QReadWriteLock * o = new QReadWriteLock();
-  Qt4xHb::returnNewObject( o, true );
+  QReadWriteLock * obj = new QReadWriteLock();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -66,8 +66,8 @@ QReadWriteLock ( RecursionMode recursionMode )
 */
 void QReadWriteLock_new2()
 {
-  QReadWriteLock * o = new QReadWriteLock( (QReadWriteLock::RecursionMode) hb_parni(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QReadWriteLock * obj = new QReadWriteLock( (QReadWriteLock::RecursionMode) hb_parni(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

@@ -57,8 +57,8 @@ HB_FUNC_STATIC( QMUTEX_NEW )
 {
   if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
-    QMutex * o = new QMutex( ISNIL(1)? (QMutex::RecursionMode) QMutex::NonRecursive : (QMutex::RecursionMode) hb_parni(1) );
-    Qt4xHb::returnNewObject( o, true );
+    QMutex * obj = new QMutex( ISNIL(1)? (QMutex::RecursionMode) QMutex::NonRecursive : (QMutex::RecursionMode) hb_parni(1) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

@@ -58,8 +58,8 @@ QPoint()
 */
 void QPoint_new1()
 {
-  QPoint * o = new QPoint();
-  Qt4xHb::returnNewObject( o, true );
+  QPoint * obj = new QPoint();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -67,8 +67,8 @@ QPoint(int xpos, int ypos)
 */
 void QPoint_new2()
 {
-  QPoint * o = new QPoint( PINT(1), PINT(2) );
-  Qt4xHb::returnNewObject( o, true );
+  QPoint * obj = new QPoint( PINT(1), PINT(2) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

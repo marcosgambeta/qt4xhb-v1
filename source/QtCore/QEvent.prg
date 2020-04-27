@@ -61,8 +61,8 @@ HB_FUNC_STATIC( QEVENT_NEW )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    QEvent * o = new QEvent( (QEvent::Type) hb_parni(1) );
-    Qt4xHb::returnNewObject( o, false );
+    QEvent * obj = new QEvent( (QEvent::Type) hb_parni(1) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

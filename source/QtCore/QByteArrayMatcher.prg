@@ -56,8 +56,8 @@ QByteArrayMatcher ()
 */
 void QByteArrayMatcher_new1()
 {
-  QByteArrayMatcher * o = new QByteArrayMatcher();
-  Qt4xHb::returnNewObject( o, true );
+  QByteArrayMatcher * obj = new QByteArrayMatcher();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -65,8 +65,8 @@ QByteArrayMatcher ( const QByteArray & pattern )
 */
 void QByteArrayMatcher_new2()
 {
-  QByteArrayMatcher * o = new QByteArrayMatcher( *PQBYTEARRAY(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QByteArrayMatcher * obj = new QByteArrayMatcher( *PQBYTEARRAY(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -74,8 +74,8 @@ QByteArrayMatcher ( const char * pattern, int length )
 */
 void QByteArrayMatcher_new3()
 {
-  QByteArrayMatcher * o = new QByteArrayMatcher( PCONSTCHAR(1), PINT(2) );
-  Qt4xHb::returnNewObject( o, true );
+  QByteArrayMatcher * obj = new QByteArrayMatcher( PCONSTCHAR(1), PINT(2) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -83,8 +83,8 @@ QByteArrayMatcher ( const QByteArrayMatcher & other )
 */
 void QByteArrayMatcher_new4()
 {
-  QByteArrayMatcher * o = new QByteArrayMatcher( *PQBYTEARRAYMATCHER(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QByteArrayMatcher * obj = new QByteArrayMatcher( *PQBYTEARRAYMATCHER(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

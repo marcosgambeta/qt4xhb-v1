@@ -56,8 +56,8 @@ QFileSystemWatcher(QObject * parent = 0)
 */
 void QFileSystemWatcher_new1()
 {
-  QFileSystemWatcher * o = new QFileSystemWatcher( OPQOBJECT(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QFileSystemWatcher * obj = new QFileSystemWatcher( OPQOBJECT(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -65,8 +65,8 @@ QFileSystemWatcher(const QStringList & paths, QObject * parent = 0)
 */
 void QFileSystemWatcher_new2()
 {
-  QFileSystemWatcher * o = new QFileSystemWatcher( PQSTRINGLIST(1), OPQOBJECT(2,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QFileSystemWatcher * obj = new QFileSystemWatcher( PQSTRINGLIST(1), OPQOBJECT(2,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -96,8 +96,8 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

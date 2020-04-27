@@ -84,8 +84,8 @@ QDateTime ()
 */
 void QDateTime_new1()
 {
-  QDateTime * o = new QDateTime();
-  Qt4xHb::returnNewObject( o, true );
+  QDateTime * obj = new QDateTime();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -93,8 +93,8 @@ QDateTime ( const QDate & date )
 */
 void QDateTime_new2()
 {
-  QDateTime * o = new QDateTime( *PQDATE(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QDateTime * obj = new QDateTime( *PQDATE(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -102,8 +102,8 @@ QDateTime ( const QDate & date, const QTime & time, Qt::TimeSpec spec = Qt::Loca
 */
 void QDateTime_new3()
 {
-  QDateTime * o = new QDateTime( *PQDATE(1), *PQTIME(2), ISNIL(3)? (Qt::TimeSpec) Qt::LocalTime : (Qt::TimeSpec) hb_parni(3) );
-  Qt4xHb::returnNewObject( o, true );
+  QDateTime * obj = new QDateTime( *PQDATE(1), *PQTIME(2), ISNIL(3)? (Qt::TimeSpec) Qt::LocalTime : (Qt::TimeSpec) hb_parni(3) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -111,8 +111,8 @@ QDateTime ( const QDateTime & other )
 */
 void QDateTime_new4()
 {
-  QDateTime * o = new QDateTime( *PQDATETIME(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QDateTime * obj = new QDateTime( *PQDATETIME(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

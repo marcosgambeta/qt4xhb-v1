@@ -59,8 +59,8 @@ QBuffer ( QObject * parent = 0 )
 */
 void QBuffer_new1()
 {
-  QBuffer * o = new QBuffer( OPQOBJECT(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QBuffer * obj = new QBuffer( OPQOBJECT(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -68,8 +68,8 @@ QBuffer ( QByteArray * byteArray, QObject * parent = 0 )
 */
 void QBuffer_new2()
 {
-  QBuffer * o = new QBuffer( PQBYTEARRAY(1), OPQOBJECT(2,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QBuffer * obj = new QBuffer( PQBYTEARRAY(1), OPQOBJECT(2,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -99,8 +99,8 @@ HB_FUNC_STATIC( QBUFFER_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

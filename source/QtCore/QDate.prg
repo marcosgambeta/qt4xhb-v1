@@ -78,8 +78,8 @@ QDate ()
 */
 void QDate_new1()
 {
-  QDate * o = new QDate();
-  Qt4xHb::returnNewObject( o, true );
+  QDate * obj = new QDate();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -87,8 +87,8 @@ QDate ( int y, int m, int d )
 */
 void QDate_new2()
 {
-  QDate * o = new QDate( PINT(1), PINT(2), PINT(3) );
-  Qt4xHb::returnNewObject( o, true );
+  QDate * obj = new QDate( PINT(1), PINT(2), PINT(3) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

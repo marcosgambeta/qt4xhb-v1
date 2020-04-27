@@ -58,8 +58,8 @@ HB_FUNC_STATIC( QBASICTIMER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QBasicTimer * o = new QBasicTimer();
-    Qt4xHb::returnNewObject( o, true );
+    QBasicTimer * obj = new QBasicTimer();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

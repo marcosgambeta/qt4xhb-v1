@@ -55,8 +55,8 @@ QDebug ( QIODevice * device )
 */
 void QDebug_new1()
 {
-  QDebug * o = new QDebug( PQIODEVICE(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QDebug * obj = new QDebug( PQIODEVICE(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -68,8 +68,8 @@ QDebug ( QtMsgType type )
 */
 void QDebug_new3()
 {
-  QDebug * o = new QDebug( (QtMsgType) hb_parni(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QDebug * obj = new QDebug( (QtMsgType) hb_parni(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -77,8 +77,8 @@ QDebug ( const QDebug & other )
 */
 void QDebug_new4()
 {
-  QDebug * o = new QDebug( *PQDEBUG(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QDebug * obj = new QDebug( *PQDEBUG(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

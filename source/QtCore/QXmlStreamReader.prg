@@ -111,8 +111,8 @@ QXmlStreamReader()
 */
 void QXmlStreamReader_new1()
 {
-  QXmlStreamReader * o = new QXmlStreamReader();
-  Qt4xHb::returnNewObject( o, true );
+  QXmlStreamReader * obj = new QXmlStreamReader();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -120,8 +120,8 @@ QXmlStreamReader(QIODevice * device)
 */
 void QXmlStreamReader_new2()
 {
-  QXmlStreamReader * o = new QXmlStreamReader( PQIODEVICE(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QXmlStreamReader * obj = new QXmlStreamReader( PQIODEVICE(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -129,8 +129,8 @@ QXmlStreamReader(const QByteArray & data)
 */
 void QXmlStreamReader_new3()
 {
-  QXmlStreamReader * o = new QXmlStreamReader( *PQBYTEARRAY(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QXmlStreamReader * obj = new QXmlStreamReader( *PQBYTEARRAY(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -138,8 +138,8 @@ QXmlStreamReader(const QString & data)
 */
 void QXmlStreamReader_new4()
 {
-  QXmlStreamReader * o = new QXmlStreamReader( PQSTRING(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QXmlStreamReader * obj = new QXmlStreamReader( PQSTRING(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -147,8 +147,8 @@ QXmlStreamReader(const char * data)
 */
 void QXmlStreamReader_new5()
 {
-  QXmlStreamReader * o = new QXmlStreamReader( PCONSTCHAR(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QXmlStreamReader * obj = new QXmlStreamReader( PCONSTCHAR(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

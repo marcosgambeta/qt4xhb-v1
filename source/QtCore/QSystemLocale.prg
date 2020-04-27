@@ -57,8 +57,8 @@ HB_FUNC_STATIC( QSYSTEMLOCALE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QSystemLocale * o = new QSystemLocale();
-    Qt4xHb::returnNewObject( o, true );
+    QSystemLocale * obj = new QSystemLocale();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

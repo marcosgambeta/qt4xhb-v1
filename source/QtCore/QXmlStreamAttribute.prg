@@ -59,8 +59,8 @@ QXmlStreamAttribute()
 */
 void QXmlStreamAttribute_new1()
 {
-  QXmlStreamAttribute * o = new QXmlStreamAttribute();
-  Qt4xHb::returnNewObject( o, true );
+  QXmlStreamAttribute * obj = new QXmlStreamAttribute();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -68,8 +68,8 @@ QXmlStreamAttribute(const QString & qualifiedName, const QString & value)
 */
 void QXmlStreamAttribute_new2()
 {
-  QXmlStreamAttribute * o = new QXmlStreamAttribute( PQSTRING(1), PQSTRING(2) );
-  Qt4xHb::returnNewObject( o, true );
+  QXmlStreamAttribute * obj = new QXmlStreamAttribute( PQSTRING(1), PQSTRING(2) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -77,8 +77,8 @@ QXmlStreamAttribute(const QString & namespaceUri, const QString & name, const QS
 */
 void QXmlStreamAttribute_new3()
 {
-  QXmlStreamAttribute * o = new QXmlStreamAttribute( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
-  Qt4xHb::returnNewObject( o, true );
+  QXmlStreamAttribute * obj = new QXmlStreamAttribute( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -86,8 +86,8 @@ QXmlStreamAttribute(const QXmlStreamAttribute & other)
 */
 void QXmlStreamAttribute_new4()
 {
-  QXmlStreamAttribute * o = new QXmlStreamAttribute( *PQXMLSTREAMATTRIBUTE(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QXmlStreamAttribute * obj = new QXmlStreamAttribute( *PQXMLSTREAMATTRIBUTE(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

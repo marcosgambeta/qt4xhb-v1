@@ -28,7 +28,7 @@ class QFutureWatcherBaseSlots: public QObject
 {
   Q_OBJECT
   public:
-  QFutureWatcherBaseSlots(QObject *parent = 0);
+  QFutureWatcherBaseSlots( QObject *parent = 0 );
   ~QFutureWatcherBaseSlots();
   public slots:
   void started();

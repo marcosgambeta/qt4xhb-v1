@@ -69,8 +69,8 @@ QTime()
 */
 void QTime_new1()
 {
-  QTime * o = new QTime();
-  Qt4xHb::returnNewObject( o, true );
+  QTime * obj = new QTime();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -78,8 +78,8 @@ QTime(int h, int m, int s = 0, int ms = 0)
 */
 void QTime_new2()
 {
-  QTime * o = new QTime( PINT(1), PINT(2), OPINT(3,0), OPINT(4,0) );
-  Qt4xHb::returnNewObject( o, true );
+  QTime * obj = new QTime( PINT(1), PINT(2), OPINT(3,0), OPINT(4,0) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

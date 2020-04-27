@@ -124,8 +124,8 @@ QUrl ()
 */
 void QUrl_new1()
 {
-  QUrl * o = new QUrl();
-  Qt4xHb::returnNewObject( o, true );
+  QUrl * obj = new QUrl();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -133,8 +133,8 @@ QUrl ( const QString & url )
 */
 void QUrl_new2()
 {
-  QUrl * o = new QUrl( PQSTRING(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QUrl * obj = new QUrl( PQSTRING(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -142,8 +142,8 @@ QUrl ( const QUrl & other )
 */
 void QUrl_new3()
 {
-  QUrl * o = new QUrl( *PQURL(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QUrl * obj = new QUrl( *PQURL(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -151,8 +151,8 @@ QUrl ( const QString & url, ParsingMode parsingMode )
 */
 void QUrl_new4()
 {
-  QUrl * o = new QUrl( PQSTRING(1), (QUrl::ParsingMode) hb_parni(2) );
-  Qt4xHb::returnNewObject( o, true );
+  QUrl * obj = new QUrl( PQSTRING(1), (QUrl::ParsingMode) hb_parni(2) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

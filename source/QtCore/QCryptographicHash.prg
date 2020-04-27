@@ -59,8 +59,8 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_NEW )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    QCryptographicHash * o = new QCryptographicHash( (QCryptographicHash::Algorithm) hb_parni(1) );
-    Qt4xHb::returnNewObject( o, true );
+    QCryptographicHash * obj = new QCryptographicHash( (QCryptographicHash::Algorithm) hb_parni(1) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

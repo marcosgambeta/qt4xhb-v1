@@ -53,8 +53,8 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_NEW )
 {
   if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
-    QSocketNotifier * o = new QSocketNotifier( PINT(1), (QSocketNotifier::Type) hb_parni(2), OPQOBJECT(3,0) );
-    Qt4xHb::returnNewObject( o, false );
+    QSocketNotifier * obj = new QSocketNotifier( PINT(1), (QSocketNotifier::Type) hb_parni(2), OPQOBJECT(3,0) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -68,8 +68,8 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

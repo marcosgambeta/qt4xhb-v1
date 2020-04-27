@@ -74,8 +74,8 @@ HB_FUNC_STATIC( QMIMEDATA_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QMimeData * o = new QMimeData();
-    Qt4xHb::returnNewObject( o, false );
+    QMimeData * obj = new QMimeData();
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -89,8 +89,8 @@ HB_FUNC_STATIC( QMIMEDATA_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

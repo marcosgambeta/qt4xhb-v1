@@ -99,8 +99,8 @@ QFileInfo()
 */
 void QFileInfo_new1()
 {
-  QFileInfo * o = new QFileInfo();
-  Qt4xHb::returnNewObject( o, true );
+  QFileInfo * obj = new QFileInfo();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -108,8 +108,8 @@ QFileInfo(const QString & file)
 */
 void QFileInfo_new2()
 {
-  QFileInfo * o = new QFileInfo( PQSTRING(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QFileInfo * obj = new QFileInfo( PQSTRING(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -117,8 +117,8 @@ QFileInfo(const QFile & file)
 */
 void QFileInfo_new3()
 {
-  QFileInfo * o = new QFileInfo( *PQFILE(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QFileInfo * obj = new QFileInfo( *PQFILE(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -126,8 +126,8 @@ QFileInfo(const QDir & dir, const QString & file)
 */
 void QFileInfo_new4()
 {
-  QFileInfo * o = new QFileInfo( *PQDIR(1), PQSTRING(2) );
-  Qt4xHb::returnNewObject( o, true );
+  QFileInfo * obj = new QFileInfo( *PQDIR(1), PQSTRING(2) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -135,8 +135,8 @@ QFileInfo(const QFileInfo & fileinfo)
 */
 void QFileInfo_new5()
 {
-  QFileInfo * o = new QFileInfo( *PQFILEINFO(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QFileInfo * obj = new QFileInfo( *PQFILEINFO(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

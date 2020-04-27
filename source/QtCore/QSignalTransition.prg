@@ -51,8 +51,8 @@ QSignalTransition(QState *sourceState = 0)
 */
 void QSignalTransition_new1()
 {
-  QSignalTransition * o = new QSignalTransition( OPQSTATE(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QSignalTransition * obj = new QSignalTransition( OPQSTATE(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -60,8 +60,8 @@ QSignalTransition(QObject *sender, const char *signal,QState *sourceState = 0)
 */
 void QSignalTransition_new2()
 {
-  QSignalTransition * o = new QSignalTransition( PQOBJECT(1), PCONSTCHAR(2), OPQSTATE(3,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QSignalTransition * obj = new QSignalTransition( PQOBJECT(1), PCONSTCHAR(2), OPQSTATE(3,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -91,8 +91,8 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

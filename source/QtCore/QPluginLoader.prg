@@ -55,8 +55,8 @@ QPluginLoader ( QObject * parent = 0 )
 */
 void QPluginLoader_new1()
 {
-  QPluginLoader * o = new QPluginLoader( OPQOBJECT(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QPluginLoader * obj = new QPluginLoader( OPQOBJECT(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -64,8 +64,8 @@ QPluginLoader ( const QString & fileName, QObject * parent = 0 )
 */
 void QPluginLoader_new2()
 {
-  QPluginLoader * o = new QPluginLoader( PQSTRING(1), OPQOBJECT(2,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QPluginLoader * obj = new QPluginLoader( PQSTRING(1), OPQOBJECT(2,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -95,8 +95,8 @@ HB_FUNC_STATIC( QPLUGINLOADER_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

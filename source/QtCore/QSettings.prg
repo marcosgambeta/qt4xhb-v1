@@ -79,8 +79,8 @@ QSettings ( const QString & organization, const QString & application = QString(
 */
 void QSettings_new1()
 {
-  QSettings * o = new QSettings( PQSTRING(1), OPQSTRING(2,QString()), OPQOBJECT(3,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QSettings * obj = new QSettings( PQSTRING(1), OPQSTRING(2,QString()), OPQOBJECT(3,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -88,8 +88,8 @@ QSettings ( Scope scope, const QString & organization, const QString & applicati
 */
 void QSettings_new2()
 {
-  QSettings * o = new QSettings( (QSettings::Scope) hb_parni(1), PQSTRING(2), OPQSTRING(3,QString()), OPQOBJECT(4,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QSettings * obj = new QSettings( (QSettings::Scope) hb_parni(1), PQSTRING(2), OPQSTRING(3,QString()), OPQOBJECT(4,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -97,8 +97,8 @@ QSettings ( Format format, Scope scope, const QString & organization, const QStr
 */
 void QSettings_new3()
 {
-  QSettings * o = new QSettings( (QSettings::Format) hb_parni(1), (QSettings::Scope) hb_parni(2), PQSTRING(3), OPQSTRING(4,QString()), OPQOBJECT(5,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QSettings * obj = new QSettings( (QSettings::Format) hb_parni(1), (QSettings::Scope) hb_parni(2), PQSTRING(3), OPQSTRING(4,QString()), OPQOBJECT(5,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -106,8 +106,8 @@ QSettings ( const QString & fileName, Format format, QObject * parent = 0 )
 */
 void QSettings_new4()
 {
-  QSettings * o = new QSettings( PQSTRING(1), (QSettings::Format) hb_parni(2), OPQOBJECT(3,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QSettings * obj = new QSettings( PQSTRING(1), (QSettings::Format) hb_parni(2), OPQOBJECT(3,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -115,8 +115,8 @@ QSettings ( QObject * parent = 0 )
 */
 void QSettings_new5()
 {
-  QSettings * o = new QSettings( OPQOBJECT(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QSettings * obj = new QSettings( OPQOBJECT(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -161,8 +161,8 @@ HB_FUNC_STATIC( QSETTINGS_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

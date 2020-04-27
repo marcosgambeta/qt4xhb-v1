@@ -47,8 +47,8 @@ QPauseAnimation ( QObject * parent = 0 )
 */
 void QPauseAnimation_new1()
 {
-  QPauseAnimation * o = new QPauseAnimation( OPQOBJECT(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QPauseAnimation * obj = new QPauseAnimation( OPQOBJECT(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -56,8 +56,8 @@ QPauseAnimation ( int msecs, QObject * parent = 0 )
 */
 void QPauseAnimation_new2()
 {
-  QPauseAnimation * o = new QPauseAnimation( PINT(1), OPQOBJECT(2,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QPauseAnimation * obj = new QPauseAnimation( PINT(1), OPQOBJECT(2,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -87,8 +87,8 @@ HB_FUNC_STATIC( QPAUSEANIMATION_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

@@ -51,8 +51,8 @@ QPropertyAnimation ( QObject * parent = 0 )
 */
 void QPropertyAnimation_new1()
 {
-  QPropertyAnimation * o = new QPropertyAnimation( OPQOBJECT(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QPropertyAnimation * obj = new QPropertyAnimation( OPQOBJECT(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -60,8 +60,8 @@ QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject 
 */
 void QPropertyAnimation_new2()
 {
-  QPropertyAnimation * o = new QPropertyAnimation( PQOBJECT(1), *PQBYTEARRAY(2), OPQOBJECT(3,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QPropertyAnimation * obj = new QPropertyAnimation( PQOBJECT(1), *PQBYTEARRAY(2), OPQOBJECT(3,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -91,8 +91,8 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

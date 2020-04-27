@@ -81,8 +81,8 @@ QFSFileEngine ()
 */
 void QFSFileEngine_new1()
 {
-  QFSFileEngine * o = new QFSFileEngine();
-  Qt4xHb::returnNewObject( o, true );
+  QFSFileEngine * obj = new QFSFileEngine();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -90,8 +90,8 @@ QFSFileEngine ( const QString & file )
 */
 void QFSFileEngine_new2()
 {
-  QFSFileEngine * o = new QFSFileEngine( PQSTRING(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QFSFileEngine * obj = new QFSFileEngine( PQSTRING(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

@@ -58,8 +58,8 @@ HB_FUNC_STATIC( QSEMAPHORE_NEW )
 {
   if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
-    QSemaphore * o = new QSemaphore( OPINT(1,0) );
-    Qt4xHb::returnNewObject( o, true );
+    QSemaphore * obj = new QSemaphore( OPINT(1,0) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

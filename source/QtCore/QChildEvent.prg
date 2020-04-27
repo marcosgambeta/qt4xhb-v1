@@ -50,8 +50,8 @@ HB_FUNC_STATIC( QCHILDEVENT_NEW )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISQOBJECT(2) )
   {
-    QChildEvent * o = new QChildEvent( (QEvent::Type) hb_parni(1), PQOBJECT(2) );
-    Qt4xHb::returnNewObject( o, false );
+    QChildEvent * obj = new QChildEvent( (QEvent::Type) hb_parni(1), PQOBJECT(2) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

@@ -66,8 +66,8 @@ QUuid()
 */
 HB_FUNC_STATIC( QUUID_NEW1 )
 {
-  QUuid * o = new QUuid();
-  Qt4xHb::returnNewObject( o, true );
+  QUuid * obj = new QUuid();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -75,8 +75,8 @@ QUuid(uint l, ushort w1, ushort w2, uchar b1, uchar b2, uchar b3, uchar b4, ucha
 */
 HB_FUNC_STATIC( QUUID_NEW2 )
 {
-  QUuid * o = new QUuid( PUINT(1), PUSHORT(2), PUSHORT(3), PUCHAR(4), PUCHAR(5), PUCHAR(6), PUCHAR(7), PUCHAR(8), PUCHAR(9), PUCHAR(10), PUCHAR(11) );
-  Qt4xHb::returnNewObject( o, true );
+  QUuid * obj = new QUuid( PUINT(1), PUSHORT(2), PUSHORT(3), PUCHAR(4), PUCHAR(5), PUCHAR(6), PUCHAR(7), PUCHAR(8), PUCHAR(9), PUCHAR(10), PUCHAR(11) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -84,8 +84,8 @@ QUuid(const QString &)
 */
 HB_FUNC_STATIC( QUUID_NEW3 )
 {
-  QUuid * o = new QUuid( PQSTRING(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QUuid * obj = new QUuid( PQSTRING(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -93,8 +93,8 @@ QUuid(const char *)
 */
 HB_FUNC_STATIC( QUUID_NEW4 )
 {
-  QUuid * o = new QUuid( PCONSTCHAR(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QUuid * obj = new QUuid( PCONSTCHAR(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -102,8 +102,8 @@ QUuid(const QByteArray &)
 */
 HB_FUNC_STATIC( QUUID_NEW5 )
 {
-  QUuid * o = new QUuid( *PQBYTEARRAY(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QUuid * obj = new QUuid( *PQBYTEARRAY(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

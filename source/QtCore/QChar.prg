@@ -89,8 +89,8 @@ QChar ()
 */
 HB_FUNC_STATIC( QCHAR_NEW1 )
 {
-  QChar * o = new QChar();
-  Qt4xHb::returnNewObject( o, true );
+  QChar * obj = new QChar();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -98,8 +98,8 @@ QChar ( char ch )
 */
 HB_FUNC_STATIC( QCHAR_NEW2 )
 {
-  QChar * o = new QChar( PCHAR(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QChar * obj = new QChar( PCHAR(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -107,8 +107,8 @@ QChar ( uchar ch )
 */
 HB_FUNC_STATIC( QCHAR_NEW3 )
 {
-  QChar * o = new QChar( PUCHAR(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QChar * obj = new QChar( PUCHAR(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -116,8 +116,8 @@ QChar ( QLatin1Char ch )
 */
 HB_FUNC_STATIC( QCHAR_NEW4 )
 {
-  QChar * o = new QChar( *PQLATIN1CHAR(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QChar * obj = new QChar( *PQLATIN1CHAR(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -125,8 +125,8 @@ QChar ( uchar cell, uchar row )
 */
 HB_FUNC_STATIC( QCHAR_NEW5 )
 {
-  QChar * o = new QChar( PUCHAR(1), PUCHAR(2) );
-  Qt4xHb::returnNewObject( o, true );
+  QChar * obj = new QChar( PUCHAR(1), PUCHAR(2) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -134,8 +134,8 @@ QChar ( ushort code )
 */
 HB_FUNC_STATIC( QCHAR_NEW6 )
 {
-  QChar * o = new QChar( PUSHORT(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QChar * obj = new QChar( PUSHORT(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -143,8 +143,8 @@ QChar ( short code )
 */
 HB_FUNC_STATIC( QCHAR_NEW7 )
 {
-  QChar * o = new QChar( PSHORT(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QChar * obj = new QChar( PSHORT(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -152,8 +152,8 @@ QChar ( uint code )
 */
 HB_FUNC_STATIC( QCHAR_NEW8 )
 {
-  QChar * o = new QChar( PUINT(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QChar * obj = new QChar( PUINT(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -161,8 +161,8 @@ QChar ( int code )
 */
 HB_FUNC_STATIC( QCHAR_NEW9 )
 {
-  QChar * o = new QChar( PINT(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QChar * obj = new QChar( PINT(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -170,8 +170,8 @@ QChar ( SpecialCharacter ch )
 */
 HB_FUNC_STATIC( QCHAR_NEW10 )
 {
-  QChar * o = new QChar( (QChar::SpecialCharacter) hb_parni(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QChar * obj = new QChar( (QChar::SpecialCharacter) hb_parni(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

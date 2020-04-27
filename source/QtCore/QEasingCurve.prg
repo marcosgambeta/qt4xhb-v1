@@ -60,8 +60,8 @@ QEasingCurve ( Type type = Linear )
 */
 void QEasingCurve_new1()
 {
-  QEasingCurve * o = new QEasingCurve( ISNIL(1)? (QEasingCurve::Type) QEasingCurve::Linear : (QEasingCurve::Type) hb_parni(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QEasingCurve * obj = new QEasingCurve( ISNIL(1)? (QEasingCurve::Type) QEasingCurve::Linear : (QEasingCurve::Type) hb_parni(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -69,8 +69,8 @@ QEasingCurve ( const QEasingCurve & other )
 */
 void QEasingCurve_new2()
 {
-  QEasingCurve * o = new QEasingCurve( *PQEASINGCURVE(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QEasingCurve * obj = new QEasingCurve( *PQEASINGCURVE(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

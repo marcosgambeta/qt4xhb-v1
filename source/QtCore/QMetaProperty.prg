@@ -86,8 +86,8 @@ HB_FUNC_STATIC( QMETAPROPERTY_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QMetaProperty * o = new QMetaProperty();
-    Qt4xHb::returnNewObject( o, true );
+    QMetaProperty * obj = new QMetaProperty();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

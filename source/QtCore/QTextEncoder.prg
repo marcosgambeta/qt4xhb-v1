@@ -54,8 +54,8 @@ QTextEncoder(const QTextCodec * codec)
 */
 void QTextEncoder_new1()
 {
-  QTextEncoder * o = new QTextEncoder( PQTEXTCODEC(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QTextEncoder * obj = new QTextEncoder( PQTEXTCODEC(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -63,8 +63,8 @@ QTextEncoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
 */
 void QTextEncoder_new2()
 {
-  QTextEncoder * o = new QTextEncoder( PQTEXTCODEC(1), (QTextCodec::ConversionFlags) hb_parni(2) );
-  Qt4xHb::returnNewObject( o, true );
+  QTextEncoder * obj = new QTextEncoder( PQTEXTCODEC(1), (QTextCodec::ConversionFlags) hb_parni(2) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

@@ -50,8 +50,8 @@ QHistoryState(QState *parent = 0)
 */
 void QHistoryState_new1()
 {
-  QHistoryState * o = new QHistoryState( OPQSTATE(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QHistoryState * obj = new QHistoryState( OPQSTATE(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -59,8 +59,8 @@ QHistoryState(HistoryType type, QState *parent = 0)
 */
 void QHistoryState_new2()
 {
-  QHistoryState * o = new QHistoryState( (QHistoryState::HistoryType) hb_parni(1), OPQSTATE(2,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QHistoryState * obj = new QHistoryState( (QHistoryState::HistoryType) hb_parni(1), OPQSTATE(2,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -90,8 +90,8 @@ HB_FUNC_STATIC( QHISTORYSTATE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

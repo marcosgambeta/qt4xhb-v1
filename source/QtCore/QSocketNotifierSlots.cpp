@@ -12,22 +12,27 @@
 
 #include "QSocketNotifierSlots.h"
 
-QSocketNotifierSlots::QSocketNotifierSlots(QObject *parent) : QObject(parent)
+QSocketNotifierSlots::QSocketNotifierSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QSocketNotifierSlots::~QSocketNotifierSlots()
 {
 }
+
 void QSocketNotifierSlots::activated( int socket )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "activated(int)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSOCKETNOTIFIER" );
     PHB_ITEM psocket = hb_itemPutNI( NULL, socket );
+
     hb_vmEvalBlockV( cb, 2, psender, psocket );
+
     hb_itemRelease( psender );
     hb_itemRelease( psocket );
   }

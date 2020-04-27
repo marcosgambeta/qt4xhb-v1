@@ -58,8 +58,8 @@ HB_FUNC_STATIC( QMUTEXLOCKER_NEW )
 {
   if( ISNUMPAR(1) && ISQMUTEX(1) )
   {
-    QMutexLocker * o = new QMutexLocker( PQMUTEX(1) );
-    Qt4xHb::returnNewObject( o, true );
+    QMutexLocker * obj = new QMutexLocker( PQMUTEX(1) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

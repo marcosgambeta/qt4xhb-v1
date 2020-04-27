@@ -52,8 +52,8 @@ HB_FUNC_STATIC( QTRANSLATOR_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QTranslator * o = new QTranslator( OPQOBJECT(1,0) );
-    Qt4xHb::returnNewObject( o, false );
+    QTranslator * obj = new QTranslator( OPQOBJECT(1,0) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -67,8 +67,8 @@ HB_FUNC_STATIC( QTRANSLATOR_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

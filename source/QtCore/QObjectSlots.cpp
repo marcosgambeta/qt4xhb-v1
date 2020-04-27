@@ -12,22 +12,27 @@
 
 #include "QObjectSlots.h"
 
-QObjectSlots::QObjectSlots(QObject *parent) : QObject(parent)
+QObjectSlots::QObjectSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QObjectSlots::~QObjectSlots()
 {
 }
+
 void QObjectSlots::destroyed( QObject * obj )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "destroyed(QObject*)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QOBJECT" );
     PHB_ITEM pobj = Signals_return_qobject( (QObject *) obj, "QOBJECT" );
+
     hb_vmEvalBlockV( cb, 2, psender, pobj );
+
     hb_itemRelease( psender );
     hb_itemRelease( pobj );
     Signals_disconnect_signal( object, "destroyed(QObject*)" );

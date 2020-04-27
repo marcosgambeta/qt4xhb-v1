@@ -46,8 +46,8 @@ HB_FUNC_STATIC( QTIMEREVENT_NEW )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    QTimerEvent * o = new QTimerEvent( PINT(1) );
-    Qt4xHb::returnNewObject( o, false );
+    QTimerEvent * obj = new QTimerEvent( PINT(1) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

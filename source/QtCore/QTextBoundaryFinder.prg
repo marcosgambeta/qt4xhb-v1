@@ -63,8 +63,8 @@ QTextBoundaryFinder()
 */
 void QTextBoundaryFinder_new1()
 {
-  QTextBoundaryFinder * o = new QTextBoundaryFinder();
-  Qt4xHb::returnNewObject( o, true );
+  QTextBoundaryFinder * obj = new QTextBoundaryFinder();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -72,8 +72,8 @@ QTextBoundaryFinder(const QTextBoundaryFinder &other)
 */
 void QTextBoundaryFinder_new2()
 {
-  QTextBoundaryFinder * o = new QTextBoundaryFinder( *PQTEXTBOUNDARYFINDER(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QTextBoundaryFinder * obj = new QTextBoundaryFinder( *PQTEXTBOUNDARYFINDER(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -81,8 +81,8 @@ QTextBoundaryFinder(BoundaryType type, const QString &string)
 */
 void QTextBoundaryFinder_new3()
 {
-  QTextBoundaryFinder * o = new QTextBoundaryFinder( (QTextBoundaryFinder::BoundaryType) hb_parni(1), PQSTRING(2) );
-  Qt4xHb::returnNewObject( o, true );
+  QTextBoundaryFinder * obj = new QTextBoundaryFinder( (QTextBoundaryFinder::BoundaryType) hb_parni(1), PQSTRING(2) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

@@ -71,8 +71,8 @@ QFile ( const QString & name )
 */
 void QFile_new1()
 {
-  QFile * o = new QFile( PQSTRING(1) );
-  Qt4xHb::returnNewObject( o, false );
+  QFile * obj = new QFile( PQSTRING(1) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -80,8 +80,8 @@ QFile ( QObject * parent )
 */
 void QFile_new2()
 {
-  QFile * o = new QFile( PQOBJECT(1) );
-  Qt4xHb::returnNewObject( o, false );
+  QFile * obj = new QFile( PQOBJECT(1) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -89,8 +89,8 @@ QFile ( const QString & name, QObject * parent )
 */
 void QFile_new3()
 {
-  QFile * o = new QFile( PQSTRING(1), PQOBJECT(2) );
-  Qt4xHb::returnNewObject( o, false );
+  QFile * obj = new QFile( PQSTRING(1), PQOBJECT(2) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -125,8 +125,8 @@ HB_FUNC_STATIC( QFILE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

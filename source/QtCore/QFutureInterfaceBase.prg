@@ -87,8 +87,8 @@ QFutureInterfaceBase(State initialState = NoState)
 */
 void QFutureInterfaceBase_new1()
 {
-  QFutureInterfaceBase * o = new QFutureInterfaceBase( ISNIL(1)? (QFutureInterfaceBase::State) QFutureInterfaceBase::NoState : (QFutureInterfaceBase::State) hb_parni(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QFutureInterfaceBase * obj = new QFutureInterfaceBase( ISNIL(1)? (QFutureInterfaceBase::State) QFutureInterfaceBase::NoState : (QFutureInterfaceBase::State) hb_parni(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -96,8 +96,8 @@ QFutureInterfaceBase(const QFutureInterfaceBase &other)
 */
 void QFutureInterfaceBase_new2()
 {
-  QFutureInterfaceBase * o = new QFutureInterfaceBase( *PQFUTUREINTERFACEBASE(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QFutureInterfaceBase * obj = new QFutureInterfaceBase( *PQFUTUREINTERFACEBASE(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

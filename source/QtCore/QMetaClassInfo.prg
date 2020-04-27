@@ -58,8 +58,8 @@ HB_FUNC_STATIC( QMETACLASSINFO_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QMetaClassInfo * o = new QMetaClassInfo();
-    Qt4xHb::returnNewObject( o, true );
+    QMetaClassInfo * obj = new QMetaClassInfo();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

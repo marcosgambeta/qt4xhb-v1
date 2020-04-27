@@ -92,8 +92,8 @@ QTextStream()
 */
 void QTextStream_new1()
 {
-  QTextStream * o = new QTextStream();
-  Qt4xHb::returnNewObject( o, true );
+  QTextStream * obj = new QTextStream();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -101,8 +101,8 @@ QTextStream(QIODevice *device)
 */
 void QTextStream_new2()
 {
-  QTextStream * o = new QTextStream( PQIODEVICE(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QTextStream * obj = new QTextStream( PQIODEVICE(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -110,8 +110,8 @@ QTextStream(FILE *fileHandle, QIODevice::OpenMode openMode = QIODevice::ReadWrit
 */
 void QTextStream_new3()
 {
-  QTextStream * o = new QTextStream( (FILE *) hb_parptr(1), ISNIL(2)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(2) );
-  Qt4xHb::returnNewObject( o, true );
+  QTextStream * obj = new QTextStream( (FILE *) hb_parptr(1), ISNIL(2)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(2) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -127,8 +127,8 @@ QTextStream(const QByteArray &array, QIODevice::OpenMode openMode = QIODevice::R
 */
 void QTextStream_new6()
 {
-  QTextStream * o = new QTextStream( *PQBYTEARRAY(1), ISNIL(2)? (QIODevice::OpenMode) QIODevice::ReadOnly : (QIODevice::OpenMode) hb_parni(2) );
-  Qt4xHb::returnNewObject( o, true );
+  QTextStream * obj = new QTextStream( *PQBYTEARRAY(1), ISNIL(2)? (QIODevice::OpenMode) QIODevice::ReadOnly : (QIODevice::OpenMode) hb_parni(2) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

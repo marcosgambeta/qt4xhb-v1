@@ -56,8 +56,8 @@ HB_FUNC_STATIC( QWAITCONDITION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QWaitCondition * o = new QWaitCondition();
-    Qt4xHb::returnNewObject( o, true );
+    QWaitCondition * obj = new QWaitCondition();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

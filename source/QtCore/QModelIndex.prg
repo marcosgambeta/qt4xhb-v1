@@ -65,8 +65,8 @@ QModelIndex ()
 */
 void QModelIndex_new1()
 {
-  QModelIndex * o = new QModelIndex();
-  Qt4xHb::returnNewObject( o, true );
+  QModelIndex * obj = new QModelIndex();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -74,8 +74,8 @@ QModelIndex ( const QModelIndex & other )
 */
 void QModelIndex_new2()
 {
-  QModelIndex * o = new QModelIndex( *PQMODELINDEX(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QModelIndex * obj = new QModelIndex( *PQMODELINDEX(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
