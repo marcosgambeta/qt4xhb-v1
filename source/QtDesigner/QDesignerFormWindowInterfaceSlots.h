@@ -28,7 +28,7 @@ class QDesignerFormWindowInterfaceSlots: public QObject
 {
   Q_OBJECT
   public:
-  QDesignerFormWindowInterfaceSlots(QObject *parent = 0);
+  QDesignerFormWindowInterfaceSlots( QObject *parent = 0 );
   ~QDesignerFormWindowInterfaceSlots();
   public slots:
   void aboutToUnmanageWidget( QWidget * widget );
