@@ -69,8 +69,8 @@ QDeclarativeComponent(QObject *parent = 0);
 */
 void QDeclarativeComponent_new1()
 {
-  QDeclarativeComponent * o = new QDeclarativeComponent( OPQOBJECT(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QDeclarativeComponent * obj = new QDeclarativeComponent( OPQOBJECT(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -78,8 +78,8 @@ QDeclarativeComponent(QDeclarativeEngine *, QObject *parent=0)
 */
 void QDeclarativeComponent_new2()
 {
-  QDeclarativeComponent * o = new QDeclarativeComponent( PQDECLARATIVEENGINE(1), OPQOBJECT(2,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QDeclarativeComponent * obj = new QDeclarativeComponent( PQDECLARATIVEENGINE(1), OPQOBJECT(2,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -87,8 +87,8 @@ QDeclarativeComponent(QDeclarativeEngine *, const QString &fileName, QObject *pa
 */
 void QDeclarativeComponent_new3()
 {
-  QDeclarativeComponent * o = new QDeclarativeComponent( PQDECLARATIVEENGINE(1), PQSTRING(2), OPQOBJECT(3,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QDeclarativeComponent * obj = new QDeclarativeComponent( PQDECLARATIVEENGINE(1), PQSTRING(2), OPQOBJECT(3,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -96,8 +96,8 @@ QDeclarativeComponent(QDeclarativeEngine *, const QUrl &url, QObject *parent = 0
 */
 void QDeclarativeComponent_new4()
 {
-  QDeclarativeComponent * o = new QDeclarativeComponent( PQDECLARATIVEENGINE(1), *PQURL(2), OPQOBJECT(3,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QDeclarativeComponent * obj = new QDeclarativeComponent( PQDECLARATIVEENGINE(1), *PQURL(2), OPQOBJECT(3,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -137,8 +137,8 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

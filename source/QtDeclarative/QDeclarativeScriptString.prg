@@ -61,8 +61,8 @@ QDeclarativeScriptString ()
 */
 void QDeclarativeScriptString_new1()
 {
-  QDeclarativeScriptString * o = new QDeclarativeScriptString();
-  Qt4xHb::returnNewObject( o, true );
+  QDeclarativeScriptString * obj = new QDeclarativeScriptString();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -70,8 +70,8 @@ QDeclarativeScriptString ( const QDeclarativeScriptString & other )
 */
 void QDeclarativeScriptString_new2()
 {
-  QDeclarativeScriptString * o = new QDeclarativeScriptString( *PQDECLARATIVESCRIPTSTRING(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QDeclarativeScriptString * obj = new QDeclarativeScriptString( *PQDECLARATIVESCRIPTSTRING(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

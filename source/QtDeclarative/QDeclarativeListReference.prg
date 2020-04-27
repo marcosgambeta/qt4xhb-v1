@@ -64,8 +64,8 @@ QDeclarativeListReference ()
 */
 void QDeclarativeListReference_new1()
 {
-  QDeclarativeListReference * o = new QDeclarativeListReference();
-  Qt4xHb::returnNewObject( o, true );
+  QDeclarativeListReference * obj = new QDeclarativeListReference();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -73,8 +73,8 @@ QDeclarativeListReference ( QObject * object, const char * property, QDeclarativ
 */
 void QDeclarativeListReference_new2()
 {
-  QDeclarativeListReference * o = new QDeclarativeListReference( PQOBJECT(1), PCONSTCHAR(2), OPQDECLARATIVEENGINE(3,0) );
-  Qt4xHb::returnNewObject( o, true );
+  QDeclarativeListReference * obj = new QDeclarativeListReference( PQOBJECT(1), PCONSTCHAR(2), OPQDECLARATIVEENGINE(3,0) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

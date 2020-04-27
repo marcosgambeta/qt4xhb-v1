@@ -69,8 +69,8 @@ QDeclarativeExpression ()
 */
 void QDeclarativeExpression_new1()
 {
-  QDeclarativeExpression * o = new QDeclarativeExpression();
-  Qt4xHb::returnNewObject( o, false );
+  QDeclarativeExpression * obj = new QDeclarativeExpression();
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -78,8 +78,8 @@ QDeclarativeExpression ( QDeclarativeContext * ctxt, QObject * scope, const QStr
 */
 void QDeclarativeExpression_new2()
 {
-  QDeclarativeExpression * o = new QDeclarativeExpression( PQDECLARATIVECONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QDeclarativeExpression * obj = new QDeclarativeExpression( PQDECLARATIVECONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -109,8 +109,8 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
