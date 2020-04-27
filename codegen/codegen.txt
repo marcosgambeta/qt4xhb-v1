@@ -184,7 +184,7 @@ QAxScriptEngine                                  |QObject  |ActiveQt
 QAxScriptEngine::State                           |enum
 QAxScriptManager                                 |QObject  |ActiveQt
 QAxWidget                                        |QObject  |ActiveQt
-QBasicAtomicInt                                  |         |QtCore
+QBasicAtomicInt                                  |object   |QtCore
 QBasicTimer                                      |object   |QtCore
 QBitArray                                        |object   |QtCore
 QBitmap                                          |object   |QtGui
@@ -438,7 +438,7 @@ QFuture                                          |object
 QFutureInterfaceBase                             |object   |QtCore
 QFutureInterfaceBase::State                      |enum
 QFutureWatcher                                   |QObject
-QFutureWatcherBase                               ||QtCore
+QFutureWatcherBase                               |QObject  |QtCore
 QGenericPlugin                                   |QObject  |QtGui
 QGenericPluginFactory                            |object   |QtGui
 QGesture                                         |QObject  |QtGui
