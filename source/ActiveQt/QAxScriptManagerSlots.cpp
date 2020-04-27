@@ -12,17 +12,20 @@
 
 #include "QAxScriptManagerSlots.h"
 
-QAxScriptManagerSlots::QAxScriptManagerSlots(QObject *parent) : QObject(parent)
+QAxScriptManagerSlots::QAxScriptManagerSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QAxScriptManagerSlots::~QAxScriptManagerSlots()
 {
 }
+
 void QAxScriptManagerSlots::error( QAxScript * script, int code, const QString & description, int sourcePosition, const QString & sourceText )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QAxScript*,int,QString,int,QString)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAXSCRIPTMANAGER" );
@@ -31,7 +34,9 @@ void QAxScriptManagerSlots::error( QAxScript * script, int code, const QString &
     PHB_ITEM pdescription = hb_itemPutC( NULL, QSTRINGTOSTRING(description) );
     PHB_ITEM psourcePosition = hb_itemPutNI( NULL, sourcePosition );
     PHB_ITEM psourceText = hb_itemPutC( NULL, QSTRINGTOSTRING(sourceText) );
+
     hb_vmEvalBlockV( cb, 6, psender, pscript, pcode, pdescription, psourcePosition, psourceText );
+
     hb_itemRelease( psender );
     hb_itemRelease( pscript );
     hb_itemRelease( pcode );

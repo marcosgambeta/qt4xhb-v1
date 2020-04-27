@@ -73,8 +73,8 @@ QAxWidget ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 void QAxWidget_new1()
 {
-  QAxWidget * o = new QAxWidget( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-  Qt4xHb::returnNewObject( o, false );
+  QAxWidget * obj = new QAxWidget( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -82,8 +82,8 @@ QAxWidget ( const QString & c, QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 void QAxWidget_new2()
 {
-  QAxWidget * o = new QAxWidget( PQSTRING(1), OPQWIDGET(2,0), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
-  Qt4xHb::returnNewObject( o, false );
+  QAxWidget * obj = new QAxWidget( PQSTRING(1), OPQWIDGET(2,0), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -91,8 +91,8 @@ QAxWidget ( IUnknown * iface, QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 void QAxWidget_new3()
 {
-  QAxWidget * o = new QAxWidget( (IUnknown *) hb_parptr(1), OPQWIDGET(2,0), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
-  Qt4xHb::returnNewObject( o, false );
+  QAxWidget * obj = new QAxWidget( (IUnknown *) hb_parptr(1), OPQWIDGET(2,0), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -127,8 +127,8 @@ HB_FUNC_STATIC( QAXWIDGET_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

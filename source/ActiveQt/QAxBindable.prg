@@ -59,8 +59,8 @@ HB_FUNC_STATIC( QAXBINDABLE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QAxBindable * o = new QAxBindable();
-    Qt4xHb::returnNewObject( o, true );
+    QAxBindable * obj = new QAxBindable();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
