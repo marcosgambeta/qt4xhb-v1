@@ -11,7 +11,7 @@
 /*
   método construtor
 */
-HAbstractTableModel::HAbstractTableModel (QObject * parent) : QAbstractTableModel (parent)
+HAbstractTableModel::HAbstractTableModel( QObject * parent ) : QAbstractTableModel( parent )
 {
   // linhas e colunas
   m_rowCountCB = NULL;
