@@ -12,34 +12,44 @@
 
 #include "QAudioInputSlots.h"
 
-QAudioInputSlots::QAudioInputSlots(QObject *parent) : QObject(parent)
+QAudioInputSlots::QAudioInputSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QAudioInputSlots::~QAudioInputSlots()
 {
 }
+
 void QAudioInputSlots::stateChanged( QAudio::State state )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QAudio::State)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAUDIOINPUT" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
+
     hb_vmEvalBlockV( cb, 2, psender, pstate );
+
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }
 }
+
 void QAudioInputSlots::notify()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "notify()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAUDIOINPUT" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

@@ -79,8 +79,8 @@ QVideoFrame ()
 */
 void QVideoFrame_new1()
 {
-  QVideoFrame * o = new QVideoFrame();
-  Qt4xHb::returnNewObject( o, true );
+  QVideoFrame * obj = new QVideoFrame();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -88,8 +88,8 @@ QVideoFrame ( QAbstractVideoBuffer * buffer, const QSize & size, PixelFormat for
 */
 void QVideoFrame_new2()
 {
-  QVideoFrame * o = new QVideoFrame( PQABSTRACTVIDEOBUFFER(1), *PQSIZE(2), (QVideoFrame::PixelFormat) hb_parni(3) );
-  Qt4xHb::returnNewObject( o, true );
+  QVideoFrame * obj = new QVideoFrame( PQABSTRACTVIDEOBUFFER(1), *PQSIZE(2), (QVideoFrame::PixelFormat) hb_parni(3) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -97,8 +97,8 @@ QVideoFrame ( int bytes, const QSize & size, int bytesPerLine, PixelFormat forma
 */
 void QVideoFrame_new3()
 {
-  QVideoFrame * o = new QVideoFrame( PINT(1), *PQSIZE(2), PINT(3), (QVideoFrame::PixelFormat) hb_parni(4) );
-  Qt4xHb::returnNewObject( o, true );
+  QVideoFrame * obj = new QVideoFrame( PINT(1), *PQSIZE(2), PINT(3), (QVideoFrame::PixelFormat) hb_parni(4) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -106,8 +106,8 @@ QVideoFrame ( const QImage & image )
 */
 void QVideoFrame_new4()
 {
-  QVideoFrame * o = new QVideoFrame( *PQIMAGE(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QVideoFrame * obj = new QVideoFrame( *PQIMAGE(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -115,8 +115,8 @@ QVideoFrame ( const QVideoFrame & other )
 */
 void QVideoFrame_new5()
 {
-  QVideoFrame * o = new QVideoFrame( *PQVIDEOFRAME(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QVideoFrame * obj = new QVideoFrame( *PQVIDEOFRAME(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

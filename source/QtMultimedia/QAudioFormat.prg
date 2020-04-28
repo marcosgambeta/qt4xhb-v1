@@ -69,8 +69,8 @@ QAudioFormat ()
 */
 void QAudioFormat_new1()
 {
-  QAudioFormat * o = new QAudioFormat();
-  Qt4xHb::returnNewObject( o, true );
+  QAudioFormat * obj = new QAudioFormat();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -78,8 +78,8 @@ QAudioFormat ( const QAudioFormat & other )
 */
 void QAudioFormat_new2()
 {
-  QAudioFormat * o = new QAudioFormat( *PQAUDIOFORMAT(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QAudioFormat * obj = new QAudioFormat( *PQAUDIOFORMAT(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

@@ -66,8 +66,8 @@ QAudioInput ( const QAudioFormat & format = QAudioFormat(), QObject * parent = 0
 */
 void QAudioInput_new1()
 {
-  QAudioInput * o = new QAudioInput( ISNIL(1)? QAudioFormat() : *(QAudioFormat *) Qt4xHb::itemGetPtr(1), OPQOBJECT(2,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QAudioInput * obj = new QAudioInput( ISNIL(1)? QAudioFormat() : *(QAudioFormat *) Qt4xHb::itemGetPtr(1), OPQOBJECT(2,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -75,8 +75,8 @@ QAudioInput ( const QAudioDeviceInfo & audioDevice, const QAudioFormat & format 
 */
 void QAudioInput_new2()
 {
-  QAudioInput * o = new QAudioInput( *PQAUDIODEVICEINFO(1), ISNIL(2)? QAudioFormat() : *(QAudioFormat *) Qt4xHb::itemGetPtr(2), OPQOBJECT(3,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QAudioInput * obj = new QAudioInput( *PQAUDIODEVICEINFO(1), ISNIL(2)? QAudioFormat() : *(QAudioFormat *) Qt4xHb::itemGetPtr(2), OPQOBJECT(3,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -106,8 +106,8 @@ HB_FUNC_STATIC( QAUDIOINPUT_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

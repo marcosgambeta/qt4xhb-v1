@@ -28,7 +28,7 @@ class QAudioInputSlots: public QObject
 {
   Q_OBJECT
   public:
-  QAudioInputSlots(QObject *parent = 0);
+  QAudioInputSlots( QObject *parent = 0 );
   ~QAudioInputSlots();
   public slots:
   void stateChanged( QAudio::State state );
