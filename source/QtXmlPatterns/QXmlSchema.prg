@@ -71,8 +71,8 @@ QXmlSchema ()
 */
 void QXmlSchema_new1()
 {
-  QXmlSchema * o = new QXmlSchema();
-  Qt4xHb::returnNewObject( o, true );
+  QXmlSchema * obj = new QXmlSchema();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -80,8 +80,8 @@ QXmlSchema ( const QXmlSchema & other )
 */
 void QXmlSchema_new2()
 {
-  QXmlSchema * o = new QXmlSchema( *PQXMLSCHEMA(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QXmlSchema * obj = new QXmlSchema( *PQXMLSCHEMA(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

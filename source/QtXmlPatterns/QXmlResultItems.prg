@@ -60,8 +60,8 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QXmlResultItems * o = new QXmlResultItems();
-    Qt4xHb::returnNewObject( o, true );
+    QXmlResultItems * obj = new QXmlResultItems();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

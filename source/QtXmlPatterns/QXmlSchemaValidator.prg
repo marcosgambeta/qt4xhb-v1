@@ -72,8 +72,8 @@ QXmlSchemaValidator ()
 */
 void QXmlSchemaValidator_new1()
 {
-  QXmlSchemaValidator * o = new QXmlSchemaValidator();
-  Qt4xHb::returnNewObject( o, true );
+  QXmlSchemaValidator * obj = new QXmlSchemaValidator();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -81,8 +81,8 @@ QXmlSchemaValidator ( const QXmlSchema & schema )
 */
 void QXmlSchemaValidator_new2()
 {
-  QXmlSchemaValidator * o = new QXmlSchemaValidator( *PQXMLSCHEMA(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QXmlSchemaValidator * obj = new QXmlSchemaValidator( *PQXMLSCHEMA(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
