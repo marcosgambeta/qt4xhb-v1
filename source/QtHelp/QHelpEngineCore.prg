@@ -82,8 +82,8 @@ HB_FUNC_STATIC( QHELPENGINECORE_NEW )
 {
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    QHelpEngineCore * o = new QHelpEngineCore( PQSTRING(1), OPQOBJECT(2,0) );
-    Qt4xHb::returnNewObject( o, false );
+    QHelpEngineCore * obj = new QHelpEngineCore( PQSTRING(1), OPQOBJECT(2,0) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -97,8 +97,8 @@ HB_FUNC_STATIC( QHELPENGINECORE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
