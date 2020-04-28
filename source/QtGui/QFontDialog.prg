@@ -58,8 +58,8 @@ QFontDialog(QWidget *parent = 0)
 */
 void QFontDialog_new1()
 {
-  QFontDialog * o = new QFontDialog( OPQWIDGET(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QFontDialog * obj = new QFontDialog( OPQWIDGET(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -67,8 +67,8 @@ QFontDialog(const QFont &initial, QWidget *parent = 0)
 */
 void QFontDialog_new2()
 {
-  QFontDialog * o = new QFontDialog( *PQFONT(1), OPQWIDGET(2,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QFontDialog * obj = new QFontDialog( *PQFONT(1), OPQWIDGET(2,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*

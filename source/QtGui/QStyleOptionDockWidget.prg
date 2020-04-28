@@ -50,8 +50,8 @@ QStyleOptionDockWidget()
 */
 void QStyleOptionDockWidget_new1()
 {
-  QStyleOptionDockWidget * o = new QStyleOptionDockWidget();
-  Qt4xHb::returnNewObject( o, true );
+  QStyleOptionDockWidget * obj = new QStyleOptionDockWidget();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -59,8 +59,8 @@ QStyleOptionDockWidget(const QStyleOptionDockWidget &other)
 */
 void QStyleOptionDockWidget_new2()
 {
-  QStyleOptionDockWidget * o = new QStyleOptionDockWidget( *PQSTYLEOPTIONDOCKWIDGET(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QStyleOptionDockWidget * obj = new QStyleOptionDockWidget( *PQSTYLEOPTIONDOCKWIDGET(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

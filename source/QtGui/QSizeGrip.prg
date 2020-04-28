@@ -50,8 +50,8 @@ HB_FUNC_STATIC( QSIZEGRIP_NEW )
 {
   if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    QSizeGrip * o = new QSizeGrip( PQWIDGET(1) );
-    Qt4xHb::returnNewObject( o, false );
+    QSizeGrip * obj = new QSizeGrip( PQWIDGET(1) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -65,8 +65,8 @@ HB_FUNC_STATIC( QSIZEGRIP_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

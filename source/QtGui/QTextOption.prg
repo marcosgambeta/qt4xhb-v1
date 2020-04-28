@@ -66,8 +66,8 @@ QTextOption ()
 */
 void QTextOption_new1()
 {
-  QTextOption * o = new QTextOption();
-  Qt4xHb::returnNewObject( o, true );
+  QTextOption * obj = new QTextOption();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -75,8 +75,8 @@ QTextOption ( Qt::Alignment alignment )
 */
 void QTextOption_new2()
 {
-  QTextOption * o = new QTextOption( (Qt::Alignment) hb_parni(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QTextOption * obj = new QTextOption( (Qt::Alignment) hb_parni(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -84,8 +84,8 @@ QTextOption ( const QTextOption & other )
 */
 void QTextOption_new3()
 {
-  QTextOption * o = new QTextOption( *PQTEXTOPTION(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QTextOption * obj = new QTextOption( *PQTEXTOPTION(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

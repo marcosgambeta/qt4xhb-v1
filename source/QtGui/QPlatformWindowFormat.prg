@@ -99,8 +99,8 @@ QPlatformWindowFormat ()
 */
 void QPlatformWindowFormat_new1()
 {
-  QPlatformWindowFormat * o = new QPlatformWindowFormat();
-  Qt4xHb::returnNewObject( o, true );
+  QPlatformWindowFormat * obj = new QPlatformWindowFormat();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -108,8 +108,8 @@ QPlatformWindowFormat ( FormatOptions options )
 */
 void QPlatformWindowFormat_new2()
 {
-  QPlatformWindowFormat * o = new QPlatformWindowFormat( (QPlatformWindowFormat::FormatOptions) hb_parni(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QPlatformWindowFormat * obj = new QPlatformWindowFormat( (QPlatformWindowFormat::FormatOptions) hb_parni(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -117,8 +117,8 @@ QPlatformWindowFormat ( const QPlatformWindowFormat & other )
 */
 void QPlatformWindowFormat_new3()
 {
-  QPlatformWindowFormat * o = new QPlatformWindowFormat( *PQPLATFORMWINDOWFORMAT(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QPlatformWindowFormat * obj = new QPlatformWindowFormat( *PQPLATFORMWINDOWFORMAT(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

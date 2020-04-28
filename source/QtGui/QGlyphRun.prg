@@ -67,8 +67,8 @@ QGlyphRun ()
 */
 void QGlyphRun_new1()
 {
-  QGlyphRun * o = new QGlyphRun();
-  Qt4xHb::returnNewObject( o, true );
+  QGlyphRun * obj = new QGlyphRun();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -76,8 +76,8 @@ QGlyphRun ( const QGlyphRun & other )
 */
 void QGlyphRun_new2()
 {
-  QGlyphRun * o = new QGlyphRun( *PQGLYPHRUN(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QGlyphRun * obj = new QGlyphRun( *PQGLYPHRUN(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

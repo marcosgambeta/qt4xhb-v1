@@ -69,8 +69,8 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QDoubleSpinBox * o = new QDoubleSpinBox( OPQWIDGET(1,0) );
-    Qt4xHb::returnNewObject( o, false );
+    QDoubleSpinBox * obj = new QDoubleSpinBox( OPQWIDGET(1,0) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

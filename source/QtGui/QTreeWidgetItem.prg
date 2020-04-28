@@ -114,8 +114,8 @@ QTreeWidgetItem ( int type = Type )
 */
 void QTreeWidgetItem_new1()
 {
-  QTreeWidgetItem * o = new QTreeWidgetItem( OPINT(1,QTreeWidgetItem::Type) );
-  Qt4xHb::returnNewObject( o, false );
+  QTreeWidgetItem * obj = new QTreeWidgetItem( OPINT(1,QTreeWidgetItem::Type) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -123,8 +123,8 @@ QTreeWidgetItem ( const QStringList & strings, int type = Type )
 */
 void QTreeWidgetItem_new2()
 {
-  QTreeWidgetItem * o = new QTreeWidgetItem( PQSTRINGLIST(1), OPINT(2,QTreeWidgetItem::Type) );
-  Qt4xHb::returnNewObject( o, false );
+  QTreeWidgetItem * obj = new QTreeWidgetItem( PQSTRINGLIST(1), OPINT(2,QTreeWidgetItem::Type) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -132,8 +132,8 @@ QTreeWidgetItem ( QTreeWidget * parent, int type = Type )
 */
 void QTreeWidgetItem_new3()
 {
-  QTreeWidgetItem * o = new QTreeWidgetItem( PQTREEWIDGET(1), OPINT(2,QTreeWidgetItem::Type) );
-  Qt4xHb::returnNewObject( o, false );
+  QTreeWidgetItem * obj = new QTreeWidgetItem( PQTREEWIDGET(1), OPINT(2,QTreeWidgetItem::Type) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -141,8 +141,8 @@ QTreeWidgetItem ( QTreeWidget * parent, const QStringList & strings, int type = 
 */
 void QTreeWidgetItem_new4()
 {
-  QTreeWidgetItem * o = new QTreeWidgetItem( PQTREEWIDGET(1), PQSTRINGLIST(2), OPINT(3,QTreeWidgetItem::Type) );
-  Qt4xHb::returnNewObject( o, false );
+  QTreeWidgetItem * obj = new QTreeWidgetItem( PQTREEWIDGET(1), PQSTRINGLIST(2), OPINT(3,QTreeWidgetItem::Type) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -150,8 +150,8 @@ QTreeWidgetItem ( QTreeWidget * parent, QTreeWidgetItem * preceding, int type = 
 */
 void QTreeWidgetItem_new5()
 {
-  QTreeWidgetItem * o = new QTreeWidgetItem( PQTREEWIDGET(1), PQTREEWIDGETITEM(2), OPINT(3,QTreeWidgetItem::Type) );
-  Qt4xHb::returnNewObject( o, false );
+  QTreeWidgetItem * obj = new QTreeWidgetItem( PQTREEWIDGET(1), PQTREEWIDGETITEM(2), OPINT(3,QTreeWidgetItem::Type) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -159,8 +159,8 @@ QTreeWidgetItem ( QTreeWidgetItem * parent, int type = Type )
 */
 void QTreeWidgetItem_new6()
 {
-  QTreeWidgetItem * o = new QTreeWidgetItem( PQTREEWIDGETITEM(1), OPINT(2,QTreeWidgetItem::Type) );
-  Qt4xHb::returnNewObject( o, false );
+  QTreeWidgetItem * obj = new QTreeWidgetItem( PQTREEWIDGETITEM(1), OPINT(2,QTreeWidgetItem::Type) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -168,8 +168,8 @@ QTreeWidgetItem ( QTreeWidgetItem * parent, const QStringList & strings, int typ
 */
 void QTreeWidgetItem_new7()
 {
-  QTreeWidgetItem * o = new QTreeWidgetItem( PQTREEWIDGETITEM(1), PQSTRINGLIST(2), OPINT(3,QTreeWidgetItem::Type) );
-  Qt4xHb::returnNewObject( o, false );
+  QTreeWidgetItem * obj = new QTreeWidgetItem( PQTREEWIDGETITEM(1), PQSTRINGLIST(2), OPINT(3,QTreeWidgetItem::Type) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -177,8 +177,8 @@ QTreeWidgetItem ( QTreeWidgetItem * parent, QTreeWidgetItem * preceding, int typ
 */
 void QTreeWidgetItem_new8()
 {
-  QTreeWidgetItem * o = new QTreeWidgetItem( PQTREEWIDGETITEM(1), PQTREEWIDGETITEM(2), OPINT(3,QTreeWidgetItem::Type) );
-  Qt4xHb::returnNewObject( o, false );
+  QTreeWidgetItem * obj = new QTreeWidgetItem( PQTREEWIDGETITEM(1), PQTREEWIDGETITEM(2), OPINT(3,QTreeWidgetItem::Type) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -186,8 +186,8 @@ QTreeWidgetItem ( const QTreeWidgetItem & other )
 */
 void QTreeWidgetItem_new9()
 {
-  QTreeWidgetItem * o = new QTreeWidgetItem( *PQTREEWIDGETITEM(1) );
-  Qt4xHb::returnNewObject( o, false );
+  QTreeWidgetItem * obj = new QTreeWidgetItem( *PQTREEWIDGETITEM(1) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*

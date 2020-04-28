@@ -59,8 +59,8 @@ HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_NEW )
 {
   if( ISNUMPAR(6) && ISCHAR(1) && ISCHAR(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) )
   {
-    QPlatformCursorImage * o = new QPlatformCursorImage( PCONSTUCHAR(1), PCONSTUCHAR(2), PINT(3), PINT(4), PINT(5), PINT(6) );
-    Qt4xHb::returnNewObject( o, true );
+    QPlatformCursorImage * obj = new QPlatformCursorImage( PCONSTUCHAR(1), PCONSTUCHAR(2), PINT(3), PINT(4), PINT(5), PINT(6) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

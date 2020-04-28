@@ -51,8 +51,8 @@ QStyleOptionTitleBar()
 */
 void QStyleOptionTitleBar_new1()
 {
-  QStyleOptionTitleBar * o = new QStyleOptionTitleBar();
-  Qt4xHb::returnNewObject( o, true );
+  QStyleOptionTitleBar * obj = new QStyleOptionTitleBar();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -60,8 +60,8 @@ QStyleOptionTitleBar(const QStyleOptionTitleBar &other)
 */
 void QStyleOptionTitleBar_new2()
 {
-  QStyleOptionTitleBar * o = new QStyleOptionTitleBar( *PQSTYLEOPTIONTITLEBAR(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QStyleOptionTitleBar * obj = new QStyleOptionTitleBar( *PQSTYLEOPTIONTITLEBAR(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

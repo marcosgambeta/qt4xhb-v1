@@ -70,8 +70,8 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QPainterPathStroker * o = new QPainterPathStroker();
-    Qt4xHb::returnNewObject( o, true );
+    QPainterPathStroker * obj = new QPainterPathStroker();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

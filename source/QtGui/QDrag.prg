@@ -68,8 +68,8 @@ HB_FUNC_STATIC( QDRAG_NEW )
 {
   if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    QDrag * o = new QDrag( PQWIDGET(1) );
-    Qt4xHb::returnNewObject( o, false );
+    QDrag * obj = new QDrag( PQWIDGET(1) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -83,8 +83,8 @@ HB_FUNC_STATIC( QDRAG_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

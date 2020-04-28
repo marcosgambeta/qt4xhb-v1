@@ -61,8 +61,8 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QItemEditorFactory * o = new QItemEditorFactory();
-    Qt4xHb::returnNewObject( o, true );
+    QItemEditorFactory * obj = new QItemEditorFactory();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

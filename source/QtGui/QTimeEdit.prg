@@ -44,8 +44,8 @@ QTimeEdit ( QWidget * parent = 0 )
 */
 void QTimeEdit_new1()
 {
-  QTimeEdit * o = new QTimeEdit( OPQWIDGET(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QTimeEdit * obj = new QTimeEdit( OPQWIDGET(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -53,8 +53,8 @@ QTimeEdit ( const QTime & time, QWidget * parent = 0 )
 */
 void QTimeEdit_new2()
 {
-  QTimeEdit * o = new QTimeEdit( *PQTIME(1), OPQWIDGET(2,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QTimeEdit * obj = new QTimeEdit( *PQTIME(1), OPQWIDGET(2,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*

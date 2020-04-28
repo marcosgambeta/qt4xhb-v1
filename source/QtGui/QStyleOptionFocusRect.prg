@@ -45,8 +45,8 @@ QStyleOptionFocusRect()
 */
 void QStyleOptionFocusRect_new1()
 {
-  QStyleOptionFocusRect * o = new QStyleOptionFocusRect();
-  Qt4xHb::returnNewObject( o, true );
+  QStyleOptionFocusRect * obj = new QStyleOptionFocusRect();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -54,8 +54,8 @@ QStyleOptionFocusRect(const QStyleOptionFocusRect &other)
 */
 void QStyleOptionFocusRect_new2()
 {
-  QStyleOptionFocusRect * o = new QStyleOptionFocusRect( *PQSTYLEOPTIONFOCUSRECT(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QStyleOptionFocusRect * obj = new QStyleOptionFocusRect( *PQSTYLEOPTIONFOCUSRECT(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

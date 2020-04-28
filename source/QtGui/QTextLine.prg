@@ -83,8 +83,8 @@ HB_FUNC_STATIC( QTEXTLINE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QTextLine * o = new QTextLine();
-    Qt4xHb::returnNewObject( o, true );
+    QTextLine * obj = new QTextLine();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

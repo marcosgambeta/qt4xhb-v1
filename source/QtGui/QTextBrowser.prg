@@ -76,8 +76,8 @@ HB_FUNC_STATIC( QTEXTBROWSER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QTextBrowser * o = new QTextBrowser( OPQWIDGET(1,0) );
-    Qt4xHb::returnNewObject( o, false );
+    QTextBrowser * obj = new QTextBrowser( OPQWIDGET(1,0) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

@@ -123,8 +123,8 @@ QTextCursor ()
 */
 void QTextCursor_new1()
 {
-  QTextCursor * o = new QTextCursor();
-  Qt4xHb::returnNewObject( o, true );
+  QTextCursor * obj = new QTextCursor();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -132,8 +132,8 @@ QTextCursor ( QTextDocument * document )
 */
 void QTextCursor_new2()
 {
-  QTextCursor * o = new QTextCursor( PQTEXTDOCUMENT(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QTextCursor * obj = new QTextCursor( PQTEXTDOCUMENT(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -141,8 +141,8 @@ QTextCursor ( QTextFrame * frame )
 */
 void QTextCursor_new3()
 {
-  QTextCursor * o = new QTextCursor( PQTEXTFRAME(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QTextCursor * obj = new QTextCursor( PQTEXTFRAME(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -150,8 +150,8 @@ QTextCursor ( const QTextBlock & block )
 */
 void QTextCursor_new4()
 {
-  QTextCursor * o = new QTextCursor( *PQTEXTBLOCK(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QTextCursor * obj = new QTextCursor( *PQTEXTBLOCK(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -159,8 +159,8 @@ QTextCursor ( const QTextCursor & cursor )
 */
 void QTextCursor_new5()
 {
-  QTextCursor * o = new QTextCursor( *PQTEXTCURSOR(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QTextCursor * obj = new QTextCursor( *PQTEXTCURSOR(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

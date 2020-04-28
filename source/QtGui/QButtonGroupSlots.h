@@ -30,7 +30,7 @@ class QButtonGroupSlots: public QObject
 {
   Q_OBJECT
   public:
-  QButtonGroupSlots(QObject *parent = 0);
+  QButtonGroupSlots( QObject *parent = 0 );
   ~QButtonGroupSlots();
   public slots:
   void buttonClicked( QAbstractButton * button );

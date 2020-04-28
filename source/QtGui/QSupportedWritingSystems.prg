@@ -54,8 +54,8 @@ QSupportedWritingSystems ()
 */
 void QSupportedWritingSystems_new1()
 {
-  QSupportedWritingSystems * o = new QSupportedWritingSystems();
-  Qt4xHb::returnNewObject( o, true );
+  QSupportedWritingSystems * obj = new QSupportedWritingSystems();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -63,8 +63,8 @@ QSupportedWritingSystems ( const QSupportedWritingSystems & other )
 */
 void QSupportedWritingSystems_new2()
 {
-  QSupportedWritingSystems * o = new QSupportedWritingSystems( *PQSUPPORTEDWRITINGSYSTEMS(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QSupportedWritingSystems * obj = new QSupportedWritingSystems( *PQSUPPORTEDWRITINGSYSTEMS(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

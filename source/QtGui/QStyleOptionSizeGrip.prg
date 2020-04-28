@@ -44,8 +44,8 @@ QStyleOptionSizeGrip()
 */
 void QStyleOptionSizeGrip_new1()
 {
-  QStyleOptionSizeGrip * o = new QStyleOptionSizeGrip();
-  Qt4xHb::returnNewObject( o, true );
+  QStyleOptionSizeGrip * obj = new QStyleOptionSizeGrip();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -53,8 +53,8 @@ QStyleOptionSizeGrip(const QStyleOptionSizeGrip &other)
 */
 void QStyleOptionSizeGrip_new2()
 {
-  QStyleOptionSizeGrip * o = new QStyleOptionSizeGrip( *PQSTYLEOPTIONSIZEGRIP(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QStyleOptionSizeGrip * obj = new QStyleOptionSizeGrip( *PQSTYLEOPTIONSIZEGRIP(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

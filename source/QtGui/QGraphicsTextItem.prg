@@ -86,8 +86,8 @@ QGraphicsTextItem ( QGraphicsItem * parent = 0 )
 */
 void QGraphicsTextItem_new1()
 {
-  QGraphicsTextItem * o = new QGraphicsTextItem( ISNIL(1)? 0 : (QGraphicsItem *) Qt4xHb::itemGetPtr(1) );
-  Qt4xHb::returnNewObject( o, false );
+  QGraphicsTextItem * obj = new QGraphicsTextItem( ISNIL(1)? 0 : (QGraphicsItem *) Qt4xHb::itemGetPtr(1) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -95,8 +95,8 @@ QGraphicsTextItem ( const QString & text, QGraphicsItem * parent = 0 )
 */
 void QGraphicsTextItem_new2()
 {
-  QGraphicsTextItem * o = new QGraphicsTextItem( PQSTRING(1), ISNIL(2)? 0 : (QGraphicsItem *) Qt4xHb::itemGetPtr(2) );
-  Qt4xHb::returnNewObject( o, false );
+  QGraphicsTextItem * obj = new QGraphicsTextItem( PQSTRING(1), ISNIL(2)? 0 : (QGraphicsItem *) Qt4xHb::itemGetPtr(2) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -126,8 +126,8 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

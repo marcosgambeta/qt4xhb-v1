@@ -65,8 +65,8 @@ HB_FUNC_STATIC( QMOTIFSTYLE_NEW )
 {
   if( ISBETWEEN(0,1) && ISOPTLOG(1) )
   {
-    QMotifStyle * o = new QMotifStyle( OPBOOL(1,false) );
-    Qt4xHb::returnNewObject( o, false );
+    QMotifStyle * obj = new QMotifStyle( OPBOOL(1,false) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -80,8 +80,8 @@ HB_FUNC_STATIC( QMOTIFSTYLE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

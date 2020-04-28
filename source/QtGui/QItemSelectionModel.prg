@@ -70,8 +70,8 @@ QItemSelectionModel ( QAbstractItemModel * model )
 */
 void QItemSelectionModel_new1()
 {
-  QItemSelectionModel * o = new QItemSelectionModel( PQABSTRACTITEMMODEL(1) );
-  Qt4xHb::returnNewObject( o, false );
+  QItemSelectionModel * obj = new QItemSelectionModel( PQABSTRACTITEMMODEL(1) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -79,8 +79,8 @@ QItemSelectionModel ( QAbstractItemModel * model, QObject * parent )
 */
 void QItemSelectionModel_new2()
 {
-  QItemSelectionModel * o = new QItemSelectionModel( PQABSTRACTITEMMODEL(1), PQOBJECT(2) );
-  Qt4xHb::returnNewObject( o, false );
+  QItemSelectionModel * obj = new QItemSelectionModel( PQABSTRACTITEMMODEL(1), PQOBJECT(2) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -110,8 +110,8 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

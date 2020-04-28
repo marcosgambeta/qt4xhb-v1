@@ -76,8 +76,8 @@ QBrush ()
 */
 void QBrush_new1()
 {
-  QBrush * o = new QBrush();
-  Qt4xHb::returnNewObject( o, true );
+  QBrush * obj = new QBrush();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -85,8 +85,8 @@ QBrush ( Qt::BrushStyle style )
 */
 void QBrush_new2()
 {
-  QBrush * o = new QBrush( (Qt::BrushStyle) hb_parni(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QBrush * obj = new QBrush( (Qt::BrushStyle) hb_parni(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -94,8 +94,8 @@ QBrush ( const QColor & color, Qt::BrushStyle style = Qt::SolidPattern )
 */
 void QBrush_new3()
 {
-  QBrush * o = new QBrush( ISOBJECT(1)? *(QColor *) Qt4xHb::itemGetPtr(1) : QColor(hb_parc(1)), ISNIL(2)? (Qt::BrushStyle) Qt::SolidPattern : (Qt::BrushStyle) hb_parni(2) );
-  Qt4xHb::returnNewObject( o, true );
+  QBrush * obj = new QBrush( ISOBJECT(1)? *(QColor *) Qt4xHb::itemGetPtr(1) : QColor(hb_parc(1)), ISNIL(2)? (Qt::BrushStyle) Qt::SolidPattern : (Qt::BrushStyle) hb_parni(2) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -103,8 +103,8 @@ QBrush ( Qt::GlobalColor color, Qt::BrushStyle style = Qt::SolidPattern )
 */
 void QBrush_new4()
 {
-  QBrush * o = new QBrush( (Qt::GlobalColor) hb_parni(1), ISNIL(2)? (Qt::BrushStyle) Qt::SolidPattern : (Qt::BrushStyle) hb_parni(2) );
-  Qt4xHb::returnNewObject( o, true );
+  QBrush * obj = new QBrush( (Qt::GlobalColor) hb_parni(1), ISNIL(2)? (Qt::BrushStyle) Qt::SolidPattern : (Qt::BrushStyle) hb_parni(2) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -112,8 +112,8 @@ QBrush ( const QColor & color, const QPixmap & pixmap )
 */
 void QBrush_new5()
 {
-  QBrush * o = new QBrush( ISOBJECT(1)? *(QColor *) Qt4xHb::itemGetPtr(1) : QColor(hb_parc(1)), *PQPIXMAP(2) );
-  Qt4xHb::returnNewObject( o, true );
+  QBrush * obj = new QBrush( ISOBJECT(1)? *(QColor *) Qt4xHb::itemGetPtr(1) : QColor(hb_parc(1)), *PQPIXMAP(2) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -121,8 +121,8 @@ QBrush ( Qt::GlobalColor color, const QPixmap & pixmap )
 */
 void QBrush_new6()
 {
-  QBrush * o = new QBrush( (Qt::GlobalColor) hb_parni(1), *PQPIXMAP(2) );
-  Qt4xHb::returnNewObject( o, true );
+  QBrush * obj = new QBrush( (Qt::GlobalColor) hb_parni(1), *PQPIXMAP(2) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -130,8 +130,8 @@ QBrush ( const QPixmap & pixmap )
 */
 void QBrush_new7()
 {
-  QBrush * o = new QBrush( *PQPIXMAP(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QBrush * obj = new QBrush( *PQPIXMAP(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -139,8 +139,8 @@ QBrush ( const QImage & image )
 */
 void QBrush_new8()
 {
-  QBrush * o = new QBrush( *PQIMAGE(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QBrush * obj = new QBrush( *PQIMAGE(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -148,8 +148,8 @@ QBrush ( const QBrush & other )
 */
 void QBrush_new9()
 {
-  QBrush * o = new QBrush( *PQBRUSH(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QBrush * obj = new QBrush( *PQBRUSH(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -157,8 +157,8 @@ QBrush ( const QGradient & gradient )
 */
 void QBrush_new10()
 {
-  QBrush * o = new QBrush( *PQGRADIENT(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QBrush * obj = new QBrush( *PQGRADIENT(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

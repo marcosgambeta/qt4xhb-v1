@@ -72,8 +72,8 @@ QProgressDialog ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 void QProgressDialog_new1()
 {
-  QProgressDialog * o = new QProgressDialog( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-  Qt4xHb::returnNewObject( o, false );
+  QProgressDialog * obj = new QProgressDialog( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -81,8 +81,8 @@ QProgressDialog ( const QString & labelText, const QString & cancelButtonText, i
 */
 void QProgressDialog_new2()
 {
-  QProgressDialog * o = new QProgressDialog( PQSTRING(1), PQSTRING(2), PINT(3), PINT(4), OPQWIDGET(5,0), ISNIL(6)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(6) );
-  Qt4xHb::returnNewObject( o, false );
+  QProgressDialog * obj = new QProgressDialog( PQSTRING(1), PQSTRING(2), PINT(3), PINT(4), OPQWIDGET(5,0), ISNIL(6)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(6) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -112,8 +112,8 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

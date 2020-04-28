@@ -96,8 +96,8 @@ QTransform ()
 */
 void QTransform_new1()
 {
-  QTransform * o = new QTransform();
-  Qt4xHb::returnNewObject( o, true );
+  QTransform * obj = new QTransform();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -105,8 +105,8 @@ QTransform ( qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, q
 */
 void QTransform_new2()
 {
-  QTransform * o = new QTransform( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6), PQREAL(7), PQREAL(8), OPQREAL(9,1.0) );
-  Qt4xHb::returnNewObject( o, true );
+  QTransform * obj = new QTransform( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6), PQREAL(7), PQREAL(8), OPQREAL(9,1.0) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -114,8 +114,8 @@ QTransform ( qreal m11, qreal m12, qreal m21, qreal m22, qreal dx, qreal dy )
 */
 void QTransform_new3()
 {
-  QTransform * o = new QTransform( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
-  Qt4xHb::returnNewObject( o, true );
+  QTransform * obj = new QTransform( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -123,8 +123,8 @@ QTransform ( const QMatrix & matrix )
 */
 void QTransform_new4()
 {
-  QTransform * o = new QTransform( *PQMATRIX(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QTransform * obj = new QTransform( *PQMATRIX(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

@@ -112,8 +112,8 @@ QFileDialog ( QWidget * parent, Qt::WindowFlags flags )
 */
 void QFileDialog_new1()
 {
-  QFileDialog * o = new QFileDialog( PQWIDGET(1), (Qt::WindowFlags) hb_parni(2) );
-  Qt4xHb::returnNewObject( o, false );
+  QFileDialog * obj = new QFileDialog( PQWIDGET(1), (Qt::WindowFlags) hb_parni(2) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -121,8 +121,8 @@ QFileDialog ( QWidget * parent = 0, const QString & caption = QString(), const Q
 */
 void QFileDialog_new2()
 {
-  QFileDialog * o = new QFileDialog( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
-  Qt4xHb::returnNewObject( o, false );
+  QFileDialog * obj = new QFileDialog( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -152,8 +152,8 @@ HB_FUNC_STATIC( QFILEDIALOG_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

@@ -117,8 +117,8 @@ HB_FUNC_STATIC( QHEADERVIEW_NEW )
 {
   if( ISBETWEEN(1,2) && ISNUM(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    QHeaderView * o = new QHeaderView( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
-    Qt4xHb::returnNewObject( o, false );
+    QHeaderView * obj = new QHeaderView( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -132,8 +132,8 @@ HB_FUNC_STATIC( QHEADERVIEW_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

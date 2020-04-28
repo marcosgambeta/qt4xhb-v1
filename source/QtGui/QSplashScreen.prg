@@ -54,8 +54,8 @@ QSplashScreen ( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
 */
 void QSplashScreen_new1()
 {
-  QSplashScreen * o = new QSplashScreen( ISNIL(1)? QPixmap() : *(QPixmap *) Qt4xHb::itemGetPtr(1), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-  Qt4xHb::returnNewObject( o, false );
+  QSplashScreen * obj = new QSplashScreen( ISNIL(1)? QPixmap() : *(QPixmap *) Qt4xHb::itemGetPtr(1), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -63,8 +63,8 @@ QSplashScreen ( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::Window
 */
 void QSplashScreen_new2()
 {
-  QSplashScreen * o = new QSplashScreen( PQWIDGET(1), ISNIL(2)? QPixmap() : *(QPixmap *) Qt4xHb::itemGetPtr(2), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
-  Qt4xHb::returnNewObject( o, false );
+  QSplashScreen * obj = new QSplashScreen( PQWIDGET(1), ISNIL(2)? QPixmap() : *(QPixmap *) Qt4xHb::itemGetPtr(2), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -94,8 +94,8 @@ HB_FUNC_STATIC( QSPLASHSCREEN_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

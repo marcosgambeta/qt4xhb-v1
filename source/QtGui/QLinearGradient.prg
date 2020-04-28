@@ -48,8 +48,8 @@ QLinearGradient()
 */
 void QLinearGradient_new1()
 {
-  QLinearGradient * o = new QLinearGradient();
-  Qt4xHb::returnNewObject( o, true );
+  QLinearGradient * obj = new QLinearGradient();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -57,8 +57,8 @@ QLinearGradient(const QPointF &start, const QPointF &finalStop)
 */
 void QLinearGradient_new2()
 {
-  QLinearGradient * o = new QLinearGradient( *PQPOINTF(1), *PQPOINTF(2) );
-  Qt4xHb::returnNewObject( o, true );
+  QLinearGradient * obj = new QLinearGradient( *PQPOINTF(1), *PQPOINTF(2) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -66,8 +66,8 @@ QLinearGradient(qreal xStart, qreal yStart, qreal xFinalStop, qreal yFinalStop)
 */
 void QLinearGradient_new3()
 {
-  QLinearGradient * o = new QLinearGradient( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
-  Qt4xHb::returnNewObject( o, true );
+  QLinearGradient * obj = new QLinearGradient( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

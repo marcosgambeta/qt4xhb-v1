@@ -66,8 +66,8 @@ HB_FUNC_STATIC( QWIZARDPAGE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QWizardPage * o = new QWizardPage( OPQWIDGET(1,0) );
-    Qt4xHb::returnNewObject( o, false );
+    QWizardPage * obj = new QWizardPage( OPQWIDGET(1,0) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

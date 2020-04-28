@@ -90,8 +90,8 @@ QMatrix4x4 ()
 */
 HB_FUNC_STATIC( QMATRIX4X4_NEW1 )
 {
-  QMatrix4x4 * o = new QMatrix4x4();
-  Qt4xHb::returnNewObject( o, true );
+  QMatrix4x4 * obj = new QMatrix4x4();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -103,8 +103,8 @@ QMatrix4x4 ( qreal m11, qreal m12, qreal m13, qreal m14, qreal m21, qreal m22, q
 */
 HB_FUNC_STATIC( QMATRIX4X4_NEW3 )
 {
-  QMatrix4x4 * o = new QMatrix4x4( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6), PQREAL(7), PQREAL(8), PQREAL(9), PQREAL(10), PQREAL(11), PQREAL(12), PQREAL(13), PQREAL(14), PQREAL(15), PQREAL(16) );
-  Qt4xHb::returnNewObject( o, true );
+  QMatrix4x4 * obj = new QMatrix4x4( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6), PQREAL(7), PQREAL(8), PQREAL(9), PQREAL(10), PQREAL(11), PQREAL(12), PQREAL(13), PQREAL(14), PQREAL(15), PQREAL(16) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -116,8 +116,8 @@ QMatrix4x4 ( const QTransform & transform )
 */
 HB_FUNC_STATIC( QMATRIX4X4_NEW5 )
 {
-  QMatrix4x4 * o = new QMatrix4x4( *PQTRANSFORM(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QMatrix4x4 * obj = new QMatrix4x4( *PQTRANSFORM(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

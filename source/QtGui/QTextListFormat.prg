@@ -54,8 +54,8 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QTextListFormat * o = new QTextListFormat();
-    Qt4xHb::returnNewObject( o, true );
+    QTextListFormat * obj = new QTextListFormat();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

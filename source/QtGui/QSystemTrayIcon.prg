@@ -67,8 +67,8 @@ QSystemTrayIcon ( QObject * parent = 0 )
 */
 void QSystemTrayIcon_new1()
 {
-  QSystemTrayIcon * o = new QSystemTrayIcon( OPQOBJECT(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QSystemTrayIcon * obj = new QSystemTrayIcon( OPQOBJECT(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -76,8 +76,8 @@ QSystemTrayIcon ( const QIcon & icon, QObject * parent = 0 )
 */
 void QSystemTrayIcon_new2()
 {
-  QSystemTrayIcon * o = new QSystemTrayIcon( ISOBJECT(1)? *(QIcon *) Qt4xHb::itemGetPtr(1) : QIcon(hb_parc(1)), OPQOBJECT(2,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QSystemTrayIcon * obj = new QSystemTrayIcon( ISOBJECT(1)? *(QIcon *) Qt4xHb::itemGetPtr(1) : QIcon(hb_parc(1)), OPQOBJECT(2,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -107,8 +107,8 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

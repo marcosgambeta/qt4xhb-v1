@@ -45,8 +45,8 @@ HB_FUNC_STATIC( QSHOWEVENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QShowEvent * o = new QShowEvent();
-    Qt4xHb::returnNewObject( o, false );
+    QShowEvent * obj = new QShowEvent();
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

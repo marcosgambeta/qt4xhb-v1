@@ -30,7 +30,7 @@ class QDialogButtonBoxSlots: public QObject
 {
   Q_OBJECT
   public:
-  QDialogButtonBoxSlots(QObject *parent = 0);
+  QDialogButtonBoxSlots( QObject *parent = 0 );
   ~QDialogButtonBoxSlots();
   public slots:
   void accepted();

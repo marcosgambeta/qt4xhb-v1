@@ -76,8 +76,8 @@ QSplitter ( QWidget * parent = 0 )
 */
 void QSplitter_new1()
 {
-  QSplitter * o = new QSplitter( OPQWIDGET(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QSplitter * obj = new QSplitter( OPQWIDGET(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -85,8 +85,8 @@ QSplitter ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
 void QSplitter_new2()
 {
-  QSplitter * o = new QSplitter( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QSplitter * obj = new QSplitter( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -116,8 +116,8 @@ HB_FUNC_STATIC( QSPLITTER_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

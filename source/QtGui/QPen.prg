@@ -77,8 +77,8 @@ QPen ()
 */
 void QPen_new1()
 {
-  QPen * o = new QPen();
-  Qt4xHb::returnNewObject( o, true );
+  QPen * obj = new QPen();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -86,8 +86,8 @@ QPen ( Qt::PenStyle style )
 */
 void QPen_new2()
 {
-  QPen * o = new QPen( (Qt::PenStyle) hb_parni(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QPen * obj = new QPen( (Qt::PenStyle) hb_parni(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -95,8 +95,8 @@ QPen ( const QColor & color )
 */
 void QPen_new3()
 {
-  QPen * o = new QPen( ISOBJECT(1)? *(QColor *) Qt4xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
-  Qt4xHb::returnNewObject( o, true );
+  QPen * obj = new QPen( ISOBJECT(1)? *(QColor *) Qt4xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -104,8 +104,8 @@ QPen ( const QBrush & brush, qreal width, Qt::PenStyle style = Qt::SolidLine, Qt
 */
 void QPen_new4()
 {
-  QPen * o = new QPen( *PQBRUSH(1), PQREAL(2), ISNIL(3)? (Qt::PenStyle) Qt::SolidLine : (Qt::PenStyle) hb_parni(3), ISNIL(4)? (Qt::PenCapStyle) Qt::SquareCap : (Qt::PenCapStyle) hb_parni(4), ISNIL(5)? (Qt::PenJoinStyle) Qt::BevelJoin : (Qt::PenJoinStyle) hb_parni(5) );
-  Qt4xHb::returnNewObject( o, true );
+  QPen * obj = new QPen( *PQBRUSH(1), PQREAL(2), ISNIL(3)? (Qt::PenStyle) Qt::SolidLine : (Qt::PenStyle) hb_parni(3), ISNIL(4)? (Qt::PenCapStyle) Qt::SquareCap : (Qt::PenCapStyle) hb_parni(4), ISNIL(5)? (Qt::PenJoinStyle) Qt::BevelJoin : (Qt::PenJoinStyle) hb_parni(5) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -113,8 +113,8 @@ QPen ( const QPen & pen )
 */
 void QPen_new5()
 {
-  QPen * o = new QPen( *PQPEN(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QPen * obj = new QPen( *PQPEN(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

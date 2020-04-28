@@ -57,8 +57,8 @@ QPrintDialog ( QPrinter * printer, QWidget * parent = 0 )
 */
 void QPrintDialog_new1()
 {
-  QPrintDialog * o = new QPrintDialog( PQPRINTER(1), OPQWIDGET(2,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QPrintDialog * obj = new QPrintDialog( PQPRINTER(1), OPQWIDGET(2,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -66,8 +66,8 @@ QPrintDialog ( QWidget * parent = 0 )
 */
 void QPrintDialog_new2()
 {
-  QPrintDialog * o = new QPrintDialog( OPQWIDGET(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QPrintDialog * obj = new QPrintDialog( OPQWIDGET(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -97,8 +97,8 @@ HB_FUNC_STATIC( QPRINTDIALOG_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

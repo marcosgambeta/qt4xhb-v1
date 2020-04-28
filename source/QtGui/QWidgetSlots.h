@@ -28,7 +28,7 @@ class QWidgetSlots: public QObject
 {
   Q_OBJECT
   public:
-  QWidgetSlots(QObject *parent = 0);
+  QWidgetSlots( QObject *parent = 0 );
   ~QWidgetSlots();
   public slots:
   void customContextMenuRequested( const QPoint & pos );

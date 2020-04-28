@@ -62,8 +62,8 @@ QTextFragment ()
 */
 void QTextFragment_new1()
 {
-  QTextFragment * o = new QTextFragment();
-  Qt4xHb::returnNewObject( o, true );
+  QTextFragment * obj = new QTextFragment();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -71,8 +71,8 @@ QTextFragment ( const QTextFragment & other )
 */
 void QTextFragment_new2()
 {
-  QTextFragment * o = new QTextFragment( *PQTEXTFRAGMENT(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QTextFragment * obj = new QTextFragment( *PQTEXTFRAGMENT(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

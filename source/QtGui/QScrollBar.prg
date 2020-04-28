@@ -48,8 +48,8 @@ QScrollBar ( QWidget * parent = 0 )
 */
 void QScrollBar_new1()
 {
-  QScrollBar * o = new QScrollBar( OPQWIDGET(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QScrollBar * obj = new QScrollBar( OPQWIDGET(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -57,8 +57,8 @@ QScrollBar ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
 void QScrollBar_new2()
 {
-  QScrollBar * o = new QScrollBar( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QScrollBar * obj = new QScrollBar( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -88,8 +88,8 @@ HB_FUNC_STATIC( QSCROLLBAR_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

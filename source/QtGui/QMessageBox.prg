@@ -89,8 +89,8 @@ QMessageBox ( QWidget * parent = 0 )
 */
 void QMessageBox_new1()
 {
-  QMessageBox * o = new QMessageBox( OPQWIDGET(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QMessageBox * obj = new QMessageBox( OPQWIDGET(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -98,8 +98,8 @@ QMessageBox ( Icon icon, const QString & title, const QString & text, StandardBu
 */
 void QMessageBox_new2()
 {
-  QMessageBox * o = new QMessageBox( (QMessageBox::Icon) hb_parni(1), PQSTRING(2), PQSTRING(3), ISNIL(4)? (QMessageBox::StandardButtons) QMessageBox::NoButton : (QMessageBox::StandardButtons) hb_parni(4), OPQWIDGET(5,0), ISNIL(6)? (Qt::WindowFlags) Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint : (Qt::WindowFlags) hb_parni(6) );
-  Qt4xHb::returnNewObject( o, false );
+  QMessageBox * obj = new QMessageBox( (QMessageBox::Icon) hb_parni(1), PQSTRING(2), PQSTRING(3), ISNIL(4)? (QMessageBox::StandardButtons) QMessageBox::NoButton : (QMessageBox::StandardButtons) hb_parni(4), OPQWIDGET(5,0), ISNIL(6)? (Qt::WindowFlags) Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint : (Qt::WindowFlags) hb_parni(6) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -129,8 +129,8 @@ HB_FUNC_STATIC( QMESSAGEBOX_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

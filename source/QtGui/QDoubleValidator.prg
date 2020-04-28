@@ -55,8 +55,8 @@ QDoubleValidator ( QObject * parent = 0 )
 */
 void QDoubleValidator_new1()
 {
-  QDoubleValidator * o = new QDoubleValidator( OPQOBJECT(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QDoubleValidator * obj = new QDoubleValidator( OPQOBJECT(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -64,8 +64,8 @@ QDoubleValidator ( double bottom, double top, int decimals, QObject * parent )
 */
 void QDoubleValidator_new2()
 {
-  QDoubleValidator * o = new QDoubleValidator( PDOUBLE(1), PDOUBLE(2), PINT(3), PQOBJECT(4) );
-  Qt4xHb::returnNewObject( o, false );
+  QDoubleValidator * obj = new QDoubleValidator( PDOUBLE(1), PDOUBLE(2), PINT(3), PQOBJECT(4) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -95,8 +95,8 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

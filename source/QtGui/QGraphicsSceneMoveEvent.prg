@@ -48,8 +48,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QGraphicsSceneMoveEvent * o = new QGraphicsSceneMoveEvent();
-    Qt4xHb::returnNewObject( o, false );
+    QGraphicsSceneMoveEvent * obj = new QGraphicsSceneMoveEvent();
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

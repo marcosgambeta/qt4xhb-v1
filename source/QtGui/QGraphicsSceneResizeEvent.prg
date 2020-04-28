@@ -48,8 +48,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QGraphicsSceneResizeEvent * o = new QGraphicsSceneResizeEvent();
-    Qt4xHb::returnNewObject( o, false );
+    QGraphicsSceneResizeEvent * obj = new QGraphicsSceneResizeEvent();
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

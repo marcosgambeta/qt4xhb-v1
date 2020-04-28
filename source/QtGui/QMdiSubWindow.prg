@@ -72,8 +72,8 @@ HB_FUNC_STATIC( QMDISUBWINDOW_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTNUM(2) )
   {
-    QMdiSubWindow * o = new QMdiSubWindow( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-    Qt4xHb::returnNewObject( o, false );
+    QMdiSubWindow * obj = new QMdiSubWindow( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

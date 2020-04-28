@@ -49,8 +49,8 @@ HB_FUNC_STATIC( QFOCUSFRAME_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QFocusFrame * o = new QFocusFrame( OPQWIDGET(1,0) );
-    Qt4xHb::returnNewObject( o, false );
+    QFocusFrame * obj = new QFocusFrame( OPQWIDGET(1,0) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

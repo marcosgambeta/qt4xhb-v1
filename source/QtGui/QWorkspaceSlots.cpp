@@ -12,22 +12,27 @@
 
 #include "QWorkspaceSlots.h"
 
-QWorkspaceSlots::QWorkspaceSlots(QObject *parent) : QObject(parent)
+QWorkspaceSlots::QWorkspaceSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QWorkspaceSlots::~QWorkspaceSlots()
 {
 }
+
 void QWorkspaceSlots::windowActivated( QWidget * w )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "windowActivated(QWidget*)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWORKSPACE" );
     PHB_ITEM pw = Signals_return_qobject( (QObject *) w, "QWIDGET" );
+
     hb_vmEvalBlockV( cb, 2, psender, pw );
+
     hb_itemRelease( psender );
     hb_itemRelease( pw );
   }

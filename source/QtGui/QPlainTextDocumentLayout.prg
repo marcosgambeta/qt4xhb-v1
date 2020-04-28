@@ -58,8 +58,8 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_NEW )
 {
   if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
   {
-    QPlainTextDocumentLayout * o = new QPlainTextDocumentLayout( PQTEXTDOCUMENT(1) );
-    Qt4xHb::returnNewObject( o, false );
+    QPlainTextDocumentLayout * obj = new QPlainTextDocumentLayout( PQTEXTDOCUMENT(1) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -73,8 +73,8 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

@@ -44,8 +44,8 @@ QDateEdit ( QWidget * parent = 0 )
 */
 void QDateEdit_new1()
 {
-  QDateEdit * o = new QDateEdit( OPQWIDGET(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QDateEdit * obj = new QDateEdit( OPQWIDGET(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -53,8 +53,8 @@ QDateEdit ( const QDate & date, QWidget * parent = 0 )
 */
 void QDateEdit_new2()
 {
-  QDateEdit * o = new QDateEdit( *PQDATE(1), OPQWIDGET(2,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QDateEdit * obj = new QDateEdit( *PQDATE(1), OPQWIDGET(2,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*

@@ -108,8 +108,8 @@ QImage ()
 */
 void QImage_new1()
 {
-  QImage * o = new QImage();
-  Qt4xHb::returnNewObject( o, true );
+  QImage * obj = new QImage();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -117,8 +117,8 @@ QImage ( const QSize & size, Format format )
 */
 void QImage_new2()
 {
-  QImage * o = new QImage( *PQSIZE(1), (QImage::Format) hb_parni(2) );
-  Qt4xHb::returnNewObject( o, true );
+  QImage * obj = new QImage( *PQSIZE(1), (QImage::Format) hb_parni(2) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -126,8 +126,8 @@ QImage ( int width, int height, Format format )
 */
 void QImage_new3()
 {
-  QImage * o = new QImage( PINT(1), PINT(2), (QImage::Format) hb_parni(3) );
-  Qt4xHb::returnNewObject( o, true );
+  QImage * obj = new QImage( PINT(1), PINT(2), (QImage::Format) hb_parni(3) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -135,8 +135,8 @@ QImage ( uchar * data, int width, int height, Format format )
 */
 void QImage_new4()
 {
-  QImage * o = new QImage( (uchar *) hb_parc(1), PINT(2), PINT(3), (QImage::Format) hb_parni(4) );
-  Qt4xHb::returnNewObject( o, true );
+  QImage * obj = new QImage( (uchar *) hb_parc(1), PINT(2), PINT(3), (QImage::Format) hb_parni(4) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -144,8 +144,8 @@ QImage ( const uchar * data, int width, int height, Format format )
 */
 void QImage_new5()
 {
-  QImage * o = new QImage( PCONSTUCHAR(1), PINT(2), PINT(3), (QImage::Format) hb_parni(4) );
-  Qt4xHb::returnNewObject( o, true );
+  QImage * obj = new QImage( PCONSTUCHAR(1), PINT(2), PINT(3), (QImage::Format) hb_parni(4) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -153,8 +153,8 @@ QImage ( uchar * data, int width, int height, int bytesPerLine, Format format )
 */
 void QImage_new6()
 {
-  QImage * o = new QImage( (uchar *) hb_parc(1), PINT(2), PINT(3), PINT(4), (QImage::Format) hb_parni(5) );
-  Qt4xHb::returnNewObject( o, true );
+  QImage * obj = new QImage( (uchar *) hb_parc(1), PINT(2), PINT(3), PINT(4), (QImage::Format) hb_parni(5) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -162,8 +162,8 @@ QImage ( const uchar * data, int width, int height, int bytesPerLine, Format for
 */
 void QImage_new7()
 {
-  QImage * o = new QImage( PCONSTUCHAR(1), PINT(2), PINT(3), PINT(4), (QImage::Format) hb_parni(5) );
-  Qt4xHb::returnNewObject( o, true );
+  QImage * obj = new QImage( PCONSTUCHAR(1), PINT(2), PINT(3), PINT(4), (QImage::Format) hb_parni(5) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -175,8 +175,8 @@ QImage ( const QString & fileName, const char * format = 0 )
 */
 void QImage_new9()
 {
-  QImage * o = new QImage( PQSTRING(1), OPCONSTCHAR(2,0) );
-  Qt4xHb::returnNewObject( o, true );
+  QImage * obj = new QImage( PQSTRING(1), OPCONSTCHAR(2,0) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -184,8 +184,8 @@ QImage ( const char * fileName, const char * format = 0 )
 */
 void QImage_new10()
 {
-  QImage * o = new QImage( PCONSTCHAR(1), OPCONSTCHAR(2,0) );
-  Qt4xHb::returnNewObject( o, true );
+  QImage * obj = new QImage( PCONSTCHAR(1), OPCONSTCHAR(2,0) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -193,8 +193,8 @@ QImage ( const QImage & image )
 */
 void QImage_new11()
 {
-  QImage * o = new QImage( *PQIMAGE(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QImage * obj = new QImage( *PQIMAGE(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

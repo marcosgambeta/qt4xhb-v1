@@ -12,22 +12,27 @@
 
 #include "QWidgetSlots.h"
 
-QWidgetSlots::QWidgetSlots(QObject *parent) : QObject(parent)
+QWidgetSlots::QWidgetSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QWidgetSlots::~QWidgetSlots()
 {
 }
+
 void QWidgetSlots::customContextMenuRequested( const QPoint & pos )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "customContextMenuRequested(QPoint)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWIDGET" );
     PHB_ITEM ppos = Signals_return_object( (void *) &pos, "QPOINT" );
+
     hb_vmEvalBlockV( cb, 2, psender, ppos );
+
     hb_itemRelease( psender );
     hb_itemRelease( ppos );
   }

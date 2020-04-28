@@ -55,8 +55,8 @@ QStringListModel(QObject * parent = 0)
 */
 void QStringListModel_new1()
 {
-  QStringListModel * o = new QStringListModel( OPQOBJECT(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QStringListModel * obj = new QStringListModel( OPQOBJECT(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -64,8 +64,8 @@ QStringListModel(const QStringList & strings, QObject * parent = 0)
 */
 void QStringListModel_new2()
 {
-  QStringListModel * o = new QStringListModel( PQSTRINGLIST(1), OPQOBJECT(2,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QStringListModel * obj = new QStringListModel( PQSTRINGLIST(1), OPQOBJECT(2,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*

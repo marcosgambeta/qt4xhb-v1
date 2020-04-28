@@ -49,8 +49,8 @@ QKeyEventTransition ( QState * sourceState = 0 )
 */
 void QKeyEventTransition_new1()
 {
-  QKeyEventTransition * o = new QKeyEventTransition( OPQSTATE(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QKeyEventTransition * obj = new QKeyEventTransition( OPQSTATE(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -58,8 +58,8 @@ QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sou
 */
 void QKeyEventTransition_new2()
 {
-  QKeyEventTransition * o = new QKeyEventTransition( PQOBJECT(1), (QEvent::Type) hb_parni(2), PINT(3), OPQSTATE(4,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QKeyEventTransition * obj = new QKeyEventTransition( PQOBJECT(1), (QEvent::Type) hb_parni(2), PINT(3), OPQSTATE(4,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -89,8 +89,8 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

@@ -93,8 +93,8 @@ QPixmap ()
 */
 HB_FUNC_STATIC( QPIXMAP_NEW1 )
 {
-  QPixmap * o = new QPixmap();
-  Qt4xHb::returnNewObject( o, true );
+  QPixmap * obj = new QPixmap();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -102,8 +102,8 @@ QPixmap ( int width, int height )
 */
 HB_FUNC_STATIC( QPIXMAP_NEW2 )
 {
-  QPixmap * o = new QPixmap( PINT(1), PINT(2) );
-  Qt4xHb::returnNewObject( o, true );
+  QPixmap * obj = new QPixmap( PINT(1), PINT(2) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -111,8 +111,8 @@ QPixmap ( const QString & fileName, const char * format = 0, Qt::ImageConversion
 */
 HB_FUNC_STATIC( QPIXMAP_NEW3 )
 {
-  QPixmap * o = new QPixmap( PQSTRING(1), OPCONSTCHAR(2,0), ISNIL(3)? (Qt::ImageConversionFlags) Qt::AutoColor : (Qt::ImageConversionFlags) hb_parni(3) );
-  Qt4xHb::returnNewObject( o, true );
+  QPixmap * obj = new QPixmap( PQSTRING(1), OPCONSTCHAR(2,0), ISNIL(3)? (Qt::ImageConversionFlags) Qt::AutoColor : (Qt::ImageConversionFlags) hb_parni(3) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -124,8 +124,8 @@ QPixmap ( const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QPIXMAP_NEW5 )
 {
-  QPixmap * o = new QPixmap( *PQPIXMAP(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QPixmap * obj = new QPixmap( *PQPIXMAP(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -133,8 +133,8 @@ QPixmap ( const QSize & size )
 */
 HB_FUNC_STATIC( QPIXMAP_NEW6 )
 {
-  QPixmap * o = new QPixmap( *PQSIZE(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QPixmap * obj = new QPixmap( *PQSIZE(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

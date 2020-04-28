@@ -68,8 +68,8 @@ QRegion ()
 */
 void QRegion_new1()
 {
-  QRegion * o = new QRegion();
-  Qt4xHb::returnNewObject( o, true );
+  QRegion * obj = new QRegion();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -77,8 +77,8 @@ QRegion ( int x, int y, int w, int h, RegionType t = Rectangle )
 */
 void QRegion_new2()
 {
-  QRegion * o = new QRegion( PINT(1), PINT(2), PINT(3), PINT(4), ISNIL(5)? (QRegion::RegionType) QRegion::Rectangle : (QRegion::RegionType) hb_parni(5) );
-  Qt4xHb::returnNewObject( o, true );
+  QRegion * obj = new QRegion( PINT(1), PINT(2), PINT(3), PINT(4), ISNIL(5)? (QRegion::RegionType) QRegion::Rectangle : (QRegion::RegionType) hb_parni(5) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -86,8 +86,8 @@ QRegion ( const QPolygon & a, Qt::FillRule fillRule = Qt::OddEvenFill )
 */
 void QRegion_new3()
 {
-  QRegion * o = new QRegion( *PQPOLYGON(1), ISNIL(2)? (Qt::FillRule) Qt::OddEvenFill : (Qt::FillRule) hb_parni(2) );
-  Qt4xHb::returnNewObject( o, true );
+  QRegion * obj = new QRegion( *PQPOLYGON(1), ISNIL(2)? (Qt::FillRule) Qt::OddEvenFill : (Qt::FillRule) hb_parni(2) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -95,8 +95,8 @@ QRegion ( const QRegion & r )
 */
 void QRegion_new4()
 {
-  QRegion * o = new QRegion( *PQREGION(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QRegion * obj = new QRegion( *PQREGION(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -104,8 +104,8 @@ QRegion ( const QBitmap & bm )
 */
 void QRegion_new5()
 {
-  QRegion * o = new QRegion( *PQBITMAP(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QRegion * obj = new QRegion( *PQBITMAP(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -113,8 +113,8 @@ QRegion ( const QRect & r, RegionType t = Rectangle )
 */
 void QRegion_new6()
 {
-  QRegion * o = new QRegion( *PQRECT(1), ISNIL(2)? (QRegion::RegionType) QRegion::Rectangle : (QRegion::RegionType) hb_parni(2) );
-  Qt4xHb::returnNewObject( o, true );
+  QRegion * obj = new QRegion( *PQRECT(1), ISNIL(2)? (QRegion::RegionType) QRegion::Rectangle : (QRegion::RegionType) hb_parni(2) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

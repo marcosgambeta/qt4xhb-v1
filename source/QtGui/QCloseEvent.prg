@@ -45,8 +45,8 @@ HB_FUNC_STATIC( QCLOSEEVENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QCloseEvent * o = new QCloseEvent();
-    Qt4xHb::returnNewObject( o, false );
+    QCloseEvent * obj = new QCloseEvent();
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

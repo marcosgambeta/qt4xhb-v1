@@ -54,8 +54,8 @@ HB_FUNC_STATIC( QSTYLEHINTRETURN_NEW )
 {
   if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTNUM(2) )
   {
-    QStyleHintReturn * o = new QStyleHintReturn( OPINT(1,QStyleOption::Version), OPINT(2,QStyleHintReturn::SH_Default) );
-    Qt4xHb::returnNewObject( o, true );
+    QStyleHintReturn * obj = new QStyleHintReturn( OPINT(1,QStyleOption::Version), OPINT(2,QStyleHintReturn::SH_Default) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

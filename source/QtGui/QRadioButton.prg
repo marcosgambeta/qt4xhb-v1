@@ -47,8 +47,8 @@ QRadioButton ( QWidget * parent = 0 )
 */
 void QRadioButton_new1()
 {
-  QRadioButton * o = new QRadioButton( OPQWIDGET(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QRadioButton * obj = new QRadioButton( OPQWIDGET(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -56,8 +56,8 @@ QRadioButton ( const QString & text, QWidget * parent = 0 )
 */
 void QRadioButton_new2()
 {
-  QRadioButton * o = new QRadioButton( PQSTRING(1), OPQWIDGET(2,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QRadioButton * obj = new QRadioButton( PQSTRING(1), OPQWIDGET(2,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*

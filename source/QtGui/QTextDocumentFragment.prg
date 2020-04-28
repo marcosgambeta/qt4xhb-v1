@@ -57,8 +57,8 @@ QTextDocumentFragment ()
 */
 void QTextDocumentFragment_new1()
 {
-  QTextDocumentFragment * o = new QTextDocumentFragment();
-  Qt4xHb::returnNewObject( o, true );
+  QTextDocumentFragment * obj = new QTextDocumentFragment();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -66,8 +66,8 @@ QTextDocumentFragment ( const QTextDocument * document )
 */
 void QTextDocumentFragment_new2()
 {
-  QTextDocumentFragment * o = new QTextDocumentFragment( PQTEXTDOCUMENT(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QTextDocumentFragment * obj = new QTextDocumentFragment( PQTEXTDOCUMENT(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -75,8 +75,8 @@ QTextDocumentFragment ( const QTextCursor & cursor )
 */
 void QTextDocumentFragment_new3()
 {
-  QTextDocumentFragment * o = new QTextDocumentFragment( *PQTEXTCURSOR(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QTextDocumentFragment * obj = new QTextDocumentFragment( *PQTEXTCURSOR(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -84,8 +84,8 @@ QTextDocumentFragment ( const QTextDocumentFragment & other )
 */
 void QTextDocumentFragment_new4()
 {
-  QTextDocumentFragment * o = new QTextDocumentFragment( *PQTEXTDOCUMENTFRAGMENT(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QTextDocumentFragment * obj = new QTextDocumentFragment( *PQTEXTDOCUMENTFRAGMENT(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

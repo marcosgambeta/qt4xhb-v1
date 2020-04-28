@@ -66,8 +66,8 @@ QTextTableCell ()
 */
 void QTextTableCell_new1()
 {
-  QTextTableCell * o = new QTextTableCell();
-  Qt4xHb::returnNewObject( o, true );
+  QTextTableCell * obj = new QTextTableCell();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -75,8 +75,8 @@ QTextTableCell ( const QTextTableCell & other )
 */
 void QTextTableCell_new2()
 {
-  QTextTableCell * o = new QTextTableCell( *PQTEXTTABLECELL(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QTextTableCell * obj = new QTextTableCell( *PQTEXTTABLECELL(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

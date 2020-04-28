@@ -74,8 +74,8 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QTextFrameFormat * o = new QTextFrameFormat();
-    Qt4xHb::returnNewObject( o, true );
+    QTextFrameFormat * obj = new QTextFrameFormat();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

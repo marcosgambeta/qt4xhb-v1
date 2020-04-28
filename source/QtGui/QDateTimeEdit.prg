@@ -104,8 +104,8 @@ QDateTimeEdit ( QWidget * parent = 0 )
 */
 void QDateTimeEdit_new1()
 {
-  QDateTimeEdit * o = new QDateTimeEdit( OPQWIDGET(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QDateTimeEdit * obj = new QDateTimeEdit( OPQWIDGET(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -113,8 +113,8 @@ QDateTimeEdit ( const QDateTime & datetime, QWidget * parent = 0 )
 */
 void QDateTimeEdit_new2()
 {
-  QDateTimeEdit * o = new QDateTimeEdit( *PQDATETIME(1), OPQWIDGET(2,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QDateTimeEdit * obj = new QDateTimeEdit( *PQDATETIME(1), OPQWIDGET(2,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -122,8 +122,8 @@ QDateTimeEdit ( const QDate & date, QWidget * parent = 0 )
 */
 void QDateTimeEdit_new3()
 {
-  QDateTimeEdit * o = new QDateTimeEdit( *PQDATE(1), OPQWIDGET(2,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QDateTimeEdit * obj = new QDateTimeEdit( *PQDATE(1), OPQWIDGET(2,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -131,8 +131,8 @@ QDateTimeEdit ( const QTime & time, QWidget * parent = 0 )
 */
 void QDateTimeEdit_new4()
 {
-  QDateTimeEdit * o = new QDateTimeEdit( *PQTIME(1), OPQWIDGET(2,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QDateTimeEdit * obj = new QDateTimeEdit( *PQTIME(1), OPQWIDGET(2,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -172,8 +172,8 @@ HB_FUNC_STATIC( QDATETIMEEDIT_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

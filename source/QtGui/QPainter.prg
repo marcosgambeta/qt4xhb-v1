@@ -169,8 +169,8 @@ QPainter ()
 */
 void QPainter_new1()
 {
-  QPainter * o = new QPainter();
-  Qt4xHb::returnNewObject( o, true );
+  QPainter * obj = new QPainter();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -178,8 +178,8 @@ QPainter ( QPaintDevice * device )
 */
 void QPainter_new2()
 {
-  QPainter * o = new QPainter( PQPAINTDEVICE(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QPainter * obj = new QPainter( PQPAINTDEVICE(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

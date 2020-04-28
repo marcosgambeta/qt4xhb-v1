@@ -48,8 +48,8 @@ HB_FUNC_STATIC( QMOVEEVENT_NEW )
 {
   if( ISNUMPAR(2) && ISQPOINT(1) && ISQPOINT(2) )
   {
-    QMoveEvent * o = new QMoveEvent( *PQPOINT(1), *PQPOINT(2) );
-    Qt4xHb::returnNewObject( o, false );
+    QMoveEvent * obj = new QMoveEvent( *PQPOINT(1), *PQPOINT(2) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

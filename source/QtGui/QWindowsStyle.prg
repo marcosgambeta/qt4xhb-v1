@@ -60,8 +60,8 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QWindowsStyle * o = new QWindowsStyle();
-    Qt4xHb::returnNewObject( o, false );
+    QWindowsStyle * obj = new QWindowsStyle();
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -75,8 +75,8 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

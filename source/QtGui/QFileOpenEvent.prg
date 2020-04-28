@@ -49,8 +49,8 @@ QFileOpenEvent(const QString &file)
 */
 void QFileOpenEvent_new1()
 {
-  QFileOpenEvent * o = new QFileOpenEvent( PQSTRING(1) );
-  Qt4xHb::returnNewObject( o, false );
+  QFileOpenEvent * obj = new QFileOpenEvent( PQSTRING(1) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -58,8 +58,8 @@ QFileOpenEvent(const QUrl &url)
 */
 void QFileOpenEvent_new2()
 {
-  QFileOpenEvent * o = new QFileOpenEvent( *PQURL(1) );
-  Qt4xHb::returnNewObject( o, false );
+  QFileOpenEvent * obj = new QFileOpenEvent( *PQURL(1) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*

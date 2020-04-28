@@ -65,8 +65,8 @@ QFontInfo ( const QFont & font )
 */
 void QFontInfo_new1()
 {
-  QFontInfo * o = new QFontInfo( *PQFONT(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QFontInfo * obj = new QFontInfo( *PQFONT(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -74,8 +74,8 @@ QFontInfo ( const QFontInfo & fi )
 */
 void QFontInfo_new2()
 {
-  QFontInfo * o = new QFontInfo( *PQFONTINFO(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QFontInfo * obj = new QFontInfo( *PQFONTINFO(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

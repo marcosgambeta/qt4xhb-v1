@@ -58,8 +58,8 @@ HB_FUNC_STATIC( QWIDGETITEM_NEW )
 {
   if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    QWidgetItem * o = new QWidgetItem( PQWIDGET(1) );
-    Qt4xHb::returnNewObject( o, true );
+    QWidgetItem * obj = new QWidgetItem( PQWIDGET(1) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

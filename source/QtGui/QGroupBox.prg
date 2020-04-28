@@ -59,8 +59,8 @@ QGroupBox ( QWidget * parent = 0 )
 */
 void QGroupBox_new1()
 {
-  QGroupBox * o = new QGroupBox( OPQWIDGET(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QGroupBox * obj = new QGroupBox( OPQWIDGET(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -68,8 +68,8 @@ QGroupBox ( const QString & title, QWidget * parent = 0 )
 */
 void QGroupBox_new2()
 {
-  QGroupBox * o = new QGroupBox( PQSTRING(1), OPQWIDGET(2,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QGroupBox * obj = new QGroupBox( PQSTRING(1), OPQWIDGET(2,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*

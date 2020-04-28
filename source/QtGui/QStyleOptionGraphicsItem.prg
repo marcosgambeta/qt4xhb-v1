@@ -51,8 +51,8 @@ QStyleOptionGraphicsItem()
 */
 void QStyleOptionGraphicsItem_new1()
 {
-  QStyleOptionGraphicsItem * o = new QStyleOptionGraphicsItem();
-  Qt4xHb::returnNewObject( o, true );
+  QStyleOptionGraphicsItem * obj = new QStyleOptionGraphicsItem();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -60,8 +60,8 @@ QStyleOptionGraphicsItem(const QStyleOptionGraphicsItem &other)
 */
 void QStyleOptionGraphicsItem_new2()
 {
-  QStyleOptionGraphicsItem * o = new QStyleOptionGraphicsItem( *PQSTYLEOPTIONGRAPHICSITEM(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QStyleOptionGraphicsItem * obj = new QStyleOptionGraphicsItem( *PQSTYLEOPTIONGRAPHICSITEM(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

@@ -66,8 +66,8 @@ QStyleOptionSlider()
 */
 void QStyleOptionSlider_new1()
 {
-  QStyleOptionSlider * o = new QStyleOptionSlider();
-  Qt4xHb::returnNewObject( o, true );
+  QStyleOptionSlider * obj = new QStyleOptionSlider();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -75,8 +75,8 @@ QStyleOptionSlider(const QStyleOptionSlider &other)
 */
 void QStyleOptionSlider_new2()
 {
-  QStyleOptionSlider * o = new QStyleOptionSlider( *PQSTYLEOPTIONSLIDER(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QStyleOptionSlider * obj = new QStyleOptionSlider( *PQSTYLEOPTIONSLIDER(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

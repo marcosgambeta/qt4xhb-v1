@@ -71,8 +71,8 @@ QPrintPreviewWidget ( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags 
 */
 void QPrintPreviewWidget_new1()
 {
-  QPrintPreviewWidget * o = new QPrintPreviewWidget( PQPRINTER(1), OPQWIDGET(2,0), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
-  Qt4xHb::returnNewObject( o, false );
+  QPrintPreviewWidget * obj = new QPrintPreviewWidget( PQPRINTER(1), OPQWIDGET(2,0), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -80,8 +80,8 @@ QPrintPreviewWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
 void QPrintPreviewWidget_new2()
 {
-  QPrintPreviewWidget * o = new QPrintPreviewWidget( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-  Qt4xHb::returnNewObject( o, false );
+  QPrintPreviewWidget * obj = new QPrintPreviewWidget( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -111,8 +111,8 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

@@ -53,8 +53,8 @@ QCheckBox ( QWidget * parent = 0 )
 */
 void QCheckBox_new1()
 {
-  QCheckBox * o = new QCheckBox( OPQWIDGET(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QCheckBox * obj = new QCheckBox( OPQWIDGET(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -62,8 +62,8 @@ QCheckBox ( const QString & text, QWidget * parent = 0 )
 */
 void QCheckBox_new2()
 {
-  QCheckBox * o = new QCheckBox( PQSTRING(1), OPQWIDGET(2,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QCheckBox * obj = new QCheckBox( PQSTRING(1), OPQWIDGET(2,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*

@@ -122,8 +122,8 @@ QLineEdit ( QWidget * parent = 0 )
 */
 void QLineEdit_new1()
 {
-  QLineEdit * o = new QLineEdit( OPQWIDGET(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QLineEdit * obj = new QLineEdit( OPQWIDGET(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -131,8 +131,8 @@ QLineEdit ( const QString & contents, QWidget * parent = 0 )
 */
 void QLineEdit_new2()
 {
-  QLineEdit * o = new QLineEdit( PQSTRING(1), OPQWIDGET(2,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QLineEdit * obj = new QLineEdit( PQSTRING(1), OPQWIDGET(2,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -162,8 +162,8 @@ HB_FUNC_STATIC( QLINEEDIT_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

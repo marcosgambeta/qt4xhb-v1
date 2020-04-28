@@ -68,8 +68,8 @@ QSizePolicy ()
 */
 void QSizePolicy_new1()
 {
-  QSizePolicy * o = new QSizePolicy();
-  Qt4xHb::returnNewObject( o, true );
+  QSizePolicy * obj = new QSizePolicy();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -77,8 +77,8 @@ QSizePolicy ( Policy horizontal, Policy vertical )
 */
 void QSizePolicy_new2()
 {
-  QSizePolicy * o = new QSizePolicy( (QSizePolicy::Policy) hb_parni(1), (QSizePolicy::Policy) hb_parni(2) );
-  Qt4xHb::returnNewObject( o, true );
+  QSizePolicy * obj = new QSizePolicy( (QSizePolicy::Policy) hb_parni(1), (QSizePolicy::Policy) hb_parni(2) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -86,8 +86,8 @@ QSizePolicy ( Policy horizontal, Policy vertical, ControlType type )
 */
 void QSizePolicy_new3()
 {
-  QSizePolicy * o = new QSizePolicy( (QSizePolicy::Policy) hb_parni(1), (QSizePolicy::Policy) hb_parni(2), (QSizePolicy::ControlType) hb_parni(3) );
-  Qt4xHb::returnNewObject( o, true );
+  QSizePolicy * obj = new QSizePolicy( (QSizePolicy::Policy) hb_parni(1), (QSizePolicy::Policy) hb_parni(2), (QSizePolicy::ControlType) hb_parni(3) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

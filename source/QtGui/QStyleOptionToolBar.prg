@@ -54,8 +54,8 @@ QStyleOptionToolBar()
 */
 void QStyleOptionToolBar_new1()
 {
-  QStyleOptionToolBar * o = new QStyleOptionToolBar();
-  Qt4xHb::returnNewObject( o, true );
+  QStyleOptionToolBar * obj = new QStyleOptionToolBar();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -63,8 +63,8 @@ QStyleOptionToolBar(const QStyleOptionToolBar &other)
 */
 void QStyleOptionToolBar_new2()
 {
-  QStyleOptionToolBar * o = new QStyleOptionToolBar( *PQSTYLEOPTIONTOOLBAR(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QStyleOptionToolBar * obj = new QStyleOptionToolBar( *PQSTYLEOPTIONTOOLBAR(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

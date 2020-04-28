@@ -57,8 +57,8 @@ QGraphicsPolygonItem ( QGraphicsItem * parent = 0 )
 */
 void QGraphicsPolygonItem_new1()
 {
-  QGraphicsPolygonItem * o = new QGraphicsPolygonItem( ISNIL(1)? 0 : (QGraphicsItem *) Qt4xHb::itemGetPtr(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QGraphicsPolygonItem * obj = new QGraphicsPolygonItem( ISNIL(1)? 0 : (QGraphicsItem *) Qt4xHb::itemGetPtr(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -66,8 +66,8 @@ QGraphicsPolygonItem ( const QPolygonF & polygon, QGraphicsItem * parent = 0 )
 */
 void QGraphicsPolygonItem_new2()
 {
-  QGraphicsPolygonItem * o = new QGraphicsPolygonItem( *PQPOLYGONF(1), ISNIL(2)? 0 : (QGraphicsItem *) Qt4xHb::itemGetPtr(2) );
-  Qt4xHb::returnNewObject( o, true );
+  QGraphicsPolygonItem * obj = new QGraphicsPolygonItem( *PQPOLYGONF(1), ISNIL(2)? 0 : (QGraphicsItem *) Qt4xHb::itemGetPtr(2) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

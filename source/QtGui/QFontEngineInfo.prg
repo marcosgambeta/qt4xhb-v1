@@ -62,8 +62,8 @@ QFontEngineInfo ()
 */
 void QFontEngineInfo_new1()
 {
-  QFontEngineInfo * o = new QFontEngineInfo();
-  Qt4xHb::returnNewObject( o, true );
+  QFontEngineInfo * obj = new QFontEngineInfo();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -71,8 +71,8 @@ QFontEngineInfo ( const QString & family )
 */
 void QFontEngineInfo_new2()
 {
-  QFontEngineInfo * o = new QFontEngineInfo( PQSTRING(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QFontEngineInfo * obj = new QFontEngineInfo( PQSTRING(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -80,8 +80,8 @@ QFontEngineInfo ( const QFontEngineInfo & other )
 */
 void QFontEngineInfo_new3()
 {
-  QFontEngineInfo * o = new QFontEngineInfo( *PQFONTENGINEINFO(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QFontEngineInfo * obj = new QFontEngineInfo( *PQFONTENGINEINFO(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

@@ -48,8 +48,8 @@ HB_FUNC_STATIC( QDECORATIONDEFAULT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QDecorationDefault * o = new QDecorationDefault();
-    Qt4xHb::returnNewObject( o, true );
+    QDecorationDefault * obj = new QDecorationDefault();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

@@ -120,8 +120,8 @@ QPlainTextEdit ( QWidget * parent = 0 )
 */
 void QPlainTextEdit_new1()
 {
-  QPlainTextEdit * o = new QPlainTextEdit( OPQWIDGET(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QPlainTextEdit * obj = new QPlainTextEdit( OPQWIDGET(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -129,8 +129,8 @@ QPlainTextEdit ( const QString & text, QWidget * parent = 0 )
 */
 void QPlainTextEdit_new2()
 {
-  QPlainTextEdit * o = new QPlainTextEdit( PQSTRING(1), OPQWIDGET(2,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QPlainTextEdit * obj = new QPlainTextEdit( PQSTRING(1), OPQWIDGET(2,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -160,8 +160,8 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

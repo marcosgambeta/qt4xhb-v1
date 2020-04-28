@@ -61,8 +61,8 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQGRAPHICSLAYOUTITEM(1)||ISNIL(1)) )
   {
-    QGraphicsAnchorLayout * o = new QGraphicsAnchorLayout( ISNIL(1)? 0 : (QGraphicsLayoutItem *) Qt4xHb::itemGetPtr(1) );
-    Qt4xHb::returnNewObject( o, true );
+    QGraphicsAnchorLayout * obj = new QGraphicsAnchorLayout( ISNIL(1)? 0 : (QGraphicsLayoutItem *) Qt4xHb::itemGetPtr(1) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

@@ -138,8 +138,8 @@ QGraphicsScene ( QObject * parent = 0 )
 */
 void QGraphicsScene_new1()
 {
-  QGraphicsScene * o = new QGraphicsScene( OPQOBJECT(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QGraphicsScene * obj = new QGraphicsScene( OPQOBJECT(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -147,8 +147,8 @@ QGraphicsScene ( const QRectF & sceneRect, QObject * parent = 0 )
 */
 void QGraphicsScene_new2()
 {
-  QGraphicsScene * o = new QGraphicsScene( *PQRECTF(1), OPQOBJECT(2,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QGraphicsScene * obj = new QGraphicsScene( *PQRECTF(1), OPQOBJECT(2,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -156,8 +156,8 @@ QGraphicsScene ( qreal x, qreal y, qreal width, qreal height, QObject * parent =
 */
 void QGraphicsScene_new3()
 {
-  QGraphicsScene * o = new QGraphicsScene( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQOBJECT(5,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QGraphicsScene * obj = new QGraphicsScene( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQOBJECT(5,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -192,8 +192,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

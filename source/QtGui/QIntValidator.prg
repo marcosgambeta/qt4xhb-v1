@@ -52,8 +52,8 @@ QIntValidator ( QObject * parent = 0 )
 */
 void QIntValidator_new1()
 {
-  QIntValidator * o = new QIntValidator( OPQOBJECT(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QIntValidator * obj = new QIntValidator( OPQOBJECT(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -61,8 +61,8 @@ QIntValidator ( int minimum, int maximum, QObject * parent )
 */
 void QIntValidator_new2()
 {
-  QIntValidator * o = new QIntValidator( PINT(1), PINT(2), PQOBJECT(3) );
-  Qt4xHb::returnNewObject( o, false );
+  QIntValidator * obj = new QIntValidator( PINT(1), PINT(2), PQOBJECT(3) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -92,8 +92,8 @@ HB_FUNC_STATIC( QINTVALIDATOR_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

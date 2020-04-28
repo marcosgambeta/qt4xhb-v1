@@ -61,8 +61,8 @@ QStyleOptionHeader()
 */
 void QStyleOptionHeader_new1()
 {
-  QStyleOptionHeader * o = new QStyleOptionHeader();
-  Qt4xHb::returnNewObject( o, true );
+  QStyleOptionHeader * obj = new QStyleOptionHeader();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -70,8 +70,8 @@ QStyleOptionHeader(const QStyleOptionHeader &other)
 */
 void QStyleOptionHeader_new2()
 {
-  QStyleOptionHeader * o = new QStyleOptionHeader( *PQSTYLEOPTIONHEADER(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QStyleOptionHeader * obj = new QStyleOptionHeader( *PQSTYLEOPTIONHEADER(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

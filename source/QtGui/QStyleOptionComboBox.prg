@@ -57,8 +57,8 @@ QStyleOptionComboBox()
 */
 void QStyleOptionComboBox_new1()
 {
-  QStyleOptionComboBox * o = new QStyleOptionComboBox();
-  Qt4xHb::returnNewObject( o, true );
+  QStyleOptionComboBox * obj = new QStyleOptionComboBox();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -66,8 +66,8 @@ QStyleOptionComboBox(const QStyleOptionComboBox &other)
 */
 void QStyleOptionComboBox_new2()
 {
-  QStyleOptionComboBox * o = new QStyleOptionComboBox( *PQSTYLEOPTIONCOMBOBOX(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QStyleOptionComboBox * obj = new QStyleOptionComboBox( *PQSTYLEOPTIONCOMBOBOX(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

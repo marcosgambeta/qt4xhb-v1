@@ -63,8 +63,8 @@ QColorDialog ( QWidget * parent = 0 )
 */
 void QColorDialog_new1()
 {
-  QColorDialog * o = new QColorDialog( OPQWIDGET(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QColorDialog * obj = new QColorDialog( OPQWIDGET(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -72,8 +72,8 @@ QColorDialog ( const QColor & initial, QWidget * parent = 0 )
 */
 void QColorDialog_new2()
 {
-  QColorDialog * o = new QColorDialog( ISOBJECT(1)? *(QColor *) Qt4xHb::itemGetPtr(1) : QColor(hb_parc(1)), OPQWIDGET(2,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QColorDialog * obj = new QColorDialog( ISOBJECT(1)? *(QColor *) Qt4xHb::itemGetPtr(1) : QColor(hb_parc(1)), OPQWIDGET(2,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -103,8 +103,8 @@ HB_FUNC_STATIC( QCOLORDIALOG_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

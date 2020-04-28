@@ -91,8 +91,8 @@ HB_FUNC_STATIC( QTEXTBLOCK_NEW )
 {
   if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
   {
-    QTextBlock * o = new QTextBlock( *PQTEXTBLOCK(1) );
-    Qt4xHb::returnNewObject( o, true );
+    QTextBlock * obj = new QTextBlock( *PQTEXTBLOCK(1) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

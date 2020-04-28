@@ -52,8 +52,8 @@ QPushButton ( QWidget * parent = 0 )
 */
 void QPushButton_new1()
 {
-  QPushButton * o = new QPushButton( OPQWIDGET(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QPushButton * obj = new QPushButton( OPQWIDGET(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -61,8 +61,8 @@ QPushButton ( const QString & text, QWidget * parent = 0 )
 */
 void QPushButton_new2()
 {
-  QPushButton * o = new QPushButton( PQSTRING(1), OPQWIDGET(2,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QPushButton * obj = new QPushButton( PQSTRING(1), OPQWIDGET(2,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -70,8 +70,8 @@ QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = 0 )
 */
 void QPushButton_new3()
 {
-  QPushButton * o = new QPushButton( ISOBJECT(1)? *(QIcon *) Qt4xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), OPQWIDGET(3,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QPushButton * obj = new QPushButton( ISOBJECT(1)? *(QIcon *) Qt4xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), OPQWIDGET(3,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -106,8 +106,8 @@ HB_FUNC_STATIC( QPUSHBUTTON_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

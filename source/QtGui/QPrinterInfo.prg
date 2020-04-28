@@ -58,8 +58,8 @@ QPrinterInfo ()
 */
 void QPrinterInfo_new1()
 {
-  QPrinterInfo * o = new QPrinterInfo();
-  Qt4xHb::returnNewObject( o, true );
+  QPrinterInfo * obj = new QPrinterInfo();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -67,8 +67,8 @@ QPrinterInfo ( const QPrinterInfo & src )
 */
 void QPrinterInfo_new2()
 {
-  QPrinterInfo * o = new QPrinterInfo( *PQPRINTERINFO(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QPrinterInfo * obj = new QPrinterInfo( *PQPRINTERINFO(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -76,8 +76,8 @@ QPrinterInfo ( const QPrinter & printer )
 */
 void QPrinterInfo_new3()
 {
-  QPrinterInfo * o = new QPrinterInfo( *PQPRINTER(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QPrinterInfo * obj = new QPrinterInfo( *PQPRINTER(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

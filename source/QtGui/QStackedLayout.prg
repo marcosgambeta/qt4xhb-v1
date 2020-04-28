@@ -58,8 +58,8 @@ QStackedLayout ()
 */
 void QStackedLayout_new1()
 {
-  QStackedLayout * o = new QStackedLayout();
-  Qt4xHb::returnNewObject( o, false );
+  QStackedLayout * obj = new QStackedLayout();
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -67,8 +67,8 @@ QStackedLayout ( QWidget * parent )
 */
 void QStackedLayout_new2()
 {
-  QStackedLayout * o = new QStackedLayout( PQWIDGET(1) );
-  Qt4xHb::returnNewObject( o, false );
+  QStackedLayout * obj = new QStackedLayout( PQWIDGET(1) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -76,8 +76,8 @@ QStackedLayout ( QLayout * parentLayout )
 */
 void QStackedLayout_new3()
 {
-  QStackedLayout * o = new QStackedLayout( PQLAYOUT(1) );
-  Qt4xHb::returnNewObject( o, false );
+  QStackedLayout * obj = new QStackedLayout( PQLAYOUT(1) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -112,8 +112,8 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

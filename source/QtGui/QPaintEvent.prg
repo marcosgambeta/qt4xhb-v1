@@ -47,8 +47,8 @@ QPaintEvent ( const QRegion & paintRegion )
 */
 void QPaintEvent_new1()
 {
-  QPaintEvent * o = new QPaintEvent( *PQREGION(1) );
-  Qt4xHb::returnNewObject( o, false );
+  QPaintEvent * obj = new QPaintEvent( *PQREGION(1) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -56,8 +56,8 @@ QPaintEvent ( const QRect & paintRect )
 */
 void QPaintEvent_new2()
 {
-  QPaintEvent * o = new QPaintEvent( *PQRECT(1) );
-  Qt4xHb::returnNewObject( o, false );
+  QPaintEvent * obj = new QPaintEvent( *PQRECT(1) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*

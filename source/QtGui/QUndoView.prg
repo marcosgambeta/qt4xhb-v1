@@ -59,8 +59,8 @@ QUndoView ( QWidget * parent = 0 )
 */
 void QUndoView_new1()
 {
-  QUndoView * o = new QUndoView( OPQWIDGET(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QUndoView * obj = new QUndoView( OPQWIDGET(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -68,8 +68,8 @@ QUndoView ( QUndoStack * stack, QWidget * parent = 0 )
 */
 void QUndoView_new2()
 {
-  QUndoView * o = new QUndoView( PQUNDOSTACK(1), OPQWIDGET(2,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QUndoView * obj = new QUndoView( PQUNDOSTACK(1), OPQWIDGET(2,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -77,8 +77,8 @@ QUndoView ( QUndoGroup * group, QWidget * parent = 0 )
 */
 void QUndoView_new3()
 {
-  QUndoView * o = new QUndoView( PQUNDOGROUP(1), OPQWIDGET(2,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QUndoView * obj = new QUndoView( PQUNDOGROUP(1), OPQWIDGET(2,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -113,8 +113,8 @@ HB_FUNC_STATIC( QUNDOVIEW_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

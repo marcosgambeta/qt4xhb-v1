@@ -31,7 +31,7 @@ class QApplicationSlots: public QObject
 {
   Q_OBJECT
   public:
-  QApplicationSlots(QObject *parent = 0);
+  QApplicationSlots( QObject *parent = 0 );
   ~QApplicationSlots();
   public slots:
   void aboutToReleaseGpuResources();

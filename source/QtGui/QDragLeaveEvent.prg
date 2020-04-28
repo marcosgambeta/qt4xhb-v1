@@ -45,8 +45,8 @@ HB_FUNC_STATIC( QDRAGLEAVEEVENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QDragLeaveEvent * o = new QDragLeaveEvent();
-    Qt4xHb::returnNewObject( o, false );
+    QDragLeaveEvent * obj = new QDragLeaveEvent();
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

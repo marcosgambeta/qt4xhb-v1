@@ -115,8 +115,8 @@ QAction ( QObject * parent )
 */
 void QAction_new1()
 {
-  QAction * o = new QAction( PQOBJECT(1) );
-  Qt4xHb::returnNewObject( o, false );
+  QAction * obj = new QAction( PQOBJECT(1) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -124,8 +124,8 @@ QAction ( const QString & text, QObject * parent )
 */
 void QAction_new2()
 {
-  QAction * o = new QAction( PQSTRING(1), PQOBJECT(2) );
-  Qt4xHb::returnNewObject( o, false );
+  QAction * obj = new QAction( PQSTRING(1), PQOBJECT(2) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -133,8 +133,8 @@ QAction ( const QIcon & icon, const QString & text, QObject * parent )
 */
 void QAction_new3()
 {
-  QAction * o = new QAction( ISOBJECT(1)? *(QIcon *) Qt4xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), PQOBJECT(3) );
-  Qt4xHb::returnNewObject( o, false );
+  QAction * obj = new QAction( ISOBJECT(1)? *(QIcon *) Qt4xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), PQOBJECT(3) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -169,8 +169,8 @@ HB_FUNC_STATIC( QACTION_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

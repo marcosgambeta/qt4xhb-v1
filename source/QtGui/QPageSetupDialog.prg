@@ -54,8 +54,8 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW )
 {
   if( ISBETWEEN(1,2) && ISQPRINTER(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    QPageSetupDialog * o = new QPageSetupDialog( PQPRINTER(1), OPQWIDGET(2,0) );
-    Qt4xHb::returnNewObject( o, false );
+    QPageSetupDialog * obj = new QPageSetupDialog( PQPRINTER(1), OPQWIDGET(2,0) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

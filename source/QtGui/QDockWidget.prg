@@ -67,8 +67,8 @@ QDockWidget ( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags
 */
 void QDockWidget_new1()
 {
-  QDockWidget * o = new QDockWidget( PQSTRING(1), OPQWIDGET(2,0), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
-  Qt4xHb::returnNewObject( o, false );
+  QDockWidget * obj = new QDockWidget( PQSTRING(1), OPQWIDGET(2,0), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -76,8 +76,8 @@ QDockWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
 void QDockWidget_new2()
 {
-  QDockWidget * o = new QDockWidget( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-  Qt4xHb::returnNewObject( o, false );
+  QDockWidget * obj = new QDockWidget( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -107,8 +107,8 @@ HB_FUNC_STATIC( QDOCKWIDGET_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

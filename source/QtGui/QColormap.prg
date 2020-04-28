@@ -64,8 +64,8 @@ HB_FUNC_STATIC( QCOLORMAP_NEW )
 {
   if( ISNUMPAR(1) && ISQCOLORMAP(1) )
   {
-    QColormap * o = new QColormap( *PQCOLORMAP(1) );
-    Qt4xHb::returnNewObject( o, true );
+    QColormap * obj = new QColormap( *PQCOLORMAP(1) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

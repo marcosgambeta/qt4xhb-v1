@@ -57,8 +57,8 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QFileIconProvider * o = new QFileIconProvider();
-    Qt4xHb::returnNewObject( o, true );
+    QFileIconProvider * obj = new QFileIconProvider();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

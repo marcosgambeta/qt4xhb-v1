@@ -57,8 +57,8 @@ QStyleOptionTab()
 */
 void QStyleOptionTab_new1()
 {
-  QStyleOptionTab * o = new QStyleOptionTab();
-  Qt4xHb::returnNewObject( o, true );
+  QStyleOptionTab * obj = new QStyleOptionTab();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -66,8 +66,8 @@ QStyleOptionTab(const QStyleOptionTab &other)
 */
 void QStyleOptionTab_new2()
 {
-  QStyleOptionTab * o = new QStyleOptionTab( *PQSTYLEOPTIONTAB(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QStyleOptionTab * obj = new QStyleOptionTab( *PQSTYLEOPTIONTAB(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

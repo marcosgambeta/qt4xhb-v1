@@ -52,8 +52,8 @@ QStyleOptionButton()
 */
 void QStyleOptionButton_new1()
 {
-  QStyleOptionButton * o = new QStyleOptionButton();
-  Qt4xHb::returnNewObject( o, true );
+  QStyleOptionButton * obj = new QStyleOptionButton();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -61,8 +61,8 @@ QStyleOptionButton(const QStyleOptionButton &other)
 */
 void QStyleOptionButton_new2()
 {
-  QStyleOptionButton * o = new QStyleOptionButton( *PQSTYLEOPTIONBUTTON(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QStyleOptionButton * obj = new QStyleOptionButton( *PQSTYLEOPTIONBUTTON(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

@@ -84,8 +84,8 @@ QGridLayout ( QWidget * parent )
 */
 void QGridLayout_new1()
 {
-  QGridLayout * o = new QGridLayout( PQWIDGET(1) );
-  Qt4xHb::returnNewObject( o, false );
+  QGridLayout * obj = new QGridLayout( PQWIDGET(1) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -93,8 +93,8 @@ QGridLayout ()
 */
 void QGridLayout_new2()
 {
-  QGridLayout * o = new QGridLayout();
-  Qt4xHb::returnNewObject( o, false );
+  QGridLayout * obj = new QGridLayout();
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -124,8 +124,8 @@ HB_FUNC_STATIC( QGRIDLAYOUT_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

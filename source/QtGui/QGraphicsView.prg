@@ -116,8 +116,8 @@ QGraphicsView ( QWidget * parent = 0 )
 */
 void QGraphicsView_new1()
 {
-  QGraphicsView * o = new QGraphicsView( OPQWIDGET(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QGraphicsView * obj = new QGraphicsView( OPQWIDGET(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -125,8 +125,8 @@ QGraphicsView ( QGraphicsScene * scene, QWidget * parent = 0 )
 */
 void QGraphicsView_new2()
 {
-  QGraphicsView * o = new QGraphicsView( PQGRAPHICSSCENE(1), OPQWIDGET(2,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QGraphicsView * obj = new QGraphicsView( PQGRAPHICSSCENE(1), OPQWIDGET(2,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -156,8 +156,8 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

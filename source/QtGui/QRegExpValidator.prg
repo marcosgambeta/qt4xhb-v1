@@ -49,8 +49,8 @@ QRegExpValidator ( QObject * parent = 0 )
 */
 void QRegExpValidator_new1()
 {
-  QRegExpValidator * o = new QRegExpValidator( OPQOBJECT(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QRegExpValidator * obj = new QRegExpValidator( OPQOBJECT(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -58,8 +58,8 @@ QRegExpValidator ( const QRegExp & rx, QObject * parent )
 */
 void QRegExpValidator_new2()
 {
-  QRegExpValidator * o = new QRegExpValidator( *PQREGEXP(1), PQOBJECT(2) );
-  Qt4xHb::returnNewObject( o, false );
+  QRegExpValidator * obj = new QRegExpValidator( *PQREGEXP(1), PQOBJECT(2) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -89,8 +89,8 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

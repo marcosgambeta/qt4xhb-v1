@@ -66,8 +66,8 @@ QStaticText ()
 */
 void QStaticText_new1()
 {
-  QStaticText * o = new QStaticText();
-  Qt4xHb::returnNewObject( o, true );
+  QStaticText * obj = new QStaticText();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -75,8 +75,8 @@ QStaticText ( const QString & text )
 */
 void QStaticText_new2()
 {
-  QStaticText * o = new QStaticText( PQSTRING(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QStaticText * obj = new QStaticText( PQSTRING(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -84,8 +84,8 @@ QStaticText ( const QStaticText & other )
 */
 void QStaticText_new3()
 {
-  QStaticText * o = new QStaticText( *PQSTATICTEXT(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QStaticText * obj = new QStaticText( *PQSTATICTEXT(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

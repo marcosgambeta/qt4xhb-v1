@@ -45,8 +45,8 @@ QWindowStateChangeEvent(Qt::WindowStates aOldState)
 */
 void QWindowStateChangeEvent_new1()
 {
-  QWindowStateChangeEvent * o = new QWindowStateChangeEvent( (Qt::WindowStates) hb_parni(1) );
-  Qt4xHb::returnNewObject( o, false );
+  QWindowStateChangeEvent * obj = new QWindowStateChangeEvent( (Qt::WindowStates) hb_parni(1) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -54,8 +54,8 @@ QWindowStateChangeEvent(Qt::WindowStates aOldState, bool isOverride)
 */
 void QWindowStateChangeEvent_new2()
 {
-  QWindowStateChangeEvent * o = new QWindowStateChangeEvent( (Qt::WindowStates) hb_parni(1), PBOOL(2) );
-  Qt4xHb::returnNewObject( o, false );
+  QWindowStateChangeEvent * obj = new QWindowStateChangeEvent( (Qt::WindowStates) hb_parni(1), PBOOL(2) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*

@@ -73,8 +73,8 @@ QVector2D ()
 */
 void QVector2D_new1()
 {
-  QVector2D * o = new QVector2D();
-  Qt4xHb::returnNewObject( o, true );
+  QVector2D * obj = new QVector2D();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -82,8 +82,8 @@ QVector2D ( qreal xpos, qreal ypos )
 */
 void QVector2D_new2()
 {
-  QVector2D * o = new QVector2D( PQREAL(1), PQREAL(2) );
-  Qt4xHb::returnNewObject( o, true );
+  QVector2D * obj = new QVector2D( PQREAL(1), PQREAL(2) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -91,8 +91,8 @@ QVector2D ( const QPoint & point )
 */
 void QVector2D_new3()
 {
-  QVector2D * o = new QVector2D( *PQPOINT(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QVector2D * obj = new QVector2D( *PQPOINT(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -100,8 +100,8 @@ QVector2D ( const QPointF & point )
 */
 void QVector2D_new4()
 {
-  QVector2D * o = new QVector2D( *PQPOINTF(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QVector2D * obj = new QVector2D( *PQPOINTF(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -109,8 +109,8 @@ QVector2D ( const QVector3D & vector )
 */
 void QVector2D_new5()
 {
-  QVector2D * o = new QVector2D( *PQVECTOR3D(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QVector2D * obj = new QVector2D( *PQVECTOR3D(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -118,8 +118,8 @@ QVector2D ( const QVector4D & vector )
 */
 void QVector2D_new6()
 {
-  QVector2D * o = new QVector2D( *PQVECTOR4D(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QVector2D * obj = new QVector2D( *PQVECTOR4D(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
