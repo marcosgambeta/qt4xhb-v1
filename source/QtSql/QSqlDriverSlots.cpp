@@ -12,22 +12,27 @@
 
 #include "QSqlDriverSlots.h"
 
-QSqlDriverSlots::QSqlDriverSlots(QObject *parent) : QObject(parent)
+QSqlDriverSlots::QSqlDriverSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QSqlDriverSlots::~QSqlDriverSlots()
 {
 }
+
 void QSqlDriverSlots::notification( const QString & name )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "notification(QString)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSQLDRIVER" );
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
+
     hb_vmEvalBlockV( cb, 2, psender, pname );
+
     hb_itemRelease( psender );
     hb_itemRelease( pname );
   }

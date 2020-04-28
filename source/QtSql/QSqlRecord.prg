@@ -75,8 +75,8 @@ QSqlRecord ()
 */
 void QSqlRecord_new1()
 {
-  QSqlRecord * o = new QSqlRecord();
-  Qt4xHb::returnNewObject( o, true );
+  QSqlRecord * obj = new QSqlRecord();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -84,8 +84,8 @@ QSqlRecord ( const QSqlRecord & other )
 */
 void QSqlRecord_new2()
 {
-  QSqlRecord * o = new QSqlRecord( *PQSQLRECORD(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QSqlRecord * obj = new QSqlRecord( *PQSQLRECORD(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

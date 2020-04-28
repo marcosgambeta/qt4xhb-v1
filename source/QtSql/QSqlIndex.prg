@@ -50,8 +50,8 @@ QSqlIndex ( const QString & cursorname = QString(), const QString & name = QStri
 */
 void QSqlIndex_new1()
 {
-  QSqlIndex * o = new QSqlIndex( OPQSTRING(1,QString()), OPQSTRING(2,QString()) );
-  Qt4xHb::returnNewObject( o, true );
+  QSqlIndex * obj = new QSqlIndex( OPQSTRING(1,QString()), OPQSTRING(2,QString()) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -59,8 +59,8 @@ QSqlIndex ( const QSqlIndex & other )
 */
 void QSqlIndex_new2()
 {
-  QSqlIndex * o = new QSqlIndex( *PQSQLINDEX(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QSqlIndex * obj = new QSqlIndex( *PQSQLINDEX(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

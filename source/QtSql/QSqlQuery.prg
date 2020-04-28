@@ -95,8 +95,8 @@ QSqlQuery ( QSqlResult * result )
 */
 void QSqlQuery_new1()
 {
-  QSqlQuery * o = new QSqlQuery( PQSQLRESULT(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QSqlQuery * obj = new QSqlQuery( PQSQLRESULT(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -104,8 +104,8 @@ QSqlQuery ( const QString & query = QString(), QSqlDatabase db = QSqlDatabase() 
 */
 void QSqlQuery_new2()
 {
-  QSqlQuery * o = new QSqlQuery( OPQSTRING(1,QString()), ISNIL(2)? QSqlDatabase() : *(QSqlDatabase *) Qt4xHb::itemGetPtr(2) );
-  Qt4xHb::returnNewObject( o, true );
+  QSqlQuery * obj = new QSqlQuery( OPQSTRING(1,QString()), ISNIL(2)? QSqlDatabase() : *(QSqlDatabase *) Qt4xHb::itemGetPtr(2) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -113,8 +113,8 @@ QSqlQuery ( QSqlDatabase db )
 */
 void QSqlQuery_new3()
 {
-  QSqlQuery * o = new QSqlQuery( *PQSQLDATABASE(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QSqlQuery * obj = new QSqlQuery( *PQSQLDATABASE(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -122,8 +122,8 @@ QSqlQuery ( const QSqlQuery & other )
 */
 void QSqlQuery_new4()
 {
-  QSqlQuery * o = new QSqlQuery( *PQSQLQUERY(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QSqlQuery * obj = new QSqlQuery( *PQSQLQUERY(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

@@ -62,8 +62,8 @@ QSqlError ( const QString & driverText = QString(), const QString & databaseText
 */
 void QSqlError_new1()
 {
-  QSqlError * o = new QSqlError( OPQSTRING(1,QString()), OPQSTRING(2,QString()), ISNIL(3)? (QSqlError::ErrorType) QSqlError::NoError : (QSqlError::ErrorType) hb_parni(3), OPINT(4,-1) );
-  Qt4xHb::returnNewObject( o, true );
+  QSqlError * obj = new QSqlError( OPQSTRING(1,QString()), OPQSTRING(2,QString()), ISNIL(3)? (QSqlError::ErrorType) QSqlError::NoError : (QSqlError::ErrorType) hb_parni(3), OPINT(4,-1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -71,8 +71,8 @@ QSqlError ( const QSqlError & other )
 */
 void QSqlError_new2()
 {
-  QSqlError * o = new QSqlError( *PQSQLERROR(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QSqlError * obj = new QSqlError( *PQSQLERROR(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
