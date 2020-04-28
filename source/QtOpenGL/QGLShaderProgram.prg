@@ -122,8 +122,8 @@ QGLShaderProgram ( QObject * parent = 0 )
 */
 void QGLShaderProgram_new1()
 {
-  QGLShaderProgram * o = new QGLShaderProgram( OPQOBJECT(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QGLShaderProgram * obj = new QGLShaderProgram( OPQOBJECT(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -131,8 +131,8 @@ QGLShaderProgram ( const QGLContext * context, QObject * parent = 0 )
 */
 void QGLShaderProgram_new2()
 {
-  QGLShaderProgram * o = new QGLShaderProgram( PQGLCONTEXT(1), OPQOBJECT(2,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QGLShaderProgram * obj = new QGLShaderProgram( PQGLCONTEXT(1), OPQOBJECT(2,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -162,8 +162,8 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
