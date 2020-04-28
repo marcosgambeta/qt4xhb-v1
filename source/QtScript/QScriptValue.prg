@@ -109,8 +109,8 @@ QScriptValue ()
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW1 )
 {
-  QScriptValue * o = new QScriptValue();
-  Qt4xHb::returnNewObject( o, true );
+  QScriptValue * obj = new QScriptValue();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -118,8 +118,8 @@ QScriptValue ( const QScriptValue & other )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW2 )
 {
-  QScriptValue * o = new QScriptValue( *PQSCRIPTVALUE(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QScriptValue * obj = new QScriptValue( *PQSCRIPTVALUE(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -127,8 +127,8 @@ QScriptValue ( SpecialValue value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW3 )
 {
-  QScriptValue * o = new QScriptValue( (QScriptValue::SpecialValue) hb_parni(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QScriptValue * obj = new QScriptValue( (QScriptValue::SpecialValue) hb_parni(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -136,8 +136,8 @@ QScriptValue ( bool value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW4 )
 {
-  QScriptValue * o = new QScriptValue( PBOOL(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QScriptValue * obj = new QScriptValue( PBOOL(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -145,8 +145,8 @@ QScriptValue ( int value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW5 )
 {
-  QScriptValue * o = new QScriptValue( PINT(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QScriptValue * obj = new QScriptValue( PINT(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -154,8 +154,8 @@ QScriptValue ( uint value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW6 )
 {
-  QScriptValue * o = new QScriptValue( PUINT(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QScriptValue * obj = new QScriptValue( PUINT(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -167,8 +167,8 @@ QScriptValue ( const QString & value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW8 )
 {
-  QScriptValue * o = new QScriptValue( PQSTRING(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QScriptValue * obj = new QScriptValue( PQSTRING(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -180,8 +180,8 @@ QScriptValue ( const char * value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW10 )
 {
-  QScriptValue * o = new QScriptValue( PCONSTCHAR(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QScriptValue * obj = new QScriptValue( PCONSTCHAR(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

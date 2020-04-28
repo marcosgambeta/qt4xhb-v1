@@ -58,8 +58,8 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_NEW )
 {
   if( ISNUMPAR(1) && ISQSCRIPTSYNTAXCHECKRESULT(1) )
   {
-    QScriptSyntaxCheckResult * o = new QScriptSyntaxCheckResult( *PQSCRIPTSYNTAXCHECKRESULT(1) );
-    Qt4xHb::returnNewObject( o, true );
+    QScriptSyntaxCheckResult * obj = new QScriptSyntaxCheckResult( *PQSCRIPTSYNTAXCHECKRESULT(1) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

@@ -70,8 +70,8 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_NEW )
 {
   if( ISNUMPAR(1) && ISQSCRIPTVALUE(1) )
   {
-    QScriptValueIterator * o = new QScriptValueIterator( *PQSCRIPTVALUE(1) );
-    Qt4xHb::returnNewObject( o, true );
+    QScriptValueIterator * obj = new QScriptValueIterator( *PQSCRIPTVALUE(1) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
