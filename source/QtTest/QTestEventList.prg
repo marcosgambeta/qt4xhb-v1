@@ -70,8 +70,8 @@ QTestEventList ()
 */
 void QTestEventList_new1()
 {
-  QTestEventList * o = new QTestEventList();
-  Qt4xHb::returnNewObject( o, true );
+  QTestEventList * obj = new QTestEventList();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -79,8 +79,8 @@ QTestEventList ( const QTestEventList & other )
 */
 void QTestEventList_new2()
 {
-  QTestEventList * o = new QTestEventList( *PQTESTEVENTLIST(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QTestEventList * obj = new QTestEventList( *PQTESTEVENTLIST(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
