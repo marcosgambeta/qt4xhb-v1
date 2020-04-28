@@ -74,8 +74,8 @@ QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
 */
 void QSslCertificate_new1()
 {
-  QSslCertificate * o = new QSslCertificate( PQIODEVICE(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2) );
-  Qt4xHb::returnNewObject( o, true );
+  QSslCertificate * obj = new QSslCertificate( PQIODEVICE(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -83,8 +83,8 @@ QSslCertificate ( const QByteArray & data = QByteArray(), QSsl::EncodingFormat f
 */
 void QSslCertificate_new2()
 {
-  QSslCertificate * o = new QSslCertificate( ISNIL(1)? QByteArray() : *(QByteArray *) Qt4xHb::itemGetPtr(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2) );
-  Qt4xHb::returnNewObject( o, true );
+  QSslCertificate * obj = new QSslCertificate( ISNIL(1)? QByteArray() : *(QByteArray *) Qt4xHb::itemGetPtr(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -92,8 +92,8 @@ QSslCertificate ( const QSslCertificate & other )
 */
 void QSslCertificate_new3()
 {
-  QSslCertificate * o = new QSslCertificate( *PQSSLCERTIFICATE(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QSslCertificate * obj = new QSslCertificate( *PQSSLCERTIFICATE(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

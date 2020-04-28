@@ -78,8 +78,8 @@ QSslConfiguration ()
 */
 void QSslConfiguration_new1()
 {
-  QSslConfiguration * o = new QSslConfiguration();
-  Qt4xHb::returnNewObject( o, true );
+  QSslConfiguration * obj = new QSslConfiguration();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -87,8 +87,8 @@ QSslConfiguration ( const QSslConfiguration & other )
 */
 void QSslConfiguration_new2()
 {
-  QSslConfiguration * o = new QSslConfiguration( *PQSSLCONFIGURATION(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QSslConfiguration * obj = new QSslConfiguration( *PQSSLCONFIGURATION(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

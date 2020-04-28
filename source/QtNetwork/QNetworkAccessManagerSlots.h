@@ -31,7 +31,7 @@ class QNetworkAccessManagerSlots: public QObject
 {
   Q_OBJECT
   public:
-  QNetworkAccessManagerSlots(QObject *parent = 0);
+  QNetworkAccessManagerSlots( QObject *parent = 0 );
   ~QNetworkAccessManagerSlots();
   public slots:
   void authenticationRequired( QNetworkReply * reply, QAuthenticator * authenticator );

@@ -28,7 +28,7 @@ class QFtpSlots: public QObject
 {
   Q_OBJECT
   public:
-  QFtpSlots(QObject *parent = 0);
+  QFtpSlots( QObject *parent = 0 );
   ~QFtpSlots();
   public slots:
   void commandFinished( int id, bool error );

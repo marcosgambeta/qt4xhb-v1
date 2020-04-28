@@ -82,8 +82,8 @@ QUrlInfo ()
 */
 void QUrlInfo_new1()
 {
-  QUrlInfo * o = new QUrlInfo();
-  Qt4xHb::returnNewObject( o, true );
+  QUrlInfo * obj = new QUrlInfo();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -91,8 +91,8 @@ QUrlInfo ( const QUrlInfo & ui )
 */
 void QUrlInfo_new2()
 {
-  QUrlInfo * o = new QUrlInfo( *PQURLINFO(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QUrlInfo * obj = new QUrlInfo( *PQURLINFO(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -100,8 +100,8 @@ QUrlInfo ( const QString & name, int permissions, const QString & owner, const Q
 */
 void QUrlInfo_new3()
 {
-  QUrlInfo * o = new QUrlInfo( PQSTRING(1), PINT(2), PQSTRING(3), PQSTRING(4), PQINT64(5), *PQDATETIME(6), *PQDATETIME(7), PBOOL(8), PBOOL(9), PBOOL(10), PBOOL(11), PBOOL(12), PBOOL(13) );
-  Qt4xHb::returnNewObject( o, true );
+  QUrlInfo * obj = new QUrlInfo( PQSTRING(1), PINT(2), PQSTRING(3), PQSTRING(4), PQINT64(5), *PQDATETIME(6), *PQDATETIME(7), PBOOL(8), PBOOL(9), PBOOL(10), PBOOL(11), PBOOL(12), PBOOL(13) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -109,8 +109,8 @@ QUrlInfo ( const QUrl & url, int permissions, const QString & owner, const QStri
 */
 void QUrlInfo_new4()
 {
-  QUrlInfo * o = new QUrlInfo( *PQURL(1), PINT(2), PQSTRING(3), PQSTRING(4), PQINT64(5), *PQDATETIME(6), *PQDATETIME(7), PBOOL(8), PBOOL(9), PBOOL(10), PBOOL(11), PBOOL(12), PBOOL(13) );
-  Qt4xHb::returnNewObject( o, true );
+  QUrlInfo * obj = new QUrlInfo( *PQURL(1), PINT(2), PQSTRING(3), PQSTRING(4), PQINT64(5), *PQDATETIME(6), *PQDATETIME(7), PBOOL(8), PBOOL(9), PBOOL(10), PBOOL(11), PBOOL(12), PBOOL(13) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

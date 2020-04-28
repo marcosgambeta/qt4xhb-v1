@@ -68,8 +68,8 @@ QHostInfo ( int id = -1 )
 */
 void QHostInfo_new1()
 {
-  QHostInfo * o = new QHostInfo( OPINT(1,-1) );
-  Qt4xHb::returnNewObject( o, true );
+  QHostInfo * obj = new QHostInfo( OPINT(1,-1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -77,8 +77,8 @@ QHostInfo ( const QHostInfo & other )
 */
 void QHostInfo_new2()
 {
-  QHostInfo * o = new QHostInfo( *PQHOSTINFO(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QHostInfo * obj = new QHostInfo( *PQHOSTINFO(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

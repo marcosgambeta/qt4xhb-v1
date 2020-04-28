@@ -75,8 +75,8 @@ QNetworkRequest ( const QUrl & url = QUrl() )
 */
 void QNetworkRequest_new1()
 {
-  QNetworkRequest * o = new QNetworkRequest( ISNIL(1)? QUrl() : *(QUrl *) Qt4xHb::itemGetPtr(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QNetworkRequest * obj = new QNetworkRequest( ISNIL(1)? QUrl() : *(QUrl *) Qt4xHb::itemGetPtr(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -84,8 +84,8 @@ QNetworkRequest ( const QNetworkRequest & other )
 */
 void QNetworkRequest_new2()
 {
-  QNetworkRequest * o = new QNetworkRequest( *PQNETWORKREQUEST(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QNetworkRequest * obj = new QNetworkRequest( *PQNETWORKREQUEST(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

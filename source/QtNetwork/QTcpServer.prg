@@ -71,8 +71,8 @@ HB_FUNC_STATIC( QTCPSERVER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QTcpServer * o = new QTcpServer( OPQOBJECT(1,0) );
-    Qt4xHb::returnNewObject( o, false );
+    QTcpServer * obj = new QTcpServer( OPQOBJECT(1,0) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -86,8 +86,8 @@ HB_FUNC_STATIC( QTCPSERVER_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

@@ -50,8 +50,8 @@ QHttpMultiPart ( QObject * parent = 0 )
 */
 void QHttpMultiPart_new1()
 {
-  QHttpMultiPart * o = new QHttpMultiPart( OPQOBJECT(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QHttpMultiPart * obj = new QHttpMultiPart( OPQOBJECT(1,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -59,8 +59,8 @@ QHttpMultiPart ( ContentType contentType, QObject * parent = 0 )
 */
 void QHttpMultiPart_new2()
 {
-  QHttpMultiPart * o = new QHttpMultiPart( (QHttpMultiPart::ContentType) hb_parni(1), OPQOBJECT(2,0) );
-  Qt4xHb::returnNewObject( o, false );
+  QHttpMultiPart * obj = new QHttpMultiPart( (QHttpMultiPart::ContentType) hb_parni(1), OPQOBJECT(2,0) );
+  Qt4xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -90,8 +90,8 @@ HB_FUNC_STATIC( QHTTPMULTIPART_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

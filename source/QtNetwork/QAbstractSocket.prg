@@ -92,8 +92,8 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_NEW )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISQOBJECT(2) )
   {
-    QAbstractSocket * o = new QAbstractSocket( (QAbstractSocket::SocketType) hb_parni(1), PQOBJECT(2) );
-    Qt4xHb::returnNewObject( o, false );
+    QAbstractSocket * obj = new QAbstractSocket( (QAbstractSocket::SocketType) hb_parni(1), PQOBJECT(2) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -107,8 +107,8 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

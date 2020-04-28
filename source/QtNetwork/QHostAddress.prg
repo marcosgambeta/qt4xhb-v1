@@ -63,8 +63,8 @@ QHostAddress ()
 */
 void QHostAddress_new1()
 {
-  QHostAddress * o = new QHostAddress();
-  Qt4xHb::returnNewObject( o, true );
+  QHostAddress * obj = new QHostAddress();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -72,8 +72,8 @@ QHostAddress ( quint32 ip4Addr )
 */
 HB_FUNC_STATIC( QHOSTADDRESS_NEW2 )
 {
-  QHostAddress * o = new QHostAddress( PQUINT32(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QHostAddress * obj = new QHostAddress( PQUINT32(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -93,8 +93,8 @@ QHostAddress ( const QString & address )
 */
 void QHostAddress_new6()
 {
-  QHostAddress * o = new QHostAddress( PQSTRING(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QHostAddress * obj = new QHostAddress( PQSTRING(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -102,8 +102,8 @@ QHostAddress ( const QHostAddress & address )
 */
 void QHostAddress_new7()
 {
-  QHostAddress * o = new QHostAddress( *PQHOSTADDRESS(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QHostAddress * obj = new QHostAddress( *PQHOSTADDRESS(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -111,8 +111,8 @@ QHostAddress ( SpecialAddress address )
 */
 HB_FUNC_STATIC( QHOSTADDRESS_NEW8 )
 {
-  QHostAddress * o = new QHostAddress( (QHostAddress::SpecialAddress) hb_parni(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QHostAddress * obj = new QHostAddress( (QHostAddress::SpecialAddress) hb_parni(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
