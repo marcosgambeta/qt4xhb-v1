@@ -72,8 +72,8 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QXmlDefaultHandler * o = new QXmlDefaultHandler();
-    Qt4xHb::returnNewObject( o, true );
+    QXmlDefaultHandler * obj = new QXmlDefaultHandler();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

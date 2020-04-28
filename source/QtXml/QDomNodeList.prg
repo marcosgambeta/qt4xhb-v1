@@ -59,8 +59,8 @@ QDomNodeList ()
 */
 void QDomNodeList_new1()
 {
-  QDomNodeList * o = new QDomNodeList();
-  Qt4xHb::returnNewObject( o, true );
+  QDomNodeList * obj = new QDomNodeList();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -68,8 +68,8 @@ QDomNodeList ( const QDomNodeList & n )
 */
 void QDomNodeList_new2()
 {
-  QDomNodeList * o = new QDomNodeList( *PQDOMNODELIST(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QDomNodeList * obj = new QDomNodeList( *PQDOMNODELIST(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

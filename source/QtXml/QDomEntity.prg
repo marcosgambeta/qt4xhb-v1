@@ -46,8 +46,8 @@ QDomEntity ()
 */
 void QDomEntity_new1()
 {
-  QDomEntity * o = new QDomEntity();
-  Qt4xHb::returnNewObject( o, true );
+  QDomEntity * obj = new QDomEntity();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -55,8 +55,8 @@ QDomEntity ( const QDomEntity & x )
 */
 void QDomEntity_new2()
 {
-  QDomEntity * o = new QDomEntity( *PQDOMENTITY(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QDomEntity * obj = new QDomEntity( *PQDOMENTITY(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

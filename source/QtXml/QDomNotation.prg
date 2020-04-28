@@ -45,8 +45,8 @@ QDomNotation ()
 */
 void QDomNotation_new1()
 {
-  QDomNotation * o = new QDomNotation();
-  Qt4xHb::returnNewObject( o, true );
+  QDomNotation * obj = new QDomNotation();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -54,8 +54,8 @@ QDomNotation ( const QDomNotation & x )
 */
 void QDomNotation_new2()
 {
-  QDomNotation * o = new QDomNotation( *PQDOMNOTATION(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QDomNotation * obj = new QDomNotation( *PQDOMNOTATION(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

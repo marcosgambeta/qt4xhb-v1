@@ -61,8 +61,8 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QXmlNamespaceSupport * o = new QXmlNamespaceSupport();
-    Qt4xHb::returnNewObject( o, true );
+    QXmlNamespaceSupport * obj = new QXmlNamespaceSupport();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

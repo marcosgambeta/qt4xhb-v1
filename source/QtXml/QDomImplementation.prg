@@ -60,8 +60,8 @@ QDomImplementation ()
 */
 void QDomImplementation_new1()
 {
-  QDomImplementation * o = new QDomImplementation();
-  Qt4xHb::returnNewObject( o, true );
+  QDomImplementation * obj = new QDomImplementation();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -69,8 +69,8 @@ QDomImplementation ( const QDomImplementation & x )
 */
 void QDomImplementation_new2()
 {
-  QDomImplementation * o = new QDomImplementation( *PQDOMIMPLEMENTATION(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QDomImplementation * obj = new QDomImplementation( *PQDOMIMPLEMENTATION(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

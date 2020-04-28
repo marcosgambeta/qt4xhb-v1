@@ -50,8 +50,8 @@ QDomDocumentType ()
 */
 void QDomDocumentType_new1()
 {
-  QDomDocumentType * o = new QDomDocumentType();
-  Qt4xHb::returnNewObject( o, true );
+  QDomDocumentType * obj = new QDomDocumentType();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -59,8 +59,8 @@ QDomDocumentType ( const QDomDocumentType & n )
 */
 void QDomDocumentType_new2()
 {
-  QDomDocumentType * o = new QDomDocumentType( *PQDOMDOCUMENTTYPE(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QDomDocumentType * obj = new QDomDocumentType( *PQDOMDOCUMENTTYPE(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

@@ -65,8 +65,8 @@ QDomNamedNodeMap ()
 */
 void QDomNamedNodeMap_new1()
 {
-  QDomNamedNodeMap * o = new QDomNamedNodeMap();
-  Qt4xHb::returnNewObject( o, true );
+  QDomNamedNodeMap * obj = new QDomNamedNodeMap();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -74,8 +74,8 @@ QDomNamedNodeMap ( const QDomNamedNodeMap & n )
 */
 void QDomNamedNodeMap_new2()
 {
-  QDomNamedNodeMap * o = new QDomNamedNodeMap( *PQDOMNAMEDNODEMAP(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QDomNamedNodeMap * obj = new QDomNamedNodeMap( *PQDOMNAMEDNODEMAP(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

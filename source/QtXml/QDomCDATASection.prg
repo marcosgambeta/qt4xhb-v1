@@ -43,8 +43,8 @@ QDomCDATASection ()
 */
 void QDomCDATASection_new1()
 {
-  QDomCDATASection * o = new QDomCDATASection();
-  Qt4xHb::returnNewObject( o, true );
+  QDomCDATASection * obj = new QDomCDATASection();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -52,8 +52,8 @@ QDomCDATASection ( const QDomCDATASection & x )
 */
 void QDomCDATASection_new2()
 {
-  QDomCDATASection * o = new QDomCDATASection( *PQDOMCDATASECTION(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QDomCDATASection * obj = new QDomCDATASection( *PQDOMCDATASECTION(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

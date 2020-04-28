@@ -49,8 +49,8 @@ QDomAttr ()
 */
 void QDomAttr_new1()
 {
-  QDomAttr * o = new QDomAttr();
-  Qt4xHb::returnNewObject( o, true );
+  QDomAttr * obj = new QDomAttr();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -58,8 +58,8 @@ QDomAttr ( const QDomAttr & x )
 */
 void QDomAttr_new2()
 {
-  QDomAttr * o = new QDomAttr( *PQDOMATTR(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QDomAttr * obj = new QDomAttr( *PQDOMATTR(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

@@ -64,8 +64,8 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QXmlAttributes * o = new QXmlAttributes();
-    Qt4xHb::returnNewObject( o, true );
+    QXmlAttributes * obj = new QXmlAttributes();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

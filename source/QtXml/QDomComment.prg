@@ -43,8 +43,8 @@ QDomComment ()
 */
 void QDomComment_new1()
 {
-  QDomComment * o = new QDomComment();
-  Qt4xHb::returnNewObject( o, true );
+  QDomComment * obj = new QDomComment();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -52,8 +52,8 @@ QDomComment ( const QDomComment & x )
 */
 void QDomComment_new2()
 {
-  QDomComment * o = new QDomComment( *PQDOMCOMMENT(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QDomComment * obj = new QDomComment( *PQDOMCOMMENT(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

@@ -43,8 +43,8 @@ QDomEntityReference ()
 */
 void QDomEntityReference_new1()
 {
-  QDomEntityReference * o = new QDomEntityReference();
-  Qt4xHb::returnNewObject( o, true );
+  QDomEntityReference * obj = new QDomEntityReference();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -52,8 +52,8 @@ QDomEntityReference ( const QDomEntityReference & x )
 */
 void QDomEntityReference_new2()
 {
-  QDomEntityReference * o = new QDomEntityReference( *PQDOMENTITYREFERENCE(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QDomEntityReference * obj = new QDomEntityReference( *PQDOMENTITYREFERENCE(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

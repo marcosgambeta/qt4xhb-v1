@@ -44,8 +44,8 @@ QDomText ()
 */
 void QDomText_new1()
 {
-  QDomText * o = new QDomText();
-  Qt4xHb::returnNewObject( o, true );
+  QDomText * obj = new QDomText();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -53,8 +53,8 @@ QDomText ( const QDomText & x )
 */
 void QDomText_new2()
 {
-  QDomText * o = new QDomText( *PQDOMTEXT(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QDomText * obj = new QDomText( *PQDOMTEXT(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
