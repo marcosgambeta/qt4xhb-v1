@@ -59,8 +59,8 @@ QWebElementCollection ()
 */
 void QWebElementCollection_new1()
 {
-  QWebElementCollection * o = new QWebElementCollection();
-  Qt4xHb::returnNewObject( o, true );
+  QWebElementCollection * obj = new QWebElementCollection();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -68,8 +68,8 @@ QWebElementCollection ( const QWebElement & contextElement, const QString & quer
 */
 void QWebElementCollection_new2()
 {
-  QWebElementCollection * o = new QWebElementCollection( *PQWEBELEMENT(1), PQSTRING(2) );
-  Qt4xHb::returnNewObject( o, true );
+  QWebElementCollection * obj = new QWebElementCollection( *PQWEBELEMENT(1), PQSTRING(2) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -77,8 +77,8 @@ QWebElementCollection ( const QWebElementCollection & other )
 */
 void QWebElementCollection_new3()
 {
-  QWebElementCollection * o = new QWebElementCollection( *PQWEBELEMENTCOLLECTION(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QWebElementCollection * obj = new QWebElementCollection( *PQWEBELEMENTCOLLECTION(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

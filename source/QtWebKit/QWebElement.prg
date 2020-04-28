@@ -111,8 +111,8 @@ QWebElement ()
 */
 void QWebElement_new1()
 {
-  QWebElement * o = new QWebElement();
-  Qt4xHb::returnNewObject( o, true );
+  QWebElement * obj = new QWebElement();
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -120,8 +120,8 @@ QWebElement ( const QWebElement & other )
 */
 void QWebElement_new2()
 {
-  QWebElement * o = new QWebElement( *PQWEBELEMENT(1) );
-  Qt4xHb::returnNewObject( o, true );
+  QWebElement * obj = new QWebElement( *PQWEBELEMENT(1) );
+  Qt4xHb::returnNewObject( obj, true );
 }
 
 /*

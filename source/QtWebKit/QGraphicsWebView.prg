@@ -89,8 +89,8 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||ISNIL(1)) )
   {
-    QGraphicsWebView * o = new QGraphicsWebView( ISNIL(1)? 0 : (QGraphicsItem *) Qt4xHb::itemGetPtr(1) );
-    Qt4xHb::returnNewObject( o, false );
+    QGraphicsWebView * obj = new QGraphicsWebView( ISNIL(1)? 0 : (QGraphicsItem *) Qt4xHb::itemGetPtr(1) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -104,8 +104,8 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
