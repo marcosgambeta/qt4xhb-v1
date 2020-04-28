@@ -8,7 +8,7 @@
 
 #include "HAbstractListModel.h"
 
-HAbstractListModel::HAbstractListModel (QObject * parent) : QAbstractListModel (parent)
+HAbstractListModel::HAbstractListModel( QObject * parent ) : QAbstractListModel( parent )
 {
   // linhas
   m_rowCountCB = NULL;
@@ -876,6 +876,7 @@ void HAbstractListModel::reloadData()
 {
   // Notas da documentação do Qt:
   // emit layoutAboutToBeChanged
+  emit QAbstractItemModel::layoutAboutToBeChanged();
   // Remember the QModelIndex that will change
   // Update your internal data
   // Call changePersistentIndex()
