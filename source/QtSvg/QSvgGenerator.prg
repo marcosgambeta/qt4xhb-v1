@@ -64,8 +64,8 @@ HB_FUNC_STATIC( QSVGGENERATOR_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QSvgGenerator * o = new QSvgGenerator();
-    Qt4xHb::returnNewObject( o, true );
+    QSvgGenerator * obj = new QSvgGenerator();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
