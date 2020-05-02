@@ -45,6 +45,7 @@ hbmk2 QCalendarWidget         %1 %2 %3 ..\qt4xhb.hbc
 hbmk2 QColorDialog1           %1 %2 %3 ..\qt4xhb.hbc
 hbmk2 QColorDialog2           %1 %2 %3 ..\qt4xhb.hbc
 hbmk2 QComboBox               %1 %2 %3 ..\qt4xhb.hbc
+hbmk2 QCompleter              %1 %2 %3 ..\qt4xhb.hbc
 hbmk2 QDateEdit               %1 %2 %3 ..\qt4xhb.hbc
 hbmk2 QDateTimeEdit           %1 %2 %3 ..\qt4xhb.hbc
 hbmk2 QDesktopWidget          %1 %2 %3 ..\qt4xhb.hbc
