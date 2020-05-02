@@ -17,15 +17,3 @@ Send you message to: marcosgambeta AT outlook DOT com
 Important:  
 Questions about the project will be responded **only by email**.  
 Qt4xHb is FOSS (Free and Open Source Software) and not a commercial project.  
-
-## Useful links
-
-https://www.qt.io/
-
-https://www.qt.io/blog
-
-https://www.qt.io/developers
-
-https://planet.qt.io/
-
-http://download.qt.io/archive/qt/4.8/
