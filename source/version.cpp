@@ -10,5 +10,5 @@
 
 HB_FUNC( QT4XHB_VERSION )
 {
-  hb_retc( (const char *) "20130630" );
+  hb_retc( (const char *) "2020.05" );
 }
