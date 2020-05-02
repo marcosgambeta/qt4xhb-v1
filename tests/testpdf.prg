@@ -18,7 +18,7 @@
 
 #include "qt4xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oLabel

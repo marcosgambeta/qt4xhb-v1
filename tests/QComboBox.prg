@@ -14,7 +14,7 @@
 
 #include "qt4xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -39,9 +39,9 @@ PROCEDURE Main ()
    oComboBox:addItem("Item 5")
 
    oApp:exec()
-   
+
    oWindow:delete()
-   
+
    oApp:delete()
 
 RETURN

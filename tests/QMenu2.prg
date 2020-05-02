@@ -14,7 +14,7 @@
 
 #include "qt4xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oMainWindow
@@ -90,10 +90,10 @@ PROCEDURE Main ()
 
 RETURN
 
-STATIC FUNCTION aviso (oParent,cText)
+STATIC FUNCTION aviso(oParent,cText)
 
    LOCAL oMessageBox
-   
+
    oMessageBox := QMessageBox():new(oParent)
 
    oMessageBox:setWindowTitle("Aviso")

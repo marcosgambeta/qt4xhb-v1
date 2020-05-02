@@ -14,7 +14,7 @@
 
 #include "qt4xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -41,7 +41,7 @@ PROCEDURE Main ()
 
 RETURN
 
-STATIC FUNCTION test (oWidget,nValue)
+STATIC FUNCTION test(oWidget,nValue)
 
    qout("slider moved")
    qout(oWidget)

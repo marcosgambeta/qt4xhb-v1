@@ -16,7 +16,7 @@
 
 STATIC aEstados
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -91,7 +91,7 @@ CLASS myModel INHERIT HAbstractTableModelV2
 
 END CLASS
 
-METHOD new (...) CLASS myModel
+METHOD new(...) CLASS myModel
 
    ::super:new(...)
 
@@ -102,13 +102,13 @@ METHOD new (...) CLASS myModel
 
 RETURN self
 
-METHOD rowCount () CLASS myModel
+METHOD rowCount() CLASS myModel
 RETURN len(aEstados)
 
-METHOD columnCount () CLASS myModel
+METHOD columnCount() CLASS myModel
 RETURN 2 // coluna 1=imagem coluna 2=nome
 
-METHOD data (oIndex, nRole) CLASS myModel
+METHOD data(oIndex, nRole) CLASS myModel
 
    LOCAL oVariant := QVariant():new()
    LOCAL nRow := oIndex:row()
@@ -128,7 +128,7 @@ METHOD data (oIndex, nRole) CLASS myModel
 
 RETURN oVariant
 
-METHOD headerData (nSection, nOrientation, nRole) CLASS myModel
+METHOD headerData(nSection, nOrientation, nRole) CLASS myModel
 
    LOCAL oVariant := QVariant():new()
 

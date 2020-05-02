@@ -14,7 +14,7 @@
 
 #include "qt4xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    lOCAL oApp
    LOCAL oMainWindow

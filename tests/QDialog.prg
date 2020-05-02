@@ -14,7 +14,7 @@
 
 #include "qt4xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -32,14 +32,14 @@ PROCEDURE Main ()
    oButton:onClicked({||ShowDialog()})
 
    oApp:exec()
-   
+
    oWindow:delete()
-   
+
    oApp:delete()
 
 RETURN
 
-STATIC FUNCTION ShowDialog ()
+STATIC FUNCTION ShowDialog()
 
    LOCAL oDialog := QDialog():new()
 

@@ -14,7 +14,7 @@
 
 #include "qt4xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -33,9 +33,9 @@ PROCEDURE Main ()
    oDateTimeEdit:show()
 
    oApp:exec()
-   
+
    oWindow:delete()
-   
+
    oApp:delete()
 
 RETURN

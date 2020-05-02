@@ -26,7 +26,7 @@ STATIC oMainWindow
   um objeto da classe HMainWindow e inicia o loop de eventos
 */
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    oApp := QApplication():new()
 
@@ -89,7 +89,7 @@ END CLASS
  e configura a janela principal
 */
 
-METHOD new () CLASS HMainWindow
+METHOD new() CLASS HMainWindow
 
    #ifdef __XHARBOUR__
    super:new()
@@ -110,7 +110,7 @@ RETURN self
   'title' e 'size' da janela principal
 */
 
-METHOD defineProperties () CLASS HMainWindow
+METHOD defineProperties() CLASS HMainWindow
 
    ::setWindowTitle("Qt4xHb - exemplo de criação da janela principal")
    ::resize(800,600)
@@ -122,7 +122,7 @@ RETURN self
   e configura a ação que cada item do menu irá executar
 */
 
-METHOD createMenuBar () CLASS HMainWindow
+METHOD createMenuBar() CLASS HMainWindow
 
    ::oMenuBar := ::menuBar()
 
@@ -179,7 +179,7 @@ RETURN self
   e configura a ação que cada botão irá executar
 */
 
-METHOD createToolBar () CLASS HMainWindow
+METHOD createToolBar() CLASS HMainWindow
 
    ::oToolBar := ::addToolBar("")
 
@@ -199,7 +199,7 @@ RETURN self
   o método 'createStatusBar' cria a barra de status
 */
 
-METHOD createStatusBar () CLASS HMainWindow
+METHOD createStatusBar() CLASS HMainWindow
 
    ::oStatusBar := ::statusBar()
 
@@ -209,7 +209,7 @@ RETURN self
  o método 'defineEvent' define os eventos que serão processados
 */
 
-METHOD defineEvents () CLASS HMainWindow
+METHOD defineEvents() CLASS HMainWindow
 
    ::onCloseEvent({|oSender,oEvent|::CloseMainWindow(oSender,oEvent)})
 
@@ -220,7 +220,7 @@ RETURN self
  realmente sair do programa
 */
 
-METHOD closeMainWindow (oSender,oCloseEvent) CLASS HMainWindow
+METHOD closeMainWindow(oSender,oCloseEvent) CLASS HMainWindow
 
    LOCAL oMB
    LOCAL nRet
@@ -251,7 +251,7 @@ RETURN .T.
   usando a classe QMessageBox
 */
 
-METHOD showMessage (cText) CLASS HMainWindow
+METHOD showMessage(cText) CLASS HMainWindow
 
    LOCAL oMB
 

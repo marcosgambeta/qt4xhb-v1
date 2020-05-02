@@ -14,7 +14,7 @@
 
 #include "qt4xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -32,9 +32,9 @@ PROCEDURE Main ()
    oWebView:show()
 
    oApp:exec()
-   
+
    oWindow:delete()
-   
+
    oApp:delete()
 
 RETURN

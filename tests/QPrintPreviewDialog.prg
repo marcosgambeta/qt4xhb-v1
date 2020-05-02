@@ -15,7 +15,7 @@
 
 #include "qt4xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -40,7 +40,7 @@ PROCEDURE Main ()
 
 RETURN
 
-STATIC FUNCTION dialog (oWindow)
+STATIC FUNCTION dialog(oWindow)
 
    LOCAL oPrintPreviewDialog
 
