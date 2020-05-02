@@ -59,6 +59,9 @@ namespace Qt4xHb
   QVariantList convert_array_parameter_to_qvariantlist ( int numpar );
   void convert_qvariantlist_to_array ( const QVariantList list );
   //void convert_qlist_qbluetoothuuid_to_array ( const QList<QBluetoothUuid> list );
+
+  PHB_ITEM returnQModelIndexObject( void * ptr );
+  PHB_ITEM returnQVariantObject( void * ptr );
 }
 
 #endif /* QT4XHB_UTILS_H */
