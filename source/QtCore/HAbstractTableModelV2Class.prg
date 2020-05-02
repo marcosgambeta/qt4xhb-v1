@@ -10,6 +10,7 @@
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QMODELINDEX
+REQUEST QVARIANT
 #endif
 
 CLASS HAbstractTableModelV2 INHERIT QAbstractTableModel

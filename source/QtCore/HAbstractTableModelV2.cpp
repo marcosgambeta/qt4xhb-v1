@@ -176,7 +176,8 @@ QVariant HAbstractTableModelV2::data( const QModelIndex & index, int role ) cons
 
   if( m_dataBlock )
   {
-    PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    // PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    PHB_ITEM pIndex = Qt4xHb::returnQModelIndexObject( (void *) &index );
     PHB_ITEM pRole = hb_itemPutNI( NULL, role );
 
     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_dataBlock, 2, pIndex, pRole ) );
@@ -236,7 +237,8 @@ Qt::ItemFlags HAbstractTableModelV2::flags( const QModelIndex &index ) const
 
   if( m_flagsBlock )
   {
-    PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    // PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    PHB_ITEM pIndex = Qt4xHb::returnQModelIndexObject( (void *) &index );
 
     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_flagsBlock, 1, pIndex ) );
 
@@ -262,8 +264,10 @@ bool HAbstractTableModelV2::setData( const QModelIndex &index, const QVariant &v
 
   if( m_setDataBlock )
   {
-    PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
-    PHB_ITEM pValue = hb_itemPutPtr( NULL, (QVariant *) &value );
+    // PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    PHB_ITEM pIndex = Qt4xHb::returnQModelIndexObject( (void *) &index );
+    // PHB_ITEM pValue = hb_itemPutPtr( NULL, (QVariant *) &value );
+    PHB_ITEM pValue = Qt4xHb::returnQVariantObject( (void *) &value );
     PHB_ITEM pRole = hb_itemPutNI( NULL, role );
 
     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_setDataBlock, 3, pIndex, pValue, pRole ) );
