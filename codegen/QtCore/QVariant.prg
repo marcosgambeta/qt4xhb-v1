@@ -412,6 +412,10 @@ $method=|QPoint|toPoint|
 $prototype=QPointF toPointF () const
 $method=|QPointF|toPointF|
 
+$prototype=qreal toReal ( bool * ok = 0 ) const
+%% TODO: implementar bool *=0
+$method=|qreal|toReal|bool *=0
+
 $prototype=QRect toRect () const
 $method=|QRect|toRect|
 

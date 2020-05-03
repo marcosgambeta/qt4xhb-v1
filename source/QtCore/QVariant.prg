@@ -94,6 +94,7 @@ CLASS QVariant
    METHOD toLocale
    METHOD toPoint
    METHOD toPointF
+   METHOD toReal
    METHOD toRect
    METHOD toRectF
    METHOD toRegExp
@@ -1114,6 +1115,32 @@ HB_FUNC_STATIC( QVARIANT_TOPOINTF )
 #endif
       QPointF * ptr = new QPointF( obj->toPointF() );
       Qt4xHb::createReturnClass( ptr, "QPOINTF", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
+
+/*
+qreal toReal ( bool * ok = 0 ) const
+*/
+HB_FUNC_STATIC( QVARIANT_TOREAL )
+{
+  QVariant * obj = (QVariant *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    {
+#endif
+      bool par1;
+      RQREAL( obj->toReal( &par1 ) );
+      hb_storl( par1, 1 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
