@@ -52,8 +52,15 @@ HAbstractTableModelV2( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_NEW )
 {
-  HAbstractTableModelV2 * o = new HAbstractTableModelV2( OPQOBJECT(1,0) );
-  Qt4xHb::returnNewObject( o, false );
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  {
+    HAbstractTableModelV2 * obj = new HAbstractTableModelV2( OPQOBJECT(1,0) );
+    Qt4xHb::returnNewObject( obj, false );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
