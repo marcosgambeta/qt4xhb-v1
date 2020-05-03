@@ -4,6 +4,8 @@
 # Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 #
 
+$(QT4XHB_OBJ_DIR)/HStyledItemDelegateMoc.cpp              : $(QT4XHB_SRC_DIR)/QtGui/HStyledItemDelegate.h
+	$(MOC) $^ -o $@
 $(QT4XHB_OBJ_DIR)/QAbstractButtonSlotsMoc.cpp             : $(QT4XHB_SRC_DIR)/QtGui/QAbstractButtonSlots.h
 	$(MOC) $^ -o $@
 $(QT4XHB_OBJ_DIR)/QAbstractItemDelegateSlotsMoc.cpp       : $(QT4XHB_SRC_DIR)/QtGui/QAbstractItemDelegateSlots.h
