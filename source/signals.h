@@ -9,13 +9,13 @@
 #ifndef SIGNALS_H
 #define SIGNALS_H
 
-#include <QObject>
-#include <QMetaObject>
-#include <QMetaMethod>
-#include <QList>
-#include <QCoreApplication>
-#include <QString>
-#include <QMutex>
+#include <QtCore/QObject>
+#include <QtCore/QMetaObject>
+#include <QtCore/QMetaMethod>
+#include <QtCore/QList>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
+#include <QtCore/QMutex>
 
 #include "hbapi.h"
 #include "hbapiitm.h"

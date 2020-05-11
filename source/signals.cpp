@@ -433,3 +433,35 @@ PHB_ITEM Signals_return_qobject ( QObject * ptr, const char * classname )
 
   return pObject;
 }
+
+#include "hbvm.h"
+#include "hbinit.h"
+
+static void qt4xhb_signals_init( void * cargo )
+{
+  HB_SYMBOL_UNUSED( cargo );
+
+  if( s_signals == NULL )
+  {
+    s_signals = new Signals();
+  }
+}
+
+static void qt4xhb_signals_exit( void * cargo )
+{
+  HB_SYMBOL_UNUSED( cargo );
+
+  delete s_signals;
+}
+
+HB_CALL_ON_STARTUP_BEGIN( _qt4xhb_signals_init_ )
+  hb_vmAtInit( qt4xhb_signals_init, NULL );
+  hb_vmAtExit( qt4xhb_signals_exit, NULL );
+HB_CALL_ON_STARTUP_END( _qt4xhb_signals_init_ )
+
+#if defined( HB_PRAGMA_STARTUP )
+  #pragma startup _qt4xhb_signals_init_
+#elif defined( HB_DATASEG_STARTUP )
+  #define HB_DATASEG_BODY HB_DATASEG_FUNC( _qt4xhb_signals_init_ )
+  #include "hbiniseg.h"
+#endif
