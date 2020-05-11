@@ -9,11 +9,12 @@
 #ifndef EVENTS_H
 #define EVENTS_H
 
-#include <QObject>
-#include <QEvent>
-#include <QList>
-#include <QCoreApplication>
-#include <QMutex>
+#include <QtCore/QObject>
+#include <QtCore/QEvent>
+#include <QtCore/QList>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QMutex>
+#include <QtCore/QMetaEnum>
 
 #include "hbapi.h"
 #include "hbapiitm.h"
