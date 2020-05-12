@@ -9,10 +9,10 @@
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 
-#include <QObject>
-#include <QStringList>
-#include <QWidget>
-#include <QVariant>
+#include <QtCore/QObject>
+#include <QtCore/QStringList>
+#include <QtCore/QVariant>
+#include <QtGui/QWidget>
 
 namespace Qt4xHb
 {
