@@ -280,14 +280,14 @@ void Events_disconnect_all_events( QObject * obj, bool children )
 
 HB_FUNC( QTXHB_EVENTS_SIZE )
 {
+  int size = 0;
+
   if( s_events )
   {
-    hb_retni( s_events->list1.size() );
+    size = s_events->list1.size();
   }
-  else
-  {
-    hb_retni( 0 );
-  }
+
+  hb_retni( size );
 }
 
 /*
@@ -298,10 +298,10 @@ HB_FUNC( QTXHB_EVENTS_SIZE )
 
 HB_FUNC( QTXHB_EVENTS_SIZE_ACTIVE )
 {
+  int count = 0;
+
   if( s_events )
   {
-    // inicializa contador
-    int count = 0;
     // percorre toda a lista de eventos
     const int listsize = s_events->list1.size();
     for( int i = 0; i < listsize; ++i )
@@ -311,12 +311,9 @@ HB_FUNC( QTXHB_EVENTS_SIZE_ACTIVE )
         ++count;
       }
     }
-    hb_retni( count );
   }
-  else
-  {
-    hb_retni( 0 );
-  }
+
+  hb_retni( count );
 }
 
 PHB_ITEM Events_return_object( QEvent * ptr, const char * classname )
