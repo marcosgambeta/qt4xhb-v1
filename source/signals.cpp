@@ -310,14 +310,14 @@ bool Signals_connection_disconnection( QObject * s, QString signal, QString slot
 
 HB_FUNC( QTXHB_SIGNALS_SIZE )
 {
+  int size = 0;
+
   if( s_signals )
   {
-    hb_retni( s_signals->list1.size() );
+    size = s_signals->list1.size();
   }
-  else
-  {
-    hb_retni( 0 );
-  }
+
+  hb_retni( size );
 }
 
 /*
@@ -328,10 +328,10 @@ HB_FUNC( QTXHB_SIGNALS_SIZE )
 
 HB_FUNC( QTXHB_SIGNALS_SIZE_ACTIVE )
 {
+  int count = 0;
+
   if( s_signals )
   {
-    // inicializa contador
-    int count = 0;
     // percorre toda a lista de sinais
     const int listsize = s_signals->list1.size();
     for( int i = 0; i < listsize; ++i )
@@ -341,12 +341,9 @@ HB_FUNC( QTXHB_SIGNALS_SIZE_ACTIVE )
         ++count;
       }
     }
-    hb_retni( count );
   }
-  else
-  {
-    hb_retni( 0 );
-  }
+
+  hb_retni( count );
 }
 
 PHB_ITEM Signals_return_object( void * ptr, const char * classname )
