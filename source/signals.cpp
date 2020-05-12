@@ -40,11 +40,6 @@ Signals::~Signals()
 bool Signals_connect_signal ( QObject * object, QString signal, PHB_ITEM codeblock )
 {
   int i;
-  // cria objeto da classe Signals, caso não tenha sido criado
-  if( s_signals == NULL )
-  {
-    s_signals = new Signals(QCoreApplication::instance());
-  }
   // verifica se já está na lista
   int found = -1;
   const int listsize = s_signals->list1.size();
@@ -96,11 +91,6 @@ bool Signals_connect_signal ( QObject * object, QString signal, PHB_ITEM codeblo
 bool Signals_disconnect_signal ( QObject * object, QString signal )
 {
   int i;
-  // cria objeto da classe Signals, caso não tenha sido criado
-  if( s_signals == NULL )
-  {
-    s_signals = new Signals(QCoreApplication::instance());
-  }
   bool ret = false;
   // remove sinal da lista de sinais
   const int listsize = s_signals->list1.size();
@@ -134,11 +124,6 @@ bool Signals_disconnect_signal ( QObject * object, QString signal )
 
 bool Signals_is_signal_connected ( QObject * object, QString signal )
 {
-  // cria objeto da classe Signals, caso não tenha sido criado
-  if( s_signals == NULL )
-  {
-    s_signals = new Signals(QCoreApplication::instance());
-  }
   // valor de retorno
   bool found = false;
   // verifica se já está na lista
@@ -161,11 +146,6 @@ bool Signals_is_signal_connected ( QObject * object, QString signal )
 
 PHB_ITEM Signals_return_codeblock ( QObject * object, QString signal )
 {
-  // cria objeto da classe Signals, caso não tenha sido criado
-  if( s_signals == NULL )
-  {
-    s_signals = new Signals(QCoreApplication::instance());
-  }
   int i;
   int found = -1;
   // localiza sinal na lista de sinais
@@ -274,11 +254,6 @@ void Signals_disconnect_all_signals (QObject * obj, bool children)
 */
 bool Signals_connection_disconnection ( QObject * s, QString signal, QString slot )
 {
-  if( s_signals == NULL )
-  {
-    s_signals = new Signals(QCoreApplication::instance());
-  }
-
   bool ret = false;
 
   s_signals->mutex->lock();
