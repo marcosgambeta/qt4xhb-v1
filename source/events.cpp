@@ -79,11 +79,6 @@ bool Events_connect_event ( QObject * object, int type, PHB_ITEM codeblock )
   //QObject * object = (QObject *) hb_parptr(1);
   //int type = hb_parni(2);
   //PHB_ITEM codeblock = hb_itemNew( hb_param( 3, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-  // cria objeto da classe Events, caso não tenha sido criado
-  if( s_events == NULL )
-  {
-    s_events = new Events(QCoreApplication::instance());
-  }
   // instala eventfilter, se não houver nenhum evento
   if( s_events->list1.contains( object ) == false )
   {
@@ -151,11 +146,6 @@ bool Events_disconnect_event ( QObject * object, int type )
   // parâmetros da função
   //QObject * object = (QObject *) hb_parptr(1);
   //int type = hb_parni(2);
-  // cria objeto da classe Events, caso não tenha sido criado
-  if( s_events == NULL )
-  {
-    s_events = new Events(QCoreApplication::instance());
-  }
   bool ret = false;
   // remove evento da lista de eventos
   const int listsize = s_events->list1.size();
