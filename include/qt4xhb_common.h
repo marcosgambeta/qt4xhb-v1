@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QT4XHB_COMMON_H
+#define QT4XHB_COMMON_H
+
 #include "hbapi.h"
 #include "hbapiitm.h"
 #include "hbapierr.h"
@@ -23,3 +26,5 @@
 #define ISOBJECT HB_ISOBJECT
 #define ISARRAY HB_ISARRAY
 #endif
+
+#endif /* QT4XHB_COMMON_H */
