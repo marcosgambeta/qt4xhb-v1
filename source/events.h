@@ -37,6 +37,8 @@ class Events: public QObject
   public:
   Events( QObject *parent = 0 );
   ~Events();
+
+  private:
   QVector<QObject*> * m_list1;     // armazena ponteiro do objeto
   QVector<QEvent::Type> * m_list2; // armazena tipo de evento
   QVector<PHB_ITEM> * m_list3;     // armazena codeblock
@@ -44,6 +46,15 @@ class Events: public QObject
 
   protected:
   bool eventFilter( QObject *obj, QEvent *event );
+
+  public:
+  //void lock();
+  //void unlock();
+  bool connectEvent( QObject * object, int type, PHB_ITEM codeblock );
+  bool disconnectEvent( QObject * object, int type );
+  void disconnectAllEvents( QObject * obj, bool children );
+  int size();
+  int active();
 };
 
 #endif
