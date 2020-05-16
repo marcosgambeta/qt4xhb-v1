@@ -67,7 +67,7 @@ bool Events::eventFilter( QObject *obj, QEvent *event )
     //PHB_ITEM pObject = hb_itemPutPtr( NULL, (QObject *) obj );
     PHB_ITEM pObject = returnQObject( obj, "QOBJECT" );
     //PHB_ITEM pEvent = hb_itemPutPtr( NULL, (QEvent *) event );
-    PHB_ITEM pEvent = returnObject( event, "QEVENT" );
+    PHB_ITEM pEvent = returnQEvent( event, "QEVENT" );
     result = hb_itemGetL( hb_vmEvalBlockV( m_list3->at(index), 2, pObject, pEvent ) );
     hb_itemRelease( pObject );
     hb_itemRelease( pEvent );
@@ -320,7 +320,7 @@ HB_FUNC( QTXHB_EVENTS_SIZE_ACTIVE ) // deprecated
 }
 
 //PHB_ITEM Events_return_object( QEvent * ptr, const char * classname )
-PHB_ITEM Events::returnObject( QEvent * ptr, const char * classname )
+PHB_ITEM Events::returnQEvent( QEvent * ptr, const char * classname )
 {
   static int eventEnumIndex = QEvent::staticMetaObject.indexOfEnumerator("Type");
 
