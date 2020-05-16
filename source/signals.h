@@ -55,6 +55,7 @@ class Signals: public QObject
   void connectSignal( QObject * object, QString signal, PHB_ITEM codeblock );
   void disconnectSignal( QObject * object, QString signal );
   bool isSignalConnected( QObject * object, QString signal );
+  void disconnectAllSignals( QObject * obj, bool children );
   int size();
   int active();
 };

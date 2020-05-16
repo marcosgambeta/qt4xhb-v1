@@ -129,6 +129,53 @@ bool Signals::isSignalConnected( QObject * object, QString signal )
   return result;
 }
 
+//void Signals_disconnect_all_signals( QObject * obj, bool children )
+void Signals::disconnectAllSignals( QObject * obj, bool children )
+{
+  if( !children )
+  {
+    // percorre toda a lista de sinais
+    const int listsize = m_list1->size();
+    for( int i = 0; i < listsize; ++i )
+    {
+      // elimina sinais ativos ligados ao objeto (obj)
+      if( ( m_list1->at(i) == obj ) && ( m_list2->at(i) != "destroyed(QObject*)" ) )
+      {
+        hb_itemRelease( m_list3->at(i) );
+        m_list1->replace( i, NULL );
+        m_list2->replace( i, "" );
+        m_list3->replace( i, NULL );
+      }
+    }
+  }
+  else
+  {
+    // obtém a lista de filhos, netos, bisnetos, etc...
+    QList<QObject *> objectList = obj->findChildren<QObject *>();
+    // adiciona o pai na lista
+    objectList << obj;
+    // percorre toda a lista de objetos
+    const int listsize = objectList.size();
+    for( int i = 0; i < listsize; ++i )
+    {
+      QObject * currentObject = (QObject *) objectList.at(i);
+      // percorre toda a lista de sinais
+      const int listsize2 = m_list1->size();
+      for( int ii = 0; ii < listsize2; ++ii )
+      {
+        // elimina sinais ativos (true) ligados ao objeto list.at(i)
+        if( ( m_list1->at(ii) == currentObject ) && ( m_list2->at(ii) != "destroyed(QObject*)" ) )
+        {
+          hb_itemRelease( m_list3->at(ii) );
+          m_list1->replace( ii, NULL );
+          m_list2->replace( ii, "" );
+          m_list3->replace( ii, NULL );
+        }
+      }
+    }
+  }
+}
+
 int Signals::size()
 {
   return m_list1->size();
@@ -158,20 +205,25 @@ int Signals::active()
   Função de uso interno, não deve ser usada nas aplicações do usuário
 */
 
+// void Signals_disconnect_signal( QObject * object, QString signal )
+// {
+//   // remove sinal da lista de sinais
+//   const int listsize = s_signals->m_list1->size();
+//   for( int i = 0; i < listsize; ++i )
+//   {
+//     if( ( s_signals->m_list1->at(i) == object ) && ( s_signals->m_list2->at(i) == signal ) )
+//     {
+//       hb_itemRelease( s_signals->m_list3->at(i) );
+//       s_signals->m_list1->replace( i, NULL );
+//       s_signals->m_list2->replace( i, "" );
+//       s_signals->m_list3->replace( i, NULL );
+//     }
+//   }
+// }
+
 void Signals_disconnect_signal( QObject * object, QString signal )
 {
-  // remove sinal da lista de sinais
-  const int listsize = s_signals->m_list1->size();
-  for( int i = 0; i < listsize; ++i )
-  {
-    if( ( s_signals->m_list1->at(i) == object ) && ( s_signals->m_list2->at(i) == signal ) )
-    {
-      hb_itemRelease( s_signals->m_list3->at(i) );
-      s_signals->m_list1->replace( i, NULL );
-      s_signals->m_list2->replace( i, "" );
-      s_signals->m_list3->replace( i, NULL );
-    }
-  }
+  s_signals->disconnectSignal( object, signal );
 }
 
 /*
@@ -206,51 +258,7 @@ PHB_ITEM Signals_return_codeblock( QObject * object, QString signal )
 
 void Signals_disconnect_all_signals( QObject * obj, bool children )
 {
-  if( s_signals )
-  {
-    if( !children )
-    {
-      // percorre toda a lista de sinais
-      const int listsize = s_signals->m_list1->size();
-      for( int i = 0; i < listsize; ++i )
-      {
-        // elimina sinais ativos ligados ao objeto (obj)
-        if( ( s_signals->m_list1->at(i) == obj ) && ( s_signals->m_list2->at(i) != "destroyed(QObject*)" ) )
-        {
-          hb_itemRelease( s_signals->m_list3->at(i) );
-          s_signals->m_list1->replace( i, NULL );
-          s_signals->m_list2->replace( i, "" );
-          s_signals->m_list3->replace( i, NULL );
-        }
-      }
-    }
-    else
-    {
-      // obtém a lista de filhos, netos, bisnetos, etc...
-      QList<QObject *> objectList = obj->findChildren<QObject *>();
-      // adiciona o pai na lista
-      objectList << obj;
-      // percorre toda a lista de objetos
-      const int listsize = objectList.size();
-      for( int i = 0; i < listsize; ++i )
-      {
-        QObject * currentObject = (QObject *) objectList.at(i);
-        // percorre toda a lista de sinais
-        const int listsize2 = s_signals->m_list1->size();
-        for( int ii = 0; ii < listsize2; ++ii )
-        {
-          // elimina sinais ativos (true) ligados ao objeto list.at(i)
-          if( ( s_signals->m_list1->at(ii) == currentObject ) && ( s_signals->m_list2->at(ii) != "destroyed(QObject*)" ) )
-          {
-            hb_itemRelease( s_signals->m_list3->at(ii) );
-            s_signals->m_list1->replace( ii, NULL );
-            s_signals->m_list2->replace( ii, "" );
-            s_signals->m_list3->replace( ii, NULL );
-          }
-        }
-      }
-    }
-  }
+  s_signals->disconnectAllSignals( obj, children );
 }
 
 /*
