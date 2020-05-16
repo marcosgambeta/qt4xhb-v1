@@ -129,6 +129,25 @@ bool Signals::isSignalConnected( QObject * object, QString signal )
   return result;
 }
 
+//PHB_ITEM Signals_return_codeblock( QObject * object, QString signal )
+PHB_ITEM Signals::returnCodeblock( QObject * object, QString signal )
+{
+  PHB_ITEM result = NULL;
+
+  // localiza sinal na lista de sinais
+  const int listsize = m_list1->size();
+  for( int i = 0; i < listsize; ++i )
+  {
+    if( ( m_list1->at(i) == object ) && ( m_list2->at(i) == signal ) )
+    {
+      result = m_list3->at(i);
+      break;
+    }
+  }
+
+  return result;
+}
+
 //void Signals_disconnect_all_signals( QObject * obj, bool children )
 void Signals::disconnectAllSignals( QObject * obj, bool children )
 {
@@ -230,22 +249,27 @@ void Signals_disconnect_signal( QObject * object, QString signal )
   Retorna o codeblock de um determinado objeto e sinal
 */
 
+// PHB_ITEM Signals_return_codeblock( QObject * object, QString signal )
+// {
+//   PHB_ITEM result = NULL;
+//
+//   // localiza sinal na lista de sinais
+//   const int listsize = s_signals->m_list1->size();
+//   for( int i = 0; i < listsize; ++i )
+//   {
+//     if( ( s_signals->m_list1->at(i) == object ) && ( s_signals->m_list2->at(i) == signal ) )
+//     {
+//       result = s_signals->m_list3->at(i);
+//       break;
+//     }
+//   }
+//
+//   return result;
+// }
+
 PHB_ITEM Signals_return_codeblock( QObject * object, QString signal )
 {
-  PHB_ITEM result = NULL;
-
-  // localiza sinal na lista de sinais
-  const int listsize = s_signals->m_list1->size();
-  for( int i = 0; i < listsize; ++i )
-  {
-    if( ( s_signals->m_list1->at(i) == object ) && ( s_signals->m_list2->at(i) == signal ) )
-    {
-      result = s_signals->m_list3->at(i);
-      break;
-    }
-  }
-
-  return result;
+  return s_signals->returnCodeblock( object, signal );
 }
 
 /*

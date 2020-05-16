@@ -42,11 +42,10 @@ class Signals: public QObject
   Signals( QObject *parent = 0 );
   ~Signals();
 
+  private:
   QVector<QObject*> * m_list1; // armazena ponteiro do objeto
   QVector<QString> * m_list2;  // armazena assinatura do sinal
   QVector<PHB_ITEM> * m_list3; // armazena codeblock
-
-  private:
   QMutex * m_mutex;
 
   public:
@@ -55,6 +54,7 @@ class Signals: public QObject
   void connectSignal( QObject * object, QString signal, PHB_ITEM codeblock );
   void disconnectSignal( QObject * object, QString signal );
   bool isSignalConnected( QObject * object, QString signal );
+  PHB_ITEM returnCodeblock( QObject * object, QString signal );
   void disconnectAllSignals( QObject * obj, bool children );
   int size();
   int active();
