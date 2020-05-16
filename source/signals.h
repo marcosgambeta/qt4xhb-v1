@@ -12,6 +12,7 @@
 #include <QtCore/QObject>
 #include <QtCore/QMetaObject>
 #include <QtCore/QMetaMethod>
+#include <QtCore/QVector>
 #include <QtCore/QList>
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
@@ -26,12 +27,10 @@
 #include "hbapicls.h"
 #endif
 
-bool Signals_connect_signal( QObject * object, QString signal, PHB_ITEM codeblock );
-bool Signals_disconnect_signal( QObject * object, QString signal );
-bool Signals_is_signal_connected( QObject * object, QString signal );
+//void Signals_connect_signal( QObject * object, QString signal, PHB_ITEM codeblock );
+void Signals_disconnect_signal( QObject * object, QString signal );
+//bool Signals_is_signal_connected( QObject * object, QString signal );
 PHB_ITEM Signals_return_codeblock( QObject * object, QString signal );
-void Signals_release_codeblocks();
-//void Signals_disconnect_all_signals (QObject * obj);
 void Signals_disconnect_all_signals( QObject * obj, bool children );
 bool Signals_connection_disconnection( QObject * s, QString signal, QString slot );
 PHB_ITEM Signals_return_object( void * ptr, const char * classname );
@@ -42,10 +41,22 @@ class Signals: public QObject
   public:
   Signals( QObject *parent = 0 );
   ~Signals();
-  QList<QObject*> list1; // armazena ponteiro do objeto
-  QList<QString> list2;  // armazena assinatura do sinal
-  QList<PHB_ITEM> list3; // armazena codeblock
-  QMutex * mutex;
+
+  QVector<QObject*> * m_list1; // armazena ponteiro do objeto
+  QVector<QString> * m_list2;  // armazena assinatura do sinal
+  QVector<PHB_ITEM> * m_list3; // armazena codeblock
+
+  private:
+  QMutex * m_mutex;
+
+  public:
+  void lock();
+  void unlock();
+  void connectSignal( QObject * object, QString signal, PHB_ITEM codeblock );
+  void disconnectSignal( QObject * object, QString signal );
+  bool isSignalConnected( QObject * object, QString signal );
+  int size();
+  int active();
 };
 
 #endif
