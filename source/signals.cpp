@@ -41,15 +41,15 @@ Signals::~Signals()
   delete m_mutex;
 }
 
-void Signals::lock()
-{
-  m_mutex->lock();
-}
+//void Signals::lock()
+//{
+//  m_mutex->lock();
+//}
 
-void Signals::unlock()
-{
-  m_mutex->unlock();
-}
+//void Signals::unlock()
+//{
+//  m_mutex->unlock();
+//}
 
 /*
   Conecta um determinado sinal com um objeto
@@ -224,22 +224,6 @@ int Signals::active()
   Função de uso interno, não deve ser usada nas aplicações do usuário
 */
 
-// void Signals_disconnect_signal( QObject * object, QString signal )
-// {
-//   // remove sinal da lista de sinais
-//   const int listsize = s_signals->m_list1->size();
-//   for( int i = 0; i < listsize; ++i )
-//   {
-//     if( ( s_signals->m_list1->at(i) == object ) && ( s_signals->m_list2->at(i) == signal ) )
-//     {
-//       hb_itemRelease( s_signals->m_list3->at(i) );
-//       s_signals->m_list1->replace( i, NULL );
-//       s_signals->m_list2->replace( i, "" );
-//       s_signals->m_list3->replace( i, NULL );
-//     }
-//   }
-// }
-
 void Signals_disconnect_signal( QObject * object, QString signal )
 {
   s_signals->disconnectSignal( object, signal );
@@ -248,24 +232,6 @@ void Signals_disconnect_signal( QObject * object, QString signal )
 /*
   Retorna o codeblock de um determinado objeto e sinal
 */
-
-// PHB_ITEM Signals_return_codeblock( QObject * object, QString signal )
-// {
-//   PHB_ITEM result = NULL;
-//
-//   // localiza sinal na lista de sinais
-//   const int listsize = s_signals->m_list1->size();
-//   for( int i = 0; i < listsize; ++i )
-//   {
-//     if( ( s_signals->m_list1->at(i) == object ) && ( s_signals->m_list2->at(i) == signal ) )
-//     {
-//       result = s_signals->m_list3->at(i);
-//       break;
-//     }
-//   }
-//
-//   return result;
-// }
 
 PHB_ITEM Signals_return_codeblock( QObject * object, QString signal )
 {
@@ -289,31 +255,31 @@ void Signals_disconnect_all_signals( QObject * obj, bool children )
   conecta/desconecta sinais e retorna resultado (true/false) (para uso nas classes Q*Slots)
 */
 
-bool Signals_connection_disconnection( QObject * s, QString signal, QString slot )
+bool Signals::connectionDisconnection( QObject * receiver, QString signal, QString slot )
 {
   bool result = false;
 
-  s_signals->lock();
+  m_mutex->lock();
 
   if( hb_pcount() == 1 )
   {
-    QObject * object = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+    QObject * sender = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    if( !s_signals->isSignalConnected( object, signal ) )
+    if( !isSignalConnected( sender, signal ) )
     {
       PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
 
       if( codeblock )
       {
-        result = object->connect( object,
-                                  object->metaObject()->method(object->metaObject()->indexOfMethod(QMetaObject::normalizedSignature(signal.toLatin1().constData()))),
-                                  s,
-                                  s->metaObject()->method(s->metaObject()->indexOfMethod(QMetaObject::normalizedSignature(slot.toLatin1().constData())))
+        result = sender->connect( sender,
+                                  sender->metaObject()->method(sender->metaObject()->indexOfMethod(QMetaObject::normalizedSignature(signal.toLatin1().constData()))),
+                                  receiver,
+                                  receiver->metaObject()->method(receiver->metaObject()->indexOfMethod(QMetaObject::normalizedSignature(slot.toLatin1().constData())))
                                 );
 
         if( result )
         {
-          s_signals->connectSignal( object, signal, codeblock ); // se conectado, adiciona
+          connectSignal( sender, signal, codeblock ); // se conectado, adiciona
         }
         else
         {
@@ -324,23 +290,28 @@ bool Signals_connection_disconnection( QObject * s, QString signal, QString slot
   }
   else if( hb_pcount() == 0 )
   {
-    QObject * object = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+    QObject * sender = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    result = object->disconnect( object,
-                                 object->metaObject()->method(object->metaObject()->indexOfMethod(QMetaObject::normalizedSignature(signal.toLatin1().constData()))),
-                                 s,
-                                 s->metaObject()->method(s->metaObject()->indexOfMethod(QMetaObject::normalizedSignature(slot.toLatin1().constData())))
+    result = sender->disconnect( sender,
+                                 sender->metaObject()->method(sender->metaObject()->indexOfMethod(QMetaObject::normalizedSignature(signal.toLatin1().constData()))),
+                                 receiver,
+                                 receiver->metaObject()->method(receiver->metaObject()->indexOfMethod(QMetaObject::normalizedSignature(slot.toLatin1().constData())))
                                );
 
     if( result )
     {
-      s_signals->disconnectSignal( object, signal ); // se desconectado, remove
+      disconnectSignal( sender, signal ); // se desconectado, remove
     }
   }
 
-  s_signals->unlock();
+  m_mutex->unlock();
 
   return result;
+}
+
+bool Signals_connection_disconnection( QObject * receiver, QString signal, QString slot )
+{
+  return s_signals->connectionDisconnection( receiver, signal, slot );
 }
 
 /*

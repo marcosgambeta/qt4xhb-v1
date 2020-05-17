@@ -49,8 +49,8 @@ class Signals: public QObject
   QMutex * m_mutex;
 
   public:
-  void lock();
-  void unlock();
+  //void lock();
+  //void unlock();
   void connectSignal( QObject * object, QString signal, PHB_ITEM codeblock );
   void disconnectSignal( QObject * object, QString signal );
   bool isSignalConnected( QObject * object, QString signal );
@@ -58,6 +58,7 @@ class Signals: public QObject
   void disconnectAllSignals( QObject * obj, bool children );
   int size();
   int active();
+  bool connectionDisconnection( QObject * s, QString signal, QString slot );
 };
 
 #endif
