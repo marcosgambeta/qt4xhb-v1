@@ -138,9 +138,7 @@ bool Events::eventFilter( QObject *obj, QEvent *event )
   if( index != -1 )
   {
     // executa bloco de código/função
-    //PHB_ITEM pObject = hb_itemPutPtr( NULL, (QObject *) obj );
     PHB_ITEM pObject = returnQObject( obj, "QOBJECT" );
-    //PHB_ITEM pEvent = hb_itemPutPtr( NULL, (QEvent *) event );
     PHB_ITEM pEvent = returnQEvent( event, "QEVENT" );
 
     result = hb_itemGetL( hb_vmEvalBlockV( m_list3->at(index), 2, pObject, pEvent ) );
@@ -155,26 +153,14 @@ bool Events::eventFilter( QObject *obj, QEvent *event )
   return result;
 }
 
-//void Events::lock()
-//{
-//  m_mutex->lock();
-//}
-
-//void Events::unlock()
-//{
-//  m_mutex->unlock();
-//}
-
 /*
   Conecta um determinado evento com um objeto
-  Parâmetro 1: ponteiro para o objeto
+  Parâmetro 1: objeto
   Parâmetro 2: id do evento
   Parâmetro 3: codeblock
   Retorna true se a conexão foi bem sucedida ou false se falhou
-  Função de uso interno, não deve ser usada nas aplicações do usuário
 */
 
-//bool Events_connect_event( QObject * object, int type, PHB_ITEM codeblock )
 bool Events::connectEvent( QObject * object, int type, PHB_ITEM codeblock )
 {
   bool result = false;
@@ -183,7 +169,7 @@ bool Events::connectEvent( QObject * object, int type, PHB_ITEM codeblock )
   // instala eventfilter, se não houver nenhum evento
   if( m_list1->contains( object ) == false )
   {
-    object->installEventFilter(s_events);
+    object->installEventFilter(this);
   }
 
   m_mutex->lock();
@@ -236,13 +222,11 @@ bool Events_connect_event( QObject * object, int type, PHB_ITEM codeblock )
 
 /*
   Desconecta um determinado evento
-  Parâmetro 1: ponteiro para o objeto
+  Parâmetro 1: objeto
   Parâmetro 2: id do evento
   Retorna true se a desconexão foi bem sucedida ou false se falhou
-  Função de uso interno, não deve ser usada nas aplicações do usuário
 */
 
-//bool Events_disconnect_event( QObject * object, int type )
 bool Events::disconnectEvent( QObject * object, int type )
 {
   bool result = false;
@@ -264,7 +248,7 @@ bool Events::disconnectEvent( QObject * object, int type )
   // desinstala eventfilter, se não houver mais nenhum evento
   if( m_list1->contains( object ) == false )
   {
-    object->removeEventFilter(s_events);
+    object->removeEventFilter(this);
   }
 
   return result;
@@ -280,7 +264,6 @@ bool Events_disconnect_event( QObject * object, int type )
   incluindo os eventos ligados aos filhos, netos, bisnetos, etc... (se children = true).
 */
 
-//void Events_disconnect_all_events( QObject * obj, bool children )
 void Events::disconnectAllEvents( QObject * obj, bool children )
 {
   if( !children )
@@ -301,7 +284,7 @@ void Events::disconnectAllEvents( QObject * obj, bool children )
     // desinstala eventfilter do objeto 'obj'
     if( m_list1->contains( obj ) == false )
     {
-      obj->removeEventFilter(s_events);
+      obj->removeEventFilter(this);
     }
   }
   else
@@ -335,7 +318,7 @@ void Events::disconnectAllEvents( QObject * obj, bool children )
       // desinstala eventfilter do objeto 'list.at(i)'
       if( m_list1->contains( currentObject ) == false )
       {
-        currentObject->removeEventFilter(s_events);
+        currentObject->removeEventFilter(this);
       }
     }
   }
@@ -395,19 +378,12 @@ HB_FUNC( QTXHB_EVENTS_SIZE_ACTIVE ) // deprecated
   hb_retni( s_events->active() );
 }
 
-//PHB_ITEM Events_return_object( QEvent * ptr, const char * classname )
 PHB_ITEM Events::returnQEvent( QEvent * ptr, const char * classname )
 {
-  //static int eventEnumIndex = QEvent::staticMetaObject.indexOfEnumerator("Type");
-
-  //QString eventname = QEvent::staticMetaObject.enumerator(eventEnumIndex).valueToKey(ptr->type());
   QString eventname = m_events->value( ptr->type(), "QEvent" );
 
   PHB_DYNS pDynSym;
 
-  //QString name = "q" + eventname + "event";
-
-  //pDynSym = hb_dynsymFindName( (const char *) name.toUpper().toLatin1().data() );
   pDynSym = hb_dynsymFindName( (const char *) eventname.toUpper().toLatin1().data() );
 
   if( !pDynSym )
@@ -436,7 +412,6 @@ PHB_ITEM Events::returnQEvent( QEvent * ptr, const char * classname )
   return pObject;
 }
 
-//PHB_ITEM Events_return_qobject( QObject * ptr, const char * classname )
 PHB_ITEM Events::returnQObject( QObject * ptr, const char * classname )
 {
   PHB_DYNS pDynSym = NULL;
