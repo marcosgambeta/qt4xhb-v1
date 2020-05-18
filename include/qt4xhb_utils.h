@@ -9,11 +9,11 @@
 #ifndef QT4XHB_UTILS_H
 #define QT4XHB_UTILS_H
 
-#include <QString>
-#include <QStringList>
-#include <QObject>
-#include <QMetaObject>
-#include <QVariant>
+#include <QtCore/QString>
+#include <QtCore/QStringList>
+#include <QtCore/QObject>
+#include <QtCore/QMetaObject>
+#include <QtCore/QVariant>
 
 namespace Qt4xHb
 {
