@@ -24,11 +24,11 @@ void QTabWidgetSlots::currentChanged( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "currentChanged(int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentChanged(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTABWIDGET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QTABWIDGET" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -42,11 +42,11 @@ void QTabWidgetSlots::tabCloseRequested( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "tabCloseRequested(int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "tabCloseRequested(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTABWIDGET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QTABWIDGET" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -71,7 +71,7 @@ void QTabWidgetSlots_connect_signal( const QString & signal, const QString & slo
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

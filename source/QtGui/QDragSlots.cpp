@@ -24,11 +24,11 @@ void QDragSlots::actionChanged( Qt::DropAction action )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "actionChanged(Qt::DropAction)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "actionChanged(Qt::DropAction)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDRAG" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDRAG" );
     PHB_ITEM paction = hb_itemPutNI( NULL, (int) action );
 
     hb_vmEvalBlockV( cb, 2, psender, paction );
@@ -42,12 +42,12 @@ void QDragSlots::targetChanged( QWidget * newTarget )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "targetChanged(QWidget*)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "targetChanged(QWidget*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDRAG" );
-    PHB_ITEM pnewTarget = Signals_return_qobject( (QObject *) newTarget, "QWIDGET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDRAG" );
+    PHB_ITEM pnewTarget = Qt4xHb::Signals_return_qobject( (QObject *) newTarget, "QWIDGET" );
 
     hb_vmEvalBlockV( cb, 2, psender, pnewTarget );
 
@@ -71,7 +71,7 @@ void QDragSlots_connect_signal( const QString & signal, const QString & slot )
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

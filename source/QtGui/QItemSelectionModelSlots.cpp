@@ -24,13 +24,13 @@ void QItemSelectionModelSlots::currentChanged( const QModelIndex & current, cons
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "currentChanged(QModelIndex,QModelIndex)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentChanged(QModelIndex,QModelIndex)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QITEMSELECTIONMODEL" );
-    PHB_ITEM pcurrent = Signals_return_object( (void *) &current, "QMODELINDEX" );
-    PHB_ITEM pprevious = Signals_return_object( (void *) &previous, "QMODELINDEX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QITEMSELECTIONMODEL" );
+    PHB_ITEM pcurrent = Qt4xHb::Signals_return_object( (void *) &current, "QMODELINDEX" );
+    PHB_ITEM pprevious = Qt4xHb::Signals_return_object( (void *) &previous, "QMODELINDEX" );
 
     hb_vmEvalBlockV( cb, 3, psender, pcurrent, pprevious );
 
@@ -44,13 +44,13 @@ void QItemSelectionModelSlots::currentColumnChanged( const QModelIndex & current
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "currentColumnChanged(QModelIndex,QModelIndex)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentColumnChanged(QModelIndex,QModelIndex)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QITEMSELECTIONMODEL" );
-    PHB_ITEM pcurrent = Signals_return_object( (void *) &current, "QMODELINDEX" );
-    PHB_ITEM pprevious = Signals_return_object( (void *) &previous, "QMODELINDEX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QITEMSELECTIONMODEL" );
+    PHB_ITEM pcurrent = Qt4xHb::Signals_return_object( (void *) &current, "QMODELINDEX" );
+    PHB_ITEM pprevious = Qt4xHb::Signals_return_object( (void *) &previous, "QMODELINDEX" );
 
     hb_vmEvalBlockV( cb, 3, psender, pcurrent, pprevious );
 
@@ -64,13 +64,13 @@ void QItemSelectionModelSlots::currentRowChanged( const QModelIndex & current, c
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "currentRowChanged(QModelIndex,QModelIndex)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentRowChanged(QModelIndex,QModelIndex)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QITEMSELECTIONMODEL" );
-    PHB_ITEM pcurrent = Signals_return_object( (void *) &current, "QMODELINDEX" );
-    PHB_ITEM pprevious = Signals_return_object( (void *) &previous, "QMODELINDEX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QITEMSELECTIONMODEL" );
+    PHB_ITEM pcurrent = Qt4xHb::Signals_return_object( (void *) &current, "QMODELINDEX" );
+    PHB_ITEM pprevious = Qt4xHb::Signals_return_object( (void *) &previous, "QMODELINDEX" );
 
     hb_vmEvalBlockV( cb, 3, psender, pcurrent, pprevious );
 
@@ -84,13 +84,13 @@ void QItemSelectionModelSlots::selectionChanged( const QItemSelection & selected
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged(QItemSelection,QItemSelection)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "selectionChanged(QItemSelection,QItemSelection)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QITEMSELECTIONMODEL" );
-    PHB_ITEM pselected = Signals_return_object( (void *) &selected, "QITEMSELECTION" );
-    PHB_ITEM pdeselected = Signals_return_object( (void *) &deselected, "QITEMSELECTION" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QITEMSELECTIONMODEL" );
+    PHB_ITEM pselected = Qt4xHb::Signals_return_object( (void *) &selected, "QITEMSELECTION" );
+    PHB_ITEM pdeselected = Qt4xHb::Signals_return_object( (void *) &deselected, "QITEMSELECTION" );
 
     hb_vmEvalBlockV( cb, 3, psender, pselected, pdeselected );
 
@@ -115,7 +115,7 @@ void QItemSelectionModelSlots_connect_signal( const QString & signal, const QStr
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

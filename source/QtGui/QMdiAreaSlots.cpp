@@ -24,12 +24,12 @@ void QMdiAreaSlots::subWindowActivated( QMdiSubWindow * window )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "subWindowActivated(QMdiSubWindow*)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "subWindowActivated(QMdiSubWindow*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMDIAREA" );
-    PHB_ITEM pwindow = Signals_return_qobject( (QObject *) window, "QMDISUBWINDOW" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QMDIAREA" );
+    PHB_ITEM pwindow = Qt4xHb::Signals_return_qobject( (QObject *) window, "QMDISUBWINDOW" );
 
     hb_vmEvalBlockV( cb, 2, psender, pwindow );
 
@@ -53,7 +53,7 @@ void QMdiAreaSlots_connect_signal( const QString & signal, const QString & slot 
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

@@ -24,12 +24,12 @@ void QTreeViewSlots::collapsed( const QModelIndex & index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "collapsed(QModelIndex)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "collapsed(QModelIndex)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTREEVIEW" );
-    PHB_ITEM pindex = Signals_return_object( (void *) &index, "QMODELINDEX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QTREEVIEW" );
+    PHB_ITEM pindex = Qt4xHb::Signals_return_object( (void *) &index, "QMODELINDEX" );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
 
@@ -42,12 +42,12 @@ void QTreeViewSlots::expanded( const QModelIndex & index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "expanded(QModelIndex)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "expanded(QModelIndex)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTREEVIEW" );
-    PHB_ITEM pindex = Signals_return_object( (void *) &index, "QMODELINDEX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QTREEVIEW" );
+    PHB_ITEM pindex = Qt4xHb::Signals_return_object( (void *) &index, "QMODELINDEX" );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
 
@@ -71,7 +71,7 @@ void QTreeViewSlots_connect_signal( const QString & signal, const QString & slot
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

@@ -24,12 +24,12 @@ void QDateTimeEditSlots::dateChanged( const QDate & date )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "dateChanged(QDate)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "dateChanged(QDate)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDATETIMEEDIT" );
-    PHB_ITEM pdate = Signals_return_object( (void *) &date, "QDATE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDATETIMEEDIT" );
+    PHB_ITEM pdate = Qt4xHb::Signals_return_object( (void *) &date, "QDATE" );
 
     hb_vmEvalBlockV( cb, 2, psender, pdate );
 
@@ -42,12 +42,12 @@ void QDateTimeEditSlots::dateTimeChanged( const QDateTime & datetime )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "dateTimeChanged(QDateTime)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "dateTimeChanged(QDateTime)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDATETIMEEDIT" );
-    PHB_ITEM pdatetime = Signals_return_object( (void *) &datetime, "QDATETIME" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDATETIMEEDIT" );
+    PHB_ITEM pdatetime = Qt4xHb::Signals_return_object( (void *) &datetime, "QDATETIME" );
 
     hb_vmEvalBlockV( cb, 2, psender, pdatetime );
 
@@ -60,12 +60,12 @@ void QDateTimeEditSlots::timeChanged( const QTime & time )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "timeChanged(QTime)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "timeChanged(QTime)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDATETIMEEDIT" );
-    PHB_ITEM ptime = Signals_return_object( (void *) &time, "QTIME" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDATETIMEEDIT" );
+    PHB_ITEM ptime = Qt4xHb::Signals_return_object( (void *) &time, "QTIME" );
 
     hb_vmEvalBlockV( cb, 2, psender, ptime );
 
@@ -89,7 +89,7 @@ void QDateTimeEditSlots_connect_signal( const QString & signal, const QString & 
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {
