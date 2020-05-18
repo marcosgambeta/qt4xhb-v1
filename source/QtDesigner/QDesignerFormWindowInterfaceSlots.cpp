@@ -24,12 +24,12 @@ void QDesignerFormWindowInterfaceSlots::aboutToUnmanageWidget( QWidget * widget 
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "aboutToUnmanageWidget(QWidget*)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "aboutToUnmanageWidget(QWidget*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
-    PHB_ITEM pwidget = Signals_return_qobject( (QObject *) widget, "QWIDGET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
+    PHB_ITEM pwidget = Qt4xHb::Signals_return_qobject( (QObject *) widget, "QWIDGET" );
 
     hb_vmEvalBlockV( cb, 2, psender, pwidget );
 
@@ -42,12 +42,12 @@ void QDesignerFormWindowInterfaceSlots::activated( QWidget * widget )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "activated(QWidget*)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "activated(QWidget*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
-    PHB_ITEM pwidget = Signals_return_qobject( (QObject *) widget, "QWIDGET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
+    PHB_ITEM pwidget = Qt4xHb::Signals_return_qobject( (QObject *) widget, "QWIDGET" );
 
     hb_vmEvalBlockV( cb, 2, psender, pwidget );
 
@@ -60,11 +60,11 @@ void QDesignerFormWindowInterfaceSlots::changed()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "changed()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "changed()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -76,11 +76,11 @@ void QDesignerFormWindowInterfaceSlots::featureChanged( QDesignerFormWindowInter
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "featureChanged(QDesignerFormWindowInterface::Feature)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "featureChanged(QDesignerFormWindowInterface::Feature)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
     PHB_ITEM pfeature = hb_itemPutNI( NULL, (int) feature );
 
     hb_vmEvalBlockV( cb, 2, psender, pfeature );
@@ -94,11 +94,11 @@ void QDesignerFormWindowInterfaceSlots::fileNameChanged( const QString & fileNam
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "fileNameChanged(QString)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "fileNameChanged(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
     PHB_ITEM pfileName = hb_itemPutC( NULL, QSTRINGTOSTRING(fileName) );
 
     hb_vmEvalBlockV( cb, 2, psender, pfileName );
@@ -112,11 +112,11 @@ void QDesignerFormWindowInterfaceSlots::geometryChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "geometryChanged()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "geometryChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -128,12 +128,12 @@ void QDesignerFormWindowInterfaceSlots::mainContainerChanged( QWidget * mainCont
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "mainContainerChanged(QWidget*)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "mainContainerChanged(QWidget*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
-    PHB_ITEM pmainContainer = Signals_return_qobject( (QObject *) mainContainer, "QWIDGET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
+    PHB_ITEM pmainContainer = Qt4xHb::Signals_return_qobject( (QObject *) mainContainer, "QWIDGET" );
 
     hb_vmEvalBlockV( cb, 2, psender, pmainContainer );
 
@@ -146,12 +146,12 @@ void QDesignerFormWindowInterfaceSlots::objectRemoved( QObject * object2 )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "objectRemoved(QObject*)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "objectRemoved(QObject*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
-    PHB_ITEM pobject2 = Signals_return_qobject( (QObject *) object2, "QOBJECT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
+    PHB_ITEM pobject2 = Qt4xHb::Signals_return_qobject( (QObject *) object2, "QOBJECT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pobject2 );
 
@@ -164,11 +164,11 @@ void QDesignerFormWindowInterfaceSlots::resourceFilesChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "resourceFilesChanged()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "resourceFilesChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -180,11 +180,11 @@ void QDesignerFormWindowInterfaceSlots::selectionChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "selectionChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -196,12 +196,12 @@ void QDesignerFormWindowInterfaceSlots::widgetManaged( QWidget * widget )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "widgetManaged(QWidget*)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "widgetManaged(QWidget*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
-    PHB_ITEM pwidget = Signals_return_qobject( (QObject *) widget, "QWIDGET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
+    PHB_ITEM pwidget = Qt4xHb::Signals_return_qobject( (QObject *) widget, "QWIDGET" );
 
     hb_vmEvalBlockV( cb, 2, psender, pwidget );
 
@@ -214,12 +214,12 @@ void QDesignerFormWindowInterfaceSlots::widgetRemoved( QWidget * widget )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "widgetRemoved(QWidget*)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "widgetRemoved(QWidget*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
-    PHB_ITEM pwidget = Signals_return_qobject( (QObject *) widget, "QWIDGET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
+    PHB_ITEM pwidget = Qt4xHb::Signals_return_qobject( (QObject *) widget, "QWIDGET" );
 
     hb_vmEvalBlockV( cb, 2, psender, pwidget );
 
@@ -232,12 +232,12 @@ void QDesignerFormWindowInterfaceSlots::widgetUnmanaged( QWidget * widget )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "widgetUnmanaged(QWidget*)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "widgetUnmanaged(QWidget*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
-    PHB_ITEM pwidget = Signals_return_qobject( (QObject *) widget, "QWIDGET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDESIGNERFORMWINDOWINTERFACE" );
+    PHB_ITEM pwidget = Qt4xHb::Signals_return_qobject( (QObject *) widget, "QWIDGET" );
 
     hb_vmEvalBlockV( cb, 2, psender, pwidget );
 
@@ -261,7 +261,7 @@ void QDesignerFormWindowInterfaceSlots_connect_signal( const QString & signal, c
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {
