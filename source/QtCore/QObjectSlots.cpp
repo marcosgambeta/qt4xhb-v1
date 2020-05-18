@@ -24,18 +24,18 @@ void QObjectSlots::destroyed( QObject * obj )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "destroyed(QObject*)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "destroyed(QObject*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QOBJECT" );
-    PHB_ITEM pobj = Signals_return_qobject( (QObject *) obj, "QOBJECT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QOBJECT" );
+    PHB_ITEM pobj = Qt4xHb::Signals_return_qobject( (QObject *) obj, "QOBJECT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pobj );
 
     hb_itemRelease( psender );
     hb_itemRelease( pobj );
-    Signals_disconnect_signal( object, "destroyed(QObject*)" );
+    Qt4xHb::Signals_disconnect_signal( object, "destroyed(QObject*)" );
   }
 }
 
@@ -54,7 +54,7 @@ void QObjectSlots_connect_signal( const QString & signal, const QString & slot )
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

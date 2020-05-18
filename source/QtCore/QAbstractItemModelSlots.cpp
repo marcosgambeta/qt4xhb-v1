@@ -24,12 +24,12 @@ void QAbstractItemModelSlots::columnsAboutToBeInserted( const QModelIndex & pare
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "columnsAboutToBeInserted(QModelIndex,int,int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "columnsAboutToBeInserted(QModelIndex,int,int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
-    PHB_ITEM pparent = Signals_return_object( (void *) &parent, "QMODELINDEX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
+    PHB_ITEM pparent = Qt4xHb::Signals_return_object( (void *) &parent, "QMODELINDEX" );
     PHB_ITEM pstart = hb_itemPutNI( NULL, start );
     PHB_ITEM pend = hb_itemPutNI( NULL, end );
 
@@ -46,15 +46,15 @@ void QAbstractItemModelSlots::columnsAboutToBeMoved( const QModelIndex & sourceP
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
-    PHB_ITEM psourceParent = Signals_return_object( (void *) &sourceParent, "QMODELINDEX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
+    PHB_ITEM psourceParent = Qt4xHb::Signals_return_object( (void *) &sourceParent, "QMODELINDEX" );
     PHB_ITEM psourceStart = hb_itemPutNI( NULL, sourceStart );
     PHB_ITEM psourceEnd = hb_itemPutNI( NULL, sourceEnd );
-    PHB_ITEM pdestinationParent = Signals_return_object( (void *) &destinationParent, "QMODELINDEX" );
+    PHB_ITEM pdestinationParent = Qt4xHb::Signals_return_object( (void *) &destinationParent, "QMODELINDEX" );
     PHB_ITEM pdestinationColumn = hb_itemPutNI( NULL, destinationColumn );
 
     hb_vmEvalBlockV( cb, 6, psender, psourceParent, psourceStart, psourceEnd, pdestinationParent, pdestinationColumn );
@@ -72,12 +72,12 @@ void QAbstractItemModelSlots::columnsAboutToBeRemoved( const QModelIndex & paren
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "columnsAboutToBeRemoved(QModelIndex,int,int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "columnsAboutToBeRemoved(QModelIndex,int,int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
-    PHB_ITEM pparent = Signals_return_object( (void *) &parent, "QMODELINDEX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
+    PHB_ITEM pparent = Qt4xHb::Signals_return_object( (void *) &parent, "QMODELINDEX" );
     PHB_ITEM pstart = hb_itemPutNI( NULL, start );
     PHB_ITEM pend = hb_itemPutNI( NULL, end );
 
@@ -94,12 +94,12 @@ void QAbstractItemModelSlots::columnsInserted( const QModelIndex & parent, int s
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "columnsInserted(QModelIndex,int,int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "columnsInserted(QModelIndex,int,int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
-    PHB_ITEM pparent = Signals_return_object( (void *) &parent, "QMODELINDEX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
+    PHB_ITEM pparent = Qt4xHb::Signals_return_object( (void *) &parent, "QMODELINDEX" );
     PHB_ITEM pstart = hb_itemPutNI( NULL, start );
     PHB_ITEM pend = hb_itemPutNI( NULL, end );
 
@@ -116,15 +116,15 @@ void QAbstractItemModelSlots::columnsMoved( const QModelIndex & sourceParent, in
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "columnsMoved(QModelIndex,int,int,QModelIndex,int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "columnsMoved(QModelIndex,int,int,QModelIndex,int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
-    PHB_ITEM psourceParent = Signals_return_object( (void *) &sourceParent, "QMODELINDEX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
+    PHB_ITEM psourceParent = Qt4xHb::Signals_return_object( (void *) &sourceParent, "QMODELINDEX" );
     PHB_ITEM psourceStart = hb_itemPutNI( NULL, sourceStart );
     PHB_ITEM psourceEnd = hb_itemPutNI( NULL, sourceEnd );
-    PHB_ITEM pdestinationParent = Signals_return_object( (void *) &destinationParent, "QMODELINDEX" );
+    PHB_ITEM pdestinationParent = Qt4xHb::Signals_return_object( (void *) &destinationParent, "QMODELINDEX" );
     PHB_ITEM pdestinationColumn = hb_itemPutNI( NULL, destinationColumn );
 
     hb_vmEvalBlockV( cb, 6, psender, psourceParent, psourceStart, psourceEnd, pdestinationParent, pdestinationColumn );
@@ -142,12 +142,12 @@ void QAbstractItemModelSlots::columnsRemoved( const QModelIndex & parent, int st
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "columnsRemoved(QModelIndex,int,int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "columnsRemoved(QModelIndex,int,int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
-    PHB_ITEM pparent = Signals_return_object( (void *) &parent, "QMODELINDEX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
+    PHB_ITEM pparent = Qt4xHb::Signals_return_object( (void *) &parent, "QMODELINDEX" );
     PHB_ITEM pstart = hb_itemPutNI( NULL, start );
     PHB_ITEM pend = hb_itemPutNI( NULL, end );
 
@@ -164,13 +164,13 @@ void QAbstractItemModelSlots::dataChanged( const QModelIndex & topLeft, const QM
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "dataChanged(QModelIndex,QModelIndex)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "dataChanged(QModelIndex,QModelIndex)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
-    PHB_ITEM ptopLeft = Signals_return_object( (void *) &topLeft, "QMODELINDEX" );
-    PHB_ITEM pbottomRight = Signals_return_object( (void *) &bottomRight, "QMODELINDEX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
+    PHB_ITEM ptopLeft = Qt4xHb::Signals_return_object( (void *) &topLeft, "QMODELINDEX" );
+    PHB_ITEM pbottomRight = Qt4xHb::Signals_return_object( (void *) &bottomRight, "QMODELINDEX" );
 
     hb_vmEvalBlockV( cb, 3, psender, ptopLeft, pbottomRight );
 
@@ -184,11 +184,11 @@ void QAbstractItemModelSlots::headerDataChanged( Qt::Orientation orientation, in
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "headerDataChanged(Qt::Orientation,int,int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "headerDataChanged(Qt::Orientation,int,int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
     PHB_ITEM porientation = hb_itemPutNI( NULL, (int) orientation );
     PHB_ITEM pfirst = hb_itemPutNI( NULL, first );
     PHB_ITEM plast = hb_itemPutNI( NULL, last );
@@ -206,11 +206,11 @@ void QAbstractItemModelSlots::layoutAboutToBeChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "layoutAboutToBeChanged()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "layoutAboutToBeChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -222,11 +222,11 @@ void QAbstractItemModelSlots::layoutChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "layoutChanged()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "layoutChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -238,11 +238,11 @@ void QAbstractItemModelSlots::modelAboutToBeReset()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "modelAboutToBeReset()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "modelAboutToBeReset()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -254,11 +254,11 @@ void QAbstractItemModelSlots::modelReset()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "modelReset()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "modelReset()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -270,12 +270,12 @@ void QAbstractItemModelSlots::rowsAboutToBeInserted( const QModelIndex & parent,
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "rowsAboutToBeInserted(QModelIndex,int,int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "rowsAboutToBeInserted(QModelIndex,int,int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
-    PHB_ITEM pparent = Signals_return_object( (void *) &parent, "QMODELINDEX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
+    PHB_ITEM pparent = Qt4xHb::Signals_return_object( (void *) &parent, "QMODELINDEX" );
     PHB_ITEM pstart = hb_itemPutNI( NULL, start );
     PHB_ITEM pend = hb_itemPutNI( NULL, end );
 
@@ -292,15 +292,15 @@ void QAbstractItemModelSlots::rowsAboutToBeMoved( const QModelIndex & sourcePare
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
-    PHB_ITEM psourceParent = Signals_return_object( (void *) &sourceParent, "QMODELINDEX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
+    PHB_ITEM psourceParent = Qt4xHb::Signals_return_object( (void *) &sourceParent, "QMODELINDEX" );
     PHB_ITEM psourceStart = hb_itemPutNI( NULL, sourceStart );
     PHB_ITEM psourceEnd = hb_itemPutNI( NULL, sourceEnd );
-    PHB_ITEM pdestinationParent = Signals_return_object( (void *) &destinationParent, "QMODELINDEX" );
+    PHB_ITEM pdestinationParent = Qt4xHb::Signals_return_object( (void *) &destinationParent, "QMODELINDEX" );
     PHB_ITEM pdestinationRow = hb_itemPutNI( NULL, destinationRow );
 
     hb_vmEvalBlockV( cb, 6, psender, psourceParent, psourceStart, psourceEnd, pdestinationParent, pdestinationRow );
@@ -318,12 +318,12 @@ void QAbstractItemModelSlots::rowsAboutToBeRemoved( const QModelIndex & parent, 
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "rowsAboutToBeRemoved(QModelIndex,int,int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "rowsAboutToBeRemoved(QModelIndex,int,int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
-    PHB_ITEM pparent = Signals_return_object( (void *) &parent, "QMODELINDEX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
+    PHB_ITEM pparent = Qt4xHb::Signals_return_object( (void *) &parent, "QMODELINDEX" );
     PHB_ITEM pstart = hb_itemPutNI( NULL, start );
     PHB_ITEM pend = hb_itemPutNI( NULL, end );
 
@@ -340,12 +340,12 @@ void QAbstractItemModelSlots::rowsInserted( const QModelIndex & parent, int star
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "rowsInserted(QModelIndex,int,int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "rowsInserted(QModelIndex,int,int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
-    PHB_ITEM pparent = Signals_return_object( (void *) &parent, "QMODELINDEX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
+    PHB_ITEM pparent = Qt4xHb::Signals_return_object( (void *) &parent, "QMODELINDEX" );
     PHB_ITEM pstart = hb_itemPutNI( NULL, start );
     PHB_ITEM pend = hb_itemPutNI( NULL, end );
 
@@ -362,15 +362,15 @@ void QAbstractItemModelSlots::rowsMoved( const QModelIndex & sourceParent, int s
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "rowsMoved(QModelIndex,int,int,QModelIndex,int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "rowsMoved(QModelIndex,int,int,QModelIndex,int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
-    PHB_ITEM psourceParent = Signals_return_object( (void *) &sourceParent, "QMODELINDEX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
+    PHB_ITEM psourceParent = Qt4xHb::Signals_return_object( (void *) &sourceParent, "QMODELINDEX" );
     PHB_ITEM psourceStart = hb_itemPutNI( NULL, sourceStart );
     PHB_ITEM psourceEnd = hb_itemPutNI( NULL, sourceEnd );
-    PHB_ITEM pdestinationParent = Signals_return_object( (void *) &destinationParent, "QMODELINDEX" );
+    PHB_ITEM pdestinationParent = Qt4xHb::Signals_return_object( (void *) &destinationParent, "QMODELINDEX" );
     PHB_ITEM pdestinationRow = hb_itemPutNI( NULL, destinationRow );
 
     hb_vmEvalBlockV( cb, 6, psender, psourceParent, psourceStart, psourceEnd, pdestinationParent, pdestinationRow );
@@ -388,12 +388,12 @@ void QAbstractItemModelSlots::rowsRemoved( const QModelIndex & parent, int start
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "rowsRemoved(QModelIndex,int,int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "rowsRemoved(QModelIndex,int,int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
-    PHB_ITEM pparent = Signals_return_object( (void *) &parent, "QMODELINDEX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTITEMMODEL" );
+    PHB_ITEM pparent = Qt4xHb::Signals_return_object( (void *) &parent, "QMODELINDEX" );
     PHB_ITEM pstart = hb_itemPutNI( NULL, start );
     PHB_ITEM pend = hb_itemPutNI( NULL, end );
 
@@ -421,7 +421,7 @@ void QAbstractItemModelSlots_connect_signal( const QString & signal, const QStri
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {
