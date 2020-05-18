@@ -24,11 +24,11 @@ void QNetworkSessionSlots::closed()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "closed()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "closed()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QNETWORKSESSION" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QNETWORKSESSION" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -40,11 +40,11 @@ void QNetworkSessionSlots::error( QNetworkSession::SessionError error )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "error(QNetworkSession::SessionError)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "error(QNetworkSession::SessionError)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QNETWORKSESSION" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QNETWORKSESSION" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
 
     hb_vmEvalBlockV( cb, 2, psender, perror );
@@ -58,11 +58,11 @@ void QNetworkSessionSlots::newConfigurationActivated()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "newConfigurationActivated()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "newConfigurationActivated()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QNETWORKSESSION" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QNETWORKSESSION" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -74,11 +74,11 @@ void QNetworkSessionSlots::opened()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "opened()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "opened()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QNETWORKSESSION" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QNETWORKSESSION" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -90,12 +90,12 @@ void QNetworkSessionSlots::preferredConfigurationChanged( const QNetworkConfigur
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "preferredConfigurationChanged(QNetworkConfiguration,bool)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "preferredConfigurationChanged(QNetworkConfiguration,bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QNETWORKSESSION" );
-    PHB_ITEM pconfig = Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QNETWORKSESSION" );
+    PHB_ITEM pconfig = Qt4xHb::Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION" );
     PHB_ITEM pisSeamless = hb_itemPutL( NULL, isSeamless );
 
     hb_vmEvalBlockV( cb, 3, psender, pconfig, pisSeamless );
@@ -110,11 +110,11 @@ void QNetworkSessionSlots::stateChanged( QNetworkSession::State state )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QNetworkSession::State)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "stateChanged(QNetworkSession::State)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QNETWORKSESSION" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QNETWORKSESSION" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
 
     hb_vmEvalBlockV( cb, 2, psender, pstate );
@@ -139,7 +139,7 @@ void QNetworkSessionSlots_connect_signal( const QString & signal, const QString 
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {
