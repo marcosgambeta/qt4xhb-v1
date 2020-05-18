@@ -24,12 +24,12 @@ void QHelpIndexWidgetSlots::linkActivated( const QUrl & link, const QString & ke
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "linkActivated(QUrl,QString)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "linkActivated(QUrl,QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHELPINDEXWIDGET" );
-    PHB_ITEM plink = Signals_return_object( (void *) &link, "QURL" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QHELPINDEXWIDGET" );
+    PHB_ITEM plink = Qt4xHb::Signals_return_object( (void *) &link, "QURL" );
     PHB_ITEM pkeyword = hb_itemPutC( NULL, QSTRINGTOSTRING(keyword) );
 
     hb_vmEvalBlockV( cb, 3, psender, plink, pkeyword );
@@ -55,7 +55,7 @@ void QHelpIndexWidgetSlots_connect_signal( const QString & signal, const QString
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {
