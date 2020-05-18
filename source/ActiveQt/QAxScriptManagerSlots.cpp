@@ -24,12 +24,12 @@ void QAxScriptManagerSlots::error( QAxScript * script, int code, const QString &
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "error(QAxScript*,int,QString,int,QString)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "error(QAxScript*,int,QString,int,QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAXSCRIPTMANAGER" );
-    PHB_ITEM pscript = Signals_return_qobject( (QObject *) script, "QAXSCRIPT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QAXSCRIPTMANAGER" );
+    PHB_ITEM pscript = Qt4xHb::Signals_return_qobject( (QObject *) script, "QAXSCRIPT" );
     PHB_ITEM pcode = hb_itemPutNI( NULL, code );
     PHB_ITEM pdescription = hb_itemPutC( NULL, QSTRINGTOSTRING(description) );
     PHB_ITEM psourcePosition = hb_itemPutNI( NULL, sourcePosition );
@@ -61,7 +61,7 @@ void QAxScriptManagerSlots_connect_signal( const QString & signal, const QString
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {
