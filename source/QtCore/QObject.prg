@@ -232,10 +232,6 @@ RETURN
 #include <QtCore/QEvent>
 #include <QtCore/QThread>
 
-bool Events_connect_event ( QObject * object, int type, PHB_ITEM codeblock );
-bool Events_disconnect_event ( QObject * object, int type );
-void Events_disconnect_all_events ( QObject * object, bool children );
-void Qt4xHb::Signals_disconnect_all_signals ( QObject * object, bool children );
 void _qtxhb_processOnEventMethod (QEvent::Type event);
 void _qtxhb_processOnEventMethod2 (QEvent::Type event);
 
@@ -261,7 +257,7 @@ HB_FUNC_STATIC( QOBJECT_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events( obj, true );
+    Qt4xHb::Events_disconnect_all_events( obj, true );
     Qt4xHb::Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
@@ -1052,12 +1048,12 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALL )
   {
     if( hb_pcount() == 0 )
     {
-      Events_disconnect_all_events (obj, false);
+      Qt4xHb::Events_disconnect_all_events (obj, false);
       Qt4xHb::Signals_disconnect_all_signals (obj, false);
     }
     else if( hb_pcount() == 1 && ISLOG(1) )
     {
-      Events_disconnect_all_events (obj, PBOOL(1) );
+      Qt4xHb::Events_disconnect_all_events (obj, PBOOL(1) );
       Qt4xHb::Signals_disconnect_all_signals (obj, PBOOL(1) );
     }
     else
@@ -1077,11 +1073,11 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALLEVENTS )
   {
     if( hb_pcount() == 0 )
     {
-      Events_disconnect_all_events (obj, false);
+      Qt4xHb::Events_disconnect_all_events (obj, false);
     }
     else if( hb_pcount() == 1 && ISLOG(1) )
     {
-      Events_disconnect_all_events (obj, PBOOL(1) );
+      Qt4xHb::Events_disconnect_all_events (obj, PBOOL(1) );
     }
     else
     {
@@ -1125,7 +1121,7 @@ void _qtxhb_processOnEventMethod (QEvent::Type event)
     if( item )
     {
       //hb_retl( Events_connect_event( obj, QEvent::Close, item ) );
-      hb_retl( Events_connect_event( obj, event, item ) );
+      hb_retl( Qt4xHb::Events_connect_event( obj, event, item ) );
     }
     else
     {
@@ -1135,7 +1131,7 @@ void _qtxhb_processOnEventMethod (QEvent::Type event)
   else if( hb_pcount() == 0 )
   {
     //hb_retl( Events_disconnect_event( obj, QEvent::Close ) );
-    hb_retl( Events_disconnect_event( obj, event ) );
+    hb_retl( Qt4xHb::Events_disconnect_event( obj, event ) );
   }
   else
   {
@@ -1153,7 +1149,7 @@ void _qtxhb_processOnEventMethod2 (QEvent::Type event)
     if( item )
     {
       //hb_retl( Events_connect_event( obj, QEvent::Close, item ) );
-      hb_retl( Events_connect_event( obj, event, item ) );
+      hb_retl( Qt4xHb::Events_connect_event( obj, event, item ) );
     }
     else
     {
@@ -1163,7 +1159,7 @@ void _qtxhb_processOnEventMethod2 (QEvent::Type event)
   else if( hb_pcount() == 1 )
   {
     //hb_retl( Events_disconnect_event( obj, QEvent::Close ) );
-    hb_retl( Events_disconnect_event( obj, event ) );
+    hb_retl( Qt4xHb::Events_disconnect_event( obj, event ) );
   }
   else
   {
