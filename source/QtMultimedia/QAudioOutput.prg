@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events( obj, true );
+    Qt4xHb::Events_disconnect_all_events( obj, true );
     Qt4xHb::Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
