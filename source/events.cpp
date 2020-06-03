@@ -215,11 +215,6 @@ bool Events::connectEvent( QObject * object, int type, PHB_ITEM codeblock )
   return result;
 }
 
-bool Events_connect_event( QObject * object, int type, PHB_ITEM codeblock )
-{
-  return s_events->connectEvent( object, type, codeblock );
-}
-
 /*
   Desconecta um determinado evento
   Parâmetro 1: objeto
@@ -252,11 +247,6 @@ bool Events::disconnectEvent( QObject * object, int type )
   }
 
   return result;
-}
-
-bool Events_disconnect_event( QObject * object, int type )
-{
-  return s_events->disconnectEvent( object, type );
 }
 
 /*
@@ -322,60 +312,6 @@ void Events::disconnectAllEvents( QObject * obj, bool children )
       }
     }
   }
-}
-
-void Events_disconnect_all_events( QObject * obj, bool children )
-{
-  s_events->disconnectAllEvents( obj, children );
-}
-
-/*
-  Retorna o tamanho da lista de eventos.
-  Atenção: está função não faz parte da API pública, podendo
-  ser removida ou sofrer modificações futuramente.
-*/
-
-int Events::size()
-{
-  return m_list1->size();
-}
-
-HB_FUNC( QTXHB_EVENTS_SIZE )
-{
-  hb_retni( s_events->size() );
-}
-
-/*
-  Retorna o número de eventos ativos na lista de eventos.
-  Atenção: está função não faz parte da API pública, podendo
-  ser removida ou sofrer modificações futuramente.
-*/
-
-int Events::active()
-{
-  int count = 0;
-
-  // percorre toda a lista de eventos
-  const int listsize = m_list1->size();
-  for( int i = 0; i < listsize; ++i )
-  {
-    if( m_list1->at(i) )
-    {
-      ++count;
-    }
-  }
-
-  return count;
-}
-
-HB_FUNC( QTXHB_EVENTS_ACTIVE )
-{
-  hb_retni( s_events->active() );
-}
-
-HB_FUNC( QTXHB_EVENTS_SIZE_ACTIVE ) // deprecated
-{
-  hb_retni( s_events->active() );
 }
 
 PHB_ITEM Events::returnQEvent( QEvent * ptr, const char * classname )
@@ -445,6 +381,88 @@ PHB_ITEM Events::returnQObject( QObject * ptr, const char * classname )
   }
 
   return pObject;
+}
+
+/*
+  Retorna o tamanho da lista de eventos.
+  Atenção: está função não faz parte da API pública, podendo
+  ser removida ou sofrer modificações futuramente.
+*/
+
+int Events::size()
+{
+  return m_list1->size();
+}
+
+/*
+  Retorna o número de eventos ativos na lista de eventos.
+  Atenção: está função não faz parte da API pública, podendo
+  ser removida ou sofrer modificações futuramente.
+*/
+
+int Events::active()
+{
+  int count = 0;
+
+  // percorre toda a lista de eventos
+  const int listsize = m_list1->size();
+  for( int i = 0; i < listsize; ++i )
+  {
+    if( m_list1->at(i) )
+    {
+      ++count;
+    }
+  }
+
+  return count;
+}
+
+namespace Qt4xHb
+{
+  bool Events_connect_event( QObject * object, int type, PHB_ITEM codeblock )
+  {
+    return s_events->connectEvent( object, type, codeblock );
+  }
+
+  bool Events_disconnect_event( QObject * object, int type )
+  {
+    return s_events->disconnectEvent( object, type );
+  }
+
+  void Events_disconnect_all_events( QObject * obj, bool children )
+  {
+    s_events->disconnectAllEvents( obj, children );
+  }
+}
+
+bool Events_connect_event( QObject * object, int type, PHB_ITEM codeblock )
+{
+  return s_events->connectEvent( object, type, codeblock );
+}
+
+bool Events_disconnect_event( QObject * object, int type )
+{
+  return s_events->disconnectEvent( object, type );
+}
+
+void Events_disconnect_all_events( QObject * obj, bool children )
+{
+  s_events->disconnectAllEvents( obj, children );
+}
+
+HB_FUNC( QTXHB_EVENTS_SIZE )
+{
+  hb_retni( s_events->size() );
+}
+
+HB_FUNC( QTXHB_EVENTS_ACTIVE )
+{
+  hb_retni( s_events->active() );
+}
+
+HB_FUNC( QTXHB_EVENTS_SIZE_ACTIVE ) // deprecated
+{
+  hb_retni( s_events->active() );
 }
 
 #include "hbvm.h"

@@ -26,6 +26,13 @@
 #include "hbapicls.h"
 #endif
 
+namespace Qt4xHb
+{
+  bool Events_connect_event( QObject * object, int type, PHB_ITEM codeblock );
+  bool Events_disconnect_event( QObject * object, int type );
+  void Events_disconnect_all_events( QObject * obj, bool children );
+}
+
 bool Events_connect_event( QObject * object, int type, PHB_ITEM codeblock );
 bool Events_disconnect_event( QObject * object, int type );
 void Events_disconnect_all_events( QObject * obj, bool children );
@@ -50,10 +57,10 @@ class Events: public QObject
   bool connectEvent( QObject * object, int type, PHB_ITEM codeblock );
   bool disconnectEvent( QObject * object, int type );
   void disconnectAllEvents( QObject * obj, bool children );
-  int size();
-  int active();
   PHB_ITEM returnQEvent( QEvent * ptr, const char * classname );
   PHB_ITEM returnQObject( QObject * ptr, const char * classname );
+  int size();
+  int active();
 };
 
 #endif
