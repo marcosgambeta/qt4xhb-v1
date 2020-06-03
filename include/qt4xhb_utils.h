@@ -62,6 +62,8 @@ namespace Qt4xHb
 
   PHB_ITEM returnQModelIndexObject( void * ptr );
   PHB_ITEM returnQVariantObject( void * ptr );
+  PHB_ITEM returnQWidgetObject( QWidget * ptr );
+  PHB_ITEM returnQObjectObject( QObject * ptr );
 }
 
 #endif /* QT4XHB_UTILS_H */
