@@ -10,6 +10,8 @@ $(QT4XHB_OBJ_DIR)/HAbstractTableModelMoc.cpp            : $(QT4XHB_SRC_DIR)/QtCo
 	$(MOC) $^ -o $@
 $(QT4XHB_OBJ_DIR)/HAbstractTableModelV2Moc.cpp          : $(QT4XHB_SRC_DIR)/QtCore/HAbstractTableModelV2.h
 	$(MOC) $^ -o $@
+$(QT4XHB_OBJ_DIR)/HEventFilterMoc.cpp                   : $(QT4XHB_SRC_DIR)/QtCore/HEventFilter.h
+	$(MOC) $^ -o $@
 $(QT4XHB_OBJ_DIR)/QAbstractAnimationSlotsMoc.cpp        : $(QT4XHB_SRC_DIR)/QtCore/QAbstractAnimationSlots.h
 	$(MOC) $^ -o $@
 $(QT4XHB_OBJ_DIR)/QAbstractEventDispatcherSlotsMoc.cpp  : $(QT4XHB_SRC_DIR)/QtCore/QAbstractEventDispatcherSlots.h

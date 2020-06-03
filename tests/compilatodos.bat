@@ -36,6 +36,7 @@ hbmk2 HAbstractTableModelV210 %1 %2 %3 ..\qt4xhb.hbc
 hbmk2 HAbstractTableModelV211 %1 %2 %3 ..\qt4xhb.hbc
 hbmk2 HAbstractTableModelV212 %1 %2 %3 ..\qt4xhb.hbc
 hbmk2 HAbstractTableModelV213 %1 %2 %3 ..\qt4xhb.hbc
+hbmk2 HEventFilter            %1 %2 %3 ..\qt4xhb.hbc
 hbmk2 mainwindow              %1 %2 %3 ..\qt4xhb.hbc
 hbmk2 QBoxLayout1             %1 %2 %3 ..\qt4xhb.hbc
 hbmk2 QBoxLayout2             %1 %2 %3 ..\qt4xhb.hbc
