@@ -180,28 +180,6 @@ void Signals::disconnectAllSignals( QObject * obj, bool children )
   }
 }
 
-int Signals::size()
-{
-  return m_list1->size();
-}
-
-int Signals::active()
-{
-  int count = 0;
-
-  // percorre toda a lista de sinais
-  const int listsize = m_list1->size();
-  for( int i = 0; i < listsize; ++i )
-  {
-    if( m_list1->at(i) )
-    {
-      ++count;
-    }
-  }
-
-  return count;
-}
-
 bool Signals::connectionDisconnection( QObject * receiver, QString signal, QString slot )
 {
   bool result = false;
@@ -254,6 +232,28 @@ bool Signals::connectionDisconnection( QObject * receiver, QString signal, QStri
   m_mutex->unlock();
 
   return result;
+}
+
+int Signals::size()
+{
+  return m_list1->size();
+}
+
+int Signals::active()
+{
+  int count = 0;
+
+  // percorre toda a lista de sinais
+  const int listsize = m_list1->size();
+  for( int i = 0; i < listsize; ++i )
+  {
+    if( m_list1->at(i) )
+    {
+      ++count;
+    }
+  }
+
+  return count;
 }
 
 namespace Qt4xHb
