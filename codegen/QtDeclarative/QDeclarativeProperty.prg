@@ -129,28 +129,21 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_CONNECTNOTIFYSIGNAL )
 }
 $addMethod=connectNotifySignal
 
-$prototype=bool hasNotifySignal () const
-$method=|bool|hasNotifySignal|
+$prototypeV2=bool hasNotifySignal() const
 
 $prototypeV2=int index() const
 
-$prototype=bool isDesignable () const
-$method=|bool|isDesignable|
+$prototypeV2=bool isDesignable() const
 
-$prototype=bool isProperty () const
-$method=|bool|isProperty|
+$prototypeV2=bool isProperty() const
 
-$prototype=bool isResettable () const
-$method=|bool|isResettable|
+$prototypeV2=bool isResettable() const
 
-$prototype=bool isSignalProperty () const
-$method=|bool|isSignalProperty|
+$prototypeV2=bool isSignalProperty() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=bool isWritable () const
-$method=|bool|isWritable|
+$prototypeV2=bool isWritable() const
 
 $prototype=QMetaMethod method () const
 $method=|QMetaMethod|method|
@@ -158,8 +151,7 @@ $method=|QMetaMethod|method|
 $prototype=QString name () const
 $method=|QString|name|
 
-$prototype=bool needsNotifySignal () const
-$method=|bool|needsNotifySignal|
+$prototypeV2=bool needsNotifySignal() const
 
 $prototype=QObject * object () const
 $method=|QObject *|object|
@@ -175,8 +167,7 @@ $method=|QDeclarativeProperty::PropertyTypeCategory|propertyTypeCategory|
 $prototype=const char * propertyTypeName () const
 $method=|const char *|propertyTypeName|
 
-$prototype=bool reset () const
-$method=|bool|reset|
+$prototypeV2=bool reset() const
 
 $prototype=Type type () const
 $method=|QDeclarativeProperty::Type|type|

@@ -43,8 +43,7 @@ $prototypeV2=int count() const
 $prototype=void insert ( const QString & key, const QVariant & value )
 $method=|void|insert|const QString &,const QVariant &
 
-$prototype=bool isEmpty () const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
 $prototype=QStringList keys () const
 $method=|QStringList|keys|

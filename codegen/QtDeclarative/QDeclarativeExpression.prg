@@ -78,13 +78,11 @@ $method=|QVariant|evaluate|bool *=0
 $prototype=QString expression () const
 $method=|QString|expression|
 
-$prototype=bool hasError () const
-$method=|bool|hasError|
+$prototypeV2=bool hasError() const
 
 $prototypeV2=int lineNumber() const
 
-$prototype=bool notifyOnValueChanged () const
-$method=|bool|notifyOnValueChanged|
+$prototypeV2=bool notifyOnValueChanged() const
 
 $prototype=QObject * scopeObject () const
 $method=|QObject *|scopeObject|

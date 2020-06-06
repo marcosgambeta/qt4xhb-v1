@@ -60,8 +60,7 @@ $prototypeV2=int column() const
 $prototype=QString description () const
 $method=|QString|description|
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototypeV2=int line() const
 

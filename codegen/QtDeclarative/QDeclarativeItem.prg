@@ -39,8 +39,7 @@ $method=|QDeclarativeItem *|childAt|qreal,qreal
 $prototype=QRectF childrenRect ()
 $method=|QRectF|childrenRect|
 
-$prototype=bool clip () const
-$method=|bool|clip|
+$prototypeV2=bool clip() const
 
 $prototype=void forceActiveFocus ()
 $method=|void|forceActiveFocus|
@@ -51,8 +50,7 @@ $method=|qreal|implicitHeight|
 $prototype=qreal implicitWidth () const
 $method=|qreal|implicitWidth|
 
-$prototype=bool keepMouseGrab () const
-$method=|bool|keepMouseGrab|
+$prototypeV2=bool keepMouseGrab() const
 
 $prototype=QScriptValue mapFromItem ( const QScriptValue & item, qreal x, qreal y ) const
 $method=|QScriptValue|mapFromItem|const QScriptValue &,qreal,qreal
@@ -81,8 +79,7 @@ $method=|void|setSmooth|bool
 $prototype=void setTransformOrigin ( TransformOrigin origin )
 $method=|void|setTransformOrigin|QDeclarativeItem::TransformOrigin
 
-$prototype=bool smooth () const
-$method=|bool|smooth|
+$prototypeV2=bool smooth() const
 
 $prototype=TransformOrigin transformOrigin () const
 $method=|QDeclarativeItem::TransformOrigin|transformOrigin|

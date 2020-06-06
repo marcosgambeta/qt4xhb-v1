@@ -69,8 +69,7 @@ $method=|QVariant|contextProperty|const QString &
 $prototype=QDeclarativeEngine * engine () const
 $method=|QDeclarativeEngine *|engine|
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=QDeclarativeContext * parentContext () const
 $method=|QDeclarativeContext *|parentContext|

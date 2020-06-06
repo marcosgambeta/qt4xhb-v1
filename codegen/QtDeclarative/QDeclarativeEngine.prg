@@ -69,8 +69,7 @@ $method=|QDeclarativeNetworkAccessManagerFactory *|networkAccessManagerFactory|
 $prototype=QString offlineStoragePath () const
 $method=|QString|offlineStoragePath|
 
-$prototype=bool outputWarningsToStandardError () const
-$method=|bool|outputWarningsToStandardError|
+$prototypeV2=bool outputWarningsToStandardError() const
 
 $prototype=QStringList pluginPathList () const
 $method=|QStringList|pluginPathList|

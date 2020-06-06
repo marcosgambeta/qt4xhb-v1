@@ -90,17 +90,13 @@ $method=|QDeclarativeContext *|creationContext|
 $prototype=QList<QDeclarativeError> errors () const
 $method=|QList<QDeclarativeError>|errors|
 
-$prototype=bool isError () const
-$method=|bool|isError|
+$prototypeV2=bool isError() const
 
-$prototype=bool isLoading () const
-$method=|bool|isLoading|
+$prototypeV2=bool isLoading() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=bool isReady () const
-$method=|bool|isReady|
+$prototypeV2=bool isReady() const
 
 $prototype=void loadUrl ( const QUrl & url )
 $method=|void|loadUrl|const QUrl &
