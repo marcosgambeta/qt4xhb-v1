@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_CHILD )
 }
 
 /*
-int childCount () const
+int childCount() const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDCOUNT )
 {
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_PARENT )
 }
 
 /*
-int row () const
+int row() const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_ROW )
 {

@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_DELETE )
 }
 
 /*
-int hitCount () const
+int hitCount() const
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_HITCOUNT )
 {
