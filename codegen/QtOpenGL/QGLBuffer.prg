@@ -115,8 +115,7 @@ $method=|bool|read|int,void *,int
 $prototype=void setUsagePattern ( QGLBuffer::UsagePattern value )
 $method=|void|setUsagePattern|QGLBuffer::UsagePattern
 
-$prototype=int size () const
-$method=|int|size|
+$prototypeV2=int size() const
 
 $prototype=QGLBuffer::Type type () const
 $method=|QGLBuffer::Type|type|

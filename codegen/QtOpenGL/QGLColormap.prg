@@ -98,8 +98,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_SETENTRY )
 }
 $addMethod=setEntry
 
-$prototype=int size () const
-$method=|int|size|
+$prototypeV2=int size() const
 
 $extraMethods
 

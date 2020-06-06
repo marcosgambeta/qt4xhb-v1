@@ -234,8 +234,7 @@ $method=|GLenum|geometryInputType|
 $prototype=GLenum geometryOutputType () const
 $method=|GLenum|geometryOutputType|
 
-$prototype=int geometryOutputVertexCount () const
-$method=|int|geometryOutputVertexCount|
+$prototypeV2=int geometryOutputVertexCount() const
 
 $prototype=bool isLinked () const
 $method=|bool|isLinked|
@@ -246,8 +245,7 @@ $virtualMethod=|bool|link|
 $prototype=QString log () const
 $method=|QString|log|
 
-$prototype=int maxGeometryOutputVertices () const
-$method=|int|maxGeometryOutputVertices|
+$prototypeV2=int maxGeometryOutputVertices() const
 
 $prototype=GLuint programId () const
 $method=|GLuint|programId|

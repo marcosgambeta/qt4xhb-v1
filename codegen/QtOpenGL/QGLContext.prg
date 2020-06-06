@@ -161,8 +161,7 @@ $staticMethod=|const QGLContext *|currentContext|
 $prototype=static void setTextureCacheLimit ( int size )
 $staticMethod=|void|setTextureCacheLimit|int
 
-$prototype=static int textureCacheLimit ()
-$staticMethod=|int|textureCacheLimit|
+$prototypeV2=static int textureCacheLimit()
 
 $extraMethods
 

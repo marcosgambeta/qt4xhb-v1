@@ -61,8 +61,7 @@ $method=|QGLFramebufferObject::Attachment|attachment|
 $prototype=GLenum internalTextureFormat () const
 $method=|GLenum|internalTextureFormat|
 
-$prototype=int samples () const
-$method=|int|samples|
+$prototypeV2=int samples() const
 
 $prototype=void setAttachment ( QGLFramebufferObject::Attachment attachment )
 $method=|void|setAttachment|QGLFramebufferObject::Attachment
