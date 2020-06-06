@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_DELETE )
 }
 
 /*
-int column () const
+int column() const
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_COLUMN )
 {
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_ISVALID )
 }
 
 /*
-int line () const
+int line() const
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_LINE )
 {
