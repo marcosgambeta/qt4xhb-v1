@@ -181,7 +181,7 @@ const uchar * bits () const
 */
 
 /*
-int bytesPerLine () const
+int bytesPerLine() const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_BYTESPERLINE )
 {
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_HANDLETYPE )
 }
 
 /*
-int height () const
+int height() const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_HEIGHT )
 {
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_MAPMODE )
 }
 
 /*
-int mappedBytes () const
+int mappedBytes() const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_MAPPEDBYTES )
 {
@@ -671,7 +671,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_UNMAP )
 }
 
 /*
-int width () const
+int width() const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_WIDTH )
 {

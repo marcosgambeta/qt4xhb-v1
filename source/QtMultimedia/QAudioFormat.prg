@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SETSAMPLERATE )
 }
 
 /*
-int sampleRate () const
+int sampleRate() const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLERATE )
 {
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SETSAMPLESIZE )
 }
 
 /*
-int sampleSize () const
+int sampleSize() const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLESIZE )
 {

@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_DELETE )
 }
 
 /*
-int frameHeight () const
+int frameHeight() const
 */
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_FRAMEHEIGHT )
 {
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_FRAMESIZE )
 }
 
 /*
-int frameWidth () const
+int frameWidth() const
 */
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_FRAMEWIDTH )
 {

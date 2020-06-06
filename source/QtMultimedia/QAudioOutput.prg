@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_DELETE )
 }
 
 /*
-int bufferSize () const
+int bufferSize() const
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_BUFFERSIZE )
 {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_BUFFERSIZE )
 }
 
 /*
-int bytesFree () const
+int bytesFree() const
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_BYTESFREE )
 {
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_FORMAT )
 }
 
 /*
-int notifyInterval () const
+int notifyInterval() const
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_NOTIFYINTERVAL )
 {
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_NOTIFYINTERVAL )
 }
 
 /*
-int periodSize () const
+int periodSize() const
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_PERIODSIZE )
 {
