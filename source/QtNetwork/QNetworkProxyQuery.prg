@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_DELETE )
 }
 
 /*
-int localPort () const
+int localPort() const
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_LOCALPORT )
 {
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_PEERHOSTNAME )
 }
 
 /*
-int peerPort () const
+int peerPort() const
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_PEERPORT )
 {

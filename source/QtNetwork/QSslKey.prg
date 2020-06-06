@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QSSLKEY_ISNULL )
 }
 
 /*
-int length () const
+int length() const
 */
 HB_FUNC_STATIC( QSSLKEY_LENGTH )
 {

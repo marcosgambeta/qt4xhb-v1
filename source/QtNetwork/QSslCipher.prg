@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QSSLCIPHER_PROTOCOLSTRING )
 }
 
 /*
-int supportedBits () const
+int supportedBits() const
 */
 HB_FUNC_STATIC( QSSLCIPHER_SUPPORTEDBITS )
 {
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QSSLCIPHER_SUPPORTEDBITS )
 }
 
 /*
-int usedBits () const
+int usedBits() const
 */
 HB_FUNC_STATIC( QSSLCIPHER_USEDBITS )
 {

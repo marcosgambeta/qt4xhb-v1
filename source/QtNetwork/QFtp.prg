@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QFTP_CLEARPENDINGCOMMANDS )
 }
 
 /*
-int close ()
+int close()
 */
 HB_FUNC_STATIC( QFTP_CLOSE )
 {
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QFTP_CURRENTDEVICE )
 }
 
 /*
-int currentId () const
+int currentId() const
 */
 HB_FUNC_STATIC( QFTP_CURRENTID )
 {

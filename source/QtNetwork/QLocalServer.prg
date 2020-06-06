@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QLOCALSERVER_LISTEN )
 }
 
 /*
-int maxPendingConnections () const
+int maxPendingConnections() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_MAXPENDINGCONNECTIONS )
 {

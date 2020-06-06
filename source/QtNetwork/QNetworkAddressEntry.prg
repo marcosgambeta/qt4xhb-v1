@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NETMASK )
 }
 
 /*
-int prefixLength () const
+int prefixLength() const
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_PREFIXLENGTH )
 {

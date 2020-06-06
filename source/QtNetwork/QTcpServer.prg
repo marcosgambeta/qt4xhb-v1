@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QTCPSERVER_LISTEN )
 }
 
 /*
-int maxPendingConnections () const
+int maxPendingConnections() const
 */
 HB_FUNC_STATIC( QTCPSERVER_MAXPENDINGCONNECTIONS )
 {
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QTCPSERVER_SETSOCKETDESCRIPTOR )
 }
 
 /*
-int socketDescriptor () const
+int socketDescriptor() const
 */
 HB_FUNC_STATIC( QTCPSERVER_SOCKETDESCRIPTOR )
 {

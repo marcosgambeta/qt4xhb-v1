@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QURLINFO_OWNER )
 }
 
 /*
-int permissions () const
+int permissions() const
 */
 HB_FUNC_STATIC( QURLINFO_PERMISSIONS )
 {

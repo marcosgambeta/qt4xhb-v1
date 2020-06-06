@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QHOSTINFO_HOSTNAME )
 }
 
 /*
-int lookupId () const
+int lookupId() const
 */
 HB_FUNC_STATIC( QHOSTINFO_LOOKUPID )
 {
