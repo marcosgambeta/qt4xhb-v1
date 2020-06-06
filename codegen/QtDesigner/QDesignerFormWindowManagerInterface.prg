@@ -98,8 +98,7 @@ $virtualMethod=|QDesignerFormWindowInterface *|createFormWindow|QWidget *=0,Qt::
 $prototype=virtual QDesignerFormWindowInterface * formWindow ( int index ) const
 $virtualMethod=|QDesignerFormWindowInterface *|formWindow|int
 
-$prototype=virtual int formWindowCount () const
-$virtualMethod=|int|formWindowCount|
+$prototypeV2=virtual int formWindowCount() const
 
 $prototype=virtual void addFormWindow ( QDesignerFormWindowInterface * formWindow )
 $virtualMethod=|void|addFormWindow|QDesignerFormWindowInterface *

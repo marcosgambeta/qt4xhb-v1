@@ -44,14 +44,12 @@ $method=|bool|isWidgetSelected|QWidget *
 $prototype=virtual bool movePosition ( MoveOperation operation, MoveMode mode = MoveAnchor ) = 0
 $virtualMethod=|bool|movePosition|QDesignerFormWindowCursorInterface::MoveOperation,QDesignerFormWindowCursorInterface::MoveMode=QDesignerFormWindowCursorInterface::MoveAnchor
 
-$prototype=virtual int position () const = 0
-$virtualMethod=|int|position|
+$prototypeV2=virtual int position() const = 0
 
 $prototype=virtual QWidget * selectedWidget ( int index ) const = 0
 $virtualMethod=|QWidget *|selectedWidget|int
 
-$prototype=virtual int selectedWidgetCount () const = 0
-$virtualMethod=|int|selectedWidgetCount|
+$prototypeV2=virtual int selectedWidgetCount() const = 0
 
 $prototype=virtual void setPosition ( int position, MoveMode mode = MoveAnchor ) = 0
 $virtualMethod=|void|setPosition|int,QDesignerFormWindowCursorInterface::MoveMode=QDesignerFormWindowCursorInterface::MoveAnchor
@@ -59,8 +57,7 @@ $virtualMethod=|void|setPosition|int,QDesignerFormWindowCursorInterface::MoveMod
 $prototype=virtual QWidget * widget ( int index ) const = 0
 $virtualMethod=|QWidget *|widget|int
 
-$prototype=virtual int widgetCount () const = 0
-$virtualMethod=|int|widgetCount|
+$prototypeV2=virtual int widgetCount() const = 0
 
 $extraMethods
 
