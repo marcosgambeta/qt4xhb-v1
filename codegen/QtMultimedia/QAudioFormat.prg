@@ -61,32 +61,27 @@ $method=|bool|isValid|
 $prototype=void setFrequency(int frequency)
 $method=|void|setFrequency|int
 
-$prototype=int frequency() const
-$method=|int|frequency|
+$prototypeV2=int frequency() const
 
 $prototype=void setSampleRate ( int samplerate )
 $method=|void|setSampleRate|int
 
-$prototype=int sampleRate () const
-$method=|int|sampleRate|
+$prototypeV2=int sampleRate() const
 
 $prototype=void setChannels(int channels)
 $method=|void|setChannels|int
 
-$prototype=int channels() const
-$method=|int|channels|
+$prototypeV2=int channels() const
 
 $prototype=void setChannelCount(int channelCount)
 $method=|void|setChannelCount|int
 
-$prototype=int channelCount() const
-$method=|int|channelCount|
+$prototypeV2=int channelCount() const
 
 $prototype=void setSampleSize ( int sampleSize )
 $method=|void|setSampleSize|int
 
-$prototype=int sampleSize () const
-$method=|int|sampleSize|
+$prototypeV2=int sampleSize() const
 
 $prototype=void setCodec ( const QString & codec )
 $method=|void|setCodec|const QString &

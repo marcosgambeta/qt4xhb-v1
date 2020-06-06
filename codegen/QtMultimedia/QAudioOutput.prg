@@ -57,11 +57,9 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=int bufferSize () const
-$method=|int|bufferSize|
+$prototypeV2=int bufferSize() const
 
-$prototype=int bytesFree () const
-$method=|int|bytesFree|
+$prototypeV2=int bytesFree() const
 
 $prototype=qint64 elapsedUSecs () const
 $method=|qint64|elapsedUSecs|
@@ -72,11 +70,9 @@ $method=|QAudio::Error|error|
 $prototype=QAudioFormat format () const
 $method=|QAudioFormat|format|
 
-$prototype=int notifyInterval () const
-$method=|int|notifyInterval|
+$prototypeV2=int notifyInterval() const
 
-$prototype=int periodSize () const
-$method=|int|periodSize|
+$prototypeV2=int periodSize() const
 
 $prototype=qint64 processedUSecs () const
 $method=|qint64|processedUSecs|

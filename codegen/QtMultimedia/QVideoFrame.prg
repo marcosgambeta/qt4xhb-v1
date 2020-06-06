@@ -106,8 +106,7 @@ $prototype=const uchar * bits () const
 %%   }
 %% }
 
-$prototype=int bytesPerLine () const
-$method=|int|bytesPerLine|
+$prototypeV2=int bytesPerLine() const
 
 $prototype=qint64 endTime () const
 $method=|qint64|endTime|
@@ -121,8 +120,7 @@ $method=|QVariant|handle|
 $prototype=QAbstractVideoBuffer::HandleType handleType () const
 $method=|QAbstractVideoBuffer::HandleType|handleType|
 
-$prototype=int height () const
-$method=|int|height|
+$prototypeV2=int height() const
 
 $prototype=bool isMapped () const
 $method=|bool|isMapped|
@@ -142,8 +140,7 @@ $method=|bool|map|QAbstractVideoBuffer::MapMode
 $prototype=QAbstractVideoBuffer::MapMode mapMode () const
 $method=|QAbstractVideoBuffer::MapMode|mapMode|
 
-$prototype=int mappedBytes () const
-$method=|int|mappedBytes|
+$prototypeV2=int mappedBytes() const
 
 $prototype=PixelFormat pixelFormat () const
 $method=|QVideoFrame::PixelFormat|pixelFormat|
@@ -166,8 +163,7 @@ $method=|qint64|startTime|
 $prototype=void unmap ()
 $method=|void|unmap|
 
-$prototype=int width () const
-$method=|int|width|
+$prototypeV2=int width() const
 
 $prototype=static QImage::Format imageFormatFromPixelFormat ( PixelFormat format )
 $staticMethod=|QImage::Format|imageFormatFromPixelFormat|QVideoFrame::PixelFormat

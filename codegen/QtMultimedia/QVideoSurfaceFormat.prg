@@ -65,8 +65,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=int frameHeight () const
-$method=|int|frameHeight|
+$prototypeV2=int frameHeight() const
 
 $prototype=qreal frameRate () const
 $method=|qreal|frameRate|
@@ -74,8 +73,7 @@ $method=|qreal|frameRate|
 $prototype=QSize frameSize () const
 $method=|QSize|frameSize|
 
-$prototype=int frameWidth () const
-$method=|int|frameWidth|
+$prototypeV2=int frameWidth() const
 
 $prototype=QAbstractVideoBuffer::HandleType handleType () const
 $method=|QAbstractVideoBuffer::HandleType|handleType|
