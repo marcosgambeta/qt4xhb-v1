@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_HOST )
 }
 
 /*
-int port () const
+int port() const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_PORT )
 {

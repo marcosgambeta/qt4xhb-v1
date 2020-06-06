@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_AT )
 }
 
 /*
-int count () const
+int count() const
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_COUNT )
 {

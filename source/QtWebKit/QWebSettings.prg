@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_ICONFORURL )
 }
 
 /*
-static int maximumPagesInCache ()
+static int maximumPagesInCache()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_MAXIMUMPAGESINCACHE )
 {

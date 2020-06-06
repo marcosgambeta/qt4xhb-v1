@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QWEBHISTORY_CLEAR )
 }
 
 /*
-int count () const
+int count() const
 */
 HB_FUNC_STATIC( QWEBHISTORY_COUNT )
 {
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QWEBHISTORY_CURRENTITEM )
 }
 
 /*
-int currentItemIndex () const
+int currentItemIndex() const
 */
 HB_FUNC_STATIC( QWEBHISTORY_CURRENTITEMINDEX )
 {
@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QWEBHISTORY_ITEMS )
 }
 
 /*
-int maximumItemCount () const
+int maximumItemCount() const
 */
 HB_FUNC_STATIC( QWEBHISTORY_MAXIMUMITEMCOUNT )
 {
