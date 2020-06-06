@@ -89,8 +89,7 @@ $method=|QChar::Category|category|
 $prototype=Decomposition decompositionTag () const
 $method=|QChar::Decomposition|decompositionTag|
 
-$prototype=int digitValue () const
-$method=|int|digitValue|
+$prototypeV2=int digitValue() const
 
 $prototype=Direction direction () const
 $method=|QChar::Direction|direction|

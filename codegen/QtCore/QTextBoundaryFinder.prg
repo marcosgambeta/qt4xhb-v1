@@ -87,17 +87,14 @@ $method=|void|toStart|
 $prototype=void toEnd()
 $method=|void|toEnd|
 
-$prototype=int position() const
-$method=|int|position|
+$prototypeV2=int position() const
 
 $prototype=void setPosition(int position)
 $method=|void|setPosition|int
 
-$prototype=int toNextBoundary()
-$method=|int|toNextBoundary|
+$prototypeV2=int toNextBoundary()
 
-$prototype=int toPreviousBoundary()
-$method=|int|toPreviousBoundary|
+$prototypeV2=int toPreviousBoundary()
 
 $prototype=bool isAtBoundary() const
 $method=|bool|isAtBoundary|

@@ -58,8 +58,7 @@ $deleteMethod
 $prototype=QModelIndex child ( int row, int column ) const
 $method=|QModelIndex|child|int,int
 
-$prototype=int column () const
-$method=|int|column|
+$prototypeV2=int column() const
 
 $prototype=QVariant data ( int role = Qt::DisplayRole ) const
 $method=|QVariant|data|int=Qt::DisplayRole
@@ -82,8 +81,7 @@ $method=|const QAbstractItemModel *|model|
 $prototype=QModelIndex parent () const
 $method=|QModelIndex|parent|
 
-$prototype=int row () const
-$method=|int|row|
+$prototypeV2=int row() const
 
 $prototype=QModelIndex sibling ( int row, int column ) const
 $method=|QModelIndex|sibling|int,int

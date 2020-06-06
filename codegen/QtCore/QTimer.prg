@@ -32,8 +32,7 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=int interval () const
-$method=|int|interval|
+$prototypeV2=int interval() const
 
 $prototype=bool isActive () const
 $method=|bool|isActive|
@@ -47,8 +46,7 @@ $method=|void|setInterval|int
 $prototype=void setSingleShot ( bool singleShot )
 $method=|void|setSingleShot|bool
 
-$prototype=int timerId () const
-$method=|int|timerId|
+$prototypeV2=int timerId() const
 
 $prototype=void start ( int msec )
 $internalMethod=|void|start,start1|int

@@ -55,17 +55,14 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=int bottom () const
-$method=|int|bottom|
+$prototypeV2=int bottom() const
 
 $prototype=bool isNull () const
 $method=|bool|isNull|
 
-$prototype=int left () const
-$method=|int|left|
+$prototypeV2=int left() const
 
-$prototype=int right () const
-$method=|int|right|
+$prototypeV2=int right() const
 
 $prototype=void setBottom ( int bottom )
 $method=|void|setBottom|int
@@ -79,8 +76,7 @@ $method=|void|setRight|int
 $prototype=void setTop ( int Top )
 $method=|void|setTop|int
 
-$prototype=int top () const
-$method=|int|top|
+$prototypeV2=int top() const
 
 $extraMethods
 

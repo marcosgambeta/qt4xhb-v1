@@ -43,8 +43,7 @@ $method=|QAbstractAnimation *|currentAnimation|
 $prototype=QPauseAnimation * insertPause ( int index, int msecs )
 $method=|QPauseAnimation *|insertPause|int,int
 
-$prototype=virtual int duration () const
-$virtualMethod=|int|duration|
+$prototypeV2=virtual int duration() const
 
 $beginSignals
 $signal=|currentAnimationChanged(QAbstractAnimation*)

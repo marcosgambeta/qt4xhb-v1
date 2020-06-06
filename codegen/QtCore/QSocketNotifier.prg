@@ -32,8 +32,7 @@ $constructor=|new|int,QSocketNotifier::Type,QObject *=0
 
 $deleteMethod
 
-$prototype=int socket() const
-$method=|int|socket|
+$prototypeV2=int socket() const
 
 $prototype=Type type() const
 $method=|QSocketNotifier::Type|type|

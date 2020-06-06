@@ -68,8 +68,7 @@ $deleteMethod
 $prototype=QString cap ( int nth = 0 ) const
 $method=|QString|cap|int=0
 
-$prototype=int captureCount () const
-$method=|int|captureCount|
+$prototypeV2=int captureCount() const
 
 $prototype=QStringList capturedTexts () const
 $method=|QStringList|capturedTexts|
@@ -98,8 +97,7 @@ $method=|bool|isValid|
 $prototype=int lastIndexIn ( const QString & str, int offset = -1, CaretMode caretMode = CaretAtZero ) const
 $method=|int|lastIndexIn|const QString &,int=-1,QRegExp::CaretMode=QRegExp::CaretAtZero
 
-$prototype=int matchedLength () const
-$method=|int|matchedLength|
+$prototypeV2=int matchedLength() const
 
 $prototype=QString pattern () const
 $method=|QString|pattern|

@@ -44,8 +44,7 @@ $method=|QStringList|environment|
 $prototype=QProcess::ProcessError error () const
 $method=|QProcess::ProcessError|error|
 
-$prototype=int exitCode () const
-$method=|int|exitCode|
+$prototypeV2=int exitCode() const
 
 $prototype=QProcess::ExitStatus exitStatus () const
 $method=|QProcess::ExitStatus|exitStatus|

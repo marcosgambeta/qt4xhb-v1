@@ -76,11 +76,9 @@ $method=|void|setFilterMode|bool
 $prototype=void setProgressRange(int minimum, int maximum)
 $method=|void|setProgressRange|int,int
 
-$prototype=int progressMinimum() const
-$method=|int|progressMinimum|
+$prototypeV2=int progressMinimum() const
 
-$prototype=int progressMaximum() const
-$method=|int|progressMaximum|
+$prototypeV2=int progressMaximum() const
 
 $prototype=bool isProgressUpdateNeeded() const
 $method=|bool|isProgressUpdateNeeded|
@@ -88,8 +86,7 @@ $method=|bool|isProgressUpdateNeeded|
 $prototype=void setProgressValue(int progressValue)
 $method=|void|setProgressValue|int
 
-$prototype=int progressValue() const
-$method=|int|progressValue|
+$prototypeV2=int progressValue() const
 
 $prototype=void setProgressValueAndText(int progressValue, const QString &progressText)
 $method=|void|setProgressValueAndText|int,const QString &
@@ -100,11 +97,9 @@ $method=|QString|progressText|
 $prototype=void setExpectedResultCount(int resultCount)
 $method=|void|setExpectedResultCount|int
 
-$prototype=int expectedResultCount()
-$method=|int|expectedResultCount|
+$prototypeV2=int expectedResultCount()
 
-$prototype=int resultCount() const
-$method=|int|resultCount|
+$prototypeV2=int resultCount() const
 
 $prototype=bool queryState(State state) const
 $method=|bool|queryState|QFutureInterfaceBase::State

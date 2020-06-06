@@ -449,8 +449,7 @@ $method=|QVariant::Type|type|
 $prototype=const char * typeName () const
 $method=|const char *|typeName|
 
-$prototype=int userType () const
-$method=|int|userType|
+$prototypeV2=int userType() const
 
 $prototype=static Type nameToType ( const char * name )
 $staticMethod=|QVariant::Type|nameToType|const char *

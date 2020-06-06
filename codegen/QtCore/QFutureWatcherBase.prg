@@ -29,14 +29,11 @@ $includes
 
 $deleteMethod
 
-$prototype=int progressValue() const
-$method=|int|progressValue|
+$prototypeV2=int progressValue() const
 
-$prototype=int progressMinimum() const
-$method=|int|progressMinimum|
+$prototypeV2=int progressMinimum() const
 
-$prototype=int progressMaximum() const
-$method=|int|progressMaximum|
+$prototypeV2=int progressMaximum() const
 
 $prototype=QString progressText() const
 $method=|QString|progressText|

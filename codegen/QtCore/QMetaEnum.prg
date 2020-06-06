@@ -36,8 +36,7 @@ $method=|const char *|name|
 $prototype=bool isFlag() const
 $method=|bool|isFlag|
 
-$prototype=int keyCount() const
-$method=|int|keyCount|
+$prototypeV2=int keyCount() const
 
 $prototype=const char *key(int index) const
 $method=|const char *|key|int

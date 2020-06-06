@@ -75,8 +75,7 @@ $deleteMethod
 $prototype=bool autoFormatting() const
 $method=|bool|autoFormatting|
 
-$prototype=int autoFormattingIndent() const
-$method=|int|autoFormattingIndent|
+$prototypeV2=int autoFormattingIndent() const
 
 $prototype=QTextCodec * codec() const
 $method=|QTextCodec *|codec|

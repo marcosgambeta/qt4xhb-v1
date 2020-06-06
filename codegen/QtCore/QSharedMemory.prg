@@ -70,8 +70,7 @@ $method=|QString|nativeKey|
 $prototype=bool create(int size, AccessMode mode = ReadWrite)
 $method=|bool|create|int,QSharedMemory::AccessMode=QSharedMemory::ReadWrite
 
-$prototype=int size() const
-$method=|int|size|
+$prototypeV2=int size() const
 
 $prototype=bool attach(AccessMode mode = ReadWrite)
 $method=|bool|attach|QSharedMemory::AccessMode=QSharedMemory::ReadWrite

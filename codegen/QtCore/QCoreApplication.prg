@@ -76,8 +76,7 @@ $staticMethod=|QStringList|arguments|
 $prototype=static bool closingDown ()
 $staticMethod=|bool|closingDown|
 
-$prototype=static int exec ()
-$staticMethod=|int|exec|
+$prototypeV2=static int exec()
 
 $prototype=static void exit ( int returnCode = 0 )
 $staticMethod=|void|exit|int=0

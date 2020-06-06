@@ -61,8 +61,7 @@ $method=|QSize|boundedTo|const QSize &
 $prototype=QSize expandedTo ( const QSize & otherSize ) const
 $method=|QSize|expandedTo|const QSize &
 
-$prototype=int height () const
-$method=|int|height|
+$prototypeV2=int height() const
 
 $prototype=bool isEmpty () const
 $method=|bool|isEmpty|
@@ -110,8 +109,7 @@ $method=|void|setWidth|int
 $prototype=void transpose ()
 $method=|void|transpose|
 
-$prototype=int width () const
-$method=|int|width|
+$prototypeV2=int width() const
 
 $extraMethods
 

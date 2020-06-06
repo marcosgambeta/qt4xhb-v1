@@ -199,8 +199,7 @@ $method=|QChar|padChar|
 $prototype=void setFieldWidth(int width)
 $method=|void|setFieldWidth|int
 
-$prototype=int fieldWidth() const
-$method=|int|fieldWidth|
+$prototypeV2=int fieldWidth() const
 
 $prototype=void setNumberFlags(NumberFlags flags)
 $method=|void|setNumberFlags|QTextStream::NumberFlags
@@ -211,8 +210,7 @@ $method=|QTextStream::NumberFlags|numberFlags|
 $prototype=void setIntegerBase(int base)
 $method=|void|setIntegerBase|int
 
-$prototype=int integerBase() const
-$method=|int|integerBase|
+$prototypeV2=int integerBase() const
 
 $prototype=void setRealNumberNotation(RealNumberNotation notation)
 $method=|void|setRealNumberNotation|QTextStream::RealNumberNotation
@@ -223,8 +221,7 @@ $method=|QTextStream::RealNumberNotation|realNumberNotation|
 $prototype=void setRealNumberPrecision(int precision)
 $method=|void|setRealNumberPrecision|int
 
-$prototype=int realNumberPrecision() const
-$method=|int|realNumberPrecision|
+$prototypeV2=int realNumberPrecision() const
 
 $extraMethods
 

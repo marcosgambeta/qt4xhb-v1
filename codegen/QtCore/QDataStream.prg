@@ -110,8 +110,7 @@ $method=|int|skipRawData|int
 $prototype=Status status () const
 $method=|QDataStream::Status|status|
 
-$prototype=int version () const
-$method=|int|version|
+$prototypeV2=int version() const
 
 $prototype=int writeRawData ( const char * s, int len )
 $method=|int|writeRawData|const char *,int

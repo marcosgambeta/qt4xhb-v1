@@ -31,26 +31,21 @@ $includes
 
 $deleteMethod
 
-$prototype=int currentLoop () const
-$method=|int|currentLoop|
+$prototypeV2=int currentLoop() const
 
-$prototype=int currentLoopTime () const
-$method=|int|currentLoopTime|
+$prototypeV2=int currentLoopTime() const
 
-$prototype=int currentTime () const
-$method=|int|currentTime|
+$prototypeV2=int currentTime() const
 
 $prototype=Direction direction () const
 $method=|QAbstractAnimation::Direction|direction|
 
-$prototype=virtual int duration () const = 0
-$virtualMethod=|int|duration|
+$prototypeV2=virtual int duration() const = 0
 
 $prototype=QAnimationGroup * group () const
 $method=|QAnimationGroup *|group|
 
-$prototype=int loopCount () const
-$method=|int|loopCount|
+$prototypeV2=int loopCount() const
 
 $prototype=void  setDirection ( Direction direction )
 $method=|void|setDirection|QAbstractAnimation::Direction
@@ -61,8 +56,7 @@ $method=|void|setLoopCount|int
 $prototype=State state () const
 $method=|QAbstractAnimation::State|state|
 
-$prototype=int totalDuration () const
-$method=|int|totalDuration|
+$prototypeV2=int totalDuration() const
 
 $prototype=void pause ()
 $method=|void|pause|

@@ -61,29 +61,23 @@ $method=|QTime|addMSecs|int
 $prototype=QTime addSecs(int s) const
 $method=|QTime|addSecs|int
 
-$prototype=int elapsed() const
-$method=|int|elapsed|
+$prototypeV2=int elapsed() const
 
-$prototype=int hour() const
-$method=|int|hour|
+$prototypeV2=int hour() const
 
 $prototype=bool isNull() const
 $method=|bool|isNull|
 
-$prototype=int minute() const
-$method=|int|minute|
+$prototypeV2=int minute() const
 
-$prototype=int msec() const
-$method=|int|msec|
+$prototypeV2=int msec() const
 
 $prototype=int msecsTo(const QTime & t) const
 $method=|int|msecsTo|const QTime &
 
-$prototype=int restart()
-$method=|int|restart|
+$prototypeV2=int restart()
 
-$prototype=int second() const
-$method=|int|second|
+$prototypeV2=int second() const
 
 $prototype=int secsTo(const QTime & t) const
 $method=|int|secsTo|const QTime &

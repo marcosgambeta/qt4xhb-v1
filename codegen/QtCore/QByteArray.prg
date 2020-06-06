@@ -133,8 +133,7 @@ $addMethod=append
 $prototype=char at ( int i ) const
 $method=|char|at|int
 
-$prototype=int capacity () const
-$method=|int|capacity|
+$prototypeV2=int capacity() const
 
 $prototype=void chop ( int n )
 $method=|void|chop|int
@@ -423,8 +422,7 @@ $method=|QByteArray|left|int
 $prototype=QByteArray leftJustified ( int width, char fill = ' ', bool truncate = false ) const
 $method=|QByteArray|leftJustified|int,char=' ',bool=false
 
-$prototype=int length () const
-$method=|int|length|
+$prototypeV2=int length() const
 
 $prototype=QByteArray mid ( int pos, int len = -1 ) const
 $method=|QByteArray|mid|int,int=-1
@@ -771,8 +769,7 @@ $method=|QByteArray &|setRawData|const char *,uint
 $prototype=QByteArray simplified () const
 $method=|QByteArray|simplified|
 
-$prototype=int size () const
-$method=|int|size|
+$prototypeV2=int size() const
 
 $prototype=QList<QByteArray> split ( char sep ) const
 $method=|QList<QByteArray>|split|char

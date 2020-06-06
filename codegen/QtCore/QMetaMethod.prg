@@ -51,14 +51,11 @@ $method=|QMetaMethod::Access|access|
 $prototype=MethodType methodType() const
 $method=|QMetaMethod::MethodType|methodType|
 
-$prototype=int attributes() const
-$method=|int|attributes|
+$prototypeV2=int attributes() const
 
-$prototype=int methodIndex() const
-$method=|int|methodIndex|
+$prototypeV2=int methodIndex() const
 
-$prototype=int revision() const
-$method=|int|revision|
+$prototypeV2=int revision() const
 
 $prototype=const QMetaObject *enclosingMetaObject() const
 $method=|const QMetaObject *|enclosingMetaObject|

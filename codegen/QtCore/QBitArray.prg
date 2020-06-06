@@ -163,8 +163,7 @@ HB_FUNC_STATIC( QBITARRAY_SETBIT )
 }
 $addMethod=setBit
 
-$prototype=int size () const
-$method=|int|size|
+$prototypeV2=int size() const
 
 $prototype=bool testBit ( int i ) const
 $method=|bool|testBit|int

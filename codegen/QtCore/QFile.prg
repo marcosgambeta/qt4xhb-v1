@@ -72,8 +72,7 @@ $method=|QString|fileName|
 $prototype=bool flush ()
 $method=|bool|flush|
 
-$prototype=int handle () const
-$method=|int|handle|
+$prototypeV2=int handle() const
 
 $prototype=void setFileName ( const QString & name )
 $method=|void|setFileName|const QString &

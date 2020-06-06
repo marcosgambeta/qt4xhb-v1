@@ -126,8 +126,7 @@ $virtualMethod=|QDateTime|fileTime|QAbstractFileEngine::FileTime
 $prototype=virtual bool flush ()
 $virtualMethod=|bool|flush|
 
-$prototype=virtual int handle () const
-$virtualMethod=|int|handle|
+$prototypeV2=virtual int handle() const
 
 $prototype=virtual bool isRelativePath () const
 $virtualMethod=|bool|isRelativePath|

@@ -30,14 +30,11 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=int activeThreadCount () const
-$method=|int|activeThreadCount|
+$prototypeV2=int activeThreadCount() const
 
-$prototype=int expiryTimeout () const
-$method=|int|expiryTimeout|
+$prototypeV2=int expiryTimeout() const
 
-$prototype=int maxThreadCount () const
-$method=|int|maxThreadCount|
+$prototypeV2=int maxThreadCount() const
 
 $prototype=void releaseThread ()
 $method=|void|releaseThread|

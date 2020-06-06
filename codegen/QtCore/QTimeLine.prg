@@ -32,11 +32,9 @@ $constructor=|new|int=1000,QObject *=0
 
 $deleteMethod
 
-$prototype=int currentFrame () const
-$method=|int|currentFrame|
+$prototypeV2=int currentFrame() const
 
-$prototype=int currentTime () const
-$method=|int|currentTime|
+$prototypeV2=int currentTime() const
 
 $prototype=qreal currentValue () const
 $method=|qreal|currentValue|
@@ -47,17 +45,14 @@ $method=|QTimeLine::CurveShape|curveShape|
 $prototype=Direction direction () const
 $method=|QTimeLine::Direction|direction|
 
-$prototype=int duration () const
-$method=|int|duration|
+$prototypeV2=int duration() const
 
-$prototype=int endFrame () const
-$method=|int|endFrame|
+$prototypeV2=int endFrame() const
 
 $prototype=int frameForTime ( int msec ) const
 $method=|int|frameForTime|int
 
-$prototype=int loopCount () const
-$method=|int|loopCount|
+$prototypeV2=int loopCount() const
 
 $prototype=void setCurveShape ( CurveShape shape )
 $method=|void|setCurveShape|QTimeLine::CurveShape
@@ -86,14 +81,12 @@ $method=|void|setStartFrame|int
 $prototype=void setUpdateInterval ( int interval )
 $method=|void|setUpdateInterval|int
 
-$prototype=int startFrame () const
-$method=|int|startFrame|
+$prototypeV2=int startFrame() const
 
 $prototype=State state () const
 $method=|QTimeLine::State|state|
 
-$prototype=int updateInterval () const
-$method=|int|updateInterval|
+$prototypeV2=int updateInterval() const
 
 $prototype=virtual qreal valueForTime ( int msec ) const
 $virtualMethod=|qreal|valueForTime|int

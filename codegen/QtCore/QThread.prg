@@ -68,8 +68,7 @@ $method=|void|terminate|
 $prototype=static QThread * currentThread()
 $staticMethod=|QThread *|currentThread|
 
-$prototype=static int idealThreadCount()
-$staticMethod=|int|idealThreadCount|
+$prototypeV2=static int idealThreadCount()
 
 $prototype=void yieldCurrentThread()
 $method=|void|yieldCurrentThread|

@@ -30,7 +30,6 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=virtual int duration () const
-$virtualMethod=|int|duration|
+$prototypeV2=virtual int duration() const
 
 #pragma ENDDUMP

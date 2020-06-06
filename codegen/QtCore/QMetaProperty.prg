@@ -39,11 +39,9 @@ $method=|const char *|typeName|
 $prototype=QVariant::Type type() const
 $method=|QVariant::Type|type|
 
-$prototype=int userType() const
-$method=|int|userType|
+$prototypeV2=int userType() const
 
-$prototype=int propertyIndex() const
-$method=|int|propertyIndex|
+$prototypeV2=int propertyIndex() const
 
 $prototype=bool isReadable() const
 $method=|bool|isReadable|
@@ -90,11 +88,9 @@ $method=|bool|hasNotifySignal|
 $prototype=QMetaMethod notifySignal() const
 $method=|QMetaMethod|notifySignal|
 
-$prototype=int notifySignalIndex() const
-$method=|int|notifySignalIndex|
+$prototypeV2=int notifySignalIndex() const
 
-$prototype=int revision() const
-$method=|int|revision|
+$prototypeV2=int revision() const
 
 $prototype=QVariant read(const QObject *obj) const
 $method=|QVariant|read|const QObject *
