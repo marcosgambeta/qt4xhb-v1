@@ -51,8 +51,7 @@ $virtualMethod=|bool|hasStockEvents|const QString &
 $prototype=virtual QUuid interfaceID ( const QString & key ) const
 $virtualMethod=|QUuid|interfaceID|const QString &
 
-$prototype=virtual bool isService () const
-$virtualMethod=|bool|isService|
+$prototypeV2=virtual bool isService() const
 
 $prototype=virtual const QMetaObject * metaObject ( const QString & key ) const = 0
 $virtualMethod=|const QMetaObject *|metaObject|const QString &
@@ -72,8 +71,7 @@ $virtualMethod=|void|unregisterClass|const QString &,QSettings *
 $prototype=virtual bool validateLicenseKey ( const QString & key, const QString & licenseKey ) const
 $virtualMethod=|bool|validateLicenseKey|const QString &,const QString &
 
-$prototype=static bool isServer ()
-$staticMethod=|bool|isServer|
+$prototypeV2=static bool isServer()
 
 $prototype=static bool registerActiveObject ( QObject * object )
 $staticMethod=|bool|registerActiveObject|QObject *
@@ -87,7 +85,6 @@ $staticMethod=|QString|serverFilePath|
 $prototype=static bool startServer ( ServerType type = MultipleInstances )
 $staticMethod=|bool|startServer|QAxFactory::ServerType=QAxFactory::MultipleInstances
 
-$prototype=static bool stopServer ()
-$staticMethod=|bool|stopServer|
+$prototypeV2=static bool stopServer()
 
 #pragma ENDDUMP

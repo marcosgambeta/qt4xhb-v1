@@ -83,8 +83,7 @@ $addMethod=dynamicCall
 $prototype=QString generateDocumentation ()
 $method=|QString|generateDocumentation|
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=virtual bool propertyWritable ( const char * prop ) const
 $virtualMethod=|bool|propertyWritable|const char *
