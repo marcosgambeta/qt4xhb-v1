@@ -85,8 +85,7 @@ $method=|QSize|defaultSize|
 $prototype=bool elementExists ( const QString & id ) const
 $method=|bool|elementExists|const QString &
 
-$prototype=int framesPerSecond () const
-$method=|int|framesPerSecond|
+$prototypeV2=int framesPerSecond() const
 
 $prototype=bool isValid () const
 $method=|bool|isValid|

@@ -39,8 +39,7 @@ $method=|QString|fileName|
 $prototype=QIODevice * outputDevice () const
 $method=|QIODevice *|outputDevice|
 
-$prototype=int resolution () const
-$method=|int|resolution|
+$prototypeV2=int resolution() const
 
 $prototype=void setDescription ( const QString & description )
 $method=|void|setDescription|const QString &
