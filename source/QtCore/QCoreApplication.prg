@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_CLOSINGDOWN )
 }
 
 /*
-static int exec ()
+static int exec()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_EXEC )
 {

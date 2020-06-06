@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QPAUSEANIMATION_SETDURATION )
 }
 
 /*
-virtual int duration () const
+virtual int duration() const
 */
 HB_FUNC_STATIC( QPAUSEANIMATION_DURATION )
 {

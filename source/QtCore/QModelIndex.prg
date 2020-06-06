@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QMODELINDEX_CHILD )
 }
 
 /*
-int column () const
+int column() const
 */
 HB_FUNC_STATIC( QMODELINDEX_COLUMN )
 {
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QMODELINDEX_PARENT )
 }
 
 /*
-int row () const
+int row() const
 */
 HB_FUNC_STATIC( QMODELINDEX_ROW )
 {

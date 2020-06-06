@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_FLUSH )
 }
 
 /*
-virtual int handle () const
+virtual int handle() const
 */
 HB_FUNC_STATIC( QFSFILEENGINE_HANDLE )
 {

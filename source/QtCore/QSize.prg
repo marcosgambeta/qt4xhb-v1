@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QSIZE_EXPANDEDTO )
 }
 
 /*
-int height () const
+int height() const
 */
 HB_FUNC_STATIC( QSIZE_HEIGHT )
 {
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QSIZE_TRANSPOSE )
 }
 
 /*
-int width () const
+int width() const
 */
 HB_FUNC_STATIC( QSIZE_WIDTH )
 {

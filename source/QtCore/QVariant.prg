@@ -1423,7 +1423,7 @@ HB_FUNC_STATIC( QVARIANT_TYPENAME )
 }
 
 /*
-int userType () const
+int userType() const
 */
 HB_FUNC_STATIC( QVARIANT_USERTYPE )
 {

@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QCHAR_DECOMPOSITIONTAG )
 }
 
 /*
-int digitValue () const
+int digitValue() const
 */
 HB_FUNC_STATIC( QCHAR_DIGITVALUE )
 {

@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QTIMER_DELETE )
 }
 
 /*
-int interval () const
+int interval() const
 */
 HB_FUNC_STATIC( QTIMER_INTERVAL )
 {
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QTIMER_SETSINGLESHOT )
 }
 
 /*
-int timerId () const
+int timerId() const
 */
 HB_FUNC_STATIC( QTIMER_TIMERID )
 {

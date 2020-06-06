@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QMARGINS_DELETE )
 }
 
 /*
-int bottom () const
+int bottom() const
 */
 HB_FUNC_STATIC( QMARGINS_BOTTOM )
 {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QMARGINS_ISNULL )
 }
 
 /*
-int left () const
+int left() const
 */
 HB_FUNC_STATIC( QMARGINS_LEFT )
 {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QMARGINS_LEFT )
 }
 
 /*
-int right () const
+int right() const
 */
 HB_FUNC_STATIC( QMARGINS_RIGHT )
 {
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QMARGINS_SETTOP )
 }
 
 /*
-int top () const
+int top() const
 */
 HB_FUNC_STATIC( QMARGINS_TOP )
 {

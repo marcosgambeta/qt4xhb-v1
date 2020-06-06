@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QFILE_FLUSH )
 }
 
 /*
-int handle () const
+int handle() const
 */
 HB_FUNC_STATIC( QFILE_HANDLE )
 {

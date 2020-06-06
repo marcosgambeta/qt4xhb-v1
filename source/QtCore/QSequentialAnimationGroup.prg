@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_INSERTPAUSE )
 }
 
 /*
-virtual int duration () const
+virtual int duration() const
 */
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_DURATION )
 {

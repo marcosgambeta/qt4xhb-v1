@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_ANIMATIONAT )
 }
 
 /*
-int animationCount () const
+int animationCount() const
 */
 HB_FUNC_STATIC( QANIMATIONGROUP_ANIMATIONCOUNT )
 {

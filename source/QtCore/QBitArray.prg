@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QBITARRAY_SETBIT )
 }
 
 /*
-int size () const
+int size() const
 */
 HB_FUNC_STATIC( QBITARRAY_SIZE )
 {

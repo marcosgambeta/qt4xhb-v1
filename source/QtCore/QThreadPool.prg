@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QTHREADPOOL_DELETE )
 }
 
 /*
-int activeThreadCount () const
+int activeThreadCount() const
 */
 HB_FUNC_STATIC( QTHREADPOOL_ACTIVETHREADCOUNT )
 {
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QTHREADPOOL_ACTIVETHREADCOUNT )
 }
 
 /*
-int expiryTimeout () const
+int expiryTimeout() const
 */
 HB_FUNC_STATIC( QTHREADPOOL_EXPIRYTIMEOUT )
 {
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QTHREADPOOL_EXPIRYTIMEOUT )
 }
 
 /*
-int maxThreadCount () const
+int maxThreadCount() const
 */
 HB_FUNC_STATIC( QTHREADPOOL_MAXTHREADCOUNT )
 {

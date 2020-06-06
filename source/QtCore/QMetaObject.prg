@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CLASSINFO )
 }
 
 /*
-int classInfoCount () const
+int classInfoCount() const
 */
 HB_FUNC_STATIC( QMETAOBJECT_CLASSINFOCOUNT )
 {
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CLASSINFOCOUNT )
 }
 
 /*
-int classInfoOffset () const
+int classInfoOffset() const
 */
 HB_FUNC_STATIC( QMETAOBJECT_CLASSINFOOFFSET )
 {
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CONSTRUCTOR )
 }
 
 /*
-int constructorCount () const
+int constructorCount() const
 */
 HB_FUNC_STATIC( QMETAOBJECT_CONSTRUCTORCOUNT )
 {
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QMETAOBJECT_ENUMERATOR )
 }
 
 /*
-int enumeratorCount () const
+int enumeratorCount() const
 */
 HB_FUNC_STATIC( QMETAOBJECT_ENUMERATORCOUNT )
 {
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QMETAOBJECT_ENUMERATORCOUNT )
 }
 
 /*
-int enumeratorOffset () const
+int enumeratorOffset() const
 */
 HB_FUNC_STATIC( QMETAOBJECT_ENUMERATOROFFSET )
 {
@@ -516,7 +516,7 @@ HB_FUNC_STATIC( QMETAOBJECT_METHOD )
 }
 
 /*
-int methodCount () const
+int methodCount() const
 */
 HB_FUNC_STATIC( QMETAOBJECT_METHODCOUNT )
 {
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QMETAOBJECT_METHODCOUNT )
 }
 
 /*
-int methodOffset () const
+int methodOffset() const
 */
 HB_FUNC_STATIC( QMETAOBJECT_METHODOFFSET )
 {
@@ -593,7 +593,7 @@ HB_FUNC_STATIC( QMETAOBJECT_PROPERTY )
 }
 
 /*
-int propertyCount () const
+int propertyCount() const
 */
 HB_FUNC_STATIC( QMETAOBJECT_PROPERTYCOUNT )
 {
@@ -617,7 +617,7 @@ HB_FUNC_STATIC( QMETAOBJECT_PROPERTYCOUNT )
 }
 
 /*
-int propertyOffset () const
+int propertyOffset() const
 */
 HB_FUNC_STATIC( QMETAOBJECT_PROPERTYOFFSET )
 {

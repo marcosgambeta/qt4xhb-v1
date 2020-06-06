@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QDATASTREAM_STATUS )
 }
 
 /*
-int version () const
+int version() const
 */
 HB_FUNC_STATIC( QDATASTREAM_VERSION )
 {

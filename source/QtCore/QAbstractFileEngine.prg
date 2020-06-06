@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_FLUSH )
 }
 
 /*
-virtual int handle () const
+virtual int handle() const
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_HANDLE )
 {

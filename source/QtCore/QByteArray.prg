@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QBYTEARRAY_AT )
 }
 
 /*
-int capacity () const
+int capacity() const
 */
 HB_FUNC_STATIC( QBYTEARRAY_CAPACITY )
 {
@@ -1283,7 +1283,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LEFTJUSTIFIED )
 }
 
 /*
-int length () const
+int length() const
 */
 HB_FUNC_STATIC( QBYTEARRAY_LENGTH )
 {
@@ -2489,7 +2489,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SIMPLIFIED )
 }
 
 /*
-int size () const
+int size() const
 */
 HB_FUNC_STATIC( QBYTEARRAY_SIZE )
 {

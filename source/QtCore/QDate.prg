@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QDATE_ADDYEARS )
 }
 
 /*
-int day () const
+int day() const
 */
 HB_FUNC_STATIC( QDATE_DAY )
 {
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QDATE_DAY )
 }
 
 /*
-int dayOfWeek () const
+int dayOfWeek() const
 */
 HB_FUNC_STATIC( QDATE_DAYOFWEEK )
 {
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QDATE_DAYOFWEEK )
 }
 
 /*
-int dayOfYear () const
+int dayOfYear() const
 */
 HB_FUNC_STATIC( QDATE_DAYOFYEAR )
 {
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QDATE_DAYOFYEAR )
 }
 
 /*
-int daysInMonth () const
+int daysInMonth() const
 */
 HB_FUNC_STATIC( QDATE_DAYSINMONTH )
 {
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QDATE_DAYSINMONTH )
 }
 
 /*
-int daysInYear () const
+int daysInYear() const
 */
 HB_FUNC_STATIC( QDATE_DAYSINYEAR )
 {
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QDATE_ISNULL )
 }
 
 /*
-int month () const
+int month() const
 */
 HB_FUNC_STATIC( QDATE_MONTH )
 {
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QDATE_SETDATE )
 }
 
 /*
-int toJulianDay () const
+int toJulianDay() const
 */
 HB_FUNC_STATIC( QDATE_TOJULIANDAY )
 {
@@ -550,7 +550,7 @@ HB_FUNC_STATIC( QDATE_WEEKNUMBER )
 }
 
 /*
-int year () const
+int year() const
 */
 HB_FUNC_STATIC( QDATE_YEAR )
 {

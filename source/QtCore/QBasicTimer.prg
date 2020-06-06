@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QBASICTIMER_STOP )
 }
 
 /*
-int timerId () const
+int timerId() const
 */
 HB_FUNC_STATIC( QBASICTIMER_TIMERID )
 {

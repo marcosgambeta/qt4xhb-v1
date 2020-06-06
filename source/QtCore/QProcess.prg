@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QPROCESS_ERROR )
 }
 
 /*
-int exitCode () const
+int exitCode() const
 */
 HB_FUNC_STATIC( QPROCESS_EXITCODE )
 {

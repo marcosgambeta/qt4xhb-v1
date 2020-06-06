@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QTIMELINE_DELETE )
 }
 
 /*
-int currentFrame () const
+int currentFrame() const
 */
 HB_FUNC_STATIC( QTIMELINE_CURRENTFRAME )
 {
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QTIMELINE_CURRENTFRAME )
 }
 
 /*
-int currentTime () const
+int currentTime() const
 */
 HB_FUNC_STATIC( QTIMELINE_CURRENTTIME )
 {
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QTIMELINE_DIRECTION )
 }
 
 /*
-int duration () const
+int duration() const
 */
 HB_FUNC_STATIC( QTIMELINE_DURATION )
 {
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QTIMELINE_DURATION )
 }
 
 /*
-int endFrame () const
+int endFrame() const
 */
 HB_FUNC_STATIC( QTIMELINE_ENDFRAME )
 {
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QTIMELINE_FRAMEFORTIME )
 }
 
 /*
-int loopCount () const
+int loopCount() const
 */
 HB_FUNC_STATIC( QTIMELINE_LOOPCOUNT )
 {
@@ -559,7 +559,7 @@ HB_FUNC_STATIC( QTIMELINE_SETUPDATEINTERVAL )
 }
 
 /*
-int startFrame () const
+int startFrame() const
 */
 HB_FUNC_STATIC( QTIMELINE_STARTFRAME )
 {
@@ -607,7 +607,7 @@ HB_FUNC_STATIC( QTIMELINE_STATE )
 }
 
 /*
-int updateInterval () const
+int updateInterval() const
 */
 HB_FUNC_STATIC( QTIMELINE_UPDATEINTERVAL )
 {

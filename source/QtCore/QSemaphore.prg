@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QSEMAPHORE_ACQUIRE )
 }
 
 /*
-int available () const
+int available() const
 */
 HB_FUNC_STATIC( QSEMAPHORE_AVAILABLE )
 {

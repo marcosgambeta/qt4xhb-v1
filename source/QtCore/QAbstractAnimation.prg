@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_DELETE )
 }
 
 /*
-int currentLoop () const
+int currentLoop() const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTLOOP )
 {
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTLOOP )
 }
 
 /*
-int currentLoopTime () const
+int currentLoopTime() const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTLOOPTIME )
 {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTLOOPTIME )
 }
 
 /*
-int currentTime () const
+int currentTime() const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTTIME )
 {
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_DIRECTION )
 }
 
 /*
-virtual int duration () const = 0
+virtual int duration() const = 0
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_DURATION )
 {
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_GROUP )
 }
 
 /*
-int loopCount () const
+int loopCount() const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_LOOPCOUNT )
 {
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_STATE )
 }
 
 /*
-int totalDuration () const
+int totalDuration() const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_TOTALDURATION )
 {

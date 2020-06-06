@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QREGEXP_CAP )
 }
 
 /*
-int captureCount () const
+int captureCount() const
 */
 HB_FUNC_STATIC( QREGEXP_CAPTURECOUNT )
 {
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QREGEXP_LASTINDEXIN )
 }
 
 /*
-int matchedLength () const
+int matchedLength() const
 */
 HB_FUNC_STATIC( QREGEXP_MATCHEDLENGTH )
 {
