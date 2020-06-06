@@ -66,8 +66,7 @@ $deleteMethod
 $prototype=QString fileName () const
 $method=|QString|fileName|
 
-$prototype=int firstLineNumber () const
-$method=|int|firstLineNumber|
+$prototypeV2=int firstLineNumber() const
 
 $prototype=bool isNull () const
 $method=|bool|isNull|

@@ -191,8 +191,7 @@ $method=|QScriptValue|nullValue|
 $prototype=void popContext ()
 $method=|void|popContext|
 
-$prototype=int processEventsInterval () const
-$method=|int|processEventsInterval|
+$prototypeV2=int processEventsInterval() const
 
 $prototype=QScriptContext * pushContext ()
 $method=|QScriptContext *|pushContext|
@@ -224,8 +223,7 @@ $method=|QScriptValue|uncaughtException|
 $prototype=QStringList uncaughtExceptionBacktrace () const
 $method=|QStringList|uncaughtExceptionBacktrace|
 
-$prototype=int uncaughtExceptionLineNumber () const
-$method=|int|uncaughtExceptionLineNumber|
+$prototypeV2=int uncaughtExceptionLineNumber() const
 
 $prototype=QScriptValue undefinedValue ()
 $method=|QScriptValue|undefinedValue|

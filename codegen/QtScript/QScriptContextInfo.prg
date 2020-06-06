@@ -66,11 +66,9 @@ $deleteMethod
 $prototype=QString fileName () const
 $method=|QString|fileName|
 
-$prototype=int functionEndLineNumber () const
-$method=|int|functionEndLineNumber|
+$prototypeV2=int functionEndLineNumber() const
 
-$prototype=int functionMetaIndex () const
-$method=|int|functionMetaIndex|
+$prototypeV2=int functionMetaIndex() const
 
 $prototype=QString functionName () const
 $method=|QString|functionName|
@@ -78,8 +76,7 @@ $method=|QString|functionName|
 $prototype=QStringList functionParameterNames () const
 $method=|QStringList|functionParameterNames|
 
-$prototype=int functionStartLineNumber () const
-$method=|int|functionStartLineNumber|
+$prototypeV2=int functionStartLineNumber() const
 
 $prototype=FunctionType functionType () const
 $method=|QScriptContextInfo::FunctionType|functionType|
@@ -87,8 +84,7 @@ $method=|QScriptContextInfo::FunctionType|functionType|
 $prototype=bool isNull () const
 $method=|bool|isNull|
 
-$prototype=int lineNumber () const
-$method=|int|lineNumber|
+$prototypeV2=int lineNumber() const
 
 $prototype=qint64 scriptId () const
 $method=|qint64|scriptId|

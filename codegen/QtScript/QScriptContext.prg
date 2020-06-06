@@ -36,8 +36,7 @@ $method=|QScriptValue|activationObject|
 $prototype=QScriptValue argument ( int index ) const
 $method=|QScriptValue|argument|int
 
-$prototype=int argumentCount () const
-$method=|int|argumentCount|
+$prototypeV2=int argumentCount() const
 
 $prototype=QScriptValue argumentsObject () const
 $method=|QScriptValue|argumentsObject|

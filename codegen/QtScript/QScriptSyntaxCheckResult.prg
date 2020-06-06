@@ -30,11 +30,9 @@ $constructor=|new|const QScriptSyntaxCheckResult &
 
 $deleteMethod
 
-$prototype=int errorColumnNumber () const
-$method=|int|errorColumnNumber|
+$prototypeV2=int errorColumnNumber() const
 
-$prototype=int errorLineNumber () const
-$method=|int|errorLineNumber|
+$prototypeV2=int errorLineNumber() const
 
 $prototype=QString errorMessage () const
 $method=|QString|errorMessage|
