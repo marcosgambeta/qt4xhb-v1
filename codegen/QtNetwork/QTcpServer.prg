@@ -50,8 +50,7 @@ $method=|bool|isListening|
 $prototype=bool listen ( const QHostAddress & address = QHostAddress::Any, quint16 port = 0 )
 $method=|bool|listen|const QHostAddress &=QHostAddress::Any,quint16=0
 
-$prototype=int maxPendingConnections () const
-$method=|int|maxPendingConnections|
+$prototypeV2=int maxPendingConnections() const
 
 $prototype=virtual QTcpSocket * nextPendingConnection ()
 $virtualMethod=|QTcpSocket *|nextPendingConnection|
@@ -77,8 +76,7 @@ $method=|void|setProxy|const QNetworkProxy &
 $prototype=bool setSocketDescriptor ( int socketDescriptor )
 $method=|bool|setSocketDescriptor|int
 
-$prototype=int socketDescriptor () const
-$method=|int|socketDescriptor|
+$prototypeV2=int socketDescriptor() const
 
 $prototype=bool waitForNewConnection ( int msec = 0, bool * timedOut = 0 )
 $method=|bool|waitForNewConnection|int=0,bool *=0

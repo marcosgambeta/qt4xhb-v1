@@ -84,11 +84,9 @@ $method=|QSsl::SslProtocol|protocol|
 $prototype=QString protocolString () const
 $method=|QString|protocolString|
 
-$prototype=int supportedBits () const
-$method=|int|supportedBits|
+$prototypeV2=int supportedBits() const
 
-$prototype=int usedBits () const
-$method=|int|usedBits|
+$prototypeV2=int usedBits() const
 
 $extraMethods
 

@@ -76,8 +76,7 @@ $method=|QSslCertificate|peerCertificate|
 $prototype=QList<QSslCertificate> peerCertificateChain () const
 $method=|QList<QSslCertificate>|peerCertificateChain|
 
-$prototype=int peerVerifyDepth () const
-$method=|int|peerVerifyDepth|
+$prototypeV2=int peerVerifyDepth() const
 
 $prototype=QSslSocket::PeerVerifyMode peerVerifyMode () const
 $method=|QSslSocket::PeerVerifyMode|peerVerifyMode|

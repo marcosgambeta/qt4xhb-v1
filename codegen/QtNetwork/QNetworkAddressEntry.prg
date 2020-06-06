@@ -64,8 +64,7 @@ $method=|QHostAddress|ip|
 $prototype=QHostAddress netmask () const
 $method=|QHostAddress|netmask|
 
-$prototype=int prefixLength () const
-$method=|int|prefixLength|
+$prototypeV2=int prefixLength() const
 
 $prototype=void setBroadcast ( const QHostAddress & newBroadcast )
 $method=|void|setBroadcast|const QHostAddress &

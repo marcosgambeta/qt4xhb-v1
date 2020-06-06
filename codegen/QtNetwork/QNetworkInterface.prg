@@ -67,8 +67,7 @@ $method=|QString|hardwareAddress|
 $prototype=QString humanReadableName () const
 $method=|QString|humanReadableName|
 
-$prototype=int index () const
-$method=|int|index|
+$prototypeV2=int index() const
 
 $prototype=bool isValid () const
 $method=|bool|isValid|

@@ -105,14 +105,12 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=int localPort () const
-$method=|int|localPort|
+$prototypeV2=int localPort() const
 
 $prototype=QString peerHostName () const
 $method=|QString|peerHostName|
 
-$prototype=int peerPort () const
-$method=|int|peerPort|
+$prototypeV2=int peerPort() const
 
 $prototype=QString protocolTag () const
 $method=|QString|protocolTag|

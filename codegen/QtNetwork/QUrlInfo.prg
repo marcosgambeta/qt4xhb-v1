@@ -107,8 +107,7 @@ $method=|QString|name|
 $prototype=QString owner () const
 $method=|QString|owner|
 
-$prototype=int permissions () const
-$method=|int|permissions|
+$prototypeV2=int permissions() const
 
 $prototype=virtual void setDir ( bool b )
 $virtualMethod=|void|setDir|bool

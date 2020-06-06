@@ -67,8 +67,7 @@ $method=|QString|errorString|
 $prototype=QString hostName () const
 $method=|QString|hostName|
 
-$prototype=int lookupId () const
-$method=|int|lookupId|
+$prototypeV2=int lookupId() const
 
 $prototype=void setAddresses ( const QList<QHostAddress> & addresses )
 $method=|void|setAddresses|const QList<QHostAddress> &

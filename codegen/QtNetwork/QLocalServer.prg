@@ -52,8 +52,7 @@ $method=|bool|isListening|
 $prototype=bool listen ( const QString & name )
 $method=|bool|listen|const QString &
 
-$prototype=int maxPendingConnections () const
-$method=|int|maxPendingConnections|
+$prototypeV2=int maxPendingConnections() const
 
 $prototype=virtual QLocalSocket * nextPendingConnection ()
 $virtualMethod=|QLocalSocket *|nextPendingConnection|

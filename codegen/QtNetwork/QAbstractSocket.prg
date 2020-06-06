@@ -89,8 +89,7 @@ $method=|bool|setSocketDescriptor|int,QAbstractSocket::SocketState=QAbstractSock
 $prototype=void setSocketOption ( QAbstractSocket::SocketOption option, const QVariant & value )
 $method=|void|setSocketOption|QAbstractSocket::SocketOption,const QVariant &
 
-$prototype=int socketDescriptor () const
-$method=|int|socketDescriptor|
+$prototypeV2=int socketDescriptor() const
 
 $prototype=QVariant socketOption ( QAbstractSocket::SocketOption option )
 $method=|QVariant|socketOption|QAbstractSocket::SocketOption

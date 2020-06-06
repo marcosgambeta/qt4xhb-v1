@@ -41,8 +41,7 @@ $method=|int|cd|const QString &
 $prototype=void clearPendingCommands ()
 $method=|void|clearPendingCommands|
 
-$prototype=int close ()
-$method=|int|close|
+$prototypeV2=int close()
 
 $prototype=int connectToHost ( const QString & host, quint16 port = 21 )
 $method=|int|connectToHost|const QString &,quint16=21
@@ -53,8 +52,7 @@ $method=|QFtp::Command|currentCommand|
 $prototype=QIODevice * currentDevice () const
 $method=|QIODevice *|currentDevice|
 
-$prototype=int currentId () const
-$method=|int|currentId|
+$prototypeV2=int currentId() const
 
 $prototype=Error error () const
 $method=|QFtp::Error|error|

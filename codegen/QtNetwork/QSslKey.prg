@@ -80,8 +80,7 @@ $method=|void|clear|
 $prototype=bool isNull () const
 $method=|bool|isNull|
 
-$prototype=int length () const
-$method=|int|length|
+$prototypeV2=int length() const
 
 $prototype=QByteArray toDer ( const QByteArray & passPhrase = QByteArray() ) const
 $method=|QByteArray|toDer|const QByteArray &=QByteArray()
