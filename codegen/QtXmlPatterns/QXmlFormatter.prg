@@ -28,8 +28,7 @@ $includes
 $prototype=QXmlFormatter ( const QXmlQuery & query, QIODevice * outputDevice )
 $constructor=|new|const QXmlQuery &,QIODevice *
 
-$prototype=int indentationDepth () const
-$method=|int|indentationDepth|
+$prototypeV2=int indentationDepth() const
 
 $prototype=void setIndentationDepth ( int depth )
 $method=|void|setIndentationDepth|int
