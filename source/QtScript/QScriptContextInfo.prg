@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FILENAME )
 }
 
 /*
-int functionEndLineNumber () const
+int functionEndLineNumber() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONENDLINENUMBER )
 {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONENDLINENUMBER )
 }
 
 /*
-int functionMetaIndex () const
+int functionMetaIndex() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONMETAINDEX )
 {
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONPARAMETERNAMES )
 }
 
 /*
-int functionStartLineNumber () const
+int functionStartLineNumber() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONSTARTLINENUMBER )
 {
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_ISNULL )
 }
 
 /*
-int lineNumber () const
+int lineNumber() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_LINENUMBER )
 {

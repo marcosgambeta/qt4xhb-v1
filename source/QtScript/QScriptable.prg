@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENT )
 }
 
 /*
-int argumentCount () const
+int argumentCount() const
 */
 HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENTCOUNT )
 {

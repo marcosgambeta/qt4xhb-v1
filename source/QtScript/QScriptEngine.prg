@@ -689,7 +689,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_POPCONTEXT )
 }
 
 /*
-int processEventsInterval () const
+int processEventsInterval() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_PROCESSEVENTSINTERVAL )
 {
@@ -967,7 +967,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_UNCAUGHTEXCEPTIONBACKTRACE )
 }
 
 /*
-int uncaughtExceptionLineNumber () const
+int uncaughtExceptionLineNumber() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_UNCAUGHTEXCEPTIONLINENUMBER )
 {

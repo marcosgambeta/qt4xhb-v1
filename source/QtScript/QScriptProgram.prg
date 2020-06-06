@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_FILENAME )
 }
 
 /*
-int firstLineNumber () const
+int firstLineNumber() const
 */
 HB_FUNC_STATIC( QSCRIPTPROGRAM_FIRSTLINENUMBER )
 {
