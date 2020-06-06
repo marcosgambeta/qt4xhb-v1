@@ -58,8 +58,7 @@ $deleteMethod
 $prototype=bool contains ( const QString & name ) const
 $method=|bool|contains|const QString &
 
-$prototype=int count () const
-$method=|int|count|
+$prototypeV2=int count() const
 
 $prototype=bool isEmpty () const
 $method=|bool|isEmpty|
@@ -88,8 +87,7 @@ $method=|QDomNode|setNamedItem|const QDomNode &
 $prototype=QDomNode setNamedItemNS ( const QDomNode & newNode )
 $method=|QDomNode|setNamedItemNS|const QDomNode &
 
-$prototype=int size () const
-$method=|int|size|
+$prototypeV2=int size() const
 
 $extraMethods
 

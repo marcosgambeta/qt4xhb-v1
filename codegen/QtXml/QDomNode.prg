@@ -70,8 +70,7 @@ $method=|void|clear|
 $prototype=QDomNode cloneNode ( bool deep = true ) const
 $method=|QDomNode|cloneNode|bool=true
 
-$prototype=int columnNumber () const
-$method=|int|columnNumber|
+$prototypeV2=int columnNumber() const
 
 $prototype=QDomNode firstChild () const
 $method=|QDomNode|firstChild|
@@ -142,8 +141,7 @@ $method=|QDomNode|lastChild|
 $prototype=QDomElement lastChildElement ( const QString & tagName = QString() ) const
 $method=|QDomElement|lastChildElement|const QString &=QString()
 
-$prototype=int lineNumber () const
-$method=|int|lineNumber|
+$prototypeV2=int lineNumber() const
 
 $prototype=QString localName () const
 $method=|QString|localName|

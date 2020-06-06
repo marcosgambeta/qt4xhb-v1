@@ -55,11 +55,9 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=int columnNumber () const
-$method=|int|columnNumber|
+$prototypeV2=int columnNumber() const
 
-$prototype=int lineNumber () const
-$method=|int|lineNumber|
+$prototypeV2=int lineNumber() const
 
 $prototype=QString message () const
 $method=|QString|message|

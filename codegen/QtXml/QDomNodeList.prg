@@ -58,8 +58,7 @@ $deleteMethod
 $prototype=QDomNode at ( int index ) const
 $method=|QDomNode|at|int
 
-$prototype=int count () const
-$method=|int|count|
+$prototypeV2=int count() const
 
 $prototype=bool isEmpty () const
 $method=|bool|isEmpty|
@@ -70,8 +69,7 @@ $method=|QDomNode|item|int
 $prototype=uint length () const
 $method=|uint|length|
 
-$prototype=int size () const
-$method=|int|size|
+$prototypeV2=int size() const
 
 $extraMethods
 
