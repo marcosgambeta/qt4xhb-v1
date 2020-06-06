@@ -74,8 +74,7 @@ $virtualMethod=|bool|hasFeature|QDesignerFormWindowInterface::Feature
 $prototype=virtual QStringList includeHints () const = 0
 $virtualMethod=|QStringList|includeHints|
 
-$prototype=virtual bool isDirty () const = 0
-$virtualMethod=|bool|isDirty|
+$prototypeV2=virtual bool isDirty() const = 0
 
 $prototype=virtual bool isManaged ( QWidget * widget ) const = 0
 $virtualMethod=|bool|isManaged|QWidget *

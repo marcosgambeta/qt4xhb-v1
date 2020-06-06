@@ -48,11 +48,9 @@ $virtualMethod=|QString|includeFile|
 $prototype=virtual void initialize ( QDesignerFormEditorInterface * formEditor )
 $virtualMethod=|void|initialize|QDesignerFormEditorInterface *
 
-$prototype=virtual bool isContainer () const = 0
-$virtualMethod=|bool|isContainer|
+$prototypeV2=virtual bool isContainer() const = 0
 
-$prototype=virtual bool isInitialized () const
-$virtualMethod=|bool|isInitialized|
+$prototypeV2=virtual bool isInitialized() const
 
 $prototype=virtual QString name () const = 0
 $virtualMethod=|QString|name|

@@ -37,8 +37,7 @@ $virtualMethod=|QDesignerFormEditorInterface *|core|
 $prototype=virtual QString currentPropertyName () const = 0
 $virtualMethod=|QString|currentPropertyName|
 
-$prototype=virtual bool isReadOnly () const = 0
-$virtualMethod=|bool|isReadOnly|
+$prototypeV2=virtual bool isReadOnly() const = 0
 
 $prototype=virtual QObject * object () const = 0
 $virtualMethod=|QObject *|object|

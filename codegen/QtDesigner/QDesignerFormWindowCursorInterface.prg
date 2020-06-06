@@ -35,8 +35,7 @@ $virtualMethod=|QWidget *|current|
 $prototype=virtual QDesignerFormWindowInterface * formWindow () const = 0
 $virtualMethod=|QDesignerFormWindowInterface *|formWindow|
 
-$prototype=virtual bool hasSelection () const = 0
-$virtualMethod=|bool|hasSelection|
+$prototypeV2=virtual bool hasSelection() const = 0
 
 $prototype=bool isWidgetSelected ( QWidget * widget ) const
 $method=|bool|isWidgetSelected|QWidget *
