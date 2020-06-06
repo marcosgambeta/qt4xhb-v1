@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QDOMNODE_CLONENODE )
 }
 
 /*
-int columnNumber () const
+int columnNumber() const
 */
 HB_FUNC_STATIC( QDOMNODE_COLUMNNUMBER )
 {
@@ -889,7 +889,7 @@ HB_FUNC_STATIC( QDOMNODE_LASTCHILDELEMENT )
 }
 
 /*
-int lineNumber () const
+int lineNumber() const
 */
 HB_FUNC_STATIC( QDOMNODE_LINENUMBER )
 {

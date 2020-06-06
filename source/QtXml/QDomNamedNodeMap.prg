@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_CONTAINS )
 }
 
 /*
-int count () const
+int count() const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_COUNT )
 {
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SETNAMEDITEMNS )
 }
 
 /*
-int size () const
+int size() const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SIZE )
 {

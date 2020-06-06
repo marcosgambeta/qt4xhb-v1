@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QDOMNODELIST_AT )
 }
 
 /*
-int count () const
+int count() const
 */
 HB_FUNC_STATIC( QDOMNODELIST_COUNT )
 {
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QDOMNODELIST_LENGTH )
 }
 
 /*
-int size () const
+int size() const
 */
 HB_FUNC_STATIC( QDOMNODELIST_SIZE )
 {

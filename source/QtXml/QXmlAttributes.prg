@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_CLEAR )
 }
 
 /*
-int count () const
+int count() const
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_COUNT )
 {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_INDEX )
 }
 
 /*
-int length () const
+int length() const
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_LENGTH )
 {

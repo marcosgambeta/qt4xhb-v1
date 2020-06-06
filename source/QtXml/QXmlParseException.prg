@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_DELETE )
 }
 
 /*
-int columnNumber () const
+int columnNumber() const
 */
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_COLUMNNUMBER )
 {
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_COLUMNNUMBER )
 }
 
 /*
-int lineNumber () const
+int lineNumber() const
 */
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_LINENUMBER )
 {
