@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_PAINT )
 }
 
 /*
-virtual int type () const
+virtual int type() const
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_TYPE )
 {

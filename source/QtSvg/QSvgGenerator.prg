@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_OUTPUTDEVICE )
 }
 
 /*
-int resolution () const
+int resolution() const
 */
 HB_FUNC_STATIC( QSVGGENERATOR_RESOLUTION )
 {

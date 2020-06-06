@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QSVGRENDERER_ELEMENTEXISTS )
 }
 
 /*
-int framesPerSecond () const
+int framesPerSecond() const
 */
 HB_FUNC_STATIC( QSVGRENDERER_FRAMESPERSECOND )
 {
