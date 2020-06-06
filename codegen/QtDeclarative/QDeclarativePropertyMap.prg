@@ -38,8 +38,7 @@ $method=|void|clear|const QString &
 $prototype=bool contains ( const QString & key ) const
 $method=|bool|contains|const QString &
 
-$prototype=int count () const
-$method=|int|count|
+$prototypeV2=int count() const
 
 $prototype=void insert ( const QString & key, const QVariant & value )
 $method=|void|insert|const QString &,const QVariant &
@@ -50,8 +49,7 @@ $method=|bool|isEmpty|
 $prototype=QStringList keys () const
 $method=|QStringList|keys|
 
-$prototype=int size () const
-$method=|int|size|
+$prototypeV2=int size() const
 
 $prototype=QVariant value ( const QString & key ) const
 $method=|QVariant|value|const QString &

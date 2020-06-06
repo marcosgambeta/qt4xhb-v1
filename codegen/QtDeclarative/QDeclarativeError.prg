@@ -55,8 +55,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=int column () const
-$method=|int|column|
+$prototypeV2=int column() const
 
 $prototype=QString description () const
 $method=|QString|description|
@@ -64,8 +63,7 @@ $method=|QString|description|
 $prototype=bool isValid () const
 $method=|bool|isValid|
 
-$prototype=int line () const
-$method=|int|line|
+$prototypeV2=int line() const
 
 $prototype=void setColumn ( int column )
 $method=|void|setColumn|int

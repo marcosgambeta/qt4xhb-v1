@@ -74,8 +74,7 @@ $method=|bool|canCount|
 $prototype=bool clear () const
 $method=|bool|clear|
 
-$prototype=int count () const
-$method=|int|count|
+$prototypeV2=int count() const
 
 $prototype=bool isValid () const
 $method=|bool|isValid|

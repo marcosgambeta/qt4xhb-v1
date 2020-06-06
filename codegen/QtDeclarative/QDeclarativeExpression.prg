@@ -81,8 +81,7 @@ $method=|QString|expression|
 $prototype=bool hasError () const
 $method=|bool|hasError|
 
-$prototype=int lineNumber () const
-$method=|int|lineNumber|
+$prototypeV2=int lineNumber() const
 
 $prototype=bool notifyOnValueChanged () const
 $method=|bool|notifyOnValueChanged|

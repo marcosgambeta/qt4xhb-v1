@@ -132,8 +132,7 @@ $addMethod=connectNotifySignal
 $prototype=bool hasNotifySignal () const
 $method=|bool|hasNotifySignal|
 
-$prototype=int index () const
-$method=|int|index|
+$prototypeV2=int index() const
 
 $prototype=bool isDesignable () const
 $method=|bool|isDesignable|
@@ -168,8 +167,7 @@ $method=|QObject *|object|
 $prototype=QMetaProperty property () const
 $method=|QMetaProperty|property|
 
-$prototype=int propertyType () const
-$method=|int|propertyType|
+$prototypeV2=int propertyType() const
 
 $prototype=PropertyTypeCategory propertyTypeCategory () const
 $method=|QDeclarativeProperty::PropertyTypeCategory|propertyTypeCategory|
