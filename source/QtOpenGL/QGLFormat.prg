@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QGLFORMAT_ACCUM )
 }
 
 /*
-int accumBufferSize () const
+int accumBufferSize() const
 */
 HB_FUNC_STATIC( QGLFORMAT_ACCUMBUFFERSIZE )
 {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QGLFORMAT_ALPHA )
 }
 
 /*
-int alphaBufferSize () const
+int alphaBufferSize() const
 */
 HB_FUNC_STATIC( QGLFORMAT_ALPHABUFFERSIZE )
 {
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QGLFORMAT_ALPHABUFFERSIZE )
 }
 
 /*
-int blueBufferSize () const
+int blueBufferSize() const
 */
 HB_FUNC_STATIC( QGLFORMAT_BLUEBUFFERSIZE )
 {
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QGLFORMAT_DEPTH )
 }
 
 /*
-int depthBufferSize () const
+int depthBufferSize() const
 */
 HB_FUNC_STATIC( QGLFORMAT_DEPTHBUFFERSIZE )
 {
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QGLFORMAT_DOUBLEBUFFER )
 }
 
 /*
-int greenBufferSize () const
+int greenBufferSize() const
 */
 HB_FUNC_STATIC( QGLFORMAT_GREENBUFFERSIZE )
 {
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QGLFORMAT_HASOVERLAY )
 }
 
 /*
-int majorVersion () const
+int majorVersion() const
 */
 HB_FUNC_STATIC( QGLFORMAT_MAJORVERSION )
 {
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QGLFORMAT_MAJORVERSION )
 }
 
 /*
-int minorVersion () const
+int minorVersion() const
 */
 HB_FUNC_STATIC( QGLFORMAT_MINORVERSION )
 {
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QGLFORMAT_MINORVERSION )
 }
 
 /*
-int plane () const
+int plane() const
 */
 HB_FUNC_STATIC( QGLFORMAT_PLANE )
 {
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QGLFORMAT_PROFILE )
 }
 
 /*
-int redBufferSize () const
+int redBufferSize() const
 */
 HB_FUNC_STATIC( QGLFORMAT_REDBUFFERSIZE )
 {
@@ -610,7 +610,7 @@ HB_FUNC_STATIC( QGLFORMAT_SAMPLEBUFFERS )
 }
 
 /*
-int samples () const
+int samples() const
 */
 HB_FUNC_STATIC( QGLFORMAT_SAMPLES )
 {
@@ -1256,7 +1256,7 @@ HB_FUNC_STATIC( QGLFORMAT_STENCIL )
 }
 
 /*
-int stencilBufferSize () const
+int stencilBufferSize() const
 */
 HB_FUNC_STATIC( QGLFORMAT_STENCILBUFFERSIZE )
 {
@@ -1304,7 +1304,7 @@ HB_FUNC_STATIC( QGLFORMAT_STEREO )
 }
 
 /*
-int swapInterval () const
+int swapInterval() const
 */
 HB_FUNC_STATIC( QGLFORMAT_SWAPINTERVAL )
 {

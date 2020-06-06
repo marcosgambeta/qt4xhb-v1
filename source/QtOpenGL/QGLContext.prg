@@ -668,7 +668,7 @@ HB_FUNC_STATIC( QGLCONTEXT_SETTEXTURECACHELIMIT )
 }
 
 /*
-static int textureCacheLimit ()
+static int textureCacheLimit()
 */
 HB_FUNC_STATIC( QGLCONTEXT_TEXTURECACHELIMIT )
 {

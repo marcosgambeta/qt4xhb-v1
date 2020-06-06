@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QGLBUFFER_SETUSAGEPATTERN )
 }
 
 /*
-int size () const
+int size() const
 */
 HB_FUNC_STATIC( QGLBUFFER_SIZE )
 {

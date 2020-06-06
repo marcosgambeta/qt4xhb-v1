@@ -698,7 +698,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_GEOMETRYOUTPUTTYPE )
 }
 
 /*
-int geometryOutputVertexCount () const
+int geometryOutputVertexCount() const
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_GEOMETRYOUTPUTVERTEXCOUNT )
 {
@@ -794,7 +794,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_LOG )
 }
 
 /*
-int maxGeometryOutputVertices () const
+int maxGeometryOutputVertices() const
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_MAXGEOMETRYOUTPUTVERTICES )
 {

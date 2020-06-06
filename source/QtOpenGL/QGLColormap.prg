@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_SETENTRY )
 }
 
 /*
-int size () const
+int size() const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_SIZE )
 {
