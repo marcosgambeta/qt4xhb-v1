@@ -76,14 +76,12 @@ $method=|bool|isReadOnly|
 $prototype=bool isValid () const
 $method=|bool|isValid|
 
-$prototype=int length () const
-$method=|int|length|
+$prototypeV2=int length() const
 
 $prototype=QString name () const
 $method=|QString|name|
 
-$prototype=int precision () const
-$method=|int|precision|
+$prototypeV2=int precision() const
 
 $prototype=RequiredStatus requiredStatus () const
 $method=|QSqlField::RequiredStatus|requiredStatus|

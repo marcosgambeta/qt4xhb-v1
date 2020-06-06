@@ -70,8 +70,7 @@ $method=|void|clearValues|
 $prototype=bool contains ( const QString & name ) const
 $method=|bool|contains|const QString &
 
-$prototype=int count () const
-$method=|int|count|
+$prototypeV2=int count() const
 
 $prototype=QSqlField field ( int index ) const
 $internalMethod=|QSqlField|field,field1|int

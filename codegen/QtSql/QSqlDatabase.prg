@@ -135,8 +135,7 @@ $addMethod=open
 $prototype=QString password () const
 $method=|QString|password|
 
-$prototype=int port () const
-$method=|int|port|
+$prototypeV2=int port() const
 
 $prototype=QSqlIndex primaryIndex ( const QString & tablename ) const
 $method=|QSqlIndex|primaryIndex|const QString &

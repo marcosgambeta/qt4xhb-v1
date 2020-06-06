@@ -64,8 +64,7 @@ $method=|QString|driverText|
 $prototype=bool isValid () const
 $method=|bool|isValid|
 
-$prototype=int number () const
-$method=|int|number|
+$prototypeV2=int number() const
 
 $prototype=void setDatabaseText ( const QString & databaseText )
 $method=|void|setDatabaseText|const QString &

@@ -79,8 +79,7 @@ $deleteMethod
 $prototype=void addBindValue ( const QVariant & val, QSql::ParamType paramType = QSql::In )
 $method=|void|addBindValue|const QVariant &,QSql::ParamType=QSql::In
 
-$prototype=int at () const
-$method=|int|at|
+$prototypeV2=int at() const
 
 $prototype=void bindValue ( const QString & placeholder, const QVariant & val, QSql::ParamType paramType = QSql::In )
 $internalMethod=|void|bindValue,bindValue1|const QString &,const QVariant &,QSql::ParamType=QSql::In
@@ -217,8 +216,7 @@ $method=|bool|next|
 $prototype=bool nextResult ()
 $method=|bool|nextResult|
 
-$prototype=int numRowsAffected () const
-$method=|int|numRowsAffected|
+$prototypeV2=int numRowsAffected() const
 
 $prototype=QSql::NumericalPrecisionPolicy numericalPrecisionPolicy () const
 $method=|QSql::NumericalPrecisionPolicy|numericalPrecisionPolicy|
@@ -244,8 +242,7 @@ $method=|void|setForwardOnly|bool
 $prototype=void setNumericalPrecisionPolicy ( QSql::NumericalPrecisionPolicy precisionPolicy )
 $method=|void|setNumericalPrecisionPolicy|QSql::NumericalPrecisionPolicy
 
-$prototype=int size () const
-$method=|int|size|
+$prototypeV2=int size() const
 
 $prototype=QVariant value ( int index ) const
 $method=|QVariant|value|int
