@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SHAPE )
 }
 
 /*
-virtual int type () const
+virtual int type() const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_TYPE )
 {

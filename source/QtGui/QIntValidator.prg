@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_DELETE )
 }
 
 /*
-int bottom () const
+int bottom() const
 */
 HB_FUNC_STATIC( QINTVALIDATOR_BOTTOM )
 {
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_SETTOP )
 }
 
 /*
-int top () const
+int top() const
 */
 HB_FUNC_STATIC( QINTVALIDATOR_TOP )
 {

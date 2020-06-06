@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEAT )
 }
 
 /*
-int autoRepeatDelay () const
+int autoRepeatDelay() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATDELAY )
 {
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATDELAY )
 }
 
 /*
-int autoRepeatInterval () const
+int autoRepeatInterval() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATINTERVAL )
 {

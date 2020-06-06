@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_CUSTOMCOLOR )
 }
 
 /*
-static int customCount ()
+static int customCount()
 */
 HB_FUNC_STATIC( QCOLORDIALOG_CUSTOMCOUNT )
 {

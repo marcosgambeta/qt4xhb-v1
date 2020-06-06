@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QTEXTTABLE_CELLAT )
 }
 
 /*
-int columns () const
+int columns() const
 */
 HB_FUNC_STATIC( QTEXTTABLE_COLUMNS )
 {
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QTEXTTABLE_ROWSTART )
 }
 
 /*
-int rows () const
+int rows() const
 */
 HB_FUNC_STATIC( QTEXTTABLE_ROWS )
 {

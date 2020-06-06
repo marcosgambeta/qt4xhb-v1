@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CURSORRECT )
 }
 
 /*
-int cursorWidth () const
+int cursorWidth() const
 */
 HB_FUNC_STATIC( QTEXTEDIT_CURSORWIDTH )
 {
@@ -708,7 +708,7 @@ HB_FUNC_STATIC( QTEXTEDIT_FONTUNDERLINE )
 }
 
 /*
-int fontWeight () const
+int fontWeight() const
 */
 HB_FUNC_STATIC( QTEXTEDIT_FONTWEIGHT )
 {
@@ -780,7 +780,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ISUNDOREDOENABLED )
 }
 
 /*
-int lineWrapColumnOrWidth () const
+int lineWrapColumnOrWidth() const
 */
 HB_FUNC_STATIC( QTEXTEDIT_LINEWRAPCOLUMNORWIDTH )
 {
@@ -1395,7 +1395,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TABCHANGESFOCUS )
 }
 
 /*
-int tabStopWidth () const
+int tabStopWidth() const
 */
 HB_FUNC_STATIC( QTEXTEDIT_TABSTOPWIDTH )
 {

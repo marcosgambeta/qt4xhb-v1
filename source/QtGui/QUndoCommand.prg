@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_CHILD )
 }
 
 /*
-int childCount () const
+int childCount() const
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_CHILDCOUNT )
 {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_CHILDCOUNT )
 }
 
 /*
-virtual int id () const
+virtual int id() const
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_ID )
 {

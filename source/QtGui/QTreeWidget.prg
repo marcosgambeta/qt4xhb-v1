@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QTREEWIDGET_CLOSEPERSISTENTEDITOR )
 }
 
 /*
-int columnCount () const
+int columnCount() const
 */
 HB_FUNC_STATIC( QTREEWIDGET_COLUMNCOUNT )
 {
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QTREEWIDGET_COLUMNCOUNT )
 }
 
 /*
-int currentColumn () const
+int currentColumn() const
 */
 HB_FUNC_STATIC( QTREEWIDGET_CURRENTCOLUMN )
 {
@@ -971,7 +971,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SETITEMWIDGET )
 }
 
 /*
-int sortColumn () const
+int sortColumn() const
 */
 HB_FUNC_STATIC( QTREEWIDGET_SORTCOLUMN )
 {
@@ -1071,7 +1071,7 @@ HB_FUNC_STATIC( QTREEWIDGET_TOPLEVELITEM )
 }
 
 /*
-int topLevelItemCount () const
+int topLevelItemCount() const
 */
 HB_FUNC_STATIC( QTREEWIDGET_TOPLEVELITEMCOUNT )
 {

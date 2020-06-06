@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_BOTTOMMARGIN )
 }
 
 /*
-int indent () const
+int indent() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_INDENT )
 {
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHT )
 }
 
 /*
-int lineHeightType () const
+int lineHeightType() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHTTYPE )
 {

@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QTAPANDHOLDGESTURE_SETTIMEOUT )
 }
 
 /*
-static int timeout ()
+static int timeout()
 */
 HB_FUNC_STATIC( QTAPANDHOLDGESTURE_TIMEOUT )
 {

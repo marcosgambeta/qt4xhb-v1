@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QLABEL_HASSELECTEDTEXT )
 }
 
 /*
-int indent () const
+int indent() const
 */
 HB_FUNC_STATIC( QLABEL_INDENT )
 {
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QLABEL_INDENT )
 }
 
 /*
-int margin () const
+int margin() const
 */
 HB_FUNC_STATIC( QLABEL_MARGIN )
 {

@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CURRENTSECTION )
 }
 
 /*
-int currentSectionIndex () const
+int currentSectionIndex() const
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_CURRENTSECTIONINDEX )
 {
@@ -711,7 +711,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SECTIONAT )
 }
 
 /*
-int sectionCount () const
+int sectionCount() const
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_SECTIONCOUNT )
 {

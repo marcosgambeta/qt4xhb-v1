@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_ADDWIDGET )
 }
 
 /*
-int currentIndex () const
+int currentIndex() const
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_CURRENTINDEX )
 {

@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_DELETE )
 }
 
 /*
-int anchor () const
+int anchor() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_ANCHOR )
 {
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_BLOCKFORMAT )
 }
 
 /*
-int blockNumber () const
+int blockNumber() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_BLOCKNUMBER )
 {
@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_CLEARSELECTION )
 }
 
 /*
-int columnNumber () const
+int columnNumber() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_COLUMNNUMBER )
 {
@@ -1400,7 +1400,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_MOVEPOSITION )
 }
 
 /*
-int position () const
+int position() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_POSITION )
 {
@@ -1424,7 +1424,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_POSITION )
 }
 
 /*
-int positionInBlock () const
+int positionInBlock() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_POSITIONINBLOCK )
 {
@@ -1583,7 +1583,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SELECTION )
 }
 
 /*
-int selectionEnd () const
+int selectionEnd() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SELECTIONEND )
 {
@@ -1607,7 +1607,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SELECTIONEND )
 }
 
 /*
-int selectionStart () const
+int selectionStart() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SELECTIONSTART )
 {
@@ -1813,7 +1813,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SETVISUALNAVIGATION )
 }
 
 /*
-int verticalMovementX () const
+int verticalMovementX() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_VERTICALMOVEMENTX )
 {

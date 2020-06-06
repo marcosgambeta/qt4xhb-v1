@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_DELETE )
 }
 
 /*
-int currentPage () const
+int currentPage() const
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_CURRENTPAGE )
 {
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ORIENTATION )
 }
 
 /*
-int pageCount () const
+int pageCount() const
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_PAGECOUNT )
 {

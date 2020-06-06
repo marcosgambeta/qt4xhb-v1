@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_CLEANTEXT )
 }
 
 /*
-int decimals () const
+int decimals() const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_DECIMALS )
 {

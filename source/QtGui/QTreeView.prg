@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QTREEVIEW_ALLCOLUMNSSHOWFOCUS )
 }
 
 /*
-int autoExpandDelay () const
+int autoExpandDelay() const
 */
 HB_FUNC_STATIC( QTREEVIEW_AUTOEXPANDDELAY )
 {
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QTREEVIEW_HEADER )
 }
 
 /*
-int indentation () const
+int indentation() const
 */
 HB_FUNC_STATIC( QTREEVIEW_INDENTATION )
 {

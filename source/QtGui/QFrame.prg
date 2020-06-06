@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QFRAME_FRAMESHAPE )
 }
 
 /*
-int frameStyle () const
+int frameStyle() const
 */
 HB_FUNC_STATIC( QFRAME_FRAMESTYLE )
 {
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QFRAME_FRAMESTYLE )
 }
 
 /*
-int frameWidth () const
+int frameWidth() const
 */
 HB_FUNC_STATIC( QFRAME_FRAMEWIDTH )
 {
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QFRAME_FRAMEWIDTH )
 }
 
 /*
-int lineWidth () const
+int lineWidth() const
 */
 HB_FUNC_STATIC( QFRAME_LINEWIDTH )
 {
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QFRAME_LINEWIDTH )
 }
 
 /*
-int midLineWidth () const
+int midLineWidth() const
 */
 HB_FUNC_STATIC( QFRAME_MIDLINEWIDTH )
 {

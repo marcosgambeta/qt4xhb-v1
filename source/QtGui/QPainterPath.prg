@@ -833,7 +833,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CURRENTPOSITION )
 }
 
 /*
-int elementCount () const
+int elementCount() const
 */
 HB_FUNC_STATIC( QPAINTERPATH_ELEMENTCOUNT )
 {

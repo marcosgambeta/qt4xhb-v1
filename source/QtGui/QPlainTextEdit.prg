@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_BACKGROUNDVISIBLE )
 }
 
 /*
-int blockCount () const
+int blockCount() const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_BLOCKCOUNT )
 {
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CURSORRECT )
 }
 
 /*
-int cursorWidth () const
+int cursorWidth() const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_CURSORWIDTH )
 {
@@ -638,7 +638,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_LOADRESOURCE )
 }
 
 /*
-int maximumBlockCount () const
+int maximumBlockCount() const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_MAXIMUMBLOCKCOUNT )
 {
@@ -1204,7 +1204,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_TABCHANGESFOCUS )
 }
 
 /*
-int tabStopWidth () const
+int tabStopWidth() const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_TABSTOPWIDTH )
 {

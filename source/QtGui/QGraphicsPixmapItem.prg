@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SHAPE )
 }
 
 /*
-virtual int type () const
+virtual int type() const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_TYPE )
 {

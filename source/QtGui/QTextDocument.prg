@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ALLFORMATS )
 }
 
 /*
-int availableRedoSteps () const
+int availableRedoSteps() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_AVAILABLEREDOSTEPS )
 {
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_AVAILABLEREDOSTEPS )
 }
 
 /*
-int availableUndoSteps () const
+int availableUndoSteps() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_AVAILABLEUNDOSTEPS )
 {
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_BEGIN )
 }
 
 /*
-int blockCount () const
+int blockCount() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_BLOCKCOUNT )
 {
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CHARACTERAT )
 }
 
 /*
-int characterCount () const
+int characterCount() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_CHARACTERCOUNT )
 {
@@ -1099,7 +1099,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_LASTBLOCK )
 }
 
 /*
-int lineCount () const
+int lineCount() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_LINECOUNT )
 {
@@ -1149,7 +1149,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_MARKCONTENTSDIRTY )
 }
 
 /*
-int maximumBlockCount () const
+int maximumBlockCount() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_MAXIMUMBLOCKCOUNT )
 {
@@ -1247,7 +1247,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_OBJECTFORFORMAT )
 }
 
 /*
-int pageCount () const
+int pageCount() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_PAGECOUNT )
 {
@@ -1347,7 +1347,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_RESOURCE )
 }
 
 /*
-int revision () const
+int revision() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_REVISION )
 {

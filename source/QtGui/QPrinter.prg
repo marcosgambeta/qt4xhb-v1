@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QPRINTER_COLORMODE )
 }
 
 /*
-int copyCount () const
+int copyCount() const
 */
 HB_FUNC_STATIC( QPRINTER_COPYCOUNT )
 {
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QPRINTER_FONTEMBEDDINGENABLED )
 }
 
 /*
-int fromPage () const
+int fromPage() const
 */
 HB_FUNC_STATIC( QPRINTER_FROMPAGE )
 {
@@ -856,7 +856,7 @@ HB_FUNC_STATIC( QPRINTER_PRINTERSTATE )
 }
 
 /*
-int resolution () const
+int resolution() const
 */
 HB_FUNC_STATIC( QPRINTER_RESOLUTION )
 {
@@ -1562,7 +1562,7 @@ HB_FUNC_STATIC( QPRINTER_SUPPORTSMULTIPLECOPIES )
 }
 
 /*
-int toPage () const
+int toPage() const
 */
 HB_FUNC_STATIC( QPRINTER_TOPAGE )
 {

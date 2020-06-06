@@ -933,7 +933,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_TEXT )
 }
 
 /*
-int textAlignment () const
+int textAlignment() const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_TEXTALIGNMENT )
 {
@@ -981,7 +981,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_TOOLTIP )
 }
 
 /*
-int type () const
+int type() const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_TYPE )
 {

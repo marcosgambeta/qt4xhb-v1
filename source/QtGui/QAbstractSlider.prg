@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ISSLIDERDOWN )
 }
 
 /*
-int maximum () const
+int maximum() const
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_MAXIMUM )
 {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_MAXIMUM )
 }
 
 /*
-int minimum () const
+int minimum() const
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_MINIMUM )
 {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ORIENTATION )
 }
 
 /*
-int pageStep () const
+int pageStep() const
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_PAGESTEP )
 {
@@ -542,7 +542,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETTRACKING )
 }
 
 /*
-int singleStep () const
+int singleStep() const
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_SINGLESTEP )
 {
@@ -566,7 +566,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SINGLESTEP )
 }
 
 /*
-int sliderPosition () const
+int sliderPosition() const
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_SLIDERPOSITION )
 {
@@ -616,7 +616,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_TRIGGERACTION )
 }
 
 /*
-int value () const
+int value() const
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_VALUE )
 {

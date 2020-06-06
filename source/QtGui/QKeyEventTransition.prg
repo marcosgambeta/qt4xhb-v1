@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_DELETE )
 }
 
 /*
-int key () const
+int key() const
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_KEY )
 {

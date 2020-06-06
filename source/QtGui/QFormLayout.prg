@@ -302,7 +302,7 @@ void getWidgetPosition ( QWidget * widget, int * rowPtr, ItemRole * rolePtr ) co
 */
 
 /*
-int horizontalSpacing () const
+int horizontalSpacing() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_HORIZONTALSPACING )
 {
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD )
 }
 
 /*
-int rowCount () const
+int rowCount() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_ROWCOUNT )
 {
@@ -838,7 +838,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETWIDGET )
 }
 
 /*
-int spacing () const
+int spacing() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SPACING )
 {
@@ -862,7 +862,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SPACING )
 }
 
 /*
-int verticalSpacing () const
+int verticalSpacing() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_VERTICALSPACING )
 {
@@ -912,7 +912,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ADDITEM )
 }
 
 /*
-virtual int count () const
+virtual int count() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_COUNT )
 {

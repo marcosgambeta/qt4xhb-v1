@@ -991,7 +991,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETVISIBLE )
 }
 
 /*
-int exec ()
+int exec()
 */
 HB_FUNC_STATIC( QMESSAGEBOX_EXEC )
 {

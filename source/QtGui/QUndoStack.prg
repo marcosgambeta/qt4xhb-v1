@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CANUNDO )
 }
 
 /*
-int cleanIndex () const
+int cleanIndex() const
 */
 HB_FUNC_STATIC( QUNDOSTACK_CLEANINDEX )
 {
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QUNDOSTACK_COMMAND )
 }
 
 /*
-int count () const
+int count() const
 */
 HB_FUNC_STATIC( QUNDOSTACK_COUNT )
 {
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ENDMACRO )
 }
 
 /*
-int index () const
+int index() const
 */
 HB_FUNC_STATIC( QUNDOSTACK_INDEX )
 {
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QUNDOSTACK_TEXT )
 }
 
 /*
-int undoLimit () const
+int undoLimit() const
 */
 HB_FUNC_STATIC( QUNDOSTACK_UNDOLIMIT )
 {

@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QTEXTLINE_LEADINGINCLUDED )
 }
 
 /*
-int lineNumber () const
+int lineNumber() const
 */
 HB_FUNC_STATIC( QTEXTLINE_LINENUMBER )
 {
@@ -623,7 +623,7 @@ HB_FUNC_STATIC( QTEXTLINE_SETPOSITION )
 }
 
 /*
-int textLength () const
+int textLength() const
 */
 HB_FUNC_STATIC( QTEXTLINE_TEXTLENGTH )
 {
@@ -647,7 +647,7 @@ HB_FUNC_STATIC( QTEXTLINE_TEXTLENGTH )
 }
 
 /*
-int textStart () const
+int textStart() const
 */
 HB_FUNC_STATIC( QTEXTLINE_TEXTSTART )
 {

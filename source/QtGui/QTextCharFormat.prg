@@ -509,7 +509,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTUNDERLINE )
 }
 
 /*
-int fontWeight () const
+int fontWeight() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTWEIGHT )
 {

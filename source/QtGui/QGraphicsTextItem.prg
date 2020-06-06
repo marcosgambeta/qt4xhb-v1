@@ -819,7 +819,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SHAPE )
 }
 
 /*
-virtual int type () const
+virtual int type() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TYPE )
 {

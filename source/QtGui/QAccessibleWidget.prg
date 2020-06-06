@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILDAT )
 }
 
 /*
-virtual int childCount () const
+virtual int childCount() const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILDCOUNT )
 {

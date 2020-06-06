@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_VERTICALSPACING )
 }
 
 /*
-virtual int count () const
+virtual int count() const
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_COUNT )
 {

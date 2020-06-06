@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QREGION_ISEMPTY )
 }
 
 /*
-int rectCount () const
+int rectCount() const
 */
 HB_FUNC_STATIC( QREGION_RECTCOUNT )
 {

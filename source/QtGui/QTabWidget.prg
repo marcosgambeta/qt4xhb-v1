@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QTABWIDGET_CORNERWIDGET )
 }
 
 /*
-int count () const
+int count() const
 */
 HB_FUNC_STATIC( QTABWIDGET_COUNT )
 {
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QTABWIDGET_COUNT )
 }
 
 /*
-int currentIndex () const
+int currentIndex() const
 */
 HB_FUNC_STATIC( QTABWIDGET_CURRENTINDEX )
 {

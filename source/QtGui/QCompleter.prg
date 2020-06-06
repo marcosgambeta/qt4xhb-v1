@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QCOMPLETER_CASESENSITIVITY )
 }
 
 /*
-int completionColumn () const
+int completionColumn() const
 */
 HB_FUNC_STATIC( QCOMPLETER_COMPLETIONCOLUMN )
 {
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONCOLUMN )
 }
 
 /*
-int completionCount () const
+int completionCount() const
 */
 HB_FUNC_STATIC( QCOMPLETER_COMPLETIONCOUNT )
 {
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONPREFIX )
 }
 
 /*
-int completionRole () const
+int completionRole() const
 */
 HB_FUNC_STATIC( QCOMPLETER_COMPLETIONROLE )
 {
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QCOMPLETER_CURRENTINDEX )
 }
 
 /*
-int currentRow () const
+int currentRow() const
 */
 HB_FUNC_STATIC( QCOMPLETER_CURRENTROW )
 {
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QCOMPLETER_CURRENTROW )
 }
 
 /*
-int maxVisibleItems () const
+int maxVisibleItems() const
 */
 HB_FUNC_STATIC( QCOMPLETER_MAXVISIBLEITEMS )
 {

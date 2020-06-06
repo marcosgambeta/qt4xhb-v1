@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_PAINT )
 }
 
 /*
-virtual int type () const
+virtual int type() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_TYPE )
 {

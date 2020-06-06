@@ -717,7 +717,7 @@ HB_FUNC_STATIC( QPEN_STYLE )
 }
 
 /*
-int width () const
+int width() const
 */
 HB_FUNC_STATIC( QPEN_WIDTH )
 {

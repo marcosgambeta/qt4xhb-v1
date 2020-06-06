@@ -604,7 +604,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_BACKGROUNDBRUSH )
 }
 
 /*
-int bspTreeDepth () const
+int bspTreeDepth() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_BSPTREEDEPTH )
 {

@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QPIXMAP_CREATEMASKFROMCOLOR )
 }
 
 /*
-int depth () const
+int depth() const
 */
 HB_FUNC_STATIC( QPIXMAP_DEPTH )
 {
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QPIXMAP_HASALPHACHANNEL )
 }
 
 /*
-int height () const
+int height() const
 */
 HB_FUNC_STATIC( QPIXMAP_HEIGHT )
 {
@@ -1073,7 +1073,7 @@ HB_FUNC_STATIC( QPIXMAP_TRANSFORMED )
 }
 
 /*
-int width () const
+int width() const
 */
 HB_FUNC_STATIC( QPIXMAP_WIDTH )
 {
@@ -1097,7 +1097,7 @@ HB_FUNC_STATIC( QPIXMAP_WIDTH )
 }
 
 /*
-static int defaultDepth ()
+static int defaultDepth()
 */
 HB_FUNC_STATIC( QPIXMAP_DEFAULTDEPTH )
 {

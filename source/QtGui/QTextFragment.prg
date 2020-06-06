@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMAT )
 }
 
 /*
-int charFormatIndex () const
+int charFormatIndex() const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMATINDEX )
 {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_ISVALID )
 }
 
 /*
-int length () const
+int length() const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_LENGTH )
 {
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_LENGTH )
 }
 
 /*
-int position () const
+int position() const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_POSITION )
 {

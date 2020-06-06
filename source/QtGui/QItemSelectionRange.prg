@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_DELETE )
 }
 
 /*
-int bottom () const
+int bottom() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_BOTTOM )
 {
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_CONTAINS )
 }
 
 /*
-int height () const
+int height() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_HEIGHT )
 {
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_ISVALID )
 }
 
 /*
-int left () const
+int left() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_LEFT )
 {
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_PARENT )
 }
 
 /*
-int right () const
+int right() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_RIGHT )
 {
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_RIGHT )
 }
 
 /*
-int top () const
+int top() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_TOP )
 {
@@ -566,7 +566,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_TOPLEFT )
 }
 
 /*
-int width () const
+int width() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_WIDTH )
 {

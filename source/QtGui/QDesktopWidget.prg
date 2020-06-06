@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ISVIRTUALDESKTOP )
 }
 
 /*
-int primaryScreen () const
+int primaryScreen() const
 */
 HB_FUNC_STATIC( QDESKTOPWIDGET_PRIMARYSCREEN )
 {
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREEN )
 }
 
 /*
-int screenCount () const
+int screenCount() const
 */
 HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENCOUNT )
 {

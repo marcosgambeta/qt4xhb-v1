@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QLISTVIEW_DELETE )
 }
 
 /*
-int batchSize () const
+int batchSize() const
 */
 HB_FUNC_STATIC( QLISTVIEW_BATCHSIZE )
 {
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QLISTVIEW_LAYOUTMODE )
 }
 
 /*
-int modelColumn () const
+int modelColumn() const
 */
 HB_FUNC_STATIC( QLISTVIEW_MODELCOLUMN )
 {
@@ -744,7 +744,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETWRAPPING )
 }
 
 /*
-int spacing () const
+int spacing() const
 */
 HB_FUNC_STATIC( QLISTVIEW_SPACING )
 {

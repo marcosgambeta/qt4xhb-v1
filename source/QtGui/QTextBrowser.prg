@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_NEW )
 }
 
 /*
-int backwardHistoryCount () const
+int backwardHistoryCount() const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_BACKWARDHISTORYCOUNT )
 {
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_CLEARHISTORY )
 }
 
 /*
-int forwardHistoryCount () const
+int forwardHistoryCount() const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_FORWARDHISTORYCOUNT )
 {

@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QDIAL_DELETE )
 }
 
 /*
-int notchSize () const
+int notchSize() const
 */
 HB_FUNC_STATIC( QDIAL_NOTCHSIZE )
 {

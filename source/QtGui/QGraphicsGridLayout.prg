@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNALIGNMENT )
 }
 
 /*
-int columnCount () const
+int columnCount() const
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNCOUNT )
 {
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWALIGNMENT )
 }
 
 /*
-int rowCount () const
+int rowCount() const
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWCOUNT )
 {
@@ -1119,7 +1119,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_VERTICALSPACING )
 }
 
 /*
-virtual int count () const
+virtual int count() const
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COUNT )
 {

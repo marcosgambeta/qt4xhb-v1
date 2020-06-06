@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QLISTWIDGET_CLOSEPERSISTENTEDITOR )
 }
 
 /*
-int count () const
+int count() const
 */
 HB_FUNC_STATIC( QLISTWIDGET_COUNT )
 {
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QLISTWIDGET_CURRENTITEM )
 }
 
 /*
-int currentRow () const
+int currentRow() const
 */
 HB_FUNC_STATIC( QLISTWIDGET_CURRENTROW )
 {

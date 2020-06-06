@@ -407,7 +407,7 @@ uchar * frameBuffer ()
 */
 
 /*
-static int linestep ()
+static int linestep()
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_LINESTEP )
 {
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_LOCK )
 }
 
 /*
-static int screenDepth ()
+static int screenDepth()
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_SCREENDEPTH )
 {
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_SCREENDEPTH )
 }
 
 /*
-static int screenHeight ()
+static int screenHeight()
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_SCREENHEIGHT )
 {
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_SCREENHEIGHT )
 }
 
 /*
-static int screenWidth ()
+static int screenWidth()
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_SCREENWIDTH )
 {

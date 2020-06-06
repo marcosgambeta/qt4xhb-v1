@@ -50,7 +50,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-virtual int exec () = 0
+virtual int exec() = 0
 */
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_EXEC )
 {
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_EXEC )
 }
 
 /*
-int fromPage () const
+int fromPage() const
 */
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_FROMPAGE )
 {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_FROMPAGE )
 }
 
 /*
-int maxPage () const
+int maxPage() const
 */
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_MAXPAGE )
 {
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_MAXPAGE )
 }
 
 /*
-int minPage () const
+int minPage() const
 */
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_MINPAGE )
 {
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETPRINTRANGE )
 }
 
 /*
-int toPage () const
+int toPage() const
 */
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_TOPAGE )
 {

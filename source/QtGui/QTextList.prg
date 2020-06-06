@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QTEXTLIST_ADD )
 }
 
 /*
-int count () const
+int count() const
 */
 HB_FUNC_STATIC( QTEXTLIST_COUNT )
 {

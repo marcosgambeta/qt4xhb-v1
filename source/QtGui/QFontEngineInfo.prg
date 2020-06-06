@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_STYLE )
 }
 
 /*
-int weight () const
+int weight() const
 */
 HB_FUNC_STATIC( QFONTENGINEINFO_WEIGHT )
 {

@@ -673,7 +673,7 @@ HB_FUNC_STATIC( QAPPLICATION_CLIPBOARD )
 }
 
 /*
-static int colorSpec ()
+static int colorSpec()
 */
 HB_FUNC_STATIC( QAPPLICATION_COLORSPEC )
 {
@@ -692,7 +692,7 @@ HB_FUNC_STATIC( QAPPLICATION_COLORSPEC )
 }
 
 /*
-static int cursorFlashTime ()
+static int cursorFlashTime()
 */
 HB_FUNC_STATIC( QAPPLICATION_CURSORFLASHTIME )
 {
@@ -750,7 +750,7 @@ HB_FUNC_STATIC( QAPPLICATION_DESKTOPSETTINGSAWARE )
 }
 
 /*
-static int doubleClickInterval ()
+static int doubleClickInterval()
 */
 HB_FUNC_STATIC( QAPPLICATION_DOUBLECLICKINTERVAL )
 {
@@ -769,7 +769,7 @@ HB_FUNC_STATIC( QAPPLICATION_DOUBLECLICKINTERVAL )
 }
 
 /*
-static int exec ()
+static int exec()
 */
 HB_FUNC_STATIC( QAPPLICATION_EXEC )
 {
@@ -980,7 +980,7 @@ HB_FUNC_STATIC( QAPPLICATION_KEYBOARDINPUTDIRECTION )
 }
 
 /*
-static int keyboardInputInterval ()
+static int keyboardInputInterval()
 */
 HB_FUNC_STATIC( QAPPLICATION_KEYBOARDINPUTINTERVAL )
 {
@@ -1631,7 +1631,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETWINDOWICON )
 }
 
 /*
-static int startDragDistance ()
+static int startDragDistance()
 */
 HB_FUNC_STATIC( QAPPLICATION_STARTDRAGDISTANCE )
 {
@@ -1650,7 +1650,7 @@ HB_FUNC_STATIC( QAPPLICATION_STARTDRAGDISTANCE )
 }
 
 /*
-static int startDragTime ()
+static int startDragTime()
 */
 HB_FUNC_STATIC( QAPPLICATION_STARTDRAGTIME )
 {
@@ -1813,7 +1813,7 @@ HB_FUNC_STATIC( QAPPLICATION_TYPE )
 }
 
 /*
-static int wheelScrollLines ()
+static int wheelScrollLines()
 */
 HB_FUNC_STATIC( QAPPLICATION_WHEELSCROLLLINES )
 {

@@ -4306,7 +4306,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TRANSFORMATIONS )
 }
 
 /*
-virtual int type () const
+virtual int type() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_TYPE )
 {

@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QFONTINFO_ITALIC )
 }
 
 /*
-int pixelSize () const
+int pixelSize() const
 */
 HB_FUNC_STATIC( QFONTINFO_PIXELSIZE )
 {
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QFONTINFO_PIXELSIZE )
 }
 
 /*
-int pointSize () const
+int pointSize() const
 */
 HB_FUNC_STATIC( QFONTINFO_POINTSIZE )
 {
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QFONTINFO_STYLENAME )
 }
 
 /*
-int weight () const
+int weight() const
 */
 HB_FUNC_STATIC( QFONTINFO_WEIGHT )
 {

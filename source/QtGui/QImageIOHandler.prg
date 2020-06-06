@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_FORMAT )
 }
 
 /*
-virtual int imageCount () const
+virtual int imageCount() const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_IMAGECOUNT )
 {
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTONEXTIMAGE )
 }
 
 /*
-virtual int loopCount () const
+virtual int loopCount() const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_LOOPCOUNT )
 {
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_LOOPCOUNT )
 }
 
 /*
-virtual int nextImageDelay () const
+virtual int nextImageDelay() const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_NEXTIMAGEDELAY )
 {

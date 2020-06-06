@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_CLONE )
 }
 
 /*
-int column () const
+int column() const
 */
 HB_FUNC_STATIC( QTABLEWIDGETITEM_COLUMN )
 {
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_READ )
 }
 
 /*
-int row () const
+int row() const
 */
 HB_FUNC_STATIC( QTABLEWIDGETITEM_ROW )
 {
@@ -931,7 +931,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_TEXT )
 }
 
 /*
-int textAlignment () const
+int textAlignment() const
 */
 HB_FUNC_STATIC( QTABLEWIDGETITEM_TEXTALIGNMENT )
 {
@@ -979,7 +979,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_TOOLTIP )
 }
 
 /*
-int type () const
+int type() const
 */
 HB_FUNC_STATIC( QTABLEWIDGETITEM_TYPE )
 {

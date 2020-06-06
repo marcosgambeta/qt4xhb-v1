@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_ISTEXTVISIBLE )
 }
 
 /*
-int maximum () const
+int maximum() const
 */
 HB_FUNC_STATIC( QPROGRESSBAR_MAXIMUM )
 {
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_MAXIMUM )
 }
 
 /*
-int minimum () const
+int minimum() const
 */
 HB_FUNC_STATIC( QPROGRESSBAR_MINIMUM )
 {
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_TEXTDIRECTION )
 }
 
 /*
-int value () const
+int value() const
 */
 HB_FUNC_STATIC( QPROGRESSBAR_VALUE )
 {

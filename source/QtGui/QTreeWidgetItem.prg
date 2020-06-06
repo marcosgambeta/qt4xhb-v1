@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_CHILD )
 }
 
 /*
-int childCount () const
+int childCount() const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_CHILDCOUNT )
 {
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_CLONE )
 }
 
 /*
-int columnCount () const
+int columnCount() const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_COLUMNCOUNT )
 {
@@ -1639,7 +1639,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TREEWIDGET )
 }
 
 /*
-int type () const
+int type() const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_TYPE )
 {

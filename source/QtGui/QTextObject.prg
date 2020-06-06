@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_FORMAT )
 }
 
 /*
-int formatIndex () const
+int formatIndex() const
 */
 HB_FUNC_STATIC( QTEXTOBJECT_FORMATINDEX )
 {
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_FORMATINDEX )
 }
 
 /*
-int objectIndex () const
+int objectIndex() const
 */
 HB_FUNC_STATIC( QTEXTOBJECT_OBJECTINDEX )
 {

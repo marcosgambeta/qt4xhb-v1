@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QTEXTFRAME_FIRSTCURSORPOSITION )
 }
 
 /*
-int firstPosition () const
+int firstPosition() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_FIRSTPOSITION )
 {
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QTEXTFRAME_LASTCURSORPOSITION )
 }
 
 /*
-int lastPosition () const
+int lastPosition() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_LASTPOSITION )
 {

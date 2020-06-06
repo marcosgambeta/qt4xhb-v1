@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QTOOLBOX_ADDITEM )
 }
 
 /*
-int count () const
+int count() const
 */
 HB_FUNC_STATIC( QTOOLBOX_COUNT )
 {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QTOOLBOX_COUNT )
 }
 
 /*
-int currentIndex () const
+int currentIndex() const
 */
 HB_FUNC_STATIC( QTOOLBOX_CURRENTINDEX )
 {

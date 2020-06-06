@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_STRETCHFACTOR )
 }
 
 /*
-virtual int count () const
+virtual int count() const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_COUNT )
 {

@@ -579,7 +579,7 @@ HB_FUNC_STATIC( QFONT_OVERLINE )
 }
 
 /*
-int pixelSize () const
+int pixelSize() const
 */
 HB_FUNC_STATIC( QFONT_PIXELSIZE )
 {
@@ -603,7 +603,7 @@ HB_FUNC_STATIC( QFONT_PIXELSIZE )
 }
 
 /*
-int pointSize () const
+int pointSize() const
 */
 HB_FUNC_STATIC( QFONT_POINTSIZE )
 {
@@ -1270,7 +1270,7 @@ HB_FUNC_STATIC( QFONT_SETWORDSPACING )
 }
 
 /*
-int stretch () const
+int stretch() const
 */
 HB_FUNC_STATIC( QFONT_STRETCH )
 {
@@ -1438,7 +1438,7 @@ HB_FUNC_STATIC( QFONT_UNDERLINE )
 }
 
 /*
-int weight () const
+int weight() const
 */
 HB_FUNC_STATIC( QFONT_WEIGHT )
 {

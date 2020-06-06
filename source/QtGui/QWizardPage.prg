@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_ISFINALPAGE )
 }
 
 /*
-virtual int nextId () const
+virtual int nextId() const
 */
 HB_FUNC_STATIC( QWIZARDPAGE_NEXTID )
 {

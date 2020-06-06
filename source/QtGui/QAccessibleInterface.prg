@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_CHILDAT )
 }
 
 /*
-virtual int childCount () const = 0
+virtual int childCount() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_CHILDCOUNT )
 {

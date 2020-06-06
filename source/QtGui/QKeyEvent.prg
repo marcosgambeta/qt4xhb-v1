@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QKEYEVENT_DELETE )
 }
 
 /*
-int count () const
+int count() const
 */
 HB_FUNC_STATIC( QKEYEVENT_COUNT )
 {
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QKEYEVENT_ISAUTOREPEAT )
 }
 
 /*
-int key () const
+int key() const
 */
 HB_FUNC_STATIC( QKEYEVENT_KEY )
 {

@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_DELETE )
 }
 
 /*
-int column () const
+int column() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELL_COLUMN )
 {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_COLUMN )
 }
 
 /*
-int columnSpan () const
+int columnSpan() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELL_COLUMNSPAN )
 {
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_LASTCURSORPOSITION )
 }
 
 /*
-int row () const
+int row() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELL_ROW )
 {
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_ROW )
 }
 
 /*
-int rowSpan () const
+int rowSpan() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELL_ROWSPAN )
 {
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_SETFORMAT )
 }
 
 /*
-int tableCellFormatIndex () const
+int tableCellFormatIndex() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELL_TABLECELLFORMATINDEX )
 {

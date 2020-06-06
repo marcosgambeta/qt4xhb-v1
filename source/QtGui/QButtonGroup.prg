@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDBUTTON )
 }
 
 /*
-int checkedId () const
+int checkedId() const
 */
 HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDID )
 {

@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_COMBOBOXITEMS )
 }
 
 /*
-int doubleDecimals () const
+int doubleDecimals() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEDECIMALS )
 {
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_INPUTMODE )
 }
 
 /*
-int intMaximum () const
+int intMaximum() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_INTMAXIMUM )
 {
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_INTMAXIMUM )
 }
 
 /*
-int intMinimum () const
+int intMinimum() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_INTMINIMUM )
 {
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_INTMINIMUM )
 }
 
 /*
-int intStep () const
+int intStep() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_INTSTEP )
 {
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_INTSTEP )
 }
 
 /*
-int intValue () const
+int intValue() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_INTVALUE )
 {

@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QCOLORMAP_COLORMAP )
 }
 
 /*
-int depth () const
+int depth() const
 */
 HB_FUNC_STATIC( QCOLORMAP_DEPTH )
 {
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QCOLORMAP_PIXEL )
 }
 
 /*
-int size () const
+int size() const
 */
 HB_FUNC_STATIC( QCOLORMAP_SIZE )
 {

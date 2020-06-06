@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_DELETE )
 }
 
 /*
-int cursorWidth () const
+int cursorWidth() const
 */
 HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_CURSORWIDTH )
 {
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_HITTEST )
 }
 
 /*
-virtual int pageCount () const
+virtual int pageCount() const
 */
 HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_PAGECOUNT )
 {

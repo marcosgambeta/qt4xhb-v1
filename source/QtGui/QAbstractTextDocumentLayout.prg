@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_HITTEST )
 }
 
 /*
-virtual int pageCount () const = 0
+virtual int pageCount() const = 0
 */
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_PAGECOUNT )
 {

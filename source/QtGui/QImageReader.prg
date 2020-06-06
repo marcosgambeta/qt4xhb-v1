@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QIMAGEREADER_CLIPRECT )
 }
 
 /*
-int currentImageNumber () const
+int currentImageNumber() const
 */
 HB_FUNC_STATIC( QIMAGEREADER_CURRENTIMAGENUMBER )
 {
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QIMAGEREADER_FORMAT )
 }
 
 /*
-int imageCount () const
+int imageCount() const
 */
 HB_FUNC_STATIC( QIMAGEREADER_IMAGECOUNT )
 {
@@ -529,7 +529,7 @@ HB_FUNC_STATIC( QIMAGEREADER_JUMPTONEXTIMAGE )
 }
 
 /*
-int loopCount () const
+int loopCount() const
 */
 HB_FUNC_STATIC( QIMAGEREADER_LOOPCOUNT )
 {
@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QIMAGEREADER_LOOPCOUNT )
 }
 
 /*
-int nextImageDelay () const
+int nextImageDelay() const
 */
 HB_FUNC_STATIC( QIMAGEREADER_NEXTIMAGEDELAY )
 {
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QIMAGEREADER_NEXTIMAGEDELAY )
 }
 
 /*
-int quality () const
+int quality() const
 */
 HB_FUNC_STATIC( QIMAGEREADER_QUALITY )
 {

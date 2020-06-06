@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QDIALOG_ISSIZEGRIPENABLED )
 }
 
 /*
-int result () const
+int result() const
 */
 HB_FUNC_STATIC( QDIALOG_RESULT )
 {
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QDIALOG_DONE )
 }
 
 /*
-int exec ()
+int exec()
 */
 HB_FUNC_STATIC( QDIALOG_EXEC )
 {

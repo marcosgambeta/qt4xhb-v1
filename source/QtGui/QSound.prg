@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QSOUND_ISFINISHED )
 }
 
 /*
-int loops () const
+int loops() const
 */
 HB_FUNC_STATIC( QSOUND_LOOPS )
 {
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QSOUND_LOOPS )
 }
 
 /*
-int loopsRemaining () const
+int loopsRemaining() const
 */
 HB_FUNC_STATIC( QSOUND_LOOPSREMAINING )
 {

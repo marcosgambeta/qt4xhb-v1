@@ -1480,7 +1480,7 @@ HB_FUNC_STATIC( QWIDGET_HASMOUSETRACKING )
 }
 
 /*
-int height () const
+int height() const
 */
 HB_FUNC_STATIC( QWIDGET_HEIGHT )
 {
@@ -2223,7 +2223,7 @@ HB_FUNC_STATIC( QWIDGET_MASK )
 }
 
 /*
-int maximumHeight () const
+int maximumHeight() const
 */
 HB_FUNC_STATIC( QWIDGET_MAXIMUMHEIGHT )
 {
@@ -2272,7 +2272,7 @@ HB_FUNC_STATIC( QWIDGET_MAXIMUMSIZE )
 }
 
 /*
-int maximumWidth () const
+int maximumWidth() const
 */
 HB_FUNC_STATIC( QWIDGET_MAXIMUMWIDTH )
 {
@@ -2296,7 +2296,7 @@ HB_FUNC_STATIC( QWIDGET_MAXIMUMWIDTH )
 }
 
 /*
-int minimumHeight () const
+int minimumHeight() const
 */
 HB_FUNC_STATIC( QWIDGET_MINIMUMHEIGHT )
 {
@@ -2370,7 +2370,7 @@ HB_FUNC_STATIC( QWIDGET_MINIMUMSIZEHINT )
 }
 
 /*
-int minimumWidth () const
+int minimumWidth() const
 */
 HB_FUNC_STATIC( QWIDGET_MINIMUMWIDTH )
 {
@@ -5240,7 +5240,7 @@ HB_FUNC_STATIC( QWIDGET_WHATSTHIS )
 }
 
 /*
-int width () const
+int width() const
 */
 HB_FUNC_STATIC( QWIDGET_WIDTH )
 {
@@ -5556,7 +5556,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWTYPE )
 }
 
 /*
-int x () const
+int x() const
 */
 HB_FUNC_STATIC( QWIDGET_X )
 {
@@ -5580,7 +5580,7 @@ HB_FUNC_STATIC( QWIDGET_X )
 }
 
 /*
-int y () const
+int y() const
 */
 HB_FUNC_STATIC( QWIDGET_Y )
 {
@@ -6047,7 +6047,7 @@ HB_FUNC_STATIC( QWIDGET_SHOWNORMAL )
 //=============================================================================
 
 /*
-int colorCount () const
+int colorCount() const
 */
 HB_FUNC_STATIC( QWIDGET_COLORCOUNT )
 {
@@ -6071,7 +6071,7 @@ HB_FUNC_STATIC( QWIDGET_COLORCOUNT )
 }
 
 /*
-int depth () const
+int depth() const
 */
 HB_FUNC_STATIC( QWIDGET_DEPTH )
 {
@@ -6095,7 +6095,7 @@ HB_FUNC_STATIC( QWIDGET_DEPTH )
 }
 
 /*
-int heightMM () const
+int heightMM() const
 */
 HB_FUNC_STATIC( QWIDGET_HEIGHTMM )
 {
@@ -6119,7 +6119,7 @@ HB_FUNC_STATIC( QWIDGET_HEIGHTMM )
 }
 
 /*
-int logicalDpiX () const
+int logicalDpiX() const
 */
 HB_FUNC_STATIC( QWIDGET_LOGICALDPIX )
 {
@@ -6143,7 +6143,7 @@ HB_FUNC_STATIC( QWIDGET_LOGICALDPIX )
 }
 
 /*
-int logicalDpiY () const
+int logicalDpiY() const
 */
 HB_FUNC_STATIC( QWIDGET_LOGICALDPIY )
 {
@@ -6215,7 +6215,7 @@ HB_FUNC_STATIC( QWIDGET_PAINTINGACTIVE )
 }
 
 /*
-int physicalDpiX () const
+int physicalDpiX() const
 */
 HB_FUNC_STATIC( QWIDGET_PHYSICALDPIX )
 {
@@ -6239,7 +6239,7 @@ HB_FUNC_STATIC( QWIDGET_PHYSICALDPIX )
 }
 
 /*
-int physicalDpiY () const
+int physicalDpiY() const
 */
 HB_FUNC_STATIC( QWIDGET_PHYSICALDPIY )
 {
@@ -6263,7 +6263,7 @@ HB_FUNC_STATIC( QWIDGET_PHYSICALDPIY )
 }
 
 /*
-int widthMM () const
+int widthMM() const
 */
 HB_FUNC_STATIC( QWIDGET_WIDTHMM )
 {

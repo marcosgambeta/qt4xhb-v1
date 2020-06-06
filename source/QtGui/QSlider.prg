@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QSLIDER_SETTICKPOSITION )
 }
 
 /*
-int tickInterval () const
+int tickInterval() const
 */
 HB_FUNC_STATIC( QSLIDER_TICKINTERVAL )
 {

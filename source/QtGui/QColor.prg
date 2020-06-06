@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QCOLOR_DELETE )
 }
 
 /*
-int alpha () const
+int alpha() const
 */
 HB_FUNC_STATIC( QCOLOR_ALPHA )
 {
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QCOLOR_ALPHAF )
 }
 
 /*
-int black () const
+int black() const
 */
 HB_FUNC_STATIC( QCOLOR_BLACK )
 {
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QCOLOR_BLACKF )
 }
 
 /*
-int blue () const
+int blue() const
 */
 HB_FUNC_STATIC( QCOLOR_BLUE )
 {
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QCOLOR_CONVERTTO )
 }
 
 /*
-int cyan () const
+int cyan() const
 */
 HB_FUNC_STATIC( QCOLOR_CYAN )
 {
@@ -781,7 +781,7 @@ HB_FUNC_STATIC( QCOLOR_GETRGBF )
 }
 
 /*
-int green () const
+int green() const
 */
 HB_FUNC_STATIC( QCOLOR_GREEN )
 {
@@ -829,7 +829,7 @@ HB_FUNC_STATIC( QCOLOR_GREENF )
 }
 
 /*
-int hslHue () const
+int hslHue() const
 */
 HB_FUNC_STATIC( QCOLOR_HSLHUE )
 {
@@ -877,7 +877,7 @@ HB_FUNC_STATIC( QCOLOR_HSLHUEF )
 }
 
 /*
-int hslSaturation () const
+int hslSaturation() const
 */
 HB_FUNC_STATIC( QCOLOR_HSLSATURATION )
 {
@@ -925,7 +925,7 @@ HB_FUNC_STATIC( QCOLOR_HSLSATURATIONF )
 }
 
 /*
-int hsvHue () const
+int hsvHue() const
 */
 HB_FUNC_STATIC( QCOLOR_HSVHUE )
 {
@@ -973,7 +973,7 @@ HB_FUNC_STATIC( QCOLOR_HSVHUEF )
 }
 
 /*
-int hsvSaturation () const
+int hsvSaturation() const
 */
 HB_FUNC_STATIC( QCOLOR_HSVSATURATION )
 {
@@ -1021,7 +1021,7 @@ HB_FUNC_STATIC( QCOLOR_HSVSATURATIONF )
 }
 
 /*
-int hue () const
+int hue() const
 */
 HB_FUNC_STATIC( QCOLOR_HUE )
 {
@@ -1118,7 +1118,7 @@ HB_FUNC_STATIC( QCOLOR_LIGHTER )
 }
 
 /*
-int lightness () const
+int lightness() const
 */
 HB_FUNC_STATIC( QCOLOR_LIGHTNESS )
 {
@@ -1166,7 +1166,7 @@ HB_FUNC_STATIC( QCOLOR_LIGHTNESSF )
 }
 
 /*
-int magenta () const
+int magenta() const
 */
 HB_FUNC_STATIC( QCOLOR_MAGENTA )
 {
@@ -1238,7 +1238,7 @@ HB_FUNC_STATIC( QCOLOR_NAME )
 }
 
 /*
-int red () const
+int red() const
 */
 HB_FUNC_STATIC( QCOLOR_RED )
 {
@@ -1334,7 +1334,7 @@ HB_FUNC_STATIC( QCOLOR_RGBA )
 }
 
 /*
-int saturation () const
+int saturation() const
 */
 HB_FUNC_STATIC( QCOLOR_SATURATION )
 {
@@ -1999,7 +1999,7 @@ HB_FUNC_STATIC( QCOLOR_TORGB )
 }
 
 /*
-int value () const
+int value() const
 */
 HB_FUNC_STATIC( QCOLOR_VALUE )
 {
@@ -2047,7 +2047,7 @@ HB_FUNC_STATIC( QCOLOR_VALUEF )
 }
 
 /*
-int yellow () const
+int yellow() const
 */
 HB_FUNC_STATIC( QCOLOR_YELLOW )
 {

@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QHEADERVIEW_CASCADINGSECTIONRESIZES )
 }
 
 /*
-int count () const
+int count() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_COUNT )
 {
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QHEADERVIEW_DEFAULTALIGNMENT )
 }
 
 /*
-int defaultSectionSize () const
+int defaultSectionSize() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_DEFAULTSECTIONSIZE )
 {
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QHEADERVIEW_DEFAULTSECTIONSIZE )
 }
 
 /*
-int hiddenSectionCount () const
+int hiddenSectionCount() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_HIDDENSECTIONCOUNT )
 {
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ISSORTINDICATORSHOWN )
 }
 
 /*
-int length () const
+int length() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_LENGTH )
 {
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT )
 }
 
 /*
-int minimumSectionSize () const
+int minimumSectionSize() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_MINIMUMSECTIONSIZE )
 {
@@ -575,7 +575,7 @@ HB_FUNC_STATIC( QHEADERVIEW_MOVESECTION )
 }
 
 /*
-int offset () const
+int offset() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_OFFSET )
 {
@@ -1279,7 +1279,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SORTINDICATORORDER )
 }
 
 /*
-int sortIndicatorSection () const
+int sortIndicatorSection() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_SORTINDICATORSECTION )
 {
@@ -1327,7 +1327,7 @@ HB_FUNC_STATIC( QHEADERVIEW_STRETCHLASTSECTION )
 }
 
 /*
-int stretchSectionCount () const
+int stretchSectionCount() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_STRETCHSECTIONCOUNT )
 {

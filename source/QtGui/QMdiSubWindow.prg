@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_ISSHADED )
 }
 
 /*
-int keyboardPageStep () const
+int keyboardPageStep() const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_KEYBOARDPAGESTEP )
 {
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_KEYBOARDPAGESTEP )
 }
 
 /*
-int keyboardSingleStep () const
+int keyboardSingleStep() const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_KEYBOARDSINGLESTEP )
 {

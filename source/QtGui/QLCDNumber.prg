@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW )
 }
 
 /*
-int digitCount () const
+int digitCount() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_DIGITCOUNT )
 {
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QLCDNUMBER_DIGITCOUNT )
 }
 
 /*
-int intValue () const
+int intValue() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_INTVALUE )
 {

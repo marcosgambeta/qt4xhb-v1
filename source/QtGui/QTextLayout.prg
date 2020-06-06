@@ -560,7 +560,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_LINEAT )
 }
 
 /*
-int lineCount () const
+int lineCount() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_LINECOUNT )
 {
@@ -706,7 +706,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_POSITION )
 }
 
 /*
-int preeditAreaPosition () const
+int preeditAreaPosition() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_PREEDITAREAPOSITION )
 {

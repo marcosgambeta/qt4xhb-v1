@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_BLOCKFORMAT )
 }
 
 /*
-int blockFormatIndex () const
+int blockFormatIndex() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_BLOCKFORMATINDEX )
 {
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_BLOCKFORMATINDEX )
 }
 
 /*
-int blockNumber () const
+int blockNumber() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_BLOCKNUMBER )
 {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_CHARFORMAT )
 }
 
 /*
-int charFormatIndex () const
+int charFormatIndex() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_CHARFORMATINDEX )
 {
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_DOCUMENT )
 }
 
 /*
-int firstLineNumber () const
+int firstLineNumber() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_FIRSTLINENUMBER )
 {
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_LAYOUT )
 }
 
 /*
-int length () const
+int length() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_LENGTH )
 {
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_LENGTH )
 }
 
 /*
-int lineCount () const
+int lineCount() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_LINECOUNT )
 {
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_NEXT )
 }
 
 /*
-int position () const
+int position() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_POSITION )
 {
@@ -534,7 +534,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_PREVIOUS )
 }
 
 /*
-int revision () const
+int revision() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_REVISION )
 {
@@ -786,7 +786,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_USERDATA )
 }
 
 /*
-int userState () const
+int userState() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_USERSTATE )
 {

@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_DONE )
 }
 
 /*
-virtual int exec ()
+virtual int exec()
 */
 HB_FUNC_STATIC( QPRINTDIALOG_EXEC )
 {

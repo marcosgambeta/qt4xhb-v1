@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SETGEOMETRY )
 }
 
 /*
-virtual int type () const
+virtual int type() const
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_TYPE )
 {

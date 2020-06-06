@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_DELETE )
 }
 
 /*
-int indent () const
+int indent() const
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_INDENT )
 {

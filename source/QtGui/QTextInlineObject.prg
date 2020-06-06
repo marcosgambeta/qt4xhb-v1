@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_FORMAT )
 }
 
 /*
-int formatIndex () const
+int formatIndex() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_FORMATINDEX )
 {
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_TEXTDIRECTION )
 }
 
 /*
-int textPosition () const
+int textPosition() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_TEXTPOSITION )
 {

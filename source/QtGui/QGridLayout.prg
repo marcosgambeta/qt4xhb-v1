@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_CELLRECT )
 }
 
 /*
-int columnCount () const
+int columnCount() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNCOUNT )
 {
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_GETITEMPOSITION )
 }
 
 /*
-int horizontalSpacing () const
+int horizontalSpacing() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_HORIZONTALSPACING )
 {
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ORIGINCORNER )
 }
 
 /*
-int rowCount () const
+int rowCount() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ROWCOUNT )
 {
@@ -750,7 +750,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETVERTICALSPACING )
 }
 
 /*
-int spacing () const
+int spacing() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SPACING )
 {
@@ -774,7 +774,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SPACING )
 }
 
 /*
-int verticalSpacing () const
+int verticalSpacing() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_VERTICALSPACING )
 {
@@ -798,7 +798,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_VERTICALSPACING )
 }
 
 /*
-virtual int count () const
+virtual int count() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_COUNT )
 {

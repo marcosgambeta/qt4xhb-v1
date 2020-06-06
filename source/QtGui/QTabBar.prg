@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QTABBAR_ADDTAB )
 }
 
 /*
-int count () const
+int count() const
 */
 HB_FUNC_STATIC( QTABBAR_COUNT )
 {
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QTABBAR_COUNT )
 }
 
 /*
-int currentIndex () const
+int currentIndex() const
 */
 HB_FUNC_STATIC( QTABBAR_CURRENTINDEX )
 {

@@ -1516,7 +1516,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SHAPE )
 }
 
 /*
-virtual int type () const
+virtual int type() const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_TYPE )
 {

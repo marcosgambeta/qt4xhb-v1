@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_COLUMNWIDTHCONSTRAINTS )
 }
 
 /*
-int columns () const
+int columns() const
 */
 HB_FUNC_STATIC( QTEXTTABLEFORMAT_COLUMNS )
 {
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_COLUMNS )
 }
 
 /*
-int headerRowCount () const
+int headerRowCount() const
 */
 HB_FUNC_STATIC( QTEXTTABLEFORMAT_HEADERROWCOUNT )
 {

@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_ADDWIDGET )
 }
 
 /*
-int count () const
+int count() const
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_COUNT )
 {
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_COUNT )
 }
 
 /*
-int currentIndex () const
+int currentIndex() const
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_CURRENTINDEX )
 {

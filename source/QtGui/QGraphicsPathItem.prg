@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_SHAPE )
 }
 
 /*
-virtual int type () const
+virtual int type() const
 */
 HB_FUNC_STATIC( QGRAPHICSPATHITEM_TYPE )
 {

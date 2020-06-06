@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_LABELTEXT )
 }
 
 /*
-int maximum () const
+int maximum() const
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_MAXIMUM )
 {
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_MAXIMUM )
 }
 
 /*
-int minimum () const
+int minimum() const
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_MINIMUM )
 {
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_MINIMUM )
 }
 
 /*
-int minimumDuration () const
+int minimumDuration() const
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_MINIMUMDURATION )
 {
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETLABEL )
 }
 
 /*
-int value () const
+int value() const
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_VALUE )
 {

@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALPOS )
 }
 
 /*
-int globalX () const
+int globalX() const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALX )
 {
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALX )
 }
 
 /*
-int globalY () const
+int globalY() const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALY )
 {
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_REASON )
 }
 
 /*
-int x () const
+int x() const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_X )
 {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_X )
 }
 
 /*
-int y () const
+int y() const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_Y )
 {

@@ -766,7 +766,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_MERGE )
 }
 
 /*
-int objectIndex () const
+int objectIndex() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_OBJECTINDEX )
 {
@@ -790,7 +790,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_OBJECTINDEX )
 }
 
 /*
-int objectType () const
+int objectType() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_OBJECTTYPE )
 {
@@ -864,7 +864,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_PROPERTY )
 }
 
 /*
-int propertyCount () const
+int propertyCount() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_PROPERTYCOUNT )
 {
@@ -1276,7 +1276,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOTABLEFORMAT )
 }
 
 /*
-int type () const
+int type() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_TYPE )
 {

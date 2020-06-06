@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QIMAGE_ALLGRAY )
 }
 
 /*
-int bitPlaneCount () const
+int bitPlaneCount() const
 */
 HB_FUNC_STATIC( QIMAGE_BITPLANECOUNT )
 {
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QIMAGE_BITPLANECOUNT )
 }
 
 /*
-int byteCount () const
+int byteCount() const
 */
 HB_FUNC_STATIC( QIMAGE_BYTECOUNT )
 {
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QIMAGE_BYTECOUNT )
 }
 
 /*
-int bytesPerLine () const
+int bytesPerLine() const
 */
 HB_FUNC_STATIC( QIMAGE_BYTESPERLINE )
 {
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QIMAGE_COLOR )
 }
 
 /*
-int colorCount () const
+int colorCount() const
 */
 HB_FUNC_STATIC( QIMAGE_COLORCOUNT )
 {
@@ -660,7 +660,7 @@ HB_FUNC_STATIC( QIMAGE_CREATEMASKFROMCOLOR )
 }
 
 /*
-int depth () const
+int depth() const
 */
 HB_FUNC_STATIC( QIMAGE_DEPTH )
 {
@@ -684,7 +684,7 @@ HB_FUNC_STATIC( QIMAGE_DEPTH )
 }
 
 /*
-int dotsPerMeterX () const
+int dotsPerMeterX() const
 */
 HB_FUNC_STATIC( QIMAGE_DOTSPERMETERX )
 {
@@ -708,7 +708,7 @@ HB_FUNC_STATIC( QIMAGE_DOTSPERMETERX )
 }
 
 /*
-int dotsPerMeterY () const
+int dotsPerMeterY() const
 */
 HB_FUNC_STATIC( QIMAGE_DOTSPERMETERY )
 {
@@ -884,7 +884,7 @@ HB_FUNC_STATIC( QIMAGE_HASALPHACHANNEL )
 }
 
 /*
-int height () const
+int height() const
 */
 HB_FUNC_STATIC( QIMAGE_HEIGHT )
 {
@@ -1854,7 +1854,7 @@ HB_FUNC_STATIC( QIMAGE_VALID )
 }
 
 /*
-int width () const
+int width() const
 */
 HB_FUNC_STATIC( QIMAGE_WIDTH )
 {

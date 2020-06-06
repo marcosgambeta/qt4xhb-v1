@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QSPLITTER_CHILDRENCOLLAPSIBLE )
 }
 
 /*
-int count () const
+int count() const
 */
 HB_FUNC_STATIC( QSPLITTER_COUNT )
 {
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QSPLITTER_HANDLE )
 }
 
 /*
-int handleWidth () const
+int handleWidth() const
 */
 HB_FUNC_STATIC( QSPLITTER_HANDLEWIDTH )
 {

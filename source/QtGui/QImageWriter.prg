@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_CANWRITE )
 }
 
 /*
-int compression () const
+int compression() const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_COMPRESSION )
 {
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_GAMMA )
 }
 
 /*
-int quality () const
+int quality() const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_QUALITY )
 {

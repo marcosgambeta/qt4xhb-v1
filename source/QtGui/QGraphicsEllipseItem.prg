@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SETSTARTANGLE )
 }
 
 /*
-int spanAngle () const
+int spanAngle() const
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SPANANGLE )
 {
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SPANANGLE )
 }
 
 /*
-int startAngle () const
+int startAngle() const
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_STARTANGLE )
 {
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SHAPE )
 }
 
 /*
-virtual int type () const
+virtual int type() const
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_TYPE )
 {

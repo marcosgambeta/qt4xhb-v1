@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_BOTTOM )
 }
 
 /*
-int decimals () const
+int decimals() const
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_DECIMALS )
 {

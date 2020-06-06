@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_MINIMUMDATE )
 }
 
 /*
-int monthShown () const
+int monthShown() const
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_MONTHSHOWN )
 {
@@ -788,7 +788,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_WEEKDAYTEXTFORMAT )
 }
 
 /*
-int yearShown () const
+int yearShown() const
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_YEARSHOWN )
 {

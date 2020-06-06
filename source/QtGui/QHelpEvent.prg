@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QHELPEVENT_GLOBALPOS )
 }
 
 /*
-int globalX () const
+int globalX() const
 */
 HB_FUNC_STATIC( QHELPEVENT_GLOBALX )
 {
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QHELPEVENT_GLOBALX )
 }
 
 /*
-int globalY () const
+int globalY() const
 */
 HB_FUNC_STATIC( QHELPEVENT_GLOBALY )
 {
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QHELPEVENT_POS )
 }
 
 /*
-int x () const
+int x() const
 */
 HB_FUNC_STATIC( QHELPEVENT_X )
 {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QHELPEVENT_X )
 }
 
 /*
-int y () const
+int y() const
 */
 HB_FUNC_STATIC( QHELPEVENT_Y )
 {

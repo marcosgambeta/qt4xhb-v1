@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_COLUMN )
 }
 
 /*
-int columnCount () const
+int columnCount() const
 */
 HB_FUNC_STATIC( QTABLEWIDGET_COLUMNCOUNT )
 {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_COLUMNCOUNT )
 }
 
 /*
-int currentColumn () const
+int currentColumn() const
 */
 HB_FUNC_STATIC( QTABLEWIDGET_CURRENTCOLUMN )
 {
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_CURRENTITEM )
 }
 
 /*
-int currentRow () const
+int currentRow() const
 */
 HB_FUNC_STATIC( QTABLEWIDGET_CURRENTROW )
 {
@@ -585,7 +585,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ROW )
 }
 
 /*
-int rowCount () const
+int rowCount() const
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ROWCOUNT )
 {

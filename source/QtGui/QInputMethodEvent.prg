@@ -111,7 +111,7 @@ const QString & preeditString () const
 */
 
 /*
-int replacementLength () const
+int replacementLength() const
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTLENGTH )
 {
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTLENGTH )
 }
 
 /*
-int replacementStart () const
+int replacementStart() const
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTSTART )
 {

@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_SHAPE )
 }
 
 /*
-virtual int type () const
+virtual int type() const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_TYPE )
 {

@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORFORWARD )
 }
 
 /*
-int cursorPosition () const
+int cursorPosition() const
 */
 HB_FUNC_STATIC( QLINEEDIT_CURSORPOSITION )
 {
@@ -856,7 +856,7 @@ HB_FUNC_STATIC( QLINEEDIT_ISUNDOAVAILABLE )
 }
 
 /*
-int maxLength () const
+int maxLength() const
 */
 HB_FUNC_STATIC( QLINEEDIT_MAXLENGTH )
 {
@@ -953,7 +953,7 @@ HB_FUNC_STATIC( QLINEEDIT_SELECTEDTEXT )
 }
 
 /*
-int selectionStart () const
+int selectionStart() const
 */
 HB_FUNC_STATIC( QLINEEDIT_SELECTIONSTART )
 {

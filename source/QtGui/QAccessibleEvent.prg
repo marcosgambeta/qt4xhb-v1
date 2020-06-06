@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_NEW )
 }
 
 /*
-int child () const
+int child() const
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_CHILD )
 {

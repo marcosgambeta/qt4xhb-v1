@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QSPINBOX_CLEANTEXT )
 }
 
 /*
-int maximum () const
+int maximum() const
 */
 HB_FUNC_STATIC( QSPINBOX_MAXIMUM )
 {
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QSPINBOX_MAXIMUM )
 }
 
 /*
-int minimum () const
+int minimum() const
 */
 HB_FUNC_STATIC( QSPINBOX_MINIMUM )
 {
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QSPINBOX_SETSUFFIX )
 }
 
 /*
-int singleStep () const
+int singleStep() const
 */
 HB_FUNC_STATIC( QSPINBOX_SINGLESTEP )
 {
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QSPINBOX_SUFFIX )
 }
 
 /*
-int value () const
+int value() const
 */
 HB_FUNC_STATIC( QSPINBOX_VALUE )
 {

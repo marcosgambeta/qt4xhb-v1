@@ -788,7 +788,7 @@ HB_FUNC_STATIC( QRAWFONT_UNITSPEREM )
 }
 
 /*
-int weight () const
+int weight() const
 */
 HB_FUNC_STATIC( QRAWFONT_WEIGHT )
 {

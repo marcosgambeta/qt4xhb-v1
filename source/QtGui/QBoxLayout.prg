@@ -544,7 +544,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_SETSTRETCHFACTOR )
 }
 
 /*
-int spacing () const
+int spacing() const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_SPACING )
 {
@@ -618,7 +618,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDITEM )
 }
 
 /*
-virtual int count () const
+virtual int count() const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_COUNT )
 {

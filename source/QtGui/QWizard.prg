@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QWIZARD_BUTTONTEXT )
 }
 
 /*
-int currentId () const
+int currentId() const
 */
 HB_FUNC_STATIC( QWIZARD_CURRENTID )
 {
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QWIZARD_HASVISITEDPAGE )
 }
 
 /*
-virtual int nextId () const
+virtual int nextId() const
 */
 HB_FUNC_STATIC( QWIZARD_NEXTID )
 {
@@ -848,7 +848,7 @@ HB_FUNC_STATIC( QWIZARD_SIDEWIDGET )
 }
 
 /*
-int startId () const
+int startId() const
 */
 HB_FUNC_STATIC( QWIZARD_STARTID )
 {

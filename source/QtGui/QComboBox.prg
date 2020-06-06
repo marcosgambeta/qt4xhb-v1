@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QCOMBOBOX_COMPLETER )
 }
 
 /*
-int count () const
+int count() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_COUNT )
 {
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QCOMBOBOX_COUNT )
 }
 
 /*
-int currentIndex () const
+int currentIndex() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_CURRENTINDEX )
 {
@@ -761,7 +761,7 @@ HB_FUNC_STATIC( QCOMBOBOX_LINEEDIT )
 }
 
 /*
-int maxCount () const
+int maxCount() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_MAXCOUNT )
 {
@@ -785,7 +785,7 @@ HB_FUNC_STATIC( QCOMBOBOX_MAXCOUNT )
 }
 
 /*
-int maxVisibleItems () const
+int maxVisibleItems() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_MAXVISIBLEITEMS )
 {
@@ -809,7 +809,7 @@ HB_FUNC_STATIC( QCOMBOBOX_MAXVISIBLEITEMS )
 }
 
 /*
-int minimumContentsLength () const
+int minimumContentsLength() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_MINIMUMCONTENTSLENGTH )
 {
@@ -858,7 +858,7 @@ HB_FUNC_STATIC( QCOMBOBOX_MODEL )
 }
 
 /*
-int modelColumn () const
+int modelColumn() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_MODELCOLUMN )
 {

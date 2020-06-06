@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QMOVIE_CACHEMODE )
 }
 
 /*
-int currentFrameNumber () const
+int currentFrameNumber() const
 */
 HB_FUNC_STATIC( QMOVIE_CURRENTFRAMENUMBER )
 {
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QMOVIE_FORMAT )
 }
 
 /*
-int frameCount () const
+int frameCount() const
 */
 HB_FUNC_STATIC( QMOVIE_FRAMECOUNT )
 {
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QMOVIE_JUMPTOFRAME )
 }
 
 /*
-int loopCount () const
+int loopCount() const
 */
 HB_FUNC_STATIC( QMOVIE_LOOPCOUNT )
 {
@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QMOVIE_LOOPCOUNT )
 }
 
 /*
-int nextFrameDelay () const
+int nextFrameDelay() const
 */
 HB_FUNC_STATIC( QMOVIE_NEXTFRAMEDELAY )
 {
@@ -683,7 +683,7 @@ HB_FUNC_STATIC( QMOVIE_SETSCALEDSIZE )
 }
 
 /*
-int speed () const
+int speed() const
 */
 HB_FUNC_STATIC( QMOVIE_SPEED )
 {

@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_HORIZONTALPOLICY )
 }
 
 /*
-int horizontalStretch () const
+int horizontalStretch() const
 */
 HB_FUNC_STATIC( QSIZEPOLICY_HORIZONTALSTRETCH )
 {
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_VERTICALPOLICY )
 }
 
 /*
-int verticalStretch () const
+int verticalStretch() const
 */
 HB_FUNC_STATIC( QSIZEPOLICY_VERTICALSTRETCH )
 {

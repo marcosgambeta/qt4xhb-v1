@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QLAYOUT_CONTENTSRECT )
 }
 
 /*
-virtual int count () const = 0
+virtual int count() const = 0
 */
 HB_FUNC_STATIC( QLAYOUT_COUNT )
 {
@@ -756,7 +756,7 @@ HB_FUNC_STATIC( QLAYOUT_SIZECONSTRAINT )
 }
 
 /*
-int spacing () const
+int spacing() const
 */
 HB_FUNC_STATIC( QLAYOUT_SPACING )
 {
