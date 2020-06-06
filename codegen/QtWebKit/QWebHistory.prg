@@ -43,14 +43,12 @@ $method=|bool|canGoForward|
 $prototype=void clear ()
 $method=|void|clear|
 
-$prototype=int count () const
-$method=|int|count|
+$prototypeV2=int count() const
 
 $prototype=QWebHistoryItem currentItem () const
 $method=|QWebHistoryItem|currentItem|
 
-$prototype=int currentItemIndex () const
-$method=|int|currentItemIndex|
+$prototypeV2=int currentItemIndex() const
 
 $prototype=void forward ()
 $method=|void|forward|
@@ -70,8 +68,7 @@ $method=|QWebHistoryItem|itemAt|int
 $prototype=QList<QWebHistoryItem> items () const
 $method=|QList<QWebHistoryItem>|items|
 
-$prototype=int maximumItemCount () const
-$method=|int|maximumItemCount|
+$prototypeV2=int maximumItemCount() const
 
 $prototype=void setMaximumItemCount ( int count )
 $method=|void|setMaximumItemCount|int

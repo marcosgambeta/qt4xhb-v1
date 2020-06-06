@@ -69,8 +69,7 @@ $method=|void|append|const QWebElementCollection &
 $prototype=QWebElement at ( int i ) const
 $method=|QWebElement|at|int
 
-$prototype=int count () const
-$method=|int|count|
+$prototypeV2=int count() const
 
 $prototype=QWebElement first () const
 $method=|QWebElement|first|

@@ -90,8 +90,7 @@ $staticMethod=|QString|iconDatabasePath|
 $prototype=static QIcon iconForUrl ( const QUrl & url )
 $staticMethod=|QIcon|iconForUrl|const QUrl &
 
-$prototype=static int maximumPagesInCache ()
-$staticMethod=|int|maximumPagesInCache|
+$prototypeV2=static int maximumPagesInCache()
 
 $prototype=static qint64 offlineStorageDefaultQuota ()
 $staticMethod=|qint64|offlineStorageDefaultQuota|

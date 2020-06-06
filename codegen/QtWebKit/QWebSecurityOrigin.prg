@@ -45,8 +45,7 @@ $method=|QList<QWebDatabase>|databases|
 $prototype=QString host () const
 $method=|QString|host|
 
-$prototype=int port () const
-$method=|int|port|
+$prototypeV2=int port() const
 
 $prototype=QString scheme () const
 $method=|QString|scheme|
