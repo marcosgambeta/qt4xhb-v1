@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_DELETE )
 }
 
 /*
-virtual int count () const = 0
+virtual int count() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_COUNT )
 {

@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_ADDWIDGET )
 }
 
 /*
-virtual int count () const = 0
+virtual int count() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_COUNT )
 {
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_COUNT )
 }
 
 /*
-virtual int currentIndex () const = 0
+virtual int currentIndex() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_CURRENTINDEX )
 {

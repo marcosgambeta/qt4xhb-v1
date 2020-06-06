@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_DELETE )
 }
 
 /*
-virtual int count () const = 0
+virtual int count() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_COUNT )
 {
