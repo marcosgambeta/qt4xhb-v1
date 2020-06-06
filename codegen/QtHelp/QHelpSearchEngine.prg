@@ -35,8 +35,7 @@ $constructor=|new|QHelpEngineCore *,QObject *=0
 
 $deleteMethod
 
-$prototype=int hitCount () const
-$method=|int|hitCount|
+$prototypeV2=int hitCount() const
 
 $prototype=QList<QHelpSearchQuery> query () const
 $method=|QList<QHelpSearchQuery>|query|
