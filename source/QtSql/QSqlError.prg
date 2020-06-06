@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QSQLERROR_ISVALID )
 }
 
 /*
-int number () const
+int number() const
 */
 HB_FUNC_STATIC( QSQLERROR_NUMBER )
 {

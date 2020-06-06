@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QSQLRECORD_CONTAINS )
 }
 
 /*
-int count () const
+int count() const
 */
 HB_FUNC_STATIC( QSQLRECORD_COUNT )
 {

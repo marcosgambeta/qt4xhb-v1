@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QSQLQUERY_ADDBINDVALUE )
 }
 
 /*
-int at () const
+int at() const
 */
 HB_FUNC_STATIC( QSQLQUERY_AT )
 {
@@ -787,7 +787,7 @@ HB_FUNC_STATIC( QSQLQUERY_NEXTRESULT )
 }
 
 /*
-int numRowsAffected () const
+int numRowsAffected() const
 */
 HB_FUNC_STATIC( QSQLQUERY_NUMROWSAFFECTED )
 {
@@ -1009,7 +1009,7 @@ HB_FUNC_STATIC( QSQLQUERY_SETNUMERICALPRECISIONPOLICY )
 }
 
 /*
-int size () const
+int size() const
 */
 HB_FUNC_STATIC( QSQLQUERY_SIZE )
 {

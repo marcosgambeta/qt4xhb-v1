@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QSQLFIELD_ISVALID )
 }
 
 /*
-int length () const
+int length() const
 */
 HB_FUNC_STATIC( QSQLFIELD_LENGTH )
 {
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QSQLFIELD_NAME )
 }
 
 /*
-int precision () const
+int precision() const
 */
 HB_FUNC_STATIC( QSQLFIELD_PRECISION )
 {

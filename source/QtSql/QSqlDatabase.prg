@@ -567,7 +567,7 @@ HB_FUNC_STATIC( QSQLDATABASE_PASSWORD )
 }
 
 /*
-int port () const
+int port() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_PORT )
 {
