@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_NEW )
 }
 
 /*
-int indentationDepth () const
+int indentationDepth() const
 */
 HB_FUNC_STATIC( QXMLFORMATTER_INDENTATIONDEPTH )
 {
