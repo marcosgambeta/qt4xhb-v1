@@ -234,8 +234,7 @@ $addMethod=setGeometry
 $prototype=virtual QPainterPath shape () const
 $virtualMethod=|QPainterPath|shape|
 
-$prototype=virtual int type () const
-$virtualMethod=|int|type|
+$prototypeV2=virtual int type() const
 
 $prototype=bool close ()
 $method=|bool|close|

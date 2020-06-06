@@ -89,8 +89,7 @@ $method=|QDate|maximumDate|
 $prototype=QDate minimumDate () const
 $method=|QDate|minimumDate|
 
-$prototype=int monthShown () const
-$method=|int|monthShown|
+$prototypeV2=int monthShown() const
 
 $prototype=QDate selectedDate () const
 $method=|QDate|selectedDate|
@@ -137,8 +136,7 @@ $method=|QCalendarWidget::VerticalHeaderFormat|verticalHeaderFormat|
 $prototype=QTextCharFormat weekdayTextFormat ( Qt::DayOfWeek dayOfWeek ) const
 $method=|QTextCharFormat|weekdayTextFormat|Qt::DayOfWeek
 
-$prototype=int yearShown () const
-$method=|int|yearShown|
+$prototypeV2=int yearShown() const
 
 $prototype=virtual QSize minimumSizeHint () const
 $virtualMethod=|QSize|minimumSizeHint|

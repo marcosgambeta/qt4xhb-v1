@@ -39,17 +39,13 @@ $method=|const QPoint &|globalPos|
 $prototype=const QPointF &hiResGlobalPos() const
 $method=|const QPointF &|hiResGlobalPos|
 
-$prototype=int x() const
-$method=|int|x|
+$prototypeV2=int x() const
 
-$prototype=int y() const
-$method=|int|y|
+$prototypeV2=int y() const
 
-$prototype=int globalX() const
-$method=|int|globalX|
+$prototypeV2=int globalX() const
 
-$prototype=int globalY() const
-$method=|int|globalY|
+$prototypeV2=int globalY() const
 
 $prototype=qreal hiResGlobalX() const
 $method=|qreal|hiResGlobalX|
@@ -69,8 +65,7 @@ $method=|qint64|uniqueId|
 $prototype=qreal pressure() const
 $method=|qreal|pressure|
 
-$prototype=int z() const
-$method=|int|z|
+$prototypeV2=int z() const
 
 $prototype=qreal tangentialPressure() const
 $method=|qreal|tangentialPressure|
@@ -78,10 +73,8 @@ $method=|qreal|tangentialPressure|
 $prototype=qreal rotation() const
 $method=|qreal|rotation|
 
-$prototype=int xTilt() const
-$method=|int|xTilt|
+$prototypeV2=int xTilt() const
 
-$prototype=int yTilt() const
-$method=|int|yTilt|
+$prototypeV2=int yTilt() const
 
 #pragma ENDDUMP

@@ -37,8 +37,7 @@ $deleteMethod
 $prototype=bool allColumnsShowFocus () const
 $method=|bool|allColumnsShowFocus|
 
-$prototype=int autoExpandDelay () const
-$method=|int|autoExpandDelay|
+$prototypeV2=int autoExpandDelay() const
 
 $prototype=int columnAt ( int x ) const
 $method=|int|columnAt|int
@@ -55,8 +54,7 @@ $method=|bool|expandsOnDoubleClick|
 $prototype=QHeaderView * header () const
 $method=|QHeaderView *|header|
 
-$prototype=int indentation () const
-$method=|int|indentation|
+$prototypeV2=int indentation() const
 
 $prototype=QModelIndex indexAbove ( const QModelIndex & index ) const
 $method=|QModelIndex|indexAbove|const QModelIndex &

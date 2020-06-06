@@ -105,8 +105,7 @@ $prototype=void getLayoutPosition ( QLayout * layout, int * rowPtr, ItemRole * r
 $prototype=void getWidgetPosition ( QWidget * widget, int * rowPtr, ItemRole * rolePtr ) const
 %% TODO: $method=|void|getWidgetPosition|QWidget *,int *,QFormLayout::ItemRole *
 
-$prototype=int horizontalSpacing () const
-$method=|int|horizontalSpacing|
+$prototypeV2=int horizontalSpacing() const
 
 $prototype=void insertRow ( int row, QWidget * label, QWidget * field )
 $internalMethod=|void|insertRow,insertRow1|int,QWidget *,QWidget *
@@ -199,8 +198,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD )
 }
 $addMethod=labelForField
 
-$prototype=int rowCount () const
-$method=|int|rowCount|
+$prototypeV2=int rowCount() const
 
 $prototype=RowWrapPolicy rowWrapPolicy () const
 $method=|QFormLayout::RowWrapPolicy|rowWrapPolicy|
@@ -235,17 +233,14 @@ $method=|void|setVerticalSpacing|int
 $prototype=void setWidget ( int row, ItemRole role, QWidget * widget )
 $method=|void|setWidget|int,QFormLayout::ItemRole,QWidget *
 
-$prototype=int spacing () const
-$method=|int|spacing|
+$prototypeV2=int spacing() const
 
-$prototype=int verticalSpacing () const
-$method=|int|verticalSpacing|
+$prototypeV2=int verticalSpacing() const
 
 $prototype=virtual void addItem ( QLayoutItem * item )
 $virtualMethod=|void|addItem|QLayoutItem *
 
-$prototype=virtual int count () const
-$virtualMethod=|int|count|
+$prototypeV2=virtual int count() const
 
 $prototype=virtual Qt::Orientations expandingDirections () const
 $virtualMethod=|Qt::Orientations|expandingDirections|

@@ -61,8 +61,7 @@ $method=|QMargins|contentsMargins|
 $prototype=QRect contentsRect () const
 $method=|QRect|contentsRect|
 
-$prototype=virtual int count () const = 0
-$virtualMethod=|int|count|
+$prototypeV2=virtual int count() const = 0
 
 $prototype=virtual Qt::Orientations expandingDirections () const
 $virtualMethod=|Qt::Orientations|expandingDirections|
@@ -176,8 +175,7 @@ $method=|void|setSpacing|int
 $prototype=SizeConstraint sizeConstraint () const
 $method=|QLayout::SizeConstraint|sizeConstraint|
 
-$prototype=int spacing () const
-$method=|int|spacing|
+$prototypeV2=int spacing() const
 
 $prototype=virtual QLayoutItem * takeAt ( int index ) = 0
 $virtualMethod=|QLayoutItem *|takeAt|int

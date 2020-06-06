@@ -65,8 +65,7 @@ $method=|QString|anchorAt|const QPoint &
 $prototype=bool backgroundVisible () const
 $method=|bool|backgroundVisible|
 
-$prototype=int blockCount () const
-$method=|int|blockCount|
+$prototypeV2=int blockCount() const
 
 $prototype=bool canPaste () const
 $method=|bool|canPaste|
@@ -111,8 +110,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CURSORRECT )
 }
 $addMethod=cursorRect
 
-$prototype=int cursorWidth () const
-$method=|int|cursorWidth|
+$prototypeV2=int cursorWidth() const
 
 $prototype=QTextDocument * document () const
 $method=|QTextDocument *|document|
@@ -138,8 +136,7 @@ $method=|QPlainTextEdit::LineWrapMode|lineWrapMode|
 $prototype=virtual QVariant loadResource ( int type, const QUrl & name )
 $virtualMethod=|QVariant|loadResource|int,const QUrl &
 
-$prototype=int maximumBlockCount () const
-$method=|int|maximumBlockCount|
+$prototypeV2=int maximumBlockCount() const
 
 $prototype=void mergeCurrentCharFormat ( const QTextCharFormat & modifier )
 $method=|void|mergeCurrentCharFormat|const QTextCharFormat &
@@ -204,8 +201,7 @@ $method=|void|setWordWrapMode|QTextOption::WrapMode
 $prototype=bool tabChangesFocus () const
 $method=|bool|tabChangesFocus|
 
-$prototype=int tabStopWidth () const
-$method=|int|tabStopWidth|
+$prototypeV2=int tabStopWidth() const
 
 $prototype=QTextCursor textCursor () const
 $method=|QTextCursor|textCursor|

@@ -71,8 +71,7 @@ HB_FUNC_STATIC( QTEXTTABLE_CELLAT )
 }
 $addMethod=cellAt
 
-$prototype=int columns () const
-$method=|int|columns|
+$prototypeV2=int columns() const
 
 $prototype=QTextTableFormat format () const
 $method=|QTextTableFormat|format|
@@ -126,8 +125,7 @@ $method=|QTextCursor|rowEnd|const QTextCursor &
 $prototype=QTextCursor rowStart ( const QTextCursor & cursor ) const
 $method=|QTextCursor|rowStart|const QTextCursor &
 
-$prototype=int rows () const
-$method=|int|rows|
+$prototypeV2=int rows() const
 
 $prototype=void setFormat ( const QTextTableFormat & format )
 $method=|void|setFormat|const QTextTableFormat &

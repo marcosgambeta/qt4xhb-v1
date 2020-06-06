@@ -77,11 +77,9 @@ $method=|void|addItems|const QStringList &
 $prototype=QCompleter * completer () const
 $method=|QCompleter *|completer|
 
-$prototype=int count () const
-$method=|int|count|
+$prototypeV2=int count() const
 
-$prototype=int currentIndex () const
-$method=|int|currentIndex|
+$prototypeV2=int currentIndex() const
 
 $prototype=QString currentText () const
 $method=|QString|currentText|
@@ -159,20 +157,16 @@ $method=|QString|itemText|int
 $prototype=QLineEdit * lineEdit () const
 $method=|QLineEdit *|lineEdit|
 
-$prototype=int maxCount () const
-$method=|int|maxCount|
+$prototypeV2=int maxCount() const
 
-$prototype=int maxVisibleItems () const
-$method=|int|maxVisibleItems|
+$prototypeV2=int maxVisibleItems() const
 
-$prototype=int minimumContentsLength () const
-$method=|int|minimumContentsLength|
+$prototypeV2=int minimumContentsLength() const
 
 $prototype=QAbstractItemModel * model () const
 $method=|QAbstractItemModel *|model|
 
-$prototype=int modelColumn () const
-$method=|int|modelColumn|
+$prototypeV2=int modelColumn() const
 
 $prototype=void removeItem ( int index )
 $method=|void|removeItem|int

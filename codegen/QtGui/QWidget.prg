@@ -257,8 +257,7 @@ $method=|bool|hasFocus|
 $prototype=bool hasMouseTracking () const
 $method=|bool|hasMouseTracking|
 
-$prototype=int height () const
-$method=|int|height|
+$prototypeV2=int height() const
 
 $prototype=virtual int heightForWidth ( int w ) const
 $virtualMethod=|int|heightForWidth|int
@@ -347,17 +346,14 @@ $method=|QPoint|mapToParent|const QPoint &
 $prototype=QRegion mask () const
 $method=|QRegion|mask|
 
-$prototype=int maximumHeight () const
-$method=|int|maximumHeight|
+$prototypeV2=int maximumHeight() const
 
 $prototype=QSize maximumSize () const
 $method=|QSize|maximumSize|
 
-$prototype=int maximumWidth () const
-$method=|int|maximumWidth|
+$prototypeV2=int maximumWidth() const
 
-$prototype=int minimumHeight () const
-$method=|int|minimumHeight|
+$prototypeV2=int minimumHeight() const
 
 $prototype=QSize minimumSize () const
 $method=|QSize|minimumSize|
@@ -365,8 +361,7 @@ $method=|QSize|minimumSize|
 $prototype=virtual QSize minimumSizeHint () const
 $virtualMethod=|QSize|minimumSizeHint|
 
-$prototype=int minimumWidth () const
-$method=|int|minimumWidth|
+$prototypeV2=int minimumWidth() const
 
 $prototype=void move ( const QPoint & )
 $internalMethod=|void|move,move1|const QPoint &
@@ -1095,8 +1090,7 @@ $method=|QRegion|visibleRegion|
 $prototype=QString whatsThis () const
 $method=|QString|whatsThis|
 
-$prototype=int width () const
-$method=|int|width|
+$prototypeV2=int width() const
 
 $prototype=WId winId () const
 $method=|WId|winId||#ifdef Q_OS_WIN
@@ -1134,11 +1128,9 @@ $method=|QString|windowTitle|
 $prototype=Qt::WindowType windowType () const
 $method=|Qt::WindowType|windowType|
 
-$prototype=int x () const
-$method=|int|x|
+$prototypeV2=int x() const
 
-$prototype=int y () const
-$method=|int|y|
+$prototypeV2=int y() const
 
 $prototype=virtual QPaintEngine * paintEngine () const
 $virtualMethod=|QPaintEngine *|paintEngine|
@@ -1195,20 +1187,15 @@ $method=|void|showNormal|
 // QPaintDevice methods - begin
 //=============================================================================
 
-$prototype=int colorCount () const
-$method=|int|colorCount|
+$prototypeV2=int colorCount() const
 
-$prototype=int depth () const
-$method=|int|depth|
+$prototypeV2=int depth() const
 
-$prototype=int heightMM () const
-$method=|int|heightMM|
+$prototypeV2=int heightMM() const
 
-$prototype=int logicalDpiX () const
-$method=|int|logicalDpiX|
+$prototypeV2=int logicalDpiX() const
 
-$prototype=int logicalDpiY () const
-$method=|int|logicalDpiY|
+$prototypeV2=int logicalDpiY() const
 
 $prototype=int numColors () const (deprecated)
 $method=|int|numColors|
@@ -1216,14 +1203,11 @@ $method=|int|numColors|
 $prototype=bool paintingActive () const
 $method=|bool|paintingActive|
 
-$prototype=int physicalDpiX () const
-$method=|int|physicalDpiX|
+$prototypeV2=int physicalDpiX() const
 
-$prototype=int physicalDpiY () const
-$method=|int|physicalDpiY|
+$prototypeV2=int physicalDpiY() const
 
-$prototype=int widthMM () const
-$method=|int|widthMM|
+$prototypeV2=int widthMM() const
 
 //=============================================================================
 // QPaintDevice methods - end

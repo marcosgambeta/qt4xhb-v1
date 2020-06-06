@@ -36,11 +36,9 @@ $constructor=|new|QWidget *=0,Qt::WindowFlags=0
 $prototype=bool isShaded () const
 $method=|bool|isShaded|
 
-$prototype=int keyboardPageStep () const
-$method=|int|keyboardPageStep|
+$prototypeV2=int keyboardPageStep() const
 
-$prototype=int keyboardSingleStep () const
-$method=|int|keyboardSingleStep|
+$prototypeV2=int keyboardSingleStep() const
 
 $prototype=QMdiArea * mdiArea () const
 $method=|QMdiArea *|mdiArea|

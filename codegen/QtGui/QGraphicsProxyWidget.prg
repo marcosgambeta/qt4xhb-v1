@@ -48,7 +48,6 @@ $virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *
 $prototype=virtual void setGeometry ( const QRectF & rect )
 $virtualMethod=|void|setGeometry|const QRectF &
 
-$prototype=virtual int type () const
-$virtualMethod=|int|type|
+$prototypeV2=virtual int type() const
 
 #pragma ENDDUMP

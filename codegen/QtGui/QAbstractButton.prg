@@ -37,11 +37,9 @@ $method=|bool|autoExclusive|
 $prototype=bool autoRepeat () const
 $method=|bool|autoRepeat|
 
-$prototype=int autoRepeatDelay () const
-$method=|int|autoRepeatDelay|
+$prototypeV2=int autoRepeatDelay() const
 
-$prototype=int autoRepeatInterval () const
-$method=|int|autoRepeatInterval|
+$prototypeV2=int autoRepeatInterval() const
 
 $prototype=QButtonGroup * group () const
 $method=|QButtonGroup *|group|

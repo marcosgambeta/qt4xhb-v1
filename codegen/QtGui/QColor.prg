@@ -99,20 +99,17 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=int alpha () const
-$method=|int|alpha|
+$prototypeV2=int alpha() const
 
 $prototype=qreal alphaF () const
 $method=|qreal|alphaF|
 
-$prototype=int black () const
-$method=|int|black|
+$prototypeV2=int black() const
 
 $prototype=qreal blackF () const
 $method=|qreal|blackF|
 
-$prototype=int blue () const
-$method=|int|blue|
+$prototypeV2=int blue() const
 
 $prototype=qreal blueF () const
 $method=|qreal|blueF|
@@ -120,8 +117,7 @@ $method=|qreal|blueF|
 $prototype=QColor convertTo ( Spec colorSpec ) const
 $method=|QColor|convertTo|QColor::Spec
 
-$prototype=int cyan () const
-$method=|int|cyan|
+$prototypeV2=int cyan() const
 
 $prototype=qreal cyanF () const
 $method=|qreal|cyanF|
@@ -153,38 +149,32 @@ $method=|void|getRgb|int *,int *,int *,int *=0
 $prototype=void getRgbF ( qreal * r, qreal * g, qreal * b, qreal * a = 0 ) const
 $method=|void|getRgbF|qreal *,qreal *,qreal *,qreal *=0
 
-$prototype=int green () const
-$method=|int|green|
+$prototypeV2=int green() const
 
 $prototype=qreal greenF () const
 $method=|qreal|greenF|
 
-$prototype=int hslHue () const
-$method=|int|hslHue|
+$prototypeV2=int hslHue() const
 
 $prototype=qreal hslHueF () const
 $method=|qreal|hslHueF|
 
-$prototype=int hslSaturation () const
-$method=|int|hslSaturation|
+$prototypeV2=int hslSaturation() const
 
 $prototype=qreal hslSaturationF () const
 $method=|qreal|hslSaturationF|
 
-$prototype=int hsvHue () const
-$method=|int|hsvHue|
+$prototypeV2=int hsvHue() const
 
 $prototype=qreal hsvHueF () const
 $method=|qreal|hsvHueF|
 
-$prototype=int hsvSaturation () const
-$method=|int|hsvSaturation|
+$prototypeV2=int hsvSaturation() const
 
 $prototype=qreal hsvSaturationF () const
 $method=|qreal|hsvSaturationF|
 
-$prototype=int hue () const
-$method=|int|hue|
+$prototypeV2=int hue() const
 
 $prototype=qreal hueF () const
 $method=|qreal|hueF|
@@ -195,14 +185,12 @@ $method=|bool|isValid|
 $prototype=QColor lighter ( int factor = 150 ) const
 $method=|QColor|lighter|int=150
 
-$prototype=int lightness () const
-$method=|int|lightness|
+$prototypeV2=int lightness() const
 
 $prototype=qreal lightnessF () const
 $method=|qreal|lightnessF|
 
-$prototype=int magenta () const
-$method=|int|magenta|
+$prototypeV2=int magenta() const
 
 $prototype=qreal magentaF () const
 $method=|qreal|magentaF|
@@ -210,8 +198,7 @@ $method=|qreal|magentaF|
 $prototype=QString name () const
 $method=|QString|name|
 
-$prototype=int red () const
-$method=|int|red|
+$prototypeV2=int red() const
 
 $prototype=qreal redF () const
 $method=|qreal|redF|
@@ -222,8 +209,7 @@ $method=|QRgb|rgb|
 $prototype=QRgb rgba () const
 $method=|QRgb|rgba|
 
-$prototype=int saturation () const
-$method=|int|saturation|
+$prototypeV2=int saturation() const
 
 $prototype=qreal saturationF () const
 $method=|qreal|saturationF|
@@ -322,14 +308,12 @@ $method=|QColor|toHsv|
 $prototype=QColor toRgb () const
 $method=|QColor|toRgb|
 
-$prototype=int value () const
-$method=|int|value|
+$prototypeV2=int value() const
 
 $prototype=qreal valueF () const
 $method=|qreal|valueF|
 
-$prototype=int yellow () const
-$method=|int|yellow|
+$prototypeV2=int yellow() const
 
 $prototype=qreal yellowF () const
 $method=|qreal|yellowF|

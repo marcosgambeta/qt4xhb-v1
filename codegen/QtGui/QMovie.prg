@@ -74,8 +74,7 @@ $method=|QColor|backgroundColor|
 $prototype=CacheMode  cacheMode () const
 $method=|QMovie::CacheMode|cacheMode|
 
-$prototype=int currentFrameNumber () const
-$method=|int|currentFrameNumber|
+$prototypeV2=int currentFrameNumber() const
 
 $prototype=QImage  currentImage () const
 $method=|QImage|currentImage|
@@ -92,8 +91,7 @@ $method=|QString|fileName|
 $prototype=QByteArray  format () const
 $method=|QByteArray|format|
 
-$prototype=int frameCount () const
-$method=|int|frameCount|
+$prototypeV2=int frameCount() const
 
 $prototype=QRect  frameRect () const
 $method=|QRect|frameRect|
@@ -104,11 +102,9 @@ $method=|bool|isValid|
 $prototype=bool jumpToFrame ( int frameNumber )
 $method=|bool|jumpToFrame|int
 
-$prototype=int loopCount () const
-$method=|int|loopCount|
+$prototypeV2=int loopCount() const
 
-$prototype=int nextFrameDelay () const
-$method=|int|nextFrameDelay|
+$prototypeV2=int nextFrameDelay() const
 
 $prototype=QSize  scaledSize ()
 $method=|QSize|scaledSize|
@@ -131,8 +127,7 @@ $method=|void|setFormat|const QByteArray &
 $prototype=void  setScaledSize ( const QSize & size )
 $method=|void|setScaledSize|const QSize &
 
-$prototype=int speed () const
-$method=|int|speed|
+$prototypeV2=int speed() const
 
 $prototype=MovieState  state () const
 $method=|QMovie::MovieState|state|

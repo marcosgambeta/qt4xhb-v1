@@ -66,8 +66,7 @@ $addMethod=addMapping
 $prototype=void clearMapping ()
 $method=|void|clearMapping|
 
-$prototype=int currentIndex () const
-$method=|int|currentIndex|
+$prototypeV2=int currentIndex() const
 
 $prototype=QAbstractItemDelegate * itemDelegate () const
 $method=|QAbstractItemDelegate *|itemDelegate|

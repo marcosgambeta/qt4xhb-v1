@@ -33,8 +33,7 @@ $deleteMethod
 $prototype=const QKeySequence &key()
 $method=|const QKeySequence &|key|
 
-$prototype=int shortcutId()
-$method=|int|shortcutId|
+$prototypeV2=int shortcutId()
 
 $prototype=bool isAmbiguous()
 $method=|bool|isAmbiguous|

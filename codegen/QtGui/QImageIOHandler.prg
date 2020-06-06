@@ -45,8 +45,7 @@ $method=|QIODevice *|device|
 $prototype=QByteArray format () const
 $method=|QByteArray|format|
 
-$prototype=virtual int imageCount () const
-$virtualMethod=|int|imageCount|
+$prototypeV2=virtual int imageCount() const
 
 $prototype=virtual bool jumpToImage ( int imageNumber )
 $virtualMethod=|bool|jumpToImage|int
@@ -54,11 +53,9 @@ $virtualMethod=|bool|jumpToImage|int
 $prototype=virtual bool jumpToNextImage ()
 $virtualMethod=|bool|jumpToNextImage|
 
-$prototype=virtual int loopCount () const
-$virtualMethod=|int|loopCount|
+$prototypeV2=virtual int loopCount() const
 
-$prototype=virtual int nextImageDelay () const
-$virtualMethod=|int|nextImageDelay|
+$prototypeV2=virtual int nextImageDelay() const
 
 $prototype=virtual QVariant option ( ImageOption option ) const
 $virtualMethod=|QVariant|option|QImageIOHandler::ImageOption

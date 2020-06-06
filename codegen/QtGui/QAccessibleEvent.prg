@@ -28,8 +28,7 @@ $includes
 $prototype=QAccessibleEvent ( Type type, int child )
 $constructor=|new|QAccessibleEvent::Type,int
 
-$prototype=int child () const
-$method=|int|child|
+$prototypeV2=int child() const
 
 $prototype=void setValue ( const QString & text )
 $method=|void|setValue|const QString &

@@ -330,8 +330,7 @@ $addMethod=cubicTo
 $prototype=QPointF currentPosition () const
 $method=|QPointF|currentPosition|
 
-$prototype=int elementCount () const
-$method=|int|elementCount|
+$prototypeV2=int elementCount() const
 
 $prototype=Qt::FillRule fillRule () const
 $method=|Qt::FillRule|fillRule|

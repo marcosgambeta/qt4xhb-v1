@@ -66,23 +66,19 @@ $deleteMethod
 $prototype=bool accum () const
 $method=|bool|accum|
 
-$prototype=int accumBufferSize () const
-$method=|int|accumBufferSize|
+$prototypeV2=int accumBufferSize() const
 
 $prototype=bool alpha () const
 $method=|bool|alpha|
 
-$prototype=int alphaBufferSize () const
-$method=|int|alphaBufferSize|
+$prototypeV2=int alphaBufferSize() const
 
-$prototype=int blueBufferSize () const
-$method=|int|blueBufferSize|
+$prototypeV2=int blueBufferSize() const
 
 $prototype=bool depth () const
 $method=|bool|depth|
 
-$prototype=int depthBufferSize () const
-$method=|int|depthBufferSize|
+$prototypeV2=int depthBufferSize() const
 
 $prototype=bool directRendering () const
 $method=|bool|directRendering|
@@ -90,14 +86,12 @@ $method=|bool|directRendering|
 $prototype=bool doubleBuffer () const
 $method=|bool|doubleBuffer|
 
-$prototype=int greenBufferSize () const
-$method=|int|greenBufferSize|
+$prototypeV2=int greenBufferSize() const
 
 $prototype=bool hasWindowSurface () const
 $method=|bool|hasWindowSurface|
 
-$prototype=int redBufferSize () const
-$method=|int|redBufferSize|
+$prototypeV2=int redBufferSize() const
 
 $prototype=bool rgba () const
 $method=|bool|rgba|
@@ -105,8 +99,7 @@ $method=|bool|rgba|
 $prototype=bool sampleBuffers () const
 $method=|bool|sampleBuffers|
 
-$prototype=int samples () const
-$method=|int|samples|
+$prototypeV2=int samples() const
 
 $prototype=void setAccum ( bool enable )
 $method=|void|setAccum|bool
@@ -180,14 +173,12 @@ $method=|QPlatformGLContext *|sharedGLContext|
 $prototype=bool stencil () const
 $method=|bool|stencil|
 
-$prototype=int stencilBufferSize () const
-$method=|int|stencilBufferSize|
+$prototypeV2=int stencilBufferSize() const
 
 $prototype=bool stereo () const
 $method=|bool|stereo|
 
-$prototype=int swapInterval () const
-$method=|int|swapInterval|
+$prototypeV2=int swapInterval() const
 
 $prototype=bool testOption ( QPlatformWindowFormat::FormatOptions opt ) const
 $method=|bool|testOption|QPlatformWindowFormat::FormatOptions

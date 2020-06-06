@@ -35,8 +35,7 @@ $deleteMethod
 $prototype=bool isSizeGripEnabled () const
 $method=|bool|isSizeGripEnabled|
 
-$prototype=int result () const
-$method=|int|result|
+$prototypeV2=int result() const
 
 $prototype=void setModal ( bool modal )
 $method=|void|setModal|bool
@@ -62,8 +61,7 @@ $virtualMethod=|void|accept|
 $prototype=virtual void done ( int r )
 $virtualMethod=|void|done|int
 
-$prototype=int exec ()
-$method=|int|exec|
+$prototypeV2=int exec()
 
 $prototype=void open ()
 $method=|void|open|

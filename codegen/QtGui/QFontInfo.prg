@@ -70,11 +70,9 @@ $method=|bool|fixedPitch|
 $prototype=bool italic () const
 $method=|bool|italic|
 
-$prototype=int pixelSize () const
-$method=|int|pixelSize|
+$prototypeV2=int pixelSize() const
 
-$prototype=int pointSize () const
-$method=|int|pointSize|
+$prototypeV2=int pointSize() const
 
 $prototype=qreal pointSizeF () const
 $method=|qreal|pointSizeF|
@@ -91,8 +89,7 @@ $method=|QFont::StyleHint|styleHint|
 $prototype=QString styleName () const
 $method=|QString|styleName|
 
-$prototype=int weight () const
-$method=|int|weight|
+$prototypeV2=int weight() const
 
 $extraMethods
 

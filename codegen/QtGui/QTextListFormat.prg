@@ -30,8 +30,7 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=int indent () const
-$method=|int|indent|
+$prototypeV2=int indent() const
 
 $prototype=bool isValid () const
 $method=|bool|isValid|

@@ -103,8 +103,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_SETSTRETCHFACTOR )
 }
 $addMethod=setStretchFactor
 
-$prototype=int spacing () const
-$method=|int|spacing|
+$prototypeV2=int spacing() const
 
 $prototype=int stretch ( int index ) const
 $method=|int|stretch|int
@@ -112,8 +111,7 @@ $method=|int|stretch|int
 $prototype=virtual void addItem ( QLayoutItem * item )
 $virtualMethod=|void|addItem|QLayoutItem *
 
-$prototype=virtual int count () const
-$virtualMethod=|int|count|
+$prototypeV2=virtual int count() const
 
 $prototype=virtual Qt::Orientations expandingDirections () const
 $virtualMethod=|Qt::Orientations|expandingDirections|

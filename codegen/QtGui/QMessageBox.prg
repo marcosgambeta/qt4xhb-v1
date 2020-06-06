@@ -230,8 +230,7 @@ $method=|Qt::TextFormat|textFormat|
 $prototype=virtual void setVisible ( bool visible )
 $virtualMethod=|void|setVisible|bool
 
-$prototype=int exec ()
-$method=|int|exec|
+$prototypeV2=int exec()
 
 $prototype=static void about ( QWidget * parent, const QString & title, const QString & text )
 $staticMethod=|void|about|QWidget *,const QString &,const QString &

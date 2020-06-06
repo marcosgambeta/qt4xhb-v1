@@ -123,11 +123,9 @@ $staticMethod=|void|changeOverrideCursor|const QCursor &
 $prototype=static QClipboard * clipboard ()
 $staticMethod=|QClipboard *|clipboard|
 
-$prototype=static int colorSpec ()
-$staticMethod=|int|colorSpec|
+$prototypeV2=static int colorSpec()
 
-$prototype=static int cursorFlashTime ()
-$staticMethod=|int|cursorFlashTime|
+$prototypeV2=static int cursorFlashTime()
 
 $prototype=static QDesktopWidget * desktop ()
 $staticMethod=|QDesktopWidget *|desktop|
@@ -135,11 +133,9 @@ $staticMethod=|QDesktopWidget *|desktop|
 $prototype=static bool desktopSettingsAware ()
 $staticMethod=|bool|desktopSettingsAware|
 
-$prototype=static int doubleClickInterval ()
-$staticMethod=|int|doubleClickInterval|
+$prototypeV2=static int doubleClickInterval()
 
-$prototype=static int exec ()
-$staticMethod=|int|exec|
+$prototypeV2=static int exec()
 
 $prototype=static QWidget * focusWidget ()
 $staticMethod=|QWidget *|focusWidget|
@@ -198,8 +194,7 @@ $staticMethod=|bool|isRightToLeft|
 $prototype=static Qt::LayoutDirection keyboardInputDirection ()
 $staticMethod=|Qt::LayoutDirection|keyboardInputDirection|
 
-$prototype=static int keyboardInputInterval ()
-$staticMethod=|int|keyboardInputInterval|
+$prototypeV2=static int keyboardInputInterval()
 
 $prototype=static QLocale keyboardInputLocale ()
 $staticMethod=|QLocale|keyboardInputLocale|
@@ -343,11 +338,9 @@ $staticMethod=|void|setWheelScrollLines|int
 $prototype=static void setWindowIcon ( const QIcon & icon )
 $staticMethod=|void|setWindowIcon|const QIcon &
 
-$prototype=static int startDragDistance ()
-$staticMethod=|int|startDragDistance|
+$prototypeV2=static int startDragDistance()
 
-$prototype=static int startDragTime ()
-$staticMethod=|int|startDragTime|
+$prototypeV2=static int startDragTime()
 
 $prototype=static QStyle * style ()
 $staticMethod=|QStyle *|style|
@@ -389,8 +382,7 @@ $staticMethod=|QWidgetList|topLevelWidgets|
 $prototype=static QApplication::Type type ()
 $staticMethod=|QApplication::Type|type|
 
-$prototype=static int wheelScrollLines ()
-$staticMethod=|int|wheelScrollLines|
+$prototypeV2=static int wheelScrollLines()
 
 $prototype=static QWidget * widgetAt ( const QPoint & point )
 $internalStaticMethod=|QWidget *|widgetAt,widgetAt1|const QPoint &

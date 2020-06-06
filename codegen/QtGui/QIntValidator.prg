@@ -55,8 +55,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=int bottom () const
-$method=|int|bottom|
+$prototypeV2=int bottom() const
 
 $prototype=void setBottom ( int )
 $method=|void|setBottom|int
@@ -67,8 +66,7 @@ $virtualMethod=|void|setRange|int,int
 $prototype=void setTop ( int )
 $method=|void|setTop|int
 
-$prototype=int top () const
-$method=|int|top|
+$prototypeV2=int top() const
 
 $prototype=virtual void fixup ( QString & input ) const
 HB_FUNC_STATIC( QINTVALIDATOR_FIXUP ) // TODO: revisar a implementacao e corrigir

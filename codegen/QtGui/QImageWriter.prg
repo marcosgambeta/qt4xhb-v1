@@ -66,8 +66,7 @@ $deleteMethod
 $prototype=bool canWrite () const
 $method=|bool|canWrite|
 
-$prototype=int compression () const
-$method=|int|compression|
+$prototypeV2=int compression() const
 
 $prototype=QIODevice * device () const
 $method=|QIODevice *|device|
@@ -87,8 +86,7 @@ $method=|QByteArray|format|
 $prototype=float gamma () const
 $method=|float|gamma|
 
-$prototype=int quality () const
-$method=|int|quality|
+$prototypeV2=int quality() const
 
 $prototype=void setCompression ( int compression )
 $method=|void|setCompression|int

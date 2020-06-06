@@ -57,14 +57,12 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=int currentPage () const
-$method=|int|currentPage|
+$prototypeV2=int currentPage() const
 
 $prototype=QPrinter::Orientation orientation () const
 $method=|QPrinter::Orientation|orientation|
 
-$prototype=int pageCount () const
-$method=|int|pageCount|
+$prototypeV2=int pageCount() const
 
 $prototype=ViewMode viewMode () const
 $method=|QPrintPreviewWidget::ViewMode|viewMode|

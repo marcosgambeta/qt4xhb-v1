@@ -58,8 +58,7 @@ $deleteMethod
 $prototype=double bottom () const
 $method=|double|bottom|
 
-$prototype=int decimals () const
-$method=|int|decimals|
+$prototypeV2=int decimals() const
 
 $prototype=Notation notation () const
 $method=|QDoubleValidator::Notation|notation|

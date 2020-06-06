@@ -60,11 +60,9 @@ HB_FUNC_STATIC( QTOOLBOX_ADDITEM )
 }
 $addMethod=addItem
 
-$prototype=int count () const
-$method=|int|count|
+$prototypeV2=int count() const
 
-$prototype=int currentIndex () const
-$method=|int|currentIndex|
+$prototypeV2=int currentIndex() const
 
 $prototype=QWidget * currentWidget () const
 $method=|QWidget *|currentWidget|

@@ -66,14 +66,12 @@ $method=|void|addItems|const QStringList &
 $prototype=void closePersistentEditor ( QListWidgetItem * item )
 $method=|void|closePersistentEditor|QListWidgetItem *
 
-$prototype=int count () const
-$method=|int|count|
+$prototypeV2=int count() const
 
 $prototype=QListWidgetItem * currentItem () const
 $method=|QListWidgetItem *|currentItem|
 
-$prototype=int currentRow () const
-$method=|int|currentRow|
+$prototypeV2=int currentRow() const
 
 $prototype=void editItem ( QListWidgetItem * item )
 $method=|void|editItem|QListWidgetItem *

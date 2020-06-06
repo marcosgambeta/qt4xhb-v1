@@ -58,11 +58,9 @@ $deleteMethod
 $prototype=const QUndoCommand * child ( int index ) const
 $method=|const QUndoCommand *|child|int
 
-$prototype=int childCount () const
-$method=|int|childCount|
+$prototypeV2=int childCount() const
 
-$prototype=virtual int id () const
-$virtualMethod=|int|id|
+$prototypeV2=virtual int id() const
 
 $prototype=virtual bool mergeWith ( const QUndoCommand * command )
 $virtualMethod=|bool|mergeWith|const QUndoCommand *

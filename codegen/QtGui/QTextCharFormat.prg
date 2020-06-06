@@ -78,8 +78,7 @@ $method=|QFont::StyleStrategy|fontStyleStrategy|
 $prototype=bool fontUnderline () const
 $method=|bool|fontUnderline|
 
-$prototype=int fontWeight () const
-$method=|int|fontWeight|
+$prototypeV2=int fontWeight() const
 
 $prototype=qreal fontWordSpacing () const
 $method=|qreal|fontWordSpacing|

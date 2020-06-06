@@ -81,8 +81,7 @@ $method=|qreal|leading|
 $prototype=bool leadingIncluded () const
 $method=|bool|leadingIncluded|
 
-$prototype=int lineNumber () const
-$method=|int|lineNumber|
+$prototypeV2=int lineNumber() const
 
 $prototype=QRectF naturalTextRect () const
 $method=|QRectF|naturalTextRect|
@@ -133,11 +132,9 @@ $addMethod=setNumColumns
 $prototype=void setPosition ( const QPointF & pos )
 $method=|void|setPosition|const QPointF &
 
-$prototype=int textLength () const
-$method=|int|textLength|
+$prototypeV2=int textLength() const
 
-$prototype=int textStart () const
-$method=|int|textStart|
+$prototypeV2=int textStart() const
 
 $prototype=qreal width () const
 $method=|qreal|width|

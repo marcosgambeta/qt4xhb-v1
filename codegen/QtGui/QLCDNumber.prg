@@ -82,11 +82,9 @@ HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW )
 }
 $addMethod=checkOverflow
 
-$prototype=int digitCount () const
-$method=|int|digitCount|
+$prototypeV2=int digitCount() const
 
-$prototype=int intValue () const
-$method=|int|intValue|
+$prototypeV2=int intValue() const
 
 $prototype=Mode mode () const
 $method=|QLCDNumber::Mode|mode|

@@ -1019,8 +1019,7 @@ $method=|QPointF|transformOriginPoint|
 $prototype=QList<QGraphicsTransform *> transformations () const
 $method=|QList<QGraphicsTransform *>|transformations|
 
-$prototype=virtual int type () const
-$virtualMethod=|int|type|
+$prototypeV2=virtual int type() const
 
 $prototype=void ungrabKeyboard ()
 $method=|void|ungrabKeyboard|

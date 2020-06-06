@@ -36,17 +36,14 @@ $deleteMethod
 $prototype=QTextBlockFormat blockFormat () const
 $method=|QTextBlockFormat|blockFormat|
 
-$prototype=int blockFormatIndex () const
-$method=|int|blockFormatIndex|
+$prototypeV2=int blockFormatIndex() const
 
-$prototype=int blockNumber () const
-$method=|int|blockNumber|
+$prototypeV2=int blockNumber() const
 
 $prototype=QTextCharFormat charFormat () const
 $method=|QTextCharFormat|charFormat|
 
-$prototype=int charFormatIndex () const
-$method=|int|charFormatIndex|
+$prototypeV2=int charFormatIndex() const
 
 $prototype=void clearLayout ()
 $method=|void|clearLayout|
@@ -57,8 +54,7 @@ $method=|bool|contains|int
 $prototype=const QTextDocument * document () const
 $method=|const QTextDocument *|document|
 
-$prototype=int firstLineNumber () const
-$method=|int|firstLineNumber|
+$prototypeV2=int firstLineNumber() const
 
 $prototype=bool isValid () const
 $method=|bool|isValid|
@@ -69,23 +65,19 @@ $method=|bool|isVisible|
 $prototype=QTextLayout * layout () const
 $method=|QTextLayout *|layout|
 
-$prototype=int length () const
-$method=|int|length|
+$prototypeV2=int length() const
 
-$prototype=int lineCount () const
-$method=|int|lineCount|
+$prototypeV2=int lineCount() const
 
 $prototype=QTextBlock next () const
 $method=|QTextBlock|next|
 
-$prototype=int position () const
-$method=|int|position|
+$prototypeV2=int position() const
 
 $prototype=QTextBlock previous () const
 $method=|QTextBlock|previous|
 
-$prototype=int revision () const
-$method=|int|revision|
+$prototypeV2=int revision() const
 
 $prototype=void setLineCount ( int count )
 $method=|void|setLineCount|int
@@ -114,8 +106,7 @@ $method=|QTextList *|textList|
 $prototype=QTextBlockUserData * userData () const
 $method=|QTextBlockUserData *|userData|
 
-$prototype=int userState () const
-$method=|int|userState|
+$prototypeV2=int userState() const
 
 $extraMethods
 

@@ -44,8 +44,7 @@ $method=|QAbstractButton *|button|QWizard::WizardButton
 $prototype=QString buttonText ( WizardButton which ) const
 $method=|QString|buttonText|QWizard::WizardButton
 
-$prototype=int currentId () const
-$method=|int|currentId|
+$prototypeV2=int currentId() const
 
 $prototype=QWizardPage * currentPage () const
 $method=|QWizardPage *|currentPage|
@@ -56,8 +55,7 @@ $method=|QVariant|field|const QString &
 $prototype=bool hasVisitedPage ( int id ) const
 $method=|bool|hasVisitedPage|int
 
-$prototype=virtual int nextId () const
-$virtualMethod=|int|nextId|
+$prototypeV2=virtual int nextId() const
 
 $prototype=WizardOptions options () const
 $method=|QWizard::WizardOptions|options|
@@ -119,8 +117,7 @@ $method=|void|setWizardStyle|QWizard::WizardStyle
 $prototype=QWidget * sideWidget () const
 $method=|QWidget *|sideWidget|
 
-$prototype=int startId () const
-$method=|int|startId|
+$prototypeV2=int startId() const
 
 $prototype=Qt::TextFormat subTitleFormat () const
 $method=|Qt::TextFormat|subTitleFormat|

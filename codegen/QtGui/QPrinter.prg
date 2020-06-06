@@ -70,8 +70,7 @@ $method=|bool|collateCopies|
 $prototype=ColorMode colorMode () const
 $method=|QPrinter::ColorMode|colorMode|
 
-$prototype=int copyCount () const
-$method=|int|copyCount|
+$prototypeV2=int copyCount() const
 
 $prototype=QString creator () const
 $method=|QString|creator|
@@ -88,8 +87,7 @@ $method=|QPrinter::DuplexMode|duplex|
 $prototype=bool fontEmbeddingEnabled () const
 $method=|bool|fontEmbeddingEnabled|
 
-$prototype=int fromPage () const
-$method=|int|fromPage|
+$prototypeV2=int fromPage() const
 
 $prototype=bool fullPage () const
 $method=|bool|fullPage|
@@ -214,8 +212,7 @@ $method=|QString|printerName|
 $prototype=PrinterState printerState () const
 $method=|QPrinter::PrinterState|printerState|
 
-$prototype=int resolution () const
-$method=|int|resolution|
+$prototypeV2=int resolution() const
 
 $prototype=void setCollateCopies ( bool collate )
 $method=|void|setCollateCopies|bool
@@ -317,8 +314,7 @@ $method=|QList<int>|supportedResolutions|
 $prototype=bool supportsMultipleCopies () const
 $method=|bool|supportsMultipleCopies|
 
-$prototype=int toPage () const
-$method=|int|toPage|
+$prototypeV2=int toPage() const
 
 $prototype=int winPageSize () const
 $method=|int|winPageSize||#ifdef Q_WS_WIN

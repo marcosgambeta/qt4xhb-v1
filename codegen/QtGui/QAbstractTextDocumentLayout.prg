@@ -48,8 +48,7 @@ $method=|QTextObjectInterface *|handlerForObject|int
 $prototype=virtual int hitTest ( const QPointF & point, Qt::HitTestAccuracy accuracy ) const = 0
 $virtualMethod=|int|hitTest|const QPointF &,Qt::HitTestAccuracy
 
-$prototype=virtual int pageCount () const = 0
-$virtualMethod=|int|pageCount|
+$prototypeV2=virtual int pageCount() const = 0
 
 $prototype=QPaintDevice * paintDevice () const
 $method=|QPaintDevice *|paintDevice|

@@ -30,8 +30,7 @@ $deleteMethod
 $prototype=void add ( const QTextBlock & block )
 $method=|void|add|const QTextBlock &
 
-$prototype=int count () const
-$method=|int|count|
+$prototypeV2=int count() const
 
 $prototype=QTextListFormat format () const
 $method=|QTextListFormat|format|

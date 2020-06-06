@@ -132,11 +132,9 @@ $method=|QVector<QTextLength>|lengthVectorProperty|int
 $prototype=void merge ( const QTextFormat & other )
 $method=|void|merge|const QTextFormat &
 
-$prototype=int objectIndex () const
-$method=|int|objectIndex|
+$prototypeV2=int objectIndex() const
 
-$prototype=int objectType () const
-$method=|int|objectType|
+$prototypeV2=int objectType() const
 
 $prototype=QPen penProperty ( int propertyId ) const
 $method=|QPen|penProperty|int
@@ -144,8 +142,7 @@ $method=|QPen|penProperty|int
 $prototype=QVariant property ( int propertyId ) const
 $method=|QVariant|property|int
 
-$prototype=int propertyCount () const
-$method=|int|propertyCount|
+$prototypeV2=int propertyCount() const
 
 $prototype=void setBackground ( const QBrush & brush )
 $method=|void|setBackground|const QBrush &
@@ -214,8 +211,7 @@ $method=|QTextTableCellFormat|toTableCellFormat|
 $prototype=QTextTableFormat toTableFormat () const
 $method=|QTextTableFormat|toTableFormat|
 
-$prototype=int type () const
-$method=|int|type|
+$prototypeV2=int type() const
 
 $extraMethods
 

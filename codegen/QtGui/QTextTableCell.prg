@@ -57,11 +57,9 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=int column () const
-$method=|int|column|
+$prototypeV2=int column() const
 
-$prototype=int columnSpan () const
-$method=|int|columnSpan|
+$prototypeV2=int columnSpan() const
 
 $prototype=QTextCursor firstCursorPosition () const
 $method=|QTextCursor|firstCursorPosition|
@@ -75,17 +73,14 @@ $method=|bool|isValid|
 $prototype=QTextCursor lastCursorPosition () const
 $method=|QTextCursor|lastCursorPosition|
 
-$prototype=int row () const
-$method=|int|row|
+$prototypeV2=int row() const
 
-$prototype=int rowSpan () const
-$method=|int|rowSpan|
+$prototypeV2=int rowSpan() const
 
 $prototype=void setFormat ( const QTextCharFormat & format )
 $method=|void|setFormat|const QTextCharFormat &
 
-$prototype=int tableCellFormatIndex () const
-$method=|int|tableCellFormatIndex|
+$prototypeV2=int tableCellFormatIndex() const
 
 $extraMethods
 

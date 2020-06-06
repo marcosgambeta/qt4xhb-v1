@@ -57,8 +57,7 @@ $method=|void|setVerticalSpacing|qreal
 $prototype=qreal verticalSpacing () const
 $method=|qreal|verticalSpacing|
 
-$prototype=virtual int count () const
-$virtualMethod=|int|count|
+$prototypeV2=virtual int count() const
 
 $prototype=virtual void invalidate ()
 $virtualMethod=|void|invalidate|

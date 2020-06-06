@@ -112,8 +112,7 @@ $virtualMethod=|void|setVisible|bool
 $prototype=static QRgb customColor ( int index )
 $staticMethod=|QRgb|customColor|int
 
-$prototype=static int customCount ()
-$staticMethod=|int|customCount|
+$prototypeV2=static int customCount()
 
 $prototype=static QColor getColor ( const QColor & initial, QWidget * parent, const QString & title, ColorDialogOptions options = 0 )
 $internalStaticMethod=|QColor|getColor,getColor1|const QColor &,QWidget *,const QString &,QColorDialog::ColorDialogOptions=0

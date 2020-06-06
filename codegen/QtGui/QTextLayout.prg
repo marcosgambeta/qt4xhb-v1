@@ -130,8 +130,7 @@ $method=|int|leftCursorPosition|int
 $prototype=QTextLine lineAt ( int i ) const
 $method=|QTextLine|lineAt|int
 
-$prototype=int lineCount () const
-$method=|int|lineCount|
+$prototypeV2=int lineCount() const
 
 $prototype=QTextLine lineForTextPosition ( int pos ) const
 $method=|QTextLine|lineForTextPosition|int
@@ -148,8 +147,7 @@ $method=|int|nextCursorPosition|int,QTextLayout::CursorMode=QTextLayout::SkipCha
 $prototype=QPointF position () const
 $method=|QPointF|position|
 
-$prototype=int preeditAreaPosition () const
-$method=|int|preeditAreaPosition|
+$prototypeV2=int preeditAreaPosition() const
 
 $prototype=QString preeditAreaText () const
 $method=|QString|preeditAreaText|

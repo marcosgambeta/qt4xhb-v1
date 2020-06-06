@@ -100,11 +100,9 @@ $method=|void|setSpanAngle|int
 $prototype=void setStartAngle ( int angle )
 $method=|void|setStartAngle|int
 
-$prototype=int spanAngle () const
-$method=|int|spanAngle|
+$prototypeV2=int spanAngle() const
 
-$prototype=int startAngle () const
-$method=|int|startAngle|
+$prototypeV2=int startAngle() const
 
 $prototype=virtual QRectF boundingRect () const
 $virtualMethod=|QRectF|boundingRect|
@@ -124,7 +122,6 @@ $virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *
 $prototype=virtual QPainterPath shape () const
 $virtualMethod=|QPainterPath|shape|
 
-$prototype=virtual int type () const
-$virtualMethod=|int|type|
+$prototypeV2=virtual int type() const
 
 #pragma ENDDUMP

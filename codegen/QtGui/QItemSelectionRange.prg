@@ -71,8 +71,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=int bottom () const
-$method=|int|bottom|
+$prototypeV2=int bottom() const
 
 $prototype=QModelIndex bottomRight () const
 $method=|QModelIndex|bottomRight|
@@ -105,8 +104,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_CONTAINS )
 }
 $addMethod=contains
 
-$prototype=int height () const
-$method=|int|height|
+$prototypeV2=int height() const
 
 $prototype=QModelIndexList indexes () const
 $method=|QModelIndexList|indexes|
@@ -123,8 +121,7 @@ $method=|bool|isEmpty|
 $prototype=bool isValid () const
 $method=|bool|isValid|
 
-$prototype=int left () const
-$method=|int|left|
+$prototypeV2=int left() const
 
 $prototype=const QAbstractItemModel * model () const
 $method=|const QAbstractItemModel *|model|
@@ -132,17 +129,14 @@ $method=|const QAbstractItemModel *|model|
 $prototype=QModelIndex parent () const
 $method=|QModelIndex|parent|
 
-$prototype=int right () const
-$method=|int|right|
+$prototypeV2=int right() const
 
-$prototype=int top () const
-$method=|int|top|
+$prototypeV2=int top() const
 
 $prototype=QModelIndex topLeft () const
 $method=|QModelIndex|topLeft|
 
-$prototype=int width () const
-$method=|int|width|
+$prototypeV2=int width() const
 
 $extraMethods
 

@@ -35,17 +35,14 @@ $deleteMethod
 $prototype=bool cascadingSectionResizes () const
 $method=|bool|cascadingSectionResizes|
 
-$prototype=int count () const
-$method=|int|count|
+$prototypeV2=int count() const
 
 $prototype=Qt::Alignment defaultAlignment () const
 $method=|Qt::Alignment|defaultAlignment|
 
-$prototype=int defaultSectionSize () const
-$method=|int|defaultSectionSize|
+$prototypeV2=int defaultSectionSize() const
 
-$prototype=int hiddenSectionCount () const
-$method=|int|hiddenSectionCount|
+$prototypeV2=int hiddenSectionCount() const
 
 $prototype=void hideSection ( int logicalIndex )
 $method=|void|hideSection|int
@@ -65,8 +62,7 @@ $method=|bool|isSectionHidden|int
 $prototype=bool isSortIndicatorShown () const
 $method=|bool|isSortIndicatorShown|
 
-$prototype=int length () const
-$method=|int|length|
+$prototypeV2=int length() const
 
 $prototype=int logicalIndex ( int visualIndex ) const
 $method=|int|logicalIndex|int
@@ -107,14 +103,12 @@ HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT )
 }
 $addMethod=logicalIndexAt
 
-$prototype=int minimumSectionSize () const
-$method=|int|minimumSectionSize|
+$prototypeV2=int minimumSectionSize() const
 
 $prototype=void moveSection ( int from, int to )
 $method=|void|moveSection|int,int
 
-$prototype=int offset () const
-$method=|int|offset|
+$prototypeV2=int offset() const
 
 $prototype=Qt::Orientation orientation () const
 $method=|Qt::Orientation|orientation|
@@ -219,14 +213,12 @@ $method=|void|showSection|int
 $prototype=Qt::SortOrder sortIndicatorOrder () const
 $method=|Qt::SortOrder|sortIndicatorOrder|
 
-$prototype=int sortIndicatorSection () const
-$method=|int|sortIndicatorSection|
+$prototypeV2=int sortIndicatorSection() const
 
 $prototype=bool stretchLastSection () const
 $method=|bool|stretchLastSection|
 
-$prototype=int stretchSectionCount () const
-$method=|int|stretchSectionCount|
+$prototypeV2=int stretchSectionCount() const
 
 $prototype=void swapSections ( int first, int second )
 $method=|void|swapSections|int,int

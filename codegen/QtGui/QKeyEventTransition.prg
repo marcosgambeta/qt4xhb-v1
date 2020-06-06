@@ -55,8 +55,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=int key () const
-$method=|int|key|
+$prototypeV2=int key() const
 
 $prototype=Qt::KeyboardModifiers modifierMask () const
 $method=|Qt::KeyboardModifiers|modifierMask|

@@ -66,14 +66,11 @@ $method=|bool|autoReset|
 $prototype=QString labelText () const
 $method=|QString|labelText|
 
-$prototype=int maximum () const
-$method=|int|maximum|
+$prototypeV2=int maximum() const
 
-$prototype=int minimum () const
-$method=|int|minimum|
+$prototypeV2=int minimum() const
 
-$prototype=int minimumDuration () const
-$method=|int|minimumDuration|
+$prototypeV2=int minimumDuration() const
 
 $prototype=void open ( QObject * receiver, const char * member )
 $method=|void|open|QObject *,const char *
@@ -93,8 +90,7 @@ $method=|void|setCancelButton|QPushButton *
 $prototype=void setLabel ( QLabel * label )
 $method=|void|setLabel|QLabel *
 
-$prototype=int value () const
-$method=|int|value|
+$prototypeV2=int value() const
 
 $prototype=bool wasCanceled () const
 $method=|bool|wasCanceled|

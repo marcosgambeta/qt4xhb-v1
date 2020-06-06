@@ -36,11 +36,9 @@ $method=|QString|fileName|
 $prototype=bool isFinished () const
 $method=|bool|isFinished|
 
-$prototype=int loops () const
-$method=|int|loops|
+$prototypeV2=int loops() const
 
-$prototype=int loopsRemaining () const
-$method=|int|loopsRemaining|
+$prototypeV2=int loopsRemaining() const
 
 $prototype=void setLoops ( int number )
 $method=|void|setLoops|int

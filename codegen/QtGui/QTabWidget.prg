@@ -66,11 +66,9 @@ $method=|void|clear|
 $prototype=QWidget * cornerWidget ( Qt::Corner corner = Qt::TopRightCorner ) const
 $method=|QWidget *|cornerWidget|Qt::Corner=Qt::TopRightCorner
 
-$prototype=int count () const
-$method=|int|count|
+$prototypeV2=int count() const
 
-$prototype=int currentIndex () const
-$method=|int|currentIndex|
+$prototypeV2=int currentIndex() const
 
 $prototype=QWidget * currentWidget () const
 $method=|QWidget *|currentWidget|

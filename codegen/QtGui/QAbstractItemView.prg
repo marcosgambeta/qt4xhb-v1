@@ -32,8 +32,7 @@ $deleteMethod
 $prototype=bool alternatingRowColors () const
 $method=|bool|alternatingRowColors|
 
-$prototype=int autoScrollMargin () const
-$method=|int|autoScrollMargin|
+$prototypeV2=int autoScrollMargin() const
 
 $prototype=void closePersistentEditor ( const QModelIndex & index )
 $method=|void|closePersistentEditor|const QModelIndex &

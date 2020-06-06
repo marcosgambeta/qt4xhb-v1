@@ -63,8 +63,7 @@ $method=|void|addWidget|QWidget *
 $prototype=bool childrenCollapsible () const
 $method=|bool|childrenCollapsible|
 
-$prototype=int count () const
-$method=|int|count|
+$prototypeV2=int count() const
 
 $prototype=void getRange ( int index, int * min, int * max ) const
 $method=|void|getRange|int,int *,int *
@@ -72,8 +71,7 @@ $method=|void|getRange|int,int *,int *
 $prototype=QSplitterHandle * handle ( int index ) const
 $method=|QSplitterHandle *|handle|int
 
-$prototype=int handleWidth () const
-$method=|int|handleWidth|
+$prototypeV2=int handleWidth() const
 
 $prototype=int indexOf ( QWidget * widget ) const
 $method=|int|indexOf|QWidget *

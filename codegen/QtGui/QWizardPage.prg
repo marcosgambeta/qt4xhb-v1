@@ -48,8 +48,7 @@ $virtualMethod=|bool|isComplete|
 $prototype=bool isFinalPage () const
 $method=|bool|isFinalPage|
 
-$prototype=virtual int nextId () const
-$virtualMethod=|int|nextId|
+$prototypeV2=virtual int nextId() const
 
 $prototype=QPixmap pixmap ( QWizard::WizardPixmap which ) const
 $method=|QPixmap|pixmap|QWizard::WizardPixmap

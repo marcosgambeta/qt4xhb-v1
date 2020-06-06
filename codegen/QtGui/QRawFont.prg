@@ -175,8 +175,7 @@ $addMethod=supportsCharacter
 $prototype=qreal unitsPerEm () const
 $method=|qreal|unitsPerEm|
 
-$prototype=int weight () const
-$method=|int|weight|
+$prototypeV2=int weight() const
 
 $prototype=qreal xHeight () const
 $method=|qreal|xHeight|

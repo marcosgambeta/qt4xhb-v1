@@ -41,17 +41,14 @@ $method=|bool|invertedControls|
 $prototype=bool isSliderDown () const
 $method=|bool|isSliderDown|
 
-$prototype=int maximum () const
-$method=|int|maximum|
+$prototypeV2=int maximum() const
 
-$prototype=int minimum () const
-$method=|int|minimum|
+$prototypeV2=int minimum() const
 
 $prototype=Qt::Orientation orientation () const
 $method=|Qt::Orientation|orientation|
 
-$prototype=int pageStep () const
-$method=|int|pageStep|
+$prototypeV2=int pageStep() const
 
 $prototype=void setInvertedAppearance ( bool )
 $method=|void|setInvertedAppearance|bool
@@ -83,17 +80,14 @@ $method=|void|setSliderPosition|int
 $prototype=void setTracking ( bool enable )
 $method=|void|setTracking|bool
 
-$prototype=int singleStep () const
-$method=|int|singleStep|
+$prototypeV2=int singleStep() const
 
-$prototype=int sliderPosition () const
-$method=|int|sliderPosition|
+$prototypeV2=int sliderPosition() const
 
 $prototype=void triggerAction ( SliderAction action )
 $method=|void|triggerAction|QAbstractSlider::SliderAction
 
-$prototype=int value () const
-$method=|int|value|
+$prototypeV2=int value() const
 
 $prototype=void setOrientation ( Qt::Orientation )
 $method=|void|setOrientation|Qt::Orientation

@@ -32,8 +32,7 @@ $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-$prototype=int batchSize () const
-$method=|int|batchSize|
+$prototypeV2=int batchSize() const
 
 $prototype=void clearPropertyFlags ()
 $method=|void|clearPropertyFlags|
@@ -56,8 +55,7 @@ $method=|bool|isWrapping|
 $prototype=LayoutMode layoutMode () const
 $method=|QListView::LayoutMode|layoutMode|
 
-$prototype=int modelColumn () const
-$method=|int|modelColumn|
+$prototypeV2=int modelColumn() const
 
 $prototype=Movement movement () const
 $method=|QListView::Movement|movement|
@@ -107,8 +105,7 @@ $method=|void|setWordWrap|bool
 $prototype=void setWrapping ( bool enable )
 $method=|void|setWrapping|bool
 
-$prototype=int spacing () const
-$method=|int|spacing|
+$prototypeV2=int spacing() const
 
 $prototype=bool uniformItemSizes () const
 $method=|bool|uniformItemSizes|

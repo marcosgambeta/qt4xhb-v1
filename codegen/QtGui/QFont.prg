@@ -122,11 +122,9 @@ $method=|QFont::SpacingType|letterSpacingType|
 $prototype=bool overline () const
 $method=|bool|overline|
 
-$prototype=int pixelSize () const
-$method=|int|pixelSize|
+$prototypeV2=int pixelSize() const
 
-$prototype=int pointSize () const
-$method=|int|pointSize|
+$prototypeV2=int pointSize() const
 
 $prototype=qreal pointSizeF () const
 $method=|qreal|pointSizeF|
@@ -203,8 +201,7 @@ $method=|void|setWeight|int
 $prototype=void setWordSpacing ( qreal spacing )
 $method=|void|setWordSpacing|qreal
 
-$prototype=int stretch () const
-$method=|int|stretch|
+$prototypeV2=int stretch() const
 
 $prototype=bool strikeOut () const
 $method=|bool|strikeOut|
@@ -224,8 +221,7 @@ $method=|QString|toString|
 $prototype=bool underline () const
 $method=|bool|underline|
 
-$prototype=int weight () const
-$method=|int|weight|
+$prototypeV2=int weight() const
 
 $prototype=qreal wordSpacing () const
 $method=|qreal|wordSpacing|

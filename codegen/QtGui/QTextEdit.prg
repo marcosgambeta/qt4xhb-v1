@@ -139,8 +139,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CURSORRECT )
 }
 $addMethod=cursorRect
 
-$prototype=int cursorWidth () const
-$method=|int|cursorWidth|
+$prototypeV2=int cursorWidth() const
 
 $prototype=QTextDocument * document () const
 $method=|QTextDocument *|document|
@@ -166,8 +165,7 @@ $method=|qreal|fontPointSize|
 $prototype=bool fontUnderline () const
 $method=|bool|fontUnderline|
 
-$prototype=int fontWeight () const
-$method=|int|fontWeight|
+$prototypeV2=int fontWeight() const
 
 $prototype=bool isReadOnly () const
 $method=|bool|isReadOnly|
@@ -175,8 +173,7 @@ $method=|bool|isReadOnly|
 $prototype=bool isUndoRedoEnabled () const
 $method=|bool|isUndoRedoEnabled|
 
-$prototype=int lineWrapColumnOrWidth () const
-$method=|int|lineWrapColumnOrWidth|
+$prototypeV2=int lineWrapColumnOrWidth() const
 
 $prototype=LineWrapMode lineWrapMode () const
 $method=|QTextEdit::LineWrapMode|lineWrapMode|
@@ -247,8 +244,7 @@ $method=|void|setWordWrapMode|QTextOption::WrapMode
 $prototype=bool tabChangesFocus () const
 $method=|bool|tabChangesFocus|
 
-$prototype=int tabStopWidth () const
-$method=|int|tabStopWidth|
+$prototypeV2=int tabStopWidth() const
 
 $prototype=QColor textBackgroundColor () const
 $method=|QColor|textBackgroundColor|

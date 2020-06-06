@@ -71,11 +71,9 @@ $method=|bool|hasScaledContents|
 $prototype=bool hasSelectedText () const
 $method=|bool|hasSelectedText|
 
-$prototype=int indent () const
-$method=|int|indent|
+$prototypeV2=int indent() const
 
-$prototype=int margin () const
-$method=|int|margin|
+$prototypeV2=int margin() const
 
 $prototype=QMovie * movie () const
 $method=|QMovie *|movie|

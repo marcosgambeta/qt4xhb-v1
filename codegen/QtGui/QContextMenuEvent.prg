@@ -66,11 +66,9 @@ $deleteMethod
 $prototype=const QPoint & globalPos () const
 $method=|const QPoint &|globalPos|
 
-$prototype=int globalX () const
-$method=|int|globalX|
+$prototypeV2=int globalX() const
 
-$prototype=int globalY () const
-$method=|int|globalY|
+$prototypeV2=int globalY() const
 
 $prototype=const QPoint & pos () const
 $method=|const QPoint &|pos|
@@ -78,10 +76,8 @@ $method=|const QPoint &|pos|
 $prototype=Reason reason () const
 $method=|QContextMenuEvent::Reason|reason|
 
-$prototype=int x () const
-$method=|int|x|
+$prototypeV2=int x() const
 
-$prototype=int y () const
-$method=|int|y|
+$prototypeV2=int y() const
 
 #pragma ENDDUMP

@@ -80,8 +80,7 @@ $method=|void|cursorBackward|bool,int=1
 $prototype=void cursorForward ( bool mark, int steps = 1 )
 $method=|void|cursorForward|bool,int=1
 
-$prototype=int cursorPosition () const
-$method=|int|cursorPosition|
+$prototypeV2=int cursorPosition() const
 
 $prototype=int cursorPositionAt ( const QPoint & pos )
 $method=|int|cursorPositionAt|const QPoint &
@@ -143,8 +142,7 @@ $method=|bool|isRedoAvailable|
 $prototype=bool isUndoAvailable () const
 $method=|bool|isUndoAvailable|
 
-$prototype=int maxLength () const
-$method=|int|maxLength|
+$prototypeV2=int maxLength() const
 
 $prototype=QString placeholderText () const
 $method=|QString|placeholderText|
@@ -155,8 +153,7 @@ $virtualMethod=|QSize|minimumSizeHint|
 $prototype=QString selectedText () const
 $method=|QString|selectedText|
 
-$prototype=int selectionStart () const
-$method=|int|selectionStart|
+$prototypeV2=int selectionStart() const
 
 $prototype=void setAlignment ( Qt::Alignment flag )
 $method=|void|setAlignment|Qt::Alignment

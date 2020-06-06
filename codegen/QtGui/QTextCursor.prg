@@ -85,8 +85,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=int anchor () const
-$method=|int|anchor|
+$prototypeV2=int anchor() const
 
 $prototype=bool atBlockEnd () const
 $method=|bool|atBlockEnd|
@@ -112,8 +111,7 @@ $method=|QTextCharFormat|blockCharFormat|
 $prototype=QTextBlockFormat blockFormat () const
 $method=|QTextBlockFormat|blockFormat|
 
-$prototype=int blockNumber () const
-$method=|int|blockNumber|
+$prototypeV2=int blockNumber() const
 
 $prototype=QTextCharFormat charFormat () const
 $method=|QTextCharFormat|charFormat|
@@ -121,8 +119,7 @@ $method=|QTextCharFormat|charFormat|
 $prototype=void clearSelection ()
 $method=|void|clearSelection|
 
-$prototype=int columnNumber () const
-$method=|int|columnNumber|
+$prototypeV2=int columnNumber() const
 
 $prototype=QTextList * createList ( const QTextListFormat & format )
 $internalMethod=|QTextList *|createList,createList1|const QTextListFormat &
@@ -376,11 +373,9 @@ $method=|void|mergeCharFormat|const QTextCharFormat &
 $prototype=bool movePosition ( MoveOperation operation, MoveMode mode = MoveAnchor, int n = 1 )
 $method=|bool|movePosition|QTextCursor::MoveOperation,QTextCursor::MoveMode=QTextCursor::MoveAnchor,int=1
 
-$prototype=int position () const
-$method=|int|position|
+$prototypeV2=int position() const
 
-$prototype=int positionInBlock () const
-$method=|int|positionInBlock|
+$prototypeV2=int positionInBlock() const
 
 $prototype=void removeSelectedText ()
 $method=|void|removeSelectedText|
@@ -397,11 +392,9 @@ $method=|QString|selectedText|
 $prototype=QTextDocumentFragment selection () const
 $method=|QTextDocumentFragment|selection|
 
-$prototype=int selectionEnd () const
-$method=|int|selectionEnd|
+$prototypeV2=int selectionEnd() const
 
-$prototype=int selectionStart () const
-$method=|int|selectionStart|
+$prototypeV2=int selectionStart() const
 
 $prototype=void setBlockCharFormat ( const QTextCharFormat & format )
 $method=|void|setBlockCharFormat|const QTextCharFormat &
@@ -424,8 +417,7 @@ $method=|void|setVerticalMovementX|int
 $prototype=void setVisualNavigation ( bool b )
 $method=|void|setVisualNavigation|bool
 
-$prototype=int verticalMovementX () const
-$method=|int|verticalMovementX|
+$prototypeV2=int verticalMovementX() const
 
 $prototype=bool visualNavigation () const
 $method=|bool|visualNavigation|

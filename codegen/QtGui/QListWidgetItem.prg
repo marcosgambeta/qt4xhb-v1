@@ -161,14 +161,12 @@ $method=|QString|statusTip|
 $prototype=QString text () const
 $method=|QString|text|
 
-$prototype=int textAlignment () const
-$method=|int|textAlignment|
+$prototypeV2=int textAlignment() const
 
 $prototype=QString toolTip () const
 $method=|QString|toolTip|
 
-$prototype=int type () const
-$method=|int|type|
+$prototypeV2=int type() const
 
 $prototype=QString whatsThis () const
 $method=|QString|whatsThis|

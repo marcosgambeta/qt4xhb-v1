@@ -63,8 +63,7 @@ $method=|bool|autoRepeat|
 $prototype=Qt::ShortcutContext context() const
 $method=|Qt::ShortcutContext|context|
 
-$prototype=int id() const
-$method=|int|id|
+$prototypeV2=int id() const
 
 $prototype=bool isEnabled() const
 $method=|bool|isEnabled|

@@ -72,23 +72,19 @@ $method=|void|adjustSize|
 $prototype=QVector<QTextFormat> allFormats () const
 $method=|QVector<QTextFormat>|allFormats|
 
-$prototype=int availableRedoSteps () const
-$method=|int|availableRedoSteps|
+$prototypeV2=int availableRedoSteps() const
 
-$prototype=int availableUndoSteps () const
-$method=|int|availableUndoSteps|
+$prototypeV2=int availableUndoSteps() const
 
 $prototype=QTextBlock begin () const
 $method=|QTextBlock|begin|
 
-$prototype=int blockCount () const
-$method=|int|blockCount|
+$prototypeV2=int blockCount() const
 
 $prototype=QChar characterAt ( int pos ) const
 $method=|QChar|characterAt|int
 
-$prototype=int characterCount () const
-$method=|int|characterCount|
+$prototypeV2=int characterCount() const
 
 $prototype=virtual void clear ()
 $virtualMethod=|void|clear|
@@ -203,14 +199,12 @@ $method=|bool|isUndoRedoEnabled|
 $prototype=QTextBlock lastBlock () const
 $method=|QTextBlock|lastBlock|
 
-$prototype=int lineCount () const
-$method=|int|lineCount|
+$prototypeV2=int lineCount() const
 
 $prototype=void markContentsDirty ( int position, int length )
 $method=|void|markContentsDirty|int,int
 
-$prototype=int maximumBlockCount () const
-$method=|int|maximumBlockCount|
+$prototypeV2=int maximumBlockCount() const
 
 $prototype=QString metaInformation ( MetaInformation info ) const
 $method=|QString|metaInformation|QTextDocument::MetaInformation
@@ -221,8 +215,7 @@ $method=|QTextObject *|object|int
 $prototype=QTextObject * objectForFormat ( const QTextFormat & f ) const
 $method=|QTextObject *|objectForFormat|const QTextFormat &
 
-$prototype=int pageCount () const
-$method=|int|pageCount|
+$prototypeV2=int pageCount() const
 
 $prototype=QSizeF pageSize () const
 $method=|QSizeF|pageSize|
@@ -233,8 +226,7 @@ $method=|void|print|QPrinter *
 $prototype=QVariant resource ( int type, const QUrl & name ) const
 $method=|QVariant|resource|int,const QUrl &
 
-$prototype=int revision () const
-$method=|int|revision|
+$prototypeV2=int revision() const
 
 $prototype=QTextFrame * rootFrame () const
 $method=|QTextFrame *|rootFrame|

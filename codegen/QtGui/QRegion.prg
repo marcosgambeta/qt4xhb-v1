@@ -179,8 +179,7 @@ $addMethod=intersects
 $prototype=bool isEmpty () const
 $method=|bool|isEmpty|
 
-$prototype=int rectCount () const
-$method=|int|rectCount|
+$prototypeV2=int rectCount() const
 
 $prototype=QVector<QRect> rects () const
 $method=|QVector<QRect>|rects|

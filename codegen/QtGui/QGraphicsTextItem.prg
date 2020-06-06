@@ -142,8 +142,7 @@ $virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *
 $prototype=virtual QPainterPath shape () const
 $virtualMethod=|QPainterPath|shape|
 
-$prototype=virtual int type () const
-$virtualMethod=|int|type|
+$prototypeV2=virtual int type() const
 
 $beginSignals
 $signal=|linkActivated(QString)

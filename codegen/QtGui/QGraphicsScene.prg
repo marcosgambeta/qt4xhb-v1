@@ -186,8 +186,7 @@ $method=|QGraphicsProxyWidget *|addWidget|QWidget *,Qt::WindowFlags=0
 $prototype=QBrush backgroundBrush () const
 $method=|QBrush|backgroundBrush|
 
-$prototype=int bspTreeDepth () const
-$method=|int|bspTreeDepth|
+$prototypeV2=int bspTreeDepth() const
 
 $prototype=void clearFocus ()
 $method=|void|clearFocus|

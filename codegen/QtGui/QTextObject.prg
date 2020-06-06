@@ -33,10 +33,8 @@ $method=|QTextDocument *|document|
 $prototype=QTextFormat format () const
 $method=|QTextFormat|format|
 
-$prototype=int formatIndex () const
-$method=|int|formatIndex|
+$prototypeV2=int formatIndex() const
 
-$prototype=int objectIndex () const
-$method=|int|objectIndex|
+$prototypeV2=int objectIndex() const
 
 #pragma ENDDUMP

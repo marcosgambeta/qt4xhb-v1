@@ -30,14 +30,12 @@ $includes
 $prototype=QTextBrowser ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
 
-$prototype=int backwardHistoryCount () const
-$method=|int|backwardHistoryCount|
+$prototypeV2=int backwardHistoryCount() const
 
 $prototype=void clearHistory ()
 $method=|void|clearHistory|
 
-$prototype=int forwardHistoryCount () const
-$method=|int|forwardHistoryCount|
+$prototypeV2=int forwardHistoryCount() const
 
 $prototype=QString historyTitle ( int i ) const
 $method=|QString|historyTitle|int

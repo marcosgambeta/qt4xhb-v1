@@ -30,14 +30,12 @@ $constructor=|new|QEvent::Type,int,Qt::KeyboardModifiers,const QString &=QString
 
 $deleteMethod
 
-$prototype=int count () const
-$method=|int|count|
+$prototypeV2=int count() const
 
 $prototype=bool isAutoRepeat () const
 $method=|bool|isAutoRepeat|
 
-$prototype=int key () const
-$method=|int|key|
+$prototypeV2=int key() const
 
 $prototype=bool matches ( QKeySequence::StandardKey key ) const
 $method=|bool|matches|QKeySequence::StandardKey

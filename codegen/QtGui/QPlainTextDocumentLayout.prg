@@ -30,8 +30,7 @@ $constructor=|new|QTextDocument *
 
 $deleteMethod
 
-$prototype=int cursorWidth () const
-$method=|int|cursorWidth|
+$prototypeV2=int cursorWidth() const
 
 $prototype=void ensureBlockLayout ( const QTextBlock & block ) const
 $method=|void|ensureBlockLayout|const QTextBlock &
@@ -54,7 +53,6 @@ $virtualMethod=|QRectF|frameBoundingRect|QTextFrame *
 $prototype=virtual int hitTest ( const QPointF &, Qt::HitTestAccuracy ) const
 $virtualMethod=|int|hitTest|const QPointF &,Qt::HitTestAccuracy
 
-$prototype=virtual int pageCount () const
-$virtualMethod=|int|pageCount|
+$prototypeV2=virtual int pageCount() const
 
 #pragma ENDDUMP

@@ -39,8 +39,7 @@ $method=|qreal|descent|
 $prototype=QTextFormat format () const
 $method=|QTextFormat|format|
 
-$prototype=int formatIndex () const
-$method=|int|formatIndex|
+$prototypeV2=int formatIndex() const
 
 $prototype=qreal height () const
 $method=|qreal|height|
@@ -63,8 +62,7 @@ $method=|void|setWidth|qreal
 $prototype=Qt::LayoutDirection textDirection () const
 $method=|Qt::LayoutDirection|textDirection|
 
-$prototype=int textPosition () const
-$method=|int|textPosition|
+$prototypeV2=int textPosition() const
 
 $prototype=qreal width () const
 $method=|qreal|width|

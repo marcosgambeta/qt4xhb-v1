@@ -155,8 +155,7 @@ HB_FUNC_STATIC( QPIXMAP_CREATEMASKFROMCOLOR )
 }
 $addMethod=createMaskFromColor
 
-$prototype=int depth () const
-$method=|int|depth|
+$prototypeV2=int depth() const
 
 $prototype=void detach ()
 $method=|void|detach|
@@ -203,8 +202,7 @@ $method=|bool|hasAlpha|
 $prototype=bool hasAlphaChannel () const
 $method=|bool|hasAlphaChannel|
 
-$prototype=int height () const
-$method=|int|height|
+$prototypeV2=int height() const
 
 $prototype=bool isNull () const
 $method=|bool|isNull|
@@ -379,11 +377,9 @@ HB_FUNC_STATIC( QPIXMAP_TRANSFORMED )
 }
 $addMethod=transformed
 
-$prototype=int width () const
-$method=|int|width|
+$prototypeV2=int width() const
 
-$prototype=static int defaultDepth ()
-$staticMethod=|int|defaultDepth|
+$prototypeV2=static int defaultDepth()
 
 $prototype=static QPixmap fromImage ( const QImage & image, Qt::ImageConversionFlags flags = Qt::AutoColor )
 $staticMethod=|QPixmap|fromImage|const QImage &,Qt::ImageConversionFlags=Qt::AutoColor

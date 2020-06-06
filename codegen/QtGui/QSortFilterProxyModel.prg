@@ -41,14 +41,12 @@ $method=|bool|dynamicSortFilter|
 $prototype=Qt::CaseSensitivity filterCaseSensitivity () const
 $method=|Qt::CaseSensitivity|filterCaseSensitivity|
 
-$prototype=int filterKeyColumn () const
-$method=|int|filterKeyColumn|
+$prototypeV2=int filterKeyColumn() const
 
 $prototype=QRegExp filterRegExp () const
 $method=|QRegExp|filterRegExp|
 
-$prototype=int filterRole () const
-$method=|int|filterRole|
+$prototypeV2=int filterRole() const
 
 $prototype=bool isSortLocaleAware () const
 $method=|bool|isSortLocaleAware|
@@ -77,14 +75,12 @@ $method=|void|setSortRole|int
 $prototype=Qt::CaseSensitivity sortCaseSensitivity () const
 $method=|Qt::CaseSensitivity|sortCaseSensitivity|
 
-$prototype=int sortColumn () const
-$method=|int|sortColumn|
+$prototypeV2=int sortColumn() const
 
 $prototype=Qt::SortOrder sortOrder () const
 $method=|Qt::SortOrder|sortOrder|
 
-$prototype=int sortRole () const
-$method=|int|sortRole|
+$prototypeV2=int sortRole() const
 
 $prototype=virtual QModelIndex buddy ( const QModelIndex & index ) const
 $virtualMethod=|QModelIndex|buddy|const QModelIndex &

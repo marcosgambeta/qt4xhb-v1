@@ -36,7 +36,6 @@ $method=|void|setPosition|const QPointF &
 $prototype=static void setTimeout ( int msecs )
 $staticMethod=|void|setTimeout|int
 
-$prototype=static int timeout ()
-$staticMethod=|int|timeout|
+$prototypeV2=static int timeout()
 
 #pragma ENDDUMP

@@ -34,8 +34,7 @@ $virtualMethod=|QString|actionText|int,QAccessible::Text,int
 $prototype=virtual int childAt ( int x, int y ) const
 $virtualMethod=|int|childAt|int,int
 
-$prototype=virtual int childCount () const
-$virtualMethod=|int|childCount|
+$prototypeV2=virtual int childCount() const
 
 $prototype=virtual bool doAction ( int action, int child, const QVariantList & params )
 $virtualMethod=|bool|doAction|int,int,const QVariantList &

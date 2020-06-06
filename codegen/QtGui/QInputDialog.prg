@@ -38,8 +38,7 @@ $method=|QString|cancelButtonText|
 $prototype=QStringList comboBoxItems () const
 $method=|QStringList|comboBoxItems|
 
-$prototype=int doubleDecimals () const
-$method=|int|doubleDecimals|
+$prototypeV2=int doubleDecimals() const
 
 $prototype=double doubleMaximum () const
 $method=|double|doubleMaximum|
@@ -53,17 +52,13 @@ $method=|double|doubleValue|
 $prototype=InputMode inputMode () const
 $method=|QInputDialog::InputMode|inputMode|
 
-$prototype=int intMaximum () const
-$method=|int|intMaximum|
+$prototypeV2=int intMaximum() const
 
-$prototype=int intMinimum () const
-$method=|int|intMinimum|
+$prototypeV2=int intMinimum() const
 
-$prototype=int intStep () const
-$method=|int|intStep|
+$prototypeV2=int intStep() const
 
-$prototype=int intValue () const
-$method=|int|intValue|
+$prototypeV2=int intValue() const
 
 $prototype=bool isComboBoxEditable () const
 $method=|bool|isComboBoxEditable|

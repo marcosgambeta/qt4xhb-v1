@@ -102,8 +102,7 @@ $method=|void|clearMinimumTime|
 $prototype=Section currentSection () const
 $method=|QDateTimeEdit::Section|currentSection|
 
-$prototype=int currentSectionIndex () const
-$method=|int|currentSectionIndex|
+$prototypeV2=int currentSectionIndex() const
 
 $prototype=QDate date () const
 $method=|QDate|date|
@@ -138,8 +137,7 @@ $method=|QTime|minimumTime|
 $prototype=Section sectionAt ( int index ) const
 $method=|QDateTimeEdit::Section|sectionAt|int
 
-$prototype=int sectionCount () const
-$method=|int|sectionCount|
+$prototypeV2=int sectionCount() const
 
 $prototype=QString sectionText ( Section section ) const
 $method=|QString|sectionText|QDateTimeEdit::Section

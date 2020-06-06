@@ -71,8 +71,7 @@ $method=|QList<QAbstractButton *>|buttons|
 $prototype=QAbstractButton * checkedButton () const
 $method=|QAbstractButton *|checkedButton|
 
-$prototype=int checkedId () const
-$method=|int|checkedId|
+$prototypeV2=int checkedId() const
 
 $prototype=bool exclusive () const
 $method=|bool|exclusive|

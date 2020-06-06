@@ -36,8 +36,7 @@ $method=|Qt::Alignment|alignment|
 $prototype=qreal bottomMargin () const
 $method=|qreal|bottomMargin|
 
-$prototype=int indent () const
-$method=|int|indent|
+$prototypeV2=int indent() const
 
 $prototype=bool isValid () const
 $method=|bool|isValid|
@@ -73,8 +72,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHT )
 }
 $addMethod=lineHeight
 
-$prototype=int lineHeightType () const
-$method=|int|lineHeightType|
+$prototypeV2=int lineHeightType() const
 
 $prototype=bool nonBreakableLines () const
 $method=|bool|nonBreakableLines|

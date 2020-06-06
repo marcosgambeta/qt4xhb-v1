@@ -61,8 +61,7 @@ $method=|void|setTickInterval|int
 $prototype=void setTickPosition ( TickPosition position )
 $method=|void|setTickPosition|QSlider::TickPosition
 
-$prototype=int tickInterval () const
-$method=|int|tickInterval|
+$prototypeV2=int tickInterval() const
 
 $prototype=TickPosition tickPosition () const
 $method=|QSlider::TickPosition|tickPosition|

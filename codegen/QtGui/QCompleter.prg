@@ -71,11 +71,9 @@ $deleteMethod
 $prototype=Qt::CaseSensitivity caseSensitivity () const
 $method=|Qt::CaseSensitivity|caseSensitivity|
 
-$prototype=int completionColumn () const
-$method=|int|completionColumn|
+$prototypeV2=int completionColumn() const
 
-$prototype=int completionCount () const
-$method=|int|completionCount|
+$prototypeV2=int completionCount() const
 
 $prototype=CompletionMode completionMode () const
 $method=|QCompleter::CompletionMode|completionMode|
@@ -86,8 +84,7 @@ $method=|QAbstractItemModel *|completionModel|
 $prototype=QString completionPrefix () const
 $method=|QString|completionPrefix|
 
-$prototype=int completionRole () const
-$method=|int|completionRole|
+$prototypeV2=int completionRole() const
 
 $prototype=QString currentCompletion () const
 $method=|QString|currentCompletion|
@@ -95,11 +92,9 @@ $method=|QString|currentCompletion|
 $prototype=QModelIndex currentIndex () const
 $method=|QModelIndex|currentIndex|
 
-$prototype=int currentRow () const
-$method=|int|currentRow|
+$prototypeV2=int currentRow() const
 
-$prototype=int maxVisibleItems () const
-$method=|int|maxVisibleItems|
+$prototypeV2=int maxVisibleItems() const
 
 $prototype=QAbstractItemModel * model () const
 $method=|QAbstractItemModel *|model|

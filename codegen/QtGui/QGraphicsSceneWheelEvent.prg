@@ -30,8 +30,7 @@ $deleteMethod
 $prototype=Qt::MouseButtons buttons () const
 $method=|Qt::MouseButtons|buttons|
 
-$prototype=int delta () const
-$method=|int|delta|
+$prototypeV2=int delta() const
 
 $prototype=Qt::KeyboardModifiers modifiers () const
 $method=|Qt::KeyboardModifiers|modifiers|

@@ -35,11 +35,9 @@ $deleteMethod
 $prototype=QString cleanText () const
 $method=|QString|cleanText|
 
-$prototype=int maximum () const
-$method=|int|maximum|
+$prototypeV2=int maximum() const
 
-$prototype=int minimum () const
-$method=|int|minimum|
+$prototypeV2=int minimum() const
 
 $prototype=QString prefix () const
 $method=|QString|prefix|
@@ -62,14 +60,12 @@ $method=|void|setSingleStep|int
 $prototype=void setSuffix ( const QString & suffix )
 $method=|void|setSuffix|const QString &
 
-$prototype=int singleStep () const
-$method=|int|singleStep|
+$prototypeV2=int singleStep() const
 
 $prototype=QString suffix () const
 $method=|QString|suffix|
 
-$prototype=int value () const
-$method=|int|value|
+$prototypeV2=int value() const
 
 $prototype=void setValue ( int val )
 $method=|void|setValue|int

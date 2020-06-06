@@ -38,8 +38,7 @@ $method=|QList<QTextFrame *>|childFrames|
 $prototype=QTextCursor firstCursorPosition () const
 $method=|QTextCursor|firstCursorPosition|
 
-$prototype=int firstPosition () const
-$method=|int|firstPosition|
+$prototypeV2=int firstPosition() const
 
 $prototype=QTextFrameFormat frameFormat () const
 $method=|QTextFrameFormat|frameFormat|
@@ -47,8 +46,7 @@ $method=|QTextFrameFormat|frameFormat|
 $prototype=QTextCursor lastCursorPosition () const
 $method=|QTextCursor|lastCursorPosition|
 
-$prototype=int lastPosition () const
-$method=|int|lastPosition|
+$prototypeV2=int lastPosition() const
 
 $prototype=QTextFrame * parentFrame () const
 $method=|QTextFrame *|parentFrame|

@@ -77,8 +77,7 @@ $method=|bool|canRead|
 $prototype=QRect clipRect () const
 $method=|QRect|clipRect|
 
-$prototype=int currentImageNumber () const
-$method=|int|currentImageNumber|
+$prototypeV2=int currentImageNumber() const
 
 $prototype=QRect currentImageRect () const
 $method=|QRect|currentImageRect|
@@ -101,8 +100,7 @@ $method=|QString|fileName|
 $prototype=QByteArray format () const
 $method=|QByteArray|format|
 
-$prototype=int imageCount () const
-$method=|int|imageCount|
+$prototypeV2=int imageCount() const
 
 $prototype=bool jumpToImage ( int imageNumber )
 $method=|bool|jumpToImage|int
@@ -110,14 +108,11 @@ $method=|bool|jumpToImage|int
 $prototype=bool jumpToNextImage ()
 $method=|bool|jumpToNextImage|
 
-$prototype=int loopCount () const
-$method=|int|loopCount|
+$prototypeV2=int loopCount() const
 
-$prototype=int nextImageDelay () const
-$method=|int|nextImageDelay|
+$prototypeV2=int nextImageDelay() const
 
-$prototype=int quality () const
-$method=|int|quality|
+$prototypeV2=int quality() const
 
 $prototype=QImage read ()
 $internalMethod=|QImage|read,read1|

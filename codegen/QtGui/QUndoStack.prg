@@ -43,8 +43,7 @@ $method=|bool|canRedo|
 $prototype=bool canUndo () const
 $method=|bool|canUndo|
 
-$prototype=int cleanIndex () const
-$method=|int|cleanIndex|
+$prototypeV2=int cleanIndex() const
 
 $prototype=void clear ()
 $method=|void|clear|
@@ -52,8 +51,7 @@ $method=|void|clear|
 $prototype=const QUndoCommand * command ( int index ) const
 $method=|const QUndoCommand *|command|int
 
-$prototype=int count () const
-$method=|int|count|
+$prototypeV2=int count() const
 
 $prototype=QAction * createRedoAction ( QObject * parent, const QString & prefix = QString() ) const
 $method=|QAction *|createRedoAction|QObject *,const QString &=QString()
@@ -64,8 +62,7 @@ $method=|QAction *|createUndoAction|QObject *,const QString &=QString()
 $prototype=void endMacro ()
 $method=|void|endMacro|
 
-$prototype=int index () const
-$method=|int|index|
+$prototypeV2=int index() const
 
 $prototype=bool isActive () const
 $method=|bool|isActive|
@@ -85,8 +82,7 @@ $method=|void|setUndoLimit|int
 $prototype=QString text ( int idx ) const
 $method=|QString|text|int
 
-$prototype=int undoLimit () const
-$method=|int|undoLimit|
+$prototypeV2=int undoLimit() const
 
 $prototype=QString undoText () const
 $method=|QString|undoText|

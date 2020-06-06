@@ -80,8 +80,7 @@ $method=|Qt::CheckState|checkState|
 $prototype=virtual QTableWidgetItem * clone () const
 $virtualMethod=|QTableWidgetItem *|clone|
 
-$prototype=int column () const
-$method=|int|column|
+$prototypeV2=int column() const
 
 $prototype=virtual QVariant data ( int role ) const
 $virtualMethod=|QVariant|data|int
@@ -104,8 +103,7 @@ $method=|bool|isSelected|
 $prototype=virtual void read ( QDataStream & in )
 $virtualMethod=|void|read|QDataStream &
 
-$prototype=int row () const
-$method=|int|row|
+$prototypeV2=int row() const
 
 $prototype=void setBackground ( const QBrush & brush )
 $method=|void|setBackground|const QBrush &
@@ -161,14 +159,12 @@ $method=|QTableWidget *|tableWidget|
 $prototype=QString text () const
 $method=|QString|text|
 
-$prototype=int textAlignment () const
-$method=|int|textAlignment|
+$prototypeV2=int textAlignment() const
 
 $prototype=QString toolTip () const
 $method=|QString|toolTip|
 
-$prototype=int type () const
-$method=|int|type|
+$prototypeV2=int type() const
 
 $prototype=QString whatsThis () const
 $method=|QString|whatsThis|

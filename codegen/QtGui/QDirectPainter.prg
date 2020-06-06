@@ -92,20 +92,16 @@ $prototype=uchar * frameBuffer ()
 %% TODO: implementar 'uchar *'
 %% $method=|uchar *|frameBuffer|
 
-$prototype=static int linestep ()
-$staticMethod=|int|linestep|
+$prototypeV2=static int linestep()
 
 $prototype=static void lock ()
 $staticMethod=|void|lock|
 
-$prototype=static int screenDepth ()
-$staticMethod=|int|screenDepth|
+$prototypeV2=static int screenDepth()
 
-$prototype=static int screenHeight ()
-$staticMethod=|int|screenHeight|
+$prototypeV2=static int screenHeight()
 
-$prototype=static int screenWidth ()
-$staticMethod=|int|screenWidth|
+$prototypeV2=static int screenWidth()
 
 $prototype=static void unlock ()
 $staticMethod=|void|unlock|

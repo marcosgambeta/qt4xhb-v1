@@ -55,8 +55,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=int delta() const
-$method=|int|delta|
+$prototypeV2=int delta() const
 
 $prototype=const QPoint &pos() const
 $method=|const QPoint &|pos|
@@ -64,17 +63,13 @@ $method=|const QPoint &|pos|
 $prototype=const QPoint &globalPos() const
 $method=|const QPoint &|globalPos|
 
-$prototype=int x() const
-$method=|int|x|
+$prototypeV2=int x() const
 
-$prototype=int y() const
-$method=|int|y|
+$prototypeV2=int y() const
 
-$prototype=int globalX() const
-$method=|int|globalX|
+$prototypeV2=int globalX() const
 
-$prototype=int globalY() const
-$method=|int|globalY|
+$prototypeV2=int globalY() const
 
 $prototype=Qt::MouseButtons buttons() const
 $method=|Qt::MouseButtons|buttons|

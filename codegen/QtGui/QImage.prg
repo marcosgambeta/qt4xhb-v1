@@ -134,14 +134,11 @@ $deleteMethod
 $prototype=bool allGray () const
 $method=|bool|allGray|
 
-$prototype=int bitPlaneCount () const
-$method=|int|bitPlaneCount|
+$prototypeV2=int bitPlaneCount() const
 
-$prototype=int byteCount () const
-$method=|int|byteCount|
+$prototypeV2=int byteCount() const
 
-$prototype=int bytesPerLine () const
-$method=|int|bytesPerLine|
+$prototypeV2=int bytesPerLine() const
 
 $prototype=qint64 cacheKey () const
 $method=|qint64|cacheKey|
@@ -149,8 +146,7 @@ $method=|qint64|cacheKey|
 $prototype=QRgb color ( int i ) const
 $method=|QRgb|color|int
 
-$prototype=int colorCount () const
-$method=|int|colorCount|
+$prototypeV2=int colorCount() const
 
 $prototype=QVector<QRgb> colorTable () const
 $method=|QVector<QRgb>|colorTable|
@@ -220,14 +216,11 @@ $method=|QImage|createHeuristicMask|bool=true
 $prototype=QImage createMaskFromColor ( QRgb color, Qt::MaskMode mode = Qt::MaskInColor ) const
 $method=|QImage|createMaskFromColor|QRgb,Qt::MaskMode=Qt::MaskInColor
 
-$prototype=int depth () const
-$method=|int|depth|
+$prototypeV2=int depth() const
 
-$prototype=int dotsPerMeterX () const
-$method=|int|dotsPerMeterX|
+$prototypeV2=int dotsPerMeterX() const
 
-$prototype=int dotsPerMeterY () const
-$method=|int|dotsPerMeterY|
+$prototypeV2=int dotsPerMeterY() const
 
 $prototype=void fill ( uint pixelValue )
 $method=|void|fill,fill1|uint
@@ -272,8 +265,7 @@ $method=|QImage::Format|format|
 $prototype=bool hasAlphaChannel () const
 $method=|bool|hasAlphaChannel|
 
-$prototype=int height () const
-$method=|int|height|
+$prototypeV2=int height() const
 
 $prototype=void invertPixels ( InvertMode mode = InvertRgb )
 $method=|void|invertPixels|QImage::InvertMode=QImage::InvertRgb
@@ -599,8 +591,7 @@ HB_FUNC_STATIC( QIMAGE_VALID )
 }
 $addMethod=valid
 
-$prototype=int width () const
-$method=|int|width|
+$prototypeV2=int width() const
 
 $prototype=static QImage fromData ( const uchar * data, int size, const char * format = 0 )
 $internalStaticMethod=|QImage|fromData,fromData1|const uchar *,int,const char *=0

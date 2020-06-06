@@ -78,8 +78,7 @@ $method=|bool|testOption|QPrintDialog::PrintDialogOption
 $prototype=virtual void done ( int result )
 $virtualMethod=|void|done|int
 
-$prototype=virtual int exec ()
-$virtualMethod=|int|exec|
+$prototypeV2=virtual int exec()
 
 $prototype=virtual void setVisible ( bool visible )
 $virtualMethod=|void|setVisible|bool

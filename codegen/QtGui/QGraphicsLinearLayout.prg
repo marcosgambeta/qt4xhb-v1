@@ -100,8 +100,7 @@ $method=|qreal|spacing|
 $prototype=int stretchFactor ( QGraphicsLayoutItem * item ) const
 $method=|int|stretchFactor|QGraphicsLayoutItem *
 
-$prototype=virtual int count () const
-$virtualMethod=|int|count|
+$prototypeV2=virtual int count() const
 
 $prototype=virtual void invalidate ()
 $virtualMethod=|void|invalidate|

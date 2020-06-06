@@ -30,8 +30,7 @@ $deleteMethod
 $prototype=void activate ()
 $method=|void|activate|
 
-$prototype=virtual int count () const = 0
-$virtualMethod=|int|count|
+$prototypeV2=virtual int count() const = 0
 
 $prototype=virtual void invalidate ()
 $virtualMethod=|void|invalidate|

@@ -58,8 +58,7 @@ $deleteMethod
 $prototype=QTextCharFormat charFormat () const
 $method=|QTextCharFormat|charFormat|
 
-$prototype=int charFormatIndex () const
-$method=|int|charFormatIndex|
+$prototypeV2=int charFormatIndex() const
 
 $prototype=bool contains ( int position ) const
 $method=|bool|contains|int
@@ -70,11 +69,9 @@ $method=|QList<QGlyphRun>|glyphRuns|
 $prototype=bool isValid () const
 $method=|bool|isValid|
 
-$prototype=int length () const
-$method=|int|length|
+$prototypeV2=int length() const
 
-$prototype=int position () const
-$method=|int|position|
+$prototypeV2=int position() const
 
 $prototype=QString text () const
 $method=|QString|text|

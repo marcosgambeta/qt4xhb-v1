@@ -30,8 +30,7 @@ $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-$prototype=int notchSize () const
-$method=|int|notchSize|
+$prototypeV2=int notchSize() const
 
 $prototype=qreal notchTarget () const
 $method=|qreal|notchTarget|

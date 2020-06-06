@@ -318,8 +318,7 @@ $method=|void|setItemPrototype|const QStandardItem *
 $prototype=QList<QStandardItem*> findItems(const QString &text,Qt::MatchFlags flags = Qt::MatchExactly,int column = 0) const
 $method=|QList<QStandardItem *>|findItems|const QString &,Qt::MatchFlags=Qt::MatchExactly,int=0
 
-$prototype=int sortRole() const
-$method=|int|sortRole|
+$prototypeV2=int sortRole() const
 
 $prototype=void setSortRole(int role)
 $method=|void|setSortRole|int

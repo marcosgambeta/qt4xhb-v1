@@ -45,11 +45,9 @@ $method=|void|clearColumnWidthConstraints|
 $prototype=QVector<QTextLength> columnWidthConstraints () const
 $method=|QVector<QTextLength>|columnWidthConstraints|
 
-$prototype=int columns () const
-$method=|int|columns|
+$prototypeV2=int columns() const
 
-$prototype=int headerRowCount () const
-$method=|int|headerRowCount|
+$prototypeV2=int headerRowCount() const
 
 $prototype=bool isValid () const
 $method=|bool|isValid|

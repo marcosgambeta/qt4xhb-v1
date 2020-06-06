@@ -38,8 +38,7 @@ $method=|const QColor|colorAt|uint
 $prototype=const QVector<QColor> colormap () const
 $method=|const QVector<QColor>|colormap|
 
-$prototype=int depth () const
-$method=|int|depth|
+$prototypeV2=int depth() const
 
 $prototype=Mode mode () const
 $method=|QColormap::Mode|mode|
@@ -47,8 +46,7 @@ $method=|QColormap::Mode|mode|
 $prototype=uint pixel ( const QColor & color ) const
 $method=|uint|pixel|const QColor &
 
-$prototype=int size () const
-$method=|int|size|
+$prototypeV2=int size() const
 
 $prototype=static QColormap instance ( int screen = -1 )
 $staticMethod=|QColormap|instance|int=-1

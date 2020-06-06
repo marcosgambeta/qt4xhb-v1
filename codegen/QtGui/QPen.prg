@@ -142,8 +142,7 @@ $method=|void|setWidthF|qreal
 $prototype=Qt::PenStyle style () const
 $method=|Qt::PenStyle|style|
 
-$prototype=int width () const
-$method=|int|width|
+$prototypeV2=int width() const
 
 $prototype=qreal widthF () const
 $method=|qreal|widthF|

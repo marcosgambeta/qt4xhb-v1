@@ -33,8 +33,7 @@ $constructor=|new|QWidget *=0
 $prototype=QString cleanText () const
 $method=|QString|cleanText|
 
-$prototype=int decimals () const
-$method=|int|decimals|
+$prototypeV2=int decimals() const
 
 $prototype=double maximum () const
 $method=|double|maximum|

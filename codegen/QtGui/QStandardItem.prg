@@ -206,11 +206,9 @@ $method=|void|setDropEnabled|bool
 $prototype=QStandardItem *parent() const
 $method=|QStandardItem *|parent|
 
-$prototype=int row() const
-$method=|int|row|
+$prototypeV2=int row() const
 
-$prototype=int column() const
-$method=|int|column|
+$prototypeV2=int column() const
 
 $prototype=QModelIndex index() const
 $method=|QModelIndex|index|
@@ -218,14 +216,12 @@ $method=|QModelIndex|index|
 $prototype=QStandardItemModel *model() const
 $method=|QStandardItemModel *|model|
 
-$prototype=int rowCount() const
-$method=|int|rowCount|
+$prototypeV2=int rowCount() const
 
 $prototype=void setRowCount(int rows)
 $method=|void|setRowCount|int
 
-$prototype=int columnCount() const
-$method=|int|columnCount|
+$prototypeV2=int columnCount() const
 
 $prototype=void setColumnCount(int columns)
 $method=|void|setColumnCount|int
@@ -387,8 +383,7 @@ $method=|void|sortChildren|int,Qt::SortOrder=Qt::AscendingOrder
 $prototype=QStandardItem *clone() const
 $method=|QStandardItem *|clone|
 
-$prototype=virtual int type() const
-$virtualMethod=|int|type|
+$prototypeV2=virtual int type() const
 
 $prototype=virtual void read(QDataStream &in)
 $virtualMethod=|void|read|QDataStream &

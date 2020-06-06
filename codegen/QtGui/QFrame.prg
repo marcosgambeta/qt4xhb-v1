@@ -39,17 +39,13 @@ $method=|QFrame::Shadow|frameShadow|
 $prototype=Shape frameShape () const
 $method=|QFrame::Shape|frameShape|
 
-$prototype=int frameStyle () const
-$method=|int|frameStyle|
+$prototypeV2=int frameStyle() const
 
-$prototype=int frameWidth () const
-$method=|int|frameWidth|
+$prototypeV2=int frameWidth() const
 
-$prototype=int lineWidth () const
-$method=|int|lineWidth|
+$prototypeV2=int lineWidth() const
 
-$prototype=int midLineWidth () const
-$method=|int|midLineWidth|
+$prototypeV2=int midLineWidth() const
 
 $prototype=void setFrameRect ( const QRect & )
 $method=|void|setFrameRect|const QRect &

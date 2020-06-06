@@ -78,8 +78,7 @@ $method=|bool|hasWidthForHeight|
 $prototype=Policy horizontalPolicy () const
 $method=|QSizePolicy::Policy|horizontalPolicy|
 
-$prototype=int horizontalStretch () const
-$method=|int|horizontalStretch|
+$prototypeV2=int horizontalStretch() const
 
 $prototype=void setControlType ( ControlType type )
 $method=|void|setControlType|QSizePolicy::ControlType
@@ -108,8 +107,7 @@ $method=|void|transpose|
 $prototype=Policy verticalPolicy () const
 $method=|QSizePolicy::Policy|verticalPolicy|
 
-$prototype=int verticalStretch () const
-$method=|int|verticalStretch|
+$prototypeV2=int verticalStretch() const
 
 $extraMethods
 

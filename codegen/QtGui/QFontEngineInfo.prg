@@ -87,8 +87,7 @@ $method=|void|setWritingSystems|QList<QFontDatabase::WritingSystem>
 $prototype=QFont::Style style () const
 $method=|QFont::Style|style|
 
-$prototype=int weight () const
-$method=|int|weight|
+$prototypeV2=int weight() const
 
 $prototype=QList<QFontDatabase::WritingSystem> writingSystems () const
 $method=|QList<QFontDatabase::WritingSystem>|writingSystems|

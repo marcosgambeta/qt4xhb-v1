@@ -41,11 +41,9 @@ $method=|void|addTopLevelItems|const QList<QTreeWidgetItem *> &
 $prototype=void closePersistentEditor ( QTreeWidgetItem * item, int column = 0 )
 $method=|void|closePersistentEditor|QTreeWidgetItem *,int=0
 
-$prototype=int columnCount () const
-$method=|int|columnCount|
+$prototypeV2=int columnCount() const
 
-$prototype=int currentColumn () const
-$method=|int|currentColumn|
+$prototypeV2=int currentColumn() const
 
 $prototype=QTreeWidgetItem * currentItem () const
 $method=|QTreeWidgetItem *|currentItem|
@@ -174,8 +172,7 @@ $method=|void|setHeaderLabels|const QStringList &
 $prototype=void setItemWidget ( QTreeWidgetItem * item, int column, QWidget * widget )
 $method=|void|setItemWidget|QTreeWidgetItem *,int,QWidget *
 
-$prototype=int sortColumn () const
-$method=|int|sortColumn|
+$prototypeV2=int sortColumn() const
 
 $prototype=void sortItems ( int column, Qt::SortOrder order )
 $method=|void|sortItems|int,Qt::SortOrder
@@ -186,8 +183,7 @@ $method=|QTreeWidgetItem *|takeTopLevelItem|int
 $prototype=QTreeWidgetItem *  topLevelItem ( int index ) const
 $method=|QTreeWidgetItem *|topLevelItem|int
 
-$prototype=int topLevelItemCount () const
-$method=|int|topLevelItemCount|
+$prototypeV2=int topLevelItemCount() const
 
 $prototype=QRect visualItemRect ( const QTreeWidgetItem * item ) const
 $method=|QRect|visualItemRect|const QTreeWidgetItem *

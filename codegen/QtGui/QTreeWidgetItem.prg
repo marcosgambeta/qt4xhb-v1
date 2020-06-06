@@ -126,8 +126,7 @@ $method=|Qt::CheckState|checkState|int
 $prototype=QTreeWidgetItem * child ( int index ) const
 $method=|QTreeWidgetItem *|child|int
 
-$prototype=int childCount () const
-$method=|int|childCount|
+$prototypeV2=int childCount() const
 
 $prototype=QTreeWidgetItem::ChildIndicatorPolicy childIndicatorPolicy () const
 $method=|QTreeWidgetItem::ChildIndicatorPolicy|childIndicatorPolicy|
@@ -135,8 +134,7 @@ $method=|QTreeWidgetItem::ChildIndicatorPolicy|childIndicatorPolicy|
 $prototype=virtual QTreeWidgetItem * clone () const
 $virtualMethod=|QTreeWidgetItem *|clone|
 
-$prototype=int columnCount () const
-$method=|int|columnCount|
+$prototypeV2=int columnCount() const
 
 $prototype=virtual QVariant data ( int column, int role ) const
 $virtualMethod=|QVariant|data|int,int
@@ -270,8 +268,7 @@ $method=|QString|toolTip|int
 $prototype=QTreeWidget * treeWidget () const
 $method=|QTreeWidget *|treeWidget|
 
-$prototype=int type () const
-$method=|int|type|
+$prototypeV2=int type() const
 
 $prototype=QString whatsThis ( int column ) const
 $method=|QString|whatsThis|int
