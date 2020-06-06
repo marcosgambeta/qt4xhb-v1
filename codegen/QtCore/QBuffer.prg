@@ -113,11 +113,9 @@ HB_FUNC_STATIC( QBUFFER_SETDATA )
 }
 $addMethod=setData
 
-$prototype=virtual bool atEnd () const
-$virtualMethod=|bool|atEnd|
+$prototypeV2=virtual bool atEnd() const
 
-$prototype=virtual bool canReadLine () const
-$virtualMethod=|bool|canReadLine|
+$prototypeV2=virtual bool canReadLine() const
 
 $prototype=virtual void close ()
 $virtualMethod=|void|close|

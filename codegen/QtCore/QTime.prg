@@ -65,8 +65,7 @@ $prototypeV2=int elapsed() const
 
 $prototypeV2=int hour() const
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototypeV2=int minute() const
 

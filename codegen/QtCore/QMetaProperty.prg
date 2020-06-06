@@ -43,14 +43,11 @@ $prototypeV2=int userType() const
 
 $prototypeV2=int propertyIndex() const
 
-$prototype=bool isReadable() const
-$method=|bool|isReadable|
+$prototypeV2=bool isReadable() const
 
-$prototype=bool isWritable() const
-$method=|bool|isWritable|
+$prototypeV2=bool isWritable() const
 
-$prototype=bool isResettable() const
-$method=|bool|isResettable|
+$prototypeV2=bool isResettable() const
 
 $prototype=bool isDesignable(const QObject *obj = 0) const
 $method=|bool|isDesignable|const QObject *=0
@@ -67,23 +64,18 @@ $method=|bool|isEditable|const QObject *=0
 $prototype=bool isUser(const QObject *obj = 0) const
 $method=|bool|isUser|const QObject *=0
 
-$prototype=bool isConstant() const
-$method=|bool|isConstant|
+$prototypeV2=bool isConstant() const
 
-$prototype=bool isFinal() const
-$method=|bool|isFinal|
+$prototypeV2=bool isFinal() const
 
-$prototype=bool isFlagType() const
-$method=|bool|isFlagType|
+$prototypeV2=bool isFlagType() const
 
-$prototype=bool isEnumType() const
-$method=|bool|isEnumType|
+$prototypeV2=bool isEnumType() const
 
 $prototype=QMetaEnum enumerator() const
 $method=|QMetaEnum|enumerator|
 
-$prototype=bool hasNotifySignal() const
-$method=|bool|hasNotifySignal|
+$prototypeV2=bool hasNotifySignal() const
 
 $prototype=QMetaMethod notifySignal() const
 $method=|QMetaMethod|notifySignal|
@@ -101,11 +93,9 @@ $method=|bool|write|QObject *,const QVariant &
 $prototype=bool reset(QObject *obj) const
 $method=|bool|reset|QObject *
 
-$prototype=bool hasStdCppSet() const
-$method=|bool|hasStdCppSet|
+$prototypeV2=bool hasStdCppSet() const
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=const QMetaObject *enclosingMetaObject() const
 $method=|const QMetaObject *|enclosingMetaObject|

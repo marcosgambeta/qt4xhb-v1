@@ -94,53 +94,37 @@ $prototypeV2=int digitValue() const
 $prototype=Direction direction () const
 $method=|QChar::Direction|direction|
 
-$prototype=bool hasMirrored () const
-$method=|bool|hasMirrored|
+$prototypeV2=bool hasMirrored() const
 
-$prototype=bool isDigit () const
-$method=|bool|isDigit|
+$prototypeV2=bool isDigit() const
 
-$prototype=bool isHighSurrogate () const
-$method=|bool|isHighSurrogate|
+$prototypeV2=bool isHighSurrogate() const
 
-$prototype=bool isLetter () const
-$method=|bool|isLetter|
+$prototypeV2=bool isLetter() const
 
-$prototype=bool isLetterOrNumber () const
-$method=|bool|isLetterOrNumber|
+$prototypeV2=bool isLetterOrNumber() const
 
-$prototype=bool isLowSurrogate () const
-$method=|bool|isLowSurrogate|
+$prototypeV2=bool isLowSurrogate() const
 
-$prototype=bool isLower () const
-$method=|bool|isLower|
+$prototypeV2=bool isLower() const
 
-$prototype=bool isMark () const
-$method=|bool|isMark|
+$prototypeV2=bool isMark() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=bool isNumber () const
-$method=|bool|isNumber|
+$prototypeV2=bool isNumber() const
 
-$prototype=bool isPrint () const
-$method=|bool|isPrint|
+$prototypeV2=bool isPrint() const
 
-$prototype=bool isPunct () const
-$method=|bool|isPunct|
+$prototypeV2=bool isPunct() const
 
-$prototype=bool isSpace () const
-$method=|bool|isSpace|
+$prototypeV2=bool isSpace() const
 
-$prototype=bool isSymbol () const
-$method=|bool|isSymbol|
+$prototypeV2=bool isSymbol() const
 
-$prototype=bool isTitleCase () const
-$method=|bool|isTitleCase|
+$prototypeV2=bool isTitleCase() const
 
-$prototype=bool isUpper () const
-$method=|bool|isUpper|
+$prototypeV2=bool isUpper() const
 
 $prototype=Joining joining () const
 $method=|QChar::Joining|joining|

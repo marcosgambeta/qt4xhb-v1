@@ -72,8 +72,7 @@ $method=|qint64|internalId|
 $prototype=void * internalPointer () const
 $method=|void *|internalPointer|
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=const QAbstractItemModel * model () const
 $method=|const QAbstractItemModel *|model|

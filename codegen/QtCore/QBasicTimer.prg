@@ -30,13 +30,12 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=bool isActive () const
-$method=|bool|isActive|
+$prototypeV2=bool isActive() const
 
 $prototype=void start ( int msec, QObject * object )
 $method=|void|start|int,QObject *
 
-$prototype=void stop ()
+$prototypeV2=void stop()
 $method=|void|stop|
 
 $prototypeV2=int timerId() const

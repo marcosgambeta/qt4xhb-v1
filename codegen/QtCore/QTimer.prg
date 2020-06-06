@@ -34,11 +34,9 @@ $deleteMethod
 
 $prototypeV2=int interval() const
 
-$prototype=bool isActive () const
-$method=|bool|isActive|
+$prototypeV2=bool isActive() const
 
-$prototype=bool isSingleShot () const
-$method=|bool|isSingleShot|
+$prototypeV2=bool isSingleShot() const
 
 $prototype=void setInterval ( int msec )
 $method=|void|setInterval|int

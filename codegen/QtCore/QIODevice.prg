@@ -50,8 +50,7 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual bool atEnd () const
-$virtualMethod=|bool|atEnd|
+$prototypeV2=virtual bool atEnd() const
 
 $prototype=virtual qint64 bytesAvailable () const
 $virtualMethod=|qint64|bytesAvailable|
@@ -59,8 +58,7 @@ $virtualMethod=|qint64|bytesAvailable|
 $prototype=virtual qint64 bytesToWrite () const
 $virtualMethod=|qint64|bytesToWrite|
 
-$prototype=virtual bool canReadLine () const
-$virtualMethod=|bool|canReadLine|
+$prototypeV2=virtual bool canReadLine() const
 
 $prototype=virtual void close ()
 $virtualMethod=|void|close|
@@ -71,20 +69,15 @@ $method=|QString|errorString|
 $prototype=bool getChar ( char * c )
 $method=|bool|getChar|char *
 
-$prototype=bool isOpen () const
-$method=|bool|isOpen|
+$prototypeV2=bool isOpen() const
 
-$prototype=bool isReadable () const
-$method=|bool|isReadable|
+$prototypeV2=bool isReadable() const
 
-$prototype=virtual bool isSequential () const
-$virtualMethod=|bool|isSequential|
+$prototypeV2=virtual bool isSequential() const
 
-$prototype=bool isTextModeEnabled () const
-$method=|bool|isTextModeEnabled|
+$prototypeV2=bool isTextModeEnabled() const
 
-$prototype=bool isWritable () const
-$method=|bool|isWritable|
+$prototypeV2=bool isWritable() const
 
 $prototype=virtual bool open ( OpenMode mode )
 $virtualMethod=|bool|open|QIODevice::OpenMode
@@ -185,8 +178,7 @@ HB_FUNC_STATIC( QIODEVICE_READLINE )
 }
 $addMethod=readLine
 
-$prototype=virtual bool reset ()
-$virtualMethod=|bool|reset|
+$prototypeV2=virtual bool reset()
 
 $prototype=virtual bool seek ( qint64 pos )
 $virtualMethod=|bool|seek|qint64

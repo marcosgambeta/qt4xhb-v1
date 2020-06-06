@@ -146,14 +146,11 @@ $method=|QRect|intersected|const QRect &
 $prototype=bool intersects ( const QRect & rectangle ) const
 $method=|bool|intersects|const QRect &
 
-$prototype=bool isEmpty () const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototypeV2=int left() const
 

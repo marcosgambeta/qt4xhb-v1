@@ -39,8 +39,7 @@ $method=|bool|hasExpired|qint64
 $prototype=void invalidate()
 $method=|void|invalidate|
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=qint64 msecsSinceReference() const
 $method=|qint64|msecsSinceReference|
@@ -63,8 +62,7 @@ $method=|void|start|
 $prototype=static ClockType clockType()
 $staticMethod=|QElapsedTimer::ClockType|clockType|
 
-$prototype=static bool isMonotonic()
-$staticMethod=|bool|isMonotonic|
+$prototypeV2=static bool isMonotonic()
 
 $extraMethods
 

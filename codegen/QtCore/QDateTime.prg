@@ -92,11 +92,9 @@ $method=|QDate|date|
 $prototype=int daysTo ( const QDateTime & other ) const
 $method=|int|daysTo|const QDateTime &
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=qint64 msecsTo ( const QDateTime & other ) const
 $method=|qint64|msecsTo|const QDateTime &

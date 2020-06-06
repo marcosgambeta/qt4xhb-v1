@@ -71,8 +71,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=bool atEnd () const
-$method=|bool|atEnd|
+$prototypeV2=bool atEnd() const
 
 $prototype=ByteOrder byteOrder () const
 $method=|QDataStream::ByteOrder|byteOrder|

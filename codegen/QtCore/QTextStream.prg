@@ -119,14 +119,12 @@ $method=|QTextCodec *|codec|
 $prototype=void setAutoDetectUnicode(bool enabled)
 $method=|void|setAutoDetectUnicode|bool
 
-$prototype=bool autoDetectUnicode() const
-$method=|bool|autoDetectUnicode|
+$prototypeV2=bool autoDetectUnicode() const
 
 $prototype=void setGenerateByteOrderMark(bool generate)
 $method=|void|setGenerateByteOrderMark|bool
 
-$prototype=bool generateByteOrderMark() const
-$method=|bool|generateByteOrderMark|
+$prototypeV2=bool generateByteOrderMark() const
 
 $prototype=void setLocale(const QLocale &locale)
 $method=|void|setLocale|const QLocale &
@@ -157,8 +155,7 @@ $method=|void|setStatus|QTextStream::Status
 $prototype=void resetStatus()
 $method=|void|resetStatus|
 
-$prototype=bool atEnd() const
-$method=|bool|atEnd|
+$prototypeV2=bool atEnd() const
 
 $prototype=void reset()
 $method=|void|reset|

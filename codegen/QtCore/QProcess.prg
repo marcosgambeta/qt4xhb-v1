@@ -137,8 +137,7 @@ $method=|bool|waitForStarted|int=30000
 $prototype=QString workingDirectory () const
 $method=|QString|workingDirectory|
 
-$prototype=virtual bool atEnd () const
-$virtualMethod=|bool|atEnd|
+$prototypeV2=virtual bool atEnd() const
 
 $prototype=virtual qint64 bytesAvailable () const
 $virtualMethod=|qint64|bytesAvailable|
@@ -146,14 +145,12 @@ $virtualMethod=|qint64|bytesAvailable|
 $prototype=virtual qint64 bytesToWrite () const
 $virtualMethod=|qint64|bytesToWrite|
 
-$prototype=virtual bool canReadLine () const
-$virtualMethod=|bool|canReadLine|
+$prototypeV2=virtual bool canReadLine() const
 
 $prototype=virtual void close ()
 $virtualMethod=|void|close|
 
-$prototype=virtual bool isSequential () const
-$virtualMethod=|bool|isSequential|
+$prototypeV2=virtual bool isSequential() const
 
 $prototype=virtual bool waitForBytesWritten ( int msecs = 30000 )
 $virtualMethod=|bool|waitForBytesWritten|int=30000

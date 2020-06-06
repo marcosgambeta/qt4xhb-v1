@@ -33,8 +33,7 @@ $deleteMethod
 $prototype=const char *name() const
 $method=|const char *|name|
 
-$prototype=bool isFlag() const
-$method=|bool|isFlag|
+$prototypeV2=bool isFlag() const
 
 $prototypeV2=int keyCount() const
 
@@ -62,8 +61,7 @@ $method=|QByteArray|valueToKeys|int
 $prototype=const QMetaObject *enclosingMetaObject() const
 $method=|const QMetaObject *|enclosingMetaObject|
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $extraMethods
 

@@ -253,8 +253,7 @@ $method=|bool|inherits|const char *
 $prototype=void installEventFilter ( QObject * filterObj )
 $method=|void|installEventFilter|QObject *
 
-$prototype=bool isWidgetType () const
-$method=|bool|isWidgetType|
+$prototypeV2=bool isWidgetType() const
 
 $prototype=void killTimer ( int id )
 $method=|void|killTimer|int
@@ -286,8 +285,7 @@ $method=|void|setParent|QObject *
 $prototype=bool setProperty ( const char * name, const QVariant & value )
 $method=|bool|setProperty|const char *,const QVariant &
 
-$prototype=bool signalsBlocked () const
-$method=|bool|signalsBlocked|
+$prototypeV2=bool signalsBlocked() const
 
 $prototype=int startTimer ( int interval )
 $method=|int|startTimer|int

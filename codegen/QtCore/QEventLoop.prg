@@ -36,8 +36,7 @@ $method=|int|exec|QEventLoop::ProcessEventsFlags=QEventLoop::AllEvents
 $prototype=void exit ( int returnCode = 0 )
 $method=|void|exit|int=0
 
-$prototype=bool isRunning () const
-$method=|bool|isRunning|
+$prototypeV2=bool isRunning() const
 
 $prototype=bool processEvents ( ProcessEventsFlags flags = AllEvents )
 $internalMethod=|bool|processEvents,processEvents1|QEventLoop::ProcessEventsFlags=QEventLoop::AllEvents

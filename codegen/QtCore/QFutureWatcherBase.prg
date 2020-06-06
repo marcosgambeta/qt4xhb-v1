@@ -38,20 +38,15 @@ $prototypeV2=int progressMaximum() const
 $prototype=QString progressText() const
 $method=|QString|progressText|
 
-$prototype=bool isStarted() const
-$method=|bool|isStarted|
+$prototypeV2=bool isStarted() const
 
-$prototype=bool isFinished() const
-$method=|bool|isFinished|
+$prototypeV2=bool isFinished() const
 
-$prototype=bool isRunning() const
-$method=|bool|isRunning|
+$prototypeV2=bool isRunning() const
 
-$prototype=bool isCanceled() const
-$method=|bool|isCanceled|
+$prototypeV2=bool isCanceled() const
 
-$prototype=bool isPaused() const
-$method=|bool|isPaused|
+$prototypeV2=bool isPaused() const
 
 $prototype=void waitForFinished()
 $method=|void|waitForFinished|

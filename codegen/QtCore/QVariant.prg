@@ -367,17 +367,14 @@ $method=|void|clear|
 $prototype=bool convert ( Type t )
 $method=|bool|convert|QVariant::Type
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=QBitArray toBitArray () const
 $method=|QBitArray|toBitArray|
 
-$prototype=bool toBool () const
-$method=|bool|toBool|
+$prototypeV2=bool toBool() const
 
 $prototype=QByteArray toByteArray () const
 $method=|QByteArray|toByteArray|

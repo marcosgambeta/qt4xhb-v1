@@ -81,8 +81,7 @@ $prototypeV2=int dx() const
 
 $prototypeV2=int dy() const
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=void setP1(const QPoint & p1)
 $method=|void|setP1|const QPoint &

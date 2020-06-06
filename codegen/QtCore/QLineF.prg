@@ -101,8 +101,7 @@ $method=|qreal|dx|
 $prototype=qreal dy() const
 $method=|qreal|dy|
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=qreal length() const
 $method=|qreal|length|

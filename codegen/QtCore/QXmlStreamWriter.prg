@@ -72,8 +72,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=bool autoFormatting() const
-$method=|bool|autoFormatting|
+$prototypeV2=bool autoFormatting() const
 
 $prototypeV2=int autoFormattingIndent() const
 
@@ -83,8 +82,7 @@ $method=|QTextCodec *|codec|
 $prototype=QIODevice * device() const
 $method=|QIODevice *|device|
 
-$prototype=bool hasError() const
-$method=|bool|hasError|
+$prototypeV2=bool hasError() const
 
 $prototype=void setAutoFormatting(bool enable)
 $method=|void|setAutoFormatting|bool

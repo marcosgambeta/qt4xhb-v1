@@ -132,8 +132,7 @@ $virtualMethod=|Qt::DropActions|supportedDropActions|
 $prototype=virtual void revert ()
 $virtualMethod=|void|revert|
 
-$prototype=virtual bool submit ()
-$virtualMethod=|bool|submit|
+$prototypeV2=virtual bool submit()
 
 $beginSignals
 $signal=|columnsAboutToBeInserted(QModelIndex,int,int)

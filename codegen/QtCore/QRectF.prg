@@ -148,14 +148,11 @@ $method=|QRectF|intersected|const QRectF &
 $prototype=bool intersects ( const QRectF & rectangle ) const
 $method=|bool|intersects|const QRectF &
 
-$prototype=bool isEmpty () const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=qreal left () const
 $method=|qreal|left|

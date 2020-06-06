@@ -69,8 +69,7 @@ $method=|QFile::FileError|error|
 $prototype=QString fileName () const
 $method=|QString|fileName|
 
-$prototype=bool flush ()
-$method=|bool|flush|
+$prototypeV2=bool flush()
 
 $prototypeV2=int handle() const
 
@@ -83,14 +82,12 @@ $method=|bool|unmap|uchar *
 $prototype=void unsetError ()
 $method=|void|unsetError|
 
-$prototype=virtual bool atEnd () const
-$virtualMethod=|bool|atEnd|
+$prototypeV2=virtual bool atEnd() const
 
 $prototype=virtual void close ()
 $virtualMethod=|void|close|
 
-$prototype=virtual bool isSequential () const
-$virtualMethod=|bool|isSequential|
+$prototypeV2=virtual bool isSequential() const
 
 $prototype=bool open ( FILE * fh, OpenMode mode )
 $internalMethod=|bool|open,open1|FILE *,QIODevice::OpenMode

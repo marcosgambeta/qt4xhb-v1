@@ -72,14 +72,11 @@ $method=|QSizeF|expandedTo|const QSizeF &
 $prototype=qreal height () const
 $method=|qreal|height|
 
-$prototype=bool isEmpty () const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=void scale ( qreal width, qreal height, Qt::AspectRatioMode mode )
 $internalMethod=|void|scale,scale1|qreal,qreal,Qt::AspectRatioMode

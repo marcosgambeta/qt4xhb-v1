@@ -64,11 +64,9 @@ $method=|QString|fileName|
 $prototype=QObject * instance ()
 $method=|QObject *|instance|
 
-$prototype=bool isLoaded () const
-$method=|bool|isLoaded|
+$prototypeV2=bool isLoaded() const
 
-$prototype=bool load ()
-$method=|bool|load|
+$prototypeV2=bool load()
 
 $prototype=QLibrary::LoadHints loadHints () const
 $method=|QLibrary::LoadHints|loadHints|
@@ -79,7 +77,6 @@ $method=|void|setFileName|const QString &
 $prototype=void setLoadHints ( QLibrary::LoadHints loadHints )
 $method=|void|setLoadHints|QLibrary::LoadHints
 
-$prototype=bool unload ()
-$method=|bool|unload|
+$prototypeV2=bool unload()
 
 #pragma ENDDUMP

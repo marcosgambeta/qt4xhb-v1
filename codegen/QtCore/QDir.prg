@@ -75,8 +75,7 @@ $method=|QString|canonicalPath|
 $prototype=bool cd(const QString & dirName)
 $method=|bool|cd|const QString &
 
-$prototype=bool cdUp()
-$method=|bool|cdUp|
+$prototypeV2=bool cdUp()
 
 $prototype=uint count() const
 $method=|uint|count|
@@ -174,20 +173,15 @@ $method=|QString|filePath|const QString &
 $prototype=Filters filter() const
 $method=|QDir::Filters|filter|
 
-$prototype=bool isAbsolute() const
-$method=|bool|isAbsolute|
+$prototypeV2=bool isAbsolute() const
 
-$prototype=bool isReadable() const
-$method=|bool|isReadable|
+$prototypeV2=bool isReadable() const
 
-$prototype=bool isRelative() const
-$method=|bool|isRelative|
+$prototypeV2=bool isRelative() const
 
-$prototype=bool isRoot() const
-$method=|bool|isRoot|
+$prototypeV2=bool isRoot() const
 
-$prototype=bool makeAbsolute()
-$method=|bool|makeAbsolute|
+$prototypeV2=bool makeAbsolute()
 
 $prototype=bool mkdir(const QString & dirName) const
 $method=|bool|mkdir|const QString &

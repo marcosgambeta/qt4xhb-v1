@@ -90,8 +90,7 @@ $method=|QByteArray|toByteArray|
 $prototype=QByteArray toRfc4122() const
 $method=|QByteArray|toRfc4122|
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=QUuid::Variant variant() const
 $method=|QUuid::Variant|variant|

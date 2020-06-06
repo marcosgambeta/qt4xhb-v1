@@ -27,11 +27,9 @@ $includes
 
 $deleteMethod
 
-$prototype=bool ref()
-$method=|bool|ref|
+$prototypeV2=bool ref()
 
-$prototype=bool deref()
-$method=|bool|deref|
+$prototypeV2=bool deref()
 
 $prototype=bool testAndSetRelaxed(int expectedValue, int newValue)
 $method=|bool|testAndSetRelaxed|int,int
@@ -69,29 +67,21 @@ $method=|int|fetchAndAddRelease|int
 $prototype=int fetchAndAddOrdered(int valueToAdd)
 $method=|int|fetchAndAddOrdered|int
 
-$prototype=static bool isReferenceCountingNative()
-$staticMethod=|bool|isReferenceCountingNative|
+$prototypeV2=static bool isReferenceCountingNative()
 
-$prototype=static bool isReferenceCountingWaitFree()
-$staticMethod=|bool|isReferenceCountingWaitFree|
+$prototypeV2=static bool isReferenceCountingWaitFree()
 
-$prototype=static bool isTestAndSetNative()
-$staticMethod=|bool|isTestAndSetNative|
+$prototypeV2=static bool isTestAndSetNative()
 
-$prototype=static bool isTestAndSetWaitFree()
-$staticMethod=|bool|isTestAndSetWaitFree|
+$prototypeV2=static bool isTestAndSetWaitFree()
 
-$prototype=static bool isFetchAndStoreNative()
-$staticMethod=|bool|isFetchAndStoreNative|
+$prototypeV2=static bool isFetchAndStoreNative()
 
-$prototype=static bool isFetchAndStoreWaitFree()
-$staticMethod=|bool|isFetchAndStoreWaitFree|
+$prototypeV2=static bool isFetchAndStoreWaitFree()
 
-$prototype=static bool isFetchAndAddNative()
-$staticMethod=|bool|isFetchAndAddNative|
+$prototypeV2=static bool isFetchAndAddNative()
 
-$prototype=static bool isFetchAndAddWaitFree()
-$staticMethod=|bool|isFetchAndAddWaitFree|
+$prototypeV2=static bool isFetchAndAddWaitFree()
 
 $extraMethods
 

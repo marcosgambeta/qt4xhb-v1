@@ -71,8 +71,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=bool isDefault() const
-$method=|bool|isDefault|
+$prototypeV2=bool isDefault() const
 
 $prototype=QStringRef name() const
 $method=|QStringRef|name|

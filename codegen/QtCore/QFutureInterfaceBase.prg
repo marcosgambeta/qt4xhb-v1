@@ -80,8 +80,7 @@ $prototypeV2=int progressMinimum() const
 
 $prototypeV2=int progressMaximum() const
 
-$prototype=bool isProgressUpdateNeeded() const
-$method=|bool|isProgressUpdateNeeded|
+$prototypeV2=bool isProgressUpdateNeeded() const
 
 $prototype=void setProgressValue(int progressValue)
 $method=|void|setProgressValue|int
@@ -104,23 +103,17 @@ $prototypeV2=int resultCount() const
 $prototype=bool queryState(State state) const
 $method=|bool|queryState|QFutureInterfaceBase::State
 
-$prototype=bool isRunning() const
-$method=|bool|isRunning|
+$prototypeV2=bool isRunning() const
 
-$prototype=bool isStarted() const
-$method=|bool|isStarted|
+$prototypeV2=bool isStarted() const
 
-$prototype=bool isCanceled() const
-$method=|bool|isCanceled|
+$prototypeV2=bool isCanceled() const
 
-$prototype=bool isFinished() const
-$method=|bool|isFinished|
+$prototypeV2=bool isFinished() const
 
-$prototype=bool isPaused() const
-$method=|bool|isPaused|
+$prototypeV2=bool isPaused() const
 
-$prototype=bool isThrottled() const
-$method=|bool|isThrottled|
+$prototypeV2=bool isThrottled() const
 
 $prototype=bool isResultReadyAt(int index) const
 $method=|bool|isResultReadyAt|int
@@ -140,8 +133,7 @@ $method=|void|setThrottled|bool
 $prototype=void waitForFinished()
 $method=|void|waitForFinished|
 
-$prototype=bool waitForNextResult()
-$method=|bool|waitForNextResult|
+$prototypeV2=bool waitForNextResult()
 
 $prototype=void waitForResult(int resultIndex)
 $method=|void|waitForResult|int

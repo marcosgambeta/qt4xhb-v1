@@ -37,8 +37,7 @@ $prototypeV2=int socket() const
 $prototype=Type type() const
 $method=|QSocketNotifier::Type|type|
 
-$prototype=bool isEnabled() const
-$method=|bool|isEnabled|
+$prototypeV2=bool isEnabled() const
 
 $prototype=void setEnabled(bool)
 $method=|void|setEnabled|bool

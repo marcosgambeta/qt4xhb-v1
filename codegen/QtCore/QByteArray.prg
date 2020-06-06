@@ -366,11 +366,9 @@ HB_FUNC_STATIC( QBYTEARRAY_INSERT )
 }
 $addMethod=insert
 
-$prototype=bool isEmpty () const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=int lastIndexOf ( const QByteArray & ba, int from = -1 ) const
 $method=|int|lastIndexOf,lastIndexOf1|const QByteArray &,int=-1

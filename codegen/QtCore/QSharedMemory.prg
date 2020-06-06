@@ -75,20 +75,16 @@ $prototypeV2=int size() const
 $prototype=bool attach(AccessMode mode = ReadWrite)
 $method=|bool|attach|QSharedMemory::AccessMode=QSharedMemory::ReadWrite
 
-$prototype=bool isAttached() const
-$method=|bool|isAttached|
+$prototypeV2=bool isAttached() const
 
-$prototype=bool detach()
-$method=|bool|detach|
+$prototypeV2=bool detach()
 
 $prototype=void *data()
 $method=|void *|data|
 
-$prototype=bool lock()
-$method=|bool|lock|
+$prototypeV2=bool lock()
 
-$prototype=bool unlock()
-$method=|bool|unlock|
+$prototypeV2=bool unlock()
 
 $prototype=SharedMemoryError error() const
 $method=|QSharedMemory::SharedMemoryError|error|

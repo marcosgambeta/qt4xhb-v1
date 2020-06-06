@@ -121,11 +121,9 @@ $method=|QString|fragment|
 $prototype=bool hasEncodedQueryItem ( const QByteArray & key ) const
 $method=|bool|hasEncodedQueryItem|const QByteArray &
 
-$prototype=bool hasFragment () const
-$method=|bool|hasFragment|
+$prototypeV2=bool hasFragment() const
 
-$prototype=bool hasQuery () const
-$method=|bool|hasQuery|
+$prototypeV2=bool hasQuery() const
 
 $prototype=bool hasQueryItem ( const QString & key ) const
 $method=|bool|hasQueryItem|const QString &
@@ -133,20 +131,16 @@ $method=|bool|hasQueryItem|const QString &
 $prototype=QString host () const
 $method=|QString|host|
 
-$prototype=bool isEmpty () const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
-$prototype=bool isLocalFile () const
-$method=|bool|isLocalFile|
+$prototypeV2=bool isLocalFile() const
 
 $prototype=bool isParentOf ( const QUrl & childUrl ) const
 $method=|bool|isParentOf|const QUrl &
 
-$prototype=bool isRelative () const
-$method=|bool|isRelative|
+$prototypeV2=bool isRelative() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=QString password () const
 $method=|QString|password|

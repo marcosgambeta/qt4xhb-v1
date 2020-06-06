@@ -27,8 +27,7 @@ $includes
 
 $deleteMethod
 
-$prototype=bool autoDelete () const
-$method=|bool|autoDelete|
+$prototypeV2=bool autoDelete() const
 
 $prototype=virtual void run () = 0
 $virtualMethod=|void|run|

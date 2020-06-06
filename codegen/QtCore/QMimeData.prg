@@ -45,23 +45,18 @@ $method=|QByteArray|data|const QString &
 $prototype=virtual QStringList formats () const
 $virtualMethod=|QStringList|formats|
 
-$prototype=bool hasColor () const
-$method=|bool|hasColor|
+$prototypeV2=bool hasColor() const
 
 $prototype=virtual bool hasFormat ( const QString & mimeType ) const
 $virtualMethod=|bool|hasFormat|const QString &
 
-$prototype=bool hasHtml () const
-$method=|bool|hasHtml|
+$prototypeV2=bool hasHtml() const
 
-$prototype=bool hasImage () const
-$method=|bool|hasImage|
+$prototypeV2=bool hasImage() const
 
-$prototype=bool hasText () const
-$method=|bool|hasText|
+$prototypeV2=bool hasText() const
 
-$prototype=bool hasUrls () const
-$method=|bool|hasUrls|
+$prototypeV2=bool hasUrls() const
 
 $prototype=QString html () const
 $method=|QString|html|

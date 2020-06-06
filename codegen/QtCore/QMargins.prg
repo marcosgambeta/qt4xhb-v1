@@ -57,8 +57,7 @@ $deleteMethod
 
 $prototypeV2=int bottom() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototypeV2=int left() const
 

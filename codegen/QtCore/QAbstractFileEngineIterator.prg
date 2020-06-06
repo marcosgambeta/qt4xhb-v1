@@ -39,8 +39,7 @@ $method=|QString|currentFilePath|
 $prototype=QDir::Filters filters () const
 $method=|QDir::Filters|filters|
 
-$prototype=virtual bool hasNext () const = 0
-$virtualMethod=|bool|hasNext|
+$prototypeV2=virtual bool hasNext() const = 0
 
 $prototype=QStringList nameFilters () const
 $method=|QStringList|nameFilters|

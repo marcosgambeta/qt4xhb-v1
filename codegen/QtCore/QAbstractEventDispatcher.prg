@@ -35,8 +35,7 @@ $method=|bool|filterEvent|void *
 $prototype=virtual void flush () = 0
 $virtualMethod=|void|flush|
 
-$prototype=virtual bool hasPendingEvents () = 0
-$virtualMethod=|bool|hasPendingEvents|
+$prototypeV2=virtual bool hasPendingEvents() = 0
 
 $prototype=virtual void interrupt () = 0
 $virtualMethod=|void|interrupt|

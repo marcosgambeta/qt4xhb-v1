@@ -63,14 +63,11 @@ $method=|QSize|expandedTo|const QSize &
 
 $prototypeV2=int height() const
 
-$prototype=bool isEmpty () const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=void scale ( int width, int height, Qt::AspectRatioMode mode )
 $internalMethod=|void|scale,scale1|int,int,Qt::AspectRatioMode

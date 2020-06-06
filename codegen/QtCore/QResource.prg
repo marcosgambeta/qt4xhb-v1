@@ -39,11 +39,9 @@ $method=|const uchar *|data|
 $prototype=QString fileName () const
 $method=|QString|fileName|
 
-$prototype=bool isCompressed () const
-$method=|bool|isCompressed|
+$prototypeV2=bool isCompressed() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=QLocale locale () const
 $method=|QLocale|locale|

@@ -56,11 +56,9 @@ $method=|QString|errorString|
 $prototype=QStateMachine::RestorePolicy globalRestorePolicy () const
 $method=|QStateMachine::RestorePolicy|globalRestorePolicy|
 
-$prototype=bool isAnimated () const
-$method=|bool|isAnimated|
+$prototypeV2=bool isAnimated() const
 
-$prototype=bool isRunning () const
-$method=|bool|isRunning|
+$prototypeV2=bool isRunning() const
 
 $prototype=int postDelayedEvent ( QEvent * event, int delay )
 $method=|int|postDelayedEvent|QEvent *,int

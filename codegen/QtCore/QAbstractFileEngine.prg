@@ -29,14 +29,11 @@ $includes
 
 $deleteMethod
 
-$prototype=bool atEnd () const
-$method=|bool|atEnd|
+$prototypeV2=bool atEnd() const
 
-$prototype=virtual bool caseSensitive () const
-$virtualMethod=|bool|caseSensitive|
+$prototypeV2=virtual bool caseSensitive() const
 
-$prototype=virtual bool close ()
-$virtualMethod=|bool|close|
+$prototypeV2=virtual bool close()
 
 $prototype=virtual bool copy ( const QString & newName )
 $virtualMethod=|bool|copy|const QString &
@@ -59,16 +56,13 @@ $virtualMethod=|QString|fileName|QAbstractFileEngine::FileName=QAbstractFileEngi
 $prototype=virtual QDateTime fileTime ( FileTime time ) const
 $virtualMethod=|QDateTime|fileTime|QAbstractFileEngine::FileTime
 
-$prototype=virtual bool flush ()
-$virtualMethod=|bool|flush|
+$prototypeV2=virtual bool flush()
 
 $prototypeV2=virtual int handle() const
 
-$prototype=virtual bool isRelativePath () const
-$virtualMethod=|bool|isRelativePath|
+$prototypeV2=virtual bool isRelativePath() const
 
-$prototype=virtual bool isSequential () const
-$virtualMethod=|bool|isSequential|
+$prototypeV2=virtual bool isSequential() const
 
 $prototype=virtual bool link ( const QString & newName )
 $virtualMethod=|bool|link|const QString &
@@ -92,8 +86,7 @@ $prototype=virtual qint64 readLine ( char * data, qint64 maxlen )
 %% TODO: corrigir codigo
 %% $virtualMethod=|qint64|readLine|char *,qint64
 
-$prototype=virtual bool remove ()
-$virtualMethod=|bool|remove|
+$prototypeV2=virtual bool remove()
 
 $prototype=virtual bool rename ( const QString & newName )
 $virtualMethod=|bool|rename|const QString &

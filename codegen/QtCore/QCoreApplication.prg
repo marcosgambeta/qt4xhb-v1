@@ -73,8 +73,7 @@ $staticMethod=|QString|applicationVersion|
 $prototype=static QStringList arguments ()
 $staticMethod=|QStringList|arguments|
 
-$prototype=static bool closingDown ()
-$staticMethod=|bool|closingDown|
+$prototypeV2=static bool closingDown()
 
 $prototypeV2=static int exec()
 
@@ -84,8 +83,7 @@ $staticMethod=|void|exit|int=0
 $prototype=static void flush ()
 $staticMethod=|void|flush|
 
-$prototype=static bool hasPendingEvents ()
-$staticMethod=|bool|hasPendingEvents|
+$prototypeV2=static bool hasPendingEvents()
 
 $prototype=static void installTranslator ( QTranslator * translationFile )
 $staticMethod=|void|installTranslator|QTranslator *
@@ -241,8 +239,7 @@ $staticMethod=|void|setOrganizationDomain|const QString &
 $prototype=static void setOrganizationName ( const QString & orgName )
 $staticMethod=|void|setOrganizationName|const QString &
 
-$prototype=static bool startingUp ()
-$staticMethod=|bool|startingUp|
+$prototypeV2=static bool startingUp()
 
 $prototype=static bool testAttribute ( Qt::ApplicationAttribute attribute )
 $staticMethod=|bool|testAttribute|Qt::ApplicationAttribute

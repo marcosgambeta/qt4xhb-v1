@@ -80,8 +80,7 @@ $method=|int|daysTo|const QDate &
 $prototype=void getDate ( int * year, int * month, int * day )
 $method=|void|getDate|int *,int *,int *
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototypeV2=int month() const
 

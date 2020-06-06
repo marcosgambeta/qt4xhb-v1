@@ -126,11 +126,9 @@ HB_FUNC_STATIC( QBITARRAY_FILL )
 }
 $addMethod=fill
 
-$prototype=bool isEmpty () const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=void resize ( int size )
 $method=|void|resize|int

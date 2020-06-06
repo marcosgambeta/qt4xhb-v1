@@ -36,14 +36,12 @@ $method=|void|accept|
 $prototype=void ignore ()
 $method=|void|ignore|
 
-$prototype=bool isAccepted () const
-$method=|bool|isAccepted|
+$prototypeV2=bool isAccepted() const
 
 $prototype=void setAccepted ( bool accepted )
 $method=|void|setAccepted|bool
 
-$prototype=bool spontaneous () const
-$method=|bool|spontaneous|
+$prototypeV2=bool spontaneous() const
 
 $prototype=Type type () const
 $method=|QEvent::Type|type|

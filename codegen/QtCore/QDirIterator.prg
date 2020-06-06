@@ -82,8 +82,7 @@ $method=|QString|fileName|
 $prototype=QString filePath () const
 $method=|QString|filePath|
 
-$prototype=bool hasNext () const
-$method=|bool|hasNext|
+$prototypeV2=bool hasNext() const
 
 $prototype=QString next ()
 $method=|QString|next|

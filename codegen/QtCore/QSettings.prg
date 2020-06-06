@@ -114,8 +114,7 @@ $method=|void|endArray|
 $prototype=void endGroup ()
 $method=|void|endGroup|
 
-$prototype=bool fallbacksEnabled () const
-$method=|bool|fallbacksEnabled|
+$prototypeV2=bool fallbacksEnabled() const
 
 $prototype=QString fileName () const
 $method=|QString|fileName|
@@ -129,8 +128,7 @@ $method=|QString|group|
 $prototype=QTextCodec * iniCodec () const
 $method=|QTextCodec *|iniCodec|
 
-$prototype=bool isWritable () const
-$method=|bool|isWritable|
+$prototypeV2=bool isWritable() const
 
 $prototype=QString organizationName () const
 $method=|QString|organizationName|

@@ -71,14 +71,12 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=bool autoRemove() const
-$method=|bool|autoRemove|
+$prototypeV2=bool autoRemove() const
 
 $prototype=QString fileTemplate() const
 $method=|QString|fileTemplate|
 
-$prototype=bool open()
-$method=|bool|open|
+$prototypeV2=bool open()
 
 $prototype=void setAutoRemove(bool b)
 $method=|void|setAutoRemove|bool

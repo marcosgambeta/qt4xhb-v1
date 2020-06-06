@@ -97,8 +97,7 @@ $method=|QString|baseName|
 $prototype=QString bundleName() const
 $method=|QString|bundleName|
 
-$prototype=bool caching() const
-$method=|bool|caching|
+$prototypeV2=bool caching() const
 
 $prototype=QString canonicalFilePath() const
 $method=|QString|canonicalFilePath|
@@ -118,8 +117,7 @@ $method=|QDateTime|created|
 $prototype=QDir dir() const
 $method=|QDir|dir|
 
-$prototype=bool exists() const
-$method=|bool|exists|
+$prototypeV2=bool exists() const
 
 $prototype=QString fileName() const
 $method=|QString|fileName|
@@ -133,38 +131,27 @@ $method=|QString|group|
 $prototype=uint groupId() const
 $method=|uint|groupId|
 
-$prototype=bool isAbsolute() const
-$method=|bool|isAbsolute|
+$prototypeV2=bool isAbsolute() const
 
-$prototype=bool isBundle() const
-$method=|bool|isBundle|
+$prototypeV2=bool isBundle() const
 
-$prototype=bool isDir() const
-$method=|bool|isDir|
+$prototypeV2=bool isDir() const
 
-$prototype=bool isExecutable() const
-$method=|bool|isExecutable|
+$prototypeV2=bool isExecutable() const
 
-$prototype=bool isFile() const
-$method=|bool|isFile|
+$prototypeV2=bool isFile() const
 
-$prototype=bool isHidden() const
-$method=|bool|isHidden|
+$prototypeV2=bool isHidden() const
 
-$prototype=bool isReadable() const
-$method=|bool|isReadable|
+$prototypeV2=bool isReadable() const
 
-$prototype=bool isRelative() const
-$method=|bool|isRelative|
+$prototypeV2=bool isRelative() const
 
-$prototype=bool isRoot() const
-$method=|bool|isRoot|
+$prototypeV2=bool isRoot() const
 
-$prototype=bool isSymLink() const
-$method=|bool|isSymLink|
+$prototypeV2=bool isSymLink() const
 
-$prototype=bool isWritable() const
-$method=|bool|isWritable|
+$prototypeV2=bool isWritable() const
 
 $prototype=QDateTime lastModified() const
 $method=|QDateTime|lastModified|
@@ -172,8 +159,7 @@ $method=|QDateTime|lastModified|
 $prototype=QDateTime lastRead() const
 $method=|QDateTime|lastRead|
 
-$prototype=bool makeAbsolute()
-$method=|bool|makeAbsolute|
+$prototypeV2=bool makeAbsolute()
 
 $prototype=QString owner() const
 $method=|QString|owner|

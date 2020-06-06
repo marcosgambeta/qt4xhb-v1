@@ -30,8 +30,7 @@ $constructor=|new|const QString &,int=0,QSystemSemaphore::AccessMode=QSystemSema
 
 $deleteMethod
 
-$prototype=bool acquire ()
-$method=|bool|acquire|
+$prototypeV2=bool acquire()
 
 $prototype=SystemSemaphoreError error () const
 $method=|QSystemSemaphore::SystemSemaphoreError|error|

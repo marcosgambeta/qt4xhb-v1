@@ -72,8 +72,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=BoundaryType type() const
 $method=|QTextBoundaryFinder::BoundaryType|type|
@@ -96,8 +95,7 @@ $prototypeV2=int toNextBoundary()
 
 $prototypeV2=int toPreviousBoundary()
 
-$prototype=bool isAtBoundary() const
-$method=|bool|isAtBoundary|
+$prototypeV2=bool isAtBoundary() const
 
 $prototype=BoundaryReasons boundaryReasons() const
 $method=|QTextBoundaryFinder::BoundaryReasons|boundaryReasons|

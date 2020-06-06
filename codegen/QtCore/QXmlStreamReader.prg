@@ -121,8 +121,7 @@ $method=|void|addExtraNamespaceDeclaration|const QXmlStreamNamespaceDeclaration 
 $prototype=void addExtraNamespaceDeclarations(const QXmlStreamNamespaceDeclarations & extraNamespaceDeclarations)
 $method=|void|addExtraNamespaceDeclarations|const QXmlStreamNamespaceDeclarations &
 
-$prototype=bool atEnd() const
-$method=|bool|atEnd|
+$prototypeV2=bool atEnd() const
 
 $prototype=QXmlStreamAttributes attributes() const
 $method=|QXmlStreamAttributes|attributes|
@@ -166,44 +165,31 @@ $method=|QXmlStreamReader::Error|error|
 $prototype=QString errorString() const
 $method=|QString|errorString|
 
-$prototype=bool hasError() const
-$method=|bool|hasError|
+$prototypeV2=bool hasError() const
 
-$prototype=bool isCDATA() const
-$method=|bool|isCDATA|
+$prototypeV2=bool isCDATA() const
 
-$prototype=bool isCharacters() const
-$method=|bool|isCharacters|
+$prototypeV2=bool isCharacters() const
 
-$prototype=bool isComment() const
-$method=|bool|isComment|
+$prototypeV2=bool isComment() const
 
-$prototype=bool isDTD() const
-$method=|bool|isDTD|
+$prototypeV2=bool isDTD() const
 
-$prototype=bool isEndDocument() const
-$method=|bool|isEndDocument|
+$prototypeV2=bool isEndDocument() const
 
-$prototype=bool isEndElement() const
-$method=|bool|isEndElement|
+$prototypeV2=bool isEndElement() const
 
-$prototype=bool isEntityReference() const
-$method=|bool|isEntityReference|
+$prototypeV2=bool isEntityReference() const
 
-$prototype=bool isProcessingInstruction() const
-$method=|bool|isProcessingInstruction|
+$prototypeV2=bool isProcessingInstruction() const
 
-$prototype=bool isStandaloneDocument() const
-$method=|bool|isStandaloneDocument|
+$prototypeV2=bool isStandaloneDocument() const
 
-$prototype=bool isStartDocument() const
-$method=|bool|isStartDocument|
+$prototypeV2=bool isStartDocument() const
 
-$prototype=bool isStartElement() const
-$method=|bool|isStartElement|
+$prototypeV2=bool isStartElement() const
 
-$prototype=bool isWhitespace() const
-$method=|bool|isWhitespace|
+$prototypeV2=bool isWhitespace() const
 
 $prototype=qint64 lineNumber() const
 $method=|qint64|lineNumber|
@@ -214,8 +200,7 @@ $method=|QStringRef|name|
 $prototype=QXmlStreamNamespaceDeclarations namespaceDeclarations() const
 $method=|QXmlStreamNamespaceDeclarations|namespaceDeclarations|
 
-$prototype=bool namespaceProcessing() const
-$method=|bool|namespaceProcessing|
+$prototypeV2=bool namespaceProcessing() const
 
 $prototype=QStringRef namespaceUri() const
 $method=|QStringRef|namespaceUri|
@@ -244,8 +229,7 @@ $method=|QString|readElementText|QXmlStreamReader::ReadElementTextBehaviour=QXml
 $prototype=TokenType readNext()
 $method=|QXmlStreamReader::TokenType|readNext|
 
-$prototype=bool readNextStartElement()
-$method=|bool|readNextStartElement|
+$prototypeV2=bool readNextStartElement()
 
 $prototype=void setDevice(QIODevice * device)
 $method=|void|setDevice|QIODevice *

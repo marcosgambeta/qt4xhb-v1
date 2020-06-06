@@ -35,11 +35,9 @@ $deleteMethod
 $prototype=void exit(int returnCode = 0)
 $method=|void|exit|int=0
 
-$prototype=bool isFinished() const
-$method=|bool|isFinished|
+$prototypeV2=bool isFinished() const
 
-$prototype=bool isRunning() const
-$method=|bool|isRunning|
+$prototypeV2=bool isRunning() const
 
 $prototype=Priority priority() const
 $method=|QThread::Priority|priority|

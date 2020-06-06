@@ -55,8 +55,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototypeV2=int manhattanLength() const
 
