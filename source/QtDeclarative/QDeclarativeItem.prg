@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDRENRECT )
 }
 
 /*
-bool clip () const
+bool clip() const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_CLIP )
 {
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_IMPLICITWIDTH )
 }
 
 /*
-bool keepMouseGrab () const
+bool keepMouseGrab() const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_KEEPMOUSEGRAB )
 {
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SETTRANSFORMORIGIN )
 }
 
 /*
-bool smooth () const
+bool smooth() const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_SMOOTH )
 {
