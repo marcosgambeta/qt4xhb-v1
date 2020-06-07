@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QWEBVIEW_ICON )
 }
 
 /*
-bool isModified () const
+bool isModified() const
 */
 HB_FUNC_STATIC( QWEBVIEW_ISMODIFIED )
 {

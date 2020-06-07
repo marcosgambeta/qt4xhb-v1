@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ICON )
 }
 
 /*
-bool isModified () const
+bool isModified() const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ISMODIFIED )
 {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ISMODIFIED )
 }
 
 /*
-bool isTiledBackingStoreFrozen () const
+bool isTiledBackingStoreFrozen() const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ISTILEDBACKINGSTOREFROZEN )
 {
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_PAGEACTION )
 }
 
 /*
-bool resizesToContents () const
+bool resizesToContents() const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_RESIZESTOCONTENTS )
 {

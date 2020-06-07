@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QWEBHISTORY_BACKITEMS )
 }
 
 /*
-bool canGoBack () const
+bool canGoBack() const
 */
 HB_FUNC_STATIC( QWEBHISTORY_CANGOBACK )
 {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QWEBHISTORY_CANGOBACK )
 }
 
 /*
-bool canGoForward () const
+bool canGoForward() const
 */
 HB_FUNC_STATIC( QWEBHISTORY_CANGOFORWARD )
 {

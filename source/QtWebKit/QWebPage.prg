@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QWEBPAGE_FOCUSNEXTPREVCHILD )
 }
 
 /*
-bool forwardUnsupportedContent () const
+bool forwardUnsupportedContent() const
 */
 HB_FUNC_STATIC( QWEBPAGE_FORWARDUNSUPPORTEDCONTENT )
 {
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QWEBPAGE_INPUTMETHODQUERY )
 }
 
 /*
-bool isContentEditable () const
+bool isContentEditable() const
 */
 HB_FUNC_STATIC( QWEBPAGE_ISCONTENTEDITABLE )
 {
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QWEBPAGE_ISCONTENTEDITABLE )
 }
 
 /*
-bool isModified () const
+bool isModified() const
 */
 HB_FUNC_STATIC( QWEBPAGE_ISMODIFIED )
 {
@@ -1111,7 +1111,7 @@ HB_FUNC_STATIC( QWEBPAGE_EVENT )
 }
 
 /*
-bool shouldInterruptJavaScript ()
+bool shouldInterruptJavaScript()
 */
 HB_FUNC_STATIC( QWEBPAGE_SHOULDINTERRUPTJAVASCRIPT )
 {

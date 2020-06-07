@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QWEBFRAME_GEOMETRY )
 }
 
 /*
-bool hasFocus () const
+bool hasFocus() const
 */
 HB_FUNC_STATIC( QWEBFRAME_HASFOCUS )
 {

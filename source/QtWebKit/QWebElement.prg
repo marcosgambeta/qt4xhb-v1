@@ -712,7 +712,7 @@ HB_FUNC_STATIC( QWEBELEMENT_HASATTRIBUTENS )
 }
 
 /*
-bool hasAttributes () const
+bool hasAttributes() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_HASATTRIBUTES )
 {
@@ -760,7 +760,7 @@ HB_FUNC_STATIC( QWEBELEMENT_HASCLASS )
 }
 
 /*
-bool hasFocus () const
+bool hasFocus() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_HASFOCUS )
 {
@@ -784,7 +784,7 @@ HB_FUNC_STATIC( QWEBELEMENT_HASFOCUS )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_ISNULL )
 {
