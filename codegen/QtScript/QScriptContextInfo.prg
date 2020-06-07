@@ -81,8 +81,7 @@ $prototypeV2=int functionStartLineNumber() const
 $prototype=FunctionType functionType () const
 $method=|QScriptContextInfo::FunctionType|functionType|
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototypeV2=int lineNumber() const
 

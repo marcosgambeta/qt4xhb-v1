@@ -216,50 +216,35 @@ $method=|bool|equals|const QScriptValue &
 $prototype=bool instanceOf ( const QScriptValue & other ) const
 $method=|bool|instanceOf|const QScriptValue &
 
-$prototype=bool isArray () const
-$method=|bool|isArray|
+$prototypeV2=bool isArray() const
 
-$prototype=bool isBool () const
-$method=|bool|isBool|
+$prototypeV2=bool isBool() const
 
-$prototype=bool isDate () const
-$method=|bool|isDate|
+$prototypeV2=bool isDate() const
 
-$prototype=bool isError () const
-$method=|bool|isError|
+$prototypeV2=bool isError() const
 
-$prototype=bool isFunction () const
-$method=|bool|isFunction|
+$prototypeV2=bool isFunction() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=bool isNumber () const
-$method=|bool|isNumber|
+$prototypeV2=bool isNumber() const
 
-$prototype=bool isObject () const
-$method=|bool|isObject|
+$prototypeV2=bool isObject() const
 
-$prototype=bool isQMetaObject () const
-$method=|bool|isQMetaObject|
+$prototypeV2=bool isQMetaObject() const
 
-$prototype=bool isQObject () const
-$method=|bool|isQObject|
+$prototypeV2=bool isQObject() const
 
-$prototype=bool isRegExp () const
-$method=|bool|isRegExp|
+$prototypeV2=bool isRegExp() const
 
-$prototype=bool isString () const
-$method=|bool|isString|
+$prototypeV2=bool isString() const
 
-$prototype=bool isUndefined () const
-$method=|bool|isUndefined|
+$prototypeV2=bool isUndefined() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=bool isVariant () const
-$method=|bool|isVariant|
+$prototypeV2=bool isVariant() const
 
 $prototype=bool lessThan ( const QScriptValue & other ) const
 $method=|bool|lessThan|const QScriptValue &
@@ -282,8 +267,7 @@ $method=|void|setScriptClass|QScriptClass *
 $prototype=bool strictlyEquals ( const QScriptValue & other ) const
 $method=|bool|strictlyEquals|const QScriptValue &
 
-$prototype=bool toBool () const
-$method=|bool|toBool|
+$prototypeV2=bool toBool() const
 
 $prototype=QDateTime toDateTime () const
 $method=|QDateTime|toDateTime|

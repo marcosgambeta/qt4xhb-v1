@@ -35,11 +35,9 @@ $deleteMethod
 $prototype=QScriptValue::PropertyFlags flags () const
 $method=|QScriptValue::PropertyFlags|flags|
 
-$prototype=bool hasNext () const
-$method=|bool|hasNext|
+$prototypeV2=bool hasNext() const
 
-$prototype=bool hasPrevious () const
-$method=|bool|hasPrevious|
+$prototypeV2=bool hasPrevious() const
 
 $prototype=QString name () const
 $method=|QString|name|

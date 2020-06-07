@@ -111,8 +111,7 @@ $addMethod=evaluate
 $prototype=QScriptValue globalObject () const
 $method=|QScriptValue|globalObject|
 
-$prototype=bool hasUncaughtException () const
-$method=|bool|hasUncaughtException|
+$prototypeV2=bool hasUncaughtException() const
 
 $prototype=QScriptValue importExtension ( const QString & extension )
 $method=|QScriptValue|importExtension|const QString &
@@ -123,8 +122,7 @@ $method=|QStringList|importedExtensions|
 $prototype=void installTranslatorFunctions ( const QScriptValue & object = QScriptValue() )
 $method=|void|installTranslatorFunctions|const QScriptValue &=QScriptValue()
 
-$prototype=bool isEvaluating () const
-$method=|bool|isEvaluating|
+$prototypeV2=bool isEvaluating() const
 
 $prototype=QScriptValue newArray ( uint length = 0 )
 $method=|QScriptValue|newArray|uint=0

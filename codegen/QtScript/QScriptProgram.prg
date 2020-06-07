@@ -68,8 +68,7 @@ $method=|QString|fileName|
 
 $prototypeV2=int firstLineNumber() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=QString sourceCode () const
 $method=|QString|sourceCode|

@@ -50,8 +50,7 @@ $method=|QScriptValue|callee|
 $prototype=QScriptEngine * engine () const
 $method=|QScriptEngine *|engine|
 
-$prototype=bool isCalledAsConstructor () const
-$method=|bool|isCalledAsConstructor|
+$prototypeV2=bool isCalledAsConstructor() const
 
 $prototype=QScriptContext * parentContext () const
 $method=|QScriptContext *|parentContext|

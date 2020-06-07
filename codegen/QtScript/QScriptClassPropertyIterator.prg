@@ -32,11 +32,9 @@ $deleteMethod
 $prototype=virtual QScriptValue::PropertyFlags flags () const
 $virtualMethod=|QScriptValue::PropertyFlags|flags|
 
-$prototype=virtual bool hasNext () const = 0
-$virtualMethod=|bool|hasNext|
+$prototypeV2=virtual bool hasNext() const = 0
 
-$prototype=virtual bool hasPrevious () const = 0
-$virtualMethod=|bool|hasPrevious|
+$prototypeV2=virtual bool hasPrevious() const = 0
 
 $prototype=virtual uint id () const
 $virtualMethod=|uint|id|

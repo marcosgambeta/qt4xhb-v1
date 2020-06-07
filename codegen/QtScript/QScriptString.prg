@@ -55,8 +55,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=QString toString () const
 $method=|QString|toString|
