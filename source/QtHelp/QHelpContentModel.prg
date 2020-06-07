@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_CREATECONTENTS )
 }
 
 /*
-bool isCreatingContents () const
+bool isCreatingContents() const
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_ISCREATINGCONTENTS )
 {

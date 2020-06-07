@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_FILTER )
 }
 
 /*
-bool isCreatingIndex () const
+bool isCreatingIndex() const
 */
 HB_FUNC_STATIC( QHELPINDEXMODEL_ISCREATINGINDEX )
 {
