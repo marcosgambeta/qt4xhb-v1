@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_COLUMN )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QSOURCELOCATION_ISNULL )
 {

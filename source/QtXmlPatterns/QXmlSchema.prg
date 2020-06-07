@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_DOCUMENTURI )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QXMLSCHEMA_ISVALID )
 {

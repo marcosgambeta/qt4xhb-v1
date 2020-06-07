@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_CURRENT )
 }
 
 /*
-bool hasError () const
+bool hasError() const
 */
 HB_FUNC_STATIC( QXMLRESULTITEMS_HASERROR )
 {

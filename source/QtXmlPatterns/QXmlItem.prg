@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QXMLITEM_DELETE )
 }
 
 /*
-bool isAtomicValue () const
+bool isAtomicValue() const
 */
 HB_FUNC_STATIC( QXMLITEM_ISATOMICVALUE )
 {
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QXMLITEM_ISATOMICVALUE )
 }
 
 /*
-bool isNode () const
+bool isNode() const
 */
 HB_FUNC_STATIC( QXMLITEM_ISNODE )
 {
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QXMLITEM_ISNODE )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QXMLITEM_ISNULL )
 {
