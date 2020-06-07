@@ -59,8 +59,7 @@ $virtualMethod=|QLayout *|createLayout|const QString &,QObject *=0,const QString
 $prototype=virtual QWidget * createWidget ( const QString & className, QWidget * parent = 0, const QString & name = QString() )
 $virtualMethod=|QWidget *|createWidget|const QString &,QWidget *=0,const QString &=QString()
 
-$prototype=bool isLanguageChangeEnabled () const
-$method=|bool|isLanguageChangeEnabled|
+$prototypeV2=bool isLanguageChangeEnabled() const
 
 $prototype=QWidget * load ( QIODevice * device, QWidget * parentWidget = 0 )
 $method=|QWidget *|load|QIODevice *,QWidget *=0
