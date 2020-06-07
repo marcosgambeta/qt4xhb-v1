@@ -836,7 +836,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_FOREGROUNDBRUSH )
 }
 
 /*
-bool hasFocus () const
+bool hasFocus() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_HASFOCUS )
 {
@@ -960,7 +960,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_INVALIDATE )
 }
 
 /*
-bool isActive () const
+bool isActive() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_ISACTIVE )
 {
@@ -984,7 +984,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ISACTIVE )
 }
 
 /*
-bool isSortCacheEnabled () const
+bool isSortCacheEnabled() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_ISSORTCACHEENABLED )
 {
@@ -2075,7 +2075,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETSTYLE )
 }
 
 /*
-bool stickyFocus () const
+bool stickyFocus() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_STICKYFOCUS )
 {

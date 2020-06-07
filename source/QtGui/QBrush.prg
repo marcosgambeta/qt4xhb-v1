@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QBRUSH_GRADIENT )
 }
 
 /*
-bool isOpaque () const
+bool isOpaque() const
 */
 HB_FUNC_STATIC( QBRUSH_ISOPAQUE )
 {

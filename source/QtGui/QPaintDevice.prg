@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QPAINTDEVICE_PAINTENGINE )
 }
 
 /*
-bool paintingActive () const
+bool paintingActive() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_PAINTINGACTIVE )
 {

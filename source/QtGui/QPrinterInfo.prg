@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QPRINTERINFO_DELETE )
 }
 
 /*
-bool isDefault () const
+bool isDefault() const
 */
 HB_FUNC_STATIC( QPRINTERINFO_ISDEFAULT )
 {
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QPRINTERINFO_ISDEFAULT )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QPRINTERINFO_ISNULL )
 {

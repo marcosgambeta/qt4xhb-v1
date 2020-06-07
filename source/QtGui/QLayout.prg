@@ -77,7 +77,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-bool activate ()
+bool activate()
 */
 HB_FUNC_STATIC( QLAYOUT_ACTIVATE )
 {
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QLAYOUT_INDEXOF )
 }
 
 /*
-bool isEnabled () const
+bool isEnabled() const
 */
 HB_FUNC_STATIC( QLAYOUT_ISENABLED )
 {
@@ -882,7 +882,7 @@ HB_FUNC_STATIC( QLAYOUT_INVALIDATE )
 }
 
 /*
-virtual bool isEmpty () const
+virtual bool isEmpty() const
 */
 HB_FUNC_STATIC( QLAYOUT_ISEMPTY )
 {

@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_DELETE )
 }
 
 /*
-bool autoClose () const
+bool autoClose() const
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_AUTOCLOSE )
 {
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_AUTOCLOSE )
 }
 
 /*
-bool autoReset () const
+bool autoReset() const
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_AUTORESET )
 {
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_VALUE )
 }
 
 /*
-bool wasCanceled () const
+bool wasCanceled() const
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_WASCANCELED )
 {

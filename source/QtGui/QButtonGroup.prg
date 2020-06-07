@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDID )
 }
 
 /*
-bool exclusive () const
+bool exclusive() const
 */
 HB_FUNC_STATIC( QBUTTONGROUP_EXCLUSIVE )
 {

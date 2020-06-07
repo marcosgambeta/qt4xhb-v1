@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ISDIR )
 }
 
 /*
-bool isReadOnly () const
+bool isReadOnly() const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ISREADONLY )
 {
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MYCOMPUTER )
 }
 
 /*
-bool nameFilterDisables () const
+bool nameFilterDisables() const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_NAMEFILTERDISABLES )
 {
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_REMOVE )
 }
 
 /*
-bool resolveSymlinks () const
+bool resolveSymlinks() const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_RESOLVESYMLINKS )
 {

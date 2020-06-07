@@ -51,7 +51,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-static bool isActive ()
+static bool isActive()
 */
 HB_FUNC_STATIC( QACCESSIBLE_ISACTIVE )
 {

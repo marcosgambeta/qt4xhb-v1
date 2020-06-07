@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QREGION_INTERSECTS )
 }
 
 /*
-bool isEmpty () const
+bool isEmpty() const
 */
 HB_FUNC_STATIC( QREGION_ISEMPTY )
 {

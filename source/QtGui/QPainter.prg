@@ -2564,7 +2564,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWTILEDPIXMAP )
 }
 
 /*
-bool end ()
+bool end()
 */
 HB_FUNC_STATIC( QPAINTER_END )
 {
@@ -3169,7 +3169,7 @@ HB_FUNC_STATIC( QPAINTER_FONTMETRICS )
 }
 
 /*
-bool hasClipping () const
+bool hasClipping() const
 */
 HB_FUNC_STATIC( QPAINTER_HASCLIPPING )
 {
@@ -3219,7 +3219,7 @@ HB_FUNC_STATIC( QPAINTER_INITFROM )
 }
 
 /*
-bool isActive () const
+bool isActive() const
 */
 HB_FUNC_STATIC( QPAINTER_ISACTIVE )
 {
@@ -4423,7 +4423,7 @@ HB_FUNC_STATIC( QPAINTER_TRANSLATE )
 }
 
 /*
-bool viewTransformEnabled () const
+bool viewTransformEnabled() const
 */
 HB_FUNC_STATIC( QPAINTER_VIEWTRANSFORMENABLED )
 {
@@ -4497,7 +4497,7 @@ HB_FUNC_STATIC( QPAINTER_WINDOW )
 }
 
 /*
-bool worldMatrixEnabled () const
+bool worldMatrixEnabled() const
 */
 HB_FUNC_STATIC( QPAINTER_WORLDMATRIXENABLED )
 {

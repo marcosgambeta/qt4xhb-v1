@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_FIRSTLINENUMBER )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_ISVALID )
 {
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_ISVALID )
 }
 
 /*
-bool isVisible () const
+bool isVisible() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_ISVISIBLE )
 {

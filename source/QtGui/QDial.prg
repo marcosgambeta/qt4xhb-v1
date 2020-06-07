@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QDIAL_NOTCHTARGET )
 }
 
 /*
-bool notchesVisible () const
+bool notchesVisible() const
 */
 HB_FUNC_STATIC( QDIAL_NOTCHESVISIBLE )
 {
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QDIAL_SETNOTCHTARGET )
 }
 
 /*
-bool wrapping () const
+bool wrapping() const
 */
 HB_FUNC_STATIC( QDIAL_WRAPPING )
 {

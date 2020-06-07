@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QSTATUSBAR_INSERTWIDGET )
 }
 
 /*
-bool isSizeGripEnabled () const
+bool isSizeGripEnabled() const
 */
 HB_FUNC_STATIC( QSTATUSBAR_ISSIZEGRIPENABLED )
 {

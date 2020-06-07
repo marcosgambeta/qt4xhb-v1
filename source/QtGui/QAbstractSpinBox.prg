@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_FIXUP )
 }
 
 /*
-bool hasAcceptableInput () const
+bool hasAcceptableInput() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_HASACCEPTABLEINPUT )
 {
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_HASACCEPTABLEINPUT )
 }
 
 /*
-bool hasFrame () const
+bool hasFrame() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_HASFRAME )
 {
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_INTERPRETTEXT )
 }
 
 /*
-bool isAccelerated () const
+bool isAccelerated() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_ISACCELERATED )
 {
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ISACCELERATED )
 }
 
 /*
-bool isReadOnly () const
+bool isReadOnly() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_ISREADONLY )
 {
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ISREADONLY )
 }
 
 /*
-bool keyboardTracking () const
+bool keyboardTracking() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_KEYBOARDTRACKING )
 {
@@ -669,7 +669,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_VALIDATE )
 }
 
 /*
-bool wrapping () const
+bool wrapping() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_WRAPPING )
 {

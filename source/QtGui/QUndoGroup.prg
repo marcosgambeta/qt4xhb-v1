@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ADDSTACK )
 }
 
 /*
-bool canRedo () const
+bool canRedo() const
 */
 HB_FUNC_STATIC( QUNDOGROUP_CANREDO )
 {
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QUNDOGROUP_CANREDO )
 }
 
 /*
-bool canUndo () const
+bool canUndo() const
 */
 HB_FUNC_STATIC( QUNDOGROUP_CANUNDO )
 {
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QUNDOGROUP_CREATEUNDOACTION )
 }
 
 /*
-bool isClean () const
+bool isClean() const
 */
 HB_FUNC_STATIC( QUNDOGROUP_ISCLEAN )
 {

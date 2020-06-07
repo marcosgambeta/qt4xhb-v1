@@ -960,7 +960,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_EXPANDINGDIRECTIONS )
 }
 
 /*
-virtual bool hasHeightForWidth () const
+virtual bool hasHeightForWidth() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_HASHEIGHTFORWIDTH )
 {

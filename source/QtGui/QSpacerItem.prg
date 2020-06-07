@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QSPACERITEM_GEOMETRY )
 }
 
 /*
-virtual bool isEmpty () const
+virtual bool isEmpty() const
 */
 HB_FUNC_STATIC( QSPACERITEM_ISEMPTY )
 {

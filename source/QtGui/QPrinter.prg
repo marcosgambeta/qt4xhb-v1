@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QPRINTER_DELETE )
 }
 
 /*
-bool abort ()
+bool abort()
 */
 HB_FUNC_STATIC( QPRINTER_ABORT )
 {
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QPRINTER_ABORT )
 }
 
 /*
-bool collateCopies () const
+bool collateCopies() const
 */
 HB_FUNC_STATIC( QPRINTER_COLLATECOPIES )
 {
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QPRINTER_DOCNAME )
 }
 
 /*
-bool doubleSidedPrinting () const
+bool doubleSidedPrinting() const
 */
 HB_FUNC_STATIC( QPRINTER_DOUBLESIDEDPRINTING )
 {
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QPRINTER_DUPLEX )
 }
 
 /*
-bool fontEmbeddingEnabled () const
+bool fontEmbeddingEnabled() const
 */
 HB_FUNC_STATIC( QPRINTER_FONTEMBEDDINGENABLED )
 {
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QPRINTER_FROMPAGE )
 }
 
 /*
-bool fullPage () const
+bool fullPage() const
 */
 HB_FUNC_STATIC( QPRINTER_FULLPAGE )
 {
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QPRINTER_FULLPAGE )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QPRINTER_ISVALID )
 {
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QPRINTER_ISVALID )
 }
 
 /*
-bool newPage ()
+bool newPage()
 */
 HB_FUNC_STATIC( QPRINTER_NEWPAGE )
 {
@@ -1538,7 +1538,7 @@ HB_FUNC_STATIC( QPRINTER_SUPPORTEDRESOLUTIONS )
 }
 
 /*
-bool supportsMultipleCopies () const
+bool supportsMultipleCopies() const
 */
 HB_FUNC_STATIC( QPRINTER_SUPPORTSMULTIPLECOPIES )
 {

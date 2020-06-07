@@ -54,7 +54,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-bool allowsErrorInteraction ()
+bool allowsErrorInteraction()
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_ALLOWSERRORINTERACTION )
 {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_ALLOWSERRORINTERACTION )
 }
 
 /*
-bool allowsInteraction ()
+bool allowsInteraction()
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_ALLOWSINTERACTION )
 {
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_DISCARDCOMMAND )
 }
 
 /*
-bool isPhase2 () const
+bool isPhase2() const
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_ISPHASE2 )
 {

@@ -827,7 +827,7 @@ HB_FUNC_STATIC( QCOMPLETER_WIDGET )
 }
 
 /*
-bool wrapAround () const
+bool wrapAround() const
 */
 HB_FUNC_STATIC( QCOMPLETER_WRAPAROUND )
 {

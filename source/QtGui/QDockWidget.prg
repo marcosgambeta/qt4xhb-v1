@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ISAREAALLOWED )
 }
 
 /*
-bool isFloating () const
+bool isFloating() const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_ISFLOATING )
 {

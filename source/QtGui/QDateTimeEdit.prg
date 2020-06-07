@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_DELETE )
 }
 
 /*
-bool calendarPopup () const
+bool calendarPopup() const
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_CALENDARPOPUP )
 {

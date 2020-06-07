@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_COUNT )
 }
 
 /*
-bool isEmpty () const
+bool isEmpty() const
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_ISEMPTY )
 {

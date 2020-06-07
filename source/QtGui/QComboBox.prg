@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QCOMBOBOX_CURRENTTEXT )
 }
 
 /*
-bool duplicatesEnabled () const
+bool duplicatesEnabled() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_DUPLICATESENABLED )
 {
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QCOMBOBOX_FINDTEXT )
 }
 
 /*
-bool hasFrame () const
+bool hasFrame() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_HASFRAME )
 {
@@ -613,7 +613,7 @@ HB_FUNC_STATIC( QCOMBOBOX_INSERTSEPARATOR )
 }
 
 /*
-bool isEditable () const
+bool isEditable() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_ISEDITABLE )
 {

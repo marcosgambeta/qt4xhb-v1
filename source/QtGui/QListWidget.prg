@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QLISTWIDGET_INSERTITEMS )
 }
 
 /*
-bool isSortingEnabled () const
+bool isSortingEnabled() const
 */
 HB_FUNC_STATIC( QLISTWIDGET_ISSORTINGENABLED )
 {

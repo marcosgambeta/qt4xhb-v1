@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_INTPROPERTY )
 }
 
 /*
-bool isBlockFormat () const
+bool isBlockFormat() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_ISBLOCKFORMAT )
 {
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_ISBLOCKFORMAT )
 }
 
 /*
-bool isCharFormat () const
+bool isCharFormat() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_ISCHARFORMAT )
 {
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_ISCHARFORMAT )
 }
 
 /*
-bool isFrameFormat () const
+bool isFrameFormat() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_ISFRAMEFORMAT )
 {
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_ISFRAMEFORMAT )
 }
 
 /*
-bool isImageFormat () const
+bool isImageFormat() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_ISIMAGEFORMAT )
 {
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_ISIMAGEFORMAT )
 }
 
 /*
-bool isListFormat () const
+bool isListFormat() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_ISLISTFORMAT )
 {
@@ -567,7 +567,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_ISLISTFORMAT )
 }
 
 /*
-bool isTableCellFormat () const
+bool isTableCellFormat() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_ISTABLECELLFORMAT )
 {
@@ -591,7 +591,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_ISTABLECELLFORMAT )
 }
 
 /*
-bool isTableFormat () const
+bool isTableFormat() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_ISTABLEFORMAT )
 {
@@ -615,7 +615,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_ISTABLEFORMAT )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_ISVALID )
 {

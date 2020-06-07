@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_INDENT )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_ISVALID )
 {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHTTYPE )
 }
 
 /*
-bool nonBreakableLines () const
+bool nonBreakableLines() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_NONBREAKABLELINES )
 {

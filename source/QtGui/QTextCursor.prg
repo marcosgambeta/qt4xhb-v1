@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_ANCHOR )
 }
 
 /*
-bool atBlockEnd () const
+bool atBlockEnd() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_ATBLOCKEND )
 {
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_ATBLOCKEND )
 }
 
 /*
-bool atBlockStart () const
+bool atBlockStart() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_ATBLOCKSTART )
 {
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_ATBLOCKSTART )
 }
 
 /*
-bool atEnd () const
+bool atEnd() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_ATEND )
 {
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_ATEND )
 }
 
 /*
-bool atStart () const
+bool atStart() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_ATSTART )
 {
@@ -764,7 +764,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_ENDEDITBLOCK )
 }
 
 /*
-bool hasComplexSelection () const
+bool hasComplexSelection() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_HASCOMPLEXSELECTION )
 {
@@ -788,7 +788,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_HASCOMPLEXSELECTION )
 }
 
 /*
-bool hasSelection () const
+bool hasSelection() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_HASSELECTION )
 {
@@ -1224,7 +1224,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_ISCOPYOF )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_ISNULL )
 {
@@ -1274,7 +1274,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_JOINPREVIOUSEDITBLOCK )
 }
 
 /*
-bool keepPositionOnInsert () const
+bool keepPositionOnInsert() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_KEEPPOSITIONONINSERT )
 {
@@ -1837,7 +1837,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_VERTICALMOVEMENTX )
 }
 
 /*
-bool visualNavigation () const
+bool visualNavigation() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_VISUALNAVIGATION )
 {

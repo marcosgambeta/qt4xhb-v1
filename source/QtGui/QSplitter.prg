@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QSPLITTER_ADDWIDGET )
 }
 
 /*
-bool childrenCollapsible () const
+bool childrenCollapsible() const
 */
 HB_FUNC_STATIC( QSPLITTER_CHILDRENCOLLAPSIBLE )
 {
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QSPLITTER_ISCOLLAPSIBLE )
 }
 
 /*
-bool opaqueResize () const
+bool opaqueResize() const
 */
 HB_FUNC_STATIC( QSPLITTER_OPAQUERESIZE )
 {

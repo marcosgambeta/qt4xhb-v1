@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_DELETE )
 }
 
 /*
-bool acceptDrops () const
+bool acceptDrops() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTDROPS )
 {
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTDROPS )
 }
 
 /*
-bool acceptHoverEvents () const
+bool acceptHoverEvents() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTHOVEREVENTS )
 {
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTHOVEREVENTS )
 }
 
 /*
-bool acceptTouchEvents () const
+bool acceptTouchEvents() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTTOUCHEVENTS )
 {
@@ -857,7 +857,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ENSUREVISIBLE )
 }
 
 /*
-bool filtersChildEvents () const
+bool filtersChildEvents() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_FILTERSCHILDEVENTS )
 {
@@ -1057,7 +1057,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_GROUP )
 }
 
 /*
-bool hasCursor () const
+bool hasCursor() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_HASCURSOR )
 {
@@ -1081,7 +1081,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_HASCURSOR )
 }
 
 /*
-bool hasFocus () const
+bool hasFocus() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_HASFOCUS )
 {
@@ -1181,7 +1181,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_INSTALLSCENEEVENTFILTER )
 }
 
 /*
-bool isActive () const
+bool isActive() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ISACTIVE )
 {
@@ -1229,7 +1229,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISANCESTOROF )
 }
 
 /*
-bool isClipped () const
+bool isClipped() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ISCLIPPED )
 {
@@ -1253,7 +1253,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISCLIPPED )
 }
 
 /*
-bool isEnabled () const
+bool isEnabled() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ISENABLED )
 {
@@ -1366,7 +1366,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISOBSCUREDBY )
 }
 
 /*
-bool isPanel () const
+bool isPanel() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ISPANEL )
 {
@@ -1390,7 +1390,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISPANEL )
 }
 
 /*
-bool isSelected () const
+bool isSelected() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ISSELECTED )
 {
@@ -1414,7 +1414,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISSELECTED )
 }
 
 /*
-bool isUnderMouse () const
+bool isUnderMouse() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ISUNDERMOUSE )
 {
@@ -1438,7 +1438,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISUNDERMOUSE )
 }
 
 /*
-bool isVisible () const
+bool isVisible() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ISVISIBLE )
 {
@@ -1486,7 +1486,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISVISIBLETO )
 }
 
 /*
-bool isWidget () const
+bool isWidget() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ISWIDGET )
 {
@@ -1510,7 +1510,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISWIDGET )
 }
 
 /*
-bool isWindow () const
+bool isWindow() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ISWINDOW )
 {

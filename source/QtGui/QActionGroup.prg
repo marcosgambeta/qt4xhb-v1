@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QACTIONGROUP_CHECKEDACTION )
 }
 
 /*
-bool isEnabled () const
+bool isEnabled() const
 */
 HB_FUNC_STATIC( QACTIONGROUP_ISENABLED )
 {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ISENABLED )
 }
 
 /*
-bool isExclusive () const
+bool isExclusive() const
 */
 HB_FUNC_STATIC( QACTIONGROUP_ISEXCLUSIVE )
 {
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ISEXCLUSIVE )
 }
 
 /*
-bool isVisible () const
+bool isVisible() const
 */
 HB_FUNC_STATIC( QACTIONGROUP_ISVISIBLE )
 {

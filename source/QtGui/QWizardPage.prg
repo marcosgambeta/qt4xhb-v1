@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_INITIALIZEPAGE )
 }
 
 /*
-bool isCommitPage () const
+bool isCommitPage() const
 */
 HB_FUNC_STATIC( QWIZARDPAGE_ISCOMMITPAGE )
 {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_ISCOMMITPAGE )
 }
 
 /*
-virtual bool isComplete () const
+virtual bool isComplete() const
 */
 HB_FUNC_STATIC( QWIZARDPAGE_ISCOMPLETE )
 {
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_ISCOMPLETE )
 }
 
 /*
-bool isFinalPage () const
+bool isFinalPage() const
 */
 HB_FUNC_STATIC( QWIZARDPAGE_ISFINALPAGE )
 {
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_TITLE )
 }
 
 /*
-virtual bool validatePage ()
+virtual bool validatePage()
 */
 HB_FUNC_STATIC( QWIZARDPAGE_VALIDATEPAGE )
 {

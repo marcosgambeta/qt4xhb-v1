@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QMOTIFSTYLE_SETUSEHIGHLIGHTCOLORS )
 }
 
 /*
-bool useHighlightColors () const
+bool useHighlightColors() const
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_USEHIGHLIGHTCOLORS )
 {

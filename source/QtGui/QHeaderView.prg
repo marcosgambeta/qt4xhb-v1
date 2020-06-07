@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QHEADERVIEW_DELETE )
 }
 
 /*
-bool cascadingSectionResizes () const
+bool cascadingSectionResizes() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_CASCADINGSECTIONRESIZES )
 {
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QHEADERVIEW_HIDESECTION )
 }
 
 /*
-bool highlightSections () const
+bool highlightSections() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_HIGHLIGHTSECTIONS )
 {
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QHEADERVIEW_HIGHLIGHTSECTIONS )
 }
 
 /*
-bool isClickable () const
+bool isClickable() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_ISCLICKABLE )
 {
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ISCLICKABLE )
 }
 
 /*
-bool isMovable () const
+bool isMovable() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_ISMOVABLE )
 {
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ISSECTIONHIDDEN )
 }
 
 /*
-bool isSortIndicatorShown () const
+bool isSortIndicatorShown() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_ISSORTINDICATORSHOWN )
 {
@@ -844,7 +844,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONVIEWPORTPOSITION )
 }
 
 /*
-bool sectionsHidden () const
+bool sectionsHidden() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_SECTIONSHIDDEN )
 {
@@ -868,7 +868,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSHIDDEN )
 }
 
 /*
-bool sectionsMoved () const
+bool sectionsMoved() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_SECTIONSMOVED )
 {
@@ -1303,7 +1303,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SORTINDICATORSECTION )
 }
 
 /*
-bool stretchLastSection () const
+bool stretchLastSection() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_STRETCHLASTSECTION )
 {

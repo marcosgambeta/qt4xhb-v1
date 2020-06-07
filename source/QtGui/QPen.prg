@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QPEN_DASHPATTERN )
 }
 
 /*
-bool isCosmetic () const
+bool isCosmetic() const
 */
 HB_FUNC_STATIC( QPEN_ISCOSMETIC )
 {
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QPEN_ISCOSMETIC )
 }
 
 /*
-bool isSolid () const
+bool isSolid() const
 */
 HB_FUNC_STATIC( QPEN_ISSOLID )
 {

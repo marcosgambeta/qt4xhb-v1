@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QFONTDATABASE_APPLICATIONFONTFAMILIES )
 }
 
 /*
-static bool removeAllApplicationFonts ()
+static bool removeAllApplicationFonts()
 */
 HB_FUNC_STATIC( QFONTDATABASE_REMOVEALLAPPLICATIONFONTS )
 {
@@ -605,7 +605,7 @@ HB_FUNC_STATIC( QFONTDATABASE_STANDARDSIZES )
 }
 
 /*
-static bool supportsThreadedFontRendering ()
+static bool supportsThreadedFontRendering()
 */
 HB_FUNC_STATIC( QFONTDATABASE_SUPPORTSTHREADEDFONTRENDERING )
 {

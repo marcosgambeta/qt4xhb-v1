@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QSCROLLAREA_WIDGET )
 }
 
 /*
-bool widgetResizable () const
+bool widgetResizable() const
 */
 HB_FUNC_STATIC( QSCROLLAREA_WIDGETRESIZABLE )
 {

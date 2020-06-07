@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_ICON )
 }
 
 /*
-bool isSelected () const
+bool isSelected() const
 */
 HB_FUNC_STATIC( QTABLEWIDGETITEM_ISSELECTED )
 {

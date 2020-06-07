@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QTEXTEDIT_DELETE )
 }
 
 /*
-bool acceptRichText () const
+bool acceptRichText() const
 */
 HB_FUNC_STATIC( QTEXTEDIT_ACCEPTRICHTEXT )
 {
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QTEXTEDIT_AUTOFORMATTING )
 }
 
 /*
-bool canPaste () const
+bool canPaste() const
 */
 HB_FUNC_STATIC( QTEXTEDIT_CANPASTE )
 {
@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QTEXTEDIT_FONTFAMILY )
 }
 
 /*
-bool fontItalic () const
+bool fontItalic() const
 */
 HB_FUNC_STATIC( QTEXTEDIT_FONTITALIC )
 {
@@ -684,7 +684,7 @@ HB_FUNC_STATIC( QTEXTEDIT_FONTPOINTSIZE )
 }
 
 /*
-bool fontUnderline () const
+bool fontUnderline() const
 */
 HB_FUNC_STATIC( QTEXTEDIT_FONTUNDERLINE )
 {
@@ -732,7 +732,7 @@ HB_FUNC_STATIC( QTEXTEDIT_FONTWEIGHT )
 }
 
 /*
-bool isReadOnly () const
+bool isReadOnly() const
 */
 HB_FUNC_STATIC( QTEXTEDIT_ISREADONLY )
 {
@@ -756,7 +756,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ISREADONLY )
 }
 
 /*
-bool isUndoRedoEnabled () const
+bool isUndoRedoEnabled() const
 */
 HB_FUNC_STATIC( QTEXTEDIT_ISUNDOREDOENABLED )
 {
@@ -905,7 +905,7 @@ HB_FUNC_STATIC( QTEXTEDIT_MOVECURSOR )
 }
 
 /*
-bool overwriteMode () const
+bool overwriteMode() const
 */
 HB_FUNC_STATIC( QTEXTEDIT_OVERWRITEMODE )
 {
@@ -1371,7 +1371,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETWORDWRAPMODE )
 }
 
 /*
-bool tabChangesFocus () const
+bool tabChangesFocus() const
 */
 HB_FUNC_STATIC( QTEXTEDIT_TABCHANGESFOCUS )
 {

@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETSEGMENTSTYLE )
 }
 
 /*
-bool smallDecimalPoint () const
+bool smallDecimalPoint() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_SMALLDECIMALPOINT )
 {

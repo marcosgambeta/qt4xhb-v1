@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QLABEL_BUDDY )
 }
 
 /*
-bool hasScaledContents () const
+bool hasScaledContents() const
 */
 HB_FUNC_STATIC( QLABEL_HASSCALEDCONTENTS )
 {
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QLABEL_HASSCALEDCONTENTS )
 }
 
 /*
-bool hasSelectedText () const
+bool hasSelectedText() const
 */
 HB_FUNC_STATIC( QLABEL_HASSELECTEDTEXT )
 {
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QLABEL_MOVIE )
 }
 
 /*
-bool openExternalLinks () const
+bool openExternalLinks() const
 */
 HB_FUNC_STATIC( QLABEL_OPENEXTERNALLINKS )
 {
@@ -745,7 +745,7 @@ HB_FUNC_STATIC( QLABEL_TEXTINTERACTIONFLAGS )
 }
 
 /*
-bool wordWrap () const
+bool wordWrap() const
 */
 HB_FUNC_STATIC( QLABEL_WORDWRAP )
 {

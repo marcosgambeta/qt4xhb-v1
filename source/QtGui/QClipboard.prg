@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QCLIPBOARD_MIMEDATA )
 }
 
 /*
-bool ownsClipboard () const
+bool ownsClipboard() const
 */
 HB_FUNC_STATIC( QCLIPBOARD_OWNSCLIPBOARD )
 {
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QCLIPBOARD_OWNSCLIPBOARD )
 }
 
 /*
-bool ownsFindBuffer () const
+bool ownsFindBuffer() const
 */
 HB_FUNC_STATIC( QCLIPBOARD_OWNSFINDBUFFER )
 {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QCLIPBOARD_OWNSFINDBUFFER )
 }
 
 /*
-bool ownsSelection () const
+bool ownsSelection() const
 */
 HB_FUNC_STATIC( QCLIPBOARD_OWNSSELECTION )
 {
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SETTEXT )
 }
 
 /*
-bool supportsFindBuffer () const
+bool supportsFindBuffer() const
 */
 HB_FUNC_STATIC( QCLIPBOARD_SUPPORTSFINDBUFFER )
 {
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SUPPORTSFINDBUFFER )
 }
 
 /*
-bool supportsSelection () const
+bool supportsSelection() const
 */
 HB_FUNC_STATIC( QCLIPBOARD_SUPPORTSSELECTION )
 {

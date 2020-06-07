@@ -954,7 +954,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_INDENTWIDTH )
 }
 
 /*
-bool isEmpty () const
+bool isEmpty() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ISEMPTY )
 {
@@ -978,7 +978,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ISEMPTY )
 }
 
 /*
-bool isModified () const
+bool isModified() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ISMODIFIED )
 {
@@ -1002,7 +1002,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ISMODIFIED )
 }
 
 /*
-bool isRedoAvailable () const
+bool isRedoAvailable() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ISREDOAVAILABLE )
 {
@@ -1026,7 +1026,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ISREDOAVAILABLE )
 }
 
 /*
-bool isUndoAvailable () const
+bool isUndoAvailable() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ISUNDOAVAILABLE )
 {
@@ -1050,7 +1050,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ISUNDOAVAILABLE )
 }
 
 /*
-bool isUndoRedoEnabled () const
+bool isUndoRedoEnabled() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ISUNDOREDOENABLED )
 {
@@ -1883,7 +1883,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_TOPLAINTEXT )
 }
 
 /*
-bool useDesignMetrics () const
+bool useDesignMetrics() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_USEDESIGNMETRICS )
 {

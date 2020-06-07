@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ISCOLUMNHIDDEN )
 }
 
 /*
-bool isCornerButtonEnabled () const
+bool isCornerButtonEnabled() const
 */
 HB_FUNC_STATIC( QTABLEVIEW_ISCORNERBUTTONENABLED )
 {
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ISROWHIDDEN )
 }
 
 /*
-bool isSortingEnabled () const
+bool isSortingEnabled() const
 */
 HB_FUNC_STATIC( QTABLEVIEW_ISSORTINGENABLED )
 {
@@ -774,7 +774,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETWORDWRAP )
 }
 
 /*
-bool showGrid () const
+bool showGrid() const
 */
 HB_FUNC_STATIC( QTABLEVIEW_SHOWGRID )
 {
@@ -849,7 +849,7 @@ HB_FUNC_STATIC( QTABLEVIEW_VERTICALHEADER )
 }
 
 /*
-bool wordWrap () const
+bool wordWrap() const
 */
 HB_FUNC_STATIC( QTABLEVIEW_WORDWRAP )
 {

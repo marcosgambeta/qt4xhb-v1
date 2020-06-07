@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_ARROWTYPE )
 }
 
 /*
-bool autoRaise () const
+bool autoRaise() const
 */
 HB_FUNC_STATIC( QTOOLBUTTON_AUTORAISE )
 {

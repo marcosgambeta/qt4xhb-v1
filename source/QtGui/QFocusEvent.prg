@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_DELETE )
 }
 
 /*
-bool gotFocus () const
+bool gotFocus() const
 */
 HB_FUNC_STATIC( QFOCUSEVENT_GOTFOCUS )
 {
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_GOTFOCUS )
 }
 
 /*
-bool lostFocus () const
+bool lostFocus() const
 */
 HB_FUNC_STATIC( QFOCUSEVENT_LOSTFOCUS )
 {

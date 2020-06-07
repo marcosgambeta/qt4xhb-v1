@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QDIALOG_DELETE )
 }
 
 /*
-bool isSizeGripEnabled () const
+bool isSizeGripEnabled() const
 */
 HB_FUNC_STATIC( QDIALOG_ISSIZEGRIPENABLED )
 {

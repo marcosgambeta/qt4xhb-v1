@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QFONTINFO_DELETE )
 }
 
 /*
-bool bold () const
+bool bold() const
 */
 HB_FUNC_STATIC( QFONTINFO_BOLD )
 {
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QFONTINFO_BOLD )
 }
 
 /*
-bool exactMatch () const
+bool exactMatch() const
 */
 HB_FUNC_STATIC( QFONTINFO_EXACTMATCH )
 {
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QFONTINFO_FAMILY )
 }
 
 /*
-bool fixedPitch () const
+bool fixedPitch() const
 */
 HB_FUNC_STATIC( QFONTINFO_FIXEDPITCH )
 {
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QFONTINFO_FIXEDPITCH )
 }
 
 /*
-bool italic () const
+bool italic() const
 */
 HB_FUNC_STATIC( QFONTINFO_ITALIC )
 {
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QFONTINFO_POINTSIZEF )
 }
 
 /*
-bool rawMode () const
+bool rawMode() const
 */
 HB_FUNC_STATIC( QFONTINFO_RAWMODE )
 {

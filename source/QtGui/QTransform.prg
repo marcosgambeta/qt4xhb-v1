@@ -516,7 +516,7 @@ HB_FUNC_STATIC( QTRANSFORM_INVERTED )
 }
 
 /*
-bool isAffine () const
+bool isAffine() const
 */
 HB_FUNC_STATIC( QTRANSFORM_ISAFFINE )
 {
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISAFFINE )
 }
 
 /*
-bool isIdentity () const
+bool isIdentity() const
 */
 HB_FUNC_STATIC( QTRANSFORM_ISIDENTITY )
 {
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISIDENTITY )
 }
 
 /*
-bool isInvertible () const
+bool isInvertible() const
 */
 HB_FUNC_STATIC( QTRANSFORM_ISINVERTIBLE )
 {
@@ -588,7 +588,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISINVERTIBLE )
 }
 
 /*
-bool isRotating () const
+bool isRotating() const
 */
 HB_FUNC_STATIC( QTRANSFORM_ISROTATING )
 {
@@ -612,7 +612,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISROTATING )
 }
 
 /*
-bool isScaling () const
+bool isScaling() const
 */
 HB_FUNC_STATIC( QTRANSFORM_ISSCALING )
 {
@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISSCALING )
 }
 
 /*
-bool isTranslating () const
+bool isTranslating() const
 */
 HB_FUNC_STATIC( QTRANSFORM_ISTRANSLATING )
 {

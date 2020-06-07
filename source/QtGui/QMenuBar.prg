@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QMENUBAR_INSERTSEPARATOR )
 }
 
 /*
-bool isDefaultUp () const
+bool isDefaultUp() const
 */
 HB_FUNC_STATIC( QMENUBAR_ISDEFAULTUP )
 {
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QMENUBAR_ISDEFAULTUP )
 }
 
 /*
-bool isNativeMenuBar () const
+bool isNativeMenuBar() const
 */
 HB_FUNC_STATIC( QMENUBAR_ISNATIVEMENUBAR )
 {

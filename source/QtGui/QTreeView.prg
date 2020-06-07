@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QTREEVIEW_DELETE )
 }
 
 /*
-bool allColumnsShowFocus () const
+bool allColumnsShowFocus() const
 */
 HB_FUNC_STATIC( QTREEVIEW_ALLCOLUMNSSHOWFOCUS )
 {
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QTREEVIEW_COLUMNWIDTH )
 }
 
 /*
-bool expandsOnDoubleClick () const
+bool expandsOnDoubleClick() const
 */
 HB_FUNC_STATIC( QTREEVIEW_EXPANDSONDOUBLECLICK )
 {
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QTREEVIEW_INDEXBELOW )
 }
 
 /*
-bool isAnimated () const
+bool isAnimated() const
 */
 HB_FUNC_STATIC( QTREEVIEW_ISANIMATED )
 {
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QTREEVIEW_ISFIRSTCOLUMNSPANNED )
 }
 
 /*
-bool isHeaderHidden () const
+bool isHeaderHidden() const
 */
 HB_FUNC_STATIC( QTREEVIEW_ISHEADERHIDDEN )
 {
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QTREEVIEW_ISROWHIDDEN )
 }
 
 /*
-bool isSortingEnabled () const
+bool isSortingEnabled() const
 */
 HB_FUNC_STATIC( QTREEVIEW_ISSORTINGENABLED )
 {
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QTREEVIEW_ISSORTINGENABLED )
 }
 
 /*
-bool itemsExpandable () const
+bool itemsExpandable() const
 */
 HB_FUNC_STATIC( QTREEVIEW_ITEMSEXPANDABLE )
 {
@@ -576,7 +576,7 @@ HB_FUNC_STATIC( QTREEVIEW_ITEMSEXPANDABLE )
 }
 
 /*
-bool rootIsDecorated () const
+bool rootIsDecorated() const
 */
 HB_FUNC_STATIC( QTREEVIEW_ROOTISDECORATED )
 {
@@ -1068,7 +1068,7 @@ HB_FUNC_STATIC( QTREEVIEW_SORTBYCOLUMN )
 }
 
 /*
-bool uniformRowHeights () const
+bool uniformRowHeights() const
 */
 HB_FUNC_STATIC( QTREEVIEW_UNIFORMROWHEIGHTS )
 {
@@ -1092,7 +1092,7 @@ HB_FUNC_STATIC( QTREEVIEW_UNIFORMROWHEIGHTS )
 }
 
 /*
-bool wordWrap () const
+bool wordWrap() const
 */
 HB_FUNC_STATIC( QTREEVIEW_WORDWRAP )
 {

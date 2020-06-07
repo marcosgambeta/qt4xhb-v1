@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_NEW )
 }
 
 /*
-bool opaqueResize () const
+bool opaqueResize() const
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_OPAQUERESIZE )
 {

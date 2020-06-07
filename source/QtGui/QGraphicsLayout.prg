@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_INVALIDATE )
 }
 
 /*
-bool isActivated () const
+bool isActivated() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_ISACTIVATED )
 {
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_UPDATEGEOMETRY )
 }
 
 /*
-static bool instantInvalidatePropagation ()
+static bool instantInvalidatePropagation()
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_INSTANTINVALIDATEPROPAGATION )
 {

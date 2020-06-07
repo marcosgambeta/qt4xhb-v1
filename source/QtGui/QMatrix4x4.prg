@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QMATRIX4X4_INVERTED )
 }
 
 /*
-bool isIdentity () const
+bool isIdentity() const
 */
 HB_FUNC_STATIC( QMATRIX4X4_ISIDENTITY )
 {

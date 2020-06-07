@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QMOVIE_FRAMERECT )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QMOVIE_ISVALID )
 {
@@ -731,7 +731,7 @@ HB_FUNC_STATIC( QMOVIE_STATE )
 }
 
 /*
-bool jumpToNextFrame ()
+bool jumpToNextFrame()
 */
 HB_FUNC_STATIC( QMOVIE_JUMPTONEXTFRAME )
 {

@@ -703,7 +703,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_INSERTCHILDREN )
 }
 
 /*
-bool isDisabled () const
+bool isDisabled() const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_ISDISABLED )
 {
@@ -727,7 +727,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_ISDISABLED )
 }
 
 /*
-bool isExpanded () const
+bool isExpanded() const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_ISEXPANDED )
 {
@@ -751,7 +751,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_ISEXPANDED )
 }
 
 /*
-bool isFirstColumnSpanned () const
+bool isFirstColumnSpanned() const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_ISFIRSTCOLUMNSPANNED )
 {
@@ -775,7 +775,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_ISFIRSTCOLUMNSPANNED )
 }
 
 /*
-bool isHidden () const
+bool isHidden() const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_ISHIDDEN )
 {
@@ -799,7 +799,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_ISHIDDEN )
 }
 
 /*
-bool isSelected () const
+bool isSelected() const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_ISSELECTED )
 {

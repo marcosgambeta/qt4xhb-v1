@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QSOUND_FILENAME )
 }
 
 /*
-bool isFinished () const
+bool isFinished() const
 */
 HB_FUNC_STATIC( QSOUND_ISFINISHED )
 {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QSOUND_STOP )
 }
 
 /*
-static bool isAvailable ()
+static bool isAvailable()
 */
 HB_FUNC_STATIC( QSOUND_ISAVAILABLE )
 {

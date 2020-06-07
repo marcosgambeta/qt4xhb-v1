@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QTABBAR_CURRENTINDEX )
 }
 
 /*
-bool documentMode () const
+bool documentMode() const
 */
 HB_FUNC_STATIC( QTABBAR_DOCUMENTMODE )
 {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QTABBAR_DOCUMENTMODE )
 }
 
 /*
-bool drawBase () const
+bool drawBase() const
 */
 HB_FUNC_STATIC( QTABBAR_DRAWBASE )
 {
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QTABBAR_ELIDEMODE )
 }
 
 /*
-bool expanding () const
+bool expanding() const
 */
 HB_FUNC_STATIC( QTABBAR_EXPANDING )
 {
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QTABBAR_INSERTTAB )
 }
 
 /*
-bool isMovable () const
+bool isMovable() const
 */
 HB_FUNC_STATIC( QTABBAR_ISMOVABLE )
 {
@@ -1237,7 +1237,7 @@ HB_FUNC_STATIC( QTABBAR_TABWHATSTHIS )
 }
 
 /*
-bool tabsClosable () const
+bool tabsClosable() const
 */
 HB_FUNC_STATIC( QTABBAR_TABSCLOSABLE )
 {
@@ -1261,7 +1261,7 @@ HB_FUNC_STATIC( QTABBAR_TABSCLOSABLE )
 }
 
 /*
-bool usesScrollButtons () const
+bool usesScrollButtons() const
 */
 HB_FUNC_STATIC( QTABBAR_USESSCROLLBUTTONS )
 {

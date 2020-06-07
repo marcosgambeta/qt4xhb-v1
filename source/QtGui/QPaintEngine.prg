@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWTILEDPIXMAP )
 }
 
 /*
-virtual bool end () = 0
+virtual bool end() = 0
 */
 HB_FUNC_STATIC( QPAINTENGINE_END )
 {
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QPAINTENGINE_HASFEATURE )
 }
 
 /*
-bool isActive () const
+bool isActive() const
 */
 HB_FUNC_STATIC( QPAINTENGINE_ISACTIVE )
 {

@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_DELETE )
 }
 
 /*
-bool autoDefault () const
+bool autoDefault() const
 */
 HB_FUNC_STATIC( QPUSHBUTTON_AUTODEFAULT )
 {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_AUTODEFAULT )
 }
 
 /*
-bool isDefault () const
+bool isDefault() const
 */
 HB_FUNC_STATIC( QPUSHBUTTON_ISDEFAULT )
 {
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_ISDEFAULT )
 }
 
 /*
-bool isFlat () const
+bool isFlat() const
 */
 HB_FUNC_STATIC( QPUSHBUTTON_ISFLAT )
 {

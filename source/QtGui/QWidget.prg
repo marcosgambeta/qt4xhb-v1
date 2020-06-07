@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QWIDGET_DELETE )
 }
 
 /*
-bool acceptDrops () const
+bool acceptDrops() const
 */
 HB_FUNC_STATIC( QWIDGET_ACCEPTDROPS )
 {
@@ -598,7 +598,7 @@ HB_FUNC_STATIC( QWIDGET_ADJUSTSIZE )
 }
 
 /*
-bool autoFillBackground () const
+bool autoFillBackground() const
 */
 HB_FUNC_STATIC( QWIDGET_AUTOFILLBACKGROUND )
 {
@@ -1432,7 +1432,7 @@ HB_FUNC_STATIC( QWIDGET_GRAPHICSPROXYWIDGET )
 }
 
 /*
-bool hasFocus () const
+bool hasFocus() const
 */
 HB_FUNC_STATIC( QWIDGET_HASFOCUS )
 {
@@ -1456,7 +1456,7 @@ HB_FUNC_STATIC( QWIDGET_HASFOCUS )
 }
 
 /*
-bool hasMouseTracking () const
+bool hasMouseTracking() const
 */
 HB_FUNC_STATIC( QWIDGET_HASMOUSETRACKING )
 {
@@ -1662,7 +1662,7 @@ HB_FUNC_STATIC( QWIDGET_INSERTACTIONS )
 }
 
 /*
-bool isActiveWindow () const
+bool isActiveWindow() const
 */
 HB_FUNC_STATIC( QWIDGET_ISACTIVEWINDOW )
 {
@@ -1710,7 +1710,7 @@ HB_FUNC_STATIC( QWIDGET_ISANCESTOROF )
 }
 
 /*
-bool isEnabled () const
+bool isEnabled() const
 */
 HB_FUNC_STATIC( QWIDGET_ISENABLED )
 {
@@ -1758,7 +1758,7 @@ HB_FUNC_STATIC( QWIDGET_ISENABLEDTO )
 }
 
 /*
-bool isFullScreen () const
+bool isFullScreen() const
 */
 HB_FUNC_STATIC( QWIDGET_ISFULLSCREEN )
 {
@@ -1782,7 +1782,7 @@ HB_FUNC_STATIC( QWIDGET_ISFULLSCREEN )
 }
 
 /*
-bool isHidden () const
+bool isHidden() const
 */
 HB_FUNC_STATIC( QWIDGET_ISHIDDEN )
 {
@@ -1806,7 +1806,7 @@ HB_FUNC_STATIC( QWIDGET_ISHIDDEN )
 }
 
 /*
-bool isMaximized () const
+bool isMaximized() const
 */
 HB_FUNC_STATIC( QWIDGET_ISMAXIMIZED )
 {
@@ -1830,7 +1830,7 @@ HB_FUNC_STATIC( QWIDGET_ISMAXIMIZED )
 }
 
 /*
-bool isMinimized () const
+bool isMinimized() const
 */
 HB_FUNC_STATIC( QWIDGET_ISMINIMIZED )
 {
@@ -1854,7 +1854,7 @@ HB_FUNC_STATIC( QWIDGET_ISMINIMIZED )
 }
 
 /*
-bool isModal () const
+bool isModal() const
 */
 HB_FUNC_STATIC( QWIDGET_ISMODAL )
 {
@@ -1878,7 +1878,7 @@ HB_FUNC_STATIC( QWIDGET_ISMODAL )
 }
 
 /*
-bool isVisible () const
+bool isVisible() const
 */
 HB_FUNC_STATIC( QWIDGET_ISVISIBLE )
 {
@@ -1926,7 +1926,7 @@ HB_FUNC_STATIC( QWIDGET_ISVISIBLETO )
 }
 
 /*
-bool isWindow () const
+bool isWindow() const
 */
 HB_FUNC_STATIC( QWIDGET_ISWINDOW )
 {
@@ -1950,7 +1950,7 @@ HB_FUNC_STATIC( QWIDGET_ISWINDOW )
 }
 
 /*
-bool isWindowModified () const
+bool isWindowModified() const
 */
 HB_FUNC_STATIC( QWIDGET_ISWINDOWMODIFIED )
 {
@@ -4922,7 +4922,7 @@ HB_FUNC_STATIC( QWIDGET_TOOLTIP )
 }
 
 /*
-bool underMouse () const
+bool underMouse() const
 */
 HB_FUNC_STATIC( QWIDGET_UNDERMOUSE )
 {
@@ -5167,7 +5167,7 @@ HB_FUNC_STATIC( QWIDGET_UPDATEGEOMETRY )
 }
 
 /*
-bool updatesEnabled () const
+bool updatesEnabled() const
 */
 HB_FUNC_STATIC( QWIDGET_UPDATESENABLED )
 {
@@ -5629,7 +5629,7 @@ HB_FUNC_STATIC( QWIDGET_PAINTENGINE )
 }
 
 /*
-bool close ()
+bool close()
 */
 HB_FUNC_STATIC( QWIDGET_CLOSE )
 {
@@ -6191,7 +6191,7 @@ HB_FUNC_STATIC( QWIDGET_NUMCOLORS )
 }
 
 /*
-bool paintingActive () const
+bool paintingActive() const
 */
 HB_FUNC_STATIC( QWIDGET_PAINTINGACTIVE )
 {

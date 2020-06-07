@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QRAWFONT_HINTINGPREFERENCE )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QRAWFONT_ISVALID )
 {

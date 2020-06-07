@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QMDIAREA_CURRENTSUBWINDOW )
 }
 
 /*
-bool documentMode () const
+bool documentMode() const
 */
 HB_FUNC_STATIC( QMDIAREA_DOCUMENTMODE )
 {

@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QPICTURE_DATA )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QPICTURE_ISNULL )
 {

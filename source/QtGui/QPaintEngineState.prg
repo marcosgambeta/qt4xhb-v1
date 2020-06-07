@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSH )
 }
 
 /*
-bool brushNeedsResolving () const
+bool brushNeedsResolving() const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSHNEEDSRESOLVING )
 {
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_FONT )
 }
 
 /*
-bool isClipEnabled () const
+bool isClipEnabled() const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_ISCLIPENABLED )
 {
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_PEN )
 }
 
 /*
-bool penNeedsResolving () const
+bool penNeedsResolving() const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_PENNEEDSRESOLVING )
 {

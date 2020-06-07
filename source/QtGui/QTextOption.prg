@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QTEXTOPTION_TEXTDIRECTION )
 }
 
 /*
-bool useDesignMetrics () const
+bool useDesignMetrics() const
 */
 HB_FUNC_STATIC( QTEXTOPTION_USEDESIGNMETRICS )
 {

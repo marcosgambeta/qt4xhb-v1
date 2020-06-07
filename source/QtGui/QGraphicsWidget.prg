@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_ADJUSTSIZE )
 }
 
 /*
-bool autoFillBackground () const
+bool autoFillBackground() const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_AUTOFILLBACKGROUND )
 {
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_INSERTACTIONS )
 }
 
 /*
-bool isActiveWindow () const
+bool isActiveWindow() const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_ISACTIVEWINDOW )
 {
@@ -1540,7 +1540,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_TYPE )
 }
 
 /*
-bool close ()
+bool close()
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_CLOSE )
 {

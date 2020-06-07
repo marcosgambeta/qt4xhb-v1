@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QMAINWINDOW_DOCKWIDGETAREA )
 }
 
 /*
-bool documentMode () const
+bool documentMode() const
 */
 HB_FUNC_STATIC( QMAINWINDOW_DOCUMENTMODE )
 {
@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QMAINWINDOW_INSERTTOOLBARBREAK )
 }
 
 /*
-bool isAnimated () const
+bool isAnimated() const
 */
 HB_FUNC_STATIC( QMAINWINDOW_ISANIMATED )
 {
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ISANIMATED )
 }
 
 /*
-bool isDockNestingEnabled () const
+bool isDockNestingEnabled() const
 */
 HB_FUNC_STATIC( QMAINWINDOW_ISDOCKNESTINGENABLED )
 {

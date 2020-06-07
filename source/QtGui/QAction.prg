@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDWIDGETS )
 }
 
 /*
-bool autoRepeat () const
+bool autoRepeat() const
 */
 HB_FUNC_STATIC( QACTION_AUTOREPEAT )
 {
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QACTION_ICONTEXT )
 }
 
 /*
-bool isCheckable () const
+bool isCheckable() const
 */
 HB_FUNC_STATIC( QACTION_ISCHECKABLE )
 {
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QACTION_ISCHECKABLE )
 }
 
 /*
-bool isChecked () const
+bool isChecked() const
 */
 HB_FUNC_STATIC( QACTION_ISCHECKED )
 {
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QACTION_ISCHECKED )
 }
 
 /*
-bool isEnabled () const
+bool isEnabled() const
 */
 HB_FUNC_STATIC( QACTION_ISENABLED )
 {
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QACTION_ISENABLED )
 }
 
 /*
-bool isIconVisibleInMenu () const
+bool isIconVisibleInMenu() const
 */
 HB_FUNC_STATIC( QACTION_ISICONVISIBLEINMENU )
 {
@@ -549,7 +549,7 @@ HB_FUNC_STATIC( QACTION_ISICONVISIBLEINMENU )
 }
 
 /*
-bool isSeparator () const
+bool isSeparator() const
 */
 HB_FUNC_STATIC( QACTION_ISSEPARATOR )
 {
@@ -573,7 +573,7 @@ HB_FUNC_STATIC( QACTION_ISSEPARATOR )
 }
 
 /*
-bool isVisible () const
+bool isVisible() const
 */
 HB_FUNC_STATIC( QACTION_ISVISIBLE )
 {

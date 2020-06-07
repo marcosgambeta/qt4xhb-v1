@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_PREVIEWWIDGET )
 }
 
 /*
-bool resizeGripsVisible () const
+bool resizeGripsVisible() const
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_RESIZEGRIPSVISIBLE )
 {

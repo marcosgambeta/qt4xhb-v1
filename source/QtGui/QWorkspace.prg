@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QWORKSPACE_BACKGROUND )
 }
 
 /*
-bool scrollBarsEnabled () const
+bool scrollBarsEnabled() const
 */
 HB_FUNC_STATIC( QWORKSPACE_SCROLLBARSENABLED )
 {

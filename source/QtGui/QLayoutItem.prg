@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_GEOMETRY )
 }
 
 /*
-virtual bool hasHeightForWidth () const
+virtual bool hasHeightForWidth() const
 */
 HB_FUNC_STATIC( QLAYOUTITEM_HASHEIGHTFORWIDTH )
 {
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_INVALIDATE )
 }
 
 /*
-virtual bool isEmpty () const = 0
+virtual bool isEmpty() const = 0
 */
 HB_FUNC_STATIC( QLAYOUTITEM_ISEMPTY )
 {

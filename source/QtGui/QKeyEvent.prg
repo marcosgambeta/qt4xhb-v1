@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QKEYEVENT_COUNT )
 }
 
 /*
-bool isAutoRepeat () const
+bool isAutoRepeat() const
 */
 HB_FUNC_STATIC( QKEYEVENT_ISAUTOREPEAT )
 {

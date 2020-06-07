@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QIMAGEREADER_DELETE )
 }
 
 /*
-bool autoDetectImageFormat () const
+bool autoDetectImageFormat() const
 */
 HB_FUNC_STATIC( QIMAGEREADER_AUTODETECTIMAGEFORMAT )
 {
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QIMAGEREADER_BACKGROUNDCOLOR )
 }
 
 /*
-bool canRead () const
+bool canRead() const
 */
 HB_FUNC_STATIC( QIMAGEREADER_CANREAD )
 {
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QIMAGEREADER_CURRENTIMAGERECT )
 }
 
 /*
-bool decideFormatFromContent () const
+bool decideFormatFromContent() const
 */
 HB_FUNC_STATIC( QIMAGEREADER_DECIDEFORMATFROMCONTENT )
 {
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QIMAGEREADER_JUMPTOIMAGE )
 }
 
 /*
-bool jumpToNextImage ()
+bool jumpToNextImage()
 */
 HB_FUNC_STATIC( QIMAGEREADER_JUMPTONEXTIMAGE )
 {
@@ -984,7 +984,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SIZE )
 }
 
 /*
-bool supportsAnimation () const
+bool supportsAnimation() const
 */
 HB_FUNC_STATIC( QIMAGEREADER_SUPPORTSANIMATION )
 {

@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_NEW )
 }
 
 /*
-bool isShaded () const
+bool isShaded() const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_ISSHADED )
 {

@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QLINEEDIT_DISPLAYTEXT )
 }
 
 /*
-bool dragEnabled () const
+bool dragEnabled() const
 */
 HB_FUNC_STATIC( QLINEEDIT_DRAGENABLED )
 {
@@ -612,7 +612,7 @@ HB_FUNC_STATIC( QLINEEDIT_GETTEXTMARGINS )
 }
 
 /*
-bool hasAcceptableInput () const
+bool hasAcceptableInput() const
 */
 HB_FUNC_STATIC( QLINEEDIT_HASACCEPTABLEINPUT )
 {
@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QLINEEDIT_HASACCEPTABLEINPUT )
 }
 
 /*
-bool hasFrame () const
+bool hasFrame() const
 */
 HB_FUNC_STATIC( QLINEEDIT_HASFRAME )
 {
@@ -660,7 +660,7 @@ HB_FUNC_STATIC( QLINEEDIT_HASFRAME )
 }
 
 /*
-bool hasSelectedText () const
+bool hasSelectedText() const
 */
 HB_FUNC_STATIC( QLINEEDIT_HASSELECTEDTEXT )
 {
@@ -760,7 +760,7 @@ HB_FUNC_STATIC( QLINEEDIT_INSERT )
 }
 
 /*
-bool isModified () const
+bool isModified() const
 */
 HB_FUNC_STATIC( QLINEEDIT_ISMODIFIED )
 {
@@ -784,7 +784,7 @@ HB_FUNC_STATIC( QLINEEDIT_ISMODIFIED )
 }
 
 /*
-bool isReadOnly () const
+bool isReadOnly() const
 */
 HB_FUNC_STATIC( QLINEEDIT_ISREADONLY )
 {
@@ -808,7 +808,7 @@ HB_FUNC_STATIC( QLINEEDIT_ISREADONLY )
 }
 
 /*
-bool isRedoAvailable () const
+bool isRedoAvailable() const
 */
 HB_FUNC_STATIC( QLINEEDIT_ISREDOAVAILABLE )
 {
@@ -832,7 +832,7 @@ HB_FUNC_STATIC( QLINEEDIT_ISREDOAVAILABLE )
 }
 
 /*
-bool isUndoAvailable () const
+bool isUndoAvailable() const
 */
 HB_FUNC_STATIC( QLINEEDIT_ISUNDOAVAILABLE )
 {

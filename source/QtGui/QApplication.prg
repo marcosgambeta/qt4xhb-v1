@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QAPPLICATION_INPUTCONTEXT )
 }
 
 /*
-bool isSessionRestored () const
+bool isSessionRestored() const
 */
 HB_FUNC_STATIC( QAPPLICATION_ISSESSIONRESTORED )
 {
@@ -731,7 +731,7 @@ HB_FUNC_STATIC( QAPPLICATION_DESKTOP )
 }
 
 /*
-static bool desktopSettingsAware ()
+static bool desktopSettingsAware()
 */
 HB_FUNC_STATIC( QAPPLICATION_DESKTOPSETTINGSAWARE )
 {
@@ -923,7 +923,7 @@ HB_FUNC_STATIC( QAPPLICATION_ISEFFECTENABLED )
 }
 
 /*
-static bool isLeftToRight ()
+static bool isLeftToRight()
 */
 HB_FUNC_STATIC( QAPPLICATION_ISLEFTTORIGHT )
 {
@@ -942,7 +942,7 @@ HB_FUNC_STATIC( QAPPLICATION_ISLEFTTORIGHT )
 }
 
 /*
-static bool isRightToLeft ()
+static bool isRightToLeft()
 */
 HB_FUNC_STATIC( QAPPLICATION_ISRIGHTTOLEFT )
 {
@@ -1171,7 +1171,7 @@ HB_FUNC_STATIC( QAPPLICATION_QUERYKEYBOARDMODIFIERS )
 }
 
 /*
-static bool quitOnLastWindowClosed ()
+static bool quitOnLastWindowClosed()
 */
 HB_FUNC_STATIC( QAPPLICATION_QUITONLASTWINDOWCLOSED )
 {

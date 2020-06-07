@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_DELETE )
 }
 
 /*
-bool autoExclusive () const
+bool autoExclusive() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOEXCLUSIVE )
 {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOEXCLUSIVE )
 }
 
 /*
-bool autoRepeat () const
+bool autoRepeat() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEAT )
 {
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ICONSIZE )
 }
 
 /*
-bool isCheckable () const
+bool isCheckable() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKABLE )
 {
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKABLE )
 }
 
 /*
-bool isChecked () const
+bool isChecked() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKED )
 {
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKED )
 }
 
 /*
-bool isDown () const
+bool isDown() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_ISDOWN )
 {

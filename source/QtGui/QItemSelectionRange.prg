@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTS )
 }
 
 /*
-bool isEmpty () const
+bool isEmpty() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_ISEMPTY )
 {
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_ISEMPTY )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_ISVALID )
 {

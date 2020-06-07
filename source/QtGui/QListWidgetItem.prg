@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_ICON )
 }
 
 /*
-bool isHidden () const
+bool isHidden() const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_ISHIDDEN )
 {
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_ISHIDDEN )
 }
 
 /*
-bool isSelected () const
+bool isSelected() const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_ISSELECTED )
 {

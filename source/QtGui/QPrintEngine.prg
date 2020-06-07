@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QPRINTENGINE_DELETE )
 }
 
 /*
-virtual bool abort () = 0
+virtual bool abort() = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_ABORT )
 {
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QPRINTENGINE_METRIC )
 }
 
 /*
-virtual bool newPage () = 0
+virtual bool newPage() = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_NEWPAGE )
 {

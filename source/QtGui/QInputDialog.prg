@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_INTVALUE )
 }
 
 /*
-bool isComboBoxEditable () const
+bool isComboBoxEditable() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_ISCOMBOBOXEDITABLE )
 {

@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ACCEPTMODE )
 }
 
 /*
-bool confirmOverwrite () const
+bool confirmOverwrite() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_CONFIRMOVERWRITE )
 {
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ICONPROVIDER )
 }
 
 /*
-bool isNameFilterDetailsVisible () const
+bool isNameFilterDetailsVisible() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_ISNAMEFILTERDETAILSVISIBLE )
 {
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ISNAMEFILTERDETAILSVISIBLE )
 }
 
 /*
-bool isReadOnly () const
+bool isReadOnly() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_ISREADONLY )
 {
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QFILEDIALOG_PROXYMODEL )
 }
 
 /*
-bool resolveSymlinks () const
+bool resolveSymlinks() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_RESOLVESYMLINKS )
 {

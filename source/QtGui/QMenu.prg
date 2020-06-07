@@ -590,7 +590,7 @@ HB_FUNC_STATIC( QMENU_INSERTSEPARATOR )
 }
 
 /*
-bool isEmpty () const
+bool isEmpty() const
 */
 HB_FUNC_STATIC( QMENU_ISEMPTY )
 {
@@ -614,7 +614,7 @@ HB_FUNC_STATIC( QMENU_ISEMPTY )
 }
 
 /*
-bool isTearOffEnabled () const
+bool isTearOffEnabled() const
 */
 HB_FUNC_STATIC( QMENU_ISTEAROFFENABLED )
 {
@@ -638,7 +638,7 @@ HB_FUNC_STATIC( QMENU_ISTEAROFFENABLED )
 }
 
 /*
-bool isTearOffMenuVisible () const
+bool isTearOffMenuVisible() const
 */
 HB_FUNC_STATIC( QMENU_ISTEAROFFMENUVISIBLE )
 {
@@ -713,7 +713,7 @@ HB_FUNC_STATIC( QMENU_POPUP )
 }
 
 /*
-bool separatorsCollapsible () const
+bool separatorsCollapsible() const
 */
 HB_FUNC_STATIC( QMENU_SEPARATORSCOLLAPSIBLE )
 {

@@ -944,7 +944,7 @@ HB_FUNC_STATIC( QWIZARD_TITLEFORMAT )
 }
 
 /*
-virtual bool validateCurrentPage ()
+virtual bool validateCurrentPage()
 */
 HB_FUNC_STATIC( QWIZARD_VALIDATECURRENTPAGE )
 {

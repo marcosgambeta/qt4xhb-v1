@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_DELETE )
 }
 
 /*
-virtual bool canRead () const = 0
+virtual bool canRead() const = 0
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_CANREAD )
 {
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTOIMAGE )
 }
 
 /*
-virtual bool jumpToNextImage ()
+virtual bool jumpToNextImage()
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTONEXTIMAGE )
 {

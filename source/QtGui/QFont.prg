@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QFONT_DELETE )
 }
 
 /*
-bool bold () const
+bool bold() const
 */
 HB_FUNC_STATIC( QFONT_BOLD )
 {
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QFONT_DEFAULTFAMILY )
 }
 
 /*
-bool exactMatch () const
+bool exactMatch() const
 */
 HB_FUNC_STATIC( QFONT_EXACTMATCH )
 {
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QFONT_FAMILY )
 }
 
 /*
-bool fixedPitch () const
+bool fixedPitch() const
 */
 HB_FUNC_STATIC( QFONT_FIXEDPITCH )
 {
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QFONT_ISCOPYOF )
 }
 
 /*
-bool italic () const
+bool italic() const
 */
 HB_FUNC_STATIC( QFONT_ITALIC )
 {
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QFONT_ITALIC )
 }
 
 /*
-bool kerning () const
+bool kerning() const
 */
 HB_FUNC_STATIC( QFONT_KERNING )
 {
@@ -555,7 +555,7 @@ HB_FUNC_STATIC( QFONT_LETTERSPACINGTYPE )
 }
 
 /*
-bool overline () const
+bool overline() const
 */
 HB_FUNC_STATIC( QFONT_OVERLINE )
 {
@@ -651,7 +651,7 @@ HB_FUNC_STATIC( QFONT_POINTSIZEF )
 }
 
 /*
-bool rawMode () const
+bool rawMode() const
 */
 HB_FUNC_STATIC( QFONT_RAWMODE )
 {
@@ -1294,7 +1294,7 @@ HB_FUNC_STATIC( QFONT_STRETCH )
 }
 
 /*
-bool strikeOut () const
+bool strikeOut() const
 */
 HB_FUNC_STATIC( QFONT_STRIKEOUT )
 {
@@ -1414,7 +1414,7 @@ HB_FUNC_STATIC( QFONT_TOSTRING )
 }
 
 /*
-bool underline () const
+bool underline() const
 */
 HB_FUNC_STATIC( QFONT_UNDERLINE )
 {

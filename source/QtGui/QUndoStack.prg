@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QUNDOSTACK_BEGINMACRO )
 }
 
 /*
-bool canRedo () const
+bool canRedo() const
 */
 HB_FUNC_STATIC( QUNDOSTACK_CANREDO )
 {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CANREDO )
 }
 
 /*
-bool canUndo () const
+bool canUndo() const
 */
 HB_FUNC_STATIC( QUNDOSTACK_CANUNDO )
 {
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QUNDOSTACK_INDEX )
 }
 
 /*
-bool isActive () const
+bool isActive() const
 */
 HB_FUNC_STATIC( QUNDOSTACK_ISACTIVE )
 {
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ISACTIVE )
 }
 
 /*
-bool isClean () const
+bool isClean() const
 */
 HB_FUNC_STATIC( QUNDOSTACK_ISCLEAN )
 {

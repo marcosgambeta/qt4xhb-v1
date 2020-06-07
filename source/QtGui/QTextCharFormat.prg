@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTFAMILY )
 }
 
 /*
-bool fontFixedPitch () const
+bool fontFixedPitch() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTFIXEDPITCH )
 {
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTHINTINGPREFERENCE )
 }
 
 /*
-bool fontItalic () const
+bool fontItalic() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTITALIC )
 {
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTITALIC )
 }
 
 /*
-bool fontKerning () const
+bool fontKerning() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTKERNING )
 {
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTLETTERSPACING )
 }
 
 /*
-bool fontOverline () const
+bool fontOverline() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTOVERLINE )
 {
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTPOINTSIZE )
 }
 
 /*
-bool fontStrikeOut () const
+bool fontStrikeOut() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTRIKEOUT )
 {
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTYLESTRATEGY )
 }
 
 /*
-bool fontUnderline () const
+bool fontUnderline() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTUNDERLINE )
 {
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTWORDSPACING )
 }
 
 /*
-bool isAnchor () const
+bool isAnchor() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_ISANCHOR )
 {
@@ -581,7 +581,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_ISANCHOR )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_ISVALID )
 {

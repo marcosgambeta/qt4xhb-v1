@@ -492,7 +492,7 @@ HB_FUNC_STATIC( QTOOLBAR_ISAREAALLOWED )
 }
 
 /*
-bool isFloatable () const
+bool isFloatable() const
 */
 HB_FUNC_STATIC( QTOOLBAR_ISFLOATABLE )
 {
@@ -516,7 +516,7 @@ HB_FUNC_STATIC( QTOOLBAR_ISFLOATABLE )
 }
 
 /*
-bool isFloating () const
+bool isFloating() const
 */
 HB_FUNC_STATIC( QTOOLBAR_ISFLOATING )
 {
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QTOOLBAR_ISFLOATING )
 }
 
 /*
-bool isMovable () const
+bool isMovable() const
 */
 HB_FUNC_STATIC( QTOOLBAR_ISMOVABLE )
 {

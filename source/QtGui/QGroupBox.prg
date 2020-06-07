@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QGROUPBOX_ALIGNMENT )
 }
 
 /*
-bool isCheckable () const
+bool isCheckable() const
 */
 HB_FUNC_STATIC( QGROUPBOX_ISCHECKABLE )
 {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QGROUPBOX_ISCHECKABLE )
 }
 
 /*
-bool isChecked () const
+bool isChecked() const
 */
 HB_FUNC_STATIC( QGROUPBOX_ISCHECKED )
 {
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QGROUPBOX_ISCHECKED )
 }
 
 /*
-bool isFlat () const
+bool isFlat() const
 */
 HB_FUNC_STATIC( QGROUPBOX_ISFLAT )
 {

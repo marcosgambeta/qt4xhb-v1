@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_IDENTIFIERNAME )
 }
 
 /*
-virtual bool isComposing () const = 0
+virtual bool isComposing() const = 0
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_ISCOMPOSING )
 {

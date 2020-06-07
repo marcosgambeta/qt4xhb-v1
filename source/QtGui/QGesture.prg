@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QGESTURE_GESTURETYPE )
 }
 
 /*
-bool hasHotSpot () const
+bool hasHotSpot() const
 */
 HB_FUNC_STATIC( QGESTURE_HASHOTSPOT )
 {

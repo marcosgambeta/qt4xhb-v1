@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_BOUNDINGRECT )
 }
 
 /*
-bool cacheEnabled () const
+bool cacheEnabled() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_CACHEENABLED )
 {

@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_DELETE )
 }
 
 /*
-bool canWrite () const
+bool canWrite() const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_CANWRITE )
 {

@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_INDENT )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_ISVALID )
 {

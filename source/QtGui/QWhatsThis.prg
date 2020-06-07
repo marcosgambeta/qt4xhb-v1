@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QWHATSTHIS_HIDETEXT )
 }
 
 /*
-static bool inWhatsThisMode ()
+static bool inWhatsThisMode()
 */
 HB_FUNC_STATIC( QWHATSTHIS_INWHATSTHISMODE )
 {

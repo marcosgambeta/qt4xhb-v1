@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QLISTVIEW_ISROWHIDDEN )
 }
 
 /*
-bool isSelectionRectVisible () const
+bool isSelectionRectVisible() const
 */
 HB_FUNC_STATIC( QLISTVIEW_ISSELECTIONRECTVISIBLE )
 {
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QLISTVIEW_ISSELECTIONRECTVISIBLE )
 }
 
 /*
-bool isWrapping () const
+bool isWrapping() const
 */
 HB_FUNC_STATIC( QLISTVIEW_ISWRAPPING )
 {
@@ -768,7 +768,7 @@ HB_FUNC_STATIC( QLISTVIEW_SPACING )
 }
 
 /*
-bool uniformItemSizes () const
+bool uniformItemSizes() const
 */
 HB_FUNC_STATIC( QLISTVIEW_UNIFORMITEMSIZES )
 {
@@ -816,7 +816,7 @@ HB_FUNC_STATIC( QLISTVIEW_VIEWMODE )
 }
 
 /*
-bool wordWrap () const
+bool wordWrap() const
 */
 HB_FUNC_STATIC( QLISTVIEW_WORDWRAP )
 {

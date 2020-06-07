@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QPOLYGONF_INTERSECTED )
 }
 
 /*
-bool isClosed () const
+bool isClosed() const
 */
 HB_FUNC_STATIC( QPOLYGONF_ISCLOSED )
 {

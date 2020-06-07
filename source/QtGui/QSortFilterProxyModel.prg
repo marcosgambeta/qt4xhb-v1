@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_DELETE )
 }
 
 /*
-bool dynamicSortFilter () const
+bool dynamicSortFilter() const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_DYNAMICSORTFILTER )
 {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FILTERROLE )
 }
 
 /*
-bool isSortLocaleAware () const
+bool isSortLocaleAware() const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_ISSORTLOCALEAWARE )
 {

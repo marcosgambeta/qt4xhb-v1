@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_DOACTION )
 }
 
 /*
-virtual bool isValid () const
+virtual bool isValid() const
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_ISVALID )
 {

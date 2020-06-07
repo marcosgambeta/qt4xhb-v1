@@ -598,7 +598,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SPAN )
 }
 
 /*
-virtual bool submit ()
+virtual bool submit()
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SUBMIT )
 {

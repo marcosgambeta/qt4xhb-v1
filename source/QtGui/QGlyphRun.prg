@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QGLYPHRUN_GLYPHINDEXES )
 }
 
 /*
-bool overline () const
+bool overline() const
 */
 HB_FUNC_STATIC( QGLYPHRUN_OVERLINE )
 {
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QGLYPHRUN_SETUNDERLINE )
 }
 
 /*
-bool strikeOut () const
+bool strikeOut() const
 */
 HB_FUNC_STATIC( QGLYPHRUN_STRIKEOUT )
 {
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QGLYPHRUN_STRIKEOUT )
 }
 
 /*
-bool underline () const
+bool underline() const
 */
 HB_FUNC_STATIC( QGLYPHRUN_UNDERLINE )
 {

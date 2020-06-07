@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QITEMDELEGATE_DELETE )
 }
 
 /*
-bool hasClipping () const
+bool hasClipping() const
 */
 HB_FUNC_STATIC( QITEMDELEGATE_HASCLIPPING )
 {

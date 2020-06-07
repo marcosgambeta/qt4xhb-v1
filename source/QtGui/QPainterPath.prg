@@ -953,7 +953,7 @@ HB_FUNC_STATIC( QPAINTERPATH_INTERSECTS )
 }
 
 /*
-bool isEmpty () const
+bool isEmpty() const
 */
 HB_FUNC_STATIC( QPAINTERPATH_ISEMPTY )
 {

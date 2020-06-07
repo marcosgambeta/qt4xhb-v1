@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ANCHORAT )
 }
 
 /*
-bool backgroundVisible () const
+bool backgroundVisible() const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_BACKGROUNDVISIBLE )
 {
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_BLOCKCOUNT )
 }
 
 /*
-bool canPaste () const
+bool canPaste() const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_CANPASTE )
 {
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CANPASTE )
 }
 
 /*
-bool centerOnScroll () const
+bool centerOnScroll() const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_CENTERONSCROLL )
 {
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_FIND )
 }
 
 /*
-bool isReadOnly () const
+bool isReadOnly() const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ISREADONLY )
 {
@@ -565,7 +565,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ISREADONLY )
 }
 
 /*
-bool isUndoRedoEnabled () const
+bool isUndoRedoEnabled() const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ISUNDOREDOENABLED )
 {
@@ -714,7 +714,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_MOVECURSOR )
 }
 
 /*
-bool overwriteMode () const
+bool overwriteMode() const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_OVERWRITEMODE )
 {
@@ -1180,7 +1180,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETWORDWRAPMODE )
 }
 
 /*
-bool tabChangesFocus () const
+bool tabChangesFocus() const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_TABCHANGESFOCUS )
 {

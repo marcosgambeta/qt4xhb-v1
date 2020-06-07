@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTONS )
 }
 
 /*
-bool centerButtons () const
+bool centerButtons() const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_CENTERBUTTONS )
 {

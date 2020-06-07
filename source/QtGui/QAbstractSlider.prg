@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_DELETE )
 }
 
 /*
-bool hasTracking () const
+bool hasTracking() const
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_HASTRACKING )
 {
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_HASTRACKING )
 }
 
 /*
-bool invertedAppearance () const
+bool invertedAppearance() const
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_INVERTEDAPPEARANCE )
 {
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_INVERTEDAPPEARANCE )
 }
 
 /*
-bool invertedControls () const
+bool invertedControls() const
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_INVERTEDCONTROLS )
 {
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_INVERTEDCONTROLS )
 }
 
 /*
-bool isSliderDown () const
+bool isSliderDown() const
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_ISSLIDERDOWN )
 {

@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QPIXMAP_FILL )
 }
 
 /*
-bool hasAlpha () const
+bool hasAlpha() const
 */
 HB_FUNC_STATIC( QPIXMAP_HASALPHA )
 {
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QPIXMAP_HASALPHA )
 }
 
 /*
-bool hasAlphaChannel () const
+bool hasAlphaChannel() const
 */
 HB_FUNC_STATIC( QPIXMAP_HASALPHACHANNEL )
 {
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QPIXMAP_HEIGHT )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QPIXMAP_ISNULL )
 {
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QPIXMAP_ISNULL )
 }
 
 /*
-bool isQBitmap () const
+bool isQBitmap() const
 */
 HB_FUNC_STATIC( QPIXMAP_ISQBITMAP )
 {

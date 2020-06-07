@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QWIDGETITEM_GEOMETRY )
 }
 
 /*
-virtual bool hasHeightForWidth () const
+virtual bool hasHeightForWidth() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_HASHEIGHTFORWIDTH )
 {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QWIDGETITEM_HEIGHTFORWIDTH )
 }
 
 /*
-virtual bool isEmpty () const
+virtual bool isEmpty() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_ISEMPTY )
 {

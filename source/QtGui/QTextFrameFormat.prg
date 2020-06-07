@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_HEIGHT )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_ISVALID )
 {

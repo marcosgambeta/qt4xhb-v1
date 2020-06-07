@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_FORMAT )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELL_ISVALID )
 {

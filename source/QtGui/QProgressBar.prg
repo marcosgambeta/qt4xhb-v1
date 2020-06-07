@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_FORMAT )
 }
 
 /*
-bool invertedAppearance ()
+bool invertedAppearance()
 */
 HB_FUNC_STATIC( QPROGRESSBAR_INVERTEDAPPEARANCE )
 {
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_INVERTEDAPPEARANCE )
 }
 
 /*
-bool isTextVisible () const
+bool isTextVisible() const
 */
 HB_FUNC_STATIC( QPROGRESSBAR_ISTEXTVISIBLE )
 {

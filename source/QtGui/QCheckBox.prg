@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QCHECKBOX_CHECKSTATE )
 }
 
 /*
-bool isTristate () const
+bool isTristate() const
 */
 HB_FUNC_STATIC( QCHECKBOX_ISTRISTATE )
 {

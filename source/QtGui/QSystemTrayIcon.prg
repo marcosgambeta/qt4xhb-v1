@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ICON )
 }
 
 /*
-bool isVisible () const
+bool isVisible() const
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_ISVISIBLE )
 {
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOW )
 }
 
 /*
-static bool isSystemTrayAvailable ()
+static bool isSystemTrayAvailable()
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_ISSYSTEMTRAYAVAILABLE )
 {
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ISSYSTEMTRAYAVAILABLE )
 }
 
 /*
-static bool supportsMessages ()
+static bool supportsMessages()
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SUPPORTSMESSAGES )
 {
