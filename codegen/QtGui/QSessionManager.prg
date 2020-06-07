@@ -25,11 +25,9 @@ $destructor
 
 $includes
 
-$prototype=bool allowsErrorInteraction ()
-$method=|bool|allowsErrorInteraction|
+$prototypeV2=bool allowsErrorInteraction()
 
-$prototype=bool allowsInteraction ()
-$method=|bool|allowsInteraction|
+$prototypeV2=bool allowsInteraction()
 
 $prototype=void cancel ()
 $method=|void|cancel|
@@ -37,8 +35,7 @@ $method=|void|cancel|
 $prototype=QStringList discardCommand () const
 $method=|QStringList|discardCommand|
 
-$prototype=bool isPhase2 () const
-$method=|bool|isPhase2|
+$prototypeV2=bool isPhase2() const
 
 $prototype=void release ()
 $method=|void|release|

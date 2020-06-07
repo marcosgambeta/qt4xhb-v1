@@ -57,11 +57,9 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=bool autoClose () const
-$method=|bool|autoClose|
+$prototypeV2=bool autoClose() const
 
-$prototype=bool autoReset () const
-$method=|bool|autoReset|
+$prototypeV2=bool autoReset() const
 
 $prototype=QString labelText () const
 $method=|QString|labelText|
@@ -92,8 +90,7 @@ $method=|void|setLabel|QLabel *
 
 $prototypeV2=int value() const
 
-$prototype=bool wasCanceled () const
-$method=|bool|wasCanceled|
+$prototypeV2=bool wasCanceled() const
 
 $prototype=virtual QSize sizeHint () const
 $virtualMethod=|QSize|sizeHint|

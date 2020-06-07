@@ -36,14 +36,12 @@ $virtualMethod=|Qt::Orientations|expandingDirections|
 $prototype=virtual QRect geometry () const
 $virtualMethod=|QRect|geometry|
 
-$prototype=virtual bool hasHeightForWidth () const
-$virtualMethod=|bool|hasHeightForWidth|
+$prototypeV2=virtual bool hasHeightForWidth() const
 
 $prototype=virtual int heightForWidth ( int w ) const
 $virtualMethod=|int|heightForWidth|int
 
-$prototype=virtual bool isEmpty () const
-$virtualMethod=|bool|isEmpty|
+$prototypeV2=virtual bool isEmpty() const
 
 $prototype=virtual QSize maximumSize () const
 $virtualMethod=|QSize|maximumSize|

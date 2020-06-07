@@ -46,8 +46,7 @@ $includes
 %%//  }
 %%// }
 
-$prototype=bool activate ()
-$method=|bool|activate|
+$prototypeV2=bool activate()
 
 $prototype=virtual void addItem ( QLayoutItem * item ) = 0
 $virtualMethod=|void|addItem|QLayoutItem *
@@ -72,8 +71,7 @@ $method=|void|getContentsMargins|int *,int *,int *,int *
 $prototype=virtual int indexOf ( QWidget * widget ) const
 $virtualMethod=|int|indexOf|QWidget *
 
-$prototype=bool isEnabled () const
-$method=|bool|isEnabled|
+$prototypeV2=bool isEnabled() const
 
 $prototype=virtual QLayoutItem * itemAt ( int index ) const = 0
 $virtualMethod=|QLayoutItem *|itemAt|int
@@ -189,8 +187,7 @@ $virtualMethod=|QRect|geometry|
 $prototype=virtual void invalidate ()
 $virtualMethod=|void|invalidate|
 
-$prototype=virtual bool isEmpty () const
-$virtualMethod=|bool|isEmpty|
+$prototypeV2=virtual bool isEmpty() const
 
 $prototype=virtual QLayout * layout ()
 $virtualMethod=|QLayout *|layout|

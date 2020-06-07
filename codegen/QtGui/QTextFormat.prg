@@ -96,29 +96,21 @@ $method=|bool|hasProperty|int
 $prototype=int intProperty ( int propertyId ) const
 $method=|int|intProperty|int
 
-$prototype=bool isBlockFormat () const
-$method=|bool|isBlockFormat|
+$prototypeV2=bool isBlockFormat() const
 
-$prototype=bool isCharFormat () const
-$method=|bool|isCharFormat|
+$prototypeV2=bool isCharFormat() const
 
-$prototype=bool isFrameFormat () const
-$method=|bool|isFrameFormat|
+$prototypeV2=bool isFrameFormat() const
 
-$prototype=bool isImageFormat () const
-$method=|bool|isImageFormat|
+$prototypeV2=bool isImageFormat() const
 
-$prototype=bool isListFormat () const
-$method=|bool|isListFormat|
+$prototypeV2=bool isListFormat() const
 
-$prototype=bool isTableCellFormat () const
-$method=|bool|isTableCellFormat|
+$prototypeV2=bool isTableCellFormat() const
 
-$prototype=bool isTableFormat () const
-$method=|bool|isTableFormat|
+$prototypeV2=bool isTableFormat() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=Qt::LayoutDirection layoutDirection () const
 $method=|Qt::LayoutDirection|layoutDirection|

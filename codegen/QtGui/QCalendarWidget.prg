@@ -74,14 +74,11 @@ $method=|QTextCharFormat|headerTextFormat|
 $prototype=HorizontalHeaderFormat horizontalHeaderFormat () const
 $method=|QCalendarWidget::HorizontalHeaderFormat|horizontalHeaderFormat|
 
-$prototype=bool isDateEditEnabled () const
-$method=|bool|isDateEditEnabled|
+$prototypeV2=bool isDateEditEnabled() const
 
-$prototype=bool isGridVisible () const
-$method=|bool|isGridVisible|
+$prototypeV2=bool isGridVisible() const
 
-$prototype=bool isNavigationBarVisible () const
-$method=|bool|isNavigationBarVisible|
+$prototypeV2=bool isNavigationBarVisible() const
 
 $prototype=QDate maximumDate () const
 $method=|QDate|maximumDate|

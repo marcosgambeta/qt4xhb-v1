@@ -55,8 +55,7 @@ $method=|QFileIconProvider *|iconProvider|
 $prototype=bool isDir ( const QModelIndex & index ) const
 $method=|bool|isDir|const QModelIndex &
 
-$prototype=bool isReadOnly () const
-$method=|bool|isReadOnly|
+$prototypeV2=bool isReadOnly() const
 
 $prototype=QDateTime lastModified ( const QModelIndex & index ) const
 $method=|QDateTime|lastModified|const QModelIndex &
@@ -67,8 +66,7 @@ $method=|QModelIndex|mkdir|const QModelIndex &,const QString &
 $prototype=QVariant myComputer ( int role = Qt::DisplayRole ) const
 $method=|QVariant|myComputer|int=Qt::DisplayRole
 
-$prototype=bool nameFilterDisables () const
-$method=|bool|nameFilterDisables|
+$prototypeV2=bool nameFilterDisables() const
 
 $prototype=QStringList nameFilters () const
 $method=|QStringList|nameFilters|
@@ -79,8 +77,7 @@ $method=|QFile::Permissions|permissions|const QModelIndex &
 $prototype=bool remove ( const QModelIndex & index ) const
 $method=|bool|remove|const QModelIndex &
 
-$prototype=bool resolveSymlinks () const
-$method=|bool|resolveSymlinks|
+$prototypeV2=bool resolveSymlinks() const
 
 $prototype=bool rmdir ( const QModelIndex & index ) const
 $method=|bool|rmdir|const QModelIndex &

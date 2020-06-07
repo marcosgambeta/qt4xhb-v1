@@ -87,17 +87,13 @@ $deleteMethod
 
 $prototypeV2=int anchor() const
 
-$prototype=bool atBlockEnd () const
-$method=|bool|atBlockEnd|
+$prototypeV2=bool atBlockEnd() const
 
-$prototype=bool atBlockStart () const
-$method=|bool|atBlockStart|
+$prototypeV2=bool atBlockStart() const
 
-$prototype=bool atEnd () const
-$method=|bool|atEnd|
+$prototypeV2=bool atEnd() const
 
-$prototype=bool atStart () const
-$method=|bool|atStart|
+$prototypeV2=bool atStart() const
 
 $prototype=void beginEditBlock ()
 $method=|void|beginEditBlock|
@@ -170,11 +166,9 @@ $method=|QTextDocument *|document|
 $prototype=void endEditBlock ()
 $method=|void|endEditBlock|
 
-$prototype=bool hasComplexSelection () const
-$method=|bool|hasComplexSelection|
+$prototypeV2=bool hasComplexSelection() const
 
-$prototype=bool hasSelection () const
-$method=|bool|hasSelection|
+$prototypeV2=bool hasSelection() const
 
 $prototype=void insertBlock ()
 $internalMethod=|void|insertBlock,insertBlock1|
@@ -352,14 +346,12 @@ $addMethod=insertText
 $prototype=bool isCopyOf ( const QTextCursor & other ) const
 $method=|bool|isCopyOf|const QTextCursor &
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=void joinPreviousEditBlock ()
 $method=|void|joinPreviousEditBlock|
 
-$prototype=bool keepPositionOnInsert () const
-$method=|bool|keepPositionOnInsert|
+$prototypeV2=bool keepPositionOnInsert() const
 
 $prototype=void mergeBlockCharFormat ( const QTextCharFormat & modifier )
 $method=|void|mergeBlockCharFormat|const QTextCharFormat &
@@ -419,8 +411,7 @@ $method=|void|setVisualNavigation|bool
 
 $prototypeV2=int verticalMovementX() const
 
-$prototype=bool visualNavigation () const
-$method=|bool|visualNavigation|
+$prototypeV2=bool visualNavigation() const
 
 $extraMethods
 

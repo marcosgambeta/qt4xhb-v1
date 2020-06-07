@@ -116,8 +116,7 @@ $prototypeV2=virtual int count() const
 $prototype=virtual Qt::Orientations expandingDirections () const
 $virtualMethod=|Qt::Orientations|expandingDirections|
 
-$prototype=virtual bool hasHeightForWidth () const
-$virtualMethod=|bool|hasHeightForWidth|
+$prototypeV2=virtual bool hasHeightForWidth() const
 
 $prototype=virtual int heightForWidth ( int w ) const
 $virtualMethod=|int|heightForWidth|int

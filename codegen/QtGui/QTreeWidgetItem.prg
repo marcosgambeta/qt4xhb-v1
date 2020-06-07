@@ -160,20 +160,15 @@ $method=|void|insertChild|int,QTreeWidgetItem *
 $prototype=void insertChildren ( int index, const QList<QTreeWidgetItem *> & children )
 $method=|void|insertChildren|int,const QList<QTreeWidgetItem *> &
 
-$prototype=bool isDisabled () const
-$method=|bool|isDisabled|
+$prototypeV2=bool isDisabled() const
 
-$prototype=bool isExpanded () const
-$method=|bool|isExpanded|
+$prototypeV2=bool isExpanded() const
 
-$prototype=bool isFirstColumnSpanned () const
-$method=|bool|isFirstColumnSpanned|
+$prototypeV2=bool isFirstColumnSpanned() const
 
-$prototype=bool isHidden () const
-$method=|bool|isHidden|
+$prototypeV2=bool isHidden() const
 
-$prototype=bool isSelected () const
-$method=|bool|isSelected|
+$prototypeV2=bool isSelected() const
 
 $prototype=QTreeWidgetItem * parent () const
 $method=|QTreeWidgetItem *|parent|

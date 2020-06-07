@@ -36,8 +36,7 @@ $method=|QGesture::GestureCancelPolicy|gestureCancelPolicy|
 $prototype=Qt::GestureType gestureType () const
 $method=|Qt::GestureType|gestureType|
 
-$prototype=bool hasHotSpot () const
-$method=|bool|hasHotSpot|
+$prototypeV2=bool hasHotSpot() const
 
 $prototype=QPointF hotSpot () const
 $method=|QPointF|hotSpot|

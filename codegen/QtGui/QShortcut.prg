@@ -57,16 +57,14 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=bool autoRepeat() const
-$method=|bool|autoRepeat|
+$prototypeV2=bool autoRepeat() const
 
 $prototype=Qt::ShortcutContext context() const
 $method=|Qt::ShortcutContext|context|
 
 $prototypeV2=int id() const
 
-$prototype=bool isEnabled() const
-$method=|bool|isEnabled|
+$prototypeV2=bool isEnabled() const
 
 $prototype=QKeySequence key() const
 $method=|QKeySequence|key|

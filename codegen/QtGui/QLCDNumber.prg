@@ -101,8 +101,7 @@ $method=|void|setMode|QLCDNumber::Mode
 $prototype=void setSegmentStyle ( SegmentStyle )
 $method=|void|setSegmentStyle|QLCDNumber::SegmentStyle
 
-$prototype=bool smallDecimalPoint () const
-$method=|bool|smallDecimalPoint|
+$prototypeV2=bool smallDecimalPoint() const
 
 $prototype=double value () const
 $method=|double|value|

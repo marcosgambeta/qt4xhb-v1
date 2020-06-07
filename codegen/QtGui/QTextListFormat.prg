@@ -32,8 +32,7 @@ $deleteMethod
 
 $prototypeV2=int indent() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=QString numberPrefix () const
 $method=|QString|numberPrefix|

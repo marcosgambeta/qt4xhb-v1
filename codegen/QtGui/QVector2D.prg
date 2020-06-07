@@ -90,8 +90,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=qreal length () const
 $method=|qreal|length|

@@ -41,11 +41,9 @@ $method=|QUndoStack *|activeStack|
 $prototype=void addStack ( QUndoStack * stack )
 $method=|void|addStack|QUndoStack *
 
-$prototype=bool canRedo () const
-$method=|bool|canRedo|
+$prototypeV2=bool canRedo() const
 
-$prototype=bool canUndo () const
-$method=|bool|canUndo|
+$prototypeV2=bool canUndo() const
 
 $prototype=QAction * createRedoAction ( QObject * parent, const QString & prefix = QString() ) const
 $method=|QAction *|createRedoAction|QObject *,const QString &=QString()
@@ -53,8 +51,7 @@ $method=|QAction *|createRedoAction|QObject *,const QString &=QString()
 $prototype=QAction * createUndoAction ( QObject * parent, const QString & prefix = QString() ) const
 $method=|QAction *|createUndoAction|QObject *,const QString &=QString()
 
-$prototype=bool isClean () const
-$method=|bool|isClean|
+$prototypeV2=bool isClean() const
 
 $prototype=QString redoText () const
 $method=|QString|redoText|

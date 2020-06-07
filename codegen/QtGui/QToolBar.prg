@@ -164,14 +164,11 @@ $method=|QAction *|insertWidget|QAction *,QWidget *
 $prototype=bool isAreaAllowed ( Qt::ToolBarArea area ) const
 $method=|bool|isAreaAllowed|Qt::ToolBarArea
 
-$prototype=bool isFloatable () const
-$method=|bool|isFloatable|
+$prototypeV2=bool isFloatable() const
 
-$prototype=bool isFloating () const
-$method=|bool|isFloating|
+$prototypeV2=bool isFloating() const
 
-$prototype=bool isMovable () const
-$method=|bool|isMovable|
+$prototypeV2=bool isMovable() const
 
 $prototype=Qt::Orientation orientation () const
 $method=|Qt::Orientation|orientation|

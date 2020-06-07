@@ -30,8 +30,7 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=bool hasClipping () const
-$method=|bool|hasClipping|
+$prototypeV2=bool hasClipping() const
 
 $prototype=QItemEditorFactory * itemEditorFactory () const
 $method=|QItemEditorFactory *|itemEditorFactory|

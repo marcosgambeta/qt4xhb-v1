@@ -38,11 +38,9 @@ $method=|Qt::Alignment|alignment|
 $prototype=QString format () const
 $method=|QString|format|
 
-$prototype=bool invertedAppearance ()
-$method=|bool|invertedAppearance|
+$prototypeV2=bool invertedAppearance()
 
-$prototype=bool isTextVisible () const
-$method=|bool|isTextVisible|
+$prototypeV2=bool isTextVisible() const
 
 $prototypeV2=int maximum() const
 

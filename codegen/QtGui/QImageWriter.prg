@@ -63,8 +63,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=bool canWrite () const
-$method=|bool|canWrite|
+$prototypeV2=bool canWrite() const
 
 $prototypeV2=int compression() const
 

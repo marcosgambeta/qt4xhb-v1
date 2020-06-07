@@ -37,8 +37,7 @@ $virtualMethod=|Qt::Orientations|expandingDirections|
 $prototype=virtual QRect geometry () const
 $virtualMethod=|QRect|geometry|
 
-$prototype=virtual bool isEmpty () const
-$virtualMethod=|bool|isEmpty|
+$prototypeV2=virtual bool isEmpty() const
 
 $prototype=virtual QSize maximumSize () const
 $virtualMethod=|QSize|maximumSize|

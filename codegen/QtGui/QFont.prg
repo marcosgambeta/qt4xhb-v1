@@ -74,8 +74,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=bool bold () const
-$method=|bool|bold|
+$prototypeV2=bool bold() const
 
 $prototype=Capitalization capitalization () const
 $method=|QFont::Capitalization|capitalization|
@@ -83,14 +82,12 @@ $method=|QFont::Capitalization|capitalization|
 $prototype=QString defaultFamily () const
 $method=|QString|defaultFamily|
 
-$prototype=bool exactMatch () const
-$method=|bool|exactMatch|
+$prototypeV2=bool exactMatch() const
 
 $prototype=QString family () const
 $method=|QString|family|
 
-$prototype=bool fixedPitch () const
-$method=|bool|fixedPitch|
+$prototypeV2=bool fixedPitch() const
 
 $prototype=bool fromString ( const QString & descrip )
 $method=|bool|fromString|const QString &
@@ -98,11 +95,9 @@ $method=|bool|fromString|const QString &
 $prototype=bool isCopyOf ( const QFont & f ) const
 $method=|bool|isCopyOf|const QFont &
 
-$prototype=bool italic () const
-$method=|bool|italic|
+$prototypeV2=bool italic() const
 
-$prototype=bool kerning () const
-$method=|bool|kerning|
+$prototypeV2=bool kerning() const
 
 $prototype=QString key () const
 $method=|QString|key|
@@ -119,8 +114,7 @@ $method=|qreal|letterSpacing|
 $prototype=SpacingType letterSpacingType () const
 $method=|QFont::SpacingType|letterSpacingType|
 
-$prototype=bool overline () const
-$method=|bool|overline|
+$prototypeV2=bool overline() const
 
 $prototypeV2=int pixelSize() const
 
@@ -129,8 +123,7 @@ $prototypeV2=int pointSize() const
 $prototype=qreal pointSizeF () const
 $method=|qreal|pointSizeF|
 
-$prototype=bool rawMode () const
-$method=|bool|rawMode|
+$prototypeV2=bool rawMode() const
 
 $prototype=QString rawName () const
 $method=|QString|rawName|
@@ -203,8 +196,7 @@ $method=|void|setWordSpacing|qreal
 
 $prototypeV2=int stretch() const
 
-$prototype=bool strikeOut () const
-$method=|bool|strikeOut|
+$prototypeV2=bool strikeOut() const
 
 $prototype=Style style () const
 $method=|QFont::Style|style|
@@ -218,8 +210,7 @@ $method=|QFont::StyleStrategy|styleStrategy|
 $prototype=QString toString () const
 $method=|QString|toString|
 
-$prototype=bool underline () const
-$method=|bool|underline|
+$prototypeV2=bool underline() const
 
 $prototypeV2=int weight() const
 

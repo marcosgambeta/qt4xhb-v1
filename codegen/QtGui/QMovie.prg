@@ -96,8 +96,7 @@ $prototypeV2=int frameCount() const
 $prototype=QRect  frameRect () const
 $method=|QRect|frameRect|
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=bool jumpToFrame ( int frameNumber )
 $method=|bool|jumpToFrame|int
@@ -132,8 +131,7 @@ $prototypeV2=int speed() const
 $prototype=MovieState  state () const
 $method=|QMovie::MovieState|state|
 
-$prototype=bool jumpToNextFrame ()
-$method=|bool|jumpToNextFrame|
+$prototypeV2=bool jumpToNextFrame()
 
 $prototype=void setPaused ( bool paused )
 $method=|void|setPaused|bool

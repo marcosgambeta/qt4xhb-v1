@@ -33,8 +33,7 @@ $deleteMethod
 $prototype=void setUseHighlightColors ( bool arg )
 $method=|void|setUseHighlightColors|bool
 
-$prototype=bool useHighlightColors () const
-$method=|bool|useHighlightColors|
+$prototypeV2=bool useHighlightColors() const
 
 $prototype=virtual void drawComplexControl ( ComplexControl cc, const QStyleOptionComplex * opt, QPainter * p, const QWidget * widget = 0 ) const
 $virtualMethod=|void|drawComplexControl|QStyle::ComplexControl,const QStyleOptionComplex *,QPainter *,const QWidget *=0

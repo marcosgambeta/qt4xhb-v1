@@ -196,19 +196,15 @@ HB_FUNC_STATIC( QPIXMAP_FILL )
 }
 $addMethod=fill
 
-$prototype=bool hasAlpha () const
-$method=|bool|hasAlpha|
+$prototypeV2=bool hasAlpha() const
 
-$prototype=bool hasAlphaChannel () const
-$method=|bool|hasAlphaChannel|
+$prototypeV2=bool hasAlphaChannel() const
 
 $prototypeV2=int height() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=bool isQBitmap () const
-$method=|bool|isQBitmap|
+$prototypeV2=bool isQBitmap() const
 
 $prototype=bool load ( const QString & fileName, const char * format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor )
 $method=|bool|load|const QString &,const char *=0,Qt::ImageConversionFlags=Qt::AutoColor

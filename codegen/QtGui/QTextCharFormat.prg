@@ -45,29 +45,24 @@ $method=|QFont::Capitalization|fontCapitalization|
 $prototype=QString fontFamily () const
 $method=|QString|fontFamily|
 
-$prototype=bool fontFixedPitch () const
-$method=|bool|fontFixedPitch|
+$prototypeV2=bool fontFixedPitch() const
 
 $prototype=QFont::HintingPreference fontHintingPreference () const
 $method=|QFont::HintingPreference|fontHintingPreference|
 
-$prototype=bool fontItalic () const
-$method=|bool|fontItalic|
+$prototypeV2=bool fontItalic() const
 
-$prototype=bool fontKerning () const
-$method=|bool|fontKerning|
+$prototypeV2=bool fontKerning() const
 
 $prototype=qreal fontLetterSpacing () const
 $method=|qreal|fontLetterSpacing|
 
-$prototype=bool fontOverline () const
-$method=|bool|fontOverline|
+$prototypeV2=bool fontOverline() const
 
 $prototype=qreal fontPointSize () const
 $method=|qreal|fontPointSize|
 
-$prototype=bool fontStrikeOut () const
-$method=|bool|fontStrikeOut|
+$prototypeV2=bool fontStrikeOut() const
 
 $prototype=QFont::StyleHint fontStyleHint () const
 $method=|QFont::StyleHint|fontStyleHint|
@@ -75,19 +70,16 @@ $method=|QFont::StyleHint|fontStyleHint|
 $prototype=QFont::StyleStrategy fontStyleStrategy () const
 $method=|QFont::StyleStrategy|fontStyleStrategy|
 
-$prototype=bool fontUnderline () const
-$method=|bool|fontUnderline|
+$prototypeV2=bool fontUnderline() const
 
 $prototypeV2=int fontWeight() const
 
 $prototype=qreal fontWordSpacing () const
 $method=|qreal|fontWordSpacing|
 
-$prototype=bool isAnchor () const
-$method=|bool|isAnchor|
+$prototypeV2=bool isAnchor() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=void setAnchor ( bool anchor )
 $method=|void|setAnchor|bool

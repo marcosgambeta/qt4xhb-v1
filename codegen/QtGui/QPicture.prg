@@ -61,8 +61,7 @@ $method=|QRect|boundingRect|
 $prototype=const char * data () const
 $method=|const char *|data|
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=bool load ( const QString & fileName, const char * format = 0 )
 $internalMethod=|bool|load,load1|const QString &,const char *=0

@@ -38,8 +38,7 @@ $staticMethod=|void|enterWhatsThisMode|
 $prototype=static void hideText ()
 $staticMethod=|void|hideText|
 
-$prototype=static bool inWhatsThisMode ()
-$staticMethod=|bool|inWhatsThisMode|
+$prototypeV2=static bool inWhatsThisMode()
 
 $prototype=static void leaveWhatsThisMode ()
 $staticMethod=|void|leaveWhatsThisMode|

@@ -69,8 +69,7 @@ $method=|void|beginLayout|
 $prototype=QRectF boundingRect () const
 $method=|QRectF|boundingRect|
 
-$prototype=bool cacheEnabled () const
-$method=|bool|cacheEnabled|
+$prototypeV2=bool cacheEnabled() const
 
 $prototype=void clearAdditionalFormats ()
 $method=|void|clearAdditionalFormats|

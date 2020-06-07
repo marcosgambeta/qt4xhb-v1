@@ -119,8 +119,7 @@ $method=|QMainWindow::DockOptions|dockOptions|
 $prototype=Qt::DockWidgetArea dockWidgetArea ( QDockWidget * dockwidget ) const
 $method=|Qt::DockWidgetArea|dockWidgetArea|QDockWidget *
 
-$prototype=bool documentMode () const
-$method=|bool|documentMode|
+$prototypeV2=bool documentMode() const
 
 $prototype=QSize iconSize () const
 $method=|QSize|iconSize|
@@ -131,11 +130,9 @@ $method=|void|insertToolBar|QToolBar *,QToolBar *
 $prototype=void insertToolBarBreak ( QToolBar * before )
 $method=|void|insertToolBarBreak|QToolBar *
 
-$prototype=bool isAnimated () const
-$method=|bool|isAnimated|
+$prototypeV2=bool isAnimated() const
 
-$prototype=bool isDockNestingEnabled () const
-$method=|bool|isDockNestingEnabled|
+$prototypeV2=bool isDockNestingEnabled() const
 
 $prototype=QMenuBar * menuBar () const
 $method=|QMenuBar *|menuBar|

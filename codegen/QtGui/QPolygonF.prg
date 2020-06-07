@@ -96,8 +96,7 @@ $method=|bool|containsPoint|const QPointF &,Qt::FillRule
 $prototype=QPolygonF intersected ( const QPolygonF & r ) const
 $method=|QPolygonF|intersected|const QPolygonF &
 
-$prototype=bool isClosed () const
-$method=|bool|isClosed|
+$prototypeV2=bool isClosed() const
 
 $prototype=QPolygonF subtracted ( const QPolygonF & r ) const
 $method=|QPolygonF|subtracted|const QPolygonF &

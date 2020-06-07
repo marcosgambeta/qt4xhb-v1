@@ -56,11 +56,9 @@ $method=|const QTextDocument *|document|
 
 $prototypeV2=int firstLineNumber() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=bool isVisible () const
-$method=|bool|isVisible|
+$prototypeV2=bool isVisible() const
 
 $prototype=QTextLayout * layout () const
 $method=|QTextLayout *|layout|

@@ -95,11 +95,9 @@ $method=|QBrush|foreground|
 $prototype=QIcon icon () const
 $method=|QIcon|icon|
 
-$prototype=bool isHidden () const
-$method=|bool|isHidden|
+$prototypeV2=bool isHidden() const
 
-$prototype=bool isSelected () const
-$method=|bool|isSelected|
+$prototypeV2=bool isSelected() const
 
 $prototype=QListWidget * listWidget () const
 $method=|QListWidget *|listWidget|

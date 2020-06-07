@@ -35,14 +35,12 @@ $prototypeV2=int notchSize() const
 $prototype=qreal notchTarget () const
 $method=|qreal|notchTarget|
 
-$prototype=bool notchesVisible () const
-$method=|bool|notchesVisible|
+$prototypeV2=bool notchesVisible() const
 
 $prototype=void setNotchTarget ( double target )
 $method=|void|setNotchTarget|double
 
-$prototype=bool wrapping () const
-$method=|bool|wrapping|
+$prototypeV2=bool wrapping() const
 
 $prototype=virtual QSize minimumSizeHint () const
 $virtualMethod=|QSize|minimumSizeHint|

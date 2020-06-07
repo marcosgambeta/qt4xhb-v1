@@ -110,8 +110,7 @@ $addMethod=insertItem
 $prototype=void insertItems ( int row, const QStringList & labels )
 $method=|void|insertItems|int,const QStringList &
 
-$prototype=bool isSortingEnabled () const
-$method=|bool|isSortingEnabled|
+$prototypeV2=bool isSortingEnabled() const
 
 $prototype=QListWidgetItem * item ( int row ) const
 $method=|QListWidgetItem *|item|int

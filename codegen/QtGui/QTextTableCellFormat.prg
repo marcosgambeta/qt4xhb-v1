@@ -33,8 +33,7 @@ $deleteMethod
 $prototype=qreal bottomPadding () const
 $method=|qreal|bottomPadding|
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=qreal leftPadding () const
 $method=|qreal|leftPadding|

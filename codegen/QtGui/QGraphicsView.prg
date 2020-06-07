@@ -180,11 +180,9 @@ $addMethod=fitInView
 $prototype=QBrush foregroundBrush () const
 $method=|QBrush|foregroundBrush|
 
-$prototype=bool isInteractive () const
-$method=|bool|isInteractive|
+$prototypeV2=bool isInteractive() const
 
-$prototype=bool isTransformed () const
-$method=|bool|isTransformed|
+$prototypeV2=bool isTransformed() const
 
 $prototype=QGraphicsItem * itemAt ( const QPoint & pos ) const
 $internalMethod=|QGraphicsItem *|itemAt,itemAt1|const QPoint &

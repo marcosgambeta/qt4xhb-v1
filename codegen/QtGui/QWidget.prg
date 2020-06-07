@@ -84,8 +84,7 @@ $constructor=|new|QWidget *=0,Qt::WindowFlags=0
 
 $deleteMethod
 
-$prototype=bool acceptDrops () const
-$method=|bool|acceptDrops|
+$prototypeV2=bool acceptDrops() const
 
 $prototype=QString accessibleDescription () const
 $method=|QString|accessibleDescription|
@@ -108,8 +107,7 @@ $method=|void|addActions|QList<QAction *>
 $prototype=void adjustSize ()
 $method=|void|adjustSize|
 
-$prototype=bool autoFillBackground () const
-$method=|bool|autoFillBackground|
+$prototypeV2=bool autoFillBackground() const
 
 $prototype=QPalette::ColorRole backgroundRole () const
 $method=|QPalette::ColorRole|backgroundRole|
@@ -251,11 +249,9 @@ $method=|QGraphicsEffect *|graphicsEffect|
 $prototype=QGraphicsProxyWidget * graphicsProxyWidget () const
 $method=|QGraphicsProxyWidget *|graphicsProxyWidget|
 
-$prototype=bool hasFocus () const
-$method=|bool|hasFocus|
+$prototypeV2=bool hasFocus() const
 
-$prototype=bool hasMouseTracking () const
-$method=|bool|hasMouseTracking|
+$prototypeV2=bool hasMouseTracking() const
 
 $prototypeV2=int height() const
 
@@ -277,44 +273,34 @@ $method=|void|insertAction|QAction *,QAction *
 $prototype=void insertActions ( QAction * before, QList<QAction *> actions )
 $method=|void|insertActions|QAction *,QList<QAction *>
 
-$prototype=bool isActiveWindow () const
-$method=|bool|isActiveWindow|
+$prototypeV2=bool isActiveWindow() const
 
 $prototype=bool isAncestorOf ( const QWidget * child ) const
 $method=|bool|isAncestorOf|const QWidget *
 
-$prototype=bool isEnabled () const
-$method=|bool|isEnabled|
+$prototypeV2=bool isEnabled() const
 
 $prototype=bool isEnabledTo ( QWidget * ancestor ) const
 $method=|bool|isEnabledTo|QWidget *
 
-$prototype=bool isFullScreen () const
-$method=|bool|isFullScreen|
+$prototypeV2=bool isFullScreen() const
 
-$prototype=bool isHidden () const
-$method=|bool|isHidden|
+$prototypeV2=bool isHidden() const
 
-$prototype=bool isMaximized () const
-$method=|bool|isMaximized|
+$prototypeV2=bool isMaximized() const
 
-$prototype=bool isMinimized () const
-$method=|bool|isMinimized|
+$prototypeV2=bool isMinimized() const
 
-$prototype=bool isModal () const
-$method=|bool|isModal|
+$prototypeV2=bool isModal() const
 
-$prototype=bool isVisible () const
-$method=|bool|isVisible|
+$prototypeV2=bool isVisible() const
 
 $prototype=bool isVisibleTo ( QWidget * ancestor ) const
 $method=|bool|isVisibleTo|QWidget *
 
-$prototype=bool isWindow () const
-$method=|bool|isWindow|
+$prototypeV2=bool isWindow() const
 
-$prototype=bool isWindowModified () const
-$method=|bool|isWindowModified|
+$prototypeV2=bool isWindowModified() const
 
 $prototype=QLayout * layout () const
 $method=|QLayout *|layout|
@@ -1019,8 +1005,7 @@ $method=|bool|testAttribute|Qt::WidgetAttribute
 $prototype=QString toolTip () const
 $method=|QString|toolTip|
 
-$prototype=bool underMouse () const
-$method=|bool|underMouse|
+$prototypeV2=bool underMouse() const
 
 $prototype=void ungrabGesture ( Qt::GestureType gesture )
 $method=|void|ungrabGesture|Qt::GestureType
@@ -1081,8 +1066,7 @@ $addMethod=update
 $prototype=void updateGeometry ()
 $method=|void|updateGeometry|
 
-$prototype=bool updatesEnabled () const
-$method=|bool|updatesEnabled|
+$prototypeV2=bool updatesEnabled() const
 
 $prototype=QRegion visibleRegion () const
 $method=|QRegion|visibleRegion|
@@ -1135,8 +1119,7 @@ $prototypeV2=int y() const
 $prototype=virtual QPaintEngine * paintEngine () const
 $virtualMethod=|QPaintEngine *|paintEngine|
 
-$prototype=bool close ()
-$method=|bool|close|
+$prototypeV2=bool close()
 
 $prototype=void hide ()
 $method=|void|hide|
@@ -1200,8 +1183,7 @@ $prototypeV2=int logicalDpiY() const
 $prototype=int numColors () const (deprecated)
 $method=|int|numColors|
 
-$prototype=bool paintingActive () const
-$method=|bool|paintingActive|
+$prototypeV2=bool paintingActive() const
 
 $prototypeV2=int physicalDpiX() const
 

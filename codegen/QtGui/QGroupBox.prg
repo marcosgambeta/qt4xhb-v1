@@ -58,14 +58,11 @@ $addMethod=new
 $prototype=Qt::Alignment alignment () const
 $method=|Qt::Alignment|alignment|
 
-$prototype=bool isCheckable () const
-$method=|bool|isCheckable|
+$prototypeV2=bool isCheckable() const
 
-$prototype=bool isChecked () const
-$method=|bool|isChecked|
+$prototypeV2=bool isChecked() const
 
-$prototype=bool isFlat () const
-$method=|bool|isFlat|
+$prototypeV2=bool isFlat() const
 
 $prototype=void setAlignment ( int alignment )
 $method=|void|setAlignment|int

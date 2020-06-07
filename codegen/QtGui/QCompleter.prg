@@ -144,8 +144,7 @@ $virtualMethod=|QStringList|splitPath|const QString &
 $prototype=QWidget * widget () const
 $method=|QWidget *|widget|
 
-$prototype=bool wrapAround () const
-$method=|bool|wrapAround|
+$prototypeV2=bool wrapAround() const
 
 $prototype=void complete ( const QRect & rect = QRect() )
 $method=|void|complete|const QRect &=QRect()

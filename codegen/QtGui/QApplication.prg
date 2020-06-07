@@ -69,8 +69,7 @@ $virtualMethod=|void|commitData|QSessionManager &
 $prototype=QInputContext * inputContext () const
 $method=|QInputContext *|inputContext|
 
-$prototype=bool isSessionRestored () const
-$method=|bool|isSessionRestored|
+$prototypeV2=bool isSessionRestored() const
 
 $prototype=virtual void saveState ( QSessionManager & manager )
 $virtualMethod=|void|saveState|QSessionManager &
@@ -130,8 +129,7 @@ $prototypeV2=static int cursorFlashTime()
 $prototype=static QDesktopWidget * desktop ()
 $staticMethod=|QDesktopWidget *|desktop|
 
-$prototype=static bool desktopSettingsAware ()
-$staticMethod=|bool|desktopSettingsAware|
+$prototypeV2=static bool desktopSettingsAware()
 
 $prototypeV2=static int doubleClickInterval()
 
@@ -185,11 +183,9 @@ $staticMethod=|QSize|globalStrut|
 $prototype=static bool isEffectEnabled ( Qt::UIEffect effect )
 $staticMethod=|bool|isEffectEnabled|Qt::UIEffect
 
-$prototype=static bool isLeftToRight ()
-$staticMethod=|bool|isLeftToRight|
+$prototypeV2=static bool isLeftToRight()
 
-$prototype=static bool isRightToLeft ()
-$staticMethod=|bool|isRightToLeft|
+$prototypeV2=static bool isRightToLeft()
 
 $prototype=static Qt::LayoutDirection keyboardInputDirection ()
 $staticMethod=|Qt::LayoutDirection|keyboardInputDirection|
@@ -250,8 +246,7 @@ $addMethod=palette
 $prototype=static Qt::KeyboardModifiers queryKeyboardModifiers ()
 $staticMethod=|Qt::KeyboardModifiers|queryKeyboardModifiers|
 
-$prototype=static bool quitOnLastWindowClosed ()
-$staticMethod=|bool|quitOnLastWindowClosed|
+$prototypeV2=static bool quitOnLastWindowClosed()
 
 $prototype=static void restoreOverrideCursor ()
 $staticMethod=|void|restoreOverrideCursor|

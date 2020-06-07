@@ -68,8 +68,7 @@ $method=|QDockWidget::DockWidgetFeatures|features|
 $prototype=bool isAreaAllowed ( Qt::DockWidgetArea area ) const
 $method=|bool|isAreaAllowed|Qt::DockWidgetArea
 
-$prototype=bool isFloating () const
-$method=|bool|isFloating|
+$prototypeV2=bool isFloating() const
 
 $prototype=void setAllowedAreas ( Qt::DockWidgetAreas areas )
 $method=|void|setAllowedAreas|Qt::DockWidgetAreas

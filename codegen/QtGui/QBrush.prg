@@ -129,8 +129,7 @@ $method=|const QColor &|color|
 $prototype=const QGradient * gradient () const
 $method=|const QGradient *|gradient|
 
-$prototype=bool isOpaque () const
-$method=|bool|isOpaque|
+$prototypeV2=bool isOpaque() const
 
 $prototype=const QMatrix & matrix () const
 $method=|const QMatrix &|matrix|

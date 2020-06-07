@@ -33,8 +33,7 @@ $deleteMethod
 $prototype=qreal height () const
 $method=|qreal|height|
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=QString name () const
 $method=|QString|name|

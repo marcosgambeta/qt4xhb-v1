@@ -38,8 +38,7 @@ $method=|qreal|bottomMargin|
 
 $prototypeV2=int indent() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=qreal leftMargin () const
 $method=|qreal|leftMargin|
@@ -74,8 +73,7 @@ $addMethod=lineHeight
 
 $prototypeV2=int lineHeightType() const
 
-$prototype=bool nonBreakableLines () const
-$method=|bool|nonBreakableLines|
+$prototypeV2=bool nonBreakableLines() const
 
 $prototype=PageBreakFlags pageBreakPolicy () const
 $method=|QTextFormat::PageBreakFlags|pageBreakPolicy|

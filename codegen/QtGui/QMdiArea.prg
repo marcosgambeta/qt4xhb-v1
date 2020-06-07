@@ -49,8 +49,7 @@ $method=|QBrush|background|
 $prototype=QMdiSubWindow * currentSubWindow () const
 $method=|QMdiSubWindow *|currentSubWindow|
 
-$prototype=bool documentMode () const
-$method=|bool|documentMode|
+$prototypeV2=bool documentMode() const
 
 $prototype=void removeSubWindow ( QWidget * widget )
 $method=|void|removeSubWindow|QWidget *

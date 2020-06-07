@@ -54,8 +54,7 @@ $method=|QWidget *|takeWidget|
 $prototype=QWidget * widget () const
 $method=|QWidget *|widget|
 
-$prototype=bool widgetResizable () const
-$method=|bool|widgetResizable|
+$prototypeV2=bool widgetResizable() const
 
 $prototype=virtual bool focusNextPrevChild ( bool next )
 $virtualMethod=|bool|focusNextPrevChild|bool

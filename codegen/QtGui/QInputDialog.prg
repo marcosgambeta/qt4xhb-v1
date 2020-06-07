@@ -60,8 +60,7 @@ $prototypeV2=int intStep() const
 
 $prototypeV2=int intValue() const
 
-$prototype=bool isComboBoxEditable () const
-$method=|bool|isComboBoxEditable|
+$prototypeV2=bool isComboBoxEditable() const
 
 $prototype=QString labelText () const
 $method=|QString|labelText|

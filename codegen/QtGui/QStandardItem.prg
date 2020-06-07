@@ -161,44 +161,37 @@ $method=|Qt::ItemFlags|flags|
 $prototype=void setFlags(Qt::ItemFlags flags)
 $method=|void|setFlags|Qt::ItemFlags
 
-$prototype=bool isEnabled() const
-$method=|bool|isEnabled|
+$prototypeV2=bool isEnabled() const
 
 $prototype=void setEnabled(bool enabled)
 $method=|void|setEnabled|bool
 
-$prototype=bool isEditable() const
-$method=|bool|isEditable|
+$prototypeV2=bool isEditable() const
 
 $prototype=void setEditable(bool editable)
 $method=|void|setEditable|bool
 
-$prototype=bool isSelectable() const
-$method=|bool|isSelectable|
+$prototypeV2=bool isSelectable() const
 
 $prototype=void setSelectable(bool selectable)
 $method=|void|setSelectable|bool
 
-$prototype=bool isCheckable() const
-$method=|bool|isCheckable|
+$prototypeV2=bool isCheckable() const
 
 $prototype=void setCheckable(bool checkable)
 $method=|void|setCheckable|bool
 
-$prototype=bool isTristate() const
-$method=|bool|isTristate|
+$prototypeV2=bool isTristate() const
 
 $prototype=void setTristate(bool tristate)
 $method=|void|setTristate|bool
 
-$prototype=bool isDragEnabled() const
-$method=|bool|isDragEnabled|
+$prototypeV2=bool isDragEnabled() const
 
 $prototype=void setDragEnabled(bool dragEnabled)
 $method=|void|setDragEnabled|bool
 
-$prototype=bool isDropEnabled() const
-$method=|bool|isDropEnabled|
+$prototypeV2=bool isDropEnabled() const
 
 $prototype=void setDropEnabled(bool dropEnabled)
 $method=|void|setDropEnabled|bool
@@ -226,8 +219,7 @@ $prototypeV2=int columnCount() const
 $prototype=void setColumnCount(int columns)
 $method=|void|setColumnCount|int
 
-$prototype=bool hasChildren() const
-$method=|bool|hasChildren|
+$prototypeV2=bool hasChildren() const
 
 $prototype=QStandardItem *child(int row, int column = 0) const
 $method=|QStandardItem *|child|int,int=0

@@ -41,8 +41,7 @@ $method=|QWidget *|addWindow|QWidget *,Qt::WindowFlags=0
 $prototype=QBrush background () const
 $method=|QBrush|background|
 
-$prototype=bool scrollBarsEnabled () const
-$method=|bool|scrollBarsEnabled|
+$prototypeV2=bool scrollBarsEnabled() const
 
 $prototype=void setBackground ( const QBrush & background )
 $method=|void|setBackground|const QBrush &

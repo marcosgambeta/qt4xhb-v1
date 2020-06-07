@@ -73,8 +73,7 @@ $method=|QAbstractButton *|checkedButton|
 
 $prototypeV2=int checkedId() const
 
-$prototype=bool exclusive () const
-$method=|bool|exclusive|
+$prototypeV2=bool exclusive() const
 
 $prototype=int id ( QAbstractButton * button ) const
 $method=|int|id|QAbstractButton *

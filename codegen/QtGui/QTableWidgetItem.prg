@@ -97,8 +97,7 @@ $method=|QBrush|foreground|
 $prototype=QIcon icon () const
 $method=|QIcon|icon|
 
-$prototype=bool isSelected () const
-$method=|bool|isSelected|
+$prototypeV2=bool isSelected() const
 
 $prototype=virtual void read ( QDataStream & in )
 $virtualMethod=|void|read|QDataStream &

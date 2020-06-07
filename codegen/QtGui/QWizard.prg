@@ -128,8 +128,7 @@ $method=|bool|testOption|QWizard::WizardOption
 $prototype=Qt::TextFormat titleFormat () const
 $method=|Qt::TextFormat|titleFormat|
 
-$prototype=virtual bool validateCurrentPage ()
-$virtualMethod=|bool|validateCurrentPage|
+$prototypeV2=virtual bool validateCurrentPage()
 
 $prototype=QList<int> visitedPages () const
 $method=|QList<int>|visitedPages|

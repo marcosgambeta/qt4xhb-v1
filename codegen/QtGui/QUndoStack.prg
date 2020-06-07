@@ -37,11 +37,9 @@ $deleteMethod
 $prototype=void beginMacro ( const QString & text )
 $method=|void|beginMacro|const QString &
 
-$prototype=bool canRedo () const
-$method=|bool|canRedo|
+$prototypeV2=bool canRedo() const
 
-$prototype=bool canUndo () const
-$method=|bool|canUndo|
+$prototypeV2=bool canUndo() const
 
 $prototypeV2=int cleanIndex() const
 
@@ -64,11 +62,9 @@ $method=|void|endMacro|
 
 $prototypeV2=int index() const
 
-$prototype=bool isActive () const
-$method=|bool|isActive|
+$prototypeV2=bool isActive() const
 
-$prototype=bool isClean () const
-$method=|bool|isClean|
+$prototypeV2=bool isClean() const
 
 $prototype=void push ( QUndoCommand * cmd )
 $method=|void|push|QUndoCommand *

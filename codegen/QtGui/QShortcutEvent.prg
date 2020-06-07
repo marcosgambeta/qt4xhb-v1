@@ -35,7 +35,6 @@ $method=|const QKeySequence &|key|
 
 $prototypeV2=int shortcutId()
 
-$prototype=bool isAmbiguous()
-$method=|bool|isAmbiguous|
+$prototypeV2=bool isAmbiguous()
 
 #pragma ENDDUMP

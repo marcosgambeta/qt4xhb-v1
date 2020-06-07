@@ -25,8 +25,7 @@ $destructor
 
 $includes
 
-$prototype=static bool isActive ()
-$staticMethod=|bool|isActive|
+$prototypeV2=static bool isActive()
 
 $prototype=static QAccessibleInterface * queryAccessibleInterface ( QObject * object )
 $staticMethod=|QAccessibleInterface *|queryAccessibleInterface|QObject *

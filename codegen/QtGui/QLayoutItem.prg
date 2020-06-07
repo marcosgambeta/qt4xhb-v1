@@ -41,8 +41,7 @@ $virtualMethod=|Qt::Orientations|expandingDirections|
 $prototype=virtual QRect geometry () const = 0
 $virtualMethod=|QRect|geometry|
 
-$prototype=virtual bool hasHeightForWidth () const
-$virtualMethod=|bool|hasHeightForWidth|
+$prototypeV2=virtual bool hasHeightForWidth() const
 
 $prototype=virtual int heightForWidth ( int w ) const
 $virtualMethod=|int|heightForWidth|int
@@ -50,8 +49,7 @@ $virtualMethod=|int|heightForWidth|int
 $prototype=virtual void invalidate ()
 $virtualMethod=|void|invalidate|
 
-$prototype=virtual bool isEmpty () const = 0
-$virtualMethod=|bool|isEmpty|
+$prototypeV2=virtual bool isEmpty() const = 0
 
 $prototype=virtual QLayout * layout ()
 $virtualMethod=|QLayout *|layout|

@@ -28,8 +28,7 @@ $includes
 $prototype=QSplitterHandle ( Qt::Orientation orientation, QSplitter * parent )
 $constructor=|new|Qt::Orientation,QSplitter *
 
-$prototype=bool opaqueResize () const
-$method=|bool|opaqueResize|
+$prototypeV2=bool opaqueResize() const
 
 $prototype=Qt::Orientation orientation () const
 $method=|Qt::Orientation|orientation|

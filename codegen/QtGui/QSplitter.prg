@@ -60,8 +60,7 @@ $deleteMethod
 $prototype=void addWidget ( QWidget * widget )
 $method=|void|addWidget|QWidget *
 
-$prototype=bool childrenCollapsible () const
-$method=|bool|childrenCollapsible|
+$prototypeV2=bool childrenCollapsible() const
 
 $prototypeV2=int count() const
 
@@ -82,8 +81,7 @@ $method=|void|insertWidget|int,QWidget *
 $prototype=bool isCollapsible ( int index ) const
 $method=|bool|isCollapsible|int
 
-$prototype=bool opaqueResize () const
-$method=|bool|opaqueResize|
+$prototypeV2=bool opaqueResize() const
 
 $prototype=Qt::Orientation orientation () const
 $method=|Qt::Orientation|orientation|

@@ -209,8 +209,7 @@ $method=|QFont|font|
 $prototype=QBrush foregroundBrush () const
 $method=|QBrush|foregroundBrush|
 
-$prototype=bool hasFocus () const
-$method=|bool|hasFocus|
+$prototypeV2=bool hasFocus() const
 
 $prototype=qreal height () const
 $method=|qreal|height|
@@ -246,11 +245,9 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_INVALIDATE )
 }
 $addMethod=invalidate
 
-$prototype=bool isActive () const
-$method=|bool|isActive|
+$prototypeV2=bool isActive() const
 
-$prototype=bool isSortCacheEnabled () const
-$method=|bool|isSortCacheEnabled|
+$prototypeV2=bool isSortCacheEnabled() const
 
 $prototype=QGraphicsItem * itemAt ( const QPointF & position, const QTransform & deviceTransform ) const
 $internalMethod=|QGraphicsItem *|itemAt,itemAt1|const QPointF &,const QTransform &
@@ -473,8 +470,7 @@ $method=|void|setStickyFocus|bool
 $prototype=void setStyle ( QStyle * style )
 $method=|void|setStyle|QStyle *
 
-$prototype=bool stickyFocus () const
-$method=|bool|stickyFocus|
+$prototypeV2=bool stickyFocus() const
 
 $prototype=QStyle * style () const
 $method=|QStyle *|style|

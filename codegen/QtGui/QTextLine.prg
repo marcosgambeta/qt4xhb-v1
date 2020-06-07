@@ -72,14 +72,12 @@ $method=|qreal|height|
 $prototype=qreal horizontalAdvance () const
 $method=|qreal|horizontalAdvance|
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=qreal leading () const
 $method=|qreal|leading|
 
-$prototype=bool leadingIncluded () const
-$method=|bool|leadingIncluded|
+$prototypeV2=bool leadingIncluded() const
 
 $prototypeV2=int lineNumber() const
 

@@ -181,20 +181,15 @@ $method=|qreal|idealWidth|
 $prototype=qreal indentWidth () const
 $method=|qreal|indentWidth|
 
-$prototype=bool isEmpty () const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
-$prototype=bool isModified () const
-$method=|bool|isModified|
+$prototypeV2=bool isModified() const
 
-$prototype=bool isRedoAvailable () const
-$method=|bool|isRedoAvailable|
+$prototypeV2=bool isRedoAvailable() const
 
-$prototype=bool isUndoAvailable () const
-$method=|bool|isUndoAvailable|
+$prototypeV2=bool isUndoAvailable() const
 
-$prototype=bool isUndoRedoEnabled () const
-$method=|bool|isUndoRedoEnabled|
+$prototypeV2=bool isUndoRedoEnabled() const
 
 $prototype=QTextBlock lastBlock () const
 $method=|QTextBlock|lastBlock|
@@ -288,8 +283,7 @@ $method=|QString|toHtml|const QByteArray &=QByteArray()
 $prototype=QString toPlainText () const
 $method=|QString|toPlainText|
 
-$prototype=bool useDesignMetrics () const
-$method=|bool|useDesignMetrics|
+$prototypeV2=bool useDesignMetrics() const
 
 $prototype=void redo ( QTextCursor * cursor )
 $internalMethod=|void|redo,redo1|QTextCursor *

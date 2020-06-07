@@ -32,8 +32,7 @@ $constructor=|new|Qt::Orientation,QWidget *=0
 
 $deleteMethod
 
-$prototype=bool cascadingSectionResizes () const
-$method=|bool|cascadingSectionResizes|
+$prototypeV2=bool cascadingSectionResizes() const
 
 $prototypeV2=int count() const
 
@@ -47,20 +46,16 @@ $prototypeV2=int hiddenSectionCount() const
 $prototype=void hideSection ( int logicalIndex )
 $method=|void|hideSection|int
 
-$prototype=bool highlightSections () const
-$method=|bool|highlightSections|
+$prototypeV2=bool highlightSections() const
 
-$prototype=bool isClickable () const
-$method=|bool|isClickable|
+$prototypeV2=bool isClickable() const
 
-$prototype=bool isMovable () const
-$method=|bool|isMovable|
+$prototypeV2=bool isMovable() const
 
 $prototype=bool isSectionHidden ( int logicalIndex ) const
 $method=|bool|isSectionHidden|int
 
-$prototype=bool isSortIndicatorShown () const
-$method=|bool|isSortIndicatorShown|
+$prototypeV2=bool isSortIndicatorShown() const
 
 $prototypeV2=int length() const
 
@@ -140,11 +135,9 @@ $method=|int|sectionSizeHint|int
 $prototype=int sectionViewportPosition ( int logicalIndex ) const
 $method=|int|sectionViewportPosition|int
 
-$prototype=bool sectionsHidden () const
-$method=|bool|sectionsHidden|
+$prototypeV2=bool sectionsHidden() const
 
-$prototype=bool sectionsMoved () const
-$method=|bool|sectionsMoved|
+$prototypeV2=bool sectionsMoved() const
 
 $prototype=void setCascadingSectionResizes ( bool enable )
 $method=|void|setCascadingSectionResizes|bool
@@ -215,8 +208,7 @@ $method=|Qt::SortOrder|sortIndicatorOrder|
 
 $prototypeV2=int sortIndicatorSection() const
 
-$prototype=bool stretchLastSection () const
-$method=|bool|stretchLastSection|
+$prototypeV2=bool stretchLastSection() const
 
 $prototypeV2=int stretchSectionCount() const
 

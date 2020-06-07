@@ -29,17 +29,13 @@ $includes
 
 $deleteMethod
 
-$prototype=bool hasTracking () const
-$method=|bool|hasTracking|
+$prototypeV2=bool hasTracking() const
 
-$prototype=bool invertedAppearance () const
-$method=|bool|invertedAppearance|
+$prototypeV2=bool invertedAppearance() const
 
-$prototype=bool invertedControls () const
-$method=|bool|invertedControls|
+$prototypeV2=bool invertedControls() const
 
-$prototype=bool isSliderDown () const
-$method=|bool|isSliderDown|
+$prototypeV2=bool isSliderDown() const
 
 $prototypeV2=int maximum() const
 

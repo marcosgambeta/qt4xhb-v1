@@ -68,8 +68,7 @@ $method=|QRect|geometry|
 $prototype=QIcon icon () const
 $method=|QIcon|icon|
 
-$prototype=bool isVisible () const
-$method=|bool|isVisible|
+$prototypeV2=bool isVisible() const
 
 $prototype=void setContextMenu ( QMenu * menu )
 $method=|void|setContextMenu|QMenu *
@@ -95,11 +94,9 @@ $method=|void|setVisible|bool
 $prototype=void show ()
 $method=|void|show|
 
-$prototype=static bool isSystemTrayAvailable ()
-$staticMethod=|bool|isSystemTrayAvailable|
+$prototypeV2=static bool isSystemTrayAvailable()
 
-$prototype=static bool supportsMessages ()
-$staticMethod=|bool|supportsMessages|
+$prototypeV2=static bool supportsMessages()
 
 $beginSignals
 $signal=|activated(QSystemTrayIcon::ActivationReason)

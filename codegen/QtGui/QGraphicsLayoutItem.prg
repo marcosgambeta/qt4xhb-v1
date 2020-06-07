@@ -42,8 +42,7 @@ $virtualMethod=|void|getContentsMargins|qreal *,qreal *,qreal *,qreal *
 $prototype=QGraphicsItem * graphicsItem () const
 $method=|QGraphicsItem *|graphicsItem|
 
-$prototype=bool isLayout () const
-$method=|bool|isLayout|
+$prototypeV2=bool isLayout() const
 
 $prototype=qreal maximumHeight () const
 $method=|qreal|maximumHeight|
@@ -63,8 +62,7 @@ $method=|QSizeF|minimumSize|
 $prototype=qreal minimumWidth () const
 $method=|qreal|minimumWidth|
 
-$prototype=bool ownedByLayout () const
-$method=|bool|ownedByLayout|
+$prototypeV2=bool ownedByLayout() const
 
 $prototype=QGraphicsLayoutItem * parentLayoutItem () const
 $method=|QGraphicsLayoutItem *|parentLayoutItem|

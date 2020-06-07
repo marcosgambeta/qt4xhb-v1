@@ -57,23 +57,18 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_FIXUP )
 }
 $addMethod=fixup
 
-$prototype=bool hasAcceptableInput () const
-$method=|bool|hasAcceptableInput|
+$prototypeV2=bool hasAcceptableInput() const
 
-$prototype=bool hasFrame () const
-$method=|bool|hasFrame|
+$prototypeV2=bool hasFrame() const
 
 $prototype=void interpretText ()
 $method=|void|interpretText|
 
-$prototype=bool isAccelerated () const
-$method=|bool|isAccelerated|
+$prototypeV2=bool isAccelerated() const
 
-$prototype=bool isReadOnly () const
-$method=|bool|isReadOnly|
+$prototypeV2=bool isReadOnly() const
 
-$prototype=bool keyboardTracking () const
-$method=|bool|keyboardTracking|
+$prototypeV2=bool keyboardTracking() const
 
 $prototype=void setAccelerated ( bool on )
 $method=|void|setAccelerated|bool
@@ -126,8 +121,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_VALIDATE )
 }
 $addMethod=validate
 
-$prototype=bool wrapping () const
-$method=|bool|wrapping|
+$prototypeV2=bool wrapping() const
 
 $prototype=virtual bool event ( QEvent * event )
 $virtualMethod=|bool|event|QEvent *

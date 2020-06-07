@@ -84,8 +84,7 @@ $prototypeV2=int currentIndex() const
 $prototype=QString currentText () const
 $method=|QString|currentText|
 
-$prototype=bool duplicatesEnabled () const
-$method=|bool|duplicatesEnabled|
+$prototypeV2=bool duplicatesEnabled() const
 
 $prototype=int findData ( const QVariant & data, int role = Qt::UserRole, Qt::MatchFlags flags = Qt::MatchExactly | Qt::MatchCaseSensitive ) const
 $method=|int|findData|const QVariant &,int=Qt::UserRole,Qt::MatchFlags=Qt::MatchExactly OR Qt::MatchCaseSensitive
@@ -93,8 +92,7 @@ $method=|int|findData|const QVariant &,int=Qt::UserRole,Qt::MatchFlags=Qt::Match
 $prototype=int findText ( const QString & text, Qt::MatchFlags flags = Qt::MatchExactly | Qt::MatchCaseSensitive ) const
 $method=|int|findText|const QString &,Qt::MatchFlags=Qt::MatchExactly OR Qt::MatchCaseSensitive
 
-$prototype=bool hasFrame () const
-$method=|bool|hasFrame|
+$prototypeV2=bool hasFrame() const
 
 $prototype=virtual void hidePopup ()
 $virtualMethod=|void|hidePopup|
@@ -139,8 +137,7 @@ $method=|QComboBox::InsertPolicy|insertPolicy|
 $prototype=void insertSeparator ( int index )
 $method=|void|insertSeparator|int
 
-$prototype=bool isEditable () const
-$method=|bool|isEditable|
+$prototypeV2=bool isEditable() const
 
 $prototype=QVariant itemData ( int index, int role = Qt::UserRole ) const
 $method=|QVariant|itemData|int,int=Qt::UserRole

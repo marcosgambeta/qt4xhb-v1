@@ -59,8 +59,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=bool acceptRichText () const
-$method=|bool|acceptRichText|
+$prototypeV2=bool acceptRichText() const
 
 $prototype=Qt::Alignment alignment () const
 $method=|Qt::Alignment|alignment|
@@ -71,8 +70,7 @@ $method=|QString|anchorAt|const QPoint &
 $prototype=AutoFormatting autoFormatting () const
 $method=|QTextEdit::AutoFormatting|autoFormatting|
 
-$prototype=bool canPaste () const
-$method=|bool|canPaste|
+$prototypeV2=bool canPaste() const
 
 $prototype=QMenu * createStandardContextMenu ()
 $internalMethod=|QMenu *|createStandardContextMenu,createStandardContextMenu1|
@@ -156,22 +154,18 @@ $method=|bool|find|const QString &,QTextDocument::FindFlags=0
 $prototype=QString fontFamily () const
 $method=|QString|fontFamily|
 
-$prototype=bool fontItalic () const
-$method=|bool|fontItalic|
+$prototypeV2=bool fontItalic() const
 
 $prototype=qreal fontPointSize () const
 $method=|qreal|fontPointSize|
 
-$prototype=bool fontUnderline () const
-$method=|bool|fontUnderline|
+$prototypeV2=bool fontUnderline() const
 
 $prototypeV2=int fontWeight() const
 
-$prototype=bool isReadOnly () const
-$method=|bool|isReadOnly|
+$prototypeV2=bool isReadOnly() const
 
-$prototype=bool isUndoRedoEnabled () const
-$method=|bool|isUndoRedoEnabled|
+$prototypeV2=bool isUndoRedoEnabled() const
 
 $prototypeV2=int lineWrapColumnOrWidth() const
 
@@ -187,8 +181,7 @@ $method=|void|mergeCurrentCharFormat|const QTextCharFormat &
 $prototype=void moveCursor ( QTextCursor::MoveOperation operation, QTextCursor::MoveMode mode = QTextCursor::MoveAnchor )
 $method=|void|moveCursor|QTextCursor::MoveOperation,QTextCursor::MoveMode=QTextCursor::MoveAnchor
 
-$prototype=bool overwriteMode () const
-$method=|bool|overwriteMode|
+$prototypeV2=bool overwriteMode() const
 
 $prototype=void print ( QPrinter * printer ) const
 $method=|void|print|QPrinter *
@@ -241,8 +234,7 @@ $method=|void|setUndoRedoEnabled|bool
 $prototype=void setWordWrapMode ( QTextOption::WrapMode policy )
 $method=|void|setWordWrapMode|QTextOption::WrapMode
 
-$prototype=bool tabChangesFocus () const
-$method=|bool|tabChangesFocus|
+$prototypeV2=bool tabChangesFocus() const
 
 $prototypeV2=int tabStopWidth() const
 

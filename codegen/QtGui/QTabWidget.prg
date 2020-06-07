@@ -73,8 +73,7 @@ $prototypeV2=int currentIndex() const
 $prototype=QWidget * currentWidget () const
 $method=|QWidget *|currentWidget|
 
-$prototype=bool documentMode () const
-$method=|bool|documentMode|
+$prototypeV2=bool documentMode() const
 
 $prototype=Qt::TextElideMode elideMode () const
 $method=|Qt::TextElideMode|elideMode|
@@ -113,8 +112,7 @@ HB_FUNC_STATIC( QTABWIDGET_INSERTTAB )
 }
 $addMethod=insertTab
 
-$prototype=bool isMovable () const
-$method=|bool|isMovable|
+$prototypeV2=bool isMovable() const
 
 $prototype=bool isTabEnabled ( int index ) const
 $method=|bool|isTabEnabled|int
@@ -182,11 +180,9 @@ $method=|QString|tabToolTip|int
 $prototype=QString tabWhatsThis ( int index ) const
 $method=|QString|tabWhatsThis|int
 
-$prototype=bool tabsClosable () const
-$method=|bool|tabsClosable|
+$prototypeV2=bool tabsClosable() const
 
-$prototype=bool usesScrollButtons () const
-$method=|bool|usesScrollButtons|
+$prototypeV2=bool usesScrollButtons() const
 
 $prototype=QWidget * widget ( int index ) const
 $method=|QWidget *|widget|int

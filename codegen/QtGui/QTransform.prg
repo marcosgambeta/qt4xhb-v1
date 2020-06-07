@@ -113,23 +113,17 @@ $method=|qreal|dy|
 $prototype=QTransform inverted ( bool * invertible = 0 ) const
 $method=|QTransform|inverted|bool *=0
 
-$prototype=bool isAffine () const
-$method=|bool|isAffine|
+$prototypeV2=bool isAffine() const
 
-$prototype=bool isIdentity () const
-$method=|bool|isIdentity|
+$prototypeV2=bool isIdentity() const
 
-$prototype=bool isInvertible () const
-$method=|bool|isInvertible|
+$prototypeV2=bool isInvertible() const
 
-$prototype=bool isRotating () const
-$method=|bool|isRotating|
+$prototypeV2=bool isRotating() const
 
-$prototype=bool isScaling () const
-$method=|bool|isScaling|
+$prototypeV2=bool isScaling() const
 
-$prototype=bool isTranslating () const
-$method=|bool|isTranslating|
+$prototypeV2=bool isTranslating() const
 
 $prototype=void map ( qreal x, qreal y, qreal * tx, qreal * ty ) const
 $method=|void|map,map1|qreal,qreal,qreal *,qreal *

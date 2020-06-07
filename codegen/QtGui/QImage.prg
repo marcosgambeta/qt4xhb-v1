@@ -131,8 +131,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=bool allGray () const
-$method=|bool|allGray|
+$prototypeV2=bool allGray() const
 
 $prototypeV2=int bitPlaneCount() const
 
@@ -262,19 +261,16 @@ $addMethod=fill
 $prototype=Format format () const
 $method=|QImage::Format|format|
 
-$prototype=bool hasAlphaChannel () const
-$method=|bool|hasAlphaChannel|
+$prototypeV2=bool hasAlphaChannel() const
 
 $prototypeV2=int height() const
 
 $prototype=void invertPixels ( InvertMode mode = InvertRgb )
 $method=|void|invertPixels|QImage::InvertMode=QImage::InvertRgb
 
-$prototype=bool isGrayscale () const
-$method=|bool|isGrayscale|
+$prototypeV2=bool isGrayscale() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=bool load ( const QString & fileName, const char * format = 0 )
 $internalMethod=|bool|load,load1|const QString &,const char *=0

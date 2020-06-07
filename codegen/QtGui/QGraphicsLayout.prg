@@ -35,8 +35,7 @@ $prototypeV2=virtual int count() const = 0
 $prototype=virtual void invalidate ()
 $virtualMethod=|void|invalidate|
 
-$prototype=bool isActivated () const
-$method=|bool|isActivated|
+$prototypeV2=bool isActivated() const
 
 $prototype=virtual QGraphicsLayoutItem * itemAt ( int i ) const = 0
 $virtualMethod=|QGraphicsLayoutItem *|itemAt|int
@@ -56,8 +55,7 @@ $virtualMethod=|void|getContentsMargins|qreal *,qreal *,qreal *,qreal *
 $prototype=virtual void updateGeometry ()
 $virtualMethod=|void|updateGeometry|
 
-$prototype=static bool instantInvalidatePropagation ()
-$staticMethod=|bool|instantInvalidatePropagation|
+$prototypeV2=static bool instantInvalidatePropagation()
 
 $prototype=static void setInstantInvalidatePropagation ( bool enable )
 $staticMethod=|void|setInstantInvalidatePropagation|bool

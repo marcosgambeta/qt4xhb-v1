@@ -113,14 +113,12 @@ $virtualMethod=|void|drawTextItem|const QPointF &,const QTextItem &
 $prototype=virtual void drawTiledPixmap ( const QRectF & rect, const QPixmap & pixmap, const QPointF & p )
 $virtualMethod=|void|drawTiledPixmap|const QRectF &,const QPixmap &,const QPointF &
 
-$prototype=virtual bool end () = 0
-$virtualMethod=|bool|end|
+$prototypeV2=virtual bool end() = 0
 
 $prototype=bool hasFeature ( PaintEngineFeatures feature ) const
 $method=|bool|hasFeature|QPaintEngine::PaintEngineFeatures
 
-$prototype=bool isActive () const
-$method=|bool|isActive|
+$prototypeV2=bool isActive() const
 
 $prototype=QPaintDevice * paintDevice () const
 $method=|QPaintDevice *|paintDevice|

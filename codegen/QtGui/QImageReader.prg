@@ -65,14 +65,12 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=bool autoDetectImageFormat () const
-$method=|bool|autoDetectImageFormat|
+$prototypeV2=bool autoDetectImageFormat() const
 
 $prototype=QColor backgroundColor () const
 $method=|QColor|backgroundColor|
 
-$prototype=bool canRead () const
-$method=|bool|canRead|
+$prototypeV2=bool canRead() const
 
 $prototype=QRect clipRect () const
 $method=|QRect|clipRect|
@@ -82,8 +80,7 @@ $prototypeV2=int currentImageNumber() const
 $prototype=QRect currentImageRect () const
 $method=|QRect|currentImageRect|
 
-$prototype=bool decideFormatFromContent () const
-$method=|bool|decideFormatFromContent|
+$prototypeV2=bool decideFormatFromContent() const
 
 $prototype=QIODevice * device () const
 $method=|QIODevice *|device|
@@ -105,8 +102,7 @@ $prototypeV2=int imageCount() const
 $prototype=bool jumpToImage ( int imageNumber )
 $method=|bool|jumpToImage|int
 
-$prototype=bool jumpToNextImage ()
-$method=|bool|jumpToNextImage|
+$prototypeV2=bool jumpToNextImage()
 
 $prototypeV2=int loopCount() const
 
@@ -181,8 +177,7 @@ $method=|void|setScaledSize|const QSize &
 $prototype=QSize size () const
 $method=|QSize|size|
 
-$prototype=bool supportsAnimation () const
-$method=|bool|supportsAnimation|
+$prototypeV2=bool supportsAnimation() const
 
 $prototype=bool supportsOption ( QImageIOHandler::ImageOption option ) const
 $method=|bool|supportsOption|QImageIOHandler::ImageOption

@@ -33,8 +33,7 @@ $deleteMethod
 $prototype=QString fileName () const
 $method=|QString|fileName|
 
-$prototype=bool isFinished () const
-$method=|bool|isFinished|
+$prototypeV2=bool isFinished() const
 
 $prototypeV2=int loops() const
 
@@ -46,8 +45,7 @@ $method=|void|setLoops|int
 $prototype=void stop ()
 $method=|void|stop|
 
-$prototype=static bool isAvailable ()
-$staticMethod=|bool|isAvailable|
+$prototypeV2=static bool isAvailable()
 
 $prototype=void play ()
 $internalMethod=|void|play,play1|

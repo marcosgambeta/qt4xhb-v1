@@ -63,11 +63,9 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=bool isDefault () const
-$method=|bool|isDefault|
+$prototypeV2=bool isDefault() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=QString printerName () const
 $method=|QString|printerName|

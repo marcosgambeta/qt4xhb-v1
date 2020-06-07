@@ -65,11 +65,9 @@ $method=|Qt::Alignment|alignment|
 $prototype=QWidget * buddy () const
 $method=|QWidget *|buddy|
 
-$prototype=bool hasScaledContents () const
-$method=|bool|hasScaledContents|
+$prototypeV2=bool hasScaledContents() const
 
-$prototype=bool hasSelectedText () const
-$method=|bool|hasSelectedText|
+$prototypeV2=bool hasSelectedText() const
 
 $prototypeV2=int indent() const
 
@@ -78,8 +76,7 @@ $prototypeV2=int margin() const
 $prototype=QMovie * movie () const
 $method=|QMovie *|movie|
 
-$prototype=bool openExternalLinks () const
-$method=|bool|openExternalLinks|
+$prototypeV2=bool openExternalLinks() const
 
 $prototype=const QPicture * picture () const
 $method=|const QPicture *|picture|
@@ -129,8 +126,7 @@ $method=|Qt::TextFormat|textFormat|
 $prototype=Qt::TextInteractionFlags textInteractionFlags () const
 $method=|Qt::TextInteractionFlags|textInteractionFlags|
 
-$prototype=bool wordWrap () const
-$method=|bool|wordWrap|
+$prototypeV2=bool wordWrap() const
 
 $prototype=virtual int heightForWidth ( int w ) const
 $virtualMethod=|int|heightForWidth|int

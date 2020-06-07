@@ -47,8 +47,7 @@ $method=|int|insertPermanentWidget|int,QWidget *,int=0
 $prototype=int insertWidget ( int index, QWidget * widget, int stretch = 0 )
 $method=|int|insertWidget|int,QWidget *,int=0
 
-$prototype=bool isSizeGripEnabled () const
-$method=|bool|isSizeGripEnabled|
+$prototypeV2=bool isSizeGripEnabled() const
 
 $prototype=void removeWidget ( QWidget * widget )
 $method=|void|removeWidget|QWidget *

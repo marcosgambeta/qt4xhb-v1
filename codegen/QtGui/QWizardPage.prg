@@ -39,14 +39,11 @@ $virtualMethod=|void|cleanupPage|
 $prototype=virtual void initializePage ()
 $virtualMethod=|void|initializePage|
 
-$prototype=bool isCommitPage () const
-$method=|bool|isCommitPage|
+$prototypeV2=bool isCommitPage() const
 
-$prototype=virtual bool isComplete () const
-$virtualMethod=|bool|isComplete|
+$prototypeV2=virtual bool isComplete() const
 
-$prototype=bool isFinalPage () const
-$method=|bool|isFinalPage|
+$prototypeV2=bool isFinalPage() const
 
 $prototypeV2=virtual int nextId() const
 
@@ -77,8 +74,7 @@ $method=|QString|subTitle|
 $prototype=QString title () const
 $method=|QString|title|
 
-$prototype=virtual bool validatePage ()
-$virtualMethod=|bool|validatePage|
+$prototypeV2=virtual bool validatePage()
 
 $beginSignals
 $signal=|completeChanged()

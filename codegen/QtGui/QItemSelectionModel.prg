@@ -63,8 +63,7 @@ $method=|bool|columnIntersectsSelection|int,const QModelIndex &
 $prototype=QModelIndex currentIndex () const
 $method=|QModelIndex|currentIndex|
 
-$prototype=bool hasSelection () const
-$method=|bool|hasSelection|
+$prototypeV2=bool hasSelection() const
 
 $prototype=bool isColumnSelected ( int column, const QModelIndex & parent ) const
 $method=|bool|isColumnSelected|int,const QModelIndex &

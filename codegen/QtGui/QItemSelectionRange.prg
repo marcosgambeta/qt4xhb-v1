@@ -115,11 +115,9 @@ $method=|QItemSelectionRange|intersected|const QItemSelectionRange &
 $prototype=bool intersects ( const QItemSelectionRange & other ) const
 $method=|bool|intersects|const QItemSelectionRange &
 
-$prototype=bool isEmpty () const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototypeV2=int left() const
 

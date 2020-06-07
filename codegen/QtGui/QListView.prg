@@ -46,11 +46,9 @@ $method=|QSize|gridSize|
 $prototype=bool isRowHidden ( int row ) const
 $method=|bool|isRowHidden|int
 
-$prototype=bool isSelectionRectVisible () const
-$method=|bool|isSelectionRectVisible|
+$prototypeV2=bool isSelectionRectVisible() const
 
-$prototype=bool isWrapping () const
-$method=|bool|isWrapping|
+$prototypeV2=bool isWrapping() const
 
 $prototype=LayoutMode layoutMode () const
 $method=|QListView::LayoutMode|layoutMode|
@@ -107,14 +105,12 @@ $method=|void|setWrapping|bool
 
 $prototypeV2=int spacing() const
 
-$prototype=bool uniformItemSizes () const
-$method=|bool|uniformItemSizes|
+$prototypeV2=bool uniformItemSizes() const
 
 $prototype=ViewMode viewMode () const
 $method=|QListView::ViewMode|viewMode|
 
-$prototype=bool wordWrap () const
-$method=|bool|wordWrap|
+$prototypeV2=bool wordWrap() const
 
 $prototype=virtual QModelIndex indexAt ( const QPoint & p ) const
 $virtualMethod=|QModelIndex|indexAt|const QPoint &

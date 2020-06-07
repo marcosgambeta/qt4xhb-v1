@@ -69,11 +69,9 @@ $method=|QSizePolicy::ControlType|controlType|
 $prototype=Qt::Orientations expandingDirections () const
 $method=|Qt::Orientations|expandingDirections|
 
-$prototype=bool hasHeightForWidth () const
-$method=|bool|hasHeightForWidth|
+$prototypeV2=bool hasHeightForWidth() const
 
-$prototype=bool hasWidthForHeight () const
-$method=|bool|hasWidthForHeight|
+$prototypeV2=bool hasWidthForHeight() const
 
 $prototype=Policy horizontalPolicy () const
 $method=|QSizePolicy::Policy|horizontalPolicy|

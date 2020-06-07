@@ -102,8 +102,7 @@ $method=|void|frustum|qreal,qreal,qreal,qreal,qreal,qreal
 $prototype=QMatrix4x4 inverted ( bool * invertible = 0 ) const
 $method=|QMatrix4x4|inverted|bool *=0
 
-$prototype=bool isIdentity () const
-$method=|bool|isIdentity|
+$prototypeV2=bool isIdentity() const
 
 $prototype=void lookAt ( const QVector3D & eye, const QVector3D & center, const QVector3D & up )
 $method=|void|lookAt|const QVector3D &,const QVector3D &,const QVector3D &

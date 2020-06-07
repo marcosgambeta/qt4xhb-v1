@@ -99,8 +99,7 @@ $method=|qreal|tabStop|
 $prototype=Qt::LayoutDirection textDirection () const
 $method=|Qt::LayoutDirection|textDirection|
 
-$prototype=bool useDesignMetrics () const
-$method=|bool|useDesignMetrics|
+$prototypeV2=bool useDesignMetrics() const
 
 $prototype=WrapMode wrapMode () const
 $method=|QTextOption::WrapMode|wrapMode|

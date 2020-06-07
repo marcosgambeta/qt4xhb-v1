@@ -55,20 +55,16 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=bool bold () const
-$method=|bool|bold|
+$prototypeV2=bool bold() const
 
-$prototype=bool exactMatch () const
-$method=|bool|exactMatch|
+$prototypeV2=bool exactMatch() const
 
 $prototype=QString family () const
 $method=|QString|family|
 
-$prototype=bool fixedPitch () const
-$method=|bool|fixedPitch|
+$prototypeV2=bool fixedPitch() const
 
-$prototype=bool italic () const
-$method=|bool|italic|
+$prototypeV2=bool italic() const
 
 $prototypeV2=int pixelSize() const
 
@@ -77,8 +73,7 @@ $prototypeV2=int pointSize() const
 $prototype=qreal pointSizeF () const
 $method=|qreal|pointSizeF|
 
-$prototype=bool rawMode () const
-$method=|bool|rawMode|
+$prototypeV2=bool rawMode() const
 
 $prototype=QFont::Style style () const
 $method=|QFont::Style|style|

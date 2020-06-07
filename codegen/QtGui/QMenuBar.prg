@@ -119,11 +119,9 @@ $method=|QAction *|insertMenu|QAction *,QMenu *
 $prototype=QAction * insertSeparator ( QAction * before )
 $method=|QAction *|insertSeparator|QAction *
 
-$prototype=bool isDefaultUp () const
-$method=|bool|isDefaultUp|
+$prototypeV2=bool isDefaultUp() const
 
-$prototype=bool isNativeMenuBar () const
-$method=|bool|isNativeMenuBar|
+$prototypeV2=bool isNativeMenuBar() const
 
 $prototype=void setActiveAction ( QAction * act )
 $method=|void|setActiveAction|QAction *

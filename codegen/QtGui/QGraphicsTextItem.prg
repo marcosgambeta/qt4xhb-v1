@@ -73,8 +73,7 @@ $method=|QTextDocument *|document|
 $prototype=QFont font () const
 $method=|QFont|font|
 
-$prototype=bool openExternalLinks () const
-$method=|bool|openExternalLinks|
+$prototypeV2=bool openExternalLinks() const
 
 $prototype=void setDefaultTextColor ( const QColor & col )
 $method=|void|setDefaultTextColor|const QColor &
@@ -106,8 +105,7 @@ $method=|void|setTextInteractionFlags|Qt::TextInteractionFlags
 $prototype=void setTextWidth ( qreal width )
 $method=|void|setTextWidth|qreal
 
-$prototype=bool tabChangesFocus () const
-$method=|bool|tabChangesFocus|
+$prototypeV2=bool tabChangesFocus() const
 
 $prototype=QTextCursor textCursor () const
 $method=|QTextCursor|textCursor|

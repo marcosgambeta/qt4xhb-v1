@@ -75,8 +75,7 @@ $method=|Qt::MouseButton|button|
 $prototype=Qt::MouseButtons buttons() const
 $method=|Qt::MouseButtons|buttons|
 
-$prototype=bool hasExtendedInfo() const
-$method=|bool|hasExtendedInfo|
+$prototypeV2=bool hasExtendedInfo() const
 
 $prototype=QPointF posF() const
 $method=|QPointF|posF|

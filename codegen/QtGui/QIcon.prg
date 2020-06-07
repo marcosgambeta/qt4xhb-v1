@@ -104,8 +104,7 @@ $method=|QList<QSize>|availableSizes|QIcon::Mode=QIcon::Normal,QIcon::State=QIco
 $prototype=qint64 cacheKey () const
 $method=|qint64|cacheKey|
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=QString name () const
 $method=|QString|name|

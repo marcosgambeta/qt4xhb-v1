@@ -61,8 +61,7 @@ $method=|void|clear|
 $prototype=QVector<quint32> glyphIndexes () const
 $method=|QVector<quint32>|glyphIndexes|
 
-$prototype=bool overline () const
-$method=|bool|overline|
+$prototypeV2=bool overline() const
 
 $prototype=QVector<QPointF> positions () const
 $method=|QVector<QPointF>|positions|
@@ -88,11 +87,9 @@ $method=|void|setStrikeOut|bool
 $prototype=void setUnderline ( bool underline )
 $method=|void|setUnderline|bool
 
-$prototype=bool strikeOut () const
-$method=|bool|strikeOut|
+$prototypeV2=bool strikeOut() const
 
-$prototype=bool underline () const
-$method=|bool|underline|
+$prototypeV2=bool underline() const
 
 $extraMethods
 

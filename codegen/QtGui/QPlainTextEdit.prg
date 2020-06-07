@@ -62,16 +62,13 @@ $deleteMethod
 $prototype=QString anchorAt ( const QPoint & pos ) const
 $method=|QString|anchorAt|const QPoint &
 
-$prototype=bool backgroundVisible () const
-$method=|bool|backgroundVisible|
+$prototypeV2=bool backgroundVisible() const
 
 $prototypeV2=int blockCount() const
 
-$prototype=bool canPaste () const
-$method=|bool|canPaste|
+$prototypeV2=bool canPaste() const
 
-$prototype=bool centerOnScroll () const
-$method=|bool|centerOnScroll|
+$prototypeV2=bool centerOnScroll() const
 
 $prototype=QMenu * createStandardContextMenu ()
 $method=|QMenu *|createStandardContextMenu|
@@ -124,11 +121,9 @@ $method=|void|ensureCursorVisible|
 $prototype=bool find ( const QString & exp, QTextDocument::FindFlags options = 0 )
 $method=|bool|find|const QString &,QTextDocument::FindFlags=0
 
-$prototype=bool isReadOnly () const
-$method=|bool|isReadOnly|
+$prototypeV2=bool isReadOnly() const
 
-$prototype=bool isUndoRedoEnabled () const
-$method=|bool|isUndoRedoEnabled|
+$prototypeV2=bool isUndoRedoEnabled() const
 
 $prototype=LineWrapMode lineWrapMode () const
 $method=|QPlainTextEdit::LineWrapMode|lineWrapMode|
@@ -144,8 +139,7 @@ $method=|void|mergeCurrentCharFormat|const QTextCharFormat &
 $prototype=void moveCursor ( QTextCursor::MoveOperation operation, QTextCursor::MoveMode mode = QTextCursor::MoveAnchor )
 $method=|void|moveCursor|QTextCursor::MoveOperation,QTextCursor::MoveMode=QTextCursor::MoveAnchor
 
-$prototype=bool overwriteMode () const
-$method=|bool|overwriteMode|
+$prototypeV2=bool overwriteMode() const
 
 $prototype=void print ( QPrinter * printer ) const
 $method=|void|print|QPrinter *
@@ -198,8 +192,7 @@ $method=|void|setUndoRedoEnabled|bool
 $prototype=void setWordWrapMode ( QTextOption::WrapMode policy )
 $method=|void|setWordWrapMode|QTextOption::WrapMode
 
-$prototype=bool tabChangesFocus () const
-$method=|bool|tabChangesFocus|
+$prototypeV2=bool tabChangesFocus() const
 
 $prototypeV2=int tabStopWidth() const
 

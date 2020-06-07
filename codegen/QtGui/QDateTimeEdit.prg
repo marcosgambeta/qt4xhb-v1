@@ -75,8 +75,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=bool calendarPopup () const
-$method=|bool|calendarPopup|
+$prototypeV2=bool calendarPopup() const
 
 $prototype=QCalendarWidget * calendarWidget () const
 $method=|QCalendarWidget *|calendarWidget|

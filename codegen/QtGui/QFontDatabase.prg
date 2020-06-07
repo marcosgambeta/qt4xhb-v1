@@ -131,8 +131,7 @@ $staticMethod=|int|addApplicationFontFromData|const QByteArray &
 $prototype=static QStringList applicationFontFamilies ( int id )
 $staticMethod=|QStringList|applicationFontFamilies|int
 
-$prototype=static bool removeAllApplicationFonts ()
-$staticMethod=|bool|removeAllApplicationFonts|
+$prototypeV2=static bool removeAllApplicationFonts()
 
 $prototype=static bool removeApplicationFont ( int id )
 $staticMethod=|bool|removeApplicationFont|int
@@ -140,8 +139,7 @@ $staticMethod=|bool|removeApplicationFont|int
 $prototype=static QList<int> standardSizes ()
 $staticMethod=|QList<int>|standardSizes|
 
-$prototype=static bool supportsThreadedFontRendering ()
-$staticMethod=|bool|supportsThreadedFontRendering|
+$prototypeV2=static bool supportsThreadedFontRendering()
 
 $prototype=static QString writingSystemName ( WritingSystem writingSystem )
 $staticMethod=|QString|writingSystemName|QFontDatabase::WritingSystem

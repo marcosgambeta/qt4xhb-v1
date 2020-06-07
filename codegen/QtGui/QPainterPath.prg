@@ -366,8 +366,7 @@ HB_FUNC_STATIC( QPAINTERPATH_INTERSECTS )
 }
 $addMethod=intersects
 
-$prototype=bool isEmpty () const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
 $prototype=qreal length () const
 $method=|qreal|length|

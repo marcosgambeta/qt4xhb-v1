@@ -67,8 +67,7 @@ $method=|QString|description|
 $prototype=void setDescription ( const QString & description )
 $method=|void|setDescription|const QString &
 
-$prototype=bool isFlat () const
-$method=|bool|isFlat|
+$prototypeV2=bool isFlat() const
 
 $prototype=void setFlat ( bool )
 $method=|void|setFlat|bool

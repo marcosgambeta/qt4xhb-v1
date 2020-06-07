@@ -63,8 +63,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
 }
 $addMethod=availableGeometry
 
-$prototype=bool isVirtualDesktop () const
-$method=|bool|isVirtualDesktop|
+$prototypeV2=bool isVirtualDesktop() const
 
 $prototypeV2=int primaryScreen() const
 

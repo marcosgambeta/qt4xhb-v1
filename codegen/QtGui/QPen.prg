@@ -94,11 +94,9 @@ $method=|qreal|dashOffset|
 $prototype=QVector<qreal> dashPattern () const
 $method=|QVector<qreal>|dashPattern|
 
-$prototype=bool isCosmetic () const
-$method=|bool|isCosmetic|
+$prototypeV2=bool isCosmetic() const
 
-$prototype=bool isSolid () const
-$method=|bool|isSolid|
+$prototypeV2=bool isSolid() const
 
 $prototype=Qt::PenJoinStyle joinStyle () const
 $method=|Qt::PenJoinStyle|joinStyle|

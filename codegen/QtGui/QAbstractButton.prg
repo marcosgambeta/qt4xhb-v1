@@ -31,11 +31,9 @@ $includes
 
 $deleteMethod
 
-$prototype=bool autoExclusive () const
-$method=|bool|autoExclusive|
+$prototypeV2=bool autoExclusive() const
 
-$prototype=bool autoRepeat () const
-$method=|bool|autoRepeat|
+$prototypeV2=bool autoRepeat() const
 
 $prototypeV2=int autoRepeatDelay() const
 
@@ -50,14 +48,11 @@ $method=|QIcon|icon|
 $prototype=QSize iconSize () const
 $method=|QSize|iconSize|
 
-$prototype=bool isCheckable () const
-$method=|bool|isCheckable|
+$prototypeV2=bool isCheckable() const
 
-$prototype=bool isChecked () const
-$method=|bool|isChecked|
+$prototypeV2=bool isChecked() const
 
-$prototype=bool isDown () const
-$method=|bool|isDown|
+$prototypeV2=bool isDown() const
 
 $prototype=void setAutoExclusive ( bool )
 $method=|void|setAutoExclusive|bool

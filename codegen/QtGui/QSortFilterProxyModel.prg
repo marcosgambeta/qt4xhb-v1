@@ -35,8 +35,7 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=bool dynamicSortFilter () const
-$method=|bool|dynamicSortFilter|
+$prototypeV2=bool dynamicSortFilter() const
 
 $prototype=Qt::CaseSensitivity filterCaseSensitivity () const
 $method=|Qt::CaseSensitivity|filterCaseSensitivity|
@@ -48,8 +47,7 @@ $method=|QRegExp|filterRegExp|
 
 $prototypeV2=int filterRole() const
 
-$prototype=bool isSortLocaleAware () const
-$method=|bool|isSortLocaleAware|
+$prototypeV2=bool isSortLocaleAware() const
 
 $prototype=void setDynamicSortFilter ( bool enable )
 $method=|void|setDynamicSortFilter|bool

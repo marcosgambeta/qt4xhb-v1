@@ -185,14 +185,11 @@ $method=|QAction *|insertMenu|QAction *,QMenu *
 $prototype=QAction * insertSeparator ( QAction * before )
 $method=|QAction *|insertSeparator|QAction *
 
-$prototype=bool isEmpty () const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
-$prototype=bool isTearOffEnabled () const
-$method=|bool|isTearOffEnabled|
+$prototypeV2=bool isTearOffEnabled() const
 
-$prototype=bool isTearOffMenuVisible () const
-$method=|bool|isTearOffMenuVisible|
+$prototypeV2=bool isTearOffMenuVisible() const
 
 $prototype=QAction * menuAction () const
 $method=|QAction *|menuAction|
@@ -200,8 +197,7 @@ $method=|QAction *|menuAction|
 $prototype=void popup ( const QPoint & p, QAction * atAction = 0 )
 $method=|void|popup|const QPoint &,QAction *=0
 
-$prototype=bool separatorsCollapsible () const
-$method=|bool|separatorsCollapsible|
+$prototypeV2=bool separatorsCollapsible() const
 
 $prototype=void setActiveAction ( QAction * act )
 $method=|void|setActiveAction|QAction *

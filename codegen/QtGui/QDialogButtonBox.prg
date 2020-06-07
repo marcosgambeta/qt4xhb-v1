@@ -112,8 +112,7 @@ $method=|QDialogButtonBox::ButtonRole|buttonRole|QAbstractButton *
 $prototype=QList<QAbstractButton *> buttons () const
 $method=|QList<QAbstractButton *>|buttons|
 
-$prototype=bool centerButtons () const
-$method=|bool|centerButtons|
+$prototypeV2=bool centerButtons() const
 
 $prototype=void clear ()
 $method=|void|clear|

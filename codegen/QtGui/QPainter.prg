@@ -1016,8 +1016,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWTILEDPIXMAP )
 }
 $addMethod=drawTiledPixmap
 
-$prototype=bool end ()
-$method=|bool|end|
+$prototypeV2=bool end()
 
 $prototype=void endNativePainting ()
 $method=|void|endNativePainting|
@@ -1178,14 +1177,12 @@ $method=|QFontInfo|fontInfo|
 $prototype=QFontMetrics fontMetrics () const
 $method=|QFontMetrics|fontMetrics|
 
-$prototype=bool hasClipping () const
-$method=|bool|hasClipping|
+$prototypeV2=bool hasClipping() const
 
 $prototype=void initFrom ( const QWidget * widget )
 $method=|void|initFrom|const QWidget *
 
-$prototype=bool isActive () const
-$method=|bool|isActive|
+$prototypeV2=bool isActive() const
 
 $prototype=Qt::LayoutDirection layoutDirection () const
 $method=|Qt::LayoutDirection|layoutDirection|
@@ -1502,8 +1499,7 @@ HB_FUNC_STATIC( QPAINTER_TRANSLATE )
 }
 $addMethod=translate
 
-$prototype=bool viewTransformEnabled () const
-$method=|bool|viewTransformEnabled|
+$prototypeV2=bool viewTransformEnabled() const
 
 $prototype=QRect viewport () const
 $method=|QRect|viewport|
@@ -1511,8 +1507,7 @@ $method=|QRect|viewport|
 $prototype=QRect window () const
 $method=|QRect|window|
 
-$prototype=bool worldMatrixEnabled () const
-$method=|bool|worldMatrixEnabled|
+$prototypeV2=bool worldMatrixEnabled() const
 
 $prototype=const QTransform & worldTransform () const
 $method=|const QTransform &|worldTransform|

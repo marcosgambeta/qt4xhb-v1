@@ -38,8 +38,7 @@ $deleteMethod
 $prototype=Qt::ArrowType arrowType () const
 $method=|Qt::ArrowType|arrowType|
 
-$prototype=bool autoRaise () const
-$method=|bool|autoRaise|
+$prototypeV2=bool autoRaise() const
 
 $prototype=QAction * defaultAction () const
 $method=|QAction *|defaultAction|

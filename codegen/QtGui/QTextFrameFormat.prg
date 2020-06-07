@@ -45,8 +45,7 @@ $method=|qreal|bottomMargin|
 $prototype=QTextLength height () const
 $method=|QTextLength|height|
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=qreal leftMargin () const
 $method=|qreal|leftMargin|

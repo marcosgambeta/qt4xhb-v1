@@ -30,8 +30,7 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual bool canRead () const = 0
-$virtualMethod=|bool|canRead|
+$prototypeV2=virtual bool canRead() const = 0
 
 $prototype=virtual int currentImageNumber () const
 $virtualMethod=|int|currentImageNumber|
@@ -50,8 +49,7 @@ $prototypeV2=virtual int imageCount() const
 $prototype=virtual bool jumpToImage ( int imageNumber )
 $virtualMethod=|bool|jumpToImage|int
 
-$prototype=virtual bool jumpToNextImage ()
-$virtualMethod=|bool|jumpToNextImage|
+$prototypeV2=virtual bool jumpToNextImage()
 
 $prototypeV2=virtual int loopCount() const
 

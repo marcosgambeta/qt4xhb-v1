@@ -31,8 +31,7 @@ $virtualMethod=|QString|actionText|int,QAccessibleObject::Text,int
 $prototype=virtual bool doAction ( int action, int child, const QVariantList & params )
 $virtualMethod=|bool|doAction|int,int,const QVariantList &
 
-$prototype=virtual bool isValid () const
-$virtualMethod=|bool|isValid|
+$prototypeV2=virtual bool isValid() const
 
 $prototype=virtual QObject * object () const
 $virtualMethod=|QObject *|object|

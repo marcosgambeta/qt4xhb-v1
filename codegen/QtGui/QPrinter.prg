@@ -61,11 +61,9 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=bool abort ()
-$method=|bool|abort|
+$prototypeV2=bool abort()
 
-$prototype=bool collateCopies () const
-$method=|bool|collateCopies|
+$prototypeV2=bool collateCopies() const
 
 $prototype=ColorMode colorMode () const
 $method=|QPrinter::ColorMode|colorMode|
@@ -78,25 +76,20 @@ $method=|QString|creator|
 $prototype=QString docName () const
 $method=|QString|docName|
 
-$prototype=bool doubleSidedPrinting () const
-$method=|bool|doubleSidedPrinting|
+$prototypeV2=bool doubleSidedPrinting() const
 
 $prototype=DuplexMode duplex () const
 $method=|QPrinter::DuplexMode|duplex|
 
-$prototype=bool fontEmbeddingEnabled () const
-$method=|bool|fontEmbeddingEnabled|
+$prototypeV2=bool fontEmbeddingEnabled() const
 
 $prototypeV2=int fromPage() const
 
-$prototype=bool fullPage () const
-$method=|bool|fullPage|
+$prototypeV2=bool fullPage() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=bool newPage ()
-$method=|bool|newPage|
+$prototypeV2=bool newPage()
 
 $prototype=Orientation orientation () const
 $method=|QPrinter::Orientation|orientation|
@@ -311,8 +304,7 @@ $method=|QList<QPrinter::PaperSource>|supportedPaperSources||#ifdef Q_WS_WIN
 $prototype=QList<int> supportedResolutions () const
 $method=|QList<int>|supportedResolutions|
 
-$prototype=bool supportsMultipleCopies () const
-$method=|bool|supportsMultipleCopies|
+$prototypeV2=bool supportsMultipleCopies() const
 
 $prototypeV2=int toPage() const
 

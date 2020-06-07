@@ -67,8 +67,7 @@ $method=|QTextCursor|firstCursorPosition|
 $prototype=QTextCharFormat format () const
 $method=|QTextCharFormat|format|
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=QTextCursor lastCursorPosition () const
 $method=|QTextCursor|lastCursorPosition|

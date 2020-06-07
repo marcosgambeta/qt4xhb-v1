@@ -38,8 +38,7 @@ $method=|QList<int>|columnWidths|
 $prototype=QWidget * previewWidget () const
 $method=|QWidget *|previewWidget|
 
-$prototype=bool resizeGripsVisible () const
-$method=|bool|resizeGripsVisible|
+$prototypeV2=bool resizeGripsVisible() const
 
 $prototype=void setColumnWidths ( const QList<int> & list )
 $method=|void|setColumnWidths|QList<int>

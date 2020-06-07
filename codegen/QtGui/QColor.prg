@@ -179,8 +179,7 @@ $prototypeV2=int hue() const
 $prototype=qreal hueF () const
 $method=|qreal|hueF|
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=QColor lighter ( int factor = 150 ) const
 $method=|QColor|lighter|int=150

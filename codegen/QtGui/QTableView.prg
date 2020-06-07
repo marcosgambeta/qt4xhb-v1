@@ -56,14 +56,12 @@ $method=|QHeaderView *|horizontalHeader|
 $prototype=bool isColumnHidden ( int column ) const
 $method=|bool|isColumnHidden|int
 
-$prototype=bool isCornerButtonEnabled () const
-$method=|bool|isCornerButtonEnabled|
+$prototypeV2=bool isCornerButtonEnabled() const
 
 $prototype=bool isRowHidden ( int row ) const
 $method=|bool|isRowHidden|int
 
-$prototype=bool isSortingEnabled () const
-$method=|bool|isSortingEnabled|
+$prototypeV2=bool isSortingEnabled() const
 
 $prototype=int rowAt ( int y ) const
 $method=|int|rowAt|int
@@ -110,8 +108,7 @@ $method=|void|setVerticalHeader|QHeaderView *
 $prototype=void setWordWrap ( bool on )
 $method=|void|setWordWrap|bool
 
-$prototype=bool showGrid () const
-$method=|bool|showGrid|
+$prototypeV2=bool showGrid() const
 
 $prototype=void sortByColumn ( int column, Qt::SortOrder order )
 $method=|void|sortByColumn|int,Qt::SortOrder
@@ -119,8 +116,7 @@ $method=|void|sortByColumn|int,Qt::SortOrder
 $prototype=QHeaderView * verticalHeader () const
 $method=|QHeaderView *|verticalHeader|
 
-$prototype=bool wordWrap () const
-$method=|bool|wordWrap|
+$prototypeV2=bool wordWrap() const
 
 $prototype=virtual QModelIndex indexAt ( const QPoint & pos ) const
 $virtualMethod=|QModelIndex|indexAt|const QPoint &

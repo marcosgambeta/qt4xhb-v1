@@ -32,8 +32,7 @@ $deleteMethod
 
 $prototypeV2=int count() const
 
-$prototype=bool isAutoRepeat () const
-$method=|bool|isAutoRepeat|
+$prototypeV2=bool isAutoRepeat() const
 
 $prototypeV2=int key() const
 

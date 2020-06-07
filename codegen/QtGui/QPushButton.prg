@@ -63,14 +63,11 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=bool autoDefault () const
-$method=|bool|autoDefault|
+$prototypeV2=bool autoDefault() const
 
-$prototype=bool isDefault () const
-$method=|bool|isDefault|
+$prototypeV2=bool isDefault() const
 
-$prototype=bool isFlat () const
-$method=|bool|isFlat|
+$prototypeV2=bool isFlat() const
 
 $prototype=void setAutoDefault ( bool )
 $method=|void|setAutoDefault|bool

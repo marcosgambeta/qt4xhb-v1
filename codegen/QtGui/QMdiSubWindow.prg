@@ -33,8 +33,7 @@ $includes
 $prototype=QMdiSubWindow ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 $constructor=|new|QWidget *=0,Qt::WindowFlags=0
 
-$prototype=bool isShaded () const
-$method=|bool|isShaded|
+$prototypeV2=bool isShaded() const
 
 $prototypeV2=int keyboardPageStep() const
 

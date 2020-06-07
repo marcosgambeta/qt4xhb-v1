@@ -46,8 +46,7 @@ $method=|void|addActions|QList<QAction *>
 $prototype=void adjustSize ()
 $method=|void|adjustSize|
 
-$prototype=bool autoFillBackground () const
-$method=|bool|autoFillBackground|
+$prototypeV2=bool autoFillBackground() const
 
 $prototype=Qt::FocusPolicy focusPolicy () const
 $method=|Qt::FocusPolicy|focusPolicy|
@@ -70,8 +69,7 @@ $method=|void|insertAction|QAction *,QAction *
 $prototype=void insertActions ( QAction * before, QList<QAction *> actions )
 $method=|void|insertActions|QAction *,QList<QAction *>
 
-$prototype=bool isActiveWindow () const
-$method=|bool|isActiveWindow|
+$prototypeV2=bool isActiveWindow() const
 
 $prototype=QGraphicsLayout * layout () const
 $method=|QGraphicsLayout *|layout|
@@ -236,8 +234,7 @@ $virtualMethod=|QPainterPath|shape|
 
 $prototypeV2=virtual int type() const
 
-$prototype=bool close ()
-$method=|bool|close|
+$prototypeV2=bool close()
 
 $prototype=static void setTabOrder ( QGraphicsWidget * first, QGraphicsWidget * second )
 $staticMethod=|void|setTabOrder|QGraphicsWidget *,QGraphicsWidget *

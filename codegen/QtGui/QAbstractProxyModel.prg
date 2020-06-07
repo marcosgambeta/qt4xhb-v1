@@ -92,8 +92,7 @@ $virtualMethod=|void|sort|int,Qt::SortOrder=Qt::AscendingOrder
 $prototype=virtual QSize span ( const QModelIndex & index ) const
 $virtualMethod=|QSize|span|const QModelIndex &
 
-$prototype=virtual bool submit ()
-$virtualMethod=|bool|submit|
+$prototypeV2=virtual bool submit()
 
 $prototype=virtual Qt::DropActions supportedDropActions () const
 $virtualMethod=|Qt::DropActions|supportedDropActions|

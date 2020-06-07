@@ -67,17 +67,14 @@ $prototypeV2=int count() const
 
 $prototypeV2=int currentIndex() const
 
-$prototype=bool documentMode () const
-$method=|bool|documentMode|
+$prototypeV2=bool documentMode() const
 
-$prototype=bool drawBase () const
-$method=|bool|drawBase|
+$prototypeV2=bool drawBase() const
 
 $prototype=Qt::TextElideMode elideMode () const
 $method=|Qt::TextElideMode|elideMode|
 
-$prototype=bool expanding () const
-$method=|bool|expanding|
+$prototypeV2=bool expanding() const
 
 $prototype=QSize iconSize () const
 $method=|QSize|iconSize|
@@ -110,8 +107,7 @@ HB_FUNC_STATIC( QTABBAR_INSERTTAB )
 }
 $addMethod=inserTab
 
-$prototype=bool isMovable () const
-$method=|bool|isMovable|
+$prototypeV2=bool isMovable() const
 
 $prototype=bool isTabEnabled ( int index ) const
 $method=|bool|isTabEnabled|int
@@ -209,11 +205,9 @@ $method=|QString|tabToolTip|int
 $prototype=QString tabWhatsThis ( int index ) const
 $method=|QString|tabWhatsThis|int
 
-$prototype=bool tabsClosable () const
-$method=|bool|tabsClosable|
+$prototypeV2=bool tabsClosable() const
 
-$prototype=bool usesScrollButtons () const
-$method=|bool|usesScrollButtons|
+$prototypeV2=bool usesScrollButtons() const
 
 $prototype=virtual QSize minimumSizeHint () const
 $virtualMethod=|QSize|minimumSizeHint|

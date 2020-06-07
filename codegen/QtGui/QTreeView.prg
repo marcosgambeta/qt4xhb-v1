@@ -34,8 +34,7 @@ $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-$prototype=bool allColumnsShowFocus () const
-$method=|bool|allColumnsShowFocus|
+$prototypeV2=bool allColumnsShowFocus() const
 
 $prototypeV2=int autoExpandDelay() const
 
@@ -48,8 +47,7 @@ $method=|int|columnViewportPosition|int
 $prototype=int columnWidth ( int column ) const
 $method=|int|columnWidth|int
 
-$prototype=bool expandsOnDoubleClick () const
-$method=|bool|expandsOnDoubleClick|
+$prototypeV2=bool expandsOnDoubleClick() const
 
 $prototype=QHeaderView * header () const
 $method=|QHeaderView *|header|
@@ -62,8 +60,7 @@ $method=|QModelIndex|indexAbove|const QModelIndex &
 $prototype=QModelIndex indexBelow ( const QModelIndex & index ) const
 $method=|QModelIndex|indexBelow|const QModelIndex &
 
-$prototype=bool isAnimated () const
-$method=|bool|isAnimated|
+$prototypeV2=bool isAnimated() const
 
 $prototype=bool isColumnHidden ( int column ) const
 $method=|bool|isColumnHidden|int
@@ -74,20 +71,16 @@ $method=|bool|isExpanded|const QModelIndex &
 $prototype=bool isFirstColumnSpanned ( int row, const QModelIndex & parent ) const
 $method=|bool|isFirstColumnSpanned|int,const QModelIndex &
 
-$prototype=bool isHeaderHidden () const
-$method=|bool|isHeaderHidden|
+$prototypeV2=bool isHeaderHidden() const
 
 $prototype=bool isRowHidden ( int row, const QModelIndex & parent ) const
 $method=|bool|isRowHidden|int,const QModelIndex &
 
-$prototype=bool isSortingEnabled () const
-$method=|bool|isSortingEnabled|
+$prototypeV2=bool isSortingEnabled() const
 
-$prototype=bool itemsExpandable () const
-$method=|bool|itemsExpandable|
+$prototypeV2=bool itemsExpandable() const
 
-$prototype=bool rootIsDecorated () const
-$method=|bool|rootIsDecorated|
+$prototypeV2=bool rootIsDecorated() const
 
 $prototype=void setAllColumnsShowFocus ( bool enable )
 $method=|void|setAllColumnsShowFocus|bool
@@ -143,11 +136,9 @@ $method=|void|setWordWrap|bool
 $prototype=void sortByColumn ( int column, Qt::SortOrder order )
 $method=|void|sortByColumn|int,Qt::SortOrder
 
-$prototype=bool uniformRowHeights () const
-$method=|bool|uniformRowHeights|
+$prototypeV2=bool uniformRowHeights() const
 
-$prototype=bool wordWrap () const
-$method=|bool|wordWrap|
+$prototypeV2=bool wordWrap() const
 
 $prototype=virtual void dataChanged ( const QModelIndex & topLeft, const QModelIndex & bottomRight )
 $virtualMethod=|void|dataChanged|const QModelIndex &,const QModelIndex &

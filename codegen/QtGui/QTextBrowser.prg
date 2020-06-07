@@ -43,17 +43,13 @@ $method=|QString|historyTitle|int
 $prototype=QUrl historyUrl ( int i ) const
 $method=|QUrl|historyUrl|int
 
-$prototype=bool isBackwardAvailable () const
-$method=|bool|isBackwardAvailable|
+$prototypeV2=bool isBackwardAvailable() const
 
-$prototype=bool isForwardAvailable () const
-$method=|bool|isForwardAvailable|
+$prototypeV2=bool isForwardAvailable() const
 
-$prototype=bool openExternalLinks () const
-$method=|bool|openExternalLinks|
+$prototypeV2=bool openExternalLinks() const
 
-$prototype=bool openLinks () const
-$method=|bool|openLinks|
+$prototypeV2=bool openLinks() const
 
 $prototype=QStringList searchPaths () const
 $method=|QStringList|searchPaths|

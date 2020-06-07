@@ -111,8 +111,7 @@ $method=|QVector<quint32>|glyphIndexesForString|const QString &
 $prototype=QFont::HintingPreference hintingPreference () const
 $method=|QFont::HintingPreference|hintingPreference|
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=qreal leading () const
 $method=|qreal|leading|

@@ -32,14 +32,11 @@ $includes
 
 $deleteMethod
 
-$prototype=bool acceptDrops () const
-$method=|bool|acceptDrops|
+$prototypeV2=bool acceptDrops() const
 
-$prototype=bool acceptHoverEvents () const
-$method=|bool|acceptHoverEvents|
+$prototypeV2=bool acceptHoverEvents() const
 
-$prototype=bool acceptTouchEvents () const
-$method=|bool|acceptTouchEvents|
+$prototypeV2=bool acceptTouchEvents() const
 
 $prototype=Qt::MouseButtons acceptedMouseButtons () const
 $method=|Qt::MouseButtons|acceptedMouseButtons|
@@ -126,8 +123,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ENSUREVISIBLE )
 }
 $addMethod=ensureVisible
 
-$prototype=bool filtersChildEvents () const
-$method=|bool|filtersChildEvents|
+$prototypeV2=bool filtersChildEvents() const
 
 $prototype=GraphicsItemFlags flags () const
 $method=|QGraphicsItem::GraphicsItemFlags|flags|
@@ -150,11 +146,9 @@ $method=|QGraphicsEffect *|graphicsEffect|
 $prototype=QGraphicsItemGroup * group () const
 $method=|QGraphicsItemGroup *|group|
 
-$prototype=bool hasCursor () const
-$method=|bool|hasCursor|
+$prototypeV2=bool hasCursor() const
 
-$prototype=bool hasFocus () const
-$method=|bool|hasFocus|
+$prototypeV2=bool hasFocus() const
 
 $prototype=void hide ()
 $method=|void|hide|
@@ -165,17 +159,14 @@ $method=|Qt::InputMethodHints|inputMethodHints|
 $prototype=void installSceneEventFilter ( QGraphicsItem * filterItem )
 $method=|void|installSceneEventFilter|QGraphicsItem *
 
-$prototype=bool isActive () const
-$method=|bool|isActive|
+$prototypeV2=bool isActive() const
 
 $prototype=bool isAncestorOf ( const QGraphicsItem * child ) const
 $method=|bool|isAncestorOf|const QGraphicsItem *
 
-$prototype=bool isClipped () const
-$method=|bool|isClipped|
+$prototypeV2=bool isClipped() const
 
-$prototype=bool isEnabled () const
-$method=|bool|isEnabled|
+$prototypeV2=bool isEnabled() const
 
 $prototype=bool isObscured () const
 $internalMethod=|bool|isObscured,isObscured1|
@@ -216,26 +207,20 @@ $addMethod=isObscured
 $prototype=virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 $virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
 
-$prototype=bool isPanel () const
-$method=|bool|isPanel|
+$prototypeV2=bool isPanel() const
 
-$prototype=bool isSelected () const
-$method=|bool|isSelected|
+$prototypeV2=bool isSelected() const
 
-$prototype=bool isUnderMouse () const
-$method=|bool|isUnderMouse|
+$prototypeV2=bool isUnderMouse() const
 
-$prototype=bool isVisible () const
-$method=|bool|isVisible|
+$prototypeV2=bool isVisible() const
 
 $prototype=bool isVisibleTo ( const QGraphicsItem * parent ) const
 $method=|bool|isVisibleTo|const QGraphicsItem *
 
-$prototype=bool isWidget () const
-$method=|bool|isWidget|
+$prototypeV2=bool isWidget() const
 
-$prototype=bool isWindow () const
-$method=|bool|isWindow|
+$prototypeV2=bool isWindow() const
 
 $prototype=QTransform itemTransform ( const QGraphicsItem * other, bool * ok = 0 ) const
 $method=|QTransform|itemTransform|const QGraphicsItem *,bool *=0

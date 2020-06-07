@@ -119,8 +119,7 @@ $virtualMethod=|void|setCurrentIndex|int
 $prototype=void setCurrentModelIndex ( const QModelIndex & index )
 $method=|void|setCurrentModelIndex|const QModelIndex &
 
-$prototype=bool submit ()
-$method=|bool|submit|
+$prototypeV2=bool submit()
 
 $prototype=void toFirst ()
 $method=|void|toFirst|

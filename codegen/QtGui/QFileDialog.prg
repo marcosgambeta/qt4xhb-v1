@@ -64,8 +64,7 @@ $deleteMethod
 $prototype=AcceptMode acceptMode () const
 $method=|QFileDialog::AcceptMode|acceptMode|
 
-$prototype=bool confirmOverwrite () const
-$method=|bool|confirmOverwrite|
+$prototypeV2=bool confirmOverwrite() const
 
 $prototype=QString defaultSuffix () const
 $method=|QString|defaultSuffix|
@@ -85,11 +84,9 @@ $method=|QStringList|history|
 $prototype=QFileIconProvider * iconProvider () const
 $method=|QFileIconProvider *|iconProvider|
 
-$prototype=bool isNameFilterDetailsVisible () const
-$method=|bool|isNameFilterDetailsVisible|
+$prototypeV2=bool isNameFilterDetailsVisible() const
 
-$prototype=bool isReadOnly () const
-$method=|bool|isReadOnly|
+$prototypeV2=bool isReadOnly() const
 
 $prototype=QAbstractItemDelegate * itemDelegate () const
 $method=|QAbstractItemDelegate *|itemDelegate|
@@ -109,8 +106,7 @@ $method=|QFileDialog::Options|options|
 $prototype=QAbstractProxyModel * proxyModel () const
 $method=|QAbstractProxyModel *|proxyModel|
 
-$prototype=bool resolveSymlinks () const
-$method=|bool|resolveSymlinks|
+$prototypeV2=bool resolveSymlinks() const
 
 $prototype=bool restoreState ( const QByteArray & state )
 $method=|bool|restoreState|const QByteArray &

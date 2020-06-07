@@ -29,8 +29,7 @@ $includes
 
 $deleteMethod
 
-$prototype=bool alternatingRowColors () const
-$method=|bool|alternatingRowColors|
+$prototypeV2=bool alternatingRowColors() const
 
 $prototypeV2=int autoScrollMargin() const
 
@@ -46,17 +45,14 @@ $method=|Qt::DropAction|defaultDropAction|
 $prototype=DragDropMode dragDropMode () const
 $method=|QAbstractItemView::DragDropMode|dragDropMode|
 
-$prototype=bool dragDropOverwriteMode () const
-$method=|bool|dragDropOverwriteMode|
+$prototypeV2=bool dragDropOverwriteMode() const
 
-$prototype=bool dragEnabled () const
-$method=|bool|dragEnabled|
+$prototypeV2=bool dragEnabled() const
 
 $prototype=EditTriggers editTriggers () const
 $method=|QAbstractItemView::EditTriggers|editTriggers|
 
-$prototype=bool hasAutoScroll () const
-$method=|bool|hasAutoScroll|
+$prototypeV2=bool hasAutoScroll() const
 
 $prototype=ScrollMode horizontalScrollMode () const
 $method=|QAbstractItemView::ScrollMode|horizontalScrollMode|
@@ -194,8 +190,7 @@ $method=|void|setTextElideMode|Qt::TextElideMode
 $prototype=void setVerticalScrollMode ( ScrollMode mode )
 $method=|void|setVerticalScrollMode|QAbstractItemView::ScrollMode
 
-$prototype=bool showDropIndicator () const
-$method=|bool|showDropIndicator|
+$prototypeV2=bool showDropIndicator() const
 
 $prototype=virtual int sizeHintForColumn ( int column ) const
 $virtualMethod=|int|sizeHintForColumn|int
@@ -206,8 +201,7 @@ $method=|QSize|sizeHintForIndex|const QModelIndex &
 $prototype=virtual int sizeHintForRow ( int row ) const
 $virtualMethod=|int|sizeHintForRow|int
 
-$prototype=bool tabKeyNavigation () const
-$method=|bool|tabKeyNavigation|
+$prototypeV2=bool tabKeyNavigation() const
 
 $prototype=Qt::TextElideMode textElideMode () const
 $method=|Qt::TextElideMode|textElideMode|

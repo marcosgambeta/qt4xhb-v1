@@ -58,7 +58,6 @@ $deleteMethod
 $prototype=Qt::WindowStates oldState() const
 $method=|Qt::WindowStates|oldState|
 
-$prototype=bool isOverride() const
-$method=|bool|isOverride|
+$prototypeV2=bool isOverride() const
 
 #pragma ENDDUMP

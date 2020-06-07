@@ -79,8 +79,7 @@ $method=|QList<QGraphicsWidget *>|associatedGraphicsWidgets|
 $prototype=QList<QWidget *> associatedWidgets () const
 $method=|QList<QWidget *>|associatedWidgets|
 
-$prototype=bool autoRepeat () const
-$method=|bool|autoRepeat|
+$prototypeV2=bool autoRepeat() const
 
 $prototype=QVariant data () const
 $method=|QVariant|data|
@@ -94,23 +93,17 @@ $method=|QIcon|icon|
 $prototype=QString iconText () const
 $method=|QString|iconText|
 
-$prototype=bool isCheckable () const
-$method=|bool|isCheckable|
+$prototypeV2=bool isCheckable() const
 
-$prototype=bool isChecked () const
-$method=|bool|isChecked|
+$prototypeV2=bool isChecked() const
 
-$prototype=bool isEnabled () const
-$method=|bool|isEnabled|
+$prototypeV2=bool isEnabled() const
 
-$prototype=bool isIconVisibleInMenu () const
-$method=|bool|isIconVisibleInMenu|
+$prototypeV2=bool isIconVisibleInMenu() const
 
-$prototype=bool isSeparator () const
-$method=|bool|isSeparator|
+$prototypeV2=bool isSeparator() const
 
-$prototype=bool isVisible () const
-$method=|bool|isVisible|
+$prototypeV2=bool isVisible() const
 
 $prototype=QMenu * menu () const
 $method=|QMenu *|menu|

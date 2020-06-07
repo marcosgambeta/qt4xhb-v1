@@ -44,8 +44,7 @@ $virtualMethod=|int|indexOfChild|const QAccessibleInterface *
 $prototype=QVariant invokeMethod ( Method method, int child = 0, const QVariantList & params = QVariantList() )
 $method=|QVariant|invokeMethod|QAccessible::Method,int=0,const QVariantList &=QVariantList()
 
-$prototype=virtual bool isValid () const = 0
-$virtualMethod=|bool|isValid|
+$prototypeV2=virtual bool isValid() const = 0
 
 $prototype=virtual QObject * object () const = 0
 $virtualMethod=|QObject *|object|

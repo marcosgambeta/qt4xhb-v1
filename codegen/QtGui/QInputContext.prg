@@ -44,8 +44,7 @@ $virtualMethod=|QFont|font|
 $prototype=virtual QString identifierName () = 0
 $virtualMethod=|QString|identifierName|
 
-$prototype=virtual bool isComposing () const = 0
-$virtualMethod=|bool|isComposing|
+$prototypeV2=virtual bool isComposing() const = 0
 
 $prototype=virtual QString language () = 0
 $virtualMethod=|QString|language|

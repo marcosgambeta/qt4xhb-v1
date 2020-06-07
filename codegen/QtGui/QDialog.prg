@@ -32,8 +32,7 @@ $constructor=|new|QWidget *=0,Qt::WindowFlags=0
 
 $deleteMethod
 
-$prototype=bool isSizeGripEnabled () const
-$method=|bool|isSizeGripEnabled|
+$prototypeV2=bool isSizeGripEnabled() const
 
 $prototypeV2=int result() const
 

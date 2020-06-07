@@ -129,8 +129,7 @@ HB_FUNC_STATIC( QVECTOR3D_DISTANCETOPLANE )
 }
 $addMethod=distanceToPlane
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=qreal length () const
 $method=|qreal|length|

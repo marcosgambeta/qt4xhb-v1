@@ -176,8 +176,7 @@ HB_FUNC_STATIC( QREGION_INTERSECTS )
 }
 $addMethod=intersects
 
-$prototype=bool isEmpty () const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
 $prototypeV2=int rectCount() const
 

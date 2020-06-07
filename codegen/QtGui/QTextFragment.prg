@@ -66,8 +66,7 @@ $method=|bool|contains|int
 $prototype=QList<QGlyphRun> glyphRuns () const
 $method=|QList<QGlyphRun>|glyphRuns|
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototypeV2=int length() const
 

@@ -100,8 +100,7 @@ $method=|void|deselect|
 $prototype=QString displayText () const
 $method=|QString|displayText|
 
-$prototype=bool dragEnabled () const
-$method=|bool|dragEnabled|
+$prototypeV2=bool dragEnabled() const
 
 $prototype=EchoMode echoMode () const
 $method=|QLineEdit::EchoMode|echoMode|
@@ -112,14 +111,11 @@ $method=|void|end|bool
 $prototype=void getTextMargins ( int * left, int * top, int * right, int * bottom ) const
 $method=|void|getTextMargins|int *,int *,int *,int *
 
-$prototype=bool hasAcceptableInput () const
-$method=|bool|hasAcceptableInput|
+$prototypeV2=bool hasAcceptableInput() const
 
-$prototype=bool hasFrame () const
-$method=|bool|hasFrame|
+$prototypeV2=bool hasFrame() const
 
-$prototype=bool hasSelectedText () const
-$method=|bool|hasSelectedText|
+$prototypeV2=bool hasSelectedText() const
 
 $prototype=void home ( bool mark )
 $method=|void|home|bool
@@ -130,17 +126,13 @@ $method=|QString|inputMask|
 $prototype=void insert ( const QString & newText )
 $method=|void|insert|const QString &
 
-$prototype=bool isModified () const
-$method=|bool|isModified|
+$prototypeV2=bool isModified() const
 
-$prototype=bool isReadOnly () const
-$method=|bool|isReadOnly|
+$prototypeV2=bool isReadOnly() const
 
-$prototype=bool isRedoAvailable () const
-$method=|bool|isRedoAvailable|
+$prototypeV2=bool isRedoAvailable() const
 
-$prototype=bool isUndoAvailable () const
-$method=|bool|isUndoAvailable|
+$prototypeV2=bool isUndoAvailable() const
 
 $prototypeV2=int maxLength() const
 

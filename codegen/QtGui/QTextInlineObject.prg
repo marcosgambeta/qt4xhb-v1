@@ -44,8 +44,7 @@ $prototypeV2=int formatIndex() const
 $prototype=qreal height () const
 $method=|qreal|height|
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=QRectF rect () const
 $method=|QRectF|rect|

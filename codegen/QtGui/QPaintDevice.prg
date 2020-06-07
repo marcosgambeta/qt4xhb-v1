@@ -45,8 +45,7 @@ $method=|int|numColors|
 $prototype=virtual QPaintEngine * paintEngine () const = 0
 $virtualMethod=|QPaintEngine *|paintEngine|
 
-$prototype=bool paintingActive () const
-$method=|bool|paintingActive|
+$prototypeV2=bool paintingActive() const
 
 $prototypeV2=int physicalDpiX() const
 

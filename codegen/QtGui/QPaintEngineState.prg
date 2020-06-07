@@ -36,8 +36,7 @@ $method=|Qt::BGMode|backgroundMode|
 $prototype=QBrush brush () const
 $method=|QBrush|brush|
 
-$prototype=bool brushNeedsResolving () const
-$method=|bool|brushNeedsResolving|
+$prototypeV2=bool brushNeedsResolving() const
 
 $prototype=QPointF brushOrigin () const
 $method=|QPointF|brushOrigin|
@@ -57,8 +56,7 @@ $method=|QPainter::CompositionMode|compositionMode|
 $prototype=QFont font () const
 $method=|QFont|font|
 
-$prototype=bool isClipEnabled () const
-$method=|bool|isClipEnabled|
+$prototypeV2=bool isClipEnabled() const
 
 $prototype=qreal opacity () const
 $method=|qreal|opacity|
@@ -69,8 +67,7 @@ $method=|QPainter *|painter|
 $prototype=QPen pen () const
 $method=|QPen|pen|
 
-$prototype=bool penNeedsResolving () const
-$method=|bool|penNeedsResolving|
+$prototypeV2=bool penNeedsResolving() const
 
 $prototype=QPainter::RenderHints renderHints () const
 $method=|QPainter::RenderHints|renderHints|

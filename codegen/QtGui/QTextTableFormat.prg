@@ -49,8 +49,7 @@ $prototypeV2=int columns() const
 
 $prototypeV2=int headerRowCount() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=void setAlignment ( Qt::Alignment alignment )
 $method=|void|setAlignment|Qt::Alignment

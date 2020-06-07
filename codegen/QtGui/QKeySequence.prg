@@ -99,8 +99,7 @@ $deleteMethod
 $prototype=uint count () const
 $method=|uint|count|
 
-$prototype=bool isEmpty () const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
 $prototype=SequenceMatch matches ( const QKeySequence & seq ) const
 $method=|QKeySequence::SequenceMatch|matches|const QKeySequence &

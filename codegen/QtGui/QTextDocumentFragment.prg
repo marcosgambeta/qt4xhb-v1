@@ -71,8 +71,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=bool isEmpty () const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
 $prototype=QString toHtml ( const QByteArray & encoding ) const
 $internalMethod=|QString|toHtml,toHtml1|const QByteArray &
