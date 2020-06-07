@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ATTACHTO )
 }
 
 /*
-bool autoShowStandardWindow () const
+bool autoShowStandardWindow() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_AUTOSHOWSTANDARDWINDOW )
 {
