@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QSIZEF_EXPANDEDTO )
 }
 
 /*
-qreal height () const
+qreal height() const
 */
 HB_FUNC_STATIC( QSIZEF_HEIGHT )
 {
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QSIZEF_TRANSPOSE )
 }
 
 /*
-qreal width () const
+qreal width() const
 */
 HB_FUNC_STATIC( QSIZEF_WIDTH )
 {

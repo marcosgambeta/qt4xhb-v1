@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_DELETE )
 }
 
 /*
-qreal opacity () const
+qreal opacity() const
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITY )
 {

@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_BOUNDINGREGION )
 }
 
 /*
-qreal boundingRegionGranularity () const
+qreal boundingRegionGranularity() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_BOUNDINGREGIONGRANULARITY )
 {
@@ -782,7 +782,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_DEVICETRANSFORM )
 }
 
 /*
-qreal effectiveOpacity () const
+qreal effectiveOpacity() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_EFFECTIVEOPACITY )
 {
@@ -2631,7 +2631,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MOVEBY )
 }
 
 /*
-qreal opacity () const
+qreal opacity() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_OPACITY )
 {
@@ -2907,7 +2907,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_RESETTRANSFORM )
 }
 
 /*
-qreal rotation () const
+qreal rotation() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ROTATION )
 {
@@ -2931,7 +2931,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ROTATION )
 }
 
 /*
-qreal scale () const
+qreal scale() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SCALE )
 {
@@ -4484,7 +4484,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_WINDOW )
 }
 
 /*
-qreal x () const
+qreal x() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_X )
 {
@@ -4508,7 +4508,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_X )
 }
 
 /*
-qreal y () const
+qreal y() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_Y )
 {
@@ -4532,7 +4532,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_Y )
 }
 
 /*
-qreal zValue () const
+qreal zValue() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ZVALUE )
 {

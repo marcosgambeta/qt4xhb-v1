@@ -3267,7 +3267,7 @@ HB_FUNC_STATIC( QPAINTER_LAYOUTDIRECTION )
 }
 
 /*
-qreal opacity () const
+qreal opacity() const
 */
 HB_FUNC_STATIC( QPAINTER_OPACITY )
 {

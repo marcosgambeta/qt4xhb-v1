@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QEASINGCURVE_DELETE )
 }
 
 /*
-qreal amplitude () const
+qreal amplitude() const
 */
 HB_FUNC_STATIC( QEASINGCURVE_AMPLITUDE )
 {
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QEASINGCURVE_AMPLITUDE )
 }
 
 /*
-qreal overshoot () const
+qreal overshoot() const
 */
 HB_FUNC_STATIC( QEASINGCURVE_OVERSHOOT )
 {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QEASINGCURVE_OVERSHOOT )
 }
 
 /*
-qreal period () const
+qreal period() const
 */
 HB_FUNC_STATIC( QEASINGCURVE_PERIOD )
 {

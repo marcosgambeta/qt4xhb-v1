@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_ISCLIPENABLED )
 }
 
 /*
-qreal opacity () const
+qreal opacity() const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_OPACITY )
 {

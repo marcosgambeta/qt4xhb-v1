@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_SETZSCALE )
 }
 
 /*
-qreal xScale () const
+qreal xScale() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_XSCALE )
 {
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_XSCALE )
 }
 
 /*
-qreal yScale () const
+qreal yScale() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_YSCALE )
 {
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_YSCALE )
 }
 
 /*
-qreal zScale () const
+qreal zScale() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_ZSCALE )
 {

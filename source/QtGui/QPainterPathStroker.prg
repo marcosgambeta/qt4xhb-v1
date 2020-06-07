@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_CREATESTROKE )
 }
 
 /*
-qreal curveThreshold () const
+qreal curveThreshold() const
 */
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_CURVETHRESHOLD )
 {
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_CURVETHRESHOLD )
 }
 
 /*
-qreal dashOffset () const
+qreal dashOffset() const
 */
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_DASHOFFSET )
 {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_JOINSTYLE )
 }
 
 /*
-qreal miterLimit () const
+qreal miterLimit() const
 */
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_MITERLIMIT )
 {
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETWIDTH )
 }
 
 /*
-qreal width () const
+qreal width() const
 */
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_WIDTH )
 {

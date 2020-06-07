@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_ALIGNMENT )
 }
 
 /*
-qreal cellPadding () const
+qreal cellPadding() const
 */
 HB_FUNC_STATIC( QTEXTTABLEFORMAT_CELLPADDING )
 {
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_CELLPADDING )
 }
 
 /*
-qreal cellSpacing () const
+qreal cellSpacing() const
 */
 HB_FUNC_STATIC( QTEXTTABLEFORMAT_CELLSPACING )
 {

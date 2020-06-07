@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QCOLOR_ALPHA )
 }
 
 /*
-qreal alphaF () const
+qreal alphaF() const
 */
 HB_FUNC_STATIC( QCOLOR_ALPHAF )
 {
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QCOLOR_BLACK )
 }
 
 /*
-qreal blackF () const
+qreal blackF() const
 */
 HB_FUNC_STATIC( QCOLOR_BLACKF )
 {
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QCOLOR_BLUE )
 }
 
 /*
-qreal blueF () const
+qreal blueF() const
 */
 HB_FUNC_STATIC( QCOLOR_BLUEF )
 {
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QCOLOR_CYAN )
 }
 
 /*
-qreal cyanF () const
+qreal cyanF() const
 */
 HB_FUNC_STATIC( QCOLOR_CYANF )
 {
@@ -805,7 +805,7 @@ HB_FUNC_STATIC( QCOLOR_GREEN )
 }
 
 /*
-qreal greenF () const
+qreal greenF() const
 */
 HB_FUNC_STATIC( QCOLOR_GREENF )
 {
@@ -853,7 +853,7 @@ HB_FUNC_STATIC( QCOLOR_HSLHUE )
 }
 
 /*
-qreal hslHueF () const
+qreal hslHueF() const
 */
 HB_FUNC_STATIC( QCOLOR_HSLHUEF )
 {
@@ -901,7 +901,7 @@ HB_FUNC_STATIC( QCOLOR_HSLSATURATION )
 }
 
 /*
-qreal hslSaturationF () const
+qreal hslSaturationF() const
 */
 HB_FUNC_STATIC( QCOLOR_HSLSATURATIONF )
 {
@@ -949,7 +949,7 @@ HB_FUNC_STATIC( QCOLOR_HSVHUE )
 }
 
 /*
-qreal hsvHueF () const
+qreal hsvHueF() const
 */
 HB_FUNC_STATIC( QCOLOR_HSVHUEF )
 {
@@ -997,7 +997,7 @@ HB_FUNC_STATIC( QCOLOR_HSVSATURATION )
 }
 
 /*
-qreal hsvSaturationF () const
+qreal hsvSaturationF() const
 */
 HB_FUNC_STATIC( QCOLOR_HSVSATURATIONF )
 {
@@ -1045,7 +1045,7 @@ HB_FUNC_STATIC( QCOLOR_HUE )
 }
 
 /*
-qreal hueF () const
+qreal hueF() const
 */
 HB_FUNC_STATIC( QCOLOR_HUEF )
 {
@@ -1142,7 +1142,7 @@ HB_FUNC_STATIC( QCOLOR_LIGHTNESS )
 }
 
 /*
-qreal lightnessF () const
+qreal lightnessF() const
 */
 HB_FUNC_STATIC( QCOLOR_LIGHTNESSF )
 {
@@ -1190,7 +1190,7 @@ HB_FUNC_STATIC( QCOLOR_MAGENTA )
 }
 
 /*
-qreal magentaF () const
+qreal magentaF() const
 */
 HB_FUNC_STATIC( QCOLOR_MAGENTAF )
 {
@@ -1262,7 +1262,7 @@ HB_FUNC_STATIC( QCOLOR_RED )
 }
 
 /*
-qreal redF () const
+qreal redF() const
 */
 HB_FUNC_STATIC( QCOLOR_REDF )
 {
@@ -1358,7 +1358,7 @@ HB_FUNC_STATIC( QCOLOR_SATURATION )
 }
 
 /*
-qreal saturationF () const
+qreal saturationF() const
 */
 HB_FUNC_STATIC( QCOLOR_SATURATIONF )
 {
@@ -2023,7 +2023,7 @@ HB_FUNC_STATIC( QCOLOR_VALUE )
 }
 
 /*
-qreal valueF () const
+qreal valueF() const
 */
 HB_FUNC_STATIC( QCOLOR_VALUEF )
 {
@@ -2071,7 +2071,7 @@ HB_FUNC_STATIC( QCOLOR_YELLOW )
 }
 
 /*
-qreal yellowF () const
+qreal yellowF() const
 */
 HB_FUNC_STATIC( QCOLOR_YELLOWF )
 {

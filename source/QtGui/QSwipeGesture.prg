@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QSWIPEGESTURE_SETSWIPEANGLE )
 }
 
 /*
-qreal swipeAngle () const
+qreal swipeAngle() const
 */
 HB_FUNC_STATIC( QSWIPEGESTURE_SWIPEANGLE )
 {

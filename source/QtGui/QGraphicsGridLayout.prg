@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNSTRETCHFACTOR )
 }
 
 /*
-qreal horizontalSpacing () const
+qreal horizontalSpacing() const
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_HORIZONTALSPACING )
 {
@@ -1095,7 +1095,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETVERTICALSPACING )
 }
 
 /*
-qreal verticalSpacing () const
+qreal verticalSpacing() const
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_VERTICALSPACING )
 {

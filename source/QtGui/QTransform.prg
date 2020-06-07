@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QTRANSFORM_DELETE )
 }
 
 /*
-qreal m11 () const
+qreal m11() const
 */
 HB_FUNC_STATIC( QTRANSFORM_M11 )
 {
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QTRANSFORM_M11 )
 }
 
 /*
-qreal m12 () const
+qreal m12() const
 */
 HB_FUNC_STATIC( QTRANSFORM_M12 )
 {
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QTRANSFORM_M12 )
 }
 
 /*
-qreal m13 () const
+qreal m13() const
 */
 HB_FUNC_STATIC( QTRANSFORM_M13 )
 {
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QTRANSFORM_M13 )
 }
 
 /*
-qreal m21 () const
+qreal m21() const
 */
 HB_FUNC_STATIC( QTRANSFORM_M21 )
 {
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QTRANSFORM_M21 )
 }
 
 /*
-qreal m22 () const
+qreal m22() const
 */
 HB_FUNC_STATIC( QTRANSFORM_M22 )
 {
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QTRANSFORM_M22 )
 }
 
 /*
-qreal m23 () const
+qreal m23() const
 */
 HB_FUNC_STATIC( QTRANSFORM_M23 )
 {
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QTRANSFORM_M23 )
 }
 
 /*
-qreal m31 () const
+qreal m31() const
 */
 HB_FUNC_STATIC( QTRANSFORM_M31 )
 {
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QTRANSFORM_M31 )
 }
 
 /*
-qreal m32 () const
+qreal m32() const
 */
 HB_FUNC_STATIC( QTRANSFORM_M32 )
 {
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QTRANSFORM_M32 )
 }
 
 /*
-qreal m33 () const
+qreal m33() const
 */
 HB_FUNC_STATIC( QTRANSFORM_M33 )
 {
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QTRANSFORM_ADJOINT )
 }
 
 /*
-qreal determinant () const
+qreal determinant() const
 */
 HB_FUNC_STATIC( QTRANSFORM_DETERMINANT )
 {
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QTRANSFORM_DETERMINANT )
 }
 
 /*
-qreal dx () const
+qreal dx() const
 */
 HB_FUNC_STATIC( QTRANSFORM_DX )
 {
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QTRANSFORM_DX )
 }
 
 /*
-qreal dy () const
+qreal dy() const
 */
 HB_FUNC_STATIC( QTRANSFORM_DY )
 {

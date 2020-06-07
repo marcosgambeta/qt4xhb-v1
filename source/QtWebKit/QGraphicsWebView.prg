@@ -647,7 +647,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_URL )
 }
 
 /*
-qreal zoomFactor () const
+qreal zoomFactor() const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ZOOMFACTOR )
 {

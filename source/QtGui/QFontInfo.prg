@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QFONTINFO_POINTSIZE )
 }
 
 /*
-qreal pointSizeF () const
+qreal pointSizeF() const
 */
 HB_FUNC_STATIC( QFONTINFO_POINTSIZEF )
 {

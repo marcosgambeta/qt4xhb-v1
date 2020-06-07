@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURHINTS )
 }
 
 /*
-qreal blurRadius () const
+qreal blurRadius() const
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURRADIUS )
 {

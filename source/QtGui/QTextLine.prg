@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QTEXTLINE_DELETE )
 }
 
 /*
-qreal ascent () const
+qreal ascent() const
 */
 HB_FUNC_STATIC( QTEXTLINE_ASCENT )
 {
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QTEXTLINE_CURSORTOX )
 }
 
 /*
-qreal descent () const
+qreal descent() const
 */
 HB_FUNC_STATIC( QTEXTLINE_DESCENT )
 {
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QTEXTLINE_DESCENT )
 }
 
 /*
-qreal height () const
+qreal height() const
 */
 HB_FUNC_STATIC( QTEXTLINE_HEIGHT )
 {
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QTEXTLINE_HEIGHT )
 }
 
 /*
-qreal horizontalAdvance () const
+qreal horizontalAdvance() const
 */
 HB_FUNC_STATIC( QTEXTLINE_HORIZONTALADVANCE )
 {
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QTEXTLINE_ISVALID )
 }
 
 /*
-qreal leading () const
+qreal leading() const
 */
 HB_FUNC_STATIC( QTEXTLINE_LEADING )
 {
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QTEXTLINE_NATURALTEXTRECT )
 }
 
 /*
-qreal naturalTextWidth () const
+qreal naturalTextWidth() const
 */
 HB_FUNC_STATIC( QTEXTLINE_NATURALTEXTWIDTH )
 {
@@ -671,7 +671,7 @@ HB_FUNC_STATIC( QTEXTLINE_TEXTSTART )
 }
 
 /*
-qreal width () const
+qreal width() const
 */
 HB_FUNC_STATIC( QTEXTLINE_WIDTH )
 {
@@ -695,7 +695,7 @@ HB_FUNC_STATIC( QTEXTLINE_WIDTH )
 }
 
 /*
-qreal x () const
+qreal x() const
 */
 HB_FUNC_STATIC( QTEXTLINE_X )
 {
@@ -743,7 +743,7 @@ HB_FUNC_STATIC( QTEXTLINE_XTOCURSOR )
 }
 
 /*
-qreal y () const
+qreal y() const
 */
 HB_FUNC_STATIC( QTEXTLINE_Y )
 {

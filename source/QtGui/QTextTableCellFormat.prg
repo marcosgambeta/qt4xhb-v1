@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_DELETE )
 }
 
 /*
-qreal bottomPadding () const
+qreal bottomPadding() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_BOTTOMPADDING )
 {
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_ISVALID )
 }
 
 /*
-qreal leftPadding () const
+qreal leftPadding() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_LEFTPADDING )
 {
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_LEFTPADDING )
 }
 
 /*
-qreal rightPadding () const
+qreal rightPadding() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_RIGHTPADDING )
 {
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETTOPPADDING )
 }
 
 /*
-qreal topPadding () const
+qreal topPadding() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_TOPPADDING )
 {

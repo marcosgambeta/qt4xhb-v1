@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_COLOR )
 }
 
 /*
-qreal strength () const
+qreal strength() const
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_STRENGTH )
 {

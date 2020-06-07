@@ -609,7 +609,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_LINEFORTEXTPOSITION )
 }
 
 /*
-qreal maximumWidth () const
+qreal maximumWidth() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_MAXIMUMWIDTH )
 {
@@ -633,7 +633,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_MAXIMUMWIDTH )
 }
 
 /*
-qreal minimumWidth () const
+qreal minimumWidth() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_MINIMUMWIDTH )
 {

@@ -977,7 +977,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ISEMPTY )
 }
 
 /*
-qreal length () const
+qreal length() const
 */
 HB_FUNC_STATIC( QPAINTERPATH_LENGTH )
 {

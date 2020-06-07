@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QTEXTITEM_DELETE )
 }
 
 /*
-qreal ascent () const
+qreal ascent() const
 */
 HB_FUNC_STATIC( QTEXTITEM_ASCENT )
 {
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QTEXTITEM_ASCENT )
 }
 
 /*
-qreal descent () const
+qreal descent() const
 */
 HB_FUNC_STATIC( QTEXTITEM_DESCENT )
 {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QTEXTITEM_TEXT )
 }
 
 /*
-qreal width () const
+qreal width() const
 */
 HB_FUNC_STATIC( QTEXTITEM_WIDTH )
 {

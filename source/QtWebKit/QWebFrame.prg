@@ -1159,7 +1159,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETZOOMFACTOR )
 }
 
 /*
-qreal textSizeMultiplier () const
+qreal textSizeMultiplier() const
 */
 HB_FUNC_STATIC( QWEBFRAME_TEXTSIZEMULTIPLIER )
 {
@@ -1280,7 +1280,7 @@ HB_FUNC_STATIC( QWEBFRAME_URL )
 }
 
 /*
-qreal zoomFactor () const
+qreal zoomFactor() const
 */
 HB_FUNC_STATIC( QWEBFRAME_ZOOMFACTOR )
 {

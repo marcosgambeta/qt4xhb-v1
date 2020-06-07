@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QTEXTLENGTH_DELETE )
 }
 
 /*
-qreal rawValue () const
+qreal rawValue() const
 */
 HB_FUNC_STATIC( QTEXTLENGTH_RAWVALUE )
 {

@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_VIEWMODE )
 }
 
 /*
-qreal zoomFactor () const
+qreal zoomFactor() const
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMFACTOR )
 {

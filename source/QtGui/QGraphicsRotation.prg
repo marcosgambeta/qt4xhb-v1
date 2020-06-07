@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_DELETE )
 }
 
 /*
-qreal angle () const
+qreal angle() const
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_ANGLE )
 {

@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QPEN_COLOR )
 }
 
 /*
-qreal dashOffset () const
+qreal dashOffset() const
 */
 HB_FUNC_STATIC( QPEN_DASHOFFSET )
 {
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QPEN_JOINSTYLE )
 }
 
 /*
-qreal miterLimit () const
+qreal miterLimit() const
 */
 HB_FUNC_STATIC( QPEN_MITERLIMIT )
 {
@@ -741,7 +741,7 @@ HB_FUNC_STATIC( QPEN_WIDTH )
 }
 
 /*
-qreal widthF () const
+qreal widthF() const
 */
 HB_FUNC_STATIC( QPEN_WIDTHF )
 {

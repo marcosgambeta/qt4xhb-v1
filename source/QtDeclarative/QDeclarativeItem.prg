@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_DELETE )
 }
 
 /*
-qreal baselineOffset () const
+qreal baselineOffset() const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_BASELINEOFFSET )
 {
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_FORCEACTIVEFOCUS )
 }
 
 /*
-qreal implicitHeight () const
+qreal implicitHeight() const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_IMPLICITHEIGHT )
 {
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_IMPLICITHEIGHT )
 }
 
 /*
-qreal implicitWidth () const
+qreal implicitWidth() const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_IMPLICITWIDTH )
 {

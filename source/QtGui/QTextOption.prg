@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QTEXTOPTION_TABARRAY )
 }
 
 /*
-qreal tabStop () const
+qreal tabStop() const
 */
 HB_FUNC_STATIC( QTEXTOPTION_TABSTOP )
 {

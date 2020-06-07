@@ -5436,7 +5436,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWMODALITY )
 }
 
 /*
-qreal windowOpacity () const
+qreal windowOpacity() const
 */
 HB_FUNC_STATIC( QWIDGET_WINDOWOPACITY )
 {

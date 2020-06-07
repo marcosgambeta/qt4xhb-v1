@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QMATRIX4X4_COLUMN )
 }
 
 /*
-qreal determinant () const
+qreal determinant() const
 */
 HB_FUNC_STATIC( QMATRIX4X4_DETERMINANT )
 {

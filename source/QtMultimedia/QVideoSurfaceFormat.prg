@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_FRAMEHEIGHT )
 }
 
 /*
-qreal frameRate () const
+qreal frameRate() const
 */
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_FRAMERATE )
 {

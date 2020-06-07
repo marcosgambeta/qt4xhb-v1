@@ -644,7 +644,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DOCUMENTLAYOUT )
 }
 
 /*
-qreal documentMargin () const
+qreal documentMargin() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_DOCUMENTMARGIN )
 {
@@ -906,7 +906,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIRSTBLOCK )
 }
 
 /*
-qreal idealWidth () const
+qreal idealWidth() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_IDEALWIDTH )
 {
@@ -930,7 +930,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_IDEALWIDTH )
 }
 
 /*
-qreal indentWidth () const
+qreal indentWidth() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_INDENTWIDTH )
 {
@@ -1811,7 +1811,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SIZE )
 }
 
 /*
-qreal textWidth () const
+qreal textWidth() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_TEXTWIDTH )
 {

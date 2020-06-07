@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_LOADURL )
 }
 
 /*
-qreal progress () const
+qreal progress() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_PROGRESS )
 {

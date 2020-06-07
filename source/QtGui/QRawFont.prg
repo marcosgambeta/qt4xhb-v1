@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QRAWFONT_ALPHAMAPFORGLYPH )
 }
 
 /*
-qreal ascent () const
+qreal ascent() const
 */
 HB_FUNC_STATIC( QRAWFONT_ASCENT )
 {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QRAWFONT_ASCENT )
 }
 
 /*
-qreal averageCharWidth () const
+qreal averageCharWidth() const
 */
 HB_FUNC_STATIC( QRAWFONT_AVERAGECHARWIDTH )
 {
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QRAWFONT_AVERAGECHARWIDTH )
 }
 
 /*
-qreal descent () const
+qreal descent() const
 */
 HB_FUNC_STATIC( QRAWFONT_DESCENT )
 {
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QRAWFONT_ISVALID )
 }
 
 /*
-qreal leading () const
+qreal leading() const
 */
 HB_FUNC_STATIC( QRAWFONT_LEADING )
 {
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QRAWFONT_LOADFROMFILE )
 }
 
 /*
-qreal maxCharWidth () const
+qreal maxCharWidth() const
 */
 HB_FUNC_STATIC( QRAWFONT_MAXCHARWIDTH )
 {
@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QRAWFONT_PATHFORGLYPH )
 }
 
 /*
-qreal pixelSize () const
+qreal pixelSize() const
 */
 HB_FUNC_STATIC( QRAWFONT_PIXELSIZE )
 {
@@ -764,7 +764,7 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTSCHARACTER )
 }
 
 /*
-qreal unitsPerEm () const
+qreal unitsPerEm() const
 */
 HB_FUNC_STATIC( QRAWFONT_UNITSPEREM )
 {
@@ -812,7 +812,7 @@ HB_FUNC_STATIC( QRAWFONT_WEIGHT )
 }
 
 /*
-qreal xHeight () const
+qreal xHeight() const
 */
 HB_FUNC_STATIC( QRAWFONT_XHEIGHT )
 {

@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_ISLAYOUT )
 }
 
 /*
-qreal maximumHeight () const
+qreal maximumHeight() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MAXIMUMHEIGHT )
 {
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MAXIMUMSIZE )
 }
 
 /*
-qreal maximumWidth () const
+qreal maximumWidth() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MAXIMUMWIDTH )
 {
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MAXIMUMWIDTH )
 }
 
 /*
-qreal minimumHeight () const
+qreal minimumHeight() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MINIMUMHEIGHT )
 {
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MINIMUMSIZE )
 }
 
 /*
-qreal minimumWidth () const
+qreal minimumWidth() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MINIMUMWIDTH )
 {
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PARENTLAYOUTITEM )
 }
 
 /*
-qreal preferredHeight () const
+qreal preferredHeight() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PREFERREDHEIGHT )
 {
@@ -492,7 +492,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PREFERREDSIZE )
 }
 
 /*
-qreal preferredWidth () const
+qreal preferredWidth() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PREFERREDWIDTH )
 {

@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QFONT_LASTRESORTFONT )
 }
 
 /*
-qreal letterSpacing () const
+qreal letterSpacing() const
 */
 HB_FUNC_STATIC( QFONT_LETTERSPACING )
 {
@@ -627,7 +627,7 @@ HB_FUNC_STATIC( QFONT_POINTSIZE )
 }
 
 /*
-qreal pointSizeF () const
+qreal pointSizeF() const
 */
 HB_FUNC_STATIC( QFONT_POINTSIZEF )
 {
@@ -1462,7 +1462,7 @@ HB_FUNC_STATIC( QFONT_WEIGHT )
 }
 
 /*
-qreal wordSpacing () const
+qreal wordSpacing() const
 */
 HB_FUNC_STATIC( QFONT_WORDSPACING )
 {

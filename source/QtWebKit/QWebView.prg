@@ -604,7 +604,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETTINGS )
 }
 
 /*
-qreal textSizeMultiplier () const
+qreal textSizeMultiplier() const
 */
 HB_FUNC_STATIC( QWEBVIEW_TEXTSIZEMULTIPLIER )
 {
@@ -703,7 +703,7 @@ HB_FUNC_STATIC( QWEBVIEW_URL )
 }
 
 /*
-qreal zoomFactor () const
+qreal zoomFactor() const
 */
 HB_FUNC_STATIC( QWEBVIEW_ZOOMFACTOR )
 {

@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ANCHOR )
 }
 
 /*
-qreal horizontalSpacing () const
+qreal horizontalSpacing() const
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_HORIZONTALSPACING )
 {
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETVERTICALSPACING )
 }
 
 /*
-qreal verticalSpacing () const
+qreal verticalSpacing() const
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_VERTICALSPACING )
 {

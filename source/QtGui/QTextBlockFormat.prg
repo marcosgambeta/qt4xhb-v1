@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_ALIGNMENT )
 }
 
 /*
-qreal bottomMargin () const
+qreal bottomMargin() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_BOTTOMMARGIN )
 {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_ISVALID )
 }
 
 /*
-qreal leftMargin () const
+qreal leftMargin() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LEFTMARGIN )
 {
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_PAGEBREAKPOLICY )
 }
 
 /*
-qreal rightMargin () const
+qreal rightMargin() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_RIGHTMARGIN )
 {
@@ -617,7 +617,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETTOPMARGIN )
 }
 
 /*
-qreal textIndent () const
+qreal textIndent() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_TEXTINDENT )
 {
@@ -641,7 +641,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_TEXTINDENT )
 }
 
 /*
-qreal topMargin () const
+qreal topMargin() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_TOPMARGIN )
 {

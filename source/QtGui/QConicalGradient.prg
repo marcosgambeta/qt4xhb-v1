@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_NEW )
 }
 
 /*
-qreal angle () const
+qreal angle() const
 */
 HB_FUNC_STATIC( QCONICALGRADIENT_ANGLE )
 {

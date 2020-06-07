@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QSTATICTEXT_TEXTOPTION )
 }
 
 /*
-qreal textWidth () const
+qreal textWidth() const
 */
 HB_FUNC_STATIC( QSTATICTEXT_TEXTWIDTH )
 {

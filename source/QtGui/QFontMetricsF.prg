@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_DELETE )
 }
 
 /*
-qreal ascent () const
+qreal ascent() const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_ASCENT )
 {
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_ASCENT )
 }
 
 /*
-qreal averageCharWidth () const
+qreal averageCharWidth() const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_AVERAGECHARWIDTH )
 {
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_BOUNDINGRECT )
 }
 
 /*
-qreal descent () const
+qreal descent() const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_DESCENT )
 {
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_ELIDEDTEXT )
 }
 
 /*
-qreal height () const
+qreal height() const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_HEIGHT )
 {
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_INFONTUCS4 )
 }
 
 /*
-qreal leading () const
+qreal leading() const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_LEADING )
 {
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_LEFTBEARING )
 }
 
 /*
-qreal lineSpacing () const
+qreal lineSpacing() const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_LINESPACING )
 {
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_LINESPACING )
 }
 
 /*
-qreal lineWidth () const
+qreal lineWidth() const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_LINEWIDTH )
 {
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_LINEWIDTH )
 }
 
 /*
-qreal maxWidth () const
+qreal maxWidth() const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_MAXWIDTH )
 {
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_MAXWIDTH )
 }
 
 /*
-qreal minLeftBearing () const
+qreal minLeftBearing() const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_MINLEFTBEARING )
 {
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_MINLEFTBEARING )
 }
 
 /*
-qreal minRightBearing () const
+qreal minRightBearing() const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_MINRIGHTBEARING )
 {
@@ -563,7 +563,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_MINRIGHTBEARING )
 }
 
 /*
-qreal overlinePos () const
+qreal overlinePos() const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_OVERLINEPOS )
 {
@@ -638,7 +638,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_SIZE )
 }
 
 /*
-qreal strikeOutPos () const
+qreal strikeOutPos() const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_STRIKEOUTPOS )
 {
@@ -687,7 +687,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_TIGHTBOUNDINGRECT )
 }
 
 /*
-qreal underlinePos () const
+qreal underlinePos() const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_UNDERLINEPOS )
 {
@@ -758,7 +758,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_WIDTH )
 }
 
 /*
-qreal xHeight () const
+qreal xHeight() const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_XHEIGHT )
 {

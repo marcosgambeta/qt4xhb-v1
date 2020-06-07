@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTKERNING )
 }
 
 /*
-qreal fontLetterSpacing () const
+qreal fontLetterSpacing() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTLETTERSPACING )
 {
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTOVERLINE )
 }
 
 /*
-qreal fontPointSize () const
+qreal fontPointSize() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTPOINTSIZE )
 {
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTWEIGHT )
 }
 
 /*
-qreal fontWordSpacing () const
+qreal fontWordSpacing() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTWORDSPACING )
 {

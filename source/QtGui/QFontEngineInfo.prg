@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_FAMILY )
 }
 
 /*
-qreal pixelSize () const
+qreal pixelSize() const
 */
 HB_FUNC_STATIC( QFONTENGINEINFO_PIXELSIZE )
 {

@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_DELETE )
 }
 
 /*
-qreal height () const
+qreal height() const
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_HEIGHT )
 {
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETWIDTH )
 }
 
 /*
-qreal width () const
+qreal width() const
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_WIDTH )
 {

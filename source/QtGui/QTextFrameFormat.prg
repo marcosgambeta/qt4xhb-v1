@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_DELETE )
 }
 
 /*
-qreal border () const
+qreal border() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BORDER )
 {
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BORDERSTYLE )
 }
 
 /*
-qreal bottomMargin () const
+qreal bottomMargin() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BOTTOMMARGIN )
 {
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_ISVALID )
 }
 
 /*
-qreal leftMargin () const
+qreal leftMargin() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_LEFTMARGIN )
 {
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_LEFTMARGIN )
 }
 
 /*
-qreal margin () const
+qreal margin() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_MARGIN )
 {
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_MARGIN )
 }
 
 /*
-qreal padding () const
+qreal padding() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_PADDING )
 {
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_POSITION )
 }
 
 /*
-qreal rightMargin () const
+qreal rightMargin() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_RIGHTMARGIN )
 {
@@ -779,7 +779,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETWIDTH )
 }
 
 /*
-qreal topMargin () const
+qreal topMargin() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_TOPMARGIN )
 {

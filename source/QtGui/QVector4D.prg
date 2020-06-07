@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QVECTOR4D_ISNULL )
 }
 
 /*
-qreal length () const
+qreal length() const
 */
 HB_FUNC_STATIC( QVECTOR4D_LENGTH )
 {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QVECTOR4D_LENGTH )
 }
 
 /*
-qreal lengthSquared () const
+qreal lengthSquared() const
 */
 HB_FUNC_STATIC( QVECTOR4D_LENGTHSQUARED )
 {
@@ -592,7 +592,7 @@ HB_FUNC_STATIC( QVECTOR4D_TOVECTOR3DAFFINE )
 }
 
 /*
-qreal w () const
+qreal w() const
 */
 HB_FUNC_STATIC( QVECTOR4D_W )
 {
@@ -616,7 +616,7 @@ HB_FUNC_STATIC( QVECTOR4D_W )
 }
 
 /*
-qreal x () const
+qreal x() const
 */
 HB_FUNC_STATIC( QVECTOR4D_X )
 {
@@ -640,7 +640,7 @@ HB_FUNC_STATIC( QVECTOR4D_X )
 }
 
 /*
-qreal y () const
+qreal y() const
 */
 HB_FUNC_STATIC( QVECTOR4D_Y )
 {
@@ -664,7 +664,7 @@ HB_FUNC_STATIC( QVECTOR4D_Y )
 }
 
 /*
-qreal z () const
+qreal z() const
 */
 HB_FUNC_STATIC( QVECTOR4D_Z )
 {

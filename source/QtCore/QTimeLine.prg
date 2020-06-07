@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QTIMELINE_CURRENTTIME )
 }
 
 /*
-qreal currentValue () const
+qreal currentValue() const
 */
 HB_FUNC_STATIC( QTIMELINE_CURRENTVALUE )
 {

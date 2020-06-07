@@ -860,7 +860,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_HASFOCUS )
 }
 
 /*
-qreal height () const
+qreal height() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_HEIGHT )
 {
@@ -2223,7 +2223,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_VIEWS )
 }
 
 /*
-qreal width () const
+qreal width() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_WIDTH )
 {

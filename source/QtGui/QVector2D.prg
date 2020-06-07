@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QVECTOR2D_ISNULL )
 }
 
 /*
-qreal length () const
+qreal length() const
 */
 HB_FUNC_STATIC( QVECTOR2D_LENGTH )
 {
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QVECTOR2D_LENGTH )
 }
 
 /*
-qreal lengthSquared () const
+qreal lengthSquared() const
 */
 HB_FUNC_STATIC( QVECTOR2D_LENGTHSQUARED )
 {
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QVECTOR2D_TOVECTOR4D )
 }
 
 /*
-qreal x () const
+qreal x() const
 */
 HB_FUNC_STATIC( QVECTOR2D_X )
 {
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QVECTOR2D_X )
 }
 
 /*
-qreal y () const
+qreal y() const
 */
 HB_FUNC_STATIC( QVECTOR2D_Y )
 {

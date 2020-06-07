@@ -660,7 +660,7 @@ HB_FUNC_STATIC( QTEXTEDIT_FONTITALIC )
 }
 
 /*
-qreal fontPointSize () const
+qreal fontPointSize() const
 */
 HB_FUNC_STATIC( QTEXTEDIT_FONTPOINTSIZE )
 {

@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SIZEPOLICY )
 }
 
 /*
-qreal spacing () const
+qreal spacing() const
 */
 HB_FUNC_STATIC( QGRAPHICSANCHOR_SPACING )
 {

@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_DELETE )
 }
 
 /*
-qreal ascent () const
+qreal ascent() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_ASCENT )
 {
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_ASCENT )
 }
 
 /*
-qreal descent () const
+qreal descent() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_DESCENT )
 {
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_FORMATINDEX )
 }
 
 /*
-qreal height () const
+qreal height() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_HEIGHT )
 {
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_TEXTPOSITION )
 }
 
 /*
-qreal width () const
+qreal width() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_WIDTH )
 {

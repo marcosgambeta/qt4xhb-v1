@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QDIAL_NOTCHSIZE )
 }
 
 /*
-qreal notchTarget () const
+qreal notchTarget() const
 */
 HB_FUNC_STATIC( QDIAL_NOTCHTARGET )
 {
