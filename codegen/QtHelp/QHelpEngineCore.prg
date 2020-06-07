@@ -37,8 +37,7 @@ $deleteMethod
 $prototype=bool addCustomFilter ( const QString & filterName, const QStringList & attributes )
 $method=|bool|addCustomFilter|const QString &,const QStringList &
 
-$prototype=bool autoSaveFilter () const
-$method=|bool|autoSaveFilter|
+$prototypeV2=bool autoSaveFilter() const
 
 $prototype=QString collectionFile () const
 $method=|QString|collectionFile|
@@ -122,8 +121,7 @@ $method=|void|setCurrentFilter|const QString &
 $prototype=bool setCustomValue ( const QString & key, const QVariant & value )
 $method=|bool|setCustomValue|const QString &,const QVariant &
 
-$prototype=bool setupData ()
-$method=|bool|setupData|
+$prototypeV2=bool setupData()
 
 $prototype=bool unregisterDocumentation ( const QString & namespaceName )
 $method=|bool|unregisterDocumentation|const QString &
