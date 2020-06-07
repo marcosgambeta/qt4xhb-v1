@@ -95,8 +95,7 @@ $method=|Qt::TextFormat|textFormat|
 $prototype=QTextOption textOption () const
 $method=|QTextOption|textOption|
 
-$prototype=qreal textWidth () const
-$method=|qreal|textWidth|
+$prototypeV2=qreal textWidth() const
 
 $extraMethods
 

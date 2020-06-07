@@ -30,8 +30,7 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=qreal ascent () const
-$method=|qreal|ascent|
+$prototypeV2=qreal ascent() const
 
 $prototype=qreal cursorToX ( int * cursorPos, Edge edge = Leading ) const
 $method=|qreal|cursorToX,cursorToX1|int *,QTextLine::Edge=QTextLine::Leading
@@ -63,19 +62,15 @@ HB_FUNC_STATIC( QTEXTLINE_CURSORTOX )
 }
 $addMethod=cursorToX
 
-$prototype=qreal descent () const
-$method=|qreal|descent|
+$prototypeV2=qreal descent() const
 
-$prototype=qreal height () const
-$method=|qreal|height|
+$prototypeV2=qreal height() const
 
-$prototype=qreal horizontalAdvance () const
-$method=|qreal|horizontalAdvance|
+$prototypeV2=qreal horizontalAdvance() const
 
 $prototypeV2=bool isValid() const
 
-$prototype=qreal leading () const
-$method=|qreal|leading|
+$prototypeV2=qreal leading() const
 
 $prototypeV2=bool leadingIncluded() const
 
@@ -84,8 +79,7 @@ $prototypeV2=int lineNumber() const
 $prototype=QRectF naturalTextRect () const
 $method=|QRectF|naturalTextRect|
 
-$prototype=qreal naturalTextWidth () const
-$method=|qreal|naturalTextWidth|
+$prototypeV2=qreal naturalTextWidth() const
 
 $prototype=QPointF position () const
 $method=|QPointF|position|
@@ -134,17 +128,14 @@ $prototypeV2=int textLength() const
 
 $prototypeV2=int textStart() const
 
-$prototype=qreal width () const
-$method=|qreal|width|
+$prototypeV2=qreal width() const
 
-$prototype=qreal x () const
-$method=|qreal|x|
+$prototypeV2=qreal x() const
 
 $prototype=int xToCursor ( qreal x, CursorPosition cpos = CursorBetweenCharacters ) const
 $method=|int|xToCursor|qreal,QTextLine::CursorPosition=QTextLine::CursorBetweenCharacters
 
-$prototype=qreal y () const
-$method=|qreal|y|
+$prototypeV2=qreal y() const
 
 $extraMethods
 

@@ -33,11 +33,9 @@ $deleteMethod
 $prototype=Qt::Alignment alignment () const
 $method=|Qt::Alignment|alignment|
 
-$prototype=qreal cellPadding () const
-$method=|qreal|cellPadding|
+$prototypeV2=qreal cellPadding() const
 
-$prototype=qreal cellSpacing () const
-$method=|qreal|cellSpacing|
+$prototypeV2=qreal cellSpacing() const
 
 $prototype=void clearColumnWidthConstraints ()
 $method=|void|clearColumnWidthConstraints|

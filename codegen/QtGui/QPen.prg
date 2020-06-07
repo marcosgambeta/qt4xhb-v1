@@ -88,8 +88,7 @@ $method=|Qt::PenCapStyle|capStyle|
 $prototype=QColor color () const
 $method=|QColor|color|
 
-$prototype=qreal dashOffset () const
-$method=|qreal|dashOffset|
+$prototypeV2=qreal dashOffset() const
 
 $prototype=QVector<qreal> dashPattern () const
 $method=|QVector<qreal>|dashPattern|
@@ -101,8 +100,7 @@ $prototypeV2=bool isSolid() const
 $prototype=Qt::PenJoinStyle joinStyle () const
 $method=|Qt::PenJoinStyle|joinStyle|
 
-$prototype=qreal miterLimit () const
-$method=|qreal|miterLimit|
+$prototypeV2=qreal miterLimit() const
 
 $prototype=void setBrush ( const QBrush & brush )
 $method=|void|setBrush|const QBrush &
@@ -142,8 +140,7 @@ $method=|Qt::PenStyle|style|
 
 $prototypeV2=int width() const
 
-$prototype=qreal widthF () const
-$method=|qreal|widthF|
+$prototypeV2=qreal widthF() const
 
 $extraMethods
 

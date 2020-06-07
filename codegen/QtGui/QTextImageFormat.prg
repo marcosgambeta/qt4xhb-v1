@@ -30,8 +30,7 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=qreal height () const
-$method=|qreal|height|
+$prototypeV2=qreal height() const
 
 $prototypeV2=bool isValid() const
 
@@ -46,7 +45,6 @@ $method=|void|setName|const QString &
 $prototype=void setWidth ( qreal width )
 $method=|void|setWidth|qreal
 
-$prototype=qreal width () const
-$method=|qreal|width|
+$prototypeV2=qreal width() const
 
 #pragma ENDDUMP

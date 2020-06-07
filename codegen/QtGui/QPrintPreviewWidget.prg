@@ -67,8 +67,7 @@ $prototypeV2=int pageCount() const
 $prototype=ViewMode viewMode () const
 $method=|QPrintPreviewWidget::ViewMode|viewMode|
 
-$prototype=qreal zoomFactor () const
-$method=|qreal|zoomFactor|
+$prototypeV2=qreal zoomFactor() const
 
 $prototype=ZoomMode zoomMode () const
 $method=|QPrintPreviewWidget::ZoomMode|zoomMode|

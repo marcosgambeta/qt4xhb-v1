@@ -44,37 +44,31 @@ $method=|QGraphicsItem *|graphicsItem|
 
 $prototypeV2=bool isLayout() const
 
-$prototype=qreal maximumHeight () const
-$method=|qreal|maximumHeight|
+$prototypeV2=qreal maximumHeight() const
 
 $prototype=QSizeF maximumSize () const
 $method=|QSizeF|maximumSize|
 
-$prototype=qreal maximumWidth () const
-$method=|qreal|maximumWidth|
+$prototypeV2=qreal maximumWidth() const
 
-$prototype=qreal minimumHeight () const
-$method=|qreal|minimumHeight|
+$prototypeV2=qreal minimumHeight() const
 
 $prototype=QSizeF minimumSize () const
 $method=|QSizeF|minimumSize|
 
-$prototype=qreal minimumWidth () const
-$method=|qreal|minimumWidth|
+$prototypeV2=qreal minimumWidth() const
 
 $prototypeV2=bool ownedByLayout() const
 
 $prototype=QGraphicsLayoutItem * parentLayoutItem () const
 $method=|QGraphicsLayoutItem *|parentLayoutItem|
 
-$prototype=qreal preferredHeight () const
-$method=|qreal|preferredHeight|
+$prototypeV2=qreal preferredHeight() const
 
 $prototype=QSizeF preferredSize () const
 $method=|QSizeF|preferredSize|
 
-$prototype=qreal preferredWidth () const
-$method=|qreal|preferredWidth|
+$prototypeV2=qreal preferredWidth() const
 
 $prototype=virtual void setGeometry ( const QRectF & rect )
 $virtualMethod=|void|setGeometry|const QRectF &

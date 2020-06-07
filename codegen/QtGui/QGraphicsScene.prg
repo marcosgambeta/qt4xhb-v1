@@ -211,8 +211,7 @@ $method=|QBrush|foregroundBrush|
 
 $prototypeV2=bool hasFocus() const
 
-$prototype=qreal height () const
-$method=|qreal|height|
+$prototypeV2=qreal height() const
 
 $prototype=virtual QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
 $virtualMethod=|QVariant|inputMethodQuery|Qt::InputMethodQuery
@@ -506,8 +505,7 @@ $addMethod=update
 $prototype=QList<QGraphicsView *> views () const
 $method=|QList<QGraphicsView *>|views|
 
-$prototype=qreal width () const
-$method=|qreal|width|
+$prototypeV2=qreal width() const
 
 $prototype=void advance ()
 $method=|void|advance|

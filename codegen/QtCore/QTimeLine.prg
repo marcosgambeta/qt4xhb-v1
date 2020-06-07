@@ -36,8 +36,7 @@ $prototypeV2=int currentFrame() const
 
 $prototypeV2=int currentTime() const
 
-$prototype=qreal currentValue () const
-$method=|qreal|currentValue|
+$prototypeV2=qreal currentValue() const
 
 $prototype=CurveShape curveShape () const
 $method=|QTimeLine::CurveShape|curveShape|

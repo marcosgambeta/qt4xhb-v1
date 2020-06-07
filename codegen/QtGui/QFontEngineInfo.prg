@@ -65,8 +65,7 @@ $deleteMethod
 
 $prototypeV2=QString family() const
 
-$prototype=qreal pixelSize () const
-$method=|qreal|pixelSize|
+$prototypeV2=qreal pixelSize() const
 
 $prototype=void setFamily ( const QString & name )
 $method=|void|setFamily|const QString &

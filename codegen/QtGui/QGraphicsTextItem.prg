@@ -113,8 +113,7 @@ $method=|QTextCursor|textCursor|
 $prototype=Qt::TextInteractionFlags textInteractionFlags () const
 $method=|Qt::TextInteractionFlags|textInteractionFlags|
 
-$prototype=qreal textWidth () const
-$method=|qreal|textWidth|
+$prototypeV2=qreal textWidth() const
 
 $prototypeV2=QString toHtml() const
 

@@ -81,8 +81,7 @@ $method=|qreal|columnSpacing|int
 $prototype=int columnStretchFactor ( int column ) const
 $method=|int|columnStretchFactor|int
 
-$prototype=qreal horizontalSpacing () const
-$method=|qreal|horizontalSpacing|
+$prototypeV2=qreal horizontalSpacing() const
 
 $prototype=QGraphicsLayoutItem * itemAt ( int row, int column ) const
 $internalMethod=|QGraphicsLayoutItem *|itemAt,itemAt1|int,int
@@ -189,8 +188,7 @@ $method=|void|setSpacing|qreal
 $prototype=void setVerticalSpacing ( qreal spacing )
 $method=|void|setVerticalSpacing|qreal
 
-$prototype=qreal verticalSpacing () const
-$method=|qreal|verticalSpacing|
+$prototypeV2=qreal verticalSpacing() const
 
 $prototypeV2=virtual int count() const
 

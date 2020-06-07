@@ -27,11 +27,9 @@ $includes
 
 $deleteMethod
 
-$prototype=qreal ascent () const
-$method=|qreal|ascent|
+$prototypeV2=qreal ascent() const
 
-$prototype=qreal descent () const
-$method=|qreal|descent|
+$prototypeV2=qreal descent() const
 
 $prototype=QFont font () const
 $method=|QFont|font|
@@ -41,8 +39,7 @@ $method=|QTextItem::RenderFlags|renderFlags|
 
 $prototypeV2=QString text() const
 
-$prototype=qreal width () const
-$method=|qreal|width|
+$prototypeV2=qreal width() const
 
 $extraMethods
 

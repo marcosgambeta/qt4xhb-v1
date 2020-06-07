@@ -30,19 +30,16 @@ $prototype=QTextInlineObject ( int i, QTextEngine * e )
 
 $deleteMethod
 
-$prototype=qreal ascent () const
-$method=|qreal|ascent|
+$prototypeV2=qreal ascent() const
 
-$prototype=qreal descent () const
-$method=|qreal|descent|
+$prototypeV2=qreal descent() const
 
 $prototype=QTextFormat format () const
 $method=|QTextFormat|format|
 
 $prototypeV2=int formatIndex() const
 
-$prototype=qreal height () const
-$method=|qreal|height|
+$prototypeV2=qreal height() const
 
 $prototypeV2=bool isValid() const
 
@@ -63,8 +60,7 @@ $method=|Qt::LayoutDirection|textDirection|
 
 $prototypeV2=int textPosition() const
 
-$prototype=qreal width () const
-$method=|qreal|width|
+$prototypeV2=qreal width() const
 
 $extraMethods
 

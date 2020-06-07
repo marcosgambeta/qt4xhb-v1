@@ -154,8 +154,7 @@ $prototypeV2=QString fontFamily() const
 
 $prototypeV2=bool fontItalic() const
 
-$prototype=qreal fontPointSize () const
-$method=|qreal|fontPointSize|
+$prototypeV2=qreal fontPointSize() const
 
 $prototypeV2=bool fontUnderline() const
 

@@ -30,8 +30,7 @@ $constructor=|new|QDeclarativeItem *=0
 
 $deleteMethod
 
-$prototype=qreal baselineOffset () const
-$method=|qreal|baselineOffset|
+$prototypeV2=qreal baselineOffset() const
 
 $prototype=QDeclarativeItem * childAt ( qreal x, qreal y ) const
 $method=|QDeclarativeItem *|childAt|qreal,qreal
@@ -44,11 +43,9 @@ $prototypeV2=bool clip() const
 $prototype=void forceActiveFocus ()
 $method=|void|forceActiveFocus|
 
-$prototype=qreal implicitHeight () const
-$method=|qreal|implicitHeight|
+$prototypeV2=qreal implicitHeight() const
 
-$prototype=qreal implicitWidth () const
-$method=|qreal|implicitWidth|
+$prototypeV2=qreal implicitWidth() const
 
 $prototypeV2=bool keepMouseGrab() const
 

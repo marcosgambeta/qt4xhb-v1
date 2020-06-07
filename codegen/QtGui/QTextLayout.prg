@@ -134,11 +134,9 @@ $prototypeV2=int lineCount() const
 $prototype=QTextLine lineForTextPosition ( int pos ) const
 $method=|QTextLine|lineForTextPosition|int
 
-$prototype=qreal maximumWidth () const
-$method=|qreal|maximumWidth|
+$prototypeV2=qreal maximumWidth() const
 
-$prototype=qreal minimumWidth () const
-$method=|qreal|minimumWidth|
+$prototypeV2=qreal minimumWidth() const
 
 $prototype=int nextCursorPosition ( int oldPos, CursorMode mode = SkipCharacters ) const
 $method=|int|nextCursorPosition|int,QTextLayout::CursorMode=QTextLayout::SkipCharacters

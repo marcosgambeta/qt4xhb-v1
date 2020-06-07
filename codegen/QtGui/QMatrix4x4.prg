@@ -87,8 +87,7 @@ $deleteMethod
 $prototype=QVector4D column ( int index ) const
 $method=|QVector4D|column|int
 
-$prototype=qreal determinant () const
-$method=|qreal|determinant|
+$prototypeV2=qreal determinant() const
 
 $prototype=void fill ( qreal value )
 $method=|void|fill|qreal

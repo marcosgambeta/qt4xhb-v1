@@ -47,14 +47,11 @@ $method=|void|setYScale|qreal
 $prototype=void setZScale ( qreal )
 $method=|void|setZScale|qreal
 
-$prototype=qreal xScale () const
-$method=|qreal|xScale|
+$prototypeV2=qreal xScale() const
 
-$prototype=qreal yScale () const
-$method=|qreal|yScale|
+$prototypeV2=qreal yScale() const
 
-$prototype=qreal zScale () const
-$method=|qreal|zScale|
+$prototypeV2=qreal zScale() const
 
 $prototype=virtual void applyTo ( QMatrix4x4 * matrix ) const
 $virtualMethod=|void|applyTo|QMatrix4x4 *

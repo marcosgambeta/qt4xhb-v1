@@ -108,11 +108,9 @@ $deleteMethod
 
 $prototypeV2=bool isNull() const
 
-$prototype=qreal length () const
-$method=|qreal|length|
+$prototypeV2=qreal length() const
 
-$prototype=qreal lengthSquared () const
-$method=|qreal|lengthSquared|
+$prototypeV2=qreal lengthSquared() const
 
 $prototype=void normalize ()
 $method=|void|normalize|
@@ -150,17 +148,13 @@ $method=|QVector3D|toVector3D|
 $prototype=QVector3D toVector3DAffine () const
 $method=|QVector3D|toVector3DAffine|
 
-$prototype=qreal w () const
-$method=|qreal|w|
+$prototypeV2=qreal w() const
 
-$prototype=qreal x () const
-$method=|qreal|x|
+$prototypeV2=qreal x() const
 
-$prototype=qreal y () const
-$method=|qreal|y|
+$prototypeV2=qreal y() const
 
-$prototype=qreal z () const
-$method=|qreal|z|
+$prototypeV2=qreal z() const
 
 $prototype=static qreal dotProduct ( const QVector4D & v1, const QVector4D & v2 )
 $staticMethod=|qreal|dotProduct|const QVector4D &,const QVector4D &

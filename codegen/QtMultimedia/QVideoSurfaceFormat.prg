@@ -67,8 +67,7 @@ $deleteMethod
 
 $prototypeV2=int frameHeight() const
 
-$prototype=qreal frameRate () const
-$method=|qreal|frameRate|
+$prototypeV2=qreal frameRate() const
 
 $prototype=QSize frameSize () const
 $method=|QSize|frameSize|

@@ -69,8 +69,7 @@ $method=|QSizeF|boundedTo|const QSizeF &
 $prototype=QSizeF expandedTo ( const QSizeF & otherSize ) const
 $method=|QSizeF|expandedTo|const QSizeF &
 
-$prototype=qreal height () const
-$method=|qreal|height|
+$prototypeV2=qreal height() const
 
 $prototypeV2=bool isEmpty() const
 
@@ -118,8 +117,7 @@ $method=|QSize|toSize|
 $prototype=void transpose ()
 $method=|void|transpose|
 
-$prototype=qreal width () const
-$method=|qreal|width|
+$prototypeV2=qreal width() const
 
 $extraMethods
 

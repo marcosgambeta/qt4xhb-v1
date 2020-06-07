@@ -32,8 +32,7 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=qreal blurRadius () const
-$method=|qreal|blurRadius|
+$prototypeV2=qreal blurRadius() const
 
 $prototype=QColor color () const
 $method=|QColor|color|
@@ -41,11 +40,9 @@ $method=|QColor|color|
 $prototype=QPointF offset () const
 $method=|QPointF|offset|
 
-$prototype=qreal xOffset () const
-$method=|qreal|xOffset|
+$prototypeV2=qreal xOffset() const
 
-$prototype=qreal yOffset () const
-$method=|qreal|yOffset|
+$prototypeV2=qreal yOffset() const
 
 $prototype=virtual QRectF boundingRectFor ( const QRectF & rect ) const
 $virtualMethod=|QRectF|boundingRectFor|const QRectF &

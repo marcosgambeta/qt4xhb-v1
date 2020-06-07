@@ -77,34 +77,26 @@ $method=|QPointF|p1|
 $prototype=QPointF p2() const
 $method=|QPointF|p2|
 
-$prototype=qreal x1() const
-$method=|qreal|x1|
+$prototypeV2=qreal x1() const
 
-$prototype=qreal x2() const
-$method=|qreal|x2|
+$prototypeV2=qreal x2() const
 
-$prototype=qreal y1() const
-$method=|qreal|y1|
+$prototypeV2=qreal y1() const
 
-$prototype=qreal y2() const
-$method=|qreal|y2|
+$prototypeV2=qreal y2() const
 
-$prototype=qreal angle() const
-$method=|qreal|angle|
+$prototypeV2=qreal angle() const
 
 $prototype=qreal angleTo(const QLineF & line) const
 $method=|qreal|angleTo|const QLineF &
 
-$prototype=qreal dx() const
-$method=|qreal|dx|
+$prototypeV2=qreal dx() const
 
-$prototype=qreal dy() const
-$method=|qreal|dy|
+$prototypeV2=qreal dy() const
 
 $prototypeV2=bool isNull() const
 
-$prototype=qreal length() const
-$method=|qreal|length|
+$prototypeV2=qreal length() const
 
 $prototype=QLineF normalVector() const
 $method=|QLineF|normalVector|

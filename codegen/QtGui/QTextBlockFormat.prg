@@ -33,15 +33,13 @@ $deleteMethod
 $prototype=Qt::Alignment alignment () const
 $method=|Qt::Alignment|alignment|
 
-$prototype=qreal bottomMargin () const
-$method=|qreal|bottomMargin|
+$prototypeV2=qreal bottomMargin() const
 
 $prototypeV2=int indent() const
 
 $prototypeV2=bool isValid() const
 
-$prototype=qreal leftMargin () const
-$method=|qreal|leftMargin|
+$prototypeV2=qreal leftMargin() const
 
 $prototype=qreal lineHeight ( qreal scriptLineHeight, qreal scaling ) const
 $internalMethod=|qreal|lineHeight,lineHeight1|qreal,qreal
@@ -78,8 +76,7 @@ $prototypeV2=bool nonBreakableLines() const
 $prototype=PageBreakFlags pageBreakPolicy () const
 $method=|QTextFormat::PageBreakFlags|pageBreakPolicy|
 
-$prototype=qreal rightMargin () const
-$method=|qreal|rightMargin|
+$prototypeV2=qreal rightMargin() const
 
 $prototype=void setAlignment ( Qt::Alignment alignment )
 $method=|void|setAlignment|Qt::Alignment
@@ -111,10 +108,8 @@ $method=|void|setTextIndent|qreal
 $prototype=void setTopMargin ( qreal margin )
 $method=|void|setTopMargin|qreal
 
-$prototype=qreal textIndent () const
-$method=|qreal|textIndent|
+$prototypeV2=qreal textIndent() const
 
-$prototype=qreal topMargin () const
-$method=|qreal|topMargin|
+$prototypeV2=qreal topMargin() const
 
 #pragma ENDDUMP

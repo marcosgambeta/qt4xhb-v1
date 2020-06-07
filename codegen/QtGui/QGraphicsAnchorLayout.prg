@@ -42,8 +42,7 @@ $method=|void|addCornerAnchors|QGraphicsLayoutItem *,Qt::Corner,QGraphicsLayoutI
 $prototype=QGraphicsAnchor * anchor ( QGraphicsLayoutItem * firstItem, Qt::AnchorPoint firstEdge, QGraphicsLayoutItem * secondItem, Qt::AnchorPoint secondEdge )
 $method=|QGraphicsAnchor *|anchor|QGraphicsLayoutItem *,Qt::AnchorPoint,QGraphicsLayoutItem *,Qt::AnchorPoint
 
-$prototype=qreal horizontalSpacing () const
-$method=|qreal|horizontalSpacing|
+$prototypeV2=qreal horizontalSpacing() const
 
 $prototype=void setHorizontalSpacing ( qreal spacing )
 $method=|void|setHorizontalSpacing|qreal
@@ -54,8 +53,7 @@ $method=|void|setSpacing|qreal
 $prototype=void setVerticalSpacing ( qreal spacing )
 $method=|void|setVerticalSpacing|qreal
 
-$prototype=qreal verticalSpacing () const
-$method=|qreal|verticalSpacing|
+$prototypeV2=qreal verticalSpacing() const
 
 $prototypeV2=virtual int count() const
 

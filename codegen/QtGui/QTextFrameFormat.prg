@@ -30,8 +30,7 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=qreal border () const
-$method=|qreal|border|
+$prototypeV2=qreal border() const
 
 $prototype=QBrush borderBrush () const
 $method=|QBrush|borderBrush|
@@ -39,22 +38,18 @@ $method=|QBrush|borderBrush|
 $prototype=BorderStyle borderStyle () const
 $method=|QTextFrameFormat::BorderStyle|borderStyle|
 
-$prototype=qreal bottomMargin () const
-$method=|qreal|bottomMargin|
+$prototypeV2=qreal bottomMargin() const
 
 $prototype=QTextLength height () const
 $method=|QTextLength|height|
 
 $prototypeV2=bool isValid() const
 
-$prototype=qreal leftMargin () const
-$method=|qreal|leftMargin|
+$prototypeV2=qreal leftMargin() const
 
-$prototype=qreal margin () const
-$method=|qreal|margin|
+$prototypeV2=qreal margin() const
 
-$prototype=qreal padding () const
-$method=|qreal|padding|
+$prototypeV2=qreal padding() const
 
 $prototype=PageBreakFlags pageBreakPolicy () const
 $method=|QTextFormat::PageBreakFlags|pageBreakPolicy|
@@ -62,8 +57,7 @@ $method=|QTextFormat::PageBreakFlags|pageBreakPolicy|
 $prototype=Position position () const
 $method=|QTextFrameFormat::Position|position|
 
-$prototype=qreal rightMargin () const
-$method=|qreal|rightMargin|
+$prototypeV2=qreal rightMargin() const
 
 $prototype=void setBorder ( qreal width )
 $method=|void|setBorder|qreal
@@ -154,8 +148,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETWIDTH )
 }
 $addMethod=setWidth
 
-$prototype=qreal topMargin () const
-$method=|qreal|topMargin|
+$prototypeV2=qreal topMargin() const
 
 $prototype=QTextLength width () const
 $method=|QTextLength|width|

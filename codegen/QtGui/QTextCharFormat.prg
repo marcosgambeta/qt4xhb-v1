@@ -52,13 +52,11 @@ $prototypeV2=bool fontItalic() const
 
 $prototypeV2=bool fontKerning() const
 
-$prototype=qreal fontLetterSpacing () const
-$method=|qreal|fontLetterSpacing|
+$prototypeV2=qreal fontLetterSpacing() const
 
 $prototypeV2=bool fontOverline() const
 
-$prototype=qreal fontPointSize () const
-$method=|qreal|fontPointSize|
+$prototypeV2=qreal fontPointSize() const
 
 $prototypeV2=bool fontStrikeOut() const
 
@@ -72,8 +70,7 @@ $prototypeV2=bool fontUnderline() const
 
 $prototypeV2=int fontWeight() const
 
-$prototype=qreal fontWordSpacing () const
-$method=|qreal|fontWordSpacing|
+$prototypeV2=qreal fontWordSpacing() const
 
 $prototypeV2=bool isAnchor() const
 

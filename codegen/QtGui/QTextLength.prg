@@ -55,8 +55,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=qreal rawValue () const
-$method=|qreal|rawValue|
+$prototypeV2=qreal rawValue() const
 
 $prototype=Type type () const
 $method=|QTextLength::Type|type|

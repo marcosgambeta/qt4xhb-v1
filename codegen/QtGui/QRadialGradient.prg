@@ -157,20 +157,17 @@ HB_FUNC_STATIC( QRADIALGRADIENT_SETFOCALPOINT )
 }
 $addMethod=setFocalPoint
 
-$prototype=qreal radius() const
-$method=|qreal|radius|
+$prototypeV2=qreal radius() const
 
 $prototype=void setRadius(qreal radius)
 $method=|void|setRadius|qreal
 
-$prototype=qreal centerRadius() const
-$method=|qreal|centerRadius|
+$prototypeV2=qreal centerRadius() const
 
 $prototype=void setCenterRadius(qreal radius)
 $method=|void|setCenterRadius|qreal
 
-$prototype=qreal focalRadius() const
-$method=|qreal|focalRadius|
+$prototypeV2=qreal focalRadius() const
 
 $prototype=void setFocalRadius(qreal radius)
 $method=|void|setFocalRadius|qreal

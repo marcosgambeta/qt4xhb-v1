@@ -55,14 +55,11 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=qreal amplitude () const
-$method=|qreal|amplitude|
+$prototypeV2=qreal amplitude() const
 
-$prototype=qreal overshoot () const
-$method=|qreal|overshoot|
+$prototypeV2=qreal overshoot() const
 
-$prototype=qreal period () const
-$method=|qreal|period|
+$prototypeV2=qreal period() const
 
 $prototype=void setAmplitude ( qreal amplitude )
 $method=|void|setAmplitude|qreal

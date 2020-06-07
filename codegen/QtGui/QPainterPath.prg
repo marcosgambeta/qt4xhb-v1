@@ -368,8 +368,7 @@ $addMethod=intersects
 
 $prototypeV2=bool isEmpty() const
 
-$prototype=qreal length () const
-$method=|qreal|length|
+$prototypeV2=qreal length() const
 
 $prototype=void lineTo ( const QPointF & endPoint )
 $internalMethod=|void|lineTo,lineTo1|const QPointF &

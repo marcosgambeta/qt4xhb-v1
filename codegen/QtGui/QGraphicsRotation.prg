@@ -32,8 +32,7 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=qreal angle () const
-$method=|qreal|angle|
+$prototypeV2=qreal angle() const
 
 $prototype=QVector3D axis () const
 $method=|QVector3D|axis|

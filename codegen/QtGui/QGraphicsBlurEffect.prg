@@ -35,8 +35,7 @@ $deleteMethod
 $prototype=BlurHints blurHints () const
 $method=|QGraphicsBlurEffect::BlurHints|blurHints|
 
-$prototype=qreal blurRadius () const
-$method=|qreal|blurRadius|
+$prototypeV2=qreal blurRadius() const
 
 $prototype=virtual QRectF boundingRectFor ( const QRectF & rect ) const
 $virtualMethod=|QRectF|boundingRectFor|const QRectF &

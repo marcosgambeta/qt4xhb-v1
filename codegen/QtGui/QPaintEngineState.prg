@@ -58,8 +58,7 @@ $method=|QFont|font|
 
 $prototypeV2=bool isClipEnabled() const
 
-$prototype=qreal opacity () const
-$method=|qreal|opacity|
+$prototypeV2=qreal opacity() const
 
 $prototype=QPainter * painter () const
 $method=|QPainter *|painter|

@@ -65,8 +65,7 @@ $deleteMethod
 
 $prototypeV2=bool isNull() const
 
-$prototype=qreal manhattanLength() const
-$method=|qreal|manhattanLength|
+$prototypeV2=qreal manhattanLength() const
 
 $prototype=void setX(qreal x)
 $method=|void|setX|qreal
@@ -77,11 +76,9 @@ $method=|void|setY|qreal
 $prototype=QPoint toPoint() const
 $method=|QPoint|toPoint|
 
-$prototype=qreal x() const
-$method=|qreal|x|
+$prototypeV2=qreal x() const
 
-$prototype=qreal y() const
-$method=|qreal|y|
+$prototypeV2=qreal y() const
 
 $extraMethods
 

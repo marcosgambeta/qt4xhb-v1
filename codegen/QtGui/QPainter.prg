@@ -1187,8 +1187,7 @@ $prototypeV2=bool isActive() const
 $prototype=Qt::LayoutDirection layoutDirection () const
 $method=|Qt::LayoutDirection|layoutDirection|
 
-$prototype=qreal opacity () const
-$method=|qreal|opacity|
+$prototypeV2=qreal opacity() const
 
 $prototype=QPaintEngine * paintEngine () const
 $method=|QPaintEngine *|paintEngine|

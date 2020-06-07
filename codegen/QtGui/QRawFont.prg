@@ -90,14 +90,11 @@ $addMethod=advancesForGlyphIndexes
 $prototype=QImage alphaMapForGlyph ( quint32 glyphIndex, AntialiasingType antialiasingType = SubPixelAntialiasing, const QTransform & transform = QTransform() ) const
 $method=|QImage|alphaMapForGlyph|quint32,QRawFont::AntialiasingType=QRawFont::SubPixelAntialiasing,const QTransform &=QTransform()
 
-$prototype=qreal ascent () const
-$method=|qreal|ascent|
+$prototypeV2=qreal ascent() const
 
-$prototype=qreal averageCharWidth () const
-$method=|qreal|averageCharWidth|
+$prototypeV2=qreal averageCharWidth() const
 
-$prototype=qreal descent () const
-$method=|qreal|descent|
+$prototypeV2=qreal descent() const
 
 $prototypeV2=QString familyName() const
 
@@ -112,8 +109,7 @@ $method=|QFont::HintingPreference|hintingPreference|
 
 $prototypeV2=bool isValid() const
 
-$prototype=qreal leading () const
-$method=|qreal|leading|
+$prototypeV2=qreal leading() const
 
 $prototype=void loadFromData ( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference )
 $method=|void|loadFromData|const QByteArray &,qreal,QFont::HintingPreference
@@ -121,14 +117,12 @@ $method=|void|loadFromData|const QByteArray &,qreal,QFont::HintingPreference
 $prototype=void loadFromFile ( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference )
 $method=|void|loadFromFile|const QString &,qreal,QFont::HintingPreference
 
-$prototype=qreal maxCharWidth () const
-$method=|qreal|maxCharWidth|
+$prototypeV2=qreal maxCharWidth() const
 
 $prototype=QPainterPath pathForGlyph ( quint32 glyphIndex ) const
 $method=|QPainterPath|pathForGlyph|quint32
 
-$prototype=qreal pixelSize () const
-$method=|qreal|pixelSize|
+$prototypeV2=qreal pixelSize() const
 
 $prototype=void setPixelSize ( qreal pixelSize )
 $method=|void|setPixelSize|qreal
@@ -169,13 +163,11 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTSCHARACTER )
 }
 $addMethod=supportsCharacter
 
-$prototype=qreal unitsPerEm () const
-$method=|qreal|unitsPerEm|
+$prototypeV2=qreal unitsPerEm() const
 
 $prototypeV2=int weight() const
 
-$prototype=qreal xHeight () const
-$method=|qreal|xHeight|
+$prototypeV2=qreal xHeight() const
 
 $prototype=static QRawFont fromFont ( const QFont & font, QFontDatabase::WritingSystem writingSystem = QFontDatabase::Any )
 $staticMethod=|QRawFont|fromFont|const QFont &,QFontDatabase::WritingSystem=QFontDatabase::Any

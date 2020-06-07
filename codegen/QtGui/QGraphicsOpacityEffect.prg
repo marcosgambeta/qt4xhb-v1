@@ -32,8 +32,7 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=qreal opacity () const
-$method=|qreal|opacity|
+$prototypeV2=qreal opacity() const
 
 $prototype=QBrush opacityMask () const
 $method=|QBrush|opacityMask|

@@ -47,11 +47,9 @@ $prototypeV2=int globalX() const
 
 $prototypeV2=int globalY() const
 
-$prototype=qreal hiResGlobalX() const
-$method=|qreal|hiResGlobalX|
+$prototypeV2=qreal hiResGlobalX() const
 
-$prototype=qreal hiResGlobalY() const
-$method=|qreal|hiResGlobalY|
+$prototypeV2=qreal hiResGlobalY() const
 
 $prototype=TabletDevice device() const
 $method=|QTabletEvent::TabletDevice|device|
@@ -62,16 +60,13 @@ $method=|QTabletEvent::PointerType|pointerType|
 $prototype=qint64 uniqueId() const
 $method=|qint64|uniqueId|
 
-$prototype=qreal pressure() const
-$method=|qreal|pressure|
+$prototypeV2=qreal pressure() const
 
 $prototypeV2=int z() const
 
-$prototype=qreal tangentialPressure() const
-$method=|qreal|tangentialPressure|
+$prototypeV2=qreal tangentialPressure() const
 
-$prototype=qreal rotation() const
-$method=|qreal|rotation|
+$prototypeV2=qreal rotation() const
 
 $prototypeV2=int xTilt() const
 

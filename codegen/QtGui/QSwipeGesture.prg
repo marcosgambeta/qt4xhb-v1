@@ -33,8 +33,7 @@ $method=|QSwipeGesture::SwipeDirection|horizontalDirection|
 $prototype=void setSwipeAngle ( qreal value )
 $method=|void|setSwipeAngle|qreal
 
-$prototype=qreal swipeAngle () const
-$method=|qreal|swipeAngle|
+$prototypeV2=qreal swipeAngle() const
 
 $prototype=SwipeDirection verticalDirection () const
 $method=|QSwipeGesture::SwipeDirection|verticalDirection|

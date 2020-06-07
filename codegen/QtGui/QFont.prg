@@ -103,8 +103,7 @@ $prototypeV2=QString lastResortFamily() const
 
 $prototypeV2=QString lastResortFont() const
 
-$prototype=qreal letterSpacing () const
-$method=|qreal|letterSpacing|
+$prototypeV2=qreal letterSpacing() const
 
 $prototype=SpacingType letterSpacingType () const
 $method=|QFont::SpacingType|letterSpacingType|
@@ -115,8 +114,7 @@ $prototypeV2=int pixelSize() const
 
 $prototypeV2=int pointSize() const
 
-$prototype=qreal pointSizeF () const
-$method=|qreal|pointSizeF|
+$prototypeV2=qreal pointSizeF() const
 
 $prototypeV2=bool rawMode() const
 
@@ -207,8 +205,7 @@ $prototypeV2=bool underline() const
 
 $prototypeV2=int weight() const
 
-$prototype=qreal wordSpacing () const
-$method=|qreal|wordSpacing|
+$prototypeV2=qreal wordSpacing() const
 
 $prototype=static void insertSubstitution ( const QString & familyName, const QString & substituteName )
 $staticMethod=|void|insertSubstitution|const QString &,const QString &

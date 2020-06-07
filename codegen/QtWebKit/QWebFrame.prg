@@ -222,8 +222,7 @@ $method=|void|setUrl|const QUrl &
 $prototype=void setZoomFactor ( qreal factor )
 $method=|void|setZoomFactor|qreal
 
-$prototype=qreal textSizeMultiplier () const
-$method=|qreal|textSizeMultiplier|
+$prototypeV2=qreal textSizeMultiplier() const
 
 $prototypeV2=QString title() const
 
@@ -234,8 +233,7 @@ $prototypeV2=QString toPlainText() const
 $prototype=QUrl url () const
 $method=|QUrl|url|
 
-$prototype=qreal zoomFactor () const
-$method=|qreal|zoomFactor|
+$prototypeV2=qreal zoomFactor() const
 
 $prototype=QVariant evaluateJavaScript ( const QString & scriptSource )
 $method=|QVariant|evaluateJavaScript|const QString &

@@ -101,8 +101,7 @@ $prototypeV2=bool isReady() const
 $prototype=void loadUrl ( const QUrl & url )
 $method=|void|loadUrl|const QUrl &
 
-$prototype=qreal progress () const
-$method=|qreal|progress|
+$prototypeV2=qreal progress() const
 
 $prototype=void setData ( const QByteArray & data, const QUrl & url )
 $method=|void|setData|const QByteArray &,const QUrl &

@@ -50,8 +50,7 @@ $virtualMethod=|QRectF|boundingRect|
 $prototype=QRegion boundingRegion ( const QTransform & itemToDeviceTransform ) const
 $method=|QRegion|boundingRegion|const QTransform &
 
-$prototype=qreal boundingRegionGranularity () const
-$method=|qreal|boundingRegionGranularity|
+$prototypeV2=qreal boundingRegionGranularity() const
 
 $prototype=CacheMode cacheMode () const
 $method=|QGraphicsItem::CacheMode|cacheMode|
@@ -92,8 +91,7 @@ $method=|QVariant|data|int
 $prototype=QTransform deviceTransform ( const QTransform & viewportTransform ) const
 $method=|QTransform|deviceTransform|const QTransform &
 
-$prototype=qreal effectiveOpacity () const
-$method=|qreal|effectiveOpacity|
+$prototypeV2=qreal effectiveOpacity() const
 
 $prototype=void ensureVisible ( const QRectF & rect = QRectF(), int xmargin = 50, int ymargin = 50 )
 $internalMethod=|void|ensureVisible,ensureVisible1|const QRectF &=QRectF(),int=50,int=50
@@ -756,8 +754,7 @@ $addMethod=mapToScene
 $prototype=void moveBy ( qreal dx, qreal dy )
 $method=|void|moveBy|qreal,qreal
 
-$prototype=qreal opacity () const
-$method=|qreal|opacity|
+$prototypeV2=qreal opacity() const
 
 $prototype=virtual QPainterPath opaqueArea () const
 $virtualMethod=|QPainterPath|opaqueArea|
@@ -789,11 +786,9 @@ $method=|void|removeSceneEventFilter|QGraphicsItem *
 $prototype=void resetTransform ()
 $method=|void|resetTransform|
 
-$prototype=qreal rotation () const
-$method=|qreal|rotation|
+$prototypeV2=qreal rotation() const
 
-$prototype=qreal scale () const
-$method=|qreal|scale|
+$prototypeV2=qreal scale() const
 
 $prototype=QGraphicsScene * scene () const
 $method=|QGraphicsScene *|scene|
@@ -1045,14 +1040,11 @@ $addMethod=update
 $prototype=QGraphicsWidget * window () const
 $method=|QGraphicsWidget *|window|
 
-$prototype=qreal x () const
-$method=|qreal|x|
+$prototypeV2=qreal x() const
 
-$prototype=qreal y () const
-$method=|qreal|y|
+$prototypeV2=qreal y() const
 
-$prototype=qreal zValue () const
-$method=|qreal|zValue|
+$prototypeV2=qreal zValue() const
 
 $extraMethods
 

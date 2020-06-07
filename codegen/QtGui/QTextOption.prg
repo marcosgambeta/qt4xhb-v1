@@ -93,8 +93,7 @@ $method=|void|setWrapMode|QTextOption::WrapMode
 $prototype=QList<qreal> tabArray () const
 $method=|QList<qreal>|tabArray|
 
-$prototype=qreal tabStop () const
-$method=|qreal|tabStop|
+$prototypeV2=qreal tabStop() const
 
 $prototype=Qt::LayoutDirection textDirection () const
 $method=|Qt::LayoutDirection|textDirection|

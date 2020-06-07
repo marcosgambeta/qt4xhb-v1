@@ -30,16 +30,13 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=qreal bottomPadding () const
-$method=|qreal|bottomPadding|
+$prototypeV2=qreal bottomPadding() const
 
 $prototypeV2=bool isValid() const
 
-$prototype=qreal leftPadding () const
-$method=|qreal|leftPadding|
+$prototypeV2=qreal leftPadding() const
 
-$prototype=qreal rightPadding () const
-$method=|qreal|rightPadding|
+$prototypeV2=qreal rightPadding() const
 
 $prototype=void setBottomPadding ( qreal padding )
 $method=|void|setBottomPadding|qreal
@@ -56,7 +53,6 @@ $method=|void|setRightPadding|qreal
 $prototype=void setTopPadding ( qreal padding )
 $method=|void|setTopPadding|qreal
 
-$prototype=qreal topPadding () const
-$method=|qreal|topPadding|
+$prototypeV2=qreal topPadding() const
 
 #pragma ENDDUMP

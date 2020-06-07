@@ -71,44 +71,32 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=qreal m11 () const
-$method=|qreal|m11|
+$prototypeV2=qreal m11() const
 
-$prototype=qreal m12 () const
-$method=|qreal|m12|
+$prototypeV2=qreal m12() const
 
-$prototype=qreal m13 () const
-$method=|qreal|m13|
+$prototypeV2=qreal m13() const
 
-$prototype=qreal m21 () const
-$method=|qreal|m21|
+$prototypeV2=qreal m21() const
 
-$prototype=qreal m22 () const
-$method=|qreal|m22|
+$prototypeV2=qreal m22() const
 
-$prototype=qreal m23 () const
-$method=|qreal|m23|
+$prototypeV2=qreal m23() const
 
-$prototype=qreal m31 () const
-$method=|qreal|m31|
+$prototypeV2=qreal m31() const
 
-$prototype=qreal m32 () const
-$method=|qreal|m32|
+$prototypeV2=qreal m32() const
 
-$prototype=qreal m33 () const
-$method=|qreal|m33|
+$prototypeV2=qreal m33() const
 
 $prototype=QTransform adjoint () const
 $method=|QTransform|adjoint|
 
-$prototype=qreal determinant () const
-$method=|qreal|determinant|
+$prototypeV2=qreal determinant() const
 
-$prototype=qreal dx () const
-$method=|qreal|dx|
+$prototypeV2=qreal dx() const
 
-$prototype=qreal dy () const
-$method=|qreal|dy|
+$prototypeV2=qreal dy() const
 
 $prototype=QTransform inverted ( bool * invertible = 0 ) const
 $method=|QTransform|inverted|bool *=0

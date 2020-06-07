@@ -109,8 +109,7 @@ $method=|QTextOption|defaultTextOption|
 $prototype=QAbstractTextDocumentLayout * documentLayout () const
 $method=|QAbstractTextDocumentLayout *|documentLayout|
 
-$prototype=qreal documentMargin () const
-$method=|qreal|documentMargin|
+$prototypeV2=qreal documentMargin() const
 
 $prototype=void drawContents ( QPainter * p, const QRectF & rect = QRectF() )
 $method=|void|drawContents|QPainter *,const QRectF &=QRectF()
@@ -174,11 +173,9 @@ $method=|QTextBlock|findBlockByNumber|int
 $prototype=QTextBlock firstBlock () const
 $method=|QTextBlock|firstBlock|
 
-$prototype=qreal idealWidth () const
-$method=|qreal|idealWidth|
+$prototypeV2=qreal idealWidth() const
 
-$prototype=qreal indentWidth () const
-$method=|qreal|indentWidth|
+$prototypeV2=qreal indentWidth() const
 
 $prototypeV2=bool isEmpty() const
 
@@ -273,8 +270,7 @@ $method=|void|setUseDesignMetrics|bool
 $prototype=QSizeF size () const
 $method=|QSizeF|size|
 
-$prototype=qreal textWidth () const
-$method=|qreal|textWidth|
+$prototypeV2=qreal textWidth() const
 
 $prototype=QString toHtml ( const QByteArray & encoding = QByteArray() ) const
 $method=|QString|toHtml|const QByteArray &=QByteArray()

@@ -69,8 +69,7 @@ $prototypeV2=int pixelSize() const
 
 $prototypeV2=int pointSize() const
 
-$prototype=qreal pointSizeF () const
-$method=|qreal|pointSizeF|
+$prototypeV2=qreal pointSizeF() const
 
 $prototypeV2=bool rawMode() const
 

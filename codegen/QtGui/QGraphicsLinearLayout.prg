@@ -94,8 +94,7 @@ $method=|void|setSpacing|qreal
 $prototype=void setStretchFactor ( QGraphicsLayoutItem * item, int stretch )
 $method=|void|setStretchFactor|QGraphicsLayoutItem *,int
 
-$prototype=qreal spacing () const
-$method=|qreal|spacing|
+$prototypeV2=qreal spacing() const
 
 $prototype=int stretchFactor ( QGraphicsLayoutItem * item ) const
 $method=|int|stretchFactor|QGraphicsLayoutItem *

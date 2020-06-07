@@ -32,8 +32,7 @@ $deleteMethod
 
 $prototypeV2=int notchSize() const
 
-$prototype=qreal notchTarget () const
-$method=|qreal|notchTarget|
+$prototypeV2=qreal notchTarget() const
 
 $prototypeV2=bool notchesVisible() const
 

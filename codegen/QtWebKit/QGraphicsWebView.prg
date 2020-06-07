@@ -115,8 +115,7 @@ $method=|void|triggerPageAction|QWebPage::WebAction,bool=false
 $prototype=QUrl url () const
 $method=|QUrl|url|
 
-$prototype=qreal zoomFactor () const
-$method=|qreal|zoomFactor|
+$prototypeV2=qreal zoomFactor() const
 
 $prototype=void back ()
 $method=|void|back|

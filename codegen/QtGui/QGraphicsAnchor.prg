@@ -36,8 +36,7 @@ $method=|void|setSpacing|qreal
 $prototype=QSizePolicy::Policy sizePolicy () const
 $method=|QSizePolicy::Policy|sizePolicy|
 
-$prototype=qreal spacing () const
-$method=|qreal|spacing|
+$prototypeV2=qreal spacing() const
 
 $prototype=void unsetSpacing ()
 $method=|void|unsetSpacing|

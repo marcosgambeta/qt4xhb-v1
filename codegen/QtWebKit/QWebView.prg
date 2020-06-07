@@ -113,8 +113,7 @@ $method=|void|setZoomFactor|qreal
 $prototype=QWebSettings * settings () const
 $method=|QWebSettings *|settings|
 
-$prototype=qreal textSizeMultiplier () const
-$method=|qreal|textSizeMultiplier|
+$prototypeV2=qreal textSizeMultiplier() const
 
 $prototypeV2=QString title() const
 
@@ -124,8 +123,7 @@ $method=|void|triggerPageAction|QWebPage::WebAction,bool=false
 $prototype=QUrl url () const
 $method=|QUrl|url|
 
-$prototype=qreal zoomFactor () const
-$method=|qreal|zoomFactor|
+$prototypeV2=qreal zoomFactor() const
 
 $prototype=void back ()
 $method=|void|back|

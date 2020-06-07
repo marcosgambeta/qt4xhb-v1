@@ -1089,8 +1089,7 @@ $prototypeV2=QString windowIconText() const
 $prototype=Qt::WindowModality windowModality () const
 $method=|Qt::WindowModality|windowModality|
 
-$prototype=qreal windowOpacity () const
-$method=|qreal|windowOpacity|
+$prototypeV2=qreal windowOpacity() const
 
 $prototypeV2=QString windowRole() const
 
