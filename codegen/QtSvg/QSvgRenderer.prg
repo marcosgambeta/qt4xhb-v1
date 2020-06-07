@@ -73,8 +73,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=bool animated () const
-$method=|bool|animated|
+$prototypeV2=bool animated() const
 
 $prototype=QRectF boundsOnElement ( const QString & id ) const
 $method=|QRectF|boundsOnElement|const QString &
@@ -87,8 +86,7 @@ $method=|bool|elementExists|const QString &
 
 $prototypeV2=int framesPerSecond() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=QMatrix matrixForElement ( const QString & id ) const
 $method=|QMatrix|matrixForElement|const QString &
