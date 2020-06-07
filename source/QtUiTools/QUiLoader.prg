@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEWIDGET )
 }
 
 /*
-bool isLanguageChangeEnabled () const
+bool isLanguageChangeEnabled() const
 */
 HB_FUNC_STATIC( QUILOADER_ISLANGUAGECHANGEENABLED )
 {
