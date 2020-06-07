@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QSVGRENDERER_DELETE )
 }
 
 /*
-bool animated () const
+bool animated() const
 */
 HB_FUNC_STATIC( QSVGRENDERER_ANIMATED )
 {
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QSVGRENDERER_FRAMESPERSECOND )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QSVGRENDERER_ISVALID )
 {
