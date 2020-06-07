@@ -43,8 +43,7 @@ $method=|QAction *|action|QScriptEngineDebugger::DebuggerAction
 $prototype=void attachTo ( QScriptEngine * engine )
 $method=|void|attachTo|QScriptEngine *
 
-$prototype=bool autoShowStandardWindow () const
-$method=|bool|autoShowStandardWindow|
+$prototypeV2=bool autoShowStandardWindow() const
 
 $prototype=QMenu * createStandardMenu ( QWidget * parent = 0 )
 $method=|QMenu *|createStandardMenu|QWidget *=0
