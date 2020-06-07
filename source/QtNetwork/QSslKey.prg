@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QSSLKEY_CLEAR )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QSSLKEY_ISNULL )
 {

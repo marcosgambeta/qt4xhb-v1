@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QFTP_GET )
 }
 
 /*
-bool hasPendingCommands () const
+bool hasPendingCommands() const
 */
 HB_FUNC_STATIC( QFTP_HASPENDINGCOMMANDS )
 {

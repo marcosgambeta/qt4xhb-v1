@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QLOCALSERVER_FULLSERVERNAME )
 }
 
 /*
-virtual bool hasPendingConnections () const
+virtual bool hasPendingConnections() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_HASPENDINGCONNECTIONS )
 {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QLOCALSERVER_HASPENDINGCONNECTIONS )
 }
 
 /*
-bool isListening () const
+bool isListening() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_ISLISTENING )
 {

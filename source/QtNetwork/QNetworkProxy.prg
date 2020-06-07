@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_HOSTNAME )
 }
 
 /*
-bool isCachingProxy () const
+bool isCachingProxy() const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_ISCACHINGPROXY )
 {
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_ISCACHINGPROXY )
 }
 
 /*
-bool isTransparentProxy () const
+bool isTransparentProxy() const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_ISTRANSPARENTPROXY )
 {

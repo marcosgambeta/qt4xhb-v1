@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QTCPSERVER_ERRORSTRING )
 }
 
 /*
-virtual bool hasPendingConnections () const
+virtual bool hasPendingConnections() const
 */
 HB_FUNC_STATIC( QTCPSERVER_HASPENDINGCONNECTIONS )
 {
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QTCPSERVER_HASPENDINGCONNECTIONS )
 }
 
 /*
-bool isListening () const
+bool isListening() const
 */
 HB_FUNC_STATIC( QTCPSERVER_ISLISTENING )
 {

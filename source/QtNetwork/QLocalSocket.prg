@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ERROR )
 }
 
 /*
-bool flush ()
+bool flush()
 */
 HB_FUNC_STATIC( QLOCALSOCKET_FLUSH )
 {
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_FULLSERVERNAME )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QLOCALSOCKET_ISVALID )
 {
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_BYTESTOWRITE )
 }
 
 /*
-virtual bool canReadLine () const
+virtual bool canReadLine() const
 */
 HB_FUNC_STATIC( QLOCALSOCKET_CANREADLINE )
 {
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_CLOSE )
 }
 
 /*
-virtual bool isSequential () const
+virtual bool isSequential() const
 */
 HB_FUNC_STATIC( QLOCALSOCKET_ISSEQUENTIAL )
 {

@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QUDPSOCKET_BIND )
 }
 
 /*
-bool hasPendingDatagrams () const
+bool hasPendingDatagrams() const
 */
 HB_FUNC_STATIC( QUDPSOCKET_HASPENDINGDATAGRAMS )
 {

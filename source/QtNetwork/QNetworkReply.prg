@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_IGNORESSLERRORS )
 }
 
 /*
-bool isFinished () const
+bool isFinished() const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_ISFINISHED )
 {
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ISFINISHED )
 }
 
 /*
-bool isRunning () const
+bool isRunning() const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_ISRUNNING )
 {

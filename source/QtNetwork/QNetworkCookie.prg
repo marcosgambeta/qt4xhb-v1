@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_EXPIRATIONDATE )
 }
 
 /*
-bool isHttpOnly () const
+bool isHttpOnly() const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_ISHTTPONLY )
 {
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_ISHTTPONLY )
 }
 
 /*
-bool isSecure () const
+bool isSecure() const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_ISSECURE )
 {
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_ISSECURE )
 }
 
 /*
-bool isSessionCookie () const
+bool isSessionCookie() const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_ISSESSIONCOOKIE )
 {

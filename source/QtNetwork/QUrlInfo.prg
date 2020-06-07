@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QURLINFO_GROUP )
 }
 
 /*
-bool isDir () const
+bool isDir() const
 */
 HB_FUNC_STATIC( QURLINFO_ISDIR )
 {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QURLINFO_ISDIR )
 }
 
 /*
-bool isExecutable () const
+bool isExecutable() const
 */
 HB_FUNC_STATIC( QURLINFO_ISEXECUTABLE )
 {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QURLINFO_ISEXECUTABLE )
 }
 
 /*
-bool isFile () const
+bool isFile() const
 */
 HB_FUNC_STATIC( QURLINFO_ISFILE )
 {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QURLINFO_ISFILE )
 }
 
 /*
-bool isReadable () const
+bool isReadable() const
 */
 HB_FUNC_STATIC( QURLINFO_ISREADABLE )
 {
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QURLINFO_ISREADABLE )
 }
 
 /*
-bool isSymLink () const
+bool isSymLink() const
 */
 HB_FUNC_STATIC( QURLINFO_ISSYMLINK )
 {
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QURLINFO_ISSYMLINK )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QURLINFO_ISVALID )
 {
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QURLINFO_ISVALID )
 }
 
 /*
-bool isWritable () const
+bool isWritable() const
 */
 HB_FUNC_STATIC( QURLINFO_ISWRITABLE )
 {

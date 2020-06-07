@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ENCRYPTEDBYTESTOWRITE )
 }
 
 /*
-bool flush ()
+bool flush()
 */
 HB_FUNC_STATIC( QSSLSOCKET_FLUSH )
 {
@@ -542,7 +542,7 @@ HB_FUNC_STATIC( QSSLSOCKET_IGNORESSLERRORS )
 }
 
 /*
-bool isEncrypted () const
+bool isEncrypted() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_ISENCRYPTED )
 {
@@ -1363,7 +1363,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORENCRYPTED )
 }
 
 /*
-virtual bool atEnd () const
+virtual bool atEnd() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_ATEND )
 {
@@ -1435,7 +1435,7 @@ HB_FUNC_STATIC( QSSLSOCKET_BYTESTOWRITE )
 }
 
 /*
-virtual bool canReadLine () const
+virtual bool canReadLine() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_CANREADLINE )
 {
@@ -1883,7 +1883,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SUPPORTEDCIPHERS )
 }
 
 /*
-static bool supportsSsl ()
+static bool supportsSsl()
 */
 HB_FUNC_STATIC( QSSLSOCKET_SUPPORTSSSL )
 {

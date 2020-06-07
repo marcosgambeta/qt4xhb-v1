@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_CIPHERS )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_ISNULL )
 {

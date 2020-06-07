@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_INTERFACE )
 }
 
 /*
-bool isOpen () const
+bool isOpen() const
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ISOPEN )
 {

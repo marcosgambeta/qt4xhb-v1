@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QHOSTADDRESS_ISNULL )
 {

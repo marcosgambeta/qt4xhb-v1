@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_INDEX )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_ISVALID )
 {
