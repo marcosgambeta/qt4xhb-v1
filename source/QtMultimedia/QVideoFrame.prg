@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_HEIGHT )
 }
 
 /*
-bool isMapped () const
+bool isMapped() const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_ISMAPPED )
 {
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_ISMAPPED )
 }
 
 /*
-bool isReadable () const
+bool isReadable() const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_ISREADABLE )
 {
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_ISREADABLE )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_ISVALID )
 {
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_ISVALID )
 }
 
 /*
-bool isWritable () const
+bool isWritable() const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_ISWRITABLE )
 {

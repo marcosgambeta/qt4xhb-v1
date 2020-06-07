@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_DELETE )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_ISVALID )
 {

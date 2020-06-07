@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ERROR )
 }
 
 /*
-bool isActive () const
+bool isActive() const
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ISACTIVE )
 {
