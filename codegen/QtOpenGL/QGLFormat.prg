@@ -64,33 +64,27 @@ $addMethod=new
 $prototype=~QGLFormat()
 $deleteMethod
 
-$prototype=bool accum () const
-$method=|bool|accum|
+$prototypeV2=bool accum() const
 
 $prototypeV2=int accumBufferSize() const
 
-$prototype=bool alpha () const
-$method=|bool|alpha|
+$prototypeV2=bool alpha() const
 
 $prototypeV2=int alphaBufferSize() const
 
 $prototypeV2=int blueBufferSize() const
 
-$prototype=bool depth () const
-$method=|bool|depth|
+$prototypeV2=bool depth() const
 
 $prototypeV2=int depthBufferSize() const
 
-$prototype=bool directRendering () const
-$method=|bool|directRendering|
+$prototypeV2=bool directRendering() const
 
-$prototype=bool doubleBuffer () const
-$method=|bool|doubleBuffer|
+$prototypeV2=bool doubleBuffer() const
 
 $prototypeV2=int greenBufferSize() const
 
-$prototype=bool hasOverlay () const
-$method=|bool|hasOverlay|
+$prototypeV2=bool hasOverlay() const
 
 $prototypeV2=int majorVersion() const
 
@@ -103,11 +97,9 @@ $method=|QGLFormat::OpenGLContextProfile|profile|
 
 $prototypeV2=int redBufferSize() const
 
-$prototype=bool rgba () const
-$method=|bool|rgba|
+$prototypeV2=bool rgba() const
 
-$prototype=bool sampleBuffers () const
-$method=|bool|sampleBuffers|
+$prototypeV2=bool sampleBuffers() const
 
 $prototypeV2=int samples() const
 
@@ -180,13 +172,11 @@ $method=|void|setSwapInterval|int
 $prototype=void setVersion ( int major, int minor )
 $method=|void|setVersion|int,int
 
-$prototype=bool stencil () const
-$method=|bool|stencil|
+$prototypeV2=bool stencil() const
 
 $prototypeV2=int stencilBufferSize() const
 
-$prototype=bool stereo () const
-$method=|bool|stereo|
+$prototypeV2=bool stereo() const
 
 $prototypeV2=int swapInterval() const
 
@@ -199,11 +189,9 @@ $staticMethod=|QGLFormat|defaultFormat|
 $prototype=static QGLFormat defaultOverlayFormat ()
 $staticMethod=|QGLFormat|defaultOverlayFormat|
 
-$prototype=static bool hasOpenGL ()
-$staticMethod=|bool|hasOpenGL|
+$prototypeV2=static bool hasOpenGL()
 
-$prototype=static bool hasOpenGLOverlays ()
-$staticMethod=|bool|hasOpenGLOverlays|
+$prototypeV2=static bool hasOpenGLOverlays()
 
 $prototype=static OpenGLVersionFlags openGLVersionFlags ()
 $staticMethod=|QGLFormat::OpenGLVersionFlags|openGLVersionFlags|

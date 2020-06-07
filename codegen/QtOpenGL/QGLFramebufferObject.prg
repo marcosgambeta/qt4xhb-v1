@@ -93,8 +93,7 @@ $deleteMethod
 $prototype=Attachment attachment () const
 $method=|QGLFramebufferObject::Attachment|attachment|
 
-$prototype=bool bind ()
-$method=|bool|bind|
+$prototypeV2=bool bind()
 
 $prototype=void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 $internalMethod=|void|drawTexture,drawTexture1|const QRectF &,GLuint,GLenum=GL_TEXTURE_2D
@@ -130,14 +129,11 @@ $method=|QGLFramebufferObjectFormat|format|
 $prototype=GLuint handle () const
 $method=|GLuint|handle|
 
-$prototype=bool isBound () const
-$method=|bool|isBound|
+$prototypeV2=bool isBound() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=bool release ()
-$method=|bool|release|
+$prototypeV2=bool release()
 
 $prototype=QSize size () const
 $method=|QSize|size|
@@ -154,10 +150,8 @@ $virtualMethod=|QPaintEngine *|paintEngine|
 $prototype=static void blitFramebuffer ( QGLFramebufferObject * target, const QRect & targetRect, QGLFramebufferObject * source, const QRect & sourceRect, GLbitfield buffers = GL_COLOR_BUFFER_BIT, GLenum filter = GL_NEAREST )
 $staticMethod=|void|blitFramebuffer|QGLFramebufferObject *,const QRect &,QGLFramebufferObject *,const QRect &,GLbitfield=GL_COLOR_BUFFER_BIT,GLenum=GL_NEAREST
 
-$prototype=static bool hasOpenGLFramebufferBlit ()
-$staticMethod=|bool|hasOpenGLFramebufferBlit|
+$prototypeV2=static bool hasOpenGLFramebufferBlit()
 
-$prototype=static bool hasOpenGLFramebufferObjects ()
-$staticMethod=|bool|hasOpenGLFramebufferObjects|
+$prototypeV2=static bool hasOpenGLFramebufferObjects()
 
 #pragma ENDDUMP

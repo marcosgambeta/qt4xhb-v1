@@ -133,8 +133,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_ATTRIBUTELOCATION )
 }
 $addMethod=attributeLocation
 
-$prototype=bool bind ()
-$method=|bool|bind|
+$prototypeV2=bool bind()
 
 $prototype=void bindAttributeLocation ( const char * name, int location )
 $method=|void|bindAttributeLocation,bindAttributeLocation1|const char *,int
@@ -236,11 +235,9 @@ $method=|GLenum|geometryOutputType|
 
 $prototypeV2=int geometryOutputVertexCount() const
 
-$prototype=bool isLinked () const
-$method=|bool|isLinked|
+$prototypeV2=bool isLinked() const
 
-$prototype=virtual bool link ()
-$virtualMethod=|bool|link|
+$prototypeV2=virtual bool link()
 
 $prototype=QString log () const
 $method=|QString|log|

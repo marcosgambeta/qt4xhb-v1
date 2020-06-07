@@ -91,20 +91,17 @@ HB_FUNC_STATIC( QGLBUFFER_ALLOCATE )
 }
 $addMethod=allocate
 
-$prototype=bool bind ()
-$method=|bool|bind|
+$prototypeV2=bool bind()
 
 $prototype=GLuint bufferId () const
 $method=|GLuint|bufferId|
 
-$prototype=bool create ()
-$method=|bool|create|
+$prototypeV2=bool create()
 
 $prototype=void destroy ()
 $method=|void|destroy|
 
-$prototype=bool isCreated () const
-$method=|bool|isCreated|
+$prototypeV2=bool isCreated() const
 
 $prototype=void * map ( QGLBuffer::Access access )
 $method=|void *|map|QGLBuffer::Access
@@ -120,8 +117,7 @@ $prototypeV2=int size() const
 $prototype=QGLBuffer::Type type () const
 $method=|QGLBuffer::Type|type|
 
-$prototype=bool unmap ()
-$method=|bool|unmap|
+$prototypeV2=bool unmap()
 
 $prototype=QGLBuffer::UsagePattern usagePattern () const
 $method=|QGLBuffer::UsagePattern|usagePattern|

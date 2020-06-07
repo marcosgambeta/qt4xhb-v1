@@ -128,11 +128,9 @@ $method=|QGLFormat|format|
 $prototype=void * getProcAddress ( const QString & proc ) const
 $method=|void *|getProcAddress|const QString &
 
-$prototype=bool isSharing () const
-$method=|bool|isSharing|
+$prototypeV2=bool isSharing() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=virtual void makeCurrent ()
 $virtualMethod=|void|makeCurrent|

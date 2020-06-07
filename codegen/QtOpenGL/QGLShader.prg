@@ -94,8 +94,7 @@ $addMethod=compileSourceCode
 $prototype=bool compileSourceFile ( const QString & fileName )
 $method=|bool|compileSourceFile|const QString &
 
-$prototype=bool isCompiled () const
-$method=|bool|isCompiled|
+$prototypeV2=bool isCompiled() const
 
 $prototype=QString log () const
 $method=|QString|log|

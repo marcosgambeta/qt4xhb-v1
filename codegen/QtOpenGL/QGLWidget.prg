@@ -128,8 +128,7 @@ $method=|void|deleteTexture|GLuint
 $prototype=void doneCurrent ()
 $method=|void|doneCurrent|
 
-$prototype=bool doubleBuffer () const
-$method=|bool|doubleBuffer|
+$prototypeV2=bool doubleBuffer() const
 
 $prototype=void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 $internalMethod=|void|drawTexture,drawTexture1|const QRectF &,GLuint,GLenum=GL_TEXTURE_2D
@@ -165,11 +164,9 @@ $method=|QGLFormat|format|
 $prototype=QImage grabFrameBuffer ( bool withAlpha = false )
 $method=|QImage|grabFrameBuffer|bool=false
 
-$prototype=bool isSharing () const
-$method=|bool|isSharing|
+$prototypeV2=bool isSharing() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=void makeCurrent ()
 $method=|void|makeCurrent|

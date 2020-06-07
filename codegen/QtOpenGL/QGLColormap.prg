@@ -67,8 +67,7 @@ $method=|int|find|QRgb
 $prototype=int findNearest ( QRgb color ) const
 $method=|int|findNearest|QRgb
 
-$prototype=bool isEmpty () const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
 $prototype=void setEntry ( int idx, QRgb color )
 $internalMethod=|void|setEntry,setEntry1|int,QRgb

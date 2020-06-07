@@ -97,8 +97,7 @@ $method=|bool|bindToDynamicTexture|GLuint
 $prototype=void deleteTexture ( GLuint texture_id )
 $method=|void|deleteTexture|GLuint
 
-$prototype=bool doneCurrent ()
-$method=|bool|doneCurrent|
+$prototypeV2=bool doneCurrent()
 
 $prototype=void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 $internalMethod=|void|drawTexture,drawTexture1|const QRectF &,GLuint,GLenum=GL_TEXTURE_2D
@@ -134,11 +133,9 @@ $method=|QGLFormat|format|
 $prototype=GLuint generateDynamicTexture () const
 $method=|GLuint|generateDynamicTexture|
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=bool makeCurrent ()
-$method=|bool|makeCurrent|
+$prototypeV2=bool makeCurrent()
 
 $prototype=void releaseFromDynamicTexture ()
 $method=|void|releaseFromDynamicTexture|
@@ -155,7 +152,6 @@ $method=|void|updateDynamicTexture|GLuint
 $prototype=virtual QPaintEngine * paintEngine () const
 $virtualMethod=|QPaintEngine *|paintEngine|
 
-$prototype=static bool hasOpenGLPbuffers ()
-$staticMethod=|bool|hasOpenGLPbuffers|
+$prototypeV2=static bool hasOpenGLPbuffers()
 
 #pragma ENDDUMP
