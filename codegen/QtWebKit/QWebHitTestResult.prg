@@ -57,8 +57,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QString alternateText () const
-$method=|QString|alternateText|
+$prototypeV2=QString alternateText() const
 
 $prototype=QRect boundingRect () const
 $method=|QRect|boundingRect|
@@ -87,8 +86,7 @@ $method=|QWebElement|linkElement|
 $prototype=QWebFrame * linkTargetFrame () const
 $method=|QWebFrame *|linkTargetFrame|
 
-$prototype=QString linkText () const
-$method=|QString|linkText|
+$prototypeV2=QString linkText() const
 
 $prototype=QUrl linkTitle () const
 $method=|QUrl|linkTitle|
@@ -102,8 +100,7 @@ $method=|QPixmap|pixmap|
 $prototype=QPoint pos () const
 $method=|QPoint|pos|
 
-$prototype=QString title () const
-$method=|QString|title|
+$prototypeV2=QString title() const
 
 $extraMethods
 

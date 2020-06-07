@@ -71,8 +71,7 @@ $virtualMethod=|void|redo|
 $prototype=void setText ( const QString & text )
 $method=|void|setText|const QString &
 
-$prototype=QString text () const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
 $prototype=virtual void undo ()
 $virtualMethod=|void|undo|

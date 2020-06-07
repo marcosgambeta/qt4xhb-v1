@@ -77,8 +77,7 @@ $virtualMethod=|QVariant|data|int=Qt::UserRole + 1
 $prototype=virtual void setData(const QVariant &value, int role = Qt::UserRole + 1)
 $virtualMethod=|void|setData|const QVariant &,int=Qt::UserRole + 1
 
-$prototype=QString text() const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
 $prototype=void setText(const QString &text)
 $method=|void|setText|const QString &
@@ -89,20 +88,17 @@ $method=|QIcon|icon|
 $prototype=void setIcon(const QIcon &icon)
 $method=|void|setIcon|const QIcon &
 
-$prototype=QString toolTip() const
-$method=|QString|toolTip|
+$prototypeV2=QString toolTip() const
 
 $prototype=void setToolTip(const QString &toolTip)
 $method=|void|setToolTip|const QString &
 
-$prototype=QString statusTip() const
-$method=|QString|statusTip|
+$prototypeV2=QString statusTip() const
 
 $prototype=void setStatusTip(const QString &statusTip)
 $method=|void|setStatusTip|const QString &
 
-$prototype=QString whatsThis() const
-$method=|QString|whatsThis|
+$prototypeV2=QString whatsThis() const
 
 $prototype=void setWhatsThis(const QString &whatsThis)
 $method=|void|setWhatsThis|const QString &
@@ -143,14 +139,12 @@ $method=|Qt::CheckState|checkState|
 $prototype=void setCheckState(Qt::CheckState checkState)
 $method=|void|setCheckState|Qt::CheckState
 
-$prototype=QString accessibleText() const
-$method=|QString|accessibleText|
+$prototypeV2=QString accessibleText() const
 
 $prototype=void setAccessibleText(const QString &accessibleText)
 $method=|void|setAccessibleText|const QString &
 
-$prototype=QString accessibleDescription() const
-$method=|QString|accessibleDescription|
+$prototypeV2=QString accessibleDescription() const
 
 $prototype=void setAccessibleDescription(const QString &accessibleDescription)
 $method=|void|setAccessibleDescription|const QString &

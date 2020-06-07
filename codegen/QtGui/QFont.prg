@@ -79,13 +79,11 @@ $prototypeV2=bool bold() const
 $prototype=Capitalization capitalization () const
 $method=|QFont::Capitalization|capitalization|
 
-$prototype=QString defaultFamily () const
-$method=|QString|defaultFamily|
+$prototypeV2=QString defaultFamily() const
 
 $prototypeV2=bool exactMatch() const
 
-$prototype=QString family () const
-$method=|QString|family|
+$prototypeV2=QString family() const
 
 $prototypeV2=bool fixedPitch() const
 
@@ -99,14 +97,11 @@ $prototypeV2=bool italic() const
 
 $prototypeV2=bool kerning() const
 
-$prototype=QString key () const
-$method=|QString|key|
+$prototypeV2=QString key() const
 
-$prototype=QString lastResortFamily () const
-$method=|QString|lastResortFamily|
+$prototypeV2=QString lastResortFamily() const
 
-$prototype=QString lastResortFont () const
-$method=|QString|lastResortFont|
+$prototypeV2=QString lastResortFont() const
 
 $prototype=qreal letterSpacing () const
 $method=|qreal|letterSpacing|
@@ -125,8 +120,7 @@ $method=|qreal|pointSizeF|
 
 $prototypeV2=bool rawMode() const
 
-$prototype=QString rawName () const
-$method=|QString|rawName|
+$prototypeV2=QString rawName() const
 
 $prototype=QFont resolve ( const QFont & other ) const
 $method=|QFont|resolve|const QFont &
@@ -207,8 +201,7 @@ $method=|QFont::StyleHint|styleHint|
 $prototype=StyleStrategy styleStrategy () const
 $method=|QFont::StyleStrategy|styleStrategy|
 
-$prototype=QString toString () const
-$method=|QString|toString|
+$prototypeV2=QString toString() const
 
 $prototypeV2=bool underline() const
 

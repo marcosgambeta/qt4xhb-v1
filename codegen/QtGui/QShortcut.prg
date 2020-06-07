@@ -87,8 +87,7 @@ $method=|void|setKey|const QKeySequence &
 $prototype=void setWhatsThis(const QString & text)
 $method=|void|setWhatsThis|const QString &
 
-$prototype=QString whatsThis() const
-$method=|QString|whatsThis|
+$prototypeV2=QString whatsThis() const
 
 $beginSignals
 $signal=|activated()

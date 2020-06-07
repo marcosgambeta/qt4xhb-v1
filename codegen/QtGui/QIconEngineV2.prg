@@ -33,11 +33,9 @@ $method=|QList<QSize>|availableSizes|QIcon::Mode=QIcon::Normal,QIcon::State=QIco
 $prototype=virtual QIconEngineV2 * clone () const
 $virtualMethod=|QIconEngineV2 *|clone|
 
-$prototype=QString iconName ()
-$method=|QString|iconName|
+$prototypeV2=QString iconName()
 
-$prototype=virtual QString key () const
-$virtualMethod=|QString|key|
+$prototypeV2=virtual QString key() const
 
 $prototype=virtual bool read ( QDataStream & in )
 $virtualMethod=|bool|read|QDataStream &

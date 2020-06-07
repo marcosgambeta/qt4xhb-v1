@@ -57,8 +57,7 @@ $prototypeV2=int currentId() const
 $prototype=Error error () const
 $method=|QFtp::Error|error|
 
-$prototype=QString errorString () const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
 $prototype=int get ( const QString & file, QIODevice * dev = 0, TransferType type = Binary )
 $method=|int|get|const QString &,QIODevice *=0,QFtp::TransferType=QFtp::Binary

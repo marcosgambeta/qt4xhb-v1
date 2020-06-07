@@ -90,8 +90,7 @@ $prototypeV2=int progressValue() const
 $prototype=void setProgressValueAndText(int progressValue, const QString &progressText)
 $method=|void|setProgressValueAndText|int,const QString &
 
-$prototype=QString progressText() const
-$method=|QString|progressText|
+$prototypeV2=QString progressText() const
 
 $prototype=void setExpectedResultCount(int resultCount)
 $method=|void|setExpectedResultCount|int

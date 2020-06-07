@@ -63,8 +63,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QString family () const
-$method=|QString|family|
+$prototypeV2=QString family() const
 
 $prototype=qreal pixelSize () const
 $method=|qreal|pixelSize|

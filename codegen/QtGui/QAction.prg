@@ -90,8 +90,7 @@ $method=|QFont|font|
 $prototype=QIcon icon () const
 $method=|QIcon|icon|
 
-$prototype=QString iconText () const
-$method=|QString|iconText|
+$prototypeV2=QString iconText() const
 
 $prototypeV2=bool isCheckable() const
 
@@ -217,17 +216,13 @@ $method=|bool|showStatusText|QWidget *=0
 $prototype=SoftKeyRole softKeyRole () const
 $method=|QAction::SoftKeyRole|softKeyRole|
 
-$prototype=QString statusTip () const
-$method=|QString|statusTip|
+$prototypeV2=QString statusTip() const
 
-$prototype=QString text () const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
-$prototype=QString toolTip () const
-$method=|QString|toolTip|
+$prototypeV2=QString toolTip() const
 
-$prototype=QString whatsThis () const
-$method=|QString|whatsThis|
+$prototypeV2=QString whatsThis() const
 
 $prototype=void hover ()
 $method=|void|hover|

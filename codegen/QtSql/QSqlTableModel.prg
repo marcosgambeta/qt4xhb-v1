@@ -43,8 +43,7 @@ $method=|QSqlTableModel::EditStrategy|editStrategy|
 $prototype=int fieldIndex ( const QString & fieldName ) const
 $method=|int|fieldIndex|const QString &
 
-$prototype=QString filter () const
-$method=|QString|filter|
+$prototypeV2=QString filter() const
 
 $prototype=bool insertRecord ( int row, const QSqlRecord & record )
 $method=|bool|insertRecord|int,const QSqlRecord &
@@ -75,8 +74,7 @@ $virtualMethod=|void|setSort|int,Qt::SortOrder
 $prototype=virtual void setTable ( const QString & tableName )
 $virtualMethod=|void|setTable|const QString &
 
-$prototype=QString tableName () const
-$method=|QString|tableName|
+$prototypeV2=QString tableName() const
 
 $prototype=virtual void clear ()
 $virtualMethod=|void|clear|

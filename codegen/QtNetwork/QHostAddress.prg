@@ -131,8 +131,7 @@ $prototypeV2=bool isNull() const
 $prototype=QAbstractSocket::NetworkLayerProtocol protocol () const
 $method=|QAbstractSocket::NetworkLayerProtocol|protocol|
 
-$prototype=QString scopeId () const
-$method=|QString|scopeId|
+$prototypeV2=QString scopeId() const
 
 $prototype=void setAddress ( quint32 ip4Addr )
 $internalMethod=|void|setAddress,setAddress1|quint32
@@ -188,8 +187,7 @@ $prototype=Q_IPV6ADDR toIPv6Address () const
 %% TODO: implementar 'Q_IPV6ADDR'
 %% $method=|Q_IPV6ADDR|toIPv6Address|
 
-$prototype=QString toString () const
-$method=|QString|toString|
+$prototypeV2=QString toString() const
 
 $extraMethods
 

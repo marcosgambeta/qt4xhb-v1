@@ -55,8 +55,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QString deviceName () const
-$method=|QString|deviceName|
+$prototypeV2=QString deviceName() const
 
 $prototype=bool isFormatSupported ( const QAudioFormat & settings ) const
 $method=|bool|isFormatSupported|const QAudioFormat &

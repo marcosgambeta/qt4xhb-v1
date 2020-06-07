@@ -287,8 +287,7 @@ $method=|QObject *|toQObject|
 $prototype=QRegExp toRegExp () const
 $method=|QRegExp|toRegExp|
 
-$prototype=QString toString () const
-$method=|QString|toString|
+$prototypeV2=QString toString() const
 
 $prototype=quint16 toUInt16 () const
 $method=|quint16|toUInt16|

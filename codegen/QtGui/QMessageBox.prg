@@ -111,8 +111,7 @@ $method=|QAbstractButton *|clickedButton|
 $prototype=QPushButton * defaultButton () const
 $method=|QPushButton *|defaultButton|
 
-$prototype=QString detailedText () const
-$method=|QString|detailedText|
+$prototypeV2=QString detailedText() const
 
 $prototype=QAbstractButton * escapeButton () const
 $method=|QAbstractButton *|escapeButton|
@@ -123,8 +122,7 @@ $method=|QMessageBox::Icon|icon|
 $prototype=QPixmap iconPixmap () const
 $method=|QPixmap|iconPixmap|
 
-$prototype=QString informativeText () const
-$method=|QString|informativeText|
+$prototypeV2=QString informativeText() const
 
 $prototype=void open ( QObject * receiver, const char * member )
 $method=|void|open|QObject *,const char *
@@ -221,8 +219,7 @@ $method=|QMessageBox::StandardButton|standardButton|QAbstractButton *
 $prototype=StandardButtons standardButtons () const
 $method=|QMessageBox::StandardButtons|standardButtons|
 
-$prototype=QString text () const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
 $prototype=Qt::TextFormat textFormat () const
 $method=|Qt::TextFormat|textFormat|

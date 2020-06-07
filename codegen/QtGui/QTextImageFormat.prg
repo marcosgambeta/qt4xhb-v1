@@ -35,8 +35,7 @@ $method=|qreal|height|
 
 $prototypeV2=bool isValid() const
 
-$prototype=QString name () const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
 $prototype=void setHeight ( qreal height )
 $method=|void|setHeight|qreal

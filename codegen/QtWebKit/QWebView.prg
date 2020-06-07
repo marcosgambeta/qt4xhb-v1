@@ -84,8 +84,7 @@ $method=|QAction *|pageAction|QWebPage::WebAction
 $prototype=QPainter::RenderHints renderHints () const
 $method=|QPainter::RenderHints|renderHints|
 
-$prototype=QString selectedText () const
-$method=|QString|selectedText|
+$prototypeV2=QString selectedText() const
 
 $prototype=void setContent ( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
 $method=|void|setContent|const QByteArray &,const QString &=QString(),const QUrl &=QUrl()
@@ -117,8 +116,7 @@ $method=|QWebSettings *|settings|
 $prototype=qreal textSizeMultiplier () const
 $method=|qreal|textSizeMultiplier|
 
-$prototype=QString title () const
-$method=|QString|title|
+$prototypeV2=QString title() const
 
 $prototype=void triggerPageAction ( QWebPage::WebAction action, bool checked = false )
 $method=|void|triggerPageAction|QWebPage::WebAction,bool=false

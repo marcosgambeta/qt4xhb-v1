@@ -34,8 +34,7 @@ $prototypeV2=int errorColumnNumber() const
 
 $prototypeV2=int errorLineNumber() const
 
-$prototype=QString errorMessage () const
-$method=|QString|errorMessage|
+$prototypeV2=QString errorMessage() const
 
 $prototype=State state () const
 $method=|QScriptSyntaxCheckResult::State|state|

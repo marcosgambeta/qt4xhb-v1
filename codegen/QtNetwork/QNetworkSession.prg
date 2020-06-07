@@ -47,8 +47,7 @@ $method=|QNetworkConfiguration|configuration|
 $prototype=SessionError error () const
 $method=|QNetworkSession::SessionError|error|
 
-$prototype=QString errorString () const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
 $prototype=QNetworkInterface interface () const
 $method=|QNetworkInterface|interface|

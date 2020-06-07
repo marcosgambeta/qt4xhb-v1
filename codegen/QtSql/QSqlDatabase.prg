@@ -67,26 +67,21 @@ $method=|void|close|
 
 $prototypeV2=bool commit()
 
-$prototype=QString connectOptions () const
-$method=|QString|connectOptions|
+$prototypeV2=QString connectOptions() const
 
-$prototype=QString connectionName () const
-$method=|QString|connectionName|
+$prototypeV2=QString connectionName() const
 
-$prototype=QString databaseName () const
-$method=|QString|databaseName|
+$prototypeV2=QString databaseName() const
 
 $prototype=QSqlDriver * driver () const
 $method=|QSqlDriver *|driver|
 
-$prototype=QString driverName () const
-$method=|QString|driverName|
+$prototypeV2=QString driverName() const
 
 $prototype=QSqlQuery exec ( const QString & query = QString() ) const
 $method=|QSqlQuery|exec|const QString &=QString()
 
-$prototype=QString hostName () const
-$method=|QString|hostName|
+$prototypeV2=QString hostName() const
 
 $prototypeV2=bool isOpen() const
 
@@ -128,8 +123,7 @@ HB_FUNC_STATIC( QSQLDATABASE_OPEN )
 }
 $addMethod=open
 
-$prototype=QString password () const
-$method=|QString|password|
+$prototypeV2=QString password() const
 
 $prototypeV2=int port() const
 
@@ -167,8 +161,7 @@ $method=|QStringList|tables|QSql::TableType=QSql::Tables
 
 $prototypeV2=bool transaction()
 
-$prototype=QString userName () const
-$method=|QString|userName|
+$prototypeV2=QString userName() const
 
 $prototype=static QSqlDatabase addDatabase ( const QString & type, const QString & connectionName = QLatin1String( defaultConnection ) )
 $internalStaticMethod=|QSqlDatabase|addDatabase,addDatabase1|const QString &,const QString &=QLatin1String( QSqlDatabase::defaultConnection )

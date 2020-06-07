@@ -174,8 +174,7 @@ $addMethod=exec
 $prototype=bool execBatch ( BatchExecutionMode mode = ValuesAsRows )
 $method=|bool|execBatch|QSqlQuery::BatchExecutionMode=QSqlQuery::ValuesAsRows
 
-$prototype=QString executedQuery () const
-$method=|QString|executedQuery|
+$prototypeV2=QString executedQuery() const
 
 $prototype=void finish ()
 $method=|void|finish|
@@ -201,8 +200,7 @@ $method=|QSqlError|lastError|
 $prototype=QVariant lastInsertId () const
 $method=|QVariant|lastInsertId|
 
-$prototype=QString lastQuery () const
-$method=|QString|lastQuery|
+$prototypeV2=QString lastQuery() const
 
 $prototypeV2=bool next()
 

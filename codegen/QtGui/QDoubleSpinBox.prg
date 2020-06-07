@@ -30,8 +30,7 @@ $includes
 $prototype=QDoubleSpinBox ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
 
-$prototype=QString cleanText () const
-$method=|QString|cleanText|
+$prototypeV2=QString cleanText() const
 
 $prototypeV2=int decimals() const
 
@@ -41,8 +40,7 @@ $method=|double|maximum|
 $prototype=double minimum () const
 $method=|double|minimum|
 
-$prototype=QString prefix () const
-$method=|QString|prefix|
+$prototypeV2=QString prefix() const
 
 $prototype=void setDecimals ( int prec )
 $method=|void|setDecimals|int
@@ -68,8 +66,7 @@ $method=|void|setSuffix|const QString &
 $prototype=double singleStep () const
 $method=|double|singleStep|
 
-$prototype=QString suffix () const
-$method=|QString|suffix|
+$prototypeV2=QString suffix() const
 
 $prototype=virtual QString textFromValue ( double value ) const
 $virtualMethod=|QString|textFromValue|double

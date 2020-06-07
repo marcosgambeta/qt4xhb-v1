@@ -77,8 +77,7 @@ $method=|QWebElementCollection|findAllElements|const QString &
 $prototype=QWebElement findFirstElement ( const QString & selectorQuery ) const
 $method=|QWebElement|findFirstElement|const QString &
 
-$prototype=QString frameName () const
-$method=|QString|frameName|
+$prototypeV2=QString frameName() const
 
 $prototype=QRect geometry () const
 $method=|QRect|geometry|
@@ -164,8 +163,7 @@ HB_FUNC_STATIC( QWEBFRAME_RENDER )
 }
 $addMethod=render
 
-$prototype=QString renderTreeDump () const
-$method=|QString|renderTreeDump|
+$prototypeV2=QString renderTreeDump() const
 
 $prototype=QUrl requestedUrl () const
 $method=|QUrl|requestedUrl|
@@ -227,14 +225,11 @@ $method=|void|setZoomFactor|qreal
 $prototype=qreal textSizeMultiplier () const
 $method=|qreal|textSizeMultiplier|
 
-$prototype=QString title () const
-$method=|QString|title|
+$prototypeV2=QString title() const
 
-$prototype=QString toHtml () const
-$method=|QString|toHtml|
+$prototypeV2=QString toHtml() const
 
-$prototype=QString toPlainText () const
-$method=|QString|toPlainText|
+$prototypeV2=QString toPlainText() const
 
 $prototype=QUrl url () const
 $method=|QUrl|url|

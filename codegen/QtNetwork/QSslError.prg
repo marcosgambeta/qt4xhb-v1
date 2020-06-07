@@ -77,8 +77,7 @@ $method=|QSslCertificate|certificate|
 $prototype=SslError error () const
 $method=|QSslError::SslError|error|
 
-$prototype=QString errorString () const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
 $extraMethods
 

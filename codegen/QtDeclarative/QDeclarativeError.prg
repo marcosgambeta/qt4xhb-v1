@@ -57,8 +57,7 @@ $deleteMethod
 
 $prototypeV2=int column() const
 
-$prototype=QString description () const
-$method=|QString|description|
+$prototypeV2=QString description() const
 
 $prototypeV2=bool isValid() const
 
@@ -76,8 +75,7 @@ $method=|void|setLine|int
 $prototype=void setUrl ( const QUrl & url )
 $method=|void|setUrl|const QUrl &
 
-$prototype=QString toString () const
-$method=|QString|toString|
+$prototypeV2=QString toString() const
 
 $prototype=QUrl url () const
 $method=|QUrl|url|

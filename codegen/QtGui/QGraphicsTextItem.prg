@@ -116,11 +116,9 @@ $method=|Qt::TextInteractionFlags|textInteractionFlags|
 $prototype=qreal textWidth () const
 $method=|qreal|textWidth|
 
-$prototype=QString toHtml () const
-$method=|QString|toHtml|
+$prototypeV2=QString toHtml() const
 
-$prototype=QString toPlainText () const
-$method=|QString|toPlainText|
+$prototypeV2=QString toPlainText() const
 
 $prototype=virtual QRectF boundingRect () const
 $virtualMethod=|QRectF|boundingRect|

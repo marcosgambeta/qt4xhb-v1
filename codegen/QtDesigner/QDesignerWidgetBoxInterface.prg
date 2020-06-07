@@ -27,8 +27,7 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QString fileName () const = 0
-$virtualMethod=|QString|fileName|
+$prototypeV2=virtual QString fileName() const = 0
 
 $prototypeV2=virtual bool load() = 0
 

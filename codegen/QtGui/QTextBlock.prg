@@ -92,8 +92,7 @@ $method=|void|setUserState|int
 $prototype=void setVisible ( bool visible )
 $method=|void|setVisible|bool
 
-$prototype=QString text () const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
 $prototype=Qt::LayoutDirection textDirection () const
 $method=|Qt::LayoutDirection|textDirection|

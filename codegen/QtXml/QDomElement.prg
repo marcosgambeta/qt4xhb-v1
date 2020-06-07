@@ -194,10 +194,8 @@ $method=|QDomAttr|setAttributeNodeNS|const QDomAttr &
 $prototype=void setTagName ( const QString & name )
 $method=|void|setTagName|const QString &
 
-$prototype=QString tagName () const
-$method=|QString|tagName|
+$prototypeV2=QString tagName() const
 
-$prototype=QString text () const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
 #pragma ENDDUMP

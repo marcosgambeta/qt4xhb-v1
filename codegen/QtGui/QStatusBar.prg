@@ -38,8 +38,7 @@ $method=|void|addPermanentWidget|QWidget *,int=0
 $prototype=void addWidget ( QWidget * widget, int stretch = 0 )
 $method=|void|addWidget|QWidget *,int=0
 
-$prototype=QString currentMessage () const
-$method=|QString|currentMessage|
+$prototypeV2=QString currentMessage() const
 
 $prototype=int insertPermanentWidget ( int index, QWidget * widget, int stretch = 0 )
 $method=|int|insertPermanentWidget|int,QWidget *,int=0

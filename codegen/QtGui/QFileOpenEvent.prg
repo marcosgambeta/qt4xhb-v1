@@ -57,8 +57,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QString file () const
-$method=|QString|file|
+$prototypeV2=QString file() const
 
 $prototype=bool openFile ( QFile & file, QIODevice::OpenMode flags ) const
 $method=|bool|openFile|QFile &,QIODevice::OpenMode

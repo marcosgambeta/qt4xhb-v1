@@ -35,8 +35,7 @@ $prototypeV2=int progressMinimum() const
 
 $prototypeV2=int progressMaximum() const
 
-$prototype=QString progressText() const
-$method=|QString|progressText|
+$prototypeV2=QString progressText() const
 
 $prototypeV2=bool isStarted() const
 

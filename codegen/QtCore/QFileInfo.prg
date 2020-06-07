@@ -85,31 +85,23 @@ $deleteMethod
 $prototype=QDir absoluteDir() const
 $method=|QDir|absoluteDir|
 
-$prototype=QString absoluteFilePath() const
-$method=|QString|absoluteFilePath|
+$prototypeV2=QString absoluteFilePath() const
 
-$prototype=QString absolutePath() const
-$method=|QString|absolutePath|
+$prototypeV2=QString absolutePath() const
 
-$prototype=QString baseName() const
-$method=|QString|baseName|
+$prototypeV2=QString baseName() const
 
-$prototype=QString bundleName() const
-$method=|QString|bundleName|
+$prototypeV2=QString bundleName() const
 
 $prototypeV2=bool caching() const
 
-$prototype=QString canonicalFilePath() const
-$method=|QString|canonicalFilePath|
+$prototypeV2=QString canonicalFilePath() const
 
-$prototype=QString canonicalPath() const
-$method=|QString|canonicalPath|
+$prototypeV2=QString canonicalPath() const
 
-$prototype=QString completeBaseName() const
-$method=|QString|completeBaseName|
+$prototypeV2=QString completeBaseName() const
 
-$prototype=QString completeSuffix() const
-$method=|QString|completeSuffix|
+$prototypeV2=QString completeSuffix() const
 
 $prototype=QDateTime created() const
 $method=|QDateTime|created|
@@ -119,14 +111,11 @@ $method=|QDir|dir|
 
 $prototypeV2=bool exists() const
 
-$prototype=QString fileName() const
-$method=|QString|fileName|
+$prototypeV2=QString fileName() const
 
-$prototype=QString filePath() const
-$method=|QString|filePath|
+$prototypeV2=QString filePath() const
 
-$prototype=QString group() const
-$method=|QString|group|
+$prototypeV2=QString group() const
 
 $prototype=uint groupId() const
 $method=|uint|groupId|
@@ -161,14 +150,12 @@ $method=|QDateTime|lastRead|
 
 $prototypeV2=bool makeAbsolute()
 
-$prototype=QString owner() const
-$method=|QString|owner|
+$prototypeV2=QString owner() const
 
 $prototype=uint ownerId() const
 $method=|uint|ownerId|
 
-$prototype=QString path() const
-$method=|QString|path|
+$prototypeV2=QString path() const
 
 $prototype=bool permission(QFile::Permissions permissions) const
 $method=|bool|permission|QFile::Permissions
@@ -221,11 +208,9 @@ $addMethod=setFile
 $prototype=qint64 size() const
 $method=|qint64|size|
 
-$prototype=QString suffix() const
-$method=|QString|suffix|
+$prototypeV2=QString suffix() const
 
-$prototype=QString symLinkTarget() const
-$method=|QString|symLinkTarget|
+$prototypeV2=QString symLinkTarget() const
 
 $extraMethods
 

@@ -97,14 +97,12 @@ $method=|void|setSpecialValueText|const QString &
 $prototype=void setWrapping ( bool w )
 $method=|void|setWrapping|bool
 
-$prototype=QString specialValueText () const
-$method=|QString|specialValueText|
+$prototypeV2=QString specialValueText() const
 
 $prototype=virtual void stepBy ( int steps )
 $virtualMethod=|void|stepBy|int
 
-$prototype=QString text () const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
 $prototype=virtual QValidator::State validate ( QString & input, int & pos ) const
 %% TODO: revisar implementacao e corrigir

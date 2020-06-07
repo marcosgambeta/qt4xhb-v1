@@ -49,11 +49,9 @@ $method=|QStringList|restartCommand|
 $prototype=RestartHint restartHint () const
 $method=|QSessionManager::RestartHint|restartHint|
 
-$prototype=QString sessionId () const
-$method=|QString|sessionId|
+$prototypeV2=QString sessionId() const
 
-$prototype=QString sessionKey () const
-$method=|QString|sessionKey|
+$prototypeV2=QString sessionKey() const
 
 $prototype=void setDiscardCommand ( const QStringList & list )
 $method=|void|setDiscardCommand|const QStringList &

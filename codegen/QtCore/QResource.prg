@@ -30,14 +30,12 @@ $constructor=|new|const QString &=QString(),const QLocale &=QLocale()
 
 $deleteMethod
 
-$prototype=QString absoluteFilePath () const
-$method=|QString|absoluteFilePath|
+$prototypeV2=QString absoluteFilePath() const
 
 $prototype=const uchar * data () const
 $method=|const uchar *|data|
 
-$prototype=QString fileName () const
-$method=|QString|fileName|
+$prototypeV2=QString fileName() const
 
 $prototypeV2=bool isCompressed() const
 

@@ -70,11 +70,9 @@ $method=|QPrinter::ColorMode|colorMode|
 
 $prototypeV2=int copyCount() const
 
-$prototype=QString creator () const
-$method=|QString|creator|
+$prototypeV2=QString creator() const
 
-$prototype=QString docName () const
-$method=|QString|docName|
+$prototypeV2=QString docName() const
 
 $prototypeV2=bool doubleSidedPrinting() const
 
@@ -94,8 +92,7 @@ $prototypeV2=bool newPage()
 $prototype=Orientation orientation () const
 $method=|QPrinter::Orientation|orientation|
 
-$prototype=QString outputFileName () const
-$method=|QString|outputFileName|
+$prototypeV2=QString outputFileName() const
 
 $prototype=OutputFormat outputFormat () const
 $method=|QPrinter::OutputFormat|outputFormat|
@@ -193,14 +190,12 @@ $method=|QPrinter::PaperSource|paperSource|
 $prototype=QPrintEngine * printEngine () const
 $method=|QPrintEngine *|printEngine|
 
-$prototype=QString printProgram () const
-$method=|QString|printProgram|
+$prototypeV2=QString printProgram() const
 
 $prototype=PrintRange printRange () const
 $method=|QPrinter::PrintRange|printRange|
 
-$prototype=QString printerName () const
-$method=|QString|printerName|
+$prototypeV2=QString printerName() const
 
 $prototype=PrinterState printerState () const
 $method=|QPrinter::PrinterState|printerState|

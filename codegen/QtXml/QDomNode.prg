@@ -127,14 +127,12 @@ $method=|QDomElement|lastChildElement|const QString &=QString()
 
 $prototypeV2=int lineNumber() const
 
-$prototype=QString localName () const
-$method=|QString|localName|
+$prototypeV2=QString localName() const
 
 $prototype=QDomNode namedItem ( const QString & name ) const
 $method=|QDomNode|namedItem|const QString &
 
-$prototype=QString namespaceURI () const
-$method=|QString|namespaceURI|
+$prototypeV2=QString namespaceURI() const
 
 $prototype=QDomNode nextSibling () const
 $method=|QDomNode|nextSibling|
@@ -142,14 +140,12 @@ $method=|QDomNode|nextSibling|
 $prototype=QDomElement nextSiblingElement ( const QString & tagName = QString() ) const
 $method=|QDomElement|nextSiblingElement|const QString &=QString()
 
-$prototype=QString nodeName () const
-$method=|QString|nodeName|
+$prototypeV2=QString nodeName() const
 
 $prototype=NodeType nodeType () const
 $method=|QDomNode::NodeType|nodeType|
 
-$prototype=QString nodeValue () const
-$method=|QString|nodeValue|
+$prototypeV2=QString nodeValue() const
 
 $prototype=void normalize ()
 $method=|void|normalize|
@@ -160,8 +156,7 @@ $method=|QDomDocument|ownerDocument|
 $prototype=QDomNode parentNode () const
 $method=|QDomNode|parentNode|
 
-$prototype=QString prefix () const
-$method=|QString|prefix|
+$prototypeV2=QString prefix() const
 
 $prototype=QDomNode previousSibling () const
 $method=|QDomNode|previousSibling|

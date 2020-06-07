@@ -69,8 +69,7 @@ $prototypeV2=bool isClean() const
 $prototype=void push ( QUndoCommand * cmd )
 $method=|void|push|QUndoCommand *
 
-$prototype=QString redoText () const
-$method=|QString|redoText|
+$prototypeV2=QString redoText() const
 
 $prototype=void setUndoLimit ( int limit )
 $method=|void|setUndoLimit|int
@@ -80,8 +79,7 @@ $method=|QString|text|int
 
 $prototypeV2=int undoLimit() const
 
-$prototype=QString undoText () const
-$method=|QString|undoText|
+$prototypeV2=QString undoText() const
 
 $prototype=void redo ()
 $method=|void|redo|

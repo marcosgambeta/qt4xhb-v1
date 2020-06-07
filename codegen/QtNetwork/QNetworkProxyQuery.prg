@@ -107,13 +107,11 @@ $deleteMethod
 
 $prototypeV2=int localPort() const
 
-$prototype=QString peerHostName () const
-$method=|QString|peerHostName|
+$prototypeV2=QString peerHostName() const
 
 $prototypeV2=int peerPort() const
 
-$prototype=QString protocolTag () const
-$method=|QString|protocolTag|
+$prototypeV2=QString protocolTag() const
 
 $prototype=QueryType queryType () const
 $method=|QNetworkProxyQuery::QueryType|queryType|

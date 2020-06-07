@@ -56,8 +56,7 @@ $addMethod=new
 $prototype=void appendData ( const QString & arg )
 $method=|void|appendData|const QString &
 
-$prototype=QString data () const
-$method=|QString|data|
+$prototypeV2=QString data() const
 
 $prototype=void deleteData ( unsigned long offset, unsigned long count )
 $method=|void|deleteData|unsigned long,unsigned long

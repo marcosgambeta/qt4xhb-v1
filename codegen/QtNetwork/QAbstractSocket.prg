@@ -63,8 +63,7 @@ $method=|quint16|localPort|
 $prototype=QHostAddress peerAddress () const
 $method=|QHostAddress|peerAddress|
 
-$prototype=QString peerName () const
-$method=|QString|peerName|
+$prototypeV2=QString peerName() const
 
 $prototype=quint16 peerPort () const
 $method=|quint16|peerPort|

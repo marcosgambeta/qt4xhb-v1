@@ -39,8 +39,7 @@ $prototypeV2=bool hasNext() const
 
 $prototypeV2=bool hasPrevious() const
 
-$prototype=QString name () const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
 $prototype=void next ()
 $method=|void|next|

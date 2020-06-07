@@ -66,8 +66,7 @@ $method=|QNetworkAccessManager *|networkAccessManager|
 $prototype=QDeclarativeNetworkAccessManagerFactory * networkAccessManagerFactory () const
 $method=|QDeclarativeNetworkAccessManagerFactory *|networkAccessManagerFactory|
 
-$prototype=QString offlineStoragePath () const
-$method=|QString|offlineStoragePath|
+$prototypeV2=QString offlineStoragePath() const
 
 $prototypeV2=bool outputWarningsToStandardError() const
 

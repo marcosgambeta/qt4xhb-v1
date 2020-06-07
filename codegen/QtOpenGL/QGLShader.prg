@@ -96,8 +96,7 @@ $method=|bool|compileSourceFile|const QString &
 
 $prototypeV2=bool isCompiled() const
 
-$prototype=QString log () const
-$method=|QString|log|
+$prototypeV2=QString log() const
 
 $prototype=GLuint shaderId () const
 $method=|GLuint|shaderId|

@@ -76,11 +76,9 @@ $prototypeV2=static bool isServer()
 $prototype=static bool registerActiveObject ( QObject * object )
 $staticMethod=|bool|registerActiveObject|QObject *
 
-$prototype=static QString serverDirPath ()
-$staticMethod=|QString|serverDirPath|
+$prototypeV2=static QString serverDirPath()
 
-$prototype=static QString serverFilePath ()
-$staticMethod=|QString|serverFilePath|
+$prototypeV2=static QString serverFilePath()
 
 $prototype=static bool startServer ( ServerType type = MultipleInstances )
 $staticMethod=|bool|startServer|QAxFactory::ServerType=QAxFactory::MultipleInstances

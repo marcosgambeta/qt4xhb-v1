@@ -85,8 +85,7 @@ $method=|QList<QByteArray>|allEncodedQueryItemValues|const QByteArray &
 $prototype=QStringList allQueryItemValues ( const QString & key ) const
 $method=|QStringList|allQueryItemValues|const QString &
 
-$prototype=QString authority () const
-$method=|QString|authority|
+$prototypeV2=QString authority() const
 
 $prototype=void clear ()
 $method=|void|clear|
@@ -112,11 +111,9 @@ $method=|QByteArray|encodedQueryItemValue|const QByteArray &
 $prototype=QByteArray encodedUserName () const
 $method=|QByteArray|encodedUserName|
 
-$prototype=QString errorString () const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
-$prototype=QString fragment () const
-$method=|QString|fragment|
+$prototypeV2=QString fragment() const
 
 $prototype=bool hasEncodedQueryItem ( const QByteArray & key ) const
 $method=|bool|hasEncodedQueryItem|const QByteArray &
@@ -128,8 +125,7 @@ $prototypeV2=bool hasQuery() const
 $prototype=bool hasQueryItem ( const QString & key ) const
 $method=|bool|hasQueryItem|const QString &
 
-$prototype=QString host () const
-$method=|QString|host|
+$prototypeV2=QString host() const
 
 $prototypeV2=bool isEmpty() const
 
@@ -142,11 +138,9 @@ $prototypeV2=bool isRelative() const
 
 $prototypeV2=bool isValid() const
 
-$prototype=QString password () const
-$method=|QString|password|
+$prototypeV2=QString password() const
 
-$prototype=QString path () const
-$method=|QString|path|
+$prototypeV2=QString path() const
 
 $prototype=int port () const
 $internalMethod=|int|port,port1|
@@ -194,8 +188,7 @@ $method=|void|removeQueryItem|const QString &
 $prototype=QUrl resolved ( const QUrl & relative ) const
 $method=|QUrl|resolved|const QUrl &
 
-$prototype=QString scheme () const
-$method=|QString|scheme|
+$prototypeV2=QString scheme() const
 
 $prototype=void setAuthority ( const QString & authority )
 $method=|void|setAuthority|const QString &
@@ -307,20 +300,16 @@ $method=|void|swap|QUrl &
 $prototype=QByteArray toEncoded ( FormattingOptions options = None ) const
 $method=|QByteArray|toEncoded|QUrl::FormattingOptions=QUrl::None
 
-$prototype=QString toLocalFile () const
-$method=|QString|toLocalFile|
+$prototypeV2=QString toLocalFile() const
 
 $prototype=QString toString ( FormattingOptions options = None ) const
 $method=|QString|toString|QUrl::FormattingOptions=QUrl::None
 
-$prototype=QString topLevelDomain () const
-$method=|QString|topLevelDomain|
+$prototypeV2=QString topLevelDomain() const
 
-$prototype=QString userInfo () const
-$method=|QString|userInfo|
+$prototypeV2=QString userInfo() const
 
-$prototype=QString userName () const
-$method=|QString|userName|
+$prototypeV2=QString userName() const
 
 $prototype=static QString fromAce ( const QByteArray & domain )
 $staticMethod=|QString|fromAce|const QByteArray &

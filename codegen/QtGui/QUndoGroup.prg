@@ -53,8 +53,7 @@ $method=|QAction *|createUndoAction|QObject *,const QString &=QString()
 
 $prototypeV2=bool isClean() const
 
-$prototype=QString redoText () const
-$method=|QString|redoText|
+$prototypeV2=QString redoText() const
 
 $prototype=void removeStack ( QUndoStack * stack )
 $method=|void|removeStack|QUndoStack *
@@ -62,8 +61,7 @@ $method=|void|removeStack|QUndoStack *
 $prototype=QList<QUndoStack *> stacks () const
 $method=|QList<QUndoStack *>|stacks|
 
-$prototype=QString undoText () const
-$method=|QString|undoText|
+$prototypeV2=QString undoText() const
 
 $prototype=void redo ()
 $method=|void|redo|

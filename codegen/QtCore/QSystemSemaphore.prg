@@ -35,11 +35,9 @@ $prototypeV2=bool acquire()
 $prototype=SystemSemaphoreError error () const
 $method=|QSystemSemaphore::SystemSemaphoreError|error|
 
-$prototype=QString errorString () const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
-$prototype=QString key () const
-$method=|QString|key|
+$prototypeV2=QString key() const
 
 $prototype=bool release ( int n = 1 )
 $method=|bool|release|int=1

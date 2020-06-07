@@ -134,8 +134,7 @@ $method=|bool|waitForFinished|int=30000
 $prototype=bool waitForStarted ( int msecs = 30000 )
 $method=|bool|waitForStarted|int=30000
 
-$prototype=QString workingDirectory () const
-$method=|QString|workingDirectory|
+$prototypeV2=QString workingDirectory() const
 
 $prototypeV2=virtual bool atEnd() const
 

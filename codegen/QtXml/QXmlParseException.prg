@@ -59,14 +59,11 @@ $prototypeV2=int columnNumber() const
 
 $prototypeV2=int lineNumber() const
 
-$prototype=QString message () const
-$method=|QString|message|
+$prototypeV2=QString message() const
 
-$prototype=QString publicId () const
-$method=|QString|publicId|
+$prototypeV2=QString publicId() const
 
-$prototype=QString systemId () const
-$method=|QString|systemId|
+$prototypeV2=QString systemId() const
 
 $extraMethods
 

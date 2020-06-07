@@ -84,8 +84,7 @@ $method=|const QPicture *|picture|
 $prototype=const QPixmap * pixmap () const
 $method=|const QPixmap *|pixmap|
 
-$prototype=QString selectedText () const
-$method=|QString|selectedText|
+$prototypeV2=QString selectedText() const
 
 $prototype=void setAlignment ( Qt::Alignment )
 $method=|void|setAlignment|Qt::Alignment
@@ -117,8 +116,7 @@ $method=|void|setTextInteractionFlags|Qt::TextInteractionFlags
 $prototype=void setWordWrap ( bool on )
 $method=|void|setWordWrap|bool
 
-$prototype=QString text () const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
 $prototype=Qt::TextFormat textFormat () const
 $method=|Qt::TextFormat|textFormat|

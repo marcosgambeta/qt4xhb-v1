@@ -66,15 +66,13 @@ $deleteMethod
 $prototype=Capabilities capabilities () const
 $method=|QNetworkProxy::Capabilities|capabilities|
 
-$prototype=QString hostName () const
-$method=|QString|hostName|
+$prototypeV2=QString hostName() const
 
 $prototypeV2=bool isCachingProxy() const
 
 $prototypeV2=bool isTransparentProxy() const
 
-$prototype=QString password () const
-$method=|QString|password|
+$prototypeV2=QString password() const
 
 $prototype=quint16 port () const
 $method=|quint16|port|
@@ -100,8 +98,7 @@ $method=|void|setUser|const QString &
 $prototype=QNetworkProxy::ProxyType type () const
 $method=|QNetworkProxy::ProxyType|type|
 
-$prototype=QString user () const
-$method=|QString|user|
+$prototypeV2=QString user() const
 
 $prototype=static QNetworkProxy applicationProxy ()
 $staticMethod=|QNetworkProxy|applicationProxy|

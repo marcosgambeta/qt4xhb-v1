@@ -74,17 +74,14 @@ $prototypeV2=bool isSessionRestored() const
 $prototype=virtual void saveState ( QSessionManager & manager )
 $virtualMethod=|void|saveState|QSessionManager &
 
-$prototype=QString sessionId () const
-$method=|QString|sessionId|
+$prototypeV2=QString sessionId() const
 
-$prototype=QString sessionKey () const
-$method=|QString|sessionKey|
+$prototypeV2=QString sessionKey() const
 
 $prototype=void setInputContext ( QInputContext * inputContext )
 $method=|void|setInputContext|QInputContext *
 
-$prototype=QString styleSheet () const
-$method=|QString|styleSheet|
+$prototypeV2=QString styleSheet() const
 
 $prototype=virtual bool notify ( QObject * receiver, QEvent * e )
 $virtualMethod=|bool|notify|QObject *,QEvent *

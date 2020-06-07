@@ -59,8 +59,7 @@ $prototypeV2=bool bold() const
 
 $prototypeV2=bool exactMatch() const
 
-$prototype=QString family () const
-$method=|QString|family|
+$prototypeV2=QString family() const
 
 $prototypeV2=bool fixedPitch() const
 
@@ -81,8 +80,7 @@ $method=|QFont::Style|style|
 $prototype=QFont::StyleHint styleHint () const
 $method=|QFont::StyleHint|styleHint|
 
-$prototype=QString styleName () const
-$method=|QString|styleName|
+$prototypeV2=QString styleName() const
 
 $prototypeV2=int weight() const
 

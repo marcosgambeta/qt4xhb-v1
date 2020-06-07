@@ -76,8 +76,7 @@ $method=|QStringList|capturedTexts|
 $prototype=Qt::CaseSensitivity caseSensitivity () const
 $method=|Qt::CaseSensitivity|caseSensitivity|
 
-$prototype=QString errorString () const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
 $prototype=bool exactMatch ( const QString & str ) const
 $method=|bool|exactMatch|const QString &
@@ -96,8 +95,7 @@ $method=|int|lastIndexIn|const QString &,int=-1,QRegExp::CaretMode=QRegExp::Care
 
 $prototypeV2=int matchedLength() const
 
-$prototype=QString pattern () const
-$method=|QString|pattern|
+$prototypeV2=QString pattern() const
 
 $prototype=PatternSyntax patternSyntax () const
 $method=|QRegExp::PatternSyntax|patternSyntax|

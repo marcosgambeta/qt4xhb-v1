@@ -71,8 +71,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QString group () const
-$method=|QString|group|
+$prototypeV2=QString group() const
 
 $prototypeV2=bool isDir() const
 
@@ -94,11 +93,9 @@ $method=|QDateTime|lastModified|
 $prototype=QDateTime lastRead () const
 $method=|QDateTime|lastRead|
 
-$prototype=QString name () const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
-$prototype=QString owner () const
-$method=|QString|owner|
+$prototypeV2=QString owner() const
 
 $prototypeV2=int permissions() const
 

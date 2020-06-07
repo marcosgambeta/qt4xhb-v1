@@ -35,7 +35,7 @@ $prototypeV2=bool isActive() const
 $prototype=void start ( int msec, QObject * object )
 $method=|void|start|int,QObject *
 
-$prototypeV2=void stop()
+$prototype=void stop()
 $method=|void|stop|
 
 $prototypeV2=int timerId() const

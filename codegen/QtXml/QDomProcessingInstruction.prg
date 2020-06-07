@@ -53,8 +53,7 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW )
 }
 $addMethod=new
 
-$prototype=QString data () const
-$method=|QString|data|
+$prototypeV2=QString data() const
 
 $prototype=QDomNode::NodeType nodeType () const
 $method=|QDomNode::NodeType|nodeType|
@@ -62,7 +61,6 @@ $method=|QDomNode::NodeType|nodeType|
 $prototype=void setData ( const QString & d )
 $method=|void|setData|const QString &
 
-$prototype=QString target () const
-$method=|QString|target|
+$prototypeV2=QString target() const
 
 #pragma ENDDUMP

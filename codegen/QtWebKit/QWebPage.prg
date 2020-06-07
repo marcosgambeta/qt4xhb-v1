@@ -95,8 +95,7 @@ $method=|QWebPluginFactory *|pluginFactory|
 $prototype=QSize preferredContentsSize () const
 $method=|QSize|preferredContentsSize|
 
-$prototype=QString selectedText () const
-$method=|QString|selectedText|
+$prototypeV2=QString selectedText() const
 
 $prototype=void setContentEditable ( bool editable )
 $method=|void|setContentEditable|bool

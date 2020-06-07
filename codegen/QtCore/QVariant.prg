@@ -428,8 +428,7 @@ $method=|QSize|toSize|
 $prototype=QSizeF toSizeF () const
 $method=|QSizeF|toSizeF|
 
-$prototype=QString toString () const
-$method=|QString|toString|
+$prototypeV2=QString toString() const
 
 $prototype=QStringList toStringList () const
 $method=|QStringList|toStringList|

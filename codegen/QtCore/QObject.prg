@@ -264,8 +264,7 @@ $virtualMethod=|const QMetaObject *|metaObject|
 $prototype=void moveToThread ( QThread * targetThread )
 $method=|void|moveToThread|QThread *
 
-$prototype=QString objectName () const
-$method=|QString|objectName|
+$prototypeV2=QString objectName() const
 
 $prototype=QObject * parent () const
 $method=|QObject *|parent|

@@ -37,11 +37,9 @@ $deleteMethod
 $prototype=void close ()
 $method=|void|close|
 
-$prototype=QString errorString () const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
-$prototype=QString fullServerName () const
-$method=|QString|fullServerName|
+$prototypeV2=QString fullServerName() const
 
 $prototypeV2=virtual bool hasPendingConnections() const
 
@@ -58,8 +56,7 @@ $virtualMethod=|QLocalSocket *|nextPendingConnection|
 $prototype=QAbstractSocket::SocketError serverError () const
 $method=|QAbstractSocket::SocketError|serverError|
 
-$prototype=QString serverName () const
-$method=|QString|serverName|
+$prototypeV2=QString serverName() const
 
 $prototype=void setMaxPendingConnections ( int numConnections )
 $method=|void|setMaxPendingConnections|int

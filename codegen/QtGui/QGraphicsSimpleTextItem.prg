@@ -66,8 +66,7 @@ $method=|void|setFont|const QFont &
 $prototype=void setText ( const QString & text )
 $method=|void|setText|const QString &
 
-$prototype=QString text () const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
 $prototype=virtual QRectF boundingRect () const
 $virtualMethod=|QRectF|boundingRect|

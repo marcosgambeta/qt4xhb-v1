@@ -37,8 +37,7 @@ $prototypeV2=virtual bool endDTD() = 0
 $prototype=virtual bool endEntity ( const QString & name ) = 0
 $virtualMethod=|bool|endEntity|const QString &
 
-$prototype=virtual QString errorString () const = 0
-$virtualMethod=|QString|errorString|
+$prototypeV2=virtual QString errorString() const = 0
 
 $prototypeV2=virtual bool startCDATA() = 0
 

@@ -46,16 +46,14 @@ $method=|QLocalSocket::LocalSocketError|error|
 
 $prototypeV2=bool flush()
 
-$prototype=QString fullServerName () const
-$method=|QString|fullServerName|
+$prototypeV2=QString fullServerName() const
 
 $prototypeV2=bool isValid() const
 
 $prototype=qint64 readBufferSize () const
 $method=|qint64|readBufferSize|
 
-$prototype=QString serverName () const
-$method=|QString|serverName|
+$prototypeV2=QString serverName() const
 
 $prototype=void setReadBufferSize ( qint64 size )
 $method=|void|setReadBufferSize|qint64

@@ -53,8 +53,7 @@ HB_FUNC_STATIC( QDOMATTR_NEW )
 }
 $addMethod=new
 
-$prototype=QString name () const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
 $prototype=QDomNode::NodeType nodeType () const
 $method=|QDomNode::NodeType|nodeType|
@@ -67,7 +66,6 @@ $method=|void|setValue|const QString &
 
 $prototypeV2=bool specified() const
 
-$prototype=QString value () const
-$method=|QString|value|
+$prototypeV2=QString value() const
 
 #pragma ENDDUMP

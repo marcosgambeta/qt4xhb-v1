@@ -30,8 +30,7 @@ $constructor=|new|const QString &,QObject *=0
 
 $deleteMethod
 
-$prototype=QString fileName () const
-$method=|QString|fileName|
+$prototypeV2=QString fileName() const
 
 $prototypeV2=bool isFinished() const
 

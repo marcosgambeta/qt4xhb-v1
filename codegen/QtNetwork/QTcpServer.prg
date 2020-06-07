@@ -38,8 +38,7 @@ $deleteMethod
 $prototype=void close ()
 $method=|void|close|
 
-$prototype=QString errorString () const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
 $prototypeV2=virtual bool hasPendingConnections() const
 

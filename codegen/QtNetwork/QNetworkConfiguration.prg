@@ -61,21 +61,18 @@ $method=|QString|bearerName|
 $prototype=BearerType bearerType () const
 $method=|QNetworkConfiguration::BearerType|bearerType|
 
-$prototype=QString bearerTypeName () const
-$method=|QString|bearerTypeName|
+$prototypeV2=QString bearerTypeName() const
 
 $prototype=QList<QNetworkConfiguration> children () const
 $method=|QList<QNetworkConfiguration>|children|
 
-$prototype=QString identifier () const
-$method=|QString|identifier|
+$prototypeV2=QString identifier() const
 
 $prototypeV2=bool isRoamingAvailable() const
 
 $prototypeV2=bool isValid() const
 
-$prototype=QString name () const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
 $prototype=Purpose purpose () const
 $method=|QNetworkConfiguration::Purpose|purpose|

@@ -56,13 +56,10 @@ $addMethod=new
 $prototype=QDomNode::NodeType nodeType () const
 $method=|QDomNode::NodeType|nodeType|
 
-$prototype=QString notationName () const
-$method=|QString|notationName|
+$prototypeV2=QString notationName() const
 
-$prototype=QString publicId () const
-$method=|QString|publicId|
+$prototypeV2=QString publicId() const
 
-$prototype=QString systemId () const
-$method=|QString|systemId|
+$prototypeV2=QString systemId() const
 
 #pragma ENDDUMP

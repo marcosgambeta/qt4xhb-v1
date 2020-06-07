@@ -106,8 +106,7 @@ $method=|qint64|cacheKey|
 
 $prototypeV2=bool isNull() const
 
-$prototype=QString name () const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
 $prototype=void paint ( QPainter * painter, const QRect & rect, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
 $internalMethod=|void|paint,paint1|QPainter *,const QRect &,Qt::Alignment=Qt::AlignCenter,QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
@@ -186,8 +185,7 @@ $staticMethod=|void|setThemeName|const QString &
 $prototype=static void setThemeSearchPaths ( const QStringList & paths )
 $staticMethod=|void|setThemeSearchPaths|const QStringList &
 
-$prototype=static QString themeName ()
-$staticMethod=|QString|themeName|
+$prototypeV2=static QString themeName()
 
 $prototype=static QStringList themeSearchPaths ()
 $staticMethod=|QStringList|themeSearchPaths|

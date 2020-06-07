@@ -142,8 +142,7 @@ $prototypeV2=int cursorWidth() const
 $prototype=QTextDocument * document () const
 $method=|QTextDocument *|document|
 
-$prototype=QString documentTitle () const
-$method=|QString|documentTitle|
+$prototypeV2=QString documentTitle() const
 
 $prototype=void ensureCursorVisible ()
 $method=|void|ensureCursorVisible|
@@ -151,8 +150,7 @@ $method=|void|ensureCursorVisible|
 $prototype=bool find ( const QString & exp, QTextDocument::FindFlags options = 0 )
 $method=|bool|find|const QString &,QTextDocument::FindFlags=0
 
-$prototype=QString fontFamily () const
-$method=|QString|fontFamily|
+$prototypeV2=QString fontFamily() const
 
 $prototypeV2=bool fontItalic() const
 
@@ -250,11 +248,9 @@ $method=|QTextCursor|textCursor|
 $prototype=Qt::TextInteractionFlags textInteractionFlags () const
 $method=|Qt::TextInteractionFlags|textInteractionFlags|
 
-$prototype=QString toHtml () const
-$method=|QString|toHtml|
+$prototypeV2=QString toHtml() const
 
-$prototype=QString toPlainText () const
-$method=|QString|toPlainText|
+$prototypeV2=QString toPlainText() const
 
 $prototype=QTextOption::WrapMode wordWrapMode () const
 $method=|QTextOption::WrapMode|wordWrapMode|

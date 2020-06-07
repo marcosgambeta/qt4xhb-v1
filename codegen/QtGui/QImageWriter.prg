@@ -73,11 +73,9 @@ $method=|QIODevice *|device|
 $prototype=ImageWriterError error () const
 $method=|QImageWriterError::ImageWriterError|error|
 
-$prototype=QString errorString () const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
-$prototype=QString fileName () const
-$method=|QString|fileName|
+$prototypeV2=QString fileName() const
 
 $prototype=QByteArray format () const
 $method=|QByteArray|format|

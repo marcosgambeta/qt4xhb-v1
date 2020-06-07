@@ -76,8 +76,7 @@ $method=|void|setFlat|bool
 $prototype=void setTitle ( const QString & title )
 $method=|void|setTitle|const QString &
 
-$prototype=QString title () const
-$method=|QString|title|
+$prototypeV2=QString title() const
 
 $prototype=virtual QSize minimumSizeHint () const
 $virtualMethod=|QSize|minimumSizeHint|

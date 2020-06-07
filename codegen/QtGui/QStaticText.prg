@@ -87,8 +87,7 @@ $method=|void|setTextWidth|qreal
 $prototype=QSizeF size () const
 $method=|QSizeF|size|
 
-$prototype=QString text () const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
 $prototype=Qt::TextFormat textFormat () const
 $method=|Qt::TextFormat|textFormat|

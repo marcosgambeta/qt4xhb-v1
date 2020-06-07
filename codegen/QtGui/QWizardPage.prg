@@ -68,11 +68,9 @@ $method=|void|setSubTitle|const QString &
 $prototype=void setTitle ( const QString & title )
 $method=|void|setTitle|const QString &
 
-$prototype=QString subTitle () const
-$method=|QString|subTitle|
+$prototypeV2=QString subTitle() const
 
-$prototype=QString title () const
-$method=|QString|title|
+$prototypeV2=QString title() const
 
 $prototypeV2=virtual bool validatePage()
 

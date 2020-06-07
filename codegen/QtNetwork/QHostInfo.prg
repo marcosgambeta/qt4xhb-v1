@@ -61,11 +61,9 @@ $method=|QList<QHostAddress>|addresses|
 $prototype=HostInfoError error () const
 $method=|QHostInfo::HostInfoError|error|
 
-$prototype=QString errorString () const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
-$prototype=QString hostName () const
-$method=|QString|hostName|
+$prototypeV2=QString hostName() const
 
 $prototypeV2=int lookupId() const
 
@@ -90,11 +88,9 @@ $staticMethod=|void|abortHostLookup|int
 $prototype=static QHostInfo fromName ( const QString & name )
 $staticMethod=|QHostInfo|fromName|const QString &
 
-$prototype=static QString localDomainName ()
-$staticMethod=|QString|localDomainName|
+$prototypeV2=static QString localDomainName()
 
-$prototype=static QString localHostName ()
-$staticMethod=|QString|localHostName|
+$prototypeV2=static QString localHostName()
 
 $prototype=static int lookupHost ( const QString & name, QObject * receiver, const char * member )
 $staticMethod=|int|lookupHost|const QString &,QObject *,const char *

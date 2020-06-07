@@ -149,24 +149,20 @@ $method=|void|setWhatsThis|const QString &
 $prototype=QSize sizeHint () const
 $method=|QSize|sizeHint|
 
-$prototype=QString statusTip () const
-$method=|QString|statusTip|
+$prototypeV2=QString statusTip() const
 
 $prototype=QTableWidget * tableWidget () const
 $method=|QTableWidget *|tableWidget|
 
-$prototype=QString text () const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
 $prototypeV2=int textAlignment() const
 
-$prototype=QString toolTip () const
-$method=|QString|toolTip|
+$prototypeV2=QString toolTip() const
 
 $prototypeV2=int type() const
 
-$prototype=QString whatsThis () const
-$method=|QString|whatsThis|
+$prototypeV2=QString whatsThis() const
 
 $prototype=virtual void write ( QDataStream & out ) const
 $virtualMethod=|void|write|QDataStream &

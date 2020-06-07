@@ -73,8 +73,7 @@ $deleteMethod
 
 $prototypeV2=bool autoRemove() const
 
-$prototype=QString fileTemplate() const
-$method=|QString|fileTemplate|
+$prototypeV2=QString fileTemplate() const
 
 $prototypeV2=bool open()
 
@@ -84,8 +83,7 @@ $method=|void|setAutoRemove|bool
 $prototype=void setFileTemplate(const QString & name)
 $method=|void|setFileTemplate|const QString &
 
-$prototype=virtual QString fileName() const
-$virtualMethod=|QString|fileName|
+$prototypeV2=virtual QString fileName() const
 
 %% TODO: verificar se 'native' ou 'local'
 

@@ -185,16 +185,13 @@ $staticMethod=|QString|currentPath|const QString &=QString()
 $prototype=QFileInfoList drives ()
 $method=|QFileInfoList|drives|
 
-$prototype=static QString homePath ()
-$staticMethod=|QString|homePath|
+$prototypeV2=static QString homePath()
 
-$prototype=static QString rootPath ()
-$staticMethod=|QString|rootPath|
+$prototypeV2=static QString rootPath()
 
 $prototype=static bool setCurrentPath ( const QString & path )
 $staticMethod=|bool|setCurrentPath|const QString &
 
-$prototype=static QString tempPath ()
-$staticMethod=|QString|tempPath|
+$prototypeV2=static QString tempPath()
 
 #pragma ENDDUMP

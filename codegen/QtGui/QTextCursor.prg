@@ -378,8 +378,7 @@ $method=|void|select|QTextCursor::SelectionType
 $prototype=void selectedTableCells ( int * firstRow, int * numRows, int * firstColumn, int * numColumns ) const
 $method=|void|selectedTableCells|int *,int *,int *,int *
 
-$prototype=QString selectedText () const
-$method=|QString|selectedText|
+$prototypeV2=QString selectedText() const
 
 $prototype=QTextDocumentFragment selection () const
 $method=|QTextDocumentFragment|selection|

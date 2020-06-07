@@ -58,8 +58,7 @@ $prototypeV2=bool hasText() const
 
 $prototypeV2=bool hasUrls() const
 
-$prototype=QString html () const
-$method=|QString|html|
+$prototypeV2=QString html() const
 
 $prototype=QVariant imageData () const
 $method=|QVariant|imageData|
@@ -85,8 +84,7 @@ $method=|void|setText|const QString &
 $prototype=void setUrls ( const QList<QUrl> & urls )
 $method=|void|setUrls|const QList<QUrl> &
 
-$prototype=QString text () const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
 $prototype=QList<QUrl> urls () const
 $method=|QList<QUrl>|urls|

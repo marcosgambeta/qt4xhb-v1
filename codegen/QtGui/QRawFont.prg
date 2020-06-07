@@ -99,8 +99,7 @@ $method=|qreal|averageCharWidth|
 $prototype=qreal descent () const
 $method=|qreal|descent|
 
-$prototype=QString familyName () const
-$method=|QString|familyName|
+$prototypeV2=QString familyName() const
 
 $prototype=QByteArray fontTable ( const char * tagName ) const
 $method=|QByteArray|fontTable|const char *
@@ -137,8 +136,7 @@ $method=|void|setPixelSize|qreal
 $prototype=QFont::Style style () const
 $method=|QFont::Style|style|
 
-$prototype=QString styleName () const
-$method=|QString|styleName|
+$prototypeV2=QString styleName() const
 
 $prototype=QList<QFontDatabase::WritingSystem> supportedWritingSystems () const
 $method=|QList<QFontDatabase::WritingSystem>|supportedWritingSystems|

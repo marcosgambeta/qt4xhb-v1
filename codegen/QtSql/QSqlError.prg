@@ -55,11 +55,9 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QString databaseText () const
-$method=|QString|databaseText|
+$prototypeV2=QString databaseText() const
 
-$prototype=QString driverText () const
-$method=|QString|driverText|
+$prototypeV2=QString driverText() const
 
 $prototypeV2=bool isValid() const
 
@@ -77,8 +75,7 @@ $method=|void|setNumber|int
 $prototype=void setType ( ErrorType type )
 $method=|void|setType|QSqlError::ErrorType
 
-$prototype=QString text () const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
 $prototype=ErrorType type () const
 $method=|QSqlError::ErrorType|type|

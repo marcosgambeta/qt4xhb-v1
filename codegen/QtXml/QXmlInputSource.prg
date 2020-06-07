@@ -55,8 +55,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=virtual QString data () const
-$virtualMethod=|QString|data|
+$prototypeV2=virtual QString data() const
 
 $prototype=virtual void fetchData ()
 $virtualMethod=|void|fetchData|

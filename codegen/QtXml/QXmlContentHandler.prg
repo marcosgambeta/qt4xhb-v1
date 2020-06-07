@@ -38,8 +38,7 @@ $virtualMethod=|bool|endElement|const QString &,const QString &,const QString &
 $prototype=virtual bool endPrefixMapping ( const QString & prefix ) = 0
 $virtualMethod=|bool|endPrefixMapping|const QString &
 
-$prototype=virtual QString errorString () const = 0
-$virtualMethod=|QString|errorString|
+$prototypeV2=virtual QString errorString() const = 0
 
 $prototype=virtual bool ignorableWhitespace ( const QString & ch ) = 0
 $virtualMethod=|bool|ignorableWhitespace|const QString &

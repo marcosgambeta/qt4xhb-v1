@@ -112,8 +112,7 @@ $prototypeV2=int cursorWidth() const
 $prototype=QTextDocument * document () const
 $method=|QTextDocument *|document|
 
-$prototype=QString documentTitle () const
-$method=|QString|documentTitle|
+$prototypeV2=QString documentTitle() const
 
 $prototype=void ensureCursorVisible ()
 $method=|void|ensureCursorVisible|
@@ -202,8 +201,7 @@ $method=|QTextCursor|textCursor|
 $prototype=Qt::TextInteractionFlags textInteractionFlags () const
 $method=|Qt::TextInteractionFlags|textInteractionFlags|
 
-$prototype=QString toPlainText () const
-$method=|QString|toPlainText|
+$prototypeV2=QString toPlainText() const
 
 $prototype=QTextOption::WrapMode wordWrapMode () const
 $method=|QTextOption::WrapMode|wordWrapMode|

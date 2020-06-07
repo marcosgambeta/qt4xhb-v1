@@ -63,15 +63,13 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QString fileName () const
-$method=|QString|fileName|
+$prototypeV2=QString fileName() const
 
 $prototypeV2=int functionEndLineNumber() const
 
 $prototypeV2=int functionMetaIndex() const
 
-$prototype=QString functionName () const
-$method=|QString|functionName|
+$prototypeV2=QString functionName() const
 
 $prototype=QStringList functionParameterNames () const
 $method=|QStringList|functionParameterNames|

@@ -194,8 +194,7 @@ $prototypeV2=int magenta() const
 $prototype=qreal magentaF () const
 $method=|qreal|magentaF|
 
-$prototype=QString name () const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
 $prototypeV2=int red() const
 

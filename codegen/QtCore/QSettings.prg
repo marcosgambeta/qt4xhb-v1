@@ -84,8 +84,7 @@ $deleteMethod
 $prototype=QStringList allKeys () const
 $method=|QStringList|allKeys|
 
-$prototype=QString applicationName () const
-$method=|QString|applicationName|
+$prototypeV2=QString applicationName() const
 
 $prototype=void beginGroup ( const QString & prefix )
 $method=|void|beginGroup|const QString &
@@ -116,22 +115,19 @@ $method=|void|endGroup|
 
 $prototypeV2=bool fallbacksEnabled() const
 
-$prototype=QString fileName () const
-$method=|QString|fileName|
+$prototypeV2=QString fileName() const
 
 $prototype=Format format () const
 $method=|QSettings::Format|format|
 
-$prototype=QString group () const
-$method=|QString|group|
+$prototypeV2=QString group() const
 
 $prototype=QTextCodec * iniCodec () const
 $method=|QTextCodec *|iniCodec|
 
 $prototypeV2=bool isWritable() const
 
-$prototype=QString organizationName () const
-$method=|QString|organizationName|
+$prototypeV2=QString organizationName() const
 
 $prototype=void remove ( const QString & key )
 $method=|void|remove|const QString &

@@ -148,8 +148,7 @@ $method=|QPointF|position|
 
 $prototypeV2=int preeditAreaPosition() const
 
-$prototype=QString preeditAreaText () const
-$method=|QString|preeditAreaText|
+$prototypeV2=QString preeditAreaText() const
 
 $prototype=int previousCursorPosition ( int oldPos, CursorMode mode = SkipCharacters ) const
 $method=|int|previousCursorPosition|int,QTextLayout::CursorMode=QTextLayout::SkipCharacters
@@ -178,8 +177,7 @@ $method=|void|setText|const QString &
 $prototype=void setTextOption ( const QTextOption & option )
 $method=|void|setTextOption|const QTextOption &
 
-$prototype=QString text () const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
 $prototype=QTextOption textOption () const
 $method=|QTextOption|textOption|

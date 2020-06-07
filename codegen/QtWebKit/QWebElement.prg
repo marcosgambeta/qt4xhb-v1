@@ -223,11 +223,9 @@ $prototypeV2=bool isNull() const
 $prototype=QWebElement lastChild () const
 $method=|QWebElement|lastChild|
 
-$prototype=QString localName () const
-$method=|QString|localName|
+$prototypeV2=QString localName() const
 
-$prototype=QString namespaceUri () const
-$method=|QString|namespaceUri|
+$prototypeV2=QString namespaceUri() const
 
 $prototype=QWebElement nextSibling () const
 $method=|QWebElement|nextSibling|
@@ -235,8 +233,7 @@ $method=|QWebElement|nextSibling|
 $prototype=QWebElement parent () const
 $method=|QWebElement|parent|
 
-$prototype=QString prefix () const
-$method=|QString|prefix|
+$prototypeV2=QString prefix() const
 
 $prototype=void prependInside ( const QString & markup )
 $internalMethod=|void|prependInside,prependInside1|const QString &
@@ -392,20 +389,16 @@ $method=|void|setStyleProperty|const QString &,const QString &
 $prototype=QString styleProperty ( const QString & name, StyleResolveStrategy strategy ) const
 $method=|QString|styleProperty|const QString &,QWebElement::StyleResolveStrategy
 
-$prototype=QString tagName () const
-$method=|QString|tagName|
+$prototypeV2=QString tagName() const
 
 $prototype=QWebElement & takeFromDocument ()
 $method=|QWebElement &|takeFromDocument|
 
-$prototype=QString toInnerXml () const
-$method=|QString|toInnerXml|
+$prototypeV2=QString toInnerXml() const
 
-$prototype=QString toOuterXml () const
-$method=|QString|toOuterXml|
+$prototypeV2=QString toOuterXml() const
 
-$prototype=QString toPlainText () const
-$method=|QString|toPlainText|
+$prototypeV2=QString toPlainText() const
 
 $prototype=void toggleClass ( const QString & name )
 $method=|void|toggleClass|const QString &

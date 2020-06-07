@@ -73,8 +73,7 @@ $prototypeV2=bool isValid() const
 
 $prototypeV2=int length() const
 
-$prototype=QString name () const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
 $prototypeV2=int precision() const
 

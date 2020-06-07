@@ -57,8 +57,7 @@ $virtualMethod=|bool|endPrefixMapping|const QString &
 $prototype=virtual bool error ( const QXmlParseException & exception )
 $virtualMethod=|bool|error|const QXmlParseException &
 
-$prototype=virtual QString errorString () const
-$virtualMethod=|QString|errorString|
+$prototypeV2=virtual QString errorString() const
 
 $prototype=virtual bool externalEntityDecl ( const QString & name, const QString & publicId, const QString & systemId )
 $virtualMethod=|bool|externalEntityDecl|const QString &,const QString &,const QString &

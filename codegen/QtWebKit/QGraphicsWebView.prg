@@ -107,8 +107,7 @@ $method=|void|setZoomFactor|qreal
 $prototype=QWebSettings * settings () const
 $method=|QWebSettings *|settings|
 
-$prototype=QString title () const
-$method=|QString|title|
+$prototypeV2=QString title() const
 
 $prototype=void triggerPageAction ( QWebPage::WebAction action, bool checked = false )
 $method=|void|triggerPageAction|QWebPage::WebAction,bool=false

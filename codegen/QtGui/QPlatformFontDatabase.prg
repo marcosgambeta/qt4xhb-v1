@@ -30,8 +30,7 @@ $deleteMethod
 $prototype=virtual QStringList addApplicationFont ( const QByteArray & fontData, const QString & fileName )
 $virtualMethod=|QStringList|addApplicationFont|const QByteArray &,const QString &
 
-$prototype=virtual QString fontDir () const
-$virtualMethod=|QString|fontDir|
+$prototypeV2=virtual QString fontDir() const
 
 $prototype=virtual QFontEngine * fontEngine ( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference )
 $virtualMethod=|QFontEngine *|fontEngine|const QByteArray &,qreal,QFont::HintingPreference

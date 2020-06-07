@@ -34,11 +34,9 @@ $prototypeV2=int indent() const
 
 $prototypeV2=bool isValid() const
 
-$prototype=QString numberPrefix () const
-$method=|QString|numberPrefix|
+$prototypeV2=QString numberPrefix() const
 
-$prototype=QString numberSuffix () const
-$method=|QString|numberSuffix|
+$prototypeV2=QString numberSuffix() const
 
 $prototype=void setIndent ( int indentation )
 $method=|void|setIndent|int

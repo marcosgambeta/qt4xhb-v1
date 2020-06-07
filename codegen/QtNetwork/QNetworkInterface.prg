@@ -61,18 +61,15 @@ $method=|QList<QNetworkAddressEntry>|addressEntries|
 $prototype=InterfaceFlags flags () const
 $method=|QNetworkInterface::InterfaceFlags|flags|
 
-$prototype=QString hardwareAddress () const
-$method=|QString|hardwareAddress|
+$prototypeV2=QString hardwareAddress() const
 
-$prototype=QString humanReadableName () const
-$method=|QString|humanReadableName|
+$prototypeV2=QString humanReadableName() const
 
 $prototypeV2=int index() const
 
 $prototypeV2=bool isValid() const
 
-$prototype=QString name () const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
 $prototype=QList<QHostAddress> allAddresses ()
 $method=|QList<QHostAddress>|allAddresses|

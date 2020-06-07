@@ -81,8 +81,7 @@ $prototypeV2=int count() const
 
 $prototypeV2=int currentIndex() const
 
-$prototype=QString currentText () const
-$method=|QString|currentText|
+$prototypeV2=QString currentText() const
 
 $prototypeV2=bool duplicatesEnabled() const
 

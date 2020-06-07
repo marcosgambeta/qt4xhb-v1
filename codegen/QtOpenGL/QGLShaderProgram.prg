@@ -239,8 +239,7 @@ $prototypeV2=bool isLinked() const
 
 $prototypeV2=virtual bool link()
 
-$prototype=QString log () const
-$method=|QString|log|
+$prototypeV2=QString log() const
 
 $prototypeV2=int maxGeometryOutputVertices() const
 

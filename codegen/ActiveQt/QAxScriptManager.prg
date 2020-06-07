@@ -130,8 +130,7 @@ $method=|QStringList|scriptNames|
 $prototype=static bool registerEngine ( const QString & name, const QString & extension, const QString & code = QString() )
 $staticMethod=|bool|registerEngine|const QString &,const QString &,const QString &=QString()
 
-$prototype=static QString scriptFileFilter ()
-$staticMethod=|QString|scriptFileFilter|
+$prototypeV2=static QString scriptFileFilter()
 
 $beginSignals
 $signal=|error(QAxScript*,int,QString,int,QString)

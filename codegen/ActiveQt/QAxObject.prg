@@ -79,8 +79,7 @@ $method=|QVariant|asVariant|
 $prototype=virtual void clear ()
 $virtualMethod=|void|clear|
 
-$prototype=QString control () const
-$method=|QString|control|
+$prototypeV2=QString control() const
 
 $prototype=void disableClassInfo ()
 $method=|void|disableClassInfo|
@@ -119,8 +118,7 @@ HB_FUNC_STATIC( QAXOBJECT_DYNAMICCALL )
 }
 $addMethod=dynamicCall
 
-$prototype=QString generateDocumentation ()
-$method=|QString|generateDocumentation|
+$prototypeV2=QString generateDocumentation()
 
 $prototypeV2=bool isNull() const
 

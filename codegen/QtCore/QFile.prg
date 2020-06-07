@@ -66,8 +66,7 @@ $deleteMethod
 $prototype=FileError error () const
 $method=|QFile::FileError|error|
 
-$prototype=QString fileName () const
-$method=|QString|fileName|
+$prototypeV2=QString fileName() const
 
 $prototypeV2=bool flush()
 

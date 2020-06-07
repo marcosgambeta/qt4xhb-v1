@@ -57,8 +57,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QString domain () const
-$method=|QString|domain|
+$prototypeV2=QString domain() const
 
 $prototype=QDateTime expirationDate () const
 $method=|QDateTime|expirationDate|
@@ -72,8 +71,7 @@ $prototypeV2=bool isSessionCookie() const
 $prototype=QByteArray name () const
 $method=|QByteArray|name|
 
-$prototype=QString path () const
-$method=|QString|path|
+$prototypeV2=QString path() const
 
 $prototype=void setDomain ( const QString & domain )
 $method=|void|setDomain|const QString &

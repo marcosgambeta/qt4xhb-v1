@@ -61,8 +61,7 @@ $method=|QDeclarativeContext *|context|
 $prototype=QObject * scopeObject () const
 $method=|QObject *|scopeObject|
 
-$prototype=QString script () const
-$method=|QString|script|
+$prototypeV2=QString script() const
 
 $prototype=void setContext ( QDeclarativeContext * context )
 $method=|void|setContext|QDeclarativeContext *

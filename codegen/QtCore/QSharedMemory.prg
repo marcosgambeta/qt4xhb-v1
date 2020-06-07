@@ -58,14 +58,12 @@ $deleteMethod
 $prototype=void setKey(const QString &key)
 $method=|void|setKey|const QString &
 
-$prototype=QString key() const
-$method=|QString|key|
+$prototypeV2=QString key() const
 
 $prototype=void setNativeKey(const QString &key)
 $method=|void|setNativeKey|const QString &
 
-$prototype=QString nativeKey() const
-$method=|QString|nativeKey|
+$prototypeV2=QString nativeKey() const
 
 $prototype=bool create(int size, AccessMode mode = ReadWrite)
 $method=|bool|create|int,QSharedMemory::AccessMode=QSharedMemory::ReadWrite
@@ -89,7 +87,6 @@ $prototypeV2=bool unlock()
 $prototype=SharedMemoryError error() const
 $method=|QSharedMemory::SharedMemoryError|error|
 
-$prototype=QString errorString() const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
 #pragma ENDDUMP

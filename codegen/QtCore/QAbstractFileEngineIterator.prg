@@ -30,11 +30,9 @@ $deleteMethod
 $prototype=virtual QFileInfo currentFileInfo () const
 $virtualMethod=|QFileInfo|currentFileInfo|
 
-$prototype=virtual QString currentFileName () const = 0
-$virtualMethod=|QString|currentFileName|
+$prototypeV2=virtual QString currentFileName() const = 0
 
-$prototype=QString currentFilePath () const
-$method=|QString|currentFilePath|
+$prototypeV2=QString currentFilePath() const
 
 $prototype=QDir::Filters filters () const
 $method=|QDir::Filters|filters|
@@ -44,11 +42,9 @@ $prototypeV2=virtual bool hasNext() const = 0
 $prototype=QStringList nameFilters () const
 $method=|QStringList|nameFilters|
 
-$prototype=virtual QString next () = 0
-$virtualMethod=|QString|next|
+$prototypeV2=virtual QString next() = 0
 
-$prototype=QString path () const
-$method=|QString|path|
+$prototypeV2=QString path() const
 
 $extraMethods
 

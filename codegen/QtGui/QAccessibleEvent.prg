@@ -33,7 +33,6 @@ $prototypeV2=int child() const
 $prototype=void setValue ( const QString & text )
 $method=|void|setValue|const QString &
 
-$prototype=QString value () const
-$method=|QString|value|
+$prototypeV2=QString value() const
 
 #pragma ENDDUMP

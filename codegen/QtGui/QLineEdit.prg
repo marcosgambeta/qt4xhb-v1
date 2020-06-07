@@ -97,8 +97,7 @@ $method=|void|del|
 $prototype=void deselect ()
 $method=|void|deselect|
 
-$prototype=QString displayText () const
-$method=|QString|displayText|
+$prototypeV2=QString displayText() const
 
 $prototypeV2=bool dragEnabled() const
 
@@ -120,8 +119,7 @@ $prototypeV2=bool hasSelectedText() const
 $prototype=void home ( bool mark )
 $method=|void|home|bool
 
-$prototype=QString inputMask () const
-$method=|QString|inputMask|
+$prototypeV2=QString inputMask() const
 
 $prototype=void insert ( const QString & newText )
 $method=|void|insert|const QString &
@@ -136,14 +134,12 @@ $prototypeV2=bool isUndoAvailable() const
 
 $prototypeV2=int maxLength() const
 
-$prototype=QString placeholderText () const
-$method=|QString|placeholderText|
+$prototypeV2=QString placeholderText() const
 
 $prototype=virtual QSize minimumSizeHint () const
 $virtualMethod=|QSize|minimumSizeHint|
 
-$prototype=QString selectedText () const
-$method=|QString|selectedText|
+$prototypeV2=QString selectedText() const
 
 $prototypeV2=int selectionStart() const
 
@@ -217,8 +213,7 @@ $method=|void|setValidator|const QValidator *
 $prototype=virtual QSize sizeHint () const
 $virtualMethod=|QSize|sizeHint|
 
-$prototype=QString text () const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
 $prototype=QMargins textMargins () const
 $method=|QMargins|textMargins|

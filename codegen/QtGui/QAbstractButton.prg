@@ -84,8 +84,7 @@ $method=|void|setText|const QString &
 $prototype=QKeySequence shortcut () const
 $method=|QKeySequence|shortcut|
 
-$prototype=QString text () const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
 $prototype=void animateClick ( int msec = 100 )
 $method=|void|animateClick|int=100

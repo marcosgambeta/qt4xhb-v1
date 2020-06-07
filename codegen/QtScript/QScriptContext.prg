@@ -98,8 +98,7 @@ $addMethod=throwError
 $prototype=QScriptValue throwValue ( const QScriptValue & value )
 $method=|QScriptValue|throwValue|const QScriptValue &
 
-$prototype=QString toString () const
-$method=|QString|toString|
+$prototypeV2=QString toString() const
 
 $extraMethods
 

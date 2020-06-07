@@ -76,19 +76,15 @@ $deleteMethod
 $prototype=QFileInfo fileInfo () const
 $method=|QFileInfo|fileInfo|
 
-$prototype=QString fileName () const
-$method=|QString|fileName|
+$prototypeV2=QString fileName() const
 
-$prototype=QString filePath () const
-$method=|QString|filePath|
+$prototypeV2=QString filePath() const
 
 $prototypeV2=bool hasNext() const
 
-$prototype=QString next ()
-$method=|QString|next|
+$prototypeV2=QString next()
 
-$prototype=QString path () const
-$method=|QString|path|
+$prototypeV2=QString path() const
 
 $extraMethods
 

@@ -56,11 +56,9 @@ $addMethod=new
 $prototype=QDomNamedNodeMap entities () const
 $method=|QDomNamedNodeMap|entities|
 
-$prototype=QString internalSubset () const
-$method=|QString|internalSubset|
+$prototypeV2=QString internalSubset() const
 
-$prototype=QString name () const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
 $prototype=QDomNode::NodeType nodeType () const
 $method=|QDomNode::NodeType|nodeType|
@@ -68,10 +66,8 @@ $method=|QDomNode::NodeType|nodeType|
 $prototype=QDomNamedNodeMap notations () const
 $method=|QDomNamedNodeMap|notations|
 
-$prototype=QString publicId () const
-$method=|QString|publicId|
+$prototypeV2=QString publicId() const
 
-$prototype=QString systemId () const
-$method=|QString|systemId|
+$prototypeV2=QString systemId() const
 
 #pragma ENDDUMP

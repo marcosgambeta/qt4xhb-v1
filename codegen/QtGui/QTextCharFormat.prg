@@ -30,8 +30,7 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=QString anchorHref () const
-$method=|QString|anchorHref|
+$prototypeV2=QString anchorHref() const
 
 $prototype=QStringList anchorNames () const
 $method=|QStringList|anchorNames|
@@ -42,8 +41,7 @@ $method=|QFont|font|
 $prototype=QFont::Capitalization fontCapitalization () const
 $method=|QFont::Capitalization|fontCapitalization|
 
-$prototype=QString fontFamily () const
-$method=|QString|fontFamily|
+$prototypeV2=QString fontFamily() const
 
 $prototypeV2=bool fontFixedPitch() const
 
@@ -156,8 +154,7 @@ $method=|void|setVerticalAlignment|QTextCharFormat::VerticalAlignment
 $prototype=QPen textOutline () const
 $method=|QPen|textOutline|
 
-$prototype=QString toolTip () const
-$method=|QString|toolTip|
+$prototypeV2=QString toolTip() const
 
 $prototype=QColor underlineColor () const
 $method=|QColor|underlineColor|

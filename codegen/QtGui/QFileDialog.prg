@@ -66,8 +66,7 @@ $method=|QFileDialog::AcceptMode|acceptMode|
 
 $prototypeV2=bool confirmOverwrite() const
 
-$prototype=QString defaultSuffix () const
-$method=|QString|defaultSuffix|
+$prototypeV2=QString defaultSuffix() const
 
 $prototype=QDir directory () const
 $method=|QDir|directory|
@@ -123,8 +122,7 @@ $method=|void|selectNameFilter|const QString &
 $prototype=QStringList selectedFiles () const
 $method=|QStringList|selectedFiles|
 
-$prototype=QString selectedNameFilter () const
-$method=|QString|selectedNameFilter|
+$prototypeV2=QString selectedNameFilter() const
 
 $prototype=void setAcceptMode ( AcceptMode mode )
 $method=|void|setAcceptMode|QFileDialog::AcceptMode

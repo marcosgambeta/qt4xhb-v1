@@ -44,8 +44,7 @@ $virtualMethod=|QStringList|entryList|QDir::Filters,const QStringList &
 $prototype=QFile::FileError error () const
 $method=|QFile::FileError|error|
 
-$prototype=QString errorString () const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
 $prototype=virtual FileFlags fileFlags ( FileFlags type = FileInfoAll ) const
 $virtualMethod=|QAbstractFileEngine::FileFlags|fileFlags|QAbstractFileEngine::FileFlags=QAbstractFileEngine::FileInfoAll

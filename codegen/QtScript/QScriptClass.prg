@@ -36,8 +36,7 @@ $prototype=QScriptEngine * engine () const
 $prototype=virtual QVariant extension ( Extension extension, const QVariant & argument = QVariant() )
 $virtualMethod=|QVariant|extension|QScriptClass::Extension,const QVariant &=QVariant()
 
-$prototype=virtual QString name () const
-$virtualMethod=|QString|name|
+$prototypeV2=virtual QString name() const
 
 $prototype=virtual QScriptClassPropertyIterator * newIterator ( const QScriptValue & object )
 $virtualMethod=|QScriptClassPropertyIterator *|newIterator|const QScriptValue &

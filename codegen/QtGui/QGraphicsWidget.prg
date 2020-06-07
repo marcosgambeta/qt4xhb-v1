@@ -186,8 +186,7 @@ $method=|QRectF|windowFrameGeometry|
 $prototype=QRectF windowFrameRect () const
 $method=|QRectF|windowFrameRect|
 
-$prototype=QString windowTitle () const
-$method=|QString|windowTitle|
+$prototypeV2=QString windowTitle() const
 
 $prototype=Qt::WindowType windowType () const
 $method=|Qt::WindowType|windowType|

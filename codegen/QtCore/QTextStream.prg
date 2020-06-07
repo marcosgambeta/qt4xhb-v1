@@ -175,8 +175,7 @@ $method=|void|skipWhiteSpace|
 $prototype=QString readLine(qint64 maxlen = 0)
 $method=|QString|readLine|qint64=0
 
-$prototype=QString readAll()
-$method=|QString|readAll|
+$prototypeV2=QString readAll()
 
 $prototype=QString read(qint64 maxlen)
 $method=|QString|read|qint64

@@ -55,8 +55,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_NEW )
 }
 $addMethod=new
 
-$prototype=QString elementId () const
-$method=|QString|elementId|
+$prototypeV2=QString elementId() const
 
 $prototype=QSize maximumCacheSize () const
 $method=|QSize|maximumCacheSize|

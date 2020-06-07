@@ -69,8 +69,7 @@ $deleteMethod
 $prototype=QIcon cleanIcon () const
 $method=|QIcon|cleanIcon|
 
-$prototype=QString emptyLabel () const
-$method=|QString|emptyLabel|
+$prototypeV2=QString emptyLabel() const
 
 $prototype=QUndoGroup * group () const
 $method=|QUndoGroup *|group|

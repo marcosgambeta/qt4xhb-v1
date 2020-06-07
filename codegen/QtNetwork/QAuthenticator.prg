@@ -64,11 +64,9 @@ $prototype=QVariantHash options () const
 %% TODO: implementar 'QVariantHash'
 %% $method=|QVariantHash|options|
 
-$prototype=QString password () const
-$method=|QString|password|
+$prototypeV2=QString password() const
 
-$prototype=QString realm () const
-$method=|QString|realm|
+$prototypeV2=QString realm() const
 
 $prototype=void setOption ( const QString & opt, const QVariant & value )
 $method=|void|setOption|const QString &,const QVariant &
@@ -79,8 +77,7 @@ $method=|void|setPassword|const QString &
 $prototype=void setUser ( const QString & user )
 $method=|void|setUser|const QString &
 
-$prototype=QString user () const
-$method=|QString|user|
+$prototypeV2=QString user() const
 
 $extraMethods
 

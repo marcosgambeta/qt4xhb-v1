@@ -37,8 +37,7 @@ $prototypeV2=bool hasIntrospection() const
 
 $prototypeV2=bool isValid() const
 
-$prototype=QString scriptLanguage () const
-$method=|QString|scriptLanguage|
+$prototypeV2=QString scriptLanguage() const
 
 $prototype=void setState ( State st )
 $method=|void|setState|QAxScriptEngine::State

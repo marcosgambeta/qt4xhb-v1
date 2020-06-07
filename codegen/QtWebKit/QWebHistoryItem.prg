@@ -46,8 +46,7 @@ $method=|QUrl|originalUrl|
 $prototype=void setUserData ( const QVariant & userData )
 $method=|void|setUserData|const QVariant &
 
-$prototype=QString title () const
-$method=|QString|title|
+$prototypeV2=QString title() const
 
 $prototype=QUrl url () const
 $method=|QUrl|url|

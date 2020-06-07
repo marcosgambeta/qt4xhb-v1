@@ -86,11 +86,9 @@ $deleteMethod
 
 $prototypeV2=bool acceptDrops() const
 
-$prototype=QString accessibleDescription () const
-$method=|QString|accessibleDescription|
+$prototypeV2=QString accessibleDescription() const
 
-$prototype=QString accessibleName () const
-$method=|QString|accessibleName|
+$prototypeV2=QString accessibleName() const
 
 $prototype=QList<QAction *> actions () const
 $method=|QList<QAction *>|actions|
@@ -990,20 +988,17 @@ $method=|QSizePolicy|sizePolicy|
 $prototype=void stackUnder ( QWidget * w )
 $method=|void|stackUnder|QWidget *
 
-$prototype=QString statusTip () const
-$method=|QString|statusTip|
+$prototypeV2=QString statusTip() const
 
 $prototype=QStyle * style () const
 $method=|QStyle *|style|
 
-$prototype=QString styleSheet () const
-$method=|QString|styleSheet|
+$prototypeV2=QString styleSheet() const
 
 $prototype=bool testAttribute ( Qt::WidgetAttribute attribute ) const
 $method=|bool|testAttribute|Qt::WidgetAttribute
 
-$prototype=QString toolTip () const
-$method=|QString|toolTip|
+$prototypeV2=QString toolTip() const
 
 $prototypeV2=bool underMouse() const
 
@@ -1071,8 +1066,7 @@ $prototypeV2=bool updatesEnabled() const
 $prototype=QRegion visibleRegion () const
 $method=|QRegion|visibleRegion|
 
-$prototype=QString whatsThis () const
-$method=|QString|whatsThis|
+$prototypeV2=QString whatsThis() const
 
 $prototypeV2=int width() const
 
@@ -1082,8 +1076,7 @@ $method=|WId|winId||#ifdef Q_OS_WIN
 $prototype=QWidget * window () const
 $method=|QWidget *|window|
 
-$prototype=QString windowFilePath () const
-$method=|QString|windowFilePath|
+$prototypeV2=QString windowFilePath() const
 
 $prototype=Qt::WindowFlags windowFlags () const
 $method=|Qt::WindowFlags|windowFlags|
@@ -1091,8 +1084,7 @@ $method=|Qt::WindowFlags|windowFlags|
 $prototype=QIcon windowIcon () const
 $method=|QIcon|windowIcon|
 
-$prototype=QString windowIconText () const
-$method=|QString|windowIconText|
+$prototypeV2=QString windowIconText() const
 
 $prototype=Qt::WindowModality windowModality () const
 $method=|Qt::WindowModality|windowModality|
@@ -1100,14 +1092,12 @@ $method=|Qt::WindowModality|windowModality|
 $prototype=qreal windowOpacity () const
 $method=|qreal|windowOpacity|
 
-$prototype=QString windowRole () const
-$method=|QString|windowRole|
+$prototypeV2=QString windowRole() const
 
 $prototype=Qt::WindowStates windowState () const
 $method=|Qt::WindowStates|windowState|
 
-$prototype=QString windowTitle () const
-$method=|QString|windowTitle|
+$prototypeV2=QString windowTitle() const
 
 $prototype=Qt::WindowType windowType () const
 $method=|Qt::WindowType|windowType|

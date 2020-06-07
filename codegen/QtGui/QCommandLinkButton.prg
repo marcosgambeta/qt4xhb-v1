@@ -61,8 +61,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW )
 }
 $addMethod=new
 
-$prototype=QString description () const
-$method=|QString|description|
+$prototypeV2=QString description() const
 
 $prototype=void setDescription ( const QString & description )
 $method=|void|setDescription|const QString &

@@ -35,8 +35,7 @@ $deleteMethod
 $prototype=Qt::Alignment alignment () const
 $method=|Qt::Alignment|alignment|
 
-$prototype=QString format () const
-$method=|QString|format|
+$prototypeV2=QString format() const
 
 $prototypeV2=bool invertedAppearance()
 
@@ -64,8 +63,7 @@ $method=|void|setTextDirection|QProgressBar::Direction
 $prototype=void setTextVisible ( bool visible )
 $method=|void|setTextVisible|bool
 
-$prototype=virtual QString text () const
-$virtualMethod=|QString|text|
+$prototypeV2=virtual QString text() const
 
 $prototype=QProgressBar::Direction textDirection ()
 $method=|QProgressBar::Direction|textDirection|

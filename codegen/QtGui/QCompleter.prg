@@ -81,13 +81,11 @@ $method=|QCompleter::CompletionMode|completionMode|
 $prototype=QAbstractItemModel * completionModel () const
 $method=|QAbstractItemModel *|completionModel|
 
-$prototype=QString completionPrefix () const
-$method=|QString|completionPrefix|
+$prototypeV2=QString completionPrefix() const
 
 $prototypeV2=int completionRole() const
 
-$prototype=QString currentCompletion () const
-$method=|QString|currentCompletion|
+$prototypeV2=QString currentCompletion() const
 
 $prototype=QModelIndex currentIndex () const
 $method=|QModelIndex|currentIndex|

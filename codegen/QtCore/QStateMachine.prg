@@ -50,8 +50,7 @@ $method=|QList<QAbstractAnimation *>|defaultAnimations|
 $prototype=Error error () const
 $method=|QStateMachine::Error|error|
 
-$prototype=QString errorString () const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
 $prototype=QStateMachine::RestorePolicy globalRestorePolicy () const
 $method=|QStateMachine::RestorePolicy|globalRestorePolicy|

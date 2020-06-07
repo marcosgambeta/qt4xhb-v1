@@ -55,20 +55,16 @@ $method=|void|quit|
 $prototype=static void addLibraryPath ( const QString & path )
 $staticMethod=|void|addLibraryPath|const QString &
 
-$prototype=static QString applicationDirPath ()
-$staticMethod=|QString|applicationDirPath|
+$prototypeV2=static QString applicationDirPath()
 
-$prototype=static QString applicationFilePath ()
-$staticMethod=|QString|applicationFilePath|
+$prototypeV2=static QString applicationFilePath()
 
-$prototype=static QString applicationName ()
-$staticMethod=|QString|applicationName|
+$prototypeV2=static QString applicationName()
 
 $prototype=static qint64 applicationPid ()
 $staticMethod=|qint64|applicationPid|
 
-$prototype=static QString applicationVersion ()
-$staticMethod=|QString|applicationVersion|
+$prototypeV2=static QString applicationVersion()
 
 $prototype=static QStringList arguments ()
 $staticMethod=|QStringList|arguments|
@@ -94,11 +90,9 @@ $staticMethod=|QCoreApplication *|instance|
 $prototype=static QStringList libraryPaths ()
 $staticMethod=|QStringList|libraryPaths|
 
-$prototype=static QString organizationDomain ()
-$staticMethod=|QString|organizationDomain|
+$prototypeV2=static QString organizationDomain()
 
-$prototype=static QString organizationName ()
-$staticMethod=|QString|organizationName|
+$prototypeV2=static QString organizationName()
 
 $prototype=static void postEvent ( QObject * receiver, QEvent * event )
 $internalStaticMethod=|void|postEvent,postEvent1|QObject *,QEvent *

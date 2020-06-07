@@ -81,8 +81,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QString toString() const;
-$method=|QString|toString|
+$prototypeV2=QString toString() const
 
 $prototype=QByteArray toByteArray() const
 $method=|QByteArray|toByteArray|

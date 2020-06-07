@@ -101,8 +101,7 @@ $method=|Qt::CursorMoveStyle|defaultCursorMoveStyle|
 $prototype=QFont defaultFont () const
 $method=|QFont|defaultFont|
 
-$prototype=QString defaultStyleSheet () const
-$method=|QString|defaultStyleSheet|
+$prototypeV2=QString defaultStyleSheet() const
 
 $prototype=QTextOption defaultTextOption () const
 $method=|QTextOption|defaultTextOption|
@@ -280,8 +279,7 @@ $method=|qreal|textWidth|
 $prototype=QString toHtml ( const QByteArray & encoding = QByteArray() ) const
 $method=|QString|toHtml|const QByteArray &=QByteArray()
 
-$prototype=QString toPlainText () const
-$method=|QString|toPlainText|
+$prototypeV2=QString toPlainText() const
 
 $prototypeV2=bool useDesignMetrics() const
 

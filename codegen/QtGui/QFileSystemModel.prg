@@ -85,8 +85,7 @@ $method=|bool|rmdir|const QModelIndex &
 $prototype=QDir rootDirectory () const
 $method=|QDir|rootDirectory|
 
-$prototype=QString rootPath () const
-$method=|QString|rootPath|
+$prototypeV2=QString rootPath() const
 
 $prototype=void setFilter ( QDir::Filters filters )
 $method=|void|setFilter|QDir::Filters

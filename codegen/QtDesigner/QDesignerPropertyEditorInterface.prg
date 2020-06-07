@@ -34,8 +34,7 @@ $deleteMethod
 $prototype=virtual QDesignerFormEditorInterface * core () const
 $virtualMethod=|QDesignerFormEditorInterface *|core|
 
-$prototype=virtual QString currentPropertyName () const = 0
-$virtualMethod=|QString|currentPropertyName|
+$prototypeV2=virtual QString currentPropertyName() const = 0
 
 $prototypeV2=virtual bool isReadOnly() const = 0
 

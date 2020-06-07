@@ -75,8 +75,7 @@ $method=|QDeclarativeError|error|
 $prototype=QVariant evaluate ( bool * valueIsUndefined = 0 )
 $method=|QVariant|evaluate|bool *=0
 
-$prototype=QString expression () const
-$method=|QString|expression|
+$prototypeV2=QString expression() const
 
 $prototypeV2=bool hasError() const
 
@@ -96,8 +95,7 @@ $method=|void|setNotifyOnValueChanged|bool
 $prototype=void setSourceLocation ( const QString & url, int line )
 $method=|void|setSourceLocation|const QString &,int
 
-$prototype=QString sourceFile () const
-$method=|QString|sourceFile|
+$prototypeV2=QString sourceFile() const
 
 $beginSignals
 $signal=|valueChanged()

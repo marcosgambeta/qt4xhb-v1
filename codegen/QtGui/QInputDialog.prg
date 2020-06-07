@@ -32,8 +32,7 @@ $constructor=|new|QWidget *=0,Qt::WindowFlags=0
 
 $deleteMethod
 
-$prototype=QString cancelButtonText () const
-$method=|QString|cancelButtonText|
+$prototypeV2=QString cancelButtonText() const
 
 $prototype=QStringList comboBoxItems () const
 $method=|QStringList|comboBoxItems|
@@ -62,11 +61,9 @@ $prototypeV2=int intValue() const
 
 $prototypeV2=bool isComboBoxEditable() const
 
-$prototype=QString labelText () const
-$method=|QString|labelText|
+$prototypeV2=QString labelText() const
 
-$prototype=QString okButtonText () const
-$method=|QString|okButtonText|
+$prototypeV2=QString okButtonText() const
 
 $prototype=void open ( QObject * receiver, const char * member )
 $method=|void|open|QObject *,const char *
@@ -140,8 +137,7 @@ $method=|bool|testOption|QInputDialog::InputDialogOption
 $prototype=QLineEdit::EchoMode textEchoMode () const
 $method=|QLineEdit::EchoMode|textEchoMode|
 
-$prototype=QString textValue () const
-$method=|QString|textValue|
+$prototypeV2=QString textValue() const
 
 $prototype=virtual void done ( int result )
 $virtualMethod=|void|done|int

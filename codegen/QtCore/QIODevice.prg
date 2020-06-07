@@ -63,8 +63,7 @@ $prototypeV2=virtual bool canReadLine() const
 $prototype=virtual void close ()
 $virtualMethod=|void|close|
 
-$prototype=QString errorString () const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
 $prototype=bool getChar ( char * c )
 $method=|bool|getChar|char *

@@ -25,14 +25,11 @@ $destructor
 
 $includes
 
-$prototype=static QString licensee()
-$staticMethod=|QString|licensee|
+$prototypeV2=static QString licensee()
 
-$prototype=static QString licensedProducts()
-$staticMethod=|QString|licensedProducts|
+$prototypeV2=static QString licensedProducts()
 
-$prototype=static QString buildKey()
-$staticMethod=|QString|buildKey|
+$prototypeV2=static QString buildKey()
 
 $prototype=static QDate buildDate()
 $staticMethod=|QDate|buildDate|

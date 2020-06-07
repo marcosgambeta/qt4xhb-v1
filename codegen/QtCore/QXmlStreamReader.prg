@@ -162,8 +162,7 @@ $method=|QXmlStreamEntityResolver *|entityResolver|
 $prototype=Error error() const
 $method=|QXmlStreamReader::Error|error|
 
-$prototype=QString errorString() const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
 $prototypeV2=bool hasError() const
 
@@ -246,8 +245,7 @@ $method=|void|skipCurrentElement|
 $prototype=QStringRef text() const
 $method=|QStringRef|text|
 
-$prototype=QString tokenString() const
-$method=|QString|tokenString|
+$prototypeV2=QString tokenString() const
 
 $prototype=TokenType tokenType() const
 $method=|QXmlStreamReader::TokenType|tokenType|

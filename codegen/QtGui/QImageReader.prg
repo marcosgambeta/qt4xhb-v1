@@ -88,11 +88,9 @@ $method=|QIODevice *|device|
 $prototype=ImageReaderError error () const
 $method=|QImageReader::ImageReaderError|error|
 
-$prototype=QString errorString () const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
-$prototype=QString fileName () const
-$method=|QString|fileName|
+$prototypeV2=QString fileName() const
 
 $prototype=QByteArray format () const
 $method=|QByteArray|format|

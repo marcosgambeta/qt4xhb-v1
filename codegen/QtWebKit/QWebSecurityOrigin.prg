@@ -42,13 +42,11 @@ $method=|qint64|databaseUsage|
 $prototype=QList<QWebDatabase> databases () const
 $method=|QList<QWebDatabase>|databases|
 
-$prototype=QString host () const
-$method=|QString|host|
+$prototypeV2=QString host() const
 
 $prototypeV2=int port() const
 
-$prototype=QString scheme () const
-$method=|QString|scheme|
+$prototypeV2=QString scheme() const
 
 $prototype=void setDatabaseQuota ( qint64 quota )
 $method=|void|setDatabaseQuota|qint64

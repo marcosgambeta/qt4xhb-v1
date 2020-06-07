@@ -80,11 +80,9 @@ HB_FUNC_STATIC( QLOCALE_NEW )
 }
 $addMethod=new
 
-$prototype=QString amText () const
-$method=|QString|amText|
+$prototypeV2=QString amText() const
 
-$prototype=QString bcp47Name () const
-$method=|QString|bcp47Name|
+$prototypeV2=QString bcp47Name() const
 
 $prototype=Country country () const
 $method=|QLocale::Country|country|
@@ -125,14 +123,11 @@ $method=|QLocale::MeasurementSystem|measurementSystem|
 $prototype=QString monthName ( int month, FormatType type = LongFormat ) const
 $method=|QString|monthName|int,QLocale::FormatType=QLocale::LongFormat
 
-$prototype=QString name () const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
-$prototype=QString nativeCountryName () const
-$method=|QString|nativeCountryName|
+$prototypeV2=QString nativeCountryName() const
 
-$prototype=QString nativeLanguageName () const
-$method=|QString|nativeLanguageName|
+$prototypeV2=QString nativeLanguageName() const
 
 $prototype=QChar negativeSign () const
 $method=|QChar|negativeSign|
@@ -143,8 +138,7 @@ $method=|QLocale::NumberOptions|numberOptions|
 $prototype=QChar percent () const
 $method=|QChar|percent|
 
-$prototype=QString pmText () const
-$method=|QString|pmText|
+$prototypeV2=QString pmText() const
 
 $prototype=QChar positiveSign () const
 $method=|QChar|positiveSign|

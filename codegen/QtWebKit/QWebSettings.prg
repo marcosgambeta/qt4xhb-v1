@@ -27,8 +27,7 @@ $includes
 
 #include <QtCore/QUrl>
 
-$prototype=QString defaultTextEncoding () const
-$method=|QString|defaultTextEncoding|
+$prototypeV2=QString defaultTextEncoding() const
 
 $prototype=QString fontFamily ( FontFamily which ) const
 $method=|QString|fontFamily|QWebSettings::FontFamily
@@ -36,8 +35,7 @@ $method=|QString|fontFamily|QWebSettings::FontFamily
 $prototype=int fontSize ( FontSize type ) const
 $method=|int|fontSize|QWebSettings::FontSize
 
-$prototype=QString localStoragePath () const
-$method=|QString|localStoragePath|
+$prototypeV2=QString localStoragePath() const
 
 $prototype=void resetAttribute ( WebAttribute attribute )
 $method=|void|resetAttribute|QWebSettings::WebAttribute
@@ -84,8 +82,7 @@ $staticMethod=|void|enablePersistentStorage|const QString &=QString()
 $prototype=static QWebSettings * globalSettings ()
 $staticMethod=|QWebSettings *|globalSettings|
 
-$prototype=static QString iconDatabasePath ()
-$staticMethod=|QString|iconDatabasePath|
+$prototypeV2=static QString iconDatabasePath()
 
 $prototype=static QIcon iconForUrl ( const QUrl & url )
 $staticMethod=|QIcon|iconForUrl|const QUrl &
@@ -95,11 +92,9 @@ $prototypeV2=static int maximumPagesInCache()
 $prototype=static qint64 offlineStorageDefaultQuota ()
 $staticMethod=|qint64|offlineStorageDefaultQuota|
 
-$prototype=static QString offlineStoragePath ()
-$staticMethod=|QString|offlineStoragePath|
+$prototypeV2=static QString offlineStoragePath()
 
-$prototype=static QString offlineWebApplicationCachePath ()
-$staticMethod=|QString|offlineWebApplicationCachePath|
+$prototypeV2=static QString offlineWebApplicationCachePath()
 
 $prototype=static qint64 offlineWebApplicationCacheQuota ()
 $staticMethod=|qint64|offlineWebApplicationCacheQuota|

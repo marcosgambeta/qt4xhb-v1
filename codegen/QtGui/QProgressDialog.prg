@@ -61,8 +61,7 @@ $prototypeV2=bool autoClose() const
 
 $prototypeV2=bool autoReset() const
 
-$prototype=QString labelText () const
-$method=|QString|labelText|
+$prototypeV2=QString labelText() const
 
 $prototypeV2=int maximum() const
 

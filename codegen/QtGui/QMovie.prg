@@ -85,8 +85,7 @@ $method=|QPixmap|currentPixmap|
 $prototype=QIODevice *  device () const
 $method=|QIODevice *|device|
 
-$prototype=QString fileName () const
-$method=|QString|fileName|
+$prototypeV2=QString fileName() const
 
 $prototype=QByteArray  format () const
 $method=|QByteArray|format|

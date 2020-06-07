@@ -85,8 +85,7 @@ $prototypeV2=int sampleSize() const
 $prototype=void setCodec ( const QString & codec )
 $method=|void|setCodec|const QString &
 
-$prototype=QString codec () const
-$method=|QString|codec|
+$prototypeV2=QString codec() const
 
 $prototype=void setByteOrder ( QAudioFormat::Endian byteOrder )
 $method=|void|setByteOrder|QAudioFormat::Endian

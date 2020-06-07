@@ -148,8 +148,7 @@ $prototypeV2=bool isWritable() const
 $prototype=QMetaMethod method () const
 $method=|QMetaMethod|method|
 
-$prototype=QString name () const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
 $prototypeV2=bool needsNotifySignal() const
 

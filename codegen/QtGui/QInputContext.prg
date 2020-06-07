@@ -41,13 +41,11 @@ $method=|QWidget *|focusWidget|
 $prototype=virtual QFont font () const
 $virtualMethod=|QFont|font|
 
-$prototype=virtual QString identifierName () = 0
-$virtualMethod=|QString|identifierName|
+$prototypeV2=virtual QString identifierName() = 0
 
 $prototypeV2=virtual bool isComposing() const = 0
 
-$prototype=virtual QString language () = 0
-$virtualMethod=|QString|language|
+$prototypeV2=virtual QString language() = 0
 
 $prototype=virtual void mouseHandler ( int x, QMouseEvent * event )
 $virtualMethod=|void|mouseHandler|int,QMouseEvent *

@@ -32,17 +32,14 @@ $constructor=|new|const QWebDatabase &
 
 $deleteMethod
 
-$prototype=QString displayName () const
-$method=|QString|displayName|
+$prototypeV2=QString displayName() const
 
 $prototype=qint64 expectedSize () const
 $method=|qint64|expectedSize|
 
-$prototype=QString fileName () const
-$method=|QString|fileName|
+$prototypeV2=QString fileName() const
 
-$prototype=QString name () const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
 $prototype=QWebSecurityOrigin origin () const
 $method=|QWebSecurityOrigin|origin|

@@ -77,8 +77,7 @@ $prototypeV2=bool isValid() const
 $prototype=BoundaryType type() const
 $method=|QTextBoundaryFinder::BoundaryType|type|
 
-$prototype=QString string() const
-$method=|QString|string|
+$prototypeV2=QString string() const
 
 $prototype=void toStart()
 $method=|void|toStart|

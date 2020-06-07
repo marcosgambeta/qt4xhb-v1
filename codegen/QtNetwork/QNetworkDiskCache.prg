@@ -30,8 +30,7 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=QString cacheDirectory () const
-$method=|QString|cacheDirectory|
+$prototypeV2=QString cacheDirectory() const
 
 $prototype=QNetworkCacheMetaData fileMetaData ( const QString & fileName ) const
 $method=|QNetworkCacheMetaData|fileMetaData|const QString &

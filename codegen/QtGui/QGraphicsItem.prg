@@ -986,8 +986,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TOGRAPHICSOBJECT )
 }
 $addMethod=toGraphicsObject
 
-$prototype=QString toolTip () const
-$method=|QString|toolTip|
+$prototypeV2=QString toolTip() const
 
 $prototype=QGraphicsItem * topLevelItem () const
 $method=|QGraphicsItem *|topLevelItem|

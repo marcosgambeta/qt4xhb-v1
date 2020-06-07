@@ -38,14 +38,11 @@ $virtualMethod=|QDir|absoluteDir|
 $prototype=virtual void addResourceFile ( const QString & path ) = 0
 $virtualMethod=|void|addResourceFile|const QString &
 
-$prototype=virtual QString author () const = 0
-$virtualMethod=|QString|author|
+$prototypeV2=virtual QString author() const = 0
 
-$prototype=virtual QString comment () const = 0
-$virtualMethod=|QString|comment|
+$prototypeV2=virtual QString comment() const = 0
 
-$prototype=virtual QString contents () const = 0
-$virtualMethod=|QString|contents|
+$prototypeV2=virtual QString contents() const = 0
 
 $prototype=virtual QDesignerFormEditorInterface * core () const
 $virtualMethod=|QDesignerFormEditorInterface *|core|
@@ -56,14 +53,12 @@ $virtualMethod=|QDesignerFormWindowCursorInterface *|cursor|
 $prototype=virtual void emitSelectionChanged () = 0
 $virtualMethod=|void|emitSelectionChanged|
 
-$prototype=virtual QString exportMacro () const = 0
-$virtualMethod=|QString|exportMacro|
+$prototypeV2=virtual QString exportMacro() const = 0
 
 $prototype=virtual Feature features () const = 0
 $virtualMethod=|QDesignerFormWindowInterface::Feature|features|
 
-$prototype=virtual QString fileName () const = 0
-$virtualMethod=|QString|fileName|
+$prototypeV2=virtual QString fileName() const = 0
 
 $prototype=virtual QPoint grid () const = 0
 $virtualMethod=|QPoint|grid|
@@ -85,8 +80,7 @@ $virtualMethod=|void|layoutDefault|int *,int *
 $prototype=virtual QWidget * mainContainer () const = 0
 $virtualMethod=|QWidget *|mainContainer|
 
-$prototype=virtual QString pixmapFunction () const = 0
-$virtualMethod=|QString|pixmapFunction|
+$prototypeV2=virtual QString pixmapFunction() const = 0
 
 $prototype=virtual void removeResourceFile ( const QString & path ) = 0
 $virtualMethod=|void|removeResourceFile|const QString &

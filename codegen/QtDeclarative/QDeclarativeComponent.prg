@@ -113,8 +113,7 @@ $method=|QDeclarativeComponent::Status|status|
 $prototype=QUrl url () const
 $method=|QUrl|url|
 
-$prototype=Q_INVOKABLE QString errorString() const
-$method=|QString|errorString|
+$prototypeV2=Q_INVOKABLE QString errorString() const
 
 $prototype=static QDeclarativeComponentAttached *qmlAttachedProperties(QObject *)
 %% TODO: implementar

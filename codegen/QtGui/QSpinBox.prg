@@ -32,15 +32,13 @@ $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-$prototype=QString cleanText () const
-$method=|QString|cleanText|
+$prototypeV2=QString cleanText() const
 
 $prototypeV2=int maximum() const
 
 $prototypeV2=int minimum() const
 
-$prototype=QString prefix () const
-$method=|QString|prefix|
+$prototypeV2=QString prefix() const
 
 $prototype=void setMaximum ( int max )
 $method=|void|setMaximum|int
@@ -62,8 +60,7 @@ $method=|void|setSuffix|const QString &
 
 $prototypeV2=int singleStep() const
 
-$prototype=QString suffix () const
-$method=|QString|suffix|
+$prototypeV2=QString suffix() const
 
 $prototypeV2=int value() const
 

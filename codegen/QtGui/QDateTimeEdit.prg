@@ -109,8 +109,7 @@ $method=|QDate|date|
 $prototype=QDateTime dateTime () const
 $method=|QDateTime|dateTime|
 
-$prototype=QString displayFormat () const
-$method=|QString|displayFormat|
+$prototypeV2=QString displayFormat() const
 
 $prototype=Sections displayedSections () const
 $method=|QDateTimeEdit::Sections|displayedSections|

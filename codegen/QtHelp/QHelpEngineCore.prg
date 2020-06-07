@@ -39,14 +39,12 @@ $method=|bool|addCustomFilter|const QString &,const QStringList &
 
 $prototypeV2=bool autoSaveFilter() const
 
-$prototype=QString collectionFile () const
-$method=|QString|collectionFile|
+$prototypeV2=QString collectionFile() const
 
 $prototype=bool copyCollectionFile ( const QString & fileName )
 $method=|bool|copyCollectionFile|const QString &
 
-$prototype=QString currentFilter () const
-$method=|QString|currentFilter|
+$prototypeV2=QString currentFilter() const
 
 $prototype=QStringList customFilters () const
 $method=|QStringList|customFilters|
@@ -57,8 +55,7 @@ $method=|QVariant|customValue|const QString &,const QVariant &=QVariant()
 $prototype=QString documentationFileName ( const QString & namespaceName )
 $method=|QString|documentationFileName|const QString &
 
-$prototype=QString error () const
-$method=|QString|error|
+$prototypeV2=QString error() const
 
 $prototype=QByteArray fileData ( const QUrl & url ) const
 $method=|QByteArray|fileData|const QUrl &

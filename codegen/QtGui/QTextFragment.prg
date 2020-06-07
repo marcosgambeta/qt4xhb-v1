@@ -72,8 +72,7 @@ $prototypeV2=int length() const
 
 $prototypeV2=int position() const
 
-$prototype=QString text () const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
 $extraMethods
 

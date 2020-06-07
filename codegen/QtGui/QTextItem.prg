@@ -39,8 +39,7 @@ $method=|QFont|font|
 $prototype=RenderFlags renderFlags () const
 $method=|QTextItem::RenderFlags|renderFlags|
 
-$prototype=QString text () const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
 $prototype=qreal width () const
 $method=|qreal|width|
