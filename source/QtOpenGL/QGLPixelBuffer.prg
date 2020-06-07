@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_DELETETEXTURE )
 }
 
 /*
-bool doneCurrent ()
+bool doneCurrent()
 */
 HB_FUNC_STATIC( QGLPIXELBUFFER_DONECURRENT )
 {
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_GENERATEDYNAMICTEXTURE )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QGLPIXELBUFFER_ISVALID )
 {
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_ISVALID )
 }
 
 /*
-bool makeCurrent ()
+bool makeCurrent()
 */
 HB_FUNC_STATIC( QGLPIXELBUFFER_MAKECURRENT )
 {
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_PAINTENGINE )
 }
 
 /*
-static bool hasOpenGLPbuffers ()
+static bool hasOpenGLPbuffers()
 */
 HB_FUNC_STATIC( QGLPIXELBUFFER_HASOPENGLPBUFFERS )
 {

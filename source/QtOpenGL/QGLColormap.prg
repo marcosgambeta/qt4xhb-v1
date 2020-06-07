@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_FINDNEAREST )
 }
 
 /*
-bool isEmpty () const
+bool isEmpty() const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_ISEMPTY )
 {

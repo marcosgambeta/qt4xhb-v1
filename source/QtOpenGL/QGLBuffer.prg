@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QGLBUFFER_ALLOCATE )
 }
 
 /*
-bool bind ()
+bool bind()
 */
 HB_FUNC_STATIC( QGLBUFFER_BIND )
 {
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QGLBUFFER_BUFFERID )
 }
 
 /*
-bool create ()
+bool create()
 */
 HB_FUNC_STATIC( QGLBUFFER_CREATE )
 {
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QGLBUFFER_DESTROY )
 }
 
 /*
-bool isCreated () const
+bool isCreated() const
 */
 HB_FUNC_STATIC( QGLBUFFER_ISCREATED )
 {
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QGLBUFFER_TYPE )
 }
 
 /*
-bool unmap ()
+bool unmap()
 */
 HB_FUNC_STATIC( QGLBUFFER_UNMAP )
 {

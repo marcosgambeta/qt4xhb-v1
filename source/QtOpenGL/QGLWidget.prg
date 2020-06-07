@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QGLWIDGET_DONECURRENT )
 }
 
 /*
-bool doubleBuffer () const
+bool doubleBuffer() const
 */
 HB_FUNC_STATIC( QGLWIDGET_DOUBLEBUFFER )
 {
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QGLWIDGET_GRABFRAMEBUFFER )
 }
 
 /*
-bool isSharing () const
+bool isSharing() const
 */
 HB_FUNC_STATIC( QGLWIDGET_ISSHARING )
 {
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QGLWIDGET_ISSHARING )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QGLWIDGET_ISVALID )
 {

@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCEFILE )
 }
 
 /*
-bool isCompiled () const
+bool isCompiled() const
 */
 HB_FUNC_STATIC( QGLSHADER_ISCOMPILED )
 {

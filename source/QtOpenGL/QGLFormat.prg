@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QGLFORMAT_DELETE )
 }
 
 /*
-bool accum () const
+bool accum() const
 */
 HB_FUNC_STATIC( QGLFORMAT_ACCUM )
 {
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QGLFORMAT_ACCUMBUFFERSIZE )
 }
 
 /*
-bool alpha () const
+bool alpha() const
 */
 HB_FUNC_STATIC( QGLFORMAT_ALPHA )
 {
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QGLFORMAT_BLUEBUFFERSIZE )
 }
 
 /*
-bool depth () const
+bool depth() const
 */
 HB_FUNC_STATIC( QGLFORMAT_DEPTH )
 {
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QGLFORMAT_DEPTHBUFFERSIZE )
 }
 
 /*
-bool directRendering () const
+bool directRendering() const
 */
 HB_FUNC_STATIC( QGLFORMAT_DIRECTRENDERING )
 {
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QGLFORMAT_DIRECTRENDERING )
 }
 
 /*
-bool doubleBuffer () const
+bool doubleBuffer() const
 */
 HB_FUNC_STATIC( QGLFORMAT_DOUBLEBUFFER )
 {
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QGLFORMAT_GREENBUFFERSIZE )
 }
 
 /*
-bool hasOverlay () const
+bool hasOverlay() const
 */
 HB_FUNC_STATIC( QGLFORMAT_HASOVERLAY )
 {
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QGLFORMAT_REDBUFFERSIZE )
 }
 
 /*
-bool rgba () const
+bool rgba() const
 */
 HB_FUNC_STATIC( QGLFORMAT_RGBA )
 {
@@ -586,7 +586,7 @@ HB_FUNC_STATIC( QGLFORMAT_RGBA )
 }
 
 /*
-bool sampleBuffers () const
+bool sampleBuffers() const
 */
 HB_FUNC_STATIC( QGLFORMAT_SAMPLEBUFFERS )
 {
@@ -1232,7 +1232,7 @@ HB_FUNC_STATIC( QGLFORMAT_SETVERSION )
 }
 
 /*
-bool stencil () const
+bool stencil() const
 */
 HB_FUNC_STATIC( QGLFORMAT_STENCIL )
 {
@@ -1280,7 +1280,7 @@ HB_FUNC_STATIC( QGLFORMAT_STENCILBUFFERSIZE )
 }
 
 /*
-bool stereo () const
+bool stereo() const
 */
 HB_FUNC_STATIC( QGLFORMAT_STEREO )
 {
@@ -1392,7 +1392,7 @@ HB_FUNC_STATIC( QGLFORMAT_DEFAULTOVERLAYFORMAT )
 }
 
 /*
-static bool hasOpenGL ()
+static bool hasOpenGL()
 */
 HB_FUNC_STATIC( QGLFORMAT_HASOPENGL )
 {
@@ -1411,7 +1411,7 @@ HB_FUNC_STATIC( QGLFORMAT_HASOPENGL )
 }
 
 /*
-static bool hasOpenGLOverlays ()
+static bool hasOpenGLOverlays()
 */
 HB_FUNC_STATIC( QGLFORMAT_HASOPENGLOVERLAYS )
 {

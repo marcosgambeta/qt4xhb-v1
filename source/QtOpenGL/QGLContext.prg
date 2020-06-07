@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QGLCONTEXT_GETPROCADDRESS )
 }
 
 /*
-bool isSharing () const
+bool isSharing() const
 */
 HB_FUNC_STATIC( QGLCONTEXT_ISSHARING )
 {
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QGLCONTEXT_ISSHARING )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QGLCONTEXT_ISVALID )
 {
