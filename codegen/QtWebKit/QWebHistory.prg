@@ -34,11 +34,9 @@ $method=|QWebHistoryItem|backItem|
 $prototype=QList<QWebHistoryItem> backItems ( int maxItems ) const
 $method=|QList<QWebHistoryItem>|backItems|int
 
-$prototype=bool canGoBack () const
-$method=|bool|canGoBack|
+$prototypeV2=bool canGoBack() const
 
-$prototype=bool canGoForward () const
-$method=|bool|canGoForward|
+$prototypeV2=bool canGoForward() const
 
 $prototype=void clear ()
 $method=|void|clear|

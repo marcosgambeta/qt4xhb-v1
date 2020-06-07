@@ -62,8 +62,7 @@ $method=|bool|findText|const QString &,QWebPage::FindFlags=0
 $prototype=bool focusNextPrevChild ( bool next )
 $method=|bool|focusNextPrevChild|bool
 
-$prototype=bool forwardUnsupportedContent () const
-$method=|bool|forwardUnsupportedContent|
+$prototypeV2=bool forwardUnsupportedContent() const
 
 $prototype=QWebFrame * frameAt ( const QPoint & pos ) const
 $method=|QWebFrame *|frameAt|const QPoint &
@@ -74,11 +73,9 @@ $method=|QWebHistory *|history|
 $prototype=QVariant inputMethodQuery ( Qt::InputMethodQuery property ) const
 $method=|QVariant|inputMethodQuery|Qt::InputMethodQuery
 
-$prototype=bool isContentEditable () const
-$method=|bool|isContentEditable|
+$prototypeV2=bool isContentEditable() const
 
-$prototype=bool isModified () const
-$method=|bool|isModified|
+$prototypeV2=bool isModified() const
 
 $prototype=LinkDelegationPolicy linkDelegationPolicy () const
 $method=|QWebPage::LinkDelegationPolicy|linkDelegationPolicy|
@@ -158,8 +155,7 @@ $method=|QSize|viewportSize|
 $prototype=virtual bool event ( QEvent * ev )
 $virtualMethod=|bool|event|QEvent *
 
-$prototype=bool shouldInterruptJavaScript ()
-$method=|bool|shouldInterruptJavaScript|
+$prototypeV2=bool shouldInterruptJavaScript()
 
 $beginSignals
 $signal=|contentsChanged()

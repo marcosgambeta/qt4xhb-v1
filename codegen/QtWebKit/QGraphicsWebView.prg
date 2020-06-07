@@ -43,11 +43,9 @@ $method=|QWebHistory *|history|
 $prototype=QIcon icon () const
 $method=|QIcon|icon|
 
-$prototype=bool isModified () const
-$method=|bool|isModified|
+$prototypeV2=bool isModified() const
 
-$prototype=bool isTiledBackingStoreFrozen () const
-$method=|bool|isTiledBackingStoreFrozen|
+$prototypeV2=bool isTiledBackingStoreFrozen() const
 
 $prototype=void load ( const QUrl & url )
 $internalMethod=|void|load,load1|const QUrl &
@@ -83,8 +81,7 @@ $method=|QWebPage *|page|
 $prototype=QAction * pageAction ( QWebPage::WebAction action ) const
 $method=|QAction *|pageAction|QWebPage::WebAction
 
-$prototype=bool resizesToContents () const
-$method=|bool|resizesToContents|
+$prototypeV2=bool resizesToContents() const
 
 $prototype=void setContent ( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
 $method=|void|setContent|const QByteArray &,const QString &=QString(),const QUrl &=QUrl()

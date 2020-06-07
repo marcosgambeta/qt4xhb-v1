@@ -35,8 +35,7 @@ $deleteMethod
 $prototype=QIcon icon () const
 $method=|QIcon|icon|
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=QDateTime lastVisited () const
 $method=|QDateTime|lastVisited|

@@ -211,17 +211,14 @@ $method=|bool|hasAttribute|const QString &
 $prototype=bool hasAttributeNS ( const QString & namespaceUri, const QString & name ) const
 $method=|bool|hasAttributeNS|const QString &,const QString &
 
-$prototype=bool hasAttributes () const
-$method=|bool|hasAttributes|
+$prototypeV2=bool hasAttributes() const
 
 $prototype=bool hasClass ( const QString & name ) const
 $method=|bool|hasClass|const QString &
 
-$prototype=bool hasFocus () const
-$method=|bool|hasFocus|
+$prototypeV2=bool hasFocus() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=QWebElement lastChild () const
 $method=|QWebElement|lastChild|

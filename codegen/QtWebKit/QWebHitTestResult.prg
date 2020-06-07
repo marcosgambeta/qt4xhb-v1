@@ -75,14 +75,11 @@ $method=|QWebFrame *|frame|
 $prototype=QUrl imageUrl () const
 $method=|QUrl|imageUrl|
 
-$prototype=bool isContentEditable () const
-$method=|bool|isContentEditable|
+$prototypeV2=bool isContentEditable() const
 
-$prototype=bool isContentSelected () const
-$method=|bool|isContentSelected|
+$prototypeV2=bool isContentSelected() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=QWebElement linkElement () const
 $method=|QWebElement|linkElement|

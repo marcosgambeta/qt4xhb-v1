@@ -45,8 +45,7 @@ $method=|QWebHistory *|history|
 $prototype=QIcon icon () const
 $method=|QIcon|icon|
 
-$prototype=bool isModified () const
-$method=|bool|isModified|
+$prototypeV2=bool isModified() const
 
 $prototype=void load ( const QUrl & url )
 $internalMethod=|void|load,load1|const QUrl &

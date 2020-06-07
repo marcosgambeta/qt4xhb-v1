@@ -83,8 +83,7 @@ $method=|QString|frameName|
 $prototype=QRect geometry () const
 $method=|QRect|geometry|
 
-$prototype=bool hasFocus () const
-$method=|bool|hasFocus|
+$prototypeV2=bool hasFocus() const
 
 $prototype=QWebHitTestResult hitTestContent ( const QPoint & pos ) const
 $method=|QWebHitTestResult|hitTestContent|const QPoint &
