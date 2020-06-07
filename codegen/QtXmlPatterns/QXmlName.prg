@@ -55,8 +55,7 @@ HB_FUNC_STATIC( QXMLNAME_NEW )
 }
 $addMethod=new
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=QString localName ( const QXmlNamePool & namePool ) const
 $method=|QString|localName|const QXmlNamePool &

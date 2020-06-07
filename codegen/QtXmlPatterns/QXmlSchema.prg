@@ -62,8 +62,7 @@ $deleteMethod
 $prototype=QUrl documentUri () const
 $method=|QUrl|documentUri|
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=bool load ( const QUrl & source )
 $internalMethod=|bool|load,load1|const QUrl &

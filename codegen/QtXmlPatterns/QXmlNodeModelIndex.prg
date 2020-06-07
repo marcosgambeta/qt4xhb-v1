@@ -62,8 +62,7 @@ $method=|qint64|data|
 $prototype=void * internalPointer () const
 $method=|void *|internalPointer|
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=const QAbstractXmlNodeModel * model () const
 $method=|const QAbstractXmlNodeModel *|model|

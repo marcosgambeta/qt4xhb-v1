@@ -66,8 +66,7 @@ $deleteMethod
 $prototype=qint64 column () const
 $method=|qint64|column|
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=qint64 line () const
 $method=|qint64|line|

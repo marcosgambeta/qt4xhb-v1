@@ -192,8 +192,7 @@ $addMethod=evaluateTo
 $prototype=QXmlName initialTemplateName () const
 $method=|QXmlName|initialTemplateName|
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=QAbstractMessageHandler * messageHandler () const
 $method=|QAbstractMessageHandler *|messageHandler|
