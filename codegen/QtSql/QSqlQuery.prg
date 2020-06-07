@@ -180,26 +180,20 @@ $method=|QString|executedQuery|
 $prototype=void finish ()
 $method=|void|finish|
 
-$prototype=bool first ()
-$method=|bool|first|
+$prototypeV2=bool first()
 
-$prototype=bool isActive () const
-$method=|bool|isActive|
+$prototypeV2=bool isActive() const
 
-$prototype=bool isForwardOnly () const
-$method=|bool|isForwardOnly|
+$prototypeV2=bool isForwardOnly() const
 
 $prototype=bool isNull ( int field ) const
 $method=|bool|isNull|int
 
-$prototype=bool isSelect () const
-$method=|bool|isSelect|
+$prototypeV2=bool isSelect() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=bool last ()
-$method=|bool|last|
+$prototypeV2=bool last()
 
 $prototype=QSqlError lastError () const
 $method=|QSqlError|lastError|
@@ -210,11 +204,9 @@ $method=|QVariant|lastInsertId|
 $prototype=QString lastQuery () const
 $method=|QString|lastQuery|
 
-$prototype=bool next ()
-$method=|bool|next|
+$prototypeV2=bool next()
 
-$prototype=bool nextResult ()
-$method=|bool|nextResult|
+$prototypeV2=bool nextResult()
 
 $prototypeV2=int numRowsAffected() const
 
@@ -224,8 +216,7 @@ $method=|QSql::NumericalPrecisionPolicy|numericalPrecisionPolicy|
 $prototype=bool prepare ( const QString & query )
 $method=|bool|prepare|const QString &
 
-$prototype=bool previous ()
-$method=|bool|previous|
+$prototypeV2=bool previous()
 
 $prototype=QSqlRecord record () const
 $method=|QSqlRecord|record|

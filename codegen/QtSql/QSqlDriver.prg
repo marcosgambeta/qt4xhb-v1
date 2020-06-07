@@ -34,14 +34,12 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual bool beginTransaction ()
-$virtualMethod=|bool|beginTransaction|
+$prototypeV2=virtual bool beginTransaction()
 
 $prototype=virtual void close () = 0
 $virtualMethod=|void|close|
 
-$prototype=virtual bool commitTransaction ()
-$virtualMethod=|bool|commitTransaction|
+$prototypeV2=virtual bool commitTransaction()
 
 $prototype=virtual QSqlResult * createResult () const = 0
 $virtualMethod=|QSqlResult *|createResult|
@@ -61,11 +59,9 @@ $virtualMethod=|bool|hasFeature|QSqlDriver::DriverFeature
 $prototype=bool isIdentifierEscaped ( const QString & identifier, IdentifierType type ) const
 $method=|bool|isIdentifierEscaped|const QString &,QSqlDriver::IdentifierType
 
-$prototype=virtual bool isOpen () const
-$virtualMethod=|bool|isOpen|
+$prototypeV2=virtual bool isOpen() const
 
-$prototype=bool isOpenError () const
-$method=|bool|isOpenError|
+$prototypeV2=bool isOpenError() const
 
 $prototype=QSqlError lastError () const
 $method=|QSqlError|lastError|
@@ -82,8 +78,7 @@ $virtualMethod=|QSqlIndex|primaryIndex|const QString &
 $prototype=virtual QSqlRecord record ( const QString & tableName ) const
 $virtualMethod=|QSqlRecord|record|const QString &
 
-$prototype=virtual bool rollbackTransaction ()
-$virtualMethod=|bool|rollbackTransaction|
+$prototypeV2=virtual bool rollbackTransaction()
 
 $prototype=void setNumericalPrecisionPolicy ( QSql::NumericalPrecisionPolicy precisionPolicy )
 $method=|void|setNumericalPrecisionPolicy|QSql::NumericalPrecisionPolicy

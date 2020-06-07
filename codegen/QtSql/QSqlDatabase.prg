@@ -65,8 +65,7 @@ $deleteMethod
 $prototype=void close ()
 $method=|void|close|
 
-$prototype=bool commit ()
-$method=|bool|commit|
+$prototypeV2=bool commit()
 
 $prototype=QString connectOptions () const
 $method=|QString|connectOptions|
@@ -89,14 +88,11 @@ $method=|QSqlQuery|exec|const QString &=QString()
 $prototype=QString hostName () const
 $method=|QString|hostName|
 
-$prototype=bool isOpen () const
-$method=|bool|isOpen|
+$prototypeV2=bool isOpen() const
 
-$prototype=bool isOpenError () const
-$method=|bool|isOpenError|
+$prototypeV2=bool isOpenError() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=QSqlError lastError () const
 $method=|QSqlError|lastError|
@@ -143,8 +139,7 @@ $method=|QSqlIndex|primaryIndex|const QString &
 $prototype=QSqlRecord record ( const QString & tablename ) const
 $method=|QSqlRecord|record|const QString &
 
-$prototype=bool rollback ()
-$method=|bool|rollback|
+$prototypeV2=bool rollback()
 
 $prototype=void setConnectOptions ( const QString & options = QString() )
 $method=|void|setConnectOptions|const QString &=QString()
@@ -170,8 +165,7 @@ $method=|void|setUserName|const QString &
 $prototype=QStringList tables ( QSql::TableType type = QSql::Tables ) const
 $method=|QStringList|tables|QSql::TableType=QSql::Tables
 
-$prototype=bool transaction ()
-$method=|bool|transaction|
+$prototypeV2=bool transaction()
 
 $prototype=QString userName () const
 $method=|QString|userName|

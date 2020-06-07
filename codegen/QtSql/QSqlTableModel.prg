@@ -58,8 +58,7 @@ $method=|QSqlIndex|primaryKey|
 $prototype=virtual void revertRow ( int row )
 $virtualMethod=|void|revertRow|int
 
-$prototype=virtual bool select ()
-$virtualMethod=|bool|select|
+$prototypeV2=virtual bool select()
 
 $prototype=virtual void setEditStrategy ( EditStrategy strategy )
 $virtualMethod=|void|setEditStrategy|QSqlTableModel::EditStrategy
@@ -115,11 +114,9 @@ $virtualMethod=|void|revert|
 $prototype=void revertAll ()
 $method=|void|revertAll|
 
-$prototype=virtual bool submit ()
-$virtualMethod=|bool|submit|
+$prototypeV2=virtual bool submit()
 
-$prototype=bool submitAll ()
-$method=|bool|submitAll|
+$prototypeV2=bool submitAll()
 
 $beginSignals
 $signal=|beforeDelete(int)

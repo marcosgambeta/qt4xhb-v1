@@ -59,8 +59,7 @@ $method=|QString|displayColumn|
 $prototype=QString indexColumn () const
 $method=|QString|indexColumn|
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=QString tableName () const
 $method=|QString|tableName|

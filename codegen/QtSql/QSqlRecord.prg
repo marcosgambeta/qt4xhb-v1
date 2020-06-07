@@ -109,8 +109,7 @@ $method=|int|indexOf|const QString &
 $prototype=void insert ( int pos, const QSqlField & field )
 $method=|void|insert|int,const QSqlField &
 
-$prototype=bool isEmpty () const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
 $prototype=bool isGenerated ( const QString & name ) const
 $internalMethod=|bool|isGenerated,isGenerated1|const QString &

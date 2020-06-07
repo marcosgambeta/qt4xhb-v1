@@ -61,20 +61,15 @@ $method=|void|clear|
 $prototype=QVariant defaultValue () const
 $method=|QVariant|defaultValue|
 
-$prototype=bool isAutoValue () const
-$method=|bool|isAutoValue|
+$prototypeV2=bool isAutoValue() const
 
-$prototype=bool isGenerated () const
-$method=|bool|isGenerated|
+$prototypeV2=bool isGenerated() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=bool isReadOnly () const
-$method=|bool|isReadOnly|
+$prototypeV2=bool isReadOnly() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototypeV2=int length() const
 

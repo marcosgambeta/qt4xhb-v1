@@ -61,8 +61,7 @@ $method=|QString|databaseText|
 $prototype=QString driverText () const
 $method=|QString|driverText|
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototypeV2=int number() const
 
