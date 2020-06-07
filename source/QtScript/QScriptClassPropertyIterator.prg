@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_FLAGS )
 }
 
 /*
-virtual bool hasNext () const = 0
+virtual bool hasNext() const = 0
 */
 HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_HASNEXT )
 {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_HASNEXT )
 }
 
 /*
-virtual bool hasPrevious () const = 0
+virtual bool hasPrevious() const = 0
 */
 HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_HASPREVIOUS )
 {

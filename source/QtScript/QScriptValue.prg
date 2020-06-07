@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_INSTANCEOF )
 }
 
 /*
-bool isArray () const
+bool isArray() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_ISARRAY )
 {
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISARRAY )
 }
 
 /*
-bool isBool () const
+bool isBool() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_ISBOOL )
 {
@@ -509,7 +509,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISBOOL )
 }
 
 /*
-bool isDate () const
+bool isDate() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_ISDATE )
 {
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISDATE )
 }
 
 /*
-bool isError () const
+bool isError() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_ISERROR )
 {
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISERROR )
 }
 
 /*
-bool isFunction () const
+bool isFunction() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_ISFUNCTION )
 {
@@ -581,7 +581,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISFUNCTION )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_ISNULL )
 {
@@ -605,7 +605,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISNULL )
 }
 
 /*
-bool isNumber () const
+bool isNumber() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_ISNUMBER )
 {
@@ -629,7 +629,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISNUMBER )
 }
 
 /*
-bool isObject () const
+bool isObject() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_ISOBJECT )
 {
@@ -653,7 +653,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISOBJECT )
 }
 
 /*
-bool isQMetaObject () const
+bool isQMetaObject() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_ISQMETAOBJECT )
 {
@@ -677,7 +677,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISQMETAOBJECT )
 }
 
 /*
-bool isQObject () const
+bool isQObject() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_ISQOBJECT )
 {
@@ -701,7 +701,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISQOBJECT )
 }
 
 /*
-bool isRegExp () const
+bool isRegExp() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_ISREGEXP )
 {
@@ -725,7 +725,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISREGEXP )
 }
 
 /*
-bool isString () const
+bool isString() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_ISSTRING )
 {
@@ -749,7 +749,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISSTRING )
 }
 
 /*
-bool isUndefined () const
+bool isUndefined() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_ISUNDEFINED )
 {
@@ -773,7 +773,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISUNDEFINED )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_ISVALID )
 {
@@ -797,7 +797,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISVALID )
 }
 
 /*
-bool isVariant () const
+bool isVariant() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_ISVARIANT )
 {
@@ -997,7 +997,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_STRICTLYEQUALS )
 }
 
 /*
-bool toBool () const
+bool toBool() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_TOBOOL )
 {

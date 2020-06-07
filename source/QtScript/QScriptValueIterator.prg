@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_FLAGS )
 }
 
 /*
-bool hasNext () const
+bool hasNext() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_HASNEXT )
 {
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_HASNEXT )
 }
 
 /*
-bool hasPrevious () const
+bool hasPrevious() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_HASPREVIOUS )
 {

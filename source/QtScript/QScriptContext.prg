@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ENGINE )
 }
 
 /*
-bool isCalledAsConstructor () const
+bool isCalledAsConstructor() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_ISCALLEDASCONSTRUCTOR )
 {

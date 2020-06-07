@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QSCRIPTSTRING_DELETE )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QSCRIPTSTRING_ISVALID )
 {

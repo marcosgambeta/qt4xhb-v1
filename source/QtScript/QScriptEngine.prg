@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_GLOBALOBJECT )
 }
 
 /*
-bool hasUncaughtException () const
+bool hasUncaughtException() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_HASUNCAUGHTEXCEPTION )
 {
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_INSTALLTRANSLATORFUNCTIONS )
 }
 
 /*
-bool isEvaluating () const
+bool isEvaluating() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_ISEVALUATING )
 {
