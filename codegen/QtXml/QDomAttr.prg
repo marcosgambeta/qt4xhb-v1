@@ -65,8 +65,7 @@ $method=|QDomElement|ownerElement|
 $prototype=void setValue ( const QString & v )
 $method=|void|setValue|const QString &
 
-$prototype=bool specified () const
-$method=|bool|specified|
+$prototypeV2=bool specified() const
 
 $prototype=QString value () const
 $method=|QString|value|

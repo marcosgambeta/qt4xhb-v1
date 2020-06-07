@@ -60,8 +60,7 @@ $method=|bool|contains|const QString &
 
 $prototypeV2=int count() const
 
-$prototype=bool isEmpty () const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
 $prototype=QDomNode item ( int index ) const
 $method=|QDomNode|item|int

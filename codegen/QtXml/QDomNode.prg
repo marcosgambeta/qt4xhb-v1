@@ -78,11 +78,9 @@ $method=|QDomNode|firstChild|
 $prototype=QDomElement firstChildElement ( const QString & tagName = QString() ) const
 $method=|QDomElement|firstChildElement|const QString &=QString()
 
-$prototype=bool hasAttributes () const
-$method=|bool|hasAttributes|
+$prototypeV2=bool hasAttributes() const
 
-$prototype=bool hasChildNodes () const
-$method=|bool|hasChildNodes|
+$prototypeV2=bool hasChildNodes() const
 
 $prototype=QDomNode insertAfter ( const QDomNode & newChild, const QDomNode & refChild )
 $method=|QDomNode|insertAfter|const QDomNode &,const QDomNode &
@@ -90,50 +88,36 @@ $method=|QDomNode|insertAfter|const QDomNode &,const QDomNode &
 $prototype=QDomNode insertBefore ( const QDomNode & newChild, const QDomNode & refChild )
 $method=|QDomNode|insertBefore|const QDomNode &,const QDomNode &
 
-$prototype=bool isAttr () const
-$method=|bool|isAttr|
+$prototypeV2=bool isAttr() const
 
-$prototype=bool isCDATASection () const
-$method=|bool|isCDATASection|
+$prototypeV2=bool isCDATASection() const
 
-$prototype=bool isCharacterData () const
-$method=|bool|isCharacterData|
+$prototypeV2=bool isCharacterData() const
 
-$prototype=bool isComment () const
-$method=|bool|isComment|
+$prototypeV2=bool isComment() const
 
-$prototype=bool isDocument () const
-$method=|bool|isDocument|
+$prototypeV2=bool isDocument() const
 
-$prototype=bool isDocumentFragment () const
-$method=|bool|isDocumentFragment|
+$prototypeV2=bool isDocumentFragment() const
 
-$prototype=bool isDocumentType () const
-$method=|bool|isDocumentType|
+$prototypeV2=bool isDocumentType() const
 
-$prototype=bool isElement () const
-$method=|bool|isElement|
+$prototypeV2=bool isElement() const
 
-$prototype=bool isEntity () const
-$method=|bool|isEntity|
+$prototypeV2=bool isEntity() const
 
-$prototype=bool isEntityReference () const
-$method=|bool|isEntityReference|
+$prototypeV2=bool isEntityReference() const
 
-$prototype=bool isNotation () const
-$method=|bool|isNotation|
+$prototypeV2=bool isNotation() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=bool isProcessingInstruction () const
-$method=|bool|isProcessingInstruction|
+$prototypeV2=bool isProcessingInstruction() const
 
 $prototype=bool isSupported ( const QString & feature, const QString & version ) const
 $method=|bool|isSupported|const QString &,const QString &
 
-$prototype=bool isText () const
-$method=|bool|isText|
+$prototypeV2=bool isText() const
 
 $prototype=QDomNode lastChild () const
 $method=|QDomNode|lastChild|
