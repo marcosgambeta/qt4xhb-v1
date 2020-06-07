@@ -77,8 +77,7 @@ $method=|QSsl::KeyAlgorithm|algorithm|
 $prototype=void clear ()
 $method=|void|clear|
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototypeV2=int length() const
 

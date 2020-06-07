@@ -41,11 +41,9 @@ $method=|void|close|
 $prototype=QString errorString () const
 $method=|QString|errorString|
 
-$prototype=virtual bool hasPendingConnections () const
-$virtualMethod=|bool|hasPendingConnections|
+$prototypeV2=virtual bool hasPendingConnections() const
 
-$prototype=bool isListening () const
-$method=|bool|isListening|
+$prototypeV2=bool isListening() const
 
 $prototype=bool listen ( const QHostAddress & address = QHostAddress::Any, quint16 port = 0 )
 $method=|bool|listen|const QHostAddress &=QHostAddress::Any,quint16=0

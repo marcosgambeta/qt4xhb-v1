@@ -74,8 +74,7 @@ HB_FUNC_STATIC( QUDPSOCKET_BIND )
 }
 $addMethod=bind
 
-$prototype=bool hasPendingDatagrams () const
-$method=|bool|hasPendingDatagrams|
+$prototypeV2=bool hasPendingDatagrams() const
 
 $prototype=qint64 pendingDatagramSize () const
 $method=|qint64|pendingDatagramSize|

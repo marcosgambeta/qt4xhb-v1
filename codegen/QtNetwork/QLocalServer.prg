@@ -43,11 +43,9 @@ $method=|QString|errorString|
 $prototype=QString fullServerName () const
 $method=|QString|fullServerName|
 
-$prototype=virtual bool hasPendingConnections () const
-$virtualMethod=|bool|hasPendingConnections|
+$prototypeV2=virtual bool hasPendingConnections() const
 
-$prototype=bool isListening () const
-$method=|bool|isListening|
+$prototypeV2=bool isListening() const
 
 $prototype=bool listen ( const QString & name )
 $method=|bool|listen|const QString &

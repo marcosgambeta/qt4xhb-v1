@@ -44,14 +44,12 @@ $method=|void|disconnectFromServer|
 $prototype=LocalSocketError error () const
 $method=|QLocalSocket::LocalSocketError|error|
 
-$prototype=bool flush ()
-$method=|bool|flush|
+$prototypeV2=bool flush()
 
 $prototype=QString fullServerName () const
 $method=|QString|fullServerName|
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=qint64 readBufferSize () const
 $method=|qint64|readBufferSize|
@@ -77,14 +75,12 @@ $virtualMethod=|qint64|bytesAvailable|
 $prototype=virtual qint64 bytesToWrite () const
 $virtualMethod=|qint64|bytesToWrite|
 
-$prototype=virtual bool canReadLine () const
-$virtualMethod=|bool|canReadLine|
+$prototypeV2=virtual bool canReadLine() const
 
 $prototype=virtual void close ()
 $virtualMethod=|void|close|
 
-$prototype=virtual bool isSequential () const
-$virtualMethod=|bool|isSequential|
+$prototypeV2=virtual bool isSequential() const
 
 $prototype=virtual bool waitForBytesWritten ( int msecs = 30000 )
 $virtualMethod=|bool|waitForBytesWritten|int=30000

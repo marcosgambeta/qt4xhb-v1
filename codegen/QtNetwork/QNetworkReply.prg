@@ -74,11 +74,9 @@ HB_FUNC_STATIC( QNETWORKREPLY_IGNORESSLERRORS )
 }
 $addMethod=ignoreSslErrors
 
-$prototype=bool isFinished () const
-$method=|bool|isFinished|
+$prototypeV2=bool isFinished() const
 
-$prototype=bool isRunning () const
-$method=|bool|isRunning|
+$prototypeV2=bool isRunning() const
 
 $prototype=QNetworkAccessManager * manager () const
 $method=|QNetworkAccessManager *|manager|

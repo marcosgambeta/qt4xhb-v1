@@ -78,11 +78,9 @@ $method=|QDateTime|effectiveDate|
 $prototype=QDateTime expiryDate () const
 $method=|QDateTime|expiryDate|
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=QString issuerInfo ( SubjectInfo subject ) const
 $internalMethod=|QString|issuerInfo,issuerInfo1|QSslCertificate::SubjectInfo

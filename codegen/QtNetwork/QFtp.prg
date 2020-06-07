@@ -63,8 +63,7 @@ $method=|QString|errorString|
 $prototype=int get ( const QString & file, QIODevice * dev = 0, TransferType type = Binary )
 $method=|int|get|const QString &,QIODevice *=0,QFtp::TransferType=QFtp::Binary
 
-$prototype=bool hasPendingCommands () const
-$method=|bool|hasPendingCommands|
+$prototypeV2=bool hasPendingCommands() const
 
 $prototype=int list ( const QString & dir = QString() )
 $method=|int|list|const QString &=QString()

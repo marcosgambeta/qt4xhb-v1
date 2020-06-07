@@ -74,26 +74,19 @@ $deleteMethod
 $prototype=QString group () const
 $method=|QString|group|
 
-$prototype=bool isDir () const
-$method=|bool|isDir|
+$prototypeV2=bool isDir() const
 
-$prototype=bool isExecutable () const
-$method=|bool|isExecutable|
+$prototypeV2=bool isExecutable() const
 
-$prototype=bool isFile () const
-$method=|bool|isFile|
+$prototypeV2=bool isFile() const
 
-$prototype=bool isReadable () const
-$method=|bool|isReadable|
+$prototypeV2=bool isReadable() const
 
-$prototype=bool isSymLink () const
-$method=|bool|isSymLink|
+$prototypeV2=bool isSymLink() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=bool isWritable () const
-$method=|bool|isWritable|
+$prototypeV2=bool isWritable() const
 
 $prototype=QDateTime lastModified () const
 $method=|QDateTime|lastModified|

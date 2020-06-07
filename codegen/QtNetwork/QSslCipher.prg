@@ -69,8 +69,7 @@ $method=|QString|authenticationMethod|
 $prototype=QString encryptionMethod () const
 $method=|QString|encryptionMethod|
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=QString keyExchangeMethod () const
 $method=|QString|keyExchangeMethod|

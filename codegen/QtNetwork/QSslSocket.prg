@@ -110,8 +110,7 @@ $method=|qint64|encryptedBytesAvailable|
 $prototype=qint64 encryptedBytesToWrite () const
 $method=|qint64|encryptedBytesToWrite|
 
-$prototype=bool flush ()
-$method=|bool|flush|
+$prototypeV2=bool flush()
 
 $prototype=void ignoreSslErrors ( const QList<QSslError> & errors )
 $internalMethod=|void|ignoreSslErrors,ignoreSslErrors1|const QList<QSslError> &
@@ -141,8 +140,7 @@ HB_FUNC_STATIC( QSSLSOCKET_IGNORESSLERRORS )
 }
 $addMethod=ignoreSslErrors
 
-$prototype=bool isEncrypted () const
-$method=|bool|isEncrypted|
+$prototypeV2=bool isEncrypted() const
 
 $prototype=QSslCertificate localCertificate () const
 $method=|QSslCertificate|localCertificate|
@@ -296,8 +294,7 @@ $method=|bool|waitForDisconnected|int=30000
 $prototype=bool waitForEncrypted ( int msecs = 30000 )
 $method=|bool|waitForEncrypted|int=30000
 
-$prototype=virtual bool atEnd () const
-$virtualMethod=|bool|atEnd|
+$prototypeV2=virtual bool atEnd() const
 
 $prototype=virtual qint64 bytesAvailable () const
 $virtualMethod=|qint64|bytesAvailable|
@@ -305,8 +302,7 @@ $virtualMethod=|qint64|bytesAvailable|
 $prototype=virtual qint64 bytesToWrite () const
 $virtualMethod=|qint64|bytesToWrite|
 
-$prototype=virtual bool canReadLine () const
-$virtualMethod=|bool|canReadLine|
+$prototypeV2=virtual bool canReadLine() const
 
 $prototype=virtual void close ()
 $virtualMethod=|void|close|
@@ -369,8 +365,7 @@ $method=|void|setDefaultCiphers|const QList<QSslCipher> &
 $prototype=QList<QSslCipher> supportedCiphers ()
 $method=|QList<QSslCipher>|supportedCiphers|
 
-$prototype=static bool supportsSsl ()
-$staticMethod=|bool|supportsSsl|
+$prototypeV2=static bool supportsSsl()
 
 $prototype=QList<QSslCertificate> systemCaCertificates ()
 $method=|QList<QSslCertificate>|systemCaCertificates|

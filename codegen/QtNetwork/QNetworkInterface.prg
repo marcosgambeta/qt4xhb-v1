@@ -69,8 +69,7 @@ $method=|QString|humanReadableName|
 
 $prototypeV2=int index() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=QString name () const
 $method=|QString|name|

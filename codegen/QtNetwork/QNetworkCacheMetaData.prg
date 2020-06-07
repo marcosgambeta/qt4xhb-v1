@@ -60,14 +60,12 @@ $deleteMethod
 $prototype=QDateTime expirationDate () const
 $method=|QDateTime|expirationDate|
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=QDateTime lastModified () const
 $method=|QDateTime|lastModified|
 
-$prototype=bool saveToDisk () const
-$method=|bool|saveToDisk|
+$prototypeV2=bool saveToDisk() const
 
 $prototype=void setExpirationDate ( const QDateTime & dateTime )
 $method=|void|setExpirationDate|const QDateTime &

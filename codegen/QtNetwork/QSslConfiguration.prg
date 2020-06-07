@@ -64,8 +64,7 @@ $method=|QList<QSslCertificate>|caCertificates|
 $prototype=QList<QSslCipher> ciphers () const
 $method=|QList<QSslCipher>|ciphers|
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=QSslCertificate localCertificate () const
 $method=|QSslCertificate|localCertificate|

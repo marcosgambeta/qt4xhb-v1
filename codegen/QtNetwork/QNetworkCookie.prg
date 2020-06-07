@@ -63,14 +63,11 @@ $method=|QString|domain|
 $prototype=QDateTime expirationDate () const
 $method=|QDateTime|expirationDate|
 
-$prototype=bool isHttpOnly () const
-$method=|bool|isHttpOnly|
+$prototypeV2=bool isHttpOnly() const
 
-$prototype=bool isSecure () const
-$method=|bool|isSecure|
+$prototypeV2=bool isSecure() const
 
-$prototype=bool isSessionCookie () const
-$method=|bool|isSessionCookie|
+$prototypeV2=bool isSessionCookie() const
 
 $prototype=QByteArray name () const
 $method=|QByteArray|name|

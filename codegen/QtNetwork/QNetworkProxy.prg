@@ -69,11 +69,9 @@ $method=|QNetworkProxy::Capabilities|capabilities|
 $prototype=QString hostName () const
 $method=|QString|hostName|
 
-$prototype=bool isCachingProxy () const
-$method=|bool|isCachingProxy|
+$prototypeV2=bool isCachingProxy() const
 
-$prototype=bool isTransparentProxy () const
-$method=|bool|isTransparentProxy|
+$prototypeV2=bool isTransparentProxy() const
 
 $prototype=QString password () const
 $method=|QString|password|

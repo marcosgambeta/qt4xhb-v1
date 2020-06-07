@@ -70,11 +70,9 @@ $method=|QList<QNetworkConfiguration>|children|
 $prototype=QString identifier () const
 $method=|QString|identifier|
 
-$prototype=bool isRoamingAvailable () const
-$method=|bool|isRoamingAvailable|
+$prototypeV2=bool isRoamingAvailable() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=QString name () const
 $method=|QString|name|

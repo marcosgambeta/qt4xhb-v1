@@ -53,8 +53,7 @@ $method=|QString|errorString|
 $prototype=QNetworkInterface interface () const
 $method=|QNetworkInterface|interface|
 
-$prototype=bool isOpen () const
-$method=|bool|isOpen|
+$prototypeV2=bool isOpen() const
 
 $prototype=QVariant sessionProperty ( const QString & key ) const
 $method=|QVariant|sessionProperty|const QString &

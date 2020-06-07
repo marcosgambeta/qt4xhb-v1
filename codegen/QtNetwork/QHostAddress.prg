@@ -126,8 +126,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET )
 }
 $addMethod=isInSubnet
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=QAbstractSocket::NetworkLayerProtocol protocol () const
 $method=|QAbstractSocket::NetworkLayerProtocol|protocol|

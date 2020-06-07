@@ -44,8 +44,7 @@ $method=|QNetworkConfiguration|configurationFromIdentifier|const QString &
 $prototype=QNetworkConfiguration defaultConfiguration () const
 $method=|QNetworkConfiguration|defaultConfiguration|
 
-$prototype=bool isOnline () const
-$method=|bool|isOnline|
+$prototypeV2=bool isOnline() const
 
 $prototype=void updateConfigurations ()
 $method=|void|updateConfigurations|
