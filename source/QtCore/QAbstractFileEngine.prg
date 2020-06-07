@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_DELETE )
 }
 
 /*
-bool atEnd () const
+bool atEnd() const
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_ATEND )
 {
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_ATEND )
 }
 
 /*
-virtual bool caseSensitive () const
+virtual bool caseSensitive() const
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_CASESENSITIVE )
 {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_CASESENSITIVE )
 }
 
 /*
-virtual bool close ()
+virtual bool close()
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_CLOSE )
 {
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_FILETIME )
 }
 
 /*
-virtual bool flush ()
+virtual bool flush()
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_FLUSH )
 {
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_HANDLE )
 }
 
 /*
-virtual bool isRelativePath () const
+virtual bool isRelativePath() const
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_ISRELATIVEPATH )
 {
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_ISRELATIVEPATH )
 }
 
 /*
-virtual bool isSequential () const
+virtual bool isSequential() const
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_ISSEQUENTIAL )
 {
@@ -583,7 +583,7 @@ virtual qint64 readLine ( char * data, qint64 maxlen )
 */
 
 /*
-virtual bool remove ()
+virtual bool remove()
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_REMOVE )
 {

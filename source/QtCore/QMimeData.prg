@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QMIMEDATA_FORMATS )
 }
 
 /*
-bool hasColor () const
+bool hasColor() const
 */
 HB_FUNC_STATIC( QMIMEDATA_HASCOLOR )
 {
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASFORMAT )
 }
 
 /*
-bool hasHtml () const
+bool hasHtml() const
 */
 HB_FUNC_STATIC( QMIMEDATA_HASHTML )
 {
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASHTML )
 }
 
 /*
-bool hasImage () const
+bool hasImage() const
 */
 HB_FUNC_STATIC( QMIMEDATA_HASIMAGE )
 {
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASIMAGE )
 }
 
 /*
-bool hasText () const
+bool hasText() const
 */
 HB_FUNC_STATIC( QMIMEDATA_HASTEXT )
 {
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASTEXT )
 }
 
 /*
-bool hasUrls () const
+bool hasUrls() const
 */
 HB_FUNC_STATIC( QMIMEDATA_HASURLS )
 {

@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QEVENT_IGNORE )
 }
 
 /*
-bool isAccepted () const
+bool isAccepted() const
 */
 HB_FUNC_STATIC( QEVENT_ISACCEPTED )
 {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QEVENT_SETACCEPTED )
 }
 
 /*
-bool spontaneous () const
+bool spontaneous() const
 */
 HB_FUNC_STATIC( QEVENT_SPONTANEOUS )
 {

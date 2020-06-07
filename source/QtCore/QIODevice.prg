@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QIODEVICE_DELETE )
 }
 
 /*
-virtual bool atEnd () const
+virtual bool atEnd() const
 */
 HB_FUNC_STATIC( QIODEVICE_ATEND )
 {
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QIODEVICE_BYTESTOWRITE )
 }
 
 /*
-virtual bool canReadLine () const
+virtual bool canReadLine() const
 */
 HB_FUNC_STATIC( QIODEVICE_CANREADLINE )
 {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QIODEVICE_GETCHAR )
 }
 
 /*
-bool isOpen () const
+bool isOpen() const
 */
 HB_FUNC_STATIC( QIODEVICE_ISOPEN )
 {
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QIODEVICE_ISOPEN )
 }
 
 /*
-bool isReadable () const
+bool isReadable() const
 */
 HB_FUNC_STATIC( QIODEVICE_ISREADABLE )
 {
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QIODEVICE_ISREADABLE )
 }
 
 /*
-virtual bool isSequential () const
+virtual bool isSequential() const
 */
 HB_FUNC_STATIC( QIODEVICE_ISSEQUENTIAL )
 {
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QIODEVICE_ISSEQUENTIAL )
 }
 
 /*
-bool isTextModeEnabled () const
+bool isTextModeEnabled() const
 */
 HB_FUNC_STATIC( QIODEVICE_ISTEXTMODEENABLED )
 {
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QIODEVICE_ISTEXTMODEENABLED )
 }
 
 /*
-bool isWritable () const
+bool isWritable() const
 */
 HB_FUNC_STATIC( QIODEVICE_ISWRITABLE )
 {
@@ -648,7 +648,7 @@ HB_FUNC_STATIC( QIODEVICE_READLINE )
 }
 
 /*
-virtual bool reset ()
+virtual bool reset()
 */
 HB_FUNC_STATIC( QIODEVICE_RESET )
 {

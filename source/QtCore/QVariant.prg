@@ -755,7 +755,7 @@ HB_FUNC_STATIC( QVARIANT_CONVERT )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QVARIANT_ISNULL )
 {
@@ -779,7 +779,7 @@ HB_FUNC_STATIC( QVARIANT_ISNULL )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QVARIANT_ISVALID )
 {
@@ -828,7 +828,7 @@ HB_FUNC_STATIC( QVARIANT_TOBITARRAY )
 }
 
 /*
-bool toBool () const
+bool toBool() const
 */
 HB_FUNC_STATIC( QVARIANT_TOBOOL )
 {

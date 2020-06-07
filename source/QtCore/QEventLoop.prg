@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QEVENTLOOP_EXIT )
 }
 
 /*
-bool isRunning () const
+bool isRunning() const
 */
 HB_FUNC_STATIC( QEVENTLOOP_ISRUNNING )
 {

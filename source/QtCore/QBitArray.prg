@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QBITARRAY_FILL )
 }
 
 /*
-bool isEmpty () const
+bool isEmpty() const
 */
 HB_FUNC_STATIC( QBITARRAY_ISEMPTY )
 {
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QBITARRAY_ISEMPTY )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QBITARRAY_ISNULL )
 {

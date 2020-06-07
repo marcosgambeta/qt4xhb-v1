@@ -665,7 +665,7 @@ HB_FUNC_STATIC( QOBJECT_INSTALLEVENTFILTER )
 }
 
 /*
-bool isWidgetType () const
+bool isWidgetType() const
 */
 HB_FUNC_STATIC( QOBJECT_ISWIDGETTYPE )
 {
@@ -942,7 +942,7 @@ HB_FUNC_STATIC( QOBJECT_SETPROPERTY )
 }
 
 /*
-bool signalsBlocked () const
+bool signalsBlocked() const
 */
 HB_FUNC_STATIC( QOBJECT_SIGNALSBLOCKED )
 {

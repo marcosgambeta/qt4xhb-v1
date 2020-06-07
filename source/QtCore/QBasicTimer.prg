@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QBASICTIMER_DELETE )
 }
 
 /*
-bool isActive () const
+bool isActive() const
 */
 HB_FUNC_STATIC( QBASICTIMER_ISACTIVE )
 {
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QBASICTIMER_START )
 }
 
 /*
-void stop ()
+void stop()
 */
 HB_FUNC_STATIC( QBASICTIMER_STOP )
 {

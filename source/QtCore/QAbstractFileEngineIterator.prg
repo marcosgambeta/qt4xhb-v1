@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_FILTERS )
 }
 
 /*
-virtual bool hasNext () const = 0
+virtual bool hasNext() const = 0
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_HASNEXT )
 {

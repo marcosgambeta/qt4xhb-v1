@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QSIZE_HEIGHT )
 }
 
 /*
-bool isEmpty () const
+bool isEmpty() const
 */
 HB_FUNC_STATIC( QSIZE_ISEMPTY )
 {
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QSIZE_ISEMPTY )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QSIZE_ISNULL )
 {
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QSIZE_ISNULL )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QSIZE_ISVALID )
 {

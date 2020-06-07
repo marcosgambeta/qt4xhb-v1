@@ -1058,7 +1058,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INSERT )
 }
 
 /*
-bool isEmpty () const
+bool isEmpty() const
 */
 HB_FUNC_STATIC( QBYTEARRAY_ISEMPTY )
 {
@@ -1082,7 +1082,7 @@ HB_FUNC_STATIC( QBYTEARRAY_ISEMPTY )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QBYTEARRAY_ISNULL )
 {

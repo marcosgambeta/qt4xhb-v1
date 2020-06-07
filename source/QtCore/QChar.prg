@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QCHAR_DIRECTION )
 }
 
 /*
-bool hasMirrored () const
+bool hasMirrored() const
 */
 HB_FUNC_STATIC( QCHAR_HASMIRRORED )
 {
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QCHAR_HASMIRRORED )
 }
 
 /*
-bool isDigit () const
+bool isDigit() const
 */
 HB_FUNC_STATIC( QCHAR_ISDIGIT )
 {
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QCHAR_ISDIGIT )
 }
 
 /*
-bool isHighSurrogate () const
+bool isHighSurrogate() const
 */
 HB_FUNC_STATIC( QCHAR_ISHIGHSURROGATE )
 {
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QCHAR_ISHIGHSURROGATE )
 }
 
 /*
-bool isLetter () const
+bool isLetter() const
 */
 HB_FUNC_STATIC( QCHAR_ISLETTER )
 {
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QCHAR_ISLETTER )
 }
 
 /*
-bool isLetterOrNumber () const
+bool isLetterOrNumber() const
 */
 HB_FUNC_STATIC( QCHAR_ISLETTERORNUMBER )
 {
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QCHAR_ISLETTERORNUMBER )
 }
 
 /*
-bool isLowSurrogate () const
+bool isLowSurrogate() const
 */
 HB_FUNC_STATIC( QCHAR_ISLOWSURROGATE )
 {
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QCHAR_ISLOWSURROGATE )
 }
 
 /*
-bool isLower () const
+bool isLower() const
 */
 HB_FUNC_STATIC( QCHAR_ISLOWER )
 {
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QCHAR_ISLOWER )
 }
 
 /*
-bool isMark () const
+bool isMark() const
 */
 HB_FUNC_STATIC( QCHAR_ISMARK )
 {
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QCHAR_ISMARK )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QCHAR_ISNULL )
 {
@@ -529,7 +529,7 @@ HB_FUNC_STATIC( QCHAR_ISNULL )
 }
 
 /*
-bool isNumber () const
+bool isNumber() const
 */
 HB_FUNC_STATIC( QCHAR_ISNUMBER )
 {
@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QCHAR_ISNUMBER )
 }
 
 /*
-bool isPrint () const
+bool isPrint() const
 */
 HB_FUNC_STATIC( QCHAR_ISPRINT )
 {
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QCHAR_ISPRINT )
 }
 
 /*
-bool isPunct () const
+bool isPunct() const
 */
 HB_FUNC_STATIC( QCHAR_ISPUNCT )
 {
@@ -601,7 +601,7 @@ HB_FUNC_STATIC( QCHAR_ISPUNCT )
 }
 
 /*
-bool isSpace () const
+bool isSpace() const
 */
 HB_FUNC_STATIC( QCHAR_ISSPACE )
 {
@@ -625,7 +625,7 @@ HB_FUNC_STATIC( QCHAR_ISSPACE )
 }
 
 /*
-bool isSymbol () const
+bool isSymbol() const
 */
 HB_FUNC_STATIC( QCHAR_ISSYMBOL )
 {
@@ -649,7 +649,7 @@ HB_FUNC_STATIC( QCHAR_ISSYMBOL )
 }
 
 /*
-bool isTitleCase () const
+bool isTitleCase() const
 */
 HB_FUNC_STATIC( QCHAR_ISTITLECASE )
 {
@@ -673,7 +673,7 @@ HB_FUNC_STATIC( QCHAR_ISTITLECASE )
 }
 
 /*
-bool isUpper () const
+bool isUpper() const
 */
 HB_FUNC_STATIC( QCHAR_ISUPPER )
 {

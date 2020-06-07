@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QMODELINDEX_INTERNALPOINTER )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QMODELINDEX_ISVALID )
 {

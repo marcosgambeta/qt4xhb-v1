@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FLUSH )
 }
 
 /*
-virtual bool hasPendingEvents () = 0
+virtual bool hasPendingEvents() = 0
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_HASPENDINGEVENTS )
 {

@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_DELETE )
 }
 
 /*
-bool acquire ()
+bool acquire()
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ACQUIRE )
 {

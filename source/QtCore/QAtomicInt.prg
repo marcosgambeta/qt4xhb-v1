@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QATOMICINT_DELETE )
 }
 
 /*
-bool deref ()
+bool deref()
 */
 HB_FUNC_STATIC( QATOMICINT_DEREF )
 {
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDSTORERELEASE )
 }
 
 /*
-bool ref ()
+bool ref()
 */
 HB_FUNC_STATIC( QATOMICINT_REF )
 {
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QATOMICINT_TESTANDSETRELEASE )
 }
 
 /*
-static bool isFetchAndAddNative ()
+static bool isFetchAndAddNative()
 */
 HB_FUNC_STATIC( QATOMICINT_ISFETCHANDADDNATIVE )
 {
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QATOMICINT_ISFETCHANDADDNATIVE )
 }
 
 /*
-static bool isFetchAndAddWaitFree ()
+static bool isFetchAndAddWaitFree()
 */
 HB_FUNC_STATIC( QATOMICINT_ISFETCHANDADDWAITFREE )
 {
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QATOMICINT_ISFETCHANDADDWAITFREE )
 }
 
 /*
-static bool isFetchAndStoreNative ()
+static bool isFetchAndStoreNative()
 */
 HB_FUNC_STATIC( QATOMICINT_ISFETCHANDSTORENATIVE )
 {
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QATOMICINT_ISFETCHANDSTORENATIVE )
 }
 
 /*
-static bool isFetchAndStoreWaitFree ()
+static bool isFetchAndStoreWaitFree()
 */
 HB_FUNC_STATIC( QATOMICINT_ISFETCHANDSTOREWAITFREE )
 {
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QATOMICINT_ISFETCHANDSTOREWAITFREE )
 }
 
 /*
-static bool isReferenceCountingNative ()
+static bool isReferenceCountingNative()
 */
 HB_FUNC_STATIC( QATOMICINT_ISREFERENCECOUNTINGNATIVE )
 {
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QATOMICINT_ISREFERENCECOUNTINGNATIVE )
 }
 
 /*
-static bool isReferenceCountingWaitFree ()
+static bool isReferenceCountingWaitFree()
 */
 HB_FUNC_STATIC( QATOMICINT_ISREFERENCECOUNTINGWAITFREE )
 {
@@ -576,7 +576,7 @@ HB_FUNC_STATIC( QATOMICINT_ISREFERENCECOUNTINGWAITFREE )
 }
 
 /*
-static bool isTestAndSetNative ()
+static bool isTestAndSetNative()
 */
 HB_FUNC_STATIC( QATOMICINT_ISTESTANDSETNATIVE )
 {
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QATOMICINT_ISTESTANDSETNATIVE )
 }
 
 /*
-static bool isTestAndSetWaitFree ()
+static bool isTestAndSetWaitFree()
 */
 HB_FUNC_STATIC( QATOMICINT_ISTESTANDSETWAITFREE )
 {

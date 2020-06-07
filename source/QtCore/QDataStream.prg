@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QDATASTREAM_DELETE )
 }
 
 /*
-bool atEnd () const
+bool atEnd() const
 */
 HB_FUNC_STATIC( QDATASTREAM_ATEND )
 {

@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ARGUMENTS )
 }
 
 /*
-static bool closingDown ()
+static bool closingDown()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_CLOSINGDOWN )
 {
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_FLUSH )
 }
 
 /*
-static bool hasPendingEvents ()
+static bool hasPendingEvents()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_HASPENDINGEVENTS )
 {
@@ -880,7 +880,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SETORGANIZATIONNAME )
 }
 
 /*
-static bool startingUp ()
+static bool startingUp()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_STARTINGUP )
 {

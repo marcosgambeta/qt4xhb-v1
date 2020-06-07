@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QRUNNABLE_DELETE )
 }
 
 /*
-bool autoDelete () const
+bool autoDelete() const
 */
 HB_FUNC_STATIC( QRUNNABLE_AUTODELETE )
 {

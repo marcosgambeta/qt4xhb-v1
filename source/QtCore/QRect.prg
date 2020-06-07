@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QRECT_INTERSECTS )
 }
 
 /*
-bool isEmpty () const
+bool isEmpty() const
 */
 HB_FUNC_STATIC( QRECT_ISEMPTY )
 {
@@ -585,7 +585,7 @@ HB_FUNC_STATIC( QRECT_ISEMPTY )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QRECT_ISNULL )
 {
@@ -609,7 +609,7 @@ HB_FUNC_STATIC( QRECT_ISNULL )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QRECT_ISVALID )
 {

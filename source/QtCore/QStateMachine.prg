@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_GLOBALRESTOREPOLICY )
 }
 
 /*
-bool isAnimated () const
+bool isAnimated() const
 */
 HB_FUNC_STATIC( QSTATEMACHINE_ISANIMATED )
 {
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_ISANIMATED )
 }
 
 /*
-bool isRunning () const
+bool isRunning() const
 */
 HB_FUNC_STATIC( QSTATEMACHINE_ISRUNNING )
 {

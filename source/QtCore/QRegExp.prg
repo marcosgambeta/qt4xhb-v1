@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QREGEXP_INDEXIN )
 }
 
 /*
-bool isEmpty () const
+bool isEmpty() const
 */
 HB_FUNC_STATIC( QREGEXP_ISEMPTY )
 {
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QREGEXP_ISEMPTY )
 }
 
 /*
-bool isMinimal () const
+bool isMinimal() const
 */
 HB_FUNC_STATIC( QREGEXP_ISMINIMAL )
 {
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QREGEXP_ISMINIMAL )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QREGEXP_ISVALID )
 {

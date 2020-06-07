@@ -629,7 +629,7 @@ HB_FUNC_STATIC( QURL_HASENCODEDQUERYITEM )
 }
 
 /*
-bool hasFragment () const
+bool hasFragment() const
 */
 HB_FUNC_STATIC( QURL_HASFRAGMENT )
 {
@@ -653,7 +653,7 @@ HB_FUNC_STATIC( QURL_HASFRAGMENT )
 }
 
 /*
-bool hasQuery () const
+bool hasQuery() const
 */
 HB_FUNC_STATIC( QURL_HASQUERY )
 {
@@ -725,7 +725,7 @@ HB_FUNC_STATIC( QURL_HOST )
 }
 
 /*
-bool isEmpty () const
+bool isEmpty() const
 */
 HB_FUNC_STATIC( QURL_ISEMPTY )
 {
@@ -749,7 +749,7 @@ HB_FUNC_STATIC( QURL_ISEMPTY )
 }
 
 /*
-bool isLocalFile () const
+bool isLocalFile() const
 */
 HB_FUNC_STATIC( QURL_ISLOCALFILE )
 {
@@ -797,7 +797,7 @@ HB_FUNC_STATIC( QURL_ISPARENTOF )
 }
 
 /*
-bool isRelative () const
+bool isRelative() const
 */
 HB_FUNC_STATIC( QURL_ISRELATIVE )
 {
@@ -821,7 +821,7 @@ HB_FUNC_STATIC( QURL_ISRELATIVE )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QURL_ISVALID )
 {

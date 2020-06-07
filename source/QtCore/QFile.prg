@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QFILE_FILENAME )
 }
 
 /*
-bool flush ()
+bool flush()
 */
 HB_FUNC_STATIC( QFILE_FLUSH )
 {
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QFILE_UNSETERROR )
 }
 
 /*
-virtual bool atEnd () const
+virtual bool atEnd() const
 */
 HB_FUNC_STATIC( QFILE_ATEND )
 {
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QFILE_CLOSE )
 }
 
 /*
-virtual bool isSequential () const
+virtual bool isSequential() const
 */
 HB_FUNC_STATIC( QFILE_ISSEQUENTIAL )
 {

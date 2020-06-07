@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QSETTINGS_ENDGROUP )
 }
 
 /*
-bool fallbacksEnabled () const
+bool fallbacksEnabled() const
 */
 HB_FUNC_STATIC( QSETTINGS_FALLBACKSENABLED )
 {
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QSETTINGS_INICODEC )
 }
 
 /*
-bool isWritable () const
+bool isWritable() const
 */
 HB_FUNC_STATIC( QSETTINGS_ISWRITABLE )
 {

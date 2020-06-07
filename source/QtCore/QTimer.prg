@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QTIMER_INTERVAL )
 }
 
 /*
-bool isActive () const
+bool isActive() const
 */
 HB_FUNC_STATIC( QTIMER_ISACTIVE )
 {
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QTIMER_ISACTIVE )
 }
 
 /*
-bool isSingleShot () const
+bool isSingleShot() const
 */
 HB_FUNC_STATIC( QTIMER_ISSINGLESHOT )
 {

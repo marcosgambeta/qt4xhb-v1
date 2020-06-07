@@ -831,7 +831,7 @@ HB_FUNC_STATIC( QPROCESS_WORKINGDIRECTORY )
 }
 
 /*
-virtual bool atEnd () const
+virtual bool atEnd() const
 */
 HB_FUNC_STATIC( QPROCESS_ATEND )
 {
@@ -903,7 +903,7 @@ HB_FUNC_STATIC( QPROCESS_BYTESTOWRITE )
 }
 
 /*
-virtual bool canReadLine () const
+virtual bool canReadLine() const
 */
 HB_FUNC_STATIC( QPROCESS_CANREADLINE )
 {
@@ -953,7 +953,7 @@ HB_FUNC_STATIC( QPROCESS_CLOSE )
 }
 
 /*
-virtual bool isSequential () const
+virtual bool isSequential() const
 */
 HB_FUNC_STATIC( QPROCESS_ISSEQUENTIAL )
 {

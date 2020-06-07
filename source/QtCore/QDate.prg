@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QDATE_GETDATE )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QDATE_ISNULL )
 {

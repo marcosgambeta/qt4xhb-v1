@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QRESOURCE_FILENAME )
 }
 
 /*
-bool isCompressed () const
+bool isCompressed() const
 */
 HB_FUNC_STATIC( QRESOURCE_ISCOMPRESSED )
 {
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QRESOURCE_ISCOMPRESSED )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QRESOURCE_ISVALID )
 {

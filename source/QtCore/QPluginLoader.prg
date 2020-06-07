@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_INSTANCE )
 }
 
 /*
-bool isLoaded () const
+bool isLoaded() const
 */
 HB_FUNC_STATIC( QPLUGINLOADER_ISLOADED )
 {
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_ISLOADED )
 }
 
 /*
-bool load ()
+bool load()
 */
 HB_FUNC_STATIC( QPLUGINLOADER_LOAD )
 {
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_SETLOADHINTS )
 }
 
 /*
-bool unload ()
+bool unload()
 */
 HB_FUNC_STATIC( QPLUGINLOADER_UNLOAD )
 {

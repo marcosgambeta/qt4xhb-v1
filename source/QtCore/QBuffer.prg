@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QBUFFER_SETDATA )
 }
 
 /*
-virtual bool atEnd () const
+virtual bool atEnd() const
 */
 HB_FUNC_STATIC( QBUFFER_ATEND )
 {
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QBUFFER_ATEND )
 }
 
 /*
-virtual bool canReadLine () const
+virtual bool canReadLine() const
 */
 HB_FUNC_STATIC( QBUFFER_CANREADLINE )
 {

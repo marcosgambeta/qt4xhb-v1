@@ -964,7 +964,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REVERT )
 }
 
 /*
-virtual bool submit ()
+virtual bool submit()
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUBMIT )
 {

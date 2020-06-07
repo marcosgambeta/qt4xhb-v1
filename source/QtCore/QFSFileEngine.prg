@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_OPEN )
 }
 
 /*
-virtual bool caseSensitive () const
+virtual bool caseSensitive() const
 */
 HB_FUNC_STATIC( QFSFILEENGINE_CASESENSITIVE )
 {
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_CASESENSITIVE )
 }
 
 /*
-virtual bool close ()
+virtual bool close()
 */
 HB_FUNC_STATIC( QFSFILEENGINE_CLOSE )
 {
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_FILETIME )
 }
 
 /*
-virtual bool flush ()
+virtual bool flush()
 */
 HB_FUNC_STATIC( QFSFILEENGINE_FLUSH )
 {
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_HANDLE )
 }
 
 /*
-virtual bool isRelativePath () const
+virtual bool isRelativePath() const
 */
 HB_FUNC_STATIC( QFSFILEENGINE_ISRELATIVEPATH )
 {
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_ISRELATIVEPATH )
 }
 
 /*
-virtual bool isSequential () const
+virtual bool isSequential() const
 */
 HB_FUNC_STATIC( QFSFILEENGINE_ISSEQUENTIAL )
 {
@@ -630,7 +630,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_READLINE )
 }
 
 /*
-virtual bool remove ()
+virtual bool remove()
 */
 HB_FUNC_STATIC( QFSFILEENGINE_REMOVE )
 {

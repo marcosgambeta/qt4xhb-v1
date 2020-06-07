@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QDIRITERATOR_FILEPATH )
 }
 
 /*
-bool hasNext () const
+bool hasNext() const
 */
 HB_FUNC_STATIC( QDIRITERATOR_HASNEXT )
 {

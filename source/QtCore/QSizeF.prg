@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QSIZEF_HEIGHT )
 }
 
 /*
-bool isEmpty () const
+bool isEmpty() const
 */
 HB_FUNC_STATIC( QSIZEF_ISEMPTY )
 {
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QSIZEF_ISEMPTY )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QSIZEF_ISNULL )
 {
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QSIZEF_ISNULL )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QSIZEF_ISVALID )
 {
