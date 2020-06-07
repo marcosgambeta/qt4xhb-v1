@@ -78,8 +78,7 @@ $prototypeV2=int frameWidth() const
 $prototype=QAbstractVideoBuffer::HandleType handleType () const
 $method=|QAbstractVideoBuffer::HandleType|handleType|
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=QSize pixelAspectRatio () const
 $method=|QSize|pixelAspectRatio|

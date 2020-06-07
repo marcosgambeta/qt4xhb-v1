@@ -34,8 +34,7 @@ $deleteMethod
 $prototype=Error error () const
 $method=|QAbstractVideoSurface::Error|error|
 
-$prototype=bool isActive () const
-$method=|bool|isActive|
+$prototypeV2=bool isActive() const
 
 $prototype=virtual bool isFormatSupported ( const QVideoSurfaceFormat & format ) const
 $virtualMethod=|bool|isFormatSupported|const QVideoSurfaceFormat &

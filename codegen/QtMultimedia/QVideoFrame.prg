@@ -122,17 +122,13 @@ $method=|QAbstractVideoBuffer::HandleType|handleType|
 
 $prototypeV2=int height() const
 
-$prototype=bool isMapped () const
-$method=|bool|isMapped|
+$prototypeV2=bool isMapped() const
 
-$prototype=bool isReadable () const
-$method=|bool|isReadable|
+$prototypeV2=bool isReadable() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=bool isWritable () const
-$method=|bool|isWritable|
+$prototypeV2=bool isWritable() const
 
 $prototype=bool map ( QAbstractVideoBuffer::MapMode mode )
 $method=|bool|map|QAbstractVideoBuffer::MapMode

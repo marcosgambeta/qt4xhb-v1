@@ -61,8 +61,7 @@ $method=|QString|deviceName|
 $prototype=bool isFormatSupported ( const QAudioFormat & settings ) const
 $method=|bool|isFormatSupported|const QAudioFormat &
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=QAudioFormat nearestFormat ( const QAudioFormat & settings ) const
 $method=|QAudioFormat|nearestFormat|const QAudioFormat &
