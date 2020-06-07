@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QAXFACTORY_INTERFACEID )
 }
 
 /*
-virtual bool isService () const
+virtual bool isService() const
 */
 HB_FUNC_STATIC( QAXFACTORY_ISSERVICE )
 {
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QAXFACTORY_VALIDATELICENSEKEY )
 }
 
 /*
-static bool isServer ()
+static bool isServer()
 */
 HB_FUNC_STATIC( QAXFACTORY_ISSERVER )
 {
@@ -549,7 +549,7 @@ HB_FUNC_STATIC( QAXFACTORY_STARTSERVER )
 }
 
 /*
-static bool stopServer ()
+static bool stopServer()
 */
 HB_FUNC_STATIC( QAXFACTORY_STOPSERVER )
 {

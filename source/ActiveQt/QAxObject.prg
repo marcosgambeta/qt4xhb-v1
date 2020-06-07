@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QAXOBJECT_GENERATEDOCUMENTATION )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QAXOBJECT_ISNULL )
 {

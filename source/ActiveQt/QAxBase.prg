@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QAXBASE_GENERATEDOCUMENTATION )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QAXBASE_ISNULL )
 {

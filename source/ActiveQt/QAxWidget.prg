@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QAXWIDGET_GENERATEDOCUMENTATION )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QAXWIDGET_ISNULL )
 {
