@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QLOCALSERVER_CLOSE )
 }
 
 /*
-QString errorString () const
+QString errorString() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_ERRORSTRING )
 {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QLOCALSERVER_ERRORSTRING )
 }
 
 /*
-QString fullServerName () const
+QString fullServerName() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_FULLSERVERNAME )
 {
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QLOCALSERVER_SERVERERROR )
 }
 
 /*
-QString serverName () const
+QString serverName() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_SERVERNAME )
 {

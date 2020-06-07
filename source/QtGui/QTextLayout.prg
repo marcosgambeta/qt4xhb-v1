@@ -730,7 +730,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_PREEDITAREAPOSITION )
 }
 
 /*
-QString preeditAreaText () const
+QString preeditAreaText() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_PREEDITAREATEXT )
 {
@@ -984,7 +984,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETTEXTOPTION )
 }
 
 /*
-QString text () const
+QString text() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_TEXT )
 {

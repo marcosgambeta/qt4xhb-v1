@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ADDLIBRARYPATH )
 }
 
 /*
-static QString applicationDirPath ()
+static QString applicationDirPath()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONDIRPATH )
 {
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONDIRPATH )
 }
 
 /*
-static QString applicationFilePath ()
+static QString applicationFilePath()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONFILEPATH )
 {
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONFILEPATH )
 }
 
 /*
-static QString applicationName ()
+static QString applicationName()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONNAME )
 {
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONPID )
 }
 
 /*
-static QString applicationVersion ()
+static QString applicationVersion()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONVERSION )
 {
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_LIBRARYPATHS )
 }
 
 /*
-static QString organizationDomain ()
+static QString organizationDomain()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_ORGANIZATIONDOMAIN )
 {
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ORGANIZATIONDOMAIN )
 }
 
 /*
-static QString organizationName ()
+static QString organizationName()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_ORGANIZATIONNAME )
 {

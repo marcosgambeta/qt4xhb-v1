@@ -858,7 +858,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SIZEHINT )
 }
 
 /*
-QString statusTip () const
+QString statusTip() const
 */
 HB_FUNC_STATIC( QTABLEWIDGETITEM_STATUSTIP )
 {
@@ -907,7 +907,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_TABLEWIDGET )
 }
 
 /*
-QString text () const
+QString text() const
 */
 HB_FUNC_STATIC( QTABLEWIDGETITEM_TEXT )
 {
@@ -955,7 +955,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_TEXTALIGNMENT )
 }
 
 /*
-QString toolTip () const
+QString toolTip() const
 */
 HB_FUNC_STATIC( QTABLEWIDGETITEM_TOOLTIP )
 {
@@ -1003,7 +1003,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_TYPE )
 }
 
 /*
-QString whatsThis () const
+QString whatsThis() const
 */
 HB_FUNC_STATIC( QTABLEWIDGETITEM_WHATSTHIS )
 {

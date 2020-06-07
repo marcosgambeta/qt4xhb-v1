@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QSOUND_DELETE )
 }
 
 /*
-QString fileName () const
+QString fileName() const
 */
 HB_FUNC_STATIC( QSOUND_FILENAME )
 {

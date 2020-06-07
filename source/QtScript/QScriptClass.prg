@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_EXTENSION )
 }
 
 /*
-virtual QString name () const
+virtual QString name() const
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_NAME )
 {

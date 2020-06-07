@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_AUTOSAVEFILTER )
 }
 
 /*
-QString collectionFile () const
+QString collectionFile() const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_COLLECTIONFILE )
 {
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_COPYCOLLECTIONFILE )
 }
 
 /*
-QString currentFilter () const
+QString currentFilter() const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_CURRENTFILTER )
 {
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_DOCUMENTATIONFILENAME )
 }
 
 /*
-QString error () const
+QString error() const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_ERROR )
 {

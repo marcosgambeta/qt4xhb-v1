@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QLABEL_PIXMAP )
 }
 
 /*
-QString selectedText () const
+QString selectedText() const
 */
 HB_FUNC_STATIC( QLABEL_SELECTEDTEXT )
 {
@@ -673,7 +673,7 @@ HB_FUNC_STATIC( QLABEL_SETWORDWRAP )
 }
 
 /*
-QString text () const
+QString text() const
 */
 HB_FUNC_STATIC( QLABEL_TEXT )
 {

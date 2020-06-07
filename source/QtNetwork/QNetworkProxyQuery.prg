@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_LOCALPORT )
 }
 
 /*
-QString peerHostName () const
+QString peerHostName() const
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_PEERHOSTNAME )
 {
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_PEERPORT )
 }
 
 /*
-QString protocolTag () const
+QString protocolTag() const
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_PROTOCOLTAG )
 {

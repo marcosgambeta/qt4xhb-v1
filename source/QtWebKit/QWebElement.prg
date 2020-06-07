@@ -833,7 +833,7 @@ HB_FUNC_STATIC( QWEBELEMENT_LASTCHILD )
 }
 
 /*
-QString localName () const
+QString localName() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_LOCALNAME )
 {
@@ -857,7 +857,7 @@ HB_FUNC_STATIC( QWEBELEMENT_LOCALNAME )
 }
 
 /*
-QString namespaceUri () const
+QString namespaceUri() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_NAMESPACEURI )
 {
@@ -931,7 +931,7 @@ HB_FUNC_STATIC( QWEBELEMENT_PARENT )
 }
 
 /*
-QString prefix () const
+QString prefix() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_PREFIX )
 {
@@ -1520,7 +1520,7 @@ HB_FUNC_STATIC( QWEBELEMENT_STYLEPROPERTY )
 }
 
 /*
-QString tagName () const
+QString tagName() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_TAGNAME )
 {
@@ -1569,7 +1569,7 @@ HB_FUNC_STATIC( QWEBELEMENT_TAKEFROMDOCUMENT )
 }
 
 /*
-QString toInnerXml () const
+QString toInnerXml() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_TOINNERXML )
 {
@@ -1593,7 +1593,7 @@ HB_FUNC_STATIC( QWEBELEMENT_TOINNERXML )
 }
 
 /*
-QString toOuterXml () const
+QString toOuterXml() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_TOOUTERXML )
 {
@@ -1617,7 +1617,7 @@ HB_FUNC_STATIC( QWEBELEMENT_TOOUTERXML )
 }
 
 /*
-QString toPlainText () const
+QString toPlainText() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_TOPLAINTEXT )
 {

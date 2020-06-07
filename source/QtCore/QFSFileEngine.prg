@@ -943,7 +943,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_DRIVES )
 }
 
 /*
-static QString homePath ()
+static QString homePath()
 */
 HB_FUNC_STATIC( QFSFILEENGINE_HOMEPATH )
 {
@@ -962,7 +962,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_HOMEPATH )
 }
 
 /*
-static QString rootPath ()
+static QString rootPath()
 */
 HB_FUNC_STATIC( QFSFILEENGINE_ROOTPATH )
 {
@@ -1000,7 +1000,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_SETCURRENTPATH )
 }
 
 /*
-static QString tempPath ()
+static QString tempPath()
 */
 HB_FUNC_STATIC( QFSFILEENGINE_TEMPPATH )
 {

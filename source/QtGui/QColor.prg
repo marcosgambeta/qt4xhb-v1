@@ -1214,7 +1214,7 @@ HB_FUNC_STATIC( QCOLOR_MAGENTAF )
 }
 
 /*
-QString name () const
+QString name() const
 */
 HB_FUNC_STATIC( QCOLOR_NAME )
 {

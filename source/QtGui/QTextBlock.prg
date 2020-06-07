@@ -688,7 +688,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_SETVISIBLE )
 }
 
 /*
-QString text () const
+QString text() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_TEXT )
 {

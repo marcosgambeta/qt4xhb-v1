@@ -166,7 +166,7 @@ QVariantHash options () const
 */
 
 /*
-QString password () const
+QString password() const
 */
 HB_FUNC_STATIC( QAUTHENTICATOR_PASSWORD )
 {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_PASSWORD )
 }
 
 /*
-QString realm () const
+QString realm() const
 */
 HB_FUNC_STATIC( QAUTHENTICATOR_REALM )
 {
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_SETUSER )
 }
 
 /*
-QString user () const
+QString user() const
 */
 HB_FUNC_STATIC( QAUTHENTICATOR_USER )
 {

@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QSPINBOX_DELETE )
 }
 
 /*
-QString cleanText () const
+QString cleanText() const
 */
 HB_FUNC_STATIC( QSPINBOX_CLEANTEXT )
 {
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QSPINBOX_MINIMUM )
 }
 
 /*
-QString prefix () const
+QString prefix() const
 */
 HB_FUNC_STATIC( QSPINBOX_PREFIX )
 {
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QSPINBOX_SINGLESTEP )
 }
 
 /*
-QString suffix () const
+QString suffix() const
 */
 HB_FUNC_STATIC( QSPINBOX_SUFFIX )
 {

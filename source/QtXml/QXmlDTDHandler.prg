@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QXMLDTDHANDLER_DELETE )
 }
 
 /*
-virtual QString errorString () const = 0
+virtual QString errorString() const = 0
 */
 HB_FUNC_STATIC( QXMLDTDHANDLER_ERRORSTRING )
 {

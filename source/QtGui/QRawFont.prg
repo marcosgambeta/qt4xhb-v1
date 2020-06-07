@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QRAWFONT_DESCENT )
 }
 
 /*
-QString familyName () const
+QString familyName() const
 */
 HB_FUNC_STATIC( QRAWFONT_FAMILYNAME )
 {
@@ -661,7 +661,7 @@ HB_FUNC_STATIC( QRAWFONT_STYLE )
 }
 
 /*
-QString styleName () const
+QString styleName() const
 */
 HB_FUNC_STATIC( QRAWFONT_STYLENAME )
 {

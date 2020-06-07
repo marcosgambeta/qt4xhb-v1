@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QURL_ALLQUERYITEMVALUES )
 }
 
 /*
-QString authority () const
+QString authority() const
 */
 HB_FUNC_STATIC( QURL_AUTHORITY )
 {
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QURL_ENCODEDUSERNAME )
 }
 
 /*
-QString errorString () const
+QString errorString() const
 */
 HB_FUNC_STATIC( QURL_ERRORSTRING )
 {
@@ -581,7 +581,7 @@ HB_FUNC_STATIC( QURL_ERRORSTRING )
 }
 
 /*
-QString fragment () const
+QString fragment() const
 */
 HB_FUNC_STATIC( QURL_FRAGMENT )
 {
@@ -701,7 +701,7 @@ HB_FUNC_STATIC( QURL_HASQUERYITEM )
 }
 
 /*
-QString host () const
+QString host() const
 */
 HB_FUNC_STATIC( QURL_HOST )
 {
@@ -845,7 +845,7 @@ HB_FUNC_STATIC( QURL_ISVALID )
 }
 
 /*
-QString password () const
+QString password() const
 */
 HB_FUNC_STATIC( QURL_PASSWORD )
 {
@@ -869,7 +869,7 @@ HB_FUNC_STATIC( QURL_PASSWORD )
 }
 
 /*
-QString path () const
+QString path() const
 */
 HB_FUNC_STATIC( QURL_PATH )
 {
@@ -1093,7 +1093,7 @@ HB_FUNC_STATIC( QURL_RESOLVED )
 }
 
 /*
-QString scheme () const
+QString scheme() const
 */
 HB_FUNC_STATIC( QURL_SCHEME )
 {
@@ -1686,7 +1686,7 @@ HB_FUNC_STATIC( QURL_TOENCODED )
 }
 
 /*
-QString toLocalFile () const
+QString toLocalFile() const
 */
 HB_FUNC_STATIC( QURL_TOLOCALFILE )
 {
@@ -1734,7 +1734,7 @@ HB_FUNC_STATIC( QURL_TOSTRING )
 }
 
 /*
-QString topLevelDomain () const
+QString topLevelDomain() const
 */
 HB_FUNC_STATIC( QURL_TOPLEVELDOMAIN )
 {
@@ -1758,7 +1758,7 @@ HB_FUNC_STATIC( QURL_TOPLEVELDOMAIN )
 }
 
 /*
-QString userInfo () const
+QString userInfo() const
 */
 HB_FUNC_STATIC( QURL_USERINFO )
 {
@@ -1782,7 +1782,7 @@ HB_FUNC_STATIC( QURL_USERINFO )
 }
 
 /*
-QString userName () const
+QString userName() const
 */
 HB_FUNC_STATIC( QURL_USERNAME )
 {

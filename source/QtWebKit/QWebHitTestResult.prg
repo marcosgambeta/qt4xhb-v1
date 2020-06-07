@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_DELETE )
 }
 
 /*
-QString alternateText () const
+QString alternateText() const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_ALTERNATETEXT )
 {
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTARGETFRAME )
 }
 
 /*
-QString linkText () const
+QString linkText() const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTEXT )
 {
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_POS )
 }
 
 /*
-QString title () const
+QString title() const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_TITLE )
 {

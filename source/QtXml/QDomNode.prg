@@ -913,7 +913,7 @@ HB_FUNC_STATIC( QDOMNODE_LINENUMBER )
 }
 
 /*
-QString localName () const
+QString localName() const
 */
 HB_FUNC_STATIC( QDOMNODE_LOCALNAME )
 {
@@ -962,7 +962,7 @@ HB_FUNC_STATIC( QDOMNODE_NAMEDITEM )
 }
 
 /*
-QString namespaceURI () const
+QString namespaceURI() const
 */
 HB_FUNC_STATIC( QDOMNODE_NAMESPACEURI )
 {
@@ -1036,7 +1036,7 @@ HB_FUNC_STATIC( QDOMNODE_NEXTSIBLINGELEMENT )
 }
 
 /*
-QString nodeName () const
+QString nodeName() const
 */
 HB_FUNC_STATIC( QDOMNODE_NODENAME )
 {
@@ -1084,7 +1084,7 @@ HB_FUNC_STATIC( QDOMNODE_NODETYPE )
 }
 
 /*
-QString nodeValue () const
+QString nodeValue() const
 */
 HB_FUNC_STATIC( QDOMNODE_NODEVALUE )
 {
@@ -1184,7 +1184,7 @@ HB_FUNC_STATIC( QDOMNODE_PARENTNODE )
 }
 
 /*
-QString prefix () const
+QString prefix() const
 */
 HB_FUNC_STATIC( QDOMNODE_PREFIX )
 {

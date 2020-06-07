@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QAXSCRIPT_LOAD )
 }
 
 /*
-QString scriptCode () const
+QString scriptCode() const
 */
 HB_FUNC_STATIC( QAXSCRIPT_SCRIPTCODE )
 {
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QAXSCRIPT_SCRIPTENGINE )
 }
 
 /*
-QString scriptName () const
+QString scriptName() const
 */
 HB_FUNC_STATIC( QAXSCRIPT_SCRIPTNAME )
 {

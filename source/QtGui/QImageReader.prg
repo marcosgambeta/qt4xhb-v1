@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QIMAGEREADER_ERROR )
 }
 
 /*
-QString errorString () const
+QString errorString() const
 */
 HB_FUNC_STATIC( QIMAGEREADER_ERRORSTRING )
 {
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QIMAGEREADER_ERRORSTRING )
 }
 
 /*
-QString fileName () const
+QString fileName() const
 */
 HB_FUNC_STATIC( QIMAGEREADER_FILENAME )
 {

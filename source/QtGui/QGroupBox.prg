@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QGROUPBOX_SETTITLE )
 }
 
 /*
-QString title () const
+QString title() const
 */
 HB_FUNC_STATIC( QGROUPBOX_TITLE )
 {

@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_ALIGNMENT )
 }
 
 /*
-QString format () const
+QString format() const
 */
 HB_FUNC_STATIC( QPROGRESSBAR_FORMAT )
 {
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETTEXTVISIBLE )
 }
 
 /*
-virtual QString text () const
+virtual QString text() const
 */
 HB_FUNC_STATIC( QPROGRESSBAR_TEXT )
 {

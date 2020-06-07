@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_COLUMN )
 }
 
 /*
-QString description () const
+QString description() const
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_DESCRIPTION )
 {
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_SETURL )
 }
 
 /*
-QString toString () const
+QString toString() const
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_TOSTRING )
 {

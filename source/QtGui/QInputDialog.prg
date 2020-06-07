@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_DELETE )
 }
 
 /*
-QString cancelButtonText () const
+QString cancelButtonText() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_CANCELBUTTONTEXT )
 {
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_ISCOMBOBOXEDITABLE )
 }
 
 /*
-QString labelText () const
+QString labelText() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_LABELTEXT )
 {
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_LABELTEXT )
 }
 
 /*
-QString okButtonText () const
+QString okButtonText() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_OKBUTTONTEXT )
 {
@@ -1085,7 +1085,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_TEXTECHOMODE )
 }
 
 /*
-QString textValue () const
+QString textValue() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_TEXTVALUE )
 {

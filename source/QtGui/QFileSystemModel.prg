@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ROOTDIRECTORY )
 }
 
 /*
-QString rootPath () const
+QString rootPath() const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ROOTPATH )
 {

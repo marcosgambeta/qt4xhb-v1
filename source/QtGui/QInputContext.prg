@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_FONT )
 }
 
 /*
-virtual QString identifierName () = 0
+virtual QString identifierName() = 0
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_IDENTIFIERNAME )
 {
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_ISCOMPOSING )
 }
 
 /*
-virtual QString language () = 0
+virtual QString language() = 0
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_LANGUAGE )
 {

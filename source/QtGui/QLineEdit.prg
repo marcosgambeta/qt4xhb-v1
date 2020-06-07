@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QLINEEDIT_DESELECT )
 }
 
 /*
-QString displayText () const
+QString displayText() const
 */
 HB_FUNC_STATIC( QLINEEDIT_DISPLAYTEXT )
 {
@@ -710,7 +710,7 @@ HB_FUNC_STATIC( QLINEEDIT_HOME )
 }
 
 /*
-QString inputMask () const
+QString inputMask() const
 */
 HB_FUNC_STATIC( QLINEEDIT_INPUTMASK )
 {
@@ -880,7 +880,7 @@ HB_FUNC_STATIC( QLINEEDIT_MAXLENGTH )
 }
 
 /*
-QString placeholderText () const
+QString placeholderText() const
 */
 HB_FUNC_STATIC( QLINEEDIT_PLACEHOLDERTEXT )
 {
@@ -929,7 +929,7 @@ HB_FUNC_STATIC( QLINEEDIT_MINIMUMSIZEHINT )
 }
 
 /*
-QString selectedText () const
+QString selectedText() const
 */
 HB_FUNC_STATIC( QLINEEDIT_SELECTEDTEXT )
 {
@@ -1391,7 +1391,7 @@ HB_FUNC_STATIC( QLINEEDIT_SIZEHINT )
 }
 
 /*
-QString text () const
+QString text() const
 */
 HB_FUNC_STATIC( QLINEEDIT_TEXT )
 {

@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_DELETE )
 }
 
 /*
-virtual QString fileName () const = 0
+virtual QString fileName() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_FILENAME )
 {

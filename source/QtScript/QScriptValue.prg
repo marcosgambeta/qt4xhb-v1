@@ -1128,7 +1128,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOREGEXP )
 }
 
 /*
-QString toString () const
+QString toString() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_TOSTRING )
 {

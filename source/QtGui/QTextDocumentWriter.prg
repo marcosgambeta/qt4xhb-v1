@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_DEVICE )
 }
 
 /*
-QString fileName () const
+QString fileName() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_FILENAME )
 {

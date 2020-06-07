@@ -770,7 +770,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_LINK )
 }
 
 /*
-QString log () const
+QString log() const
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_LOG )
 {

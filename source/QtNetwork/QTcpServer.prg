@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QTCPSERVER_CLOSE )
 }
 
 /*
-QString errorString () const
+QString errorString() const
 */
 HB_FUNC_STATIC( QTCPSERVER_ERRORSTRING )
 {

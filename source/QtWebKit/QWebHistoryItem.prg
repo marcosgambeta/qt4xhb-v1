@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_SETUSERDATA )
 }
 
 /*
-QString title () const
+QString title() const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_TITLE )
 {

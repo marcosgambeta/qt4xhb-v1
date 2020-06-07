@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PEERADDRESS )
 }
 
 /*
-QString peerName () const
+QString peerName() const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_PEERNAME )
 {

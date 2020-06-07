@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_ISVALID )
 }
 
 /*
-QString scriptLanguage () const
+QString scriptLanguage() const
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_SCRIPTLANGUAGE )
 {

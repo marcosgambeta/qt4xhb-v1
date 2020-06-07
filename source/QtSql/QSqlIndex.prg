@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QSQLINDEX_APPEND )
 }
 
 /*
-QString cursorName () const
+QString cursorName() const
 */
 HB_FUNC_STATIC( QSQLINDEX_CURSORNAME )
 {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QSQLINDEX_ISDESCENDING )
 }
 
 /*
-QString name () const
+QString name() const
 */
 HB_FUNC_STATIC( QSQLINDEX_NAME )
 {

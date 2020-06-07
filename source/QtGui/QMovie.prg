@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QMOVIE_DEVICE )
 }
 
 /*
-QString fileName () const
+QString fileName() const
 */
 HB_FUNC_STATIC( QMOVIE_FILENAME )
 {

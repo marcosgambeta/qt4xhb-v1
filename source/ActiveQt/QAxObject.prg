@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QAXOBJECT_CLEAR )
 }
 
 /*
-QString control () const
+QString control() const
 */
 HB_FUNC_STATIC( QAXOBJECT_CONTROL )
 {
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QAXOBJECT_DYNAMICCALL )
 }
 
 /*
-QString generateDocumentation ()
+QString generateDocumentation()
 */
 HB_FUNC_STATIC( QAXOBJECT_GENERATEDOCUMENTATION )
 {

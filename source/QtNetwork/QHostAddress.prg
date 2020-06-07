@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_PROTOCOL )
 }
 
 /*
-QString scopeId () const
+QString scopeId() const
 */
 HB_FUNC_STATIC( QHOSTADDRESS_SCOPEID )
 {
@@ -418,7 +418,7 @@ Q_IPV6ADDR toIPv6Address () const
 */
 
 /*
-QString toString () const
+QString toString() const
 */
 HB_FUNC_STATIC( QHOSTADDRESS_TOSTRING )
 {

@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_LINENUMBER )
 }
 
 /*
-QString message () const
+QString message() const
 */
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_MESSAGE )
 {
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_MESSAGE )
 }
 
 /*
-QString publicId () const
+QString publicId() const
 */
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_PUBLICID )
 {
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_PUBLICID )
 }
 
 /*
-QString systemId () const
+QString systemId() const
 */
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_SYSTEMID )
 {

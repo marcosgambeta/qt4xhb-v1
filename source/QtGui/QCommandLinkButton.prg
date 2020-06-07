@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW )
 }
 
 /*
-QString description () const
+QString description() const
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DESCRIPTION )
 {

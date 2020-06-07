@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_DELETE )
 }
 
 /*
-QString errorString () const
+QString errorString() const
 */
 HB_FUNC_STATIC( QPLUGINLOADER_ERRORSTRING )
 {
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_ERRORSTRING )
 }
 
 /*
-QString fileName () const
+QString fileName() const
 */
 HB_FUNC_STATIC( QPLUGINLOADER_FILENAME )
 {

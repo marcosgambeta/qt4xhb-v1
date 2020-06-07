@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_DELETE )
 }
 
 /*
-QString cacheDirectory () const
+QString cacheDirectory() const
 */
 HB_FUNC_STATIC( QNETWORKDISKCACHE_CACHEDIRECTORY )
 {

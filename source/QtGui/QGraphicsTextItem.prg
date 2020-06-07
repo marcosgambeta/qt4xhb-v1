@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTWIDTH )
 }
 
 /*
-QString toHtml () const
+QString toHtml() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOHTML )
 {
@@ -646,7 +646,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOHTML )
 }
 
 /*
-QString toPlainText () const
+QString toPlainText() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOPLAINTEXT )
 {

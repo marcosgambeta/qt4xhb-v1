@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_DELETE )
 }
 
 /*
-virtual QString data () const
+virtual QString data() const
 */
 HB_FUNC_STATIC( QXMLINPUTSOURCE_DATA )
 {

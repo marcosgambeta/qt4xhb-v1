@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASES )
 }
 
 /*
-QString host () const
+QString host() const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_HOST )
 {
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_PORT )
 }
 
 /*
-QString scheme () const
+QString scheme() const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_SCHEME )
 {

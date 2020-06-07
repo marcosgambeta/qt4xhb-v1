@@ -1307,7 +1307,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWFRAMERECT )
 }
 
 /*
-QString windowTitle () const
+QString windowTitle() const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWTITLE )
 {

@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QSETTINGS_ALLKEYS )
 }
 
 /*
-QString applicationName () const
+QString applicationName() const
 */
 HB_FUNC_STATIC( QSETTINGS_APPLICATIONNAME )
 {
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QSETTINGS_FALLBACKSENABLED )
 }
 
 /*
-QString fileName () const
+QString fileName() const
 */
 HB_FUNC_STATIC( QSETTINGS_FILENAME )
 {
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QSETTINGS_FORMAT )
 }
 
 /*
-QString group () const
+QString group() const
 */
 HB_FUNC_STATIC( QSETTINGS_GROUP )
 {
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QSETTINGS_ISWRITABLE )
 }
 
 /*
-QString organizationName () const
+QString organizationName() const
 */
 HB_FUNC_STATIC( QSETTINGS_ORGANIZATIONNAME )
 {

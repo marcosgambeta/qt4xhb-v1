@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CORE )
 }
 
 /*
-virtual QString currentPropertyName () const = 0
+virtual QString currentPropertyName() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CURRENTPROPERTYNAME )
 {

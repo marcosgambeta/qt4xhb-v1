@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QFONT_CAPITALIZATION )
 }
 
 /*
-QString defaultFamily () const
+QString defaultFamily() const
 */
 HB_FUNC_STATIC( QFONT_DEFAULTFAMILY )
 {
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QFONT_EXACTMATCH )
 }
 
 /*
-QString family () const
+QString family() const
 */
 HB_FUNC_STATIC( QFONT_FAMILY )
 {
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QFONT_KERNING )
 }
 
 /*
-QString key () const
+QString key() const
 */
 HB_FUNC_STATIC( QFONT_KEY )
 {
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QFONT_KEY )
 }
 
 /*
-QString lastResortFamily () const
+QString lastResortFamily() const
 */
 HB_FUNC_STATIC( QFONT_LASTRESORTFAMILY )
 {
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QFONT_LASTRESORTFAMILY )
 }
 
 /*
-QString lastResortFont () const
+QString lastResortFont() const
 */
 HB_FUNC_STATIC( QFONT_LASTRESORTFONT )
 {
@@ -675,7 +675,7 @@ HB_FUNC_STATIC( QFONT_RAWMODE )
 }
 
 /*
-QString rawName () const
+QString rawName() const
 */
 HB_FUNC_STATIC( QFONT_RAWNAME )
 {
@@ -1390,7 +1390,7 @@ HB_FUNC_STATIC( QFONT_STYLESTRATEGY )
 }
 
 /*
-QString toString () const
+QString toString() const
 */
 HB_FUNC_STATIC( QFONT_TOSTRING )
 {

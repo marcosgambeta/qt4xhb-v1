@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASURLS )
 }
 
 /*
-QString html () const
+QString html() const
 */
 HB_FUNC_STATIC( QMIMEDATA_HTML )
 {
@@ -586,7 +586,7 @@ HB_FUNC_STATIC( QMIMEDATA_SETURLS )
 }
 
 /*
-QString text () const
+QString text() const
 */
 HB_FUNC_STATIC( QMIMEDATA_TEXT )
 {

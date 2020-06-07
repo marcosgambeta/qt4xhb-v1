@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_SETVALUE )
 }
 
 /*
-QString value () const
+QString value() const
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_VALUE )
 {

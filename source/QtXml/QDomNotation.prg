@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QDOMNOTATION_NODETYPE )
 }
 
 /*
-QString publicId () const
+QString publicId() const
 */
 HB_FUNC_STATIC( QDOMNOTATION_PUBLICID )
 {
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QDOMNOTATION_PUBLICID )
 }
 
 /*
-QString systemId () const
+QString systemId() const
 */
 HB_FUNC_STATIC( QDOMNOTATION_SYSTEMID )
 {

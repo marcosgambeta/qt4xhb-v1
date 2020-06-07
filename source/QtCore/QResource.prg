@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QRESOURCE_DELETE )
 }
 
 /*
-QString absoluteFilePath () const
+QString absoluteFilePath() const
 */
 HB_FUNC_STATIC( QRESOURCE_ABSOLUTEFILEPATH )
 {
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QRESOURCE_DATA )
 }
 
 /*
-QString fileName () const
+QString fileName() const
 */
 HB_FUNC_STATIC( QRESOURCE_FILENAME )
 {

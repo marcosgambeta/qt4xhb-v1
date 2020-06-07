@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QXMLERRORHANDLER_ERROR )
 }
 
 /*
-virtual QString errorString () const = 0
+virtual QString errorString() const = 0
 */
 HB_FUNC_STATIC( QXMLERRORHANDLER_ERRORSTRING )
 {

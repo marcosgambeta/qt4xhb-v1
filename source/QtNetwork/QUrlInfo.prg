@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QURLINFO_DELETE )
 }
 
 /*
-QString group () const
+QString group() const
 */
 HB_FUNC_STATIC( QURLINFO_GROUP )
 {
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QURLINFO_LASTREAD )
 }
 
 /*
-QString name () const
+QString name() const
 */
 HB_FUNC_STATIC( QURLINFO_NAME )
 {
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QURLINFO_NAME )
 }
 
 /*
-QString owner () const
+QString owner() const
 */
 HB_FUNC_STATIC( QURLINFO_OWNER )
 {

@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QAXBASE_CLEAR )
 }
 
 /*
-QString control () const
+QString control() const
 */
 HB_FUNC_STATIC( QAXBASE_CONTROL )
 {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QAXBASE_DYNAMICCALL )
 }
 
 /*
-QString generateDocumentation ()
+QString generateDocumentation()
 */
 HB_FUNC_STATIC( QAXBASE_GENERATEDOCUMENTATION )
 {

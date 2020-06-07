@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QREGEXP_CASESENSITIVITY )
 }
 
 /*
-QString errorString () const
+QString errorString() const
 */
 HB_FUNC_STATIC( QREGEXP_ERRORSTRING )
 {
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QREGEXP_MATCHEDLENGTH )
 }
 
 /*
-QString pattern () const
+QString pattern() const
 */
 HB_FUNC_STATIC( QREGEXP_PATTERN )
 {

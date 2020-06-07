@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QCOMBOBOX_CURRENTINDEX )
 }
 
 /*
-QString currentText () const
+QString currentText() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_CURRENTTEXT )
 {

@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ERROR )
 }
 
 /*
-QString errorString () const
+QString errorString() const
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ERRORSTRING )
 {

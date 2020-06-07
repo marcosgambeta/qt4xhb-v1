@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SETCODEC )
 }
 
 /*
-QString codec () const
+QString codec() const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_CODEC )
 {

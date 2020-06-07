@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QSTATICTEXT_SIZE )
 }
 
 /*
-QString text () const
+QString text() const
 */
 HB_FUNC_STATIC( QSTATICTEXT_TEXT )
 {

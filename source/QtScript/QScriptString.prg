@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QSCRIPTSTRING_ISVALID )
 }
 
 /*
-QString toString () const
+QString toString() const
 */
 HB_FUNC_STATIC( QSCRIPTSTRING_TOSTRING )
 {

@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_METHOD )
 }
 
 /*
-QString name () const
+QString name() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NAME )
 {

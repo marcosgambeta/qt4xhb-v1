@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QWEBFRAME_FINDFIRSTELEMENT )
 }
 
 /*
-QString frameName () const
+QString frameName() const
 */
 HB_FUNC_STATIC( QWEBFRAME_FRAMENAME )
 {
@@ -653,7 +653,7 @@ HB_FUNC_STATIC( QWEBFRAME_RENDER )
 }
 
 /*
-QString renderTreeDump () const
+QString renderTreeDump() const
 */
 HB_FUNC_STATIC( QWEBFRAME_RENDERTREEDUMP )
 {
@@ -1183,7 +1183,7 @@ HB_FUNC_STATIC( QWEBFRAME_TEXTSIZEMULTIPLIER )
 }
 
 /*
-QString title () const
+QString title() const
 */
 HB_FUNC_STATIC( QWEBFRAME_TITLE )
 {
@@ -1207,7 +1207,7 @@ HB_FUNC_STATIC( QWEBFRAME_TITLE )
 }
 
 /*
-QString toHtml () const
+QString toHtml() const
 */
 HB_FUNC_STATIC( QWEBFRAME_TOHTML )
 {
@@ -1231,7 +1231,7 @@ HB_FUNC_STATIC( QWEBFRAME_TOHTML )
 }
 
 /*
-QString toPlainText () const
+QString toPlainText() const
 */
 HB_FUNC_STATIC( QWEBFRAME_TOPLAINTEXT )
 {

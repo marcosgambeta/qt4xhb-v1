@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QSQLFIELD_LENGTH )
 }
 
 /*
-QString name () const
+QString name() const
 */
 HB_FUNC_STATIC( QSQLFIELD_NAME )
 {

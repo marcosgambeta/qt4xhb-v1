@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QPRINTER_COPYCOUNT )
 }
 
 /*
-QString creator () const
+QString creator() const
 */
 HB_FUNC_STATIC( QPRINTER_CREATOR )
 {
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QPRINTER_CREATOR )
 }
 
 /*
-QString docName () const
+QString docName() const
 */
 HB_FUNC_STATIC( QPRINTER_DOCNAME )
 {
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QPRINTER_ORIENTATION )
 }
 
 /*
-QString outputFileName () const
+QString outputFileName() const
 */
 HB_FUNC_STATIC( QPRINTER_OUTPUTFILENAME )
 {
@@ -760,7 +760,7 @@ HB_FUNC_STATIC( QPRINTER_PRINTENGINE )
 }
 
 /*
-QString printProgram () const
+QString printProgram() const
 */
 HB_FUNC_STATIC( QPRINTER_PRINTPROGRAM )
 {
@@ -808,7 +808,7 @@ HB_FUNC_STATIC( QPRINTER_PRINTRANGE )
 }
 
 /*
-QString printerName () const
+QString printerName() const
 */
 HB_FUNC_STATIC( QPRINTER_PRINTERNAME )
 {

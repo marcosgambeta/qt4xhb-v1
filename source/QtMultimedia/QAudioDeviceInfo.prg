@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_DELETE )
 }
 
 /*
-QString deviceName () const
+QString deviceName() const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_DEVICENAME )
 {

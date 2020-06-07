@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_RESTARTHINT )
 }
 
 /*
-QString sessionId () const
+QString sessionId() const
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_SESSIONID )
 {
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SESSIONID )
 }
 
 /*
-QString sessionKey () const
+QString sessionKey() const
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_SESSIONKEY )
 {

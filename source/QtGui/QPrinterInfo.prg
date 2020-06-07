@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QPRINTERINFO_ISNULL )
 }
 
 /*
-QString printerName () const
+QString printerName() const
 */
 HB_FUNC_STATIC( QPRINTERINFO_PRINTERNAME )
 {

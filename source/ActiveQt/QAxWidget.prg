@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QAXWIDGET_ASVARIANT )
 }
 
 /*
-QString control () const
+QString control() const
 */
 HB_FUNC_STATIC( QAXWIDGET_CONTROL )
 {
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QAXWIDGET_DYNAMICCALL )
 }
 
 /*
-QString generateDocumentation ()
+QString generateDocumentation()
 */
 HB_FUNC_STATIC( QAXWIDGET_GENERATEDOCUMENTATION )
 {

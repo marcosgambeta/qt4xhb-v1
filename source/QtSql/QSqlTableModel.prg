@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_FIELDINDEX )
 }
 
 /*
-QString filter () const
+QString filter() const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_FILTER )
 {
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETTABLE )
 }
 
 /*
-QString tableName () const
+QString tableName() const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_TABLENAME )
 {

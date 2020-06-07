@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_ADDAPPLICATIONFONT )
 }
 
 /*
-virtual QString fontDir () const
+virtual QString fontDir() const
 */
 HB_FUNC_STATIC( QPLATFORMFONTDATABASE_FONTDIR )
 {

@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_DOCUMENT )
 }
 
 /*
-QString documentTitle () const
+QString documentTitle() const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_DOCUMENTTITLE )
 {
@@ -1277,7 +1277,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_TEXTINTERACTIONFLAGS )
 }
 
 /*
-QString toPlainText () const
+QString toPlainText() const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_TOPLAINTEXT )
 {

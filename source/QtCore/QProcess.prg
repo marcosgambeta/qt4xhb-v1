@@ -807,7 +807,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORSTARTED )
 }
 
 /*
-QString workingDirectory () const
+QString workingDirectory() const
 */
 HB_FUNC_STATIC( QPROCESS_WORKINGDIRECTORY )
 {

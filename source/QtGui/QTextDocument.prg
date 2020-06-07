@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTFONT )
 }
 
 /*
-QString defaultStyleSheet () const
+QString defaultStyleSheet() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTSTYLESHEET )
 {
@@ -1859,7 +1859,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_TOHTML )
 }
 
 /*
-QString toPlainText () const
+QString toPlainText() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_TOPLAINTEXT )
 {

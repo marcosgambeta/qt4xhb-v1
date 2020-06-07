@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_POSITION )
 }
 
 /*
-QString text () const
+QString text() const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_TEXT )
 {

@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_SETTEXT )
 }
 
 /*
-QString text () const
+QString text() const
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_TEXT )
 {

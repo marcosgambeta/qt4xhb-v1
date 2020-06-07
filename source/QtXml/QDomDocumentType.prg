@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_ENTITIES )
 }
 
 /*
-QString internalSubset () const
+QString internalSubset() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_INTERNALSUBSET )
 {
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_INTERNALSUBSET )
 }
 
 /*
-QString name () const
+QString name() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NAME )
 {
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NOTATIONS )
 }
 
 /*
-QString publicId () const
+QString publicId() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_PUBLICID )
 {
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_PUBLICID )
 }
 
 /*
-QString systemId () const
+QString systemId() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_SYSTEMID )
 {

@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QICON_ISNULL )
 }
 
 /*
-QString name () const
+QString name() const
 */
 HB_FUNC_STATIC( QICON_NAME )
 {
@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QICON_SETTHEMESEARCHPATHS )
 }
 
 /*
-static QString themeName ()
+static QString themeName()
 */
 HB_FUNC_STATIC( QICON_THEMENAME )
 {

@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QLOCALE_NEW )
 }
 
 /*
-QString amText () const
+QString amText() const
 */
 HB_FUNC_STATIC( QLOCALE_AMTEXT )
 {
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QLOCALE_AMTEXT )
 }
 
 /*
-QString bcp47Name () const
+QString bcp47Name() const
 */
 HB_FUNC_STATIC( QLOCALE_BCP47NAME )
 {
@@ -574,7 +574,7 @@ HB_FUNC_STATIC( QLOCALE_MONTHNAME )
 }
 
 /*
-QString name () const
+QString name() const
 */
 HB_FUNC_STATIC( QLOCALE_NAME )
 {
@@ -598,7 +598,7 @@ HB_FUNC_STATIC( QLOCALE_NAME )
 }
 
 /*
-QString nativeCountryName () const
+QString nativeCountryName() const
 */
 HB_FUNC_STATIC( QLOCALE_NATIVECOUNTRYNAME )
 {
@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QLOCALE_NATIVECOUNTRYNAME )
 }
 
 /*
-QString nativeLanguageName () const
+QString nativeLanguageName() const
 */
 HB_FUNC_STATIC( QLOCALE_NATIVELANGUAGENAME )
 {
@@ -720,7 +720,7 @@ HB_FUNC_STATIC( QLOCALE_PERCENT )
 }
 
 /*
-QString pmText () const
+QString pmText() const
 */
 HB_FUNC_STATIC( QLOCALE_PMTEXT )
 {

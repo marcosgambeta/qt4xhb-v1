@@ -885,7 +885,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SIZEHINT )
 }
 
 /*
-QString statusTip () const
+QString statusTip() const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_STATUSTIP )
 {
@@ -909,7 +909,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_STATUSTIP )
 }
 
 /*
-QString text () const
+QString text() const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_TEXT )
 {
@@ -957,7 +957,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_TEXTALIGNMENT )
 }
 
 /*
-QString toolTip () const
+QString toolTip() const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_TOOLTIP )
 {
@@ -1005,7 +1005,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_TYPE )
 }
 
 /*
-QString whatsThis () const
+QString whatsThis() const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_WHATSTHIS )
 {

@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QUNDOSTACK_PUSH )
 }
 
 /*
-QString redoText () const
+QString redoText() const
 */
 HB_FUNC_STATIC( QUNDOSTACK_REDOTEXT )
 {
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QUNDOSTACK_UNDOLIMIT )
 }
 
 /*
-QString undoText () const
+QString undoText() const
 */
 HB_FUNC_STATIC( QUNDOSTACK_UNDOTEXT )
 {

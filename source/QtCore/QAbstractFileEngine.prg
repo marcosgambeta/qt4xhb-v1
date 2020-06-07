@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_ERROR )
 }
 
 /*
-QString errorString () const
+QString errorString() const
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_ERRORSTRING )
 {

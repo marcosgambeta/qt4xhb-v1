@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_ERROR )
 }
 
 /*
-QString errorString () const
+QString errorString() const
 */
 HB_FUNC_STATIC( QSTATEMACHINE_ERRORSTRING )
 {

@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_DATETIME )
 }
 
 /*
-QString displayFormat () const
+QString displayFormat() const
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_DISPLAYFORMAT )
 {

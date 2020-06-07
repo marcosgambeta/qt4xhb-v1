@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ERROR )
 }
 
 /*
-virtual QString errorString () const
+virtual QString errorString() const
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ERRORSTRING )
 {

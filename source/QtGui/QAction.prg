@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QACTION_ICON )
 }
 
 /*
-QString iconText () const
+QString iconText() const
 */
 HB_FUNC_STATIC( QACTION_ICONTEXT )
 {
@@ -1397,7 +1397,7 @@ HB_FUNC_STATIC( QACTION_SOFTKEYROLE )
 }
 
 /*
-QString statusTip () const
+QString statusTip() const
 */
 HB_FUNC_STATIC( QACTION_STATUSTIP )
 {
@@ -1421,7 +1421,7 @@ HB_FUNC_STATIC( QACTION_STATUSTIP )
 }
 
 /*
-QString text () const
+QString text() const
 */
 HB_FUNC_STATIC( QACTION_TEXT )
 {
@@ -1445,7 +1445,7 @@ HB_FUNC_STATIC( QACTION_TEXT )
 }
 
 /*
-QString toolTip () const
+QString toolTip() const
 */
 HB_FUNC_STATIC( QACTION_TOOLTIP )
 {
@@ -1469,7 +1469,7 @@ HB_FUNC_STATIC( QACTION_TOOLTIP )
 }
 
 /*
-QString whatsThis () const
+QString whatsThis() const
 */
 HB_FUNC_STATIC( QACTION_WHATSTHIS )
 {

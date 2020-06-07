@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ADDRESOURCEFILE )
 }
 
 /*
-virtual QString author () const = 0
+virtual QString author() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_AUTHOR )
 {
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_AUTHOR )
 }
 
 /*
-virtual QString comment () const = 0
+virtual QString comment() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_COMMENT )
 {
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_COMMENT )
 }
 
 /*
-virtual QString contents () const = 0
+virtual QString contents() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_CONTENTS )
 {
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_EMITSELECTIONCHANGED )
 }
 
 /*
-virtual QString exportMacro () const = 0
+virtual QString exportMacro() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_EXPORTMACRO )
 {
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FEATURES )
 }
 
 /*
-virtual QString fileName () const = 0
+virtual QString fileName() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FILENAME )
 {
@@ -567,7 +567,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_MAINCONTAINER )
 }
 
 /*
-virtual QString pixmapFunction () const = 0
+virtual QString pixmapFunction() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_PIXMAPFUNCTION )
 {

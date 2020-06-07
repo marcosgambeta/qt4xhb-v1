@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QKEYEVENT_NATIVEVIRTUALKEY )
 }
 
 /*
-QString text () const
+QString text() const
 */
 HB_FUNC_STATIC( QKEYEVENT_TEXT )
 {

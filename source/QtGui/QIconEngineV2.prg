@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QICONENGINEV2_CLONE )
 }
 
 /*
-QString iconName ()
+QString iconName()
 */
 HB_FUNC_STATIC( QICONENGINEV2_ICONNAME )
 {
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QICONENGINEV2_ICONNAME )
 }
 
 /*
-virtual QString key () const
+virtual QString key() const
 */
 HB_FUNC_STATIC( QICONENGINEV2_KEY )
 {

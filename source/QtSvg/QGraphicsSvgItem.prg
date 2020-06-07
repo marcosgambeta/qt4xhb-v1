@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_NEW )
 }
 
 /*
-QString elementId () const
+QString elementId() const
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_ELEMENTID )
 {

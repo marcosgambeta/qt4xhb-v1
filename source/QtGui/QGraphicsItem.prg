@@ -4134,7 +4134,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TOGRAPHICSOBJECT )
 }
 
 /*
-QString toolTip () const
+QString toolTip() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_TOOLTIP )
 {

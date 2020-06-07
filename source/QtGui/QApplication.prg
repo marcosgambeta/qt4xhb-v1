@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QAPPLICATION_SAVESTATE )
 }
 
 /*
-QString sessionId () const
+QString sessionId() const
 */
 HB_FUNC_STATIC( QAPPLICATION_SESSIONID )
 {
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QAPPLICATION_SESSIONID )
 }
 
 /*
-QString sessionKey () const
+QString sessionKey() const
 */
 HB_FUNC_STATIC( QAPPLICATION_SESSIONKEY )
 {
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETINPUTCONTEXT )
 }
 
 /*
-QString styleSheet () const
+QString styleSheet() const
 */
 HB_FUNC_STATIC( QAPPLICATION_STYLESHEET )
 {

@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_FLAGS )
 }
 
 /*
-QString hardwareAddress () const
+QString hardwareAddress() const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_HARDWAREADDRESS )
 {
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_HARDWAREADDRESS )
 }
 
 /*
-QString humanReadableName () const
+QString humanReadableName() const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_HUMANREADABLENAME )
 {
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ISVALID )
 }
 
 /*
-QString name () const
+QString name() const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_NAME )
 {

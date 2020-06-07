@@ -605,7 +605,7 @@ HB_FUNC_STATIC( QWEBPAGE_PREFERREDCONTENTSSIZE )
 }
 
 /*
-QString selectedText () const
+QString selectedText() const
 */
 HB_FUNC_STATIC( QWEBPAGE_SELECTEDTEXT )
 {

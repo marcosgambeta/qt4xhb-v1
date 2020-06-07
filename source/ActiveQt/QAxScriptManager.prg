@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_REGISTERENGINE )
 }
 
 /*
-static QString scriptFileFilter ()
+static QString scriptFileFilter()
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPTFILEFILTER )
 {

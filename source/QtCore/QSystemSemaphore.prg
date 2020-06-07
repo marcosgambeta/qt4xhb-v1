@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ERROR )
 }
 
 /*
-QString errorString () const
+QString errorString() const
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ERRORSTRING )
 {
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ERRORSTRING )
 }
 
 /*
-QString key () const
+QString key() const
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_KEY )
 {

@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_DELETE )
 }
 
 /*
-QString fileName () const
+QString fileName() const
 */
 HB_FUNC_STATIC( QSCRIPTPROGRAM_FILENAME )
 {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_ISNULL )
 }
 
 /*
-QString sourceCode () const
+QString sourceCode() const
 */
 HB_FUNC_STATIC( QSCRIPTPROGRAM_SOURCECODE )
 {

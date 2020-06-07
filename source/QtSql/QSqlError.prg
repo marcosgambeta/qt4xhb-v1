@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QSQLERROR_DELETE )
 }
 
 /*
-QString databaseText () const
+QString databaseText() const
 */
 HB_FUNC_STATIC( QSQLERROR_DATABASETEXT )
 {
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QSQLERROR_DATABASETEXT )
 }
 
 /*
-QString driverText () const
+QString driverText() const
 */
 HB_FUNC_STATIC( QSQLERROR_DRIVERTEXT )
 {
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QSQLERROR_SETTYPE )
 }
 
 /*
-QString text () const
+QString text() const
 */
 HB_FUNC_STATIC( QSQLERROR_TEXT )
 {

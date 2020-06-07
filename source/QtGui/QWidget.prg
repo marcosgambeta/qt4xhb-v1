@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QWIDGET_ACCEPTDROPS )
 }
 
 /*
-QString accessibleDescription () const
+QString accessibleDescription() const
 */
 HB_FUNC_STATIC( QWIDGET_ACCESSIBLEDESCRIPTION )
 {
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QWIDGET_ACCESSIBLEDESCRIPTION )
 }
 
 /*
-QString accessibleName () const
+QString accessibleName() const
 */
 HB_FUNC_STATIC( QWIDGET_ACCESSIBLENAME )
 {
@@ -4801,7 +4801,7 @@ HB_FUNC_STATIC( QWIDGET_STACKUNDER )
 }
 
 /*
-QString statusTip () const
+QString statusTip() const
 */
 HB_FUNC_STATIC( QWIDGET_STATUSTIP )
 {
@@ -4850,7 +4850,7 @@ HB_FUNC_STATIC( QWIDGET_STYLE )
 }
 
 /*
-QString styleSheet () const
+QString styleSheet() const
 */
 HB_FUNC_STATIC( QWIDGET_STYLESHEET )
 {
@@ -4898,7 +4898,7 @@ HB_FUNC_STATIC( QWIDGET_TESTATTRIBUTE )
 }
 
 /*
-QString toolTip () const
+QString toolTip() const
 */
 HB_FUNC_STATIC( QWIDGET_TOOLTIP )
 {
@@ -5216,7 +5216,7 @@ HB_FUNC_STATIC( QWIDGET_VISIBLEREGION )
 }
 
 /*
-QString whatsThis () const
+QString whatsThis() const
 */
 HB_FUNC_STATIC( QWIDGET_WHATSTHIS )
 {
@@ -5315,7 +5315,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOW )
 }
 
 /*
-QString windowFilePath () const
+QString windowFilePath() const
 */
 HB_FUNC_STATIC( QWIDGET_WINDOWFILEPATH )
 {
@@ -5388,7 +5388,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWICON )
 }
 
 /*
-QString windowIconText () const
+QString windowIconText() const
 */
 HB_FUNC_STATIC( QWIDGET_WINDOWICONTEXT )
 {
@@ -5460,7 +5460,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWOPACITY )
 }
 
 /*
-QString windowRole () const
+QString windowRole() const
 */
 HB_FUNC_STATIC( QWIDGET_WINDOWROLE )
 {
@@ -5508,7 +5508,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWSTATE )
 }
 
 /*
-QString windowTitle () const
+QString windowTitle() const
 */
 HB_FUNC_STATIC( QWIDGET_WINDOWTITLE )
 {

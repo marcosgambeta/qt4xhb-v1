@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETTINGS )
 }
 
 /*
-QString title () const
+QString title() const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_TITLE )
 {

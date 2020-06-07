@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ISCLEAN )
 }
 
 /*
-QString redoText () const
+QString redoText() const
 */
 HB_FUNC_STATIC( QUNDOGROUP_REDOTEXT )
 {
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QUNDOGROUP_STACKS )
 }
 
 /*
-QString undoText () const
+QString undoText() const
 */
 HB_FUNC_STATIC( QUNDOGROUP_UNDOTEXT )
 {

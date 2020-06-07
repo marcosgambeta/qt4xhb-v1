@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QFILEDIALOG_CONFIRMOVERWRITE )
 }
 
 /*
-QString defaultSuffix () const
+QString defaultSuffix() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_DEFAULTSUFFIX )
 {
@@ -705,7 +705,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SELECTEDFILES )
 }
 
 /*
-QString selectedNameFilter () const
+QString selectedNameFilter() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_SELECTEDNAMEFILTER )
 {

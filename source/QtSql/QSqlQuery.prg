@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QSQLQUERY_EXECBATCH )
 }
 
 /*
-QString executedQuery () const
+QString executedQuery() const
 */
 HB_FUNC_STATIC( QSQLQUERY_EXECUTEDQUERY )
 {
@@ -715,7 +715,7 @@ HB_FUNC_STATIC( QSQLQUERY_LASTINSERTID )
 }
 
 /*
-QString lastQuery () const
+QString lastQuery() const
 */
 HB_FUNC_STATIC( QSQLQUERY_LASTQUERY )
 {

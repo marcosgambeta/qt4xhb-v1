@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_DELETE )
 }
 
 /*
-QString domain () const
+QString domain() const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_DOMAIN )
 {
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_NAME )
 }
 
 /*
-QString path () const
+QString path() const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_PATH )
 {

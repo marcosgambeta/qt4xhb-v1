@@ -598,7 +598,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SHORTCUT )
 }
 
 /*
-QString text () const
+QString text() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_TEXT )
 {

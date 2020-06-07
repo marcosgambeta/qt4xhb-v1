@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QHOSTINFO_ERROR )
 }
 
 /*
-QString errorString () const
+QString errorString() const
 */
 HB_FUNC_STATIC( QHOSTINFO_ERRORSTRING )
 {
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QHOSTINFO_ERRORSTRING )
 }
 
 /*
-QString hostName () const
+QString hostName() const
 */
 HB_FUNC_STATIC( QHOSTINFO_HOSTNAME )
 {
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QHOSTINFO_FROMNAME )
 }
 
 /*
-static QString localDomainName ()
+static QString localDomainName()
 */
 HB_FUNC_STATIC( QHOSTINFO_LOCALDOMAINNAME )
 {
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QHOSTINFO_LOCALDOMAINNAME )
 }
 
 /*
-static QString localHostName ()
+static QString localHostName()
 */
 HB_FUNC_STATIC( QHOSTINFO_LOCALHOSTNAME )
 {

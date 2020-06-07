@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_DELETE )
 }
 
 /*
-QString anchorHref () const
+QString anchorHref() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_ANCHORHREF )
 {
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTCAPITALIZATION )
 }
 
 /*
-QString fontFamily () const
+QString fontFamily() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTFAMILY )
 {
@@ -1254,7 +1254,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_TEXTOUTLINE )
 }
 
 /*
-QString toolTip () const
+QString toolTip() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_TOOLTIP )
 {

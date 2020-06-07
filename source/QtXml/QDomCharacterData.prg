@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_APPENDDATA )
 }
 
 /*
-QString data () const
+QString data() const
 */
 HB_FUNC_STATIC( QDOMCHARACTERDATA_DATA )
 {

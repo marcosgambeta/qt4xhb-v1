@@ -766,7 +766,7 @@ HB_FUNC_STATIC( QOBJECT_MOVETOTHREAD )
 }
 
 /*
-QString objectName () const
+QString objectName() const
 */
 HB_FUNC_STATIC( QOBJECT_OBJECTNAME )
 {

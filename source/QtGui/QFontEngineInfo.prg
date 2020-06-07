@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_DELETE )
 }
 
 /*
-QString family () const
+QString family() const
 */
 HB_FUNC_STATIC( QFONTENGINEINFO_FAMILY )
 {

@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QTEXTEDIT_DOCUMENT )
 }
 
 /*
-QString documentTitle () const
+QString documentTitle() const
 */
 HB_FUNC_STATIC( QTEXTEDIT_DOCUMENTTITLE )
 {
@@ -612,7 +612,7 @@ HB_FUNC_STATIC( QTEXTEDIT_FIND )
 }
 
 /*
-QString fontFamily () const
+QString fontFamily() const
 */
 HB_FUNC_STATIC( QTEXTEDIT_FONTFAMILY )
 {
@@ -1518,7 +1518,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TEXTINTERACTIONFLAGS )
 }
 
 /*
-QString toHtml () const
+QString toHtml() const
 */
 HB_FUNC_STATIC( QTEXTEDIT_TOHTML )
 {
@@ -1542,7 +1542,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TOHTML )
 }
 
 /*
-QString toPlainText () const
+QString toPlainText() const
 */
 HB_FUNC_STATIC( QTEXTEDIT_TOPLAINTEXT )
 {

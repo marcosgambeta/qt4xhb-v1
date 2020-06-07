@@ -900,7 +900,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETTAGNAME )
 }
 
 /*
-QString tagName () const
+QString tagName() const
 */
 HB_FUNC_STATIC( QDOMELEMENT_TAGNAME )
 {
@@ -924,7 +924,7 @@ HB_FUNC_STATIC( QDOMELEMENT_TAGNAME )
 }
 
 /*
-QString text () const
+QString text() const
 */
 HB_FUNC_STATIC( QDOMELEMENT_TEXT )
 {

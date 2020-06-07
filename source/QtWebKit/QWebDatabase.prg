@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QWEBDATABASE_DELETE )
 }
 
 /*
-QString displayName () const
+QString displayName() const
 */
 HB_FUNC_STATIC( QWEBDATABASE_DISPLAYNAME )
 {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QWEBDATABASE_EXPECTEDSIZE )
 }
 
 /*
-QString fileName () const
+QString fileName() const
 */
 HB_FUNC_STATIC( QWEBDATABASE_FILENAME )
 {
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QWEBDATABASE_FILENAME )
 }
 
 /*
-QString name () const
+QString name() const
 */
 HB_FUNC_STATIC( QWEBDATABASE_NAME )
 {

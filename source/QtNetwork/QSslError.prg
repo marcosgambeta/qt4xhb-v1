@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QSSLERROR_ERROR )
 }
 
 /*
-QString errorString () const
+QString errorString() const
 */
 HB_FUNC_STATIC( QSSLERROR_ERRORSTRING )
 {

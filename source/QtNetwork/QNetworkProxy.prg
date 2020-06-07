@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_CAPABILITIES )
 }
 
 /*
-QString hostName () const
+QString hostName() const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_HOSTNAME )
 {
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_ISTRANSPARENTPROXY )
 }
 
 /*
-QString password () const
+QString password() const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_PASSWORD )
 {
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_TYPE )
 }
 
 /*
-QString user () const
+QString user() const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_USER )
 {

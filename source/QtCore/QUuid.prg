@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QUUID_DELETE )
 }
 
 /*
-QString toString() const;
+QString toString() const
 */
 HB_FUNC_STATIC( QUUID_TOSTRING )
 {

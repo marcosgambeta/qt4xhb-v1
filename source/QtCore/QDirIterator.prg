@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QDIRITERATOR_FILEINFO )
 }
 
 /*
-QString fileName () const
+QString fileName() const
 */
 HB_FUNC_STATIC( QDIRITERATOR_FILENAME )
 {
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QDIRITERATOR_FILENAME )
 }
 
 /*
-QString filePath () const
+QString filePath() const
 */
 HB_FUNC_STATIC( QDIRITERATOR_FILEPATH )
 {
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QDIRITERATOR_HASNEXT )
 }
 
 /*
-QString next ()
+QString next()
 */
 HB_FUNC_STATIC( QDIRITERATOR_NEXT )
 {
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QDIRITERATOR_NEXT )
 }
 
 /*
-QString path () const
+QString path() const
 */
 HB_FUNC_STATIC( QDIRITERATOR_PATH )
 {

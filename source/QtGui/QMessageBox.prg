@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_DEFAULTBUTTON )
 }
 
 /*
-QString detailedText () const
+QString detailedText() const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_DETAILEDTEXT )
 {
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ICONPIXMAP )
 }
 
 /*
-QString informativeText () const
+QString informativeText() const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_INFORMATIVETEXT )
 {
@@ -917,7 +917,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_STANDARDBUTTONS )
 }
 
 /*
-QString text () const
+QString text() const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_TEXT )
 {

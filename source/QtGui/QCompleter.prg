@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONMODEL )
 }
 
 /*
-QString completionPrefix () const
+QString completionPrefix() const
 */
 HB_FUNC_STATIC( QCOMPLETER_COMPLETIONPREFIX )
 {
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONROLE )
 }
 
 /*
-QString currentCompletion () const
+QString currentCompletion() const
 */
 HB_FUNC_STATIC( QCOMPLETER_CURRENTCOMPLETION )
 {

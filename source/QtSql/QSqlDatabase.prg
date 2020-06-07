@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QSQLDATABASE_COMMIT )
 }
 
 /*
-QString connectOptions () const
+QString connectOptions() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_CONNECTOPTIONS )
 {
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CONNECTOPTIONS )
 }
 
 /*
-QString connectionName () const
+QString connectionName() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_CONNECTIONNAME )
 {
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CONNECTIONNAME )
 }
 
 /*
-QString databaseName () const
+QString databaseName() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_DATABASENAME )
 {
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DRIVER )
 }
 
 /*
-QString driverName () const
+QString driverName() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_DRIVERNAME )
 {
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QSQLDATABASE_EXEC )
 }
 
 /*
-QString hostName () const
+QString hostName() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_HOSTNAME )
 {
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QSQLDATABASE_OPEN )
 }
 
 /*
-QString password () const
+QString password() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_PASSWORD )
 {
@@ -895,7 +895,7 @@ HB_FUNC_STATIC( QSQLDATABASE_TRANSACTION )
 }
 
 /*
-QString userName () const
+QString userName() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_USERNAME )
 {

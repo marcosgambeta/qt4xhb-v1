@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_ERROR )
 }
 
 /*
-QString errorString () const
+QString errorString() const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_ERRORSTRING )
 {
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_ERRORSTRING )
 }
 
 /*
-QString fileName () const
+QString fileName() const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_FILENAME )
 {

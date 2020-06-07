@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QFONTINFO_EXACTMATCH )
 }
 
 /*
-QString family () const
+QString family() const
 */
 HB_FUNC_STATIC( QFONTINFO_FAMILY )
 {
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QFONTINFO_STYLEHINT )
 }
 
 /*
-QString styleName () const
+QString styleName() const
 */
 HB_FUNC_STATIC( QFONTINFO_STYLENAME )
 {

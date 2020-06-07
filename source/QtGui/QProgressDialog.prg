@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_AUTORESET )
 }
 
 /*
-QString labelText () const
+QString labelText() const
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_LABELTEXT )
 {

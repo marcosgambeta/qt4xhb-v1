@@ -492,7 +492,7 @@ HB_FUNC_STATIC( QAXFACTORY_REGISTERACTIVEOBJECT )
 }
 
 /*
-static QString serverDirPath ()
+static QString serverDirPath()
 */
 HB_FUNC_STATIC( QAXFACTORY_SERVERDIRPATH )
 {
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QAXFACTORY_SERVERDIRPATH )
 }
 
 /*
-static QString serverFilePath ()
+static QString serverFilePath()
 */
 HB_FUNC_STATIC( QAXFACTORY_SERVERFILEPATH )
 {

@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QFILEOPENEVENT_DELETE )
 }
 
 /*
-QString file () const
+QString file() const
 */
 HB_FUNC_STATIC( QFILEOPENEVENT_FILE )
 {

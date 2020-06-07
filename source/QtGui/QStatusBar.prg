@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QSTATUSBAR_ADDWIDGET )
 }
 
 /*
-QString currentMessage () const
+QString currentMessage() const
 */
 HB_FUNC_STATIC( QSTATUSBAR_CURRENTMESSAGE )
 {

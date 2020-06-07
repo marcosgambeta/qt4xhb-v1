@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETWRAPPING )
 }
 
 /*
-QString specialValueText () const
+QString specialValueText() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SPECIALVALUETEXT )
 {
@@ -630,7 +630,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPBY )
 }
 
 /*
-QString text () const
+QString text() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_TEXT )
 {

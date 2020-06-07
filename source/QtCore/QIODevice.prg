@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QIODEVICE_CLOSE )
 }
 
 /*
-QString errorString () const
+QString errorString() const
 */
 HB_FUNC_STATIC( QIODEVICE_ERRORSTRING )
 {

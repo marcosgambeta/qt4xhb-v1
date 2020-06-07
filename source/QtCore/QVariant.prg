@@ -1277,7 +1277,7 @@ HB_FUNC_STATIC( QVARIANT_TOSIZEF )
 }
 
 /*
-QString toString () const
+QString toString() const
 */
 HB_FUNC_STATIC( QVARIANT_TOSTRING )
 {

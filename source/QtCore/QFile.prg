@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QFILE_ERROR )
 }
 
 /*
-QString fileName () const
+QString fileName() const
 */
 HB_FUNC_STATIC( QFILE_FILENAME )
 {

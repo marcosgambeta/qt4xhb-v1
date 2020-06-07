@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_ISVALID )
 }
 
 /*
-QString numberPrefix () const
+QString numberPrefix() const
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_NUMBERPREFIX )
 {
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_NUMBERPREFIX )
 }
 
 /*
-QString numberSuffix () const
+QString numberSuffix() const
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_NUMBERSUFFIX )
 {

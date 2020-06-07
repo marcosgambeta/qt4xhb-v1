@@ -1534,7 +1534,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SELECTEDTABLECELLS )
 }
 
 /*
-QString selectedText () const
+QString selectedText() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SELECTEDTEXT )
 {

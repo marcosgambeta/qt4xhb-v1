@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QTEXTITEM_RENDERFLAGS )
 }
 
 /*
-QString text () const
+QString text() const
 */
 HB_FUNC_STATIC( QTEXTITEM_TEXT )
 {

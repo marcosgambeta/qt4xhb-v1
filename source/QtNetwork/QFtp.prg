@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QFTP_ERROR )
 }
 
 /*
-QString errorString () const
+QString errorString() const
 */
 HB_FUNC_STATIC( QFTP_ERRORSTRING )
 {

@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QSSLCIPHER_DELETE )
 }
 
 /*
-QString authenticationMethod () const
+QString authenticationMethod() const
 */
 HB_FUNC_STATIC( QSSLCIPHER_AUTHENTICATIONMETHOD )
 {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QSSLCIPHER_AUTHENTICATIONMETHOD )
 }
 
 /*
-QString encryptionMethod () const
+QString encryptionMethod() const
 */
 HB_FUNC_STATIC( QSSLCIPHER_ENCRYPTIONMETHOD )
 {
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QSSLCIPHER_ISNULL )
 }
 
 /*
-QString keyExchangeMethod () const
+QString keyExchangeMethod() const
 */
 HB_FUNC_STATIC( QSSLCIPHER_KEYEXCHANGEMETHOD )
 {
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QSSLCIPHER_KEYEXCHANGEMETHOD )
 }
 
 /*
-QString name () const
+QString name() const
 */
 HB_FUNC_STATIC( QSSLCIPHER_NAME )
 {
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QSSLCIPHER_PROTOCOL )
 }
 
 /*
-QString protocolString () const
+QString protocolString() const
 */
 HB_FUNC_STATIC( QSSLCIPHER_PROTOCOLSTRING )
 {

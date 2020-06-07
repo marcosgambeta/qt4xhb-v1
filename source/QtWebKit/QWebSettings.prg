@@ -86,7 +86,7 @@ RETURN
 #include <QtCore/QUrl>
 
 /*
-QString defaultTextEncoding () const
+QString defaultTextEncoding() const
 */
 HB_FUNC_STATIC( QWEBSETTINGS_DEFAULTTEXTENCODING )
 {
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_FONTSIZE )
 }
 
 /*
-QString localStoragePath () const
+QString localStoragePath() const
 */
 HB_FUNC_STATIC( QWEBSETTINGS_LOCALSTORAGEPATH )
 {
@@ -548,7 +548,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_GLOBALSETTINGS )
 }
 
 /*
-static QString iconDatabasePath ()
+static QString iconDatabasePath()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_ICONDATABASEPATH )
 {
@@ -625,7 +625,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_OFFLINESTORAGEDEFAULTQUOTA )
 }
 
 /*
-static QString offlineStoragePath ()
+static QString offlineStoragePath()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_OFFLINESTORAGEPATH )
 {
@@ -644,7 +644,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_OFFLINESTORAGEPATH )
 }
 
 /*
-static QString offlineWebApplicationCachePath ()
+static QString offlineWebApplicationCachePath()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_OFFLINEWEBAPPLICATIONCACHEPATH )
 {

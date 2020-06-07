@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QDOMATTR_NEW )
 }
 
 /*
-QString name () const
+QString name() const
 */
 HB_FUNC_STATIC( QDOMATTR_NAME )
 {
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QDOMATTR_SPECIFIED )
 }
 
 /*
-QString value () const
+QString value() const
 */
 HB_FUNC_STATIC( QDOMATTR_VALUE )
 {

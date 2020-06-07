@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_DELETE )
 }
 
 /*
-QString description () const
+QString description() const
 */
 HB_FUNC_STATIC( QSVGGENERATOR_DESCRIPTION )
 {
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_DESCRIPTION )
 }
 
 /*
-QString fileName () const
+QString fileName() const
 */
 HB_FUNC_STATIC( QSVGGENERATOR_FILENAME )
 {
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SIZE )
 }
 
 /*
-QString title () const
+QString title() const
 */
 HB_FUNC_STATIC( QSVGGENERATOR_TITLE )
 {

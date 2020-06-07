@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QGLSHADER_ISCOMPILED )
 }
 
 /*
-QString log () const
+QString log() const
 */
 HB_FUNC_STATIC( QGLSHADER_LOG )
 {

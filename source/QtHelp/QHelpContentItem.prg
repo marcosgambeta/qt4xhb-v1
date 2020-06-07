@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_ROW )
 }
 
 /*
-QString title () const
+QString title() const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_TITLE )
 {

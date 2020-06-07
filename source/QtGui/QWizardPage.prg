@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETTITLE )
 }
 
 /*
-QString subTitle () const
+QString subTitle() const
 */
 HB_FUNC_STATIC( QWIZARDPAGE_SUBTITLE )
 {
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_SUBTITLE )
 }
 
 /*
-QString title () const
+QString title() const
 */
 HB_FUNC_STATIC( QWIZARDPAGE_TITLE )
 {

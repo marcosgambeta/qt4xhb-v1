@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QUNDOVIEW_CLEANICON )
 }
 
 /*
-QString emptyLabel () const
+QString emptyLabel() const
 */
 HB_FUNC_STATIC( QUNDOVIEW_EMPTYLABEL )
 {

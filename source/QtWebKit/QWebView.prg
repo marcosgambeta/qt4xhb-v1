@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QWEBVIEW_RENDERHINTS )
 }
 
 /*
-QString selectedText () const
+QString selectedText() const
 */
 HB_FUNC_STATIC( QWEBVIEW_SELECTEDTEXT )
 {
@@ -628,7 +628,7 @@ HB_FUNC_STATIC( QWEBVIEW_TEXTSIZEMULTIPLIER )
 }
 
 /*
-QString title () const
+QString title() const
 */
 HB_FUNC_STATIC( QWEBVIEW_TITLE )
 {

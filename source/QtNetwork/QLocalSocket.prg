@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_FLUSH )
 }
 
 /*
-QString fullServerName () const
+QString fullServerName() const
 */
 HB_FUNC_STATIC( QLOCALSOCKET_FULLSERVERNAME )
 {
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_READBUFFERSIZE )
 }
 
 /*
-QString serverName () const
+QString serverName() const
 */
 HB_FUNC_STATIC( QLOCALSOCKET_SERVERNAME )
 {
