@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_COMMENT )
 }
 
 /*
-virtual bool endCDATA ()
+virtual bool endCDATA()
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDCDATA )
 {
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDCDATA )
 }
 
 /*
-virtual bool endDTD ()
+virtual bool endDTD()
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDDTD )
 {
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDDTD )
 }
 
 /*
-virtual bool endDocument ()
+virtual bool endDocument()
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDDOCUMENT )
 {
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_SKIPPEDENTITY )
 }
 
 /*
-virtual bool startCDATA ()
+virtual bool startCDATA()
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTCDATA )
 {
@@ -605,7 +605,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTDTD )
 }
 
 /*
-virtual bool startDocument ()
+virtual bool startDocument()
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTDOCUMENT )
 {

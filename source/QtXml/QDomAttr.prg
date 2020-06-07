@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QDOMATTR_SETVALUE )
 }
 
 /*
-bool specified () const
+bool specified() const
 */
 HB_FUNC_STATIC( QDOMATTR_SPECIFIED )
 {

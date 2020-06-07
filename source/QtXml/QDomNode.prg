@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QDOMNODE_FIRSTCHILDELEMENT )
 }
 
 /*
-bool hasAttributes () const
+bool hasAttributes() const
 */
 HB_FUNC_STATIC( QDOMNODE_HASATTRIBUTES )
 {
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QDOMNODE_HASATTRIBUTES )
 }
 
 /*
-bool hasChildNodes () const
+bool hasChildNodes() const
 */
 HB_FUNC_STATIC( QDOMNODE_HASCHILDNODES )
 {
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QDOMNODE_INSERTBEFORE )
 }
 
 /*
-bool isAttr () const
+bool isAttr() const
 */
 HB_FUNC_STATIC( QDOMNODE_ISATTR )
 {
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QDOMNODE_ISATTR )
 }
 
 /*
-bool isCDATASection () const
+bool isCDATASection() const
 */
 HB_FUNC_STATIC( QDOMNODE_ISCDATASECTION )
 {
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QDOMNODE_ISCDATASECTION )
 }
 
 /*
-bool isCharacterData () const
+bool isCharacterData() const
 */
 HB_FUNC_STATIC( QDOMNODE_ISCHARACTERDATA )
 {
@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QDOMNODE_ISCHARACTERDATA )
 }
 
 /*
-bool isComment () const
+bool isComment() const
 */
 HB_FUNC_STATIC( QDOMNODE_ISCOMMENT )
 {
@@ -575,7 +575,7 @@ HB_FUNC_STATIC( QDOMNODE_ISCOMMENT )
 }
 
 /*
-bool isDocument () const
+bool isDocument() const
 */
 HB_FUNC_STATIC( QDOMNODE_ISDOCUMENT )
 {
@@ -599,7 +599,7 @@ HB_FUNC_STATIC( QDOMNODE_ISDOCUMENT )
 }
 
 /*
-bool isDocumentFragment () const
+bool isDocumentFragment() const
 */
 HB_FUNC_STATIC( QDOMNODE_ISDOCUMENTFRAGMENT )
 {
@@ -623,7 +623,7 @@ HB_FUNC_STATIC( QDOMNODE_ISDOCUMENTFRAGMENT )
 }
 
 /*
-bool isDocumentType () const
+bool isDocumentType() const
 */
 HB_FUNC_STATIC( QDOMNODE_ISDOCUMENTTYPE )
 {
@@ -647,7 +647,7 @@ HB_FUNC_STATIC( QDOMNODE_ISDOCUMENTTYPE )
 }
 
 /*
-bool isElement () const
+bool isElement() const
 */
 HB_FUNC_STATIC( QDOMNODE_ISELEMENT )
 {
@@ -671,7 +671,7 @@ HB_FUNC_STATIC( QDOMNODE_ISELEMENT )
 }
 
 /*
-bool isEntity () const
+bool isEntity() const
 */
 HB_FUNC_STATIC( QDOMNODE_ISENTITY )
 {
@@ -695,7 +695,7 @@ HB_FUNC_STATIC( QDOMNODE_ISENTITY )
 }
 
 /*
-bool isEntityReference () const
+bool isEntityReference() const
 */
 HB_FUNC_STATIC( QDOMNODE_ISENTITYREFERENCE )
 {
@@ -719,7 +719,7 @@ HB_FUNC_STATIC( QDOMNODE_ISENTITYREFERENCE )
 }
 
 /*
-bool isNotation () const
+bool isNotation() const
 */
 HB_FUNC_STATIC( QDOMNODE_ISNOTATION )
 {
@@ -743,7 +743,7 @@ HB_FUNC_STATIC( QDOMNODE_ISNOTATION )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QDOMNODE_ISNULL )
 {
@@ -767,7 +767,7 @@ HB_FUNC_STATIC( QDOMNODE_ISNULL )
 }
 
 /*
-bool isProcessingInstruction () const
+bool isProcessingInstruction() const
 */
 HB_FUNC_STATIC( QDOMNODE_ISPROCESSINGINSTRUCTION )
 {
@@ -815,7 +815,7 @@ HB_FUNC_STATIC( QDOMNODE_ISSUPPORTED )
 }
 
 /*
-bool isText () const
+bool isText() const
 */
 HB_FUNC_STATIC( QDOMNODE_ISTEXT )
 {

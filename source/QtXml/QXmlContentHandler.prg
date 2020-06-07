@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_CHARACTERS )
 }
 
 /*
-virtual bool endDocument () = 0
+virtual bool endDocument() = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_ENDDOCUMENT )
 {
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_SKIPPEDENTITY )
 }
 
 /*
-virtual bool startDocument () = 0
+virtual bool startDocument() = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_STARTDOCUMENT )
 {

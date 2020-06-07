@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_COUNT )
 }
 
 /*
-bool isEmpty () const
+bool isEmpty() const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_ISEMPTY )
 {

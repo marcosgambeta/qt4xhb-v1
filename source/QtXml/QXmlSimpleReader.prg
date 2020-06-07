@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSE )
 }
 
 /*
-virtual bool parseContinue ()
+virtual bool parseContinue()
 */
 HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSECONTINUE )
 {

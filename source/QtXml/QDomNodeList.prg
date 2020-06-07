@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QDOMNODELIST_COUNT )
 }
 
 /*
-bool isEmpty () const
+bool isEmpty() const
 */
 HB_FUNC_STATIC( QDOMNODELIST_ISEMPTY )
 {
