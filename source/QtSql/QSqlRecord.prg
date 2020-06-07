@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QSQLRECORD_INSERT )
 }
 
 /*
-bool isEmpty () const
+bool isEmpty() const
 */
 HB_FUNC_STATIC( QSQLRECORD_ISEMPTY )
 {

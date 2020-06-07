@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QSQLQUERY_FINISH )
 }
 
 /*
-bool first ()
+bool first()
 */
 HB_FUNC_STATIC( QSQLQUERY_FIRST )
 {
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QSQLQUERY_FIRST )
 }
 
 /*
-bool isActive () const
+bool isActive() const
 */
 HB_FUNC_STATIC( QSQLQUERY_ISACTIVE )
 {
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISACTIVE )
 }
 
 /*
-bool isForwardOnly () const
+bool isForwardOnly() const
 */
 HB_FUNC_STATIC( QSQLQUERY_ISFORWARDONLY )
 {
@@ -593,7 +593,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISNULL )
 }
 
 /*
-bool isSelect () const
+bool isSelect() const
 */
 HB_FUNC_STATIC( QSQLQUERY_ISSELECT )
 {
@@ -617,7 +617,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISSELECT )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QSQLQUERY_ISVALID )
 {
@@ -641,7 +641,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISVALID )
 }
 
 /*
-bool last ()
+bool last()
 */
 HB_FUNC_STATIC( QSQLQUERY_LAST )
 {
@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QSQLQUERY_LASTQUERY )
 }
 
 /*
-bool next ()
+bool next()
 */
 HB_FUNC_STATIC( QSQLQUERY_NEXT )
 {
@@ -763,7 +763,7 @@ HB_FUNC_STATIC( QSQLQUERY_NEXT )
 }
 
 /*
-bool nextResult ()
+bool nextResult()
 */
 HB_FUNC_STATIC( QSQLQUERY_NEXTRESULT )
 {
@@ -859,7 +859,7 @@ HB_FUNC_STATIC( QSQLQUERY_PREPARE )
 }
 
 /*
-bool previous ()
+bool previous()
 */
 HB_FUNC_STATIC( QSQLQUERY_PREVIOUS )
 {

@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QSQLERROR_DRIVERTEXT )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QSQLERROR_ISVALID )
 {

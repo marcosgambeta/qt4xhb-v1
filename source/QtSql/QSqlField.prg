@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QSQLFIELD_DEFAULTVALUE )
 }
 
 /*
-bool isAutoValue () const
+bool isAutoValue() const
 */
 HB_FUNC_STATIC( QSQLFIELD_ISAUTOVALUE )
 {
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QSQLFIELD_ISAUTOVALUE )
 }
 
 /*
-bool isGenerated () const
+bool isGenerated() const
 */
 HB_FUNC_STATIC( QSQLFIELD_ISGENERATED )
 {
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QSQLFIELD_ISGENERATED )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QSQLFIELD_ISNULL )
 {
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QSQLFIELD_ISNULL )
 }
 
 /*
-bool isReadOnly () const
+bool isReadOnly() const
 */
 HB_FUNC_STATIC( QSQLFIELD_ISREADONLY )
 {
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QSQLFIELD_ISREADONLY )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QSQLFIELD_ISVALID )
 {

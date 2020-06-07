@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CLOSE )
 }
 
 /*
-bool commit ()
+bool commit()
 */
 HB_FUNC_STATIC( QSQLDATABASE_COMMIT )
 {
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QSQLDATABASE_HOSTNAME )
 }
 
 /*
-bool isOpen () const
+bool isOpen() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_ISOPEN )
 {
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ISOPEN )
 }
 
 /*
-bool isOpenError () const
+bool isOpenError() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_ISOPENERROR )
 {
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ISOPENERROR )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_ISVALID )
 {
@@ -641,7 +641,7 @@ HB_FUNC_STATIC( QSQLDATABASE_RECORD )
 }
 
 /*
-bool rollback ()
+bool rollback()
 */
 HB_FUNC_STATIC( QSQLDATABASE_ROLLBACK )
 {
@@ -871,7 +871,7 @@ HB_FUNC_STATIC( QSQLDATABASE_TABLES )
 }
 
 /*
-bool transaction ()
+bool transaction()
 */
 HB_FUNC_STATIC( QSQLDATABASE_TRANSACTION )
 {

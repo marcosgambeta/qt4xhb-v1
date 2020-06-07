@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QSQLRELATION_INDEXCOLUMN )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QSQLRELATION_ISVALID )
 {

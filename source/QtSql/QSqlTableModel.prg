@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REVERTROW )
 }
 
 /*
-virtual bool select ()
+virtual bool select()
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SELECT )
 {
@@ -785,7 +785,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REVERTALL )
 }
 
 /*
-virtual bool submit ()
+virtual bool submit()
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SUBMIT )
 {
@@ -809,7 +809,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SUBMIT )
 }
 
 /*
-bool submitAll ()
+bool submitAll()
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SUBMITALL )
 {

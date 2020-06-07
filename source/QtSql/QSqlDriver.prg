@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QSQLDRIVER_DELETE )
 }
 
 /*
-virtual bool beginTransaction ()
+virtual bool beginTransaction()
 */
 HB_FUNC_STATIC( QSQLDRIVER_BEGINTRANSACTION )
 {
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QSQLDRIVER_CLOSE )
 }
 
 /*
-virtual bool commitTransaction ()
+virtual bool commitTransaction()
 */
 HB_FUNC_STATIC( QSQLDRIVER_COMMITTRANSACTION )
 {
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ISIDENTIFIERESCAPED )
 }
 
 /*
-virtual bool isOpen () const
+virtual bool isOpen() const
 */
 HB_FUNC_STATIC( QSQLDRIVER_ISOPEN )
 {
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ISOPEN )
 }
 
 /*
-bool isOpenError () const
+bool isOpenError() const
 */
 HB_FUNC_STATIC( QSQLDRIVER_ISOPENERROR )
 {
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QSQLDRIVER_RECORD )
 }
 
 /*
-virtual bool rollbackTransaction ()
+virtual bool rollbackTransaction()
 */
 HB_FUNC_STATIC( QSQLDRIVER_ROLLBACKTRANSACTION )
 {
