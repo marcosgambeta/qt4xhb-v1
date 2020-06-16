@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_DELETE )
 }
 
 /*
-virtual QWidget * current () const = 0
+virtual QWidget * current() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_CURRENT )
 {
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_CURRENT )
 }
 
 /*
-virtual QDesignerFormWindowInterface * formWindow () const = 0
+virtual QDesignerFormWindowInterface * formWindow() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_FORMWINDOW )
 {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_FORMWINDOW )
     {
 #endif
       QDesignerFormWindowInterface * ptr = obj->formWindow();
-      Qt4xHb::createReturnQObjectClass( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

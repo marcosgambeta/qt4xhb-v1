@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QFORMBUILDER_ADDPLUGINPATH )
 }
 
 /*
-void clearPluginPaths ()
+void clearPluginPaths()
 */
 HB_FUNC_STATIC( QFORMBUILDER_CLEARPLUGINPATHS )
 {
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QFORMBUILDER_CUSTOMWIDGETS )
 }
 
 /*
-QStringList pluginPaths () const
+QStringList pluginPaths() const
 */
 HB_FUNC_STATIC( QFORMBUILDER_PLUGINPATHS )
 {

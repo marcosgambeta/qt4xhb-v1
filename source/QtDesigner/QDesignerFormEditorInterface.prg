@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_DELETE )
 }
 
 /*
-QDesignerActionEditorInterface * actionEditor () const
+QDesignerActionEditorInterface * actionEditor() const
 */
 HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_ACTIONEDITOR )
 {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_ACTIONEDITOR )
 }
 
 /*
-QExtensionManager * extensionManager () const
+QExtensionManager * extensionManager() const
 */
 HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_EXTENSIONMANAGER )
 {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_EXTENSIONMANAGER )
 }
 
 /*
-QDesignerFormWindowManagerInterface * formWindowManager () const
+QDesignerFormWindowManagerInterface * formWindowManager() const
 */
 HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_FORMWINDOWMANAGER )
 {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_FORMWINDOWMANAGER )
 }
 
 /*
-QDesignerObjectInspectorInterface * objectInspector () const
+QDesignerObjectInspectorInterface * objectInspector() const
 */
 HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_OBJECTINSPECTOR )
 {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_OBJECTINSPECTOR )
 }
 
 /*
-QDesignerPropertyEditorInterface * propertyEditor () const
+QDesignerPropertyEditorInterface * propertyEditor() const
 */
 HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_PROPERTYEDITOR )
 {
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_SETWIDGETBOX )
 }
 
 /*
-QWidget * topLevel () const
+QWidget * topLevel() const
 */
 HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_TOPLEVEL )
 {
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_TOPLEVEL )
 }
 
 /*
-QDesignerWidgetBoxInterface * widgetBox () const
+QDesignerWidgetBoxInterface * widgetBox() const
 */
 HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_WIDGETBOX )
 {

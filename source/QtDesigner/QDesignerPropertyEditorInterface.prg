@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_DELETE )
 }
 
 /*
-virtual QDesignerFormEditorInterface * core () const
+virtual QDesignerFormEditorInterface * core() const
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CORE )
 {
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ISREADONLY )
 }
 
 /*
-virtual QObject * object () const = 0
+virtual QObject * object() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_OBJECT )
 {

@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_DELETE )
 }
 
 /*
-virtual QDesignerFormEditorInterface * core () const
+virtual QDesignerFormEditorInterface * core() const
 */
 HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_CORE )
 {

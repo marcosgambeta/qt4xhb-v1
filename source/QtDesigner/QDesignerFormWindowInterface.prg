@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_DELETE )
 }
 
 /*
-virtual QDir absoluteDir () const = 0
+virtual QDir absoluteDir() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ABSOLUTEDIR )
 {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_CONTENTS )
 }
 
 /*
-virtual QDesignerFormEditorInterface * core () const
+virtual QDesignerFormEditorInterface * core() const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_CORE )
 {
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_CORE )
 }
 
 /*
-virtual QDesignerFormWindowCursorInterface * cursor () const = 0
+virtual QDesignerFormWindowCursorInterface * cursor() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_CURSOR )
 {
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_CURSOR )
 }
 
 /*
-virtual void emitSelectionChanged () = 0
+virtual void emitSelectionChanged() = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_EMITSELECTIONCHANGED )
 {
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_EXPORTMACRO )
 }
 
 /*
-virtual Feature features () const = 0
+virtual QDesignerFormWindowInterface::Feature features() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FEATURES )
 {
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FILENAME )
 }
 
 /*
-virtual QPoint grid () const = 0
+virtual QPoint grid() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_GRID )
 {
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_HASFEATURE )
 }
 
 /*
-virtual QStringList includeHints () const = 0
+virtual QStringList includeHints() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_INCLUDEHINTS )
 {
@@ -542,7 +542,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_LAYOUTDEFAULT )
 }
 
 /*
-virtual QWidget * mainContainer () const = 0
+virtual QWidget * mainContainer() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_MAINCONTAINER )
 {
@@ -617,7 +617,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_REMOVERESOURCEFILE )
 }
 
 /*
-virtual QStringList resourceFiles () const = 0
+virtual QStringList resourceFiles() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_RESOURCEFILES )
 {
@@ -1114,7 +1114,7 @@ void QDesignerFormWindowInterface_findFormWindow1()
 {
 
   QDesignerFormWindowInterface * ptr = QDesignerFormWindowInterface::findFormWindow( PQWIDGET(1) );
-  Qt4xHb::createReturnQObjectClass( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
+  Qt4xHb::createReturnQWidgetClass( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
 }
 
 /*
@@ -1124,7 +1124,7 @@ void QDesignerFormWindowInterface_findFormWindow2()
 {
 
   QDesignerFormWindowInterface * ptr = QDesignerFormWindowInterface::findFormWindow( PQOBJECT(1) );
-  Qt4xHb::createReturnQObjectClass( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
+  Qt4xHb::createReturnQWidgetClass( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
 }
 
 /*

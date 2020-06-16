@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QEXTENSIONFACTORY_DELETE )
 }
 
 /*
-QExtensionManager * extensionManager () const
+QExtensionManager * extensionManager() const
 */
 HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSIONMANAGER )
 {
