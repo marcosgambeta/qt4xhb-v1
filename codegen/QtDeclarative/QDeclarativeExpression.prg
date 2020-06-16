@@ -60,17 +60,13 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=void clearError ()
-$method=|void|clearError|
+$prototypeV2=void clearError()
 
-$prototype=QDeclarativeContext * context () const
-$method=|QDeclarativeContext *|context|
+$prototypeV2=QDeclarativeContext * context() const
 
-$prototype=QDeclarativeEngine * engine () const
-$method=|QDeclarativeEngine *|engine|
+$prototypeV2=QDeclarativeEngine * engine() const
 
-$prototype=QDeclarativeError error () const
-$method=|QDeclarativeError|error|
+$prototypeV2=QDeclarativeError error() const
 
 $prototype=QVariant evaluate ( bool * valueIsUndefined = 0 )
 $method=|QVariant|evaluate|bool *=0
@@ -83,8 +79,7 @@ $prototypeV2=int lineNumber() const
 
 $prototypeV2=bool notifyOnValueChanged() const
 
-$prototype=QObject * scopeObject () const
-$method=|QObject *|scopeObject|
+$prototypeV2=QObject * scopeObject() const
 
 $prototype=void setExpression ( const QString & expression )
 $method=|void|setExpression|const QString &

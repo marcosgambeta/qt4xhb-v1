@@ -78,14 +78,12 @@ $deleteMethod
 $prototype=virtual QObject * beginCreate ( QDeclarativeContext * context )
 $virtualMethod=|QObject *|beginCreate|QDeclarativeContext *
 
-$prototype=virtual void completeCreate ()
-$virtualMethod=|void|completeCreate|
+$prototypeV2=virtual void completeCreate()
 
 $prototype=virtual QObject * create ( QDeclarativeContext * context = 0 )
 $virtualMethod=|QObject *|create|QDeclarativeContext *=0
 
-$prototype=QDeclarativeContext * creationContext () const
-$method=|QDeclarativeContext *|creationContext|
+$prototypeV2=QDeclarativeContext * creationContext() const
 
 $prototype=QList<QDeclarativeError> errors () const
 $method=|QList<QDeclarativeError>|errors|
@@ -106,11 +104,9 @@ $prototypeV2=qreal progress() const
 $prototype=void setData ( const QByteArray & data, const QUrl & url )
 $method=|void|setData|const QByteArray &,const QUrl &
 
-$prototype=Status status () const
-$method=|QDeclarativeComponent::Status|status|
+$prototypeV2=QDeclarativeComponent::Status status() const
 
-$prototype=QUrl url () const
-$method=|QUrl|url|
+$prototypeV2=QUrl url() const
 
 $prototypeV2=Q_INVOKABLE QString errorString() const
 

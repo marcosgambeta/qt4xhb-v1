@@ -35,13 +35,11 @@ $prototypeV2=qreal baselineOffset() const
 $prototype=QDeclarativeItem * childAt ( qreal x, qreal y ) const
 $method=|QDeclarativeItem *|childAt|qreal,qreal
 
-$prototype=QRectF childrenRect ()
-$method=|QRectF|childrenRect|
+$prototypeV2=QRectF childrenRect()
 
 $prototypeV2=bool clip() const
 
-$prototype=void forceActiveFocus ()
-$method=|void|forceActiveFocus|
+$prototypeV2=void forceActiveFocus()
 
 $prototypeV2=qreal implicitHeight() const
 
@@ -55,8 +53,7 @@ $method=|QScriptValue|mapFromItem|const QScriptValue &,qreal,qreal
 $prototype=QScriptValue mapToItem ( const QScriptValue & item, qreal x, qreal y ) const
 $method=|QScriptValue|mapToItem|const QScriptValue &,qreal,qreal
 
-$prototype=QDeclarativeItem * parentItem () const
-$method=|QDeclarativeItem *|parentItem|
+$prototypeV2=QDeclarativeItem * parentItem() const
 
 $prototype=void setBaselineOffset ( qreal )
 $method=|void|setBaselineOffset|qreal
@@ -78,7 +75,6 @@ $method=|void|setTransformOrigin|QDeclarativeItem::TransformOrigin
 
 $prototypeV2=bool smooth() const
 
-$prototype=TransformOrigin transformOrigin () const
-$method=|QDeclarativeItem::TransformOrigin|transformOrigin|
+$prototypeV2=QDeclarativeItem::TransformOrigin transformOrigin() const
 
 #pragma ENDDUMP

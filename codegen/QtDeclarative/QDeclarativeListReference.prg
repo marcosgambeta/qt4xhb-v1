@@ -76,8 +76,7 @@ $prototypeV2=bool isValid() const
 $prototype=const QMetaObject * listElementType () const
 $method=|const QMetaObject *|listElementType|
 
-$prototype=QObject * object () const
-$method=|QObject *|object|
+$prototypeV2=QObject * object() const
 
 $extraMethods
 

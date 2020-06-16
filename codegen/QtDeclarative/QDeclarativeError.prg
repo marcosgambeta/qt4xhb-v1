@@ -77,8 +77,7 @@ $method=|void|setUrl|const QUrl &
 
 $prototypeV2=QString toString() const
 
-$prototype=QUrl url () const
-$method=|QUrl|url|
+$prototypeV2=QUrl url() const
 
 $extraMethods
 

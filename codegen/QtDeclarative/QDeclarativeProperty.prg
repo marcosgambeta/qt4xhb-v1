@@ -145,31 +145,26 @@ $prototypeV2=bool isValid() const
 
 $prototypeV2=bool isWritable() const
 
-$prototype=QMetaMethod method () const
-$method=|QMetaMethod|method|
+$prototypeV2=QMetaMethod method() const
 
 $prototypeV2=QString name() const
 
 $prototypeV2=bool needsNotifySignal() const
 
-$prototype=QObject * object () const
-$method=|QObject *|object|
+$prototypeV2=QObject * object() const
 
-$prototype=QMetaProperty property () const
-$method=|QMetaProperty|property|
+$prototypeV2=QMetaProperty property() const
 
 $prototypeV2=int propertyType() const
 
-$prototype=PropertyTypeCategory propertyTypeCategory () const
-$method=|QDeclarativeProperty::PropertyTypeCategory|propertyTypeCategory|
+$prototypeV2=QDeclarativeProperty::PropertyTypeCategory propertyTypeCategory() const
 
 $prototype=const char * propertyTypeName () const
 $method=|const char *|propertyTypeName|
 
 $prototypeV2=bool reset() const
 
-$prototype=Type type () const
-$method=|QDeclarativeProperty::Type|type|
+$prototypeV2=QDeclarativeProperty::Type type() const
 
 $prototype=QVariant read () const
 $internalMethod=|QVariant|read,read1|

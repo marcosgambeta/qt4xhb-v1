@@ -45,8 +45,7 @@ $method=|void|insert|const QString &,const QVariant &
 
 $prototypeV2=bool isEmpty() const
 
-$prototype=QStringList keys () const
-$method=|QStringList|keys|
+$prototypeV2=QStringList keys() const
 
 $prototypeV2=int size() const
 

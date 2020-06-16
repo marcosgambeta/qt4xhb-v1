@@ -57,22 +57,18 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QUrl baseUrl () const
-$method=|QUrl|baseUrl|
+$prototypeV2=QUrl baseUrl() const
 
-$prototype=QObject * contextObject () const
-$method=|QObject *|contextObject|
+$prototypeV2=QObject * contextObject() const
 
 $prototype=QVariant contextProperty ( const QString & name ) const
 $method=|QVariant|contextProperty|const QString &
 
-$prototype=QDeclarativeEngine * engine () const
-$method=|QDeclarativeEngine *|engine|
+$prototypeV2=QDeclarativeEngine * engine() const
 
 $prototypeV2=bool isValid() const
 
-$prototype=QDeclarativeContext * parentContext () const
-$method=|QDeclarativeContext *|parentContext|
+$prototypeV2=QDeclarativeContext * parentContext() const
 
 $prototype=QUrl resolvedUrl ( const QUrl & src )
 $method=|QUrl|resolvedUrl|const QUrl &
