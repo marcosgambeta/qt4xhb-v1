@@ -59,15 +59,13 @@ $prototypeV2=QString errorString() const
 
 $prototypeV2=QString fileName() const
 
-$prototype=QObject * instance ()
-$method=|QObject *|instance|
+$prototypeV2=QObject * instance()
 
 $prototypeV2=bool isLoaded() const
 
 $prototypeV2=bool load()
 
-$prototype=QLibrary::LoadHints loadHints () const
-$method=|QLibrary::LoadHints|loadHints|
+$prototypeV2=QLibrary::LoadHints loadHints() const
 
 $prototype=void setFileName ( const QString & fileName )
 $method=|void|setFileName|const QString &

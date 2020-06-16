@@ -32,8 +32,7 @@ $deleteMethod
 
 $prototypeV2=bool acquire()
 
-$prototype=SystemSemaphoreError error () const
-$method=|QSystemSemaphore::SystemSemaphoreError|error|
+$prototypeV2=QSystemSemaphore::SystemSemaphoreError error() const
 
 $prototypeV2=QString errorString() const
 

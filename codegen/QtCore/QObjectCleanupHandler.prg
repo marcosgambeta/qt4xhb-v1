@@ -38,7 +38,6 @@ $method=|void|remove|QObject *
 
 $prototypeV2=bool isEmpty() const
 
-$prototype=void clear()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 #pragma ENDDUMP

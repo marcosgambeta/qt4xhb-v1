@@ -41,8 +41,7 @@ $virtualMethod=|bool|copy|const QString &
 $prototype=virtual QStringList entryList ( QDir::Filters filters, const QStringList & filterNames ) const
 $virtualMethod=|QStringList|entryList|QDir::Filters,const QStringList &
 
-$prototype=QFile::FileError error () const
-$method=|QFile::FileError|error|
+$prototypeV2=QFile::FileError error() const
 
 $prototypeV2=QString errorString() const
 
@@ -78,8 +77,7 @@ $virtualMethod=|QString|owner|QAbstractFileEngine::FileOwner
 $prototype=virtual uint ownerId ( FileOwner owner ) const
 $virtualMethod=|uint|ownerId|QAbstractFileEngine::FileOwner
 
-$prototype=virtual qint64 pos () const
-$virtualMethod=|qint64|pos|
+$prototypeV2=virtual qint64 pos() const
 
 $prototype=virtual qint64 readLine ( char * data, qint64 maxlen )
 %% TODO: corrigir codigo
@@ -105,8 +103,7 @@ $virtualMethod=|bool|setPermissions|uint
 $prototype=virtual bool setSize ( qint64 size )
 $virtualMethod=|bool|setSize|qint64
 
-$prototype=virtual qint64 size () const
-$virtualMethod=|qint64|size|
+$prototypeV2=virtual qint64 size() const
 
 $prototype=virtual bool supportsExtension ( Extension extension ) const
 $virtualMethod=|bool|supportsExtension|QAbstractFileEngine::Extension

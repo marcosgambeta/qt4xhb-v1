@@ -74,8 +74,7 @@ HB_FUNC_STATIC( QTIMER_START )
 }
 $addMethod=start
 
-$prototype=void stop ()
-$method=|void|stop|
+$prototypeV2=void stop()
 
 $prototype=static void singleShot ( int msec, QObject * receiver, const char * member )
 $staticMethod=|void|singleShot|int,QObject *,const char *

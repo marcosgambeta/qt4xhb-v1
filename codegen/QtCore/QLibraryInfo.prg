@@ -31,8 +31,7 @@ $prototypeV2=static QString licensedProducts()
 
 $prototypeV2=static QString buildKey()
 
-$prototype=static QDate buildDate()
-$staticMethod=|QDate|buildDate|
+$prototypeV2=static QDate buildDate()
 
 $prototype=static QString location(LibraryLocation)
 $staticMethod=|QString|location|QLibraryInfo::LibraryLocation

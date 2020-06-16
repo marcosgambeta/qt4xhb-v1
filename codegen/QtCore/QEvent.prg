@@ -30,11 +30,9 @@ $constructor=|new|QEvent::Type
 
 $deleteMethod
 
-$prototype=void accept ()
-$method=|void|accept|
+$prototypeV2=void accept()
 
-$prototype=void ignore ()
-$method=|void|ignore|
+$prototypeV2=void ignore()
 
 $prototypeV2=bool isAccepted() const
 
@@ -43,8 +41,7 @@ $method=|void|setAccepted|bool
 
 $prototypeV2=bool spontaneous() const
 
-$prototype=Type type () const
-$method=|QEvent::Type|type|
+$prototypeV2=QEvent::Type type() const
 
 $prototype=static int registerEventType ( int hint = -1 )
 $staticMethod=|int|registerEventType|int=-1

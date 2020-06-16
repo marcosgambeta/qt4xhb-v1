@@ -70,11 +70,9 @@ $method=|QString|cap|int=0
 
 $prototypeV2=int captureCount() const
 
-$prototype=QStringList capturedTexts () const
-$method=|QStringList|capturedTexts|
+$prototypeV2=QStringList capturedTexts() const
 
-$prototype=Qt::CaseSensitivity caseSensitivity () const
-$method=|Qt::CaseSensitivity|caseSensitivity|
+$prototypeV2=Qt::CaseSensitivity caseSensitivity() const
 
 $prototypeV2=QString errorString() const
 
@@ -97,8 +95,7 @@ $prototypeV2=int matchedLength() const
 
 $prototypeV2=QString pattern() const
 
-$prototype=PatternSyntax patternSyntax () const
-$method=|QRegExp::PatternSyntax|patternSyntax|
+$prototypeV2=QRegExp::PatternSyntax patternSyntax() const
 
 $prototype=int pos ( int nth = 0 ) const
 $method=|int|pos|int=0

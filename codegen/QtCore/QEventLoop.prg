@@ -66,10 +66,8 @@ HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS )
 }
 $addMethod=processEvents
 
-$prototype=void wakeUp ()
-$method=|void|wakeUp|
+$prototypeV2=void wakeUp()
 
-$prototype=void quit ()
-$method=|void|quit|
+$prototypeV2=void quit()
 
 #pragma ENDDUMP

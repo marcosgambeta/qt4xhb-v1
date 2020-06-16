@@ -141,8 +141,7 @@ $virtualMethod=|QString|owner|QAbstractFileEngine::FileOwner
 $prototype=virtual uint ownerId ( FileOwner own ) const
 $virtualMethod=|uint|ownerId|QAbstractFileEngine::FileOwner
 
-$prototype=virtual qint64 pos () const
-$virtualMethod=|qint64|pos|
+$prototypeV2=virtual qint64 pos() const
 
 $prototype=virtual qint64 read ( char * data, qint64 maxlen )
 $virtualMethod=|qint64|read|char *,qint64
@@ -170,8 +169,7 @@ $virtualMethod=|bool|setPermissions|uint
 $prototype=virtual bool setSize ( qint64 size )
 $virtualMethod=|bool|setSize|qint64
 
-$prototype=virtual qint64 size () const
-$virtualMethod=|qint64|size|
+$prototypeV2=virtual qint64 size() const
 
 $prototype=virtual bool supportsExtension ( Extension extension ) const
 $virtualMethod=|bool|supportsExtension|QAbstractFileEngine::Extension
@@ -182,8 +180,7 @@ $virtualMethod=|qint64|write|const char *,qint64
 $prototype=static QString currentPath ( const QString & fileName = QString() )
 $staticMethod=|QString|currentPath|const QString &=QString()
 
-$prototype=QFileInfoList drives ()
-$method=|QFileInfoList|drives|
+$prototypeV2=QFileInfoList drives()
 
 $prototypeV2=static QString homePath()
 

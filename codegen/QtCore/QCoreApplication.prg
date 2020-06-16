@@ -49,8 +49,7 @@ $method=|bool|filterEvent|void *,long *
 $prototype=virtual bool notify ( QObject * receiver, QEvent * event )
 $virtualMethod=|bool|notify|QObject *,QEvent *
 
-$prototype=void quit ()
-$method=|void|quit|
+$prototypeV2=void quit()
 
 $prototype=static void addLibraryPath ( const QString & path )
 $staticMethod=|void|addLibraryPath|const QString &
@@ -61,13 +60,11 @@ $prototypeV2=static QString applicationFilePath()
 
 $prototypeV2=static QString applicationName()
 
-$prototype=static qint64 applicationPid ()
-$staticMethod=|qint64|applicationPid|
+$prototypeV2=static qint64 applicationPid()
 
 $prototypeV2=static QString applicationVersion()
 
-$prototype=static QStringList arguments ()
-$staticMethod=|QStringList|arguments|
+$prototypeV2=static QStringList arguments()
 
 $prototypeV2=static bool closingDown()
 
@@ -76,19 +73,16 @@ $prototypeV2=static int exec()
 $prototype=static void exit ( int returnCode = 0 )
 $staticMethod=|void|exit|int=0
 
-$prototype=static void flush ()
-$staticMethod=|void|flush|
+$prototypeV2=static void flush()
 
 $prototypeV2=static bool hasPendingEvents()
 
 $prototype=static void installTranslator ( QTranslator * translationFile )
 $staticMethod=|void|installTranslator|QTranslator *
 
-$prototype=static QCoreApplication * instance ()
-$staticMethod=|QCoreApplication *|instance|
+$prototypeV2=static QCoreApplication * instance()
 
-$prototype=static QStringList libraryPaths ()
-$staticMethod=|QStringList|libraryPaths|
+$prototypeV2=static QStringList libraryPaths()
 
 $prototypeV2=static QString organizationDomain()
 

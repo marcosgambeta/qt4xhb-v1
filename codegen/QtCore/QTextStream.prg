@@ -113,8 +113,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETCODEC )
 }
 $addMethod=setCodec
 
-$prototype=QTextCodec *codec() const
-$method=|QTextCodec *|codec|
+$prototypeV2=QTextCodec * codec() const
 
 $prototype=void setAutoDetectUnicode(bool enabled)
 $method=|void|setAutoDetectUnicode|bool
@@ -129,8 +128,7 @@ $prototypeV2=bool generateByteOrderMark() const
 $prototype=void setLocale(const QLocale &locale)
 $method=|void|setLocale|const QLocale &
 
-$prototype=QLocale locale() const
-$method=|QLocale|locale|
+$prototypeV2=QLocale locale() const
 
 $prototype=void setDevice(QIODevice *device)
 $method=|void|setDevice|QIODevice *
@@ -146,31 +144,25 @@ $prototype=QString *string() const
 %% TODO: implementar
 %% $method=|QString *|string|
 
-$prototype=Status status() const
-$method=|QTextStream::Status|status|
+$prototypeV2=QTextStream::Status status() const
 
 $prototype=void setStatus(Status status)
 $method=|void|setStatus|QTextStream::Status
 
-$prototype=void resetStatus()
-$method=|void|resetStatus|
+$prototypeV2=void resetStatus()
 
 $prototypeV2=bool atEnd() const
 
-$prototype=void reset()
-$method=|void|reset|
+$prototypeV2=void reset()
 
-$prototype=void flush()
-$method=|void|flush|
+$prototypeV2=void flush()
 
 $prototype=bool seek(qint64 pos)
 $method=|bool|seek|qint64
 
-$prototype=qint64 pos() const
-$method=|qint64|pos|
+$prototypeV2=qint64 pos() const
 
-$prototype=void skipWhiteSpace()
-$method=|void|skipWhiteSpace|
+$prototypeV2=void skipWhiteSpace()
 
 $prototype=QString readLine(qint64 maxlen = 0)
 $method=|QString|readLine|qint64=0
@@ -183,14 +175,12 @@ $method=|QString|read|qint64
 $prototype=void setFieldAlignment(FieldAlignment alignment)
 $method=|void|setFieldAlignment|QTextStream::FieldAlignment
 
-$prototype=FieldAlignment fieldAlignment() const
-$method=|QTextStream::FieldAlignment|fieldAlignment|
+$prototypeV2=QTextStream::FieldAlignment fieldAlignment() const
 
 $prototype=void setPadChar(QChar ch)
 $method=|void|setPadChar|QChar
 
-$prototype=QChar padChar() const
-$method=|QChar|padChar|
+$prototypeV2=QChar padChar() const
 
 $prototype=void setFieldWidth(int width)
 $method=|void|setFieldWidth|int
@@ -200,8 +190,7 @@ $prototypeV2=int fieldWidth() const
 $prototype=void setNumberFlags(NumberFlags flags)
 $method=|void|setNumberFlags|QTextStream::NumberFlags
 
-$prototype=NumberFlags numberFlags() const
-$method=|QTextStream::NumberFlags|numberFlags|
+$prototypeV2=QTextStream::NumberFlags numberFlags() const
 
 $prototype=void setIntegerBase(int base)
 $method=|void|setIntegerBase|int

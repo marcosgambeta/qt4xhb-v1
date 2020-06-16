@@ -201,11 +201,9 @@ $prototype=const QObjectList & children () const
 %% TODO: implementar 'const QObjectList &'
 $method=|QObjectList|children|
 
-$prototype=void dumpObjectInfo ()
-$method=|void|dumpObjectInfo|
+$prototypeV2=void dumpObjectInfo()
 
-$prototype=void dumpObjectTree ()
-$method=|void|dumpObjectTree|
+$prototypeV2=void dumpObjectTree()
 
 $prototype=QList<QByteArray> dynamicPropertyNames () const
 $method=|QList<QByteArray>|dynamicPropertyNames|
@@ -266,8 +264,7 @@ $method=|void|moveToThread|QThread *
 
 $prototypeV2=QString objectName() const
 
-$prototype=QObject * parent () const
-$method=|QObject *|parent|
+$prototypeV2=QObject * parent() const
 
 $prototype=QVariant property ( const char * name ) const
 $method=|QVariant|property|const char *
@@ -289,11 +286,9 @@ $prototypeV2=bool signalsBlocked() const
 $prototype=int startTimer ( int interval )
 $method=|int|startTimer|int
 
-$prototype=QThread * thread () const
-$method=|QThread *|thread|
+$prototypeV2=QThread * thread() const
 
-$prototype=void deleteLater ()
-$method=|void|deleteLater|
+$prototypeV2=void deleteLater()
 
 HB_FUNC_STATIC( QOBJECT_DISCONNECTALL )
 {

@@ -55,11 +55,9 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=void lockForRead ()
-$method=|void|lockForRead|
+$prototypeV2=void lockForRead()
 
-$prototype=void lockForWrite ()
-$method=|void|lockForWrite|
+$prototypeV2=void lockForWrite()
 
 $prototype=bool tryLockForRead ()
 $internalMethod=|bool|tryLockForRead,tryLockForRead1|
@@ -117,8 +115,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORWRITE )
 }
 $addMethod=tryLockForWrite
 
-$prototype=void unlock ()
-$method=|void|unlock|
+$prototypeV2=void unlock()
 
 $extraMethods
 

@@ -97,8 +97,7 @@ $prototypeV2=int propertyOffset() const
 $prototype=const QMetaObject * superClass () const
 $method=|const QMetaObject *|superClass|
 
-$prototype=QMetaProperty userProperty () const
-$method=|QMetaProperty|userProperty|
+$prototypeV2=QMetaProperty userProperty() const
 
 $prototype=static bool checkConnectArgs ( const char * signal, const char * method )
 $staticMethod=|bool|checkConnectArgs|const char *,const char *

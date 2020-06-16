@@ -63,11 +63,9 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QStringRef namespaceUri() const
-$method=|QStringRef|namespaceUri|
+$prototypeV2=QStringRef namespaceUri() const
 
-$prototype=QStringRef prefix() const
-$method=|QStringRef|prefix|
+$prototypeV2=QStringRef prefix() const
 
 $extraMethods
 

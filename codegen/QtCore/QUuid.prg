@@ -83,25 +83,20 @@ $deleteMethod
 
 $prototypeV2=QString toString() const
 
-$prototype=QByteArray toByteArray() const
-$method=|QByteArray|toByteArray|
+$prototypeV2=QByteArray toByteArray() const
 
-$prototype=QByteArray toRfc4122() const
-$method=|QByteArray|toRfc4122|
+$prototypeV2=QByteArray toRfc4122() const
 
 $prototypeV2=bool isNull() const
 
-$prototype=QUuid::Variant variant() const
-$method=|QUuid::Variant|variant|
+$prototypeV2=QUuid::Variant variant() const
 
-$prototype=QUuid::Version version() const
-$method=|QUuid::Version|version|
+$prototypeV2=QUuid::Version version() const
 
 $prototype=static QUuid fromRfc4122(const QByteArray &)
 $staticMethod=|QUuid|fromRfc4122|const QByteArray &
 
-$prototype=static QUuid createUuid()
-$staticMethod=|QUuid|createUuid|
+$prototypeV2=static QUuid createUuid()
 
 $extraMethods
 

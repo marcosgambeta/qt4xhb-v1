@@ -63,8 +63,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=FileError error () const
-$method=|QFile::FileError|error|
+$prototypeV2=QFile::FileError error() const
 
 $prototypeV2=QString fileName() const
 
@@ -78,13 +77,11 @@ $method=|void|setFileName|const QString &
 $prototype=bool unmap ( uchar * address )
 $method=|bool|unmap|uchar *
 
-$prototype=void unsetError ()
-$method=|void|unsetError|
+$prototypeV2=void unsetError()
 
 $prototypeV2=virtual bool atEnd() const
 
-$prototype=virtual void close ()
-$virtualMethod=|void|close|
+$prototypeV2=virtual void close()
 
 $prototypeV2=virtual bool isSequential() const
 
@@ -144,14 +141,12 @@ HB_FUNC_STATIC( QFILE_OPEN )
 }
 $addMethod=open
 
-$prototype=virtual qint64 pos () const
-$virtualMethod=|qint64|pos|
+$prototypeV2=virtual qint64 pos() const
 
 $prototype=virtual bool seek ( qint64 pos )
 $virtualMethod=|bool|seek|qint64
 
-$prototype=virtual qint64 size () const
-$virtualMethod=|qint64|size|
+$prototypeV2=virtual qint64 size() const
 
 $prototype=bool copy ( const QString & newName )
 $internalMethod=|bool|copy,copy1|const QString &

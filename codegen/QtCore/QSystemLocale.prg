@@ -28,8 +28,7 @@ $includes
 $prototype=QSystemLocale ()
 $constructor=|new|
 
-$prototype=virtual QLocale fallbackLocale () const
-$virtualMethod=|QLocale|fallbackLocale|
+$prototypeV2=virtual QLocale fallbackLocale() const
 
 $prototype=virtual QVariant query ( QueryType type, QVariant in ) const
 $virtualMethod=|QVariant|query|QSystemLocale::QueryType,QVariant

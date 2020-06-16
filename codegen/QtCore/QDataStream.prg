@@ -73,20 +73,16 @@ $deleteMethod
 
 $prototypeV2=bool atEnd() const
 
-$prototype=ByteOrder byteOrder () const
-$method=|QDataStream::ByteOrder|byteOrder|
+$prototypeV2=QDataStream::ByteOrder byteOrder() const
 
-$prototype=QIODevice * device () const
-$method=|QIODevice *|device|
+$prototypeV2=QIODevice * device() const
 
-$prototype=FloatingPointPrecision floatingPointPrecision () const
-$method=|QDataStream::FloatingPointPrecision|floatingPointPrecision|
+$prototypeV2=QDataStream::FloatingPointPrecision floatingPointPrecision() const
 
 $prototype=int readRawData ( char * s, int len )
 $method=|int|readRawData|char *,int
 
-$prototype=void resetStatus ()
-$method=|void|resetStatus|
+$prototypeV2=void resetStatus()
 
 $prototype=void setByteOrder ( ByteOrder bo )
 $method=|void|setByteOrder|QDataStream::ByteOrder
@@ -106,8 +102,7 @@ $method=|void|setVersion|int
 $prototype=int skipRawData ( int len )
 $method=|int|skipRawData|int
 
-$prototype=Status status () const
-$method=|QDataStream::Status|status|
+$prototypeV2=QDataStream::Status status() const
 
 $prototypeV2=int version() const
 

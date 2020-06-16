@@ -30,14 +30,11 @@ $constructor=|new|QMutex *
 
 $deleteMethod
 
-$prototype=QMutex * mutex () const
-$method=|QMutex *|mutex|
+$prototypeV2=QMutex * mutex() const
 
-$prototype=void relock ()
-$method=|void|relock|
+$prototypeV2=void relock()
 
-$prototype=void unlock ()
-$method=|void|unlock|
+$prototypeV2=void unlock()
 
 $extraMethods
 

@@ -30,8 +30,7 @@ $constructor=|new|QMutex::RecursionMode=QMutex::NonRecursive
 
 $deleteMethod
 
-$prototype=void lock ()
-$method=|void|lock|
+$prototypeV2=void lock()
 
 $prototype=bool tryLock ()
 $internalMethod=|bool|tryLock,tryLock1|
@@ -61,8 +60,7 @@ HB_FUNC_STATIC( QMUTEX_TRYLOCK )
 }
 $addMethod=tryLock
 
-$prototype=void unlock ()
-$method=|void|unlock|
+$prototypeV2=void unlock()
 
 $extraMethods
 

@@ -58,11 +58,9 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_ADDDATA )
 }
 $addMethod=addData
 
-$prototype=void reset ()
-$method=|void|reset|
+$prototypeV2=void reset()
 
-$prototype=QByteArray result () const
-$method=|QByteArray|result|
+$prototypeV2=QByteArray result() const
 
 $prototype=static QByteArray hash ( const QByteArray & data, Algorithm method )
 $staticMethod=|QByteArray|hash|const QByteArray &,QCryptographicHash::Algorithm

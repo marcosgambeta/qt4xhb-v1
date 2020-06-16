@@ -45,11 +45,9 @@ $method=|QList<QByteArray>|parameterNames|
 $prototype=const char *tag() const
 $method=|const char *|tag|
 
-$prototype=Access access() const
-$method=|QMetaMethod::Access|access|
+$prototypeV2=QMetaMethod::Access access() const
 
-$prototype=MethodType methodType() const
-$method=|QMetaMethod::MethodType|methodType|
+$prototypeV2=QMetaMethod::MethodType methodType() const
 
 $prototypeV2=int attributes() const
 

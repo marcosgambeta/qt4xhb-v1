@@ -30,11 +30,9 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=void wakeAll ()
-$method=|void|wakeAll|
+$prototypeV2=void wakeAll()
 
-$prototype=void wakeOne ()
-$method=|void|wakeOne|
+$prototypeV2=void wakeOne()
 
 $extraMethods
 

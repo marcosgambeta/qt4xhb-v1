@@ -57,8 +57,7 @@ $deleteMethod
 
 $prototypeV2=bool isEmpty() const
 
-$prototype=void clear()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=bool contains(const QString &name) const
 $method=|bool|contains|const QString &
@@ -69,11 +68,9 @@ $method=|void|remove|const QString &
 $prototype=QString value(const QString &name, const QString &defaultValue = QString()) const
 $method=|QString|value|const QString &,const QString &=QString()
 
-$prototype=QStringList toStringList() const
-$method=|QStringList|toStringList|
+$prototypeV2=QStringList toStringList() const
 
-$prototype=QStringList keys() const
-$method=|QStringList|keys|
+$prototypeV2=QStringList keys() const
 
 $prototype=void insert(const QString &name, const QString &value)
 $internalMethod=|void|insert,insert1|const QString &,const QString &
@@ -103,8 +100,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_INSERT )
 }
 $addMethod=insert
 
-$prototype=static QProcessEnvironment systemEnvironment()
-$staticMethod=|QProcessEnvironment|systemEnvironment|
+$prototypeV2=static QProcessEnvironment systemEnvironment()
 
 $extraMethods
 

@@ -64,8 +64,7 @@ $addMethod=new
 $prototype=bool at ( int i ) const
 $method=|bool|at|int
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=void clearBit ( int i )
 $method=|void|clearBit|int

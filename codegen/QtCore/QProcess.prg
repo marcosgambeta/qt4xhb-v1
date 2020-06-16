@@ -35,37 +35,29 @@ $deleteMethod
 $prototype=void closeReadChannel ( ProcessChannel channel )
 $method=|void|closeReadChannel|QProcess::ProcessChannel
 
-$prototype=void closeWriteChannel ()
-$method=|void|closeWriteChannel|
+$prototypeV2=void closeWriteChannel()
 
 $prototype=QStringList environment () const (deprecated)
 $method=|QStringList|environment|
 
-$prototype=QProcess::ProcessError error () const
-$method=|QProcess::ProcessError|error|
+$prototypeV2=QProcess::ProcessError error() const
 
 $prototypeV2=int exitCode() const
 
-$prototype=QProcess::ExitStatus exitStatus () const
-$method=|QProcess::ExitStatus|exitStatus|
+$prototypeV2=QProcess::ExitStatus exitStatus() const
 
 $prototype=QString nativeArguments () const
 $method=|QString|nativeArguments||#if defined(Q_OS_WIN) || defined(Q_OS_SYMBIAN)
 
-$prototype=ProcessChannelMode processChannelMode () const
-$method=|QProcess::ProcessChannelMode|processChannelMode|
+$prototypeV2=QProcess::ProcessChannelMode processChannelMode() const
 
-$prototype=QProcessEnvironment processEnvironment () const
-$method=|QProcessEnvironment|processEnvironment|
+$prototypeV2=QProcessEnvironment processEnvironment() const
 
-$prototype=QByteArray readAllStandardError ()
-$method=|QByteArray|readAllStandardError|
+$prototypeV2=QByteArray readAllStandardError()
 
-$prototype=QByteArray readAllStandardOutput ()
-$method=|QByteArray|readAllStandardOutput|
+$prototypeV2=QByteArray readAllStandardOutput()
 
-$prototype=ProcessChannel readChannel () const
-$method=|QProcess::ProcessChannel|readChannel|
+$prototypeV2=QProcess::ProcessChannel readChannel() const
 
 $prototype=void setEnvironment ( const QStringList & environment ) (deprecated)
 $method=|void|setEnvironment|const QStringList &
@@ -125,8 +117,7 @@ HB_FUNC_STATIC( QPROCESS_START )
 }
 $addMethod=start
 
-$prototype=QProcess::ProcessState state () const
-$method=|QProcess::ProcessState|state|
+$prototypeV2=QProcess::ProcessState state() const
 
 $prototype=bool waitForFinished ( int msecs = 30000 )
 $method=|bool|waitForFinished|int=30000
@@ -138,16 +129,13 @@ $prototypeV2=QString workingDirectory() const
 
 $prototypeV2=virtual bool atEnd() const
 
-$prototype=virtual qint64 bytesAvailable () const
-$virtualMethod=|qint64|bytesAvailable|
+$prototypeV2=virtual qint64 bytesAvailable() const
 
-$prototype=virtual qint64 bytesToWrite () const
-$virtualMethod=|qint64|bytesToWrite|
+$prototypeV2=virtual qint64 bytesToWrite() const
 
 $prototypeV2=virtual bool canReadLine() const
 
-$prototype=virtual void close ()
-$virtualMethod=|void|close|
+$prototypeV2=virtual void close()
 
 $prototypeV2=virtual bool isSequential() const
 
@@ -157,11 +145,9 @@ $virtualMethod=|bool|waitForBytesWritten|int=30000
 $prototype=virtual bool waitForReadyRead ( int msecs = 30000 )
 $virtualMethod=|bool|waitForReadyRead|int=30000
 
-$prototype=void kill ()
-$method=|void|kill|
+$prototypeV2=void kill()
 
-$prototype=void terminate ()
-$method=|void|terminate|
+$prototypeV2=void terminate()
 
 $prototype=static int execute ( const QString & program, const QStringList & arguments )
 $internalStaticMethod=|int|execute,execute1|const QString &,const QStringList &
@@ -228,8 +214,7 @@ HB_FUNC_STATIC( QPROCESS_STARTDETACHED )
 }
 $addMethod=startDetached
 
-$prototype=static QStringList systemEnvironment ()
-$staticMethod=|QStringList|systemEnvironment|
+$prototypeV2=static QStringList systemEnvironment()
 
 $beginSignals
 $signal=|error(QProcess::ProcessError)

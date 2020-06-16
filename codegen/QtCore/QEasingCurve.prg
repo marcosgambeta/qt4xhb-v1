@@ -73,8 +73,7 @@ $method=|void|setPeriod|qreal
 $prototype=void setType ( Type type )
 $method=|void|setType|QEasingCurve::Type
 
-$prototype=Type type () const
-$method=|QEasingCurve::Type|type|
+$prototypeV2=QEasingCurve::Type type() const
 
 $extraMethods
 

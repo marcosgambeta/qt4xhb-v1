@@ -34,8 +34,7 @@ $deleteMethod
 
 $prototypeV2=int socket() const
 
-$prototype=Type type() const
-$method=|QSocketNotifier::Type|type|
+$prototypeV2=QSocketNotifier::Type type() const
 
 $prototypeV2=bool isEnabled() const
 

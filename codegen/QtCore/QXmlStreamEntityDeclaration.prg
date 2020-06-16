@@ -55,20 +55,15 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QStringRef name() const
-$method=|QStringRef|name|
+$prototypeV2=QStringRef name() const
 
-$prototype=QStringRef notationName() const
-$method=|QStringRef|notationName|
+$prototypeV2=QStringRef notationName() const
 
-$prototype=QStringRef publicId() const
-$method=|QStringRef|publicId|
+$prototypeV2=QStringRef publicId() const
 
-$prototype=QStringRef systemId() const
-$method=|QStringRef|systemId|
+$prototypeV2=QStringRef systemId() const
 
-$prototype=QStringRef value() const
-$method=|QStringRef|value|
+$prototypeV2=QStringRef value() const
 
 $extraMethods
 

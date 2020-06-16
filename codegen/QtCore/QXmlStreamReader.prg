@@ -123,44 +123,31 @@ $method=|void|addExtraNamespaceDeclarations|const QXmlStreamNamespaceDeclaration
 
 $prototypeV2=bool atEnd() const
 
-$prototype=QXmlStreamAttributes attributes() const
-$method=|QXmlStreamAttributes|attributes|
+$prototypeV2=QXmlStreamAttributes attributes() const
 
-$prototype=qint64 characterOffset() const
-$method=|qint64|characterOffset|
+$prototypeV2=qint64 characterOffset() const
 
-$prototype=void clear()
-$method=|void|clear|
+$prototypeV2=void clear()
 
-$prototype=qint64 columnNumber() const
-$method=|qint64|columnNumber|
+$prototypeV2=qint64 columnNumber() const
 
-$prototype=QIODevice * device() const
-$method=|QIODevice *|device|
+$prototypeV2=QIODevice * device() const
 
-$prototype=QStringRef documentEncoding() const
-$method=|QStringRef|documentEncoding|
+$prototypeV2=QStringRef documentEncoding() const
 
-$prototype=QStringRef documentVersion() const
-$method=|QStringRef|documentVersion|
+$prototypeV2=QStringRef documentVersion() const
 
-$prototype=QStringRef dtdName() const
-$method=|QStringRef|dtdName|
+$prototypeV2=QStringRef dtdName() const
 
-$prototype=QStringRef dtdPublicId() const
-$method=|QStringRef|dtdPublicId|
+$prototypeV2=QStringRef dtdPublicId() const
 
-$prototype=QStringRef dtdSystemId() const
-$method=|QStringRef|dtdSystemId|
+$prototypeV2=QStringRef dtdSystemId() const
 
-$prototype=QXmlStreamEntityDeclarations entityDeclarations() const
-$method=|QXmlStreamEntityDeclarations|entityDeclarations|
+$prototypeV2=QXmlStreamEntityDeclarations entityDeclarations() const
 
-$prototype=QXmlStreamEntityResolver * entityResolver() const
-$method=|QXmlStreamEntityResolver *|entityResolver|
+$prototypeV2=QXmlStreamEntityResolver * entityResolver() const
 
-$prototype=Error error() const
-$method=|QXmlStreamReader::Error|error|
+$prototypeV2=QXmlStreamReader::Error error() const
 
 $prototypeV2=QString errorString() const
 
@@ -190,34 +177,25 @@ $prototypeV2=bool isStartElement() const
 
 $prototypeV2=bool isWhitespace() const
 
-$prototype=qint64 lineNumber() const
-$method=|qint64|lineNumber|
+$prototypeV2=qint64 lineNumber() const
 
-$prototype=QStringRef name() const
-$method=|QStringRef|name|
+$prototypeV2=QStringRef name() const
 
-$prototype=QXmlStreamNamespaceDeclarations namespaceDeclarations() const
-$method=|QXmlStreamNamespaceDeclarations|namespaceDeclarations|
+$prototypeV2=QXmlStreamNamespaceDeclarations namespaceDeclarations() const
 
 $prototypeV2=bool namespaceProcessing() const
 
-$prototype=QStringRef namespaceUri() const
-$method=|QStringRef|namespaceUri|
+$prototypeV2=QStringRef namespaceUri() const
 
-$prototype=QXmlStreamNotationDeclarations notationDeclarations() const
-$method=|QXmlStreamNotationDeclarations|notationDeclarations|
+$prototypeV2=QXmlStreamNotationDeclarations notationDeclarations() const
 
-$prototype=QStringRef prefix() const
-$method=|QStringRef|prefix|
+$prototypeV2=QStringRef prefix() const
 
-$prototype=QStringRef processingInstructionData() const
-$method=|QStringRef|processingInstructionData|
+$prototypeV2=QStringRef processingInstructionData() const
 
-$prototype=QStringRef processingInstructionTarget() const
-$method=|QStringRef|processingInstructionTarget|
+$prototypeV2=QStringRef processingInstructionTarget() const
 
-$prototype=QStringRef qualifiedName() const
-$method=|QStringRef|qualifiedName|
+$prototypeV2=QStringRef qualifiedName() const
 
 $prototype=void raiseError(const QString & message = QString())
 $method=|void|raiseError|const QString &=QString()
@@ -225,8 +203,7 @@ $method=|void|raiseError|const QString &=QString()
 $prototype=QString readElementText(ReadElementTextBehaviour behaviour = ErrorOnUnexpectedElement)
 $method=|QString|readElementText|QXmlStreamReader::ReadElementTextBehaviour=QXmlStreamReader::ErrorOnUnexpectedElement
 
-$prototype=TokenType readNext()
-$method=|QXmlStreamReader::TokenType|readNext|
+$prototypeV2=QXmlStreamReader::TokenType readNext()
 
 $prototypeV2=bool readNextStartElement()
 
@@ -239,16 +216,13 @@ $method=|void|setEntityResolver|QXmlStreamEntityResolver *
 $prototype=void setNamespaceProcessing(bool)
 $method=|void|setNamespaceProcessing|bool
 
-$prototype=void skipCurrentElement()
-$method=|void|skipCurrentElement|
+$prototypeV2=void skipCurrentElement()
 
-$prototype=QStringRef text() const
-$method=|QStringRef|text|
+$prototypeV2=QStringRef text() const
 
 $prototypeV2=QString tokenString() const
 
-$prototype=TokenType tokenType() const
-$method=|QXmlStreamReader::TokenType|tokenType|
+$prototypeV2=QXmlStreamReader::TokenType tokenType() const
 
 $extraMethods
 

@@ -47,8 +47,7 @@ $prototypeV2=bool isCanceled() const
 
 $prototypeV2=bool isPaused() const
 
-$prototype=void waitForFinished()
-$method=|void|waitForFinished|
+$prototypeV2=void waitForFinished()
 
 $prototype=void setPendingResultsLimit(int limit)
 $method=|void|setPendingResultsLimit|int
@@ -56,20 +55,16 @@ $method=|void|setPendingResultsLimit|int
 $prototype=bool event(QEvent *event)
 $method=|bool|event|QEvent *
 
-$prototype=void cancel()
-$method=|void|cancel|
+$prototypeV2=void cancel()
 
 $prototype=void setPaused(bool paused)
 $method=|void|setPaused|bool
 
-$prototype=void pause()
-$method=|void|pause|
+$prototypeV2=void pause()
 
-$prototype=void resume()
-$method=|void|resume|
+$prototypeV2=void resume()
 
-$prototype=void togglePaused()
-$method=|void|togglePaused|
+$prototypeV2=void togglePaused()
 
 $beginSignals
 $signal=|started()

@@ -32,8 +32,7 @@ $deleteMethod
 
 $prototypeV2=bool added() const
 
-$prototype=QObject * child() const
-$method=|QObject *|child|
+$prototypeV2=QObject * child() const
 
 $prototypeV2=bool polished() const
 

@@ -73,8 +73,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QFileInfo fileInfo () const
-$method=|QFileInfo|fileInfo|
+$prototypeV2=QFileInfo fileInfo() const
 
 $prototypeV2=QString fileName() const
 

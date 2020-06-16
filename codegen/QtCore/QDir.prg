@@ -75,8 +75,7 @@ $method=|bool|cd|const QString &
 
 $prototypeV2=bool cdUp()
 
-$prototype=uint count() const
-$method=|uint|count|
+$prototypeV2=uint count() const
 
 $prototypeV2=QString dirName() const
 
@@ -167,8 +166,7 @@ $addMethod=exists
 $prototype=QString filePath(const QString & fileName) const
 $method=|QString|filePath|const QString &
 
-$prototype=Filters filter() const
-$method=|QDir::Filters|filter|
+$prototypeV2=QDir::Filters filter() const
 
 $prototypeV2=bool isAbsolute() const
 
@@ -186,13 +184,11 @@ $method=|bool|mkdir|const QString &
 $prototype=bool mkpath(const QString & dirPath) const
 $method=|bool|mkpath|const QString &
 
-$prototype=QStringList nameFilters() const
-$method=|QStringList|nameFilters|
+$prototypeV2=QStringList nameFilters() const
 
 $prototypeV2=QString path() const
 
-$prototype=void refresh() const
-$method=|void|refresh|
+$prototypeV2=void refresh() const
 
 $prototype=QString relativeFilePath(const QString & fileName) const
 $method=|QString|relativeFilePath|const QString &
@@ -221,8 +217,7 @@ $method=|void|setPath|const QString &
 $prototype=void setSorting(SortFlags sort)
 $method=|void|setSorting|QDir::SortFlags
 
-$prototype=SortFlags sorting() const
-$method=|QDir::SortFlags|sorting|
+$prototypeV2=QDir::SortFlags sorting() const
 
 $prototype=static void addSearchPath(const QString & prefix, const QString & path)
 $staticMethod=|void|addSearchPath|const QString &,const QString &
@@ -230,19 +225,16 @@ $staticMethod=|void|addSearchPath|const QString &,const QString &
 $prototype=static QString cleanPath(const QString & path)
 $staticMethod=|QString|cleanPath|const QString &
 
-$prototype=static QDir current()
-$staticMethod=|QDir|current|
+$prototypeV2=static QDir current()
 
 $prototypeV2=static QString currentPath()
 
-$prototype=static QFileInfoList drives()
-$staticMethod=|QFileInfoList|drives|
+$prototypeV2=static QFileInfoList drives()
 
 $prototype=static QString fromNativeSeparators(const QString & pathName)
 $staticMethod=|QString|fromNativeSeparators|const QString &
 
-$prototype=static QDir home()
-$staticMethod=|QDir|home|
+$prototypeV2=static QDir home()
 
 $prototypeV2=static QString homePath()
 
@@ -280,16 +272,14 @@ HB_FUNC_STATIC( QDIR_MATCH )
 }
 $addMethod=match
 
-$prototype=static QDir root()
-$staticMethod=|QDir|root|
+$prototypeV2=static QDir root()
 
 $prototypeV2=static QString rootPath()
 
 $prototype=static QStringList searchPaths(const QString & prefix)
 $staticMethod=|QStringList|searchPaths|const QString &
 
-$prototype=static QChar separator()
-$staticMethod=|QChar|separator|
+$prototypeV2=static QChar separator()
 
 $prototype=static bool setCurrent(const QString & path)
 $staticMethod=|bool|setCurrent|const QString &
@@ -297,8 +287,7 @@ $staticMethod=|bool|setCurrent|const QString &
 $prototype=static void setSearchPaths(const QString & prefix, const QStringList & searchPaths)
 $staticMethod=|void|setSearchPaths|const QString &,const QStringList &
 
-$prototype=static QDir temp()
-$staticMethod=|QDir|temp|
+$prototypeV2=static QDir temp()
 
 $prototypeV2=static QString tempPath()
 

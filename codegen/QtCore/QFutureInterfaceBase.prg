@@ -55,14 +55,11 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=void reportStarted()
-$method=|void|reportStarted|
+$prototypeV2=void reportStarted()
 
-$prototype=void reportFinished()
-$method=|void|reportFinished|
+$prototypeV2=void reportFinished()
 
-$prototype=void reportCanceled()
-$method=|void|reportCanceled|
+$prototypeV2=void reportCanceled()
 
 $prototype=void reportResultsReady(int beginIndex, int endIndex)
 $method=|void|reportResultsReady|int,int
@@ -117,31 +114,26 @@ $prototypeV2=bool isThrottled() const
 $prototype=bool isResultReadyAt(int index) const
 $method=|bool|isResultReadyAt|int
 
-$prototype=void cancel()
-$method=|void|cancel|
+$prototypeV2=void cancel()
 
 $prototype=void setPaused(bool paused)
 $method=|void|setPaused|bool
 
-$prototype=void togglePaused()
-$method=|void|togglePaused|
+$prototypeV2=void togglePaused()
 
 $prototype=void setThrottled(bool enable)
 $method=|void|setThrottled|bool
 
-$prototype=void waitForFinished()
-$method=|void|waitForFinished|
+$prototypeV2=void waitForFinished()
 
 $prototypeV2=bool waitForNextResult()
 
 $prototype=void waitForResult(int resultIndex)
 $method=|void|waitForResult|int
 
-$prototype=void waitForResume()
-$method=|void|waitForResume|
+$prototypeV2=void waitForResume()
 
-$prototype=QMutex *mutex() const
-$method=|QMutex *|mutex|
+$prototypeV2=QMutex *mutex() const
 
 $extraMethods
 

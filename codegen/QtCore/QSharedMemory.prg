@@ -84,8 +84,7 @@ $prototypeV2=bool lock()
 
 $prototypeV2=bool unlock()
 
-$prototype=SharedMemoryError error() const
-$method=|QSharedMemory::SharedMemoryError|error|
+$prototypeV2=QSharedMemory::SharedMemoryError error() const
 
 $prototypeV2=QString errorString() const
 

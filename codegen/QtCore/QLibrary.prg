@@ -115,8 +115,7 @@ $prototypeV2=QString errorString() const
 $prototype=void setLoadHints(LoadHints hints)
 $method=|void|setLoadHints|QLibrary::LoadHints
 
-$prototype=LoadHints loadHints() const
-$method=|QLibrary::LoadHints|loadHints|
+$prototypeV2=QLibrary::LoadHints loadHints() const
 
 $prototype=void *resolve(const char *symbol)
 $internalMethod=|void *|resolve,resolve1|const char *

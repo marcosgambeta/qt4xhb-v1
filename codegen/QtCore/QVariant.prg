@@ -361,8 +361,7 @@ $method=|bool|canConvert|QVariant::Type
 %%   }
 %% }
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=bool convert ( Type t )
 $method=|bool|convert|QVariant::Type
@@ -371,76 +370,56 @@ $prototypeV2=bool isNull() const
 
 $prototypeV2=bool isValid() const
 
-$prototype=QBitArray toBitArray () const
-$method=|QBitArray|toBitArray|
+$prototypeV2=QBitArray toBitArray() const
 
 $prototypeV2=bool toBool() const
 
-$prototype=QByteArray toByteArray () const
-$method=|QByteArray|toByteArray|
+$prototypeV2=QByteArray toByteArray() const
 
-$prototype=QChar toChar () const
-$method=|QChar|toChar|
+$prototypeV2=QChar toChar() const
 
-$prototype=QDate toDate () const
-$method=|QDate|toDate|
+$prototypeV2=QDate toDate() const
 
-$prototype=QDateTime toDateTime () const
-$method=|QDateTime|toDateTime|
+$prototypeV2=QDateTime toDateTime() const
 
-$prototype=QEasingCurve toEasingCurve () const
-$method=|QEasingCurve|toEasingCurve|
+$prototypeV2=QEasingCurve toEasingCurve() const
 
-$prototype=QLine toLine () const
-$method=|QLine|toLine|
+$prototypeV2=QLine toLine() const
 
-$prototype=QLineF toLineF () const
-$method=|QLineF|toLineF|
+$prototypeV2=QLineF toLineF() const
 
 $prototype=QList<QVariant> toList () const
 $method=|QList<QVariant>|toList|
 
-$prototype=QLocale toLocale () const
-$method=|QLocale|toLocale|
+$prototypeV2=QLocale toLocale() const
 
-$prototype=QPoint toPoint () const
-$method=|QPoint|toPoint|
+$prototypeV2=QPoint toPoint() const
 
-$prototype=QPointF toPointF () const
-$method=|QPointF|toPointF|
+$prototypeV2=QPointF toPointF() const
 
 $prototype=qreal toReal ( bool * ok = 0 ) const
 %% TODO: implementar bool *=0
 $method=|qreal|toReal|bool *=0
 
-$prototype=QRect toRect () const
-$method=|QRect|toRect|
+$prototypeV2=QRect toRect() const
 
-$prototype=QRectF toRectF () const
-$method=|QRectF|toRectF|
+$prototypeV2=QRectF toRectF() const
 
-$prototype=QRegExp toRegExp () const
-$method=|QRegExp|toRegExp|
+$prototypeV2=QRegExp toRegExp() const
 
-$prototype=QSize toSize () const
-$method=|QSize|toSize|
+$prototypeV2=QSize toSize() const
 
-$prototype=QSizeF toSizeF () const
-$method=|QSizeF|toSizeF|
+$prototypeV2=QSizeF toSizeF() const
 
 $prototypeV2=QString toString() const
 
-$prototype=QStringList toStringList () const
-$method=|QStringList|toStringList|
+$prototypeV2=QStringList toStringList() const
 
-$prototype=QTime toTime () const
-$method=|QTime|toTime|
+$prototypeV2=QTime toTime() const
 
-$prototype=QUrl toUrl () const
-$method=|QUrl|toUrl|
+$prototypeV2=QUrl toUrl() const
 
-$prototype=Type type () const
-$method=|QVariant::Type|type|
+$prototypeV2=QVariant::Type type() const
 
 $prototype=const char * typeName () const
 $method=|const char *|typeName|

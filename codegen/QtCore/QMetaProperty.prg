@@ -36,8 +36,7 @@ $method=|const char *|name|
 $prototype=const char *typeName() const
 $method=|const char *|typeName|
 
-$prototype=QVariant::Type type() const
-$method=|QVariant::Type|type|
+$prototypeV2=QVariant::Type type() const
 
 $prototypeV2=int userType() const
 
@@ -72,13 +71,11 @@ $prototypeV2=bool isFlagType() const
 
 $prototypeV2=bool isEnumType() const
 
-$prototype=QMetaEnum enumerator() const
-$method=|QMetaEnum|enumerator|
+$prototypeV2=QMetaEnum enumerator() const
 
 $prototypeV2=bool hasNotifySignal() const
 
-$prototype=QMetaMethod notifySignal() const
-$method=|QMetaMethod|notifySignal|
+$prototypeV2=QMetaMethod notifySignal() const
 
 $prototypeV2=int notifySignalIndex() const
 

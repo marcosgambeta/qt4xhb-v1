@@ -103,8 +103,7 @@ $method=|void|setHeight|int
 $prototype=void setWidth ( int width )
 $method=|void|setWidth|int
 
-$prototype=void transpose ()
-$method=|void|transpose|
+$prototypeV2=void transpose()
 
 $prototypeV2=int width() const
 

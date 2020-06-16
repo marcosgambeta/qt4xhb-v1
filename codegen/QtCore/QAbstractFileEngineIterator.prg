@@ -27,20 +27,17 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QFileInfo currentFileInfo () const
-$virtualMethod=|QFileInfo|currentFileInfo|
+$prototypeV2=virtual QFileInfo currentFileInfo() const
 
 $prototypeV2=virtual QString currentFileName() const = 0
 
 $prototypeV2=QString currentFilePath() const
 
-$prototype=QDir::Filters filters () const
-$method=|QDir::Filters|filters|
+$prototypeV2=QDir::Filters filters() const
 
 $prototypeV2=virtual bool hasNext() const = 0
 
-$prototype=QStringList nameFilters () const
-$method=|QStringList|nameFilters|
+$prototypeV2=QStringList nameFilters() const
 
 $prototypeV2=virtual QString next() = 0
 

@@ -122,8 +122,7 @@ $method=|int|weekNumber|int *=0
 
 $prototypeV2=int year() const
 
-$prototype=static QDate currentDate ()
-$staticMethod=|QDate|currentDate|
+$prototypeV2=static QDate currentDate()
 
 $prototype=static QDate fromJulianDay ( int jd )
 $staticMethod=|QDate|fromJulianDay|int

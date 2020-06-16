@@ -29,8 +29,7 @@ $deleteMethod
 
 $prototypeV2=bool autoDelete() const
 
-$prototype=virtual void run () = 0
-$virtualMethod=|void|run|
+$prototypeV2=virtual void run() = 0
 
 $prototype=void setAutoDelete ( bool autoDelete )
 $method=|void|setAutoDelete|bool

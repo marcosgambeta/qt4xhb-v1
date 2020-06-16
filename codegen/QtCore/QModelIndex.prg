@@ -63,11 +63,9 @@ $prototypeV2=int column() const
 $prototype=QVariant data ( int role = Qt::DisplayRole ) const
 $method=|QVariant|data|int=Qt::DisplayRole
 
-$prototype=Qt::ItemFlags flags () const
-$method=|Qt::ItemFlags|flags|
+$prototypeV2=Qt::ItemFlags flags() const
 
-$prototype=qint64 internalId () const
-$method=|qint64|internalId|
+$prototypeV2=qint64 internalId() const
 
 $prototype=void * internalPointer () const
 $method=|void *|internalPointer|
@@ -77,8 +75,7 @@ $prototypeV2=bool isValid() const
 $prototype=const QAbstractItemModel * model () const
 $method=|const QAbstractItemModel *|model|
 
-$prototype=QModelIndex parent () const
-$method=|QModelIndex|parent|
+$prototypeV2=QModelIndex parent() const
 
 $prototypeV2=int row() const
 

@@ -74,16 +74,13 @@ $deleteMethod
 
 $prototypeV2=bool isValid() const
 
-$prototype=BoundaryType type() const
-$method=|QTextBoundaryFinder::BoundaryType|type|
+$prototypeV2=QTextBoundaryFinder::BoundaryType type() const
 
 $prototypeV2=QString string() const
 
-$prototype=void toStart()
-$method=|void|toStart|
+$prototypeV2=void toStart()
 
-$prototype=void toEnd()
-$method=|void|toEnd|
+$prototypeV2=void toEnd()
 
 $prototypeV2=int position() const
 
@@ -96,8 +93,7 @@ $prototypeV2=int toPreviousBoundary()
 
 $prototypeV2=bool isAtBoundary() const
 
-$prototype=BoundaryReasons boundaryReasons() const
-$method=|QTextBoundaryFinder::BoundaryReasons|boundaryReasons|
+$prototypeV2=QTextBoundaryFinder::BoundaryReasons boundaryReasons() const
 
 $extraMethods
 

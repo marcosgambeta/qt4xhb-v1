@@ -138,8 +138,7 @@ $prototypeV2=int capacity() const
 $prototype=void chop ( int n )
 $method=|void|chop|int
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=const char * constData () const
 $method=|const char *|constData|
@@ -764,16 +763,14 @@ $addMethod=setNum
 $prototype=QByteArray & setRawData ( const char * data, uint size )
 $method=|QByteArray &|setRawData|const char *,uint
 
-$prototype=QByteArray simplified () const
-$method=|QByteArray|simplified|
+$prototypeV2=QByteArray simplified() const
 
 $prototypeV2=int size() const
 
 $prototype=QList<QByteArray> split ( char sep ) const
 $method=|QList<QByteArray>|split|char
 
-$prototype=void squeeze ()
-$method=|void|squeeze|
+$prototypeV2=void squeeze()
 
 $prototype=bool startsWith ( const QByteArray & ba ) const
 $internalMethod=|bool|startsWith,startsWith1|const QByteArray &
@@ -820,8 +817,7 @@ $method=|double|toDouble|bool *=0
 $prototype=float toFloat ( bool * ok = 0 ) const
 $method=|float|toFloat|bool *=0
 
-$prototype=QByteArray toHex () const
-$method=|QByteArray|toHex|
+$prototypeV2=QByteArray toHex() const
 
 $prototype=int toInt ( bool * ok = 0, int base = 10 ) const
 $method=|int|toInt|bool *=0,int=10
@@ -832,8 +828,7 @@ $method=|long|toLong|bool *=0,int=10
 $prototype=qlonglong toLongLong ( bool * ok = 0, int base = 10 ) const
 $method=|qlonglong|toLongLong|bool *=0,int=10
 
-$prototype=QByteArray toLower () const
-$method=|QByteArray|toLower|
+$prototypeV2=QByteArray toLower() const
 
 $prototype=QByteArray toPercentEncoding ( const QByteArray & exclude = QByteArray(), const QByteArray & include = QByteArray(), char percent = '%' ) const
 $method=|QByteArray|toPercentEncoding|const QByteArray &=QByteArray(),const QByteArray &=QByteArray(),char='%'
@@ -853,11 +848,9 @@ $method=|qulonglong|toULongLong|bool *=0,int=10
 $prototype=ushort toUShort ( bool * ok = 0, int base = 10 ) const
 $method=|ushort|toUShort|bool *=0,int=10
 
-$prototype=QByteArray toUpper () const
-$method=|QByteArray|toUpper|
+$prototypeV2=QByteArray toUpper() const
 
-$prototype=QByteArray trimmed () const
-$method=|QByteArray|trimmed|
+$prototypeV2=QByteArray trimmed() const
 
 $prototype=void truncate ( int pos )
 $method=|void|truncate|int

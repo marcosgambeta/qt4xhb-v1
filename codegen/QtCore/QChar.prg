@@ -83,16 +83,13 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=Category category () const
-$method=|QChar::Category|category|
+$prototypeV2=QChar::Category category() const
 
-$prototype=Decomposition decompositionTag () const
-$method=|QChar::Decomposition|decompositionTag|
+$prototypeV2=QChar::Decomposition decompositionTag() const
 
 $prototypeV2=int digitValue() const
 
-$prototype=Direction direction () const
-$method=|QChar::Direction|direction|
+$prototypeV2=QChar::Direction direction() const
 
 $prototypeV2=bool hasMirrored() const
 
@@ -126,26 +123,19 @@ $prototypeV2=bool isTitleCase() const
 
 $prototypeV2=bool isUpper() const
 
-$prototype=Joining joining () const
-$method=|QChar::Joining|joining|
+$prototypeV2=QChar::Joining joining() const
 
-$prototype=QChar mirroredChar () const
-$method=|QChar|mirroredChar|
+$prototypeV2=QChar mirroredChar() const
 
-$prototype=QChar toCaseFolded () const
-$method=|QChar|toCaseFolded|
+$prototypeV2=QChar toCaseFolded() const
 
-$prototype=QChar toLower () const
-$method=|QChar|toLower|
+$prototypeV2=QChar toLower() const
 
-$prototype=QChar toTitleCase () const
-$method=|QChar|toTitleCase|
+$prototypeV2=QChar toTitleCase() const
 
-$prototype=QChar toUpper () const
-$method=|QChar|toUpper|
+$prototypeV2=QChar toUpper() const
 
-$prototype=UnicodeVersion unicodeVersion () const
-$method=|QChar::UnicodeVersion|unicodeVersion|
+$prototypeV2=QChar::UnicodeVersion unicodeVersion() const
 
 %% TODO: implementar metódos estáticos
 

@@ -84,8 +84,7 @@ $method=|int|secsTo|const QTime &
 $prototype=bool setHMS(int h, int m, int s, int ms = 0)
 $method=|bool|setHMS|int,int,int,int=0
 
-$prototype=void start()
-$method=|void|start|
+$prototypeV2=void start()
 
 $prototype=QString toString(const QString & format) const
 $internalMethod=|QString|toString,toString1|const QString &
@@ -115,8 +114,7 @@ HB_FUNC_STATIC( QTIME_TOSTRING )
 }
 $addMethod=toString
 
-$prototype=static QTime currentTime()
-$staticMethod=|QTime|currentTime|
+$prototypeV2=static QTime currentTime()
 
 $prototype=static QTime fromString(const QString & string, Qt::DateFormat format = Qt::TextDate)
 $internalStaticMethod=|QTime|fromString,fromString1|const QString &,Qt::DateFormat=Qt::TextDate

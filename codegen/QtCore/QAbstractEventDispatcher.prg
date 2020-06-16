@@ -32,13 +32,11 @@ $deleteMethod
 $prototype=bool filterEvent ( void * message )
 $method=|bool|filterEvent|void *
 
-$prototype=virtual void flush () = 0
-$virtualMethod=|void|flush|
+$prototypeV2=virtual void flush() = 0
 
 $prototypeV2=virtual bool hasPendingEvents() = 0
 
-$prototype=virtual void interrupt () = 0
-$virtualMethod=|void|interrupt|
+$prototypeV2=virtual void interrupt() = 0
 
 $prototype=virtual bool processEvents ( QEventLoop::ProcessEventsFlags flags ) = 0
 $virtualMethod=|bool|processEvents|QEventLoop::ProcessEventsFlags
@@ -83,8 +81,7 @@ $virtualMethod=|bool|unregisterTimer|int
 $prototype=virtual bool unregisterTimers ( QObject * object ) = 0
 $virtualMethod=|bool|unregisterTimers|QObject *
 
-$prototype=virtual void wakeUp () = 0
-$virtualMethod=|void|wakeUp|
+$prototypeV2=virtual void wakeUp() = 0
 
 $prototype=static QAbstractEventDispatcher * instance ( QThread * thread = 0 )
 $staticMethod=|QAbstractEventDispatcher *|instance|QThread *=0

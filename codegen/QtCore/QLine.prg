@@ -63,11 +63,9 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QPoint p1() const
-$method=|QPoint|p1|
+$prototypeV2=QPoint p1() const
 
-$prototype=QPoint p2() const
-$method=|QPoint|p2|
+$prototypeV2=QPoint p2() const
 
 $prototypeV2=int x1() const
 

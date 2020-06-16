@@ -33,17 +33,14 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
-$prototype=QVariant colorData () const
-$method=|QVariant|colorData|
+$prototypeV2=QVariant colorData() const
 
 $prototype=QByteArray data ( const QString & mimeType ) const
 $method=|QByteArray|data|const QString &
 
-$prototype=virtual QStringList formats () const
-$virtualMethod=|QStringList|formats|
+$prototypeV2=virtual QStringList formats() const
 
 $prototypeV2=bool hasColor() const
 
@@ -60,8 +57,7 @@ $prototypeV2=bool hasUrls() const
 
 $prototypeV2=QString html() const
 
-$prototype=QVariant imageData () const
-$method=|QVariant|imageData|
+$prototypeV2=QVariant imageData() const
 
 $prototype=void removeFormat ( const QString & mimeType )
 $method=|void|removeFormat|const QString &

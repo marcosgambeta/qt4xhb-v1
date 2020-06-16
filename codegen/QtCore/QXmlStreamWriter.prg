@@ -76,11 +76,9 @@ $prototypeV2=bool autoFormatting() const
 
 $prototypeV2=int autoFormattingIndent() const
 
-$prototype=QTextCodec * codec() const
-$method=|QTextCodec *|codec|
+$prototypeV2=QTextCodec * codec() const
 
-$prototype=QIODevice * device() const
-$method=|QIODevice *|device|
+$prototypeV2=QIODevice * device() const
 
 $prototypeV2=bool hasError() const
 
@@ -206,11 +204,9 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEEMPTYELEMENT )
 }
 $addMethod=writeEmptyElement
 
-$prototype=void writeEndDocument()
-$method=|void|writeEndDocument|
+$prototypeV2=void writeEndDocument()
 
-$prototype=void writeEndElement()
-$method=|void|writeEndElement|
+$prototypeV2=void writeEndElement()
 
 $prototype=void writeEntityReference(const QString & name)
 $method=|void|writeEntityReference|const QString &

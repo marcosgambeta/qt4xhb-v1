@@ -38,11 +38,9 @@ $prototypeV2=int currentTime() const
 
 $prototypeV2=qreal currentValue() const
 
-$prototype=CurveShape curveShape () const
-$method=|QTimeLine::CurveShape|curveShape|
+$prototypeV2=QTimeLine::CurveShape curveShape() const
 
-$prototype=Direction direction () const
-$method=|QTimeLine::Direction|direction|
+$prototypeV2=QTimeLine::Direction direction() const
 
 $prototypeV2=int duration() const
 
@@ -82,16 +80,14 @@ $method=|void|setUpdateInterval|int
 
 $prototypeV2=int startFrame() const
 
-$prototype=State state () const
-$method=|QTimeLine::State|state|
+$prototypeV2=QTimeLine::State state() const
 
 $prototypeV2=int updateInterval() const
 
 $prototype=virtual qreal valueForTime ( int msec ) const
 $virtualMethod=|qreal|valueForTime|int
 
-$prototype=void resume ()
-$method=|void|resume|
+$prototypeV2=void resume()
 
 $prototype=void setCurrentTime ( int msec )
 $method=|void|setCurrentTime|int
@@ -99,14 +95,11 @@ $method=|void|setCurrentTime|int
 $prototype=void setPaused ( bool paused )
 $method=|void|setPaused|bool
 
-$prototype=void start ()
-$method=|void|start|
+$prototypeV2=void start()
 
-$prototype=void stop ()
-$method=|void|stop|
+$prototypeV2=void stop()
 
-$prototype=void toggleDirection ()
-$method=|void|toggleDirection|
+$prototypeV2=void toggleDirection()
 
 $beginSignals
 $signal=|finished()

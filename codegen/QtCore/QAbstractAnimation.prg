@@ -37,13 +37,11 @@ $prototypeV2=int currentLoopTime() const
 
 $prototypeV2=int currentTime() const
 
-$prototype=Direction direction () const
-$method=|QAbstractAnimation::Direction|direction|
+$prototypeV2=QAbstractAnimation::Direction direction() const
 
 $prototypeV2=virtual int duration() const = 0
 
-$prototype=QAnimationGroup * group () const
-$method=|QAnimationGroup *|group|
+$prototypeV2=QAnimationGroup * group() const
 
 $prototypeV2=int loopCount() const
 
@@ -53,16 +51,13 @@ $method=|void|setDirection|QAbstractAnimation::Direction
 $prototype=void setLoopCount ( int loopCount )
 $method=|void|setLoopCount|int
 
-$prototype=State state () const
-$method=|QAbstractAnimation::State|state|
+$prototypeV2=QAbstractAnimation::State state() const
 
 $prototypeV2=int totalDuration() const
 
-$prototype=void pause ()
-$method=|void|pause|
+$prototypeV2=void pause()
 
-$prototype=void resume ()
-$method=|void|resume|
+$prototypeV2=void resume()
 
 $prototype=void setCurrentTime ( int msecs )
 $method=|void|setCurrentTime|int
@@ -73,8 +68,7 @@ $method=|void|setPaused|bool
 $prototype=void start ( QAbstractAnimation::DeletionPolicy policy = KeepWhenStopped )
 $method=|void|start|QAbstractAnimation::DeletionPolicy=QAbstractAnimation::KeepWhenStopped
 
-$prototype=void stop ()
-$method=|void|stop|
+$prototypeV2=void stop()
 
 $beginSignals
 $signal=|currentLoopChanged(int)

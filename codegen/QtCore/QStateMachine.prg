@@ -41,19 +41,16 @@ $method=|void|addState|QAbstractState *
 $prototype=bool cancelDelayedEvent ( int id )
 $method=|bool|cancelDelayedEvent|int
 
-$prototype=void clearError ()
-$method=|void|clearError|
+$prototypeV2=void clearError()
 
 $prototype=QList<QAbstractAnimation *> defaultAnimations () const
 $method=|QList<QAbstractAnimation *>|defaultAnimations|
 
-$prototype=Error error () const
-$method=|QStateMachine::Error|error|
+$prototypeV2=QStateMachine::Error error() const
 
 $prototypeV2=QString errorString() const
 
-$prototype=QStateMachine::RestorePolicy globalRestorePolicy () const
-$method=|QStateMachine::RestorePolicy|globalRestorePolicy|
+$prototypeV2=QStateMachine::RestorePolicy globalRestorePolicy() const
 
 $prototypeV2=bool isAnimated() const
 
@@ -80,11 +77,9 @@ $method=|void|setGlobalRestorePolicy|QStateMachine::RestorePolicy
 $prototype=virtual bool eventFilter ( QObject * watched, QEvent * event )
 $virtualMethod=|bool|eventFilter|QObject *,QEvent *
 
-$prototype=void start ()
-$method=|void|start|
+$prototypeV2=void start()
 
-$prototype=void stop ()
-$method=|void|stop|
+$prototypeV2=void stop()
 
 $beginSignals
 $signal=|started()

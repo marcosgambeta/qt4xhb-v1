@@ -111,11 +111,9 @@ $method=|void|setHeight|qreal
 $prototype=void setWidth ( qreal width )
 $method=|void|setWidth|qreal
 
-$prototype=QSize toSize () const
-$method=|QSize|toSize|
+$prototypeV2=QSize toSize() const
 
-$prototype=void transpose ()
-$method=|void|transpose|
+$prototypeV2=void transpose()
 
 $prototypeV2=qreal width() const
 

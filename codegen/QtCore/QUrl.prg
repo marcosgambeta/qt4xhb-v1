@@ -87,29 +87,22 @@ $method=|QStringList|allQueryItemValues|const QString &
 
 $prototypeV2=QString authority() const
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
-$prototype=QByteArray encodedFragment () const
-$method=|QByteArray|encodedFragment|
+$prototypeV2=QByteArray encodedFragment() const
 
-$prototype=QByteArray encodedHost () const
-$method=|QByteArray|encodedHost|
+$prototypeV2=QByteArray encodedHost() const
 
-$prototype=QByteArray encodedPassword () const
-$method=|QByteArray|encodedPassword|
+$prototypeV2=QByteArray encodedPassword() const
 
-$prototype=QByteArray encodedPath () const
-$method=|QByteArray|encodedPath|
+$prototypeV2=QByteArray encodedPath() const
 
-$prototype=QByteArray encodedQuery () const
-$method=|QByteArray|encodedQuery|
+$prototypeV2=QByteArray encodedQuery() const
 
 $prototype=QByteArray encodedQueryItemValue ( const QByteArray & key ) const
 $method=|QByteArray|encodedQueryItemValue|const QByteArray &
 
-$prototype=QByteArray encodedUserName () const
-$method=|QByteArray|encodedUserName|
+$prototypeV2=QByteArray encodedUserName() const
 
 $prototypeV2=QString errorString() const
 
@@ -351,8 +344,7 @@ $staticMethod=|QString|fromPercentEncoding|const QByteArray &
 $prototype=static QUrl fromUserInput ( const QString & userInput )
 $staticMethod=|QUrl|fromUserInput|const QString &
 
-$prototype=static QStringList idnWhitelist ()
-$staticMethod=|QStringList|idnWhitelist|
+$prototypeV2=static QStringList idnWhitelist()
 
 $prototype=static void setIdnWhitelist ( const QStringList & list )
 $staticMethod=|void|setIdnWhitelist|const QStringList &

@@ -73,8 +73,7 @@ $method=|void|setX|qreal
 $prototype=void setY(qreal y)
 $method=|void|setY|qreal
 
-$prototype=QPoint toPoint() const
-$method=|QPoint|toPoint|
+$prototypeV2=QPoint toPoint() const
 
 $prototypeV2=qreal x() const
 

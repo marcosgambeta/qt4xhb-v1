@@ -35,8 +35,7 @@ $method=|QAbstractAnimation *|animationAt|int
 
 $prototypeV2=int animationCount() const
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=int indexOfAnimation ( QAbstractAnimation * animation ) const
 $method=|int|indexOfAnimation|QAbstractAnimation *

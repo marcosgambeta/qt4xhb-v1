@@ -82,8 +82,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QDir absoluteDir() const
-$method=|QDir|absoluteDir|
+$prototypeV2=QDir absoluteDir() const
 
 $prototypeV2=QString absoluteFilePath() const
 
@@ -103,11 +102,9 @@ $prototypeV2=QString completeBaseName() const
 
 $prototypeV2=QString completeSuffix() const
 
-$prototype=QDateTime created() const
-$method=|QDateTime|created|
+$prototypeV2=QDateTime created() const
 
-$prototype=QDir dir() const
-$method=|QDir|dir|
+$prototypeV2=QDir dir() const
 
 $prototypeV2=bool exists() const
 
@@ -117,8 +114,7 @@ $prototypeV2=QString filePath() const
 
 $prototypeV2=QString group() const
 
-$prototype=uint groupId() const
-$method=|uint|groupId|
+$prototypeV2=uint groupId() const
 
 $prototypeV2=bool isAbsolute() const
 
@@ -142,29 +138,24 @@ $prototypeV2=bool isSymLink() const
 
 $prototypeV2=bool isWritable() const
 
-$prototype=QDateTime lastModified() const
-$method=|QDateTime|lastModified|
+$prototypeV2=QDateTime lastModified() const
 
-$prototype=QDateTime lastRead() const
-$method=|QDateTime|lastRead|
+$prototypeV2=QDateTime lastRead() const
 
 $prototypeV2=bool makeAbsolute()
 
 $prototypeV2=QString owner() const
 
-$prototype=uint ownerId() const
-$method=|uint|ownerId|
+$prototypeV2=uint ownerId() const
 
 $prototypeV2=QString path() const
 
 $prototype=bool permission(QFile::Permissions permissions) const
 $method=|bool|permission|QFile::Permissions
 
-$prototype=QFile::Permissions permissions() const
-$method=|QFile::Permissions|permissions|
+$prototypeV2=QFile::Permissions permissions() const
 
-$prototype=void refresh()
-$method=|void|refresh|
+$prototypeV2=void refresh()
 
 $prototype=void setCaching(bool enable)
 $method=|void|setCaching|bool
@@ -205,8 +196,7 @@ HB_FUNC_STATIC( QFILEINFO_SETFILE )
 }
 $addMethod=setFile
 
-$prototype=qint64 size() const
-$method=|qint64|size|
+$prototypeV2=qint64 size() const
 
 $prototypeV2=QString suffix() const
 

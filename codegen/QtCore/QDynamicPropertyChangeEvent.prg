@@ -30,7 +30,6 @@ $constructor=|new|const QByteArray &
 
 $deleteMethod
 
-$prototype=QByteArray propertyName () const
-$method=|QByteArray|propertyName|
+$prototypeV2=QByteArray propertyName() const
 
 #pragma ENDDUMP

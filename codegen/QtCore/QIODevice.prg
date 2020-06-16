@@ -52,16 +52,13 @@ $deleteMethod
 
 $prototypeV2=virtual bool atEnd() const
 
-$prototype=virtual qint64 bytesAvailable () const
-$virtualMethod=|qint64|bytesAvailable|
+$prototypeV2=virtual qint64 bytesAvailable() const
 
-$prototype=virtual qint64 bytesToWrite () const
-$virtualMethod=|qint64|bytesToWrite|
+$prototypeV2=virtual qint64 bytesToWrite() const
 
 $prototypeV2=virtual bool canReadLine() const
 
-$prototype=virtual void close ()
-$virtualMethod=|void|close|
+$prototypeV2=virtual void close()
 
 $prototypeV2=QString errorString() const
 
@@ -112,8 +109,7 @@ HB_FUNC_STATIC( QIODEVICE_PEEK )
 }
 $addMethod=peek
 
-$prototype=virtual qint64 pos () const
-$virtualMethod=|qint64|pos|
+$prototypeV2=virtual qint64 pos() const
 
 $prototype=bool putChar ( char c )
 $method=|bool|putChar|char
@@ -146,8 +142,7 @@ HB_FUNC_STATIC( QIODEVICE_READ )
 }
 $addMethod=read
 
-$prototype=QByteArray readAll ()
-$method=|QByteArray|readAll|
+$prototypeV2=QByteArray readAll()
 
 $prototype=qint64 readLine ( char * data, qint64 maxSize )
 $internalMethod=|qint64|readLine,readLine1|char *,qint64
@@ -185,8 +180,7 @@ $virtualMethod=|bool|seek|qint64
 $prototype=void setTextModeEnabled ( bool enabled )
 $method=|void|setTextModeEnabled|bool
 
-$prototype=virtual qint64 size () const
-$virtualMethod=|qint64|size|
+$prototypeV2=virtual qint64 size() const
 
 $prototype=void ungetChar ( char c )
 $method=|void|ungetChar|char

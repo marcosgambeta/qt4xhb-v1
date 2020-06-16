@@ -84,8 +84,7 @@ $virtualMethod=|QModelIndexList|match|const QModelIndex &,int,const QVariant &,i
 $prototype=virtual QMimeData * mimeData ( const QModelIndexList & indexes ) const
 $virtualMethod=|QMimeData *|mimeData|const QModelIndexList &
 
-$prototype=virtual QStringList mimeTypes () const
-$virtualMethod=|QStringList|mimeTypes|
+$prototypeV2=virtual QStringList mimeTypes() const
 
 $prototype=virtual QModelIndex parent ( const QModelIndex & index ) const = 0
 $virtualMethod=|QModelIndex|parent|const QModelIndex &
@@ -123,14 +122,11 @@ $virtualMethod=|void|sort|int,Qt::SortOrder=Qt::AscendingOrder
 $prototype=virtual QSize span ( const QModelIndex & index ) const
 $virtualMethod=|QSize|span|const QModelIndex &
 
-$prototype=Qt::DropActions supportedDragActions () const
-$method=|Qt::DropActions|supportedDragActions|
+$prototypeV2=Qt::DropActions supportedDragActions() const
 
-$prototype=virtual Qt::DropActions supportedDropActions () const
-$virtualMethod=|Qt::DropActions|supportedDropActions|
+$prototypeV2=virtual Qt::DropActions supportedDropActions() const
 
-$prototype=virtual void revert ()
-$virtualMethod=|void|revert|
+$prototypeV2=virtual void revert()
 
 $prototypeV2=virtual bool submit()
 

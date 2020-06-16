@@ -55,11 +55,9 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QObject * eventSource() const
-$method=|QObject *|eventSource|
+$prototypeV2=QObject * eventSource() const
 
-$prototype=QEvent::Type eventType() const
-$method=|QEvent::Type|eventType|
+$prototypeV2=QEvent::Type eventType() const
 
 $prototype=void setEventSource(QObject * object)
 $method=|void|setEventSource|QObject *

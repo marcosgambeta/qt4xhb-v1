@@ -36,11 +36,9 @@ $prototypeV2=int expiryTimeout() const
 
 $prototypeV2=int maxThreadCount() const
 
-$prototype=void releaseThread ()
-$method=|void|releaseThread|
+$prototypeV2=void releaseThread()
 
-$prototype=void reserveThread ()
-$method=|void|reserveThread|
+$prototypeV2=void reserveThread()
 
 $prototype=void setExpiryTimeout ( int expiryTimeout )
 $method=|void|setExpiryTimeout|int
@@ -82,7 +80,6 @@ HB_FUNC_STATIC( QTHREADPOOL_WAITFORDONE )
 }
 $addMethod=waitForDone
 
-$prototype=static QThreadPool * globalInstance ()
-$staticMethod=|QThreadPool *|globalInstance|
+$prototypeV2=static QThreadPool * globalInstance()
 
 #pragma ENDDUMP
