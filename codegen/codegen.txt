@@ -307,7 +307,7 @@ QDesignerFormEditorInterface                     |QObject  |QtDesigner
 QDesignerFormWindowCursorInterface               |object   |QtDesigner
 QDesignerFormWindowCursorInterface::MoveMode     |enum     |QtDesigner
 QDesignerFormWindowCursorInterface::MoveOperation|enum     |QtDesigner
-QDesignerFormWindowInterface                     |QObject  |QtDesigner
+QDesignerFormWindowInterface                     |QWidget  |QtDesigner
 QDesignerFormWindowInterface::Feature            |enum     |QtDesigner
 QDesignerFormWindowManagerInterface              |QObject  |QtDesigner
 QDesignerMemberSheetExtension                    |object   |QtDesigner
