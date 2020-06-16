@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ACQUIRE )
 }
 
 /*
-SystemSemaphoreError error () const
+QSystemSemaphore::SystemSemaphoreError error() const
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ERROR )
 {

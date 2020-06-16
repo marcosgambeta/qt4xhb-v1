@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_DELETE )
 }
 
 /*
-QVariant currentValue () const
+QVariant currentValue() const
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_CURRENTVALUE )
 {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_CURRENTVALUE )
 }
 
 /*
-QEasingCurve easingCurve () const
+QEasingCurve easingCurve() const
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_EASINGCURVE )
 {
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_EASINGCURVE )
 }
 
 /*
-QVariant endValue () const
+QVariant endValue() const
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_ENDVALUE )
 {
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETSTARTVALUE )
 }
 
 /*
-QVariant startValue () const
+QVariant startValue() const
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_STARTVALUE )
 {

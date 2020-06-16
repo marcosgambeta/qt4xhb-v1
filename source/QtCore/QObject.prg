@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QOBJECT_CHILDREN )
 }
 
 /*
-void dumpObjectInfo ()
+void dumpObjectInfo()
 */
 HB_FUNC_STATIC( QOBJECT_DUMPOBJECTINFO )
 {
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QOBJECT_DUMPOBJECTINFO )
 }
 
 /*
-void dumpObjectTree ()
+void dumpObjectTree()
 */
 HB_FUNC_STATIC( QOBJECT_DUMPOBJECTTREE )
 {
@@ -790,7 +790,7 @@ HB_FUNC_STATIC( QOBJECT_OBJECTNAME )
 }
 
 /*
-QObject * parent () const
+QObject * parent() const
 */
 HB_FUNC_STATIC( QOBJECT_PARENT )
 {
@@ -990,7 +990,7 @@ HB_FUNC_STATIC( QOBJECT_STARTTIMER )
 }
 
 /*
-QThread * thread () const
+QThread * thread() const
 */
 HB_FUNC_STATIC( QOBJECT_THREAD )
 {
@@ -1015,7 +1015,7 @@ HB_FUNC_STATIC( QOBJECT_THREAD )
 }
 
 /*
-void deleteLater ()
+void deleteLater()
 */
 HB_FUNC_STATIC( QOBJECT_DELETELATER )
 {

@@ -682,7 +682,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ENTITYRESOLVER )
 }
 
 /*
-Error error() const
+QXmlStreamReader::Error error() const
 */
 HB_FUNC_STATIC( QXMLSTREAMREADER_ERROR )
 {
@@ -1394,7 +1394,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_READELEMENTTEXT )
 }
 
 /*
-TokenType readNext()
+QXmlStreamReader::TokenType readNext()
 */
 HB_FUNC_STATIC( QXMLSTREAMREADER_READNEXT )
 {
@@ -1595,7 +1595,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_TOKENSTRING )
 }
 
 /*
-TokenType tokenType() const
+QXmlStreamReader::TokenType tokenType() const
 */
 HB_FUNC_STATIC( QXMLSTREAMREADER_TOKENTYPE )
 {

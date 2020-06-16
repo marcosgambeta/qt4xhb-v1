@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SETTYPE )
 }
 
 /*
-Type type () const
+QEasingCurve::Type type() const
 */
 HB_FUNC_STATIC( QEASINGCURVE_TYPE )
 {

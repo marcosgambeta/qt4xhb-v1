@@ -705,7 +705,7 @@ HB_FUNC_STATIC( QVARIANT_CANCONVERT )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QVARIANT_CLEAR )
 {
@@ -803,7 +803,7 @@ HB_FUNC_STATIC( QVARIANT_ISVALID )
 }
 
 /*
-QBitArray toBitArray () const
+QBitArray toBitArray() const
 */
 HB_FUNC_STATIC( QVARIANT_TOBITARRAY )
 {
@@ -852,7 +852,7 @@ HB_FUNC_STATIC( QVARIANT_TOBOOL )
 }
 
 /*
-QByteArray toByteArray () const
+QByteArray toByteArray() const
 */
 HB_FUNC_STATIC( QVARIANT_TOBYTEARRAY )
 {
@@ -877,7 +877,7 @@ HB_FUNC_STATIC( QVARIANT_TOBYTEARRAY )
 }
 
 /*
-QChar toChar () const
+QChar toChar() const
 */
 HB_FUNC_STATIC( QVARIANT_TOCHAR )
 {
@@ -902,7 +902,7 @@ HB_FUNC_STATIC( QVARIANT_TOCHAR )
 }
 
 /*
-QDate toDate () const
+QDate toDate() const
 */
 HB_FUNC_STATIC( QVARIANT_TODATE )
 {
@@ -927,7 +927,7 @@ HB_FUNC_STATIC( QVARIANT_TODATE )
 }
 
 /*
-QDateTime toDateTime () const
+QDateTime toDateTime() const
 */
 HB_FUNC_STATIC( QVARIANT_TODATETIME )
 {
@@ -952,7 +952,7 @@ HB_FUNC_STATIC( QVARIANT_TODATETIME )
 }
 
 /*
-QEasingCurve toEasingCurve () const
+QEasingCurve toEasingCurve() const
 */
 HB_FUNC_STATIC( QVARIANT_TOEASINGCURVE )
 {
@@ -977,7 +977,7 @@ HB_FUNC_STATIC( QVARIANT_TOEASINGCURVE )
 }
 
 /*
-QLine toLine () const
+QLine toLine() const
 */
 HB_FUNC_STATIC( QVARIANT_TOLINE )
 {
@@ -1002,7 +1002,7 @@ HB_FUNC_STATIC( QVARIANT_TOLINE )
 }
 
 /*
-QLineF toLineF () const
+QLineF toLineF() const
 */
 HB_FUNC_STATIC( QVARIANT_TOLINEF )
 {
@@ -1051,7 +1051,7 @@ HB_FUNC_STATIC( QVARIANT_TOLIST )
 }
 
 /*
-QLocale toLocale () const
+QLocale toLocale() const
 */
 HB_FUNC_STATIC( QVARIANT_TOLOCALE )
 {
@@ -1076,7 +1076,7 @@ HB_FUNC_STATIC( QVARIANT_TOLOCALE )
 }
 
 /*
-QPoint toPoint () const
+QPoint toPoint() const
 */
 HB_FUNC_STATIC( QVARIANT_TOPOINT )
 {
@@ -1101,7 +1101,7 @@ HB_FUNC_STATIC( QVARIANT_TOPOINT )
 }
 
 /*
-QPointF toPointF () const
+QPointF toPointF() const
 */
 HB_FUNC_STATIC( QVARIANT_TOPOINTF )
 {
@@ -1152,7 +1152,7 @@ HB_FUNC_STATIC( QVARIANT_TOREAL )
 }
 
 /*
-QRect toRect () const
+QRect toRect() const
 */
 HB_FUNC_STATIC( QVARIANT_TORECT )
 {
@@ -1177,7 +1177,7 @@ HB_FUNC_STATIC( QVARIANT_TORECT )
 }
 
 /*
-QRectF toRectF () const
+QRectF toRectF() const
 */
 HB_FUNC_STATIC( QVARIANT_TORECTF )
 {
@@ -1202,7 +1202,7 @@ HB_FUNC_STATIC( QVARIANT_TORECTF )
 }
 
 /*
-QRegExp toRegExp () const
+QRegExp toRegExp() const
 */
 HB_FUNC_STATIC( QVARIANT_TOREGEXP )
 {
@@ -1227,7 +1227,7 @@ HB_FUNC_STATIC( QVARIANT_TOREGEXP )
 }
 
 /*
-QSize toSize () const
+QSize toSize() const
 */
 HB_FUNC_STATIC( QVARIANT_TOSIZE )
 {
@@ -1252,7 +1252,7 @@ HB_FUNC_STATIC( QVARIANT_TOSIZE )
 }
 
 /*
-QSizeF toSizeF () const
+QSizeF toSizeF() const
 */
 HB_FUNC_STATIC( QVARIANT_TOSIZEF )
 {
@@ -1301,7 +1301,7 @@ HB_FUNC_STATIC( QVARIANT_TOSTRING )
 }
 
 /*
-QStringList toStringList () const
+QStringList toStringList() const
 */
 HB_FUNC_STATIC( QVARIANT_TOSTRINGLIST )
 {
@@ -1325,7 +1325,7 @@ HB_FUNC_STATIC( QVARIANT_TOSTRINGLIST )
 }
 
 /*
-QTime toTime () const
+QTime toTime() const
 */
 HB_FUNC_STATIC( QVARIANT_TOTIME )
 {
@@ -1350,7 +1350,7 @@ HB_FUNC_STATIC( QVARIANT_TOTIME )
 }
 
 /*
-QUrl toUrl () const
+QUrl toUrl() const
 */
 HB_FUNC_STATIC( QVARIANT_TOURL )
 {
@@ -1375,7 +1375,7 @@ HB_FUNC_STATIC( QVARIANT_TOURL )
 }
 
 /*
-Type type () const
+QVariant::Type type() const
 */
 HB_FUNC_STATIC( QVARIANT_TYPE )
 {

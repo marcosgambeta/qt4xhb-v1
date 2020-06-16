@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QWRITELOCKER_DELETE )
 }
 
 /*
-QReadWriteLock * readWriteLock () const
+QReadWriteLock * readWriteLock() const
 */
 HB_FUNC_STATIC( QWRITELOCKER_READWRITELOCK )
 {
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QWRITELOCKER_READWRITELOCK )
 }
 
 /*
-void relock ()
+void relock()
 */
 HB_FUNC_STATIC( QWRITELOCKER_RELOCK )
 {
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QWRITELOCKER_RELOCK )
 }
 
 /*
-void unlock ()
+void unlock()
 */
 HB_FUNC_STATIC( QWRITELOCKER_UNLOCK )
 {

@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QTIMELINE_CURRENTVALUE )
 }
 
 /*
-CurveShape curveShape () const
+QTimeLine::CurveShape curveShape() const
 */
 HB_FUNC_STATIC( QTIMELINE_CURVESHAPE )
 {
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QTIMELINE_CURVESHAPE )
 }
 
 /*
-Direction direction () const
+QTimeLine::Direction direction() const
 */
 HB_FUNC_STATIC( QTIMELINE_DIRECTION )
 {
@@ -583,7 +583,7 @@ HB_FUNC_STATIC( QTIMELINE_STARTFRAME )
 }
 
 /*
-State state () const
+QTimeLine::State state() const
 */
 HB_FUNC_STATIC( QTIMELINE_STATE )
 {
@@ -655,7 +655,7 @@ HB_FUNC_STATIC( QTIMELINE_VALUEFORTIME )
 }
 
 /*
-void resume ()
+void resume()
 */
 HB_FUNC_STATIC( QTIMELINE_RESUME )
 {
@@ -733,7 +733,7 @@ HB_FUNC_STATIC( QTIMELINE_SETPAUSED )
 }
 
 /*
-void start ()
+void start()
 */
 HB_FUNC_STATIC( QTIMELINE_START )
 {
@@ -759,7 +759,7 @@ HB_FUNC_STATIC( QTIMELINE_START )
 }
 
 /*
-void stop ()
+void stop()
 */
 HB_FUNC_STATIC( QTIMELINE_STOP )
 {
@@ -785,7 +785,7 @@ HB_FUNC_STATIC( QTIMELINE_STOP )
 }
 
 /*
-void toggleDirection ()
+void toggleDirection()
 */
 HB_FUNC_STATIC( QTIMELINE_TOGGLEDIRECTION )
 {

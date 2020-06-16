@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_CANCELDELAYEDEVENT )
 }
 
 /*
-void clearError ()
+void clearError()
 */
 HB_FUNC_STATIC( QSTATEMACHINE_CLEARERROR )
 {
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_DEFAULTANIMATIONS )
 }
 
 /*
-Error error () const
+QStateMachine::Error error() const
 */
 HB_FUNC_STATIC( QSTATEMACHINE_ERROR )
 {
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_ERRORSTRING )
 }
 
 /*
-QStateMachine::RestorePolicy globalRestorePolicy () const
+QStateMachine::RestorePolicy globalRestorePolicy() const
 */
 HB_FUNC_STATIC( QSTATEMACHINE_GLOBALRESTOREPOLICY )
 {
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_EVENTFILTER )
 }
 
 /*
-void start ()
+void start()
 */
 HB_FUNC_STATIC( QSTATEMACHINE_START )
 {
@@ -573,7 +573,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_START )
 }
 
 /*
-void stop ()
+void stop()
 */
 HB_FUNC_STATIC( QSTATEMACHINE_STOP )
 {

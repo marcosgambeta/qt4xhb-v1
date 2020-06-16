@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_ADDPATHS )
 }
 
 /*
-QStringList directories () const
+QStringList directories() const
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_DIRECTORIES )
 {
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_DIRECTORIES )
 }
 
 /*
-QStringList files () const
+QStringList files() const
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_FILES )
 {

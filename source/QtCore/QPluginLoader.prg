@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_FILENAME )
 }
 
 /*
-QObject * instance ()
+QObject * instance()
 */
 HB_FUNC_STATIC( QPLUGINLOADER_INSTANCE )
 {
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_LOAD )
 }
 
 /*
-QLibrary::LoadHints loadHints () const
+QLibrary::LoadHints loadHints() const
 */
 HB_FUNC_STATIC( QPLUGINLOADER_LOADHINTS )
 {

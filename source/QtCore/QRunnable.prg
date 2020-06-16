@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QRUNNABLE_AUTODELETE )
 }
 
 /*
-virtual void run () = 0
+virtual void run() = 0
 */
 HB_FUNC_STATIC( QRUNNABLE_RUN )
 {

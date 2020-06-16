@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_INDEXIN )
 }
 
 /*
-QByteArray pattern () const
+QByteArray pattern() const
 */
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_PATTERN )
 {

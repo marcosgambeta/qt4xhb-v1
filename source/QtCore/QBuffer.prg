@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QBUFFER_CANREADLINE )
 }
 
 /*
-virtual void close ()
+virtual void close()
 */
 HB_FUNC_STATIC( QBUFFER_CLOSE )
 {
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QBUFFER_OPEN )
 }
 
 /*
-virtual qint64 pos () const
+virtual qint64 pos() const
 */
 HB_FUNC_STATIC( QBUFFER_POS )
 {
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QBUFFER_SEEK )
 }
 
 /*
-virtual qint64 size () const
+virtual qint64 size() const
 */
 HB_FUNC_STATIC( QBUFFER_SIZE )
 {

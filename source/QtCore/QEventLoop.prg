@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS )
 }
 
 /*
-void wakeUp ()
+void wakeUp()
 */
 HB_FUNC_STATIC( QEVENTLOOP_WAKEUP )
 {
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QEVENTLOOP_WAKEUP )
 }
 
 /*
-void quit ()
+void quit()
 */
 HB_FUNC_STATIC( QEVENTLOOP_QUIT )
 {

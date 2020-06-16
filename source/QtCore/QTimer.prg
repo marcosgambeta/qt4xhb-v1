@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QTIMER_START )
 }
 
 /*
-void stop ()
+void stop()
 */
 HB_FUNC_STATIC( QTIMER_STOP )
 {

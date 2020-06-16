@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_DELETE )
 }
 
 /*
-QObject *senderObject() const
+QObject * senderObject() const
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_SENDEROBJECT )
 {

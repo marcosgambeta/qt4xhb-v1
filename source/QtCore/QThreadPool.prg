@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QTHREADPOOL_MAXTHREADCOUNT )
 }
 
 /*
-void releaseThread ()
+void releaseThread()
 */
 HB_FUNC_STATIC( QTHREADPOOL_RELEASETHREAD )
 {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QTHREADPOOL_RELEASETHREAD )
 }
 
 /*
-void reserveThread ()
+void reserveThread()
 */
 HB_FUNC_STATIC( QTHREADPOOL_RESERVETHREAD )
 {
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QTHREADPOOL_WAITFORDONE )
 }
 
 /*
-static QThreadPool * globalInstance ()
+static QThreadPool * globalInstance()
 */
 HB_FUNC_STATIC( QTHREADPOOL_GLOBALINSTANCE )
 {

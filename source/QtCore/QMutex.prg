@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QMUTEX_DELETE )
 }
 
 /*
-void lock ()
+void lock()
 */
 HB_FUNC_STATIC( QMUTEX_LOCK )
 {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QMUTEX_TRYLOCK )
 }
 
 /*
-void unlock ()
+void unlock()
 */
 HB_FUNC_STATIC( QMUTEX_UNLOCK )
 {

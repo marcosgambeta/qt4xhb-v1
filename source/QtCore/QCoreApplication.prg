@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_NOTIFY )
 }
 
 /*
-void quit ()
+void quit()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_QUIT )
 {
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONNAME )
 }
 
 /*
-static qint64 applicationPid ()
+static qint64 applicationPid()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONPID )
 {
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONVERSION )
 }
 
 /*
-static QStringList arguments ()
+static QStringList arguments()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_ARGUMENTS )
 {
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_EXIT )
 }
 
 /*
-static void flush ()
+static void flush()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_FLUSH )
 {
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_INSTALLTRANSLATOR )
 }
 
 /*
-static QCoreApplication * instance ()
+static QCoreApplication * instance()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_INSTANCE )
 {
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_INSTANCE )
 }
 
 /*
-static QStringList libraryPaths ()
+static QStringList libraryPaths()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_LIBRARYPATHS )
 {

@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QEVENT_DELETE )
 }
 
 /*
-void accept ()
+void accept()
 */
 HB_FUNC_STATIC( QEVENT_ACCEPT )
 {
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QEVENT_ACCEPT )
 }
 
 /*
-void ignore ()
+void ignore()
 */
 HB_FUNC_STATIC( QEVENT_IGNORE )
 {
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QEVENT_SPONTANEOUS )
 }
 
 /*
-Type type () const
+QEvent::Type type() const
 */
 HB_FUNC_STATIC( QEVENT_TYPE )
 {

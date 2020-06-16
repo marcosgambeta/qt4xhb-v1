@@ -558,7 +558,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_OWNERID )
 }
 
 /*
-virtual qint64 pos () const
+virtual qint64 pos() const
 */
 HB_FUNC_STATIC( QFSFILEENGINE_POS )
 {
@@ -800,7 +800,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_SETSIZE )
 }
 
 /*
-virtual qint64 size () const
+virtual qint64 size() const
 */
 HB_FUNC_STATIC( QFSFILEENGINE_SIZE )
 {
@@ -891,7 +891,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_CURRENTPATH )
 }
 
 /*
-QFileInfoList drives ()
+QFileInfoList drives()
 */
 HB_FUNC_STATIC( QFSFILEENGINE_DRIVES )
 {

@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QRESOURCE_ISVALID )
 }
 
 /*
-QLocale locale () const
+QLocale locale() const
 */
 HB_FUNC_STATIC( QRESOURCE_LOCALE )
 {
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QRESOURCE_SETLOCALE )
 }
 
 /*
-qint64 size () const
+qint64 size() const
 */
 HB_FUNC_STATIC( QRESOURCE_SIZE )
 {

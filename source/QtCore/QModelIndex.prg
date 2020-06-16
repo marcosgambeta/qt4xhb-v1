@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QMODELINDEX_DATA )
 }
 
 /*
-Qt::ItemFlags flags () const
+Qt::ItemFlags flags() const
 */
 HB_FUNC_STATIC( QMODELINDEX_FLAGS )
 {
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QMODELINDEX_FLAGS )
 }
 
 /*
-qint64 internalId () const
+qint64 internalId() const
 */
 HB_FUNC_STATIC( QMODELINDEX_INTERNALID )
 {
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QMODELINDEX_MODEL )
 }
 
 /*
-QModelIndex parent () const
+QModelIndex parent() const
 */
 HB_FUNC_STATIC( QMODELINDEX_PARENT )
 {

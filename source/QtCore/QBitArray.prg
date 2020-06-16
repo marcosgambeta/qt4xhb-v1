@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QBITARRAY_AT )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QBITARRAY_CLEAR )
 {

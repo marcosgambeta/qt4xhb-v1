@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_ENTRYLIST )
 }
 
 /*
-QFile::FileError error () const
+QFile::FileError error() const
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_ERROR )
 {
@@ -555,7 +555,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_OWNERID )
 }
 
 /*
-virtual qint64 pos () const
+virtual qint64 pos() const
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_POS )
 {
@@ -753,7 +753,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_SETSIZE )
 }
 
 /*
-virtual qint64 size () const
+virtual qint64 size() const
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_SIZE )
 {

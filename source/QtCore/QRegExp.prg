@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QREGEXP_CAPTURECOUNT )
 }
 
 /*
-QStringList capturedTexts () const
+QStringList capturedTexts() const
 */
 HB_FUNC_STATIC( QREGEXP_CAPTUREDTEXTS )
 {
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QREGEXP_CAPTUREDTEXTS )
 }
 
 /*
-Qt::CaseSensitivity caseSensitivity () const
+Qt::CaseSensitivity caseSensitivity() const
 */
 HB_FUNC_STATIC( QREGEXP_CASESENSITIVITY )
 {
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QREGEXP_PATTERN )
 }
 
 /*
-PatternSyntax patternSyntax () const
+QRegExp::PatternSyntax patternSyntax() const
 */
 HB_FUNC_STATIC( QREGEXP_PATTERNSYNTAX )
 {

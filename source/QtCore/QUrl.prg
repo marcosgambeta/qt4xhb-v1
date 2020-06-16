@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QURL_AUTHORITY )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QURL_CLEAR )
 {
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QURL_CLEAR )
 }
 
 /*
-QByteArray encodedFragment () const
+QByteArray encodedFragment() const
 */
 HB_FUNC_STATIC( QURL_ENCODEDFRAGMENT )
 {
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QURL_ENCODEDFRAGMENT )
 }
 
 /*
-QByteArray encodedHost () const
+QByteArray encodedHost() const
 */
 HB_FUNC_STATIC( QURL_ENCODEDHOST )
 {
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QURL_ENCODEDHOST )
 }
 
 /*
-QByteArray encodedPassword () const
+QByteArray encodedPassword() const
 */
 HB_FUNC_STATIC( QURL_ENCODEDPASSWORD )
 {
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QURL_ENCODEDPASSWORD )
 }
 
 /*
-QByteArray encodedPath () const
+QByteArray encodedPath() const
 */
 HB_FUNC_STATIC( QURL_ENCODEDPATH )
 {
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QURL_ENCODEDPATH )
 }
 
 /*
-QByteArray encodedQuery () const
+QByteArray encodedQuery() const
 */
 HB_FUNC_STATIC( QURL_ENCODEDQUERY )
 {
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QURL_ENCODEDQUERYITEMVALUE )
 }
 
 /*
-QByteArray encodedUserName () const
+QByteArray encodedUserName() const
 */
 HB_FUNC_STATIC( QURL_ENCODEDUSERNAME )
 {
@@ -1925,7 +1925,7 @@ HB_FUNC_STATIC( QURL_FROMUSERINPUT )
 }
 
 /*
-static QStringList idnWhitelist ()
+static QStringList idnWhitelist()
 */
 HB_FUNC_STATIC( QURL_IDNWHITELIST )
 {

@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QRECT_BOTTOM )
 }
 
 /*
-QPoint bottomLeft () const
+QPoint bottomLeft() const
 */
 HB_FUNC_STATIC( QRECT_BOTTOMLEFT )
 {
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QRECT_BOTTOMLEFT )
 }
 
 /*
-QPoint bottomRight () const
+QPoint bottomRight() const
 */
 HB_FUNC_STATIC( QRECT_BOTTOMRIGHT )
 {
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QRECT_BOTTOMRIGHT )
 }
 
 /*
-QPoint center () const
+QPoint center() const
 */
 HB_FUNC_STATIC( QRECT_CENTER )
 {
@@ -942,7 +942,7 @@ HB_FUNC_STATIC( QRECT_MOVETOPRIGHT )
 }
 
 /*
-QRect normalized () const
+QRect normalized() const
 */
 HB_FUNC_STATIC( QRECT_NORMALIZED )
 {
@@ -1381,7 +1381,7 @@ HB_FUNC_STATIC( QRECT_SETY )
 }
 
 /*
-QSize size () const
+QSize size() const
 */
 HB_FUNC_STATIC( QRECT_SIZE )
 {
@@ -1430,7 +1430,7 @@ HB_FUNC_STATIC( QRECT_TOP )
 }
 
 /*
-QPoint topLeft () const
+QPoint topLeft() const
 */
 HB_FUNC_STATIC( QRECT_TOPLEFT )
 {
@@ -1455,7 +1455,7 @@ HB_FUNC_STATIC( QRECT_TOPLEFT )
 }
 
 /*
-QPoint topRight () const
+QPoint topRight() const
 */
 HB_FUNC_STATIC( QRECT_TOPRIGHT )
 {

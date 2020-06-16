@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QFILE_DELETE )
 }
 
 /*
-FileError error () const
+QFile::FileError error() const
 */
 HB_FUNC_STATIC( QFILE_ERROR )
 {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QFILE_UNMAP )
 }
 
 /*
-void unsetError ()
+void unsetError()
 */
 HB_FUNC_STATIC( QFILE_UNSETERROR )
 {
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QFILE_ATEND )
 }
 
 /*
-virtual void close ()
+virtual void close()
 */
 HB_FUNC_STATIC( QFILE_CLOSE )
 {
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QFILE_OPEN )
 }
 
 /*
-virtual qint64 pos () const
+virtual qint64 pos() const
 */
 HB_FUNC_STATIC( QFILE_POS )
 {
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QFILE_SEEK )
 }
 
 /*
-virtual qint64 size () const
+virtual qint64 size() const
 */
 HB_FUNC_STATIC( QFILE_SIZE )
 {

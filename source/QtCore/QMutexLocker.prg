@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QMUTEXLOCKER_DELETE )
 }
 
 /*
-QMutex * mutex () const
+QMutex * mutex() const
 */
 HB_FUNC_STATIC( QMUTEXLOCKER_MUTEX )
 {
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QMUTEXLOCKER_MUTEX )
 }
 
 /*
-void relock ()
+void relock()
 */
 HB_FUNC_STATIC( QMUTEXLOCKER_RELOCK )
 {
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QMUTEXLOCKER_RELOCK )
 }
 
 /*
-void unlock ()
+void unlock()
 */
 HB_FUNC_STATIC( QMUTEXLOCKER_UNLOCK )
 {

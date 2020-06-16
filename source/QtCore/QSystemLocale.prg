@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QSYSTEMLOCALE_NEW )
 }
 
 /*
-virtual QLocale fallbackLocale () const
+virtual QLocale fallbackLocale() const
 */
 HB_FUNC_STATIC( QSYSTEMLOCALE_FALLBACKLOCALE )
 {

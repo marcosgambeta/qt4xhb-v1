@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QLOCALE_BCP47NAME )
 }
 
 /*
-Country country () const
+QLocale::Country country() const
 */
 HB_FUNC_STATIC( QLOCALE_COUNTRY )
 {
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QLOCALE_DAYNAME )
 }
 
 /*
-QChar decimalPoint () const
+QChar decimalPoint() const
 */
 HB_FUNC_STATIC( QLOCALE_DECIMALPOINT )
 {
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QLOCALE_DECIMALPOINT )
 }
 
 /*
-QChar exponential () const
+QChar exponential() const
 */
 HB_FUNC_STATIC( QLOCALE_EXPONENTIAL )
 {
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QLOCALE_EXPONENTIAL )
 }
 
 /*
-Qt::DayOfWeek firstDayOfWeek () const
+Qt::DayOfWeek firstDayOfWeek() const
 */
 HB_FUNC_STATIC( QLOCALE_FIRSTDAYOFWEEK )
 {
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QLOCALE_FIRSTDAYOFWEEK )
 }
 
 /*
-QChar groupSeparator () const
+QChar groupSeparator() const
 */
 HB_FUNC_STATIC( QLOCALE_GROUPSEPARATOR )
 {
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QLOCALE_GROUPSEPARATOR )
 }
 
 /*
-Language language () const
+QLocale::Language language() const
 */
 HB_FUNC_STATIC( QLOCALE_LANGUAGE )
 {
@@ -526,7 +526,7 @@ HB_FUNC_STATIC( QLOCALE_LANGUAGE )
 }
 
 /*
-MeasurementSystem measurementSystem () const
+QLocale::MeasurementSystem measurementSystem() const
 */
 HB_FUNC_STATIC( QLOCALE_MEASUREMENTSYSTEM )
 {
@@ -646,7 +646,7 @@ HB_FUNC_STATIC( QLOCALE_NATIVELANGUAGENAME )
 }
 
 /*
-QChar negativeSign () const
+QChar negativeSign() const
 */
 HB_FUNC_STATIC( QLOCALE_NEGATIVESIGN )
 {
@@ -671,7 +671,7 @@ HB_FUNC_STATIC( QLOCALE_NEGATIVESIGN )
 }
 
 /*
-NumberOptions numberOptions () const
+QLocale::NumberOptions numberOptions() const
 */
 HB_FUNC_STATIC( QLOCALE_NUMBEROPTIONS )
 {
@@ -695,7 +695,7 @@ HB_FUNC_STATIC( QLOCALE_NUMBEROPTIONS )
 }
 
 /*
-QChar percent () const
+QChar percent() const
 */
 HB_FUNC_STATIC( QLOCALE_PERCENT )
 {
@@ -744,7 +744,7 @@ HB_FUNC_STATIC( QLOCALE_PMTEXT )
 }
 
 /*
-QChar positiveSign () const
+QChar positiveSign() const
 */
 HB_FUNC_STATIC( QLOCALE_POSITIVESIGN )
 {
@@ -816,7 +816,7 @@ HB_FUNC_STATIC( QLOCALE_QUOTESTRING )
 }
 
 /*
-Script script () const
+QLocale::Script script() const
 */
 HB_FUNC_STATIC( QLOCALE_SCRIPT )
 {
@@ -914,7 +914,7 @@ HB_FUNC_STATIC( QLOCALE_STANDALONEMONTHNAME )
 }
 
 /*
-Qt::LayoutDirection textDirection () const
+Qt::LayoutDirection textDirection() const
 */
 HB_FUNC_STATIC( QLOCALE_TEXTDIRECTION )
 {
@@ -1929,7 +1929,7 @@ HB_FUNC_STATIC( QLOCALE_TOUPPER )
 }
 
 /*
-QStringList uiLanguages () const
+QStringList uiLanguages() const
 */
 HB_FUNC_STATIC( QLOCALE_UILANGUAGES )
 {
@@ -1985,7 +1985,7 @@ HB_FUNC_STATIC( QLOCALE_WEEKDAYS )
 }
 
 /*
-static QLocale c ()
+static QLocale c()
 */
 HB_FUNC_STATIC( QLOCALE_C )
 {
@@ -2130,7 +2130,7 @@ HB_FUNC_STATIC( QLOCALE_SETDEFAULT )
 }
 
 /*
-static QLocale system ()
+static QLocale system()
 */
 HB_FUNC_STATIC( QLOCALE_SYSTEM )
 {

@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QLIBRARY_SETLOADHINTS )
 }
 
 /*
-LoadHints loadHints() const
+QLibrary::LoadHints loadHints() const
 */
 HB_FUNC_STATIC( QLIBRARY_LOADHINTS )
 {

@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QDATETIME_ADDYEARS )
 }
 
 /*
-QDate date () const
+QDate date() const
 */
 HB_FUNC_STATIC( QDATETIME_DATE )
 {
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QDATETIME_SETTIME_T )
 }
 
 /*
-QTime time () const
+QTime time() const
 */
 HB_FUNC_STATIC( QDATETIME_TIME )
 {
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QDATETIME_TIME )
 }
 
 /*
-Qt::TimeSpec timeSpec () const
+Qt::TimeSpec timeSpec() const
 */
 HB_FUNC_STATIC( QDATETIME_TIMESPEC )
 {
@@ -613,7 +613,7 @@ HB_FUNC_STATIC( QDATETIME_TIMESPEC )
 }
 
 /*
-QDateTime toLocalTime () const
+QDateTime toLocalTime() const
 */
 HB_FUNC_STATIC( QDATETIME_TOLOCALTIME )
 {
@@ -638,7 +638,7 @@ HB_FUNC_STATIC( QDATETIME_TOLOCALTIME )
 }
 
 /*
-qint64 toMSecsSinceEpoch () const
+qint64 toMSecsSinceEpoch() const
 */
 HB_FUNC_STATIC( QDATETIME_TOMSECSSINCEEPOCH )
 {
@@ -734,7 +734,7 @@ HB_FUNC_STATIC( QDATETIME_TOTIMESPEC )
 }
 
 /*
-uint toTime_t () const
+uint toTime_t() const
 */
 HB_FUNC_STATIC( QDATETIME_TOTIME_T )
 {
@@ -758,7 +758,7 @@ HB_FUNC_STATIC( QDATETIME_TOTIME_T )
 }
 
 /*
-QDateTime toUTC () const
+QDateTime toUTC() const
 */
 HB_FUNC_STATIC( QDATETIME_TOUTC )
 {
@@ -783,7 +783,7 @@ HB_FUNC_STATIC( QDATETIME_TOUTC )
 }
 
 /*
-static QDateTime currentDateTime ()
+static QDateTime currentDateTime()
 */
 HB_FUNC_STATIC( QDATETIME_CURRENTDATETIME )
 {
@@ -803,7 +803,7 @@ HB_FUNC_STATIC( QDATETIME_CURRENTDATETIME )
 }
 
 /*
-static QDateTime currentDateTimeUtc ()
+static QDateTime currentDateTimeUtc()
 */
 HB_FUNC_STATIC( QDATETIME_CURRENTDATETIMEUTC )
 {
@@ -823,7 +823,7 @@ HB_FUNC_STATIC( QDATETIME_CURRENTDATETIMEUTC )
 }
 
 /*
-static qint64 currentMSecsSinceEpoch ()
+static qint64 currentMSecsSinceEpoch()
 */
 HB_FUNC_STATIC( QDATETIME_CURRENTMSECSSINCEEPOCH )
 {

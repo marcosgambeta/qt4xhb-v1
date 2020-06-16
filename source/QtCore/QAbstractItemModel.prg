@@ -571,7 +571,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_MIMEDATA )
 }
 
 /*
-virtual QStringList mimeTypes () const
+virtual QStringList mimeTypes() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_MIMETYPES )
 {
@@ -890,7 +890,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SPAN )
 }
 
 /*
-Qt::DropActions supportedDragActions () const
+Qt::DropActions supportedDragActions() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUPPORTEDDRAGACTIONS )
 {
@@ -914,7 +914,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUPPORTEDDRAGACTIONS )
 }
 
 /*
-virtual Qt::DropActions supportedDropActions () const
+virtual Qt::DropActions supportedDropActions() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUPPORTEDDROPACTIONS )
 {
@@ -938,7 +938,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUPPORTEDDROPACTIONS )
 }
 
 /*
-virtual void revert ()
+virtual void revert()
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_REVERT )
 {

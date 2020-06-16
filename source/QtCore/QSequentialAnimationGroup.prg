@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_ADDPAUSE )
 }
 
 /*
-QAbstractAnimation * currentAnimation () const
+QAbstractAnimation * currentAnimation() const
 */
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_CURRENTANIMATION )
 {

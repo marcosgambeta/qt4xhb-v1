@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_ADDDATA )
 }
 
 /*
-void reset ()
+void reset()
 */
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_RESET )
 {
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_RESET )
 }
 
 /*
-QByteArray result () const
+QByteArray result() const
 */
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_RESULT )
 {

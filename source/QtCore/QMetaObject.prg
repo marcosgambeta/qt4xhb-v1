@@ -666,7 +666,7 @@ HB_FUNC_STATIC( QMETAOBJECT_SUPERCLASS )
 }
 
 /*
-QMetaProperty userProperty () const
+QMetaProperty userProperty() const
 */
 HB_FUNC_STATIC( QMETAOBJECT_USERPROPERTY )
 {

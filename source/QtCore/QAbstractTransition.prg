@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_ANIMATIONS )
 }
 
 /*
-QStateMachine * machine () const
+QStateMachine * machine() const
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_MACHINE )
 {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_SETTARGETSTATES )
 }
 
 /*
-QState * sourceState () const
+QState * sourceState() const
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_SOURCESTATE )
 {
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_SOURCESTATE )
 }
 
 /*
-QAbstractState * targetState () const
+QAbstractState * targetState() const
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATE )
 {

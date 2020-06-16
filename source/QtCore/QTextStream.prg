@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETCODEC )
 }
 
 /*
-QTextCodec *codec() const
+QTextCodec * codec() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_CODEC )
 {
@@ -468,7 +468,7 @@ QString *string() const
 */
 
 /*
-Status status() const
+QTextStream::Status status() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_STATUS )
 {
@@ -792,7 +792,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETFIELDALIGNMENT )
 }
 
 /*
-FieldAlignment fieldAlignment() const
+QTextStream::FieldAlignment fieldAlignment() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_FIELDALIGNMENT )
 {
@@ -943,7 +943,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETNUMBERFLAGS )
 }
 
 /*
-NumberFlags numberFlags() const
+QTextStream::NumberFlags numberFlags() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_NUMBERFLAGS )
 {

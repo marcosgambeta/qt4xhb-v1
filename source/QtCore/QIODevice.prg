@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QIODEVICE_ATEND )
 }
 
 /*
-virtual qint64 bytesAvailable () const
+virtual qint64 bytesAvailable() const
 */
 HB_FUNC_STATIC( QIODEVICE_BYTESAVAILABLE )
 {
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QIODEVICE_BYTESAVAILABLE )
 }
 
 /*
-virtual qint64 bytesToWrite () const
+virtual qint64 bytesToWrite() const
 */
 HB_FUNC_STATIC( QIODEVICE_BYTESTOWRITE )
 {
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QIODEVICE_CANREADLINE )
 }
 
 /*
-virtual void close ()
+virtual void close()
 */
 HB_FUNC_STATIC( QIODEVICE_CLOSE )
 {
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QIODEVICE_PEEK )
 }
 
 /*
-virtual qint64 pos () const
+virtual qint64 pos() const
 */
 HB_FUNC_STATIC( QIODEVICE_POS )
 {
@@ -575,7 +575,7 @@ HB_FUNC_STATIC( QIODEVICE_READ )
 }
 
 /*
-QByteArray readAll ()
+QByteArray readAll()
 */
 HB_FUNC_STATIC( QIODEVICE_READALL )
 {
@@ -722,7 +722,7 @@ HB_FUNC_STATIC( QIODEVICE_SETTEXTMODEENABLED )
 }
 
 /*
-virtual qint64 size () const
+virtual qint64 size() const
 */
 HB_FUNC_STATIC( QIODEVICE_SIZE )
 {

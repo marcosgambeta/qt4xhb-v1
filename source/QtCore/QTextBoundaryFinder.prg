@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_ISVALID )
 }
 
 /*
-BoundaryType type() const
+QTextBoundaryFinder::BoundaryType type() const
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TYPE )
 {
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_ISATBOUNDARY )
 }
 
 /*
-BoundaryReasons boundaryReasons() const
+QTextBoundaryFinder::BoundaryReasons boundaryReasons() const
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_BOUNDARYREASONS )
 {

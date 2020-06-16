@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_UNLOCK )
 }
 
 /*
-SharedMemoryError error() const
+QSharedMemory::SharedMemoryError error() const
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_ERROR )
 {

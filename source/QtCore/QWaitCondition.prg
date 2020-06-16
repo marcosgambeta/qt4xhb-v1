@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QWAITCONDITION_DELETE )
 }
 
 /*
-void wakeAll ()
+void wakeAll()
 */
 HB_FUNC_STATIC( QWAITCONDITION_WAKEALL )
 {
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QWAITCONDITION_WAKEALL )
 }
 
 /*
-void wakeOne ()
+void wakeOne()
 */
 HB_FUNC_STATIC( QWAITCONDITION_WAKEONE )
 {

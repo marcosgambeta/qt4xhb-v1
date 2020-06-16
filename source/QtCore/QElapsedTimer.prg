@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_START )
 }
 
 /*
-static ClockType clockType()
+static QElapsedTimer::ClockType clockType()
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_CLOCKTYPE )
 {

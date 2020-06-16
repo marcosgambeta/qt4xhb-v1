@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_DELETE )
 }
 
 /*
-QByteArray propertyName () const
+QByteArray propertyName() const
 */
 HB_FUNC_STATIC( QPROPERTYANIMATION_PROPERTYNAME )
 {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_SETTARGETOBJECT )
 }
 
 /*
-QObject * targetObject () const
+QObject * targetObject() const
 */
 HB_FUNC_STATIC( QPROPERTYANIMATION_TARGETOBJECT )
 {

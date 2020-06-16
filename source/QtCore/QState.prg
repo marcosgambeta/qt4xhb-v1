@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QSTATE_ASSIGNPROPERTY )
 }
 
 /*
-ChildMode childMode () const
+QState::ChildMode childMode() const
 */
 HB_FUNC_STATIC( QSTATE_CHILDMODE )
 {
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QSTATE_CHILDMODE )
 }
 
 /*
-QAbstractState * errorState () const
+QAbstractState * errorState() const
 */
 HB_FUNC_STATIC( QSTATE_ERRORSTATE )
 {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QSTATE_ERRORSTATE )
 }
 
 /*
-QAbstractState * initialState () const
+QAbstractState * initialState() const
 */
 HB_FUNC_STATIC( QSTATE_INITIALSTATE )
 {

@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTTIME )
 }
 
 /*
-Direction direction () const
+QAbstractAnimation::Direction direction() const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_DIRECTION )
 {
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_DURATION )
 }
 
 /*
-QAnimationGroup * group () const
+QAnimationGroup * group() const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_GROUP )
 {
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_SETLOOPCOUNT )
 }
 
 /*
-State state () const
+QAbstractAnimation::State state() const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_STATE )
 {
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_TOTALDURATION )
 }
 
 /*
-void pause ()
+void pause()
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_PAUSE )
 {
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_PAUSE )
 }
 
 /*
-void resume ()
+void resume()
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_RESUME )
 {
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_START )
 }
 
 /*
-void stop ()
+void stop()
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_STOP )
 {

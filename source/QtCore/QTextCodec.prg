@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QTEXTCODEC_AVAILABLEMIBS )
 }
 
 /*
-static QTextCodec* codecForLocale()
+static QTextCodec * codecForLocale()
 */
 HB_FUNC_STATIC( QTEXTCODEC_CODECFORLOCALE )
 {
@@ -571,7 +571,7 @@ HB_FUNC_STATIC( QTEXTCODEC_SETCODECFORLOCALE )
 }
 
 /*
-static QTextCodec* codecForTr()
+static QTextCodec * codecForTr()
 */
 HB_FUNC_STATIC( QTEXTCODEC_CODECFORTR )
 {
@@ -612,7 +612,7 @@ HB_FUNC_STATIC( QTEXTCODEC_SETCODECFORTR )
 }
 
 /*
-static QTextCodec* codecForCStrings()
+static QTextCodec * codecForCStrings()
 */
 HB_FUNC_STATIC( QTEXTCODEC_CODECFORCSTRINGS )
 {

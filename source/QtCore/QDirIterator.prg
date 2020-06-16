@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QDIRITERATOR_DELETE )
 }
 
 /*
-QFileInfo fileInfo () const
+QFileInfo fileInfo() const
 */
 HB_FUNC_STATIC( QDIRITERATOR_FILEINFO )
 {

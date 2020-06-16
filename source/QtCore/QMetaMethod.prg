@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QMETAMETHOD_TAG )
 }
 
 /*
-Access access() const
+QMetaMethod::Access access() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_ACCESS )
 {
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QMETAMETHOD_ACCESS )
 }
 
 /*
-MethodType methodType() const
+QMetaMethod::MethodType methodType() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_METHODTYPE )
 {

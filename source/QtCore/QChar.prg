@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QCHAR_DELETE )
 }
 
 /*
-Category category () const
+QChar::Category category() const
 */
 HB_FUNC_STATIC( QCHAR_CATEGORY )
 {
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QCHAR_CATEGORY )
 }
 
 /*
-Decomposition decompositionTag () const
+QChar::Decomposition decompositionTag() const
 */
 HB_FUNC_STATIC( QCHAR_DECOMPOSITIONTAG )
 {
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QCHAR_DIGITVALUE )
 }
 
 /*
-Direction direction () const
+QChar::Direction direction() const
 */
 HB_FUNC_STATIC( QCHAR_DIRECTION )
 {
@@ -697,7 +697,7 @@ HB_FUNC_STATIC( QCHAR_ISUPPER )
 }
 
 /*
-Joining joining () const
+QChar::Joining joining() const
 */
 HB_FUNC_STATIC( QCHAR_JOINING )
 {
@@ -721,7 +721,7 @@ HB_FUNC_STATIC( QCHAR_JOINING )
 }
 
 /*
-QChar mirroredChar () const
+QChar mirroredChar() const
 */
 HB_FUNC_STATIC( QCHAR_MIRROREDCHAR )
 {
@@ -746,7 +746,7 @@ HB_FUNC_STATIC( QCHAR_MIRROREDCHAR )
 }
 
 /*
-QChar toCaseFolded () const
+QChar toCaseFolded() const
 */
 HB_FUNC_STATIC( QCHAR_TOCASEFOLDED )
 {
@@ -771,7 +771,7 @@ HB_FUNC_STATIC( QCHAR_TOCASEFOLDED )
 }
 
 /*
-QChar toLower () const
+QChar toLower() const
 */
 HB_FUNC_STATIC( QCHAR_TOLOWER )
 {
@@ -796,7 +796,7 @@ HB_FUNC_STATIC( QCHAR_TOLOWER )
 }
 
 /*
-QChar toTitleCase () const
+QChar toTitleCase() const
 */
 HB_FUNC_STATIC( QCHAR_TOTITLECASE )
 {
@@ -821,7 +821,7 @@ HB_FUNC_STATIC( QCHAR_TOTITLECASE )
 }
 
 /*
-QChar toUpper () const
+QChar toUpper() const
 */
 HB_FUNC_STATIC( QCHAR_TOUPPER )
 {
@@ -846,7 +846,7 @@ HB_FUNC_STATIC( QCHAR_TOUPPER )
 }
 
 /*
-UnicodeVersion unicodeVersion () const
+QChar::UnicodeVersion unicodeVersion() const
 */
 HB_FUNC_STATIC( QCHAR_UNICODEVERSION )
 {

@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QDIR_FILEPATH )
 }
 
 /*
-Filters filter() const
+QDir::Filters filter() const
 */
 HB_FUNC_STATIC( QDIR_FILTER )
 {
@@ -1051,7 +1051,7 @@ HB_FUNC_STATIC( QDIR_SETSORTING )
 }
 
 /*
-SortFlags sorting() const
+QDir::SortFlags sorting() const
 */
 HB_FUNC_STATIC( QDIR_SORTING )
 {

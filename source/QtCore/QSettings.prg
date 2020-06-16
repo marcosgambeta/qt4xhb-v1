@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QSETTINGS_DELETE )
 }
 
 /*
-QStringList allKeys () const
+QStringList allKeys() const
 */
 HB_FUNC_STATIC( QSETTINGS_ALLKEYS )
 {
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QSETTINGS_BEGINWRITEARRAY )
 }
 
 /*
-QStringList childGroups () const
+QStringList childGroups() const
 */
 HB_FUNC_STATIC( QSETTINGS_CHILDGROUPS )
 {
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QSETTINGS_CHILDGROUPS )
 }
 
 /*
-QStringList childKeys () const
+QStringList childKeys() const
 */
 HB_FUNC_STATIC( QSETTINGS_CHILDKEYS )
 {
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QSETTINGS_CHILDKEYS )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QSETTINGS_CLEAR )
 {
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QSETTINGS_CONTAINS )
 }
 
 /*
-void endArray ()
+void endArray()
 */
 HB_FUNC_STATIC( QSETTINGS_ENDARRAY )
 {
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QSETTINGS_ENDARRAY )
 }
 
 /*
-void endGroup ()
+void endGroup()
 */
 HB_FUNC_STATIC( QSETTINGS_ENDGROUP )
 {
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QSETTINGS_FILENAME )
 }
 
 /*
-Format format () const
+QSettings::Format format() const
 */
 HB_FUNC_STATIC( QSETTINGS_FORMAT )
 {
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QSETTINGS_GROUP )
 }
 
 /*
-QTextCodec * iniCodec () const
+QTextCodec * iniCodec() const
 */
 HB_FUNC_STATIC( QSETTINGS_INICODEC )
 {
@@ -644,7 +644,7 @@ HB_FUNC_STATIC( QSETTINGS_REMOVE )
 }
 
 /*
-Scope scope () const
+QSettings::Scope scope() const
 */
 HB_FUNC_STATIC( QSETTINGS_SCOPE )
 {
@@ -797,7 +797,7 @@ HB_FUNC_STATIC( QSETTINGS_SETVALUE )
 }
 
 /*
-Status status () const
+QSettings::Status status() const
 */
 HB_FUNC_STATIC( QSETTINGS_STATUS )
 {
@@ -821,7 +821,7 @@ HB_FUNC_STATIC( QSETTINGS_STATUS )
 }
 
 /*
-void sync ()
+void sync()
 */
 HB_FUNC_STATIC( QSETTINGS_SYNC )
 {
@@ -872,7 +872,7 @@ HB_FUNC_STATIC( QSETTINGS_VALUE )
 }
 
 /*
-static Format defaultFormat ()
+static QSettings::Format defaultFormat()
 */
 HB_FUNC_STATIC( QSETTINGS_DEFAULTFORMAT )
 {

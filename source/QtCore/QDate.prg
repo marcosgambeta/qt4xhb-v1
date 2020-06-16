@@ -574,7 +574,7 @@ HB_FUNC_STATIC( QDATE_YEAR )
 }
 
 /*
-static QDate currentDate ()
+static QDate currentDate()
 */
 HB_FUNC_STATIC( QDATE_CURRENTDATE )
 {

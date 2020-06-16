@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_SOCKET )
 }
 
 /*
-Type type() const
+QSocketNotifier::Type type() const
 */
 HB_FUNC_STATIC( QSOCKETNOTIFIER_TYPE )
 {

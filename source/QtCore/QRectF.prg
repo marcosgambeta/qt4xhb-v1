@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QRECTF_BOTTOM )
 }
 
 /*
-QPointF bottomLeft () const
+QPointF bottomLeft() const
 */
 HB_FUNC_STATIC( QRECTF_BOTTOMLEFT )
 {
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QRECTF_BOTTOMLEFT )
 }
 
 /*
-QPointF bottomRight () const
+QPointF bottomRight() const
 */
 HB_FUNC_STATIC( QRECTF_BOTTOMRIGHT )
 {
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QRECTF_BOTTOMRIGHT )
 }
 
 /*
-QPointF center () const
+QPointF center() const
 */
 HB_FUNC_STATIC( QRECTF_CENTER )
 {
@@ -941,7 +941,7 @@ HB_FUNC_STATIC( QRECTF_MOVETOPRIGHT )
 }
 
 /*
-QRectF normalized () const
+QRectF normalized() const
 */
 HB_FUNC_STATIC( QRECTF_NORMALIZED )
 {
@@ -1405,7 +1405,7 @@ HB_FUNC_STATIC( QRECTF_SIZE )
 }
 
 /*
-QRect toAlignedRect () const
+QRect toAlignedRect() const
 */
 HB_FUNC_STATIC( QRECTF_TOALIGNEDRECT )
 {
@@ -1430,7 +1430,7 @@ HB_FUNC_STATIC( QRECTF_TOALIGNEDRECT )
 }
 
 /*
-QRect toRect () const
+QRect toRect() const
 */
 HB_FUNC_STATIC( QRECTF_TORECT )
 {
@@ -1479,7 +1479,7 @@ HB_FUNC_STATIC( QRECTF_TOP )
 }
 
 /*
-QPointF topLeft () const
+QPointF topLeft() const
 */
 HB_FUNC_STATIC( QRECTF_TOPLEFT )
 {
@@ -1504,7 +1504,7 @@ HB_FUNC_STATIC( QRECTF_TOPLEFT )
 }
 
 /*
-QPointF topRight () const
+QPointF topRight() const
 */
 HB_FUNC_STATIC( QRECTF_TOPRIGHT )
 {

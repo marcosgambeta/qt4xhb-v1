@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QSIZEF_SETWIDTH )
 }
 
 /*
-QSize toSize () const
+QSize toSize() const
 */
 HB_FUNC_STATIC( QSIZEF_TOSIZE )
 {
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QSIZEF_TOSIZE )
 }
 
 /*
-void transpose ()
+void transpose()
 */
 HB_FUNC_STATIC( QSIZEF_TRANSPOSE )
 {

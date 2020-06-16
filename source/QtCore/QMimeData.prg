@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QMIMEDATA_DELETE )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QMIMEDATA_CLEAR )
 {
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QMIMEDATA_CLEAR )
 }
 
 /*
-QVariant colorData () const
+QVariant colorData() const
 */
 HB_FUNC_STATIC( QMIMEDATA_COLORDATA )
 {
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QMIMEDATA_DATA )
 }
 
 /*
-virtual QStringList formats () const
+virtual QStringList formats() const
 */
 HB_FUNC_STATIC( QMIMEDATA_FORMATS )
 {
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QMIMEDATA_HTML )
 }
 
 /*
-QVariant imageData () const
+QVariant imageData() const
 */
 HB_FUNC_STATIC( QMIMEDATA_IMAGEDATA )
 {

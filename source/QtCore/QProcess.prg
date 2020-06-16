@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QPROCESS_CLOSEREADCHANNEL )
 }
 
 /*
-void closeWriteChannel ()
+void closeWriteChannel()
 */
 HB_FUNC_STATIC( QPROCESS_CLOSEWRITECHANNEL )
 {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QPROCESS_ENVIRONMENT )
 }
 
 /*
-QProcess::ProcessError error () const
+QProcess::ProcessError error() const
 */
 HB_FUNC_STATIC( QPROCESS_ERROR )
 {
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QPROCESS_EXITCODE )
 }
 
 /*
-QProcess::ExitStatus exitStatus () const
+QProcess::ExitStatus exitStatus() const
 */
 HB_FUNC_STATIC( QPROCESS_EXITSTATUS )
 {
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QPROCESS_NATIVEARGUMENTS )
 }
 
 /*
-ProcessChannelMode processChannelMode () const
+QProcess::ProcessChannelMode processChannelMode() const
 */
 HB_FUNC_STATIC( QPROCESS_PROCESSCHANNELMODE )
 {
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QPROCESS_PROCESSCHANNELMODE )
 }
 
 /*
-QProcessEnvironment processEnvironment () const
+QProcessEnvironment processEnvironment() const
 */
 HB_FUNC_STATIC( QPROCESS_PROCESSENVIRONMENT )
 {
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QPROCESS_PROCESSENVIRONMENT )
 }
 
 /*
-QByteArray readAllStandardError ()
+QByteArray readAllStandardError()
 */
 HB_FUNC_STATIC( QPROCESS_READALLSTANDARDERROR )
 {
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QPROCESS_READALLSTANDARDERROR )
 }
 
 /*
-QByteArray readAllStandardOutput ()
+QByteArray readAllStandardOutput()
 */
 HB_FUNC_STATIC( QPROCESS_READALLSTANDARDOUTPUT )
 {
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QPROCESS_READALLSTANDARDOUTPUT )
 }
 
 /*
-ProcessChannel readChannel () const
+QProcess::ProcessChannel readChannel() const
 */
 HB_FUNC_STATIC( QPROCESS_READCHANNEL )
 {
@@ -735,7 +735,7 @@ HB_FUNC_STATIC( QPROCESS_START )
 }
 
 /*
-QProcess::ProcessState state () const
+QProcess::ProcessState state() const
 */
 HB_FUNC_STATIC( QPROCESS_STATE )
 {
@@ -855,7 +855,7 @@ HB_FUNC_STATIC( QPROCESS_ATEND )
 }
 
 /*
-virtual qint64 bytesAvailable () const
+virtual qint64 bytesAvailable() const
 */
 HB_FUNC_STATIC( QPROCESS_BYTESAVAILABLE )
 {
@@ -879,7 +879,7 @@ HB_FUNC_STATIC( QPROCESS_BYTESAVAILABLE )
 }
 
 /*
-virtual qint64 bytesToWrite () const
+virtual qint64 bytesToWrite() const
 */
 HB_FUNC_STATIC( QPROCESS_BYTESTOWRITE )
 {
@@ -927,7 +927,7 @@ HB_FUNC_STATIC( QPROCESS_CANREADLINE )
 }
 
 /*
-virtual void close ()
+virtual void close()
 */
 HB_FUNC_STATIC( QPROCESS_CLOSE )
 {
@@ -1025,7 +1025,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORREADYREAD )
 }
 
 /*
-void kill ()
+void kill()
 */
 HB_FUNC_STATIC( QPROCESS_KILL )
 {
@@ -1051,7 +1051,7 @@ HB_FUNC_STATIC( QPROCESS_KILL )
 }
 
 /*
-void terminate ()
+void terminate()
 */
 HB_FUNC_STATIC( QPROCESS_TERMINATE )
 {
@@ -1169,7 +1169,7 @@ HB_FUNC_STATIC( QPROCESS_STARTDETACHED )
 }
 
 /*
-static QStringList systemEnvironment ()
+static QStringList systemEnvironment()
 */
 HB_FUNC_STATIC( QPROCESS_SYSTEMENVIRONMENT )
 {

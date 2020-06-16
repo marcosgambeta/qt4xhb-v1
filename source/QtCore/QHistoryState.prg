@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_DELETE )
 }
 
 /*
-QAbstractState *defaultState() const
+QAbstractState * defaultState() const
 */
 HB_FUNC_STATIC( QHISTORYSTATE_DEFAULTSTATE )
 {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_SETDEFAULTSTATE )
 }
 
 /*
-HistoryType historyType() const
+QHistoryState::HistoryType historyType() const
 */
 HB_FUNC_STATIC( QHISTORYSTATE_HISTORYTYPE )
 {

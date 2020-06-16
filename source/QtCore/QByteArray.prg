@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QBYTEARRAY_CHOP )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QBYTEARRAY_CLEAR )
 {
@@ -2464,7 +2464,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETRAWDATA )
 }
 
 /*
-QByteArray simplified () const
+QByteArray simplified() const
 */
 HB_FUNC_STATIC( QBYTEARRAY_SIMPLIFIED )
 {
@@ -2565,7 +2565,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SPLIT )
 }
 
 /*
-void squeeze ()
+void squeeze()
 */
 HB_FUNC_STATIC( QBYTEARRAY_SQUEEZE )
 {
@@ -2733,7 +2733,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOFLOAT )
 }
 
 /*
-QByteArray toHex () const
+QByteArray toHex() const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOHEX )
 {
@@ -2836,7 +2836,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOLONGLONG )
 }
 
 /*
-QByteArray toLower () const
+QByteArray toLower() const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOLOWER )
 {
@@ -3016,7 +3016,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOUSHORT )
 }
 
 /*
-QByteArray toUpper () const
+QByteArray toUpper() const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOUPPER )
 {
@@ -3041,7 +3041,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOUPPER )
 }
 
 /*
-QByteArray trimmed () const
+QByteArray trimmed() const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TRIMMED )
 {

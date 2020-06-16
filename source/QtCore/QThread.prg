@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QTHREAD_ISRUNNING )
 }
 
 /*
-Priority priority() const
+QThread::Priority priority() const
 */
 HB_FUNC_STATIC( QTHREAD_PRIORITY )
 {

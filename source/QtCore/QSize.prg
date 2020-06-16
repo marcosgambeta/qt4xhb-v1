@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QSIZE_SETWIDTH )
 }
 
 /*
-void transpose ()
+void transpose()
 */
 HB_FUNC_STATIC( QSIZE_TRANSPOSE )
 {
