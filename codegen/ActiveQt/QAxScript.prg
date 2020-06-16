@@ -70,8 +70,7 @@ $method=|bool|load|const QString &,const QString &=QString()
 
 $prototypeV2=QString scriptCode() const
 
-$prototype=QAxScriptEngine * scriptEngine () const
-$method=|QAxScriptEngine *|scriptEngine|
+$prototypeV2=QAxScriptEngine * scriptEngine() const
 
 $prototypeV2=QString scriptName() const
 

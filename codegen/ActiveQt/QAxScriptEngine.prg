@@ -42,7 +42,6 @@ $prototypeV2=QString scriptLanguage() const
 $prototype=void setState ( State st )
 $method=|void|setState|QAxScriptEngine::State
 
-$prototype=State state () const
-$method=|QAxScriptEngine::State|state|
+$prototypeV2=QAxScriptEngine::State state() const
 
 #pragma ENDDUMP

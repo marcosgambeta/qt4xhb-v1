@@ -69,37 +69,29 @@ $deleteMethod
 
 // métodos da classe QAxWidget
 
-$prototype=virtual QAxAggregated * createAggregate ()
-$virtualMethod=|QAxAggregated *|createAggregate|
+$prototypeV2=virtual QAxAggregated * createAggregate()
 
 $prototype=bool doVerb ( const QString & verb )
 $method=|bool|doVerb|const QString &
 
-$prototype=virtual void clear ()
-$virtualMethod=|void|clear|
+$prototypeV2=virtual void clear()
 
-$prototype=virtual QSize minimumSizeHint () const
-$virtualMethod=|QSize|minimumSizeHint|
+$prototypeV2=virtual QSize minimumSizeHint() const
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 // métodos da classe QAxBase, colocados aqui por causa
 // de problemas com herança no [x]Harbour
 
-$prototype=QVariant asVariant () const
-$method=|QVariant|asVariant|
+$prototypeV2=QVariant asVariant() const
 
 $prototypeV2=QString control() const
 
-$prototype=void disableClassInfo ()
-$method=|void|disableClassInfo|
+$prototypeV2=void disableClassInfo()
 
-$prototype=void disableEventSink ()
-$method=|void|disableEventSink|
+$prototypeV2=void disableEventSink()
 
-$prototype=void disableMetaObject ()
-$method=|void|disableMetaObject|
+$prototypeV2=void disableMetaObject()
 
 $prototype=QVariant dynamicCall ( const char * function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 $internalMethod=|QVariant|dynamicCall,dynamicCall1|const char *,const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant()
@@ -170,8 +162,7 @@ $method=|bool|setControl|const QString &
 $prototype=virtual void setPropertyWritable ( const char * prop, bool ok )
 $virtualMethod=|void|setPropertyWritable|const char *,bool
 
-$prototype=QStringList verbs () const
-$method=|QStringList|verbs|
+$prototypeV2=QStringList verbs() const
 
 $beginSignals
 $signal=|exception(int,QString,QString,QString)
