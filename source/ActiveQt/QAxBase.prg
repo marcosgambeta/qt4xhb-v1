@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QAXBASE_DELETE )
 }
 
 /*
-QVariant asVariant () const
+QVariant asVariant() const
 */
 HB_FUNC_STATIC( QAXBASE_ASVARIANT )
 {
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QAXBASE_ASVARIANT )
 }
 
 /*
-virtual void clear ()
+virtual void clear()
 */
 HB_FUNC_STATIC( QAXBASE_CLEAR )
 {
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QAXBASE_CONTROL )
 }
 
 /*
-void disableClassInfo ()
+void disableClassInfo()
 */
 HB_FUNC_STATIC( QAXBASE_DISABLECLASSINFO )
 {
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QAXBASE_DISABLECLASSINFO )
 }
 
 /*
-void disableEventSink ()
+void disableEventSink()
 */
 HB_FUNC_STATIC( QAXBASE_DISABLEEVENTSINK )
 {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QAXBASE_DISABLEEVENTSINK )
 }
 
 /*
-void disableMetaObject ()
+void disableMetaObject()
 */
 HB_FUNC_STATIC( QAXBASE_DISABLEMETAOBJECT )
 {
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QAXBASE_SETPROPERTYWRITABLE )
 }
 
 /*
-QStringList verbs () const
+QStringList verbs() const
 */
 HB_FUNC_STATIC( QAXBASE_VERBS )
 {

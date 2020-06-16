@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_SETSTATE )
 }
 
 /*
-State state () const
+QAxScriptEngine::State state() const
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_STATE )
 {

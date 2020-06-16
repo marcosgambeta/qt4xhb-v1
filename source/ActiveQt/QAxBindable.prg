@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QAXBINDABLE_DELETE )
 }
 
 /*
-virtual QAxAggregated * createAggregate ()
+virtual QAxAggregated * createAggregate()
 */
 HB_FUNC_STATIC( QAXBINDABLE_CREATEAGGREGATE )
 {

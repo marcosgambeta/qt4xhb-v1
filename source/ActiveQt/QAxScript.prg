@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QAXSCRIPT_SCRIPTCODE )
 }
 
 /*
-QAxScriptEngine * scriptEngine () const
+QAxScriptEngine * scriptEngine() const
 */
 HB_FUNC_STATIC( QAXSCRIPT_SCRIPTENGINE )
 {

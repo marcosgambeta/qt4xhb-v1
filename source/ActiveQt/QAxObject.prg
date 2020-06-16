@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QAXOBJECT_DOVERB )
 // de problemas com herança no [x]Harbour
 
 /*
-QVariant asVariant () const
+QVariant asVariant() const
 */
 HB_FUNC_STATIC( QAXOBJECT_ASVARIANT )
 {
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QAXOBJECT_ASVARIANT )
 }
 
 /*
-virtual void clear ()
+virtual void clear()
 */
 HB_FUNC_STATIC( QAXOBJECT_CLEAR )
 {
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QAXOBJECT_CONTROL )
 }
 
 /*
-void disableClassInfo ()
+void disableClassInfo()
 */
 HB_FUNC_STATIC( QAXOBJECT_DISABLECLASSINFO )
 {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QAXOBJECT_DISABLECLASSINFO )
 }
 
 /*
-void disableEventSink ()
+void disableEventSink()
 */
 HB_FUNC_STATIC( QAXOBJECT_DISABLEEVENTSINK )
 {
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QAXOBJECT_DISABLEEVENTSINK )
 }
 
 /*
-void disableMetaObject ()
+void disableMetaObject()
 */
 HB_FUNC_STATIC( QAXOBJECT_DISABLEMETAOBJECT )
 {
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QAXOBJECT_SETPROPERTYWRITABLE )
 }
 
 /*
-QStringList verbs () const
+QStringList verbs() const
 */
 HB_FUNC_STATIC( QAXOBJECT_VERBS )
 {

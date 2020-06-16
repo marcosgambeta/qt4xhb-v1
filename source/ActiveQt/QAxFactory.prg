@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QAXFACTORY_DELETE )
 }
 
 /*
-virtual QUuid appID () const
+virtual QUuid appID() const
 */
 HB_FUNC_STATIC( QAXFACTORY_APPID )
 {
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QAXFACTORY_EXPOSETOSUPERCLASS )
 }
 
 /*
-virtual QStringList featureList () const = 0
+virtual QStringList featureList() const = 0
 */
 HB_FUNC_STATIC( QAXFACTORY_FEATURELIST )
 {
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QAXFACTORY_STAYTOPLEVEL )
 }
 
 /*
-virtual QUuid typeLibID () const
+virtual QUuid typeLibID() const
 */
 HB_FUNC_STATIC( QAXFACTORY_TYPELIBID )
 {

@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPT )
 }
 
 /*
-QStringList scriptNames () const
+QStringList scriptNames() const
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPTNAMES )
 {

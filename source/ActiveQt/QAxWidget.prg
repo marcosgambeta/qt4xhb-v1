@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QAXWIDGET_DELETE )
 // métodos da classe QAxWidget
 
 /*
-virtual QAxAggregated * createAggregate ()
+virtual QAxAggregated * createAggregate()
 */
 HB_FUNC_STATIC( QAXWIDGET_CREATEAGGREGATE )
 {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QAXWIDGET_DOVERB )
 }
 
 /*
-virtual void clear ()
+virtual void clear()
 */
 HB_FUNC_STATIC( QAXWIDGET_CLEAR )
 {
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QAXWIDGET_CLEAR )
 }
 
 /*
-virtual QSize minimumSizeHint () const
+virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QAXWIDGET_MINIMUMSIZEHINT )
 {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QAXWIDGET_MINIMUMSIZEHINT )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QAXWIDGET_SIZEHINT )
 {
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QAXWIDGET_SIZEHINT )
 // de problemas com herança no [x]Harbour
 
 /*
-QVariant asVariant () const
+QVariant asVariant() const
 */
 HB_FUNC_STATIC( QAXWIDGET_ASVARIANT )
 {
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QAXWIDGET_CONTROL )
 }
 
 /*
-void disableClassInfo ()
+void disableClassInfo()
 */
 HB_FUNC_STATIC( QAXWIDGET_DISABLECLASSINFO )
 {
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QAXWIDGET_DISABLECLASSINFO )
 }
 
 /*
-void disableEventSink ()
+void disableEventSink()
 */
 HB_FUNC_STATIC( QAXWIDGET_DISABLEEVENTSINK )
 {
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QAXWIDGET_DISABLEEVENTSINK )
 }
 
 /*
-void disableMetaObject ()
+void disableMetaObject()
 */
 HB_FUNC_STATIC( QAXWIDGET_DISABLEMETAOBJECT )
 {
@@ -618,7 +618,7 @@ HB_FUNC_STATIC( QAXWIDGET_SETPROPERTYWRITABLE )
 }
 
 /*
-QStringList verbs () const
+QStringList verbs() const
 */
 HB_FUNC_STATIC( QAXWIDGET_VERBS )
 {
