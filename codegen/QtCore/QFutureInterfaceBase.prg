@@ -133,7 +133,7 @@ $method=|void|waitForResult|int
 
 $prototypeV2=void waitForResume()
 
-$prototypeV2=QMutex *mutex() const
+$prototypeV2=QMutex * mutex() const
 
 $extraMethods
 
