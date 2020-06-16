@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_DELETE )
 }
 
 /*
-QUrl baseUrl () const
+QUrl baseUrl() const
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_BASEURL )
 {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_BASEURL )
 }
 
 /*
-QObject * contextObject () const
+QObject * contextObject() const
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_CONTEXTOBJECT )
 {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_CONTEXTPROPERTY )
 }
 
 /*
-QDeclarativeEngine * engine () const
+QDeclarativeEngine * engine() const
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_ENGINE )
 {
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_ISVALID )
 }
 
 /*
-QDeclarativeContext * parentContext () const
+QDeclarativeContext * parentContext() const
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_PARENTCONTEXT )
 {

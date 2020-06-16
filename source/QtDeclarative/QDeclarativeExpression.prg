@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_DELETE )
 }
 
 /*
-void clearError ()
+void clearError()
 */
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_CLEARERROR )
 {
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_CLEARERROR )
 }
 
 /*
-QDeclarativeContext * context () const
+QDeclarativeContext * context() const
 */
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_CONTEXT )
 {
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_CONTEXT )
 }
 
 /*
-QDeclarativeEngine * engine () const
+QDeclarativeEngine * engine() const
 */
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ENGINE )
 {
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ENGINE )
 }
 
 /*
-QDeclarativeError error () const
+QDeclarativeError error() const
 */
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ERROR )
 {
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NOTIFYONVALUECHANGED )
 }
 
 /*
-QObject * scopeObject () const
+QObject * scopeObject() const
 */
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SCOPEOBJECT )
 {

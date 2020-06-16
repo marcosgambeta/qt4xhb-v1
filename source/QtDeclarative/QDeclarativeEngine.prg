@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDPLUGINPATH )
 }
 
 /*
-QUrl baseUrl () const
+QUrl baseUrl() const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_BASEURL )
 {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_BASEURL )
 }
 
 /*
-void clearComponentCache ()
+void clearComponentCache()
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_CLEARCOMPONENTCACHE )
 {
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_IMAGEPROVIDER )
 }
 
 /*
-QStringList importPathList () const
+QStringList importPathList() const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_IMPORTPATHLIST )
 {
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_IMPORTPLUGIN )
 }
 
 /*
-QNetworkAccessManager * networkAccessManager () const
+QNetworkAccessManager * networkAccessManager() const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGER )
 {
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGER )
 }
 
 /*
-QDeclarativeNetworkAccessManagerFactory * networkAccessManagerFactory () const
+QDeclarativeNetworkAccessManagerFactory * networkAccessManagerFactory() const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGERFACTORY )
 {
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_OUTPUTWARNINGSTOSTANDARDERROR )
 }
 
 /*
-QStringList pluginPathList () const
+QStringList pluginPathList() const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_PLUGINPATHLIST )
 {
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_REMOVEIMAGEPROVIDER )
 }
 
 /*
-QDeclarativeContext * rootContext () const
+QDeclarativeContext * rootContext() const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_ROOTCONTEXT )
 {

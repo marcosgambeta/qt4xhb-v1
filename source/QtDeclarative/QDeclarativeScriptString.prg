@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW )
 }
 
 /*
-QDeclarativeContext * context () const
+QDeclarativeContext * context() const
 */
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_CONTEXT )
 {
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_CONTEXT )
 }
 
 /*
-QObject * scopeObject () const
+QObject * scopeObject() const
 */
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SCOPEOBJECT )
 {

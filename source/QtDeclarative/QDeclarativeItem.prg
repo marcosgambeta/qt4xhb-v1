@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDAT )
 }
 
 /*
-QRectF childrenRect ()
+QRectF childrenRect()
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDRENRECT )
 {
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_CLIP )
 }
 
 /*
-void forceActiveFocus ()
+void forceActiveFocus()
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_FORCEACTIVEFOCUS )
 {
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_MAPTOITEM )
 }
 
 /*
-QDeclarativeItem * parentItem () const
+QDeclarativeItem * parentItem() const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_PARENTITEM )
 {
@@ -548,7 +548,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SMOOTH )
 }
 
 /*
-TransformOrigin transformOrigin () const
+QDeclarativeItem::TransformOrigin transformOrigin() const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_TRANSFORMORIGIN )
 {

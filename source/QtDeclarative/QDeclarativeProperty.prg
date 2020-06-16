@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISWRITABLE )
 }
 
 /*
-QMetaMethod method () const
+QMetaMethod method() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_METHOD )
 {
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEEDSNOTIFYSIGNAL )
 }
 
 /*
-QObject * object () const
+QObject * object() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_OBJECT )
 {
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_OBJECT )
 }
 
 /*
-QMetaProperty property () const
+QMetaProperty property() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTY )
 {
@@ -581,7 +581,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTYTYPE )
 }
 
 /*
-PropertyTypeCategory propertyTypeCategory () const
+QDeclarativeProperty::PropertyTypeCategory propertyTypeCategory() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTYTYPECATEGORY )
 {
@@ -653,7 +653,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_RESET )
 }
 
 /*
-Type type () const
+QDeclarativeProperty::Type type() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_TYPE )
 {

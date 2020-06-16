@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_DELETE )
 }
 
 /*
-QDeclarativeEngine * engine () const
+QDeclarativeEngine * engine() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ENGINE )
 {
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
 }
 
 /*
-QSize initialSize () const
+QSize initialSize() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_INITIALSIZE )
 {
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_INITIALSIZE )
 }
 
 /*
-ResizeMode resizeMode () const
+QDeclarativeView::ResizeMode resizeMode() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_RESIZEMODE )
 {
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_RESIZEMODE )
 }
 
 /*
-QDeclarativeContext * rootContext () const
+QDeclarativeContext * rootContext() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTCONTEXT )
 {
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTCONTEXT )
 }
 
 /*
-QGraphicsObject * rootObject () const
+QGraphicsObject * rootObject() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTOBJECT )
 {
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SETSOURCE )
 }
 
 /*
-QUrl source () const
+QUrl source() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_SOURCE )
 {
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SOURCE )
 }
 
 /*
-Status status () const
+QDeclarativeView::Status status() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_STATUS )
 {

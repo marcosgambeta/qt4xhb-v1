@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_BEGINCREATE )
 }
 
 /*
-virtual void completeCreate ()
+virtual void completeCreate()
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_COMPLETECREATE )
 {
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATE )
 }
 
 /*
-QDeclarativeContext * creationContext () const
+QDeclarativeContext * creationContext() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATIONCONTEXT )
 {
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_SETDATA )
 }
 
 /*
-Status status () const
+QDeclarativeComponent::Status status() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_STATUS )
 {
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_STATUS )
 }
 
 /*
-QUrl url () const
+QUrl url() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_URL )
 {

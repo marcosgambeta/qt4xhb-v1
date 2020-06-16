@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_DELETE )
 }
 
 /*
-ImageType imageType () const
+QDeclarativeImageProvider::ImageType imageType() const
 */
 HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_IMAGETYPE )
 {
