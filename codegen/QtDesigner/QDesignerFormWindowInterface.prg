@@ -32,8 +32,7 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QDir absoluteDir () const = 0
-$virtualMethod=|QDir|absoluteDir|
+$prototypeV2=virtual QDir absoluteDir() const = 0
 
 $prototype=virtual void addResourceFile ( const QString & path ) = 0
 $virtualMethod=|void|addResourceFile|const QString &
@@ -44,30 +43,24 @@ $prototypeV2=virtual QString comment() const = 0
 
 $prototypeV2=virtual QString contents() const = 0
 
-$prototype=virtual QDesignerFormEditorInterface * core () const
-$virtualMethod=|QDesignerFormEditorInterface *|core|
+$prototypeV2=virtual QDesignerFormEditorInterface * core() const
 
-$prototype=virtual QDesignerFormWindowCursorInterface * cursor () const = 0
-$virtualMethod=|QDesignerFormWindowCursorInterface *|cursor|
+$prototypeV2=virtual QDesignerFormWindowCursorInterface * cursor() const = 0
 
-$prototype=virtual void emitSelectionChanged () = 0
-$virtualMethod=|void|emitSelectionChanged|
+$prototypeV2=virtual void emitSelectionChanged() = 0
 
 $prototypeV2=virtual QString exportMacro() const = 0
 
-$prototype=virtual Feature features () const = 0
-$virtualMethod=|QDesignerFormWindowInterface::Feature|features|
+$prototypeV2=virtual QDesignerFormWindowInterface::Feature features() const = 0
 
 $prototypeV2=virtual QString fileName() const = 0
 
-$prototype=virtual QPoint grid () const = 0
-$virtualMethod=|QPoint|grid|
+$prototypeV2=virtual QPoint grid() const = 0
 
 $prototype=virtual bool hasFeature ( Feature feature ) const = 0
 $virtualMethod=|bool|hasFeature|QDesignerFormWindowInterface::Feature
 
-$prototype=virtual QStringList includeHints () const = 0
-$virtualMethod=|QStringList|includeHints|
+$prototypeV2=virtual QStringList includeHints() const = 0
 
 $prototypeV2=virtual bool isDirty() const = 0
 
@@ -77,16 +70,14 @@ $virtualMethod=|bool|isManaged|QWidget *
 $prototype=virtual void layoutDefault ( int * margin, int * spacing ) = 0
 $virtualMethod=|void|layoutDefault|int *,int *
 
-$prototype=virtual QWidget * mainContainer () const = 0
-$virtualMethod=|QWidget *|mainContainer|
+$prototypeV2=virtual QWidget * mainContainer() const = 0
 
 $prototypeV2=virtual QString pixmapFunction() const = 0
 
 $prototype=virtual void removeResourceFile ( const QString & path ) = 0
 $virtualMethod=|void|removeResourceFile|const QString &
 
-$prototype=virtual QStringList resourceFiles () const = 0
-$virtualMethod=|QStringList|resourceFiles|
+$prototypeV2=virtual QStringList resourceFiles() const = 0
 
 $prototype=virtual void setAuthor ( const QString & author ) = 0
 $virtualMethod=|void|setAuthor|const QString &

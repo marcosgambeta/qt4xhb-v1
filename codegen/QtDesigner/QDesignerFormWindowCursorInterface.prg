@@ -29,11 +29,9 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QWidget * current () const = 0
-$virtualMethod=|QWidget *|current|
+$prototypeV2=virtual QWidget * current() const = 0
 
-$prototype=virtual QDesignerFormWindowInterface * formWindow () const = 0
-$virtualMethod=|QDesignerFormWindowInterface *|formWindow|
+$prototypeV2=virtual QDesignerFormWindowInterface * formWindow() const = 0
 
 $prototypeV2=virtual bool hasSelection() const = 0
 

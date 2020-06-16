@@ -36,8 +36,7 @@ $prototypeV2=virtual QString domXml() const
 
 $prototypeV2=virtual QString group() const = 0
 
-$prototype=virtual QIcon icon () const = 0
-$virtualMethod=|QIcon|icon|
+$prototypeV2=virtual QIcon icon() const = 0
 
 $prototypeV2=virtual QString includeFile() const = 0
 

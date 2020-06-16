@@ -31,15 +31,13 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QDesignerFormEditorInterface * core () const
-$virtualMethod=|QDesignerFormEditorInterface *|core|
+$prototypeV2=virtual QDesignerFormEditorInterface * core() const
 
 $prototypeV2=virtual QString currentPropertyName() const = 0
 
 $prototypeV2=virtual bool isReadOnly() const = 0
 
-$prototype=virtual QObject * object () const = 0
-$virtualMethod=|QObject *|object|
+$prototypeV2=virtual QObject * object() const = 0
 
 $prototype=virtual void setObject ( QObject * object ) = 0
 $virtualMethod=|void|setObject|QObject *
