@@ -27,8 +27,7 @@ $destructor
 
 $includes
 
-$prototype=void activateCurrentItem ()
-$method=|void|activateCurrentItem|
+$prototypeV2=void activateCurrentItem()
 
 $prototype=void filterIndices ( const QString & filter, const QString & wildcard = QString() )
 $method=|void|filterIndices|const QString &,const QString &=QString()

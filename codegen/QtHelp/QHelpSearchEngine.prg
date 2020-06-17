@@ -40,20 +40,15 @@ $prototypeV2=int hitCount() const
 $prototype=QList<QHelpSearchQuery> query () const
 $method=|QList<QHelpSearchQuery>|query|
 
-$prototype=QHelpSearchQueryWidget * queryWidget ()
-$method=|QHelpSearchQueryWidget *|queryWidget|
+$prototypeV2=QHelpSearchQueryWidget * queryWidget()
 
-$prototype=QHelpSearchResultWidget * resultWidget ()
-$method=|QHelpSearchResultWidget *|resultWidget|
+$prototypeV2=QHelpSearchResultWidget * resultWidget()
 
-$prototype=void cancelIndexing ()
-$method=|void|cancelIndexing|
+$prototypeV2=void cancelIndexing()
 
-$prototype=void cancelSearching ()
-$method=|void|cancelSearching|
+$prototypeV2=void cancelSearching()
 
-$prototype=void reindexDocumentation ()
-$method=|void|reindexDocumentation|
+$prototypeV2=void reindexDocumentation()
 
 $prototype=void search ( const QList<QHelpSearchQuery> & queryList )
 $method=|void|search|const QList<QHelpSearchQuery> &

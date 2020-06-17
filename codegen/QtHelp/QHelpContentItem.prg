@@ -37,15 +37,13 @@ $prototypeV2=int childCount() const
 $prototype=int childPosition ( QHelpContentItem * child ) const
 $method=|int|childPosition|QHelpContentItem *
 
-$prototype=QHelpContentItem * parent () const
-$method=|QHelpContentItem *|parent|
+$prototypeV2=QHelpContentItem * parent() const
 
 $prototypeV2=int row() const
 
 $prototypeV2=QString title() const
 
-$prototype=QUrl url () const
-$method=|QUrl|url|
+$prototypeV2=QUrl url() const
 
 $extraMethods
 

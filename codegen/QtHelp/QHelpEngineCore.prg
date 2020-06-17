@@ -46,8 +46,7 @@ $method=|bool|copyCollectionFile|const QString &
 
 $prototypeV2=QString currentFilter() const
 
-$prototype=QStringList customFilters () const
-$method=|QStringList|customFilters|
+$prototypeV2=QStringList customFilters() const
 
 $prototype=QVariant customValue ( const QString & key, const QVariant & defaultValue = QVariant() ) const
 $method=|QVariant|customValue|const QString &,const QVariant &=QVariant()
@@ -97,8 +96,7 @@ $method=|QUrl|findFile|const QUrl &
 $prototype=bool registerDocumentation ( const QString & documentationFileName )
 $method=|bool|registerDocumentation|const QString &
 
-$prototype=QStringList registeredDocumentations () const
-$method=|QStringList|registeredDocumentations|
+$prototypeV2=QStringList registeredDocumentations() const
 
 $prototype=bool removeCustomFilter ( const QString & filterName )
 $method=|bool|removeCustomFilter|const QString &
