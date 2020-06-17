@@ -71,20 +71,17 @@ $prototypeV2=int functionMetaIndex() const
 
 $prototypeV2=QString functionName() const
 
-$prototype=QStringList functionParameterNames () const
-$method=|QStringList|functionParameterNames|
+$prototypeV2=QStringList functionParameterNames() const
 
 $prototypeV2=int functionStartLineNumber() const
 
-$prototype=FunctionType functionType () const
-$method=|QScriptContextInfo::FunctionType|functionType|
+$prototypeV2=QScriptContextInfo::FunctionType functionType() const
 
 $prototypeV2=bool isNull() const
 
 $prototypeV2=int lineNumber() const
 
-$prototype=qint64 scriptId () const
-$method=|qint64|scriptId|
+$prototypeV2=qint64 scriptId() const
 
 $extraMethods
 

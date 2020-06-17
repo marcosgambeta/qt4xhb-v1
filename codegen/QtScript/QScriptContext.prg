@@ -30,30 +30,24 @@ $includes
 
 $deleteMethod
 
-$prototype=QScriptValue activationObject () const
-$method=|QScriptValue|activationObject|
+$prototypeV2=QScriptValue activationObject() const
 
 $prototype=QScriptValue argument ( int index ) const
 $method=|QScriptValue|argument|int
 
 $prototypeV2=int argumentCount() const
 
-$prototype=QScriptValue argumentsObject () const
-$method=|QScriptValue|argumentsObject|
+$prototypeV2=QScriptValue argumentsObject() const
 
-$prototype=QStringList backtrace () const
-$method=|QStringList|backtrace|
+$prototypeV2=QStringList backtrace() const
 
-$prototype=QScriptValue callee () const
-$method=|QScriptValue|callee|
+$prototypeV2=QScriptValue callee() const
 
-$prototype=QScriptEngine * engine () const
-$method=|QScriptEngine *|engine|
+$prototypeV2=QScriptEngine * engine() const
 
 $prototypeV2=bool isCalledAsConstructor() const
 
-$prototype=QScriptContext * parentContext () const
-$method=|QScriptContext *|parentContext|
+$prototypeV2=QScriptContext * parentContext() const
 
 $prototype=void setActivationObject ( const QScriptValue & activation )
 $method=|void|setActivationObject|const QScriptValue &
@@ -61,11 +55,9 @@ $method=|void|setActivationObject|const QScriptValue &
 $prototype=void setThisObject ( const QScriptValue & thisObject )
 $method=|void|setThisObject|const QScriptValue &
 
-$prototype=ExecutionState state () const
-$method=|QScriptContext::ExecutionState|state|
+$prototypeV2=QScriptContext::ExecutionState state() const
 
-$prototype=QScriptValue thisObject () const
-$method=|QScriptValue|thisObject|
+$prototypeV2=QScriptValue thisObject() const
 
 $prototype=QScriptValue throwError ( Error error, const QString & text )
 $internalMethod=|QScriptValue|throwError,throwError1|QScriptContext::Error,const QString &

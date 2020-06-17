@@ -47,8 +47,7 @@ $virtualMethod=|QScriptValue|property|const QScriptValue &,const QScriptString &
 $prototype=virtual QScriptValue::PropertyFlags propertyFlags ( const QScriptValue & object, const QScriptString & name, uint id )
 $virtualMethod=|QScriptValue::PropertyFlags|propertyFlags|const QScriptValue &,const QScriptString &,uint
 
-$prototype=virtual QScriptValue prototype () const
-$virtualMethod=|QScriptValue|prototype|
+$prototypeV2=virtual QScriptValue prototype() const
 
 $prototype=virtual QueryFlags queryProperty ( const QScriptValue & object, const QScriptString & name, QueryFlags flags, uint * id )
 %% TODO: $virtualMethod=|QScriptClass::QueryFlags|queryProperty|const QScriptValue &,const QScriptString &,QScriptClass::QueryFlags,uint *

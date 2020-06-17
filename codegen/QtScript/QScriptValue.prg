@@ -204,8 +204,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT )
 }
 $addMethod=construct
 
-$prototype=QScriptValue data () const
-$method=|QScriptValue|data|
+$prototypeV2=QScriptValue data() const
 
 $prototype=QScriptEngine * engine () const
 %% TODO: $method=|QScriptEngine *|engine|
@@ -249,11 +248,9 @@ $prototypeV2=bool isVariant() const
 $prototype=bool lessThan ( const QScriptValue & other ) const
 $method=|bool|lessThan|const QScriptValue &
 
-$prototype=QScriptValue prototype () const
-$method=|QScriptValue|prototype|
+$prototypeV2=QScriptValue prototype() const
 
-$prototype=QScriptClass * scriptClass () const
-$method=|QScriptClass *|scriptClass|
+$prototypeV2=QScriptClass * scriptClass() const
 
 $prototype=void setData ( const QScriptValue & data )
 $method=|void|setData|const QScriptValue &
@@ -269,11 +266,9 @@ $method=|bool|strictlyEquals|const QScriptValue &
 
 $prototypeV2=bool toBool() const
 
-$prototype=QDateTime toDateTime () const
-$method=|QDateTime|toDateTime|
+$prototypeV2=QDateTime toDateTime() const
 
-$prototype=qint32 toInt32 () const
-$method=|qint32|toInt32|
+$prototypeV2=qint32 toInt32() const
 
 $prototype=qsreal toInteger () const
 %% TODO: $method=|qsreal|toInteger|
@@ -281,22 +276,17 @@ $prototype=qsreal toInteger () const
 $prototype=qsreal toNumber () const
 %% TODO: $method=|qsreal|toNumber|
 
-$prototype=QObject * toQObject () const
-$method=|QObject *|toQObject|
+$prototypeV2=QObject * toQObject() const
 
-$prototype=QRegExp toRegExp () const
-$method=|QRegExp|toRegExp|
+$prototypeV2=QRegExp toRegExp() const
 
 $prototypeV2=QString toString() const
 
-$prototype=quint16 toUInt16 () const
-$method=|quint16|toUInt16|
+$prototypeV2=quint16 toUInt16() const
 
-$prototype=quint32 toUInt32 () const
-$method=|quint32|toUInt32|
+$prototypeV2=quint32 toUInt32() const
 
-$prototype=QVariant toVariant () const
-$method=|QVariant|toVariant|
+$prototypeV2=QVariant toVariant() const
 
 $extraMethods
 

@@ -35,14 +35,11 @@ $method=|QScriptValue|argument|int
 
 $prototypeV2=int argumentCount() const
 
-$prototype=QScriptContext * context () const
-$method=|QScriptContext *|context|
+$prototypeV2=QScriptContext * context() const
 
-$prototype=QScriptEngine * engine () const
-$method=|QScriptEngine *|engine|
+$prototypeV2=QScriptEngine * engine() const
 
-$prototype=QScriptValue thisObject () const
-$method=|QScriptValue|thisObject|
+$prototypeV2=QScriptValue thisObject() const
 
 $extraMethods
 

@@ -32,8 +32,7 @@ $constructor=|new|const QScriptValue &
 
 $deleteMethod
 
-$prototype=QScriptValue::PropertyFlags flags () const
-$method=|QScriptValue::PropertyFlags|flags|
+$prototypeV2=QScriptValue::PropertyFlags flags() const
 
 $prototypeV2=bool hasNext() const
 
@@ -41,29 +40,22 @@ $prototypeV2=bool hasPrevious() const
 
 $prototypeV2=QString name() const
 
-$prototype=void next ()
-$method=|void|next|
+$prototypeV2=void next()
 
-$prototype=void previous ()
-$method=|void|previous|
+$prototypeV2=void previous()
 
-$prototype=void remove ()
-$method=|void|remove|
+$prototypeV2=void remove()
 
-$prototype=QScriptString scriptName () const
-$method=|QScriptString|scriptName|
+$prototypeV2=QScriptString scriptName() const
 
 $prototype=void setValue ( const QScriptValue & value )
 $method=|void|setValue|const QScriptValue &
 
-$prototype=void toBack ()
-$method=|void|toBack|
+$prototypeV2=void toBack()
 
-$prototype=void toFront ()
-$method=|void|toFront|
+$prototypeV2=void toFront()
 
-$prototype=QScriptValue value () const
-$method=|QScriptValue|value|
+$prototypeV2=QScriptValue value() const
 
 $extraMethods
 

@@ -36,8 +36,7 @@ $prototypeV2=int errorLineNumber() const
 
 $prototypeV2=QString errorMessage() const
 
-$prototype=State state () const
-$method=|QScriptSyntaxCheckResult::State|state|
+$prototypeV2=QScriptSyntaxCheckResult::State state() const
 
 $extraMethods
 
