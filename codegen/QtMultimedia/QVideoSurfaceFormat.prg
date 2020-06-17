@@ -69,21 +69,17 @@ $prototypeV2=int frameHeight() const
 
 $prototypeV2=qreal frameRate() const
 
-$prototype=QSize frameSize () const
-$method=|QSize|frameSize|
+$prototypeV2=QSize frameSize() const
 
 $prototypeV2=int frameWidth() const
 
-$prototype=QAbstractVideoBuffer::HandleType handleType () const
-$method=|QAbstractVideoBuffer::HandleType|handleType|
+$prototypeV2=QAbstractVideoBuffer::HandleType handleType() const
 
 $prototypeV2=bool isValid() const
 
-$prototype=QSize pixelAspectRatio () const
-$method=|QSize|pixelAspectRatio|
+$prototypeV2=QSize pixelAspectRatio() const
 
-$prototype=QVideoFrame::PixelFormat pixelFormat () const
-$method=|QVideoFrame::PixelFormat|pixelFormat|
+$prototypeV2=QVideoFrame::PixelFormat pixelFormat() const
 
 $prototype=QVariant property ( const char * name ) const
 $method=|QVariant|property|const char *
@@ -165,14 +161,11 @@ $method=|void|setViewport|const QRect &
 $prototype=void setYCbCrColorSpace ( YCbCrColorSpace space )
 $method=|void|setYCbCrColorSpace|QVideoSurfaceFormat::YCbCrColorSpace
 
-$prototype=QSize sizeHint () const
-$method=|QSize|sizeHint|
+$prototypeV2=QSize sizeHint() const
 
-$prototype=QRect viewport () const
-$method=|QRect|viewport|
+$prototypeV2=QRect viewport() const
 
-$prototype=YCbCrColorSpace yCbCrColorSpace () const
-$method=|QVideoSurfaceFormat::YCbCrColorSpace|yCbCrColorSpace|
+$prototypeV2=QVideoSurfaceFormat::YCbCrColorSpace yCbCrColorSpace() const
 
 $extraMethods
 

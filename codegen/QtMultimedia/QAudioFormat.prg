@@ -90,11 +90,9 @@ $prototypeV2=QString codec() const
 $prototype=void setByteOrder ( QAudioFormat::Endian byteOrder )
 $method=|void|setByteOrder|QAudioFormat::Endian
 
-$prototype=QAudioFormat::Endian byteOrder () const
-$method=|QAudioFormat::Endian|byteOrder|
+$prototypeV2=QAudioFormat::Endian byteOrder() const
 
-$prototype=QAudioFormat::SampleType sampleType () const
-$method=|QAudioFormat::SampleType|sampleType|
+$prototypeV2=QAudioFormat::SampleType sampleType() const
 
 $prototype=void setSampleType ( QAudioFormat::SampleType sampleType )
 $method=|void|setSampleType|QAudioFormat::SampleType

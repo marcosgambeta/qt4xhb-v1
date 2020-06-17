@@ -65,8 +65,7 @@ $prototypeV2=bool isNull() const
 $prototype=QAudioFormat nearestFormat ( const QAudioFormat & settings ) const
 $method=|QAudioFormat|nearestFormat|const QAudioFormat &
 
-$prototype=QAudioFormat preferredFormat () const
-$method=|QAudioFormat|preferredFormat|
+$prototypeV2=QAudioFormat preferredFormat() const
 
 $prototype=QList<int> supportedFrequencies() const
 $method=|QList<int>|supportedFrequencies|
@@ -89,17 +88,14 @@ $method=|QList<QAudioFormat::Endian>|supportedByteOrders|
 $prototype=QList<QAudioFormat::SampleType> supportedSampleTypes () const
 $method=|QList<QAudioFormat::SampleType>|supportedSampleTypes|
 
-$prototype=QStringList supportedCodecs () const
-$method=|QStringList|supportedCodecs|
+$prototypeV2=QStringList supportedCodecs() const
 
 $prototype=static QList<QAudioDeviceInfo> availableDevices ( QAudio::Mode mode )
 $staticMethod=|QList<QAudioDeviceInfo>|availableDevices|QAudio::Mode
 
-$prototype=static QAudioDeviceInfo defaultInputDevice ()
-$staticMethod=|QAudioDeviceInfo|defaultInputDevice|
+$prototypeV2=static QAudioDeviceInfo defaultInputDevice()
 
-$prototype=static QAudioDeviceInfo defaultOutputDevice ()
-$staticMethod=|QAudioDeviceInfo|defaultOutputDevice|
+$prototypeV2=static QAudioDeviceInfo defaultOutputDevice()
 
 $extraMethods
 

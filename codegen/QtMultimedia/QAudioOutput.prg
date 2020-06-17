@@ -61,27 +61,21 @@ $prototypeV2=int bufferSize() const
 
 $prototypeV2=int bytesFree() const
 
-$prototype=qint64 elapsedUSecs () const
-$method=|qint64|elapsedUSecs|
+$prototypeV2=qint64 elapsedUSecs() const
 
-$prototype=QAudio::Error error () const
-$method=|QAudio::Error|error|
+$prototypeV2=QAudio::Error error() const
 
-$prototype=QAudioFormat format () const
-$method=|QAudioFormat|format|
+$prototypeV2=QAudioFormat format() const
 
 $prototypeV2=int notifyInterval() const
 
 $prototypeV2=int periodSize() const
 
-$prototype=qint64 processedUSecs () const
-$method=|qint64|processedUSecs|
+$prototypeV2=qint64 processedUSecs() const
 
-$prototype=void reset ()
-$method=|void|reset|
+$prototypeV2=void reset()
 
-$prototype=void resume ()
-$method=|void|resume|
+$prototypeV2=void resume()
 
 $prototype=void setBufferSize ( int value )
 $method=|void|setBufferSize|int
@@ -117,14 +111,11 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_START )
 }
 $addMethod=start
 
-$prototype=QAudio::State state () const
-$method=|QAudio::State|state|
+$prototypeV2=QAudio::State state() const
 
-$prototype=void stop ()
-$method=|void|stop|
+$prototypeV2=void stop()
 
-$prototype=void suspend ()
-$method=|void|suspend|
+$prototypeV2=void suspend()
 
 $beginSignals
 $signal=|notify()

@@ -31,8 +31,7 @@ $includes
 
 $deleteMethod
 
-$prototype=Error error () const
-$method=|QAbstractVideoSurface::Error|error|
+$prototypeV2=QAbstractVideoSurface::Error error() const
 
 $prototypeV2=bool isActive() const
 
@@ -48,14 +47,12 @@ $virtualMethod=|bool|present|const QVideoFrame &
 $prototype=virtual bool start ( const QVideoSurfaceFormat & format )
 $virtualMethod=|bool|start|const QVideoSurfaceFormat &
 
-$prototype=virtual void stop ()
-$virtualMethod=|void|stop|
+$prototypeV2=virtual void stop()
 
 $prototype=virtual QList<QVideoFrame::PixelFormat> supportedPixelFormats ( QAbstractVideoBuffer::HandleType type = QAbstractVideoBuffer::NoHandle ) const = 0
 $virtualMethod=|QList<QVideoFrame::PixelFormat>|supportedPixelFormats|QAbstractVideoBuffer::HandleType=QAbstractVideoBuffer::NoHandle
 
-$prototype=QVideoSurfaceFormat surfaceFormat () const
-$method=|QVideoSurfaceFormat|surfaceFormat|
+$prototypeV2=QVideoSurfaceFormat surfaceFormat() const
 
 $beginSignals
 $signal=|activeChanged(bool)
