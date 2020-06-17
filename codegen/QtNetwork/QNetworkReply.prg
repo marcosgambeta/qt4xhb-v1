@@ -31,14 +31,12 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual void abort () = 0
-$virtualMethod=|void|abort|
+$prototypeV2=virtual void abort() = 0
 
 $prototype=QVariant attribute ( QNetworkRequest::Attribute code ) const
 $method=|QVariant|attribute|QNetworkRequest::Attribute
 
-$prototype=NetworkError error () const
-$method=|QNetworkReply::NetworkError|error|
+$prototypeV2=QNetworkReply::NetworkError error() const
 
 $prototype=bool hasRawHeader ( const QByteArray & headerName ) const
 $method=|bool|hasRawHeader|const QByteArray &
@@ -78,11 +76,9 @@ $prototypeV2=bool isFinished() const
 
 $prototypeV2=bool isRunning() const
 
-$prototype=QNetworkAccessManager * manager () const
-$method=|QNetworkAccessManager *|manager|
+$prototypeV2=QNetworkAccessManager * manager() const
 
-$prototype=QNetworkAccessManager::Operation operation () const
-$method=|QNetworkAccessManager::Operation|operation|
+$prototypeV2=QNetworkAccessManager::Operation operation() const
 
 $prototype=QByteArray rawHeader ( const QByteArray & headerName ) const
 $method=|QByteArray|rawHeader|const QByteArray &
@@ -90,11 +86,9 @@ $method=|QByteArray|rawHeader|const QByteArray &
 $prototype=QList<QByteArray> rawHeaderList () const
 $method=|QList<QByteArray>|rawHeaderList|
 
-$prototype=qint64 readBufferSize () const
-$method=|qint64|readBufferSize|
+$prototypeV2=qint64 readBufferSize() const
 
-$prototype=QNetworkRequest request () const
-$method=|QNetworkRequest|request|
+$prototypeV2=QNetworkRequest request() const
 
 $prototype=virtual void setReadBufferSize ( qint64 size )
 $virtualMethod=|void|setReadBufferSize|qint64
@@ -102,14 +96,11 @@ $virtualMethod=|void|setReadBufferSize|qint64
 $prototype=void setSslConfiguration ( const QSslConfiguration & config )
 $method=|void|setSslConfiguration|const QSslConfiguration &
 
-$prototype=QSslConfiguration sslConfiguration () const
-$method=|QSslConfiguration|sslConfiguration|
+$prototypeV2=QSslConfiguration sslConfiguration() const
 
-$prototype=QUrl url () const
-$method=|QUrl|url|
+$prototypeV2=QUrl url() const
 
-$prototype=virtual void close ()
-$virtualMethod=|void|close|
+$prototypeV2=virtual void close()
 
 $beginSignals
 $signal=|downloadProgress(qint64,qint64)

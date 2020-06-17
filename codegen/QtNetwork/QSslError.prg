@@ -71,11 +71,9 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QSslCertificate certificate () const
-$method=|QSslCertificate|certificate|
+$prototypeV2=QSslCertificate certificate() const
 
-$prototype=SslError error () const
-$method=|QSslError::SslError|error|
+$prototypeV2=QSslError::SslError error() const
 
 $prototypeV2=QString errorString() const
 

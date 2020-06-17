@@ -35,8 +35,7 @@ $prototypeV2=QString cacheDirectory() const
 $prototype=QNetworkCacheMetaData fileMetaData ( const QString & fileName ) const
 $method=|QNetworkCacheMetaData|fileMetaData|const QString &
 
-$prototype=qint64 maximumCacheSize () const
-$method=|qint64|maximumCacheSize|
+$prototypeV2=qint64 maximumCacheSize() const
 
 $prototype=void setCacheDirectory ( const QString & cacheDir )
 $method=|void|setCacheDirectory|const QString &
@@ -44,8 +43,7 @@ $method=|void|setCacheDirectory|const QString &
 $prototype=void setMaximumCacheSize ( qint64 size )
 $method=|void|setMaximumCacheSize|qint64
 
-$prototype=virtual qint64 cacheSize () const
-$virtualMethod=|qint64|cacheSize|
+$prototypeV2=virtual qint64 cacheSize() const
 
 $prototype=virtual QIODevice * data ( const QUrl & url )
 $virtualMethod=|QIODevice *|data|const QUrl &
@@ -65,7 +63,6 @@ $virtualMethod=|bool|remove|const QUrl &
 $prototype=virtual void updateMetaData ( const QNetworkCacheMetaData & metaData )
 $virtualMethod=|void|updateMetaData|const QNetworkCacheMetaData &
 
-$prototype=virtual void clear ()
-$virtualMethod=|void|clear|
+$prototypeV2=virtual void clear()
 
 #pragma ENDDUMP

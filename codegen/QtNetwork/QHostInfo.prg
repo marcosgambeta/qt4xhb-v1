@@ -58,8 +58,7 @@ $deleteMethod
 $prototype=QList<QHostAddress> addresses () const
 $method=|QList<QHostAddress>|addresses|
 
-$prototype=HostInfoError error () const
-$method=|QHostInfo::HostInfoError|error|
+$prototypeV2=QHostInfo::HostInfoError error() const
 
 $prototypeV2=QString errorString() const
 

@@ -73,8 +73,7 @@ $prototypeV2=QString keyExchangeMethod() const
 
 $prototypeV2=QString name() const
 
-$prototype=QSsl::SslProtocol protocol () const
-$method=|QSsl::SslProtocol|protocol|
+$prototypeV2=QSsl::SslProtocol protocol() const
 
 $prototypeV2=QString protocolString() const
 

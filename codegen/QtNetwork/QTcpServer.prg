@@ -35,8 +35,7 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=void close ()
-$method=|void|close|
+$prototypeV2=void close()
 
 $prototypeV2=QString errorString() const
 
@@ -49,20 +48,15 @@ $method=|bool|listen|const QHostAddress &=QHostAddress::Any,quint16=0
 
 $prototypeV2=int maxPendingConnections() const
 
-$prototype=virtual QTcpSocket * nextPendingConnection ()
-$virtualMethod=|QTcpSocket *|nextPendingConnection|
+$prototypeV2=virtual QTcpSocket * nextPendingConnection()
 
-$prototype=QNetworkProxy proxy () const
-$method=|QNetworkProxy|proxy|
+$prototypeV2=QNetworkProxy proxy() const
 
-$prototype=QHostAddress serverAddress () const
-$method=|QHostAddress|serverAddress|
+$prototypeV2=QHostAddress serverAddress() const
 
-$prototype=QAbstractSocket::SocketError serverError () const
-$method=|QAbstractSocket::SocketError|serverError|
+$prototypeV2=QAbstractSocket::SocketError serverError() const
 
-$prototype=quint16 serverPort () const
-$method=|quint16|serverPort|
+$prototypeV2=quint16 serverPort() const
 
 $prototype=void setMaxPendingConnections ( int numConnections )
 $method=|void|setMaxPendingConnections|int

@@ -34,8 +34,7 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=void close ()
-$method=|void|close|
+$prototypeV2=void close()
 
 $prototypeV2=QString errorString() const
 
@@ -50,11 +49,9 @@ $method=|bool|listen|const QString &
 
 $prototypeV2=int maxPendingConnections() const
 
-$prototype=virtual QLocalSocket * nextPendingConnection ()
-$virtualMethod=|QLocalSocket *|nextPendingConnection|
+$prototypeV2=virtual QLocalSocket * nextPendingConnection()
 
-$prototype=QAbstractSocket::SocketError serverError () const
-$method=|QAbstractSocket::SocketError|serverError|
+$prototypeV2=QAbstractSocket::SocketError serverError() const
 
 $prototypeV2=QString serverName() const
 

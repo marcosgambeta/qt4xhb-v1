@@ -35,8 +35,7 @@ $constructor=|new|QAbstractSocket::SocketType,QObject *
 
 $deleteMethod
 
-$prototype=void abort ()
-$method=|void|abort|
+$prototypeV2=void abort()
 
 $prototype=void connectToHost ( const QString & hostName, quint16 port, OpenMode openMode = ReadWrite )
 $method=|void|connectToHost,connectToHost1|const QString &,quint16,QIODevice::OpenMode=QIODevice::ReadWrite
@@ -44,35 +43,27 @@ $method=|void|connectToHost,connectToHost1|const QString &,quint16,QIODevice::Op
 $prototype=void connectToHost ( const QHostAddress & address, quint16 port, OpenMode openMode = ReadWrite )
 $method=|void|connectToHost,connectToHost2|const QHostAddress &,quint16,QIODevice::OpenMode=QIODevice::ReadWrite
 
-$prototype=void disconnectFromHost ()
-$method=|void|disconnectFromHost|
+$prototypeV2=void disconnectFromHost()
 
-$prototype=SocketError error () const
-$method=|QAbstractSocket::SocketError|error|
+$prototypeV2=QAbstractSocket::SocketError error() const
 
 $prototypeV2=bool flush()
 
 $prototypeV2=bool isValid() const
 
-$prototype=QHostAddress localAddress () const
-$method=|QHostAddress|localAddress|
+$prototypeV2=QHostAddress localAddress() const
 
-$prototype=quint16 localPort () const
-$method=|quint16|localPort|
+$prototypeV2=quint16 localPort() const
 
-$prototype=QHostAddress peerAddress () const
-$method=|QHostAddress|peerAddress|
+$prototypeV2=QHostAddress peerAddress() const
 
 $prototypeV2=QString peerName() const
 
-$prototype=quint16 peerPort () const
-$method=|quint16|peerPort|
+$prototypeV2=quint16 peerPort() const
 
-$prototype=QNetworkProxy proxy () const
-$method=|QNetworkProxy|proxy|
+$prototypeV2=QNetworkProxy proxy() const
 
-$prototype=qint64 readBufferSize () const
-$method=|qint64|readBufferSize|
+$prototypeV2=qint64 readBufferSize() const
 
 $prototype=void setProxy ( const QNetworkProxy & networkProxy )
 $method=|void|setProxy|const QNetworkProxy &
@@ -91,11 +82,9 @@ $prototypeV2=int socketDescriptor() const
 $prototype=QVariant socketOption ( QAbstractSocket::SocketOption option )
 $method=|QVariant|socketOption|QAbstractSocket::SocketOption
 
-$prototype=SocketType socketType () const
-$method=|QAbstractSocket::SocketType|socketType|
+$prototypeV2=QAbstractSocket::SocketType socketType() const
 
-$prototype=SocketState state () const
-$method=|QAbstractSocket::SocketState|state|
+$prototypeV2=QAbstractSocket::SocketState state() const
 
 $prototype=bool waitForConnected ( int msecs = 30000 )
 $method=|bool|waitForConnected|int=30000
@@ -105,16 +94,13 @@ $method=|bool|waitForDisconnected|int=30000
 
 $prototypeV2=virtual bool atEnd() const
 
-$prototype=virtual qint64 bytesAvailable () const
-$virtualMethod=|qint64|bytesAvailable|
+$prototypeV2=virtual qint64 bytesAvailable() const
 
-$prototype=virtual qint64 bytesToWrite () const
-$virtualMethod=|qint64|bytesToWrite|
+$prototypeV2=virtual qint64 bytesToWrite() const
 
 $prototypeV2=virtual bool canReadLine() const
 
-$prototype=virtual void close ()
-$virtualMethod=|void|close|
+$prototypeV2=virtual void close()
 
 $prototypeV2=virtual bool isSequential() const
 

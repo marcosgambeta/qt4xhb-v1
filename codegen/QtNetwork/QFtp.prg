@@ -32,30 +32,25 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=qint64 bytesAvailable () const
-$method=|qint64|bytesAvailable|
+$prototypeV2=qint64 bytesAvailable() const
 
 $prototype=int cd ( const QString & dir )
 $method=|int|cd|const QString &
 
-$prototype=void clearPendingCommands ()
-$method=|void|clearPendingCommands|
+$prototypeV2=void clearPendingCommands()
 
 $prototypeV2=int close()
 
 $prototype=int connectToHost ( const QString & host, quint16 port = 21 )
 $method=|int|connectToHost|const QString &,quint16=21
 
-$prototype=Command currentCommand () const
-$method=|QFtp::Command|currentCommand|
+$prototypeV2=QFtp::Command currentCommand() const
 
-$prototype=QIODevice * currentDevice () const
-$method=|QIODevice *|currentDevice|
+$prototypeV2=QIODevice * currentDevice() const
 
 $prototypeV2=int currentId() const
 
-$prototype=Error error () const
-$method=|QFtp::Error|error|
+$prototypeV2=QFtp::Error error() const
 
 $prototypeV2=QString errorString() const
 
@@ -108,8 +103,7 @@ $prototype=qint64 read ( char * data, qint64 maxlen )
 %% TODO: corrigir 'char *'
 $method=|qint64|read|char *,qint64
 
-$prototype=QByteArray readAll ()
-$method=|QByteArray|readAll|
+$prototypeV2=QByteArray readAll()
 
 $prototype=int remove ( const QString & file )
 $method=|int|remove|const QString &
@@ -126,11 +120,9 @@ $method=|int|setProxy|const QString &,quint16
 $prototype=int setTransferMode ( TransferMode mode )
 $method=|int|setTransferMode|QFtp::TransferMode
 
-$prototype=State state () const
-$method=|QFtp::State|state|
+$prototypeV2=QFtp::State state() const
 
-$prototype=void abort ()
-$method=|void|abort|
+$prototypeV2=void abort()
 
 $beginSignals
 $signal=|commandFinished(int,bool)

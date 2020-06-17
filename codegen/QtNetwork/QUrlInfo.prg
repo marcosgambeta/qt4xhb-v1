@@ -87,11 +87,9 @@ $prototypeV2=bool isValid() const
 
 $prototypeV2=bool isWritable() const
 
-$prototype=QDateTime lastModified () const
-$method=|QDateTime|lastModified|
+$prototypeV2=QDateTime lastModified() const
 
-$prototype=QDateTime lastRead () const
-$method=|QDateTime|lastRead|
+$prototypeV2=QDateTime lastRead() const
 
 $prototypeV2=QString name() const
 
@@ -135,8 +133,7 @@ $virtualMethod=|void|setSymLink|bool
 $prototype=virtual void setWritable ( bool b )
 $virtualMethod=|void|setWritable|bool
 
-$prototype=qint64 size () const
-$method=|qint64|size|
+$prototypeV2=qint64 size() const
 
 $prototype=static bool equal ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 $staticMethod=|bool|equal|const QUrlInfo &,const QUrlInfo &,int

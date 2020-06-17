@@ -113,8 +113,7 @@ $prototypeV2=int peerPort() const
 
 $prototypeV2=QString protocolTag() const
 
-$prototype=QueryType queryType () const
-$method=|QNetworkProxyQuery::QueryType|queryType|
+$prototypeV2=QNetworkProxyQuery::QueryType queryType() const
 
 $prototype=void setLocalPort ( int port )
 $method=|void|setLocalPort|int
@@ -134,8 +133,7 @@ $method=|void|setQueryType|QNetworkProxyQuery::QueryType
 $prototype=void setUrl ( const QUrl & url )
 $method=|void|setUrl|const QUrl &
 
-$prototype=QUrl url () const
-$method=|QUrl|url|
+$prototypeV2=QUrl url() const
 
 $extraMethods
 

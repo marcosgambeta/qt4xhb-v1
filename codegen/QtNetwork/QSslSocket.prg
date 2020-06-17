@@ -36,8 +36,7 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=void abort ()
-$method=|void|abort|
+$prototypeV2=void abort()
 
 $prototype=void addCaCertificate ( const QSslCertificate & certificate )
 $method=|void|addCaCertificate|const QSslCertificate &
@@ -104,11 +103,9 @@ HB_FUNC_STATIC( QSSLSOCKET_CONNECTTOHOSTENCRYPTED )
 }
 $addMethod=connectToHostEncrypted
 
-$prototype=qint64 encryptedBytesAvailable () const
-$method=|qint64|encryptedBytesAvailable|
+$prototypeV2=qint64 encryptedBytesAvailable() const
 
-$prototype=qint64 encryptedBytesToWrite () const
-$method=|qint64|encryptedBytesToWrite|
+$prototypeV2=qint64 encryptedBytesToWrite() const
 
 $prototypeV2=bool flush()
 
@@ -142,31 +139,24 @@ $addMethod=ignoreSslErrors
 
 $prototypeV2=bool isEncrypted() const
 
-$prototype=QSslCertificate localCertificate () const
-$method=|QSslCertificate|localCertificate|
+$prototypeV2=QSslCertificate localCertificate() const
 
-$prototype=SslMode mode () const
-$method=|QSslSocket::SslMode|mode|
+$prototypeV2=QSslSocket::SslMode mode() const
 
-$prototype=QSslCertificate peerCertificate () const
-$method=|QSslCertificate|peerCertificate|
+$prototypeV2=QSslCertificate peerCertificate() const
 
 $prototype=QList<QSslCertificate> peerCertificateChain () const
 $method=|QList<QSslCertificate>|peerCertificateChain|
 
 $prototypeV2=int peerVerifyDepth() const
 
-$prototype=QSslSocket::PeerVerifyMode peerVerifyMode () const
-$method=|QSslSocket::PeerVerifyMode|peerVerifyMode|
+$prototypeV2=QSslSocket::PeerVerifyMode peerVerifyMode() const
 
-$prototype=QSslKey privateKey () const
-$method=|QSslKey|privateKey|
+$prototypeV2=QSslKey privateKey() const
 
-$prototype=QSsl::SslProtocol protocol () const
-$method=|QSsl::SslProtocol|protocol|
+$prototypeV2=QSsl::SslProtocol protocol() const
 
-$prototype=QSslCipher sessionCipher () const
-$method=|QSslCipher|sessionCipher|
+$prototypeV2=QSslCipher sessionCipher() const
 
 $prototype=void setCaCertificates ( const QList<QSslCertificate> & certificates )
 $method=|void|setCaCertificates|const QList<QSslCertificate> &
@@ -279,8 +269,7 @@ $method=|void|setSslConfiguration|const QSslConfiguration &
 $prototype=QVariant socketOption ( QAbstractSocket::SocketOption option )
 $method=|QVariant|socketOption|QAbstractSocket::SocketOption
 
-$prototype=QSslConfiguration sslConfiguration () const
-$method=|QSslConfiguration|sslConfiguration|
+$prototypeV2=QSslConfiguration sslConfiguration() const
 
 $prototype=QList<QSslError> sslErrors () const
 $method=|QList<QSslError>|sslErrors|
@@ -296,16 +285,13 @@ $method=|bool|waitForEncrypted|int=30000
 
 $prototypeV2=virtual bool atEnd() const
 
-$prototype=virtual qint64 bytesAvailable () const
-$virtualMethod=|qint64|bytesAvailable|
+$prototypeV2=virtual qint64 bytesAvailable() const
 
-$prototype=virtual qint64 bytesToWrite () const
-$virtualMethod=|qint64|bytesToWrite|
+$prototypeV2=virtual qint64 bytesToWrite() const
 
 $prototypeV2=virtual bool canReadLine() const
 
-$prototype=virtual void close ()
-$virtualMethod=|void|close|
+$prototypeV2=virtual void close()
 
 $prototype=virtual bool waitForBytesWritten ( int msecs = 30000 )
 $virtualMethod=|bool|waitForBytesWritten|int=30000
@@ -313,11 +299,9 @@ $virtualMethod=|bool|waitForBytesWritten|int=30000
 $prototype=virtual bool waitForReadyRead ( int msecs = 30000 )
 $virtualMethod=|bool|waitForReadyRead|int=30000
 
-$prototype=void startClientEncryption ()
-$method=|void|startClientEncryption|
+$prototypeV2=void startClientEncryption()
 
-$prototype=void startServerEncryption ()
-$method=|void|startServerEncryption|
+$prototypeV2=void startServerEncryption()
 
 $prototype=static void addDefaultCaCertificate ( const QSslCertificate & certificate )
 $staticMethod=|void|addDefaultCaCertificate|const QSslCertificate &

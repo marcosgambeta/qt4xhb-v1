@@ -66,17 +66,14 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=QByteArray digest ( QCryptographicHash::Algorithm algorithm = QCryptographicHash::Md5 ) const
 $method=|QByteArray|digest|QCryptographicHash::Algorithm=QCryptographicHash::Md5
 
-$prototype=QDateTime effectiveDate () const
-$method=|QDateTime|effectiveDate|
+$prototypeV2=QDateTime effectiveDate() const
 
-$prototype=QDateTime expiryDate () const
-$method=|QDateTime|expiryDate|
+$prototypeV2=QDateTime expiryDate() const
 
 $prototypeV2=bool isNull() const
 
@@ -110,11 +107,9 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFO )
 }
 $addMethod=issuerInfo
 
-$prototype=QSslKey publicKey () const
-$method=|QSslKey|publicKey|
+$prototypeV2=QSslKey publicKey() const
 
-$prototype=QByteArray serialNumber () const
-$method=|QByteArray|serialNumber|
+$prototypeV2=QByteArray serialNumber() const
 
 $prototype=QString subjectInfo ( SubjectInfo subject ) const
 $internalMethod=|QString|subjectInfo,subjectInfo1|QSslCertificate::SubjectInfo
@@ -144,14 +139,11 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SUBJECTINFO )
 }
 $addMethod=subjectInfo
 
-$prototype=QByteArray toDer () const
-$method=|QByteArray|toDer|
+$prototypeV2=QByteArray toDer() const
 
-$prototype=QByteArray toPem () const
-$method=|QByteArray|toPem|
+$prototypeV2=QByteArray toPem() const
 
-$prototype=QByteArray version () const
-$method=|QByteArray|version|
+$prototypeV2=QByteArray version() const
 
 $prototype=QList<QSslCertificate> fromData ( const QByteArray & data, QSsl::EncodingFormat format = QSsl::Pem )
 $method=|QList<QSslCertificate>|fromData|const QByteArray &,QSsl::EncodingFormat=QSsl::Pem

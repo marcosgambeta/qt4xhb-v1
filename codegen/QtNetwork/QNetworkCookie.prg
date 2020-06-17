@@ -59,8 +59,7 @@ $deleteMethod
 
 $prototypeV2=QString domain() const
 
-$prototype=QDateTime expirationDate () const
-$method=|QDateTime|expirationDate|
+$prototypeV2=QDateTime expirationDate() const
 
 $prototypeV2=bool isHttpOnly() const
 
@@ -68,8 +67,7 @@ $prototypeV2=bool isSecure() const
 
 $prototypeV2=bool isSessionCookie() const
 
-$prototype=QByteArray name () const
-$method=|QByteArray|name|
+$prototypeV2=QByteArray name() const
 
 $prototypeV2=QString path() const
 
@@ -97,8 +95,7 @@ $method=|void|setValue|const QByteArray &
 $prototype=QByteArray toRawForm ( RawForm form = Full ) const
 $method=|QByteArray|toRawForm|QNetworkCookie::RawForm=QNetworkCookie::Full
 
-$prototype=QByteArray value () const
-$method=|QByteArray|value|
+$prototypeV2=QByteArray value() const
 
 $prototype=QList<QNetworkCookie> parseCookies ( const QByteArray & cookieString )
 $method=|QList<QNetworkCookie>|parseCookies|const QByteArray &

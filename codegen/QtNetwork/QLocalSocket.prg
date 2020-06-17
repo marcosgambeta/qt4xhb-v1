@@ -32,17 +32,14 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=void abort ()
-$method=|void|abort|
+$prototypeV2=void abort()
 
 $prototype=void connectToServer ( const QString & name, OpenMode openMode = ReadWrite )
 $method=|void|connectToServer|const QString &,QIODevice::OpenMode=QIODevice::ReadWrite
 
-$prototype=void disconnectFromServer ()
-$method=|void|disconnectFromServer|
+$prototypeV2=void disconnectFromServer()
 
-$prototype=LocalSocketError error () const
-$method=|QLocalSocket::LocalSocketError|error|
+$prototypeV2=QLocalSocket::LocalSocketError error() const
 
 $prototypeV2=bool flush()
 
@@ -50,16 +47,14 @@ $prototypeV2=QString fullServerName() const
 
 $prototypeV2=bool isValid() const
 
-$prototype=qint64 readBufferSize () const
-$method=|qint64|readBufferSize|
+$prototypeV2=qint64 readBufferSize() const
 
 $prototypeV2=QString serverName() const
 
 $prototype=void setReadBufferSize ( qint64 size )
 $method=|void|setReadBufferSize|qint64
 
-$prototype=LocalSocketState state () const
-$method=|QLocalSocket::LocalSocketState|state|
+$prototypeV2=QLocalSocket::LocalSocketState state() const
 
 $prototype=bool waitForConnected ( int msecs = 30000 )
 $method=|bool|waitForConnected|int=30000
@@ -67,16 +62,13 @@ $method=|bool|waitForConnected|int=30000
 $prototype=bool waitForDisconnected ( int msecs = 30000 )
 $method=|bool|waitForDisconnected|int=30000
 
-$prototype=virtual qint64 bytesAvailable () const
-$virtualMethod=|qint64|bytesAvailable|
+$prototypeV2=virtual qint64 bytesAvailable() const
 
-$prototype=virtual qint64 bytesToWrite () const
-$virtualMethod=|qint64|bytesToWrite|
+$prototypeV2=virtual qint64 bytesToWrite() const
 
 $prototypeV2=virtual bool canReadLine() const
 
-$prototype=virtual void close ()
-$virtualMethod=|void|close|
+$prototypeV2=virtual void close()
 
 $prototypeV2=virtual bool isSequential() const
 

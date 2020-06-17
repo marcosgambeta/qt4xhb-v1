@@ -35,19 +35,16 @@ $deleteMethod
 $prototype=QList<QNetworkConfiguration> allConfigurations ( QNetworkConfiguration::StateFlags filter = 0 ) const
 $method=|QList<QNetworkConfiguration>|allConfigurations|QNetworkConfiguration::StateFlags=0
 
-$prototype=QNetworkConfigurationManager::Capabilities capabilities () const
-$method=|QNetworkConfigurationManager::Capabilities|capabilities|
+$prototypeV2=QNetworkConfigurationManager::Capabilities capabilities() const
 
 $prototype=QNetworkConfiguration configurationFromIdentifier ( const QString & identifier ) const
 $method=|QNetworkConfiguration|configurationFromIdentifier|const QString &
 
-$prototype=QNetworkConfiguration defaultConfiguration () const
-$method=|QNetworkConfiguration|defaultConfiguration|
+$prototypeV2=QNetworkConfiguration defaultConfiguration() const
 
 $prototypeV2=bool isOnline() const
 
-$prototype=void updateConfigurations ()
-$method=|void|updateConfigurations|
+$prototypeV2=void updateConfigurations()
 
 $beginSignals
 $signal=|configurationAdded(QNetworkConfiguration)

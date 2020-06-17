@@ -63,8 +63,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=Capabilities capabilities () const
-$method=|QNetworkProxy::Capabilities|capabilities|
+$prototypeV2=QNetworkProxy::Capabilities capabilities() const
 
 $prototypeV2=QString hostName() const
 
@@ -74,8 +73,7 @@ $prototypeV2=bool isTransparentProxy() const
 
 $prototypeV2=QString password() const
 
-$prototype=quint16 port () const
-$method=|quint16|port|
+$prototypeV2=quint16 port() const
 
 $prototype=void setCapabilities ( Capabilities capabilities )
 $method=|void|setCapabilities|QNetworkProxy::Capabilities
@@ -100,8 +98,7 @@ $method=|QNetworkProxy::ProxyType|type|
 
 $prototypeV2=QString user() const
 
-$prototype=static QNetworkProxy applicationProxy ()
-$staticMethod=|QNetworkProxy|applicationProxy|
+$prototypeV2=static QNetworkProxy applicationProxy()
 
 $prototype=static void setApplicationProxy ( const QNetworkProxy & networkProxy )
 $staticMethod=|void|setApplicationProxy|const QNetworkProxy &

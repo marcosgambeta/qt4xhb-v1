@@ -57,13 +57,11 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QDateTime expirationDate () const
-$method=|QDateTime|expirationDate|
+$prototypeV2=QDateTime expirationDate() const
 
 $prototypeV2=bool isValid() const
 
-$prototype=QDateTime lastModified () const
-$method=|QDateTime|lastModified|
+$prototypeV2=QDateTime lastModified() const
 
 $prototypeV2=bool saveToDisk() const
 
@@ -79,8 +77,7 @@ $method=|void|setSaveToDisk|bool
 $prototype=void setUrl ( const QUrl & url )
 $method=|void|setUrl|const QUrl &
 
-$prototype=QUrl url () const
-$method=|QUrl|url|
+$prototypeV2=QUrl url() const
 
 $extraMethods
 

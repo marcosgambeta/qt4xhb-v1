@@ -58,8 +58,7 @@ $deleteMethod
 $prototype=QList<QNetworkAddressEntry> addressEntries () const
 $method=|QList<QNetworkAddressEntry>|addressEntries|
 
-$prototype=InterfaceFlags flags () const
-$method=|QNetworkInterface::InterfaceFlags|flags|
+$prototypeV2=QNetworkInterface::InterfaceFlags flags() const
 
 $prototypeV2=QString hardwareAddress() const
 

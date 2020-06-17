@@ -94,8 +94,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=bool isInSubnet ( const QHostAddress & subnet, int netmask ) const
 $internalMethod=|bool|isInSubnet,isInSubnet1|const QHostAddress &,int
@@ -128,8 +127,7 @@ $addMethod=isInSubnet
 
 $prototypeV2=bool isNull() const
 
-$prototype=QAbstractSocket::NetworkLayerProtocol protocol () const
-$method=|QAbstractSocket::NetworkLayerProtocol|protocol|
+$prototypeV2=QAbstractSocket::NetworkLayerProtocol protocol() const
 
 $prototypeV2=QString scopeId() const
 
@@ -180,8 +178,7 @@ $addMethod=setAddress
 $prototype=void setScopeId ( const QString & id )
 $method=|void|setScopeId|const QString &
 
-$prototype=quint32 toIPv4Address () const
-$method=|quint32|toIPv4Address|
+$prototypeV2=quint32 toIPv4Address() const
 
 $prototype=Q_IPV6ADDR toIPv6Address () const
 %% TODO: implementar 'Q_IPV6ADDR'

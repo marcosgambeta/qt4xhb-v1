@@ -71,11 +71,9 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QSsl::KeyAlgorithm algorithm () const
-$method=|QSsl::KeyAlgorithm|algorithm|
+$prototypeV2=QSsl::KeyAlgorithm algorithm() const
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototypeV2=bool isNull() const
 
@@ -87,8 +85,7 @@ $method=|QByteArray|toDer|const QByteArray &=QByteArray()
 $prototype=QByteArray toPem ( const QByteArray & passPhrase = QByteArray() ) const
 $method=|QByteArray|toPem|const QByteArray &=QByteArray()
 
-$prototype=QSsl::KeyType type () const
-$method=|QSsl::KeyType|type|
+$prototypeV2=QSsl::KeyType type() const
 
 $extraMethods
 

@@ -76,8 +76,7 @@ $addMethod=bind
 
 $prototypeV2=bool hasPendingDatagrams() const
 
-$prototype=qint64 pendingDatagramSize () const
-$method=|qint64|pendingDatagramSize|
+$prototypeV2=qint64 pendingDatagramSize() const
 
 $prototype=qint64 readDatagram ( char * data, qint64 maxSize, QHostAddress * address = 0, quint16 * port = 0 )
 %% TODO: implementar 'quint16 * port = 0'

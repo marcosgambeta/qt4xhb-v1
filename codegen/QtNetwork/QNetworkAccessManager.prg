@@ -38,17 +38,13 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=QNetworkConfiguration activeConfiguration () const
-$method=|QNetworkConfiguration|activeConfiguration|
+$prototypeV2=QNetworkConfiguration activeConfiguration() const
 
-$prototype=QAbstractNetworkCache * cache () const
-$method=|QAbstractNetworkCache *|cache|
+$prototypeV2=QAbstractNetworkCache * cache() const
 
-$prototype=QNetworkConfiguration configuration () const
-$method=|QNetworkConfiguration|configuration|
+$prototypeV2=QNetworkConfiguration configuration() const
 
-$prototype=QNetworkCookieJar * cookieJar () const
-$method=|QNetworkCookieJar *|cookieJar|
+$prototypeV2=QNetworkCookieJar * cookieJar() const
 
 $prototype=QNetworkReply * deleteResource ( const QNetworkRequest & request )
 $method=|QNetworkReply *|deleteResource|const QNetworkRequest &
@@ -59,8 +55,7 @@ $method=|QNetworkReply *|get|const QNetworkRequest &
 $prototype=QNetworkReply * head ( const QNetworkRequest & request )
 $method=|QNetworkReply *|head|const QNetworkRequest &
 
-$prototype=NetworkAccessibility networkAccessible () const
-$method=|QNetworkAccessManager::NetworkAccessibility|networkAccessible|
+$prototypeV2=QNetworkAccessManager::NetworkAccessibility networkAccessible() const
 
 $prototype=QNetworkReply * post ( const QNetworkRequest & request, QIODevice * data )
 $internalMethod=|QNetworkReply *|post,post1|const QNetworkRequest &,QIODevice *
@@ -90,11 +85,9 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_POST )
 }
 $addMethod=post
 
-$prototype=QNetworkProxy proxy () const
-$method=|QNetworkProxy|proxy|
+$prototypeV2=QNetworkProxy proxy() const
 
-$prototype=QNetworkProxyFactory * proxyFactory () const
-$method=|QNetworkProxyFactory *|proxyFactory|
+$prototypeV2=QNetworkProxyFactory * proxyFactory() const
 
 $prototype=QNetworkReply * put ( const QNetworkRequest & request, QIODevice * data )
 $internalMethod=|QNetworkReply *|put,put1|const QNetworkRequest &,QIODevice *

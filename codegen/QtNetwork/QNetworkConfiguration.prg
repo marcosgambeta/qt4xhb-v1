@@ -58,8 +58,7 @@ $deleteMethod
 $prototype=QString bearerName () const (deprecated)
 $method=|QString|bearerName|
 
-$prototype=BearerType bearerType () const
-$method=|QNetworkConfiguration::BearerType|bearerType|
+$prototypeV2=QNetworkConfiguration::BearerType bearerType() const
 
 $prototypeV2=QString bearerTypeName() const
 
@@ -74,14 +73,11 @@ $prototypeV2=bool isValid() const
 
 $prototypeV2=QString name() const
 
-$prototype=Purpose purpose () const
-$method=|QNetworkConfiguration::Purpose|purpose|
+$prototypeV2=QNetworkConfiguration::Purpose purpose() const
 
-$prototype=StateFlags state () const
-$method=|QNetworkConfiguration::StateFlags|state|
+$prototypeV2=QNetworkConfiguration::StateFlags state() const
 
-$prototype=Type type () const
-$method=|QNetworkConfiguration::Type|type|
+$prototypeV2=QNetworkConfiguration::Type type() const
 
 $extraMethods
 
