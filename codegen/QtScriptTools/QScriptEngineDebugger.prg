@@ -51,17 +51,14 @@ $method=|QMenu *|createStandardMenu|QWidget *=0
 $prototype=QToolBar * createStandardToolBar ( QWidget * parent = 0 )
 $method=|QToolBar *|createStandardToolBar|QWidget *=0
 
-$prototype=void detach ()
-$method=|void|detach|
+$prototypeV2=void detach()
 
 $prototype=void setAutoShowStandardWindow ( bool autoShow )
 $method=|void|setAutoShowStandardWindow|bool
 
-$prototype=QMainWindow * standardWindow () const
-$method=|QMainWindow *|standardWindow|
+$prototypeV2=QMainWindow * standardWindow() const
 
-$prototype=DebuggerState state () const
-$method=|QScriptEngineDebugger::DebuggerState|state|
+$prototypeV2=QScriptEngineDebugger::DebuggerState state() const
 
 $prototype=QWidget * widget ( DebuggerWidget widget ) const
 $method=|QWidget *|widget|QScriptEngineDebugger::DebuggerWidget
