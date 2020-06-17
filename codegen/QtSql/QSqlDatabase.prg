@@ -62,8 +62,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=void close ()
-$method=|void|close|
+$prototypeV2=void close()
 
 $prototypeV2=bool commit()
 
@@ -73,8 +72,7 @@ $prototypeV2=QString connectionName() const
 
 $prototypeV2=QString databaseName() const
 
-$prototype=QSqlDriver * driver () const
-$method=|QSqlDriver *|driver|
+$prototypeV2=QSqlDriver * driver() const
 
 $prototypeV2=QString driverName() const
 
@@ -89,11 +87,9 @@ $prototypeV2=bool isOpenError() const
 
 $prototypeV2=bool isValid() const
 
-$prototype=QSqlError lastError () const
-$method=|QSqlError|lastError|
+$prototypeV2=QSqlError lastError() const
 
-$prototype=QSql::NumericalPrecisionPolicy numericalPrecisionPolicy () const
-$method=|QSql::NumericalPrecisionPolicy|numericalPrecisionPolicy|
+$prototypeV2=QSql::NumericalPrecisionPolicy numericalPrecisionPolicy() const
 
 $prototype=bool open ()
 $internalMethod=|bool|open,open1|
@@ -251,8 +247,7 @@ $addMethod=addDatabase
 $prototype=static QSqlDatabase cloneDatabase ( const QSqlDatabase & other, const QString & connectionName )
 $staticMethod=|QSqlDatabase|cloneDatabase|const QSqlDatabase &,const QString &
 
-$prototype=static QStringList connectionNames ()
-$staticMethod=|QStringList|connectionNames|
+$prototypeV2=static QStringList connectionNames()
 
 $prototype=static bool contains ( const QString & connectionName = QLatin1String( defaultConnection ) )
 $staticMethod=|bool|contains|const QString &=QLatin1String( QSqlDatabase::defaultConnection )
@@ -301,8 +296,7 @@ $staticMethod=|QSqlDatabase|database|const QString &=QLatin1String( QSqlDatabase
 %%   }
 %% }
 
-$prototype=static QStringList drivers ()
-$staticMethod=|QStringList|drivers|
+$prototypeV2=static QStringList drivers()
 
 $prototype=static bool isDriverAvailable ( const QString & name )
 $staticMethod=|bool|isDriverAvailable|const QString &

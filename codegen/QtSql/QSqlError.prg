@@ -77,8 +77,7 @@ $method=|void|setType|QSqlError::ErrorType
 
 $prototypeV2=QString text() const
 
-$prototype=ErrorType type () const
-$method=|QSqlError::ErrorType|type|
+$prototypeV2=QSqlError::ErrorType type() const
 
 $extraMethods
 

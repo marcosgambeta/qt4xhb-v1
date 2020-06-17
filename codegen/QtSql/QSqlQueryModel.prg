@@ -34,14 +34,11 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=virtual void clear ()
-$virtualMethod=|void|clear|
+$prototypeV2=virtual void clear()
 
-$prototype=QSqlError lastError () const
-$method=|QSqlError|lastError|
+$prototypeV2=QSqlError lastError() const
 
-$prototype=QSqlQuery query () const
-$method=|QSqlQuery|query|
+$prototypeV2=QSqlQuery query() const
 
 $prototype=QSqlRecord record ( int row ) const
 $internalMethod=|QSqlRecord|record,record1|int

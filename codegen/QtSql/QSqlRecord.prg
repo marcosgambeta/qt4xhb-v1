@@ -61,11 +61,9 @@ $deleteMethod
 $prototype=void append ( const QSqlField & field )
 $method=|void|append|const QSqlField &
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
-$prototype=void clearValues ()
-$method=|void|clearValues|
+$prototypeV2=void clearValues()
 
 $prototype=bool contains ( const QString & name ) const
 $method=|bool|contains|const QString &

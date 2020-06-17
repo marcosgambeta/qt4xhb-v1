@@ -32,7 +32,6 @@ $deleteMethod
 $prototype=virtual QSqlDriver * create ( const QString & key ) = 0
 $virtualMethod=|QSqlDriver *|create|const QString &
 
-$prototype=virtual QStringList keys () const = 0
-$virtualMethod=|QStringList|keys|
+$prototypeV2=virtual QStringList keys() const = 0
 
 #pragma ENDDUMP

@@ -39,8 +39,7 @@ $virtualMethod=|QSqlTableModel *|relationModel|int
 $prototype=virtual void setRelation ( int column, const QSqlRelation & relation )
 $virtualMethod=|void|setRelation|int,const QSqlRelation &
 
-$prototype=virtual void clear ()
-$virtualMethod=|void|clear|
+$prototypeV2=virtual void clear()
 
 $prototype=virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const
 $virtualMethod=|QVariant|data|const QModelIndex &,int=Qt::DisplayRole

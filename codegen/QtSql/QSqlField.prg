@@ -55,11 +55,9 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
-$prototype=QVariant defaultValue () const
-$method=|QVariant|defaultValue|
+$prototypeV2=QVariant defaultValue() const
 
 $prototypeV2=bool isAutoValue() const
 
@@ -77,8 +75,7 @@ $prototypeV2=QString name() const
 
 $prototypeV2=int precision() const
 
-$prototype=RequiredStatus requiredStatus () const
-$method=|QSqlField::RequiredStatus|requiredStatus|
+$prototypeV2=QSqlField::RequiredStatus requiredStatus() const
 
 $prototype=void setAutoValue ( bool autoVal )
 $method=|void|setAutoValue|bool
@@ -113,11 +110,9 @@ $method=|void|setType|QVariant::Type
 $prototype=void setValue ( const QVariant & value )
 $method=|void|setValue|const QVariant &
 
-$prototype=QVariant::Type type () const
-$method=|QVariant::Type|type|
+$prototypeV2=QVariant::Type type() const
 
-$prototype=QVariant value () const
-$method=|QVariant|value|
+$prototypeV2=QVariant value() const
 
 $extraMethods
 

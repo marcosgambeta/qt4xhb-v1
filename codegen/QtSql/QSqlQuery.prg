@@ -137,11 +137,9 @@ HB_FUNC_STATIC( QSQLQUERY_BOUNDVALUE )
 }
 $addMethod=boundValue
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
-$prototype=const QSqlDriver * driver () const
-$method=|const QSqlDriver *|driver|
+$prototypeV2=const QSqlDriver * driver() const
 
 $prototype=bool exec ( const QString & query )
 $internalMethod=|bool|exec,exec1|const QString &
@@ -176,8 +174,7 @@ $method=|bool|execBatch|QSqlQuery::BatchExecutionMode=QSqlQuery::ValuesAsRows
 
 $prototypeV2=QString executedQuery() const
 
-$prototype=void finish ()
-$method=|void|finish|
+$prototypeV2=void finish()
 
 $prototypeV2=bool first()
 
@@ -194,11 +191,9 @@ $prototypeV2=bool isValid() const
 
 $prototypeV2=bool last()
 
-$prototype=QSqlError lastError () const
-$method=|QSqlError|lastError|
+$prototypeV2=QSqlError lastError() const
 
-$prototype=QVariant lastInsertId () const
-$method=|QVariant|lastInsertId|
+$prototypeV2=QVariant lastInsertId() const
 
 $prototypeV2=QString lastQuery() const
 
@@ -208,19 +203,16 @@ $prototypeV2=bool nextResult()
 
 $prototypeV2=int numRowsAffected() const
 
-$prototype=QSql::NumericalPrecisionPolicy numericalPrecisionPolicy () const
-$method=|QSql::NumericalPrecisionPolicy|numericalPrecisionPolicy|
+$prototypeV2=QSql::NumericalPrecisionPolicy numericalPrecisionPolicy() const
 
 $prototype=bool prepare ( const QString & query )
 $method=|bool|prepare|const QString &
 
 $prototypeV2=bool previous()
 
-$prototype=QSqlRecord record () const
-$method=|QSqlRecord|record|
+$prototypeV2=QSqlRecord record() const
 
-$prototype=const QSqlResult * result () const
-$method=|const QSqlResult *|result|
+$prototypeV2=const QSqlResult * result() const
 
 $prototype=bool seek ( int index, bool relative = false )
 $method=|bool|seek|int,bool=false

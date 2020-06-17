@@ -36,13 +36,11 @@ $deleteMethod
 
 $prototypeV2=virtual bool beginTransaction()
 
-$prototype=virtual void close () = 0
-$virtualMethod=|void|close|
+$prototypeV2=virtual void close() = 0
 
 $prototypeV2=virtual bool commitTransaction()
 
-$prototype=virtual QSqlResult * createResult () const = 0
-$virtualMethod=|QSqlResult *|createResult|
+$prototypeV2=virtual QSqlResult * createResult() const = 0
 
 $prototype=virtual QString escapeIdentifier ( const QString & identifier, IdentifierType type ) const
 $virtualMethod=|QString|escapeIdentifier|const QString &,QSqlDriver::IdentifierType
@@ -50,8 +48,7 @@ $virtualMethod=|QString|escapeIdentifier|const QString &,QSqlDriver::IdentifierT
 $prototype=virtual QString formatValue ( const QSqlField & field, bool trimStrings = false ) const
 $virtualMethod=|QString|formatValue|const QSqlField &,bool=false
 
-$prototype=virtual QVariant handle () const
-$virtualMethod=|QVariant|handle|
+$prototypeV2=virtual QVariant handle() const
 
 $prototype=virtual bool hasFeature ( DriverFeature feature ) const = 0
 $virtualMethod=|bool|hasFeature|QSqlDriver::DriverFeature
@@ -63,11 +60,9 @@ $prototypeV2=virtual bool isOpen() const
 
 $prototypeV2=bool isOpenError() const
 
-$prototype=QSqlError lastError () const
-$method=|QSqlError|lastError|
+$prototypeV2=QSqlError lastError() const
 
-$prototype=QSql::NumericalPrecisionPolicy numericalPrecisionPolicy () const
-$method=|QSql::NumericalPrecisionPolicy|numericalPrecisionPolicy|
+$prototypeV2=QSql::NumericalPrecisionPolicy numericalPrecisionPolicy() const
 
 $prototype=virtual bool open ( const QString & db, const QString & user = QString(), const QString & password = QString(), const QString & host = QString(), int port = -1, const QString & options = QString() ) = 0
 $virtualMethod=|bool|open|const QString &,const QString &=QString(),const QString &=QString(),const QString &=QString(),int=-1,const QString &=QString()
@@ -92,8 +87,7 @@ $method=|QString|stripDelimiters|const QString &,QSqlDriver::IdentifierType
 $prototype=bool subscribeToNotification ( const QString & name )
 $method=|bool|subscribeToNotification|const QString &
 
-$prototype=QStringList subscribedToNotifications () const
-$method=|QStringList|subscribedToNotifications|
+$prototypeV2=QStringList subscribedToNotifications() const
 
 $prototype=virtual QStringList tables ( QSql::TableType tableType ) const
 $virtualMethod=|QStringList|tables|QSql::TableType

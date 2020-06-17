@@ -34,11 +34,9 @@ $constructor=|new|QObject *=0,QSqlDatabase=QSqlDatabase()
 
 $deleteMethod
 
-$prototype=QSqlDatabase database () const
-$method=|QSqlDatabase|database|
+$prototypeV2=QSqlDatabase database() const
 
-$prototype=EditStrategy editStrategy () const
-$method=|QSqlTableModel::EditStrategy|editStrategy|
+$prototypeV2=QSqlTableModel::EditStrategy editStrategy() const
 
 $prototype=int fieldIndex ( const QString & fieldName ) const
 $method=|int|fieldIndex|const QString &
@@ -51,8 +49,7 @@ $method=|bool|insertRecord|int,const QSqlRecord &
 $prototype=bool isDirty ( const QModelIndex & index ) const
 $method=|bool|isDirty|const QModelIndex &
 
-$prototype=QSqlIndex primaryKey () const
-$method=|QSqlIndex|primaryKey|
+$prototypeV2=QSqlIndex primaryKey() const
 
 $prototype=virtual void revertRow ( int row )
 $virtualMethod=|void|revertRow|int
@@ -76,8 +73,7 @@ $virtualMethod=|void|setTable|const QString &
 
 $prototypeV2=QString tableName() const
 
-$prototype=virtual void clear ()
-$virtualMethod=|void|clear|
+$prototypeV2=virtual void clear()
 
 $prototype=virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const
 $virtualMethod=|QVariant|data|const QModelIndex &,int=Qt::DisplayRole
@@ -106,11 +102,9 @@ $virtualMethod=|bool|setData|const QModelIndex &,const QVariant &,int=Qt::EditRo
 $prototype=virtual void sort ( int column, Qt::SortOrder order )
 $virtualMethod=|void|sort|int,Qt::SortOrder
 
-$prototype=virtual void revert ()
-$virtualMethod=|void|revert|
+$prototypeV2=virtual void revert()
 
-$prototype=void revertAll ()
-$method=|void|revertAll|
+$prototypeV2=void revertAll()
 
 $prototypeV2=virtual bool submit()
 
