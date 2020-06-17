@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ADDMAPPING )
 }
 
 /*
-void clearMapping ()
+void clearMapping()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_CLEARMAPPING )
 {
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_CURRENTINDEX )
 }
 
 /*
-QAbstractItemDelegate * itemDelegate () const
+QAbstractItemDelegate * itemDelegate() const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_ITEMDELEGATE )
 {
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDWIDGETAT )
 }
 
 /*
-QAbstractItemModel * model () const
+QAbstractItemModel * model() const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_MODEL )
 {
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MODEL )
 }
 
 /*
-Qt::Orientation orientation () const
+Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_ORIENTATION )
 {
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_REMOVEMAPPING )
 }
 
 /*
-QModelIndex rootIndex () const
+QModelIndex rootIndex() const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_ROOTINDEX )
 {
@@ -565,7 +565,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SUBMITPOLICY )
 }
 
 /*
-void revert ()
+void revert()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_REVERT )
 {
@@ -667,7 +667,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SUBMIT )
 }
 
 /*
-void toFirst ()
+void toFirst()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOFIRST )
 {
@@ -693,7 +693,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOFIRST )
 }
 
 /*
-void toLast ()
+void toLast()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOLAST )
 {
@@ -719,7 +719,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOLAST )
 }
 
 /*
-void toNext ()
+void toNext()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_TONEXT )
 {
@@ -745,7 +745,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TONEXT )
 }
 
 /*
-void toPrevious ()
+void toPrevious()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOPREVIOUS )
 {

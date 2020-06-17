@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_DELETE )
 }
 
 /*
-Qt::Alignment alignment () const
+Qt::Alignment alignment() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_ALIGNMENT )
 {
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ALIGNMENT )
 }
 
 /*
-ButtonSymbols buttonSymbols () const
+QAbstractSpinBox::ButtonSymbols buttonSymbols() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_BUTTONSYMBOLS )
 {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_BUTTONSYMBOLS )
 }
 
 /*
-CorrectionMode correctionMode () const
+QAbstractSpinBox::CorrectionMode correctionMode() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_CORRECTIONMODE )
 {
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_HASFRAME )
 }
 
 /*
-void interpretText ()
+void interpretText()
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_INTERPRETTEXT )
 {
@@ -742,7 +742,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_INPUTMETHODQUERY )
 }
 
 /*
-virtual QSize minimumSizeHint () const
+virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_MINIMUMSIZEHINT )
 {
@@ -767,7 +767,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_MINIMUMSIZEHINT )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SIZEHINT )
 {
@@ -792,7 +792,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SIZEHINT )
 }
 
 /*
-virtual void clear ()
+virtual void clear()
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_CLEAR )
 {
@@ -818,7 +818,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_CLEAR )
 }
 
 /*
-void selectAll ()
+void selectAll()
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SELECTALL )
 {
@@ -844,7 +844,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SELECTALL )
 }
 
 /*
-void stepDown ()
+void stepDown()
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPDOWN )
 {
@@ -870,7 +870,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPDOWN )
 }
 
 /*
-void stepUp ()
+void stepUp()
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPUP )
 {

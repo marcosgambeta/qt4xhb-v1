@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QWIDGET_ACTIONS )
 }
 
 /*
-void activateWindow ()
+void activateWindow()
 */
 HB_FUNC_STATIC( QWIDGET_ACTIVATEWINDOW )
 {
@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QWIDGET_ADDACTIONS )
 }
 
 /*
-void adjustSize ()
+void adjustSize()
 */
 HB_FUNC_STATIC( QWIDGET_ADJUSTSIZE )
 {
@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QWIDGET_AUTOFILLBACKGROUND )
 }
 
 /*
-QPalette::ColorRole backgroundRole () const
+QPalette::ColorRole backgroundRole() const
 */
 HB_FUNC_STATIC( QWIDGET_BACKGROUNDROLE )
 {
@@ -646,7 +646,7 @@ HB_FUNC_STATIC( QWIDGET_BACKGROUNDROLE )
 }
 
 /*
-QSize baseSize () const
+QSize baseSize() const
 */
 HB_FUNC_STATIC( QWIDGET_BASESIZE )
 {
@@ -720,7 +720,7 @@ HB_FUNC_STATIC( QWIDGET_CHILDAT )
 }
 
 /*
-QRect childrenRect () const
+QRect childrenRect() const
 */
 HB_FUNC_STATIC( QWIDGET_CHILDRENRECT )
 {
@@ -745,7 +745,7 @@ HB_FUNC_STATIC( QWIDGET_CHILDRENRECT )
 }
 
 /*
-QRegion childrenRegion () const
+QRegion childrenRegion() const
 */
 HB_FUNC_STATIC( QWIDGET_CHILDRENREGION )
 {
@@ -770,7 +770,7 @@ HB_FUNC_STATIC( QWIDGET_CHILDRENREGION )
 }
 
 /*
-void clearFocus ()
+void clearFocus()
 */
 HB_FUNC_STATIC( QWIDGET_CLEARFOCUS )
 {
@@ -796,7 +796,7 @@ HB_FUNC_STATIC( QWIDGET_CLEARFOCUS )
 }
 
 /*
-void clearMask ()
+void clearMask()
 */
 HB_FUNC_STATIC( QWIDGET_CLEARMASK )
 {
@@ -822,7 +822,7 @@ HB_FUNC_STATIC( QWIDGET_CLEARMASK )
 }
 
 /*
-QMargins contentsMargins () const
+QMargins contentsMargins() const
 */
 HB_FUNC_STATIC( QWIDGET_CONTENTSMARGINS )
 {
@@ -847,7 +847,7 @@ HB_FUNC_STATIC( QWIDGET_CONTENTSMARGINS )
 }
 
 /*
-QRect contentsRect () const
+QRect contentsRect() const
 */
 HB_FUNC_STATIC( QWIDGET_CONTENTSRECT )
 {
@@ -872,7 +872,7 @@ HB_FUNC_STATIC( QWIDGET_CONTENTSRECT )
 }
 
 /*
-Qt::ContextMenuPolicy contextMenuPolicy () const
+Qt::ContextMenuPolicy contextMenuPolicy() const
 */
 HB_FUNC_STATIC( QWIDGET_CONTEXTMENUPOLICY )
 {
@@ -896,7 +896,7 @@ HB_FUNC_STATIC( QWIDGET_CONTEXTMENUPOLICY )
 }
 
 /*
-QCursor cursor () const
+QCursor cursor() const
 */
 HB_FUNC_STATIC( QWIDGET_CURSOR )
 {
@@ -947,7 +947,7 @@ HB_FUNC_STATIC( QWIDGET_EFFECTIVEWINID )
 }
 
 /*
-void ensurePolished () const
+void ensurePolished() const
 */
 HB_FUNC_STATIC( QWIDGET_ENSUREPOLISHED )
 {
@@ -973,7 +973,7 @@ HB_FUNC_STATIC( QWIDGET_ENSUREPOLISHED )
 }
 
 /*
-Qt::FocusPolicy focusPolicy () const
+Qt::FocusPolicy focusPolicy() const
 */
 HB_FUNC_STATIC( QWIDGET_FOCUSPOLICY )
 {
@@ -997,7 +997,7 @@ HB_FUNC_STATIC( QWIDGET_FOCUSPOLICY )
 }
 
 /*
-QWidget * focusProxy () const
+QWidget * focusProxy() const
 */
 HB_FUNC_STATIC( QWIDGET_FOCUSPROXY )
 {
@@ -1022,7 +1022,7 @@ HB_FUNC_STATIC( QWIDGET_FOCUSPROXY )
 }
 
 /*
-QWidget * focusWidget () const
+QWidget * focusWidget() const
 */
 HB_FUNC_STATIC( QWIDGET_FOCUSWIDGET )
 {
@@ -1047,7 +1047,7 @@ HB_FUNC_STATIC( QWIDGET_FOCUSWIDGET )
 }
 
 /*
-const QFont & font () const
+const QFont & font() const
 */
 HB_FUNC_STATIC( QWIDGET_FONT )
 {
@@ -1072,7 +1072,7 @@ HB_FUNC_STATIC( QWIDGET_FONT )
 }
 
 /*
-QFontInfo fontInfo () const
+QFontInfo fontInfo() const
 */
 HB_FUNC_STATIC( QWIDGET_FONTINFO )
 {
@@ -1097,7 +1097,7 @@ HB_FUNC_STATIC( QWIDGET_FONTINFO )
 }
 
 /*
-QFontMetrics fontMetrics () const
+QFontMetrics fontMetrics() const
 */
 HB_FUNC_STATIC( QWIDGET_FONTMETRICS )
 {
@@ -1122,7 +1122,7 @@ HB_FUNC_STATIC( QWIDGET_FONTMETRICS )
 }
 
 /*
-QPalette::ColorRole foregroundRole () const
+QPalette::ColorRole foregroundRole() const
 */
 HB_FUNC_STATIC( QWIDGET_FOREGROUNDROLE )
 {
@@ -1146,7 +1146,7 @@ HB_FUNC_STATIC( QWIDGET_FOREGROUNDROLE )
 }
 
 /*
-QRect frameGeometry () const
+QRect frameGeometry() const
 */
 HB_FUNC_STATIC( QWIDGET_FRAMEGEOMETRY )
 {
@@ -1171,7 +1171,7 @@ HB_FUNC_STATIC( QWIDGET_FRAMEGEOMETRY )
 }
 
 /*
-QSize frameSize () const
+QSize frameSize() const
 */
 HB_FUNC_STATIC( QWIDGET_FRAMESIZE )
 {
@@ -1196,7 +1196,7 @@ HB_FUNC_STATIC( QWIDGET_FRAMESIZE )
 }
 
 /*
-const QRect & geometry () const
+const QRect & geometry() const
 */
 HB_FUNC_STATIC( QWIDGET_GEOMETRY )
 {
@@ -1281,7 +1281,7 @@ HB_FUNC_STATIC( QWIDGET_GRABGESTURE )
 }
 
 /*
-void grabKeyboard ()
+void grabKeyboard()
 */
 HB_FUNC_STATIC( QWIDGET_GRABKEYBOARD )
 {
@@ -1382,7 +1382,7 @@ HB_FUNC_STATIC( QWIDGET_GRABSHORTCUT )
 }
 
 /*
-QGraphicsEffect * graphicsEffect () const
+QGraphicsEffect * graphicsEffect() const
 */
 HB_FUNC_STATIC( QWIDGET_GRAPHICSEFFECT )
 {
@@ -1407,7 +1407,7 @@ HB_FUNC_STATIC( QWIDGET_GRAPHICSEFFECT )
 }
 
 /*
-QGraphicsProxyWidget * graphicsProxyWidget () const
+QGraphicsProxyWidget * graphicsProxyWidget() const
 */
 HB_FUNC_STATIC( QWIDGET_GRAPHICSPROXYWIDGET )
 {
@@ -1528,7 +1528,7 @@ HB_FUNC_STATIC( QWIDGET_HEIGHTFORWIDTH )
 }
 
 /*
-QInputContext * inputContext ()
+QInputContext * inputContext()
 */
 HB_FUNC_STATIC( QWIDGET_INPUTCONTEXT )
 {
@@ -1553,7 +1553,7 @@ HB_FUNC_STATIC( QWIDGET_INPUTCONTEXT )
 }
 
 /*
-Qt::InputMethodHints inputMethodHints () const
+Qt::InputMethodHints inputMethodHints() const
 */
 HB_FUNC_STATIC( QWIDGET_INPUTMETHODHINTS )
 {
@@ -1974,7 +1974,7 @@ HB_FUNC_STATIC( QWIDGET_ISWINDOWMODIFIED )
 }
 
 /*
-QLayout * layout () const
+QLayout * layout() const
 */
 HB_FUNC_STATIC( QWIDGET_LAYOUT )
 {
@@ -1999,7 +1999,7 @@ HB_FUNC_STATIC( QWIDGET_LAYOUT )
 }
 
 /*
-Qt::LayoutDirection layoutDirection () const
+Qt::LayoutDirection layoutDirection() const
 */
 HB_FUNC_STATIC( QWIDGET_LAYOUTDIRECTION )
 {
@@ -2023,7 +2023,7 @@ HB_FUNC_STATIC( QWIDGET_LAYOUTDIRECTION )
 }
 
 /*
-QLocale locale () const
+QLocale locale() const
 */
 HB_FUNC_STATIC( QWIDGET_LOCALE )
 {
@@ -2198,7 +2198,7 @@ HB_FUNC_STATIC( QWIDGET_MAPTOPARENT )
 }
 
 /*
-QRegion mask () const
+QRegion mask() const
 */
 HB_FUNC_STATIC( QWIDGET_MASK )
 {
@@ -2247,7 +2247,7 @@ HB_FUNC_STATIC( QWIDGET_MAXIMUMHEIGHT )
 }
 
 /*
-QSize maximumSize () const
+QSize maximumSize() const
 */
 HB_FUNC_STATIC( QWIDGET_MAXIMUMSIZE )
 {
@@ -2320,7 +2320,7 @@ HB_FUNC_STATIC( QWIDGET_MINIMUMHEIGHT )
 }
 
 /*
-QSize minimumSize () const
+QSize minimumSize() const
 */
 HB_FUNC_STATIC( QWIDGET_MINIMUMSIZE )
 {
@@ -2345,7 +2345,7 @@ HB_FUNC_STATIC( QWIDGET_MINIMUMSIZE )
 }
 
 /*
-virtual QSize minimumSizeHint () const
+virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QWIDGET_MINIMUMSIZEHINT )
 {
@@ -2445,7 +2445,7 @@ HB_FUNC_STATIC( QWIDGET_MOVE )
 }
 
 /*
-QWidget * nativeParentWidget () const
+QWidget * nativeParentWidget() const
 */
 HB_FUNC_STATIC( QWIDGET_NATIVEPARENTWIDGET )
 {
@@ -2470,7 +2470,7 @@ HB_FUNC_STATIC( QWIDGET_NATIVEPARENTWIDGET )
 }
 
 /*
-QWidget * nextInFocusChain () const
+QWidget * nextInFocusChain() const
 */
 HB_FUNC_STATIC( QWIDGET_NEXTINFOCUSCHAIN )
 {
@@ -2495,7 +2495,7 @@ HB_FUNC_STATIC( QWIDGET_NEXTINFOCUSCHAIN )
 }
 
 /*
-QRect normalGeometry () const
+QRect normalGeometry() const
 */
 HB_FUNC_STATIC( QWIDGET_NORMALGEOMETRY )
 {
@@ -2546,7 +2546,7 @@ HB_FUNC_STATIC( QWIDGET_OVERRIDEWINDOWFLAGS )
 }
 
 /*
-const QPalette & palette () const
+const QPalette & palette() const
 */
 HB_FUNC_STATIC( QWIDGET_PALETTE )
 {
@@ -2571,7 +2571,7 @@ HB_FUNC_STATIC( QWIDGET_PALETTE )
 }
 
 /*
-QWidget * parentWidget () const
+QWidget * parentWidget() const
 */
 HB_FUNC_STATIC( QWIDGET_PARENTWIDGET )
 {
@@ -2596,7 +2596,7 @@ HB_FUNC_STATIC( QWIDGET_PARENTWIDGET )
 }
 
 /*
-QPoint pos () const
+QPoint pos() const
 */
 HB_FUNC_STATIC( QWIDGET_POS )
 {
@@ -2621,7 +2621,7 @@ HB_FUNC_STATIC( QWIDGET_POS )
 }
 
 /*
-QWidget * previousInFocusChain () const
+QWidget * previousInFocusChain() const
 */
 HB_FUNC_STATIC( QWIDGET_PREVIOUSINFOCUSCHAIN )
 {
@@ -2646,7 +2646,7 @@ HB_FUNC_STATIC( QWIDGET_PREVIOUSINFOCUSCHAIN )
 }
 
 /*
-QRect rect () const
+QRect rect() const
 */
 HB_FUNC_STATIC( QWIDGET_RECT )
 {
@@ -2671,7 +2671,7 @@ HB_FUNC_STATIC( QWIDGET_RECT )
 }
 
 /*
-void releaseKeyboard ()
+void releaseKeyboard()
 */
 HB_FUNC_STATIC( QWIDGET_RELEASEKEYBOARD )
 {
@@ -2697,7 +2697,7 @@ HB_FUNC_STATIC( QWIDGET_RELEASEKEYBOARD )
 }
 
 /*
-void releaseMouse ()
+void releaseMouse()
 */
 HB_FUNC_STATIC( QWIDGET_RELEASEMOUSE )
 {
@@ -2972,7 +2972,7 @@ HB_FUNC_STATIC( QWIDGET_RESTOREGEOMETRY )
 }
 
 /*
-QByteArray saveGeometry () const
+QByteArray saveGeometry() const
 */
 HB_FUNC_STATIC( QWIDGET_SAVEGEOMETRY )
 {
@@ -4675,7 +4675,7 @@ HB_FUNC_STATIC( QWIDGET_SETWINDOWSTATE )
 }
 
 /*
-QSize size () const
+QSize size() const
 */
 HB_FUNC_STATIC( QWIDGET_SIZE )
 {
@@ -4700,7 +4700,7 @@ HB_FUNC_STATIC( QWIDGET_SIZE )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QWIDGET_SIZEHINT )
 {
@@ -4725,7 +4725,7 @@ HB_FUNC_STATIC( QWIDGET_SIZEHINT )
 }
 
 /*
-QSize sizeIncrement () const
+QSize sizeIncrement() const
 */
 HB_FUNC_STATIC( QWIDGET_SIZEINCREMENT )
 {
@@ -4750,7 +4750,7 @@ HB_FUNC_STATIC( QWIDGET_SIZEINCREMENT )
 }
 
 /*
-QSizePolicy sizePolicy () const
+QSizePolicy sizePolicy() const
 */
 HB_FUNC_STATIC( QWIDGET_SIZEPOLICY )
 {
@@ -4825,7 +4825,7 @@ HB_FUNC_STATIC( QWIDGET_STATUSTIP )
 }
 
 /*
-QStyle * style () const
+QStyle * style() const
 */
 HB_FUNC_STATIC( QWIDGET_STYLE )
 {
@@ -4972,7 +4972,7 @@ HB_FUNC_STATIC( QWIDGET_UNGRABGESTURE )
 }
 
 /*
-void unsetCursor ()
+void unsetCursor()
 */
 HB_FUNC_STATIC( QWIDGET_UNSETCURSOR )
 {
@@ -4998,7 +4998,7 @@ HB_FUNC_STATIC( QWIDGET_UNSETCURSOR )
 }
 
 /*
-void unsetLayoutDirection ()
+void unsetLayoutDirection()
 */
 HB_FUNC_STATIC( QWIDGET_UNSETLAYOUTDIRECTION )
 {
@@ -5024,7 +5024,7 @@ HB_FUNC_STATIC( QWIDGET_UNSETLAYOUTDIRECTION )
 }
 
 /*
-void unsetLocale ()
+void unsetLocale()
 */
 HB_FUNC_STATIC( QWIDGET_UNSETLOCALE )
 {
@@ -5141,7 +5141,7 @@ HB_FUNC_STATIC( QWIDGET_UPDATE )
 }
 
 /*
-void updateGeometry ()
+void updateGeometry()
 */
 HB_FUNC_STATIC( QWIDGET_UPDATEGEOMETRY )
 {
@@ -5191,7 +5191,7 @@ HB_FUNC_STATIC( QWIDGET_UPDATESENABLED )
 }
 
 /*
-QRegion visibleRegion () const
+QRegion visibleRegion() const
 */
 HB_FUNC_STATIC( QWIDGET_VISIBLEREGION )
 {
@@ -5290,7 +5290,7 @@ HB_FUNC_STATIC( QWIDGET_WINID )
 }
 
 /*
-QWidget * window () const
+QWidget * window() const
 */
 HB_FUNC_STATIC( QWIDGET_WINDOW )
 {
@@ -5339,7 +5339,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWFILEPATH )
 }
 
 /*
-Qt::WindowFlags windowFlags () const
+Qt::WindowFlags windowFlags() const
 */
 HB_FUNC_STATIC( QWIDGET_WINDOWFLAGS )
 {
@@ -5363,7 +5363,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWFLAGS )
 }
 
 /*
-QIcon windowIcon () const
+QIcon windowIcon() const
 */
 HB_FUNC_STATIC( QWIDGET_WINDOWICON )
 {
@@ -5412,7 +5412,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWICONTEXT )
 }
 
 /*
-Qt::WindowModality windowModality () const
+Qt::WindowModality windowModality() const
 */
 HB_FUNC_STATIC( QWIDGET_WINDOWMODALITY )
 {
@@ -5484,7 +5484,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWROLE )
 }
 
 /*
-Qt::WindowStates windowState () const
+Qt::WindowStates windowState() const
 */
 HB_FUNC_STATIC( QWIDGET_WINDOWSTATE )
 {
@@ -5532,7 +5532,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWTITLE )
 }
 
 /*
-Qt::WindowType windowType () const
+Qt::WindowType windowType() const
 */
 HB_FUNC_STATIC( QWIDGET_WINDOWTYPE )
 {
@@ -5604,7 +5604,7 @@ HB_FUNC_STATIC( QWIDGET_Y )
 }
 
 /*
-virtual QPaintEngine * paintEngine () const
+virtual QPaintEngine * paintEngine() const
 */
 HB_FUNC_STATIC( QWIDGET_PAINTENGINE )
 {
@@ -5653,7 +5653,7 @@ HB_FUNC_STATIC( QWIDGET_CLOSE )
 }
 
 /*
-void hide ()
+void hide()
 */
 HB_FUNC_STATIC( QWIDGET_HIDE )
 {
@@ -5679,7 +5679,7 @@ HB_FUNC_STATIC( QWIDGET_HIDE )
 }
 
 /*
-void lower ()
+void lower()
 */
 HB_FUNC_STATIC( QWIDGET_LOWER )
 {
@@ -5705,7 +5705,7 @@ HB_FUNC_STATIC( QWIDGET_LOWER )
 }
 
 /*
-void raise ()
+void raise()
 */
 HB_FUNC_STATIC( QWIDGET_RAISE )
 {
@@ -5913,7 +5913,7 @@ HB_FUNC_STATIC( QWIDGET_SETWINDOWTITLE )
 }
 
 /*
-void show ()
+void show()
 */
 HB_FUNC_STATIC( QWIDGET_SHOW )
 {
@@ -5939,7 +5939,7 @@ HB_FUNC_STATIC( QWIDGET_SHOW )
 }
 
 /*
-void showFullScreen ()
+void showFullScreen()
 */
 HB_FUNC_STATIC( QWIDGET_SHOWFULLSCREEN )
 {
@@ -5965,7 +5965,7 @@ HB_FUNC_STATIC( QWIDGET_SHOWFULLSCREEN )
 }
 
 /*
-void showMaximized ()
+void showMaximized()
 */
 HB_FUNC_STATIC( QWIDGET_SHOWMAXIMIZED )
 {
@@ -5991,7 +5991,7 @@ HB_FUNC_STATIC( QWIDGET_SHOWMAXIMIZED )
 }
 
 /*
-void showMinimized ()
+void showMinimized()
 */
 HB_FUNC_STATIC( QWIDGET_SHOWMINIMIZED )
 {
@@ -6017,7 +6017,7 @@ HB_FUNC_STATIC( QWIDGET_SHOWMINIMIZED )
 }
 
 /*
-void showNormal ()
+void showNormal()
 */
 HB_FUNC_STATIC( QWIDGET_SHOWNORMAL )
 {
@@ -6313,7 +6313,7 @@ HB_FUNC_STATIC( QWIDGET_FIND )
 }
 
 /*
-static QWidget * keyboardGrabber ()
+static QWidget * keyboardGrabber()
 */
 HB_FUNC_STATIC( QWIDGET_KEYBOARDGRABBER )
 {
@@ -6333,7 +6333,7 @@ HB_FUNC_STATIC( QWIDGET_KEYBOARDGRABBER )
 }
 
 /*
-static QWidget * mouseGrabber ()
+static QWidget * mouseGrabber()
 */
 HB_FUNC_STATIC( QWIDGET_MOUSEGRABBER )
 {

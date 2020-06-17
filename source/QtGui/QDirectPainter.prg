@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_DELETE )
 }
 
 /*
-QRegion allocatedRegion () const
+QRegion allocatedRegion() const
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_ALLOCATEDREGION )
 {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_FLUSH )
 }
 
 /*
-QRect geometry () const
+QRect geometry() const
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_GEOMETRY )
 {
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_GEOMETRY )
 }
 
 /*
-void lower ()
+void lower()
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_LOWER )
 {
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_LOWER )
 }
 
 /*
-void raise ()
+void raise()
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_RAISE )
 {
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_REGIONCHANGED )
 }
 
 /*
-QRegion requestedRegion () const
+QRegion requestedRegion() const
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_REQUESTEDREGION )
 {
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_LINESTEP )
 }
 
 /*
-static void lock ()
+static void lock()
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_LOCK )
 {
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_SCREENWIDTH )
 }
 
 /*
-static void unlock ()
+static void unlock()
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_UNLOCK )
 {

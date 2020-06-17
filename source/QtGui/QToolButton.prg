@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_DELETE )
 }
 
 /*
-Qt::ArrowType arrowType () const
+Qt::ArrowType arrowType() const
 */
 HB_FUNC_STATIC( QTOOLBUTTON_ARROWTYPE )
 {
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_AUTORAISE )
 }
 
 /*
-QAction * defaultAction () const
+QAction * defaultAction() const
 */
 HB_FUNC_STATIC( QTOOLBUTTON_DEFAULTACTION )
 {
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_DEFAULTACTION )
 }
 
 /*
-QMenu * menu () const
+QMenu * menu() const
 */
 HB_FUNC_STATIC( QTOOLBUTTON_MENU )
 {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_MENU )
 }
 
 /*
-ToolButtonPopupMode popupMode () const
+QToolButton::ToolButtonPopupMode popupMode() const
 */
 HB_FUNC_STATIC( QTOOLBUTTON_POPUPMODE )
 {
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETPOPUPMODE )
 }
 
 /*
-Qt::ToolButtonStyle toolButtonStyle () const
+Qt::ToolButtonStyle toolButtonStyle() const
 */
 HB_FUNC_STATIC( QTOOLBUTTON_TOOLBUTTONSTYLE )
 {
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_TOOLBUTTONSTYLE )
 }
 
 /*
-virtual QSize minimumSizeHint () const
+virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QTOOLBUTTON_MINIMUMSIZEHINT )
 {
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_MINIMUMSIZEHINT )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QTOOLBUTTON_SIZEHINT )
 {
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETTOOLBUTTONSTYLE )
 }
 
 /*
-void showMenu ()
+void showMenu()
 */
 HB_FUNC_STATIC( QTOOLBUTTON_SHOWMENU )
 {

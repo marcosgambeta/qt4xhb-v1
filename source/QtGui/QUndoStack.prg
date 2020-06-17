@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CLEANINDEX )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QUNDOSTACK_CLEAR )
 {
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CREATEUNDOACTION )
 }
 
 /*
-void endMacro ()
+void endMacro()
 */
 HB_FUNC_STATIC( QUNDOSTACK_ENDMACRO )
 {
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QUNDOSTACK_UNDOTEXT )
 }
 
 /*
-void redo ()
+void redo()
 */
 HB_FUNC_STATIC( QUNDOSTACK_REDO )
 {
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QUNDOSTACK_SETACTIVE )
 }
 
 /*
-void setClean ()
+void setClean()
 */
 HB_FUNC_STATIC( QUNDOSTACK_SETCLEAN )
 {
@@ -684,7 +684,7 @@ HB_FUNC_STATIC( QUNDOSTACK_SETINDEX )
 }
 
 /*
-void undo ()
+void undo()
 */
 HB_FUNC_STATIC( QUNDOSTACK_UNDO )
 {

@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_DISPLAYTEXT )
 }
 
 /*
-QItemEditorFactory * itemEditorFactory () const
+QItemEditorFactory * itemEditorFactory() const
 */
 HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_ITEMEDITORFACTORY )
 {

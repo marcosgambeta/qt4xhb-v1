@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_ACCEPT )
 }
 
 /*
-QRect answerRect () const
+QRect answerRect() const
 */
 HB_FUNC_STATIC( QDRAGMOVEEVENT_ANSWERRECT )
 {

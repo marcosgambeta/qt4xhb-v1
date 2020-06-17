@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QRAWFONT_GLYPHINDEXESFORSTRING )
 }
 
 /*
-QFont::HintingPreference hintingPreference () const
+QFont::HintingPreference hintingPreference() const
 */
 HB_FUNC_STATIC( QRAWFONT_HINTINGPREFERENCE )
 {

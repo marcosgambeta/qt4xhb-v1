@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ITEMSPACING )
 }
 
 /*
-Qt::Orientation orientation () const
+Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ORIENTATION )
 {
@@ -522,7 +522,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_COUNT )
 }
 
 /*
-virtual void invalidate ()
+virtual void invalidate()
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_INVALIDATE )
 {

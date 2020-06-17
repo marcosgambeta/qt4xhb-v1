@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_ADDSCROLLBARWIDGET )
 }
 
 /*
-QWidget * cornerWidget () const
+QWidget * cornerWidget() const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_CORNERWIDGET )
 {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_CORNERWIDGET )
 }
 
 /*
-QScrollBar * horizontalScrollBar () const
+QScrollBar * horizontalScrollBar() const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBAR )
 {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBAR )
 }
 
 /*
-Qt::ScrollBarPolicy horizontalScrollBarPolicy () const
+Qt::ScrollBarPolicy horizontalScrollBarPolicy() const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBARPOLICY )
 {
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBARPOLICY )
 }
 
 /*
-QSize maximumViewportSize () const
+QSize maximumViewportSize() const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_MAXIMUMVIEWPORTSIZE )
 {
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVIEWPORT )
 }
 
 /*
-QScrollBar * verticalScrollBar () const
+QScrollBar * verticalScrollBar() const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VERTICALSCROLLBAR )
 {
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VERTICALSCROLLBAR )
 }
 
 /*
-Qt::ScrollBarPolicy verticalScrollBarPolicy () const
+Qt::ScrollBarPolicy verticalScrollBarPolicy() const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VERTICALSCROLLBARPOLICY )
 {
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VERTICALSCROLLBARPOLICY )
 }
 
 /*
-QWidget * viewport () const
+QWidget * viewport() const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VIEWPORT )
 {
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VIEWPORT )
 }
 
 /*
-virtual QSize minimumSizeHint () const
+virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_MINIMUMSIZEHINT )
 {
@@ -509,7 +509,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_MINIMUMSIZEHINT )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SIZEHINT )
 {

@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_OPEN )
 }
 
 /*
-PageSetupDialogOptions options () const
+QPageSetupDialog::PageSetupDialogOptions options() const
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_OPTIONS )
 {
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_OPTIONS )
 }
 
 /*
-QPrinter * printer ()
+QPrinter * printer()
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_PRINTER )
 {

@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_CURRENTINDEX )
 }
 
 /*
-QWidget * currentWidget () const
+QWidget * currentWidget() const
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_CURRENTWIDGET )
 {

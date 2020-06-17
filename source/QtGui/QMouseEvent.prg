@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_DELETE )
 }
 
 /*
-const QPoint &pos() const
+const QPoint & pos() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_POS )
 {
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_POS )
 }
 
 /*
-const QPoint &globalPos() const
+const QPoint & globalPos() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_GLOBALPOS )
 {

@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QVALIDATOR_FIXUP )
 }
 
 /*
-QLocale locale () const
+QLocale locale() const
 */
 HB_FUNC_STATIC( QVALIDATOR_LOCALE )
 {

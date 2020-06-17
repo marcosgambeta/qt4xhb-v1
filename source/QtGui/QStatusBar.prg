@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QSTATUSBAR_SETSIZEGRIPENABLED )
 }
 
 /*
-void clearMessage ()
+void clearMessage()
 */
 HB_FUNC_STATIC( QSTATUSBAR_CLEARMESSAGE )
 {

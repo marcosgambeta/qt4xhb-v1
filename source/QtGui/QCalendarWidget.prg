@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_DELETE )
 }
 
 /*
-int dateEditAcceptDelay () const
+int dateEditAcceptDelay() const
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_DATEEDITACCEPTDELAY )
 {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_DATETEXTFORMAT )
 }
 
 /*
-Qt::DayOfWeek firstDayOfWeek () const
+Qt::DayOfWeek firstDayOfWeek() const
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_FIRSTDAYOFWEEK )
 {
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_FIRSTDAYOFWEEK )
 }
 
 /*
-QTextCharFormat headerTextFormat () const
+QTextCharFormat headerTextFormat() const
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_HEADERTEXTFORMAT )
 {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_HEADERTEXTFORMAT )
 }
 
 /*
-HorizontalHeaderFormat horizontalHeaderFormat () const
+QCalendarWidget::HorizontalHeaderFormat horizontalHeaderFormat() const
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_HORIZONTALHEADERFORMAT )
 {
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ISNAVIGATIONBARVISIBLE )
 }
 
 /*
-QDate maximumDate () const
+QDate maximumDate() const
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_MAXIMUMDATE )
 {
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_MAXIMUMDATE )
 }
 
 /*
-QDate minimumDate () const
+QDate minimumDate() const
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_MINIMUMDATE )
 {
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_MONTHSHOWN )
 }
 
 /*
-QDate selectedDate () const
+QDate selectedDate() const
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_SELECTEDDATE )
 {
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SELECTEDDATE )
 }
 
 /*
-SelectionMode selectionMode () const
+QCalendarWidget::SelectionMode selectionMode() const
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_SELECTIONMODE )
 {
@@ -812,7 +812,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_YEARSHOWN )
 }
 
 /*
-virtual QSize minimumSizeHint () const
+virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_MINIMUMSIZEHINT )
 {
@@ -837,7 +837,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_MINIMUMSIZEHINT )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_SIZEHINT )
 {
@@ -992,7 +992,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETSELECTEDDATE )
 }
 
 /*
-void showNextMonth ()
+void showNextMonth()
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_SHOWNEXTMONTH )
 {
@@ -1018,7 +1018,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SHOWNEXTMONTH )
 }
 
 /*
-void showNextYear ()
+void showNextYear()
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_SHOWNEXTYEAR )
 {
@@ -1044,7 +1044,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SHOWNEXTYEAR )
 }
 
 /*
-void showPreviousMonth ()
+void showPreviousMonth()
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_SHOWPREVIOUSMONTH )
 {
@@ -1070,7 +1070,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SHOWPREVIOUSMONTH )
 }
 
 /*
-void showPreviousYear ()
+void showPreviousYear()
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_SHOWPREVIOUSYEAR )
 {
@@ -1096,7 +1096,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SHOWPREVIOUSYEAR )
 }
 
 /*
-void showSelectedDate ()
+void showSelectedDate()
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_SHOWSELECTEDDATE )
 {
@@ -1122,7 +1122,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SHOWSELECTEDDATE )
 }
 
 /*
-void showToday ()
+void showToday()
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_SHOWTODAY )
 {

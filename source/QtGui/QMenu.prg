@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QMENU_ACTIONGEOMETRY )
 }
 
 /*
-QAction * activeAction () const
+QAction * activeAction() const
 */
 HB_FUNC_STATIC( QMENU_ACTIVEACTION )
 {
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QMENU_ADDMENU )
 }
 
 /*
-QAction * addSeparator ()
+QAction * addSeparator()
 */
 HB_FUNC_STATIC( QMENU_ADDSEPARATOR )
 {
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QMENU_ADDSEPARATOR )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QMENU_CLEAR )
 {
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QMENU_CLEAR )
 }
 
 /*
-QAction * defaultAction () const
+QAction * defaultAction() const
 */
 HB_FUNC_STATIC( QMENU_DEFAULTACTION )
 {
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QMENU_DEFAULTACTION )
 }
 
 /*
-void hideTearOffMenu ()
+void hideTearOffMenu()
 */
 HB_FUNC_STATIC( QMENU_HIDETEAROFFMENU )
 {
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QMENU_HIDETEAROFFMENU )
 }
 
 /*
-QIcon icon () const
+QIcon icon() const
 */
 HB_FUNC_STATIC( QMENU_ICON )
 {
@@ -662,7 +662,7 @@ HB_FUNC_STATIC( QMENU_ISTEAROFFMENUVISIBLE )
 }
 
 /*
-QAction * menuAction () const
+QAction * menuAction() const
 */
 HB_FUNC_STATIC( QMENU_MENUACTION )
 {
@@ -917,7 +917,7 @@ HB_FUNC_STATIC( QMENU_TITLE )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QMENU_SIZEHINT )
 {

@@ -1143,7 +1143,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COUNT )
 }
 
 /*
-virtual void invalidate ()
+virtual void invalidate()
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_INVALIDATE )
 {

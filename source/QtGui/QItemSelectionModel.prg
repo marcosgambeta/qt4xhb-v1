@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_COLUMNINTERSECTSSELECTION )
 }
 
 /*
-QModelIndex currentIndex () const
+QModelIndex currentIndex() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_CURRENTINDEX )
 {
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDCOLUMNS )
 }
 
 /*
-QModelIndexList selectedIndexes () const
+QModelIndexList selectedIndexes() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDINDEXES )
 {
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTION )
 }
 
 /*
-virtual void clear ()
+virtual void clear()
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_CLEAR )
 {
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_CLEAR )
 }
 
 /*
-void clearSelection ()
+void clearSelection()
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_CLEARSELECTION )
 {
@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_CLEARSELECTION )
 }
 
 /*
-virtual void reset ()
+virtual void reset()
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_RESET )
 {

@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_DELETE )
 }
 
 /*
-QTextCodec * codec () const
+QTextCodec * codec() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_CODEC )
 {
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_CODEC )
 }
 
 /*
-QIODevice * device () const
+QIODevice * device() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_DEVICE )
 {
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_FILENAME )
 }
 
 /*
-QByteArray format () const
+QByteArray format() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_FORMAT )
 {

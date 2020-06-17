@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QMDIAREA_DELETE )
 }
 
 /*
-WindowOrder activationOrder () const
+QMdiArea::WindowOrder activationOrder() const
 */
 HB_FUNC_STATIC( QMDIAREA_ACTIVATIONORDER )
 {
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QMDIAREA_ACTIVATIONORDER )
 }
 
 /*
-QMdiSubWindow * activeSubWindow () const
+QMdiSubWindow * activeSubWindow() const
 */
 HB_FUNC_STATIC( QMDIAREA_ACTIVESUBWINDOW )
 {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QMDIAREA_ADDSUBWINDOW )
 }
 
 /*
-QBrush background () const
+QBrush background() const
 */
 HB_FUNC_STATIC( QMDIAREA_BACKGROUND )
 {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QMDIAREA_BACKGROUND )
 }
 
 /*
-QMdiSubWindow * currentSubWindow () const
+QMdiSubWindow * currentSubWindow() const
 */
 HB_FUNC_STATIC( QMDIAREA_CURRENTSUBWINDOW )
 {
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QMDIAREA_SUBWINDOWLIST )
 }
 
 /*
-QTabWidget::TabPosition tabPosition () const
+QTabWidget::TabPosition tabPosition() const
 */
 HB_FUNC_STATIC( QMDIAREA_TABPOSITION )
 {
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QMDIAREA_TABPOSITION )
 }
 
 /*
-QTabWidget::TabShape tabShape () const
+QTabWidget::TabShape tabShape() const
 */
 HB_FUNC_STATIC( QMDIAREA_TABSHAPE )
 {
@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QMDIAREA_TESTOPTION )
 }
 
 /*
-ViewMode viewMode () const
+QMdiArea::ViewMode viewMode() const
 */
 HB_FUNC_STATIC( QMDIAREA_VIEWMODE )
 {
@@ -611,7 +611,7 @@ HB_FUNC_STATIC( QMDIAREA_VIEWMODE )
 }
 
 /*
-virtual QSize minimumSizeHint () const
+virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QMDIAREA_MINIMUMSIZEHINT )
 {
@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QMDIAREA_MINIMUMSIZEHINT )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QMDIAREA_SIZEHINT )
 {
@@ -661,7 +661,7 @@ HB_FUNC_STATIC( QMDIAREA_SIZEHINT )
 }
 
 /*
-void activateNextSubWindow ()
+void activateNextSubWindow()
 */
 HB_FUNC_STATIC( QMDIAREA_ACTIVATENEXTSUBWINDOW )
 {
@@ -687,7 +687,7 @@ HB_FUNC_STATIC( QMDIAREA_ACTIVATENEXTSUBWINDOW )
 }
 
 /*
-void activatePreviousSubWindow ()
+void activatePreviousSubWindow()
 */
 HB_FUNC_STATIC( QMDIAREA_ACTIVATEPREVIOUSSUBWINDOW )
 {
@@ -713,7 +713,7 @@ HB_FUNC_STATIC( QMDIAREA_ACTIVATEPREVIOUSSUBWINDOW )
 }
 
 /*
-void cascadeSubWindows ()
+void cascadeSubWindows()
 */
 HB_FUNC_STATIC( QMDIAREA_CASCADESUBWINDOWS )
 {
@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QMDIAREA_CASCADESUBWINDOWS )
 }
 
 /*
-void closeActiveSubWindow ()
+void closeActiveSubWindow()
 */
 HB_FUNC_STATIC( QMDIAREA_CLOSEACTIVESUBWINDOW )
 {
@@ -765,7 +765,7 @@ HB_FUNC_STATIC( QMDIAREA_CLOSEACTIVESUBWINDOW )
 }
 
 /*
-void closeAllSubWindows ()
+void closeAllSubWindows()
 */
 HB_FUNC_STATIC( QMDIAREA_CLOSEALLSUBWINDOWS )
 {
@@ -817,7 +817,7 @@ HB_FUNC_STATIC( QMDIAREA_SETACTIVESUBWINDOW )
 }
 
 /*
-void tileSubWindows ()
+void tileSubWindows()
 */
 HB_FUNC_STATIC( QMDIAREA_TILESUBWINDOWS )
 {

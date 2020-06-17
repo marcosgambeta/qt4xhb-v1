@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_DISPLAYNAME )
 }
 
 /*
-virtual QStringList keys () const = 0
+virtual QStringList keys() const = 0
 */
 HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_KEYS )
 {

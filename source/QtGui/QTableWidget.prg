@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_CURRENTCOLUMN )
 }
 
 /*
-QTableWidgetItem * currentItem () const
+QTableWidgetItem * currentItem() const
 */
 HB_FUNC_STATIC( QTABLEWIDGET_CURRENTITEM )
 {
@@ -1270,7 +1270,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_VISUALROW )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QTABLEWIDGET_CLEAR )
 {
@@ -1296,7 +1296,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_CLEAR )
 }
 
 /*
-void clearContents ()
+void clearContents()
 */
 HB_FUNC_STATIC( QTABLEWIDGET_CLEARCONTENTS )
 {

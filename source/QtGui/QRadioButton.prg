@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QRADIOBUTTON_NEW )
 }
 
 /*
-virtual QSize minimumSizeHint () const
+virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QRADIOBUTTON_MINIMUMSIZEHINT )
 {
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QRADIOBUTTON_MINIMUMSIZEHINT )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QRADIOBUTTON_SIZEHINT )
 {

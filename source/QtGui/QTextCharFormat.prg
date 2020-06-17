@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_ANCHORHREF )
 }
 
 /*
-QStringList anchorNames () const
+QStringList anchorNames() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_ANCHORNAMES )
 {
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_ANCHORNAMES )
 }
 
 /*
-QFont font () const
+QFont font() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONT )
 {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONT )
 }
 
 /*
-QFont::Capitalization fontCapitalization () const
+QFont::Capitalization fontCapitalization() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTCAPITALIZATION )
 {
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTFIXEDPITCH )
 }
 
 /*
-QFont::HintingPreference fontHintingPreference () const
+QFont::HintingPreference fontHintingPreference() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTHINTINGPREFERENCE )
 {
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTRIKEOUT )
 }
 
 /*
-QFont::StyleHint fontStyleHint () const
+QFont::StyleHint fontStyleHint() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTYLEHINT )
 {
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTYLEHINT )
 }
 
 /*
-QFont::StyleStrategy fontStyleStrategy () const
+QFont::StyleStrategy fontStyleStrategy() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTYLESTRATEGY )
 {
@@ -1229,7 +1229,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETVERTICALALIGNMENT )
 }
 
 /*
-QPen textOutline () const
+QPen textOutline() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_TEXTOUTLINE )
 {
@@ -1278,7 +1278,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_TOOLTIP )
 }
 
 /*
-QColor underlineColor () const
+QColor underlineColor() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_UNDERLINECOLOR )
 {
@@ -1303,7 +1303,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_UNDERLINECOLOR )
 }
 
 /*
-UnderlineStyle underlineStyle () const
+QTextCharFormat::UnderlineStyle underlineStyle() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_UNDERLINESTYLE )
 {
@@ -1327,7 +1327,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_UNDERLINESTYLE )
 }
 
 /*
-VerticalAlignment verticalAlignment () const
+QTextCharFormat::VerticalAlignment verticalAlignment() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_VERTICALALIGNMENT )
 {

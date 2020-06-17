@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_DELETE )
 }
 
 /*
-QLineF line () const
+QLineF line() const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_LINE )
 {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_LINE )
 }
 
 /*
-QPen pen () const
+QPen pen() const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_PEN )
 {
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETPEN )
 }
 
 /*
-virtual QRectF boundingRect () const
+virtual QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_BOUNDINGRECT )
 {
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_ISOBSCUREDBY )
 }
 
 /*
-virtual QPainterPath opaqueArea () const
+virtual QPainterPath opaqueArea() const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_OPAQUEAREA )
 {
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_PAINT )
 }
 
 /*
-virtual QPainterPath shape () const
+virtual QPainterPath shape() const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_SHAPE )
 {

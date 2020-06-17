@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QPALETTE_DELETE )
 }
 
 /*
-const QBrush & alternateBase () const
+const QBrush & alternateBase() const
 */
 HB_FUNC_STATIC( QPALETTE_ALTERNATEBASE )
 {
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QPALETTE_ALTERNATEBASE )
 }
 
 /*
-const QBrush & base () const
+const QBrush & base() const
 */
 HB_FUNC_STATIC( QPALETTE_BASE )
 {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QPALETTE_BASE )
 }
 
 /*
-const QBrush & brightText () const
+const QBrush & brightText() const
 */
 HB_FUNC_STATIC( QPALETTE_BRIGHTTEXT )
 {
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QPALETTE_BRUSH )
 }
 
 /*
-const QBrush & button () const
+const QBrush & button() const
 */
 HB_FUNC_STATIC( QPALETTE_BUTTON )
 {
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QPALETTE_BUTTON )
 }
 
 /*
-const QBrush & buttonText () const
+const QBrush & buttonText() const
 */
 HB_FUNC_STATIC( QPALETTE_BUTTONTEXT )
 {
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QPALETTE_BUTTONTEXT )
 }
 
 /*
-qint64 cacheKey () const
+qint64 cacheKey() const
 */
 HB_FUNC_STATIC( QPALETTE_CACHEKEY )
 {
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QPALETTE_COLOR )
 }
 
 /*
-ColorGroup currentColorGroup () const
+QPalette::ColorGroup currentColorGroup() const
 */
 HB_FUNC_STATIC( QPALETTE_CURRENTCOLORGROUP )
 {
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QPALETTE_CURRENTCOLORGROUP )
 }
 
 /*
-const QBrush & dark () const
+const QBrush & dark() const
 */
 HB_FUNC_STATIC( QPALETTE_DARK )
 {
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QPALETTE_DARK )
 }
 
 /*
-const QBrush & highlight () const
+const QBrush & highlight() const
 */
 HB_FUNC_STATIC( QPALETTE_HIGHLIGHT )
 {
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QPALETTE_HIGHLIGHT )
 }
 
 /*
-const QBrush & highlightedText () const
+const QBrush & highlightedText() const
 */
 HB_FUNC_STATIC( QPALETTE_HIGHLIGHTEDTEXT )
 {
@@ -611,7 +611,7 @@ HB_FUNC_STATIC( QPALETTE_ISEQUAL )
 }
 
 /*
-const QBrush & light () const
+const QBrush & light() const
 */
 HB_FUNC_STATIC( QPALETTE_LIGHT )
 {
@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QPALETTE_LIGHT )
 }
 
 /*
-const QBrush & link () const
+const QBrush & link() const
 */
 HB_FUNC_STATIC( QPALETTE_LINK )
 {
@@ -661,7 +661,7 @@ HB_FUNC_STATIC( QPALETTE_LINK )
 }
 
 /*
-const QBrush & linkVisited () const
+const QBrush & linkVisited() const
 */
 HB_FUNC_STATIC( QPALETTE_LINKVISITED )
 {
@@ -686,7 +686,7 @@ HB_FUNC_STATIC( QPALETTE_LINKVISITED )
 }
 
 /*
-const QBrush & mid () const
+const QBrush & mid() const
 */
 HB_FUNC_STATIC( QPALETTE_MID )
 {
@@ -711,7 +711,7 @@ HB_FUNC_STATIC( QPALETTE_MID )
 }
 
 /*
-const QBrush & midlight () const
+const QBrush & midlight() const
 */
 HB_FUNC_STATIC( QPALETTE_MIDLIGHT )
 {
@@ -915,7 +915,7 @@ HB_FUNC_STATIC( QPALETTE_SETCURRENTCOLORGROUP )
 }
 
 /*
-const QBrush & shadow () const
+const QBrush & shadow() const
 */
 HB_FUNC_STATIC( QPALETTE_SHADOW )
 {
@@ -940,7 +940,7 @@ HB_FUNC_STATIC( QPALETTE_SHADOW )
 }
 
 /*
-const QBrush & text () const
+const QBrush & text() const
 */
 HB_FUNC_STATIC( QPALETTE_TEXT )
 {
@@ -965,7 +965,7 @@ HB_FUNC_STATIC( QPALETTE_TEXT )
 }
 
 /*
-const QBrush & toolTipBase () const
+const QBrush & toolTipBase() const
 */
 HB_FUNC_STATIC( QPALETTE_TOOLTIPBASE )
 {
@@ -990,7 +990,7 @@ HB_FUNC_STATIC( QPALETTE_TOOLTIPBASE )
 }
 
 /*
-const QBrush & toolTipText () const
+const QBrush & toolTipText() const
 */
 HB_FUNC_STATIC( QPALETTE_TOOLTIPTEXT )
 {
@@ -1015,7 +1015,7 @@ HB_FUNC_STATIC( QPALETTE_TOOLTIPTEXT )
 }
 
 /*
-const QBrush & window () const
+const QBrush & window() const
 */
 HB_FUNC_STATIC( QPALETTE_WINDOW )
 {
@@ -1040,7 +1040,7 @@ HB_FUNC_STATIC( QPALETTE_WINDOW )
 }
 
 /*
-const QBrush & windowText () const
+const QBrush & windowText() const
 */
 HB_FUNC_STATIC( QPALETTE_WINDOWTEXT )
 {

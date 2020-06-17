@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_SETWIDGET )
 }
 
 /*
-QWidget * widget () const
+QWidget * widget() const
 */
 HB_FUNC_STATIC( QGESTUREEVENT_WIDGET )
 {

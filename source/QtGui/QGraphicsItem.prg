@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTTOUCHEVENTS )
 }
 
 /*
-Qt::MouseButtons acceptedMouseButtons () const
+Qt::MouseButtons acceptedMouseButtons() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTEDMOUSEBUTTONS )
 {
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ADVANCE )
 }
 
 /*
-virtual QRectF boundingRect () const = 0
+virtual QRectF boundingRect() const = 0
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_BOUNDINGRECT )
 {
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_BOUNDINGREGIONGRANULARITY )
 }
 
 /*
-CacheMode cacheMode () const
+QGraphicsItem::CacheMode cacheMode() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_CACHEMODE )
 {
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_CHILDITEMS )
 }
 
 /*
-QRectF childrenBoundingRect () const
+QRectF childrenBoundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_CHILDRENBOUNDINGRECT )
 {
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_CHILDRENBOUNDINGRECT )
 }
 
 /*
-void clearFocus ()
+void clearFocus()
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_CLEARFOCUS )
 {
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_CLEARFOCUS )
 }
 
 /*
-QPainterPath clipPath () const
+QPainterPath clipPath() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_CLIPPATH )
 {
@@ -707,7 +707,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_CONTAINS )
 }
 
 /*
-QCursor cursor () const
+QCursor cursor() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_CURSOR )
 {
@@ -881,7 +881,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_FILTERSCHILDEVENTS )
 }
 
 /*
-GraphicsItemFlags flags () const
+QGraphicsItem::GraphicsItemFlags flags() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_FLAGS )
 {
@@ -905,7 +905,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_FLAGS )
 }
 
 /*
-QGraphicsItem * focusItem () const
+QGraphicsItem * focusItem() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_FOCUSITEM )
 {
@@ -930,7 +930,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_FOCUSITEM )
 }
 
 /*
-QGraphicsItem * focusProxy () const
+QGraphicsItem * focusProxy() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_FOCUSPROXY )
 {
@@ -955,7 +955,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_FOCUSPROXY )
 }
 
 /*
-void grabKeyboard ()
+void grabKeyboard()
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_GRABKEYBOARD )
 {
@@ -981,7 +981,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_GRABKEYBOARD )
 }
 
 /*
-void grabMouse ()
+void grabMouse()
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_GRABMOUSE )
 {
@@ -1007,7 +1007,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_GRABMOUSE )
 }
 
 /*
-QGraphicsEffect * graphicsEffect () const
+QGraphicsEffect * graphicsEffect() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_GRAPHICSEFFECT )
 {
@@ -1032,7 +1032,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_GRAPHICSEFFECT )
 }
 
 /*
-QGraphicsItemGroup * group () const
+QGraphicsItemGroup * group() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_GROUP )
 {
@@ -1105,7 +1105,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_HASFOCUS )
 }
 
 /*
-void hide ()
+void hide()
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_HIDE )
 {
@@ -1131,7 +1131,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_HIDE )
 }
 
 /*
-Qt::InputMethodHints inputMethodHints () const
+Qt::InputMethodHints inputMethodHints() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_INPUTMETHODHINTS )
 {
@@ -2655,7 +2655,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_OPACITY )
 }
 
 /*
-virtual QPainterPath opaqueArea () const
+virtual QPainterPath opaqueArea() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_OPAQUEAREA )
 {
@@ -2706,7 +2706,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_PAINT )
 }
 
 /*
-QGraphicsItem * panel () const
+QGraphicsItem * panel() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_PANEL )
 {
@@ -2731,7 +2731,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_PANEL )
 }
 
 /*
-PanelModality panelModality () const
+QGraphicsItem::PanelModality panelModality() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_PANELMODALITY )
 {
@@ -2755,7 +2755,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_PANELMODALITY )
 }
 
 /*
-QGraphicsItem * parentItem () const
+QGraphicsItem * parentItem() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_PARENTITEM )
 {
@@ -2780,7 +2780,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_PARENTITEM )
 }
 
 /*
-QGraphicsObject * parentObject () const
+QGraphicsObject * parentObject() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_PARENTOBJECT )
 {
@@ -2805,7 +2805,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_PARENTOBJECT )
 }
 
 /*
-QGraphicsWidget * parentWidget () const
+QGraphicsWidget * parentWidget() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_PARENTWIDGET )
 {
@@ -2830,7 +2830,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_PARENTWIDGET )
 }
 
 /*
-QPointF pos () const
+QPointF pos() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_POS )
 {
@@ -2881,7 +2881,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_REMOVESCENEEVENTFILTER )
 }
 
 /*
-void resetTransform ()
+void resetTransform()
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_RESETTRANSFORM )
 {
@@ -2955,7 +2955,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SCALE )
 }
 
 /*
-QGraphicsScene * scene () const
+QGraphicsScene * scene() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SCENE )
 {
@@ -2980,7 +2980,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SCENE )
 }
 
 /*
-QRectF sceneBoundingRect () const
+QRectF sceneBoundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SCENEBOUNDINGRECT )
 {
@@ -3005,7 +3005,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SCENEBOUNDINGRECT )
 }
 
 /*
-QPointF scenePos () const
+QPointF scenePos() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SCENEPOS )
 {
@@ -3030,7 +3030,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SCENEPOS )
 }
 
 /*
-QTransform sceneTransform () const
+QTransform sceneTransform() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SCENETRANSFORM )
 {
@@ -3997,7 +3997,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETZVALUE )
 }
 
 /*
-virtual QPainterPath shape () const
+virtual QPainterPath shape() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SHAPE )
 {
@@ -4022,7 +4022,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SHAPE )
 }
 
 /*
-void show ()
+void show()
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SHOW )
 {
@@ -4158,7 +4158,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TOOLTIP )
 }
 
 /*
-QGraphicsItem * topLevelItem () const
+QGraphicsItem * topLevelItem() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_TOPLEVELITEM )
 {
@@ -4183,7 +4183,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TOPLEVELITEM )
 }
 
 /*
-QGraphicsWidget * topLevelWidget () const
+QGraphicsWidget * topLevelWidget() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_TOPLEVELWIDGET )
 {
@@ -4208,7 +4208,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TOPLEVELWIDGET )
 }
 
 /*
-QTransform transform () const
+QTransform transform() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_TRANSFORM )
 {
@@ -4233,7 +4233,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TRANSFORM )
 }
 
 /*
-QPointF transformOriginPoint () const
+QPointF transformOriginPoint() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_TRANSFORMORIGINPOINT )
 {
@@ -4330,7 +4330,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TYPE )
 }
 
 /*
-void ungrabKeyboard ()
+void ungrabKeyboard()
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_UNGRABKEYBOARD )
 {
@@ -4356,7 +4356,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_UNGRABKEYBOARD )
 }
 
 /*
-void ungrabMouse ()
+void ungrabMouse()
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_UNGRABMOUSE )
 {
@@ -4382,7 +4382,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_UNGRABMOUSE )
 }
 
 /*
-void unsetCursor ()
+void unsetCursor()
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_UNSETCURSOR )
 {
@@ -4459,7 +4459,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_UPDATE )
 }
 
 /*
-QGraphicsWidget * window () const
+QGraphicsWidget * window() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_WINDOW )
 {

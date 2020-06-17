@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_KEYBOARDSINGLESTEP )
 }
 
 /*
-QMdiArea * mdiArea () const
+QMdiArea * mdiArea() const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_MDIAREA )
 {
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETWIDGET )
 }
 
 /*
-QMenu * systemMenu () const
+QMenu * systemMenu() const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SYSTEMMENU )
 {
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_TESTOPTION )
 }
 
 /*
-QWidget * widget () const
+QWidget * widget() const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_WIDGET )
 {
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_WIDGET )
 }
 
 /*
-virtual QSize minimumSizeHint () const
+virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_MINIMUMSIZEHINT )
 {
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_MINIMUMSIZEHINT )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SIZEHINT )
 {
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SIZEHINT )
 }
 
 /*
-void showShaded ()
+void showShaded()
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SHOWSHADED )
 {
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SHOWSHADED )
 }
 
 /*
-void showSystemMenu ()
+void showSystemMenu()
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SHOWSYSTEMMENU )
 {

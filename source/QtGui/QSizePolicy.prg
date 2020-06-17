@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_DELETE )
 }
 
 /*
-ControlType controlType () const
+QSizePolicy::ControlType controlType() const
 */
 HB_FUNC_STATIC( QSIZEPOLICY_CONTROLTYPE )
 {
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_CONTROLTYPE )
 }
 
 /*
-Qt::Orientations expandingDirections () const
+Qt::Orientations expandingDirections() const
 */
 HB_FUNC_STATIC( QSIZEPOLICY_EXPANDINGDIRECTIONS )
 {
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_HASWIDTHFORHEIGHT )
 }
 
 /*
-Policy horizontalPolicy () const
+QSizePolicy::Policy horizontalPolicy() const
 */
 HB_FUNC_STATIC( QSIZEPOLICY_HORIZONTALPOLICY )
 {
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_SETWIDTHFORHEIGHT )
 }
 
 /*
-void transpose ()
+void transpose()
 */
 HB_FUNC_STATIC( QSIZEPOLICY_TRANSPOSE )
 {
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_TRANSPOSE )
 }
 
 /*
-Policy verticalPolicy () const
+QSizePolicy::Policy verticalPolicy() const
 */
 HB_FUNC_STATIC( QSIZEPOLICY_VERTICALPOLICY )
 {

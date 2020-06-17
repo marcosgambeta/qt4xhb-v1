@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QTEXTOPTION_DELETE )
 }
 
 /*
-Qt::Alignment alignment () const
+Qt::Alignment alignment() const
 */
 HB_FUNC_STATIC( QTEXTOPTION_ALIGNMENT )
 {
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QTEXTOPTION_ALIGNMENT )
 }
 
 /*
-Flags flags () const
+QTextOption::Flags flags() const
 */
 HB_FUNC_STATIC( QTEXTOPTION_FLAGS )
 {
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QTEXTOPTION_TABSTOP )
 }
 
 /*
-Qt::LayoutDirection textDirection () const
+Qt::LayoutDirection textDirection() const
 */
 HB_FUNC_STATIC( QTEXTOPTION_TEXTDIRECTION )
 {
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QTEXTOPTION_USEDESIGNMETRICS )
 }
 
 /*
-WrapMode wrapMode () const
+QTextOption::WrapMode wrapMode() const
 */
 HB_FUNC_STATIC( QTEXTOPTION_WRAPMODE )
 {

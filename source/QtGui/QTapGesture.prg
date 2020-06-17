@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QTAPGESTURE_DELETE )
 }
 
 /*
-QPointF position () const
+QPointF position() const
 */
 HB_FUNC_STATIC( QTAPGESTURE_POSITION )
 {

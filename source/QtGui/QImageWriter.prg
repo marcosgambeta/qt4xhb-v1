@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_COMPRESSION )
 }
 
 /*
-QIODevice * device () const
+QIODevice * device() const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_DEVICE )
 {
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_DEVICE )
 }
 
 /*
-ImageWriterError error () const
+QImageWriterError::ImageWriterError error() const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_ERROR )
 {
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_FILENAME )
 }
 
 /*
-QByteArray format () const
+QByteArray format() const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_FORMAT )
 {
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_FORMAT )
 }
 
 /*
-float gamma () const
+float gamma() const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_GAMMA )
 {

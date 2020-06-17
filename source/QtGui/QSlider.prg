@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QSLIDER_TICKINTERVAL )
 }
 
 /*
-TickPosition tickPosition () const
+QSlider::TickPosition tickPosition() const
 */
 HB_FUNC_STATIC( QSLIDER_TICKPOSITION )
 {
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QSLIDER_EVENT )
 }
 
 /*
-virtual QSize minimumSizeHint () const
+virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QSLIDER_MINIMUMSIZEHINT )
 {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QSLIDER_MINIMUMSIZEHINT )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSLIDER_SIZEHINT )
 {

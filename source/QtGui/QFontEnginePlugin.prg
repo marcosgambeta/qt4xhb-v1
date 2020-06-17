@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QFONTENGINEPLUGIN_CREATE )
 }
 
 /*
-virtual QStringList keys () const
+virtual QStringList keys() const
 */
 HB_FUNC_STATIC( QFONTENGINEPLUGIN_KEYS )
 {

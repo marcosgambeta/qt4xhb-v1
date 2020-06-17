@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_OPEN )
 }
 
 /*
-QPrinter * printer ()
+QPrinter * printer()
 */
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_PRINTER )
 {

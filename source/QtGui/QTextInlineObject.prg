@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_DESCENT )
 }
 
 /*
-QTextFormat format () const
+QTextFormat format() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_FORMAT )
 {
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_ISVALID )
 }
 
 /*
-QRectF rect () const
+QRectF rect() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_RECT )
 {
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_SETWIDTH )
 }
 
 /*
-Qt::LayoutDirection textDirection () const
+Qt::LayoutDirection textDirection() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_TEXTDIRECTION )
 {

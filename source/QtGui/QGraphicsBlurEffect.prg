@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_DELETE )
 }
 
 /*
-BlurHints blurHints () const
+QGraphicsBlurEffect::BlurHints blurHints() const
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURHINTS )
 {

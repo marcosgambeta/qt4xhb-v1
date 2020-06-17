@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_SETFLAT )
 }
 
 /*
-void showMenu ()
+void showMenu()
 */
 HB_FUNC_STATIC( QPUSHBUTTON_SHOWMENU )
 {

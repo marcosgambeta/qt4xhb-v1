@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QPRINTENGINE_NEWPAGE )
 }
 
 /*
-virtual QPrinter::PrinterState printerState () const = 0
+virtual QPrinter::PrinterState printerState() const = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_PRINTERSTATE )
 {

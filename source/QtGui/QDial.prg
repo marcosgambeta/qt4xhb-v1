@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QDIAL_WRAPPING )
 }
 
 /*
-virtual QSize minimumSizeHint () const
+virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QDIAL_MINIMUMSIZEHINT )
 {
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QDIAL_MINIMUMSIZEHINT )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QDIAL_SIZEHINT )
 {

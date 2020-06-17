@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_ALLOWSINTERACTION )
 }
 
 /*
-void cancel ()
+void cancel()
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_CANCEL )
 {
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_CANCEL )
 }
 
 /*
-QStringList discardCommand () const
+QStringList discardCommand() const
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_DISCARDCOMMAND )
 {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_ISPHASE2 )
 }
 
 /*
-void release ()
+void release()
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_RELEASE )
 {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_RELEASE )
 }
 
 /*
-void requestPhase2 ()
+void requestPhase2()
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_REQUESTPHASE2 )
 {
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_REQUESTPHASE2 )
 }
 
 /*
-QStringList restartCommand () const
+QStringList restartCommand() const
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_RESTARTCOMMAND )
 {
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_RESTARTCOMMAND )
 }
 
 /*
-RestartHint restartHint () const
+QSessionManager::RestartHint restartHint() const
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_RESTARTHINT )
 {

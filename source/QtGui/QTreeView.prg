@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QTREEVIEW_EXPANDSONDOUBLECLICK )
 }
 
 /*
-QHeaderView * header () const
+QHeaderView * header() const
 */
 HB_FUNC_STATIC( QTREEVIEW_HEADER )
 {
@@ -1193,7 +1193,7 @@ HB_FUNC_STATIC( QTREEVIEW_KEYBOARDSEARCH )
 }
 
 /*
-virtual void reset ()
+virtual void reset()
 */
 HB_FUNC_STATIC( QTREEVIEW_RESET )
 {
@@ -1245,7 +1245,7 @@ HB_FUNC_STATIC( QTREEVIEW_SCROLLTO )
 }
 
 /*
-virtual void selectAll ()
+virtual void selectAll()
 */
 HB_FUNC_STATIC( QTREEVIEW_SELECTALL )
 {
@@ -1400,7 +1400,7 @@ HB_FUNC_STATIC( QTREEVIEW_COLLAPSE )
 }
 
 /*
-void collapseAll ()
+void collapseAll()
 */
 HB_FUNC_STATIC( QTREEVIEW_COLLAPSEALL )
 {
@@ -1452,7 +1452,7 @@ HB_FUNC_STATIC( QTREEVIEW_EXPAND )
 }
 
 /*
-void expandAll ()
+void expandAll()
 */
 HB_FUNC_STATIC( QTREEVIEW_EXPANDALL )
 {

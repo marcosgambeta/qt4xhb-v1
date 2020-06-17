@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_DELETE )
 }
 
 /*
-QRectF rect () const
+QRectF rect() const
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_RECT )
 {
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_STARTANGLE )
 }
 
 /*
-virtual QRectF boundingRect () const
+virtual QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_BOUNDINGRECT )
 {
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_ISOBSCUREDBY )
 }
 
 /*
-virtual QPainterPath opaqueArea () const
+virtual QPainterPath opaqueArea() const
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_OPAQUEAREA )
 {
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_PAINT )
 }
 
 /*
-virtual QPainterPath shape () const
+virtual QPainterPath shape() const
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SHAPE )
 {

@@ -590,7 +590,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ARCTO )
 }
 
 /*
-QRectF boundingRect () const
+QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QPAINTERPATH_BOUNDINGRECT )
 {
@@ -615,7 +615,7 @@ HB_FUNC_STATIC( QPAINTERPATH_BOUNDINGRECT )
 }
 
 /*
-void closeSubpath ()
+void closeSubpath()
 */
 HB_FUNC_STATIC( QPAINTERPATH_CLOSESUBPATH )
 {
@@ -732,7 +732,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CONTAINS )
 }
 
 /*
-QRectF controlPointRect () const
+QRectF controlPointRect() const
 */
 HB_FUNC_STATIC( QPAINTERPATH_CONTROLPOINTRECT )
 {
@@ -808,7 +808,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CUBICTO )
 }
 
 /*
-QPointF currentPosition () const
+QPointF currentPosition() const
 */
 HB_FUNC_STATIC( QPAINTERPATH_CURRENTPOSITION )
 {
@@ -857,7 +857,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ELEMENTCOUNT )
 }
 
 /*
-Qt::FillRule fillRule () const
+Qt::FillRule fillRule() const
 */
 HB_FUNC_STATIC( QPAINTERPATH_FILLRULE )
 {
@@ -1255,7 +1255,7 @@ HB_FUNC_STATIC( QPAINTERPATH_SETFILLRULE )
 }
 
 /*
-QPainterPath simplified () const
+QPainterPath simplified() const
 */
 HB_FUNC_STATIC( QPAINTERPATH_SIMPLIFIED )
 {
@@ -1507,7 +1507,7 @@ HB_FUNC_STATIC( QPAINTERPATH_TOFILLPOLYGONS )
 }
 
 /*
-QPainterPath toReversed () const
+QPainterPath toReversed() const
 */
 HB_FUNC_STATIC( QPAINTERPATH_TOREVERSED )
 {

@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_DELETE )
 }
 
 /*
-Qt::PenCapStyle capStyle () const
+Qt::PenCapStyle capStyle() const
 */
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_CAPSTYLE )
 {
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_DASHPATTERN )
 }
 
 /*
-Qt::PenJoinStyle joinStyle () const
+Qt::PenJoinStyle joinStyle() const
 */
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_JOINSTYLE )
 {

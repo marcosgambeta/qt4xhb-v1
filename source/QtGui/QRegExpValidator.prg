@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_DELETE )
 }
 
 /*
-const QRegExp & regExp () const
+const QRegExp & regExp() const
 */
 HB_FUNC_STATIC( QREGEXPVALIDATOR_REGEXP )
 {

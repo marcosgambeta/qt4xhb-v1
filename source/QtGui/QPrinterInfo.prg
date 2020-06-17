@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERS )
 }
 
 /*
-static QPrinterInfo defaultPrinter ()
+static QPrinterInfo defaultPrinter()
 */
 HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPRINTER )
 {

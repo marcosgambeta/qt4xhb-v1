@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QPAINTER_DELETE )
 }
 
 /*
-const QBrush & background () const
+const QBrush & background() const
 */
 HB_FUNC_STATIC( QPAINTER_BACKGROUND )
 {
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QPAINTER_BACKGROUND )
 }
 
 /*
-Qt::BGMode backgroundMode () const
+Qt::BGMode backgroundMode() const
 */
 HB_FUNC_STATIC( QPAINTER_BACKGROUNDMODE )
 {
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QPAINTER_BEGIN )
 }
 
 /*
-void beginNativePainting ()
+void beginNativePainting()
 */
 HB_FUNC_STATIC( QPAINTER_BEGINNATIVEPAINTING )
 {
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QPAINTER_BOUNDINGRECT )
 }
 
 /*
-const QBrush & brush () const
+const QBrush & brush() const
 */
 HB_FUNC_STATIC( QPAINTER_BRUSH )
 {
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QPAINTER_BRUSH )
 }
 
 /*
-QPoint brushOrigin () const
+QPoint brushOrigin() const
 */
 HB_FUNC_STATIC( QPAINTER_BRUSHORIGIN )
 {
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QPAINTER_BRUSHORIGIN )
 }
 
 /*
-QPainterPath clipPath () const
+QPainterPath clipPath() const
 */
 HB_FUNC_STATIC( QPAINTER_CLIPPATH )
 {
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QPAINTER_CLIPPATH )
 }
 
 /*
-QRegion clipRegion () const
+QRegion clipRegion() const
 */
 HB_FUNC_STATIC( QPAINTER_CLIPREGION )
 {
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QPAINTER_CLIPREGION )
 }
 
 /*
-QTransform combinedTransform () const
+QTransform combinedTransform() const
 */
 HB_FUNC_STATIC( QPAINTER_COMBINEDTRANSFORM )
 {
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QPAINTER_COMBINEDTRANSFORM )
 }
 
 /*
-CompositionMode compositionMode () const
+QPainter::CompositionMode compositionMode() const
 */
 HB_FUNC_STATIC( QPAINTER_COMPOSITIONMODE )
 {
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QPAINTER_COMPOSITIONMODE )
 }
 
 /*
-QPaintDevice * device () const
+QPaintDevice * device() const
 */
 HB_FUNC_STATIC( QPAINTER_DEVICE )
 {
@@ -581,7 +581,7 @@ HB_FUNC_STATIC( QPAINTER_DEVICE )
 }
 
 /*
-const QTransform & deviceTransform () const
+const QTransform & deviceTransform() const
 */
 HB_FUNC_STATIC( QPAINTER_DEVICETRANSFORM )
 {
@@ -2588,7 +2588,7 @@ HB_FUNC_STATIC( QPAINTER_END )
 }
 
 /*
-void endNativePainting ()
+void endNativePainting()
 */
 HB_FUNC_STATIC( QPAINTER_ENDNATIVEPAINTING )
 {
@@ -3094,7 +3094,7 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT )
 }
 
 /*
-const QFont & font () const
+const QFont & font() const
 */
 HB_FUNC_STATIC( QPAINTER_FONT )
 {
@@ -3119,7 +3119,7 @@ HB_FUNC_STATIC( QPAINTER_FONT )
 }
 
 /*
-QFontInfo fontInfo () const
+QFontInfo fontInfo() const
 */
 HB_FUNC_STATIC( QPAINTER_FONTINFO )
 {
@@ -3144,7 +3144,7 @@ HB_FUNC_STATIC( QPAINTER_FONTINFO )
 }
 
 /*
-QFontMetrics fontMetrics () const
+QFontMetrics fontMetrics() const
 */
 HB_FUNC_STATIC( QPAINTER_FONTMETRICS )
 {
@@ -3243,7 +3243,7 @@ HB_FUNC_STATIC( QPAINTER_ISACTIVE )
 }
 
 /*
-Qt::LayoutDirection layoutDirection () const
+Qt::LayoutDirection layoutDirection() const
 */
 HB_FUNC_STATIC( QPAINTER_LAYOUTDIRECTION )
 {
@@ -3291,7 +3291,7 @@ HB_FUNC_STATIC( QPAINTER_OPACITY )
 }
 
 /*
-QPaintEngine * paintEngine () const
+QPaintEngine * paintEngine() const
 */
 HB_FUNC_STATIC( QPAINTER_PAINTENGINE )
 {
@@ -3316,7 +3316,7 @@ HB_FUNC_STATIC( QPAINTER_PAINTENGINE )
 }
 
 /*
-const QPen & pen () const
+const QPen & pen() const
 */
 HB_FUNC_STATIC( QPAINTER_PEN )
 {
@@ -3341,7 +3341,7 @@ HB_FUNC_STATIC( QPAINTER_PEN )
 }
 
 /*
-RenderHints renderHints () const
+QPainter::RenderHints renderHints() const
 */
 HB_FUNC_STATIC( QPAINTER_RENDERHINTS )
 {
@@ -3365,7 +3365,7 @@ HB_FUNC_STATIC( QPAINTER_RENDERHINTS )
 }
 
 /*
-void resetTransform ()
+void resetTransform()
 */
 HB_FUNC_STATIC( QPAINTER_RESETTRANSFORM )
 {
@@ -3391,7 +3391,7 @@ HB_FUNC_STATIC( QPAINTER_RESETTRANSFORM )
 }
 
 /*
-void restore ()
+void restore()
 */
 HB_FUNC_STATIC( QPAINTER_RESTORE )
 {
@@ -3443,7 +3443,7 @@ HB_FUNC_STATIC( QPAINTER_ROTATE )
 }
 
 /*
-void save ()
+void save()
 */
 HB_FUNC_STATIC( QPAINTER_SAVE )
 {
@@ -4327,7 +4327,7 @@ HB_FUNC_STATIC( QPAINTER_TESTRENDERHINT )
 }
 
 /*
-const QTransform & transform () const
+const QTransform & transform() const
 */
 HB_FUNC_STATIC( QPAINTER_TRANSFORM )
 {
@@ -4447,7 +4447,7 @@ HB_FUNC_STATIC( QPAINTER_VIEWTRANSFORMENABLED )
 }
 
 /*
-QRect viewport () const
+QRect viewport() const
 */
 HB_FUNC_STATIC( QPAINTER_VIEWPORT )
 {
@@ -4472,7 +4472,7 @@ HB_FUNC_STATIC( QPAINTER_VIEWPORT )
 }
 
 /*
-QRect window () const
+QRect window() const
 */
 HB_FUNC_STATIC( QPAINTER_WINDOW )
 {
@@ -4521,7 +4521,7 @@ HB_FUNC_STATIC( QPAINTER_WORLDMATRIXENABLED )
 }
 
 /*
-const QTransform & worldTransform () const
+const QTransform & worldTransform() const
 */
 HB_FUNC_STATIC( QPAINTER_WORLDTRANSFORM )
 {

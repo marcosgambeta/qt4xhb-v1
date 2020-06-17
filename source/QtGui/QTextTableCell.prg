@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_COLUMNSPAN )
 }
 
 /*
-QTextCursor firstCursorPosition () const
+QTextCursor firstCursorPosition() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELL_FIRSTCURSORPOSITION )
 {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_FIRSTCURSORPOSITION )
 }
 
 /*
-QTextCharFormat format () const
+QTextCharFormat format() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELL_FORMAT )
 {
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_ISVALID )
 }
 
 /*
-QTextCursor lastCursorPosition () const
+QTextCursor lastCursorPosition() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELL_LASTCURSORPOSITION )
 {

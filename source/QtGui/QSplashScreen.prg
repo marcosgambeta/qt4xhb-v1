@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_FINISH )
 }
 
 /*
-const QPixmap pixmap () const
+const QPixmap pixmap() const
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_PIXMAP )
 {
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_PIXMAP )
 }
 
 /*
-void repaint ()
+void repaint()
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_REPAINT )
 {
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_SETPIXMAP )
 }
 
 /*
-void clearMessage ()
+void clearMessage()
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_CLEARMESSAGE )
 {

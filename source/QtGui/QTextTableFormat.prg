@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_DELETE )
 }
 
 /*
-Qt::Alignment alignment () const
+Qt::Alignment alignment() const
 */
 HB_FUNC_STATIC( QTEXTTABLEFORMAT_ALIGNMENT )
 {
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_CELLSPACING )
 }
 
 /*
-void clearColumnWidthConstraints ()
+void clearColumnWidthConstraints()
 */
 HB_FUNC_STATIC( QTEXTTABLEFORMAT_CLEARCOLUMNWIDTHCONSTRAINTS )
 {

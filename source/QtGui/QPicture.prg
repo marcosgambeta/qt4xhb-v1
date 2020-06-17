@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QPICTURE_DELETE )
 }
 
 /*
-QRect boundingRect () const
+QRect boundingRect() const
 */
 HB_FUNC_STATIC( QPICTURE_BOUNDINGRECT )
 {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QPICTURE_BOUNDINGRECT )
 }
 
 /*
-const char * data () const
+const char * data() const
 */
 HB_FUNC_STATIC( QPICTURE_DATA )
 {
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QPICTURE_SETDATA )
 }
 
 /*
-uint size () const
+uint size() const
 */
 HB_FUNC_STATIC( QPICTURE_SIZE )
 {

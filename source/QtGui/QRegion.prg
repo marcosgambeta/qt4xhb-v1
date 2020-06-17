@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QREGION_DELETE )
 }
 
 /*
-QRect boundingRect () const
+QRect boundingRect() const
 */
 HB_FUNC_STATIC( QREGION_BOUNDINGRECT )
 {

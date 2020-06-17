@@ -721,7 +721,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETITEM )
 }
 
 /*
-QStandardItem *invisibleRootItem() const
+QStandardItem * invisibleRootItem() const
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_INVISIBLEROOTITEM )
 {
@@ -1350,7 +1350,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKEVERTICALHEADERITEM )
 }
 
 /*
-const QStandardItem *itemPrototype() const
+const QStandardItem * itemPrototype() const
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_ITEMPROTOTYPE )
 {

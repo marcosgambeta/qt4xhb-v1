@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QITEMEDITORCREATORBASE_CREATEWIDGET )
 }
 
 /*
-virtual QByteArray valuePropertyName () const = 0
+virtual QByteArray valuePropertyName() const = 0
 */
 HB_FUNC_STATIC( QITEMEDITORCREATORBASE_VALUEPROPERTYNAME )
 {

@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_BUTTONS )
 }
 
 /*
-QAbstractButton * clickedButton () const
+QAbstractButton * clickedButton() const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_CLICKEDBUTTON )
 {
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_CLICKEDBUTTON )
 }
 
 /*
-QPushButton * defaultButton () const
+QPushButton * defaultButton() const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_DEFAULTBUTTON )
 {
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_DETAILEDTEXT )
 }
 
 /*
-QAbstractButton * escapeButton () const
+QAbstractButton * escapeButton() const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_ESCAPEBUTTON )
 {
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ESCAPEBUTTON )
 }
 
 /*
-Icon icon () const
+QMessageBox::Icon icon() const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_ICON )
 {
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ICON )
 }
 
 /*
-QPixmap iconPixmap () const
+QPixmap iconPixmap() const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_ICONPIXMAP )
 {
@@ -893,7 +893,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_STANDARDBUTTON )
 }
 
 /*
-StandardButtons standardButtons () const
+QMessageBox::StandardButtons standardButtons() const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_STANDARDBUTTONS )
 {
@@ -941,7 +941,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_TEXT )
 }
 
 /*
-Qt::TextFormat textFormat () const
+Qt::TextFormat textFormat() const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_TEXTFORMAT )
 {

@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QGLYPHRUN_DELETE )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QGLYPHRUN_CLEAR )
 {
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QGLYPHRUN_POSITIONS )
 }
 
 /*
-QRawFont rawFont () const
+QRawFont rawFont() const
 */
 HB_FUNC_STATIC( QGLYPHRUN_RAWFONT )
 {

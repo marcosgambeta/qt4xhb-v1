@@ -1320,7 +1320,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETDROPENABLED )
 }
 
 /*
-QStandardItem *parent() const
+QStandardItem * parent() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_PARENT )
 {
@@ -1418,7 +1418,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_INDEX )
 }
 
 /*
-QStandardItemModel *model() const
+QStandardItemModel * model() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_MODEL )
 {
@@ -2199,7 +2199,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SORTCHILDREN )
 }
 
 /*
-QStandardItem *clone() const
+QStandardItem * clone() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_CLONE )
 {

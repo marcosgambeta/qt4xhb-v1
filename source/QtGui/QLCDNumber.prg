@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QLCDNUMBER_INTVALUE )
 }
 
 /*
-Mode mode () const
+QLCDNumber::Mode mode() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_MODE )
 {
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QLCDNUMBER_MODE )
 }
 
 /*
-SegmentStyle segmentStyle () const
+QLCDNumber::SegmentStyle segmentStyle() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_SEGMENTSTYLE )
 {
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SMALLDECIMALPOINT )
 }
 
 /*
-double value () const
+double value() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_VALUE )
 {
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QLCDNUMBER_VALUE )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_SIZEHINT )
 {
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QLCDNUMBER_DISPLAY )
 }
 
 /*
-void setBinMode ()
+void setBinMode()
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETBINMODE )
 {
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETBINMODE )
 }
 
 /*
-void setDecMode ()
+void setDecMode()
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETDECMODE )
 {
@@ -588,7 +588,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETDECMODE )
 }
 
 /*
-void setHexMode ()
+void setHexMode()
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETHEXMODE )
 {
@@ -614,7 +614,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETHEXMODE )
 }
 
 /*
-void setOctMode ()
+void setOctMode()
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETOCTMODE )
 {

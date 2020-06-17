@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QGESTURE_DELETE )
 }
 
 /*
-GestureCancelPolicy gestureCancelPolicy () const
+QGesture::GestureCancelPolicy gestureCancelPolicy() const
 */
 HB_FUNC_STATIC( QGESTURE_GESTURECANCELPOLICY )
 {
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QGESTURE_GESTURECANCELPOLICY )
 }
 
 /*
-Qt::GestureType gestureType () const
+Qt::GestureType gestureType() const
 */
 HB_FUNC_STATIC( QGESTURE_GESTURETYPE )
 {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QGESTURE_HASHOTSPOT )
 }
 
 /*
-QPointF hotSpot () const
+QPointF hotSpot() const
 */
 HB_FUNC_STATIC( QGESTURE_HOTSPOT )
 {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QGESTURE_SETHOTSPOT )
 }
 
 /*
-Qt::GestureState state () const
+Qt::GestureState state() const
 */
 HB_FUNC_STATIC( QGESTURE_STATE )
 {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QGESTURE_STATE )
 }
 
 /*
-void unsetHotSpot ()
+void unsetHotSpot()
 */
 HB_FUNC_STATIC( QGESTURE_UNSETHOTSPOT )
 {

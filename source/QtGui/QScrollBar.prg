@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QSCROLLBAR_EVENT )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSCROLLBAR_SIZEHINT )
 {

@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_DELETE )
 }
 
 /*
-Qt::DockWidgetAreas allowedAreas () const
+Qt::DockWidgetAreas allowedAreas() const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_ALLOWEDAREAS )
 {
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ALLOWEDAREAS )
 }
 
 /*
-DockWidgetFeatures features () const
+QDockWidget::DockWidgetFeatures features() const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_FEATURES )
 {
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETWIDGET )
 }
 
 /*
-QWidget * titleBarWidget () const
+QWidget * titleBarWidget() const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_TITLEBARWIDGET )
 {
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_TITLEBARWIDGET )
 }
 
 /*
-QAction * toggleViewAction () const
+QAction * toggleViewAction() const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_TOGGLEVIEWACTION )
 {
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_TOGGLEVIEWACTION )
 }
 
 /*
-QWidget * widget () const
+QWidget * widget() const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_WIDGET )
 {

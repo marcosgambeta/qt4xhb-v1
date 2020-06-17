@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSPACING )
 }
 
 /*
-QSizePolicy::Policy sizePolicy () const
+QSizePolicy::Policy sizePolicy() const
 */
 HB_FUNC_STATIC( QGRAPHICSANCHOR_SIZEPOLICY )
 {
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SPACING )
 }
 
 /*
-void unsetSpacing ()
+void unsetSpacing()
 */
 HB_FUNC_STATIC( QGRAPHICSANCHOR_UNSETSPACING )
 {

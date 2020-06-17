@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_KEY )
 }
 
 /*
-Qt::KeyboardModifiers modifierMask () const
+Qt::KeyboardModifiers modifierMask() const
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_MODIFIERMASK )
 {

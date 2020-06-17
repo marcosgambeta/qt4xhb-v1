@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_SETWRITINGSYSTEMS )
 }
 
 /*
-QFont::Style style () const
+QFont::Style style() const
 */
 HB_FUNC_STATIC( QFONTENGINEINFO_STYLE )
 {

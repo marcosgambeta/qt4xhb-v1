@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CALENDARPOPUP )
 }
 
 /*
-QCalendarWidget * calendarWidget () const
+QCalendarWidget * calendarWidget() const
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_CALENDARWIDGET )
 {
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CALENDARWIDGET )
 }
 
 /*
-void clearMaximumDate ()
+void clearMaximumDate()
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMAXIMUMDATE )
 {
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMAXIMUMDATE )
 }
 
 /*
-void clearMaximumDateTime ()
+void clearMaximumDateTime()
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMAXIMUMDATETIME )
 {
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMAXIMUMDATETIME )
 }
 
 /*
-void clearMaximumTime ()
+void clearMaximumTime()
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMAXIMUMTIME )
 {
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMAXIMUMTIME )
 }
 
 /*
-void clearMinimumDate ()
+void clearMinimumDate()
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMINIMUMDATE )
 {
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMINIMUMDATE )
 }
 
 /*
-void clearMinimumDateTime ()
+void clearMinimumDateTime()
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMINIMUMDATETIME )
 {
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMINIMUMDATETIME )
 }
 
 /*
-void clearMinimumTime ()
+void clearMinimumTime()
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMINIMUMTIME )
 {
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMINIMUMTIME )
 }
 
 /*
-Section currentSection () const
+QDateTimeEdit::Section currentSection() const
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_CURRENTSECTION )
 {
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CURRENTSECTIONINDEX )
 }
 
 /*
-QDate date () const
+QDate date() const
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_DATE )
 {
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_DATE )
 }
 
 /*
-QDateTime dateTime () const
+QDateTime dateTime() const
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_DATETIME )
 {
@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_DISPLAYFORMAT )
 }
 
 /*
-Sections displayedSections () const
+QDateTimeEdit::Sections displayedSections() const
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_DISPLAYEDSECTIONS )
 {
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_DISPLAYEDSECTIONS )
 }
 
 /*
-QDate maximumDate () const
+QDate maximumDate() const
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_MAXIMUMDATE )
 {
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_MAXIMUMDATE )
 }
 
 /*
-QDateTime maximumDateTime () const
+QDateTime maximumDateTime() const
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_MAXIMUMDATETIME )
 {
@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_MAXIMUMDATETIME )
 }
 
 /*
-QTime maximumTime () const
+QTime maximumTime() const
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_MAXIMUMTIME )
 {
@@ -612,7 +612,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_MAXIMUMTIME )
 }
 
 /*
-QDate minimumDate () const
+QDate minimumDate() const
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_MINIMUMDATE )
 {
@@ -637,7 +637,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_MINIMUMDATE )
 }
 
 /*
-QDateTime minimumDateTime () const
+QDateTime minimumDateTime() const
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_MINIMUMDATETIME )
 {
@@ -662,7 +662,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_MINIMUMDATETIME )
 }
 
 /*
-QTime minimumTime () const
+QTime minimumTime() const
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_MINIMUMTIME )
 {
@@ -1175,7 +1175,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETTIMESPEC )
 }
 
 /*
-QTime time () const
+QTime time() const
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_TIME )
 {
@@ -1200,7 +1200,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_TIME )
 }
 
 /*
-Qt::TimeSpec timeSpec () const
+Qt::TimeSpec timeSpec() const
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_TIMESPEC )
 {
@@ -1224,7 +1224,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_TIMESPEC )
 }
 
 /*
-virtual void clear ()
+virtual void clear()
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_CLEAR )
 {
@@ -1274,7 +1274,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_EVENT )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_SIZEHINT )
 {

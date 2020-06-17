@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_CANREAD )
 }
 
 /*
-virtual int currentImageNumber () const
+virtual int currentImageNumber() const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGENUMBER )
 {
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGENUMBER )
 }
 
 /*
-virtual QRect currentImageRect () const
+virtual QRect currentImageRect() const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGERECT )
 {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGERECT )
 }
 
 /*
-QIODevice * device () const
+QIODevice * device() const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_DEVICE )
 {
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_DEVICE )
 }
 
 /*
-QByteArray format () const
+QByteArray format() const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_FORMAT )
 {

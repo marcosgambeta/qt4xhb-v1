@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_DECIMALS )
 }
 
 /*
-double maximum () const
+double maximum() const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_MAXIMUM )
 {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_MAXIMUM )
 }
 
 /*
-double minimum () const
+double minimum() const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_MINIMUM )
 {
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETSUFFIX )
 }
 
 /*
-double singleStep () const
+double singleStep() const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SINGLESTEP )
 {
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_TEXTFROMVALUE )
 }
 
 /*
-double value () const
+double value() const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_VALUE )
 {

@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QGENERICPLUGINFACTORY_CREATE )
 }
 
 /*
-static QStringList keys ()
+static QStringList keys()
 */
 HB_FUNC_STATIC( QGENERICPLUGINFACTORY_KEYS )
 {

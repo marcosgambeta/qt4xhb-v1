@@ -1097,7 +1097,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETWINDOWSURFACE )
 }
 
 /*
-QPlatformGLContext * sharedGLContext () const
+QPlatformGLContext * sharedGLContext() const
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SHAREDGLCONTEXT )
 {
@@ -1242,7 +1242,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_TESTOPTION )
 }
 
 /*
-WindowApi windowApi () const
+QPlatformWindowFormat::WindowApi windowApi() const
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_WINDOWAPI )
 {
@@ -1266,7 +1266,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_WINDOWAPI )
 }
 
 /*
-static QPlatformWindowFormat defaultFormat ()
+static QPlatformWindowFormat defaultFormat()
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_DEFAULTFORMAT )
 {

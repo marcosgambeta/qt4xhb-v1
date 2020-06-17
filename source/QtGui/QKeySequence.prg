@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_DELETE )
 }
 
 /*
-uint count () const
+uint count() const
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_COUNT )
 {

@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QGROUPBOX_NEW )
 }
 
 /*
-Qt::Alignment alignment () const
+Qt::Alignment alignment() const
 */
 HB_FUNC_STATIC( QGROUPBOX_ALIGNMENT )
 {
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QGROUPBOX_TITLE )
 }
 
 /*
-virtual QSize minimumSizeHint () const
+virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QGROUPBOX_MINIMUMSIZEHINT )
 {

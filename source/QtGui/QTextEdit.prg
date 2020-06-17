@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ACCEPTRICHTEXT )
 }
 
 /*
-Qt::Alignment alignment () const
+Qt::Alignment alignment() const
 */
 HB_FUNC_STATIC( QTEXTEDIT_ALIGNMENT )
 {
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ANCHORAT )
 }
 
 /*
-AutoFormatting autoFormatting () const
+QTextEdit::AutoFormatting autoFormatting() const
 */
 HB_FUNC_STATIC( QTEXTEDIT_AUTOFORMATTING )
 {
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CREATESTANDARDCONTEXTMENU )
 }
 
 /*
-QTextCharFormat currentCharFormat () const
+QTextCharFormat currentCharFormat() const
 */
 HB_FUNC_STATIC( QTEXTEDIT_CURRENTCHARFORMAT )
 {
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CURRENTCHARFORMAT )
 }
 
 /*
-QFont currentFont () const
+QFont currentFont() const
 */
 HB_FUNC_STATIC( QTEXTEDIT_CURRENTFONT )
 {
@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CURSORWIDTH )
 }
 
 /*
-QTextDocument * document () const
+QTextDocument * document() const
 */
 HB_FUNC_STATIC( QTEXTEDIT_DOCUMENT )
 {
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QTEXTEDIT_DOCUMENTTITLE )
 }
 
 /*
-void ensureCursorVisible ()
+void ensureCursorVisible()
 */
 HB_FUNC_STATIC( QTEXTEDIT_ENSURECURSORVISIBLE )
 {
@@ -804,7 +804,7 @@ HB_FUNC_STATIC( QTEXTEDIT_LINEWRAPCOLUMNORWIDTH )
 }
 
 /*
-LineWrapMode lineWrapMode () const
+QTextEdit::LineWrapMode lineWrapMode() const
 */
 HB_FUNC_STATIC( QTEXTEDIT_LINEWRAPMODE )
 {
@@ -1419,7 +1419,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TABSTOPWIDTH )
 }
 
 /*
-QColor textBackgroundColor () const
+QColor textBackgroundColor() const
 */
 HB_FUNC_STATIC( QTEXTEDIT_TEXTBACKGROUNDCOLOR )
 {
@@ -1444,7 +1444,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TEXTBACKGROUNDCOLOR )
 }
 
 /*
-QColor textColor () const
+QColor textColor() const
 */
 HB_FUNC_STATIC( QTEXTEDIT_TEXTCOLOR )
 {
@@ -1469,7 +1469,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TEXTCOLOR )
 }
 
 /*
-QTextCursor textCursor () const
+QTextCursor textCursor() const
 */
 HB_FUNC_STATIC( QTEXTEDIT_TEXTCURSOR )
 {
@@ -1494,7 +1494,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TEXTCURSOR )
 }
 
 /*
-Qt::TextInteractionFlags textInteractionFlags () const
+Qt::TextInteractionFlags textInteractionFlags() const
 */
 HB_FUNC_STATIC( QTEXTEDIT_TEXTINTERACTIONFLAGS )
 {
@@ -1566,7 +1566,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TOPLAINTEXT )
 }
 
 /*
-QTextOption::WrapMode wordWrapMode () const
+QTextOption::WrapMode wordWrapMode() const
 */
 HB_FUNC_STATIC( QTEXTEDIT_WORDWRAPMODE )
 {
@@ -1616,7 +1616,7 @@ HB_FUNC_STATIC( QTEXTEDIT_APPEND )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QTEXTEDIT_CLEAR )
 {
@@ -1642,7 +1642,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CLEAR )
 }
 
 /*
-void copy ()
+void copy()
 */
 HB_FUNC_STATIC( QTEXTEDIT_COPY )
 {
@@ -1668,7 +1668,7 @@ HB_FUNC_STATIC( QTEXTEDIT_COPY )
 }
 
 /*
-void cut ()
+void cut()
 */
 HB_FUNC_STATIC( QTEXTEDIT_CUT )
 {
@@ -1746,7 +1746,7 @@ HB_FUNC_STATIC( QTEXTEDIT_INSERTPLAINTEXT )
 }
 
 /*
-void paste ()
+void paste()
 */
 HB_FUNC_STATIC( QTEXTEDIT_PASTE )
 {
@@ -1772,7 +1772,7 @@ HB_FUNC_STATIC( QTEXTEDIT_PASTE )
 }
 
 /*
-void redo ()
+void redo()
 */
 HB_FUNC_STATIC( QTEXTEDIT_REDO )
 {
@@ -1824,7 +1824,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SCROLLTOANCHOR )
 }
 
 /*
-void selectAll ()
+void selectAll()
 */
 HB_FUNC_STATIC( QTEXTEDIT_SELECTALL )
 {
@@ -2162,7 +2162,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETTEXTCOLOR )
 }
 
 /*
-void undo ()
+void undo()
 */
 HB_FUNC_STATIC( QTEXTEDIT_UNDO )
 {

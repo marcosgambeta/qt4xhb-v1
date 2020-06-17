@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QTAPANDHOLDGESTURE_DELETE )
 }
 
 /*
-QPointF position () const
+QPointF position() const
 */
 HB_FUNC_STATIC( QTAPANDHOLDGESTURE_POSITION )
 {

@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QDECORATIONFACTORY_CREATE )
 }
 
 /*
-static QStringList keys ()
+static QStringList keys()
 */
 HB_FUNC_STATIC( QDECORATIONFACTORY_KEYS )
 {

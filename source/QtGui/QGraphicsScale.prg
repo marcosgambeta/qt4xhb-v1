@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_DELETE )
 }
 
 /*
-QVector3D origin () const
+QVector3D origin() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_ORIGIN )
 {

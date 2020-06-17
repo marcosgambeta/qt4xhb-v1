@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QTREEWIDGET_CURRENTCOLUMN )
 }
 
 /*
-QTreeWidgetItem * currentItem () const
+QTreeWidgetItem * currentItem() const
 */
 HB_FUNC_STATIC( QTREEWIDGET_CURRENTITEM )
 {
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QTREEWIDGET_FINDITEMS )
 }
 
 /*
-QTreeWidgetItem *  headerItem () const
+QTreeWidgetItem * headerItem() const
 */
 HB_FUNC_STATIC( QTREEWIDGET_HEADERITEM )
 {
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QTREEWIDGET_INSERTTOPLEVELITEMS )
 }
 
 /*
-QTreeWidgetItem * invisibleRootItem () const
+QTreeWidgetItem * invisibleRootItem() const
 */
 HB_FUNC_STATIC( QTREEWIDGET_INVISIBLEROOTITEM )
 {
@@ -1146,7 +1146,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SETSELECTIONMODEL )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QTREEWIDGET_CLEAR )
 {

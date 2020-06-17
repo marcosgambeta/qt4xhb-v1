@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QUNDOVIEW_DELETE )
 }
 
 /*
-QIcon cleanIcon () const
+QIcon cleanIcon() const
 */
 HB_FUNC_STATIC( QUNDOVIEW_CLEANICON )
 {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QUNDOVIEW_EMPTYLABEL )
 }
 
 /*
-QUndoGroup * group () const
+QUndoGroup * group() const
 */
 HB_FUNC_STATIC( QUNDOVIEW_GROUP )
 {
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QUNDOVIEW_SETEMPTYLABEL )
 }
 
 /*
-QUndoStack * stack () const
+QUndoStack * stack() const
 */
 HB_FUNC_STATIC( QUNDOVIEW_STACK )
 {

@@ -47,7 +47,7 @@ RETURN
 #include <QtGui/QTextDocument>
 
 /*
-QTextDocument * document () const
+QTextDocument * document() const
 */
 HB_FUNC_STATIC( QTEXTOBJECT_DOCUMENT )
 {
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_DOCUMENT )
 }
 
 /*
-QTextFormat format () const
+QTextFormat format() const
 */
 HB_FUNC_STATIC( QTEXTOBJECT_FORMAT )
 {

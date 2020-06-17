@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_CLOSEPERSISTENTEDITOR )
 }
 
 /*
-QModelIndex currentIndex () const
+QModelIndex currentIndex() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_CURRENTINDEX )
 {
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_CURRENTINDEX )
 }
 
 /*
-Qt::DropAction defaultDropAction () const
+Qt::DropAction defaultDropAction() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_DEFAULTDROPACTION )
 {
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_DEFAULTDROPACTION )
 }
 
 /*
-DragDropMode dragDropMode () const
+QAbstractItemView::DragDropMode dragDropMode() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_DRAGDROPMODE )
 {
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_DRAGENABLED )
 }
 
 /*
-EditTriggers editTriggers () const
+QAbstractItemView::EditTriggers editTriggers() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_EDITTRIGGERS )
 {
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_HASAUTOSCROLL )
 }
 
 /*
-ScrollMode horizontalScrollMode () const
+QAbstractItemView::ScrollMode horizontalScrollMode() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_HORIZONTALSCROLLMODE )
 {
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_HORIZONTALSCROLLMODE )
 }
 
 /*
-QSize iconSize () const
+QSize iconSize() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ICONSIZE )
 {
@@ -606,7 +606,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_KEYBOARDSEARCH )
 }
 
 /*
-QAbstractItemModel * model () const
+QAbstractItemModel * model() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_MODEL )
 {
@@ -657,7 +657,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_OPENPERSISTENTEDITOR )
 }
 
 /*
-QModelIndex rootIndex () const
+QModelIndex rootIndex() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ROOTINDEX )
 {
@@ -708,7 +708,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SCROLLTO )
 }
 
 /*
-QAbstractItemView::SelectionBehavior selectionBehavior () const
+QAbstractItemView::SelectionBehavior selectionBehavior() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTIONBEHAVIOR )
 {
@@ -732,7 +732,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTIONBEHAVIOR )
 }
 
 /*
-QAbstractItemView::SelectionMode selectionMode () const
+QAbstractItemView::SelectionMode selectionMode() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTIONMODE )
 {
@@ -756,7 +756,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTIONMODE )
 }
 
 /*
-QItemSelectionModel * selectionModel () const
+QItemSelectionModel * selectionModel() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTIONMODEL )
 {
@@ -1474,7 +1474,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_TABKEYNAVIGATION )
 }
 
 /*
-Qt::TextElideMode textElideMode () const
+Qt::TextElideMode textElideMode() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_TEXTELIDEMODE )
 {
@@ -1498,7 +1498,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_TEXTELIDEMODE )
 }
 
 /*
-ScrollMode verticalScrollMode () const
+QAbstractItemView::ScrollMode verticalScrollMode() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_VERTICALSCROLLMODE )
 {
@@ -1572,7 +1572,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_INPUTMETHODQUERY )
 }
 
 /*
-void clearSelection ()
+void clearSelection()
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_CLEARSELECTION )
 {
@@ -1624,7 +1624,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_EDIT )
 }
 
 /*
-virtual void reset ()
+virtual void reset()
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_RESET )
 {
@@ -1650,7 +1650,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_RESET )
 }
 
 /*
-void scrollToBottom ()
+void scrollToBottom()
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SCROLLTOBOTTOM )
 {
@@ -1676,7 +1676,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SCROLLTOBOTTOM )
 }
 
 /*
-void scrollToTop ()
+void scrollToTop()
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SCROLLTOTOP )
 {
@@ -1702,7 +1702,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SCROLLTOTOP )
 }
 
 /*
-virtual void selectAll ()
+virtual void selectAll()
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTALL )
 {

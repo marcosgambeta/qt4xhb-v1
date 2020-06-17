@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QAPPLICATION_COMMITDATA )
 }
 
 /*
-QInputContext * inputContext () const
+QInputContext * inputContext() const
 */
 HB_FUNC_STATIC( QAPPLICATION_INPUTCONTEXT )
 {
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QAPPLICATION_NOTIFY )
 }
 
 /*
-void aboutQt ()
+void aboutQt()
 */
 HB_FUNC_STATIC( QAPPLICATION_ABOUTQT )
 {
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QAPPLICATION_ABOUTQT )
 }
 
 /*
-void closeAllWindows ()
+void closeAllWindows()
 */
 HB_FUNC_STATIC( QAPPLICATION_CLOSEALLWINDOWS )
 {
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETSTYLESHEET )
 }
 
 /*
-static QWidget * activeModalWidget ()
+static QWidget * activeModalWidget()
 */
 HB_FUNC_STATIC( QAPPLICATION_ACTIVEMODALWIDGET )
 {
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QAPPLICATION_ACTIVEMODALWIDGET )
 }
 
 /*
-static QWidget * activePopupWidget ()
+static QWidget * activePopupWidget()
 */
 HB_FUNC_STATIC( QAPPLICATION_ACTIVEPOPUPWIDGET )
 {
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QAPPLICATION_ACTIVEPOPUPWIDGET )
 }
 
 /*
-static QWidget * activeWindow ()
+static QWidget * activeWindow()
 */
 HB_FUNC_STATIC( QAPPLICATION_ACTIVEWINDOW )
 {
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QAPPLICATION_ALERT )
 }
 
 /*
-static QWidgetList allWidgets ()
+static QWidgetList allWidgets()
 */
 HB_FUNC_STATIC( QAPPLICATION_ALLWIDGETS )
 {
@@ -611,7 +611,7 @@ HB_FUNC_STATIC( QAPPLICATION_ALLWIDGETS )
 }
 
 /*
-static void beep ()
+static void beep()
 */
 HB_FUNC_STATIC( QAPPLICATION_BEEP )
 {
@@ -653,7 +653,7 @@ HB_FUNC_STATIC( QAPPLICATION_CHANGEOVERRIDECURSOR )
 }
 
 /*
-static QClipboard * clipboard ()
+static QClipboard * clipboard()
 */
 HB_FUNC_STATIC( QAPPLICATION_CLIPBOARD )
 {
@@ -711,7 +711,7 @@ HB_FUNC_STATIC( QAPPLICATION_CURSORFLASHTIME )
 }
 
 /*
-static QDesktopWidget * desktop ()
+static QDesktopWidget * desktop()
 */
 HB_FUNC_STATIC( QAPPLICATION_DESKTOP )
 {
@@ -788,7 +788,7 @@ HB_FUNC_STATIC( QAPPLICATION_EXEC )
 }
 
 /*
-static QWidget * focusWidget ()
+static QWidget * focusWidget()
 */
 HB_FUNC_STATIC( QAPPLICATION_FOCUSWIDGET )
 {
@@ -864,7 +864,7 @@ HB_FUNC_STATIC( QAPPLICATION_FONT )
 }
 
 /*
-static QFontMetrics fontMetrics ()
+static QFontMetrics fontMetrics()
 */
 HB_FUNC_STATIC( QAPPLICATION_FONTMETRICS )
 {
@@ -884,7 +884,7 @@ HB_FUNC_STATIC( QAPPLICATION_FONTMETRICS )
 }
 
 /*
-static QSize globalStrut ()
+static QSize globalStrut()
 */
 HB_FUNC_STATIC( QAPPLICATION_GLOBALSTRUT )
 {
@@ -961,7 +961,7 @@ HB_FUNC_STATIC( QAPPLICATION_ISRIGHTTOLEFT )
 }
 
 /*
-static Qt::LayoutDirection keyboardInputDirection ()
+static Qt::LayoutDirection keyboardInputDirection()
 */
 HB_FUNC_STATIC( QAPPLICATION_KEYBOARDINPUTDIRECTION )
 {
@@ -999,7 +999,7 @@ HB_FUNC_STATIC( QAPPLICATION_KEYBOARDINPUTINTERVAL )
 }
 
 /*
-static QLocale keyboardInputLocale ()
+static QLocale keyboardInputLocale()
 */
 HB_FUNC_STATIC( QAPPLICATION_KEYBOARDINPUTLOCALE )
 {
@@ -1019,7 +1019,7 @@ HB_FUNC_STATIC( QAPPLICATION_KEYBOARDINPUTLOCALE )
 }
 
 /*
-static Qt::KeyboardModifiers keyboardModifiers ()
+static Qt::KeyboardModifiers keyboardModifiers()
 */
 HB_FUNC_STATIC( QAPPLICATION_KEYBOARDMODIFIERS )
 {
@@ -1038,7 +1038,7 @@ HB_FUNC_STATIC( QAPPLICATION_KEYBOARDMODIFIERS )
 }
 
 /*
-static Qt::LayoutDirection layoutDirection ()
+static Qt::LayoutDirection layoutDirection()
 */
 HB_FUNC_STATIC( QAPPLICATION_LAYOUTDIRECTION )
 {
@@ -1057,7 +1057,7 @@ HB_FUNC_STATIC( QAPPLICATION_LAYOUTDIRECTION )
 }
 
 /*
-static Qt::MouseButtons mouseButtons ()
+static Qt::MouseButtons mouseButtons()
 */
 HB_FUNC_STATIC( QAPPLICATION_MOUSEBUTTONS )
 {
@@ -1076,7 +1076,7 @@ HB_FUNC_STATIC( QAPPLICATION_MOUSEBUTTONS )
 }
 
 /*
-static QCursor * overrideCursor ()
+static QCursor * overrideCursor()
 */
 HB_FUNC_STATIC( QAPPLICATION_OVERRIDECURSOR )
 {
@@ -1152,7 +1152,7 @@ HB_FUNC_STATIC( QAPPLICATION_PALETTE )
 }
 
 /*
-static Qt::KeyboardModifiers queryKeyboardModifiers ()
+static Qt::KeyboardModifiers queryKeyboardModifiers()
 */
 HB_FUNC_STATIC( QAPPLICATION_QUERYKEYBOARDMODIFIERS )
 {
@@ -1190,7 +1190,7 @@ HB_FUNC_STATIC( QAPPLICATION_QUITONLASTWINDOWCLOSED )
 }
 
 /*
-static void restoreOverrideCursor ()
+static void restoreOverrideCursor()
 */
 HB_FUNC_STATIC( QAPPLICATION_RESTOREOVERRIDECURSOR )
 {
@@ -1669,7 +1669,7 @@ HB_FUNC_STATIC( QAPPLICATION_STARTDRAGTIME )
 }
 
 /*
-static QStyle * style ()
+static QStyle * style()
 */
 HB_FUNC_STATIC( QAPPLICATION_STYLE )
 {
@@ -1689,7 +1689,7 @@ HB_FUNC_STATIC( QAPPLICATION_STYLE )
 }
 
 /*
-static void syncX ()
+static void syncX()
 */
 HB_FUNC_STATIC( QAPPLICATION_SYNCX )
 {
@@ -1751,7 +1751,7 @@ HB_FUNC_STATIC( QAPPLICATION_TOPLEVELAT )
 }
 
 /*
-static QWidgetList topLevelWidgets ()
+static QWidgetList topLevelWidgets()
 */
 HB_FUNC_STATIC( QAPPLICATION_TOPLEVELWIDGETS )
 {
@@ -1794,7 +1794,7 @@ HB_FUNC_STATIC( QAPPLICATION_TOPLEVELWIDGETS )
 }
 
 /*
-static QApplication::Type type ()
+static QApplication::Type type()
 */
 HB_FUNC_STATIC( QAPPLICATION_TYPE )
 {
@@ -1873,7 +1873,7 @@ HB_FUNC_STATIC( QAPPLICATION_WIDGETAT )
 }
 
 /*
-static QIcon windowIcon ()
+static QIcon windowIcon()
 */
 HB_FUNC_STATIC( QAPPLICATION_WINDOWICON )
 {

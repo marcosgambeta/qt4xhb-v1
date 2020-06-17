@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QSPLITTER_OPAQUERESIZE )
 }
 
 /*
-Qt::Orientation orientation () const
+Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QSPLITTER_ORIENTATION )
 {
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QSPLITTER_ORIENTATION )
 }
 
 /*
-void refresh ()
+void refresh()
 */
 HB_FUNC_STATIC( QSPLITTER_REFRESH )
 {
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QSPLITTER_RESTORESTATE )
 }
 
 /*
-QByteArray saveState () const
+QByteArray saveState() const
 */
 HB_FUNC_STATIC( QSPLITTER_SAVESTATE )
 {
@@ -722,7 +722,7 @@ HB_FUNC_STATIC( QSPLITTER_WIDGET )
 }
 
 /*
-virtual QSize minimumSizeHint () const
+virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QSPLITTER_MINIMUMSIZEHINT )
 {
@@ -747,7 +747,7 @@ HB_FUNC_STATIC( QSPLITTER_MINIMUMSIZEHINT )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSPLITTER_SIZEHINT )
 {

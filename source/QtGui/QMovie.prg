@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QMOVIE_DELETE )
 }
 
 /*
-QColor  backgroundColor () const
+QColor backgroundColor() const
 */
 HB_FUNC_STATIC( QMOVIE_BACKGROUNDCOLOR )
 {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QMOVIE_BACKGROUNDCOLOR )
 }
 
 /*
-CacheMode  cacheMode () const
+QMovie::CacheMode cacheMode() const
 */
 HB_FUNC_STATIC( QMOVIE_CACHEMODE )
 {
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QMOVIE_CURRENTFRAMENUMBER )
 }
 
 /*
-QImage  currentImage () const
+QImage currentImage() const
 */
 HB_FUNC_STATIC( QMOVIE_CURRENTIMAGE )
 {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QMOVIE_CURRENTIMAGE )
 }
 
 /*
-QPixmap  currentPixmap () const
+QPixmap currentPixmap() const
 */
 HB_FUNC_STATIC( QMOVIE_CURRENTPIXMAP )
 {
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QMOVIE_CURRENTPIXMAP )
 }
 
 /*
-QIODevice *  device () const
+QIODevice * device() const
 */
 HB_FUNC_STATIC( QMOVIE_DEVICE )
 {
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QMOVIE_FILENAME )
 }
 
 /*
-QByteArray  format () const
+QByteArray format() const
 */
 HB_FUNC_STATIC( QMOVIE_FORMAT )
 {
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QMOVIE_FRAMECOUNT )
 }
 
 /*
-QRect  frameRect () const
+QRect frameRect() const
 */
 HB_FUNC_STATIC( QMOVIE_FRAMERECT )
 {
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QMOVIE_NEXTFRAMEDELAY )
 }
 
 /*
-QSize  scaledSize ()
+QSize scaledSize()
 */
 HB_FUNC_STATIC( QMOVIE_SCALEDSIZE )
 {
@@ -707,7 +707,7 @@ HB_FUNC_STATIC( QMOVIE_SPEED )
 }
 
 /*
-MovieState  state () const
+QMovie::MovieState state() const
 */
 HB_FUNC_STATIC( QMOVIE_STATE )
 {
@@ -807,7 +807,7 @@ HB_FUNC_STATIC( QMOVIE_SETSPEED )
 }
 
 /*
-void start ()
+void start()
 */
 HB_FUNC_STATIC( QMOVIE_START )
 {
@@ -833,7 +833,7 @@ HB_FUNC_STATIC( QMOVIE_START )
 }
 
 /*
-void stop ()
+void stop()
 */
 HB_FUNC_STATIC( QMOVIE_STOP )
 {

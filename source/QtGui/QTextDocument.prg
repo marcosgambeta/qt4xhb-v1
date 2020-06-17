@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ADDRESOURCE )
 }
 
 /*
-void adjustSize ()
+void adjustSize()
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ADJUSTSIZE )
 {
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_AVAILABLEUNDOSTEPS )
 }
 
 /*
-QTextBlock begin () const
+QTextBlock begin() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_BEGIN )
 {
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CHARACTERCOUNT )
 }
 
 /*
-virtual void clear ()
+virtual void clear()
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_CLEAR )
 {
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CLONE )
 }
 
 /*
-Qt::CursorMoveStyle defaultCursorMoveStyle () const
+Qt::CursorMoveStyle defaultCursorMoveStyle() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTCURSORMOVESTYLE )
 {
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTCURSORMOVESTYLE )
 }
 
 /*
-QFont defaultFont () const
+QFont defaultFont() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTFONT )
 {
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTSTYLESHEET )
 }
 
 /*
-QTextOption defaultTextOption () const
+QTextOption defaultTextOption() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTTEXTOPTION )
 {
@@ -619,7 +619,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTTEXTOPTION )
 }
 
 /*
-QAbstractTextDocumentLayout * documentLayout () const
+QAbstractTextDocumentLayout * documentLayout() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_DOCUMENTLAYOUT )
 {
@@ -694,7 +694,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DRAWCONTENTS )
 }
 
 /*
-QTextBlock end () const
+QTextBlock end() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_END )
 {
@@ -881,7 +881,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FINDBLOCKBYNUMBER )
 }
 
 /*
-QTextBlock firstBlock () const
+QTextBlock firstBlock() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_FIRSTBLOCK )
 {
@@ -1074,7 +1074,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ISUNDOREDOENABLED )
 }
 
 /*
-QTextBlock lastBlock () const
+QTextBlock lastBlock() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_LASTBLOCK )
 {
@@ -1271,7 +1271,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_PAGECOUNT )
 }
 
 /*
-QSizeF pageSize () const
+QSizeF pageSize() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_PAGESIZE )
 {
@@ -1371,7 +1371,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_REVISION )
 }
 
 /*
-QTextFrame * rootFrame () const
+QTextFrame * rootFrame() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ROOTFRAME )
 {
@@ -1786,7 +1786,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETUSEDESIGNMETRICS )
 }
 
 /*
-QSizeF size () const
+QSizeF size() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SIZE )
 {

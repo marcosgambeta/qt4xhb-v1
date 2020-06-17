@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QIMAGEREADER_AUTODETECTIMAGEFORMAT )
 }
 
 /*
-QColor backgroundColor () const
+QColor backgroundColor() const
 */
 HB_FUNC_STATIC( QIMAGEREADER_BACKGROUNDCOLOR )
 {
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QIMAGEREADER_CANREAD )
 }
 
 /*
-QRect clipRect () const
+QRect clipRect() const
 */
 HB_FUNC_STATIC( QIMAGEREADER_CLIPRECT )
 {
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QIMAGEREADER_CURRENTIMAGENUMBER )
 }
 
 /*
-QRect currentImageRect () const
+QRect currentImageRect() const
 */
 HB_FUNC_STATIC( QIMAGEREADER_CURRENTIMAGERECT )
 {
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QIMAGEREADER_DECIDEFORMATFROMCONTENT )
 }
 
 /*
-QIODevice * device () const
+QIODevice * device() const
 */
 HB_FUNC_STATIC( QIMAGEREADER_DEVICE )
 {
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QIMAGEREADER_DEVICE )
 }
 
 /*
-ImageReaderError error () const
+QImageReader::ImageReaderError error() const
 */
 HB_FUNC_STATIC( QIMAGEREADER_ERROR )
 {
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QIMAGEREADER_FILENAME )
 }
 
 /*
-QByteArray format () const
+QByteArray format() const
 */
 HB_FUNC_STATIC( QIMAGEREADER_FORMAT )
 {
@@ -649,7 +649,7 @@ HB_FUNC_STATIC( QIMAGEREADER_READ )
 }
 
 /*
-QRect scaledClipRect () const
+QRect scaledClipRect() const
 */
 HB_FUNC_STATIC( QIMAGEREADER_SCALEDCLIPRECT )
 {
@@ -674,7 +674,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SCALEDCLIPRECT )
 }
 
 /*
-QSize scaledSize () const
+QSize scaledSize() const
 */
 HB_FUNC_STATIC( QIMAGEREADER_SCALEDSIZE )
 {
@@ -959,7 +959,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETSCALEDSIZE )
 }
 
 /*
-QSize size () const
+QSize size() const
 */
 HB_FUNC_STATIC( QIMAGEREADER_SIZE )
 {
@@ -1056,7 +1056,7 @@ HB_FUNC_STATIC( QIMAGEREADER_TEXT )
 }
 
 /*
-QStringList textKeys () const
+QStringList textKeys() const
 */
 HB_FUNC_STATIC( QIMAGEREADER_TEXTKEYS )
 {

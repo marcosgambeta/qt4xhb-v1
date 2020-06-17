@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QPRINTER_COLLATECOPIES )
 }
 
 /*
-ColorMode colorMode () const
+QPrinter::ColorMode colorMode() const
 */
 HB_FUNC_STATIC( QPRINTER_COLORMODE )
 {
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QPRINTER_DOUBLESIDEDPRINTING )
 }
 
 /*
-DuplexMode duplex () const
+QPrinter::DuplexMode duplex() const
 */
 HB_FUNC_STATIC( QPRINTER_DUPLEX )
 {
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QPRINTER_NEWPAGE )
 }
 
 /*
-Orientation orientation () const
+QPrinter::Orientation orientation() const
 */
 HB_FUNC_STATIC( QPRINTER_ORIENTATION )
 {
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QPRINTER_OUTPUTFILENAME )
 }
 
 /*
-OutputFormat outputFormat () const
+QPrinter::OutputFormat outputFormat() const
 */
 HB_FUNC_STATIC( QPRINTER_OUTPUTFORMAT )
 {
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QPRINTER_OUTPUTFORMAT )
 }
 
 /*
-PageOrder pageOrder () const
+QPrinter::PageOrder pageOrder() const
 */
 HB_FUNC_STATIC( QPRINTER_PAGEORDER )
 {
@@ -711,7 +711,7 @@ HB_FUNC_STATIC( QPRINTER_PAPERSIZE )
 }
 
 /*
-PaperSource paperSource () const
+QPrinter::PaperSource paperSource() const
 */
 HB_FUNC_STATIC( QPRINTER_PAPERSOURCE )
 {
@@ -735,7 +735,7 @@ HB_FUNC_STATIC( QPRINTER_PAPERSOURCE )
 }
 
 /*
-QPrintEngine * printEngine () const
+QPrintEngine * printEngine() const
 */
 HB_FUNC_STATIC( QPRINTER_PRINTENGINE )
 {
@@ -784,7 +784,7 @@ HB_FUNC_STATIC( QPRINTER_PRINTPROGRAM )
 }
 
 /*
-PrintRange printRange () const
+QPrinter::PrintRange printRange() const
 */
 HB_FUNC_STATIC( QPRINTER_PRINTRANGE )
 {
@@ -832,7 +832,7 @@ HB_FUNC_STATIC( QPRINTER_PRINTERNAME )
 }
 
 /*
-PrinterState printerState () const
+QPrinter::PrinterState printerState() const
 */
 HB_FUNC_STATIC( QPRINTER_PRINTERSTATE )
 {
@@ -1612,7 +1612,7 @@ HB_FUNC_STATIC( QPRINTER_WINPAGESIZE )
 }
 
 /*
-virtual QPaintEngine * paintEngine () const
+virtual QPaintEngine * paintEngine() const
 */
 HB_FUNC_STATIC( QPRINTER_PAINTENGINE )
 {

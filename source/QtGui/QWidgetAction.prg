@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QWIDGETACTION_DELETE )
 }
 
 /*
-QWidget * defaultWidget () const
+QWidget * defaultWidget() const
 */
 HB_FUNC_STATIC( QWIDGETACTION_DEFAULTWIDGET )
 {

@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QPAINTEVENT_DELETE )
 }
 
 /*
-const QRect & rect () const
+const QRect & rect() const
 */
 HB_FUNC_STATIC( QPAINTEVENT_RECT )
 {
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QPAINTEVENT_RECT )
 }
 
 /*
-const QRegion & region () const
+const QRegion & region() const
 */
 HB_FUNC_STATIC( QPAINTEVENT_REGION )
 {

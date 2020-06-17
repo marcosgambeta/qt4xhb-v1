@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QCLEANLOOKSSTYLE_SIZEFROMCONTENTS )
 }
 
 /*
-virtual QPalette standardPalette () const
+virtual QPalette standardPalette() const
 */
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_STANDARDPALETTE )
 {

@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_BOTTOM )
 }
 
 /*
-QModelIndex bottomRight () const
+QModelIndex bottomRight() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_BOTTOMRIGHT )
 {
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_HEIGHT )
 }
 
 /*
-QModelIndexList indexes () const
+QModelIndexList indexes() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_INDEXES )
 {
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_MODEL )
 }
 
 /*
-QModelIndex parent () const
+QModelIndex parent() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_PARENT )
 {
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_TOP )
 }
 
 /*
-QModelIndex topLeft () const
+QModelIndex topLeft() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_TOPLEFT )
 {

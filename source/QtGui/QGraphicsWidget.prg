@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_ADDACTIONS )
 }
 
 /*
-void adjustSize ()
+void adjustSize()
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_ADJUSTSIZE )
 {
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_AUTOFILLBACKGROUND )
 }
 
 /*
-Qt::FocusPolicy focusPolicy () const
+Qt::FocusPolicy focusPolicy() const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_FOCUSPOLICY )
 {
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_FOCUSPOLICY )
 }
 
 /*
-QGraphicsWidget * focusWidget () const
+QGraphicsWidget * focusWidget() const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_FOCUSWIDGET )
 {
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_FOCUSWIDGET )
 }
 
 /*
-QFont font () const
+QFont font() const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_FONT )
 {
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_ISACTIVEWINDOW )
 }
 
 /*
-QGraphicsLayout * layout () const
+QGraphicsLayout * layout() const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_LAYOUT )
 {
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_LAYOUT )
 }
 
 /*
-Qt::LayoutDirection layoutDirection () const
+Qt::LayoutDirection layoutDirection() const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_LAYOUTDIRECTION )
 {
@@ -590,7 +590,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_PAINTWINDOWFRAME )
 }
 
 /*
-QPalette palette () const
+QPalette palette() const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_PALETTE )
 {
@@ -615,7 +615,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_PALETTE )
 }
 
 /*
-QRectF rect () const
+QRectF rect() const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_RECT )
 {
@@ -1107,7 +1107,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETWINDOWTITLE )
 }
 
 /*
-QSizeF size () const
+QSizeF size() const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SIZE )
 {
@@ -1132,7 +1132,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SIZE )
 }
 
 /*
-QStyle * style () const
+QStyle * style() const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_STYLE )
 {
@@ -1181,7 +1181,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_TESTATTRIBUTE )
 }
 
 /*
-void unsetLayoutDirection ()
+void unsetLayoutDirection()
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_UNSETLAYOUTDIRECTION )
 {
@@ -1207,7 +1207,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_UNSETLAYOUTDIRECTION )
 }
 
 /*
-void unsetWindowFrameMargins ()
+void unsetWindowFrameMargins()
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_UNSETWINDOWFRAMEMARGINS )
 {
@@ -1233,7 +1233,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_UNSETWINDOWFRAMEMARGINS )
 }
 
 /*
-Qt::WindowFlags windowFlags () const
+Qt::WindowFlags windowFlags() const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWFLAGS )
 {
@@ -1257,7 +1257,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWFLAGS )
 }
 
 /*
-QRectF windowFrameGeometry () const
+QRectF windowFrameGeometry() const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWFRAMEGEOMETRY )
 {
@@ -1282,7 +1282,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWFRAMEGEOMETRY )
 }
 
 /*
-QRectF windowFrameRect () const
+QRectF windowFrameRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWFRAMERECT )
 {
@@ -1331,7 +1331,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWTITLE )
 }
 
 /*
-Qt::WindowType windowType () const
+Qt::WindowType windowType() const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWTYPE )
 {
@@ -1355,7 +1355,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWTYPE )
 }
 
 /*
-virtual QRectF boundingRect () const
+virtual QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_BOUNDINGRECT )
 {
@@ -1491,7 +1491,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETGEOMETRY )
 }
 
 /*
-virtual QPainterPath shape () const
+virtual QPainterPath shape() const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SHAPE )
 {

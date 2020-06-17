@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QDIALOG_SETSIZEGRIPENABLED )
 }
 
 /*
-virtual QSize minimumSizeHint () const
+virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QDIALOG_MINIMUMSIZEHINT )
 {
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QDIALOG_SETVISIBLE )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QDIALOG_SIZEHINT )
 {
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QDIALOG_SIZEHINT )
 }
 
 /*
-virtual void accept ()
+virtual void accept()
 */
 HB_FUNC_STATIC( QDIALOG_ACCEPT )
 {
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QDIALOG_EXEC )
 }
 
 /*
-void open ()
+void open()
 */
 HB_FUNC_STATIC( QDIALOG_OPEN )
 {
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QDIALOG_OPEN )
 }
 
 /*
-virtual void reject ()
+virtual void reject()
 */
 HB_FUNC_STATIC( QDIALOG_REJECT )
 {

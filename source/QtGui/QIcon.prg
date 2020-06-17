@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QICON_AVAILABLESIZES )
 }
 
 /*
-qint64 cacheKey () const
+qint64 cacheKey() const
 */
 HB_FUNC_STATIC( QICON_CACHEKEY )
 {
@@ -606,7 +606,7 @@ HB_FUNC_STATIC( QICON_THEMENAME )
 }
 
 /*
-static QStringList themeSearchPaths ()
+static QStringList themeSearchPaths()
 */
 HB_FUNC_STATIC( QICON_THEMESEARCHPATHS )
 {

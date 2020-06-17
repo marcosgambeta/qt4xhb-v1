@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QPOLYGON_DELETE )
 }
 
 /*
-QRect boundingRect () const
+QRect boundingRect() const
 */
 HB_FUNC_STATIC( QPOLYGON_BOUNDINGRECT )
 {

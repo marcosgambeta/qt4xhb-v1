@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_ANGLE )
 }
 
 /*
-QPointF center () const
+QPointF center() const
 */
 HB_FUNC_STATIC( QCONICALGRADIENT_CENTER )
 {

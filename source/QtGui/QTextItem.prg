@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QTEXTITEM_DESCENT )
 }
 
 /*
-QFont font () const
+QFont font() const
 */
 HB_FUNC_STATIC( QTEXTITEM_FONT )
 {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QTEXTITEM_FONT )
 }
 
 /*
-RenderFlags renderFlags () const
+QTextItem::RenderFlags renderFlags() const
 */
 HB_FUNC_STATIC( QTEXTITEM_RENDERFLAGS )
 {

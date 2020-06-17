@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_DELETE )
 }
 
 /*
-QPointF offset () const
+QPointF offset() const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_OFFSET )
 {
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_OFFSET )
 }
 
 /*
-QPixmap pixmap () const
+QPixmap pixmap() const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_PIXMAP )
 {
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETTRANSFORMATIONMODE )
 }
 
 /*
-ShapeMode shapeMode () const
+QGraphicsPixmapItem::ShapeMode shapeMode() const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SHAPEMODE )
 {
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SHAPEMODE )
 }
 
 /*
-Qt::TransformationMode transformationMode () const
+Qt::TransformationMode transformationMode() const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_TRANSFORMATIONMODE )
 {
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_TRANSFORMATIONMODE )
 }
 
 /*
-virtual QRectF boundingRect () const
+virtual QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_BOUNDINGRECT )
 {
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_ISOBSCUREDBY )
 }
 
 /*
-virtual QPainterPath opaqueArea () const
+virtual QPainterPath opaqueArea() const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_OPAQUEAREA )
 {
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_PAINT )
 }
 
 /*
-virtual QPainterPath shape () const
+virtual QPainterPath shape() const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SHAPE )
 {

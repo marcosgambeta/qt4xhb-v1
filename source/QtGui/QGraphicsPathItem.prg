@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_DELETE )
 }
 
 /*
-QPainterPath path () const
+QPainterPath path() const
 */
 HB_FUNC_STATIC( QGRAPHICSPATHITEM_PATH )
 {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_SETPATH )
 }
 
 /*
-virtual QRectF boundingRect () const
+virtual QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSPATHITEM_BOUNDINGRECT )
 {
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_ISOBSCUREDBY )
 }
 
 /*
-virtual QPainterPath opaqueArea () const
+virtual QPainterPath opaqueArea() const
 */
 HB_FUNC_STATIC( QGRAPHICSPATHITEM_OPAQUEAREA )
 {
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_PAINT )
 }
 
 /*
-virtual QPainterPath shape () const
+virtual QPainterPath shape() const
 */
 HB_FUNC_STATIC( QGRAPHICSPATHITEM_SHAPE )
 {

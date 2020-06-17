@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QPEN_DELETE )
 }
 
 /*
-QBrush brush () const
+QBrush brush() const
 */
 HB_FUNC_STATIC( QPEN_BRUSH )
 {
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QPEN_BRUSH )
 }
 
 /*
-Qt::PenCapStyle capStyle () const
+Qt::PenCapStyle capStyle() const
 */
 HB_FUNC_STATIC( QPEN_CAPSTYLE )
 {
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QPEN_CAPSTYLE )
 }
 
 /*
-QColor color () const
+QColor color() const
 */
 HB_FUNC_STATIC( QPEN_COLOR )
 {
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QPEN_ISSOLID )
 }
 
 /*
-Qt::PenJoinStyle joinStyle () const
+Qt::PenJoinStyle joinStyle() const
 */
 HB_FUNC_STATIC( QPEN_JOINSTYLE )
 {
@@ -693,7 +693,7 @@ HB_FUNC_STATIC( QPEN_SETWIDTHF )
 }
 
 /*
-Qt::PenStyle style () const
+Qt::PenStyle style() const
 */
 HB_FUNC_STATIC( QPEN_STYLE )
 {

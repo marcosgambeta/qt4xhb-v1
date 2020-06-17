@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QPAINTENGINE_ISACTIVE )
 }
 
 /*
-QPaintDevice * paintDevice () const
+QPaintDevice * paintDevice() const
 */
 HB_FUNC_STATIC( QPAINTENGINE_PAINTDEVICE )
 {
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QPAINTENGINE_PAINTDEVICE )
 }
 
 /*
-QPainter * painter () const
+QPainter * painter() const
 */
 HB_FUNC_STATIC( QPAINTENGINE_PAINTER )
 {
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QPAINTENGINE_SETACTIVE )
 }
 
 /*
-virtual Type type () const = 0
+virtual QPaintEngine::Type type() const = 0
 */
 HB_FUNC_STATIC( QPAINTENGINE_TYPE )
 {

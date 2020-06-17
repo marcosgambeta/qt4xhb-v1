@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_DELETE )
 }
 
 /*
-QFont currentFont () const
+QFont currentFont() const
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_CURRENTFONT )
 {
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_CURRENTFONT )
 }
 
 /*
-FontFilters fontFilters () const
+QFontComboBox::FontFilters fontFilters() const
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_FONTFILTERS )
 {
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_SETWRITINGSYSTEM )
 }
 
 /*
-QFontDatabase::WritingSystem writingSystem () const
+QFontDatabase::WritingSystem writingSystem() const
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_WRITINGSYSTEM )
 {
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_WRITINGSYSTEM )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_SIZEHINT )
 {

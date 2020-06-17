@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QTABWIDGET_ADDTAB )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QTABWIDGET_CLEAR )
 {
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QTABWIDGET_CURRENTINDEX )
 }
 
 /*
-QWidget * currentWidget () const
+QWidget * currentWidget() const
 */
 HB_FUNC_STATIC( QTABWIDGET_CURRENTWIDGET )
 {
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QTABWIDGET_DOCUMENTMODE )
 }
 
 /*
-Qt::TextElideMode elideMode () const
+Qt::TextElideMode elideMode() const
 */
 HB_FUNC_STATIC( QTABWIDGET_ELIDEMODE )
 {
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QTABWIDGET_ELIDEMODE )
 }
 
 /*
-QSize iconSize () const
+QSize iconSize() const
 */
 HB_FUNC_STATIC( QTABWIDGET_ICONSIZE )
 {
@@ -901,7 +901,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABICON )
 }
 
 /*
-TabPosition tabPosition () const
+QTabWidget::TabPosition tabPosition() const
 */
 HB_FUNC_STATIC( QTABWIDGET_TABPOSITION )
 {
@@ -925,7 +925,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABPOSITION )
 }
 
 /*
-TabShape tabShape () const
+QTabWidget::TabShape tabShape() const
 */
 HB_FUNC_STATIC( QTABWIDGET_TABSHAPE )
 {
@@ -1094,7 +1094,7 @@ HB_FUNC_STATIC( QTABWIDGET_WIDGET )
 }
 
 /*
-virtual QSize minimumSizeHint () const
+virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QTABWIDGET_MINIMUMSIZEHINT )
 {
@@ -1119,7 +1119,7 @@ HB_FUNC_STATIC( QTABWIDGET_MINIMUMSIZEHINT )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QTABWIDGET_SIZEHINT )
 {

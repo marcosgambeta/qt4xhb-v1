@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QFONTINFO_RAWMODE )
 }
 
 /*
-QFont::Style style () const
+QFont::Style style() const
 */
 HB_FUNC_STATIC( QFONTINFO_STYLE )
 {
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QFONTINFO_STYLE )
 }
 
 /*
-QFont::StyleHint styleHint () const
+QFont::StyleHint styleHint() const
 */
 HB_FUNC_STATIC( QFONTINFO_STYLEHINT )
 {

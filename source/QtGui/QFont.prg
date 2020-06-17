@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QFONT_BOLD )
 }
 
 /*
-Capitalization capitalization () const
+QFont::Capitalization capitalization() const
 */
 HB_FUNC_STATIC( QFONT_CAPITALIZATION )
 {
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QFONT_LETTERSPACING )
 }
 
 /*
-SpacingType letterSpacingType () const
+QFont::SpacingType letterSpacingType() const
 */
 HB_FUNC_STATIC( QFONT_LETTERSPACINGTYPE )
 {
@@ -1318,7 +1318,7 @@ HB_FUNC_STATIC( QFONT_STRIKEOUT )
 }
 
 /*
-Style style () const
+QFont::Style style() const
 */
 HB_FUNC_STATIC( QFONT_STYLE )
 {
@@ -1342,7 +1342,7 @@ HB_FUNC_STATIC( QFONT_STYLE )
 }
 
 /*
-StyleHint styleHint () const
+QFont::StyleHint styleHint() const
 */
 HB_FUNC_STATIC( QFONT_STYLEHINT )
 {
@@ -1366,7 +1366,7 @@ HB_FUNC_STATIC( QFONT_STYLEHINT )
 }
 
 /*
-StyleStrategy styleStrategy () const
+QFont::StyleStrategy styleStrategy() const
 */
 HB_FUNC_STATIC( QFONT_STYLESTRATEGY )
 {
@@ -1587,7 +1587,7 @@ HB_FUNC_STATIC( QFONT_SUBSTITUTES )
 }
 
 /*
-static QStringList substitutions ()
+static QStringList substitutions()
 */
 HB_FUNC_STATIC( QFONT_SUBSTITUTIONS )
 {

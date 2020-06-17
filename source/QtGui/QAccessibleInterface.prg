@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_ISVALID )
 }
 
 /*
-virtual QObject * object () const = 0
+virtual QObject * object() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_OBJECT )
 {

@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_BUTTONS )
 }
 
 /*
-QAbstractButton * checkedButton () const
+QAbstractButton * checkedButton() const
 */
 HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDBUTTON )
 {

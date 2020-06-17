@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QTEXTLENGTH_RAWVALUE )
 }
 
 /*
-Type type () const
+QTextLength::Type type() const
 */
 HB_FUNC_STATIC( QTEXTLENGTH_TYPE )
 {

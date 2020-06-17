@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_DELETE )
 }
 
 /*
-QColor currentColor () const
+QColor currentColor() const
 */
 HB_FUNC_STATIC( QCOLORDIALOG_CURRENTCOLOR )
 {
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_OPEN )
 }
 
 /*
-ColorDialogOptions options () const
+QColorDialog::ColorDialogOptions options() const
 */
 HB_FUNC_STATIC( QCOLORDIALOG_OPTIONS )
 {
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_OPTIONS )
 }
 
 /*
-QColor selectedColor () const
+QColor selectedColor() const
 */
 HB_FUNC_STATIC( QCOLORDIALOG_SELECTEDCOLOR )
 {

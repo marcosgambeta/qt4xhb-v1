@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_DELETE )
 }
 
 /*
-Qt::Alignment alignment () const
+Qt::Alignment alignment() const
 */
 HB_FUNC_STATIC( QLAYOUTITEM_ALIGNMENT )
 {
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_ALIGNMENT )
 }
 
 /*
-QSizePolicy::ControlTypes controlTypes () const
+QSizePolicy::ControlTypes controlTypes() const
 */
 HB_FUNC_STATIC( QLAYOUTITEM_CONTROLTYPES )
 {
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_CONTROLTYPES )
 }
 
 /*
-virtual Qt::Orientations expandingDirections () const = 0
+virtual Qt::Orientations expandingDirections() const = 0
 */
 HB_FUNC_STATIC( QLAYOUTITEM_EXPANDINGDIRECTIONS )
 {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_EXPANDINGDIRECTIONS )
 }
 
 /*
-virtual QRect geometry () const = 0
+virtual QRect geometry() const = 0
 */
 HB_FUNC_STATIC( QLAYOUTITEM_GEOMETRY )
 {
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_HEIGHTFORWIDTH )
 }
 
 /*
-virtual void invalidate ()
+virtual void invalidate()
 */
 HB_FUNC_STATIC( QLAYOUTITEM_INVALIDATE )
 {
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_ISEMPTY )
 }
 
 /*
-virtual QLayout * layout ()
+virtual QLayout * layout()
 */
 HB_FUNC_STATIC( QLAYOUTITEM_LAYOUT )
 {
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_LAYOUT )
 }
 
 /*
-virtual QSize maximumSize () const = 0
+virtual QSize maximumSize() const = 0
 */
 HB_FUNC_STATIC( QLAYOUTITEM_MAXIMUMSIZE )
 {
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_MINIMUMHEIGHTFORWIDTH )
 }
 
 /*
-virtual QSize minimumSize () const = 0
+virtual QSize minimumSize() const = 0
 */
 HB_FUNC_STATIC( QLAYOUTITEM_MINIMUMSIZE )
 {
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_SETGEOMETRY )
 }
 
 /*
-virtual QSize sizeHint () const = 0
+virtual QSize sizeHint() const = 0
 */
 HB_FUNC_STATIC( QLAYOUTITEM_SIZEHINT )
 {
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_SIZEHINT )
 }
 
 /*
-virtual QSpacerItem * spacerItem ()
+virtual QSpacerItem * spacerItem()
 */
 HB_FUNC_STATIC( QLAYOUTITEM_SPACERITEM )
 {
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_SPACERITEM )
 }
 
 /*
-virtual QWidget * widget ()
+virtual QWidget * widget()
 */
 HB_FUNC_STATIC( QLAYOUTITEM_WIDGET )
 {

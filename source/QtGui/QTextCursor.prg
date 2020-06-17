@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_ATSTART )
 }
 
 /*
-void beginEditBlock ()
+void beginEditBlock()
 */
 HB_FUNC_STATIC( QTEXTCURSOR_BEGINEDITBLOCK )
 {
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_BEGINEDITBLOCK )
 }
 
 /*
-QTextBlock block () const
+QTextBlock block() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_BLOCK )
 {
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_BLOCK )
 }
 
 /*
-QTextCharFormat blockCharFormat () const
+QTextCharFormat blockCharFormat() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_BLOCKCHARFORMAT )
 {
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_BLOCKCHARFORMAT )
 }
 
 /*
-QTextBlockFormat blockFormat () const
+QTextBlockFormat blockFormat() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_BLOCKFORMAT )
 {
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_BLOCKNUMBER )
 }
 
 /*
-QTextCharFormat charFormat () const
+QTextCharFormat charFormat() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_CHARFORMAT )
 {
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_CHARFORMAT )
 }
 
 /*
-void clearSelection ()
+void clearSelection()
 */
 HB_FUNC_STATIC( QTEXTCURSOR_CLEARSELECTION )
 {
@@ -586,7 +586,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_CREATELIST )
 }
 
 /*
-QTextFrame * currentFrame () const
+QTextFrame * currentFrame() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_CURRENTFRAME )
 {
@@ -611,7 +611,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_CURRENTFRAME )
 }
 
 /*
-QTextList * currentList () const
+QTextList * currentList() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_CURRENTLIST )
 {
@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_CURRENTLIST )
 }
 
 /*
-QTextTable * currentTable () const
+QTextTable * currentTable() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_CURRENTTABLE )
 {
@@ -661,7 +661,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_CURRENTTABLE )
 }
 
 /*
-void deleteChar ()
+void deleteChar()
 */
 HB_FUNC_STATIC( QTEXTCURSOR_DELETECHAR )
 {
@@ -687,7 +687,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_DELETECHAR )
 }
 
 /*
-void deletePreviousChar ()
+void deletePreviousChar()
 */
 HB_FUNC_STATIC( QTEXTCURSOR_DELETEPREVIOUSCHAR )
 {
@@ -713,7 +713,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_DELETEPREVIOUSCHAR )
 }
 
 /*
-QTextDocument * document () const
+QTextDocument * document() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_DOCUMENT )
 {
@@ -738,7 +738,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_DOCUMENT )
 }
 
 /*
-void endEditBlock ()
+void endEditBlock()
 */
 HB_FUNC_STATIC( QTEXTCURSOR_ENDEDITBLOCK )
 {
@@ -1248,7 +1248,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_ISNULL )
 }
 
 /*
-void joinPreviousEditBlock ()
+void joinPreviousEditBlock()
 */
 HB_FUNC_STATIC( QTEXTCURSOR_JOINPREVIOUSEDITBLOCK )
 {
@@ -1448,7 +1448,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_POSITIONINBLOCK )
 }
 
 /*
-void removeSelectedText ()
+void removeSelectedText()
 */
 HB_FUNC_STATIC( QTEXTCURSOR_REMOVESELECTEDTEXT )
 {
@@ -1558,7 +1558,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SELECTEDTEXT )
 }
 
 /*
-QTextDocumentFragment selection () const
+QTextDocumentFragment selection() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SELECTION )
 {

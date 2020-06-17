@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_ISVALID )
 }
 
 /*
-virtual QObject * object () const
+virtual QObject * object() const
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_OBJECT )
 {

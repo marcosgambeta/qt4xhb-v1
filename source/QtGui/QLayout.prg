@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QLAYOUT_ADDWIDGET )
 }
 
 /*
-QMargins contentsMargins () const
+QMargins contentsMargins() const
 */
 HB_FUNC_STATIC( QLAYOUT_CONTENTSMARGINS )
 {
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QLAYOUT_CONTENTSMARGINS )
 }
 
 /*
-QRect contentsRect () const
+QRect contentsRect() const
 */
 HB_FUNC_STATIC( QLAYOUT_CONTENTSRECT )
 {
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QLAYOUT_COUNT )
 }
 
 /*
-virtual Qt::Orientations expandingDirections () const
+virtual Qt::Orientations expandingDirections() const
 */
 HB_FUNC_STATIC( QLAYOUT_EXPANDINGDIRECTIONS )
 {
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QLAYOUT_ITEMAT )
 }
 
 /*
-virtual QSize maximumSize () const
+virtual QSize maximumSize() const
 */
 HB_FUNC_STATIC( QLAYOUT_MAXIMUMSIZE )
 {
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QLAYOUT_MAXIMUMSIZE )
 }
 
 /*
-QWidget * menuBar () const
+QWidget * menuBar() const
 */
 HB_FUNC_STATIC( QLAYOUT_MENUBAR )
 {
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QLAYOUT_MENUBAR )
 }
 
 /*
-virtual QSize minimumSize () const
+virtual QSize minimumSize() const
 */
 HB_FUNC_STATIC( QLAYOUT_MINIMUMSIZE )
 {
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QLAYOUT_MINIMUMSIZE )
 }
 
 /*
-QWidget * parentWidget () const
+QWidget * parentWidget() const
 */
 HB_FUNC_STATIC( QLAYOUT_PARENTWIDGET )
 {
@@ -732,7 +732,7 @@ HB_FUNC_STATIC( QLAYOUT_SETSPACING )
 }
 
 /*
-SizeConstraint sizeConstraint () const
+QLayout::SizeConstraint sizeConstraint() const
 */
 HB_FUNC_STATIC( QLAYOUT_SIZECONSTRAINT )
 {
@@ -805,7 +805,7 @@ HB_FUNC_STATIC( QLAYOUT_TAKEAT )
 }
 
 /*
-void update ()
+void update()
 */
 HB_FUNC_STATIC( QLAYOUT_UPDATE )
 {
@@ -831,7 +831,7 @@ HB_FUNC_STATIC( QLAYOUT_UPDATE )
 }
 
 /*
-virtual QRect geometry () const
+virtual QRect geometry() const
 */
 HB_FUNC_STATIC( QLAYOUT_GEOMETRY )
 {
@@ -856,7 +856,7 @@ HB_FUNC_STATIC( QLAYOUT_GEOMETRY )
 }
 
 /*
-virtual void invalidate ()
+virtual void invalidate()
 */
 HB_FUNC_STATIC( QLAYOUT_INVALIDATE )
 {
@@ -906,7 +906,7 @@ HB_FUNC_STATIC( QLAYOUT_ISEMPTY )
 }
 
 /*
-virtual QLayout * layout ()
+virtual QLayout * layout()
 */
 HB_FUNC_STATIC( QLAYOUT_LAYOUT )
 {

@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_DYNAMICSORTFILTER )
 }
 
 /*
-Qt::CaseSensitivity filterCaseSensitivity () const
+Qt::CaseSensitivity filterCaseSensitivity() const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FILTERCASESENSITIVITY )
 {
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FILTERKEYCOLUMN )
 }
 
 /*
-QRegExp filterRegExp () const
+QRegExp filterRegExp() const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FILTERREGEXP )
 {
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETSORTROLE )
 }
 
 /*
-Qt::CaseSensitivity sortCaseSensitivity () const
+Qt::CaseSensitivity sortCaseSensitivity() const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTCASESENSITIVITY )
 {
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTCOLUMN )
 }
 
 /*
-Qt::SortOrder sortOrder () const
+Qt::SortOrder sortOrder() const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTORDER )
 {
@@ -1039,7 +1039,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MIMEDATA )
 }
 
 /*
-virtual QStringList mimeTypes () const
+virtual QStringList mimeTypes() const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MIMETYPES )
 {
@@ -1285,7 +1285,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SPAN )
 }
 
 /*
-virtual Qt::DropActions supportedDropActions () const
+virtual Qt::DropActions supportedDropActions() const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SUPPORTEDDROPACTIONS )
 {
@@ -1309,7 +1309,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SUPPORTEDDROPACTIONS )
 }
 
 /*
-void invalidate ()
+void invalidate()
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_INVALIDATE )
 {

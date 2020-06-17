@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QPOLYGONF_DELETE )
 }
 
 /*
-QRectF boundingRect () const
+QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QPOLYGONF_BOUNDINGRECT )
 {
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QPOLYGONF_SWAP )
 }
 
 /*
-QPolygon toPolygon () const
+QPolygon toPolygon() const
 */
 HB_FUNC_STATIC( QPOLYGONF_TOPOLYGON )
 {

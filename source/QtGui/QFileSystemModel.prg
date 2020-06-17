@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEPATH )
 }
 
 /*
-QDir::Filters filter () const
+QDir::Filters filter() const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_FILTER )
 {
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILTER )
 }
 
 /*
-QFileIconProvider * iconProvider () const
+QFileIconProvider * iconProvider() const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ICONPROVIDER )
 {
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_NAMEFILTERDISABLES )
 }
 
 /*
-QStringList nameFilters () const
+QStringList nameFilters() const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_NAMEFILTERS )
 {
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_RMDIR )
 }
 
 /*
-QDir rootDirectory () const
+QDir rootDirectory() const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ROOTDIRECTORY )
 {
@@ -1085,7 +1085,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMEDATA )
 }
 
 /*
-virtual QStringList mimeTypes () const
+virtual QStringList mimeTypes() const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMETYPES )
 {
@@ -1208,7 +1208,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SORT )
 }
 
 /*
-virtual Qt::DropActions supportedDropActions () const
+virtual Qt::DropActions supportedDropActions() const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SUPPORTEDDROPACTIONS )
 {

@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QWORKSPACE_DELETE )
 }
 
 /*
-QWidget * activeWindow () const
+QWidget * activeWindow() const
 */
 HB_FUNC_STATIC( QWORKSPACE_ACTIVEWINDOW )
 {
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QWORKSPACE_ADDWINDOW )
 }
 
 /*
-QBrush background () const
+QBrush background() const
 */
 HB_FUNC_STATIC( QWORKSPACE_BACKGROUND )
 {
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QWORKSPACE_WINDOWLIST )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QWORKSPACE_SIZEHINT )
 {
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QWORKSPACE_SIZEHINT )
 }
 
 /*
-void activateNextWindow ()
+void activateNextWindow()
 */
 HB_FUNC_STATIC( QWORKSPACE_ACTIVATENEXTWINDOW )
 {
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QWORKSPACE_ACTIVATENEXTWINDOW )
 }
 
 /*
-void activatePreviousWindow ()
+void activatePreviousWindow()
 */
 HB_FUNC_STATIC( QWORKSPACE_ACTIVATEPREVIOUSWINDOW )
 {
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QWORKSPACE_ACTIVATEPREVIOUSWINDOW )
 }
 
 /*
-void arrangeIcons ()
+void arrangeIcons()
 */
 HB_FUNC_STATIC( QWORKSPACE_ARRANGEICONS )
 {
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QWORKSPACE_ARRANGEICONS )
 }
 
 /*
-void cascade ()
+void cascade()
 */
 HB_FUNC_STATIC( QWORKSPACE_CASCADE )
 {
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QWORKSPACE_CASCADE )
 }
 
 /*
-void closeActiveWindow ()
+void closeActiveWindow()
 */
 HB_FUNC_STATIC( QWORKSPACE_CLOSEACTIVEWINDOW )
 {
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QWORKSPACE_CLOSEACTIVEWINDOW )
 }
 
 /*
-void closeAllWindows ()
+void closeAllWindows()
 */
 HB_FUNC_STATIC( QWORKSPACE_CLOSEALLWINDOWS )
 {
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QWORKSPACE_SETACTIVEWINDOW )
 }
 
 /*
-void tile ()
+void tile()
 */
 HB_FUNC_STATIC( QWORKSPACE_TILE )
 {

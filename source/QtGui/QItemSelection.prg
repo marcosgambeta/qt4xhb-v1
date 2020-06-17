@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QITEMSELECTION_CONTAINS )
 }
 
 /*
-QModelIndexList indexes () const
+QModelIndexList indexes() const
 */
 HB_FUNC_STATIC( QITEMSELECTION_INDEXES )
 {

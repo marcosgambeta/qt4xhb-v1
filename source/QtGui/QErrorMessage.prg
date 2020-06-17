@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QERRORMESSAGE_SHOWMESSAGE )
 }
 
 /*
-QErrorMessage * qtHandler ()
+QErrorMessage * qtHandler()
 */
 HB_FUNC_STATIC( QERRORMESSAGE_QTHANDLER )
 {

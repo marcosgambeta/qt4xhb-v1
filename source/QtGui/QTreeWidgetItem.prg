@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_CHILDCOUNT )
 }
 
 /*
-QTreeWidgetItem::ChildIndicatorPolicy childIndicatorPolicy () const
+QTreeWidgetItem::ChildIndicatorPolicy childIndicatorPolicy() const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_CHILDINDICATORPOLICY )
 {
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_CHILDINDICATORPOLICY )
 }
 
 /*
-virtual QTreeWidgetItem * clone () const
+virtual QTreeWidgetItem * clone() const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_CLONE )
 {
@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_DATA )
 }
 
 /*
-Qt::ItemFlags flags () const
+Qt::ItemFlags flags() const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_FLAGS )
 {
@@ -823,7 +823,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_ISSELECTED )
 }
 
 /*
-QTreeWidgetItem * parent () const
+QTreeWidgetItem * parent() const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_PARENT )
 {
@@ -1614,7 +1614,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TOOLTIP )
 }
 
 /*
-QTreeWidget * treeWidget () const
+QTreeWidget * treeWidget() const
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_TREEWIDGET )
 {

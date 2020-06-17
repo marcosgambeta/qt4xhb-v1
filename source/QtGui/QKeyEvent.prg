@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QKEYEVENT_MATCHES )
 }
 
 /*
-Qt::KeyboardModifiers modifiers () const
+Qt::KeyboardModifiers modifiers() const
 */
 HB_FUNC_STATIC( QKEYEVENT_MODIFIERS )
 {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QKEYEVENT_MODIFIERS )
 }
 
 /*
-quint32 nativeModifiers () const
+quint32 nativeModifiers() const
 */
 HB_FUNC_STATIC( QKEYEVENT_NATIVEMODIFIERS )
 {
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QKEYEVENT_NATIVEMODIFIERS )
 }
 
 /*
-quint32 nativeScanCode () const
+quint32 nativeScanCode() const
 */
 HB_FUNC_STATIC( QKEYEVENT_NATIVESCANCODE )
 {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QKEYEVENT_NATIVESCANCODE )
 }
 
 /*
-quint32 nativeVirtualKey () const
+quint32 nativeVirtualKey() const
 */
 HB_FUNC_STATIC( QKEYEVENT_NATIVEVIRTUALKEY )
 {

@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QLISTWIDGET_COUNT )
 }
 
 /*
-QListWidgetItem * currentItem () const
+QListWidgetItem * currentItem() const
 */
 HB_FUNC_STATIC( QLISTWIDGET_CURRENTITEM )
 {
@@ -948,7 +948,7 @@ HB_FUNC_STATIC( QLISTWIDGET_DROPEVENT )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QLISTWIDGET_CLEAR )
 {

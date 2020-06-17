@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_MINPAGE )
 }
 
 /*
-PrintRange printRange () const
+QAbstractPrintDialog::PrintRange printRange() const
 */
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_PRINTRANGE )
 {
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_PRINTRANGE )
 }
 
 /*
-QPrinter * printer () const
+QPrinter * printer() const
 */
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_PRINTER )
 {

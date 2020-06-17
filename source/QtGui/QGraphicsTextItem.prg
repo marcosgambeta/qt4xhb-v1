@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DELETE )
 }
 
 /*
-void adjustSize ()
+void adjustSize()
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ADJUSTSIZE )
 {
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ADJUSTSIZE )
 }
 
 /*
-QColor defaultTextColor () const
+QColor defaultTextColor() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DEFAULTTEXTCOLOR )
 {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DEFAULTTEXTCOLOR )
 }
 
 /*
-QTextDocument * document () const
+QTextDocument * document() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DOCUMENT )
 {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DOCUMENT )
 }
 
 /*
-QFont font () const
+QFont font() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_FONT )
 {
@@ -549,7 +549,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TABCHANGESFOCUS )
 }
 
 /*
-QTextCursor textCursor () const
+QTextCursor textCursor() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTCURSOR )
 {
@@ -574,7 +574,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTCURSOR )
 }
 
 /*
-Qt::TextInteractionFlags textInteractionFlags () const
+Qt::TextInteractionFlags textInteractionFlags() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTINTERACTIONFLAGS )
 {
@@ -670,7 +670,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOPLAINTEXT )
 }
 
 /*
-virtual QRectF boundingRect () const
+virtual QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_BOUNDINGRECT )
 {
@@ -743,7 +743,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ISOBSCUREDBY )
 }
 
 /*
-virtual QPainterPath opaqueArea () const
+virtual QPainterPath opaqueArea() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_OPAQUEAREA )
 {
@@ -794,7 +794,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_PAINT )
 }
 
 /*
-virtual QPainterPath shape () const
+virtual QPainterPath shape() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SHAPE )
 {

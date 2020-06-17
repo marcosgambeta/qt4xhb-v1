@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_DELETE )
 }
 
 /*
-QBrush background () const
+QBrush background() const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_BACKGROUND )
 {
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_BACKGROUND )
 }
 
 /*
-Qt::CheckState checkState () const
+Qt::CheckState checkState() const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_CHECKSTATE )
 {
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_CHECKSTATE )
 }
 
 /*
-virtual QListWidgetItem * clone () const
+virtual QListWidgetItem * clone() const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_CLONE )
 {
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_DATA )
 }
 
 /*
-Qt::ItemFlags flags () const
+Qt::ItemFlags flags() const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_FLAGS )
 {
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_FLAGS )
 }
 
 /*
-QFont font () const
+QFont font() const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_FONT )
 {
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_FONT )
 }
 
 /*
-QBrush foreground () const
+QBrush foreground() const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_FOREGROUND )
 {
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_FOREGROUND )
 }
 
 /*
-QIcon icon () const
+QIcon icon() const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_ICON )
 {
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_ISSELECTED )
 }
 
 /*
-QListWidget * listWidget () const
+QListWidget * listWidget() const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_LISTWIDGET )
 {
@@ -860,7 +860,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETWHATSTHIS )
 }
 
 /*
-QSize sizeHint () const
+QSize sizeHint() const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SIZEHINT )
 {

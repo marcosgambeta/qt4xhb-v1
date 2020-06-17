@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QACTION_DELETE )
 }
 
 /*
-QActionGroup * actionGroup () const
+QActionGroup * actionGroup() const
 */
 HB_FUNC_STATIC( QACTION_ACTIONGROUP )
 {
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QACTION_AUTOREPEAT )
 }
 
 /*
-QVariant data () const
+QVariant data() const
 */
 HB_FUNC_STATIC( QACTION_DATA )
 {
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QACTION_DATA )
 }
 
 /*
-QFont font () const
+QFont font() const
 */
 HB_FUNC_STATIC( QACTION_FONT )
 {
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QACTION_FONT )
 }
 
 /*
-QIcon icon () const
+QIcon icon() const
 */
 HB_FUNC_STATIC( QACTION_ICON )
 {
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QACTION_ISVISIBLE )
 }
 
 /*
-QMenu * menu () const
+QMenu * menu() const
 */
 HB_FUNC_STATIC( QACTION_MENU )
 {
@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QACTION_MENU )
 }
 
 /*
-MenuRole menuRole () const
+QAction::MenuRole menuRole() const
 */
 HB_FUNC_STATIC( QACTION_MENUROLE )
 {
@@ -646,7 +646,7 @@ HB_FUNC_STATIC( QACTION_MENUROLE )
 }
 
 /*
-QWidget * parentWidget () const
+QWidget * parentWidget() const
 */
 HB_FUNC_STATIC( QACTION_PARENTWIDGET )
 {
@@ -671,7 +671,7 @@ HB_FUNC_STATIC( QACTION_PARENTWIDGET )
 }
 
 /*
-Priority priority () const
+QAction::Priority priority() const
 */
 HB_FUNC_STATIC( QACTION_PRIORITY )
 {
@@ -1248,7 +1248,7 @@ HB_FUNC_STATIC( QACTION_SETWHATSTHIS )
 }
 
 /*
-QKeySequence shortcut () const
+QKeySequence shortcut() const
 */
 HB_FUNC_STATIC( QACTION_SHORTCUT )
 {
@@ -1273,7 +1273,7 @@ HB_FUNC_STATIC( QACTION_SHORTCUT )
 }
 
 /*
-Qt::ShortcutContext shortcutContext () const
+Qt::ShortcutContext shortcutContext() const
 */
 HB_FUNC_STATIC( QACTION_SHORTCUTCONTEXT )
 {
@@ -1373,7 +1373,7 @@ HB_FUNC_STATIC( QACTION_SHOWSTATUSTEXT )
 }
 
 /*
-SoftKeyRole softKeyRole () const
+QAction::SoftKeyRole softKeyRole() const
 */
 HB_FUNC_STATIC( QACTION_SOFTKEYROLE )
 {
@@ -1493,7 +1493,7 @@ HB_FUNC_STATIC( QACTION_WHATSTHIS )
 }
 
 /*
-void hover ()
+void hover()
 */
 HB_FUNC_STATIC( QACTION_HOVER )
 {
@@ -1623,7 +1623,7 @@ HB_FUNC_STATIC( QACTION_SETVISIBLE )
 }
 
 /*
-void toggle ()
+void toggle()
 */
 HB_FUNC_STATIC( QACTION_TOGGLE )
 {
@@ -1649,7 +1649,7 @@ HB_FUNC_STATIC( QACTION_TOGGLE )
 }
 
 /*
-void trigger ()
+void trigger()
 */
 HB_FUNC_STATIC( QACTION_TRIGGER )
 {

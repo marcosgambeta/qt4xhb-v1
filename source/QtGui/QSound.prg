@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QSOUND_SETLOOPS )
 }
 
 /*
-void stop ()
+void stop()
 */
 HB_FUNC_STATIC( QSOUND_STOP )
 {

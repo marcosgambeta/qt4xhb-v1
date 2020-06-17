@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QTABLEVIEW_DELETE )
 }
 
 /*
-void clearSpans ()
+void clearSpans()
 */
 HB_FUNC_STATIC( QTABLEVIEW_CLEARSPANS )
 {
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QTABLEVIEW_COLUMNWIDTH )
 }
 
 /*
-Qt::PenStyle gridStyle () const
+Qt::PenStyle gridStyle() const
 */
 HB_FUNC_STATIC( QTABLEVIEW_GRIDSTYLE )
 {
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QTABLEVIEW_GRIDSTYLE )
 }
 
 /*
-QHeaderView * horizontalHeader () const
+QHeaderView * horizontalHeader() const
 */
 HB_FUNC_STATIC( QTABLEVIEW_HORIZONTALHEADER )
 {
@@ -824,7 +824,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SORTBYCOLUMN )
 }
 
 /*
-QHeaderView * verticalHeader () const
+QHeaderView * verticalHeader() const
 */
 HB_FUNC_STATIC( QTABLEVIEW_VERTICALHEADER )
 {
@@ -1054,7 +1054,7 @@ HB_FUNC_STATIC( QTABLEVIEW_RESIZECOLUMNTOCONTENTS )
 }
 
 /*
-void resizeColumnsToContents ()
+void resizeColumnsToContents()
 */
 HB_FUNC_STATIC( QTABLEVIEW_RESIZECOLUMNSTOCONTENTS )
 {
@@ -1106,7 +1106,7 @@ HB_FUNC_STATIC( QTABLEVIEW_RESIZEROWTOCONTENTS )
 }
 
 /*
-void resizeRowsToContents ()
+void resizeRowsToContents()
 */
 HB_FUNC_STATIC( QTABLEVIEW_RESIZEROWSTOCONTENTS )
 {

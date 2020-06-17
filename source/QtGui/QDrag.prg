@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QDRAG_EXEC )
 }
 
 /*
-QPoint hotSpot () const
+QPoint hotSpot() const
 */
 HB_FUNC_STATIC( QDRAG_HOTSPOT )
 {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QDRAG_HOTSPOT )
 }
 
 /*
-QMimeData * mimeData () const
+QMimeData * mimeData() const
 */
 HB_FUNC_STATIC( QDRAG_MIMEDATA )
 {
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QDRAG_MIMEDATA )
 }
 
 /*
-QPixmap pixmap () const
+QPixmap pixmap() const
 */
 HB_FUNC_STATIC( QDRAG_PIXMAP )
 {
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QDRAG_SETPIXMAP )
 }
 
 /*
-QWidget * source () const
+QWidget * source() const
 */
 HB_FUNC_STATIC( QDRAG_SOURCE )
 {
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QDRAG_SOURCE )
 }
 
 /*
-QWidget * target () const
+QWidget * target() const
 */
 HB_FUNC_STATIC( QDRAG_TARGET )
 {

@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QWHATSTHIS_CREATEACTION )
 }
 
 /*
-static void enterWhatsThisMode ()
+static void enterWhatsThisMode()
 */
 HB_FUNC_STATIC( QWHATSTHIS_ENTERWHATSTHISMODE )
 {
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QWHATSTHIS_ENTERWHATSTHISMODE )
 }
 
 /*
-static void hideText ()
+static void hideText()
 */
 HB_FUNC_STATIC( QWHATSTHIS_HIDETEXT )
 {
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QWHATSTHIS_INWHATSTHISMODE )
 }
 
 /*
-static void leaveWhatsThisMode ()
+static void leaveWhatsThisMode()
 */
 HB_FUNC_STATIC( QWHATSTHIS_LEAVEWHATSTHISMODE )
 {

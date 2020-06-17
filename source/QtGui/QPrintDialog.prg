@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_OPEN )
 }
 
 /*
-PrintDialogOptions options () const
+QPrintDialog::PrintDialogOptions options() const
 */
 HB_FUNC_STATIC( QPRINTDIALOG_OPTIONS )
 {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_OPTIONS )
 }
 
 /*
-QPrinter * printer ()
+QPrinter * printer()
 */
 HB_FUNC_STATIC( QPRINTDIALOG_PRINTER )
 {

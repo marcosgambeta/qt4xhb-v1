@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ANGLE )
 }
 
 /*
-QVector3D axis () const
+QVector3D axis() const
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_AXIS )
 {
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_AXIS )
 }
 
 /*
-QVector3D origin () const
+QVector3D origin() const
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_ORIGIN )
 {

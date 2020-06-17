@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QCHECKBOX_NEW )
 }
 
 /*
-Qt::CheckState checkState () const
+Qt::CheckState checkState() const
 */
 HB_FUNC_STATIC( QCHECKBOX_CHECKSTATE )
 {
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QCHECKBOX_SETTRISTATE )
 }
 
 /*
-virtual QSize minimumSizeHint () const
+virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QCHECKBOX_MINIMUMSIZEHINT )
 {
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QCHECKBOX_MINIMUMSIZEHINT )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QCHECKBOX_SIZEHINT )
 {

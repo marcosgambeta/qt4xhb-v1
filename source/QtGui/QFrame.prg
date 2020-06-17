@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QFRAME_DELETE )
 }
 
 /*
-QRect frameRect () const
+QRect frameRect() const
 */
 HB_FUNC_STATIC( QFRAME_FRAMERECT )
 {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QFRAME_FRAMERECT )
 }
 
 /*
-Shadow frameShadow () const
+QFrame::Shadow frameShadow() const
 */
 HB_FUNC_STATIC( QFRAME_FRAMESHADOW )
 {
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QFRAME_FRAMESHADOW )
 }
 
 /*
-Shape frameShape () const
+QFrame::Shape frameShape() const
 */
 HB_FUNC_STATIC( QFRAME_FRAMESHAPE )
 {

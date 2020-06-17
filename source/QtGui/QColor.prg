@@ -1286,7 +1286,7 @@ HB_FUNC_STATIC( QCOLOR_REDF )
 }
 
 /*
-QRgb rgb () const
+QRgb rgb() const
 */
 HB_FUNC_STATIC( QCOLOR_RGB )
 {
@@ -1310,7 +1310,7 @@ HB_FUNC_STATIC( QCOLOR_RGB )
 }
 
 /*
-QRgb rgba () const
+QRgb rgba() const
 */
 HB_FUNC_STATIC( QCOLOR_RGBA )
 {
@@ -1875,7 +1875,7 @@ HB_FUNC_STATIC( QCOLOR_SETRGBA )
 }
 
 /*
-Spec spec () const
+QColor::Spec spec() const
 */
 HB_FUNC_STATIC( QCOLOR_SPEC )
 {
@@ -1899,7 +1899,7 @@ HB_FUNC_STATIC( QCOLOR_SPEC )
 }
 
 /*
-QColor toCmyk () const
+QColor toCmyk() const
 */
 HB_FUNC_STATIC( QCOLOR_TOCMYK )
 {
@@ -1924,7 +1924,7 @@ HB_FUNC_STATIC( QCOLOR_TOCMYK )
 }
 
 /*
-QColor toHsl () const
+QColor toHsl() const
 */
 HB_FUNC_STATIC( QCOLOR_TOHSL )
 {
@@ -1949,7 +1949,7 @@ HB_FUNC_STATIC( QCOLOR_TOHSL )
 }
 
 /*
-QColor toHsv () const
+QColor toHsv() const
 */
 HB_FUNC_STATIC( QCOLOR_TOHSV )
 {
@@ -1974,7 +1974,7 @@ HB_FUNC_STATIC( QCOLOR_TOHSV )
 }
 
 /*
-QColor toRgb () const
+QColor toRgb() const
 */
 HB_FUNC_STATIC( QCOLOR_TORGB )
 {
@@ -2095,7 +2095,7 @@ HB_FUNC_STATIC( QCOLOR_YELLOWF )
 }
 
 /*
-static QStringList colorNames ()
+static QStringList colorNames()
 */
 HB_FUNC_STATIC( QCOLOR_COLORNAMES )
 {

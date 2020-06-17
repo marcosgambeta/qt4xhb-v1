@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_DELETE )
 }
 
 /*
-QBrush backgroundBrush () const
+QBrush backgroundBrush() const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_BACKGROUNDBRUSH )
 {
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_BACKGROUNDBRUSH )
 }
 
 /*
-Qt::BGMode backgroundMode () const
+Qt::BGMode backgroundMode() const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_BACKGROUNDMODE )
 {
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_BACKGROUNDMODE )
 }
 
 /*
-QBrush brush () const
+QBrush brush() const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSH )
 {
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSHNEEDSRESOLVING )
 }
 
 /*
-QPointF brushOrigin () const
+QPointF brushOrigin() const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSHORIGIN )
 {
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSHORIGIN )
 }
 
 /*
-Qt::ClipOperation clipOperation () const
+Qt::ClipOperation clipOperation() const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPOPERATION )
 {
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPOPERATION )
 }
 
 /*
-QPainterPath clipPath () const
+QPainterPath clipPath() const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPPATH )
 {
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPPATH )
 }
 
 /*
-QRegion clipRegion () const
+QRegion clipRegion() const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPREGION )
 {
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPREGION )
 }
 
 /*
-QPainter::CompositionMode compositionMode () const
+QPainter::CompositionMode compositionMode() const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_COMPOSITIONMODE )
 {
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_COMPOSITIONMODE )
 }
 
 /*
-QFont font () const
+QFont font() const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_FONT )
 {
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_OPACITY )
 }
 
 /*
-QPainter * painter () const
+QPainter * painter() const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_PAINTER )
 {
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_PAINTER )
 }
 
 /*
-QPen pen () const
+QPen pen() const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_PEN )
 {
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_PENNEEDSRESOLVING )
 }
 
 /*
-QPainter::RenderHints renderHints () const
+QPainter::RenderHints renderHints() const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_RENDERHINTS )
 {
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_RENDERHINTS )
 }
 
 /*
-QPaintEngine::DirtyFlags state () const
+QPaintEngine::DirtyFlags state() const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_STATE )
 {
@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_STATE )
 }
 
 /*
-QTransform transform () const
+QTransform transform() const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_TRANSFORM )
 {

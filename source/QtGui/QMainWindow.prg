@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBARBREAK )
 }
 
 /*
-QWidget * centralWidget () const
+QWidget * centralWidget() const
 */
 HB_FUNC_STATIC( QMAINWINDOW_CENTRALWIDGET )
 {
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QMAINWINDOW_CORNER )
 }
 
 /*
-virtual QMenu * createPopupMenu ()
+virtual QMenu * createPopupMenu()
 */
 HB_FUNC_STATIC( QMAINWINDOW_CREATEPOPUPMENU )
 {
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QMAINWINDOW_CREATEPOPUPMENU )
 }
 
 /*
-DockOptions dockOptions () const
+QMainWindow::DockOptions dockOptions() const
 */
 HB_FUNC_STATIC( QMAINWINDOW_DOCKOPTIONS )
 {
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QMAINWINDOW_DOCUMENTMODE )
 }
 
 /*
-QSize iconSize () const
+QSize iconSize() const
 */
 HB_FUNC_STATIC( QMAINWINDOW_ICONSIZE )
 {
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ISDOCKNESTINGENABLED )
 }
 
 /*
-QMenuBar * menuBar () const
+QMenuBar * menuBar() const
 */
 HB_FUNC_STATIC( QMAINWINDOW_MENUBAR )
 {
@@ -579,7 +579,7 @@ HB_FUNC_STATIC( QMAINWINDOW_MENUBAR )
 }
 
 /*
-QWidget * menuWidget () const
+QWidget * menuWidget() const
 */
 HB_FUNC_STATIC( QMAINWINDOW_MENUWIDGET )
 {
@@ -1067,7 +1067,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SPLITDOCKWIDGET )
 }
 
 /*
-QStatusBar * statusBar () const
+QStatusBar * statusBar() const
 */
 HB_FUNC_STATIC( QMAINWINDOW_STATUSBAR )
 {
@@ -1116,7 +1116,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TABPOSITION )
 }
 
 /*
-QTabWidget::TabShape tabShape () const
+QTabWidget::TabShape tabShape() const
 */
 HB_FUNC_STATIC( QMAINWINDOW_TABSHAPE )
 {
@@ -1262,7 +1262,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TOOLBARBREAK )
 }
 
 /*
-Qt::ToolButtonStyle toolButtonStyle () const
+Qt::ToolButtonStyle toolButtonStyle() const
 */
 HB_FUNC_STATIC( QMAINWINDOW_TOOLBUTTONSTYLE )
 {

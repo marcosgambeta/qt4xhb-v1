@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_DISPLAYNAME )
 }
 
 /*
-static QStringList keys ()
+static QStringList keys()
 */
 HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_KEYS )
 {

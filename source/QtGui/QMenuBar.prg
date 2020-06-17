@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QMENUBAR_DELETE )
 }
 
 /*
-QAction * activeAction () const
+QAction * activeAction() const
 */
 HB_FUNC_STATIC( QMENUBAR_ACTIVEACTION )
 {
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDMENU )
 }
 
 /*
-QAction * addSeparator ()
+QAction * addSeparator()
 */
 HB_FUNC_STATIC( QMENUBAR_ADDSEPARATOR )
 {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDSEPARATOR )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QMENUBAR_CLEAR )
 {
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QMENUBAR_HEIGHTFORWIDTH )
 }
 
 /*
-virtual QSize minimumSizeHint () const
+virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QMENUBAR_MINIMUMSIZEHINT )
 {
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QMENUBAR_MINIMUMSIZEHINT )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QMENUBAR_SIZEHINT )
 {

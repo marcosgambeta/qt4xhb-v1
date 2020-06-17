@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_DELETE )
 }
 
 /*
-QGraphicsItem * activePanel () const
+QGraphicsItem * activePanel() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_ACTIVEPANEL )
 {
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ACTIVEPANEL )
 }
 
 /*
-QGraphicsWidget * activeWindow () const
+QGraphicsWidget * activeWindow() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_ACTIVEWINDOW )
 {
@@ -579,7 +579,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDWIDGET )
 }
 
 /*
-QBrush backgroundBrush () const
+QBrush backgroundBrush() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_BACKGROUNDBRUSH )
 {
@@ -628,7 +628,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_BSPTREEDEPTH )
 }
 
 /*
-void clearFocus ()
+void clearFocus()
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_CLEARFOCUS )
 {
@@ -761,7 +761,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_DESTROYITEMGROUP )
 }
 
 /*
-QGraphicsItem * focusItem () const
+QGraphicsItem * focusItem() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_FOCUSITEM )
 {
@@ -786,7 +786,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_FOCUSITEM )
 }
 
 /*
-QFont font () const
+QFont font() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_FONT )
 {
@@ -811,7 +811,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_FONT )
 }
 
 /*
-QBrush foregroundBrush () const
+QBrush foregroundBrush() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_FOREGROUNDBRUSH )
 {
@@ -1057,7 +1057,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMAT )
 }
 
 /*
-ItemIndexMethod itemIndexMethod () const
+QGraphicsScene::ItemIndexMethod itemIndexMethod() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMINDEXMETHOD )
 {
@@ -1386,7 +1386,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS )
 }
 
 /*
-QRectF itemsBoundingRect () const
+QRectF itemsBoundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMSBOUNDINGRECT )
 {
@@ -1411,7 +1411,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMSBOUNDINGRECT )
 }
 
 /*
-QGraphicsItem * mouseGrabberItem () const
+QGraphicsItem * mouseGrabberItem() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_MOUSEGRABBERITEM )
 {
@@ -1436,7 +1436,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_MOUSEGRABBERITEM )
 }
 
 /*
-QPalette palette () const
+QPalette palette() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_PALETTE )
 {
@@ -1513,7 +1513,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_RENDER )
 }
 
 /*
-QRectF sceneRect () const
+QRectF sceneRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_SCENERECT )
 {
@@ -1586,7 +1586,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SELECTEDITEMS )
 }
 
 /*
-QPainterPath selectionArea () const
+QPainterPath selectionArea() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_SELECTIONAREA )
 {
@@ -2099,7 +2099,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_STICKYFOCUS )
 }
 
 /*
-QStyle * style () const
+QStyle * style() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_STYLE )
 {
@@ -2247,7 +2247,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_WIDTH )
 }
 
 /*
-void advance ()
+void advance()
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_ADVANCE )
 {
@@ -2273,7 +2273,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADVANCE )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_CLEAR )
 {
@@ -2299,7 +2299,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_CLEAR )
 }
 
 /*
-void clearSelection ()
+void clearSelection()
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_CLEARSELECTION )
 {

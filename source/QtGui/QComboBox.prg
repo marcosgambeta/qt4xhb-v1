@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ADDITEMS )
 }
 
 /*
-QCompleter * completer () const
+QCompleter * completer() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_COMPLETER )
 {
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QCOMBOBOX_HASFRAME )
 }
 
 /*
-virtual void hidePopup ()
+virtual void hidePopup()
 */
 HB_FUNC_STATIC( QCOMBOBOX_HIDEPOPUP )
 {
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QCOMBOBOX_HIDEPOPUP )
 }
 
 /*
-QSize iconSize () const
+QSize iconSize() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_ICONSIZE )
 {
@@ -563,7 +563,7 @@ HB_FUNC_STATIC( QCOMBOBOX_INSERTITEMS )
 }
 
 /*
-InsertPolicy insertPolicy () const
+QComboBox::InsertPolicy insertPolicy() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_INSERTPOLICY )
 {
@@ -662,7 +662,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMDATA )
 }
 
 /*
-QAbstractItemDelegate * itemDelegate () const
+QAbstractItemDelegate * itemDelegate() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_ITEMDELEGATE )
 {
@@ -736,7 +736,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMTEXT )
 }
 
 /*
-QLineEdit * lineEdit () const
+QLineEdit * lineEdit() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_LINEEDIT )
 {
@@ -833,7 +833,7 @@ HB_FUNC_STATIC( QCOMBOBOX_MINIMUMCONTENTSLENGTH )
 }
 
 /*
-QAbstractItemModel * model () const
+QAbstractItemModel * model() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_MODEL )
 {
@@ -908,7 +908,7 @@ HB_FUNC_STATIC( QCOMBOBOX_REMOVEITEM )
 }
 
 /*
-QModelIndex rootModelIndex () const
+QModelIndex rootModelIndex() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_ROOTMODELINDEX )
 {
@@ -1453,7 +1453,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETVIEW )
 }
 
 /*
-virtual void showPopup ()
+virtual void showPopup()
 */
 HB_FUNC_STATIC( QCOMBOBOX_SHOWPOPUP )
 {
@@ -1479,7 +1479,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SHOWPOPUP )
 }
 
 /*
-SizeAdjustPolicy sizeAdjustPolicy () const
+QComboBox::SizeAdjustPolicy sizeAdjustPolicy() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_SIZEADJUSTPOLICY )
 {
@@ -1503,7 +1503,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SIZEADJUSTPOLICY )
 }
 
 /*
-const QValidator * validator () const
+const QValidator * validator() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_VALIDATOR )
 {
@@ -1528,7 +1528,7 @@ HB_FUNC_STATIC( QCOMBOBOX_VALIDATOR )
 }
 
 /*
-QAbstractItemView * view () const
+QAbstractItemView * view() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_VIEW )
 {
@@ -1577,7 +1577,7 @@ HB_FUNC_STATIC( QCOMBOBOX_EVENT )
 }
 
 /*
-virtual QSize minimumSizeHint () const
+virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_MINIMUMSIZEHINT )
 {
@@ -1602,7 +1602,7 @@ HB_FUNC_STATIC( QCOMBOBOX_MINIMUMSIZEHINT )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_SIZEHINT )
 {
@@ -1627,7 +1627,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SIZEHINT )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QCOMBOBOX_CLEAR )
 {
@@ -1653,7 +1653,7 @@ HB_FUNC_STATIC( QCOMBOBOX_CLEAR )
 }
 
 /*
-void clearEditText ()
+void clearEditText()
 */
 HB_FUNC_STATIC( QCOMBOBOX_CLEAREDITTEXT )
 {

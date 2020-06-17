@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_DELETE )
 }
 
 /*
-double bottom () const
+double bottom() const
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_BOTTOM )
 {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_DECIMALS )
 }
 
 /*
-Notation notation () const
+QDoubleValidator::Notation notation() const
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_NOTATION )
 {
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETTOP )
 }
 
 /*
-double top () const
+double top() const
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_TOP )
 {

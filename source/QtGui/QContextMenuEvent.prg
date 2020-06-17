@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_POS )
 }
 
 /*
-Reason reason () const
+QContextMenuEvent::Reason reason() const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_REASON )
 {

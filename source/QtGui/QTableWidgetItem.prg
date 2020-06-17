@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_DELETE )
 }
 
 /*
-QBrush background () const
+QBrush background() const
 */
 HB_FUNC_STATIC( QTABLEWIDGETITEM_BACKGROUND )
 {
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_BACKGROUND )
 }
 
 /*
-Qt::CheckState checkState () const
+Qt::CheckState checkState() const
 */
 HB_FUNC_STATIC( QTABLEWIDGETITEM_CHECKSTATE )
 {
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_CHECKSTATE )
 }
 
 /*
-virtual QTableWidgetItem * clone () const
+virtual QTableWidgetItem * clone() const
 */
 HB_FUNC_STATIC( QTABLEWIDGETITEM_CLONE )
 {
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_DATA )
 }
 
 /*
-Qt::ItemFlags flags () const
+Qt::ItemFlags flags() const
 */
 HB_FUNC_STATIC( QTABLEWIDGETITEM_FLAGS )
 {
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_FLAGS )
 }
 
 /*
-QFont font () const
+QFont font() const
 */
 HB_FUNC_STATIC( QTABLEWIDGETITEM_FONT )
 {
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_FONT )
 }
 
 /*
-QBrush foreground () const
+QBrush foreground() const
 */
 HB_FUNC_STATIC( QTABLEWIDGETITEM_FOREGROUND )
 {
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_FOREGROUND )
 }
 
 /*
-QIcon icon () const
+QIcon icon() const
 */
 HB_FUNC_STATIC( QTABLEWIDGETITEM_ICON )
 {
@@ -833,7 +833,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETWHATSTHIS )
 }
 
 /*
-QSize sizeHint () const
+QSize sizeHint() const
 */
 HB_FUNC_STATIC( QTABLEWIDGETITEM_SIZEHINT )
 {
@@ -882,7 +882,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_STATUSTIP )
 }
 
 /*
-QTableWidget * tableWidget () const
+QTableWidget * tableWidget() const
 */
 HB_FUNC_STATIC( QTABLEWIDGETITEM_TABLEWIDGET )
 {

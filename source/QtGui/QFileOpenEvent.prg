@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QFILEOPENEVENT_OPENFILE )
 }
 
 /*
-QUrl url () const
+QUrl url() const
 */
 HB_FUNC_STATIC( QFILEOPENEVENT_URL )
 {

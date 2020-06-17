@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QSIZEGRIP_SETVISIBLE )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSIZEGRIP_SIZEHINT )
 {

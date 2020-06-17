@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QTEXTLINE_LINENUMBER )
 }
 
 /*
-QRectF naturalTextRect () const
+QRectF naturalTextRect() const
 */
 HB_FUNC_STATIC( QTEXTLINE_NATURALTEXTRECT )
 {
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QTEXTLINE_NATURALTEXTWIDTH )
 }
 
 /*
-QPointF position () const
+QPointF position() const
 */
 HB_FUNC_STATIC( QTEXTLINE_POSITION )
 {
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QTEXTLINE_POSITION )
 }
 
 /*
-QRectF rect () const
+QRectF rect() const
 */
 HB_FUNC_STATIC( QTEXTLINE_RECT )
 {

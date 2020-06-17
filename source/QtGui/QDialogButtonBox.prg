@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_CENTERBUTTONS )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_CLEAR )
 {
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_CLEAR )
 }
 
 /*
-Qt::Orientation orientation () const
+Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ORIENTATION )
 {
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTON )
 }
 
 /*
-StandardButtons standardButtons () const
+QDialogButtonBox::StandardButtons standardButtons() const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTONS )
 {

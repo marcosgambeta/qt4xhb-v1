@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_DELETE )
 }
 
 /*
-Qt::FillRule fillRule () const
+Qt::FillRule fillRule() const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_FILLRULE )
 {
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_FILLRULE )
 }
 
 /*
-QPolygonF polygon () const
+QPolygonF polygon() const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_POLYGON )
 {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SETPOLYGON )
 }
 
 /*
-virtual QRectF boundingRect () const
+virtual QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_BOUNDINGRECT )
 {
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_ISOBSCUREDBY )
 }
 
 /*
-virtual QPainterPath opaqueArea () const
+virtual QPainterPath opaqueArea() const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_OPAQUEAREA )
 {
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_PAINT )
 }
 
 /*
-virtual QPainterPath shape () const
+virtual QPainterPath shape() const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SHAPE )
 {

@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QLISTVIEW_BATCHSIZE )
 }
 
 /*
-void clearPropertyFlags ()
+void clearPropertyFlags()
 */
 HB_FUNC_STATIC( QLISTVIEW_CLEARPROPERTYFLAGS )
 {
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QLISTVIEW_CLEARPROPERTYFLAGS )
 }
 
 /*
-Flow flow () const
+QListView::Flow flow() const
 */
 HB_FUNC_STATIC( QLISTVIEW_FLOW )
 {
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QLISTVIEW_FLOW )
 }
 
 /*
-QSize gridSize () const
+QSize gridSize() const
 */
 HB_FUNC_STATIC( QLISTVIEW_GRIDSIZE )
 {
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QLISTVIEW_ISWRAPPING )
 }
 
 /*
-LayoutMode layoutMode () const
+QListView::LayoutMode layoutMode() const
 */
 HB_FUNC_STATIC( QLISTVIEW_LAYOUTMODE )
 {
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QLISTVIEW_MODELCOLUMN )
 }
 
 /*
-Movement movement () const
+QListView::Movement movement() const
 */
 HB_FUNC_STATIC( QLISTVIEW_MOVEMENT )
 {
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QLISTVIEW_MOVEMENT )
 }
 
 /*
-ResizeMode resizeMode () const
+QListView::ResizeMode resizeMode() const
 */
 HB_FUNC_STATIC( QLISTVIEW_RESIZEMODE )
 {
@@ -792,7 +792,7 @@ HB_FUNC_STATIC( QLISTVIEW_UNIFORMITEMSIZES )
 }
 
 /*
-ViewMode viewMode () const
+QListView::ViewMode viewMode() const
 */
 HB_FUNC_STATIC( QLISTVIEW_VIEWMODE )
 {

@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_SETSTYLE )
 }
 
 /*
-Style style () const
+QTextListFormat::Style style() const
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_STYLE )
 {

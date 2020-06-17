@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_DELETE )
 }
 
 /*
-void beginLayout ()
+void beginLayout()
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_BEGINLAYOUT )
 {
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_BEGINLAYOUT )
 }
 
 /*
-QRectF boundingRect () const
+QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_BOUNDINGRECT )
 {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_CACHEENABLED )
 }
 
 /*
-void clearAdditionalFormats ()
+void clearAdditionalFormats()
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_CLEARADDITIONALFORMATS )
 {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_CLEARADDITIONALFORMATS )
 }
 
 /*
-void clearLayout ()
+void clearLayout()
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_CLEARLAYOUT )
 {
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_CLEARLAYOUT )
 }
 
 /*
-QTextLine createLine ()
+QTextLine createLine()
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_CREATELINE )
 {
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_CREATELINE )
 }
 
 /*
-Qt::CursorMoveStyle cursorMoveStyle () const
+Qt::CursorMoveStyle cursorMoveStyle() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_CURSORMOVESTYLE )
 {
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_DRAWCURSOR )
 }
 
 /*
-void endLayout ()
+void endLayout()
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_ENDLAYOUT )
 {
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_ENDLAYOUT )
 }
 
 /*
-QFont font () const
+QFont font() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_FONT )
 {
@@ -681,7 +681,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEXTCURSORPOSITION )
 }
 
 /*
-QPointF position () const
+QPointF position() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_POSITION )
 {
@@ -1008,7 +1008,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_TEXT )
 }
 
 /*
-QTextOption textOption () const
+QTextOption textOption() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_TEXTOPTION )
 {

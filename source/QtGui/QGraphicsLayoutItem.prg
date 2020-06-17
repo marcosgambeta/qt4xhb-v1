@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_DELETE )
 }
 
 /*
-QRectF contentsRect () const
+QRectF contentsRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_CONTENTSRECT )
 {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_EFFECTIVESIZEHINT )
 }
 
 /*
-QRectF geometry () const
+QRectF geometry() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_GEOMETRY )
 {
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_GETCONTENTSMARGINS )
 }
 
 /*
-QGraphicsItem * graphicsItem () const
+QGraphicsItem * graphicsItem() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_GRAPHICSITEM )
 {
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MAXIMUMHEIGHT )
 }
 
 /*
-QSizeF maximumSize () const
+QSizeF maximumSize() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MAXIMUMSIZE )
 {
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MINIMUMHEIGHT )
 }
 
 /*
-QSizeF minimumSize () const
+QSizeF minimumSize() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MINIMUMSIZE )
 {
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_OWNEDBYLAYOUT )
 }
 
 /*
-QGraphicsLayoutItem * parentLayoutItem () const
+QGraphicsLayoutItem * parentLayoutItem() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PARENTLAYOUTITEM )
 {
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PREFERREDHEIGHT )
 }
 
 /*
-QSizeF preferredSize () const
+QSizeF preferredSize() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PREFERREDSIZE )
 {
@@ -928,7 +928,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETSIZEPOLICY )
 }
 
 /*
-QSizePolicy sizePolicy () const
+QSizePolicy sizePolicy() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SIZEPOLICY )
 {
@@ -953,7 +953,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SIZEPOLICY )
 }
 
 /*
-virtual void updateGeometry ()
+virtual void updateGeometry()
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_UPDATEGEOMETRY )
 {

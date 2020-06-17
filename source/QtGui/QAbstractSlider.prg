@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_MINIMUM )
 }
 
 /*
-Qt::Orientation orientation () const
+Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_ORIENTATION )
 {

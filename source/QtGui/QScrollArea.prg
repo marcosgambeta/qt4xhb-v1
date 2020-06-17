@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QSCROLLAREA_DELETE )
 }
 
 /*
-Qt::Alignment alignment () const
+Qt::Alignment alignment() const
 */
 HB_FUNC_STATIC( QSCROLLAREA_ALIGNMENT )
 {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QSCROLLAREA_SETWIDGETRESIZABLE )
 }
 
 /*
-QWidget * takeWidget ()
+QWidget * takeWidget()
 */
 HB_FUNC_STATIC( QSCROLLAREA_TAKEWIDGET )
 {
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QSCROLLAREA_TAKEWIDGET )
 }
 
 /*
-QWidget * widget () const
+QWidget * widget() const
 */
 HB_FUNC_STATIC( QSCROLLAREA_WIDGET )
 {
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QSCROLLAREA_FOCUSNEXTPREVCHILD )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSCROLLAREA_SIZEHINT )
 {

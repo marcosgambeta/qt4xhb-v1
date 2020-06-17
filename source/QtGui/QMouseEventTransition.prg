@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_DELETE )
 }
 
 /*
-Qt::MouseButton button () const
+Qt::MouseButton button() const
 */
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_BUTTON )
 {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_BUTTON )
 }
 
 /*
-QPainterPath hitTestPath () const
+QPainterPath hitTestPath() const
 */
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_HITTESTPATH )
 {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_HITTESTPATH )
 }
 
 /*
-Qt::KeyboardModifiers modifierMask () const
+Qt::KeyboardModifiers modifierMask() const
 */
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_MODIFIERMASK )
 {

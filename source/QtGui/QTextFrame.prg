@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QTEXTFRAME_CHILDFRAMES )
 }
 
 /*
-QTextCursor firstCursorPosition () const
+QTextCursor firstCursorPosition() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_FIRSTCURSORPOSITION )
 {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QTEXTFRAME_FIRSTPOSITION )
 }
 
 /*
-QTextFrameFormat frameFormat () const
+QTextFrameFormat frameFormat() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_FRAMEFORMAT )
 {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QTEXTFRAME_FRAMEFORMAT )
 }
 
 /*
-QTextCursor lastCursorPosition () const
+QTextCursor lastCursorPosition() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_LASTCURSORPOSITION )
 {
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QTEXTFRAME_LASTPOSITION )
 }
 
 /*
-QTextFrame * parentFrame () const
+QTextFrame * parentFrame() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_PARENTFRAME )
 {

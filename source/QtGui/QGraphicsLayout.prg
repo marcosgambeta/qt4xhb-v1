@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_DELETE )
 }
 
 /*
-void activate ()
+void activate()
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_ACTIVATE )
 {
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_COUNT )
 }
 
 /*
-virtual void invalidate ()
+virtual void invalidate()
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_INVALIDATE )
 {
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_GETCONTENTSMARGINS )
 }
 
 /*
-virtual void updateGeometry ()
+virtual void updateGeometry()
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_UPDATEGEOMETRY )
 {

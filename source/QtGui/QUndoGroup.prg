@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QUNDOGROUP_DELETE )
 }
 
 /*
-QUndoStack * activeStack () const
+QUndoStack * activeStack() const
 */
 HB_FUNC_STATIC( QUNDOGROUP_ACTIVESTACK )
 {
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QUNDOGROUP_UNDOTEXT )
 }
 
 /*
-void redo ()
+void redo()
 */
 HB_FUNC_STATIC( QUNDOGROUP_REDO )
 {
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QUNDOGROUP_SETACTIVESTACK )
 }
 
 /*
-void undo ()
+void undo()
 */
 HB_FUNC_STATIC( QUNDOGROUP_UNDO )
 {

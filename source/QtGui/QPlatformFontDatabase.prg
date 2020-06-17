@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_FONTENGINE )
 }
 
 /*
-virtual void populateFontDatabase ()
+virtual void populateFontDatabase()
 */
 HB_FUNC_STATIC( QPLATFORMFONTDATABASE_POPULATEFONTDATABASE )
 {

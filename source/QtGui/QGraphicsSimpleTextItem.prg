@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_DELETE )
 }
 
 /*
-QFont font () const
+QFont font() const
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_FONT )
 {
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_TEXT )
 }
 
 /*
-virtual QRectF boundingRect () const
+virtual QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_BOUNDINGRECT )
 {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_ISOBSCUREDBY )
 }
 
 /*
-virtual QPainterPath opaqueArea () const
+virtual QPainterPath opaqueArea() const
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_OPAQUEAREA )
 {
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_PAINT )
 }
 
 /*
-virtual QPainterPath shape () const
+virtual QPainterPath shape() const
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SHAPE )
 {

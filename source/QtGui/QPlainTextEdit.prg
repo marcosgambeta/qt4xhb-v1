@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CENTERONSCROLL )
 }
 
 /*
-QMenu * createStandardContextMenu ()
+QMenu * createStandardContextMenu()
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_CREATESTANDARDCONTEXTMENU )
 {
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CREATESTANDARDCONTEXTMENU )
 }
 
 /*
-QTextCharFormat currentCharFormat () const
+QTextCharFormat currentCharFormat() const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_CURRENTCHARFORMAT )
 {
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CURSORWIDTH )
 }
 
 /*
-QTextDocument * document () const
+QTextDocument * document() const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_DOCUMENT )
 {
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_DOCUMENTTITLE )
 }
 
 /*
-void ensureCursorVisible ()
+void ensureCursorVisible()
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ENSURECURSORVISIBLE )
 {
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ISUNDOREDOENABLED )
 }
 
 /*
-LineWrapMode lineWrapMode () const
+QPlainTextEdit::LineWrapMode lineWrapMode() const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_LINEWRAPMODE )
 {
@@ -1228,7 +1228,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_TABSTOPWIDTH )
 }
 
 /*
-QTextCursor textCursor () const
+QTextCursor textCursor() const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_TEXTCURSOR )
 {
@@ -1253,7 +1253,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_TEXTCURSOR )
 }
 
 /*
-Qt::TextInteractionFlags textInteractionFlags () const
+Qt::TextInteractionFlags textInteractionFlags() const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_TEXTINTERACTIONFLAGS )
 {
@@ -1301,7 +1301,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_TOPLAINTEXT )
 }
 
 /*
-QTextOption::WrapMode wordWrapMode () const
+QTextOption::WrapMode wordWrapMode() const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_WORDWRAPMODE )
 {
@@ -1377,7 +1377,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_APPENDPLAINTEXT )
 }
 
 /*
-void centerCursor ()
+void centerCursor()
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_CENTERCURSOR )
 {
@@ -1403,7 +1403,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CENTERCURSOR )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_CLEAR )
 {
@@ -1429,7 +1429,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CLEAR )
 }
 
 /*
-void copy ()
+void copy()
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_COPY )
 {
@@ -1455,7 +1455,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_COPY )
 }
 
 /*
-void cut ()
+void cut()
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_CUT )
 {
@@ -1507,7 +1507,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_INSERTPLAINTEXT )
 }
 
 /*
-void paste ()
+void paste()
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_PASTE )
 {
@@ -1533,7 +1533,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_PASTE )
 }
 
 /*
-void redo ()
+void redo()
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_REDO )
 {
@@ -1559,7 +1559,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_REDO )
 }
 
 /*
-void selectAll ()
+void selectAll()
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SELECTALL )
 {
@@ -1611,7 +1611,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETPLAINTEXT )
 }
 
 /*
-void undo ()
+void undo()
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_UNDO )
 {

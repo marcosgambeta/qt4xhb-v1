@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_CURRENTINDEX )
 }
 
 /*
-QWidget * currentWidget () const
+QWidget * currentWidget() const
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_CURRENTWIDGET )
 {
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_SETSTACKINGMODE )
 }
 
 /*
-StackingMode stackingMode () const
+QStackedLayout::StackingMode stackingMode() const
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_STACKINGMODE )
 {

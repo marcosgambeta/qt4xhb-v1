@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QRUBBERBAND_SETGEOMETRY )
 }
 
 /*
-Shape shape () const
+QRubberBand::Shape shape() const
 */
 HB_FUNC_STATIC( QRUBBERBAND_SHAPE )
 {

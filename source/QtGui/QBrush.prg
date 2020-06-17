@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QBRUSH_SETTRANSFORM )
 }
 
 /*
-Qt::BrushStyle style () const
+Qt::BrushStyle style() const
 */
 HB_FUNC_STATIC( QBRUSH_STYLE )
 {
@@ -544,7 +544,7 @@ HB_FUNC_STATIC( QBRUSH_STYLE )
 }
 
 /*
-QPixmap texture () const
+QPixmap texture() const
 */
 HB_FUNC_STATIC( QBRUSH_TEXTURE )
 {
@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QBRUSH_TEXTURE )
 }
 
 /*
-QImage textureImage () const
+QImage textureImage() const
 */
 HB_FUNC_STATIC( QBRUSH_TEXTUREIMAGE )
 {
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QBRUSH_TEXTUREIMAGE )
 }
 
 /*
-QTransform transform () const
+QTransform transform() const
 */
 HB_FUNC_STATIC( QBRUSH_TRANSFORM )
 {

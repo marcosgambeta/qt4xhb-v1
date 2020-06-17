@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QICONENGINEV2_AVAILABLESIZES )
 }
 
 /*
-virtual QIconEngineV2 * clone () const
+virtual QIconEngineV2 * clone() const
 */
 HB_FUNC_STATIC( QICONENGINEV2_CLONE )
 {

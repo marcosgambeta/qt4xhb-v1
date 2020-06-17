@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QLINEEDIT_DELETE )
 }
 
 /*
-Qt::Alignment alignment () const
+Qt::Alignment alignment() const
 */
 HB_FUNC_STATIC( QLINEEDIT_ALIGNMENT )
 {
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QLINEEDIT_ALIGNMENT )
 }
 
 /*
-void backspace ()
+void backspace()
 */
 HB_FUNC_STATIC( QLINEEDIT_BACKSPACE )
 {
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QLINEEDIT_BACKSPACE )
 }
 
 /*
-QCompleter * completer () const
+QCompleter * completer() const
 */
 HB_FUNC_STATIC( QLINEEDIT_COMPLETER )
 {
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QLINEEDIT_COMPLETER )
 }
 
 /*
-QMenu * createStandardContextMenu ()
+QMenu * createStandardContextMenu()
 */
 HB_FUNC_STATIC( QLINEEDIT_CREATESTANDARDCONTEXTMENU )
 {
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORWORDFORWARD )
 }
 
 /*
-void del ()
+void del()
 */
 HB_FUNC_STATIC( QLINEEDIT_DEL )
 {
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QLINEEDIT_DEL )
 }
 
 /*
-void deselect ()
+void deselect()
 */
 HB_FUNC_STATIC( QLINEEDIT_DESELECT )
 {
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QLINEEDIT_DRAGENABLED )
 }
 
 /*
-EchoMode echoMode () const
+QLineEdit::EchoMode echoMode() const
 */
 HB_FUNC_STATIC( QLINEEDIT_ECHOMODE )
 {
@@ -904,7 +904,7 @@ HB_FUNC_STATIC( QLINEEDIT_PLACEHOLDERTEXT )
 }
 
 /*
-virtual QSize minimumSizeHint () const
+virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QLINEEDIT_MINIMUMSIZEHINT )
 {
@@ -1366,7 +1366,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETVALIDATOR )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QLINEEDIT_SIZEHINT )
 {
@@ -1415,7 +1415,7 @@ HB_FUNC_STATIC( QLINEEDIT_TEXT )
 }
 
 /*
-QMargins textMargins () const
+QMargins textMargins() const
 */
 HB_FUNC_STATIC( QLINEEDIT_TEXTMARGINS )
 {
@@ -1440,7 +1440,7 @@ HB_FUNC_STATIC( QLINEEDIT_TEXTMARGINS )
 }
 
 /*
-const QValidator * validator () const
+const QValidator * validator() const
 */
 HB_FUNC_STATIC( QLINEEDIT_VALIDATOR )
 {
@@ -1514,7 +1514,7 @@ HB_FUNC_STATIC( QLINEEDIT_INPUTMETHODQUERY )
 }
 
 /*
-void copy () const
+void copy() const
 */
 HB_FUNC_STATIC( QLINEEDIT_COPY )
 {
@@ -1540,7 +1540,7 @@ HB_FUNC_STATIC( QLINEEDIT_COPY )
 }
 
 /*
-void cut ()
+void cut()
 */
 HB_FUNC_STATIC( QLINEEDIT_CUT )
 {
@@ -1566,7 +1566,7 @@ HB_FUNC_STATIC( QLINEEDIT_CUT )
 }
 
 /*
-void paste ()
+void paste()
 */
 HB_FUNC_STATIC( QLINEEDIT_PASTE )
 {
@@ -1592,7 +1592,7 @@ HB_FUNC_STATIC( QLINEEDIT_PASTE )
 }
 
 /*
-void redo ()
+void redo()
 */
 HB_FUNC_STATIC( QLINEEDIT_REDO )
 {
@@ -1618,7 +1618,7 @@ HB_FUNC_STATIC( QLINEEDIT_REDO )
 }
 
 /*
-void selectAll ()
+void selectAll()
 */
 HB_FUNC_STATIC( QLINEEDIT_SELECTALL )
 {
@@ -1670,7 +1670,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETTEXT )
 }
 
 /*
-void undo ()
+void undo()
 */
 HB_FUNC_STATIC( QLINEEDIT_UNDO )
 {

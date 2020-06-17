@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QMATRIX4X4_FILL )
 }
 
 /*
-void flipCoordinates ()
+void flipCoordinates()
 */
 HB_FUNC_STATIC( QMATRIX4X4_FLIPCOORDINATES )
 {
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QMATRIX4X4_MAPVECTOR )
 }
 
 /*
-QMatrix3x3 normalMatrix () const
+QMatrix3x3 normalMatrix() const
 */
 HB_FUNC_STATIC( QMATRIX4X4_NORMALMATRIX )
 {
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QMATRIX4X4_NORMALMATRIX )
 }
 
 /*
-void optimize ()
+void optimize()
 */
 HB_FUNC_STATIC( QMATRIX4X4_OPTIMIZE )
 {
@@ -923,7 +923,7 @@ HB_FUNC_STATIC( QMATRIX4X4_SETROW )
 }
 
 /*
-void setToIdentity ()
+void setToIdentity()
 */
 HB_FUNC_STATIC( QMATRIX4X4_SETTOIDENTITY )
 {
@@ -1069,7 +1069,7 @@ HB_FUNC_STATIC( QMATRIX4X4_TRANSLATE )
 }
 
 /*
-QMatrix4x4 transposed () const
+QMatrix4x4 transposed() const
 */
 HB_FUNC_STATIC( QMATRIX4X4_TRANSPOSED )
 {

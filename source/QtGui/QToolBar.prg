@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
 }
 
 /*
-QAction * addSeparator ()
+QAction * addSeparator()
 */
 HB_FUNC_STATIC( QTOOLBAR_ADDSEPARATOR )
 {
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDWIDGET )
 }
 
 /*
-Qt::ToolBarAreas allowedAreas () const
+Qt::ToolBarAreas allowedAreas() const
 */
 HB_FUNC_STATIC( QTOOLBAR_ALLOWEDAREAS )
 {
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QTOOLBAR_ALLOWEDAREAS )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QTOOLBAR_CLEAR )
 {
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QTOOLBAR_CLEAR )
 }
 
 /*
-QSize iconSize () const
+QSize iconSize() const
 */
 HB_FUNC_STATIC( QTOOLBAR_ICONSIZE )
 {
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QTOOLBAR_ISMOVABLE )
 }
 
 /*
-Qt::Orientation orientation () const
+Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QTOOLBAR_ORIENTATION )
 {
@@ -692,7 +692,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETORIENTATION )
 }
 
 /*
-QAction * toggleViewAction () const
+QAction * toggleViewAction() const
 */
 HB_FUNC_STATIC( QTOOLBAR_TOGGLEVIEWACTION )
 {
@@ -717,7 +717,7 @@ HB_FUNC_STATIC( QTOOLBAR_TOGGLEVIEWACTION )
 }
 
 /*
-Qt::ToolButtonStyle toolButtonStyle () const
+Qt::ToolButtonStyle toolButtonStyle() const
 */
 HB_FUNC_STATIC( QTOOLBAR_TOOLBUTTONSTYLE )
 {

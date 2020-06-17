@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_DELETE )
 }
 
 /*
-QBrush background () const
+QBrush background() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_BACKGROUND )
 {
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_BRUSHPROPERTY )
 }
 
 /*
-void clearBackground ()
+void clearBackground()
 */
 HB_FUNC_STATIC( QTEXTFORMAT_CLEARBACKGROUND )
 {
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_CLEARBACKGROUND )
 }
 
 /*
-void clearForeground ()
+void clearForeground()
 */
 HB_FUNC_STATIC( QTEXTFORMAT_CLEARFOREGROUND )
 {
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_DOUBLEPROPERTY )
 }
 
 /*
-QBrush foreground () const
+QBrush foreground() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_FOREGROUND )
 {
@@ -639,7 +639,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_ISVALID )
 }
 
 /*
-Qt::LayoutDirection layoutDirection () const
+Qt::LayoutDirection layoutDirection() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_LAYOUTDIRECTION )
 {
@@ -1101,7 +1101,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_STRINGPROPERTY )
 }
 
 /*
-QTextBlockFormat toBlockFormat () const
+QTextBlockFormat toBlockFormat() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_TOBLOCKFORMAT )
 {
@@ -1126,7 +1126,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOBLOCKFORMAT )
 }
 
 /*
-QTextCharFormat toCharFormat () const
+QTextCharFormat toCharFormat() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_TOCHARFORMAT )
 {
@@ -1151,7 +1151,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOCHARFORMAT )
 }
 
 /*
-QTextFrameFormat toFrameFormat () const
+QTextFrameFormat toFrameFormat() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_TOFRAMEFORMAT )
 {
@@ -1176,7 +1176,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOFRAMEFORMAT )
 }
 
 /*
-QTextImageFormat toImageFormat () const
+QTextImageFormat toImageFormat() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_TOIMAGEFORMAT )
 {
@@ -1201,7 +1201,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOIMAGEFORMAT )
 }
 
 /*
-QTextListFormat toListFormat () const
+QTextListFormat toListFormat() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_TOLISTFORMAT )
 {
@@ -1226,7 +1226,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOLISTFORMAT )
 }
 
 /*
-QTextTableCellFormat toTableCellFormat () const
+QTextTableCellFormat toTableCellFormat() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_TOTABLECELLFORMAT )
 {
@@ -1251,7 +1251,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOTABLECELLFORMAT )
 }
 
 /*
-QTextTableFormat toTableFormat () const
+QTextTableFormat toTableFormat() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_TOTABLEFORMAT )
 {

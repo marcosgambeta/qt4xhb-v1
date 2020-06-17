@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QTEXTLIST_COUNT )
 }
 
 /*
-QTextListFormat format () const
+QTextListFormat format() const
 */
 HB_FUNC_STATIC( QTEXTLIST_FORMAT )
 {

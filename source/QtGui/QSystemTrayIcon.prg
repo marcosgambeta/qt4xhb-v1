@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_DELETE )
 }
 
 /*
-QMenu * contextMenu () const
+QMenu * contextMenu() const
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_CONTEXTMENU )
 {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_CONTEXTMENU )
 }
 
 /*
-QRect geometry () const
+QRect geometry() const
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_GEOMETRY )
 {
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_GEOMETRY )
 }
 
 /*
-QIcon icon () const
+QIcon icon() const
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_ICON )
 {
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOWMESSAGE )
 }
 
 /*
-QString toolTip () const
+QString toolTip() const
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_TOOLTIP )
 {
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_TOOLTIP )
 }
 
 /*
-void hide ()
+void hide()
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_HIDE )
 {
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SETVISIBLE )
 }
 
 /*
-void show ()
+void show()
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOW )
 {

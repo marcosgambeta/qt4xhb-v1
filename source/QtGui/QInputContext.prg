@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_FILTEREVENT )
 }
 
 /*
-QWidget * focusWidget () const
+QWidget * focusWidget() const
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_FOCUSWIDGET )
 {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_FOCUSWIDGET )
 }
 
 /*
-virtual QFont font () const
+virtual QFont font() const
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_FONT )
 {
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_MOUSEHANDLER )
 }
 
 /*
-virtual void reset () = 0
+virtual void reset() = 0
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_RESET )
 {
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_STANDARDFORMAT )
 }
 
 /*
-virtual void update ()
+virtual void update()
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_UPDATE )
 {

@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QSWIPEGESTURE_DELETE )
 }
 
 /*
-SwipeDirection horizontalDirection () const
+QSwipeGesture::SwipeDirection horizontalDirection() const
 */
 HB_FUNC_STATIC( QSWIPEGESTURE_HORIZONTALDIRECTION )
 {
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QSWIPEGESTURE_SWIPEANGLE )
 }
 
 /*
-SwipeDirection verticalDirection () const
+QSwipeGesture::SwipeDirection verticalDirection() const
 */
 HB_FUNC_STATIC( QSWIPEGESTURE_VERTICALDIRECTION )
 {

@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_DELETE )
 }
 
 /*
-const QKeySequence &key()
+const QKeySequence & key()
 */
 HB_FUNC_STATIC( QSHORTCUTEVENT_KEY )
 {

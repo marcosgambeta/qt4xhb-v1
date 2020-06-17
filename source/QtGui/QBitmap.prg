@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QBITMAP_DELETE )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QBITMAP_CLEAR )
 {

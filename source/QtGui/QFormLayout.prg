@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ADDROW )
 }
 
 /*
-FieldGrowthPolicy fieldGrowthPolicy () const
+QFormLayout::FieldGrowthPolicy fieldGrowthPolicy() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_FIELDGROWTHPOLICY )
 {
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_FIELDGROWTHPOLICY )
 }
 
 /*
-Qt::Alignment formAlignment () const
+Qt::Alignment formAlignment() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_FORMALIGNMENT )
 {
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_INSERTROW )
 }
 
 /*
-Qt::Alignment labelAlignment () const
+Qt::Alignment labelAlignment() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_LABELALIGNMENT )
 {
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ROWCOUNT )
 }
 
 /*
-RowWrapPolicy rowWrapPolicy () const
+QFormLayout::RowWrapPolicy rowWrapPolicy() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_ROWWRAPPOLICY )
 {
@@ -936,7 +936,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_COUNT )
 }
 
 /*
-virtual Qt::Orientations expandingDirections () const
+virtual Qt::Orientations expandingDirections() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_EXPANDINGDIRECTIONS )
 {
@@ -1008,7 +1008,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_HEIGHTFORWIDTH )
 }
 
 /*
-virtual void invalidate ()
+virtual void invalidate()
 */
 HB_FUNC_STATIC( QFORMLAYOUT_INVALIDATE )
 {
@@ -1083,7 +1083,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ITEMAT )
 }
 
 /*
-virtual QSize minimumSize () const
+virtual QSize minimumSize() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_MINIMUMSIZE )
 {
@@ -1134,7 +1134,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETGEOMETRY )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SIZEHINT )
 {

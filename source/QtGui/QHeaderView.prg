@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QHEADERVIEW_COUNT )
 }
 
 /*
-Qt::Alignment defaultAlignment () const
+Qt::Alignment defaultAlignment() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_DEFAULTALIGNMENT )
 {
@@ -599,7 +599,7 @@ HB_FUNC_STATIC( QHEADERVIEW_OFFSET )
 }
 
 /*
-Qt::Orientation orientation () const
+Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_ORIENTATION )
 {
@@ -723,7 +723,7 @@ HB_FUNC_STATIC( QHEADERVIEW_RESTORESTATE )
 }
 
 /*
-QByteArray saveState () const
+QByteArray saveState() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_SAVESTATE )
 {
@@ -1255,7 +1255,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SHOWSECTION )
 }
 
 /*
-Qt::SortOrder sortIndicatorOrder () const
+Qt::SortOrder sortIndicatorOrder() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_SORTINDICATORORDER )
 {
@@ -1425,7 +1425,7 @@ HB_FUNC_STATIC( QHEADERVIEW_VISUALINDEXAT )
 }
 
 /*
-virtual void reset ()
+virtual void reset()
 */
 HB_FUNC_STATIC( QHEADERVIEW_RESET )
 {
@@ -1477,7 +1477,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETMODEL )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_SIZEHINT )
 {
@@ -1554,7 +1554,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETOFFSET )
 }
 
 /*
-void setOffsetToLastSection ()
+void setOffsetToLastSection()
 */
 HB_FUNC_STATIC( QHEADERVIEW_SETOFFSETTOLASTSECTION )
 {

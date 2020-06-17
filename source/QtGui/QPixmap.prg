@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QPIXMAP_DELETE )
 }
 
 /*
-qint64 cacheKey () const
+qint64 cacheKey() const
 */
 HB_FUNC_STATIC( QPIXMAP_CACHEKEY )
 {
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QPIXMAP_DEPTH )
 }
 
 /*
-void detach ()
+void detach()
 */
 HB_FUNC_STATIC( QPIXMAP_DETACH )
 {
@@ -675,7 +675,7 @@ HB_FUNC_STATIC( QPIXMAP_LOADFROMDATA )
 }
 
 /*
-QBitmap mask () const
+QBitmap mask() const
 */
 HB_FUNC_STATIC( QPIXMAP_MASK )
 {
@@ -700,7 +700,7 @@ HB_FUNC_STATIC( QPIXMAP_MASK )
 }
 
 /*
-QRect rect () const
+QRect rect() const
 */
 HB_FUNC_STATIC( QPIXMAP_RECT )
 {
@@ -948,7 +948,7 @@ HB_FUNC_STATIC( QPIXMAP_SETMASK )
 }
 
 /*
-QSize size () const
+QSize size() const
 */
 HB_FUNC_STATIC( QPIXMAP_SIZE )
 {
@@ -999,7 +999,7 @@ HB_FUNC_STATIC( QPIXMAP_SWAP )
 }
 
 /*
-QImage toImage () const
+QImage toImage() const
 */
 HB_FUNC_STATIC( QPIXMAP_TOIMAGE )
 {

@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SETSOURCEMODEL )
 }
 
 /*
-QAbstractItemModel * sourceModel () const
+QAbstractItemModel * sourceModel() const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SOURCEMODEL )
 {
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MIMEDATA )
 }
 
 /*
-virtual QStringList mimeTypes () const
+virtual QStringList mimeTypes() const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MIMETYPES )
 {
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MIMETYPES )
 }
 
 /*
-virtual void revert ()
+virtual void revert()
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_REVERT )
 {
@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SUBMIT )
 }
 
 /*
-virtual Qt::DropActions supportedDropActions () const
+virtual Qt::DropActions supportedDropActions() const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SUPPORTEDDROPACTIONS )
 {

@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_COLUMNWIDTHS )
 }
 
 /*
-QWidget * previewWidget () const
+QWidget * previewWidget() const
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_PREVIEWWIDGET )
 {
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SCROLLTO )
 }
 
 /*
-virtual void selectAll ()
+virtual void selectAll()
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_SELECTALL )
 {
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SETSELECTIONMODEL )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_SIZEHINT )
 {

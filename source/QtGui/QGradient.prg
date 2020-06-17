@@ -52,7 +52,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-CoordinateMode coordinateMode () const
+QGradient::CoordinateMode coordinateMode() const
 */
 HB_FUNC_STATIC( QGRADIENT_COORDINATEMODE )
 {
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QGRADIENT_SETSPREAD )
 }
 
 /*
-Spread spread () const
+QGradient::Spread spread() const
 */
 HB_FUNC_STATIC( QGRADIENT_SPREAD )
 {
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QGRADIENT_SPREAD )
 }
 
 /*
-Type type () const
+QGradient::Type type() const
 */
 HB_FUNC_STATIC( QGRADIENT_TYPE )
 {

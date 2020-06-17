@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BORDER )
 }
 
 /*
-QBrush borderBrush () const
+QBrush borderBrush() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BORDERBRUSH )
 {
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BORDERBRUSH )
 }
 
 /*
-BorderStyle borderStyle () const
+QTextFrameFormat::BorderStyle borderStyle() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BORDERSTYLE )
 {
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BOTTOMMARGIN )
 }
 
 /*
-QTextLength height () const
+QTextLength height() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_HEIGHT )
 {
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_PADDING )
 }
 
 /*
-PageBreakFlags pageBreakPolicy () const
+QTextFormat::PageBreakFlags pageBreakPolicy() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_PAGEBREAKPOLICY )
 {
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_PAGEBREAKPOLICY )
 }
 
 /*
-Position position () const
+QTextFrameFormat::Position position() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_POSITION )
 {
@@ -803,7 +803,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_TOPMARGIN )
 }
 
 /*
-QTextLength width () const
+QTextLength width() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_WIDTH )
 {

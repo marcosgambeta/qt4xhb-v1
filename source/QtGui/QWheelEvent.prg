@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QWHEELEVENT_DELTA )
 }
 
 /*
-const QPoint &pos() const
+const QPoint & pos() const
 */
 HB_FUNC_STATIC( QWHEELEVENT_POS )
 {
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QWHEELEVENT_POS )
 }
 
 /*
-const QPoint &globalPos() const
+const QPoint & globalPos() const
 */
 HB_FUNC_STATIC( QWHEELEVENT_GLOBALPOS )
 {

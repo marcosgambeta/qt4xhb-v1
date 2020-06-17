@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QITEMDELEGATE_HASCLIPPING )
 }
 
 /*
-QItemEditorFactory * itemEditorFactory () const
+QItemEditorFactory * itemEditorFactory() const
 */
 HB_FUNC_STATIC( QITEMDELEGATE_ITEMEDITORFACTORY )
 {

@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_CANCELBUTTONTEXT )
 }
 
 /*
-QStringList comboBoxItems () const
+QStringList comboBoxItems() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_COMBOBOXITEMS )
 {
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEDECIMALS )
 }
 
 /*
-double doubleMaximum () const
+double doubleMaximum() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEMAXIMUM )
 {
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEMAXIMUM )
 }
 
 /*
-double doubleMinimum () const
+double doubleMinimum() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEMINIMUM )
 {
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEMINIMUM )
 }
 
 /*
-double doubleValue () const
+double doubleValue() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEVALUE )
 {
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEVALUE )
 }
 
 /*
-InputMode inputMode () const
+QInputDialog::InputMode inputMode() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_INPUTMODE )
 {
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_OPEN )
 }
 
 /*
-InputDialogOptions options () const
+QInputDialog::InputDialogOptions options() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_OPTIONS )
 {
@@ -1061,7 +1061,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_TESTOPTION )
 }
 
 /*
-QLineEdit::EchoMode textEchoMode () const
+QLineEdit::EchoMode textEchoMode() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_TEXTECHOMODE )
 {
@@ -1135,7 +1135,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_DONE )
 }
 
 /*
-virtual QSize minimumSizeHint () const
+virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_MINIMUMSIZEHINT )
 {
@@ -1186,7 +1186,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETVISIBLE )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SIZEHINT )
 {

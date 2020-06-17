@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QWIDGETITEM_DELETE )
 }
 
 /*
-virtual Qt::Orientations expandingDirections () const
+virtual Qt::Orientations expandingDirections() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_EXPANDINGDIRECTIONS )
 {
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QWIDGETITEM_EXPANDINGDIRECTIONS )
 }
 
 /*
-virtual QRect geometry () const
+virtual QRect geometry() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_GEOMETRY )
 {
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QWIDGETITEM_ISEMPTY )
 }
 
 /*
-virtual QSize maximumSize () const
+virtual QSize maximumSize() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_MAXIMUMSIZE )
 {
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QWIDGETITEM_MAXIMUMSIZE )
 }
 
 /*
-virtual QSize minimumSize () const
+virtual QSize minimumSize() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_MINIMUMSIZE )
 {
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QWIDGETITEM_SETGEOMETRY )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_SIZEHINT )
 {
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QWIDGETITEM_SIZEHINT )
 }
 
 /*
-virtual QWidget * widget ()
+virtual QWidget * widget()
 */
 HB_FUNC_STATIC( QWIDGETITEM_WIDGET )
 {

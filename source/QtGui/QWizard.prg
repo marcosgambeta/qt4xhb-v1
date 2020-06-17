@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QWIZARD_CURRENTID )
 }
 
 /*
-QWizardPage * currentPage () const
+QWizardPage * currentPage() const
 */
 HB_FUNC_STATIC( QWIZARD_CURRENTPAGE )
 {
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QWIZARD_NEXTID )
 }
 
 /*
-WizardOptions options () const
+QWizard::WizardOptions options() const
 */
 HB_FUNC_STATIC( QWIZARD_OPTIONS )
 {
@@ -823,7 +823,7 @@ HB_FUNC_STATIC( QWIZARD_SETWIZARDSTYLE )
 }
 
 /*
-QWidget * sideWidget () const
+QWidget * sideWidget() const
 */
 HB_FUNC_STATIC( QWIZARD_SIDEWIDGET )
 {
@@ -872,7 +872,7 @@ HB_FUNC_STATIC( QWIZARD_STARTID )
 }
 
 /*
-Qt::TextFormat subTitleFormat () const
+Qt::TextFormat subTitleFormat() const
 */
 HB_FUNC_STATIC( QWIZARD_SUBTITLEFORMAT )
 {
@@ -920,7 +920,7 @@ HB_FUNC_STATIC( QWIZARD_TESTOPTION )
 }
 
 /*
-Qt::TextFormat titleFormat () const
+Qt::TextFormat titleFormat() const
 */
 HB_FUNC_STATIC( QWIZARD_TITLEFORMAT )
 {
@@ -993,7 +993,7 @@ HB_FUNC_STATIC( QWIZARD_VISITEDPAGES )
 }
 
 /*
-WizardStyle wizardStyle () const
+QWizard::WizardStyle wizardStyle() const
 */
 HB_FUNC_STATIC( QWIZARD_WIZARDSTYLE )
 {
@@ -1043,7 +1043,7 @@ HB_FUNC_STATIC( QWIZARD_SETVISIBLE )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QWIZARD_SIZEHINT )
 {
@@ -1068,7 +1068,7 @@ HB_FUNC_STATIC( QWIZARD_SIZEHINT )
 }
 
 /*
-void back ()
+void back()
 */
 HB_FUNC_STATIC( QWIZARD_BACK )
 {
@@ -1094,7 +1094,7 @@ HB_FUNC_STATIC( QWIZARD_BACK )
 }
 
 /*
-void next ()
+void next()
 */
 HB_FUNC_STATIC( QWIZARD_NEXT )
 {
@@ -1120,7 +1120,7 @@ HB_FUNC_STATIC( QWIZARD_NEXT )
 }
 
 /*
-void restart ()
+void restart()
 */
 HB_FUNC_STATIC( QWIZARD_RESTART )
 {

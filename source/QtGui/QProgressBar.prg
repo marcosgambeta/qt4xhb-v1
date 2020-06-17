@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_DELETE )
 }
 
 /*
-Qt::Alignment alignment () const
+Qt::Alignment alignment() const
 */
 HB_FUNC_STATIC( QPROGRESSBAR_ALIGNMENT )
 {
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_MINIMUM )
 }
 
 /*
-Qt::Orientation orientation () const
+Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QPROGRESSBAR_ORIENTATION )
 {
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_TEXT )
 }
 
 /*
-QProgressBar::Direction textDirection ()
+QProgressBar::Direction textDirection()
 */
 HB_FUNC_STATIC( QPROGRESSBAR_TEXTDIRECTION )
 {
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_VALUE )
 }
 
 /*
-virtual QSize minimumSizeHint () const
+virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QPROGRESSBAR_MINIMUMSIZEHINT )
 {
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_MINIMUMSIZEHINT )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QPROGRESSBAR_SIZEHINT )
 {
@@ -522,7 +522,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_SIZEHINT )
 }
 
 /*
-void reset ()
+void reset()
 */
 HB_FUNC_STATIC( QPROGRESSBAR_RESET )
 {

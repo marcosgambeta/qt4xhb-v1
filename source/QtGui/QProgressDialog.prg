@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_WASCANCELED )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SIZEHINT )
 {
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SIZEHINT )
 }
 
 /*
-void cancel ()
+void cancel()
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_CANCEL )
 {
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_CANCEL )
 }
 
 /*
-void reset ()
+void reset()
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_RESET )
 {

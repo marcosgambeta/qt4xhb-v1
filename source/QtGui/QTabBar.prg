@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QTABBAR_DRAWBASE )
 }
 
 /*
-Qt::TextElideMode elideMode () const
+Qt::TextElideMode elideMode() const
 */
 HB_FUNC_STATIC( QTABBAR_ELIDEMODE )
 {
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QTABBAR_EXPANDING )
 }
 
 /*
-QSize iconSize () const
+QSize iconSize() const
 */
 HB_FUNC_STATIC( QTABBAR_ICONSIZE )
 {
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QTABBAR_REMOVETAB )
 }
 
 /*
-SelectionBehavior selectionBehaviorOnRemove () const
+QTabBar::SelectionBehavior selectionBehaviorOnRemove() const
 */
 HB_FUNC_STATIC( QTABBAR_SELECTIONBEHAVIORONREMOVE )
 {
@@ -992,7 +992,7 @@ HB_FUNC_STATIC( QTABBAR_SETUSESSCROLLBUTTONS )
 }
 
 /*
-Shape shape () const
+QTabBar::Shape shape() const
 */
 HB_FUNC_STATIC( QTABBAR_SHAPE )
 {
@@ -1285,7 +1285,7 @@ HB_FUNC_STATIC( QTABBAR_USESSCROLLBUTTONS )
 }
 
 /*
-virtual QSize minimumSizeHint () const
+virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QTABBAR_MINIMUMSIZEHINT )
 {
@@ -1310,7 +1310,7 @@ HB_FUNC_STATIC( QTABBAR_MINIMUMSIZEHINT )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QTABBAR_SIZEHINT )
 {

@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_BUTTONTEXT )
 }
 
 /*
-virtual void cleanupPage ()
+virtual void cleanupPage()
 */
 HB_FUNC_STATIC( QWIZARDPAGE_CLEANUPPAGE )
 {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_CLEANUPPAGE )
 }
 
 /*
-virtual void initializePage ()
+virtual void initializePage()
 */
 HB_FUNC_STATIC( QWIZARDPAGE_INITIALIZEPAGE )
 {

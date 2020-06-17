@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QTABLETEVENT_DELETE )
 }
 
 /*
-const QPoint &pos() const
+const QPoint & pos() const
 */
 HB_FUNC_STATIC( QTABLETEVENT_POS )
 {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QTABLETEVENT_POS )
 }
 
 /*
-const QPoint &globalPos() const
+const QPoint & globalPos() const
 */
 HB_FUNC_STATIC( QTABLETEVENT_GLOBALPOS )
 {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QTABLETEVENT_GLOBALPOS )
 }
 
 /*
-const QPointF &hiResGlobalPos() const
+const QPointF & hiResGlobalPos() const
 */
 HB_FUNC_STATIC( QTABLETEVENT_HIRESGLOBALPOS )
 {
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QTABLETEVENT_HIRESGLOBALY )
 }
 
 /*
-TabletDevice device() const
+QTabletEvent::TabletDevice device() const
 */
 HB_FUNC_STATIC( QTABLETEVENT_DEVICE )
 {
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QTABLETEVENT_DEVICE )
 }
 
 /*
-PointerType pointerType() const
+QTabletEvent::PointerType pointerType() const
 */
 HB_FUNC_STATIC( QTABLETEVENT_POINTERTYPE )
 {

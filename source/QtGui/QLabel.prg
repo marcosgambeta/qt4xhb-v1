@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QLABEL_DELETE )
 }
 
 /*
-Qt::Alignment alignment () const
+Qt::Alignment alignment() const
 */
 HB_FUNC_STATIC( QLABEL_ALIGNMENT )
 {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QLABEL_ALIGNMENT )
 }
 
 /*
-QWidget * buddy () const
+QWidget * buddy() const
 */
 HB_FUNC_STATIC( QLABEL_BUDDY )
 {
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QLABEL_MARGIN )
 }
 
 /*
-QMovie * movie () const
+QMovie * movie() const
 */
 HB_FUNC_STATIC( QLABEL_MOVIE )
 {
@@ -697,7 +697,7 @@ HB_FUNC_STATIC( QLABEL_TEXT )
 }
 
 /*
-Qt::TextFormat textFormat () const
+Qt::TextFormat textFormat() const
 */
 HB_FUNC_STATIC( QLABEL_TEXTFORMAT )
 {
@@ -721,7 +721,7 @@ HB_FUNC_STATIC( QLABEL_TEXTFORMAT )
 }
 
 /*
-Qt::TextInteractionFlags textInteractionFlags () const
+Qt::TextInteractionFlags textInteractionFlags() const
 */
 HB_FUNC_STATIC( QLABEL_TEXTINTERACTIONFLAGS )
 {
@@ -793,7 +793,7 @@ HB_FUNC_STATIC( QLABEL_HEIGHTFORWIDTH )
 }
 
 /*
-virtual QSize minimumSizeHint () const
+virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QLABEL_MINIMUMSIZEHINT )
 {
@@ -818,7 +818,7 @@ HB_FUNC_STATIC( QLABEL_MINIMUMSIZEHINT )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QLABEL_SIZEHINT )
 {
@@ -843,7 +843,7 @@ HB_FUNC_STATIC( QLABEL_SIZEHINT )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QLABEL_CLEAR )
 {

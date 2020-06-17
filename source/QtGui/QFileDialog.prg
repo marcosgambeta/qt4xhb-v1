@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QFILEDIALOG_DELETE )
 }
 
 /*
-AcceptMode acceptMode () const
+QFileDialog::AcceptMode acceptMode() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_ACCEPTMODE )
 {
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QFILEDIALOG_DEFAULTSUFFIX )
 }
 
 /*
-QDir directory () const
+QDir directory() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_DIRECTORY )
 {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QFILEDIALOG_DIRECTORY )
 }
 
 /*
-FileMode fileMode () const
+QFileDialog::FileMode fileMode() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_FILEMODE )
 {
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QFILEDIALOG_FILEMODE )
 }
 
 /*
-QDir::Filters filter () const
+QDir::Filters filter() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_FILTER )
 {
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QFILEDIALOG_FILTER )
 }
 
 /*
-QStringList history () const
+QStringList history() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_HISTORY )
 {
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QFILEDIALOG_HISTORY )
 }
 
 /*
-QFileIconProvider * iconProvider () const
+QFileIconProvider * iconProvider() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_ICONPROVIDER )
 {
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ISREADONLY )
 }
 
 /*
-QAbstractItemDelegate * itemDelegate () const
+QAbstractItemDelegate * itemDelegate() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_ITEMDELEGATE )
 {
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QFILEDIALOG_LABELTEXT )
 }
 
 /*
-QStringList nameFilters () const
+QStringList nameFilters() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_NAMEFILTERS )
 {
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QFILEDIALOG_OPEN )
 }
 
 /*
-Options options () const
+QFileDialog::Options options() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_OPTIONS )
 {
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QFILEDIALOG_OPTIONS )
 }
 
 /*
-QAbstractProxyModel * proxyModel () const
+QAbstractProxyModel * proxyModel() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_PROXYMODEL )
 {
@@ -604,7 +604,7 @@ HB_FUNC_STATIC( QFILEDIALOG_RESTORESTATE )
 }
 
 /*
-QByteArray saveState () const
+QByteArray saveState() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_SAVESTATE )
 {
@@ -681,7 +681,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SELECTNAMEFILTER )
 }
 
 /*
-QStringList selectedFiles () const
+QStringList selectedFiles() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_SELECTEDFILES )
 {
@@ -1358,7 +1358,7 @@ HB_FUNC_STATIC( QFILEDIALOG_TESTOPTION )
 }
 
 /*
-ViewMode viewMode () const
+QFileDialog::ViewMode viewMode() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_VIEWMODE )
 {

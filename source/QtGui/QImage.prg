@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QIMAGE_BYTESPERLINE )
 }
 
 /*
-qint64 cacheKey () const
+qint64 cacheKey() const
 */
 HB_FUNC_STATIC( QIMAGE_CACHEKEY )
 {
@@ -836,7 +836,7 @@ HB_FUNC_STATIC( QIMAGE_FILL )
 }
 
 /*
-Format format () const
+QImage::Format format() const
 */
 HB_FUNC_STATIC( QIMAGE_FORMAT )
 {
@@ -1101,7 +1101,7 @@ HB_FUNC_STATIC( QIMAGE_MIRRORED )
 }
 
 /*
-QPoint offset () const
+QPoint offset() const
 */
 HB_FUNC_STATIC( QIMAGE_OFFSET )
 {
@@ -1220,7 +1220,7 @@ HB_FUNC_STATIC( QIMAGE_PIXELINDEX )
 }
 
 /*
-QRect rect () const
+QRect rect() const
 */
 HB_FUNC_STATIC( QIMAGE_RECT )
 {
@@ -1245,7 +1245,7 @@ HB_FUNC_STATIC( QIMAGE_RECT )
 }
 
 /*
-QImage rgbSwapped () const
+QImage rgbSwapped() const
 */
 HB_FUNC_STATIC( QIMAGE_RGBSWAPPED )
 {
@@ -1659,7 +1659,7 @@ HB_FUNC_STATIC( QIMAGE_SETTEXT )
 }
 
 /*
-QSize size () const
+QSize size() const
 */
 HB_FUNC_STATIC( QIMAGE_SIZE )
 {
@@ -1734,7 +1734,7 @@ HB_FUNC_STATIC( QIMAGE_TEXT )
 }
 
 /*
-QStringList textKeys () const
+QStringList textKeys() const
 */
 HB_FUNC_STATIC( QIMAGE_TEXTKEYS )
 {

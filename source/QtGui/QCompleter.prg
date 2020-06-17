@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QCOMPLETER_DELETE )
 }
 
 /*
-Qt::CaseSensitivity caseSensitivity () const
+Qt::CaseSensitivity caseSensitivity() const
 */
 HB_FUNC_STATIC( QCOMPLETER_CASESENSITIVITY )
 {
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONCOUNT )
 }
 
 /*
-CompletionMode completionMode () const
+QCompleter::CompletionMode completionMode() const
 */
 HB_FUNC_STATIC( QCOMPLETER_COMPLETIONMODE )
 {
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONMODE )
 }
 
 /*
-QAbstractItemModel * completionModel () const
+QAbstractItemModel * completionModel() const
 */
 HB_FUNC_STATIC( QCOMPLETER_COMPLETIONMODEL )
 {
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QCOMPLETER_CURRENTCOMPLETION )
 }
 
 /*
-QModelIndex currentIndex () const
+QModelIndex currentIndex() const
 */
 HB_FUNC_STATIC( QCOMPLETER_CURRENTINDEX )
 {
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QCOMPLETER_MAXVISIBLEITEMS )
 }
 
 /*
-QAbstractItemModel * model () const
+QAbstractItemModel * model() const
 */
 HB_FUNC_STATIC( QCOMPLETER_MODEL )
 {
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QCOMPLETER_MODEL )
 }
 
 /*
-ModelSorting modelSorting () const
+QCompleter::ModelSorting modelSorting() const
 */
 HB_FUNC_STATIC( QCOMPLETER_MODELSORTING )
 {
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QCOMPLETER_PATHFROMINDEX )
 }
 
 /*
-QAbstractItemView * popup () const
+QAbstractItemView * popup() const
 */
 HB_FUNC_STATIC( QCOMPLETER_POPUP )
 {
@@ -802,7 +802,7 @@ HB_FUNC_STATIC( QCOMPLETER_SPLITPATH )
 }
 
 /*
-QWidget * widget () const
+QWidget * widget() const
 */
 HB_FUNC_STATIC( QCOMPLETER_WIDGET )
 {

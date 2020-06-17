@@ -67,7 +67,7 @@ virtual void addGlyphOutlinesToPath ( uint * glyphs, int numGlyphs, FixedPoint *
 */
 
 /*
-virtual Capabilities capabilities () const = 0
+virtual QAbstractFontEngine::Capabilities capabilities() const = 0
 */
 HB_FUNC_STATIC( QABSTRACTFONTENGINE_CAPABILITIES )
 {

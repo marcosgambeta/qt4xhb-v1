@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_BACKWARDHISTORYCOUNT )
 }
 
 /*
-void clearHistory ()
+void clearHistory()
 */
 HB_FUNC_STATIC( QTEXTBROWSER_CLEARHISTORY )
 {
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_OPENLINKS )
 }
 
 /*
-QStringList searchPaths () const
+QStringList searchPaths() const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_SEARCHPATHS )
 {
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_SETSEARCHPATHS )
 }
 
 /*
-QUrl source () const
+QUrl source() const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_SOURCE )
 {
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_LOADRESOURCE )
 }
 
 /*
-virtual void backward ()
+virtual void backward()
 */
 HB_FUNC_STATIC( QTEXTBROWSER_BACKWARD )
 {
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_BACKWARD )
 }
 
 /*
-virtual void forward ()
+virtual void forward()
 */
 HB_FUNC_STATIC( QTEXTBROWSER_FORWARD )
 {
@@ -509,7 +509,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_FORWARD )
 }
 
 /*
-virtual void home ()
+virtual void home()
 */
 HB_FUNC_STATIC( QTEXTBROWSER_HOME )
 {
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_HOME )
 }
 
 /*
-virtual void reload ()
+virtual void reload()
 */
 HB_FUNC_STATIC( QTEXTBROWSER_RELOAD )
 {

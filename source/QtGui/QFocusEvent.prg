@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_LOSTFOCUS )
 }
 
 /*
-Qt::FocusReason reason () const
+Qt::FocusReason reason() const
 */
 HB_FUNC_STATIC( QFOCUSEVENT_REASON )
 {

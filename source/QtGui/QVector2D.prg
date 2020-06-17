@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QVECTOR2D_LENGTHSQUARED )
 }
 
 /*
-void normalize ()
+void normalize()
 */
 HB_FUNC_STATIC( QVECTOR2D_NORMALIZE )
 {
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QVECTOR2D_NORMALIZE )
 }
 
 /*
-QVector2D normalized () const
+QVector2D normalized() const
 */
 HB_FUNC_STATIC( QVECTOR2D_NORMALIZED )
 {
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QVECTOR2D_SETY )
 }
 
 /*
-QPoint toPoint () const
+QPoint toPoint() const
 */
 HB_FUNC_STATIC( QVECTOR2D_TOPOINT )
 {
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QVECTOR2D_TOPOINT )
 }
 
 /*
-QPointF toPointF () const
+QPointF toPointF() const
 */
 HB_FUNC_STATIC( QVECTOR2D_TOPOINTF )
 {
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QVECTOR2D_TOPOINTF )
 }
 
 /*
-QVector3D toVector3D () const
+QVector3D toVector3D() const
 */
 HB_FUNC_STATIC( QVECTOR2D_TOVECTOR3D )
 {
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QVECTOR2D_TOVECTOR3D )
 }
 
 /*
-QVector4D toVector4D () const
+QVector4D toVector4D() const
 */
 HB_FUNC_STATIC( QVECTOR2D_TOVECTOR4D )
 {

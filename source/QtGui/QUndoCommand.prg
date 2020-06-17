@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_MERGEWITH )
 }
 
 /*
-virtual void redo ()
+virtual void redo()
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_REDO )
 {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_TEXT )
 }
 
 /*
-virtual void undo ()
+virtual void undo()
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_UNDO )
 {

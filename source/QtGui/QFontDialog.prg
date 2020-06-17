@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QFONTDIALOG_NEW )
 }
 
 /*
-QFont currentFont () const
+QFont currentFont() const
 */
 HB_FUNC_STATIC( QFONTDIALOG_CURRENTFONT )
 {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QFONTDIALOG_OPEN )
 }
 
 /*
-FontDialogOptions options () const
+QFontDialog::FontDialogOptions options() const
 */
 HB_FUNC_STATIC( QFONTDIALOG_OPTIONS )
 {
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QFONTDIALOG_OPTIONS )
 }
 
 /*
-QFont selectedFont () const
+QFont selectedFont() const
 */
 HB_FUNC_STATIC( QFONTDIALOG_SELECTEDFONT )
 {

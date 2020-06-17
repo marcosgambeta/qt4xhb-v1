@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_DELETE )
 }
 
 /*
-QPointF finalStop () const
+QPointF finalStop() const
 */
 HB_FUNC_STATIC( QLINEARGRADIENT_FINALSTOP )
 {
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_SETSTART )
 }
 
 /*
-QPointF start () const
+QPointF start() const
 */
 HB_FUNC_STATIC( QLINEARGRADIENT_START )
 {

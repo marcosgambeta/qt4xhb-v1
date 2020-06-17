@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_DELETE )
 }
 
 /*
-Qt::Alignment alignment () const
+Qt::Alignment alignment() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_ALIGNMENT )
 {
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ALIGNMENT )
 }
 
 /*
-QBrush backgroundBrush () const
+QBrush backgroundBrush() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_BACKGROUNDBRUSH )
 {
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_BACKGROUNDBRUSH )
 }
 
 /*
-CacheMode cacheMode () const
+QGraphicsView::CacheMode cacheMode() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_CACHEMODE )
 {
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_CENTERON )
 }
 
 /*
-DragMode dragMode () const
+QGraphicsView::DragMode dragMode() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_DRAGMODE )
 {
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_FITINVIEW )
 }
 
 /*
-QBrush foregroundBrush () const
+QBrush foregroundBrush() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_FOREGROUNDBRUSH )
 {
@@ -1157,7 +1157,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_MAPTOSCENE )
 }
 
 /*
-QMatrix matrix () const
+QMatrix matrix() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_MATRIX )
 {
@@ -1182,7 +1182,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_MATRIX )
 }
 
 /*
-OptimizationFlags optimizationFlags () const
+QGraphicsView::OptimizationFlags optimizationFlags() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_OPTIMIZATIONFLAGS )
 {
@@ -1232,7 +1232,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RENDER )
 }
 
 /*
-QPainter::RenderHints renderHints () const
+QPainter::RenderHints renderHints() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_RENDERHINTS )
 {
@@ -1256,7 +1256,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RENDERHINTS )
 }
 
 /*
-void resetCachedContent ()
+void resetCachedContent()
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_RESETCACHEDCONTENT )
 {
@@ -1282,7 +1282,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RESETCACHEDCONTENT )
 }
 
 /*
-void resetMatrix ()
+void resetMatrix()
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_RESETMATRIX )
 {
@@ -1308,7 +1308,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RESETMATRIX )
 }
 
 /*
-void resetTransform ()
+void resetTransform()
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_RESETTRANSFORM )
 {
@@ -1334,7 +1334,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RESETTRANSFORM )
 }
 
 /*
-ViewportAnchor resizeAnchor () const
+QGraphicsView::ViewportAnchor resizeAnchor() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_RESIZEANCHOR )
 {
@@ -1384,7 +1384,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ROTATE )
 }
 
 /*
-Qt::ItemSelectionMode rubberBandSelectionMode () const
+Qt::ItemSelectionMode rubberBandSelectionMode() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_RUBBERBANDSELECTIONMODE )
 {
@@ -1434,7 +1434,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SCALE )
 }
 
 /*
-QGraphicsScene * scene () const
+QGraphicsScene * scene() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SCENE )
 {
@@ -1459,7 +1459,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SCENE )
 }
 
 /*
-QRectF sceneRect () const
+QRectF sceneRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SCENERECT )
 {
@@ -2003,7 +2003,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SHEAR )
 }
 
 /*
-QTransform transform () const
+QTransform transform() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_TRANSFORM )
 {
@@ -2028,7 +2028,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_TRANSFORM )
 }
 
 /*
-ViewportAnchor transformationAnchor () const
+QGraphicsView::ViewportAnchor transformationAnchor() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_TRANSFORMATIONANCHOR )
 {
@@ -2078,7 +2078,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_TRANSLATE )
 }
 
 /*
-QTransform viewportTransform () const
+QTransform viewportTransform() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_VIEWPORTTRANSFORM )
 {
@@ -2103,7 +2103,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_VIEWPORTTRANSFORM )
 }
 
 /*
-ViewportUpdateMode viewportUpdateMode () const
+QGraphicsView::ViewportUpdateMode viewportUpdateMode() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_VIEWPORTUPDATEMODE )
 {
@@ -2152,7 +2152,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_INPUTMETHODQUERY )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SIZEHINT )
 {

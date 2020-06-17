@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_DELETE )
 }
 
 /*
-QTextBlockFormat blockFormat () const
+QTextBlockFormat blockFormat() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_BLOCKFORMAT )
 {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_BLOCKNUMBER )
 }
 
 /*
-QTextCharFormat charFormat () const
+QTextCharFormat charFormat() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_CHARFORMAT )
 {
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_CHARFORMATINDEX )
 }
 
 /*
-void clearLayout ()
+void clearLayout()
 */
 HB_FUNC_STATIC( QTEXTBLOCK_CLEARLAYOUT )
 {
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_CONTAINS )
 }
 
 /*
-const QTextDocument * document () const
+const QTextDocument * document() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_DOCUMENT )
 {
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_ISVISIBLE )
 }
 
 /*
-QTextLayout * layout () const
+QTextLayout * layout() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_LAYOUT )
 {
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_LINECOUNT )
 }
 
 /*
-QTextBlock next () const
+QTextBlock next() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_NEXT )
 {
@@ -509,7 +509,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_POSITION )
 }
 
 /*
-QTextBlock previous () const
+QTextBlock previous() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_PREVIOUS )
 {
@@ -712,7 +712,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_TEXT )
 }
 
 /*
-Qt::LayoutDirection textDirection () const
+Qt::LayoutDirection textDirection() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_TEXTDIRECTION )
 {
@@ -736,7 +736,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_TEXTDIRECTION )
 }
 
 /*
-QTextList * textList () const
+QTextList * textList() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_TEXTLIST )
 {
@@ -761,7 +761,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_TEXTLIST )
 }
 
 /*
-QTextBlockUserData * userData () const
+QTextBlockUserData * userData() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_USERDATA )
 {

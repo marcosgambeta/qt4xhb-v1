@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QCURSOR_BITMAP )
 }
 
 /*
-QPoint hotSpot () const
+QPoint hotSpot() const
 */
 HB_FUNC_STATIC( QCURSOR_HOTSPOT )
 {
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QCURSOR_MASK )
 }
 
 /*
-QPixmap pixmap () const
+QPixmap pixmap() const
 */
 HB_FUNC_STATIC( QCURSOR_PIXMAP )
 {
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QCURSOR_SETSHAPE )
 }
 
 /*
-Qt::CursorShape shape () const
+Qt::CursorShape shape() const
 */
 HB_FUNC_STATIC( QCURSOR_SHAPE )
 {
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QCURSOR_SHAPE )
 }
 
 /*
-static QPoint pos ()
+static QPoint pos()
 */
 HB_FUNC_STATIC( QCURSOR_POS )
 {

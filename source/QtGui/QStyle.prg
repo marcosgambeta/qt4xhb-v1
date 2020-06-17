@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QSTYLE_POLISH )
 }
 
 /*
-const QStyle * proxy () const
+const QStyle * proxy() const
 */
 HB_FUNC_STATIC( QSTYLE_PROXY )
 {
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QSTYLE_STANDARDICON )
 }
 
 /*
-virtual QPalette standardPalette () const
+virtual QPalette standardPalette() const
 */
 HB_FUNC_STATIC( QSTYLE_STANDARDPALETTE )
 {

@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QTEXTTABLE_COLUMNS )
 }
 
 /*
-QTextTableFormat format () const
+QTextTableFormat format() const
 */
 HB_FUNC_STATIC( QTEXTTABLE_FORMAT )
 {

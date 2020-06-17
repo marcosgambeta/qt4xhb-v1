@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_REMOVEFROMGROUP )
 }
 
 /*
-virtual QRectF boundingRect () const
+virtual QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_BOUNDINGRECT )
 {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_ISOBSCUREDBY )
 }
 
 /*
-virtual QPainterPath opaqueArea () const
+virtual QPainterPath opaqueArea() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_OPAQUEAREA )
 {

@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_DELETE )
 }
 
 /*
-QRectF boundingRect () const
+QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECT )
 {
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_SETENABLED )
 }
 
 /*
-void update ()
+void update()
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_UPDATE )
 {

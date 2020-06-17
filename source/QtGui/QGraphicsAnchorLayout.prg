@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_COUNT )
 }
 
 /*
-virtual void invalidate ()
+virtual void invalidate()
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_INVALIDATE )
 {

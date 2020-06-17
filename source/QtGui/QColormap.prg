@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QCOLORMAP_DEPTH )
 }
 
 /*
-Mode mode () const
+QColormap::Mode mode() const
 */
 HB_FUNC_STATIC( QCOLORMAP_MODE )
 {

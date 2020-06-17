@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QTOOLBOX_CURRENTINDEX )
 }
 
 /*
-QWidget * currentWidget () const
+QWidget * currentWidget() const
 */
 HB_FUNC_STATIC( QTOOLBOX_CURRENTWIDGET )
 {

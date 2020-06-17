@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_DELETE )
 }
 
 /*
-QTextCharFormat charFormat () const
+QTextCharFormat charFormat() const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMAT )
 {

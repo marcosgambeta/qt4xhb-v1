@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QTRANSFORM_M33 )
 }
 
 /*
-QTransform adjoint () const
+QTransform adjoint() const
 */
 HB_FUNC_STATIC( QTRANSFORM_ADJOINT )
 {
@@ -967,7 +967,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAPTOPOLYGON )
 }
 
 /*
-void reset ()
+void reset()
 */
 HB_FUNC_STATIC( QTRANSFORM_RESET )
 {
@@ -1019,7 +1019,7 @@ HB_FUNC_STATIC( QTRANSFORM_SETMATRIX )
 }
 
 /*
-QTransform transposed () const
+QTransform transposed() const
 */
 HB_FUNC_STATIC( QTRANSFORM_TRANSPOSED )
 {
@@ -1044,7 +1044,7 @@ HB_FUNC_STATIC( QTRANSFORM_TRANSPOSED )
 }
 
 /*
-TransformationType type () const
+QTransform::TransformationType type() const
 */
 HB_FUNC_STATIC( QTRANSFORM_TYPE )
 {

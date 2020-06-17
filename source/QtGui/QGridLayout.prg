@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ITEMATPOSITION )
 }
 
 /*
-Qt::Corner originCorner () const
+Qt::Corner originCorner() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ORIGINCORNER )
 {
@@ -822,7 +822,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COUNT )
 }
 
 /*
-virtual Qt::Orientations expandingDirections () const
+virtual Qt::Orientations expandingDirections() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_EXPANDINGDIRECTIONS )
 {
@@ -894,7 +894,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_HEIGHTFORWIDTH )
 }
 
 /*
-virtual void invalidate ()
+virtual void invalidate()
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_INVALIDATE )
 {
@@ -945,7 +945,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ITEMAT )
 }
 
 /*
-virtual QSize maximumSize () const
+virtual QSize maximumSize() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_MAXIMUMSIZE )
 {
@@ -994,7 +994,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_MINIMUMHEIGHTFORWIDTH )
 }
 
 /*
-virtual QSize minimumSize () const
+virtual QSize minimumSize() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_MINIMUMSIZE )
 {
@@ -1045,7 +1045,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETGEOMETRY )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SIZEHINT )
 {

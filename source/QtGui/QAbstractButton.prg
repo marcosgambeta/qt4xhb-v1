@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATINTERVAL )
 }
 
 /*
-QButtonGroup * group () const
+QButtonGroup * group() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_GROUP )
 {
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_GROUP )
 }
 
 /*
-QIcon icon () const
+QIcon icon() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_ICON )
 {
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ICON )
 }
 
 /*
-QSize iconSize () const
+QSize iconSize() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_ICONSIZE )
 {
@@ -573,7 +573,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETTEXT )
 }
 
 /*
-QKeySequence shortcut () const
+QKeySequence shortcut() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SHORTCUT )
 {
@@ -648,7 +648,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ANIMATECLICK )
 }
 
 /*
-void click ()
+void click()
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_CLICK )
 {
@@ -726,7 +726,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETICONSIZE )
 }
 
 /*
-void toggle ()
+void toggle()
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_TOGGLE )
 {

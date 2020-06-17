@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION )
 }
 
 /*
-QAction * checkedAction () const
+QAction * checkedAction() const
 */
 HB_FUNC_STATIC( QACTIONGROUP_CHECKEDACTION )
 {
