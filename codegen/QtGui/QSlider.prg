@@ -63,16 +63,13 @@ $method=|void|setTickPosition|QSlider::TickPosition
 
 $prototypeV2=int tickInterval() const
 
-$prototype=TickPosition tickPosition () const
-$method=|QSlider::TickPosition|tickPosition|
+$prototypeV2=QSlider::TickPosition tickPosition() const
 
 $prototype=virtual bool event ( QEvent * event )
 $virtualMethod=|bool|event|QEvent *
 
-$prototype=virtual QSize minimumSizeHint () const
-$virtualMethod=|QSize|minimumSizeHint|
+$prototypeV2=virtual QSize minimumSizeHint() const
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 #pragma ENDDUMP

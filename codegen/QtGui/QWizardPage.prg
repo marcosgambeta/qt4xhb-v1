@@ -33,11 +33,9 @@ $constructor=|new|QWidget *=0
 $prototype=QString buttonText ( QWizard::WizardButton which ) const
 $method=|QString|buttonText|QWizard::WizardButton
 
-$prototype=virtual void cleanupPage ()
-$virtualMethod=|void|cleanupPage|
+$prototypeV2=virtual void cleanupPage()
 
-$prototype=virtual void initializePage ()
-$virtualMethod=|void|initializePage|
+$prototypeV2=virtual void initializePage()
 
 $prototypeV2=bool isCommitPage() const
 

@@ -31,11 +31,9 @@ $prototypeV2=qreal ascent() const
 
 $prototypeV2=qreal descent() const
 
-$prototype=QFont font () const
-$method=|QFont|font|
+$prototypeV2=QFont font() const
 
-$prototype=RenderFlags renderFlags () const
-$method=|QTextItem::RenderFlags|renderFlags|
+$prototypeV2=QTextItem::RenderFlags renderFlags() const
 
 $prototypeV2=QString text() const
 

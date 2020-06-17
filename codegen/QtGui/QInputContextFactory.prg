@@ -38,8 +38,7 @@ $staticMethod=|QString|description|const QString &
 $prototype=static QString displayName ( const QString & key )
 $staticMethod=|QString|displayName|const QString &
 
-$prototype=static QStringList keys ()
-$staticMethod=|QStringList|keys|
+$prototypeV2=static QStringList keys()
 
 $prototype=static QStringList languages ( const QString & key )
 $staticMethod=|QStringList|languages|const QString &

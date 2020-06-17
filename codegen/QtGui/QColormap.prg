@@ -40,8 +40,7 @@ $method=|const QVector<QColor>|colormap|
 
 $prototypeV2=int depth() const
 
-$prototype=Mode mode () const
-$method=|QColormap::Mode|mode|
+$prototypeV2=QColormap::Mode mode() const
 
 $prototype=uint pixel ( const QColor & color ) const
 $method=|uint|pixel|const QColor &

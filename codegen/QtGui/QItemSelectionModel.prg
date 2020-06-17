@@ -60,8 +60,7 @@ $deleteMethod
 $prototype=bool columnIntersectsSelection ( int column, const QModelIndex & parent ) const
 $method=|bool|columnIntersectsSelection|int,const QModelIndex &
 
-$prototype=QModelIndex currentIndex () const
-$method=|QModelIndex|currentIndex|
+$prototypeV2=QModelIndex currentIndex() const
 
 $prototypeV2=bool hasSelection() const
 
@@ -83,8 +82,7 @@ $method=|bool|rowIntersectsSelection|int,const QModelIndex &
 $prototype=QModelIndexList selectedColumns ( int row = 0 ) const
 $method=|QModelIndexList|selectedColumns|int=0
 
-$prototype=QModelIndexList selectedIndexes () const
-$method=|QModelIndexList|selectedIndexes|
+$prototypeV2=QModelIndexList selectedIndexes() const
 
 $prototype=QModelIndexList selectedRows ( int column = 0 ) const
 $method=|QModelIndexList|selectedRows|int=0
@@ -92,14 +90,11 @@ $method=|QModelIndexList|selectedRows|int=0
 $prototype=const QItemSelection selection () const
 $method=|const QItemSelection|selection|
 
-$prototype=virtual void clear ()
-$virtualMethod=|void|clear|
+$prototypeV2=virtual void clear()
 
-$prototype=void clearSelection ()
-$method=|void|clearSelection|
+$prototypeV2=void clearSelection()
 
-$prototype=virtual void reset ()
-$virtualMethod=|void|reset|
+$prototypeV2=virtual void reset()
 
 $prototype=virtual void select ( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
 $internalVirtualMethod=|void|select,select1|const QModelIndex &,QItemSelectionModel::SelectionFlags

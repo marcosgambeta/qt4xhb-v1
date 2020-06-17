@@ -30,8 +30,7 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=Qt::PenCapStyle capStyle () const
-$method=|Qt::PenCapStyle|capStyle|
+$prototypeV2=Qt::PenCapStyle capStyle() const
 
 $prototype=QPainterPath createStroke ( const QPainterPath & path ) const
 $method=|QPainterPath|createStroke|const QPainterPath &
@@ -43,8 +42,7 @@ $prototypeV2=qreal dashOffset() const
 $prototype=QVector<qreal> dashPattern () const
 $method=|QVector<qreal>|dashPattern|
 
-$prototype=Qt::PenJoinStyle joinStyle () const
-$method=|Qt::PenJoinStyle|joinStyle|
+$prototypeV2=Qt::PenJoinStyle joinStyle() const
 
 $prototypeV2=qreal miterLimit() const
 

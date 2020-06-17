@@ -101,8 +101,7 @@ $method=|void|addPixmap|const QPixmap &,QIcon::Mode=QIcon::Normal,QIcon::State=Q
 $prototype=QList<QSize> availableSizes ( Mode mode = Normal, State state = Off ) const
 $method=|QList<QSize>|availableSizes|QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
 
-$prototype=qint64 cacheKey () const
-$method=|qint64|cacheKey|
+$prototypeV2=qint64 cacheKey() const
 
 $prototypeV2=bool isNull() const
 
@@ -187,8 +186,7 @@ $staticMethod=|void|setThemeSearchPaths|const QStringList &
 
 $prototypeV2=static QString themeName()
 
-$prototype=static QStringList themeSearchPaths ()
-$staticMethod=|QStringList|themeSearchPaths|
+$prototypeV2=static QStringList themeSearchPaths()
 
 $variantMethods
 

@@ -35,8 +35,7 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=QUndoStack * activeStack () const
-$method=|QUndoStack *|activeStack|
+$prototypeV2=QUndoStack * activeStack() const
 
 $prototype=void addStack ( QUndoStack * stack )
 $method=|void|addStack|QUndoStack *
@@ -63,14 +62,12 @@ $method=|QList<QUndoStack *>|stacks|
 
 $prototypeV2=QString undoText() const
 
-$prototype=void redo ()
-$method=|void|redo|
+$prototypeV2=void redo()
 
 $prototype=void setActiveStack ( QUndoStack * stack )
 $method=|void|setActiveStack|QUndoStack *
 
-$prototype=void undo ()
-$method=|void|undo|
+$prototypeV2=void undo()
 
 $beginSignals
 $signal=|activeStackChanged(QUndoStack*)

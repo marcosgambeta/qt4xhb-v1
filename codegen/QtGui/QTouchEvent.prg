@@ -27,13 +27,10 @@ $includes
 
 $deleteMethod
 
-$prototype=QWidget *widget() const
-$method=|QWidget *|widget|
+$prototypeV2=QWidget * widget() const
 
-$prototype=QTouchEvent::DeviceType deviceType() const
-$method=|QTouchEvent::DeviceType|deviceType|
+$prototypeV2=QTouchEvent::DeviceType deviceType() const
 
-$prototype=Qt::TouchPointStates touchPointStates() const
-$method=|Qt::TouchPointStates|touchPointStates|
+$prototypeV2=Qt::TouchPointStates touchPointStates() const
 
 #pragma ENDDUMP

@@ -50,7 +50,6 @@ $method=|void|setNumberSuffix|const QString &
 $prototype=void setStyle ( Style style )
 $method=|void|setStyle|QTextListFormat::Style
 
-$prototype=Style style () const
-$method=|QTextListFormat::Style|style|
+$prototypeV2=QTextListFormat::Style style() const
 
 #pragma ENDDUMP

@@ -45,8 +45,7 @@ $prototypeV2=int columnCount() const
 
 $prototypeV2=int currentColumn() const
 
-$prototype=QTreeWidgetItem * currentItem () const
-$method=|QTreeWidgetItem *|currentItem|
+$prototypeV2=QTreeWidgetItem * currentItem() const
 
 $prototype=void editItem ( QTreeWidgetItem * item, int column = 0 )
 $method=|void|editItem|QTreeWidgetItem *,int=0
@@ -54,8 +53,7 @@ $method=|void|editItem|QTreeWidgetItem *,int=0
 $prototype=QList<QTreeWidgetItem *> findItems ( const QString & text, Qt::MatchFlags flags, int column = 0 ) const
 $method=|QList<QTreeWidgetItem *>|findItems|const QString &,Qt::MatchFlags,int=0
 
-$prototype=QTreeWidgetItem *  headerItem () const
-$method=|QTreeWidgetItem *|headerItem|
+$prototypeV2=QTreeWidgetItem * headerItem() const
 
 $prototype=int indexOfTopLevelItem ( QTreeWidgetItem * item ) const
 $method=|int|indexOfTopLevelItem|QTreeWidgetItem *
@@ -66,8 +64,7 @@ $method=|void|insertTopLevelItem|int,QTreeWidgetItem *
 $prototype=void insertTopLevelItems ( int index, const QList<QTreeWidgetItem *> & items )
 $method=|void|insertTopLevelItems|int,const QList<QTreeWidgetItem *> &
 
-$prototype=QTreeWidgetItem * invisibleRootItem () const
-$method=|QTreeWidgetItem *|invisibleRootItem|
+$prototypeV2=QTreeWidgetItem * invisibleRootItem() const
 
 $prototype=bool isFirstItemColumnSpanned ( const QTreeWidgetItem * item ) const
 $method=|bool|isFirstItemColumnSpanned|const QTreeWidgetItem *
@@ -191,8 +188,7 @@ $method=|QRect|visualItemRect|const QTreeWidgetItem *
 $prototype=virtual void setSelectionModel ( QItemSelectionModel * selectionModel )
 $virtualMethod=|void|setSelectionModel|QItemSelectionModel *
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=void collapseItem ( const QTreeWidgetItem * item )
 $method=|void|collapseItem|const QTreeWidgetItem *

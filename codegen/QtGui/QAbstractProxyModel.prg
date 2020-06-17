@@ -47,8 +47,7 @@ $virtualMethod=|QModelIndex|mapToSource|const QModelIndex &
 $prototype=virtual void setSourceModel ( QAbstractItemModel * sourceModel )
 $virtualMethod=|void|setSourceModel|QAbstractItemModel *
 
-$prototype=QAbstractItemModel * sourceModel () const
-$method=|QAbstractItemModel *|sourceModel|
+$prototypeV2=QAbstractItemModel * sourceModel() const
 
 $prototype=virtual QModelIndex buddy ( const QModelIndex & index ) const
 $virtualMethod=|QModelIndex|buddy|const QModelIndex &
@@ -74,11 +73,9 @@ $virtualMethod=|QVariant|headerData|int,Qt::Orientation,int
 $prototype=virtual QMimeData * mimeData ( const QModelIndexList & indexes ) const
 $virtualMethod=|QMimeData *|mimeData|const QModelIndexList &
 
-$prototype=virtual QStringList mimeTypes () const
-$virtualMethod=|QStringList|mimeTypes|
+$prototypeV2=virtual QStringList mimeTypes() const
 
-$prototype=virtual void revert ()
-$virtualMethod=|void|revert|
+$prototypeV2=virtual void revert()
 
 $prototype=virtual bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 $virtualMethod=|bool|setData|const QModelIndex &,const QVariant &,int=Qt::EditRole
@@ -94,7 +91,6 @@ $virtualMethod=|QSize|span|const QModelIndex &
 
 $prototypeV2=virtual bool submit()
 
-$prototype=virtual Qt::DropActions supportedDropActions () const
-$virtualMethod=|Qt::DropActions|supportedDropActions|
+$prototypeV2=virtual Qt::DropActions supportedDropActions() const
 
 #pragma ENDDUMP

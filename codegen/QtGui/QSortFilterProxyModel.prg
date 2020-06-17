@@ -37,13 +37,11 @@ $deleteMethod
 
 $prototypeV2=bool dynamicSortFilter() const
 
-$prototype=Qt::CaseSensitivity filterCaseSensitivity () const
-$method=|Qt::CaseSensitivity|filterCaseSensitivity|
+$prototypeV2=Qt::CaseSensitivity filterCaseSensitivity() const
 
 $prototypeV2=int filterKeyColumn() const
 
-$prototype=QRegExp filterRegExp () const
-$method=|QRegExp|filterRegExp|
+$prototypeV2=QRegExp filterRegExp() const
 
 $prototypeV2=int filterRole() const
 
@@ -70,13 +68,11 @@ $method=|void|setSortLocaleAware|bool
 $prototype=void setSortRole ( int role )
 $method=|void|setSortRole|int
 
-$prototype=Qt::CaseSensitivity sortCaseSensitivity () const
-$method=|Qt::CaseSensitivity|sortCaseSensitivity|
+$prototypeV2=Qt::CaseSensitivity sortCaseSensitivity() const
 
 $prototypeV2=int sortColumn() const
 
-$prototype=Qt::SortOrder sortOrder () const
-$method=|Qt::SortOrder|sortOrder|
+$prototypeV2=Qt::SortOrder sortOrder() const
 
 $prototypeV2=int sortRole() const
 
@@ -134,8 +130,7 @@ $virtualMethod=|QModelIndexList|match|const QModelIndex &,int,const QVariant &,i
 $prototype=virtual QMimeData * mimeData ( const QModelIndexList & indexes ) const
 $virtualMethod=|QMimeData *|mimeData|const QModelIndexList &
 
-$prototype=virtual QStringList mimeTypes () const
-$virtualMethod=|QStringList|mimeTypes|
+$prototypeV2=virtual QStringList mimeTypes() const
 
 $prototype=virtual QModelIndex parent ( const QModelIndex & child ) const
 $virtualMethod=|QModelIndex|parent|const QModelIndex &
@@ -164,11 +159,9 @@ $virtualMethod=|void|sort|int,Qt::SortOrder=Qt::AscendingOrder
 $prototype=virtual QSize span ( const QModelIndex & index ) const
 $virtualMethod=|QSize|span|const QModelIndex &
 
-$prototype=virtual Qt::DropActions supportedDropActions () const
-$virtualMethod=|Qt::DropActions|supportedDropActions|
+$prototypeV2=virtual Qt::DropActions supportedDropActions() const
 
-$prototype=void invalidate ()
-$method=|void|invalidate|
+$prototypeV2=void invalidate()
 
 $prototype=void setFilterFixedString ( const QString & pattern )
 $method=|void|setFilterFixedString|const QString &

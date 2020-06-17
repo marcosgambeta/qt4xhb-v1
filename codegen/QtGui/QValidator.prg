@@ -43,8 +43,7 @@ HB_FUNC_STATIC( QVALIDATOR_FIXUP )
 }
 $addMethod=fixup
 
-$prototype=QLocale locale () const
-$method=|QLocale|locale|
+$prototypeV2=QLocale locale() const
 
 $prototype=void setLocale ( const QLocale & locale )
 $method=|void|setLocale|const QLocale &

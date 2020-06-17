@@ -39,7 +39,6 @@ $virtualMethod=|void|drawPrimitive|QStyle::PrimitiveElement,const QStyleOption *
 $prototype=virtual int pixelMetric ( PixelMetric metric, const QStyleOption * option = 0, const QWidget * widget = 0 ) const
 $virtualMethod=|int|pixelMetric|QStyle::PixelMetric,const QStyleOption *=0,const QWidget *=0
 
-$prototype=virtual QPalette standardPalette () const
-$virtualMethod=|QPalette|standardPalette|
+$prototypeV2=virtual QPalette standardPalette() const
 
 #pragma ENDDUMP

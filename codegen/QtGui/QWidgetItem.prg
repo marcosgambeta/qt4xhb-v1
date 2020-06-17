@@ -30,11 +30,9 @@ $constructor=|new|QWidget *
 
 $deleteMethod
 
-$prototype=virtual Qt::Orientations expandingDirections () const
-$virtualMethod=|Qt::Orientations|expandingDirections|
+$prototypeV2=virtual Qt::Orientations expandingDirections() const
 
-$prototype=virtual QRect geometry () const
-$virtualMethod=|QRect|geometry|
+$prototypeV2=virtual QRect geometry() const
 
 $prototypeV2=virtual bool hasHeightForWidth() const
 
@@ -43,19 +41,15 @@ $virtualMethod=|int|heightForWidth|int
 
 $prototypeV2=virtual bool isEmpty() const
 
-$prototype=virtual QSize maximumSize () const
-$virtualMethod=|QSize|maximumSize|
+$prototypeV2=virtual QSize maximumSize() const
 
-$prototype=virtual QSize minimumSize () const
-$virtualMethod=|QSize|minimumSize|
+$prototypeV2=virtual QSize minimumSize() const
 
 $prototype=virtual void setGeometry ( const QRect & rect )
 $virtualMethod=|void|setGeometry|const QRect &
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
-$prototype=virtual QWidget * widget ()
-$virtualMethod=|QWidget *|widget|
+$prototypeV2=virtual QWidget * widget()
 
 #pragma ENDDUMP

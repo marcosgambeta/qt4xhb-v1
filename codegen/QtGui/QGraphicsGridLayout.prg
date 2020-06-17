@@ -192,8 +192,7 @@ $prototypeV2=qreal verticalSpacing() const
 
 $prototypeV2=virtual int count() const
 
-$prototype=virtual void invalidate ()
-$virtualMethod=|void|invalidate|
+$prototypeV2=virtual void invalidate()
 
 $prototype=virtual void removeAt ( int index )
 $virtualMethod=|void|removeAt|int

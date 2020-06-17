@@ -35,8 +35,7 @@ $deleteMethod
 $prototype=QList<int> columnWidths () const
 $method=|QList<int>|columnWidths|
 
-$prototype=QWidget * previewWidget () const
-$method=|QWidget *|previewWidget|
+$prototypeV2=QWidget * previewWidget() const
 
 $prototypeV2=bool resizeGripsVisible() const
 
@@ -55,8 +54,7 @@ $virtualMethod=|QModelIndex|indexAt|const QPoint &
 $prototype=virtual void scrollTo ( const QModelIndex & index, ScrollHint hint = EnsureVisible )
 $virtualMethod=|void|scrollTo|const QModelIndex &,QColumnView::ScrollHint=QColumnView::EnsureVisible
 
-$prototype=virtual void selectAll ()
-$virtualMethod=|void|selectAll|
+$prototypeV2=virtual void selectAll()
 
 $prototype=virtual void setModel ( QAbstractItemModel * model )
 $virtualMethod=|void|setModel|QAbstractItemModel *
@@ -67,8 +65,7 @@ $virtualMethod=|void|setRootIndex|const QModelIndex &
 $prototype=virtual void setSelectionModel ( QItemSelectionModel * newSelectionModel )
 $virtualMethod=|void|setSelectionModel|QItemSelectionModel *
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 $prototype=virtual QRect visualRect ( const QModelIndex & index ) const
 $virtualMethod=|QRect|visualRect|const QModelIndex &

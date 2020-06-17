@@ -65,16 +65,13 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QTextCodec * codec () const
-$method=|QTextCodec *|codec|
+$prototypeV2=QTextCodec * codec() const
 
-$prototype=QIODevice * device () const
-$method=|QIODevice *|device|
+$prototypeV2=QIODevice * device() const
 
 $prototypeV2=QString fileName() const
 
-$prototype=QByteArray format () const
-$method=|QByteArray|format|
+$prototypeV2=QByteArray format() const
 
 $prototype=void setCodec ( QTextCodec * codec )
 $method=|void|setCodec|QTextCodec *

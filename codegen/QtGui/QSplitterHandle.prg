@@ -30,16 +30,13 @@ $constructor=|new|Qt::Orientation,QSplitter *
 
 $prototypeV2=bool opaqueResize() const
 
-$prototype=Qt::Orientation orientation () const
-$method=|Qt::Orientation|orientation|
+$prototypeV2=Qt::Orientation orientation() const
 
 $prototype=void setOrientation ( Qt::Orientation orientation )
 $method=|void|setOrientation|Qt::Orientation
 
-$prototype=QSplitter * splitter () const
-$method=|QSplitter *|splitter|
+$prototypeV2=QSplitter * splitter() const
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 #pragma ENDDUMP

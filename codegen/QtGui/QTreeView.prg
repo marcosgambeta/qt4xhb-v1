@@ -49,8 +49,7 @@ $method=|int|columnWidth|int
 
 $prototypeV2=bool expandsOnDoubleClick() const
 
-$prototype=QHeaderView * header () const
-$method=|QHeaderView *|header|
+$prototypeV2=QHeaderView * header() const
 
 $prototypeV2=int indentation() const
 
@@ -149,14 +148,12 @@ $virtualMethod=|QModelIndex|indexAt|const QPoint &
 $prototype=virtual void keyboardSearch ( const QString & search )
 $virtualMethod=|void|keyboardSearch|const QString &
 
-$prototype=virtual void reset ()
-$virtualMethod=|void|reset|
+$prototypeV2=virtual void reset()
 
 $prototype=virtual void scrollTo ( const QModelIndex & index, ScrollHint hint = EnsureVisible )
 $virtualMethod=|void|scrollTo|const QModelIndex &,QTreeView::ScrollHint=QTreeView::EnsureVisible
 
-$prototype=virtual void selectAll ()
-$virtualMethod=|void|selectAll|
+$prototypeV2=virtual void selectAll()
 
 $prototype=virtual void setModel ( QAbstractItemModel * model )
 $virtualMethod=|void|setModel|QAbstractItemModel *
@@ -173,14 +170,12 @@ $virtualMethod=|QRect|visualRect|const QModelIndex &
 $prototype=void collapse ( const QModelIndex & index )
 $method=|void|collapse|const QModelIndex &
 
-$prototype=void collapseAll ()
-$method=|void|collapseAll|
+$prototypeV2=void collapseAll()
 
 $prototype=void expand ( const QModelIndex & index )
 $method=|void|expand|const QModelIndex &
 
-$prototype=void expandAll ()
-$method=|void|expandAll|
+$prototypeV2=void expandAll()
 
 $prototype=void expandToDepth ( int depth )
 $method=|void|expandToDepth|int

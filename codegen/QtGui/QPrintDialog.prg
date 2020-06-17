@@ -60,11 +60,9 @@ $deleteMethod
 $prototype=void open ( QObject * receiver, const char * member )
 $method=|void|open|QObject *,const char *
 
-$prototype=PrintDialogOptions options () const
-$method=|QPrintDialog::PrintDialogOptions|options|
+$prototypeV2=QPrintDialog::PrintDialogOptions options() const
 
-$prototype=QPrinter * printer ()
-$method=|QPrinter *|printer|
+$prototypeV2=QPrinter * printer()
 
 $prototype=void setOption ( PrintDialogOption option, bool on = true )
 $method=|void|setOption|QPrintDialog::PrintDialogOption,bool=true

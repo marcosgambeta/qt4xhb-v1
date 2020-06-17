@@ -30,8 +30,7 @@ $constructor=|new|QObject *=0,QDirectPainter::SurfaceFlag=QDirectPainter::NonRes
 
 $deleteMethod
 
-$prototype=QRegion allocatedRegion () const
-$method=|QRegion|allocatedRegion|
+$prototypeV2=QRegion allocatedRegion() const
 
 $prototype=void endPainting ()
 $internalMethod=|void|endPainting,endPainting1|
@@ -64,20 +63,16 @@ $addMethod=endPainting
 $prototype=void flush ( const QRegion & region )
 $method=|void|flush|const QRegion &
 
-$prototype=QRect geometry () const
-$method=|QRect|geometry|
+$prototypeV2=QRect geometry() const
 
-$prototype=void lower ()
-$method=|void|lower|
+$prototypeV2=void lower()
 
-$prototype=void raise ()
-$method=|void|raise|
+$prototypeV2=void raise()
 
 $prototype=virtual void regionChanged ( const QRegion & newRegion )
 $virtualMethod=|void|regionChanged|const QRegion &
 
-$prototype=QRegion requestedRegion () const
-$method=|QRegion|requestedRegion|
+$prototypeV2=QRegion requestedRegion() const
 
 $prototype=void setGeometry ( const QRect & rectangle )
 $method=|void|setGeometry|const QRect &
@@ -94,8 +89,7 @@ $prototype=uchar * frameBuffer ()
 
 $prototypeV2=static int linestep()
 
-$prototype=static void lock ()
-$staticMethod=|void|lock|
+$prototypeV2=static void lock()
 
 $prototypeV2=static int screenDepth()
 
@@ -103,7 +97,6 @@ $prototypeV2=static int screenHeight()
 
 $prototypeV2=static int screenWidth()
 
-$prototype=static void unlock ()
-$staticMethod=|void|unlock|
+$prototypeV2=static void unlock()
 
 #pragma ENDDUMP

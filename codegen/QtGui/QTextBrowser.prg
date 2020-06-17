@@ -32,8 +32,7 @@ $constructor=|new|QWidget *=0
 
 $prototypeV2=int backwardHistoryCount() const
 
-$prototype=void clearHistory ()
-$method=|void|clearHistory|
+$prototypeV2=void clearHistory()
 
 $prototypeV2=int forwardHistoryCount() const
 
@@ -51,8 +50,7 @@ $prototypeV2=bool openExternalLinks() const
 
 $prototypeV2=bool openLinks() const
 
-$prototype=QStringList searchPaths () const
-$method=|QStringList|searchPaths|
+$prototypeV2=QStringList searchPaths() const
 
 $prototype=void setOpenExternalLinks ( bool open )
 $method=|void|setOpenExternalLinks|bool
@@ -63,23 +61,18 @@ $method=|void|setOpenLinks|bool
 $prototype=void setSearchPaths ( const QStringList & paths )
 $method=|void|setSearchPaths|const QStringList &
 
-$prototype=QUrl source () const
-$method=|QUrl|source|
+$prototypeV2=QUrl source() const
 
 $prototype=virtual QVariant loadResource ( int type, const QUrl & name )
 $virtualMethod=|QVariant|loadResource|int,const QUrl &
 
-$prototype=virtual void backward ()
-$virtualMethod=|void|backward|
+$prototypeV2=virtual void backward()
 
-$prototype=virtual void forward ()
-$virtualMethod=|void|forward|
+$prototypeV2=virtual void forward()
 
-$prototype=virtual void home ()
-$virtualMethod=|void|home|
+$prototypeV2=virtual void home()
 
-$prototype=virtual void reload ()
-$virtualMethod=|void|reload|
+$prototypeV2=virtual void reload()
 
 $prototype=virtual void setSource ( const QUrl & name )
 $virtualMethod=|void|setSource|const QUrl &

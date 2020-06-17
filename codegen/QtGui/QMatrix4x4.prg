@@ -92,8 +92,7 @@ $prototypeV2=qreal determinant() const
 $prototype=void fill ( qreal value )
 $method=|void|fill|qreal
 
-$prototype=void flipCoordinates ()
-$method=|void|flipCoordinates|
+$prototypeV2=void flipCoordinates()
 
 $prototype=void frustum ( qreal left, qreal right, qreal bottom, qreal top, qreal nearPlane, qreal farPlane )
 $method=|void|frustum|qreal,qreal,qreal,qreal,qreal,qreal
@@ -181,11 +180,9 @@ $addMethod=mapRect
 $prototype=QVector3D mapVector ( const QVector3D & vector ) const
 $method=|QVector3D|mapVector|const QVector3D &
 
-$prototype=QMatrix3x3 normalMatrix () const
-$method=|QMatrix3x3|normalMatrix|
+$prototypeV2=QMatrix3x3 normalMatrix() const
 
-$prototype=void optimize ()
-$method=|void|optimize|
+$prototypeV2=void optimize()
 
 $prototype=void ortho ( qreal left, qreal right, qreal bottom, qreal top, qreal nearPlane, qreal farPlane )
 $internalMethod=|void|ortho,ortho1|qreal,qreal,qreal,qreal,qreal,qreal
@@ -315,8 +312,7 @@ $method=|void|setColumn|int,const QVector4D &
 $prototype=void setRow ( int index, const QVector4D & value )
 $method=|void|setRow|int,const QVector4D &
 
-$prototype=void setToIdentity ()
-$method=|void|setToIdentity|
+$prototypeV2=void setToIdentity()
 
 $prototype=QTransform toTransform () const
 $internalMethod=|QTransform|toTransform,toTransform1|
@@ -382,8 +378,7 @@ HB_FUNC_STATIC( QMATRIX4X4_TRANSLATE )
 }
 $addMethod=translate
 
-$prototype=QMatrix4x4 transposed () const
-$method=|QMatrix4x4|transposed|
+$prototypeV2=QMatrix4x4 transposed() const
 
 $extraMethods
 

@@ -90,11 +90,9 @@ HB_FUNC_STATIC( QFORMLAYOUT_ADDROW )
 }
 $addMethod=addRow
 
-$prototype=FieldGrowthPolicy fieldGrowthPolicy () const
-$method=|QFormLayout::FieldGrowthPolicy|fieldGrowthPolicy|
+$prototypeV2=QFormLayout::FieldGrowthPolicy fieldGrowthPolicy() const
 
-$prototype=Qt::Alignment formAlignment () const
-$method=|Qt::Alignment|formAlignment|
+$prototypeV2=Qt::Alignment formAlignment() const
 
 $prototype=void getItemPosition ( int index, int * rowPtr, ItemRole * rolePtr ) const
 %% TODO: $method=|void|getItemPosition|int,int *,QFormLayout::ItemRole *
@@ -167,8 +165,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_INSERTROW )
 }
 $addMethod=insertRow
 
-$prototype=Qt::Alignment labelAlignment () const
-$method=|Qt::Alignment|labelAlignment|
+$prototypeV2=Qt::Alignment labelAlignment() const
 
 $prototype=QWidget * labelForField ( QWidget * field ) const
 $internalMethod=|QWidget *|labelForField,labelForField1|QWidget *
@@ -200,8 +197,7 @@ $addMethod=labelForField
 
 $prototypeV2=int rowCount() const
 
-$prototype=RowWrapPolicy rowWrapPolicy () const
-$method=|QFormLayout::RowWrapPolicy|rowWrapPolicy|
+$prototypeV2=QFormLayout::RowWrapPolicy rowWrapPolicy() const
 
 $prototype=void setFieldGrowthPolicy ( FieldGrowthPolicy policy )
 $method=|void|setFieldGrowthPolicy|QFormLayout::FieldGrowthPolicy
@@ -242,16 +238,14 @@ $virtualMethod=|void|addItem|QLayoutItem *
 
 $prototypeV2=virtual int count() const
 
-$prototype=virtual Qt::Orientations expandingDirections () const
-$virtualMethod=|Qt::Orientations|expandingDirections|
+$prototypeV2=virtual Qt::Orientations expandingDirections() const
 
 $prototypeV2=virtual bool hasHeightForWidth() const
 
 $prototype=virtual int heightForWidth ( int width ) const
 $virtualMethod=|int|heightForWidth|int
 
-$prototype=virtual void invalidate ()
-$virtualMethod=|void|invalidate|
+$prototypeV2=virtual void invalidate()
 
 $prototype=QLayoutItem * itemAt ( int row, ItemRole role ) const
 $internalMethod=|QLayoutItem *|itemAt,itemAt1|int,QFormLayout::ItemRole
@@ -281,14 +275,12 @@ HB_FUNC_STATIC( QFORMLAYOUT_ITEMAT )
 }
 $addMethod=itemAt
 
-$prototype=virtual QSize minimumSize () const
-$virtualMethod=|QSize|minimumSize|
+$prototypeV2=virtual QSize minimumSize() const
 
 $prototype=virtual void setGeometry ( const QRect & rect )
 $virtualMethod=|void|setGeometry|const QRect &
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 $prototype=virtual QLayoutItem * takeAt ( int index )
 $virtualMethod=|QLayoutItem *|takeAt|int

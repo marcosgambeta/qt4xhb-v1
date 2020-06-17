@@ -75,8 +75,7 @@ $method=|QList<QPrinter::PaperSize>|supportedPaperSizes|
 $prototype=QList<QPrinterInfo> availablePrinters ()
 $method=|QList<QPrinterInfo>|availablePrinters|
 
-$prototype=static QPrinterInfo defaultPrinter ()
-$staticMethod=|QPrinterInfo|defaultPrinter|
+$prototypeV2=static QPrinterInfo defaultPrinter()
 
 $extraMethods
 

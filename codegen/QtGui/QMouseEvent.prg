@@ -55,11 +55,9 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=const QPoint &pos() const
-$method=|const QPoint &|pos|
+$prototypeV2=const QPoint & pos() const
 
-$prototype=const QPoint &globalPos() const
-$method=|const QPoint &|globalPos|
+$prototypeV2=const QPoint & globalPos() const
 
 $prototypeV2=int x() const
 
@@ -69,16 +67,13 @@ $prototypeV2=int globalX() const
 
 $prototypeV2=int globalY() const
 
-$prototype=Qt::MouseButton button() const
-$method=|Qt::MouseButton|button|
+$prototypeV2=Qt::MouseButton button() const
 
-$prototype=Qt::MouseButtons buttons() const
-$method=|Qt::MouseButtons|buttons|
+$prototypeV2=Qt::MouseButtons buttons() const
 
 $prototypeV2=bool hasExtendedInfo() const
 
-$prototype=QPointF posF() const
-$method=|QPointF|posF|
+$prototypeV2=QPointF posF() const
 
 $prototype=static QMouseEvent *createExtendedMouseEvent(Type type, const QPointF &pos,const QPoint &globalPos, Qt::MouseButton button,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
 $staticMethod=|QMouseEvent *|createExtendedMouseEvent|QEvent::Type,const QPointF &,const QPoint &,Qt::MouseButton,Qt::MouseButtons,Qt::KeyboardModifiers

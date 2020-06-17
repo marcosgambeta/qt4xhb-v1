@@ -34,8 +34,7 @@ $prototypeV2=qreal ascent() const
 
 $prototypeV2=qreal descent() const
 
-$prototype=QTextFormat format () const
-$method=|QTextFormat|format|
+$prototypeV2=QTextFormat format() const
 
 $prototypeV2=int formatIndex() const
 
@@ -43,8 +42,7 @@ $prototypeV2=qreal height() const
 
 $prototypeV2=bool isValid() const
 
-$prototype=QRectF rect () const
-$method=|QRectF|rect|
+$prototypeV2=QRectF rect() const
 
 $prototype=void setAscent ( qreal a )
 $method=|void|setAscent|qreal
@@ -55,8 +53,7 @@ $method=|void|setDescent|qreal
 $prototype=void setWidth ( qreal w )
 $method=|void|setWidth|qreal
 
-$prototype=Qt::LayoutDirection textDirection () const
-$method=|Qt::LayoutDirection|textDirection|
+$prototypeV2=Qt::LayoutDirection textDirection() const
 
 $prototypeV2=int textPosition() const
 

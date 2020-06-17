@@ -188,11 +188,9 @@ $prototypeV2=int red() const
 
 $prototypeV2=qreal redF() const
 
-$prototype=QRgb rgb () const
-$method=|QRgb|rgb|
+$prototypeV2=QRgb rgb() const
 
-$prototype=QRgb rgba () const
-$method=|QRgb|rgba|
+$prototypeV2=QRgb rgba() const
 
 $prototypeV2=int saturation() const
 
@@ -277,20 +275,15 @@ $method=|void|setRgbF|qreal,qreal,qreal,qreal=1.0
 $prototype=void setRgba ( QRgb rgba )
 $method=|void|setRgba|QRgb
 
-$prototype=Spec spec () const
-$method=|QColor::Spec|spec|
+$prototypeV2=QColor::Spec spec() const
 
-$prototype=QColor toCmyk () const
-$method=|QColor|toCmyk|
+$prototypeV2=QColor toCmyk() const
 
-$prototype=QColor toHsl () const
-$method=|QColor|toHsl|
+$prototypeV2=QColor toHsl() const
 
-$prototype=QColor toHsv () const
-$method=|QColor|toHsv|
+$prototypeV2=QColor toHsv() const
 
-$prototype=QColor toRgb () const
-$method=|QColor|toRgb|
+$prototypeV2=QColor toRgb() const
 
 $prototypeV2=int value() const
 
@@ -300,8 +293,7 @@ $prototypeV2=int yellow() const
 
 $prototypeV2=qreal yellowF() const
 
-$prototype=static QStringList colorNames ()
-$staticMethod=|QStringList|colorNames|
+$prototypeV2=static QStringList colorNames()
 
 $prototype=static QColor fromCmyk ( int c, int m, int y, int k, int a = 255 )
 $staticMethod=|QColor|fromCmyk|int,int,int,int,int=255

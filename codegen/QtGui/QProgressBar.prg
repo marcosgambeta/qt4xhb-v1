@@ -32,8 +32,7 @@ $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-$prototype=Qt::Alignment alignment () const
-$method=|Qt::Alignment|alignment|
+$prototypeV2=Qt::Alignment alignment() const
 
 $prototypeV2=QString format() const
 
@@ -45,8 +44,7 @@ $prototypeV2=int maximum() const
 
 $prototypeV2=int minimum() const
 
-$prototype=Qt::Orientation orientation () const
-$method=|Qt::Orientation|orientation|
+$prototypeV2=Qt::Orientation orientation() const
 
 $prototype=void setAlignment ( Qt::Alignment alignment )
 $method=|void|setAlignment|Qt::Alignment
@@ -65,19 +63,15 @@ $method=|void|setTextVisible|bool
 
 $prototypeV2=virtual QString text() const
 
-$prototype=QProgressBar::Direction textDirection ()
-$method=|QProgressBar::Direction|textDirection|
+$prototypeV2=QProgressBar::Direction textDirection()
 
 $prototypeV2=int value() const
 
-$prototype=virtual QSize minimumSizeHint () const
-$virtualMethod=|QSize|minimumSizeHint|
+$prototypeV2=virtual QSize minimumSizeHint() const
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
-$prototype=void reset ()
-$method=|void|reset|
+$prototypeV2=void reset()
 
 $prototype=void setMaximum ( int maximum )
 $method=|void|setMaximum|int

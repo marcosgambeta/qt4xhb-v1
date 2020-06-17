@@ -55,8 +55,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=QVector<quint32> glyphIndexes () const
 $method=|QVector<quint32>|glyphIndexes|
@@ -66,8 +65,7 @@ $prototypeV2=bool overline() const
 $prototype=QVector<QPointF> positions () const
 $method=|QVector<QPointF>|positions|
 
-$prototype=QRawFont rawFont () const
-$method=|QRawFont|rawFont|
+$prototypeV2=QRawFont rawFont() const
 
 $prototype=void setGlyphIndexes ( const QVector<quint32> & glyphIndexes )
 $method=|void|setGlyphIndexes|const QVector<quint32> &

@@ -55,8 +55,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=Qt::WindowStates oldState() const
-$method=|Qt::WindowStates|oldState|
+$prototypeV2=Qt::WindowStates oldState() const
 
 $prototypeV2=bool isOverride() const
 

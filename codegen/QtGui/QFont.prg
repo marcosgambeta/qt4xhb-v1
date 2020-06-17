@@ -76,8 +76,7 @@ $deleteMethod
 
 $prototypeV2=bool bold() const
 
-$prototype=Capitalization capitalization () const
-$method=|QFont::Capitalization|capitalization|
+$prototypeV2=QFont::Capitalization capitalization() const
 
 $prototypeV2=QString defaultFamily() const
 
@@ -105,8 +104,7 @@ $prototypeV2=QString lastResortFont() const
 
 $prototypeV2=qreal letterSpacing() const
 
-$prototype=SpacingType letterSpacingType () const
-$method=|QFont::SpacingType|letterSpacingType|
+$prototypeV2=QFont::SpacingType letterSpacingType() const
 
 $prototypeV2=bool overline() const
 
@@ -190,14 +188,11 @@ $prototypeV2=int stretch() const
 
 $prototypeV2=bool strikeOut() const
 
-$prototype=Style style () const
-$method=|QFont::Style|style|
+$prototypeV2=QFont::Style style() const
 
-$prototype=StyleHint styleHint () const
-$method=|QFont::StyleHint|styleHint|
+$prototypeV2=QFont::StyleHint styleHint() const
 
-$prototype=StyleStrategy styleStrategy () const
-$method=|QFont::StyleStrategy|styleStrategy|
+$prototypeV2=QFont::StyleStrategy styleStrategy() const
 
 $prototypeV2=QString toString() const
 
@@ -222,8 +217,7 @@ $staticMethod=|QString|substitute|const QString &
 $prototype=static QStringList substitutes ( const QString & familyName )
 $staticMethod=|QStringList|substitutes|const QString &
 
-$prototype=static QStringList substitutions ()
-$staticMethod=|QStringList|substitutions|
+$prototypeV2=static QStringList substitutions()
 
 $variantMethods
 

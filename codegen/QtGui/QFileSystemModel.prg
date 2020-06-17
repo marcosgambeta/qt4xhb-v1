@@ -46,11 +46,9 @@ $method=|QString|fileName|const QModelIndex &
 $prototype=QString filePath ( const QModelIndex & index ) const
 $method=|QString|filePath|const QModelIndex &
 
-$prototype=QDir::Filters filter () const
-$method=|QDir::Filters|filter|
+$prototypeV2=QDir::Filters filter() const
 
-$prototype=QFileIconProvider * iconProvider () const
-$method=|QFileIconProvider *|iconProvider|
+$prototypeV2=QFileIconProvider * iconProvider() const
 
 $prototype=bool isDir ( const QModelIndex & index ) const
 $method=|bool|isDir|const QModelIndex &
@@ -68,8 +66,7 @@ $method=|QVariant|myComputer|int=Qt::DisplayRole
 
 $prototypeV2=bool nameFilterDisables() const
 
-$prototype=QStringList nameFilters () const
-$method=|QStringList|nameFilters|
+$prototypeV2=QStringList nameFilters() const
 
 $prototype=QFile::Permissions permissions ( const QModelIndex & index ) const
 $method=|QFile::Permissions|permissions|const QModelIndex &
@@ -82,8 +79,7 @@ $prototypeV2=bool resolveSymlinks() const
 $prototype=bool rmdir ( const QModelIndex & index ) const
 $method=|bool|rmdir|const QModelIndex &
 
-$prototype=QDir rootDirectory () const
-$method=|QDir|rootDirectory|
+$prototypeV2=QDir rootDirectory() const
 
 $prototypeV2=QString rootPath() const
 
@@ -181,8 +177,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMEDATA )
 }
 $addMethod=mimeData
 
-$prototype=virtual QStringList mimeTypes () const
-$virtualMethod=|QStringList|mimeTypes|
+$prototypeV2=virtual QStringList mimeTypes() const
 
 $prototype=virtual QModelIndex parent ( const QModelIndex & index ) const
 $virtualMethod=|QModelIndex|parent|const QModelIndex &
@@ -196,8 +191,7 @@ $virtualMethod=|bool|setData|const QModelIndex &,const QVariant &,int=Qt::EditRo
 $prototype=virtual void sort ( int column, Qt::SortOrder order = Qt::AscendingOrder )
 $virtualMethod=|void|sort|int,Qt::SortOrder=Qt::AscendingOrder
 
-$prototype=virtual Qt::DropActions supportedDropActions () const
-$virtualMethod=|Qt::DropActions|supportedDropActions|
+$prototypeV2=virtual Qt::DropActions supportedDropActions() const
 
 $beginSignals
 $signal=|directoryLoaded(QString)

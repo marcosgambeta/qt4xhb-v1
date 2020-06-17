@@ -57,8 +57,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QColor currentColor () const
-$method=|QColor|currentColor|
+$prototypeV2=QColor currentColor() const
 
 $prototype=void open ()
 $internalMethod=|void|open,open1|
@@ -88,11 +87,9 @@ HB_FUNC_STATIC( QCOLORDIALOG_OPEN )
 }
 $addMethod=open
 
-$prototype=ColorDialogOptions options () const
-$method=|QColorDialog::ColorDialogOptions|options|
+$prototypeV2=QColorDialog::ColorDialogOptions options() const
 
-$prototype=QColor selectedColor () const
-$method=|QColor|selectedColor|
+$prototypeV2=QColor selectedColor() const
 
 $prototype=void setCurrentColor ( const QColor & color )
 $method=|void|setCurrentColor|const QColor &

@@ -34,11 +34,9 @@ $prototypeV2=QString cleanText() const
 
 $prototypeV2=int decimals() const
 
-$prototype=double maximum () const
-$method=|double|maximum|
+$prototypeV2=double maximum() const
 
-$prototype=double minimum () const
-$method=|double|minimum|
+$prototypeV2=double minimum() const
 
 $prototypeV2=QString prefix() const
 
@@ -63,16 +61,14 @@ $method=|void|setSingleStep|double
 $prototype=void setSuffix ( const QString & suffix )
 $method=|void|setSuffix|const QString &
 
-$prototype=double singleStep () const
-$method=|double|singleStep|
+$prototypeV2=double singleStep() const
 
 $prototypeV2=QString suffix() const
 
 $prototype=virtual QString textFromValue ( double value ) const
 $virtualMethod=|QString|textFromValue|double
 
-$prototype=double value () const
-$method=|double|value|
+$prototypeV2=double value() const
 
 $prototype=virtual double valueFromText ( const QString & text ) const
 $virtualMethod=|double|valueFromText|const QString &

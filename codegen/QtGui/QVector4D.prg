@@ -112,11 +112,9 @@ $prototypeV2=qreal length() const
 
 $prototypeV2=qreal lengthSquared() const
 
-$prototype=void normalize ()
-$method=|void|normalize|
+$prototypeV2=void normalize()
 
-$prototype=QVector4D normalized () const
-$method=|QVector4D|normalized|
+$prototypeV2=QVector4D normalized() const
 
 $prototype=void setW ( qreal w )
 $method=|void|setW|qreal
@@ -130,23 +128,17 @@ $method=|void|setY|qreal
 $prototype=void setZ ( qreal z )
 $method=|void|setZ|qreal
 
-$prototype=QPoint toPoint () const
-$method=|QPoint|toPoint|
+$prototypeV2=QPoint toPoint() const
 
-$prototype=QPointF toPointF () const
-$method=|QPointF|toPointF|
+$prototypeV2=QPointF toPointF() const
 
-$prototype=QVector2D toVector2D () const
-$method=|QVector2D|toVector2D|
+$prototypeV2=QVector2D toVector2D() const
 
-$prototype=QVector2D toVector2DAffine () const
-$method=|QVector2D|toVector2DAffine|
+$prototypeV2=QVector2D toVector2DAffine() const
 
-$prototype=QVector3D toVector3D () const
-$method=|QVector3D|toVector3D|
+$prototypeV2=QVector3D toVector3D() const
 
-$prototype=QVector3D toVector3DAffine () const
-$method=|QVector3D|toVector3DAffine|
+$prototypeV2=QVector3D toVector3DAffine() const
 
 $prototypeV2=qreal w() const
 

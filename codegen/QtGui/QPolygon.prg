@@ -79,8 +79,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QRect boundingRect () const
-$method=|QRect|boundingRect|
+$prototypeV2=QRect boundingRect() const
 
 $prototype=bool containsPoint ( const QPoint & point, Qt::FillRule fillRule ) const
 $method=|bool|containsPoint|const QPoint &,Qt::FillRule

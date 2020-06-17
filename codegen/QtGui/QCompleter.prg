@@ -68,18 +68,15 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=Qt::CaseSensitivity caseSensitivity () const
-$method=|Qt::CaseSensitivity|caseSensitivity|
+$prototypeV2=Qt::CaseSensitivity caseSensitivity() const
 
 $prototypeV2=int completionColumn() const
 
 $prototypeV2=int completionCount() const
 
-$prototype=CompletionMode completionMode () const
-$method=|QCompleter::CompletionMode|completionMode|
+$prototypeV2=QCompleter::CompletionMode completionMode() const
 
-$prototype=QAbstractItemModel * completionModel () const
-$method=|QAbstractItemModel *|completionModel|
+$prototypeV2=QAbstractItemModel * completionModel() const
 
 $prototypeV2=QString completionPrefix() const
 
@@ -87,24 +84,20 @@ $prototypeV2=int completionRole() const
 
 $prototypeV2=QString currentCompletion() const
 
-$prototype=QModelIndex currentIndex () const
-$method=|QModelIndex|currentIndex|
+$prototypeV2=QModelIndex currentIndex() const
 
 $prototypeV2=int currentRow() const
 
 $prototypeV2=int maxVisibleItems() const
 
-$prototype=QAbstractItemModel * model () const
-$method=|QAbstractItemModel *|model|
+$prototypeV2=QAbstractItemModel * model() const
 
-$prototype=ModelSorting modelSorting () const
-$method=|QCompleter::ModelSorting|modelSorting|
+$prototypeV2=QCompleter::ModelSorting modelSorting() const
 
 $prototype=virtual QString pathFromIndex ( const QModelIndex & index ) const
 $virtualMethod=|QString|pathFromIndex|const QModelIndex &
 
-$prototype=QAbstractItemView * popup () const
-$method=|QAbstractItemView *|popup|
+$prototypeV2=QAbstractItemView * popup() const
 
 $prototype=void setCaseSensitivity ( Qt::CaseSensitivity caseSensitivity )
 $method=|void|setCaseSensitivity|Qt::CaseSensitivity
@@ -139,8 +132,7 @@ $method=|void|setWidget|QWidget *
 $prototype=virtual QStringList splitPath ( const QString & path ) const
 $virtualMethod=|QStringList|splitPath|const QString &
 
-$prototype=QWidget * widget () const
-$method=|QWidget *|widget|
+$prototypeV2=QWidget * widget() const
 
 $prototypeV2=bool wrapAround() const
 

@@ -32,8 +32,7 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=BlurHints blurHints () const
-$method=|QGraphicsBlurEffect::BlurHints|blurHints|
+$prototypeV2=QGraphicsBlurEffect::BlurHints blurHints() const
 
 $prototypeV2=qreal blurRadius() const
 

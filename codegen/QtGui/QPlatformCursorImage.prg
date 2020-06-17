@@ -30,11 +30,9 @@ $constructor=|new|const uchar *,const uchar *,int,int,int,int
 
 $deleteMethod
 
-$prototype=QPoint hotspot ()
-$method=|QPoint|hotspot|
+$prototypeV2=QPoint hotspot()
 
-$prototype=QImage * image ()
-$method=|QImage *|image|
+$prototypeV2=QImage * image()
 
 $prototype=void set ( const uchar * data, const uchar * mask, int width, int height, int hx, int hy )
 $internalMethod=|void|set,set1|const uchar *,const uchar *,int,int,int,int

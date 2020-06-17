@@ -28,8 +28,7 @@ $includes
 $prototype=static QDecoration * create ( const QString & key )
 $staticMethod=|QDecoration *|create|const QString &
 
-$prototype=static QStringList keys ()
-$staticMethod=|QStringList|keys|
+$prototypeV2=static QStringList keys()
 
 $extraMethods
 

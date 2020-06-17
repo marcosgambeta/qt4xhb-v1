@@ -46,8 +46,7 @@ $method=|QVariant|invokeMethod|QAccessible::Method,int=0,const QVariantList &=QV
 
 $prototypeV2=virtual bool isValid() const = 0
 
-$prototype=virtual QObject * object () const = 0
-$virtualMethod=|QObject *|object|
+$prototypeV2=virtual QObject * object() const = 0
 
 $prototype=virtual QRect rect ( int child ) const = 0
 $virtualMethod=|QRect|rect|int

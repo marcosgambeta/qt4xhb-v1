@@ -30,14 +30,11 @@ $constructor=|new|QEvent::Type,const QPoint &,const QPoint &,const QPointF &,int
 
 $deleteMethod
 
-$prototype=const QPoint &pos() const
-$method=|const QPoint &|pos|
+$prototypeV2=const QPoint & pos() const
 
-$prototype=const QPoint &globalPos() const
-$method=|const QPoint &|globalPos|
+$prototypeV2=const QPoint & globalPos() const
 
-$prototype=const QPointF &hiResGlobalPos() const
-$method=|const QPointF &|hiResGlobalPos|
+$prototypeV2=const QPointF & hiResGlobalPos() const
 
 $prototypeV2=int x() const
 
@@ -51,14 +48,11 @@ $prototypeV2=qreal hiResGlobalX() const
 
 $prototypeV2=qreal hiResGlobalY() const
 
-$prototype=TabletDevice device() const
-$method=|QTabletEvent::TabletDevice|device|
+$prototypeV2=QTabletEvent::TabletDevice device() const
 
-$prototype=PointerType pointerType() const
-$method=|QTabletEvent::PointerType|pointerType|
+$prototypeV2=QTabletEvent::PointerType pointerType() const
 
-$prototype=qint64 uniqueId() const
-$method=|qint64|uniqueId|
+$prototypeV2=qint64 uniqueId() const
 
 $prototypeV2=qreal pressure() const
 

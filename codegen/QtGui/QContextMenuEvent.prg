@@ -73,8 +73,7 @@ $prototypeV2=int globalY() const
 $prototype=const QPoint & pos () const
 $method=|const QPoint &|pos|
 
-$prototype=Reason reason () const
-$method=|QContextMenuEvent::Reason|reason|
+$prototypeV2=QContextMenuEvent::Reason reason() const
 
 $prototypeV2=int x() const
 

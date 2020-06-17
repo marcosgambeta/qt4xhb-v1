@@ -46,8 +46,7 @@ $method=|QString|buttonText|QWizard::WizardButton
 
 $prototypeV2=int currentId() const
 
-$prototype=QWizardPage * currentPage () const
-$method=|QWizardPage *|currentPage|
+$prototypeV2=QWizardPage * currentPage() const
 
 $prototype=QVariant field ( const QString & name ) const
 $method=|QVariant|field|const QString &
@@ -57,8 +56,7 @@ $method=|bool|hasVisitedPage|int
 
 $prototypeV2=virtual int nextId() const
 
-$prototype=WizardOptions options () const
-$method=|QWizard::WizardOptions|options|
+$prototypeV2=QWizard::WizardOptions options() const
 
 $prototype=QWizardPage * page ( int id ) const
 $method=|QWizardPage *|page|int
@@ -114,42 +112,34 @@ $method=|void|setTitleFormat|Qt::TextFormat
 $prototype=void setWizardStyle ( WizardStyle style )
 $method=|void|setWizardStyle|QWizard::WizardStyle
 
-$prototype=QWidget * sideWidget () const
-$method=|QWidget *|sideWidget|
+$prototypeV2=QWidget * sideWidget() const
 
 $prototypeV2=int startId() const
 
-$prototype=Qt::TextFormat subTitleFormat () const
-$method=|Qt::TextFormat|subTitleFormat|
+$prototypeV2=Qt::TextFormat subTitleFormat() const
 
 $prototype=bool testOption ( WizardOption option ) const
 $method=|bool|testOption|QWizard::WizardOption
 
-$prototype=Qt::TextFormat titleFormat () const
-$method=|Qt::TextFormat|titleFormat|
+$prototypeV2=Qt::TextFormat titleFormat() const
 
 $prototypeV2=virtual bool validateCurrentPage()
 
 $prototype=QList<int> visitedPages () const
 $method=|QList<int>|visitedPages|
 
-$prototype=WizardStyle wizardStyle () const
-$method=|QWizard::WizardStyle|wizardStyle|
+$prototypeV2=QWizard::WizardStyle wizardStyle() const
 
 $prototype=virtual void setVisible ( bool visible )
 $virtualMethod=|void|setVisible|bool
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
-$prototype=void back ()
-$method=|void|back|
+$prototypeV2=void back()
 
-$prototype=void next ()
-$method=|void|next|
+$prototypeV2=void next()
 
-$prototype=void restart ()
-$method=|void|restart|
+$prototypeV2=void restart()
 
 $beginSignals
 $signal=|currentIdChanged(int)

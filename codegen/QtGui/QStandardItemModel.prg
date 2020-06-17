@@ -126,11 +126,9 @@ $method=|bool|removeColumns|int,int,const QModelIndex &=QModelIndex()
 $prototype=Qt::ItemFlags flags(const QModelIndex &index) const
 $method=|Qt::ItemFlags|flags|const QModelIndex &
 
-$prototype=Qt::DropActions supportedDropActions() const
-$method=|Qt::DropActions|supportedDropActions|
+$prototypeV2=Qt::DropActions supportedDropActions() const
 
-$prototype=void clear()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
 $method=|void|sort|int,Qt::SortOrder=Qt::AscendingOrder
@@ -172,8 +170,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETITEM )
 }
 $addMethod=setItem
 
-$prototype=QStandardItem *invisibleRootItem() const
-$method=|QStandardItem *|invisibleRootItem|
+$prototypeV2=QStandardItem * invisibleRootItem() const
 
 $prototype=QStandardItem *horizontalHeaderItem(int column) const
 $method=|QStandardItem *|horizontalHeaderItem|int
@@ -309,8 +306,7 @@ $method=|QStandardItem *|takeHorizontalHeaderItem|int
 $prototype=QStandardItem *takeVerticalHeaderItem(int row)
 $method=|QStandardItem *|takeVerticalHeaderItem|int
 
-$prototype=const QStandardItem *itemPrototype() const
-$method=|const QStandardItem *|itemPrototype|
+$prototypeV2=const QStandardItem * itemPrototype() const
 
 $prototype=void setItemPrototype(const QStandardItem *item)
 $method=|void|setItemPrototype|const QStandardItem *
@@ -323,8 +319,7 @@ $prototypeV2=int sortRole() const
 $prototype=void setSortRole(int role)
 $method=|void|setSortRole|int
 
-$prototype=QStringList mimeTypes() const
-$method=|QStringList|mimeTypes|
+$prototypeV2=QStringList mimeTypes() const
 
 $prototype=QMimeData *mimeData(const QModelIndexList &indexes) const
 $method=|QMimeData *|mimeData|const QModelIndexList &

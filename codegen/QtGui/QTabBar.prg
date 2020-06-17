@@ -71,13 +71,11 @@ $prototypeV2=bool documentMode() const
 
 $prototypeV2=bool drawBase() const
 
-$prototype=Qt::TextElideMode elideMode () const
-$method=|Qt::TextElideMode|elideMode|
+$prototypeV2=Qt::TextElideMode elideMode() const
 
 $prototypeV2=bool expanding() const
 
-$prototype=QSize iconSize () const
-$method=|QSize|iconSize|
+$prototypeV2=QSize iconSize() const
 
 $prototype=int insertTab ( int index, const QString & text )
 $internalMethod=|int|insertTab,insertTab1|int,const QString &
@@ -118,8 +116,7 @@ $method=|void|moveTab|int,int
 $prototype=void removeTab ( int index )
 $method=|void|removeTab|int
 
-$prototype=SelectionBehavior selectionBehaviorOnRemove () const
-$method=|QTabBar::SelectionBehavior|selectionBehaviorOnRemove|
+$prototypeV2=QTabBar::SelectionBehavior selectionBehaviorOnRemove() const
 
 $prototype=void setDocumentMode ( bool set )
 $method=|void|setDocumentMode|bool
@@ -175,8 +172,7 @@ $method=|void|setTabsClosable|bool
 $prototype=void setUsesScrollButtons ( bool useButtons )
 $method=|void|setUsesScrollButtons|bool
 
-$prototype=Shape shape () const
-$method=|QTabBar::Shape|shape|
+$prototypeV2=QTabBar::Shape shape() const
 
 $prototype=int tabAt ( const QPoint & position ) const
 $method=|int|tabAt|const QPoint &
@@ -209,11 +205,9 @@ $prototypeV2=bool tabsClosable() const
 
 $prototypeV2=bool usesScrollButtons() const
 
-$prototype=virtual QSize minimumSizeHint () const
-$virtualMethod=|QSize|minimumSizeHint|
+$prototypeV2=virtual QSize minimumSizeHint() const
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 $prototype=void setCurrentIndex ( int index )
 $method=|void|setCurrentIndex|int

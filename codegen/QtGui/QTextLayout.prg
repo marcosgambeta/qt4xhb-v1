@@ -63,25 +63,19 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=void beginLayout ()
-$method=|void|beginLayout|
+$prototypeV2=void beginLayout()
 
-$prototype=QRectF boundingRect () const
-$method=|QRectF|boundingRect|
+$prototypeV2=QRectF boundingRect() const
 
 $prototypeV2=bool cacheEnabled() const
 
-$prototype=void clearAdditionalFormats ()
-$method=|void|clearAdditionalFormats|
+$prototypeV2=void clearAdditionalFormats()
 
-$prototype=void clearLayout ()
-$method=|void|clearLayout|
+$prototypeV2=void clearLayout()
 
-$prototype=QTextLine createLine ()
-$method=|QTextLine|createLine|
+$prototypeV2=QTextLine createLine()
 
-$prototype=Qt::CursorMoveStyle cursorMoveStyle () const
-$method=|Qt::CursorMoveStyle|cursorMoveStyle|
+$prototypeV2=Qt::CursorMoveStyle cursorMoveStyle() const
 
 $prototype=void drawCursor ( QPainter * painter, const QPointF & position, int cursorPosition, int width ) const
 $internalMethod=|void|drawCursor,drawCursor1|QPainter *,const QPointF &,int,int
@@ -111,11 +105,9 @@ HB_FUNC_STATIC( QTEXTLAYOUT_DRAWCURSOR )
 }
 $addMethod=drawCursor
 
-$prototype=void endLayout ()
-$method=|void|endLayout|
+$prototypeV2=void endLayout()
 
-$prototype=QFont font () const
-$method=|QFont|font|
+$prototypeV2=QFont font() const
 
 $prototype=QList<QGlyphRun> glyphRuns () const
 $method=|QList<QGlyphRun>|glyphRuns|
@@ -141,8 +133,7 @@ $prototypeV2=qreal minimumWidth() const
 $prototype=int nextCursorPosition ( int oldPos, CursorMode mode = SkipCharacters ) const
 $method=|int|nextCursorPosition|int,QTextLayout::CursorMode=QTextLayout::SkipCharacters
 
-$prototype=QPointF position () const
-$method=|QPointF|position|
+$prototypeV2=QPointF position() const
 
 $prototypeV2=int preeditAreaPosition() const
 
@@ -177,8 +168,7 @@ $method=|void|setTextOption|const QTextOption &
 
 $prototypeV2=QString text() const
 
-$prototype=QTextOption textOption () const
-$method=|QTextOption|textOption|
+$prototypeV2=QTextOption textOption() const
 
 $extraMethods
 

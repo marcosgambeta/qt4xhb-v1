@@ -89,8 +89,7 @@ $prototypeV2=qreal m32() const
 
 $prototypeV2=qreal m33() const
 
-$prototype=QTransform adjoint () const
-$method=|QTransform|adjoint|
+$prototypeV2=QTransform adjoint() const
 
 $prototypeV2=qreal determinant() const
 
@@ -238,17 +237,14 @@ $addMethod=mapRect
 $prototype=QPolygon mapToPolygon ( const QRect & rectangle ) const
 $method=|QPolygon|mapToPolygon|const QRect &
 
-$prototype=void reset ()
-$method=|void|reset|
+$prototypeV2=void reset()
 
 $prototype=void setMatrix ( qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33 )
 $method=|void|setMatrix|qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal
 
-$prototype=QTransform transposed () const
-$method=|QTransform|transposed|
+$prototypeV2=QTransform transposed() const
 
-$prototype=TransformationType type () const
-$method=|QTransform::TransformationType|type|
+$prototypeV2=QTransform::TransformationType type() const
 
 $prototype=static QTransform fromScale ( qreal sx, qreal sy )
 $staticMethod=|QTransform|fromScale|qreal,qreal

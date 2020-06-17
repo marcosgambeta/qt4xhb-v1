@@ -70,8 +70,7 @@ $prototypeV2=int columnCount() const
 
 $prototypeV2=int currentColumn() const
 
-$prototype=QTableWidgetItem * currentItem () const
-$method=|QTableWidgetItem *|currentItem|
+$prototypeV2=QTableWidgetItem * currentItem() const
 
 $prototypeV2=int currentRow() const
 
@@ -242,11 +241,9 @@ $method=|QRect|visualItemRect|const QTableWidgetItem *
 $prototype=int visualRow ( int logicalRow ) const
 $method=|int|visualRow|int
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
-$prototype=void clearContents ()
-$method=|void|clearContents|
+$prototypeV2=void clearContents()
 
 $prototype=void insertColumn ( int column )
 $method=|void|insertColumn|int

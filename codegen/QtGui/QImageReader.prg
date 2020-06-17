@@ -67,33 +67,27 @@ $deleteMethod
 
 $prototypeV2=bool autoDetectImageFormat() const
 
-$prototype=QColor backgroundColor () const
-$method=|QColor|backgroundColor|
+$prototypeV2=QColor backgroundColor() const
 
 $prototypeV2=bool canRead() const
 
-$prototype=QRect clipRect () const
-$method=|QRect|clipRect|
+$prototypeV2=QRect clipRect() const
 
 $prototypeV2=int currentImageNumber() const
 
-$prototype=QRect currentImageRect () const
-$method=|QRect|currentImageRect|
+$prototypeV2=QRect currentImageRect() const
 
 $prototypeV2=bool decideFormatFromContent() const
 
-$prototype=QIODevice * device () const
-$method=|QIODevice *|device|
+$prototypeV2=QIODevice * device() const
 
-$prototype=ImageReaderError error () const
-$method=|QImageReader::ImageReaderError|error|
+$prototypeV2=QImageReader::ImageReaderError error() const
 
 $prototypeV2=QString errorString() const
 
 $prototypeV2=QString fileName() const
 
-$prototype=QByteArray format () const
-$method=|QByteArray|format|
+$prototypeV2=QByteArray format() const
 
 $prototypeV2=int imageCount() const
 
@@ -136,11 +130,9 @@ HB_FUNC_STATIC( QIMAGEREADER_READ )
 }
 $addMethod=read
 
-$prototype=QRect scaledClipRect () const
-$method=|QRect|scaledClipRect|
+$prototypeV2=QRect scaledClipRect() const
 
-$prototype=QSize scaledSize () const
-$method=|QSize|scaledSize|
+$prototypeV2=QSize scaledSize() const
 
 $prototype=void setAutoDetectImageFormat ( bool enabled )
 $method=|void|setAutoDetectImageFormat|bool
@@ -172,8 +164,7 @@ $method=|void|setScaledClipRect|const QRect &
 $prototype=void setScaledSize ( const QSize & size )
 $method=|void|setScaledSize|const QSize &
 
-$prototype=QSize size () const
-$method=|QSize|size|
+$prototypeV2=QSize size() const
 
 $prototypeV2=bool supportsAnimation() const
 
@@ -183,8 +174,7 @@ $method=|bool|supportsOption|QImageIOHandler::ImageOption
 $prototype=QString text ( const QString & key ) const
 $method=|QString|text|const QString &
 
-$prototype=QStringList textKeys () const
-$method=|QStringList|textKeys|
+$prototypeV2=QStringList textKeys() const
 
 $prototype=QImage::Format imageFormat () const
 $internalMethod=|QImage::Format|imageFormat,imageFormat1|

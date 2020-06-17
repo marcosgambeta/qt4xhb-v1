@@ -30,15 +30,13 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=Qt::Alignment alignment () const
-$method=|Qt::Alignment|alignment|
+$prototypeV2=Qt::Alignment alignment() const
 
 $prototypeV2=qreal cellPadding() const
 
 $prototypeV2=qreal cellSpacing() const
 
-$prototype=void clearColumnWidthConstraints ()
-$method=|void|clearColumnWidthConstraints|
+$prototypeV2=void clearColumnWidthConstraints()
 
 $prototype=QVector<QTextLength> columnWidthConstraints () const
 $method=|QVector<QTextLength>|columnWidthConstraints|

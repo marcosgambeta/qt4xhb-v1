@@ -66,8 +66,7 @@ $deleteMethod
 $prototype=void addResource ( int type, const QUrl & name, const QVariant & resource )
 $method=|void|addResource|int,const QUrl &,const QVariant &
 
-$prototype=void adjustSize ()
-$method=|void|adjustSize|
+$prototypeV2=void adjustSize()
 
 $prototype=QVector<QTextFormat> allFormats () const
 $method=|QVector<QTextFormat>|allFormats|
@@ -76,8 +75,7 @@ $prototypeV2=int availableRedoSteps() const
 
 $prototypeV2=int availableUndoSteps() const
 
-$prototype=QTextBlock begin () const
-$method=|QTextBlock|begin|
+$prototypeV2=QTextBlock begin() const
 
 $prototypeV2=int blockCount() const
 
@@ -86,8 +84,7 @@ $method=|QChar|characterAt|int
 
 $prototypeV2=int characterCount() const
 
-$prototype=virtual void clear ()
-$virtualMethod=|void|clear|
+$prototypeV2=virtual void clear()
 
 $prototype=void clearUndoRedoStacks ( Stacks stacksToClear = UndoAndRedoStacks )
 $method=|void|clearUndoRedoStacks|QTextDocument::Stacks=QTextDocument::UndoAndRedoStacks
@@ -95,27 +92,22 @@ $method=|void|clearUndoRedoStacks|QTextDocument::Stacks=QTextDocument::UndoAndRe
 $prototype=QTextDocument * clone ( QObject * parent = 0 ) const
 $method=|QTextDocument *|clone|QObject *=0
 
-$prototype=Qt::CursorMoveStyle defaultCursorMoveStyle () const
-$method=|Qt::CursorMoveStyle|defaultCursorMoveStyle|
+$prototypeV2=Qt::CursorMoveStyle defaultCursorMoveStyle() const
 
-$prototype=QFont defaultFont () const
-$method=|QFont|defaultFont|
+$prototypeV2=QFont defaultFont() const
 
 $prototypeV2=QString defaultStyleSheet() const
 
-$prototype=QTextOption defaultTextOption () const
-$method=|QTextOption|defaultTextOption|
+$prototypeV2=QTextOption defaultTextOption() const
 
-$prototype=QAbstractTextDocumentLayout * documentLayout () const
-$method=|QAbstractTextDocumentLayout *|documentLayout|
+$prototypeV2=QAbstractTextDocumentLayout * documentLayout() const
 
 $prototypeV2=qreal documentMargin() const
 
 $prototype=void drawContents ( QPainter * p, const QRectF & rect = QRectF() )
 $method=|void|drawContents|QPainter *,const QRectF &=QRectF()
 
-$prototype=QTextBlock end () const
-$method=|QTextBlock|end|
+$prototypeV2=QTextBlock end() const
 
 $prototype=QTextCursor find ( const QString & subString, const QTextCursor & cursor, FindFlags options = 0 ) const
 $internalMethod=|QTextCursor|find,find1|const QString &,const QTextCursor &,QTextDocument::FindFlags=0
@@ -170,8 +162,7 @@ $method=|QTextBlock|findBlockByLineNumber|int
 $prototype=QTextBlock findBlockByNumber ( int blockNumber ) const
 $method=|QTextBlock|findBlockByNumber|int
 
-$prototype=QTextBlock firstBlock () const
-$method=|QTextBlock|firstBlock|
+$prototypeV2=QTextBlock firstBlock() const
 
 $prototypeV2=qreal idealWidth() const
 
@@ -187,8 +178,7 @@ $prototypeV2=bool isUndoAvailable() const
 
 $prototypeV2=bool isUndoRedoEnabled() const
 
-$prototype=QTextBlock lastBlock () const
-$method=|QTextBlock|lastBlock|
+$prototypeV2=QTextBlock lastBlock() const
 
 $prototypeV2=int lineCount() const
 
@@ -208,8 +198,7 @@ $method=|QTextObject *|objectForFormat|const QTextFormat &
 
 $prototypeV2=int pageCount() const
 
-$prototype=QSizeF pageSize () const
-$method=|QSizeF|pageSize|
+$prototypeV2=QSizeF pageSize() const
 
 $prototype=void print ( QPrinter * printer ) const
 $method=|void|print|QPrinter *
@@ -219,8 +208,7 @@ $method=|QVariant|resource|int,const QUrl &
 
 $prototypeV2=int revision() const
 
-$prototype=QTextFrame * rootFrame () const
-$method=|QTextFrame *|rootFrame|
+$prototypeV2=QTextFrame * rootFrame() const
 
 $prototype=void setDefaultCursorMoveStyle ( Qt::CursorMoveStyle style )
 $method=|void|setDefaultCursorMoveStyle|Qt::CursorMoveStyle
@@ -267,8 +255,7 @@ $method=|void|setUndoRedoEnabled|bool
 $prototype=void setUseDesignMetrics ( bool b )
 $method=|void|setUseDesignMetrics|bool
 
-$prototype=QSizeF size () const
-$method=|QSizeF|size|
+$prototypeV2=QSizeF size() const
 
 $prototypeV2=qreal textWidth() const
 

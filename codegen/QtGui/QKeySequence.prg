@@ -96,8 +96,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=uint count () const
-$method=|uint|count|
+$prototypeV2=uint count() const
 
 $prototypeV2=bool isEmpty() const
 

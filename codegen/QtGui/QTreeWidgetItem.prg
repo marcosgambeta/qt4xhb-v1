@@ -128,19 +128,16 @@ $method=|QTreeWidgetItem *|child|int
 
 $prototypeV2=int childCount() const
 
-$prototype=QTreeWidgetItem::ChildIndicatorPolicy childIndicatorPolicy () const
-$method=|QTreeWidgetItem::ChildIndicatorPolicy|childIndicatorPolicy|
+$prototypeV2=QTreeWidgetItem::ChildIndicatorPolicy childIndicatorPolicy() const
 
-$prototype=virtual QTreeWidgetItem * clone () const
-$virtualMethod=|QTreeWidgetItem *|clone|
+$prototypeV2=virtual QTreeWidgetItem * clone() const
 
 $prototypeV2=int columnCount() const
 
 $prototype=virtual QVariant data ( int column, int role ) const
 $virtualMethod=|QVariant|data|int,int
 
-$prototype=Qt::ItemFlags flags () const
-$method=|Qt::ItemFlags|flags|
+$prototypeV2=Qt::ItemFlags flags() const
 
 $prototype=QFont font ( int column ) const
 $method=|QFont|font|int
@@ -170,8 +167,7 @@ $prototypeV2=bool isHidden() const
 
 $prototypeV2=bool isSelected() const
 
-$prototype=QTreeWidgetItem * parent () const
-$method=|QTreeWidgetItem *|parent|
+$prototypeV2=QTreeWidgetItem * parent() const
 
 $prototype=virtual void read ( QDataStream & in )
 $virtualMethod=|void|read|QDataStream &
@@ -260,8 +256,7 @@ $method=|int|textAlignment|int
 $prototype=QString toolTip ( int column ) const
 $method=|QString|toolTip|int
 
-$prototype=QTreeWidget * treeWidget () const
-$method=|QTreeWidget *|treeWidget|
+$prototypeV2=QTreeWidget * treeWidget() const
 
 $prototypeV2=int type() const
 

@@ -71,36 +71,28 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QBrush background () const
-$method=|QBrush|background|
+$prototypeV2=QBrush background() const
 
-$prototype=Qt::CheckState checkState () const
-$method=|Qt::CheckState|checkState|
+$prototypeV2=Qt::CheckState checkState() const
 
-$prototype=virtual QListWidgetItem * clone () const
-$virtualMethod=|QListWidgetItem *|clone|
+$prototypeV2=virtual QListWidgetItem * clone() const
 
 $prototype=virtual QVariant data ( int role ) const
 $virtualMethod=|QVariant|data|int
 
-$prototype=Qt::ItemFlags flags () const
-$method=|Qt::ItemFlags|flags|
+$prototypeV2=Qt::ItemFlags flags() const
 
-$prototype=QFont font () const
-$method=|QFont|font|
+$prototypeV2=QFont font() const
 
-$prototype=QBrush foreground () const
-$method=|QBrush|foreground|
+$prototypeV2=QBrush foreground() const
 
-$prototype=QIcon icon () const
-$method=|QIcon|icon|
+$prototypeV2=QIcon icon() const
 
 $prototypeV2=bool isHidden() const
 
 $prototypeV2=bool isSelected() const
 
-$prototype=QListWidget * listWidget () const
-$method=|QListWidget *|listWidget|
+$prototypeV2=QListWidget * listWidget() const
 
 $prototype=virtual void read ( QDataStream & in )
 $virtualMethod=|void|read|QDataStream &
@@ -150,8 +142,7 @@ $method=|void|setToolTip|const QString &
 $prototype=void setWhatsThis ( const QString & whatsThis )
 $method=|void|setWhatsThis|const QString &
 
-$prototype=QSize sizeHint () const
-$method=|QSize|sizeHint|
+$prototypeV2=QSize sizeHint() const
 
 $prototypeV2=QString statusTip() const
 

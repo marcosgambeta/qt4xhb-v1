@@ -45,14 +45,12 @@ $includes
 
 $deleteMethod
 
-$prototype=QTextDocument * document () const
-$method=|QTextDocument *|document|
+$prototypeV2=QTextDocument * document() const
 
 $prototype=void setDocument ( QTextDocument * doc )
 $method=|void|setDocument|QTextDocument *
 
-$prototype=void rehighlight ()
-$method=|void|rehighlight|
+$prototypeV2=void rehighlight()
 
 $prototype=void rehighlightBlock ( const QTextBlock & block )
 $method=|void|rehighlightBlock|const QTextBlock &

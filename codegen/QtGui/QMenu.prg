@@ -63,8 +63,7 @@ $method=|QAction *|actionAt|const QPoint &
 $prototype=QRect actionGeometry ( QAction * act ) const
 $method=|QRect|actionGeometry|QAction *
 
-$prototype=QAction * activeAction () const
-$method=|QAction *|activeAction|
+$prototypeV2=QAction * activeAction() const
 
 $prototype=QAction * addAction ( const QString & text )
 $internalMethod=|QAction *|addAction,addAction1|const QString &
@@ -164,20 +163,15 @@ HB_FUNC_STATIC( QMENU_ADDMENU )
 }
 $addMethod=addMenu
 
-$prototype=QAction * addSeparator ()
-$method=|QAction *|addSeparator|
+$prototypeV2=QAction * addSeparator()
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
-$prototype=QAction * defaultAction () const
-$method=|QAction *|defaultAction|
+$prototypeV2=QAction * defaultAction() const
 
-$prototype=void hideTearOffMenu ()
-$method=|void|hideTearOffMenu|
+$prototypeV2=void hideTearOffMenu()
 
-$prototype=QIcon icon () const
-$method=|QIcon|icon|
+$prototypeV2=QIcon icon() const
 
 $prototype=QAction * insertMenu ( QAction * before, QMenu * menu )
 $method=|QAction *|insertMenu|QAction *,QMenu *
@@ -191,8 +185,7 @@ $prototypeV2=bool isTearOffEnabled() const
 
 $prototypeV2=bool isTearOffMenuVisible() const
 
-$prototype=QAction * menuAction () const
-$method=|QAction *|menuAction|
+$prototypeV2=QAction * menuAction() const
 
 $prototype=void popup ( const QPoint & p, QAction * atAction = 0 )
 $method=|void|popup|const QPoint &,QAction *=0
@@ -219,8 +212,7 @@ $method=|void|setTitle|const QString &
 
 $prototypeV2=QString title() const
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 $prototype=QAction * exec ()
 $internalMethod=|QAction *|exec,exec1|

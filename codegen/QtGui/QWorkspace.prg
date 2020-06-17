@@ -32,14 +32,12 @@ $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-$prototype=QWidget * activeWindow () const
-$method=|QWidget *|activeWindow|
+$prototypeV2=QWidget * activeWindow() const
 
 $prototype=QWidget * addWindow ( QWidget * w, Qt::WindowFlags flags = 0 )
 $method=|QWidget *|addWindow|QWidget *,Qt::WindowFlags=0
 
-$prototype=QBrush background () const
-$method=|QBrush|background|
+$prototypeV2=QBrush background() const
 
 $prototypeV2=bool scrollBarsEnabled() const
 
@@ -52,32 +50,24 @@ $method=|void|setScrollBarsEnabled|bool
 $prototype=QWidgetList windowList ( WindowOrder order = CreationOrder ) const
 $method=|QWidgetList|windowList|QWorkspace::WindowOrder=QWorkspace::CreationOrder
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
-$prototype=void activateNextWindow ()
-$method=|void|activateNextWindow|
+$prototypeV2=void activateNextWindow()
 
-$prototype=void activatePreviousWindow ()
-$method=|void|activatePreviousWindow|
+$prototypeV2=void activatePreviousWindow()
 
-$prototype=void arrangeIcons ()
-$method=|void|arrangeIcons|
+$prototypeV2=void arrangeIcons()
 
-$prototype=void cascade ()
-$method=|void|cascade|
+$prototypeV2=void cascade()
 
-$prototype=void closeActiveWindow ()
-$method=|void|closeActiveWindow|
+$prototypeV2=void closeActiveWindow()
 
-$prototype=void closeAllWindows ()
-$method=|void|closeAllWindows|
+$prototypeV2=void closeAllWindows()
 
 $prototype=void setActiveWindow ( QWidget * w )
 $method=|void|setActiveWindow|QWidget *
 
-$prototype=void tile ()
-$method=|void|tile|
+$prototypeV2=void tile()
 
 $beginSignals
 $signal=|windowActivated(QWidget*)

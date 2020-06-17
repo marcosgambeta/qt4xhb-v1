@@ -73,8 +73,7 @@ $addMethod=cellAt
 
 $prototypeV2=int columns() const
 
-$prototype=QTextTableFormat format () const
-$method=|QTextTableFormat|format|
+$prototypeV2=QTextTableFormat format() const
 
 $prototype=void insertColumns ( int index, int columns )
 $method=|void|insertColumns|int,int

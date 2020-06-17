@@ -62,17 +62,13 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=Qt::Alignment alignment () const
-$method=|Qt::Alignment|alignment|
+$prototypeV2=Qt::Alignment alignment() const
 
-$prototype=void backspace ()
-$method=|void|backspace|
+$prototypeV2=void backspace()
 
-$prototype=QCompleter * completer () const
-$method=|QCompleter *|completer|
+$prototypeV2=QCompleter * completer() const
 
-$prototype=QMenu * createStandardContextMenu ()
-$method=|QMenu *|createStandardContextMenu|
+$prototypeV2=QMenu * createStandardContextMenu()
 
 $prototype=void cursorBackward ( bool mark, int steps = 1 )
 $method=|void|cursorBackward|bool,int=1
@@ -91,18 +87,15 @@ $method=|void|cursorWordBackward|bool
 $prototype=void cursorWordForward ( bool mark )
 $method=|void|cursorWordForward|bool
 
-$prototype=void del ()
-$method=|void|del|
+$prototypeV2=void del()
 
-$prototype=void deselect ()
-$method=|void|deselect|
+$prototypeV2=void deselect()
 
 $prototypeV2=QString displayText() const
 
 $prototypeV2=bool dragEnabled() const
 
-$prototype=EchoMode echoMode () const
-$method=|QLineEdit::EchoMode|echoMode|
+$prototypeV2=QLineEdit::EchoMode echoMode() const
 
 $prototype=void end ( bool mark )
 $method=|void|end|bool
@@ -136,8 +129,7 @@ $prototypeV2=int maxLength() const
 
 $prototypeV2=QString placeholderText() const
 
-$prototype=virtual QSize minimumSizeHint () const
-$virtualMethod=|QSize|minimumSizeHint|
+$prototypeV2=virtual QSize minimumSizeHint() const
 
 $prototypeV2=QString selectedText() const
 
@@ -210,16 +202,13 @@ $addMethod=setTextMargins
 $prototype=void setValidator ( const QValidator * v )
 $method=|void|setValidator|const QValidator *
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 $prototypeV2=QString text() const
 
-$prototype=QMargins textMargins () const
-$method=|QMargins|textMargins|
+$prototypeV2=QMargins textMargins() const
 
-$prototype=const QValidator * validator () const
-$method=|const QValidator *|validator|
+$prototypeV2=const QValidator * validator() const
 
 $prototype=virtual bool event ( QEvent * e )
 $virtualMethod=|bool|event|QEvent *
@@ -227,26 +216,20 @@ $virtualMethod=|bool|event|QEvent *
 $prototype=virtual QVariant inputMethodQuery ( Qt::InputMethodQuery property ) const
 $virtualMethod=|QVariant|inputMethodQuery|Qt::InputMethodQuery
 
-$prototype=void copy () const
-$method=|void|copy|
+$prototypeV2=void copy() const
 
-$prototype=void cut ()
-$method=|void|cut|
+$prototypeV2=void cut()
 
-$prototype=void paste ()
-$method=|void|paste|
+$prototypeV2=void paste()
 
-$prototype=void redo ()
-$method=|void|redo|
+$prototypeV2=void redo()
 
-$prototype=void selectAll ()
-$method=|void|selectAll|
+$prototypeV2=void selectAll()
 
 $prototype=void setText ( const QString & )
 $method=|void|setText|const QString &
 
-$prototype=void undo ()
-$method=|void|undo|
+$prototypeV2=void undo()
 
 $beginSignals
 $signal=|cursorPositionChanged(int,int)

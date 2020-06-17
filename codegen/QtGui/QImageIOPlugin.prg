@@ -33,7 +33,6 @@ $virtualMethod=|QImageIOPlugin::Capabilities|capabilities|QIODevice *,const QByt
 $prototype=virtual QImageIOHandler * create ( QIODevice * device, const QByteArray & format = QByteArray() ) const = 0
 $virtualMethod=|QImageIOHandler *|create|QIODevice *,const QByteArray &=QByteArray()
 
-$prototype=virtual QStringList keys () const = 0
-$virtualMethod=|QStringList|keys|
+$prototypeV2=virtual QStringList keys() const = 0
 
 #pragma ENDDUMP

@@ -76,16 +76,13 @@ $prototypeV2=bool leadingIncluded() const
 
 $prototypeV2=int lineNumber() const
 
-$prototype=QRectF naturalTextRect () const
-$method=|QRectF|naturalTextRect|
+$prototypeV2=QRectF naturalTextRect() const
 
 $prototypeV2=qreal naturalTextWidth() const
 
-$prototype=QPointF position () const
-$method=|QPointF|position|
+$prototypeV2=QPointF position() const
 
-$prototype=QRectF rect () const
-$method=|QRectF|rect|
+$prototypeV2=QRectF rect() const
 
 $prototype=void setLeadingIncluded ( bool included )
 $method=|void|setLeadingIncluded|bool

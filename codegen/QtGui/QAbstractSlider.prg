@@ -41,8 +41,7 @@ $prototypeV2=int maximum() const
 
 $prototypeV2=int minimum() const
 
-$prototype=Qt::Orientation orientation () const
-$method=|Qt::Orientation|orientation|
+$prototypeV2=Qt::Orientation orientation() const
 
 $prototypeV2=int pageStep() const
 

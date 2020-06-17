@@ -57,14 +57,11 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=Qt::MouseButton button () const
-$method=|Qt::MouseButton|button|
+$prototypeV2=Qt::MouseButton button() const
 
-$prototype=QPainterPath hitTestPath () const
-$method=|QPainterPath|hitTestPath|
+$prototypeV2=QPainterPath hitTestPath() const
 
-$prototype=Qt::KeyboardModifiers modifierMask () const
-$method=|Qt::KeyboardModifiers|modifierMask|
+$prototypeV2=Qt::KeyboardModifiers modifierMask() const
 
 $prototype=void setButton ( Qt::MouseButton button )
 $method=|void|setButton|Qt::MouseButton

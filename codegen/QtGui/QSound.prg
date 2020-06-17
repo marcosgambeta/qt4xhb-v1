@@ -41,8 +41,7 @@ $prototypeV2=int loopsRemaining() const
 $prototype=void setLoops ( int number )
 $method=|void|setLoops|int
 
-$prototype=void stop ()
-$method=|void|stop|
+$prototypeV2=void stop()
 
 $prototypeV2=static bool isAvailable()
 

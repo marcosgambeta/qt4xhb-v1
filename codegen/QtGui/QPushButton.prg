@@ -78,7 +78,6 @@ $method=|void|setDefault|bool
 $prototype=void setFlat ( bool )
 $method=|void|setFlat|bool
 
-$prototype=void showMenu ()
-$method=|void|showMenu|
+$prototypeV2=void showMenu()
 
 #pragma ENDDUMP

@@ -32,8 +32,7 @@ $deleteMethod
 
 $prototypeV2=bool hasClipping() const
 
-$prototype=QItemEditorFactory * itemEditorFactory () const
-$method=|QItemEditorFactory *|itemEditorFactory|
+$prototypeV2=QItemEditorFactory * itemEditorFactory() const
 
 $prototype=void setClipping ( bool clip )
 $method=|void|setClipping|bool

@@ -65,16 +65,14 @@ $prototypeV2=virtual int id() const
 $prototype=virtual bool mergeWith ( const QUndoCommand * command )
 $virtualMethod=|bool|mergeWith|const QUndoCommand *
 
-$prototype=virtual void redo ()
-$virtualMethod=|void|redo|
+$prototypeV2=virtual void redo()
 
 $prototype=void setText ( const QString & text )
 $method=|void|setText|const QString &
 
 $prototypeV2=QString text() const
 
-$prototype=virtual void undo ()
-$virtualMethod=|void|undo|
+$prototypeV2=virtual void undo()
 
 $extraMethods
 

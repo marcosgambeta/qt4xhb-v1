@@ -33,8 +33,7 @@ $deleteMethod
 $prototype=virtual QString displayText ( const QVariant & value, const QLocale & locale ) const
 $virtualMethod=|QString|displayText|const QVariant &,const QLocale &
 
-$prototype=QItemEditorFactory * itemEditorFactory () const
-$method=|QItemEditorFactory *|itemEditorFactory|
+$prototypeV2=QItemEditorFactory * itemEditorFactory() const
 
 $prototype=void setItemEditorFactory ( QItemEditorFactory * factory )
 $method=|void|setItemEditorFactory|QItemEditorFactory *

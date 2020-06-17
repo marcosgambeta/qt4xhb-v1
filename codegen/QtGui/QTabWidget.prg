@@ -60,8 +60,7 @@ HB_FUNC_STATIC( QTABWIDGET_ADDTAB )
 }
 $addMethod=addTab
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=QWidget * cornerWidget ( Qt::Corner corner = Qt::TopRightCorner ) const
 $method=|QWidget *|cornerWidget|Qt::Corner=Qt::TopRightCorner
@@ -70,16 +69,13 @@ $prototypeV2=int count() const
 
 $prototypeV2=int currentIndex() const
 
-$prototype=QWidget * currentWidget () const
-$method=|QWidget *|currentWidget|
+$prototypeV2=QWidget * currentWidget() const
 
 $prototypeV2=bool documentMode() const
 
-$prototype=Qt::TextElideMode elideMode () const
-$method=|Qt::TextElideMode|elideMode|
+$prototypeV2=Qt::TextElideMode elideMode() const
 
-$prototype=QSize iconSize () const
-$method=|QSize|iconSize|
+$prototypeV2=QSize iconSize() const
 
 $prototype=int indexOf ( QWidget * w ) const
 $method=|int|indexOf|QWidget *
@@ -165,11 +161,9 @@ $method=|void|setUsesScrollButtons|bool
 $prototype=QIcon tabIcon ( int index ) const
 $method=|QIcon|tabIcon|int
 
-$prototype=TabPosition tabPosition () const
-$method=|QTabWidget::TabPosition|tabPosition|
+$prototypeV2=QTabWidget::TabPosition tabPosition() const
 
-$prototype=TabShape tabShape () const
-$method=|QTabWidget::TabShape|tabShape|
+$prototypeV2=QTabWidget::TabShape tabShape() const
 
 $prototype=QString tabText ( int index ) const
 $method=|QString|tabText|int
@@ -187,11 +181,9 @@ $prototypeV2=bool usesScrollButtons() const
 $prototype=QWidget * widget ( int index ) const
 $method=|QWidget *|widget|int
 
-$prototype=virtual QSize minimumSizeHint () const
-$virtualMethod=|QSize|minimumSizeHint|
+$prototypeV2=virtual QSize minimumSizeHint() const
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 $prototype=void setCurrentIndex ( int index )
 $method=|void|setCurrentIndex|int

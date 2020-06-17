@@ -54,16 +54,13 @@ $virtualMethod=|void|addItem|QLayoutItem *
 $prototype=void addWidget ( QWidget * w )
 $method=|void|addWidget|QWidget *
 
-$prototype=QMargins contentsMargins () const
-$method=|QMargins|contentsMargins|
+$prototypeV2=QMargins contentsMargins() const
 
-$prototype=QRect contentsRect () const
-$method=|QRect|contentsRect|
+$prototypeV2=QRect contentsRect() const
 
 $prototypeV2=virtual int count() const = 0
 
-$prototype=virtual Qt::Orientations expandingDirections () const
-$virtualMethod=|Qt::Orientations|expandingDirections|
+$prototypeV2=virtual Qt::Orientations expandingDirections() const
 
 $prototype=void getContentsMargins ( int * left, int * top, int * right, int * bottom ) const
 $method=|void|getContentsMargins|int *,int *,int *,int *
@@ -76,17 +73,13 @@ $prototypeV2=bool isEnabled() const
 $prototype=virtual QLayoutItem * itemAt ( int index ) const = 0
 $virtualMethod=|QLayoutItem *|itemAt|int
 
-$prototype=virtual QSize maximumSize () const
-$virtualMethod=|QSize|maximumSize|
+$prototypeV2=virtual QSize maximumSize() const
 
-$prototype=QWidget * menuBar () const
-$method=|QWidget *|menuBar|
+$prototypeV2=QWidget * menuBar() const
 
-$prototype=virtual QSize minimumSize () const
-$virtualMethod=|QSize|minimumSize|
+$prototypeV2=virtual QSize minimumSize() const
 
-$prototype=QWidget * parentWidget () const
-$method=|QWidget *|parentWidget|
+$prototypeV2=QWidget * parentWidget() const
 
 $prototype=void removeItem ( QLayoutItem * item )
 $method=|void|removeItem|QLayoutItem *
@@ -170,27 +163,22 @@ $method=|void|setSizeConstraint|QLayout::SizeConstraint
 $prototype=void setSpacing ( int )
 $method=|void|setSpacing|int
 
-$prototype=SizeConstraint sizeConstraint () const
-$method=|QLayout::SizeConstraint|sizeConstraint|
+$prototypeV2=QLayout::SizeConstraint sizeConstraint() const
 
 $prototypeV2=int spacing() const
 
 $prototype=virtual QLayoutItem * takeAt ( int index ) = 0
 $virtualMethod=|QLayoutItem *|takeAt|int
 
-$prototype=void update ()
-$method=|void|update|
+$prototypeV2=void update()
 
-$prototype=virtual QRect geometry () const
-$virtualMethod=|QRect|geometry|
+$prototypeV2=virtual QRect geometry() const
 
-$prototype=virtual void invalidate ()
-$virtualMethod=|void|invalidate|
+$prototypeV2=virtual void invalidate()
 
 $prototypeV2=virtual bool isEmpty() const
 
-$prototype=virtual QLayout * layout ()
-$virtualMethod=|QLayout *|layout|
+$prototypeV2=virtual QLayout * layout()
 
 $prototype=virtual void setGeometry ( const QRect & r )
 $virtualMethod=|void|setGeometry|const QRect &

@@ -35,8 +35,7 @@ $prototypeV2=int cursorWidth() const
 $prototype=void ensureBlockLayout ( const QTextBlock & block ) const
 $method=|void|ensureBlockLayout|const QTextBlock &
 
-$prototype=void requestUpdate ()
-$method=|void|requestUpdate|
+$prototypeV2=void requestUpdate()
 
 $prototype=void setCursorWidth ( int width )
 $method=|void|setCursorWidth|int
@@ -44,8 +43,7 @@ $method=|void|setCursorWidth|int
 $prototype=virtual QRectF blockBoundingRect ( const QTextBlock & block ) const
 $virtualMethod=|QRectF|blockBoundingRect|const QTextBlock &
 
-$prototype=virtual QSizeF documentSize () const
-$virtualMethod=|QSizeF|documentSize|
+$prototypeV2=virtual QSizeF documentSize() const
 
 $prototype=virtual QRectF frameBoundingRect ( QTextFrame * ) const
 $virtualMethod=|QRectF|frameBoundingRect|QTextFrame *

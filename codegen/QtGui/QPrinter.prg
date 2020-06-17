@@ -65,8 +65,7 @@ $prototypeV2=bool abort()
 
 $prototypeV2=bool collateCopies() const
 
-$prototype=ColorMode colorMode () const
-$method=|QPrinter::ColorMode|colorMode|
+$prototypeV2=QPrinter::ColorMode colorMode() const
 
 $prototypeV2=int copyCount() const
 
@@ -76,8 +75,7 @@ $prototypeV2=QString docName() const
 
 $prototypeV2=bool doubleSidedPrinting() const
 
-$prototype=DuplexMode duplex () const
-$method=|QPrinter::DuplexMode|duplex|
+$prototypeV2=QPrinter::DuplexMode duplex() const
 
 $prototypeV2=bool fontEmbeddingEnabled() const
 
@@ -89,16 +87,13 @@ $prototypeV2=bool isValid() const
 
 $prototypeV2=bool newPage()
 
-$prototype=Orientation orientation () const
-$method=|QPrinter::Orientation|orientation|
+$prototypeV2=QPrinter::Orientation orientation() const
 
 $prototypeV2=QString outputFileName() const
 
-$prototype=OutputFormat outputFormat () const
-$method=|QPrinter::OutputFormat|outputFormat|
+$prototypeV2=QPrinter::OutputFormat outputFormat() const
 
-$prototype=PageOrder pageOrder () const
-$method=|QPrinter::PageOrder|pageOrder|
+$prototypeV2=QPrinter::PageOrder pageOrder() const
 
 $prototype=QRect pageRect () const
 $internalMethod=|QRect|pageRect,pageRect1|
@@ -184,21 +179,17 @@ HB_FUNC_STATIC( QPRINTER_PAPERSIZE )
 }
 $addMethod=paperSize
 
-$prototype=PaperSource paperSource () const
-$method=|QPrinter::PaperSource|paperSource|
+$prototypeV2=QPrinter::PaperSource paperSource() const
 
-$prototype=QPrintEngine * printEngine () const
-$method=|QPrintEngine *|printEngine|
+$prototypeV2=QPrintEngine * printEngine() const
 
 $prototypeV2=QString printProgram() const
 
-$prototype=PrintRange printRange () const
-$method=|QPrinter::PrintRange|printRange|
+$prototypeV2=QPrinter::PrintRange printRange() const
 
 $prototypeV2=QString printerName() const
 
-$prototype=PrinterState printerState () const
-$method=|QPrinter::PrinterState|printerState|
+$prototypeV2=QPrinter::PrinterState printerState() const
 
 $prototypeV2=int resolution() const
 
@@ -306,7 +297,6 @@ $prototypeV2=int toPage() const
 $prototype=int winPageSize () const
 $method=|int|winPageSize||#ifdef Q_WS_WIN
 
-$prototype=virtual QPaintEngine * paintEngine () const
-$virtualMethod=|QPaintEngine *|paintEngine|
+$prototypeV2=virtual QPaintEngine * paintEngine() const
 
 #pragma ENDDUMP

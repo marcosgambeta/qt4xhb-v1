@@ -61,16 +61,13 @@ $prototypeV2=int column() const
 
 $prototypeV2=int columnSpan() const
 
-$prototype=QTextCursor firstCursorPosition () const
-$method=|QTextCursor|firstCursorPosition|
+$prototypeV2=QTextCursor firstCursorPosition() const
 
-$prototype=QTextCharFormat format () const
-$method=|QTextCharFormat|format|
+$prototypeV2=QTextCharFormat format() const
 
 $prototypeV2=bool isValid() const
 
-$prototype=QTextCursor lastCursorPosition () const
-$method=|QTextCursor|lastCursorPosition|
+$prototypeV2=QTextCursor lastCursorPosition() const
 
 $prototypeV2=int row() const
 

@@ -68,8 +68,7 @@ $method=|void|closePersistentEditor|QListWidgetItem *
 
 $prototypeV2=int count() const
 
-$prototype=QListWidgetItem * currentItem () const
-$method=|QListWidgetItem *|currentItem|
+$prototypeV2=QListWidgetItem * currentItem() const
 
 $prototypeV2=int currentRow() const
 
@@ -232,8 +231,7 @@ $method=|QRect|visualItemRect|const QListWidgetItem *
 $prototype=virtual void dropEvent ( QDropEvent * event )
 $virtualMethod=|void|dropEvent|QDropEvent *
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=void scrollToItem ( const QListWidgetItem * item, QAbstractItemView::ScrollHint hint = EnsureVisible )
 $method=|void|scrollToItem|const QListWidgetItem *,QAbstractItemView::ScrollHint=QAbstractItemView::EnsureVisible

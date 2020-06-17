@@ -63,18 +63,15 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=ControlType controlType () const
-$method=|QSizePolicy::ControlType|controlType|
+$prototypeV2=QSizePolicy::ControlType controlType() const
 
-$prototype=Qt::Orientations expandingDirections () const
-$method=|Qt::Orientations|expandingDirections|
+$prototypeV2=Qt::Orientations expandingDirections() const
 
 $prototypeV2=bool hasHeightForWidth() const
 
 $prototypeV2=bool hasWidthForHeight() const
 
-$prototype=Policy horizontalPolicy () const
-$method=|QSizePolicy::Policy|horizontalPolicy|
+$prototypeV2=QSizePolicy::Policy horizontalPolicy() const
 
 $prototypeV2=int horizontalStretch() const
 
@@ -99,11 +96,9 @@ $method=|void|setVerticalStretch|uchar
 $prototype=void setWidthForHeight ( bool dependent )
 $method=|void|setWidthForHeight|bool
 
-$prototype=void transpose ()
-$method=|void|transpose|
+$prototypeV2=void transpose()
 
-$prototype=Policy verticalPolicy () const
-$method=|QSizePolicy::Policy|verticalPolicy|
+$prototypeV2=QSizePolicy::Policy verticalPolicy() const
 
 $prototypeV2=int verticalStretch() const
 

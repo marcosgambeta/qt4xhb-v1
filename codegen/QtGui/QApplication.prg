@@ -66,8 +66,7 @@ $deleteMethod
 $prototype=virtual void commitData ( QSessionManager & manager )
 $virtualMethod=|void|commitData|QSessionManager &
 
-$prototype=QInputContext * inputContext () const
-$method=|QInputContext *|inputContext|
+$prototypeV2=QInputContext * inputContext() const
 
 $prototypeV2=bool isSessionRestored() const
 
@@ -86,45 +85,36 @@ $prototypeV2=QString styleSheet() const
 $prototype=virtual bool notify ( QObject * receiver, QEvent * e )
 $virtualMethod=|bool|notify|QObject *,QEvent *
 
-$prototype=void aboutQt ()
-$method=|void|aboutQt|
+$prototypeV2=void aboutQt()
 
-$prototype=void closeAllWindows ()
-$method=|void|closeAllWindows|
+$prototypeV2=void closeAllWindows()
 
 $prototype=void setStyleSheet ( const QString & sheet )
 $method=|void|setStyleSheet|const QString &
 
-$prototype=static QWidget * activeModalWidget ()
-$staticMethod=|QWidget *|activeModalWidget|
+$prototypeV2=static QWidget * activeModalWidget()
 
-$prototype=static QWidget * activePopupWidget ()
-$staticMethod=|QWidget *|activePopupWidget|
+$prototypeV2=static QWidget * activePopupWidget()
 
-$prototype=static QWidget * activeWindow ()
-$staticMethod=|QWidget *|activeWindow|
+$prototypeV2=static QWidget * activeWindow()
 
 $prototype=static void alert ( QWidget * widget, int msec = 0 )
 $staticMethod=|void|alert|QWidget *,int=0
 
-$prototype=static QWidgetList allWidgets ()
-$staticMethod=|QWidgetList|allWidgets|
+$prototypeV2=static QWidgetList allWidgets()
 
-$prototype=static void beep ()
-$staticMethod=|void|beep|
+$prototypeV2=static void beep()
 
 $prototype=static void changeOverrideCursor ( const QCursor & cursor )
 $staticMethod=|void|changeOverrideCursor|const QCursor &
 
-$prototype=static QClipboard * clipboard ()
-$staticMethod=|QClipboard *|clipboard|
+$prototypeV2=static QClipboard * clipboard()
 
 $prototypeV2=static int colorSpec()
 
 $prototypeV2=static int cursorFlashTime()
 
-$prototype=static QDesktopWidget * desktop ()
-$staticMethod=|QDesktopWidget *|desktop|
+$prototypeV2=static QDesktopWidget * desktop()
 
 $prototypeV2=static bool desktopSettingsAware()
 
@@ -132,8 +122,7 @@ $prototypeV2=static int doubleClickInterval()
 
 $prototypeV2=static int exec()
 
-$prototype=static QWidget * focusWidget ()
-$staticMethod=|QWidget *|focusWidget|
+$prototypeV2=static QWidget * focusWidget()
 
 $prototype=static QFont font ()
 $internalStaticMethod=|QFont|font,font1|
@@ -171,11 +160,9 @@ HB_FUNC_STATIC( QAPPLICATION_FONT )
 }
 $addMethod=font
 
-$prototype=static QFontMetrics fontMetrics ()
-$staticMethod=|QFontMetrics|fontMetrics|
+$prototypeV2=static QFontMetrics fontMetrics()
 
-$prototype=static QSize globalStrut ()
-$staticMethod=|QSize|globalStrut|
+$prototypeV2=static QSize globalStrut()
 
 $prototype=static bool isEffectEnabled ( Qt::UIEffect effect )
 $staticMethod=|bool|isEffectEnabled|Qt::UIEffect
@@ -184,25 +171,19 @@ $prototypeV2=static bool isLeftToRight()
 
 $prototypeV2=static bool isRightToLeft()
 
-$prototype=static Qt::LayoutDirection keyboardInputDirection ()
-$staticMethod=|Qt::LayoutDirection|keyboardInputDirection|
+$prototypeV2=static Qt::LayoutDirection keyboardInputDirection()
 
 $prototypeV2=static int keyboardInputInterval()
 
-$prototype=static QLocale keyboardInputLocale ()
-$staticMethod=|QLocale|keyboardInputLocale|
+$prototypeV2=static QLocale keyboardInputLocale()
 
-$prototype=static Qt::KeyboardModifiers keyboardModifiers ()
-$staticMethod=|Qt::KeyboardModifiers|keyboardModifiers|
+$prototypeV2=static Qt::KeyboardModifiers keyboardModifiers()
 
-$prototype=static Qt::LayoutDirection layoutDirection ()
-$staticMethod=|Qt::LayoutDirection|layoutDirection|
+$prototypeV2=static Qt::LayoutDirection layoutDirection()
 
-$prototype=static Qt::MouseButtons mouseButtons ()
-$staticMethod=|Qt::MouseButtons|mouseButtons|
+$prototypeV2=static Qt::MouseButtons mouseButtons()
 
-$prototype=static QCursor * overrideCursor ()
-$staticMethod=|QCursor *|overrideCursor|
+$prototypeV2=static QCursor * overrideCursor()
 
 $prototype=static QPalette palette ()
 $internalStaticMethod=|QPalette|palette,palette1|
@@ -240,13 +221,11 @@ HB_FUNC_STATIC( QAPPLICATION_PALETTE )
 }
 $addMethod=palette
 
-$prototype=static Qt::KeyboardModifiers queryKeyboardModifiers ()
-$staticMethod=|Qt::KeyboardModifiers|queryKeyboardModifiers|
+$prototypeV2=static Qt::KeyboardModifiers queryKeyboardModifiers()
 
 $prototypeV2=static bool quitOnLastWindowClosed()
 
-$prototype=static void restoreOverrideCursor ()
-$staticMethod=|void|restoreOverrideCursor|
+$prototypeV2=static void restoreOverrideCursor()
 
 $prototype=static void setActiveWindow ( QWidget * active )
 $staticMethod=|void|setActiveWindow|QWidget *
@@ -334,11 +313,9 @@ $prototypeV2=static int startDragDistance()
 
 $prototypeV2=static int startDragTime()
 
-$prototype=static QStyle * style ()
-$staticMethod=|QStyle *|style|
+$prototypeV2=static QStyle * style()
 
-$prototype=static void syncX ()
-$staticMethod=|void|syncX|
+$prototypeV2=static void syncX()
 
 $prototype=static QWidget * topLevelAt ( const QPoint & point )
 $internalStaticMethod=|QWidget *|topLevelAt,topLevelAt1|const QPoint &
@@ -368,11 +345,9 @@ HB_FUNC_STATIC( QAPPLICATION_TOPLEVELAT )
 }
 $addMethod=topLevelAt
 
-$prototype=static QWidgetList topLevelWidgets ()
-$staticMethod=|QWidgetList|topLevelWidgets|
+$prototypeV2=static QWidgetList topLevelWidgets()
 
-$prototype=static QApplication::Type type ()
-$staticMethod=|QApplication::Type|type|
+$prototypeV2=static QApplication::Type type()
 
 $prototypeV2=static int wheelScrollLines()
 
@@ -404,8 +379,7 @@ HB_FUNC_STATIC( QAPPLICATION_WIDGETAT )
 }
 $addMethod=widgetAt
 
-$prototype=static QIcon windowIcon ()
-$staticMethod=|QIcon|windowIcon|
+$prototypeV2=static QIcon windowIcon()
 
 $beginSignals
 $signal=|aboutToReleaseGpuResources()

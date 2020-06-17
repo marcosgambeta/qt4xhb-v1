@@ -30,7 +30,6 @@ $deleteMethod
 $prototype=virtual QIconEngineV2 * create ( const QString & filename = QString() ) = 0
 $virtualMethod=|QIconEngineV2 *|create|const QString &=QString()
 
-$prototype=virtual QStringList keys () const = 0
-$virtualMethod=|QStringList|keys|
+$prototypeV2=virtual QStringList keys() const = 0
 
 #pragma ENDDUMP

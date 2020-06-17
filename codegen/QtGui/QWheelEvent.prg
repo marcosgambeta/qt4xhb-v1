@@ -57,11 +57,9 @@ $deleteMethod
 
 $prototypeV2=int delta() const
 
-$prototype=const QPoint &pos() const
-$method=|const QPoint &|pos|
+$prototypeV2=const QPoint & pos() const
 
-$prototype=const QPoint &globalPos() const
-$method=|const QPoint &|globalPos|
+$prototypeV2=const QPoint & globalPos() const
 
 $prototypeV2=int x() const
 
@@ -71,10 +69,8 @@ $prototypeV2=int globalX() const
 
 $prototypeV2=int globalY() const
 
-$prototype=Qt::MouseButtons buttons() const
-$method=|Qt::MouseButtons|buttons|
+$prototypeV2=Qt::MouseButtons buttons() const
 
-$prototype=Qt::Orientation orientation() const
-$method=|Qt::Orientation|orientation|
+$prototypeV2=Qt::Orientation orientation() const
 
 #pragma ENDDUMP

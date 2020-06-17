@@ -29,25 +29,19 @@ $prototypeV2=bool allowsErrorInteraction()
 
 $prototypeV2=bool allowsInteraction()
 
-$prototype=void cancel ()
-$method=|void|cancel|
+$prototypeV2=void cancel()
 
-$prototype=QStringList discardCommand () const
-$method=|QStringList|discardCommand|
+$prototypeV2=QStringList discardCommand() const
 
 $prototypeV2=bool isPhase2() const
 
-$prototype=void release ()
-$method=|void|release|
+$prototypeV2=void release()
 
-$prototype=void requestPhase2 ()
-$method=|void|requestPhase2|
+$prototypeV2=void requestPhase2()
 
-$prototype=QStringList restartCommand () const
-$method=|QStringList|restartCommand|
+$prototypeV2=QStringList restartCommand() const
 
-$prototype=RestartHint restartHint () const
-$method=|QSessionManager::RestartHint|restartHint|
+$prototypeV2=QSessionManager::RestartHint restartHint() const
 
 $prototypeV2=QString sessionId() const
 

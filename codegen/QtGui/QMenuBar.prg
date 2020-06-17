@@ -32,8 +32,7 @@ $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-$prototype=QAction * activeAction () const
-$method=|QAction *|activeAction|
+$prototypeV2=QAction * activeAction() const
 
 $prototype=QAction * addAction ( const QString & text )
 $internalMethod=|QAction *|addAction,addAction1|const QString &
@@ -107,11 +106,9 @@ HB_FUNC_STATIC( QMENUBAR_ADDMENU )
 }
 $addMethod=addMenu
 
-$prototype=QAction * addSeparator ()
-$method=|QAction *|addSeparator|
+$prototypeV2=QAction * addSeparator()
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=QAction * insertMenu ( QAction * before, QMenu * menu )
 $method=|QAction *|insertMenu|QAction *,QMenu *
@@ -135,11 +132,9 @@ $method=|void|setNativeMenuBar|bool
 $prototype=virtual int heightForWidth ( int ) const
 $virtualMethod=|int|heightForWidth|int
 
-$prototype=virtual QSize minimumSizeHint () const
-$virtualMethod=|QSize|minimumSizeHint|
+$prototypeV2=virtual QSize minimumSizeHint() const
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 $prototype=virtual void setVisible ( bool visible )
 $virtualMethod=|void|setVisible|bool

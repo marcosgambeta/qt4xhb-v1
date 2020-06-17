@@ -133,8 +133,7 @@ $prototypeV2=int horizontalSpacing() const
 $prototype=QLayoutItem * itemAtPosition ( int row, int column ) const
 $method=|QLayoutItem *|itemAtPosition|int,int
 
-$prototype=Qt::Corner originCorner () const
-$method=|Qt::Corner|originCorner|
+$prototypeV2=Qt::Corner originCorner() const
 
 $prototypeV2=int rowCount() const
 
@@ -174,34 +173,29 @@ $prototypeV2=int verticalSpacing() const
 
 $prototypeV2=virtual int count() const
 
-$prototype=virtual Qt::Orientations expandingDirections () const
-$virtualMethod=|Qt::Orientations|expandingDirections|
+$prototypeV2=virtual Qt::Orientations expandingDirections() const
 
 $prototypeV2=virtual bool hasHeightForWidth() const
 
 $prototype=virtual int heightForWidth ( int w ) const
 $virtualMethod=|int|heightForWidth|int
 
-$prototype=virtual void invalidate ()
-$virtualMethod=|void|invalidate|
+$prototypeV2=virtual void invalidate()
 
 $prototype=virtual QLayoutItem * itemAt ( int index ) const
 $virtualMethod=|QLayoutItem *|itemAt|int
 
-$prototype=virtual QSize maximumSize () const
-$virtualMethod=|QSize|maximumSize|
+$prototypeV2=virtual QSize maximumSize() const
 
 $prototype=virtual int minimumHeightForWidth ( int w ) const
 $virtualMethod=|int|minimumHeightForWidth|int
 
-$prototype=virtual QSize minimumSize () const
-$virtualMethod=|QSize|minimumSize|
+$prototypeV2=virtual QSize minimumSize() const
 
 $prototype=virtual void setGeometry ( const QRect & rect )
 $virtualMethod=|void|setGeometry|const QRect &
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 $prototype=virtual QLayoutItem * takeAt ( int index )
 $virtualMethod=|QLayoutItem *|takeAt|int

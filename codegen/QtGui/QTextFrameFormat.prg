@@ -32,16 +32,13 @@ $deleteMethod
 
 $prototypeV2=qreal border() const
 
-$prototype=QBrush borderBrush () const
-$method=|QBrush|borderBrush|
+$prototypeV2=QBrush borderBrush() const
 
-$prototype=BorderStyle borderStyle () const
-$method=|QTextFrameFormat::BorderStyle|borderStyle|
+$prototypeV2=QTextFrameFormat::BorderStyle borderStyle() const
 
 $prototypeV2=qreal bottomMargin() const
 
-$prototype=QTextLength height () const
-$method=|QTextLength|height|
+$prototypeV2=QTextLength height() const
 
 $prototypeV2=bool isValid() const
 
@@ -51,11 +48,9 @@ $prototypeV2=qreal margin() const
 
 $prototypeV2=qreal padding() const
 
-$prototype=PageBreakFlags pageBreakPolicy () const
-$method=|QTextFormat::PageBreakFlags|pageBreakPolicy|
+$prototypeV2=QTextFormat::PageBreakFlags pageBreakPolicy() const
 
-$prototype=Position position () const
-$method=|QTextFrameFormat::Position|position|
+$prototypeV2=QTextFrameFormat::Position position() const
 
 $prototypeV2=qreal rightMargin() const
 
@@ -150,7 +145,6 @@ $addMethod=setWidth
 
 $prototypeV2=qreal topMargin() const
 
-$prototype=QTextLength width () const
-$method=|QTextLength|width|
+$prototypeV2=QTextLength width() const
 
 #pragma ENDDUMP

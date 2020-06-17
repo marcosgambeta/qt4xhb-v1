@@ -30,8 +30,7 @@ $constructor=|new|const QKeySequence &,int,bool=false
 
 $deleteMethod
 
-$prototype=const QKeySequence &key()
-$method=|const QKeySequence &|key|
+$prototypeV2=const QKeySequence & key()
 
 $prototypeV2=int shortcutId()
 

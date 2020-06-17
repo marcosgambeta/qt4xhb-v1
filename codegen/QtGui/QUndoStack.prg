@@ -43,8 +43,7 @@ $prototypeV2=bool canUndo() const
 
 $prototypeV2=int cleanIndex() const
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=const QUndoCommand * command ( int index ) const
 $method=|const QUndoCommand *|command|int
@@ -57,8 +56,7 @@ $method=|QAction *|createRedoAction|QObject *,const QString &=QString()
 $prototype=QAction * createUndoAction ( QObject * parent, const QString & prefix = QString() ) const
 $method=|QAction *|createUndoAction|QObject *,const QString &=QString()
 
-$prototype=void endMacro ()
-$method=|void|endMacro|
+$prototypeV2=void endMacro()
 
 $prototypeV2=int index() const
 
@@ -81,20 +79,17 @@ $prototypeV2=int undoLimit() const
 
 $prototypeV2=QString undoText() const
 
-$prototype=void redo ()
-$method=|void|redo|
+$prototypeV2=void redo()
 
 $prototype=void setActive ( bool active = true )
 $method=|void|setActive|bool=true
 
-$prototype=void setClean ()
-$method=|void|setClean|
+$prototypeV2=void setClean()
 
 $prototype=void setIndex ( int idx )
 $method=|void|setIndex|int
 
-$prototype=void undo ()
-$method=|void|undo|
+$prototypeV2=void undo()
 
 $beginSignals
 $signal=|canRedoChanged(bool)

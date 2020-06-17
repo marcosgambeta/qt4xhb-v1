@@ -35,8 +35,7 @@ $prototypeV2=virtual QString fontDir() const
 $prototype=virtual QFontEngine * fontEngine ( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference )
 $virtualMethod=|QFontEngine *|fontEngine|const QByteArray &,qreal,QFont::HintingPreference
 
-$prototype=virtual void populateFontDatabase ()
-$virtualMethod=|void|populateFontDatabase|
+$prototypeV2=virtual void populateFontDatabase()
 
 $prototype=virtual void releaseHandle ( void * handle )
 $virtualMethod=|void|releaseHandle|void *

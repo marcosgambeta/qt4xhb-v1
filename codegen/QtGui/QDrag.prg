@@ -64,14 +64,11 @@ HB_FUNC_STATIC( QDRAG_EXEC )
 }
 $addMethod=exec
 
-$prototype=QPoint hotSpot () const
-$method=|QPoint|hotSpot|
+$prototypeV2=QPoint hotSpot() const
 
-$prototype=QMimeData * mimeData () const
-$method=|QMimeData *|mimeData|
+$prototypeV2=QMimeData * mimeData() const
 
-$prototype=QPixmap pixmap () const
-$method=|QPixmap|pixmap|
+$prototypeV2=QPixmap pixmap() const
 
 $prototype=void setDragCursor ( const QPixmap & cursor, Qt::DropAction action )
 $method=|void|setDragCursor|const QPixmap &,Qt::DropAction
@@ -85,11 +82,9 @@ $method=|void|setMimeData|QMimeData *
 $prototype=void setPixmap ( const QPixmap & pixmap )
 $method=|void|setPixmap|const QPixmap &
 
-$prototype=QWidget * source () const
-$method=|QWidget *|source|
+$prototypeV2=QWidget * source() const
 
-$prototype=QWidget * target () const
-$method=|QWidget *|target|
+$prototypeV2=QWidget * target() const
 
 $beginSignals
 $signal=|actionChanged(Qt::DropAction)

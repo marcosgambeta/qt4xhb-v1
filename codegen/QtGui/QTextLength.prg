@@ -57,8 +57,7 @@ $deleteMethod
 
 $prototypeV2=qreal rawValue() const
 
-$prototype=Type type () const
-$method=|QTextLength::Type|type|
+$prototypeV2=QTextLength::Type type() const
 
 $prototype=qreal value ( qreal maximumLength ) const
 $method=|qreal|value|qreal

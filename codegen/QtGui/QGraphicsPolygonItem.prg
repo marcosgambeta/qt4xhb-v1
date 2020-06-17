@@ -55,11 +55,9 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=Qt::FillRule fillRule () const
-$method=|Qt::FillRule|fillRule|
+$prototypeV2=Qt::FillRule fillRule() const
 
-$prototype=QPolygonF polygon () const
-$method=|QPolygonF|polygon|
+$prototypeV2=QPolygonF polygon() const
 
 $prototype=void setFillRule ( Qt::FillRule rule )
 $method=|void|setFillRule|Qt::FillRule
@@ -67,8 +65,7 @@ $method=|void|setFillRule|Qt::FillRule
 $prototype=void setPolygon ( const QPolygonF & polygon )
 $method=|void|setPolygon|const QPolygonF &
 
-$prototype=virtual QRectF boundingRect () const
-$virtualMethod=|QRectF|boundingRect|
+$prototypeV2=virtual QRectF boundingRect() const
 
 $prototype=virtual bool contains ( const QPointF & point ) const
 $virtualMethod=|bool|contains|const QPointF &
@@ -76,14 +73,12 @@ $virtualMethod=|bool|contains|const QPointF &
 $prototype=virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 $virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
 
-$prototype=virtual QPainterPath opaqueArea () const
-$virtualMethod=|QPainterPath|opaqueArea|
+$prototypeV2=virtual QPainterPath opaqueArea() const
 
 $prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
 $virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
 
-$prototype=virtual QPainterPath shape () const
-$virtualMethod=|QPainterPath|shape|
+$prototypeV2=virtual QPainterPath shape() const
 
 $prototypeV2=virtual int type() const
 

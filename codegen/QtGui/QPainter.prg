@@ -55,17 +55,14 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=const QBrush & background () const
-$method=|const QBrush &|background|
+$prototypeV2=const QBrush & background() const
 
-$prototype=Qt::BGMode backgroundMode () const
-$method=|Qt::BGMode|backgroundMode|
+$prototypeV2=Qt::BGMode backgroundMode() const
 
 $prototype=bool begin ( QPaintDevice * device )
 $method=|bool|begin|QPaintDevice *
 
-$prototype=void beginNativePainting ()
-$method=|void|beginNativePainting|
+$prototypeV2=void beginNativePainting()
 
 $prototype=QRectF boundingRect ( const QRectF & rectangle, int flags, const QString & text )
 $internalMethod=|QRectF|boundingRect,boundingRect1|const QRectF &,int,const QString &
@@ -111,29 +108,21 @@ HB_FUNC_STATIC( QPAINTER_BOUNDINGRECT )
 }
 $addMethod=boundingRect
 
-$prototype=const QBrush & brush () const
-$method=|const QBrush &|brush|
+$prototypeV2=const QBrush & brush() const
 
-$prototype=QPoint brushOrigin () const
-$method=|QPoint|brushOrigin|
+$prototypeV2=QPoint brushOrigin() const
 
-$prototype=QPainterPath clipPath () const
-$method=|QPainterPath|clipPath|
+$prototypeV2=QPainterPath clipPath() const
 
-$prototype=QRegion clipRegion () const
-$method=|QRegion|clipRegion|
+$prototypeV2=QRegion clipRegion() const
 
-$prototype=QTransform combinedTransform () const
-$method=|QTransform|combinedTransform|
+$prototypeV2=QTransform combinedTransform() const
 
-$prototype=CompositionMode compositionMode () const
-$method=|QPainter::CompositionMode|compositionMode|
+$prototypeV2=QPainter::CompositionMode compositionMode() const
 
-$prototype=QPaintDevice * device () const
-$method=|QPaintDevice *|device|
+$prototypeV2=QPaintDevice * device() const
 
-$prototype=const QTransform & deviceTransform () const
-$method=|const QTransform &|deviceTransform|
+$prototypeV2=const QTransform & deviceTransform() const
 
 $prototype=void drawArc ( const QRectF & rectangle, int startAngle, int spanAngle )
 $internalMethod=|void|drawArc,drawArc1|const QRectF &,int,int
@@ -1018,8 +1007,7 @@ $addMethod=drawTiledPixmap
 
 $prototypeV2=bool end()
 
-$prototype=void endNativePainting ()
-$method=|void|endNativePainting|
+$prototypeV2=void endNativePainting()
 
 $prototype=void eraseRect ( const QRectF & rectangle )
 $internalMethod=|void|eraseRect,eraseRect1|const QRectF &
@@ -1168,14 +1156,11 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT )
 }
 $addMethod=fillRect
 
-$prototype=const QFont & font () const
-$method=|const QFont &|font|
+$prototypeV2=const QFont & font() const
 
-$prototype=QFontInfo fontInfo () const
-$method=|QFontInfo|fontInfo|
+$prototypeV2=QFontInfo fontInfo() const
 
-$prototype=QFontMetrics fontMetrics () const
-$method=|QFontMetrics|fontMetrics|
+$prototypeV2=QFontMetrics fontMetrics() const
 
 $prototypeV2=bool hasClipping() const
 
@@ -1184,31 +1169,24 @@ $method=|void|initFrom|const QWidget *
 
 $prototypeV2=bool isActive() const
 
-$prototype=Qt::LayoutDirection layoutDirection () const
-$method=|Qt::LayoutDirection|layoutDirection|
+$prototypeV2=Qt::LayoutDirection layoutDirection() const
 
 $prototypeV2=qreal opacity() const
 
-$prototype=QPaintEngine * paintEngine () const
-$method=|QPaintEngine *|paintEngine|
+$prototypeV2=QPaintEngine * paintEngine() const
 
-$prototype=const QPen & pen () const
-$method=|const QPen &|pen|
+$prototypeV2=const QPen & pen() const
 
-$prototype=RenderHints renderHints () const
-$method=|QPainter::RenderHints|renderHints|
+$prototypeV2=QPainter::RenderHints renderHints() const
 
-$prototype=void resetTransform ()
-$method=|void|resetTransform|
+$prototypeV2=void resetTransform()
 
-$prototype=void restore ()
-$method=|void|restore|
+$prototypeV2=void restore()
 
 $prototype=void rotate ( qreal angle )
 $method=|void|rotate|qreal
 
-$prototype=void save ()
-$method=|void|save|
+$prototypeV2=void save()
 
 $prototype=void scale ( qreal sx, qreal sy )
 $method=|void|scale|qreal,qreal
@@ -1459,8 +1437,7 @@ $method=|void|strokePath|const QPainterPath &,const QPen &
 $prototype=bool testRenderHint ( RenderHint hint ) const
 $method=|bool|testRenderHint|QPainter::RenderHint
 
-$prototype=const QTransform & transform () const
-$method=|const QTransform &|transform|
+$prototypeV2=const QTransform & transform() const
 
 $prototype=void translate ( const QPointF & offset )
 $internalMethod=|void|translate,translate1|const QPointF &
@@ -1500,16 +1477,13 @@ $addMethod=translate
 
 $prototypeV2=bool viewTransformEnabled() const
 
-$prototype=QRect viewport () const
-$method=|QRect|viewport|
+$prototypeV2=QRect viewport() const
 
-$prototype=QRect window () const
-$method=|QRect|window|
+$prototypeV2=QRect window() const
 
 $prototypeV2=bool worldMatrixEnabled() const
 
-$prototype=const QTransform & worldTransform () const
-$method=|const QTransform &|worldTransform|
+$prototypeV2=const QTransform & worldTransform() const
 
 $extraMethods
 

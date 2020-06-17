@@ -67,8 +67,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QActionGroup * actionGroup () const
-$method=|QActionGroup *|actionGroup|
+$prototypeV2=QActionGroup * actionGroup() const
 
 $prototype=void activate ( ActionEvent event )
 $method=|void|activate|QAction::ActionEvent
@@ -81,14 +80,11 @@ $method=|QList<QWidget *>|associatedWidgets|
 
 $prototypeV2=bool autoRepeat() const
 
-$prototype=QVariant data () const
-$method=|QVariant|data|
+$prototypeV2=QVariant data() const
 
-$prototype=QFont font () const
-$method=|QFont|font|
+$prototypeV2=QFont font() const
 
-$prototype=QIcon icon () const
-$method=|QIcon|icon|
+$prototypeV2=QIcon icon() const
 
 $prototypeV2=QString iconText() const
 
@@ -104,17 +100,13 @@ $prototypeV2=bool isSeparator() const
 
 $prototypeV2=bool isVisible() const
 
-$prototype=QMenu * menu () const
-$method=|QMenu *|menu|
+$prototypeV2=QMenu * menu() const
 
-$prototype=MenuRole menuRole () const
-$method=|QAction::MenuRole|menuRole|
+$prototypeV2=QAction::MenuRole menuRole() const
 
-$prototype=QWidget * parentWidget () const
-$method=|QWidget *|parentWidget|
+$prototypeV2=QWidget * parentWidget() const
 
-$prototype=Priority priority () const
-$method=|QAction::Priority|priority|
+$prototypeV2=QAction::Priority priority() const
 
 $prototype=void setActionGroup ( QActionGroup * group )
 $method=|void|setActionGroup|QActionGroup *
@@ -201,11 +193,9 @@ $method=|void|setToolTip|const QString &
 $prototype=void setWhatsThis ( const QString & what )
 $method=|void|setWhatsThis|const QString &
 
-$prototype=QKeySequence shortcut () const
-$method=|QKeySequence|shortcut|
+$prototypeV2=QKeySequence shortcut() const
 
-$prototype=Qt::ShortcutContext shortcutContext () const
-$method=|Qt::ShortcutContext|shortcutContext|
+$prototypeV2=Qt::ShortcutContext shortcutContext() const
 
 $prototype=QList<QKeySequence> shortcuts () const
 $method=|QList<QKeySequence>|shortcuts|
@@ -213,8 +203,7 @@ $method=|QList<QKeySequence>|shortcuts|
 $prototype=bool showStatusText ( QWidget * widget = 0 )
 $method=|bool|showStatusText|QWidget *=0
 
-$prototype=SoftKeyRole softKeyRole () const
-$method=|QAction::SoftKeyRole|softKeyRole|
+$prototypeV2=QAction::SoftKeyRole softKeyRole() const
 
 $prototypeV2=QString statusTip() const
 
@@ -224,8 +213,7 @@ $prototypeV2=QString toolTip() const
 
 $prototypeV2=QString whatsThis() const
 
-$prototype=void hover ()
-$method=|void|hover|
+$prototypeV2=void hover()
 
 $prototype=void setChecked ( bool )
 $method=|void|setChecked|bool
@@ -239,11 +227,9 @@ $method=|void|setEnabled|bool
 $prototype=void setVisible ( bool )
 $method=|void|setVisible|bool
 
-$prototype=void toggle ()
-$method=|void|toggle|
+$prototypeV2=void toggle()
 
-$prototype=void trigger ()
-$method=|void|trigger|
+$prototypeV2=void trigger()
 
 $beginSignals
 $signal=|changed()

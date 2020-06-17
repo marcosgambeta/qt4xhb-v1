@@ -159,8 +159,7 @@ $method=|void|setWindowApi|QPlatformWindowFormat::WindowApi
 $prototype=void setWindowSurface ( bool enable )
 $method=|void|setWindowSurface|bool
 
-$prototype=QPlatformGLContext * sharedGLContext () const
-$method=|QPlatformGLContext *|sharedGLContext|
+$prototypeV2=QPlatformGLContext * sharedGLContext() const
 
 $prototypeV2=bool stencil() const
 
@@ -173,11 +172,9 @@ $prototypeV2=int swapInterval() const
 $prototype=bool testOption ( QPlatformWindowFormat::FormatOptions opt ) const
 $method=|bool|testOption|QPlatformWindowFormat::FormatOptions
 
-$prototype=WindowApi windowApi () const
-$method=|QPlatformWindowFormat::WindowApi|windowApi|
+$prototypeV2=QPlatformWindowFormat::WindowApi windowApi() const
 
-$prototype=static QPlatformWindowFormat defaultFormat ()
-$staticMethod=|QPlatformWindowFormat|defaultFormat|
+$prototypeV2=static QPlatformWindowFormat defaultFormat()
 
 $prototype=static void setDefaultFormat ( const QPlatformWindowFormat & f )
 $staticMethod=|void|setDefaultFormat|const QPlatformWindowFormat &

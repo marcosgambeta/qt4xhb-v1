@@ -42,8 +42,7 @@ $prototypeV2=int logicalDpiY() const
 $prototype=int numColors () const (deprecated)
 $method=|int|numColors|
 
-$prototype=virtual QPaintEngine * paintEngine () const = 0
-$virtualMethod=|QPaintEngine *|paintEngine|
+$prototypeV2=virtual QPaintEngine * paintEngine() const = 0
 
 $prototypeV2=bool paintingActive() const
 

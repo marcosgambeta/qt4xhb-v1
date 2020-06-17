@@ -34,14 +34,11 @@ $deleteMethod
 
 $prototypeV2=int batchSize() const
 
-$prototype=void clearPropertyFlags ()
-$method=|void|clearPropertyFlags|
+$prototypeV2=void clearPropertyFlags()
 
-$prototype=Flow flow () const
-$method=|QListView::Flow|flow|
+$prototypeV2=QListView::Flow flow() const
 
-$prototype=QSize gridSize () const
-$method=|QSize|gridSize|
+$prototypeV2=QSize gridSize() const
 
 $prototype=bool isRowHidden ( int row ) const
 $method=|bool|isRowHidden|int
@@ -50,16 +47,13 @@ $prototypeV2=bool isSelectionRectVisible() const
 
 $prototypeV2=bool isWrapping() const
 
-$prototype=LayoutMode layoutMode () const
-$method=|QListView::LayoutMode|layoutMode|
+$prototypeV2=QListView::LayoutMode layoutMode() const
 
 $prototypeV2=int modelColumn() const
 
-$prototype=Movement movement () const
-$method=|QListView::Movement|movement|
+$prototypeV2=QListView::Movement movement() const
 
-$prototype=ResizeMode resizeMode () const
-$method=|QListView::ResizeMode|resizeMode|
+$prototypeV2=QListView::ResizeMode resizeMode() const
 
 $prototype=void setBatchSize ( int batchSize )
 $method=|void|setBatchSize|int
@@ -107,8 +101,7 @@ $prototypeV2=int spacing() const
 
 $prototypeV2=bool uniformItemSizes() const
 
-$prototype=ViewMode viewMode () const
-$method=|QListView::ViewMode|viewMode|
+$prototypeV2=QListView::ViewMode viewMode() const
 
 $prototypeV2=bool wordWrap() const
 

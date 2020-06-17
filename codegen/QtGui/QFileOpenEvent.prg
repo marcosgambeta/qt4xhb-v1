@@ -62,7 +62,6 @@ $prototypeV2=QString file() const
 $prototype=bool openFile ( QFile & file, QIODevice::OpenMode flags ) const
 $method=|bool|openFile|QFile &,QIODevice::OpenMode
 
-$prototype=QUrl url () const
-$method=|QUrl|url|
+$prototypeV2=QUrl url() const
 
 #pragma ENDDUMP

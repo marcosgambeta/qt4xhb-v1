@@ -59,14 +59,11 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QMenu * contextMenu () const
-$method=|QMenu *|contextMenu|
+$prototypeV2=QMenu * contextMenu() const
 
-$prototype=QRect geometry () const
-$method=|QRect|geometry|
+$prototypeV2=QRect geometry() const
 
-$prototype=QIcon icon () const
-$method=|QIcon|icon|
+$prototypeV2=QIcon icon() const
 
 $prototypeV2=bool isVisible() const
 
@@ -82,17 +79,14 @@ $method=|void|setToolTip|const QString &
 $prototype=void showMessage ( const QString & title, const QString & message, MessageIcon icon = Information, int millisecondsTimeoutHint = 10000 )
 $method=|void|showMessage|const QString &,const QString &,QSystemTrayIcon::MessageIcon=QSystemTrayIcon::Information,int=10000
 
-$prototype=QString toolTip () const
-$method=|QString|toolTip|
+$prototypeV2=QString toolTip() const
 
-$prototype=void hide ()
-$method=|void|hide|
+$prototypeV2=void hide()
 
 $prototype=void setVisible ( bool visible )
 $method=|void|setVisible|bool
 
-$prototype=void show ()
-$method=|void|show|
+$prototypeV2=void show()
 
 $prototypeV2=static bool isSystemTrayAvailable()
 

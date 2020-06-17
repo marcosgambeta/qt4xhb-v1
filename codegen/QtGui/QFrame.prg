@@ -30,14 +30,11 @@ $constructor=|new|QWidget *=0,Qt::WindowFlags=0
 
 $deleteMethod
 
-$prototype=QRect frameRect () const
-$method=|QRect|frameRect|
+$prototypeV2=QRect frameRect() const
 
-$prototype=Shadow frameShadow () const
-$method=|QFrame::Shadow|frameShadow|
+$prototypeV2=QFrame::Shadow frameShadow() const
 
-$prototype=Shape frameShape () const
-$method=|QFrame::Shape|frameShape|
+$prototypeV2=QFrame::Shape frameShape() const
 
 $prototypeV2=int frameStyle() const
 

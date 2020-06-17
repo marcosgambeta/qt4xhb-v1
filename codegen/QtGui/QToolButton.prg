@@ -35,19 +35,15 @@ $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-$prototype=Qt::ArrowType arrowType () const
-$method=|Qt::ArrowType|arrowType|
+$prototypeV2=Qt::ArrowType arrowType() const
 
 $prototypeV2=bool autoRaise() const
 
-$prototype=QAction * defaultAction () const
-$method=|QAction *|defaultAction|
+$prototypeV2=QAction * defaultAction() const
 
-$prototype=QMenu * menu () const
-$method=|QMenu *|menu|
+$prototypeV2=QMenu * menu() const
 
-$prototype=ToolButtonPopupMode popupMode () const
-$method=|QToolButton::ToolButtonPopupMode|popupMode|
+$prototypeV2=QToolButton::ToolButtonPopupMode popupMode() const
 
 $prototype=void setArrowType ( Qt::ArrowType type )
 $method=|void|setArrowType|Qt::ArrowType
@@ -61,14 +57,11 @@ $method=|void|setMenu|QMenu *
 $prototype=void setPopupMode ( ToolButtonPopupMode mode )
 $method=|void|setPopupMode|QToolButton::ToolButtonPopupMode
 
-$prototype=Qt::ToolButtonStyle toolButtonStyle () const
-$method=|Qt::ToolButtonStyle|toolButtonStyle|
+$prototypeV2=Qt::ToolButtonStyle toolButtonStyle() const
 
-$prototype=virtual QSize minimumSizeHint () const
-$virtualMethod=|QSize|minimumSizeHint|
+$prototypeV2=virtual QSize minimumSizeHint() const
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 $prototype=void setDefaultAction ( QAction * action )
 $method=|void|setDefaultAction|QAction *
@@ -76,8 +69,7 @@ $method=|void|setDefaultAction|QAction *
 $prototype=void setToolButtonStyle ( Qt::ToolButtonStyle style )
 $method=|void|setToolButtonStyle|Qt::ToolButtonStyle
 
-$prototype=void showMenu ()
-$method=|void|showMenu|
+$prototypeV2=void showMenu()
 
 $beginSignals
 $signal=|triggered(QAction*)

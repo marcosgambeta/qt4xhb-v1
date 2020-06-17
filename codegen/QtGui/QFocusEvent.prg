@@ -34,7 +34,6 @@ $prototypeV2=bool gotFocus() const
 
 $prototypeV2=bool lostFocus() const
 
-$prototype=Qt::FocusReason reason () const
-$method=|Qt::FocusReason|reason|
+$prototypeV2=Qt::FocusReason reason() const
 
 #pragma ENDDUMP

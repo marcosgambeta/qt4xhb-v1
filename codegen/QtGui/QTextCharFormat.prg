@@ -32,21 +32,17 @@ $deleteMethod
 
 $prototypeV2=QString anchorHref() const
 
-$prototype=QStringList anchorNames () const
-$method=|QStringList|anchorNames|
+$prototypeV2=QStringList anchorNames() const
 
-$prototype=QFont font () const
-$method=|QFont|font|
+$prototypeV2=QFont font() const
 
-$prototype=QFont::Capitalization fontCapitalization () const
-$method=|QFont::Capitalization|fontCapitalization|
+$prototypeV2=QFont::Capitalization fontCapitalization() const
 
 $prototypeV2=QString fontFamily() const
 
 $prototypeV2=bool fontFixedPitch() const
 
-$prototype=QFont::HintingPreference fontHintingPreference () const
-$method=|QFont::HintingPreference|fontHintingPreference|
+$prototypeV2=QFont::HintingPreference fontHintingPreference() const
 
 $prototypeV2=bool fontItalic() const
 
@@ -60,11 +56,9 @@ $prototypeV2=qreal fontPointSize() const
 
 $prototypeV2=bool fontStrikeOut() const
 
-$prototype=QFont::StyleHint fontStyleHint () const
-$method=|QFont::StyleHint|fontStyleHint|
+$prototypeV2=QFont::StyleHint fontStyleHint() const
 
-$prototype=QFont::StyleStrategy fontStyleStrategy () const
-$method=|QFont::StyleStrategy|fontStyleStrategy|
+$prototypeV2=QFont::StyleStrategy fontStyleStrategy() const
 
 $prototypeV2=bool fontUnderline() const
 
@@ -148,18 +142,14 @@ $method=|void|setUnderlineStyle|QTextCharFormat::UnderlineStyle
 $prototype=void setVerticalAlignment ( VerticalAlignment alignment )
 $method=|void|setVerticalAlignment|QTextCharFormat::VerticalAlignment
 
-$prototype=QPen textOutline () const
-$method=|QPen|textOutline|
+$prototypeV2=QPen textOutline() const
 
 $prototypeV2=QString toolTip() const
 
-$prototype=QColor underlineColor () const
-$method=|QColor|underlineColor|
+$prototypeV2=QColor underlineColor() const
 
-$prototype=UnderlineStyle underlineStyle () const
-$method=|QTextCharFormat::UnderlineStyle|underlineStyle|
+$prototypeV2=QTextCharFormat::UnderlineStyle underlineStyle() const
 
-$prototype=VerticalAlignment verticalAlignment () const
-$method=|QTextCharFormat::VerticalAlignment|verticalAlignment|
+$prototypeV2=QTextCharFormat::VerticalAlignment verticalAlignment() const
 
 #pragma ENDDUMP

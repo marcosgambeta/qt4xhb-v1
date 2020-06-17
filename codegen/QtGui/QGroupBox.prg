@@ -55,8 +55,7 @@ HB_FUNC_STATIC( QGROUPBOX_NEW )
 }
 $addMethod=new
 
-$prototype=Qt::Alignment alignment () const
-$method=|Qt::Alignment|alignment|
+$prototypeV2=Qt::Alignment alignment() const
 
 $prototypeV2=bool isCheckable() const
 
@@ -78,8 +77,7 @@ $method=|void|setTitle|const QString &
 
 $prototypeV2=QString title() const
 
-$prototype=virtual QSize minimumSizeHint () const
-$virtualMethod=|QSize|minimumSizeHint|
+$prototypeV2=virtual QSize minimumSizeHint() const
 
 $prototype=void setChecked ( bool checked )
 $method=|void|setChecked|bool

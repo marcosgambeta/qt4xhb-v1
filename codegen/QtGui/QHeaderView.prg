@@ -36,8 +36,7 @@ $prototypeV2=bool cascadingSectionResizes() const
 
 $prototypeV2=int count() const
 
-$prototype=Qt::Alignment defaultAlignment () const
-$method=|Qt::Alignment|defaultAlignment|
+$prototypeV2=Qt::Alignment defaultAlignment() const
 
 $prototypeV2=int defaultSectionSize() const
 
@@ -105,8 +104,7 @@ $method=|void|moveSection|int,int
 
 $prototypeV2=int offset() const
 
-$prototype=Qt::Orientation orientation () const
-$method=|Qt::Orientation|orientation|
+$prototypeV2=Qt::Orientation orientation() const
 
 $prototype=ResizeMode resizeMode ( int logicalIndex ) const
 $method=|QHeaderView::ResizeMode|resizeMode|int
@@ -120,8 +118,7 @@ $method=|void|resizeSections|QHeaderView::ResizeMode
 $prototype=bool restoreState ( const QByteArray & state )
 $method=|bool|restoreState|const QByteArray &
 
-$prototype=QByteArray saveState () const
-$method=|QByteArray|saveState|
+$prototypeV2=QByteArray saveState() const
 
 $prototype=int sectionPosition ( int logicalIndex ) const
 $method=|int|sectionPosition|int
@@ -203,8 +200,7 @@ $method=|void|setStretchLastSection|bool
 $prototype=void showSection ( int logicalIndex )
 $method=|void|showSection|int
 
-$prototype=Qt::SortOrder sortIndicatorOrder () const
-$method=|Qt::SortOrder|sortIndicatorOrder|
+$prototypeV2=Qt::SortOrder sortIndicatorOrder() const
 
 $prototypeV2=int sortIndicatorSection() const
 
@@ -221,14 +217,12 @@ $method=|int|visualIndex|int
 $prototype=int visualIndexAt ( int position ) const
 $method=|int|visualIndexAt|int
 
-$prototype=virtual void reset ()
-$virtualMethod=|void|reset|
+$prototypeV2=virtual void reset()
 
 $prototype=virtual void setModel ( QAbstractItemModel * model )
 $virtualMethod=|void|setModel|QAbstractItemModel *
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 $prototype=void headerDataChanged ( Qt::Orientation orientation, int logicalFirst, int logicalLast )
 $method=|void|headerDataChanged|Qt::Orientation,int,int
@@ -236,8 +230,7 @@ $method=|void|headerDataChanged|Qt::Orientation,int,int
 $prototype=void setOffset ( int offset )
 $method=|void|setOffset|int
 
-$prototype=void setOffsetToLastSection ()
-$method=|void|setOffsetToLastSection|
+$prototypeV2=void setOffsetToLastSection()
 
 $prototype=void setOffsetToSectionPosition ( int visualIndex )
 $method=|void|setOffsetToSectionPosition|int

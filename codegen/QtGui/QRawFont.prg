@@ -104,8 +104,7 @@ $method=|QByteArray|fontTable|const char *
 $prototype=QVector<quint32> glyphIndexesForString ( const QString & text ) const
 $method=|QVector<quint32>|glyphIndexesForString|const QString &
 
-$prototype=QFont::HintingPreference hintingPreference () const
-$method=|QFont::HintingPreference|hintingPreference|
+$prototypeV2=QFont::HintingPreference hintingPreference() const
 
 $prototypeV2=bool isValid() const
 

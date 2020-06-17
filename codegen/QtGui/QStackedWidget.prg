@@ -39,8 +39,7 @@ $prototypeV2=int count() const
 
 $prototypeV2=int currentIndex() const
 
-$prototype=QWidget * currentWidget () const
-$method=|QWidget *|currentWidget|
+$prototypeV2=QWidget * currentWidget() const
 
 $prototype=int indexOf ( QWidget * widget ) const
 $method=|int|indexOf|QWidget *

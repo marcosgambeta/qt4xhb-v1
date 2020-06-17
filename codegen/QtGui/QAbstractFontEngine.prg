@@ -31,8 +31,7 @@ $prototype=virtual void addGlyphOutlinesToPath ( uint * glyphs, int numGlyphs, F
 %% TODO: implementar 'uint *'
 %% $virtualMethod=|void|addGlyphOutlinesToPath|uint *,int,QAbstractFontEngine::FixedPoint *,QPainterPath *
 
-$prototype=virtual Capabilities capabilities () const = 0
-$virtualMethod=|QAbstractFontEngine::Capabilities|capabilities|
+$prototypeV2=virtual QAbstractFontEngine::Capabilities capabilities() const = 0
 
 $prototype=virtual bool convertStringToGlyphIndices ( const QChar * string, int length, uint * glyphs, int * numGlyphs, TextShapingFlags flags ) const = 0
 %% TODO: implementar 'uint *'

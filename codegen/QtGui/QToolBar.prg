@@ -140,20 +140,16 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
 }
 $addMethod=addAction
 
-$prototype=QAction * addSeparator ()
-$method=|QAction *|addSeparator|
+$prototypeV2=QAction * addSeparator()
 
 $prototype=QAction * addWidget ( QWidget * widget )
 $method=|QAction *|addWidget|QWidget *
 
-$prototype=Qt::ToolBarAreas allowedAreas () const
-$method=|Qt::ToolBarAreas|allowedAreas|
+$prototypeV2=Qt::ToolBarAreas allowedAreas() const
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
-$prototype=QSize iconSize () const
-$method=|QSize|iconSize|
+$prototypeV2=QSize iconSize() const
 
 $prototype=QAction * insertSeparator ( QAction * before )
 $method=|QAction *|insertSeparator|QAction *
@@ -170,8 +166,7 @@ $prototypeV2=bool isFloating() const
 
 $prototypeV2=bool isMovable() const
 
-$prototype=Qt::Orientation orientation () const
-$method=|Qt::Orientation|orientation|
+$prototypeV2=Qt::Orientation orientation() const
 
 $prototype=void setAllowedAreas ( Qt::ToolBarAreas areas )
 $method=|void|setAllowedAreas|Qt::ToolBarAreas
@@ -185,11 +180,9 @@ $method=|void|setMovable|bool
 $prototype=void setOrientation ( Qt::Orientation orientation )
 $method=|void|setOrientation|Qt::Orientation
 
-$prototype=QAction * toggleViewAction () const
-$method=|QAction *|toggleViewAction|
+$prototypeV2=QAction * toggleViewAction() const
 
-$prototype=Qt::ToolButtonStyle toolButtonStyle () const
-$method=|Qt::ToolButtonStyle|toolButtonStyle|
+$prototypeV2=Qt::ToolButtonStyle toolButtonStyle() const
 
 $prototype=QWidget * widgetForAction ( QAction * action ) const
 $method=|QWidget *|widgetForAction|QAction *

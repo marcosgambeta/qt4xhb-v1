@@ -39,8 +39,7 @@ $prototypeV2=int keyboardPageStep() const
 
 $prototypeV2=int keyboardSingleStep() const
 
-$prototype=QMdiArea * mdiArea () const
-$method=|QMdiArea *|mdiArea|
+$prototypeV2=QMdiArea * mdiArea() const
 
 $prototype=void setKeyboardPageStep ( int step )
 $method=|void|setKeyboardPageStep|int
@@ -57,26 +56,20 @@ $method=|void|setSystemMenu|QMenu *
 $prototype=void setWidget ( QWidget * widget )
 $method=|void|setWidget|QWidget *
 
-$prototype=QMenu * systemMenu () const
-$method=|QMenu *|systemMenu|
+$prototypeV2=QMenu * systemMenu() const
 
 $prototype=bool testOption ( SubWindowOption option ) const
 $method=|bool|testOption|QMdiSubWindow::SubWindowOption
 
-$prototype=QWidget * widget () const
-$method=|QWidget *|widget|
+$prototypeV2=QWidget * widget() const
 
-$prototype=virtual QSize minimumSizeHint () const
-$virtualMethod=|QSize|minimumSizeHint|
+$prototypeV2=virtual QSize minimumSizeHint() const
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
-$prototype=void showShaded ()
-$method=|void|showShaded|
+$prototypeV2=void showShaded()
 
-$prototype=void showSystemMenu ()
-$method=|void|showSystemMenu|
+$prototypeV2=void showSystemMenu()
 
 $beginSignals
 $signal=|aboutToActivate()

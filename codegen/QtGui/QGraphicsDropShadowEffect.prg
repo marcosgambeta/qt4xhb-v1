@@ -34,11 +34,9 @@ $deleteMethod
 
 $prototypeV2=qreal blurRadius() const
 
-$prototype=QColor color () const
-$method=|QColor|color|
+$prototypeV2=QColor color() const
 
-$prototype=QPointF offset () const
-$method=|QPointF|offset|
+$prototypeV2=QPointF offset() const
 
 $prototypeV2=qreal xOffset() const
 

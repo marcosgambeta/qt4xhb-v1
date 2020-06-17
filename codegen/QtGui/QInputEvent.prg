@@ -30,8 +30,7 @@ $constructor=|new|QEvent::Type,Qt::KeyboardModifiers=Qt::NoModifier
 
 $deleteMethod
 
-$prototype=Qt::KeyboardModifiers modifiers() const
-$method=|Qt::KeyboardModifiers|modifiers|
+$prototypeV2=Qt::KeyboardModifiers modifiers() const
 
 $prototype=void setModifiers(Qt::KeyboardModifiers amodifiers)
 $method=|void|setModifiers|Qt::KeyboardModifiers

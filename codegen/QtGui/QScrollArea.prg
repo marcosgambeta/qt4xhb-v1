@@ -30,8 +30,7 @@ $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-$prototype=Qt::Alignment alignment () const
-$method=|Qt::Alignment|alignment|
+$prototypeV2=Qt::Alignment alignment() const
 
 $prototype=void ensureVisible ( int x, int y, int xmargin = 50, int ymargin = 50 )
 $method=|void|ensureVisible|int,int,int=50,int=50
@@ -48,18 +47,15 @@ $method=|void|setWidget|QWidget *
 $prototype=void setWidgetResizable ( bool resizable )
 $method=|void|setWidgetResizable|bool
 
-$prototype=QWidget * takeWidget ()
-$method=|QWidget *|takeWidget|
+$prototypeV2=QWidget * takeWidget()
 
-$prototype=QWidget * widget () const
-$method=|QWidget *|widget|
+$prototypeV2=QWidget * widget() const
 
 $prototypeV2=bool widgetResizable() const
 
 $prototype=virtual bool focusNextPrevChild ( bool next )
 $virtualMethod=|bool|focusNextPrevChild|bool
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 #pragma ENDDUMP

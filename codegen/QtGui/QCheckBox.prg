@@ -55,8 +55,7 @@ HB_FUNC_STATIC( QCHECKBOX_NEW )
 }
 $addMethod=new
 
-$prototype=Qt::CheckState checkState () const
-$method=|Qt::CheckState|checkState|
+$prototypeV2=Qt::CheckState checkState() const
 
 $prototypeV2=bool isTristate() const
 
@@ -66,11 +65,9 @@ $method=|void|setCheckState|Qt::CheckState
 $prototype=void setTristate ( bool y = true )
 $method=|void|setTristate|bool=true
 
-$prototype=virtual QSize minimumSizeHint () const
-$virtualMethod=|QSize|minimumSizeHint|
+$prototypeV2=virtual QSize minimumSizeHint() const
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 $beginSignals
 $signal=|stateChanged(int)

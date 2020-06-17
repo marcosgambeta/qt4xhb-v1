@@ -71,31 +71,24 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QBrush background () const
-$method=|QBrush|background|
+$prototypeV2=QBrush background() const
 
-$prototype=Qt::CheckState checkState () const
-$method=|Qt::CheckState|checkState|
+$prototypeV2=Qt::CheckState checkState() const
 
-$prototype=virtual QTableWidgetItem * clone () const
-$virtualMethod=|QTableWidgetItem *|clone|
+$prototypeV2=virtual QTableWidgetItem * clone() const
 
 $prototypeV2=int column() const
 
 $prototype=virtual QVariant data ( int role ) const
 $virtualMethod=|QVariant|data|int
 
-$prototype=Qt::ItemFlags flags () const
-$method=|Qt::ItemFlags|flags|
+$prototypeV2=Qt::ItemFlags flags() const
 
-$prototype=QFont font () const
-$method=|QFont|font|
+$prototypeV2=QFont font() const
 
-$prototype=QBrush foreground () const
-$method=|QBrush|foreground|
+$prototypeV2=QBrush foreground() const
 
-$prototype=QIcon icon () const
-$method=|QIcon|icon|
+$prototypeV2=QIcon icon() const
 
 $prototypeV2=bool isSelected() const
 
@@ -146,13 +139,11 @@ $method=|void|setToolTip|const QString &
 $prototype=void setWhatsThis ( const QString & whatsThis )
 $method=|void|setWhatsThis|const QString &
 
-$prototype=QSize sizeHint () const
-$method=|QSize|sizeHint|
+$prototypeV2=QSize sizeHint() const
 
 $prototypeV2=QString statusTip() const
 
-$prototype=QTableWidget * tableWidget () const
-$method=|QTableWidget *|tableWidget|
+$prototypeV2=QTableWidget * tableWidget() const
 
 $prototypeV2=QString text() const
 

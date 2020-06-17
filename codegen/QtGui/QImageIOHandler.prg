@@ -32,17 +32,13 @@ $deleteMethod
 
 $prototypeV2=virtual bool canRead() const = 0
 
-$prototype=virtual int currentImageNumber () const
-$virtualMethod=|int|currentImageNumber|
+$prototypeV2=virtual int currentImageNumber() const
 
-$prototype=virtual QRect currentImageRect () const
-$virtualMethod=|QRect|currentImageRect|
+$prototypeV2=virtual QRect currentImageRect() const
 
-$prototype=QIODevice * device () const
-$method=|QIODevice *|device|
+$prototypeV2=QIODevice * device() const
 
-$prototype=QByteArray format () const
-$method=|QByteArray|format|
+$prototypeV2=QByteArray format() const
 
 $prototypeV2=virtual int imageCount() const
 

@@ -27,11 +27,9 @@ $includes
 
 #include <QtGui/QTextDocument>
 
-$prototype=QTextDocument * document () const
-$method=|QTextDocument *|document|
+$prototypeV2=QTextDocument * document() const
 
-$prototype=QTextFormat format () const
-$method=|QTextFormat|format|
+$prototypeV2=QTextFormat format() const
 
 $prototypeV2=int formatIndex() const
 

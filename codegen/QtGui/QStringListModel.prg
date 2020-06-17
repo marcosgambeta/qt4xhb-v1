@@ -56,8 +56,7 @@ $addMethod=new
 $prototype=void setStringList(const QStringList & strings)
 $method=|void|setStringList|const QStringList &
 
-$prototype=QStringList stringList() const
-$method=|QStringList|stringList|
+$prototypeV2=QStringList stringList() const
 
 $prototype=virtual QVariant data(const QModelIndex & index, int role) const
 $virtualMethod=|QVariant|data|const QModelIndex &,int
@@ -80,7 +79,6 @@ $virtualMethod=|bool|setData|const QModelIndex &,const QVariant &,int=Qt::EditRo
 $prototype=virtual void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
 $virtualMethod=|void|sort|int,Qt::SortOrder=Qt::AscendingOrder
 
-$prototype=virtual Qt::DropActions supportedDropActions() const
-$virtualMethod=|Qt::DropActions|supportedDropActions|
+$prototypeV2=virtual Qt::DropActions supportedDropActions() const
 
 #pragma ENDDUMP

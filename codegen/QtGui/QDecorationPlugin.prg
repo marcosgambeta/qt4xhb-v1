@@ -30,7 +30,6 @@ $deleteMethod
 $prototype=virtual QDecoration * create ( const QString & key ) = 0
 $virtualMethod=|QDecoration *|create|const QString &
 
-$prototype=virtual QStringList keys () const = 0
-$virtualMethod=|QStringList|keys|
+$prototypeV2=virtual QStringList keys() const = 0
 
 #pragma ENDDUMP

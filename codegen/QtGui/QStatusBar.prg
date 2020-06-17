@@ -54,8 +54,7 @@ $method=|void|removeWidget|QWidget *
 $prototype=void setSizeGripEnabled ( bool )
 $method=|void|setSizeGripEnabled|bool
 
-$prototype=void clearMessage ()
-$method=|void|clearMessage|
+$prototypeV2=void clearMessage()
 
 $prototype=void showMessage ( const QString & message, int timeout = 0 )
 $method=|void|showMessage|const QString &,int=0

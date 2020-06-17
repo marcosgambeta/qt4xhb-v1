@@ -87,8 +87,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QRectF boundingRect () const
-$method=|QRectF|boundingRect|
+$prototypeV2=QRectF boundingRect() const
 
 $prototype=bool containsPoint ( const QPointF & point, Qt::FillRule fillRule ) const
 $method=|bool|containsPoint|const QPointF &,Qt::FillRule
@@ -104,8 +103,7 @@ $method=|QPolygonF|subtracted|const QPolygonF &
 $prototype=void swap ( QPolygonF & other )
 $method=|void|swap|QPolygonF &
 
-$prototype=QPolygon toPolygon () const
-$method=|QPolygon|toPolygon|
+$prototypeV2=QPolygon toPolygon() const
 
 $prototype=void translate ( const QPointF & offset )
 $internalMethod=|void|translate,translate1|const QPointF &

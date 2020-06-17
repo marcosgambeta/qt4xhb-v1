@@ -55,8 +55,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=const QRegExp & regExp () const
-$method=|const QRegExp &|regExp|
+$prototypeV2=const QRegExp & regExp() const
 
 $prototype=void setRegExp ( const QRegExp & rx )
 $method=|void|setRegExp|const QRegExp &

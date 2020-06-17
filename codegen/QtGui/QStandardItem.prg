@@ -82,8 +82,7 @@ $prototypeV2=QString text() const
 $prototype=void setText(const QString &text)
 $method=|void|setText|const QString &
 
-$prototype=QIcon icon() const
-$method=|QIcon|icon|
+$prototypeV2=QIcon icon() const
 
 $prototype=void setIcon(const QIcon &icon)
 $method=|void|setIcon|const QIcon &
@@ -103,38 +102,32 @@ $prototypeV2=QString whatsThis() const
 $prototype=void setWhatsThis(const QString &whatsThis)
 $method=|void|setWhatsThis|const QString &
 
-$prototype=QSize sizeHint() const
-$method=|QSize|sizeHint|
+$prototypeV2=QSize sizeHint() const
 
 $prototype=void setSizeHint(const QSize &sizeHint)
 $method=|void|setSizeHint|const QSize &
 
-$prototype=QFont font() const
-$method=|QFont|font|
+$prototypeV2=QFont font() const
 
 $prototype=void setFont(const QFont &font)
 $method=|void|setFont|const QFont &
 
-$prototype=Qt::Alignment textAlignment() const
-$method=|Qt::Alignment|textAlignment|
+$prototypeV2=Qt::Alignment textAlignment() const
 
 $prototype=void setTextAlignment(Qt::Alignment textAlignment)
 $method=|void|setTextAlignment|Qt::Alignment
 
-$prototype=QBrush background() const
-$method=|QBrush|background|
+$prototypeV2=QBrush background() const
 
 $prototype=void setBackground(const QBrush &brush)
 $method=|void|setBackground|const QBrush &
 
-$prototype=QBrush foreground() const
-$method=|QBrush|foreground|
+$prototypeV2=QBrush foreground() const
 
 $prototype=void setForeground(const QBrush &brush)
 $method=|void|setForeground|const QBrush &
 
-$prototype=Qt::CheckState checkState() const
-$method=|Qt::CheckState|checkState|
+$prototypeV2=Qt::CheckState checkState() const
 
 $prototype=void setCheckState(Qt::CheckState checkState)
 $method=|void|setCheckState|Qt::CheckState
@@ -149,8 +142,7 @@ $prototypeV2=QString accessibleDescription() const
 $prototype=void setAccessibleDescription(const QString &accessibleDescription)
 $method=|void|setAccessibleDescription|const QString &
 
-$prototype=Qt::ItemFlags flags() const
-$method=|Qt::ItemFlags|flags|
+$prototypeV2=Qt::ItemFlags flags() const
 
 $prototype=void setFlags(Qt::ItemFlags flags)
 $method=|void|setFlags|Qt::ItemFlags
@@ -190,18 +182,15 @@ $prototypeV2=bool isDropEnabled() const
 $prototype=void setDropEnabled(bool dropEnabled)
 $method=|void|setDropEnabled|bool
 
-$prototype=QStandardItem *parent() const
-$method=|QStandardItem *|parent|
+$prototypeV2=QStandardItem * parent() const
 
 $prototypeV2=int row() const
 
 $prototypeV2=int column() const
 
-$prototype=QModelIndex index() const
-$method=|QModelIndex|index|
+$prototypeV2=QModelIndex index() const
 
-$prototype=QStandardItemModel *model() const
-$method=|QStandardItemModel *|model|
+$prototypeV2=QStandardItemModel * model() const
 
 $prototypeV2=int rowCount() const
 
@@ -366,8 +355,7 @@ $method=|QList<QStandardItem *>|takeColumn|int
 $prototype=void sortChildren(int column, Qt::SortOrder order = Qt::AscendingOrder)
 $method=|void|sortChildren|int,Qt::SortOrder=Qt::AscendingOrder
 
-$prototype=QStandardItem *clone() const
-$method=|QStandardItem *|clone|
+$prototypeV2=QStandardItem * clone() const
 
 $prototypeV2=virtual int type() const
 

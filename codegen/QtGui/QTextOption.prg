@@ -63,11 +63,9 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=Qt::Alignment alignment () const
-$method=|Qt::Alignment|alignment|
+$prototypeV2=Qt::Alignment alignment() const
 
-$prototype=Flags flags () const
-$method=|QTextOption::Flags|flags|
+$prototypeV2=QTextOption::Flags flags() const
 
 $prototype=void setAlignment ( Qt::Alignment alignment )
 $method=|void|setAlignment|Qt::Alignment
@@ -95,13 +93,11 @@ $method=|QList<qreal>|tabArray|
 
 $prototypeV2=qreal tabStop() const
 
-$prototype=Qt::LayoutDirection textDirection () const
-$method=|Qt::LayoutDirection|textDirection|
+$prototypeV2=Qt::LayoutDirection textDirection() const
 
 $prototypeV2=bool useDesignMetrics() const
 
-$prototype=WrapMode wrapMode () const
-$method=|QTextOption::WrapMode|wrapMode|
+$prototypeV2=QTextOption::WrapMode wrapMode() const
 
 $extraMethods
 

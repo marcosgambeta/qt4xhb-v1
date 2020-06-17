@@ -28,8 +28,7 @@ $includes
 $prototype=QObject * create ( const QString & key, const QString & specification )
 $method=|QObject *|create|const QString &,const QString &
 
-$prototype=static QStringList keys ()
-$staticMethod=|QStringList|keys|
+$prototypeV2=static QStringList keys()
 
 $extraMethods
 

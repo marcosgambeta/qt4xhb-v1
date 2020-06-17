@@ -39,14 +39,11 @@ $prototypeV2=int autoRepeatDelay() const
 
 $prototypeV2=int autoRepeatInterval() const
 
-$prototype=QButtonGroup * group () const
-$method=|QButtonGroup *|group|
+$prototypeV2=QButtonGroup * group() const
 
-$prototype=QIcon icon () const
-$method=|QIcon|icon|
+$prototypeV2=QIcon icon() const
 
-$prototype=QSize iconSize () const
-$method=|QSize|iconSize|
+$prototypeV2=QSize iconSize() const
 
 $prototypeV2=bool isCheckable() const
 
@@ -81,16 +78,14 @@ $method=|void|setShortcut|const QKeySequence &
 $prototype=void setText ( const QString & text )
 $method=|void|setText|const QString &
 
-$prototype=QKeySequence shortcut () const
-$method=|QKeySequence|shortcut|
+$prototypeV2=QKeySequence shortcut() const
 
 $prototypeV2=QString text() const
 
 $prototype=void animateClick ( int msec = 100 )
 $method=|void|animateClick|int=100
 
-$prototype=void click ()
-$method=|void|click|
+$prototypeV2=void click()
 
 $prototype=void setChecked ( bool )
 $method=|void|setChecked|bool
@@ -98,8 +93,7 @@ $method=|void|setChecked|bool
 $prototype=void setIconSize ( const QSize & size )
 $method=|void|setIconSize|const QSize &
 
-$prototype=void toggle ()
-$method=|void|toggle|
+$prototypeV2=void toggle()
 
 $beginSignals
 $signal=|clicked(bool)

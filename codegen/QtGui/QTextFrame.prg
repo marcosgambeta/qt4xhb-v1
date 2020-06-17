@@ -35,21 +35,17 @@ $deleteMethod
 $prototype=QList<QTextFrame *> childFrames () const
 $method=|QList<QTextFrame *>|childFrames|
 
-$prototype=QTextCursor firstCursorPosition () const
-$method=|QTextCursor|firstCursorPosition|
+$prototypeV2=QTextCursor firstCursorPosition() const
 
 $prototypeV2=int firstPosition() const
 
-$prototype=QTextFrameFormat frameFormat () const
-$method=|QTextFrameFormat|frameFormat|
+$prototypeV2=QTextFrameFormat frameFormat() const
 
-$prototype=QTextCursor lastCursorPosition () const
-$method=|QTextCursor|lastCursorPosition|
+$prototypeV2=QTextCursor lastCursorPosition() const
 
 $prototypeV2=int lastPosition() const
 
-$prototype=QTextFrame * parentFrame () const
-$method=|QTextFrame *|parentFrame|
+$prototypeV2=QTextFrame * parentFrame() const
 
 $prototype=void setFrameFormat ( const QTextFrameFormat & format )
 $method=|void|setFrameFormat|const QTextFrameFormat &

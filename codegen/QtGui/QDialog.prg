@@ -45,28 +45,23 @@ $method=|void|setResult|int
 $prototype=void setSizeGripEnabled ( bool )
 $method=|void|setSizeGripEnabled|bool
 
-$prototype=virtual QSize minimumSizeHint () const
-$virtualMethod=|QSize|minimumSizeHint|
+$prototypeV2=virtual QSize minimumSizeHint() const
 
 $prototype=virtual void setVisible ( bool visible )
 $virtualMethod=|void|setVisible|bool
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
-$prototype=virtual void accept ()
-$virtualMethod=|void|accept|
+$prototypeV2=virtual void accept()
 
 $prototype=virtual void done ( int r )
 $virtualMethod=|void|done|int
 
 $prototypeV2=int exec()
 
-$prototype=void open ()
-$method=|void|open|
+$prototypeV2=void open()
 
-$prototype=virtual void reject ()
-$virtualMethod=|void|reject|
+$prototypeV2=virtual void reject()
 
 $beginSignals
 $signal=|accepted()

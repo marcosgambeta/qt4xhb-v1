@@ -30,7 +30,6 @@ $deleteMethod
 $prototype=virtual QAccessibleInterface * create ( const QString & key, QObject * object ) = 0
 $virtualMethod=|QAccessibleInterface *|create|const QString &,QObject *
 
-$prototype=virtual QStringList keys () const = 0
-$virtualMethod=|QStringList|keys|
+$prototypeV2=virtual QStringList keys() const = 0
 
 #pragma ENDDUMP

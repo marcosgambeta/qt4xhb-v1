@@ -95,25 +95,19 @@ $prototypeV2=bool atEnd() const
 
 $prototypeV2=bool atStart() const
 
-$prototype=void beginEditBlock ()
-$method=|void|beginEditBlock|
+$prototypeV2=void beginEditBlock()
 
-$prototype=QTextBlock block () const
-$method=|QTextBlock|block|
+$prototypeV2=QTextBlock block() const
 
-$prototype=QTextCharFormat blockCharFormat () const
-$method=|QTextCharFormat|blockCharFormat|
+$prototypeV2=QTextCharFormat blockCharFormat() const
 
-$prototype=QTextBlockFormat blockFormat () const
-$method=|QTextBlockFormat|blockFormat|
+$prototypeV2=QTextBlockFormat blockFormat() const
 
 $prototypeV2=int blockNumber() const
 
-$prototype=QTextCharFormat charFormat () const
-$method=|QTextCharFormat|charFormat|
+$prototypeV2=QTextCharFormat charFormat() const
 
-$prototype=void clearSelection ()
-$method=|void|clearSelection|
+$prototypeV2=void clearSelection()
 
 $prototypeV2=int columnNumber() const
 
@@ -145,26 +139,19 @@ HB_FUNC_STATIC( QTEXTCURSOR_CREATELIST )
 }
 $addMethod=createList
 
-$prototype=QTextFrame * currentFrame () const
-$method=|QTextFrame *|currentFrame|
+$prototypeV2=QTextFrame * currentFrame() const
 
-$prototype=QTextList * currentList () const
-$method=|QTextList *|currentList|
+$prototypeV2=QTextList * currentList() const
 
-$prototype=QTextTable * currentTable () const
-$method=|QTextTable *|currentTable|
+$prototypeV2=QTextTable * currentTable() const
 
-$prototype=void deleteChar ()
-$method=|void|deleteChar|
+$prototypeV2=void deleteChar()
 
-$prototype=void deletePreviousChar ()
-$method=|void|deletePreviousChar|
+$prototypeV2=void deletePreviousChar()
 
-$prototype=QTextDocument * document () const
-$method=|QTextDocument *|document|
+$prototypeV2=QTextDocument * document() const
 
-$prototype=void endEditBlock ()
-$method=|void|endEditBlock|
+$prototypeV2=void endEditBlock()
 
 $prototypeV2=bool hasComplexSelection() const
 
@@ -348,8 +335,7 @@ $method=|bool|isCopyOf|const QTextCursor &
 
 $prototypeV2=bool isNull() const
 
-$prototype=void joinPreviousEditBlock ()
-$method=|void|joinPreviousEditBlock|
+$prototypeV2=void joinPreviousEditBlock()
 
 $prototypeV2=bool keepPositionOnInsert() const
 
@@ -369,8 +355,7 @@ $prototypeV2=int position() const
 
 $prototypeV2=int positionInBlock() const
 
-$prototype=void removeSelectedText ()
-$method=|void|removeSelectedText|
+$prototypeV2=void removeSelectedText()
 
 $prototype=void select ( SelectionType selection )
 $method=|void|select|QTextCursor::SelectionType
@@ -380,8 +365,7 @@ $method=|void|selectedTableCells|int *,int *,int *,int *
 
 $prototypeV2=QString selectedText() const
 
-$prototype=QTextDocumentFragment selection () const
-$method=|QTextDocumentFragment|selection|
+$prototypeV2=QTextDocumentFragment selection() const
 
 $prototypeV2=int selectionEnd() const
 

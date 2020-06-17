@@ -31,11 +31,9 @@ $constructor=|new|QPrinter *,QWidget *=0
 $prototype=void open ( QObject * receiver, const char * member )
 $method=|void|open|QObject *,const char *
 
-$prototype=PageSetupDialogOptions options () const
-$method=|QPageSetupDialog::PageSetupDialogOptions|options|
+$prototypeV2=QPageSetupDialog::PageSetupDialogOptions options() const
 
-$prototype=QPrinter * printer ()
-$method=|QPrinter *|printer|
+$prototypeV2=QPrinter * printer()
 
 $prototype=void setOption ( PageSetupDialogOption option, bool on = true )
 $method=|void|setOption|QPageSetupDialog::PageSetupDialogOption,bool=true

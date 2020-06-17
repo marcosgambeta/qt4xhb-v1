@@ -59,11 +59,9 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=Qt::Alignment alignment () const
-$method=|Qt::Alignment|alignment|
+$prototypeV2=Qt::Alignment alignment() const
 
-$prototype=QWidget * buddy () const
-$method=|QWidget *|buddy|
+$prototypeV2=QWidget * buddy() const
 
 $prototypeV2=bool hasScaledContents() const
 
@@ -73,8 +71,7 @@ $prototypeV2=int indent() const
 
 $prototypeV2=int margin() const
 
-$prototype=QMovie * movie () const
-$method=|QMovie *|movie|
+$prototypeV2=QMovie * movie() const
 
 $prototypeV2=bool openExternalLinks() const
 
@@ -118,25 +115,20 @@ $method=|void|setWordWrap|bool
 
 $prototypeV2=QString text() const
 
-$prototype=Qt::TextFormat textFormat () const
-$method=|Qt::TextFormat|textFormat|
+$prototypeV2=Qt::TextFormat textFormat() const
 
-$prototype=Qt::TextInteractionFlags textInteractionFlags () const
-$method=|Qt::TextInteractionFlags|textInteractionFlags|
+$prototypeV2=Qt::TextInteractionFlags textInteractionFlags() const
 
 $prototypeV2=bool wordWrap() const
 
 $prototype=virtual int heightForWidth ( int w ) const
 $virtualMethod=|int|heightForWidth|int
 
-$prototype=virtual QSize minimumSizeHint () const
-$virtualMethod=|QSize|minimumSizeHint|
+$prototypeV2=virtual QSize minimumSizeHint() const
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=void setMovie ( QMovie * movie )
 $method=|void|setMovie|QMovie *

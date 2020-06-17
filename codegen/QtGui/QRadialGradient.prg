@@ -95,8 +95,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QPointF center() const
-$method=|QPointF|center|
+$prototypeV2=QPointF center() const
 
 $prototype=void setCenter(const QPointF &center)
 $internalMethod=|void|setCenter,setCenter1|const QPointF &
@@ -126,8 +125,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_SETCENTER )
 }
 $addMethod=setCenter
 
-$prototype=QPointF focalPoint() const
-$method=|QPointF|focalPoint|
+$prototypeV2=QPointF focalPoint() const
 
 $prototype=void setFocalPoint(const QPointF &focalPoint)
 $internalMethod=|void|setFocalPoint,setFocalPoint1|const QPointF &

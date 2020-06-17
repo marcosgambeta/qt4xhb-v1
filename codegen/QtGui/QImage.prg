@@ -139,8 +139,7 @@ $prototypeV2=int byteCount() const
 
 $prototypeV2=int bytesPerLine() const
 
-$prototype=qint64 cacheKey () const
-$method=|qint64|cacheKey|
+$prototypeV2=qint64 cacheKey() const
 
 $prototype=QRgb color ( int i ) const
 $method=|QRgb|color|int
@@ -258,8 +257,7 @@ HB_FUNC_STATIC( QIMAGE_FILL )
 }
 $addMethod=fill
 
-$prototype=Format format () const
-$method=|QImage::Format|format|
+$prototypeV2=QImage::Format format() const
 
 $prototypeV2=bool hasAlphaChannel() const
 
@@ -331,8 +329,7 @@ $addMethod=loadFromData
 $prototype=QImage mirrored ( bool horizontal = false, bool vertical = true ) const
 $method=|QImage|mirrored|bool=false,bool=true
 
-$prototype=QPoint offset () const
-$method=|QPoint|offset|
+$prototypeV2=QPoint offset() const
 
 $prototype=QRgb pixel ( const QPoint & position ) const
 $internalMethod=|QRgb|pixel,pixel1|const QPoint &
@@ -390,11 +387,9 @@ HB_FUNC_STATIC( QIMAGE_PIXELINDEX )
 }
 $addMethod=pixelIndex
 
-$prototype=QRect rect () const
-$method=|QRect|rect|
+$prototypeV2=QRect rect() const
 
-$prototype=QImage rgbSwapped () const
-$method=|QImage|rgbSwapped|
+$prototypeV2=QImage rgbSwapped() const
 
 $prototype=bool save ( const QString & fileName, const char * format = 0, int quality = -1 ) const
 $internalMethod=|bool|save,save1|const QString &,const char *=0,int=-1
@@ -519,8 +514,7 @@ $addMethod=setPixel
 $prototype=void setText ( const QString & key, const QString & text )
 $method=|void|setText|const QString &,const QString &
 
-$prototype=QSize size () const
-$method=|QSize|size|
+$prototypeV2=QSize size() const
 
 $prototype=void swap ( QImage & other )
 $method=|void|swap|QImage &
@@ -528,8 +522,7 @@ $method=|void|swap|QImage &
 $prototype=QString text ( const QString & key = QString() ) const
 $method=|QString|text|const QString &=QString()
 
-$prototype=QStringList textKeys () const
-$method=|QStringList|textKeys|
+$prototypeV2=QStringList textKeys() const
 
 $prototype=QImage transformed ( const QMatrix & matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
 $internalMethod=|QImage|transformed,transformed1|const QMatrix &,Qt::TransformationMode=Qt::FastTransformation

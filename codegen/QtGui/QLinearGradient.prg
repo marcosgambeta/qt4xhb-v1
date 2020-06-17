@@ -63,8 +63,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QPointF finalStop () const
-$method=|QPointF|finalStop|
+$prototypeV2=QPointF finalStop() const
 
 $prototype=void setFinalStop ( const QPointF & stop )
 $internalMethod=|void|setFinalStop,setFinalStop1|const QPointF &
@@ -122,7 +121,6 @@ HB_FUNC_STATIC( QLINEARGRADIENT_SETSTART )
 }
 $addMethod=setStart
 
-$prototype=QPointF start () const
-$method=|QPointF|start|
+$prototypeV2=QPointF start() const
 
 #pragma ENDDUMP

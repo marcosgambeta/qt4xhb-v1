@@ -59,18 +59,15 @@ $deleteMethod
 
 $prototypeV2=bool autoRepeat() const
 
-$prototype=Qt::ShortcutContext context() const
-$method=|Qt::ShortcutContext|context|
+$prototypeV2=Qt::ShortcutContext context() const
 
 $prototypeV2=int id() const
 
 $prototypeV2=bool isEnabled() const
 
-$prototype=QKeySequence key() const
-$method=|QKeySequence|key|
+$prototypeV2=QKeySequence key() const
 
-$prototype=QWidget * parentWidget() const
-$method=|QWidget *|parentWidget|
+$prototypeV2=QWidget * parentWidget() const
 
 $prototype=void setAutoRepeat(bool on)
 $method=|void|setAutoRepeat|bool

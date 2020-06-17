@@ -32,8 +32,7 @@ $method=|void|add|const QTextBlock &
 
 $prototypeV2=int count() const
 
-$prototype=QTextListFormat format () const
-$method=|QTextListFormat|format|
+$prototypeV2=QTextListFormat format() const
 
 $prototype=QTextBlock item ( int i ) const
 $method=|QTextBlock|item|int

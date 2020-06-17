@@ -32,16 +32,13 @@ $deleteMethod
 $prototype=static QAction * createAction ( QObject * parent = 0 )
 $staticMethod=|QAction *|createAction|QObject *=0
 
-$prototype=static void enterWhatsThisMode ()
-$staticMethod=|void|enterWhatsThisMode|
+$prototypeV2=static void enterWhatsThisMode()
 
-$prototype=static void hideText ()
-$staticMethod=|void|hideText|
+$prototypeV2=static void hideText()
 
 $prototypeV2=static bool inWhatsThisMode()
 
-$prototype=static void leaveWhatsThisMode ()
-$staticMethod=|void|leaveWhatsThisMode|
+$prototypeV2=static void leaveWhatsThisMode()
 
 $prototype=static void showText ( const QPoint & pos, const QString & text, QWidget * w = 0 )
 $staticMethod=|void|showText|const QPoint &,const QString &,QWidget *=0

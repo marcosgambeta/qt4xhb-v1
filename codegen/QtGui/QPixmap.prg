@@ -90,8 +90,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=qint64 cacheKey () const
-$method=|qint64|cacheKey|
+$prototypeV2=qint64 cacheKey() const
 
 $prototype=bool convertFromImage ( const QImage & image, Qt::ImageConversionFlags flags = Qt::AutoColor )
 $method=|bool|convertFromImage|const QImage &,Qt::ImageConversionFlags=Qt::AutoColor
@@ -157,8 +156,7 @@ $addMethod=createMaskFromColor
 
 $prototypeV2=int depth() const
 
-$prototype=void detach ()
-$method=|void|detach|
+$prototypeV2=void detach()
 
 $prototype=void fill ( const QColor & color = Qt::white )
 $internalMethod=|void|fill,fill1|const QColor &=Qt::white
@@ -237,11 +235,9 @@ HB_FUNC_STATIC( QPIXMAP_LOADFROMDATA )
 }
 $addMethod=loadFromData
 
-$prototype=QBitmap mask () const
-$method=|QBitmap|mask|
+$prototypeV2=QBitmap mask() const
 
-$prototype=QRect rect () const
-$method=|QRect|rect|
+$prototypeV2=QRect rect() const
 
 $prototype=bool save ( const QString & fileName, const char * format = 0, int quality = -1 ) const
 $internalMethod=|bool|save,save1|const QString &,const char *=0,int=-1
@@ -336,14 +332,12 @@ $addMethod=scroll
 $prototype=void setMask ( const QBitmap & mask )
 $method=|void|setMask|const QBitmap &
 
-$prototype=QSize size () const
-$method=|QSize|size|
+$prototypeV2=QSize size() const
 
 $prototype=void swap ( QPixmap & other )
 $method=|void|swap|QPixmap &
 
-$prototype=QImage toImage () const
-$method=|QImage|toImage|
+$prototypeV2=QImage toImage() const
 
 $prototype=QPixmap transformed ( const QTransform & transform, Qt::TransformationMode mode = Qt::FastTransformation ) const
 $internalMethod=|QPixmap|transformed,transformed1|const QTransform &,Qt::TransformationMode=Qt::FastTransformation

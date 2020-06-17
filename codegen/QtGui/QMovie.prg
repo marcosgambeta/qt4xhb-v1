@@ -68,32 +68,25 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QColor  backgroundColor () const
-$method=|QColor|backgroundColor|
+$prototypeV2=QColor backgroundColor() const
 
-$prototype=CacheMode  cacheMode () const
-$method=|QMovie::CacheMode|cacheMode|
+$prototypeV2=QMovie::CacheMode cacheMode() const
 
 $prototypeV2=int currentFrameNumber() const
 
-$prototype=QImage  currentImage () const
-$method=|QImage|currentImage|
+$prototypeV2=QImage currentImage() const
 
-$prototype=QPixmap  currentPixmap () const
-$method=|QPixmap|currentPixmap|
+$prototypeV2=QPixmap currentPixmap() const
 
-$prototype=QIODevice *  device () const
-$method=|QIODevice *|device|
+$prototypeV2=QIODevice * device() const
 
 $prototypeV2=QString fileName() const
 
-$prototype=QByteArray  format () const
-$method=|QByteArray|format|
+$prototypeV2=QByteArray format() const
 
 $prototypeV2=int frameCount() const
 
-$prototype=QRect  frameRect () const
-$method=|QRect|frameRect|
+$prototypeV2=QRect frameRect() const
 
 $prototypeV2=bool isValid() const
 
@@ -104,8 +97,7 @@ $prototypeV2=int loopCount() const
 
 $prototypeV2=int nextFrameDelay() const
 
-$prototype=QSize  scaledSize ()
-$method=|QSize|scaledSize|
+$prototypeV2=QSize scaledSize()
 
 $prototype=void  setBackgroundColor ( const QColor & color )
 $method=|void|setBackgroundColor|const QColor &
@@ -127,8 +119,7 @@ $method=|void|setScaledSize|const QSize &
 
 $prototypeV2=int speed() const
 
-$prototype=MovieState  state () const
-$method=|QMovie::MovieState|state|
+$prototypeV2=QMovie::MovieState state() const
 
 $prototypeV2=bool jumpToNextFrame()
 
@@ -138,11 +129,9 @@ $method=|void|setPaused|bool
 $prototype=void setSpeed ( int percentSpeed )
 $method=|void|setSpeed|int
 
-$prototype=void start ()
-$method=|void|start|
+$prototypeV2=void start()
 
-$prototype=void stop ()
-$method=|void|stop|
+$prototypeV2=void stop()
 
 $prototype=static QList<QByteArray> supportedFormats ()
 $staticMethod=|QList<QByteArray>|supportedFormats|

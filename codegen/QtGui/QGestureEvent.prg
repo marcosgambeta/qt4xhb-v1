@@ -194,7 +194,6 @@ $addMethod=setAccepted
 $prototype=void setWidget(QWidget *widget)
 $method=|void|setWidget|QWidget *
 
-$prototype=QWidget * widget () const
-$method=|QWidget *|widget|
+$prototypeV2=QWidget * widget() const
 
 #pragma ENDDUMP

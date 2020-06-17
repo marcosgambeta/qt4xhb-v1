@@ -56,8 +56,7 @@ $virtualMethod=|void|polish|QPalette &
 $prototype=virtual QSize sizeFromContents ( ContentsType ct, const QStyleOption * opt, const QSize & contentsSize, const QWidget * widget = 0 ) const
 $virtualMethod=|QSize|sizeFromContents|QStyle::ContentsType,const QStyleOption *,const QSize &,const QWidget *=0
 
-$prototype=virtual QPalette standardPalette () const
-$virtualMethod=|QPalette|standardPalette|
+$prototypeV2=virtual QPalette standardPalette() const
 
 $prototype=virtual QPixmap standardPixmap ( StandardPixmap standardPixmap, const QStyleOption * opt, const QWidget * widget = 0 ) const
 $virtualMethod=|QPixmap|standardPixmap|QStyle::StandardPixmap,const QStyleOption *,const QWidget *=0

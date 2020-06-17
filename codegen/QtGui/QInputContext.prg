@@ -35,11 +35,9 @@ $virtualMethod=|QList<QAction *>|actions|
 $prototype=virtual bool filterEvent ( const QEvent * event )
 $virtualMethod=|bool|filterEvent|const QEvent *
 
-$prototype=QWidget * focusWidget () const
-$method=|QWidget *|focusWidget|
+$prototypeV2=QWidget * focusWidget() const
 
-$prototype=virtual QFont font () const
-$virtualMethod=|QFont|font|
+$prototypeV2=virtual QFont font() const
 
 $prototypeV2=virtual QString identifierName() = 0
 
@@ -50,8 +48,7 @@ $prototypeV2=virtual QString language() = 0
 $prototype=virtual void mouseHandler ( int x, QMouseEvent * event )
 $virtualMethod=|void|mouseHandler|int,QMouseEvent *
 
-$prototype=virtual void reset () = 0
-$virtualMethod=|void|reset|
+$prototypeV2=virtual void reset() = 0
 
 $prototype=void sendEvent ( const QInputMethodEvent & event )
 $method=|void|sendEvent|const QInputMethodEvent &
@@ -62,8 +59,7 @@ $virtualMethod=|void|setFocusWidget|QWidget *
 $prototype=QTextFormat standardFormat ( StandardFormat s ) const
 $method=|QTextFormat|standardFormat|QInputContext::StandardFormat
 
-$prototype=virtual void update ()
-$virtualMethod=|void|update|
+$prototypeV2=virtual void update()
 
 $prototype=virtual void widgetDestroyed ( QWidget * widget )
 $virtualMethod=|void|widgetDestroyed|QWidget *

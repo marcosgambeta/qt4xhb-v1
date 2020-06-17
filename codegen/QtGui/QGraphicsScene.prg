@@ -72,11 +72,9 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QGraphicsItem * activePanel () const
-$method=|QGraphicsItem *|activePanel|
+$prototypeV2=QGraphicsItem * activePanel() const
 
-$prototype=QGraphicsWidget * activeWindow () const
-$method=|QGraphicsWidget *|activeWindow|
+$prototypeV2=QGraphicsWidget * activeWindow() const
 
 $prototype=QGraphicsEllipseItem * addEllipse ( const QRectF & rect, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
 $internalMethod=|QGraphicsEllipseItem *|addEllipse,addEllipse1|const QRectF &,const QPen &=QPen(),const QBrush &=QBrush()
@@ -183,13 +181,11 @@ $method=|QGraphicsTextItem *|addText|const QString &,const QFont &=QFont()
 $prototype=QGraphicsProxyWidget * addWidget ( QWidget * widget, Qt::WindowFlags wFlags = 0 )
 $method=|QGraphicsProxyWidget *|addWidget|QWidget *,Qt::WindowFlags=0
 
-$prototype=QBrush backgroundBrush () const
-$method=|QBrush|backgroundBrush|
+$prototypeV2=QBrush backgroundBrush() const
 
 $prototypeV2=int bspTreeDepth() const
 
-$prototype=void clearFocus ()
-$method=|void|clearFocus|
+$prototypeV2=void clearFocus()
 
 $prototype=QList<QGraphicsItem *> collidingItems ( const QGraphicsItem * item, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
 $method=|QList<QGraphicsItem *>|collidingItems|const QGraphicsItem *,Qt::ItemSelectionMode=Qt::IntersectsItemShape
@@ -200,14 +196,11 @@ $method=|QGraphicsItemGroup *|createItemGroup|const QList<QGraphicsItem *> &
 $prototype=void destroyItemGroup ( QGraphicsItemGroup * group )
 $method=|void|destroyItemGroup|QGraphicsItemGroup *
 
-$prototype=QGraphicsItem * focusItem () const
-$method=|QGraphicsItem *|focusItem|
+$prototypeV2=QGraphicsItem * focusItem() const
 
-$prototype=QFont font () const
-$method=|QFont|font|
+$prototypeV2=QFont font() const
 
-$prototype=QBrush foregroundBrush () const
-$method=|QBrush|foregroundBrush|
+$prototypeV2=QBrush foregroundBrush() const
 
 $prototypeV2=bool hasFocus() const
 
@@ -276,8 +269,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMAT )
 }
 $addMethod=itemAt
 
-$prototype=ItemIndexMethod itemIndexMethod () const
-$method=|QGraphicsScene::ItemIndexMethod|itemIndexMethod|
+$prototypeV2=QGraphicsScene::ItemIndexMethod itemIndexMethod() const
 
 $prototype=QList<QGraphicsItem *> items () const
 $internalMethod=|QList<QGraphicsItem *>|items,items1|
@@ -347,14 +339,11 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS )
 }
 $addMethod=items
 
-$prototype=QRectF itemsBoundingRect () const
-$method=|QRectF|itemsBoundingRect|
+$prototypeV2=QRectF itemsBoundingRect() const
 
-$prototype=QGraphicsItem * mouseGrabberItem () const
-$method=|QGraphicsItem *|mouseGrabberItem|
+$prototypeV2=QGraphicsItem * mouseGrabberItem() const
 
-$prototype=QPalette palette () const
-$method=|QPalette|palette|
+$prototypeV2=QPalette palette() const
 
 $prototype=void removeItem ( QGraphicsItem * item )
 $method=|void|removeItem|QGraphicsItem *
@@ -362,14 +351,12 @@ $method=|void|removeItem|QGraphicsItem *
 $prototype=void render ( QPainter * painter, const QRectF & target = QRectF(), const QRectF & source = QRectF(), Qt::AspectRatioMode aspectRatioMode = Qt::KeepAspectRatio )
 $method=|void|render|QPainter *,const QRectF &=QRectF(),const QRectF &=QRectF(),Qt::AspectRatioMode=Qt::KeepAspectRatio
 
-$prototype=QRectF sceneRect () const
-$method=|QRectF|sceneRect|
+$prototypeV2=QRectF sceneRect() const
 
 $prototype=QList<QGraphicsItem *> selectedItems () const
 $method=|QList<QGraphicsItem *>|selectedItems|
 
-$prototype=QPainterPath selectionArea () const
-$method=|QPainterPath|selectionArea|
+$prototypeV2=QPainterPath selectionArea() const
 
 $prototype=bool sendEvent ( QGraphicsItem * item, QEvent * event )
 $method=|bool|sendEvent|QGraphicsItem *,QEvent *
@@ -471,8 +458,7 @@ $method=|void|setStyle|QStyle *
 
 $prototypeV2=bool stickyFocus() const
 
-$prototype=QStyle * style () const
-$method=|QStyle *|style|
+$prototypeV2=QStyle * style() const
 
 $prototype=void update ( qreal x, qreal y, qreal w, qreal h )
 $internalMethod=|void|update,update1|qreal,qreal,qreal,qreal
@@ -507,14 +493,11 @@ $method=|QList<QGraphicsView *>|views|
 
 $prototypeV2=qreal width() const
 
-$prototype=void advance ()
-$method=|void|advance|
+$prototypeV2=void advance()
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
-$prototype=void clearSelection ()
-$method=|void|clearSelection|
+$prototypeV2=void clearSelection()
 
 $beginSignals
 $signal=|changed(QList<QRectF>)

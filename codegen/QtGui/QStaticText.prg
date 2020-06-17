@@ -63,8 +63,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=PerformanceHint performanceHint () const
-$method=|QStaticText::PerformanceHint|performanceHint|
+$prototypeV2=QStaticText::PerformanceHint performanceHint() const
 
 $prototype=void prepare ( const QTransform & matrix = QTransform(), const QFont & font = QFont() )
 $method=|void|prepare|const QTransform &=QTransform(),const QFont &=QFont()
@@ -84,16 +83,13 @@ $method=|void|setTextOption|const QTextOption &
 $prototype=void setTextWidth ( qreal textWidth )
 $method=|void|setTextWidth|qreal
 
-$prototype=QSizeF size () const
-$method=|QSizeF|size|
+$prototypeV2=QSizeF size() const
 
 $prototypeV2=QString text() const
 
-$prototype=Qt::TextFormat textFormat () const
-$method=|Qt::TextFormat|textFormat|
+$prototypeV2=Qt::TextFormat textFormat() const
 
-$prototype=QTextOption textOption () const
-$method=|QTextOption|textOption|
+$prototypeV2=QTextOption textOption() const
 
 $prototypeV2=qreal textWidth() const
 

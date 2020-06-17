@@ -55,8 +55,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QTextCharFormat charFormat () const
-$method=|QTextCharFormat|charFormat|
+$prototypeV2=QTextCharFormat charFormat() const
 
 $prototypeV2=int charFormatIndex() const
 

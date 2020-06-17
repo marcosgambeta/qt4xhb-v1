@@ -33,7 +33,6 @@ $virtualMethod=|QList<QFontEngineInfo>|availableFontEngines|
 $prototype=virtual QAbstractFontEngine * create ( const QFontEngineInfo & info ) = 0
 $virtualMethod=|QAbstractFontEngine *|create|const QFontEngineInfo &
 
-$prototype=virtual QStringList keys () const
-$virtualMethod=|QStringList|keys|
+$prototypeV2=virtual QStringList keys() const
 
 #pragma ENDDUMP

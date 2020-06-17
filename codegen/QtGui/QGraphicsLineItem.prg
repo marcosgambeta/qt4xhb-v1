@@ -65,11 +65,9 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QLineF line () const
-$method=|QLineF|line|
+$prototypeV2=QLineF line() const
 
-$prototype=QPen pen () const
-$method=|QPen|pen|
+$prototypeV2=QPen pen() const
 
 $prototype=void setLine ( const QLineF & line )
 $internalMethod=|void|setLine,setLine1|const QLineF &
@@ -102,8 +100,7 @@ $addMethod=setLine
 $prototype=void setPen ( const QPen & pen )
 $method=|void|setPen|const QPen &
 
-$prototype=virtual QRectF boundingRect () const
-$virtualMethod=|QRectF|boundingRect|
+$prototypeV2=virtual QRectF boundingRect() const
 
 $prototype=virtual bool contains ( const QPointF & point ) const
 $virtualMethod=|bool|contains|const QPointF &
@@ -111,14 +108,12 @@ $virtualMethod=|bool|contains|const QPointF &
 $prototype=virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 $virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
 
-$prototype=virtual QPainterPath opaqueArea () const
-$virtualMethod=|QPainterPath|opaqueArea|
+$prototypeV2=virtual QPainterPath opaqueArea() const
 
 $prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
 $virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
 
-$prototype=virtual QPainterPath shape () const
-$virtualMethod=|QPainterPath|shape|
+$prototypeV2=virtual QPainterPath shape() const
 
 $prototypeV2=virtual int type() const
 

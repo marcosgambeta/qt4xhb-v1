@@ -34,8 +34,7 @@ $virtualMethod=|int|metric|QPaintDevice::PaintDeviceMetric
 
 $prototypeV2=virtual bool newPage() = 0
 
-$prototype=virtual QPrinter::PrinterState printerState () const = 0
-$virtualMethod=|QPrinter::PrinterState|printerState|
+$prototypeV2=virtual QPrinter::PrinterState printerState() const = 0
 
 $prototype=virtual QVariant property ( PrintEnginePropertyKey key ) const = 0
 $virtualMethod=|QVariant|property|QPrintEngine::PrintEnginePropertyKey

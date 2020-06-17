@@ -105,22 +105,17 @@ $method=|QMessageBox::ButtonRole|buttonRole|QAbstractButton *
 $prototype=QList<QAbstractButton *> buttons () const
 $method=|QList<QAbstractButton *>|buttons|
 
-$prototype=QAbstractButton * clickedButton () const
-$method=|QAbstractButton *|clickedButton|
+$prototypeV2=QAbstractButton * clickedButton() const
 
-$prototype=QPushButton * defaultButton () const
-$method=|QPushButton *|defaultButton|
+$prototypeV2=QPushButton * defaultButton() const
 
 $prototypeV2=QString detailedText() const
 
-$prototype=QAbstractButton * escapeButton () const
-$method=|QAbstractButton *|escapeButton|
+$prototypeV2=QAbstractButton * escapeButton() const
 
-$prototype=Icon icon () const
-$method=|QMessageBox::Icon|icon|
+$prototypeV2=QMessageBox::Icon icon() const
 
-$prototype=QPixmap iconPixmap () const
-$method=|QPixmap|iconPixmap|
+$prototypeV2=QPixmap iconPixmap() const
 
 $prototypeV2=QString informativeText() const
 
@@ -216,13 +211,11 @@ $method=|void|setWindowTitle|const QString &
 $prototype=StandardButton standardButton ( QAbstractButton * button ) const
 $method=|QMessageBox::StandardButton|standardButton|QAbstractButton *
 
-$prototype=StandardButtons standardButtons () const
-$method=|QMessageBox::StandardButtons|standardButtons|
+$prototypeV2=QMessageBox::StandardButtons standardButtons() const
 
 $prototypeV2=QString text() const
 
-$prototype=Qt::TextFormat textFormat () const
-$method=|Qt::TextFormat|textFormat|
+$prototypeV2=Qt::TextFormat textFormat() const
 
 $prototype=virtual void setVisible ( bool visible )
 $virtualMethod=|void|setVisible|bool

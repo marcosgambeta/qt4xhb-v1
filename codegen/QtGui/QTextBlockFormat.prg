@@ -30,8 +30,7 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=Qt::Alignment alignment () const
-$method=|Qt::Alignment|alignment|
+$prototypeV2=Qt::Alignment alignment() const
 
 $prototypeV2=qreal bottomMargin() const
 
@@ -73,8 +72,7 @@ $prototypeV2=int lineHeightType() const
 
 $prototypeV2=bool nonBreakableLines() const
 
-$prototype=PageBreakFlags pageBreakPolicy () const
-$method=|QTextFormat::PageBreakFlags|pageBreakPolicy|
+$prototypeV2=QTextFormat::PageBreakFlags pageBreakPolicy() const
 
 $prototypeV2=qreal rightMargin() const
 

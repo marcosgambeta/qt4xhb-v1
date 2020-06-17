@@ -38,8 +38,7 @@ $virtualMethod=|QString|description|const QString &
 $prototype=virtual QString displayName ( const QString & key ) = 0
 $virtualMethod=|QString|displayName|const QString &
 
-$prototype=virtual QStringList keys () const = 0
-$virtualMethod=|QStringList|keys|
+$prototypeV2=virtual QStringList keys() const = 0
 
 $prototype=virtual QStringList languages ( const QString & key ) = 0
 $virtualMethod=|QStringList|languages|const QString &

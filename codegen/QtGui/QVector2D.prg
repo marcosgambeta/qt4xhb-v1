@@ -96,11 +96,9 @@ $prototypeV2=qreal length() const
 
 $prototypeV2=qreal lengthSquared() const
 
-$prototype=void normalize ()
-$method=|void|normalize|
+$prototypeV2=void normalize()
 
-$prototype=QVector2D normalized () const
-$method=|QVector2D|normalized|
+$prototypeV2=QVector2D normalized() const
 
 $prototype=void setX ( qreal x )
 $method=|void|setX|qreal
@@ -108,17 +106,13 @@ $method=|void|setX|qreal
 $prototype=void setY ( qreal y )
 $method=|void|setY|qreal
 
-$prototype=QPoint toPoint () const
-$method=|QPoint|toPoint|
+$prototypeV2=QPoint toPoint() const
 
-$prototype=QPointF toPointF () const
-$method=|QPointF|toPointF|
+$prototypeV2=QPointF toPointF() const
 
-$prototype=QVector3D toVector3D () const
-$method=|QVector3D|toVector3D|
+$prototypeV2=QVector3D toVector3D() const
 
-$prototype=QVector4D toVector4D () const
-$method=|QVector4D|toVector4D|
+$prototypeV2=QVector4D toVector4D() const
 
 $prototypeV2=qreal x() const
 

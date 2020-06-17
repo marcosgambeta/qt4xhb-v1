@@ -34,22 +34,17 @@ $deleteMethod
 
 $prototypeV2=QString cancelButtonText() const
 
-$prototype=QStringList comboBoxItems () const
-$method=|QStringList|comboBoxItems|
+$prototypeV2=QStringList comboBoxItems() const
 
 $prototypeV2=int doubleDecimals() const
 
-$prototype=double doubleMaximum () const
-$method=|double|doubleMaximum|
+$prototypeV2=double doubleMaximum() const
 
-$prototype=double doubleMinimum () const
-$method=|double|doubleMinimum|
+$prototypeV2=double doubleMinimum() const
 
-$prototype=double doubleValue () const
-$method=|double|doubleValue|
+$prototypeV2=double doubleValue() const
 
-$prototype=InputMode inputMode () const
-$method=|QInputDialog::InputMode|inputMode|
+$prototypeV2=QInputDialog::InputMode inputMode() const
 
 $prototypeV2=int intMaximum() const
 
@@ -68,8 +63,7 @@ $prototypeV2=QString okButtonText() const
 $prototype=void open ( QObject * receiver, const char * member )
 $method=|void|open|QObject *,const char *
 
-$prototype=InputDialogOptions options () const
-$method=|QInputDialog::InputDialogOptions|options|
+$prototypeV2=QInputDialog::InputDialogOptions options() const
 
 $prototype=void setCancelButtonText ( const QString & text )
 $method=|void|setCancelButtonText|const QString &
@@ -134,22 +128,19 @@ $method=|void|setTextValue|const QString &
 $prototype=bool testOption ( InputDialogOption option ) const
 $method=|bool|testOption|QInputDialog::InputDialogOption
 
-$prototype=QLineEdit::EchoMode textEchoMode () const
-$method=|QLineEdit::EchoMode|textEchoMode|
+$prototypeV2=QLineEdit::EchoMode textEchoMode() const
 
 $prototypeV2=QString textValue() const
 
 $prototype=virtual void done ( int result )
 $virtualMethod=|void|done|int
 
-$prototype=virtual QSize minimumSizeHint () const
-$virtualMethod=|QSize|minimumSizeHint|
+$prototypeV2=virtual QSize minimumSizeHint() const
 
 $prototype=virtual void setVisible ( bool visible )
 $virtualMethod=|void|setVisible|bool
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 $prototype=static double getDouble ( QWidget * parent, const QString & title, const QString & label, double value = 0, double min = -2147483647, double max = 2147483647, int decimals = 1, bool * ok = 0, Qt::WindowFlags flags = 0 )
 $staticMethod=|double|getDouble|QWidget *,const QString &,const QString &,double=0,double=-2147483647,double=2147483647,int=1,bool *=0,Qt::WindowFlags=0

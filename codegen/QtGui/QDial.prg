@@ -41,11 +41,9 @@ $method=|void|setNotchTarget|double
 
 $prototypeV2=bool wrapping() const
 
-$prototype=virtual QSize minimumSizeHint () const
-$virtualMethod=|QSize|minimumSizeHint|
+$prototypeV2=virtual QSize minimumSizeHint() const
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 $prototype=void setNotchesVisible ( bool visible )
 $method=|void|setNotchesVisible|bool

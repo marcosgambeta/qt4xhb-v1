@@ -32,8 +32,7 @@ $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-$prototype=void clearSpans ()
-$method=|void|clearSpans|
+$prototypeV2=void clearSpans()
 
 $prototype=int columnAt ( int x ) const
 $method=|int|columnAt|int
@@ -47,11 +46,9 @@ $method=|int|columnViewportPosition|int
 $prototype=int columnWidth ( int column ) const
 $method=|int|columnWidth|int
 
-$prototype=Qt::PenStyle gridStyle () const
-$method=|Qt::PenStyle|gridStyle|
+$prototypeV2=Qt::PenStyle gridStyle() const
 
-$prototype=QHeaderView * horizontalHeader () const
-$method=|QHeaderView *|horizontalHeader|
+$prototypeV2=QHeaderView * horizontalHeader() const
 
 $prototype=bool isColumnHidden ( int column ) const
 $method=|bool|isColumnHidden|int
@@ -113,8 +110,7 @@ $prototypeV2=bool showGrid() const
 $prototype=void sortByColumn ( int column, Qt::SortOrder order )
 $method=|void|sortByColumn|int,Qt::SortOrder
 
-$prototype=QHeaderView * verticalHeader () const
-$method=|QHeaderView *|verticalHeader|
+$prototypeV2=QHeaderView * verticalHeader() const
 
 $prototypeV2=bool wordWrap() const
 
@@ -139,14 +135,12 @@ $method=|void|hideRow|int
 $prototype=void resizeColumnToContents ( int column )
 $method=|void|resizeColumnToContents|int
 
-$prototype=void resizeColumnsToContents ()
-$method=|void|resizeColumnsToContents|
+$prototypeV2=void resizeColumnsToContents()
 
 $prototype=void resizeRowToContents ( int row )
 $method=|void|resizeRowToContents|int
 
-$prototype=void resizeRowsToContents ()
-$method=|void|resizeRowsToContents|
+$prototypeV2=void resizeRowsToContents()
 
 $prototype=void selectColumn ( int column )
 $method=|void|selectColumn|int

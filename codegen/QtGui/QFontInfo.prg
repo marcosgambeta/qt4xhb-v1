@@ -73,11 +73,9 @@ $prototypeV2=qreal pointSizeF() const
 
 $prototypeV2=bool rawMode() const
 
-$prototype=QFont::Style style () const
-$method=|QFont::Style|style|
+$prototypeV2=QFont::Style style() const
 
-$prototype=QFont::StyleHint styleHint () const
-$method=|QFont::StyleHint|styleHint|
+$prototypeV2=QFont::StyleHint styleHint() const
 
 $prototypeV2=QString styleName() const
 

@@ -83,17 +83,14 @@ $method=|bool|isCollapsible|int
 
 $prototypeV2=bool opaqueResize() const
 
-$prototype=Qt::Orientation orientation () const
-$method=|Qt::Orientation|orientation|
+$prototypeV2=Qt::Orientation orientation() const
 
-$prototype=void refresh ()
-$method=|void|refresh|
+$prototypeV2=void refresh()
 
 $prototype=bool restoreState ( const QByteArray & state )
 $method=|bool|restoreState|const QByteArray &
 
-$prototype=QByteArray saveState () const
-$method=|QByteArray|saveState|
+$prototypeV2=QByteArray saveState() const
 
 $prototype=void setChildrenCollapsible ( bool )
 $method=|void|setChildrenCollapsible|bool
@@ -122,11 +119,9 @@ $method=|QList<int>|sizes|
 $prototype=QWidget * widget ( int index ) const
 $method=|QWidget *|widget|int
 
-$prototype=virtual QSize minimumSizeHint () const
-$virtualMethod=|QSize|minimumSizeHint|
+$prototypeV2=virtual QSize minimumSizeHint() const
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 $beginSignals
 $signal=|splitterMoved(int,int)

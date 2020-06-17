@@ -73,8 +73,7 @@ $deleteMethod
 
 $prototypeV2=int bottom() const
 
-$prototype=QModelIndex bottomRight () const
-$method=|QModelIndex|bottomRight|
+$prototypeV2=QModelIndex bottomRight() const
 
 $prototype=bool contains ( const QModelIndex & index ) const
 $internalMethod=|bool|contains,contains1|const QModelIndex &
@@ -106,8 +105,7 @@ $addMethod=contains
 
 $prototypeV2=int height() const
 
-$prototype=QModelIndexList indexes () const
-$method=|QModelIndexList|indexes|
+$prototypeV2=QModelIndexList indexes() const
 
 $prototype=QItemSelectionRange intersected ( const QItemSelectionRange & other ) const
 $method=|QItemSelectionRange|intersected|const QItemSelectionRange &
@@ -124,15 +122,13 @@ $prototypeV2=int left() const
 $prototype=const QAbstractItemModel * model () const
 $method=|const QAbstractItemModel *|model|
 
-$prototype=QModelIndex parent () const
-$method=|QModelIndex|parent|
+$prototypeV2=QModelIndex parent() const
 
 $prototypeV2=int right() const
 
 $prototypeV2=int top() const
 
-$prototype=QModelIndex topLeft () const
-$method=|QModelIndex|topLeft|
+$prototypeV2=QModelIndex topLeft() const
 
 $prototypeV2=int width() const
 

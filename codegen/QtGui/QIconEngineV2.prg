@@ -30,8 +30,7 @@ $deleteMethod
 $prototype=QList<QSize> availableSizes ( QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off )
 $method=|QList<QSize>|availableSizes|QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
 
-$prototype=virtual QIconEngineV2 * clone () const
-$virtualMethod=|QIconEngineV2 *|clone|
+$prototypeV2=virtual QIconEngineV2 * clone() const
 
 $prototypeV2=QString iconName()
 

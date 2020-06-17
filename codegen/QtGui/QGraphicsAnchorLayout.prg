@@ -57,8 +57,7 @@ $prototypeV2=qreal verticalSpacing() const
 
 $prototypeV2=virtual int count() const
 
-$prototype=virtual void invalidate ()
-$virtualMethod=|void|invalidate|
+$prototypeV2=virtual void invalidate()
 
 $prototype=virtual QGraphicsLayoutItem * itemAt ( int index ) const
 $virtualMethod=|QGraphicsLayoutItem *|itemAt|int

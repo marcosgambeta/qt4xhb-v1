@@ -33,8 +33,7 @@ $virtualMethod=|bool|doAction|int,int,const QVariantList &
 
 $prototypeV2=virtual bool isValid() const
 
-$prototype=virtual QObject * object () const
-$virtualMethod=|QObject *|object|
+$prototypeV2=virtual QObject * object() const
 
 $prototype=virtual QRect rect ( int child ) const
 $virtualMethod=|QRect|rect|int

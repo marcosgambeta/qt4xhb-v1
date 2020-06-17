@@ -63,8 +63,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QBrush background () const
-$method=|QBrush|background|
+$prototypeV2=QBrush background() const
 
 $prototype=bool boolProperty ( int propertyId ) const
 $method=|bool|boolProperty|int
@@ -72,11 +71,9 @@ $method=|bool|boolProperty|int
 $prototype=QBrush brushProperty ( int propertyId ) const
 $method=|QBrush|brushProperty|int
 
-$prototype=void clearBackground ()
-$method=|void|clearBackground|
+$prototypeV2=void clearBackground()
 
-$prototype=void clearForeground ()
-$method=|void|clearForeground|
+$prototypeV2=void clearForeground()
 
 $prototype=void clearProperty ( int propertyId )
 $method=|void|clearProperty|int
@@ -87,8 +84,7 @@ $method=|QColor|colorProperty|int
 $prototype=qreal doubleProperty ( int propertyId ) const
 $method=|qreal|doubleProperty|int
 
-$prototype=QBrush foreground () const
-$method=|QBrush|foreground|
+$prototypeV2=QBrush foreground() const
 
 $prototype=bool hasProperty ( int propertyId ) const
 $method=|bool|hasProperty|int
@@ -112,8 +108,7 @@ $prototypeV2=bool isTableFormat() const
 
 $prototypeV2=bool isValid() const
 
-$prototype=Qt::LayoutDirection layoutDirection () const
-$method=|Qt::LayoutDirection|layoutDirection|
+$prototypeV2=Qt::LayoutDirection layoutDirection() const
 
 $prototype=QTextLength lengthProperty ( int propertyId ) const
 $method=|QTextLength|lengthProperty|int
@@ -182,26 +177,19 @@ $addMethod=setProperty
 $prototype=QString stringProperty ( int propertyId ) const
 $method=|QString|stringProperty|int
 
-$prototype=QTextBlockFormat toBlockFormat () const
-$method=|QTextBlockFormat|toBlockFormat|
+$prototypeV2=QTextBlockFormat toBlockFormat() const
 
-$prototype=QTextCharFormat toCharFormat () const
-$method=|QTextCharFormat|toCharFormat|
+$prototypeV2=QTextCharFormat toCharFormat() const
 
-$prototype=QTextFrameFormat toFrameFormat () const
-$method=|QTextFrameFormat|toFrameFormat|
+$prototypeV2=QTextFrameFormat toFrameFormat() const
 
-$prototype=QTextImageFormat toImageFormat () const
-$method=|QTextImageFormat|toImageFormat|
+$prototypeV2=QTextImageFormat toImageFormat() const
 
-$prototype=QTextListFormat toListFormat () const
-$method=|QTextListFormat|toListFormat|
+$prototypeV2=QTextListFormat toListFormat() const
 
-$prototype=QTextTableCellFormat toTableCellFormat () const
-$method=|QTextTableCellFormat|toTableCellFormat|
+$prototypeV2=QTextTableCellFormat toTableCellFormat() const
 
-$prototype=QTextTableFormat toTableFormat () const
-$method=|QTextTableFormat|toTableFormat|
+$prototypeV2=QTextTableFormat toTableFormat() const
 
 $prototypeV2=int type() const
 

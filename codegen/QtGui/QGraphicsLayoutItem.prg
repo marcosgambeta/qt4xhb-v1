@@ -27,46 +27,39 @@ $includes
 
 $deleteMethod
 
-$prototype=QRectF contentsRect () const
-$method=|QRectF|contentsRect|
+$prototypeV2=QRectF contentsRect() const
 
 $prototype=QSizeF effectiveSizeHint ( Qt::SizeHint which, const QSizeF & constraint = QSizeF() ) const
 $method=|QSizeF|effectiveSizeHint|Qt::SizeHint,const QSizeF &=QSizeF()
 
-$prototype=QRectF geometry () const
-$method=|QRectF|geometry|
+$prototypeV2=QRectF geometry() const
 
 $prototype=virtual void getContentsMargins ( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
 $virtualMethod=|void|getContentsMargins|qreal *,qreal *,qreal *,qreal *
 
-$prototype=QGraphicsItem * graphicsItem () const
-$method=|QGraphicsItem *|graphicsItem|
+$prototypeV2=QGraphicsItem * graphicsItem() const
 
 $prototypeV2=bool isLayout() const
 
 $prototypeV2=qreal maximumHeight() const
 
-$prototype=QSizeF maximumSize () const
-$method=|QSizeF|maximumSize|
+$prototypeV2=QSizeF maximumSize() const
 
 $prototypeV2=qreal maximumWidth() const
 
 $prototypeV2=qreal minimumHeight() const
 
-$prototype=QSizeF minimumSize () const
-$method=|QSizeF|minimumSize|
+$prototypeV2=QSizeF minimumSize() const
 
 $prototypeV2=qreal minimumWidth() const
 
 $prototypeV2=bool ownedByLayout() const
 
-$prototype=QGraphicsLayoutItem * parentLayoutItem () const
-$method=|QGraphicsLayoutItem *|parentLayoutItem|
+$prototypeV2=QGraphicsLayoutItem * parentLayoutItem() const
 
 $prototypeV2=qreal preferredHeight() const
 
-$prototype=QSizeF preferredSize () const
-$method=|QSizeF|preferredSize|
+$prototypeV2=QSizeF preferredSize() const
 
 $prototypeV2=qreal preferredWidth() const
 
@@ -206,10 +199,8 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETSIZEPOLICY )
 }
 $addMethod=setSizePolicy
 
-$prototype=QSizePolicy sizePolicy () const
-$method=|QSizePolicy|sizePolicy|
+$prototypeV2=QSizePolicy sizePolicy() const
 
-$prototype=virtual void updateGeometry ()
-$virtualMethod=|void|updateGeometry|
+$prototypeV2=virtual void updateGeometry()
 
 #pragma ENDDUMP

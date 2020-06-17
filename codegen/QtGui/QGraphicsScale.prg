@@ -32,8 +32,7 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=QVector3D origin () const
-$method=|QVector3D|origin|
+$prototypeV2=QVector3D origin() const
 
 $prototype=void setOrigin ( const QVector3D & point )
 $method=|void|setOrigin|const QVector3D &

@@ -34,8 +34,7 @@ $deleteMethod
 
 $prototypeV2=qreal opacity() const
 
-$prototype=QBrush opacityMask () const
-$method=|QBrush|opacityMask|
+$prototypeV2=QBrush opacityMask() const
 
 $prototype=void setOpacity ( qreal opacity )
 $method=|void|setOpacity|qreal

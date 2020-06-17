@@ -91,14 +91,11 @@ $prototypeV2=int value() const
 
 $prototypeV2=bool wasCanceled() const
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
-$prototype=void cancel ()
-$method=|void|cancel|
+$prototypeV2=void cancel()
 
-$prototype=void reset ()
-$method=|void|reset|
+$prototypeV2=void reset()
 
 $prototype=void setCancelButtonText ( const QString & cancelButtonText )
 $method=|void|setCancelButtonText|const QString &

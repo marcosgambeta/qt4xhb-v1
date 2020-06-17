@@ -79,14 +79,11 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QBrush brush () const
-$method=|QBrush|brush|
+$prototypeV2=QBrush brush() const
 
-$prototype=Qt::PenCapStyle capStyle () const
-$method=|Qt::PenCapStyle|capStyle|
+$prototypeV2=Qt::PenCapStyle capStyle() const
 
-$prototype=QColor color () const
-$method=|QColor|color|
+$prototypeV2=QColor color() const
 
 $prototypeV2=qreal dashOffset() const
 
@@ -97,8 +94,7 @@ $prototypeV2=bool isCosmetic() const
 
 $prototypeV2=bool isSolid() const
 
-$prototype=Qt::PenJoinStyle joinStyle () const
-$method=|Qt::PenJoinStyle|joinStyle|
+$prototypeV2=Qt::PenJoinStyle joinStyle() const
 
 $prototypeV2=qreal miterLimit() const
 
@@ -135,8 +131,7 @@ $method=|void|setWidth|int
 $prototype=void setWidthF ( qreal width )
 $method=|void|setWidthF|qreal
 
-$prototype=Qt::PenStyle style () const
-$method=|Qt::PenStyle|style|
+$prototypeV2=Qt::PenStyle style() const
 
 $prototypeV2=int width() const
 

@@ -101,8 +101,7 @@ HB_FUNC_STATIC( QSTYLE_POLISH )
 }
 $addMethod=polish
 
-$prototype=const QStyle * proxy () const
-$method=|const QStyle *|proxy|
+$prototypeV2=const QStyle * proxy() const
 
 $prototype=virtual QSize sizeFromContents ( ContentsType type, const QStyleOption * option, const QSize & contentsSize, const QWidget * widget = 0 ) const = 0
 $virtualMethod=|QSize|sizeFromContents|QStyle::ContentsType,const QStyleOption *,const QSize &,const QWidget *=0
@@ -110,8 +109,7 @@ $virtualMethod=|QSize|sizeFromContents|QStyle::ContentsType,const QStyleOption *
 $prototype=QIcon standardIcon ( StandardPixmap standardIcon, const QStyleOption * option = 0, const QWidget * widget = 0 ) const
 $method=|QIcon|standardIcon|QStyle::StandardPixmap,const QStyleOption *=0,const QWidget *=0
 
-$prototype=virtual QPalette standardPalette () const
-$virtualMethod=|QPalette|standardPalette|
+$prototypeV2=virtual QPalette standardPalette() const
 
 $prototype=virtual int styleHint ( StyleHint hint, const QStyleOption * option = 0, const QWidget * widget = 0, QStyleHintReturn * returnData = 0 ) const = 0
 $virtualMethod=|int|styleHint|QStyle::StyleHint,const QStyleOption *=0,const QWidget *=0,QStyleHintReturn *=0

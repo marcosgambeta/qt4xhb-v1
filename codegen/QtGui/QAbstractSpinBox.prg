@@ -32,14 +32,11 @@ $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-$prototype=Qt::Alignment alignment () const
-$method=|Qt::Alignment|alignment|
+$prototypeV2=Qt::Alignment alignment() const
 
-$prototype=ButtonSymbols buttonSymbols () const
-$method=|QAbstractSpinBox::ButtonSymbols|buttonSymbols|
+$prototypeV2=QAbstractSpinBox::ButtonSymbols buttonSymbols() const
 
-$prototype=CorrectionMode correctionMode () const
-$method=|QAbstractSpinBox::CorrectionMode|correctionMode|
+$prototypeV2=QAbstractSpinBox::CorrectionMode correctionMode() const
 
 $prototype=virtual void fixup ( QString & input ) const
 %% TODO: revisar implementacao e corrigir
@@ -61,8 +58,7 @@ $prototypeV2=bool hasAcceptableInput() const
 
 $prototypeV2=bool hasFrame() const
 
-$prototype=void interpretText ()
-$method=|void|interpretText|
+$prototypeV2=void interpretText()
 
 $prototypeV2=bool isAccelerated() const
 
@@ -127,23 +123,17 @@ $virtualMethod=|bool|event|QEvent *
 $prototype=virtual QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
 $virtualMethod=|QVariant|inputMethodQuery|Qt::InputMethodQuery
 
-$prototype=virtual QSize minimumSizeHint () const
-$virtualMethod=|QSize|minimumSizeHint|
+$prototypeV2=virtual QSize minimumSizeHint() const
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
-$prototype=virtual void clear ()
-$virtualMethod=|void|clear|
+$prototypeV2=virtual void clear()
 
-$prototype=void selectAll ()
-$method=|void|selectAll|
+$prototypeV2=void selectAll()
 
-$prototype=void stepDown ()
-$method=|void|stepDown|
+$prototypeV2=void stepDown()
 
-$prototype=void stepUp ()
-$method=|void|stepUp|
+$prototypeV2=void stepUp()
 
 $beginSignals
 $signal=|editingFinished()

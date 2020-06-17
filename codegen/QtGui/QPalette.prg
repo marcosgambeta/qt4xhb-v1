@@ -87,14 +87,11 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=const QBrush & alternateBase () const
-$method=|const QBrush &|alternateBase|
+$prototypeV2=const QBrush & alternateBase() const
 
-$prototype=const QBrush & base () const
-$method=|const QBrush &|base|
+$prototypeV2=const QBrush & base() const
 
-$prototype=const QBrush & brightText () const
-$method=|const QBrush &|brightText|
+$prototypeV2=const QBrush & brightText() const
 
 $prototype=const QBrush & brush ( ColorGroup group, ColorRole role ) const
 $internalMethod=|const QBrush &|brush,brush1|QPalette::ColorGroup,QPalette::ColorRole
@@ -124,14 +121,11 @@ HB_FUNC_STATIC( QPALETTE_BRUSH )
 }
 $addMethod=brush
 
-$prototype=const QBrush & button () const
-$method=|const QBrush &|button|
+$prototypeV2=const QBrush & button() const
 
-$prototype=const QBrush & buttonText () const
-$method=|const QBrush &|buttonText|
+$prototypeV2=const QBrush & buttonText() const
 
-$prototype=qint64 cacheKey () const
-$method=|qint64|cacheKey|
+$prototypeV2=qint64 cacheKey() const
 
 $prototype=const QColor & color ( ColorGroup group, ColorRole role ) const
 $internalMethod=|const QColor &|color,color1|QPalette::ColorGroup,QPalette::ColorRole
@@ -161,17 +155,13 @@ HB_FUNC_STATIC( QPALETTE_COLOR )
 }
 $addMethod=color
 
-$prototype=ColorGroup currentColorGroup () const
-$method=|QPalette::ColorGroup|currentColorGroup|
+$prototypeV2=QPalette::ColorGroup currentColorGroup() const
 
-$prototype=const QBrush & dark () const
-$method=|const QBrush &|dark|
+$prototypeV2=const QBrush & dark() const
 
-$prototype=const QBrush & highlight () const
-$method=|const QBrush &|highlight|
+$prototypeV2=const QBrush & highlight() const
 
-$prototype=const QBrush & highlightedText () const
-$method=|const QBrush &|highlightedText|
+$prototypeV2=const QBrush & highlightedText() const
 
 $prototype=bool isBrushSet ( ColorGroup cg, ColorRole cr ) const
 $method=|bool|isBrushSet|QPalette::ColorGroup,QPalette::ColorRole
@@ -182,20 +172,15 @@ $method=|bool|isCopyOf|const QPalette &
 $prototype=bool isEqual ( ColorGroup cg1, ColorGroup cg2 ) const
 $method=|bool|isEqual|QPalette::ColorGroup,QPalette::ColorGroup
 
-$prototype=const QBrush & light () const
-$method=|const QBrush &|light|
+$prototypeV2=const QBrush & light() const
 
-$prototype=const QBrush & link () const
-$method=|const QBrush &|link|
+$prototypeV2=const QBrush & link() const
 
-$prototype=const QBrush & linkVisited () const
-$method=|const QBrush &|linkVisited|
+$prototypeV2=const QBrush & linkVisited() const
 
-$prototype=const QBrush & mid () const
-$method=|const QBrush &|mid|
+$prototypeV2=const QBrush & mid() const
 
-$prototype=const QBrush & midlight () const
-$method=|const QBrush &|midlight|
+$prototypeV2=const QBrush & midlight() const
 
 $prototype=QPalette resolve ( const QPalette & other ) const
 $method=|QPalette|resolve|const QPalette &
@@ -262,23 +247,17 @@ $method=|void|setColorGroup|QPalette::ColorGroup,const QBrush &,const QBrush &,c
 $prototype=void setCurrentColorGroup ( ColorGroup cg )
 $method=|void|setCurrentColorGroup|QPalette::ColorGroup
 
-$prototype=const QBrush & shadow () const
-$method=|const QBrush &|shadow|
+$prototypeV2=const QBrush & shadow() const
 
-$prototype=const QBrush & text () const
-$method=|const QBrush &|text|
+$prototypeV2=const QBrush & text() const
 
-$prototype=const QBrush & toolTipBase () const
-$method=|const QBrush &|toolTipBase|
+$prototypeV2=const QBrush & toolTipBase() const
 
-$prototype=const QBrush & toolTipText () const
-$method=|const QBrush &|toolTipText|
+$prototypeV2=const QBrush & toolTipText() const
 
-$prototype=const QBrush & window () const
-$method=|const QBrush &|window|
+$prototypeV2=const QBrush & window() const
 
-$prototype=const QBrush & windowText () const
-$method=|const QBrush &|windowText|
+$prototypeV2=const QBrush & windowText() const
 
 $extraMethods
 
