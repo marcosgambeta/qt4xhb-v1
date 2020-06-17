@@ -227,11 +227,9 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_ENABLEATTRIBUTEARRAY )
 }
 $addMethod=enableAttributeArray
 
-$prototype=GLenum geometryInputType () const
-$method=|GLenum|geometryInputType|
+$prototypeV2=GLenum geometryInputType() const
 
-$prototype=GLenum geometryOutputType () const
-$method=|GLenum|geometryOutputType|
+$prototypeV2=GLenum geometryOutputType() const
 
 $prototypeV2=int geometryOutputVertexCount() const
 
@@ -243,14 +241,11 @@ $prototypeV2=QString log() const
 
 $prototypeV2=int maxGeometryOutputVertices() const
 
-$prototype=GLuint programId () const
-$method=|GLuint|programId|
+$prototypeV2=GLuint programId() const
 
-$prototype=void release ()
-$method=|void|release|
+$prototypeV2=void release()
 
-$prototype=void removeAllShaders ()
-$method=|void|removeAllShaders|
+$prototypeV2=void removeAllShaders()
 
 $prototype=void removeShader ( QGLShader * shader )
 $method=|void|removeShader|QGLShader *

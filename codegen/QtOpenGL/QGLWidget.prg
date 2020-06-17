@@ -116,17 +116,14 @@ HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE )
 }
 $addMethod=bindTexture
 
-$prototype=const QGLColormap & colormap () const
-$method=|const QGLColormap &|colormap|
+$prototypeV2=const QGLColormap & colormap() const
 
-$prototype=const QGLContext * context () const
-$method=|const QGLContext *|context|
+$prototypeV2=const QGLContext * context() const
 
 $prototype=void deleteTexture ( GLuint id )
 $method=|void|deleteTexture|GLuint
 
-$prototype=void doneCurrent ()
-$method=|void|doneCurrent|
+$prototypeV2=void doneCurrent()
 
 $prototypeV2=bool doubleBuffer() const
 
@@ -158,8 +155,7 @@ HB_FUNC_STATIC( QGLWIDGET_DRAWTEXTURE )
 }
 $addMethod=drawTexture
 
-$prototype=QGLFormat format () const
-$method=|QGLFormat|format|
+$prototypeV2=QGLFormat format() const
 
 $prototype=QImage grabFrameBuffer ( bool withAlpha = false )
 $method=|QImage|grabFrameBuffer|bool=false
@@ -168,14 +164,11 @@ $prototypeV2=bool isSharing() const
 
 $prototypeV2=bool isValid() const
 
-$prototype=void makeCurrent ()
-$method=|void|makeCurrent|
+$prototypeV2=void makeCurrent()
 
-$prototype=void makeOverlayCurrent ()
-$method=|void|makeOverlayCurrent|
+$prototypeV2=void makeOverlayCurrent()
 
-$prototype=const QGLContext * overlayContext () const
-$method=|const QGLContext *|overlayContext|
+$prototypeV2=const QGLContext * overlayContext() const
 
 $prototype=void qglClearColor ( const QColor & c ) const
 $method=|void|qglClearColor|const QColor &
@@ -220,14 +213,11 @@ $method=|void|setColormap|const QGLColormap &
 $prototype=void setMouseTracking ( bool enable )
 $method=|void|setMouseTracking|bool
 
-$prototype=void swapBuffers ()
-$method=|void|swapBuffers|
+$prototypeV2=void swapBuffers()
 
-$prototype=virtual void updateGL ()
-$virtualMethod=|void|updateGL|
+$prototypeV2=virtual void updateGL()
 
-$prototype=virtual void updateOverlayGL ()
-$virtualMethod=|void|updateOverlayGL|
+$prototypeV2=virtual void updateOverlayGL()
 
 $prototype=static QImage convertToGLFormat ( const QImage & img )
 $staticMethod=|QImage|convertToGLFormat|const QImage &

@@ -127,30 +127,24 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_DRAWTEXTURE )
 }
 $addMethod=drawTexture
 
-$prototype=QGLFormat format () const
-$method=|QGLFormat|format|
+$prototypeV2=QGLFormat format() const
 
-$prototype=GLuint generateDynamicTexture () const
-$method=|GLuint|generateDynamicTexture|
+$prototypeV2=GLuint generateDynamicTexture() const
 
 $prototypeV2=bool isValid() const
 
 $prototypeV2=bool makeCurrent()
 
-$prototype=void releaseFromDynamicTexture ()
-$method=|void|releaseFromDynamicTexture|
+$prototypeV2=void releaseFromDynamicTexture()
 
-$prototype=QSize size () const
-$method=|QSize|size|
+$prototypeV2=QSize size() const
 
-$prototype=QImage toImage () const
-$method=|QImage|toImage|
+$prototypeV2=QImage toImage() const
 
 $prototype=void updateDynamicTexture ( GLuint texture_id ) const
 $method=|void|updateDynamicTexture|GLuint
 
-$prototype=virtual QPaintEngine * paintEngine () const
-$virtualMethod=|QPaintEngine *|paintEngine|
+$prototypeV2=virtual QPaintEngine * paintEngine() const
 
 $prototypeV2=static bool hasOpenGLPbuffers()
 

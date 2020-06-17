@@ -90,8 +90,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=Attachment attachment () const
-$method=|QGLFramebufferObject::Attachment|attachment|
+$prototypeV2=QGLFramebufferObject::Attachment attachment() const
 
 $prototypeV2=bool bind()
 
@@ -123,11 +122,9 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_DRAWTEXTURE )
 }
 $addMethod=drawTexture
 
-$prototype=QGLFramebufferObjectFormat format () const
-$method=|QGLFramebufferObjectFormat|format|
+$prototypeV2=QGLFramebufferObjectFormat format() const
 
-$prototype=GLuint handle () const
-$method=|GLuint|handle|
+$prototypeV2=GLuint handle() const
 
 $prototypeV2=bool isBound() const
 
@@ -135,17 +132,13 @@ $prototypeV2=bool isValid() const
 
 $prototypeV2=bool release()
 
-$prototype=QSize size () const
-$method=|QSize|size|
+$prototypeV2=QSize size() const
 
-$prototype=GLuint texture () const
-$method=|GLuint|texture|
+$prototypeV2=GLuint texture() const
 
-$prototype=QImage toImage () const
-$method=|QImage|toImage|
+$prototypeV2=QImage toImage() const
 
-$prototype=virtual QPaintEngine * paintEngine () const
-$virtualMethod=|QPaintEngine *|paintEngine|
+$prototypeV2=virtual QPaintEngine * paintEngine() const
 
 $prototype=static void blitFramebuffer ( QGLFramebufferObject * target, const QRect & targetRect, QGLFramebufferObject * source, const QRect & sourceRect, GLbitfield buffers = GL_COLOR_BUFFER_BIT, GLenum filter = GL_NEAREST )
 $staticMethod=|void|blitFramebuffer|QGLFramebufferObject *,const QRect &,QGLFramebufferObject *,const QRect &,GLbitfield=GL_COLOR_BUFFER_BIT,GLenum=GL_NEAREST

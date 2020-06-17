@@ -100,8 +100,7 @@ $method=|void|glCompressedTexImage2D|GLenum,GLint,GLenum,GLsizei,GLsizei,GLint,G
 $prototype=void glCompressedTexSubImage2D ( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, const void * data )
 $method=|void|glCompressedTexSubImage2D|GLenum,GLint,GLint,GLint,GLsizei,GLsizei,GLenum,GLsizei,const void *
 
-$prototype=GLuint glCreateProgram ()
-$method=|GLuint|glCreateProgram|
+$prototypeV2=GLuint glCreateProgram()
 
 $prototype=GLuint glCreateShader ( GLenum type )
 $method=|GLuint|glCreateShader|GLenum
@@ -157,8 +156,7 @@ $method=|GLboolean|glIsShader|GLuint
 $prototype=void glLinkProgram ( GLuint program )
 $method=|void|glLinkProgram|GLuint
 
-$prototype=void glReleaseShaderCompiler ()
-$method=|void|glReleaseShaderCompiler|
+$prototypeV2=void glReleaseShaderCompiler()
 
 $prototype=void glRenderbufferStorage ( GLenum target, GLenum internalformat, GLsizei width, GLsizei height )
 $method=|void|glRenderbufferStorage|GLenum,GLenum,GLsizei,GLsizei
@@ -226,8 +224,7 @@ $method=|bool|hasOpenGLFeature|QGLFunctions::OpenGLFeature
 $prototype=void initializeGLFunctions ( const QGLContext * context = 0 )
 $method=|void|initializeGLFunctions|const QGLContext *=0
 
-$prototype=QGLFunctions::OpenGLFeatures openGLFeatures () const
-$method=|QGLFunctions::OpenGLFeatures|openGLFeatures|
+$prototypeV2=QGLFunctions::OpenGLFeatures openGLFeatures() const
 
 $extraMethods
 

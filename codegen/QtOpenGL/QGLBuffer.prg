@@ -93,13 +93,11 @@ $addMethod=allocate
 
 $prototypeV2=bool bind()
 
-$prototype=GLuint bufferId () const
-$method=|GLuint|bufferId|
+$prototypeV2=GLuint bufferId() const
 
 $prototypeV2=bool create()
 
-$prototype=void destroy ()
-$method=|void|destroy|
+$prototypeV2=void destroy()
 
 $prototypeV2=bool isCreated() const
 
@@ -114,13 +112,11 @@ $method=|void|setUsagePattern|QGLBuffer::UsagePattern
 
 $prototypeV2=int size() const
 
-$prototype=QGLBuffer::Type type () const
-$method=|QGLBuffer::Type|type|
+$prototypeV2=QGLBuffer::Type type() const
 
 $prototypeV2=bool unmap()
 
-$prototype=QGLBuffer::UsagePattern usagePattern () const
-$method=|QGLBuffer::UsagePattern|usagePattern|
+$prototypeV2=QGLBuffer::UsagePattern usagePattern() const
 
 $prototype=void release ()
 $internalMethod=|void|release,release1|

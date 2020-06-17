@@ -92,8 +92,7 @@ $prototypeV2=int minorVersion() const
 
 $prototypeV2=int plane() const
 
-$prototype=OpenGLContextProfile profile () const
-$method=|QGLFormat::OpenGLContextProfile|profile|
+$prototypeV2=QGLFormat::OpenGLContextProfile profile() const
 
 $prototypeV2=int redBufferSize() const
 
@@ -183,18 +182,15 @@ $prototypeV2=int swapInterval() const
 $prototype=bool testOption ( QGL::FormatOptions opt ) const
 $method=|bool|testOption|QGL::FormatOptions
 
-$prototype=static QGLFormat defaultFormat ()
-$staticMethod=|QGLFormat|defaultFormat|
+$prototypeV2=static QGLFormat defaultFormat()
 
-$prototype=static QGLFormat defaultOverlayFormat ()
-$staticMethod=|QGLFormat|defaultOverlayFormat|
+$prototypeV2=static QGLFormat defaultOverlayFormat()
 
 $prototypeV2=static bool hasOpenGL()
 
 $prototypeV2=static bool hasOpenGLOverlays()
 
-$prototype=static OpenGLVersionFlags openGLVersionFlags ()
-$staticMethod=|QGLFormat::OpenGLVersionFlags|openGLVersionFlags|
+$prototypeV2=static QGLFormat::OpenGLVersionFlags openGLVersionFlags()
 
 $prototype=static void setDefaultFormat ( const QGLFormat & f )
 $staticMethod=|void|setDefaultFormat|const QGLFormat &
