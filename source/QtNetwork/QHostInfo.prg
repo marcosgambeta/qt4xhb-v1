@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QHOSTINFO_ADDRESSES )
 }
 
 /*
-HostInfoError error () const
+QHostInfo::HostInfoError error() const
 */
 HB_FUNC_STATIC( QHOSTINFO_ERROR )
 {

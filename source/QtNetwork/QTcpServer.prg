@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QTCPSERVER_DELETE )
 }
 
 /*
-void close ()
+void close()
 */
 HB_FUNC_STATIC( QTCPSERVER_CLOSE )
 {
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QTCPSERVER_MAXPENDINGCONNECTIONS )
 }
 
 /*
-virtual QTcpSocket * nextPendingConnection ()
+virtual QTcpSocket * nextPendingConnection()
 */
 HB_FUNC_STATIC( QTCPSERVER_NEXTPENDINGCONNECTION )
 {
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QTCPSERVER_NEXTPENDINGCONNECTION )
 }
 
 /*
-QNetworkProxy proxy () const
+QNetworkProxy proxy() const
 */
 HB_FUNC_STATIC( QTCPSERVER_PROXY )
 {
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QTCPSERVER_PROXY )
 }
 
 /*
-QHostAddress serverAddress () const
+QHostAddress serverAddress() const
 */
 HB_FUNC_STATIC( QTCPSERVER_SERVERADDRESS )
 {
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QTCPSERVER_SERVERADDRESS )
 }
 
 /*
-QAbstractSocket::SocketError serverError () const
+QAbstractSocket::SocketError serverError() const
 */
 HB_FUNC_STATIC( QTCPSERVER_SERVERERROR )
 {
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QTCPSERVER_SERVERERROR )
 }
 
 /*
-quint16 serverPort () const
+quint16 serverPort() const
 */
 HB_FUNC_STATIC( QTCPSERVER_SERVERPORT )
 {

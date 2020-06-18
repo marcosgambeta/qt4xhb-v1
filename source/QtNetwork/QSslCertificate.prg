@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_DELETE )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_CLEAR )
 {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_DIGEST )
 }
 
 /*
-QDateTime effectiveDate () const
+QDateTime effectiveDate() const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_EFFECTIVEDATE )
 {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_EFFECTIVEDATE )
 }
 
 /*
-QDateTime expiryDate () const
+QDateTime expiryDate() const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_EXPIRYDATE )
 {
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFO )
 }
 
 /*
-QSslKey publicKey () const
+QSslKey publicKey() const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_PUBLICKEY )
 {
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_PUBLICKEY )
 }
 
 /*
-QByteArray serialNumber () const
+QByteArray serialNumber() const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_SERIALNUMBER )
 {
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SUBJECTINFO )
 }
 
 /*
-QByteArray toDer () const
+QByteArray toDer() const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_TODER )
 {
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_TODER )
 }
 
 /*
-QByteArray toPem () const
+QByteArray toPem() const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_TOPEM )
 {
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_TOPEM )
 }
 
 /*
-QByteArray version () const
+QByteArray version() const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_VERSION )
 {

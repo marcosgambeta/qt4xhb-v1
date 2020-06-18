@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_DELETE )
 }
 
 /*
-virtual void abort () = 0
+virtual void abort() = 0
 */
 HB_FUNC_STATIC( QNETWORKREPLY_ABORT )
 {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ATTRIBUTE )
 }
 
 /*
-NetworkError error () const
+QNetworkReply::NetworkError error() const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_ERROR )
 {
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ISRUNNING )
 }
 
 /*
-QNetworkAccessManager * manager () const
+QNetworkAccessManager * manager() const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_MANAGER )
 {
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_MANAGER )
 }
 
 /*
-QNetworkAccessManager::Operation operation () const
+QNetworkAccessManager::Operation operation() const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_OPERATION )
 {
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADERLIST )
 }
 
 /*
-qint64 readBufferSize () const
+qint64 readBufferSize() const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_READBUFFERSIZE )
 {
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_READBUFFERSIZE )
 }
 
 /*
-QNetworkRequest request () const
+QNetworkRequest request() const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_REQUEST )
 {
@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_SETSSLCONFIGURATION )
 }
 
 /*
-QSslConfiguration sslConfiguration () const
+QSslConfiguration sslConfiguration() const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_SSLCONFIGURATION )
 {
@@ -576,7 +576,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_SSLCONFIGURATION )
 }
 
 /*
-QUrl url () const
+QUrl url() const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_URL )
 {
@@ -601,7 +601,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_URL )
 }
 
 /*
-virtual void close ()
+virtual void close()
 */
 HB_FUNC_STATIC( QNETWORKREPLY_CLOSE )
 {

@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QFTP_DELETE )
 }
 
 /*
-qint64 bytesAvailable () const
+qint64 bytesAvailable() const
 */
 HB_FUNC_STATIC( QFTP_BYTESAVAILABLE )
 {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QFTP_CD )
 }
 
 /*
-void clearPendingCommands ()
+void clearPendingCommands()
 */
 HB_FUNC_STATIC( QFTP_CLEARPENDINGCOMMANDS )
 {
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QFTP_CONNECTTOHOST )
 }
 
 /*
-Command currentCommand () const
+QFtp::Command currentCommand() const
 */
 HB_FUNC_STATIC( QFTP_CURRENTCOMMAND )
 {
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QFTP_CURRENTCOMMAND )
 }
 
 /*
-QIODevice * currentDevice () const
+QIODevice * currentDevice() const
 */
 HB_FUNC_STATIC( QFTP_CURRENTDEVICE )
 {
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QFTP_CURRENTID )
 }
 
 /*
-Error error () const
+QFtp::Error error() const
 */
 HB_FUNC_STATIC( QFTP_ERROR )
 {
@@ -571,7 +571,7 @@ HB_FUNC_STATIC( QFTP_READ )
 }
 
 /*
-QByteArray readAll ()
+QByteArray readAll()
 */
 HB_FUNC_STATIC( QFTP_READALL )
 {
@@ -716,7 +716,7 @@ HB_FUNC_STATIC( QFTP_SETTRANSFERMODE )
 }
 
 /*
-State state () const
+QFtp::State state() const
 */
 HB_FUNC_STATIC( QFTP_STATE )
 {
@@ -740,7 +740,7 @@ HB_FUNC_STATIC( QFTP_STATE )
 }
 
 /*
-void abort ()
+void abort()
 */
 HB_FUNC_STATIC( QFTP_ABORT )
 {

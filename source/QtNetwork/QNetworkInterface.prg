@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
 }
 
 /*
-InterfaceFlags flags () const
+QNetworkInterface::InterfaceFlags flags() const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_FLAGS )
 {

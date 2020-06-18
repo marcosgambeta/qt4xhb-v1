@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_DELETE )
 }
 
 /*
-void abort ()
+void abort()
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_ABORT )
 {
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_CONNECTTOHOST2 )
 }
 
 /*
-void disconnectFromHost ()
+void disconnectFromHost()
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_DISCONNECTFROMHOST )
 {
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_DISCONNECTFROMHOST )
 }
 
 /*
-SocketError error () const
+QAbstractSocket::SocketError error() const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_ERROR )
 {
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ISVALID )
 }
 
 /*
-QHostAddress localAddress () const
+QHostAddress localAddress() const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_LOCALADDRESS )
 {
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_LOCALADDRESS )
 }
 
 /*
-quint16 localPort () const
+quint16 localPort() const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_LOCALPORT )
 {
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_LOCALPORT )
 }
 
 /*
-QHostAddress peerAddress () const
+QHostAddress peerAddress() const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_PEERADDRESS )
 {
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PEERNAME )
 }
 
 /*
-quint16 peerPort () const
+quint16 peerPort() const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_PEERPORT )
 {
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PEERPORT )
 }
 
 /*
-QNetworkProxy proxy () const
+QNetworkProxy proxy() const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_PROXY )
 {
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PROXY )
 }
 
 /*
-qint64 readBufferSize () const
+qint64 readBufferSize() const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_READBUFFERSIZE )
 {
@@ -619,7 +619,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETOPTION )
 }
 
 /*
-SocketType socketType () const
+QAbstractSocket::SocketType socketType() const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETTYPE )
 {
@@ -643,7 +643,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETTYPE )
 }
 
 /*
-SocketState state () const
+QAbstractSocket::SocketState state() const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_STATE )
 {
@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ATEND )
 }
 
 /*
-virtual qint64 bytesAvailable () const
+virtual qint64 bytesAvailable() const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_BYTESAVAILABLE )
 {
@@ -763,7 +763,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_BYTESAVAILABLE )
 }
 
 /*
-virtual qint64 bytesToWrite () const
+virtual qint64 bytesToWrite() const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_BYTESTOWRITE )
 {
@@ -811,7 +811,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_CANREADLINE )
 }
 
 /*
-virtual void close ()
+virtual void close()
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_CLOSE )
 {

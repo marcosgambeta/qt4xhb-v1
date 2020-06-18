@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_HEADER )
 }
 
 /*
-QObject * originatingObject () const
+QObject * originatingObject() const
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_ORIGINATINGOBJECT )
 {
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_ORIGINATINGOBJECT )
 }
 
 /*
-Priority priority () const
+QNetworkRequest::Priority priority() const
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_PRIORITY )
 {
@@ -509,7 +509,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETURL )
 }
 
 /*
-QSslConfiguration sslConfiguration () const
+QSslConfiguration sslConfiguration() const
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_SSLCONFIGURATION )
 {
@@ -534,7 +534,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SSLCONFIGURATION )
 }
 
 /*
-QUrl url () const
+QUrl url() const
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_URL )
 {

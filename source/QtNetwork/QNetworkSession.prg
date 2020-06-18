@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_DELETE )
 }
 
 /*
-quint64 activeTime () const
+quint64 activeTime() const
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ACTIVETIME )
 {
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ACTIVETIME )
 }
 
 /*
-quint64 bytesReceived () const
+quint64 bytesReceived() const
 */
 HB_FUNC_STATIC( QNETWORKSESSION_BYTESRECEIVED )
 {
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_BYTESRECEIVED )
 }
 
 /*
-quint64 bytesWritten () const
+quint64 bytesWritten() const
 */
 HB_FUNC_STATIC( QNETWORKSESSION_BYTESWRITTEN )
 {
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_BYTESWRITTEN )
 }
 
 /*
-QNetworkConfiguration configuration () const
+QNetworkConfiguration configuration() const
 */
 HB_FUNC_STATIC( QNETWORKSESSION_CONFIGURATION )
 {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_CONFIGURATION )
 }
 
 /*
-SessionError error () const
+QNetworkSession::SessionError error() const
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ERROR )
 {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ERRORSTRING )
 }
 
 /*
-QNetworkInterface interface () const
+QNetworkInterface interface() const
 */
 HB_FUNC_STATIC( QNETWORKSESSION_INTERFACE )
 {
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_SETSESSIONPROPERTY )
 }
 
 /*
-State state () const
+QNetworkSession::State state() const
 */
 HB_FUNC_STATIC( QNETWORKSESSION_STATE )
 {
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_WAITFOROPENED )
 }
 
 /*
-void accept ()
+void accept()
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ACCEPT )
 {
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ACCEPT )
 }
 
 /*
-void close ()
+void close()
 */
 HB_FUNC_STATIC( QNETWORKSESSION_CLOSE )
 {
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_CLOSE )
 }
 
 /*
-void ignore ()
+void ignore()
 */
 HB_FUNC_STATIC( QNETWORKSESSION_IGNORE )
 {
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_IGNORE )
 }
 
 /*
-void migrate ()
+void migrate()
 */
 HB_FUNC_STATIC( QNETWORKSESSION_MIGRATE )
 {
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_MIGRATE )
 }
 
 /*
-void open ()
+void open()
 */
 HB_FUNC_STATIC( QNETWORKSESSION_OPEN )
 {
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_OPEN )
 }
 
 /*
-void reject ()
+void reject()
 */
 HB_FUNC_STATIC( QNETWORKSESSION_REJECT )
 {
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_REJECT )
 }
 
 /*
-void stop ()
+void stop()
 */
 HB_FUNC_STATIC( QNETWORKSESSION_STOP )
 {

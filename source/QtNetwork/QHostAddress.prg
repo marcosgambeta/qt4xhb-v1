@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_DELETE )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QHOSTADDRESS_CLEAR )
 {
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISNULL )
 }
 
 /*
-QAbstractSocket::NetworkLayerProtocol protocol () const
+QAbstractSocket::NetworkLayerProtocol protocol() const
 */
 HB_FUNC_STATIC( QHOSTADDRESS_PROTOCOL )
 {
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_SETSCOPEID )
 }
 
 /*
-quint32 toIPv4Address () const
+quint32 toIPv4Address() const
 */
 HB_FUNC_STATIC( QHOSTADDRESS_TOIPV4ADDRESS )
 {

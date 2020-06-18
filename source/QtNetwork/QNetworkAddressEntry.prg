@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_DELETE )
 }
 
 /*
-QHostAddress broadcast () const
+QHostAddress broadcast() const
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_BROADCAST )
 {
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_BROADCAST )
 }
 
 /*
-QHostAddress ip () const
+QHostAddress ip() const
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_IP )
 {
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_IP )
 }
 
 /*
-QHostAddress netmask () const
+QHostAddress netmask() const
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NETMASK )
 {

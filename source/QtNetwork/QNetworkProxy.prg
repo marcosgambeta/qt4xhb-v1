@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_DELETE )
 }
 
 /*
-Capabilities capabilities () const
+QNetworkProxy::Capabilities capabilities() const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_CAPABILITIES )
 {
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_PASSWORD )
 }
 
 /*
-quint16 port () const
+quint16 port() const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_PORT )
 {
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_USER )
 }
 
 /*
-static QNetworkProxy applicationProxy ()
+static QNetworkProxy applicationProxy()
 */
 HB_FUNC_STATIC( QNETWORKPROXY_APPLICATIONPROXY )
 {

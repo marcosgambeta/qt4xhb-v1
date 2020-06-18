@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS )
 }
 
 /*
-QNetworkConfigurationManager::Capabilities capabilities () const
+QNetworkConfigurationManager::Capabilities capabilities() const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_CAPABILITIES )
 {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_CONFIGURATIONFROMIDENTIFIER )
 }
 
 /*
-QNetworkConfiguration defaultConfiguration () const
+QNetworkConfiguration defaultConfiguration() const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_DEFAULTCONFIGURATION )
 {
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ISONLINE )
 }
 
 /*
-void updateConfigurations ()
+void updateConfigurations()
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_UPDATECONFIGURATIONS )
 {

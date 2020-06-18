@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QSSLKEY_DELETE )
 }
 
 /*
-QSsl::KeyAlgorithm algorithm () const
+QSsl::KeyAlgorithm algorithm() const
 */
 HB_FUNC_STATIC( QSSLKEY_ALGORITHM )
 {
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QSSLKEY_ALGORITHM )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QSSLKEY_CLEAR )
 {
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QSSLKEY_TOPEM )
 }
 
 /*
-QSsl::KeyType type () const
+QSsl::KeyType type() const
 */
 HB_FUNC_STATIC( QSSLKEY_TYPE )
 {

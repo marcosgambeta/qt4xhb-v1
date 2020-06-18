@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_DELETE )
 }
 
 /*
-void abort ()
+void abort()
 */
 HB_FUNC_STATIC( QLOCALSOCKET_ABORT )
 {
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_CONNECTTOSERVER )
 }
 
 /*
-void disconnectFromServer ()
+void disconnectFromServer()
 */
 HB_FUNC_STATIC( QLOCALSOCKET_DISCONNECTFROMSERVER )
 {
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_DISCONNECTFROMSERVER )
 }
 
 /*
-LocalSocketError error () const
+QLocalSocket::LocalSocketError error() const
 */
 HB_FUNC_STATIC( QLOCALSOCKET_ERROR )
 {
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ISVALID )
 }
 
 /*
-qint64 readBufferSize () const
+qint64 readBufferSize() const
 */
 HB_FUNC_STATIC( QLOCALSOCKET_READBUFFERSIZE )
 {
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_SETREADBUFFERSIZE )
 }
 
 /*
-LocalSocketState state () const
+QLocalSocket::LocalSocketState state() const
 */
 HB_FUNC_STATIC( QLOCALSOCKET_STATE )
 {
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_WAITFORDISCONNECTED )
 }
 
 /*
-virtual qint64 bytesAvailable () const
+virtual qint64 bytesAvailable() const
 */
 HB_FUNC_STATIC( QLOCALSOCKET_BYTESAVAILABLE )
 {
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_BYTESAVAILABLE )
 }
 
 /*
-virtual qint64 bytesToWrite () const
+virtual qint64 bytesToWrite() const
 */
 HB_FUNC_STATIC( QLOCALSOCKET_BYTESTOWRITE )
 {
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_CANREADLINE )
 }
 
 /*
-virtual void close ()
+virtual void close()
 */
 HB_FUNC_STATIC( QLOCALSOCKET_CLOSE )
 {

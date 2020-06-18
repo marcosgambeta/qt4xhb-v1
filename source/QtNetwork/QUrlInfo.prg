@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QURLINFO_ISWRITABLE )
 }
 
 /*
-QDateTime lastModified () const
+QDateTime lastModified() const
 */
 HB_FUNC_STATIC( QURLINFO_LASTMODIFIED )
 {
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QURLINFO_LASTMODIFIED )
 }
 
 /*
-QDateTime lastRead () const
+QDateTime lastRead() const
 */
 HB_FUNC_STATIC( QURLINFO_LASTREAD )
 {
@@ -788,7 +788,7 @@ HB_FUNC_STATIC( QURLINFO_SETWRITABLE )
 }
 
 /*
-qint64 size () const
+qint64 size() const
 */
 HB_FUNC_STATIC( QURLINFO_SIZE )
 {

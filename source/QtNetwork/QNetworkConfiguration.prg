@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERNAME )
 }
 
 /*
-BearerType bearerType () const
+QNetworkConfiguration::BearerType bearerType() const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPE )
 {
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_NAME )
 }
 
 /*
-Purpose purpose () const
+QNetworkConfiguration::Purpose purpose() const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_PURPOSE )
 {
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_PURPOSE )
 }
 
 /*
-StateFlags state () const
+QNetworkConfiguration::StateFlags state() const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_STATE )
 {
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_STATE )
 }
 
 /*
-Type type () const
+QNetworkConfiguration::Type type() const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_TYPE )
 {

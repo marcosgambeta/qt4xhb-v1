@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_DOMAIN )
 }
 
 /*
-QDateTime expirationDate () const
+QDateTime expirationDate() const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_EXPIRATIONDATE )
 {
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_ISSESSIONCOOKIE )
 }
 
 /*
-QByteArray name () const
+QByteArray name() const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_NAME )
 {
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_TORAWFORM )
 }
 
 /*
-QByteArray value () const
+QByteArray value() const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_VALUE )
 {

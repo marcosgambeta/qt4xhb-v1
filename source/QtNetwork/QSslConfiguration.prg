@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_ISNULL )
 }
 
 /*
-QSslCertificate localCertificate () const
+QSslCertificate localCertificate() const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_LOCALCERTIFICATE )
 {
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_LOCALCERTIFICATE )
 }
 
 /*
-QSslCertificate peerCertificate () const
+QSslCertificate peerCertificate() const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_PEERCERTIFICATE )
 {
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PEERVERIFYDEPTH )
 }
 
 /*
-QSslSocket::PeerVerifyMode peerVerifyMode () const
+QSslSocket::PeerVerifyMode peerVerifyMode() const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_PEERVERIFYMODE )
 {
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PEERVERIFYMODE )
 }
 
 /*
-QSslKey privateKey () const
+QSslKey privateKey() const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_PRIVATEKEY )
 {
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PRIVATEKEY )
 }
 
 /*
-QSsl::SslProtocol protocol () const
+QSsl::SslProtocol protocol() const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_PROTOCOL )
 {
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PROTOCOL )
 }
 
 /*
-QSslCipher sessionCipher () const
+QSslCipher sessionCipher() const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SESSIONCIPHER )
 {
@@ -680,7 +680,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETPROTOCOL )
 }
 
 /*
-static QSslConfiguration defaultConfiguration ()
+static QSslConfiguration defaultConfiguration()
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_DEFAULTCONFIGURATION )
 {

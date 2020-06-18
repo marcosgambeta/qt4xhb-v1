@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QSSLCIPHER_NAME )
 }
 
 /*
-QSsl::SslProtocol protocol () const
+QSsl::SslProtocol protocol() const
 */
 HB_FUNC_STATIC( QSSLCIPHER_PROTOCOL )
 {

@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_DELETE )
 }
 
 /*
-QNetworkConfiguration activeConfiguration () const
+QNetworkConfiguration activeConfiguration() const
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ACTIVECONFIGURATION )
 {
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ACTIVECONFIGURATION )
 }
 
 /*
-QAbstractNetworkCache * cache () const
+QAbstractNetworkCache * cache() const
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_CACHE )
 {
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_CACHE )
 }
 
 /*
-QNetworkConfiguration configuration () const
+QNetworkConfiguration configuration() const
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_CONFIGURATION )
 {
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_CONFIGURATION )
 }
 
 /*
-QNetworkCookieJar * cookieJar () const
+QNetworkCookieJar * cookieJar() const
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_COOKIEJAR )
 {
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_HEAD )
 }
 
 /*
-NetworkAccessibility networkAccessible () const
+QNetworkAccessManager::NetworkAccessibility networkAccessible() const
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_NETWORKACCESSIBLE )
 {
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_POST )
 }
 
 /*
-QNetworkProxy proxy () const
+QNetworkProxy proxy() const
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PROXY )
 {
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PROXY )
 }
 
 /*
-QNetworkProxyFactory * proxyFactory () const
+QNetworkProxyFactory * proxyFactory() const
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PROXYFACTORY )
 {

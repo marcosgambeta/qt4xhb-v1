@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QSSLERROR_DELETE )
 }
 
 /*
-QSslCertificate certificate () const
+QSslCertificate certificate() const
 */
 HB_FUNC_STATIC( QSSLERROR_CERTIFICATE )
 {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QSSLERROR_CERTIFICATE )
 }
 
 /*
-SslError error () const
+QSslError::SslError error() const
 */
 HB_FUNC_STATIC( QSSLERROR_ERROR )
 {

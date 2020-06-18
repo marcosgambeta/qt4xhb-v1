@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_DELETE )
 }
 
 /*
-virtual qint64 cacheSize () const = 0
+virtual qint64 cacheSize() const = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_CACHESIZE )
 {
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_UPDATEMETADATA )
 }
 
 /*
-virtual void clear () = 0
+virtual void clear() = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_CLEAR )
 {

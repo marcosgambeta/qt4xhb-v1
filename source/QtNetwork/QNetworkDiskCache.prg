@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_FILEMETADATA )
 }
 
 /*
-qint64 maximumCacheSize () const
+qint64 maximumCacheSize() const
 */
 HB_FUNC_STATIC( QNETWORKDISKCACHE_MAXIMUMCACHESIZE )
 {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_SETMAXIMUMCACHESIZE )
 }
 
 /*
-virtual qint64 cacheSize () const
+virtual qint64 cacheSize() const
 */
 HB_FUNC_STATIC( QNETWORKDISKCACHE_CACHESIZE )
 {
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_UPDATEMETADATA )
 }
 
 /*
-virtual void clear ()
+virtual void clear()
 */
 HB_FUNC_STATIC( QNETWORKDISKCACHE_CLEAR )
 {

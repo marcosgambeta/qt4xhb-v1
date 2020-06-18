@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_PROTOCOLTAG )
 }
 
 /*
-QueryType queryType () const
+QNetworkProxyQuery::QueryType queryType() const
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_QUERYTYPE )
 {
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETURL )
 }
 
 /*
-QUrl url () const
+QUrl url() const
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_URL )
 {

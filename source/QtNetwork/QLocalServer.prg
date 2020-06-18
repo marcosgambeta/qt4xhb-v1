@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QLOCALSERVER_DELETE )
 }
 
 /*
-void close ()
+void close()
 */
 HB_FUNC_STATIC( QLOCALSERVER_CLOSE )
 {
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QLOCALSERVER_MAXPENDINGCONNECTIONS )
 }
 
 /*
-virtual QLocalSocket * nextPendingConnection ()
+virtual QLocalSocket * nextPendingConnection()
 */
 HB_FUNC_STATIC( QLOCALSERVER_NEXTPENDINGCONNECTION )
 {
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QLOCALSERVER_NEXTPENDINGCONNECTION )
 }
 
 /*
-QAbstractSocket::SocketError serverError () const
+QAbstractSocket::SocketError serverError() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_SERVERERROR )
 {

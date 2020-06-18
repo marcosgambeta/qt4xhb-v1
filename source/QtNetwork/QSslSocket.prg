@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QSSLSOCKET_DELETE )
 }
 
 /*
-void abort ()
+void abort()
 */
 HB_FUNC_STATIC( QSSLSOCKET_ABORT )
 {
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QSSLSOCKET_CONNECTTOHOSTENCRYPTED )
 }
 
 /*
-qint64 encryptedBytesAvailable () const
+qint64 encryptedBytesAvailable() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_ENCRYPTEDBYTESAVAILABLE )
 {
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ENCRYPTEDBYTESAVAILABLE )
 }
 
 /*
-qint64 encryptedBytesToWrite () const
+qint64 encryptedBytesToWrite() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_ENCRYPTEDBYTESTOWRITE )
 {
@@ -566,7 +566,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ISENCRYPTED )
 }
 
 /*
-QSslCertificate localCertificate () const
+QSslCertificate localCertificate() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_LOCALCERTIFICATE )
 {
@@ -591,7 +591,7 @@ HB_FUNC_STATIC( QSSLSOCKET_LOCALCERTIFICATE )
 }
 
 /*
-SslMode mode () const
+QSslSocket::SslMode mode() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_MODE )
 {
@@ -615,7 +615,7 @@ HB_FUNC_STATIC( QSSLSOCKET_MODE )
 }
 
 /*
-QSslCertificate peerCertificate () const
+QSslCertificate peerCertificate() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_PEERCERTIFICATE )
 {
@@ -716,7 +716,7 @@ HB_FUNC_STATIC( QSSLSOCKET_PEERVERIFYDEPTH )
 }
 
 /*
-QSslSocket::PeerVerifyMode peerVerifyMode () const
+QSslSocket::PeerVerifyMode peerVerifyMode() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_PEERVERIFYMODE )
 {
@@ -740,7 +740,7 @@ HB_FUNC_STATIC( QSSLSOCKET_PEERVERIFYMODE )
 }
 
 /*
-QSslKey privateKey () const
+QSslKey privateKey() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_PRIVATEKEY )
 {
@@ -765,7 +765,7 @@ HB_FUNC_STATIC( QSSLSOCKET_PRIVATEKEY )
 }
 
 /*
-QSsl::SslProtocol protocol () const
+QSsl::SslProtocol protocol() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_PROTOCOL )
 {
@@ -789,7 +789,7 @@ HB_FUNC_STATIC( QSSLSOCKET_PROTOCOL )
 }
 
 /*
-QSslCipher sessionCipher () const
+QSslCipher sessionCipher() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_SESSIONCIPHER )
 {
@@ -1214,7 +1214,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SOCKETOPTION )
 }
 
 /*
-QSslConfiguration sslConfiguration () const
+QSslConfiguration sslConfiguration() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_SSLCONFIGURATION )
 {
@@ -1387,7 +1387,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ATEND )
 }
 
 /*
-virtual qint64 bytesAvailable () const
+virtual qint64 bytesAvailable() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_BYTESAVAILABLE )
 {
@@ -1411,7 +1411,7 @@ HB_FUNC_STATIC( QSSLSOCKET_BYTESAVAILABLE )
 }
 
 /*
-virtual qint64 bytesToWrite () const
+virtual qint64 bytesToWrite() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_BYTESTOWRITE )
 {
@@ -1459,7 +1459,7 @@ HB_FUNC_STATIC( QSSLSOCKET_CANREADLINE )
 }
 
 /*
-virtual void close ()
+virtual void close()
 */
 HB_FUNC_STATIC( QSSLSOCKET_CLOSE )
 {
@@ -1533,7 +1533,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORREADYREAD )
 }
 
 /*
-void startClientEncryption ()
+void startClientEncryption()
 */
 HB_FUNC_STATIC( QSSLSOCKET_STARTCLIENTENCRYPTION )
 {
@@ -1559,7 +1559,7 @@ HB_FUNC_STATIC( QSSLSOCKET_STARTCLIENTENCRYPTION )
 }
 
 /*
-void startServerEncryption ()
+void startServerEncryption()
 */
 HB_FUNC_STATIC( QSSLSOCKET_STARTSERVERENCRYPTION )
 {

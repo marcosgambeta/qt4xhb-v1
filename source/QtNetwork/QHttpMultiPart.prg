@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QHTTPMULTIPART_APPEND )
 }
 
 /*
-QByteArray boundary () const
+QByteArray boundary() const
 */
 HB_FUNC_STATIC( QHTTPMULTIPART_BOUNDARY )
 {

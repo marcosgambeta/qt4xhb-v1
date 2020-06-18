@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QUDPSOCKET_HASPENDINGDATAGRAMS )
 }
 
 /*
-qint64 pendingDatagramSize () const
+qint64 pendingDatagramSize() const
 */
 HB_FUNC_STATIC( QUDPSOCKET_PENDINGDATAGRAMSIZE )
 {
