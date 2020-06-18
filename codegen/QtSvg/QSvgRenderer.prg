@@ -78,8 +78,7 @@ $prototypeV2=bool animated() const
 $prototype=QRectF boundsOnElement ( const QString & id ) const
 $method=|QRectF|boundsOnElement|const QString &
 
-$prototype=QSize defaultSize () const
-$method=|QSize|defaultSize|
+$prototypeV2=QSize defaultSize() const
 
 $prototype=bool elementExists ( const QString & id ) const
 $method=|bool|elementExists|const QString &
@@ -122,11 +121,9 @@ HB_FUNC_STATIC( QSVGRENDERER_SETVIEWBOX )
 }
 $addMethod=setViewBox
 
-$prototype=QRect viewBox () const
-$method=|QRect|viewBox|
+$prototypeV2=QRect viewBox() const
 
-$prototype=QRectF viewBoxF () const
-$method=|QRectF|viewBoxF|
+$prototypeV2=QRectF viewBoxF() const
 
 $prototype=bool load ( const QString & filename )
 $internalMethod=|bool|load,load1|const QString &

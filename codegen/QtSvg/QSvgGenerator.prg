@@ -34,8 +34,7 @@ $prototypeV2=QString description() const
 
 $prototypeV2=QString fileName() const
 
-$prototype=QIODevice * outputDevice () const
-$method=|QIODevice *|outputDevice|
+$prototypeV2=QIODevice * outputDevice() const
 
 $prototypeV2=int resolution() const
 
@@ -85,15 +84,12 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETVIEWBOX )
 }
 $addMethod=setViewBox
 
-$prototype=QSize size () const
-$method=|QSize|size|
+$prototypeV2=QSize size() const
 
 $prototypeV2=QString title() const
 
-$prototype=QRect viewBox () const
-$method=|QRect|viewBox|
+$prototypeV2=QRect viewBox() const
 
-$prototype=QRectF viewBoxF () const
-$method=|QRectF|viewBoxF|
+$prototypeV2=QRectF viewBoxF() const
 
 #pragma ENDDUMP

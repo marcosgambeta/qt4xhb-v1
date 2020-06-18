@@ -57,11 +57,9 @@ $addMethod=new
 
 $prototypeV2=QString elementId() const
 
-$prototype=QSize maximumCacheSize () const
-$method=|QSize|maximumCacheSize|
+$prototypeV2=QSize maximumCacheSize() const
 
-$prototype=QSvgRenderer * renderer () const
-$method=|QSvgRenderer *|renderer|
+$prototypeV2=QSvgRenderer * renderer() const
 
 $prototype=void setElementId ( const QString & id )
 $method=|void|setElementId|const QString &
@@ -72,8 +70,7 @@ $method=|void|setMaximumCacheSize|const QSize &
 $prototype=void setSharedRenderer ( QSvgRenderer * renderer )
 $method=|void|setSharedRenderer|QSvgRenderer *
 
-$prototype=virtual QRectF boundingRect () const
-$virtualMethod=|QRectF|boundingRect|
+$prototypeV2=virtual QRectF boundingRect() const
 
 $prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
 $virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
