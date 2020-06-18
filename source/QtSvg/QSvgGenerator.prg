@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_FILENAME )
 }
 
 /*
-QIODevice * outputDevice () const
+QIODevice * outputDevice() const
 */
 HB_FUNC_STATIC( QSVGGENERATOR_OUTPUTDEVICE )
 {
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETVIEWBOX )
 }
 
 /*
-QSize size () const
+QSize size() const
 */
 HB_FUNC_STATIC( QSVGGENERATOR_SIZE )
 {
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_TITLE )
 }
 
 /*
-QRect viewBox () const
+QRect viewBox() const
 */
 HB_FUNC_STATIC( QSVGGENERATOR_VIEWBOX )
 {
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_VIEWBOX )
 }
 
 /*
-QRectF viewBoxF () const
+QRectF viewBoxF() const
 */
 HB_FUNC_STATIC( QSVGGENERATOR_VIEWBOXF )
 {

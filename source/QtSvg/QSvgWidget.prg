@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QSVGWIDGET_DELETE )
 }
 
 /*
-QSvgRenderer * renderer () const
+QSvgRenderer * renderer() const
 */
 HB_FUNC_STATIC( QSVGWIDGET_RENDERER )
 {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QSVGWIDGET_RENDERER )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSVGWIDGET_SIZEHINT )
 {

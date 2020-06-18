@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QSVGRENDERER_BOUNDSONELEMENT )
 }
 
 /*
-QSize defaultSize () const
+QSize defaultSize() const
 */
 HB_FUNC_STATIC( QSVGRENDERER_DEFAULTSIZE )
 {
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QSVGRENDERER_SETVIEWBOX )
 }
 
 /*
-QRect viewBox () const
+QRect viewBox() const
 */
 HB_FUNC_STATIC( QSVGRENDERER_VIEWBOX )
 {
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QSVGRENDERER_VIEWBOX )
 }
 
 /*
-QRectF viewBoxF () const
+QRectF viewBoxF() const
 */
 HB_FUNC_STATIC( QSVGRENDERER_VIEWBOXF )
 {
