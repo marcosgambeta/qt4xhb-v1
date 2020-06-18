@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QSQLDRIVERCREATORBASE_DELETE )
 }
 
 /*
-virtual QSqlDriver * createObject () const = 0
+virtual QSqlDriver * createObject() const = 0
 */
 HB_FUNC_STATIC( QSQLDRIVERCREATORBASE_CREATEOBJECT )
 {

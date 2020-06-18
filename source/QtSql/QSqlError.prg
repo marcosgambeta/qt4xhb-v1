@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QSQLERROR_TEXT )
 }
 
 /*
-ErrorType type () const
+QSqlError::ErrorType type() const
 */
 HB_FUNC_STATIC( QSQLERROR_TYPE )
 {

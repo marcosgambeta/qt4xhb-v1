@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DELETE )
 }
 
 /*
-void close ()
+void close()
 */
 HB_FUNC_STATIC( QSQLDATABASE_CLOSE )
 {
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DATABASENAME )
 }
 
 /*
-QSqlDriver * driver () const
+QSqlDriver * driver() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_DRIVER )
 {
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ISVALID )
 }
 
 /*
-QSqlError lastError () const
+QSqlError lastError() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_LASTERROR )
 {
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QSQLDATABASE_LASTERROR )
 }
 
 /*
-QSql::NumericalPrecisionPolicy numericalPrecisionPolicy () const
+QSql::NumericalPrecisionPolicy numericalPrecisionPolicy() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_NUMERICALPRECISIONPOLICY )
 {
@@ -980,7 +980,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CLONEDATABASE )
 }
 
 /*
-static QStringList connectionNames ()
+static QStringList connectionNames()
 */
 HB_FUNC_STATIC( QSQLDATABASE_CONNECTIONNAMES )
 {
@@ -1038,7 +1038,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DATABASE )
 }
 
 /*
-static QStringList drivers ()
+static QStringList drivers()
 */
 HB_FUNC_STATIC( QSQLDATABASE_DRIVERS )
 {

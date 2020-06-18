@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_DELETE )
 }
 
 /*
-virtual void clear ()
+virtual void clear()
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_CLEAR )
 {
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_CLEAR )
 }
 
 /*
-QSqlError lastError () const
+QSqlError lastError() const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_LASTERROR )
 {
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_LASTERROR )
 }
 
 /*
-QSqlQuery query () const
+QSqlQuery query() const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_QUERY )
 {

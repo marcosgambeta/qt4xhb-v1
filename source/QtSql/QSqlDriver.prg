@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QSQLDRIVER_BEGINTRANSACTION )
 }
 
 /*
-virtual void close () = 0
+virtual void close() = 0
 */
 HB_FUNC_STATIC( QSQLDRIVER_CLOSE )
 {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QSQLDRIVER_COMMITTRANSACTION )
 }
 
 /*
-virtual QSqlResult * createResult () const = 0
+virtual QSqlResult * createResult() const = 0
 */
 HB_FUNC_STATIC( QSQLDRIVER_CREATERESULT )
 {
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QSQLDRIVER_FORMATVALUE )
 }
 
 /*
-virtual QVariant handle () const
+virtual QVariant handle() const
 */
 HB_FUNC_STATIC( QSQLDRIVER_HANDLE )
 {
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ISOPENERROR )
 }
 
 /*
-QSqlError lastError () const
+QSqlError lastError() const
 */
 HB_FUNC_STATIC( QSQLDRIVER_LASTERROR )
 {
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QSQLDRIVER_LASTERROR )
 }
 
 /*
-QSql::NumericalPrecisionPolicy numericalPrecisionPolicy () const
+QSql::NumericalPrecisionPolicy numericalPrecisionPolicy() const
 */
 HB_FUNC_STATIC( QSQLDRIVER_NUMERICALPRECISIONPOLICY )
 {
@@ -608,7 +608,7 @@ HB_FUNC_STATIC( QSQLDRIVER_SUBSCRIBETONOTIFICATION )
 }
 
 /*
-QStringList subscribedToNotifications () const
+QStringList subscribedToNotifications() const
 */
 HB_FUNC_STATIC( QSQLDRIVER_SUBSCRIBEDTONOTIFICATIONS )
 {

@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QSQLFIELD_DELETE )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QSQLFIELD_CLEAR )
 {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QSQLFIELD_CLEAR )
 }
 
 /*
-QVariant defaultValue () const
+QVariant defaultValue() const
 */
 HB_FUNC_STATIC( QSQLFIELD_DEFAULTVALUE )
 {
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QSQLFIELD_PRECISION )
 }
 
 /*
-RequiredStatus requiredStatus () const
+QSqlField::RequiredStatus requiredStatus() const
 */
 HB_FUNC_STATIC( QSQLFIELD_REQUIREDSTATUS )
 {
@@ -682,7 +682,7 @@ HB_FUNC_STATIC( QSQLFIELD_SETVALUE )
 }
 
 /*
-QVariant::Type type () const
+QVariant::Type type() const
 */
 HB_FUNC_STATIC( QSQLFIELD_TYPE )
 {
@@ -706,7 +706,7 @@ HB_FUNC_STATIC( QSQLFIELD_TYPE )
 }
 
 /*
-QVariant value () const
+QVariant value() const
 */
 HB_FUNC_STATIC( QSQLFIELD_VALUE )
 {

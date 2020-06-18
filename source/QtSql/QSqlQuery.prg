@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QSQLQUERY_BOUNDVALUE )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QSQLQUERY_CLEAR )
 {
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QSQLQUERY_CLEAR )
 }
 
 /*
-const QSqlDriver * driver () const
+const QSqlDriver * driver() const
 */
 HB_FUNC_STATIC( QSQLQUERY_DRIVER )
 {
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QSQLQUERY_EXECUTEDQUERY )
 }
 
 /*
-void finish ()
+void finish()
 */
 HB_FUNC_STATIC( QSQLQUERY_FINISH )
 {
@@ -665,7 +665,7 @@ HB_FUNC_STATIC( QSQLQUERY_LAST )
 }
 
 /*
-QSqlError lastError () const
+QSqlError lastError() const
 */
 HB_FUNC_STATIC( QSQLQUERY_LASTERROR )
 {
@@ -690,7 +690,7 @@ HB_FUNC_STATIC( QSQLQUERY_LASTERROR )
 }
 
 /*
-QVariant lastInsertId () const
+QVariant lastInsertId() const
 */
 HB_FUNC_STATIC( QSQLQUERY_LASTINSERTID )
 {
@@ -811,7 +811,7 @@ HB_FUNC_STATIC( QSQLQUERY_NUMROWSAFFECTED )
 }
 
 /*
-QSql::NumericalPrecisionPolicy numericalPrecisionPolicy () const
+QSql::NumericalPrecisionPolicy numericalPrecisionPolicy() const
 */
 HB_FUNC_STATIC( QSQLQUERY_NUMERICALPRECISIONPOLICY )
 {
@@ -883,7 +883,7 @@ HB_FUNC_STATIC( QSQLQUERY_PREVIOUS )
 }
 
 /*
-QSqlRecord record () const
+QSqlRecord record() const
 */
 HB_FUNC_STATIC( QSQLQUERY_RECORD )
 {
@@ -908,7 +908,7 @@ HB_FUNC_STATIC( QSQLQUERY_RECORD )
 }
 
 /*
-const QSqlResult * result () const
+const QSqlResult * result() const
 */
 HB_FUNC_STATIC( QSQLQUERY_RESULT )
 {

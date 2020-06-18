@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QSQLRECORD_APPEND )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QSQLRECORD_CLEAR )
 {
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QSQLRECORD_CLEAR )
 }
 
 /*
-void clearValues ()
+void clearValues()
 */
 HB_FUNC_STATIC( QSQLRECORD_CLEARVALUES )
 {

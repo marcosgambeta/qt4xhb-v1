@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_DELETE )
 }
 
 /*
-QSqlDatabase database () const
+QSqlDatabase database() const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_DATABASE )
 {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_DATABASE )
 }
 
 /*
-EditStrategy editStrategy () const
+QSqlTableModel::EditStrategy editStrategy() const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_EDITSTRATEGY )
 {
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ISDIRTY )
 }
 
 /*
-QSqlIndex primaryKey () const
+QSqlIndex primaryKey() const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_PRIMARYKEY )
 {
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_TABLENAME )
 }
 
 /*
-virtual void clear ()
+virtual void clear()
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_CLEAR )
 {
@@ -733,7 +733,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SORT )
 }
 
 /*
-virtual void revert ()
+virtual void revert()
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_REVERT )
 {
@@ -759,7 +759,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REVERT )
 }
 
 /*
-void revertAll ()
+void revertAll()
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_REVERTALL )
 {
