@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTENODENS )
 }
 
 /*
-QDomNamedNodeMap attributes () const
+QDomNamedNodeMap attributes() const
 */
 HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTES )
 {
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QDOMELEMENT_HASATTRIBUTENS )
 }
 
 /*
-QDomNode::NodeType nodeType () const
+QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMELEMENT_NODETYPE )
 {

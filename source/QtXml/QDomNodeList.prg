@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QDOMNODELIST_ITEM )
 }
 
 /*
-uint length () const
+uint length() const
 */
 HB_FUNC_STATIC( QDOMNODELIST_LENGTH )
 {

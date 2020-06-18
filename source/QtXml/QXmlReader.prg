@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QXMLREADER_DELETE )
 }
 
 /*
-virtual QXmlDTDHandler * DTDHandler () const = 0
+virtual QXmlDTDHandler * DTDHandler() const = 0
 */
 HB_FUNC_STATIC( QXMLREADER_DTDHANDLER )
 {
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QXMLREADER_DTDHANDLER )
 }
 
 /*
-virtual QXmlContentHandler * contentHandler () const = 0
+virtual QXmlContentHandler * contentHandler() const = 0
 */
 HB_FUNC_STATIC( QXMLREADER_CONTENTHANDLER )
 {
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QXMLREADER_CONTENTHANDLER )
 }
 
 /*
-virtual QXmlDeclHandler * declHandler () const = 0
+virtual QXmlDeclHandler * declHandler() const = 0
 */
 HB_FUNC_STATIC( QXMLREADER_DECLHANDLER )
 {
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QXMLREADER_DECLHANDLER )
 }
 
 /*
-virtual QXmlEntityResolver * entityResolver () const = 0
+virtual QXmlEntityResolver * entityResolver() const = 0
 */
 HB_FUNC_STATIC( QXMLREADER_ENTITYRESOLVER )
 {
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QXMLREADER_ENTITYRESOLVER )
 }
 
 /*
-virtual QXmlErrorHandler * errorHandler () const = 0
+virtual QXmlErrorHandler * errorHandler() const = 0
 */
 HB_FUNC_STATIC( QXMLREADER_ERRORHANDLER )
 {
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QXMLREADER_HASPROPERTY )
 }
 
 /*
-virtual QXmlLexicalHandler * lexicalHandler () const = 0
+virtual QXmlLexicalHandler * lexicalHandler() const = 0
 */
 HB_FUNC_STATIC( QXMLREADER_LEXICALHANDLER )
 {

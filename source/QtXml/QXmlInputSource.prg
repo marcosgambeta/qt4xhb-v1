@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_DATA )
 }
 
 /*
-virtual void fetchData ()
+virtual void fetchData()
 */
 HB_FUNC_STATIC( QXMLINPUTSOURCE_FETCHDATA )
 {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_FETCHDATA )
 }
 
 /*
-virtual QChar next ()
+virtual QChar next()
 */
 HB_FUNC_STATIC( QXMLINPUTSOURCE_NEXT )
 {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_NEXT )
 }
 
 /*
-virtual void reset ()
+virtual void reset()
 */
 HB_FUNC_STATIC( QXMLINPUTSOURCE_RESET )
 {

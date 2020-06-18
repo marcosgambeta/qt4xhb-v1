@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_APPEND )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_CLEAR )
 {

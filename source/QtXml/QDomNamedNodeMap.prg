@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_ITEM )
 }
 
 /*
-uint length () const
+uint length() const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_LENGTH )
 {

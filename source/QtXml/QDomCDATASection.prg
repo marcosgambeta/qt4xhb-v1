@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QDOMCDATASECTION_NEW )
 }
 
 /*
-QDomNode::NodeType nodeType () const
+QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMCDATASECTION_NODETYPE )
 {

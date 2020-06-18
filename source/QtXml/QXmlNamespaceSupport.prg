@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_DELETE )
 }
 
 /*
-void popContext ()
+void popContext()
 */
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_POPCONTEXT )
 {
@@ -189,7 +189,7 @@ void processName ( const QString & qname, bool isAttribute, QString & nsuri, QSt
 */
 
 /*
-void pushContext ()
+void pushContext()
 */
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PUSHCONTEXT )
 {
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PUSHCONTEXT )
 }
 
 /*
-void reset ()
+void reset()
 */
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_RESET )
 {

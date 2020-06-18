@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW )
 }
 
 /*
-QDomNamedNodeMap entities () const
+QDomNamedNodeMap entities() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_ENTITIES )
 {
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NAME )
 }
 
 /*
-QDomNode::NodeType nodeType () const
+QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NODETYPE )
 {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NODETYPE )
 }
 
 /*
-QDomNamedNodeMap notations () const
+QDomNamedNodeMap notations() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NOTATIONS )
 {

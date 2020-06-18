@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATECOMMENT )
 }
 
 /*
-QDomDocumentFragment createDocumentFragment ()
+QDomDocumentFragment createDocumentFragment()
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_CREATEDOCUMENTFRAGMENT )
 {
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATETEXTNODE )
 }
 
 /*
-QDomDocumentType doctype () const
+QDomDocumentType doctype() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_DOCTYPE )
 {
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_DOCTYPE )
 }
 
 /*
-QDomElement documentElement () const
+QDomElement documentElement() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_DOCUMENTELEMENT )
 {
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTSBYTAGNAMENS )
 }
 
 /*
-QDomImplementation implementation () const
+QDomImplementation implementation() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_IMPLEMENTATION )
 {
@@ -581,7 +581,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_IMPORTNODE )
 }
 
 /*
-QDomNode::NodeType nodeType () const
+QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_NODETYPE )
 {

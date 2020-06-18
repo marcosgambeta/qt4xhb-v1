@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_ISNULL )
 }
 
 /*
-static InvalidDataPolicy invalidDataPolicy ()
+static QDomImplementation::InvalidDataPolicy invalidDataPolicy()
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_INVALIDDATAPOLICY )
 {

@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_INSERTDATA )
 }
 
 /*
-uint length () const
+uint length() const
 */
 HB_FUNC_STATIC( QDOMCHARACTERDATA_LENGTH )
 {
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_LENGTH )
 }
 
 /*
-QDomNode::NodeType nodeType () const
+QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMCHARACTERDATA_NODETYPE )
 {

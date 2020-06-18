@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QDOMATTR_NAME )
 }
 
 /*
-QDomNode::NodeType nodeType () const
+QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMATTR_NODETYPE )
 {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QDOMATTR_NODETYPE )
 }
 
 /*
-QDomElement ownerElement () const
+QDomElement ownerElement() const
 */
 HB_FUNC_STATIC( QDOMATTR_OWNERELEMENT )
 {

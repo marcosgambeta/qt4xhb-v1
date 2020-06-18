@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_DATA )
 }
 
 /*
-QDomNode::NodeType nodeType () const
+QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NODETYPE )
 {

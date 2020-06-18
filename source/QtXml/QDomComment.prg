@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QDOMCOMMENT_NEW )
 }
 
 /*
-QDomNode::NodeType nodeType () cons
+QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMCOMMENT_NODETYPE )
 {

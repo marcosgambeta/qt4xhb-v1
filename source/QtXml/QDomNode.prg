@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QDOMNODE_APPENDCHILD )
 }
 
 /*
-QDomNamedNodeMap attributes () const
+QDomNamedNodeMap attributes() const
 */
 HB_FUNC_STATIC( QDOMNODE_ATTRIBUTES )
 {
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QDOMNODE_ATTRIBUTES )
 }
 
 /*
-QDomNodeList childNodes () const
+QDomNodeList childNodes() const
 */
 HB_FUNC_STATIC( QDOMNODE_CHILDNODES )
 {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QDOMNODE_CHILDNODES )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QDOMNODE_CLEAR )
 {
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QDOMNODE_COLUMNNUMBER )
 }
 
 /*
-QDomNode firstChild () const
+QDomNode firstChild() const
 */
 HB_FUNC_STATIC( QDOMNODE_FIRSTCHILD )
 {
@@ -839,7 +839,7 @@ HB_FUNC_STATIC( QDOMNODE_ISTEXT )
 }
 
 /*
-QDomNode lastChild () const
+QDomNode lastChild() const
 */
 HB_FUNC_STATIC( QDOMNODE_LASTCHILD )
 {
@@ -986,7 +986,7 @@ HB_FUNC_STATIC( QDOMNODE_NAMESPACEURI )
 }
 
 /*
-QDomNode nextSibling () const
+QDomNode nextSibling() const
 */
 HB_FUNC_STATIC( QDOMNODE_NEXTSIBLING )
 {
@@ -1060,7 +1060,7 @@ HB_FUNC_STATIC( QDOMNODE_NODENAME )
 }
 
 /*
-NodeType nodeType () const
+QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMNODE_NODETYPE )
 {
@@ -1108,7 +1108,7 @@ HB_FUNC_STATIC( QDOMNODE_NODEVALUE )
 }
 
 /*
-void normalize ()
+void normalize()
 */
 HB_FUNC_STATIC( QDOMNODE_NORMALIZE )
 {
@@ -1134,7 +1134,7 @@ HB_FUNC_STATIC( QDOMNODE_NORMALIZE )
 }
 
 /*
-QDomDocument ownerDocument () const
+QDomDocument ownerDocument() const
 */
 HB_FUNC_STATIC( QDOMNODE_OWNERDOCUMENT )
 {
@@ -1159,7 +1159,7 @@ HB_FUNC_STATIC( QDOMNODE_OWNERDOCUMENT )
 }
 
 /*
-QDomNode parentNode () const
+QDomNode parentNode() const
 */
 HB_FUNC_STATIC( QDOMNODE_PARENTNODE )
 {
@@ -1208,7 +1208,7 @@ HB_FUNC_STATIC( QDOMNODE_PREFIX )
 }
 
 /*
-QDomNode previousSibling () const
+QDomNode previousSibling() const
 */
 HB_FUNC_STATIC( QDOMNODE_PREVIOUSSIBLING )
 {
@@ -1411,7 +1411,7 @@ HB_FUNC_STATIC( QDOMNODE_SETPREFIX )
 }
 
 /*
-QDomAttr toAttr () const
+QDomAttr toAttr() const
 */
 HB_FUNC_STATIC( QDOMNODE_TOATTR )
 {
@@ -1436,7 +1436,7 @@ HB_FUNC_STATIC( QDOMNODE_TOATTR )
 }
 
 /*
-QDomCDATASection toCDATASection () const
+QDomCDATASection toCDATASection() const
 */
 HB_FUNC_STATIC( QDOMNODE_TOCDATASECTION )
 {
@@ -1461,7 +1461,7 @@ HB_FUNC_STATIC( QDOMNODE_TOCDATASECTION )
 }
 
 /*
-QDomCharacterData toCharacterData () const
+QDomCharacterData toCharacterData() const
 */
 HB_FUNC_STATIC( QDOMNODE_TOCHARACTERDATA )
 {
@@ -1486,7 +1486,7 @@ HB_FUNC_STATIC( QDOMNODE_TOCHARACTERDATA )
 }
 
 /*
-QDomComment toComment () const
+QDomComment toComment() const
 */
 HB_FUNC_STATIC( QDOMNODE_TOCOMMENT )
 {
@@ -1511,7 +1511,7 @@ HB_FUNC_STATIC( QDOMNODE_TOCOMMENT )
 }
 
 /*
-QDomDocument toDocument () const
+QDomDocument toDocument() const
 */
 HB_FUNC_STATIC( QDOMNODE_TODOCUMENT )
 {
@@ -1536,7 +1536,7 @@ HB_FUNC_STATIC( QDOMNODE_TODOCUMENT )
 }
 
 /*
-QDomDocumentFragment toDocumentFragment () const
+QDomDocumentFragment toDocumentFragment() const
 */
 HB_FUNC_STATIC( QDOMNODE_TODOCUMENTFRAGMENT )
 {
@@ -1561,7 +1561,7 @@ HB_FUNC_STATIC( QDOMNODE_TODOCUMENTFRAGMENT )
 }
 
 /*
-QDomDocumentType toDocumentType () const
+QDomDocumentType toDocumentType() const
 */
 HB_FUNC_STATIC( QDOMNODE_TODOCUMENTTYPE )
 {
@@ -1586,7 +1586,7 @@ HB_FUNC_STATIC( QDOMNODE_TODOCUMENTTYPE )
 }
 
 /*
-QDomElement toElement () const
+QDomElement toElement() const
 */
 HB_FUNC_STATIC( QDOMNODE_TOELEMENT )
 {
@@ -1611,7 +1611,7 @@ HB_FUNC_STATIC( QDOMNODE_TOELEMENT )
 }
 
 /*
-QDomEntity toEntity () const
+QDomEntity toEntity() const
 */
 HB_FUNC_STATIC( QDOMNODE_TOENTITY )
 {
@@ -1636,7 +1636,7 @@ HB_FUNC_STATIC( QDOMNODE_TOENTITY )
 }
 
 /*
-QDomEntityReference toEntityReference () const
+QDomEntityReference toEntityReference() const
 */
 HB_FUNC_STATIC( QDOMNODE_TOENTITYREFERENCE )
 {
@@ -1661,7 +1661,7 @@ HB_FUNC_STATIC( QDOMNODE_TOENTITYREFERENCE )
 }
 
 /*
-QDomNotation toNotation () const
+QDomNotation toNotation() const
 */
 HB_FUNC_STATIC( QDOMNODE_TONOTATION )
 {
@@ -1686,7 +1686,7 @@ HB_FUNC_STATIC( QDOMNODE_TONOTATION )
 }
 
 /*
-QDomProcessingInstruction toProcessingInstruction () const
+QDomProcessingInstruction toProcessingInstruction() const
 */
 HB_FUNC_STATIC( QDOMNODE_TOPROCESSINGINSTRUCTION )
 {
@@ -1711,7 +1711,7 @@ HB_FUNC_STATIC( QDOMNODE_TOPROCESSINGINSTRUCTION )
 }
 
 /*
-QDomText toText () const
+QDomText toText() const
 */
 HB_FUNC_STATIC( QDOMNODE_TOTEXT )
 {
