@@ -1340,3 +1340,8 @@ QXmlStreamReader::Error                          |enum     |QtCore
 QXmlStreamReader::ReadElementTextBehaviour       |enum     |QtCore
 QXmlStreamReader::TokenType                      |enum     |QtCore
 QXmlStreamWriter                                 |object   |QtCore
+
+QStringList                                      |QList
+QFileInfoList                                    |QList
+QWidgetList                                      |QList
+QModelIndexList                                  |QList
