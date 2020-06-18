@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_FRAMERATE )
 }
 
 /*
-QSize frameSize () const
+QSize frameSize() const
 */
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_FRAMESIZE )
 {
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_FRAMEWIDTH )
 }
 
 /*
-QAbstractVideoBuffer::HandleType handleType () const
+QAbstractVideoBuffer::HandleType handleType() const
 */
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_HANDLETYPE )
 {
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_ISVALID )
 }
 
 /*
-QSize pixelAspectRatio () const
+QSize pixelAspectRatio() const
 */
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_PIXELASPECTRATIO )
 {
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_PIXELASPECTRATIO )
 }
 
 /*
-QVideoFrame::PixelFormat pixelFormat () const
+QVideoFrame::PixelFormat pixelFormat() const
 */
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_PIXELFORMAT )
 {
@@ -672,7 +672,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETYCBCRCOLORSPACE )
 }
 
 /*
-QSize sizeHint () const
+QSize sizeHint() const
 */
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SIZEHINT )
 {
@@ -697,7 +697,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SIZEHINT )
 }
 
 /*
-QRect viewport () const
+QRect viewport() const
 */
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_VIEWPORT )
 {
@@ -722,7 +722,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_VIEWPORT )
 }
 
 /*
-YCbCrColorSpace yCbCrColorSpace () const
+QVideoSurfaceFormat::YCbCrColorSpace yCbCrColorSpace() const
 */
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_YCBCRCOLORSPACE )
 {

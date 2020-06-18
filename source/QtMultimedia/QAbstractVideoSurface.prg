@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_DELETE )
 }
 
 /*
-Error error () const
+QAbstractVideoSurface::Error error() const
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ERROR )
 {
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_START )
 }
 
 /*
-virtual void stop ()
+virtual void stop()
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_STOP )
 {
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_SUPPORTEDPIXELFORMATS )
 }
 
 /*
-QVideoSurfaceFormat surfaceFormat () const
+QVideoSurfaceFormat surfaceFormat() const
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_SURFACEFORMAT )
 {

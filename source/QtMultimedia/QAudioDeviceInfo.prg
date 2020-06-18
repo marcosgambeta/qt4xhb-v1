@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_NEARESTFORMAT )
 }
 
 /*
-QAudioFormat preferredFormat () const
+QAudioFormat preferredFormat() const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_PREFERREDFORMAT )
 {
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLETYPES )
 }
 
 /*
-QStringList supportedCodecs () const
+QStringList supportedCodecs() const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDCODECS )
 {
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_AVAILABLEDEVICES )
 }
 
 /*
-static QAudioDeviceInfo defaultInputDevice ()
+static QAudioDeviceInfo defaultInputDevice()
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_DEFAULTINPUTDEVICE )
 {
@@ -523,7 +523,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_DEFAULTINPUTDEVICE )
 }
 
 /*
-static QAudioDeviceInfo defaultOutputDevice ()
+static QAudioDeviceInfo defaultOutputDevice()
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_DEFAULTOUTPUTDEVICE )
 {

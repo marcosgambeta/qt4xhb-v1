@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SETBYTEORDER )
 }
 
 /*
-QAudioFormat::Endian byteOrder () const
+QAudioFormat::Endian byteOrder() const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_BYTEORDER )
 {
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_BYTEORDER )
 }
 
 /*
-QAudioFormat::SampleType sampleType () const
+QAudioFormat::SampleType sampleType() const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLETYPE )
 {

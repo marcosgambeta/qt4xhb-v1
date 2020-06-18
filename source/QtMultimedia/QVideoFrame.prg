@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_BYTESPERLINE )
 }
 
 /*
-qint64 endTime () const
+qint64 endTime() const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_ENDTIME )
 {
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_ENDTIME )
 }
 
 /*
-FieldType fieldType () const
+QVideoFrame::FieldType fieldType() const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_FIELDTYPE )
 {
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_FIELDTYPE )
 }
 
 /*
-QVariant handle () const
+QVariant handle() const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_HANDLE )
 {
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_HANDLE )
 }
 
 /*
-QAbstractVideoBuffer::HandleType handleType () const
+QAbstractVideoBuffer::HandleType handleType() const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_HANDLETYPE )
 {
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_MAP )
 }
 
 /*
-QAbstractVideoBuffer::MapMode mapMode () const
+QAbstractVideoBuffer::MapMode mapMode() const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_MAPMODE )
 {
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_MAPPEDBYTES )
 }
 
 /*
-PixelFormat pixelFormat () const
+QVideoFrame::PixelFormat pixelFormat() const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_PIXELFORMAT )
 {
@@ -596,7 +596,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_SETSTARTTIME )
 }
 
 /*
-QSize size () const
+QSize size() const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_SIZE )
 {
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_SIZE )
 }
 
 /*
-qint64 startTime () const
+qint64 startTime() const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_STARTTIME )
 {
@@ -645,7 +645,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_STARTTIME )
 }
 
 /*
-void unmap ()
+void unmap()
 */
 HB_FUNC_STATIC( QVIDEOFRAME_UNMAP )
 {

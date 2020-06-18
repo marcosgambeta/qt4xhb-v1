@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_BYTESFREE )
 }
 
 /*
-qint64 elapsedUSecs () const
+qint64 elapsedUSecs() const
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_ELAPSEDUSECS )
 {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_ELAPSEDUSECS )
 }
 
 /*
-QAudio::Error error () const
+QAudio::Error error() const
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_ERROR )
 {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_ERROR )
 }
 
 /*
-QAudioFormat format () const
+QAudioFormat format() const
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_FORMAT )
 {
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_PERIODSIZE )
 }
 
 /*
-qint64 processedUSecs () const
+qint64 processedUSecs() const
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_PROCESSEDUSECS )
 {
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_PROCESSEDUSECS )
 }
 
 /*
-void reset ()
+void reset()
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_RESET )
 {
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_RESET )
 }
 
 /*
-void resume ()
+void resume()
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_RESUME )
 {
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_START )
 }
 
 /*
-QAudio::State state () const
+QAudio::State state() const
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_STATE )
 {
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_STATE )
 }
 
 /*
-void stop ()
+void stop()
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_STOP )
 {
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_STOP )
 }
 
 /*
-void suspend ()
+void suspend()
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_SUSPEND )
 {

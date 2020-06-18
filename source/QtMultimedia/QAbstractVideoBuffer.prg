@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_DELETE )
 }
 
 /*
-virtual QVariant handle () const
+virtual QVariant handle() const
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_HANDLE )
 {
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_HANDLE )
 }
 
 /*
-HandleType handleType () const
+QAbstractVideoBuffer::HandleType handleType() const
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_HANDLETYPE )
 {
@@ -124,7 +124,7 @@ virtual uchar * map ( MapMode mode, int * numBytes, int * bytesPerLine ) = 0
 */
 
 /*
-virtual MapMode mapMode () const = 0
+virtual QAbstractVideoBuffer::MapMode mapMode() const = 0
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_MAPMODE )
 {
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_MAPMODE )
 }
 
 /*
-virtual void unmap () = 0
+virtual void unmap() = 0
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_UNMAP )
 {
