@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT )
 }
 
 /*
-QScriptValue data () const
+QScriptValue data() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_DATA )
 {
@@ -845,7 +845,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_LESSTHAN )
 }
 
 /*
-QScriptValue prototype () const
+QScriptValue prototype() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_PROTOTYPE )
 {
@@ -870,7 +870,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_PROTOTYPE )
 }
 
 /*
-QScriptClass * scriptClass () const
+QScriptClass * scriptClass() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_SCRIPTCLASS )
 {
@@ -1021,7 +1021,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOBOOL )
 }
 
 /*
-QDateTime toDateTime () const
+QDateTime toDateTime() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_TODATETIME )
 {
@@ -1046,7 +1046,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TODATETIME )
 }
 
 /*
-qint32 toInt32 () const
+qint32 toInt32() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_TOINT32 )
 {
@@ -1078,7 +1078,7 @@ qsreal toNumber () const
 */
 
 /*
-QObject * toQObject () const
+QObject * toQObject() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_TOQOBJECT )
 {
@@ -1103,7 +1103,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOQOBJECT )
 }
 
 /*
-QRegExp toRegExp () const
+QRegExp toRegExp() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_TOREGEXP )
 {
@@ -1152,7 +1152,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOSTRING )
 }
 
 /*
-quint16 toUInt16 () const
+quint16 toUInt16() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_TOUINT16 )
 {
@@ -1176,7 +1176,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOUINT16 )
 }
 
 /*
-quint32 toUInt32 () const
+quint32 toUInt32() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_TOUINT32 )
 {
@@ -1200,7 +1200,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOUINT32 )
 }
 
 /*
-QVariant toVariant () const
+QVariant toVariant() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_TOVARIANT )
 {

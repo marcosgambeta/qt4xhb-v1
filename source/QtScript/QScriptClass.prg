@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_PROPERTYFLAGS )
 }
 
 /*
-virtual QScriptValue prototype () const
+virtual QScriptValue prototype() const
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_PROTOTYPE )
 {

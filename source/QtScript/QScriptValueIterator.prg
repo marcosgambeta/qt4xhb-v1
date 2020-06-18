@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_DELETE )
 }
 
 /*
-QScriptValue::PropertyFlags flags () const
+QScriptValue::PropertyFlags flags() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_FLAGS )
 {
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_NAME )
 }
 
 /*
-void next ()
+void next()
 */
 HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_NEXT )
 {
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_NEXT )
 }
 
 /*
-void previous ()
+void previous()
 */
 HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_PREVIOUS )
 {
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_PREVIOUS )
 }
 
 /*
-void remove ()
+void remove()
 */
 HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_REMOVE )
 {
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_REMOVE )
 }
 
 /*
-QScriptString scriptName () const
+QScriptString scriptName() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_SCRIPTNAME )
 {
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_SETVALUE )
 }
 
 /*
-void toBack ()
+void toBack()
 */
 HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_TOBACK )
 {
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_TOBACK )
 }
 
 /*
-void toFront ()
+void toFront()
 */
 HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_TOFRONT )
 {
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_TOFRONT )
 }
 
 /*
-QScriptValue value () const
+QScriptValue value() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_VALUE )
 {

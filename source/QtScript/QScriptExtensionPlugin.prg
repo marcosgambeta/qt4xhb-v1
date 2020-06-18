@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_INITIALIZE )
 }
 
 /*
-virtual QStringList keys () const = 0
+virtual QStringList keys() const = 0
 */
 HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_KEYS )
 {

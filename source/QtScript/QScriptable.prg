@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENTCOUNT )
 }
 
 /*
-QScriptContext * context () const
+QScriptContext * context() const
 */
 HB_FUNC_STATIC( QSCRIPTABLE_CONTEXT )
 {
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QSCRIPTABLE_CONTEXT )
 }
 
 /*
-QScriptEngine * engine () const
+QScriptEngine * engine() const
 */
 HB_FUNC_STATIC( QSCRIPTABLE_ENGINE )
 {
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QSCRIPTABLE_ENGINE )
 }
 
 /*
-QScriptValue thisObject () const
+QScriptValue thisObject() const
 */
 HB_FUNC_STATIC( QSCRIPTABLE_THISOBJECT )
 {

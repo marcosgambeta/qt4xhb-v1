@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_ABORTEVALUATION )
 }
 
 /*
-QScriptEngineAgent * agent () const
+QScriptEngineAgent * agent() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_AGENT )
 {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_AGENT )
 }
 
 /*
-QStringList availableExtensions () const
+QStringList availableExtensions() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_AVAILABLEEXTENSIONS )
 {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_AVAILABLEEXTENSIONS )
 }
 
 /*
-void clearExceptions ()
+void clearExceptions()
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_CLEAREXCEPTIONS )
 {
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_CLEAREXCEPTIONS )
 }
 
 /*
-void collectGarbage ()
+void collectGarbage()
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_COLLECTGARBAGE )
 {
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_COLLECTGARBAGE )
 }
 
 /*
-QScriptContext * currentContext () const
+QScriptContext * currentContext() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_CURRENTCONTEXT )
 {
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_EVALUATE )
 }
 
 /*
-QScriptValue globalObject () const
+QScriptValue globalObject() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_GLOBALOBJECT )
 {
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_IMPORTEXTENSION )
 }
 
 /*
-QStringList importedExtensions () const
+QStringList importedExtensions() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_IMPORTEDEXTENSIONS )
 {
@@ -638,7 +638,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWVARIANT )
 }
 
 /*
-QScriptValue nullValue ()
+QScriptValue nullValue()
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_NULLVALUE )
 {
@@ -663,7 +663,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NULLVALUE )
 }
 
 /*
-void popContext ()
+void popContext()
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_POPCONTEXT )
 {
@@ -713,7 +713,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_PROCESSEVENTSINTERVAL )
 }
 
 /*
-QScriptContext * pushContext ()
+QScriptContext * pushContext()
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_PUSHCONTEXT )
 {
@@ -918,7 +918,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_TOSTRINGHANDLE )
 }
 
 /*
-QScriptValue uncaughtException () const
+QScriptValue uncaughtException() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_UNCAUGHTEXCEPTION )
 {
@@ -943,7 +943,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_UNCAUGHTEXCEPTION )
 }
 
 /*
-QStringList uncaughtExceptionBacktrace () const
+QStringList uncaughtExceptionBacktrace() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_UNCAUGHTEXCEPTIONBACKTRACE )
 {
@@ -991,7 +991,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_UNCAUGHTEXCEPTIONLINENUMBER )
 }
 
 /*
-QScriptValue undefinedValue ()
+QScriptValue undefinedValue()
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_UNDEFINEDVALUE )
 {

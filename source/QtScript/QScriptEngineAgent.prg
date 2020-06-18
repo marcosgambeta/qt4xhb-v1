@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_DELETE )
 }
 
 /*
-virtual void contextPop ()
+virtual void contextPop()
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_CONTEXTPOP )
 {
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_CONTEXTPOP )
 }
 
 /*
-virtual void contextPush ()
+virtual void contextPush()
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_CONTEXTPUSH )
 {
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_CONTEXTPUSH )
 }
 
 /*
-QScriptEngine * engine () const
+QScriptEngine * engine() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_ENGINE )
 {

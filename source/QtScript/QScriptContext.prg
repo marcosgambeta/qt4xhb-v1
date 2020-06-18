@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_DELETE )
 }
 
 /*
-QScriptValue activationObject () const
+QScriptValue activationObject() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_ACTIVATIONOBJECT )
 {
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENTCOUNT )
 }
 
 /*
-QScriptValue argumentsObject () const
+QScriptValue argumentsObject() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENTSOBJECT )
 {
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENTSOBJECT )
 }
 
 /*
-QStringList backtrace () const
+QStringList backtrace() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_BACKTRACE )
 {
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_BACKTRACE )
 }
 
 /*
-QScriptValue callee () const
+QScriptValue callee() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_CALLEE )
 {
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_CALLEE )
 }
 
 /*
-QScriptEngine * engine () const
+QScriptEngine * engine() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_ENGINE )
 {
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ISCALLEDASCONSTRUCTOR )
 }
 
 /*
-QScriptContext * parentContext () const
+QScriptContext * parentContext() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_PARENTCONTEXT )
 {
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_SETTHISOBJECT )
 }
 
 /*
-ExecutionState state () const
+QScriptContext::ExecutionState state() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_STATE )
 {
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_STATE )
 }
 
 /*
-QScriptValue thisObject () const
+QScriptValue thisObject() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_THISOBJECT )
 {

@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_DELETE )
 }
 
 /*
-virtual QScriptValue::PropertyFlags flags () const
+virtual QScriptValue::PropertyFlags flags() const
 */
 HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_FLAGS )
 {
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_HASPREVIOUS )
 }
 
 /*
-virtual uint id () const
+virtual uint id() const
 */
 HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_ID )
 {
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_ID )
 }
 
 /*
-virtual QScriptString name () const = 0
+virtual QScriptString name() const = 0
 */
 HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_NAME )
 {
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_NAME )
 }
 
 /*
-virtual void next () = 0
+virtual void next() = 0
 */
 HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_NEXT )
 {
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_NEXT )
 }
 
 /*
-QScriptValue object () const
+QScriptValue object() const
 */
 HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_OBJECT )
 {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_OBJECT )
 }
 
 /*
-virtual void previous () = 0
+virtual void previous() = 0
 */
 HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_PREVIOUS )
 {
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_PREVIOUS )
 }
 
 /*
-virtual void toBack () = 0
+virtual void toBack() = 0
 */
 HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_TOBACK )
 {
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_TOBACK )
 }
 
 /*
-virtual void toFront () = 0
+virtual void toFront() = 0
 */
 HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_TOFRONT )
 {
