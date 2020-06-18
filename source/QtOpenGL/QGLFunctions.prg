@@ -550,7 +550,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLCOMPRESSEDTEXSUBIMAGE2D )
 }
 
 /*
-GLuint glCreateProgram ()
+GLuint glCreateProgram()
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLCREATEPROGRAM )
 {
@@ -1026,7 +1026,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLLINKPROGRAM )
 }
 
 /*
-void glReleaseShaderCompiler ()
+void glReleaseShaderCompiler()
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLRELEASESHADERCOMPILER )
 {
@@ -1622,7 +1622,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_INITIALIZEGLFUNCTIONS )
 }
 
 /*
-QGLFunctions::OpenGLFeatures openGLFeatures () const
+QGLFunctions::OpenGLFeatures openGLFeatures() const
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_OPENGLFEATURES )
 {

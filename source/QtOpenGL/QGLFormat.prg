@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QGLFORMAT_PLANE )
 }
 
 /*
-OpenGLContextProfile profile () const
+QGLFormat::OpenGLContextProfile profile() const
 */
 HB_FUNC_STATIC( QGLFORMAT_PROFILE )
 {
@@ -1352,7 +1352,7 @@ HB_FUNC_STATIC( QGLFORMAT_TESTOPTION )
 }
 
 /*
-static QGLFormat defaultFormat ()
+static QGLFormat defaultFormat()
 */
 HB_FUNC_STATIC( QGLFORMAT_DEFAULTFORMAT )
 {
@@ -1372,7 +1372,7 @@ HB_FUNC_STATIC( QGLFORMAT_DEFAULTFORMAT )
 }
 
 /*
-static QGLFormat defaultOverlayFormat ()
+static QGLFormat defaultOverlayFormat()
 */
 HB_FUNC_STATIC( QGLFORMAT_DEFAULTOVERLAYFORMAT )
 {
@@ -1430,7 +1430,7 @@ HB_FUNC_STATIC( QGLFORMAT_HASOPENGLOVERLAYS )
 }
 
 /*
-static OpenGLVersionFlags openGLVersionFlags ()
+static QGLFormat::OpenGLVersionFlags openGLVersionFlags()
 */
 HB_FUNC_STATIC( QGLFORMAT_OPENGLVERSIONFLAGS )
 {

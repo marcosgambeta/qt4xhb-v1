@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE )
 }
 
 /*
-const QGLColormap & colormap () const
+const QGLColormap & colormap() const
 */
 HB_FUNC_STATIC( QGLWIDGET_COLORMAP )
 {
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QGLWIDGET_COLORMAP )
 }
 
 /*
-const QGLContext * context () const
+const QGLContext * context() const
 */
 HB_FUNC_STATIC( QGLWIDGET_CONTEXT )
 {
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QGLWIDGET_DELETETEXTURE )
 }
 
 /*
-void doneCurrent ()
+void doneCurrent()
 */
 HB_FUNC_STATIC( QGLWIDGET_DONECURRENT )
 {
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QGLWIDGET_DRAWTEXTURE )
 }
 
 /*
-QGLFormat format () const
+QGLFormat format() const
 */
 HB_FUNC_STATIC( QGLWIDGET_FORMAT )
 {
@@ -518,7 +518,7 @@ HB_FUNC_STATIC( QGLWIDGET_ISVALID )
 }
 
 /*
-void makeCurrent ()
+void makeCurrent()
 */
 HB_FUNC_STATIC( QGLWIDGET_MAKECURRENT )
 {
@@ -544,7 +544,7 @@ HB_FUNC_STATIC( QGLWIDGET_MAKECURRENT )
 }
 
 /*
-void makeOverlayCurrent ()
+void makeOverlayCurrent()
 */
 HB_FUNC_STATIC( QGLWIDGET_MAKEOVERLAYCURRENT )
 {
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QGLWIDGET_MAKEOVERLAYCURRENT )
 }
 
 /*
-const QGLContext * overlayContext () const
+const QGLContext * overlayContext() const
 */
 HB_FUNC_STATIC( QGLWIDGET_OVERLAYCONTEXT )
 {
@@ -775,7 +775,7 @@ HB_FUNC_STATIC( QGLWIDGET_SETMOUSETRACKING )
 }
 
 /*
-void swapBuffers ()
+void swapBuffers()
 */
 HB_FUNC_STATIC( QGLWIDGET_SWAPBUFFERS )
 {
@@ -801,7 +801,7 @@ HB_FUNC_STATIC( QGLWIDGET_SWAPBUFFERS )
 }
 
 /*
-virtual void updateGL ()
+virtual void updateGL()
 */
 HB_FUNC_STATIC( QGLWIDGET_UPDATEGL )
 {
@@ -827,7 +827,7 @@ HB_FUNC_STATIC( QGLWIDGET_UPDATEGL )
 }
 
 /*
-virtual void updateOverlayGL ()
+virtual void updateOverlayGL()
 */
 HB_FUNC_STATIC( QGLWIDGET_UPDATEOVERLAYGL )
 {

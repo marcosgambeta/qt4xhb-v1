@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QGLCONTEXT_DELETETEXTURE )
 }
 
 /*
-QPaintDevice * device () const
+QPaintDevice * device() const
 */
 HB_FUNC_STATIC( QGLCONTEXT_DEVICE )
 {
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QGLCONTEXT_DEVICE )
 }
 
 /*
-virtual void doneCurrent ()
+virtual void doneCurrent()
 */
 HB_FUNC_STATIC( QGLCONTEXT_DONECURRENT )
 {
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QGLCONTEXT_DRAWTEXTURE )
 }
 
 /*
-QGLFormat format () const
+QGLFormat format() const
 */
 HB_FUNC_STATIC( QGLCONTEXT_FORMAT )
 {
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QGLCONTEXT_ISVALID )
 }
 
 /*
-virtual void makeCurrent ()
+virtual void makeCurrent()
 */
 HB_FUNC_STATIC( QGLCONTEXT_MAKECURRENT )
 {
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QGLCONTEXT_MAKECURRENT )
 }
 
 /*
-QColor overlayTransparentColor () const
+QColor overlayTransparentColor() const
 */
 HB_FUNC_STATIC( QGLCONTEXT_OVERLAYTRANSPARENTCOLOR )
 {
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QGLCONTEXT_OVERLAYTRANSPARENTCOLOR )
 }
 
 /*
-QGLFormat requestedFormat () const
+QGLFormat requestedFormat() const
 */
 HB_FUNC_STATIC( QGLCONTEXT_REQUESTEDFORMAT )
 {
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QGLCONTEXT_REQUESTEDFORMAT )
 }
 
 /*
-void reset ()
+void reset()
 */
 HB_FUNC_STATIC( QGLCONTEXT_RESET )
 {
@@ -582,7 +582,7 @@ HB_FUNC_STATIC( QGLCONTEXT_SETFORMAT )
 }
 
 /*
-virtual void swapBuffers () const
+virtual void swapBuffers() const
 */
 HB_FUNC_STATIC( QGLCONTEXT_SWAPBUFFERS )
 {
@@ -627,7 +627,7 @@ HB_FUNC_STATIC( QGLCONTEXT_ARESHARING )
 }
 
 /*
-static const QGLContext * currentContext ()
+static const QGLContext * currentContext()
 */
 HB_FUNC_STATIC( QGLCONTEXT_CURRENTCONTEXT )
 {

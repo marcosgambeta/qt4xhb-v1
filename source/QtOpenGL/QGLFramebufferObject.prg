@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_DELETE )
 }
 
 /*
-Attachment attachment () const
+QGLFramebufferObject::Attachment attachment() const
 */
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_ATTACHMENT )
 {
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_DRAWTEXTURE )
 }
 
 /*
-QGLFramebufferObjectFormat format () const
+QGLFramebufferObjectFormat format() const
 */
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_FORMAT )
 {
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_FORMAT )
 }
 
 /*
-GLuint handle () const
+GLuint handle() const
 */
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_HANDLE )
 {
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_RELEASE )
 }
 
 /*
-QSize size () const
+QSize size() const
 */
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_SIZE )
 {
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_SIZE )
 }
 
 /*
-GLuint texture () const
+GLuint texture() const
 */
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_TEXTURE )
 {
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_TEXTURE )
 }
 
 /*
-QImage toImage () const
+QImage toImage() const
 */
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_TOIMAGE )
 {
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_TOIMAGE )
 }
 
 /*
-virtual QPaintEngine * paintEngine () const
+virtual QPaintEngine * paintEngine() const
 */
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_PAINTENGINE )
 {

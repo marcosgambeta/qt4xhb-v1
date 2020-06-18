@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_DRAWTEXTURE )
 }
 
 /*
-QGLFormat format () const
+QGLFormat format() const
 */
 HB_FUNC_STATIC( QGLPIXELBUFFER_FORMAT )
 {
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_FORMAT )
 }
 
 /*
-GLuint generateDynamicTexture () const
+GLuint generateDynamicTexture() const
 */
 HB_FUNC_STATIC( QGLPIXELBUFFER_GENERATEDYNAMICTEXTURE )
 {
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_MAKECURRENT )
 }
 
 /*
-void releaseFromDynamicTexture ()
+void releaseFromDynamicTexture()
 */
 HB_FUNC_STATIC( QGLPIXELBUFFER_RELEASEFROMDYNAMICTEXTURE )
 {
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_RELEASEFROMDYNAMICTEXTURE )
 }
 
 /*
-QSize size () const
+QSize size() const
 */
 HB_FUNC_STATIC( QGLPIXELBUFFER_SIZE )
 {
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_SIZE )
 }
 
 /*
-QImage toImage () const
+QImage toImage() const
 */
 HB_FUNC_STATIC( QGLPIXELBUFFER_TOIMAGE )
 {
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_UPDATEDYNAMICTEXTURE )
 }
 
 /*
-virtual QPaintEngine * paintEngine () const
+virtual QPaintEngine * paintEngine() const
 */
 HB_FUNC_STATIC( QGLPIXELBUFFER_PAINTENGINE )
 {

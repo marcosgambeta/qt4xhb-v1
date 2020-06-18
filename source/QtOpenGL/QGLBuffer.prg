@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QGLBUFFER_BIND )
 }
 
 /*
-GLuint bufferId () const
+GLuint bufferId() const
 */
 HB_FUNC_STATIC( QGLBUFFER_BUFFERID )
 {
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QGLBUFFER_CREATE )
 }
 
 /*
-void destroy ()
+void destroy()
 */
 HB_FUNC_STATIC( QGLBUFFER_DESTROY )
 {
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QGLBUFFER_SIZE )
 }
 
 /*
-QGLBuffer::Type type () const
+QGLBuffer::Type type() const
 */
 HB_FUNC_STATIC( QGLBUFFER_TYPE )
 {
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QGLBUFFER_UNMAP )
 }
 
 /*
-QGLBuffer::UsagePattern usagePattern () const
+QGLBuffer::UsagePattern usagePattern() const
 */
 HB_FUNC_STATIC( QGLBUFFER_USAGEPATTERN )
 {

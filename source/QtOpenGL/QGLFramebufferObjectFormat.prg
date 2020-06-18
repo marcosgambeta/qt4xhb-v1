@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_DELETE )
 }
 
 /*
-QGLFramebufferObject::Attachment attachment () const
+QGLFramebufferObject::Attachment attachment() const
 */
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_ATTACHMENT )
 {
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_ATTACHMENT )
 }
 
 /*
-GLenum internalTextureFormat () const
+GLenum internalTextureFormat() const
 */
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_INTERNALTEXTUREFORMAT )
 {
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SETTEXTURETARGET )
 }
 
 /*
-GLenum textureTarget () const
+GLenum textureTarget() const
 */
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_TEXTURETARGET )
 {
