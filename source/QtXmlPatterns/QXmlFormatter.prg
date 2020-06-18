@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_COMMENT )
 }
 
 /*
-virtual void endDocument ()
+virtual void endDocument()
 */
 HB_FUNC_STATIC( QXMLFORMATTER_ENDDOCUMENT )
 {
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_ENDDOCUMENT )
 }
 
 /*
-virtual void endElement ()
+virtual void endElement()
 */
 HB_FUNC_STATIC( QXMLFORMATTER_ENDELEMENT )
 {
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_ENDELEMENT )
 }
 
 /*
-virtual void endOfSequence ()
+virtual void endOfSequence()
 */
 HB_FUNC_STATIC( QXMLFORMATTER_ENDOFSEQUENCE )
 {
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_PROCESSINGINSTRUCTION )
 }
 
 /*
-virtual void startDocument ()
+virtual void startDocument()
 */
 HB_FUNC_STATIC( QXMLFORMATTER_STARTDOCUMENT )
 {
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_STARTELEMENT )
 }
 
 /*
-virtual void startOfSequence ()
+virtual void startOfSequence()
 */
 HB_FUNC_STATIC( QXMLFORMATTER_STARTOFSEQUENCE )
 {

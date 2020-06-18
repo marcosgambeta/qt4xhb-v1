@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_COMMENT )
 }
 
 /*
-virtual void endDocument () = 0
+virtual void endDocument() = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ENDDOCUMENT )
 {
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ENDDOCUMENT )
 }
 
 /*
-virtual void endElement () = 0
+virtual void endElement() = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ENDELEMENT )
 {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ENDELEMENT )
 }
 
 /*
-virtual void endOfSequence () = 0
+virtual void endOfSequence() = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ENDOFSEQUENCE )
 {
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_PROCESSINGINSTRUCTION )
 }
 
 /*
-virtual void startDocument () = 0
+virtual void startDocument() = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_STARTDOCUMENT )
 {
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_STARTELEMENT )
 }
 
 /*
-virtual void startOfSequence () = 0
+virtual void startOfSequence() = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_STARTOFSEQUENCE )
 {

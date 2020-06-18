@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QXMLITEM_ISNULL )
 }
 
 /*
-QVariant toAtomicValue () const
+QVariant toAtomicValue() const
 */
 HB_FUNC_STATIC( QXMLITEM_TOATOMICVALUE )
 {
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QXMLITEM_TOATOMICVALUE )
 }
 
 /*
-QXmlNodeModelIndex toNodeModelIndex () const
+QXmlNodeModelIndex toNodeModelIndex() const
 */
 HB_FUNC_STATIC( QXMLITEM_TONODEMODELINDEX )
 {

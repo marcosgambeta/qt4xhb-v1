@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_DELETE )
 }
 
 /*
-QAbstractMessageHandler * messageHandler () const
+QAbstractMessageHandler * messageHandler() const
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_MESSAGEHANDLER )
 {
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_MESSAGEHANDLER )
 }
 
 /*
-QXmlNamePool namePool () const
+QXmlNamePool namePool() const
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NAMEPOOL )
 {
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NAMEPOOL )
 }
 
 /*
-QNetworkAccessManager * networkAccessManager () const
+QNetworkAccessManager * networkAccessManager() const
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NETWORKACCESSMANAGER )
 {
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NETWORKACCESSMANAGER )
 }
 
 /*
-QXmlSchema schema () const
+QXmlSchema schema() const
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SCHEMA )
 {
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETURIRESOLVER )
 }
 
 /*
-const QAbstractUriResolver * uriResolver () const
+const QAbstractUriResolver * uriResolver() const
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_URIRESOLVER )
 {

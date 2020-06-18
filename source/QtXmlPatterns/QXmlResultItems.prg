@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_DELETE )
 }
 
 /*
-QXmlItem current () const
+QXmlItem current() const
 */
 HB_FUNC_STATIC( QXMLRESULTITEMS_CURRENT )
 {
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_HASERROR )
 }
 
 /*
-QXmlItem next ()
+QXmlItem next()
 */
 HB_FUNC_STATIC( QXMLRESULTITEMS_NEXT )
 {

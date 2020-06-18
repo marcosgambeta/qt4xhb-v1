@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_DELETE )
 }
 
 /*
-qint64 column () const
+qint64 column() const
 */
 HB_FUNC_STATIC( QSOURCELOCATION_COLUMN )
 {
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_ISNULL )
 }
 
 /*
-qint64 line () const
+qint64 line() const
 */
 HB_FUNC_STATIC( QSOURCELOCATION_LINE )
 {
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_SETURI )
 }
 
 /*
-QUrl uri () const
+QUrl uri() const
 */
 HB_FUNC_STATIC( QSOURCELOCATION_URI )
 {

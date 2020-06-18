@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QXMLQUERY_EVALUATETO )
 }
 
 /*
-QXmlName initialTemplateName () const
+QXmlName initialTemplateName() const
 */
 HB_FUNC_STATIC( QXMLQUERY_INITIALTEMPLATENAME )
 {
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QXMLQUERY_ISVALID )
 }
 
 /*
-QAbstractMessageHandler * messageHandler () const
+QAbstractMessageHandler * messageHandler() const
 */
 HB_FUNC_STATIC( QXMLQUERY_MESSAGEHANDLER )
 {
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QXMLQUERY_MESSAGEHANDLER )
 }
 
 /*
-QXmlNamePool namePool () const
+QXmlNamePool namePool() const
 */
 HB_FUNC_STATIC( QXMLQUERY_NAMEPOOL )
 {
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QXMLQUERY_NAMEPOOL )
 }
 
 /*
-QNetworkAccessManager * networkAccessManager () const
+QNetworkAccessManager * networkAccessManager() const
 */
 HB_FUNC_STATIC( QXMLQUERY_NETWORKACCESSMANAGER )
 {
@@ -488,7 +488,7 @@ HB_FUNC_STATIC( QXMLQUERY_NETWORKACCESSMANAGER )
 }
 
 /*
-QueryLanguage queryLanguage () const
+QXmlQuery::QueryLanguage queryLanguage() const
 */
 HB_FUNC_STATIC( QXMLQUERY_QUERYLANGUAGE )
 {
@@ -797,7 +797,7 @@ HB_FUNC_STATIC( QXMLQUERY_SETURIRESOLVER )
 }
 
 /*
-const QAbstractUriResolver * uriResolver () const
+const QAbstractUriResolver * uriResolver() const
 */
 HB_FUNC_STATIC( QXMLQUERY_URIRESOLVER )
 {

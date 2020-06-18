@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_DELETE )
 }
 
 /*
-QUrl documentUri () const
+QUrl documentUri() const
 */
 HB_FUNC_STATIC( QXMLSCHEMA_DOCUMENTURI )
 {
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_LOAD )
 }
 
 /*
-QAbstractMessageHandler * messageHandler () const
+QAbstractMessageHandler * messageHandler() const
 */
 HB_FUNC_STATIC( QXMLSCHEMA_MESSAGEHANDLER )
 {
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_MESSAGEHANDLER )
 }
 
 /*
-QXmlNamePool namePool () const
+QXmlNamePool namePool() const
 */
 HB_FUNC_STATIC( QXMLSCHEMA_NAMEPOOL )
 {
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_NAMEPOOL )
 }
 
 /*
-QNetworkAccessManager * networkAccessManager () const
+QNetworkAccessManager * networkAccessManager() const
 */
 HB_FUNC_STATIC( QXMLSCHEMA_NETWORKACCESSMANAGER )
 {
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_SETURIRESOLVER )
 }
 
 /*
-const QAbstractUriResolver * uriResolver () const
+const QAbstractUriResolver * uriResolver() const
 */
 HB_FUNC_STATIC( QXMLSCHEMA_URIRESOLVER )
 {

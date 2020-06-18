@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_DELETE )
 }
 
 /*
-QXmlNamePool & namePool () const
+QXmlNamePool & namePool() const
 */
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMEPOOL )
 {
