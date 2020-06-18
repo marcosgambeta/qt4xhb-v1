@@ -43,7 +43,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-void activateCurrentItem ()
+void activateCurrentItem()
 */
 HB_FUNC_STATIC( QHELPINDEXWIDGET_ACTIVATECURRENTITEM )
 {

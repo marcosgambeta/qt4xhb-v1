@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_CURRENTFILTER )
 }
 
 /*
-QStringList customFilters () const
+QStringList customFilters() const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_CUSTOMFILTERS )
 {
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_REGISTERDOCUMENTATION )
 }
 
 /*
-QStringList registeredDocumentations () const
+QStringList registeredDocumentations() const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_REGISTEREDDOCUMENTATIONS )
 {

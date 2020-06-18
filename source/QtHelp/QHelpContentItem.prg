@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDPOSITION )
 }
 
 /*
-QHelpContentItem * parent () const
+QHelpContentItem * parent() const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_PARENT )
 {
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_TITLE )
 }
 
 /*
-QUrl url () const
+QUrl url() const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_URL )
 {

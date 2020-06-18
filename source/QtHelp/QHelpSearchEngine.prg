@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERY )
 }
 
 /*
-QHelpSearchQueryWidget * queryWidget ()
+QHelpSearchQueryWidget * queryWidget()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERYWIDGET )
 {
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERYWIDGET )
 }
 
 /*
-QHelpSearchResultWidget * resultWidget ()
+QHelpSearchResultWidget * resultWidget()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_RESULTWIDGET )
 {
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_RESULTWIDGET )
 }
 
 /*
-void cancelIndexing ()
+void cancelIndexing()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_CANCELINDEXING )
 {
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_CANCELINDEXING )
 }
 
 /*
-void cancelSearching ()
+void cancelSearching()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_CANCELSEARCHING )
 {
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_CANCELSEARCHING )
 }
 
 /*
-void reindexDocumentation ()
+void reindexDocumentation()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_REINDEXDOCUMENTATION )
 {

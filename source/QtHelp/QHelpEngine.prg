@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QHELPENGINE_DELETE )
 }
 
 /*
-QHelpContentModel * contentModel () const
+QHelpContentModel * contentModel() const
 */
 HB_FUNC_STATIC( QHELPENGINE_CONTENTMODEL )
 {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QHELPENGINE_CONTENTMODEL )
 }
 
 /*
-QHelpContentWidget * contentWidget ()
+QHelpContentWidget * contentWidget()
 */
 HB_FUNC_STATIC( QHELPENGINE_CONTENTWIDGET )
 {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QHELPENGINE_CONTENTWIDGET )
 }
 
 /*
-QHelpIndexModel * indexModel () const
+QHelpIndexModel * indexModel() const
 */
 HB_FUNC_STATIC( QHELPENGINE_INDEXMODEL )
 {
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QHELPENGINE_INDEXMODEL )
 }
 
 /*
-QHelpIndexWidget * indexWidget ()
+QHelpIndexWidget * indexWidget()
 */
 HB_FUNC_STATIC( QHELPENGINE_INDEXWIDGET )
 {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QHELPENGINE_INDEXWIDGET )
 }
 
 /*
-QHelpSearchEngine * searchEngine ()
+QHelpSearchEngine * searchEngine()
 */
 HB_FUNC_STATIC( QHELPENGINE_SEARCHENGINE )
 {
