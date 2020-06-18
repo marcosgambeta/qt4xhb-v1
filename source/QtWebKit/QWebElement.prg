@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTENAMES )
 }
 
 /*
-QStringList classes () const
+QStringList classes() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_CLASSES )
 {
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QWEBELEMENT_CLASSES )
 }
 
 /*
-QWebElement clone () const
+QWebElement clone() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_CLONE )
 {
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QWEBELEMENT_CLONE )
 }
 
 /*
-QWebElement document () const
+QWebElement document() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_DOCUMENT )
 {
@@ -614,7 +614,7 @@ HB_FUNC_STATIC( QWEBELEMENT_FINDFIRST )
 }
 
 /*
-QWebElement firstChild () const
+QWebElement firstChild() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_FIRSTCHILD )
 {
@@ -639,7 +639,7 @@ HB_FUNC_STATIC( QWEBELEMENT_FIRSTCHILD )
 }
 
 /*
-QRect geometry () const
+QRect geometry() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_GEOMETRY )
 {
@@ -808,7 +808,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ISNULL )
 }
 
 /*
-QWebElement lastChild () const
+QWebElement lastChild() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_LASTCHILD )
 {
@@ -881,7 +881,7 @@ HB_FUNC_STATIC( QWEBELEMENT_NAMESPACEURI )
 }
 
 /*
-QWebElement nextSibling () const
+QWebElement nextSibling() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_NEXTSIBLING )
 {
@@ -906,7 +906,7 @@ HB_FUNC_STATIC( QWEBELEMENT_NEXTSIBLING )
 }
 
 /*
-QWebElement parent () const
+QWebElement parent() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_PARENT )
 {
@@ -1057,7 +1057,7 @@ HB_FUNC_STATIC( QWEBELEMENT_PREPENDOUTSIDE )
 }
 
 /*
-QWebElement previousSibling () const
+QWebElement previousSibling() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_PREVIOUSSIBLING )
 {
@@ -1082,7 +1082,7 @@ HB_FUNC_STATIC( QWEBELEMENT_PREVIOUSSIBLING )
 }
 
 /*
-void removeAllChildren ()
+void removeAllChildren()
 */
 HB_FUNC_STATIC( QWEBELEMENT_REMOVEALLCHILDREN )
 {
@@ -1186,7 +1186,7 @@ HB_FUNC_STATIC( QWEBELEMENT_REMOVECLASS )
 }
 
 /*
-void removeFromDocument ()
+void removeFromDocument()
 */
 HB_FUNC_STATIC( QWEBELEMENT_REMOVEFROMDOCUMENT )
 {
@@ -1366,7 +1366,7 @@ HB_FUNC_STATIC( QWEBELEMENT_SETATTRIBUTENS )
 }
 
 /*
-void setFocus ()
+void setFocus()
 */
 HB_FUNC_STATIC( QWEBELEMENT_SETFOCUS )
 {
@@ -1544,7 +1544,7 @@ HB_FUNC_STATIC( QWEBELEMENT_TAGNAME )
 }
 
 /*
-QWebElement & takeFromDocument ()
+QWebElement & takeFromDocument()
 */
 HB_FUNC_STATIC( QWEBELEMENT_TAKEFROMDOCUMENT )
 {
@@ -1667,7 +1667,7 @@ HB_FUNC_STATIC( QWEBELEMENT_TOGGLECLASS )
 }
 
 /*
-QWebFrame * webFrame () const
+QWebFrame * webFrame() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_WEBFRAME )
 {

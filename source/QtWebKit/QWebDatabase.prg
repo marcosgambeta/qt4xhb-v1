@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QWEBDATABASE_DISPLAYNAME )
 }
 
 /*
-qint64 expectedSize () const
+qint64 expectedSize() const
 */
 HB_FUNC_STATIC( QWEBDATABASE_EXPECTEDSIZE )
 {
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QWEBDATABASE_NAME )
 }
 
 /*
-QWebSecurityOrigin origin () const
+QWebSecurityOrigin origin() const
 */
 HB_FUNC_STATIC( QWEBDATABASE_ORIGIN )
 {
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QWEBDATABASE_ORIGIN )
 }
 
 /*
-qint64 size () const
+qint64 size() const
 */
 HB_FUNC_STATIC( QWEBDATABASE_SIZE )
 {
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QWEBDATABASE_SIZE )
 }
 
 /*
-static void removeAllDatabases ()
+static void removeAllDatabases()
 */
 HB_FUNC_STATIC( QWEBDATABASE_REMOVEALLDATABASES )
 {

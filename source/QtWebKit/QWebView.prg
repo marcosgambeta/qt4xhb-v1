@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QWEBVIEW_FINDTEXT )
 }
 
 /*
-QWebHistory * history () const
+QWebHistory * history() const
 */
 HB_FUNC_STATIC( QWEBVIEW_HISTORY )
 {
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QWEBVIEW_HISTORY )
 }
 
 /*
-QIcon icon () const
+QIcon icon() const
 */
 HB_FUNC_STATIC( QWEBVIEW_ICON )
 {
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QWEBVIEW_LOAD )
 }
 
 /*
-QWebPage * page () const
+QWebPage * page() const
 */
 HB_FUNC_STATIC( QWEBVIEW_PAGE )
 {
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QWEBVIEW_PAGEACTION )
 }
 
 /*
-QPainter::RenderHints renderHints () const
+QPainter::RenderHints renderHints() const
 */
 HB_FUNC_STATIC( QWEBVIEW_RENDERHINTS )
 {
@@ -579,7 +579,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETZOOMFACTOR )
 }
 
 /*
-QWebSettings * settings () const
+QWebSettings * settings() const
 */
 HB_FUNC_STATIC( QWEBVIEW_SETTINGS )
 {
@@ -678,7 +678,7 @@ HB_FUNC_STATIC( QWEBVIEW_TRIGGERPAGEACTION )
 }
 
 /*
-QUrl url () const
+QUrl url() const
 */
 HB_FUNC_STATIC( QWEBVIEW_URL )
 {
@@ -727,7 +727,7 @@ HB_FUNC_STATIC( QWEBVIEW_ZOOMFACTOR )
 }
 
 /*
-void back ()
+void back()
 */
 HB_FUNC_STATIC( QWEBVIEW_BACK )
 {
@@ -753,7 +753,7 @@ HB_FUNC_STATIC( QWEBVIEW_BACK )
 }
 
 /*
-void forward ()
+void forward()
 */
 HB_FUNC_STATIC( QWEBVIEW_FORWARD )
 {
@@ -805,7 +805,7 @@ HB_FUNC_STATIC( QWEBVIEW_PRINT )
 }
 
 /*
-void reload ()
+void reload()
 */
 HB_FUNC_STATIC( QWEBVIEW_RELOAD )
 {
@@ -831,7 +831,7 @@ HB_FUNC_STATIC( QWEBVIEW_RELOAD )
 }
 
 /*
-void stop ()
+void stop()
 */
 HB_FUNC_STATIC( QWEBVIEW_STOP )
 {

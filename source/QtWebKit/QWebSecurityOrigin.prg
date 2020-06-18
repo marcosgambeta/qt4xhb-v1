@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_DELETE )
 }
 
 /*
-qint64 databaseQuota () const
+qint64 databaseQuota() const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASEQUOTA )
 {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASEQUOTA )
 }
 
 /*
-qint64 databaseUsage () const
+qint64 databaseUsage() const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASEUSAGE )
 {
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_ALLORIGINS )
 }
 
 /*
-static QStringList localSchemes ()
+static QStringList localSchemes()
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_LOCALSCHEMES )
 {

@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_FINDTEXT )
 }
 
 /*
-QWebHistory * history () const
+QWebHistory * history() const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_HISTORY )
 {
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_HISTORY )
 }
 
 /*
-QIcon icon () const
+QIcon icon() const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ICON )
 {
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_LOAD )
 }
 
 /*
-QWebPage * page () const
+QWebPage * page() const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_PAGE )
 {
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETZOOMFACTOR )
 }
 
 /*
-QWebSettings * settings () const
+QWebSettings * settings() const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETTINGS )
 {
@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_TRIGGERPAGEACTION )
 }
 
 /*
-QUrl url () const
+QUrl url() const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_URL )
 {
@@ -671,7 +671,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ZOOMFACTOR )
 }
 
 /*
-void back ()
+void back()
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_BACK )
 {
@@ -697,7 +697,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_BACK )
 }
 
 /*
-void forward ()
+void forward()
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_FORWARD )
 {
@@ -723,7 +723,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_FORWARD )
 }
 
 /*
-void reload ()
+void reload()
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_RELOAD )
 {
@@ -749,7 +749,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_RELOAD )
 }
 
 /*
-void stop ()
+void stop()
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_STOP )
 {

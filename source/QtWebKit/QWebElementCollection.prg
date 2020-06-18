@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_COUNT )
 }
 
 /*
-QWebElement first () const
+QWebElement first() const
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_FIRST )
 {
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_FIRST )
 }
 
 /*
-QWebElement last () const
+QWebElement last() const
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_LAST )
 {

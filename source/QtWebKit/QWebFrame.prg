@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT )
 }
 
 /*
-QUrl baseUrl () const
+QUrl baseUrl() const
 */
 HB_FUNC_STATIC( QWEBFRAME_BASEURL )
 {
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QWEBFRAME_CHILDFRAMES )
 }
 
 /*
-QSize contentsSize () const
+QSize contentsSize() const
 */
 HB_FUNC_STATIC( QWEBFRAME_CONTENTSSIZE )
 {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QWEBFRAME_CONTENTSSIZE )
 }
 
 /*
-QWebElement documentElement () const
+QWebElement documentElement() const
 */
 HB_FUNC_STATIC( QWEBFRAME_DOCUMENTELEMENT )
 {
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QWEBFRAME_FRAMENAME )
 }
 
 /*
-QRect geometry () const
+QRect geometry() const
 */
 HB_FUNC_STATIC( QWEBFRAME_GEOMETRY )
 {
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QWEBFRAME_HITTESTCONTENT )
 }
 
 /*
-QIcon icon () const
+QIcon icon() const
 */
 HB_FUNC_STATIC( QWEBFRAME_ICON )
 {
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QWEBFRAME_LOAD )
 }
 
 /*
-QWebPage * page () const
+QWebPage * page() const
 */
 HB_FUNC_STATIC( QWEBFRAME_PAGE )
 {
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QWEBFRAME_PAGE )
 }
 
 /*
-QWebFrame * parentFrame () const
+QWebFrame * parentFrame() const
 */
 HB_FUNC_STATIC( QWEBFRAME_PARENTFRAME )
 {
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QWEBFRAME_PARENTFRAME )
 }
 
 /*
-QPoint pos () const
+QPoint pos() const
 */
 HB_FUNC_STATIC( QWEBFRAME_POS )
 {
@@ -677,7 +677,7 @@ HB_FUNC_STATIC( QWEBFRAME_RENDERTREEDUMP )
 }
 
 /*
-QUrl requestedUrl () const
+QUrl requestedUrl() const
 */
 HB_FUNC_STATIC( QWEBFRAME_REQUESTEDURL )
 {
@@ -849,7 +849,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARVALUE )
 }
 
 /*
-QPoint scrollPosition () const
+QPoint scrollPosition() const
 */
 HB_FUNC_STATIC( QWEBFRAME_SCROLLPOSITION )
 {
@@ -900,7 +900,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLTOANCHOR )
 }
 
 /*
-QWebSecurityOrigin securityOrigin () const
+QWebSecurityOrigin securityOrigin() const
 */
 HB_FUNC_STATIC( QWEBFRAME_SECURITYORIGIN )
 {
@@ -951,7 +951,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETCONTENT )
 }
 
 /*
-void setFocus ()
+void setFocus()
 */
 HB_FUNC_STATIC( QWEBFRAME_SETFOCUS )
 {
@@ -1255,7 +1255,7 @@ HB_FUNC_STATIC( QWEBFRAME_TOPLAINTEXT )
 }
 
 /*
-QUrl url () const
+QUrl url() const
 */
 HB_FUNC_STATIC( QWEBFRAME_URL )
 {

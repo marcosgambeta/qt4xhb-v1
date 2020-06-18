@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QWEBPAGE_ACTION )
 }
 
 /*
-quint64 bytesReceived () const
+quint64 bytesReceived() const
 */
 HB_FUNC_STATIC( QWEBPAGE_BYTESRECEIVED )
 {
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QWEBPAGE_BYTESRECEIVED )
 }
 
 /*
-QMenu * createStandardContextMenu ()
+QMenu * createStandardContextMenu()
 */
 HB_FUNC_STATIC( QWEBPAGE_CREATESTANDARDCONTEXTMENU )
 {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QWEBPAGE_CREATESTANDARDCONTEXTMENU )
 }
 
 /*
-QWebFrame * currentFrame () const
+QWebFrame * currentFrame() const
 */
 HB_FUNC_STATIC( QWEBPAGE_CURRENTFRAME )
 {
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QWEBPAGE_FRAMEAT )
 }
 
 /*
-QWebHistory * history () const
+QWebHistory * history() const
 */
 HB_FUNC_STATIC( QWEBPAGE_HISTORY )
 {
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QWEBPAGE_ISMODIFIED )
 }
 
 /*
-LinkDelegationPolicy linkDelegationPolicy () const
+QWebPage::LinkDelegationPolicy linkDelegationPolicy() const
 */
 HB_FUNC_STATIC( QWEBPAGE_LINKDELEGATIONPOLICY )
 {
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QWEBPAGE_LINKDELEGATIONPOLICY )
 }
 
 /*
-QWebFrame * mainFrame () const
+QWebFrame * mainFrame() const
 */
 HB_FUNC_STATIC( QWEBPAGE_MAINFRAME )
 {
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QWEBPAGE_MAINFRAME )
 }
 
 /*
-QNetworkAccessManager * networkAccessManager () const
+QNetworkAccessManager * networkAccessManager() const
 */
 HB_FUNC_STATIC( QWEBPAGE_NETWORKACCESSMANAGER )
 {
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QWEBPAGE_NETWORKACCESSMANAGER )
 }
 
 /*
-QPalette palette () const
+QPalette palette() const
 */
 HB_FUNC_STATIC( QWEBPAGE_PALETTE )
 {
@@ -555,7 +555,7 @@ HB_FUNC_STATIC( QWEBPAGE_PALETTE )
 }
 
 /*
-QWebPluginFactory * pluginFactory () const
+QWebPluginFactory * pluginFactory() const
 */
 HB_FUNC_STATIC( QWEBPAGE_PLUGINFACTORY )
 {
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QWEBPAGE_PLUGINFACTORY )
 }
 
 /*
-QSize preferredContentsSize () const
+QSize preferredContentsSize() const
 */
 HB_FUNC_STATIC( QWEBPAGE_PREFERREDCONTENTSSIZE )
 {
@@ -863,7 +863,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETVIEWPORTSIZE )
 }
 
 /*
-QWebSettings * settings () const
+QWebSettings * settings() const
 */
 HB_FUNC_STATIC( QWEBPAGE_SETTINGS )
 {
@@ -936,7 +936,7 @@ HB_FUNC_STATIC( QWEBPAGE_SWALLOWCONTEXTMENUEVENT )
 }
 
 /*
-quint64 totalBytes () const
+quint64 totalBytes() const
 */
 HB_FUNC_STATIC( QWEBPAGE_TOTALBYTES )
 {
@@ -986,7 +986,7 @@ HB_FUNC_STATIC( QWEBPAGE_TRIGGERACTION )
 }
 
 /*
-QUndoStack * undoStack () const
+QUndoStack * undoStack() const
 */
 HB_FUNC_STATIC( QWEBPAGE_UNDOSTACK )
 {
@@ -1037,7 +1037,7 @@ HB_FUNC_STATIC( QWEBPAGE_UPDATEPOSITIONDEPENDENTACTIONS )
 }
 
 /*
-QWidget * view () const
+QWidget * view() const
 */
 HB_FUNC_STATIC( QWEBPAGE_VIEW )
 {
@@ -1062,7 +1062,7 @@ HB_FUNC_STATIC( QWEBPAGE_VIEW )
 }
 
 /*
-QSize viewportSize () const
+QSize viewportSize() const
 */
 HB_FUNC_STATIC( QWEBPAGE_VIEWPORTSIZE )
 {

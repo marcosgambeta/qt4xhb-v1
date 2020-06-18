@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_DELETE )
 }
 
 /*
-QWebPage * page () const
+QWebPage * page() const
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_PAGE )
 {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_EVENT )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_SIZEHINT )
 {

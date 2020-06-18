@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_DELETE )
 }
 
 /*
-QIcon icon () const
+QIcon icon() const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_ICON )
 {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_ISVALID )
 }
 
 /*
-QDateTime lastVisited () const
+QDateTime lastVisited() const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_LASTVISITED )
 {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_LASTVISITED )
 }
 
 /*
-QUrl originalUrl () const
+QUrl originalUrl() const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_ORIGINALURL )
 {
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_TITLE )
 }
 
 /*
-QUrl url () const
+QUrl url() const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_URL )
 {
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_URL )
 }
 
 /*
-QVariant userData () const
+QVariant userData() const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_USERDATA )
 {

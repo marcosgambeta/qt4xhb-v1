@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QWEBPLUGINFACTORY_CREATE )
 }
 
 /*
-virtual void refreshPlugins ()
+virtual void refreshPlugins()
 */
 HB_FUNC_STATIC( QWEBPLUGINFACTORY_REFRESHPLUGINS )
 {

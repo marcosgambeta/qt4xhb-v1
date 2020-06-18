@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_TESTATTRIBUTE )
 }
 
 /*
-QUrl userStyleSheetUrl () const
+QUrl userStyleSheetUrl() const
 */
 HB_FUNC_STATIC( QWEBSETTINGS_USERSTYLESHEETURL )
 {
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_USERSTYLESHEETURL )
 }
 
 /*
-static void clearIconDatabase ()
+static void clearIconDatabase()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_CLEARICONDATABASE )
 {
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_CLEARICONDATABASE )
 }
 
 /*
-static void clearMemoryCaches ()
+static void clearMemoryCaches()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_CLEARMEMORYCACHES )
 {
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_ENABLEPERSISTENTSTORAGE )
 }
 
 /*
-static QWebSettings * globalSettings ()
+static QWebSettings * globalSettings()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_GLOBALSETTINGS )
 {
@@ -606,7 +606,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_MAXIMUMPAGESINCACHE )
 }
 
 /*
-static qint64 offlineStorageDefaultQuota ()
+static qint64 offlineStorageDefaultQuota()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_OFFLINESTORAGEDEFAULTQUOTA )
 {
@@ -663,7 +663,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_OFFLINEWEBAPPLICATIONCACHEPATH )
 }
 
 /*
-static qint64 offlineWebApplicationCacheQuota ()
+static qint64 offlineWebApplicationCacheQuota()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_OFFLINEWEBAPPLICATIONCACHEQUOTA )
 {

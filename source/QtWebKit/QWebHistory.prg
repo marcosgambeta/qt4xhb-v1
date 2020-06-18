@@ -64,7 +64,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-void back ()
+void back()
 */
 HB_FUNC_STATIC( QWEBHISTORY_BACK )
 {
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QWEBHISTORY_BACK )
 }
 
 /*
-QWebHistoryItem backItem () const
+QWebHistoryItem backItem() const
 */
 HB_FUNC_STATIC( QWEBHISTORY_BACKITEM )
 {
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QWEBHISTORY_CANGOFORWARD )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QWEBHISTORY_CLEAR )
 {
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QWEBHISTORY_COUNT )
 }
 
 /*
-QWebHistoryItem currentItem () const
+QWebHistoryItem currentItem() const
 */
 HB_FUNC_STATIC( QWEBHISTORY_CURRENTITEM )
 {
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QWEBHISTORY_CURRENTITEMINDEX )
 }
 
 /*
-void forward ()
+void forward()
 */
 HB_FUNC_STATIC( QWEBHISTORY_FORWARD )
 {
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QWEBHISTORY_FORWARD )
 }
 
 /*
-QWebHistoryItem forwardItem () const
+QWebHistoryItem forwardItem() const
 */
 HB_FUNC_STATIC( QWEBHISTORY_FORWARDITEM )
 {
