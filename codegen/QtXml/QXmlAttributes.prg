@@ -33,8 +33,7 @@ $deleteMethod
 $prototype=void append ( const QString & qName, const QString & uri, const QString & localPart, const QString & value )
 $method=|void|append|const QString &,const QString &,const QString &,const QString &
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototypeV2=int count() const
 

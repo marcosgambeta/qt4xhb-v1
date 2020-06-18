@@ -55,8 +55,7 @@ $addMethod=new
 
 $prototypeV2=QString data() const
 
-$prototype=QDomNode::NodeType nodeType () const
-$method=|QDomNode::NodeType|nodeType|
+$prototypeV2=QDomNode::NodeType nodeType() const
 
 $prototype=void setData ( const QString & d )
 $method=|void|setData|const QString &

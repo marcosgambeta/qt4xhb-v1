@@ -57,14 +57,11 @@ $deleteMethod
 
 $prototypeV2=virtual QString data() const
 
-$prototype=virtual void fetchData ()
-$virtualMethod=|void|fetchData|
+$prototypeV2=virtual void fetchData()
 
-$prototype=virtual QChar next ()
-$virtualMethod=|QChar|next|
+$prototypeV2=virtual QChar next()
 
-$prototype=virtual void reset ()
-$virtualMethod=|void|reset|
+$prototypeV2=virtual void reset()
 
 $prototype=virtual void setData ( const QString & dat )
 $internalVirtualMethod=|void|setData,setData1|const QString &

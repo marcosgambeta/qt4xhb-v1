@@ -53,8 +53,7 @@ HB_FUNC_STATIC( QDOMNOTATION_NEW )
 }
 $addMethod=new
 
-$prototype=QDomNode::NodeType nodeType () const
-$method=|QDomNode::NodeType|nodeType|
+$prototypeV2=QDomNode::NodeType nodeType() const
 
 $prototypeV2=QString publicId() const
 

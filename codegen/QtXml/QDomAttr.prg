@@ -55,11 +55,9 @@ $addMethod=new
 
 $prototypeV2=QString name() const
 
-$prototype=QDomNode::NodeType nodeType () const
-$method=|QDomNode::NodeType|nodeType|
+$prototypeV2=QDomNode::NodeType nodeType() const
 
-$prototype=QDomElement ownerElement () const
-$method=|QDomElement|ownerElement|
+$prototypeV2=QDomElement ownerElement() const
 
 $prototype=void setValue ( const QString & v )
 $method=|void|setValue|const QString &

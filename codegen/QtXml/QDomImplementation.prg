@@ -66,8 +66,7 @@ $method=|bool|hasFeature|const QString &,const QString &
 
 $prototypeV2=bool isNull()
 
-$prototype=static InvalidDataPolicy invalidDataPolicy ()
-$staticMethod=|QDomImplementation::InvalidDataPolicy|invalidDataPolicy|
+$prototypeV2=static QDomImplementation::InvalidDataPolicy invalidDataPolicy()
 
 $prototype=static void setInvalidDataPolicy ( InvalidDataPolicy policy )
 $staticMethod=|void|setInvalidDataPolicy|QDomImplementation::InvalidDataPolicy

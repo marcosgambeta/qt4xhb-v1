@@ -53,18 +53,15 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW )
 }
 $addMethod=new
 
-$prototype=QDomNamedNodeMap entities () const
-$method=|QDomNamedNodeMap|entities|
+$prototypeV2=QDomNamedNodeMap entities() const
 
 $prototypeV2=QString internalSubset() const
 
 $prototypeV2=QString name() const
 
-$prototype=QDomNode::NodeType nodeType () const
-$method=|QDomNode::NodeType|nodeType|
+$prototypeV2=QDomNode::NodeType nodeType() const
 
-$prototype=QDomNamedNodeMap notations () const
-$method=|QDomNamedNodeMap|notations|
+$prototypeV2=QDomNamedNodeMap notations() const
 
 $prototypeV2=QString publicId() const
 

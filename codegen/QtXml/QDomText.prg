@@ -53,8 +53,7 @@ HB_FUNC_STATIC( QDOMTEXT_NEW )
 }
 $addMethod=new
 
-$prototype=QDomNode::NodeType nodeType () const
-$method=|QDomNode::NodeType|nodeType|
+$prototypeV2=QDomNode::NodeType nodeType() const
 
 $prototype=QDomText splitText ( int offset )
 $method=|QDomText|splitText|int

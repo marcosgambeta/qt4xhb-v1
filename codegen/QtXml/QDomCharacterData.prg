@@ -64,11 +64,9 @@ $method=|void|deleteData|unsigned long,unsigned long
 $prototype=void insertData ( unsigned long offset, const QString & arg )
 $method=|void|insertData|unsigned long,const QString &
 
-$prototype=uint length () const
-$method=|uint|length|
+$prototypeV2=uint length() const
 
-$prototype=QDomNode::NodeType nodeType () const
-$method=|QDomNode::NodeType|nodeType|
+$prototypeV2=QDomNode::NodeType nodeType() const
 
 $prototype=void replaceData ( unsigned long offset, unsigned long count, const QString & arg )
 $method=|void|replaceData|unsigned long,unsigned long,const QString &

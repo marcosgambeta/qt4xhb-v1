@@ -65,8 +65,7 @@ $prototypeV2=bool isEmpty() const
 $prototype=QDomNode item ( int index ) const
 $method=|QDomNode|item|int
 
-$prototype=uint length () const
-$method=|uint|length|
+$prototypeV2=uint length() const
 
 $prototypeV2=int size() const
 
