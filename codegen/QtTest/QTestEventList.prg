@@ -160,8 +160,7 @@ $method=|void|addMousePress|Qt::MouseButton,Qt::KeyboardModifiers=0,QPoint=QPoin
 $prototype=void addMouseRelease ( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
 $method=|void|addMouseRelease|Qt::MouseButton,Qt::KeyboardModifiers=0,QPoint=QPoint(),int=-1
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=void simulate ( QWidget * w )
 $method=|void|simulate|QWidget *
