@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QUILOADER_ADDPLUGINPATH )
 }
 
 /*
-QStringList availableLayouts () const
+QStringList availableLayouts() const
 */
 HB_FUNC_STATIC( QUILOADER_AVAILABLELAYOUTS )
 {
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QUILOADER_AVAILABLELAYOUTS )
 }
 
 /*
-QStringList availableWidgets () const
+QStringList availableWidgets() const
 */
 HB_FUNC_STATIC( QUILOADER_AVAILABLEWIDGETS )
 {
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QUILOADER_AVAILABLEWIDGETS )
 }
 
 /*
-void clearPluginPaths ()
+void clearPluginPaths()
 */
 HB_FUNC_STATIC( QUILOADER_CLEARPLUGINPATHS )
 {
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QUILOADER_LOAD )
 }
 
 /*
-QStringList pluginPaths () const
+QStringList pluginPaths() const
 */
 HB_FUNC_STATIC( QUILOADER_PLUGINPATHS )
 {
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QUILOADER_SETWORKINGDIRECTORY )
 }
 
 /*
-QDir workingDirectory () const
+QDir workingDirectory() const
 */
 HB_FUNC_STATIC( QUILOADER_WORKINGDIRECTORY )
 {
