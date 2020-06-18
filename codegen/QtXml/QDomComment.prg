@@ -53,6 +53,6 @@ HB_FUNC_STATIC( QDOMCOMMENT_NEW )
 }
 $addMethod=new
 
-$prototypeV2=QDomNode::NodeType nodeType() cons
+$prototypeV2=QDomNode::NodeType nodeType() const
 
 #pragma ENDDUMP
