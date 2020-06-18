@@ -59,8 +59,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QUrl documentUri () const
-$method=|QUrl|documentUri|
+$prototypeV2=QUrl documentUri() const
 
 $prototypeV2=bool isValid() const
 
@@ -100,14 +99,11 @@ HB_FUNC_STATIC( QXMLSCHEMA_LOAD )
 }
 $addMethod=load
 
-$prototype=QAbstractMessageHandler * messageHandler () const
-$method=|QAbstractMessageHandler *|messageHandler|
+$prototypeV2=QAbstractMessageHandler * messageHandler() const
 
-$prototype=QXmlNamePool namePool () const
-$method=|QXmlNamePool|namePool|
+$prototypeV2=QXmlNamePool namePool() const
 
-$prototype=QNetworkAccessManager * networkAccessManager () const
-$method=|QNetworkAccessManager *|networkAccessManager|
+$prototypeV2=QNetworkAccessManager * networkAccessManager() const
 
 $prototype=void setMessageHandler ( QAbstractMessageHandler * handler )
 $method=|void|setMessageHandler|QAbstractMessageHandler *
@@ -118,8 +114,7 @@ $method=|void|setNetworkAccessManager|QNetworkAccessManager *
 $prototype=void setUriResolver ( const QAbstractUriResolver * resolver )
 $method=|void|setUriResolver|const QAbstractUriResolver *
 
-$prototype=const QAbstractUriResolver * uriResolver () const
-$method=|const QAbstractUriResolver *|uriResolver|
+$prototypeV2=const QAbstractUriResolver * uriResolver() const
 
 $extraMethods
 

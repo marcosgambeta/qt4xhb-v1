@@ -53,19 +53,15 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEW )
 }
 $addMethod=new
 
-$prototype=qint64 additionalData () const
-$method=|qint64|additionalData|
+$prototypeV2=qint64 additionalData() const
 
-$prototype=qint64 data () const
-$method=|qint64|data|
+$prototypeV2=qint64 data() const
 
-$prototype=void * internalPointer () const
-$method=|void *|internalPointer|
+$prototypeV2=void * internalPointer() const
 
 $prototypeV2=bool isNull() const
 
-$prototype=const QAbstractXmlNodeModel * model () const
-$method=|const QAbstractXmlNodeModel *|model|
+$prototypeV2=const QAbstractXmlNodeModel * model() const
 
 $extraMethods
 

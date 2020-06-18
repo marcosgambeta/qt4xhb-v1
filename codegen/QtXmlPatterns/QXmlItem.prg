@@ -79,11 +79,9 @@ $prototypeV2=bool isNode() const
 
 $prototypeV2=bool isNull() const
 
-$prototype=QVariant toAtomicValue () const
-$method=|QVariant|toAtomicValue|
+$prototypeV2=QVariant toAtomicValue() const
 
-$prototype=QXmlNodeModelIndex toNodeModelIndex () const
-$method=|QXmlNodeModelIndex|toNodeModelIndex|
+$prototypeV2=QXmlNodeModelIndex toNodeModelIndex() const
 
 $extraMethods
 

@@ -63,13 +63,11 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=qint64 column () const
-$method=|qint64|column|
+$prototypeV2=qint64 column() const
 
 $prototypeV2=bool isNull() const
 
-$prototype=qint64 line () const
-$method=|qint64|line|
+$prototypeV2=qint64 line() const
 
 $prototype=void setColumn ( qint64 newColumn )
 $method=|void|setColumn|qint64
@@ -80,8 +78,7 @@ $method=|void|setLine|qint64
 $prototype=void setUri ( const QUrl & newUri )
 $method=|void|setUri|const QUrl &
 
-$prototype=QUrl uri () const
-$method=|QUrl|uri|
+$prototypeV2=QUrl uri() const
 
 $extraMethods
 
