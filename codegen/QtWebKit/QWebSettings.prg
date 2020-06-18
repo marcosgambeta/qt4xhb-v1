@@ -67,20 +67,16 @@ $method=|void|setUserStyleSheetUrl|const QUrl &
 $prototype=bool testAttribute ( WebAttribute attribute ) const
 $method=|bool|testAttribute|QWebSettings::WebAttribute
 
-$prototype=QUrl userStyleSheetUrl () const
-$method=|QUrl|userStyleSheetUrl|
+$prototypeV2=QUrl userStyleSheetUrl() const
 
-$prototype=static void clearIconDatabase ()
-$staticMethod=|void|clearIconDatabase|
+$prototypeV2=static void clearIconDatabase()
 
-$prototype=static void clearMemoryCaches ()
-$staticMethod=|void|clearMemoryCaches|
+$prototypeV2=static void clearMemoryCaches()
 
 $prototype=static void enablePersistentStorage ( const QString & path = QString() )
 $staticMethod=|void|enablePersistentStorage|const QString &=QString()
 
-$prototype=static QWebSettings * globalSettings ()
-$staticMethod=|QWebSettings *|globalSettings|
+$prototypeV2=static QWebSettings * globalSettings()
 
 $prototypeV2=static QString iconDatabasePath()
 
@@ -89,15 +85,13 @@ $staticMethod=|QIcon|iconForUrl|const QUrl &
 
 $prototypeV2=static int maximumPagesInCache()
 
-$prototype=static qint64 offlineStorageDefaultQuota ()
-$staticMethod=|qint64|offlineStorageDefaultQuota|
+$prototypeV2=static qint64 offlineStorageDefaultQuota()
 
 $prototypeV2=static QString offlineStoragePath()
 
 $prototypeV2=static QString offlineWebApplicationCachePath()
 
-$prototype=static qint64 offlineWebApplicationCacheQuota ()
-$staticMethod=|qint64|offlineWebApplicationCacheQuota|
+$prototypeV2=static qint64 offlineWebApplicationCacheQuota()
 
 $prototype=static void setIconDatabasePath ( const QString & path )
 $staticMethod=|void|setIconDatabasePath|const QString &

@@ -33,11 +33,9 @@ $constructor=|new|const QWebSecurityOrigin &
 
 $deleteMethod
 
-$prototype=qint64 databaseQuota () const
-$method=|qint64|databaseQuota|
+$prototypeV2=qint64 databaseQuota() const
 
-$prototype=qint64 databaseUsage () const
-$method=|qint64|databaseUsage|
+$prototypeV2=qint64 databaseUsage() const
 
 $prototype=QList<QWebDatabase> databases () const
 $method=|QList<QWebDatabase>|databases|
@@ -57,8 +55,7 @@ $staticMethod=|void|addLocalScheme|const QString &
 $prototype=QList<QWebSecurityOrigin> allOrigins ()
 $method=|QList<QWebSecurityOrigin>|allOrigins|
 
-$prototype=static QStringList localSchemes ()
-$staticMethod=|QStringList|localSchemes|
+$prototypeV2=static QStringList localSchemes()
 
 $prototype=static void removeLocalScheme ( const QString & scheme )
 $staticMethod=|void|removeLocalScheme|const QString &

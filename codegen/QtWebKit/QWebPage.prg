@@ -42,14 +42,11 @@ $deleteMethod
 $prototype=QAction * action ( WebAction action ) const
 $method=|QAction *|action|QWebPage::WebAction
 
-$prototype=quint64 bytesReceived () const
-$method=|quint64|bytesReceived|
+$prototypeV2=quint64 bytesReceived() const
 
-$prototype=QMenu * createStandardContextMenu ()
-$method=|QMenu *|createStandardContextMenu|
+$prototypeV2=QMenu * createStandardContextMenu()
 
-$prototype=QWebFrame * currentFrame () const
-$method=|QWebFrame *|currentFrame|
+$prototypeV2=QWebFrame * currentFrame() const
 
 $prototype=virtual bool extension ( Extension extension, const ExtensionOption * option = 0, ExtensionReturn * output = 0 )
 %% TODO: QWebPage::ExtensionOption é uma classe
@@ -67,8 +64,7 @@ $prototypeV2=bool forwardUnsupportedContent() const
 $prototype=QWebFrame * frameAt ( const QPoint & pos ) const
 $method=|QWebFrame *|frameAt|const QPoint &
 
-$prototype=QWebHistory * history () const
-$method=|QWebHistory *|history|
+$prototypeV2=QWebHistory * history() const
 
 $prototype=QVariant inputMethodQuery ( Qt::InputMethodQuery property ) const
 $method=|QVariant|inputMethodQuery|Qt::InputMethodQuery
@@ -77,23 +73,17 @@ $prototypeV2=bool isContentEditable() const
 
 $prototypeV2=bool isModified() const
 
-$prototype=LinkDelegationPolicy linkDelegationPolicy () const
-$method=|QWebPage::LinkDelegationPolicy|linkDelegationPolicy|
+$prototypeV2=QWebPage::LinkDelegationPolicy linkDelegationPolicy() const
 
-$prototype=QWebFrame * mainFrame () const
-$method=|QWebFrame *|mainFrame|
+$prototypeV2=QWebFrame * mainFrame() const
 
-$prototype=QNetworkAccessManager * networkAccessManager () const
-$method=|QNetworkAccessManager *|networkAccessManager|
+$prototypeV2=QNetworkAccessManager * networkAccessManager() const
 
-$prototype=QPalette palette () const
-$method=|QPalette|palette|
+$prototypeV2=QPalette palette() const
 
-$prototype=QWebPluginFactory * pluginFactory () const
-$method=|QWebPluginFactory *|pluginFactory|
+$prototypeV2=QWebPluginFactory * pluginFactory() const
 
-$prototype=QSize preferredContentsSize () const
-$method=|QSize|preferredContentsSize|
+$prototypeV2=QSize preferredContentsSize() const
 
 $prototypeV2=QString selectedText() const
 
@@ -124,8 +114,7 @@ $method=|void|setView|QWidget *
 $prototype=void setViewportSize ( const QSize & size ) const
 $method=|void|setViewportSize|const QSize &
 
-$prototype=QWebSettings * settings () const
-$method=|QWebSettings *|settings|
+$prototypeV2=QWebSettings * settings() const
 
 $prototype=virtual bool supportsExtension ( Extension extension ) const
 $virtualMethod=|bool|supportsExtension|QWebPage::Extension
@@ -133,23 +122,19 @@ $virtualMethod=|bool|supportsExtension|QWebPage::Extension
 $prototype=bool swallowContextMenuEvent ( QContextMenuEvent * event )
 $method=|bool|swallowContextMenuEvent|QContextMenuEvent *
 
-$prototype=quint64 totalBytes () const
-$method=|quint64|totalBytes|
+$prototypeV2=quint64 totalBytes() const
 
 $prototype=virtual void triggerAction ( WebAction action, bool checked = false )
 $virtualMethod=|void|triggerAction|QWebPage::WebAction,bool=false
 
-$prototype=QUndoStack * undoStack () const
-$method=|QUndoStack *|undoStack|
+$prototypeV2=QUndoStack * undoStack() const
 
 $prototype=void updatePositionDependentActions ( const QPoint & pos )
 $method=|void|updatePositionDependentActions|const QPoint &
 
-$prototype=QWidget * view () const
-$method=|QWidget *|view|
+$prototypeV2=QWidget * view() const
 
-$prototype=QSize viewportSize () const
-$method=|QSize|viewportSize|
+$prototypeV2=QSize viewportSize() const
 
 $prototype=virtual bool event ( QEvent * ev )
 $virtualMethod=|bool|event|QEvent *

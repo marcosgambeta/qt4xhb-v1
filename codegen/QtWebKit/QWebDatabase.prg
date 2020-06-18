@@ -34,21 +34,17 @@ $deleteMethod
 
 $prototypeV2=QString displayName() const
 
-$prototype=qint64 expectedSize () const
-$method=|qint64|expectedSize|
+$prototypeV2=qint64 expectedSize() const
 
 $prototypeV2=QString fileName() const
 
 $prototypeV2=QString name() const
 
-$prototype=QWebSecurityOrigin origin () const
-$method=|QWebSecurityOrigin|origin|
+$prototypeV2=QWebSecurityOrigin origin() const
 
-$prototype=qint64 size () const
-$method=|qint64|size|
+$prototypeV2=qint64 size() const
 
-$prototype=static void removeAllDatabases ()
-$staticMethod=|void|removeAllDatabases|
+$prototypeV2=static void removeAllDatabases()
 
 $prototype=static void removeDatabase ( const QWebDatabase & db )
 $staticMethod=|void|removeDatabase|const QWebDatabase &

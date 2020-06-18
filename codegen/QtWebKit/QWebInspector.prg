@@ -30,8 +30,7 @@ $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-$prototype=QWebPage * page () const
-$method=|QWebPage *|page|
+$prototypeV2=QWebPage * page() const
 
 $prototype=void setPage ( QWebPage * page )
 $method=|void|setPage|QWebPage *
@@ -39,7 +38,6 @@ $method=|void|setPage|QWebPage *
 $prototype=virtual bool event ( QEvent * ev )
 $virtualMethod=|bool|event|QEvent *
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 #pragma ENDDUMP

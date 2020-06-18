@@ -59,17 +59,14 @@ HB_FUNC_STATIC( QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT )
 }
 $addMethod=addToJavaScriptWindowObject
 
-$prototype=QUrl baseUrl () const
-$method=|QUrl|baseUrl|
+$prototypeV2=QUrl baseUrl() const
 
 $prototype=QList<QWebFrame *> childFrames () const
 $method=|QList<QWebFrame *>|childFrames|
 
-$prototype=QSize contentsSize () const
-$method=|QSize|contentsSize|
+$prototypeV2=QSize contentsSize() const
 
-$prototype=QWebElement documentElement () const
-$method=|QWebElement|documentElement|
+$prototypeV2=QWebElement documentElement() const
 
 $prototype=QWebElementCollection findAllElements ( const QString & selectorQuery ) const
 $method=|QWebElementCollection|findAllElements|const QString &
@@ -79,16 +76,14 @@ $method=|QWebElement|findFirstElement|const QString &
 
 $prototypeV2=QString frameName() const
 
-$prototype=QRect geometry () const
-$method=|QRect|geometry|
+$prototypeV2=QRect geometry() const
 
 $prototypeV2=bool hasFocus() const
 
 $prototype=QWebHitTestResult hitTestContent ( const QPoint & pos ) const
 $method=|QWebHitTestResult|hitTestContent|const QPoint &
 
-$prototype=QIcon icon () const
-$method=|QIcon|icon|
+$prototypeV2=QIcon icon() const
 
 $prototype=void load ( const QUrl & url )
 $internalMethod=|void|load,load1|const QUrl &
@@ -118,14 +113,11 @@ HB_FUNC_STATIC( QWEBFRAME_LOAD )
 }
 $addMethod=load
 
-$prototype=QWebPage * page () const
-$method=|QWebPage *|page|
+$prototypeV2=QWebPage * page() const
 
-$prototype=QWebFrame * parentFrame () const
-$method=|QWebFrame *|parentFrame|
+$prototypeV2=QWebFrame * parentFrame() const
 
-$prototype=QPoint pos () const
-$method=|QPoint|pos|
+$prototypeV2=QPoint pos() const
 
 $prototype=void render ( QPainter * painter )
 $internalMethod=|void|render,render1|QPainter *
@@ -165,8 +157,7 @@ $addMethod=render
 
 $prototypeV2=QString renderTreeDump() const
 
-$prototype=QUrl requestedUrl () const
-$method=|QUrl|requestedUrl|
+$prototypeV2=QUrl requestedUrl() const
 
 $prototype=void scroll ( int dx, int dy )
 $method=|void|scroll|int,int
@@ -186,20 +177,17 @@ $method=|Qt::ScrollBarPolicy|scrollBarPolicy|Qt::Orientation
 $prototype=int scrollBarValue ( Qt::Orientation orientation ) const
 $method=|int|scrollBarValue|Qt::Orientation
 
-$prototype=QPoint scrollPosition () const
-$method=|QPoint|scrollPosition|
+$prototypeV2=QPoint scrollPosition() const
 
 $prototype=void scrollToAnchor ( const QString & anchor )
 $method=|void|scrollToAnchor|const QString &
 
-$prototype=QWebSecurityOrigin securityOrigin () const
-$method=|QWebSecurityOrigin|securityOrigin|
+$prototypeV2=QWebSecurityOrigin securityOrigin() const
 
 $prototype=void setContent ( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
 $method=|void|setContent|const QByteArray &,const QString &=QString(),const QUrl &=QUrl()
 
-$prototype=void setFocus ()
-$method=|void|setFocus|
+$prototypeV2=void setFocus()
 
 $prototype=void setHtml ( const QString & html, const QUrl & baseUrl = QUrl() )
 $method=|void|setHtml|const QString &,const QUrl &=QUrl()
@@ -230,8 +218,7 @@ $prototypeV2=QString toHtml() const
 
 $prototypeV2=QString toPlainText() const
 
-$prototype=QUrl url () const
-$method=|QUrl|url|
+$prototypeV2=QUrl url() const
 
 $prototypeV2=qreal zoomFactor() const
 

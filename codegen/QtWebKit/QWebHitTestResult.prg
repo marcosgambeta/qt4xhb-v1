@@ -59,20 +59,15 @@ $deleteMethod
 
 $prototypeV2=QString alternateText() const
 
-$prototype=QRect boundingRect () const
-$method=|QRect|boundingRect|
+$prototypeV2=QRect boundingRect() const
 
-$prototype=QWebElement element () const
-$method=|QWebElement|element|
+$prototypeV2=QWebElement element() const
 
-$prototype=QWebElement enclosingBlockElement () const
-$method=|QWebElement|enclosingBlockElement|
+$prototypeV2=QWebElement enclosingBlockElement() const
 
-$prototype=QWebFrame * frame () const
-$method=|QWebFrame *|frame|
+$prototypeV2=QWebFrame * frame() const
 
-$prototype=QUrl imageUrl () const
-$method=|QUrl|imageUrl|
+$prototypeV2=QUrl imageUrl() const
 
 $prototypeV2=bool isContentEditable() const
 
@@ -80,25 +75,19 @@ $prototypeV2=bool isContentSelected() const
 
 $prototypeV2=bool isNull() const
 
-$prototype=QWebElement linkElement () const
-$method=|QWebElement|linkElement|
+$prototypeV2=QWebElement linkElement() const
 
-$prototype=QWebFrame * linkTargetFrame () const
-$method=|QWebFrame *|linkTargetFrame|
+$prototypeV2=QWebFrame * linkTargetFrame() const
 
 $prototypeV2=QString linkText() const
 
-$prototype=QUrl linkTitle () const
-$method=|QUrl|linkTitle|
+$prototypeV2=QUrl linkTitle() const
 
-$prototype=QUrl linkUrl () const
-$method=|QUrl|linkUrl|
+$prototypeV2=QUrl linkUrl() const
 
-$prototype=QPixmap pixmap () const
-$method=|QPixmap|pixmap|
+$prototypeV2=QPixmap pixmap() const
 
-$prototype=QPoint pos () const
-$method=|QPoint|pos|
+$prototypeV2=QPoint pos() const
 
 $prototypeV2=QString title() const
 

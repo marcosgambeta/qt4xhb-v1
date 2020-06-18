@@ -37,11 +37,9 @@ $deleteMethod
 $prototype=bool findText ( const QString & subString, QWebPage::FindFlags options = 0 )
 $method=|bool|findText|const QString &,QWebPage::FindFlags=0
 
-$prototype=QWebHistory * history () const
-$method=|QWebHistory *|history|
+$prototypeV2=QWebHistory * history() const
 
-$prototype=QIcon icon () const
-$method=|QIcon|icon|
+$prototypeV2=QIcon icon() const
 
 $prototypeV2=bool isModified() const
 
@@ -75,8 +73,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_LOAD )
 }
 $addMethod=load
 
-$prototype=QWebPage * page () const
-$method=|QWebPage *|page|
+$prototypeV2=QWebPage * page() const
 
 $prototype=QAction * pageAction ( QWebPage::WebAction action ) const
 $method=|QAction *|pageAction|QWebPage::WebAction
@@ -104,30 +101,24 @@ $method=|void|setUrl|const QUrl &
 $prototype=void setZoomFactor ( qreal )
 $method=|void|setZoomFactor|qreal
 
-$prototype=QWebSettings * settings () const
-$method=|QWebSettings *|settings|
+$prototypeV2=QWebSettings * settings() const
 
 $prototypeV2=QString title() const
 
 $prototype=void triggerPageAction ( QWebPage::WebAction action, bool checked = false )
 $method=|void|triggerPageAction|QWebPage::WebAction,bool=false
 
-$prototype=QUrl url () const
-$method=|QUrl|url|
+$prototypeV2=QUrl url() const
 
 $prototypeV2=qreal zoomFactor() const
 
-$prototype=void back ()
-$method=|void|back|
+$prototypeV2=void back()
 
-$prototype=void forward ()
-$method=|void|forward|
+$prototypeV2=void forward()
 
-$prototype=void reload ()
-$method=|void|reload|
+$prototypeV2=void reload()
 
-$prototype=void stop ()
-$method=|void|stop|
+$prototypeV2=void stop()
 
 $beginSignals
 $signal=|iconChanged()

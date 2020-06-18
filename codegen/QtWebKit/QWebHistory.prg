@@ -25,11 +25,9 @@ $destructor
 
 $includes
 
-$prototype=void back ()
-$method=|void|back|
+$prototypeV2=void back()
 
-$prototype=QWebHistoryItem backItem () const
-$method=|QWebHistoryItem|backItem|
+$prototypeV2=QWebHistoryItem backItem() const
 
 $prototype=QList<QWebHistoryItem> backItems ( int maxItems ) const
 $method=|QList<QWebHistoryItem>|backItems|int
@@ -38,21 +36,17 @@ $prototypeV2=bool canGoBack() const
 
 $prototypeV2=bool canGoForward() const
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototypeV2=int count() const
 
-$prototype=QWebHistoryItem currentItem () const
-$method=|QWebHistoryItem|currentItem|
+$prototypeV2=QWebHistoryItem currentItem() const
 
 $prototypeV2=int currentItemIndex() const
 
-$prototype=void forward ()
-$method=|void|forward|
+$prototypeV2=void forward()
 
-$prototype=QWebHistoryItem forwardItem () const
-$method=|QWebHistoryItem|forwardItem|
+$prototypeV2=QWebHistoryItem forwardItem() const
 
 $prototype=QList<QWebHistoryItem> forwardItems ( int maxItems ) const
 $method=|QList<QWebHistoryItem>|forwardItems|int

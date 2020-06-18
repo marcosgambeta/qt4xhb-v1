@@ -71,11 +71,9 @@ $method=|QWebElement|at|int
 
 $prototypeV2=int count() const
 
-$prototype=QWebElement first () const
-$method=|QWebElement|first|
+$prototypeV2=QWebElement first() const
 
-$prototype=QWebElement last () const
-$method=|QWebElement|last|
+$prototypeV2=QWebElement last() const
 
 $prototype=QList<QWebElement> toList () const
 $method=|QList<QWebElement>|toList|
