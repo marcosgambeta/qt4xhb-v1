@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_HITCOUNT )
 }
 
 /*
-QList<QHelpSearchQuery> query () const
+QList<QHelpSearchQuery> query() const
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERY )
 {
