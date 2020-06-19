@@ -58,11 +58,9 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QList<QSslCertificate> caCertificates () const
-$method=|QList<QSslCertificate>|caCertificates|
+$prototypeV2=QList<QSslCertificate> caCertificates() const
 
-$prototype=QList<QSslCipher> ciphers () const
-$method=|QList<QSslCipher>|ciphers|
+$prototypeV2=QList<QSslCipher> ciphers() const
 
 $prototypeV2=bool isNull() const
 
@@ -70,8 +68,7 @@ $prototypeV2=QSslCertificate localCertificate() const
 
 $prototypeV2=QSslCertificate peerCertificate() const
 
-$prototype=QList<QSslCertificate> peerCertificateChain () const
-$method=|QList<QSslCertificate>|peerCertificateChain|
+$prototypeV2=QList<QSslCertificate> peerCertificateChain() const
 
 $prototypeV2=int peerVerifyDepth() const
 

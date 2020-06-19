@@ -73,8 +73,7 @@ $prototypeV2=QNetworkRequest::Priority priority() const
 $prototype=QByteArray rawHeader ( const QByteArray & headerName ) const
 $method=|QByteArray|rawHeader|const QByteArray &
 
-$prototype=QList<QByteArray> rawHeaderList () const
-$method=|QList<QByteArray>|rawHeaderList|
+$prototypeV2=QList<QByteArray> rawHeaderList() const
 
 $prototype=void setAttribute ( Attribute code, const QVariant & value )
 $method=|void|setAttribute|QNetworkRequest::Attribute,const QVariant &

@@ -69,11 +69,9 @@ HB_FUNC_STATIC( QSSLSOCKET_ADDCACERTIFICATES )
 }
 $addMethod=addCaCertificates
 
-$prototype=QList<QSslCertificate> caCertificates () const
-$method=|QList<QSslCertificate>|caCertificates|
+$prototypeV2=QList<QSslCertificate> caCertificates() const
 
-$prototype=QList<QSslCipher> ciphers () const
-$method=|QList<QSslCipher>|ciphers|
+$prototypeV2=QList<QSslCipher> ciphers() const
 
 $prototype=void connectToHostEncrypted ( const QString & hostName, quint16 port, OpenMode mode = ReadWrite )
 $internalMethod=|void|connectToHostEncrypted,connectToHostEncrypted1|const QString &,quint16,QIODevice::OpenMode=QIODevice::ReadWrite
@@ -145,8 +143,7 @@ $prototypeV2=QSslSocket::SslMode mode() const
 
 $prototypeV2=QSslCertificate peerCertificate() const
 
-$prototype=QList<QSslCertificate> peerCertificateChain () const
-$method=|QList<QSslCertificate>|peerCertificateChain|
+$prototypeV2=QList<QSslCertificate> peerCertificateChain() const
 
 $prototypeV2=int peerVerifyDepth() const
 
@@ -271,8 +268,7 @@ $method=|QVariant|socketOption|QAbstractSocket::SocketOption
 
 $prototypeV2=QSslConfiguration sslConfiguration() const
 
-$prototype=QList<QSslError> sslErrors () const
-$method=|QList<QSslError>|sslErrors|
+$prototypeV2=QList<QSslError> sslErrors() const
 
 $prototype=bool waitForConnected ( int msecs = 30000 )
 $method=|bool|waitForConnected|int=30000
@@ -334,11 +330,9 @@ HB_FUNC_STATIC( QSSLSOCKET_ADDDEFAULTCACERTIFICATES )
 }
 $addMethod=addDefaultCaCertificates
 
-$prototype=QList<QSslCertificate> defaultCaCertificates ()
-$method=|QList<QSslCertificate>|defaultCaCertificates|
+$prototypeV2=QList<QSslCertificate> defaultCaCertificates()
 
-$prototype=QList<QSslCipher> defaultCiphers ()
-$method=|QList<QSslCipher>|defaultCiphers|
+$prototypeV2=QList<QSslCipher> defaultCiphers()
 
 $prototype=void setDefaultCaCertificates ( const QList<QSslCertificate> & certificates )
 $method=|void|setDefaultCaCertificates|const QList<QSslCertificate> &
@@ -346,13 +340,11 @@ $method=|void|setDefaultCaCertificates|const QList<QSslCertificate> &
 $prototype=void setDefaultCiphers ( const QList<QSslCipher> & ciphers )
 $method=|void|setDefaultCiphers|const QList<QSslCipher> &
 
-$prototype=QList<QSslCipher> supportedCiphers ()
-$method=|QList<QSslCipher>|supportedCiphers|
+$prototypeV2=QList<QSslCipher> supportedCiphers()
 
 $prototypeV2=static bool supportsSsl()
 
-$prototype=QList<QSslCertificate> systemCaCertificates ()
-$method=|QList<QSslCertificate>|systemCaCertificates|
+$prototypeV2=QList<QSslCertificate> systemCaCertificates()
 
 $beginSignals
 $signal=|encrypted()

@@ -55,15 +55,14 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QString bearerName () const (deprecated)
-$method=|QString|bearerName|
+%% deprecated
+$prototypeV2=QString bearerName() const
 
 $prototypeV2=QNetworkConfiguration::BearerType bearerType() const
 
 $prototypeV2=QString bearerTypeName() const
 
-$prototype=QList<QNetworkConfiguration> children () const
-$method=|QList<QNetworkConfiguration>|children|
+$prototypeV2=QList<QNetworkConfiguration> children() const
 
 $prototypeV2=QString identifier() const
 

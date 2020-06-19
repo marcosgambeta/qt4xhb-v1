@@ -83,8 +83,7 @@ $prototypeV2=QNetworkAccessManager::Operation operation() const
 $prototype=QByteArray rawHeader ( const QByteArray & headerName ) const
 $method=|QByteArray|rawHeader|const QByteArray &
 
-$prototype=QList<QByteArray> rawHeaderList () const
-$method=|QList<QByteArray>|rawHeaderList|
+$prototypeV2=QList<QByteArray> rawHeaderList() const
 
 $prototypeV2=qint64 readBufferSize() const
 

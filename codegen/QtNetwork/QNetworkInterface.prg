@@ -55,8 +55,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QList<QNetworkAddressEntry> addressEntries () const
-$method=|QList<QNetworkAddressEntry>|addressEntries|
+$prototypeV2=QList<QNetworkAddressEntry> addressEntries() const
 
 $prototypeV2=QNetworkInterface::InterfaceFlags flags() const
 
@@ -70,11 +69,9 @@ $prototypeV2=bool isValid() const
 
 $prototypeV2=QString name() const
 
-$prototype=QList<QHostAddress> allAddresses ()
-$method=|QList<QHostAddress>|allAddresses|
+$prototypeV2=QList<QHostAddress> allAddresses()
 
-$prototype=QList<QNetworkInterface> allInterfaces ()
-$method=|QList<QNetworkInterface>|allInterfaces|
+$prototypeV2=QList<QNetworkInterface> allInterfaces()
 
 $prototype=static QNetworkInterface interfaceFromIndex ( int index )
 $staticMethod=|QNetworkInterface|interfaceFromIndex|int

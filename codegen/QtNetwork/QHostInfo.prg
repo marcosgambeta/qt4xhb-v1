@@ -55,8 +55,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QList<QHostAddress> addresses () const
-$method=|QList<QHostAddress>|addresses|
+$prototypeV2=QList<QHostAddress> addresses() const
 
 $prototypeV2=QHostInfo::HostInfoError error() const
 
