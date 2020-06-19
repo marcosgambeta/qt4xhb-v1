@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QMETAMETHOD_DELETE )
 }
 
 /*
-const char *signature() const
+const char * signature() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_SIGNATURE )
 {
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QMETAMETHOD_SIGNATURE )
 }
 
 /*
-const char *typeName() const
+const char * typeName() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_TYPENAME )
 {
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QMETAMETHOD_PARAMETERNAMES )
 }
 
 /*
-const char *tag() const
+const char * tag() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_TAG )
 {
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QMETAMETHOD_REVISION )
 }
 
 /*
-const QMetaObject *enclosingMetaObject() const
+const QMetaObject * enclosingMetaObject() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_ENCLOSINGMETAOBJECT )
 {

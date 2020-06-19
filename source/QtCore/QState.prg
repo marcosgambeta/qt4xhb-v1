@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QSTATE_SETINITIALSTATE )
 }
 
 /*
-QList<QAbstractTransition *> transitions () const
+QList<QAbstractTransition *> transitions() const
 */
 HB_FUNC_STATIC( QSTATE_TRANSITIONS )
 {

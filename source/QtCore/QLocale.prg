@@ -1953,7 +1953,7 @@ HB_FUNC_STATIC( QLOCALE_UILANGUAGES )
 }
 
 /*
-QList<Qt::DayOfWeek> weekdays () const
+QList<Qt::DayOfWeek> weekdays() const
 */
 HB_FUNC_STATIC( QLOCALE_WEEKDAYS )
 {

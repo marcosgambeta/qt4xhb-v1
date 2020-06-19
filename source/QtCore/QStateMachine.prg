@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_CLEARERROR )
 }
 
 /*
-QList<QAbstractAnimation *> defaultAnimations () const
+QList<QAbstractAnimation *> defaultAnimations() const
 */
 HB_FUNC_STATIC( QSTATEMACHINE_DEFAULTANIMATIONS )
 {

@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_ADDANIMATION )
 }
 
 /*
-QList<QAbstractAnimation *> animations () const
+QList<QAbstractAnimation *> animations() const
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_ANIMATIONS )
 {
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATE )
 }
 
 /*
-QList<QAbstractState *> targetStates () const
+QList<QAbstractState *> targetStates() const
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATES )
 {

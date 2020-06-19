@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QBYTEARRAY_CLEAR )
 }
 
 /*
-const char * constData () const
+const char * constData() const
 */
 HB_FUNC_STATIC( QBYTEARRAY_CONSTDATA )
 {
@@ -2656,7 +2656,7 @@ HB_FUNC_STATIC( QBYTEARRAY_STARTSWITH )
 }
 
 /*
-QByteArray toBase64 () const
+QByteArray toBase64() const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOBASE64 )
 {

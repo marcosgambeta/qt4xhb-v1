@@ -610,7 +610,7 @@ HB_FUNC_STATIC( QMIMEDATA_TEXT )
 }
 
 /*
-QList<QUrl> urls () const
+QList<QUrl> urls() const
 */
 HB_FUNC_STATIC( QMIMEDATA_URLS )
 {

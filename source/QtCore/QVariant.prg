@@ -1027,7 +1027,7 @@ HB_FUNC_STATIC( QVARIANT_TOLINEF )
 }
 
 /*
-QList<QVariant> toList () const
+QList<QVariant> toList() const
 */
 HB_FUNC_STATIC( QVARIANT_TOLIST )
 {
@@ -1399,7 +1399,7 @@ HB_FUNC_STATIC( QVARIANT_TYPE )
 }
 
 /*
-const char * typeName () const
+const char * typeName() const
 */
 HB_FUNC_STATIC( QVARIANT_TYPENAME )
 {

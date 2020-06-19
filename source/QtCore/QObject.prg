@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QOBJECT_BLOCKSIGNALS )
 }
 
 /*
-const QObjectList & children () const
+const QObjectList & children() const
 */
 HB_FUNC_STATIC( QOBJECT_CHILDREN )
 {
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QOBJECT_CHILDREN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObjectList list = obj->children();
+      const QObjectList list = obj->children();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QOBJECT" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QOBJECT_DUMPOBJECTTREE )
 }
 
 /*
-QList<QByteArray> dynamicPropertyNames () const
+QList<QByteArray> dynamicPropertyNames() const
 */
 HB_FUNC_STATIC( QOBJECT_DYNAMICPROPERTYNAMES )
 {
@@ -715,7 +715,7 @@ HB_FUNC_STATIC( QOBJECT_KILLTIMER )
 }
 
 /*
-virtual const QMetaObject * metaObject () const
+virtual const QMetaObject * metaObject() const
 */
 HB_FUNC_STATIC( QOBJECT_METAOBJECT )
 {
