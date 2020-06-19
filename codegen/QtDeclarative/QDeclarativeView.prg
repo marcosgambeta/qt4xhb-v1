@@ -64,8 +64,7 @@ $deleteMethod
 
 $prototypeV2=QDeclarativeEngine * engine() const
 
-$prototype=QList<QDeclarativeError> errors () const
-$method=|QList<QDeclarativeError>|errors|
+$prototypeV2=QList<QDeclarativeError> errors() const
 
 $prototypeV2=QSize initialSize() const
 
