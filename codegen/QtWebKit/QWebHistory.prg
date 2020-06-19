@@ -57,8 +57,7 @@ $method=|void|goToItem|const QWebHistoryItem &
 $prototype=QWebHistoryItem itemAt ( int i ) const
 $method=|QWebHistoryItem|itemAt|int
 
-$prototype=QList<QWebHistoryItem> items () const
-$method=|QList<QWebHistoryItem>|items|
+$prototypeV2=QList<QWebHistoryItem> items() const
 
 $prototypeV2=int maximumItemCount() const
 

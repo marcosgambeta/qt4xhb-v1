@@ -75,8 +75,7 @@ $prototypeV2=QWebElement first() const
 
 $prototypeV2=QWebElement last() const
 
-$prototype=QList<QWebElement> toList () const
-$method=|QList<QWebElement>|toList|
+$prototypeV2=QList<QWebElement> toList() const
 
 $extraMethods
 

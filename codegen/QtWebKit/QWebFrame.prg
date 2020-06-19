@@ -61,8 +61,7 @@ $addMethod=addToJavaScriptWindowObject
 
 $prototypeV2=QUrl baseUrl() const
 
-$prototype=QList<QWebFrame *> childFrames () const
-$method=|QList<QWebFrame *>|childFrames|
+$prototypeV2=QList<QWebFrame *> childFrames() const
 
 $prototypeV2=QSize contentsSize() const
 

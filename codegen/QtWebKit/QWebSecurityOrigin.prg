@@ -37,8 +37,7 @@ $prototypeV2=qint64 databaseQuota() const
 
 $prototypeV2=qint64 databaseUsage() const
 
-$prototype=QList<QWebDatabase> databases () const
-$method=|QList<QWebDatabase>|databases|
+$prototypeV2=QList<QWebDatabase> databases() const
 
 $prototypeV2=QString host() const
 
@@ -52,8 +51,7 @@ $method=|void|setDatabaseQuota|qint64
 $prototype=static void addLocalScheme ( const QString & scheme )
 $staticMethod=|void|addLocalScheme|const QString &
 
-$prototype=QList<QWebSecurityOrigin> allOrigins ()
-$method=|QList<QWebSecurityOrigin>|allOrigins|
+$prototypeV2=QList<QWebSecurityOrigin> allOrigins()
 
 $prototypeV2=static QStringList localSchemes()
 
