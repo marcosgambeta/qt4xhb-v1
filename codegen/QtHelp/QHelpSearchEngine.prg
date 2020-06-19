@@ -37,8 +37,7 @@ $deleteMethod
 
 $prototypeV2=int hitCount() const
 
-$prototype=QList<QHelpSearchQuery> query () const
-$method=|QList<QHelpSearchQuery>|query|
+$prototypeV2=QList<QHelpSearchQuery> query() const
 
 $prototypeV2=QHelpSearchQueryWidget * queryWidget()
 

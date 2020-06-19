@@ -32,8 +32,7 @@ $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-$prototype=QList<QHelpSearchQuery> query () const
-$method=|QList<QHelpSearchQuery>|query|
+$prototypeV2=QList<QHelpSearchQuery> query() const
 
 $beginSignals
 $signal=|search()
