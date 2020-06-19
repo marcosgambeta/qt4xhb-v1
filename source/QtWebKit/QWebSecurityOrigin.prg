@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASEUSAGE )
 }
 
 /*
-QList<QWebDatabase> databases () const
+QList<QWebDatabase> databases() const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASES )
 {
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_ADDLOCALSCHEME )
 }
 
 /*
-QList<QWebSecurityOrigin> allOrigins ()
+QList<QWebSecurityOrigin> allOrigins()
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_ALLORIGINS )
 {

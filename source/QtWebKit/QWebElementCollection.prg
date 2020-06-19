@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_LAST )
 }
 
 /*
-QList<QWebElement> toList () const
+QList<QWebElement> toList() const
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_TOLIST )
 {

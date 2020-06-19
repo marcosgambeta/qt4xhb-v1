@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QWEBHISTORY_ITEMAT )
 }
 
 /*
-QList<QWebHistoryItem> items () const
+QList<QWebHistoryItem> items() const
 */
 HB_FUNC_STATIC( QWEBHISTORY_ITEMS )
 {

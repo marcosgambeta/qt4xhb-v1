@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QWEBFRAME_BASEURL )
 }
 
 /*
-QList<QWebFrame *> childFrames () const
+QList<QWebFrame *> childFrames() const
 */
 HB_FUNC_STATIC( QWEBFRAME_CHILDFRAMES )
 {
