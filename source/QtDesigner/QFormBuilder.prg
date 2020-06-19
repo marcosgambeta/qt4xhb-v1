@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QFORMBUILDER_CLEARPLUGINPATHS )
 }
 
 /*
-QList<QDesignerCustomWidgetInterface *> customWidgets () const
+QList<QDesignerCustomWidgetInterface *> customWidgets() const
 */
 HB_FUNC_STATIC( QFORMBUILDER_CUSTOMWIDGETS )
 {

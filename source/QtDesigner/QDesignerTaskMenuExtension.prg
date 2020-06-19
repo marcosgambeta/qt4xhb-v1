@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_PREFERREDEDITACTION )
 }
 
 /*
-virtual QList<QAction *> taskActions () const = 0
+virtual QList<QAction *> taskActions() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_TASKACTIONS )
 {
