@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_PROPERTY )
 }
 
 /*
-QList<QByteArray> propertyNames () const
+QList<QByteArray> propertyNames() const
 */
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_PROPERTYNAMES )
 {
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_PROPERTYNAMES )
 }
 
 /*
-Direction scanLineDirection () const
+QVideoSurfaceFormat::Direction scanLineDirection() const
 */
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SCANLINEDIRECTION )
 {

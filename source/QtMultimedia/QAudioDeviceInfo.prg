@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDFREQUENCIES )
 }
 
 /*
-QList<int> supportedSampleRates () const
+QList<int> supportedSampleRates() const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLERATES )
 {
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDCHANNELS )
 }
 
 /*
-QList<int> supportedChannelCounts () const
+QList<int> supportedChannelCounts() const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDCHANNELCOUNTS )
 {
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDCHANNELCOUNTS )
 }
 
 /*
-QList<int> supportedSampleSizes () const
+QList<int> supportedSampleSizes() const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLESIZES )
 {
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLESIZES )
 }
 
 /*
-QList<QAudioFormat::Endian> supportedByteOrders () const
+QList<QAudioFormat::Endian> supportedByteOrders() const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDBYTEORDERS )
 {
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDBYTEORDERS )
 }
 
 /*
-QList<QAudioFormat::SampleType> supportedSampleTypes () const
+QList<QAudioFormat::SampleType> supportedSampleTypes() const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLETYPES )
 {
