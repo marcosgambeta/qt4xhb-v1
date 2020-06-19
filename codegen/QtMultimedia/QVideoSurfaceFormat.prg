@@ -84,11 +84,9 @@ $prototypeV2=QVideoFrame::PixelFormat pixelFormat() const
 $prototype=QVariant property ( const char * name ) const
 $method=|QVariant|property|const char *
 
-$prototype=QList<QByteArray> propertyNames () const
-$method=|QList<QByteArray>|propertyNames|
+$prototypeV2=QList<QByteArray> propertyNames() const
 
-$prototype=Direction scanLineDirection () const
-$method=|QVideoSurfaceFormat::Direction|scanLineDirection|
+$prototypeV2=QVideoSurfaceFormat::Direction scanLineDirection() const
 
 $prototype=void setFrameRate ( qreal rate )
 $method=|void|setFrameRate|qreal

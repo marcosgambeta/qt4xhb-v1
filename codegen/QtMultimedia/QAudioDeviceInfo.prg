@@ -67,26 +67,19 @@ $method=|QAudioFormat|nearestFormat|const QAudioFormat &
 
 $prototypeV2=QAudioFormat preferredFormat() const
 
-$prototype=QList<int> supportedFrequencies() const
-$method=|QList<int>|supportedFrequencies|
+$prototypeV2=QList<int> supportedFrequencies() const
 
-$prototype=QList<int> supportedSampleRates () const
-$method=|QList<int>|supportedSampleRates|
+$prototypeV2=QList<int> supportedSampleRates() const
 
-$prototype=QList<int> supportedChannels() const
-$method=|QList<int>|supportedChannels|
+$prototypeV2=QList<int> supportedChannels() const
 
-$prototype=QList<int> supportedChannelCounts () const
-$method=|QList<int>|supportedChannelCounts|
+$prototypeV2=QList<int> supportedChannelCounts() const
 
-$prototype=QList<int> supportedSampleSizes () const
-$method=|QList<int>|supportedSampleSizes|
+$prototypeV2=QList<int> supportedSampleSizes() const
 
-$prototype=QList<QAudioFormat::Endian> supportedByteOrders () const
-$method=|QList<QAudioFormat::Endian>|supportedByteOrders|
+$prototypeV2=QList<QAudioFormat::Endian> supportedByteOrders() const
 
-$prototype=QList<QAudioFormat::SampleType> supportedSampleTypes () const
-$method=|QList<QAudioFormat::SampleType>|supportedSampleTypes|
+$prototypeV2=QList<QAudioFormat::SampleType> supportedSampleTypes() const
 
 $prototypeV2=QStringList supportedCodecs() const
 
