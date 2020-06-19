@@ -1345,3 +1345,4 @@ QStringList                                      |QList
 QFileInfoList                                    |QList
 QWidgetList                                      |QList
 QModelIndexList                                  |QList
+QObjectList                                      |QList
