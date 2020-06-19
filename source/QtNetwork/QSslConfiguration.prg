@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_DELETE )
 }
 
 /*
-QList<QSslCertificate> caCertificates () const
+QList<QSslCertificate> caCertificates() const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_CACERTIFICATES )
 {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_CACERTIFICATES )
 }
 
 /*
-QList<QSslCipher> ciphers () const
+QList<QSslCipher> ciphers() const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_CIPHERS )
 {
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PEERCERTIFICATE )
 }
 
 /*
-QList<QSslCertificate> peerCertificateChain () const
+QList<QSslCertificate> peerCertificateChain() const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_PEERCERTIFICATECHAIN )
 {

@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QHOSTINFO_DELETE )
 }
 
 /*
-QList<QHostAddress> addresses () const
+QList<QHostAddress> addresses() const
 */
 HB_FUNC_STATIC( QHOSTINFO_ADDRESSES )
 {

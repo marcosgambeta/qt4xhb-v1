@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_DELETE )
 }
 
 /*
-QString bearerName () const (deprecated)
+QString bearerName() const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERNAME )
 {
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPENAME )
 }
 
 /*
-QList<QNetworkConfiguration> children () const
+QList<QNetworkConfiguration> children() const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_CHILDREN )
 {

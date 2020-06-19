@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ADDCACERTIFICATES )
 }
 
 /*
-QList<QSslCertificate> caCertificates () const
+QList<QSslCertificate> caCertificates() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_CACERTIFICATES )
 {
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QSSLSOCKET_CACERTIFICATES )
 }
 
 /*
-QList<QSslCipher> ciphers () const
+QList<QSslCipher> ciphers() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_CIPHERS )
 {
@@ -640,7 +640,7 @@ HB_FUNC_STATIC( QSSLSOCKET_PEERCERTIFICATE )
 }
 
 /*
-QList<QSslCertificate> peerCertificateChain () const
+QList<QSslCertificate> peerCertificateChain() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_PEERCERTIFICATECHAIN )
 {
@@ -1239,7 +1239,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SSLCONFIGURATION )
 }
 
 /*
-QList<QSslError> sslErrors () const
+QList<QSslError> sslErrors() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_SSLERRORS )
 {
@@ -1659,7 +1659,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ADDDEFAULTCACERTIFICATES )
 }
 
 /*
-QList<QSslCertificate> defaultCaCertificates ()
+QList<QSslCertificate> defaultCaCertificates()
 */
 HB_FUNC_STATIC( QSSLSOCKET_DEFAULTCACERTIFICATES )
 {
@@ -1711,7 +1711,7 @@ HB_FUNC_STATIC( QSSLSOCKET_DEFAULTCACERTIFICATES )
 }
 
 /*
-QList<QSslCipher> defaultCiphers ()
+QList<QSslCipher> defaultCiphers()
 */
 HB_FUNC_STATIC( QSSLSOCKET_DEFAULTCIPHERS )
 {
@@ -1831,7 +1831,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETDEFAULTCIPHERS )
 }
 
 /*
-QList<QSslCipher> supportedCiphers ()
+QList<QSslCipher> supportedCiphers()
 */
 HB_FUNC_STATIC( QSSLSOCKET_SUPPORTEDCIPHERS )
 {
@@ -1902,7 +1902,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SUPPORTSSSL )
 }
 
 /*
-QList<QSslCertificate> systemCaCertificates ()
+QList<QSslCertificate> systemCaCertificates()
 */
 HB_FUNC_STATIC( QSSLSOCKET_SYSTEMCACERTIFICATES )
 {

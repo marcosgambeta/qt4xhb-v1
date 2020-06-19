@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_DELETE )
 }
 
 /*
-QList<QNetworkAddressEntry> addressEntries () const
+QList<QNetworkAddressEntry> addressEntries() const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
 {
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NAME )
 }
 
 /*
-QList<QHostAddress> allAddresses ()
+QList<QHostAddress> allAddresses()
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_ALLADDRESSES )
 {
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLADDRESSES )
 }
 
 /*
-QList<QNetworkInterface> allInterfaces ()
+QList<QNetworkInterface> allInterfaces()
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_ALLINTERFACES )
 {

@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_RAWHEADER )
 }
 
 /*
-QList<QByteArray> rawHeaderList () const
+QList<QByteArray> rawHeaderList() const
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_RAWHEADERLIST )
 {
