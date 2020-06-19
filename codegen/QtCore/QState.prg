@@ -118,8 +118,7 @@ $method=|void|setErrorState|QAbstractState *
 $prototype=void setInitialState ( QAbstractState * state )
 $method=|void|setInitialState|QAbstractState *
 
-$prototype=QList<QAbstractTransition *> transitions () const
-$method=|QList<QAbstractTransition *>|transitions|
+$prototypeV2=QList<QAbstractTransition *> transitions() const
 
 $beginSignals
 $signal=|finished()

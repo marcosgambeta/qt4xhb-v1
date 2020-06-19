@@ -388,8 +388,7 @@ $prototypeV2=QLine toLine() const
 
 $prototypeV2=QLineF toLineF() const
 
-$prototype=QList<QVariant> toList () const
-$method=|QList<QVariant>|toList|
+$prototypeV2=QList<QVariant> toList() const
 
 $prototypeV2=QLocale toLocale() const
 
@@ -421,8 +420,7 @@ $prototypeV2=QUrl toUrl() const
 
 $prototypeV2=QVariant::Type type() const
 
-$prototype=const char * typeName () const
-$method=|const char *|typeName|
+$prototypeV2=const char * typeName() const
 
 $prototypeV2=int userType() const
 

@@ -82,7 +82,6 @@ $method=|void|setUrls|const QList<QUrl> &
 
 $prototypeV2=QString text() const
 
-$prototype=QList<QUrl> urls () const
-$method=|QList<QUrl>|urls|
+$prototypeV2=QList<QUrl> urls() const
 
 #pragma ENDDUMP

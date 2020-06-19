@@ -30,20 +30,15 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=const char *signature() const
-$method=|const char *|signature|
+$prototypeV2=const char * signature() const
 
-$prototype=const char *typeName() const
-$method=|const char *|typeName|
+$prototypeV2=const char * typeName() const
 
-$prototype=QList<QByteArray> parameterTypes() const
-$method=|QList<QByteArray>|parameterTypes|
+$prototypeV2=QList<QByteArray> parameterTypes() const
 
-$prototype=QList<QByteArray> parameterNames() const
-$method=|QList<QByteArray>|parameterNames|
+$prototypeV2=QList<QByteArray> parameterNames() const
 
-$prototype=const char *tag() const
-$method=|const char *|tag|
+$prototypeV2=const char * tag() const
 
 $prototypeV2=QMetaMethod::Access access() const
 
@@ -55,8 +50,7 @@ $prototypeV2=int methodIndex() const
 
 $prototypeV2=int revision() const
 
-$prototype=const QMetaObject *enclosingMetaObject() const
-$method=|const QMetaObject *|enclosingMetaObject|
+$prototypeV2=const QMetaObject * enclosingMetaObject() const
 
 $prototype=bool invoke(QObject *object,Qt::ConnectionType connectionType,QGenericReturnArgument returnValue,QGenericArgument val0 = QGenericArgument(0),QGenericArgument val1 = QGenericArgument(),QGenericArgument val2 = QGenericArgument(),QGenericArgument val3 = QGenericArgument(),QGenericArgument val4 = QGenericArgument(),QGenericArgument val5 = QGenericArgument(),QGenericArgument val6 = QGenericArgument(),QGenericArgument val7 = QGenericArgument(),QGenericArgument val8 = QGenericArgument(),QGenericArgument val9 = QGenericArgument()) const
 %% TODO: implementar

@@ -140,8 +140,7 @@ $method=|void|chop|int
 
 $prototypeV2=void clear()
 
-$prototype=const char * constData () const
-$method=|const char *|constData|
+$prototypeV2=const char * constData() const
 
 $prototype=bool contains ( const QByteArray & ba ) const
 $internalMethod=|bool|contains,contains1|const QByteArray &
@@ -808,8 +807,7 @@ HB_FUNC_STATIC( QBYTEARRAY_STARTSWITH )
 }
 $addMethod=startsWith
 
-$prototype=QByteArray toBase64 () const
-$method=|QByteArray|toBase64|
+$prototypeV2=QByteArray toBase64() const
 
 $prototype=double toDouble ( bool * ok = 0 ) const
 $method=|double|toDouble|bool *=0

@@ -173,8 +173,7 @@ $addMethod=makeEncoder
 
 $prototypeV2=virtual QByteArray name() const = 0
 
-$prototype=virtual QList<QByteArray> aliases() const
-$virtualMethod=|QList<QByteArray>|aliases|
+$prototypeV2=virtual QList<QByteArray> aliases() const
 
 $prototypeV2=virtual int mibEnum() const = 0
 
@@ -209,11 +208,9 @@ $addMethod=codecForName
 $prototype=static QTextCodec* codecForMib(int mib)
 $staticMethod=|QTextCodec *|codecForMib|int
 
-$prototype=static QList<QByteArray> availableCodecs()
-$staticMethod=|QList<QByteArray>|availableCodecs|
+$prototypeV2=static QList<QByteArray> availableCodecs()
 
-$prototype=static QList<int> availableMibs()
-$staticMethod=|QList<int>|availableMibs|
+$prototypeV2=static QList<int> availableMibs()
 
 $prototypeV2=static QTextCodec * codecForLocale()
 

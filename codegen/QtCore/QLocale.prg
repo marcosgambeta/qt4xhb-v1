@@ -400,8 +400,7 @@ $method=|QString|toUpper|const QString &
 
 $prototypeV2=QStringList uiLanguages() const
 
-$prototype=QList<Qt::DayOfWeek> weekdays () const
-$method=|QList<Qt::DayOfWeek>|weekdays|
+$prototypeV2=QList<Qt::DayOfWeek> weekdays() const
 
 $prototypeV2=static QLocale c()
 

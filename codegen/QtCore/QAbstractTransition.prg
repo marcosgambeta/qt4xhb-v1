@@ -36,8 +36,7 @@ $deleteMethod
 $prototype=void addAnimation ( QAbstractAnimation * animation )
 $method=|void|addAnimation|QAbstractAnimation *
 
-$prototype=QList<QAbstractAnimation *> animations () const
-$method=|QList<QAbstractAnimation *>|animations|
+$prototypeV2=QList<QAbstractAnimation *> animations() const
 
 $prototypeV2=QStateMachine * machine() const
 
@@ -54,8 +53,7 @@ $prototypeV2=QState * sourceState() const
 
 $prototypeV2=QAbstractState * targetState() const
 
-$prototype=QList<QAbstractState *> targetStates () const
-$method=|QList<QAbstractState *>|targetStates|
+$prototypeV2=QList<QAbstractState *> targetStates() const
 
 $beginSignals
 $signal=|triggered()

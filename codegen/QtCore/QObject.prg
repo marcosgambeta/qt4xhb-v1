@@ -197,16 +197,13 @@ $deleteMethod
 $prototype=bool blockSignals ( bool block )
 $method=|bool|blockSignals|bool
 
-$prototype=const QObjectList & children () const
-%% TODO: implementar 'const QObjectList &'
-$method=|QObjectList|children|
+$prototypeV2=const QObjectList & children() const
 
 $prototypeV2=void dumpObjectInfo()
 
 $prototypeV2=void dumpObjectTree()
 
-$prototype=QList<QByteArray> dynamicPropertyNames () const
-$method=|QList<QByteArray>|dynamicPropertyNames|
+$prototypeV2=QList<QByteArray> dynamicPropertyNames() const
 
 $prototype=virtual bool event ( QEvent * e )
 $virtualMethod=|bool|event|QEvent *
@@ -256,8 +253,7 @@ $prototypeV2=bool isWidgetType() const
 $prototype=void killTimer ( int id )
 $method=|void|killTimer|int
 
-$prototype=virtual const QMetaObject * metaObject () const
-$virtualMethod=|const QMetaObject *|metaObject|
+$prototypeV2=virtual const QMetaObject * metaObject() const
 
 $prototype=void moveToThread ( QThread * targetThread )
 $method=|void|moveToThread|QThread *

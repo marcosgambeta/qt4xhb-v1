@@ -43,8 +43,7 @@ $method=|bool|cancelDelayedEvent|int
 
 $prototypeV2=void clearError()
 
-$prototype=QList<QAbstractAnimation *> defaultAnimations () const
-$method=|QList<QAbstractAnimation *>|defaultAnimations|
+$prototypeV2=QList<QAbstractAnimation *> defaultAnimations() const
 
 $prototypeV2=QStateMachine::Error error() const
 
