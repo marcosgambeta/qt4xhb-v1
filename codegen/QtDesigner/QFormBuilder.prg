@@ -35,8 +35,7 @@ $method=|void|addPluginPath|const QString &
 
 $prototypeV2=void clearPluginPaths()
 
-$prototype=QList<QDesignerCustomWidgetInterface *> customWidgets () const
-$method=|QList<QDesignerCustomWidgetInterface *>|customWidgets|
+$prototypeV2=QList<QDesignerCustomWidgetInterface *> customWidgets() const
 
 $prototypeV2=QStringList pluginPaths() const
 
