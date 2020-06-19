@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATIONCONTEXT )
 }
 
 /*
-QList<QDeclarativeError> errors () const
+QList<QDeclarativeError> errors() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORS )
 {

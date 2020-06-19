@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ENGINE )
 }
 
 /*
-QList<QDeclarativeError> errors () const
+QList<QDeclarativeError> errors() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
 {
