@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QTEXTOPTION_SETWRAPMODE )
 }
 
 /*
-QList<qreal> tabArray () const
+QList<qreal> tabArray() const
 */
 HB_FUNC_STATIC( QTEXTOPTION_TABARRAY )
 {

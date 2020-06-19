@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTONROLE )
 }
 
 /*
-QList<QAbstractButton *> buttons () const
+QList<QAbstractButton *> buttons() const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTONS )
 {

@@ -672,7 +672,7 @@ HB_FUNC_STATIC( QSPLITTER_SETSTRETCHFACTOR )
 }
 
 /*
-QList<int> sizes () const
+QList<int> sizes() const
 */
 HB_FUNC_STATIC( QSPLITTER_SIZES )
 {

@@ -968,7 +968,7 @@ HB_FUNC_STATIC( QWIZARD_VALIDATECURRENTPAGE )
 }
 
 /*
-QList<int> visitedPages () const
+QList<int> visitedPages() const
 */
 HB_FUNC_STATIC( QWIZARD_VISITEDPAGES )
 {

@@ -644,7 +644,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ROW )
 }
 
 /*
-QList<QListWidgetItem *> selectedItems () const
+QList<QListWidgetItem *> selectedItems() const
 */
 HB_FUNC_STATIC( QLISTWIDGET_SELECTEDITEMS )
 {

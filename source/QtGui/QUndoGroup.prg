@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QUNDOGROUP_REMOVESTACK )
 }
 
 /*
-QList<QUndoStack *> stacks () const
+QList<QUndoStack *> stacks() const
 */
 HB_FUNC_STATIC( QUNDOGROUP_STACKS )
 {

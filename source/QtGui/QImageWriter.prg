@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_WRITE )
 }
 
 /*
-QList<QByteArray> supportedImageFormats ()
+QList<QByteArray> supportedImageFormats()
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTEDIMAGEFORMATS )
 {

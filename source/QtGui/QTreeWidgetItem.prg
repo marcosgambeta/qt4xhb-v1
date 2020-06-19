@@ -1494,7 +1494,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TAKECHILD )
 }
 
 /*
-QList<QTreeWidgetItem *> takeChildren ()
+QList<QTreeWidgetItem *> takeChildren()
 */
 HB_FUNC_STATIC( QTREEWIDGETITEM_TAKECHILDREN )
 {

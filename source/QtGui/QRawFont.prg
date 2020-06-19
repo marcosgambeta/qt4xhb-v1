@@ -637,7 +637,7 @@ HB_FUNC_STATIC( QRAWFONT_SETPIXELSIZE )
 }
 
 /*
-QFont::Style style () const
+QFont::Style style() const
 */
 HB_FUNC_STATIC( QRAWFONT_STYLE )
 {
@@ -685,7 +685,7 @@ HB_FUNC_STATIC( QRAWFONT_STYLENAME )
 }
 
 /*
-QList<QFontDatabase::WritingSystem> supportedWritingSystems () const
+QList<QFontDatabase::WritingSystem> supportedWritingSystems() const
 */
 HB_FUNC_STATIC( QRAWFONT_SUPPORTEDWRITINGSYSTEMS )
 {

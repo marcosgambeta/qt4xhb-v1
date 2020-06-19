@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QFONTENGINEPLUGIN_DELETE )
 }
 
 /*
-virtual QList<QFontEngineInfo> availableFontEngines () const = 0
+virtual QList<QFontEngineInfo> availableFontEngines() const = 0
 */
 HB_FUNC_STATIC( QFONTENGINEPLUGIN_AVAILABLEFONTENGINES )
 {

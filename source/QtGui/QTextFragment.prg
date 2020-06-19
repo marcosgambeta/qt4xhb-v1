@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_CONTAINS )
 }
 
 /*
-QList<QGlyphRun> glyphRuns () const
+QList<QGlyphRun> glyphRuns() const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
 {

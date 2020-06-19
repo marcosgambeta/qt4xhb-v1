@@ -1282,7 +1282,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETVIEWMODE )
 }
 
 /*
-QList<QUrl> sidebarUrls () const
+QList<QUrl> sidebarUrls() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_SIDEBARURLS )
 {

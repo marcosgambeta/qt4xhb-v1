@@ -609,7 +609,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ROWCOUNT )
 }
 
 /*
-QList<QTableWidgetItem *> selectedItems ()
+QList<QTableWidgetItem *> selectedItems()
 */
 HB_FUNC_STATIC( QTABLEWIDGET_SELECTEDITEMS )
 {
@@ -657,7 +657,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SELECTEDITEMS )
 }
 
 /*
-QList<QTableWidgetSelectionRange> selectedRanges () const
+QList<QTableWidgetSelectionRange> selectedRanges() const
 */
 HB_FUNC_STATIC( QTABLEWIDGET_SELECTEDRANGES )
 {

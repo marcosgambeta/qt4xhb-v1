@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACCEPT )
 }
 
 /*
-QList<QGesture *> activeGestures () const
+QList<QGesture *> activeGestures() const
 */
 HB_FUNC_STATIC( QGESTUREEVENT_ACTIVEGESTURES )
 {
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACTIVEGESTURES )
 }
 
 /*
-QList<QGesture *> canceledGestures () const
+QList<QGesture *> canceledGestures() const
 */
 HB_FUNC_STATIC( QGESTUREEVENT_CANCELEDGESTURES )
 {
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_GESTURE )
 }
 
 /*
-QList<QGesture *> gestures () const
+QList<QGesture *> gestures() const
 */
 HB_FUNC_STATIC( QGESTUREEVENT_GESTURES )
 {

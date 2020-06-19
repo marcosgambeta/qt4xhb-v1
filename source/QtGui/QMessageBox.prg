@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_BUTTONROLE )
 }
 
 /*
-QList<QAbstractButton *> buttons () const
+QList<QAbstractButton *> buttons() const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_BUTTONS )
 {

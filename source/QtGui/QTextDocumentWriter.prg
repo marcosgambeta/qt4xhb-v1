@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_WRITE )
 }
 
 /*
-QList<QByteArray> supportedDocumentFormats ()
+QList<QByteArray> supportedDocumentFormats()
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SUPPORTEDDOCUMENTFORMATS )
 {

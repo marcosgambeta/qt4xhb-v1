@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_DELETE )
 }
 
 /*
-virtual QList<QAction *> actions ()
+virtual QList<QAction *> actions()
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_ACTIONS )
 {

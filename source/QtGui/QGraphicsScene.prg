@@ -1538,7 +1538,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SCENERECT )
 }
 
 /*
-QList<QGraphicsItem *> selectedItems () const
+QList<QGraphicsItem *> selectedItems() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_SELECTEDITEMS )
 {
@@ -2175,7 +2175,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_UPDATE )
 }
 
 /*
-QList<QGraphicsView *> views () const
+QList<QGraphicsView *> views() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_VIEWS )
 {

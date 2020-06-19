@@ -859,7 +859,7 @@ HB_FUNC_STATIC( QMOVIE_STOP )
 }
 
 /*
-static QList<QByteArray> supportedFormats ()
+static QList<QByteArray> supportedFormats()
 */
 HB_FUNC_STATIC( QMOVIE_SUPPORTEDFORMATS )
 {

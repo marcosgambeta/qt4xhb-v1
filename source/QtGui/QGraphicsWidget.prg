@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_DELETE )
 }
 
 /*
-QList<QAction *> actions () const
+QList<QAction *> actions() const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_ACTIONS )
 {

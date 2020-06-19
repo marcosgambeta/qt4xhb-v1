@@ -1139,7 +1139,7 @@ HB_FUNC_STATIC( QIMAGEREADER_IMAGEFORMAT )
 }
 
 /*
-QList<QByteArray> supportedImageFormats ()
+QList<QByteArray> supportedImageFormats()
 */
 HB_FUNC_STATIC( QIMAGEREADER_SUPPORTEDIMAGEFORMATS )
 {

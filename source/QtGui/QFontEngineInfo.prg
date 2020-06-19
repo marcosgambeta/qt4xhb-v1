@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_WEIGHT )
 }
 
 /*
-QList<QFontDatabase::WritingSystem> writingSystems () const
+QList<QFontDatabase::WritingSystem> writingSystems() const
 */
 HB_FUNC_STATIC( QFONTENGINEINFO_WRITINGSYSTEMS )
 {

@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QACTION_ACTIVATE )
 }
 
 /*
-QList<QGraphicsWidget *> associatedGraphicsWidgets () const
+QList<QGraphicsWidget *> associatedGraphicsWidgets() const
 */
 HB_FUNC_STATIC( QACTION_ASSOCIATEDGRAPHICSWIDGETS )
 {
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDGRAPHICSWIDGETS )
 }
 
 /*
-QList<QWidget *> associatedWidgets () const
+QList<QWidget *> associatedWidgets() const
 */
 HB_FUNC_STATIC( QACTION_ASSOCIATEDWIDGETS )
 {
@@ -1297,7 +1297,7 @@ HB_FUNC_STATIC( QACTION_SHORTCUTCONTEXT )
 }
 
 /*
-QList<QKeySequence> shortcuts () const
+QList<QKeySequence> shortcuts() const
 */
 HB_FUNC_STATIC( QACTION_SHORTCUTS )
 {

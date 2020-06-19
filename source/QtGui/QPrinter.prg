@@ -1513,7 +1513,7 @@ HB_FUNC_STATIC( QPRINTER_SUPPORTEDPAPERSOURCES )
 }
 
 /*
-QList<int> supportedResolutions () const
+QList<int> supportedResolutions() const
 */
 HB_FUNC_STATIC( QPRINTER_SUPPORTEDRESOLUTIONS )
 {

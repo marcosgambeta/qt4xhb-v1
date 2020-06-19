@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_DELETE )
 }
 
 /*
-QList<int> columnWidths () const
+QList<int> columnWidths() const
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_COLUMNWIDTHS )
 {

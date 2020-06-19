@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QTEXTFRAME_DELETE )
 }
 
 /*
-QList<QTextFrame *> childFrames () const
+QList<QTextFrame *> childFrames() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_CHILDFRAMES )
 {

@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_BUTTON )
 }
 
 /*
-QList<QAbstractButton *> buttons () const
+QList<QAbstractButton *> buttons() const
 */
 HB_FUNC_STATIC( QBUTTONGROUP_BUTTONS )
 {

@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QWIDGET_ACCESSIBLENAME )
 }
 
 /*
-QList<QAction *> actions () const
+QList<QAction *> actions() const
 */
 HB_FUNC_STATIC( QWIDGET_ACTIONS )
 {
@@ -6167,7 +6167,7 @@ HB_FUNC_STATIC( QWIDGET_LOGICALDPIY )
 }
 
 /*
-int numColors () const (deprecated)
+int numColors() const
 */
 HB_FUNC_STATIC( QWIDGET_NUMCOLORS )
 {

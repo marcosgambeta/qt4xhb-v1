@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_CACHEMODE )
 }
 
 /*
-QList<QGraphicsItem *> childItems () const
+QList<QGraphicsItem *> childItems() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_CHILDITEMS )
 {
@@ -4258,7 +4258,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TRANSFORMORIGINPOINT )
 }
 
 /*
-QList<QGraphicsTransform *> transformations () const
+QList<QGraphicsTransform *> transformations() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_TRANSFORMATIONS )
 {

@@ -696,7 +696,7 @@ HB_FUNC_STATIC( QTREEWIDGET_REMOVEITEMWIDGET )
 }
 
 /*
-QList<QTreeWidgetItem *> selectedItems () const
+QList<QTreeWidgetItem *> selectedItems() const
 */
 HB_FUNC_STATIC( QTREEWIDGET_SELECTEDITEMS )
 {

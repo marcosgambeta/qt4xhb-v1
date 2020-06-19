@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QPRINTERINFO_PRINTERNAME )
 }
 
 /*
-QList<QPrinter::PaperSize> supportedPaperSizes () const
+QList<QPrinter::PaperSize> supportedPaperSizes() const
 */
 HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAPERSIZES )
 {
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAPERSIZES )
 }
 
 /*
-QList<QPrinterInfo> availablePrinters ()
+QList<QPrinterInfo> availablePrinters()
 */
 HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERS )
 {

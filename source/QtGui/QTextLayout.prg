@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_FONT )
 }
 
 /*
-QList<QGlyphRun> glyphRuns () const
+QList<QGlyphRun> glyphRuns() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_GLYPHRUNS )
 {

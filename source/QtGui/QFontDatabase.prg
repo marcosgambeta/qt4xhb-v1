@@ -585,7 +585,7 @@ HB_FUNC_STATIC( QFONTDATABASE_REMOVEAPPLICATIONFONT )
 }
 
 /*
-static QList<int> standardSizes ()
+static QList<int> standardSizes()
 */
 HB_FUNC_STATIC( QFONTDATABASE_STANDARDSIZES )
 {

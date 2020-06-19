@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QACTIONGROUP_DELETE )
 }
 
 /*
-QList<QAction *> actions () const
+QList<QAction *> actions() const
 */
 HB_FUNC_STATIC( QACTIONGROUP_ACTIONS )
 {
