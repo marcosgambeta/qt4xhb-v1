@@ -109,8 +109,7 @@ $method=|QPushButton *|button|QDialogButtonBox::StandardButton
 $prototype=ButtonRole buttonRole ( QAbstractButton * button ) const
 $method=|QDialogButtonBox::ButtonRole|buttonRole|QAbstractButton *
 
-$prototype=QList<QAbstractButton *> buttons () const
-$method=|QList<QAbstractButton *>|buttons|
+$prototypeV2=QList<QAbstractButton *> buttons() const
 
 $prototypeV2=bool centerButtons() const
 

@@ -27,8 +27,7 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QList<QFontEngineInfo> availableFontEngines () const = 0
-$virtualMethod=|QList<QFontEngineInfo>|availableFontEngines|
+$prototypeV2=virtual QList<QFontEngineInfo> availableFontEngines() const = 0
 
 $prototype=virtual QAbstractFontEngine * create ( const QFontEngineInfo & info ) = 0
 $virtualMethod=|QAbstractFontEngine *|create|const QFontEngineInfo &

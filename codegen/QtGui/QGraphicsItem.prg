@@ -52,8 +52,7 @@ $prototypeV2=qreal boundingRegionGranularity() const
 
 $prototypeV2=QGraphicsItem::CacheMode cacheMode() const
 
-$prototype=QList<QGraphicsItem *> childItems () const
-$method=|QList<QGraphicsItem *>|childItems|
+$prototypeV2=QList<QGraphicsItem *> childItems() const
 
 $prototypeV2=QRectF childrenBoundingRect() const
 
@@ -961,8 +960,7 @@ $prototypeV2=QTransform transform() const
 
 $prototypeV2=QPointF transformOriginPoint() const
 
-$prototype=QList<QGraphicsTransform *> transformations () const
-$method=|QList<QGraphicsTransform *>|transformations|
+$prototypeV2=QList<QGraphicsTransform *> transformations() const
 
 $prototypeV2=virtual int type() const
 

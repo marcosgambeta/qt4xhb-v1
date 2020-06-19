@@ -88,8 +88,7 @@ $method=|void|setUseDesignMetrics|bool
 $prototype=void setWrapMode ( WrapMode mode )
 $method=|void|setWrapMode|QTextOption::WrapMode
 
-$prototype=QList<qreal> tabArray () const
-$method=|QList<qreal>|tabArray|
+$prototypeV2=QList<qreal> tabArray() const
 
 $prototypeV2=qreal tabStop() const
 

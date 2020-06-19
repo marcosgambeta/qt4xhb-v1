@@ -29,8 +29,7 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QList<QAction *> actions ()
-$virtualMethod=|QList<QAction *>|actions|
+$prototypeV2=virtual QList<QAction *> actions()
 
 $prototype=virtual bool filterEvent ( const QEvent * event )
 $virtualMethod=|bool|filterEvent|const QEvent *

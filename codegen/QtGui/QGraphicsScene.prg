@@ -353,8 +353,7 @@ $method=|void|render|QPainter *,const QRectF &=QRectF(),const QRectF &=QRectF(),
 
 $prototypeV2=QRectF sceneRect() const
 
-$prototype=QList<QGraphicsItem *> selectedItems () const
-$method=|QList<QGraphicsItem *>|selectedItems|
+$prototypeV2=QList<QGraphicsItem *> selectedItems() const
 
 $prototypeV2=QPainterPath selectionArea() const
 
@@ -488,8 +487,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_UPDATE )
 }
 $addMethod=update
 
-$prototype=QList<QGraphicsView *> views () const
-$method=|QList<QGraphicsView *>|views|
+$prototypeV2=QList<QGraphicsView *> views() const
 
 $prototypeV2=qreal width() const
 

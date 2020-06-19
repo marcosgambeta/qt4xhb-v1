@@ -113,8 +113,7 @@ $method=|void|setSizes|const QList<int> &
 $prototype=void setStretchFactor ( int index, int stretch )
 $method=|void|setStretchFactor|int,int
 
-$prototype=QList<int> sizes () const
-$method=|QList<int>|sizes|
+$prototypeV2=QList<int> sizes() const
 
 $prototype=QWidget * widget ( int index ) const
 $method=|QWidget *|widget|int

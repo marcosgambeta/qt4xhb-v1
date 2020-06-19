@@ -57,8 +57,7 @@ $prototypeV2=QString redoText() const
 $prototype=void removeStack ( QUndoStack * stack )
 $method=|void|removeStack|QUndoStack *
 
-$prototype=QList<QUndoStack *> stacks () const
-$method=|QList<QUndoStack *>|stacks|
+$prototypeV2=QList<QUndoStack *> stacks() const
 
 $prototypeV2=QString undoText() const
 

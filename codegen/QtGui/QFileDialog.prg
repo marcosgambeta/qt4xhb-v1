@@ -197,8 +197,7 @@ $method=|void|setSidebarUrls|const QList<QUrl> &
 $prototype=void setViewMode ( ViewMode mode )
 $method=|void|setViewMode|QFileDialog::ViewMode
 
-$prototype=QList<QUrl> sidebarUrls () const
-$method=|QList<QUrl>|sidebarUrls|
+$prototypeV2=QList<QUrl> sidebarUrls() const
 
 $prototype=bool testOption ( Option option ) const
 $method=|bool|testOption|QFileDialog::Option

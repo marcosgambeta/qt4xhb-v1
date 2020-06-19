@@ -34,8 +34,7 @@ $constructor=|new|QGraphicsItem *=0,Qt::WindowFlags=0
 
 $deleteMethod
 
-$prototype=QList<QAction *> actions () const
-$method=|QList<QAction *>|actions|
+$prototypeV2=QList<QAction *> actions() const
 
 $prototype=void addAction ( QAction * action )
 $method=|void|addAction|QAction *

@@ -72,11 +72,9 @@ $prototypeV2=QActionGroup * actionGroup() const
 $prototype=void activate ( ActionEvent event )
 $method=|void|activate|QAction::ActionEvent
 
-$prototype=QList<QGraphicsWidget *> associatedGraphicsWidgets () const
-$method=|QList<QGraphicsWidget *>|associatedGraphicsWidgets|
+$prototypeV2=QList<QGraphicsWidget *> associatedGraphicsWidgets() const
 
-$prototype=QList<QWidget *> associatedWidgets () const
-$method=|QList<QWidget *>|associatedWidgets|
+$prototypeV2=QList<QWidget *> associatedWidgets() const
 
 $prototypeV2=bool autoRepeat() const
 
@@ -197,8 +195,7 @@ $prototypeV2=QKeySequence shortcut() const
 
 $prototypeV2=Qt::ShortcutContext shortcutContext() const
 
-$prototype=QList<QKeySequence> shortcuts () const
-$method=|QList<QKeySequence>|shortcuts|
+$prototypeV2=QList<QKeySequence> shortcuts() const
 
 $prototype=bool showStatusText ( QWidget * widget = 0 )
 $method=|bool|showStatusText|QWidget *=0

@@ -32,8 +32,7 @@ $constructor=|new|QObject *
 
 $deleteMethod
 
-$prototype=QList<QAction *> actions () const
-$method=|QList<QAction *>|actions|
+$prototypeV2=QList<QAction *> actions() const
 
 $prototype=QAction * addAction ( QAction * action )
 $internalMethod=|QAction *|addAction,addAction1|QAction *

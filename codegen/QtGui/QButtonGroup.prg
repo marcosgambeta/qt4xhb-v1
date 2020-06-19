@@ -65,8 +65,7 @@ $addMethod=addButton
 $prototype=QAbstractButton * button ( int id ) const
 $method=|QAbstractButton *|button|int
 
-$prototype=QList<QAbstractButton *> buttons () const
-$method=|QList<QAbstractButton *>|buttons|
+$prototypeV2=QList<QAbstractButton *> buttons() const
 
 $prototypeV2=QAbstractButton * checkedButton() const
 

@@ -69,11 +69,9 @@ $prototypeV2=bool isNull() const
 
 $prototypeV2=QString printerName() const
 
-$prototype=QList<QPrinter::PaperSize> supportedPaperSizes () const
-$method=|QList<QPrinter::PaperSize>|supportedPaperSizes|
+$prototypeV2=QList<QPrinter::PaperSize> supportedPaperSizes() const
 
-$prototype=QList<QPrinterInfo> availablePrinters ()
-$method=|QList<QPrinterInfo>|availablePrinters|
+$prototypeV2=QList<QPrinterInfo> availablePrinters()
 
 $prototypeV2=static QPrinterInfo defaultPrinter()
 

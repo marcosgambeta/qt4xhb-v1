@@ -126,13 +126,11 @@ $prototypeV2=qreal pixelSize() const
 $prototype=void setPixelSize ( qreal pixelSize )
 $method=|void|setPixelSize|qreal
 
-$prototype=QFont::Style style () const
-$method=|QFont::Style|style|
+$prototypeV2=QFont::Style style() const
 
 $prototypeV2=QString styleName() const
 
-$prototype=QList<QFontDatabase::WritingSystem> supportedWritingSystems () const
-$method=|QList<QFontDatabase::WritingSystem>|supportedWritingSystems|
+$prototypeV2=QList<QFontDatabase::WritingSystem> supportedWritingSystems() const
 
 $prototype=bool supportsCharacter ( QChar character ) const
 $internalMethod=|bool|supportsCharacter,supportsCharacter1|QChar

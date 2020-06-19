@@ -287,8 +287,7 @@ $method=|void|setWinPageSize|int|#ifdef Q_WS_WIN
 $prototype=QList<PaperSource> supportedPaperSources () const
 $method=|QList<QPrinter::PaperSource>|supportedPaperSources||#ifdef Q_WS_WIN
 
-$prototype=QList<int> supportedResolutions () const
-$method=|QList<int>|supportedResolutions|
+$prototypeV2=QList<int> supportedResolutions() const
 
 $prototypeV2=bool supportsMultipleCopies() const
 

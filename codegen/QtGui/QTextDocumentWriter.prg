@@ -113,8 +113,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_WRITE )
 }
 $addMethod=write
 
-$prototype=QList<QByteArray> supportedDocumentFormats ()
-$method=|QList<QByteArray>|supportedDocumentFormats|
+$prototypeV2=QList<QByteArray> supportedDocumentFormats()
 
 $extraMethods
 

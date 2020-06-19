@@ -62,8 +62,7 @@ $prototypeV2=int charFormatIndex() const
 $prototype=bool contains ( int position ) const
 $method=|bool|contains|int
 
-$prototype=QList<QGlyphRun> glyphRuns () const
-$method=|QList<QGlyphRun>|glyphRuns|
+$prototypeV2=QList<QGlyphRun> glyphRuns() const
 
 $prototypeV2=bool isValid() const
 

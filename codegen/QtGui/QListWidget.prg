@@ -154,8 +154,7 @@ $method=|void|removeItemWidget|QListWidgetItem *
 $prototype=int row ( const QListWidgetItem * item ) const
 $method=|int|row|const QListWidgetItem *
 
-$prototype=QList<QListWidgetItem *> selectedItems () const
-$method=|QList<QListWidgetItem *>|selectedItems|
+$prototypeV2=QList<QListWidgetItem *> selectedItems() const
 
 $prototype=void setCurrentItem ( QListWidgetItem * item )
 $internalMethod=|void|setCurrentItem,setCurrentItem1|QListWidgetItem *

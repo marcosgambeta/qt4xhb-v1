@@ -68,17 +68,14 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACCEPT )
 }
 $addMethod=accept
 
-$prototype=QList<QGesture *> activeGestures () const
-$method=|QList<QGesture *>|activeGestures|
+$prototypeV2=QList<QGesture *> activeGestures() const
 
-$prototype=QList<QGesture *> canceledGestures () const
-$method=|QList<QGesture *>|canceledGestures|
+$prototypeV2=QList<QGesture *> canceledGestures() const
 
 $prototype=QGesture * gesture ( Qt::GestureType type ) const
 $method=|QGesture *|gesture|Qt::GestureType
 
-$prototype=QList<QGesture *> gestures () const
-$method=|QList<QGesture *>|gestures|
+$prototypeV2=QList<QGesture *> gestures() const
 
 $prototype=void ignore ()
 $internalMethod=|void|ignore,ignore1|

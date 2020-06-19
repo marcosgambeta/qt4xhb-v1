@@ -32,8 +32,7 @@ $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-$prototype=QList<int> columnWidths () const
-$method=|QList<int>|columnWidths|
+$prototypeV2=QList<int> columnWidths() const
 
 $prototypeV2=QWidget * previewWidget() const
 

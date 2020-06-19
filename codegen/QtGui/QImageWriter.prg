@@ -108,8 +108,7 @@ $method=|bool|supportsOption|QImageIOHandler::ImageOption
 $prototype=bool write ( const QImage & image )
 $method=|bool|write|const QImage &
 
-$prototype=QList<QByteArray> supportedImageFormats ()
-$method=|QList<QByteArray>|supportedImageFormats|
+$prototypeV2=QList<QByteArray> supportedImageFormats()
 
 $extraMethods
 

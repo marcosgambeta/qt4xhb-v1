@@ -212,8 +212,7 @@ HB_FUNC_STATIC( QIMAGEREADER_IMAGEFORMAT )
 }
 $addMethod=imageFormat
 
-$prototype=QList<QByteArray> supportedImageFormats ()
-$method=|QList<QByteArray>|supportedImageFormats|
+$prototypeV2=QList<QByteArray> supportedImageFormats()
 
 $extraMethods
 

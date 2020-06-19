@@ -244,8 +244,7 @@ $method=|QString|statusTip|int
 $prototype=QTreeWidgetItem * takeChild ( int index )
 $method=|QTreeWidgetItem *|takeChild|int
 
-$prototype=QList<QTreeWidgetItem *> takeChildren ()
-$method=|QList<QTreeWidgetItem *>|takeChildren|
+$prototypeV2=QList<QTreeWidgetItem *> takeChildren()
 
 $prototype=QString text ( int column ) const
 $method=|QString|text|int

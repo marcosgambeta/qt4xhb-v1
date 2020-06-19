@@ -109,8 +109,7 @@ $prototypeV2=void endLayout()
 
 $prototypeV2=QFont font() const
 
-$prototype=QList<QGlyphRun> glyphRuns () const
-$method=|QList<QGlyphRun>|glyphRuns|
+$prototypeV2=QList<QGlyphRun> glyphRuns() const
 
 $prototype=bool isValidCursorPosition ( int pos ) const
 $method=|bool|isValidCursorPosition|int

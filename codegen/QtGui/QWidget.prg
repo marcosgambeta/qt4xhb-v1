@@ -90,8 +90,7 @@ $prototypeV2=QString accessibleDescription() const
 
 $prototypeV2=QString accessibleName() const
 
-$prototype=QList<QAction *> actions () const
-$method=|QList<QAction *>|actions|
+$prototypeV2=QList<QAction *> actions() const
 
 $prototypeV2=void activateWindow()
 
@@ -1098,8 +1097,8 @@ $prototypeV2=int logicalDpiX() const
 
 $prototypeV2=int logicalDpiY() const
 
-$prototype=int numColors () const (deprecated)
-$method=|int|numColors|
+%% deprecated
+$prototypeV2=int numColors() const
 
 $prototypeV2=bool paintingActive() const
 

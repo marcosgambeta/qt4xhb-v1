@@ -32,8 +32,7 @@ $constructor=|new|QTextDocument *
 
 $deleteMethod
 
-$prototype=QList<QTextFrame *> childFrames () const
-$method=|QList<QTextFrame *>|childFrames|
+$prototypeV2=QList<QTextFrame *> childFrames() const
 
 $prototypeV2=QTextCursor firstCursorPosition() const
 

@@ -102,8 +102,7 @@ $method=|QAbstractButton *|button|QMessageBox::StandardButton
 $prototype=ButtonRole buttonRole ( QAbstractButton * button ) const
 $method=|QMessageBox::ButtonRole|buttonRole|QAbstractButton *
 
-$prototype=QList<QAbstractButton *> buttons () const
-$method=|QList<QAbstractButton *>|buttons|
+$prototypeV2=QList<QAbstractButton *> buttons() const
 
 $prototypeV2=QAbstractButton * clickedButton() const
 

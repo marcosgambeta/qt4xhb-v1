@@ -112,8 +112,7 @@ $method=|void|openPersistentEditor|QTreeWidgetItem *,int=0
 $prototype=void removeItemWidget ( QTreeWidgetItem * item, int column )
 $method=|void|removeItemWidget|QTreeWidgetItem *,int
 
-$prototype=QList<QTreeWidgetItem *> selectedItems () const
-$method=|QList<QTreeWidgetItem *>|selectedItems|
+$prototypeV2=QList<QTreeWidgetItem *> selectedItems() const
 
 $prototype=void setColumnCount ( int columns )
 $method=|void|setColumnCount|int

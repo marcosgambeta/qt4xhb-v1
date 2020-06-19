@@ -125,11 +125,9 @@ $method=|int|row|const QTableWidgetItem *
 
 $prototypeV2=int rowCount() const
 
-$prototype=QList<QTableWidgetItem *> selectedItems ()
-$method=|QList<QTableWidgetItem *>|selectedItems|
+$prototypeV2=QList<QTableWidgetItem *> selectedItems()
 
-$prototype=QList<QTableWidgetSelectionRange> selectedRanges () const
-$method=|QList<QTableWidgetSelectionRange>|selectedRanges|
+$prototypeV2=QList<QTableWidgetSelectionRange> selectedRanges() const
 
 $prototype=void setCellWidget ( int row, int column, QWidget * widget )
 $method=|void|setCellWidget|int,int,QWidget *

@@ -133,8 +133,7 @@ $prototypeV2=void start()
 
 $prototypeV2=void stop()
 
-$prototype=static QList<QByteArray> supportedFormats ()
-$staticMethod=|QList<QByteArray>|supportedFormats|
+$prototypeV2=static QList<QByteArray> supportedFormats()
 
 $beginSignals
 $signal=|error(QImageReader::ImageReaderError)

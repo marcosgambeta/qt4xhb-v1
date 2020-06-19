@@ -136,8 +136,7 @@ $prototypeV2=static bool removeAllApplicationFonts()
 $prototype=static bool removeApplicationFont ( int id )
 $staticMethod=|bool|removeApplicationFont|int
 
-$prototype=static QList<int> standardSizes ()
-$staticMethod=|QList<int>|standardSizes|
+$prototypeV2=static QList<int> standardSizes()
 
 $prototypeV2=static bool supportsThreadedFontRendering()
 

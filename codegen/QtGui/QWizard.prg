@@ -125,8 +125,7 @@ $prototypeV2=Qt::TextFormat titleFormat() const
 
 $prototypeV2=virtual bool validateCurrentPage()
 
-$prototype=QList<int> visitedPages () const
-$method=|QList<int>|visitedPages|
+$prototypeV2=QList<int> visitedPages() const
 
 $prototypeV2=QWizard::WizardStyle wizardStyle() const
 
